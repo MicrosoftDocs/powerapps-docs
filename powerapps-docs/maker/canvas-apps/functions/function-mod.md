@@ -1,12 +1,12 @@
 ---
 title: Mod function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Mod function in PowerApps
+description: Reference information, including syntax and examples, for the Mod function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/01/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Mod function in PowerApps
+# Mod function in Power Apps
 Returns the remainder of a division.
 
 ## Description

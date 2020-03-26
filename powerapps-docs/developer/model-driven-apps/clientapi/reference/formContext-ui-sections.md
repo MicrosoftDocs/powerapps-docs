@@ -8,7 +8,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: e362dfb2-cb64-49f5-b3d4-d77e813325ca
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -30,7 +30,7 @@ var sectionObj = tabObj.sections.get(arg);
 
 ## Properties
 
-- **Controls**: The section controls collection provides access to the controls within a section. See [Collections (Client API reference)](collections.md) for information about the methods exposed by collections. See [Controls (Client API reference)](controls.md) for information about the properties and methods exposed by the objects in this collection.
+- **controls**: The section controls collection provides access to the controls within a section. See [Collections (Client API reference)](collections.md) for information about the methods exposed by collections. See [Controls (Client API reference)](controls.md) for information about the properties and methods exposed by the objects in this collection.
 
 
 ## Methods

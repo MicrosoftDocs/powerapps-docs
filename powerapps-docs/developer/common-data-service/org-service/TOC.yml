@@ -13,7 +13,6 @@
   - name: OrganizationServiceContext
     href: organizationservicecontext.md
   - name: Create a client app
-    href: create-client-app.md
     items:
     - name: Subscribe to SDK assembly updates using NuGet
       href: subscribe-sdk-assembly-updates-using-nuget.md
@@ -44,8 +43,8 @@
         href: page-large-result-sets-with-queryexpression.md
       - name: Use a left outer join in QueryExpression to query for records "not in"
         href: use-left-outer-join-queryexpression-query-records-not-in.md
-      - name: Use the QueryByAttribute class
-        href: use-querybyattribute-class.md
+    - name: Use the QueryByAttribute class
+      href: use-querybyattribute-class.md
   - name: Create entities
     href: entity-operations-create.md
   - name: Retrieve an entity

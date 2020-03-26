@@ -1,12 +1,12 @@
 ---
 title: EndsWith and StartsWith functions | Microsoft Docs
-description: Reference information, including syntax and examples for the EndsWith and StartsWith functions in PowerApps
+description: Reference information, including syntax and examples for the EndsWith and StartsWith functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/24/2017
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# EndsWith and StartsWith functions in PowerApps
+# EndsWith and StartsWith functions in Power Apps
 Tests whether a text string begins or ends another text string.
 
 ## Description
@@ -44,7 +44,7 @@ Use **EndsWith** and **StartsWith** with the **[Filter](function-filter-lookup.m
 | **EndsWith( "Hello World", "world" )** |Tests whether **"Hello World"** ends with **"world"**.  The test is case insensitive. |**true** |
 | **EndsWith( "Good bye", "good" )** |Tests whether **"Good bye"** ends with **"good"**.  The *EndText* argument (**"good"**) appears in the text but not at the end. |**false** |
 | **EndsWith( "Always say hello", "hello" )** |Tests whether **"Always say hello"** ends with **"hello"**. |**true** |
-| **Endswith( "Bye bye", "" )** |Tests whether **"Bye bye"** ends with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **EndsWith** is defined to return **true** in this case. |**true** |
+| **EndsWith( "Bye bye", "" )** |Tests whether **"Bye bye"** ends with an empty text string (**Len** returns 0).  Easing its use in **Filter** expressions, **EndsWith** is defined to return **true** in this case. |**true** |
 
 | Formula | Description | Result |
 | --- | --- | --- |

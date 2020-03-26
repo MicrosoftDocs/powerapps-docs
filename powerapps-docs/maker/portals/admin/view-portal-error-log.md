@@ -1,21 +1,19 @@
 ---
 title: "Viewing portal error logs and storing them in Azure Blob storage | MicrosoftDocs"
 description: "Learn how to view portal error logs and store them in your Azure Blob storage account."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
-ms.author: shjais
+ms.date: 10/07/2019
+ms.author: tapanm
 ms.reviewer:
 ---
 
 # View portal error logs
 
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
-As a portal administrator or developer, you can use PowerApps Portals to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
+As a portal administrator or developer, you can use Power Apps portals to create a website for your customers. One common task for a developer is to debug issues while developing the portal. To help debug, you can access detailed error logs for any issues on your portal. There are multiple ways that you can get error logs for your portals.
 
 ## Custom error
 
@@ -31,13 +29,13 @@ To enable YSOD, you need to [disable custom errors](#disable-custom-error) on yo
 > [!NOTE]
 > It is advisable to only disable custom errors when you are in the development phase and enable custom errors once you go live.
 
-More information on custom error: [Displaying a Custom Error Page](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs)
+More information on custom error: [Displaying a Custom Error Page](https://docs.microsoft.com/aspnet/web-forms/overview/older-versions-getting-started/deploying-web-site-projects/displaying-a-custom-error-page-cs)
 
 ### Disable custom error
 
 You can disable custom errors on portals to display the detailed exception message if any server-side exception occurs in your portal.
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Disable custom errors**.
 
@@ -50,7 +48,7 @@ You can disable custom errors on portals to display the detailed exception messa
 
 You can enable custom errors on portals to display a professional-looking page instead of YSOD. This page provides meaningful information if any exception occurs in the application.
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Enable custom errors**.
 
@@ -60,14 +58,14 @@ You can enable custom errors on portals to display a professional-looking page i
 3. Select **Enable** in the confirmation message. While custom errors are being enabled, the portal restarts and will be unavailable. A message appears when custom errors are enabled.
 
 > [!NOTE]
-> - If you change the Dynamics 365 for Customer Engagement instance that your portal is connected to, the custom errors setting is set to enabled. You must disable the custom errors again, if required.
-> - You must not enable or disable custom errors when the Dynamics 365 for Customer Engagement instance that your portal is connected to is being changed; otherwise an error message appears.
+> - If you change the instance that your portal is connected to, the custom errors setting is set to enabled. You must disable the custom errors again, if required.
+> - You must not enable or disable custom errors when the instance that your portal is connected to is being changed; otherwise an error message appears.
 
 ### Display a custom error message
 
 You can configure your portal to display a professional-looking custom error instead of a generic error.
 
-To define a custom error, use the content snippet `Portal Generic Error`. The content defined in this snippet is shown on the error page. This content snippet is not available out-of-the-box and you must create it. The content snippet **Type** can be **Text** or **HTML**. To create or edit the content snippet, see [Customize content by using content snippets](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/customize-content-snippets).
+To define a custom error, use the content snippet `Portal Generic Error`. The content defined in this snippet is shown on the error page. This content snippet is not available out-of-the-box and you must create it. The content snippet **Type** can be **Text** or **HTML**. To create or edit the content snippet, see [Customize content by using content snippets](../configure/customize-content-snippets.md).
 
 > [!NOTE]
 > If liquid code is written in the content snippet, it will be skipped and not rendered.
@@ -87,18 +85,18 @@ This is a custom error, please file a support ticket with screenshot of error by
 > ![Custom error message](../media/custom-error-message.png "Custom error message")
 
 > [!NOTE]
-> If the portal cannot retrieve a content snippet because it can't connect to Dynamics 365 or if the snippet is not available in Dynamics 365, an error message appears.
+> If the portal cannot retrieve a content snippet because it can't connect to Common Data Service or if the snippet is not available in Common Data Service, an error message appears.
 
 ## Access portal error logs
 
-After developing and publishing the portal, you still need to be able to access portal logs to debug issues reported by your customers. To access the logs, you can configure your portal to send all application errors to an Azure Blob storage account that you own. By accessing portal error logs, you can respond to customer queries efficiently because you have details of the issue. To get portal error logs into your Azure Blob storage, you must enable diagnostic logging from the Portal Admin center.
+After developing and publishing the portal, you still need to be able to access portal logs to debug issues reported by your customers. To access the logs, you can configure your portal to send all application errors to an Azure Blob storage account that you own. By accessing portal error logs, you can respond to customer queries efficiently because you have details of the issue. To get portal error logs into your Azure Blob storage, you must enable diagnostic logging from the Power Apps Portals admin center.
 
 > [!NOTE]
-> If you change the Dynamics 365 instance that your portal is connected to, diagnostic logging is disabled. You must enable diagnostic logging again.
+> If you change the Common Data Service instance that your portal is connected to, diagnostic logging is disabled. You must enable diagnostic logging again.
 
 ### Enable diagnostic logging
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Enable diagnostic logging**.
 
@@ -107,7 +105,7 @@ After developing and publishing the portal, you still need to be able to access 
 
 3. In the **Enable diagnostic logging** window, enter the following values:
 
-   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL is 2048 characters. If the URL is longer than 2048 characters, an error message appears. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)
+   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL is 2048 characters. If the URL is longer than 2048 characters, an error message appears. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
    - **Select retention period**: Duration to keep the portal error logs in blob storage. The error logs are deleted after the selected duration. You can select one of the following values:
      - 1 day
      - 7 days
@@ -135,7 +133,7 @@ When diagnostic logging is enabled successfully, the following action becomes av
  
 ### Update diagnostic logging
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Update diagnostic logging configuration**.
 
@@ -144,7 +142,7 @@ When diagnostic logging is enabled successfully, the following action becomes av
 
 3. In the Update diagnostic logging configuration window, enter the following values:
    - **Do you want to update the Connection string of the Azure Blob Storage service?**: Allows you to specify whether to update the connection string of the Azure Blob Storage service. By default, it is selected.
-   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL can be 2048 characters. If the URL is longer than 2048 characters, an error message appears. This field is displayed only if the **Do you want to update the Connection string of the Azure Blob Storage service?** check box is selected. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)
+   - **Connection String of Azure Blob Storage service**: URL of the Azure Blob Storage service to store the portal error logs. The maximum length of the URL can be 2048 characters. If the URL is longer than 2048 characters, an error message appears. This field is displayed only if the **Do you want to update the Connection string of the Azure Blob Storage service?** check box is selected. More information on connection string: [Configure Azure Storage connection strings](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
    - **Select retention period**: Duration to keep the portal error logs in blob storage. The error logs are deleted after the selected duration. You can select one of the following values:
      - 1 day
      - 7 days
@@ -163,7 +161,7 @@ When diagnostic logging is enabled successfully, the following action becomes av
 
 ### Disable diagnostic logging
 
-1. Open [PowerApps Portals admin center](admin-overview.md).
+1. Open [Power Apps Portals admin center](admin-overview.md).
 
 2. Go to **Portal Actions** > **Disable diagnostic logging**.
 
@@ -172,9 +170,9 @@ When diagnostic logging is enabled successfully, the following action becomes av
 
 3. Click **Disable** in the confirmation message.
 
-## Display Dynamics 365 for Customer Engagement plugin error
+## Display plugin error
 
-Another scenario that often occurs while developing a portal is an error generated by custom plug-ins and business logic written in your Dynamics 365 organization. These errors can generally be accessed by [disabling custom errors](#disable-custom-error) or [enabling diagnostic logging](#enable-diagnostic-logging). However, in some cases, it is faster to display these errors directly on the portal to diagnose the issue faster. To do this, you can configure your portal to display custom plugin errors from Dynamics 365 on your portal screen.
+Another scenario that often occurs while developing a portal is an error generated by custom plug-ins and business logic written in your Common Data Service environment. These errors can generally be accessed by [disabling custom errors](#disable-custom-error) or [enabling diagnostic logging](#enable-diagnostic-logging). However, in some cases, it is faster to display these errors directly on the portal to diagnose the issue faster. To do this, you can configure your portal to display custom plugin errors from Common Data Service on your portal screen.
 
 To display custom plugin errors, create the site setting `Site/EnableCustomPluginError` and set its value to True. The custom plugin errors will be displayed on the screen instead of a generic error. The error will display only the message part of the plugin error and not the complete stack trace.
 

@@ -2,11 +2,11 @@
 title: "Web service error codes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "This topic lists the error codes you might encounter when you debug your code. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/09/2019
-ms.reviewer: ""
+ms.date: 02/21/2020
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -30,6 +30,7 @@ This topic lists the error codes you might encounter when you debug your code.
 >
 > |Error|Message|
 > |---|---|
+> |**Name**:<br />AADError<br />**Hex**:<br />80072559<br />**Number**:<br />-2147015335|Error from AAD|
 > |**Name**:<br />AccessDenied<br />**Hex**:<br />80048405<br />**Number**:<br />-2147187707|Access is denied.|
 > |**Name**:<br />AccessDeniedSharePointRecord<br />**Hex**:<br />80060904<br />**Number**:<br />-2147088124|Access denied on SharePoint record in Dynamics 365.|
 > |**Name**:<br />AccessTokenExpired<br />**Hex**:<br />8005F101<br />**Number**:<br />-2147094271|The requested resource requires authentication.|
@@ -63,6 +64,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />AggregateQueryRecordLimitExceeded<br />**Hex**:<br />8004E023<br />**Number**:<br />-2147164125|The maximum record limit is exceeded. Reduce the number of records.|
 > |**Name**:<br />AlreadyLinkedToAnotherAttribute<br />**Hex**:<br />8004F0FE<br />**Number**:<br />-2147159810|Given linked attribute is alreadly linked to other attribute.|
 > |**Name**:<br />AppConfigFeatureNotEnabled<br />**Hex**:<br />80072200<br />**Number**:<br />-2147016192|In-App Customization App Configuration feature is not enabled.|
+> |**Name**:<br />AppEntityLimitExceeded<br />**Hex**:<br />80048547<br />**Number**:<br />-2147187385|{0}|
 > |**Name**:<br />ApplicationMetadataConverterFailed<br />**Hex**:<br />8005F231<br />**Number**:<br />-2147093967|Sorry, something went wrong. Please try again, or restart the app.|
 > |**Name**:<br />ApplicationMetadatadaCreateFailed<br />**Hex**:<br />8005F233<br />**Number**:<br />-2147093965|Sorry, something went wrong. Please try again, or restart the app.|
 > |**Name**:<br />ApplicationMetadatadaNullData<br />**Hex**:<br />8005F232<br />**Number**:<br />-2147093966|Sorry, something went wrong. Please try again, or restart the app.|
@@ -102,7 +104,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ArticleIsPublished<br />**Hex**:<br />800404fe<br />**Number**:<br />-2147220226|The article cannot be updated or deleted because it is in published state|
 > |**Name**:<br />AssociateProductFailureDifferentUom<br />**Hex**:<br />80061040<br />**Number**:<br />-2147086272|The product can't be added to the bundle. You have to use a product unit that belongs to the unit group of the product.|
 > |**Name**:<br />AssociationRoleOrdinalInvalid<br />**Hex**:<br />80048468<br />**Number**:<br />-2147187608|The association role ordinal is not valid - it must be 1 or 2.|
+> |**Name**:<br />AsyncAssignOperationOngoing<br />**Hex**:<br />80048555<br />**Number**:<br />-2147187371|This entity is currently being assigned as part of an asynchronous cascade assign job. Please wait for the asynchronous job to complete before attempting to assign this entity again. (EntityId: {0}, EntityName: {1}, AsyncJobName: {2}, AsyncJobId: {3}, AsyncAssignOperationId: {4})|
 > |**Name**:<br />AsyncCommunicationError<br />**Hex**:<br />80044307<br />**Number**:<br />-2147204345|A communication error occurred while processing the async operation.|
+> |**Name**:<br />AsyncDeleteOperationOngoing<br />**Hex**:<br />80048549<br />**Number**:<br />-2147187383|This entity is currently being deleted as part of an asynchronous cascade delete job. Please wait for the asynchronous job to complete before attempting to delete this entity again. (EntityId: {0}, EntityName: {1}, AsyncJobName: {2}, AsyncJobId: {3}, AsyncDeleteOperationId: {4})|
 > |**Name**:<br />AsyncNetworkError<br />**Hex**:<br />80044306<br />**Number**:<br />-2147204346|An error occurred while accessing the network.|
 > |**Name**:<br />AsyncOperationCannotCancel<br />**Hex**:<br />80044F00<br />**Number**:<br />-2147201280|This system job cannot be canceled.|
 > |**Name**:<br />AsyncOperationCannotDeleteUnlessCompleted<br />**Hex**:<br />8004416a<br />**Number**:<br />-2147204758|Cannot delete async operation unless it is in Completed state.|
@@ -131,6 +135,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />AttributeFormulaDefinitionIsEmpty<br />**Hex**:<br />80060439<br />**Number**:<br />-2147089351|The formula is empty.|
 > |**Name**:<br />AttributeIsNotCustomAttribute<br />**Hex**:<br />80047009<br />**Number**:<br />-2147192823|The specified attribute is not a custom attribute|
 > |**Name**:<br />AttributeIsNotFacetable<br />**Hex**:<br />80060305<br />**Number**:<br />-2147089659|Cannot set user search facets for entity {0} as attribute {1} is not facetable. Kindly remove it from the list to proceed.|
+> |**Name**:<br />AttributeMapHasAnUnmanagedBaseInstance<br />**Hex**:<br />8004F223<br />**Number**:<br />-2147159517|An AttributeMap, with Id: {0}, between attribute {1} and {2} of entity {3} and {4}, has an unmanaged base instance and therefore cannot be updated by a managed solution.|
+> |**Name**:<br />AttributeMapIsManagedException<br />**Hex**:<br />8004F224<br />**Number**:<br />-2147159516|Cannot delete managed attribute map with Id: {0} between attribute {1} and {2} of entity {3} and {4}.|
+> |**Name**:<br />AttributeNameConflictWithNavigationPropertyName<br />**Hex**:<br />80048834<br />**Number**:<br />-2147186636|Attribute name {0} conflict with NavigationProerty name on entity. Please use unique name for attribute.|
 > |**Name**:<br />AttributeNotCreatedForOfficeGraphError<br />**Hex**:<br />80044237<br />**Number**:<br />-2147204553|This attribute cannot be created since support to enable attribute for officegraph is not available.|
 > |**Name**:<br />AttributeNotOfTypePicklist<br />**Hex**:<br />8004033c<br />**Number**:<br />-2147220676|This attribute is not mapped to a drop-down list, Boolean, or state/status attribute. However, you have included a ListValueMap element for it.  Fix this inconsistency, and then import this data map again.|
 > |**Name**:<br />AttributeNotOfTypeReference<br />**Hex**:<br />80040390<br />**Number**:<br />-2147220592|This attribute is not mapped as a reference attribute. However, you have included a ReferenceMap for it.  Fix this inconsistency, and then import this data map again.|
@@ -153,6 +160,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />AutoDataCaptureAuthorizationFailureException<br />**Hex**:<br />80091042<br />**Number**:<br />-2146889662|You don’t have the proper Office 365 license to get untracked emails. Please contact your system administrator.|
 > |**Name**:<br />AutoDataCaptureDisabledError<br />**Hex**:<br />80091041<br />**Number**:<br />-2146889663|Auto capture feature is not enabled.|
 > |**Name**:<br />AutoDataCaptureResponseRetrievalFailureException<br />**Hex**:<br />80091043<br />**Number**:<br />-2146889661|Error while fetching untracked emails from Exchange.|
+> |**Name**:<br />AutoNumberAttributeSequenceMissing<br />**Hex**:<br />80060885<br />**Number**:<br />-2147088251|SQL Sequence missing for Auto Number attribute {0} of entity {1}. Will attempt to re-create the SQL Sequence now.|
 > |**Name**:<br />AzureApplicationIdNotFound<br />**Hex**:<br />8004F510<br />**Number**:<br />-2147158768|We didn’t find that application ID {0} in your Azure Active Directory (Azure AD) with CorrelationID {1}. Make sure your application is registered in Azure AD.|
 > |**Name**:<br />AzureApplicationIdNotFoundInOrgDB<br />**Hex**:<br />8004F512<br />**Number**:<br />-2147158766|Azure applicationid not found. We didn’t find the application ID {0} in your CRM database. Correct the application ID and resubmit the update.|
 > |**Name**:<br />AzureOperationResponseTimedOut<br />**Hex**:<br />80061635<br />**Number**:<br />-2147084747|An Azure operation request did not return a response within stated timeout period. Retry the operation or increase timeout provided for the operation.|
@@ -299,7 +307,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />BusinessProcessFlowStepHasInvalidParent<br />**Hex**:<br />80060405<br />**Number**:<br />-2147089403|{0} parent is not of type {1}|
 > |**Name**:<br />BusinessRuleEditorSupportsOnlyIfConditionBranch<br />**Hex**:<br />80060008<br />**Number**:<br />-2147090424|The business rule editor only supports one if condition. Please fix the rule.|
 > |**Name**:<br />BusinessUnitCannotBeDisabled<br />**Hex**:<br />80041d59<br />**Number**:<br />-2147213991|Business unit cannot be disabled: no active user with system admin role exists outside of business unit subtree.|
-> |**Name**:<br />BusinessUnitDefaultTeamOwnsRecords<br />**Hex**:<br />80041d62<br />**Number**:<br />-2147213982|Business unit default team owns records. Business unit cannot be deleted.|
+> |**Name**:<br />BusinessUnitDefaultTeamOwnsRecords<br />**Hex**:<br />80041d62<br />**Number**:<br />-2147213982|Business unit default team owns records. Business unit (Id = {0}) cannot be deleted.|
 > |**Name**:<br />BusinessUnitHasChildAndCannotBeDeleted<br />**Hex**:<br />80041d61<br />**Number**:<br />-2147213983|Business unit has a child business unit and cannot be deleted.|
 > |**Name**:<br />BusinessUnitIsNotDisabledAndCannotBeDeleted<br />**Hex**:<br />80041d60<br />**Number**:<br />-2147213984|Not disabled business unit cannot be deleted.|
 > |**Name**:<br />BusinessUnitQueuesAssociatedWithBU<br />**Hex**:<br />80072526<br />**Number**:<br />-2147015386|There are {0} queues referencing this BusinessUnit with id ={1}, Name = {2}. Please delete the queues before deleting this business unit or assign to a different Business Unit.|
@@ -338,6 +346,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CancelActiveChildCaseFirst<br />**Hex**:<br />8003F451<br />**Number**:<br />-2147224495|Cancel active child case before canceling parent case.|
 > |**Name**:<br />CannotAcceptEmail<br />**Hex**:<br />8005E20B<br />**Number**:<br />-2147098101|The email that you are trying to deliver cannot be accepted by Microsoft Dynamics 365. Reason Code: {0}.|
 > |**Name**:<br />CannotAccessExchangeOptinStatus<br />**Hex**:<br />80071110<br />**Number**:<br />-2147020528|Exchange optin status is not accessible.|
+> |**Name**:<br />CannotActivateDeactivateOnAnyEntityRoutingRuleFCBOff<br />**Hex**:<br />8004F849<br />**Number**:<br />-2147157943|Unable to activate or deactivate routing rule set record for entities (except case entity) as the feature control bit for entity records routing is disabled.|
 > |**Name**:<br />CannotActivateMailboxForDisabledUserOrQueue<br />**Hex**:<br />8005E230<br />**Number**:<br />-2147098064|Mailbox cannot be activated because the user or queue associated with the mailbox is in disabled state. Mailbox can only be activated for Active User/Queue.|
 > |**Name**:<br />CannotActivateRecord<br />**Hex**:<br />80081017<br />**Number**:<br />-2146955241|You can't activate a retired product family or bundle. Also, you can't activate a retired product that is part of a product family.|
 > |**Name**:<br />CannotActOnBehalfOfAnotherUser<br />**Hex**:<br />8004A110<br />**Number**:<br />-2147180272|User does not have the privilege to act on behalf another user.|
@@ -367,13 +376,13 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CannotAddRetiredProductToKit<br />**Hex**:<br />80061027<br />**Number**:<br />-2147086297|You can't add a retired product to a kit.|
 > |**Name**:<br />CannotAddRetiredProductToPricelist<br />**Hex**:<br />80061009<br />**Number**:<br />-2147086327|Retired products can not be added to pricelists.|
 > |**Name**:<br />CannotAddSingleQueueEnabledEntityToQueue<br />**Hex**:<br />8004051c<br />**Number**:<br />-2147220196|The entity record cannot be added to the queue as it already exists in other queue.|
-> |**Name**:<br />CannotAddSolutionComponentWithoutRoots <br />**Hex**:<br />8004F018<br />**Number**:<br />-2147160040|This item is not a valid solution component. For more information about solution components, see the Microsoft Dynamics 365 SDK documentation.|
+> |**Name**:<br />CannotAddSolutionComponentWithoutRoots<br />**Hex**:<br />8004F018<br />**Number**:<br />-2147160040|This item is not a valid solution component. For more information about solution components, see the Microsoft Dynamics 365 SDK documentation.|
 > |**Name**:<br />CannotAddUserToMobileOfflineProfile<br />**Hex**:<br />800609A6<br />**Number**:<br />-2147087962|You can’t add this user to this mobile offline profile because the user’s role is either missing or doesn’t have the Dynamics 365 for mobile privilege.|
-> |**Name**:<br />CannotAddWorkflowActivationToSolution <br />**Hex**:<br />8004F00C<br />**Number**:<br />-2147160052|Cannot add Workflow Activation to solution |
+> |**Name**:<br />CannotAddWorkflowActivationToSolution<br />**Hex**:<br />8004F00C<br />**Number**:<br />-2147160052|Cannot add Workflow Activation to solution.|
 > |**Name**:<br />CannotAssignAddressBookFilters<br />**Hex**:<br />80048448<br />**Number**:<br />-2147187640|Cannot assign address book filters|
 > |**Name**:<br />CannotAssignOfflineFilters<br />**Hex**:<br />800404ff<br />**Number**:<br />-2147220225|Cannot assign offline filters|
 > |**Name**:<br />CannotAssignOutlookFilters<br />**Hex**:<br />80040264<br />**Number**:<br />-2147220892|Cannot assign outlook filters|
-> |**Name**:<br />CannotAssignRolesOrProfilesToAccessTeam<br />**Hex**:<br />80048331<br />**Number**:<br />-2147187919|Cannot assign roles or profiles to an access team.|
+> |**Name**:<br />CannotAssignRolesOrProfilesToAccessTeam<br />**Hex**:<br />80048331<br />**Number**:<br />-2147187919|Cannot assign roles or profiles to an access team (Id = {0}).|
 > |**Name**:<br />CannotAssignRolesToSupportUser<br />**Hex**:<br />80041d51<br />**Number**:<br />-2147213999|The support user are read-only, which cannot be assigned with other roles|
 > |**Name**:<br />CannotAssignSupportUser<br />**Hex**:<br />80041d44<br />**Number**:<br />-2147214012|The Support User Role cannot be assigned to a user.|
 > |**Name**:<br />CannotAssignToAccessTeam<br />**Hex**:<br />80048340<br />**Number**:<br />-2147187904|You cannot assign a record to the access team. You can assign a record to the owner team.|
@@ -388,13 +397,14 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CannotCancelInvoice<br />**Hex**:<br />80100001<br />**Number**:<br />-2146435071|The invoice cannot be cancelled because it is not in active or paid state.|
 > |**Name**:<br />CannotChangeAccessModeForInternetMarketingUser<br />**Hex**:<br />80045035<br />**Number**:<br />-2147200971|Internet Marketing User is a system user. You cannot change its access mode.|
 > |**Name**:<br />CannotChangeAttributeRequiredLevel<br />**Hex**:<br />8004D293<br />**Number**:<br />-2147167597|An attribute's required level cannot be changed from SystemRequired|
+> |**Name**:<br />CannotChangeConnectorDisplayName<br />**Hex**:<br />80072607<br />**Number**:<br />-2147015161|The connector display name attribute cannot be changed.|
 > |**Name**:<br />CannotChangeConvertRuleState<br />**Hex**:<br />800608F4<br />**Number**:<br />-2147088140|Error occured during activating Convert Rule.Please check your privileges on Workflow and kindly try again or Contact your system administrator.|
 > |**Name**:<br />CannotChangeDaysSinceRecordLastModified<br />**Hex**:<br />800609A4<br />**Number**:<br />-2147087964|You need to enable this entity for mobile offline before you can set or change the number of days since the record was last modified.|
 > |**Name**:<br />CannotChangeInvitationStatusForInternetMarketingUser<br />**Hex**:<br />80045036<br />**Number**:<br />-2147200970|Internet Marketing User is a system user. You cannot change its invitation status.|
 > |**Name**:<br />CannotChangeProductRelationship<br />**Hex**:<br />80061013<br />**Number**:<br />-2147086317|You can't add or modify the product relationship of a retired product.|
 > |**Name**:<br />CannotChangeSelectedBundleToAnotherValue<br />**Hex**:<br />8004F986<br />**Number**:<br />-2147157626|If a bundle is selected as an existing product, you can't change it to another value.|
 > |**Name**:<br />CannotChangeSelectedProductWithBundle<br />**Hex**:<br />8004F987<br />**Number**:<br />-2147157625|If a product is selected as an existing product, you can't change it to a bundle.|
-> |**Name**:<br />CannotChangeState<br />**Hex**:<br />8004F863<br />**Number**:<br />-2147157917|Error occured during activating SLA..Please check your privileges on Workflow and kindly try again or Contact your system administrator.|
+> |**Name**:<br />CannotChangeState<br />**Hex**:<br />8004F863<br />**Number**:<br />-2147157917|Error occured during activating SLA.Please check your privileges on Workflow and kindly try again or Contact your system administrator.|
 > |**Name**:<br />CannotChangeStateOfNonpublicView<br />**Hex**:<br />80040279<br />**Number**:<br />-2147220871|Only public views can be deactivated and activated.|
 > |**Name**:<br />CannotChangeTeamTypeDueToOwnership<br />**Hex**:<br />80048337<br />**Number**:<br />-2147187913|You cannot modify the type of the team because there are records owned by the team.|
 > |**Name**:<br />CannotChangeTeamTypeDueToRoleOrProfile<br />**Hex**:<br />80048336<br />**Number**:<br />-2147187914|You cannot modify the type of the team because there are security roles or field security profiles assigned to the team.|
@@ -403,6 +413,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CannotCloneBundleWithRetiredProducts<br />**Hex**:<br />80061034<br />**Number**:<br />-2147086284|You can't clone a bundle that contains retired products.|
 > |**Name**:<br />CannotCloneProductKit<br />**Hex**:<br />80061020<br />**Number**:<br />-2147086304|You can't clone a kit.|
 > |**Name**:<br />CannotCloseCase<br />**Hex**:<br />8004F456<br />**Number**:<br />-2147158954|This operation can't be completed. One or more child cases can't be closed because of the status transition rules that are defined for cases.|
+> |**Name**:<br />CannotCompleteLockRequest<br />**Hex**:<br />8004026c<br />**Number**:<br />-2147220884|Cannot complete Request due to timeout taking {0} lock.|
 > |**Name**:<br />CannotConnectToSelf<br />**Hex**:<br />80048217<br />**Number**:<br />-2147188201|Cannot connect a record to itself.|
 > |**Name**:<br />CannotConvertBundleToKit<br />**Hex**:<br />80061030<br />**Number**:<br />-2147086288|You can't convert a bundle to a kit.|
 > |**Name**:<br />CannotConvertProductAssociatedWithBundleToKit<br />**Hex**:<br />80061018<br />**Number**:<br />-2147086312|You can't convert a product that is a part of a bundle to a kit.|
@@ -423,6 +434,8 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CannotCreatePropertyOptionSetItem<br />**Hex**:<br />80081013<br />**Number**:<br />-2146955245|You can only create a property option set item record that refers to a property that has its data type set to Option Set.|
 > |**Name**:<br />CannotCreateQueueItemInactiveObject<br />**Hex**:<br />8004051e<br />**Number**:<br />-2147220194|Deactivated object cannot be added to queue.|
 > |**Name**:<br />CannotCreateResponseForTemplate<br />**Hex**:<br />80040312<br />**Number**:<br />-2147220718|CampaignResponse can not be created for Template Campaign.|
+> |**Name**:<br />CannotCreateRuleOnAnyEntityRoutingRuleFCBOff<br />**Hex**:<br />8004F848<br />**Number**:<br />-2147157944|Unable to create routing rule set record for entities (except case entity) as the feature control bit for entity records routing is disabled.|
+> |**Name**:<br />CannotCreateSelfReferencingParentChild<br />**Hex**:<br />8007200C<br />**Number**:<br />-2147016692|Parent-Child relationship {0} cannot be self-referenced.|
 > |**Name**:<br />CannotCreateSLAForEntity<br />**Hex**:<br />80055005<br />**Number**:<br />-2147135483|You can't create a service level agreement (SLA) for this entity because it’s not enabled for creating SLAs|
 > |**Name**:<br />CannotCreateSyncUserIsLicensedField<br />**Hex**:<br />80041d4d<br />**Number**:<br />-2147214003|The property IsLicensed cannot be set for Sync User Creation.|
 > |**Name**:<br />CannotCreateSyncUserObjectMissing<br />**Hex**:<br />80041d4b<br />**Number**:<br />-2147214005|This is not a valid Microsoft Online Services ID for this organization.|
@@ -490,7 +503,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CannotDeleteSystemEmailTemplate<br />**Hex**:<br />80048432<br />**Number**:<br />-2147187662|System e-mail templates cannot be deleted.|
 > |**Name**:<br />CannotDeleteSystemForm<br />**Hex**:<br />8004F652<br />**Number**:<br />-2147158446|System forms cannot be deleted.|
 > |**Name**:<br />CannotDeleteSystemTheme<br />**Hex**:<br />800608DA<br />**Number**:<br />-2147088166|You can't delete system themes.|
-> |**Name**:<br />CannotDeleteTeamOwningRecords<br />**Hex**:<br />8004830E<br />**Number**:<br />-2147187954|Can't delete a team which owns records. Reassign the records and try again.|
+> |**Name**:<br />CannotDeleteTeamOwningRecords<br />**Hex**:<br />8004830E<br />**Number**:<br />-2147187954|Can't delete a team (Id = {0}) which owns records. Reassign the records and try again.|
 > |**Name**:<br />CannotDeleteUpdateInUseRule<br />**Hex**:<br />80048428<br />**Number**:<br />-2147187672|The duplicate detection rule is currently in use and cannot be updated or deleted. Please try again later.|
 > |**Name**:<br />CannotDeleteUserMailbox<br />**Hex**:<br />8005E200<br />**Number**:<br />-2147098112|The mailbox associated to a user or a queue cannot be deleted.|
 > |**Name**:<br />CannotDeleteUserProfile<br />**Hex**:<br />800609A3<br />**Number**:<br />-2147087965|You can’t delete an active mobile offline profile. Remove all users from the profile and try again.|
@@ -512,7 +525,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CannotEnableEntityForRelevanceSearch<br />**Hex**:<br />80060302<br />**Number**:<br />-2147089662|Entity {0} can’t be enabled for relevance search because of the configuration of its managed properties.|
 > |**Name**:<br />CannotExceedFilterLimit<br />**Hex**:<br />8004027c<br />**Number**:<br />-2147220868|Cannot exceed synchronization filter limit.|
 > |**Name**:<br />CannotExecuteRequestBecauseHttpsIsRequired<br />**Hex**:<br />8004852C<br />**Number**:<br />-2147187412|HTTPS protocol is required for this type of request, please enable HTTPS protocol and try again.|
+> |**Name**:<br />CannotExportRuleOnAnyEntityRoutingRuleFCBOff<br />**Hex**:<br />8004F847<br />**Number**:<br />-2147157945|Unable to export routing rule set record for entities (except case entity) as the feature control bit for entity records routing is disabled.|
 > |**Name**:<br />CannotFindDomainAccount<br />**Hex**:<br />80044342<br />**Number**:<br />-2147204286|Invalid domain account|
+> |**Name**:<br />CannotFindLayerToMerge<br />**Hex**:<br />8004F060<br />**Number**:<br />-2147159968|Cannot find a suitable layer to merge Component: [{0}] with Id: [{1}]. Cannot continue with the operation. Check the layers of the component.|
 > |**Name**:<br />CannotFindObjectInQueue<br />**Hex**:<br />800404eb<br />**Number**:<br />-2147220245|The object was not found in the given queue|
 > |**Name**:<br />CannotFindUserQueue<br />**Hex**:<br />800404ec<br />**Number**:<br />-2147220244|Cannot find user queue|
 > |**Name**:<br />CannotFollowInactiveEntity<br />**Hex**:<br />8004F6A3<br />**Number**:<br />-2147158365|Can't follow inactive record. |
@@ -522,6 +537,8 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CannotHaveDuplicateYomi<br />**Hex**:<br />80047018<br />**Number**:<br />-2147192808|One attribute can be tied to only one yomi at a time|
 > |**Name**:<br />CannotHaveMultipleDefaultFilterTemplates<br />**Hex**:<br />8004027d<br />**Number**:<br />-2147220867|Cannot have multiple default synchronization templates for a single entity.|
 > |**Name**:<br />CannotImportNullStringsForBaseLanguage<br />**Hex**:<br />80044246<br />**Number**:<br />-2147204538|The base language translation string present in worksheet {0}, row {1}, column {2} is null.|
+> |**Name**:<br />CannotImportRuleOnAnyEntityRoutingRuleFCBOff<br />**Hex**:<br />8004F845<br />**Number**:<br />-2147157947|Unable to import routing rule set record for entities (except case entity) as the feature control bit for entity records routing is disabled.|
+> |**Name**:<br />CannotImportRuleOnFieldMetadataUnavailable<br />**Hex**:<br />8004F846<br />**Number**:<br />-2147157946|Unable to import routing rule set record for entities (except case entity) as the metadata for msdyn_entitylogicalname field is unavailable.|
 > |**Name**:<br />CannotInviteDisabledUser<br />**Hex**:<br />8004D212<br />**Number**:<br />-2147167726|An invitation cannot be sent to a disabled user|
 > |**Name**:<br />CannotLocateRecordForWorkflowActivity<br />**Hex**:<br />80045031<br />**Number**:<br />-2147200975|A record required by this workflow job could not be found.|
 > |**Name**:<br />CannotMakeReadOnlyUser<br />**Hex**:<br />80041d38<br />**Number**:<br />-2147214024|A user cannot be made a read only user if they are the last non read only user that has the System Administrator Role.|
@@ -628,6 +645,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CannotUpdateExternalPartyWithSameCorrelationKey<br />**Hex**:<br />80061114<br />**Number**:<br />-2147086060|An external party record already exists with the same correlation key value.|
 > |**Name**:<br />CannotUpdateGoalPeriodInfoChildGoal<br />**Hex**:<br />80044901<br />**Number**:<br />-2147202815|You cannot update goal period related attributes on a child goal.|
 > |**Name**:<br />CannotUpdateGoalPeriodInfoClosedGoal<br />**Hex**:<br />80044910<br />**Number**:<br />-2147202800|You cannot change the time period of this goal because there are one or more closed subordinate goals.|
+> |**Name**:<br />CannotUpdateLogicalAttribute<br />**Hex**:<br />80048461<br />**Number**:<br />-2147187615|Cannot update logical attribute {0} |
 > |**Name**:<br />CannotUpdateManagedSolution<br />**Hex**:<br />8004F024<br />**Number**:<br />-2147160028|Cannot update solution '{0}' because it is a managed solution.|
 > |**Name**:<br />CannotUpdateMetricOnChildGoal<br />**Hex**:<br />80044900<br />**Number**:<br />-2147202816|You cannot update metric on a child goal.|
 > |**Name**:<br />CannotUpdateMetricOnGoalWithChildren<br />**Hex**:<br />80044902<br />**Number**:<br />-2147202814|You cannot update metric on a goal which has associated child goals.|
@@ -642,6 +660,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CannotUpdateProductCurrency<br />**Hex**:<br />80048cfa<br />**Number**:<br />-2147185414|The currency of the product cannot be updated because there are associated price list items with pricing method percentage.|
 > |**Name**:<br />CannotUpdateQuoteCurrency<br />**Hex**:<br />8004480e<br />**Number**:<br />-2147203058|The currency cannot be changed because this quote has Products associated with it. If you want to change the currency please delete all of the Products and then change the currency or create a new quote with the appropriate currency.|
 > |**Name**:<br />CannotUpdateReadOnlyPublisher<br />**Hex**:<br />8004F033<br />**Number**:<br />-2147160013|Attempting to update a readonly publisher.|
+> |**Name**:<br />CanNotUpdateRequiredBundleItem<br />**Hex**:<br />80100009<br />**Number**:<br />-2146435063|You can't update this bundle item because it's a required product in the bundle.|
 > |**Name**:<br />CannotUpdateRestrictedPublisher<br />**Hex**:<br />8004F017<br />**Number**:<br />-2147160041|Restricted publisher ({0}) cannot be updated.|
 > |**Name**:<br />CannotUpdateRestrictedSolution<br />**Hex**:<br />8004F00A<br />**Number**:<br />-2147160054|Restricted solution ({0}) cannot be updated.|
 > |**Name**:<br />CannotUpdateRollupAttributeWithClosedGoals<br />**Hex**:<br />80044801<br />**Number**:<br />-2147203071|The changes made to the roll-up field definition cannot be saved because the related goal metric is being used by one or more closed goals.|
@@ -676,6 +695,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CascadeInvalidLinkType<br />**Hex**:<br />80048102<br />**Number**:<br />-2147188478|Invalid CascadeLink Type|
 > |**Name**:<br />CascadeInvalidLinkTypeTransition<br />**Hex**:<br />80044155<br />**Number**:<br />-2147204779|Invalid link type for system entity cascading actions.|
 > |**Name**:<br />CascadeMergeInvalidSpecialColumn<br />**Hex**:<br />80048106<br />**Number**:<br />-2147188474|Invalid Column Name for Merge Special Casing|
+> |**Name**:<br />CascadeOperationConcurrentRequested<br />**Hex**:<br />80048105<br />**Number**:<br />-2147188475|More than one concurrent {0} requests detected for an Entity {1} and ObjectTypeCode {2}.|
 > |**Name**:<br />CascadeProxyEmptyCallerId<br />**Hex**:<br />8004810b<br />**Number**:<br />-2147188469|Empty Caller Id|
 > |**Name**:<br />CascadeProxyInvalidNativeDAPtr<br />**Hex**:<br />80048109<br />**Number**:<br />-2147188471|Invalid pointer of unmanaged data access object|
 > |**Name**:<br />CascadeProxyInvalidPrincipalType<br />**Hex**:<br />8004810a<br />**Number**:<br />-2147188470|Invalid security principal type|
@@ -702,6 +722,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ChildUserDoesNotExist<br />**Hex**:<br />80041d26<br />**Number**:<br />-2147214042|The child user Id is invalid.|
 > |**Name**:<br />ChildWorkflowNotFound<br />**Hex**:<br />8004502F<br />**Number**:<br />-2147200977|This workflow cannot run because one or more child workflows it uses have not been published or have been deleted. Please check the child workflows and try running this workflow again.|
 > |**Name**:<br />ChildWorkflowParameterMismatch<br />**Hex**:<br />80045048<br />**Number**:<br />-2147200952|This workflow cannot run because arguments provided by parent workflow does not match with the specified parameters in linked child workflow. Check the child workflow reference in parent workflow and try running this workflow again.|
+> |**Name**:<br />ChunkSizeExceeded<br />**Hex**:<br />80090008<br />**Number**:<br />-2146893816|Invalid file chunk size: {0} MB. Maximum chunk size supported: {1} MB.|
 > |**Name**:<br />CircularDependency<br />**Hex**:<br />80071157<br />**Number**:<br />-2147020457|The solution operation failed due to a circular dependency with other solutions. Please check the exception for more details: {0}|
 > |**Name**:<br />ClientAuthCanceled<br />**Hex**:<br />8004D224<br />**Number**:<br />-2147167708|Authentication was canceled by the user.|
 > |**Name**:<br />ClientAuthNoConnectivity<br />**Hex**:<br />8004D226<br />**Number**:<br />-2147167706|There is no connectivity.|
@@ -722,6 +743,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ColorStripAttributesInvalid<br />**Hex**:<br />80061502<br />**Number**:<br />-2147085054|Color Strip section can only have attributes of type Two Options, Option Set and Status Reason|
 > |**Name**:<br />CombinedManagedPropertyFailure<br />**Hex**:<br />8004F027<br />**Number**:<br />-2147160025|The evaluation of the current component(name={0}, id={1}) in the current operation ({2}) failed during at least one managed property evaluations: {3}|
 > |**Name**:<br />CommandNotSupported<br />**Hex**:<br />80154B52<br />**Number**:<br />-2146088110|Command is not supported in offline mode.|
+> |**Name**:<br />CommitFileFailure<br />**Hex**:<br />80072556<br />**Number**:<br />-2147015338|Error occured when commiting file. (chunkList size: {0}, uploadToken: {1}, fileName:{2}, mimeType:{3})|
 > |**Name**:<br />CommunicationBlocked<br />**Hex**:<br />80044506<br />**Number**:<br />-2147203834|Communication is blocked due to a socket exception.|
 > |**Name**:<br />ComponentDefinitionDoesNotExists<br />**Hex**:<br />8004F019<br />**Number**:<br />-2147160039|No component definition exists for the component type {0}.|
 > |**Name**:<br />ConcurrencyVersionMismatch<br />**Hex**:<br />80060882<br />**Number**:<br />-2147088254|The version of the existing record doesn't match the RowVersion property provided.|
@@ -748,8 +770,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ConnectionInvalidStartEndDate<br />**Hex**:<br />80048209<br />**Number**:<br />-2147188215|Start date / end date is invalid.|
 > |**Name**:<br />ConnectionNotSupported<br />**Hex**:<br />80048213<br />**Number**:<br />-2147188205|The selected record does not support connections. You cannot add the connection.|
 > |**Name**:<br />ConnectionObjectsMissing<br />**Hex**:<br />80048210<br />**Number**:<br />-2147188208|Both objects being connected are missing.|
-> |**Name**:<br />ConnectionRoleNotValidForObjectType<br />**Hex**:<br />80048215<br />**Number**:<br />-2147188203|The record type {0} is not defined for use with the connection role {1}.|
+> |**Name**:<br />ConnectionRoleNotValidForObjectType<br />**Hex**:<br />80048215<br />**Number**:<br />-2147188203|The record of type {0} (Object type code {1}) is not defined for use with connection role {2} with id {3}.|
 > |**Name**:<br />ConnectionTimeOut<br />**Hex**:<br />80071024<br />**Number**:<br />-2147020764|Unable to copy the documents because the network connection timed out.  Please try again later or contact your system administrator.|
+> |**Name**:<br />ConnectorLogicalNameAlreadyExists<br />**Hex**:<br />80072606<br />**Number**:<br />-2147015162|The connector logical name '{0}' already exists in the org.|
 > |**Name**:<br />ConnectorNotEnabled<br />**Hex**:<br />80072600<br />**Number**:<br />-2147015168|Creation and editing of Connector is not enabled.|
 > |**Name**:<br />ContactDoesNotExist<br />**Hex**:<br />80040503<br />**Number**:<br />-2147220221|Contact does not exist.|
 > |**Name**:<br />ContactLoopBeingCreated<br />**Hex**:<br />8004050a<br />**Number**:<br />-2147220214|Creating this parental association would create a loop in Contacts hierarchy.|
@@ -780,7 +803,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ConvertReportToCrmError<br />**Hex**:<br />8004832d<br />**Number**:<br />-2147187923|An unexpected error occurred while converting supplied report to Dynamics 365 format.|
 > |**Name**:<br />ConvertRuleActivateDeactivateByNonOwner<br />**Hex**:<br />8004F886<br />**Number**:<br />-2147157882|This Convert Rule Set cannot be activated or deactivated by someone who is not its owner.|
 > |**Name**:<br />ConvertRuleAlreadyActive<br />**Hex**:<br />80060731<br />**Number**:<br />-2147088591|Selected ConvertRule is already in active state. Please select another record and try again|
-> |**Name**:<br />ConvertRuleAlreadyInDraftState <br />**Hex**:<br />80060732<br />**Number**:<br />-2147088590|Selected ConvertRule is already in draft state. Please select another record and try again|
+> |**Name**:<br />ConvertRuleAlreadyInDraftState<br />**Hex**:<br />80060732<br />**Number**:<br />-2147088590|Selected ConvertRule is already in draft state. Please select another record and try again|
 > |**Name**:<br />ConvertRuleInvalidAutoResponseSettings<br />**Hex**:<br />8004F879<br />**Number**:<br />-2147157895|Select an email template for an autoresponse or set the autoresponse option to No.|
 > |**Name**:<br />ConvertRulePermissionToPerformAction<br />**Hex**:<br />80060733<br />**Number**:<br />-2147088589|You don't have the required permissions on ConvertRules and processes to perform this action.|
 > |**Name**:<br />ConvertRuleQueueIdMissingForEmailSource<br />**Hex**:<br />8004F896<br />**Number**:<br />-2147157866|Queue value required. Provide a value for the queue.|
@@ -806,8 +829,12 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CrmExpressionEvaluationError<br />**Hex**:<br />80040260<br />**Number**:<br />-2147220896|Crm expression evaluation error occurred.|
 > |**Name**:<br />CrmExpressionParametersParsingError<br />**Hex**:<br />8004025f<br />**Number**:<br />-2147220897|Crm expression parameters parsing error occurred.|
 > |**Name**:<br />CrmExpressionParsingError<br />**Hex**:<br />8004025d<br />**Number**:<br />-2147220899|Crm expression parsing error occurred.|
+> |**Name**:<br />CRMGlobalMetadataVersionMismatch<br />**Hex**:<br />80072494<br />**Number**:<br />-2147015532|Mismatch in CRM global metadata version when retrieving data for entity: '{0}'. Global metadata version before retrieving data: '{1}'. Global metadata version after retrieving data: '{2}'|
 > |**Name**:<br />CrmHttpError<br />**Hex**:<br />8006088A<br />**Number**:<br />-2147088246|A failure occurred in Wep Api in Dynamics 365.|
 > |**Name**:<br />CrmImpersonationError<br />**Hex**:<br />80040245<br />**Number**:<br />-2147220923|Error occurred in the Crm AutoReimpersonator.|
+> |**Name**:<br />CrmLicensingError<br />**Hex**:<br />80050300<br />**Number**:<br />-2147155200|A failure occurred during licensing check.|
+> |**Name**:<br />CrmLicensingNoServicePlan<br />**Hex**:<br />80050301<br />**Number**:<br />-2147155199|The application requires a license. Please contact your administrator. Caller userId={0} does not have any license to read entity appmodule uniqueName={1} with Id={2} from publisher={3}. A license is required with one of the service plans (count={4}): {5}.|
+> |**Name**:<br />CrmLicensingNoUserPass<br />**Hex**:<br />80050302<br />**Number**:<br />-2147155198|The application requires a license and organization doesn't have user passes. Please contact your administrator. Caller userId={0} does not have any license to read entity appmodule uniqueName={1} with Id={2} from publisher={3}.|
 > |**Name**:<br />CrmLiveAddOnAddLicenseLimitReached<br />**Hex**:<br />8004B056<br />**Number**:<br />-2147176362|Your subscription has the maximum number of user licenses available.  For additional licenses, please contact our sales organization at 1-877-Dynamics 365-CHOICE (276-2464).|
 > |**Name**:<br />CrmLiveAddOnAddStorageLimitReached<br />**Hex**:<br />8004B057<br />**Number**:<br />-2147176361|Your storage consumption has reached the maximum storage limit allotted to this environment. Trial environments are allocated with limited resources. If you are not using a trial environment, please contact support.|
 > |**Name**:<br />CrmLiveAddOnDataChanged<br />**Hex**:<br />8004B05C<br />**Number**:<br />-2147176356|Due to recent changes you have made to your account, these changes cannot be made at this time.   Close this wizard, and try again later.  If the problem persists, please contact our sales organization at 1-877-Dynamics 365-CHOICE (276-2464).|
@@ -866,6 +893,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CurrencyFieldMissing<br />**Hex**:<br />8004E026<br />**Number**:<br />-2147164122|Record currency is required to calculate rollup field of type currency. Provide a currency and try again.|
 > |**Name**:<br />CurrencyNotEqual<br />**Hex**:<br />80048cea<br />**Number**:<br />-2147185430|The currency of the {0} does not match the currency of the {1}.|
 > |**Name**:<br />CurrencyRequiredForDiscountTypeAmount<br />**Hex**:<br />80048cf7<br />**Number**:<br />-2147185417|The currency cannot be null for discount type amount.|
+> |**Name**:<br />CurrentFormEntityIsNull<br />**Hex**:<br />80060371<br />**Number**:<br />-2147089551|Current Form Entity cannot be NULL|
 > |**Name**:<br />CustomActionMustBeMarked<br />**Hex**:<br />80060381<br />**Number**:<br />-2147089535|Custom Action must be marked ‘As a Business Process Flow action step’ to use as BPF action step.|
 > |**Name**:<br />CustomActivityCannotBeMailMergeEnabled<br />**Hex**:<br />8004F124<br />**Number**:<br />-2147159772|A custom entity defined as an activity already cannot have MailMerge enabled.|
 > |**Name**:<br />CustomActivityInvalid<br />**Hex**:<br />8004501D<br />**Number**:<br />-2147200995|Invalid custom activity.|
@@ -876,7 +904,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CustomerIsInactive<br />**Hex**:<br />80040517<br />**Number**:<br />-2147220201|An inactive customer cannot be set as the parent of an object.|
 > |**Name**:<br />CustomerOpportunityRoleExists<br />**Hex**:<br />80048202<br />**Number**:<br />-2147188222|Customer opportunity role exists.|
 > |**Name**:<br />CustomerRelationshipCannotBeDeleted<br />**Hex**:<br />8004847d<br />**Number**:<br />-2147187587|This relationship {1} is required by the {0} attribute and can't be deleted. To delete this relationship, first delete the lookup attribute.|
-> |**Name**:<br />CustomerRelationshipExists<br />**Hex**:<br />80048201<br />**Number**:<br />-2147188223|Customer relationship already exists.|
+> |**Name**:<br />CustomerRelationshipExists<br />**Hex**:<br />80048201<br />**Number**:<br />-2147188223|Customer relationship already exists. CustomerRelationshipId: {0}, CustomerId: {1}, CustomerIdType: {2}, PartnerId: {3}, PartnerIdType: {4}, CustomerRoleId: {5}, PartnerRoleId: {6}, UniqueDscId: {7}|
 > |**Name**:<br />CustomImageAttributeOnlyAllowedOnCustomEntity<br />**Hex**:<br />80048531<br />**Number**:<br />-2147187407|A custom image attribute can only be added to a custom entity.|
 > |**Name**:<br />CustomOperationNotActivated<br />**Hex**:<br />80045052<br />**Number**:<br />-2147200942|Process action associated with this process is not activated.|
 > |**Name**:<br />CustomParentingSystemNotSupported<br />**Hex**:<br />80047102<br />**Number**:<br />-2147192574|A custom entity can not have a parental relationship to a system entity|
@@ -887,7 +915,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CyclicalRelationship<br />**Hex**:<br />80047004<br />**Number**:<br />-2147192828|The specified relationship will result in a cycle.|
 > |**Name**:<br />CyclicDependency<br />**Hex**:<br />80071156<br />**Number**:<br />-2147020458|Cyclic component dependency detected. Please check the exception for more details. Fix the invalid dependencies and try the operation one more time. Detaisl: {0}|
 > |**Name**:<br />CyclicReferencesNotSupported<br />**Hex**:<br />8004417F<br />**Number**:<br />-2147204737|The input contains a cyclic reference, which is not supported.|
-> |**Name**:<br />DatabaseCallsBlockedFailure<br />**Hex**:<br />80072401<br />**Number**:<br />-2147015679|This invocation may lead to calls do Database which is not allowed.|
+> |**Name**:<br />DatabaseCallsBlockedFailure<br />**Hex**:<br />80072401<br />**Number**:<br />-2147015679|This invocation may lead to calls to Database which is not allowed.|
 > |**Name**:<br />DatacenterNotAvailable<br />**Hex**:<br />8004B065<br />**Number**:<br />-2147176347|This datacenter endpoint is not currently available for this organization.|
 > |**Name**:<br />DataColumnsNumberMismatch<br />**Hex**:<br />80040345<br />**Number**:<br />-2147220667|The number of fields differs from the number of column headings.|
 > |**Name**:<br />DataEngineQueryThrottling<br />**Hex**:<br />80048544<br />**Number**:<br />-2147187388|This query cannot be executed because it conflicts with throttling optimization.|
@@ -899,11 +927,14 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />DataSourceOfflineErrorCode<br />**Hex**:<br />8005F211<br />**Number**:<br />-2147093999|This operation failed because you're offline. Reconnect and try again.|
 > |**Name**:<br />DataSourceProhibited<br />**Hex**:<br />8004830D<br />**Number**:<br />-2147187955|A non fetch based data source is not permitted on this report|
 > |**Name**:<br />DataStoreKeyNotFoundErrorCode<br />**Hex**:<br />8005F21d<br />**Number**:<br />-2147093987|Not in local store with key '{0}'|
+> |**Name**:<br />DataSyncBadRequest<br />**Hex**:<br />80072514<br />**Number**:<br />-2147015404|The request could not be understood by the server|
 > |**Name**:<br />DataSyncNoContent<br />**Hex**:<br />80072512<br />**Number**:<br />-2147015406|No data sync content|
 > |**Name**:<br />DataSyncRequestAccepted<br />**Hex**:<br />80072511<br />**Number**:<br />-2147015407|Data sync request accepted|
 > |**Name**:<br />DataTableNotAvailable<br />**Hex**:<br />800609B0<br />**Number**:<br />-2147087952|The original data table has been deleted or renamed.|
 > |**Name**:<br />DataTypeMismatchForLinkedAttribute<br />**Hex**:<br />8004F0FC<br />**Number**:<br />-2147159812|Data type mismatch found for linked attribute.|
 > |**Name**:<br />DateTimeFormatFailed<br />**Hex**:<br />8004025a<br />**Number**:<br />-2147220902|Failed to produce a formatted datetime value.|
+> |**Name**:<br />DBConnectionOrTransactionInitializationFailed<br />**Hex**:<br />80048551<br />**Number**:<br />-2147187375|Initialization of the database connection or transaction failed. This operation should be retried later. Initialization exception message: {0}|
+> |**Name**:<br />DBUpgradeCauseTimeout<br />**Hex**:<br />80048553<br />**Number**:<br />-2147187373|The operation timed out because the database is currently being upgraded. Please try again after the database upgrade is complete.|
 > |**Name**:<br />DecimalValueOutOfRange<br />**Hex**:<br />80044330<br />**Number**:<br />-2147204304|A validation error occurred. A decimal value provided is outside of the allowed values for this attribute.|
 > |**Name**:<br />DecoupleChildEntity<br />**Hex**:<br />80048206<br />**Number**:<br />-2147188218|Cannot decouple a child entity.|
 > |**Name**:<br />DecoupleUserOwnedEntity<br />**Hex**:<br />80048207<br />**Number**:<br />-2147188217|Can only decouple user owned entities.|
@@ -955,6 +986,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />DiscountRangeOverlap<br />**Hex**:<br />80043b02<br />**Number**:<br />-2147206398|The new quantities overlap the range covered by existing quantities.|
 > |**Name**:<br />DiscountTypeAndPriceLevelCurrencyNotEqual<br />**Hex**:<br />80048cf8<br />**Number**:<br />-2147185416|The currency of the discount needs to match the currency of the price list for discount type amount.|
 > |**Name**:<br />DiskSpaceNotEnough<br />**Hex**:<br />80050124<br />**Number**:<br />-2147155676|There is not enough space in the Temp Folder.|
+> |**Name**:<br />DistinctWithImageAttributeError<br />**Hex**:<br />80072531<br />**Number**:<br />-2147015375|Distinct is not allowed when image attributes are selected.|
 > |**Name**:<br />DistributeListAssociatedVary<br />**Hex**:<br />80048453<br />**Number**:<br />-2147187629|This campaign activity cannot be distributed. Mail merge activities can be done only on marketing lists that are all the same record type. For this campaign activity, remove marketing lists so that the remaining ones are the same record type, and then try again.|
 > |**Name**:<br />DistributeNoListAssociated<br />**Hex**:<br />80048454<br />**Number**:<br />-2147187628|This campaign activity cannot be distributed. No marketing lists are associated with it. Add at least one marketing list and try again.|
 > |**Name**:<br />DocumentManagementDisabled<br />**Hex**:<br />8004F0FF<br />**Number**:<br />-2147159809|Document Management has been disabled for this organization.|
@@ -971,11 +1003,12 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />DownloadAllEntityRecordsChangedOrCreatedWithinTheseDays<br />**Hex**:<br />8006098F<br />**Number**:<br />-2147087985|Download all entity records changed or created within this number of days.|
 > |**Name**:<br />DownloadRelatedDataOnlyMustHaveRelationship<br />**Hex**:<br />80071140<br />**Number**:<br />-2147020480|The entity '{0}' in profile '{1}' is configured with the filter download related data only, however there are no relationships specified for this entity in profile item associations. If an entity is set to download related data only you must specify a profile item association to this entity.|
 > |**Name**:<br />DraftBundleToProduct<br />**Hex**:<br />8004F994<br />**Number**:<br />-2147157612|You can only add products to a draft bundle.|
+> |**Name**:<br />DSSThrottlingConcurrencyLimitExceededError<br />**Hex**:<br />80072327<br />**Number**:<br />-2147015897|Too many concurrent requests detected.|
 > |**Name**:<br />DuplicateAliasFound<br />**Hex**:<br />8004E00B<br />**Number**:<br />-2147164149|Data Description is invalid. Duplicate alias found.|
 > |**Name**:<br />DuplicateApplicationUser<br />**Hex**:<br />8004F511<br />**Number**:<br />-2147158767|You are attempting to create an Application ID = {0} that already exists.|
 > |**Name**:<br />DuplicateAppModuleUniqueName<br />**Hex**:<br />8005011F<br />**Number**:<br />-2147155681|The name you entered is already in use.|
 > |**Name**:<br />DuplicateAttributePhysicalName<br />**Hex**:<br />80060304<br />**Number**:<br />-2147089660|Attribute {0} already exists for entity {1}.|
-> |**Name**:<br />DuplicateAttributeSchemaName<br />**Hex**:<br />80047013<br />**Number**:<br />-2147192813|An attribute with the specified name already exists|
+> |**Name**:<br />DuplicateAttributeSchemaName<br />**Hex**:<br />80047013<br />**Number**:<br />-2147192813|{0}|
 > |**Name**:<br />DuplicateChannelPropertyName<br />**Hex**:<br />800608F1<br />**Number**:<br />-2147088143|A channel property with the specified name already exists. You can't create another one.|
 > |**Name**:<br />DuplicateCheckNotEnabled<br />**Hex**:<br />80048412<br />**Number**:<br />-2147187694|Duplicate detection is not enabled. To enable duplicate detection, click Settings, click Data Management, and then click Duplicate Detection Settings.|
 > |**Name**:<br />DuplicateCheckNotSupportedOnEntity<br />**Hex**:<br />80048410<br />**Number**:<br />-2147187696|Duplicate detection is not supported on this record type.|
@@ -1098,6 +1131,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />EntityIsUnlocked<br />**Hex**:<br />80043b1e<br />**Number**:<br />-2147206370|This entity is already unlocked.|
 > |**Name**:<br />EntityKeyNameExists<br />**Hex**:<br />80060893<br />**Number**:<br />-2147088237|An entity key with the name {0} already exists on entity {1}.|
 > |**Name**:<br />EntityKeyNotDefined<br />**Hex**:<br />80060890<br />**Number**:<br />-2147088240|The specified key attributes are not a defined key for the {0} entity|
+> |**Name**:<br />EntityKeyNotSupportedForSolutionAwareComponents<br />**Hex**:<br />8006089F<br />**Number**:<br />-2147088225|Entity keys are not supported for entity {0} because the entity is a solution aware component|
 > |**Name**:<br />EntityKeyWithSelectedAttributesExists<br />**Hex**:<br />80060894<br />**Number**:<br />-2147088236|An entity key with the selected attributes already exists on entity.|
 > |**Name**:<br />EntityLimitExceeded<br />**Hex**:<br />80060200<br />**Number**:<br />-2147089920|MultiEntitySearch exceeded Entity Limit defined for the Organization.|
 > |**Name**:<br />EntityLoopBeingCreated<br />**Hex**:<br />80040387<br />**Number**:<br />-2147220601|Creating this parental association would create a loop in this entity hierarchy.|
@@ -1109,6 +1143,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />EntityNotEnabledForThisDevice<br />**Hex**:<br />8005F200<br />**Number**:<br />-2147094016|Entity not enabled to be viewed in this device|
 > |**Name**:<br />EntityNotRule<br />**Hex**:<br />8004E112<br />**Number**:<br />-2147163886|The collection name is not a recurrence rule.|
 > |**Name**:<br />EntityReferenceArgumentsNotBound<br />**Hex**:<br />80060395<br />**Number**:<br />-2147089515|Required arguments of type EntityReference must be bound to some entity.|
+> |**Name**:<br />EntityReferenceLinkNull<br />**Hex**:<br />80048466<br />**Number**:<br />-2147187610|EntityRefererence link cannot be null|
 > |**Name**:<br />EntityRelationshipRoleCustomLabelsMissing<br />**Hex**:<br />80044328<br />**Number**:<br />-2147204312|Custom labels must be provided if an entity relationship role has a display option of UseCustomLabels|
 > |**Name**:<br />EntityRelationshipSchemaNameNotUnique<br />**Hex**:<br />8004432B<br />**Number**:<br />-2147204309|A relationship with the specified name already exists. Please specify a unique name.|
 > |**Name**:<br />EntityRelationshipSchemaNameRequired<br />**Hex**:<br />8004432A<br />**Number**:<br />-2147204310|Entity relationships require a name|
@@ -1199,7 +1234,16 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ExpiredKey<br />**Hex**:<br />8004A106<br />**Number**:<br />-2147180282|The key specified to compute a hash value is expired, only active keys are valid.  Expired Key : {0}.|
 > |**Name**:<br />ExpiredOAuthToken<br />**Hex**:<br />80041d52<br />**Number**:<br />-2147213998|The OAuth token has expired|
 > |**Name**:<br />ExpiredVersionStamp<br />**Hex**:<br />80044352<br />**Number**:<br />-2147204270|Version stamp associated with the client has expired. Please perform a full sync.|
+> |**Name**:<br />ExportAttributeMapException<br />**Hex**:<br />80044415<br />**Number**:<br />-2147204075|Failed to export AttributeMap from attribute {0} to {1} in EntityMap from entity {2} to {3} during solution export. AttributeMapId = {4}, EntityMapId = {5}|
 > |**Name**:<br />ExportDefaultAsPackagedError<br />**Hex**:<br />80048048<br />**Number**:<br />-2147188664|The default solution cannot be exported as a package.|
+> |**Name**:<br />ExportEntityMapException<br />**Hex**:<br />80044416<br />**Number**:<br />-2147204074|Failed to export EntityMap from entity {0} to {1} during solution export. EntityMapId = {2}|
+> |**Name**:<br />ExportKeyAttributeInvalidPrefix<br />**Hex**:<br />800608AD<br />**Number**:<br />-2147088211|Export key attribute {0} for component {1} must start with a valid customization prefix.|
+> |**Name**:<br />ExportKeyAttributeNotBeginWithLetterOrNonAlphaNumericCharacters<br />**Hex**:<br />800608AB<br />**Number**:<br />-2147088213|Export key attribute {0} for component {1} must begin with a letter and only consist of alpha-numeric and underscore characters.|
+> |**Name**:<br />ExportKeyAttributeValuesIncorrectNumber<br />**Hex**:<br />800608AC<br />**Number**:<br />-2147088212|Incorrect number of export key attribute values for export key {0} for entity {1}.|
+> |**Name**:<br />ExportKeyNotSupported<br />**Hex**:<br />800608A8<br />**Number**:<br />-2147088216|Export keys are not supported for entity {0} because export keys are unsupported|
+> |**Name**:<br />ExportKeyNotSupportedForMaxAttributes<br />**Hex**:<br />800608AA<br />**Number**:<br />-2147088214|Export key cannot be created for entity {0} because the key exceeds {1} attributes|
+> |**Name**:<br />ExportKeyNotSupportedForNonCustomizableComponents<br />**Hex**:<br />800608A7<br />**Number**:<br />-2147088217|Export keys are not supported for entity {0} because the entity is not customizable|
+> |**Name**:<br />ExportKeyNotSupportedForNonSolutionAwareComponents<br />**Hex**:<br />800608A6<br />**Number**:<br />-2147088218|Export keys are not supported for entity {0} because the entity is not a solution aware component|
 > |**Name**:<br />ExportManagedSolutionError<br />**Hex**:<br />80048036<br />**Number**:<br />-2147188682|An error occurred while exporting a solution. Managed solutions cannot be exported.|
 > |**Name**:<br />ExportMissingSolutionError<br />**Hex**:<br />80048037<br />**Number**:<br />-2147188681|An error occurred while exporting a solution. The solution does not exist in this system.|
 > |**Name**:<br />ExportSolutionError<br />**Hex**:<br />80048035<br />**Number**:<br />-2147188683|An error occurred while exporting a Solution.|
@@ -1210,6 +1254,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ExternalSearchAttributeLimitExceeded<br />**Hex**:<br />80060300<br />**Number**:<br />-2147089664|The maximum number of indexed fields has been reached. Update the Relevance Search configuration to reduce the total number of indexed fields {1} below {0}.|
 > |**Name**:<br />ExtraPartyInformation<br />**Hex**:<br />80040316<br />**Number**:<br />-2147220714|Extra party information should not be provided for this operation.|
 > |**Name**:<br />FailedToDeserializeAsyncOperationData<br />**Hex**:<br />80044304<br />**Number**:<br />-2147204348|Failed to deserialize async operation data.|
+> |**Name**:<br />FailedToFindDependentConnectorsForModernFlow<br />**Hex**:<br />80060475<br />**Number**:<br />-2147089291|Failed to find any of dependent custom connectors of current Modern Flow.|
 > |**Name**:<br />FailedToGetNetworkServiceName<br />**Hex**:<br />80047103<br />**Number**:<br />-2147192573|Failed to obtain the localized name for NetworkService account|
 > |**Name**:<br />FailedToLoadAssembly<br />**Hex**:<br />8004024e<br />**Number**:<br />-2147220914|Failed to load assembly|
 > |**Name**:<br />FailedToScheduleActivity<br />**Hex**:<br />80047000<br />**Number**:<br />-2147192832|Failed to schedule activity.|
@@ -1231,6 +1276,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />FeedbackRatingValue<br />**Hex**:<br />80061773<br />**Number**:<br />-2147084429|The rating must be a value from {0} through {1}.|
 > |**Name**:<br />FetchDataSetQueryTimeout<br />**Hex**:<br />8005E00E<br />**Number**:<br />-2147098610|The fetch data set query timed out after {0} seconds. Increase the query timeout, and try again.|
 > |**Name**:<br />FieldLevelSecurityNotSupported<br />**Hex**:<br />80044817<br />**Number**:<br />-2147203049|Field level security is not supported for virtual entity.|
+> |**Name**:<br />FileContentIsNull<br />**Hex**:<br />80090004<br />**Number**:<br />-2146893820|File content can not be null.|
 > |**Name**:<br />FileInUse<br />**Hex**:<br />80048837<br />**Number**:<br />-2147186633|Could not read the file because another application is using the file.|
 > |**Name**:<br />FileNotFound<br />**Hex**:<br />80048440<br />**Number**:<br />-2147187648|The attachment file was not found.|
 > |**Name**:<br />FilePickerErrorApplicationInSnapView<br />**Hex**:<br />8005F20D<br />**Number**:<br />-2147094003|Try this action again. If the problem continues, check the {0} for solutions or contact your organization's {#Brand_CRM} Administrator. Finally, you can contact {1}.|
@@ -1240,6 +1286,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />FilePickerErrorUnableToOpenFile<br />**Hex**:<br />8005F207<br />**Number**:<br />-2147094009|Try this action again. If the problem continues, check the {0} for solutions or contact your organization's {#Brand_CRM} Administrator. Finally, you can contact {1}.|
 > |**Name**:<br />FileReadError<br />**Hex**:<br />80048437<br />**Number**:<br />-2147187657|There was an error reading the file from the file system. Make sure you have read permission for this file, and then try migrating the file again.|
 > |**Name**:<br />FileSizeExceeded<br />**Hex**:<br />80071026<br />**Number**:<br />-2147020762|Unable to copy the documents. The selected file exceeds the maximium size limit of 128 MB.|
+> |**Name**:<br />FileSizeExceededForNonChunkedRequest<br />**Hex**:<br />80090001<br />**Number**:<br />-2146893823|Maximum file size supported for {0} is [{1}] MB. File of [{2} MB] size may only be {0}ed using staged chunk {0}.|
 > |**Name**:<br />FileStoreFeatureNotEnabled<br />**Hex**:<br />80072520<br />**Number**:<br />-2147015392|Feature not enabled for this organization|
 > |**Name**:<br />FileTypeNotSupported<br />**Hex**:<br />800609B4<br />**Number**:<br />-2147087948|The specified file type is not supported as template.|
 > |**Name**:<br />FilteredDuetoAntiSpam<br />**Hex**:<br />80040325<br />**Number**:<br />-2147220699|This customer is filtered due to AntiSpam settings.|
@@ -1269,6 +1316,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />GenericMetadataSyncFailed<br />**Hex**:<br />8005F246<br />**Number**:<br />-2147093946|Sorry, something went wrong. Please try again, or restart the app.|
 > |**Name**:<br />GenericMetadataSyncFailedWithContinue<br />**Hex**:<br />8005F247<br />**Number**:<br />-2147093945|Sorry, something went wrong downloading server configuration changes.  You can continue to use the app with the older configuration, however you may experience problems including errors when saving.  If this issue continues please contact your Dynamics 365 administrator and provide the information available when you choose ‘more information’.|
 > |**Name**:<br />GenericTransformationInvocationError<br />**Hex**:<br />8004037b<br />**Number**:<br />-2147220613|The transformation returned invalid data.|
+> |**Name**:<br />GetOnPolymorphicAttributeError<br />**Hex**:<br />80072532<br />**Number**:<br />-2147015374|Cannot query for {0} on {1}|
 > |**Name**:<br />GetPhotoFromGalleryFailed<br />**Hex**:<br />8005F208<br />**Number**:<br />-2147094008|Try this action again. If the problem continues, check the {0} for solutions or contact your organization's {#Brand_CRM} Administrator. Finally, you can contact {1}.|
 > |**Name**:<br />GetTenantIdFailure<br />**Hex**:<br />80071109<br />**Number**:<br />-2147020535|Error occurred while getting TenantId.|
 > |**Name**:<br />GoalAttributeAlreadyMapped<br />**Hex**:<br />80044807<br />**Number**:<br />-2147203065|The Metric Detail for Specified Goal Attribute already exists.|
@@ -1280,6 +1328,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />GoOfflineFailedMoveData<br />**Hex**:<br />80044225<br />**Number**:<br />-2147204571|Client was not able to download data. Contact your system administrator for assistance and try going offline again.|
 > |**Name**:<br />GoOfflineFailedPrepareMsde<br />**Hex**:<br />80044226<br />**Number**:<br />-2147204570|Prepare MSDE failed. Contact your system administrator for assistance and try going offline again.|
 > |**Name**:<br />GoOfflineFailedReloadMetadataCache<br />**Hex**:<br />80044227<br />**Number**:<br />-2147204569|The Microsoft Dynamics 365 for Outlook was unable to go offline. Please try going offline again.|
+> |**Name**:<br />GoOfflineFeatureNotEnabled<br />**Hex**:<br />8004422a<br />**Number**:<br />-2147204566|Offline capability is not supported with Microsoft Dynamics 365 for Outlook.|
 > |**Name**:<br />GoOfflineFileWasDeleted<br />**Hex**:<br />80044229<br />**Number**:<br />-2147204567|Data file was deleted on server before it was sent to client.|
 > |**Name**:<br />GoOfflineGetBCPFileException<br />**Hex**:<br />80044221<br />**Number**:<br />-2147204575|Dynamics 365 server was not able to process your request. Contact your system administrator for assistance and try going offline again.|
 > |**Name**:<br />GoOfflineMetadataVersionsMismatch<br />**Hex**:<br />80044220<br />**Number**:<br />-2147204576|Client and Server metadata versions are different due to new customization on the server. Please try going offline again.|
@@ -1296,6 +1345,8 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />HonorPauseWithoutSLAKPIError<br />**Hex**:<br />80045000<br />**Number**:<br />-2147201024|SLA can be set to honor pause and resume only if Use SLA KPI is set to Yes.|
 > |**Name**:<br />HybridSSSExchangeOnlineS2SCertActsExpired<br />**Hex**:<br />80131500<br />**Number**:<br />-2146233088|Certificate used for S2S authentication of Dynamics 365 Onpremise with Exchange Online has expired|
 > |**Name**:<br />HybridSSSExchangeOnlineS2SCertExpired<br />**Hex**:<br />80131509<br />**Number**:<br />-2146233079|Certificate used for S2S authentication of Dynamics 365 Onpremise with Exchange Online has expired|
+> |**Name**:<br />ImageAttributeNotSupportedFullImage<br />**Hex**:<br />8009000D<br />**Number**:<br />-2146893811|Image attribute {0} of entity {1} does not support storing full image.|
+> |**Name**:<br />ImageInvalidMaxSizeInKB<br />**Hex**:<br />8009000E<br />**Number**:<br />-2146893810|Invalid MaxSizeInKB for image attribute {0} of entity {1}. Valid size should be between [{2} - {3}] KB|
 > |**Name**:<br />ImportArticleTemplateError<br />**Hex**:<br />8004800D<br />**Number**:<br />-2147188723|There was an error in parsing the article templates in Import Xml|
 > |**Name**:<br />ImportAttributeNameError<br />**Hex**:<br />80048062<br />**Number**:<br />-2147188638|Invalid name for attribute {0}.  Custom attribute names must start with a valid customization prefix. The prefix for a solution component should match the prefix that is specified for the publisher of the solution.|
 > |**Name**:<br />ImportChannelPropertyGroupError<br />**Hex**:<br />800608F3<br />**Number**:<br />-2147088141|An error occurred while importing Channel Property Group.|
@@ -1324,6 +1375,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ImportFileFailed<br />**Hex**:<br />80050125<br />**Number**:<br />-2147155675|Import and extraction of the file failed.|
 > |**Name**:<br />ImportFileSignatureInvalid<br />**Hex**:<br />80048065<br />**Number**:<br />-2147188635|The import file has an invalid digital signature.|
 > |**Name**:<br />ImportFileTooLargeToUpload<br />**Hex**:<br />80040375<br />**Number**:<br />-2147220619|The import file is too large to upload.|
+> |**Name**:<br />ImportFileUnprocessed<br />**Hex**:<br />80072035<br />**Number**:<br />-2147016651|Unprocessed files found: {0}|
 > |**Name**:<br />ImportFormXmlError<br />**Hex**:<br />80048007<br />**Number**:<br />-2147188729|The number of format parameters passed into the input string is incorrect|
 > |**Name**:<br />ImportGenericEntitiesError<br />**Hex**:<br />80048020<br />**Number**:<br />-2147188704|An error occurred while importing generic entities.|
 > |**Name**:<br />ImportGenericError<br />**Hex**:<br />8004801E<br />**Number**:<br />-2147188706|The import failed. For more information, see the related error messages.|
@@ -1415,16 +1467,19 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />IncomingServerLocationAndSslSetToYes<br />**Hex**:<br />8005E240<br />**Number**:<br />-2147098048|The URL specified for Incoming Server Location uses HTTP but the Use SSL for Incoming Connection option is set to Yes. Specify a server location that uses HTTPS, and then try again.|
 > |**Name**:<br />IncompatibleStepsEncountered<br />**Hex**:<br />8006088B<br />**Number**:<br />-2147088245|You can't enable the EnforceReadOnlyPlugins setting because plug-ins that change data are registered on read-only SDK messages. {0}|
 > |**Name**:<br />IncompleteTransformationParameterMappingsFound<br />**Hex**:<br />8004037d<br />**Number**:<br />-2147220611|One or more mandatory transformation parameters do not have mappings defined for them.|
+> |**Name**:<br />InconsistentAttributeConfiguration<br />**Hex**:<br />80072009<br />**Number**:<br />-2147016695|More than one configuration found for attribute with id {0}.|
 > |**Name**:<br />InconsistentAttributeNameCasing<br />**Hex**:<br />8004F043<br />**Number**:<br />-2147159997|Detected inconsistent attribute name casing, expected: {0}, actual: {1}.|
 > |**Name**:<br />InconsistentProductRelationshipState<br />**Hex**:<br />8004F996<br />**Number**:<br />-2147157610|The other row for the product relationship is not available.|
 > |**Name**:<br />IncorrectActiveStageEntity<br />**Hex**:<br />80060462<br />**Number**:<br />-2147089310|Active stage is not on '{0}' entity.|
 > |**Name**:<br />IncorrectAttributeValueType<br />**Hex**:<br />80044354<br />**Number**:<br />-2147204268|Invalid Attribute Value Type for {0}. Expected: {1}, Found: {2}|
 > |**Name**:<br />IncorrectEntitySetName<br />**Hex**:<br />8006089C<br />**Number**:<br />-2147088228|The entity set name {0} must start with a valid customization prefix.|
+> |**Name**:<br />IncorrectFileFormat<br />**Hex**:<br />80072037<br />**Number**:<br />-2147016649|The file {0} cannot be imported.|
 > |**Name**:<br />IncorrectSingleFileMultipleEntityMap<br />**Hex**:<br />80048502<br />**Number**:<br />-2147187454|There should be two or more Entity Mappings defined when EntitiesPerFile in ImportMap is set to Multiple|
 > |**Name**:<br />IncreasingDaysWillResetMobileOfflineData<br />**Hex**:<br />80060991<br />**Number**:<br />-2147087983|Increasing the number of days will cause a reset of mobile offline data and a resynchronization with mobile devices.|
 > |**Name**:<br />IndexOutOfRange<br />**Hex**:<br />8005E008<br />**Number**:<br />-2147098616|The index {0} is out of range for {1}. Number of elements present are {2}.|
 > |**Name**:<br />IndexSizeConstraintViolated<br />**Hex**:<br />80060895<br />**Number**:<br />-2147088235|Index size exceeded the size limit of {0} bytes. The key is too large. Try removing some columns or making the strings in string columns shorter.|
 > |**Name**:<br />InitializeErrorNoReadOnSource<br />**Hex**:<br />8004F800<br />**Number**:<br />-2147158016|The operation could not be completed because you donot have read access on some of the fields in {0} record.|
+> |**Name**:<br />InitializeFileRequestFailure<br />**Hex**:<br />80072555<br />**Number**:<br />-2147015339|Error occured during initialize file request. (RecordId: {0}, EntityName: {1}) Details:{2}|
 > |**Name**:<br />InputParameterFieldIncorrect<br />**Hex**:<br />80060378<br />**Number**:<br />-2147089544|Input parameter “{0}” does not match the input parameter field configured. Contact your system administrator to check the configuration metadata if the error persists.|
 > |**Name**:<br />InsertOptionValueInvalidType<br />**Hex**:<br />80044320<br />**Number**:<br />-2147204320|You can add option values only to picklist and status attributes.|
 > |**Name**:<br />InstanceOutsideEffectiveRange<br />**Hex**:<br />8004E115<br />**Number**:<br />-2147163883|Cannot perform the operation. An instance is outside of series effective expansion range.|
@@ -1463,6 +1518,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidAppModuleComponentType<br />**Hex**:<br />80050112<br />**Number**:<br />-2147155694|An app can’t reference the component type “{0}”.|
 > |**Name**:<br />InvalidAppModuleEventHandlers<br />**Hex**:<br />8005012F<br />**Number**:<br />-2147155665|The event handlers provided for the app are invalid.|
 > |**Name**:<br />InvalidAppModuleId<br />**Hex**:<br />80050116<br />**Number**:<br />-2147155690|The app ID is invalid or you don’t have access to the app.|
+> |**Name**:<br />InvalidAppModuleOptimizedFor<br />**Hex**:<br />8005013A<br />**Number**:<br />-2147155654|The optimized for value(s) provided for the app are invalid.|
 > |**Name**:<br />InvalidAppModuleSiteMap<br />**Hex**:<br />80050110<br />**Number**:<br />-2147155696|The customized site map for this app module could not be used because it is configured incorrectly. To resolve this issue, navigate to the full experience to repair the customized site map and import it again.|
 > |**Name**:<br />InvalidAppModuleSiteMapXml<br />**Hex**:<br />80050109<br />**Number**:<br />-2147155703|The App Module SiteMap is invalid.|
 > |**Name**:<br />InvalidAppModuleUniqueName<br />**Hex**:<br />8005011E<br />**Number**:<br />-2147155682|The unique name exceeds the maximum length of 40 characters or contains invalid characters. Only letters and numbers are allowed.|
@@ -1480,6 +1536,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidAssociatedSavedQuery<br />**Hex**:<br />800609AE<br />**Number**:<br />-2147087954|Selected saved query does not belong to associated entity of the mobile offline profile item.|
 > |**Name**:<br />InvalidAttachmentsFolder<br />**Hex**:<br />80048490<br />**Number**:<br />-2147187568|The compressed (.zip) file can't be uploaded because the folder "Attachments" contains one or more subfolders. Remove the subfolders and try again.|
 > |**Name**:<br />InvalidAttribute<br />**Hex**:<br />8005E009<br />**Number**:<br />-2147098615|Attribute {0} cannot be found for entity {1}.|
+> |**Name**:<br />InvalidAttributeCopyTarget<br />**Hex**:<br />80048545<br />**Number**:<br />-2147187387|A target attribute must be unset or have the same value as the source attribute when copying.|
 > |**Name**:<br />InvalidAttributeDataType<br />**Hex**:<br />80044815<br />**Number**:<br />-2147203051|Attribute data type: {0} is not valid for this entity.|
 > |**Name**:<br />InvalidAttributeFieldType<br />**Hex**:<br />80044816<br />**Number**:<br />-2147203050|Attribute field type: {0} is not valid for virtual entity.|
 > |**Name**:<br />InvalidAttributeFound<br />**Hex**:<br />8004E303<br />**Number**:<br />-2147163389|A dashboard Form XML cannot contain attribute: {0}.|
@@ -1493,6 +1550,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidBaseUnit<br />**Hex**:<br />80043b0b<br />**Number**:<br />-2147206389|The base unit does not belong to the schedule.|
 > |**Name**:<br />InvalidBehavior<br />**Hex**:<br />800608A1<br />**Number**:<br />-2147088223|The Behavior value of this attribute can't be changed.|
 > |**Name**:<br />InvalidBehaviorSelection<br />**Hex**:<br />800608A0<br />**Number**:<br />-2147088224|The behavior of this Date and Time field can only be changed to “Date Only".|
+> |**Name**:<br />InvalidBlockList<br />**Hex**:<br />80090006<br />**Number**:<br />-2146893818|Commit file operation failed. Either the specified block list is invalid or some chunk(s) are missing to upload.|
 > |**Name**:<br />InvalidBrowserToConfigureOrganization<br />**Hex**:<br />8004D255<br />**Number**:<br />-2147167659|Browser not compatible to configure organization|
 > |**Name**:<br />InvalidBusinessProcess<br />**Hex**:<br />80060389<br />**Number**:<br />-2147089527|Invalid Business Process.|
 > |**Name**:<br />InvalidCaller<br />**Hex**:<br />80040257<br />**Number**:<br />-2147220905|Cannot switch ExecutionContext to system user without setting Caller first.|
@@ -1503,13 +1561,16 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidChannelForCampaignActivityPropagate<br />**Hex**:<br />80040310<br />**Number**:<br />-2147220720|Cannot distribute activities for campaign activities of the specified channel type.|
 > |**Name**:<br />InvalidChannelOrigin<br />**Hex**:<br />80060602<br />**Number**:<br />-2147088894|An entitlement channel term with the same channel already exists. Specify a different channel and try again.|
 > |**Name**:<br />InvalidCharactersInField<br />**Hex**:<br />80040278<br />**Number**:<br />-2147220872|The field '{0}' contains one or more invalid characters.|
+> |**Name**:<br />InvalidCharInConnectorName<br />**Hex**:<br />80072604<br />**Number**:<br />-2147015164|Connector name must be alphanumeric, '-', or '_' and start with alphanumeric.|
 > |**Name**:<br />InvalidClassIdInReferencePanelSection<br />**Hex**:<br />80061503<br />**Number**:<br />-2147085053|Reference Panel section can have only sub-grid, quick view form, knowledge base search, i-frame and HTML web resource controls. Found control with invalid classid {0}.|
 > |**Name**:<br />InvalidCollectionName<br />**Hex**:<br />8006088E<br />**Number**:<br />-2147088242|An entity with that collection name already exists. Specify a unique name.|
 > |**Name**:<br />InvalidColumnMapping<br />**Hex**:<br />80040377<br />**Number**:<br />-2147220617|ColumnMapping is Invalid. Check that the target attribute exists.|
 > |**Name**:<br />InvalidColumnNumber<br />**Hex**:<br />80040336<br />**Number**:<br />-2147220682|The column number specified in the data map does not exist.|
 > |**Name**:<br />InvalidCommand<br />**Hex**:<br />8005E100<br />**Number**:<br />-2147098368|Invalid command.|
 > |**Name**:<br />InvalidComplexControlId<br />**Hex**:<br />8005E103<br />**Number**:<br />-2147098365|The complex control id is invalid.|
+> |**Name**:<br />InvalidComponentType<br />**Hex**:<br />80072004<br />**Number**:<br />-2147016700|Component type {0} cannot be found|
 > |**Name**:<br />InvalidConnectionString<br />**Hex**:<br />8004023f<br />**Number**:<br />-2147220929|The connection string not found or invalid.|
+> |**Name**:<br />InvalidContentRangeForFileUpload<br />**Hex**:<br />80090005<br />**Number**:<br />-2146893819|Content range is either not valid or size of the payload [{0}] doesn't match with the chunk size provided.|
 > |**Name**:<br />InvalidContractDetailId<br />**Hex**:<br />800404f6<br />**Number**:<br />-2147220234|The Contract detail id is invalid|
 > |**Name**:<br />InvalidControlClass<br />**Hex**:<br />8004E307<br />**Number**:<br />-2147163385|The dashboard Form XML cannot contain controls elements with class id: {0}.|
 > |**Name**:<br />InvalidConversionRule<br />**Hex**:<br />800608F6<br />**Number**:<br />-2147088138|The ConversionRule specified {0} is invalid. Please specify a valid ConversionRule.|
@@ -1522,6 +1583,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidCustomActivityType<br />**Hex**:<br />8004F125<br />**Number**:<br />-2147159771|A custom entity defined as an activity must be of communicaton activity type.|
 > |**Name**:<br />InvalidCustomDataDownloadFilters<br />**Hex**:<br />80060996<br />**Number**:<br />-2147087978|You can’t set custom download filters because Record Distribution Criteria isn’t set to Other Data Filters.|
 > |**Name**:<br />InvalidCustomer<br />**Hex**:<br />8004022d<br />**Number**:<br />-2147220947|The customer is invalid.|
+> |**Name**:<br />InvalidCustomerLookupXml<br />**Hex**:<br />80048051<br />**Number**:<br />-2147188655|Customer lookup Xml is invalid. One or more relationships is/are missing.|
 > |**Name**:<br />InvalidCustomReportingWizardXml<br />**Hex**:<br />80040491<br />**Number**:<br />-2147220335|Invalid wizard xml|
 > |**Name**:<br />InvalidDataDescription<br />**Hex**:<br />8004E000<br />**Number**:<br />-2147164160|The data description for the visualization is invalid.|
 > |**Name**:<br />InvalidDataDownloadFilterBusinessUnit<br />**Hex**:<br />8005F222<br />**Number**:<br />-2147093982|For an entity owned by the Business Owner, you can only use the following data download filters: All records or Download related data only.|
@@ -1552,6 +1614,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidElementFound<br />**Hex**:<br />8004E300<br />**Number**:<br />-2147163392|A dashboard Form XML cannot contain element: {0}.|
 > |**Name**:<br />InvalidEmail<br />**Hex**:<br />8004B016<br />**Number**:<br />-2147176426|Email generated from the template is not valid|
 > |**Name**:<br />InvalidEmailAddressFormat<br />**Hex**:<br />80044192<br />**Number**:<br />-2147204718|Invalid e-mail address. For more information, contact your system administrator.|
+> |**Name**:<br />InvalidEmailAddressFormatWithEntityTypeAndId<br />**Hex**:<br />80040b0b<br />**Number**:<br />-2147218677|Invalid e-mail address for recipient of type '{0}' with ID '{1}'|
 > |**Name**:<br />InvalidEmailAddressInMailbox<br />**Hex**:<br />8005E221<br />**Number**:<br />-2147098079|The email address in the mailbox is not correct. Please enter the correct email address to process mails.|
 > |**Name**:<br />InvalidEmailServerLocation<br />**Hex**:<br />8005E218<br />**Number**:<br />-2147098088|The server location is either not present or is not valid. Please correct the server location.|
 > |**Name**:<br />InvalidEmailTemplate<br />**Hex**:<br />80040313<br />**Number**:<br />-2147220717|Must specify a valid Template Id|
@@ -1586,7 +1649,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidFeatureType<br />**Hex**:<br />80044272<br />**Number**:<br />-2147204494|The feature type isn’t valid.|
 > |**Name**:<br />InvalidFetchCollection<br />**Hex**:<br />8004E019<br />**Number**:<br />-2147164135|The fetch collection for the visualization is invalid.|
 > |**Name**:<br />InvalidFetchXml<br />**Hex**:<br />80040303<br />**Number**:<br />-2147220733|Malformed FetchXml.|
+> |**Name**:<br />InvalidFileAttributeName<br />**Hex**:<br />80090007<br />**Number**:<br />-2146893817|Invalid File Attribute Name: [{0}].|
 > |**Name**:<br />InvalidFileBadCharacters<br />**Hex**:<br />80040396<br />**Number**:<br />-2147220586|The file could not be uploaded because it contains invalid character(s)|
+> |**Name**:<br />InvalidFileRangeRequested<br />**Hex**:<br />80090000<br />**Number**:<br />-2146893824|Chunk range used in this call is either not valid or it is bigger than allowed {0} MB.|
 > |**Name**:<br />InvalidFileType<br />**Hex**:<br />800608CC<br />**Number**:<br />-2147088180|Invalid File Type.|
 > |**Name**:<br />InvalidFilterCriteriaForVisualization<br />**Hex**:<br />8004E01E<br />**Number**:<br />-2147164130|The visualization cannot be rendered for the given filter criteria.|
 > |**Name**:<br />InvalidFiscalPeriod<br />**Hex**:<br />80044814<br />**Number**:<br />-2147203052|The fiscal period {0} does not fall in the permitted range of fiscal periods as per organization's fiscal settings.|
@@ -1609,12 +1674,14 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidHexColorValue<br />**Hex**:<br />800608D0<br />**Number**:<br />-2147088176|Only hexadecimal values are allowed.|
 > |**Name**:<br />InvalidHierarchicalRelationship<br />**Hex**:<br />8004701F<br />**Number**:<br />-2147192801|This relationship is not self-referential and therefore cannot be made hierarchical.|
 > |**Name**:<br />InvalidHierarchicalRelationshipChange<br />**Hex**:<br />8004701a<br />**Number**:<br />-2147192806|You can’t change this entity’s hierarchy because the {0} hierarchical relationship can’t be customized.|
+> |**Name**:<br />InvalidIconFileFormatForConnector<br />**Hex**:<br />80072603<br />**Number**:<br />-2147015165|Invalid icon file format. Supported formats are PNG and JPG.|
 > |**Name**:<br />InvalidImportFileContent<br />**Hex**:<br />80040374<br />**Number**:<br />-2147220620|The content of the import file is not valid. You must select a text file.|
 > |**Name**:<br />InvalidImportFileData<br />**Hex**:<br />80040351<br />**Number**:<br />-2147220655|The data is not in the required format|
 > |**Name**:<br />InvalidImportFileParseData<br />**Hex**:<br />80040349<br />**Number**:<br />-2147220663|Field and data delimiters for this file are not specified.|
 > |**Name**:<br />InvalidImportJobId<br />**Hex**:<br />80044252<br />**Number**:<br />-2147204526|The requested importjob does not exist.|
 > |**Name**:<br />InvalidImportJobTemplateFile<br />**Hex**:<br />80044251<br />**Number**:<br />-2147204527|The ImportJobTemplate.xml file is invalid.|
 > |**Name**:<br />InvalidIncomingDeliveryExpectingEmailConnector<br />**Hex**:<br />8005E224<br />**Number**:<br />-2147098076|The incoming delivery method is not email connector. To receive mails its incoming delivery method should be Email Connector.|
+> |**Name**:<br />InvalidInputArgumentForModernFlowExecute<br />**Hex**:<br />80060480<br />**Number**:<br />-2147089280|Cannot execute Modern Flow '{0}' because '{1}' is not a supported input argument.|
 > |**Name**:<br />InvalidInstanceEntityName<br />**Hex**:<br />8004E10D<br />**Number**:<br />-2147163891|Invalid instance entity name.|
 > |**Name**:<br />InvalidInstanceTypeCode<br />**Hex**:<br />8004E107<br />**Number**:<br />-2147163897|Invalid instance type code.|
 > |**Name**:<br />InvalidInteractiveUserQuota<br />**Hex**:<br />8004B049<br />**Number**:<br />-2147176375|You have reached the maximum number of interactive/full users.|
@@ -1646,15 +1713,16 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidManifestFilePath<br />**Hex**:<br />80048533<br />**Number**:<br />-2147187405|Failed to locate the manifest file in the specified location|
 > |**Name**:<br />InvalidMatchingAttributeError<br />**Hex**:<br />80044244<br />**Number**:<br />-2147204540|Invalid Matching attribute.|
 > |**Name**:<br />InvalidMaximumResourceLimit<br />**Hex**:<br />8004B02B<br />**Number**:<br />-2147176405|The resource type {0} cannot have a maximum limit of {1}.|
-> |**Name**:<br />InvalidMaxLengthForControl <br />**Hex**:<br />80060879<br />**Number**:<br />-2147088263|Invalid MaxLength Parameter specified for control {0}.Maxlength must be in between {1} and {2} .|
-> |**Name**:<br />InvalidMaxValueForControl <br />**Hex**:<br />8006087B<br />**Number**:<br />-2147088261|Invalid MaxValue Parameter specified for control {0}.Max Value must be in between {1} and {2} .|
+> |**Name**:<br />InvalidMaxLengthForControl<br />**Hex**:<br />80060879<br />**Number**:<br />-2147088263|Invalid MaxLength Parameter specified for control {0}.Maxlength must be in between {1} and {2}.|
+> |**Name**:<br />InvalidMaxSizeInKB<br />**Hex**:<br />80090009<br />**Number**:<br />-2146893815|Invalid size for file type attribute. Valid size should be between [0-{0}] KB|
+> |**Name**:<br />InvalidMaxValueForControl<br />**Hex**:<br />8006087B<br />**Number**:<br />-2147088261|Invalid MaxValue Parameter specified for control {0}.Max Value must be in between {1} and {2}.|
 > |**Name**:<br />InvalidMeasureCollection<br />**Hex**:<br />8004E00A<br />**Number**:<br />-2147164150|Measure collection is invalid. Not all the measures in the measure collection have the same group bys.|
 > |**Name**:<br />InvalidMetadata<br />**Hex**:<br />8004023a<br />**Number**:<br />-2147220934|Invalid Metadata.|
 > |**Name**:<br />InvalidMetadataSqlOperation<br />**Hex**:<br />80072343<br />**Number**:<br />-2147015869|SQL exception has been thrown on current metadata operation. Please check the exception for more details.|
 > |**Name**:<br />InvalidMigrationFileContent<br />**Hex**:<br />8005F033<br />**Number**:<br />-2147094477|The content of the import file is not valid. You must select a text file.|
-> |**Name**:<br />InvalidMinAndMaxValueForControl <br />**Hex**:<br />8006087C<br />**Number**:<br />-2147088260|Invalid MinValue and MaxValue Parameter specified for control {0}.Min Value must be less than Max Value .|
+> |**Name**:<br />InvalidMinAndMaxValueForControl<br />**Hex**:<br />8006087C<br />**Number**:<br />-2147088260|Invalid MinValue and MaxValue Parameter specified for control {0}.Min Value must be less than Max Value.|
 > |**Name**:<br />InvalidMinimumResourceLimit<br />**Hex**:<br />8004B02A<br />**Number**:<br />-2147176406|The resource type {0} cannot have a minimum limit of {1}.|
-> |**Name**:<br />InvalidMinValueForControl <br />**Hex**:<br />8006087A<br />**Number**:<br />-2147088262|Invalid MinValue Parameter specified for control {0}.Min Value must be in between {1} and {2} .|
+> |**Name**:<br />InvalidMinValueForControl<br />**Hex**:<br />8006087A<br />**Number**:<br />-2147088262|Invalid MinValue Parameter specified for control {0}.Min Value must be in between {1} and {2}.|
 > |**Name**:<br />InvalidMobileOfflineFiltersFetchXml<br />**Hex**:<br />80071113<br />**Number**:<br />-2147020525|XML Format mismatch. Check for the correctness of XML.|
 > |**Name**:<br />InvalidMultipleMapping<br />**Hex**:<br />80048498<br />**Number**:<br />-2147187560|A source field is mapped to more than one Dynamics 365 fields of lookup/picklist type.|
 > |**Name**:<br />InvalidMultipleSiteMapReferenceSingleAppModule<br />**Hex**:<br />80050111<br />**Number**:<br />-2147155695|An app can’t have multiple site maps.|
@@ -1663,11 +1731,13 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidNonInteractiveUserQuota<br />**Hex**:<br />8004B050<br />**Number**:<br />-2147176368|You have reached the maximum number of non-interactive users/|
 > |**Name**:<br />InvalidNumberGroupFormat<br />**Hex**:<br />80043700<br />**Number**:<br />-2147207424|Invalid input string for numbergroupformat. The input string should contain an array of integers. Every element in the value array should be between one and nine, except for the last element, which can be zero.|
 > |**Name**:<br />InvalidNumberOfCardFormSections<br />**Hex**:<br />80061505<br />**Number**:<br />-2147085051|Number of sections in a card form must be 4. Found {0}.|
+> |**Name**:<br />InvalidNumberOfParametersForFileUpload<br />**Hex**:<br />80090002<br />**Number**:<br />-2146893822|Invalid number of parameters [{0}] provided in request URL.|
 > |**Name**:<br />InvalidNumberOfPartitions<br />**Hex**:<br />8004E200<br />**Number**:<br />-2147163648|You cannot delete audit data in the partitions that are currently in use, or delete the partitions that are created for storing future audit data.|
 > |**Name**:<br />InvalidNumberOfReferencePanelSections<br />**Hex**:<br />80061504<br />**Number**:<br />-2147085052|MainInteractionCentric form can have only 1 reference panel section. Found {0}.|
 > |**Name**:<br />InvalidNumberOfSectionsInTab<br />**Hex**:<br />80060872<br />**Number**:<br />-2147088270|A dialog Form XML cannot contain more than one section.|
 > |**Name**:<br />InvalidNumberOfTabsInDialog<br />**Hex**:<br />80060871<br />**Number**:<br />-2147088271|A dialog Form XML cannot contain more than one tab.|
 > |**Name**:<br />InvalidOAuthToken<br />**Hex**:<br />80041d50<br />**Number**:<br />-2147214000|The OAuth token is invalid|
+> |**Name**:<br />InvalidObjectTypeCode<br />**Hex**:<br />80072005<br />**Number**:<br />-2147016699|Object type code {0} cannot be found. Is Metadata: {1}|
 > |**Name**:<br />InvalidObjectTypes<br />**Hex**:<br />8004021f<br />**Number**:<br />-2147220961|Invalid object type.|
 > |**Name**:<br />InvalidOccurrenceNumber<br />**Hex**:<br />8004E125<br />**Number**:<br />-2147163867|The effective end date of the series cannot be earlier than today. Select a valid occurrence number.|
 > |**Name**:<br />InvalidOfflineOperation<br />**Hex**:<br />8004410e<br />**Number**:<br />-2147204850|Operation not valid when offline.|
@@ -1677,6 +1747,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidOperation<br />**Hex**:<br />8004023b<br />**Number**:<br />-2147220933|Invalid Operation performed.|
 > |**Name**:<br />InvalidOperationForClosedOrCancelledCampaignActivity<br />**Hex**:<br />80040314<br />**Number**:<br />-2147220716|Can not add items to closed (cancelled) campaignactivity.|
 > |**Name**:<br />InvalidOperationForDynamicList<br />**Hex**:<br />8004F701<br />**Number**:<br />-2147158271|This action is not available for a dynamic marketing list.|
+> |**Name**:<br />InvalidOperationWhenBusinessRuleIsActive<br />**Hex**:<br />80060015<br />**Number**:<br />-2147090411|Invalid  operation - You cannot activate or deactivate this business rule|
 > |**Name**:<br />InvalidOperationWhenListIsNotActive<br />**Hex**:<br />8004033a<br />**Number**:<br />-2147220678|List is not active. Cannot perform this operation.|
 > |**Name**:<br />InvalidOperationWhenListLocked<br />**Hex**:<br />80040302<br />**Number**:<br />-2147220734|List is Locked. Cannot perform this action.|
 > |**Name**:<br />InvalidOperationWhenPartyIsNotActive<br />**Hex**:<br />8004033b<br />**Number**:<br />-2147220677|The party is not active. Cannot perform this operation.|
@@ -1698,7 +1769,10 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidOwnerID<br />**Hex**:<br />80040229<br />**Number**:<br />-2147220951|The owner ID is invalid or missing.|
 > |**Name**:<br />InvalidOwnershipTypeMask<br />**Hex**:<br />8004700d<br />**Number**:<br />-2147192819|The specified ownership type mask is not valid for this operation|
 > |**Name**:<br />InvalidPageResponse<br />**Hex**:<br />8004E00D<br />**Number**:<br />-2147164147|Invalid Page Response generated.|
+> |**Name**:<br />InvalidParameterForFileOperation<br />**Hex**:<br />80090003<br />**Number**:<br />-2146893821|Invalid parameter [{0}] provided in request URL.|
 > |**Name**:<br />InvalidParent<br />**Hex**:<br />80040205<br />**Number**:<br />-2147220987|The parent object is invalid or missing.|
+> |**Name**:<br />InvalidParentChildCascadeBehavior<br />**Hex**:<br />8007200D<br />**Number**:<br />-2147016691|Parent-Child relationship {0} requires parental cascade behavior.|
+> |**Name**:<br />InvalidParentChildRelationshipUpdate<br />**Hex**:<br />8007200B<br />**Number**:<br />-2147016693|You cannot update relationship of type ParentChild.|
 > |**Name**:<br />InvalidParentId<br />**Hex**:<br />80040206<br />**Number**:<br />-2147220986|The parent id is invalid or missing.|
 > |**Name**:<br />InvalidPartnerSolutionCustomizationProvider<br />**Hex**:<br />8004A109<br />**Number**:<br />-2147180279|Invalid partner solution customization provider type|
 > |**Name**:<br />InvalidPartyMapping<br />**Hex**:<br />80043515<br />**Number**:<br />-2147207915|Invalid party mapping.|
@@ -1708,7 +1782,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidPluginStrongNameRequired<br />**Hex**:<br />80081114<br />**Number**:<br />-2146954988|Plug-in assembly is not strong name signed.|
 > |**Name**:<br />InvalidPluginTypeImplementation<br />**Hex**:<br />8004418c<br />**Number**:<br />-2147204724|Plug-in type must implement exactly one of the following classes or interfaces: Microsoft.Crm.Sdk.IPlugin, Microsoft.Xrm.Sdk.IPlugin, System.Activities.Activity and System.Workflow.ComponentModel.Activity.|
 > |**Name**:<br />InvalidPointer<br />**Hex**:<br />80040218<br />**Number**:<br />-2147220968|The object is disposed.|
-> |**Name**:<br />InvalidPrecisionForControl <br />**Hex**:<br />8006087D<br />**Number**:<br />-2147088259|Invalid Precision Parameter specified for control {0}.Precision must be in between {1} and {2} .|
+> |**Name**:<br />InvalidPostponeUntilTimeForModernFlowExecute<br />**Hex**:<br />80060478<br />**Number**:<br />-2147089288|Cannot execute Modern Flow '{0}' because '{1}' is not in a supported DateTimeOffset format.|
+> |**Name**:<br />InvalidPrecisionForControl<br />**Hex**:<br />8006087D<br />**Number**:<br />-2147088259|Invalid Precision Parameter specified for control {0}.Precision must be in between {1} and {2}.|
+> |**Name**:<br />InvalidPrefixInConnectorName<br />**Hex**:<br />80072605<br />**Number**:<br />-2147015163|Connector name must start with a alphanumeric prefix with length between 2~8 and followed by  '_' and alphanumeric name.|
 > |**Name**:<br />InvalidPresentationDescription<br />**Hex**:<br />8004E002<br />**Number**:<br />-2147164158|The presentation description is invalid.|
 > |**Name**:<br />InvalidPreviewModeOperation<br />**Hex**:<br />8005f219<br />**Number**:<br />-2147093991|You can’t perform this operation in preview mode.|
 > |**Name**:<br />InvalidPriceLevelCurrencyForPricingMethod<br />**Hex**:<br />80048cf9<br />**Number**:<br />-2147185415|The currency of the price list needs to match the currency of the product for pricing method percentage.|
@@ -1737,6 +1813,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidRecurrencePattern<br />**Hex**:<br />8004E100<br />**Number**:<br />-2147163904|Invalid recurrence pattern.|
 > |**Name**:<br />InvalidRecurrenceRule<br />**Hex**:<br />80040246<br />**Number**:<br />-2147220922|Error in RecurrencePatternFactory.|
 > |**Name**:<br />InvalidRecurrenceRuleForBulkDeleteAndDuplicateDetection<br />**Hex**:<br />8004D2A0<br />**Number**:<br />-2147167584|Bulk Delete and Duplicate Detection recurrence must be specified as daily.|
+> |**Name**:<br />InvalidReferencesFound<br />**Hex**:<br />80072032<br />**Number**:<br />-2147016654|Invalid references found: {0}|
 > |**Name**:<br />InvalidRegardingObjectTypeCode<br />**Hex**:<br />80040319<br />**Number**:<br />-2147220711|The regarding Object Type Code is not valid for the Bulk Operation.|
 > |**Name**:<br />InvalidRegistryKey<br />**Hex**:<br />8004024c<br />**Number**:<br />-2147220916|Invalid registry key specified.|
 > |**Name**:<br />InvalidRelationshipDescription<br />**Hex**:<br />80047003<br />**Number**:<br />-2147192829|The specified relationship cannot be created|
@@ -1753,6 +1830,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidRequestParameters<br />**Hex**:<br />8006110E<br />**Number**:<br />-2147086066|Request parameters are not valid to server External Party request.|
 > |**Name**:<br />InvalidResourceType<br />**Hex**:<br />8004B029<br />**Number**:<br />-2147176407|The requested action is not valid for resource type {0}.|
 > |**Name**:<br />InvalidRestore<br />**Hex**:<br />80040258<br />**Number**:<br />-2147220904|RestoreCaller must be called after SwitchToSystemUser.|
+> |**Name**:<br />InvalidRoboticProcessAutomationFlowProcessClientData<br />**Hex**:<br />80060473<br />**Number**:<br />-2147089293|Clientdata is in invalid format. Details: "{0}".|
 > |**Name**:<br />InvalidRole<br />**Hex**:<br />8004B012<br />**Number**:<br />-2147176430|You have not assigned roles to this user|
 > |**Name**:<br />InvalidRoleOccurrencesForOneToManyRelationship<br />**Hex**:<br />8006089A<br />**Number**:<br />-2147088230|There can't be more than two entity relationship roles for a one-to-many relationship {0}.|
 > |**Name**:<br />InvalidRoleTypeForOneToManyRelationship<br />**Hex**:<br />80060899<br />**Number**:<br />-2147088231|This relationship role type isn't valid for a one-to-many relationship {0}.|
@@ -1772,7 +1850,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidSingletonResults<br />**Hex**:<br />8004024f<br />**Number**:<br />-2147220913|Crm Internal Exception: Singleton Retrieve Query should not return more than 1 record.|
 > |**Name**:<br />InvalidSiteRelativeUrlFormat<br />**Hex**:<br />80048053<br />**Number**:<br />-2147188653|The relative url contains invalid characters. Please use a different name. Valid relative url names cannot end with the following strings: .aspx, .ashx, .asmx, .svc , cannot begin or end with a dot or /, cannot contain consecutive dots or / and cannot contain any of the following characters: ~ " # % & * : < > ? \ { | }.|
 > |**Name**:<br />InvalidSolutionAwarenessDeclaration<br />**Hex**:<br />80072000<br />**Number**:<br />-2147016704|An entity cannot be declared as solution-aware on an update operation. Entity: {0}|
+> |**Name**:<br />InvalidSolutionComponentKey<br />**Hex**:<br />8007200E<br />**Number**:<br />-2147016690|The attribute {0} from key {1} and entity {2} should be exportable to be an export key.|
 > |**Name**:<br />InvalidSolutionConfigurationPage<br />**Hex**:<br />8004701B<br />**Number**:<br />-2147192805|The specified configuration page for this solution is invalid.|
+> |**Name**:<br />InvalidSolutionDependencies<br />**Hex**:<br />80072006<br />**Number**:<br />-2147016698|All components present in this solution have dependencies. This is not allowed as uninstall of this solution would be unactionable.|
 > |**Name**:<br />InvalidSolutionUniqueName<br />**Hex**:<br />8004F002<br />**Number**:<br />-2147160062|Invalid character specified for solution unique name. Only characters within the ranges [A-Z], [a-z], [0-9] or _ are allowed. The first character may only be in the ranges [A-Z], [a-z] or _.|
 > |**Name**:<br />InvalidSolutionVersion<br />**Hex**:<br />8004F01E<br />**Number**:<br />-2147160034|An invalid solution version was specified.|
 > |**Name**:<br />InvalidSourceAttributeType<br />**Hex**:<br />80044808<br />**Number**:<br />-2147203064|Source Attribute Type does not match the Amount Data Type specified.|
@@ -1792,6 +1872,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidSubmitFromUnapprovedArticle<br />**Hex**:<br />80048dff<br />**Number**:<br />-2147185153|You are trying to submit an article that has a status of unapproved. You can only submit an article with the status of draft.|
 > |**Name**:<br />InvalidSubstituteProduct<br />**Hex**:<br />80043aff<br />**Number**:<br />-2147206401|A product can't have a relationship with itself.|
 > |**Name**:<br />InvalidSyncDirectionValueForUpdate<br />**Hex**:<br />80060742<br />**Number**:<br />-2147088574|The sync direction is invalid as per the allowed sync direction for one or more attribute mappings.|
+> |**Name**:<br />InvalidSyncToken<br />**Hex**:<br />80072515<br />**Number**:<br />-2147015403|Invalid Sync Token|
 > |**Name**:<br />InvalidTargetEntity<br />**Hex**:<br />80040369<br />**Number**:<br />-2147220631|The specified target record type does not exist.|
 > |**Name**:<br />InvalidTargetEntityTypeForControl<br />**Hex**:<br />80060878<br />**Number**:<br />-2147088264|Target Entity Type not specified for control {0}.Target Entity is an mandatory Field.|
 > |**Name**:<br />InvalidTargetFrameworkVersion<br />**Hex**:<br />8004420b<br />**Number**:<br />-2147204597|Plug-in assembly targets a version of .NET Framework that is not supported.|
@@ -1803,6 +1884,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />InvalidThemeDeleteOperation<br />**Hex**:<br />800608D7<br />**Number**:<br />-2147088169|You can’t delete system or default themes.|
 > |**Name**:<br />InvalidThemeId<br />**Hex**:<br />800608D4<br />**Number**:<br />-2147088172|Invalid theme id.|
 > |**Name**:<br />InvalidTimeZoneCode<br />**Hex**:<br />800608F7<br />**Number**:<br />-2147088137|Time Zone Code {0} specified is not recognized. Please specify a valid Time Zone Code value.|
+> |**Name**:<br />InvalidToDeleteFileAttachmentBulkDelete<br />**Hex**:<br />8009000A<br />**Number**:<br />-2146893814|File Attachment bulk delete jobs cannot be deleted.|
 > |**Name**:<br />InvalidToken<br />**Hex**:<br />8004B061<br />**Number**:<br />-2147176351|The token is invalid.|
 > |**Name**:<br />InvalidTotalDiscount<br />**Hex**:<br />800404f4<br />**Number**:<br />-2147220236|The total discount is invalid|
 > |**Name**:<br />InvalidTotalPrice<br />**Hex**:<br />800404f5<br />**Number**:<br />-2147220235|The total price is invalid|
@@ -1881,12 +1963,24 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />IsNotLiveToSendInvitation<br />**Hex**:<br />8004B009<br />**Number**:<br />-2147176439|This functionality is not supported, its only available for Online solution.|
 > |**Name**:<br />IsvAborted<br />**Hex**:<br />80040265<br />**Number**:<br />-2147220891|ISV code aborted the operation.|
 > |**Name**:<br />IsvExtensionsPrivilegeNotPresent<br />**Hex**:<br />80048029<br />**Number**:<br />-2147188695|To import ISV.Config, your user account must be associated with a security role that includes the ISV Extensions privilege.|
+> |**Name**:<br />IsvTransactionCount<br />**Hex**:<br />8009000C<br />**Number**:<br />-2146893812|ISV code reduced the open transaction count. Custom plug-ins should not catch exceptions from OrganizationService calls and continue processing.|
 > |**Name**:<br />IsvUnExpected<br />**Hex**:<br />80040224<br />**Number**:<br />-2147220956|An unexpected error occurred from ISV code.|
 > |**Name**:<br />JobNameIsEmptyOrNull<br />**Hex**:<br />80048457<br />**Number**:<br />-2147187625|Job Name can not be null or empty.|
 > |**Name**:<br />KBInvalidCreateAssociation<br />**Hex**:<br />80060861<br />**Number**:<br />-2147088287|This KB article is already linked to the {0}.|
 > |**Name**:<br />KnowledgeSearchActiveModelsAlreadyExist<br />**Hex**:<br />80061680<br />**Number**:<br />-2147084672|An active configuration already exists for source entity {0}. Only one active configuration is allowed per source entity.|
 > |**Name**:<br />LabelIdDoesNotMatchStepId<br />**Hex**:<br />80060419<br />**Number**:<br />-2147089383|The label ID {0} doesn’t match the step ID {1}.|
 > |**Name**:<br />LanguageProvisioningSrsDataConnectorNotInstalled<br />**Hex**:<br />8004F710<br />**Number**:<br />-2147158256|The Microsoft Dynamics 365 Reporting Extensions must be installed before the language can be provisioned for this organization.|
+> |**Name**:<br />LayerDesiredOrderFCBIsOff<br />**Hex**:<br />8004F057<br />**Number**:<br />-2147159977|The clause LayerDesiredOrder is present in the import message but the FCB is not Enabled. To prevent incorrect layering the process is terminated.|
+> |**Name**:<br />LayerDesiredOrderHintDiffFormOnBase<br />**Hex**:<br />8004F055<br />**Number**:<br />-2147159979|The clause LayerDesiredOrder contains a value that will cause form [{0}] to become the base, but the Form in the incoming solution is a diff. This is a terminal failure, retrying will not help.|
+> |**Name**:<br />LayerDesiredOrderHintTypeNotAvailable<br />**Hex**:<br />8004F054<br />**Number**:<br />-2147159980|The clause LayerDesiredOrder contains a type [{0}] that is not available for use. This is a terminal failure, retrying will not help.|
+> |**Name**:<br />LayerDesiredOrderInvalidLayerState<br />**Hex**:<br />8004F051<br />**Number**:<br />-2147159983|There was a match for a solution in the LayerDesiredOrder clause but it is not possible to honor it, due to a corruption in the layers of the component [{0}], id [{1}]. This is a terminal failure, retrying will not help. Please call customer support. The layer state is: [{2}].|
+> |**Name**:<br />LayerDesiredOrderInvalidXML<br />**Hex**:<br />8004F049<br />**Number**:<br />-2147159991|The clause LayerDesiredOrder contains an invalid XML schema.|
+> |**Name**:<br />LayerDesiredOrderInvalidXMLDetail<br />**Hex**:<br />8004F050<br />**Number**:<br />-2147159984|The clause LayerDesiredOrder contains an invalid XML schema. Check the property [{0}].|
+> |**Name**:<br />LayerDesiredOrderNotAllowedOnPatch<br />**Hex**:<br />8004F052<br />**Number**:<br />-2147159982|The clause LayerDesiredOrder cannot be used when importing a Patch. Remove the clause and retry the operation.|
+> |**Name**:<br />LayerDesiredOrderNotSamePublisher<br />**Hex**:<br />8004F048<br />**Number**:<br />-2147159992|The solution [{0}] was used in a LayerDesiredOrder clause, but its publisher [{1}] does not match the publisher of the solution being installed: [{2}]. This is not supported.|
+> |**Name**:<br />LayerDesiredOrderPendingUpgrade<br />**Hex**:<br />8004F047<br />**Number**:<br />-2147159993|The solution [{0}] was used in a LayerDesiredOrder clause, but it has a pending upgrade. Complete the upgrade and try the operation again.|
+> |**Name**:<br />LayerDesiredOrderPublisherNotAllowed<br />**Hex**:<br />8004F056<br />**Number**:<br />-2147159978|The publisher [{0}] in not allowed to use the LayerDesiredOrder clause.|
+> |**Name**:<br />LayerDesiredOrderRestrictedSolution<br />**Hex**:<br />8004F058<br />**Number**:<br />-2147159976|The clause LayerDesiredOrder cannot be used on [{0}]. This is a terminal failure, retrying will not help.|
 > |**Name**:<br />LeadAlreadyInClosedState<br />**Hex**:<br />80040519<br />**Number**:<br />-2147220199|The lead is already closed.|
 > |**Name**:<br />LeadAlreadyInOpenState<br />**Hex**:<br />80040518<br />**Number**:<br />-2147220200|The lead is already in the open state.|
 > |**Name**:<br />LegacyXlsxFileNotSupported<br />**Hex**:<br />800608CF<br />**Number**:<br />-2147088177|Legacy .xlsx files cannot be used for Excel Templates.|
@@ -1916,6 +2010,13 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />LowerVersionUpgrade<br />**Hex**:<br />80048541<br />**Number**:<br />-2147187391|The import solution must have a higher version than the existing solution it is upgrading.|
 > |**Name**:<br />LowQuantityGreaterThanHighQuantity<br />**Hex**:<br />80043b01<br />**Number**:<br />-2147206399|Low quantity should be less than high quantity.|
 > |**Name**:<br />LowQuantityLessThanZero<br />**Hex**:<br />80043b00<br />**Number**:<br />-2147206400|Low quantity should be greater than zero.|
+> |**Name**:<br />MailApp_AppModuleDashboardFormInactive<br />**Hex**:<br />80061227<br />**Number**:<br />-2147085785|App for Outlook Dashboard form is inactive.|
+> |**Name**:<br />MailApp_AppModuleDashboardFormMissing<br />**Hex**:<br />80061223<br />**Number**:<br />-2147085789|App for Outlook Dashboard form is missing.|
+> |**Name**:<br />MailApp_AppModuleDashboardFormRoleNotAssigned<br />**Hex**:<br />80061228<br />**Number**:<br />-2147085784|User does not have access to the App for Outlook Dashboard.|
+> |**Name**:<br />MailApp_AppModulePermission<br />**Hex**:<br />80070004<br />**Number**:<br />-2147024892|Сurrent user role does not have required permissions to access App for Outlook|
+> |**Name**:<br />MailApp_AppModuleSitemapDashboardMissing<br />**Hex**:<br />80061224<br />**Number**:<br />-2147085788|App for Outlook Dashboard is missing in Site Map.|
+> |**Name**:<br />MailApp_AppModuleSitemapDashboardNotDefault<br />**Hex**:<br />80061225<br />**Number**:<br />-2147085787|App for Outlook Dashboard is not set as default in Site Map.|
+> |**Name**:<br />MailApp_AppModuleSitemapMissing<br />**Hex**:<br />80061226<br />**Number**:<br />-2147085786|App for Outlook AppModule Site Map is missing|
 > |**Name**:<br />MailApp_AppointmentFeatureNotEnabled<br />**Hex**:<br />80061218<br />**Number**:<br />-2147085800|Access to the app hasn’t been enabled for Appointments for this Microsoft Dynamics 365 organization. Contact your system administrator to enable access for appointments.|
 > |**Name**:<br />MailApp_DifferentSecurityZoneError<br />**Hex**:<br />80061210<br />**Number**:<br />-2147085808|Try adding the following URLs to your Trusted Sites:{0} {1} {2}|
 > |**Name**:<br />MailApp_EmailAddressMismatch<br />**Hex**:<br />80061211<br />**Number**:<br />-2147085807|It looks like you're trying to access the CRM App for Outlook from an email address that we don't recognize. Either sign out and sign in with the email address you use for Dynamics CRM or have your system administrator update your email Mailbox settings to reflect this email address.|
@@ -1951,6 +2052,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />MaxActiveSLAKPIError<br />**Hex**:<br />8004F898<br />**Number**:<br />-2147157864|You can’t activate this SLA because you’ve exceeded the maxiumum number of SLA KPIs that are allowed per entity for your organization.|
 > |**Name**:<br />MaxChildCasesLimitExceeded<br />**Hex**:<br />8003F454<br />**Number**:<br />-2147224492|A Parent Case cannot have more than maximum child cases allowed. Contact your administrator for more details|
 > |**Name**:<br />MaxConditionsMobileOfflineFilters<br />**Hex**:<br />80071114<br />**Number**:<br />-2147020524|You can only define 3 Mobile offline Org  filter for each entity.|
+> |**Name**:<br />MaxIconSizeExceededForConnector<br />**Hex**:<br />80072602<br />**Number**:<br />-2147015166|Connector icon file too large, size cannot exceed 1 MB.|
 > |**Name**:<br />MaximumControlsLimitExceeded<br />**Hex**:<br />8004E301<br />**Number**:<br />-2147163391|The dashboard Form XML contains more than the maximum allowed number of control elements: {0}.|
 > |**Name**:<br />MaximumCountForUpdateModeExceeded<br />**Hex**:<br />8004F602<br />**Number**:<br />-2147158526|In an update operation, you can import only one file at a time.|
 > |**Name**:<br />MaximumNumberHandlersExceeded<br />**Hex**:<br />80048505<br />**Number**:<br />-2147187451|This solution adds form event handlers so the number of event handlers for a form event exceeds the maximum number.|
@@ -1983,7 +2085,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />MissingControlStep<br />**Hex**:<br />80060385<br />**Number**:<br />-2147089531|Required control step is missing.|
 > |**Name**:<br />MissingCrmAuthenticationToken<br />**Hex**:<br />80044300<br />**Number**:<br />-2147204352|CrmAuthenticationToken is missing.|
 > |**Name**:<br />MissingCrmAuthenticationTokenOrganizationName<br />**Hex**:<br />80044308<br />**Number**:<br />-2147204344|Organization Name must be specified in CrmAuthenticationToken.|
+> |**Name**:<br />MissingDependentConnectorsForModernFlow<br />**Hex**:<br />80060474<br />**Number**:<br />-2147089292|There are missing custom connectors for current flow, Expected count: {0} with name: {1}, actual count: {2}|
 > |**Name**:<br />MissingHierarchicalRelationshipForOperator<br />**Hex**:<br />80047020<br />**Number**:<br />-2147192800|This query uses a hierarchical operator, but the {0} entity doesn't have a hierarchical relationship.|
+> |**Name**:<br />MissingKeyValue<br />**Hex**:<br />80072034<br />**Number**:<br />-2147016652|Entity {0} does not contain key value for attribute {1}.|
 > |**Name**:<br />MissingOpportunityId<br />**Hex**:<br />80043b15<br />**Number**:<br />-2147206379|The opportunity id is missing or invalid.|
 > |**Name**:<br />MissingOrganizationFriendlyName<br />**Hex**:<br />8004B00A<br />**Number**:<br />-2147176438|Cannot install Dynamics 365 without an organization friendly name.|
 > |**Name**:<br />MissingOrganizationUniqueName<br />**Hex**:<br />8004B00B<br />**Number**:<br />-2147176437|Cannot install Dynamics 365 without an organization unique name.|
@@ -1993,13 +2097,16 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />MissingParameterToMethod<br />**Hex**:<br />8004B021<br />**Number**:<br />-2147176415|Missing parameter {0} to method {1}|
 > |**Name**:<br />MissingParameterToStoredProcedure<br />**Hex**:<br />8004C000<br />**Number**:<br />-2147172352|Missing parameter to stored procedure:  {0}|
 > |**Name**:<br />MissingPriceLevelId<br />**Hex**:<br />80043b12<br />**Number**:<br />-2147206382|The price level id is missing.|
+> |**Name**:<br />MissingPrimaryKey<br />**Hex**:<br />80072033<br />**Number**:<br />-2147016653|The Entity {0} is missing primary key {1}.|
 > |**Name**:<br />MissingProductId<br />**Hex**:<br />80043b11<br />**Number**:<br />-2147206383|The product id is missing.|
 > |**Name**:<br />MissingQuantity<br />**Hex**:<br />80081012<br />**Number**:<br />-2146955246|The Quantity is missing.|
 > |**Name**:<br />MissingQueryType<br />**Hex**:<br />80040235<br />**Number**:<br />-2147220939|The query type is missing.|
 > |**Name**:<br />MissingRecipient<br />**Hex**:<br />8004350d<br />**Number**:<br />-2147207923|The fax must have a recipient before it can be sent.|
+> |**Name**:<br />MissingRelationshipInSolution<br />**Hex**:<br />80048548<br />**Number**:<br />-2147187384|The following attributes {0} of entity {1} are missing their associated relationships.|
 > |**Name**:<br />MissingRequiredAttributes<br />**Hex**:<br />80061037<br />**Number**:<br />-2147086281|The property couldn’t be created or updated because the regardingobjectid, datatype, or name attribute is missing.|
 > |**Name**:<br />MissingRequiredComponentAttributes<br />**Hex**:<br />80072002<br />**Number**:<br />-2147016702|Required attribute should not be null. Attribute: {0}|
 > |**Name**:<br />MissingTeamName<br />**Hex**:<br />80041d0b<br />**Number**:<br />-2147214069|The team name was unexpectedly missing.|
+> |**Name**:<br />MissingTransactionCurrencyId<br />**Hex**:<br />80048546<br />**Number**:<br />-2147187386|TransactionCurrencyId needs to be supplied to format the money field (Id: {0}, Name: {1}, Value: {2}, Entity: {3}).|
 > |**Name**:<br />MissingUomId<br />**Hex**:<br />80043b0d<br />**Number**:<br />-2147206387|The unit id is missing.|
 > |**Name**:<br />MissingUomScheduleId<br />**Hex**:<br />80043b0a<br />**Number**:<br />-2147206390|The unit schedule id is missing.|
 > |**Name**:<br />MissingUserId<br />**Hex**:<br />8004021b<br />**Number**:<br />-2147220965|The user id or the team id is missing.|
@@ -2015,6 +2122,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />MobileOfflineProfileNameCanNotBeNullOrEmpty<br />**Hex**:<br />800609A9<br />**Number**:<br />-2147087959|The mobile offline profile name can’t be null or empty. Enter a name for this profile.|
 > |**Name**:<br />MobileOfflineRuleEnhancementFeatureNotAvailaible<br />**Hex**:<br />80071117<br />**Number**:<br />-2147020521|This feature is not enabled for your organization. Please contact your system administrator for help.|
 > |**Name**:<br />MobileServiceError<br />**Hex**:<br />8004B070<br />**Number**:<br />-2147176336|Error communicating with mobile service|
+> |**Name**:<br />ModernFlowMustBeMarkedAsOnDemandForExecuteWorkflow<br />**Hex**:<br />80060479<br />**Number**:<br />-2147089287|Cannot execute Modern Flow '{0}' because it is not marked as on-demand.|
 > |**Name**:<br />ModernFlowProcessesNotEnabled<br />**Hex**:<br />80060464<br />**Number**:<br />-2147089308|Creation of Modern Flow processes is not enabled.|
 > |**Name**:<br />ModernFlowProcessesOnlyAvailableOnline<br />**Hex**:<br />80060465<br />**Number**:<br />-2147089307|Creation of Modern Flow processes is only available online.|
 > |**Name**:<br />MoneySizeExceeded<br />**Hex**:<br />80040317<br />**Number**:<br />-2147220713|Supplied value exceeded the MIN/MAX value of Money Type field.|
@@ -2025,12 +2133,16 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />MultilevelParentChildRelationshipNotAllowed<br />**Hex**:<br />8003F453<br />**Number**:<br />-2147224493|Associating child cases to the existing child case is not allowed.|
 > |**Name**:<br />MultipleChartAreasFound<br />**Hex**:<br />8004E008<br />**Number**:<br />-2147164152|Multiple Chart Areas are not supported.|
 > |**Name**:<br />MultipleChildPicklist<br />**Hex**:<br />80040250<br />**Number**:<br />-2147220912|Crm Internal Exception: Picklists with more than one childAttribute are not supported.|
+> |**Name**:<br />MultipleExportKeyNotSupported<br />**Hex**:<br />800608A9<br />**Number**:<br />-2147088215|Export key cannot be created for entity {0} because the entity already ha an export key defined|
 > |**Name**:<br />MultipleFilesFound<br />**Hex**:<br />80048439<br />**Number**:<br />-2147187655|The attachment file name is not unique.|
 > |**Name**:<br />MultipleFormElementsFound<br />**Hex**:<br />8004E304<br />**Number**:<br />-2147163388|A dashboard Form XML can contain only one form element.|
+> |**Name**:<br />MultipleImportFilesFound<br />**Hex**:<br />80072036<br />**Number**:<br />-2147016650|Multiple files for attribute {0} were found for entity {1}.|
+> |**Name**:<br />MultipleInstancesOnEntity<br />**Hex**:<br />80060373<br />**Number**:<br />-2147089549|Multiple instances of process '{0}' exist for '{1}':'{2}'. Use business process flow APIs to perform process related actions.|
 > |**Name**:<br />MultipleLabelsInUserDashboard<br />**Hex**:<br />8004E30D<br />**Number**:<br />-2147163379|A user dashboard can have at most one label for a form element.|
 > |**Name**:<br />MultipleMeasureCollectionsFound<br />**Hex**:<br />8004E01C<br />**Number**:<br />-2147164132|More than one measure collection is not supported for charts with subcategory i.e. comparison charts|
 > |**Name**:<br />MultipleMeasuresFound<br />**Hex**:<br />8004E007<br />**Number**:<br />-2147164153|More than one measure is not supported for charts with subcategory i.e. comparison charts|
 > |**Name**:<br />MultipleOrganizationsNotAllowed<br />**Hex**:<br />80041d35<br />**Number**:<br />-2147214027|Only one organization and one root business are allowed.|
+> |**Name**:<br />MultipleParentEntitiesFoundByEntity<br />**Hex**:<br />8006089E<br />**Number**:<br />-2147088226|More than one parent exists for {0} An entity can have only one parent entity.|
 > |**Name**:<br />MultipleParentReportsFound<br />**Hex**:<br />80040485<br />**Number**:<br />-2147220347|More than one report link found. Each report can have only one parent.|
 > |**Name**:<br />MultipleParentsNotSupported<br />**Hex**:<br />80047007<br />**Number**:<br />-2147192825|An entity can have only one parental relationship|
 > |**Name**:<br />MultiplePartnerSecurityRoleWithSameInformation<br />**Hex**:<br />8004A10a<br />**Number**:<br />-2147180278|More than one security role found for partner user|
@@ -2045,16 +2157,20 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />MustContainAtLeastACharInMention<br />**Hex**:<br />8004F6A4<br />**Number**:<br />-2147158364|The display name must contain atleast one non-whitespace character.|
 > |**Name**:<br />NavigationPropertyAlreadyExists<br />**Hex**:<br />80072551<br />**Number**:<br />-2147015343|NavigationPropertyName {0} is not unique within an entity|
 > |**Name**:<br />NavigationPropertyNameCannotBeTheSameOnBothSidesOfRel<br />**Hex**:<br />80072550<br />**Number**:<br />-2147015344|Navigation Property Name cannot be the same on both sides of a self-referential relationship. SchemaName - {0}|
+> |**Name**:<br />NavigationPropertyNameNodeMissing<br />**Hex**:<br />80048452<br />**Number**:<br />-2147187630|NavigationPropertyName node is missing for entity relationship {0}.|
+> |**Name**:<br />NavigationPropertyNameValueMissing<br />**Hex**:<br />80048836<br />**Number**:<br />-2147186634|NavigationPropertyName value is missing for entity relationship {0}.|
 > |**Name**:<br />NavPaneNotCustomizable<br />**Hex**:<br />80044329<br />**Number**:<br />-2147204311|The nav pane properties for this relationship are not customizable|
 > |**Name**:<br />NavPaneOrderValueNotAllowed<br />**Hex**:<br />80044327<br />**Number**:<br />-2147204313|The provided nav pane order value is not allowed|
+> |**Name**:<br />NegativeAutoNumberSeed<br />**Hex**:<br />80060886<br />**Number**:<br />-2147088250|Cannot set Auto Number seed for attribute {0} of entity {1} with value {2} as it is less than 0.|
 > |**Name**:<br />NetworkIssue<br />**Hex**:<br />8005F104<br />**Number**:<br />-2147094268|Request failed due to unknown network issues or GateWay issues or server issues.|
 > |**Name**:<br />NewStatusHasInvalidState<br />**Hex**:<br />80044322<br />**Number**:<br />-2147204318|The state value that was provided for this new status option does not exist.|
 > |**Name**:<br />NewStatusRequiresAssociatedState<br />**Hex**:<br />80044321<br />**Number**:<br />-2147204319|The new status option must have an associated state value.|
 > |**Name**:<br />NoActiveLocation<br />**Hex**:<br />80060900<br />**Number**:<br />-2147088128|No active location found.|
+> |**Name**:<br />NoAddressFoundForRecipient<br />**Hex**:<br />80040b0a<br />**Number**:<br />-2147218678|Could not find email address for recipient of type '{0}' with ID '{1}'|
 > |**Name**:<br />NoAppModuleComponentReferred<br />**Hex**:<br />8005011B<br />**Number**:<br />-2147155685|No component is referenced|
 > |**Name**:<br />NoAttributesForEntityCreate<br />**Hex**:<br />80047014<br />**Number**:<br />-2147192812|No attributes for Create Entity action.|
 > |**Name**:<br />NoConditionRuleCreationNotAllowedForSetValueShowError<br />**Hex**:<br />80060013<br />**Number**:<br />-2147090413|The "Show error message" and "Set value" actions can't be used in a business rule that doesn't have a condition.|
-> |**Name**:<br />NoConnectionRoleAndObjectTypeCodePairPresent<br />**Hex**:<br />8004F222<br />**Number**:<br />-2147159518|There are no ConnectionRoleId and AssociatedObjectTypeCode pairs present. Entities being connected: ({0},{1}); Entity Records being connected: ({2},{3}); Record1ConnectionRoleName: {4}, Record2ConnectionRoleName: {5}. ConnectionRoleIds : {6}|
+> |**Name**:<br />NoConnectionRoleAndObjectTypeCodePairPresent<br />**Hex**:<br />8004F222<br />**Number**:<br />-2147159518|There are no ConnectionRoleId and AssociatedObjectTypeCode pairs present. Entities being connected: ({0},{1}); Entity Records being connected: ({2},{3}); Record1ConnectionRoleName: {4}, Record2ConnectionRoleName: {5}. ConnectionRoleIds: {6};|
 > |**Name**:<br />NoConversionRule<br />**Hex**:<br />800608F5<br />**Number**:<br />-2147088139|A ConversionRule is required for the tool to run.|
 > |**Name**:<br />NoDataFilterSelectedForOtherDataFilter<br />**Hex**:<br />80071138<br />**Number**:<br />-2147020488|The entity '{0}' in the profile '{1}' contained the Data Download Filter 'Other data filter' however no data filter option was selected. The entity must specify a data filter option.|
 > |**Name**:<br />NoDataForVisualization<br />**Hex**:<br />8004E011<br />**Number**:<br />-2147164143|There is no data to create this visualization.|
@@ -2071,6 +2187,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />NoLicenseInConfigDB<br />**Hex**:<br />8004D241<br />**Number**:<br />-2147167679|No license exists in MSCRM_CONFIG database.|
 > |**Name**:<br />NoMinimumRequiredPrivilegesForTabletApp<br />**Hex**:<br />8005F20F<br />**Number**:<br />-2147094001|You do not have sufficient permissions on the server to load the application.\nPlease contact your administrator to update your permissions.|
 > |**Name**:<br />NoMoreCustomOptionValuesExist<br />**Hex**:<br />8004431F<br />**Number**:<br />-2147204321|All available custom option values have been used.|
+> |**Name**:<br />NonAutoNumberAttributeSpecified<br />**Hex**:<br />80060884<br />**Number**:<br />-2147088252|Attribute {0} of entity {1} is not an Auto Number attribute. Please confirm the inputs for Attribute and Entity correctly map to an Auto Number attribute.|
 > |**Name**:<br />NoncompliantXml<br />**Hex**:<br />80048425<br />**Number**:<br />-2147187675|The input XML does not comply with the XML schema.|
 > |**Name**:<br />NonCrmUIInteractiveWorkflowNotSupported<br />**Hex**:<br />80045044<br />**Number**:<br />-2147200956|This interactive workflow cannot be created, updated or published because it was created outside the Microsoft Dynamics 365 Web application.|
 > |**Name**:<br />NonCrmUIWorkflowsNotSupported<br />**Hex**:<br />80045040<br />**Number**:<br />-2147200960|This workflow cannot be created, updated or published because it was created outside the Microsoft Dynamics 365 Web application. Your organization does not allow this type of workflow.|
@@ -2100,15 +2217,18 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />NotSupported<br />**Hex**:<br />80040315<br />**Number**:<br />-2147220715|This action is not supported.|
 > |**Name**:<br />NotVerifiedAdmin<br />**Hex**:<br />8005F106<br />**Number**:<br />-2147094266|You need an enterprise account with Yammer in order to complete this setup. Please sign in with a Yammer administrator account or contact a Yammer administrator for help.|
 > |**Name**:<br />NoUserPrivilege<br />**Hex**:<br />80154B50<br />**Number**:<br />-2146088112|You do not have sufficient permissions.|
+> |**Name**:<br />NoValidModernFlowTriggerForExecute<br />**Hex**:<br />80060476<br />**Number**:<br />-2147089290|Modern Flow '{0}' is not valid for ExecuteWorkflow.  Please select a Flow that triggers whenever a Common Data Service entity is created, updated, or deleted.|
 > |**Name**:<br />NoWritePermission<br />**Hex**:<br />80071023<br />**Number**:<br />-2147020765|You do not have Write permissions to copy the documents.|
 > |**Name**:<br />NoYammerNetworksFound<br />**Hex**:<br />8005F108<br />**Number**:<br />-2147094264|You are not authorized for any Yammer network. Please reauthorize the Yammer setup with a Yammer administrator account or contact a Yammer administrator for help.|
 > |**Name**:<br />NullArticleTemplateFormatXml<br />**Hex**:<br />800404f8<br />**Number**:<br />-2147220232|The article template formatxml cannot be NULL|
 > |**Name**:<br />NullArticleTemplateStructureXml<br />**Hex**:<br />800404f9<br />**Number**:<br />-2147220231|The article template structurexml cannot be NULL|
 > |**Name**:<br />NullArticleXml<br />**Hex**:<br />800404f7<br />**Number**:<br />-2147220233|The article xml cannot be NULL|
+> |**Name**:<br />NullAutoNumberParameterSpecfied<br />**Hex**:<br />80060887<br />**Number**:<br />-2147088249|Auto Number attribute or Entity parameters cannot be null or empty string.|
 > |**Name**:<br />NullDashboardName<br />**Hex**:<br />8004E305<br />**Number**:<br />-2147163387|The name of a dashboard cannot be null.|
 > |**Name**:<br />NullKBArticleTemplateId<br />**Hex**:<br />800404fa<br />**Number**:<br />-2147220230|The kbarticletemplateid cannot be NULL|
 > |**Name**:<br />NullOrEmptyAttributeInXaml<br />**Hex**:<br />80060406<br />**Number**:<br />-2147089402|Attribute - {0} of {1} cannot be null or empty|
 > |**Name**:<br />NumberFormatFailed<br />**Hex**:<br />80040259<br />**Number**:<br />-2147220903|Failed to produce a formatted numeric value.|
+> |**Name**:<br />O365RoleUnsupportedForEmailApproval<br />**Hex**:<br />8009000B<br />**Number**:<br />-2146893813|Email address can only be approved by an Office 365 Global Administrator or by an Exchange Administrator. For more information, contact your system administrator.|
 > |**Name**:<br />OAuthTokenNotFound<br />**Hex**:<br />8005F109<br />**Number**:<br />-2147094263|Yammer OAuth token is not found. You should configure Yammer before accessing any related feature.|
 > |**Name**:<br />ObjectAlreadyExists<br />**Hex**:<br />8004E30A<br />**Number**:<br />-2147163382|An object with id {0} already exists. Please change the id and try again.|
 > |**Name**:<br />ObjectDoesNotExist<br />**Hex**:<br />80040217<br />**Number**:<br />-2147220969|The specified object was not found.|
@@ -2150,11 +2270,12 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />OpenDocumentErrorCodeGeneric<br />**Hex**:<br />8005F20C<br />**Number**:<br />-2147094004|Try this action again. If the problem continues, check the {0} for solutions or contact your organization's {#Brand_CRM} Administrator. Finally, you can contact {1}.|
 > |**Name**:<br />OpenDocumentErrorCodeUnableToFindAnActivity<br />**Hex**:<br />8005F20A<br />**Number**:<br />-2147094006|Try this action again. If the problem continues, check the {0} for solutions or contact your organization's {#Brand_CRM} Administrator. Finally, you can contact {1}.|
 > |**Name**:<br />OpenDocumentErrorCodeUnableToFindTheDataId<br />**Hex**:<br />8005F20B<br />**Number**:<br />-2147094005|Try this action again. If the problem continues, check the {0} for solutions or contact your organization's {#Brand_CRM} Administrator. Finally, you can contact {1}.|
-> |**Name**:<br />OpenMailboxException<br />**Hex**:<br />8005E216<br />**Number**:<br />-2147098090|Exception occurs while opening mailbox for Exchaange mail server.|
+> |**Name**:<br />OpenMailboxException<br />**Hex**:<br />8005E216<br />**Number**:<br />-2147098090|Exception occurs while opening mailbox for Exchange mail server.|
 > |**Name**:<br />OperationCanBeCalledOnlyOnce<br />**Hex**:<br />80040334<br />**Number**:<br />-2147220684|The specified action can be done only one time.|
 > |**Name**:<br />OperationCanceled<br />**Hex**:<br />80060912<br />**Number**:<br />-2147088110|Refresh was canceled by user.|
 > |**Name**:<br />OperationFailedTryAgain<br />**Hex**:<br />80154B53<br />**Number**:<br />-2146088109|Operation could not be performed at the moment. Please try again.|
 > |**Name**:<br />OperationOrganizationNotFullyDisabled<br />**Hex**:<br />8004D23a<br />**Number**:<br />-2147167686|The {1} operation failed because organization {0} is not fully disabled yet.  Use FORCE to override|
+> |**Name**:<br />OperationReservedForSolutionAwareEntities<br />**Hex**:<br />80072008<br />**Number**:<br />-2147016696|This operation is reserved for solution-aware entities only.|
 > |**Name**:<br />OperatorCodeNotPresentError<br />**Hex**:<br />80044241<br />**Number**:<br />-2147204543|OperatorCode should be present in condition xml.|
 > |**Name**:<br />OperatorsInViewNotSupportedOffline<br />**Hex**:<br />80071127<br />**Number**:<br />-2147020505|One or more operators in this view are not supported offline.|
 > |**Name**:<br />OpportunityAlreadyInOpenState<br />**Hex**:<br />8004051a<br />**Number**:<br />-2147220198|The opportunity is already in the open state.|
@@ -2203,7 +2324,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ParsingMetadataNotFound<br />**Hex**:<br />80040367<br />**Number**:<br />-2147220633|Data required to parse the file, such as the data delimiter, field delimiter, or column headings, was not found.|
 > |**Name**:<br />PartialExpansionSettingLoadError<br />**Hex**:<br />8004E102<br />**Number**:<br />-2147163902|Failed to retrieve partial expansion settings from the configuration database.|
 > |**Name**:<br />PartialHolidayScheduleCreation<br />**Hex**:<br />8004F873<br />**Number**:<br />-2147157901|Partial holiday schedule can not be created.|
-> |**Name**:<br />ParticipatingEntityDoesNotAppearInTraversedPath<br />**Hex**:<br />80060441<br />**Number**:<br />-2147089343|Error displaying Business Process control. Participating entity must be part of traversed path, but entity '{0}' does not appear in path '{1}'. Please contact your system administrator.|
+> |**Name**:<br />ParticipatingEntityDoesNotAppearInTraversedPath<br />**Hex**:<br />80060441<br />**Number**:<br />-2147089343|Record for entity '{0}' is not in the traversed path '{1}'. Please contact your system administrator.|
 > |**Name**:<br />ParticipatingQueryEntityMismatch<br />**Hex**:<br />80044909<br />**Number**:<br />-2147202807|The entitytype of participating query should be the same as the entity specified in fetchxml.|
 > |**Name**:<br />PasswordRequiredForImpersonation<br />**Hex**:<br />8005E24E<br />**Number**:<br />-2147098034|Type in a password and save again|
 > |**Name**:<br />PatchMissingBase<br />**Hex**:<br />80048540<br />**Number**:<br />-2147187392|You can't import the patch ({0}) for the solution ({1}) because the solution isn't present. The operation has been canceled.|
@@ -2222,6 +2343,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />PluginSecureStoreAdalAcquireToken<br />**Hex**:<br />80091005<br />**Number**:<br />-2146889723|Unable to AcquireToken for resource|
 > |**Name**:<br />PluginSecureStoreKeyVaultClient<br />**Hex**:<br />80091000<br />**Number**:<br />-2146889728|Unable to initialize KeyVaultClientProvider under Sandbox WorkerProcess|
 > |**Name**:<br />PluginSecureStoreKeyVaultClientDecrypt<br />**Hex**:<br />80091003<br />**Number**:<br />-2146889725|Unable to Decrypt using KeyVault|
+> |**Name**:<br />PluginSecureStoreKeyVaultClientDeleteSecret<br />**Hex**:<br />80091010<br />**Number**:<br />-2146889712|Unable to DeleteSecret to KeyVault|
 > |**Name**:<br />PluginSecureStoreKeyVaultClientEncrypt<br />**Hex**:<br />80091004<br />**Number**:<br />-2146889724|Unable to Encrypt using KeyVault|
 > |**Name**:<br />PluginSecureStoreKeyVaultClientGetSecret<br />**Hex**:<br />80091001<br />**Number**:<br />-2146889727|Unable to GetSecret from KeyVault|
 > |**Name**:<br />PluginSecureStoreKeyVaultClientSetSecret<br />**Hex**:<br />80091002<br />**Number**:<br />-2146889726|Unable to SetSecret to KeyVault|
@@ -2242,6 +2364,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />PreviousOperationNotComplete<br />**Hex**:<br />80048464<br />**Number**:<br />-2147187612|An operation on which this operation depends did not complete successfully.|
 > |**Name**:<br />PriceLevelNameExists<br />**Hex**:<br />80043b0f<br />**Number**:<br />-2147206385|The name already exists.|
 > |**Name**:<br />PriceLevelNoName<br />**Hex**:<br />80043b0e<br />**Number**:<br />-2147206386|The name can not be null.|
+> |**Name**:<br />PriceListIsMandatory<br />**Hex**:<br />80100010<br />**Number**:<br />-2146435056|PriceList is mandatory for creating entity.|
 > |**Name**:<br />PrimaryEntityInvalid<br />**Hex**:<br />8004501E<br />**Number**:<br />-2147200994|Invalid primary entity.|
 > |**Name**:<br />PrimaryEntityIsNull<br />**Hex**:<br />80060401<br />**Number**:<br />-2147089407|Primary Entity cannot be NULL while creating business process flow category|
 > |**Name**:<br />PrimaryNameAttributeNotFound<br />**Hex**:<br />80044355<br />**Number**:<br />-2147204267|PrimaryName attribute not found for Entity: {0}|
@@ -2256,10 +2379,13 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ProcessActionWithInvalidInputParam<br />**Hex**:<br />80045057<br />**Number**:<br />-2147200937|Process Action contains a field in input parameter that is unsupported on Action Steps. Refer to {0} |
 > |**Name**:<br />ProcessActionWithInvalidOutputParam<br />**Hex**:<br />80045056<br />**Number**:<br />-2147200938|Process Action contains a field in output parameter that is unsupported on Action Steps. Refer to {0}.|
 > |**Name**:<br />ProcessActionWorkflowNotEnabledForOnDemand<br />**Hex**:<br />80060380<br />**Number**:<br />-2147089536|Process Action or Workflow must be enabled for on-demand execution to be available for action steps.|
+> |**Name**:<br />ProcessControlDoesNotExistOnForm<br />**Hex**:<br />80060372<br />**Number**:<br />-2147089550|Process Control does not exist on form|
 > |**Name**:<br />ProcessEmptyBranches<br />**Hex**:<br />80060399<br />**Number**:<br />-2147089511|This process contains empty branches. Define or delete these branches and try again.|
+> |**Name**:<br />ProcessFileFailure<br />**Hex**:<br />80072554<br />**Number**:<br />-2147015340|Error occured when processing file. Reason: {0}|
 > |**Name**:<br />ProcessIdDoesNotMatchBusinessProcessDefinition<br />**Hex**:<br />80060460<br />**Number**:<br />-2147089312|Validation error: Process ID does not match Business Process definition.|
 > |**Name**:<br />ProcessIdIsEmpty<br />**Hex**:<br />80060459<br />**Number**:<br />-2147089319|Validation error: Process ID cannot be empty.|
 > |**Name**:<br />ProcessImageFailure<br />**Hex**:<br />80072553<br />**Number**:<br />-2147015341|Error occured when processing image. Reason: {0}|
+> |**Name**:<br />ProcessInstanceNotFound<br />**Hex**:<br />80060370<br />**Number**:<br />-2147089552|Supplied process instance {0} does not match any existing instance on this entity {1}|
 > |**Name**:<br />ProcessNameContainsInvalidCharacters<br />**Hex**:<br />80060398<br />**Number**:<br />-2147089512|The business process name contains invalid characters.|
 > |**Name**:<br />ProcessNameIsNullOrEmpty<br />**Hex**:<br />80060418<br />**Number**:<br />-2147089384|The business process flow name is NULL or empty. |
 > |**Name**:<br />ProcessStageIdIsEmpty<br />**Hex**:<br />80060461<br />**Number**:<br />-2147089311|Validation error: Primary Stage ID cannot be empty.|
@@ -2369,7 +2495,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />QueueMailboxUnexpectedDeliveryMethod<br />**Hex**:<br />8005E210<br />**Number**:<br />-2147098096|Delivery method for mailbox associated with a queue cannot be outlook client.|
 > |**Name**:<br />QuickCreateDisabledOnEntity<br />**Hex**:<br />80060911<br />**Number**:<br />-2147088111|The {0} entity doesn't have a quick create form or the number of nested quick create forms has exceeded the maximum number allowed.|
 > |**Name**:<br />QuickCreateInvalidEntityName<br />**Hex**:<br />80060910<br />**Number**:<br />-2147088112|The entityLogicalName isn't valid. This value can't be null or empty, and it must represent an entity in the organization.|
-> |**Name**:<br />QuickFindQueryRecordLimitExceeded<br />**Hex**:<br />8004E024<br />**Number**:<br />-2147164124|QuickFindQueryRecordLimit exceeded. Cannot perform this operation.|
+> |**Name**:<br />QuickFindQueryRecordLimitExceeded<br />**Hex**:<br />8004E024<br />**Number**:<br />-2147164124|The number of records for this search exceeds the Quick Search record limit. Please refine your query and try again.|
 > |**Name**:<br />QuickFindSavedQueryAlreadyExists<br />**Hex**:<br />8004853A<br />**Number**:<br />-2147187398|"Only one quickfind saved query can exist for an entity. There already exists a quick-find saved query for entity with objecttypecode: {0}"|
 > |**Name**:<br />QuickFormNotCustomizableThroughSdk<br />**Hex**:<br />8004F659<br />**Number**:<br />-2147158439|The SDK does not support creating a form of type "Quick". This form type is reserved for internal use only.|
 > |**Name**:<br />QuoteAndSalesOrderCurrencyNotEqual<br />**Hex**:<br />80048cee<br />**Number**:<br />-2147185426|The currency of the record does not match the currency of the price list.|
@@ -2380,6 +2506,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />ReadOnlyUpdateValidationFailed<br />**Hex**:<br />80061003<br />**Number**:<br />-2147086333|You can't update the property instance for a read-only property.|
 > |**Name**:<br />ReadOnlyUserNotSupported<br />**Hex**:<br />80041d40<br />**Number**:<br />-2147214016|The read-only access mode is not supported|
 > |**Name**:<br />RecalculateNotSupportedOnNonRollupField<br />**Hex**:<br />80060554<br />**Number**:<br />-2147089068|Field {0} of type {1} does not support Recalculate action. Recalculate action can only be invoked for rollup field.|
+> |**Name**:<br />RecipientMarkedDoNotEmail<br />**Hex**:<br />80040b09<br />**Number**:<br />-2147218679|Recipient of type '{0}' with ID '{1}' is marked as non-emailable|
 > |**Name**:<br />RecommendationAzureConnectionCascadeActivateFailed<br />**Hex**:<br />80061633<br />**Number**:<br />-2147084749|One or more recommendation models couldn't be activated. Try activating the existing recommendation models separately from the Azure service connection.|
 > |**Name**:<br />RecommendationAzureConnectionFailed<br />**Hex**:<br />80061631<br />**Number**:<br />-2147084751|Failed to connect to the Azure Recommendations service. Check that the service URL and the Azure account key are valid and the service subscription is active.|
 > |**Name**:<br />RecommendationModelActivateConnectionMustBeActive<br />**Hex**:<br />80061607<br />**Number**:<br />-2147084793|The Azure Machine Learning recommendation service connection must be activated before the model can be activated. Please activate the recommendation service connection and try again.|
@@ -2424,6 +2551,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />RelatedEntityGenericError<br />**Hex**:<br />8005F220<br />**Number**:<br />-2147093984|An unexpected error occurred while creating the profile association. Please try again.|
 > |**Name**:<br />RelatedRecordsFailure<br />**Hex**:<br />80071013<br />**Number**:<br />-2147020781|Failed to retrieve related records.|
 > |**Name**:<br />RelationshipGraphLimitExceeded<br />**Hex**:<br />80071139<br />**Number**:<br />-2147020487|You have specified one or more profile item associations for the entities defined in the profile '{0}'. Please review the profile item associations involving the entity '{1}' which has an association count of {2} and exceeds the supported limit of {3}.|
+> |**Name**:<br />RelationshipGraphLimitExceededForIntersectEntity<br />**Hex**:<br />80071135<br />**Number**:<br />-2147020491|You have specified one or more profile item associations for the entities defined in the profile '{0}' and related to the intersect entity '{1}'. Please review the profile item associations involving the entities '{2}' and '{3}' which have a total association count of {4} and exceeds the supported limit of {5}.|
 > |**Name**:<br />RelationshipInsightsFeatureDisableError<br />**Hex**:<br />80044292<br />**Number**:<br />-2147204462|Relationship Insights feature can't be disabled|
 > |**Name**:<br />RelationshipInsightsFeatureNotEnabledError<br />**Hex**:<br />80044293<br />**Number**:<br />-2147204461|Relationship Insights feature is not enabled or RI package is not installed|
 > |**Name**:<br />RelationshipIntelligenceSDKInvocationError<br />**Hex**:<br />80044276<br />**Number**:<br />-2147204490|You need Dynamics 365 (online) to use the Relationship Insights SDK.|
@@ -2433,7 +2561,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />RelationshipNotUpdatedForOfficeGraphError<br />**Hex**:<br />80044236<br />**Number**:<br />-2147204554|This relationship cannot be updated for officegraph because neither entity is enabled for officegraph.|
 > |**Name**:<br />RelationshipRoleMismatch<br />**Hex**:<br />80048467<br />**Number**:<br />-2147187609|The relationship role name {0} does not match either expected entity name of {1} or {2}.|
 > |**Name**:<br />RelationshipRoleNodeNumberInvalid<br />**Hex**:<br />80048469<br />**Number**:<br />-2147187607|There must be two entity relationship role nodes when creating a new many-to-many entity relationship.|
+> |**Name**:<br />RelationshipSchemaNameConflictWithFieldNameOnReferencedEntity<br />**Hex**:<br />80048835<br />**Number**:<br />-2147186635|RelationshipName {0} conflict with attribute name on entity {1} (entityid={2}). Please use unique name for relationship.|
 > |**Name**:<br />RelatioshipAlreadyExists<br />**Hex**:<br />8005F221<br />**Number**:<br />-2147093983|Selected Relationship for entity already exists in profile. |
+> |**Name**:<br />RemoveActiveCustomizationsNotSupported<br />**Hex**:<br />8004F059<br />**Number**:<br />-2147159975|RemoveActiveCustomizations is not supported for components of type {0}|
 > |**Name**:<br />ReportDoesNotExist<br />**Hex**:<br />80040499<br />**Number**:<br />-2147220327|Report does not exist. ReportId:{0}|
 > |**Name**:<br />ReportFileTooBig<br />**Hex**:<br />80048297<br />**Number**:<br />-2147188073|The file is too large and cannot be uploaded. Please reduce the size of the file and try again.|
 > |**Name**:<br />ReportFileZeroLength<br />**Hex**:<br />80048296<br />**Number**:<br />-2147188074|You have uploaded an empty file.  Please select a new file and try again.|
@@ -2467,6 +2597,8 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />RequiredChildReportHasOtherParent<br />**Hex**:<br />8004F029<br />**Number**:<br />-2147160023|A category option for the reports was not found.|
 > |**Name**:<br />RequiredColumnsNotFoundInImportFile<br />**Hex**:<br />80040383<br />**Number**:<br />-2147220605|One or more source columns used in the transformation do not exist in the source file.|
 > |**Name**:<br />RequiredFieldMissing<br />**Hex**:<br />80040200<br />**Number**:<br />-2147220992|Required field missing.|
+> |**Name**:<br />RequiredProcessFlowStepIsNotComplete<br />**Hex**:<br />8006041d<br />**Number**:<br />-2147089379|You cannot move to the next stage or complete the process until the required Flow Step or Approval Step on the current stage is completed.|
+> |**Name**:<br />RequiredProcessFlowStepIsNotStarted<br />**Hex**:<br />8006041e<br />**Number**:<br />-2147089378|To move to the next stage or complete the process, click the required Flow Step or Approval Step on the current stage. You cannot move stages or complete the process until the required Flow Step or Approval Step on the current stage is completed.|
 > |**Name**:<br />RequiredProcessStepIsNull<br />**Hex**:<br />8006041a<br />**Number**:<br />-2147089382|To move to the next stage, complete the required steps.|
 > |**Name**:<br />RequireValidImportMapForUpdate<br />**Hex**:<br />8004F600<br />**Number**:<br />-2147158528|The update operation cannot be completed because the import map used for the update is invalid.|
 > |**Name**:<br />RestrictedSolutionName<br />**Hex**:<br />8004F022<br />**Number**:<br />-2147160030|The solution unique name '{0}' is restricted and can only be used by internal solutions.|
@@ -2490,6 +2622,8 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />RibbonImportModifyingTopLevelNode<br />**Hex**:<br />8004F108<br />**Number**:<br />-2147159800|Ribbon customizations cannot be made to the following top-level ribbon nodes: <Ribbon>, <ContextualGroups>, and <Tabs>.|
 > |**Name**:<br />RibbonImportRibbonDiffIdInvalidLength<br />**Hex**:<br />8004F10C<br />**Number**:<br />-2147159796|We can’t import this ribbon element because the ID length exceeds the maximum length of 128 characters: {0}|
 > |**Name**:<br />RINotProvisioned<br />**Hex**:<br />80044281<br />**Number**:<br />-2147204479|Relationship Insights hasn’t been turned on for your organization {0}.|
+> |**Name**:<br />RoboticProcessAutomationFlowProcessesNotEnabled<br />**Hex**:<br />80060471<br />**Number**:<br />-2147089295|Creation of Reserved processes is not enabled.|
+> |**Name**:<br />RoboticProcessAutomationFlowProcessesOnlyAvailableOnline<br />**Hex**:<br />80060472<br />**Number**:<br />-2147089294|Creation of Reserved processes is only available online.|
 > |**Name**:<br />RoleAlreadyExists<br />**Hex**:<br />80041403<br />**Number**:<br />-2147216381|A role with the specified name '{0}' already exists on business unit {1} and Solution Id {3}. Role id: {2}|
 > |**Name**:<br />RoleNotEnabledForTabletApp<br />**Hex**:<br />8005F203<br />**Number**:<br />-2147094013|You haven't been authorized to use this app.\nCheck with your system administrator to update your settings.|
 > |**Name**:<br />RollupAggregateQueryRecordLimitExceeded<br />**Hex**:<br />8004E025<br />**Number**:<br />-2147164123|Calculations can't be performed online because the calculation limit of {0} related records has been reached.|
@@ -2574,6 +2708,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />SalesPeopleEmptyEffectiveDate<br />**Hex**:<br />80043801<br />**Number**:<br />-2147207167|Fiscal calendar effective date cannot be empty|
 > |**Name**:<br />SalesPeopleEmptySalesPerson<br />**Hex**:<br />80043800<br />**Number**:<br />-2147207168|Parent salesperson cannot be empty|
 > |**Name**:<br />SalesPeopleManagerNotAllowed<br />**Hex**:<br />80043805<br />**Number**:<br />-2147207163|Territory manager cannot belong to other territory|
+> |**Name**:<br />SameSolutionCircularDependenciesIdentified<br />**Hex**:<br />80072007<br />**Number**:<br />-2147016697|Circular dependencies were identified for this solution.|
 > |**Name**:<br />SandboxClientPluginTimeout<br />**Hex**:<br />80044171<br />**Number**:<br />-2147204751|The plug-in execution failed because the operation has timed-out at the Sandbox Client.|
 > |**Name**:<br />SandboxHostNotAvailable<br />**Hex**:<br />8004418e<br />**Number**:<br />-2147204722|The plug-in execution failed because no Sandbox Hosts are currently available. Please check that you have a Sandbox server configured and that it is running.|
 > |**Name**:<br />SandboxHostPluginTimeout<br />**Hex**:<br />80044172<br />**Number**:<br />-2147204750|The plug-in execution failed because the operation has timed-out at the Sandbox Host.|
@@ -2672,11 +2807,12 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />SkipValidDateTimeBehavior<br />**Hex**:<br />800608A3<br />**Number**:<br />-2147088221|The behavior value for this field was ignored. A System Customizer will need to configure the behavior value for this field directly.|
 > |**Name**:<br />SlaActivateDeactivateByNonOwner<br />**Hex**:<br />8004F872<br />**Number**:<br />-2147157902|This SLA cannot be activated or deactivated by someone who is not its owner.|
 > |**Name**:<br />SlaAlreadyInactiveState<br />**Hex**:<br />8004F861<br />**Number**:<br />-2147157919|You can't activate this record because it's already active.|
-> |**Name**:<br />SlaAlreadyInDraftState <br />**Hex**:<br />8004F862<br />**Number**:<br />-2147157918|You can't deactivate this record because it's in a draft state.|
+> |**Name**:<br />SlaAlreadyInDraftState<br />**Hex**:<br />8004F862<br />**Number**:<br />-2147157918|You can't deactivate this record because it's in a draft state.|
 > |**Name**:<br />SlaNotEnabledEntity<br />**Hex**:<br />80055003<br />**Number**:<br />-2147135485|SLA is not enabled for this entity.|
 > |**Name**:<br />SlaPermissionToPerformAction<br />**Hex**:<br />8004F875<br />**Number**:<br />-2147157899|You don't have the required permissions on SLAs and processes to perform this action.|
 > |**Name**:<br />SnapshotReportNotReady<br />**Hex**:<br />80040489<br />**Number**:<br />-2147220343|The selected report is not ready for viewing. The report is still being created or a report snapshot is not available. ReportId:{0}|
 > |**Name**:<br />SocialCareDisabledError<br />**Hex**:<br />80060621<br />**Number**:<br />-2147088863|There's a problem communicating with the Dynamics 365 Organization. The organization might be unavailable or the feature is set so that it can't receive social data. Try again later. If the problem persists, contact your Microsoft Dynamics 365 administrator.|
+> |**Name**:<br />SolutionComponentDefinitionNotAvailable<br />**Hex**:<br />8007200A<br />**Number**:<br />-2147016694|Cannot create component definition for solution-aware entity {0}.|
 > |**Name**:<br />SolutionConcurrencyFailure<br />**Hex**:<br />80071151<br />**Number**:<br />-2147020463|The solution installation or removal failed due to the installation or removal of another solution at the same time. Please try again later.|
 > |**Name**:<br />SolutionConfigurationPageMustBeHtmlWebResource<br />**Hex**:<br />8004701C<br />**Number**:<br />-2147192804|The solution configuration page must exist within the solution it represents.|
 > |**Name**:<br />SolutionImportCauseTimeout<br />**Hex**:<br />80048543<br />**Number**:<br />-2147187389|The operation timed out. This may be because a solution is currently being imported into this environment. Please try again after the solution import is completed. Solutions should be imported outside of working hours if possible.|
@@ -2684,6 +2820,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />SolutionUniqueNameViolation<br />**Hex**:<br />8004F023<br />**Number**:<br />-2147160029|The solution unique name '{0}' is already being used and cannot be used again.|
 > |**Name**:<br />SolutionUpgradeFailed<br />**Hex**:<br />8004F046<br />**Number**:<br />-2147159994|Solution Upgrade action failed after import as holding. InnerException is: {1}.|
 > |**Name**:<br />SolutionUpgradeNotAvailable<br />**Hex**:<br />8004853B<br />**Number**:<br />-2147187397|"The {0} solution doesn’t have an upgrade that is ready to be applied."|
+> |**Name**:<br />SolutionUpgradeOfApiManagedSolutionError<br />**Hex**:<br />8004803C<br />**Number**:<br />-2147188676|The import has failed because an ApiManaged solution cannot be updated.|
 > |**Name**:<br />SolutionUpgradeWrongSolutionSelected<br />**Hex**:<br />8004853C<br />**Number**:<br />-2147187396|"To use this action, you must first select the old solution and then try again."|
 > |**Name**:<br />SourceAttributeHeaderTooBig<br />**Hex**:<br />80044340<br />**Number**:<br />-2147204288|Column headers must be 160 or fewer characters. Fix the column headers, and then run Data Migration Manager again.|
 > |**Name**:<br />SourceEntityMappedToMultipleTargets<br />**Hex**:<br />8004033d<br />**Number**:<br />-2147220675|This source entity is mapped to more than one Microsoft Dynamics 365 entity. Remove any duplicate mappings, and then import this data map again.|
@@ -2793,6 +2930,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />StageIdIsEmpty<br />**Hex**:<br />80060454<br />**Number**:<br />-2147089324|Validation error: Stage ID cannot be empty.|
 > |**Name**:<br />StageIdIsNotPresentInBusinessProcess<br />**Hex**:<br />80060450<br />**Number**:<br />-2147089328|Validation error: Stage ID ‘{0}’ is not present in Business Process. Please contact your system administrator.|
 > |**Name**:<br />StageIdIsNotValid<br />**Hex**:<br />80060458<br />**Number**:<br />-2147089320|Validation error: Stage ID is not valid for Business Process.|
+> |**Name**:<br />StandAloneBpfNotActivated<br />**Hex**:<br />80060470<br />**Number**:<br />-2147089296|Stand Alone BPF must be activated on Flows page.|
 > |**Name**:<br />StateTransitionActivateNewStatus<br />**Hex**:<br />8004F857<br />**Number**:<br />-2147157929|You can't activate this record because of the status transition rules.Contact your system administrator.|
 > |**Name**:<br />StateTransitionActiveToCanceled<br />**Hex**:<br />8004F855<br />**Number**:<br />-2147157931|Because of the status transition rules, you can't cancel the case in the current status.Change the case status, and then try canceling it, or contact your system administrator.|
 > |**Name**:<br />StateTransitionActiveToResolve<br />**Hex**:<br />8004F854<br />**Number**:<br />-2147157932|Because of the status transition rules, you can't resolve a case in the current status.Change the case status, and then try resolving it, or contact your system administrator.|
@@ -2817,7 +2955,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />SupportUserCannotBeCreateNorUpdated<br />**Hex**:<br />80041d41<br />**Number**:<br />-2147214015|The support user cannot be updated|
 > |**Name**:<br />SyncAttributeMappingCannotBeUpdated<br />**Hex**:<br />80060741<br />**Number**:<br />-2147088575|The sync attribute mapping cannot be updated.|
 > |**Name**:<br />SyncToMsdeFailure<br />**Hex**:<br />80048407<br />**Number**:<br />-2147187705|Failed to start or connect to the offline mode MSDE database.|
-> |**Name**:<br />SystemAttributeMap<br />**Hex**:<br />80046205<br />**Number**:<br />-2147196411|SystemAttributeMap Error Occurred|
+> |**Name**:<br />SystemAttributeMap<br />**Hex**:<br />80046205<br />**Number**:<br />-2147196411|Cannot create or delete system attribute map having id {0} from {1} to {2} belonging to an entity map with id {3} from {4} to {5}.|
 > |**Name**:<br />SystemEntityMap<br />**Hex**:<br />80046202<br />**Number**:<br />-2147196414|SystemEntityMap Error Occurred|
 > |**Name**:<br />SystemFormCopyUnmatchedEntity<br />**Hex**:<br />8004F656<br />**Number**:<br />-2147158442|The entity for the Target and the SourceId must match.|
 > |**Name**:<br />SystemFormCopyUnmatchedFormType<br />**Hex**:<br />8004F657<br />**Number**:<br />-2147158441|The form type of the SourceId is not valid for the Target entity.|
@@ -2877,6 +3015,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />TooManyConditionsInQuery<br />**Hex**:<br />8004430C<br />**Number**:<br />-2147204340|Number of conditions in query exceeded maximum limit.|
 > |**Name**:<br />TooManyEntitiesEnabledForAutoCreatedAccessTeams<br />**Hex**:<br />80048332<br />**Number**:<br />-2147187918|Too many entities enabled for auto created access teams.|
 > |**Name**:<br />TooManyLinkEntitiesInQuery<br />**Hex**:<br />8004430D<br />**Number**:<br />-2147204339|Number of link entities in query exceeded maximum limit.|
+> |**Name**:<br />TooManyModernFlowTriggersForExecute<br />**Hex**:<br />80060477<br />**Number**:<br />-2147089289|Cannot execute Modern Flow '{0}' because more than one callback is registered.|
 > |**Name**:<br />TooManyMultiSelectConditionParametersInQuery<br />**Hex**:<br />80050223<br />**Number**:<br />-2147155421|Number of multiselect condition parameters in query exceeded maximum limit: {0}.|
 > |**Name**:<br />TooManyPicklistValues<br />**Hex**:<br />80048492<br />**Number**:<br />-2147187566|Number of distinct picklist values exceed the limit.|
 > |**Name**:<br />TooManyRecipients<br />**Hex**:<br />8004350e<br />**Number**:<br />-2147207922|Sending to multiple recipients is not supported.|
@@ -2889,6 +3028,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />TopicModelTestWithoutConfiguration<br />**Hex**:<br />80061654<br />**Number**:<br />-2147084716|Specify the configuration used for the build.|
 > |**Name**:<br />TraceMessageConstructionError<br />**Hex**:<br />8004F900<br />**Number**:<br />-2147157760|The trace record has an invalid trace code or an insufficient number of trace parameters.|
 > |**Name**:<br />TransactionAborted<br />**Hex**:<br />80040255<br />**Number**:<br />-2147220907|Transaction Aborted.|
+> |**Name**:<br />TransactionAbortedByIsvException<br />**Hex**:<br />80048550<br />**Number**:<br />-2147187376|Transaction Aborted by ISV code exception in pre-commit stage. See inner exception for detailed information.|
 > |**Name**:<br />TransactionNotCommited<br />**Hex**:<br />80040252<br />**Number**:<br />-2147220910|Transaction not committed.|
 > |**Name**:<br />TransactionNotStarted<br />**Hex**:<br />80040251<br />**Number**:<br />-2147220911|Transaction not started.|
 > |**Name**:<br />TransactionNotSupported<br />**Hex**:<br />8005E007<br />**Number**:<br />-2147098617|The operation that you are trying to perform does not support transactions.|
@@ -3352,7 +3492,7 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />UserNameRequiredForImpersonation<br />**Hex**:<br />8005E24D<br />**Number**:<br />-2147098035|Type in a user name and save again|
 > |**Name**:<br />UserNeverLoggedIntoYammer<br />**Hex**:<br />8005F111<br />**Number**:<br />-2147094255|To follow other users, you must be logged in to Yammer. Log in to your Yammer account, and try again.|
 > |**Name**:<br />UserNotAssignedLicense<br />**Hex**:<br />8004D24B<br />**Number**:<br />-2147167669|The user has not been assigned any License|
-> |**Name**:<br />UserNotAssignedRoles<br />**Hex**:<br />80042f09<br />**Number**:<br />-2147209463|The user has not been assigned any roles.|
+> |**Name**:<br />UserNotAssignedRoles<br />**Hex**:<br />80042f09<br />**Number**:<br />-2147209463|The user (Id = {0}) has not been assigned any roles.|
 > |**Name**:<br />UserNotInParentHierarchy<br />**Hex**:<br />80041d07<br />**Number**:<br />-2147214073|The user is not in parent user's business hierarchy.|
 > |**Name**:<br />UserNotMemberOfOrg<br />**Hex**:<br />80072560<br />**Number**:<br />-2147015328|The user is not a member of the organization.|
 > |**Name**:<br />UserSettingsInvalidAdvancedFindStartupMode<br />**Hex**:<br />80041d34<br />**Number**:<br />-2147214028|Invalid advanced find startup mode.|
@@ -3402,10 +3542,12 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />WebResourceNameInvalidCharacters<br />**Hex**:<br />8004F117<br />**Number**:<br />-2147159785|Web resource names may only include letters, numbers, periods, and nonconsecutive forward slash characters.|
 > |**Name**:<br />WebResourceNameInvalidFileExtension<br />**Hex**:<br />8004F119<br />**Number**:<br />-2147159783|A Web resource cannot have the following file extensions: .aspx, .ascx, .asmx or .ashx.|
 > |**Name**:<br />WebResourceNameInvalidPrefix<br />**Hex**:<br />8004F118<br />**Number**:<br />-2147159784|Webresource name does not contain a valid prefix.|
+> |**Name**:<br />WebResourcePreventingFormSave<br />**Hex**:<br />80060369<br />**Number**:<br />-2147089559|Unable to save form data due to web resource registered onSave invoking preventDefault.|
 > |**Name**:<br />WopiApplicationUrl<br />**Hex**:<br />80060802<br />**Number**:<br />-2147088382|Error in retrieving information from WOPI application url.|
 > |**Name**:<br />WopiDiscoveryFailed<br />**Hex**:<br />80060800<br />**Number**:<br />-2147088384|Request for retrieving the WOPI discovery XML failed.|
 > |**Name**:<br />WopiMaxFileSizeExceeded<br />**Hex**:<br />80060803<br />**Number**:<br />-2147088381|{0} file exceeded size limit of {1}.|
 > |**Name**:<br />WordTemplateFeatureNotEnabled<br />**Hex**:<br />800608DB<br />**Number**:<br />-2147088165|Word document template feature is not enabled.|
+> |**Name**:<br />WorkerProcessCrashFailure<br />**Hex**:<br />80072031<br />**Number**:<br />-2147016655|This operation failed due to a worker process crash.|
 > |**Name**:<br />WorkflowActivityNotSupported<br />**Hex**:<br />80045045<br />**Number**:<br />-2147200955|This workflow cannot be created, updated or published because it's referring unsupported workflow step.|
 > |**Name**:<br />WorkflowAutomaticallyDeactivated<br />**Hex**:<br />80045042<br />**Number**:<br />-2147200958|The original workflow definition has been deactivated and replaced.|
 > |**Name**:<br />WorkflowCompileFailure<br />**Hex**:<br />80045001<br />**Number**:<br />-2147201023|An error has occurred during compilation of the workflow.|

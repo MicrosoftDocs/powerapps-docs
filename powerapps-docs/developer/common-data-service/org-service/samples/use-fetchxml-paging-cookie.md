@@ -3,10 +3,10 @@ title: "Sample: Use FetchXML with a paging cookie (Common Data Service) | Micros
 description: "This sample shows how to use the paging cookie in a FetchXML" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -41,11 +41,9 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `fetchXml` creates the FetchXML string for retrieving all child accounts to a parent account. This fetch query is using 1 placeholder to specify the parent account id for filtering out required accounts.
+The `fetchXml` creates the FetchXML string for retrieving all child accounts to a parent account. This fetch query is using 1 placeholder to specify the parent account id for filtering out required accounts.
 
 ### Clean up
 
-1. Displays an option to delete all the data created in the sample.
-
-The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
+Displays an option to delete all the data created in the sample. The deletion is optional in case you want to examine the data created by the sample. You can manually delete the data to achieve same results.
 

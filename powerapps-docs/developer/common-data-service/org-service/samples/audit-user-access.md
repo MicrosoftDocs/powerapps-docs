@@ -3,10 +3,10 @@ title: "Sample: Audit user access (Common Data Service) | Microsoft Docs" # Inte
 description: "This sample shows how to audit user access" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -40,13 +40,11 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Get's the organization's ID from the system user record and retrieves organization record.
+1. Gets the organization's ID from the system user record and retrieves organization record.
 2. Enables auditing on the organization, including auditing for user access.
 3. Makes an update request to the account entity to be tracked by auditing.
 4. set the organization and account auditing flags back to old values and retrieve them if they were actually changed.
 
 ### Clean up
 
-1. Display an option to delete the records created during [Setup](#setup). 
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created during [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

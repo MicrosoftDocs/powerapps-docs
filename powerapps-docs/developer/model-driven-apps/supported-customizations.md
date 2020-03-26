@@ -1,13 +1,13 @@
 ---
 title: "Get started with Model-driven Apps customization using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "You can customize Model-driven apps by using tools that are available in the PowerApps portal or that are described in the documentation. " # 115-145 characters including spaces. This abstract displays in the search result.
+description: "You can customize Model-driven apps by using tools that are available in the Power Apps portal or that are described in the documentation. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: "Nkrb" # GitHub ID
+ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -21,20 +21,20 @@ search.app:
 Split to just include MDA issues
  -->
 
-You can customize Model-driven apps by using tools that are available in the PowerApps portal or that are described in the documentation. These customizations are supported and can be upgraded.
+You can customize Model-driven apps by using tools that are available in the Power Apps portal or that are described in the documentation. These customizations are supported and can be upgraded.
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Model-driven apps. For more information, see [Unsupported customizations](#unsupported-customizations) later in this topic.
 
 Topics covered in technical articles published on Microsoft sites such as this one are supported, but might not be upgradable.
 
 
-## Customizations using PowerApps portal
+## Customizations using Power Apps portal
 
 There are a variety of tools included with Model-driven apps that you can use to customize them. Customizations made using the Model-driven apps tools are fully supported and fully upgradeable.
 
 The following customization methods can be used to produce fully supported customizations:
 
-- Customization in the PowerApps portal or solution explorer. For more information, see [Overview of building a Model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
+- Customization in the Power Apps portal or solution explorer. For more information, see [Overview of building a Model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
 
 - Settings in the web application. For more information, see [Administer Model-driven apps](/dynamics365/customer-engagement/admin/admin-guide).
 
@@ -69,7 +69,7 @@ Use of `RibbonDiffXml` to add, remove, or hide ribbon elements is supported. Reu
 
 ## Unsupported customizations
 
-Modifications to Model-driven apps that are made without using either the methods described in this documentation or PowerApps portal tools are not supported and are not preserved during updates or upgrades of Model-driven apps. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade Model-driven apps.
+Modifications to Model-driven apps that are made without using either the methods described in this documentation or Power Apps portal tools are not supported and are not preserved during updates or upgrades of Model-driven apps. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade Model-driven apps.
 
 The following is a list of unsupported action types that are frequently asked about: 
 

@@ -6,18 +6,19 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 11/10/2017
+ms.reviewer: tapanm
+ms.date: 10/23/2019
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Create a rule in PowerApps
-Create rules to automatically modify an app based on criteria that you specify. For example, show list items in red, yellow, or green based on their status, or show an approval button only for certain users (such as managers).
+# Create a rule in canvas apps
+Create rules to automatically modify an app based on criteria that you specify. For example, show list items in red, yellow, or green based on their status, or show an approval button only for certain users (such as managers). You can add rules to a variety of controls. In this topic, you'll add a rule to change the text color of a **Label** control if the value of a **Slider** control is greater than 70.
 
-You can add rules to a variety of controls. In this topic, you'll add a rule to change the text color of a **Label** control if the value of a **Slider** control is greater than 70.
+> [!IMPORTANT]
+> Effective October 14, 2019, the rules feature in canvas apps is deprecated. More information: [Blog: Canvas Rules feature deprecation](https://powerapps.microsoft.com/blog/canvas-rules-feature-deprecation/).
 
 ## Add a rule
 1. Select a control (or add a control and leave it selected).
@@ -45,13 +46,13 @@ A condition is an expression that evaluates to true or false, such as whether a 
     <br>**Slider1.Value > 70**
 
 ## Add an action
-Actions define what happens when the rule is applied. PowerApps can create actions automatically based on changes you make to controls.
+Actions define what happens when the rule is applied. Power Apps can create actions automatically based on changes you make to controls.
 
 1. Click or tap **Define actions**.
 
     ![Define actions](./media/working-with-rules/rule-define-actions.png)
 
-1. In the confirmation dialog box, click or tap **Let's go** so that PowerApps will capture your next change or changes as one or more actions.
+1. In the confirmation dialog box, click or tap **Let's go** so that Power Apps will capture your next change or changes as one or more actions.
 
 1. Configure one or more controls to match your expectations when the condition is true.
 

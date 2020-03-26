@@ -1,12 +1,12 @@
 ---
 title: UpdateContext function | Microsoft Docs
-description: Reference information, including syntax and examples, for the UpdateContext function in PowerApps
+description: Reference information, including syntax and examples, for the UpdateContext function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/08/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# UpdateContext function in PowerApps
+# UpdateContext function in Power Apps
 Creates or updates [context variables](../working-with-variables.md#use-a-context-variable) of the current screen.
 
 ## Overview
@@ -22,7 +22,7 @@ Use the **UpdateContext** function to create a context variable, which temporari
 
 Context variables are scoped to a screen, which means that you can't build a formula that refers to a context variable on another screen. If you've used another programming tool, you can think of a context variable as similar to a local variable.  Use the [**Set** function](function-set.md) to work with global variables that are available throughout your app.  
 
-PowerApps are based on formulas that automatically recalculate as the user interacts with an app.  Context variables don't offer this benefit and can make your app harder to create and understand.  Before you use a context variable, review [working with variables](../working-with-variables.md).
+Power Apps are based on formulas that automatically recalculate as the user interacts with an app.  Context variables don't offer this benefit and can make your app harder to create and understand.  Before you use a context variable, review [working with variables](../working-with-variables.md).
 
 ## Description
 To create or update a context variable, pass a single [record](../working-with-tables.md#records) to the **UpdateContext** function. In each record, specify the name of a [column](../working-with-tables.md#columns), which defines or matches the name of the variable, and the value to which you want to set that variable.

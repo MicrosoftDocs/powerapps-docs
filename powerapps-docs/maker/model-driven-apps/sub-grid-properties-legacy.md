@@ -1,5 +1,5 @@
 ---
-title: Sub-grid properties for model-driven app main forms in PowerApps | MicrosoftDocs
+title: Sub-grid properties for model-driven app main forms in Power Apps | MicrosoftDocs
 description: Understand the Sub-Grid properties for main forms
 Keywords: Main form; Sub-Grid properties; Dynamics 365
 author: Mattp123
@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 06/07/2018
+ms.date: 03/17/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 82892cd3-3436-4677-b96b-f2ccd0a4f078
@@ -21,19 +21,51 @@ search.app:
 ---
 # Sub-grid properties for model-driven app main forms overview
 
-You can configure a sub-grid on a form to display a list of records or a chart. Select **Show Chart Only** on the **Display** tab to show a chart instead of a list.  
+You can configure a sub-grid on a form to display a list of records.  
 
-You can access **Sub-Grid properties** from the PowerApps site. 
-1.  On the [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) site, select **Model-driven** (lower left of the navigation pane).  
-
-     ![Model-driven design mode](media/model-driven-switch.png)
+You can access **Sub-Grid properties** from the Power Apps site. 
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
 
-3.  In the list of forms, open the form of type **Main**. Then on the **Insert** tab, select **Sub-Grid** to view sub-grid properties.
+3.  In the list of forms, open a form of type **Main**, and then select **Components**. 
 
-    ![sub-grid properties](media/sub-grid-properties.png)
-  
+4.  From the Components pane, select **Subgrid**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select sub-grid views](media/sub-grid-views.png "Select sub-grid views")
+
+5.  In **Entity**, select an entity whose records you want to display in the sub-grid. The **Entity** drop-down list is filtered to list only entities that are related to the current entity.
+
+6.  In **Default view**, select a default view for the sub-grid. The is the view of the entity selected in the Entity property that will be used to get and display the list of records in the sub-grid.
+
+7.  Select **Show related records** to display only records related to the current record that is displayed on the form.
+
+8.  Select **Done** to add the sub-grid to the form. The properties of the sub-grid appear in the Properties pane.
+
+    > [!div class="mx-imgBorder"] 
+    > ![sub-grid properties](media/newform-designer-sub-grid-properties.png "sub-grid properties")
+
+|Property|Description|  
+|--------------|-----------------|  
+|**Name**|**Required**: The unique name for the sub-grid that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores.|  
+|**Label**|**Required**: The localizable label for the sub-grid visible to users.|  
+|**Hide label**|Whether the label should be displayed on the form. This is required if you enable **Display Search Box**. You can also choose to have the panel header color.|  
+|**Hide on phone**|Specify whether the section should be available on phone.|
+|**Show related records**| Sub-grid will display only records related to the current record.<br /> If you do not select this property, the sub-grid will display records filtered only by the default view or, if the view selector is enabled, any views the user chooses.<br /><br /> The option you choose will affect the behavior of the show list control. More information: [Show list behavior](#show-list-behavior) |  
+|**Entity**|Depending on the option you choose for **Show related records**, this list displays either:<br /><br /> - Only related records: A list of entities that are related to this entity with the name of the lookup field on that entity which defines the relationship in parentheses.<br />- All record types: A list of all entities.|  
+|**Default view**|Choose the view that will be applied by default. If you do not enable any other views using the **View Selector** property. This will be the only view.<br /><br /> Use the **Edit** button to open the default view for editing. Use the **New** button to create a new view to use for this sub-grid.|  
+|**Allow users to change view**|When selected, app users can change from the Default view to another view of the entity selected in the Entity property.|
+
+## Sub-grid properties for model-driven app main forms: Classic
+
+You can configure a sub-grid on a form using the classic form designer to display a list of records or a chart. Select **Show Chart Only** on the **Display** tab to show a chart instead of a list.
+
+  > [!div class="mx-imgBorder"] 
+  > ![sub-grid properties](media/sub-grid-properties.png "sub-grid properties")
+
+These are the properties available to configure when using a sub-grid component on a form using the classic form designer.
+
 |Tab|Property|Description|  
 |---------|--------------|-----------------|  
 |**Display**|**Name**|**Required**: The unique name for the sub-grid that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores.|  
@@ -68,11 +100,11 @@ You can access **Sub-Grid properties** from the PowerApps site.
 ## Add record behavior  
  When displaying a list in forms with the [Updated forms](main-form-presentations.md#updated-forms), each sub-grid displays the **Add record** button ![Add button](media/crm-itpro-cust-subgridadd.PNG "Add button") in the top right side of the sub-grid. Choosing this button will allow you to add a record. This behavior will change depending on the option chosen for the **Records** property and if the lookup is for activity records.  
   
- When you select **Only Related Records** the default behavior is the behavior to add existing records. People see an in-line lookup to search for an existing record first. This helps prevent creating duplicate records.  If they can’t find an existing record, they can choose the **New** option. When a new record is created any of the field mappings defined in the relationship will be applied. More information: [Map entity fields](../common-data-service/map-entity-fields.md)   
+ When you select **Only Related Records** the default behavior is the behavior to add existing records. People see an in-line lookup to search for an existing record first. This helps prevent creating duplicate records.  If they can't find an existing record, they can choose the **New** option. When a new record is created any of the field mappings defined in the relationship will be applied. More information: [Map entity fields](../common-data-service/map-entity-fields.md)   
   
  When you select **All Record Types** the default behavior is to add a new record. The quick create form will be shown if the target entity has one. If not, the default entity main form is shown.  
   
- If the sub-grid displays activities, people will first need to choose the type of activity and then they will see the “add new record” behavior.  
+ If the sub-grid displays activities, people will first need to choose the type of activity and then they will see the "add new record" behavior.  
   
 ## Delete record behavior  
  When you select a record in a sub-grid the **Delete** button ![Sublist delete icon](media/crm-itpro-cust-subgriddelete.PNG "Sublist delete icon") appears on the right side of the row. The behavior of this delete action is different depending on the type of relationship with the current entity.  

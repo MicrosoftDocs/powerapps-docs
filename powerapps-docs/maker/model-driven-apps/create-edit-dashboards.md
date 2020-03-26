@@ -15,6 +15,7 @@ ms.assetid: 641885d2-4a08-41b8-b914-d9a244e4d5b1
 caps.latest.revision: 10
 ms.author: "matp"
 manager: "kvivek"
+author: "Mattp123"
 search.audienceType: 
   - maker
 search.app: 
@@ -28,7 +29,7 @@ There are two types of dashboards, user dashboards and system dashboards. An app
 <a name="BKMK_createdashboard"></a>   
 ## Create a new dashboard  
   
-1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     > [!IMPORTANT]
     > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
@@ -50,7 +51,7 @@ There are two types of dashboards, user dashboards and system dashboards. An app
 <a name="BKMK_editdashboard"></a>   
 ## Edit an existing dashboard  
   
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
     > [!IMPORTANT]
     > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).    
@@ -65,15 +66,15 @@ There are two types of dashboards, user dashboards and system dashboards. An app
   
 4.  When you’ve completed your changes be sure to save them, and then publish them.  
   
- Additional system dashboards tasks you can perform include:  
+Additional system dashboards tasks you can perform include:  
   
-    -   Remove a list or chart from a dashboard  
-  
-    -   Add a list or chart to a dashboard  
-  
-    -   Set the default dashboard  
-  
-    -   Use security roles to make a dashboard visible to just certain roles    
-  
+-   Remove a list or chart from a dashboard  
+
+-   Add a list or chart to a dashboard  
+
+-   Set the default dashboard  
+
+-   Use security roles to make a dashboard visible to just certain roles    
+
 ## Next steps  
 [Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md)

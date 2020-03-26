@@ -1,14 +1,14 @@
 ---
 title: "Use the Discovery Service with the SDK Assemblies (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Describes how to use the discovery service with the .NET SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
+description: "Describes how to use the Discovery Service with the APIs available in the SDK assemblies." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 1/16/2020
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -17,23 +17,27 @@ search.app:
 ---
 # Use the Discovery Service with the SDK Assemblies
 
+> [!IMPORTANT]
+> Effective March 2, 2020, the *regional* Discovery Service will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).
+> 
+> For information on how to transition to use the *global* Discovery Service, see [Modify your code to use global Discovery Service](../webapi/discovery-orgsdk-to-webapi.md).
+
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
+To access the Discovery Service using the SDK assembly APIs, add a reference to the `Microsoft.Xrm.Sdk.dll` assembly in your Visual Studio project, and then add a `using` statement to access the <xref:Microsoft.Xrm.Sdk.Discovery> namespace.
 
-To use the discovery service using the SDK assemblies, add a reference to the `Microsoft.Xrm.Sdk.dll` assembly to your Visual Studio project, and then add a `using` statement to access the <xref:Microsoft.Xrm.Sdk.Discovery> namespace. 
-
-The <xref:Microsoft.Xrm.Sdk.Client.DiscoveryServiceProxy> implements the <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService> interface.
+The <xref:Microsoft.Xrm.Sdk.WebServiceClient.DiscoveryWebProxyClient> implements the <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService> interface.
 
 The <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService> interface provides <xref:Microsoft.Xrm.Sdk.Discovery.IDiscoveryService.Execute(Microsoft.Xrm.Sdk.Discovery.DiscoveryRequest)> method you will use to pass a instance of the abstract <xref:Microsoft.Xrm.Sdk.Discovery.DiscoveryRequest> class.
 
 ## Regional Discovery services
 
-When you instantiate the <xref:Microsoft.Xrm.Sdk.Client.DiscoveryServiceProxy> you will need to provide a URL for a regional data center using one of the following values.
+When you instantiate the <xref:Microsoft.Xrm.Sdk.WebServiceClient.DiscoveryWebProxyClient> you will need to provide a URL for a regional data center using one of the following values.
 
 [!INCLUDE [regional-discovery-services](../../../includes/regional-discovery-services.md)]
 
 > [!NOTE]
-> If you do not know the user's region, you need to loop through the available regions until you get results. The Web API provides a single global discovery service. More information: [Discover the URL for your organization using the Web API](../webapi/discover-url-organization-web-api.md)
+> If you do not know the user's region, you need to loop through the available regions until you get results. A single global Discovery Service is also available. More information: [Discover the URL for your organization](../webapi/discover-url-organization-web-api.md)
 
 ## Discovery service messages
 
@@ -55,62 +59,76 @@ The following code for a console application uses the <xref:Microsoft.Xrm.Sdk.Di
 using System;
 using System.Linq;
 using Microsoft.Xrm.Sdk.Discovery;
-using Microsoft.Xrm.Sdk.Client;
-using System.ServiceModel.Description;
+using Microsoft.IdentityModel.Clients.ActiveDirectory;
+using Microsoft.Xrm.Sdk.WebServiceClient;
 
 namespace DiscoveryServiceSample
 {
-  class Program
-  {
-
-    static OrganizationDetailCollection GetOrganizationDetails(DiscoveryServiceProxy svc)
+    class Program
     {
+        //These sample application registration values are available for all online instances.
+        // this sample requires ADAL.net 5.2 + 
+        public static string clientId = "51f81489-12ee-4a9e-aaae-a2591f45987d";
 
-      var request = new RetrieveOrganizationsRequest()
-      {
-        AccessType = EndpointAccessType.Default,
-        Release = OrganizationRelease.Current
-      };
-      try
-      {
-        var response = (RetrieveOrganizationsResponse)svc.Execute(request);
-        return response.Details;
-      }
-      catch (Exception)
-      {
-        throw;
-      }
-    }
-    static void Main(string[] args)
-    {
-      string canadaUrl = "https://disco.crm3.dynamics.com/XRMServices/2011/Discovery.svc";
-      Uri discoveryUri = new Uri(canadaUrl);
-
-      ClientCredentials creds = new ClientCredentials();
-      creds.UserName.UserName = "you@yourorg.onmicrosoft.com";
-      creds.UserName.Password = "yourPassword";
-
-      using (var svc = new DiscoveryServiceProxy(discoveryUri, null, creds, null))
-      {
-
-        OrganizationDetailCollection details = GetOrganizationDetails(svc);
-
-        details.ToList().ForEach(x =>
+        static OrganizationDetailCollection GetOrganizationDetails(DiscoveryWebProxyClient svc)
         {
-          Console.WriteLine("Organization Name: {0}", x.FriendlyName);
-          Console.WriteLine("Unique Name: {0}", x.UniqueName);
-          Console.WriteLine("Endpoints:");
-          foreach (var endpoint in x.Endpoints)
-          {
-            Console.WriteLine("  Name: {0}", endpoint.Key);
-            Console.WriteLine("  URL: {0}", endpoint.Value);
-          }
-          Console.WriteLine();
-        });
-      };
-      Console.ReadLine();
+
+            var request = new RetrieveOrganizationsRequest()
+            {
+                AccessType = EndpointAccessType.Default,
+                Release = OrganizationRelease.Current
+            };
+            try
+            {
+                var response = (RetrieveOrganizationsResponse)svc.Execute(request);
+                return response.Details;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        static void Main(string[] args)
+        {
+            string authority = @"https://login.microsoftonline.com/common";
+            string northAmericaResourceUrl = "https://disco.crm.dynamics.com";
+            string discoveryUrl = $"{northAmericaResourceUrl}/XRMServices/2011/Discovery.svc/web";
+            Uri discoveryUri = new Uri(discoveryUrl);
+
+            AuthenticationContext authContext = new AuthenticationContext(authority, false);
+            string username = "you@yourorg.onmicrosoft.com";
+            string password = "yourPassword"; 
+
+            AuthenticationResult authResult = null;
+            if (username != string.Empty && password != string.Empty)
+            {
+                UserPasswordCredential cred = new UserPasswordCredential(username, password);
+                authResult = authContext.AcquireTokenAsync(northAmericaResourceUrl, clientId, cred).Result;
+            }
+
+           
+            using (var svc = new DiscoveryWebProxyClient(discoveryUri))
+            {
+                svc.HeaderToken = authResult.AccessToken;
+
+                OrganizationDetailCollection details = GetOrganizationDetails(svc);
+
+                details.ToList().ForEach(x =>
+                {
+                    Console.WriteLine("Organization Name: {0}", x.FriendlyName);
+                    Console.WriteLine("Unique Name: {0}", x.UniqueName);
+                    Console.WriteLine("Endpoints:");
+                    foreach (var endpoint in x.Endpoints)
+                    {
+                        Console.WriteLine("  Name: {0}", endpoint.Key);
+                        Console.WriteLine("  URL: {0}", endpoint.Value);
+                    }
+                    Console.WriteLine();
+                });
+            };
+            Console.ReadLine();
+        }
     }
-  }
 }
 
 ```
@@ -122,21 +140,21 @@ Organization Name: Organization A
 Unique Name: orga
 Endpoints:
   Name: WebApplication
-  URL: https://orgaservice.crm3.dynamics.com/
+  URL: https://orgaservice.crm.dynamics.com/
   Name: OrganizationService
-  URL: https://orgaservice.api.crm3.dynamics.com/XRMServices/2011/Organization.svc
+  URL: https://orgaservice.api.crm.dynamics.com/XRMServices/2011/Organization.svc
   Name: OrganizationDataService
-  URL: https://orgaservice.api.crm3.dynamics.com/XRMServices/2011/OrganizationData.svc
+  URL: https://orgaservice.api.crm.dynamics.com/XRMServices/2011/OrganizationData.svc
 
 Organization Name: Organization B
 Unique Name: orgb
 Endpoints:
   Name: WebApplication
-  URL: https://orgbservice.crm3.dynamics.com/
+  URL: https://orgbservice.crm.dynamics.com/
   Name: OrganizationService
-  URL: https://orgbservice.api.crm3.dynamics.com/XRMServices/2011/Organization.svc
+  URL: https://orgbservice.api.crm.dynamics.com/XRMServices/2011/Organization.svc
   Name: OrganizationDataService
-  URL: https://orgbservice.api.crm3.dynamics.com/XRMServices/2011/OrganizationData.svc
+  URL: https://orgbservice.api.crm.dynamics.com/XRMServices/2011/OrganizationData.svc
 ```
 
 > [!NOTE]
@@ -146,4 +164,4 @@ Endpoints:
 ### See also
 
 [Discovery Services](../discovery-service.md)<br />
-[Discover the URL for your organization using the Web API](../webapi/discover-url-organization-web-api.md)
+[Discover the URL for your organization](../webapi/discover-url-organization-web-api.md)

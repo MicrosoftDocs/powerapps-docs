@@ -1,12 +1,12 @@
 ---
 title: Reference for the email-screen template for canvas apps | Microsoft Docs
-description: Understand details of how the email-screen template for canvas apps works in PowerApps
+description: Understand details of how the email-screen template for canvas apps works in Power Apps
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 12/31/2018
 ms.author: emcoope
 search.audienceType: 
@@ -17,7 +17,7 @@ search.app:
 
 # Reference information about the email-screen template for canvas apps
 
-For canvas apps in PowerApps, understand how each significant control in the email-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [email-screen overview](email-screen-overview.md).
+For canvas apps in Power Apps, understand how each significant control in the email-screen template contributes to the screen's overall default functionality. This deep dive presents the behavior formulas and the values of other properties that determine how the controls respond to user input. For a high-level discussion of this screen's default functionality, see the [email-screen overview](email-screen-overview.md).
 
 This topic highlights some significant controls and explains the expressions or formulas to which various properties (such as **Items** and **OnSelect**) of these controls are set:
 
@@ -29,7 +29,7 @@ This topic highlights some significant controls and explains the expressions or 
 
 ## Prerequisite
 
-Familiarity with how to add and configure screens and other controls as you [create an app in PowerApps](../data-platform-create-app-scratch.md).
+Familiarity with how to add and configure screens and other controls as you [create an app in Power Apps](../data-platform-create-app-scratch.md).
 
 ## Text search box
 
@@ -199,5 +199,5 @@ Selecting this control does three things concurrently:
 ## Next steps
 
 * [Learn more about this screen](./email-screen-overview.md)
-* [Learn more about the Office 365 Outlook connector in PowerApps](../connections/connection-office365-outlook.md)
-* [Learn more about the Office 365 Users connector in PowerApps](../connections/connection-office365-users.md)
+* [Learn more about the Office 365 Outlook connector in Power Apps](../connections/connection-office365-outlook.md)
+* [Learn more about the Office 365 Users connector in Power Apps](../connections/connection-office365-users.md)

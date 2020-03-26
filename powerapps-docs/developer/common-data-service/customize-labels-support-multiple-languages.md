@@ -3,7 +3,7 @@ title: "Customize labels to support multiple languages (Common Data Service) | M
 description: "Learn about customizing labels to support multiple languages." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
@@ -75,7 +75,7 @@ When you create customizations in Common Data Service, you can support multiple 
 
  Exported text is saved as a compressed file that contains a CrmTranslations.xml that you open by using Office Excel. You can send this file to a linguistic expert, translation agency, or localization firm.  
 
- For more information, see [Office 2003 XML Reference Schemas](http://www.microsoft.com/downloads/details.aspx?FamilyID=fe118952-3547-420a-a412-00a2662442d9).  
+ For more information, see [Office 2003 XML Reference Schemas](https://www.microsoft.com/downloads/details.aspx?FamilyID=fe118952-3547-420a-a412-00a2662442d9).  
 
 ### Import translated text  
  After you have exported the customized entity or attribute text and had it translated, you can import the translated text strings in the Web application by using the `ImportTranslation` message (<xref href="Microsoft.Dynamics.CRM.ImportTranslation?text=ImportTranslation Action" /> or <xref:Microsoft.Crm.Sdk.Messages.ImportTranslationRequest> class). The file that you import must be a compressed file that contains the CrmTranslations.xml and the [Content_Types].xml file just as they were exported.  

@@ -3,10 +3,10 @@ title: "Register a webhook (Common Data Service) | Microsoft Docs" # Intent and 
 description: "This topic will describe how to register a webhook using the plug-in registration tool" 
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -141,7 +141,7 @@ More information: [Use FetchXML with FetchExpression](org-service/entity-operati
 [!INCLUDE [synchronous-webhook-error](includes/synchronous-webhook-error.md)]
 
 > [!NOTE]
-> You should use synchronous mode when it is important that the operation triggered by the webhook occur immediately or if you want the entire transaction to fail unless the webhook payload is recieved by the service. A simple webhook step registration provides limited options to manage failure, but you can also invoke webhooks using plugins workflow activities if you require more control. More information: [Invoke a webhook from a plugin or workflow activity](use-webhooks.md#invoke-a-webhook-from-a-plugin-or-workflow-activity).
+> You should use synchronous mode when it is important that the operation triggered by the webhook occur immediately or if you want the entire transaction to fail unless the webhook payload is received by the service. A simple webhook step registration provides limited options to manage failure, but you can also invoke webhooks using plugins workflow activities if you require more control. More information: [Invoke a webhook from a plugin or workflow activity](use-webhooks.md#invoke-a-webhook-from-a-plugin-or-workflow-activity).
 
 ## Query steps registered for a webhook
 

@@ -1,12 +1,12 @@
 ---
 title: Char function | Microsoft Docs
-description: Reference information for the Char function in PowerApps, including syntax and examples
+description: Reference information for the Char function in Power Apps, including syntax and examples
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 03/01/2019
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Char function in PowerApps
+# Char function in Power Apps
 
 Translates a character code into a string.
 
@@ -48,7 +48,7 @@ The **Char** function translates a number into a string with the corresponding A
 
 1. Inside that gallery, add a **Gallery** control with a **Blank Vertical** layout, and then set these properties:
 
-    - **Items**: `ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 )`
+    - **Items**: `ForAll( [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 )`
     - **Width**: 100
     - **Height**: 500
     - **TemplateSize**: 30
@@ -73,7 +73,7 @@ You've created a chart of the first 128 ASCII characters. Characters that appear
 
 To show the extended ASCII characters, set the **Items** property of the second gallery to this formula, which adds 128 to each character value:
 
-`ForAll( [0,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 + 128)`
+`ForAll( [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15], Value + ThisItem.Value * 16 + 128)`
 
 ![Extended ASCII characters](media/function-char/chart-higher.png)
 

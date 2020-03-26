@@ -1,12 +1,12 @@
 ---
 title: JSON function | Microsoft Docs
-description: Reference information, including syntax, for the JSON function in PowerApps
+description: Reference information, including syntax, for the JSON function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/02/2019
 ms.author: gregli
 search.audienceType: 
@@ -14,13 +14,13 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# JSON function in PowerApps
+# JSON function in Power Apps
 
 Generates a JSON text string for a table, a record, or a value.
 
 ## Description
 
-The **JSON** function returns the JavaScript Object Notation (JSON) representation of a data structure as text so that it's suitable for storing or transmitting across a network. [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf) and [IETF RFC 8259](https://tools.ietf.org/html/rfc8259) describe the format, which is widely used by JavaScript and other programming languages.
+The **JSON** function returns the JavaScript Object Notation (JSON) representation of a data structure as text so that it's suitable for storing or transmitting across a network. [ECMA-404](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf) and [IETF RFC 8259](https://tools.ietf.org/html/rfc8259) describe the format, which is widely used by JavaScript and other programming languages.
 
 Canvas apps support the [data types](data-types.md) that this table lists with details about their text representation:
 

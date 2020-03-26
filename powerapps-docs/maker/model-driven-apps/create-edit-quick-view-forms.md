@@ -1,8 +1,8 @@
 ---
-title: "Create or edit model-driven app quick view forms in PowerApps | MicrosoftDocs"
+title: "Create or edit model-driven app quick view forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a quick view form"
 ms.custom: ""
-ms.date: 05/23/2018
+ms.date: 03/13/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -38,35 +38,29 @@ A quick view form can be added to another form as a quick view control. It provi
 ## Create a quick view form  
  You create quick view forms using the form editor in a manner similar to the way you create other forms. Quick view forms are read-only. Use them to create forms that are for reading purposes only.  
   
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-
-    > [!IMPORTANT]
-    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     
-  
 2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
   
 3. On the toolbar, select **Add form** > **Quick View Form**.  
   
-4. On the form editor toolbar, select **Form Properties**.  
+5. In the **Form** panel, enter a **Display Name** and **Description** to differentiate this quick view form from any others.  
   
-5. In the **Form Properties** dialog box, enter a **Form Name** and **Description** to differentiate this quick view form from any others. Select **OK** to close the **Form Properties** dialog box.  
-  
-6. In the form designer drag any fields from the **Field Explorer** into the section on the form. 
-  
-    > [!IMPORTANT]
-    >  If you add a field and choose **Field Requirement** > **Business Required** and then save it, you will not be able to delete the field.  
-  
-7. To save the form and close the form editor select **Save**.  
+6. In the form designer drag any fields from the **Fields Explorer** into the section on the form.
 
-8. Select **Publish** to see the new form in the application.
+    > [!IMPORTANT]
+    > Required fields cannot be removed from a form. If you add a Required field to the form and want to remove it, you have to delete the form and then recreate it. When you set the Required property for a field, a record can't be saved without data in this field.
+
+7. To save the form select **Save**.  
+
+8. Select **Publish** to see the new form in the application. <!-- Which app? What does Publish do?-->
   
 <a name="BKMK_EditQVF"></a>   
 ## Edit a quick view form  
  Quick view forms have a simplified layout because they are designed to be viewed within a form section. Only one single column tab is available. You can add only additional single column sections, fields, subgrids, and spacers.   
   
-> [!NOTE]
->  You cannot delete a field that is **Business Required**. You will receive this message if you try to delete the field: “The field you are trying to remove is required by the system or business.” If you do not want the field in the form you have to delete the entire form and then recreate it.  
+  > [!IMPORTANT]
+  > Required fields cannot be deleted. If you add a Required field to the form, you cannot delete it. If you do not want the field in the form you have to delete the form and then recreate it.
   
  When you edit a quick view form, you must publish your changes before they will be visible in the application.  
   
@@ -74,23 +68,23 @@ A quick view form can be added to another form as a quick view control. It provi
 ## Add a quick view control to a main form  
  Quick view forms can only be added to a main form where a lookup field exists that targets the entity of the quick view form.  
   
-1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-    > [!IMPORTANT]
-    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).     
-  
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
 
 3. Select a form, which **Type** is **Main**.
 
-4. On the form designer select the **Insert** tab, and then on the toolbar select **Quick View Form**.  
+4. In the form designer, from the Components pane, select **Quick view**.  
   
-5.  In the **Quick View Control Properties** dialog box, set the properties for the quick view control, such as **Name**, **Label**, and **Quick View Form**. More information: [Quick view control properties](quick-view-control-properties-legacy.md).  
-  
-6.  Select **OK** to close the **Quick View Control Properties** dialog box.  
-  
-7.  Select the **Home** tab, and then select **Publish** to make the quick view control appear on the form.  
-  
+5.  In the **Select quick view forms** dialog box, select the **Lookup** field, and then select the Lookup field value. More information: [Quick view control properties](quick-view-control-properties-legacy.md).  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Add quick view control](media/add-quick-view-control.png "Add quick view control to main form")
+
+6.  Select **Done** to close the **Select quick View forms** dialog box. The quick view form appears on the form.
+
+7.  To save the form select **Save**.  
+
 ## Next steps   
  [Create and design forms](create-design-forms.md)   
  [Create or edit quick create forms](create-edit-quick-create-forms.md)

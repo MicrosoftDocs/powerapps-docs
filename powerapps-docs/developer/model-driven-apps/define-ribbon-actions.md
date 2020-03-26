@@ -4,13 +4,11 @@ description: "Learn about defining the actions to be performed by a command bar 
 keywords: ""
 ms.date: 10/31/2018
 ms.service:
-  - powerapps
-ms.custom:
-  - ""
+  - PowerApps
 ms.topic: article
 ms.assetid: fbb7ff68-e4be-d8c2-069f-6a4a69665b56
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -34,14 +32,15 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
   
      You have several options to pass parameters to a URL using the ribbon. More information: [Passing Parameters to a URL using the Ribbon](pass-parameters-url-by-using-ribbon.md)  
   
-### Passing parameters to ribbon actions  
+## Passing parameters to ribbon actions  
+
  Use the following elements to define data to pass to your custom action:  
   
  `<BoolParameter>`  
 [!INCLUDE[ribbon_element_BoolParameter](../../includes/ribbon-element-boolparameter.md)]
   
  `<CrmParameter>`  
- [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] More information: [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo>
+ [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] More information: [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo -->
   
  `<DecimalParameter>`  
  [!INCLUDE[ribbon_element_DecimalParameter](../../includes/ribbon-element-decimalparameter.md)]
@@ -56,7 +55,9 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
   
  Parameters passed to a `<JavaScriptFunction>` do not require a name but they must be included in the order expected by the function and be of the correct data type.  
   
-### See also  
+## See also  
+
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Define Ribbon Display Rules](define-ribbon-display-rules.md)   
- [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo-->
+ [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  
+<!-- TODO need to update the relevant link from the powerapps repo-->

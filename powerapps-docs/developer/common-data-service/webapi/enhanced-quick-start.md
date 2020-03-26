@@ -11,9 +11,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 08377156-32c7-492a-8e66-50a47a330dc6
 caps.latest.revision: 14
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "annbe"
 search.audienceType: 
   - developer
@@ -35,7 +35,7 @@ Enabling this requires three steps:
 
 1. [Add Reference to System.Configuration to the Visual Studio project](#add-reference-to-systemconfiguration-to-the-visual-studio-project)
 1. [Edit the application configuration file](#edit-the-application-configuration-file)
-1. [Add using statement to Program.cs](#add-using-statement-to-programcs)
+1. [Add using directive to Program.cs](#add-using-directive-to-programcs)
 
 
 ### Add Reference to System.Configuration to the Visual Studio project
@@ -76,9 +76,9 @@ This creates a connection string that can be referenced by name, in this case `C
 
 Edit the connection string `Url`, `Username` and `Password` values in the `connectionString` to match what you need to connect to your Common Data Service environment.
 
-### Add using statement to Program.cs
+### Add using directive to Program.cs
 
-At the top of your Program.cs file, add this using statement:
+At the top of your Program.cs file, add this using directive:
 
 ```csharp
 using System.Configuration;
@@ -96,7 +96,7 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
     > [!NOTE]
     > The name of the class will determine how you will reference these helper properties and methods within your `Program.cs`. The remaining instructions will expect you named it `SampleHelpers`, so remember if you named it something else.
 
-1. Add the following `using` statements:
+1. Add the following `using` directives:
 
     ```csharp
     using Microsoft.IdentityModel.Clients.ActiveDirectory;
@@ -185,11 +185,11 @@ These helpers are also used in the [SampleHelper.cs](https://github.com/Microsof
     > [!NOTE]
     > Do not add this within the `SampleHelpers` class itself.
 
-    This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Azure Active Directory Authentication Library (ADAL) authentication context to call the `AcquireToken` method everytime an operation is performed so you don't need to explicitly manage token expiration.
+    This class ensures that the access token is refreshed each time an operation is performed. Each access token will expire after about an hour. This class implements a <xref:System.Net.Http.DelegatingHandler> that will work with the Azure Active Directory Authentication Library (ADAL) authentication context to call the `AcquireToken` method every time an operation is performed so you don't need to explicitly manage token expiration.
 
     ```csharp
     /// <summary>
-    ///Custom HTTP message handler that uses OAuth authentication thru ADAL.
+    ///Custom HTTP message handler that uses OAuth authentication through ADAL.
     /// </summary>
     class OAuthMessageHandler : DelegatingHandler
     {
@@ -274,10 +274,10 @@ This is less code and you have added error handling and the means to refresh the
 
 Press F5 to run the program. Just like the [Quick start](quick-start-console-app-csharp.md) sample, the output should look like this:
 
-    ```
-    Your UserId is 969effb0-98ae-478c-b547-53a2968c2e75
-    Press any key to exit.
-    ```
+```
+Your UserId is 969effb0-98ae-478c-b547-53a2968c2e75
+Press any key to exit.
+```
 
 ## Create re-usable methods
 
@@ -343,7 +343,7 @@ In your Visual Studio project perform the following steps:
 
     In this way the `Program` class in `ProgramMethods.cs` file is just an extension of the original `Program` class in the `Program.cs` file. 
 
-1. Add the following using statements to the top of the `ProgramMethods.cs` file.
+1. Add the following using directives to the top of the `ProgramMethods.cs` file.
 
     ```csharp
     using Newtonsoft.Json.Linq;
@@ -419,7 +419,7 @@ In your Visual Studio project perform the following steps:
 
 ## Troubleshooting
 
-If you have any troubles running these samples, you can download all the PowerApps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
+If you have any troubles running these samples, you can download all the Power Apps samples from the GitHub repository at [https://github.com/Microsoft/PowerApps-Samples](https://github.com/Microsoft/PowerApps-Samples).
 
 This sample is based on the [SimpleWebApi](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/SimpleWebApi) located in the `PowerApps-Samples-master\PowerApps-Samples-master\cds\webapi\C#\SimpleWebApi` folder.
 

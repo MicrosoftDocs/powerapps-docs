@@ -1,12 +1,12 @@
 ---
 title: HashTags function | Microsoft Docs
-description: Reference information, including syntax and examples, for the HashTags function in PowerApps
+description: Reference information, including syntax and examples, for the HashTags function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# HashTags function in PowerApps
+# HashTags function in Power Apps
 Extracts the hashtags (#strings) from a string of text.
 
 ## Description

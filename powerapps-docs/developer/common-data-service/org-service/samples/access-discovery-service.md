@@ -3,10 +3,10 @@ title: "Sample: Work with discovery service <Topic Title> (Common Data Service) 
 description: "This sample code shows how to use discovery services" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -17,14 +17,13 @@ search.app:
 ---
 # Sample: Access the Discovery service
 
-# Work with Discovery Service 
 This sample code shows how to use the discovery service with SDK assemblies. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DiscoveryService)
 
 ## How to run this sample
 
 This sample will not open dialog to prompt you for connection information.
 
-If you have set `Username` and `Password` values in the App.config connection strings it will use them. Otherwise, set the `username` and `password` variables in the `SampleProgram.Main` method.
+If you have set  and  values in the App.config connection strings, it will use them. Otherwise, set the `username` and `password` variables in the `SampleProgram.Main` method.
 
 ## What this sample does
 

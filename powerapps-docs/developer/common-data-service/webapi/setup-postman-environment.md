@@ -3,13 +3,11 @@ title: "Set up a Postman environment (Common Data Service for Apps)| MicrosoftDo
 description: "Learn how to set up and configure a Postman environment that connects with Common Data Service environments."
 ms.custom: 
 ms.date: 04/09/2019
-ms.reviewer: 
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: 
-  - Dynamics 365 for Customer Engagement (online)
 ms.assetid: 955BA444-A53D-4843-9429-833B1636E2B4
 caps.latest.revision: 7
 author: susikka
@@ -27,12 +25,9 @@ You can use Postman to connect to your Common Data Service instance and to compo
 
 You can use a Postman environment to save a set of variables that you use to connect. These values can be accessed within Postman by using this syntax: `{{name}}`. For more information with Postman variables, see [Postman Documentation > Variables](https://www.getpostman.com/docs/v6/postman/environments_and_globals/variables).
 
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-topic](../includes/cc-d365ce-note-topic.md)] [Set up a Postman environment (Customer Engagement)](/dynamics365/customer-engagement/developer/webapi/setup-postman-environment)
-
 ## Prerequisites
 
-* Have a PowerApps Common Data Service environment that you can connect to. 
+* Have a Power Apps Common Data Service environment that you can connect to. 
 * Download and install the [Postman desktop application](https://www.getpostman.com/apps).
 
 <a name="bkmk_connectcds"></a> 
@@ -57,7 +52,7 @@ Use these steps to create a Postman environment that you can use to connect with
 
     | Variable name | Value |
     |----|---|
-    |`url`|`https://<add your environment name, like ‘myorg.crm’>.dynamics.com`|
+    |`url`|`https://<add your environment name, like 'myorg.crm'>.dynamics.com`|
     |`clientid`|`51f81489-12ee-4a9e-aaae-a2591f45987d`|
     |`version`|`9.0`|
     |`webapiurl`|`{{url}}/api/data/v{{version}}/`|

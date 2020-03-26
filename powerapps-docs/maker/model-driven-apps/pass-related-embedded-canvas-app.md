@@ -15,7 +15,7 @@ author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
-  - "PowerApps maker portal impact"
+  - "Power Apps maker portal impact"
 search.audienceType: 
   - maker
 search.app: 
@@ -32,7 +32,7 @@ This topic explains how to add an embedded canvas app and pass a list of records
 
 Let's say you want to add an embedded canvas app on an account main form and pass a list of contacts related to the current account record to the embedded canvas app. To do this, follow these steps:
 
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity.
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and open the form editor for a main form of an entity, such as the account entity.
 2.	Select the section on the form where you want the embedded canvas app to appear.
 3.	With the section selected, on the **Insert** tab, in the **Control** group, select **Sub-Grid**.
 4.	In the **Set Properties** dialog box, select the **Display** tab, and then in the **Name** box enter a name for the grid control.
@@ -48,10 +48,10 @@ Let's say you want to add an embedded canvas app on an account main form and pas
          -  The filter criteria for a view are not used at authoring time. Therefore, the data that you see when authoring embedded canvas apps is not filtered, it is simply a list of top few records that you have access to. At runtime, the filter criteria for the view are applied as expected so users only see relevant data.
      -  The **App ID** property specifies the ID of the embedded canvas app. It is automatically generated and filled-in for you when the canvas app is created.
          - 	Notice that any change to the App ID value breaks the link from the model-driven form to the embedded canvas app.
-10.	Select the **Customize** button to create or edit the canvas app. This opens PowerApps Studio in a new browser tab.
+10.	Select the **Customize** button to create or edit the canvas app. This opens Power Apps Studio in a new browser tab.
 	 > [!IMPORTANT]
-     > If opening PowerApps Studio is blocked due to a web browser pop-up blocker, you must enable the web.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
-11.	In PowerApps Studio, notice that there is a **ModelDrivenFormIntegration** control located in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app. 
+     > If opening Power Apps Studio is blocked due to a web browser pop-up blocker, you must enable the make.powerapps.com site or temporarily disable the pop-up blocker and then select **Customize** again. 
+11.	In Power Apps Studio, notice that there is a **ModelDrivenFormIntegration** control located in the left pane. This control is responsible for bringing contextual data from the host model-driven form to the embedded canvas app. 
 12.	Select the **Gallery1** control and observe that the **Items** property is set to **ModelDrivenFormIntegration.Data**.
 13.	In the property pane on the right, next to **Fields**, select **Edit**.
 14.	In the data pane, change the field mapped to the **Title1** control to **FullName** or another field that has data.
@@ -64,7 +64,7 @@ Let's say you want to add an embedded canvas app on an account main form and pas
 	  -  On subsequent saves you must select **Publish** and then **Publish this version** to make your changes available.
 20.	Select **Back**, and then select the browser tab that has the form editor open. 
 21.	Observe that the **App ID** property of the **Canvas app** control now has a value automatically filled in. Note the following: 
-     - 	The form editor has a direct link with PowerApps Studio that was opened in another browser tab in an earlier step.
+     - 	The form editor has a direct link with Power Apps Studio that was opened in another browser tab in an earlier step.
      - 	The form editor has been listening for the App ID to be sent to it.
      - 	The App ID was sent to it when the app was saved.
 22.	In the **Set Properties** dialog box, select the **Display** tab, clear **Display label on the form**, and then select **OK**.

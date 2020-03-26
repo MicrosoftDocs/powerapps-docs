@@ -1,8 +1,8 @@
 ---
-title: "Define rollup fields with PowerApps | MicrosoftDocs"
+title: "Define rollup fields with Power Apps | MicrosoftDocs"
 description: "Learn how to define rollup fields"
 ms.custom: ""
-ms.date: 05/23/2018
+ms.date: 01/23/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -28,7 +28,7 @@ search.app:
 
 Rollup fields help users obtain insights into data by monitoring key business metrics. A rollup field contains an aggregate value computed over the records related to a specified record. This includes regular entities and activity entities such as emails and appointments.
 
-In more complex scenarios, you can aggregate data over the hierarchy of records. As an administrator or customizer, you can define rollup fields by using the customization tools in PowerApps, without needing to write code.  
+In more complex scenarios, you can aggregate data over the hierarchy of records. As an administrator or customizer, you can define rollup fields by using the customization tools in Power Apps, without needing to write code.  
   
 <a name="BKMK_benefitsandcapabilities"></a> 
  
@@ -76,22 +76,23 @@ The rollups are calculated by scheduled system jobs that run asynchronously in t
 To view rollup jobs:
 
 1. While viewing the **Common Data Services Default Solution** edit the URL, removing everything after `dynamics.com` and refresh the page.
-2. In the **Settings** area select **System** > **System Jobs**.<br />![Navigate to system jobs](media/navigate-system-jobs.png)
+2. In the **Settings** area, select **System** > **System Jobs**.<br />![Navigate to system jobs](media/navigate-system-jobs.png)
 1. In the  view selector, choose **Recurring System Jobs**.
 2. To quickly find a relevant job, you can filter by the System Job type: **Mass Calculate Rollup Field** or **Calculate Rollup Field**.
  
 ### Mass Calculate Rollup Field
 
-**Mass Calculate Rollup Field** is a recurring job, created per a rollup field. It runs once, after you created or updated a rollup field. The job recalculates the specified rollup field value in all existing records that contain this field. By default, the job will run 12 hours after you created or updated a field. After the job completes, it is automatically scheduled to run in the distant future, approximately, in 10 years. If the field is modified, the job resets to run again in 12 hours after the update. The 12 hour delay is needed to assure that the **Mass Calculate Rollup Field** runs during the non-operational hours of the environment. It is recommended that an administrator adjusts the start time of a **Mass Calculate Rollup Field** job after the rollup field is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup fields.  
+**Mass Calculate Rollup Field** is a recurring job, created per a rollup field. It runs once, after you created or updated a rollup field. The job recalculates the specified rollup field value in all existing records that contain this field. By default, the job will run 12 hours after you created or updated a field. After the job completes, it is automatically scheduled to run in the distant future, approximately, in 10 years. If the field is modified, the job resets to run again in 12 hours after the update. The 12-hour delay is needed to assure that the **Mass Calculate Rollup Field** runs during the non-operational hours of the environment. It is recommended that an administrator adjusts the start time of a **Mass Calculate Rollup Field** job after the rollup field is created or modified, in such a way that it runs during non-operational hours. For example, midnight would be a good time to run the job to assure efficient processing of the rollup fields.  
 
 ### Calculate Rollup Field 
 
-**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup fields in the existing records for a specified entity. There is only one **Calculate Rollup Field** job per entity. The incremental calculations mean that the **Calculate Rollup Field** job processes the records that were created, updated or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup field on an entity is created and deleted when the last rollup field is deleted.  
+**Calculate Rollup Field** is a recurring job that does incremental calculations of all rollup fields in the existing records for a specified entity. There is only one **Calculate Rollup Field** job per entity. The incremental calculations mean that the **Calculate Rollup Field** job processes the records that were created, updated, or deleted after the last **Mass Calculate Rollup Field** job finished execution. The default maximum recurrence setting is one hour. The job is automatically created when the first rollup field on an entity is created and deleted when the last rollup field is deleted.  
 
 ## Online recalculation option
-If you hover over the rollup field on the form, you can see the time of the last rollup and you can refresh the rollup value by choosing the Refresh icon next to the field, as shown below:  
+The rollup field on the form displays a calculator image, rollup value, and the time of the last calculation. To recaclulate, select the calculator image, and then select the **Recalculate** button that appears. 
 
-![Rollup field on the account form](media/rollup-field-on-account-form.png)
+> [!div class="mx-imgBorder"] 
+> ![Rollup field on the account form](media/rollup-field-on-account-form.png)
   
 
 There are a few considerations you should keep in mind when using the online recalculation option (manual refresh on the form):  
@@ -103,9 +104,9 @@ There are a few considerations you should keep in mind when using the online rec
 
 ## Modify rollup job recurrence
 
-As a system administrator, you can modify the rollup job recurrence pattern, postpone, pause or resume the rollup job. However, you can’t cancel or delete a rollup job. 
+As a system administrator, you can modify the rollup job recurrence pattern, postpone, pause, or resume the rollup job. However, you can’t cancel or delete a rollup job. 
 
-To pause, postpone, resume or modify the recurrence pattern, you must view the system jobs. More information [View Rollup jobs](#view-rollup-jobs) 
+To pause, postpone, resume, or modify the recurrence pattern, you must view the system jobs. More information [View Rollup jobs](#view-rollup-jobs) 
 
 On the nav bar, choose **Actions** and select the action you want. 
 
@@ -212,5 +213,5 @@ Certain entity  forms, such as Account or Contact, out-of-the-box, contain the a
 [Define calculated fields](define-calculated-fields.md)<br />
 [Behavior and format of the Date and Time field](behavior-format-date-time-field.md)<br />
 [Define and query hierarchically related data](define-query-hierarchical-data.md)<br />
-[Video: Rollup and Calculated Fields](http://www.youtube.com/watch?v=RoahCH1p3T8&list=PLC3591A8FE4ADBE07&index=8)<br />
-[Video: Using Power BI](http://www.youtube.com/watch?v=PkQe4BFlBS8&list=PLC3591A8FE4ADBE07&index=3)
+[Video: Rollup and Calculated Fields](https://www.youtube.com/watch?v=RoahCH1p3T8&list=PLC3591A8FE4ADBE07&index=8)<br />
+[Video: Using Power BI](https://www.youtube.com/watch?v=PkQe4BFlBS8&list=PLC3591A8FE4ADBE07&index=3)

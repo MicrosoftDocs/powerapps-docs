@@ -22,7 +22,7 @@ You can create and update one or more custom fields in any entity. When you crea
 > Every entity has system fields, such as fields that indicate when a record was last updated, and who updated it. In addition, standard entities have standard (default) fields. You can't modify or delete system fields or standard fields. If you create a custom field, it should provide functionality on top of these built-in fields.
 
 ## Create a field
-1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
     ![Entity Details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
 
@@ -73,7 +73,7 @@ Calculated fields let you automate manual calculations used in your business pro
 For more details on the types of expressions supported and examples, see [Define calculated fields](/dynamics365/customer-engagement/customize/define-calculated-fields)
 
 ## Update or delete a field
-1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane, and then click or tap an entity.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane, and then click or tap an entity.
 2. In the list of fields for the entity that you selected, click or tap a field, and then follow one of these steps:
    
    * Change one or more properties of the field.
@@ -101,5 +101,5 @@ As you create and modify fields, keep these points in mind:
 * [Create an app from scratch using a Common Data Service database](../canvas-apps/data-platform-create-app-scratch.md)
 
 ## Privacy notice
-With the Microsoft PowerApps common data model we collect and store custom entity and field names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The entity and field names that Creators create help us understand scenarios that are common across the Microsoft PowerApps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
+With the Microsoft Power Apps common data model we collect and store custom entity and field names in our diagnostic systems.  We use this knowledge to improve the common data model for our customers. The entity and field names that Creators create help us understand scenarios that are common across the Microsoft Power Apps community and ascertain gaps in the service’s standard entity coverage, such as schemas related to organizations. The data in the database tables associated with these entities is not accessed or used by Microsoft or replicated outside of the region in which the database is provisioned. Note, however, the custom entity and field names may be replicated across regions and are deleted in accordance with our data retention policies. Microsoft is committed to your privacy as described further in our [Trust Center](https://www.microsoft.com/trustcenter/Privacy/default.aspx).
 

@@ -3,7 +3,7 @@ title: "Tutorial: Write and register a plug-in (Common Data Service) | Microsoft
 description: "This tutorial is the first in a series that will show you how to work with plug-ins." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/23/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -45,6 +45,8 @@ Create an asynchronous plug-in registered on the Create message of the account e
 - Knowledge of the Visual C# programming language
 - Download the Plug-in Registration tool.
     - Information about downloading the Plug-in registration tool is at : [Download tools from NuGet](download-tools-nuget.md). That topic includes instructions to use a PowerShell script to download the latest tools from NuGet.
+
+<a name="BKMK_create"></a>
 
 ## Create a plug-in project
 
@@ -213,6 +215,8 @@ In Visual Studio, press **F6** to build the assembly. Verify that it compiles wi
 
 > [!NOTE]
 > Build the assembly using **Debug** configuration because you will use the Plug-in profiler to debug it in a later tutorial.   Before you include a plug-in with your solution, you should build it using the release configuration.
+
+<a name="BKMK_register"></a>
 
 ## Register plug-in
 

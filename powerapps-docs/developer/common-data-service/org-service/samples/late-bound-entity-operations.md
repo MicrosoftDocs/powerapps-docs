@@ -3,10 +3,10 @@ title: "Sample: Create, retrieve, update, and delete (late bound) (Common Data S
 description: "This sample demonstrates the create, retrieve, update, and delete operations on an account using the late bound Entity class." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -38,7 +38,7 @@ In order to simulate the scenario described above, the sample will do the follow
 
 ### Setup
 
-1. Checks for the current version of the org.
+Checks for the current version of the org.
 
 
 ### Demonstrate
@@ -53,4 +53,4 @@ In order to simulate the scenario described above, the sample will do the follow
 
 ### Clean up
 
-1. There is no clean up required, since all the sample records that are created are deleted in the demonstrate section.
+There is no clean up required, since all the sample records that are created are deleted in the demonstrate section.

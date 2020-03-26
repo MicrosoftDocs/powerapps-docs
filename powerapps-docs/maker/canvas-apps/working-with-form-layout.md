@@ -1,22 +1,22 @@
 ---
 title: Understand data-form layout for canvas apps | Microsoft Docs
-description: In PowerApps, create great-looking form layouts in canvas apps by using rows and columns.
+description: In Power Apps, create great-looking form layouts in canvas apps by using rows and columns.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 06/17/2017
+ms.reviewer: tapanm
+ms.date: 02/10/2020
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Understand data-form layout for canvas apps in PowerApps
+# Understand data-form layout for canvas apps in Power Apps
 
-Easily create an attractive and efficient form when you build a canvas app in PowerApps. For example, consider this basic form for recording sales orders:
+Easily create an attractive and efficient form when you build a canvas app in Power Apps. For example, consider this basic form for recording sales orders:
 
 ![Sample sales order](./media/working-with-form-layout/sales-order.png)
 
@@ -24,9 +24,9 @@ In this tutorial, we'll walk through the steps to create this form. We'll also l
 
 ## Before you start
 
-If you're new to PowerApps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
+If you're new to Power Apps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
 
-This topic is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a PowerApps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service and add similar fields. 
+This topic is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a Power Apps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service and add similar fields. 
 
 ## Add a gallery
 
@@ -172,13 +172,9 @@ The result for the complete third address line:
 Note that many of the cards start out with dynamic formulas for their properties. For example, the Text input control that we resized and moved above had a **Width** property based on the width of its parent. When you move or resize a control, these dynamic formulas are replaced with static values. If you want, you can restore the dynamic formulas by using the formula bar.
 
 ## Turning off Snap to columns
-Sometimes you'll want finer control than the standard 12 columns can provide. For these cases, you can turn off **Snap to columns** and then position cards manually. The form will continue snapping to 12 columns, but you can also hold down the Alt key to manually position and size a card as you wish.
+Sometimes you'll want finer control than the standard 12 columns can provide. For these cases, you can turn off **Snap to columns** and then position cards manually. The form will continue snapping to 12 columns, but you can also hold down the Alt or Ctrl+Shift keys after starting a resize or reposition to override the snap points.  For more details, see [alternate behavior keyboard shortcuts](keyboard-shortcuts.md#alternate-behavior). 
 
-In our example, the four components that make up the third line of the address all have exactly the same width. But this may not be the best layout, as city names are longer than state abbreviations, and the Text input box for countries/regions is short due to the length of its label.
-
-To optimize this space, turn off **Snap to columns** in the right-hand pane and then hold down the Alt key while sizing and positioning these cards. Whenever you hold down the Alt key, all controls show black captions. This behavior is by design to show you control names.
-
-![Positioning and sizing with the ALT key held down](./media/working-with-form-layout/delivery-address-alt-resize.png)
+In our example, the four components that make up the third line of the address all have exactly the same width. But this may not be the best layout, as city names are longer than state abbreviations, and the Text input box for countries/regions is short due to the length of its label.  To optimize this space, turn off **Snap to columns** in the right-hand pane and then hold down the Alt or Ctrl+Shift keys after starting to size and position these cards. For
 
 After careful positioning, the result has appropriate sizes for each field and even spacing horizontally between fields:
 
@@ -189,11 +185,11 @@ In summary, what are the differences when **Snap to columns** is on versus off?
 | Behavior | Snap to columns On | Snap to columns Off |
 | --- | --- | --- |
 | Resize snaps to |Number of columns you select:<br>1, 2, 3, 4, 6, or 12 |12 columns |
-| Resize snap can be overriden |No |Yes, with Alt key |
+| Resize snap can be overriden |No |Yes, with Alt or Ctrl+Shift keys after starting the resize |
 | Cards automatically re-layout between rows (more on this later) |Yes |No |
 
 ## Set width and height
-As with everything in PowerApps, the form's layout is governed by properties on the card controls. As already described, you can change the values of these properties by dragging controls to different locations or dragging grab handles to resize controls. But you'll discover situations in which you'll want to understand and manipulate these properties more precisely, especially when making your forms dynamic with formulas.
+As with everything in Power Apps, the form's layout is governed by properties on the card controls. As already described, you can change the values of these properties by dragging controls to different locations or dragging grab handles to resize controls. But you'll discover situations in which you'll want to understand and manipulate these properties more precisely, especially when making your forms dynamic with formulas.
 
 ### Basic Layout: X, Y, and Width
 The **X** and **Y** properties control the position of cards. When we work with controls on the raw canvas, these properties provide an absolute position. In a form, these properties have a different meaning:

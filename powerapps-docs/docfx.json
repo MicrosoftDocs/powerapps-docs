@@ -38,21 +38,25 @@
       "contributors_to_exclude": [
         "buck1ey",
         "bishalgoswami",
-        "openpublishingbuild",
-        "sudeepku",
-        "v-thepet",
-        "PRMerger10"
+        "kathleenmcgrath",
+        "marycc",
+        "tinaburden",
+        "almostdunh",
+        "AshleyWoodruff"
       ],
       "breadcrumb_path": "breadcrumb/toc.yml",
       "extendBreadcrumb": true,
       "searchScope": [
         "PowerApps"
       ],
-      "titleSuffix": "PowerApps",
+      "titleSuffix": "Power Apps",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/powerapps-docs",
       "feedback_product_url": "https://ideas.powerapps.com",
-      "search.appverid": "met150"
+      "search.appverid": "met150",
+      "search.app": [
+        "PowerApps"
+      ]
     },
     "fileMetadata": {
       "bilingual_type": {

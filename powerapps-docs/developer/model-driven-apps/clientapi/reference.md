@@ -9,7 +9,7 @@ applies_to:
 ms.assetid: 
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -23,9 +23,9 @@ search.app:
 This section contains reference documentation for client API object model that can be used with JavaScript libraries.
 
 > [!IMPORTANT]
-> - All the client scripting APIs available in this documentation also apply to Dynamics 365 for Customer Engagement apps because Customer Engagement apps are in fact model-driven apps built on Common Data Service platform.
 > - The Client API object model also contains the **Xrm.Internal** namespace, and use of the objects/methods in this namespace isn’t supported. These objects, and any parts of the HTML Document Object Model (DOM), are subject to change without notice. We recommend that you don’t use these functions or any script that depends on the DOM.
 > - Also, while debugging, you may find methods and objects in the Client API object model that aren’t documented. Only documented objects and methods are supported.
+> - The client scripting APIs available in this documentation also apply to Dynamics 365 Customer Engagement (on-premises).
 
 The topics under this section are organized as follows:
 - Starts with reference for all the events, collections, and the execution context object.

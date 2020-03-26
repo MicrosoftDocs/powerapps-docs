@@ -8,7 +8,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 32e8d1d0-4093-4588-a517-2930eec34dce
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -59,6 +59,7 @@ This topic provides information about the methods available per attribute type.
 <li><a href="attributes/setRequiredLevel.md" data-raw-source="[setRequiredLevel](attributes/setRequiredLevel.md)">setRequiredLevel</a></li>
 <li><a href="attributes/setSubmitMode.md" data-raw-source="[setSubmitMode](attributes/setSubmitMode.md)">setSubmitMode</a></li>
 <li><a href="attributes/setValue.md" data-raw-source="[setValue](attributes/setValue.md)">setValue</a></li>
+<li><a href="attributes/setIsValid.md" data-raw-source="[setIsValid](attributes/setIsValid.md)">setIsValid</a></li>
 </ul>
 </td>
 </tr>
@@ -66,18 +67,19 @@ This topic provides information about the methods available per attribute type.
 
 
 ## Boolean attribute type
-In addition to the methods available for all attribute types as explained ealier, the following method is available only for the **boolean** attribute:
+
+In addition to the methods available for all attribute types as explained earlier, the following method is available only for the **boolean** attribute:
 
 - [getInitialValue](attributes/getInitialValue.md)
 
 ## Lookup attribute type
-In addition to the methods available for all attribute types as explained ealier, the following method is available only for the **lookup** attribute:
+In addition to the methods available for all attribute types as explained earlier, the following method is available only for the **lookup** attribute:
 
 - [getIsPartyList](attributes/getIsPartyList.md)
 
 ## MultiSelectOptionSet and OptionSet attribute types
 
-In addition to the methods available for all attribute types as explained ealier, the following methods are available only for the **multiselectoption** and **optionset** attributes:
+In addition to the methods available for all attribute types as explained earlier, the following methods are available only for the **multiselectoption** and **optionset** attributes:
 
 <table>
 <tr>
@@ -104,14 +106,13 @@ The following methods are available only for the **decimal**,  **double**, and *
 <li><a href="attributes/getMin.md" data-raw-source="[getMin](attributes/getMin.md)">getMin</a></li>
 <li><a href="attributes/getPrecision.md" data-raw-source="[getPrecision](attributes/getPrecision.md)">getPrecision</a></a></li>
 <li><a href="attributes/setPrecision.md" data-raw-source="[setPrecision](attributes/setPrecision.md)">setPrecision</a></li>
-<li><a href="attributes/getText.md" data-raw-source="[getText](attributes/getText.md)">getText</a></li>
 </ul>
 </td>
 </tr>
 </table>
 
 ## String attribute type
-In addition to the methods available for all attribute types as explained ealier, the following method is available only for the **string** attribute:
+In addition to the methods available for all attribute types as explained earlier, the following method is available only for the **string** attribute:
 
 - [getMaxLength](attributes/getMaxLength.md)
 

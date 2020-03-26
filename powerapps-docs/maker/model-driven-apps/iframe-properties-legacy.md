@@ -1,5 +1,5 @@
 ---
-title: iFrame properties for model-driven app Main forms in PowerApps | MicrosoftDocs
+title: iFrame properties for model-driven app Main forms in Power Apps | MicrosoftDocs
 description: Understand the iFrame properties for Main forms
 Keywords: Main form; iFrame properties; Dynamics 365
 author: Mattp123
@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 06/18/2018
+ms.date: 03/18/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 1b7e6a0c-18a9-47e2-aa7d-0cffb8c93b19
@@ -25,13 +25,18 @@ You can add iFrames to a form to integrate content from another website within a
 
 To view IFrame properties, follow these steps.
 
-1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
 
-3. In the list of forms, open a form of type **Main**. Then on the **Insert** tab, select IFRAME to view IFRAME properties.
+3. In the list of forms, open a form of type **Main**.
 
-![iframe-properties](media/iframe-properties.png)
+4.  Select **Switch to classic** to edit the form in the classic form designer.
+
+4.  On the **Insert** tab, select IFRAME to view IFRAME properties.
+
+      > [!div class="mx-imgBorder"] 
+      > ![iframe-properties](media/iframe-properties.png)
 
 
 > [!NOTE]
@@ -61,7 +66,7 @@ To view IFrame properties, follow these steps.
 |---------------|-----------------|  
 |`orglcid`|The Organization default language LCID.|  
 |`orgname`|The name of the organization.|  
-|`userlcid`|The user’s preferred language LCID|  
+|`userlcid`|The user's preferred language LCID|  
 |`type`|The entity type code. This value can be different for custom entities in different organizations. Use `typename` instead.|  
 |`typename`|The entity type name.|  
 |`id`|The id value of the record. this parameter has no value until the entity record is saved.|  

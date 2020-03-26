@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/12/2017
 ms.author: lanced
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Connect to Twitter from PowerApps
+# Connect to Twitter from Power Apps
 ![Twitter](./media/connection-twitter/twittericon.png)
 
 Twitter lets you post tweets and get tweets, timeline, friends, and followers from your Twitter account.
@@ -26,7 +26,7 @@ This topic shows you how to create the Twitter connection, use the Twitter conne
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Connect to Twitter
-1. Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
+1. Open Power Apps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
 
    ![Open a blank app](./media/connection-twitter/blank-app.png)
 2. In the right-hand pane, click or tap the **Data** tab, and then click or tap **Add data source**.
@@ -233,7 +233,7 @@ Search tweet: Retrieves a collection of relevant tweets matching a specified que
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: http://www.twitter.com/search) |
+| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: https://www.twitter.com/search) |
 | maxResults |integer |no |Maximum number of tweets to retrieve, e.g. {maxResults:5} |
 
 #### Output properties
@@ -382,7 +382,7 @@ When a new tweet appears: Triggers a workflow when a new tweet is posted which m
 
 | Name | Data Type | Required | Description |
 | --- | --- | --- | --- |
-| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: http://www.twitter.com/search) |
+| searchQuery |string |yes |Query text (you may use any Twitter supported query operators: https://www.twitter.com/search) |
 
 #### Output properties
 

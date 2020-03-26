@@ -3,8 +3,9 @@ title: deletePopup | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,6 +17,10 @@ ms.assetid: 89029a0b-5e03-4314-95fe-253b4d8d6da1
 
 [!INCLUDE [deletepopup-description](includes/deletepopup-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
 `deletePopup(name)`
@@ -24,11 +29,11 @@ ms.assetid: 89029a0b-5e03-4314-95fe-253b4d8d6da1
 
 | Parameter Name|Type|Required|Description|
 | ------------- |----|--------|-----------|
-|name|`string`|yes|The name of the popup to remove.|
+|name|`String`|Yes|The name of the popup to remove.|
 
 
 ### Related topics
 
 [Popup Service](../popupservice.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

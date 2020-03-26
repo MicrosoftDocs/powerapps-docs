@@ -1,15 +1,13 @@
 ---
 title: "Create, manage, and publish model-driven apps using code | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Learn about how to create, manage, and publish model-driven apps using code in PowerApps." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Learn about how to create, manage, and publish model-driven apps using code in Power Apps." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 03/04/2019
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 4261c476-2eff-10e3-a334-d02e0cbbb9d5
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -23,7 +21,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-manage-custom-business-apps-using-code -->
 
-In addition to creating a Model-driven app using the PowerApps app designer, you can programmatically create and manage Model-driven apps. 
+In addition to creating a Model-driven app using the Power Apps app designer, you can programmatically create and manage Model-driven apps. 
 
 > [!IMPORTANT]
 > You don't have to write code to build Model-driven apps if you don't need to! The app designer provides a much simpler and intuitive experience for building Model-driven apps without having to write code by providing a tile-based information structure and simplified interface. Check it out here: [Design Model-driven apps by using the app designer](../../maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)  

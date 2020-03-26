@@ -1,5 +1,5 @@
 ---
-title: "Use custom controls for model-driven app data visualizations in PowerApps | MicrosoftDocs"
+title: "Use custom controls for model-driven app data visualizations in Power Apps | MicrosoftDocs"
 description: "Learn how to use custom controls for fields"
 ms.custom: ""
 ms.date: 06/07/2018
@@ -43,7 +43,7 @@ You can set one type of custom control to appear in the web browser client while
 ## Use a custom control to add visualizations to a field  
  Following the steps in this procedure will change the default label and text box field  of the **Budget Amount** field to the slider custom control on the Opportunity entity. You can use similar steps to replace an existing field with a custom control or configure a custom control for a custom field.  
   
-1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
      
 

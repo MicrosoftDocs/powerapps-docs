@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: b8f41b5f-7de2-4855-87a1-d052ee9aa7ae
 ---
 
-Returns the top-most filter associated with the data-set
+Sets the top-most filter associated with the data-set.

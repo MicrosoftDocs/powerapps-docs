@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 10/4/2019
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -66,7 +66,7 @@ Charts provide you with a quick view of how you’re tracking to your goals. The
 -   To view records in the chart or refresh the chart, select ![More commands](media/MoreButton.png "More commands") and then choose an  action: **Refresh** or **View Records**.
      
      > [!div class="mx-imgBorder"]
-     > ![View of charts in PowerApps](media/ViewOfCharts.png "View of charts in PowerApps")  
+     > ![View of charts in Power Apps](media/ViewOfCharts.png "View of charts in Power Apps")  
        
 
 **Change the chart view**
@@ -76,10 +76,10 @@ Changing the chart view shows you a different breakdown of your data, such as op
 For example, choose "All Opportunities," then select a different view, and both chart and grid will get refreshed.
 
 > [!div class="mx-imgBorder"]
-> ![Change a chart view in PowerApps](media/ChangeChartView.png "Change a chart view in PowerApps")
+> ![Change a chart view in Power Apps](media/ChangeChartView.png "Change a chart view in Power Apps")
 
-
-
+## Known issues  
+In the chart designer, adding a order by on certain calculated fields are not supported and will cause an error.  The calculated fields causing this are using another calculated fields, a related entity field, or a local field on the entity.
 
 
 

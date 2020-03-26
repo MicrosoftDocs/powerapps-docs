@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,4 +14,5 @@ applies_to:
   - "Dynamics 365 Version 9.x"
 ms.assetid: e5fa625c-3d41-4873-8aad-da372369ee6d
 ---
-The interface for the Organization System Settings Number Format info exposed to a custom component
+
+The interface for the Organization System Settings Number Format info exposed to a code component.

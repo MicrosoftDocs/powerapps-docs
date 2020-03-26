@@ -8,13 +8,13 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2017
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Connect to Microsoft Translator from PowerApps
+# Connect to Microsoft Translator from Power Apps
 ![Microsoft Translator](./media/connection-microsoft-translator/translatoricon.png)
 
 Add the Microsoft Translator connector to display translated text in a **Label** control in your app. For example, you can create an input text box that asks the user to enter some text to translate. In another label, you can display the translated text.
@@ -27,7 +27,7 @@ This topic shows you how to create the Microsoft Translator connection, use the 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Connect to Microsoft Translator
-1. Open PowerApps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
+1. Open Power Apps, select **New**, and then create a **Blank app**. Choose phone or tablet layout. Tablet layout gives you more workspace:  
 
    ![Open a blank app](./media/connection-microsoft-translator/blank-app.png)
 2. In the right-hand pane, click or tap **Data** tab, and then click or tap **Add data source**.

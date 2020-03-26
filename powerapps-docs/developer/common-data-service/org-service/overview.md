@@ -3,10 +3,10 @@ title: "Use the Common Data Service Organization Service (Common Data Service) |
 description: "Read how you can use Common Data Service Organization Service to work with data and metadata." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -23,9 +23,6 @@ The Organization service is one of two web services you can use to work with dat
 The organization service is optimized for use with the .NET Framework and the SDK assemblies in the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package provide the classes for the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface necessary work with data and metadata using this service. 
 
 Some extension capabilities, such as plug-ins and workflow extensions, depend on the .NET Framework and classes defined in these assemblies so the organization service is the only option when using these methods to extend Common Data Service.
-
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-section](../includes/cc-d365ce-note-section.md)] [Use the Dynamics 365 for Customer Engagement Organization service](/dynamics365/customer-engagement/developer/use-microsoft-dynamics-365-organization-service)
 
 ## Organization service assemblies
 

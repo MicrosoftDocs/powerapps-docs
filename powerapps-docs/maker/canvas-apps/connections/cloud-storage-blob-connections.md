@@ -8,14 +8,14 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 07/12/2016
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Connect to cloud-storage from PowerApps
-PowerApps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
+# Connect to cloud-storage from Power Apps
+Power Apps offers several cloud-storage connections. Using any of these connections, you can store an Excel file and use the information in it throughout your app. These connections include:  
 
 | **Azure Blob** | **Box** | **Dropbox** | **Google Drive** | **OneDrive** | **OneDrive<br>for Business** |
 | --- | --- | --- | --- | --- | --- |
@@ -31,7 +31,7 @@ PowerApps offers several cloud-storage connections. Using any of these connectio
   4. Save your changes.
 
 ## Connect to the cloud storage connection
-1. At [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Manage**, and select **Connections**:  
+1. At [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand **Manage**, and select **Connections**:  
    
     ![Select Connections](./media/cloud-storage-blob-connections/connections.png)
 2. Select **New connection**, and select your cloud storage connection. For example, select **OneDrive**.

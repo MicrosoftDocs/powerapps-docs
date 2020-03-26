@@ -3,7 +3,7 @@ title: "User and team entities (Common Data Service) | Microsoft Docs" # Intent 
 description: "Learn about user and team management using which you can create and maintain user accounts and profiles." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -71,5 +71,5 @@ User and team management is the area of Common Data Service where you can create
  [Sample: Disable a User](/dynamics365/customer-engagement/developer/sample-disable-user)   
  [Sample: Share Records Using GrantAccess, ModifyAccess and RevokeAccess Messages](org-service/samples/share-records-using-grantaccess-modifyaccess-revokeaccess-messages.md)   
  [Sample: Share a record using an access team](org-service/samples/share-record-using-access-team.md)   
- [Blog: Service Accounts – Non-Interactive Users](http://go.microsoft.com/fwlink/p/?LinkId=234350)   
+ [Blog: Service Accounts – Non-Interactive Users](https://go.microsoft.com/fwlink/p/?LinkId=234350)   
  [Privilege and Role Entities](/dynamics365/customer-engagement/developer/privilege-role-entities)

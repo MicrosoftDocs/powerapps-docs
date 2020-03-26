@@ -3,10 +3,10 @@ title: "Sample: Retrieve multiple with QueryExpression (Common Data Service) | M
 description: "This sample shows how to retrieve multiple using QueryExpression" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -37,11 +37,13 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org.
+Checks for the current version of the org.
 
 ### Demonstrate
+
 1. Creates multiple accounts with primary contacts.
 1. The `QueryExpression` class creates a query expression specifying the link entity alias and the columns of the link entity that you want to return.
+
 ### Clean up
 
-1. No clean up is required.
+No clean up is required.

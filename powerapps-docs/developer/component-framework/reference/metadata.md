@@ -3,8 +3,9 @@ title: Metadata | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,31 +15,45 @@ ms.assetid: 0a11feb1-0b7d-4591-b7b3-8e45d4e58805
 
 # Metadata
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+Provides all the metadata information about the attributes.
+
+## Available for 
+
+Model-driven apps
 
 ## Properties
 
-## DisplayName
+### DisplayName
+
+The display name of the attribute.
 
 **Type**: `string`
 
-## LogicalName 
+### LogicalName 
+
+The logical name of the attribute.
 
 **Type**: `string`
 
-## IsSecured
+### IsSecured
+
+Defines whether the attribute is secured or not.
 
 **Type**: `boolean`
 
-## SourceType
+### SourceType
 
 **Type**: `number`
 
-## Description
+### Description
+
+The description of the attribute.
 
 **Type**: `string`
 
-## RequiredLevel
+### RequiredLevel
+
+Defines whether the attribute is required or not.
 
 **Type**: `RequiredLevel`
 
@@ -55,5 +70,5 @@ The `RequiredLevel` has following values:
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework overview](../overview.md)

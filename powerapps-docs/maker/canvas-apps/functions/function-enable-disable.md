@@ -1,12 +1,12 @@
 ---
 title: Enable and Disable functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Enable and Disable functions in PowerApps
+description: Reference information, including syntax and examples, for the Enable and Disable functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Enable and Disable functions in PowerApps
+# Enable and Disable functions in Power Apps
 Turns a [signal](signals.md) on or off.
 
 ## Overview

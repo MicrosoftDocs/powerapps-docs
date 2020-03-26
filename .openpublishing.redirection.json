@@ -1,6 +1,36 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/model-driven-apps/create-and-edit-views.md",
+      "redirect_url": "create-edit-views-app-designer",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/add-images-to-excel.md",
+      "redirect_url": "add-images-pictures-audio-video",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/tutorial-working-with-images-in-excel.md",
+      "redirect_url": "add-images-pictures-audio-video",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/fill-app-submission-form-appsource.md",
+      "redirect_url": "register-microsoft-partner-network",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/maker/portals/configure/view-email-in-timeline.md",
+      "redirect_url": "view-all-activities-in-portal-timeline",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/working-with-environments.md",
+      "redirect_url": "/power-platform/admin/working-with-environments",
+      "redirect_document_id": "false"
+    },    
+    {
       "source_path": "powerapps-docs/developer/component-framework/updating-tooling.md",
       "redirect_url": "get-powerapps-cli#update-microsoft-powerapps-cli-to-the-latest-version",
       "redirect_document_id": "false"
@@ -1564,6 +1594,26 @@
     {
       "source_path": "powerapps/maker/canvas-apps/release-notes.md",
       "redirect_url": "/powerapps/whats-new",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/understand-managed-solutions-merged.md",
+      "redirect_url": "../../maker/common-data-service/how-managed-solutions-merged",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/navigate-specific-solution.md",
+      "redirect_url": "use-solution-explorer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/publish-changes-for-use-customer-service-hub.md",
+      "redirect_url": "create-solution#publish-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/embed-powerapps-powerbi.md",
+      "redirect_url": "https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-powerapp",
       "redirect_document_id": true
     }
   ]

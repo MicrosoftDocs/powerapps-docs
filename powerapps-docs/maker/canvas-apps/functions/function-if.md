@@ -1,12 +1,12 @@
 ---
 title: If and Switch functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the If and Switch functions in PowerApps
+description: Reference information, including syntax and examples, for the If and Switch functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/24/2017
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# If and Switch functions in PowerApps
+# If and Switch functions in Power Apps
 Determines whether any condition in a set is true (**If**) or the result of a formula matches any value in a set (**Switch**) and then returns a result or executes an action.
 
 ## Description
@@ -25,7 +25,7 @@ The **Switch** function evaluates a formula and determines whether the result ma
 **If** and **Switch** are very similar, but you should use the best function for your situation:
 
 * Use **If** to evaluate a single condition. The most common syntax for this function is **If**( *Condition*, *ThenResult*, *DefaultResult* ), which provides the common “if …  then … else …” pattern seen in other programming tools.
-* Use **If** to evaluate multiple unrelated conditions. In PowerApps (unlike Microsoft Excel), you can specify multiple conditions without having to nest **If** formulas.
+* Use **If** to evaluate multiple unrelated conditions. In Power Apps (unlike Microsoft Excel), you can specify multiple conditions without having to nest **If** formulas.
 * Use **Switch** to evaluate a single condition against multiple possible matches. You can also use **If** in this case, but you'd need to repeat the formula for each possible match.
 
 You can use both of these functions in [behavior formulas](../working-with-formulas-in-depth.md) to branch between two or more actions. Only one branch will trigger an action. Conditions and matches are evaluated in order, and they stop if a condition is **true** or a match is found.

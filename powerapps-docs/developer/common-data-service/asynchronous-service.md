@@ -3,10 +3,10 @@ title: "Asynchronous service (Common Data Service) | Microsoft Docs" # Intent an
 description: "Understand how the asynchronous service that manages system jobs works." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 11/27/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -221,7 +221,7 @@ The `RecurrenceStartTime` is simply a datetime value to indicate when the system
 
 The `RecurrencePattern` attribute stores information about how frequently recurring system jobs occur. This value may be set by the platform when a new asyncoperation entity is created. You may set this value to change the pattern.
 
-The values for this attribute use parts of the [RFC2445 Internet standard (Internet Calendaring and Scheduling Core Object Specification)](http://www.rfc-editor.org/info/rfc2445).
+The values for this attribute use parts of the [RFC2445 Internet standard (Internet Calendaring and Scheduling Core Object Specification)](https://www.rfc-editor.org/info/rfc2445).
 
 The following table provides from examples:
 

@@ -1,5 +1,5 @@
 ---
-title: "Create or edit model-driven app web resources in PowerApps | MicrosoftDocs"
+title: "Create or edit model-driven app web resources in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a web resource"
 ms.custom: ""
 ms.date: 06/02/2018
@@ -28,8 +28,8 @@ search.app:
 Web resources are typically used by developers to extend an app using files that are used in web development. App users may need to manage web resources provided by a developer or designer.  
 
 > [!TIP]
-> For an in-depth discussion of web resources, see [Developer Documentation: Web resources for Customer Engagement](/dynamics365/customer-engagement/developer/web-resources).<br /> 
-> For information on web resource dependencies added in PowerApps, see [Developer Documentation: Web resource dependencies](/dynamics365/customer-engagement/developer/web-resources).
+> For an in-depth discussion of web resources, see [Developer Documentation: Web resources for model-driven apps](/powerapps/developer/model-driven-apps/web-resources).<br /> 
+> For information on web resource dependencies added in Power Apps, see [Developer Documentation: Web resource dependencies](/dynamics365/customer-engagement/developer/web-resources).
    
 <a name="BKMK_WhatAreWebResources"></a>
 
@@ -75,7 +75,7 @@ Complete the form to create or edit the web resource:
 |**Type**|*Required*. This is the type of web resource. You can’t change this after you save the web resource.|  
 |**Text Editor**|When the type of web resource represents a kind of text file, select this button to open a page to edit the content using the text editor.<br />More information: [Use the text editor appropriately](#use-the-text-editor-appropriately)| 
 |**Language**|Allows for a selection of a language. This option just tags the record that stores the web resource data. It doesn’t change the behavior of the web resource.|  
-|**Upload File**|Select the **Browse…** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified in Dynamics 365 customer engagement by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
+|**Upload File**|Select the **Browse…** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
 |**URL**|After you save the web resource, the URL to the web resource will be displayed here. Select this link to view the web resource in your browser.|  
   
 After you have added your changes, choose **Save** and then **Publish**.  
@@ -137,4 +137,4 @@ When your customizations are complete, publish them:
 [Web resource properties](web-resource-properties-legacy.md) <br /> 
 [Create and design forms](create-design-forms.md) <br />
 [Understand model-driven app components](model-driven-app-components.md) <br /> 
-[Developer Documentation: Web resources for Customer Engagement](/dynamics365/customer-engagement/developer/web-resources)
+[Developer Documentation: Web resources in model-driven apps](/powerapps/developer/model-driven-apps/web-resources)

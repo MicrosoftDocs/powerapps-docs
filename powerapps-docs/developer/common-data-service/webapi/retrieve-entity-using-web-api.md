@@ -1,5 +1,5 @@
 ---
-title: "Retrieve an entity using the Web API (Common Data Service)| Microsoft Docs"
+title: "Retrieve an entity record using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read how to form a GET request using the Common Data Service Web API to retrieve data for an entity specified as the resource with a unique identifier"
 ms.custom: ""
 ms.date: 10/31/2018
@@ -11,9 +11,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: abae4614-9e03-45e7-94fa-9e6e7225ece5
 caps.latest.revision: 21
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "annbe"
 search.audienceType: 
   - developer
@@ -22,9 +22,9 @@ search.app:
   - D365CE
 ---
 
-# Retrieve an entity using the Web API
+# Retrieve an entity record using the Web API
 
-Use a `GET` request to retrieve data for an entity specified as the resource with a unique identifier. When retrieving an entity you can also request specific properties and expand navigation properties to return properties from related entities.  
+Use a `GET` request to retrieve data for an entity specified as the resource with a unique identifier. When retrieving an entity record you can also request specific properties and expand navigation properties to return properties from related entities.  
 
 > [!NOTE]
 >  For information about retrieving entity metadata, see [Query Metadata using the Web API](query-metadata-web-api.md).
@@ -39,7 +39,7 @@ This example returns data for an account entity instance with the primary key va
 GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)
 ```
 
-To retrieve more than one entity at a time, see [Basic query example](query-data-web-api.md#bkmk_basicQuery) in the [Query Data using the Web API](query-data-web-api.md) topic.
+To retrieve more than one entity record at a time, see [Basic query example](query-data-web-api.md#bkmk_basicQuery) in the [Query Data using the Web API](query-data-web-api.md) topic.
 
 > [!CAUTION]
 >  The above example will return all the properties for account record, which is against the performance best practices for retrieving data. This example was just to illustrate how you can do a basic retrieve of an entity instance in Common Data Service. Because all the properties were returned, we haven't included the response information for the request in this example.
@@ -94,6 +94,11 @@ If an entity has an alternate key defined, you can also use the alternate key to
 
 ```http
 GET [Organization URI]/api/data/v9.0/contacts(firstname='Joe',emailaddress1='abc@example.com')
+```
+If the alternate key definition contains Lookup type field (for example, the primarycontactid property for the Account entity), you can retrieve the account using the [lookup property](/powerapps/developer/common-data-service/webapi/web-api-types-operations#lookup-properties) as shown here.
+
+```http
+GET [Organization URI]/api/data/v9.0/accounts(_primarycontactid_value=00000000-0000-0000-0000-000000000001) 
 ```
 
 Any time you need to uniquely identify an entity to retrieve, update, or delete, you can use alternate keys configured for the entity. By default, there are no alternate keys configured for entities. Alternate keys will only be available if the organization adds them.
@@ -382,7 +387,7 @@ GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-0000000000
 ```
 
 > [!NOTE]
-> This is a subset of the system query options described in the “11.2.4.2.1 Expand Options” section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](http://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, `$expand` and `$levels` aren’t supported for the Web API.
+> This is a subset of the system query options described in the “11.2.4.2.1 Expand Options” section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, `$expand` and `$levels` aren’t supported for the Web API.
 
 <a name="bkmk_DetectIfChanged"></a>
 

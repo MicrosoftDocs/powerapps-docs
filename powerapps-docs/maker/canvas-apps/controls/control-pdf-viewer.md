@@ -1,27 +1,27 @@
 ---
 title: 'PDF viewer control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the PDF viewer control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# PDF viewer control (experimental) in PowerApps
+# PDF viewer control (experimental) in Power Apps
 An experimental control that shows the content of a PDF file.
 
 ## Description
 Show text, graphics, and other content in a PDF file by adding this type of control and setting its **Document** property to the URL, enclosed in double quotation marks, of the file that you want to show.
 
 ## Limitations
-1. The security architecture of PowerApps requires the PDF Viewer to support only HTTPS links, not HTTP.  
+1. The security architecture of Power Apps requires the PDF Viewer to support only HTTPS links, not HTTP.  
 
 2. The **Document** property must link directly to the PDF file. Server redirects or HTML views of the document aren't supported.
 
@@ -103,9 +103,9 @@ Add a **PDF viewer** control, and set its **Document** property to the URL, encl
 
   **"https://blog.mozilla.org/security/files/2015/05/HTTPS-FAQ.pdf"**
 
-    The control shows the PDF file.
+The control shows the PDF file.
 
-    Don't know how to [add and configure a control](../add-configure-controls.md)?
+Don't know how to [add and configure a control](../add-configure-controls.md)?
 
 ## Accessibility guidelines
 

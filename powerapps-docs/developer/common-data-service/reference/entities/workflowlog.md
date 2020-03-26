@@ -1,7 +1,7 @@
 ---
 title: "WorkflowLog Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the WorkflowLog entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the WorkflowLog entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # WorkflowLog Entity Reference
 
@@ -58,13 +57,17 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [CompletedOn](#BKMK_CompletedOn)
 - [Description](#BKMK_Description)
 - [ErrorCode](#BKMK_ErrorCode)
+- [ErrorText](#BKMK_ErrorText)
 - [InteractionActivityResult](#BKMK_InteractionActivityResult)
+- [IterationCount](#BKMK_IterationCount)
 - [Message](#BKMK_Message)
 - [ObjectTypeCode](#BKMK_ObjectTypeCode)
 - [RegardingObjectId](#BKMK_RegardingObjectId)
 - [RegardingObjectIdName](#BKMK_RegardingObjectIdName)
 - [RegardingObjectIdYomiName](#BKMK_RegardingObjectIdYomiName)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
+- [RepetitionCount](#BKMK_RepetitionCount)
+- [RepetitionId](#BKMK_RepetitionId)
 - [StageName](#BKMK_StageName)
 - [StartedOn](#BKMK_StartedOn)
 - [Status](#BKMK_Status)
@@ -179,6 +182,24 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Integer|
 
 
+### <a name="BKMK_ErrorText"></a> ErrorText
+
+**Added by**: Power Automate Extensions package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The string representation of the error.|
+|DisplayName|ErrorText|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|errortext|
+|MaxLength|1000|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_InteractionActivityResult"></a> InteractionActivityResult
 
 |Property|Value|
@@ -193,6 +214,24 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MaxLength|100000|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_IterationCount"></a> IterationCount
+
+**Added by**: Power Automate Extensions package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The iteration count for the action when in a do until loop.|
+|DisplayName|IterationCount|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|iterationcount|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
 
 
 ### <a name="BKMK_Message"></a> Message
@@ -282,6 +321,42 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |LogicalName|regardingobjecttypecode|
 |RequiredLevel|None|
 |Type|EntityName|
+
+
+### <a name="BKMK_RepetitionCount"></a> RepetitionCount
+
+**Added by**: Power Automate Extensions package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The count of repetitions of the action when in a loop.|
+|DisplayName|RepetitionCount|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|repetitioncount|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
+
+
+### <a name="BKMK_RepetitionId"></a> RepetitionId
+
+**Added by**: Power Automate Extensions package Solution
+
+|Property|Value|
+|--------|-----|
+|Description|The string representation of the repetition and iteration / level of the action.|
+|DisplayName|RepetitionId|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|repetitionid|
+|MaxLength|1000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_StageName"></a> StageName
@@ -387,6 +462,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [CreatedOnBehalfByName](#BKMK_CreatedOnBehalfByName)
 - [CreatedOnBehalfByYomiName](#BKMK_CreatedOnBehalfByYomiName)
 - [Duration](#BKMK_Duration)
+- [Inputs_Name](#BKMK_Inputs_Name)
 - [ModifiedBy](#BKMK_ModifiedBy)
 - [ModifiedByName](#BKMK_ModifiedByName)
 - [ModifiedByYomiName](#BKMK_ModifiedByYomiName)
@@ -394,6 +470,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [ModifiedOnBehalfBy](#BKMK_ModifiedOnBehalfBy)
 - [ModifiedOnBehalfByName](#BKMK_ModifiedOnBehalfByName)
 - [ModifiedOnBehalfByYomiName](#BKMK_ModifiedOnBehalfByYomiName)
+- [Outputs_Name](#BKMK_Outputs_Name)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
@@ -556,6 +633,24 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |Type|Integer|
 
 
+### <a name="BKMK_Inputs_Name"></a> Inputs_Name
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|inputs_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ModifiedBy"></a> ModifiedBy
 
 |Property|Value|
@@ -663,6 +758,24 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |Type|String|
 
 
+### <a name="BKMK_Outputs_Name"></a> Outputs_Name
+
+**Added by**: Active Solution Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|outputs_name|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_OwnerId"></a> OwnerId
 
 |Property|Value|
@@ -750,6 +863,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_translationprocess_workflowlogs](#BKMK_lk_translationprocess_workflowlogs)
 - [lk_expiredprocess_workflowlogs](#BKMK_lk_expiredprocess_workflowlogs)
 - [lk_workflowlog_modifiedonbehalfby](#BKMK_lk_workflowlog_modifiedonbehalfby)
+- [lk_workflowlog_flowsession_childworkflow](#BKMK_lk_workflowlog_flowsession_childworkflow)
+- [lk_workflowlog_flowsessions](#BKMK_lk_workflowlog_flowsessions)
 
 
 ### <a name="BKMK_business_unit_workflowlogs"></a> business_unit_workflowlogs
@@ -803,6 +918,18 @@ See expiredprocess Entity [lk_expiredprocess_workflowlogs](expiredprocess.md#BKM
 ### <a name="BKMK_lk_workflowlog_modifiedonbehalfby"></a> lk_workflowlog_modifiedonbehalfby
 
 See systemuser Entity [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_modifiedonbehalfby) One-To-Many relationship.
+
+### <a name="BKMK_lk_workflowlog_flowsession_childworkflow"></a> lk_workflowlog_flowsession_childworkflow
+
+**Added by**: Power Automate Extensions package Solution
+
+See flowsession Entity [lk_workflowlog_flowsession_childworkflow](flowsession.md#BKMK_lk_workflowlog_flowsession_childworkflow) One-To-Many relationship.
+
+### <a name="BKMK_lk_workflowlog_flowsessions"></a> lk_workflowlog_flowsessions
+
+**Added by**: Power Automate Extensions package Solution
+
+See flowsession Entity [lk_workflowlog_flowsessions](flowsession.md#BKMK_lk_workflowlog_flowsessions) One-To-Many relationship.
 
 ### See also
 

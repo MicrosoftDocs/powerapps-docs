@@ -8,7 +8,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: d5f3c0c5-b267-42a8-82e8-8c4a1cda3752
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -21,7 +21,7 @@ search.app:
 
 Use the Controls collection to access controls associated with attributes. 
 
-Because each attribute may be represented more than one time on the page, the controls collection provides access to all controls representing that attribute. If the attribute is represented by only one field in the page, the length of this collection will be 1. When you use the control getName method the name of the first control will be the same as the name of the attribute. The second instance of a control for that attribute will be **\<attributeName>1**. The pattern **\<attributeName>+N** will continue for each additional control added to the form for a specific attribute.
+Because each attribute may be represented more than one time on the page, the controls collection provides access to all controls representing that attribute. If the attribute is represented by only one control in the page, the length of this collection will be 1. When you use the control getName method, the name of the first control will be the same as the name of the attribute. The second instance of a control for that attribute will be **\<attributeName>1**. The pattern **\<attributeName>+N** will continue for each additional control added to the form for a specific attribute.
 
 When a form displays a business process flow control in the header, additional controls will be added for each attribute that is displayed in the business process flow. These controls have a unique name like the following: **header\_process\_\<attribute name>**.
 

@@ -1,12 +1,12 @@
 ---
 title: Sort and SortByColumns functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Sort and SortByColumns functions in PowerApps
+description: Reference information, including syntax and examples, for the Sort and SortByColumns functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/26/2016
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Sort and SortByColumns functions in PowerApps
+# Sort and SortByColumns functions in Power Apps
 Sorts a [table](../working-with-tables.md).
 
 ## Description
@@ -34,7 +34,7 @@ You can combine **SortByColumns** with a **[Drop down](../controls/control-drop-
 
 In addition to sorting ascending or descending, **SortByColumns** can sort based on a single column table of values.  For example, you can sort record based on the name of a day of the week by supplying **[ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]** as the sort order.  All records which have **Monday"** will come first, followed by **Tuesday**, and so on.  Records found that do not appear in the sort table are put at the end of the list.
 
-[Tables](../working-with-tables.md) are a value in PowerApps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** don't modify a table; instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../working-with-tables.md) for more details.
+[Tables](../working-with-tables.md) are a value in Power Apps, just like a string or number.  They can be passed to and returned from functions.  **Sort** and **SortByColumn** don't modify a table; instead they take a table as an argument and return a new table that has been sorted.  See [working with tables](../working-with-tables.md) for more details.
 
 [!INCLUDE [delegation](../../../includes/delegation.md)]
 

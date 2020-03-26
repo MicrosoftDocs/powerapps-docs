@@ -3,7 +3,7 @@ title: "Auditing Overview (Common Data Service) | Microsoft Docs" # Intent and p
 description: "Read how the auditing capability of Common Data Service can be used to record attribute and entity data changes over time for use in analysis and reporting purposes." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -75,7 +75,5 @@ Organizations often need to be in compliance with various regulations to ensure 
  Enabling or disabling of field level security by setting the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsSecured> attribute cannot be audited.  
   
 ### See also
- [Data Management in Dynamics 365](/dynamics365/customer-engagement/developer/manage-data)   
- [Audit entity data changes](/dynamics365/customer-engagement/developer/audit-entity-data-changes)   
- [Configure entities and attributes for auditing](configure-entities-attributes-auditing.md)       
- [Blog: Recover your deleted CRM data and recreate them using CRM API](http://blogs.msdn.com/b/crm/archive/2011/05/23/recover-your-deleted-crm-data-and-recreate-them-using-crm-api.aspx)
+   
+ [Configure entities and attributes for auditing](configure-entities-attributes-auditing.md) 

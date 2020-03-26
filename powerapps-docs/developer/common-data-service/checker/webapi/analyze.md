@@ -1,6 +1,6 @@
 ---
 title: "Invoke analysis | Microsoft Docs"
-description: "Learn how to form a POST request using the PowerApps checker web API to initiate the analysis request job."
+description: "Learn how to form a POST request using the Power Apps checker web API to initiate the analysis request job."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Initiating an analysis job is done by submitting a `POST` request to the `analyze` route. Analysis can be a long running process that usually lasts longer than a minute. The API first does some basic validation, initiates the request on the backend by submitting a job, and then responds with a status code of 202 and a `Location` header or with the appropriate error details. The `Location` header value is a URL that can be used to check on the status of the request and to obtain the URL(s) of the result(s). There are various options through the `POST` action to taylor the job based on your criteria, such as the list of rules or rulesets, files to exclude from the analysis, and more. You can initiate the analysis using the following `[Geographical URL]/api/analyze?api-version=1.0`.
+Initiating an analysis job is done by submitting a `POST` request to the `analyze` route. Analysis can be a long running process that usually lasts longer than a minute. The API first does some basic validation, initiates the request on the backend by submitting a job, and then responds with a status code of 202 and a `Location` header or with the appropriate error details. The `Location` header value is a URL that can be used to check on the status of the request and to obtain the URL(s) of the result(s). There are various options through the `POST` action to tailor the job based on your criteria, such as the list of rules or rulesets, files to exclude from the analysis, and more. You can initiate the analysis using the following `[Geographical URL]/api/analyze?api-version=1.0`.
 
 
 > [!NOTE]
@@ -108,7 +108,7 @@ Location: [Geographical URI]/api/status/9E378E56-6F35-41E9-BF8B-C0CC88E2B832&api
 
 ### See also
 
-[Use the PowerApps checker web API](overview.md)<br />
+[Use the Power Apps checker web API](overview.md)<br />
 [Retrieve the list of rulesets](retrieve-rulesets.md)<br />
 [Retrieve the list of rules](retrieve-rules.md)<br />
 [Upload a file](upload-file.md)<br />

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 1/29/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -17,25 +17,32 @@ search.app:
   - PowerApps
   - D365CE
 ---
-#  Enhanced user experience with the Unified Interface for model-driven apps 
+# Enhanced user experience with the Unified Interface for model-driven apps 
 
 The Unified Interface for model-driven apps provides a consistent and accessible user experience across devices—whether on a desktop, laptop, tablet, or phone. The apps scale by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have, the more information can be displayed.
 
 > [!div class="mx-imgBorder"]
 > ![Unified Interface adapts to screen](media/Reflow.png "Unified Interface adapts to screen")
 
+For an overview of Unified Interface in model-driven apps, watch this video: [Introduction to Unified Interface](https://www.youtube.com/watch?v=_VPOi_Iq6ko)
+
+> [!NOTE]
+> The legacy web client will be deprecated and customers must transition to Unified Interface before October 1, 2020. For more information, see [Blog: Announcing the timeline to move to Unified Interface](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/). To learn more on how to transition, see [Quick start for transitioning](https://docs.microsoft.com/powerapps/maker/model-driven-apps/transition-web-app).
+
 ## Navigation
 
-The menu options let you swiftly navigate the different apps in the system. They provide quick access to recently viewed records and pinned favorites. 
+The menu options let you swiftly navigate the different apps in the system. They provide quick access to recently viewed records and pinned favorites.
 
-> [!div class="mx-imgBorder"]
-> ![Model-driven app nav](media/nav.png "Model-driven app nav")
+![Navigation controls, expanded view](media/nav-expanded.png "Navigation controls, expanded view")
 
-1. Site map is expanded and persists by default.
-2. The subarea that you are currently in is highlighted to indicate where in the app.
-3. **Recent** and **Pinned** items are at the top for easy access. 
-4. Use the Area switcher to switch between apps.
-5. Icons have unique colors on the command bar to show differentiation between commands.
+Legend:
+
+1. **App selector**: Open this menu to move between apps.
+1. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again.
+1. **Recent records**: Expand this entry to view a list of records you were recently using. Select an record here to open it. Select the push-pin icon next to a record listed here to added to your favorites (pinned records).
+1. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
+1. **Entity navigator**: This area lists each entity and dashboard available for the current work area. Select any entry here to open the named dashboard or list-view for that entity.
+1. **Work-area selector**: Open this menu to move to another work area. The current work area is named here.
 
 For more information, see [Basic navigation in a model-driven app](navigation.md).
 
@@ -50,3 +57,12 @@ The business process flow has been improved by the docking mechanism. You can do
 
 ## Accessibility
 The improved accessibility experience lets you use screen readers to translate on-screen information into audible sound and print to a Braille reader so that more people can use the app. For more information, see [Use a screen reader](screen-reader.md).
+
+## Create a Unified Interface app
+If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
+
+![Create new Unified Interface app](media/uci-model-driven-app.png "Create new Unified Interface app")
+
+## Unified Interface Community
+
+Go to the [Unified Interface Community site](https://community.dynamics.com/365/unified-interface/) to get help with planning and executing a smooth transition to the Unified Interface and engage with experts and peers on blogs, webinars, videos, events, and more.

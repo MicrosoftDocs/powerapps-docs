@@ -1,5 +1,5 @@
 ---
-title: "Choose and configure columns in model-driven app views in PowerApps | MicrosoftDocs"
+title: "Choose and configure columns in model-driven app views in Power Apps | MicrosoftDocs"
 description: "Learn how to select and configure views for your app"
 keywords: ""
 ms.date: 11/27/2018
@@ -30,7 +30,7 @@ search.app:
 
 <a name="BKMK_ChooseAndConfigureColumns"></a>   
 
- Along with the filter criteria, the columns visible in a PowerApps view are very important to the value provided by the view. In this topic, you create or edit views by performing the following tasks:  
+ Along with the filter criteria, the columns visible in a Power Apps view are very important to the value provided by the view. In this topic, you create or edit views by performing the following tasks:  
 
 -   [Open the view editor](choose-and-configure-columns.md#open-the-view-editor)  
    
@@ -52,7 +52,7 @@ search.app:
 
 ### Open the view editor
 
-1.  Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab. 
 

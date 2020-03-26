@@ -26,7 +26,7 @@
     href: use-editable-grids.md
   - name: Query and edit an organization theme
     href: query-and-edit-an-organization-theme.md
-  - name: Build custom components using PowerApps Component Framework
+  - name: Build code components using Power Apps component framework
     href: /powerapps/developer/component-framework/overview
 - name: Apply data visualizations using code
   href: customize-visualizations-dashboards.md
@@ -89,8 +89,14 @@
         href: clientapi/reference/events/grid-onrecordselect.md
       - name: Grid OnSave event
         href: clientapi/reference/events/grid-onsave.md
+      - name: OnLookupTagClick event
+        href: clientapi/reference/events/onlookuptagclick.md
       - name: OnProcessStatusChange event
         href: clientapi/reference/events/onprocessstatuschange.md
+      - name: OnPreProcessStatusChange event
+        href: clientapi/reference/events/onpreprocessstatuschange.md
+      - name: OnPreStageChange
+        href: clientapi/reference/events/onprestagechange.md
       - name: OnReadyStateComplete event
         href: clientapi/reference/events/onreadystatecomplete.md
       - name: OnResultOpened event
@@ -197,6 +203,8 @@
         href: clientapi/reference/attributes/isValid.md
       - name: removeOnChange
         href: clientapi/reference/attributes/removeOnChange.md
+      - name: setIsValid
+        href: clientapi/reference/attributes/setIsValid.md
       - name: setPrecision
         href: clientapi/reference/attributes/setPrecision.md
       - name: setRequiredLevel
@@ -214,6 +222,8 @@
         href: clientapi/reference/controls/addCustomView.md
       - name: addNotification
         href: clientapi/reference/controls/addNotification.md
+      - name: addOnLookupTagClick
+        href: clientapi/reference/controls/addOnLookupTagClick.md
       - name: addOnPostSearch
         href: clientapi/reference/controls/addOnPostSearch.md
       - name: addOnResultOpened
@@ -230,6 +240,8 @@
         href: clientapi/reference/controls/clearOptions.md
       - name: getAttribute
         href: clientapi/reference/controls/getAttribute.md
+      - name: getContentWindow
+        href: clientapi/reference/controls/getContentWindow.md
       - name: getControl
         href: clientapi/reference/controls/getControl.md
       - name: getControlType
@@ -250,6 +262,8 @@
         href: clientapi/reference/controls/getName.md
       - name: getObject
         href: clientapi/reference/controls/getObject.md
+      - name: getOptions
+        href: clientapi/reference/controls/getOptions.md
       - name: getParent
         href: clientapi/reference/controls/getParent.md
       - name: getSearchQuery
@@ -272,6 +286,8 @@
         href: clientapi/reference/controls/openSearchResult.md
       - name: refresh
         href: clientapi/reference/controls/refresh.md
+      - name: removeOnLookupTagClick
+        href: clientapi/reference/controls/removeOnLookupTagClick.md
       - name: removeOnPostSearch
         href: clientapi/reference/controls/removeOnPostSearch.md
       - name: removeOnResultOpened
@@ -347,12 +363,20 @@
       items:
       - name: Event handler methods
         items:
+        - name: addOnPreProcessStatusChange
+          href: clientapi/reference/formContext-data-process/eventhandlers/addOnPreProcessStatusChange.md
+        - name: addOnPreStageChange
+          href: clientapi/reference/formContext-data-process/eventhandlers/addonprestagechange.md
         - name: addOnProcessStatusChange
           href: clientapi/reference/formContext-data-process/eventhandlers/addOnProcessStatusChange.md
         - name: addOnStageChange
           href: clientapi/reference/formContext-data-process/eventhandlers/addOnStageChange.md
         - name: addOnStageSelected
           href: clientapi/reference/formContext-data-process/eventhandlers/addOnStageSelected.md
+        - name: removeOnPreProcessStatusChange
+          href: clientapi/reference/formContext-data-process/eventhandlers/removeOnPreProcessStatusChange.md
+        - name: removeOnPreStageChange
+          href: clientapi/reference/formContext-data-process/eventhandlers/removeOnPreStageChange.md
         - name: removeOnProcessStatusChange
           href: clientapi/reference/formContext-data-process/eventhandlers/removeOnProcessStatusChange.md
         - name: removeOnStageChange
@@ -531,8 +555,6 @@
       items:
       - name: addtabStateChange
         href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
-      - name: addtabStateChange
-        href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
       - name: getDisplayState
         href: clientapi/reference/formcontext-ui-tabs/getDisplayState.md
       - name: getLabel
@@ -641,6 +663,13 @@
           href: clientapi/reference/grids/viewselector/isVisible.md
         - name: setCurrentView
           href: clientapi/reference/grids/viewselector/setCurrentView.md
+    - name: Xrm.App
+      href: clientapi/reference/xrm-app.md
+      items:
+      - name: addGlobalNotification
+        href: clientapi/reference/xrm-app/addGlobalNotification.md
+      - name: clearGlobalNotification
+        href: clientapi/reference/xrm-app/clearGlobalNotification.md
     - name: Xrm.Device
       href: clientapi/reference/xrm-device.md
       items:
@@ -672,6 +701,8 @@
     - name: Xrm.Navigation
       href: clientapi/reference/xrm-navigation.md
       items:
+      - name: navigateTo
+        href: clientapi/reference/xrm-navigation/navigateTo.md
       - name: openAlertDialog
         href: clientapi/reference/xrm-navigation/openAlertDialog.md
       - name: openConfirmDialog
@@ -721,12 +752,16 @@
           href: clientapi/reference/xrm-utility/getGlobalContext/getCurrentAppUrl.md
         - name: getVersion
           href: clientapi/reference/xrm-utility/getGlobalContext/getVersion.md
+        - name: getWebResourceUrl
+          href: clientapi/reference/xrm-utility/getGlobalContext/getWebResourceUrl.md
         - name: isOnPremises
           href: clientapi/reference/xrm-utility/getGlobalContext/isOnPremises.md
         - name: prependOrgName
           href: clientapi/reference/xrm-utility/getGlobalContext/prependOrgName.md
       - name: getLearningPathAttributeName
         href: clientapi/reference/xrm-utility/getLearningPathAttributeName.md
+      - name: getPageContext
+        href: clientapi/reference/xrm-utility/getPageContext.md
       - name: getResourceString
         href: clientapi/reference/xrm-utility/getResourceString.md
       - name: invokeProcessAction

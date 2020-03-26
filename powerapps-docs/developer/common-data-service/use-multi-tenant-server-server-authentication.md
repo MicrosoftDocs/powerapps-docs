@@ -3,7 +3,7 @@ title: "Use Multi-Tenant Server-to-server authentication (Common Data Service) |
 description: "Describes how to configure an application user for server-to-server authentication with Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 2/28/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -84,7 +84,7 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
   
  When you configure a project with these options it will be configured to use OWIN middleware and scaffolding for a basic application that supports this scenario. With some basic modifications it can be adapted to work with Common Data Service. 
   
- In the process of creating and registering your application for development you will most likely use `http://localhost` as the **Sign-on URL** and **Reply URL** values so you can test and debug your application locally before publishing. You will need to change these values before you publish your app.  
+ In the process of creating and registering your application for development you will most likely use `https://localhost` as the **Sign-on URL** and **Reply URL** values so you can test and debug your application locally before publishing. You will need to change these values before you publish your app.  
   
  When you register your app you must generate a key, also known as a `ClientSecret`. These keys can be configured for a 1 or 2-year duration. As the host of the application you must treat this value like a password and it is your responsibility to manage renewal of the keys before they expire. You may want to use Key Vault. More information: [https://azure.microsoft.com/services/key-vault/](https://azure.microsoft.com/services/key-vault/)  
   
@@ -165,7 +165,7 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
   
     When you create this user the values for these fields will be retrieved from Azure AD based on the **Application ID** value when you save the user.  
   
-5. Associate the application user with the custom security role you created in [Create a security role for the application user](#bkmk_CreateSecurityRole). More information: [Create users in Dynamics 365 (online) and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles)  
+5. Associate the application user with the custom security role you created in [Create a security role for the application user](#bkmk_CreateSecurityRole). More information: [Create users and assign security roles](/dynamics365/customer-engagement/admin/create-users-assign-online-security-roles)  
   
 <a name="bkmk_TestUsingYourTenant"></a>  
  

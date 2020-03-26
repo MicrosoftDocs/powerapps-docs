@@ -1,12 +1,12 @@
 ---
-title: "Sample: Rollup goal data for a fiscal period against strech target count(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This sample shows how to rollup goal data for a fiscal period against strech target count." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Sample: Rollup goal data for a fiscal period against stretch target count(Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This sample shows how to rollup goal data for a fiscal period against stretch target count." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -62,7 +62,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Creates Metric, and setting the Metric type to **count** and enabling strech tracking.
+1. Creates Metric, and setting the Metric type to **count** and enabling stretch tracking.
 2. Creates a rollup field which targets completed (received) phone calls.
 3. The `GoalRollupQuery` creates the goal rollup queries, locating the incoming and outgoing closed phone calls. 
 4. Creates three goals, one parent goal and two child goals.
@@ -70,6 +70,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-1. Display an option to delete the sample data created in [Setup](#setup).
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

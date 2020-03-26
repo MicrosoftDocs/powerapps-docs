@@ -3,10 +3,10 @@ title: "Sample: Query connections by reciprocal roles (Common Data Service) | Mi
 description: "This sample shows how to query connections bt reciprocal roles" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Query connections by reciprocal roles
+# Sample: Query connections by reciprocal roles (early bound)
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-query-connections-reciprocal-roles-early-bound -->
 
@@ -34,6 +34,7 @@ This sample shows how to create matching roles and then find a matching role for
 In order to simulate the scenario described in [What this sample does](#what-this-sample-does), the sample will do the following:
 
 ### Setup
+
 1. Checks for the current version of the org.
 2. Defines some anonymous types to define the range of possible connection property values.
 3. The `ConnectionRole`creates the primary connection role instance.
@@ -42,9 +43,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `QueryExpression` retrieves all connection roles that have this role listed as reciprocal role.
+The `QueryExpression` retrieves all connection roles that have this role listed as reciprocal role.
 
 ### Clean up
 
-1. Display an option to delete the records in [Setup](#setup).
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

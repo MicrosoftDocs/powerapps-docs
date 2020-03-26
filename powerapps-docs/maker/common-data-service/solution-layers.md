@@ -1,15 +1,11 @@
 ---
-title: "View solution layers | MicrosoftDocs"
+title: "Solution layers  | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
-ms.date: 04/18/2019
+ms.date: 02/05/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
-applies_to: 
-  - Dynamics 365 for Customer Engagement (online)
-  - Dynamics 365 for Customer Engagement Version 9.x
-  - powerapps
 ms.assetid: 
 author: Mattp123
 ms.author: matp
@@ -26,20 +22,26 @@ search.app:
   - D365CE
 ---
 
-<!--note from editor: Best practice is that H1 title and title in metadata are different.    -->
+# Solution layers
 
-# View solution layers
-Solution layers allow you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill down to view specific changed and unchanged property details for a component. 
+Managed and unmanaged solutions exist at different levels within a Common Data Service environment. In Common Data Service, there are two distinct layer levels:  
+- Unmanaged layer. All imported unmanaged solutions and unmanaged customizations exist at this layer. The unmanaged layer is a single layer.  
+- Managed layers. All imported managed solutions and the system solution exist at this level. When multiple managed solutions are installed, the last one installed is above the managed solution installed previously. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the runtime behavior is either “Last one wins” or a merge logic is implemented.  If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solutions, the default behavior defined within the system solution is applied. At the base of the managed layers level is the system layer. The system layer contains the entities and components that are required for the platform to function. 
 
-Solution layers: 
--	Let you see the order in which a solution changed a component. 
--	Let you view all properties of a component within a specific solution, including the changes to the component. 
--	Can be used to troubleshoot dependency or solution-layering issues by displaying change details for a component that was introduced by a solution change.
+![Solution layers](media/solution-layers.png)
+
+## Solution merge behavior
+When you prepare your managed solution for distribution, remember that an environment may have multiple solutions installed or that other solutions may be installed in the future. Construct a solution that follows best practices so that your solution will not interfere with other solutions.
+
+The processes that Common Data Service uses to merge customizations emphasize maintaining the functionality of the solution. While every effort is made to preserve the presentation, some incompatibilities between customizations may require that the computed resolution will change some presentation details in favor of maintaining the customization functionality. More information: [Understand how managed solutions are merged](../../developer/common-data-service/understand-managed-solutions-merged.md)
 
 ## View the solution layers for a component
-You can access solution layers from the **Components** list or from the **Dependency Details** dialog box in solution explorer. 
+The solution layers feature allows you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill down to view specific changed and unchanged property details for a component. You can access solution layers from the **Components** list or from the **Dependency Details** dialog box in solution explorer. 
 
-<!--note from editor: In step 2 below, does the page display a name at top? If so, use the same capitalization in text. -->
+The solution layers feature: 
+-	Lets you see the order in which a solution changed a component. 
+-	Lets you view all properties of a component within a specific solution, including the changes to the component. 
+-	Can be used to troubleshoot dependency or solution-layering issues by displaying change details for a component that was introduced by a solution change.
 
 1. To view solution layers from the **Components** list, open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). In the **Components** list, select a component, such as **Account**, and then select **Solution Layers** on the toolbar. 
 

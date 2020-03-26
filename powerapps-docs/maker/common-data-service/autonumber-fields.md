@@ -27,11 +27,14 @@ search.app:
 
 Autonumber fields are fields that automatically generate alphanumeric strings whenever they are created. Makers can customize the format of these fields to their liking, and then rely on the system to generate matching values that automatically fill them in at runtime.
 
-While autonumber fields are formally just text fields with additional functionality built on top of them, [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) simplifies this concept by simply exposing **Autonumber** as a distinct data type under the **Text** category. It is important to note that the [classic solution explorer](use-solution-explorer.md#classic-solution-explorer) doesn't support creating or managing autonumber fields.
+While autonumber fields are formally just text fields with additional functionality built on top of them, [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) simplifies this concept by simply exposing **Autonumber** as a distinct data type under the **Text** category. It is important to note that the [classic solution explorer](use-solution-explorer.md#classic-solution-explorer) doesn't support creating or managing autonumber fields.
 
 To create an autonumber field, follow the same steps to [create a field](create-edit-field-portal.md#create-a-field) and simply select **Autonumber** from the **Data type** drop-down list box. 
 
 You may also activate autonumber functionality on an existing text field by opening the field and selecting **Autonumber** from the **Data type** drop-down list box. Similarly, autonumber functionality can also be disabled at any time by opening the field and selecting a different option in the **Data type** drop-down list box.
+
+> [!NOTE]
+>Autonumber values are preselected by the database when the record is started. If a record is started but cancelled, the number it was assigned is not used. If, during this time, another record is completed with the next sequential number, gaps will be present in the autonumbering of records.
 
 ## Autonumber types
 
@@ -64,7 +67,7 @@ Autonumber fields have a default seed value of 1000, but you may set a custom se
 
 ## Create an autonumber field
   
-1.  Sign in to the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.  Sign in to the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
   
 2.  On the left pane expand **Data** and select **Entities**.
   
@@ -86,4 +89,4 @@ Autonumber fields have a default seed value of 1000, but you may set a custom se
 9. Select **Done**.
 
 ## See also
- [Create and edit fields for Common Data Service using PowerApps portal](create-edit-field-portal.md)
+ [Create and edit fields for Common Data Service using Power Apps portal](create-edit-field-portal.md)

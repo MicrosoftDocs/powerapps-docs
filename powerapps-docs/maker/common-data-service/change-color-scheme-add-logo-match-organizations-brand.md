@@ -71,7 +71,7 @@ You can create a custom look and feel (a theme), for your app by making changes 
 ## Copy and alter the existing theme  
  The easiest and quickest way to create a new theme is to clone and alter an existing theme, then save it, preview and publish. 
  
-1.	Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 2.	Select **Model-driven** (lower left). 
 
@@ -146,6 +146,6 @@ The following screenshot shows a portion of the default theme setup.
   
 ## See also  
          
- [Video: Themes in Dynamics 365 Customer Engagement](http://go.microsoft.com/fwlink/p/?LinkId=529568)
+ [Video: Themes](https://go.microsoft.com/fwlink/p/?LinkId=529568)
  [Query and edit an organization theme](https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme)
 

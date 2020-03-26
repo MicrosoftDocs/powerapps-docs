@@ -3,7 +3,7 @@ title: " Event Framework (Common Data Service) | Microsoft Docs" # Intent and pr
 description: "Describes the event framework and information developers should know when working with it." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/18/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -62,10 +62,10 @@ $filter=iscustomprocessingstepallowed eq true and isvisible eq true)
 ```
 
 > [!TIP]
-> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and entities eligible for plug-ins using the Common Data Service](https://powerapps.microsoft.com/en-us/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-common-data-service/)
+> You can export this data to an Excel worksheet using this query and the instructions provided in this blog post: [Find Messages and entities eligible for plug-ins using the Common Data Service](https://powerapps.microsoft.com/blog/find-messages-and-entities-eligible-for-plug-ins-using-the-common-data-service/)
 
 
-You can also use the following FetchXML to retrieve this information. The [FetchXML Builder](http://fxb.xrmtoolbox.com) is a useful tool to execute this kind of query.
+You can also use the following FetchXML to retrieve this information. The [FetchXML Builder](https://fxb.xrmtoolbox.com) is a useful tool to execute this kind of query.
 
 ```xml
 <fetch>

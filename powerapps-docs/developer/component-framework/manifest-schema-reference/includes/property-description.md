@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 0966cc45-b8a7-47bc-ab13-126b17c60d5c
 ---
 
-The property node defines a specific, configurable piece of data that the control expects from the Common Data Service.
+The property node defines a specific, configurable piece of data that the component expects from the Common Data Service.

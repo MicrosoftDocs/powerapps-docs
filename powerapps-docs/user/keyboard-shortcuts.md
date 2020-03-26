@@ -1,5 +1,5 @@
 ---
-title: "Use keyboard shortcuts in PowerApps| MicrosoftDocs"
+title: "Use keyboard shortcuts in Power Apps| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -18,7 +18,7 @@ search.app:
   - D365CE
 
 ---
-# Use keyboard shortcuts in PowerApps
+# Use keyboard shortcuts in Power Apps
 
 Keyboard shortcuts give you an alternate way to do common tasks instead of using your mouse or tapping with your finger. They help in seamless navigation of the interface. The following keyboard shortcuts apply across apps. 
 
@@ -27,7 +27,7 @@ Keyboard shortcuts give you an alternate way to do common tasks instead of using
 
 ## Form shortcuts
 
-<!--does the N/A mean not available? If so, why include them? -->
+
 
 
 |Task  | Unified Interface |
@@ -148,8 +148,6 @@ Interactive dashboards enable new functionality, such as filtering, sorting, and
 |Move to the first element in a chart | Tab |
 |Move to the next data point | Right (→) arrow key **OR** Down (↓) arrow key|
 |Move to the previous data point | Left (←) arrow key **OR**  Up (↑) arrow key|
-|Move to the first data point | Home |
-|Move to the last data point | End |
 |Move to the **See More** button in a Tag chart | Tab |
 |Move back from the **See More** button to the tags in a Tag chart | Shift+Tab |
 |Filter the dashboard when the focus is on a data point in an interactive dashboard | Enter **Or** Spacebar |
@@ -199,6 +197,6 @@ If you’re in a record—for example, a lead—this section shows you the keybo
   > [!NOTE]
   > The process name is an icon at the bottom of the page, not the top.
 
-- **Keyboard shortcuts in Windows**: If you are using the Windows operating system, select the following link and choose the version number from the drop-down list. You can view all the shortcuts that are applicable to a Windows environment. See [Windows keyboard shortcuts](https://support.microsoft.com/en-us/help/12445/windows-keyboard-shortcuts). 
-- **Keyboard shortcuts in Mac**: If you are using a Mac operating system, select the following link to view all the shortcuts that are applicable to a Mac environment. See [Mac keyboard shortcuts](https://support.apple.com/en-us/HT201236).
+- **Keyboard shortcuts in Windows**: If you are using the Windows operating system, select the following link and choose the version number from the drop-down list. You can view all the shortcuts that are applicable to a Windows environment. See [Windows keyboard shortcuts](https://support.microsoft.com/help/12445/windows-keyboard-shortcuts). 
+- **Keyboard shortcuts in Mac**: If you are using a Mac operating system, select the following link to view all the shortcuts that are applicable to a Mac environment. See [Mac keyboard shortcuts](https://support.apple.com/HT201236).
 

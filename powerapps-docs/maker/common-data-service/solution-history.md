@@ -6,10 +6,6 @@ ms.date: 05/19/2019
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
-applies_to: 
-  - Dynamics 365 for Customer Engagement (online)
-  - Dynamics 365 for Customer Engagement Version 9.x
-  - powerapps
 ms.assetid: 
 author: Mattp123
 ms.author: matp
@@ -39,7 +35,7 @@ You can view details about solution operations from the **Solutions** area of a 
      > ![](media/solution-history-sitemap.png "Solution History area")
 
      > [!NOTE]
-     > To get to the **Settings** area from a PowerApps unified interface model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
+     > To get to the **Settings** area from a Power Apps unified interface model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
 
 2. By default, the **Custom Solutions History** view is displayed. The following views are available from the **Solutions History** area. 
 - **All Solutions History**. Displays solution history for both internal system and custom solutions. 

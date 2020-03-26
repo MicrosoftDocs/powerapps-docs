@@ -1,12 +1,12 @@
 ---
 title: EncodeUrl and PlainText functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the EncodeUrl and PlainText functions in PowerApps
+description: Reference information, including syntax and examples, for the EncodeUrl and PlainText functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# EncodeUrl and PlainText functions in PowerApps
+# EncodeUrl and PlainText functions in Power Apps
 Encodes and decodes strings.
 
 ## Description
@@ -39,8 +39,12 @@ The return value from these functions is the encoded or decoded string. This fun
 ## Examples
 If you show an RSS feed in a text gallery and then set the **[Text](../controls/properties-core.md)** property of a label in that gallery to **ThisItem.description**, the label might show raw HTML or XML code as in this example:
 
-    <p>We have done an unusually&nbsp;&quot;deep&quot; globalization and localization.<p>
+```html
+    <p>We have done an unusually&nbsp;&quot;deep&quot; globalization and localization.</p>
+```
 
 If you set the **[Text](../controls/properties-core.md)** property of the label to **PlainText(ThisItem.description)**, the text appears as in this example:
 
+```
     We have done an unusually "deep" globalization and localization.
+```

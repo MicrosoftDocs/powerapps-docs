@@ -1,20 +1,20 @@
 ---
 title: 'Combo box control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the combo box control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 09/13/2017
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Combo box control in PowerApps
+# Combo box control in Power Apps
 A control that allows users to make selections from provided choices.  Supports search and multiple selections.
 
 ## Description

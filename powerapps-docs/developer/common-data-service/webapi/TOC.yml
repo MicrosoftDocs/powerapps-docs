@@ -24,10 +24,12 @@
     href: perform-operations-web-api.md
   - name: Compose HTTP requests and handle errors
     href: compose-http-requests-handle-errors.md
-  - name: Query Data
-    href: query-data-web-api.md
-  - name: Retrieve related entities with query
-    href: retrieve-related-entities-query.md
+  - name: Query Data with Web API
+    items:
+    - name: Query data
+      href: query-data-web-api.md
+    - name: Retrieve related entities with query
+      href: retrieve-related-entities-query.md
   - name: Retrieve and execute predefined queries
     href: retrieve-and-execute-predefined-queries.md
   - name: Create an entity
@@ -78,10 +80,12 @@
   items:
   - name: Get started
     href: discover-url-organization-web-api.md
+  - name: Modify your code to use global Discovery Service
+    href: discovery-orgsdk-to-webapi.md
   - name: Global Discovery Service Sample (C#)
     href: samples/global-discovery-service-csharp.md
-- name: Import data
-  href: ../import-data.md 
+- name: Web API versions and limitations
+  href: web-api-versions.md
 - name: Sample data
   href: ../sample-data.md #Topic is for both Web API and Organization service
 - name: Samples

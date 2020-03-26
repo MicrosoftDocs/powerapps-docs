@@ -1,20 +1,20 @@
 ---
 title: Collect, Clear, and ClearCollect functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the Collect, Clear, and ClearCollect functions in PowerApps
+description: Reference information, including syntax and examples, for the Collect, Clear, and ClearCollect functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 11/01/2015
+ms.reviewer: tapanm
+ms.date: 09/14/2019
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Collect, Clear, and ClearCollect functions in PowerApps
+# Collect, Clear, and ClearCollect functions in Power Apps
 
 Creates and clears [collections](../working-with-data-sources.md#collections) and adds [records](../working-with-tables.md#records) to any [data source](../working-with-data-sources.md).
 
@@ -32,7 +32,7 @@ When used with a collection, additional [columns](../working-with-tables.md#colu
 
 If the data source doesn't already exist, a collection is created.
 
-Collections are sometimes used to hold global variables or make a temporary copy of a data source. PowerApps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../working-with-variables.md).
+Collections are sometimes used to hold global variables or make a temporary copy of a data source. Power Apps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../working-with-variables.md).
 
 You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 
@@ -80,8 +80,19 @@ In these examples, you'll erase and add to a collection that's named **IceCream*
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )** |Clears all data from the **IceCream** collection and then adds a record that includes a quantity of strawberry ice cream. |<style> img { max-width: none } </style> ![Table with one record](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>The **IceCream** data source has also been modified. |
-| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Adds two records to the **IceCream** collection that includes a quantity of pistachio and Orange ice cream. |![Table with two records](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>The **IceCream** data source has also been modified. |
-| **Clear( IceCream )** |Removes all records from the **IceCream** collection. |![Empty table](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>The **IceCream** data source has also been modified. |
+| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Strawberry",&nbsp;Quantity:&nbsp;300&nbsp;} )** |Clears all data from the **IceCream** collection and then adds a record that includes a quantity of strawberry ice cream. |<style> img { max-width: none } </style> ![Table with one record](media/function-clear-collect-clearcollect/icecream-clearcollect.png)<br><br>The **IceCream** collection has also been modified. |
+| **Collect( IceCream, {&nbsp;Flavor:&nbsp;"Pistachio",&nbsp;Quantity:&nbsp;40&nbsp;}, {&nbsp;Flavor:&nbsp;"Orange",&nbsp;Quantity:&nbsp;200&nbsp;}  )** |Adds two records to the **IceCream** collection that includes a quantity of pistachio and orange ice cream. |![Table with two records](media/function-clear-collect-clearcollect/icecream-collect.png)<br><br>The **IceCream** collection has also been modified. |
+| **Clear( IceCream )** |Removes all records from the **IceCream** collection. |![Empty table](media/function-clear-collect-clearcollect/icecream-clear.png)<br><br>The **IceCream** collection has also been modified. |
 
 For step-by-step examples of how to create a collection, see [Create and update a collection](../create-update-collection.md).
+
+### Records and tables
+
+These examples examine how record and table arguments to **Collect** and **ClearCollect** are handled.
+
+| Formula | Description | Result |
+| --- | --- | --- |
+| **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;}  )** | Clear all data and then adds two records to the **IceCream** collection that includes a quantity of chocolate and vanilla ice cream.  The records to be added are provided as individual arguments to the function.| ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream.png) <br><br>The **IceCream** collection has also been modified. |
+| **ClearCollect( IceCream, Table( {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;} ) )** | Same as the previous example except that the records are combined in a table and passed in through a single argument. The contents of the table are extracted record by record before being added to the **IceCream** collection. | ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream.png)<br><br>The **IceCream** collection has also been modified. |
+| **ClearCollect( IceCream,<br>{&nbsp;MyFavorites: Table( {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;} ) } )** | Same as the previous example except that the table is wrapped in a record.  The records of the table are not extracted and instead the entire table is added as a sub-table of the record. | ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream-myfavorites.png)<br><br>The **IceCream** collection has also been modified. |
+

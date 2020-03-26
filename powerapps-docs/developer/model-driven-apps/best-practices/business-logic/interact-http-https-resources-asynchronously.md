@@ -83,7 +83,7 @@ There are multiple ways to interact with the server or request resources. Common
   requestXhr.open('GET', '/test/test.txt', false);
   ```
 
-- Usage of the [`jQuery`](https://www.jquery.com) [`ajax` function](http://api.jquery.com/jquery.ajax/), passing in `false` for the value of the `async` parameter
+- Usage of the [`jQuery`](https://www.jquery.com) [`ajax` function](https://api.jquery.com/jquery.ajax/), passing in `false` for the value of the `async` parameter
 
   ```javascript
   // Explicitly setting the async parameter to false or supplying a variable with a value of false will force this as a synchronous call.

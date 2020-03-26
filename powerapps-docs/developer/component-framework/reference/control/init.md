@@ -1,16 +1,21 @@
 ---
 title: "init | MicrosoftDocs"
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 applies_to: ""
 ms.assetid: 4485b7d4-c68f-4298-8676-1820eb33c1ad
 ms.author: "nabuthuk"
+author: Nkrb
 ---
 # init
 
 [!INCLUDE[./includes/init-description.md](./includes/init-description.md)]
+
+## Available for 
+
+Model-driven apps and canvas apps (public preview)
 
 ## Syntax
 
@@ -38,5 +43,5 @@ MyNameSpace.JSHelloWorldControl.prototype.init = function (context, notifyOutput
 ### Related topics
 
 [Control](../control.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

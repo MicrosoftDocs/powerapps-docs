@@ -1,20 +1,20 @@
 ---
 title: Left, Mid, and Right functions| Microsoft Docs
-description: Reference information, including syntax and examples, for the Left, Mid, and Right functions in PowerApps
+description: Reference information, including syntax and examples, for the Left, Mid, and Right functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 11/07/2015
+ms.reviewer: tapanm
+ms.date: 02/07/2020
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Left, Mid, and Right functions in PowerApps
+# Left, Mid, and Right functions in Power Apps
 Extracts the left, middle, or right portion of a string of text.
 
 ## Description
@@ -29,13 +29,13 @@ If you specify a single string as an argument, the function returns the portion 
 If the starting position is negative or beyond the end of the string, **Mid** returns *blank*.  You can check the length of a string by using the **[Len](function-len.md)** function. If you request more characters than the string contains, the function returns as many characters as possible.
 
 ## Syntax
-**Left**( *String*, *NumberOfCharacters* )<br>**Mid**( *String*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *String*, *NumberOfCharacters* )
+**Left**( *String*, *NumberOfCharacters* )<br>**Mid**( *String*, *StartingPosition* [, *NumberOfCharacters* ] )<br>**Right**( *String*, *NumberOfCharacters* )
 
 * *String* - Required. The string to from which to extract the result.
 * *StartingPosition* - Required (**Mid** only).  The starting position.  The first character of the string is position 1.
 * *NumberOfCharacters* - Required (**Left** and **Right** only).  The number of characters to return.  If omitted for the **Mid** function, the function returns the portion from the starting position until the end of the string.
 
-**Left**( *SingleColumnTable*, *NumberOfCharacters* )<br>**Mid**( *SingleColumnTable*, *StartingPosition*, *NumberOfCharacters* )<br>**Right**( *SingleColumnTable*, *NumberOfCharacters* )
+**Left**( *SingleColumnTable*, *NumberOfCharacters* )<br>**Mid**( *SingleColumnTable*, *StartingPosition* [, *NumberOfCharacters* ] )<br>**Right**( *SingleColumnTable*, *NumberOfCharacters* )
 
 * *SingleColumnTable* - Required. A single-column table of strings from which to extract the results.
 * *StartingPosition* - Required (**Mid** only).  The starting position.  The first character of the string is position 1.

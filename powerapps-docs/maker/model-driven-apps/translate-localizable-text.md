@@ -2,7 +2,7 @@
 title: "Translate localizable text for model-driven apps | MicrosoftDocs"
 description: "Learn how to get localizeable text translated to support multiple languages"
 ms.custom: ""
-ms.date: 06/03/2018
+ms.date: 03/05/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -41,24 +41,29 @@ If you haven't already enabled the languages for your environment, use the steps
 > Each language can take several minutes to enable. During this time, other users of the environment may not be able to use your app. You should enable languages at time that will be least disruptive to users.
 
 > [!TIP]
-> While you are enableing the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](http://go.microsoft.com/fwlink/?LinkId=122128).
+> While you are enabling the languages, note the LCID values used for each language. This value will represent the language in the exported data for the localizable text. Language codes are four-digit or five-digit locale IDs. Valid locale ID values can be found at [Locale ID (LCID) Chart)](https://go.microsoft.com/fwlink/?LinkId=122128).
 
 ## Export the localizable text
 
-The scope of the localizable text that will be exported is the unmanaged solution that contains the localizable text. This can only be done using solution explorer
+The scope of the localizable text that will be exported is the unmanaged solution that contains the localizable text.
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+<!-- [!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)] -->
 
-Open the unmanaged solution that contains the localizable text in the menu bar select **Translations** > **Export Translations**. 
+1. From the Power Apps portal select **Solutions**.
 
-![Export Translations](media/export-localizable-text.png)
+2. In the **All Solutions** list select the unmanaged solution that contains the localizable text you want.
 
-You should see an alert that says:
-> Exporting customized labels for translation can take several minutes. Do not click the export link again until the first export has finished. Are you sure that you want to export now? 
+3. In the menu bar select **Translations** > **Export Translations**. 
 
-Click **OK** if you want to continue.
+    > [!div class="mx-imgBorder"] 
+    > ![Export Translations](media/export-localizable-text.png "Export Translations")
 
-When the export is completed, you can find a file named something like `CrmTranslations_{0}_{1}.zip` in your downloads folder where `{0}` is the unique name of the solution and `{1}` is the version number of the solution.
+    You could see an alert that says:
+    > Exporting customized labels for translation can take several minutes. Do not click the export link again until the first export has finished. Are you sure that you want to export now?
+    
+    > Click **OK** if you want to continue.
+
+When the export is completed, save the translations zip file. The file is named something like `CrmTranslations_{0}_{1}.zip`, where `{0}` is the unique name of the solution and `{1}` is the version number of the solution.
 
 ## Get the localizable text translated
 
@@ -78,7 +83,7 @@ You can open the CrmTranslations.xml file with Microsoft Office Excel.
 
 When you view the data in Excel, look at the **Localized Labels** tab.
 
-![Exported text for localization](media/localized-labels-tab-exported-languages.png)
+![Exported text for localization](media/localized-labels-tab-exported-languages.png "Exported text for localization")
 
 Any custom entities or fields will have empty cells for the localizable text. Add the localized values for those items.
 
@@ -111,13 +116,14 @@ After changes are made to the `CrmTranslations.xml` file, you must compress the 
 
 From the same unmanaged solution that you exported the translations from, in the menu choose **Translations** > **Import Translations**. 
 
-![Import translations](media/import-translations.png)
+<!-- ![Import translations](media/import-translations.png) -->
+
+> [!div class="mx-imgBorder"] 
+> ![Import selected file](media/import-translated-text-dialog.png "Import localized text")
 
 Select the file that contains the compressed translated text and select **Import**.
 
-![Import selected file](media/import-translated-text-dialog.png)
-
-After the translated text is imported, you should publish all customizations to see the changes in your app(s);
+After the translated text is imported, you should publish all customizations to see the changes in your app(s).
 
 ## Community tools
 
@@ -131,4 +137,3 @@ After the translated text is imported, you should publish all customizations to 
 ## Next steps
 [Regional and language options for your organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-languages)<br />
 [Edit system entity messages](../common-data-service/edit-system-entity-messages.md)
-

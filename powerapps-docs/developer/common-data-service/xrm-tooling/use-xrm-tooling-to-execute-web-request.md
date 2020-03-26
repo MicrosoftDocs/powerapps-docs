@@ -3,7 +3,7 @@ title: "Use XRM tooling to execute actions in Common Data Service| MicrosoftDocs
 description: "Object of CrmServiceClient class can be used to perform create, retrieve, update and delete operations on Dynamics 365 data"
 ms.custom: ""
 ms.date: 03/20/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,6 +14,7 @@ ms.assetid: 72e9238d-e0fb-453b-b1ab-3a15ffb19838
 caps.latest.revision: 13
 ms.author: "nabuthuk"
 manager: "kvivek"
+author: Nkrb
 search.audienceType: 
   - developer
 search.app: 

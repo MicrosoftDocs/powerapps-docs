@@ -3,7 +3,7 @@ title: "Create Client applications (Common Data Service) | Microsoft Docs" # Int
 description: "Introduces the concepts required to create custom client applications that connect to Common Data Service using code." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -18,9 +18,9 @@ search.app:
 # Create Client applications
 
 You can create client applications without writing code using canvas and model-driven apps.
-More information: [Overview of creating apps in PowerApps](../../maker/index.md)
+More information: [Overview of creating apps in Power Apps](../../maker/index.md)
 
-If the PowerApps options do not meet your requirements, you can create a client application using code.
+If the Power Apps options do not meet your requirements, you can create a client application using code.
 
 ## Connecting to Common Data Service
 

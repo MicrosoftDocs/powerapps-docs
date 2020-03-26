@@ -1,33 +1,31 @@
 ---
 title: Work with templates | Microsoft Docs
 description: Instructions to work with templates in portal.
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
-ms.author: shjais
+ms.date: 10/07/2019
+ms.author: tapanm
 ms.reviewer:
 ---
 
 # Work with templates
 
-You can edit the built-in templates by using the code editor. The following templates are editable:
+The built-in templates are available according to the portal you provision. You can edit the templates by using the code editor. For example, the following built-in templates are available when you provision a Common Data Service starter portal:
 
-- 100% Blank page
-- Blank page
-- Blank page with title
-- Landing page
+- Default studio template
+- Page with title
 - Page with child links
-- Page with side navigation
+
 
 > [!NOTE]
-> It is recommended not to edit **Profile** and **Search** templates.
+> It is recommended not to edit **Default studio template**, **Profile**, and **Search** templates.
 
 To open a template in code editor:
 
-1.  [Edit the portal](manage-existing-portals.md#edit) to open it in the portal designer.  
+1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
 2.  Select **Templates** ![templates icon](media/templates-icon.png "Templates icon") from the toolbelt on the left side of the screen. The available templates are displayed.  
 
@@ -39,4 +37,5 @@ To open a template in code editor:
 4.  Edit the code and save the changes.
 
 > [!NOTE]
-> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/portals/custom-templates-dynamic-content)
+> - You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)
+> - The page templates you create using the [Portal Management app](configure/configure-portal.md) are also displayed in the **Templates** pane.

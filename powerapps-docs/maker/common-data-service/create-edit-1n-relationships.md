@@ -1,5 +1,5 @@
 ---
-title: "Create 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps overview | MicrosoftDocs"
+title: "Create 1:N (one-to-many) or N:1 (many-to-one) entity relationships in Power Apps overview | MicrosoftDocs"
 description: "Learn how to create one-to-many or many-to-one entity relationships"
 ms.custom: ""
 ms.date: 05/27/2018
@@ -34,7 +34,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 |Designer| Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps portal](create-edit-1n-relationships-portal.md)|
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.<br />More information: [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in Power Apps portal](create-edit-1n-relationships-portal.md)|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements. <br />More information: [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md) |
 
 > [!NOTE]
@@ -47,7 +47,7 @@ There are two designers you can use to create and edit 1:N (one-to-many) or N:1 
 
 Information in this topic will help you choose which designer you can use. 
 
-You should use the PowerApps portal to create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships unless you need to address any of the following requirements:
+You should use the Power Apps portal to create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships unless you need to address any of the following requirements:
 
 - Configure field mappings
 - Configure navigation pane options for model-driven app
@@ -67,7 +67,7 @@ You should use the PowerApps portal to create and edit 1:N (one-to-many) or N:1 
 ### See also
 
 [Create and edit relationships between entities](create-edit-entity-relationships.md)<br />
-[Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps portal](create-edit-1n-relationships-portal.md)<br />
+[Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in Power Apps portal](create-edit-1n-relationships-portal.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)<br />
 [Developer documentation: Customize entity relationship metadata](/dynamics365/customer-engagement/developer/customize-entity-relationship-metadata)<br />
 [Developer documentation: Entity relationship eligibility](/dynamics365/customer-engagement/developer/entity-relationship-eligibility)

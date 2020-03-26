@@ -1,12 +1,12 @@
 ---
 title: Understand data cards | Microsoft Docs
-description: In PowerApps, use form cards to collect and display information from a data source.
+description: In Power Apps, use form cards to collect and display information from a data source.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/26/2016
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand data cards in PowerApps
+# Understand data cards in Power Apps
 
 **[Card](controls/control-card.md)** controls are the building blocks of the **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls in canvas apps. The form represents the entire record, and each card represents a single field of that record.
 
@@ -26,7 +26,7 @@ To get started with cards, see [add a form](add-form.md) and [understand data fo
 
 ## Predefined cards
 
-PowerApps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
+Power Apps offers a predefined set of cards for strings, numbers, and other data types. In the right-hand pane, you can see the variations available and change the card used for a field:
 
 ![](./media/working-with-cards/selected-card.png)
 
@@ -102,7 +102,7 @@ We can do the same thing on the second screen of this app, where we use a **Disp
 ## Interact with a form
 After you unlock a card, you can change how it interacts with the form that contains it.
 
-Below are some guidelines for how controls should work with their card and how the cards should work with the form. These are only guidelines. As with any control in PowerApps, you can create formulas that reference any other control in PowerApps, and that's no less true for cards and controls within cards. Be creative: you can create an app in many ways.  
+Below are some guidelines for how controls should work with their card and how the cards should work with the form. These are only guidelines. As with any control in Power Apps, you can create formulas that reference any other control in Power Apps, and that's no less true for cards and controls within cards. Be creative: you can create an app in many ways.  
 
 ### DataField property
 The most important property on the card is the **[DataField](controls/control-card.md)** property.  This property drives validation, what field is updated, and other aspects of the card.

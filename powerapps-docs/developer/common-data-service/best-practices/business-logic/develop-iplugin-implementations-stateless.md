@@ -13,7 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
-ms.date: 1/15/2019
+ms.date: 9/05/2019
 ms.author: jowells
 search.audienceType: 
   - developer
@@ -40,7 +40,11 @@ Members of classes that implement the <xref href="Microsoft.Xrm.Sdk.IPlugin?text
 
 ## Guidance
 
-When implementing <xref:Microsoft.Xrm.Sdk.IPlugin>, do not use member fields and properties and write the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method as a stateless operation.  All per invocation state information should be accessed via the execution context only.  Do not attempt to store any execution state data in member fields or properties for use during the current or next plug-in invocation unless that data was obtained from the configuration parameter provided to the overloaded constructor.
+When implementing <xref:Microsoft.Xrm.Sdk.IPlugin>, do not use member fields and properties and write the <xref:Microsoft.Xrm.Sdk.IPlugin.Execute*> method as a stateless operation.  All per invocation state information should be accessed via the execution context only.  
+
+Do not attempt to store any execution state data in member fields or properties for use during the current or next plug-in invocation unless that data was obtained from the configuration parameter provided to the overloaded constructor.
+
+Do not use code that registers to AppDomain events. Plugin logic should not rely on any AppDomain events or properties, since the internal implementation of the plugin infrastructure can change the execution behavior at any point of time. This can cause failures even if the code worked at some point in time.
 
 Read-only, static, and constant members are inherently thread-safe and can also be used reliably within a plug-in class. The following are some examples on how to maintain thread-safe plug-ins:
 
@@ -200,4 +204,4 @@ Another reason IPlugins should be stateless is that multiple system threads coul
 ### See also
 
 [Write a plug-in](../../write-plug-in.md)<br />
-[CRM Team Blog: Thread Safety in Plug-ins](http://blogs.msdn.com/b/crm/archive/2008/11/18/member-static-variable-and-thread-safety-in-plug-in-for-crm-4-0.aspx)<br />
+[CRM Team Blog: Thread Safety in Plug-ins](https://blogs.msdn.com/b/crm/archive/2008/11/18/member-static-variable-and-thread-safety-in-plug-in-for-crm-4-0.aspx)<br />

@@ -3,10 +3,10 @@ title: "Query hierarchical data (Common Data Service) | Microsoft Docs" # Intent
 description: "Read how you can use the new query condition operators to query entities with explicit hierarchical relationships." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -32,8 +32,8 @@ You can take advantage of new query condition operators to query entities with e
 |`under`|`Under`|Returns all child records below the referenced record in the hierarchy|  
 |`eq-or-under`|`UnderOrEqual`|Returns the referenced record and all child records below it in the hierarchy|  
 |`not-under`|`NotUnder`|Returns all records not below the referenced record in the hierarchy|  
-|`eq-owneduseroruserhierarchy`|`OwnedByMeOrMyReports`|When hierarchical security models are used, Equals current user or his reporting hierarchy|  
-|`eq-useroruserhierarchyandteams`|`OwnedByMeOrMyReportsAndTeams`|When hierarchical security models are used, Equals current user and his or her teams, or his or her reporting hierarchy and their teams|  
+|`eq-owneduseroruserhierarchy`|`OwnedByMeOrMyReports`|When hierarchical security models are used, Equals current user or user's reporting hierarchy|  
+|`eq-useroruserhierarchyandteams`|`OwnedByMeOrMyReportsAndTeams`|When hierarchical security models are used, Equals current user and user's teams, or user's reporting hierarchy and their teams|  
   
 ### Recursion limits when querying hierarchical data  
  Because querying hierarchical data can be resource intensive, there is a default limit of 100 recursions allowed conditions for hierarchical queries using the `Above`, `AboveOrEqual`, `Under`, `UnderOrEqual`, and `NotUnder` condition operators.  

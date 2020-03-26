@@ -1,20 +1,20 @@
 ---
 title: 'Web barcode-scanner control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the barcode-scanner control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
-ms.reviewer: anneta
+ms.author: chmoncay
+ms.reviewer: tapanm
 search.audienceType:
   - maker
 search.app:
   - PowerApps
 ---
-# Web barcode-scanner control (experimental) in PowerApps
+# Web barcode-scanner control (experimental) in Power Apps
 
 The legacy barcode-scanning control, which is obsolete but might be useful for scanning codes in a web browser.
 

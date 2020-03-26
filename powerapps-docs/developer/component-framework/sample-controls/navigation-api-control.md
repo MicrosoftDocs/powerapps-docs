@@ -3,25 +3,28 @@ title: " Navigation API component| Microsoft Docs"
 description: "Implementing navigation api component" 
 ms.custom: ""
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.topic: "article"
 ms.author: "nabuthuk" 
+author: Nkrb
 ---
 
 # Implementing Navigation API component
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
-This sample component explores the various methods available as part of the PowerApps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed.  
+This sample component explores the various methods available as part of the Power Apps component framework navigation API. In this sample, you create a series of input elements of type buttons which calls into the respective methods of the navigation API that matches with the value displayed. You can download the sample component from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/TS_NavigationAPI).
 
 > [!div class="mx-imgBorder"]
 > ![Navigation API component](../media/navigation-api-control.png "Navigation API component")
 
+## Available for 
+
+Model-driven apps
+
 ## Manifest
 
 ```xml
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest>
 	<control namespace="SampleNamespace" constructor="TSNavigationAPI" version="1.0.0" display-name-key="TS_NavigationAPI_Display_Key" description-key="TS_NavigationAPI_Desc_Key" control-type="standard">
 		<type-group name="numbers">
@@ -44,7 +47,7 @@ This sample component explores the various methods available as part of the Powe
 ```TypeScript
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 export class TSNavigationAPI implements ComponentFramework.StandardControl<IInputs, IOutputs> {
-// PowerApps component framework framework delegate which will be assigned to this object which would be called whenever an update happens. 
+// Power Apps component framework framework delegate which will be assigned to this object which would be called whenever an update happens. 
 private _notifyOutputChanged: () => void;
 // Reference to the div element that hold together all the HTML elements that we are creating as part of this control
 private divElement: HTMLDivElement;
@@ -117,7 +120,7 @@ this._container.appendChild(this.divElement);
 */
 public raiseEvent(event: Event,)
 {
-var inputSource = event.srcElement!.id; 
+var inputSource = (event.srcElement! as Element)!.id;
 switch(inputSource)
 {
 	case "openAlertDialogButton": this._context.navigation.openAlertDialog({text:"This is an alert.", confirmButtonLabel : "Yes",}).then(
@@ -189,20 +192,20 @@ public destroy()
 ## Resources
 
 ```css
-mpleNamespace\.TSNavigationAPI button{
-	background-color: rgb(59, 121, 183);
-	border: 1px solid black;
-	color: white;
-	padding: 10px 24px;
-	cursor: pointer;
-	width: 100%;
-	display: block;
+.SampleNamespace\.TSNavigationAPI button {
+  background-color: rgb(59, 121, 183);
+  border: 1px solid black;
+  color: white;
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
 }
 .SampleNamespace\.TSNavigationAPI button:not(:last-child) {
-	border-bottom: none;
+  border-bottom: none;
 }
 .SampleNamespace\.TSNavigationAPI button:hover {
-	background-color: #c2c2c2;
+  background-color: #c2c2c2;
 }
 ```
 
@@ -236,6 +239,8 @@ This sample opens a new window and loads the microsoft.com home page on clicking
 
 ### Related topics
 
-[Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Manifest Schema Reference](../manifest-schema-reference/index.md)
+[Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
+[How to use the sample components](../use-sample-components.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)
+

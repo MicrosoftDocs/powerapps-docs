@@ -1,12 +1,12 @@
 ---
 title: Replace and Substitute functions | Microsoft Docs
-description: Reference information, including syntax, for the Replace and Substitute functions in PowerApps
+description: Reference information, including syntax, for the Replace and Substitute functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 12/02/2018
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Replace and Substitute functions in PowerApps
+# Replace and Substitute functions in Power Apps
 Replace a portion of a string of text with another string.
 
 ## Description

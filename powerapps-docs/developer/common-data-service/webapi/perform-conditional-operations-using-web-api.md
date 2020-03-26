@@ -2,7 +2,7 @@
 title: "Perform conditional operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 01/08/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,9 +11,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 771002b0-825a-462d-bbf0-1aeba4b726c8
 caps.latest.revision: 16
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "annbe"
 search.audienceType: 
   - developer
@@ -38,8 +38,6 @@ Common Data Service generates a weakly validating `@odata.etag` property for eve
 ## If-Match and If-None-Match headers
 
 Use [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers with ETag values to check whether the current version of a resource matches the one last retrieved, matches any previous version or matches no version.  These comparisons form the basis of conditional operation support. Common Data Service provides ETags to support conditional retrievals, optimistic concurrency, and limited upsert operations.
- 
-Queries which expand collection-valued navigation properties may return cached data for those properties that doesn’t reflect recent changes. It is recommended to use `If-None-Match` header with value `null` to override browser caching. See [HTTP Headers](compose-http-requests-handle-errors.md#bkmk_headers) for more details. Use `If-None-Match` header with a specific ETag value to ensure that only changed data is returned.
   
 > [!WARNING]
 > Client code should not give any meaning to the specific value of an ETag, nor to any apparent relationship between ETags beyond equality or inequality. For example, an ETag value for a more recent version of a resource is not guaranteed to be greater than the ETag value for an earlier version. Also, the algorithm used to generate new ETag values may change without notice between releases of a service.  
@@ -48,16 +46,9 @@ Queries which expand collection-valued navigation properties may return cached d
 
 ## Conditional retrievals
 
-Etags enable you to optimize record retrievals whenever you access the same record multiple times. If you have previously retrieved a record, you can pass the ETag value with the `If-None-Match` header to request data to be retrieved only if it has changed since the last time it was retrieved. If the data has changed, the request returns an HTTP status of 200 (OK) with the latest data in the body of the request. If the data hasn’t changed, the HTTP status code 304 (Not Modified) is returned to indicate that the entity hasn’t been modified. The following example message pair returns data for an account entity with the `accountid` equal to `00000000-0000-0000-0000-000000000001` when the data hasn’t changed since it was last retrieved.  
+Etags enable you to optimize record retrievals whenever you access the same record multiple times. If you have previously retrieved a record, you can pass the ETag value with the `If-None-Match` header to request data to be retrieved only if it has changed since the last time it was retrieved. If the data has changed, the request returns an HTTP status of `200 (OK)` with the latest data in the body of the request. If the data hasn’t changed, the HTTP status code `304 (Not Modified)` is returned to indicate that the entity hasn’t been modified. 
 
-> [!NOTE]
-> Conditional retrieval works only for entities that have optimistic concurrency enabled. Check if an entity has optimistic concurrency enabled using the Web API request shown below. Entities that have optimistic concurrency enabled will have <xref href="Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled?text=EntityMetadata.IsOptimisticConcurrencyEnabled" /> property set to `true`.
-
-> ```HTTP
-> GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='<Entity Logical Name>')?$select=IsOptimisticConcurrencyEnabled
-> ```
-<!-- TODO:
-> For more information about optimistic concurrency, see [Reduce potential data loss using optimistic concurrency](../org-service/reduce-potential-data-loss-using-optimistic-concurrency.md).   -->
+The following example message pair returns data for an account entity with the `accountid` equal to `00000000-0000-0000-0000-000000000001` when the data hasn’t changed since it was last retrieved when the Etag value was `W/"468026"`
 
  **Request**  
 ```http  
@@ -74,6 +65,20 @@ HTTP/1.1 304 Not Modified
 Content-Type: application/json; odata.metadata=minimal  
 OData-Version: 4.0  
 ```  
+
+The following sections describe limitations to using conditional retrievals.
+
+### Entity must have optimistic concurrency enabled
+
+Check if an entity has optimistic concurrency enabled using the Web API request shown below. Entities that have optimistic concurrency enabled will have <xref href="Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled?text=EntityMetadata.IsOptimisticConcurrencyEnabled" /> property set to `true`.
+
+```http
+GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='<Entity Logical Name>')?$select=IsOptimisticConcurrencyEnabled
+```
+
+### Query must not include $expand
+
+The Etag can only detect if the single record that is being retrieved has changed. When you use `$expand` in your query, additional records may be returned and it is not possible to detect whether or not any of those records have changed. If the query includes `$expand` it will never return `304 Not Modified`.
   
 <a name="bkmk_limitUpsertOperations"></a>
   
@@ -85,7 +90,7 @@ An upsert ordinarily operates by creating an entity if it doesn’t exist; other
  
 ### Prevent create in upsert
 
-If you are updating data and there is some possibility that the entity was deleted intentionally, you will not want to re-create the entity. To prevent this, add an `If-Match` header to the request with a value of "`*`".  
+If you are updating data and there is some possibility that the entity was deleted intentionally, you will not want to re-create the entity. To prevent this, add an `If-Match` header to the request with a value of "*".  
   
  **Request**  
 ```http  
@@ -93,7 +98,7 @@ PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-00000000
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-If-Match: "*"  
+If-Match: *  
   
 {  
     "name": "Updated Sample Account ",  
@@ -130,7 +135,7 @@ Content-Type: application/json; odata.metadata=minimal
   
 ### Prevent update in upsert
 
-If you’re inserting data, there is some possibility that a record with the same `id` value already exists in the system and you may not want to update it. To prevent this, add an `If-None-Match` header to the request with a value of "`*`".  
+If you’re inserting data, there is some possibility that a record with the same `id` value already exists in the system and you may not want to update it. To prevent this, add an `If-None-Match` header to the request with a value of "*".  
   
  **Request**  
 ```http  
@@ -138,7 +143,7 @@ PATCH [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-00000000
 Content-Type: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
-If-None-Match: "*"  
+If-None-Match: *  
   
 {  
     "name": "Updated Sample Account ",  

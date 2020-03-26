@@ -12,7 +12,8 @@ applies_to:
   - "Dynamics 365 Version 9.x"
   - "PowerApps"
 ms.author: "matp"
-manager: "brycho"
+manager: "kvivek"
+author: "Mattp123"
 search.audienceType: 
   - maker
 search.app: 
@@ -23,7 +24,7 @@ search.app:
 
 Solution explorer provides one way to Create and edit global option sets for Common Data Service.
 
-The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Create and edit global option sets for Common Data Service](create-edit-global-option-sets.md)
 - [Create an option set](custom-picklists.md)
 
@@ -69,6 +70,9 @@ Type a **Description** for the global option set.
 While viewing global option sets, select the option set you want to edit to open the panel to edit it.
 
 Except for changing the **Name** field value or the number **Value** assigned to an option, you can make any of the changes you can when creating the global option set.
+
+> [!NOTE]
+> You cannot edit an option set if it is part of a managed solution. To edit managed solution option sets, you will have to contact the solution owner.
 
 [!INCLUDE [cc_remove-option-warning](../../includes/cc_remove-option-warning.md)]
 

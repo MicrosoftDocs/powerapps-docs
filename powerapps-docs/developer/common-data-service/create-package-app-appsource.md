@@ -1,21 +1,21 @@
 ---
-title: "Step 4: Create an AppSource package for your app (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Step 3: Create an AppSource package for your app (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to create an AppSource package (.zip file) to include your solution and demo data files along with other required files." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "shmcarth" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: "KumarVivek" # GitHub ID
+ms.author: "kvivek" # MSFT alias of Microsoft employees only
+manager: "annbe" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Step 4: Create an AppSource package for your app
+# Step 3: Create an AppSource package for your app
 
 You must create an AppSource package (.zip file) to include your solution and demo data files along with other required files. An AppSource package consists of the following files:
 
@@ -44,7 +44,7 @@ A package lets you bundle and deploy multiple files related to your app at once.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
-    <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+    <Types xmlns="https://schemas.openxmlformats.org/package/2006/content-types">
       <Default Extension="xml" ContentType="application/octet-stream" />
       <Default Extension="xaml" ContentType="application/octet-stream" />
       <Default Extension="dll" ContentType="application/octet-stream" />
@@ -95,7 +95,7 @@ Create an *input.xml* file that provides information about your package and the 
   <StartDate>12/01/2017</StartDate>
   <EndDate>01/01/2021</EndDate>
   <SupportedCountries>US,CA</SupportedCountries>
-  <LearnMoreLink>http://www.microsoft.com</LearnMoreLink>
+  <LearnMoreLink>https://www.microsoft.com</LearnMoreLink>
   <Locales>
     <PackageLocale Code="1033" IsDefault="true">
       <Logo>logo32x32.png</Logo>
@@ -114,8 +114,7 @@ Here is a description of the elements in the **input.xml** file.
 |--|--|
 |ProviderName|Name of the solution provider. If created by a Microsoft internal team, specify **Microsoft**.|
 |PackageFile|Name of package (.zip file) for the Package Deployer tool. This zip file should contain the package assembly, the package folder with your app assets, and the Content_Types.xml file. For example, the package.zip file created under the [Create a Package file](#create-a-package-file) section.|
-|SolutionAnchorName|Name of the solution zip file in the package that is use for the display name and description of solution assets.|
-|SolutionAnchorName|Name of the solution zip file in the package that is use for the display name and description of solution assets.|
+|SolutionAnchorName|Name of the solution zip file in the package that is used for the display name and description of solution assets.|
 |StartDate|Date on which the app becomes available on AppSource. The format is MM/DD/YYYY.|
 |EndDate|Date on which the app stops being available on AppSource. The format is MM/DD/YYYY.|
 |SupportedCountries|This is a comma-separated list of countries or regions where the app should be available. At the time of writing this article, the supported countries list is the following: AE,AL,AM,AO,AR,AT,AU,AZ,BA,BB,BD,BE,BG,BH,BM,BN,BO,BR,BY,CA,CH,CI,CL,CM,CO,CR,CV,CW,CY,CZ,DE,DK,DO,DZ,EC,EE,EG,ES,FI,FR,GB,GE,GH,GR,GT,HK,HN,HR,HU,ID,IE,IL,IN,IQ,IS,IT,JM,JO,JP,KE,KG,KN,KR,KW,KY,KZ,LB,LK,LT,LU,LV,LY,MA,MC,MD,ME,MK,MN,MO,MT,MU,MX,MY,NG,NI,NL,NO,NZ,OM,PA,PE,PH,PK,PL,PR,PS,PT,PY,QA,RO,RS,RU,RW,SA,SE,SG,SI,SK,SN,SV,TH,TM,TN,TR,TT,TW,UA,US,UY,UZ,VE,VI,VN,ZA,ZW|
@@ -137,4 +136,4 @@ The final step is to add all the components that you created earlier into a sing
  
 
 > [!div class="nextstepaction"]
-> [Step 5: Store your AppSource Package on Azure Storage](store-appsource-package-azure-storage.md) 
+> [Step 4: Store your AppSource Package on Azure Storage](store-appsource-package-azure-storage.md) 

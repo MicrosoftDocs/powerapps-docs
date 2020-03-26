@@ -1,14 +1,14 @@
 ---
 title: Keyboard shortcuts for canvas apps | Microsoft Docs
 description: Keyboard shortcuts for canvas apps
-author: AFTOwen
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 04/23/2019
-ms.author: anneta
+ms.date: 02/09/2020
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
@@ -26,6 +26,7 @@ search.app:
 | Ctrl+O (or Alt+F) | Open a file. |
 | Ctrl+Shift+S (or Alt+P) | Save the app with a different name. |
 | Ctrl+S | Save the app with the same name or for the first time. |
+| Ctrl+Shift+P | Save the app and activate the publish dialog. |
 | F12 | Download the app file (.msapp). |
 | Alt+F | Open the **File** menu. |
 
@@ -109,10 +110,30 @@ search.app:
 | Ctrl+I | Turn italic on or off. |
 | Ctrl+U | Add or remove underline. |
 
+## Alternate behavior
+
+| Shortcut | Action |
+|--|--|
+| Alt or Ctrl+Shift | 1. Before selecting a control, hide design elements so that you can interact with controls as the app's user would.<br>2. After initiating a resize or reposition of a control, holding down these keys overrides any snap points. |
+
+Like an Excel spreadsheet, canvas apps are live and operating even when they are being edited.  There is no need to change to preview mode in order to exercise your app, making the edit and test cycle much faster.  But this poses a problem: how do we differentiate selecting a button control so that it can be resized from selecting a button control to exercise the logic in our app?
+
+When in design mode, by default selecting an object is for editing: moving, resizing, changing properties, and otherwise configuring the object.  This default can be overridden by holding down the Alt or Ctrl+Shift keys *before* initiating the selection which treats the selection as if a user of the app had done it.  
+
+In the following animation, a button control is first selected for editing.  Adorners appear around the control and the formula bar shows the **OnSelect** property, ready to be edited.  The button is then released.  *With the Alt key first depressed*, the button control is again selected, but this time the **OnSelect** property is evaluated and the notification is displayed, just as if the button was selected in a running app.  
+
+![Animation showing the effect of starting by holding down the alt key select a button control](media/keyboard-shortcuts/alt-select.gif)
+
+The Alt key can also be used *after* a control has been selected to override snap points for moving and resizing.  The next animation shows the resize of a data card within an [**Edit form**](controls/control-form-detail.md) control.  Initially, the resizing is restricted to specific snap points.  Later, *without releasing the mouses button*, the Alt key is depressed in addition to the mouse button. The addition of the Alt key overrides the snap points and any width can be obtained with the mouse. 
+
+![Animation showing the effect of adding the alt key to the resize of a data card](media/keyboard-shortcuts/alt-fine-control.gif)
+
 ## Other
 
 | Shortcut | Action |
 |--|--|
 | F1 | Open documentation. |
 | Shift+F10 | Open a shortcut menu in, for example, **Tree view**. |
-| Alt or Ctrl+Shift | Hide design elements so that you can interact with controls as if the app were running. |
+
+
+ 

@@ -3,10 +3,10 @@ title: "Sample: Dump entity metadata to a file (Common Data Service) | Microsoft
 description: "This sample shows how to write out all the entitymetadata to an XML file." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -35,7 +35,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Setup
 
-1. Checks for the current version of the org.
+Checks for the current version of the org.
 
 
 ### Demonstrate
@@ -45,6 +45,6 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-1. This sample creates no records. No cleanup is required.
+This sample creates no records. No cleanup is required.
 
 

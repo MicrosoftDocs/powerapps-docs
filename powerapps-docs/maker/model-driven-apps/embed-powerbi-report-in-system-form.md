@@ -27,7 +27,7 @@ search.app:
 ---
 
 # Embed a Power BI report in a model-driven system form
-You can use Power BI reports in PowerApps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
+You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
  
 ## Prerequisites
 Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi?#enable--visualizations-in-the-organization).
@@ -104,6 +104,7 @@ This table describes any additional properties used in the previous example.
 |-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                         **PowerBIFilter**                          |        The filter expression that contextualizes the Power BI report by passing the form attributes as parameters. To make it more readable, the filter is constructed as shown here. 	|
 
+```json
 	{
 	        "Filter": "[{
 	                \"$schema\":\"basic\",
@@ -120,15 +121,16 @@ This table describes any additional properties used in the previous example.
 	                "$b":"lastname"
 	        }
 	}
+```
 
-The target part of the previous expression identifies the table and the column to apply the filters on. The operator identifies the logic and values identify the data passed from the PowerApps model-driven app. To parameterize in a generic way, the values are constructed by aliasing. In the previous expression, the value of an account's **firstname** and **lastname** are passed, and either of them is searched in the **Account Name** column in the Power BI report. Note that **firstname** and **lastname** are the unique names of attributes of the account entity, whose value will be passed here. 
+The target part of the previous expression identifies the table and the column to apply the filters on. The operator identifies the logic and values identify the data passed from the Power Apps model-driven app. To parameterize in a generic way, the values are constructed by aliasing. In the previous expression, the value of an account's **firstname** and **lastname** are passed, and either of them is searched in the **Account Name** column in the Power BI report. Note that **firstname** and **lastname** are the unique names of attributes of the account entity, whose value will be passed here. 
 
 You can create more complex filter expressions by looking at examples from [Constructing Filters](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Filters#contructingfilters) and providing the appropriate values for $schema and filterType. Be sure to escape every literal in the filter part using *\"*, so that the JSON is generated correctly.
 
 ## Known issues and limitations
 1. This integration is available only in the Unified Interface client, on supported web browsers and mobile devices.
-2. Opening this form in the PowerApps form designer will not show the control in a meaningful way. This is because the control is customized outside of the form designer.
-3. Users will be authenticated into Power BI automatically with their PowerApps username and password. If a Power BI account with matching credentials doesn’t exist, a sign in prompt is displayed as illustrated here. 
+2. Opening this form in the Power Apps form designer will not show the control in a meaningful way. This is because the control is customized outside of the form designer.
+3. Users will be authenticated into Power BI automatically with their Power Apps username and password. If a Power BI account with matching credentials doesn’t exist, a sign in prompt is displayed as illustrated here. 
 
    > [!div class="mx-imgBorder"] 
    > ![](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-1.png "Embed-powerbi-report-in-system-form-auth-1")
@@ -141,14 +143,14 @@ You can create more complex filter expressions by looking at examples from [Cons
    > [!div class="mx-imgBorder"] 
    > ![](media/embed-powerbi/embed-powerbi-report-in-system-form-auth-3.png "Embed-powerbi-report-in-system-form-auth-3")
 
-5. The view of the report data shown inside PowerApps is the same as that in Power BI, and PowerApps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to PowerApps security roles and teams, use [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls).
+5. The view of the report data shown inside Power Apps is the same as that in Power BI, and Power Apps security roles and privileges don't affect the data that is displayed. Hence, the data is essentially the same as what the creator of the Power BI dataset would see. To apply data access restrictions similar to Power Apps security roles and teams, use [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls).
 6. If the form doesn’t show the Power BI report after importing the solution and publishing customizations, open it in the model-driven form editor and save it, so that the form JSON is regenerated.
 
 
 ### See also
 
-[Embed a Power BI dashboard in a PowerApps model-driven personal dashboard](https://docs.microsoft.com/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
+[Embed a Power BI dashboard in a Power Apps model-driven personal dashboard](https://docs.microsoft.com/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
 
-[Use Power BI with Dynamics 365 for Customer Engagement](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi)
+[Use Power BI with Dynamics 365 apps](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi)
 
 [Import, update, and export solutions](../common-data-service/import-update-export-solutions.md)

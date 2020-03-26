@@ -23,7 +23,7 @@ search.app:
 ---
 <!-- 
 Was Mike Carter
-This topic was not migrated it was written for PowerApps 
+This topic was not migrated it was written for Power Apps 
 
 Overlap with content in https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-entities
 
@@ -46,8 +46,8 @@ There are several ways to edit entity metadata using designers.
 
 |Designer  |Description  |
 |---------|---------|
-|powerapps.com|The easiest and most common approach to modify the schema is to use the [powerapps.com](https://web.powerapps.com/) site to edit Common Data Service associated with an environment. Changes applied here are performed in the context of an unmanaged Common Data Service Default solution. <!-- TODO: Add link to topic that describes this -->|
-|Common Data Service Default solution explorer|There is another designer available from the [powerapps.com](https://web.powerapps.com/) site when editing Common Data Service. In the lower left-hand corner, the **Advanced** button will open the solution explorer to the Common Data Service Default solution. |
+|powerapps.com|The easiest and most common approach to modify the schema is to use the [powerapps.com](https://make.powerapps.com/) site to edit Common Data Service associated with an environment. Changes applied here are performed in the context of an unmanaged Common Data Service Default solution. <!-- TODO: Add link to topic that describes this -->|
+|Common Data Service Default solution explorer|There is another designer available from the [powerapps.com](https://make.powerapps.com/) site when editing Common Data Service. In the lower left-hand corner, the **Advanced** button will open the solution explorer to the Common Data Service Default solution. |
 |Solution explorer for your solution |If you will distribute a solution you should create any new entities, attributes, or relationships in the context of the unmanaged solution that you will use to develop your solution. <br /> More information: [Create a solution publisher and solution](introduction-solutions.md#create-a-solution-publisher-and-solution)|
 |From the form editor|When editing a model-driven app form for an entity, you can click the **New Field** button in the **Field Explorer**. If you create a lookup field, you will create a new entity relationship to support it.|
 

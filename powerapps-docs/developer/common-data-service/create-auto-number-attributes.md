@@ -3,11 +3,11 @@ title: "Create auto-number attributes (Common Data Service) | Microsoft Docs" # 
 description: "Learn about creating auto-number attribute in the same way you create a string attribute using the StringAttributeMetadata class except that you use the new AutoNumberFormat property. Use the AutoNumberFormat property to define a pattern that includes sequential numbers and random strings by composing placeholders, which indicates the length and type of values that are generated."
 keywords: "Auto-number attributes" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 07/24/2019
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "MicroSri" # GitHub ID
+author: "nhelgren" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -118,6 +118,8 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 OData-EntityId: [Organization URI]/api/data/v9.0/EntityDefinitions(402fa40f-287c-e511-80d2-00155d2a68d2)/Attributes(f01bef16-287c-e511-80d2-00155d2a68d2)
 ```
+> [!NOTE]
+>Autonumber values are preselected by the database when the record is started. If a record is started but cancelled, the number it was assigned is not used. If, during this time, another record is completed with the next sequential number, gaps will be present in the autonumbering of records.
 
 ## AutoNumberFormat options
 
@@ -265,7 +267,7 @@ OData-Version: 4.0
 ### Auto Number Manager
 
 **[Auto Number Manager](https://www.xrmtoolbox.com/plugins/Rappen.XrmToolBox.AutoNumManager/)** for XrmToolBox is a community driven tool for Common Data Service that provides a UI to set, update and remove auto number format on new or existing attributes.
-Please see the [Developer tools](developer-tools.md) topic for community developed tools and [anm.xrmtoolbox.com](http://anm.xrmtoolbox.com) for more information about Auto Number Manager.
+Please see the [Developer tools](developer-tools.md) topic for community developed tools and [anm.xrmtoolbox.com](https://anm.xrmtoolbox.com) for more information about Auto Number Manager.
 
 > [!NOTE]
 > The community tools are not a product of Common Data Service and does not extend support to the community tools. 

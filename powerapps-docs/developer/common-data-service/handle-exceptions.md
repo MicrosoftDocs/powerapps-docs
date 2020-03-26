@@ -2,8 +2,8 @@
 title: "Handle exceptions in a plug-in (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
 ms.custom: ""
-ms.date: 1/23/2019
-ms.reviewer: ""
+ms.date: 09/20/2019
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: JimDaly
@@ -27,7 +27,7 @@ Your code can cause the current message request processing operation to be cance
 
 If your business logic dictates that the operation should be cancelled, you should throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> exception and provide a message to explain why the operation was cancelled.
 
-Ideally, you should only cancel operations using synchronous plug-ins registered in the **PreValidation** stage. This stage *usually* occurs outside the main database transaction. Cancelling an operation before it reaches the transaction is highly desireable because the cancelled operation has to be rolled back. Rolling back the operation requires significant resources and has a performance impact on the system. Operations in the **PreOperation** and **PostOperation** stages are always within the database transaction.
+Ideally, you should only cancel operations using synchronous plug-ins registered in the **PreValidation** stage. This stage *usually* occurs outside the main database transaction. Cancelling an operation before it reaches the transaction is highly desirable because the cancelled operation has to be rolled back. Rolling back the operation requires significant resources and has a performance impact on the system. Operations in the **PreOperation** and **PostOperation** stages are always within the database transaction.
 
 Sometimes **PreValidation** stages will be within a transaction when they are initated by logic in another operation. For example, if you create a task entity record in the **PreOperation** stage of the creation of an account, the task creation will pass through the event execution pipeline and occur within the **PreValidation** stage yet it will be part of the transaction that is creating the account entity record. You can tell whether an operation is within a transaction by the value of the <xref:Microsoft.Xrm.Sdk.IExecutionContext>.<xref:Microsoft.Xrm.Sdk.IExecutionContext.IsInTransaction> property.
 
@@ -38,5 +38,4 @@ When you throw an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> excep
 The exception message for asynchronous registered plug-ins is written to a System Job [AsyncOperation Entity](reference/entities/asyncoperation.md) record which can be viewed in the **System Jobs** area of the web application. No dialog will be displayed to the user. Async plug-ins do not participate in the database transaction that queued them, therefore they cannot cancel the transaction.
 
 > [!NOTE]
-> - For on-premise plug-ins not registered in the sandbox, the exception information is written to the Application event log on the Dynamics 365 Server that executes the plug-in. The event log can be viewed by using the Event Viewer administrative tool.
-> - In the Unified Interface, the error dialog does not support HTML encoded content or messaging.
+> In the Unified Interface, the error dialog does not support HTML encoded content or messaging.

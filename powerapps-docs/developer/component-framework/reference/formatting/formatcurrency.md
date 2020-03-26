@@ -3,8 +3,9 @@ title: FormatCurrency | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,9 +17,13 @@ ms.assetid: 87e433e6-573f-414f-b49d-1213f2bd8cf4
 
 [!INCLUDE [formatcurrency-description](includes/formatcurrency-description.md)]
 
+## Available for 
+
+Model-driven apps and canvas apps (public preview)
+
 ## Syntax
 
-`formatCurrency(value, precision, symbol)`
+`context.formatting.formatCurrency(value, precision, symbol)`
 
 ## Parameters
 
@@ -36,5 +41,5 @@ Type: `string`
 ### Related topics
 
 [Formatting](../formatting.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

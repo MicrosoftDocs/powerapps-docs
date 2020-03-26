@@ -1,6 +1,6 @@
 ---
 title: "Upload a file for analysis | Microsoft Docs"
-description: "Read how to form a POST request using the PowerApps checker web API to retrieve to upload a file to analyze."
+description: "Read how to form a POST request using the Power Apps checker web API to retrieve to upload a file to analyze."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -81,7 +81,7 @@ Content-Type: application/json; charset=utf-8
 
 ### See also
 
-[Use the PowerApps checker web API](overview.md)<br />
+[Use the Power Apps checker web API](overview.md)<br />
 [Retrieve the list of rulesets](retrieve-rulesets.md)<br />
 [Retrieve the list of rules](retrieve-rules.md)<br />
 [Invoke analysis](analyze.md)<br />

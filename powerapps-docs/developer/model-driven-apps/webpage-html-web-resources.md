@@ -44,7 +44,7 @@ Because an HTML web resource is just streamed to the user's browser, it can incl
  For example, a more complex HTML page that requires script to render the contents of the page will begin like the following sample.
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
  <title></title>
@@ -136,7 +136,7 @@ Because of the capability for the HTML in web resources to be changed by using t
 |security||For internal use only.|
 |tabSet||For internal use only.|
 
- To pass more than one value in the data parameter, you must encode parameters in the value of the data parameter and then include logic to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) topic demonstrates one approach to address passing multiple parameter values.  
+ If multiple values are passed in the data parameter, they will be automatically encoded. Logic must also be included to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) topic demonstrates one approach to address passing multiple parameter values.  
 
 ### See also
  [Web Resources](web-resources.md)   

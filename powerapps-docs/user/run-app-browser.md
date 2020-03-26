@@ -1,12 +1,12 @@
 ---
 title: Run apps in a web browser | Microsoft Docs
 description: In this topic, you learn how to run apps in a web browser
-author: Mattp123
+author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 11/16/2018
-ms.author: matp
+ms.date: 12/05/2019
+ms.author: mkaur
 manager: "kvivek"
 ms.custom: ""
 ms.reviewer: ""
@@ -19,10 +19,15 @@ search.app:
 ---
 
 # Run an app in a web browser
-When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Dynamics 365 Home page](https://home.dynamics.com).
+When you create an app, or someone shares an app with you, you can run that app on the Dynamics 365 mobile app or in a web browser on a tablet. In this topic, you'll learn how to run a canvas or model-driven app in a web browser on a tablet from the [Dynamics 365 Home page](https://home.dynamics.com).
+
+For full functionality and optimized experience, we strongly recommend that you use the Dynamics 365 for phones and tablets mobile app. If you don't have the Dynamics 365 for phones and tablets app installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [What's supported](https://docs.microsoft.com/dynamics365/mobile-app/support-phones-tablets#supported-devices-for-the-mobile-app).
+
+> [!NOTE]
+> Using the web browser on your phone to run your model-driven apps isn't supported; you must use the Dynamics 365 for phones app.
 
 To follow this quickstart, you need:
-- A PowerApps license. This is available with a PowerApps plan, such as the [PowerApps Plan 2 trial](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), or any of the [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) or [Dynamics 365](https://dynamics.microsoft.com/pricing/) plans that include PowerApps. 
+- A Power Apps license. This is available with a Power Apps plan, such as the [Power Apps Plan 2 trial](https://docs.microsoft.com/powerapps/maker/signup-for-powerapps), or any of the [Microsoft Office 365](https://signup.microsoft.com/Signup?OfferId=467eab54-127b-42d3-b046-3844b860bebf&dl=O365_BUSINESS_PREMIUM&ali=1) or [Dynamics 365](https://dynamics.microsoft.com/pricing/) plans that include Power Apps. 
 - Access to an app that you built or that someone else built and shared with you.
 - Access to a supported web browser and operating system.
    - For canvas apps, see: [System requirements, limits, and configuration values](../maker/canvas-apps/limits-and-config.md)
@@ -33,23 +38,15 @@ To follow this quickstart, you need:
 Sign in to Dynamics 365 at [https://home.dynamics.com](https://home.dynamics.com).
 
 ## Find an app on the Home page
-The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You can also filter the list to show only apps created by a specific source, such as PowerApps. To do this, click or tap **Filter** and then select the source.
+The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You can also filter the list to show only apps created by a specific source, such as Power Apps. To do this, select **Filter** and then select the source.
 
-If you've recently installed the app, it might not immediately appear in the list of apps. Click or tap **Sync** to show all your apps. This process may take up to a minute.
+If you've recently installed the app, it might not immediately appear in the list of apps. Select **Sync** to show all your apps. This process may take up to a minute.
 
 ![](./media/run-app-browser/dynamics-365-home.png)
 
-## Run an app from the task pane
-After you find an app, you can pin it to the task pane for easier access. To pin an app, click or tap the ellipsis (...) on the app tile, and then click or tap **Pin this app**.
-
-![](./media/run-app-browser/homepage-pin.png)
-
-To run the pinned app from the task pane, click or tap **Dynamics 365** in the upper-left corner, locate the app under **My apps**, and then click or tap it.
-
-![](./media/run-app-browser/taskpane.png)
 
 ## Run an app from a URL
-You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by clicking or tapping the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
+You can save an app's URL as a bookmark in your tablet's browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
 
 ![](./media/run-app-browser/web-login.png)
 

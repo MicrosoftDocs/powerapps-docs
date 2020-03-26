@@ -3,10 +3,10 @@ title: "Sample: Query the working hours of multiple users (Common Data Service) 
 description: "This sample shows how to query the working hours of multiple hours" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -47,10 +47,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `QueryMultipleScheduleRequest` message retrieves the working hours of the current user and the user that you have created manually.
+The `QueryMultipleScheduleRequest` message retrieves the working hours of the current user and the user that you have created manually.
 
 ### Clean up
 
-1. Display an option to delete the records created in [Setup](#setup).
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

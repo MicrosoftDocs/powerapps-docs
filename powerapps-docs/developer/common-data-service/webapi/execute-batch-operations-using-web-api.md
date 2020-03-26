@@ -2,7 +2,7 @@
 title: "Execute batch operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
-ms.date: 07/13/2019
+ms.date: 12/10/2019
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -11,9 +11,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 799b2346-bda1-4a26-a330-79d0927a7743
 caps.latest.revision: 11
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "annbe"
 search.audienceType: 
   - developer
@@ -47,21 +47,21 @@ Use a POST request to submit a batch operation that contains multiple requests. 
 The POST request containing the batch must have a Content-Type header with a value set to multipart/mixed with a boundary set to include the identifier of the batch using this pattern:  
   
 ```  
---batch_<unique identifier>  
+--batch_<unique identifier>
 ```  
   
 The unique identifier doesn’t need to be a GUID, but should be unique. Each item within the batch must be preceded by the batch identifier with a Content-Type and Content-Transfer-Encoding header like the following:  
   
 ```  
---batch_WKQS9Yui9r  
-Content-Type: application/http  
-Content-Transfer-Encoding:binary  
+--batch_WKQS9Yui9r
+Content-Type: application/http
+Content-Transfer-Encoding:binary
 ```  
   
 The end of the batch must contain a termination indicator like the following:  
   
 ```  
---batch_WKQS9Yui9r--  
+--batch_WKQS9Yui9r--
 ```   
   
 <a name="bkmk_ChangeSets"></a>
@@ -71,15 +71,15 @@ The end of the batch must contain a termination indicator like the following:
 When multiple operations are contained in a change set, all the operations are considered atomic, which means that if any one of the operations fail, any completed operations will be rolled back. Like a batch request, change sets must have a Content-Type header with value set to multipart/mixed with a boundary set to include the identifier of the change set using this pattern:  
   
 ```  
---changeset_<unique identifier>  
+--changeset_<unique identifier>
 ```  
   
 The unique identifier doesn’t need to be a GUID, but should be unique. Each item within the change set must be preceded by the change set identifier with a Content-Type and Content-Transfer-Encoding header like the following:  
   
 ```  
---changeset_BBB456  
-Content-Type: application/http  
-Content-Transfer-Encoding:binary  
+--changeset_BBB456
+Content-Type: application/http
+Content-Transfer-Encoding:binary
 ```  
   
 Change sets can also include a Content-ID header with a unique value. This value, when prefixed with `$`, represents a variable that contains the Uri for any entity created in that operation. For example, when you set the value of 1, you can refer to that entity using `$1` later in your change set.  
@@ -87,7 +87,7 @@ Change sets can also include a Content-ID header with a unique value. This value
 The end of the change set must contain a termination indicator like the following:  
   
 ```  
---changeset_BBB456--  
+--changeset_BBB456--
 ```  
   
 <a name="bkmk_Example"></a>
@@ -103,117 +103,119 @@ Finally, a GET request is included outside the change set to return all six task
  **Request**
 
 ```http 
-POST[Organization URI]/api/data/v9.1/$batch HTTP/1.1  
-Content-Type: multipart/mixed;boundary=batch_AAA123  
-Accept: application/json  
-OData-MaxVersion: 4.0  
-OData-Version: 4.0  
-  
---batch_AAA123  
-Content-Type: multipart/mixed;boundary=changeset_BBB456  
-  
---changeset_BBB456  
-Content-Type: application/http  
-Content-Transfer-Encoding:binary  
-Content-ID: 1  
-  
-POST[Organization URI]/api/data/v9.1/tasks HTTP/1.1  
-Content-Type: application/json;type=entry  
-  
-{"subject":"Task 1 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)"}  
---changeset_BBB456  
-Content-Type: application/http  
-Content-Transfer-Encoding:binary  
-Content-ID: 2  
-  
-POST[Organization URI]/api/data/v9.1/tasks HTTP/1.1  
-Content-Type: application/json;type=entry  
-  
-{"subject":"Task 2 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)"}  
---changeset_BBB456--  
-  
---batch_AAA123  
-Content-Type: application/http  
-Content-Transfer-Encoding:binary  
-  
-GET[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)/Account_Tasks?$select=subject HTTP/1.1  
-Accept: application/json  
-  
---batch_AAA123--  
+POST[Organization URI]/api/data/v9.1/$batch HTTP/1.1
+Content-Type: multipart/mixed;boundary=batch_AAA123
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+
+--batch_AAA123
+Content-Type: multipart/mixed;boundary=changeset_BBB456
+
+--changeset_BBB456
+Content-Type: application/http
+Content-Transfer-Encoding:binary
+Content-ID: 1
+
+POST[Organization URI]/api/data/v9.1/tasks HTTP/1.1
+Content-Type: application/json;type=entry
+
+{"subject":"Task 1 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)"}
+--changeset_BBB456
+Content-Type: application/http
+Content-Transfer-Encoding:binary
+Content-ID: 2
+
+POST[Organization URI]/api/data/v9.1/tasks HTTP/1.1
+Content-Type: application/json;type=entry
+
+{"subject":"Task 2 in batch","regardingobjectid_account_task@odata.bind":"[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)"}
+--changeset_BBB456--
+
+--batch_AAA123
+Content-Type: application/http
+Content-Transfer-Encoding:binary
+
+GET[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)/Account_Tasks?$select=subject HTTP/1.1
+Accept: application/json
+
+--batch_AAA123--
 ```  
   
  **Response**
 
-```http 
---batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f  
-Content-Type: multipart/mixed; boundary=changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc  
-  
---changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc  
-Content-Type: application/http  
-Content-Transfer-Encoding: binary  
-Content-ID: 1  
-  
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
-Location:[Organization URI]/api/data/v9.1/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)  
-OData-EntityId:[Organization URI]/api/data/v9.1/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)  
-  
---changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc  
-Content-Type: application/http  
-Content-Transfer-Encoding: binary  
-Content-ID: 2  
-  
-HTTP/1.1 204 No Content  
-OData-Version: 4.0  
-Location:[Organization URI]/api/data/v9.1/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)  
-OData-EntityId:[Organization URI]/api/data/v9.1/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)  
-  
---changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc--  
---batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f  
-Content-Type: application/http  
-Content-Transfer-Encoding: binary  
-  
-HTTP/1.1 200 OK  
-Content-Type: application/json; odata.metadata=minimal  
-OData-Version: 4.0  
-  
-{  
-  "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#tasks(subject)","value":[  
-    {  
-      "@odata.etag":"W/\"474122\"","subject":"Task Created with Test Account","activityid":"919c24f3-fafc-e411-80dd-00155d2a68cb"  
-    },{  
-      "@odata.etag":"W/\"474125\"","subject":"Task 1","activityid":"a29c24f3-fafc-e411-80dd-00155d2a68cb"  
-    },{  
-      "@odata.etag":"W/\"474128\"","subject":"Task 2","activityid":"a39c24f3-fafc-e411-80dd-00155d2a68cb"  
-    },{  
-      "@odata.etag":"W/\"474131\"","subject":"Task 3","activityid":"a49c24f3-fafc-e411-80dd-00155d2a68cb"  
-    },{  
-      "@odata.etag":"W/\"474134\"","subject":"Task 1 in batch","activityid":"a59c24f3-fafc-e411-80dd-00155d2a68cb"  
-    },{  
-      "@odata.etag":"W/\"474137\"","subject":"Task 2 in batch","activityid":"a69c24f3-fafc-e411-80dd-00155d2a68cb"  
-    }  
-  ]  
-}  
---batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f--  
+```http
+--batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f
+Content-Type: multipart/mixed; boundary=changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc
+
+--changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 1
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location:[Organization URI]/api/data/v9.1/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)
+OData-EntityId:[Organization URI]/api/data/v9.1/tasks(a59c24f3-fafc-e411-80dd-00155d2a68cb)
+
+--changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+Content-ID: 2
+
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+Location:[Organization URI]/api/data/v9.1/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)
+OData-EntityId:[Organization URI]/api/data/v9.1/tasks(a69c24f3-fafc-e411-80dd-00155d2a68cb)
+
+--changesetresponse_ff83b4f1-ab48-430c-b81c-926a2c596abc--
+--batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f
+Content-Type: application/http
+Content-Transfer-Encoding: binary
+
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+OData-Version: 4.0
+
+{
+  "@odata.context":"[Organization URI]/api/data/v9.1/$metadata#tasks(subject)","value":[
+    {
+      "@odata.etag":"W/\"474122\"","subject":"Task Created with Test Account","activityid":"919c24f3-fafc-e411-80dd-00155d2a68cb"
+    },{
+      "@odata.etag":"W/\"474125\"","subject":"Task 1","activityid":"a29c24f3-fafc-e411-80dd-00155d2a68cb"
+    },{
+      "@odata.etag":"W/\"474128\"","subject":"Task 2","activityid":"a39c24f3-fafc-e411-80dd-00155d2a68cb"
+    },{
+      "@odata.etag":"W/\"474131\"","subject":"Task 3","activityid":"a49c24f3-fafc-e411-80dd-00155d2a68cb"
+    },{
+      "@odata.etag":"W/\"474134\"","subject":"Task 1 in batch","activityid":"a59c24f3-fafc-e411-80dd-00155d2a68cb"
+    },{
+      "@odata.etag":"W/\"474137\"","subject":"Task 2 in batch","activityid":"a69c24f3-fafc-e411-80dd-00155d2a68cb"
+    }
+  ]
+}
+--batchresponse_c1bd45c1-dd81-470d-b897-e965846aad2f--
 ```  
 Include `odata.include-annotations` preference header with the `GET` requests and set its value to "*" to specify that all annotations related to the properties be returned.
 
 ```HTTP
---batch_AAA123  
-Content-Type: application/http  
-Content-Transfer-Encoding:binary  
-  
-GET[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)?$select=name,telephone1,emailaddress1,shippingmethodcode,customersizecode,accountratingcode,followemail,donotemail,donotphone,statuscode HTTP/1.1  
-Accept: application/json  
+--batch_AAA123
+Content-Type: application/http
+Content-Transfer-Encoding:binary
+
+GET[Organization URI]/api/data/v9.1/accounts(00000000-0000-0000-000000000001)?$select=name,telephone1,emailaddress1,shippingmethodcode,customersizecode,accountratingcode,followemail,donotemail,donotphone,statuscode HTTP/1.1
+Accept: application/json
 Prefer: odata.include-annotations="*"
-  
---batch_AAA123-- 
+
+--batch_AAA123--
 ```
-For more information about preference headers, see [Header Prefer](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752234).
+For more information about preference headers, see [Header Prefer](https://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752234).
 
 ## Reference URIs in an operation
 
-You can use `$parameter` such as `$1`, `$2`, etc to reference URIs used in an earlier changeset in a batch request. This section shows various examples on how `$parameter` can be used in the request body of a batch operation to reference URIs.
+You can use `$parameter` such as `$1`, `$2`, etc to reference URIs returned for new entities created earlier in the same changeset in a batch request. For more information see the OData v4.0 specification: [11.7.3.1 Referencing Requests in a Change Set](http://docs.oasis-open.org/odata/odata/v4.0/os/part1-protocol/odata-v4.0-os-part1-protocol.html#_Toc372793752).
+
+This section shows various examples on how `$parameter` can be used in the request body of a batch operation to reference URIs.
 
 ### Reference URIs in request body
 

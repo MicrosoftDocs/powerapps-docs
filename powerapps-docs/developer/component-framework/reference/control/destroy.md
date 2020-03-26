@@ -6,11 +6,15 @@ ms.assetid: ba66b513-2a7b-4ba6-b2d5-446ea2b42fdb
 author: "nkrb"
 ms.author: "nabuthuk"
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ---
 # destroy
 
 [!INCLUDE[./includes/destroy-description.md](./includes/destroy-description.md)]
+
+## Available for 
+
+Model-driven apps and canvas apps (public preview)
 
 ## Syntax
 
@@ -27,5 +31,5 @@ MyControl.prototype.destroy = function () {
 ### Related topics
 
 [Control](../control.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

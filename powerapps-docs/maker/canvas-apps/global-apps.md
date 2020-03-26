@@ -1,12 +1,12 @@
 ---
 title: Build global support into canvas apps | Microsoft Docs
-description: Use PowerApps to build apps that are used worldwide.
+description: Use Power Apps to build apps that are used worldwide.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: gregli
 search.audienceType: 
@@ -15,9 +15,9 @@ search.app:
   - PowerApps
 ---
 # Build global support into canvas apps
-PowerApps is a global product. You can build and use canvas apps in many different languages and regions.
+Power Apps is a global product. You can build and use canvas apps in many different languages and regions.
 
-Both while building and running apps, the text displayed by PowerApps has been translated into a variety of languages.  You will see menu items, dialog boxes, ribbon tabs, and other text in your native language.  Typing in and displaying dates and numbers is also adapted for your particular language and region.  For example, some regions of the world use a **.** (dot or period) as the decimal separator while others use a **,** (comma).  
+Both while building and running apps, the text displayed by Power Apps has been translated into a variety of languages.  You will see menu items, dialog boxes, ribbon tabs, and other text in your native language.  Typing in and displaying dates and numbers is also adapted for your particular language and region.  For example, some regions of the world use a **.** (dot or period) as the decimal separator while others use a **,** (comma).  
 
 The apps you create can be globally aware as well.  Use the **[Language](functions/function-language.md)**, **[Text](functions/function-text.md)**, **[Value](functions/function-value.md)**, **[DateValue](functions/function-datevalue-timevalue.md)** and other functions to adapt what is displayed and used as input in different languages.   
 
@@ -59,12 +59,12 @@ You can use whatever names you like for:
 ### Formula separators and chaining operator
 Some [separators and operators](functions/operators.md) will shift based on the decimal separator of the author's language:
 
-| Author's language decimal separator | PowerApps decimal separator | PowerApps list separator | PowerApps chaining operator |
+| Author's language decimal separator | Power Apps decimal separator | Power Apps list separator | Power Apps chaining operator |
 | --- | --- | --- | --- |
 | **.** (dot or period) |**.** (dot or period) |**,** (comma) |**;** (semi-colon) |
 | **,** (comma) |**,** (comma) |**;** (semi-colon) |**;;** (double semi-colon) |
 
-The change in the PowerApps list separator is consistent with what happens to the Excel list separator.  It impacts:
+The change in the Power Apps list separator is consistent with what happens to the Excel list separator.  It impacts:
 
 * Arguments in function calls.
 * Fields in a [record](working-with-tables.md#elements-of-a-table).
@@ -72,11 +72,11 @@ The change in the PowerApps list separator is consistent with what happens to th
 
 For example, consider the following formula expressed in a language and region that uses dot or period as the decimal separator, such as Japan or the United Kingdom:
 
-![PowerApps formula If open paren slider1 dot value greater than 12 dot 59 comma notify open paren "Valid!" comma success close paren semi-colon Navigate open paren "NextScreen" comma None close paren comma notify open paren "Invalid, try again" comma error close paren close paren](media/global-apps/operators-dot.png)
+![Power Apps formula If open paren slider1 dot value greater than 12 dot 59 comma notify open paren "Valid!" comma success close paren semi-colon Navigate open paren "NextScreen" comma None close paren comma notify open paren "Invalid, try again" comma error close paren close paren](media/global-apps/operators-dot.png)
 
 Now view this same formula in a language and region where a comma is used for the decimal separator, such as France or Spain:
 
-![PowerApps formula If open paren slider1 dot value greater than 12 comma 59 semi-colon notify open paren "Valid!" semi-colon success close paren double semi-colon Navigate open paren "NextScreen" semi-colon None close paren semi-colon notify open paren "Invalid, try again" semi-colon error close paren close paren](media/global-apps/operators-comma.png)
+![Power Apps formula If open paren slider1 dot value greater than 12 comma 59 semi-colon notify open paren "Valid!" semi-colon success close paren double semi-colon Navigate open paren "NextScreen" semi-colon None close paren semi-colon notify open paren "Invalid, try again" semi-colon error close paren close paren](media/global-apps/operators-comma.png)
 
 The highlight shows the operators that change between the two versions.  Note that the property selection operator **.** (dot or period) in **Slider1.Value** is always the same, no matter what the decimal separator is.
 
@@ -124,7 +124,7 @@ There are four functions for reading numbers, dates, and times provided by the u
 * **[TimeValue](functions/function-datevalue-timevalue.md)**: Converts a time value in a text string to a date/time value.  Any date specified in the text string is ignored.
 * **[DateTimeValue](functions/function-datevalue-timevalue.md)**: Converts a date and time value in a text string to a date/time value.  
 
-If you have used Excel, all of these functions are combined in the single **Value** function.  They are broken out here since PowerApps has separate types for date/time values and numbers.
+If you have used Excel, all of these functions are combined in the single **Value** function.  They are broken out here since Power Apps has separate types for date/time values and numbers.
 
 All of these functions have the same arguments:
 

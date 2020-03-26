@@ -3,7 +3,7 @@ title: "FetchXML schema (Common Data Service) | Microsoft Docs" # Intent and pro
 description: "The FetchXML query language is used to create queries against the Common Data Service database" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
@@ -20,14 +20,14 @@ search.app:
 The FetchXML query language is used to create queries against the Common Data Service database. The following is the schema for the FetchXML query language. For more information, see [Use FetchXML to Construct a Query](use-fetchxml-construct-query.md).
 
 You can find this schema in the `Schemas\9.0.0.2090\Fetch.xsd` folder when you download the Schemas zip file.
-Download the [Schemas](http://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
+Download the [Schemas](https://download.microsoft.com/download/B/9/7/B97655A4-4E46-4E51-BA0A-C669106D563F/Schemas.zip).
   
 ## FetchXML Schema  
   
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
-<xs:schema id="fetch" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns:mstns="http://tempuri.org/fetch/unique">
+<xs:schema id="fetch" elementFormDefault="qualified" xmlns:xs="https://www.w3.org/2001/XMLSchema"
+	xmlns:mstns="https://tempuri.org/fetch/unique">
   <xs:annotation>
     <xs:documentation>Schema name: fetch-schema</xs:documentation>
   </xs:annotation>

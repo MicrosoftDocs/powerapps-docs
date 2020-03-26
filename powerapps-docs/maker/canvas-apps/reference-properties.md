@@ -6,15 +6,15 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 03/17/2016
+ms.reviewer: tapanm-msft
+ms.date: 01/24/2020
 ms.author: fikaradz
 search.audienceType:
   - maker
 search.app:
   - PowerApps
 ---
-# Controls and properties in PowerApps
+# Controls and properties in Power Apps
 
 Configure the appearance and behavior of a control by setting one of its properties. Each type of control has a different set of properties. Some properties, such as **Height** and **Width**, are common to almost every type of control, but other properties, such as **CheckboxSize**, are specific to one type of control.
 
@@ -42,6 +42,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Combo box](controls/control-combo-box.md)** - Allows users to make selections from provided choices. Supports search and multi-select.
 
+**[Container (experimental)](controls/control-container.md)** - Create nested hierarchy for accessibility and responsiveness. 
+
 **[Data table](controls/control-data-table.md)** - Show data in a tabular format.
 
 **[Date picker](controls/control-date-picker.md)** – Specify a date by clicking or tapping.
@@ -54,7 +56,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Entity form](entity-form-control.md)** - Experimental feature: Add dynamic forms in which users can view, navigate, and edit relational data from the Common Data Service.
 
-**[Export](controls/control-export-import.md)** – Export data for use elsewhere in PowerApps.
+**[Export](controls/control-export-import.md)** – Export data for use elsewhere in Power Apps.
 
 **[Gallery](controls/control-gallery.md)** – Show a list of records that can contain multiple types of data.
 
@@ -64,7 +66,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Image](controls/control-image.md)** – Show an image from, for example, a local file or a data source.
 
-**[Import](controls/control-export-import.md)** – Import data from elsewhere in PowerApps.
+**[Import](controls/control-export-import.md)** – Import data from elsewhere in Power Apps.
 
 **[Line chart](controls/control-column-line-chart.md)** – Show values as data points relative to two axes.
 
@@ -91,6 +93,8 @@ Configure the appearance and behavior of a control by setting one of its propert
 **[Shape](controls/control-shapes-icons.md)** – Display arrows and geometric shapes, such as rectangles.
 
 **[Slider](controls/control-slider.md)** – Specify a value by dragging a handle.
+
+**[Stream Video](controls/control-stream-video.md)** – Play videos and browse through channels from the Microsoft Stream service.
 
 **[Label](controls/control-text-box.md)** – Shows data such as text, numbers, dates, or currency,
 

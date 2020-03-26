@@ -3,7 +3,7 @@ title: "Email activity entities (Common Data Service) | Microsoft Docs" # Intent
 description: "The email activity in Dynamics 365 lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
@@ -22,7 +22,7 @@ The email activity lets you track and manage email communications with customers
 <a name="Actions"></a>   
 
 ## Actions on an Email Activity  
- Using Dynamics 365 Customer Engagement Web Services, you can perform the following actions on an email activity:  
+ Using Common Data Service Web Services, you can perform the following actions on an email activity:  
   
 - Create, retrieve, update, and delete the email activity.  
   

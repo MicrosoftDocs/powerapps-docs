@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 73dfc13c-a18c-42fc-b511-a37896c2f893
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -16,13 +16,12 @@ search.app:
 ---
 # Walkthrough: Write your first client script
 
-
-
 Ready to write your first client script to see things in action. Lets get started; we'll keep it simple.
 
 ## Objective
 
 After completing this walkthrough, you will know how to use your JavaScript code in model-driven apps, which involves the following steps at a high level:
+
 - Write your JavaScript code to address a business issue
 - Upload your JavaScript code as a web resource in model-driven apps
 - Associate the JavaScript functions in the web resource to different client-side events in model-driven apps.
@@ -33,13 +32,14 @@ We will draw your attention to important facts during the walkthrough, and provi
 
 The first step is to identify the business issue you are trying to address using client scripting. Once you have identified it, you need to write your JavaScript code containing the custom business logic that addresses your business issue. 
 
-model-driven apps does not provide a JavaScript editor. So, you can use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](https://docs.microsoft.com/scripting/javascript/).
+Model-driven apps do not provide a JavaScript editor. So, you can use an external authoring tool that provides features to specifically support editing JavaScript files, such as [Notepad++](https://notepad-plus-plus.org/), [Visual Studio Code](https://code.visualstudio.com/docs/languages/javascript), or [Microsoft Visual Studio](https://docs.microsoft.com/scripting/javascript/).
 
 You can review the complete sample code used in the walkthrough later in this topic.
 
 Let's look at the code in detail:
  
 ### Detailed code explanation
+
 - **Define namespace**: The code starts by defining a namespace for your custom script. As a best practice, you should always create namespaced JavaScript libraries to avoid having your functions overriden by functions in another library.
 
     ```JavaScript
@@ -71,7 +71,7 @@ Let's look at the code in detail:
         window.setTimeout(function () { formContext.ui.clearFormNotification(myUniqueId); }, 5000);        
     }
     ```
-- **Code to execute on the OnChange event**: Code in this sections will be associated with the **Account Name** field in the account form so that it gets executed **only** when you change the account name value.
+- **Code to execute on the OnChange event**: Code in this section will be associated with the **Account Name** field in the account form so that it gets executed **only** when you change the account name value.
 
     The code performs a case-insensitive search for "Contoso" in the account name, and if present, automatically sets values for some fields in the account form.
 
@@ -83,7 +83,7 @@ Let's look at the code in detail:
         // Automatically set some field values if the account name contains "Contoso"
         var accountName = formContext.getAttribute("name").getValue();
         if (accountName.toLowerCase().search("contoso") != -1) {
-            formContext.getAttribute("websiteurl").setValue("http://www.contoso.com");
+            formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
             formContext.getAttribute("telephone1").setValue("425-555-0100");
             formContext.getAttribute("description").setValue("Website URL, Phone and Description set using custom script.");
         }
@@ -132,7 +132,7 @@ Associate the web resource containing your JavaScript code to model-driven apps 
 
     ![Lookup record](../media/clientapi_walkThrough-img4.png)
 
-This makes the web resource available to be selected under the **Event Hadlers** section in the **Form Properties** dialog. Remember that we have three functions in our JavaScript code to be associated with approprite events in the form.
+This makes the web resource available to be selected under the **Event Handlers** section in the **Form Properties** dialog. Remember that we have three functions in our JavaScript code to be associated with appropriate events in the form.
 
 1. Under the **Event Handlers** section, select **Form** as the control and **OnLoad** as the **Event**; click **Add** to add an event handler for the OnLoad event.
 
@@ -144,7 +144,7 @@ This makes the web resource available to be selected under the **Event Hadlers**
     
       ![Form OnLoad](../media/clientapi_walkThrough-img6.png)
 
-1. Click **OK** to return to the **Form Properties** diaog box.
+1. Click **OK** to return to the **Form Properties** dialog box.
 2. Under the **Event Handlers** section, select **OnSave** as the **Event** this time, and click **Add** to add an event handler for the Form OnSave event.
 
     ![Form OnSave](../media/clientapi_walkThrough-img7.png)
@@ -153,7 +153,7 @@ This makes the web resource available to be selected under the **Event Hadlers**
 
     ![Form OnSave](../media/clientapi_walkThrough-img8.png)
 
-1. Click **OK** to return to the **Form Properties** diaog box.
+1. Click **OK** to return to the **Form Properties** dialog box.
 2. Under the **Event Handlers** section, select **Account Name** as the control and **OnChange** as the event; click **Add** to add an event handler for the OnChange event.
 
     ![Form OnSave](../media/clientapi_walkThrough-img9.png)
@@ -164,8 +164,8 @@ This makes the web resource available to be selected under the **Event Hadlers**
     - Select **Pass execution context as first parameter** to pass in the execution context as a parameter to this function. If you review the function definition in the code, we are passing an **executionContext** object to our function definition, and selecting this option wires them up.
     
       ![Attribute OnChange](../media/clientapi_walkThrough-img10.png) 
-1. Click **OK** to return to the **Form Properties** diaog box.
-2. Click **OK** in the **Form Properties** diaog box to return to the form editor.
+1. Click **OK** to return to the **Form Properties** dialog box.
+2. Click **OK** in the **Form Properties** dialog box to return to the form editor.
 3. Click **Save** to save the changes to the form.
 4. Click **Publish** to publish the form changes.
 
@@ -176,7 +176,7 @@ Thats it! You have completed the steps to configure the account form to use cust
 Its recommended that you refresh your browser for the changes to take effect in your model-driven apps instance. To test custom business logic you configured in this walkthrough:
 
 1. Sign in to your model-driven apps instance.
-2. Browse to **Accounts**, and try to open or create a new account. In this case, we will open an existing account to load the account form. You will see a notification conytaining your user name that will automatically disappear in 5 seconds.
+2. Browse to **Accounts**, and try to open or create a new account. In this case, we will open an existing account to load the account form. You will see a notification containing your user name that will automatically disappear in 5 seconds.
 
       ![Form level notification](../media/clientapi_walkThrough-img11.png)
 
@@ -219,7 +219,7 @@ var Sdk = window.Sdk || {};
         // Automatically set some field values if the account name contains "Contoso"
         var accountName = formContext.getAttribute("name").getValue();
         if (accountName.toLowerCase().search("contoso") != -1) {
-            formContext.getAttribute("websiteurl").setValue("http://www.contoso.com");
+            formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
             formContext.getAttribute("telephone1").setValue("425-555-0100");
             formContext.getAttribute("description").setValue("Website URL, Phone and Description set using custom script.");
         }

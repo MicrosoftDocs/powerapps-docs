@@ -3,13 +3,11 @@ title: "Use Postman to perform operations with the Web API (Common Data Service 
 description: "Learn how to compose and send Web API requests using Postman."
 ms.custom: 
 ms.date: 03/22/2019
-ms.reviewer: 
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: 
-  - Dynamics 365 for Customer Engagement (online)
 ms.assetid: AB50128B-D8E3-47A3-A0F8-9594EF6B7022
 caps.latest.revision: 7
 author: susikka

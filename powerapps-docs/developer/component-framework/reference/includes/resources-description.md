@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: d2b842bc-2fa3-414c-a132-93516a916729
 ---
 
-The resource interface of `context.resources`
+Provides access to the methods to get all the information about the resource files defined in the manifest.

@@ -1,20 +1,20 @@
 ---
 title: Install and configure the Expense Report sample for canvas apps | Microsoft Docs
-description: Step-by-step instructions for, in PowerApps, installing and configuring the Expense Report sample for canvas apps.
-author: yijw2017
+description: Step-by-step instructions for, in Power Apps, installing and configuring the Expense Report sample for canvas apps.
+author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 04/08/2018
-ms.author: yijw
+ms.reviewer: tapanm
+ms.date: 10/29/2019
+ms.author: mabolan
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Install and configure the Expense Report sample for canvas apps in PowerApps
+# Install and configure the Expense Report sample for canvas apps in Power Apps
 
 Step-by-step instructions for installing and configuring the Expense Report sample. You can also preview the sample app [here](https://aka.ms/previewmyexpenses).
 
@@ -28,11 +28,11 @@ Track expense reports from submission to approval. Tally line items as individua
 ![Opening screen of the Expense Report PowerApp](./media/expense-report-install/expense-report-powerapp.png)
 
 > [!TIP]
-> Watch [this](https://youtu.be/h6E9cdrOvMU) video to see how to use the Expense Report sample.
+> Watch [this](https://youtu.be/kJXZPILfbwU) video to see how to use the Expense Report sample.
 
 ## Prerequisites
 
-- [Sign up](../signup-for-powerapps.md) for PowerApps.
+- [Sign up](../signup-for-powerapps.md) for Power Apps.
 
 ## Create the Expenses list
 
@@ -198,13 +198,13 @@ This list stores the line items that are associated with each expense report.
 
 1. In a web browser, navigate to the following link:
 
-    [http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip](http://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip).
+    [https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip](https://pappsfeprodwestuscontent.blob.core.windows.net/sampleapps/myexpenses/docs/MyExpenses(SP_List).zip).
 
-2. Download the Expense Report PowerApps Sample package, and save it to your machine.
+2. Download the Expense Report Power Apps Sample package, and save it to your machine.
 
 ## Create connections
 
-1.	In a web browser, navigate to [web.powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1.	In a web browser, navigate to [make.powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 2.	Sign in by providing the same credentials that you used to sign up.
 3.	In the menu on the left, select **Connections**.
 
@@ -233,7 +233,7 @@ This list stores the line items that are associated with each expense report.
 
 ## Import the app
 
-1. In a web browser, navigate to https://web.powerapps.com.
+1. In a web browser, navigate to https://make.powerapps.com.
 1. Sign in by providing the same credentials that you used to sign up.
 1. In left navigation bar, select **Apps**, and then select **Import package(preview)**.
 

@@ -11,10 +11,10 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 3ad4a332-a304-421f-a9fa-82ea3e0503fe
 caps.latest.revision: 18
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
-manager: "amyla"
+ms.reviewer: "pehecke"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

@@ -3,7 +3,7 @@ title: "Create packages for the Package Deployer (Common Data Service) | Microso
 description: "Create packages that administrators can deploy on Common Data Service instances." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
@@ -35,7 +35,7 @@ Common Data Service provides you with a Visual Studio template for creating thes
 - Visual Studio 2015 or Visual Studio 2017
 - NuGet Package Manager for [Visual Studio 2015](https://visualstudiogallery.msdn.microsoft.com/5d345edc-2e2d-4a9c-b73b-d53956dc458d)
     - In Visual Studio 2017, NuGet and the NuGet Package Manager are automatically installed when you select any .NET-related workloads.
-- Microsoft Dynamics CRM SDK Templates for Visual Studio that contains the package template. You can get it by downloading the [Microsoft Dynamics CRM SDK Templates](http://go.microsoft.com/fwlink/p/?LinkId=400925) and double-click the `CRMSDKTemplates.vsix` file to install the template in Visual Studio.  
+- Microsoft Dynamics CRM SDK Templates for Visual Studio that contains the package template. You can get it by downloading the [Microsoft Dynamics CRM SDK Templates](https://go.microsoft.com/fwlink/p/?LinkId=400925) and double-click the `CRMSDKTemplates.vsix` file to install the template in Visual Studio.  
 
 
 
@@ -143,7 +143,7 @@ Common Data Service provides you with a Visual Studio template for creating thes
 
    ```  
 
-    `<filestoimportnode>` node  
+    `<filestoimport>` node  
     Contains an array of `<configimportfile>` and `<zipimportdetails>` nodes that are used to describe individual files and zip files respectively to be imported.  
 
     `<configimportfile>` node  
@@ -254,8 +254,8 @@ Common Data Service provides you with a Visual Studio template for creating thes
 
    ```xml  
    <?xml version="1.0" encoding="utf-16"?>  
-   <configdatastorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
+   <configdatastorage xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"  
+   xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
    installsampledata="true"  
    waitforsampledatatoinstall="true"  
    agentdesktopzipfile=""  

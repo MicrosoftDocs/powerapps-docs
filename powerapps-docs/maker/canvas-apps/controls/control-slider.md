@@ -1,20 +1,20 @@
 ---
 title: 'Slider control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the slider control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Slider control in PowerApps
+# Slider control in Power Apps
 A control with which the user can specify a value by dragging a handle.
 
 ## Description

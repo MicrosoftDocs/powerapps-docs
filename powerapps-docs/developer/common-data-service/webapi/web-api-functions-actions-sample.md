@@ -11,8 +11,8 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 953c3137-6171-4e6e-b249-6a96221c6e96
 caps.latest.revision: 16
-author: "brandonsimons" # GitHub ID
-ms.reviewer: "susikka"
+author: "JimDaly" # GitHub ID
+ms.reviewer: "pehecke"
 ms.author: "jdaly"
 search.audienceType: 
   - developer
@@ -132,7 +132,7 @@ Getting the request and response for the <xref href="Microsoft.Dynamics.CRM.WhoA
  **Request**  
   
 ```http  
-GET http://[Organization URI]/api/data/v9.0/WhoAmI HTTP/1.1  
+GET https://[Organization URI]/api/data/v9.0/WhoAmI HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8   
@@ -147,7 +147,7 @@ OData-Version: 4.0
 Content-Length: 273  
   
 {  
-   "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",  
+   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.WhoAmIResponse",  
    "BusinessUnitId":"0d6cc84a-d3f6-e511-80d0-00155da84802",  
    "UserId":"b08dc84a-d3f6-e511-80d0-00155da84802",  
    "OrganizationId":"0f47eae2-a906-4ae4-9215-f09875979f6a"  
@@ -163,7 +163,7 @@ Use an unbound function to retrieve the time zone code. This operation demonstra
  **Request**  
   
 ```http  
-GET http://[Organization URI]/api/data/v9.0/GetTimeZoneCodeByLocalizedName(LocalizedStandardName=@p1,LocaleId=@p2)?@p1='Pacific%20Standard%20Time'&@p2=1033 HTTP/1.1  
+GET https://[Organization URI]/api/data/v9.0/GetTimeZoneCodeByLocalizedName(LocalizedStandardName=@p1,LocaleId=@p2)?@p1='Pacific%20Standard%20Time'&@p2=1033 HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8 
@@ -178,7 +178,7 @@ OData-Version: 4.0
 Content-Length: 154  
   
 {  
-   "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedNameResponse",  
+   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.GetTimeZoneCodeByLocalizedNameResponse",  
    "TimeZoneCode":4  
 }  
 ```  
@@ -199,7 +199,7 @@ Use a  bound function to retrieve the total time it took to complete all the tas
  **Request**  
   
 ```http  
-GET http://[Organization URI]/api/data/v9.0/incidents(3d920da5-fb4a-e611-80d5-00155da84802)/Microsoft.Dynamics.CRM.CalculateTotalTimeIncident() HTTP/1.1  
+GET https://[Organization URI]/api/data/v9.0/incidents(3d920da5-fb4a-e611-80d5-00155da84802)/Microsoft.Dynamics.CRM.CalculateTotalTimeIncident() HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8  
@@ -215,7 +215,7 @@ OData-Version: 4.0
 Content-Length: 148  
   
 {  
-   "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.CalculateTotalTimeIncidentResponse",  
+   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.CalculateTotalTimeIncidentResponse",  
    "TotalTime":90  
 }  
 ```  
@@ -242,7 +242,7 @@ Use an unbound action that takes a set of parameters. This operation closes an o
  **Request**  
   
 ```http  
-POST http://[Organization URI]/api/data/v9.0/WinOpportunity HTTP/1.1  
+POST https://[Organization URI]/api/data/v9.0/WinOpportunity HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8  
@@ -251,7 +251,7 @@ Content-Type: application/json; charset=utf-8
    "Status":3,  
    "OpportunityClose":{  
       "subject":"Won Opportunity",  
-      "opportunityid@odata.bind":"http://[Organization URI]/api/data/v9.0/opportunities(47920da5-fb4a-e611-80d5-00155da84802)"  
+      "opportunityid@odata.bind":"https://[Organization URI]/api/data/v9.0/opportunities(47920da5-fb4a-e611-80d5-00155da84802)"  
    }  
 }  
 ```  
@@ -279,7 +279,7 @@ Use a bound action that takes parameters. This operation adds a letter to the cu
  **Request**  
   
 ```http  
-POST http://[Organization URI]/api/data/v9.0/queues(1f7bcc50-d3f6-e511-80d0-00155da84802)/Microsoft.Dynamics.CRM.AddToQueue HTTP/1.1  
+POST https://[Organization URI]/api/data/v9.0/queues(1f7bcc50-d3f6-e511-80d0-00155da84802)/Microsoft.Dynamics.CRM.AddToQueue HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8  
@@ -302,7 +302,7 @@ OData-Version: 4.0
 Content-Length: 170  
   
 {  
-   "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.AddToQueueResponse",  
+   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#Microsoft.Dynamics.CRM.AddToQueueResponse",  
    "QueueItemId":"67bdfabd-fc4a-e611-80d5-00155da84802"  
 }  
 ```  
@@ -342,7 +342,7 @@ The request and response of the action.
  **Request**  
   
 ```http  
-POST http://[Organization URI]/api/data/v9.0/contacts(4d920da5-fb4a-e611-80d5-00155da84802)/Microsoft.Dynamics.CRM.sample_AddNoteToContact HTTP/1.1  
+POST https://[Organization URI]/api/data/v9.0/contacts(4d920da5-fb4a-e611-80d5-00155da84802)/Microsoft.Dynamics.CRM.sample_AddNoteToContact HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8  
@@ -363,7 +363,7 @@ OData-Version: 4.0
 Content-Length: 149  
   
 {  
-   "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#annotations/$entity",  
+   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#annotations/$entity",  
    "annotationid":"ba146d0b-fd4a-e611-80d5-00155da84802"  
 }  
 ```  
@@ -373,7 +373,7 @@ Content-Length: 149
  **Request**  
   
 ```http  
-GET http://[Organization URI]/api/data/v9.0/annotations(ba146d0b-fd4a-e611-80d5-00155da84802)?$select=subject,notetext&$expand=objectid_contact($select=fullname) HTTP/1.1  
+GET https://[Organization URI]/api/data/v9.0/annotations(ba146d0b-fd4a-e611-80d5-00155da84802)?$select=subject,notetext&$expand=objectid_contact($select=fullname) HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8  
@@ -388,7 +388,7 @@ OData-Version: 4.0
 Content-Length: 450  
   
 {  
-   "@odata.context":"http://[Organization URI]/api/data/v9.0/$metadata#annotations(subject,notetext,objectid_contact,objectid_contact(fullname))/$entity",  
+   "@odata.context":"https://[Organization URI]/api/data/v9.0/$metadata#annotations(subject,notetext,objectid_contact,objectid_contact(fullname))/$entity",  
    "@odata.etag":"W/\"622978\"",  
    "subject":"The Title of the Note",  
    "notetext":"The text content of the note.",  
@@ -417,7 +417,7 @@ This operation calls the `sample_CreateCustomer`  custom action to create an "ac
  **Request**  
   
 ```http  
-POST http://[Organization URI]/api/data/v9.0/sample_CreateCustomer HTTP/1.1  
+POST https://[Organization URI]/api/data/v9.0/sample_CreateCustomer HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8  
@@ -446,7 +446,7 @@ This example shows that custom actions can return custom error messages. You han
  **Request**  
   
 ```http  
-POST http://[Organization URI]/api/data/v9.0/sample_CreateCustomer HTTP/1.1  
+POST https://[Organization URI]/api/data/v9.0/sample_CreateCustomer HTTP/1.1  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0  
 Content-Type: application/json; charset=utf-8  

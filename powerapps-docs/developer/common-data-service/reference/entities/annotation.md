@@ -1,7 +1,7 @@
 ---
 title: "Annotation Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Annotation entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the Annotation entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # Annotation Entity Reference
 
@@ -220,7 +219,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForRead|True|
 |LogicalName|objectid|
 |RequiredLevel|None|
-|Targets|account,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_solutioncomponentdatasource,msdyn_solutionhistorydatasource,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
+|Targets|account,appointment,calendar,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,contact,convertrule,duplicaterule,email,emailserverprofile,fax,goal,kbarticle,knowledgearticle,knowledgebaserecord,letter,mailbox,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_solutioncomponentdatasource,msdyn_solutionhistorydatasource,phonecall,recurringappointmentmaster,routingrule,routingruleitem,sharepointdocument,sla,socialactivity,task,workflow|
 |Type|Lookup|
 
 
@@ -709,7 +708,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|False|
-|IsValidForRead|False|
+|IsValidForRead|True|
 |LogicalName|prefix|
 |MaxLength|10|
 |RequiredLevel|None|
@@ -823,8 +822,6 @@ Same as processsession entity [Annotation_ProcessSessions](processsession.md#BKM
 
 Each Many-To-One relationship is defined by a corresponding One-To-Many relationship with the related entity. Listed by **SchemaName**.
 
-- [msdyn_solutioncomponentdatasource_Annotations](#BKMK_msdyn_solutioncomponentdatasource_Annotations)
-- [msdyn_solutionhistorydatasource_Annotations](#BKMK_msdyn_solutionhistorydatasource_Annotations)
 - [knowledgearticle_Annotations](#BKMK_knowledgearticle_Annotations)
 - [KnowledgeBaseRecord_Annotations](#BKMK_KnowledgeBaseRecord_Annotations)
 - [lk_annotationbase_modifiedonbehalfby](#BKMK_lk_annotationbase_modifiedonbehalfby)
@@ -852,19 +849,12 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [Goal_Annotation](#BKMK_Goal_Annotation)
 - [KbArticle_Annotation](#BKMK_KbArticle_Annotation)
 - [DuplicateRule_Annotation](#BKMK_DuplicateRule_Annotation)
+- [msdyn_solutioncomponentdatasource_Annotations](#BKMK_msdyn_solutioncomponentdatasource_Annotations)
+- [msdyn_solutionhistorydatasource_Annotations](#BKMK_msdyn_solutionhistorydatasource_Annotations)
+- [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
+- [msdyn_aifptrainingdocument_Annotations](#BKMK_msdyn_aifptrainingdocument_Annotations)
+- [msdyn_aiodimage_Annotations](#BKMK_msdyn_aiodimage_Annotations)
 
-
-### <a name="BKMK_msdyn_solutioncomponentdatasource_Annotations"></a> msdyn_solutioncomponentdatasource_Annotations
-
-**Added by**: Microsoft Dynamics 365 Settings APIs Solution
-
-See msdyn_solutioncomponentdatasource Entity [msdyn_solutioncomponentdatasource_Annotations](msdyn_solutioncomponentdatasource.md#BKMK_msdyn_solutioncomponentdatasource_Annotations) One-To-Many relationship.
-
-### <a name="BKMK_msdyn_solutionhistorydatasource_Annotations"></a> msdyn_solutionhistorydatasource_Annotations
-
-**Added by**: Microsoft Dynamics 365 Solution History APIs Solution
-
-See msdyn_solutionhistorydatasource Entity [msdyn_solutionhistorydatasource_Annotations](msdyn_solutionhistorydatasource.md#BKMK_msdyn_solutionhistorydatasource_Annotations) One-To-Many relationship.
 
 ### <a name="BKMK_knowledgearticle_Annotations"></a> knowledgearticle_Annotations
 
@@ -973,6 +963,36 @@ See kbarticle Entity [KbArticle_Annotation](kbarticle.md#BKMK_KbArticle_Annotati
 ### <a name="BKMK_DuplicateRule_Annotation"></a> DuplicateRule_Annotation
 
 See duplicaterule Entity [DuplicateRule_Annotation](duplicaterule.md#BKMK_DuplicateRule_Annotation) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_solutioncomponentdatasource_Annotations"></a> msdyn_solutioncomponentdatasource_Annotations
+
+**Added by**: Microsoft Dynamics 365 Settings APIs Solution
+
+See msdyn_solutioncomponentdatasource Entity [msdyn_solutioncomponentdatasource_Annotations](msdyn_solutioncomponentdatasource.md#BKMK_msdyn_solutioncomponentdatasource_Annotations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_solutionhistorydatasource_Annotations"></a> msdyn_solutionhistorydatasource_Annotations
+
+**Added by**: Microsoft Dynamics 365 Solution History APIs Solution
+
+See msdyn_solutionhistorydatasource Entity [msdyn_solutionhistorydatasource_Annotations](msdyn_solutionhistorydatasource.md#BKMK_msdyn_solutionhistorydatasource_Annotations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aimodel_Annotations"></a> msdyn_aimodel_Annotations
+
+**Added by**: AISolution Solution
+
+See msdyn_aimodel Entity [msdyn_aimodel_Annotations](msdyn_aimodel.md#BKMK_msdyn_aimodel_Annotations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aifptrainingdocument_Annotations"></a> msdyn_aifptrainingdocument_Annotations
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aifptrainingdocument Entity [msdyn_aifptrainingdocument_Annotations](msdyn_aifptrainingdocument.md#BKMK_msdyn_aifptrainingdocument_Annotations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aiodimage_Annotations"></a> msdyn_aiodimage_Annotations
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aiodimage Entity [msdyn_aiodimage_Annotations](msdyn_aiodimage.md#BKMK_msdyn_aiodimage_Annotations) One-To-Many relationship.
 
 ### See also
 

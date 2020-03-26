@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/03/2019
 ms.author: niwaggon
 search.audienceType:
@@ -27,14 +27,14 @@ Depending on where your data resides, you can take either or both of these appro
 
 ## Generate an app
 
-If you want to manage data in a custom list, PowerApps can [generate a three-screen app for you automatically](../app-from-sharepoint.md). Users can browse the list on the first screen, show details of an item in the second screen, and create or update items in the third screen.
+If you want to manage data in a custom list, Power Apps can [generate a three-screen app for you automatically](../app-from-sharepoint.md). Users can browse the list on the first screen, show details of an item in the second screen, and create or update items in the third screen.
 
 > [!NOTE]
 > If your SharePoint list contains a **Choice**, **Lookup**, or **Person or group** column, see [Show data in a gallery](connection-sharepoint-online.md#show-list-columns-in-a-gallery) later in this topic.
 
 ## Create a connection
 
-1. [Sign in to PowerApps](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Connections** in the left navigation bar, and then select **New connection** near the upper-left corner.
+1. [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Connections** in the left navigation bar, and then select **New connection** near the upper-left corner.
 
     > [!div class="mx-imgBorder"]
     > ![Select Data > Connections in the left navigation bar, and then select New connection near the upper-left corner.](./media/connection-sharepoint-online/new-connection.png)
@@ -75,7 +75,7 @@ If you want to manage data in a custom list, PowerApps can [generate a three-scr
 
 ## Add data to an existing app
 
-1. In PowerApps Studio, open the app that you want to update, select the **View** tab, and then select **Data sources**.
+1. In Power Apps Studio, open the app that you want to update, select the **View** tab, and then select **Data sources**.
 
     > [!div class="mx-imgBorder"]
     > ![On the View tab, and then select Data sources](./media/connection-sharepoint-online/view-data-sources.png)
@@ -92,7 +92,7 @@ If you want to manage data in a custom list, PowerApps can [generate a three-scr
     > [!div class="mx-imgBorder"]
     > ![Under Choose a list, select the check box for Documents or one or more lists that you want to use, and then select Connect](./media/connection-sharepoint-online/select-sp-tables.png)
 
-    Not all types of lists appear by default. PowerApps supports custom lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
+    Not all types of lists appear by default. Power Apps supports custom lists, not template-based lists. If the name of the list that you want to use doesn't appear, scroll to the bottom, and then type the name of the list in the box that contains **Enter custom table name**.
 
     > [!div class="mx-imgBorder"]
     > ![Type the name of the list in the box that contains Enter a custom list name.](./media/connection-sharepoint-online/custom-list.png)
@@ -154,7 +154,7 @@ If you have several images in a SharePoint library, you can add a **Drop down** 
 
 You can [download a sample app](https://pwrappssamples.blob.core.windows.net/samples/spdoclib_blogapp.msapp) that demonstrates a more complex approach to showing data from a SharePoint library.
 
-1. After you download the app, open [PowerApps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**.
+1. After you download the app, open [Power Apps Studio](https://us.create.powerapps.com/studio/#), select **Open** in the left navigation bar, and then select **Browse**.
 1. In the **Open** dialog box, find and open the file that you downloaded, and then add a SharePoint library as a data source by following the first two procedures in this topic.
 
 > [!NOTE]
@@ -174,7 +174,7 @@ When you find the file that you want, select it to show it in the **Video**, **I
 
 ### Lists
 
-PowerApps can read column names that contain spaces, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+Power Apps can read column names that contain spaces, but the spaces are replaced with the hexadecimal escape code **"\_x0020\_"**. For example, **"Column Name"** in SharePoint will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 Not all types of columns are supported, and not all types of columns support all types of cards.
 
@@ -200,10 +200,10 @@ Not all types of columns are supported, and not all types of columns support all
 
 ### Libraries
 
-- You can't upload files from PowerApps to a library.
+- You can't upload files from Power Apps to a library.
 - You can't show PDF files from a library in a PDF Viewer control.
-- PowerApps Mobile doesn't support the **Download** function.
-- If your users will run the app in PowerApps Mobile or the Windows 10 app, use the **Launch** function to display library content in a gallery.
+- Power Apps Mobile doesn't support the **Download** function.
+- If your users will run the app in Power Apps Mobile or the Windows 10 app, use the **Launch** function to display library content in a gallery.
 
 ## Next steps
 

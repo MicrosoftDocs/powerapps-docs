@@ -3,8 +3,9 @@ title: Types  | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,8 +15,9 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 
 # types element
 
+## Available for 
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+Model-driven apps and canvas apps (public preview) 
 
 ## Parent Elements
 
@@ -32,6 +34,6 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 
 ### Related topics
 
-[PowerApps component framework Manifest Schema Reference](index.md)<br/>
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[Power Apps component framework manifest schema reference](index.md)<br/>
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework overview](../overview.md)

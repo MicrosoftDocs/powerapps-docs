@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Image properties in PowerApps
+# Image properties in Power Apps
 Configure graphical elements in your app, including images, photos, and elements of a pen control.
 
 **BackgroundImage** – The name of an image file that appears in the background of a screen.

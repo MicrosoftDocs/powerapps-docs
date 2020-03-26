@@ -3,8 +3,9 @@ title: updateRecord | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,9 +17,13 @@ ms.assetid: 179ced61-ff0f-45ef-aa14-835ce99532cf
 
 [!INCLUDE [updaterecord-description](includes/updaterecord-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Syntax
 
-`updateRecord(entityLogicalName, id, data).then(successCallback, errorCallback);`
+`context.webAPI.updateRecord(entityLogicalName, id, data).then(successCallback, errorCallback);`
 
 ## Parameters
 
@@ -72,11 +77,13 @@ ms.assetid: 179ced61-ff0f-45ef-aa14-835ce99532cf
 
 ## Return Value
 
-On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
+Type: [Promise]((dateformattinginfo.md)<[Entityreference](../entityreference.md)>
+
+Description: On success, returns a promise object containing the attributes specified earlier in the description of the **successCallback** parameter.
 
 
 ### Related topics
 
 [Web API](../webapi.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

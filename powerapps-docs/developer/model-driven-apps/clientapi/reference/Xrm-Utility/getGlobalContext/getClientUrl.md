@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -37,7 +37,7 @@ globalContext.getClientUrl();
 |---|---|
 |https://[org].crm.dynamics.com|model-driven apps (online)|
 |http(s)://[server]/[org]|model-driven apps (on-premises)|
-|http://localhost:2525|model-driven apps for Outlook with Offline Access when offline|
+|https://localhost:2525|model-driven apps for Outlook with Offline Access when offline|
 
 ### Related topics
 

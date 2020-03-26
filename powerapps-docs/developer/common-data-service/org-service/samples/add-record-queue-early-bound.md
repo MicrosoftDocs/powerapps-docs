@@ -3,10 +3,10 @@ title: "Sample: Add a record to queue (Common Data Service) | Microsoft Docs" # 
 description: "This sample shows how to add a record to a queue." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -19,7 +19,7 @@ search.app:
 
 This sample shows how to add a record to a queue. It creates source and destination queues. It adds a letter activity to the source queue and then moves it to the destination queue. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RecordToQueue).
 
-This sample requires additional users that are not in your system. Create the users manually in **Office 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. 
+This sample requires additional users that are not in your system. Create the users manually in **Office 365** in order to run the sample without any errors. For this sample, create a user profile **as is** shown below. 
 
 **First Name**: Kevin<br/>
 **Last Name**: Cook<br/>
@@ -53,6 +53,4 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Clean up
 
-1. Display an option to delete the sample data that is created in [Setup](#setup).
-
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the sample data that is created in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

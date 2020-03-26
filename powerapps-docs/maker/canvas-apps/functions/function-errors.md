@@ -1,12 +1,12 @@
 ---
 title: Errors function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Errors function in PowerApps
+description: Reference information, including syntax and examples, for the Errors function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/11/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Errors function in PowerApps
+# Errors function in Power Apps
 Provides error information for previous changes to a [data source](../working-with-data-sources.md).
 
 ## Overview
@@ -76,7 +76,7 @@ To make this change in the data source, the **[Patch](function-patch.md)** funct
 
 where **Gallery.Updates** evaluates to **{ Quantity: 90 }**, since only the **Quantity** property has been modified.
 
-Unfortunately, just before the **[Patch](function-patch.md)** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  PowerApps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
+Unfortunately, just before the **[Patch](function-patch.md)** function was invoked, somebody else modifies the **Quantity** for Chocolate to 80.  Power Apps will detect this and not allow the conflicting change to occur.  You can check for this situation with the formula:
 
 * **IsEmpty( Errors( IceCream, EditRecord ) )**
 

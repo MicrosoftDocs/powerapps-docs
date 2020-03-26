@@ -1,6 +1,6 @@
 ---
-title: "Define alternate keys using PowerApps portal | MicrosoftDocs"
-description: "Learn how to define alternate keys using PowerApps portal"
+title: "Define alternate keys using Power Apps portal | MicrosoftDocs"
+description: "Learn how to define alternate keys using Power Apps portal"
 ms.custom: ""
 ms.date: 05/31/2018
 ms.reviewer: ""
@@ -21,9 +21,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Define alternate keys using PowerApps portal
+# Define alternate keys using Power Apps portal
 
-The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view and create entity alternate keys with the Common Data Service.
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view and create entity alternate keys with the Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Define alternate keys to reference records](define-alternate-keys-reference-records.md)
@@ -31,9 +31,8 @@ The portal enables configuring the most common options, but certain options can 
 
 ## View alternate keys
 
-1. From the [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select either **Model-driven** or **Canvas** design mode.
-2. Select **Data** > **Entities** and select the entity that you want to view.
-3. Select **Keys** to view a list of any alternate keys that are defined.
+1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Entities** and select the entity that you want to view.
+2. Select **Keys** to view a list of any alternate keys that are defined.
 
     ![View alternate keys](media/view-alternate-keys-portal.png)
 

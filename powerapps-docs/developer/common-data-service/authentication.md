@@ -3,7 +3,7 @@ title: "Authentication with Common Data Service web services (Common Data Servic
 description: "Introduces authentication options that depend on the software framework you use." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -45,7 +45,7 @@ Office 365 authentication requires using the .NET Framework SDK assemblies with 
 
 Using Office 365 authentication does not require that your register your applications as OAuth does. You must simply provide a User Principal Name (UPN) and password for a valid user.
 
-More information: [Authentication with .NET Framework applications](authenticate-dot-net-framework.md)
+More information: [Authentication with .NET Framework applications](authenticate-dot-net-framework.md), [Use of Office365 authentication with the WS-Trust security protocol](authenticate-office365-deprecation.md)
 
 ## All other software frameworks
 

@@ -26,7 +26,7 @@ search.app:
 
 # Design model-driven apps by using the app designer
 
-With PowerApps, model-driven apps are comprised of components such as entities, dashboards, forms, views, charts, and business processes.  
+With Power Apps, model-driven apps are comprised of components such as entities, dashboards, forms, views, charts, and business processes.  
   
  The app designer helps you bring together all these components quickly. Its tile-based information structure and simplified interface make the process of building an app much easier, and you can create apps that are specific to your business roles and functions without having to write any code.  
   

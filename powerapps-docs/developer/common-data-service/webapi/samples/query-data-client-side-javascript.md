@@ -10,10 +10,10 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 6df7cccb-071d-4853-8acb-01bceef973ca
 caps.latest.revision: 22
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
-manager: "amyla"
+ms.reviewer: "pehecke"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -41,7 +41,7 @@ This sample demonstrates how to perform basic query requests using the Common Da
 
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Query Data Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824050) and download the sample archive file: Microsoft CRM Web API Query Data Sample (Client-side JavaScript).zip. Extract the contents of the sample archieve and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Common Data Service organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Query Data Sample (Client-side JavaScript)](https://go.microsoft.com/fwlink/p/?LinkId=824050) and download the sample archive file: Microsoft CRM Web API Query Data Sample (Client-side JavaScript).zip. Extract the contents of the sample archieve and locate the WebAPIQueryData_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Common Data Service organization and run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codeSample"></a>
 

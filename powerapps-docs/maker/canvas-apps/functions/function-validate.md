@@ -1,12 +1,12 @@
 ---
 title: Validate function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Validate function in PowerApps
+description: Reference information, including syntax and examples, for the Validate function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/01/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Validate function in PowerApps
+# Validate function in Power Apps
 The **Validate** function checks whether the value of a single [column](../working-with-tables.md#columns) or a complete [record](../working-with-tables.md#records) is valid for a [data source](../working-with-data-sources.md).  
 
 ## Description

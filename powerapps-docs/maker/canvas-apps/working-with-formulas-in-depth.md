@@ -1,12 +1,12 @@
 ---
 title: Understand behavior formulas in a canvas app | Microsoft Docs
-description: Reference information about working with behavior formulas, which change the state of a canvas app in PowerApps
+description: Reference information about working with behavior formulas, which change the state of a canvas app in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 11/10/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand behavior formulas for canvas apps in PowerApps
+# Understand behavior formulas for canvas apps in Power Apps
 
 Most formulas calculate a value.  Like an Excel spreadsheet, recalculation happens automatically as values change.  For example, you might want to show the value in a **[Label](controls/control-text-box.md)** control in red if the value is less than zero or in black otherwise. So you can set the **[Color](controls/properties-color-border.md)** property of that control to this formula:
 

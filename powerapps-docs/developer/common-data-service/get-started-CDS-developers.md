@@ -1,13 +1,13 @@
 ---
 title: "Developers: Get started with Common Data Service | Microsoft Docs"
-description: Learn how developers can add value using Common Data Service in PowerApps.
+description: Learn how developers can add value using Common Data Service in Power Apps.
 suite: powerapps
 author: JimDaly
-manager: annbe
+manager: ryjones
 ms.service: powerapps
-ms.date: 03/27/2019
+ms.date: 08/05/2019
 ms.author: jdaly
-ms.reviewer: kvivek
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -57,7 +57,7 @@ Developing a good working understanding of the metadata in the system can help y
 If you are going to distribute the extensions you create or any customizations that they depend on, you will need to understand solutions. Solutions created by an individual are relatively simple to work with and don't require the skills of a developer. But for a team of developers to work productively with solutions and use effective application lifecycle management principles requires a more sophisticated approach. More information:
 
  - [Introduction to solutions](introduction-solutions.md)
- - [SolutionPackager toolSolutionPackager tool](compress-extract-solution-file-solutionpackager.md)
+ - [SolutionPackager tool](compress-extract-solution-file-solutionpackager.md)
  - [Package Deployer tool](./package-deployer/create-packages-package-deployer.md)
  - [Publish your app on AppSource](publish-app-appsource.md)
 

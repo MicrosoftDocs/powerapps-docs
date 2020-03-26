@@ -1,12 +1,12 @@
 ---
 title: Set function | Microsoft Docs
-description: Reference information, including syntax and examples, for the Set function in PowerApps
+description: Reference information, including syntax and examples, for the Set function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/29/2017
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Set function in PowerApps
+# Set function in Power Apps
 Sets the value of a global variable.
 
 ## Overview
@@ -22,12 +22,12 @@ Use the **Set** function to set the value of a global variable, which temporaril
 
 Global variables are available throughout your app on all screens. These are the simplest kind of variables and fill the needs of most situations. There are also context variables which are scoped to a single screen and collections that allow row level modifications to tables. For more information about these other options, review [Understand variables](../working-with-variables.md).
 
-PowerApps are based on formulas that automatically recalculate as the user interacts with an app. Any formulas that depend on a variable will automatically update when it changes. However, the variable won't be automatically updated if the value of the formula used in the **Set** function changes. This requires the app maker to manually update the variable, which can be error prone and harder for others to understand. Before you use a variable, review [Understand variables](../working-with-variables.md).
+Power Apps are based on formulas that automatically recalculate as the user interacts with an app. Any formulas that depend on a variable will automatically update when it changes. However, the variable won't be automatically updated if the value of the formula used in the **Set** function changes. This requires the app maker to manually update the variable, which can be error prone and harder for others to understand. Before you use a variable, review [Understand variables](../working-with-variables.md).
 
 ## Description
 Global variables are implicitly created by using the **Set** function. No explicit declaration is required. If you remove all the **Set** functions for a global variable, that global variable will cease to exist. To clear a variable, set its value to the result of the [**Blank** function](function-isblank-isempty.md).
 
-You can see your variables' values, definitions, and uses with the Variables view under the **File** menu in PowerApps Studio.
+You can see your variables' values, definitions, and uses with the Variables view under the **File** menu in Power Apps Studio.
 
 As the examples later in this topic show, global variables can hold several kinds of information, including these:
 

@@ -3,7 +3,7 @@ title: "Create, export, or import an unmanaged solution (Common Data Service) | 
 description: "An unmanaged solution is useful as a way to group a set of unmanaged customizations into a set that can be transported between organizations" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
@@ -59,7 +59,10 @@ In addition to being a prerequisite to creating a managed solution, an unmanaged
 
 <a name="BKMK_UseSolutionConfigurationPage"></a>   
 ### Use the Solution Configuration page  
- The solution configuration page provides a canvas you can use to display information or enable customers to perform actions in the context of your solution. Set the configuration page by using the **Configuration Page** lookup field to select a Web Page (HTML) Web resource included in the solution. This will cause a new **Configuration** node to appear in the Solution window underneath the **Information** node and above the **Components** node. The **Configuration** node will display the Web resource you set.  
+ The solution configuration page provides a canvas you can use to display information or enable customers to perform actions in the context of your solution. Set the configuration page by using the **Configuration Page** lookup field to select a Web Page (HTML) Web resource included in the solution. This will cause a new **Configuration** node to appear in the Solution window underneath the **Information** node and above the **Components** node. The **Configuration** node will display the Web resource you set.
+ 
+ > [!NOTE]
+>  The solution configuration page can only be accessed in classic mode currently.
 
  You can use the solution configuration page to display controls that will configure your solution. For example, you may provide some entities in your solution that control the behavior of your solution. By using the Web API for data access, you can provide custom controls on your Web resource page to update data in these entities.  
 

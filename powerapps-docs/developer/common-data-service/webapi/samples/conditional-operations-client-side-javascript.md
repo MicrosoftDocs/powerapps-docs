@@ -9,12 +9,12 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.assetid: 7f097d9f-8fe7-428a-9ef7-ca79ec501d81
 caps.latest.revision: 23
 ms.author: "jdaly"
-ms.reviewer: "susikka"
-manager: "amyla"
+ms.reviewer: "pehecke"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -42,7 +42,7 @@ This sample demonstrates how to perform conditional operations using Common Data
  
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824046) and download the Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the WebAPIConditionalOperations_1_0_0_0_managed.zip managed solution. Import the managed solution into your Common Data Service organization and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript)](https://go.microsoft.com/fwlink/p/?LinkId=824046) and download the Microsoft CRM Web API Conditional Operations Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the WebAPIConditionalOperations_1_0_0_0_managed.zip managed solution. Import the managed solution into your Common Data Service organization and view the solution configuration page to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_sampleCode"></a>
 

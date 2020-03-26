@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 1324b465-6012-47d4-bf35-837df82014cb
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -26,20 +26,14 @@ All
 
 `formContext.getAttribute(arg).setValue(value)`
 
-# Parameters
+## Parameters
 Depends on the type of attribute.
 
-<!-- TODO: 
-
-Change type links from msdn to docs, i.e. https://msdn.microsoft.com/library/dwab3ed2.aspx to /scripting/javascript/reference/number-object-javascript 
-
-or MDN https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
--->
 
 | Attribute Type|Parameters Type|
 -------|------|
 | boolean| [Boolean](https://msdn.microsoft.com/library/t7bkhaz6.aspx) |
-| datetime|[Date](https://msdn.microsoft.com/library/cd9w2te4.aspx)|
+| datetime|[Date](https://msdn.microsoft.com/library/cd9w2te4.aspx) <br/><br/>In the Unified Interface, date values are assumed to be UTC.<br/>In the legacy web client, date values are assumed to be in the user's time zone.|
 | decimal| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|
 | double| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx) |
 | Integer|[Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)|

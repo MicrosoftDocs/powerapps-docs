@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 05/19/2019
+ms.reviewer: tapanm
+ms.date: 02/07/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -28,7 +28,7 @@ This article provides details for the data types that canvas apps support. When 
 | **Date** | A date without a time, in the time zone of the app's user. | **Date( 2019, 5, 16 )** |
 | **DateTime** | A date with a time, in the time zone of the app's user. | **DateTimeValue( "May 16, 2019 1:23:09 PM" )** |
 | **GUID** | A [Globally Unique Identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier). | **GUID()**<br>**GUID( "123e4567-e89b-12d3-a456-426655440000" )** |
-| **Hyperlink** | A text string that holds a hyperlink. | **"http://powerapps.microsoft.com"** |
+| **Hyperlink** | A text string that holds a hyperlink. | **"https://powerapps.microsoft.com"** |
 | **Image** | A [Universal Resource Identifier (URI)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier) text string to an image in .jpeg, .png, .svg, .gif, or other common web-image format. | **MyImage** added as an app resource<br>**"https://northwindtraders.com/logo.jpg"**<br>**"appres://blobmanager/7b12ffa2..."** |
 | **Media** | A URI text string to a video or audio recording. | **MyVideo** added as an app resource<br>**"https://northwindtraders.com/intro.mp4"**<br>**"appres://blobmanager/3ba411c..."** |
 | **Number** | A floating-point number. | **123**<br>**-4.567**<br>**8.903e121** |
@@ -55,6 +55,20 @@ Because all data types support *blank*, the **Boolean** and **Two option** data 
 ## Text, Hyperlink, Image, and Media
 
 All four of these data types are based on a [Unicode](https://en.wikipedia.org/wiki/Unicode) text string.
+
+### Embedded text
+
+Embedded text strings in a formula are enclosed in double quotation marks.  Use two double quotes together to represent a single double quote in the text string.  For example, using the following formula in the **OnSelect** property of a [**Button**](../controls/control-button.md) control:
+
+```powerapps-dot
+Notify( "Jane said ""Hello, World!""" )
+```
+
+results in a banner when the button is pressed, where the first and last double quotes are omitted (as they delimit the text string) and the repeated double quotes around **Hello, World!** are replaced with a single double quote:
+
+![pop up notification with the message Jane said "Hello, World"](media/data-types/literal-string.png)
+
+Single quotation marks are not used for [identifier names](operators.md#identifier-names) that contain special characters and have no significance within a text string.  
 
 ### Image and Media resources
 
@@ -128,6 +142,8 @@ This table shows some examples:
 
 For **User local** date/times, canvas apps use the time zone of the browser or device, but model-driven apps use the user's setting in Common Data Service. These settings typically match, but results will differ if these settings differ.
 
+Use the [**DateAdd**](function-dateadd-datediff.md) and [**TimeZoneInformation**](function-dateadd-datediff.md) functions to convert local time to UTC and back again.  See the examples at the end of the documentation for these functions.
+
 ### Numeric equivalents
 
 Canvas apps hold and calculate all date/time values, whether **User local** or **Time zone independent** in UTC. The app translates the values based on the app user's time zone when showing them and when the app user specifies them.
@@ -156,7 +172,7 @@ However, that function returns **Saturday, September 8, 2001 18:46:40** if you u
 To convert to a Unix time, divide the result from **Value** by 1,000:
 <br>**RoundDown( Value( UnixTime ) / 1000, 0 )**
 
-If you need the Unix time in a **Date** value for further calculations or display within PowerApps, use this formula:
+If you need the Unix time in a **Date** value for further calculations or display within Power Apps, use this formula:
 <br>**DateAdd( Date( 1970,1,1 ), UnixTime, Seconds )**
 
 ### SQL Server
@@ -168,12 +184,12 @@ Canvas apps use the included time-zone information in **Datetimeoffset** fields 
 Canvas apps read and write values of the [**Time**](https://docs.microsoft.com/sql/t-sql/data-types/time-transact-sql) data type in SQL Server as text strings in the [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601#Durations). For example, you must parse this string format and use the [**Time**](function-date-time.md) function to convert the text string **"PT2H1M39S"** to a **Time** value:
 
 ```powerapps-dot
-First(
-    ForAll(
-        MatchAll( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
-        Time( Value( hours ), Value( minutes ), Value( seconds ) )
-    )
-).Value
+With( 
+    Match( "PT2H1M39S", "PT(?:(?<hours>\d+)H)?(?:(?<minutes>\d+)M)?(?:(?<seconds>\d+)S)?" ),
+    Time( Value( hours ), Value( minutes ), Value( seconds ) )
+)
+// Result: 2:01 AM (as shown in a label control, use the Text function to see the seconds)
+
 ```
 
 ### Mixing date and time information

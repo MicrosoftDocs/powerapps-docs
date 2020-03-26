@@ -4,12 +4,10 @@ description: "Learn about defining custom actions to modify the ribbon." # 115-1
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 72544b02-4eed-4d70-666e-a0d880f526af
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -59,5 +57,5 @@ The default, an application command bar or ribbon is defined by Common Data Serv
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions)<br/>   <!-- TODO need to update the relevant PowerApps repo link-->
+ [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions)<br/>   <!-- TODO need to update the relevant Power Apps repo link-->
  [Define Scaling for Ribbon Elements](define-scaling-ribbon-elements.md)

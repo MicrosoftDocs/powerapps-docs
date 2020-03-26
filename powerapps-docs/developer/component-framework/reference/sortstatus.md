@@ -3,8 +3,9 @@ title: SortStatus | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,19 +15,22 @@ ms.assetid: 09f6d0a7-a95a-421e-a413-281d1d0d0e19
 
 # SortStatus
 
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
 
 [!INCLUDE [sort-description](includes/sortstatus-description.md)]
 
+## Available for 
+
+Model-driven apps
+
 ## Properties
 
-## name
+### name
 
 The name of the column
 
 **Type**: `string`
 
-## sortDirection
+### sortDirection
 
 <!-- ColumnSortDirection  -->
 The current sort direction for the column.
@@ -44,5 +48,5 @@ The `sortDirection` value is an enum with the following possible values
 
 ### Related topics
 
-[PowerApps component framework API Reference](../reference/index.md)<br/>
-[PowerApps component framework Overview](../overview.md)
+[Power Apps component framework API reference](../reference/index.md)<br/>
+[Power Apps component framework overview](../overview.md)

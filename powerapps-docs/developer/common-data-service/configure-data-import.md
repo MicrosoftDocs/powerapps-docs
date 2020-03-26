@@ -3,7 +3,7 @@ title: "Configure data import (Common Data Service) | Microsoft Docs" # Intent a
 description: "Configuration information that is required for importing data is contained in the data import entity and the import source file entity." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
@@ -54,7 +54,7 @@ The configuration information that is required for importing data is contained i
 ### See Also
 
 [Import data](import-data.md)<br />
-[Blog Post: How to Import attachments programmatically](http://blogs.msdn.com/b/crm/archive/2012/08/06/how-to-import-attachments-programmatically.aspx)<br />
+[Blog Post: How to Import attachments programmatically](https://blogs.msdn.com/b/crm/archive/2012/08/06/how-to-import-attachments-programmatically.aspx)<br />
 [Prepare source files for import](prepare-source-files-import.md)<br />
 [Create data maps for import](create-data-maps-for-import.md)<br />
 [Add transformation mappings for import](add-transformation-mappings-import.md)<br />

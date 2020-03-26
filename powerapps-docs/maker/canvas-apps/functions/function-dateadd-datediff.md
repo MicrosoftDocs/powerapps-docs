@@ -1,12 +1,12 @@
 ---
 title: DateAdd, DateDiff, and TimeZoneOffset functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the DateAdd, DateDiff, and TimeZoneOffset functions in PowerApps
+description: Reference information, including syntax and examples, for the DateAdd, DateDiff, and TimeZoneOffset functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/23/2017
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# DateAdd, DateDiff, and TimeZoneOffset functions in PowerApps
+# DateAdd, DateDiff, and TimeZoneOffset functions in Power Apps
 Adds to or finds the difference in date/time values and converts between local time and UTC.
 
 ## Description
@@ -28,7 +28,7 @@ The **TimeZoneOffset** function returns the number of minutes between the user's
 
 You can use **DateAdd** with the **TimeZoneOffset** to convert between the user's local time and UTC (Coordinated Universal Time).  Adding **TimeZoneOffset** will convert a local time to UTC, and subtracting it (adding the negative) will convert from UTC to local time.
 
-Also see [working with dates and times](../show-text-dates-times.md) for more information.
+Also see [Date, Time, and DateTime data types](../functions/data-types.md#date-time-and-datetime) and [working with dates and times](../show-text-dates-times.md) for more information.
 
 ## Syntax
 **DateAdd**( *DateTime*, *Addition* [, *Units* ] )
@@ -83,7 +83,7 @@ To convert from UTC, subtract the **TimeZoneOffset** (by adding the negative) fo
 
 For example, imagine the UTC date and time **July 15, 2013, 8:02 PM** is stored in a variable named **StartTime**. To adjust the time for the user's time zone, use:
 
-* **DateAdd( StartTime, -TimeZoneOffset( StartTime ), Minutes )**
+* **DateAdd( StartTime, &minus;TimeZoneOffset( StartTime ), Minutes )**
 
 Note the negative sign before **TimeZoneOffset** to subtract the offset rather than add it.
 

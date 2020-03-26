@@ -9,7 +9,7 @@ applies_to:
 ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996dea
 author: "mayadumesh" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -67,7 +67,7 @@ Two new properties were added to the <xref:Microsoft.Xrm.Sdk.Metadata.AttributeM
 |<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.ExternalName>|Name of the type in the external data source|
 |<xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.IsDataSourceSecret>|Indicates whether the field contains sensitive information|
 
-The `ExternalName` property was also added to the <xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata> and <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> classes. These external names assist in the external data source mapping, by specifiying the name of the associated type in the external data source. These properties are only used for virtual entities; for a builtin or standard custom entity type, these external names must be `null`.
+The `ExternalName` property was also added to the <xref:Microsoft.Xrm.Sdk.Metadata.OptionMetadata> and <xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata> classes. These external names assist in the external data source mapping, by specifying the name of the associated type in the external data source. These properties are only used for virtual entities; for a builtin or standard custom entity type, these external names must be `null`.
 
 
 ### Virtual entity creation

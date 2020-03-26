@@ -3,7 +3,7 @@ title: "Build web applications using Server-to-Server (S2S) authentication (Comm
 description: "Use server-to-server (S2S) authentication to securely and seamlessly communicate with Common Data Service with your web applications and services. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the Common Data Service  data of their subscribers." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -19,11 +19,11 @@ search.app:
 
 Use server-to-server (S2S) authentication to securely and seamlessly communicate with Common Data Service with your web applications and services. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the Common Data Service data of their subscribers.  
 
- S2S authentication means you don’t need to use a paid PowerApps user license when you connect to Common Data Service environments. There is no license fee for the special *application user* account you will use with S2S authentication. With S2S authentication a special unlicensed application user account is created and includes information about your application registered with Azure Active Directory (Azure AD). Rather than user credentials, the application is authenticated based on a service principal identified by an Azure AD Object ID value which is stored in the application user record. The application user is associated with a custom security role which controls the kinds of data and operations the application is allowed to perform.  
+S2S authentication means you don’t need to use a paid Power Apps user license when you connect to Common Data Service environments. There is no license fee for the special *application user* account you will use with S2S authentication. However, there are [limits to the number of requests the application user](https://docs.microsoft.com/power-platform/admin/api-request-limits-allocations#non-licensed-usersapplication-users) account can call. With S2S authentication, a special unlicensed application user account is created and includes information about your application registered with Azure Active Directory (Azure AD). Rather than user credentials, the application is authenticated based on a service principal identified by an Azure AD Object ID value which is stored in the application user record. The application user is associated with a custom security role which controls the kinds of data and operations the application is allowed to perform.  
 
  All operations performed by your application or service using S2S will be performed as the application user you provide rather than as the user who is accessing your application. If you want your application to perform data operations on behalf of a specific user, such as the one who is interacting with your application, you can apply impersonation when the custom security role applied to your application service principal has the privileges required. More information: [Impersonate another user](impersonate-another-user.md)  
 
- A web application or service which uses S2S authentication is responsible for controlling access to the data that it has access to. This is typically done using an OpenID Connect provider. More information: <http://openid.net/connect/>.  
+ A web application or service which uses S2S authentication is responsible for controlling access to the data that it has access to. This is typically done using an OpenID Connect provider. More information: <https://openid.net/connect/>.  
 
 ## Server-to-Server authentication scenarios  
  There are two scenarios where you can apply S2S authentication.  

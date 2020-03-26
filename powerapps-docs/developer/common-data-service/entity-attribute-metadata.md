@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-<!-- This topic was not migrated it was written for PowerApps 
+<!-- This topic was not migrated it was written for Power Apps 
 Was Mike Carter
 Overlap with https://docs.microsoft.com/dynamics365/customer-engagement/developer/introduction-entity-attributes
 
@@ -82,6 +82,7 @@ In the following table:
 |Collection|`CalendarRulesType`|No|Contains a collection of `CalendarRules` entity records.<br />There are no attributes that use this type. When generating a proxy, the code generation tool will create two simulated attributes that are not present in the metadata. These attributes represent a view of the calendar rules records associated in a one-to-many relationship to the entity record.|
 |Collection|`PartyListType`|No|Contains a collection of `ActivityParty` entity records.<br />More information: [ActivityParty entity](reference/entities/activityparty.md)|
 |Date and Time|`DateTimeType`<br />[DateTimeAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.datetimeattributemetadata)|Yes<br />**Date and Time**|Contains a date and time value.<br />All date and time attributes support values as early as 1/1/1753 12:00 AM.|
+|File|`FileType`<br />[FileAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.fileattributemetadata)|Yes<br />**File**|Contains data to support retrieving binary data for an entity record.<br />More information: [File Attributes](file-attributes.md)|
 |Image|`ImageType`<br />[ImageAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata)|Yes<br />**Image**|Contains data to support retrieving image data for an entity record.<br />More information: [Entity Images](entity-metadata.md#entity-images)|
 |Managed Property|`ManagedPropertyType`<br />[ManagedPropertyAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.managedpropertyattributemetadata)|No|Contains data that describe whether the solution component stored in the entity record can be customized when included in a managed solution.<br />More information: [Managed Properties](introduction-solutions.md#managed-properties)|
 |Quantity|`BigIntType`<br />[BigIntAttributeMetadata](/dotnet/api/microsoft.xrm.sdk.metadata.bigintattributemetadata)|No|Contains a `BigInt` value. For internal use only.|
@@ -226,7 +227,7 @@ More information:
 
 #### Use the Web API to retrieve options
 
-The Web API provides a RESTful style for querying option values. You can retreive local or global options by retrieving the attributes within an entity. The following example returns the [OptionSetMetadata](/dynamics365/customer-engagement/web-api/optionsetmetadata) for the options included in the [Account](reference/entities/account.md).[AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
+The Web API provides a RESTful style for querying option values. You can retrieve local or global options by retrieving the attributes within an entity. The following example returns the [OptionSetMetadata](/dynamics365/customer-engagement/web-api/optionsetmetadata) for the options included in the [Account](reference/entities/account.md).[AccountCategoryCode property](reference/entities/account.md#BKMK_AccountCategoryCode).
 
 `GET <organization url>/api/data/v9.0/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='accountcategorycode')/Microsoft.Dynamics.CRM.PicklistAttributeMetadata?$select=LogicalName&$expand=OptionSet`
 

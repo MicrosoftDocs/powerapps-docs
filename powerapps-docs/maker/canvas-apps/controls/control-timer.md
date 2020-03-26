@@ -1,27 +1,27 @@
 ---
 title: 'Timer control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the timer control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Timer control in PowerApps
+# Timer control in Power Apps
 A control that can determine how your app responds after a certain amount of time passes.
 
 ## Description
 Timers can, for example, determine how long a control appears or change other properties of a control after a certain amount of time has passed.
 
 > [!NOTE]
-> In PowerApps Studio, timers run only in Preview mode.
+> In Power Apps Studio, timers run only in Preview mode.
 
 
 ## Key properties

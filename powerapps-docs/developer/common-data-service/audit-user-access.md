@@ -2,8 +2,8 @@
 title: "Audit user access (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Support for the ability to audit user access, including user identification, access time, and client type." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 01/27/2019
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -37,10 +37,10 @@ Common Data Service support the ability to audit user access. The information th
   
 -   `AuditAction.UserAccessAuditStopped`  
   
- `UserAccessviaWeb` indicates access from the Common Data Service web application or Dynamics 365 for Outlook. `UserAccessviaWebServices` indicates a web service request from the SDK. The `AuditAction` enumeration is available to your code when you include `OptionSets.cs` or `OptionSets.vb` in your application’s project.  
+ `UserAccessviaWeb` indicates access from the Common Data Service web application or Dynamics 365 for Outlook. `UserAccessviaWebServices` indicates a web service request from the SDK. The `AuditAction` enumeration is available to your code when you include `OptionSets.cs` in your application’s project.  
   
 ### See also  
- [Audit Entity Data Changes in Dynamics 365](/dynamics365/customer-engagement/developer/audit-entity-data-changes)   
- [Configure Entities and Attributes for Auditing](/dynamics365/customer-engagement/developer/configure-entities-attributes-auditing)     
- [Sample: Audit Entity Data Changes](/dynamics365/customer-engagement/developer/sample-audit-entity-data-changes)   
- [Sample: Audit User Access](/dynamics365/customer-engagement/developer/sample-audit-user-access)
+ [Audit data changes](/powerapps/developer/common-data-service/auditing-overview)   
+ [Configure entities and attributes for auditing](/powerapps/developer/common-data-service/configure-entities-attributes-auditing)     
+ [Sample: Audit entity data changes](/powerapps/developer/common-data-service/org-service/samples/audit-entity-data-changes)   
+ [Sample: Audit user access](/powerapps/developer/common-data-service/org-service/samples/audit-user-access)

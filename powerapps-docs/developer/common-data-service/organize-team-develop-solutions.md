@@ -3,7 +3,7 @@ title: "Organize your team to develop solutions (Common Data Service) | Microsof
 description: "This document lists down some strategies to use when multiple developers are working on the same solution" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
@@ -44,9 +44,9 @@ When multiple developers have to work on the same solution, you may want to crea
   
 <a name="BKMK_DeployingSolutionsFromDevThroughToProduction"></a>   
 ## Deploy solutions from development through test and production environments  
- In development organizations, solutions are deployed into various test and staging environments for analysis before they are deployed into a production environment. The white paper [Deploying Microsoft Dynamics CRM 2011 and CRM Online Solutions from Development through Test and Production Environments](http://go.microsoft.com/fwlink/p/?LinkId=232288) explores how to deploy real-world Dynamics 365 solutions across test and production environments in reliable and repeatable ways by using automation. The paper also highlights specific constraints that exist when you deploy and test solutions in Common Data Service.  
+ In development organizations, solutions are deployed into various test and staging environments for analysis before they are deployed into a production environment. The white paper [Deploying Microsoft Dynamics CRM 2011 and CRM Online Solutions from Development through Test and Production Environments](https://go.microsoft.com/fwlink/p/?LinkId=232288) explores how to deploy real-world Dynamics 365 solutions across test and production environments in reliable and repeatable ways by using automation. The paper also highlights specific constraints that exist when you deploy and test solutions in Common Data Service.  
   
 ### See also  
  [Planning for Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   
  [Modularize your Solutions](organize-solutions.md)   
- [White Paper: Deploying Dynamics 365 Customer Engagement and CRM Online Solutions from Development through Test and Production Environments](http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=27824)
+ 

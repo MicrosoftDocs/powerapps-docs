@@ -1,43 +1,51 @@
 ---
-title: "Migrate Dynamics 365 for Customer Engagement Portal configuration | MicrosoftDocs"
-description: "Learn how to migrate Dynamics 365 for Customer Engagement Portal configuration."
-author: sbmjais
-manager: shujoshi
+title: "Migrate portal configuration | MicrosoftDocs"
+description: "Learn how to migrate portal configuration."
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
-ms.author: shjais
-ms.reviewer:
+ms.date: 01/08/2020
+ms.author: tapanm
+ms.reviewer: tapanm
 ---
 
-# Migrate Dynamics 365 for Customer Engagement Portal configuration
-
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
+# Migrate portal configuration
 
 Portal development involves several configurations and customizations to achieve a desired experience for portal end users.
 
-After you have completed development or configuration of your Dynamics 365 Portal instance, you might want to migrate your latest Dynamics 365 Portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Dynamics 365 instance, and then importing it into the target Dynamics 365 instance.
+After you have completed development or configuration of your portal instance, you might want to migrate your latest portal configuration from development to testing or the production environments. Migration involves exporting the existing configuration from the source Common Data Service environment, and then importing it into the target Common Data Service environment.
 
-To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/admin/manage-configuration-data).
+To export configuration data, you would need to use the Configuration Migration tool and a portal-specific configuration schema file. For more information about this tool, see [Manage configuration data](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-configuration-data).
 
 > [!NOTE]
-> - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget).
-> - The minimum solution version of Dynamics 365 Portal supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
+> - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget).
+> - The minimum solution version of portals supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
 
 Schema files are available for the following portal types:
-- [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
-- [Customer Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019705)
-- [Partner portal](https://go.microsoft.com/fwlink/p/?linkid=2019803)
-- [Employee Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019802)
-- [Custom portal](https://go.microsoft.com/fwlink/p/?linkid=2019804)
+
+- **Portals created in an environment with Common Data Service**
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2110477)
+
+- **Portals created in an environment containing model-driven apps in Dynamics 365**
+    - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2019804)
+    - [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
+    - [Customer Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019705)
+    - [Partner portal](https://go.microsoft.com/fwlink/p/?linkid=2019803)
+    - [Employee Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019802)
 
 The default schema files contain information about portal entities, relationships, and uniqueness definitions for each entity. More information: [Export portal configuration data](#export-portal-configuration-data)
 
 After exporting the configuration data, you must import it into the target environment. More information: [Import portal configuration data](#import-portal-configuration-data)
 
 > [!NOTE]
-> The schema files are provided to reduce the effort required to build a schema from scratch. Schema can be tailored for your implementation using standard ways provided by the tool. Schema files can be loaded in the Configuration Migration tool and altered to add, remove, and modify entities, attributes, and so on.
+> The Configuration Migration tool uses schema to export and import configuration data. The tool does not migrate entities or entity schema. Migration may fail with missing elements such as entities and fields when configuration data has mismatch with selected schema.
+>
+> During export, ensure the source environment contains portal entities as specified in Configuration Migration tool schema file. You can still alter the schema files to add, remove, and modify entities, attributes, and so on to migrate subset of configuration data.
+>
+> During import, ensure the destination environment contains the same portal type already installed with any additional customizations such as entities, fields, forms or views imported separately as solutions.
+
 
 ## Export portal configuration data
 
@@ -53,12 +61,12 @@ You can export portal configuration data from a source system by using portal-sp
     > [!div class=mx-imgBorder]
     > ![Export configuration data](../media/export-config-data.png "Export configuration data")
 
-4.	On the **Login** screen, provide authentication details to connect to your Dynamics 365 instance from where you want to export data. If you have multiple organizations on the Dynamics 365 instance and want to select the organization from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
+4.	On the **Login** screen, provide authentication details to connect to your Common Data Service environment from where you want to export data. If you have multiple organizations on the Common Data Service environment from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
 
     > [!div class=mx-imgBorder]
-    > ![Provide authentication details to connect to your Dynamics 365 for Customer Engagement instance from where you want to export data](../media/export-config-login.png "Provide authentication details to connect to your Dynamics 365 for Customer Engagement instance from where you want to export data")
+    > ![Provide authentication details to connect to your Common Data Service environment from where you want to export data](../media/export-config-login.png "Provide authentication details to connect to your Common Data Service environment from where you want to export data")
 
-5.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Dynamics 365 organization to connect to. 
+5.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Common Data Service environment to connect to. 
 
     > [!NOTE]
     > If you do not have multiple organizations, this screen is not displayed.
@@ -75,9 +83,6 @@ You can export portal configuration data from a source system by using portal-sp
     > [!div class=mx-imgBorder]
     > ![Progress of configuration data export](../media/export-config-status.png "Progress of configuration data export")
 
-    > [!IMPORTANT]
-    > The Configuration Migration tool does not support filtering of records in an entity. By default, all the records in the selected entity will be exported. Therefore, if you have created more than one website record, all website records will be exported.
-
 9.	Select **Exit** to close the tool.
 
 ## Import portal configuration data
@@ -87,9 +92,9 @@ You can export portal configuration data from a source system by using portal-sp
     > [!div class=mx-imgBorder]
     > ![Import configuration data](../media/import-config-data.png "Import configuration data")
 
-2.	On the **Login** screen, provide authentication details to connect to your Dynamics 365 instance from where you want to export data. If you have multiple organizations on the Dynamics 365 instance and want to select the organization from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
+2.	On the **Login** screen, provide authentication details to connect to your Common Data Service environment from where you want to export data. If you have multiple organizations on the Common Data Service environment from where to export the data, select the **Display list of available organizations** check box, and then select **Login**.
 
-3.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Dynamics 365 organization to connect to. 
+3.	If you have multiple organizations, and you had selected the **Display list of available organizations** check box in the previous step, the next screen allows you to choose the organization that you want to connect to. Select a Common Data Service environment to connect to. 
 
     > [!NOTE]
     > - If you do not have multiple organizations, this screen is not displayed.

@@ -3,8 +3,9 @@ title: formatDateAsFilterStringUTC | Microsoft Docs
 description: 
 keywords:
 ms.author: nabuthuk
+author: Nkrb
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,7 +19,11 @@ ms.assetid: a604fbbf-6d09-450d-b686-7a5cb3f3a2bc
 
 ## Syntax
 
-`formatDateAsFilterStringInUTC(value, includeTime)`
+`context.formatting.formatDateAsFilterStringInUTC(value, includeTime)`
+
+## Available for 
+
+Model-driven apps and canvas apps (public preview)
 
 ## Parameters
 
@@ -35,5 +40,5 @@ Type: `string`
 ### Related topics
 
 [Formatting](../formatting.md)<br/>
-[PowerApps component framework API Reference](../../reference/index.md)<br/>
-[PowerApps component framework Overview](../../overview.md)
+[Power Apps component framework API reference](../../reference/index.md)<br/>
+[Power Apps component framework overview](../../overview.md)

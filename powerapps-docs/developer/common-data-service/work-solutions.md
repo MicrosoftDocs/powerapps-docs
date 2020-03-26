@@ -4,14 +4,12 @@ description: ""
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 33c9da5b-27dd-d82d-1eb1-7b3b69b6032b
 author: shmcarth # GitHub ID
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -37,10 +35,10 @@ This topic presents specific programming tasks included in [Sample: Work With So
   
 - A friendly name  
   
-  The following sample first defines a publisher and then checks to see whether the publisher already exists based on the unique name. If it already exists, the customization prefix may have been changed, so this sample seeks to capture the current customization prefix. The `PublisherId` is also captured so that the publisher record can be deleted. If the publisher is not found, a new publisher is created using the<xref:Microsoft.Xrm.Sdk.IOrganizationService>. <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method 
+  The following sample first defines a publisher and then checks to see whether the publisher already exists based on the unique name. If it already exists, the customization prefix may have been changed, so this sample seeks to capture the current customization prefix. The `PublisherId` is also captured so that the publisher record can be deleted. If the publisher is not found, a new publisher is created using the <xref:Microsoft.Xrm.Sdk.IOrganizationService>. <xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method 
 
-  ```csharp
-  //Define a new publisher
+ ```csharp
+//Define a new publisher
 Publisher _crmSdkPublisher = new Publisher
 {
     UniqueName = "sdksamples",
@@ -50,7 +48,6 @@ Publisher _crmSdkPublisher = new Publisher
     EMailAddress = "someone@microsoft.com",
     Description = "This publisher was created with samples from the Microsoft Dynamics CRM SDK"
 };
-
 //Does publisher already exist?
 QueryExpression querySDKSamplePublisher = new QueryExpression
 {
@@ -62,7 +59,6 @@ QueryExpression querySDKSamplePublisher = new QueryExpression
 querySDKSamplePublisher.Criteria.AddCondition("uniquename", ConditionOperator.Equal, _crmSdkPublisher.UniqueName);
 EntityCollection querySDKSamplePublisherResults = _serviceProxy.RetrieveMultiple(querySDKSamplePublisher);
 Publisher SDKSamplePublisherResults = null;
-
 //If it already exists, use it
 if (querySDKSamplePublisherResults.Entities.Count > 0)
 {
@@ -77,12 +73,14 @@ if (SDKSamplePublisherResults == null)
     Console.WriteLine(String.Format("Created publisher: {0}.", _crmSdkPublisher.FriendlyName));
     _customizationPrefix = _crmSdkPublisher.CustomizationPrefix;
 }
-  ``` 
+``` 
   
-<a name="BKMK_RetrieveDefaultPublisher"></a>   
+<a name="BKMK_RetrieveDefaultPublisher"></a>
+   
 ## Retrieve the default publisher  
- This sample shows how toretrieve the default publisher. The default publisher has a constant GUID value: `d21aab71-79e7-11dd-8874-00188b01e34f`.  
-  
+
+This sample shows how to retrieve the default publisher. The default publisher has a constant GUID value: `d21aab71-79e7-11dd-8874-00188b01e34f`.  
+
 ```csharp
 // Retrieve the Default Publisher
 
@@ -120,7 +118,7 @@ Console.WriteLine("Retrieved the {0}.", DefaultPublisherReference.Name);
   
   This sample checks whether the Solution already exists in the organization based on the unique name. If the solution does not exist it is created. The `SolutionId` value is captured so the solution can be deleted.  
   
-  ```csharp
+ ```csharp
   // Create a Solution
 //Define a solution
 Solution solution = new Solution
@@ -155,11 +153,13 @@ if (SampleSolutionResults == null)
 }
   ```
   
-<a name="BKMK_RetrieveASolution"></a>   
-## Retrieve a solution  
- To retrieve a specific solution you can use the solution’s `UniqueName`. Each organization will have a default solution with a constant GUID value: `FD140AAF-4DF4-11DD-BD17-0019B9312238`.  
+<a name="BKMK_RetrieveASolution"></a> 
   
- This sample shows how to retrieve data for a solution with the unique name ”samplesolution”. A solution with this name is created in [Create a Solution](work-solutions.md#BKMK_CreateASolution).  
+## Retrieve a solution  
+
+To retrieve a specific solution you can use the solution's `UniqueName`. Each organization will have a default solution with a constant GUID value: `FD140AAF-4DF4-11DD-BD17-0019B9312238`.  
+  
+This sample shows how to retrieve data for a solution with the unique name "samplesolution". A solution with this name is created in [Create a Solution](work-solutions.md#BKMK_CreateASolution).  
   
  ```csharp
  // Retrieve a solution
@@ -175,9 +175,11 @@ querySampleSolution.Criteria.AddCondition("uniquename", ConditionOperator.Equal,
 Solution SampleSolution = (Solution)_serviceProxy.RetrieveMultiple(querySampleSolution).Entities[0];
  ``` 
   
-<a name="BKMK_AddANewSolutionComponent"></a>   
-## Add a new solution component  
- This sample shows how to create a solution component that is associated with a specific solution. If you don’t associate the solution component to a specific solution when it is created it will only be added to the default solution and you will need to add it to a solution manually or by using the code included in the [Add an Existing Solution Component](work-solutions.md#BKMK_AddExistingSolutionComponent).  
+<a name="BKMK_AddANewSolutionComponent"></a> 
+  
+## Add a new solution component 
+ 
+This sample shows how to create a solution component that is associated with a specific solution. If you don't associate the solution component to a specific solution when it is created it will only be added to the default solution and you will need to add it to a solution manually or by using the code included in the [Add an Existing Solution Component](work-solutions.md#BKMK_AddExistingSolutionComponent).  
   
  This code creates a new global option set and adds it to the solution with a unique name equal to `_primarySolutionName`.  
   
@@ -203,11 +205,13 @@ createOptionSetRequest.SolutionUniqueName = _primarySolutionName;
 _serviceProxy.Execute(createOptionSetRequest);
  ```  
   
-<a name="BKMK_AddExistingSolutionComponent"></a>   
+<a name="BKMK_AddExistingSolutionComponent"></a>  
+ 
 ## Add an existing solution component  
- This sample shows how to add an existing solution component to a solution.  
+
+This sample shows how to add an existing solution component to a solution.  
   
- The following code uses the <xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest> to add the `Account` entity as a solution component to an unmanaged solution.  
+The following code uses the <xref:Microsoft.Crm.Sdk.Messages.AddSolutionComponentRequest> to add the `Account` entity as a solution component to an unmanaged solution.  
   
  ```csharp
  // Add an existing Solution Component
@@ -226,9 +230,11 @@ AddSolutionComponentRequest addReq = new AddSolutionComponentRequest()
 _serviceProxy.Execute(addReq);
 ``` 
   
-<a name="BKMK_RemoveSolutionComponent"></a>   
+<a name="BKMK_RemoveSolutionComponent"></a>  
+ 
 ## Remove a solution component  
- This sample shows how to remove a solution component from an unmanaged solution. The following code uses the <xref:Microsoft.Crm.Sdk.Messages.RemoveSolutionComponentRequest> to remove an entity solution component from an unmanaged solution. The `solution.UniqueName` references the Solution created in the [Create a Solution](work-solutions.md#BKMK_CreateASolution).  
+
+This sample shows how to remove a solution component from an unmanaged solution. The following code uses the <xref:Microsoft.Crm.Sdk.Messages.RemoveSolutionComponentRequest> to remove an entity solution component from an unmanaged solution. The `solution.UniqueName` references the Solution created in the [Create a Solution](work-solutions.md#BKMK_CreateASolution).  
   
  ```csharp
  // Remove a Solution Component
@@ -248,9 +254,11 @@ RemoveSolutionComponentRequest removeReq = new RemoveSolutionComponentRequest()
 _serviceProxy.Execute(removeReq);
 ```
   
-<a name="BKMK_ExportPackageSolution"></a>   
+<a name="BKMK_ExportPackageSolution"></a>
+   
 ## Export or package a solution  
- This sample shows how to export an unmanaged solution or package a managed solution. The code uses <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> to export a compressed file representing an unmanaged solution. The option to create a managed solution is set using the <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.Managed> property. This sample saves a file named samplesolution.zip to the `c:\temp\` folder.  
+
+This sample shows how to export an unmanaged solution or package a managed solution. The code uses <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest> to export a compressed file representing an unmanaged solution. The option to create a managed solution is set using the <xref:Microsoft.Crm.Sdk.Messages.ExportSolutionRequest.Managed> property. This sample saves a file named *samplesolution.zip* to the `c:\temp\` folder.  
   
 ```csharp
 // Export or package a solution
@@ -269,13 +277,15 @@ File.WriteAllBytes(outputDir + filename, exportXml);
 Console.WriteLine("Solution exported to {0}.", outputDir + filename);
 ``` 
 
-<a name="BKMK_InstallUpgradeSolution"></a>   
+<a name="BKMK_InstallUpgradeSolution"></a>  
+ 
 ## Install or upgrade a solution  
- This sample shows how to install or upgrade a solution using the <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> message.  
+
+This sample shows how to install or upgrade a solution using the <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> message.  
   
- You can use the `ImportJob` entity to capture data about the success of the import.  
+You can use the `ImportJob` entity to capture data about the success of the import.  
   
- The following sample shows how to import a solution without tracking the success.  
+The following sample shows how to import a solution without tracking the success.  
   
  ```csharp
  // Install or Upgrade a Solution                  
@@ -293,6 +303,7 @@ Console.WriteLine("Imported Solution from {0}", ManagedSolutionLocation);
  ```  
   
 ### Tracking import success
+
  When you specify an <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest.ImportJobId> for the `ImportSolutionRequest`, you can use that value to query the `ImportJob` entity about the status of the import.  
   
  The `ImportJobId` can also be used to download an import log file using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveFormattedImportJobResultsRequest> message.  
@@ -350,7 +361,7 @@ foreach (System.Xml.XmlNode node in optionSets)
 }
 ```   
   
- The contents of the `Data` property is a string representing an XML file. The following is a sample captured using the code in this sample. This managed solution contained a single global option set called `sample_tempsampleglobaloptionsetname`.  
+The contents of the `Data` property is a string representing an XML file. The following is a sample captured using the code in this sample. This managed solution contained a single global option set called `sample_tempsampleglobaloptionsetname`.  
   
 ```xml  
 <importexportxml start="634224017519682730"  
@@ -704,3 +715,4 @@ if (_globalOptionSetId != null)
  [Solution Entities](/dynamics365/customer-engagement/developer/solution-entities)   
  [Sample: Work With Solutions](org-service/samples/work-solutions.md)
  [Sample: Detect Solution Dependencies](/dynamics365/customer-engagement/developer/sample-detect-solution-dependencies)
+ 

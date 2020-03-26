@@ -1,13 +1,13 @@
 ---
 title: "Developer tools (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Provides information about the community developed tools that you can use with model-driven apps in PowerApps."
+description: "Provides information about the community developed tools that you can use with model-driven apps in Power Apps."
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: "Nkrb" # GitHub ID
+ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer

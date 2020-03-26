@@ -1,12 +1,12 @@
 ---
 title: GroupBy and Ungroup functions | Microsoft Docs
-description: Reference information, including syntax and examples, for the GroupBy and Ungroup functions in PowerApps
+description: Reference information, including syntax and examples, for the GroupBy and Ungroup functions in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/26/2016
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# GroupBy and Ungroup functions in PowerApps
+# GroupBy and Ungroup functions in Power Apps
 Groups and ungroups [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
 
 ## Description
@@ -36,7 +36,7 @@ You can also aggregate results based on a grouping:
 
 **Ungroup** tries to preserve the original order of the records that were fed to **GroupBy**.  This isn't always possible (for example, if the original table contains *blank* records).
 
-A table is a value in PowerApps, just like a string or a number. You can specify a table as an argument for a function, and a function can return a table. **GroupBy** and **Ungroup** don't modify a table; instead they take a table as an argument and return a different table. See [working with tables](../working-with-tables.md) for more details.
+A table is a value in Power Apps, just like a string or a number. You can specify a table as an argument for a function, and a function can return a table. **GroupBy** and **Ungroup** don't modify a table; instead they take a table as an argument and return a different table. See [working with tables](../working-with-tables.md) for more details.
 
 ## Syntax
 **GroupBy**( *Table*, *ColumnName1* [, *ColumnName2*, ... ], *GroupColumnName* )

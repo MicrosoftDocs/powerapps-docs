@@ -1,13 +1,13 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 11/21/2018
+ms.date: 10/28/2019
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +15,6 @@ search.app:
   - D365CE
 ---
 # Xrm.WebApi.online.execute (Client API reference)
-
-
 
 [!INCLUDE[./includes/execute-description.md](./includes/execute-description.md)]
 
@@ -73,13 +71,15 @@ search.app:
 <td>No</td>
 <td><p>A function to call when operation is executed successfully. A response object is passed to the function with the following attributes:</p>
 <ul>
-<li><b>body</b>: (Optional). Object. Response body.</li>
+<li><b>body (Deprecated)</b>: Object. Response body.</li>
 <li><b>headers</b>: Object. Response headers.</li>
 <li><b>ok</b>: Boolean. Indicates whether the request was successful.</li>
 <li><b>status</b>: Number. Numeric value in the response status code. For example: <b>200</b></li>
 <li><b>statusText</b>: String. Description of the response status code. For example: <b>OK</b></li>
-<li><b>type</b>: String. Response type. Values are: the empty string (default), "arraybuffer", "blob", "document", "json", and "text".</b></li>
+<li><b>type (Deprecated)</b>: String. Response type. Values are: the empty string (default), "arraybuffer", "blob", "document", "json", and "text".</b></li>
 <li><b>url</b>: String. Request URL of the action, function, or CRUD request that was sent to the Web API endpoint.</b></li>
+<li><b>json</b>: Promise. Parameter to the callback delegate is of type any (JSON object).</b></li>
+<li><b>text</b>: Promise. Parameter to the callback delegate is a String.</b></li>
 </ul>
 </td>
 </tr>
@@ -100,6 +100,7 @@ On success, returns a promise object with the attributes specified earlier in th
 ### Execute an action
 
 The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.WinOpportunity> action. The request object is created based on the action definition here: [Unbound actions](../../../../../common-data-service/webapi/use-web-api-actions.md#unbound-actions)
+
 ```JavaScript
 var Sdk = window.Sdk || {};
 /**
@@ -110,30 +111,28 @@ var Sdk = window.Sdk || {};
 Sdk.WinOpportunityRequest = function (opportunityClose, status) {
     this.OpportunityClose = opportunityClose;
     this.Status = status;
-
-    this.getMetadata = function () {
-        return {
-            boundParameter: null,
-            parameterTypes: {
-                "OpportunityClose": {
-                    "typeName": "mscrm.opportunityclose",
-                    "structuralProperty": 5 // Entity Type
+};
+Sdk.WinOpportunityRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {
+            "OpportunityClose": {
+                "typeName": "mscrm.opportunityclose",
+                "structuralProperty": 5 // Entity Type
                 },
-                "Status": {
-                    "typeName": "Edm.Int32",
-                    "structuralProperty": 1 // Primitive Type
+            "Status": {
+                "typeName": "Edm.Int32",
+                "structuralProperty": 1 // Primitive Type
                 }
             },
-            operationType: 0, // This is an action. Use '1' for functions and '2' for CRUD
-            operationName: "WinOpportunity",
-        };
+        operationType: 0, // This is an action. Use '1' for functions and '2' for CRUD
+        operationName: "WinOpportunity",
     };
 };
 
-
 var opportunityClose = {
     "opportunityid@odata.bind": "/opportunities(c60e0283-5bf2-e311-945f-6c3be5a8dd64)",
-    "description": "Product and maintainance for 2018",
+    "description": "Product and maintenance for 2018",
     "subject": "Contract for 2018"
 }
 
@@ -197,12 +196,194 @@ Xrm.WebApi.online.execute(whoAmIRequest).then(
 );
 ```
 
+### Perform CRUD operations
+
+#### Create a record
+
+The following example demonstrates how to perform a Create operation.
+
+```JavaScript
+var Sdk = window.Sdk || {};
+
+/**
+ * Request to execute a create operation
+ */
+Sdk.CreateRequest = function (entityName, payload) {
+    this.etn = entityName;
+    this.payload = payload;
+};
+Sdk.CreateRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {},
+        operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
+        operationName: "Create",
+    };
+};
+// Construct a request object from the metadata
+var payload = {
+    name: "Fabrikam Inc."
+};
+var createRequest = new Sdk.CreateRequest("account", payload);
+
+// Use the request object to execute the function
+Xrm.WebApi.online.execute(createRequest).then(
+    function (result) {
+        if (result.ok) {
+            console.log("Status: %s %s", result.status, result.statusText);
+            // perform other operations as required;
+        }
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+ ```
  
+#### Retrieve a record
+
+The following example demonstrates how to perform a Retrieve operation.
+
+```JavaScript
+var Sdk = window.Sdk || {};
+
+/**
+ * Request to execute a retrieve operation
+ */
+Sdk.RetrieveRequest = function (entityReference, columns) {
+    this.entityReference = entityReference;
+    this.columns = columns;
+};
+Sdk.RetrieveRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {},
+        operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
+        operationName: "Retrieve",
+    };
+};
+
+// Construct request object from the metadata
+var entityReference = {
+    entityType: "account",
+    id: "d2b6c3f8-b0fa-e911-a812-000d3a59fa22"
+};
+var retrieveRequest = new Sdk.RetrieveRequest(entityReference, ["name"]);
+
+// Use the request object to execute the function
+Xrm.WebApi.online.execute(retrieveRequest).then(
+    function (result) {
+        if (result.ok) {
+            console.log("Status: %s %s", result.status, result.statusText);
+            result.json().then(
+                function (response) {
+                    console.log("Name: %s", response.name);
+                    // perform other operations as required;
+                });
+        }
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+
+```
+
+#### Update a record
+
+The following example demonstrates how to perform a Update operation.
+
+```JavaScript
+var Sdk = window.Sdk || {};
+
+
+/**
+ * Request to execute an update operation
+ */
+Sdk.UpdateRequest = function (entityName, entityId, payload) {
+    this.etn = entityName;
+    this.id = entityId;
+    this.payload = payload;
+};
+Sdk.UpdateRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {},
+        operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
+        operationName: "Update",
+    };
+};
+
+// Construct a request object from the metadata
+var payload = {
+    name: "Updated Sample Account"
+};
+var updateRequest = new Sdk.UpdateRequest("account", "d2b6c3f8-b0fa-e911-a812-000d3a59fa22", payload);
+
+// Use the request object to execute the function
+Xrm.WebApi.online.execute(updateRequest).then(
+    function (result) {
+        if (result.ok) {
+            console.log("Status: %s %s", result.status, result.statusText);
+            // perform other operations as required;
+        }
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
+#### Delete a record
+
+The following example demonstrates how to perform a Delete operation.
+
+```JavaScript
+var Sdk = window.Sdk || {};
+
+/**
+ * Request to execute a delete operation
+ */
+Sdk.DeleteRequest = function (entityReference) {
+    this.entityReference = entityReference;
+};
+Sdk.DeleteRequest.prototype.getMetadata = function () {
+        return {
+            boundParameter: null,
+            parameterTypes: {},
+            operationType: 2, // This is a CRUD operation. Use '0' for actions and '1' for functions
+            operationName: "Delete",
+        };
+    };
+};
+
+// Construct request object from the metadata
+var entityReference = {
+    entityType: "account",
+    id: "d2b6c3f8-b0fa-e911-a812-000d3a59fa22"
+};
+var deleteRequest = new Sdk.DeleteRequest(entityReference);
+
+// Use the request object to execute the function
+Xrm.WebApi.online.execute(deleteRequest).then(
+    function (result) {
+        if (result.ok) {
+            console.log("Status: %s %s", result.status, result.statusText);
+            // perform other operations as required;
+        }
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
 ### Related topics
 
 
 [Xrm.WebApi](../../xrm-webapi.md)
-
-
-
 

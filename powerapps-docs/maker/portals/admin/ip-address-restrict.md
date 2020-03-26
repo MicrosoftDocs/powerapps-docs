@@ -1,28 +1,26 @@
 ---
-title: "Restrict access to a portal by using IP address in Dynamics 365 for Customer Engagement | MicrosoftDocs"
+title: "Restrict access to a portal by using IP address | MicrosoftDocs"
 description: "Instructions to restrict portal access by IP address."
-author: sbmjais
-manager: shujoshi
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
-ms.author: shjais
+ms.date: 10/07/2019
+ms.author: tapanm
 ms.reviewer:
 ---
 
 # Restrict portal access by IP address
 
-[!include[cc-beta-prerelease-disclaimer](../../../includes/cc-beta-prerelease-disclaimer.md)]
-
-The Dynamics 365 Portal is public when provisioned and accessible by anyone from any computer. Now you can restrict access to your portal from a list of IP addresses. For example, a government organization might want to surface their content only within their corporate network. A commercial organization might want to display the portal only when it is published and not while it is in development to avoid any data leak.
+The portal is public when provisioned and accessible by anyone from any computer. Now you can restrict access to your portal from a list of IP addresses. For example, a government organization might want to surface their content only within their corporate network. A commercial organization might want to display the portal only when it is published and not while it is in development to avoid any data leak.
 
 When a request to the portal is generated from any user, their IP address is evaluated against the allow list. If the IP address is not on the list, the portal displays a web page with an HTTP 403 status code.
 
 To add or remove IP addresses, you must be assigned any one of the following roles:
 - Office 365 Global Administrator 
-- Dynamics 365 Service Administrator. More information: [Use the service admin role to manage your tenant](https://technet.microsoft.com/en-us/library/mt793847.aspx)  
-- System Administrator of the Dynamics 365 organization selected for the portal
+- Service Administrator. More information: [Use the service admin role to manage your tenant](https://technet.microsoft.com/library/mt793847.aspx)  
+- System Administrator of the Common Data Service environment selected for the portal
 
 ## Add an IP address
 
@@ -36,7 +34,7 @@ Once you add an IP address to the restriction list, the portal will be accessibl
 > [!NOTE]
 > You must specify a public IP address that can be accessed by the portal. Private IP address can't be accessed by the portal.
 
-1.	Open [PowerApps Portals admin center](admin-overview.md).
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
 2.	Go to **Set up IP address restriction**. A list of IP addresses and their type is displayed.
 
@@ -60,16 +58,14 @@ Once you add an IP address to the restriction list, the portal will be accessibl
 
 To remove access to a portal from a previously allowed IP address, you can remove the IP address from the list. If you remove all IP addresses, the portal will be accessible from all IP addresses.
 
-1.	Go to the Dynamics 365 admin center and select the **Applications** tab.
+1.	Open [Power Apps Portals admin center](admin-overview.md).
 
-2.	Select the name of the portal for which you want restrict access by IP address, and then select **Manage**.
-
-3.	Go to **Set up IP address restriction**. A list of IP addresses and their type is displayed.
+2.	Go to **Set up IP address restriction**. A list of IP addresses and their type is displayed.
 
     > [!div class=mx-imgBorder]
     > ![Set up IP address restriction](../media/set-up-ip-address-restrict.png "Set up IP address restriction")
 
-4.	Select **Remove an IP address (x)** next to the IP address to be removed.
+3.	Select **Remove an IP address (x)** next to the IP address to be removed.
 
-5.	Select **Remove** in the confirmation message.
+4.	Select **Remove** in the confirmation message.
 

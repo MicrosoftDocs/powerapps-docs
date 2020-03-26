@@ -30,16 +30,18 @@ In this procedure, you'll create an entity in [Common Data Service](data-platfor
 
 You can also filter, transform, and combine data before you load it into a new or existing entity.
 
-If you don't have a license for PowerApps, you can [sign up for free](../signup-for-powerapps.md).
+If you don't have a license for Power Apps, you can [sign up for free](../signup-for-powerapps.md).
 
 ## Prerequisites
-To follow this topic, you must switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create entities.
+Before you start to follow this topic:
+- Switch to an [environment](../canvas-apps/working-with-environments.md) in which you can create entities.
+- You must have a Power Apps per user plan or Power Apps per app plan.
 
 ## Specify the source data
 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap the down arrow for **Data** near the left edge.
 
-	![PowerApps home page](./media/data-platform-cds-newentity-pq/sign-in.png)
+	![Power Apps home page](./media/data-platform-cds-newentity-pq/sign-in.png)
 
 1. In the list that appears, click or tap **Data Integration**, and then click or tap **New Project** near the upper-right corner of the window.
 
@@ -48,7 +50,7 @@ To follow this topic, you must switch to an [environment](../canvas-apps/working
 	![Choose the OAuth connector](./media/data-platform-cds-newentity-pq/choose-odata.png)
 
 1. Under **Connection settings**, type or paste this URL, and then select **Next**:<br>
-`http://services.odata.org/V4/Northwind/Northwind.svc/`
+`https://services.odata.org/V4/Northwind/Northwind.svc/`
 
 1. In the list of tables, select the **Customers** check box, and then click or tap **Next**.
 

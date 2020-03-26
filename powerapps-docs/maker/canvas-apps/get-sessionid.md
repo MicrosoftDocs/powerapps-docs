@@ -1,21 +1,21 @@
 ---
 title: Get a session ID or a canvas-app ID | Microsoft Docs
-description: How to get a session ID or a canvas-app ID for troubleshooting in PowerApps
-author: AFTOwen
+description: How to get a session ID or a canvas-app ID for troubleshooting in Power Apps
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
 ms.date: 06/18/2018
-ms.author: anneta
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
 # Get a session ID or a canvas-app ID
-If you encounter a problem with a canvas app that was created in PowerApps, you can help Microsoft troubleshoot the problem much more effectively if you provide them with a session ID, an app ID, or both for that problem.
+If you encounter a problem with a canvas app that was created in Power Apps, you can help Microsoft troubleshoot the problem much more effectively if you provide them with a session ID, an app ID, or both for that problem.
 
 ## Get the session ID
 
@@ -26,7 +26,7 @@ If you encounter a problem with a canvas app that was created in PowerApps, you 
 
 1. Under **Diagnostics**, select **Session details**.
 
-    ![Get a session ID from PowerApps Studio](media/get-sessionid/studio.png)
+    ![Get a session ID from Power Apps Studio](media/get-sessionid/studio.png)
 
 ### When running an app in a browser
 1. In the upper-right corner, select the gear icon.
@@ -53,7 +53,7 @@ If you encounter a problem with a canvas app that was created in PowerApps, you 
     ![Get a session ID from an embedded app](media/get-sessionid/embedded.png)
 
 ## Get an app ID
-1. [Sign in to PowerApps](https://powerapps.microsoft.com).
+1. [Sign in to Power Apps](https://powerapps.microsoft.com).
 
 1. Near the left edge, select **Apps**.
 

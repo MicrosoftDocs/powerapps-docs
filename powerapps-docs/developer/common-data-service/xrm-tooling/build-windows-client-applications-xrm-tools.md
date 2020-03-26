@@ -3,7 +3,7 @@ title: "Build Windows client applications using the XRM tools (Common Data Servi
 description: "XRM tooling is a set of APIs that provides support for building Windows client applications for Common Data Service"
 ms.custom: ""
 ms.date: 03/27/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -32,9 +32,6 @@ XRM tooling is a set of APIs built on top of the Common Data Service assembly AP
 - Supports secure storage of the sign-in credentials and reuse of the stored credentials to automatically sign in to Common Data Service after initial sign in.  
 - Provides built-in diagnostic tracing and performance reporting of the actions performed in Common Data Service, which you can configure based on your organization’s requirements.  
 
-> [!NOTE]
-> [!INCLUDE[cc-d365ce-note-section](../includes/cc-d365ce-note-section.md)] [Build Windows client applications using the XRM tools (Customer Engagement)](/dynamics365/customer-engagement/developer/build-windows-client-applications-xrm-tools)
-
 ## Components of XRM tooling  
 
 XRM tooling has the following three components:  
@@ -58,5 +55,5 @@ The following applications in the current version of Common Data Service use the
 ### See also
 
 [Sample: Quick start for XRM Tooling API](sample-quick-start-xrm-tooling-api.md)<br />
-[Blog: PowerShell module for performing data operations and manipulating user and system settings in Common Data Service](http://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)
+[Blog: PowerShell module for performing data operations and manipulating user and system settings in Common Data Service](https://blogs.msdn.com/b/crm/archive/2015/09/25/powershell-module-for-performing-data-operations-and-manipulating-user-and-system-settings-in-crm.aspx)
 

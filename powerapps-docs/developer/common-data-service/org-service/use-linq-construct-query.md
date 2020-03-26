@@ -3,10 +3,10 @@ title: "Use LINQ to construct a query (Common Data Service) | Microsoft Docs" # 
 description: "Discusses how to use .NET Language-Integrated Query(LINQ) query provider in Dynamics 365 to construct a query" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -153,4 +153,4 @@ select new Contact
  [Sample: LINQ Query Examples](/dynamics365/customer-engagement/developer/org-service/sample-complex-linq-queries)   
  [Build Queries with LINQ (.NET Language-Integrated Query)](/dynamics365/customer-engagement/developer/org-service/build-queries-with-linq-net-language-integrated-query)   
  [Use Late-Bound Entity Class with a LINQ Query](/dynamics365/customer-engagement/developer/org-service/use-late-bound-entity-class-linq-query)   
- [Blog: LINQPad 4 Driver for Dynamics CRM REST/Web API are available on CodePlex](http://blogs.msdn.com/b/crminthefield/archive/2015/06/11/linqpad-4-driver-for-dynamics-crm-rest-webapi-are-available-on-codeplex.aspx)
+ [Blog: LINQPad 4 Driver for Dynamics CRM REST/Web API are available on CodePlex](https://blogs.msdn.com/b/crminthefield/archive/2015/06/11/linqpad-4-driver-for-dynamics-crm-rest-webapi-are-available-on-codeplex.aspx)

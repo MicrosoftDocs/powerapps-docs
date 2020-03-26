@@ -1,6 +1,6 @@
 ---
 title: "Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships using solution explorer | MicrosoftDocs"
-description: "Learn how to create one-to-many or many-to-one entity relationships using PowerApps solution explorer"
+description: "Learn how to create one-to-many or many-to-one entity relationships using Power Apps solution explorer"
 ms.custom: ""
 ms.date: 10/28/2018
 ms.reviewer: ""
@@ -26,9 +26,9 @@ search.app:
 
 Solution explorer provides one way to create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships for Common Data Service.
 
-The [PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
+The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. More information: 
 - [Create 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)
-- [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps portal](create-edit-1n-relationships-portal.md)
+- [Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in Power Apps portal](create-edit-1n-relationships-portal.md)
   
 ## Open solution explorer
 
@@ -89,7 +89,7 @@ These properties are about the relationship.
 
 ### Lookup field
 
-These are the properties of the lookup field created on the related entity. The properties can be edited here or by editing the lookup field directly. Some field properties are not editiable from the relationship. More information: [Edit a field](create-edit-field-solution-explorer.md#edit-a-field)
+These are the properties of the lookup field created on the related entity. The properties can be edited here or by editing the lookup field directly. Some field properties are not editable from the relationship. More information: [Edit a field](create-edit-field-solution-explorer.md#edit-a-field)
 
 |Field|Description|
 |--|--|
@@ -190,7 +190,7 @@ Use the **Type of Behavior** field to choose between a set of standard behaviors
 
 While [viewing entity relationships](#view-entity-relationships), select the entity relationship you want to delete and click the ![Delete command](media/delete.gif) command.
 
-Deleteing the relationship will delete the lookup field on the related entity.
+Deleting the relationship will delete the lookup field on the related entity.
 
 > [!NOTE]
 > You will not be able to delete a relationship that has dependencies. For example, if you have added the lookup field to a form for the related entity, you must remove the field from the form before you delete the relationship.
@@ -230,6 +230,6 @@ Because of parental relationships there are some limitations you should keep in 
 
 [Create and edit relationships between entities](create-edit-entity-relationships.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
-[Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in PowerApps portal](create-edit-1n-relationships-portal.md)<br />
+[Create and edit 1:N (one-to-many) or N:1 (many-to-one) entity relationships in Power Apps portal](create-edit-1n-relationships-portal.md)<br />
 [Create N:N (many-to-many) relationships](create-edit-nn-relationships.md)
 

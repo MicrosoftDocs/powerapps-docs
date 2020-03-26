@@ -1,6 +1,6 @@
 ---
 title: Overview of the Office 365 Outlook connection | Microsoft Docs
-description: Reference information, including examples, for the Office 365 Outlook connection to PowerApps
+description: Reference information, including examples, for the Office 365 Outlook connection to Power Apps
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -8,13 +8,13 @@ ms.topic: reference
 ms.custom: canvas
 ms.date: 10/20/2017
 ms.author: lanced
-ms.reviewer: anneta
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Connect to Office 365 Outlook from PowerApps
+# Connect to Office 365 Outlook from Power Apps
 ![Office 365 Outlook](./media/connection-office365-outlook/office365icon.png)
 
 If you connect to Office 365 Outlook, you can show, send, delete, and reply to email messages, in addition to other tasks.
@@ -42,8 +42,11 @@ The Office 365 Outlook connection has been created and added to your app. Now, i
    
     `Office365.GetEmails({fetchOnlyUnread:false})`
    
+    After changing the settings, change **Layout** to **Title, Subtitle, Body**.
+    
     The gallery control is automatically populated with some of your emails.
-3. In the gallery, set the **Text** property of the first label to `ThisItem.From`. Set the second label to `ThisItem.Subject`. Set the third label to `ThisItem.Body`. You can also resize the labels.
+    
+3. In the gallery, set the **Text** property of the first label to `ThisItem.From`. Set the second label to `ThisItem.Subject`. Set the third label to `ThisItem.BodyPreview`. You can also resize the labels.
    
     The gallery control is automatically populated with the new properties.
 4. This function has several optional parameters available. Set the gallery's **Items** property to one of the following formulas:

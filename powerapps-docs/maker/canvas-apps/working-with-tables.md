@@ -1,12 +1,12 @@
 ---
 title: Understand tables in canvas apps | Microsoft Docs
-description: Reference information about working with canvas-app tables, columns, and records in PowerApps
+description: Reference information about working with canvas-app tables, columns, and records in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 05/23/2019
 ms.author: gregli
 search.audienceType: 
@@ -14,16 +14,16 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Understand canvas-app tables and records in PowerApps
+# Understand canvas-app tables and records in Power Apps
 
-In PowerApps, you can create a canvas app that accesses information in Microsoft Excel, SharePoint, SQL Server, and several other sources that store data in records and tables. To work most effectively with this kind of data, review the concepts that underlie these structures.
+In Power Apps, you can create a canvas app that accesses information in Microsoft Excel, SharePoint, SQL Server, and several other sources that store data in records and tables. To work most effectively with this kind of data, review the concepts that underlie these structures.
 
 * A record contains one or more categories of information about a person, a place, or a thing. For example, a record might contain the name, the email address, and the phone number of a single customer. Other tools refer to a record as a "row" or an "item."
 * A table holds one or more records that contain the same categories of information. For example, a table might contain the names, the email addresses, and the phone numbers of 50 customers.
 
 In your app, you'll use [formulas](working-with-formulas.md) to create, update, and manipulate records and tables. You'll probably read and write data to an external [data source](working-with-data-sources.md), which is an extended table. In addition, you might create one or more internal tables, which are called [collections](working-with-data-sources.md#collections).
 
-You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in PowerApps return a table that reflects the other arguments that you specify. For example, you might create a formula:
+You can build a variety of formulas that take the name of a table as an argument, just as a formula in Excel takes one or more cell references as arguments. Some formulas in Power Apps return a table that reflects the other arguments that you specify. For example, you might create a formula:
 
 * to update a record in a table by specifying that table as one of multiple arguments for the **[Patch](functions/function-patch.md)** function
 * to add, remove, and rename columns in a table by specifying that table as an argument for the **[AddColumns](functions/function-table-shaping.md)**, **[DropColumns](functions/function-table-shaping.md)**, or **[RenameColumns](functions/function-table-shaping.md)** function. None of those functions modifies the original table. Instead, the function returns another table based on the other arguments that you specify.
@@ -58,7 +58,7 @@ All values within a column are of the same data type. In the above example, the 
 You may have referred to columns as "fields" in other tools.
 
 > [!NOTE]
-> For SharePoint and Excel data sources that contain column names with spaces, PowerApps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in PowerApps when displayed in the data layout or used in a formula.
+> For SharePoint and Excel data sources that contain column names with spaces, Power Apps will replace the spaces with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 ### Table
 A table comprises one or more records, each with multiple fields that have consistent names across the records.
@@ -74,10 +74,10 @@ You can also define a single-column table with square brackets.  An equivalent w
 `[ "Strawberry", "Vanilla" ]`
 
 ## Table formulas
-In Excel and PowerApps, you use formulas to manipulate numbers and strings of text in similar ways:
+In Excel and Power Apps, you use formulas to manipulate numbers and strings of text in similar ways:
 
 * In Excel, type a value, such as **42**, in cell **A1**, and then type a formula, such as **A1+2**, in another cell to show the value of **44**.
-* In PowerApps, set the **[Default](controls/properties-core.md)** property of **Slider1** to **42**, and set the **[Text](controls/properties-core.md)** property of a label to **Slider1.Value + 2** to show the value of **44**.
+* In Power Apps, set the **[Default](controls/properties-core.md)** property of **Slider1** to **42**, and set the **[Text](controls/properties-core.md)** property of a label to **Slider1.Value + 2** to show the value of **44**.
 
 In both cases, the calculated value changes automatically if you change the values of the arguments (for example, the number in cell **A1** or the value of **Slider1**).
 
@@ -116,9 +116,9 @@ Let's walk through some simple examples.
 
 ## Table functions and control properties
 
-Consider the **Lower** function. If the variable **welcome** contains the text string **"Hello, World"**, the formula **Lower( welcome )** returns **"hello, world"**.  This function doesn't, in any way, change the value in that variable. **Lower** is a pure function in that it only processes input and produces output. That's all; it has no side effects. All functions in Excel and most functions in PowerApps are pure functions, which allow the workbook or the app to be recalculated automatically.
+Consider the **Lower** function. If the variable **welcome** contains the text string **"Hello, World"**, the formula **Lower( welcome )** returns **"hello, world"**.  This function doesn't, in any way, change the value in that variable. **Lower** is a pure function in that it only processes input and produces output. That's all; it has no side effects. All functions in Excel and most functions in Power Apps are pure functions, which allow the workbook or the app to be recalculated automatically.
 
-PowerApps offers a set of functions that operate on tables in the same manner. These functions take tables as input and filter, sort, transform, reduce, and summarize entire tables of data. In fact, **Lower** and many other functions that typically take a single value can also take a single-column table as input.
+Power Apps offers a set of functions that operate on tables in the same manner. These functions take tables as input and filter, sort, transform, reduce, and summarize entire tables of data. In fact, **Lower** and many other functions that typically take a single value can also take a single-column table as input.
 
 * **[Sort](functions/function-sort.md)**, **[Filter](functions/function-filter-lookup.md)** - Sorts and filters records.
 * **[FirstN](functions/function-first-last.md)**, **[LastN](functions/function-first-last.md)** - Returns the first N or last N records of the table.
@@ -205,13 +205,14 @@ Properties that return records:
 
 Some functions operate by evaluating a formula across all the records of a table individually. The formula's result is used in various ways:
 
-* **Filter**, **Lookup** - Formula determines if the record should be included in the output.
-* **Sort** - Formula provides the value to sort the records on.
-* **Concat** - Formula determines the strings to concatenate together.
-* **ForAll** - Formula can return any value, potentially with a side effect.
-* **Distinct** - Formula returns a value, used to identify duplicate records.
 * **AddColumns** - Formula provides the value of the added field.
 * **Average**, **Max**, **Min**, **Sum**, **StdevP**, **VarP** - Formula provides the value to aggregate.
+* **Filter**, **Lookup** - Formula determines if the record should be included in the output.
+* **Concat** - Formula determines the strings to concatenate together.
+* **Distinct** - Formula returns a value, used to identify duplicate records.
+* **ForAll** - Formula can return any value, potentially with side effects.
+* **Sort** - Formula provides the value to sort the records on.
+* **With** - Formula can return any value, potentially with side effects.
 
 Inside these formulas, you can reference the fields of the record being processed. Each of these functions creates a "record scope" in which the formula is evaluated, where the fields of the record are available as top-level identifiers. You can also reference control properties and other values from throughout your app.
 
@@ -219,7 +220,7 @@ For example, take a table of **Products**:
 
 ![](media/working-with-tables/requested.png)
 
-To create this example table in your app, insert a button, set its **OnSelect** property to this formula, and then select the button (click it while you hold down the Alt key in PowerApps Studio):
+To create this example table in your app, insert a button, set its **OnSelect** property to this formula, and then select the button (click it while you hold down the Alt key in Power Apps Studio):
 
 ```powerapps-dot
 Set( Products,

@@ -1,6 +1,6 @@
 ---
-title: Overview of building a model-driven app with PowerApps | Microsoft Docs
-description: Step-by-step instructions for creating and configuring an entity to use with a PowerApps app.
+title: Overview of building a model-driven app with Power Apps | Microsoft Docs
+description: Step-by-step instructions for creating and configuring an entity to use with a Power Apps app.
 documentationcenter: na
 author: Mattp123
 manager: kvivek
@@ -10,7 +10,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 08/09/2018
+ms.date: 02/12/2020
 ms.author: matp
 search.audienceType: 
   - maker
@@ -18,16 +18,16 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# What are model-driven apps in PowerApps?
+# What are model-driven apps in Power Apps?
 
-Model-driven app design is a component-focused approach to app development. Model-driven app design doesn’t require code and the apps you make can be simple or very complex.  Unlike canvas app development where the designer has complete control over app layout, with model-driven apps much of the layout is determined for you and largely designated by the components you add to the app. 
+Model-driven app design is a component-focused approach to app development. Model-driven app design doesn’t require code and the apps you make can be simple or very complex.  Unlike canvas app development where the designer has complete control over app layout, with model-driven apps much of the layout is determined for you and largely designated by the components you add to the app.
 
 ![Sample model-driven app](media/model-driven-app-overview/model-app-sample.png)
 
 Model-driven app design provides the following benefits:
 - Rich component-focused no-code design environments 
 - Create complex responsive apps with a similar UI across a variety of devices from desktop to mobile
-- Design capability similar to what’s is available in the Dynamics 365 customer engagement platform 
+- Rich design capability 
 - Your app can be distributed as a solution
  
 ## The approach to model-driven app making
@@ -38,7 +38,7 @@ At a fundamental level, model-driven app making consists of three key focus area
 - Composing the app
 
 ### Modeling business data
-To model business data you determine what data your app will need and how that data will relate to other data. Model-driven design uses a metadata-driven architecture so that designers can customize the application without writing code. Metadata means “data about data” and it defines the structure of the data stored in the system. [Tutorial: Create a custom entity that has components in PowerApps](../common-data-service/create-custom-entity.md)
+To model business data you determine what data your app will need and how that data will relate to other data. Model-driven design uses a metadata-driven architecture so that designers can customize the application without writing code. Metadata means “data about data” and it defines the structure of the data stored in the system. [Tutorial: Create a custom entity that has components in Power Apps](../common-data-service/create-custom-entity.md)
 
 ### Defining business processes
 Defining and enforcing consistent business processes is a key aspect of model-driven app design. Consistent processes help make sure your app users focus on their work and not on remembering to perform a set of manual steps. Processes can be simple or complex and often change over time. To create a process, from the PowerApps.com Model-driven area select ![Settings](media/powerapps-gear.png) > **Advanced customizations** > **Open solution explorer**. Next, on the left navigation pane in solution explorer select **Processes**, and then select **New**. More information: [Business process flows overview](/flow/business-process-flows-overview) and [Apply business logic with Common Data Service](../common-data-service/cds-processes.md). 

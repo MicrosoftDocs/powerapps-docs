@@ -1,20 +1,20 @@
 ---
 title: 'Audio and Video controls: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Audio and Video controls
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
-ms.reviewer: anneta
+ms.author: chmoncay
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Audio and Video controls in PowerApps
+# Audio and Video controls in Power Apps
 A control that plays an audio file, a video file, or a video on YouTube.
 
 ## Description

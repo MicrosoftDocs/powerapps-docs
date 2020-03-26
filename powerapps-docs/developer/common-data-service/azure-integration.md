@@ -3,10 +3,10 @@ title: "Azure Integration (Common Data Service) | Microsoft Docs"
 description: "<Description>" 
 ms.custom: ""
 ms.date: 06/01/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons"
+author: "JimDaly"
 ms.author: "jdaly" 
 manager: "ryjones"
 search.audienceType: 
@@ -64,7 +64,7 @@ Similarly to plug-ins, custom workflow activities can be written to initiate pos
   
 ### Asynchronous Service
 
-Once notified by the service endpoint notification service, the asynchronous service handles posting the  data context of the request message currently being processed by the event execution pipeline to the Azure Service Bus. Each post is performed by a system job of the asynchronous service. A user can view the status of each system job by using the **System Jobs** view of the PowerApps web application.  
+Once notified by the service endpoint notification service, the asynchronous service handles posting the  data context of the request message currently being processed by the event execution pipeline to the Azure Service Bus. Each post is performed by a system job of the asynchronous service. A user can view the status of each system job by using the **System Jobs** view of the Power Apps web application.  
   
 For more information about the asynchronous service see [Asynchronous service](asynchronous-service.md).  
   
@@ -131,7 +131,7 @@ Similar to a queue except that one or more listeners can subscribe to receive me
 This contract type applies to Azure Event Hub solutions.  
   
 > [!IMPORTANT]
->  To use these contracts, you must write your listener applications using the [Azure SDK](http://www.windowsazure.com/develop/downloads/) v1.7 or later.  
+>  To use these contracts, you must write your listener applications using the [Azure SDK](https://www.windowsazure.com/develop/downloads/) v1.7 or later.  
   
 Identifying the kind of security a contract uses is part of the contract’s configuration. A contract can use Transport security, which uses Transport Layer Security (TLS) or Secure Sockets Layer (SSL) (https).  
   

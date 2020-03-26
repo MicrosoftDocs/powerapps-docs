@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 04/06/2018
 ms.author: lanced
 search.audienceType: 
@@ -14,9 +14,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add a data connection to a canvas app in PowerApps
+# Add a data connection to a canvas app in Power Apps
 
-In PowerApps, add a data connection to an existing canvas app or to an app that you're building from scratch. Your app can connect to SharePoint, Common Data Service, Salesforce, OneDrive, or [many other data sources](connections-list.md).
+In Power Apps, add a data connection to an existing canvas app or to an app that you're building from scratch. Your app can connect to SharePoint, Common Data Service, Salesforce, OneDrive, or [many other data sources](connections-list.md).
 
 Your [next step](#next-steps) after this article is to display and manage data from that data source in your app, as in these examples:
 
@@ -27,7 +27,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 ## Prerequisites
 
-[Sign up](../signup-for-powerapps.md) for PowerApps, and then [sign in](http://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
+[Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) by providing the same credentials that you used to sign up.
 
 ## Open a blank app
 
@@ -35,7 +35,7 @@ Your [next step](#next-steps) after this article is to display and manage data f
 
 1. Specify a name for your app, and then select **Create**.
 
-1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
 ## Add data source
 

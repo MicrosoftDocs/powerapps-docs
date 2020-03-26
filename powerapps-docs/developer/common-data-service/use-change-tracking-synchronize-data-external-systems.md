@@ -1,12 +1,12 @@
 ---
 title: "Use change tracking to synchronize data with external systems (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The change tracking feature in Dynamics 365 Customer Engagement provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -35,7 +35,7 @@ The change tracking feature in Common Data Service provides a way to keep the da
 ## Retrieve changes for an entity using the Web API  
 Changes made in entities can be tracked using Web API requests by adding `odata.track-changes` as a preference header. Preference header `odata.track-changes` is used to request that a *delta link* be returned which can subsequently be used to retrieve entity changes.
 
-Delta links are opaque, service-generated links that the client uses to retrieve subsequent changes to a result. They are based on a defining query that describes the set of results for which changes are being tracked; for example, the request that generated the results containing the delta link. The delta link encodes the collection of entities for which changes are being tracked, along with a starting point from which to track changes. Read more about delta links here [Oasis OData Version 4.0 - Delta Links](http://docs.oasis-open.org/odata/odata/v4.0/cs01/part1-protocol/odata-v4.0-cs01-part1-protocol.html#_Toc365046305)
+Delta links are opaque, service-generated links that the client uses to retrieve subsequent changes to a result. They are based on a defining query that describes the set of results for which changes are being tracked; for example, the request that generated the results containing the delta link. The delta link encodes the collection of entities for which changes are being tracked, along with a starting point from which to track changes. Read more about delta links here [Oasis OData Version 4.0 - Delta Links](https://docs.oasis-open.org/odata/odata/v4.0/cs01/part1-protocol/odata-v4.0-cs01-part1-protocol.html#_Toc365046305)
 
 <a name="BKMK_webapiexample"></a>   
 ## Retrieve changes in entities using Web API example
@@ -128,7 +128,7 @@ System query options `$filter`, `$orderby` and `$top` are not supported when usi
   
 <a name="BKMK_SampleCode"></a>   
 ## Sample code  
- The following code snippet shows how the `RetrieveEntityChangesRequest` message is used to retrieve the changes for an entity. For the complete sample, see [Synchronize data with external systems using change tracking](http://go.microsoft.com/fwlink/p/?LinkId=533957).  
+ The following code snippet shows how the `RetrieveEntityChangesRequest` message is used to retrieve the changes for an entity. For the complete sample, see [Synchronize data with external systems using change tracking](https://go.microsoft.com/fwlink/p/?LinkId=533957).  
   
 ```csharp
 string token;

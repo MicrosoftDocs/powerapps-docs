@@ -3,7 +3,7 @@ title: "Run data import (Common Data Service) | Microsoft Docs" # Intent and pro
 description: "Data importation runs directly on the Dynamics 365 server, and requires three asynchronous jobs for parsing, map-guided transformation, and uploading." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
@@ -84,4 +84,4 @@ Data import runs directly on the Common Data Service server. To run data import,
 [Data import entities](data-import-entities.md)<br />
 [Sample: Export and import a data map](org-service/samples/export-import-data-map.md)<br />
 [Sample: Import data using complex data map](org-service/samples/import-data-complex-data-map.md)<br />
-[Blog Post: How to Import attachments programmatically](http://blogs.msdn.com/b/crm/archive/2012/08/06/how-to-import-attachments-programmatically.aspx) 
+[Blog Post: How to Import attachments programmatically](https://blogs.msdn.com/b/crm/archive/2012/08/06/how-to-import-attachments-programmatically.aspx) 

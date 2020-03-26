@@ -1,20 +1,20 @@
 ---
 title: Functions, signals, and enumerations | Microsoft Docs
-description: Reference information for functions, signals, and enumerations in PowerApps.
+description: Reference information for functions, signals, and enumerations in Power Apps.
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 11/14/2018
+ms.reviewer: tapanm
+ms.date: 03/21/2020
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Formula reference for PowerApps
+# Formula reference for Power Apps
 Formulas combine many elements.  Listed below are:
 
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
@@ -24,7 +24,7 @@ Formulas combine many elements.  Listed below are:
 
 Other elements include:
 
-* [All operators](functions/operators.md)
+* [Operators and identifiers](functions/operators.md)
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 
@@ -44,6 +44,8 @@ Other elements include:
 **[App](functions/object-app.md)** – Provides information about the currently running app and control over the app's behavior.
 
 **[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
+
+**[Assert](functions/function-assert.md)** – Evaluates to true or false in a test.
 
 **[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
 
@@ -141,7 +143,7 @@ Other elements include:
 
 **[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
 
-**[Exit](functions/function-exit.md)** – Exits the currently running app.
+**[Exit](functions/function-exit.md)** – Exits the currently running app and optionally signs out the current user.
 
 **[Exp](functions/function-numericals.md)** - Returns *e* raised to a power.
 
@@ -201,7 +203,7 @@ Other elements include:
 
 **[Ln](functions/function-numericals.md)** – Returns the natural log.
 
-**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from PowerApps private storage.
+**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from a local device's storage.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
@@ -289,7 +291,7 @@ Other elements include:
 **[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S
-**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to PowerApps private storage.
+**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to a local device's storage.
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 
@@ -298,6 +300,10 @@ Other elements include:
 **[Select](functions/function-select.md)** – Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
+
+**[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
+
+**[SetPropertry](functions/function-setproperty.md)** – Simulates interactions with input controls.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
@@ -342,6 +348,8 @@ Other elements include:
 
 **[Today](functions/function-now-today-istoday.md)** – Returns the current date/time value.
 
+**[Trace](functions/function-trace.md)** - Provide additional information in your test results.
+
 **[Trim](functions/function-trim.md)** – Removes extra spaces from the ends and interior of a string of text.
 
 **[TrimEnds](functions/function-trim.md)** – Removes extra spaces from the ends of a string of text only.
@@ -372,6 +380,8 @@ Other elements include:
 
 ## W
 **[Weekday](functions/function-datetime-parts.md)** – Retrieves the weekday portion of a date/time value.
+
+**[With](functions/function-with.md)** – Calculates values and performs actions for a single record, including inline records of named values.
 
 ## Y
 **[Year](functions/function-datetime-parts.md)** – Retrieves the year portion of a date/time value.  

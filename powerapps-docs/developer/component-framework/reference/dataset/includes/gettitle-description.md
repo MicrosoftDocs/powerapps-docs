@@ -4,7 +4,7 @@ description:
 keywords:
 ms.author: nabuthuk
 manager: kvivek
-ms.date: 04/23/2019
+ms.date: 10/01/2019
 ms.service: "powerapps"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,4 +15,4 @@ applies_to:
 ms.assetid: 00304b7b-63f8-4f37-9294-8d2c08c53704
 ---
 
-Retrieves the view display name used by the dataset property.
+Retrieves the view display name used by the data-set property.

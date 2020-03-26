@@ -1,6 +1,6 @@
 ---
 title: "Retrieve the list of rules | Microsoft Docs"
-description: "Learn how to form a GET request using the PowerApps checker web API to retrieve the list of rules available."
+description: "Learn how to form a GET request using the Power Apps checker web API to retrieve the list of rules available."
 ms.custom: ""
 ms.date: 06/04/2019
 ms.service: powerapps
@@ -98,7 +98,7 @@ Content-Type: application/json; charset=utf-8
 [
     {
         "description": "Ne pas implémenter d’activités de workflow Microsoft Dynamics CRM 4.0",
-        "guidanceUrl": "http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-crm4-wf&client=PAChecker",
+        "guidanceUrl": "https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-crm4-wf&client=PAChecker",
         "include": true,
         "code": "il-avoid-crm4-wf",
         "summary": "Ne pas implémenter d’activités de workflow Microsoft Dynamics CRM 4.0",
@@ -108,7 +108,7 @@ Content-Type: application/json; charset=utf-8
     },
     {
         "description": "Utiliser InvalidPluginExecutionException dans des plug-ins et activités de workflow",
-        "guidanceUrl": "http://go.microsoft.com/fwlink/?LinkID=398563&error=il-use-standard-exception&client=PAChecker",
+        "guidanceUrl": "https://go.microsoft.com/fwlink/?LinkID=398563&error=il-use-standard-exception&client=PAChecker",
         "include": true,
         "code": "il-use-standard-exception",
         "summary": "Utiliser InvalidPluginExecutionException dans des plug-ins et activités de workflow",
@@ -143,7 +143,7 @@ Content-Type: application/json; charset=utf-8
 [
     {
         "description": "Retrieve specific columns for an entity via query APIs",
-        "guidanceUrl": "http://go.microsoft.com/fwlink/?LinkID=398563&error=il-specify-column&client=PAChecker",
+        "guidanceUrl": "https://go.microsoft.com/fwlink/?LinkID=398563&error=il-specify-column&client=PAChecker",
         "include": true,
         "code": "il-specify-column",
         "summary": "Retrieve specific columns for an entity via query APIs",
@@ -153,7 +153,7 @@ Content-Type: application/json; charset=utf-8
     },
     {
         "description": "Do not duplicate plug-in step registration",
-        "guidanceUrl": "http://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-dup-reg&client=PAChecker",
+        "guidanceUrl": "https://go.microsoft.com/fwlink/?LinkID=398563&error=meta-remove-dup-reg&client=PAChecker",
         "include": true,
         "code": "meta-remove-dup-reg",
         "summary": "Do not duplicate plug-in step registration",
@@ -188,7 +188,7 @@ Content-Type: application/json; charset=utf-8
 [
     {
         "description": "Do not implement Microsoft Dynamics CRM 4.0 workflow activities",
-        "guidanceUrl": "http://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-crm4-wf&client=PAChecker",
+        "guidanceUrl": "https://go.microsoft.com/fwlink/?LinkID=398563&error=il-avoid-crm4-wf&client=PAChecker",
         "include": true,
         "code": "il-avoid-crm4-wf",
         "summary": "Do not implement Microsoft Dynamics CRM 4.0 workflow activities",
@@ -220,7 +220,7 @@ Content-Type: application/json; charset=utf-8
     },
     {
         "description": "Use InvalidPluginExecutionException in plug-ins and workflow activities",
-        "guidanceUrl": "http://go.microsoft.com/fwlink/?LinkID=398563&error=il-use-standard-exception&client=PAChecker",
+        "guidanceUrl": "https://go.microsoft.com/fwlink/?LinkID=398563&error=il-use-standard-exception&client=PAChecker",
         "include": true,
         "code": "il-use-standard-exception",
         "summary": "Use InvalidPluginExecutionException in plug-ins and workflow activities",
@@ -246,7 +246,7 @@ Content-Type: application/json; charset=utf-8
 
 ### See also
 
-[Use the PowerApps checker web API](overview.md)<br />
+[Use the Power Apps checker web API](overview.md)<br />
 [Retrieve the list of rulesets](retrieve-rulesets.md)<br />
 [Upload a file](upload-file.md)<br />
 [Invoke analysis](analyze.md)<br />

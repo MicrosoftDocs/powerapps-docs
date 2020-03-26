@@ -1,32 +1,32 @@
 ---
-title: Generate a canvas app from Common Data Service | Microsoft Docs
-description: In PowerApps, automatically generate a canvas app to manage data in Common Data Service
-author: AFTOwen
+title: Create a canvas app from Common Data Service | Microsoft Docs
+description: In Power Apps, automatically create a canvas app to manage data in Common Data Service
+author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: quickstart
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/06/2018
-ms.author: anneta
+ms.date: 12/05/2019
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Generate a canvas app from Common Data Service in PowerApps
+# Create a canvas app from Common Data Service in Power Apps
 
-In PowerApps, automatically generate a canvas app based on a list of sample accounts in [Common Data Service](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
+In Power Apps, create a canvas app based on a list of sample accounts in [Common Data Service](../common-data-service/data-platform-intro.md). In this app, you can browse all accounts, show details of a single account, and create, update, or delete an account.
 
-If you're not signed up for PowerApps, [sign up for free](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
+If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) before you start.
 
 ## Prerequisites
 
 To follow this quickstart, you must be assigned to the [Environment Maker](https://docs.microsoft.com/power-platform/admin/database-security#predefined-security-roles) security role, and you must [switch to an environment](working-with-environments.md) in which a database in Common Data Service has been created, contains data, and allows updates. If no such environment exists and you have administrative privileges, you can [create an environment](https://docs.microsoft.com/power-platform/admin/environments-administration#create-an-environment) that meets this requirement.
 
-## Generate an app
+## Create an app
 
-1. Sign in to [PowerApps](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, switch environments as specified earlier in this topic.
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and, if necessary, switch environments as specified earlier in this topic.
 
 1. Under **Make your own app**, hover over **Start from data**, and then select **Make this app**.
 
@@ -38,7 +38,7 @@ To follow this quickstart, you must be assigned to the [Environment Maker](https
 
 1. Under **Choose a table**, select **Accounts**, and then select **Connect**.
 
-1. If the **Welcome to PowerApps Studio** dialog box appears, select **Skip**.
+1. If the **Welcome to Power Apps Studio** dialog box appears, select **Skip**.
 
 Your app opens to the browse screen, which shows a list of accounts in a control called a gallery. Near the top of the screen, a title bar shows icons for refreshing the data in the gallery, sorting the data in the gallery alphabetically, and adding data to the gallery. Under the title bar, a search box provides the option to filter the data in the gallery based on text that you type or paste. 
 

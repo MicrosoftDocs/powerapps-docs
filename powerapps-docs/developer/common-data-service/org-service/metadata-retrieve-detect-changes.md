@@ -3,10 +3,10 @@ title: "Retrieve and detect changes to metadata (Common Data Service) | Microsof
 description: "The classes in the Query namespace and the RetrieveMetadataChangesRequest and RetrieveMetadataChangesResponse classes let you build efficient metadata queries and capture changes to metadata as they occur over time." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -292,7 +292,7 @@ AttributeProperties.PropertyNames.Add("AttributeType");
   
 ### Retrieve labels
   
- Finally, the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that lets you specify one or more integer `LCID` values for to determine which localized labels to return. Valid locale ID values can be found at [Locale ID (LCID) Chart](http://go.microsoft.com/fwlink/?LinkId=122128). If an organization has many language packs installed the labels for all languages will be returned unless you specify a <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery>.  
+ Finally, the <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression>.<xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery> property accepts a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that lets you specify one or more integer `LCID` values for to determine which localized labels to return. Valid locale ID values can be found at [Locale ID (LCID) Chart](https://go.microsoft.com/fwlink/?LinkId=122128). If an organization has many language packs installed the labels for all languages will be returned unless you specify a <xref:Microsoft.Xrm.Sdk.Metadata.Query.EntityQueryExpression.LabelQuery>.  
   
  The following example defines a <xref:Microsoft.Xrm.Sdk.Metadata.Query.LabelQueryExpression> that will limit labels to only those representing the users preferred language.  
   
@@ -457,7 +457,7 @@ protected String updateOptionLabelList(EntityQueryExpression entityQueryExpressi
 ### See also  
  [Write Applications and Server Extensions](/dynamics365/customer-engagement/developer/extend-dynamics-365-server)   
  [Offline Use of the Dynamics 365 Services](/dynamics365/customer-engagement/developer/org-service/offline-use-services)   
- [Sample: Query Metadata and Detect Changes](/dynamics365/customer-engagement/developer/org-service/sample-query-metadata-detect-changes)   
+ [Sample: Query Metadata and Detect Changes](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/MetadataQuery)   
  [Extend the Metadata Model for Dynamics 365](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)   
  [Customize Entity Metadata](/dynamics365/customer-engagement/developer/customize-entity-metadata)   
  [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata)   

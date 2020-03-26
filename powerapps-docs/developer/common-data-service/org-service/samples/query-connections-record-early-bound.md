@@ -3,10 +3,10 @@ title: "Sample: Query connections by a record (Common Data Service) | Microsoft 
 description: "This sample shows how to query connections for a particular record." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Sample: Query connections by a record 
+# Sample: Query connections by a record (early bound)
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-query-connections-record-early-bound -->
 
@@ -43,9 +43,8 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. The `QueryExpression` retrieves all the connections associated with the contact created in the sample.
+The `QueryExpression` retrieves all the connections associated with the contact created in the sample.
 
 ### Clean up
 
-1. Display an option to delete the records in [Setup](#setup).
-    The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.
+Display an option to delete the records in [Setup](#setup). The deletion is optional in case you want to examine the entities and data created by the sample. You can manually delete the records to achieve the same result.

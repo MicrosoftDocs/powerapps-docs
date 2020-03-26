@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 07/06/2017
 ms.author: aneesa
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Edit form and Display form controls in PowerApps
+# Edit form and Display form controls in Power Apps
 Display, edit, and create a record in a data source.
 
 ## Description
@@ -116,7 +116,7 @@ Derived from the **Mode** property based and cannot be set independently:
 | Mode | Description |
 | --- | --- |
 | **FormMode.Edit** |The user can edit a record by using the form. The values in the form's cards are pre-populated with the existing record, for the user to change. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an existing record is modified. |
-| **FormMode.New** |The user can create a record by using the form. The values in the form's controls are pre-populated with the defaults for a record of the data source. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, an record is created. |
+| **FormMode.New** |The user can create a record by using the form. The values in the form's controls are pre-populated with the defaults for a record of the data source. If the **[SubmitForm](../functions/function-form.md)** function runs successfully, a record is created. |
 | **FormMode.View** |The user can view a record by using the form. The values in the form's controls are pre-populated with the defaults for a record of the data source. |
 
 The form switches from **New** mode to **Edit** mode when any of these changes occurs:

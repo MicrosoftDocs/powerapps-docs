@@ -1,20 +1,20 @@
 ---
 title: 'Image control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Image control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Image control in PowerApps
+# Image control in Power Apps
 A control that shows an image from, for example, a local file or a data source.
 
 ## Description
@@ -119,7 +119,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 ### Show a set of images from a data source
 1. Download this [Excel file](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx), and save it on your local device.
-2. In PowerApps Studio, create or open an app, and then click or tap **Add data source** in the right-hand pane.
+2. In Power Apps Studio, create or open an app, and then click or tap **Add data source** in the right-hand pane.
 
     If **Add data source** doesn't appear in the right-hand pane, click or tap a screen in the left navigation bar.
 3. Click or tap **Add static data to your app**, click or tap the Excel file that you downloaded, and then click or tap **Open**.

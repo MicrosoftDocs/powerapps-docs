@@ -1,23 +1,21 @@
 ---
-title: Portal portal designer anatomy | Microsoft Docs
-description: Learn about the anatomy of portal designer.
-author: sbmjais
-manager: shujoshi
+title: Portal Power Apps portals Studio anatomy | Microsoft Docs
+description: Learn about the anatomy of Power Apps portals Studio.
+author: tapanm-msft
+manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/18/2019
-ms.author: shjais
+ms.date: 11/29/2019
+ms.author: tapanm
 ms.reviewer:
 ---
 
-# Portal designer anatomy
+# Power Apps portals Studio anatomy
 
-[!include[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+You can use Power Apps portals Studio to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists. The anatomy of Power Apps portals Studio is as follows:
 
-You can use the portal designer to create and customize your website. It contains various options to add and configure webpages, components, forms, and lists. The anatomy of portal designer is as follows:
-
-![Portal designer anatomy](media/maker-anatomy.png "Portal designer anatomy")  
+![Power Apps portals Studio anatomy](media/maker-anatomy.png "Power Apps portals Studio anatomy")  
 
 | **Annotation** | **Name**        | **Description**                                                                              |
 |----------------|-----------------|----------------------------------------------------------------------------------------------|
@@ -27,3 +25,5 @@ You can use the portal designer to create and customize your website. It contain
 | 4              | Footer          | Displays auto-save status and allows you to open source code editor.                         |
 | 5              | Properties pane | Displays properties of webpage and selected components and allows you edit them as required. |
 
+> [!NOTE]
+> Editing a portal through Power Apps portals Studio will temporarily cause poor portal performance due to multiple background processes. For example, the clear cache process runs and reloads data from Common Data Service.

@@ -1,12 +1,12 @@
 ---
 title: Revert function | Microsoft Docs
-description: Reference information, including syntax and an example, for the Revert function in PowerApps
+description: Reference information, including syntax and an example, for the Revert function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/21/2015
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Revert function in PowerApps
+# Revert function in Power Apps
 Refreshes and clears errors for the [records](../working-with-tables.md#records) of a [data source](../working-with-data-sources.md).
 
 ## Description

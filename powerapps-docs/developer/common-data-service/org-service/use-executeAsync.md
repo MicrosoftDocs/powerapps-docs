@@ -3,10 +3,10 @@ title: "Use ExecuteAsync to execute messages asynchronously  (Common Data Servic
 description: "You can use the ExecuteAsync message to import solutions asynchronously" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/08/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 

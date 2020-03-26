@@ -1,20 +1,20 @@
 ---
 title: 'Button control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Button control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
-ms.reviewer: anneta
+ms.author: chmoncay
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Button control in PowerApps
+# Button control in Power Apps
 A control that the user can click or tap to interact with the app.
 
 ## Description
@@ -155,7 +155,7 @@ Add a second button to clear the total between calculations.
 
 ### Change a button's appearance
 #### Change a button's shape
-By default, PowerApps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** control by setting its **[Height](properties-size-location.md)**, **[Width](properties-size-location.md)**, and **[Radius](properties-size-location.md)** properties.
+By default, Power Apps creates a rectangular **Button** control with rounded corners. You can make basic modifications to the shape of a **Button** control by setting its **[Height](properties-size-location.md)**, **[Width](properties-size-location.md)**, and **[Radius](properties-size-location.md)** properties.
 
 > [!NOTE]
 > [Icons and Shapes](control-shapes-icons.md) provide a wide variety of designs and can perform some of the same basic functions that **Button** controls do. However, **[Icons and Shapes](control-shapes-icons.md)** don’t have a **[Text](properties-core.md)** property.

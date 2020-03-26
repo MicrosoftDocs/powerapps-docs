@@ -6,15 +6,15 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/25/2016
+ms.reviewer: tapanm
+ms.date: 09/14/2019
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Screen control in PowerApps
+# Screen control in Power Apps
 
 A UI element that contains one or more other controls in an app.
 
@@ -38,14 +38,7 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **OnHidden** – The behavior of an app when the user navigates away from a screen.
 
-**OnStart** – The behavior of the app when the user opens the app.
-
-- The formula to which this property is set runs before the first screen of the app appears. Call the [**Navigate**](../functions/function-navigate.md) function to change which screen appears first when the app starts.
-- You can't set [context variables](../working-with-variables.md) with the [**UpdateContext**](../functions/function-updatecontext.md) function because no screen has appeared yet. However, you can pass context variables in the **Navigate** function and create and fill a [collection](../working-with-variables.md) by using the [**Collect**](../functions/function-clear-collect-clearcollect.md) function.
-- When you update an app, the formula to which this property is set runs when the app is loaded into PowerApps Studio. To see the impact of changing this property, you'll need to save, close, and reload your app.
-- The **OnStart** property is actually a property of the app, not the screen. For editing convenience, you view and modify it as a property on the first screen of your app. If you remove the first screen or reorder screens, this property may become hard to find. In this case, save, close, and reload your app, and the property will reappear as a property of the first screen.
-
-**OnVisible** – The behavior of an app when the user navigates to a screen.
+**OnVisible** – The behavior of an app when the user navigates to a screen.  Use this property to set up variables and preload data used by the screen.  Use the [**App.OnStart**](../functions/object-app.md#onstart-property) property for set up once when the app is started.
 
 **Orientation** - The orientation of the screen. If its **Width** is greater than its **Height**, the orientation will be **Layout.Horizontal**; otherwise, it will be **Layout.Vertical**.
 

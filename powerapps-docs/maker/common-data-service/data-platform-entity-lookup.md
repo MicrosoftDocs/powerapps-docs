@@ -1,6 +1,6 @@
 ---
 title: Create a relationship between entities by using a lookup field | Microsoft Docs
-description: Step-by-step instructions for how to create a relationship between entities in PowerApps by using a lookup field.
+description: Step-by-step instructions for how to create a relationship between entities in Power Apps by using a lookup field.
 author: lancedMicrosoft
 manager: kvivek
 ms.service: powerapps
@@ -31,7 +31,7 @@ Additionally, you can set advanced cascading behaviors on many-to-one and one-to
 
 To add a lookup relation to an entity, create a relation under the **Relationships** tab and specify the entity with which you want to create a relationship.
 
-1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
 2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
 
@@ -55,7 +55,7 @@ To add a lookup relation to an entity, create a relation under the **Relationshi
 
 To add a One-to-many relationship, create a relation under the **Relationships** tab and specify the entity with which you want to create a relationship.
 
-1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
 2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
 
@@ -81,7 +81,7 @@ To add a One-to-many relationship, create a relation under the **Relationships**
 ## Add a Many-to-many relationship
 To add a Many-to-many relationship, create a relation under the **Relationships** tab and specify the entity with which you want to create a relationship.
 
-1. On [powerapps.com](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
+1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and click or tap **Entities** in the left navigation pane.
 
 2. Click or tap an existing entity, or [Create a new entity](data-platform-create-entity.md)
 
@@ -103,7 +103,7 @@ While building a one-to-many or a many-to-one relationship, you can also set adv
 
 ![Advanced behavior](./media/data-platform-cds-newrelationship/advanced-1.png "Advanced behavior")
 
-These options are also referred to as cascading behaviors because they cascade down the hierarchy of related entities. For example, it may be desireable to delete the related tests and homework of a student if a student is removed from the system. This type of behavior is called a parental relationship.
+These options are also referred to as cascading behaviors because they cascade down the hierarchy of related entities. For example, it may be desirable to delete the related tests and homework of a student if a student is removed from the system. This type of behavior is called a parental relationship.
 
 On the other hand, you may decide that you don't want  actions to cascade down the hierarchy. For example, in the teacher to class relationship you may decide that the child entity (class) should *not* be deleted when a parent (teacher) is deleted. This is called a referential relationship.
 
@@ -131,7 +131,7 @@ For more information on defaults and custom behaviors: [Configure entity relatio
 If you [create an app automatically](../canvas-apps/data-platform-create-app.md) from an entity that contains a lookup field, it appears as a **Drop down** control that contains data from the **Primary name** field of the entity.
 
 ## Add 1:N and N:N relationships for canvas apps
-Use the **Relate** function to link two records through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in PowerApps](../canvas-apps/functions/function-relate-unrelate.md)
+Use the **Relate** function to link two records through a one-to-many or many-to-many relationship in Common Data Service. More information: [Relate and Unrelate functions in Power Apps](../canvas-apps/functions/function-relate-unrelate.md)
 
 ## Next steps
 * [Generate an app by using a Common Data Service database](../canvas-apps/data-platform-create-app.md)

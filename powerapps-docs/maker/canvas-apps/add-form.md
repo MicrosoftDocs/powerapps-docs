@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/06/2017
 ms.author: emcoope
 search.audienceType: 
@@ -20,7 +20,7 @@ In a canvas app, add and configure a **[Display](controls/control-form-detail.md
 
 ## Prerequisites
 
-- Learn how to [add and configure a control](add-configure-controls.md) in PowerApps.
+- Learn how to [add and configure a control](add-configure-controls.md) in Power Apps.
 - Download [this Excel file](https://az787822.vo.msecnd.net/documentation/get-started-from-data/FlooringEstimates.xlsx), which contains sample data for this tutorial.
 - Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 - Create or open an app for phones, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.

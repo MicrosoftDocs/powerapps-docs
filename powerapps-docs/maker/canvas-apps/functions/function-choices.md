@@ -1,12 +1,12 @@
 ---
 title: Choices function | Microsoft Docs
-description: Reference information, including syntax, for the Choices function in PowerApps
+description: Reference information, including syntax, for the Choices function in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 06/15/2018
 ms.author: gregli
 search.audienceType: 
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Choices function in PowerApps
+# Choices function in Power Apps
 Returns a table of the possible values for a lookup column.
 
 ## Description
@@ -47,13 +47,13 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
     Many entities, such as **Accounts**, are created.
 
-    **Note**: Entity names are singular on web.powerapps.com and plural in PowerApps Studio.
+    **Note**: Entity names are singular on make.powerapps.com and plural in Power Apps Studio.
 
-    ![A partial list of the fields from the Account entity in Commmon Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
+    ![A partial list of the fields from the Account entity in Common Data Service for Apps, highlighting that "Primary Contact" is a lookup field](media/function-choices/entity-account.png)
 
     The **Accounts** entity has a **Primary Contact** column, which is a lookup to the **Contacts** entity.  
 
-    ![A partial list of the fields from the Contact entity in the Commmon Data Service](media/function-choices/entity-contact.png)
+    ![A partial list of the fields from the Contact entity in the Common Data Service](media/function-choices/entity-contact.png)
 
     For each account, a contact is designated as the primary contact, or the primary contact is *blank*.
 
@@ -86,7 +86,7 @@ At this time, you can use lookup columns only with SharePoint and Common Data Se
 
      ![A canvas screen with a form control. The Combo box control within the Primary Contact card is selected, and the Items property with the formula Choices( Accounts.'Primary Contact' ) appears](media/function-choices/accounts-primary-contact.png)
 
-1. On the **Home** tab, select **New screen**, and then select **Blank**.
+1. For illustration purposes, we can view the complete table returned by the **Choices** function in a **Data table** control.  On the **Home** tab, select **New screen**, and then select **Blank**.
 
 1. On the **Insert** tab, select **Data table**.
 

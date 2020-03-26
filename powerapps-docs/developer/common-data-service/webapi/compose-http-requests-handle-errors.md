@@ -11,9 +11,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 64a39182-25de-4d31-951c-852025a75811
 caps.latest.revision: 13
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "annbe"
 search.audienceType: 
   - developer
@@ -35,7 +35,7 @@ To access the Web API you must compose a URL using the parts in the following ta
 |--|--|
 |Protocol| `https://`|
 |Environment Name|The unique name that applies to your environment. If your company name is *Contoso*, then it may be `contoso`.|
-|Region|Your environment will usually be available in a data center that is close to you geographically.<br />North America: `crm`<br />South America: `crm2`<br />Canada: `crm3`<br />Europe, Middle East and Africa (EMEA): `crm4`<br />Asia Pacific Area (APAC): `crm5`<br />Oceania: `crm6`<br />Japan: `crm7`<br />India: `crm8`<br />North America 2: `crm9`<br />United Kingdom: `crm11`<br />More values will be added over time as new data center regions are opened.|
+|Region|Your environment will usually be available in a data center that is close to you geographically.<br />North America: `crm`<br />South America: `crm2`<br />Canada: `crm3`<br />Europe, Middle East and Africa (EMEA): `crm4`<br />Asia Pacific Area (APAC): `crm5`<br />Oceania: `crm6`<br />Japan: `crm7`<br />India: `crm8`<br />North America 2: `crm9`<br />United Kingdom: `crm11`<br />France: `crm12`<br />More values will be added over time as new data center regions are opened.|
 |Base URL|`dynamics.com.`|
 |Web API path|The path to the web API is `/api/data/`.|
 |Version|	The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.0`.|
@@ -132,8 +132,8 @@ You can use additional headers to enable specific capabilities.
 |404 Not Found|Expect this when the resource doesn’t exist.|Client Error|  
 |405 Method Not Allowed|This error occurs for incorrect method and resource combinations. For example, you can’t use DELETE or PATCH on a collection of entities.<br /><br /> Expect this for the following types of errors:<br /><br /> -   CannotDeleteDueToAssociation<br />-   InvalidOperation<br />-   NotSupported|Client Error|  
 |412 Precondition Failed|Expect this for the following types of errors:<br /><br /> -   ConcurrencyVersionMismatch<br />-   DuplicateRecord|Client Error|
-|429 Too Many Requests|Expect this when API limits are exceeded. More information:[API Limits](../api-limits.md)|Client Error|  
-|501 Not Implemented|Expect this when some requested operation isnt implemented.|Server Error|  
+|429 Too Many Requests|Expect this when API limits are exceeded. More information:[Service Protection API Limits](../api-limits.md)|Client Error|  
+|501 Not Implemented|Expect this when some requested operation isn't implemented.|Server Error|  
 |503 Service Unavailable|Expect this when the web API service isn’t available.|Server Error|  
   
 <a name="bkmk_parseErrors"></a>

@@ -8,7 +8,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 1888a882-7dfc-41a8-9bb4-d693d6046666
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -29,7 +29,7 @@ var tabObj = formContext.ui.tabs.get(arg);
 
 ## Properties
 
-- **Sections**: The sections collection provides access to sections within the tab. See [Collections (Client API reference)](collections.md) for information about methods to access the sections in the collection. See [formContext.ui section](formContext-ui-sections.md) for information about the properties and methods of the section objects in the collection.
+- **sections**: The sections collection provides access to sections within the tab. See [Collections (Client API reference)](collections.md) for information about methods to access the sections in the collection. See [formContext.ui section](formContext-ui-sections.md) for information about the properties and methods of the section objects in the collection.
 
 ## Methods
 

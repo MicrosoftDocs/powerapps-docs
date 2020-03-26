@@ -1,9 +1,9 @@
 ---
-title: "Next steps: Submit your app on Cloud Partner Portal (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+title: "Next steps: Submit your app on Partner Center (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about how to submit an app on Cloud Partner Portal to be listed on AppSource." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 02/25/2019
-ms.reviewer: ""
+ms.date: 07/25/2019
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID
@@ -15,19 +15,17 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Next steps: Submit your app on Cloud Partner Portal
+# Next steps: Submit your app on Partner Center
 
 Your app is ready for submission after completing steps 1-5. 
 
-If you have been granted access to the [Cloud Partner Portal](https://cloudpartner.azure.com) in response to the information you provided in [step 1](fill-app-submission-form-appsource.md), proceed to [create an offer](https://cloudpartner.azure.com/#new/microsoft-crm/form/offerSettings) on the Cloud partner Portal to submit your app. 
+If you have completed access to [Partner Center](https://partner.microsoft.com/dashboard/account/v3/enrollment/introduction/azureisv), proceed to [create an offer](https://docs.microsoft.com/azure/marketplace/partner-center-portal/offer-creation-checklist) on Partner Center to submit your app.
 
-All apps that are submitted to be listed on AppSource go through a certification process. For information about the checks done in the certification process, see [Appendix: App certification checklist](appendix-app-certification-checklist.md)
-
-Detailed information about submitting an app for Dynamics 365 Customer Engagement is available in the Cloud Partner Portal [documentation](https://cloudpartner.azure.com/#documentation/crm-create-offer). The portal documentation is only accessible to authorized users of the Cloud Partner Portal.
+All apps that are submitted to be listed on AppSource go through a certification process. For information about the checks done in the certification process, see [Appendix: App certification checklist](appendix-app-certification-checklist.md).
 
 ## See also
 
-[Getting started with the Cloud Partner Portal](https://cloudpartner.azure.com/#documentation/getting-started-with-the-cloud-partner-portal)
+[Overview of the Commercial Marketplace portal in Partner Center](https://docs.microsoft.com/azure/marketplace/partner-center-portal/commercial-marketplace-overview)  
 
 [Publish your app on AppSource](publish-app-appsource.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Section properties for model-driven app main forms in PowerApps | MicrosoftDocs
+title: Section properties for model-driven app main forms in Power Apps | MicrosoftDocs
 description: Understand the section properties for a main form
 Keywords: Main form; Section properties; Dynamics 365
 author: Mattp123
@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 06/06/2018
+ms.date: 03/23/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 2d3af6e9-e8a4-4129-b708-383b2740c015
@@ -25,16 +25,47 @@ search.app:
   
  Sections can have up to 4 columns and includes options for displaying how labels for fields in the section are displayed.  
   
- Headers and footers are similar to sections but cannot be removed. If they don’t contain anything they will not be shown. 
+ Headers and footers are similar to sections but cannot be removed. If they don't contain anything they will not be shown.
 
-You can access **Section properties** from the PowerApps site. 
-1. Sign in to [PowerApps](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+## Section properties in form designer
+
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
 
-3.  In the list of forms, open the form of type **Main**. Then double-click inside one of the sections to see the section properties. 
+3.  In the list of forms, open a form of type **Main**. To open a form in another tab, select **More commands** ![More Commands button](media/more-commands.gif "More Commands button for Forms"), and then select **Edit form** > **Edit form in new tab**.
 
-    ![section-properties](media/section-properties.png)
+4.  Select one of the sections to see the section properties.
+
+    > [!div class="mx-imgBorder"]
+    > ![section-properties](media/new-section-properties.png "Section properties in Form designer")
+
+|Property|Description|  
+|---------|--------------|  
+|**Section label**|**Required**: The localizable label for the section visible to users.|  
+|**Name**|**Required**: The unique name for the section that is used when referencing it in scripts. The name can contain only alphanumeric characters and underscores.|  
+|**Hide label**|Sections are frequently used without labels to control formatting of the fields within them.|
+|**Lock section**|This will prevent the section from accidentally being removed and prevents people from removing the contents.<br /><br /> Removing a section will not only remove the section, but also any fields within it.<br /><br /> Someone wanting to remove this section would need to change this setting before removing it.|  
+|**Hide section**|Showing the section is optional and can be controlled using scripts. More information: [Visibility options](visibility-options-legacy.md)|  
+|**Hide on phone**|Choose if you want the tab to be available on the phone.|  
+|**Formatting**|Specify up to four columns to be in the section.|  
+
+## Section properties in classic form designer
+
+You can access **Section properties** in solution explorer from the Power Apps site .
+
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+
+2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
+
+3.  In the list of forms, open the form of type **Main**. 
+
+4.  Select **Switch to classic** to edit the form in the classic form designer.
+
+5.  Double-click inside one of the sections to see the section properties. 
+
+    > [!div class="mx-imgBorder"]
+    > ![section-properties](media/section-properties.png "Section properties in solution explorer")
   
 |Tab|Property|Description|  
 |---------|--------------|-----------------|  
@@ -53,7 +84,7 @@ You can access **Section properties** from the PowerApps site.
 
 A new type of section called **Reference panel** can also be added. A Reference panel is a single column section. You can insert sub-grids, quick view control, or a Knowledge Base Search control inside a reference panel section. Each control that you added in the reference panel appears as a vertical tab within the panel at the runtime. You can drag and drop the various controls within the Reference panel section. The default tab at runtime is the first control added in the reference panel. The other tabs appear in the order in which they are added in the form editor. To delete a tab, use the delete key on your keyboard.  
   
-When you insert a reference panel, by default it’s added as a last section in the tab. You can add only one reference panel per form.  
+When you insert a reference panel, by default it's added as a last section in the tab. You can add only one reference panel per form.  
   
 > [!IMPORTANT]
 >  By default, the reference panel section is locked in these standard forms: Cases, Accounts, and Contacts. To remove it or change it, you must unlock it. 

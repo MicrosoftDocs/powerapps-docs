@@ -1,9 +1,9 @@
 ---
-title: "Customize entity and attribute mappings in PowerApps (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "Learn about mapping attributes between entities that have an entity relationship in PowerApps. This lets you set default values for a record that is created in the context of another record." # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Customize entity and attribute mappings in Power Apps (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "Learn about mapping attributes between entities that have an entity relationship in Power Apps. This lets you set default values for a record that is created in the context of another record." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID
@@ -44,7 +44,7 @@ The response received from InitializeFrom request consists of values of mapped a
 > [!NOTE] 
 > To determine if two entities can be mapped, use the following Web API request:<br/>`GET [Organization URI]/api/data/v9.0/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
 
-For more information see [Create a new entity from another entity](webapi/create-entity-web-api.md#create-a-new-entity-from-another-entity).
+For more information see [Create a new entity record from another entity](webapi/create-entity-web-api.md#create-a-new-entity-record-from-another-entity).
 
 ### Using Organization Service
 

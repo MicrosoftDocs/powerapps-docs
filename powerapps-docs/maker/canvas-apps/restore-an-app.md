@@ -1,24 +1,27 @@
 ---
 title: Restore your canvas app to a previous version | Microsoft Docs
-description: Restore a canvas app in PowerApps
+description: Restore a canvas app in Power Apps
 author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/16/2016
+ms.reviewer: tapanm
+ms.date: 03/05/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Restore a canvas app to a previous version in PowerApps
-This article shows you how to restore a canvas app to a previous version that was saved to the cloud from your PowerApps account.
+# Restore a canvas app to a previous version in Power Apps
+This article shows you how to restore a canvas app to a previous version that was saved to the cloud from your Power Apps account.
+
+> [!NOTE]
+> You can only restore app versions created in last six months.
 
 ## Restore an app from your account
-1. Open [powerapps.com](https://web.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap **Apps** in the left navigation bar.
+1. Open [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap **Apps** in the left navigation bar.
 
     ![Left navigation bar](./media/restore-an-app/file-apps.png)
 

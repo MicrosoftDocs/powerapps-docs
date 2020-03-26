@@ -1,15 +1,13 @@
 ---
-title: "Start a Dynamics 365 for Customer Engagement Web API project in Visual Studio (C#) (Common Data Service)| MicrosoftDocs"
+title: "Start a Common Data Service Web API project in Visual Studio (C#) (Common Data Service)| MicrosoftDocs"
 description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
 ms.custom: 
 ms.date: 04/22/2019
-ms.reviewer: 
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: 
-  - Dynamics 365 for Customer Engagement (online)
 ms.assetid: F96B384D-EF70-490D-BE3D-2E3883278B99
 caps.latest.revision: 14
 author: JimDaly
@@ -51,9 +49,9 @@ The following procedure demonstrates how to create a console application project
   
    ![A new console app project dialog in Common Data Service](media/new-project.PNG "A new console app project dialog in Common Data Service")  
   
-5. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name “StartWebAPI-CS” was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
+5. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name "StartWebAPI-CS" was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
   
-6. Under the **Project** menu, open the project’s properties form and verify the target framework is set to **.NET Framework 4.6.2**.  
+6. Under the **Project** menu, open the project's properties form and verify the target framework is set to **.NET Framework 4.6.2**.  
   
 #### Install and verify the required assembly references  
 
@@ -75,7 +73,7 @@ install-package System.Net.Http
   
 1.  In the **Solution Explorer**, open **Program.cs** for editing.  
   
-2.  At the top of the file, add the following `using` statements, which reference namespaces commonly used in Dynamics 365 for Customer Engagement Web API-based solutions.  
+2.  At the top of the file, add the following `using` statements, which reference namespaces commonly used in Common Data Service Web API-based solutions.  
   
     ```csharp
     using Newtonsoft.Json;  
@@ -104,7 +102,7 @@ This section explains how to add a basic set of settings and instructions to per
         <clear />  
   
         <!-- When providing a password, make sure to set the app.config file's security so that only you can read it. -->  
-        <add name="default"   connectionString="Url=http://myserver/myorg/; Username=name; Password=password; Domain=domain" />  
+        <add name="default"   connectionString="Url=https://myserver/myorg/; Username=name; Password=password; Domain=domain" />  
         <add name="CrmOnline" connectionString="Url=https://mydomain.crm.dynamics.com/; Username=someone@mydomain.onmicrosoft.com; Password=password" />  
       </connectionStrings>  
   
@@ -114,7 +112,7 @@ This section explains how to add a basic set of settings and instructions to per
         <!--Active Directory application registration. -->  
         <!--These are dummy values and should be replaced with your actual app registration values.-->  
         <add key="ClientId" value="e5cf0024-a66a-4f16-85ce-99ba97a24bb2" />  
-        <add key="RedirectUrl" value="http://localhost/SdkSample" />  
+        <add key="RedirectUrl" value="https://localhost/SdkSample" />  
   
         <!-- Use an alternate configuration file for connection string and setting values. This optional setting  
         enables use of an app.config file shared among multiple applications. If the specified file does  
@@ -136,5 +134,5 @@ This section explains how to add a basic set of settings and instructions to per
 ### See also
 
  [Get Started with the Web API (C#)](get-started-dynamics-365-web-api-csharp.md)   
- [Use the Dynamics 365 for Customer Engagement Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)   
+ [Use the Web API Helper Library (C#)](use-microsoft-dynamics-365-web-api-helper-library-csharp.md)   
  [Perform operations using the Web API](perform-operations-web-api.md)

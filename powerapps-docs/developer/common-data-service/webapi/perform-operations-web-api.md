@@ -7,11 +7,9 @@ ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-- "Common Data Service (online)"
 ms.assetid: b7ae4dd3-e9ee-45cc-a345-2fb7be5eddc6
 caps.latest.revision: 12
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "susikka"
 manager: "shujoshi"
 search.audienceType: 
@@ -25,7 +23,7 @@ search.app:
 The Web API provides a modern, RESTful web service you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices.
 
 > [!NOTE]
-> Information under this section is also applicable to the Dynamics 365 for Customer Engagement apps users (online and on-premises). 
+> Information under this section is also applicable to the Dynamics 365 Customer Engagement (on-premises) users. 
 
 
 ## In this section

@@ -1,20 +1,20 @@
 ---
 title: 'Date Picker control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Date Picker control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
+ms.reviewer: tapanm
 ms.date: 10/25/2016
-ms.author: fikaradz
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Date Picker control in PowerApps
+# Date Picker control in Power Apps
 A control that the user can click or tap to specify a date.
 
 ## Description
@@ -23,7 +23,7 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 ## Key properties
 **DefaultDate** – The initial value of a date control unless the user changes it.
 
-**SelectedDate** – The date currently selected in a date control.
+**SelectedDate** – The date currently selected in a date control.  This date is represented in local time.
 
 **Format** – The text format in which the control shows the date and the user specifies the date. You can set this property to **ShortDate** (default) or **LongDate** to format dates based on the **Language** property of this control. You can also set this property to an expression, such as **yyyy/mm/dd** if you want the same format regardless of language. For example:
 
@@ -42,6 +42,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **[BorderThickness](properties-color-border.md)** – The thickness of a control's border.
 
 **[Color](properties-color-border.md)** – The color of text in a control.
+
+**DateTimeZone** – Whether to display the date in **UTC** or the user's **Local** time.
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (Edit), only displays data (View), or is disabled (Disabled).
 
@@ -71,6 +73,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 
 **InputTextPlaceholder** – Instructional text that appears if no dates are entered.
 
+**IsEditable** – Whether the datepicker text can be edited. If false, the date can only be changed by using the calendar.
+
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
@@ -84,6 +88,8 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **[PaddingTop](properties-size-location.md)** – The distance between text in a control and the top edge of that control.
 
 **[Size](properties-text.md)** – The font size of the text that appears on a control.
+
+**StartOfWeek** – The day of the week to display in the first day column of the date-picker control.
 
 **StartYear** – The earliest year to which the user can set the value of a date-picker control.
 

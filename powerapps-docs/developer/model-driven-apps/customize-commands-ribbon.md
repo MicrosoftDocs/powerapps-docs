@@ -4,12 +4,10 @@ description: "Common Data Service displays commands in different ways depending 
 keywords: ""
 ms.date: 10/31/2018
 ms.service: powerapps
-ms.custom:
-  - ""
 ms.topic: article
 ms.assetid: 926364b0-ede6-00e9-39d4-5aae5e00be0b
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -36,11 +34,11 @@ search.app:
   
  The SDK describes the process of editing the ribbon by editing the customization.xml file directly. Several people have created ribbon editors that provide a user interface to make editing the ribbon easier. Currently the following projects are available on Codeplex and other locations:  
   
-- [Ribbon Workbench](http://www.develop1.net/public/rwb/ribbonworkbench.aspx)  
+- [Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx)  
   
-- [MS CRM 2011 : Pragma Toolkit : Ribbon, Site Map Editor](http://pragmatoolkit.codeplex.com/)  
+- [MS CRM 2011 : Pragma Toolkit : Ribbon, Site Map Editor](https://pragmatoolkit.codeplex.com/)  
   
-- [CRM 2011 Visual Ribbon Editor](http://crmvisualribbonedit.codeplex.com/)  
+- [CRM 2011 Visual Ribbon Editor](https://crmvisualribbonedit.codeplex.com/)  
   
   To obtain support or help to use these programs, contact the program publisher.  
   

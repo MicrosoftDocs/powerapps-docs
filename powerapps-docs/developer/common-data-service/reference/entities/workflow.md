@@ -1,7 +1,7 @@
 ---
 title: "Workflow Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Workflow entity."
-ms.date: 04/01/2019
+description: "Includes schema information and supported messages for the Workflow entity in Common Data Service."
+ms.date: 11/07/2019
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,7 +12,6 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
-  - D365CE
 ---
 # Workflow Entity Reference
 
@@ -94,6 +93,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [TriggerOnDelete](#BKMK_TriggerOnDelete)
 - [TriggerOnUpdateAttributeList](#BKMK_TriggerOnUpdateAttributeList)
 - [Type](#BKMK_Type)
+- [UIFlowType](#BKMK_UIFlowType)
 - [UniqueName](#BKMK_UniqueName)
 - [UpdateStage](#BKMK_UpdateStage)
 - [WorkflowId](#BKMK_WorkflowId)
@@ -168,6 +168,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |3|Action|
 |4|Business Process Flow|
 |5|Modern Flow|
+|6|Reserved|
 
 
 
@@ -736,6 +737,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |1|Definition|
 |2|Activation|
 |3|Template|
+
+
+
+### <a name="BKMK_UIFlowType"></a> UIFlowType
+
+|Property|Value|
+|--------|-----|
+|Description|Type of the UI Flow process.|
+|DisplayName|UI Flow Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|uiflowtype|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### UIFlowType Options
+
+|Value|Label|
+|-----|-----|
+|0|Desktop|
+|1|Selenium IDE|
+|2|PowerShell|
 
 
 
@@ -1459,6 +1483,10 @@ Listed by **SchemaName**.
 - [lk_newprocess_processid](#BKMK_lk_newprocess_processid)
 - [Workflow_SyncErrors](#BKMK_Workflow_SyncErrors)
 - [workflow_active_workflow](#BKMK_workflow_active_workflow)
+- [regardingobjectid_process](#BKMK_regardingobjectid_process)
+- [workflow_workflowbinary_Process](#BKMK_workflow_workflowbinary_Process)
+- [msdyn_workflow_msdyn_solutionhealthrule_Workflow](#BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow)
+- [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](#BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction)
 
 
 ### <a name="BKMK_Workflow_Annotation"></a> Workflow_Annotation
@@ -1654,6 +1682,74 @@ Same as workflow entity [workflow_active_workflow](workflow.md#BKMK_workflow_act
 |ReferencedEntityNavigationPropertyName|workflow_active_workflow|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
+
+**Added by**: Power Automate Extensions package Solution
+
+Same as flowsession entity [regardingobjectid_process](flowsession.md#BKMK_regardingobjectid_process) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|flowsession|
+|ReferencingAttribute|regardingobjectid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|regardingobjectid_process|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_workflow_workflowbinary_Process"></a> workflow_workflowbinary_Process
+
+**Added by**: Power Automate Extensions package Solution
+
+Same as workflowbinary entity [workflow_workflowbinary_Process](workflowbinary.md#BKMK_workflow_workflowbinary_Process) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|workflowbinary|
+|ReferencingAttribute|process|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|workflow_workflowbinary_Process|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow"></a> msdyn_workflow_msdyn_solutionhealthrule_Workflow
+
+**Added by**: Power Apps Checker Solution
+
+Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule_Workflow](msdyn_solutionhealthrule.md#BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_solutionhealthrule|
+|ReferencingAttribute|msdyn_workflow|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_workflow_msdyn_solutionhealthrule_Workflow|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction"></a> msdyn_workflow_msdyn_solutionhealthrule_resolutionaction
+
+**Added by**: Power Apps Checker Solution
+
+Same as msdyn_solutionhealthrule entity [msdyn_workflow_msdyn_solutionhealthrule_resolutionaction](msdyn_solutionhealthrule.md#BKMK_msdyn_workflow_msdyn_solutionhealthrule_resolutionaction) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_solutionhealthrule|
+|ReferencingAttribute|msdyn_resolutionaction|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_workflow_msdyn_solutionhealthrule_resolutionaction|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

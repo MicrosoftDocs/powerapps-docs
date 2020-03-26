@@ -1,24 +1,24 @@
 ---
 title: 'Export control and Import control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Export control and the Import control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 10/25/2016
-ms.author: fikaradz
+ms.reviewer: tapanm
+ms.date: 03/09/2020
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Export control and Import control in PowerApps
-Controls for exporting data to a local file and then importing that data into another app in PowerApps.
+# Export control and Import control in Power Apps
+Controls for exporting data to a local file and then importing that data into another app in Power Apps.
 
 ## Description
-If you want to create more than one app that uses the same data but not share that data outside those apps, you can export it and import it by using an **Export** control and an **Import** control. When you export data, you create a compressed file that you can copy to another machine, but you can't read it in any program other than PowerApps.
+If you want to create more than one app that uses the same data but not share that data outside those apps, you can export it and import it by using an **Export** control and an **Import** control. When you export data, you create a compressed file that you can copy to another machine, but you can't read it in any program other than Power Apps.
 
 ## Warning
 Enabling this functionality in your app may expose it to security vulnerabilities and data leakage.  It is recommended to advise users to import only recognized and trusted files and only export data that is not confidential or sensitive.
@@ -109,20 +109,19 @@ The export functionality isn't supported in web browsers.
 **[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Example
-1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula:
-   <br>**ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})**
-   
-    Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-   
-    Want more information about the **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-2. Press F5, click or tap the **[Button](control-button.md)** control, and then press Esc.
+1. Add a **[Button](control-button.md)** control, and set its **[OnSelect](properties-core.md)** property to this formula: <br>
+   ```
+   ClearCollect(Products, {Name:"Europa", Price:"10.99"}, {Name:"Ganymede", Price:"12.49"}, {Name:"Callisto", Price:"11.79"})
+   ```
+   For more details, read [adding, naming, and configuring a control](../add-configure-controls.md), **[ClearCollect](../functions/function-clear-collect-clearcollect.md)** and [other functions](../formula-reference.md).
+2. Press F5 and select **[Button](control-button.md)** control, and then press Esc.
 3. Add an **Export** control, and set its **Data** property to **Products**.
-4. Press F5, click or tap the **Export** control, and then specify the name of the file into which you want to export the data.
-5. Click or tap **Save**, then press Esc to return to the default workspace.
+4. Press F5 and select the **Export** control to download the file *Data.zip*.
+5. Select **Save**, then press Esc to return to the default workspace.
 6. In a new or existing app, add an **Import** control, name it **MyData**, and set its **[OnSelect](properties-core.md)** property to this formula:<br>
    **Collect(ImportedProducts, MyData.Data)**
-7. Press F5, click or tap **MyData**, click or tap the file that you exported, and then click or tap **Open**.
-8. Press Esc, click or tap **Collections** on the **File** menu, and confirm that the current app has the data that you exported.
+7. Press F5 and select **MyData**, then select the file that you exported, and then select **Open**.
+8. Press Esc and select **Collections** on the **File** menu, and confirm that the current app has the data that you exported.
 
 
 ## Accessibility guidelines

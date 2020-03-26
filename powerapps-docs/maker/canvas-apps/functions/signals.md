@@ -1,20 +1,20 @@
 ---
 title: Acceleration, App, Compass, Connection, and Location signals | Microsoft Docs
-description: Reference information, including syntax and examples, for the Acceleration, App, Compass, Connection, and Location sensors in PowerApps
+description: Reference information, including syntax and examples, for the Acceleration, App, Compass, Connection, and Location sensors in Power Apps
 author: gregli-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: anneta
-ms.date: 05/29/2019
+ms.reviewer: tapanm
+ms.date: 02/07/2020
 ms.author: gregli
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Acceleration, App, Compass, Connection, and Location signals in PowerApps
+# Acceleration, App, Compass, Connection, and Location signals in Power Apps
 
 Returns information about the app's environment, such as where the user is located in the world and which screen is displayed.
 
@@ -72,8 +72,8 @@ As the location changes, dependencies on the location will continuously recalcul
 | Property | Description |
 | --- | --- |
 | **Location.Altitude** |Returns a number that indicates the altitude, measured in feet, above sea level. |
-| **Location.Latitude** |Returns a number, from -90 to 90, that indicates the latitude, as measured in degrees from the equator. A positive number indicates a location that's north of the equator. |
-| **Location.Longitude** |Returns a number, from 0 to 180, that indicates the longitude, as measured in degrees west from Greenwich, England. |
+| **Location.Latitude** |Returns a number, from –90 to 90, that indicates the latitude, as measured in degrees from the equator. A positive number indicates a location that's north of the equator. |
+| **Location.Longitude** |Returns a number, from –180 to 180, that indicates the longitude, as measured in degrees from Greenwich, England.  A positive number indicates a location that's east of Greenwhich. |
 
 ## Examples
 In a baseball field, a pitcher throws a phone from the pitcher's mound to a catcher at home plate. The phone is lying flat with respect to the ground, the top of the screen is pointed at the catcher, and the pitcher adds no spin. At this location, the phone has cellular network service that's metered but no WiFi. The **PlayBall** screen is displayed.   

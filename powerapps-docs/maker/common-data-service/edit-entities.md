@@ -1,5 +1,5 @@
 ---
-title: "Edit an entity in PowerApps | MicrosoftDocs"
+title: "Edit an entity in Power Apps | MicrosoftDocs"
 description: "Learn the different ways that an entity can be edited"
 ms.custom: ""
 ms.date: 05/15/2018
@@ -34,10 +34,10 @@ There are two ways to edit an entity using a designer:
 
 |Designer|Description|
 |--|--|
-|[PowerApps portal](https://web.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.|
+|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.|
 |Solution explorer|Not as easy, but provides for more flexibility for less common requirements.|
 
-In both the PowerApps portal and solution explorer you can perform the following:
+In both the Power Apps portal and solution explorer you can perform the following:
 
 - **Edit the entity fields**. More information:  [Create and edit fields for Common Data Service](create-edit-fields.md)
   
@@ -57,9 +57,9 @@ You can also make changes to records that support the entity:
 
 - **Charts**. [Create or edit a system chart](../model-driven-apps/create-edit-system-chart.md)
 
-## Edit using PowerApps portal designer
+## Edit using Power Apps portal designer
 
-Within the PowerApps portal designer there are only three entity properties you can edit:
+Within the Power Apps portal designer there are only three entity properties you can edit:
  - Display name
  - Plural display name
  - Description

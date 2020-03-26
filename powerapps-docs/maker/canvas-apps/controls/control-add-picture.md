@@ -1,30 +1,30 @@
 ---
 title: 'Add picture control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Add picture control
-author: fikaradz
+author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.date: 10/25/2016
-ms.author: fikaradz
-ms.reviewer: anneta
+ms.author: chmoncay
+ms.reviewer: tapanm
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# Add picture control in PowerApps
+# Add picture control in Power Apps
 Takes a photo or loads images from the local device.
 
 ## Description
 With this control users can take photos or upload image files from their device and update the data source with this content. On a mobile device the user is presented with the device's choice dialog to choose between taking a photo or selecting one already available.
 
-This control is a grouped control containing two controls: an **Image** and an **Add media button**. The **Image** control shows the uploaded image or a placeholder if no image has been uploaded. The **Add media button** prompts for an image to be uploaded.
+This control is a grouped control containing two controls: an **Image** and an **Add picture button**. The **Image** control shows the uploaded image or a placeholder if no image has been uploaded. The **Add picture button** prompts for an image to be uploaded.
 
 See the [Image control reference](control-image.md) for **Image** properties.
 
-## Add media button properties
+## Add picture button properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of adding a picture.
 
 **[Align](properties-text.md)** – The location of text in relation to the horizontal center of its control.
@@ -136,12 +136,12 @@ Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to s
 The same guidelines for **[Button](control-button.md)** and **[Image](control-image.md)** apply. In addition, consider the following:
 
 ### Color contrast
-* **Add media button** must have adequate contrast between its text and background. Since the uploaded image may have varying colors, use an opaque **[Fill](properties-color-border.md)** on the **Add media button** to ensure consistent contrast.
+* **Add picture button** must have adequate contrast between its text and background. Since the uploaded image may have varying colors, use an opaque **[Fill](properties-color-border.md)** on the **Add picture button** to ensure consistent contrast.
 
 ### Screen reader support
-* **Add media button** must have **Text** and **ChangePictureText** that prompts the user to add or change a picture.
+* **Add picture button** must have **Text** and **ChangePictureText** that prompts the user to add or change a picture.
 
 ### Keyboard support
-* **Add media button** must have **[TabIndex](properties-accessibility.md)** of zero or greater so that keyboard users can navigate to it.
-* **Add media button** must have clearly visible focus indicators. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
+* **Add picture button** must have **[TabIndex](properties-accessibility.md)** of zero or greater so that keyboard users can navigate to it.
+* **Add picture button** must have clearly visible focus indicators. Use **[FocusedBorderColor](properties-color-border.md)** and **[FocusedBorderThickness](properties-color-border.md)** to achieve this.
  

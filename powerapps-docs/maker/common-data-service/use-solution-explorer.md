@@ -1,17 +1,11 @@
 ---
-title: "Use solutions in PowerApps | MicrosoftDocs"
+title: "Use solutions in Power Apps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
-ms.date: 06/17/2019
-ms.reviewer: ""
+ms.date: 10/28/2019
+ms.reviewer: tapanm
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "caburk"
 ms.assetid: 72bacfbb-96a3-4daa-88ff-11bdaaac9a3d
 caps.latest.revision: 57
@@ -23,15 +17,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use solutions in PowerApps
+# Use solutions in Power Apps
 
- Within PowerApps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
+ Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
  
 > [!div class="mx-imgBorder"]  
 > ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
  
 > [!NOTE]
->  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[PowerApps admin center](https://admin.powerapps.com/)> **Environments** > select your environment > **Details** tab. For earlier version environments, selecting a solution opens it in the classic experience.  
+>  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[Power Apps admin center](https://admin.powerapps.com/)> **Environments** > select your environment > **Details** tab. For earlier version environments, selecting a solution opens it in the classic experience.  
  
  You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
@@ -75,7 +69,7 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
   
- With solutions that are managed, only certain commands are available and you’ll see the message as shown below. You’ll need to locate the component in the solution named **Default Solution** and try to edit it there or add it to another unmanaged solution that you’ve created. The component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
+ With solutions that are managed, only certain commands are available and you’ll see the message as shown below. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
 
 > [!div class="mx-imgBorder"]  
 > ![Managed solution](media/managed-solution.PNG "Managed solution")  
@@ -87,23 +81,29 @@ search.app:
 
 ## Classic solution explorer
 
-In PowerApps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** in the command bar. Classic solution explorer is the one that was previously available through the **Settings > Advanced customizations** area in PowerApps. If you are a Dynamics 365 for Customer Engagement user, you use the classic solution explorer to work with solutions.  
+In Power Apps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** in the command bar. Classic solution explorer is the one that was previously available through the **Settings > Advanced customizations** area in Power Apps. 
 
 ## Known limitations
 
-- Custom connectors are not available in a solution.
-- Canvas apps must be opened after a solution is imported to update the connections.
-- If a canvas app is packaged in a managed solution it can still be edited in the target environment, but not re-published.
-- Dependencies are not available for canvas apps.
-- Deleting a managed solution will not rollback to a different canvas app's version. 
--	Canvas app access (CRUD and security) is managed entirely in PowerApps and not the Common Data Service (Common Data Service) database.
--	Common Data Service APIs to call canvas apps are blocked and don't return anything. 
--	Canvas apps and flows created in a solution can't be shared as co-owner to an AAD Security Group.
--	Canvas apps won't display in the classic solution explorer.
+The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
+
+- Canvas app button triggered flows are currently not supported in solutions. Create the app and flow outside of a solution, and export the .msapp file to migrate canvas apps with an embedded button triggered flow. 
+- If a canvas app is packaged in a managed solution, it can't be edited and re-published in the target environment. Use unmanaged solutions if the apps require editing in the target environment. 
+- Connections require authentication and consent, which requires an interactive user session and therefore cannot be transported via solutions. After importing your solution, play the app to authenticate connections. You can also create the connections in the target environment prior to importing the solution. 
+-	Canvas apps shared as co-owner to an Azure Active Directory (AAD) security group can't be added to solutions. Unshare the app before adding it to a solution.
+-	Canvas apps won't display in the classic solution explorer. Use the modern experience.
+-	Canvas app access (CRUD and security) is managed entirely in Power Apps and not in the Common Data Service database.
+- Database operations such as backup, restore, and copy are not supported for canvas apps and flows. These operations can corrupt canvas apps and flows.
+- Deleting a managed solution does not rollback to a different canvas app version. Instead, all versions of the app are deleted.
+- Importing a solution containing a flow will not automatically create or associate required connections. The flow must be edited to fix the connections.
+  - If using managed solutions, this creates an active customization in the unmanaged layer. Therefore subsequent solution updates to the flow will not be reflected. 
+- Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
 - Button triggered flows are not available in solutions.
-- Canvas app triggered flows are not available in solutions.
-- Flows triggered from Microsoft 365 applications such as SharePoint and Excel are not available in solutions.
+- Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
+- Flows that connect to SharePoint are not available in solutions.
 - Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
+- Custom connectors created outside solutions cannot be added to solutions at this time.
+
 
  For details about customizing the individual components in a solution, see the following topics:  
   

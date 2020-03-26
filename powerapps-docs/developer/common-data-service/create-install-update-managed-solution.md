@@ -3,7 +3,7 @@ title: "Create, install, and update a managed solution (Common Data Service) | M
 description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
@@ -45,7 +45,7 @@ You create a managed solution by exporting an unmanaged solution as a managed so
 > [!IMPORTANT]
 >  Installing a solution or publishing customizations can interfere with normal system operation. We recommend that you schedule solution imports when it’s least disruptive to users.  
   
- If the solution did not import successfully, you can click **Download Log** in the dialog box to download a report that will provide information about errors that occurred that prevented successful import of the managed solution. This file is an XML document configured to be opened by using Ofice Excel.  
+ If the solution did not import successfully, you can click **Download Log** in the dialog box to download a report that will provide information about errors that occurred that prevented successful import of the managed solution. This file is an XML document configured to be opened by using Office Excel.  
   
  You can import or update a managed solution programmatically by using the <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> message. When using this message, you can request a reference to an `ImportJob`  entity record that will include details about the success of the import. More information: [Install or Upgrade a Solution](work-solutions.md#BKMK_InstallUpgradeSolution)  
   

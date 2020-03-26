@@ -11,9 +11,9 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 337f5d15-66be-46db-a96a-309951a37a2a
 caps.latest.revision: 20
-author: "brandonsimons" # GitHub ID
+author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -46,7 +46,7 @@ This sample demonstrates how to perform bound and unbound functions and actions,
  
 ## Run this sample
 
-To run this sample, go to  [Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript)](http://go.microsoft.com/fwlink/p/?LinkId=824048) and download the Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the  WebAPIFunctionsandActions_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Common Data Service organization and view the configuration page of the solution to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
+To run this sample, go to  [Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript)](https://go.microsoft.com/fwlink/p/?LinkId=824048) and download the Microsoft CRM Web API Functions and Actions Sample (Client-side JavaScript).zip sample file. Extract the contents and locate the  WebAPIFunctionsandActions_1_0_0_0_managed.zip managed solution file. Import the managed solution into your Common Data Service organization and view the configuration page of the solution to run the sample. For instructions on how to import the sample solution, see [Web API Samples (Client-side JavaScript)](../web-api-samples-client-side-javascript.md).  
   
 <a name="bkmk_codeSample"></a>
 

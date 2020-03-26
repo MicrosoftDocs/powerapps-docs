@@ -8,7 +8,7 @@ applies_to:
 ms.assetid: b58e6173-e3cd-4a3b-b39a-334c295503ec
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -59,7 +59,7 @@ You must include a reference to the **ClientGlobalContext.js.aspx** page located
 > [!NOTE]
 > Using a relative path including the root WebResources folder, for example, /WebResources/ClientGlobalContext.js.aspx, is not recommended because it can cause the page to lose organization context in a multi-tenant environment.
 
-The **ClientGlobalContext.js.aspx** page will include some global event handlers. These event handlers will cancel the [onselectstart](https://developer.mozilla.org/en-US/docs/Web/Events/selectstart), [contextmenu](https://developer.mozilla.org/en-US/docs/Web/Events/contextmenu), and [ondragstart](https://developer.mozilla.org/en-US/docs/Web/Events/dragstart) events. 
+The **ClientGlobalContext.js.aspx** page will include some global event handlers. These event handlers will cancel the [onselectstart](https://developer.mozilla.org/docs/Web/Events/selectstart), [contextmenu](https://developer.mozilla.org/docs/Web/Events/contextmenu), and [ondragstart](https://developer.mozilla.org/docs/Web/Events/dragstart) events. 
 
 ### Related topics
 

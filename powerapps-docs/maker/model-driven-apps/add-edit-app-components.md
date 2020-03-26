@@ -1,8 +1,8 @@
 ---
-title: "Tutorial to add or edit model-driven app components with PowerApps | MicrosoftDocs"
-description: "Use the PowerApps app designer to add or edit components"
+title: "Tutorial to add or edit model-driven app components with Power Apps | MicrosoftDocs"
+description: "Use the Power Apps app designer to add or edit components"
 keywords: ""
-ms.date: 10/15/2018
+ms.date: 03/05/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -25,7 +25,7 @@ search.app:
   - D365CE
 ---
 
-# Tutorial: Add or edit model-driven app components in the PowerApps app designer
+# Tutorial: Add or edit model-driven app components in the Power Apps app designer
 
 In this tutorial you learn how to add components to and remove components from a model-driven app. 
 
@@ -36,7 +36,8 @@ The app designer refers to existing metadata in the default solution. You can us
 ## App designer layout  
  The app designer has two main areas. On the left side is the canvas where you add app components.  
   
-![App designer canvas](../model-driven-apps/media/app-designer-canvas-pane.png)
+ > [!div class="mx-imgBorder"]
+ > ![App designer canvas](../model-driven-apps/media/app-designer-canvas-pane.png "App designer canvas")
 
  On the right side are tabs that you'll use to select components and set component properties.  
  
@@ -51,9 +52,9 @@ The app designer refers to existing metadata in the default solution. You can us
  > ![Canvas search option](media/app-designer-search-tab.png "Canvas search")
 
 ## Open an app
-1. Sign in to [PowerApps](https://web.powerapps.com/). 
+1. Sign in to [Power Apps](https://make.powerapps.com/). 
 
-2. Select an existing model-driven app or select **Start from blank**. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md#create-an-app).
+2. Select an existing model-driven app or select **Model-driven app from blank**. For information about how to create an app, see [Create or edit a model-driven app by using the app designer](create-edit-app.md#create-an-app).
 
 ## Add an artifact (entity, dashboard, or business process flow)  
  When you add a dashboard or business process flow to an app, the entities they use are automatically added to the app. When you add an entity, the tiles for its assets are automatically added. There are two ways you can add artifacts to the designer canvas: by using the **Add** button  ![Add button on the designer](../model-driven-apps/media/dynamics365-designer-addbutton.PNG "Add button on the designer") on the command bar or by using the tiles on the **Components** tab.  
@@ -80,9 +81,10 @@ The app designer refers to existing metadata in the default solution. You can us
 
      Those dashboards will be added to the **Dashboard** tile on the app designer canvas. The **Dashboard** tile also shows a count of the number of dashboards you added to the app. If you don't select a dashboard, **All** will appear instead of the dashboard count, and all dashboards will be available to users when they use the app.  
   
-     All entities the dashboard uses are also added to the **Entity View** area. For example, if you add the Customer Service Manager dashboard, the Case, Entitlement, and Queue Item entities are added to the Entity View area. For each entity, tiles for its assets are also added. You can use these tiles to add forms, views, and charts. More information:[Add or edit app components in the PowerApps app designer](add-edit-app-components.md#bkmk_AddEntityAssets)   
+     All entities the dashboard uses are also added to the **Entity View** area. For example, if you add the Customer Service Manager dashboard, the Case, Entitlement, and Queue Item entities are added to the Entity View area. For each entity, tiles for its assets are also added. You can use these tiles to add forms, views, and charts. More information: [Add or edit app components in the Power Apps app designer](add-edit-app-components.md#bkmk_AddEntityAssets)   
   
-    ![Add entity to the app designer canvas](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add an entity to the app designer canvas")  
+    > [!div class="mx-imgBorder"]
+    > ![Add entity to the app designer canvas](../model-driven-apps/media/add-entity-app-designer-canvas.png "Add an entity to the app designer canvas")  
   
 4.  If the dashboard you want doesn't exist in the default solution, create a dashboard by selecting **Create New** on the **Components** tab to the right of the canvas.  
   

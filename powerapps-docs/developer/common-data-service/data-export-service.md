@@ -3,7 +3,7 @@ title: "Data export service (Common Data Service) | Microsoft Docs" # Intent and
 description: "Capabilities, prerequisites, API, and programming of the Data Export Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "sabinn-msft" # GitHub ID
@@ -17,14 +17,14 @@ search.app:
 ---
 # Data export service
 
-Data Export is an add-on service made available as a Common Data Service solution that adds the ability to replicate Common Data Service data to a Microsoft Azure SQL Database store in a customer-owned Microsoft Azure subscription. The supported target destinations are Microsoft Azure SQL Database and Microsoft Azure SQL Server on Microsoft Azure virtual machines. Data Export intelligently synchronizes the entire Dynamics 365 schema and data initially and thereafter synchronizes on a continuous basis as changes occur (delta changes) in the Dynamics 365 (online) system.  
+Data Export is an add-on service made available as a Common Data Service solution that adds the ability to replicate Common Data Service data to a Microsoft Azure SQL Database store in a customer-owned Microsoft Azure subscription. The supported target destinations are Microsoft Azure SQL Database and Microsoft Azure SQL Server on Microsoft Azure virtual machines. Data Export intelligently synchronizes the entire Common Data Service schema and data initially and thereafter synchronizes on a continuous basis as changes occur (delta changes) in Common Data Service.  
   
- The Data Export service provides an interface for managing configuration and ongoing administration of this service from within Common Data Service.  For more information, see [Data Export](https://technet.microsoft.com/library/a70feedc-12b9-4a2d-baf0-f489cdcc177d). This topic explains the corresponding programmatic interface and issues for this service.  
+The Data Export service provides an interface for managing configuration and ongoing administration of this service from within Common Data Service.  For more information, see [Replicate data to Azure SQL Database](https://docs.microsoft.com/power-platform/admin/replicate-data-microsoft-azure-sql-database). This topic explains the corresponding programmatic interface and issues for this service.  
   
 ## Prerequisites for using the Data Export Service  
- Because this service requires access to an external Microsoft Azure SQL Database from Common Data Service,   a number of prerequisites must be satisfied before you can successfully access this service. The following perquisites are more fully explained from an administrator's perspective in the section [Prerequisites for using Data Export Service](https://technet.microsoft.com/library/mt744592.aspx).  
+ Because this service requires access to an external Microsoft Azure SQL Database from Common Data Service, a number of prerequisites must be satisfied before you can successfully access this service. The following perquisites are more fully explained from an administrator's perspective in the section [Prerequisites for using Data Export Service](/power-platform/admin/replicate-data-microsoft-azure-sql-database#prerequisites-for-using-).  
   
- Your Common Data Service service must be configured so that:  
+ Your Common Data Service environment must be configured so that:  
   
 - The entities that will be exported are enabled with change tracking. For more information, see [Use change tracking to synchronize data with external systems](use-change-tracking-synchronize-data-external-systems.md).  
   
@@ -62,7 +62,7 @@ For online solutions and services, Azure provides a [Key Vault](https://azure.mi
 It is also advised that you add the domain https://discovery.crmreplication.azure.net/ to the trusted sites list in your browser and to enable pop-ups for this site.  
   
 ## Programming for the Data Export Service  
- The Data Export Service exposes a REST-based API that is divided into two groups: a set of `Metadata` operations for exploring Common Data Service organizational structure, relationships, and connection information; and a set of `Profiles` operations    for configuring and managing each data replication.  This API is fully defined and documented at the following [Swagger](http://swagger.io/) URLs:  
+ The Data Export Service exposes a REST-based API that is divided into two groups: a set of `Metadata` operations for exploring Common Data Service organizational structure, relationships, and connection information; and a set of `Profiles` operations    for configuring and managing each data replication.  This API is fully defined and documented at the following [Swagger](https://swagger.io/) URLs:  
   
 |Swagger endpoint|Description|  
 |----------------------|-----------------|  
@@ -104,7 +104,7 @@ Because only Common Data Service System Administrators are authorized to perform
   
 ```csharp  
   
-//Reference Azure AD authentication Library (ADAL)    
+//Reference Azure AD authentication Library (ADAL v2.29)    
 using Microsoft.IdentityModel.Clients.ActiveDirectory;  
    . . .  
     string yourAppClientID = "[app-associated-GUID]";   //Your AAD-registered AppId   
