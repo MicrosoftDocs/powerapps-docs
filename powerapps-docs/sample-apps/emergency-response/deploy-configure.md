@@ -231,7 +231,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
 1.  Select the **Emergency Response App** record to open it for editing.
 
-    1.  Double click the icon to specify a new image as the app icon.
+    1.  Double-click the icon to specify a new image as the app icon.
 
     2.  Update the app names and colors for your app.
 
