@@ -25,7 +25,7 @@ This section provides you information on how to deploy the Emergency Response ap
 
 ### Step 1: Sign up for Power Apps and create an environment
 
-If you don't have already have Power Apps, sign up for Power Apps and purchase an appropriate license.
+If you don't already have Power Apps, sign up for Power Apps and purchase an appropriate license.
 
 More information:
 
@@ -54,7 +54,7 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 #### What's in the deployment package?
 
-Get the latest deployment file (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution files, images, and data files to set up the apps and business logic for the Emergency Response app.
+Get the latest deployment file (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution file, images, and data files to set up the apps and business logic for the Emergency Response app.
 
 To begin the deployment process, extract the deployment file (.zip) to a location on your computer. The extracted folder will contain the following folders:
 
@@ -92,7 +92,7 @@ Select the **Admin App** to open the model-driven app that lets you configure th
 > [!div class="mx-imgBorder"] 
 > ![Open Admin app](media/conf-admin-app-open.png "Open the Admin app")
 
-The admin app has a bunch of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to view and manage entities in various areas.
+The admin app has a number of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to select a different area.
 
 #### Step 2.2: Load configuration and master data for your organization
 
@@ -125,7 +125,7 @@ The **Data Files** folder has the following files and folders:
 </ul>
 <br/>Importing data to these entities will create records for these entities that are required for the Emergency Response app to work.
 <br/>
-<strong>Caution</strong>: Ensure that you don't update the configuration values in these entities, except for the App and App Config entities as explained later.</td>
+<strong>Caution</strong>: Ensure that you don't update the configuration values in these entities, except for the <strong>Apps</strong> and <strong>App Config</strong> entities as explained later.</td>
 </tr>
 <tr>
 <td><strong>Sample Data</strong> folder</td>
@@ -165,16 +165,16 @@ To load sample data from one of the data files to an entity:
 
 4.  After the sample data is imported, you will see the imported record in the entity:
 
-  > [!div class="mx-imgBorder"] 
-  > ![Entity record](media/conf-entity-record.png "Record in the entity after import")
+    > [!div class="mx-imgBorder"] 
+    > ![Entity record](media/conf-entity-record.png "Record in the entity after import")
 
 Repeat the above steps with other entities.
 
 Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
 
-#### Import mandatory data
+#### Import mandatory configuration data
 
-Importing the following files is mandatory before you move to the next step:
+Importing the configuration data under the following entities in the admin app is **mandatory** before you move to the next step:
 
 | Area name | Entity name| File name
 |-|-|-
@@ -184,7 +184,7 @@ Importing the following files is mandatory before you move to the next step:
 | Staffing | Request Roles | 00 - Request Roles Import.xlsx
 | Locations | Supplies | 00 - Supplies Import.xlsx
 
-Data for other entities can be added later [manually](#manually-configure-and-manage-master-data-for-your-organization) or using sample data files explained above. 
+Data for other entities can be [manually](#manually-configure-and-manage-master-data-for-your-organization) added later or by using the sample data files explained earlier.
 
 #### Step 2.3: Update the mobile app branding
 
@@ -197,7 +197,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
 1.  Make sure you have imported the configuration data for **Apps** and **App Config** entities from the **App Import.xlsx** and **App Config Import.xlsx** files respectively in the extracted deployment package.
 
-1.  Now, we will copy the app IDs four your canvas apps so that we can populate it in the App records we imported. Sign in to [Power Apps](https://make.powerapps.com).
+1.  Now, we will copy the app IDs of your canvas apps so that we can populate it in the App records we imported. Sign in to [Power Apps](https://make.powerapps.com).
 
 1.  Select your environment from the top-right corner.
 
