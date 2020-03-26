@@ -29,16 +29,16 @@ If you don't have already have Power Apps, sign up for Power Apps and purchase a
 
 More information:
 
--   [Power Apps Pricing](https://powerapps.microsoft.com/en-us/pricing/)
--   [Purchase Power Apps](https://docs.microsoft.com/en-us/power-platform/admin/signup-for-powerapps-admin)
+-   [Power Apps Pricing](https://powerapps.microsoft.com/pricing/)
+-   [Purchase Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin)
 
 After you have purchased Power Apps, create an environment with a Common Data Service database.
 
 1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
 
-2.  Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/en-us/power-platform/admin/create-environment)
+2.  Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
-3.  Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles)
+3.  Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
 ### Step 2: Install the deployment files in your environment
 
