@@ -32,7 +32,7 @@ The following table outlines the designations and which license an end user must
 | Extended​ | An app allowed to use connectors promoted to premium on October 1, 2019.​ An end user must have a Power Apps for Office 365 plan, per app plan or per user plan. [Power Apps licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines which connectors were promoted to premium on October 1, 2019.
 | Premium​ | An app that uses at least one premium connector. An end user must have a per app plan or per user plan to access.
 
-## Check app **license designation** from **app settings**
+## Check app license designation from app settings
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -46,7 +46,7 @@ The following table outlines the designations and which license an end user must
 
     ![License designation from settings](media/license-designation/settings-license-designation.png)
 
-## Check app **license designation** from **app details**
+## Check app license designation from app details
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
