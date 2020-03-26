@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/07/2015
+ms.date: 03/21/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -15,11 +15,32 @@ search.app:
   - PowerApps
 ---
 # Exit function in Power Apps
-Exits the currently running app.
+Exits the currently running app and optionally signs out the current user.
 
 ## Description
-The **Exit** function exits the currently running app.  The user is returned to the list of apps, where they can select another app to open.
+The **Exit** function exits the currently running app. The user is returned to the list of apps. The user can then select another app to open.  
+
+**Exit** stops any further formula evaluation. Any function calls chained with a [semicolon operator](operators.md) after the **Exit** aren't carried out.   
+
+Use the optional *Signout* argument to sign the current user out of Power Apps. *Signout* is useful when devices are shared to ensure user security.
+
+While authoring the app, calling **Exit** doesn't exit or sign out the user.  However, it doesn't stop the evaluation of the rest of the formula.
+
+**Exit** can only be used in [behavior formulas](../working-with-formulas-in-depth.md).
+
+> [!NOTE]
+> Signing out is not supported while running the app in a web browser.
 
 ## Syntax
-**Exit**()
+**Exit**( [*Signout*] )
+
+* *Signout* – Optional. A Boolean value that if *true* will sign the current user out of Power Apps.  The default is *false* and the user remains signed in.
+
+## Examples
+
+| Formula | Description | 
+| --- | --- | 
+| **Exit()** | Exits the current app and leaves the user signed in.  The user is returned to the list of apps.  |
+| **Exit(&nbsp;true&nbsp;)** | Exits the current app and the user is signed out.  The user will need to sign back in with their credentials before running an app. | 
+
 

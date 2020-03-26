@@ -3,7 +3,7 @@ title: "Email activity entities (Common Data Service) | Microsoft Docs" # Intent
 description: "The email activity in Dynamics 365 lets you track and manage email communications with customers." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

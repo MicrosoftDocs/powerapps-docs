@@ -3,7 +3,7 @@ title: "Sample: Bulk delete exported records (Common Data Service) | Microsoft D
 description: "This sample shows how to perform a bulk deletion of records" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

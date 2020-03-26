@@ -3,7 +3,7 @@ title: "Dependency tracking for solution components (Common Data Service) | Micr
 description: "Solution component dependencies help make sure you have a reliable experience working with solutions. They can be viewed in the application by clicking Show Dependencies" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID

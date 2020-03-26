@@ -3,7 +3,7 @@ title: "Work with data using code in Common Data Service (PowerApps) | Microsoft
 description: "Common Data Service provides two web services that you can use to interact with data: Web API and Organization Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID Temp owner

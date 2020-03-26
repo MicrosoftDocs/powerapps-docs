@@ -3,7 +3,7 @@ title: "Sample: Update next birthday using a custom workflow activity (Common Da
 description: "The sample demonstrates workflow activity returns the next birthday. Use this in a workflow that sends a birthday greeting to a customer. "
 ms.custom: ""
 ms.date: 1/28/2020
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

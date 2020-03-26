@@ -3,7 +3,7 @@ title: "Define custom state model transitions (Common Data Service) | Microsoft 
 description: "Learn about defining custom state model transistions for the Incident (Case) entity or custom entities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

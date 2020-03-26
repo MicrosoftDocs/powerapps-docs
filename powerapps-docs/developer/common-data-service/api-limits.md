@@ -3,7 +3,7 @@ title: "Service Protection API Limits (Common Data Service) | Microsoft Docs"
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
 ms.date: 11/23/2019
-ms.reviewer: "kvivek"
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" 
