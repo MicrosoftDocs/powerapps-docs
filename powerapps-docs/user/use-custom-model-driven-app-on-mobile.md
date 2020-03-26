@@ -32,9 +32,6 @@ For more information on how to install and get started with the app, see [Run ca
 
 It's easy to get around in the Power Apps mobile app. The following illustration shows the primary navigation elements on the Home screen. 
 
-> [!IMPORTANT]
-> The screenshots and short clips covered in the topic show Android screens. 
-
 
 ![Navigation controls, expanded view](media/pa_mobile_main_nav_android.png "Navigation controls, expanded view")
 
