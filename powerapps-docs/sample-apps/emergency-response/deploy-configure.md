@@ -724,4 +724,4 @@ To view and manage app feedback:
 
 ## Next step
 
-[Use Emergency Response app](use.md)
+[Use the Emergency Response app](use.md)
