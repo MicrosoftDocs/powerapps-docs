@@ -1,5 +1,5 @@
 ---
-title: Business and technical decision makers learning catalog
+title: Business and Technical Decision Makers learning catalog
 description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
@@ -7,7 +7,7 @@ ms.date: 02/19/2020
 ms.author: v-lshann
 ---
 
-# Business and technical decision makers learning catalog
+# Business and Technical Decision Makers Learning Catalog
 
 Do you decide whether to invest in new technologies? 
 
