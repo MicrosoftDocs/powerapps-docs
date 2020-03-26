@@ -101,7 +101,7 @@ If this is the first time you're using the Power Apps mobile app, a screen shows
 
 ![Pinch to zoom](media/pinchtozoom.jpg)
 
-## Give consent
+### Give consent
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
 
 ![Connection](media/give_consent.png)
@@ -124,6 +124,6 @@ To see model-driven apps from non production environments, select the setting me
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
 ## Next steps
-In this topic, you learned how to install and run a canvas and model-driven apps on your mobile device. Next, see the user guide for detailed instructions on how to use model-driven app running on the Power Apps mobile app. 
+In this topic, you learned how to install and run a canvas and model-driven apps on your mobile device. Next, see the user guide for detailed instructions on how to use model-driven apps running on the Power Apps mobile app. 
 > [!div class="nextstepaction"]
 > [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md)
