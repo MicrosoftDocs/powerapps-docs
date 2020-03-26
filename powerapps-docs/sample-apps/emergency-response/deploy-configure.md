@@ -312,7 +312,7 @@ Detailed information about sharing your apps: [Share a canvas app](https://docs.
 
 This step lets you set your mobile app as the hero and featured app within the **Power Apps** mobile app.
 
-Before you perform this step, you will need app ID of each mobile app (canvas app) that you want to set as hero and featured app. For info about getting app ID for a canvas app, see [Step 2.4: Bypass consent for mobile apps](#step-24-bypass-consent-for-mobile-apps)
+Before you perform this step, you will need app ID of each mobile app (canvas app) that you want to set as hero and featured app. For info about getting app ID for a canvas app, see [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
 
 Next, do the following:
 
