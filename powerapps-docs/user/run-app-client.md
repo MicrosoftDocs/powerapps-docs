@@ -59,7 +59,7 @@ The following filters are available:
 
 * **All apps** : Displays all canvas and model-driven apps to which you have access, including apps you created and apps that others shared with you.
 
-* **My apps**: Displays both canvas and model-driven apps that you've run at least once.
+* **My apps**: Displays all canvas and model-driven apps that you have opened, app that you are the owner of, and apps that you can edit.
 
 * **Sample apps** (only for canvas apps): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
 
@@ -128,7 +128,7 @@ If an app requires a connection to a data source or permission to use the device
 
 ### Run a model-driven app 
 
-Here is an exmaple of a mode-driven app screen after you sign in. 
+Exmaple of a mode-driven app screen after you sign in. 
 
 ![Model-driven app home page](media/model-driven-app-opened.png)
 
