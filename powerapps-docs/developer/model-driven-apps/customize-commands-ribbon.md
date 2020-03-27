@@ -36,7 +36,7 @@ If you are experiencing an issue with a ribbon command bar button, use this trou
 
 
 ## Community tool
-The SDK describes the process of editing the ribbon by editing the customization.xml file directly. YOu can also use a community tool, [Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx), to visually edit ribbons using the UI. 
+The SDK describes the process of editing the ribbon by editing the customization.xml file directly. You can also use a community tool, [Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx), to visually edit ribbons using the UI. 
 
 > [!NOTE]
 > Microsoft does not provide help or support for community tools. To obtain support or help to use these programs, contact the program publisher.  
