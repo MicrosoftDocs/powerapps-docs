@@ -109,6 +109,8 @@ To run an app on a mobile device, select the app tile. If someone else created a
 
 If this is the first time you're running canvas app using the Power Apps mobile app, a screen shows the swipe gestures.
 
+#### Close a canvas app
+
 Use your finger to swipe from the left edge of the app to the right to close an app. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
 ![Launch app](media/swipe.gif)
@@ -121,12 +123,23 @@ Use your finger to swipe from the left edge of the app to the right to close an 
 
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
 
-![Give consent](media/give_consent_canvas.png)
+![Give consent](media/give_consent_canvas.jpg)
 
 
 ### Run a model-drive app 
 
+Here is an exmaple of a mode-driven app screen after you sign in. 
+
 ![Model-driven app home page](media/model-driven-app-opened.png)
+
+
+#### Give consent
+
+If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
+
+![Give consent](media/give_consent.png)
+
+#### Close a model-drive app
 
 Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") and then select, **Apps**.
 
