@@ -115,7 +115,7 @@ Use your finger to swipe from the left edge of the app to the right to close an 
 
 ![Launch app](media/swipe.gif)
 
-#### To pinch and zoom in on a canvas app:
+#### Pinch and zoom in on a canvas app
 
 ![Pinch to zoom](media/pinchtozoom.jpg)
 
@@ -126,7 +126,7 @@ If an app requires a connection to a data source or permission to use the device
 ![Give consent](media/give_consent_canvas.jpg)
 
 
-### Run a model-drive app 
+### Run a model-driven app 
 
 Here is an exmaple of a mode-driven app screen after you sign in. 
 
