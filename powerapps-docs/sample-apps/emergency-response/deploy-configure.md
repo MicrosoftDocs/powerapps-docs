@@ -287,7 +287,7 @@ Next do the following:
     Set-AdminPowerAppApisToBypassConsent -AppName APPGUIDHERE
     ```
 
-2.  Replace the `APPGUIDHERE` value in each line with the actual app ID of a canvas app.
+2.  Replace the `APPGUIDHERE` value with the actual app ID of a canvas app.
 
 3.  Save the file as .ps file.
 
@@ -358,11 +358,12 @@ Next, do the following:
     Set-AdminPowerAppAsHero -AppName APPGUIDHERE
     ```
 
-2.  Replace the `APPGUIDHERE` value in each line with the actual app ID for the app you want to set as featured and hero respectively.
+2.  Replace the `APPGUIDHERE` value in the script with the actual app ID for the app you want to set as featured and hero respectively.
 
 3.  Save the file as .ps file.
 
 4.  Run PowerShell as an administrator and execute the .ps file you just created.
+ 
 
 ### Step 10: Share model-driven app with admins in your organization
 
