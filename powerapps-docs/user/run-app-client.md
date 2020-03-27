@@ -133,7 +133,15 @@ Here's an example of a canvas app screen after you sign in.
 ![Canvas app home page](media/.png)
 
 ## Close an app
-To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
+
+### Close a model-driven app
+
+From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, the profile icon ![Profile icon](media/profile_icon.png "Site map icon") and then **Sign out**.
+
+### Close a canvas app
+
+To close a canvas app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
+
 
 ## Next steps
 In this topic, you learned how to install and run a canvas and model-driven apps on your mobile device. Next, see the user guide for detailed instructions on how to use model-driven apps running on the Power Apps mobile app. 
