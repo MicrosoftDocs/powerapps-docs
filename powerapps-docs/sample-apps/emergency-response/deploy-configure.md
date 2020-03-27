@@ -60,6 +60,9 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 2.  Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
+    > [!IMPORTANT]
+    > While creating the database, if you select a security group for the database, the apps can be shared *only* with users that are members of the security group.
+
 3.  Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
 ### Step 2: Download the deployment package
@@ -284,7 +287,7 @@ Next do the following:
     Set-AdminPowerAppApisToBypassConsent -AppName APPGUIDHERE
     ```
 
-2.  Replace the `APPGUIDHERE` value in each line with the actual app ID of a canvas app.
+2.  Replace the `APPGUIDHERE` value with the actual app ID of a canvas app.
 
 3.  Save the file as .ps file.
 
@@ -294,7 +297,7 @@ Next do the following:
 
 ### Step 7: Add Azure Application Insights key to mobile apps for telemetry
 
-You can use Azure Application Insights to collect detailed telemetry for your mobile apps (canvas apps) to get insights on the app usage. For detailed information about this, see [Log telemetry for your Apps using Azure Application Insights](https://powerapps.microsoft.com/blog/log-telemetry-for-your-apps-using-azure-application-insights/)
+You can use Azure Application Insights to collect detailed telemetry for your mobile apps (canvas apps) to get insights on the app usage. For detailed information about this, see [Analyze app telemetry using Application Insights](https://docs.microsoft.com/powerapps/maker/canvas-apps/application-insights)
 
 ### Step 8: Share canvas apps with users in your organization
 
@@ -355,11 +358,12 @@ Next, do the following:
     Set-AdminPowerAppAsHero -AppName APPGUIDHERE
     ```
 
-2.  Replace the `APPGUIDHERE` value in each line with the actual app ID for the app you want to set as featured and hero respectively.
+2.  Replace the `APPGUIDHERE` value in the script with the actual app ID for the app you want to set as featured and hero respectively.
 
 3.  Save the file as .ps file.
 
 4.  Run PowerShell as an administrator and execute the .ps file you just created.
+ 
 
 ### Step 10: Share model-driven app with admins in your organization
 
