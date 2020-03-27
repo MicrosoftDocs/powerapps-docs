@@ -122,7 +122,7 @@ To see model-driven apps from non production environments, select the setting me
 
 ## Model-drive app screen
 
-![Model-driven app home page](media/model-driven-app-opened.png
+![Model-driven app home page](media/model-driven-app-opened.png)
 
 ## Canvas app screen
 
