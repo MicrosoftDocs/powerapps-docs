@@ -88,23 +88,6 @@ If you filtered your apps, it will search the filtered list.
 
 Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh both the canvas and model-driven app list. 
 
-## Run an app
-To run an app on a mobile device, select the app tile. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email.
-
-If this is the first time you're using the Power Apps mobile app, a screen shows the swipe gestures.
-
-### Gesture to close the app:
-
-![Launch app](media/swipe.gif)
-
-### Gestures to pinch and zoom:
-
-![Pinch to zoom](media/pinchtozoom.jpg)
-
-### Give consent
-If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
-
-![Connection](media/give_consent.png)
 
 ## Pin an app to the home screen
 You can pin both canvas and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
@@ -119,28 +102,35 @@ To see model-driven apps from non production environments, select the setting me
 
 ![Non production apps toggle](media/non_prod_toggle.png)
 
+## Run an app
+To run an app on a mobile device, select the app tile. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email.
 
-## Model-drive app screen
+### Run a canvas app
 
-Here's an example of a model-driven app screen after you sign in.  
+If this is the first time you're running canvas app using the Power Apps mobile app, a screen shows the swipe gestures.
+
+Use your finger to swipe from the left edge of the app to the right to close an app. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
+
+![Launch app](media/swipe.gif)
+
+#### To pinch and zoom in on a canvas app:
+
+![Pinch to zoom](media/pinchtozoom.jpg)
+
+#### Give consent
+
+If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
+
+![Give consent](media/give_consent_canvas.png)
+
+
+### Run a model-drive app 
 
 ![Model-driven app home page](media/model-driven-app-opened.png)
 
-## Canvas app screen
-
-Here's an example of a canvas app screen after you sign in.  
-
-![Canvas app home page](media/.png)
-
-## Close amodel-driven app
-
 Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") and then select, **Apps**.
 
-![Close an app](media/pa_mobile_close_app.png)
-
-## Close a canvas app
-
-Use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
+![Close a model-driven app](media/pa_mobile_close_app.png)
 
 
 ## Next steps
