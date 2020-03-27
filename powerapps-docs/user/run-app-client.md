@@ -136,7 +136,9 @@ Here's an example of a canvas app screen after you sign in.
 
 ### Model-driven app
 
-From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, **All apps**.
+To close a model-driven app, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") and then select, **Apps**.
+
+![Close an app](media/pa_mobile_close_app.png)
 
 ### Canvas app
 
