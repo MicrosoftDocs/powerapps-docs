@@ -120,6 +120,14 @@ To see model-driven apps from non production environments, select the setting me
 ![Non production apps toggle](media/non_prod_toggle.png)
 
 
+## Model-drive app screen
+
+![Model-driven app home page](media/model-driven-app-opened.png
+
+## Canvas app screen
+
+![Canvas app home page](media/.png)
+
 ## Close an app
 To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
