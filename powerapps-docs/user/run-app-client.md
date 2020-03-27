@@ -21,9 +21,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-When you create an app, or someone shares an app with you, you can run that app on iOS and Android device using the Power Apps mobile app. The mobile app is not supported on Windows devices. In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device. 
+When you create an app, or someone shares an app with you, you can run that app on iOS and Android device using the Power Apps mobile app. If you're on a Windows device, you can only run canvas apps. Model-driven apps are not support on the Power App mobile app for Widnows devices. In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device. 
 
-For detailed instructions on how to use model-driven app running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md).
+To learn how to use model-driven apps running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md).
 
 > [!IMPORTANT]
 > Model-driven apps for sales, customer service, and field service don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
