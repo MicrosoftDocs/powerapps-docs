@@ -30,11 +30,7 @@
   - name: In a browser
     href: ../user/run-app-browser.md
   - name: On a phone
-    items:
-    - name: For canvas and model-driven apps
-      href: ../user/run-app-client.md
-    - name: User Guide for model-driven apps
-      href: ../user/use-custom-model-driven-app-on-mobile.md
+    href: ../user/run-app-client.md
   - name: On a SharePoint Online page (canvas apps)
     href: ../user/powerapps-web-part.md
   - name: In Microsoft Teams (canvas apps)
@@ -145,6 +141,8 @@
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
+  - name: Use model-driven apps on mobile
+    href: ../user/use-custom-model-driven-app-on-mobile.md
   - name: 'Use Dynamics 365 App for Outlook'
     href: ../user/use-outlook-app.md
 - name: Create apps
