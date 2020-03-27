@@ -30,7 +30,7 @@ Common Data Service displays commands in different ways depending on the entity 
 > [!NOTE]
 >  Because the underlying XML schema was designed to display commands as ribbons, the term *ribbon* will continue to be used in the documentation.  
   
-## Troubleshooting ribbon issues
+## Troubleshoot ribbon issues
 
 If you are experiencing an issue with a ribbon command bar button, use this troubleshooting guide to find and solve the problem: <https://support.microsoft.com/help/4552163>
 
