@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/10/2020
-ms.author: tapanm
+ms.date: 03/26/2020
+ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
@@ -41,7 +41,7 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
     > [!NOTE]
     > The editable elements are demarcated by a boundary.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
+4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Select the component to be added.
 
@@ -57,21 +57,23 @@ After adding the required webpages and managing their hierarchy in the sitemap, 
 
 ## Add sections
 
-Sections allow you to define a structure for your page and arrange portal components accordingly. Once you add sections to your page, you can add portal components inside the sections as per the requirement.
+Sections allow you to define a structure for your page and arrange portal components.
 
-1.	[Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
+Once you add sections to your page, you can add portal components inside the sections as per the requirement.
 
-2.	Select the page on which you want to add a section.
+1.    [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
 
-3.	Select an editable element on the canvas.
+2.    Select the page on which you want to add a section.
 
-4.	Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.
+3.    Select an editable element on the canvas.
 
-5.	Under **Section layout**, select the section type to be inserted.
+4.    Select **Components** ![components icon](media/components-icon.png "Components icon") from left side of the screen.
 
-6.	In the properties pane on the right side of the screen, enter or select the following information:
+5.    Under **Section layout**, select the section type to be inserted.
 
-    - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100px. You can also enter the height in points (pt) and percentage (%).
+6.    In the properties pane on the right side of the screen, enter or select the following information:
+
+    - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100 px. You can also enter the height in points (pt) and percentage (%).
 
         > [!div class=mx-imgBorder]
         > ![Alignment in the section](media/section-props-height.png "Alignment in the section")  
@@ -81,7 +83,7 @@ Sections allow you to define a structure for your page and arrange portal compon
         > [!div class=mx-imgBorder]
         > ![Alignment in the section](media/section-props-align.png "Alignment in the section")  
 
-    - **Background**: Select if would like to have color or an image as the section background.
+    - **Background**: Select if you'd like to have color or an image as the section background.
 
         - **Fill**: Select a color for the background.
 
@@ -93,7 +95,7 @@ Sections allow you to define a structure for your page and arrange portal compon
             > [!div class=mx-imgBorder]
             > ![Add image in the section](media/section-props-image.png "Add image in the section")  
 
-7.	Add the required portal component in the section.
+7.    Add the required portal component in the section.
 
 
 ## Add portal components
@@ -116,9 +118,9 @@ You can add the following components on a webpage:
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
+4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
 
-5.	Under **Portal components**, select **Text**.
+5.    Under **Portal components**, select **Text**.
 
 6.  Enter the required text in the text box.
 
@@ -145,7 +147,7 @@ You can add the following components on a webpage:
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
+4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **Image**. The image placeholder is added to the canvas.
 
@@ -182,7 +184,7 @@ You can add the following components on a webpage:
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
+4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **IFrame**. The IFrame placeholder is added to the canvas.
 
@@ -198,14 +200,16 @@ You can add the following components on a webpage:
     - **Link**: Enter the URL of the website to be displayed in the IFrame. Only secured links are accepted—that is, https:// is mandatory. By default, <https://www.bing.com> is available as the value.
     
         > [!div class=mx-imgBorder]
-        > ![iframe properties](media/iframe-props.png "IFrame properties")  
+        > ![IFrame properties](media/iframe-props.png "IFrame properties")  
 
 > [!NOTE]
 > You can also add [Power Virtual Agent](https://docs.microsoft.com/power-virtual-agents/fundamentals-what-is-power-virtual-agents) bot to the  IFrame similarly using steps described in [add bot to your web site](https://docs.microsoft.com/power-virtual-agents/publication-connect-bot-to-web-channels#custom-website).
 
 ### Add form
 
-Form is a data-driven configuration that you use to add a form to collect data in the portal without the need for a developer to surface the form in the portal. [Forms are created in Common Data Service](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview) and you can use them into webpages in the portal or in conjunction with lists to build out complete web applications.  
+Form is a data-driven configuration that collects data in the portal without the need for a developer to surface the form in the portal. 
+
+Forms are [created in Common Data Service](https://docs.microsoft.com/powerapps/maker/model-driven-apps/form-designer-overview). You can use them in webpages in the portal or in conjunction with lists to build out complete web applications.  
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
@@ -213,7 +217,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
+4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **Form**.
 
@@ -222,11 +226,11 @@ Form is a data-driven configuration that you use to add a form to collect data i
     - **Create new**: Create a new form.
     - **Use existing**: Use an existing form.
 
-7. Enter information or make selection for the following:
+7. Enter information or make selection:
 
     - **Name**: Name of the form.
 
-    - **Entity**: The name of the entity from which the form will be loaded.
+    - **Entity**: The name of the entity from which the form is loaded.
 
     - **Form layout**: The name of the form on the target entity in Common Data Service that is to be rendered.
 
@@ -236,7 +240,7 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
         - **Edit**: Indicates the form should edit an existing record.
 
-        - **Read only**: Indicates the form should display an existing record’s non-editable form.
+        - **Read only**: Indicates the form should display an existing record's non-editable form.
 
         > [!NOTE]
         > The default option for **Edit** and **ReadOnly** modes is set as Query String Parameter Name passed as ID in URL. To change these values, you need to open Portal Management app and update the form properties.
@@ -245,22 +249,24 @@ Form is a data-driven configuration that you use to add a form to collect data i
 
         - **Show success message**: Requires a message to be displayed to the user on successful submission of the form. You can also select **Hide form on success** to hide the form upon successful submission.
 
-        - **Redirect to webpage**: Redirects the user to the selected webpage in the portal. You must select a webpage from the **Redirect to webpage** list.
+        - **Redirect to webpage**: Redirects the user to the selected webpage in the portal. This field is required.
 
-        - **Redirect to URL**: Redirects the user to the specified URL. You must enter a URL in the **Redirect to URL** field.
+        - **Redirect to URL**: Redirects the user to the specified URL. This field is required.
 
     - **Show captcha for anonymous users**: Displays captcha to anonymous users.
 
     - **Show captcha for authenticated users**: Displays captcha to authenticated users.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)
+    - **Enable entity permissions**: Entity permissions to be considered for the form. By default, it isn't selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)
 
         > [!div class=mx-imgBorder]
-        > ![form properties](media/form-props.png "Form properties")
+        > ![Form properties](media/form-props.png "Form properties")
 
 ### Add list
 
-List is a data-driven configuration that you use to add a webpage that will render a list of records without the need for a developer to surface the grid in the portal. Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
+List is a data-driven configuration to render a list of records without the need for a developer to surface the grid in the portal.
+
+Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-and-edit-views) to display records on the portal.  
 
 1.  [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.  
 
@@ -268,7 +274,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
+4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **List**.
 
@@ -277,13 +283,13 @@ List is a data-driven configuration that you use to add a webpage that will rend
     - **Create new**: Create a new list.
     - **Use existing**: Use an existing list.
 
-7.  Enter information or make selection for the following:
+7.  Enter information or make selection:
 
     - **Name**: Name of the list.
 
-    - **Entity**: The name of the entity from which the views will be loaded.
+    - **Entity**: The name of the entity from which the views are loaded.
 
-    - **Views**: The list of views of the target entity that is to be rendered. You can select multiple views to display records in the list. The view selected first will be the default view.
+    - **Views**: The list of views of the target entity that is to be rendered. You can select multiple views to display records in the list. The view selected first is the default view.
 
     - **Create new record**: Allows a user to create a record. Select a webpage that contains a form to create a new record.
 
@@ -299,7 +305,7 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
     - **Enable search in entity list**: Allows a user to search records in the list.
 
-    - **Enable entity permissions**: Entity permissions to be considered for the list. By default, it is not selected. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)  
+    - **Enable entity permissions**: Entity permissions to be considered for the list. Not selected by default. If selected, explicit permissions are required for any user to access the form. More information: [Entity permission](configure/assign-entity-permissions.md)  
 
     > [!div class=mx-imgBorder]
     > ![list properties](media/list-props.png "List properties")
@@ -312,21 +318,21 @@ List is a data-driven configuration that you use to add a webpage that will rend
 
 3.  Select an editable element on the canvas.
 
-4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the toolbelt on the left side of the screen.  
+4.  Select **Components** ![components icon](media/components-icon.png "Components icon") from the left side of the screen.  
 
 5.  Under **Portal components**, select **Breadcrumb**.
 
 ## Add a custom menu
 
-By default, the menu on the website is created automatically based on the hierarchy of the webpages. It is called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](configure/manage-web-links.md)
+By default, the menu on the website is created automatically based on the hierarchy of the webpages. It's called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](configure/manage-web-links.md)
 
 After you create the web link set:
 
-1.	[Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
+1.    [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
 
-2.	Select the header component. 
+2.    Select the header component. 
 
-3.	In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
+3.    In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
 
     > [!div class=mx-imgBorder]
     > ![Navigation menu](media/navigation-menu.png "Navigation menu")
@@ -346,4 +352,98 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 > [!NOTE]
 > You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)
 
+## Add Power BI
 
+You can add Power BI component on a page. When adding a Power BI component, you have different options to select for access type, workspace, and advanced settings:
+
+![Power BI options](media/powerbi-options.png)
+
+To add a Power BI component to a web page:
+
+1. [Edit the
+    portal](https://docs.microsoft.com/powerapps/maker/portals/manage-existing-portals#edit).
+
+1. Select the page to add a component to.
+
+1. Select an editable element on the canvas.
+
+1. Select **Components** from the left side of the screen.
+
+    ![Components](media/components-powerbi.png)
+
+1. From Portal components, select **Power BI**. The Power BI placeholder is added to the canvas.
+
+1. In the properties pane on the right side of the screen, enter the following information:
+
+    1. **Access type**
+
+        Select appropriate option from the drop-down as per your requirement.
+
+        1. **Embed for your customers**
+
+            Allows you to securely share the Power BI report or dashboard to external users without Power BI license or Azure Active Directory authentication setup.
+
+            This option uses Power BI Embedded services to integrate Power BI chart into portal.
+
+            Make sure [Power BI Embedded service is enabled](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service) and respective Power BI workspaces are selected.
+
+        1. **Embed for your organization**
+
+            Allows you to securely share the Power BI report or dashboard to Azure Active Directory authenticated users. ​
+
+            Make sure you've shared Power BI workspaces with maker and target portal users.
+
+            > [!NOTE]
+            > **Embed for your customers** use Power BI Embedded service and **Embed for your organization** use Azure Active Directory authentication to allow user to see these charts. For more information, read [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service)
+
+        1. **Publish to web**
+            Allows you to share Power BI report or dashboard to anyone on the internet.
+
+            > [!WARNING]
+            > When you use **Publish to web**, anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Do not publish confidential or proprietary information. When in doubt, check your organization's policies before publishing.
+
+    1. **Workspace**
+
+        Select the Power BI workspace from the list.
+
+        > [!NOTE]
+        > Values in the workspace list depend on the selected access type.
+        > - **Embed for your customers** shows the list of workspaces shared to logged in user and enabled for [Power BI Embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service).
+        > - **Embed for your organization** shows the list of workspaces shared with logged in user.
+
+    1. **Select type**
+        Select Dashboard or Report from the list.
+
+    1. **Select dashboard / Select report**
+
+        If you selected the type as **Dashboard**, then **Select dashboard** option appears and you can select any one of the available dashboards from the list.
+
+        If you selected the type as **Report**, then **Select report** option appears and you can select any one of the available reports from the list.
+
+    1. **Select tile** and **Select page**
+
+        Select tile option allows user to add all or a specific tile in page.
+
+        Select page option allows user to select specific page as default page when Power BI report load in portal. Default first page is selected when Power BI report loads.
+
+    1. **Apply roles**
+
+        This option is available for reports when access type **Embed for your customer** is selected.
+
+        If you have defined roles in Power BI and assigned them to reports, you must specify the appropriate roles in this field.
+
+        You can specify multiple roles separated by a comma (for example role_1,role_2). For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls)
+
+    1. **Apply filter**
+
+        This option is available for report in **Embed for your customer** and **Embed for your organization** access types. This allows user to load the report with pre-filtered values. User can provide filter condition in the field.
+
+        This field requires filter parameter format without ```?filter=``` prefix. For more information, read [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
+
+        For example, ```Table/Field eq 'value'```.
+
+    1. **Embed code URL**
+
+        This option is only available for **Publish to web** access type. To get embed code URL that you can copy and paste, read [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
+
+        ![Embed Code URL](media/embed-code-url.png)
