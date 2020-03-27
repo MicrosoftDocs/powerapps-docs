@@ -134,11 +134,11 @@ Here's an example of a canvas app screen after you sign in.
 
 ## Close an app
 
-### Close a model-driven app
+### Model-driven app
 
-From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, the profile icon ![Profile icon](media/profile_icon.png "Site map icon") and then **Sign out**.
+From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, **All apps**.
 
-### Close a canvas app
+### Canvas app
 
 To close a canvas app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
