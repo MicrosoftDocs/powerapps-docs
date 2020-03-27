@@ -92,7 +92,9 @@ To begin the deployment process, extract the deployment file (.zip) to a locatio
 
 5.  In the **Import Solution** dialog box, select the solution file mentioned in step 1, and then follow the steps in the wizard to import the solution.
 
-After the solution is imported successfully, you will see new apps under **Apps**:
+6.  After the solution is imported successfully, select **Close** in the import dialog box, and then select **Public all customizations**. This might take a while to complete.
+
+Now, you will see new apps under **Apps**:
 
 > [!div class="mx-imgBorder"] 
 > ![New apps](media/conf-apps-new-apps.png "New apps")
@@ -255,7 +257,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
 ### Step 6: Bypass consent for mobile apps
 
-Before you perform this step, you will need app ID of each mobile app (canvas app).
+You must be a Tenant Admin to complete this step. Also, before you perform this step, you will need app ID of each mobile app (canvas app).
 
 To get the app ID for your app, in the left navigation pane of the admin app, select **Administration** from the area picker and then select **Apps**. This displays all the mobile apps (canvas apps). Select a mobile app to view its app ID. Copy the app Id for each app to a notepad file.
 
@@ -282,11 +284,13 @@ Next do the following:
     Set-AdminPowerAppApisToBypassConsent -AppName APPGUIDHERE
     ```
 
-2.  Add as many lines under the `# Change the App ID for each new app` section as the count of your mobile apps, and replace the `APPGUIDHERE` value in each line with the actual app ID for each app.
+2.  Replace the `APPGUIDHERE` value in each line with the actual app ID of a canvas app.
 
 3.  Save the file as .ps file.
 
 4.  Run PowerShell as an administrator and execute the .ps file you just created.
+
+5.  Repeat steps 2 - 4 for each canvas app.
 
 ### Step 7: Add Azure Application Insights key to mobile apps for telemetry
 
@@ -319,7 +323,7 @@ Detailed information about sharing your apps: [Share a canvas app](https://docs.
 
 ### Step 9: Set your mobile app as hero and featured app
 
-This step lets you set your mobile app as the hero and featured app within the **Power Apps** mobile app.
+This step lets you set your mobile app as the hero and featured app within the **Power Apps** mobile app. You must be a Tenant Admin to complete this step.
 
 Before you perform this step, you will need app ID of each mobile app (canvas app) that you want to set as hero and featured app. For info about getting app ID for a canvas app, see [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
 
