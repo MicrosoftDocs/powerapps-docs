@@ -60,7 +60,7 @@ The following illustration shows the primary navigation elements on the site map
 
 Legend
 
-1. **App selector**: Open this menu to move between apps.
+1. **App selector**: Open this menu to close your app and switch to another app.
 2. **Home screen**: Select this to go back to the Home screen.
 3. **Profile**: Go to the Profile screen to sign out or reconfigure the app. 
 4. **Recent records**: View a list of records you were recently using. 
@@ -148,9 +148,7 @@ Use the **Recent** records list to pin favorite records.
    > [!div class="mx-imgBorder"]
    > ![Go back to the home screen](media/go_back_home.gif "Go back to home sceen").
    
-   
-## Close the app
-
+  
 
 ## Sign out
 From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, the profile icon ![Profile icon](media/profile_icon.png "Site map icon") and then select **Sign out**.
