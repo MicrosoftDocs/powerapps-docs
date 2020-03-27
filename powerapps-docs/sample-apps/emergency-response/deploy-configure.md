@@ -315,7 +315,7 @@ groups to easily share apps with groups of users.
     > [!div class="mx-imgBorder"] 
     > ![Share canvas apps](media/conf-share-canvas-apps.png "Share canvas apps")
 
-4.  Specify the Azure AD group or users that you want to share this app with. As the app connects to Common Data Service data, you will also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **COVID 19 End User** and **Common Data Service User** security roles to the entities used by this app and select **Share**.
+4.  Specify the Azure AD group or users that you want to share this app with. As the app connects to Common Data Service data, you will also need to provide permissions to the entities. The sharing panel prompts you to manage security for the entities. Assign the **Emergency Response User** and **Common Data Service User** security roles to the entities used by this app and select **Share**.
 
     > [!div class="mx-imgBorder"] 
     > ![Share app with Azure AD group or users](media/conf-share-app-groups-users.png "Share app with Azure AD group or users")
