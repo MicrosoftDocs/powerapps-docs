@@ -60,6 +60,9 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 2.  Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
+    > [!IMPORTANT]
+    > While creating the database, if you select a security group for the database, the apps can be shared *only* with users that are members of the security group.
+
 3.  Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
 ### Step 2: Download the deployment package
