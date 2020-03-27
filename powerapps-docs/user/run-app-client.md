@@ -128,7 +128,7 @@ If an app requires a connection to a data source or permission to use the device
 
 ### Run a model-driven app 
 
-Exmaple of a mode-driven app screen after you sign in. 
+Exmaple of a mode-driven app screen after you sign in. To learn how to use model-driven apps running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md). 
 
 ![Model-driven app home page](media/model-driven-app-opened.png)
 
@@ -146,7 +146,3 @@ Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map 
 ![Close a model-driven app](media/pa_mobile_close_app.png)
 
 
-## Next steps
-In this topic, you learned how to install and run a canvas and model-driven apps on your mobile device. Next, see the user guide to learn how to use model-driven apps running on the Power Apps mobile app. 
-> [!div class="nextstepaction"]
-> [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md)
