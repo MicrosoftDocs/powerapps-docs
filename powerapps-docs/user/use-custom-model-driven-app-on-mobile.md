@@ -19,7 +19,7 @@ search.app:
 ---
 # User guide for model-driven apps running on the Power Apps mobile app
 
-This is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Use the Power Apps mobile app to run model-driven apps on your mobile device. 
 
