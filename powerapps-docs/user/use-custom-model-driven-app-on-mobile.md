@@ -147,5 +147,10 @@ Use the **Recent** records list to pin favorite records.
 
    > [!div class="mx-imgBorder"]
    > ![Go back to the home screen](media/go_back_home.gif "Go back to home sceen").
+   
+   
+## Close the app
 
 
+## Sign out
+From the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") select, the profile icon ![Profile icon](media/profile_icon.png "Site map icon") and then select **Sign out**.
