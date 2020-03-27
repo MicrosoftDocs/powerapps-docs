@@ -51,7 +51,7 @@ If you have the Microsoft Authenticator app installed on your mobile device, sim
 ## Find the app
 To make it easier to find the app, open the **Power Apps** menu, and then select a filter. 
 
-Only the **My apps** and **All apps** filters apply to model-driven apps. For early-access, **My apps** filters shows **All apps** for model-driven apps.
+Only the **All apps** filter apply to model-driven apps. For early-access, **My apps** filters shows **All apps** for model-driven apps.
 
 ![App filters](media/filter-menu.png)
 
