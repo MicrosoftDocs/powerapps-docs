@@ -1,37 +1,70 @@
 ---
-title: "Configure notes on entity forms and web forms for a portal | MicrosoftDocs"
-description: "Instructions to add and configure notes on entity forms and web forms in a portal."
+title: "Configure notes as attachments on entity forms and web forms for a portal | MicrosoftDocs"
+description: "Instructions to add and configure notes as attachments on entity forms and web forms in a portal."
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/24/2020
+ms.date: 03/27/2020
 ms.author: tapanm
 ms.reviewer:
 ---
 
-# Configure notes for entity forms and web forms on portals
+# Configure notes as attachments for entity forms and web forms on portals
 
-Just like with subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
+Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
-> [!Note]                                                           
+> [!NOTE]                                                           
 > Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding entity form or web form step for the entity permissions to take effect.
 
-## Notes configuration for entity forms
+## Notes configuration for Entity Forms
 
-1. Open the [Portal Management app](configure/configure-portal.md).
-2. Go to **Portals** > **Content** > **Entity Forms**. A list of active entity forms is displayed.
-3. Select the entity form to which you want to add note configuration.
-4. Go to **Entity Form Metadata** either by using the top drop-down list or the subgrid on the main form of the entity form record that you are working with.
-5. Select **Add New Entity Form Metadata** to add a new record.
-6. From the **Type** drop-down list, select **Notes**. The notes configuration&ndash;specific settings are displayed. Most of the settings are collapsed by default. You can expand a section to see additional settings.
-7. Fill in the fields by entering appropriate values. [!include[](../../includes/proc-more-information.md)] [Attributes](#attributes), [Create dialog options](#create-dialog-options), [Edit dialog options](#edit-dialog-options), and [Delete dialog options](#delete-dialog-options)
-8. Save the form.
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-    ![Add notes configuration for entity forms](media/add-note-configuration.png "Add notes configuration for entity forms")  
+1. Select **Apps** from left pane.
 
-    After adding the configuration, the Note control will be rendered by using the appropriate options enabled on the portal.
+1. Select the portal from the list of apps.
+
+1. Select **More Commands** (**...**) and then select **Settings** from the drop-down options. You can also select **Settings** from the top menu instead:
+
+    ![Portal settings](media/configure-notes/portal-settings.png)
+
+1. Select **Site Settings**:
+
+    ![Site settings](media/configure-notes/site-settings.png)
+
+1. If you don't have any existing Dynamics 365 apps, you may have to select drop-down for apps and then select **Portal Management** app:
+
+    ![Portal management app](media/configure-notes/portal-management-power-apps.png)
+
+1. Select **Entity Forms** under **Content** from left pane:
+
+    ![Entity forms](media/configure-notes/entity-forms.png)
+
+1. From the list of forms, select to open a record of the form to which you want to add note configuration.
+
+1. From the available tabs in form settings, select **Entity Form Metadata**:
+
+    ![Entity form metadata](media/configure-notes/entity-form-metadata.png)
+
+1. Select **New Entity Form Metadata**:
+
+    ![New entity form metadata](media/configure-notes/new-entity-form-metadata.png)
+
+1. Select **Type** as **Note**:
+
+    ![Type as Note](media/configure-notes/type-notes.png)
+
+1. The notes configuration settings are displayed. Most of the settings are collapsed by default. You can expand a section to see additional settings:
+
+    ![Notes options](media/configure-notes/notes-options.png)
+
+1. Fill in the fields by entering appropriate values. [!include[](../../includes/proc-more-information.md)] [Attributes](#attributes), [Create dialog options](#create-dialog-options), [Edit dialog options](#edit-dialog-options), and [Delete dialog options](#delete-dialog-options)
+
+1. Save the form.
+
+After adding the configuration, the Note control will be rendered by using the appropriate options enabled on the portal.
 
 ## Attributes
 
@@ -55,7 +88,7 @@ Just like with subgrids, adding notes to your managed forms on the portal is eas
 | Note Privacy Label    | Overrides the label denoting that a note is Private.                                                                                                         |
 | Loading Message       | Overrides the message shown while the list of notes is loading.                                                                                              |
 | Error Message         | Overrides the message shown when an error occurs while trying to load the list of notes.                                                                     |
-| Access Denied Message | Overrides the message shown when the user does not have sufficient permissions to view the list of notes.                                                    |
+| Access Denied Message | Overrides the message shown when the user doesn't have sufficient permissions to view the list of notes.                                                    |
 | Empty Message         | Overrides the message shown when the current entity does not have any notes that can be viewed.                                                              |
 | List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders")   To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
@@ -139,10 +172,10 @@ Just like with subgrids, adding notes to your managed forms on the portal is eas
 
 You must create and assign the appropriate entity permission to the records as follows, otherwise the **Add**, **Edit**, and **Delete** buttons for the note will be hidden:
 
-- Read, Write, Create, Append, and Append To privileges for the **Activity (activitypointer)** entity with the scope as **Global**. This entity permission must be associated with a web role for the user.
+- Read, Write, Create, Append, and Append To privileges for the **Annotation** entity with the scope as **Global**. This entity permission must be associated with a web role for the user.
 - Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled in it. The scope should be set to **Global**. This entity permission must be associated with a web role for the user.
 
-    ![Add entity permissions](media/entity-permission.png "Add entity permissions")
+    ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
     ![Add web roles to an entity permission](media/entity-permission-web-roles.png "Add web roles to an entity permission")
 
@@ -150,9 +183,39 @@ If you created a custom form and added the notes section to it, be sure to selec
 
 ![Notes in a custom form](media/notes-activities-tab.png "Notes in a custom form")
 
+### Enable file attachment on form
+
+You must enable **Attach File** option for the **Entity Form** to show the attachment option available with the notes. 
+
+To enable attachment on an entity form:
+
+1. Follow steps 1 through 8 from earlier [notes configuration](#notes-configuration-for-entity-forms) section to open the entity form.
+
+1. Select **Additional Settings** for the form. You need to configure the additional settings as per fields explained in the [attachment options](#additional-settings-for-file-attachment):
+
+    ![Additional settings - attach file](media/configure-notes/additional-settings.png)
+
+#### Additional settings for file attachment
+
+| Name | Description
+| - | - 
+| Attach File | Check the box to enable file attachments on the form.
+| Attach File Save Option | Select **Notes** or **Portal Comments** to save file attachments. For notes attachments, select **Notes**.
+| Allow Multiple Files | Check the box to allow multiple file attachments.
+| Label | Label for the attachment option.
+| Attach File Storage Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>
+| Accept MIME Types | Allows you to specify a list of accepted MIME types.
+| Accept File Types | Only available when using **Portal Comment** option for **Attach File Save Option**. Allows you to specify a list of accepted file types.
+
+### Attach File Option
+
+After you configure the notes and enable notes attachments, you can see the **Attach File** option on the form:
+
+![Attach file option](media/configure-notes/attach-file-option.png)
+
 ## Notes configuration for web forms
 
-Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). You must first create a metadata record for the Web Form Step that has notes, and then add the notes configuration metadata.
+Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). You must create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
 
 > [!NOTE]
 > Notes description must be prefixed with **\*WEB\*** (*'WEB' keyword with an asterisk sign (\*) before and after*) in order to display on the portal.
