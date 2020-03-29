@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/21/2015
+ms.date: 03/28/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -64,8 +64,115 @@ In these examples, you'll remove a record or records in a data source that's nam
 | **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Removes records that have a **Quantity** that's greater than 150 and **Flavor** starts with an **S**. |![](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>The **IceCream** data source has been modified. |
 | **RemoveIf(&nbsp;IceCream, true )** |Removes all records from the data source. |![](media/function-remove-removeif/icecream-empty.png)<br><br>The **IceCream** data source has been modified. |
 
-### Step by step
-1. Import or create a collection named **Inventory**, and show it in a gallery as [Show data in a gallery](../show-images-text-gallery-sort-filter.md) describes.
-2. In the gallery, set the **[OnSelect](../controls/properties-core.md)** property of the image to this expression:<br>**Remove(Inventory, ThisItem)**
-3. Press F5, and then select an image in the gallery.<br>The item is removed from the gallery and the collection.
+### Removing an item from a gallery
 
+In this example we will use a [**Gallery** control](../controls/control-gallery.md) to list the records in a table and then use the **Remove** function to selectively remove an item.  
+
+This example uses the **Contacts** entity in Common Data Service, loaded with sample data when the database was created.  You can create your own database with sample data by creating a trial environment.  
+
+But any data source or collection can be used in this same manner.  To use a collection for this example, add a button control to your screen, set the **OnSelect** property to this formula, and select the button:
+
+```powerapps-dot
+ClearCollect( Contacts, 
+              { Name: "Yvonne",  Email: "yvonne@contoso.com" },
+              { Name: "Susanna", Email: "susanna@contoso.com" },
+              { Name: "Nancy",   Email: "nancy@contoso.com" },
+              { Name: "Maria",   Email: "maria@contoso.com" },
+              { Name: "Robert",  Email: "robert@contoso.com" },
+              { Name: "Paul",    Email: "paul@contoso.com" },
+              { Name: "Rene",    Email: "rene@consoto.com" } 
+)
+```  
+
+#### From outside the gallery
+
+In this first part, we will remove an item from a button that is outside the gallery.
+
+1. Create a new blank app using the Phone layout.
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-new.png)
+
+1. Select the **Insert** tool pane on the left hand side of the studio.  
+
+1. Select **Vertical gallery**.  The **Gallery** control will be added to your screen.
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-add.png)
+
+1. You will be prompted to select a data source.  If your desired data source is not shown, enter the name in the Search box at the top.  For this exercise, select the **Contacts** entity.  
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-datasource.png)
+
+1. The gallery will show items from this entity. 
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-data.png)
+
+1. Insert a [**Button** control](../controls/control-button.md) from the Insert tool pane.
+    
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-addbutton.png)
+
+1. Set the **OnSelect** property for this button control to the formula:
+
+    ```powerapps-dot
+    Remove( Contacts, Gallery1.Selected )
+    ```
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-button-onselect.png)
+
+    The gallery controls makes the currently selected record available through its **Selected** property.  We are using that to tell **Remove** which record to remove from the **Contacts** entity.
+
+1. [Hold down the Alt key](../keyboard-shortcuts#alternate-behavior.md) and select the third item in the gallery, in our case Nancy's record.  You can also preview the app to select items.
+
+1. Again with the Alt key held down, select the button control.  The record for Nancy will be removed.
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-activatebutton.png)
+
+#### From inside the gallery
+
+> [!NOTE]
+> There is currently an issue with using ThisItem to remove items from Common Data Service that is being investigated.  The following example will work fine for collections, SharePoint lists, and SQL Server tables. 
+
+In this example, we will remove an item from inside the gallery.
+
+1. Select the top item of the gallery.  This is important to ensure that the next step will insert the item into the gallery's template and not outside it.
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-select-template.png)
+
+
+1. Return to the Insert tool pane and select **Add icon**.  This will insert a **+** icon on the left side of the gallery, replicated for each item.  
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-addicon.png)
+
+1. In the top item, move the icon to the right side of the screen.  
+1. To change to a trash can icon, set the **Icon** property to the formula:
+
+    ```powerapps-dot 
+    Icon.Trash
+    ```
+    
+    The **Icon.** prefix will not be shown unless you are editing the formula.
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-icontrash.png)
+
+1. Set the **OnSelect** property to the formula:
+
+    ```powerapps-dot
+    Remove( Contacts, ThisItem )
+    ```
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-onselect.png)
+
+1. Hold down the Alt key and select any of the trash can icons in the gallery.  The contact will disappear as it is removed.
+
+    > [!div class="mx-imgBorder"]
+    > ![](media/function-remove-removeif/gallery-activateicon.png)
