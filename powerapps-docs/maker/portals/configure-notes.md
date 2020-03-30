@@ -20,23 +20,7 @@ Similar to subgrids, adding notes to your managed forms on the portal is easy&md
 
 ## Notes configuration for Entity Forms
 
-1. Sign in to [Power Apps](https://make.powerapps.com).
-
-1. Select **Apps** from left pane.
-
-1. Select the portal from the list of apps.
-
-1. Select **More Commands** (**...**) and then select **Settings** from the drop-down options. You can also select **Settings** from the top menu instead:
-
-    ![Portal settings](media/configure-notes/portal-settings.png)
-
-1. Select **Site Settings**:
-
-    ![Site settings](media/configure-notes/site-settings.png)
-
-1. If you don't have any existing Dynamics 365 apps, you may have to select drop-down for apps and then select **Portal Management** app:
-
-    ![Portal management app](media/configure-notes/portal-management-power-apps.png)
+1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
 
 1. Select **Entity Forms** under **Content** from left pane:
 
@@ -189,7 +173,13 @@ You must enable **Attach File** option for the **Entity Form** to show the attac
 
 To enable attachment on an entity form:
 
-1. Follow steps 1 through 8 from earlier [notes configuration](#notes-configuration-for-entity-forms) section to open the entity form.
+1. Open the [Portal Management](https://docs.microsoft.com/powerapps/maker/portals/configure/configure-portal) app.
+
+1. Select **Entity Forms** under **Content** from left pane:
+
+    ![Entity forms](media/configure-notes/entity-forms.png)
+
+1. From the list of forms, select to open a record of the form to which you want to add note configuration.
 
 1. Select **Additional Settings** for the form. You need to configure the additional settings as per fields explained in the [attachment options](#additional-settings-for-file-attachment):
 
