@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 10/29/2019
+ms.date: 03/30/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -18,7 +18,7 @@ search.app:
 
 [This topic is pre-release documentation and is subject to change.]
 
-In this topic, you'll use data in your Azure SQL Database to create an app with Power Apps in minutes. You’ll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
+In this topic, you'll use data in your Azure SQL Database to create an app with Power Apps in minutes. You'll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -31,23 +31,25 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 - You need access to an existing SQL Database. </br> If you don't have an existing SQL Database, [create a new database](https://docs.microsoft.com/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal).
 - You need to allow Power Apps region [IP addresses or Azure services](#app-access-to-sql-database) access to SQL Database in firewall settings.
 - The SQL Database table must have at least one column with text data type.
-- You need a valid Power Apps license or sign up for a [30 day trial license](../signup-for-powerapps.md).
 
-## Create an app
+## Create an app from Azure portal
 
-1. Sign into [Azure Portal](https://portal.azure.com).
+> [!TIP]
+> You can also create an app that uses Azure SQL database from [Power Apps](https://make.powerapps.com). For more information, read [SQL Server connector for Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-azure-sqldatabase).
+
+1. Sign into [Azure portal](https://portal.azure.com).
 2. Navigate to your SQL Database.
 3. Select Power Apps.
-
     
     ![Power Apps option in SQL Database options](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "Power Apps option inside SQL Database")
 
+4. Type a name for the app such as "Site Inspection", "Fundraiser", or "Budget Tracker".
+
+5. Enter a SQL authentication password and if necessary, change the username.
+    
     > [!NOTE]
-    > If you don't have a Power Apps license, you'll see a blue information bar with a link to start a trial. When you select to start  a trial, you'll be taken to a new tab where you'll be signed up for a license. Once complete, go back to the Azure portal and refresh the blade to continue.
+    > If you want to use Azure AD Integrated authentication instead of SQL authentication with Azure SQL database, create an app from [Power Apps](https://make.powerapps.com) instead, and use [SQL Server connector](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-azure-sqldatabase).
 
-4. Type a name for the app such as “Site Inspection”, “Fundraiser”, or “Budget Tracker”.
-
-5. Enter a SQL authentication password and if required, change the username.
 6. Select a table from the dropdown list that you want to use to create the app.
 
 7. Select **Create**.
@@ -88,9 +90,9 @@ Power Apps can connect to the SQL Database **Allow access to Azure services** co
 ## Limitations
 
 - The app name can include only letters, numbers, hyphens, parentheses, or underscores.
-- Power Apps requires SQL authentication to connect to SQL Database.
-- You can select only one table while you are creating a canvas app from the Azure portal. Customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
-- Power Apps cannot connect to SQL Database using VNet Service Endpoints. For more information, read [allowing access through VNet Service Endpoints](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview).
+- Creating an app from Azure portal requires SQL authentication.
+- You can select only one table while you're creating a canvas app from the Azure portal. Customize the app after the app is created if you want to add more tables and other data sources by adding more data connections.
+- Power Apps can't connect to SQL Database using VNet Service Endpoints. For more information, read [allowing access through VNet Service Endpoints](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview).
 
 ## Other considerations
 
@@ -100,7 +102,7 @@ Power Apps can connect to the SQL Database **Allow access to Azure services** co
 
 ## Next steps
 
-In this quickstart, you created an app using data from your SQL Database using the Azure portal. As a next step, customize the app with controls, images, and logic to better suit your business needs.
+As a next step, use [Power Apps](https://make.powerapps.com) studio to customize the app by adding additional controls, images, and logic to better suit your business needs.
 
 > [!div class="nextstepaction"]
 > [Design the canvas app interface in Power Apps](add-configure-controls.md)
