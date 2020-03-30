@@ -35,9 +35,9 @@ Legend:
 1. **Model-driven apps**
 2. **Canvas apps**
 
-To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to an app that you created or that someone else created and shared with you.
-
-
+To sign up for preview, download the beta version of the Power Apps mobile app using the following links:
+1. FOr iOS, download the app using this link. For android, download the app using this link. 
+2. If you already have the app installed, the installed app will be replaced by the beta version of the app.
 
 ## Open Power Apps and sign in
 Open Power Apps on your mobile device and sign in using your Azure Active Directory credentials.
