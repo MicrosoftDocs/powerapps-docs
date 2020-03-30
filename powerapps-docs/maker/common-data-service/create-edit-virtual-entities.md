@@ -144,6 +144,7 @@ Virtual entities have these restrictions.
 - We recommend that you target a single data source when you use virtual entities in Advanced Finds. For example, creating an  Advanced Find that ultimately creates a join between the Common Data Service native data and the virtual entity external data isn't supported.  
 - Field metadata properties that validate on update don’t apply to virtual entities. For example, a Whole Number field on a virtual entity field may be set to have a minimum value of zero. However, since the value is coming from an external data source, a query will return values less than zero when retrieved from a virtual entity.  The minimum value property is not implied in the query.  You would still need to filter the values to be greater than 0 if that’s what is desired.
 - Virtual entities don't support change tracking and cannot be synchronized by using a Common Data Service feature, such as the Data Export Service.
+- Virtual entities using the out of the box ODta provider are enabled on outbound port 443.
   
 ### See also  
 
