@@ -36,8 +36,8 @@ Perform the following steps to deploy the Emergency Response sample app for your
 - [Step 2: Download the deployment package](#step-2-download-the-deployment-package)
 - [Step 3: Import the solution file into your environment](#step-3-import-the-solution-file-into-your-environment)
 - [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization)
-    - [Step 4.1: How to load data from data files?](#step-41-how-to-load-data-from-data-files)
-    - [Step 4.2: Import mandatory configuration data](#step-42-import-mandatory-configuration-data)
+    - [Step 4.1: Load mandatory configuration data](#step-41-load-mandatory-configuration-data)
+    - [Step 4.2: Load master data](#step-42-load-master-data)
 - [Step 5: Update the mobile app branding](#step-5-update-the-mobile-app-branding)
 - [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
 - [Step 7: Add Azure Application Insights key to mobile apps for telemetry](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry)
@@ -95,7 +95,7 @@ To begin the deployment process, extract the deployment file (.zip) to a locatio
 
 5.  In the **Import Solution** dialog box, select the solution file mentioned in step 1, and then follow the steps in the wizard to import the solution.
 
-6.  After the solution is imported successfully, select **Close** in the import dialog box, and then select **Publish all customizations**. This might take a while to complete.
+6.  After the solution is imported successfully, select **Close** in the import dialog box.
 
 Now, you will see new apps under **Apps**:
 
@@ -166,29 +166,7 @@ The **Data Files** folder has the following files and folders:
 </tr>
 </table>
 
-#### Step 4.1: How to load data from data files?
-
-To load sample data from one of the data files to an entity:
-
-1.  In the left navigation pane of the admin app, select an entity for which you want to load the data. For example, select **Location** from the area picker and then select **Systems**.
-
-2.  Select **Import from Excel** and select the **01 - Load Systems.xlsx** file from the **Sample Data** folder.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Import from Excel](media/conf-import-from-excel.png "Import from Excel")
-
-3.  Proceed with the import wizard steps to import the data.
-
-4.  After the sample data is imported, you will see the imported record in the entity:
-
-    > [!div class="mx-imgBorder"] 
-    > ![Entity record](media/conf-entity-record.png "Record in the entity after import")
-
-Repeat the above steps with other entities.
-
-Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
-
-#### Step 4.2: Import mandatory configuration data
+#### Step 4.1: Load mandatory configuration data
 
 Importing the configuration data under the following entities in the admin app is **mandatory** before you move to the next step:
 
@@ -200,7 +178,36 @@ Importing the configuration data under the following entities in the admin app i
 | Staffing | Request Roles | 00 - Request Roles Import.xlsx
 | Locations | Supplies | 00 - Supplies Import.xlsx
 
-Data for other entities can be [manually](#manually-configure-and-manage-master-data-for-your-organization) added later or by using the sample data files explained earlier.
+##### How to load data from data files?
+
+To import data from one of the data files to an entity:
+
+1.  In the left navigation pane of the admin app, select an entity for which you want to load the data. For example, select **Administration** from the area picker and then select **Acuities**.
+
+2.  Select **Import from Excel** and select the **00 - Acuities Import.xlsx** file from the **Data Files** folder.
+
+    > [!div class="mx-imgBorder"]
+    > ![Import from Excel](media/conf-import-from-excel.png "Import from Excel")
+
+3.  Proceed with the import wizard steps to import the data.
+
+4.  After the sample data is imported, you will see the imported record in the entity:
+
+    > [!div class="mx-imgBorder"] 
+    > ![Entity record](media/conf-entity-record.png "Record in the entity after import")
+
+Repeat the above steps with other configuration data entities.
+
+Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
+
+#### Step 4.2: Load master data
+
+As explained earlier:
+- You can use the sample data files for master data entities under the **Data Files/Sample Data** folder to import the sample data in the required entities. 
+
+- You can use the "empty" data files for master entities under the **Data Files/Data Template File for Master Data** folder that you can use to populate your organization data, and then import the data in the required entities.
+
+You can also manually add master data later. More information: [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization)
 
 ### Step 5: Update the mobile app branding
 
@@ -227,7 +234,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
     > [!div class="mx-imgBorder"] 
     > ![Details App ID](media/conf-details-app-id.png "Details App ID")
 
-1.  Repeat steps 3 and 4 for each canvas app.
+1.  Repeat steps 4 and 5 for each canvas app.
 
 1.  Open the Admin App, and in the left navigation pane of the admin app, select **Administration** from the area picker, and then select **Apps**. This will show all the canvas app records you imported from the **App Import.xlsx** file.
 
