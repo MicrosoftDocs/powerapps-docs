@@ -36,7 +36,7 @@ Legend:
 2. **Canvas apps**
 
 To sign up for preview, download the beta version of the Power Apps mobile app using the following links:
-1. FOr iOS, download the app using this link. For android, download the app using this link. 
+1. For iOS, download the app using this link. For android, download the app using this link. 
 2. If you already have the app installed, the installed app will be replaced by the beta version of the app.
 
 ## Open Power Apps and sign in
