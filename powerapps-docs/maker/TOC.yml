@@ -30,7 +30,7 @@
   - name: In a browser
     href: ../user/run-app-browser.md
   - name: On a phone (preview)
-    hred: ../user/run-canvas-and-model-apps-on-mobile.md
+    href: ../user/run-canvas-and-model-apps-on-mobile.md
   - name: On a phone (canvas)
     href: ../user/run-app-client.md
   - name: On a SharePoint Online page (canvas apps)
