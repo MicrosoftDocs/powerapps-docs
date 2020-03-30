@@ -127,7 +127,7 @@ If an app requires a connection to a data source or permission to use the device
 
 ### Run a model-driven app 
 
-Exmaple of a mode-driven app screen after you sign in. To learn how to use model-driven apps running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md). 
+Example of a mode-driven app screen after you sign in. To learn how to use model-driven apps running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md). 
 
 ![Model-driven app home page](media/model-driven-app-opened.png)
 
