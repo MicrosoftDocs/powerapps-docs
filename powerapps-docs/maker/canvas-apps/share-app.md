@@ -186,7 +186,7 @@ Power Apps canvas apps can be shared with guest users of an Azure Active Directo
           > [!div class="mx-imgBorder"] 
           > ![Share with guest](media/share-app/guest_access_doc_2.png "Share with guest")
  
-After you share an app for guest access, guests can discover and access apps shared with them from the email sent to them as part of sharing.
+After you share an app for guest access, guests can discover and access apps shared with them from the email sent to them as part of sharing.  Alternatively, you can share the app URL directly with the guest. To find the URL, go to https://make.powerapps.com, select an app, select the **Details** tab, and the URL is displayed under **Web link**.
 
 > [!div class="mx-imgBorder"]  
 > ![Guests receive app share email](media/share-app/guest_access_doc_4.png "Guests receive app share email")
