@@ -49,17 +49,14 @@ If you have the Microsoft Authenticator app installed on your mobile device, sim
 
 
 ## Find the app
-To make it easier to find the app, open the **Power Apps** menu, and then select a filter. 
-
-Only the **All apps** filter apply to model-driven apps. For early-access, **My apps** filters shows **All apps** for model-driven apps.
-
+When you sign in to the app, **my apps** filter is set by default. If you don't find the app you are looking for, you can open the **Power Apps** menu, and then select a different filter. 
 ![App filters](media/filter-menu.png)
 
 The following filters are available:
 
 * **All apps** : Displays all canvas and model-driven apps to which you have access, including apps you created and apps that others shared with you.
 
-* **My apps** (only for canvas apps): Displays canvas apps that you have opened, app that you are the owner of, and apps that you can edit.
+* **My apps**: Displays canvas apps that you have opened, app that you are the owner of, and apps that you can edit. Displays all model apps that you have access to. 
 
 * **Sample apps** (only for canvas apps): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
 
