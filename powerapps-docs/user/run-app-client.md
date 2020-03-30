@@ -1,12 +1,12 @@
 ---
-title: Run canvas and model-driven apps on a mobile device | Microsoft Docs
-description: Learn how to run a canvas app or a custom model-driven app on a mobile device.
-author: mduelae
+title: Run a canvas-based app on a mobile device | Microsoft Docs
+description: Learn how to run a canvas app on a mobile device.
+author: Mattp123
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/12/2020
-ms.author: mkaur
+ms.date: 11/16/2018
+ms.author: matp
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -17,131 +17,67 @@ search.app:
   - D365CE
 ---
 
-# Run canvas and model-driven apps on a mobile device
+# Run a canvas app on a mobile device
+When you create an app, or someone shares an app with you, you can run that app on Windows, iOS, Android, or in a web browser. In this topic, you'll learn how to run a canvas app on a mobile device. Apps running on a mobile device can take advantage of the device's capabilities, such as location services and camera.
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
-When you create an app, or someone shares an app with you, canvas or model-driven app, you can run that app on iOS and Android device using the Power Apps mobile app. If you're on a Windows device, you can only run canvas apps. Model-driven apps are not support on the Power App mobile app for Widnows devices. In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device. 
-
-To learn how to use model-driven apps running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md).
-
-> [!IMPORTANT]
-> Model-driven apps for sales, customer service and other dynamics verticals don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
-
-![Power Apps mobile](media/powerappsmobile.png)
-
-Legend:
-
-1. **Model-driven apps**
-2. **Canvas apps**
-
-To sign up for preview, download the beta version of the Power Apps mobile app using the following links:
-1. For iOS, download the app using this link. For android, download the app using this link. 
-2. If you already have the app installed, the installed app will be replaced by the beta version of the app.
+To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
 
 ## Open Power Apps and sign in
 Open Power Apps on your mobile device and sign in using your Azure Active Directory credentials.
 
-![Login user](media/powerapps_mobile_app_signin_screen.png)
+![Login user](./media/run-app-client/run-client-login.png)
 
 If you have the Microsoft Authenticator app installed on your mobile device, simply enter your username when prompted, and then approve the notification sent to your device.
 
-
-
 ## Find the app
-When you sign in to the app, **my apps** filter is set by default. If you don't find the app you are looking for, you can open the **Power Apps** menu, and then select a different filter. 
+To make it easier to find the app, open the **PowerApps** menu, and then select a filter.
 
-
-![App filters](media/filter-menu.png)
+![App filters](./media/run-app-client/filter-menu.png)
 
 The following filters are available:
 
-* **All apps** : Displays all canvas and model-driven apps to which you have access, including apps you created and apps that others shared with you.
+* **All apps**: Displays all apps to which you have access, including apps you created and apps that others shared with you.
 
-* **My apps**: For canvas apps, it displays canvas apps that you have opened, apps that you are the owner of, and apps that you can edit. For model-driven apps, it displays all model-driven apps that you have access to. 
+* **My Apps**: Displays apps that you've run at least once.
 
-* **Sample apps** (only for canvas apps): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
+* **Sample apps**: Displays sample apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
 
-* **Favorites** (only for canvas apps): Displays canvas apps that you've marked by selecting the ellipsis (...) on the app tile, and then select **Favorite**. To remove an app from this list, select the ellipsis (...) on the app tile, and then tap **Unfavorite**.
+* **Favorites**: Displays apps that you've marked by tapping the ellipsis (...) on the app tile, and then tapping **Favorite**. To remove an app from this list, tap the ellipsis (...) on the app tile, and then tap **Unfavorite**.
 
-    ![Mark as Favorite](media/add_favorite_app.png)
+    ![Mark as Favorite](./media/run-app-client/favorite.png)
 
-* **Featured apps** (only for canvas apps): Displays canvas apps that your admin as marked as featured apps.
+After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen Power Apps.
 
-### Sort apps
+![Sort menu](./media/run-app-client/sort-menu.png)
 
-After you filter your apps, you can sort the filtered list by the date the apps were most recently opened or modified, or alphabetically by name. These preferences are retained when you close and reopen apps. You can sort both canvas and model-driven apps.
+If you know the name of the app you want to run, you can tap the search icon at the top of Powerapps, and then type part of its name in the search box.
 
-![Sort menu](media/sort_apps.png)
-
-### Search apps
-
-If you know the name of the app you want to run, you can select the search icon at the top, and then type part of its name in the search box. You can search for both canvas and model-driven apps.
-
-
-![Search](media/search_apps.png)
+![Search](./media/run-app-client/search.png)
 
 If you filtered your apps, it will search the filtered list.
 
-### Refresh the list of apps
+## Run an app
+To run a canvas app on a mobile device, tap the app tile. If someone else created a canvas app and shared it with you in an email, you can run the app by tapping the link in the email.
 
-Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh both the canvas and model-driven app list. 
+If this is the first time you're using Power Apps, a screen shows the swipe gesture to close the app.
 
+![Launch app](./media/run-app-client/run-client-app.png)
+
+## Give consent
+If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
+
+![Connection](./media/run-app-client/app-connection.png)
 
 ## Pin an app to the home screen
-You can pin both canvas and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
+You can pin an app to the home screen of your device for quick access. Tap the ellipsis (...) on the app tile, tap **Pin to Home**, and then follow the instructions that appear.
 
-![Pin app](media/pin_to_home.png)
+![Pin app](./media/run-app-client/run-client-pin.png)
 
-## See non production apps
+## Close an app
+To close an app, use your finger to swipe from the left edge of the app to the right. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
 
-By default, only production model-driven apps are shown in the list of apps. 
+## Next steps
+In this topic, you learned how to run a canvas app on a mobile device. You can also run model-driven apps on a mobile device.
 
-To see model-driven apps from non production environments, select the setting menu ![Setting icon](media/settings_icon.png) and then set the **Show non production apps** toggle to on, and then follow the instructions that appear.
-
-![Non production apps toggle](media/non_prod_toggle.png)
-
-## Run an app
-To run an app on a mobile device, select the app tile. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email.
-
-### Run a canvas app
-
-If this is the first time you're running canvas app using the Power Apps mobile app, a screen shows the swipe gestures.
-
-#### Close a canvas app
-
-Use your finger to swipe from the left edge of the app to the right to close an app. On Android devices, you can also press the Back button and then confirm that you intended to close the app.
-
-![Launch app](media/swipe.gif)
-
-#### Pinch and zoom in on a canvas app
-
-![Pinch to zoom](media/pinchtozoom.jpg)
-
-#### Give consent
-
-If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
-
-![Give consent](media/give_consent_canvas.jpg)
-
-
-### Run a model-driven app 
-
-Example of a mode-driven app screen after you sign in. To learn how to use model-driven apps running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md). 
-
-![Model-driven app home page](media/model-driven-app-opened.png)
-
-
-#### Give consent
-
-If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
-
-![Give consent](media/give_consent.png)
-
-#### Close a model-drive app
-
-Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") and then select, **Apps**.
-
-![Close a model-driven app](media/pa_mobile_close_app.png)
-
-
+> [!div class="nextstepaction"]
+> [Run a model-driven app on a mobile device](run-app-client-model-driven.md)
