@@ -95,7 +95,7 @@ To begin the deployment process, extract the deployment file (.zip) to a locatio
 
 5.  In the **Import Solution** dialog box, select the solution file mentioned in step 1, and then follow the steps in the wizard to import the solution.
 
-6.  After the solution is imported successfully, select **Close** in the import dialog box, and then select **Public all customizations**. This might take a while to complete.
+6.  After the solution is imported successfully, select **Close** in the import dialog box, and then select **Publish all customizations**. This might take a while to complete.
 
 Now, you will see new apps under **Apps**:
 
