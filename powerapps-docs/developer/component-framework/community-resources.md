@@ -68,6 +68,7 @@ The following is the list of blogs created by Power Apps community.
 - [Public availability of Power Apps component framework – An important milestone](https://crmindian.com/2019/04/24/public-availability-of-powerapps-component-framework-an-important-milestone-for-powerapps-and-d365/)
 - [Work with code components using Power Apps component framework](https://powermaverick.dev/2019/05/18/create-custom-controls-using-powerapp-component-framework)
 - [What happens when a web resource calls setVisible/setDisabled for that component](https://www.itaintboring.com/dynamics-crm/pcf-components-and-setvisible-setdisabled)
+- [When do you call updateView method](https://dianabirkelbach.wordpress.com/2020/03/29/pcf-when-is-updateview-called)
 
 ## Tools
 
