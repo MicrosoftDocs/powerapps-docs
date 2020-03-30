@@ -58,7 +58,7 @@ The following filters are available:
 
 * **All apps** : Displays all canvas and model-driven apps to which you have access, including apps you created and apps that others shared with you.
 
-* **My apps**: Displays canvas apps that you have opened, app that you are the owner of, and apps that you can edit. Displays all model apps that you have access to. 
+* **My apps**: For canvas apps, it displays canvas apps that you have opened, apps that you are the owner of, and apps that you can edit. For model-driven apps, it displays all model-driven apps that you have access to. 
 
 * **Sample apps** (only for canvas apps): Displays sample canvas apps from Microsoft that showcase real application scenarios with fictitious data to help you explore design possibilities.
 
