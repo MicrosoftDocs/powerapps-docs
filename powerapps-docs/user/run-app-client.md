@@ -50,6 +50,8 @@ If you have the Microsoft Authenticator app installed on your mobile device, sim
 
 ## Find the app
 When you sign in to the app, **my apps** filter is set by default. If you don't find the app you are looking for, you can open the **Power Apps** menu, and then select a different filter. 
+
+
 ![App filters](media/filter-menu.png)
 
 The following filters are available:
