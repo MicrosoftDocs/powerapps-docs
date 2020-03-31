@@ -15,7 +15,7 @@ ms.reviewer:
 
 In Power Apps portals, you can search for records across multiple entities by using portal's global search functionality. You can also search within records of entity lists using entity list search functionality. 
 
-Entity list search functionality in the portal uses FetchXML in the back end to search the columns defined in the entity list and then display the results. 
+Entity list search functionality in the portal uses FetchXML in the backend to search the columns defined in the entity list and then display the results. 
 
 Global search uses an external search index that is based on Lucene.Net and is used to search within multiple entities and fields at once.
 
@@ -25,7 +25,9 @@ Global search of portals allows you to search for records across multiple entiti
 
 Among the benefits of global search are its ability to:
 - Find matches to any word in the search term in any field in the entity. Matches can include inflectional words like stream, streaming, or streamed.
-- Return results from all searchable entities in a single list sorted by relevance, based on factors like number of words matched, or their proximity to each other in the text.
+- Return results from all searchable entities in a single list sorted by relevance, based on factors such as:
+    - Number of words matched.
+    - Proximity to each other in the text.
 - Highlight matches in the search results.
 - Provide facet options that can be used to further filter search results.
 
@@ -62,7 +64,7 @@ All the fields available in the view defined by the Search/IndexQueryName site s
 
 Default value for Search/IndexQueryName is "Portal Search".
 
-If the view is not available for any entity, it is not indexed and the results are not displayed in global search.
+If the view is not available for any entity, it's not indexed and the results are not displayed in global search.
 
 > [!NOTE]
 > If you change the value of the Search/IndexQueryName site setting, you need to trigger a manual re-index of the build using steps defined in the [Rebuild full search index](#rebuild-full-search-index) section.
@@ -73,16 +75,16 @@ The following site settings are related to global search:
 
 | Name    | Default value     | Description       |
 |-----------------------|--------------------|-------------|
-| Search/Enabled | True  | A Boolean value that indicates whether search is enabled. If you set its value to false, global search in the portal is turned off.<br>If you are using out-of-the-box web templates and you turn this setting off, the search box will not be displayed in the header as well as on the search page. Also, no results are returned even if the direct URL for the search page is hit.  |
+| Search/Enabled | True  | A Boolean value that indicates whether search is enabled. If you set its value to false, global search in the portal is turned off.<br>If you're using out-of-the-box web templates and you turn off this setting, the search box will not be displayed in the header as well as on the search page. Also, no results are returned even if the direct URL for the search page is hit.  |
 | Search/EnableAdditionalEntities  | False  | Setting this value to true enables searching on additional entities on your portal. <br> Requires *Search/Enabled* set to *True* when used.  |
 | Search/Filters  | Content:adx_webpage;Events:adx_event,adx_eventschedule;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea,adx_ideacomment;Issues:adx_issueforum,adx_issue,adx_issuecomment;Help Desk:incident | A collection of search logical name filter options. Defining a value here will add drop-down filter options to global search. This value should be in the form of name/value pairs, with name and value separated by a colon, and pairs separated by a semicolon. For example: "Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Blogs:adx_blog,adx_blogpost,adx_blogpostcomment".  |
 | Search/IndexQueryName   | Portal search  | The name of the system view used by the portal search query to define the fields of an entity enabled that are indexed and searched.   |
-| Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2 -_logicalname:adx_webfile\~0.9 adx_partialurl:(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:adx_communityforumthread\~0.9   | This setting adds additional weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br>For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only applies to the search box that comes in the default search page of the portal. If you are using a liquid search tag to create your own search page, then this setting doesn't apply. |
+| Search/Query  | +(@Query) _title:(@Query) _logicalname:adx_webpage\~0.9^0.2 -_logicalname:adx_webfile\~0.9 adx_partialurl:(@Query) _logicalname:adx_blogpost\~0.9^0.1 -_logicalname:adx_communityforumthread\~0.9   | This setting adds additional weights and filters to the query that a user enters in the default search box that is displayed on the portal. In the default value, @Query is the query text entered by a user.<br>For information on how to modify this value, follow [Lucene query syntax](https://lucene.apache.org/core/old_versioned_docs/versions/2_9_1/queryparsersyntax.html).<br>**Important**: This weighting and filtering only apply to the search box that comes in the default search page of the portal. If you're using a liquid search tag to create your own search page, then this setting doesn't apply. |
 | Search/Stemmer  | English    | The language used by the portal search's stemming algorithm.   |
 | Search/FacetedView  | True   | This enables facets in the search results. When set to True, facets will be shown along with results on the search page.  |
-| Search/IndexNotesAttachments   | True    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it is set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
+| Search/IndexNotesAttachments   | True    | Indicates whether the content of notes attachments in knowledge base articles and web files should be indexed. By default, it's set to False. More information: [Search within file attachment content](search-file-attachment.md)    |
 | Search/RecordTypeFacetsEntities  | Blogs:adx_blog,adx_blogpost;Forums:adx_communityforum,adx_communityforumthread,adx_communityforumpost;Ideas:adx_ideaforum,adx_idea;Downloads:annotation,adx_webfile    | This determines how the entities are grouped in Record Type facet on the Search page. This setting is in the format <br>"DisplayNameinRecordTypeFacet1:logicalnameofentity1,logicalnameofentity2; DisplayNameinRecordTypeFacet2:logicalnameofentity3,logicalnameofentity4" <br>Display Name in Record Type facet will appear on the UI. This facet group will combine the result of the entities defined in the configuration.   |
-| KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it is set to False. |
+| KnowledgeManagement/DisplayNotes | True   | Indicates whether to index attachments of knowledge base articles. By default, it's set to False. |
 |||
 
 ## Related content snippets
@@ -110,7 +112,7 @@ The following content snippets are related to global search:
 
 ## Entity-specific handling
 
-- **Case**: By default, the only cases that are searchable are in the **Resolved** state with the **Publish to Web** field set to **True**. This behavior can be modified by updating the Portal Search view of the Case entity and removing the filters available in the Portal Search view. However, when this check is removed, it is important to ensure that the Customer Service – Case web template is modified appropriately, as this web template restricts all users from viewing cases that are active and are not published to the web. If the web template is not modified, cases will be visible in search results. However, when you select them, the case detail web page is displayed with the Permission denied error.
+- **Case**: By default, the only cases that are searchable are in the **Resolved** state with the **Publish to Web** field set to **True**. This behavior can be modified by updating the Portal Search view of the Case entity and removing the filters available in the Portal Search view. However, when this check is removed, it's important to ensure that the Customer Service – Case web template is modified appropriately, as this web template restricts all users from viewing cases that are active and are not published to the web. If the web template is not modified, cases will be visible in search results. However, when you select them, the case detail web page is displayed with the Permission denied error.
 
 - **Knowledge Base**: Knowledge articles are searchable only if they are in the **Published** state with the **Internal** field set to **No**. This behavior cannot be modified. Knowledge articles also have special functionality available in search results as follows:
 
@@ -150,9 +152,9 @@ As part of portal global search, a variety of special characters and syntaxes ar
     
         To do proximity searches, use the tilde (~) symbol at the end of the query. For example, if you want results for the words "Picture" and "blurry" appearing within 10 words of each other, then the query would be "Picture blurry"~10.
 
-    - **Boosting a term**: Global search provides the relevance level of matching documents based on the terms found. To boost a term, use the caret (^) symbol with a boost factor (a number) at the end of the term you are searching. The higher the boost factor, the more relevant the term will be.
+    - **Boosting a term**: Global search provides the relevance level of matching documents based on the terms found. To boost a term, use the caret (^) symbol with a boost factor (a number) at the end of the term you're searching. The higher the boost factor, the more relevant the term will be.
 
-        Boosting allows you to control the relevance of a document by boosting its term. For example, if you are searching for Smart TV and you want the term Smart to be more relevant, boost it using the ^ symbol along with the boost factor next to the term. You would type: Smart^4 TV. This will make documents with the term Smart appear more relevant.
+        Boosting allows you to control the relevance of a document by boosting its term. For example, if you're searching for Smart TV and you want the term Smart to be more relevant, boost it using the ^ symbol along with the boost factor next to the term. You would type: Smart^4 TV. This will make documents with the term Smart appear more relevant.
 
         You can also boost phrase terms as in the example: Smart TV^4 New TV. In this case, the "Smart TV" phrase would be boosted in comparison to "New TV".
 
@@ -173,11 +175,11 @@ As part of portal global search, a variety of special characters and syntaxes ar
 
     - **Minus (–) symbol**: The minus (-) symbol, also known as the prohibit operator, excludes documents that contain the term after the "-" symbol. For example, the search query "Smart - TV" will search for all records where the word Smart is present, and the word TV must not be present.
 
-- **Grouping**: Portal global search supports using parentheses to group clauses to form sub queries. This can be very useful if you want to control the Boolean logic for a query. For example, if you want to search for all records where either one of the terms "HD" or "Smart" is present but the word TV is always present, then the query can be written as "(HD or Smart) AND TV" (excluding quotation marks).
+- **Grouping**: Portal global search supports using parentheses to group clauses to form sub queries. This can be useful if you want to control the Boolean logic for a query. For example, if you want to search for all records where either one of the terms "HD" or "Smart" is present but the word TV is always present, then the query can be written as "(HD or Smart) AND TV" (excluding quotation marks).
 
 ## Liquid search tag
 
-You can invoke portal global search from liquid templates by using the searchindex tag. More information: [searchindex](../liquid/portals-entity-tags.md#searchindex)
+You can invoke portal global search from liquid templates by using the *searchindex* tag. More information: [searchindex](../liquid/portals-entity-tags.md#searchindex)
 
 > [!IMPORTANT]
 > When you use the searchindex tag, facets are not returned as part of results, nor can they be applied as a filter.
@@ -190,7 +192,7 @@ Search index updates in Power Apps portals happen automatically like the cache i
 
 - Any change can take up to 30 minutes to be reflected in a portal search. However, 95 percent of the changes will be updated within 15 minutes. If attachments are involved, it can take longer depending on the size of the attachment.
 
-- It is advisable to rebuild the full index manually after performing a bulk data migration or bulk updates to records within a short span of time. For details, see [Rebuild full search index](#rebuild-full-search-index).
+- it's advisable to rebuild the full index manually after performing a bulk data migration or bulk updates to records within a short span of time. For details, see [Rebuild full search index](#rebuild-full-search-index).
 
 ## Rebuild full search index
 
