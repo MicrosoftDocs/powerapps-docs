@@ -13,7 +13,7 @@ ms.reviewer: tapanm
 
 # Configuring additional entities for global search  
 
-## Overview of additional entities in global search
+## Overview
 
 You can enable additional entities for search functionality. Configuring search for additional entities requires additional actions.
 
