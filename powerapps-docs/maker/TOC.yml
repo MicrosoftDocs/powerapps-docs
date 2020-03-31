@@ -1267,6 +1267,8 @@
           items:
             - name: About search
               href: ./portals/configure/search.md
+            - name: Configure search for additional entities
+              href: ./portals/configure/search-additional-entities.md
             - name: Improve search by using faceted search
               href: ./portals/configure/improve-portal-search-faceted-search.md
             - name: Search within file attachments
