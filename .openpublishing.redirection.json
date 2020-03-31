@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/administrator/app-analytics.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/analytics-common-data-service",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/administrator/export-import-packages.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/analytics-common-data-service",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/administrator/index.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/admin/analytics-common-data-service",
+      "redirect_document_id": "false"
+    },   
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/create-and-edit-views.md",
       "redirect_url": "create-edit-views-app-designer",
       "redirect_document_id": "false"
