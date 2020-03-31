@@ -36,8 +36,9 @@ Legend:
 2. **Canvas apps**
 
 To sign up for preview:
-1. [Install Power App for iOS](https://go.microsoft.com/fwlink/?linkid=2125171) or [Install Power App for android](https://go.microsoft.com/fwlink/?linkid=2125172).
+1. [Install Power Apps for iOS](https://go.microsoft.com/fwlink/?linkid=2125171) or [Install Power Apps for android](https://go.microsoft.com/fwlink/?linkid=2125172).
 2. If you already have the app installed, the installed app will be replaced by the beta version of the app.
+3. Make sure to manually update to the latest version available to benefit from all the latest improvements. 
 3. Once you have the app installed, you can start testing. For any feedabck, reach out to us at pamobsup@microsoft.com. 
 
 ## Open Power Apps and sign in
