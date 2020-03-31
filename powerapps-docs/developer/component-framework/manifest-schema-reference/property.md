@@ -25,14 +25,14 @@ Model-driven apps and canvas apps (public preview)
 
 |Name|Description|Type|Required|
 |--|--|--|--|
-|`name`|Name of the property|`string`|Yes|
-|`display-name-key`|Used in the customization screens as localized strings that describes the name of the property.|`string`|Yes|
-|`of-type`|Defines the data type of the property|See [Remarks](#remarks)|Optional|
-|`usage`|The usage attribute identifies if the property is meant to represent an entity attribute that the component can change (bound) or read-only values (input)|`bound` or `input`|Optional|
-|`required`|Whether the property is required or not|`boolean`|Optional|
-|`of-type-group`|Name of the type-group as defined in manifest|`string`|Optional|
-|`description-key`|Used in the customization screens as localized strings that describes the description of the property.|`string`|Optional|
-|`default-value`|The default configuration value provided to the component. In model-driven apps, this attribute is only allowed on inputs since the bound parameters expect to have a field associated.|`string`|Optional|
+|name|Name of the property|`string`|Yes|
+|display-name-key|Used in the customization screens as localized strings that describes the name of the property.|`string`|Yes|
+|of-type|Defines the data type of the property|See [Remarks](#remarks)|Optional|
+|usage|The usage attribute identifies if the property is meant to represent an entity attribute that the component can change (bound) or read-only values (input)|`bound` or `input`|Optional|
+|required|Whether the property is required or not|`boolean`|Optional|
+|of-type-group|Name of the type-group as defined in manifest|`string`|Optional|
+|description-key|Used in the customization screens as localized strings that describes the description of the property.|`string`|Optional|
+|default-value|The default configuration value provided to the component. In model-driven apps, this attribute is only allowed on inputs since the bound parameters expect to have a field associated.|`string`|Optional|
 
 ### Remarks
 
