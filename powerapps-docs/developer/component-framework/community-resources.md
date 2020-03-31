@@ -16,7 +16,7 @@ ms.topic: "article"
 
 The following is a list of some community resources created by the Power Apps community that you can use to create code components in model-driven and canvas apps using Power Apps component framework and Power Apps CLI. 
 
-> [!NOTE]
+> [!NOTE]            
 > Resources created by the community are not supported by Microsoft. If you have questions or issues with community resources, contact the publisher of the resource. Before using these resources, you must ensure that these community resources meet the Power Apps component framework guidelines and should only be used for reference purpose. 
 
 ## Code components gallery
@@ -31,7 +31,7 @@ Make sure that you review the licensing terms and the source code before you dow
 > [!div class="mx-imgBorder"]
 > ![Component gallery](media/pcf-gallery.PNG "Components gallery")
 
-## Videos
+## Videos        
 
 The following is the list of videos created by Power Apps community.
 
