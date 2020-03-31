@@ -60,7 +60,16 @@ The contact entity stores all information about a person such as an email addres
   
 The basic operations that you can perform on a contact include Create, Read, Update, and Delete.  
   
-Linking entities such as activities and notes to the contact entity lets user see all the communication the user has had with a customer, any actions the user has taken on behalf of the customer, and all information the user needs about the customer.  
+Linking entities such as activities and notes to the contact entity lets user see all the communication the user has had with a customer, any actions the user has taken on behalf of the customer, and all information the user needs about the customer.
+
+## CustomerAddress entity
+
+This entity contains address and shipping information. It is used to store additional addresses for an account or contact.
+
+>[!NOTE]
+>The Customer Address table is updated at the platform level when a change is made to the Account or Contact entities. 
+>Because of this, no separate SDK call will be made to update or create the Customer Address entity. Any code that is triggering 
+>on address updates or creates should be pointing to the Contact or Account entities.
   
 ## In This Section  
  [Account Entity](reference/entities/account.md)  
