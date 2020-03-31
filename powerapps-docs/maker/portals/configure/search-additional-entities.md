@@ -195,7 +195,7 @@ solution.
 
 1. Select [Clear cache](https://docs.microsoft.com/powerapps/maker/portals/admin/clear-server-side-cache).
 
-1. After clearing cache, select [Rebuild Search Index](https://docs.microsoft.com/powerapps/maker/portals/configure/search#rebuild-full-search-index) to rebuild the search index.
+1. After clearing cache, select [Rebuild Search Index](search.md#rebuild-full-search-index) to rebuild the search index.
 
 ## Verify Global Search with custom entity
 
