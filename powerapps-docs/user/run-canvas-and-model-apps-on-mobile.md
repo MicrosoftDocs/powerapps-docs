@@ -35,9 +35,10 @@ Legend:
 1. **Model-driven apps**
 2. **Canvas apps**
 
-To sign up for preview, download the beta version of the Power Apps mobile app using the following links:
-1. For iOS, download the app using this link. For android, download the app using this link. 
+To sign up for preview:
+1. [Install Power App for iOS](https://go.microsoft.com/fwlink/?linkid=2125171) or [Install Power App for android](https://go.microsoft.com/fwlink/?linkid=2125172).
 2. If you already have the app installed, the installed app will be replaced by the beta version of the app.
+3. Once you have the app installed, you can start testing. For any feedabck, reach out to us at pamobsup@microsoft.com. 
 
 ## Open Power Apps and sign in
 Open Power Apps on your mobile device and sign in using your Azure Active Directory credentials.
@@ -132,6 +133,8 @@ Example of a mode-driven app screen after you sign in. To learn how to use model
 ![Model-driven app home page](media/model-driven-app-opened.png)
 
 
+
+
 #### Give consent
 
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
@@ -143,3 +146,6 @@ If an app requires a connection to a data source or permission to use the device
 Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") and then select, **Apps**.
 
 ![Close a model-driven app](media/pa_mobile_close_app.png)
+
+#### Known issues
+We are still working through some known issues and will release fixes for those over time. Make sure to manually update to the latest beta build as soon as available. Some of the known issues are: No apps are displayed in the app list when you open the Power Apps app in offline mode, icons inside the model-driven apps sometimes disappear etc.
