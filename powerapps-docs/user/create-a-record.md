@@ -55,8 +55,8 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
     > [!div class="mx-imgBorder"] 
     > ![Save option on a record](media/saveoptionalwaysvisible.png "Save option on a record")
 
-    > [!NOTE]
-    > If you have unsaved changes and try to go to another record or form, a **Unsaved changes** dialog box will pop-up. If you select **Save and continue**, it will attempt to save your information and open the page you wanted to go to. If you choose to save and continue and there is an error on a field, the dialog will close and you will remain on the page to fix the error before you can navigate away.
+   > [!NOTE]
+   > If you have unsaved changes and try to go to another record or form, a **Unsaved changes** dialog box will pop-up. If you select **Save and continue**, it will attempt to save your information and open the page you wanted to go to. If you choose to save and continue and there is an error on a field, the dialog will close and you will remain on the page to fix the error before you can navigate away.
 
  
 
