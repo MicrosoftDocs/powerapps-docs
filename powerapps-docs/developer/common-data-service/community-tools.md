@@ -19,7 +19,12 @@ search.app:
 
 The Power Apps community creates tools! 
 
-Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming. The following is a selected list of community tools distributed via the XrmToolBox that you can use with Common Data Service.
+Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming. 
+
+> [!IMPORTANT]
+> Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
+
+The following is a selected list of community tools distributed via the XrmToolBox that you can use with Common Data Service.
 
 |Tool  |Description  |
 |---------|---------|
@@ -33,5 +38,4 @@ Many of the most popular ones are distributed in the [XrmToolBox](https://www.xr
 
 Here is another tool, [Chromium Metadata Browser](https://community.dynamicslabs.io/feed/metadata-browser), that lets you browse metadata such as entities, attributes, relationships, option sets of Common Data Service environements. It works with Microsoft Edge and Google Chrome browsers. 
 
-> [!IMPORTANT]
-> Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
+
