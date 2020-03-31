@@ -191,7 +191,7 @@ To import data from one of the data files to an entity:
 
 3.  Proceed with the import wizard steps to import the data.
 
-4.  After the sample data is imported, you will see the imported record in the entity:
+4.  After the data is imported, you will see the imported record in the entity:
 
     > [!div class="mx-imgBorder"] 
     > ![Entity record](media/conf-entity-record.png "Record in the entity after import")
@@ -266,11 +266,9 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
 1.  Select the **Emergency Response App** record to open it for editing.
 
-    1.  Double-click the icon to specify a new image as the app icon.
+    1.  If required, update the colors for your app.
 
-    2.  Update the app names and colors for your app.
-
-    3.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in the mobile apps or not. Selecting **Yes** will make the **Sign Out** option available.
+    2.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in the mobile apps or not. Selecting **Yes** will make the **Sign Out** option available.
 
     > [!div class="mx-imgBorder"] 
     > ![Device Sharing Enabled field](media/conf-device-sharing-enabled-field.png "Device Sharing Enabled field")
