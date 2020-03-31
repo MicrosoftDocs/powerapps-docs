@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/25/2020
+ms.date: 03/31/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -735,30 +735,28 @@ The current **Get group members** action is limited to pulling 5000 users for th
 
 1. Select **Save**.
 
-
 ### Optional: Deep link Teams notification into Teams app
 
 If you would like your Teams notification to open directly into the canvas app
-inside of Teams, follow these steps.
+inside of Teams, follow these steps:
 
-1. Update the app URL to point to the Teams deep link in the admin app.
-Within the admin app, change the app URL to the following, where `App ID` is the ID of your app.
+1. Update the app URL to point to the Teams deep link in the admin app. <br>
+In the admin app, change the app URL to the following, where `App ID` is the ID of your app.
 
-```
-https://teams.microsoft.com/l/entity/<APP ID>/<APP ID>
-```
+    ```
+    https://teams.microsoft.com/l/entity/<APP ID>/<APP ID>
+    ```
 
     ![Admin app](media/sample-crisis-communication-app/42-admin-app.png)
 
-1. Update the app link that’s generated inside of the notification flow.
-Open the Set App Link Variable card and change the expression for Value to the following: 
+1. Update the app link generated inside of the notification flow. <br> Open the Set App Link Variable card and change the expression for Value to the following:
 
-```
-concat(items('Apply_to_each')?['AppUrl'], if(greater(indexOf(items('Apply_to_each')?['AppUrl'], '?'),0),'&','?'), 'context=%7B%22subEntityId%22%3A%22',triggerBody()?['ID'],'%22%7D')
-```
+    ```
+    concat(items('Apply_to_each')?['AppUrl'], if(greater(indexOf(items('Apply_to_each')?['AppUrl'], '?'),0),'&','?'), 'context=%7B%22subEntityId%22%3A%22',triggerBody()?['ID'],'%22%7D')
+    ```
     ![Change flow settings](media/sample-crisis-communication-app/43-flow-settings.png)
 
-1. Update the canvas app to consume the teams context variable to deep link to the correct news article. To do so, for the **OnStart** property of the app, change the Param from `newsid` to `subEntityId`.
+1. Update the canvas app to consume the teams context variable to deep link to the correct news article. <br> For the **OnStart** property of the app, change the Param from `newsid` to `subEntityId`.
 
     ![Change OnStart](media/sample-crisis-communication-app/44-onstart.png)
 
