@@ -23,7 +23,7 @@ Following considerations apply when configuring additional entities for global s
 - Ensure an **Entity Permission** is created that provides Read privilege, and appropriate scope for the records to show search results.
 - Associate the entity permission with required **Web Roles**.
 - Entity permissions must be associated with the **Anonymous Web Role** if you want to allow anonymous search for an entity.
-- Create a named view **Portal Search** for additional entity you want to enable search for. For more information, read [searchable fields in global search](search#fields-searchable-in-global-search).
+- Create a named view **Portal Search** for additional entity you want to enable search for. For more information, read [searchable fields in global search](search.md#fields-searchable-in-global-search).
 
 Explicit configuration explained above ensures that no records are accidentally made available via global search.
 
