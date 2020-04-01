@@ -1,6 +1,6 @@
 ---
 title: "navigateTo (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 03/29/2020
+ms.date: 04/01/2020
 ms.service: powerapps
 ms.topic: "reference"
 author: "KumarVivek"
@@ -59,7 +59,7 @@ search.app:
 <li><b>data</b>: (Optional) Object. A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
 ">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a>.</li>
 <li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
-<li><b>formType</b>: (Optional) Number. Specify one of the following values for the form type:<ul><li><code>2: Main</code></li><li><code>9: QuickCreate</code></li></ul></li>
+<li><b>formType</b>: (Optional) Number. Specify **2** to open the Main form.</li>
 <li><b>isCrossEntityNavigate</b>: (Optional) Boolean. Indicates whether the form is navigated to from a different entity using cross-entity business process flow.</li>
 <li><b>isOfflineSyncError</b>: (Optional) Boolean. Indicates whether there are any offline sync errors.</li>
 <li><b>processId</b>: (Optional) String. ID of the business process to be displayed on the form.</li>
@@ -116,7 +116,7 @@ search.app:
 <td>No</td>
 <td><p>Options for navigating to a page: whether to open inline or in a dialog. If you don't specify this parameter, page is opened inline by default. The object contains the following attributes:</p>
 <ul>
-<li><strong>target</strong>: Number. Specify <strong>1</strong> to open the page inline; <strong>2</strong> to open the page in a dialog. <br/><i>Entity lists</i> can only be opened inline; <i>entity records</i> and <i>web resources</i> can be opened either inline or in a dialog.</li>
+<li><strong>target</strong>: Number. Specify <strong>1</strong> to open the page inline; <strong>2</strong> to open the page in a dialog. Also, rest of the attributes (<b>width</b>, <b>height</b>, and <b>position</b>) are valid only if you have specified <strong>2</strong> in this attribute (open page in a dialog). <p><b>NOTE</b>: <i>Entity lists</i> can only be opened inline; <i>entity records</i> and <i>web resources</i> can be opened either inline or in a dialog.</p></li>
 <li><strong>width</strong>: (Optional) Number or Object. The width of dialog. To specify the width in pixels, just type a numeric value. To specify the width in percentage, specify an object of type <b>SizeValue</b> with the following properties:
 <ul><li><b>value</b>: Number. The numerical value.</li>
 <li><b>unit</b>: String. The unit of measurement. Specify "%" or "px". Default value is "px".</li></ul></li>
@@ -193,37 +193,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 );
 ```
 
-### Example 3: Open new account entity record in the quick create form
-
-```javascript
-// Define some default values to populate in the quick create form
-var accountData = {
-    name: "Sample account",
-    telephone1: "555-0158",
-    revenue: 10000,
-    numberofemployees: 50,
-    description: "Values were set programmatically."
-};
-
-var pageInput = {
-    pageType: "entityrecord",
-    entityName: "account",
-    formType: 9, // Quick create form
-    data: accountData
-};
-
-Xrm.Navigation.navigateTo(pageInput).then(
-    function success(result) {
-            console.log(result.savedEntityReference[0].id + ", " + result.savedEntityReference[0].name)
-            // Handle dialog closed
-    },
-    function error() {
-            // Handle errors
-    }
-);
-```
-
-### Example 4: Open an HTML web resource in a dialog
+### Example 3: Open an HTML web resource in a dialog
 
 ```javascript
 var pageInput = {
