@@ -1,7 +1,7 @@
 ---
 title: "Sort records in a model-driven app view in Power Apps | MicrosoftDocs"
 ms.custom: ""
-ms.date: 06/27/2018
+ms.date: 03/26/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,22 +24,22 @@ search.app:
 ---
 # Sort records in a model-driven app view
 
- When you create or edit a view you can configure the sort order for either ascending or descending.   
-  
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+When you create or edit a view you can configure the sort order for either ascending or descending.
 
+To change the sort order in the view designer, see [Create a public view in Power Apps](create-edit-views-app-designer.md#create-a-public-view-in-power-apps).
 
-2.  Expand **Data**, select **Entities**, and then select the entity that you want, such as **Accounts**.   
-3.  Select the **Views** tab, and if shown, select **Remove filter**, and then open the view you want, such as **Active Accounts**.
+## Change the sort order using solution explorer
 
-4.  In the view designer, select **Configure Sorting**.  
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the entity you want, select **Views**, and then open the view you want.
+
+2.  In the view designer, select **Configure Sorting**.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Configure sorting](media/configure-sorting.png)
+    > ![Configure sorting](media/configure-sorting.png "Configure sorting")
   
-5.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
+3.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
   
-6.  Select **OK** to close the **Configure Sort Order** dialog box.  
+4.  Select **OK** to close the **Configure Sort Order** dialog box.  
 
 ## Next steps
 [Create or edit a view](create-edit-views.md)

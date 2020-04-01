@@ -1,7 +1,7 @@
 ---
 title: "Create or edit model-driven app dashboards | MicrosoftDocs"
 ms.custom: ""
-ms.date: 05/23/2018
+ms.date: 03/30/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -31,9 +31,6 @@ There are two types of dashboards, user dashboards and system dashboards. An app
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    > [!IMPORTANT]
-    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
-  
 2. Expand **Data**, select **Entities**, select the entity that you want base the dashboard on, such as the **Account** entity, and then select the **Dashboards** tab. 
 
 3. On the toolbar select **Add a dashboard**, and then choose a 2, 3, or 4 column layout.  
@@ -53,18 +50,15 @@ There are two types of dashboards, user dashboards and system dashboards. An app
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    > [!IMPORTANT]
-    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).    
-  
 2. Expand **Data**, select **Entities**, select the entity that you want base the dashboard on, such as the **Account** entity, and then select the **Dashboards** tab.  
 
 3. Open a dashboard, select one of the component areas, and then on the toolbar select **Edit Component**.  
   
-4.  In the **Set Properties** dialog box, you can make changes to a chart or list such as change the entity, default view, add a chart selector, or make the dashboard available on the mobile apps. When you’re done, select **Set**.  
+4.  In the **Set Properties** dialog box, you can make changes to a chart or list such as change the entity, default view, add a chart selector, or make the dashboard available on the mobile apps. When you're done, select **Set**.  
   
      For more information about setting dashboard component properties, see [Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md).  
   
-4.  When you’ve completed your changes be sure to save them, and then publish them.  
+4.  When you've completed your changes be sure to save them, and then publish them.  
   
 Additional system dashboards tasks you can perform include:  
   
