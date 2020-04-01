@@ -61,7 +61,7 @@ To run a canvas app on a mobile device, tap the app tile. If someone else create
 
 If this is the first time you're using Power Apps, a screen shows the swipe gesture to close the app.
 
-![Launch app](./media/run-app-client/run-client-app.png)
+![Launch app](media/run_client.png)
 
 ## Give consent
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time.
