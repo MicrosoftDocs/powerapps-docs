@@ -1,1 +1,1 @@
-Navigates to the specified entity record, entity list, or an HTML web resource. 
+Navigates to the specified entity list, entity record, or HTML web resource. 
