@@ -172,8 +172,7 @@ Xrm.Navigation.navigateTo(pageInput).then(
 var pageInput = {
     pageType: "entityrecord",
     entityName: "account",
-    entityId: "5a57f2c3-5672-ea11-a812-000d3a339706", //replace with actual ID
-    formType: 2
+    entityId: "5a57f2c3-5672-ea11-a812-000d3a339706" //replace with actual ID
 };
 var navigationOptions = {
     target: 2,
