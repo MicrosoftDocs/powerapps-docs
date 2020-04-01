@@ -15,11 +15,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create a personal view using advanced grid filters 
+# Edit or create a personal view using advanced grid filters 
 
 Create personal views in Unified Interface using expression builder to edit or create a new view. 
 
-The filters you apply determine which records appear in a view. 
+The filters you apply determine which records appear in a view. Use the expression builder to add or edit filters for any fields of the entity in the current view or any fields in a related entity.
 
 he advanced filtering panel allows you to create a wide spectrum of simple to complex expressions with grouped and nested conditions to help you apply the right lens and granularity to your dataset.
 
