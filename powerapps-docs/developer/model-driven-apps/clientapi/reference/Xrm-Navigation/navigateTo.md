@@ -59,7 +59,7 @@ search.app:
 <li><b>data</b>: (Optional) Object. A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
 ">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a>.</li>
 <li><b>formId</b>: (Optional) String. ID of the form instance to be displayed.</li>
-<li><b>formType</b>: (Optional) Number. Specify **2** to open the Main form.</li>
+<li><b>formType</b>: (Optional) Number. Specify <b>2</b> to open the Main form.</li>
 <li><b>isCrossEntityNavigate</b>: (Optional) Boolean. Indicates whether the form is navigated to from a different entity using cross-entity business process flow.</li>
 <li><b>isOfflineSyncError</b>: (Optional) Boolean. Indicates whether there are any offline sync errors.</li>
 <li><b>processId</b>: (Optional) String. ID of the business process to be displayed on the form.</li>
