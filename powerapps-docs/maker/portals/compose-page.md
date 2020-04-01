@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/26/2020
+ms.date: 03/31/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -385,7 +385,7 @@ To add a Power BI component to a web page:
 
             This option uses Power BI Embedded services to integrate Power BI chart into portal.
 
-            Make sure [Power BI Embedded service is enabled](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service) and respective Power BI workspaces are selected.
+            Make sure [Power BI Embedded service is enabled](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service) and respective Power BI workspaces are selected, and shared with the maker or the logged-in user.
 
         1. **Embed for your organization**
 
@@ -424,7 +424,7 @@ To add a Power BI component to a web page:
 
         Select tile option allows user to add all or a specific tile in page.
 
-        Select page option allows user to select specific page as default page when Power BI report load in portal. Default first page is selected when Power BI report loads.
+        Select page option allows user to select specific page as default page when Power BI report load in portal. 
 
     1. **Apply roles**
 
@@ -447,3 +447,15 @@ To add a Power BI component to a web page:
         This option is only available for **Publish to web** access type. To get embed code URL that you can copy and paste, read [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
 
         ![Embed Code URL](media/embed-code-url.png)
+
+### Power BI performance and optimization considerations
+
+Embedding multiple Power BI workspaces may need additional considerations. Refer to the following resources for Power BI embed scenario troubleshooting, optimization and best practices:
+
+- [Troubleshooting Power BI Embedded application content rendering](https://docs.microsoft.com/power-bi/developer/embedded/embedded-troubleshoot#content-rendering).
+- [Power BI Embedded performance best practices](https://docs.microsoft.com/power-bi/developer/embedded/embedded-performance-best-practices).
+- [Power BI optimization guide](https://docs.microsoft.com/power-bi/guidance/power-bi-optimization).
+
+## Next steps
+
+[Work with templates](work-with-templates.md)
