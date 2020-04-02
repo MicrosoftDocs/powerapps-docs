@@ -27,7 +27,7 @@ search.app:
 
 |Name |Type |Required |Description |
 |---|---|---|---|
-|alertStrings|Object|Yes|The strings to be used in the alert dialog. The object contains the following attributes:<br/>- **confirmButtonLabel**: (Optional) String. The confirm button label. If you do not specify the button label, **OK** is used as the button label.<br/>- **text**: String. The message to be displyed in the alert dialog.<br/>- **title**: (Optional) String. The title of the alert dialog.|
+|alertStrings|Object|Yes|The strings to be used in the alert dialog. The object contains the following attributes:<br/>- **confirmButtonLabel**: (Optional) String. The confirm button label. If you do not specify the button label, **OK** is used as the button label.<br/>- **text**: String. The message to be displayed in the alert dialog.<br/>- **title**: (Optional) String. The title of the alert dialog.|
 |alertOptions|Object|No|The height and width options for alert dialog. The object contains the following attributes:<br/>- **height**: (Optional) Number. Height of the alert dialog in pixels.<br/>- **width**: (Optional) Number. Width of the alert dialog pixels.|
 |successCallback|function|No|A function to execute when the alert dialog is closed by either clicking the confirm button or canceled by pressing ESC.|
 |errorCallback|function|No|A function to execute when the operation fails.|

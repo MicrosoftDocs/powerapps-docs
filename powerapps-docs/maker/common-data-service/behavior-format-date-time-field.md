@@ -113,3 +113,4 @@ The following date and time related query operators are invalid for the **Date O
 [Managed properties](solutions-overview.md#managed-properties)  
 [Blog: Working with time zones in the Common Data Service](https://powerapps.microsoft.com/en-us/blog/working-with-time-zones-in-the-common-data-service/)
 
+

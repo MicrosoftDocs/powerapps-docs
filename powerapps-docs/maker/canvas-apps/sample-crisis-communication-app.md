@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/18/2020
+ms.date: 03/31/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 ---
 
 # Set up and learn about the Crisis Communication sample template in Power Apps
-<!--note from editor: Suggest moving the overview into the usual overview position (i.e. after the H1). Other notes: According to the Docs Contributor Guide, graphic file names should be all lowercase, including the extension. I didn't change this, but something to note for next time. -->
+
 The Crisis Communication app provides a user-friendly experience to connect
 users with information about a crisis. Quickly get updates on
 internal company news, get answers to frequently asked questions, and get access
@@ -711,9 +711,9 @@ The app uses a flow to send notifications to end users whenever there is a new c
   If this occurs, please open the card with the unauthorized connection and reauthorize.
 
 
-### Optional: Sending notifications to more than 999 users
+### Optional: Sending notifications to more than 5000 users
 
-The current **Get group members** action is limited to pulling 999 users (100 users by default). To distribute to more users, you can alter to the flow to  send an email to a distribution group instead.
+The current **Get group members** action is limited to pulling 5000 users for the Office license of Power Automate. Even for the premium license, you may hit throttling limits with the Teams connector if you try to send notifications to too many users. To distribute to more users, you can alter to the flow to send an email to a distribution list instead.
 
 1. Delete the following cards: **Get group members** and **Switch on preferred send notification setting**:
 
@@ -734,6 +734,31 @@ The current **Get group members** action is limited to pulling 999 users (100 us
 1. In the **Body** field, select the **Add a dynamic value** button and add the **Details** field from the **When a news item is posted** card.
 
 1. Select **Save**.
+
+### Optional: Deep link Teams notification into Teams app
+
+If you would like your Teams notification to open directly into the canvas app
+inside of Teams, follow these steps:
+
+1. Update the app URL to point to the Teams deep link in the admin app. <br>
+In the admin app, change the app URL to the following, where `App ID` is the ID of your app.
+
+    ```
+    https://teams.microsoft.com/l/entity/<APP ID>/<APP ID>
+    ```
+
+    ![Admin app](media/sample-crisis-communication-app/42-admin-app.png)
+
+1. Update the app link generated inside of the notification flow. <br> Open the Set App Link Variable card and change the expression for Value to the following:
+
+    ```
+    concat(items('Apply_to_each')?['AppUrl'], if(greater(indexOf(items('Apply_to_each')?['AppUrl'], '?'),0),'&','?'), 'context=%7B%22subEntityId%22%3A%22',triggerBody()?['ID'],'%22%7D')
+    ```
+    ![Change flow settings](media/sample-crisis-communication-app/43-flow-settings.png)
+
+1. Update the canvas app to consume the teams context variable to deep link to the correct news article. <br> For the **OnStart** property of the app, change the Param from `newsid` to `subEntityId`.
+
+    ![Change OnStart](media/sample-crisis-communication-app/44-onstart.png)
 
 ### Test the news notification flow
 
@@ -856,7 +881,7 @@ If you're a Teams admin, you can push the app to all your users in the Teams app
 ### Create a central crisis management team in Teams<a name="create-a-central-crisis-management-teams-team"></a>
 
 To coordinate your crisis response, you'll want to create a central crisis management team in Teams
-and populate it with all relevant information.
+and populate it with all relevant information. This team only needs to be shared with the central response team.
 
 1. Go to Teams.
 1. Select **Teams** from the left app bar.
@@ -904,6 +929,10 @@ you might want to pin the crisis management admin app or the Power BI report to 
 * **What features aren't currently supported in GCC?**
 
     The Power Automate bot connector for Teams and the Push Notification connector are currently not available for GCC. Use the email option to alert users about internal news updates instead.
+
+* **How can I update the application?**
+
+    If you would like to update the application, please follow the steps outlined on [aka.ms/CrisisCommunicationSolution](https://aka.ms/CrisisCommunicationSolution).
 
 ## Issues and feedback
 
