@@ -94,9 +94,9 @@ Selecting **Change View** lets you determine:
 
 ### Only my records, related records filtering
 
-In the **Change View** menu, we can apply some extra filtering by toggling check boxes for only my records and related records filtering.
+To apply extra filters, in the **Change View** menu, select **Only my records** or **Filter by related Primary Contact**.
 
- 	![Change view contacts types](media/only-my-records-related-records-filtering.png "Only my records and related records check boxes")
+![Change view contacts types](media/only-my-records-related-records-filtering.png "Only my records and related records check boxes")
 
 ### Choose from multiple records
 
