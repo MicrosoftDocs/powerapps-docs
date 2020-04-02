@@ -17,9 +17,9 @@ search.app:
 ---
 # Edit or create personal views using advanced grid filters 
 
-Easily create a personal view for a set of records using advanced grid filters and expression builder. The advanced filters allows you to create a wide range of views from simple to complex that you can also add grouped and nested conditions to.
+Easily create a personal view that only you can see for a set of records using advanced grid filters and expression builder. The advanced filters allows you to create a wide range of views from simple to complex that you can also add grouped and nested conditions to.
 
-When you create and save a personal view, it will appear in your list of view under **My Views**.
+When you create and save a personal view, it appears in your list of personal views under **My Views**.
 
 ![Personal views](media/my_peronsal_view.png "Personal views")
 
