@@ -52,9 +52,21 @@ You can also use the **[Clear](function-clear-collect-clearcollect.md)** functio
 * *Condition(s)* – Required. A formula that evaluates to **true** for the record or records to remove.  You can use column names from the *DataSource* in the formula.  If you specify multiple *Conditions*, all must evaluate to **true** for the record or records to be removed.
 
 ## Examples
+
+### Simple examples
 In these examples, you'll remove a record or records in a data source that's named **IceCream** and that starts with the data in this table:
 
 ![](media/function-remove-removeif/icecream.png)
+
+To create a collection with this data, insert a [**Button** control](../controls/control-button.md), set its **OnSelect** property the below formula, and select the button [while hold down the Alt key](../keyboard-shortcuts#alternate-behavior.md):
+
+```powerapps-dot
+ClearCollect( IceCream,
+              { ID: 1, Flavor: "Chocolate",  Quantity: 100 },
+              { ID: 2, Flavor: "Vanilla",    Quantity: 200 },
+              { ID: 3, Flavor: "Strawberry", Quantity: 300 }
+)
+```
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -68,9 +80,9 @@ In these examples, you'll remove a record or records in a data source that's nam
 
 In this example we will use a [**Gallery** control](../controls/control-gallery.md) to list the records in a table and then use the **Remove** function to selectively remove an item.  
 
-This example uses the **Contacts** entity in Common Data Service, loaded with sample data when the database was created.  You can create your own database with sample data by creating a trial environment.  
+This example uses the **Contacts** entity in Common Data Service which has been loaded with sample data when the database was created.  You can create your own database with sample data by creating a trial environment.  
 
-But any data source or collection can be used in this same manner.  To use a collection for this example, add a button control to your screen, set the **OnSelect** property to this formula, and select the button:
+Any data source or collection can be used in this same manner.  To use a collection to work through this example, add a [**Button** control](../controls/control-button.md) to your screen, set the **OnSelect** property to the formula below, and select the button [while hold down the Alt key](../keyboard-shortcuts#alternate-behavior.md):
 
 ```powerapps-dot
 ClearCollect( Contacts, 
@@ -82,20 +94,20 @@ ClearCollect( Contacts,
               { Name: "Paul",    Email: "paul@contoso.com" },
               { Name: "Rene",    Email: "rene@consoto.com" } 
 )
-```  
+```
 
 #### From outside the gallery
 
-In this first part, we will remove an item from a button that is outside the gallery.
+In this first part, we will remove an item by using a button that is outside the gallery.
 
-1. Create a [new blank canvas app](../data-platform-create-app-scratch) using the Phone layout.
+1. Create a [new blank canvas app](../data-platform-create-app-scratch) using a Phone layout.
 
     > [!div class="mx-imgBorder"]
     > ![A blank canvas app using the phone layout](media/function-remove-removeif/gallery-new.png)
 
 1. Select the **Insert** tool pane on the left hand side of the studio.  
 
-1. Select **Vertical gallery**.  The **Gallery** control will be added to your screen.
+1. Select **Vertical gallery**.  A **Gallery** control will be added to your screen.
 
     > [!div class="mx-imgBorder"]
     > ![Using the Insert tool pane to add a vertical gallery control](media/function-remove-removeif/gallery-add.png)
@@ -124,9 +136,9 @@ In this first part, we will remove an item from a button that is outside the gal
     > [!div class="mx-imgBorder"]
     > ![Setting the OnSelect property of the button control](media/function-remove-removeif/gallery-button-onselect.png)
 
-    The gallery controls makes the currently selected record available through its **Selected** property.  We are using that to tell **Remove** which record to remove from the **Contacts** entity.
+    The gallery controls makes the currently selected record available through its **Selected** property.  We use this to tell the **Remove** function which record is to be removed from the **Contacts** entity.
 
-1. [Hold down the Alt key](../keyboard-shortcuts#alternate-behavior.md) and select the third item in the gallery, in our case Nancy's record.  You can also preview the app to select items.
+1. [Hold down the Alt key](../keyboard-shortcuts#alternate-behavior.md) and select the third item in the gallery, in our case Nancy's record.  You can also preview the app to select items (press F5 or use the triangular icon in the upper right corner of the studio window).
 
 1. Again with the Alt key held down, select the button control.  The record for Nancy will be removed.
 
@@ -135,22 +147,20 @@ In this first part, we will remove an item from a button that is outside the gal
 
 #### From inside the gallery
 
-> [!NOTE]
-> There is currently an issue with using ThisItem to remove items from Common Data Service that is being investigated.  The following example will work fine for collections, SharePoint lists, and SQL Server tables. 
+In this next part, we will remove an item from inside the gallery.
 
-In this example, we will remove an item from inside the gallery.
-
-1. Select the top item of the gallery.  This is important to ensure that the next step will insert the item into the gallery's template and not outside it.
+1. Select the top item of the gallery.  This is important to ensure that the next step will insert the item into the gallery's template and not outside the gallery.
 
     > [!div class="mx-imgBorder"]
     > ![Gallery with the top record selected, which is the template for how records are replicated throughout the rest of the gallery](media/function-remove-removeif/gallery-select-template.png)
 
-1. Return to the Insert tool pane and select **Add icon**.  This will insert a **+** icon on the left side of the gallery, replicated for each item.  
+1. Return to the Insert tool pane and select **Add icon**.  This will insert a **+** icon on the left side of the gallery, replicated for each item in the gallery.  
 
     > [!div class="mx-imgBorder"]
     > ![Using the Insert tool pane to add an icon control](media/function-remove-removeif/gallery-addicon.png)
 
-1. In the top item, move the icon to the right side of the screen.  
+1. In the top item (gallery template), move the icon to the right side of the screen.
+  
 1. To change to a trash can icon, set the **Icon** property to the formula:
 
     ```powerapps-dot 
@@ -169,12 +179,12 @@ In this example, we will remove an item from inside the gallery.
     ```
 
     > [!NOTE]
-    > At present, we must use the [global disambiguation operator](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators#disambiguation-operator) [@...] to avoid a name conflict with a One-to-Many relationship on the Contacts entity.  We are working to remove these conflicts.
+    > At present, we must use the [global disambiguation operator](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators#disambiguation-operator) [@...] to avoid a name conflict with a One-to-Many relationship on the Contacts entity.  We are working to reduce name conflicts.
 
     > [!div class="mx-imgBorder"]
     > ![Setting the OnSelect property of the icon control within the gallery](media/function-remove-removeif/gallery-onselect.png)
 
-1. Hold down the Alt key and select any of the trash can icons in the gallery.  The contact will disappear as it is removed.
+1. Hold down the Alt key and select any of the trash can icons in the gallery.  The associate contact will be removed.
 
     > [!div class="mx-imgBorder"]
     > ![Gallery with one of the contacts removed](media/function-remove-removeif/gallery-activateicon.png)
