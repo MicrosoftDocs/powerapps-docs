@@ -80,8 +80,23 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 
 **Workaround**
 
-- When you're creating the `bundle.js` file from the CLI tooling, it bundles lot of components that makes the file large. Remove some of the components that are not necessary.
-- Build the component in `production` mode by modifying the `node_modules/pcf-scripts/webpackconfig.js` file.
+- Build  the `.pcfproj` as release configuration which sets the webpack to production mode using the command 
+  ```CLI
+  msbuild /property:configuration=Release
+  ```
+- Run the msbuild command with an additional property as shown below: 
+  ```CLI
+  msbuild /p:PcfBuildMode=production
+  ```
+- Edit the `.pcfproj` to always build the webpack in production mode by setting the property `PcfBuildMode` to production:
+  ```XML
+  <PropertyGroup>
+    <Name>TS_ReactStandardControl</Name>
+    <ProjectGuid>0df84c56-2f55-4a80-ac9f-85b7a14bf378</ProjectGuid>
+    <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
+    <PcfBuildMode>production</PcfBuildMode>
+  </PropertyGroup>
+  ```
 
 ## Power Apps component framework Datasets getValue by property alias doesn't work
 
