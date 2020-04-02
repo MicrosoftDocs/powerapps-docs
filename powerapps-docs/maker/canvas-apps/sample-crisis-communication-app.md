@@ -232,7 +232,7 @@ This app allows you to record a user's location and store it in your SharePoint 
 1. Copy and paste the following snippet in the formula bar for the **OnSelect** property.
 
     > [!NOTE]
-    > The following snippet is intended to work with versions of the solution that are older than 2020.03.16. For newer versions, instead edit the code in place (look for the line starting with "// To implement location" for instructions).
+    > The following snippet is intended to work with versions of the solution that are older than 2020.03.16. For newer versions, edit the code after *// To implement location* comment.
 
 
     ```
