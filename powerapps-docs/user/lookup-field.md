@@ -92,7 +92,7 @@ Selecting **Change View** lets you determine:
 
     ![Change view contacts types](media/change-view.png "Change view contacts types")
 
-### Only my records, related records filtering
+### Filter by, Only my records or Filter by related primary contact
 
 To apply extra filters, in the **Change View** menu, select **Only my records** or **Filter by related Primary Contact**.
 
