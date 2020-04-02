@@ -42,7 +42,7 @@ To see which filters were applied to the current view, select a view and then se
 
 ### Add a group or nested condition 
 
-To drill down further into your data, can add a group or nested condition to a filter. For more information, see [Add a group condition to a filter](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-view-filters#add-a-group-condition-to-a-filter).
+To drill down further into your data, you can add a group or nested condition to a filter. For more information, see [Add a group condition to a filter](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-view-filters#add-a-group-condition-to-a-filter).
 
 
 ![Add a group or nested condition](media/group_condition.gif "Add a group or nested condition")
