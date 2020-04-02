@@ -365,8 +365,9 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
      msbuild
     ```
     > [!TIP]
-    > It is recommended to run the command `msbuild/property:configuration=Release` when you want to build code components for production use.
-
+    > You will be hit with the error: *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Common Data Service and run the solution checker.
+    > Re build the solution file using the command `msbuild/property:configuration:Release` and reimport the solution into Common Data Service and run the solution checker.
+      
     > [!NOTE]
     > Make sure that **NuGet targets & Build Tasks** is checked. To enable it:
     > - Open **Visual Studio Installer**.

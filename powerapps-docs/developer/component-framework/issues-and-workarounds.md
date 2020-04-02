@@ -97,6 +97,18 @@ Error  **Import Solution Failed: Web resource content size is too big**.
     <PcfBuildMode>production</PcfBuildMode>
   </PropertyGroup>
   ```
+## Solution checker issue
+
+**Error: Do not use the eval function or its functional equivalents.**
+
+This error occurs when the user creates, builds, and packages code components using CLI and build solution file using `msbuild` and imports the solution file into Common Data Service and runs the solution checker.
+
+**Workaround**
+
+Re build the solution file using  the following command and reimport the solution into Common Data Service and run the solution checker.
+```CLI
+msbuild/property:configuration:Release
+```
 
 ## Power Apps component framework Datasets getValue by property alias doesn't work
 
