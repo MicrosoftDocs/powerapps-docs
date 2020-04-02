@@ -1193,8 +1193,12 @@
           href: ./portals/compose-page.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
-        - name: Edit CSS
-          href: ./portals/edit-css.md
+        - name: Work with themes
+          items:
+            - name: Create theme
+              href: ./portals/theme-overview.md
+            - name: Edit CSS
+              href: ./portals/edit-css.md
     - name: Manage existing portals
       href: ./portals/manage-existing-portals.md
     - name: Advanced portal administration
