@@ -49,7 +49,7 @@ To drill down further into your data, you can add a group or nested condition to
 
 ### Clear filters
 
-Once the filters are applied, to clear them and reset the view back to the original definition, select the clear filter icon ![Clear filter icon](media/clear_filter_icon.png "Clear filter icon").
+To clear filter that were applied and reset the view back to the original definition, select the clear filter icon ![Clear filter icon](media/clear_filter_icon.png "Clear filter icon").
 
 ### Save your personal view
 
