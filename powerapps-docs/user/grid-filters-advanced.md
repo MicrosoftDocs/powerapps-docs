@@ -21,8 +21,7 @@ Easily create a personal view that only you can see for a set of records using a
 
 When you create and save a personal view, it appears in your list of personal views under **My Views**.
 
-   > [!div class="mx-imgBorder"] 
-   > ![Personal views](media/my_peronsal_view.png "Personal views")
+![Personal views](media/my_peronsal_view.png "Personal views")
 
 > [!NOTE]
 > Advanced filtering is only avilable to English orgs. 
