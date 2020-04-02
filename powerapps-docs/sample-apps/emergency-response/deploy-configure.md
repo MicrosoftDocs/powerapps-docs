@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/26/2020
+ms.date: 03/30/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -36,8 +36,8 @@ Perform the following steps to deploy the Emergency Response sample app for your
 - [Step 2: Download the deployment package](#step-2-download-the-deployment-package)
 - [Step 3: Import the solution file into your environment](#step-3-import-the-solution-file-into-your-environment)
 - [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization)
-    - [Step 4.1: How to load data from data files?](#step-41-how-to-load-data-from-data-files)
-    - [Step 4.2: Import mandatory configuration data](#step-42-import-mandatory-configuration-data)
+    - [Step 4.1: Load mandatory configuration data](#step-41-load-mandatory-configuration-data)
+    - [Step 4.2: Load master data](#step-42-load-master-data)
 - [Step 5: Update the mobile app branding](#step-5-update-the-mobile-app-branding)
 - [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
 - [Step 7: Add Azure Application Insights key to mobile apps for telemetry](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry)
@@ -95,7 +95,7 @@ To begin the deployment process, extract the deployment file (.zip) to a locatio
 
 5.  In the **Import Solution** dialog box, select the solution file mentioned in step 1, and then follow the steps in the wizard to import the solution.
 
-6.  After the solution is imported successfully, select **Close** in the import dialog box, and then select **Public all customizations**. This might take a while to complete.
+6.  After the solution is imported successfully, select **Close** in the import dialog box.
 
 Now, you will see new apps under **Apps**:
 
@@ -166,29 +166,7 @@ The **Data Files** folder has the following files and folders:
 </tr>
 </table>
 
-#### Step 4.1: How to load data from data files?
-
-To load sample data from one of the data files to an entity:
-
-1.  In the left navigation pane of the admin app, select an entity for which you want to load the data. For example, select **Location** from the area picker and then select **Systems**.
-
-2.  Select **Import from Excel** and select the **01 - Load Systems.xlsx** file from the **Sample Data** folder.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Import from Excel](media/conf-import-from-excel.png "Import from Excel")
-
-3.  Proceed with the import wizard steps to import the data.
-
-4.  After the sample data is imported, you will see the imported record in the entity:
-
-    > [!div class="mx-imgBorder"] 
-    > ![Entity record](media/conf-entity-record.png "Record in the entity after import")
-
-Repeat the above steps with other entities.
-
-Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
-
-#### Step 4.2: Import mandatory configuration data
+#### Step 4.1: Load mandatory configuration data
 
 Importing the configuration data under the following entities in the admin app is **mandatory** before you move to the next step:
 
@@ -200,18 +178,47 @@ Importing the configuration data under the following entities in the admin app i
 | Staffing | Request Roles | 00 - Request Roles Import.xlsx
 | Locations | Supplies | 00 - Supplies Import.xlsx
 
-Data for other entities can be [manually](#manually-configure-and-manage-master-data-for-your-organization) added later or by using the sample data files explained earlier.
+##### How to load data from data files?
+
+To import data from one of the data files to an entity:
+
+1.  In the left navigation pane of the admin app, select an entity for which you want to load the data. For example, select **Administration** from the area picker and then select **Acuities**.
+
+2.  Select **Import from Excel** and select the **00 - Acuities Import.xlsx** file from the **Data Files** folder.
+
+    > [!div class="mx-imgBorder"]
+    > ![Import from Excel](media/conf-import-from-excel.png "Import from Excel")
+
+3.  Proceed with the import wizard steps to import the data.
+
+4.  After the data is imported, you will see the imported record in the entity:
+
+    > [!div class="mx-imgBorder"] 
+    > ![Entity record](media/conf-entity-record.png "Record in the entity after import")
+
+Repeat the above steps with other configuration data entities.
+
+Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
+
+#### Step 4.2: Load master data
+
+As explained earlier:
+- You can use the sample data files for master data entities under the **Data Files/Sample Data** folder to import the sample data in the required entities. 
+
+- You can use the "empty" data files for master entities under the **Data Files/Data Template File for Master Data** folder that you can use to populate your organization data, and then import the data in the required entities.
+
+You can also manually add master data later. More information: [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization)
 
 ### Step 5: Update the mobile app branding
 
-You can change the icon or color scheme of the mobile apps to match the branding of your organization.
+You can change the app icon, color scheme, or display name of the mobile apps to match the branding of your organization.
 
-You do this using the **App** and **App Config** entities in the **Administration** area by importing app and app config data from the Excel file available in the **Data Files** folder under the deployment package as explained in the previous step.
+You do this using the **App** and **App Config** entities in the **Administration** area by importing app and app config data from the Excel files available in the **Data Files** folder and icon files under **App Icons** folder under the deployment package as explained in [Step 2: Download the deployment package](#step-2-download-the-deployment-package).
 
 > [!div class="mx-imgBorder"] 
 > ![Apps and App Config entities](media/conf-app-app-config-entities.png "Apps and App Config entities")
 
-1.  Make sure you have imported the configuration data for **Apps** and **App Config** entities from the **App Import.xlsx** and **App Config Import.xlsx** files respectively in the extracted deployment package.
+1.  Make sure you have imported the configuration data for **Apps** and **App Config** entities using the **App Import.xlsx** and **App Config Import.xlsx** files respectively.
 
 1.  Now, we will copy the app IDs of canvas apps so that we can populate it in the **Apps** records we imported. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -222,12 +229,12 @@ You do this using the **App** and **App Config** entities in the **Administratio
     > [!div class="mx-imgBorder"] 
     > ![Apps details](media/conf-environments-apps-details.png "App details")
 
-1.  The app ID appears at the bottom of the **Details** pane for the app. Copy the App ID along with its name in the notepad file.
+1.  The app ID appears at the bottom of the **Details** pane for the app. Copy the App ID along with its name in a Notepad file.
 
     > [!div class="mx-imgBorder"] 
     > ![Details App ID](media/conf-details-app-id.png "Details App ID")
 
-1.  Repeat steps 3 and 4 for each canvas app.
+1.  Repeat steps 4 and 5 for each canvas app.
 
 1.  Open the Admin App, and in the left navigation pane of the admin app, select **Administration** from the area picker, and then select **Apps**. This will show all the canvas app records you imported from the **App Import.xlsx** file.
 
@@ -239,19 +246,29 @@ You do this using the **App** and **App Config** entities in the **Administratio
     > [!div class="mx-imgBorder"] 
     > ![Power App ID field ](media/conf-powerapp-id-field.png "Power App ID field")
 
-1.  Copy the app ID from the notepad, where you copied earlier in steps 2-6, to the **Power App ID** field. You can also update the app icon by    double-clicking the app icon and specifying another image. Save the record.
+1.  In the app details page:
 
-1.  Repeat step 9 for each canvas app record under **Apps** to add the **Power App ID** value.
+    1. Copy the app ID from the notepad (where you copied earlier) to the **Power App ID** field.
+
+    2. Double-click the app icon, and select an icon file for the app from the **App Icons** folder. The image files are named intuitively so that you can easily select the correct icon. For example, select the "Emergency Response App.png" file for **Emergency Response App**. You can also select a custom image as per your organization branding.
+
+    3. If required, update the **Description** or **Display Name** of the app.
+
+    4. If required, update the **Hide App from Menu** value to set if the app should be displayed in the app list. As **Emergency Response App** is a container app, the value is set to **No** by default.
+
+    5. If required, update the **App Display Rank** value to set the display position of app in the app list.
+
+    6. Select **Save**.
+
+1.  Repeat steps 8 and 9 for each canvas app record under **Apps**.
 
 1.  In the left pane, select **App Config**.
 
 1.  Select the **Emergency Response App** record to open it for editing.
 
-    1.  Double-click the icon to specify a new image as the app icon.
+    1.  If required, update the colors for your app.
 
-    2.  Update the app names and colors for your app.
-
-    3.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in the mobile apps or not. Selecting **Yes** will make the **Sign Out** option available.
+    2.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in the mobile apps or not. Selecting **Yes** will make the **Sign Out** option available.
 
     > [!div class="mx-imgBorder"] 
     > ![Device Sharing Enabled field](media/conf-device-sharing-enabled-field.png "Device Sharing Enabled field")
