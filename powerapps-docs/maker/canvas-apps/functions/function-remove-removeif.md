@@ -68,7 +68,6 @@ ClearCollect( IceCream,
 )
 ```
 
-
 | Formula | Description | Result |
 | --- | --- | --- |
 | **Remove(&nbsp;IceCream,<br>First(&nbsp;Filter(&nbsp;IceCream,&nbsp;Flavor="Chocolate"&nbsp;)&nbsp;) )** |Removes the **Chocolate** record from the data source. |<style> img { max-width: none } </style> ![](media/function-remove-removeif/icecream-no-chocolate.png)<br><br>The **IceCream** data source has been modified. |
@@ -81,7 +80,7 @@ ClearCollect( IceCream,
 
 In this example we will use a [**Gallery** control](../controls/control-gallery.md) to list the records in a table and then use the **Remove** function to selectively remove an item.  
 
-This example uses the **Contacts** entity in Common Data Service which has been loaded with sample data when the database was created.  You can create your own database with sample data by creating a trial environment.  
+This example uses the **Contacts** entity in Common Data Service which was loaded with sample data when the database was created.  You can create your own database with sample data by creating a trial environment.  
 
 Any data source or collection can be used in this same manner.  To use a collection to work through this example, add a [**Button** control](../controls/control-button.md) to your screen, set the **OnSelect** property to the formula below, and select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior):
 
@@ -180,7 +179,7 @@ In this next part, we will remove an item from inside the gallery.
     ```
 
     > [!NOTE]
-    > At present, we must use the [global disambiguation operator](operators.md#disambiguation-operator) [@...] to avoid a name conflict with a One-to-Many relationship on the Contacts entity.  We are working to reduce name conflicts and make this unnecessary in the future.  This is not needed if the data source has no conflicts, often the case for SharePoint lists or SQL Server tables, but the syntax does no harm either.  
+    > At present, we must use the [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** to avoid a name conflict with a One-to-Many relationship on the Contacts entity.  We are working to reduce name conflicts and make this unnecessary in the future.  This is not needed if the data source has no conflicts, often the case for SharePoint lists or SQL Server tables, but the syntax does no harm either.  
 
     > [!div class="mx-imgBorder"]
     > ![Setting the OnSelect property of the icon control within the gallery](media/function-remove-removeif/gallery-onselect.png)
