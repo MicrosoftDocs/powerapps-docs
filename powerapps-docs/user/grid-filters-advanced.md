@@ -21,7 +21,8 @@ Easily create a personal view that only you can see for a set of records using a
 
 When you create and save a personal view, it appears in your list of personal views under **My Views**.
 
-![Personal views](media/my_peronsal_view.png "Personal views")
+   > [!div class="mx-imgBorder"] 
+   > ![Personal views](media/my_peronsal_view.png "Personal views")
 
 > [!NOTE]
 > Advanced filtering is only avilable to English orgs. 
@@ -30,7 +31,8 @@ When you create and save a personal view, it appears in your list of personal vi
 
 To see which filters were applied to the current view, select a view and then select the filter icon to open expression builder. This displays the current view definition by default.
 
-![Current view definition](media/current_view_def.gif "Current view definition")
+   > [!div class="mx-imgBorder"] 
+   > ![Current view definition](media/current_view_def.gif "Current view definition")
 
 ## Add conditions to filters
 
@@ -38,22 +40,23 @@ To see which filters were applied to the current view, select a view and then se
 2. On the **Advanced filters** screen use the expression builder to add conditions to filters. For more information on how to add conditions, see [Add conditions to a filter](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-view-filters#add-conditions-to-a-filter).
 3. When you're done, select **Apply**. 
 
-![Add filters](media/add_filters.gif "Add filters")
+   > [!div class="mx-imgBorder"] 
+   > ![Add filters](media/add_filters.gif "Add filters")
 
 ### Add a group or nested condition 
 
 To drill down further into your data, you can add a group or nested condition to a filter. For more information, see [Add a group condition to a filter](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-view-filters#add-a-group-condition-to-a-filter).
 
-
-![Add a group or nested condition](media/group_condition.gif "Add a group or nested condition")
+   > [!div class="mx-imgBorder"] 
+   > ![Add a group or nested condition](media/group_condition.gif "Add a group or nested condition")
 
 ### Clear filters
 
-To clear filter that were applied and reset the view back to the original definition, select the clear filter icon ![Clear filter icon](media/clear_filter_icon.png "Clear filter icon").
+To clear filters that were applied and reset the view back to the original definition, select the clear filter icon ![Clear filter icon](media/clear_filter_icon.png "Clear filter icon").
 
 ### Save your personal view
 
-The asterisk next to a view name indicates the view has not been saved. 
+The asterisk next to a view name indicates the view is not saved. 
 
 ![Unsaved view](media/unsaved_view.png "Unsaved view")
 
@@ -62,7 +65,8 @@ The asterisk next to a view name indicates the view has not been saved.
 3. On the **Save as new view** dialog box, type in a name and description for the view and then select **Save**.
 4. Go to your list of view to see the new personal view that you created.
  
-![Save a personal view](media/save_personal_view.gif "Save a personal view")
+   > [!div class="mx-imgBorder"] 
+   > ![Save a personal view](media/save_personal_view.gif "Save a personal view")
 
 
    
