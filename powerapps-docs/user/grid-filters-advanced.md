@@ -55,7 +55,8 @@ To clear filters that were applied and reset the view back to the original defin
 
 ### Save your personal view
 
-The asterisk next to a view name indicates the view is not saved. 
+   > [!div class="mx-imgBorder"] 
+   > he asterisk next to a view name indicates the view is not saved. 
 
 ![Unsaved view](media/unsaved_view.png "Unsaved view")
 
