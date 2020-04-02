@@ -92,8 +92,11 @@ Selecting **Change View** lets you determine:
 
     ![Change view contacts types](media/change-view.png "Change view contacts types")
 
->[!IMPORTANT] 
->The **Change View** option will not be visible if your administrator hasn't configured the option to appear in your views.
+### Only my records, related records filtering
+
+In the **Change View** menu, we can apply some extra filtering by toggling check boxes for only my records and related records filtering.
+
+ 	![Change view contacts types](media/only-my-records-related-records-filtering.png "Only my records and related records check boxes")
 
 ### Choose from multiple records
 
