@@ -29,13 +29,12 @@ The following steps are required to build a linear slider code component:
 
 To create a new project:
 
-1. Open a **Developer Command Prompt for VS 2017** window.
-       . Create a new folder for the project using the following command: 
-                ```CLI
-                mkdir LinearComponent
-                      ```
+1. Open a **Developer Command Prompt for VS 2017** window. Create a new folder for the project using the following command: 
+    ```CLI
+     mkdir LinearComponent
+    ```
                      
-               Go into the component folder using the command `cd LinearComponent`. 
+1. Go into the component folder using the command `cd LinearComponent`. 
          
 1. Create a new component project by passing basic parameters using the command.
 
@@ -361,10 +360,12 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
      msbuild /t:restore
     ```
 
-5. Again, run the following command msbuild:
+5. Again, run the following command:
     ```CLI
      msbuild
     ```
+    > [!TIP]
+    > It is recommended to run the command `msbuild/property:configuration=Release` when you want to build code components for production use.
 
     > [!NOTE]
     > Make sure that **NuGet targets & Build Tasks** is checked. To enable it:
