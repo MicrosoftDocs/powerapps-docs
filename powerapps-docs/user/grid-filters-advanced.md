@@ -55,10 +55,10 @@ To clear filters that were applied and reset the view back to the original defin
 
 ### Save your personal view
 
-   > [!div class="mx-imgBorder"] 
-   > he asterisk next to a view name indicates the view is not saved. 
+An asterisk next to a view name indicates the view has not been saved. 
 
-![Unsaved view](media/unsaved_view.png "Unsaved view")
+   > [!div class="mx-imgBorder"] 
+   >![Unsaved view](media/unsaved_view.png "Unsaved view")
 
 1. To save a personal view, on the command bar select the more icon ![More icon](media/commandbar_more_icon.png "More icon"). 
 2. Select **Create view** > **Save filter as new view**.
