@@ -26,13 +26,21 @@ The control opens a native scanner on an Android or iOS device. The scanner auto
 
 **Value** – Output property that contains the text value of the code that was scanned most recently.
 
-**Text** - Text that appears on the button that activates the scanner.
+**Type** – Output property that contains the type of the code that was scanned most recently.
 
 **OnScan** – How an app responds when a barcode is successfully scanned.
 
-## Additional properties
+**OnCancel** – How an app responds when a barcode scan is cancelled by the user.
 
 **BarcodeType** - The barcode type to scan. You can target multiple barcode types by concatenating them. Ex. BarcodeType.Code128 & BarcodeType.Code39  **Default: Auto**
+
+**PreferFrontCamera** - Whether the front-facing camera, when available, is used for scanning.
+
+**FlashlightEnabled** - Whether the flashlight is enabled automatically when the scanner is opened.
+
+## Additional properties
+
+**Text** - Text that appears on the button that activates the scanner.
 
 **[BorderColor](properties-color-border.md)** – The color of a control's border.
 
@@ -42,11 +50,7 @@ The control opens a native scanner on an Android or iOS device. The scanner auto
 
 **[DisplayMode](properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**FlashlightEnabled** - Whether the flashlight is enabled automatically when the scanner is opened.
-
 **[Height](properties-size-location.md)** – The height of the button that activates the scanner.
-
-**PreferFrontCamera** - Whether the front-facing camera, when available, is used for scanning.
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
