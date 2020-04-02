@@ -58,7 +58,7 @@ In these examples, you'll remove a record or records in a data source that's nam
 
 ![](media/function-remove-removeif/icecream.png)
 
-To create a collection with this data, insert a [**Button** control](../controls/control-button.md), set its **OnSelect** property the below formula, and select the button [while hold down the Alt key](../keyboard-shortcuts#alternate-behavior.md):
+To create a collection with this data, insert a [**Button** control](../controls/control-button.md), set its **OnSelect** property to the below formula, and select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior):
 
 ```powerapps-dot
 ClearCollect( IceCream,
@@ -67,6 +67,7 @@ ClearCollect( IceCream,
               { ID: 3, Flavor: "Strawberry", Quantity: 300 }
 )
 ```
+
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -82,7 +83,7 @@ In this example we will use a [**Gallery** control](../controls/control-gallery.
 
 This example uses the **Contacts** entity in Common Data Service which has been loaded with sample data when the database was created.  You can create your own database with sample data by creating a trial environment.  
 
-Any data source or collection can be used in this same manner.  To use a collection to work through this example, add a [**Button** control](../controls/control-button.md) to your screen, set the **OnSelect** property to the formula below, and select the button [while hold down the Alt key](../keyboard-shortcuts#alternate-behavior.md):
+Any data source or collection can be used in this same manner.  To use a collection to work through this example, add a [**Button** control](../controls/control-button.md) to your screen, set the **OnSelect** property to the formula below, and select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior):
 
 ```powerapps-dot
 ClearCollect( Contacts, 
@@ -100,7 +101,7 @@ ClearCollect( Contacts,
 
 In this first part, we will remove an item by using a button that is outside the gallery.
 
-1. Create a [new blank canvas app](../data-platform-create-app-scratch) using a Phone layout.
+1. Create a [new blank canvas app](../data-platform-create-app-scratch.md) using a Phone layout.
 
     > [!div class="mx-imgBorder"]
     > ![A blank canvas app using the phone layout](media/function-remove-removeif/gallery-new.png)
@@ -136,9 +137,9 @@ In this first part, we will remove an item by using a button that is outside the
     > [!div class="mx-imgBorder"]
     > ![Setting the OnSelect property of the button control](media/function-remove-removeif/gallery-button-onselect.png)
 
-    The gallery controls makes the currently selected record available through its **Selected** property.  We use this to tell the **Remove** function which record is to be removed from the **Contacts** entity.
+    The gallery controls makes the currently selected record available through its **Selected** property.  We use this to tell the **Remove** function which record to be remove from the **Contacts** entity.
 
-1. [Hold down the Alt key](../keyboard-shortcuts#alternate-behavior.md) and select the third item in the gallery, in our case Nancy's record.  You can also preview the app to select items (press F5 or use the triangular icon in the upper right corner of the studio window).
+1. [Hold down the Alt key](../keyboard-shortcuts.md#alternate-behavior) and select the third item in the gallery, in our case Nancy's record.  You can also preview the app to select items (press F5 or use the triangular icon in the upper right corner of the studio).
 
 1. Again with the Alt key held down, select the button control.  The record for Nancy will be removed.
 
@@ -159,7 +160,7 @@ In this next part, we will remove an item from inside the gallery.
     > [!div class="mx-imgBorder"]
     > ![Using the Insert tool pane to add an icon control](media/function-remove-removeif/gallery-addicon.png)
 
-1. In the top item (gallery template), move the icon to the right side of the screen.
+1. In the top item, move the icon to the right side of the screen.
   
 1. To change to a trash can icon, set the **Icon** property to the formula:
 
@@ -179,7 +180,7 @@ In this next part, we will remove an item from inside the gallery.
     ```
 
     > [!NOTE]
-    > At present, we must use the [global disambiguation operator](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators#disambiguation-operator) [@...] to avoid a name conflict with a One-to-Many relationship on the Contacts entity.  We are working to reduce name conflicts.
+    > At present, we must use the [global disambiguation operator](operators.md#disambiguation-operator) [@...] to avoid a name conflict with a One-to-Many relationship on the Contacts entity.  We are working to reduce name conflicts and make this unnecessary in the future.  This is not needed if the data source has no conflicts, often the case for SharePoint lists or SQL Server tables, but the syntax does no harm either.  
 
     > [!div class="mx-imgBorder"]
     > ![Setting the OnSelect property of the icon control within the gallery](media/function-remove-removeif/gallery-onselect.png)
