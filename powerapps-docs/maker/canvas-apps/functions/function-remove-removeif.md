@@ -88,32 +88,32 @@ ClearCollect( Contacts,
 
 In this first part, we will remove an item from a button that is outside the gallery.
 
-1. Create a new blank app using the Phone layout.
+1. Create a [new blank canvas app](../data-platform-create-app-scratch) using the Phone layout.
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-new.png)
+    > ![A blank canvas app using the phone layout](media/function-remove-removeif/gallery-new.png)
 
 1. Select the **Insert** tool pane on the left hand side of the studio.  
 
 1. Select **Vertical gallery**.  The **Gallery** control will be added to your screen.
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-add.png)
+    > ![Using the Insert tool pane to add a vertical gallery control](media/function-remove-removeif/gallery-add.png)
 
 1. You will be prompted to select a data source.  If your desired data source is not shown, enter the name in the Search box at the top.  For this exercise, select the **Contacts** entity.  
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-datasource.png)
+    > ![Selecting the Contacts entity to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
 
 1. The gallery will show items from this entity. 
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-data.png)
+    > ![Gallery added showing the Contacts entity](media/function-remove-removeif/gallery-data.png)
 
 1. Insert a [**Button** control](../controls/control-button.md) from the Insert tool pane.
     
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-addbutton.png)
+    > ![Using the Insert tool pane to add a button control](media/function-remove-removeif/gallery-addbutton.png)
 
 1. Set the **OnSelect** property for this button control to the formula:
 
@@ -122,7 +122,7 @@ In this first part, we will remove an item from a button that is outside the gal
     ```
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-button-onselect.png)
+    > ![Setting the OnSelect property of the button control](media/function-remove-removeif/gallery-button-onselect.png)
 
     The gallery controls makes the currently selected record available through its **Selected** property.  We are using that to tell **Remove** which record to remove from the **Contacts** entity.
 
@@ -131,7 +131,7 @@ In this first part, we will remove an item from a button that is outside the gal
 1. Again with the Alt key held down, select the button control.  The record for Nancy will be removed.
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-activatebutton.png)
+    > ![Gallery of contacts, now without the Nancy record that has been removed](media/function-remove-removeif/gallery-activatebutton.png)
 
 #### From inside the gallery
 
@@ -143,13 +143,12 @@ In this example, we will remove an item from inside the gallery.
 1. Select the top item of the gallery.  This is important to ensure that the next step will insert the item into the gallery's template and not outside it.
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-select-template.png)
-
+    > ![Gallery with the top record selected, which is the template for how records are replicated throughout the rest of the gallery](media/function-remove-removeif/gallery-select-template.png)
 
 1. Return to the Insert tool pane and select **Add icon**.  This will insert a **+** icon on the left side of the gallery, replicated for each item.  
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-addicon.png)
+    > ![Using the Insert tool pane to add an icon control](media/function-remove-removeif/gallery-addicon.png)
 
 1. In the top item, move the icon to the right side of the screen.  
 1. To change to a trash can icon, set the **Icon** property to the formula:
@@ -158,21 +157,24 @@ In this example, we will remove an item from inside the gallery.
     Icon.Trash
     ```
     
-    The **Icon.** prefix will not be shown unless you are editing the formula.
+    The **Icon.** prefix will not be shown unless you are actively editing the formula.
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-icontrash.png)
+    > ![Changing the icon to the trash can icon](media/function-remove-removeif/gallery-icontrash.png)
 
 1. Set the **OnSelect** property to the formula:
 
     ```powerapps-dot
-    Remove( Contacts, ThisItem )
+    Remove( [@Contacts], ThisItem )
     ```
 
+    > [!NOTE]
+    > At present, we must use the [global disambiguation operator](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/operators#disambiguation-operator) [@...] to avoid a name conflict with a One-to-Many relationship on the Contacts entity.  We are working to remove these conflicts.
+
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-onselect.png)
+    > ![Setting the OnSelect property of the icon control within the gallery](media/function-remove-removeif/gallery-onselect.png)
 
 1. Hold down the Alt key and select any of the trash can icons in the gallery.  The contact will disappear as it is removed.
 
     > [!div class="mx-imgBorder"]
-    > ![](media/function-remove-removeif/gallery-activateicon.png)
+    > ![Gallery with one of the contacts removed](media/function-remove-removeif/gallery-activateicon.png)
