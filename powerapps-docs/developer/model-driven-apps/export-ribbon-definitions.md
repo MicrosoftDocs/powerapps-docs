@@ -204,7 +204,12 @@ foreach (System.String entityName in entitiesWithRibbons)
   }
  }
 }  
-```  
+``` 
+
+## Troubleshoot ribbon issues
+
+If you are experiencing an issue with a ribbon command bar button, use this troubleshooting guide to find and solve the problem: <https://support.microsoft.com/help/4552163>
+
 ### See also  
  [Customize the Ribbon](customize-commands-ribbon.md)   
  [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)   

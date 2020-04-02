@@ -3,7 +3,7 @@ title: "Download tools from NuGet (Common Data Service) | Microsoft Docs"
 description: "Download the Plugin Registration, Package Deployment, and other core tools from Nuget."
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

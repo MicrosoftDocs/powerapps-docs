@@ -33,7 +33,7 @@ Dynamics 365 model-driven apps let you interact with customers through email. Th
 
 To view your email:
 
-1. In the model-driven app's sitemap, select **Activities**. 
+1. In the model-driven app's sitemap, select **Activities**. 
 
 2. Select the **All Activities** drop-down, and then select **My Received Emails**.
 

@@ -3,7 +3,7 @@ title: "Sample: Modify query in PreOperation stage (Common Data Service) | Micro
 description: "This sample shows how to write a plug-in that modifies a query defined within the PreOperation stage of a RetrieveMultiple request." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 09/23/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

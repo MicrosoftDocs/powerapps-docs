@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/administrator/app-analytics.md",
+      "redirect_url": "/power-platform/admin/analytics-common-data-service",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/administrator/export-import-packages.md",
+      "redirect_url": "/power-platform/admin/powerapps-gdpr-export-dsr",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/administrator/index.md",
+      "redirect_url": "/powerapps/administrator/admin-guide",
+      "redirect_document_id": "false"
+    },   
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/create-and-edit-views.md",
+      "redirect_url": "create-edit-views-app-designer",
+      "redirect_document_id": "false"
+    },    
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/add-images-to-excel.md",
       "redirect_url": "add-images-pictures-audio-video",
       "redirect_document_id": "false"
@@ -1604,6 +1624,11 @@
     {
       "source_path": "powerapps-docs/maker/common-data-service/publish-changes-for-use-customer-service-hub.md",
       "redirect_url": "create-solution#publish-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/embed-powerapps-powerbi.md",
+      "redirect_url": "https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-powerapp",
       "redirect_document_id": true
     }
   ]

@@ -3,7 +3,7 @@ title: "Use OAuth with Common Data Service (Common Data Service) | Microsoft Doc
 description: "Learn how to authenticate using OAuth with Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID

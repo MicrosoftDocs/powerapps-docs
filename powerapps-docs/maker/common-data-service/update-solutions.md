@@ -1,8 +1,8 @@
 ---
-title: "Apply an update or upgrade for a solution | MicrosoftDocs"
+title: "Update a solution | MicrosoftDocs"
 description: "Learn how to update or upgrade a solution in Power Apps"
 ms.custom: ""
-ms.date: 01/24/2020
+ms.date: 03/18/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -23,10 +23,20 @@ search.app:
   - D365CE
 ---
 
-# Apply an update or upgrade for a solution  
-There are times when you may wish to install an update to an existing managed solution. The procedure is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
+# Upgrade or update a solution  
+There are times when you need to update an existing managed solution. To update the solution, follow these steps: 
 
-1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
+1.	Open the unmanaged solution in your development environment and create new or add and remove the existing components that you want. 
+2.	Increment the version number when you export the solution as a managed solution. More information: [Understanding version numbers for updates](#understanding-version-numbers-for-updates) 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Update solution version](media/update-solution-version.png)
+3. [Apply the upgrade or update in the target environment](#apply-the-upgrade-or-update-in-the-target-environment)
+
+## Apply the upgrade or update in the target environment
+The procedure to import the updated solution is similar to installing a new managed solution, except you will get some different options. If you are updating a solution you got from someone else, you should get guidance from the solution publisher about which options you should choose.  
+
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the target environment you want, and then select **Solutions** from the left navigation.  
 
 2. On the command bar, select **Import**.  
 
@@ -69,8 +79,11 @@ There are times when you may wish to install an update to an existing managed so
 **Completing Solution Upgrade**
 If you chose to stage for upgrade, or if the system had an issue completing an upgrade, you will see that you have the original solution still installed in your system as well as a new solution that has the same solution name as the base solution suffixed with \_Upgrade.  To complete the upgrade, select the base solution in the solution list and select **Apply Solution Upgrade**.  This will uninstall all previous patches and the base solution then rename the \_Upgrade solution to be the same name as the previous base solution.  Any components that were in the original solution and patches that are not present in the \_Upgrade solution will be deleted as part of this process.
 
+## Understanding version numbers for updates
+A solution’s version has the following format: major.minor.build.revision. An update must have a higher major, minor, build or revision number than the parent solution. For example, for a base solution version 3.1.5.7, a small update could be a version 3.1.5.8 or a slightly more signficant update could have version 3.1.7.0. A substantially more signficant update could be version 3.2.0.0.
+
 
 ### See also
+[Add solution components](create-solution.md#add-solution-components) <br />
 [Export solutions](export-solutions.md) <br />
-[Distribute solutions and patches](use-segmented-solutions-patches-simplify-updates.md) <br />
 [Import solutions](import-update-export-solutions.md)

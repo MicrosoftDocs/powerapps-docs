@@ -3,7 +3,7 @@ title: "Handle exceptions in a plug-in (Common Data Service) | Microsoft Docs" #
 description: "Understand system behavior when a plug-in passes an exception back to the caller."
 ms.custom: ""
 ms.date: 09/20/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: JimDaly

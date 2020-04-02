@@ -2,7 +2,7 @@
 title: "Access a model-driven app view definition | MicrosoftDocs"
 description: In this topic you learn how to access entity views
 ms.custom: ""
-ms.date: 11/27/2018
+ms.date: 03/23/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -35,11 +35,8 @@ search.app:
 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-
-    > [!IMPORTANT]
-    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment). 
-
 2.  Expand **Data**, select **Entities**, and then select the entity that you want, such as the **Account** entity.   
+
 3. Select the **Views** tab.
 
     > [!div class="mx-imgBorder"] 

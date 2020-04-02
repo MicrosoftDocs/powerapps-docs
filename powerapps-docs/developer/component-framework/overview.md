@@ -62,5 +62,6 @@ With the general availability of the framework, code component developers will b
 [What are code components](custom-controls-overview.md)<br/>
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
+[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)<br/>
 [Power Apps for developers](https://docs.microsoft.com/powerapps/#pivot=home&panel=developer)
 

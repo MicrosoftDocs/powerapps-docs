@@ -3,7 +3,7 @@ title: " Disable or enable a user (Common Data Service) | Microsoft Docs" # Inte
 description: "This sample shows how to disable and enable a system user." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/27/2020
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID
