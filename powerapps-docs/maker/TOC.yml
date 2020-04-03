@@ -939,7 +939,7 @@
           href: ./model-driven-apps/create-site-map-app.md
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
-        - name: Add the team entity as a lookup option
+        - name: Add an entity as a lookup
           href: ./model-driven-apps/team-entity-lookup.md          
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
