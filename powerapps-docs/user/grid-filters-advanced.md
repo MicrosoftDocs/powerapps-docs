@@ -19,12 +19,13 @@ search.app:
 
 Easily create a personal view for yourself to see the records that are important to you. The advanced filters allow you to create a wide range of views from simple to complex that you can also add group and nested conditions to.
 
+> [!NOTE]
+> The advanced filter option  is only available to English organizations.
+
 When you create and save a personal view, it appears in your list of personal views under **My Views**.
 
 ![Personal views](media/my_peronsal_view.png "Personal views")
 
-> [!NOTE]
-> The advanced filter option  is only available to English organizations.
 
 ## See the current view definition
 
