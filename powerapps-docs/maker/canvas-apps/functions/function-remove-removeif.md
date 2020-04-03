@@ -86,12 +86,11 @@ To create a collection with this data:
 
 ## Examples - remove button outside a gallery
 
-In these examples you'll use a [**Gallery** control](../controls/control-gallery.md) to list the records in a table. And then use the **Remove** function to selectively remove an item.  
+In this example, you'll use a [**Gallery** control](../controls/control-gallery.md) to list the records in a table. And then use the **Remove** function to selectively remove an item.  
 
-The first example walks through using gallery and a button outside the gallery to remove a record. The next example walks through using an icon inside the gallery to remove a record.
+### Prepare for sample data
 
-> [!NOTE]
->  This example uses the **Contacts** entity in Common Data Service available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data source instead including [collections](../working-with-data-sources.md#collections).
+This example uses the **Contacts** entity in Common Data Service available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data source instead including [collections](../working-with-data-sources.md#collections).
 
 To use a collection for this example without images:
 
@@ -100,16 +99,18 @@ To use a collection for this example without images:
 
     ```powerapps-dot
     ClearCollect( Contacts, 
-                  { Name: "Yvonne",  Email: "yvonne@contoso.com" },
-                  { Name: "Susanna", Email: "susanna@contoso.com" },
-                  { Name: "Nancy",   Email: "nancy@contoso.com" },
-                  { Name: "Maria",   Email: "maria@contoso.com" },
-                  { Name: "Robert",  Email: "robert@contoso.com" },
-                  { Name: "Paul",    Email: "paul@contoso.com" },
-                  { Name: "Rene",    Email: "rene@consoto.com" } 
+                  { Name: "Yvonne",  Email: "someone_a@example.com" },
+                  { Name: "Susanna", Email: "someone_b@example.com" },
+                  { Name: "Nancy",   Email: "someone_c@example.com" },
+                  { Name: "Maria",   Email: "someone_d@example.com" },
+                  { Name: "Robert",  Email: "someone_e@example.com" },
+                  { Name: "Paul",    Email: "someone_f@example.com" },
+                  { Name: "Rene",    Email: "someone_g@example.com" } 
     )
     ```
 1. Select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior)
+
+### Remove button outside a gallery
 
 In this example, you'll remove an item by using a *button* that is outside the gallery.
 
@@ -176,7 +177,9 @@ In this example, you'll remove an item by using a *button* that is outside the g
 
 ## Examples - trash can icon inside a gallery
 
-This example builds on the previous example.  In this example, you'll remove an item by using an *icon* placed inside the gallery.
+In this example, you'll remove an item by using an *icon* placed inside the gallery.
+
+If you don't have any sample data, read [prepare for sample data](#prepare-for-sample-data).
 
 1. Select a control within the top item in the gallery. <br>
     
