@@ -99,13 +99,13 @@ To use a collection for this example without images:
 
     ```powerapps-dot
     ClearCollect( Contacts, 
-                  { Name: "Yvonne",  Email: "someone_a@example.com" },
-                  { Name: "Susanna", Email: "someone_b@example.com" },
-                  { Name: "Nancy",   Email: "someone_c@example.com" },
-                  { Name: "Maria",   Email: "someone_d@example.com" },
-                  { Name: "Robert",  Email: "someone_e@example.com" },
-                  { Name: "Paul",    Email: "someone_f@example.com" },
-                  { Name: "Rene",    Email: "someone_g@example.com" } 
+                  { Name: "Yvonne McKay (sample)",      Email: "someone_a@example.com" },
+                  { Name: "Susanna Stubberod (sample)", Email: "someone_b@example.com" },
+                  { Name: "Nancy Anderson (sample)",    Email: "someone_c@example.com" },
+                  { Name: "Maria Campbell (sample)",    Email: "someone_d@example.com" },
+                  { Name: "Robert Lyon (sample)",       Email: "someone_e@example.com" },
+                  { Name: "Paul Cannon (sample)",       Email: "someone_f@example.com" },
+                  { Name: "Rene Valdes (sample)",       Email: "someone_g@example.com" } 
     )
     ```
 1. Select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior)
