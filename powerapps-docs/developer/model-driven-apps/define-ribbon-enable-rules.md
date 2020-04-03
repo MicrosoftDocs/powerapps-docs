@@ -82,6 +82,14 @@ function EnableRule()
  > [!NOTE]
 >  Promises-based rules will only work on Unified Interface, so they cannot be used if classic Web Client is still being used.
  ```JavaScript
+function BAD_SYNC_EnableRule()
+{
+    const request = new XMLHttpRequest();
+    request.open('GET', '/bar/foo', false);
+    request.send(null);
+    return request.status === 200 && request.responseText === "true";
+}
+
 function EnableRule()
 {
     const request = new XMLHttpRequest();
