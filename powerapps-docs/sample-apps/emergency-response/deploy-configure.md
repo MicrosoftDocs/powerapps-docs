@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/30/2020
+ms.date: 04/02/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -322,6 +322,9 @@ For your frontline users to use and consume data using the canvas apps in their
 mobile devices, the apps must be shared with them. It's easier to use Azure AD
 groups to easily share apps with groups of users.
 
+> [!IMPORTANT]
+> Make sure the user or group you plan to share the apps with *already* have access to your environment. Typically, you would have already added users or group while [setting up your environment](#step-1-sign-up-for-power-apps-and-create-an-environment). Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing apps with them: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles).
+
 1.  Sign in to [Power Apps](https://make.powerapps.com)
 
 2.  In the left navigation pane, select **Apps** to view a list of all your
@@ -385,6 +388,9 @@ Next, do the following:
 ### Step 10: Share model-driven app with admins in your organization
 
 For your admin users to use the admin app (model-driven app), it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
+
+> [!IMPORTANT]
+> Make sure the user or group you plan to share the app with *already* have access to your environment. Typically, you would have already added users or group while [setting up your environment](#step-1-sign-up-for-power-apps-and-create-an-environment). Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing app with them: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles).
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
