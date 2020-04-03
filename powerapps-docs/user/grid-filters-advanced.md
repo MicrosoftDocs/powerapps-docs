@@ -71,7 +71,7 @@ An asterisk next to a view name indicates the view has not been saved.
 4. Go to your list of view to see the new personal view that you created.
  
    > [!div class="mx-imgBorder"] 
-   > ![Save a personal view](media/save_personal_view.gif "This image demonstrates how to save a personal view that was created")
+   > ![Save a personal view](media/save_personal_view.gif "This image demonstrates how to save a personal view")
 
 
    
