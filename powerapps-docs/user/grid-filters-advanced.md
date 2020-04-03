@@ -36,7 +36,7 @@ When you create and save a personal view, it appears in your list of personal vi
 To see which filters were applied to the current view, select a view and then select **Filter** ![Filter icon](media/commandbar_filter_icon.png "Filter icon"). This opens expression builder and displays the default view definition.
 
 > [!div class="mx-imgBorder"] 
-> ![Current view definition](media/current_view_def.gif "Current view definition")
+> ![Current view definition](media/current_view_def.gif "This image demonstrates how to see the filters for the view the view")
 
 ## Add conditions to filters
 
@@ -45,14 +45,14 @@ To see which filters were applied to the current view, select a view and then se
 3. When you're done, select **Apply**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Add filters](media/add_filters.gif "Add filters")
+   > ![Add filters](media/add_filters.gif "This image demonstrates how to add filters using expression builder")
 
 ### Add a group or nested condition 
 
 To drill down further into your data, add a group or nested condition to the filters. For more information, see [Add a group condition to a filter](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-view-filters#add-a-group-condition-to-a-filter).
 
    > [!div class="mx-imgBorder"] 
-   > ![Add a group or nested condition](media/group_condition.gif "Add a group or nested condition")
+   > ![Add a group or nested condition](media/group_condition.gif "This image demonstrates how to add a grouped or nested condition to a filter")
 
 ### Clear filters
 
@@ -71,7 +71,7 @@ An asterisk next to a view name indicates the view has not been saved.
 4. Go to your list of view to see the new personal view that you created.
  
    > [!div class="mx-imgBorder"] 
-   > ![Save a personal view](media/save_personal_view.gif "Save a personal view")
+   > ![Save a personal view](media/save_personal_view.gif "This image demonstrates how to save a personal view that was created")
 
 
    
