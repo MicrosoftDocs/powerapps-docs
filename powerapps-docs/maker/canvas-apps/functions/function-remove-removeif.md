@@ -93,7 +93,7 @@ The first example walks through using gallery and a button outside the gallery t
 > [!NOTE]
 >  This example uses the **Contacts** entity in Common Data Service available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data source instead including [collections](../working-with-data-sources.md#collections).
 
-To use a collection for this example:
+To use a collection for this example without images:
 
 1. Add a [**Button**](../controls/control-button.md) control to your screen.
 1. Set the **OnSelect** property to the following formula:
