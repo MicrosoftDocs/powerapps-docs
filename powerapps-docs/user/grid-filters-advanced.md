@@ -43,7 +43,7 @@ When you create and save a personal view, it appears in your list of personal vi
    > [!div class="mx-imgBorder"] 
    > ![Add filters](media/add_filters.gif "Add filters")
 
-### Add grouped or nested condition 
+### Add grouped or nested conditions
 
 To drill down further into your data, you can add grouped or nested conditions to the filters. For more information, see [Add a group condition to a filter](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-view-filters#add-a-group-condition-to-a-filter).
 
@@ -64,8 +64,8 @@ An asterisk next to a view name indicates the view has not been saved.
 1. To save a personal view, on the command bar select the more icon ![More icon](media/commandbar_more_icon.png "More icon"). 
 2. Select **Create view** > **Save filter as new view**.
 3. On the **Save as new view** dialog box, type in a name and description for the view and then select **Save**.
-4. Go to your list of views to see the personal view that you created.
- 
+4. The view will appear in your list of personal views under **My Views**.
+
    > [!div class="mx-imgBorder"] 
    > ![Save a personal view](media/save_personal_view.gif "Save a personal view")
 
