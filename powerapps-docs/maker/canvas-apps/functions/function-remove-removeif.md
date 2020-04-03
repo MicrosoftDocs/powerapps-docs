@@ -51,9 +51,8 @@ You can also use the **[Clear](function-clear-collect-clearcollect.md)** functio
 * *DataSource* – Required. The data source that contains the record or records that you want to remove.
 * *Condition(s)* – Required. A formula that evaluates to **true** for the record or records to remove.  You can use column names from the *DataSource* in the formula.  If you specify multiple *Conditions*, all must evaluate to **true** for the record or records to be removed.
 
-## Examples
+## Examples - using formula
 
-### Remove records using formula
 In these examples, you'll remove a record or records in a data source that's named **IceCream** and that starts with the data in this table:
 
 ![](media/function-remove-removeif/icecream.png)
@@ -85,9 +84,11 @@ To create a collection with this data:
 | **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Removes records that have a **Quantity** that's greater than 150 and **Flavor** starts with an **S**. |![](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>The **IceCream** data source has been modified. |
 | **RemoveIf(&nbsp;IceCream, true )** |Removes all records from the data source. |![](media/function-remove-removeif/icecream-empty.png)<br><br>The **IceCream** data source has been modified. |
 
-### Remove records from a gallery
+## Examples - using gallery
 
-In this example you'll use a [**Gallery** control](../controls/control-gallery.md) to list the records in a table. And then use the **Remove** function to selectively remove an item.  
+In these examples you'll use a [**Gallery** control](../controls/control-gallery.md) to list the records in a table. And then use the **Remove** function to selectively remove an item.  
+
+The first example walks through using gallery and a button outside the gallery to remove a record. The next example walks through using an icon inside the gallery to remove a record.
 
 > [!NOTE]
 >  This example uses the **Contacts** entity in Common Data Service available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data with Common Data Service instead.
