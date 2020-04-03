@@ -51,6 +51,8 @@
         href: ../user/navigation.md
       - name: Use grid filters
         href: ../user/grid-filters.md
+      - name: Create personal views with grid filters
+      - href: ../user/grid-filters-advanced.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
