@@ -38,7 +38,7 @@ To access the Web API you must compose a URL using the parts in the following ta
 |Region|Your environment will usually be available in a data center that is close to you geographically.<br />North America: `crm`<br />South America: `crm2`<br />Canada: `crm3`<br />Europe, Middle East and Africa (EMEA): `crm4`<br />Asia Pacific Area (APAC): `crm5`<br />Oceania: `crm6`<br />Japan: `crm7`<br />India: `crm8`<br />North America 2: `crm9`<br />United Kingdom: `crm11`<br />France: `crm12`<br />More values will be added over time as new data center regions are opened.|
 |Base URL|`dynamics.com.`|
 |Web API path|The path to the web API is `/api/data/`.|
-|Version|    The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.0`.|
+|Version|    The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.1`.|
 |Resource|The name of the entity, function, or action you want to use.|
 
 
@@ -101,15 +101,15 @@ You can use additional headers to enable specific capabilities.
   
 -   To return data on create (POST) or update (PATCH) operations for entities, include the `return=representation` preference. When this preference is applied to a POST request, a successful response will have status 201 (Created) . For a PATCH request, a successful response will have a status 200 (OK). Without this preference applied, both operations will return status 204 (No Content) to reflect that no data is returned in the body of the response by default.  
   
--   To return formatted values with a query, include the odata.include-annotations preference set to Microsoft.Dynamics.CRM.formattedvalue using the [Prefer](https://tools.ietf.org/html/rfc7240) header. More information:[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)  
+-   To return formatted values with a query, include the odata.include-annotations preference set to `Microsoft.Dynamics.CRM.formattedvalue` using the [Prefer](https://tools.ietf.org/html/rfc7240) header. More information:[Include formatted values](query-data-web-api.md#bkmk_includeFormattedValues)  
   
--   You also use the Prefer header with the odata.maxpagesize option to specify how many pages you want to return. More information:[Specify the number of entities to return in a page](query-data-web-api.md#bkmk_specifyNumber)  
+-   You also use the `Prefer` header with the `odata.maxpagesize` option to specify how many pages you want to return. More information:[Specify the number of entities to return in a page](query-data-web-api.md#bkmk_specifyNumber)  
   
--   To impersonate another user when the caller has the privileges to do so, add the MSCRMCallerID header with the systemuserid value of the user to impersonate. More information:[Impersonate another user using the Web API](impersonate-another-user-web-api.md).  
+-   To impersonate another user when the caller has the privileges to do so, add the `CallerObjectId` header with the user's Azure Active Directory Object Id value of the user to impersonate. This data is in the [SystemUser entity](/reference/entities/systemuser) [AzureActiveDirectoryObjectId](/reference/entities/systemuser#BKMK_AzureActiveDirectoryObjectId) attribute. More information:[Impersonate another user using the Web API](impersonate-another-user-web-api.md).  
   
--   To apply optimistic concurrency, you can apply the [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) header with an Etag value. More information:[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency).  
+-   To apply optimistic concurrency, you can apply the [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) header with an `Etag` value. More information:[Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency).  
   
--   To control whether an upsert operation should actually create or update an entity, you can also use the If-Match and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers. More information:[Upsert an entity](update-delete-entities-using-web-api.md#bkmk_upsert).  
+-   To control whether an upsert operation should actually create or update an entity, you can also use the `If-Match` and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers. More information:[Upsert an entity](update-delete-entities-using-web-api.md#bkmk_upsert).  
   
 -   When you execute batch operations, you must apply a number of different headers in the request and with each part sent in the body. More information:[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md).  
   
@@ -132,7 +132,7 @@ You can use additional headers to enable specific capabilities.
 |404 Not Found|Expect this when the resource doesn't exist.|Client Error|  
 |405 Method Not Allowed|This error occurs for incorrect method and resource combinations. For example, you can't use DELETE or PATCH on a collection of entities.<br /><br /> Expect this for the following types of errors:<br /><br /> -   CannotDeleteDueToAssociation<br />-   InvalidOperation<br />-   NotSupported|Client Error|  
 |412 Precondition Failed|Expect this for the following types of errors:<br /><br /> -   ConcurrencyVersionMismatch<br />-   DuplicateRecord|Client Error|
-|429 Too Many Requests|Expect this when API limits are exceeded. More information:[Service Protection API Limits](../api-limits.md)|Client Error|  
+|429 Too Many Requests|Expect this when API limits are exceeded. More information: [Service Protection API Limits](../api-limits.md)|Client Error|  
 |501 Not Implemented|Expect this when some requested operation isn't implemented.|Server Error|  
 |503 Service Unavailable|Expect this when the web API service isn't available.|Server Error|  
   
