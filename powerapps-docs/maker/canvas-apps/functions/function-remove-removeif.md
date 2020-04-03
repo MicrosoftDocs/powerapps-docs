@@ -90,28 +90,7 @@ In this example, you'll use a [**Gallery** control](../controls/control-gallery.
 
 ### Prepare for sample data
 
-This example uses the **Contacts** entity in Common Data Service available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data source instead including [collections](../working-with-data-sources.md#collections).
-
-To use a collection for this example without images:
-
-1. Add a [**Button**](../controls/control-button.md) control to your screen.
-1. Set the **OnSelect** property to the following formula:
-
-    ```powerapps-dot
-    ClearCollect( Contacts, 
-          { 'Full Name': "Yvonne McKay (sample)",      'Primary Email': "someone_a@example.com" },
-          { 'Full Name': "Susanna Stubberod (sample)", 'Primary Email': "someone_b@example.com" },
-          { 'Full Name': "Nancy Anderson (sample)",    'Primary Email': "someone_c@example.com" },
-          { 'Full Name': "Maria Campbell (sample)",    'Primary Email': "someone_d@example.com" },
-          { 'Full Name': "Robert Lyon (sample)",       'Primary Email': "someone_e@example.com" },
-          { 'Full Name': "Paul Cannon (sample)",       'Primary Email': "someone_f@example.com" },
-          { 'Full Name': "Rene Valdes (sample)",       'Primary Email': "someone_g@example.com" } 
-    )
-    ```
-1. Select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior)
-
-> [!NOTE]
-> There is currently a bug that prevents a collection from working with the first example with a button outside the gallery.  The bug is being investigated and will be fixed soon.  The second example with a trash icon inside the gallery works fine.
+This example uses the **Contacts** entity in Common Data Service available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data source instead.
 
 ### Remove button outside a gallery
 
@@ -182,7 +161,49 @@ In this example, you'll remove an item by using a *button* that is outside the g
 
 In this example, you'll remove an item by using an *icon* placed inside the gallery.
 
-If you don't have any sample data, read [prepare for sample data](#prepare-for-sample-data).
+### Create a collection with sample data
+
+If you already have [prepared sample data](#prepare-for-sample-data), skip this step and move to [Trash can icon inside a gallery](#trash-can-icon-inside-a-gallery).
+
+1. Add a [**Button**](../controls/control-button.md) control to your screen.
+1. Set the **OnSelect** property to the following formula:
+
+    ```powerapps-dot
+    ClearCollect( SampleContacts, 
+          { 'Full Name': "Yvonne McKay (sample)",      'Primary Email': "someone_a@example.com" },
+          { 'Full Name': "Susanna Stubberod (sample)", 'Primary Email': "someone_b@example.com" },
+          { 'Full Name': "Nancy Anderson (sample)",    'Primary Email': "someone_c@example.com" },
+          { 'Full Name': "Maria Campbell (sample)",    'Primary Email': "someone_d@example.com" },
+          { 'Full Name': "Robert Lyon (sample)",       'Primary Email': "someone_e@example.com" },
+          { 'Full Name': "Paul Cannon (sample)",       'Primary Email': "someone_f@example.com" },
+          { 'Full Name': "Rene Valdes (sample)",       'Primary Email': "someone_g@example.com" } 
+    )
+    ```
+1. Select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior).
+
+Sample collection is created that you can use in the following example.
+
+### Trash can icon inside a gallery
+
+1. Create a [new blank canvas app](../data-platform-create-app-scratch.md) using a Phone layout.
+
+    ![A blank canvas app using the phone layout](media/function-remove-removeif/gallery-new.png)
+
+1. Select the **Insert** from the left pane.
+
+1. Select **Vertical gallery**. <br>
+    A **Gallery** control is be added to your screen.
+
+    ![Using the Insert tool pane to add a vertical gallery control](media/function-remove-removeif/gallery-add.png)
+
+1. You're prompted to select a data source where you can select a data source from the available data sources. <br>
+    For example, select the **Contacts** entity to use *sample data*:  
+
+    ![Selecting the Contacts entity to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
+
+    If you created a [collection](#create-a-collection-with-sample-data), select your collection instead:
+
+    ![Sample contacts collection](media/function-remove-removeif/sample-contacts.png)
 
 1. Select a control within the top item in the gallery. <br>
     
