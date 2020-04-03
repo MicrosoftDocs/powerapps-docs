@@ -110,6 +110,9 @@ To use a collection for this example without images:
     ```
 1. Select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior)
 
+> [!NOTE]
+> There is currently a bug that prevents a collection from working with the first example with a button outside the gallery.  The bug is being investigated and will be fixed soon.  The second example with a trash icon inside the gallery works fine.
+
 ### Remove button outside a gallery
 
 In this example, you'll remove an item by using a *button* that is outside the gallery.
