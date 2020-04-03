@@ -2,7 +2,7 @@
 title: "Compose HTTP requests and handle errors (Common Data Service)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 11/05/2018
+ms.date: 04/03/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -38,7 +38,7 @@ To access the Web API you must compose a URL using the parts in the following ta
 |Region|Your environment will usually be available in a data center that is close to you geographically.<br />North America: `crm`<br />South America: `crm2`<br />Canada: `crm3`<br />Europe, Middle East and Africa (EMEA): `crm4`<br />Asia Pacific Area (APAC): `crm5`<br />Oceania: `crm6`<br />Japan: `crm7`<br />India: `crm8`<br />North America 2: `crm9`<br />United Kingdom: `crm11`<br />France: `crm12`<br />More values will be added over time as new data center regions are opened.|
 |Base URL|`dynamics.com.`|
 |Web API path|The path to the web API is `/api/data/`.|
-|Version|	The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.0`.|
+|Version|    The version is expressed this way: `v[Major_version].[Minor_version][PatchVersion]/`. The valid version for this release is `v9.0`.|
 |Resource|The name of the entity, function, or action you want to use.|
 
 
@@ -68,7 +68,7 @@ As new capabilities are introduced they may conflict with earlier versions. This
 |POST|Use when creating entities or calling actions.|  
 |PATCH|Use when updating entities or performing upsert operations.|  
 |DELETE|Use when deleting entities or individual properties of entities.|  
-|PUT|Use in limited situations to update individual properties of entities. This method isn’t recommended when updating most entities. You’ll use this when updating model entities.|  
+|PUT|Use in limited situations to update individual properties of entities. This method isn't recommended when updating most entities. You'll use this when updating model entities.|  
   
 <a name="bkmk_headers"></a>
 
@@ -76,11 +76,11 @@ As new capabilities are introduced they may conflict with earlier versions. This
 
 Although the OData protocol allows for both JSON and ATOM format, the web API only supports JSON. Therefore the following headers can be applied.  
   
-Every request should include the Accept header value of `application/json`, even when no response body is expected. Any error returned in the response will be returned as JSON. While your code should work even if this header isn’t included, we recommend including it as a best practice  
+Every request should include the Accept header value of `application/json`, even when no response body is expected. Any error returned in the response will be returned as JSON. While your code should work even if this header isn't included, we recommend including it as a best practice  
   
 The current OData version is 4.0, but future versions may allow for new capabilities. To ensure that there is no ambiguity about the OData version that will be applied to your code at that point in the future, you should always include an explicit statement of the current OData version and the Maximum version to apply in your code. Use both OData-Version and OData-MaxVersion headers set to a value of 4.0.  
  
-Queries which expand collection-valued navigation properties may return cached data for those properties that doesn’t reflect recent changes. Include `If-None-Match: null` header in the request body to override browser caching of Web API request. For more information see [Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests 3.2 : If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2).
+Queries which expand collection-valued navigation properties may return cached data for those properties that doesn't reflect recent changes. Include `If-None-Match: null` header in the request body to override browser caching of Web API request. For more information see [Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests 3.2 : If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2).
  
 All HTTP headers should include at least the following headers.  
   
@@ -129,32 +129,53 @@ You can use additional headers to enable specific capabilities.
 |401 Unauthorized|Expect this for the following types of errors:<br /><br /> -   BadAuthTicket<br />-   ExpiredAuthTicket<br />-   InsufficientAuthTicket<br />-   InvalidAuthTicket<br />-   InvalidUserAuth<br />-   MissingCrmAuthenticationToken<br />-   MissingCrmAuthenticationTokenOrganizationName<br />-   RequestIsNotAuthenticated<br />-   TamperedAuthTicket<br />-   UnauthorizedAccess<br />-   UnManagedInvalidSecurityPrincipal|Client Error|  
 |413 Payload Too Large|Expect this when the request length is too large.|Client Error|  
 |400 BadRequest|Expect this when an argument is invalid.|Client Error|  
-|404 Not Found|Expect this when the resource doesn’t exist.|Client Error|  
-|405 Method Not Allowed|This error occurs for incorrect method and resource combinations. For example, you can’t use DELETE or PATCH on a collection of entities.<br /><br /> Expect this for the following types of errors:<br /><br /> -   CannotDeleteDueToAssociation<br />-   InvalidOperation<br />-   NotSupported|Client Error|  
+|404 Not Found|Expect this when the resource doesn't exist.|Client Error|  
+|405 Method Not Allowed|This error occurs for incorrect method and resource combinations. For example, you can't use DELETE or PATCH on a collection of entities.<br /><br /> Expect this for the following types of errors:<br /><br /> -   CannotDeleteDueToAssociation<br />-   InvalidOperation<br />-   NotSupported|Client Error|  
 |412 Precondition Failed|Expect this for the following types of errors:<br /><br /> -   ConcurrencyVersionMismatch<br />-   DuplicateRecord|Client Error|
 |429 Too Many Requests|Expect this when API limits are exceeded. More information:[Service Protection API Limits](../api-limits.md)|Client Error|  
 |501 Not Implemented|Expect this when some requested operation isn't implemented.|Server Error|  
-|503 Service Unavailable|Expect this when the web API service isn’t available.|Server Error|  
+|503 Service Unavailable|Expect this when the web API service isn't available.|Server Error|  
   
 <a name="bkmk_parseErrors"></a>
 
 ## Parse errors from the response
 
- Details about errors are included as JSON in the response. Errors will be in this format.  
+Details about errors are included as JSON in the response. Errors will be in this format.  
   
 ```json  
 {  
  "error":{  
   "code": "<This code is not related to the http status code and is frequently empty>",  
-  "message": "<A message describing the error>",  
-  "innererror": {  
-   "message": "<A message describing the error, this is frequently the same as the outer message>",  
-   "type": "Microsoft.Crm.CrmHttpException",  
-   "stacktrace": "<Details from the server about where the error occurred>"  
-  }  
+  "message": "<A message describing the error>"  
  }  
 }  
-```  
+```
+
+> [!IMPORTANT]
+> The structure of the error messages is changing. This change is expected to be deployed to different regions over a period starting in late April through May 2020.
+> 
+> Before this change, the errors returned were in this format:
+> 
+> ```json  
+> {  
+>  "error":{  
+>   "code": "<This code is not related to the http status code and is frequently empty>",  
+>   "message": "<A message describing the error>",  
+>   "innererror": {  
+>    "message": "<A message describing the error, this is frequently the same as the outer message>",  
+>    "type": "Microsoft.Crm.CrmHttpException",  
+>    "stacktrace": "<Details from the server about where the error occurred>"  
+>   }  
+>  }  
+> }  
+> ```
+> 
+> We are removing the `innererror` property of the error message. You should remove any code that expects to parse this property.
+>
+> The OData [Error Response guidance](https://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html#_Toc372793091) states "*The innererror name/value pair SHOULD only be used in development environments in order to guard against potential security concerns around information disclosure.*". To align with this guidance we are removing this property.
+> 
+> If you find that an application you use has a dependency on this property after this change is deployed, you can contact support and request that the change be temporarily removed for your environment. This will provide time for the application developer to make appropriate changes to remove this dependency.
+
   
 ### See also  
 
