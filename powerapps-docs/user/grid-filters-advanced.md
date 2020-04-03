@@ -17,18 +17,18 @@ search.app:
 ---
 # Edit or create personal views using advanced grid filters 
 
-Easily create a personal view that only you can see for a set of records using advanced grid filters and expression builder. The advanced filters allows you to create a wide range of views from simple to complex that you can also add grouped and nested conditions to.
+Easily create a personal view that only you can see for a set of records using advanced grid filters and expression builder. The advanced filters allow you to create a wide range of views from simple to complex that you can also add grouped and nested conditions to.
 
 When you create and save a personal view, it appears in your list of personal views under **My Views**.
 
 ![Personal views](media/my_peronsal_view.png "Personal views")
 
 > [!NOTE]
-> Advanced filtering is only avilable to English orgs. 
+> The advanced filter option  is only available to English organizations.
 
 ## See the current view definition
 
-To see which filters were applied to the current view, select a view and then select the filter icon ![Filter icon](media/commandbar_filter_icon.png "Filter icon") to open expression builder. This displays the current view definition by default.
+- To see which filters were applied to the current view, select a view and then select the filter icon ![Filter icon](media/commandbar_filter_icon.png "Filter icon"). This opens expression builder and displays the default view definition.
 
    > [!div class="mx-imgBorder"] 
    > ![Current view definition](media/current_view_def.gif "Current view definition")
