@@ -28,7 +28,7 @@ When you create and save a personal view, it appears in your list of personal vi
 
 ## See the current view definition
 
-To see which filters were applied to the current view, select a view and then select the filter icon to open expression builder. This displays the current view definition by default.
+To see which filters were applied to the current view, select a view and then select the filter icon ![Filter icon](media/commandbar_filter_icon.png "Filter icon") to open expression builder. This displays the current view definition by default.
 
    > [!div class="mx-imgBorder"] 
    > ![Current view definition](media/current_view_def.gif "Current view definition")
