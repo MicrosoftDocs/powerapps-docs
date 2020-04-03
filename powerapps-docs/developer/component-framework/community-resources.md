@@ -14,9 +14,9 @@ ms.topic: "article"
 
 # Community resources for Power Apps component framework
 
-The following is a list of some community resources created by the Power Apps community that you can utilize to create code components in model-driven and canvas apps using Power Apps component framework and Power Apps CLI. 
+The following is a list of some community resources created by the Power Apps community that you can use to create code components in model-driven and canvas apps using Power Apps component framework and Power Apps CLI. 
 
-> [!NOTE]
+> [!NOTE]            
 > Resources created by the community are not supported by Microsoft. If you have questions or issues with community resources, contact the publisher of the resource. Before using these resources, you must ensure that these community resources meet the Power Apps component framework guidelines and should only be used for reference purpose. 
 
 ## Code components gallery
@@ -31,7 +31,7 @@ Make sure that you review the licensing terms and the source code before you dow
 > [!div class="mx-imgBorder"]
 > ![Component gallery](media/pcf-gallery.PNG "Components gallery")
 
-## Videos
+## Videos        
 
 The following is the list of videos created by Power Apps community.
 
@@ -40,7 +40,7 @@ The following is the list of videos created by Power Apps community.
 |[Build your own code components](https://www.youtube.com/watch?v=S3Z_IUf1ncg)| Learn how to build code components in model-driven and canvas apps using the Power Apps component framework.| 
 |[Code components for canvas apps](https://www.youtube.com/watch?v=bMSCkcb4xAQ&feature=emb_logo)| Learn how to develop and use code components in canvas apps.|
 |[Develop code components](https://www.youtube.com/watch?v=FxWF-LCCB4g&feature=youtu.be)| This video shows the requirements for developing code components using Power Apps component framework and demonstrates a step-by-step approach for creating your first code component.|
-|[Easier debugging with sourcemaps and Fiddler](https://www.youtube.com/watch?v=Ov-m5FBUj9g&feature=youtu.be)|Learn how to debug minified production code using Fiddler and sourcemaps.|
+|[Easier debugging with source maps and Fiddler](https://www.youtube.com/watch?v=Ov-m5FBUj9g&feature=youtu.be)|Learn how to debug minified production code using Fiddler and source maps.|
 |[Getting started with code components](https://www.youtube.com/watch?v=ylhVZUlGgQw)| Introductory video on Power Apps component framework and basics of building code components.|
 |[Power Apps component framework Academy: Getting started](https://www.youtube.com/watch?v=YJ9hrKxAhTU)| Introductory video on how to build your first code component.|
 |[Power Apps component framework: Deep dive manifest file for dataset template](https://www.youtube.com/watch?v=TsTrYaOGaGo&feature=youtu.be)| Learn how to define a manifest file for dataset type code components.|
@@ -68,6 +68,7 @@ The following is the list of blogs created by Power Apps community.
 - [Public availability of Power Apps component framework – An important milestone](https://crmindian.com/2019/04/24/public-availability-of-powerapps-component-framework-an-important-milestone-for-powerapps-and-d365/)
 - [Work with code components using Power Apps component framework](https://powermaverick.dev/2019/05/18/create-custom-controls-using-powerapp-component-framework)
 - [What happens when a web resource calls setVisible/setDisabled for that component](https://www.itaintboring.com/dynamics-crm/pcf-components-and-setvisible-setdisabled)
+- [When do you call updateView method](https://dianabirkelbach.wordpress.com/2020/03/29/pcf-when-is-updateview-called)
 
 ## Tools
 

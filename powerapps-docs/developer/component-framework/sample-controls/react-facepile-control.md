@@ -51,7 +51,7 @@ The component sample consists of three Office UI Fabric components: a facepile, 
 - When the component is loaded, the slider is set to the bound attribute value. The `context.parameters.[property_name].attributes` property contains the associated metadata.
 - An event handler is passed in the React component's props; this will allow the React component to notify the host Power Apps component framework control that a value has changed. The event handler then determines if a call to the **notifyOutputEvents** method is necessary.
 - Sliding the slider will cause React to update the bound value and call the passed in event handler. Inside that handler, if a call is made to the **notifyOutputEvents** method, then the control's [getOutputs](../reference/control/getoutputs.md) method will be called asynchronously and will flow to the Power Apps component framework. 
-- The framework host updates the bound attribute value, and the updated value flows to the component, triggering the control’s [updateView](../reference/control/updateview.md) method. The control then rerenders the React component with the new value.
+- The framework host updates the bound attribute value, and the updated value flows to the component, triggering the control's [updateView](../reference/control/updateview.md) method. The control then rerenders the React component with the new value.
 
 
 ## Code
@@ -130,7 +130,7 @@ export class ReactStandardControl
 
   /**
    * It is called by the framework prior to a control receiving new data.
-   * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as “bound” or “output”
+   * @returns an object based on nomenclature defined in manifest, expecting object[s] for property marked as "bound" or "output"
    */
   public getOutputs(): IOutputs {
     return {
@@ -415,6 +415,7 @@ export const TestImages = {
 
 ### Related topics
 
+[Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)<br />
 [Power Apps component framework API reference](../reference/index.md)<br />
