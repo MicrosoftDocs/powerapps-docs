@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/28/2020
+ms.date: 04/02/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -53,20 +53,29 @@ You can also use the **[Clear](function-clear-collect-clearcollect.md)** functio
 
 ## Examples
 
-### Simple examples
+### Remove records using formula
 In these examples, you'll remove a record or records in a data source that's named **IceCream** and that starts with the data in this table:
 
 ![](media/function-remove-removeif/icecream.png)
 
-To create a collection with this data, insert a [**Button** control](../controls/control-button.md), set its **OnSelect** property to the below formula, and select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior):
+#### Create a collection with sample records
 
-```powerapps-dot
-ClearCollect( IceCream,
-              { ID: 1, Flavor: "Chocolate",  Quantity: 100 },
-              { ID: 2, Flavor: "Vanilla",    Quantity: 200 },
-              { ID: 3, Flavor: "Strawberry", Quantity: 300 }
-)
-```
+To create a collection with this data:
+
+1. Insert a [**Button**](../controls/control-button.md) control.
+1. Set button control's **OnSelect** property to the below formula:
+
+    ```powerapps-dot
+    ClearCollect( IceCream,
+                  { ID: 1, Flavor: "Chocolate",  Quantity: 100 },
+                  { ID: 2, Flavor: "Vanilla",    Quantity: 200 },
+                  { ID: 3, Flavor: "Strawberry", Quantity: 300 }
+    )
+    ```
+1. Select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior):
+
+
+#### Remove sample records from collection using formula
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -76,115 +85,151 @@ ClearCollect( IceCream,
 | **RemoveIf(&nbsp;IceCream, Quantity&nbsp;>&nbsp;150, Left(&nbsp;Flavor,&nbsp;1&nbsp;) = "S" )** |Removes records that have a **Quantity** that's greater than 150 and **Flavor** starts with an **S**. |![](media/function-remove-removeif/icecream-no-strawberry.png)<br><br><br>The **IceCream** data source has been modified. |
 | **RemoveIf(&nbsp;IceCream, true )** |Removes all records from the data source. |![](media/function-remove-removeif/icecream-empty.png)<br><br>The **IceCream** data source has been modified. |
 
-### Removing an item from a gallery
+### Remove records from a gallery
 
-In this example we will use a [**Gallery** control](../controls/control-gallery.md) to list the records in a table and then use the **Remove** function to selectively remove an item.  
+In this example you'll use a [**Gallery** control](../controls/control-gallery.md) to list the records in a table. And then use the **Remove** function to selectively remove an item.  
 
-This example uses the **Contacts** entity in Common Data Service which was loaded with sample data when the database was created.  You can create your own database with sample data by creating a trial environment.  
+> [!NOTE]
+>  This example uses the **Contacts** entity in Common Data Service available with the *sample apps and data*. You can deploy *sample apps and data* when you [create an environment](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database). You can also use any other data with Common Data Service instead.
 
-Any data source or collection can be used in this same manner.  To use a collection to work through this example, add a [**Button** control](../controls/control-button.md) to your screen, set the **OnSelect** property to the formula below, and select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior):
+<!---
 
-```powerapps-dot
-ClearCollect( Contacts, 
-              { Name: "Yvonne",  Email: "yvonne@contoso.com" },
-              { Name: "Susanna", Email: "susanna@contoso.com" },
-              { Name: "Nancy",   Email: "nancy@contoso.com" },
-              { Name: "Maria",   Email: "maria@contoso.com" },
-              { Name: "Robert",  Email: "robert@contoso.com" },
-              { Name: "Paul",    Email: "paul@contoso.com" },
-              { Name: "Rene",    Email: "rene@consoto.com" } 
-)
-```
+To use a collection in this example:
 
-#### From outside the gallery
+1. Add a [**Button**](../controls/control-button.md) control to your screen.
+1. Set the **OnSelect** property to the following formula:
 
-In this first part, we will remove an item by using a button that is outside the gallery.
+    ```powerapps-dot
+    ClearCollect( Contacts, 
+                  { Name: "Yvonne",  Email: "yvonne@contoso.com" },
+                  { Name: "Susanna", Email: "susanna@contoso.com" },
+                  { Name: "Nancy",   Email: "nancy@contoso.com" },
+                  { Name: "Maria",   Email: "maria@contoso.com" },
+                  { Name: "Robert",  Email: "robert@contoso.com" },
+                  { Name: "Paul",    Email: "paul@contoso.com" },
+                  { Name: "Rene",    Email: "rene@consoto.com" } 
+    )
+    ```
+1. Select the button [while holding down the Alt key](../keyboard-shortcuts.md#alternate-behavior)
+
+-->
+
+#### A. Remove records from outside the gallery
+
+In this example, you'll remove an item by using a *button* that is outside the gallery.
 
 1. Create a [new blank canvas app](../data-platform-create-app-scratch.md) using a Phone layout.
 
-    > [!div class="mx-imgBorder"]
-    > ![A blank canvas app using the phone layout](media/function-remove-removeif/gallery-new.png)
+    ![A blank canvas app using the phone layout](media/function-remove-removeif/gallery-new.png)
 
-1. Select the **Insert** tool pane on the left hand side of the studio.  
+1. Select the **Insert** from the left pane.
 
-1. Select **Vertical gallery**.  A **Gallery** control will be added to your screen.
+1. Select **Vertical gallery**. <br>
+    A **Gallery** control is be added to your screen.
 
-    > [!div class="mx-imgBorder"]
-    > ![Using the Insert tool pane to add a vertical gallery control](media/function-remove-removeif/gallery-add.png)
+    ![Using the Insert tool pane to add a vertical gallery control](media/function-remove-removeif/gallery-add.png)
 
-1. You will be prompted to select a data source.  If your desired data source is not shown, enter the name in the Search box at the top.  For this exercise, select the **Contacts** entity.  
+1. You're prompted to select a data source where you can select a data source from the available data sources. <br>
+    For example, select the **Contacts** entity to use *sample data*:  
 
-    > [!div class="mx-imgBorder"]
-    > ![Selecting the Contacts entity to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
+    ![Selecting the Contacts entity to display in the gallery](media/function-remove-removeif/gallery-datasource.png)
 
-1. The gallery will show items from this entity. 
+    The gallery shows items from this entity: 
 
-    > [!div class="mx-imgBorder"]
-    > ![Gallery added showing the Contacts entity](media/function-remove-removeif/gallery-data.png)
+    ![Gallery added showing the Contacts entity](media/function-remove-removeif/gallery-data.png)
 
-1. Insert a [**Button** control](../controls/control-button.md) from the Insert tool pane.
+1. Insert a [**Button**](../controls/control-button.md) control from left pane:
     
-    > [!div class="mx-imgBorder"]
-    > ![Using the Insert tool pane to add a button control](media/function-remove-removeif/gallery-addbutton.png)
+    ![Using the Insert tool pane to add a button control](media/function-remove-removeif/gallery-addbutton.png)
 
-1. Set the **OnSelect** property for this button control to the formula:
+1. Move the added button below the gallery items:
+
+    ![Move button](media/function-remove-removeif/move-button-down.png)
+
+1. Update button text property to *Remove record*. You can also use text of your choice:
+
+    ![Rename button](media/function-remove-removeif/button-text.png)
+
+1. Set the **OnSelect** property for this button control to the following formula:
 
     ```powerapps-dot
     Remove( Contacts, Gallery1.Selected )
     ```
 
-    > [!div class="mx-imgBorder"]
-    > ![Setting the OnSelect property of the button control](media/function-remove-removeif/gallery-button-onselect.png)
+    ![Setting the OnSelect property of the button control](media/function-remove-removeif/gallery-button-onselect.png)
 
-    The gallery controls makes the currently selected record available through its **Selected** property.  We use this to tell the **Remove** function which record to be remove from the **Contacts** entity.
+    The gallery control makes the currently selected record available using **Selected** property. **Remove** function refers to this selected record to remove it.
 
-1. [Hold down the Alt key](../keyboard-shortcuts.md#alternate-behavior) and select the third item in the gallery, in our case Nancy's record.  You can also preview the app to select items (press F5 or use the triangular icon in the upper right corner of the studio).
+1. Preview the app using the *Play* button on the top right, or press *F5* on keyboard:
 
-1. Again with the Alt key held down, select the button control.  The record for Nancy will be removed.
+    ![Preview app](media/function-remove-removeif/preview-app.png)
 
-    > [!div class="mx-imgBorder"]
-    > ![Gallery of contacts, now without the Nancy record that has been removed](media/function-remove-removeif/gallery-activatebutton.png)
+1. Select a record to remove, such as *Nancy*'s record in this example:
 
-#### From inside the gallery
+    ![Select a record](media/function-remove-removeif/select-nancy-record.png)
 
-In this next part, we will remove an item from inside the gallery.
+1. Select **Remove record**:
 
-1. Select the top item of the gallery.  This is important to ensure that the next step will insert the item into the gallery's template and not outside the gallery.
+    ![Gallery of contacts, now without the Nancy record that has been removed](media/function-remove-removeif/gallery-activatebutton.png)
 
-    > [!div class="mx-imgBorder"]
-    > ![Gallery with the top record selected, which is the template for how records are replicated throughout the rest of the gallery](media/function-remove-removeif/gallery-select-template.png)
+    Selecting the button removes the selected record (in this example, Nancy's record).
 
-1. Return to the Insert tool pane and select **Add icon**.  This will insert a **+** icon on the left side of the gallery, replicated for each item in the gallery.  
+1. Close the app preview.
 
-    > [!div class="mx-imgBorder"]
-    > ![Using the Insert tool pane to add an icon control](media/function-remove-removeif/gallery-addicon.png)
+    > [!TIP]
+    > You can also use alternate behavior with [*Alt key*](../keyboard-shortcuts.md#alternate-behavior) instead of using the app preview with *Play* button or *F5*.
+
+#### B. Remove records from inside the gallery
+
+In this example, you'll remove an item by using an *icon* placed inside the gallery.
+
+1. Select the top item in the gallery. <br>
+    
+    To ensure next step inserts item into gallery's template and not outside the gallery, ensure you follow this step before moving to the next step.
+    
+    ![Select top record in a gallery](media/function-remove-removeif/gallery-select-template.png)
+
+1. Select **Add icon** from left pane. <br>
+    
+    ![Using the Insert tool pane to add an icon control](media/function-remove-removeif/gallery-addicon.png)
+
+    > [!NOTE]
+    > **Add icon** inserts a **+** icon on the left side of the gallery, replicated for each item in the gallery. 
 
 1. In the top item, move the icon to the right side of the screen.
-  
-1. To change to a trash can icon, set the **Icon** property to the formula:
+
+    ![Move icon](media/function-remove-removeif/move-icon.png)
+
+1. Select the **Icon** property for icon and set it to the following formula to update the icon image as trash icon:
 
     ```powerapps-dot 
     Icon.Trash
     ```
     
-    The **Icon.** prefix will not be shown unless you are actively editing the formula.
+    > [!NOTE]
+    > The **Icon.** prefix is only shown when you're actively editing the formula.
 
-    > [!div class="mx-imgBorder"]
-    > ![Changing the icon to the trash can icon](media/function-remove-removeif/gallery-icontrash.png)
+    ![Changing the icon to the trash can icon](media/function-remove-removeif/gallery-icontrash.png)
 
-1. Set the **OnSelect** property to the formula:
+1. Set the **OnSelect** property to the following formula:
 
     ```powerapps-dot
     Remove( [@Contacts], ThisItem )
     ```
 
     > [!NOTE]
-    > At present, we must use the [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** to avoid a name conflict with a One-to-Many relationship on the Contacts entity.  We are working to reduce name conflicts and make this unnecessary in the future.  This is not needed if the data source has no conflicts, often the case for SharePoint lists or SQL Server tables, but the syntax does no harm either.  
+    > You must use [global disambiguation operator](operators.md#disambiguation-operator) **[@**...**]** in this example with sample data that uses the *Contacts* entity to avoid conflict with a *One-to-Many* relationship. If you use data sources such as a SharePoint list or a SQL Server table, using *global disambgulation operator* is optional, though recommended.
 
-    > [!div class="mx-imgBorder"]
-    > ![Setting the OnSelect property of the icon control within the gallery](media/function-remove-removeif/gallery-onselect.png)
+    ![OnSelect for trash icon](media/function-remove-removeif/gallery-onselect.png)
 
-1. Hold down the Alt key and select any of the trash can icons in the gallery.  The associate contact will be removed.
+1. Preview the app using the *Play* button on the top right, or press *F5* on keyboard.
 
-    > [!div class="mx-imgBorder"]
-    > ![Gallery with one of the contacts removed](media/function-remove-removeif/gallery-activateicon.png)
+1. Select the trash icon next to a record, for example *Maria*'s:
+
+    ![Gallery with one of the contacts removed](media/function-remove-removeif/gallery-activateicon.png)
+
+    The record is deleted:
+
+    ![Deleted record](media/function-remove-removeif/deleted-record.png)
+
+1. Close the app preview.
