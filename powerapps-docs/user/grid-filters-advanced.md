@@ -64,7 +64,7 @@ An asterisk next to a view name indicates the view has not been saved.
 1. To save a personal view, on the command bar select the more icon ![More icon](media/commandbar_more_icon.png "More icon"). 
 2. Select **Create view** > **Save filter as new view**.
 3. On the **Save as new view** dialog box, type in a name and description for the view and then select **Save**.
-4. Go to your list of view to see the new personal view that you created.
+4. Go to your list of views to see the personal view that you created.
  
    > [!div class="mx-imgBorder"] 
    > ![Save a personal view](media/save_personal_view.gif "Save a personal view")
