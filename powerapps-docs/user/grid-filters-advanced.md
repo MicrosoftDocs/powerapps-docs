@@ -16,28 +16,14 @@ search.app:
   - D365CE
 ---
 
-<!--comment: There are four GIFs in this topic. GIFs on docs are problematic for several reasons. Here is the MS guidance on use of GIFs:
->
-- Animated GIFs require the same steps be written out in text. You can’t rely only on the action in the images. At minimum, the alt text must explain well. Use an alt text that says something along the lines of "This image demonstrates adding a user. The step by step instructions follow in text." You can never have an animated gif file unless you have text that describes the thing in the gif.
->
-- Animated GIFs must not loop. If there is no way to provide a Pause or Stop button (which on Docs, there isn’t), then you have to build the GIF so that it doesn’t loop. Then users have to refresh the page if they want to see the animation again.
->
-- Animated GIFs must also use only approved fictitious content, such as people and company names, phone numbers, etc. 
->
-Based on the above, you should replace the GIFs with still images. If the GIFs don't loop (which they seem to do), you would still need to make sure there are sufficient written steps for readers who can't see the action in the GIFs. (Also, be sure all names in the GIFs are from an approved fictitious names list.)
--->
-
 
 # Edit or create personal views using advanced grid filters 
 
 Easily create a personal view for yourself to see the records that are important to you. The advanced filters allow you to create a wide range of views from simple to complex that you can also add group and nested conditions to.
 
 
-<!--question: what does "English organizations" mean? Does it mean it's available only in English language versions? -->
-
-
 > [!NOTE]
-> The advanced filter option is available only to English organizations.
+> The advanced filter option is available only in English language versions.
 
 When you create and save a personal view, it appears in your list of personal views under **My Views**.
 
