@@ -528,15 +528,17 @@ To create a record:
     | Facility             | Select a facility. This list is populated based on the **Facilities** data you have created earlier. |
     | Floor                | Type the floor information for the facility.                                                         |
     | Unit                 | Type the unit information for the facility                                                           |
-    | Location Acuity      | Select acuity record associated with this location.                                                                                                     |
+    | Acuity      | Select acuity record associated with this location.                                                                                                     |
+    | COVID Location.      | Select whether this location is used to treat COVID patients (**Yes** or **No**.)                                                                                                      |
     | Total Beds           | Type the total number of beds in the facility.                                                       |
+    | Surge Beds           | Type the number of surge beds in the facility. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                                      |
     | Blocked beds         | Type the number of beds blocked in the facility.                                                     |
     | Last Census          | Populates based on the last census record being created.                                             |
     | Occupancy Percentage | Automatically calculated based on last census and total beds                                         |
     | Effective Start Data | Type start date and time for this hospital system.                                                   |
     | Effective End Date   | Type end date and time for this hospital system.                                                     |
     | Location Order       | Type a number that sorts the location in the location drop-down lists.                               |
-    | Alternate Site Flag  | For internal use                                                                                     |
+    | Alternate Site Flag  | For internal use.                                                                                     |
 
 3. Select **Save & Close**. The newly created record will be available in the **Locations** list.
 
@@ -669,37 +671,33 @@ Publish the Power BI dashboard and share it with users in your organization so t
 
 1. Navigate to the location where you extracted the deployment package. You will find the **Emergency Response App.pbit** file under the **Power BI Template** folder.
 
-2. Open the **Emergency Response App.pbit** file in Power BI Desktop. When this file opens in Power BI Desktop, you will see a **Refresh** dialog box stating that the data refresh failed. This is because we haven't yet specified the connection details to your Common Data Service environment.
+2. Open the **Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following values:
 
-3. Select **Transform Data** to specify connection to your Common Data Service environment.  
-    
-    > [!div class="mx-imgBorder"]
-    > ![select-transform-data](media/select-transform-data.png)
-
-4. In the query editor, update the **CDSBaseURL** parameter with the URL of your Common Data Service environment. Right-click **CDSBaseURL**, select **Advanced Editor**, and then specify appropriate value.  
+    - **Organization_name**: Type your organization name that will be populated on the top-left corner of each report page.
+    - **CDS_base_solution_URL**: Type the URL of your Common Data Service environement instance. For example: https://*[myenv]*.crm.dynamics.com
 
     > [!div class="mx-imgBorder"]
-    > ![select-advanced-editor](media/select-advanced-editor.png)
+    > ![specify org name and base URL](media/pbi-pub-rep1.png)
 
-5. Save your changes. A message displays asking you to apply pending changes to your query. Select **Apply**.
+    Select **Load**.
 
-6. You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** > **Sign in** to specify your Common Data Service credentials.  
+3. You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** > **Sign in** to specify your Common Data Service credentials.  
 
     > [!div class="mx-imgBorder"]
     > ![select-organizational-account](media/select-organizational-account.png)
 
-7. Select **Connect** to establish a connection.
+4. After signing in, select **Connect** to connect to your data in Common Data Service.
 
-8. On successful connection, you will be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
+5. On successful connection, your data will be displayed in the Power BI report. You'll be prompted to apply pending changes to your query; select **Apply changes**.
 
-9. In the **Home** tab, select **Close & Apply**.
+6. Select **Publish** to publish data to your Power BI workspace. You'll be prompted to save your changes; select **Save**.
 
-10. Select **Refresh** to refresh the data from your Common Data Service environment. Select **Publish** to publish data to your Power BI workspace.  
-    
     > [!div class="mx-imgBorder"]
     > ![select-refresh-publish](media/select-refresh-publish.png)
 
-11. In the **Publish to Power BI** page, select the workspace where you want to publish.
+7. You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
+
+8. After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
 
 12. The report becomes available in your workspace. Now, we will configure the data refresh for the dataset. Select the dataset in your workspace and select the **Schedule refresh** icon.  
     
