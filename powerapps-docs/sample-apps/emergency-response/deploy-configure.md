@@ -1,5 +1,5 @@
 ---
-title: Deploy and configure the Emergency Response app | Microsoft Docs
+title: Deploy and configure the Hospital Emergency Response app | Microsoft Docs
 description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: KumarVivek
 manager: annbe
@@ -13,24 +13,24 @@ searchScope:
   - GetStarted
   - PowerApps
 ---
-# Deploy and configure the Emergency Response app
+# Deploy and configure the Hospital Emergency Response app
 
-The Emergency Response app requires a small amount of setup to adapt to your needs. This article provides step-by-step instructions for hospital IT admins to deploy and configure the application for their organization.
+The Hospital Emergency Response app requires a small amount of setup to adapt to your needs. This article provides step-by-step instructions for hospital IT admins to deploy and configure the application for their organization.
 
 Estimated time to complete these steps: **35–40 minutes**.
 
-## Demo: Deploy and configure the Emergency Response app
+## Demo: Deploy and configure the Hospital Emergency Response app
 
-Watch how you can deploy and configure the Emergency Response app.
+Watch how you can deploy and configure the Hospital Emergency Response app.
 
 <br/>
 
 > [!VIDEO https://www.youtube.com/embed/-1g44wNiuWI]
 
 
-## Deploy the Emergency Response app
+## Deploy the Hospital Emergency Response app
 
-Perform the following steps to deploy the Emergency Response sample app for your organization.
+Perform the following steps to deploy the Hospital Emergency Response sample app for your organization.
 
 - [Step 1: Sign up for Power Apps and create an environment](#step-1-sign-up-for-power-apps-and-create-an-environment)
 - [Step 2: Download the deployment package](#step-2-download-the-deployment-package)
@@ -67,7 +67,7 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 ### Step 2: Download the deployment package
 
-Get the latest deployment package (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution file, images, and data files to set up the apps and business logic for the Emergency Response app.
+Get the latest deployment package (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution file, images, and data files to set up the apps and business logic for the Hospital Emergency Response app.
 
 To begin the deployment process, extract the deployment file (.zip) to a location on your computer. The extracted folder will contain the following folders:
 
@@ -77,7 +77,7 @@ To begin the deployment process, extract the deployment file (.zip) to a locatio
 | **Data Files**        | Contains the master and sample data files (.xlsx) for the solution/app to work. You can import data from these files to start working on the app. More information: see [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization) |
 | **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization. More Information: [Get insights using Power BI dashboards](#get-insights-using-power-bi-dashboards)|
 | **PowerShell**        | Contains scripts that you will use to configure your mobile apps (canvas apps). |
-| **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Emergency Response app.  |
+| **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Hospital Emergency Response app.  |
 
 ### Step 3: Import the solution file into your environment
 
@@ -111,7 +111,7 @@ The admin app has a number of entities where you can add and manage data for you
 
 ### Step 4: Load configuration and master data for your organization
 
-All the data required for the Emergency Response app is available under the **Data Files** folder under your extracted deployment folder.
+All the data required for the Hospital Emergency Response app is available under the **Data Files** folder under your extracted deployment folder.
 
 The **Data Files** folder has the following files and folders:
 
@@ -138,7 +138,7 @@ The **Data Files** folder has the following files and folders:
 <li>Request Roles</li>
 <li>Supplies Import</li>
 </ul>
-<br/>Importing data to these entities will create records for these entities that are required for the Emergency Response app to work.
+<br/>Importing data to these entities will create records for these entities that are required for the Hospital Emergency Response app to work.
 <br/>
 <br/>
 <strong>Caution</strong>: Ensure that you don't update the configuration values in these entities, except for the <strong>Apps</strong> and <strong>App Config</strong> entities as explained later.</td>
@@ -146,7 +146,7 @@ The **Data Files** folder has the following files and folders:
 <tr>
 <td><strong>Sample Data</strong> folder</td>
 <td><p>The folder contains the sample data files (.xlsx) that you can import to populate the sample data in your application. The files are named to denote the sequence in which the data should be imported into your app. </p>
-<p>You must import data for the following entities that contain the master sample data for the Emergency Response app:
+<p>You must import data for the following entities that contain the master sample data for the Hospital Emergency Response app:
 <ul>
 <li>Systems</li>
 <li>Regions</li>
@@ -403,7 +403,7 @@ For your admin users to use the admin app (model-driven app), it must be shared 
 
 ## Manually configure and manage master data for your organization
 
-Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Emergency Response app to work.
+Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Hospital Emergency Response app to work.
 
 > [!NOTE]
 > You can also import your organization data into data files available in the deployment package and then import it to these entities. More information: [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization)
@@ -568,7 +568,7 @@ To edit the record, select the record, update the values as required, and select
 
 ## Get insights using Common Data Service dashboards
 
-Following dashboards are available by default in the Emergency Response admin (model-driven) app:
+Following dashboards are available by default in the Hospital Emergency Response admin (model-driven) app:
 
 - **Bed Management**
 
@@ -758,10 +758,10 @@ To view and manage app feedback:
 
 ## Issues and feedback
 
-- To report an issue with the Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
+- To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
 
-- For feedback about the Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
+- For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
 ## Next step
 
-[Use the Emergency Response app](use.md)
+[Use the Hospital Emergency Response app](use.md)

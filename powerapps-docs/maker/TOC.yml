@@ -1637,7 +1637,7 @@
   items:
   - name: Crisis communication app
     href: ./canvas-apps/sample-crisis-communication-app.md
-  - name: Emergency Response solution
+  - name: Hospital Emergency Response solution
     items:
     - name: Overview
       href: ../sample-apps/emergency-response/overview.md
