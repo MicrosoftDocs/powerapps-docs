@@ -1635,9 +1635,9 @@
     href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
-  - name: Crisis communication app
+  - name: Crisis communication
     href: ./canvas-apps/sample-crisis-communication-app.md
-  - name: Hospital Emergency Response solution
+  - name: Hospital Emergency Response
     items:
     - name: Overview
       href: ../sample-apps/emergency-response/overview.md
