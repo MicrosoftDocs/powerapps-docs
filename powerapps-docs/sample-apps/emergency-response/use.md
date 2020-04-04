@@ -107,9 +107,9 @@ After you submit the data, you have the option to go back to the **Staff + equip
 | *Unassigned*                  | Number of Registered Nurses not assigned to any task at the selected location.                    |
 | **Equipment in use**          |                                                                                                   |
 | *Vents*                       | Number of Ventilators in use at the selected location.                                            |
-| *PAPR hoods*                  | Number of Powered Air-Purifying Respirator hoods in use at the selected location.                 |
 | *PAPR belts*                  | Number of Powered Air-Purifying Respirator belts in use at the selected location.                 |
 | *PAPR chargers*               | Number of Powered Air-Purifying Respirator chargers in use at the selected location.              |
+| *PAPR hoods*                  | Number of Powered Air-Purifying Respirator hoods in use at the selected location.                 |
 
 ## Supplies
 
@@ -154,7 +154,7 @@ Select **Back** from top-left if you want to go back to the **Emergency Response
 | Request type             | Type of the request for labor such as Clinical and Non-clinical. This field is *required.* |
 | Role needed              | Role of the requested labor such as sitter or a registered nurse.                          |
 | Needed now or next shift | Select a shift for the requested labor, current shift, or an upcoming shift.                |
-| Quantity | Quantity required in number format.                |
+| How many | How many resources needed, in number format.                |
 | Details                  | Describe additional details or comments for the labor pool request.                        |
 
 ## COVID-19 stats
