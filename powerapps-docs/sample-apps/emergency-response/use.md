@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/26/2020
+ms.date: 04/04/2020
 ms.author: tapanm
 ms.reviewer: kvivek
 searchScope:
@@ -39,21 +39,21 @@ Watch how to use the Hospital Emergency Response app.
 
 > [!VIDEO https://www.youtube.com/embed/H1u6SYt3UsQ]
 
-## App Launcher
+## Emergency Response app
 
-![App Launcher](media/use/app-launcher.png)
+![Emergency Response app](media/use/app-launcher.png)
 
 The Hospital Emergency Response mobile app has a modular structure with different apps as applicable to your role. Open the Hospital Emergency Response mobile app from the Power Apps Mobile, select your **Hospital system**, **Region, Facility**, and select **Next** to get started.
 
 > [!NOTE]
-> When you launch the Hospital Emergency Response mobile app launcher or any of
+> When you launch the Hospital Emergency Response mobile app or any of
 its components for the *first time*, you will be asked for your consent to allow the app to read your *Office 365 Users* profile and your *Location*. You must select **Allow** before you can start using the selected app. For more information, see [give consent](https://docs.microsoft.com/powerapps/user/run-app-client#give-consent).
 
 ## App components
 
 ![Hospital Emergency Response mobile app components](media/use/app-components.png)
 
-The Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more apps in the **App Launcher** for Hospital Emergency Response mobile app.
+The Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more components in the **Emergency Response app**.
 
 - **Staff + equipment**
     <br> Collect status of the RNs and critical equipment by location in that
@@ -79,7 +79,7 @@ The Hospital Emergency Response sample solution app consists of multiple apps fo
 
 Submit location-specific inventory for Registered nurses, patients, and
 equipment. The area list consists of all locations specific to the facility
-chosen on the **App Launcher**. Select location from the available options to
+chosen on the **Emergency Response app**. Select location from the available options to
 update other fields.
 
 After you select an area, enter the required values for the fields to
@@ -90,8 +90,9 @@ For example, if you need to add number of registered nurses requested as 3,
 enter 3 in the **Registered nurses on duty - Requested** field and select
 **Send**. If you also need to update ventilators in use as 6, enter 3 in **Registered nurses on duty - Requested** field, then enter 6 in **Vents** under **Equipment in use**, and select **Send**.
 
-Select **Back** from top-left if you want to go back to the **App Launcher**
-without submitting any change. **Send** button submits values you entered.
+Select **Back** from top-left if you want to go back to the **Emegency Response app** without submitting any change. **Submit** button submits values you entered.
+
+After you submit the data, you have the option to go back to the **Staff + equipment** app with **Track another** button. Select **Home** to go back to **Emergency Response app**.
 
 ### Fields and description
 
@@ -121,8 +122,7 @@ from this app.
 > [!NOTE]
 > Enter values in both fields - **In stock** and **Used past 24 hr** before you select send.
 
-Select **Back** in the top-left if you want to go back to the **App Launcher**
-without submitting any change. **Send** button submits values you entered.
+Select **Back** in the top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
 ### Fields and description
 
@@ -143,8 +143,7 @@ Collects labor pool requests the selected facility. Before you can submit the
 labor pool request for a facility, ensure fields marked as *required* are
 filled.
 
-Select **Back** from top-left if you want to go back to the **App Launcher**
-without submitting any change. **Send** button submits values you entered.
+Select **Back** from top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
 ### Fields and description
 
@@ -168,8 +167,9 @@ update the location-specific number of patients under investigation and patients
 You can also add another location using the **+ Add another location** button to
 send stats for more than one location.
 
-Select **Back** from top-left if you want to go back to the **App Launcher**
-without submitting any change. **Send** button submits values you entered.
+Select **Back** from top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered.
+
+After you submit the data, you have the option to go back to the **COVID-19 stats** app with **Track another** button. Select **Home** to go back to **Emergency Response app**.
 
 ### Fields and description
 
@@ -186,8 +186,7 @@ without submitting any change. **Send** button submits values you entered.
 Submit discharge information and patient status with total number using
 the **Discharge planning** app. You can update the discharge details for last 24 hours, current discharge barriers, and the break-up for the barriers.
 
-Select **Back** from top-left if you want to go back to the **App Launcher**
-without submitting any change. **Send** button submits values you entered.
+Select **Back** from top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
 ### Fields and description
 
@@ -214,24 +213,26 @@ the screen.  
 
 ![Sign-out](media/use/sign-out.png)
 
+Select the **End shift** button to end your session and sign out.
+
 > [!NOTE]
-> *Sign-out* may not be available if your IT administrator has disabled
+> *End shift* may not be available if your IT administrator has disabled
 device sharing.
 
-### Give feedback
+### Provide feedback
 
-![Give feedback](media/use/give-feedback.png)
+You can share your feedback with the **Provide feedback** option from any Emergency Response mobile app component. To share your feedback, select your profile from top-left and then select the **Provide feedback** button:
 
-You can send feedback with the **App feedback** option from any Emergency
-Response mobile app component. When you select **App feedback**, you have
+![Provide feedback](media/use/give-feedback.png)
+
+When you select **Provide feedback**, you have
 options to share a praise, an idea or report an issue with the app.
 
 ### Switch facility
 
 ![Switch facility](media/use/switch-facility.png)
 
-Switch facility anytime by selecting the facility name on the top-right side of the screen. After you select the location name, you're taken to the **App
-Launcher** screen where you can select a different hospital, region, or facility.
+Switch facility anytime by selecting the facility name on the top-right side of the screen. After you select the location name, you're taken to the **Emergency Response app** screen where you can select a different hospital, region, or facility.
 
 ## Issues and feedback
 
