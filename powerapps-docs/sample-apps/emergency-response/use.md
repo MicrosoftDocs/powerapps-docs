@@ -122,7 +122,7 @@ from this app.
 > [!NOTE]
 > Enter values in both fields - **In stock** and **Used past 24 hr** before you select send.
 
-Select **Back** in the top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered.
+Select **Back** in the top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Emergency Response app** after you submit.
 
 ### Fields and description
 
@@ -143,7 +143,7 @@ Collects labor pool requests the selected facility. Before you can submit the
 labor pool request for a facility, ensure fields marked as *required* are
 filled.
 
-Select **Back** from top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered.
+Select **Back** from top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Emergency Response app** after you submit.
 
 ### Fields and description
 
@@ -186,7 +186,7 @@ After you submit the data, you have the option to go back to the **COVID-19 stat
 Submit discharge information and patient status with total number using
 the **Discharge planning** app. You can update the discharge details for last 24 hours, current discharge barriers, and the break-up for the barriers.
 
-Select **Back** from top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered.
+Select **Back** from top-left if you want to go back to the **Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Emergency Response app** after you submit.
 
 ### Fields and description
 
