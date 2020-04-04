@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Hospital Emergency Response sample solution for Power Platform
+# Hospital Emergency Response - Power Platform sample solution
 
 The Hospital Emergency Response sample solution provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that summarize key data and insights for you to make informed decisions resulting in efficient deployment and usage of resources.
 
