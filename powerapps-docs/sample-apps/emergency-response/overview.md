@@ -1,6 +1,6 @@
 ---
-title: Overview of Emergency Response sample solution for Power Platform | Microsoft Docs
-description: Provides an overview of Emergency Response Solution.
+title: Overview of Hospital Emergency Response sample solution for Power Platform | Microsoft Docs
+description: Provides an overview of Hospital Emergency Response Solution.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
@@ -12,14 +12,14 @@ ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Emergency Response sample solution for Power Platform
+# Hospital Emergency Response - Power Platform sample solution
 
-The Emergency Response sample solution provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that summarize key data and insights for you to make informed decisions resulting in efficient deployment and usage of resources.
+The Hospital Emergency Response sample solution provides a set of capabilities for healthcare organizations to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges. The solution also provides dashboards that summarize key data and insights for you to make informed decisions resulting in efficient deployment and usage of resources.
 
 > [!div class="mx-imgBorder"] 
-> ![Emergency Response app](media/conf-ermerg-response-solution-overview.png)
+> ![Hospital Emergency Response app](media/conf-ermerg-response-solution-overview.png)
 
-The main components of the Emergency Response solution are:
+The main components of the Hospital Emergency Response solution are:
 
 - **Mobile app for frontline staff**: Frontline staff, such as nurses and medical practitioners, can use the mobile app to quickly view and enter information as required.
 - **Web app for Hospital IT admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
@@ -27,7 +27,7 @@ The main components of the Emergency Response solution are:
 
 ## Demo: Quick overview
 
-Watch a quick overview of the Emergency Response solution.
+Watch a quick overview of the Hospital Emergency Response solution.
 
 <br/>
 
@@ -44,15 +44,15 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 
 ## Issues and feedback
 
-- To report an issue with the Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
+- To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
 
-- For feedback about the Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
+- For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
 ## Next step
 
-[Deploy and configure the Emergency Response app](deploy-configure.md)
+[Deploy and configure the Hospital Emergency Response app](deploy-configure.md)
 
 ### Disclaimer
 
-This app is a sample and may be used with Microsoft Power Apps for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical
+This is a sample solution and may be used with Microsoft Power Apps and Microsoft Power BI for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical
 requirements of any person.
