@@ -1,6 +1,6 @@
 ---
-title: Use the Emergency Response app | Microsoft Docs
-description: Walk-through different apps and components for the users of the Emergency Response sample app template 
+title: Use the Hospital Emergency Response app | Microsoft Docs
+description: Walk-through different apps and components for the users of the Hospital Emergency Response sample app template 
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -12,10 +12,10 @@ searchScope:
   - PowerApps
 ---
 
-# Use the Emergency Response app
+# Use the Hospital Emergency Response app
 
 Hospital staff are challenged to meet an increase in number of
-patients while managing supply chain during emergency. By using the Emergency Response mobile app, frontline workers can quickly view and add data for ventilators, staffing, pending discharges,and COVID-19 related patients.
+patients while managing supply chain during emergency. By using the Hospital Emergency Response mobile app, frontline workers can quickly view and add data for ventilators, staffing, pending discharges,and COVID-19 related patients.
 
 ## Prerequisites
 
@@ -31,9 +31,9 @@ sign in with your company's Azure Active Directory account. You can view all
 apps shared to you by your organization once you sign in. For more information, see [Power Apps mobile device sign
 in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in).
 
-## Demo: Use the Emergency Response app
+## Demo: Use the Hospital Emergency Response app
 
-Watch how to use the Emergency Response app.
+Watch how to use the Hospital Emergency Response app.
 
 <br/>
 
@@ -43,17 +43,17 @@ Watch how to use the Emergency Response app.
 
 ![App Launcher](media/use/app-launcher.png)
 
-The Emergency Response mobile app has a modular structure with different apps as applicable to your role. Open the Emergency Response mobile app from the Power Apps Mobile, select your **Hospital system**, **Region, Facility**, and select **Next** to get started.
+The Hospital Emergency Response mobile app has a modular structure with different apps as applicable to your role. Open the Hospital Emergency Response mobile app from the Power Apps Mobile, select your **Hospital system**, **Region, Facility**, and select **Next** to get started.
 
 > [!NOTE]
-> When you launch the Emergency Response mobile app launcher or any of
+> When you launch the Hospital Emergency Response mobile app launcher or any of
 its components for the *first time*, you will be asked for your consent to allow the app to read your *Office 365 Users* profile and your *Location*. You must select **Allow** before you can start using the selected app. For more information, see [give consent](https://docs.microsoft.com/powerapps/user/run-app-client#give-consent).
 
 ## App components
 
-![Emergency Response mobile app components](media/use/app-components.png)
+![Hospital Emergency Response mobile app components](media/use/app-components.png)
 
-The Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more apps in the **App Launcher** for Emergency Response mobile app.
+The Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more apps in the **App Launcher** for Hospital Emergency Response mobile app.
 
 - **Staff + equipment**
     <br> Collect status of the RNs and critical equipment by location in that
@@ -204,7 +204,7 @@ without submitting any change. **Send** button submits values you entered.
 | Likely next 24 h          | Number of patients discharged in last 24 hours.                    |
 ## Other options
 
-This section explains other actions you can do with the Emergency Response
+This section explains other actions you can do with the Hospital Emergency Response
 mobile app components.
 
 ### End shift - sign out
@@ -235,8 +235,8 @@ Launcher** screen where you can select a different hospital, region, or facility
 
 ## Issues and feedback
 
-- To report an issue with the Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
+- To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
 
-- For feedback about the Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
+- For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
 
