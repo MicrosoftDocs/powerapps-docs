@@ -793,7 +793,7 @@ The **System View** page displays charts with the following information for a ho
 
 #### Location Details page 
 
-To drill-down the report by location, click **Location Details** on the top-right corner. The **Location Details** page displays data by location such as total number of beds, available beds, COVID patients and so on. 
+To drill-down the report by location, click **Location Details** on the top-right corner. The **Location Details** page displays data by location such as total number of beds, available beds, surge beds, COVID patients, and so on. 
 
 > [!div class="mx-imgBorder"]
 > ![Location Details](media/report-location-details.png) 
