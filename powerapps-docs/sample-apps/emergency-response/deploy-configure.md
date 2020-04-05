@@ -470,8 +470,8 @@ To create a record:
     | System               | Select a hospital system. This list is populated based on the **Systems** data you have created earlier. |
     | Region Name          | Type the region name. For example, Seattle.                                                              |
     | Description          | Type an optional description.                                                                            |
-    | Effective Start Data | Type start date and time for this hospital system.                                                       |
-    | Effective End Date   | Type end date and time for this hospital system.                                                         |
+    | Effective Start Data | Type start date and time for this region.                                                       |
+    | Effective End Date   | Type end date and time for this region.                                                         |
 
 3. Select **Save & Close**. The newly created record will be available in the **Regions** list.
 
@@ -535,8 +535,8 @@ To create a record:
     | Blocked beds         | Type the number of beds blocked in the facility.                                                     |
     | Last Census          | Populates based on the last census record being created.                                             |
     | Occupancy Percentage | Automatically calculated based on last census and total beds                                         |
-    | Effective Start Data | Type start date and time for this hospital system.                                                   |
-    | Effective End Date   | Type end date and time for this hospital system.                                                     |
+    | Effective Start Data | Type start date and time for this location.                                                   |
+    | Effective End Date   | Type end date and time for this location.                                                     |
     | Location Order       | Type a number that sorts the location in the location drop-down lists.                               |
     | Alternate Site Flag  | For internal use.                                                                                     |
 
@@ -552,7 +552,7 @@ To create a record:
 
 1. Select **Departments** in the left pane, and select **New**.
 
-2. In the **New Department** page, specify appropriate values:    
+2. In the **New Department** page, specify appropriate values:
 
     > [!div class="mx-imgBorder"]
     > ![enter-details-new-department](media/enter-details-new-department.png)
@@ -561,8 +561,8 @@ To create a record:
     |----------------------|----------------------------------------------------|
     | Department Name      | Type a department name.                            |
     | Description          | Type an optional description.                      |
-    | Effective Start Data | Type start date and time for this hospital system. |
-    | Effective End Date   | Type end date and time for this hospital system.   |
+    | Effective Start Data | Type start date and time for this department. |
+    | Effective End Date   | Type end date and time for this department.   |
 
 3. Select **Save & Close**. The newly created record will be available in the **Departments** list.
 
