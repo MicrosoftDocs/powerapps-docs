@@ -240,6 +240,12 @@ You should not depend on these values to control how many requests you send. The
 
 ## Frequently asked questions
 
+This section includes frequently asked questions.
+
+### I'm using an ETL application I licenced. How do I get optimum throughput?
+
+You should work with the ETL application vendor to learn which settings to apply. Make sure you are using a version of the product that supports the Retry-After behavior.
+
 ### See also
 
 [Administer Power Platform / Licensing and license management / Requests limits and allocations](/power-platform/admin/api-request-limits-allocations)<br />
