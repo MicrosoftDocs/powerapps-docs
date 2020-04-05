@@ -732,7 +732,7 @@ Publish the Power BI dashboard and share it with users in your organization so t
 
 17. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
 
-### View the Power BI report
+### View the Power BI dashboard
 
 Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI dashboard.
 
