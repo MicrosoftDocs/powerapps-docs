@@ -801,15 +801,14 @@ The **Staff Details** page provides details about the staff by location, number 
 
 #### Equipment Details page 
 
- 
+The **Equipment Details** page provides details about the equipment by location, the total number of vents in use, overlaid by number of COVID patients, and other pieces of equipment, such as belts, chargers, and hoods in use.
 
-The Equipment Details page provides details about the equipment by location, the total number of vents in use, overlaid by number of COVID patients, and other pieces of equipment, such as belts and hoods, in use. 
+> [!div class="mx-imgBorder"]
+> ![Equipment Details](media/report-equipment-details.png)
 
-Discharge Details page 
+#### Discharge Details page 
 
- 
-
-The Discharge Details page provides details about the long-term patients by location, see your discharge barriers over a period, and variances in terms of actual and anticipated discharges. 
+The **Discharge Details** page provides details about the long-term patients by location, see your discharge barriers over a period, and variances in terms of actual and anticipated discharges. 
 
 ## View and manage app feedback
 
