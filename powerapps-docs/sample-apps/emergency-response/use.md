@@ -90,7 +90,7 @@ For example, if you need to add number of registered nurses requested as 3,
 enter 3 in the **Registered nurses on duty - Requested** field and select
 **Send**. If you also need to update ventilators in use as 6, enter 3 in **Registered nurses on duty - Requested** field, then enter 6 in **Vents** under **Equipment in use**, and select **Send**.
 
-Select **Back** from top-left if you want to go back to the **Emegency Response app** without submitting any change. **Submit** button submits values you entered.
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
 After you submit the data, you have the option to go back to the **Staff + equipment** app with **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
 
