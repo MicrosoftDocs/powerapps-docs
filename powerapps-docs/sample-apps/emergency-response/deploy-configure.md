@@ -780,9 +780,9 @@ The page displays a summarized view of the following:
 >    - Gray: Data is refreshed 20 - 24 hours ago
 >    - Red: Data is refreshed more than 24 hours ago 
  
-#### System Details page
+#### System View page
 
-The **System Details** page displays charts with the following information for a hospital system:
+The **System View** page displays charts with the following information for a hospital system:
 - Vents in use and vents available
 - Availability of beds and acute care beds and occupancy percentage
 - Total staff requested, number of patients (census), nurse to patient ratio.
