@@ -716,20 +716,20 @@ Publish the Power BI dashboard and share it with users in your organization so t
 
     You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
 
-14. In the **Settings** page, Expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule.
+15. In the **Settings** page, expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule. Select **Apply**.
 
     > [!div class="mx-imgBorder"]
-    > ![select-edit-credentials](media/refresh-schedule.png)
+    > ![Scheduled refresh](media/refresh-schedule.png)
 
     > [!NOTE] 
     > There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
 
-15. Select your workspace name in the left pane, and then select **Create app** in the top-right corner.  
+16. Select your workspace name in the left pane, and then select **Create app** in the top-right corner.  
 
     > [!div class="mx-imgBorder"]
     > ![select-create-app](media/select-create-app.png)
 
-16. On the app publishing page:
+17. On the app publishing page:
 
     1. On the **Setup** tab, specify the name and description of your app.
 
@@ -740,7 +740,7 @@ Publish the Power BI dashboard and share it with users in your organization so t
         > [!div class="mx-imgBorder"]
         > ![select-install-apps-automatically](media/select-install-apps-automatically.png)
 
-17. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
+18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
 
 ### View the Power BI dashboard
 
