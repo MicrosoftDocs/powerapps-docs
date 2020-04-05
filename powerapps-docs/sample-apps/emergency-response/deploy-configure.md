@@ -699,17 +699,27 @@ Publish the Power BI dashboard and share it with users in your organization so t
 
 8. After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
 
-12. The report becomes available in your workspace. Now, we will configure the data refresh for the dataset. Select the dataset in your workspace and select the **Schedule refresh** icon.  
+12. The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Select the dataset in your workspace and select the **Schedule refresh** icon.  
     
     > [!div class="mx-imgBorder"]
     > ![schedule-refresh](media/schedule-refresh.png)
 
-13. On the setting page for your dataset, expand **Data source credentials**, and select **Edit credentials** to ensure the connection details to connect to your data source are correct  
+13. The first time you try to set the data refresh setting, you'll see the **Settings** page with a message stating that your credentials aren't valid. Under **Data source credentials**, select **Edit credentials** to specify your credentials.  
 
     > [!div class="mx-imgBorder"]
     > ![select-edit-credentials](media/select-edit-credentials.png)
 
-14. Expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule.
+14. In the next screen:
+    - Select **Authentication method** as **OAuth2**.
+    - Select **Privacy level setting for this data source** as **Organizational**.
+    - Select **Sign in**.
+
+    You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
+
+14. In the **Settings** page, Expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule.
+
+    > [!div class="mx-imgBorder"]
+    > ![select-edit-credentials](media/refresh-schedule.png)
 
     > [!NOTE] 
     > There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
