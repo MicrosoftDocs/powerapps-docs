@@ -758,7 +758,12 @@ The page displays a summarized view of the following:
 - **Supplies**: Shows number of supplies on hand by days.
 
 > [!NOTE]
-> Selecting the information icon (i) in any of the summarized area takes you to the respective details page for the area. You can also perform a bunch of other actions on reports such as filter and sort data, export teh report to PDF and Power Point, add a spotlight. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports) 
+> - Selecting the information icon (i) in any of the summarized area takes you to the respective details page for the area. 
+> - You can also perform other actions on reports such as filter and sort data, export the report to PDF and Power Point, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports)
+> - The **[Column Title] - Most Recent** column in these reports uses the following color to show the freshness of the data displayed in the report:
+>    - Black: Data is refreshed less than 20 hours ago
+>    - Gray: Data is refreshed 20 - 24 hours ago
+>    - Red: Data is refreshed more than 24 hours ago 
  
 #### System Details page
 
