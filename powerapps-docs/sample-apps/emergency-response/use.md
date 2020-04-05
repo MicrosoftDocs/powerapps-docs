@@ -25,6 +25,7 @@ device using the device's app store.
 - **Download** the [**Power Apps Mobile**](https://powerapps.microsoft.com/downloads)
 - For **Apple** devices with iOS such as iPhone and iPad, use [**App store**](https://aka.ms/powerappsios)
 - For **Android** devices, use [**Google Play**](https://aka.ms/powerappsandroid)
+- Ensure your organization has deployed and configured the Hospital Emergency Response app as explained in [Deploy and configure the app](deploy-configure.md).
 
 After you install the Power Apps Mobile, open the app from your device and
 sign in with your company's Azure Active Directory account. You can view all
