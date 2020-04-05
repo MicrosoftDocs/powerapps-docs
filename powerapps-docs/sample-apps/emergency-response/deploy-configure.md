@@ -762,7 +762,7 @@ The page displays a summarized view of the following:
 
 - **COVID patients**: Shows total number of COVID patients, number of patients found positive with COVID-19, and number of patients under investigation. 
 
-- **Bed Management**: Shows availability of beds, occupancy percentage and total number of beds. You can also use the grid below to view the numbers by acute units. 
+- **Bed Management**: Shows availability of beds, occupancy percentage, number of surge beds, and total number of beds. You can also use the grid below to view the numbers by acute units. 
 
 - **Nurse staffing management**: Shows number of patients in ICU, nurses assigned, and nurse to patient ratio.  
 
