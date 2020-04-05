@@ -737,11 +737,16 @@ Publish the Power BI dashboard and share it with users in your organization so t
 Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI dashboard.
 
 > [!div class="mx-imgBorder"]
-> ![view-power-dashboard](media/view-power-dashboard.png)
+> ![View Power BI dashboard](media/view-power-dashboard.png)
+
+You can use the filters at the top of the report to filter data for hospital systems, regions, and facilities. You can also filter for COVID locations.
+
+> [!div class="mx-imgBorder"]
+> ![Report filters](media/report-filters.png)
 
 #### System at a glance page 
 
-The **Systems at a glance page** is the default or the top-level page that provides an overall view. You can use the filters at the top to filter data for systems, regions, and facilities. You can also filter for COVID locations.  
+The **Systems at a glance page** is the default or the top-level page that provides an overall view.  
 
 The page displays a summarized view of the following: 
 
@@ -759,7 +764,7 @@ The page displays a summarized view of the following:
 
 > [!NOTE]
 > - Selecting the information icon (i) in any of the summarized area takes you to the respective details page for the area. 
-> - You can also perform other actions on reports such as filter and sort data, export the report to PDF and Power Point, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports)
+> - You can also perform other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports)
 > - The most recent or last updated columns in some of these reports show the date and time when the data was last refreshed. It's also easy to identify the freshness by viewing the color of the date and time values in these columns:
 >    - Black: Data is refreshed less than 20 hours ago
 >    - Gray: Data is refreshed 20 - 24 hours ago
