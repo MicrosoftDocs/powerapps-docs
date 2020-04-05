@@ -529,7 +529,7 @@ To create a record:
     | Floor                | Type the floor information for the facility.                                                         |
     | Unit                 | Type the unit information for the facility                                                           |
     | Acuity      | Select acuity record associated with this location.                                                                                                     |
-    | COVID Location.      | Select whether this location is used to treat COVID patients (**Yes** or **No**.)                                                                                                      |
+    | COVID Location      | Select whether this location is used to treat COVID patients (**Yes** or **No**.)                                                                                                      |
     | Total Beds           | Type the total number of beds in the facility.                                                       |
     | Surge Beds           | Type the number of surge beds in the facility. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                                      |
     | Blocked beds         | Type the number of beds blocked in the facility.                                                     |
