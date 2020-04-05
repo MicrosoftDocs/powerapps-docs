@@ -92,7 +92,7 @@ enter 3 in the **Registered nurses on duty - Requested** field and select
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
-After you submit the data, you have the option to go back to the **Staff + equipment** app with **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+After you submit the data, you have the option to go back to the **Staff + equipment** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
 
 ### Fields and description
 
@@ -106,10 +106,11 @@ After you submit the data, you have the option to go back to the **Staff + equip
 | *Assigned*                    | Number of Registered Nurses assigned to the selected location.                                    |
 | *Unassigned*                  | Number of Registered Nurses not assigned to any task at the selected location.                    |
 | **Equipment in use**          |                                                                                                   |
-| *Vents*                       | Number of Ventilators in use at the selected location.                                            |
+| *Ventilators*                 | Number of Ventilators in use at the selected location.                                            |
+| *PAPR hoods*                  | Number of Powered Air-Purifying Respirator hoods in use at the selected location.                 |
 | *PAPR belts*                  | Number of Powered Air-Purifying Respirator belts in use at the selected location.                 |
 | *PAPR chargers*               | Number of Powered Air-Purifying Respirator chargers in use at the selected location.              |
-| *PAPR hoods*                  | Number of Powered Air-Purifying Respirator hoods in use at the selected location.                 |
+
 
 ## Supplies
 
@@ -120,7 +121,7 @@ component quantities in the entire facility inventory and the daily burn rate
 from this app.
 
 > [!NOTE]
-> Enter values in both fields - **In stock** and **Used past 24 hr** before you select send.
+> Enter values in both fields, **In stock** and **Used past 24 hr**, before you select **Submit**.
 
 Select **Back** in the top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
 
@@ -133,14 +134,15 @@ names.
 IT Administrators can add or update the supplies app items list using the
 model-driven app for Power Apps. For more information, see [configuration guide](deploy-configure.md).
 
-**Note:** The supply inventory item values must be in number format.
+> [!NOTE]
+> The supply inventory item values must be in number format.
 
 ## Staffing needs
 
 ![Staffing needs](media/use/staffing-needs.png)
 
-Collects labor pool requests the selected facility. Before you can submit the
-labor pool request for a facility, ensure fields marked as *required* are
+Collects labor pool requests for the selected facility. Before you can submit the
+labor pool request for a facility, ensure fields marked as *required* (*) are
 filled.
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
@@ -150,11 +152,11 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | **Field name**           | **Description**                                                                            |
 |--------------------------|--------------------------------------------------------------------------------------------|
 | Department               | Name of the department requesting the labor request. This field is *required*.             |
-| Department location                 | Location of the department.                                                                |
+| Department location      | Location of the department.                                                                |
 | Request type             | Type of the request for labor such as Clinical and Non-clinical. This field is *required.* |
 | Role needed              | Role of the requested labor such as sitter or a registered nurse.                          |
 | Needed now or next shift | Select a shift for the requested labor, current shift, or an upcoming shift.                |
-| How many | How many resources needed, in number format.                |
+| How many                 | How many resources needed, in number format.                |
 | Details                  | Describe additional details or comments for the labor pool request.                        |
 
 ## COVID-19 stats
@@ -169,7 +171,7 @@ send stats for more than one location.
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
-After you submit the data, you have the option to go back to the **COVID-19 stats** app with **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+After you submit the data, you have the option to go back to the **COVID-19 stats** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
 
 ### Fields and description
 
@@ -197,10 +199,11 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | Guardianship              | Number of patients under guardianship.                             |
 | Home + Community Services | Number of patients using Home or Community services.               |
 | Placement                 | Number of placements needed.                                       |
-| Skilled Nursing Facility  | Number of skilled nursing facilities.                              |
+| Skilled nursing facility  | Number of skilled nursing facilities.                              |
 | **Discharges**            |                                                                    |
 | Past 24 h                 | Number of patients expected to be discharged in last 24 hours.  |
 | Likely next 24 h          | Number of patients discharged in last 24 hours.                    |
+
 ## Other options
 
 This section explains other actions you can do with the Hospital Emergency Response
