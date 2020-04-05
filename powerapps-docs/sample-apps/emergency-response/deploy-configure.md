@@ -732,12 +732,80 @@ Publish the Power BI dashboard and share it with users in your organization so t
 
 17. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
 
-### View the Power BI dashboard
+### View the Power BI report
 
 Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI dashboard.
 
 > [!div class="mx-imgBorder"]
 > ![view-power-dashboard](media/view-power-dashboard.png)
+
+#### System at a glance page 
+
+The **Systems at a glance page** is the default or the top-level page that provides an overall view. You can use the filters at the top to filter data for systems, regions, and facilities. You can also filter for COVID locations.  
+
+The page displays a summarized view of the following: 
+
+- **COVID patients**: Shows total number of COVID patients, number of patients found positive with COVID-19, and number of patients under investigation. 
+
+- **Bed Management**: Shows availability of beds, occupancy percentage and total number of beds. You can also use the grid below to view the numbers by acute units. 
+
+- **Nurse staffing management**: Shows number of patients in ICU, nurses assigned, and nurse to patient ratio.  
+
+- **Discharges**: Shows the number of total long stay patients, number of patients anticipated for discharge, and actual discharge. 
+
+- **Equipment**: Shows total number of vents, number of vents in use, and available vents. 
+
+- **Supplies**: Shows number of supplies on hand by days.
+
+> [!NOTE]
+> Selecting the information icon (i) in any of the summarized area takes you to the respective details page for the area. You can also perform a bunch of other actions on reports such as filter and sort data, export teh report to PDF and Power Point, add a spotlight. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports) 
+ 
+#### System Details page
+
+The **System Details** page displays charts with the following information for a hospital system:
+- Vents in use and vents available
+- Availability of beds and acute care beds and occupancy percentage
+- Total staff requested, number of patients (census), nurse to patient ratio.
+- Supplies on hand in days
+
+> [!div class="mx-imgBorder"]
+> ![System View](media/report-system-view.png)
+
+#### Location Details page 
+
+To drill-down the report by location, click **Location Details** on the top-right corner. The **Location Details** page displays data by location such as total number of beds, available beds, COVID patients and so on. 
+
+> [!div class="mx-imgBorder"]
+> ![Location Details](media/report-location-details.png) 
+
+#### COVID Patient Details page 
+
+The **COVID Patient Details** page provides drill-down information about the COVID patients such as patients at each location, patient trend over time that shows peaks and valleys of number of patients under investigation (PUI), and number of patients found positive, and get a sense of where the patients are located within the hospital.
+
+> [!div class="mx-imgBorder"]
+> ![COVID Patient Details](media/report-covid-details.png)
+
+#### Bed Management Details page 
+
+The **Bed Management Details** page provides drill-down information by location such as total available beds and occupancy percentage.
+
+
+
+#### Staff Details page  
+
+The Staff Details page provides details about the staff by location, the total staff requested and variance, overlaid by number of COVID patients in relation to the variance of staff, and trends over time in terms of where the staff was assigned. 
+
+#### Equipment Details page 
+
+ 
+
+The Equipment Details page provides details about the equipment by location, the total number of vents in use, overlaid by number of COVID patients, and other pieces of equipment, such as belts and hoods, in use. 
+
+Discharge Details page 
+
+ 
+
+The Discharge Details page provides details about the long-term patients by location, see your discharge barriers over a period, and variances in terms of actual and anticipated discharges. 
 
 ## View and manage app feedback
 
