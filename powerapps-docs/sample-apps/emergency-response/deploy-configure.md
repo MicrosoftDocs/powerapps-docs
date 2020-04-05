@@ -808,7 +808,17 @@ The **Equipment Details** page provides details about the equipment by location,
 
 #### Discharge Details page 
 
-The **Discharge Details** page provides details about the long-term patients by location, see your discharge barriers over a period, and variances in terms of actual and anticipated discharges. 
+The **Discharge Details** page provides details about the long-term patients, discharge barriers over a period, and variance in terms of actual and anticipated discharges.
+
+> [!div class="mx-imgBorder"]
+> ![Equipment Details](media/report-discharge-details.png)
+
+#### Supplies on Hand Details page 
+
+The **Supplies on Hand Details** page provides details about the supplies by location and supply; it also provides data about the supply available on hand over a period of time.
+
+> [!div class="mx-imgBorder"]
+> ![Equipment Details](media/report-discharge-details.png)
 
 ## View and manage app feedback
 
