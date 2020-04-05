@@ -674,7 +674,7 @@ Publish the Power BI dashboard and share it with users in your organization so t
 2. Open the **Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following values:
 
     - **Organization_name**: Type your organization name that will be populated on the top-left corner of each report page.
-    - **CDS_base_solution_URL**: Type the URL of your Common Data Service environement instance. For example: https://*[myenv]*.crm.dynamics.com
+    - **CDS_base_solution_URL**: Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com
 
     > [!div class="mx-imgBorder"]
     > ![specify org name and base URL](media/pbi-pub-rep1.png)
