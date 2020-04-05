@@ -785,15 +785,19 @@ The **COVID Patient Details** page provides drill-down information about the COV
 > [!div class="mx-imgBorder"]
 > ![COVID Patient Details](media/report-covid-details.png)
 
-#### Bed Management Details page 
+#### Bed Management page 
 
-The **Bed Management Details** page provides drill-down information by location such as total available beds and occupancy percentage.
+The **Bed Management** page provides drill-down information by location such as total available beds and occupancy percentage.
 
-
+> [!div class="mx-imgBorder"]
+> ![Bed Management](media/report-bed-details.png)
 
 #### Staff Details page  
 
-The Staff Details page provides details about the staff by location, the total staff requested and variance, overlaid by number of COVID patients in relation to the variance of staff, and trends over time in terms of where the staff was assigned. 
+The **Staff Details** page provides details about the staff by location, number of nurses assigned, total number of patients and number of COVID patients. It also displays nurse to patient ratio and ICU nurse to patient ratio over a period of time.
+
+> [!div class="mx-imgBorder"]
+> ![Staff Details](media/report-staff-details.png)
 
 #### Equipment Details page 
 
