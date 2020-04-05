@@ -241,7 +241,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
     > [!div class="mx-imgBorder"] 
     > ![Admin apps](media/conf-admin-app-records.png "Admin apps")
 
-1.  Open one of the app records by selecting it. Note that the Power App ID field is blank.
+1.  Open one of the app records by selecting it. Note that the **Power App ID** field is blank.
 
     > [!div class="mx-imgBorder"] 
     > ![Power App ID field ](media/conf-powerapp-id-field.png "Power App ID field")
@@ -252,11 +252,11 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
     2. Double-click the app icon, and select an icon file for the app from the **App Icons** folder. The image files are named intuitively so that you can easily select the correct icon. For example, select the "Emergency Response App.png" file for **Emergency Response App**. You can also select a custom image as per your organization branding.
 
-    3. If required, update the **Description** or **Display Name** of the app.
+    3. If necessary, update the **Description** or **Display Name** of the app.
 
-    4. If required, update the **Hide App from Menu** value to set if the app should be displayed in the app list. As **Emergency Response App** is a container app, the value is set to **No** by default.
+    4. If necessary, update the **Hide App from Menu** value to set if the app should be displayed in the app list. As **Emergency Response App** is a container app, the value is set to **No** by default.
 
-    5. If required, update the **App Display Rank** value to set the display position of app in the app list.
+    5. If necessary, update the **App Display Rank** value to set the display position of app in the app list.
 
     6. Select **Save**.
 
@@ -266,9 +266,9 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
 1.  Select the **Emergency Response App** record to open it for editing.
 
-    1.  If required, update the colors for your app.
+    1.  If necessary, update the colors for your app.
 
-    2.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in the mobile apps or not. Selecting **Yes** will make the **Sign Out** option available.
+    2.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in mobile apps or not. Selecting **Yes** will make the **Sign Out** option available. More information: [End shift - sign out](use.md#end-shift---sign-out) in the user guide.
 
     > [!div class="mx-imgBorder"] 
     > ![Device Sharing Enabled field](media/conf-device-sharing-enabled-field.png "Device Sharing Enabled field")
@@ -760,7 +760,7 @@ The page displays a summarized view of the following:
 > [!NOTE]
 > - Selecting the information icon (i) in any of the summarized area takes you to the respective details page for the area. 
 > - You can also perform other actions on reports such as filter and sort data, export the report to PDF and Power Point, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports)
-> - The **[Column Title] - Most Recent** column in these reports uses the following color to show the freshness of the data displayed in the report:
+> - The most recent or last updated columns in some of these reports show the date and time when the data was last refreshed. It's also easy to identify the freshness by viewing the color of the date and time values in these columns:
 >    - Black: Data is refreshed less than 20 hours ago
 >    - Gray: Data is refreshed 20 - 24 hours ago
 >    - Red: Data is refreshed more than 24 hours ago 
