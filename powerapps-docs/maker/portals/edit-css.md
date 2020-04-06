@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/06/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -24,8 +24,7 @@ To open a CSS in code editor:
 
 2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the toolbelt on the left side of the screen. The available themes are displayed.  
 
-    > [!div class=mx-imgBorder]
-    > ![Theme pane](media/theme-pane.png "Theme pane")  
+    ![Theme](./media/edit-css/themes.png)
 
 3.  Select the required CSS to open it in the code editor.
 
@@ -39,8 +38,7 @@ To upload a new CSS file:
 
 3. Select **Upload custom CSS**.
 
-    > [!div class=mx-imgBorder]
-    > ![Theme pane](media/upload-css.png "Theme pane")  
+    ![Upload custom CSS](./media/edit-css/upload-custom-css.png) 
 
 4. Browse and select the CSS file to upload.
 

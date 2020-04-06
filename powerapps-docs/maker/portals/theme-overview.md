@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/01/2020
+ms.date: 04/06/2020
 ms.author: yogupt
 ms.reviewer: tapanm
 ---
@@ -17,9 +17,12 @@ Power Apps portal by default has **Enable basic theme** feature **On**. Basic th
 
 In this topic, you'll walk-through working with basic themes. For more advanced theme customization, read [Edit CSS](edit-css.md).
 
-## Enable basic theme for existing portals
+> [!IMPORTANT]
+> **Basic theme** feature is in preview. For more information about preview features, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
 
-Portals created before April 1, 2020 have basic theme feature disabled by default. 
+## Enable basic theme for existing portals (Preview)
+
+Portals created before April 1, 2020 have basic theme feature disabled by default.
 
 To enable basic theme and apply a preset theme on your existing portal:
 
@@ -60,9 +63,7 @@ To change theme for your portal from an existing theme to any default theme:
 
     ![Select default theme](./media/theme-overview/basic-theme.png)
 
-**Red** theme is now applied to your portal:
-
-![Theme applied](./media/theme-overview/theme-applied.png)
+**Red** theme is now applied to your portal.
 
 ## Create new theme
 
