@@ -51,6 +51,8 @@
         href: ../user/navigation.md
       - name: Use grid filters
         href: ../user/grid-filters.md
+      - name: Create personal views with advanced grid filters
+        href: ../user/grid-filters-advanced.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
@@ -69,7 +71,7 @@
         href: ../user/add-activities.md
       - name: FAQ about activities
         href: ../user/faq-for-timeline-and-activity.md
-      - name: View and create email through the Activities grid
+      - name: View and create email through the activities grid
         href: ../user/view-create-email.md
       - name: Send email using the enhanced email experience
         href: ../user/enhanced-email.md
@@ -937,7 +939,7 @@
           href: ./model-driven-apps/create-site-map-app.md
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
-        - name: Add the team entity as a lookup option
+        - name: Add an entity as a lookup
           href: ./model-driven-apps/team-entity-lookup.md          
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
@@ -1633,9 +1635,9 @@
     href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
-  - name: Crisis communication app
+  - name: Crisis communication
     href: ./canvas-apps/sample-crisis-communication-app.md
-  - name: Emergency Response solution
+  - name: Hospital Emergency Response
     items:
     - name: Overview
       href: ../sample-apps/emergency-response/overview.md
