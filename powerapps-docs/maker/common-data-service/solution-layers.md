@@ -69,5 +69,5 @@ The solution layers feature:
     Select a label to see its full layering.
 
 ### See also
-[Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md)
+[Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md) <br />
 [Solutions overview](solutions-overview.md)
