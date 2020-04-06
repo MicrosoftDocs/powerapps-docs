@@ -62,7 +62,7 @@ The solution layers feature:
 
    > [!div class="mx-imgBorder"] 
    > ![Solution layer all properties](media/solution-layers-all-prop.png "Solution layer all properties")
-5. Select the **LocalizedLabels** tab to display information for components that have label fields in the solution layer. If no labels exist the tab isn't displayed.  
+5. Select the **LocalizedLabels** tab to display information for components that have label fields in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. If no labels exist the tab isn't displayed.  
    > [!div class="mx-imgBorder"] 
    > ![Solution layer localized labels](media/localized-labels.png "Solution layer localized labels")
 
