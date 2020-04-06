@@ -92,8 +92,11 @@ Selecting **Change View** lets you determine:
 
     ![Change view contacts types](media/change-view.png "Change view contacts types")
 
->[!IMPORTANT] 
->The **Change View** option will not be visible if your administrator hasn't configured the option to appear in your views.
+### Filter by, Only my records or Filter by related primary contact
+
+To apply extra filters, in the **Change View** menu, select **Only my records** or **Filter by related Primary Contact**.
+
+![Add more filters](media/extra_filters.png "Add more filters")
 
 ### Choose from multiple records
 

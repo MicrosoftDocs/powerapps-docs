@@ -150,8 +150,7 @@ Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map 
 
 We're still working through some known issues and will release fixes for them over time. Make sure to manually update to the latest preview build as soon as it's available. 
 
-Some known issues include:
+known issues:
 
-- No apps are displayed in the app list when you open the Power Apps app in offline mode
 - Icons inside model-driven apps sometimes disappear.
 
