@@ -41,6 +41,12 @@ Selecting the portal notification will link to this page of common issues for fu
 
 ![Failure notification](media/solution-checker-failure-notification.png)
 
+
+## Solution Checker fails to check Default solution
+
+Similar to large solutions, the Default solution may fail to get exported and the check will not complete successfully. The export request must complete in 20 minutes or the request will timeout. It will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification. Please see additional guidance on [exporting large solutions](common-issues-resolutions-solution-checker#solution-checker-fails-to-export-large-solutions).
+
+
 ## Solution checker fails due to unsupported version of Power Apps Checker
 
 Solution checker is a feature enabled by the Power Apps Checker app.  If you have installed a Power Apps Checker app version earlier than version **1.0.0.47**, solution checker runs may fail to complete successfully. You should upgrade your Power Apps Checker version from the [!INCLUDE [pn-dyn-365-admin-center](../../includes/pn-dyn-365-admin-center.md)].
