@@ -107,7 +107,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Create a record](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a record and open it or save and create a new record")
 
-## View commands for a record
+## View commands for a record (Android)
 
 1. From the Home screen, open a record.
 2. On the open record, select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
