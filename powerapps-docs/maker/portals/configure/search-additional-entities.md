@@ -6,12 +6,12 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/31/2020
+ms.date: 04/07/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configuring additional entities for global search  
+# Walkthrough: Configuring additional entities for global search  
 
 ## Overview
 
@@ -19,7 +19,8 @@ You can enable additional entities for search functionality. Configuring search 
 
 Following considerations apply when configuring additional entities for global search:
 
-- Ensure [site setting](search.md#related-site-settings) for search and additional entities are enabled.
+- Ensure [site setting](#-site-setting-for-additional-entities) for search and additional entities are enabled.
+- Configure [search results page](#results-page-for-additional-entities).
 - Ensure an **Entity Permission** is created that provides Read privilege, and appropriate scope for the records to show search results.
 - Associate the entity permission with required **Web Roles**.
 - Entity permissions must be associated with the **Anonymous Web Role** if you want to allow anonymous search for an entity.
@@ -27,15 +28,7 @@ Following considerations apply when configuring additional entities for global s
 
 Explicit configuration explained above ensures that no records are accidentally made available via global search.
 
-## Results page for additional entities
-
-The search result page is configured via a **Site Marker** named ```<entitylogicalname>_SearchResultPage```.
-
-For example, if your entity logical name is *nwind_products* then the Site Marker will be ```nwind_products_SearchResultPage```. The value of the site marker is the page that you want to open on click of that search result. By default, record ID is passed in the *id* querystring parameter to the search result page.
-
-Ensure that your search results page has an entity form. Or has logic written to show the search result details.  
-
-## Site Setting for additional entities
+### Site Setting for additional entities
 
 Site setting **Search/EnableAdditionalEntities** is required when configuring additional entities for search.
 
@@ -48,6 +41,16 @@ For example, **Search/Filters** allow configuring the additional entities and
 
 For more information about site settings, read [site setting](search.md#related-site-settings).
 
+### Results page for additional entities
+
+The search result page is configured via a **Site Marker** named ```<entitylogicalname>_SearchResultPage```.
+
+For example, if your entity logical name is *nwind_products* then the Site Marker will be ```nwind_products_SearchResultPage```. The value of the site marker is the page that you want to open on click of that search result. By default, record ID is passed in the *id* querystring parameter to the search result page.
+
+Ensure that your search results page has an entity form. Or has logic written to show the search result details.
+
+## Walkthrough with sample database
+
 The following walk-through explains enabling search for **Order Products** entity in sample database **Northwind** available with Common Data Service.
 
 For more information about sample database, read [Install Northwind Traders database and apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
@@ -55,7 +58,9 @@ For more information about sample database, read [Install Northwind Traders data
 > [!TIP]
 > You can follow the walk-through with your entity instead by replacing *nwind_products* entity name with your entity's logical name.
 
-## Add or update search Site Settings
+## Step 1: Add or update search Site Settings
+
+
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -79,7 +84,7 @@ For more information about sample database, read [Install Northwind Traders data
 
     ![search/filtes Site Setting](media/search-additional-entities/search-filters.png)
 
-## Create or verify the Portal Search view
+## Step 2: Create or verify the Portal Search view
 
 > [!NOTE]
 > Following steps require the [Northwind Traders(https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install) solution installed. If
@@ -119,7 +124,7 @@ solution.
 
     ![Save and Publish](media/search-additional-entities/save-publish.png)
 
-## Create Entity Permissions
+## Step 3: Create Entity Permissions
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -150,7 +155,7 @@ solution.
 
     ![Add authenticated users](media/search-additional-entities/add-authenticated-users.png)
 
-## Add a Web Page
+## Step 4: Add a Web Page
 
 1. Go to [Power Apps](https://make.powerapps.com) and select **Apps** in left pane.
 
@@ -170,7 +175,7 @@ solution.
 
     ![Mode](media/search-additional-entities/mode.png)
 
-## Add Site Marker for the search result details page
+## Step 5: Add Site Marker for the search result details page
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -185,7 +190,7 @@ solution.
     
     ![New Site Marker](media/search-additional-entities/new-site-marker.png)
 
-## Rebuild search index
+## Step 6: Rebuild search index
 
 1. Browse your portal with a user account that has *Administrator* **Web Role** assigned.
 
@@ -197,7 +202,7 @@ solution.
 
 1. After clearing cache, select [Rebuild Search Index](search.md#rebuild-full-search-index) to rebuild the search index.
 
-## Verify Global Search with custom entity
+## Step 7: Verify Global Search with custom entity
 
 1. Browse to the portal with a user that has *Authenticated* **Web Role** assigned.
 
