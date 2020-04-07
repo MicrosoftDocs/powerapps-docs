@@ -13,7 +13,7 @@ ms.reviewer: tapanm
 
 # Overview of themes in Power Apps portal
 
-Power Apps portal by default has **Enable basic theme** feature **On**. Basic themes allow you to use themes available by default, called **Presets**. You can also create copies of default basic themes for additional customization.
+Power Apps portal by default has **Enable basic theme** feature **Off**. Basic themes allow you to use themes available by default, called **Presets**. You can also create copies of default basic themes for additional customization.
 
 In this topic, you'll walk-through working with basic themes. For more advanced theme customization, read [Edit CSS](edit-css.md).
 
@@ -21,8 +21,6 @@ In this topic, you'll walk-through working with basic themes. For more advanced 
 > **Basic theme** feature is in preview. For more information about preview features, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
 
 ## Enable basic theme for existing portals (Preview)
-
-Portals created before April 1, 2020 have basic theme feature disabled by default.
 
 To enable basic theme and apply a preset theme on your existing portal:
 
@@ -100,7 +98,19 @@ To edit theme details:
 
     ![Create new theme](./media/theme-overview/theme-details.png)
 
-1. Edit theme details such as name, description, details or typography and save the changes to update the theme.
+1. Edit theme details such as name, description and color for different areas:
+
+    |Color option | Impacted area
+    | - | - 
+    | Primary | Button and link colors.
+    | Header | Header background color.
+    | Header menu text | Text color for header menu.
+    | Header menu hover | Background color of menu items upon hover over.
+    | Body background |  Background color of body section.​
+    | Footer background | Background color for footer.​
+    | Footer text | Footer text color.​
+
+1. Save and publish the changes.
 
 ## Copy preset theme
 
