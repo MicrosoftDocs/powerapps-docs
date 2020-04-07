@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/06/2020
+ms.date: 04/07/2020
 ms.author: yogupt
 ms.reviewer: tapanm
 ---
@@ -37,7 +37,7 @@ To enable basic theme and apply a preset theme on your existing portal:
 
     ![Edit portal](./media/theme-overview/edit-portal.png)
 
-1. Select **Enable basic theme** to enable basic theme:
+1. Select **Themes** from left pane and then select **Enable basic theme** to enable basic theme:
 
     ![Enable basic theme](./media/theme-overview/enable-basic-theme.png)
 
@@ -57,11 +57,13 @@ To change theme for your portal from an existing theme to any default theme:
 
     ![Select theme](./media/theme-overview/select-theme.png)
 
-1. Select any default theme from the available presents, such as **Red**:
+1. Select any default theme from the available presents, such as **Green**:
 
     ![Select default theme](./media/theme-overview/basic-theme.png)
 
-**Red** theme is now applied to your portal.
+Selected theme is applied to your portal:
+
+![Applied theme](./media/theme-overview/theme-applied.png)
 
 ## Create new theme
 
@@ -129,6 +131,10 @@ To copy preset theme:
     ![Copy preset theme](./media/theme-overview/copy-preset-theme.png)
 
 1. Update the [theme details](#edit-theme-details) as needed and save.
+
+## SASS variables
+
+> Awaiting list of variables and example from Anand Ratn
 
 ## Basic theme considerations
 
