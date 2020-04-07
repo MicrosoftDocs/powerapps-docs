@@ -2,7 +2,7 @@
 title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: " A list of common issues and resolutions within solution checker"
 keywords: ""
-ms.date: 02/11/2019
+ms.date: 04/07/2020
 ms.service: powerapps
 ms.custom:
   - ""
@@ -44,7 +44,7 @@ Selecting the portal notification will link to this page of common issues for fu
 
 ## Solution Checker fails to check Default solution
 
-Solution checker exports the solution from the Common Data Service environment for analysis. Exporting the Default Solution is not supported and the check may not complete successfully. Please see additional guidance on [exporting large solutions](common-issues-resolutions-solution-checker#solution-checker-fails-to-export-large-solutions).
+Solution checker exports the solution from the Common Data Service environment for analysis. Exporting the Default Solution is not supported and the check may not complete successfully. More information: [Exporting large solutions](common-issues-resolutions-solution-checker#solution-checker-fails-to-export-large-solutions).
 
 
 ## Solution checker fails due to unsupported version of Power Apps Checker
