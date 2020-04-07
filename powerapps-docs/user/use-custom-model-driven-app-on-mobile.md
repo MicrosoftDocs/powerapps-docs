@@ -37,9 +37,7 @@ Legend:
 1. **Site map**: Open the menu and move between apps, get to your favorite and recently used records, access settings, and more.
 2. **Search**: Search for app records in Common Data Service.
 3. **Quick Create**: Create a new record and quickly enter almost any type of information into the system.
-4. **Global commands**: Access global commands customized by your admin.
-5. **More**: Access more commands for the records that you're working with, like sort, search, delete, refresh, and more.<!--There really are "more"? Or can you end the list at "refresh"?-->
-6. **Sort records**: Sort and view records alphabetically.
+4. **Relationship Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
 
 ## Site map 
 
