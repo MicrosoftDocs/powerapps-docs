@@ -55,6 +55,8 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 
 [BorderThickness](properties-color-border.md) – The thickness of a control's border.
 
+**DelayItemLoading** - Delay loading of items (rows) until after the screen first loads.
+
 [DisplayMode](properties-core.md) – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
 [Fill](properties-color-border.md) – The background color of a control.
@@ -62,6 +64,10 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 [Height](properties-size-location.md) – The distance between a control's top and bottom edges.
 
 **ItemAccessibleLabel** – Label of each gallery item for screen readers. Should describe what each item is.
+
+**LoadingSpinner** (**None**, **Controls** or **Data**) - When None, spinner will not be rendered. When Controls | Data, spinner will appear when a render pass occurs that results in visible empty rows.
+
+**LoadingSpinnerColor** - The fill color of the loading spinner.  Default is set to BorderColor.
 
 **NavigationStep** – How far a gallery scrolls if its **ShowNavigation** property is set to **true** and the user selects a navigation arrow at either end of that gallery.
 
