@@ -65,7 +65,7 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 
 **ItemAccessibleLabel** – Label of each gallery item for screen readers. Should describe what each item is.
 
-**LoadingSpinner** (**None**, **Controls** or **Data**) - When None, spinner will not be rendered. When Controls | Data, spinner will appear when a render pass occurs that results in visible empty rows.
+**LoadingSpinner** (**None**, **Controls** or **Data**) - When None, spinner will not be shown. When Controls | Data, spinner will be shown when a render pass occurs that results in visible empty rows.
 
 **LoadingSpinnerColor** - The fill color of the loading spinner.  Default is set to BorderColor.
 
