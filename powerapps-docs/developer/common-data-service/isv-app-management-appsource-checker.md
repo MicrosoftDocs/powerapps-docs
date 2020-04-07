@@ -13,8 +13,7 @@ ms.devlang: na
 ms.topic: article
 ms.reviewer: pehecke
 ms.workload: na
-ms.date: 07/11/2019
-ms.author: prkoduku
+ms.date: 04/07/2020
 search.audienceType: 
   - developer
 search.app: 

@@ -388,7 +388,7 @@
     - name: AppSource checker
       href: isv-app-management-appsource-checker.md
     - name: Connector certification portal
-      href: https://docs.microsoft.com/connectors/custom-connectors/submit-certification
+      href: isv-app-management-certification.md
 - name: Create client applications
   href: connect-cds.md
   items:
