@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 03/16/2020
+ms.date: 04/07/2020
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -96,9 +96,9 @@ For these examples, you'll need a device with a camera. To test your app, use a 
 
 1. Authorize the app to use device's camera if prompted.
 
-1. Add an **Image** control.
+1. Add an [**Image**](../controls/control-image.md) control.
 
-1. Set the **Image** property of the **Image** control to this formula:
+1. Set the **Image** property of the **Image** control to the following formula:
 
     ```powerapps-dot
     Camera1.Photo
@@ -109,7 +109,7 @@ For these examples, you'll need a device with a camera. To test your app, use a 
 
 1. Press F5 to preview your app.
 
-1. Take a picture by selecting or tapping the camera control.  You should see the result in your image control.
+1. Take a picture by selecting or tapping the camera control. You should see the result in your image control.
 
 ### Add pictures to an Image gallery control
 
