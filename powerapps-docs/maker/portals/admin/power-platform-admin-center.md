@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/22/2020
+ms.date: 04/07/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -62,6 +62,12 @@ Follow these steps to see a list of all portals for your environment.
     ![Manage portal specific to an environment](../media/manage-environments-portal.png)
 
 To continue and configure portal details, refer [portals details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
+
+## Manage portal add-on
+
+The ability to manage portal as explained above using **Power Platform admin center** replaces the following earlier functionality:
+
+![Manage add-on portal](../media/old-admin-center.png)
 
 ### Portal types
 
