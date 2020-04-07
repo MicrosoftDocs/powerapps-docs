@@ -1,6 +1,6 @@
 ---
-title: "Use the default solution to customize with Power Apps | MicrosoftDocs"
-description: "Learn how to customize the default solution"
+title: "Use a solution to customize Power Apps | MicrosoftDocs"
+description: "Learn how to customize Power Apps"
 ms.custom: ""
 ms.date: 02/20/2020
 ms.reviewer: ""

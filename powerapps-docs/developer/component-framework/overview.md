@@ -21,6 +21,10 @@ Power Apps component framework empowers professional developers and app makers t
 - Replace a field that displays a numeric text value with a `dial` or `slider` code component.
 - Transform a list into an entirely different visual experience bound to the data set like a `Calendar` or `Map`.
 
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4slRe]
+
+
 > [!IMPORTANT]
 > - PowerApps component framework is in public preview for canvas apps, and is generally available for model-driven apps. This implies that all the APIs that are supported for model-driven apps might not be supported on canvas apps yet.
 > - By default Power Apps component framework is enabled for model-driven apps. To enable this feature for canvas apps, see [Code components for canvas apps](component-framework-for-canvas-apps.md).
@@ -62,5 +66,6 @@ With the general availability of the framework, code component developers will b
 [What are code components](custom-controls-overview.md)<br/>
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>
 [Create and build a code component](create-custom-controls-using-pcf.md)<br/>
+[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)<br/>
 [Power Apps for developers](https://docs.microsoft.com/powerapps/#pivot=home&panel=developer)
 

@@ -136,7 +136,11 @@ To edit the ribbon, you must perform the following steps:
     >  The most common type of failure is an error when referencing a dependent element in the RibbonDiffXml. Perhaps you forgot to include a LocLabel that was referenced somewhere. Perhaps there is an extra blank character included at the end of an XML attribute referencing another element. All references must match exactly.  
   
 4.  After you have corrected the error, complete the steps to import the Ribbon again.  
-  
+
+## Troubleshoot ribbon issues
+
+If you are experiencing an issue with a ribbon command bar button, use this troubleshooting guide to find and solve the problem: <https://support.microsoft.com/help/4552163>
+
 ### See also  
  [Customize the Ribbon](customize-commands-ribbon.md)   
  [Export Ribbon Definitions](export-ribbon-definitions.md)   

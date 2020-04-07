@@ -2,7 +2,7 @@
 title: "Execute batch operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Batch operation lets you group multiple operations in a single HTTP request. Read how to execute batch operations using the Web API"
 ms.custom: ""
-ms.date: 12/10/2019
+ms.date: 03/30/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -31,12 +31,12 @@ You can group multiple operations into a single HTTP request using a batch opera
 
 The value that batch requests provide is that they can include change sets, which provide a way to bundle a number of operations that either succeed or fail as a group. Compared to other operations that can be performed using the web API, they are more difficult to compose without some object model that includes serialization of objects or a deeper understanding of the HTTP protocol because the request body is essentially a text document that must match very specific requirements.  
   
-Remember that associated entities can be created in a single operation more easily than using a batch request. Batch requests are best used when performing operations on entities that aren’t associated with each other when all the operations must be performed in a single transactional operation.  
+Remember that associated entities can be created in a single operation more easily than using a batch request. Batch requests are best used when performing operations on entities that aren't associated with each other when all the operations must be performed in a single transactional operation.  
   
-Also, the responses returned are essentially text documents rather than objects that can easily be parsed into JSON. You’ll need to parse the text in the response or locate a helper library to access the data in the response.  
+Also, the responses returned are essentially text documents rather than objects that can easily be parsed into JSON. You'll need to parse the text in the response or locate a helper library to access the data in the response.  
  
 >[!NOTE]
->  Batch requests can contain up to 100 individual requests and cannot contain other batch requests.  
+>  Batch requests can contain up to 1000 individual requests and cannot contain other batch requests.  
   
 <a name="bkmk_BatchRequests"></a> 
 
@@ -50,7 +50,7 @@ The POST request containing the batch must have a Content-Type header with a val
 --batch_<unique identifier>
 ```  
   
-The unique identifier doesn’t need to be a GUID, but should be unique. Each item within the batch must be preceded by the batch identifier with a Content-Type and Content-Transfer-Encoding header like the following:  
+The unique identifier doesn't need to be a GUID, but should be unique. Each item within the batch must be preceded by the batch identifier with a Content-Type and Content-Transfer-Encoding header like the following:  
   
 ```  
 --batch_WKQS9Yui9r
@@ -74,7 +74,7 @@ When multiple operations are contained in a change set, all the operations are c
 --changeset_<unique identifier>
 ```  
   
-The unique identifier doesn’t need to be a GUID, but should be unique. Each item within the change set must be preceded by the change set identifier with a Content-Type and Content-Transfer-Encoding header like the following:  
+The unique identifier doesn't need to be a GUID, but should be unique. Each item within the change set must be preceded by the change set identifier with a Content-Type and Content-Transfer-Encoding header like the following:  
   
 ```  
 --changeset_BBB456
