@@ -44,7 +44,7 @@ Selecting the portal notification will link to this page of common issues for fu
 
 ## Solution Checker fails to check Default solution
 
-Similar to large solutions, the Default solution may fail to get exported and the check will not complete successfully. The export request must complete in 20 minutes or the request will timeout. It will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification. Please see additional guidance on [exporting large solutions](common-issues-resolutions-solution-checker#solution-checker-fails-to-export-large-solutions).
+Solution checker exports the solution from the Common Data Service environment for analysis. Exporting the Default Solution is not supported and the check may not complete successfully. Please see additional guidance on [exporting large solutions](common-issues-resolutions-solution-checker#solution-checker-fails-to-export-large-solutions).
 
 
 ## Solution checker fails due to unsupported version of Power Apps Checker
