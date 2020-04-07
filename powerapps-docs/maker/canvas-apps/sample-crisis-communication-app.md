@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/25/2020
+ms.date: 03/31/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -713,21 +713,52 @@ The app uses a flow to send notifications to end users whenever there is a new c
 
 ### Optional: Sending notifications to more than 5000 users
 
-The current **Get group members** action is limited to pulling 5000 users if you are using the Office license of Power Automate. If you have a premium license and would like to distribute to up to 100000 users, you can follow these steps to send to more users.
+The current **Get group members** action is limited to pulling 5000 users for the Office license of Power Automate. Even for the premium license, you may hit throttling limits with the Teams connector if you try to send notifications to too many users. To distribute to more users, you can alter to the flow to send an email to a distribution list instead.
 
-1. Select the **...** menu for the **Get group members** card.
+1. Delete the following cards: **Get group members** and **Switch on preferred send notification setting**:
 
-    ![Select ... menu](media/sample-crisis-communication-app/40-Settings.png)
+    ![Delete actions](media/sample-crisis-communication-app/36-delete-actions.png)
 
-1. Select **Settings**.
+1. Add a new action.
 
-1. Change the **Threshold** field to 100,000
+1. Search for and select **Send an email (V2)**:
 
-    ![Setting the Threshold field](media/sample-crisis-communication-app/41-Threshold.png)
+    ![Add send an email](media/sample-crisis-communication-app/37-add-send-an-email.png)
 
-1. Select **Done**
+1. In the **To** field, type in the name of your distribution group.
+
+1. In the **Subject** field, select the **Add a dynamic value** button and add the **Title** field from the **When a news item is posted** card:
+
+    ![Add title](media/sample-crisis-communication-app/38-add-title.png)
+
+1. In the **Body** field, select the **Add a dynamic value** button and add the **Details** field from the **When a news item is posted** card.
 
 1. Select **Save**.
+
+### Optional: Deep link Teams notification into Teams app
+
+If you would like your Teams notification to open directly into the canvas app
+inside of Teams, follow these steps:
+
+1. Update the app URL to point to the Teams deep link in the admin app. <br>
+In the admin app, change the app URL to the following, where `App ID` is the ID of your app.
+
+    ```
+    https://teams.microsoft.com/l/entity/<APP ID>/<APP ID>
+    ```
+
+    ![Admin app](media/sample-crisis-communication-app/42-admin-app.png)
+
+1. Update the app link generated inside of the notification flow. <br> Open the Set App Link Variable card and change the expression for Value to the following:
+
+    ```
+    concat(items('Apply_to_each')?['AppUrl'], if(greater(indexOf(items('Apply_to_each')?['AppUrl'], '?'),0),'&','?'), 'context=%7B%22subEntityId%22%3A%22',triggerBody()?['ID'],'%22%7D')
+    ```
+    ![Change flow settings](media/sample-crisis-communication-app/43-flow-settings.png)
+
+1. Update the canvas app to consume the teams context variable to deep link to the correct news article. <br> For the **OnStart** property of the app, change the Param from `newsid` to `subEntityId`.
+
+    ![Change OnStart](media/sample-crisis-communication-app/44-onstart.png)
 
 ### Test the news notification flow
 
@@ -901,7 +932,7 @@ you might want to pin the crisis management admin app or the Power BI report to 
 
 * **How can I update the application?**
 
-    If you would like to update the application, please follow the steps outlined on [aka.ms/CrisisCommunicationSolution](aka.ms/CrisisCommunicationSolution).
+    If you would like to update the application, please follow the steps outlined on [aka.ms/CrisisCommunicationSolution](https://aka.ms/CrisisCommunicationSolution).
 
 ## Issues and feedback
 
