@@ -121,7 +121,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 2. When you're done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
    > [!div class="mx-imgBorder"]
-   > ![Edit a record](media/edit_record_iphone.gif "This image demonstrate how to edit and then save a record")
+   > ![Edit a record](media/edit_records_iphone.gif "This image demonstrate how to edit and then save a record")
 
 ## Go back to the Home screen
 
