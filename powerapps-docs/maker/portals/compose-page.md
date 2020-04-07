@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/03/2020
+ms.date: 04/06/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -358,6 +358,9 @@ You can add Power BI component on a page. When adding a Power BI component, you 
 
 ![Power BI options](media/powerbi-options.png)
 
+> [!NOTE]
+> Before you begin, read [Power BI access types](#power-bi-access-types) and [Power BI considerations](#-other-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portal.
+
 To add a Power BI component to a web page:
 
 1. [Edit the
@@ -381,14 +384,12 @@ To add a Power BI component to a web page:
 
         1. **Embed for your customers**
 
-            Allows you to securely share the Power BI report or dashboard to external users without Power BI license or Azure Active Directory authentication setup.
-
-            This option uses Power BI Embedded services to integrate Power BI chart into portal.
+            Allows you to securely share the Power BI report or dashboard to external users without Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI chart into portal.
 
             Make sure [Power BI Embedded service is enabled](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service) and respective Power BI workspaces are selected, and shared with the maker or the logged-in user.
 
-            > [!CAUTION]
-            > If you add Power BI with *Embed for your customers* on a Power Apps portal page that is available anonymously, anyone can view the dashboard. To secure a web page, read [web page access control in Power Apps portal](https://docs.microsoft.com/powerapps/maker/portals/configure/webpage-access-control).
+            <!-- > [!CAUTION]
+            > If you add Power BI with *Embed for your customers* on a Power Apps portal page that is available anonymously, anyone can view the dashboard. To secure a web page, read [web page access control in Power Apps portal](https://docs.microsoft.com/powerapps/maker/portals/configure/webpage-access-control).-->
 
         1. **Embed for your organization**
 
@@ -396,23 +397,25 @@ To add a Power BI component to a web page:
 
             Make sure you've shared Power BI workspaces with maker and target portal users.
 
-            > [!NOTE]
-            > **Embed for your customers** use Power BI Embedded service and **Embed for your organization** use Azure Active Directory authentication to allow user to see these charts. For more information, read [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service)
+            <!-- > [!NOTE]
+            > **Embed for your customers** use Power BI Embedded service and **Embed for your organization** use Azure Active Directory authentication to allow user to see these charts. For more information, read [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).-->
 
-        1. **Publish to web**
+        For more information, read [access types](#access-types).
+
+        3. **Publish to web**
             Allows you to share Power BI report or dashboard to anyone on the internet.
 
-            > [!CAUTION]
-            > When you use **Publish to web**, anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Do not publish confidential or proprietary information. When in doubt, check your organization's policies before publishing.
+            <!-- > [!CAUTION]
+            > When you use **Publish to web**, anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Do not publish confidential or proprietary information. When in doubt, check your organization's policies before publishing.-->
 
     1. **Workspace**
 
         Select the Power BI workspace from the list.
 
-        > [!NOTE]
+        <!-- > [!NOTE]
         > Values in the workspace list depend on the selected access type.
         > - **Embed for your customers** shows the list of workspaces shared to logged in user and enabled for [Power BI Embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service).
-        > - **Embed for your organization** shows the list of workspaces shared with logged in user.
+        > - **Embed for your organization** shows the list of workspaces shared with logged in user.-->
 
     1. **Select type**
         Select Dashboard or Report from the list.
@@ -450,6 +453,27 @@ To add a Power BI component to a web page:
         This option is only available for **Publish to web** access type. To get embed code URL that you can copy and paste, read [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
 
         ![Embed Code URL](media/embed-code-url.png)
+
+### Power BI access types
+
+- **Embed for your customers**:
+    - Shows the list of workspaces shared to logged in user and enabled for [Power BI Embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service).
+    - Uses Power BI Embedded service.
+- **Embed for your organization**:
+    - Shows the list of workspaces shared with logged in user.
+    - Uses Azure Active Directory authentication.
+- If you add Power BI with **Embed for your customers** on a Power Apps portal page that is available anonymously, anyone can view the dashboard. To secure a web page, read [web page access control in Power Apps portal](https://docs.microsoft.com/powerapps/maker/portals/configure/webpage-access-control).
+
+For more information, read [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
+
+### Other Power BI considerations
+
+- When you use **Publish to web**, anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Do not publish confidential or sensitive information. When in doubt, check your organization's policies before publishing.
+- [Portal Studio](https://docs.microsoft.com/powerapps/maker/portals/portal-designer-anatomy) performance can degrade while working with Power BI workspaces due to the following Power BI workspace configurations:
+    - Increased number of workspaces shared with user account used while editing the portal.
+    - Increased number of users the Power BI workspace is shared with.
+- [Capture liquid variable](https://docs.microsoft.com/powerapps/maker/portals/liquid/portals-entity-tags#powerbi) is not supported in portal Studio while working with Power BI component.
+- If you [reset portal](https://docs.microsoft.com/powerapps/maker/portals/admin/reset-portal) and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, read [Set up Power BI integration](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#create-security-group-and-add-to-power-bi-account).  
 
 ### Power BI performance and optimization considerations
 
