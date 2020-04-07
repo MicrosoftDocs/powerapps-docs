@@ -91,7 +91,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 - From the Home screen, select the down arrow ![Change view icon](media/mobile_view_selector_icon.png "Change view icon") next to the current view, and then select a new view.
 
    > [!div class="mx-imgBorder"]
-   > ![Change views](media/change_view_iphone.gif "This image demonstrate how to select a differnt view")
+   > ![Change views](media/change_views_iphone.gif "This image demonstrate how to select a differnt view")
 
 ## Add a record quickly
 
