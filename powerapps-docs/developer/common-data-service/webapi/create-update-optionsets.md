@@ -12,7 +12,7 @@ applies_to:
 caps.latest.revision: 15
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "ryjones"
 search.audienceType: 
   - developer

@@ -20,6 +20,7 @@ The following steps are required to build a linear slider code component:
 - [Implementing manifest](#implementing-manifest)
 - [Implement component logic using TypeScript](#implementing-component-logic)
 - [Add style to the code components](#adding-style-to-the-code-component)
+- [Build your code components](#build-your-code-components)
 - [Packaging code components](#packaging-your-code-components)
 - [Adding component to a model-driven app](#adding-code-components-in-model-driven-apps)
 - [Adding component to a canvas app](#adding-code-components-to-a-canvas-app)
@@ -28,14 +29,13 @@ The following steps are required to build a linear slider code component:
 
 To create a new project:
 
-1. Open a **Developer Command Prompt for VS 2017** window.
-1. Create a new folder for the project using the following command: 
+1. Open a **Developer Command Prompt for VS 2017** window. Create a new folder for the project using the following command: 
     ```CLI
-    mkdir LinearComponent
+     mkdir LinearComponent
     ```
-
+                     
 1. Go into the component folder using the command `cd LinearComponent`. 
-   
+         
 1. Create a new component project by passing basic parameters using the command.
 
    ```CLI
@@ -43,7 +43,7 @@ To create a new project:
     ``` 
 
 1. Install the project build tools using the command `npm install`. 
-1. Open your project folder `C:\Users\<your name>\Documents\<My_code_Component>` in a developer environment of your choice and get started with your code component development. The quickest way to start is by running `code .` from the command prompt once you are in the `C:\Users\<your name>\Documents\<My_code_Component>` directory. This command opens your component project in Visual Studio Code.
+1. Open your project folder in a developer environment of your choice and get started with your code component development. The quickest way to start is by running `code .` from the command prompt once you are in the project directory. This command opens your component project in Visual Studio Code.
 
 ## Implementing manifest
 
@@ -63,7 +63,7 @@ Make changes to the predefined manifest file, as shown here:
      ```XML
       <?xml version="1.0" encoding="utf-8" ?>
       <manifest>
-      <control namespace="SampleNameSpace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="Linear Input Component" description-key="Allows you to enter the numeric values using the visual slider." control-type="standard">
+      <control namespace="SampleNameSpace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="TSLinearInputComponent_Display_Key" description-key="TSLinearInputComponent_Desc_Key" control-type="standard">
      ```
 
 2. The [property](manifest-schema-reference/property.md) node defines the properties of the code component like defining the data type of field. The property node is specified as the child element under the `control` element. Define the [property](manifest-schema-reference/property.md) node as shown here:
@@ -85,36 +85,32 @@ Make changes to the predefined manifest file, as shown here:
  
       ```XML
       <resources>
-	    <code path="index.ts" order="1" />
-	    <css path="css/TS_LinearInputComponent.css" order="1" />
-	    </resources>
+        <code path="index.ts" order="1" />
+        <css path="css/TS_LinearInputComponent.css" order="1" />
+      </resources>
         ```
       The overall manifest file should look something like this: 
 
      ```XML
       <?xml version="1.0" encoding="utf-8" ?>
       <manifest>
-      <control namespace="SampleNamespace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="Linear Input Component" description-key="Allows you to enter the numeric values using the visual slider." control-type="standard">
-	    <type-group name="numbers">
-		  <type>Whole.None</type>
-		  <type>Currency</type>
-		  <type>FP</type>
-		  <type>Decimal</type>
-	     </type-group>
-	    <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
-	   <resources>
-		 <code path="index.ts" order="1" />
-		 <css path="css/TS_LinearInputComponent.css" order="1" />
-	   </resources>
+      <control namespace="SampleNamespace" constructor="TSLinearInputComponent" version="1.0.0" display-name-key="TSLinearInputComponent_Display_Key" description-key="TSLinearInputComponent_Desc_Key" control-type="standard">
+        <type-group name="numbers">
+          <type>Whole.None</type>
+          <type>Currency</type>
+          <type>FP</type>
+          <type>Decimal</type>
+         </type-group>
+        <property name="sliderValue" display-name-key="sliderValue_Display_Key" description-key="sliderValue_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+       <resources>
+         <code path="index.ts" order="1" />
+         <css path="css/TS_LinearInputComponent.css" order="1" />
+       </resources>
       </control>
      </manifest>
      ```
 
 4. Save the changes to the `ControlManifest.Input.xml` file.
-5. Now, create a new folder inside the `TSLinearInputComponent` folder and name it as **css**.
-6. Create a CSS file to [add styling to the code component](#adding-style-to-the-code-component).
-7. Build the component project using the command `npm run build`.
-8. The build generates an updated TypeScript type declaration file under the `TSLinearInputComponent/generated` folder.
 
 ## Implementing component logic
 
@@ -227,20 +223,15 @@ export class TSLinearInputComponent
 
 ```
 
-3. Rebuild the project using the command `npm run build`. 
- 
-4. The component is compiled into the `out/controls/TSLinearInputComponent` folder. The build artifacts include:
-
-   - bundle.js – Bundled component source code. 
-   - ControlManifest.xml – Actual component manifest file that is uploaded to the Common Data Service organization.
+3. Save the change to the `index.ts` file.
 
 ## Adding style to the code component
 
-Developers and app makers can define their styling to represent their code components visually using CSS. CSS allows the developers to describe the presentation of code components, including style, colors, layouts, and fonts. The linear input component’s [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
+Developers and app makers can define their styling to represent their code components visually using CSS. CSS allows the developers to describe the presentation of code components, including style, colors, layouts, and fonts. The linear input component's [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
 
 1. Create a new `css` subfolder under the `TSLinearInputComponent` folder. 
 2. Create a new `TS_LinearInputComponent.css` file inside the `css` subfolder. 
-3. Add the following style content to the `TS_LinearInputComponent.css` file:
+3. Add the following style content to the `TS_LinearInputComponent.css` file:""""""""
 
     ```CSS
     .SampleNamespace\.TSLinearInputComponent input[type=range].linearslider {
@@ -320,11 +311,20 @@ Developers and app makers can define their styling to represent their code compo
       <css path="css/TS_LinearInputComponent.css" order="1"/> 
     </resources> 
      ```
-7. Rebuild the project using the following command: 
-   ```CLI
-   npm run build
-   ```
-8. Inspect the build output under the **./out/controls/TSLinearInputComponent** and observe that the **TS_LinearInputComponent.css** file is now included with the compiled build artifacts. 
+
+## Build your code components
+
+After you finish adding manifest, component logic, and styling, build the code components using the command:
+```
+npm run build
+```
+
+Alternatively, to build the component project, open the project folder that contains `package.json` in Visual Studio Code and use the (Ctrl-Shift-B) command, then select the build options. 
+The build generates an updated TypeScript type declaration file under the `TSLinearInputComponent/generated` folder.
+The component is compiled into the `out/controls/TSLinearInputComponent` folder. The build artifacts include:
+
+   - bundle.js – Bundled component source code. 
+   - ControlManifest.xml – Actual component manifest file that is uploaded to the Common Data Service organization.
 
 ## Debugging your code component
 
@@ -360,11 +360,14 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
      msbuild /t:restore
     ```
 
-5. Again, run the following command msbuild:
+5. Again, run the following command:
     ```CLI
      msbuild
     ```
-
+    > [!TIP]
+    > You will be hit with the error: *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Common Data Service and run the solution checker.
+    > Re build the solution file using the command `msbuild/property:configuration:Release` and reimport the solution into Common Data Service and run the solution checker.
+      
     > [!NOTE]
     > Make sure that **NuGet targets & Build Tasks** is checked. To enable it:
     > - Open **Visual Studio Installer**.
@@ -377,15 +380,16 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
 
 ## Adding code components in model-driven apps
 
-To add a code component like a linear input component, follow the steps mentioned in the topic [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
+To add a code component like a linear input component, follow the steps mentioned in the article [Add components to fields and entities](add-custom-controls-to-a-field-or-entity.md).
 
 ## Adding code components to a canvas app
 
-To add the code components to a canvas app, follow the steps in the topic [Add code components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app).
+To add the code components to a canvas app, follow the steps in the article [Add code components to a canvas app](component-framework-for-canvas-apps.md#add-components-to-a-canvas-app).
 
 ### See also
 
-[Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
+[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)<br/>
 [Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
 [Power Apps build tools](https://docs.microsoft.com/powerapps/developer/common-data-service/build-tools-overview)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>

@@ -39,7 +39,7 @@ If a component is created using the CLI version lower than 0.4.3, you will encou
 **Workaround**:
 
 - Delete the solution containing the relevant component from Common Data Service. 
-- The component needs to be removed from the filed or grid if the component is already configured to avoid dependencies.
+- The component should be removed from the filed or grid if the component is already configured to avoid dependencies.
 - Import the new solution with updates to the component built by the latest CLI version.
 - Newly imported components can now be configured on forms or grids.  
 
@@ -74,18 +74,45 @@ If a component is created using the CLI version lower than 0.4.3, you will encou
        </configuration>
      ```
 
-## Web resource size is too big
+## Web resource size is too large
 
 Error  **Import Solution Failed: Web resource content size is too big**.
 
 **Workaround**
 
-- When you're creating the `bundle.js` file from the CLI tooling, it bundles lot of components which makes the file large. Remove some of the components that are not necessary.
-- Build the component in `production` mode by modifying the `node_modules/pcf-scripts/webpackconfig.js` file.
+- Build  the `.pcfproj` as release configuration which sets the webpack to production mode using the command 
+  ```CLI
+  msbuild /property:configuration=Release
+  ```
+- Run the msbuild command with an additional property as shown below: 
+  ```CLI
+  msbuild /p:PcfBuildMode=production
+  ```
+- Edit the `.pcfproj` to always build the webpack in production mode by setting the property `PcfBuildMode` to production:
+  ```XML
+  <PropertyGroup>
+    <Name>TS_ReactStandardControl</Name>
+    <ProjectGuid>0df84c56-2f55-4a80-ac9f-85b7a14bf378</ProjectGuid>
+    <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
+    <PcfBuildMode>production</PcfBuildMode>
+  </PropertyGroup>
+  ```
+## Solution checker issue
+
+**Error: Do not use the eval function or its functional equivalents.**
+
+This error occurs when the user creates, builds, and packages code components using CLI and build solution file using `msbuild` and imports the solution file into Common Data Service and runs the solution checker.
+
+**Workaround**
+
+Re build the solution file using  the following command and reimport the solution into Common Data Service and run the solution checker.
+```CLI
+msbuild/property:configuration:Release
+```
 
 ## Power Apps component framework Datasets getValue by property alias doesn't work
 
-Power Apps component framework dataset APIs getValue function only searches record by the dataset column name and not the property alias set in the manifest. Attempting to get value by property alias will return an empty value.
+Power Apps component framework dataset API's getValue function only searches record by the dataset column name and not the property alias set in the manifest. Attempting to get value by property alias will return an empty value.
 
 **Workaround**
 

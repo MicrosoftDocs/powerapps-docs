@@ -11,7 +11,7 @@ tags: ''
 ms.service: powerapps
 ms.devlang: na
 ms.topic: article
-ms.reviewer: kvivek
+ms.reviewer: "pehecke"
 ms.workload: na
 ms.date: 01/28/2019
 ms.author: jdaly
@@ -46,7 +46,7 @@ A **managed** solution is a completed solution that is intended to be distribute
   > [!IMPORTANT]
   > When you uninstall a managed solution, the following data is lost: data stored in custom entities that are part of the managed solution and data stored in custom attributes that are part of the managed solution on other entities that are not part of the managed solution.
 
-An **unmanaged** solution is one that is still under development or isn’t intended to be distributed. 
+An **unmanaged** solution is one that is still under development or isn't intended to be distributed. 
 - While a solution is unmanaged, you can continue to add and remove components to it. 
 - You can export an unmanaged solution to transport unmanaged customizations from one environment to another.
 - When an unmanaged solution is deleted, only the solution container of any customizations included in it is deleted. All the unmanaged customizations remain in effect and belong to the default solution. 
@@ -125,15 +125,15 @@ More information: [Introduction to solutions > Unmanaged and managed solutions](
 
 ## Managed properties
 
-When you distribute a managed solution, anyone who installs your solution can include their own unmanaged customizations to it. Those unmanaged customizations can then be added to a solution that they distributed as a managed solution that depends on your solution. But what if you don’t want people to do this? As the publisher of the managed solution you can use managed properties to disable specific customizations for the components of your managed solution.
+When you distribute a managed solution, anyone who installs your solution can include their own unmanaged customizations to it. Those unmanaged customizations can then be added to a solution that they distributed as a managed solution that depends on your solution. But what if you don't want people to do this? As the publisher of the managed solution you can use managed properties to disable specific customizations for the components of your managed solution.
 
 More information: [Use managed properties](use-managed-properties.md)
 
 ## Modular solutions
 
-You can use the solution framework to create a discrete set of components that provide a set of functionalities. Each managed solution can be installed and uninstalled to return the customer’s deployment to its original state. Each managed solution you create runs on top of the system solution and can access the capabilities of that underlying solution.
+You can use the solution framework to create a discrete set of components that provide a set of functionalities. Each managed solution can be installed and uninstalled to return the customer's deployment to its original state. Each managed solution you create runs on top of the system solution and can access the capabilities of that underlying solution.
 
-You can also build managed solutions that run on top of other solutions to create a set of functionalities that can be shared by different solutions. In this way, you can build and maintain a common module as a solution to support multiple solutions. Because of this, customers only need to install the solutions that are right for them and you don’t need to include the same shared functionality in every solution. If you need to push out an update to solution that supports multiple solutions, you only need to update the common module.
+You can also build managed solutions that run on top of other solutions to create a set of functionalities that can be shared by different solutions. In this way, you can build and maintain a common module as a solution to support multiple solutions. Because of this, customers only need to install the solutions that are right for them and you don't need to include the same shared functionality in every solution. If you need to push out an update to solution that supports multiple solutions, you only need to update the common module.
 
 Customers, System Implementers, and other ISVs can then build solutions on top of your solutions to achieve the specific customizations they require.
 

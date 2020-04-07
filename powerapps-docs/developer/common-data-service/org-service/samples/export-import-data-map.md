@@ -3,7 +3,7 @@ title: "Sample: Export and import data map (Common Data Service) | Microsoft Doc
 description: "This sample shows how to create a data map and export it" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "mayadumesh" # GitHub ID

@@ -27,7 +27,7 @@ iframe, web resource
 ## Syntax
 
 ```JavaScript
-formContext.getControl(arg).getContenWindow().then(successCallback, errorCallback);
+formContext.getControl(arg).getContentWindow().then(successCallback, errorCallback);
 ```
 
 ## Parameters
