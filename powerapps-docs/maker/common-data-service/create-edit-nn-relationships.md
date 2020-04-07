@@ -2,7 +2,7 @@
 title: "Create many-to-many entity relationships in Common Data Service overview | MicrosoftDocs"
 description: "Learn how to create many-to-many entity relationships"
 ms.custom: ""
-ms.date: 05/29/2018
+ms.date: 04/07/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -26,6 +26,8 @@ search.app:
 # Create many-to-many entity relationships overview
 
 One-to-many (1:N) entity relationships establish a hierarchy between records. With Many-to-many (N:N) relationships there is no explicit hierarchy. There are no lookup fields or behaviors to configure. Records created using Many-to-many relationships can be considered peers and the relationship is reciprocal.  
+
+One example of a many-to-many relationship is defined between two standard entities included with the Dynamics 365 Sales app. The opportunity entity has an N:N relationship with the competitor entity. This allows for multiple competitors to be added to the opportunity and multiple opportunities associated with the same competitor. 
   
 With Many-to-many relationships a Relationship (or Intersect) entity stores the data that associates the entities. This entity has a One-to-many entity relationship with both of the related entities and only stores the necessary values to define the relationship. You can’t add custom fields to a relationship entity and it is never visible in the user interface. 
   
