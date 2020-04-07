@@ -40,7 +40,7 @@ In ISV Studio, an ISV can either upload a full package or solution(s) and be not
    > [!div class="mx-imgBorder"]
    > ![AppSource checker](media/appsource-browse-solution-files.png)
  
-   >  [!NOTE]
+   > [!NOTE]
    > If a user has previously uploaded a solution for validation then you will see a history of submissions instead of the screenshot above.
 
 3. Once the solution checker completes validating, a summary of results will be displayed along with the number of issues present (if any). Double-click on the solution file to see the issues in detail.
