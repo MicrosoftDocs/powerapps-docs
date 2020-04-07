@@ -359,7 +359,7 @@ You can add Power BI component on a page. When adding a Power BI component, you 
 ![Power BI options](media/powerbi-options.png)
 
 > [!NOTE]
-> Before you begin, read [Power BI access types](#power-bi-access-types) and [Power BI considerations](#-other-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portal.
+> Before you begin, read [Power BI access types](#power-bi-access-types) and [Power BI considerations](#other-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portal.
 
 To add a Power BI component to a web page:
 
@@ -400,7 +400,7 @@ To add a Power BI component to a web page:
             <!-- > [!NOTE]
             > **Embed for your customers** use Power BI Embedded service and **Embed for your organization** use Azure Active Directory authentication to allow user to see these charts. For more information, read [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).-->
 
-        For more information, read [access types](#access-types).
+        For more information, read [access types](#power-bi-access-types).
 
         3. **Publish to web**
             Allows you to share Power BI report or dashboard to anyone on the internet.
