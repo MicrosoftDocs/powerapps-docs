@@ -54,7 +54,7 @@ search.app:
 <ul>
 <li><strong>pageType</strong>: String. Specify "entityrecord".</li>
 <li><b>entityName</b>: String. Logical name of the entity to display the form for.</li>
-<li><b>entityId</b>: (Optional) String. ID of the entity record to display the form for. If you don't specify this value, the form will be opened in create-record mode.</li>
+<li><b>entityId</b>: (Optional) String. ID of the entity record to display the form for. If you don't specify this value, the form will be opened in create mode.</li>
 <li><b>createFromEntity</b>: (Optional) Lookup. Designates a record that will provide default values based on mapped attribute values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
 <li><b>data</b>: (Optional) Object. A dictionary object that passes extra parameters to the form. Invalid parameters will cause an error.<br/>For information about passing parameters to a form, see <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/set-field-values-using-parameters-passed-form
 ">Set field values using parameters passed to a form</a> and <a href="https://docs.microsoft.com/powerapps/developer/model-driven-apps/configure-form-accept-custom-querystring-parameters">Configure a form to accept custom querystring parameters</a>.</li>
@@ -143,7 +143,7 @@ search.app:
 
 Returns a promise. The value passed when the promise resolves is dependent on the target:
 - *inline*: Promise resolves right away, and does not return any value.
-- *dialog*: Promise resolves when the dialog closes, and an object is passed if the pageType = entityRecord. The object has a <b>savedEntityReference</b> array with the following properties to identify the entity record(s) displayed or created:
+- *dialog*: Promise resolves when the dialog is closed. An object is passed only if the **pageType** = **entityRecord** and you opened the form in create mode. The object has a <b>savedEntityReference</b> array with the following properties to identify the entity record created:
     - **entityType**: The logical name of the entity.
     - **id**: A string representation of a GUID value for the record.
     - **name**: The primary attribute value of the record displayed or created.
@@ -181,8 +181,32 @@ var navigationOptions = {
     position: 1
 };
 Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+    function success() {
+            // Run code on success
+    },
+    function error() {
+            // Handle errors
+    }
+);
+```
+
+### Example 3: Open an account form in the create mode within a dialog
+
+```javascript
+var pageInput = {
+    pageType: "entityrecord",
+    entityName: "account"    
+};
+var navigationOptions = {
+    target: 2,
+    height: {value: 80, unit:"%"},
+    width: {value: 70, unit:"%"},
+    position: 1
+};
+Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
     function success(result) {
-            console.log(result.savedEntityReference[0].id + ", " + result.savedEntityReference[0].name)
+            console.log("Record created with ID: " + result.savedEntityReference[0].id + 
+            " Name: " + result.savedEntityReference[0].name)
             // Handle dialog closed
     },
     function error() {
@@ -191,7 +215,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 );
 ```
 
-### Example 3: Open an HTML web resource in a dialog
+### Example 4: Open an HTML web resource in a dialog
 
 ```javascript
 var pageInput = {
@@ -206,7 +230,7 @@ var navigationOptions = {
 };
 Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
     function success() {
-            // Handle dialog closed
+            // Run code on success
     },
     function error() {
             // Handle errors
