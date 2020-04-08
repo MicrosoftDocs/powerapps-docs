@@ -34,6 +34,10 @@ Most apps have multiple **Screen** controls that contain **[Label](control-text-
 
 **[ImagePosition](properties-visual.md)** – The position (**Fill**, **Fit**, **Stretch**, **Tile**, or **Center**) of an image in a screen or a control if it isn't the same size as the image.
 
+**LoadingSpinner** (**None**, **Controls** or **Data**) - When None, spinner will not be shown. When Controls | Data, will show  spinner until all child controls at the screen level are visible. **Note. Nested controls are not considered.**
+
+**LoadingSpinnerColor** - The fill color of the loading spinner.
+
 **Name** - The name of the screen.
 
 **OnHidden** – The behavior of an app when the user navigates away from a screen.
