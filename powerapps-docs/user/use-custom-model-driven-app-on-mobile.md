@@ -47,7 +47,7 @@ From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitem
    > [!div class="mx-imgBorder"]
    > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrate how to get to the site map screen")
    
-*Refresh the page to restart the GIF action*
+  *Refresh the page to restart the GIF action*.
 
 The following illustration shows the primary navigation elements on the site map screen. 
 
