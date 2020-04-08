@@ -93,12 +93,12 @@ You can set any identity provider as **default**. When an identity provider is s
 
 Though identity providers are added by default that you can configure, you can still add identity providers. The added identity provider replaces the provider available by default.
 
-For example, if you add a new **LinkedIn** identity provider named **Contoso LinkedIn**, the default **LinkedIn** provider is updated with your configuration. And **LinkedIn** provider gets changed to **Contoso LinkedIn**. You can also add a new identity provider and select the provider as **LinkedIn** instead.
+For example, if you add a new *LinkedIn* identity provider named *Contoso LinkedIn*, the default *LinkedIn* provider is updated with your configuration. And *LinkedIn* provider gets changed to *Contoso LinkedIn*. You can also add a new identity provider and select the provider as *LinkedIn* instead.
 
-You can then add or configure the **LinkedIn** identity provider again if you delete the **Contoso LinkedIn** identity provider
+You can then add or configure the *LinkedIn* identity provider again if you delete the *Contoso LinkedIn* identity provider
 
 > [!NOTE]
-> - The identity providers [**Local sign in**](configure-portal-authentication.md) and **Azure Active Directory** can be only **Enabled** or **Disabled**.
+> - You can only **Enable** or **Disable** the [**Local sign in**](configure-portal-authentication.md) and **Azure Active Directory** providers.
 > - You can have only one instance of each identity provider type.
 
 ### Add or configure provider
@@ -142,7 +142,7 @@ To delete an identity provider, go to **Authentication Settings** and then selec
 
 Deleting a provider deletes your provider configuration for the selected provider type, and the deleted provider gets reset. 
 
-For example, the **Contoso LinkedIn** provider after deleted is reset with default **LinkedIn** provider.
+For example, the *Contoso LinkedIn* provider after deleted is reset with default *LinkedIn* provider.
 
 > [!NOTE]
 > When you delete a provider, only the portal configuration for the provider is deleted. For example, if you delete **LinkedIn** provider, your **LinkedIn** app and app configuration remains intact. Similarly, if you delete an **Azure Active Directory B2C** provider, only portal configuration gets deleted. The Azure tenant configuration for this provider doesn't change.
