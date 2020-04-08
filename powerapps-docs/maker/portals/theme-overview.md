@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/07/2020
+ms.date: 04/08/2020
 ms.author: yogupt
 ms.reviewer: tapanm
 ---
@@ -15,7 +15,7 @@ ms.reviewer: tapanm
 
 Power Apps portal by default has **Enable basic theme** feature **Off**. Basic themes allow you to use themes available by default, called **Presets**. You can also create copies of default basic themes for additional customization.
 
-In this topic, you'll walk-through working with basic themes. For more advanced theme customization, read [Edit CSS](edit-css.md).
+In this article, you'll walk through basic themes feature. For more advanced theme customization, read [Edit CSS](edit-css.md).
 
 > [!IMPORTANT]
 > **Basic theme** feature is in preview. For more information about preview features, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
@@ -83,7 +83,7 @@ To create a new theme:
 
 ## Edit theme details
 
-You can update theme name, description, color and other typography settings in the Power Apps portal Studio. 
+You can update theme name, description, color, and other typography settings in the Power Apps portal Studio. 
 
 To edit theme details:
 
@@ -100,7 +100,7 @@ To edit theme details:
 
     ![Create new theme](./media/theme-overview/theme-details.png)
 
-1. Edit theme details such as name, description and color for different areas:
+1. Edit theme details such as name, description, and color for different areas:
 
     |Color option | Impacted area
     | - | - 
@@ -132,15 +132,39 @@ To copy preset theme:
 
 1. Update the [theme details](#edit-theme-details) as needed and save.
 
-## SASS variables
+## Saas variables
 
-> Awaiting list of variables and example from Anand Ratn
+[Sass](https://sass-lang.com/) is a stylesheet language with fully CSS-compatible syntax. When you enable *Basic theme* feature, you can use [Sass variables](https://sass-lang.com/documentation/variables) instead of values to configure theme colors.
+
+For example, if you want the **Header** color to be 25% lighter than the **Primary** color, you can use the following value instead of actual color:
+
+```powerappsfl
+lighten($primaryColor, 25%);
+```
+
+![Sass example](./media/theme-overview/sass-example.png)
+
+You can use the following Sass variables with *Basic theme*:
+
+|Color option | Sass variable name
+| - | -
+| Primary | $primaryColor
+| Header | $headerColor
+| Header menu text | $headerMenuTextColor
+| Header menu hover | $headerMenuHoverColor
+| Body background |  $bodyBackground
+| Footer background | $footerColor​
+| Footer text | $footerTextColor
+
+### Order of Sass variables
+
+Sass variables work from top to bottom. You can set *Header* color to ```lighten($primaryColor, 25%);```. But, you can't set *Primary* color to ```lighten($headerColor, 25%);``` as *Header* is below *Primary* in color options.
 
 ## Basic theme considerations
 
 - You can't have two themes with same *theme name* or same *theme file name*. 
 - Color value manually entered must be for a valid color.
-- Changing CSS for preset themes is not supported.
+- Changing CSS for preset themes isn't supported.
 - Theme foreground and background color contrast ratio is recommended at 4.5:1 for accessibility.
 
 ### Next steps
