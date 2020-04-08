@@ -43,6 +43,7 @@ Legend:
 
 From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to access entities, favorite or most-used records, other apps, and settings.
 
+ 
    > [!div class="mx-imgBorder"]
    > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrate how to get to the site map screen")
 
@@ -72,6 +73,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 3. To view the newly pinned records, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon"), and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
+
    > [!div class="mx-imgBorder"]
    > ![Pin a record to favorites](media/pin_favs.gif "This image demonstrate how to pin favorite records")
 
@@ -81,12 +83,14 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 2. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
 
+
    > [!div class="mx-imgBorder"]
    > ![Unpin a record](media/unpin_favs.gif "This image demonstrate how to unpin a record")
 
 ## Change views
 
 - From the Home screen, select the down arrow ![Change view icon](media/mobile_view_selector_icon.png "Change view icon") next to the current view, and then select a new view.
+
 
    > [!div class="mx-imgBorder"]
    > ![Change views](media/change_views_iphone.gif "This image demonstrate how to select a differnt view")
