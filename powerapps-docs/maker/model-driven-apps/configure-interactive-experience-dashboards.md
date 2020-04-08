@@ -133,21 +133,22 @@ The following illustration shows the flyout dialog with the list of the availabl
 
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
   
-2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
+2.  Select **Solutions**, and then open the solution you want. 
+
+3.  Select the dashboard that you want and then on the toolbar select **Enable security roles**. 
   
-3. Under **Components**, select **Dashboards**.  
+    > [!div class="mx-imgBorder"] 
+    > ![Enable security roles](media/dashboard-enable-security-roles.png)
+
+4.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
   
-4.  In the grid, select the interactive dashboard you want and select **Enable Security Roles** on the task bar.  
+6.  Select **Publish** for your changes to take effect.    
   
-5.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
-  
-6.  Select **Publish All Customizations** for your changes to take effect.    
-  
- ![Enable security roles](media/security-roles.png "Enable security roles")    
+     ![Enable security roles](media/security-roles.png "Enable security roles")    
   
 <a name="BKMK_Configure"></a>   
 ## Create interactive experience dashboards  
-The following sections describe how to configure various types of the interactive dashboards.  
+The following sections describe how to create and then configure the various types of interactive dashboards.  
   
 ### Configure a multi-stream interactive dashboard using the 4-column layout  
  
@@ -209,23 +210,17 @@ The following illustration is an example of a fully configured chart panel and s
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).   
   
-2. Select **Data** > **Entities** > select the entity you want. Select the **Dashboards** tab.  
+2. Select **Solutions**, open the solution you want, and then open the interactive dashboard.  
   
-     -OR-  
-   
-   Open [solution explorer](advanced-navigation.md#solution-explorer), and then under **Components** select **Dashboards**.
+3.  Select the stream that you want to edit to select it, and then select **Edit Component**.  
   
-3.  In the grid, select the interactive dashboard that you want to edit to open it.  
+4.  Depending on whether you want to add a view or queue to the stream, select the view or queue details for the stream, and then select **Set**.  
   
-4.  Select the stream that you want to edit to select it, and then select **Edit Component**.  
+5.  Select **Save**.  
   
-5.  Depending on whether you want to add a view or queue to the stream, select the view or queue details for the stream, and then select **Set**.  
+ You can also delete an individual stream from a dashboard. To do this, select the stream, and then on the toolbar, select **Delete**.  
   
-6.  Select **Save**.  
-  
- You can also delete an individual stream from a dashboard. To do this, select the stream, and then on the command bar, select **Delete**.  
-  
-### Configure an entity-specific dashboard  
+### Create an entity-specific dashboard  
  An entity-specific dashboard is a multi-stream dashboard. Configuring this dashboard is similar to configuring a home page multi-stream dashboard, but you do it in the different place in the UI and there are other minor differences. 
 
 For example, instead of selecting an entity, some fields in the entity-specific dashboard are preset to the entity for which you are creating the dashboard.  
