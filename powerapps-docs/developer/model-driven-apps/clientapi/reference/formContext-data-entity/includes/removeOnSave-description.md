@@ -1,1 +1,1 @@
-Removes a function to be called when form data is loaded.
+Removes a function to be called when the record is saved.
