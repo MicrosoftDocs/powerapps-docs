@@ -28,10 +28,12 @@ See [working with dates and times](../show-text-dates-times.md) for more informa
 The **Text** function can also convert any data type to a text representation using a default format. Use this to pass non-text values to text-based functions such as [**Len**](function-len.md), [**Right**](function-left-mid-right.md), and [**IsMatch**](function-ismatch.md).
 
 ### <a name="predefined-datetime-formats"></a> Predefined date/time formats
+
+For these examples, date and time used is Tuesday, April 7, 2020 8:26:59.180 PM, in the time zone UTC-7 hours.
  
-| DateTimeFormat enum | Description | Examples&nbsp;(en-US&nbsp;locale) |
+| DateTimeFormat enum | Description | Examples (using **en-US**) |
 | --- | --- | --- |
-| **LongDate** |Four-digit year, month name, day of the month, and day of the week. The names of the month and day of the week aren't abbreviated. | "Tuesday,&nbsp;April 7,&nbsp;2020" |
+| **LongDate** |Four-digit year, month name, day of the month, and day of the week. The names of the month and day of the week aren't abbreviated. | "Tuesday, April 7, 2020" |
 | **LongDateTime** |Four-digit year, month name, day of the month, and day of the week, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. The names of the month and day of the week aren't abbreviated. | "Tuesday, April 7, 2020 8:26:59 PM" |
 | **LongDateTime24** |Four-digit year, month, day of the month, and day of the week, plus hour (24-hour clock), minutes, and seconds. The names of the month and day of the week aren't abbreviated. | "Tuesday, April 7, 2020 20:26:59" |
 | **LongTime** |Hour (12-hour clock), minutes, seconds, and AM/PM designation.  | "8:26:59 PM" |
@@ -42,8 +44,6 @@ The **Text** function can also convert any data type to a text representation us
 | **ShortTime** |Hour (12-hour clock), minutes, and AM/PM designation.   | "8:26 PM" |
 | **ShortTime24** |Hour (24-hour clock) and minutes.   | "20:26" |
 | **UTC** |The date/time value is converted to UTC based on the current user's time zone and formatted according to the ISO 8601 standard. | "2020-04-08T03:26:59.180Z" |
-
-For these examples, date and time was Tuesday, April 7, 2020 8:26:59.180 PM, UTC-7 hours.
 
 ### Number placeholders
 
