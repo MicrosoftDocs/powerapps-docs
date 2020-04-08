@@ -1,12 +1,12 @@
 ---
-title: "Configure model-driven app interactive experience dashboards in Power Apps | Microsoft Docs"
-description: "Know how to configure interactive experience dashboards in Power Apps"
+title: "Create and configure model-driven app interactive experience dashboards in Power Apps | Microsoft Docs"
+description: "Know how to create and configure interactive experience dashboards in Power Apps"
 keywords: Interactive dashboards; Customer Service; Microsoft Dynamics 365; Interactive service hub
 author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ""
-ms.date: 04/19/2019
+ms.date: 04/08/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,13 +24,16 @@ search.app:
   - D365CE
 ---
 
-# Configure model-driven app interactive experience dashboards
+# Create and configure model-driven app interactive experience dashboards
 
 Interactive experience dashboards can be a one-stop workplace for app users, such as service reps, to see workload information and take action. They're fully configurable, security-role based, and deliver workload information across multiple streams in real time. Interactive dashboard users don't need to page through the application looking for a particular record; they can act on a it directly from the dashboard. 
 
  The interactive experience dashboards come in two forms: multi-stream and single-stream. In addition, multi-stream dashboards can be home page or entity-specific dashboards. The entity-specific dashboards are configured in a different part of the user interface and partially preloaded with the entity-specific configuration information.  
   
  The multi-stream dashboards display data in real time over multiple data streams. There’s no limit on how many streams you can configure on the dashboard. The data in a stream can be based only on one entity, but, each stream can be based on a different entity. In the entity-specific dashboards, all streams are based on the same entity. The data flows from various views or queues, such as **My Activities**, **My Cases**, or **Cases in the Banking Queue**. 
+ 
+> [!NOTE]
+> The examples described here use the Case entity, which is available with the Dynamics 365 Customer Service app.
   
  The single-stream dashboards display real-time data over one stream based on an entity view or queue. The tiles are positioned on the right side of the dashboards and are always shown. The single-stream dashboards are typically helpful to Tier 2 service leads or managers, who monitor fewer, but more complex or escalated cases.  
   
@@ -139,16 +142,18 @@ The following illustration shows the flyout dialog with the list of the availabl
  ![Enable security roles](media/security-roles.png "Enable security roles")    
   
 <a name="BKMK_Configure"></a>   
-## Configure interactive experience dashboards  
- The following sections describe how to configure various types of the interactive dashboards.  
+## Create interactive experience dashboards  
+The following sections describe how to configure various types of the interactive dashboards.  
   
 ### Configure a multi-stream interactive dashboard using the 4-column layout  
  
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
   
-2.  Select **Data** > **Entities** > select the entity you want. 
+2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
 
-3.  Select the **Dashboards** tab, and then on the toolbar select **Add dashboard**. 
+3.  In the left navigation pane, select **Dashboards**, on the toolbar select **New**, and then select **Interactive experience dashboard**. 
+
+    ![New Interactive experience dashboard](media/interactive-exp-dash-sol-explorer.png)
   
 4.  Choose the layout, either 2, 3, or 4 column width.  
   
@@ -159,11 +164,11 @@ The following illustration shows the flyout dialog with the list of the availabl
   
    - **Filter Entity**: The visual filters and global filter attributes are based on this entity.  
       
-    - **Entity View**: The visual filters are based on this view.  
+   - **Entity View**: The visual filters are based on this view.  
       
-    - **Filter By**: The field that the time frame filter applies to.  
+   - **Filter By**: The field that the time frame filter applies to.  
       
-    - **Time Frame**: The default time frame filter value for the **Filter By** field.  
+   - **Time Frame**: The default time frame filter value for the **Filter By** field.  
       
  After you  have specified the filtering information, start adding components for the charts and the data streams. To add a component, simply select the element in the center of the chart or stream, and when the dialog appears, select the required information from the drop-down list, as shown in the following illustrations.  
   
