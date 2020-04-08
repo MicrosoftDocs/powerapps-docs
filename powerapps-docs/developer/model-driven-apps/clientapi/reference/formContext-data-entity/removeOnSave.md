@@ -1,9 +1,8 @@
 ---
 title: "removeOnSave (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 04/07/2020
 ms.service: powerapps
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
 ms.assetid: 14a92f7c-f4c0-475d-8797-dcbb283db37a
 author: "KumarVivek"
 ms.author: "kvivek"

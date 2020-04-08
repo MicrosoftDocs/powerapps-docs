@@ -6,8 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/05/2020
-ms.author: tapanm
-ms.reviewer: pankar
+ms.author: pankar
+ms.reviewer: tapanm
 searchScope:
   - PowerApps
 ---
