@@ -173,7 +173,7 @@ Configure site settings and password reset policy for your Azure AD B2C provider
 
 - **Valid issuers** - A comma-delimited list of issuers that includes the issuer of the sign up or sign in user flow, and the issuer of the password reset user flow.
 
-For a complete list of site settings, read [related site settings](azure-ad-b2.mdc#related-site-settings).
+For a complete list of site settings, read [related site settings](azure-ad-b2.md#related-site-settings).
 
 ### Step 3 - Configure additional settings
 
