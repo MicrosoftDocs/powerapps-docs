@@ -31,9 +31,11 @@ Watch how you can deploy and configure the Hospital Emergency Response app.
 
 The Hospital Emergency Response solution is also available for US Government customers. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
 
-The commercial version of the service URL is used throughout this article. If you are a US Government customer, use the respective US Government URL for your deployment as mentioned here: 
-| **Commercial version URL**                | **US Government version URL**                      |
-|-------------------------------------------|----------------------------------------------------|
+The commercial version of the service URL is used throughout this article. If you are a US Government customer, use the respective US Government URL for your deployment as mentioned here:
+
+
+| **Commercial version URL**                | **US Government version URL**  |
+|-------------------------------------------|--------------------------------|
 | https://make.powerapps.com                | https://make.gov.powerapps.us (GCC)<br/><br/>https://make.high.powerapps.us (GCC High)                |
 | https://admin.powerplatform.microsoft.com | https://gcc.admin.powerplatform.microsoft.us (GCC)<br/><br/>https://high.admin.powerplatform.microsoft.us (GCC High) |
 | https://app.powerbi.com/                  | <https://app.powerbigov.us> (GCC)<br/><br/>https://app.high.powerbigov.us (GCC High)                  |
@@ -55,7 +57,7 @@ Perform the following steps to deploy the Hospital Emergency Response sample app
     - [Step 4.2: Load master data](#step-42-load-master-data)
 - [Step 5: Update the mobile app branding](#step-5-update-the-mobile-app-branding)
 - [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
-- [Step 7: Add Azure Application Insights key to mobile apps for telemetry (optional)](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry)
+- [Step 7: Add Azure Application Insights key to mobile apps for telemetry (optional)](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry-optional)
 - [Step 8: Share canvas apps with users in your organization](#step-8-share-canvas-apps-with-users-in-your-organization)
 - [Step 9: Set your mobile app as hero and featured app](#step-9-set-your-mobile-app-as-hero-and-featured-app)
 - [Step 10: Share model-driven app with admins in your organization](#step-10-share-model-driven-app-with-admins-in-your-organization)
