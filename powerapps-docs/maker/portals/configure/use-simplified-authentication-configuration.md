@@ -1,6 +1,6 @@
 ---
 title: "Use simplified portal authentication configuration (Preview) | MicrosoftDocs"
-description: "Learn how to use quick, easy and simplified portal configuration for authentication."
+description: "Learn how to use quick, easy, and simplified portal configuration for authentication."
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -13,14 +13,16 @@ ms.reviewer:
 
 # Simplified portal authentication configuration (Preview)
 
-Setting up authentication provider is a core customization in any portal. Simplified portal identity provider configuration provides in-app guidance for identity provider setup and abstracts setup complexities. This helps makers and administrators quickly and easily perform setup for supported identity providers and also reduce usual configuration errors.
+Setting up authentication provider is a core customization in any portal. Simplified portal identity provider configuration provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal setup for supported identity providers.
 
 > [!IMPORTANT]
 > **Simplified portal authentication** feature is in preview. For more information about preview features, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
 
 ## Overview
 
-You can enable, disable and configure portal identity providers from [Power Apps](https://make.powerapps.com) using simplified portal authentication configuration. After you select an identity provider, you can then go through prompts to easily select and enter provider settings instead of setting up authentication [manually](set-authentication-identity.md).
+You can enable, disable, and configure portal identity providers from [Power Apps](https://make.powerapps.com) using simplified portal authentication configuration. 
+
+After you select an identity provider, you can then go through prompts to easily select and enter provider settings instead of setting up authentication [manually](set-authentication-identity.md).
 
 ### Authentication Settings
 
@@ -67,14 +69,14 @@ The details page shows you the **Identity providers** section:
 
 ## General authentication settings
 
-You can turn the following general authentication settings **On** or **Off** by selecting the **Authentication Settings** when you view the **Identity providers**:
+You can turn the following general authentication settings to **On** or **Off** by selecting the **Authentication Settings** when you view the **Identity providers**:
 
 ![General authentication settings](media/use-simplified-authentication-configuration/general-authentication-settings.png)
 
 - **External login** - Turn [**External login**](set-authentication-identity.md#manage-external-accounts) for your portal *On* or *Off*.
 - **Open registration** - Turn [**Open registration**](configure-portal-authentication.md#open-registration) for your portal *On* or *Off*.
 
-You can also go to general authentication settings from **portal details** by selecting **settings** on top right in **Identity providers** section:
+You can also go to general authentication settings from **portal details** using **Settings** on top right in **Identity providers** section:
 
 ![General authentication settings from details](media/use-simplified-authentication-configuration/general-settings-from-details.png)
 
@@ -87,13 +89,13 @@ You can set any identity provider as **default**. When an identity provider is s
 > [!NOTE]
 > You can only set **configured** identity provider as default. **Set as default** option becomes available after you configure an identity provider.
 
-## Add, configure or delete an identity provider
+## Add, configure, or delete an identity provider
 
-By default, you have the available identity providers added that you can configure. You can still add the identity provider but the added identity provider replaces the provider of same type available by default.
+Though identity providers are added by default that you can configure, you can still add identity providers. The added identity provider replaces the provider available by default.
 
-For example, if you want to add a new **LinkedIn** identity provider named **Contoso LinkedIn**, it updates the default **LinkedIn** provider with your configuration. And **LinkedIn** provider gets changed to **Contoso LinkedIn**.. Alternatively, you can also add a new identity provider and select the provider as **LinkedIn**.
+For example, if you add a new **LinkedIn** identity provider named **Contoso LinkedIn**, the default **LinkedIn** provider is updated with your configuration. And **LinkedIn** provider gets changed to **Contoso LinkedIn**. You can also add a new identity provider and select the provider as **LinkedIn** instead.
 
-If you delete the **Contoso LinkedIn** identity provider you configured, you can then add or configure the **LinkedIn** identity provider again.
+You can then add or configure the **LinkedIn** identity provider again if you delete the **Contoso LinkedIn** identity provider
 
 > [!NOTE]
 > - The identity providers [**Local sign in**](configure-portal-authentication.md) and **Azure Active Directory** can be only **Enabled** or **Disabled**.
@@ -109,7 +111,7 @@ You can also select **Add provider** from **portal details** instead:
 
 ![Add provider from details](media/use-simplified-authentication-configuration/add-provider-from-details.png)
 
-You can select from the available list of providers, enter a name and then select **Next** to configue the provider settings:
+You can select from the available list of providers, enter a name, and then select **Next** to configure the provider settings:
 
 ![Add new provider](media/use-simplified-authentication-configuration/add-provider.png)
 
@@ -173,7 +175,7 @@ Configure site settings and password reset policy for your Azure AD B2C provider
 
 - **Valid issuers** - A comma-delimited list of issuers that includes the issuer of the sign up or sign in user flow, and the issuer of the password reset user flow.
 
-For a complete list of site settings, read [related site settings](azure-ad-b2.md#related-site-settings).
+For a complete list of site settings, read [related site settings](azure-ad-b2c.md#related-site-settings).
 
 ### Step 3 - Configure additional settings
 
@@ -208,7 +210,7 @@ The Redirect URL is used by the Facebook app to redirect users to the portal aft
 
 To configure **Additional settings** for Facebook, read [configure additional settings for OAuth 2 providers](#configure-additional-settings-for-oauth-2-providers).
 
-For more information about configuring OAuth 2 providers, refer to [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
+For more information about configuring OAuth 2 providers, see [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
 
 ## Configure LinkedIn provider
 
@@ -225,7 +227,7 @@ The Redirect URL is used by the LinkedIn app to redirect users to the portal aft
 
 To configure **Additional settings** for LinkedIn, read [configure additional settings for OAuth 2 providers](#configure-additional-settings-for-oauth-2-providers).
 
-For more information about configuring OAuth 2 providers, refer to [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
+For more information about configuring OAuth 2 providers, see [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
 
 ## Configure Google provider
 
@@ -242,7 +244,7 @@ The Redirect URL is used by the Google app to redirect users to the portal after
 
 To configure **Additional settings** for Google, read [configure additional settings for OAuth 2 providers](#configure-additional-settings-for-oauth-2-providers).
 
-For more information about configuring OAuth 2 providers, refer to [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
+For more information about configuring OAuth 2 providers, see [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
 
 ## Configure Twitter provider
 
@@ -259,13 +261,13 @@ The Redirect URL is used by the Twitter app to redirect users to the portal afte
 
 To configure **Additional settings** for Twitter, read [configure additional settings for OAuth 2 providers](#configure-additional-settings-for-oauth-2-providers).
 
-For more information about configuring OAuth 2 providers, refer to [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
+For more information about configuring OAuth 2 providers, see [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
 
 ## Configure Microsoft provider
 
 ![Configure Microsoft app](media/use-simplified-authentication-configuration/configure-microsoft.png)
 
-To use [Microsoft](http://aka.ms/AppRegistrations) as an identity provider, you need to create an app in Twitter with a redirect URL.
+To use [Microsoft](https://aka.ms/AppRegistrations) as an identity provider, you need to create an app in Twitter with a redirect URL.
 
 The Redirect URL is used by the Microsoft app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you may have a different URL than the one provided here.​
 
@@ -276,11 +278,11 @@ The Redirect URL is used by the Microsoft app to redirect users to the portal af
 
 To configure **Additional settings** for Microsoft, read [configure additional settings for OAuth 2 providers](#configure-additional-settings-for-oauth-2-providers).
 
-For more information about configuring OAuth 2 providers, refer to [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
+For more information about configuring OAuth 2 providers, see [OAuth 2 provider settings for portals](configure-oauth2-settings.md).
 
 ## Configure additional settings for OAuth 2 providers
 
-Applies to authentication settings for **Facebook**, **Twitter**, **Microsoft**, **LinkedIn** and **Google**:
+Applies to authentication settings for **Facebook**, **Twitter**, **Microsoft**, **LinkedIn, and **Google**:
 
 ![Configure additional settings](media/use-simplified-authentication-configuration/additional-oauth-settings.png)
 
@@ -289,7 +291,7 @@ Applies to authentication settings for **Facebook**, **Twitter**, **Microsoft**,
 - **Backchannel timeout** - Timeout value in milliseconds for back channel communications: [MicrosoftAccountAuthenticationOptions.BackchannelTimeout](https://docs.microsoft.com/previous-versions/aspnet/mt174421(v=vs.113)?redirectedfrom=MSDN).
 - **Callback path** - The request path within the application's base path where the user-agent will be returned: [MicrosoftAccountAuthenticationOptions.CallbackPath](https://docs.microsoft.com/previous-versions/aspnet/mt174433(v=vs.113)?redirectedfrom=MSDN).​
 - **Sign in As authentication type** - The name of another authentication middleware which will be responsible for actually issuing a user Claims Identity: [MicrosoftAccountAuthenticationOptions.SignInAsAuthenticationType](https://docs.microsoft.com/previous-versions/aspnet/mt174430(v=vs.113)?redirectedfrom=MSDN).​
-- **Scope** - A comma separated list of permissions to request: [MicrosoftAccountAuthenticationOptions.Scope](https://docs.microsoft.com/en-us/previous-versions/aspnet/mt174435(v=vs.113)?redirectedfrom=MSDN).​
+- **Scope** - A comma separated list of permissions to request: [MicrosoftAccountAuthenticationOptions.Scope](https://docs.microsoft.com/previous-versions/aspnet/mt174435(v=vs.113)?redirectedfrom=MSDN).​
 - ​**Registration Enabled**​ - Enables or disables the registration requirement for the existing identity provider. When disabled, the user is denied registration with an error if no contact record exists for the user. When enabled, user registration is allowed for a new user only if the Site Setting Authentication/Registration/Enabled is set to true.​
 
 For more information, read [OAuth2 site settings](configure-oauth2-settings.md#create-site-settings-by-using-oauth2).
