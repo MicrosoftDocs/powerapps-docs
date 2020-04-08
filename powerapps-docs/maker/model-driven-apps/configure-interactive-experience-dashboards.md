@@ -267,7 +267,7 @@ In the following example, we’re changing the color for the **IsEscalated** fie
  > [!div class="mx-imgBorder"] 
  > ![Change color in the dashboard](media/edit-color.png "Change color in the dashboard")  
   
-When the **Modify List Value** dialog box opens, enter the hexidecimal color code, such as #800000 shown here:  
+When the **Modify List Value** dialog box opens, enter the hexadecimal color code, such as #800000 shown here:  
   
  ![Modify the dashboard color](media/modify-color.png "Modify the dashboard color")  
 
