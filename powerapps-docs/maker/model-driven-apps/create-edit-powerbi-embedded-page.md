@@ -31,6 +31,8 @@ This topic will outline the setup of a system dashboard referencing a Power BI r
 
 ## Create system dashboard with Power BI embedded
 
+This examples sets up a Power BI embedded page for a single environment with one workspace.  The next example would need to be used with Environment Variables for managed solution ALM which has a different workspace for prod.
+
 1. Create or edit a solution in <a href="https://make.powerapps.com">make.powerapps.com</a>
 
 1. Click **New** > **Dashboards** > **Power BI embedded**
@@ -43,7 +45,15 @@ This topic will outline the setup of a system dashboard referencing a Power BI r
 
 1. Enter name for the dashboard which will be shown to the user in the selector on the **Dashboards** page
 
-1. TOOD
+1. Select the Power BI type of Report or Dashboard
+
+1. Select a Power BI workspace then select a Power BI report/dashboard
+
+1. Click Create to save and publish the system dashboard
+
+## Create Power BI embedded page with Environment Variables
+
+1. TODO
 
 ## Related
 
