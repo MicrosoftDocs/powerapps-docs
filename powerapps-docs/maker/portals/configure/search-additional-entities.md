@@ -19,7 +19,7 @@ You can enable additional entities for search functionality. Configuring search 
 
 Following considerations apply when configuring additional entities for global search:
 
-- Ensure [site settings](#-site-setting-for-additional-entities) for search and additional entities is enabled.
+- Ensure [site settings](#site-setting-for-additional-entities) for search and additional entities is enabled.
 - Configure [search results page](#results-page-for-additional-entities) to display search results.
 - Ensure an **Entity Permission** is created that provides Read privilege, and appropriate scope for the records to show search results.
 - Associate the entity permission with required **Web Roles**.
