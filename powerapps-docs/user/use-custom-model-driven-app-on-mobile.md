@@ -47,7 +47,7 @@ From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitem
    > [!div class="mx-imgBorder"]
    > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrate how to get to the site map screen")
    
-  *Refresh the page to restart the GIF action*.
+ *Refresh the page to restart the GIF action*.
 
 The following illustration shows the primary navigation elements on the site map screen. 
 
@@ -79,7 +79,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Pin a record to favorites](media/pin_favs.gif "This image demonstrate how to pin favorite records")
    
-*Refresh the page to restart the GIF action*
+*Refresh the page to restart the GIF action*.
 
 ### Unpin a record
 
@@ -91,7 +91,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Unpin a record](media/unpin_favs.gif "This image demonstrate how to unpin a record")
    
-*Refresh the page to restart the GIF action*
+*Refresh the page to restart the GIF action*.
 
 ## Change views
 
@@ -101,7 +101,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Change views](media/change_views_iphone.gif "This image demonstrate how to select a differnt view")
 
-*Refresh the page to restart the GIF action*
+*Refresh the page to restart the GIF action*.
 
 ## Add a record quickly
 
@@ -112,7 +112,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Create a record](media/pamobile_add_record.gif "This image demonstrates how create a new record")
 
-*Refresh the page to restart the GIF action*
+*Refresh the page to restart the GIF action*.
 
 -  To save and open the record that you created, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon"), and then select **Save and Open**.
 
@@ -121,7 +121,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Create a record](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a record and open it or save and create a new record")
 
-*Refresh the page to restart the GIF action*
+*Refresh the page to restart the GIF action*.
 
 ## View commands for a record (Android)
 
@@ -131,7 +131,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Commands on a record](media/pa_mobile_view_record_commands.gif "This image demonstrate how to access more commands on a record")
 
-*Refresh the page to restart the GIF action*
+*Refresh the page to restart the GIF action*.
 
 ## Edit a record
 
@@ -141,7 +141,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Edit a record](media/save_on_iphone.gif "This image demonstrate how to edit and then save a record")
 
-*Refresh the page to restart the GIF action*
+*Refresh the page to restart the GIF action*.
 
 ## Go back to the Home screen
 
@@ -151,7 +151,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Go back to the Home screen](media/go_back_home.gif "This image demonstrate how to go back to the home screen by pressing and holding the back icon")
 
-*Refresh the page to restart the GIF action*
+*Refresh the page to restart the GIF action*.
 
 ## Sign out
 
