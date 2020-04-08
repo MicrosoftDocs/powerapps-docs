@@ -33,8 +33,11 @@ Converts date, time, or both in a *string* to a *date/time* value.
 
 Dates must be in one of these formats:
 
-- MM/DD/YYYY
-- DD/MM/YYYY
+- MM/DD/YYYY or MM-DD-YYYY
+- DD/MM/YYYY or DD-MM-YYYY
+- YYYY/MM/DD or YYYY-MM-DD
+- MM/DD/YY or MM-DD-YY
+- DD/MM/YY or DD-MM-YY
 - DD Mon YYYY
 - Month DD, YYYY
 
@@ -70,7 +73,7 @@ If you type **10/11/2014** into a text-input control named **Startdate**, and th
     Device set to **en** locale shows the label as **Saturday, October 11, 2014**.
   
     > [!NOTE]
-    > You can use several options with **DateTimeFormat** compared to **LongDateTime**. To display a list of options, type the parameter followed by an exclamation sign (**!**) in the formula bar.
+    > You can use several options with the **DateTimeFormat** enum. To display a list of options, type the parameter followed by a dot or period (**.**) in the formula bar or consult the [**Text** function's reference](function-text.md).
 
 - Convert date from a string in the French locale and show the result as a long date. In this example, the months and day of the month are interpreted differently from English.
 
@@ -103,7 +106,7 @@ If you typed **10/11/2014 1:50:24.765 PM** into a text-input control named **Sta
     Device set to **en** locale shows the label as **Saturday, October 11, 2014 1:50:24 PM**.
   
   > [!NOTE]
-  > You can use several options with **DateTimeFormat** compared to **LongDateTime**. To display a list of options, type the parameter followed by an exclamation sign (**!**) in the formula bar.
+  > You can use several options with the **DateTimeFormat** enum. To display a list of options, type the parameter followed by a dot or period (**.**) in the formula bar or consult the [**Text** function's reference](function-text.md).
 
 - Convert both a date and time string in the French locale. Month and day of the month are interpreted differently.
 
