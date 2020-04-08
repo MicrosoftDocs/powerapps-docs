@@ -148,13 +148,13 @@ You can use the following Sass variables with *Basic theme*:
 
 |Color option | Sass variable name
 | - | -
-| Primary | $primaryColor
-| Header | $headerColor
-| Header menu text | $headerMenuTextColor
-| Header menu hover | $headerMenuHoverColor
-| Body background |  $bodyBackground
-| Footer background | $footerColor​
-| Footer text | $footerTextColor
+| Primary | ```$primaryColor```
+| Header | ```$headerColor```
+| Header menu text | ```$headerMenuTextColor```
+| Header menu hover | ```$headerMenuHoverColor```
+| Body background |  ```$bodyBackground```
+| Footer background | ```$footerColor​```
+| Footer text | ```$footerTextColor```
 
 ### Order of Sass variables
 
