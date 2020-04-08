@@ -141,10 +141,11 @@ The following illustration shows the flyout dialog with the list of the availabl
     > ![Enable security roles](media/dashboard-enable-security-roles.png)
 
 4.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
-  
-6.  Select **Publish** for your changes to take effect.    
-  
+
      ![Enable security roles](media/security-roles.png "Enable security roles")    
+  
+5.  Select **Publish** for your changes to take effect.    
+  
   
 <a name="BKMK_Configure"></a>   
 ## Create interactive experience dashboards  
@@ -243,7 +244,7 @@ For example, instead of selecting an entity, some fields in the entity-specific 
   
 <a name="BKMK_ConfigureColors"></a>   
 ## Configure dashboard colors  
- For all **Option Set** and **Two Options** type fields, such as the **Case Type**, **IsEscalated** or **Priority** of the **Case** entity, you can configure a particular color that will appear in the charts and streams for specific field values. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
+For all **Option Set** and **Two Options** type fields, such as the **Case Type**, **IsEscalated** or **Priority** of the **Case** entity, you can configure a particular color that will appear in the charts and streams for specific field values. For example, high priority cases can be shown in red, medium priority cases in blue, and low priority cases in green in the interactive charts. In the streams, there will be a thin vertical line in color next to the work item description.  
   
 > [!NOTE]
 >  The color coding isn’t available for the tag charts and doughnut charts. These charts appear on the dashboard in white, gray, and black shades.  
@@ -257,7 +258,7 @@ For example, instead of selecting an entity, some fields in the entity-specific 
   
 5.  When the **Modify List Value** dialog appears, set the new value in the **Color** text box. Select **OK**.  
   
-     Select **Save and Close**.  
+6.  Select **Save and Close**.  
   
 7.  Select **Publish** for your changes to take effect.  
   
@@ -266,7 +267,7 @@ In the following example, we’re changing the color for the **IsEscalated** fie
  > [!div class="mx-imgBorder"] 
  > ![Change color in the dashboard](media/edit-color.png "Change color in the dashboard")  
   
-When the **Modify List Value** dialog box opens, choose the color as shown here:  
+When the **Modify List Value** dialog box opens, enter the hexidecimal color code, such as #800000 shown here:  
   
  ![Modify the dashboard color](media/modify-color.png "Modify the dashboard color")  
 
