@@ -156,7 +156,7 @@ You can use the following Sass variables with *Basic theme*:
 | Footer background | ```$footerColor​```
 | Footer text | ```$footerTextColor```
 
-### Order of Sass variables
+### Sass variable order
 
 Sass variables work from top to bottom. You can set *Header* color to ```lighten($primaryColor, 25%);```. But, you can't set *Primary* color to ```lighten($headerColor, 25%);``` as *Header* is below *Primary* in color options.
 
