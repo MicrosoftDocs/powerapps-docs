@@ -69,6 +69,8 @@
         href: ../user/create-a-record.md
       - name: Add activities to the timeline
         href: ../user/add-activities.md
+      - name: Work with records in the new calendar view
+        href: ../user/calendar-view.md
       - name: FAQ about activities
         href: ../user/faq-for-timeline-and-activity.md
       - name: View and create email through the activities grid
