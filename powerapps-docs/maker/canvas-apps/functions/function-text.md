@@ -40,7 +40,7 @@ For these examples, date and time used is Tuesday, April 7, 2020 8:26:59.180 PM,
 | **LongTime24** |Hour (24-hour clock), minutes, seconds.  | "20:26:59" | 
 | **ShortDate** |Four-digit year with numerical month and day of the month. | "4/7/2020" | 
 | **ShortDateTime** |Four-digit year with numerical month and day of the month, plus hour (12-hour clock), minutes, and AM/PM designation. | "4/7/2020 8:26 PM" |
-| **ShortDateTime24** |Four-digit year with numerical month and day of the month, plus hour (24-hour clock) and minutes. | "4/7/2020 20:28" |
+| **ShortDateTime24** |Four-digit year with numerical month and day of the month, plus hour (24-hour clock) and minutes. | "4/7/2020 20:26" |
 | **ShortTime** |Hour (12-hour clock), minutes, and AM/PM designation.   | "8:26 PM" |
 | **ShortTime24** |Hour (24-hour clock) and minutes.   | "20:26" |
 | **UTC** |The date/time value is converted to UTC based on the current user's time zone and formatted according to the ISO 8601 standard. | "2020-04-08T03:26:59.180Z" |
