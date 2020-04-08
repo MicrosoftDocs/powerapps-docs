@@ -95,11 +95,12 @@ In this example there are two interactive dashboard options available in the Cas
   
 ### Configure the 'Appears in global filter in interactive experience' option
 
-1. Open [solution explorer](advanced-navigation.md#solution-explorer).  
-2. Under **Components**, expand **Entities**, and then expand the entity you want.
-3. In the navigation pane, select **Fields** and in the grid, double-click the field you want to enable.
-4. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
-5. Select **Publish All Customizations** for your changes to take effect.
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
+3. Under **Components**, expand **Entities**, and then expand the entity you want.
+4. In the navigation pane, select **Fields** and in the grid, double-click the field you want to enable.
+5. In the **General** tab, select the **Appears in global filter in interactive experience** check box. Select **Save and Close**.
+6. Select **Publish All Customizations** for your changes to take effect.
   
  The fields that you enable for **Appears in global filter in interactive experience** appear in the global filter flyout window when the global filter icon is clicked on the dashboard header. In the flyout window, the service reps can select the fields on which they want to filter globally, in charts, and also in streams and tiles that are based on the filter entity.   
   
@@ -112,11 +113,12 @@ In this example there are two interactive dashboard options available in the Cas
   
 ### Configure the 'Sortable in interactive experience dashboard' option
   
-1. Open [solution explorer](advanced-navigation.md#solution-explorer).  
-2. Under **Components**, expand **Entities**, and then expand the entity you want.
-3. In the navigation pane, select Fields and in the grid, double-click the field you want to enable.
-4. In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.
-5. Select **Publish All Customizations** for your changes to take effect.
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
+2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
+3. Under **Components**, expand **Entities**, and then expand the entity you want.
+4. In the navigation pane, select **Fields** and in the grid, double-click the field you want to enable.
+5. In the **General** tab, select the **Sortable in interactive experience dashboard** check box. Select **Save and Close**.
+6. Select **Publish All Customizations** for your changes to take effect.
   
 The fields that you configure for sorting appear in the drop-down list on the stream header. 
 
@@ -129,15 +131,17 @@ The following illustration shows the flyout dialog with the list of the availabl
   
 #### Enable security roles for interactive dashboards
 
-1. Open [solution explorer](advanced-navigation.md#solution-explorer).  
+1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
   
-2. Under **Components**, select **Dashboards**.  
+2.  Select **Solutions**, open the solution you want, and then on the toolbar select **Switch to classic**. 
   
-3.  In the grid, select the interactive dashboard you want and select **Enable Security Roles** on the task bar.  
+3. Under **Components**, select **Dashboards**.  
   
-4.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
+4.  In the grid, select the interactive dashboard you want and select **Enable Security Roles** on the task bar.  
   
-5.  Select **Publish All Customizations** for your changes to take effect.    
+5.  In the **Assign Security Roles** dialog, select the **Display only to these selected security roles** option and select the roles that you want to enable. Select **OK**.  
+  
+6.  Select **Publish All Customizations** for your changes to take effect.    
   
  ![Enable security roles](media/security-roles.png "Enable security roles")    
   
@@ -159,8 +163,8 @@ The following sections describe how to configure various types of the interactiv
   
 5.  When the dashboard form opens, fill in the filtering information at the top of form, as shown here.  
  
- > [!div class="mx-imgBorder"] 
- > ![Add visual filters](media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
+    > [!div class="mx-imgBorder"] 
+    > ![Add visual filters](media/interactive-dashboards-add-visual-filters.png "Add visual filters")  
   
    - **Filter Entity**: The visual filters and global filter attributes are based on this entity.  
       

@@ -56,15 +56,15 @@ Dashboards can be standard or interactive. Interactive dashboards provide the ca
 
 2. Select **Solutions**, and then open the solution you want.  
 
-3. Open the dashboard, select one of the component areas, and then on the toolbar select **Edit Component**.  
+3. In the list of solution components, open the dashboard, select one of the component areas, and then on the toolbar select **Edit Component**.  
   
 4.  In the **Set Properties** dialog box, you can make changes to a chart or list such as change the entity, default view, add a chart selector, or make the dashboard available on the mobile apps. When you’re done, select **OK**.  
   
      For more information about setting dashboard component properties, see [Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md).  
   
-4.  When you’ve completed your changes on the toolbar select **Save**, and then select **Close**. 
+5.  When you’ve completed your changes on the toolbar select **Save**, and then select **Close**. 
 
-5. On the solution toolbar, select **Publish**.  
+6. On the solution toolbar, select **Publish**.  
   
 Additional system dashboards tasks you can perform include:  
   
