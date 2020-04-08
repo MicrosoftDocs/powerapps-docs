@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/07/2020
+ms.date: 04/08/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -19,8 +19,8 @@ You can enable additional entities for search functionality. Configuring search 
 
 Following considerations apply when configuring additional entities for global search:
 
-- Ensure [site setting](#-site-setting-for-additional-entities) for search and additional entities are enabled.
-- Configure [search results page](#results-page-for-additional-entities).
+- Ensure [site settings](#-site-setting-for-additional-entities) for search and additional entities is enabled.
+- Configure [search results page](#results-page-for-additional-entities) to display search results.
 - Ensure an **Entity Permission** is created that provides Read privilege, and appropriate scope for the records to show search results.
 - Associate the entity permission with required **Web Roles**.
 - Entity permissions must be associated with the **Anonymous Web Role** if you want to allow anonymous search for an entity.
@@ -49,7 +49,7 @@ For example, if your entity logical name is *nwind_products* then the Site Marke
 
 Ensure that your search results page has an entity form. Or has logic written to show the search result details.
 
-## Walkthrough with sample database
+## Walkthrough - configure search for additional entities with sample database
 
 The following walk-through explains enabling search for **Order Products** entity in sample database **Northwind** available with Common Data Service.
 
