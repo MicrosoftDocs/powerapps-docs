@@ -138,7 +138,7 @@ To copy preset theme:
 
 For example, if you want the **Header** color to be 25% lighter than the **Primary** color, you can use the following value instead of actual color:
 
-```powerappsfl
+```
 lighten($primaryColor, 25%);
 ```
 
