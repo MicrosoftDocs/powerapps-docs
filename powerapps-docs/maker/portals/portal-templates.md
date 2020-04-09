@@ -33,10 +33,10 @@ If you select an environment that contains model-driven apps in Dynamics 365 (Dy
     > [!NOTE]
     > Field Service and Project Service packages must be installed in your Dynamics 365 organization to enable respective options. For more information, see [Integrate Project Service Automation](https://docs.microsoft.com/dynamics365/portals/integrate-project-service-automation) and [Integrate Field Service](https://docs.microsoft.com/dynamics365/portals/integrate-field-service).
 
-- **Employee self-service portal**: An employee self-service portal creates an efficient and well-informed workforce by streamlining common tasks and empowering every employee with a definitive source of knowledge
-- **Community portal**: A community portal leverages peer-to-peer interactions between customers and experts to organically grow the catalog of available knowledge from knowledge base articles, forums, and blogs as well as providing feedback through comments and ratings
+- **Employee self-service portal**: An employee self-service portal creates an efficient and well-informed workforce by streamlining common tasks and empowering every employee with a definitive source of knowledge.
+- **Community portal**: A community portal leverages peer-to-peer interactions between customers and experts to organically grow the catalog of available knowledge from knowledge base articles, forums, and blogs as well as providing feedback through comments and ratings.
 - **Portal from blank**: Create a website to share data with external and internal users. This template comes with sample pages to get you quickly started.
-- **Customer Portal**: The Supply Chain Management Customer Portal template provisions an externally facing B2B order placing website template that allows external users to create and view orders to the associated Dynamics 365 for Supply Chain Management environment.
+- **Customer Portal**: A Supply Chain Management Customer Portal template provisions an externally facing B2B order placing website. This template allows external users to create and view orders to the associated Dynamics 365 for Supply Chain Management environment.
 
 ## Portal templates features
 
