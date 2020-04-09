@@ -14,7 +14,7 @@ ms.reviewer: "pehecke"
 ms.suite: 
 ms.tgt_pltfrm: 
 search.audienceType: 
-  - maker
+  - developer
 search.app: 
   - PowerApps
   - D365CE
@@ -80,7 +80,7 @@ More information: [Azure integration](/powerapps/developer/common-data-service/a
 
 Because people may have access to multiple Common Data Service environments, the discovery services allow for retrieving the available environments that a person can access based on their user credentials.
 
-### Discovery RESTful API
+### Discovery Web API
 
 This is the endpoint address for the RESTful OData v4 version of the Discovery Service to use for your instance. You can also download the service document here.
 More information: [Developer Documentation: Discover the URL for your organization using the Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api)
