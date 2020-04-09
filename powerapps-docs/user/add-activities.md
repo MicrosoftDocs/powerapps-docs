@@ -216,6 +216,16 @@ Manage activities directly from the timeline wall including assigning an activit
   ![Timeline command bar options](media/timeline-options3.png "Timeline command bar options")
   ![Timeline command bar options](media/timeline-options4.png "Timeline command bar options")
 
+## See activities in List or Calendar view
+
+You can see the activities in the following views:
+
+- **List**: Shows a list of all activities.
+
+- **Calendar**: Shows a calendar with a list of the day's scheduled activities and the associated deals.
+
+- **New Calendar**: Shows an interactive calendar with a list of the day's scheduled activities and the associated deals. More information: [Work with records in the new calendar view](calendar-view.md)
+
 ## See also
 
 [Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
