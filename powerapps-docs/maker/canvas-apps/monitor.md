@@ -123,48 +123,40 @@ additional details about the event. The panel has four tabs:
 
     ![JSON format - Response tab](./media/monitor/json-format-response-tab.png)
 
-## Example - use Monitor to identity an issue with an app
+## Example scenario - use Monitor to identity an issue with an app
 
 In this example, you'll use the *Northwind Sample Data* app included with
 the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
 
 *Northwind sample solution* is a canvas app that loads sample data into the Common Data Service. You can also create a new app or use an existing app instead.
 
-### Example issue background
+### Scenario background
 
 Consider the scenario where the app is deployed and the initial app versions experiences performance degradation. The app also intermittently generates errors with no clear pattern. Loading data in app succeeds mostly and fails sometimes.
 
-To debug the app, start the Monitor. <!--CONTINUE EDITING FROM HERE-->Within the monitor, we observed the
-data operations as they were happening for each table load. But we also saw
-several requests with a https status code of 429, indicating the user has sent
-too many requests in a specific timeframe. Selecting one of these events in the
-table, we were able to view the specific details and error message "Rate limit
-exceeded. Try again in xx seconds."
+When you check canvas app **Monitor**, you see data operations as expected. However, you also see several responses with HTTP status code 429 indicating too many requests in a specific timeframe.
 
-![](./media/monitor/aabd514dcb039037ebed515eafe43e19.png)
+When you select such event, you see the error as *Rate limit exceeded. Try again in XX seconds.*:
 
-This issue needed further analysis to understand why requests were getting
-throttled. In the monitor, we could see that for each **createRow** call we are
-generating a lot of **getRows** requests from
-the **ProgressCount.Text** property, each to a different entity. This was not
-the entity we were creating rows for. The **ProgressCount.Text**  formula could
-be seen directly in the monitor.
+![HTTP status code 429](./media/monitor/http-statuscode-429.png)
 
-![](./media/monitor/9d91cb18f02ad5e43a965b688a05e7cc.png)
+### Scenario analysis
 
-For each record added, the formula was being revaluated and **CountRows** is
-being called on many of the entities. This resulted in **getRows** in the log,
-since **CountRows** isn't delegated for CDS. For each single request to add a
-record, we were potentially making 12 additional requests to count the rows in
-each entity.
+The issue needs further analysis to understand why requests are getting
+throttled. In the Monitor, you see that for each **createRow** call, there are several **getRows** requests from the **ProgressCount.Text** property; each to a different entity. These aren't the entities the app is creating rows for. The **ProgressCount.Text**  formula is seen in the Monitor:
 
-These extra requests sporadically caused errors due to the CDS platform
-throttling the requests to the service, and it also explained the overall
-performance problem.
+![ProgressCount.Text formula](./media/monitor/progresscount-text-formula.png)
 
-The permanent fix for this app was to do the **CountRows** manually for each
-entity as records were being created in it.   Without monitor, it would have
-been difficult to diagnose and resolve this issue.
+For each record added, the formula is evaluated again and **CountRows** is
+called on several entities. This resulted in **getRows** in the log,
+since **CountRows** isn't delegated for Common Data Service. For each single request to add a record, you're potentially making 12 additional requests to count the rows in each entity.
+
+These extra requests intermittently cause errors due to the Common Data Service platform throttling the requests to the service. And it also explains the overall performance problem.
+
+### Scenario conclusion
+
+The permanent fix for this app is to do the **CountRows** manually for each
+entity as records are being created in it. Without using Monitor, it would've been difficult to diagnose and resolve this issue.
 
 ### See also
 
