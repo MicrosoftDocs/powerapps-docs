@@ -36,7 +36,7 @@ If you select an environment that contains model-driven apps in Dynamics 365 (Dy
 - **Employee self-service portal**: An employee self-service portal creates an efficient and well-informed workforce by streamlining common tasks and empowering every employee with a definitive source of knowledge.
 - **Community portal**: A community portal leverages peer-to-peer interactions between customers and experts to organically grow the catalog of available knowledge from knowledge base articles, forums, and blogs as well as providing feedback through comments and ratings.
 - **Portal from blank**: Create a website to share data with external and internal users. This template comes with sample pages to get you quickly started.
-- **Customer Portal (Preview)**: A Supply Chain Management Customer Portal template provisions an externally facing B2B order placing website. This template allows external users to create and view orders to the associated Dynamics 365 for Supply Chain Management environment. Customer Portal template is in *Preview*. For more information about *preview* features, see [Understand experimental and preview features](working-with-experimental-preview.md).
+- **Customer Portal (Preview)**: A Supply Chain Management Customer Portal template provisions an externally facing B2B order placing website. This template allows external users to create and view orders to the associated Dynamics 365 for Supply Chain Management environment. Customer Portal template is in *Preview*. For more information about *preview* features, see [Understand preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
 
 ## Portal templates features
 
