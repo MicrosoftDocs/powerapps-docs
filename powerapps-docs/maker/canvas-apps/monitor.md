@@ -17,8 +17,6 @@ search.app:
 
 # Debugging an app with canvas app Monitor
 
-## Overview
-
 **Canvas app monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an
 app runs by providing a log of all activities in your app as the app runs.
 
