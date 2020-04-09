@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/08/2020
+ms.date: 04/09/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -20,8 +20,9 @@ search.app:
 ## Overview
 
 **Canvas app monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an
-app runs by providing a log of all activity occurring in your app as it is
-played. This gives you a better understanding of how the formulas contained in
+app runs by providing a log of all activities in your app as the app runs.
+
+This gives you a better understanding of how the formulas contained in
 your app work so you can improve performance and identify any errors or
 problems.
 
@@ -156,7 +157,7 @@ These extra requests intermittently cause errors due to the Common Data Service 
 ### Scenario conclusion
 
 The permanent fix for this app is to do the **CountRows** manually for each
-entity as records are being created in it. Without using Monitor, it would've been difficult to diagnose and resolve this issue.
+entity as records are being created in it. Without using Monitor, it would have been difficult to diagnose and resolve this issue.
 
 ### See also
 
