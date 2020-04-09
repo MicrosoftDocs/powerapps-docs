@@ -22,13 +22,13 @@ search.app:
 
 # View or download developer resources
 
-This page provides resources for developers and information about the specific instance you are working on. 
+This page provides resources for developers and information about the specific instance you're working on. 
 
 ## View the Developer Resources page for your environment
 
 1. Sign into [Power Apps](https://make.powerapps.com), and select your environment in the top-right corner.
 
-1. Select the **Settings** button on the top-right corner, and select **Advanced Settings**.
+1. Select the **Settings** button in the top-right corner, and select **Advanced Settings**.
 
     ![Advanced Customizations](media/advanced-customizations-menu.png)
 
@@ -50,7 +50,7 @@ This section provides links for developers to find resources. The following reso
 |[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006)|The main entry point for documentation for developers.|
 |[Developer Forums](https://go.microsoft.com/fwlink/?LinkId=550993)|Ask and answer questions with other developers.|
 |[NuGet Packages](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
-|[Download Tools](https://go.microsoft.com/fwlink/?LinkID=512122)|Tools that you will need are available to download from NuGet. Use the PowerShell script on this page to get the latest versions.|
+|[Download Tools](https://go.microsoft.com/fwlink/?LinkID=512122)|Tools that you'll need are available to download from NuGet. Use the PowerShell script on this page to get the latest versions.|
 |[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of samples available.|
 |[Developer Overview](https://go.microsoft.com/fwlink/?LinkId=550995)|Link to a topic providing an overview for developers.|
 
