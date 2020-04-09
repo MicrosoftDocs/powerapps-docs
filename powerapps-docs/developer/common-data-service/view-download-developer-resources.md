@@ -32,7 +32,7 @@ This page provides resources for developers and information about the specific i
 
     ![Advanced Customizations](media/advanced-customizations-menu.png)
 
-1. On the **Settings** page, select the drop-down arrow next to **Settings** and select **Customization**.
+1. On the **Settings** page, select the drop-down arrow next to **Settings**, and select **Customizations**.
 
     ![Select Customizations](media/dev-customization.png)
 
@@ -49,9 +49,9 @@ This section provides links for developers to find resources. The following reso
 |---------|---------|
 |[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006)|The main entry point for documentation for developers.|
 |[Developer Forums](https://go.microsoft.com/fwlink/?LinkId=550993)|Ask and answer questions with other developers.|
-|[NuGet Packages](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
-|[Download Tools](https://go.microsoft.com/fwlink/?LinkID=512122)|Tools that you'll need are available to download from NuGet. Use the PowerShell script on this page to get the latest versions.|
-|[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of samples available.|
+|[SDK NuGet Packages](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
+|SDK Download|We no longer ship the SDK package for Common Data Service as a download. Instead, the SDK assemblies and tools are now available as [NuGet packages](https://go.microsoft.com/fwlink/?LinkId=550994). Use the PowerShell script in this article to get the latest version of SDK tools: [Download tools from NuGet](https://docs.microsoft.com/powerapps/developer/common-data-service/download-tools-nuget)|
+|[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of code samples available.|
 |[Developer Overview](https://go.microsoft.com/fwlink/?LinkId=550995)|Link to a topic providing an overview for developers.|
 
 
