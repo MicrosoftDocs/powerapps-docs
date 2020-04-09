@@ -849,8 +849,8 @@
       href: ./canvas-apps/test-studio.md
     - name: Working with Test Studio
       href: ./canvas-apps/working-with-test-studio.md
-    - name: Use canvas app Monitor
-      href: ./canvas-apps/monitor.md
+  - name: Use canvas app Monitor
+    href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes

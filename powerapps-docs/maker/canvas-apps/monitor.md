@@ -1,5 +1,5 @@
 ---
-title: Monitoring an app with canvas app Monitor | Microsoft Docs
+title: Debugging an app with canvas app Monitor | Microsoft Docs
 description: Describes canvas app Monitor to debug a canvas app.
 author: tapanm-msft
 manager: kvivek
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Canvas app Monitor
+# Debugging an app with canvas app Monitor
 
 ## Overview
 
