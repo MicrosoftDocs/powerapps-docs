@@ -71,6 +71,8 @@
         href: ../user/add-activities.md
       - name: Work with records in the new calendar view
         href: ../user/calendar-view.md
+      - name: Add the calendar control to entities
+        href: ../user/add-calendar-control.md
       - name: FAQ about activities
         href: ../user/faq-for-timeline-and-activity.md
       - name: View and create email through the activities grid
