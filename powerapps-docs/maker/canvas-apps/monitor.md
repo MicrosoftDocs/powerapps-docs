@@ -51,7 +51,7 @@ Monitor helps you answer the following questions about your app:
     - Have you configured the required permissions to run the app correctly?
     - Are your requests throttled by the platform?
 
-These are just a few example questions, and answers that you can uncover when using the monitor. To see **Monitor** in action, see [Example: how to identify an issue in a sample app using Monitor](#Link-To-Example).
+These are just a few example questions, and answers that you can uncover when using the monitor. To see **Monitor** in action, see [example scenario](#example-scenario).
 
 ## Open canvas app Monitor
 
@@ -123,7 +123,7 @@ additional details about the event. The panel has four tabs:
 
     ![JSON format - Response tab](./media/monitor/json-format-response-tab.png)
 
-## Example scenario - use Monitor to identity an issue with an app
+## Example scenario
 
 In this example, you'll use the *Northwind Sample Data* app included with
 the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
