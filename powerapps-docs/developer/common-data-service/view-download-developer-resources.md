@@ -40,6 +40,8 @@ This page provides resources for developers and information about the specific i
 
     ![Developer Resources page](media/developer-resources-page.png)
 
+The following sections explain the information available on the developer resources page.
+
 ## Getting Started 
 
 This section provides links for developers to find resources. The following resources are available:
@@ -50,7 +52,7 @@ This section provides links for developers to find resources. The following reso
 |[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006)|The main entry point for documentation for developers.|
 |[Developer Forums](https://go.microsoft.com/fwlink/?LinkId=550993)|Ask and answer questions with other developers.|
 |[SDK NuGet Packages](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
-|SDK Download|We no longer ship the SDK package for Common Data Service as a download. Instead, the SDK assemblies and tools are now available as [NuGet packages](https://go.microsoft.com/fwlink/?LinkId=550994). Use the PowerShell script in this article to get the latest version of SDK tools: [Download tools from NuGet](https://docs.microsoft.com/powerapps/developer/common-data-service/download-tools-nuget)|
+|SDK Download|We no longer ship the SDK package as a download on Microsoft Download Center. Instead, the SDK assemblies and tools are available as [NuGet packages](https://go.microsoft.com/fwlink/?LinkId=550994). Use the PowerShell script in this article to get the latest version of SDK tools: [Download tools from NuGet](https://docs.microsoft.com/powerapps/developer/common-data-service/download-tools-nuget)|
 |[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of code samples available.|
 |[Developer Overview](https://go.microsoft.com/fwlink/?LinkId=550995)|Link to a topic providing an overview for developers.|
 
