@@ -222,9 +222,18 @@ You can see the activities in the following views:
 
 - **List**: Shows a list of all activities.
 
+  > [!div class="mx-imgBorder"]
+  > ![List view](media/grid-view.png "List view") 
+
 - **Calendar**: Shows a calendar with a list of the day's scheduled activities and the associated deals.
 
+  > [!div class="mx-imgBorder"]
+  > ![Old calendar view](media/old-cal-view.png "Old calendar view") 
+
 - **New Calendar**: Shows an interactive calendar with a list of the day's scheduled activities and the associated deals. More information: [Work with records in the new calendar view](calendar-view.md)
+
+    > [!div class="mx-imgBorder"]
+    > ![New calendar view](media/cal-view.png "New calendar view") 
 
 ## See also
 
