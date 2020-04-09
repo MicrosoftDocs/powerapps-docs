@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/08/2020
+ms.date: 04/09/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -82,9 +82,14 @@ You can also go to general authentication settings from **portal details** using
 
 ### Default identity provider
 
-You can set any identity provider as **default**. When an identity provider is set as default, users signing into the portal always default to sign in with this provider first:
+You can set any identity provider as **default**. When an identity provider is set as default, users signing into the portal always default to sign in with this provider:
 
 ![Default identity provider](media/use-simplified-authentication-configuration/set-default.png)
+
+> [!IMPORTANT]
+> Setting any one identity provider as default **disables all other identity providers**. Users no longer have option to use identity provider other than the default you set.
+
+After you set an identity provider as default, you can then use **Remove as default** to remove the set default identity provider. Removing a default identity provider enables all other identity providers earlier disabled while setting default identity provider.
 
 > [!NOTE]
 > You can only set **configured** identity provider as default. **Set as default** option becomes available after you configure an identity provider.
