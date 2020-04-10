@@ -58,7 +58,7 @@ To save the results, select **Save As** and name the personalized view.
 
 ## Share a personal view
 
-Before you can share a personal view, you must save it as a personal view.
+Before you can share a personal view, it must be saved.
 
 1. On the command bar, select the **Advanced Find** button.
 2. On the Advanced Find tab, select **Saved Views**.
