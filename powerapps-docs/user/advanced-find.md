@@ -78,7 +78,7 @@ Before you can share a personal view, it must be saved.
 
 
 5. Use the look up to find the users or team that you want to share the view with.
-6. When you find the usesr or team, select their name and then choose **Select** and then **Add**.
+6. When you find the user or team, select their name and then choose **Select** and then **Add**.
 
    > [!div class="mx-imgBorder"] 
    > ![Select user or team names](media/saved_views_4.png "Select the user or team names")
