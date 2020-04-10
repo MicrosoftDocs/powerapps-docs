@@ -64,27 +64,27 @@ Before you can share a personal view, you must save it as a personal view.
 2. On the Advanced Find tab, select **Saved Views**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Saved view button](media/saved_view_1.png "Saved view button")
+   > ![Saved view button](media/saved_views_1.png "Saved view button")
    
 3. Select a view from you list of saved views and then select **Share**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select a saved view](media/saved_view_2.png "Select a saved view")
+   > ![Select a saved view](media/saved_views_2.png "Select a saved view")
    
 4. In the **Share saved view** screen, select **Add User/Team**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select users or team](media/saved_view_3.png "Select users or team")
+   > ![Select users or team](media/saved_views_3.png "Select users or team")
 
 
 5. Use the look up to find the users or team you want to share the saved with.
 6. When you find the usesr or team, select their name and then choose **Select** and then **Add**.
 
    > [!div class="mx-imgBorder"] 
-   > ![Select user or team names](media/saved_view_4.png "Select the user or team names")
+   > ![Select user or team names](media/saved_views_4.png "Select the user or team names")
    
 7. Select each user’s permissions. You can give them Read, Write, Delete, Assign, and Share the Personal View. Select **Share** when you’re ready to share the view.
 
    > [!div class="mx-imgBorder"] 
-   > ![Share the view](media/saved_view_5.png "Select share to share the view")
+   > ![Share the view](media/saved_views_5.png "Select share to share the view")
 
