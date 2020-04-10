@@ -21,13 +21,13 @@ search.app:
 
 Find the records you want in your app by using the Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives.  
   
-1. On the command bar, click the **Advanced Find** button.
+1. On the command bar, select the **Advanced Find** button.
   
 2. Specify what to search for.  
   
    1.  In the **Look for** list, select a record type.  
   
-   2.  Click **Select** to define search criteria: field (for example, Account Name or City), the query relational operator (part of an expression such as "is equal to" or "contains" that defines how a specified attribute should be compared with a value.), and the values to locate (for example, "Seattle" or "Email").  
+   2.  Choose **Select** to define search criteria: field (for example, Account Name or City), the query relational operator (part of an expression such as "is equal to" or "contains" that defines how a specified attribute should be compared with a value.), and the values to locate (for example, "Seattle" or "Email").  
   
        You can select fields from the current record type, or from related records. For example, an account might have many related contact records.  
   
@@ -52,3 +52,39 @@ Find the records you want in your app by using the Advanced Find search option. 
    4.  Select **OK**.  
   
 5. Select **Results**.
+
+To save the results, select **Save As** and name the personalized view. 
+
+
+## Share a personal view
+
+Before you can share a personal view, you must save it as a personal view.
+
+1. On the command bar, select the **Advanced Find** button.
+2. On the Advanced Find tab, select **Saved Views**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Saved view button](media/saved_view_1.png "Saved view button")
+   
+3. Select a view from you list of saved views and then select **Share**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Select a saved view](media/saved_view_2.png "Select a saved view")
+   
+4. In the **Share saved view** screen, select **Add User/Team**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Select users or team](media/saved_view_3.png "Select users or team")
+
+
+5. Use the look up to find the users or team you want to share the saved with.
+6. When you find the usesr or team, select their name and then choose **Select** and then **Add**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Select user or team names](media/saved_view_4.png "Select the user or team names")
+   
+7. Select each user’s permissions. You can give them Read, Write, Delete, Assign, and Share the Personal View. Select **Share** when you’re ready to share the view.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Share the view](media/saved_view_5.png "Select share to share the view")
+
