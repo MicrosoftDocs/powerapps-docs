@@ -66,7 +66,7 @@ Before you can share a personal view, it must be saved.
    > [!div class="mx-imgBorder"] 
    > ![Saved view button](media/saved_views_1.png "Saved view button")
    
-3. Select a view from you list of saved views and then select **Share**.
+3. From the list of saved views, select a view and then select **Share**.
 
    > [!div class="mx-imgBorder"] 
    > ![Select a saved view](media/saved_views_2.png "Select a saved view")
@@ -77,13 +77,13 @@ Before you can share a personal view, it must be saved.
    > ![Select users or team](media/saved_views_3.png "Select users or team")
 
 
-5. Use the look up to find the users or team you want to share the saved with.
+5. Use the look up to find the users or team that you want to share the view with.
 6. When you find the usesr or team, select their name and then choose **Select** and then **Add**.
 
    > [!div class="mx-imgBorder"] 
    > ![Select user or team names](media/saved_views_4.png "Select the user or team names")
-   
-7. Select each user’s permissions. You can give them Read, Write, Delete, Assign, and Share the Personal View. Select **Share** when you’re ready to share the view.
+    
+7. Select each user’s permission and then select **Share**.
 
    > [!div class="mx-imgBorder"] 
    > ![Share the view](media/saved_views_5.png "Select share to share the view")
