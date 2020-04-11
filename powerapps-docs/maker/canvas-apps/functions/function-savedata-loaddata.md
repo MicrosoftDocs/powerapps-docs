@@ -23,7 +23,7 @@ The **SaveData** function stores a collection for later use under a name.
 The **LoadData** function reloads a collection by name that was previously saved with **SaveData**. You can't use this function to load a collection from another source.  
 
 > [!NOTE]
-> The name is a key, not a file name.  It need not be complex as it is unique to this app.  The name may not contain any of these characters: `*".?:\<>|/`. 
+> The name shared between **SaveData** and **LoadData** is a key, not a file name.  It need not be complex as names are unique to each app and there is no danger of name conflict.  The name may not contain any of these characters: `*".?:\<>|/`. 
 
 Use these functions to improve app-startup performance by:
 
