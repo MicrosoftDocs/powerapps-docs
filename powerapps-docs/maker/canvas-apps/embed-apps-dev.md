@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 08/28/2019
+ms.date: 04/13/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -64,6 +64,9 @@ The app ID is available on powerapps.com. For the app you want to embed:
     ```
     https://apps.powerapps.com/play/76897698-91a8-b2de-756e-fe2774f114f2?source=iframe
     ```
+
+> [!NOTE]
+> When you embed an app in your website that uses [Launch()](functions/function-param.md) function to launch a webpage or an app, you may need to disable pop-up blockers when you browse to your website for *Launch()* to work.
 
 ## Embed your app in a website
 Embedding your app is now as simple as adding the iframe to the HTML code for your site (or any other service that supports iframes, such as Power BI or SharePoint):
