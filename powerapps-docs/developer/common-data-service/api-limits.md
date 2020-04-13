@@ -259,6 +259,12 @@ Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re
 
 If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the CrmServiceClient class. More information: [Build Windows client applications using the XRM tools](/xrm-tooling/build-windows-client-applications-xrm-tools).
 
+### Use Task Parallel Library with CrmServiceClient
+
+To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
+
+TPL can be used with <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> because CrmServiceClient includes a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone> method that allows for managing multiple instances of the client with TPL. For an example, see [Task Parallel Library sample with CrmServiceClient](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/TPLCrmServiceClient)
+
 ## Using the Web API
 
 TODO need to provide an example
