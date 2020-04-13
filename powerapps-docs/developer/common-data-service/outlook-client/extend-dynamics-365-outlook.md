@@ -2,7 +2,7 @@
 title: "Extend Dynamics 365 for Outlook (Common Data Service) | Microsoft Docs"
 description: "Dynamics 365 for Outlook lets users interact with data while they’re offline and not connected to a server. Common Data Service includes features that let you extend your solutions to offline scenarios by calling the web services offline from your custom code. In addition, the Sdk assembly provides programmatic support for basic Outlook actions such as synchronization, going offline or online, and Dynamics 365 for Outlook state verification. Offline programming uses the ASP.NET Development Server."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/07/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -15,17 +15,15 @@ search.app:
   - PowerApps
   - D365CE
 ---
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/extend-customer-engagement-outlook 
-
-This topic should be in powerapps-docs/developer/common-data-service/outlook-client/
--->
 
 # Extend Dynamics 365 for Outlook
 
 > [!IMPORTANT]
-> As of 1/29/2018, based on overwhelming customer feedback and our desire to continue supporting our customers, we have **decided not to deprecate Dynamics 365 for Outlook** (Outlook add-in). Please read [this blog post](https://blogs.msdn.microsoft.com/crm/2018/01/29/continued-support-for-outlook-add-in-dynamics-365-for-outlook/) for more details.
+> Effective March 2020, the legacy Dynamics 365 for Outlook (also referred to as Outlook COM add-in) is deprecated. Customers must transition to the modern [Dynamics 365 App for Outlook](https://docs.microsoft.com/dynamics365/outlook-app/overview) before October 1, 2020. Microsoft will continue to provide support, security and other critical updates to the Outlook COM Add-in until October 1, 2020.
+> 
+> For further information and steps to make a smooth transition, download [Dynamics 365 for Outlook (COM add-in) Playbook](https://aka.ms/OutlookCOMPlaybook).
 
-Microsoft Dynamics 365 for Outlook lets users interact with data while they’re offline and not connected to a server. Common Data Service includes features that let you extend your solutions to offline scenarios by calling the web services offline from your custom code. In addition, the <xref:Microsoft.Crm.Outlook.Sdk> assembly provides programmatic support for basic Outlook actions such as synchronization, going offline or online, and Dynamics 365 for Outlook state verification. Offline programming uses the ASP.NET Development Server.  
+Dynamics 365 for Outlook lets users interact with data while they’re offline and not connected to a server. Common Data Service includes features that let you extend your solutions to offline scenarios by calling the web services offline from your custom code. In addition, the <xref:Microsoft.Crm.Outlook.Sdk> assembly provides programmatic support for basic Outlook actions such as synchronization, going offline or online, and Dynamics 365 for Outlook state verification. Offline programming uses the ASP.NET Development Server.  
   
  Dynamics 365 includes features that allow administrators to customize and manage filters for their users. Filter templates provide the starting point for entity synchronization on Dynamics 365 for Outlook. Filters determine which entity collections are synchronized to Outlook and to SQL Server 2008 Express Edition for offline-enabled Dynamics 365 solutions.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Territory Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Territory entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the Territory entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # Territory Entity Reference
 
@@ -89,7 +90,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |--------|-----|
 |Description|The default image for the entity.|
 |DisplayName|Entity Image|
-|IsPrimaryImage|False|
+|IsPrimaryImage|True|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|entityimage|
@@ -833,7 +834,7 @@ Same as territory entity [territory_parent_territory](territory.md#BKMK_territor
 |--------|-----|
 |ReferencingEntity|territory|
 |ReferencingAttribute|parentterritoryid|
-|IsHierarchical|False|
+|IsHierarchical|True|
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|territory_parent_territory|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |

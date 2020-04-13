@@ -229,9 +229,12 @@ export class TSLinearInputComponent
 
 Developers and app makers can define their styling to represent their code components visually using CSS. CSS allows the developers to describe the presentation of code components, including style, colors, layouts, and fonts. The linear input component's [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate `CSS` file. Additional component resources like `CSS` files can be included with the code component to support further customizations.
 
+> [!IMPORTANT]
+> When you implement styling to your code components using CSS, ensure that the CSS is scoped to your control using the automatically generated CSS classes applied to the container `DIV` element for your component. If your CSS is scoped globally, it will likely break the existing styling of the form or screen where the code component is rendered. If using a third-party CSS framework, use a version of that framework that is already namespaced or otherwise wrap that framework in a namespace manually either by hand or using a CSS preprocessor.
+
 1. Create a new `css` subfolder under the `TSLinearInputComponent` folder. 
 2. Create a new `TS_LinearInputComponent.css` file inside the `css` subfolder. 
-3. Add the following style content to the `TS_LinearInputComponent.css` file:""""""""
+3. Add the following style content to the `TS_LinearInputComponent.css` file:
 
     ```CSS
     .SampleNamespace\.TSLinearInputComponent input[type=range].linearslider {

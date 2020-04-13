@@ -1,7 +1,7 @@
 ---
 title: "connector Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the connector entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the connector entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # connector Entity Reference
 
@@ -37,6 +38,7 @@ Connector Entity to support Solutioning Integration
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH [*org URI*]/api/data/v9.0/connectors(*connectorid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/connectors(*connectorid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+
 
 ## Entity Properties
 
@@ -218,6 +220,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -973,6 +977,7 @@ Listed by **SchemaName**.
 - [connector_ProcessSession](#BKMK_connector_ProcessSession)
 - [connector_BulkDeleteFailures](#BKMK_connector_BulkDeleteFailures)
 - [connector_PrincipalObjectAttributeAccesses](#BKMK_connector_PrincipalObjectAttributeAccesses)
+- [connector_connectionreference](#BKMK_connector_connectionreference)
 
 
 ### <a name="BKMK_connector_SyncErrors"></a> connector_SyncErrors
@@ -1109,6 +1114,23 @@ Same as principalobjectattributeaccess entity [connector_PrincipalObjectAttribut
 |ReferencedEntityNavigationPropertyName|connector_PrincipalObjectAttributeAccesses|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_connector_connectionreference"></a> connector_connectionreference
+
+**Added by**: Power Platform Connection References Solution
+
+Same as connectionreference entity [connector_connectionreference](connectionreference.md#BKMK_connector_connectionreference) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|connectionreference|
+|ReferencingAttribute|customconnectorid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|connector_connectionreference|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
