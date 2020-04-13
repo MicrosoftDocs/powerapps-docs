@@ -1,7 +1,7 @@
 ---
 title: "Workflow Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Workflow entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the Workflow entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # Workflow Entity Reference
 
@@ -81,6 +82,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [PrimaryEntity](#BKMK_PrimaryEntity)
 - [ProcessOrder](#BKMK_ProcessOrder)
 - [ProcessRoleAssignment](#BKMK_ProcessRoleAssignment)
+- [ProcessTriggerFormId](#BKMK_ProcessTriggerFormId)
+- [ProcessTriggerScope](#BKMK_ProcessTriggerScope)
 - [Rank](#BKMK_Rank)
 - [RendererObjectTypeCode](#BKMK_RendererObjectTypeCode)
 - [RunAs](#BKMK_RunAs)
@@ -492,6 +495,40 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MaxLength|1048576|
 |RequiredLevel|None|
 |Type|Memo|
+
+
+### <a name="BKMK_ProcessTriggerFormId"></a> ProcessTriggerFormId
+
+|Property|Value|
+|--------|-----|
+|Description|Unique identifier of the associated form for process trigger.|
+|DisplayName|ProcessTriggerFormId|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|processtriggerformid|
+|RequiredLevel|None|
+|Type|Uniqueidentifier|
+
+
+### <a name="BKMK_ProcessTriggerScope"></a> ProcessTriggerScope
+
+|Property|Value|
+|--------|-----|
+|Description|Scope of the process trigger.|
+|DisplayName|ProcessTriggerScope|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|processtriggerscope|
+|RequiredLevel|None|
+|Type|Picklist|
+
+#### ProcessTriggerScope Options
+
+|Value|Label|
+|-----|-----|
+|1|Form|
+|2|Entity|
+
 
 
 ### <a name="BKMK_Rank"></a> Rank
@@ -1483,6 +1520,7 @@ Listed by **SchemaName**.
 - [lk_newprocess_processid](#BKMK_lk_newprocess_processid)
 - [Workflow_SyncErrors](#BKMK_Workflow_SyncErrors)
 - [workflow_active_workflow](#BKMK_workflow_active_workflow)
+- [msdyn_retrainworkflow_msdyn_toaimodel](#BKMK_msdyn_retrainworkflow_msdyn_toaimodel)
 - [regardingobjectid_process](#BKMK_regardingobjectid_process)
 - [workflow_workflowbinary_Process](#BKMK_workflow_workflowbinary_Process)
 - [msdyn_workflow_msdyn_solutionhealthrule_Workflow](#BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow)
@@ -1516,7 +1554,7 @@ Same as processstage entity [process_processstage](processstage.md#BKMK_process_
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|process_processstage|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: Cascade<br />Unshare: Cascade|
 
 
 ### <a name="BKMK_lk_asyncoperation_workflowactivationid"></a> lk_asyncoperation_workflowactivationid
@@ -1684,9 +1722,26 @@ Same as workflow entity [workflow_active_workflow](workflow.md#BKMK_workflow_act
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_msdyn_retrainworkflow_msdyn_toaimodel"></a> msdyn_retrainworkflow_msdyn_toaimodel
+
+**Added by**: AISolution Solution
+
+Same as msdyn_aimodel entity [msdyn_retrainworkflow_msdyn_toaimodel](msdyn_aimodel.md#BKMK_msdyn_retrainworkflow_msdyn_toaimodel) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aimodel|
+|ReferencingAttribute|msdyn_retrainworkflowid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|msdyn_retrainworkflow_msdyn_toaimodel|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_regardingobjectid_process"></a> regardingobjectid_process
 
-**Added by**: Power Automate Extensions package Solution
+**Added by**: Microsoft Flow Extensions core package Solution
 
 Same as flowsession entity [regardingobjectid_process](flowsession.md#BKMK_regardingobjectid_process) Many-To-One relationship.
 
@@ -1698,12 +1753,12 @@ Same as flowsession entity [regardingobjectid_process](flowsession.md#BKMK_regar
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|regardingobjectid_process|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_workflow_workflowbinary_Process"></a> workflow_workflowbinary_Process
 
-**Added by**: Power Automate Extensions package Solution
+**Added by**: Microsoft Flow Extensions core package Solution
 
 Same as workflowbinary entity [workflow_workflowbinary_Process](workflowbinary.md#BKMK_workflow_workflowbinary_Process) Many-To-One relationship.
 
@@ -1715,7 +1770,7 @@ Same as workflowbinary entity [workflow_workflowbinary_Process](workflowbinary.m
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|workflow_workflowbinary_Process|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_msdyn_workflow_msdyn_solutionhealthrule_Workflow"></a> msdyn_workflow_msdyn_solutionhealthrule_Workflow

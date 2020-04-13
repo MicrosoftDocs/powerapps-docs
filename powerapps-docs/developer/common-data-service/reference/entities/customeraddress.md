@@ -1,7 +1,7 @@
 ---
 title: "CustomerAddress Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CustomerAddress entity in Common Data Service."
-ms.date: 03/26/2020
+description: "Includes schema information and supported messages for the CustomerAddress entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,13 +12,12 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # CustomerAddress Entity Reference
 
 Address and shipping information. Used to store additional addresses for an account or contact.
 
->[!NOTE]
->The Customer Address table is updated at the platform level when a change is made to the Account or Contact entities. Because of this, no separate SDK call will be made to update or create the Customer Address entity. Any code that is triggering on address updates or creates should be pointing to the Contact or Account entities.
 
 ## Messages
 
