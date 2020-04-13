@@ -1,7 +1,7 @@
 ---
 title: "SdkMessageProcessingStep Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SdkMessageProcessingStep entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the SdkMessageProcessingStep entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # SdkMessageProcessingStep Entity Reference
 
@@ -445,6 +446,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |45|Internal Post-operation After External Plugins (For internal use only)|
 |50|Post-operation (Deprecated)|
 |55|Final Post-operation (For internal use only)|
+|80|Pre-Commit stage fired before transaction commit (For internal use only)|
+|90|Post-Commit stage fired after transaction commit (For internal use only)|
 
 
 

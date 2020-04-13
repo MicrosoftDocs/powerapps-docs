@@ -1,7 +1,7 @@
 ---
 title: "flowsession Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the flowsession entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the flowsession entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,12 +12,13 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # flowsession Entity Reference
 
 Entity to store the information that is generated when a modern flow or UI flow runs.
 
-**Added by**: Power Automate Extensions package Solution
+**Added by**: Microsoft Flow Extensions core package Solution
 
 
 ## Messages
@@ -26,6 +27,7 @@ Entity to store the information that is generated when a modern flow or UI flow 
 |-|-|-|
 |Assign|PATCH [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `ownerid` property.|<xref:Microsoft.Crm.Sdk.Messages.AssignRequest>|
 |Create|POST [*org URI*]/api/data/v9.0/flowsessions<br />See [Create](/powerapps/developer/common-data-service/webapi/create-entity-web-api)|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*>|
+|CreateMultiple|<xref href="Microsoft.Dynamics.CRM.CreateMultiple?text=CreateMultiple Action" />|<xref:Microsoft.Xrm.Sdk.Messages.CreateMultipleRequest>|
 |Delete|DELETE [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />See [Delete](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-delete)|<xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Delete*>|
 |GrantAccess|<xref href="Microsoft.Dynamics.CRM.GrantAccess?text=GrantAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|
 |IsValidStateTransition|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref:Microsoft.Crm.Sdk.Messages.IsValidStateTransitionRequest>|
@@ -37,6 +39,7 @@ Entity to store the information that is generated when a modern flow or UI flow 
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/flowsessions(*flowsessionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+|UpdateMultiple|<xref href="Microsoft.Dynamics.CRM.UpdateMultiple?text=UpdateMultiple Action" />|<xref:Microsoft.Xrm.Sdk.Messages.UpdateMultipleRequest>|
 
 ## Entity Properties
 
@@ -61,10 +64,12 @@ Entity to store the information that is generated when a modern flow or UI flow 
 These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
 - [CompletedOn](#BKMK_CompletedOn)
+- [Context](#BKMK_Context)
 - [CorrelationId](#BKMK_CorrelationId)
 - [ErrorCode](#BKMK_ErrorCode)
 - [ErrorMessage](#BKMK_ErrorMessage)
 - [flowsessionId](#BKMK_flowsessionId)
+- [Gateway](#BKMK_Gateway)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
@@ -93,6 +98,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |LogicalName|completedon|
 |RequiredLevel|None|
 |Type|DateTime|
+
+
+### <a name="BKMK_Context"></a> Context
+
+|Property|Value|
+|--------|-----|
+|Description|Context about flow session.|
+|DisplayName|Context|
+|Format|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|context|
+|MaxLength|10000|
+|RequiredLevel|None|
+|Type|Memo|
 
 
 ### <a name="BKMK_CorrelationId"></a> CorrelationId
@@ -155,6 +176,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |LogicalName|flowsessionid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_Gateway"></a> Gateway
+
+|Property|Value|
+|--------|-----|
+|Description|The name of the gateway used.|
+|DisplayName|Gateway|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|gateway|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
@@ -835,8 +872,6 @@ Listed by **SchemaName**.
 - [flowsession_BulkDeleteFailures](#BKMK_flowsession_BulkDeleteFailures)
 - [flowsession_PrincipalObjectAttributeAccesses](#BKMK_flowsession_PrincipalObjectAttributeAccesses)
 - [flowsession_workflowbinary_FlowSessionId](#BKMK_flowsession_workflowbinary_FlowSessionId)
-- [lk_workflowlog_flowsession_childworkflow](#BKMK_lk_workflowlog_flowsession_childworkflow)
-- [lk_workflowlog_flowsessions](#BKMK_lk_workflowlog_flowsessions)
 
 
 ### <a name="BKMK_flowsession_SyncErrors"></a> flowsession_SyncErrors
@@ -937,40 +972,6 @@ Same as workflowbinary entity [flowsession_workflowbinary_FlowSessionId](workflo
 |ReferencedEntityNavigationPropertyName|flowsession_workflowbinary_FlowSessionId|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_lk_workflowlog_flowsession_childworkflow"></a> lk_workflowlog_flowsession_childworkflow
-
-**Added by**: System Solution Solution
-
-Same as workflowlog entity [lk_workflowlog_flowsession_childworkflow](workflowlog.md#BKMK_lk_workflowlog_flowsession_childworkflow) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|workflowlog|
-|ReferencingAttribute|childworkflowinstanceid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|lk_workflowlog_flowsession_childworkflow|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_lk_workflowlog_flowsessions"></a> lk_workflowlog_flowsessions
-
-**Added by**: System Solution Solution
-
-Same as workflowlog entity [lk_workflowlog_flowsessions](workflowlog.md#BKMK_lk_workflowlog_flowsessions) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|workflowlog|
-|ReferencingAttribute|asyncoperationid|
-|IsHierarchical|False|
-|IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|lk_workflowlog_flowsessions|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: Cascade<br />Delete: Cascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 
