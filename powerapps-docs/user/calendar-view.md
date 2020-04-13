@@ -114,4 +114,4 @@ You can use the Search box to filter the records in the calendar based on a sear
 
 ### See also
 
-[Add the calendar control to entities](add-calendar-control.md)
+[Add the calendar control to entities](../maker/model-driven-apps/add-calendar-control.md)

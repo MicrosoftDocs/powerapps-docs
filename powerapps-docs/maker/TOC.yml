@@ -71,8 +71,6 @@
         href: ../user/add-activities.md
       - name: Work with records in the new calendar view
         href: ../user/calendar-view.md
-      - name: Add the calendar control to entities
-        href: ../user/add-calendar-control.md
       - name: FAQ about activities
         href: ../user/faq-for-timeline-and-activity.md
       - name: View and create email through the activities grid
@@ -1103,6 +1101,8 @@
           href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
         - name: Timer control overview
           href: ./model-driven-apps/timer-control-legacy.md
+        - name: Add the calendar control to entities
+        href: ./model-driven-apps/add-calendar-control.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
