@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/08/2020
+ms.date: 04/13/2020
 ms.author: yogupt
 ms.reviewer: tapanm
 ---
@@ -23,9 +23,6 @@ In this article, you'll walk through basic themes feature. For more advanced the
 ## Enable basic theme for existing portals (Preview)
 
 To enable basic theme and apply a preset theme on your existing portal:
-
-> [!NOTE]
-> If you created portal after April 1, 2020, you already have basic theme feature enabled.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
