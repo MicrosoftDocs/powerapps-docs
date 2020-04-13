@@ -6,11 +6,10 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/05/2020
+ms.date: 04/07/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
-  - GetStarted
   - PowerApps
 ---
 # Deploy and configure the Hospital Emergency Response app
@@ -28,6 +27,24 @@ Watch how you can deploy and configure the Hospital Emergency Response app.
 > [!VIDEO https://www.youtube.com/embed/-1g44wNiuWI]
 
 
+## Service URLs for US Government customers
+
+The Hospital Emergency Response solution is also available for US Government customers. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
+
+The commercial version of the service URL is used throughout this article. If you are a US Government customer, use the respective US Government URL for your deployment as mentioned here:
+
+
+| **Commercial version URL**                | **US Government version URL**  |
+|-------------------------------------------|--------------------------------|
+| https://make.powerapps.com                | https://make.gov.powerapps.us (GCC)<br/><br/>https://make.high.powerapps.us (GCC High)                |
+| https://admin.powerplatform.microsoft.com | https://gcc.admin.powerplatform.microsoft.us (GCC)<br/><br/>https://high.admin.powerplatform.microsoft.us (GCC High) |
+| https://app.powerbi.com/                  | <https://app.powerbigov.us> (GCC)<br/><br/>https://app.high.powerbigov.us (GCC High)                  |
+
+For detailed information about the US Government plans for Power Apps and Power BI, see:
+- [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
+- [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
+
+
 ## Deploy the Hospital Emergency Response app
 
 Perform the following steps to deploy the Hospital Emergency Response sample app for your organization.
@@ -40,7 +57,7 @@ Perform the following steps to deploy the Hospital Emergency Response sample app
     - [Step 4.2: Load master data](#step-42-load-master-data)
 - [Step 5: Update the mobile app branding](#step-5-update-the-mobile-app-branding)
 - [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
-- [Step 7: Add Azure Application Insights key to mobile apps for telemetry](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry)
+- [Step 7: Add Azure Application Insights key to mobile apps for telemetry (optional)](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry-optional)
 - [Step 8: Share canvas apps with users in your organization](#step-8-share-canvas-apps-with-users-in-your-organization)
 - [Step 9: Set your mobile app as hero and featured app](#step-9-set-your-mobile-app-as-hero-and-featured-app)
 - [Step 10: Share model-driven app with admins in your organization](#step-10-share-model-driven-app-with-admins-in-your-organization)
@@ -69,14 +86,21 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 Get the latest deployment package (.zip) from <https://aka.ms/emergency-response-solution> that contains the solution file, images, and data files to set up the apps and business logic for the Hospital Emergency Response app.
 
-To begin the deployment process, extract the deployment file (.zip) to a location on your computer. The extracted folder will contain the following folders:
+> [!IMPORTANT]
+> Before extracting the deployment package (.zip file), ensure that you unblock the file. To unblock:
+> 1. Right-click the .zip file and select **Properties**.
+> 2. In the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
+
+<br/>
+
+After unblocking the deployment file (.zip file), extract the file to a location on your computer. The extracted folder will contain the following folders:
 
 | **Folder/File**       | **Description**  |
 |-----------------------|------------------|
 | **App Icons**         | Contains the default app icons for the mobile apps (canvas apps)|
 | **Data Files**        | Contains the master and sample data files (.xlsx) for the solution/app to work. You can import data from these files to start working on the app. More information: see [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization) |
 | **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization. More Information: [Get insights using Power BI dashboards](#get-insights-using-power-bi-dashboards)|
-| **PowerShell**        | Contains scripts that you will use to configure your mobile apps (canvas apps). |
+| **PowerShell**        | Contains scripts that you'll use to configure your mobile apps (canvas apps). |
 | **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Hospital Emergency Response app.  |
 
 ### Step 3: Import the solution file into your environment
@@ -146,7 +170,7 @@ The **Data Files** folder has the following files and folders:
 <tr>
 <td><strong>Sample Data</strong> folder</td>
 <td><p>The folder contains the sample data files (.xlsx) that you can import to populate the sample data in your application. The files are named to denote the sequence in which the data should be imported into your app. </p>
-<p>You must import data for the following entities that contain the master sample data for the Hospital Emergency Response app:
+<p>Import data for the following entities that contain the master sample data for the Hospital Emergency Response app:
 <ul>
 <li>Systems</li>
 <li>Regions</li>
@@ -312,9 +336,9 @@ Next do the following:
 
 5.  Repeat steps 2 - 4 for each canvas app.
 
-### Step 7: Add Azure Application Insights key to mobile apps for telemetry
+### Step 7: Add Azure Application Insights key to mobile apps for telemetry (optional)
 
-You can use Azure Application Insights to collect detailed telemetry for your mobile apps (canvas apps) to get insights on the app usage. For detailed information about this, see [Analyze app telemetry using Application Insights](https://docs.microsoft.com/powerapps/maker/canvas-apps/application-insights)
+Optionally, you can use Azure Application Insights to collect detailed telemetry for your mobile apps (canvas apps) to get insights on the app usage. For detailed information about this, see [Analyze app telemetry using Application Insights](https://docs.microsoft.com/powerapps/maker/canvas-apps/application-insights)
 
 ### Step 8: Share canvas apps with users in your organization
 
@@ -663,7 +687,9 @@ Publish the Power BI dashboard and share it with users in your organization so t
 - Install Power BI Desktop from the Windows app store: <https://aka.ms/pbidesktop>
 
    > [!NOTE] 
-   > If you have installed Power BI by downloading directly from the Power BI site as an executable in the past, remove it and use the one from the app store. The app store version will be updated automatically as new releases are available.
+   > If you have installed Power BI Desktop by downloading directly from the Download Center page as an executable in the past, remove it and use the one from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available.
+   >
+   > If you can't install from Microsoft Store, install the latest non-Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
 
 - After installing Power BI Desktop from app store, run it, sign in using an account that has permission to publish Power BI apps in your organization.
 

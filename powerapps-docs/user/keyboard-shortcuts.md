@@ -65,8 +65,8 @@ If your administrator has enabled editable grids (views), you can edit data dire
 
 |Task  | Unified Interface|
 |---------|---------|
-|When the focus is on a column header, sort by column | Enter key |
-|When the focus is on a column header, open filter dialog | Spacebar|
+|When the focus is on a column header, sort by column | Spacebar to drop down list and then down arrow to select an action, followed by Enter |
+|When the focus is on a column header, open filter dialog | Spacebar to drop down list and then down arrow to select the **Filter by** option, followed by Enter |
 |When the focus is on the cells, move to the next field |  Right arrow (→) key  | 
 |When the focus is on the cells, move to the previous field   |  Left arrow (←) key|
 |When the focus is on the column header, move to the next column header |  Tab  | 
