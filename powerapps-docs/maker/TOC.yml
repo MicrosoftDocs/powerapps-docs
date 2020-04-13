@@ -1102,7 +1102,7 @@
         - name: Timer control overview
           href: ./model-driven-apps/timer-control-legacy.md
         - name: Add the calendar control to entities
-        href: ./model-driven-apps/add-calendar-control.md
+          href: ./model-driven-apps/add-calendar-control.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
