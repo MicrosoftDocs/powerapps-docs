@@ -234,7 +234,7 @@ Developers and app makers can define their styling to represent their code compo
 
 1. Create a new `css` subfolder under the `TSLinearInputComponent` folder. 
 2. Create a new `TS_LinearInputComponent.css` file inside the `css` subfolder. 
-3. Add the following style content to the `TS_LinearInputComponent.css` file:""""""""
+3. Add the following style content to the `TS_LinearInputComponent.css` file:
 
     ```CSS
     .SampleNamespace\.TSLinearInputComponent input[type=range].linearslider {
