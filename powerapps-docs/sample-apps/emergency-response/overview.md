@@ -22,7 +22,7 @@ The Hospital Emergency Response sample solution provides a set of capabilities f
 The main components of the Hospital Emergency Response solution are:
 
 - **Mobile app for frontline staff**: Frontline staff, such as nurses and medical practitioners, can use the mobile app to quickly view and enter information as required.
-- **Web app for Hospital IT admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
+- **Web app for Hospital admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
 - **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
 
 ## Demo: Quick overview
@@ -42,15 +42,21 @@ Contact your local Microsoft account representative for questions related to lic
 
 See also: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 
+## Start here
+
+|Task | Target audience|See|
+|--|--|--|
+|Deploy the sample app and dashboard|IT admin|[Deploy the Hospital Emergency Response app](deploy-configure.md)|
+|Use the admin app to add/manage master data|Business admin|[Configure and manage master data for your organization](configure-data-reporting.md#configure-and-manage-master-data-for-your-organization)|
+|Use dashboards for insights and decision making|Business admin|[View Common Data Service dashboards](configure-data-reporting.md#view-common-data-service-dashboards)<br/><br/>[View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)|
+|Use the mobile app to track data for ventilators, staffing, pending discharges, and COVID-19 related patients|Frontline worker|[Use the Hospital Emergency Response mobile app](use.md)
+
+
 ## Issues and feedback
 
 - To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
 
 - For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
-
-## Next step
-
-[Deploy and configure the Hospital Emergency Response app](deploy-configure.md)
 
 ### Disclaimer
 
