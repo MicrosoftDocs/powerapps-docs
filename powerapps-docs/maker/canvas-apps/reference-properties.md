@@ -490,7 +490,7 @@ Configure the appearance and behavior of a control by setting one of its propert
 
 **[Transition](controls/control-gallery.md)** – The visual effect (**Pop**, **Push**, or **None**) when the user hovers over an item in a gallery.  Applies to the **[Gallery](controls/control-gallery.md)** control.
 
-**[Transparency](controls/control-image.md)** – The degree to which controls behind an image remain visible.  Applies to the **[Image](controls/control-image.md)** control.
+**[Transparency](controls/control-image.md)** – The degree to which controls behind an image remain visible.  Applies to the **[Image](controls/control-image.md)** control. Decimal values range from 0 to 1.  Where 0 is transparent, 0.5 is semi-transparent and 1 is opaque.
 
 ### U
 
