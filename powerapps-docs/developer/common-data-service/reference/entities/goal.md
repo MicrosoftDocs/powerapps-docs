@@ -1,7 +1,7 @@
 ---
 title: "Goal Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Goal entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the Goal entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # Goal Entity Reference
 
@@ -264,7 +265,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |--------|-----|
 |Description|The default image for the entity.|
 |DisplayName|Entity Image|
-|IsPrimaryImage|False|
+|IsPrimaryImage|True|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|entityimage|
@@ -2099,7 +2100,7 @@ Same as goal entity [Goal_RollupError_Goal](goal.md#BKMK_Goal_RollupError_Goal) 
 |IsCustomizable|True|
 |ReferencedEntityNavigationPropertyName|Goal_RollupError_Goal|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_Goal_SyncErrors"></a> Goal_SyncErrors
