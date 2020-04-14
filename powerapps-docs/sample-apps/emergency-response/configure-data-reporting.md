@@ -1,5 +1,5 @@
 ---
-title: Deploy and configure the Hospital Emergency Response app | Microsoft Docs
+title: Configure master data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
 description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: pankajarora-msft
 manager: annbe
