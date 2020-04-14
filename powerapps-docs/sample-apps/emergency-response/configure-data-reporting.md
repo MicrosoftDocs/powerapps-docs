@@ -18,19 +18,14 @@ This article provides information on how you can use the admin app (model-driven
 
 These tasks are typically performed by business admins in your organization.
 
-## Prerequisites
-
-Make sure your IT admin has:
-- Deployed the solution in your organization and has granted appropriate permissions for business admins to use the admin app. More information: [Deploy the Hospital Emergency Response app](deploy-configure.md#deploy-the-hospital-emergency-response-app)
-
-- Published the Power BI dashboard in your organization. More information: [Publish the Power BI dashboard](deploy-configure.md#publish-the-power-bi-dashboard)
-
 ## Configure and manage master data for your organization
 
 Use the admin app to create and manage master data for your organization. This data is required for the Hospital Emergency Response app to work.
 
 > [!IMPORTANT]
-> You can also import your data from the data files available in the deployment package. More information: [Step 4: Load configuration and master data for your organization](deploy-configure.md#step-4-load-configuration-and-master-data-for-your-organization)
+> - Ensure that your IT Admin has deployed the solution in your organization and has granted appropriate permissions for business admins to use the admin app. More information: [Deploy the Hospital Emergency Response app](deploy-configure.md#deploy-the-hospital-emergency-response-app)
+> 
+> - You can also import your data from the data files available in the deployment package. More information: [Step 4: Load configuration and master data for your organization](deploy-configure.md#step-4-load-configuration-and-master-data-for-your-organization)
 
 You must add master data in these entities in the following sequence:
 
@@ -285,7 +280,7 @@ View the Power BI dashboards for insights and decision making.
 
 - Power BI Premium Capacity or Power BI Pro licenses assigned to users accessing the report. 
 
-- Your IT admin must have published the report and granted you permissions to access it. More information: 
+- Your IT admin must have published the Power BI report and granted you permissions to access it. More information: [Publish the Power BI dashboard](deploy-configure.md#publish-the-power-bi-dashboard) 
 
 ### View the dashboard
 
