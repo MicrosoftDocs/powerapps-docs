@@ -21,9 +21,9 @@ These tasks are typically performed by business admins in your organization.
 ## Prerequisites
 
 Make sure your IT admin has:
-- Deployed the solution in your organization and has granted appropriate permissions for business admins to use the admin app. More information: 
+- Deployed the solution in your organization and has granted appropriate permissions for business admins to use the admin app. More information: [Deploy the Hospital Emergency Response app](deploy-configure.md#deploy-the-hospital-emergency-response-app)
 
-- Published the Power BI report in your organization. More information: 
+- Published the Power BI dashboard in your organization. More information: [Publish the Power BI dashboard](deploy-configure.md#publish-the-power-bi-dashboard)
 
 ## Configure and manage master data for your organization
 
