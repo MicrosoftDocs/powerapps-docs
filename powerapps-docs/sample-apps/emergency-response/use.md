@@ -1,5 +1,5 @@
 ---
-title: Use the Hospital Emergency Response app | Microsoft Docs
+title: Use the Hospital Emergency Response mobile app | Microsoft Docs
 description: Walk-through different apps and components for the users of the Hospital Emergency Response sample app template 
 author: pankajarora-msft
 ms.service: powerapps
@@ -12,14 +12,14 @@ searchScope:
   - PowerApps
 ---
 
-# Use the Hospital Emergency Response app
+# Use the Hospital Emergency Response mobile app
 
 Hospital staff are challenged to meet an increase in number of
 patients while managing supply chain during emergency. By using the Hospital Emergency Response mobile app, frontline workers can quickly view and add data for ventilators, staffing, pending discharges,and COVID-19 related patients.
 
 ## Prerequisites
 
-To get started with the app, you need to download the Power Apps Mobile on your
+To get started with the mobile app, you need to download the Power Apps Mobile on your
 device using the device's app store.
 
 - **Download** the [**Power Apps Mobile**](https://powerapps.microsoft.com/downloads)
@@ -32,7 +32,7 @@ sign in with your company's Azure Active Directory account. You can view all
 apps shared to you by your organization once you sign in. For more information, see [Power Apps mobile device sign
 in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in).
 
-## Demo: Use the Hospital Emergency Response app
+## Demo: Use the Hospital Emergency Response mobile app
 
 Watch how to use the Hospital Emergency Response app.
 
@@ -40,7 +40,7 @@ Watch how to use the Hospital Emergency Response app.
 
 > [!VIDEO https://www.youtube.com/embed/H1u6SYt3UsQ]
 
-## Hospital Emergency Response app
+## Hospital Emergency Response mobile app
 
 ![Hospital Emergency Response app](media/use/app-launcher.png)
 

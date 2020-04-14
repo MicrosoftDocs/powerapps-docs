@@ -1641,9 +1641,11 @@
     items:
     - name: Overview
       href: ../sample-apps/emergency-response/overview.md
-    - name: Deploy and configure the app
+    - name: Deploy the app
       href: ../sample-apps/emergency-response/deploy-configure.md
-    - name: Use the app
+    - name: Use the admin app and dashboards
+      href: ../sample-apps/emergency-response/configure-data-reporting.md
+      - name: Use the mobile app
       href: ../sample-apps/emergency-response/use.md
 - name: Learn from others
   items:
