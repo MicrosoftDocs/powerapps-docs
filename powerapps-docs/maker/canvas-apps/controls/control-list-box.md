@@ -92,6 +92,12 @@ When you add a gallery, a list, or a chart, the property list shows **Items** by
 
 **[Reset](properties-core.md)** – Whether a control reverts to its default value.
 
+**Selected** – The data record that represents the selected item.  You can only have one default selected item.  If you need multiple selected items please use the [Combo Box](control-combo-box.md) control.
+
+**SelectedItems** - **Read-only**. Represents a datatable of selected items for a multiselect listbox.
+
+**SelectedItemsText** - **Read-only**. Represents a datatable of selected items text for a multiselect listbox.
+
 **SelectedText (Deprecated)** – A string value that represents the selected item.
 
 **[SelectionColor](properties-color-border.md)** – The text color of a selected item or items in a list or the color of the selection tool in a pen control.
