@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/07/2020
+ms.date: 04/13/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
@@ -179,13 +179,13 @@ The **Data Files** folder has the following files and folders:
 <li>Departments</li>
 </ul>
 <p>If you want to import your organization data instead of the sample data, you can replace the sample data in these Excel files with your organization data, and then import the data in the app.</p>
-<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="#manually-configure-and-manage-master-data-for-your-organization">Manually configure and manage master data for your organization</a></p></td>
+<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="configure-data-reporting.md#configure-and-manage-master-data-for-your-organization">Configure and manage master data for your organization</a></p></td>
 </tr>
 <tr>
 <td><strong>Data Template File for Master Data</strong> folder</td>
 <td><p>The folder contains "empty" data files (.xlsx) for master entities that you can use to populate your organization data, and then import it to the app.</p>
 <p>The files are named to denote the sequence in which the data should be imported into your app. It's the same list of entities that is mentioned earlier for the <strong>Sample Data</strong> folder.</p>
-<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="#manually-configure-and-manage-master-data-for-your-organization">Manually configure and manage master data for your organization</a></p>
+<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="#configure-data-reporting.md#configure-and-manage-master-data-for-your-organization">Configure and manage master data for your organization</a></p>
 </td>
 </tr>
 </table>
@@ -222,7 +222,7 @@ To import data from one of the data files to an entity:
 
 Repeat the above steps with other configuration data entities.
 
-Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
+Alternatively, if you want to enter the master data manually, see [Configure and manage master data for your organization](#configure-data-reporting.md#configure-and-manage-master-data-for-your-organization).
 
 #### Step 4.2: Load master data
 
@@ -231,7 +231,7 @@ As explained earlier:
 
 - You can use the "empty" data files for master entities under the **Data Files/Data Template File for Master Data** folder that you can use to populate your organization data, and then import the data in the required entities.
 
-You can also manually add master data later. More information: [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization)
+You can also manually add master data later. More information: [Configure and manage master data for your organization](#configure-data-reporting.md#configure-and-manage-master-data-for-your-organization)
 
 ### Step 5: Update the mobile app branding
 

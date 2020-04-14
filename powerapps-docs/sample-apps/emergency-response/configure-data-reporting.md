@@ -133,7 +133,7 @@ To edit the record, select the record, update the values as required, and select
 The **Locations** entity lets you manage specific locations within each hospital facility.
 
 > [!NOTE]
-> Before creating a **Locations** record, ensure that you have imported the acuity data using the **00 - Acuities Import.xlsx** file as explained earlier in [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization). This is because acuity information is required to create a **Location** record.
+> Before creating a **Locations** record, ensure that you have imported the acuity data using the **00 - Acuities Import.xlsx** file as explained earlier in [Step 4: Load configuration and master data for your organization](deploy-configure.md#step-4-load-configuration-and-master-data-for-your-organization). This is because acuity information is required to create a **Location** record.
 
 To create a record:
 
