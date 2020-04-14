@@ -28,7 +28,7 @@ problems.
 
 The key to debugging an issue is to have a better understanding of what your app does, and how. Sometimes, it's difficult to isolate an issue when just looking at the app formulas, or even reviewing runtime errors. Watching the events as they occur in your app can help you understand the order and performance of events, errors, and diagnose issues faster.
 
-Monitor helps you answer the following questions about your app:
+A few example questions, and answers that you can uncover when using the monitor are:
 
 - **High number of network calls**
     - Is the app fetching data too frequently?
@@ -50,7 +50,7 @@ Monitor helps you answer the following questions about your app:
     - Have you configured the required permissions to run the app correctly?
     - Are your requests throttled by the platform?
 
-These are just a few example questions, and answers that you can uncover when using the monitor. To see **Monitor** in action, see [example scenario](#example-scenario).
+To see **Monitor** in action, see [example scenario](#example-scenario).
 
 ## Open canvas app Monitor
 
@@ -121,6 +121,18 @@ additional details about the event. The panel has four tabs:
     Selecting *JSON tree* shows content in JSON format:
 
     ![JSON format - Response tab](./media/monitor/json-format-response-tab.png)
+
+
+## Download and upload a trace file
+
+You can download the events which are shown in the  table for offline analysis. The downloaded trace file can be shared with other individuals and it can be uploaded back into monitor for review and analysis. You can also attach a trace file to support tickets which can help teams expedite the solution to your problem.   
+
+![Download](./media/monitor/Download.png)
+
+Select the upload option to load a .json trace file to the monitor. The upload option will remove any events currently displayed in the monitor table, and replace the details with the events contained in the trace file. 
+
+![Upload](./media/monitor/upload.png)
+
 
 ## Example scenario
 
