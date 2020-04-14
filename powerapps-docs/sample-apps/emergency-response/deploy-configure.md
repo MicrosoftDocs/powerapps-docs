@@ -99,7 +99,7 @@ After unblocking the deployment file (.zip file), extract the file to a location
 |-----------------------|------------------|
 | **App Icons**         | Contains the default app icons for the mobile apps (canvas apps)|
 | **Data Files**        | Contains the master and sample data files (.xlsx) for the solution/app to work. You can import data from these files to start working on the app. More information: see [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization) |
-| **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization. More Information: [Get insights using Power BI dashboards](#get-insights-using-power-bi-dashboards)|
+| **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization. More Information: [Publish the Power BI dashboard](#publish-the-power-bi-dashboard)|
 | **PowerShell**        | Contains scripts that you'll use to configure your mobile apps (canvas apps). |
 | **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Hospital Emergency Response app.  |
 
