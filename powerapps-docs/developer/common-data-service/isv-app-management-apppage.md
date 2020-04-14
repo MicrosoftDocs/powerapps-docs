@@ -85,4 +85,4 @@ When hovering over any item of the graph, the following information is shown:
 [Home page](isv-app-management-homepage.md)<br/>  
 [Tenant page](isv-app-management-tenantpage.md)<br/>
 [AppSource checker](isv-app-management-appsource-checker.md)<br/>
-[Connector certification portal](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
+[Connector Certification](isv-app-management-certification.md)

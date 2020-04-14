@@ -62,7 +62,7 @@ Please send an email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft
 [App page](isv-app-management-apppage.md)  
 [Tenant page](isv-app-management-tenantpage.md)
 [AppSource checker](isv-app-management-appsource-checker.md)
-[Connector Certification](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
+[Connector Certification](isv-app-management-certification.md)
 
 ### See also
 
