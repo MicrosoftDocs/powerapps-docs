@@ -1,7 +1,7 @@
 ---
 title: "Appointment Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Appointment entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the Appointment entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # Appointment Entity Reference
 
@@ -40,6 +41,7 @@ Commitment representing a time interval with start/end times and duration.
 |Update|PATCH [*org URI*]/api/data/v9.0/appointments(*activityid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
 |Validate|<xref href="Microsoft.Dynamics.CRM.Validate?text=Validate Action" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateRequest>|
 |ValidateSavedQuery|<xref href="Microsoft.Dynamics.CRM.ValidateSavedQuery?text=ValidateSavedQuery Action" />|<xref:Microsoft.Crm.Sdk.Messages.ValidateSavedQueryRequest>|
+
 
 ## Entity Properties
 
@@ -1322,7 +1324,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|regardingobjectidname|
-|MaxLength|100|
+|MaxLength|400|
 |RequiredLevel|None|
 |Type|String|
 
@@ -1338,7 +1340,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|regardingobjectidyominame|
-|MaxLength|100|
+|MaxLength|400|
 |RequiredLevel|None|
 |Type|String|
 

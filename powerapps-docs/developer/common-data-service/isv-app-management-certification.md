@@ -21,7 +21,7 @@ search.app:
   - D365CE
 ---
 
-# Connector Certification 
+# Connector Certification
 
 If you own a service, API, or built a custom connector that you want to connect to Power Apps, Power Automate, Azure Logic Apps, or Power Query, you need to submit your connector to Microsoft for certification. 
 
