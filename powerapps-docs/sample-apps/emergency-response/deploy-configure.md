@@ -31,7 +31,7 @@ Watch how you can deploy and configure the Hospital Emergency Response app.
 
 The Hospital Emergency Response solution is also available for US Government customers. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
 
-The commercial version of the service URL is used throughout this article. If you are a US Government customer, use the respective US Government URL for your deployment as mentioned here:
+The commercial version of the service URL is used throughout this article. If you're a US Government customer, use the respective US Government URL for your deployment as mentioned here:
 
 
 | **Commercial version URL**                | **US Government version URL**  |
@@ -428,15 +428,15 @@ For your admin users to use the admin app (model-driven app), it must be shared 
 
 Publish the Power BI dashboard and share it with users in your organization so that they can use the dashboard for insights and decision making.
 
-You can publish Power BI dashboard in two ways: using the template app from the AppSource or using the **.pbit** file available in the deployment package.
+You can publish the Power BI dashboard using either of the following options: using the template app from the AppSource *or* using the **.pbit** file available in the deployment package.
 
-### Publish using the template app
+### Option A: Publish using the template app from AppSource
 
-Detailed instructions about using the template app from teh app store is available here: [Connect to the Hospital Emergency Response Decision Support Dashboard](https://docs.microsoft.com/power-bi/connect-data/service-connect-to-health-emergency-response)
+Detailed information about using the template app from the AppSource is available here: [Connect to the Hospital Emergency Response Decision Support Dashboard](https://docs.microsoft.com/power-bi/connect-data/service-connect-to-health-emergency-response)
 
-### Publish using the .pbit file
+### Option B: Publish using the .pbit file in the deployment package
 
-This section provides information on how you can use the **Emergency Response App.pbit** available in the deployment package.
+This section provides information on how you can use the **Emergency Response App.pbit** available in the deployment package to publish the file.
 
 #### Prerequisites
 
@@ -453,7 +453,7 @@ This section provides information on how you can use the **Emergency Response Ap
 
 - After installing Power BI Desktop from app store, run it, sign in using an account that has permission to publish Power BI apps in your organization.
 
-#### Publish the dashboard
+#### Publish the dashboard using the .pbit file
 
 1. Navigate to the location where you extracted the deployment package. You will find the **Emergency Response App.pbit** file under the **Power BI Template** folder.
 
