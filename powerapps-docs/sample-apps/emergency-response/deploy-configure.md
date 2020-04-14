@@ -436,7 +436,7 @@ Detailed information about using the template app from the AppSource is availabl
 
 ### Option B: Publish using the .pbit file in the deployment package
 
-This section provides information on how you can use the **Emergency Response App.pbit** available in the deployment package to publish the file.
+This section provides information on how you can use the **Emergency Response App.pbit** available in the deployment package to publish the dashboard.
 
 #### Prerequisites
 
@@ -528,7 +528,7 @@ This section provides information on how you can use the **Emergency Response Ap
 
 18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
 
-#### Next step
+### After publishing the dashboard
 
 To view the published Power BI dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)
 
