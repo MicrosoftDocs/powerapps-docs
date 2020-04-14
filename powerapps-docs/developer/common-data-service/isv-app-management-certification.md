@@ -21,11 +21,11 @@ search.app:
   - D365CE
 ---
 
-# Connector Certification Portal
+# Connector Certification 
 
 If you own a service, API, or built a custom connector that you want to connect to Power Apps, Power Automate, Azure Logic Apps, or Power Query, you need to submit your connector to Microsoft for certification. 
 
-The Connector certification portal is now in ISV Studio allowing the users to manage and track their connector certification submission. More information: [Get your connector certified](https://docs.microsoft.com/connectors/custom-connectors/submit-certification).
+Connector Certification is now in ISV Studio allowing the users to manage and track their connector certification submission. More information: [Get your connector certified](https://docs.microsoft.com/connectors/custom-connectors/submit-certification).
 
 Before you start submitting your connector for certification, see the [Instructions on submitting your connector](https://docs.microsoft.com/connectors/custom-connectors/certification-submission) article for submission requirements.
 

@@ -76,4 +76,4 @@ The App names and icons are from AppSource.
 [App page](isv-app-management-apppage.md)  
 [Tenant page](isv-app-management-tenantpage.md)
 [AppSource checker](isv-app-management-appsource-checker.md)
-[Connector certification portal](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
+[Connector Certification](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
