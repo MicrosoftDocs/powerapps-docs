@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/09/2020
+ms.date: 04/14/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -17,7 +17,7 @@ search.app:
 
 # Debugging an app with canvas app Monitor
 
-**Canvas app monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an
+**Canvas app Monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an
 app runs by providing a log of all activities in your app as the app runs.
 
 This gives you a better understanding of how the formulas contained in
@@ -122,17 +122,15 @@ additional details about the event. The panel has four tabs:
 
     ![JSON format - Response tab](./media/monitor/json-format-response-tab.png)
 
-
 ## Download and upload a trace file
 
-You can download the events which are shown in the  table for offline analysis. The downloaded trace file can be shared with other individuals and it can be uploaded back into monitor for review and analysis. You can also attach a trace file to support tickets which can help teams expedite the solution to your problem.   
+You can download the events that are shown in the  table for offline analysis. The downloaded trace file can be shared with others and it can be uploaded back into the monitor for review and analysis. You can also attach a trace file to support service requests helping expedite the solution to your problem.
 
 ![Download](./media/monitor/Download.png)
 
-Select the upload option to load a .json trace file to the monitor. The upload option will remove any events currently displayed in the monitor table, and replace the details with the events contained in the trace file. 
+Select **Upload** to load a ```.json``` trace file to the monitor. The upload option will remove any events currently displayed in the monitor table, and replace the details with the events contained in the trace file.
 
 ![Upload](./media/monitor/upload.png)
-
 
 ## Example scenario
 
