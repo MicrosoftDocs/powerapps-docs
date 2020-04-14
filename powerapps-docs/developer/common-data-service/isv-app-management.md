@@ -59,10 +59,10 @@ Please send an email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft
 ## In this Section
 
 [Home page](isv-app-management-homepage.md)  
-[App page](isv-app-management-apppage.md)  
-[Tenant page](isv-app-management-tenantpage.md)
-[AppSource checker](isv-app-management-appsource-checker.md)
-[Connector certification portal](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
+[App page](isv-app-management-apppage.md)<br/> 
+[Tenant page](isv-app-management-tenantpage.md)<br/>
+[AppSource checker](isv-app-management-appsource-checker.md)<br/>
+[Connector Certification](isv-app-management-certification.md)
 
 ### See also
 
