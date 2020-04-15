@@ -5,7 +5,7 @@ author: pankajarora-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/14/2020
+ms.date: 04/15/2020
 ms.author: pankar
 ms.reviewer: tapanm
 searchScope:
@@ -86,7 +86,7 @@ Submit bed related information such as licensed beds, ICU (AIIR/non-AIIR) beds, 
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
-After you submit the data, you have the option to go back to the **Staff + equipment** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+After you submit the data, you have the option to go back to the **Bed capacity** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
 
 ### Fields and description
 
@@ -130,7 +130,7 @@ Submit location specific equipment details using the **Equipment** app. You 
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
-After you submit the data, you have the option to go back to the **COVID-19 stats** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+After you submit the data, you have the option to go back to the **Equipment** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
 
 ### Fields and description
 
