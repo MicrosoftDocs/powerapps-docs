@@ -99,7 +99,7 @@ function EnableRule()
     const request = new XMLHttpRequest();
     request.open('GET', '/bar/foo');
 
-    return new Promise((resolve, reject) =>
+    return new Promise(function(resolve, reject)
     {
         request.onload = function (e)
         {
