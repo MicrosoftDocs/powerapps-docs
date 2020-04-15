@@ -49,7 +49,7 @@ To access the public preview of ISV Studio, navigate your browser to [https://ak
 
 2. The ISV must have an [Azure Active Directory](https://azure.microsoft.com/services/active-directory/) (AAD) account and the account must be configured as an app contributor or owner in Cloud Partner Portal (CPP) for the particular ISV.
 
-If you want additional users to get access to ISV Studio, they can be added as app contributors in CPP.  Instructions can be found at
+If you want additional users to get access to ISV Studio, they can be added as app contributors in Partner Center.  Instructions can be found at
 [Managing users on cloud partner portal](https://docs.microsoft.com/azure/marketplace/cloud-partner-portal-orig/cloud-partner-portal-manage-users).
 
 Continue reading the "App" and "Tenant" page topics listed below to learn about the capabilities of ISV Studio.
@@ -59,10 +59,10 @@ Please send an email to [ISVFeedback@microsoft.com](mailto:ISVFeedback@microsoft
 ## In this Section
 
 [Home page](isv-app-management-homepage.md)  
-[App page](isv-app-management-apppage.md)  
-[Tenant page](isv-app-management-tenantpage.md)
-[AppSource checker](isv-app-management-appsource-checker.md)
-[Connector certification portal](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
+[App page](isv-app-management-apppage.md)<br/> 
+[Tenant page](isv-app-management-tenantpage.md)<br/>
+[AppSource checker](isv-app-management-appsource-checker.md)<br/>
+[Connector Certification](isv-app-management-certification.md)
 
 ### See also
 
