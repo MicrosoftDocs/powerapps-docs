@@ -5,7 +5,7 @@ author: pankajarora-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/05/2020
+ms.date: 04/14/2020
 ms.author: pankar
 ms.reviewer: tapanm
 searchScope:
@@ -56,9 +56,17 @@ its components for the *first time*, you will be asked for your consent to allow
 
 The Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more components in the **Hospital Emergency Response app**.
 
-- **Staff + equipment**
-    <br> Collect status of the RNs and critical equipment by location in that
-    facility.
+- **Bed capacity**
+    <br> Collect bed information such as licensed beds, ICU beds other bed capacity data.
+
+- **COVID-19 stats**
+    <br> Collect status on how many patients are under investigation for COVID-19 and how many tested positive.
+
+- **Equipment**
+    <br> Track equipment information such as ventilators, NIPPV and PAPR.
+
+- **Staff**
+    <br> Collect number of patients and RN status information such as partners, assigned, requested and unassigned.
 
 - **Supplies**
     <br> Track key supplies to track, manage, and forecast inventory more
@@ -67,33 +75,88 @@ The Hospital Emergency Response sample solution app consists of multiple apps fo
 - **Staffing needs**
     <br> Collect requests for personnel by department, role, and urgency.
 
-- **COVID-19 stats**
-    <br> Collect status on how many patients are under investigation for COVID-19 and
-    how many tested positive.
-
 - **Discharge planning**
     <br> Collect status and projections on ​patient discharges.
 
-## Staff + equipment
+## Bed capacity
 
-![Staff + equipment](media/use/staff-equipment.png)
+![Bed capacity](media/use/bed-capacity.png)
 
-Submit location-specific inventory for Registered nurses, patients, and
-equipment. The area list consists of all locations specific to the facility
-chosen on the **Hospital Emergency Response app**. Select location from the available options to
-update other fields.
-
-After you select an area, enter the required values for the fields to
-save the records in the solution database. You don't have to enter values for
-each field on the screen. Enter a number for the field that you need to save in the solution database.
-
-For example, if you need to add number of registered nurses requested as 3,
-enter 3 in the **Registered nurses on duty - Requested** field and select
-**Send**. If you also need to update ventilators in use as 6, enter 3 in **Registered nurses on duty - Requested** field, then enter 6 in **Vents** under **Equipment in use**, and select **Send**.
+Submit bed related information such as licensed beds, ICU (AIIR/non-AIIR) beds, Acute Care (AIIR/non-AIIR) beds and whether the selected facility is staffed to full license bed capacity.
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
 After you submit the data, you have the option to go back to the **Staff + equipment** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+
+### Fields and description
+
+| **Option name**                                               | **Description**                                                                       |
+|---------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| How many licensed beds are currently in use in this facility? | Number of licensed beds currently in use at this facility.                            |
+| Number of ICU Beds (AIIR Room) currently in use               | Number of ICU Beds (AIIR Room) currently in use.                                      |
+| Number of ICU Beds (non-AIIR Room) currently in use           | Number of ICU Beds (non-AIIR Room) currently in use.                                  |
+| Number of Acute Care Beds (AIIR Room) currently in use        | Number of Acute Care Beds (AIIR Room) currently in use.                               |
+| Number of Acute Care Beds (non-AIIR Room) currently in use    | Number of Acute Care Beds (non-AIIR Room) currently in use.                           |
+| Is your facility staffed to its full license bed capacity?    | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume |
+| Are you able to surge beyond your licensed beds?              | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
+| Number of surge beds currently in use                         | Number of surge beds currently in use.                                                |
+
+## COVID-19 stats
+
+![COVID-19 Stats](media/use/covid19-stats.png)
+
+Submit COVID-19 specific details using the **COVID-19 stats** app. You can
+update the location-specific patient details such as PUIs, positives, intubated,  and discharged patients.
+
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
+
+After you submit the data, you have the option to go back to the **COVID-19 stats** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+
+### Fields and description
+
+| **Field name**  | **Description**                                                                                    |
+|-----------------|----------------------------------------------------------------------------------------------------|
+| Location        | The name and type of the room, ward, or any other specialty location within the selected facility.  |
+| PUIs            | Number of patients under investigation.                                                            |
+| Positive        | Number of patients positive with COVID-19.                                                         |
+| Intubated        | Number of patients intubated.                                                         |
+| Discharged        | Number of COVID-19 patients discharged.                                                         |
+
+## Equipment
+
+![Equipment](media/use/equipment.png)
+
+Submit location specific equipment details using the **Equipment** app. You can update the number of in-use equipment such as ventilators, NIPPV and PAPR.
+
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
+
+After you submit the data, you have the option to go back to the **COVID-19 stats** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+
+### Fields and description
+
+| **Field name**  | **Description**                                                                                    |
+|-----------------|----------------------------------------------------------------------------------------------------|
+| Location        | The name and type of the room, ward, or any other specialty location within the selected facility.  |
+| Ventilators            | Number of ventilators in use.                                                            |
+| NIPPV        | Number of Noninvasive Positive-Pressure Ventilators in use.                                                         |
+| PAPR belts        | Number of Powered Air-Purifying Respirator belts in use.                                                         |
+| PAPR chargers        | Number of Powered Air-Purifying Respirator chargers in use.                                                         |
+| PAPR hoods        | Number of Powered Air-Purifying Respirator hoods in use.                                                         |
+
+## Staff
+
+![Staff](media/use/staff.png)
+
+Submit location-specific inventory for Registered nurses, patients, and
+equipment. You don't have to enter values for each field on the screen. Enter a number for the field that you need to save in the solution database.
+
+For example, if you need to add number of registered nurses requested as 3,
+enter 3 in the **Registered nurses on duty - Requested** field and select
+**Submit**. If you also need to update **Registered nurses on duty - Assigned** in use as 6, enter 3 in **Registered nurses on duty - Requested** field, then enter 6 in **Registered nurses on duty - Assigned**, and then select **Submit**.
+
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
+
+After you submit the data, you have the option to go back to the **Staff** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
 
 ### Fields and description
 
@@ -106,12 +169,8 @@ After you submit the data, you have the option to go back to the **Staff + equip
 | *Requested*                   | Number of Registered Nurses requested for the selected location.                                  |
 | *Assigned*                    | Number of Registered Nurses assigned to the selected location.                                    |
 | *Unassigned*                  | Number of Registered Nurses not assigned to any task at the selected location.                    |
-| **Equipment in use**          |                                                                                                   |
-| *Ventilators*                 | Number of Ventilators in use at the selected location.                                            |
-| *PAPR hoods*                  | Number of Powered Air-Purifying Respirator hoods in use at the selected location.                 |
-| *PAPR belts*                  | Number of Powered Air-Purifying Respirator belts in use at the selected location.                 |
-| *PAPR chargers*               | Number of Powered Air-Purifying Respirator chargers in use at the selected location.              |
-
+| **Facility level tracking** |                                                                                                   |
+| % of essential care personnel currently absent in the this facility                  | Essential care personnel currently absent in percentage format of the total for **entire facility**.                    |
 
 ## Supplies
 
@@ -160,27 +219,7 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | How many                 | How many resources needed, in number format.                |
 | Details                  | Describe additional details or comments for the labor pool request.                        |
 
-## COVID-19 stats
 
-![COVID-19 Stats](media/use/covid19-stats.png)
-
-Submit COVID-19 specific details using the **COVID-19 stats** app. You can
-update the location-specific number of patients under investigation and patients found positive.
-
-You can also add another location using the **+ Add another location** button to
-send stats for more than one location.
-
-Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
-
-After you submit the data, you have the option to go back to the **COVID-19 stats** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
-
-### Fields and description
-
-| **Field name**  | **Description**                                                                                    |
-|-----------------|----------------------------------------------------------------------------------------------------|
-| Location        | The name and type of the room, ward, or any other specialty location within the selected facility.  |
-| PUIs            | Number of patients under investigation.                                                            |
-| Positive        | Number of patients positive with COVID-19.                                                         |
 
 ## Discharge planning
 
@@ -223,13 +262,13 @@ Select the **End shift** button to end your session and sign out.
 > *End shift* may not be available if your IT administrator has disabled
 device sharing.
 
-### Provide feedback
+### App feedback
 
-You can share your feedback with the **Provide feedback** option from any Emergency Response mobile app component. To share your feedback, select your profile from top-left and then select the **Provide feedback** button:
+You can share your feedback with the **App feedback** option from any Emergency Response mobile app component. To share your feedback, select your profile from top-left and then select the **Submit feedback** button:
 
 ![Provide feedback](media/use/give-feedback.png)
 
-When you select **Provide feedback**, you have
+When you select **App feedback**, you have
 options to share a praise, an idea or report an issue with the app.
 
 ### Switch facility
