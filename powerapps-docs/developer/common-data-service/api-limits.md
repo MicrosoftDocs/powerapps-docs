@@ -2,7 +2,7 @@
 title: "Service Protection API Limits (Common Data Service) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 04/05/2020
+ms.date: 04/15/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -17,7 +17,7 @@ search.app:
 ---
 # Service Protection API Limits
 
-To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. These limits, sometimes called *throttles*, are designed to detect when client applications are making extraordinary demands on server resources.
+To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources.
 
 The limits should not affect normal users of interactive clients. Only client applications that perform extraordinary API requests should be affected. The limits provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service platform.
 
@@ -29,7 +29,7 @@ When a client application makes extraordinarily demanding requests, the Common D
 
 ## Impact on client applications
 
-It is the responsibility of the client application to manage API limit errors. Exactly how to manage this error depends on the nature of the application. 
+It is the responsibility of client applications to manage API limit errors. Exactly how to manage this error depends on the nature of the application. 
 
 ### Interactive client applications
 
@@ -39,24 +39,24 @@ Client application developers should not simply throw the error to display the m
 
 ### Data integration applications
 
-Applications designed to extract, transfer, and load (ETL) data into CDS must also be able to manage API limit errors. These typically non-interactive applications prioritize throughput so they can complete their work in the minimum amount of time. These applications must have a strategy to retry operations. There are several strategies that they can apply to get the maximum throughput. More information: [How to maximize throughput](#how-to-maximize-throughput).
+Applications designed to load data into CDS or perform bulk updates must also be able to manage API limit errors. These applications prioritize throughput so they can complete their work in the minimum amount of time. These applications must have a strategy to retry operations. There are several strategies that they can apply to get the maximum throughput. More information: [How to maximize throughput](#how-to-maximize-throughput).
 
 ### Portal applications
 
-Portal applications typically send requests from anonymous users through a single service principal account. Because the service protection API limits are based on a per user basis, portal applications can hit service protection API limits due to the fact that all the limits are applied to a single account. Like interactive client applications, it isn't expected that the service protection API limits errors should be displayed to the portal user. It is expected that the UI should disable further requests and display a message that the server is busy. The message may include the time when the application can begin accepting new requests.
+Portal applications typically send requests from anonymous users through a single service principal account. Because the service protection API limits are based on a per user basis, portal applications can hit service protection API limits based on the amount of traffic the portal experiences. Like interactive client applications, it isn't expected that the service protection API limits errors should be displayed to the portal end user. It is expected that the UI should disable further requests and display a message that the server is busy. The message may include the time when the application can begin accepting new requests.
 
 ## Impact on plug-ins and custom workflow activities
 
-Service protection limits are not applied to plug-ins and custom workflow activities. Plug-ins and custom workflow activities are uploaded and run within the isolated sandbox service. Common Data Service operations invoked on the sandbox service do not use the public API endpoints.
+Plug-ins and custom workflow activities apply business logic triggered by incoming requests. Service protection limits are not applied to plug-ins and custom workflow activities. Plug-ins and custom workflow activities are uploaded and run within the isolated sandbox service. Common Data Service operations invoked on the sandbox service do not use the public API endpoints.
 
-If your application performs operations that trigger custom logic that is performed by plug-ins or custom workflow activities, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits.
+If your application performs operations that trigger custom logic, the number of requests sent by plug-ins or custom workflow activities will not be counted towards service protection API limits. However, the additional computation time that these operations contribute will be added to the initial request that triggered them. This computation time is part of the service protection API limits. More information: [How Service Protection API Limits are enforced](#how-service-protection-api-limits-are-enforced)
 
 ## Retry operations
 
 When an API limit error occurs, it will provide a value indicating the duration before any new requests can be processed.
 
 - When a 429 error is returned from the Web API, the response will include a [Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After) with number of seconds.
-- With the Organization Service, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the [OrganizationServiceFault.ErrorDetails](/dotnet/api/microsoft.xrm.sdk.baseservicefault.errordetails#Microsoft_Xrm_Sdk_BaseServiceFault_ErrorDetails) collection with the key `Retry-After`.
+- With the Organization Service, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> collection with the key `Retry-After`.
 
 ### Interactive application re-try 
 
@@ -70,15 +70,15 @@ If the client is not interactive, the common practice is to simply wait for the 
 
 ## How Service Protection API Limits are enforced
 
-The service protection API limits are evaluated within a 5 minute (300 second) sliding window. If any of the limits are exceeded within the preceding 300 seconds, an API Limit error will be returned on subsequent requests to protect the service.
+The service protection API limits are evaluated within a 5 minute (300 second) sliding window. If any of the limits are exceeded within the preceding 300 seconds, an API Limit error will be returned on subsequent requests to protect the service until the Retry-After duration has ended.
 
 The service protection API limits are evaluated per user. Each authenticated user is limited independently. Only those users accounts which are making extraordinary demands will be limited. Other users will not be impacted.
 
 Service protection API limits are enforced based on three facets:
 
 - The number of requests were sent by a user.
-- The combined execution time was required to process requests.
-- The number of concurrent requests sent.
+- The combined execution time was required to process requests sent by a user.
+- The number of concurrent requests sent by a user.
 
 Each of these facets are designed to address different ways that people could attempt to bypass service protection API limits if the limits were based only on the number of requests that are sent individually in succession. For example:
 
@@ -101,9 +101,9 @@ The following table describes the default service protection API limits enforced
 
 The `Retry-After` duration will depend on the nature of the operations that have been sent in the preceding 5 minute period. The more demanding the requests are, the longer it will take for the server to recover.
 
-Today, because of the way the limits are evaluated, you can expect to exceed all limits for a 5 minute period before the service protection API limits will take effect. If the application continues to send such demanding requests, the duration will be extended to minimize the impact on shared resources. This will cause the individual retry-after duration period to be longer, which means your application will see longer periods of inactivity while it is waiting. This behavior may change in the future.
+Today, because of the way the limits are evaluated, you can expect to exceed the number of requests and execution time limits for a 5 minute period before the service protection API limits will take effect. However, exceeding the number of concurrent requests will immediately return an error. If the application continues to send such demanding requests, the duration will be extended to minimize the impact on shared resources. This will cause the individual retry-after duration period to be longer, which means your application will see longer periods of inactivity while it is waiting. This behavior may change in the future.
 
-Instead, we recommend trying to achieve a consistent rate by starting with a lower number of requests and gradually increasing until you start hitting the service protection API limits. After that, let the server tell you how many requests it can handle within a 5 minute period. Keeping your maximum number of requests limited within this 5 minute period and gradually increasing will keep the retry-after duration low, optimizing your total throughput and minimizing server resource spikes.
+When possible, we recommend trying to achieve a consistent rate by starting with a lower number of requests and gradually increasing until you start hitting the service protection API limits. After that, let the server tell you how many requests it can handle within a 5 minute period. Keeping your maximum number of requests limited within this 5 minute period and gradually increasing will keep the retry-after duration low, optimizing your total throughput and minimizing server resource spikes.
 
 ## API Limit Errors returned
 
@@ -149,33 +149,15 @@ This limit tracks the total number of concurrent requests during the preceding 3
 |------------|------------|-------------------------------------|
 |`-2147015898`|`0x80072326`|`Number of concurrent requests exceeded the limit of 52.`|
 
-Client applications are not limited to sending requests individually in succession. The client may apply parallel programming patterns or various methods to send multiple requests simultaneously using JavaScript running in the browser. The server can detect when it is responding to multiple requests simultaneously. If this number of concurrent requests is exceeded during the 5 minute window, this error will be thrown.
+Client applications are not limited to sending requests individually in succession. The client may apply parallel programming patterns or various methods to send multiple requests simultaneously. The server can detect when it is responding to multiple requests from the same user simultaneously. If this number of concurrent requests is exceeded, this error will be thrown.
 
 Sending concurrent requests can be a key part of a strategy to maximize throughput, but it is important to keep it under control.
 
-When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. This can be increased by TODO, but it should not exceed 52. The [ParallelOptions.MaxDegreeOfParallelism Property](/dotnet/api/system.threading.tasks.paralleloptions.maxdegreeofparallelism) can be set to define a maximum number of concurrent tasks.
-
-For client-side JavaScript TODO
-
-    <!-- 
-    
-    The open question is whether the JavaScript client developer has control over this. Seems like modern browsers will attempt to send asynchronous concurrent requests up to a limit that the server tells them in can support.
-    
-    I'm finding many different libraries that provide a way to limit concurrency, but these may apply to Node.js server projects rather than scripts running in a browser.
-
-    *    ES6 Promise Pool Runs Promises in a pool that limits their concurrency
-    *    Vilic Vane's Promise Pool offers a similar API.
-    *    Bluebird includes Promise.map(), which takes a concurrency option.
-    *    Similarly, λ (a.k.a. contra) has λ.concurrent() with the optional cap parameter.
-    *    With Q, you can use qlimit.
-    *    Async does not use promises, but offers a queue() function. 
-    
-    But we are also evaluating raising this to 100 and providing the browser with information so it will automatically avoid doing this. There may be nothing for the client-side developer to do.
-    -->
+When using [Parallel Programming in .NET](/dotnet/standard/parallel-programming/) the default degree of parallelism depends on the number of CPU cores on the server running the code. It should not exceed 52. The [ParallelOptions.MaxDegreeOfParallelism Property](/dotnet/api/system.threading.tasks.paralleloptions.maxdegreeofparallelism) can be set to define a maximum number of concurrent tasks.
 
 ## How to maximize throughput
 
-When you have an ETL application that must prioritize throughput to move the most data in the shortest period, there are some strategies you can apply.
+When you have an application that must prioritize throughput to move the most data in the shortest period, there are some strategies you can apply.
 
 ### Let the server tell you how much it can handle
 
@@ -183,29 +165,27 @@ You shouldn't try to calculate how many requests to send at a time. Each environ
 
 ### Use multiple threads
 
-The higher limit on number of concurrent threads is something your ETL application can use to have a significant improvement in performance. This is particularly true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
-
-<!-- TODO: Show how to set the number of threads independent of the number of logical processors -->
+The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is particularly true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
 
 ### Avoid batching
 
-In the Organization Service the conventional wisdom has been to employ the ExecuteMultiple message to bundle multiple operations. The main benefit this provides is that it reduces the total amount of SOAP XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue.
+In the Organization Service the conventional wisdom has been to employ the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> to bundle multiple operations. The main benefit this provides is that it reduces the total amount of SOAP XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue.
 
 In the past, ExecuteMultiple operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection API limits have made that limit redundant.
 
 Most scenarios will be fastest sending single requests with a high degree of parallelism. If you feel batch size might improve performance, it is best to start with a small batch size of 10 and increase concurrency until you start getting API limit errors that you will retry.
 
-When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. The total amount of payload that is sent using $batch is greater than sending individual requests. $batch should only be used if you want to managed transactions using changesets.
+When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. The total amount of payload that is sent using $batch is greater than sending individual requests. $batch should only be used if you want to managed transactions using changesets. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
 
 > [!NOTE]
-> Batch operations are not a valid strategy to bypass entitlement limits. service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/common-data-service/api-limits-overview.md#entitlement-limits)
+> Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/common-data-service/api-limits-overview.md#entitlement-limits)
 
 ### Remove the affinity cookie
 
-When you make a connection to a service on Azure a cookie is returned with the response and all your subsequent requests will attempt to be routed to the same server unless capacity management forces it to go to another server. If you remove this cookie, each request you send will be routed any of the eligible servers which can increase throughput.
+When you make a connection to a service on Azure a cookie is returned with the response and all your subsequent requests will attempt to be routed to the same server unless capacity management forces it to go to another server. If you remove this cookie, each request you send will be routed any of the eligible servers. This increases throughput because limits are applied per server. This simply allows you to use more servers if they are available.
 
 > [!NOTE]
-> This strategy should only be used by ETL applications that are seeking to optimize throughput. Interactive client applications benefit from the affinity cookie because it allows for reusing cached data that would otherwise need to be re-created leading to poorer performance.
+> This strategy should only be used by applications that are seeking to optimize throughput. Interactive client applications benefit from the affinity cookie because it allows for reusing cached data that would otherwise need to be re-created leading to poorer performance.
 
 The following code shows how to disable cookies when initializing an HttpClient with the Web API, assuming you are using a custom HttpMessageHandler to manage authentication. More information: [Example demonstrating a DelegatingHandler](authenticate-oauth.md#example-demonstrating-a-delegatinghandler)
 
@@ -249,25 +229,70 @@ API limits have been applied to CDS since 2018, but there are many client applic
 
 ### Move towards real-time integration
 
-Remember that the main point of API limits is to smooth out the impact of highly demanding requests occurring over a short period of time. If your current business processes depend on large periodic nightly, weekly, or monthly jobs which attempt to process large amounts of data in a short period of time, consider how you might enable a real-time data integration strategy. If you can move away from processes that require highly demanding operations, you can reduce the impact API limits will have.
-
-## Using the Organization Service
-
-If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>. This class implements the IOrganizationService methods and can manage any API Limit errors that are returned. 
-
-Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
-
-If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the CrmServiceClient class. More information: [Build Windows client applications using the XRM tools](/xrm-tooling/build-windows-client-applications-xrm-tools).
-
-### Use Task Parallel Library with CrmServiceClient
-
-To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
-
-TPL can be used with <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> because CrmServiceClient includes a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone> method that allows for managing multiple instances of the client with TPL. For an example, see [Task Parallel Library sample with CrmServiceClient](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/TPLCrmServiceClient)
+Remember that the main point of API limits is to smooth out the impact of highly demanding requests occurring over a short period of time. If your current business processes depend on large periodic nightly, weekly, or monthly jobs which attempt to process large amounts of data in a short period of time, consider how you might enable a real-time data integration strategy. If you can move away from processes that require highly demanding operations, you can reduce the impact Service protection limits will have.
 
 ## Using the Web API
 
-TODO need to provide an example
+If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. You should check with the client library publisher.
+
+If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [Web API CDSWebApiService class](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/CDSWebApiService/CDSWebApiService).
+
+```csharp
+private async Task<HttpResponseMessage> SendAsync(
+    HttpRequestMessage request,
+    HttpCompletionOption httpCompletionOption = HttpCompletionOption.ResponseHeadersRead,
+    int retryCount = 0)
+{
+    HttpResponseMessage response;
+    try
+    {
+        //The request is cloned so it can be sent again.
+        response = await httpClient.SendAsync(request.Clone(), httpCompletionOption);
+    }
+    catch (Exception)
+    {
+        throw;
+    }
+
+    if (!response.IsSuccessStatusCode)
+    {
+        if ((int)response.StatusCode != 429)
+        {
+            //Not a service protection limit error
+            throw ParseError(response);
+        }
+        else
+        {
+            // Give up re-trying if exceeding the maxRetries
+            if (++retryCount >= config.MaxRetries)
+            {
+                throw ParseError(response);
+            }
+
+            int seconds;
+            //Try to use the Retry-After header value if it is returned.
+            if (response.Headers.Contains("Retry-After"))
+            {
+                seconds = int.Parse(response.Headers.GetValues("Retry-After").FirstOrDefault());
+            }
+            else
+            {
+                //Otherwise, use an exponential backoff strategy
+                seconds = (int)Math.Pow(2, retryCount);
+            }
+            Thread.Sleep(TimeSpan.FromSeconds(seconds));
+
+            return await SendAsync(request, httpCompletionOption, retryCount);
+        }
+    }
+    else
+    {
+        return response;
+    }
+}
+```
+
+You may also want to use [Polly](https://github.com/App-vNext/Polly), a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner. 
 
 ### HTTP Response headers
 
@@ -280,11 +305,30 @@ If you are using HTTP requests with the Web API, you can track the remaining lim
 
 You should not depend on these values to control how many requests you send. They are intended for debugging purposes. If you are removing the affinity cookie, these values are re-set when you connect to a different server.
 
+## Using the Organization Service
+
+If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>. This class implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any API Limit errors that are returned. 
+
+Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
+
+If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the CrmServiceClient class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
+
+More information: 
+
+- [Build Windows client applications using the XRM tools](/xrm-tooling/build-windows-client-applications-xrm-tools).
+- [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Common Data Service](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
+
+### Use Task Parallel Library with CrmServiceClient
+
+To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
+
+TPL can be used with <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> because CrmServiceClient includes a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone> method that allows for managing multiple instances of the client with TPL. For an example, see [Task Parallel Library sample with CrmServiceClient](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/TPLCrmServiceClient)
+
 ## Frequently asked questions
 
-This section includes frequently asked questions.
+This section includes frequently asked questions. If you have questions that are not answered, please post them using the **Feedback** button at the bottom of this page to submit feedback about this page.
 
-### I'm using an ETL application I licenced. How do I get optimum throughput?
+### I'm using an ETL application I licensed. How do I get optimum throughput?
 
 You should work with the ETL application vendor to learn which settings to apply. Make sure you are using a version of the product that supports the Retry-After behavior.
 
