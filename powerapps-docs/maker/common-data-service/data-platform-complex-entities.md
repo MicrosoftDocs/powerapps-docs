@@ -18,7 +18,9 @@ search.app:
 # Complex entities and licensing
 
 > [!IMPORTANT]
-> This topic is applicable *only* for older Power Apps Plan 1 and Plan 2 licenses. This is because complex entities are only applicable for the older Power Apps Plan 1 and Plan 2 licenses, and not for the latest Power Apps per app and Power Apps per user plans.
+> *This topic is applicable only for older Power Apps Plan 1 and Plan 2 licenses.* 
+>
+> Complex entities are applicable *only* for the older Power Apps Plan 1 and Plan 2 licenses, and not for the latest Power Apps per app and Power Apps per user plans.
 > 
 > For the latest information on licensing requirements for entities, see the [Power Apps licensing guide](https://go.microsoft.com/fwlink/p/?linkid=2085130).
 
