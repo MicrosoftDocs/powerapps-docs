@@ -48,14 +48,13 @@ To that value, append this syntax:
 &$filter=<TableName>/<ColumnName> eq '<Value>'
 ```
 
-The parameter will filter a value in the dataset of the report where the tile originates.
+The parameter will filter a value in the dataset of the report where the tile originates. However, filtering feature has the following limitations:
 
-Note that this filtering feature is limited:
-* only one filter can be applied
-* only the `eq` operator is supported
-* field type must be string
+- Only one filter can be applied.
+- Only the `eq` operator is supported.
+- Field type must be string.
 
-It is possible to work around these limitations to some extent by introducing a computed field in the Power BI report that converts other value types to string or combines multiple fields into one.
+You can use computed fields in the Power BI report to convert other value types to string or combines multiple fields into one.
 
 ## Key properties
 
