@@ -19,7 +19,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/query-and-edit-an-organization-theme -->
 
-You can define and apply visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application. You can create a custom theme for your application by making changes to the default colors and visual elements provided in the un-customized Model-driven apps system. For example, you can create your personal product branding, add a company logo and provide entity-specific coloring. The theme colors are applied globally throughout the application, with the exception of some legacy areas.  
+You can define and apply visual themes for an organization. This provides a supported way to apply an organization’s logo and color choices to the application. You can create a custom theme for your application by making changes to the default colors and visual elements provided in the un-customized model-driven apps system. For example, you can create your personal product branding, add a company logo and provide entity-specific coloring. The theme colors are applied globally throughout the application, with the exception of some legacy areas.  
   
 <!-- [!NOTE]
 > [!INCLUDE[cc_feature_included_with_2015_update_1_admins](../../includes/cc-feature-included-with-2015-update-1-admins.md)]  -->
