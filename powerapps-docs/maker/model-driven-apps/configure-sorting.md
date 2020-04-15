@@ -24,12 +24,12 @@ search.app:
 ---
 # Sort records in a model-driven app view
 
- When you create or edit a view you can configure the sort order for either ascending or descending.   
+When you create or edit a view you can configure the sort order for either ascending or descending.   
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-
 2.  Expand **Data**, select **Entities**, and then select the entity that you want, such as **Accounts**.   
+
 3.  Select the **Views** tab, and if shown, select **Remove filter**, and then open the view you want, such as **Active Accounts**.
 
 4.  In the view designer, select **Configure Sorting**.  
@@ -39,7 +39,11 @@ search.app:
   
 5.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
   
-6.  Select **OK** to close the **Configure Sort Order** dialog box.  
+6.  Select **OK** to close the **Configure Sort Order** dialog box. 
+
+## Columns of grid don't have data showing when the grid is loading
+
+Columns (attributes) that are in the view's layoutxml but not in the layoutxml. In web client, there are special process on the server side to process layoutxml and then add those columns into the FetchXML. So the data will be showing in grid. However, UCI is directly using ODATA with FetchXML to retrieve data from server. If the attribute(s) are not in the FetchXML, then the data will not be retrieved.
 
 ## Next steps
 [Create or edit a view](create-edit-views.md)
