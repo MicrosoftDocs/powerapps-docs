@@ -268,7 +268,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 1.  Open one of the app records by selecting it. Note that the **Power App ID** field is blank.
 
     > [!div class="mx-imgBorder"] 
-    > ![Power App ID field ](media/conf-powerapp-id-field.png "Power App ID field")
+    > ![Power App ID field ](media/conf-powerapp-id-field.png "Update app info")
 
 1.  In the app details page:
 
@@ -282,7 +282,23 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
     5. If necessary, update the **App Display Rank** value to set the display position of app in the app list.
 
-    6. Select **Save**.
+    6. If necessary, select a value in the **Tracking Level** field to specify if you want to track data from this mobile app at a **Location** or **Facility** level.
+        - If **Location** is selected for an app, records created using the mobile app will contain location and facility information along with other data. Additionally, a **Location** drop-down will be available in the mobile app for users to select a location to track the data.
+        - If **Facility** is selected for an app, records created using the mobile app will contain only the facility information along with other data.
+        - If you don't select any value for the **Tracking Level** field, the following default tracking level is applied to the mobile apps:
+
+        |App  |Default tracking level  |
+        |--|--|
+        |COVID tracking|Location|
+        |Staff|Location|
+        |Equipment|Location|
+        |Bed capacity|Facility|
+        |Supplies|Facility|
+        |Staffing needs|Facility|
+        |Discharge tracking|Facility|
+
+
+    7. Select **Save**.
 
 1.  Repeat steps 8 and 9 for each canvas app record under **Apps**.
 
