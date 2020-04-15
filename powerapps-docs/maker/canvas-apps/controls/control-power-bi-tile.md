@@ -50,6 +50,13 @@ To that value, append this syntax:
 
 The parameter will filter a value in the dataset of the report where the tile originates.
 
+Note that this filtering feature is limited:
+* only one filter can be applied
+* only the `eq` operator is supported
+* field type must be string
+
+It is possible to work around these limitations to some extent by introducing a computed field in the Power BI report that converts other value types to string or combines multiple fields into one.
+
 ## Key properties
 
 **Workspace** – The Power BI workspace where the tile comes from.
