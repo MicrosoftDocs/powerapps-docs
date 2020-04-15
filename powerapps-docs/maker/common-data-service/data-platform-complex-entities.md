@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
-ms.date: 03/20/2020
+ms.date: 04/15/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -18,8 +18,9 @@ search.app:
 # Complex entities and licensing
 
 > [!IMPORTANT]
-> Complex entities are only applicable for Power Apps Plan 1 and Plan 2 licenses and not for Power Apps per app and Power Apps per user plans.
-> For the latest information on licensing requirements for entities, see the [Power Apps licensing guide](https://go.microsoft.com/fwlink/p/?linkid=2085130).
+> This topic is only applicable for older Power Apps Plan 1 and Plan 2 licenses. This is because complex entities are only applicable for the older Power Apps Plan 1 and Plan 2 licenses, and not for the latest Power Apps per app and Power Apps per user plans.
+> 
+> For the latest information on licensing requirements for entities, see the [Licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus) or [Power Apps licensing guide](https://go.microsoft.com/fwlink/p/?linkid=2085130).
 
 Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a Power Apps Plan 2 or Power Automate Plan 2 license:
 
@@ -171,8 +172,4 @@ The following table lists entities that contain complex server-side logic out-of
 * Work Order Service Task
 * Work Order Sub-Status
 * Work template
-
-
-## Licensing
-For more information about Power Apps and Dynamics 365 licenses, see [Licensing overview](../../administrator/pricing-billing-skus.md) page.
 
