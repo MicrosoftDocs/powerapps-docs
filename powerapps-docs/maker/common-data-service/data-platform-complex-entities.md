@@ -29,7 +29,7 @@ Entities that include the following complex server-side logic require users of a
 * Code plug-ins. More information: [Plug-in development](/powerapps/developer/common-data-service/plug-ins)
 * Real-time workflows. More information: [Workflow processes](/flow/workflow-processes)
 
-    > [!IMPORTANT]
+    > [!NOTE]
     >  Only workflows that are converted to a real-time workflow are considered real-time and synchronous. Workflows that are run in the background can still be used with the appropriate Power Apps plan and do not require additional licenses.
 
 To know whether or not you've added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment.
