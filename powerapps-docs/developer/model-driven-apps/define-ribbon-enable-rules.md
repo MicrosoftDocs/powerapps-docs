@@ -84,8 +84,7 @@ function EnableRule()
  ```JavaScript
 // Old synchronous style
 /*
-function EnableRule()
-{
+function EnableRule() {
     const request = new XMLHttpRequest();
     request.open('GET', '/bar/foo', false);
     request.send(null);
@@ -94,29 +93,21 @@ function EnableRule()
 */
 
 // New asynchronous style
-function EnableRule()
-{
+function EnableRule() {
     const request = new XMLHttpRequest();
     request.open('GET', '/bar/foo');
 
-    return new Promise(function(resolve, reject)
-    {
-        request.onload = function (e)
-        {
-            if (request.readyState === 4)
-            {
-                if (request.status === 200)
-                {
+    return new Promise(function(resolve, reject) {
+        request.onload = function (e) {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
                     resolve(request.responseText === "true");
-                }
-                else
-                {
+                } else {
                     reject(request.statusText);
                 }
             }
         };
-        request.onerror = function (e)
-        {
+        request.onerror = function (e) {
             reject(request.statusText);
         };
 
