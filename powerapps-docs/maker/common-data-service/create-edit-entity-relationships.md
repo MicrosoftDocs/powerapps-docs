@@ -142,28 +142,6 @@ Because of parental relationships there are some limitations you should keep in 
 - A custom entity can't be the primary entity in a relationship with a related system entity that cascades. This means you can't have a relationship with any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned** between a primary custom entity and a related system entity.  
 - No new relationship can have any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned** if the related entity in that relationship already exists as a related entity in another relationship that has any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned**. This prevents relationships that create a multi-parent relationship.  
 
-### Inherited Access Rights Cleanup
-
-Using Reparent and Share cascading behaviors are helpful when you want to provide access to records across related entities. But there can be a change in process or design that requires a change of the cascading behavior settings.
-
-When an entity relationship uses Reparent or Share, and the cascading behavior is changed from **Cascade All** to **Cascade None**, the entity relationship prevents any new permission changes from cascading to the related child entities. In addition, inherited permissions that were granted while the cascading behavior was active must be revoked.
-
-Recently implemented, Inherited Access Rights Cleanup automatically cleans up the legacy inherited access rights that remain after the cascading behavior is changed from **Cascade All** to **Cascade None**. This cleanup will not affect any user that was directly granted access to an entity, but will remove access from anyone who received access through inheritance only.
-
-This is how Inherited Access Rights Cleanup works:
-
-1. Identifies and collects all the entities that were in a cascading relationship with the updated parent.
-
-2. Identifies and collects the users that were granted access to the related entities through inherited access.
-
-3. Checks for users who were given direct access to a related entity and removes them from the collection.
-
-4. Removes inherited access for the collected users on the collected entities.
-
-After the cleanup runs, users who were able to access related entities only because of the cascading feature can no longer access the records, ensuring greater security.
-
-The cleanup is automatically triggered when you switch Reparent or Share cascading behaviors from All to None. No action is required.
-
 ### See also
 [Entities and metadata overview](create-edit-metadata.md)<br />
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) relationships](create-edit-1n-relationships.md)<br />
