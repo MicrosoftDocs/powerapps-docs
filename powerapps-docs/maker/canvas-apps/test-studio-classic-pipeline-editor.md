@@ -31,8 +31,9 @@ Before you begin, you must complete the following steps:
 
 - [Fork](#step-1---fork-the-powerappstestautomation-project) the [Microsoft/PowerAppsTestAutomation](https://github.com/microsoft/PowerAppsTestAutomation) project on GitHub.
 
-> [!NOTE]
-> Public forks can’t be made private. If you want to create a private repo, please [duplicate the repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository).
+    > [!NOTE]
+    > Public forks can’t be made private. If you want to create a private repo, please [duplicate the repository](https://help.github.com/github/creating-cloning-and-archiving-repositories/duplicating-a-repository).
+
 - Create a new [*Test URLs .json file*](#step-2---create-test-url-json-file) in the repo with the App Test URLs you want to run from the pipeline.
 
 ### Step 1 - Fork the PowerAppsTestAutomation project
@@ -115,15 +116,15 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 You'll now add new job tasks and configure the tasks to run the tests
 from the pipeline in this sequence:
 
-1. Configure screen resolution using PowerShell.
+1. [Configure screen resolution using PowerShell.](#step-1---configure-screen-resolution-using-powershell)
 
-1. Restore NuGet packages for the PowerAppsTestAutomation solution.
+1. [Restore NuGet packages for the PowerAppsTestAutomation solution.](#step-2---restore-nuget-packages)
 
-1. Build the PowerAppsTestAutomation solution.
+1. [Build the PowerAppsTestAutomation solution.](#step-3---build-the-powerappstestautomation-solution)
 
-1. Add Visual Studio Tests for Google Chrome.
+1. [Add Visual Studio Tests for Google Chrome.](#step-4---add-visual-studio-tests-for-google-chrome)
 
-1. Add Visual Studio Tests for Mozilla Firefox.
+1. [Add Visual Studio Tests for Mozilla Firefox.](#step-5---add-visual-studio-tests-for-mozilla-firefox)
 
 ### Step 1 - Configure screen resolution using PowerShell
 
