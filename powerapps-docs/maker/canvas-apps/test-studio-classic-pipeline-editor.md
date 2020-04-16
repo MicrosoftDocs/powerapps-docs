@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/15/2020
+ms.date: 04/16/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -81,7 +81,7 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 
     ![Create pipeline](media/test-studio-classic-pipeline-editor/create-pipeline.png)
 
-1. Select **Use the classic editor**
+1. Select **Use the classic editor**:
 
     ![Classic editor](media/test-studio-classic-pipeline-editor/use-classic-editor.png)
 
@@ -202,9 +202,9 @@ from the pipeline in this sequence:
 
 1. Remove the default entries in the Test Files text field and add the following:
 
-    ```\*\*\\Microsoft.PowerApps.TestAutomation.Tests\\bin\\Debug\\Microsoft.PowerApps.TestAutomation.Tests.dll```
+    ```**\Microsoft.PowerApps.TestAutomation.Tests\bin\\Debug\Microsoft.PowerApps.TestAutomation.Tests.dll```
 
-1. Enter **TestCategory=PowerAppsTestAutomation** in the **Test Filter Criteria field**.
+1. Enter ```TestCategory=PowerAppsTestAutomation``` in the **Test Filter Criteria field**.
 
 1. Select **Test mix contains UI tests**.
 
