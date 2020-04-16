@@ -282,21 +282,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
     5. If necessary, update the **App Display Rank** value to set the display position of app in the app list.
 
-    6. If necessary, select a value in the **Tracking Level** field to specify if you want to track data from this mobile app at a **Location** or **Facility** level.
-        - If **Location** is selected for an app, records created using the mobile app will contain location and facility information along with other data. Additionally, a **Location** drop-down will be available in the mobile app for users to select a location to track the data.
-        - If **Facility** is selected for an app, records created using the mobile app will contain only the facility information along with other data.
-        - If you don't select any value for the **Tracking Level** field, the following default tracking level is applied to the mobile apps:
-
-        |App  |Default tracking level  |
-        |--|--|
-        |COVID tracking|Location|
-        |Staff|Location|
-        |Equipment|Location|
-        |Bed capacity|Facility|
-        |Supplies|Facility|
-        |Staffing needs|Facility|
-        |Discharge tracking|Facility|
-
+    6. If necessary, select a value in the **Tracking Level** field to specify if you want to track data in this mobile app at a **Location** or **Facility** level. More information: [Manage tracking level for mobile apps](configure-data-reporting.md#manage-tracking-level-for-mobile-apps)
 
     7. Select **Save**.
 
