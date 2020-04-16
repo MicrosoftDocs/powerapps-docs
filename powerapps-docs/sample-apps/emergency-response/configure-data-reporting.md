@@ -115,12 +115,15 @@ To create a record:
 
     | **Field**            | **Description**                                                                                 |
     |----------------------|-------------------------------------------------------------------------------------------------|
-    | Region               | Select a region. This list is populated based on the **Regions** data you have created earlier. |
+    | Region               | Select a region this facility is associated with. This list is populated based on the **Regions** data you have created earlier. |
     | Facility Name        | Type the facility name. For example, Bellevue.                                                  |
+    | Total Vents          | Type the total number of ventilators available in the facility.                                  |
     | Description          | Type an optional description.                                                                   |
-    | Total Vents          | Type the total number of ventilators available in the facility                                  |
     | Effective Start Data | Type start date and time for this facility.                                                     |
     | Effective End Date   | Type end date and time for this facility.                                                       |
+    |Total Beds      | Automatically calculated.|
+    |Total Occupied      | Automatically calculated.|
+    |Facility Address      | Type the Street, City, County, State, Zip code, Latitude, and Longitude for the facility.|
 
     If required, enter facility address.
 
@@ -149,14 +152,14 @@ To create a record:
     | Location Name        | Type the name of the location.                                                                       |
     | Facility             | Select a facility. This list is populated based on the **Facilities** data you have created earlier. |
     | Floor                | Type the floor information for the facility.                                                         |
-    | Unit                 | Type the unit information for the facility                                                           |
+    | Unit                 | Type the unit information for the facility.                                                           |
+    | Occupancy Percentage | Automatically calculated based on last census and total beds values.                                         |
     | Acuity      | Select acuity record associated with this location.                                                                                                     |
-    | COVID Location      | Select whether this location is used to treat COVID patients (**Yes** or **No**.)                                                                                                      |
+    | COVID Location      | Select whether this location is used to treat COVID patients (**Yes** or **No**).                                                                                                      |
     | Total Beds           | Type the total number of beds in the facility.                                                       |
     | Surge Beds           | Type the number of surge beds in the facility. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                                      |
     | Blocked beds         | Type the number of beds blocked in the facility.                                                     |
     | Last Census          | Populates based on the last census record being created.                                             |
-    | Occupancy Percentage | Automatically calculated based on last census and total beds                                         |
     | Effective Start Data | Type start date and time for this location.                                                   |
     | Effective End Date   | Type end date and time for this location.                                                     |
     | Location Order       | Type a number that sorts the location in the location drop-down lists.                               |
@@ -165,6 +168,12 @@ To create a record:
 3. Select **Save & Close**. The newly created record will be available in the **Locations** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
+
+You can view the associated data for a location, such as **Census**, **COVID Tracking**, **Equipment Needs**, by opening an existing location record and selecting the respective tabs. The associated data is entered by frontline staff using the [mobile apps](use.md).
+
+> [!div class="mx-imgBorder"]
+> ![location-related-records](media/location-related-records.png)
+
 
 ### Departments data
 
