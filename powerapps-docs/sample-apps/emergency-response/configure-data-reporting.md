@@ -287,12 +287,9 @@ View the Power BI dashboards for insights and decision making.
 Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI dashboard.
 
 > [!div class="mx-imgBorder"]
-> ![View Power BI dashboard](media/view-power-dashboard.png)
+> ![View Power BI dashboard](media/view-powerbi-dashboard.png)
 
-You can use the filters at the top of the report to filter data for hospital systems, regions, and facilities. You can also filter for COVID locations.
-
-> [!div class="mx-imgBorder"]
-> ![Report filters](media/report-filters.png)
+You can use the filters on the right side to filter data for COVID locations, facilities, regions and hospital systems.
 
 #### System at a glance page 
 
@@ -300,85 +297,85 @@ The **Systems at a glance page** is the default or the top-level page that provi
 
 The page displays a summarized view of the following: 
 
-- **COVID patients**: Shows total number of COVID patients, number of patients found positive with COVID-19, and number of patients under investigation. 
+- **COVID Patient Information**: Shows total number of COVID patients, number of patients found positive with COVID-19, and number of patients under investigation (PUI).
 
-- **Bed Management**: Shows availability of beds, occupancy percentage, number of surge beds, and total number of beds. You can also use the grid below to view the numbers by acute units. 
+- **Bed Management**: Shows availability of beds, occupancy percentage, number of surge beds, and total number of beds. You can also use the grid below to view the numbers by acute units.
 
-- **Nurse staffing management**: Shows number of patients in ICU, nurses assigned, and nurse to patient ratio.  
+- **Staffing Information**: Shows number of patients in ICU, nurses assigned, and nurse to patient ratio.  
 
-- **Discharges**: Shows the number of total long stay patients, number of patients anticipated for discharge, and actual discharge. 
+- **Patient Discharge Information**: Shows the number of total long stay patients, number of patients anticipated for discharge, and actual discharge.
 
-- **Equipment**: Shows total number of vents, number of vents in use, and available vents. 
+- **Equipment Information**: Shows total number of vents, number of vents in use, and available vents. 
 
-- **Supplies**: Shows number of supplies on hand by days.
+- **Supplies Information**: Shows number of supplies on hand by days.
 
 > [!NOTE]
-> - Selecting the information icon (i) in any of the summarized area takes you to the respective details page for the area. 
+> - Selecting the title in any of the summarized area takes you to the respective details page for the area. 
 > - You can also perform other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports)
 > - The most recent or last updated columns in some of these reports show the date and time when the data was last refreshed. It's also easy to identify the freshness by viewing the color of the date and time values in these columns:
 >    - Black: Data is refreshed less than 20 hours ago
 >    - Gray: Data is refreshed 20 - 24 hours ago
 >    - Red: Data is refreshed more than 24 hours ago 
  
-#### System View page
+#### System view page
 
 The **System View** page displays charts with the following information for a hospital system:
 - Vents in use and vents available
 - Availability of beds and acute care beds and occupancy percentage
-- Total staff requested, number of patients (census), nurse to patient ratio.
-- Supplies on hand in days
+- Total staff requested, number of patients (census), and nurse to patient ratio
+- Supplies on hand over a period of time
 
 > [!div class="mx-imgBorder"]
 > ![System View](media/report-system-view.png)
 
-#### Location Details page 
+#### Location details page 
 
-To drill-down the report by location, click **Location Details** on the top-right corner. The **Location Details** page displays data by location such as total number of beds, available beds, surge beds, COVID patients, and so on. 
+TFrom the **System at a glance** page, select **i** on the top-right corner. The **Location details** page displays data by location such as total number of beds, available beds, surge beds, COVID patients, and so on. 
 
 > [!div class="mx-imgBorder"]
 > ![Location Details](media/report-location-details.png) 
 
-#### COVID Patient Details page 
+#### COVID patients page 
 
-The **COVID Patient Details** page provides drill-down information about the COVID patients such as patients at each location, patient trend over time that shows peaks and valleys of number of patients under investigation (PUI), and number of patients found positive, and get a sense of where the patients are located within the hospital.
+The page provides drill-down information about the COVID patients such as patients at each location, patient trend over time that shows peaks and valleys of number of patients under investigation (PUI), and number of patients found positive, and get a sense of where the patients are located within the hospital.
 
 > [!div class="mx-imgBorder"]
 > ![COVID Patient Details](media/report-covid-details.png)
 
-#### Bed Management page 
+#### Bed management page 
 
-The **Bed Management** page provides drill-down information by location such as total available beds and occupancy percentage.
+The page provides drill-down information by location such as total available beds, acute care beds available, and occupancy percentage.
 
 > [!div class="mx-imgBorder"]
 > ![Bed Management](media/report-bed-details.png)
 
-#### Staff Details page  
+#### Staffing details page  
 
-The **Staff Details** page provides details about the staff by location, number of nurses assigned, total number of patients and number of COVID patients. It also displays nurse to patient ratio and ICU nurse to patient ratio over a period of time.
+The page provides details about the staff by location, number of nurses assigned, total number of patients and number of COVID patients. It also displays nurse to patient ratio and ICU nurse to patient ratio over a period of time.
 
 > [!div class="mx-imgBorder"]
 > ![Staff Details](media/report-staff-details.png)
 
-#### Equipment Details page 
+#### Equipment page 
 
-The **Equipment Details** page provides details about the equipment by location, the total number of vents in use, overlaid by number of COVID patients, and other pieces of equipment, such as belts, chargers, and hoods in use.
+The page provides details about the equipment by location, the total number of vents in use, overlaid by number of COVID patients, and other pieces of equipment, such as belts, chargers, and hoods in use.
 
 > [!div class="mx-imgBorder"]
 > ![Equipment Details](media/report-equipment-details.png)
 
-#### Discharge Details page 
+#### Discharges page 
 
-The **Discharge Details** page provides details about the long-term patients, discharge barriers over a period, and variance in terms of actual and anticipated discharges.
-
-> [!div class="mx-imgBorder"]
-> ![Equipment Details](media/report-discharge-details.png)
-
-#### Supplies on Hand Details page 
-
-The **Supplies on Hand Details** page provides details about the supplies by location and supply; it also provides data about the supply available on hand over a period of time.
+The page provides details about the long-term patients, discharge barriers over a period, and variance in terms of actual and anticipated discharges.
 
 > [!div class="mx-imgBorder"]
 > ![Equipment Details](media/report-discharge-details.png)
+
+#### Supplies page 
+
+The page provides details about the supplies by location. It also provides a chart about days on hand by supply and facility, and the supply available on hand over a period of time.
+
+> [!div class="mx-imgBorder"]
+> ![Equipment Details](media/report-supplies.png)
 
 ## View and manage app feedback
 
