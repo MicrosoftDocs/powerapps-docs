@@ -3,8 +3,6 @@ title: "GetGlobalContext function and ClientGlobalContext.js.aspx in model-drive
 ms.date: 04/15/2020
 ms.service: powerapps
 ms.topic: "conceptual"
-applies_to: 
-  - "Dynamics 365 (online)"
 ms.assetid: b58e6173-e3cd-4a3b-b39a-334c295503ec
 author: "KumarVivek"
 ms.author: "kvivek"
