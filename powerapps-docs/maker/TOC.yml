@@ -849,6 +849,10 @@
       href: ./canvas-apps/test-studio.md
     - name: Working with Test Studio
       href: ./canvas-apps/working-with-test-studio.md
+    - name: Automate tests with Azure DevOps Pipelines
+      items:
+      - name: Configure pipeline using classic editor
+        href: ./canvas-apps/test-studio-classic-pipeline-editor.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes
