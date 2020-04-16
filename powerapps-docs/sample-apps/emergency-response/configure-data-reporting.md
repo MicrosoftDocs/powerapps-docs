@@ -55,11 +55,13 @@ The **Systems** entity lets you create and manage entries for Hospital Systems. 
 
 To create a record:
 
+1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
+
 1. Select **Systems** in the left pane, and select **New**:  
     > [!div class="mx-imgBorder"]
     > ![select-systems-new](media/select-systems-new.png)
 
-2. In the **New System** page, specify appropriate values:  
+1. In the **New System** page, specify appropriate values:  
    > [!div class="mx-imgBorder"]
    > ![enter-details-new-system](media/enter-details-new-system.png)
 
@@ -70,7 +72,7 @@ To create a record:
    | Effective Start Data | Type start date and time for this hospital system. |
    | Effective End Date   | Type end date and time for this hospital system.   |
 
-3. Select **Save & Close**. The newly created record will be available in the **Systems** list.
+1. Select **Save & Close**. The newly created record will be available in the **Systems** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
@@ -80,9 +82,11 @@ The **Regions** entity lets you manage the geographical regions for your hospita
 
 To create a record:
 
+1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
+
 1. Select **Regions** in the left pane, and select **New**.
 
-2. In the **New Region** page, specify appropriate values:  
+1. In the **New Region** page, specify appropriate values:  
 
     > [!div class="mx-imgBorder"]
     > ![enter-details-new-region](media/enter-details-new-region.png)
@@ -95,7 +99,7 @@ To create a record:
     | Effective Start Data | Type start date and time for this region.                                                       |
     | Effective End Date   | Type end date and time for this region.                                                         |
 
-3. Select **Save & Close**. The newly created record will be available in the **Regions** list.
+1. Select **Save & Close**. The newly created record will be available in the **Regions** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
@@ -106,9 +110,11 @@ The **Facilities** entity lets you manage the hospital locations within each reg
 
 To create a record:
 
+1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
+
 1. Select **Facilities** in the left pane, and select **New**.
 
-2. In the **New Facility** page, specify appropriate values: 
+1. In the **New Facility** page, specify appropriate values: 
 
     > [!div class="mx-imgBorder"] 
     > ![enter-details-new-facility](media/enter-details-new-facility.png)
@@ -127,7 +133,7 @@ To create a record:
 
     If required, enter facility address.
 
-3. Select **Save & Close**. The newly created record will be available in the **Facilities** list.
+1. Select **Save & Close**. The newly created record will be available in the **Facilities** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
@@ -140,9 +146,11 @@ The **Locations** entity lets you manage specific locations within each hospital
 
 To create a record:
 
+1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
+
 1. Select **Locations** in the left pane, and select **New**.
 
-2. In the **New Location** page, specify appropriate values:  
+1. In the **New Location** page, specify appropriate values:  
  
     > [!div class="mx-imgBorder"]
     > ![enter-details-new-location](media/enter-details-new-location.png)
@@ -165,7 +173,7 @@ To create a record:
     | Location Order       | Type a number that sorts the location in the location drop-down lists.                               |
     | Alternate Site Flag  | For internal use.                                                                                     |
 
-3. Select **Save & Close**. The newly created record will be available in the **Locations** list.
+1. Select **Save & Close**. The newly created record will be available in the **Locations** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
 
@@ -181,9 +189,11 @@ The **Departments** entity lets you manage departments information for a hospita
 
 To create a record:
 
+1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
+
 1. Select **Departments** in the left pane, and select **New**.
 
-2. In the **New Department** page, specify appropriate values:
+1. In the **New Department** page, specify appropriate values:
 
     > [!div class="mx-imgBorder"]
     > ![enter-details-new-department](media/enter-details-new-department.png)
@@ -195,9 +205,47 @@ To create a record:
     | Effective Start Data | Type start date and time for this department. |
     | Effective End Date   | Type end date and time for this department.   |
 
-3. Select **Save & Close**. The newly created record will be available in the **Departments** list.
+1. Select **Save & Close**. The newly created record will be available in the **Departments** list.
 
 To edit the record, select the record, update the values as required, and select **Save & Close**.
+
+## Manage tracking level for mobile apps
+
+Frontline workers can track information by *location* or *facility* using the mobile apps (canvas apps). Here is the default tracking level for each mobile app: 
+
+|App  |Default tracking level  |
+|--|--|
+|COVID tracking|Location|
+|Staff|Location|
+|Equipment|Location|
+|Bed capacity|Facility|
+|Supplies|Facility|
+|Staffing needs|Facility|
+|Discharge tracking|Facility|
+
+As an admin, you can change the default tracking level of mobile apps.
+
+1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
+
+1. In the left navigation, select the **Administration** area, and then select **Apps**. 
+
+    > [!div class="mx-imgBorder"]
+    > ![config-admin-app-records](media/admin-apps.png)
+
+1. Select one of the canvas apps to open the record.
+
+1. In the app record, select an appropriate value in the **Tracking Level** field.
+
+    > [!div class="mx-imgBorder"]
+    > ![app-tracking-level](media/app-tracking-level.png)
+
+    - If **Location** is selected for an app, records created using the mobile app will contain location and facility information along with other data. Additionally, a **Location** drop-down will be available in the mobile app for users to select a location to track the data.
+
+    - If **Facility** is selected for an app, records created using the mobile app will contain only the facility information along with other data.
+
+    - If you don't select any value for the **Tracking Level** field, the *default* tracking level as explained earlier is applied to the mobile apps.
+
+1. Select **Save** in the lower-right corner to save your changes.
 
 ## View Common Data Service dashboards
 

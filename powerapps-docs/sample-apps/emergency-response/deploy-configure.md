@@ -55,7 +55,7 @@ Perform the following steps to deploy the Hospital Emergency Response sample app
 - [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization)
     - [Step 4.1: Load mandatory configuration data](#step-41-load-mandatory-configuration-data)
     - [Step 4.2: Load master data](#step-42-load-master-data)
-- [Step 5: Update the mobile app branding and tracking level](#step-5-update-the-mobile-app-branding-and-tracking-level)
+- [Step 5: Update the mobile app branding](#step-5-update-the-mobile-app-branding)
 - [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
 - [Step 7: Add Azure Application Insights key to mobile apps for telemetry (optional)](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry-optional)
 - [Step 8: Share canvas apps with users in your organization](#step-8-share-canvas-apps-with-users-in-your-organization)
@@ -233,7 +233,7 @@ As explained earlier:
 
 You can also manually add master data later. More information: [Configure and manage master data for your organization](configure-data-reporting.md#configure-and-manage-master-data-for-your-organization)
 
-### Step 5: Update the mobile app branding and tracking level
+### Step 5: Update the mobile app branding
 
 You can change the app icon, color scheme, or display name of the mobile apps to match the branding of your organization.
 
@@ -282,21 +282,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
     5. If necessary, update the **App Display Rank** value to set the display position of app in the app list.
 
-    6. If necessary, select a value in the **Tracking Level** field to specify if you want to track data from this mobile app at a **Location** or **Facility** level.
-        - If **Location** is selected for an app, records created using the mobile app will contain location and facility information along with other data. Additionally, a **Location** drop-down will be available in the mobile app for users to select a location to track the data.
-        - If **Facility** is selected for an app, records created using the mobile app will contain only the facility information along with other data.
-        - If you don't select any value for the **Tracking Level** field, the following default tracking level is applied to the mobile apps:
-
-        |App  |Default tracking level  |
-        |--|--|
-        |COVID tracking|Location|
-        |Staff|Location|
-        |Equipment|Location|
-        |Bed capacity|Facility|
-        |Supplies|Facility|
-        |Staffing needs|Facility|
-        |Discharge tracking|Facility|
-
+    6. If necessary, select a value in the **Tracking Level** field to specify if you want to track data in this mobile app at a **Location** or **Facility** level. More information: [Manage tracking level for mobile apps](configure-data-reporting.md#manage-tracking-level-for-mobile-apps)
 
     7. Select **Save**.
 

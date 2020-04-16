@@ -79,7 +79,7 @@ The Hospital Emergency Response sample solution app consists of multiple apps fo
     <br> Collect status and projections on ​patient discharges.
 
 > [!NOTE]
-> By default, you can track information in the following apps at a *location* level: **COVID-19 stats**, **Equipment**, and **Staff**. In rest of the apps, you can track information at the *facility* level by default. Your IT admin can change the default tracking level, if required. More information: [Step 5: Update the mobile app branding and tracking level](deploy-configure.md#step-5-update-the-mobile-app-branding-and-tracking-level)
+> By default, you can track information in the following apps at a *location* level: **COVID-19 stats**, **Equipment**, and **Staff**. In rest of the apps, you can track information at the *facility* level by default. Your admin can change the default tracking level, if required. More information: [Manage tracking level for mobile apps](configure-data-reporting.md#manage-tracking-level-for-mobile-apps)
 
 ## Bed capacity
 
