@@ -41,9 +41,10 @@ When you create or edit a view you can configure the sort order for either ascen
   
 6.  Select **OK** to close the **Configure Sort Order** dialog box. 
 
-## Columns of grid don't have data showing when the grid is loading
+## Columns of a grid don't show data when the grid loads
 
-Columns (attributes) that are in the view's layoutxml but not in the layoutxml. In web client, there are special process on the server side to process layoutxml and then add those columns into the FetchXML. So the data will be showing in grid. However, UCI is directly using ODATA with FetchXML to retrieve data from server. If the attribute(s) are not in the FetchXML, then the data will not be retrieved.
+Grids in Unified Interface apps take the list of displayed columns from the underlying FetchXML of the view. If the FetchXML that is returned from the server does not have a column, then that column is not displayed. This is in contrast to the classic web application, where if a column is not present in FetchXML but present in LayoutXML, such a column is automatically added to the list of displayed columns. Unified Interface apps use OData directly with FetchXML to retrieve data from the server.
 
 ## Next steps
 [Create or edit a view](create-edit-views.md)
+[Use FetchXML to query data](../../developer/common-data-service/use-fetchxml-construct-query.md)
