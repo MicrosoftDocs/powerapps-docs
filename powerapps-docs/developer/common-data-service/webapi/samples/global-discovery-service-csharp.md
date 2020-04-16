@@ -23,15 +23,14 @@ This sample shows how to access the Discovery Service using the OData V4 RESTful
 
 This sample is available on Github at [https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/GlobalDiscovery](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/GlobalDiscovery)
 
-## What this sample does''
-''
+## What this sample does
+
 This sample returns the available Common Data Service instances for a given user credential.
 
 ## How this sample works
 
-This sample will use credential information in the App.config file, but will not use the URL configured in the connection string.
-Instead, it will just use the user credentials and the clientid.
-''''''''''''
+This sample will use credential information in the App.config file, but will not use the URL configured in the connection string. Instead, it will just use the user credentials and the client ID.
+
 ### Demonstrates
 
 This sample uses a HttpClient to authenticate using ADAL and call the Discovery Service to return information about available instances the user can connect to.
@@ -40,21 +39,24 @@ The sample depends on the `GetInstances` method and the `Instance` class below:
 
 ```csharp
 /// <summary>
-/// Uses the global web api discovery service to return instances
+/// Uses the global discovery service to return environment instances
 /// </summary>
 /// <param name="username">The user name</param>
 /// <param name="password">The password</param>
-/// <returns>A List of Instances</returns>
+/// <returns>A list of Instances</returns>
 static List<Instance> GetInstances(string username, string password)
 {
 
     string GlobalDiscoUrl = "https://globaldisco.crm.dynamics.com/";
     HttpClient client = new HttpClient();
-    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", GetAccessToken(username, password, new Uri("https://disco.crm.dynamics.com/api/discovery/"))); // Getting Authority from Commercial 
+    client.DefaultRequestHeaders.Authorization = 
+        new AuthenticationHeaderValue("Bearer", GetAccessToken(username, password, 
+        new Uri("https://disco.crm.dynamics.com/api/discovery/")));
     client.Timeout = new TimeSpan(0, 2, 0);
     client.BaseAddress = new Uri(GlobalDiscoUrl);
 
-    HttpResponseMessage response = client.GetAsync("api/discovery/v2.0/Instances", HttpCompletionOption.ResponseHeadersRead).Result;
+    HttpResponseMessage response = 
+        client.GetAsync("api/discovery/v2.0/Instances", HttpCompletionOption.ResponseHeadersRead).Result;
 
     if (response.IsSuccessStatusCode)
     {
