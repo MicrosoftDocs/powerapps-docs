@@ -37,7 +37,7 @@ The following pre-built components can be used to solve your AR scenarios:
 1. You need to be [enrolled in the Experience Dynamics Insider Program](#enroll-in-the-mixed-reality-in-power-apps-dynamics-365-insider-program-internal).
 1. You need a PowerApps license that supports Common Data Service. If you [identify your current license](/powerapps/maker/signup-for-powerapps#identify-your-current-license) does not support CDS, you can sign up for a [free trial license for 30 days](http://web.powerapps.com/trial). Please note that in some circumstances this step may take 30 to 60 minutes. Please check periodically after requesting a trial license.
 2. If you don’t have one already, you will need to [create an environment with Common Data Service instance installed](/power-platform/admin/create-environment). You will need to have system administrator privileges for this step.
-3. [Enable the PowerApps component framework](/powerapps/developer/component-framework/component-framework-for-canvas-apps#enable-power-apps-component-framework-feature) in your environment for canvas apps.
+3. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
 
 
 
@@ -71,6 +71,27 @@ After you've been added to the program, you'll need to download and import the s
 4. Open the .zip file and extract the *MixedRealityPreview_###.zip* file to a location on your hard drive. *###* in the file name indicates the latest version number, for example *MixedRealityPreview_1_1_2.zip*. You can also extract the *ModelGallerySample.zip* file.
 5. [Import the two solutions into your environment](/powerapps/maker/common-data-service/import-update-export-solutions).
 
+### Enable the mixed reality features for each app
+
+For each app you create, you need to enable the mixed reality features:
+
+1. Open the app for editing in the Power Apps studio at [https://create.powerapps.com](https://create.powerapps.com).
+
+2. Select **File** from the top menu.
+
+    ![](./media/augmented-overview/augmented-overview-file.png)
+
+3. Go to the **Settings** tab, select **Advanced settings**, and scroll down to find the **Mixed reality features** option. Set the option to **On**.
+
+    ![](./media/augmented-overview/augmented-enable-mixed-reality.png)
+
+4. Return to editing your app by selecting the back arrow icon
+
+    ![](./media/augmented-overview/augmented-overview-back.png)
+
+5. Open the **Insert** pane to see the mixed reality components under **Media** and **Mixed Reality**.
+
+    ![](./media/augmented-overview/augmented-overview-insert-all.png)
 
 ## Scenarios
 

@@ -18,13 +18,11 @@ search.app:
 
 # Map geospatial component
 
-The dynamic map component can be added to your canvas apps by following the instructions for [adding framework components](/powerapps/developer/component-framework/component-framework-for-canvas-apps#add-components-to-a-canvas-app). 
+Easily bring dynamic mapping capabilities into your canvas apps. View the physical position of entities by linking to a data source, or by inputting new physical locations. Customize your map view by changing its default location and adding map components. Pan, tilt, zoom, and drag to center your map view.
 
 ![](./media/augmented-geospatial/geospatial-map-component.png)
 
-## Description
-
-Easily bring dynamic mapping capabilities into your canvas apps. View the physical position of entities by linking to a data source, or by inputting new physical locations. Customize your map view by changing its default location and adding map components. Pan, tilt, zoom, and drag to center your map view.
+The dynamic map component can be added to your canvas apps by following the instructions for [adding framework components](/powerapps/developer/component-framework/component-framework-for-canvas-apps#add-components-to-a-canvas-app). 
 
 ## Use sample apps to explore the map component
 
