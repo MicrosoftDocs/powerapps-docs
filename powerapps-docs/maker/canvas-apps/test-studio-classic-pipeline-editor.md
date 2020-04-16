@@ -17,8 +17,6 @@ search.app:
 
 # Automate tests with Azure Pipeline using classic editor
 
-## Overview
-
 In this article, you'll learn how to setup and run your canvas app tests built in the Test Studio using the [**Azure Pipelines classic editor**](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops#define-pipelines-using-the-classic-interface) in [**Azure DevOps Services**](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops). 
 
 You can use a public project on GitHub - [**Microsoft/PowerAppsTestAutomation**](https://github.com/microsoft/PowerAppsTestAutomation) to:
