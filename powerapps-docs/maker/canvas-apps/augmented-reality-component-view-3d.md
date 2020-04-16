@@ -15,11 +15,11 @@ search.app:
   - PowerApps
 ---
 
-# View 2D and 3D shapes and objects in canvas apps
+# View 3D objects in canvas and model-driven apps
 
-Add 3D models to your canvas and model-driven apps built in Power Apps. Use the component to rotate the shape and zoom into the model with simple gestures.
+Add 3D models to your canvas and model-driven apps built in Power Apps. Use the **View in 3D** component to rotate the shape and zoom into the model with simple gestures.
 
-You can display a single 3D object, or you can let the user see multiple objects by connecting the component to the **Gallery** control.
+You can display a single 3D object, or you can let the user see [multiple objects by connecting the component to the **Gallery** control](#define-the-location-for-3d-objects).
 
 ![](./media/augmented-3d/augmented-3d-viewer.png)
 
@@ -28,62 +28,36 @@ You can display a single 3D object, or you can let the user see multiple objects
 >You can use the [AR Import Tool](/dynamics365/mixed-reality/import-tool/) to convert from a variety of industry 3D formats into .glb.
 
 
-To use the 3D model viewer, you need to [enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
+To use the component, you need to [enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
-
-## Use sample apps to explore the map component
-
-The dynamic map component appears in the following two sample apps:
-- Map Sample App: This sample canvas app shows a set of data points in a table, plots them as pins in the dynamic map and centers the map view to show all pins. The user can pan, tilt, zoom, and drag the map view. The map also clusters the data points when the map view is far away enough from the pins.
-- Address + Map Sample App: This sample canvas app lets the user type an address in the text input, showing suggestions to autocomplete the address. Once the user selects the address, the address is plotted as a pin in the dynamic map and the map view is centered at this pin. The user can pan, tilt, zoom, and drag the map view.
 
 ## Properties
 
-The following properties can be defined and configured in the component's **Controls** pane. 
+The following properties can be defined and configured in the **View in 3D** component's **View in 3D** pane on the **Properties** and **Advanced** tabs. 
 
-![](./media/augmented-geospatial/geospatial-controls.png)
+![](./media/augmented-3d/augmented-3d-viewer-controls.png)
 
-Note that some properties are only available in the **Advanced** tab on the **Controls** pane, under the **More options** button.
+Note that some properties are only available in the **Advanced** tab on the **View in 3D** pane.
 
 Property | Description | Type | Location
 - | - | - | -
-Data source(Items) | Data source (table) that lists a pre-defined set of longitudes and latitudes to display as map pin on the map when it's loaded. Map each of the columns in your data with the *ItemsLongitudes*, *ItemsLatitudes*, and *ItemLabels*. | Not applicable | Properties
-Transparency | Set the transparency of the map. | Percentage | Properties
-Visible | Whether the map should show or not. | Boolean | Properties
-Position | Location of the map component (top left corner) on the app's screen, in pixels from the top left corner of the app screen. | Pixels | Properties
-Size | The size of the map component on the app's screen. | Pixels | Properties
-Use custom location | Whether the map initializes at a custom location set by the user or not. | Boolean | Properties
-Custom longitude | Longitude at which the map would go to when it's loaded if **Use custom location** is enabled. | Floating point number | Properties
-Custom latitude | Latitude at which the map would go to when it's loaded if **Use custom location** is enabled. | Floating point number | Properties
-Custom zoom level | Zoom level at which the map would be set to when it's loaded if **Use custom location** is enabled. | Integer | Properties
-Satellite view | Whether the style of the map is a satellite view or a road view. | Boolean | Properties
-Cluster pins | Whether the map pins are clustered or not. | Boolean | Properties
-Zoom control | Whether the zoom component appears on the map or not. | Boolean | Properties
-Compass control | Whether the compass component appears on the map or not. | Boolean | Properties
-Pitch control | Whether the pitch component appears on the map or not. | Boolean | Properties
-Maximum map pins | Maximum number of pins displayed on the map | Integer | Properties
-Border radius | How curved the corners of the map component should appear; higher numbers result in a more distinct curve. | Integer | Properties
-Border | Style, thickness, and color of the border. | Multiple | Properties
-Tab index | Order in which items on the app screen be tabbed between. | Integer | Properties
-ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | TableName.ColumnName | Advanced
-ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins. | TableName.ColumnName | Advanced
-ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. | TableName.ColumnName | Advanced
-Items_Items | Name of the table in your data source that contains all the records that you want to plot in the map using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced
+Source | Data source that identifies the .glb file to display. <br/>Within **model-driven apps**, the **View in 3D** component is bound to a *SingleLine.URL* field property. This means that you can only add the component to a *SingleLine.URL* field on the form. An example is the **Website** field on the **Account** entity. <br/>Within **canvas apps**, the **View in 3D** component supports loading models from publically accessible, CORS-compliant URLs, base64-encoded models, and as attachments or media content accessed through data connectors. | Not applicable | Properties (also in **Advanced** as **Src**)
+Background fill | Set the background color for the component. | Color picker | Properties (also in **Advanced** as **BackgroundFill**, where it accepts RGBA or HTML hexadecimal color codes)
+OnChange |  | Boolean | Advanced
 Tooltip | Descriptive text that appears when a user navigates to the map component. | String | Advanced
+DisplayMode | | String | Advanced
+Height | Height of the component in pixels. | Pixels | Advanced
+TabIndex | Order in which items on the app screen be tabbed between. | Integer | Advanced
+Visible | Whether the component is shown or not. | Boolean | Advanced
+Width | Width of the component in pixels. | Pixels | Advanced
+X | Horizontal position of the component on the app screen. 0 is the leftmost edge of the screen. | Pixels | Advanced
+Y | Vertical position of the component on the app screen. 0 is the topmost edge of the screen. | Pixels | Advanced
 
-## Known issues
 
-- Localization is not yet supported.
-- Model-driven apps are not yet supported.
-
-
-## Other geospatial components
-- [Address input](geospatial-component-input-address.md)
-
+## Define the location for 3D objects
 
 
 ## Other augmented reality controls
-- [View in 3D](augmented-reality-component-view-3d.md)
 - [View in augmented reality](augmented-reality-component-view-ar.md)
 - [Measure in augmented reality - distance](augmented-reality-component-measure-distance.md)
 - [Measure in augmented reality - advanced](augmented-reality-component-measure-advanced.md)
