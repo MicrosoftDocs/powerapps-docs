@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/13/2020
+ms.date: 04/15/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
@@ -339,7 +339,7 @@ The **System View** page displays charts with the following information for a ho
 
 #### Location details page 
 
-TFrom the **System at a glance** page, select **i** on the top-right corner. The **Location details** page displays data by location such as total number of beds, available beds, surge beds, COVID patients, and so on. 
+From the **System at a glance** page, select **i** on the top-right corner. The **Location details** page displays data by location such as total number of beds, available beds, surge beds, COVID patients, and so on. 
 
 > [!div class="mx-imgBorder"]
 > ![Location Details](media/report-location-details.png) 
