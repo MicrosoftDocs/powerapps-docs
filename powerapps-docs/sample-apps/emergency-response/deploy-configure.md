@@ -55,7 +55,7 @@ Perform the following steps to deploy the Hospital Emergency Response sample app
 - [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization)
     - [Step 4.1: Load mandatory configuration data](#step-41-load-mandatory-configuration-data)
     - [Step 4.2: Load master data](#step-42-load-master-data)
-- [Step 5: Update the mobile app branding](#step-5-update-the-mobile-app-branding)
+- [Step 5: Update the mobile app branding and tracking level](#step-5-update-the-mobile-app-branding-and-tracking-level)
 - [Step 6: Bypass consent for mobile apps](#step-6-bypass-consent-for-mobile-apps)
 - [Step 7: Add Azure Application Insights key to mobile apps for telemetry (optional)](#step-7-add-azure-application-insights-key-to-mobile-apps-for-telemetry-optional)
 - [Step 8: Share canvas apps with users in your organization](#step-8-share-canvas-apps-with-users-in-your-organization)
@@ -233,7 +233,7 @@ As explained earlier:
 
 You can also manually add master data later. More information: [Configure and manage master data for your organization](configure-data-reporting.md#configure-and-manage-master-data-for-your-organization)
 
-### Step 5: Update the mobile app branding
+### Step 5: Update the mobile app branding and tracking level
 
 You can change the app icon, color scheme, or display name of the mobile apps to match the branding of your organization.
 
