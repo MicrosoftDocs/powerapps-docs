@@ -31,7 +31,9 @@ Before you begin, you must complete the following steps:
 
 - [Fork](#step-1---fork-the-powerappstestautomation-project) the [Microsoft/PowerAppsTestAutomation](https://github.com/microsoft/PowerAppsTestAutomation) project on GitHub.
 
-- Create a new [*Test URLs .json file*](#step-2---create-test-url-json-file) in the forked repo with the App Test URLs you want to run from the pipeline.
+> [!NOTE]
+> Public forks can’t be made private. If you want to create a private repo, please [duplicate the repository](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository).
+- Create a new [*Test URLs .json file*](#step-2---create-test-url-json-file) in the repo with the App Test URLs you want to run from the pipeline.
 
 ### Step 1 - Fork the PowerAppsTestAutomation project
 
@@ -57,7 +59,7 @@ Your forked repository will now be available.
 
 Test URL .json file will contain the test suite and test case URLs for validating your app. The app test suite and test case URLs can be retrieved by selecting the [Copy play link](working-with-test-studio.md#playing-tests-in-a-browser) in Test studio.
 
-You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you forked earlier.
+You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you created earlier.
 
 1. Create a new ```TestURLs.json``` file in your repo, or use any other file name. <br> The file name and location will be mapped in the pipeline variables later in the document.
 
@@ -96,7 +98,7 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 
 1. Select **...** (ellipsis) from the right side of **Repository** input.
 
-1. Enter the name of your [forked](#step-1---fork-the-powerappstestautomation-project) project on GitHub, and then **Select** it:
+1. Enter the name of your project on GitHub, and then **Select** it:
 
     ![Select repo](media/test-studio-classic-pipeline-editor/select-repo.png)
 
@@ -262,7 +264,7 @@ you've added [earlier](#add-tasks-to-the-pipeline).
 | BrowserTypeChrome         | Chrome                                                                                                                         |
 | BrowserTypeFirefox        | Firefox                                                                                                                        |
 | OnlineUrl                 | <https://make.powerapps.com>                                                                                                   |
-| TestAutomationURLFilePath | ```$(Build.SourcesDirectory)\<test URL file>.json``` <br>**Note:** This is the test URL file you created.                                 |
+| TestAutomationURLFilePath | ```$(Build.SourcesDirectory)\<test URL file>.json``` <br>**Note:** This is the [*Test URLs .json file*](#step-2---create-test-url-json-file) file you created earlier.                      |
 | UsePrivateMode            | true                                                                                                                           |
 | OnlineUsername            | Enter the Azure Active Directory email address of the user context that will sign in to the application. Tests will run under the context of this user account.\> |
 
@@ -305,6 +307,8 @@ the failure with any trace information, if available.
 - Multi-factor authentication isn't supported.
 
 - Internet Explorer 11 and Microsoft Edge aren't supported browsers.
+
+- Test summary will report a single test result per browser. The test result will contain 1 or more test cases or test suite results.   
 
 - Any authentication process other than Azure Active Directory sign in flow requires customization of the sign in process in the **PowerAppsTestAutomation** solution.
 
