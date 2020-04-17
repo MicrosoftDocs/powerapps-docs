@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/14/2020
+ms.date: 04/17/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Debugging an app with canvas app Monitor
+# Debugging an app with canvas app Monitor (Experimental)
 
 **Canvas app Monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an
 app runs by providing a log of all activities in your app as the app runs.
@@ -23,6 +23,9 @@ app runs by providing a log of all activities in your app as the app runs.
 This gives you a better understanding of how the formulas contained in
 your app work so you can improve performance and identify any errors or
 problems.
+
+> [!NOTE]
+> Canvas app Monitor feature is still experimental. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 ## Debugging an app
 
@@ -79,6 +82,8 @@ To view events from your app, play the app in the Studio. The monitor will then
 display the table of events occurring along with specific details.
 
 ![View events as they occur](./media/monitor/view-events.gif)
+
+Refresh the page to replay the media.
 
 You can review various properties for each event inside the Monitor. Depending on the event category, some of these properties may not contain data.
 
