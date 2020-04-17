@@ -432,9 +432,12 @@ Publish the Power BI dashboard and share it with users in your organization so t
 
 You can publish the Power BI dashboard using either of the following options: using the template app from the AppSource *or* using the **.pbit** file available in the deployment package.
 
-### Option A: Publish using the template app from AppSource
+### Option A: Publish using the template app from AppSource (Preferred Option)
 
 Detailed information about using the template app from the AppSource is available here: [Connect to the Hospital Emergency Response Decision Support Dashboard](https://docs.microsoft.com/power-bi/connect-data/service-connect-to-health-emergency-response)
+
+> [!IMPORTANT]
+> This is an easier way to publish the Power BI dashboard than using the .pbit file option to publish. We recommend customers use this option instead of publishing using the .pbit file option. 
 
 ### Option B: Publish using the .pbit file in the deployment package
 
