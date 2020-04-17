@@ -137,14 +137,14 @@ Select **Upload** to load a ```.json``` trace file to the monitor. The upload op
 
 ![Upload](./media/monitor/upload.png)
 
-## Example scenario
+## Example
 
 In this example, you'll use the *Northwind Sample Data* app included with
 the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
 
 *Northwind sample solution* is a canvas app that loads sample data into the Common Data Service. You can also create a new app or use an existing app instead.
 
-### Scenario background
+### Background
 
 Consider the scenario where the app is deployed and the initial app versions experiences performance degradation. The app also intermittently generates errors with no clear pattern. Loading data in app succeeds mostly and fails sometimes.
 
@@ -154,7 +154,7 @@ When you select such event, you see the error as *Rate limit exceeded. Try again
 
 ![HTTP status code 429](./media/monitor/http-statuscode-429.png)
 
-### Scenario analysis
+### Analysis
 
 The issue needs further analysis to understand why requests are getting
 throttled. In the Monitor, you see that for each **createRow** call, there are several **getRows** requests from the **ProgressCount.Text** property; each to a different entity. These aren't the entities the app is creating rows for. The **ProgressCount.Text**  formula is seen in the Monitor:
@@ -167,7 +167,7 @@ since **CountRows** isn't delegated for Common Data Service. For each single r
 
 These extra requests intermittently cause errors due to the Common Data Service platform throttling the requests to the service. And it also explains the overall performance problem.
 
-### Scenario conclusion
+### Conclusion
 
 The permanent fix for this app is to do the **CountRows** manually for each
 entity as records are being created in it. Without using Monitor, it would have been difficult to diagnose and resolve this issue.
