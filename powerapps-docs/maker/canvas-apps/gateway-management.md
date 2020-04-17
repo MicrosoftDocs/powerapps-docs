@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/16/2019
+ms.date: 04/14/2020
 ms.author: arthii
 search.audienceType: 
   - maker
@@ -50,6 +50,9 @@ To install a gateway, follow the steps in [Install an on-premises data gateway](
    * **Admin**: Administrators who have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
 For **Can use** and **Can use + share** permission levels, select the data sources that the user can connect to over the gateway.
+
+> [!NOTE]
+> **Can use** and **Can use + share** does not apply to custom connectors.
 
 ## View and manage gateway connections
 

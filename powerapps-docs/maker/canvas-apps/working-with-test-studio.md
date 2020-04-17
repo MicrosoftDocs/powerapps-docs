@@ -109,7 +109,7 @@ To add test steps and test assertions in Kudos app:
     > [!NOTE]
     > When you select **Insert step above**, a new blank step is added above the current step. You can also use **Assert**, **SetProperty**, **Select** or **Trace** actions instead. This adds step with respective action formula that you can edit.
 
-3. Update the step description. For example, “Count Kudo in database”.
+3. Update the step description. For example, "Count Kudo in database".
 
 4. Enter an expression or formula into the action input to count the records in the database before executing the test.
 
@@ -306,7 +306,7 @@ Other example of expressions you could use in these properties are:
 
 - Email your results:
 
-    ```Office365.SendMailV2(“someone@example.com”, “Test case results”, JSON(TestCaseResult, JSONFormat.IndentFour))```
+    ```Office365.SendMailV2("someone@example.com", "Test case results", JSON(TestCaseResult, JSONFormat.IndentFour))```
 
 - Receive an app notification of the test result:
 
@@ -331,3 +331,7 @@ In addition to the [functions](formula-reference.md) available in Power Apps, fo
 - [SetProperty](./functions/function-setproperty.md)
 - [Assert](./functions/function-assert.md)
 - [Trace](./functions/function-trace.md)
+
+## Next steps
+
+- [Automate tests with Azure DevOps pipeline classic editor](test-studio-classic-pipeline-editor.md)

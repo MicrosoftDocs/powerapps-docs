@@ -58,5 +58,6 @@ In ISV Studio, an ISV can either upload a full [package](/powerapps/developer/co
 
 [Home page](isv-app-management-homepage.md)<br/>
 [App page](isv-app-management-apppage.md)<br/>
-[Tenant page](isv-app-management-tenantpage.md)
+[Tenant page](isv-app-management-tenantpage.md)<br/>
+[Connector Certification](isv-app-management-certification.md)
 

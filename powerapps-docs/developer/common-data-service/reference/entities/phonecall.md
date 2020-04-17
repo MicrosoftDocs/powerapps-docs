@@ -1,7 +1,7 @@
 ---
 title: "PhoneCall Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the PhoneCall entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the PhoneCall entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # PhoneCall Entity Reference
 
@@ -1108,7 +1109,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|regardingobjectidname|
-|MaxLength|100|
+|MaxLength|400|
 |RequiredLevel|None|
 |Type|String|
 
@@ -1124,7 +1125,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|regardingobjectidyominame|
-|MaxLength|100|
+|MaxLength|400|
 |RequiredLevel|None|
 |Type|String|
 
