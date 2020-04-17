@@ -97,17 +97,22 @@ Error  **Import Solution Failed: Web resource content size is too big**.
     <PcfBuildMode>production</PcfBuildMode>
   </PropertyGroup>
   ```
-## Solution checker issue
 
-**Error: Do not use the eval function or its functional equivalents.**
+## When running Power Apps checker with the solution built using CLI tooling in default configuration
 
-This error occurs when the user creates, builds, and packages code components using CLI and build solution file using `msbuild` and imports the solution file into Common Data Service and runs the solution checker.
+**Error: Do not use the eval function or its functional equivalents**
+This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs webpack (used to bundle the code component) to package in development mode, which emits `eval()`. 
 
 **Workaround**
 
-Re build the solution file using  the following command and reimport the solution into Common Data Service and run the solution checker.
+Re build the solution file using  the following either of the commands and reimport the solution into Common Data Service.
+
 ```CLI
 msbuild/property:configuration:Release
+```
+
+```CLI
+npm run build -- --buildMode production
 ```
 
 ## Power Apps component framework Datasets getValue by property alias doesn't work
