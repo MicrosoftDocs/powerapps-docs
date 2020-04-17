@@ -2,7 +2,7 @@
 title: "Customize entity forms (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Forms provide the user interface (UI) that people use to create, view, or edit entity records. Use the form designer in the customization tools to create and edit entity forms. This topic will provide information necessary to create or edit forms programmatically." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 10/31/2018
+ms.date: 03/10/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: e6a25bbe-e484-cfe9-9ad9-20ac6f19336a
@@ -39,8 +39,8 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 ### View FormXML from an exported entity  
  Only definitions of system entity forms that have been customized are included in exported managed solution. To view the definition of a system entity form, you must either change it in some way, or create a new form by saving the existing form with a new name.  
 
- After you export the solution, extract the contents and view the customizations.xml file. You’ll find the definition of the forms in `ImportExportXml` > `Entities` > `Entity` > `FormXml`. 
- In the `<FormXml>` node, you’ll find each type of form is grouped in a `<forms>` element with the `type` attribute specifying the type of form.  
+ After you export the solution, extract the contents and view the customizations.xml file. You'll find the definition of the forms in `ImportExportXml` > `Entities` > `Entity` > `FormXml`. 
+ In the `<FormXml>` node, you'll find each type of form is grouped in a `<forms>` element with the `type` attribute specifying the type of form.  
 
 <a name="BKMK_FormProperties"></a>   
 ## Form properties  
@@ -52,7 +52,7 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 |   `AncestorFormId`    |                  `<ancestor>`                   |                      Unique identifier of the parent form. This is set when you create a new form by using **Save As** for an existing form or by using <xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest>.                      |
 |    `CanBeDeleted`     |                `<CanBeDeleted>`                 |                                    Information that specifies whether this component can be deleted.This managed property is only applied if the form was created by importing a managed solution.                                    |
 |     `Description`     |                `<Descriptions>`                 | `Description` is a string and `<Descriptions>` contains any localized labels for the description of the form.<br /><br /> The localized labels can be retrieved using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>. |
-| `FormActivationState` |             `<FormActivationState>`             |                                  Specifies the state of the form.<br /><br /> Only forms of type “main” can be deactivated.<br /><br /> Valid Values:<br /><br /> -   0: Inactive<br />-   1: Active                                  |
+| `FormActivationState` |             `<FormActivationState>`             |                                  Specifies the state of the form.<br /><br /> Only forms of type "main" can be deactivated.<br /><br /> Valid Values:<br /><br /> -   0: Inactive<br />-   1: Active                                  |
 |       `FormId`        |                   `<formid>`                    |                                                                                                     Unique identifier of the form                                                                                                     |
 |  `FormPresentation`   |              `<FormPresentation>`               |                                     Specifies whether this form is in the updated UI layout in Common Data Service.                                      |
 |       `FormXml`       |                    `<form>`                     |                                                                                                XML representation of the form layout.                                                                                                 |
@@ -70,13 +70,18 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 
  You can only create new forms for an entity where <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>. <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.CanCreateForms> allows it.  
 
- You can create new forms using either a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or the <xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest>. When using <xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest> or using **Save As** in the form editor, note that there is no inheritance between forms. Therefore, changes to the base form aren’t automatically applied to any forms created from it.  
+ You can create new forms using either a <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> or the <xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest>. When using <xref:Microsoft.Crm.Sdk.Messages.CopySystemFormRequest> or using **Save As** in the form editor, note that there is no inheritance between forms. Therefore, changes to the base form aren't automatically applied to any forms created from it.  
 
  Editing the form definitions from an exported managed solution and then re-importing the solution is a supported method to edit entity forms. When manually editing forms we strongly recommend you use an XML editor that allows for schema validation. More information: [Edit the Customizations XML File with Schema Validation](edit-customizations-xml-file-schema-validation.md)  
 
 ## Open main form in a dialog using client API
 
 To open the main form in a dialog using client API, you need to invoke the call using the [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) method. The [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto) API method allows you to open the dialog with several options, including the size and position.
+
+
+> [!IMPORTANT]
+> - Open main form in a dialog using client API is still in preview.
+> - Preview features aren't meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
 > [!NOTE]
 > [Xrm.Navigation.openForm](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/openform) method is not supported to open a main form as a dialog.
@@ -133,3 +138,4 @@ Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formTy
  [SystemForm Entity](../common-data-service/reference/entities/systemform.md)  
  [Form XML Schema](form-xml-schema.md)<br/>
  [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto)
+ 

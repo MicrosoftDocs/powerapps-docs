@@ -426,7 +426,7 @@ ms.custom:
                                     <h3 style="font-size: 1.15rem">Resources</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="https://aka.ms/powerappsadminwhitepaper">Whitepaper: Administering Power Apps and Power Automate Enterprise Deployment</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://powerapps.microsoft.com/blog/introducing-the-powerapps-center-of-excellence-starter-kit/">Power Apps Center of Excellence (CoE) Starter Kit</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/guidance/coe/starter-kit">Power Apps Center of Excellence (CoE) Starter Kit</a></p>
                                  </div>
                               </div>
                            </div>

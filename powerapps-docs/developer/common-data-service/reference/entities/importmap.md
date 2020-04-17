@@ -1,7 +1,7 @@
 ---
 title: "ImportMap Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the ImportMap entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the ImportMap entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # ImportMap Entity Reference
 
@@ -874,6 +875,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |85|Virtual Entity Data Source|
 |92|Team template|
 |99|Social Profile|
+|101|Service Plan|
 |126|Indexed Article|
 |127|Article|
 |129|Subject|
@@ -888,9 +890,10 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |400|AI Template|
 |401|AI Model|
 |402|AI Configuration|
+|418|Dataflow|
 |430|Entity Analytics Config|
-|431|AttributeImageConfig|
-|432|EntityImageConfig|
+|431|Image Attribute Configuration|
+|432|Entity Image Configuration|
 |950|New Process|
 |951|Translation Process|
 |955|Expired Process|
@@ -1120,6 +1123,9 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |9800|Entity|
 |9808|Attribute|
 |9809|OptionSet|
+|9810|Entity Key|
+|9811|Entity Relationship|
+|9812|Managed Property|
 |9866|Mobile Offline Profile|
 |9867|Mobile Offline Profile Item|
 |9868|Mobile Offline Profile Item Association|
@@ -1157,28 +1163,41 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |9987|External Party Item|
 |9996|HolidayWrapper|
 |9997|Email Signature|
-|10000|Solution Component Summary|
-|10001|Solution Component Data Source|
-|10002|Knowledge Article Image|
-|10003|Knowledge Article Template|
-|10004|OData v4 Data Source|
-|10005|Solution History|
-|10006|Solution History Data Source|
-|10007|Component Layer|
-|10008|Component Layer Data Source|
-|10009|AI Form Processing Document|
-|10010|AI Object Detection Image|
-|10011|AI Object Detection Label|
-|10012|AI Object Detection Bounding Box|
-|10013|AI Object Detection Image Mapping|
-|10015|Workflow Binary|
-|10016|Analysis Component|
-|10017|Analysis Job|
-|10018|Analysis Result|
-|10019|Analysis Result Detail|
-|10020|Solution Health Rule|
-|10021|Solution Health Rule Argument|
-|10022|Solution Health Rule Set|
+|10000|Solution History|
+|10001|Solution History Data Source|
+|10002|Solution Component Attribute Configuration|
+|10003|Solution Component Configuration|
+|10004|Component Layer|
+|10005|Component Layer Data Source|
+|10006|StageSolutionUpload|
+|10008|Solution Component Summary|
+|10009|Solution Component Data Source|
+|10010|Knowledge Article Image|
+|10011|Knowledge Article Template|
+|10012|ApiSettings|
+|10013|OData v4 Data Source|
+|10014|AI Builder Dataset|
+|10015|AI Builder Dataset File|
+|10016|AI Builder Dataset Record|
+|10017|AI Builder Datasets Container|
+|10018|AI Builder File|
+|10019|AI Builder File Attached Data|
+|10020|AI Form Processing Document|
+|10021|AI Object Detection Image|
+|10022|AI Object Detection Label|
+|10023|AI Object Detection Bounding Box|
+|10024|AI Object Detection Image Mapping|
+|10026|ProcessStageParameter|
+|10027|Workflow Binary|
+|10028|Connection Reference|
+|10029|Help Page|
+|10030|Analysis Component|
+|10031|Analysis Job|
+|10032|Analysis Result|
+|10033|Analysis Result Detail|
+|10034|Solution Health Rule|
+|10035|Solution Health Rule Argument|
+|10036|Solution Health Rule Set|
 
 
 <a name="onetomany"></a>

@@ -19,8 +19,6 @@ search.app:
 
 # Create a dashboard
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/create-dashboard -->
-
 Organization-owned dashboards can be created by using the Common Data Service or by customizing the entity form in Common Data Service by editing the customizations.xml file.  
   
 > [!NOTE]
@@ -141,7 +139,7 @@ SystemForm dashboard = new SystemForm
 _dashboardId = _serviceProxy.Create(dashboard);
  ``` 
   
- For a complete sample, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a User-Owned Dashboard to Another User](/dynamics365/customer-engagement/developer/customize-dev/sample-assign-user-owned-dashboard-another-user).  <!-- TODO relevant powerapps repo topic must be linked> 
+ For a complete sample, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a User-Owned Dashboard to Another User](/dynamics365/customer-engagement/developer/customize-dev/sample-assign-user-owned-dashboard-another-user).  
   
 <a name="UsingFormCustomization"></a>   
 ## Create an organization-owned dashboard by customizing the entity form  

@@ -56,6 +56,8 @@
   href: columnmapping.md
 - name: Connection
   href: connection.md
+- name: connectionreference
+  href: connectionreference.md
 - name: ConnectionRole
   href: connectionrole.md
 - name: connector
@@ -92,6 +94,8 @@
   href: entityanalyticsconfig.md
 - name: EntityDataProvider
   href: entitydataprovider.md
+- name: EntityDataSource
+  href: entitydatasource.md
 - name: EntityImageConfig
   href: entityimageconfig.md
 - name: EnvironmentVariableDefinition
@@ -168,6 +172,18 @@
   href: mobileofflineprofileitemassociation.md
 - name: MonthlyFiscalCalendar
   href: monthlyfiscalcalendar.md
+- name: msdyn_AIBDataset
+  href: msdyn_aibdataset.md
+- name: msdyn_AIBDatasetFile
+  href: msdyn_aibdatasetfile.md
+- name: msdyn_AIBDatasetRecord
+  href: msdyn_aibdatasetrecord.md
+- name: msdyn_AIBDatasetsContainer
+  href: msdyn_aibdatasetscontainer.md
+- name: msdyn_AIBFile
+  href: msdyn_aibfile.md
+- name: msdyn_AIBFileAttachedData
+  href: msdyn_aibfileattacheddata.md
 - name: msdyn_AIConfiguration
   href: msdyn_aiconfiguration.md
 - name: msdyn_AIFpTrainingDocument
@@ -196,6 +212,10 @@
   href: msdyn_componentlayer.md
 - name: msdyn_componentlayerdatasource
   href: msdyn_componentlayerdatasource.md
+- name: msdyn_dataflow
+  href: msdyn_dataflow.md
+- name: msdyn_helppage
+  href: msdyn_helppage.md
 - name: msdyn_knowledgearticleimage
   href: msdyn_knowledgearticleimage.md
 - name: msdyn_knowledgearticletemplate
@@ -258,6 +278,8 @@
   href: processsession.md
 - name: ProcessStage
   href: processstage.md
+- name: processstageparameter
+  href: processstageparameter.md
 - name: ProcessTrigger
   href: processtrigger.md
 - name: Publisher
@@ -304,6 +326,8 @@
   href: semiannualfiscalcalendar.md
 - name: ServiceEndpoint
   href: serviceendpoint.md
+- name: ServicePlan
+  href: serviceplan.md
 - name: SharePointDocumentLocation
   href: sharepointdocumentlocation.md
 - name: SharePointSite
@@ -324,8 +348,14 @@
   href: solution.md
 - name: SolutionComponent
   href: solutioncomponent.md
+- name: solutioncomponentattributeconfiguration
+  href: solutioncomponentattributeconfiguration.md
+- name: solutioncomponentconfiguration
+  href: solutioncomponentconfiguration.md
 - name: SolutionHistoryData
   href: solutionhistorydata.md
+- name: StageSolutionUpload
+  href: stagesolutionupload.md
 - name: Subject
   href: subject.md
 - name: SyncError

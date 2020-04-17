@@ -1,7 +1,7 @@
 ---
 title: "Annotation Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Annotation entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the Annotation entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # Annotation Entity Reference
 
@@ -849,8 +850,8 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [Goal_Annotation](#BKMK_Goal_Annotation)
 - [KbArticle_Annotation](#BKMK_KbArticle_Annotation)
 - [DuplicateRule_Annotation](#BKMK_DuplicateRule_Annotation)
-- [msdyn_solutioncomponentdatasource_Annotations](#BKMK_msdyn_solutioncomponentdatasource_Annotations)
 - [msdyn_solutionhistorydatasource_Annotations](#BKMK_msdyn_solutionhistorydatasource_Annotations)
+- [msdyn_solutioncomponentdatasource_Annotations](#BKMK_msdyn_solutioncomponentdatasource_Annotations)
 - [msdyn_aimodel_Annotations](#BKMK_msdyn_aimodel_Annotations)
 - [msdyn_aifptrainingdocument_Annotations](#BKMK_msdyn_aifptrainingdocument_Annotations)
 - [msdyn_aiodimage_Annotations](#BKMK_msdyn_aiodimage_Annotations)
@@ -964,17 +965,17 @@ See kbarticle Entity [KbArticle_Annotation](kbarticle.md#BKMK_KbArticle_Annotati
 
 See duplicaterule Entity [DuplicateRule_Annotation](duplicaterule.md#BKMK_DuplicateRule_Annotation) One-To-Many relationship.
 
-### <a name="BKMK_msdyn_solutioncomponentdatasource_Annotations"></a> msdyn_solutioncomponentdatasource_Annotations
-
-**Added by**: Microsoft Dynamics 365 Settings APIs Solution
-
-See msdyn_solutioncomponentdatasource Entity [msdyn_solutioncomponentdatasource_Annotations](msdyn_solutioncomponentdatasource.md#BKMK_msdyn_solutioncomponentdatasource_Annotations) One-To-Many relationship.
-
 ### <a name="BKMK_msdyn_solutionhistorydatasource_Annotations"></a> msdyn_solutionhistorydatasource_Annotations
 
 **Added by**: Microsoft Dynamics 365 Solution History APIs Solution
 
 See msdyn_solutionhistorydatasource Entity [msdyn_solutionhistorydatasource_Annotations](msdyn_solutionhistorydatasource.md#BKMK_msdyn_solutionhistorydatasource_Annotations) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_solutioncomponentdatasource_Annotations"></a> msdyn_solutioncomponentdatasource_Annotations
+
+**Added by**: Microsoft Dynamics 365 Settings APIs Solution
+
+See msdyn_solutioncomponentdatasource Entity [msdyn_solutioncomponentdatasource_Annotations](msdyn_solutioncomponentdatasource.md#BKMK_msdyn_solutioncomponentdatasource_Annotations) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_aimodel_Annotations"></a> msdyn_aimodel_Annotations
 
