@@ -37,14 +37,14 @@ Data visualization and analytics in model-driven apps enable you to graphically 
   
 ## Related Sections 
 
-[Extend the metadata model](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)  <!-- TODO Need to update relevant powerapps repo link-->
+[Extend the metadata model](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)
 [Customize entity forms](customize-entity-forms.md)  
-[Customize Entity Views](customize-entity-views.md)  
-[Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)  <!-- TODO Need to update relevant powerapps repo link-->
-[Change application navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)  <!-- TODO Need to update relevant powerapps repo link-->
+[Customize Entity Views](customize-entity-views.md) 
+[Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)<br/>
+[Change application navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)<br/>  
 [Customize commands and the ribbon](customize-commands-ribbon.md)  
-[Service calendar appearance configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration)  <!-- TODO Need to update relevant powerapps repo link-->
+[Service calendar appearance configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration) 
 [Publish customizations](publish-customizations.md)  
 [When to edit the customizations file](when-edit-customization-file.md)  
-[Extend Client](/dynamics365/customer-engagement/developer/extend-client)  <!-- TODO Need to update relevant powerapps repo link-->
+[Extend Client](/dynamics365/customer-engagement/developer/extend-client)  
 [Web Resources](web-resources.md)

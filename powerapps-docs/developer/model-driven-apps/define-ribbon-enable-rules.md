@@ -161,5 +161,5 @@ Uses the `<ValueRule>` element. Use this rule to check the value of a specific f
 
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define Ribbon Commands](define-ribbon-commands.md)   
- [Define Ribbon Display Rules](define-ribbon-display-rules.md)
+ [Define Ribbon commands](define-ribbon-commands.md)   
+ [Define Ribbon display rules](define-ribbon-display-rules.md)
