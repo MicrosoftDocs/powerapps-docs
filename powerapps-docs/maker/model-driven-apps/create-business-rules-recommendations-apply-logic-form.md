@@ -135,6 +135,9 @@ This section describes common issues that may occur when you use business rules.
 ### Full Name field not supported with unified interface apps
 Actions or conditions that use a **Full Name** (fullname) field aren’t supported in apps based on the unified interface.  Alternatively, you can use actions or conditions with **First Name** (firstname) and **Last Name** (lastname) fields. 
 
+### Business rules on editable grid
+Business Rules on an editable grid are supported only if the conditional field is also a column on the grid. If the field is not a column the business rules won’t work. Verify that each field referenced in the business rule is also included on the form. Note that business rules on an editable grid do not fire if the editable grid is configured on a dashboard page.
+
 ### Is your business rule not firing for a form?
 A business rule may not execute because the field referenced in the business rule isn’t included with the form. 
 1.	Open solution explorer. Expand the entity that you want and then select **Forms**. 
