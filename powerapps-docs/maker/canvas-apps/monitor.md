@@ -53,7 +53,7 @@ A few example questions, and answers that you can uncover when using the monitor
     - Have you configured the required permissions to run the app correctly?
     - Are your requests throttled by the platform?
 
-To see **Monitor** in action, see [example scenario](#example-scenario).
+To see **Monitor** in action, see [example scenario](#example).
 
 ## Open canvas app Monitor
 
