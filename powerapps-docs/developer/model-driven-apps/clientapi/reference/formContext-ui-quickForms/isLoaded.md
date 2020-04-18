@@ -51,7 +51,7 @@ function getAttributeValue(executionContext) {
         }
         else {
             // Wait for some time and check again
-            setTimeout(getAttributeValue, 10);
+            setTimeout(getAttributeValue, 10, executionContext);
         }
     }
     else {

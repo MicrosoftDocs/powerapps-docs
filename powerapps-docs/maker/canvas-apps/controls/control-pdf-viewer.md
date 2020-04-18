@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 04/10/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -30,8 +30,6 @@ Show text, graphics, and other content in a PDF file by adding this type of cont
 4. You may not be able to view a PDF document in your app if the document resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the server that hosts PDF documents must permit cross-origin requests from powerapps.com.
 
 App users can work around these limitations by opening PDF documents in an external browser, as prompted if the control can't open a document. This option is also available in the control menu for all external documents.
-
-App makers can work around these limitations by including PDF documents as media resources in the app. That way, the PDF Viewer control can always show the document.
 
 ## Key properties
 **Document** – The URL, enclosed in double-quotation marks, of a PDF file.
