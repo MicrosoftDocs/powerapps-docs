@@ -449,6 +449,10 @@ To view and manage app feedback:
     > [!div class="mx-imgBorder"]
     > ![select-app-feedback](media/select-app-feedback.png)
 
+## View the admin app in your language
+
+[!include[cc-lang](includes/cc-lang.md)]
+
 ## Issues and feedback
 
 - To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
