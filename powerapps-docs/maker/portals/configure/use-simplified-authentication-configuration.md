@@ -1,26 +1,26 @@
 ---
-title: "Use simplified portal authentication configuration (Preview) | MicrosoftDocs"
+title: "Use simplified authentication and identity provider configuration (Preview) | MicrosoftDocs"
 description: "Learn how to use quick, easy, and simplified portal configuration for authentication."
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/09/2020
+ms.date: 04/017/2020
 ms.author: tapanm
 ms.reviewer:
 ---
 
-# Simplified portal authentication configuration (Preview)
+# Simplified authentication and identity provider configuration (Preview)
 
-Setting up authentication provider is a core customization in any portal. Simplified portal identity provider configuration provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal setup for supported identity providers.
+Setting up authentication is a core customization in any portal. Simplified identity provider configuration in Power Apps portals provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal for supported identity providers.
 
-> [!IMPORTANT]
-> **Simplified portal authentication** feature is in preview. For more information about preview features, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
+> [!NOTE]
+> **Simplified authentication and identity provider configuration** feature is in preview. For more information about preview features, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview). However, you can't turn this preview feature *On* or *Off* for your portal. To access this preview feature, you must use [Power Apps preview](https://make.preview.powerapps.com). After this preview feature is *Generally Available*, you'll be able to access it from [Power Apps](https://make.powerapps.com).
 
 ## Overview
 
-You can enable, disable, and configure portal identity providers from [Power Apps](https://make.powerapps.com) using simplified portal authentication configuration. 
+You can enable, disable, and configure portal identity providers from [Power Apps](https://make.preview.powerapps.com) using simplified portal authentication configuration. 
 
 After you select an identity provider, you can then go through prompts to easily select and enter provider settings instead of setting up authentication [manually](set-authentication-identity.md).
 
@@ -28,7 +28,7 @@ After you select an identity provider, you can then go through prompts to easily
 
 To begin configuring identity provider for your portal: 
 
-1. Go to [Power Apps](https://make.powerapps.com).
+1. Go to [Power Apps](https://make.preview.powerapps.com).
 
 1. Select **Apps** from left pane:
 
@@ -48,6 +48,9 @@ You can see a list of identity providers that you can configure with Power Apps 
 
 ![Identity Providers](media/use-simplified-authentication-configuration/portal-authentication-settings.png)
 
+> [!NOTE]
+> Power Apps portals support multiple identity providers. However, the **Simplified authentication and identity provider configuration** feature only supports the identity providers listed above.
+
 #### Authentication Settings from portal details
 
 You can also view the **Identity providers** from the portal **Details**. 
@@ -65,16 +68,16 @@ The details page shows you the **Identity providers** section:
 ![Portal details](media/use-simplified-authentication-configuration/portal-details.png)
 
 > [!NOTE]
-> Selecting **See all** from portal details takes you to the **Authentication Settings** page.
+> Selecting **See all** from portal details takes you to the list of [*identity providers*](#authentication-settings).
 
 ## General authentication settings
 
-You can turn the following general authentication settings to **On** or **Off** by selecting the **Authentication Settings** when you view the **Identity providers**:
+You can configure the following general authentication settings by selecting the **Authentication Settings** when you view the **Identity providers**:
 
 ![General authentication settings](media/use-simplified-authentication-configuration/general-authentication-settings.png)
 
-- **External login** - Turn [**External login**](set-authentication-identity.md#manage-external-accounts) for your portal *On* or *Off*.
-- **Open registration** - Turn [**Open registration**](configure-portal-authentication.md#open-registration) for your portal *On* or *Off*.
+- **External login** - Turn [**External login**](set-authentication-identity.md#manage-external-accounts) for your portal *On* or *Off*. Setting to *Off* disables and hides external account registration and sign in.
+- **Open registration** - Turn [**Open registration**](configure-portal-authentication.md#open-registration) for your portal *On* or *Off*. Setting to *Off* disables and hides external account registration.
 
 You can also go to general authentication settings from **portal details** using **Settings** on top right in **Identity providers** section:
 
@@ -82,29 +85,25 @@ You can also go to general authentication settings from **portal details** using
 
 ### Default identity provider
 
-You can set any identity provider as **default**. When an identity provider is set as default, users signing into the portal always default to sign in with this provider:
+You can set any identity provider as **default**. When an identity provider is set as default, users signing into the portal aren't redirected to the portal sign in page. Instead, the signing experience always defaults to sign in with the selected provider:
 
 ![Default identity provider](media/use-simplified-authentication-configuration/set-default.png)
 
 > [!IMPORTANT]
-> Setting any one identity provider as default **disables all other identity providers**. Users no longer have option to use identity provider other than the default you set.
+> If you set an identity provider as default, users won't have option to choose any other identity provider.
 
-After you set an identity provider as default, you can then use **Remove as default** to remove the set default identity provider. Removing a default identity provider enables all other identity providers earlier disabled while setting default identity provider.
+After you set an identity provider as default, you can then use **Remove as default** to remove the set default identity provider. If you remove an identity provider from being the default, users will be redirected to portal sign in page and can choose from the identity providers you enable.
 
 > [!NOTE]
 > You can only set **configured** identity provider as default. **Set as default** option becomes available after you configure an identity provider.
 
 ## Add, configure, or delete an identity provider
 
-Though identity providers are added by default that you can configure, you can still add identity providers. The added identity provider replaces the provider available by default.
-
-For example, if you add a new *LinkedIn* identity provider named *Contoso LinkedIn*, the default *LinkedIn* provider is updated with your configuration. And *LinkedIn* provider gets changed to *Contoso LinkedIn*. You can also add a new identity provider and select the provider as *LinkedIn* instead.
-
-You can then add or configure the *LinkedIn* identity provider again if you delete the *Contoso LinkedIn* identity provider
+Several identity providers are added by default that you can configure. You can add additional *Azure Active Directory B2C* providers, or configure the available OAuth 2.0 providers such as LinkedIn and Microsoft.
 
 > [!NOTE]
-> - You can only **Enable** or **Disable** the [**Local sign in**](configure-portal-authentication.md) and **Azure Active Directory** providers.
-> - You can have only one instance of each identity provider type.
+> - You can't change the configuration of the [**Local sign in**](configure-portal-authentication.md) and **Azure Active Directory** providers when using this interface. You can only **Enable** or **Disable** these two providers.
+> - You can have only one instance of each identity provider type for OAuth 2.0, such as **Facebook**, **LinkedIn**, **Google**, **Twitter**, and **Microsoft**.
 
 ### Add or configure provider
 
@@ -120,7 +119,7 @@ You can select from the available list of providers, enter a name, and then sele
 
 ![Add new provider](media/use-simplified-authentication-configuration/add-provider.png)
 
-Similarly, to configure a provider, select **Configure**:
+To configure a provider, select **Click to Configure** or use **More Commands** (**...**) and then select **Configure**:
 
 ![Configure provider](media/use-simplified-authentication-configuration/configure-provider.png)
 
@@ -141,13 +140,11 @@ Refer to the provider-specific sections later in this article to edit provider s
 
 ### Delete provider
 
-To delete an identity provider, go to **Authentication Settings** and then select **Delete** from the top menu. You can also use **More Commands** (**...**) and then select **Delete**:
+To delete an identity provider, select **More Commands** (**...**) and then select **Delete**:
 
 ![Delete provider](media/use-simplified-authentication-configuration/delete-provider.png)
 
-Deleting a provider deletes your provider configuration for the selected provider type, and the deleted provider gets reset. 
-
-For example, the *Contoso LinkedIn* provider after deleted is reset with default *LinkedIn* provider.
+Deleting a provider deletes your provider configuration for the selected provider type, and the provider becomes available again for configuration.
 
 > [!NOTE]
 > When you delete a provider, only the portal configuration for the provider is deleted. For example, if you delete **LinkedIn** provider, your **LinkedIn** app and app configuration remains intact. Similarly, if you delete an **Azure Active Directory B2C** provider, only portal configuration gets deleted. The Azure tenant configuration for this provider doesn't change.
