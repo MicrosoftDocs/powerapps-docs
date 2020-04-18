@@ -49,11 +49,11 @@ You can see a list of identity providers that you can configure with Power Apps 
 ![Identity Providers](media/use-simplified-authentication-configuration/portal-authentication-settings.png)
 
 > [!NOTE]
-> Power Apps portals support multiple identity providers. However, the **Simplified authentication and identity provider configuration** feature only supports the identity providers listed above.
+> Power Apps portals supports several identity providers. However, the **Simplified authentication and identity provider configuration** feature only supports the identity providers listed above.
 
 #### Authentication Settings from portal details
 
-You can also view the **Identity providers** from the portal **Details**. 
+You can also view the **Identity providers** from the portal **Details**.
 
 To view **Identity providers** from portal details:
 
