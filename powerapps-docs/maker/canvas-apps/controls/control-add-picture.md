@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2016
+ms.date: 04/17/2020
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -96,6 +96,8 @@ See the [Image control reference](control-image.md) for **Image** properties.
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
+
+**UseMobileCamera** – Whether to use a mobile camera directly, when available.
 
 **[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 

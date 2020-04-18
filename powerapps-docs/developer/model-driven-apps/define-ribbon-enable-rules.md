@@ -82,29 +82,32 @@ function EnableRule()
  > [!NOTE]
 >  Promises-based rules will only work on Unified Interface, so they cannot be used if classic Web Client is still being used.
  ```JavaScript
-function EnableRule()
-{
+// Old synchronous style
+/*
+function EnableRule() {
+    const request = new XMLHttpRequest();
+    request.open('GET', '/bar/foo', false);
+    request.send(null);
+    return request.status === 200 && request.responseText === "true";
+}
+*/
+
+// New asynchronous style
+function EnableRule() {
     const request = new XMLHttpRequest();
     request.open('GET', '/bar/foo');
 
-    return new Promise((resolve, reject) =>
-    {
-        request.onload = function (e)
-        {
-            if (request.readyState === 4)
-            {
-                if (request.status === 200)
-                {
+    return new Promise(function(resolve, reject) {
+        request.onload = function (e) {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
                     resolve(request.responseText === "true");
-                }
-                else
-                {
+                } else {
                     reject(request.statusText);
                 }
             }
         };
-        request.onerror = function (e)
-        {
+        request.onerror = function (e) {
             reject(request.statusText);
         };
 

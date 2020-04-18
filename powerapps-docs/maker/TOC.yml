@@ -853,6 +853,8 @@
       items:
       - name: Configure pipeline using classic editor
         href: ./canvas-apps/test-studio-classic-pipeline-editor.md
+  - name: Debug an app with canvas app Monitor
+    href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes

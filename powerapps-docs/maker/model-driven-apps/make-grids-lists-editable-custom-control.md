@@ -139,7 +139,9 @@ The following data types aren't editable in editable grids: Customer and Partyli
 ## Group by views work on client side only
 Grouping behavior works only on the client side and does not span pages. Group by is a client only function and works only on one page of data. Group by does not show you all options based on your complete data set on the server. Group by shows grouping only on the current page. You can disable the grouping by using the property on custom control configuration. More information: [Make main grids editable](#make-main-grids-editable)
 
- 
+## Business rules work only if conditional field is a column on the grid
+Business Rules on an editable grid are supported only if the conditional field is also a column on the grid. If the field is not a column the business rules won’t work. Verify that each field referenced in the business rule is also included on the form. Note that business rules on an editable grid do not fire if the editable grid is configured on a dashboard.
+
 ## Next steps  
  [Use keyboard shortcuts in editable grids](https://docs.microsoft.com/dynamics365/customer-engagement/basics/keyboard-shortcuts#editable-grids-views)
 
