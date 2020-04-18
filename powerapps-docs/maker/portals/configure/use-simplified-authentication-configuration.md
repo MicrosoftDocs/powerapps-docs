@@ -16,7 +16,7 @@ ms.reviewer:
 Setting up authentication is a core customization in any portal. Simplified identity provider configuration in Power Apps portals provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal for supported identity providers.
 
 > [!NOTE]
-> **Simplified authentication and identity provider configuration** feature is in preview. For more information about preview features, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview). However, you can't turn this preview feature *On* or *Off* for your portal. To access this preview feature, you must use [Power Apps preview](https://make.preview.powerapps.com). After this preview feature is *Generally Available*, you'll be able to access it from [Power Apps](https://make.powerapps.com).
+> **Simplified authentication and identity provider configuration** feature is in preview. To access this preview feature, you must use [Power Apps preview](https://make.preview.powerapps.com). After this preview feature is *Generally Available*, you'll be able to access it from [Power Apps](https://make.powerapps.com). You can't turn this preview feature *On* or *Off* for your portal. For more information about preview features, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview). 
 
 ## Overview
 
