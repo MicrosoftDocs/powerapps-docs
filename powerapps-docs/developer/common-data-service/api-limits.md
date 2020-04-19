@@ -24,7 +24,7 @@ The limits should not affect normal users of interactive clients. Only client ap
 When a client application makes extraordinarily demanding requests, the Common Data Service follows the common pattern for online services. We return an error indicating that too many requests have been made.
 
 - With the Web API we return a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error.
-- With the Organization Service you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one three specific error codes. More information: [Service Protection API Limit Errors returned](#api-limit-errors-returned)
+- With the Organization Service you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one three specific error codes. More information: [Service Protection API Limit Errors returned](#service-protection-api-limit-errors-returned)
 
 
 ## Impact on client applications
@@ -80,11 +80,11 @@ Service protection API limits are enforced based on three facets:
 - The combined execution time was required to process requests sent by a user.
 - The number of concurrent requests sent by a user.
 
-Each of these facets are designed to address different ways that people could attempt to bypass service protection API limits if the limits were based only on the number of requests that are sent individually in succession. For example:
+If the only limit was on the number of requests sent by a user, it would be possible to bypass it. The other facets were added to counter these attempts. For example:
 
-- You can send fewer requests by bundling them in batch operations.
+- You could send fewer requests by bundling them in batch operations.
   - The combined execution time limit will counter this.
-- Rather than sending requests individually in succession, you can send a large number of concurrent requests within the 5 minute sliding window before service protection API limits are enforced.
+- Rather than sending requests individually in succession, you could send a large number of concurrent requests within the 5 minute sliding window before service protection API limits are enforced.
   - The concurrent request limit will counter this.
 
 Each web server available to your environment will enforce these limits independently. Most environments will have more than one web server. Trial environments are allocated only a single web server. The actual number of web servers that are available to your environment depends on multiple factors that are part of the managed service we provide. One of the factors is how many user licenses you have purchased.
@@ -96,6 +96,9 @@ The following table describes the default service protection API limits enforced
 |Number of requests|The cumulative number of requests made by the user.|6000|
 |Execution time|The combined execution time of all requests made by the user.| 20 minutes (1200 seconds)|
 |Number of concurrent requests|The number of concurrent requests made by the user|52|
+
+> [!IMPORTANT]
+> These limits are subject to change and may vary between different environments. These numbers represent default values and are provided to give you some idea of what values you can expect.
 
 ### The Retry-After duration
 
