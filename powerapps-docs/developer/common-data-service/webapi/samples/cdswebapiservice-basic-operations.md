@@ -24,7 +24,10 @@ This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, an
 
 ## Prerequisites
 
-Prerequisites for all Common Data Service Web API C# samples are detailed in the [Prerequisites](../web-api-samples-csharp.md#bkmk_prerequisites) section of the parent topic [Web API Samples (C#)](../web-api-samples-csharp.md).  
+The following is required to build and run the CDSWebApiService C# samples :
+
+- Microsoft Visual Studio 2019. 
+- Access to Common Data Service with privileges to perform CRUD operations.
   
 <a name="bkmk_runSample"></a>
   
