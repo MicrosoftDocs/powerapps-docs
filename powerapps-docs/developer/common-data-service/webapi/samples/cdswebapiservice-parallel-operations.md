@@ -17,7 +17,7 @@ search.app:
 ---
 # Web API CDSWebApiService Parallel Operations Sample (C#)
 
-This example shows how to use a [System.Threading.Tasks.Parallel.ForEach Method](dotnet/api/system.threading.tasks.parallel.foreach) loop to enable data parallelism over a set of records to create in CDS.
+This example shows how to use a [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach) loop to enable data parallelism over a set of records to create in CDS.
 
 This sample uses the CDSWebApiService class synchronous methods within operations. Because the CDSWebApiService class can manage Service Protection API limits, this code can be resilient to the transient 429 errors that clients should expect. It will retry a configurable number of times. 
 
@@ -26,7 +26,7 @@ More information:
 - [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)
 - [Service Protection API Limits](../../api-limits.md)
 
-This sample is based on the [How to: Write a simple Parallel.ForEach loop](dotnet/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop) example, but modified to perform create and delete operations with CDS entities using the synchronous methods provided by the CDSWebApiService class.
+This sample is based on the [How to: Write a simple Parallel.ForEach loop](/dotnet/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop) example, but modified to perform create and delete operations with CDS entities using the synchronous methods provided by the CDSWebApiService class.
 
 > [!NOTE]
 > If you want to use Fiddler to observe the expected service protection API limits, you will need to set the number of records to create to be around 10,000. They will start to appear after 5 minutes. Note how the application retries the failures and completes the flow of all the records.
