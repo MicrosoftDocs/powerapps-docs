@@ -23,8 +23,8 @@ The limits should not affect normal users of interactive clients. Only client ap
 
 When a client application makes extraordinarily demanding requests, the Common Data Service follows the common pattern for online services. We return an error indicating that too many requests have been made.
 
-- With the Web API we return a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error.
-- With the Organization Service you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one three specific error codes. More information: [Service Protection API Limit Errors returned](#service-protection-api-limit-errors-returned)
+- With the Web API, we return a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error.
+- With the Organization Service, you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one of three specific error codes. More information: [Service Protection API Limit Errors returned](#service-protection-api-limit-errors-returned)
 
 
 ## Impact on client applications
@@ -60,7 +60,7 @@ When a service protection API limit error occurs, it will provide a value indica
 
 ### Interactive application re-try 
 
-If the client is an interactive application you should display a message that the server is busy while you re-try the request the user made. You may want to provide an option for the user to cancel the operation. Don't allow users to submit more requests until the previous request you sent has completed.
+If the client is an interactive application, you should display a message that the server is busy while you re-try the request the user made. You may want to provide an option for the user to cancel the operation. Don't allow users to submit more requests until the previous request you sent has completed.
 
 ### Non-interactive application re-try
 
@@ -164,11 +164,11 @@ When you have an application that must prioritize throughput to move the most da
 
 ### Let the server tell you how much it can handle
 
-You shouldn't try to calculate how many requests to send at a time. Each environment can be different. Gradually increase the rate you send requests until you begin to hit limits and then depend on the service protection API Limit `Retry-After` value to tell you when to send more. This value will keep your total throughput at the highest possible level.
+Don't try to calculate how many requests to send at a time. Each environment can be different. Gradually increase the rate you send requests until you begin to hit limits and then depend on the service protection API Limit `Retry-After` value to tell you when to send more. This value will keep your total throughput at the highest possible level.
 
 ### Use multiple threads
 
-The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is particularly true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
+The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
 
 More information:
 
@@ -183,7 +183,7 @@ In the past, ExecuteMultiple operations were limited to just 2 at a time because
 
 Most scenarios will be fastest sending single requests with a high degree of parallelism. If you feel batch size might improve performance, it is best to start with a small batch size of 10 and increase concurrency until you start getting service protection API limit errors that you will retry.
 
-When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. The total amount of payload that is sent using $batch is greater than sending individual requests. $batch should only be used if you want to managed transactions using changesets. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
+When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. The total amount of payload that is sent using $batch is greater than sending individual requests. Only use $batch if you want to manage transactions using changesets. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
 
 > [!NOTE]
 > Batch operations are not a valid strategy to bypass entitlement limits. Service protection API limits and Entitlement limits are evaluated separately. Entitlement limits are based on CRUD operations and accrue whether or not they are included in a batch operation. More information: [Entitlement limits](../../maker/common-data-service/api-limits-overview.md#entitlement-limits)
@@ -213,7 +213,7 @@ If you are using CrmServiceClient, add the following to the AppSettings node in 
 
 ### Optimize your connection
 
-The throughput you can expect can be greatly improved by optimizing the connection. Supporting .NET sample code uses these settings:
+You can expect greater throughput by optimizing the connection. Supporting .NET sample code uses these settings:
 
 ```csharp
 //Change max connections from .NET to a remote service default: 2
@@ -241,7 +241,7 @@ Remember that the main point of service protection API limits is to smooth out t
 
 ## Using the Web API
 
-If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. You should check with the client library publisher.
+If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. Check with the client library publisher.
 
 If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [Web API CDSWebApiService class Sample (C#)](webapi/samples/cdswebapiservice.md).
 
@@ -315,7 +315,7 @@ You should not depend on these values to control how many requests you send. The
 
 ### Use Task Parallel Library with Web API
 
-To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
+To achieve optimum throughput, you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
 
 See these examples using the [Web API CDSWebApiService class Sample (C#)](webapi/samples/cdswebapiservice.md):
 
@@ -348,7 +348,7 @@ This section includes frequently asked questions. If you have questions that are
 
 ### I'm using an ETL application I licensed. How do I get optimum throughput?
 
-You should work with the ETL application vendor to learn which settings to apply. Make sure you are using a version of the product that supports the Retry-After behavior.
+Work with the ETL application vendor to learn which settings to apply. Make sure you are using a version of the product that supports the Retry-After behavior.
 
 ### See also
 
