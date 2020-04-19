@@ -170,6 +170,11 @@ You shouldn't try to calculate how many requests to send at a time. Each environ
 
 The higher limit on number of concurrent threads is something your application can use to have a significant improvement in performance. This is particularly true if your individual operations are relatively quick. Depending on the nature of the data you are processing, you may need to adjust the number of threads to get optimum throughput.
 
+More information:
+
+- [Use Task Parallel Library with Web API](#use-task-parallel-library-with-web-api)
+- [Use Task Parallel Library with CrmServiceClient](#use-task-parallel-library-with-crmserviceclient)
+
 ### Avoid batching
 
 In the Organization Service the conventional wisdom has been to employ the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> to bundle multiple operations. The main benefit this provides is that it reduces the total amount of SOAP XML payload that must be sent over the wire. This provides some performance benefit when network latency is an issue.
@@ -238,7 +243,7 @@ Remember that the main point of service protection API limits is to smooth out t
 
 If you are using the Web API with a client library, you may find that it supports the retry behavior expected for 429 errors. You should check with the client library publisher.
 
-If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [Web API CDSWebApiService class](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/CDSWebApiService/CDSWebApiService).
+If you have written your own library, you can include behaviors to be similar to the one included in this sample code for a helper [Web API CDSWebApiService class Sample (C#)](webapi/samples/cdswebapiservice.md).
 
 ```csharp
 private async Task<HttpResponseMessage> SendAsync(
@@ -308,6 +313,16 @@ If you are using HTTP requests with the Web API, you can track the remaining lim
 
 You should not depend on these values to control how many requests you send. They are intended for debugging purposes. If you are removing the affinity cookie, these values are re-set when you connect to a different server.
 
+### Use Task Parallel Library with Web API
+
+To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
+
+See these examples using the [Web API CDSWebApiService class Sample (C#)](webapi/samples/cdswebapiservice.md):
+
+- [Web API CDSWebApiService Parallel Operations Sample (C#)](webapi/samples/cdswebapiservice-parallel-operations.md)
+- [Web API CDSWebApiService Async Parallel Operations Sample (C#)](webapi/samples/cdswebapiservice-async-parallel-operations.md)
+
+
 ## Using the Organization Service
 
 If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>. This class implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned. 
@@ -325,7 +340,7 @@ More information:
 
 To achieve optimum throughput you should use multiple-threads. The Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
 
-TPL can be used with <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> because CrmServiceClient includes a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone> method that allows for managing multiple instances of the client with TPL. For an example, see [Task Parallel Library sample with CrmServiceClient](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/Xrm%20Tooling/TPLCrmServiceClient)
+TPL can be used with <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> because CrmServiceClient includes a <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone> method that allows for managing multiple instances of the client with TPL. For an example, see [Sample: Task Parallel Library with CrmServiceClient](xrm-tooling/sample-tpl-crmserviceclient.md).
 
 ## Frequently asked questions
 
