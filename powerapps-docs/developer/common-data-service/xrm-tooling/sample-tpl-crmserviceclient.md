@@ -35,13 +35,13 @@ Download the sample: [Task Parallel Library sample with CrmServiceClient](https:
 
 ## Demonstrates
 
-Because the [Microsoft.Xrm.Tooling.Connector.CrmServiceClient Class](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) includes handling for the transient errors thrown by the CDS service protection limits, the combination of TPL and CrmServiceClient is valuable to create applications that can optimize throughput while being resilient to the service protection limit errors by re-trying requests that are rejected due to these limits.
+Because the [Microsoft.Xrm.Tooling.Connector.CrmServiceClient Class](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient) includes handling for the transient errors thrown by the CDS service protection limits, the combination of TPL and CrmServiceClient is valuable to create applications that can optimize throughput while being resilient to the service protection limit errors by re-trying requests that are rejected due to these limits.
 
 More information: [Service Protection API Limits](../api-limits.md)
 
-The [CrmServiceClient.Clone Method](dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.clone) enables TPL to use the client with multiple threads.
+The [CrmServiceClient.Clone Method](/dotnet/api/microsoft.xrm.tooling.connector.crmserviceclient.clone) enables TPL to use the client with multiple threads.
 
-This simple sample will generate a number of account entity records using the [System.Threading.Tasks.Parallel.ForEach Method](dotnet/api/system.threading.tasks.parallel.foreach).
+This simple sample will generate a number of account entity records using the [System.Threading.Tasks.Parallel.ForEach Method](/dotnet/api/system.threading.tasks.parallel.foreach).
 
 Then it will use that technique again to delete the entities created.
 
@@ -274,4 +274,4 @@ private static void DeleteEntities(CrmServiceClient svc, List<EntityReference> e
 
 ### More information
 
-[Task Parallel Library (TPL)](dotnet/standard/parallel-programming/task-parallel-library-tpl)
+[Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl)
