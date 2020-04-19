@@ -17,7 +17,7 @@ search.app:
 ---
 # Web API CDSWebApiService Async Parallel Operations Sample (C#)
 
-This sample demonstrates using Task Parallel Library (TPL) dataflow components [Dataflow (Task Parallel Library)](dotnet/standard/parallel-programming/dataflow-task-parallel-library) with asynchronous requests.
+This sample demonstrates using Task Parallel Library (TPL) dataflow components [Dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library) with asynchronous requests.
 
 TPL provides capabilities to add parallelism and concurrency to applications. These capabilities are an important part of maximizing throughput when performing operations that will add or update data within CDS.
 
