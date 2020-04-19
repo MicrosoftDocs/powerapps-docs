@@ -91,7 +91,7 @@ Creates an entity synchronously and returns the URI.
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
-|entitySetName|string|The entity set name of the type of entity to create. |
+|entitySetName|<xref:System.String>|The entity set name of the type of entity to create. |
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|Contains the data for the entity to create|
 
 #### Return Value
@@ -116,9 +116,9 @@ Sends a `POST` request synchronously and returns the response as a [JObject](htt
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
-|path|string|The relative path to send the request. Frequently the name of an action or an entity set name.|
+|path|<xref:System.String>|The relative path to send the request. Frequently the name of an action or an entity set name.|
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to `POST`|
-|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|<xref:Collections.Generic.Dictionary><string, List<string>>|(Optional) Any headers needed to apply special behaviors|
 
 #### Return Value
 
@@ -148,7 +148,7 @@ Sends a `PATCH` request synchronously.
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path to send the request. Frequently the Uri for a specific entity|
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to send|
-|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|<xref:Collections.Generic.Dictionary><string, List<string>>|(Optional) Any headers needed to apply special behaviors|
 
 #### Remarks
 
@@ -171,8 +171,8 @@ Sends a `GET` request synchronously and returns data
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
-|path|string|The relative path of the resource to return |
-|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|path|<xref:System.String>|The relative path of the resource to return |
+|headers|<xref:Collections.Generic.Dictionary><string, List<string>>|(Optional) Any headers needed to apply special behaviors|
 
 #### Return Value
 
@@ -200,7 +200,7 @@ Sends a `DELETE` request synchronously.
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path of the resource to delete |
-|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|<xref:Collections.Generic.Dictionary><string, List<string>>|(Optional) Any headers needed to apply special behaviors|
 
 #### Remarks
 
@@ -222,8 +222,8 @@ Sends a `PUT` request synchronously.
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path to the resource to update.|
-|property|string|The name of the property to update|
-|value|string|The value to set|
+|property|<xref:System.String>|The name of the property to update|
+|value|<xref:System.String>|The value to set|
 
 #### Remarks
 
