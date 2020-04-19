@@ -53,7 +53,7 @@ If your application performs operations that trigger custom logic, the number of
 
 ## Retry operations
 
-When a service protection API limit error occurs, it will provide a value indicating the duration before any new requests can be processed.
+When a service protection API limit error occurs, it will provide a value indicating the duration before any new requests from the user can be processed.
 
 - When a 429 error is returned from the Web API, the response will include a [Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After) with number of seconds.
 - With the Organization Service, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> collection with the key `Retry-After`.
@@ -237,7 +237,7 @@ Service Protection API limits have been applied to CDS since 2018, but there are
 
 ### Move towards real-time integration
 
-Remember that the main point of service protection API limits is to smooth out the impact of highly demanding requests occurring over a short period of time. If your current business processes depend on large periodic nightly, weekly, or monthly jobs which attempt to process large amounts of data in a short period of time, consider how you might enable a real-time data integration strategy. If you can move away from processes that require highly demanding operations, you can reduce the impact Service protection limits will have.
+Remember that the main point of service protection API limits is to smooth out the impact of highly demanding requests occurring over a short period of time. If your current business processes depend on large periodic nightly, weekly, or monthly jobs which attempt to process large amounts of data in a short period of time, consider how you might enable a real-time data integration strategy. If you can move away from processes that require highly demanding operations, you can reduce the impact service protection limits will have.
 
 ## Using the Web API
 
