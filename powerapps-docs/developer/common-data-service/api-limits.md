@@ -2,7 +2,7 @@
 title: "Service Protection API Limits (Common Data Service) | Microsoft Docs" 
 description: "Understand the service protection limits for API requests." 
 ms.custom: ""
-ms.date: 04/15/2020
+ms.date: 04/20/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -24,22 +24,22 @@ The limits should not affect normal users of interactive clients. Only client ap
 When a client application makes extraordinarily demanding requests, the Common Data Service follows the common pattern for online services. We return an error indicating that too many requests have been made.
 
 - With the Web API we return a [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) error.
-- With the Organization Service you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one three specific error codes. More information: [API Limit Errors returned](#api-limit-errors-returned)
+- With the Organization Service you will get an [OrganizationServiceFault](/dotnet/api/microsoft.xrm.sdk.organizationservicefault) error with one three specific error codes. More information: [Service Protection API Limit Errors returned](#api-limit-errors-returned)
 
 
 ## Impact on client applications
 
-It is the responsibility of client applications to manage API limit errors. Exactly how to manage this error depends on the nature of the application. 
+It is the responsibility of client applications to manage service protection API limit errors. Exactly how to manage this error depends on the nature of the application. 
 
 ### Interactive client applications
 
-The service protection limits are high enough that it should be rare for an individual using an interactive client application to encounter them during normal usage. However, it is possible if the client application allows for bulk operations. Client application developers should be aware of how service protection API Limits are enforced and design the UI to reduce the potential for users to send extremely demanding requests to the server. But they should still expect that API Limit errors can occur and be prepared to handle them.
+The service protection limits are high enough that it should be rare for an individual using an interactive client application to encounter them during normal usage. However, it is possible if the client application allows for bulk operations. Client application developers should be aware of how service protection API limits are enforced and design the UI to reduce the potential for users to send extremely demanding requests to the server. But they should still expect that service protection API limit errors can occur and be prepared to handle them.
 
 Client application developers should not simply throw the error to display the message to the user. The error message is not intended for end users. See [Retry operations](#retry-operations) for specific strategies.
 
 ### Data integration applications
 
-Applications designed to load data into CDS or perform bulk updates must also be able to manage API limit errors. These applications prioritize throughput so they can complete their work in the minimum amount of time. These applications must have a strategy to retry operations. There are several strategies that they can apply to get the maximum throughput. More information: [How to maximize throughput](#how-to-maximize-throughput).
+Applications designed to load data into CDS or perform bulk updates must also be able to manage service protection API limit errors. These applications prioritize throughput so they can complete their work in the minimum amount of time. These applications must have a strategy to retry operations. There are several strategies that they can apply to get the maximum throughput. More information: [How to maximize throughput](#how-to-maximize-throughput).
 
 ### Portal applications
 
@@ -53,7 +53,7 @@ If your application performs operations that trigger custom logic, the number of
 
 ## Retry operations
 
-When an API limit error occurs, it will provide a value indicating the duration before any new requests can be processed.
+When a service protection API limit error occurs, it will provide a value indicating the duration before any new requests can be processed.
 
 - When a 429 error is returned from the Web API, the response will include a [Retry-After](https://developer.mozilla.org/docs/Web/HTTP/Headers/Retry-After) with number of seconds.
 - With the Organization Service, a [TimeSpan](/dotnet/api/system.timespan) value is returned in the <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails> collection with the key `Retry-After`.
@@ -70,7 +70,7 @@ If the client is not interactive, the common practice is to simply wait for the 
 
 ## How Service Protection API Limits are enforced
 
-The service protection API limits are evaluated within a 5 minute (300 second) sliding window. If any of the limits are exceeded within the preceding 300 seconds, an API Limit error will be returned on subsequent requests to protect the service until the Retry-After duration has ended.
+The service protection API limits are evaluated within a 5 minute (300 second) sliding window. If any of the limits are exceeded within the preceding 300 seconds, a service protection API Limit error will be returned on subsequent requests to protect the service until the Retry-After duration has ended.
 
 The service protection API limits are evaluated per user. Each authenticated user is limited independently. Only those users accounts which are making extraordinary demands will be limited. Other users will not be impacted.
 
@@ -105,9 +105,9 @@ Today, because of the way the limits are evaluated, you can expect to exceed the
 
 When possible, we recommend trying to achieve a consistent rate by starting with a lower number of requests and gradually increasing until you start hitting the service protection API limits. After that, let the server tell you how many requests it can handle within a 5 minute period. Keeping your maximum number of requests limited within this 5 minute period and gradually increasing will keep the retry-after duration low, optimizing your total throughput and minimizing server resource spikes.
 
-## API Limit Errors returned
+## Service Protection API Limit Errors returned
 
-This section describes the three types of API limit errors that can be returned as well as factors that cause these errors and possible mitigation strategies.
+This section describes the three types of service protection API limit errors that can be returned as well as factors that cause these errors and possible mitigation strategies.
 
 - The **Error code** is the numerical error value returned by the Organization Service <xref:Microsoft.Xrm.Sdk.OrganizationServiceFault>.<xref:Microsoft.Xrm.Sdk.BaseServiceFault.ErrorDetails>.
 - The **Hex code** is the hexadecimal error value returned by the Web API.
@@ -161,7 +161,7 @@ When you have an application that must prioritize throughput to move the most da
 
 ### Let the server tell you how much it can handle
 
-You shouldn't try to calculate how many requests to send at a time. Each environment can be different. Gradually increase the rate you send requests until you begin to hit limits and then depend on the API Limit `Retry-After` value to tell you when to send more. This value will keep your total throughput at the highest possible level.
+You shouldn't try to calculate how many requests to send at a time. Each environment can be different. Gradually increase the rate you send requests until you begin to hit limits and then depend on the service protection API Limit `Retry-After` value to tell you when to send more. This value will keep your total throughput at the highest possible level.
 
 ### Use multiple threads
 
@@ -173,7 +173,7 @@ In the Organization Service the conventional wisdom has been to employ the <xref
 
 In the past, ExecuteMultiple operations were limited to just 2 at a time because of the impact on performance that this could have. This is no longer the case, because service protection API limits have made that limit redundant.
 
-Most scenarios will be fastest sending single requests with a high degree of parallelism. If you feel batch size might improve performance, it is best to start with a small batch size of 10 and increase concurrency until you start getting API limit errors that you will retry.
+Most scenarios will be fastest sending single requests with a high degree of parallelism. If you feel batch size might improve performance, it is best to start with a small batch size of 10 and increase concurrency until you start getting service protection API limit errors that you will retry.
 
 When using the Web API, the smaller JSON payload sent over the wire for individual requests means that network latency is not an issue. The total amount of payload that is sent using $batch is greater than sending individual requests. $batch should only be used if you want to managed transactions using changesets. More information: [Execute batch operations using the Web API](webapi/execute-batch-operations-using-web-api.md)
 
@@ -219,17 +219,17 @@ System.Net.ServicePointManager.UseNagleAlgorithm = false;
 ```
 More information: [Managing Connections](/dotnet/framework/network-programming/managing-connections)
 
-## Strategies to manage API limits
+## Strategies to manage Service Protection API limits
 
-This section describes ways that you can design your clients and systems to avoid API limit errors. You may also want to consider how you manage your licenses to reduce the impact.
+This section describes ways that you can design your clients and systems to avoid service protection API limit errors. You may also want to consider how you manage your licenses to reduce the impact.
 
 ### Update your client application
 
-API limits have been applied to CDS since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns described in the [Using the Organization Service](#using-the-organization-service) or [Using the Web API](#using-the-web-api) sections below.
+Service Protection API limits have been applied to CDS since 2018, but there are many client applications written before these limits existed. These clients didn't expect these errors and can't handle the errors correctly. You should update these applications and apply the patterns described in the [Using the Organization Service](#using-the-organization-service) or [Using the Web API](#using-the-web-api) sections below.
 
 ### Move towards real-time integration
 
-Remember that the main point of API limits is to smooth out the impact of highly demanding requests occurring over a short period of time. If your current business processes depend on large periodic nightly, weekly, or monthly jobs which attempt to process large amounts of data in a short period of time, consider how you might enable a real-time data integration strategy. If you can move away from processes that require highly demanding operations, you can reduce the impact Service protection limits will have.
+Remember that the main point of service protection API limits is to smooth out the impact of highly demanding requests occurring over a short period of time. If your current business processes depend on large periodic nightly, weekly, or monthly jobs which attempt to process large amounts of data in a short period of time, consider how you might enable a real-time data integration strategy. If you can move away from processes that require highly demanding operations, you can reduce the impact Service protection limits will have.
 
 ## Using the Web API
 
@@ -292,7 +292,7 @@ private async Task<HttpResponseMessage> SendAsync(
 }
 ```
 
-You may also want to use [Polly](https://github.com/App-vNext/Polly), a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner. 
+You may also want to use [Polly](https://github.com/App-vNext/Polly), a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
 
 ### HTTP Response headers
 
@@ -307,13 +307,13 @@ You should not depend on these values to control how many requests you send. The
 
 ## Using the Organization Service
 
-If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>. This class implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any API Limit errors that are returned. 
+If you are using the Organization Service, we recommend that you use the <xref:Microsoft.Xrm.Tooling.Connector>.<xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient>. This class implements the <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and can manage any service protection API limit errors that are returned. 
 
 Since Xrm.Tooling.Connector version 9.0.2.16, it will automatically pause and re-send the request after the Retry-After duration period.
 
 If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Client>.<xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> or <xref:Microsoft.Xrm.Sdk.WebServiceClient>.<xref:Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient> classes. You should be able to replace those with the CrmServiceClient class. The <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy> is deprecated.
 
-More information: 
+More information:
 
 - [Build Windows client applications using the XRM tools](/xrm-tooling/build-windows-client-applications-xrm-tools).
 - [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Common Data Service](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
