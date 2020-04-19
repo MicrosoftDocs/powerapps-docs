@@ -181,5 +181,6 @@ namespace PowerApps.Samples
 [Use the Common Data Service Web API](../overview.md)<br />
 [Web API CDSWebApiService class Sample (C#)](cdswebapiservice.md)<br />
 [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />
+[Web API CDSWebApiService Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)<br />
 [Create an entity using the Web API](../create-entity-web-api.md)<br />
 [Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)

@@ -118,7 +118,7 @@ Sends a `POST` request synchronously and returns the response as a [JObject](htt
 |---------|---------|---------|
 |path|<xref:System.String>|The relative path to send the request. Frequently the name of an action or an entity set name.|
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to `POST`|
-|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
 #### Return Value
 
@@ -148,7 +148,7 @@ Sends a `PATCH` request synchronously.
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path to send the request. Frequently the Uri for a specific entity|
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to send|
-|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
 #### Remarks
 
@@ -172,7 +172,7 @@ Sends a `GET` request synchronously and returns data
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |path|<xref:System.String>|The relative path of the resource to return |
-|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
 #### Return Value
 
@@ -200,7 +200,7 @@ Sends a `DELETE` request synchronously.
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path of the resource to delete |
-|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
 #### Remarks
 
@@ -328,4 +328,6 @@ This class simply extends <xref:System.Exception> and provides additional proper
 
 The following samples use this class:
 
-TODO List them here
+- [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)
+- [Web API CDSWebApiService Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)
+- [Web API CDSWebApiService Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)
