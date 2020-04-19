@@ -243,15 +243,15 @@ from the pipeline in this sequence:
 1. Select the task and update the following areas.
 
     1. **Title**: Run Power Apps Test Automation Tests via
-        \$(BrowserTypeFirefox) copy
+        \$(BrowserTypeFirefox)
 
-    1.  **Override test run parameters**
+    2.  **Override test run parameters**
 
         ```
         -OnlineUsername $(OnlineUsername) -OnlinePassword $(OnlinePassword) -BrowserType $(BrowserTypeFirefox) -OnlineUrl $(OnlineUrl) -UsePrivateMode $(UsePrivateMode) -TestAutomationURLFilePath $(TestAutomationURLFilePath) -DriversPath $(GeckoWebDriver)
         ```
 
-    1.  **Test Run Title**: Run Power Apps Test Automation Tests via
+    3.  **Test Run Title**: Run Power Apps Test Automation Tests via
         \$(BrowserTypeFirefox)
 
 ## Configure Pipeline variables
