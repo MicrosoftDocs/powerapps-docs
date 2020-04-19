@@ -118,7 +118,7 @@ Sends a `POST` request synchronously and returns the response as a [JObject](htt
 |---------|---------|---------|
 |path|<xref:System.String>|The relative path to send the request. Frequently the name of an action or an entity set name.|
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to `POST`|
-|headers|<xref:Collections.Generic.Dictionary><string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
 
 #### Return Value
 
@@ -148,7 +148,7 @@ Sends a `PATCH` request synchronously.
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path to send the request. Frequently the Uri for a specific entity|
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to send|
-|headers|<xref:Collections.Generic.Dictionary><string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
 
 #### Remarks
 
@@ -172,7 +172,7 @@ Sends a `GET` request synchronously and returns data
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |path|<xref:System.String>|The relative path of the resource to return |
-|headers|<xref:Collections.Generic.Dictionary><string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
 
 #### Return Value
 
@@ -200,13 +200,14 @@ Sends a `DELETE` request synchronously.
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path of the resource to delete |
-|headers|<xref:Collections.Generic.Dictionary><string, List<string>>|(Optional) Any headers needed to apply special behaviors|
+|headers|Dictionary<string, List<string>>|(Optional) Any headers needed to apply special behaviors|
 
 #### Remarks
 
 More information:
 
 - [Basic delete](../update-delete-entities-using-web-api.md#basic-delete)
+- [Remove a reference to an entity](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-an-entity)
 - [Delete a single property value](../update-delete-entities-using-web-api.md#delete-a-single-property-value)
 
 ### DeleteAsync
@@ -231,7 +232,10 @@ Put is used to update specific entity properties.
 
 **Note**: The Http `PUT` method is also used to update Metadata. This method cannot be used for that purpose. It is specifically for business data.
 
-More information: [Update a single property value](../update-delete-entities-using-web-api.md#update-a-single-property-value)
+More information: 
+
+- [Update a single property value](../update-delete-entities-using-web-api.md#update-a-single-property-value)
+- [Change the reference in a single-valued navigation property](../associate-disassociate-entities-using-web-api.md#change-the-reference-in-a-single-valued-navigation-property)
 
 
 ### PutAsync
