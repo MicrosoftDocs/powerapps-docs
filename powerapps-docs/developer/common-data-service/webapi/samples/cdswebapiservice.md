@@ -24,7 +24,7 @@ This assembly demonstrates how to:
 
 - Make your code '[DRY](/dotnet/architecture/modern-web-apps-azure/architectural-principles#dont-repeat-yourself-dry)'er by wrapping common operations by Http methods.
 - Manage an <xref:System.Net.Http.HttpClient> in a thread-safe manner.
-- Manage Service Protection Limit API [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429)] errors that a client application should expect.
+- Manage Service Protection Limit API [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors that a client application should expect.
     - More information: [Service Protection API Limits](../../api-limits.md)
 
 ## Example
@@ -256,6 +256,8 @@ The copy of the request is available because of the custom <xref:System.Net.Http
 
 When the internal <xref:System.Net.Http.HttpClient> is initialized in the CDSWebApiService constructor, an instance of this class is set as an <xref:System.Net.Http.HttpMessageHandler>. This class works with the ADAL libraries to ensure that the `accessToken` will be refreshed each time a request is sent. If the `accessToken` expires, the ADAL library methods will automatically refresh it.
 
+More information: [Example demonstrating a DelegatingHandler](../../authenticate-oauth.md#example-demonstrating-a-delegatinghandler)
+
 ## ServiceConfig
 
 The CDSWebApiService class should be initialized with a connection string via the ServiceConfig class.
@@ -274,7 +276,7 @@ The following are the properties of the ServiceConfig class.
 |MaxRetries|<xref:System.Byte>|The maximum number of attempts to retry a request blocked by service protection limits. Default is 3.|
 |Password|<xref:System.Security.SecureString>|The password for the user principal|
 |RedirectUrl|<xref:System.String>|The Redirect Url of the application registered with Azure AD|
-|TimeoutInSeconds|ushort|The amount of time to try completing a request before it will be cancelled. Default is 120 (2 minutes)|
+|TimeoutInSeconds|`ushort`|The amount of time to try completing a request before it will be cancelled. Default is 120 (2 minutes)|
 |Url|<xref:System.String>|The Url to the CDS environment, i.e "https://yourorg.api.crm.dynamics.com"|
 |UserPrincipalName|<xref:System.String>|The user principal name of the user. i.e. you@yourorg.onmicrosoft.com|
 |Version|<xref:System.String>|The version of the Web API to use. Default is '9.1'|

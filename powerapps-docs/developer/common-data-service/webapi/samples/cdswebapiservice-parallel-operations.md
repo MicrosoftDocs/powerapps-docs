@@ -17,7 +17,7 @@ search.app:
 ---
 # Web API CDSWebApiService Parallel Operations Sample (C#)
 
-This example shows how to use a <xref:System.Threading.Tasks.Parallel.ForEach<TSource>> loop to enable data parallelism over a set of records to create in CDS.
+This example shows how to use a [System.Threading.Tasks.Parallel.ForEach Method](dotnet/api/system.threading.tasks.parallel.foreach) loop to enable data parallelism over a set of records to create in CDS.
 
 This sample uses the CDSWebApiService class synchronous methods within operations. Because the CDSWebApiService class can manage Service Protection API limits, this code can be resilient to the transient 429 errors that clients should expect. It will retry a configurable number of times. 
 
