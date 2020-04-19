@@ -83,36 +83,36 @@ This class exposes only the **BaseAddress** property. This is the configured <xr
 
 This class provides the following public methods:
 
-### PostCreate
+## PostCreate
 
 Creates an entity synchronously and returns the URI.
 
-#### Parameters
+### Parameters
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |entitySetName|<xref:System.String>|The entity set name of the type of entity to create. |
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|Contains the data for the entity to create|
 
-#### Return Value
+### Return Value
 
 The <xref:System.Uri> of the created entity
 
-#### Remarks
+### Remarks
 
 This method is provided because creating entities is a common operation and the URI is returned in the `OData-EntityId` header. Having this specialized method allows for less code than having only the [Post](#post) method, which returns only a [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm).
 
 More information: [Create an entity record using the Web API](../create-entity-web-api.md).
 
-### PostCreateAsync
+## PostCreateAsync
 
 The asynchronous version of [PostCreate](#postcreate).
 
-### Post
+## Post
 
 Sends a `POST` request synchronously and returns the response as a [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm).
 
-#### Parameters
+### Parameters
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
@@ -120,11 +120,11 @@ Sends a `POST` request synchronously and returns the response as a [JObject](htt
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to `POST`|
 |headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
-#### Return Value
+### Return Value
 
 A [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm) containing the response.
 
-#### Remarks
+### Remarks
 
 This method can be used for any operation using the `POST` http method, but it only includes the response content. Use [PostCreate](#postcreate) to create entities and return only the URI of the created entity.
 
@@ -134,15 +134,15 @@ More information:
 - [Use Web API actions](../use-web-api-actions.md)
 
 
-### PostAsync
+## PostAsync
 
 The asynchronous version of [Post](#post).
 
-### Patch
+## Patch
 
 Sends a `PATCH` request synchronously.
 
-#### Parameters
+### Parameters
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
@@ -150,7 +150,7 @@ Sends a `PATCH` request synchronously.
 |body|[JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm)|The payload to send|
 |headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
-#### Remarks
+### Remarks
 
 Patch is frequently used to Update or Upsert records.
 
@@ -159,26 +159,26 @@ More information:
 - [Basic update](../update-delete-entities-using-web-api.md#basic-update)
 - [Upsert an entity](../update-delete-entities-using-web-api.md#upsert-an-entity)
 
-### PatchAsync
+## PatchAsync
 
 The asynchronous version of [Patch](#patch).
 
-### Get
+## Get
 
 Sends a `GET` request synchronously and returns data
 
-#### Parameters
+### Parameters
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |path|<xref:System.String>|The relative path of the resource to return |
 |headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
-#### Return Value
+### Return Value
 
 A [JToken](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JToken.htm) representing the requested data.
 
-#### Remarks
+### Remarks
 
 More information:
 
@@ -187,22 +187,22 @@ More information:
 - [Use Web API functions](../use-web-api-functions.md)
 
 
-### GetAsync
+## GetAsync
 
 The asynchronous version of [Get](#get).
 
-### Delete
+## Delete
 
 Sends a `DELETE` request synchronously.
 
-#### Parameters
+### Parameters
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
 |uri|<xref:System.Uri>|The relative path of the resource to delete |
 |headers|`Dictionary<string, List<string>>`|(Optional) Any headers needed to apply special behaviors|
 
-#### Remarks
+### Remarks
 
 More information:
 
@@ -210,15 +210,15 @@ More information:
 - [Remove a reference to an entity](../associate-disassociate-entities-using-web-api.md#remove-a-reference-to-an-entity)
 - [Delete a single property value](../update-delete-entities-using-web-api.md#delete-a-single-property-value)
 
-### DeleteAsync
+## DeleteAsync
 
 The asynchronous version of [Delete](#delete).
 
-### Put
+## Put
 
 Sends a `PUT` request synchronously.
 
-#### Parameters
+### Parameters
 
 |Name  |Type  |Description  |
 |---------|---------|---------|
@@ -226,7 +226,7 @@ Sends a `PUT` request synchronously.
 |property|<xref:System.String>|The name of the property to update|
 |value|<xref:System.String>|The value to set|
 
-#### Remarks
+### Remarks
 
 Put is used to update specific entity properties.
 
@@ -238,7 +238,7 @@ More information:
 - [Change the reference in a single-valued navigation property](../associate-disassociate-entities-using-web-api.md#change-the-reference-in-a-single-valued-navigation-property)
 
 
-### PutAsync
+## PutAsync
 
 The asynchronous version of [Put](#put).
 
