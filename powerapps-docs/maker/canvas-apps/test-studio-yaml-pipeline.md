@@ -1,13 +1,13 @@
 ---
-title: Automate tests with Azure Pipeline using classic editor | Microsoft Docs
-description: Describes how to automate test suites and cases using the classic editor from Azure Pipeline.
+title: Automate tests with Azure Pipeline using YAML | Microsoft Docs
+description: Describes how to automate test suites and cases using a Azure Pipeline YAML.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/17/2020
+ms.date: 04/20/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -39,7 +39,7 @@ Before you begin, you must complete the following steps:
 
 - Create a new [*Test URLs .json file*](#step-2---create-test-url-json-file) in the repo with the App Test URLs you want to run from the pipeline.
 
-- Create a new [*Pipelines YAML file*](#step-3---create-pipeline-yaml-file) in the repo. 
+- Create a new [*Pipelines YAML file*](#step-3---create-pipeline-yaml-file) in your repo. 
 
 - Create a [*Github service connection*](#step-4---create-github-service-connection) to your repo. 
 
@@ -83,15 +83,16 @@ You can find a sample file ```Samples/TestAutomationURLs.json``` in the repo you
 
 You can find a sample file ```Samples/azure-pipelines.yml``` in the repo you created earlier.
 
-1. Create a new ```azure-pipelines.yml``` file in the root of your repo.<br> You will reference and update the azure-pipelines.yml file when you are configuring your pipeline later in the document. 
+1. Create a new ```azure-pipelines.yml``` file in your repo.
 
-2. Copy the content from the ```Samples/azure-pipelines.yml``` file.
+1. Copy the content from the ```Samples/azure-pipelines.yml``` file.
 
-3. Commit the changes to your repo:
+1. Commit the changes to your repo. <br> You will reference and update the azure-pipelines.yml file when you are configuring your pipeline later in the document. 
 
-    ![JSON update](media/test-studio-classic-pipeline-editor/json-update.png)
 
-### Step 4 - Create a Github service connection
+
+
+### Step 4 - Create Github service connection
 
 1. Sign in to your Azure DevOps instance.
 
@@ -142,12 +143,17 @@ You can find a sample file ```Samples/azure-pipelines.yml``` in the repo you cre
 
     ![Select repo](media/test-studio-yaml-pipeline/select-repo.png)
 
-1. The azure-pipelines file you created earlier will be automatically detected and displayed:
+1. Select **Existing Azure Pipelines YAML file**
+
+1. Set the path to the [*Azure YAML pipeline file*](#step-3---create-pipeline-yaml-file) you created earlier. 
+
+1. Select **Continue**
+
+    ![Review YAML](media/test-studio-yaml-pipeline/use-existing-pipelines-yaml.png)
+
+1. The azure-pipelines file will be displayed:
 
     ![Review YAML](media/test-studio-yaml-pipeline/review-pipeline-yaml.png)
-
-    > [!NOTE]
-    > If you did not create the YAML file in the root of your repo, Select **Existing Azure Pipelines YAML file** and select the YAML file from the location in your repo. 
 
 1. Update the **repositories name** to your repo 
 
@@ -173,7 +179,7 @@ You can find a sample file ```Samples/azure-pipelines.yml``` in the repo you cre
 
 1. Check the **Keep this value secret** and **Let users override this value when running this pipeline** options: 
  
-    ![Pipeline variables](media/test-studio-yaml-pipeline/configure-variables.png)
+    ![Pipeline variables](media/test-studio-yaml-pipeline/set-password-variable.png)
 
 1. **Save** and **Commit** the changes to your repo:  
 
@@ -182,9 +188,9 @@ You can find a sample file ```Samples/azure-pipelines.yml``` in the repo you cre
 
 ## Run and analyze tests
 
-To validate your tests are executing successfully, select **Queue** and then select **Run**. Your job will start running.
+To validate your tests are executing successfully, select **Run**. You can optionally select the server image to run your tests and also the Browser Types. Your job will start running.
 
-![Run job](media/test-studio-classic-pipeline-editor/run-job.png)
+![Run job](media/test-studio-yaml-pipeline/run-job.png)
 
 As the job runs, select the job to see a detailed status on each of the
 tasks running:
