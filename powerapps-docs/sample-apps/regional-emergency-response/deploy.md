@@ -34,7 +34,7 @@ The commercial version of the service URL is used throughout this article. If yo
 |------------------------|---------------------------|
 |<https://make.powerapps.com>     |  <https://make.gov.powerapps.us> (GCC)       |
 |<https://admin.powerplatform.microsoft.com>     |   <https://gcc.admin.powerplatform.microsoft.us> (GCC)      |
-|<https://app.powerbi.com/></br>- <https://make.high.powerapps.us> (GCC High)></br>- <https://high.admin.powerplatform.microsoft.us> (GCC High)</br>- <https://app.high.powerbigov.us> (GCC High)       |<https://app.powerbigov.us> (GCC)         |
+|<https://app.powerbi.com/></br>- <https://make.high.powerapps.us> (GCC High)</br>- <https://high.admin.powerplatform.microsoft.us> (GCC High)</br>- <https://app.high.powerbigov.us> (GCC High)       |<https://app.powerbigov.us> (GCC)         |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 
@@ -545,8 +545,8 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 7.  Select the email ID in the **From** field that will be used to send the portal invitation links. The user account specified here must have the server-side synchronization enabled for the email to be sent out.
 
     > [!TIP]
-    > >You might want to set up an account in your environment with the server-side synchronization enabled and an email address like no-reply\@[*customerdomain*].com to send password reset emails.
-    > >Make sure you don’t update the dynamic values highlighted in yellow. Optionally, you can update the email body content as required per your organization in the email body.
+    > You might want to set up an account in your environment with the server-side synchronization enabled and an email address like no-reply\@[*customerdomain*].com to send password reset emails.
+    > Make sure you don’t update the dynamic values highlighted in yellow. Optionally, you can update the email body content as required per your organization in the email body.
 
     > [!div class="mx-imgBorder"] 
     > ![Don’t update dynamic values](media/deploy-dynamic-values.png "Don’t update dynamic values")
