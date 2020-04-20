@@ -280,9 +280,9 @@ In this step, we will embed the Power BI report that you published to your porta
 
 For step-by-step instructions, see the following in Power Apps portals docs:
 
--   [Enable Power BI visualization](https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-visualization)
+-   [Enable Power BI visualization](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-visualization)
 
--   [Enable Power BI embedded service](https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service)
+-   [Enable Power BI embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service)
 
 ### The process
 
@@ -343,7 +343,7 @@ Now, we will restart the portal for the changes to take effect.
 5.  Select **Restart** in the confirmation message to restart the portal.
 
   > [!NOTE]
-  > Optionally, you can also set up a vanity URL for your portal by using a custom domain name. A custom domain can help your customers find your support resources more easily and enhance your brand. For detailed information to do so, see [Add a custom domain](https://docs.microsoft.com/en-us/powerapps/maker/portals/admin/add-custom-domain) in portals docs.
+  > Optionally, you can also set up a vanity URL for your portal by using a custom domain name. A custom domain can help your customers find your support resources more easily and enhance your brand. For detailed information to do so, see [Add a custom domain](https://docs.microsoft.com/powerapps/maker/portals/admin/add-custom-domain) in portals docs.
 
 ## Step 7: Add a custom title and logo for your portal
 
@@ -474,11 +474,11 @@ Server-side synchronization enables you to sync emails in Common Data Service wi
 
 For detailed steps on setting server-side sync; see the following resources:
 
--   [Set up server-side sync](https://docs.microsoft.com/en-us/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
+-   [Set up server-side sync](https://docs.microsoft.com/power-platform/admin/set-up-server-side-synchronization-of-email-appointments-contacts-and-tasks)
 
--   [Connect to Exchange Online](https://docs.microsoft.com/en-us/power-platform/admin/connect-exchange-online)
+-   [Connect to Exchange Online](https://docs.microsoft.com/power-platform/admin/connect-exchange-online)
 
--   [Connect to Exchange Server (on-premises)](https://docs.microsoft.com/en-us/power-platform/admin/connect-exchange-server-on-premises)
+-   [Connect to Exchange Server (on-premises)](https://docs.microsoft.com/power-platform/admin/connect-exchange-server-on-premises)
 
     > [!WARNING]
     > Make sure this user is not configured for server-side sync on any other Common Data Service or Dynamics 365 environment. If you have a server-side sync set in another environment, enabling the server-side sync here will disable it in the previously used environment.
@@ -629,7 +629,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 For your business admin users to use the admin app (model-driven app) to enter and manage data, it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
 > [!IMPORTANT]
-> Make sure the user or group you plan to share the app with already have access to your environment. Typically, you would have already added users or group while setting up your environment. Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing app with them: [Create users and assign security roles](https://docs.microsoft.com/en-us/power-platform/admin/create-users-assign-online-security-roles).
+> Make sure the user or group you plan to share the app with already have access to your environment. Typically, you would have already added users or group while setting up your environment. Alternatively, you can follow the steps here to add users to your environment and provide appropriate access before sharing app with them: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles).
 
 1.  Sign into [Power Apps](https://make.powerapps.com).
 
