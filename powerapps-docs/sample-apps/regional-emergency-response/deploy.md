@@ -51,8 +51,8 @@ Before extracting the .zip file, ensure that you unblock it.
 
 2.	In the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![Solution package properties](media/deploy-deployment-package.png "Solution package properties")
+    > [!div class="mx-imgBorder"] 
+    > ![Solution package properties](media/deploy-deployment-package.png "Solution package properties")
 
 On extracting the .zip file, you will see the following in the extracted folder:
 
@@ -94,13 +94,11 @@ After you have created your environment, you can access it using the following U
 
     > [!div class="mx-imgBorder"] 
     > ![Create Power Apps portal](media/deploy-create-powerapps-portal.png "Create Power Apps portal")
-    <!-- ![](media/0264fcacbd10951ff83aa7d51aecfae7.png) -->
 
 4.	In the **Portal from blank** page, specify appropriate values, and then select **Create**.
 
     > [!div class="mx-imgBorder"] 
     > ![Create portal from blank](media/deploy-portal-from-blank.png "Create portal from blank")
-    <!-- ![](media/f2b06fbb9f59eee784eb72e18337910d.png) -->
 
 Power Apps will start provisioning the portal for you, and the progress message will be displayed at the upper-right corner of the page.
 
@@ -111,7 +109,6 @@ After the portal is provisioned, it will appear in your **Apps** list in Power A
 
 > [!div class="mx-imgBorder"] 
 > ![View starter portal](media/deploy-view-starter-portal.png "View starter portal")
-<!-- ![](media/a9c0ef994ccf50a7decef7b8f0356534.png) -->
 
   > [!NOTE]
   > Wait for the portal to be provisioned before proceeding to the next step.
@@ -128,7 +125,6 @@ After your portal is provisioned, follow these steps to install the package that
 
     > [!div class="mx-imgBorder"] 
     > ![Deploy package](media/deploy-connect-to-environment.png "Deploy package")
-    <!-- ![](media/147fba48bb75777a5af09f8f746638ca.png) -->
 
 4.  Select **Login** to continue.
 
@@ -136,7 +132,6 @@ After your portal is provisioned, follow these steps to install the package that
 
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/deploy-select-environment.png "Select an environment")
-    <!-- ![](media/f0b90f77792a59e4ead1e4e690179bc0.png) -->
 
 6.  On the next screen, select **Next.**
 
@@ -146,7 +141,6 @@ After your portal is provisioned, follow these steps to install the package that
 
     > [!div class="mx-imgBorder"] 
     > ![Validate starter portal](media/deploy-validate-starter-portal.png "Validate starter portal")
-    <!-- ![](media/7ab7885d6387642a5f7251b6fced19fa.png) -->
 
 9.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
 
@@ -158,7 +152,6 @@ After the package is installed, you will find a new admin app in your **Apps** l
 
   > [!div class="mx-imgBorder"] 
   > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
-  <!-- ![](media/4a51e7dd439d08f05b2d957d41ae149d.png) -->
 
 ## Step 5: Configure and publish Power BI dashboard
 
@@ -191,7 +184,6 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
         > [!div class="mx-imgBorder"] 
         > ![Configure Power BI dashboard](media/deploy-config-dashboard.png "Configure Power BI dashboard")
-        <!-- ![](media/23815ce106a9c649ed7da5df11782bdb.png) -->
 
     3.  Select **Load.**
 
@@ -199,7 +191,6 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
     > [!div class="mx-imgBorder"] 
     > ![Connect to Common Data Service environment](media/deploy-connect-cds.png "Connect to Common Data Service environment")
-    <!-- ![](media/9b931931c1c31283e43029fcc3ceb055.png) -->
 
 5.  After signing in, select **Connect** to connect to your data in Common Data Service.
 
@@ -209,7 +200,6 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
     > [!div class="mx-imgBorder"] 
     > ![Save Power BI workspace](media/deploy-save-workspace.png "Save Power BI workspace")
-    <!-- ![](media/073386254355b77076b5b5063a350ef3.png) -->
 
 8.  You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
 
@@ -217,19 +207,16 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-publish-workspace.png "Publish to Power BI")
-    <!-- ![](media/cf7d8c0b684fa6684e1324f352e5645f.png) -->
 
 10.  The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Under the **Datasets** tab of your workspace, select the **Schedule refresh** icon for the dataset of your report you just published.
 
       > [!div class="mx-imgBorder"] 
       > ![Report available in workspace](media/deploy-report-workspace.png "Report available in workspace")
-      <!-- ![](media/ab6f88e88da2dcca796b79db7a6b4d5a.png) -->
 
 11.  The first time you try to set the data refresh setting, you'll see the **Settings** page with a message stating that your credentials aren't valid. Under **Data source credentials**, select **Edit credentials** to specify your credentials.
 
       > [!div class="mx-imgBorder"] 
       > ![Data source credentials](media/deploy-datasource-credentials.png "Data source credentials")
-      <!-- ![](media/44618e25e5c6183c9f8297fe54ec4a5c.png) -->
 
 12.  In the next screen:
 
@@ -246,20 +233,16 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
       > [!div class="mx-imgBorder"] 
       > ![Schedule refresh data](media/deploy-schedule-refresh-data.png "Schedule refresh data")
-      <!-- ![](media/5b026d8f28074a5a4222a76ad53d96de.png) -->
 
-> [!NOTE]
-> There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
+      > [!NOTE]
+      > There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)</BR>We recommend setting the data to refresh every 30 mins.
 
-We recommend setting the data to refresh every 30 mins**.**
+15.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
 
-1.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
+        > [!div class="mx-imgBorder"] 
+        > ![Open report in browser](media/deploy-open-report.png "Open report in browser")
 
-  > [!div class="mx-imgBorder"] 
-  > ![Open report in browser](media/deploy-open-report.png "Open report in browser")
-  <!-- ![](media/5796cf4d38719b84a63e2150a6cf7907.png) -->
-
-2.  The browser URL will be in the following format:
+16.  The browser URL will be in the following format:
     <https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1>
 
 Copy the Power BI report URL to a Notepad as you will need it in the next section to embed it in the portal.
@@ -272,11 +255,10 @@ In this step, we will embed the Power BI report that you published to your porta
 
 - You must have Global Admin role to perform this step.
 
-- Before you can embed a Power BI report in Power Apps portal, **Power BI    visualization** and **Power BI embedded service** must be enabled for your portal using the [Power Apps Portals admin center](https://docs.microsoft.com/powerapps/maker/portals/admin/admin-overview).
+- Before you can embed a Power BI report in Power Apps portal, **Power BI visualization** and **Power BI embedded service** must be enabled for your portal using the [Power Apps Portals admin center](https://docs.microsoft.com/powerapps/maker/portals/admin/admin-overview).
 
   > [!div class="mx-imgBorder"] 
   > ![Power Apps Portals admin center](media/deploy-admin-center.png "Power Apps Portals admin center")
-  <!-- ![](media/4376a48bfb43c8e95e4bb5a494b4e5ae.png) -->
 
 For step-by-step instructions, see the following in Power Apps portals docs:
 
@@ -294,13 +276,11 @@ Now that you have enabled both Power BI visualization and Power BI Embedded serv
 
     > [!div class="mx-imgBorder"] 
     > ![Open Portal Management app](media/deploy-open-mgmt-app.png "Open Portal Management app")
-    <!-- ![](media/1ea8e5d336953e8ca28cf932500e67d5.png) -->
 
 3.  In the left pane, select **Site Settings**, select **New**:
 
     > [!div class="mx-imgBorder"] 
     > ![New site settings](media/deploy-site-settings.png "New site settings")
-    <!-- ![](media/5eb665fad79b63f2728439f9685893c9.png) -->
 
 4.  On the **New Site Setting** page, specify the following values:
 
@@ -312,7 +292,6 @@ Now that you have enabled both Power BI visualization and Power BI Embedded serv
 
         > [!div class="mx-imgBorder"] 
         > ![Site setting values](media/deploy-site-setting-values.png "Site setting values")
-        <!-- ![](media/e6c56cad3d28367decd5761923c1118c.png) -->
 
 5.  Select **Save & Close** to save the record.
 
@@ -326,19 +305,16 @@ Now, we will restart the portal for the changes to take effect.
 
     > [!div class="mx-imgBorder"] 
     > ![Apps portal menu](media/deploy-portal-menu.png "Apps portal menu")
-    <!-- ![](media/a3240f27d884f7bbbb577acd2564a204.png) -->
 
 3.  In the **Portal settings** pane, select **Administration**.
 
     > [!div class="mx-imgBorder"] 
     > ![Portal settings administration](media/deploy-settings-admin.png "[Portal settings administration")
-    <!-- ![](media/4376becbd381c02e48b212249a406677.png) -->
 
 4.  In the Power Apps Portals admin center, select **Portal Actions** \> **Restart**.
 
     > [!div class="mx-imgBorder"] 
     > ![Portal actions restart](media/deploy-portal-restart.png "Portal actions restart")
-    <!-- ![](media/6022c9f40d7c60e85206e5e7eb8c66cf.png) -->
 
 5.  Select **Restart** in the confirmation message to restart the portal.
 
