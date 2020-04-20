@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/17/2020
+ms.date: 04/20/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -49,7 +49,7 @@ You can see a list of identity providers that you can configure with Power Apps 
 ![Identity Providers](media/use-simplified-authentication-configuration/portal-authentication-settings.png)
 
 > [!NOTE]
-> Power Apps portals supports several identity providers. However, the **Simplified authentication and identity provider configuration** feature only supports the identity providers listed above.
+> Power Apps portals supports several identity providers. However, the **Simplified authentication and identity provider configuration** feature currently only supports the identity providers listed above.
 
 #### Authentication Settings from portal details
 
@@ -68,7 +68,7 @@ The details page shows you the **Identity providers** section:
 ![Portal details](media/use-simplified-authentication-configuration/portal-details.png)
 
 > [!NOTE]
-> Selecting **See all** from portal details takes you to the list of [*identity providers*](#authentication-settings).
+> Selecting **See all** from portal details takes you to the list of *identity providers*.
 
 ## General authentication settings
 
@@ -155,9 +155,18 @@ Deleting a provider deletes your provider configuration for the selected provide
 
 ![Configure AD B2C app](media/use-simplified-authentication-configuration/configure-ad-b2c-step1.png)
 
-To use Azure AD B2C as an identity provider, you must create and configure Azure AD B2C tenant. And then, [register an application](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant.
+To use Azure AD B2C as an identity provider, you must:
 
-For more details, read [create and configure Azure AD B2C application](azure-ad-b2c.md#use-azure-ad-b2c-as-an-identity-provider-for-your-portal).
+1. [**Create and configure Azure AD B2C tenant**](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant).
+
+1. [**Register an application**](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant. Use the **Reply URL** provided in the wizard while configuring the application.
+
+    > [!NOTE]
+    > You must choose **Yes** for the **Allow implicit flow** field and enter your portal URL in the **Reply URL** field.
+
+    For more details, read [create and configure Azure AD B2C application](azure-ad-b2c.md#use-azure-ad-b2c-as-an-identity-provider-for-your-portal).
+
+1. [**Create user flows**](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, [create password reset user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
 
 ### Step 2 - Configure site settings
 
@@ -166,18 +175,30 @@ Configure site settings and password reset policy for your Azure AD B2C provider
 ![Configure site settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step2.png)
 
 - **Authority** - The issuer URL defined in the metadata of the sign up & sign in policy user flow.​
-- **Client ID​** - The ID associated with the application created in Azure Active Directory B2C tenant to be used with the portal.​
-- **Redirect URI** - The location where Azure AD B2C will send an authentication response.
+<br> To get issuer URL:
+
+    1. Open the sign-up and sign-in user flow in created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
+    1. Select **Run user flow** and in the new window, select the URL from the top. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
+    1. Copy the URL value of the **Issuer** from the document that opens.
+
+- **Client ID​** - Enter the **Application ID** of the Azure AD B2C application created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
+- **Redirect URI** - Enter portal URL. <br> If your portal uses a custom domain name, you may have a different URL than the one provided here.​
 
 #### Password resets
 
-- **Default policy ID** - ID of the sign in or sign up user flow created in Azure Active Directory B2C.​
+- **Default policy ID** - Enter the **Name** of the *sign up and sign in user flows* created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
 
-- **Password reset policy ID** - ID of the password reset user flow created in Azure Active Directory B2C.​
+- **Password reset policy ID** - Enter the **Name** of the *password reset user flow* created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
 
-- **Valid issuers** - A comma-delimited list of issuers that includes the issuer of the sign up or sign in user flow, and the issuer of the password reset user flow.
+- **Valid issuers** - A comma-delimited list of issuer URLs for the *sign up and sign in user flows* and *password reset user flow* created in [step 1](#step-1---configure-azure-active-directory-b2c-application). 
+<br> To get issuer URL:
 
-For a complete list of site settings, read [related site settings](azure-ad-b2c.md#related-site-settings).
+    1. Open the sign-up and sign-in user flow in created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
+    1. Select **Run user flow** and in the new window, select the URL from the top. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
+    1. Copy the URL value of the **Issuer** from the document that opens.
+    1. Repeat the above steps for *password reset user flow*.
+
+For more information about site settings, read [related site settings](azure-ad-b2c.md#related-site-settings).
 
 ### Step 3 - Configure additional settings
 
