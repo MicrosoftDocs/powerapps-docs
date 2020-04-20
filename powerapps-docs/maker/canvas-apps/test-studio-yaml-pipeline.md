@@ -98,7 +98,7 @@ You can find a sample file ```Samples/azure-pipelines.yml``` in the repo you cre
 
 1. Select an existing project or create a new project.
 
-1. Select **Project settings** at the bottom of the left menu.
+1. Select **Project settings** at the bottom of the left menu:
 
     ![Create pipeline](media/test-studio-yaml-pipeline/project-settings.png)
 
