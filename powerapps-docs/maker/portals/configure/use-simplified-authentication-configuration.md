@@ -76,7 +76,8 @@ You can configure the following general authentication settings by selecting the
 
 ![General authentication settings](media/use-simplified-authentication-configuration/general-authentication-settings.png)
 
-- **External login** - Turn [**External login**](set-authentication-identity.md#manage-external-accounts) for your portal *On* or *Off*. Setting to *Off* disables and hides external account registration and sign in.
+- **External login** - Turn External login for your portal *On* or *Off*. Setting to *Off* disables and hides external account registration and sign in.
+<br> *More information*: External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity provider. This includes OpenID based providers such as Yahoo! and Google and OAuth 2.0 based providers such as Twitter, Facebook, and Microsoft. Users sign up to the portal by selecting an external identity to register with the portal. After it is registered, an external identity has access to the same features as a local account. See [Manage external accounts](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity#manage-external-accounts) for related site settings.
 - **Open registration** - Turn [**Open registration**](configure-portal-authentication.md#open-registration) for your portal *On* or *Off*. Setting to *Off* disables and hides external account registration.
 
 You can also go to general authentication settings from **portal details** using **Settings** on top right in **Identity providers** section:
