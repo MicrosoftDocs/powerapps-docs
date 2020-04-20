@@ -83,5 +83,7 @@ When hovering over any item of the graph, the following information is shown:
 ### See also
 
 [Introduction to ISV Studio for the Power Platform](isv-app-management.md)  
-[Home page](isv-app-management-homepage.md)  
-[App page](isv-app-management-apppage.md)
+[Home page](isv-app-management-homepage.md)<br/> 
+[App page](isv-app-management-apppage.md)<br/> 
+[AppSource checker](isv-app-management-appsource-checker.md)<br/> 
+[Connector Certification](isv-app-management-certification.md)

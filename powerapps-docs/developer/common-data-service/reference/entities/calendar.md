@@ -1,7 +1,7 @@
 ---
 title: "Calendar Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Calendar entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the Calendar entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # Calendar Entity Reference
 
@@ -525,6 +526,7 @@ Listed by **SchemaName**.
 - [BusinessUnit_Calendar](#BKMK_BusinessUnit_Calendar)
 - [slabase_businesshoursid](#BKMK_slabase_businesshoursid)
 - [calendar_organization](#BKMK_calendar_organization)
+- [calendar_slaitem](#BKMK_calendar_slaitem)
 
 
 ### <a name="BKMK_calendar_system_users"></a> calendar_system_users
@@ -645,6 +647,23 @@ Same as organization entity [calendar_organization](organization.md#BKMK_calenda
 |ReferencedEntityNavigationPropertyName|calendar_organization|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_calendar_slaitem"></a> calendar_slaitem
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+Same as slaitem entity [calendar_slaitem](slaitem.md#BKMK_calendar_slaitem) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|slaitem|
+|ReferencingAttribute|businesshoursid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|calendar_slaitem|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

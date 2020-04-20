@@ -1,7 +1,7 @@
 ---
 title: "View and create email in model-driven apps | MicrosoftDocs"
 description: "View and create email while using a model-driven app."
-ms.date: 02/03/2020
+ms.date: 04/09/2020
 ms.service:
   - "dynamics-365"
 ms.topic: article
@@ -11,9 +11,7 @@ manager: shujoshi
 ---
 
 
-# Preview: View and create email through the Activities grid
-
-View and create email through the Activities grid is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+# View and create email through the Activities grid
 
 Dynamics 365 model-driven apps let you interact with customers through email. The email functionality allows you to:
 
