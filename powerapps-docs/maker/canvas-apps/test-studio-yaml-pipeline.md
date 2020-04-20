@@ -195,7 +195,7 @@ To validate your tests are executing successfully, select **Run**. You can optio
 As the job runs, select the job to see a detailed status on each of the
 tasks running:
 
-![Job details](media/test-studio-classic-pipeline-editor/job-details.png)
+![Job details](media/test-studio-yaml-pipeline/job-details.png)
 
 When the job completes, you can view the high-level job summary, and any errors or warnings. By selecting the Test tab, you can view specific details on the test cases you've executed.
 
