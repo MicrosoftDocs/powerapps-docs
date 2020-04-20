@@ -27,7 +27,7 @@ You can view details about solution operations from the **Solutions** area of Po
 
 ## View solution history
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-2.	Select **Solutions**, select the solution you want, and then on the command bar select **See history**. 
+2.	Select **Solutions** on the left navigation pane, select the solution you want, and then on the command bar select **See history**. 
 
     The history is displayed. 
 
