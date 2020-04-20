@@ -277,7 +277,7 @@ You can also create your own dashboards in addition to the dashboards available 
 
 To manage dashboards:
 
-1. Sign into [Power Apps](https://make.powerapps.com) and browse to your admin app.
+1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
 
 2. In the left navigation pane, select **Dashboards** from the area picker:
 
@@ -440,7 +440,7 @@ All the feedback provided by frontline staff using canvas apps on their mobile d
 
 To view and manage app feedback:
 
-1. Sign into [Power Apps](https://make.powerapps.com) and browse to your admin app.
+1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
 
 2. In the left navigation pane, select **Administration** from the area picker.
 
@@ -452,6 +452,47 @@ To view and manage app feedback:
 ## View the admin app in your language
 
 [!include[cc-lang](includes/cc-lang.md)]
+
+### Enable languages for your environment
+
+Before you can view the admin app in one of the supported languages, the languages must be enabled by the system administrator in your environment. The system administrator can perform a *one-time* configuration step to enable the required languages from one of the languages supported by the admin app.
+
+1. Sign into [Power Platform admin center](https://aka.ms/ppac).
+
+2. In the left pane, select **Environments**, and then select [Your Environment] > **Settings** > **Product** > **Languages**.
+
+    > [!div class="mx-imgBorder"]
+    > ![ppac-settings](media/ppac-settings.png)
+
+3. On the **Language Settings** page, select the languages you want to enable from one of the supported languages mentioned earlier, and select **Apply** in the lower-right corner. For example, we are enabling the **French** and **German** languages.
+
+    > [!div class="mx-imgBorder"]
+    > ![ppac-lang-settings](media/ppac-lang-settings.png)
+
+4. On the **Confirm Language Change** dialog box, select **OK**.
+
+    > [!IMPORTANT]
+    > Each selected language can take several minutes to enable.
+
+### Set the language of your choice
+
+After the required languages are enabled by your system administrator, each admin user can select the language she/he prefers to see the admin app displayed in.
+
+1. Sign into the admin app (model-driven app) using the URL provided by your IT admin.
+
+2. Select the **Settings** button in the upper-right corner of the screen, and then select **Personalization Settings**.
+
+    > [!div class="mx-imgBorder"]
+    > ![personal-settings](media/personal-settings.png)
+
+3. On the **Set Personal Options** page, select the **Languages** tab, and then select a language of choice from the **User Interface Language** list. The list shows all the languages enabled by your system administrator for your environment.
+
+    > [!div class="mx-imgBorder"]
+    > ![select-lang](media/select-lang.png)
+
+4. Select **OK** in the lower-right corner.
+
+The admin app UI will switch to display in the language you selected.
 
 ## Issues and feedback
 
