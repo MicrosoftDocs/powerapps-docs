@@ -378,8 +378,8 @@ You can add a custom logo and title to your portal to align with your organizati
 
     4.  **Partial URL:** mylogo.png
 
-      > [!IMPORTANT]
-      > Ensure that this value matches the value you specified earlier for the **SiteLogoPath** site setting.
+        > [!IMPORTANT]
+        > Ensure that this value matches the value you specified earlier for the **SiteLogoPath** site setting.
 
     5.  **Publishing State**: Select **Published**
 
@@ -494,7 +494,7 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
     2.  Update the “https://**regionaldev**.powerappsportals.com” string in the email body with the actual URL of your portal. Also, ensure you don’t change the **Encode Invitation Code** content highlighted in yellow.
 
-      You can make other changes as required in the email body to align with your organization branding.
+        You can make other changes as required in the email body to align with your organization branding.
 
     3.  Select **Save and Close** to save your changes.
 
