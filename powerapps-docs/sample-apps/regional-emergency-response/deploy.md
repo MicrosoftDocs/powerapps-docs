@@ -31,10 +31,10 @@ The Regional Emergency Response solution is also available for US Government org
 The commercial version of the service URL is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
 
 |Commercial version URL  |US Government version URL  |
-|---------|---------|
+|------------------------|---------------------------|
 |<https://make.powerapps.com>     |  <https://make.gov.powerapps.us> (GCC)       |
 |<https://admin.powerplatform.microsoft.com>     |   <https://gcc.admin.powerplatform.microsoft.us> (GCC)      |
-|<https://app.powerbi.com/></br>- <https://make.high.powerapps.us (GCC High)></br>-<https://high.admin.powerplatform.microsoft.us> (GCC High)</br>-<https://app.high.powerbigov.us> (GCC High)       |<https://app.powerbigov.us> (GCC)         |
+|<https://app.powerbi.com/></br>- <https://make.high.powerapps.us> (GCC High)></br>- <https://high.admin.powerplatform.microsoft.us> (GCC High)</br>- <https://app.high.powerbigov.us> (GCC High)       |<https://app.powerbigov.us> (GCC)         |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 
@@ -52,7 +52,7 @@ Before extracting the .zip file, ensure that you unblock it.
 2.	In the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
 
   > [!div class="mx-imgBorder"] 
-  > ![Solution package properties](media/deployment-package.png "Solution package properties")
+  > ![Solution package properties](media/deploy-deployment-package.png "Solution package properties")
 
 On extracting the .zip file, you will see the following in the extracted folder:
 
@@ -92,26 +92,26 @@ After you have created your environment, you can access it using the following U
 
 3.  In the left pane, select **Apps**, and then select **New app** \> **Portal**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/0264fcacbd10951ff83aa7d51aecfae7.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Create Power Apps portal](media/deploy-create-powerapps-portal.png "Create Power Apps portal")
+    <!-- ![](media/0264fcacbd10951ff83aa7d51aecfae7.png) -->
 
 4.	In the **Portal from blank** page, specify appropriate values, and then select **Create**.
 
-> [!div class="mx-imgBorder"] 
-> ![???](media/?.png "???
-![](media/f2b06fbb9f59eee784eb72e18337910d.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Create portal from blank](media/deploy-portal-from-blank.png "Create portal from blank")
+    <!-- ![](media/f2b06fbb9f59eee784eb72e18337910d.png) -->
 
 Power Apps will start provisioning the portal for you, and the progress message will be displayed at the upper-right corner of the page.
 
-  > [!Note]
-  > It might take a while to provision your portal.
+> [!NOTE]
+> It might take a while to provision your portal.
 
 After the portal is provisioned, it will appear in your **Apps** list in Power Apps. You can select the ellipsis (…) for your portal record and select **Browse** to view the starter portal.
 
 > [!div class="mx-imgBorder"] 
-> ![???](media/?.png "???
-![](media/a9c0ef994ccf50a7decef7b8f0356534.png)
+> ![View starter portal](media/deploy-view-starter-portal.png "View starter portal")
+<!-- ![](media/a9c0ef994ccf50a7decef7b8f0356534.png) -->
 
   > [!NOTE]
   > Wait for the portal to be provisioned before proceeding to the next step.
@@ -126,17 +126,17 @@ After your portal is provisioned, follow these steps to install the package that
 
 3.  You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/147fba48bb75777a5af09f8f746638ca.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Deploy package](media/deploy-connect-to-environment.png "Deploy package")
+    <!-- ![](media/147fba48bb75777a5af09f8f746638ca.png) -->
 
 4.  Select **Login** to continue.
 
 5.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/f0b90f77792a59e4ead1e4e690179bc0.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Select an environment](media/deploy-select-environment.png "Select an environment")
+    <!-- ![](media/f0b90f77792a59e4ead1e4e690179bc0.png) -->
 
 6.  On the next screen, select **Next.**
 
@@ -144,9 +144,9 @@ After your portal is provisioned, follow these steps to install the package that
 
 8.  The next screen validates if a starter portal is available on your environment. Select **Next** to continue with the installation.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/7ab7885d6387642a5f7251b6fced19fa.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Validate starter portal](media/deploy-validate-starter-portal.png "Validate starter portal")
+    <!-- ![](media/7ab7885d6387642a5f7251b6fced19fa.png) -->
 
 9.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
 
@@ -156,9 +156,9 @@ After your portal is provisioned, follow these steps to install the package that
 
 After the package is installed, you will find a new admin app in your **Apps** list.
 
-> [!div class="mx-imgBorder"] 
-> ![???](media/?.png "???
-![](media/4a51e7dd439d08f05b2d957d41ae149d.png)
+  > [!div class="mx-imgBorder"] 
+  > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+  <!-- ![](media/4a51e7dd439d08f05b2d957d41ae149d.png) -->
 
 ## Step 5: Configure and publish Power BI dashboard
 
@@ -172,8 +172,8 @@ In this step, we will configure and publish the Power BI dashboard so that it ca
 
 -   Install Power BI Desktop from the Microsoft Store: <https://aka.ms/pbidesktop>
 
-> [!NOTE]
-> If you have installed Power BI Desktop by downloading directly from the Download Center page as an executable in the past, remove it and use the one from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available.
+    > [!NOTE]
+    > If you have installed Power BI Desktop by downloading directly from the Download Center page as an executable in the past, remove it and use the one from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available.
 
 If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
 
@@ -189,73 +189,75 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
     2.  **CDS_base_solution_URL**: Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment.
 
-    > [!div class="mx-imgBorder"] 
-    > ![???](media/?.png "???
-    ![](media/23815ce106a9c649ed7da5df11782bdb.png)
+        > [!div class="mx-imgBorder"] 
+        > ![Configure Power BI dashboard](media/deploy-config-dashboard.png "Configure Power BI dashboard")
+        <!-- ![](media/23815ce106a9c649ed7da5df11782bdb.png) -->
 
     3.  Select **Load.**
 
-1.  You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** \> **Sign in** to specify your Common Data Service credentials.
+4.  You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** \> **Sign in** to specify your Common Data Service credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![???](media/?.png "???
-    ![](media/9b931931c1c31283e43029fcc3ceb055.png)
+    > ![Connect to Common Data Service environment](media/deploy-connect-cds.png "Connect to Common Data Service environment")
+    <!-- ![](media/9b931931c1c31283e43029fcc3ceb055.png) -->
 
-1.  After signing in, select **Connect** to connect to your data in Common Data Service.
+5.  After signing in, select **Connect** to connect to your data in Common Data Service.
 
-2.  On successful connection, your data will be displayed in the Power BI report. You'll be prompted to apply pending changes to your query; select **Apply changes**.
+6.  On successful connection, your data will be displayed in the Power BI report. You'll be prompted to apply pending changes to your query; select **Apply changes**.
 
-3.  Select **Publish** to publish data to your Power BI workspace. You'll be prompted to save your changes; select **Save**.
-
-![](media/073386254355b77076b5b5063a350ef3.png)
-
-1.  You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
-
-2.  After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
-
-> [!div class="mx-imgBorder"] 
-> ![???](media/?.png "???
-![](media/cf7d8c0b684fa6684e1324f352e5645f.png)
-
-1.  The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Under the **Datasets** tab of your workspace, select the **Schedule refresh** icon for the dataset of your report you just published.
-
-> [!div class="mx-imgBorder"] 
-> ![???](media/?.png "???
-![](media/ab6f88e88da2dcca796b79db7a6b4d5a.png)
-
-1.  The first time you try to set the data refresh setting, you'll see the **Settings** page with a message stating that your credentials aren't valid. Under **Data source credentials**, select **Edit credentials** to specify your credentials.
-
-> [!div class="mx-imgBorder"] 
-> ![???](media/?.png "???
-![](media/44618e25e5c6183c9f8297fe54ec4a5c.png)
-
-1.  In the next screen:
-
-    1.  Select **Authentication** method as **OAuth2**.
-
-    2.  Select **Privacy level setting for this data source** as
-        **Organizational**.
-
-    3.  Select **Sign in**.
-
-2.  You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
-
-3.  In the **Settings** page, expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule. Select **Apply**.
+7.  Select **Publish** to publish data to your Power BI workspace. You'll be prompted to save your changes; select **Save**.
 
     > [!div class="mx-imgBorder"] 
-    > ![???](media/?.png "???
-    ![](media/5b026d8f28074a5a4222a76ad53d96de.png)
+    > ![Save Power BI workspace](media/deploy-save-workspace.png "Save Power BI workspace")
+    <!-- ![](media/073386254355b77076b5b5063a350ef3.png) -->
+
+8.  You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
+
+9.  After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Publish to Power BI](media/deploy-publish-workspace.png "Publish to Power BI")
+    <!-- ![](media/cf7d8c0b684fa6684e1324f352e5645f.png) -->
+
+10.  The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Under the **Datasets** tab of your workspace, select the **Schedule refresh** icon for the dataset of your report you just published.
+
+      > [!div class="mx-imgBorder"] 
+      > ![Report available in workspace](media/deploy-report-workspace.png "Report available in workspace")
+      <!-- ![](media/ab6f88e88da2dcca796b79db7a6b4d5a.png) -->
+
+11.  The first time you try to set the data refresh setting, you'll see the **Settings** page with a message stating that your credentials aren't valid. Under **Data source credentials**, select **Edit credentials** to specify your credentials.
+
+      > [!div class="mx-imgBorder"] 
+      > ![Data source credentials](media/deploy-datasource-credentials.png "Data source credentials")
+      <!-- ![](media/44618e25e5c6183c9f8297fe54ec4a5c.png) -->
+
+12.  In the next screen:
+
+      1.  Select **Authentication** method as **OAuth2**.
+
+      2.  Select **Privacy level setting for this data source** as
+          **Organizational**.
+
+      3.  Select **Sign in**.
+
+13.  You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
+
+14.  In the **Settings** page, expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule. Select **Apply**.
+
+      > [!div class="mx-imgBorder"] 
+      > ![Schedule refresh data](media/deploy-schedule-refresh-data.png "Schedule refresh data")
+      <!-- ![](media/5b026d8f28074a5a4222a76ad53d96de.png) -->
 
 > [!NOTE]
 > There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
-> 
+
 We recommend setting the data to refresh every 30 mins**.**
 
 1.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
 
   > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/5796cf4d38719b84a63e2150a6cf7907.png)
+  > ![Open report in browser](media/deploy-open-report.png "Open report in browser")
+  <!-- ![](media/5796cf4d38719b84a63e2150a6cf7907.png) -->
 
 2.  The browser URL will be in the following format:
     <https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1>
@@ -273,8 +275,8 @@ In this step, we will embed the Power BI report that you published to your porta
 - Before you can embed a Power BI report in Power Apps portal, **Power BI    visualization** and **Power BI embedded service** must be enabled for your portal using the [Power Apps Portals admin center](https://docs.microsoft.com/powerapps/maker/portals/admin/admin-overview).
 
   > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/4376a48bfb43c8e95e4bb5a494b4e5ae.png)
+  > ![Power Apps Portals admin center](media/deploy-admin-center.png "Power Apps Portals admin center")
+  <!-- ![](media/4376a48bfb43c8e95e4bb5a494b4e5ae.png) -->
 
 For step-by-step instructions, see the following in Power Apps portals docs:
 
@@ -290,15 +292,15 @@ Now that you have enabled both Power BI visualization and Power BI Embedded serv
 
 2.  In the left pane, select **Apps**, and select the **Portal Management** app to open it.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/1ea8e5d336953e8ca28cf932500e67d5.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Open Portal Management app](media/deploy-open-mgmt-app.png "Open Portal Management app")
+    <!-- ![](media/1ea8e5d336953e8ca28cf932500e67d5.png) -->
 
 3.  In the left pane, select **Site Settings**, select **New**:
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/5eb665fad79b63f2728439f9685893c9.png)
+    > [!div class="mx-imgBorder"] 
+    > ![New site settings](media/deploy-site-settings.png "New site settings")
+    <!-- ![](media/5eb665fad79b63f2728439f9685893c9.png) -->
 
 4.  On the **New Site Setting** page, specify the following values:
 
@@ -308,9 +310,9 @@ Now that you have enabled both Power BI visualization and Power BI Embedded serv
 
     3.  **Value**: Copy the Power BI report URL from the previous step.
 
-      > [!div class="mx-imgBorder"] 
-      > ![???](media/?.png "???
-      ![](media/e6c56cad3d28367decd5761923c1118c.png)
+        > [!div class="mx-imgBorder"] 
+        > ![Site setting values](media/deploy-site-setting-values.png "Site setting values")
+        <!-- ![](media/e6c56cad3d28367decd5761923c1118c.png) -->
 
 5.  Select **Save & Close** to save the record.
 
@@ -322,21 +324,21 @@ Now, we will restart the portal for the changes to take effect.
 
 2.  In the left pane, select **Apps**, select the ellipsis (…) menu for your portal, and select **Settings**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/a3240f27d884f7bbbb577acd2564a204.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Apps portal menu](media/deploy-portal-menu.png "Apps portal menu")
+    <!-- ![](media/a3240f27d884f7bbbb577acd2564a204.png) -->
 
 3.  In the **Portal settings** pane, select **Administration**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/4376becbd381c02e48b212249a406677.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Portal settings administration](media/deploy-settings-admin.png "[Portal settings administration")
+    <!-- ![](media/4376becbd381c02e48b212249a406677.png) -->
 
 4.  In the Power Apps Portals admin center, select **Portal Actions** \> **Restart**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/6022c9f40d7c60e85206e5e7eb8c66cf.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Portal actions restart](media/deploy-portal-restart.png "Portal actions restart")
+    <!-- ![](media/6022c9f40d7c60e85206e5e7eb8c66cf.png) -->
 
 5.  Select **Restart** in the confirmation message to restart the portal.
 
@@ -366,9 +368,9 @@ You can add a custom logo and title to your portal to align with your organizati
 
     3.  **Value**: String that you want to appear in the top-left corner of your portal.
 
-        [!div class="mx-imgBorder"] 
-        ![???](media/?.png "???
-        ![](media/f4dc39b6861ea92ec7cf7327fb8eded3.png)
+        > [!div class="mx-imgBorder"] 
+        > ![Portal Management Site Settings](media/deploy-portal-site-settings.png "Portal Management Site Settings")
+        <!-- ![](media/f4dc39b6861ea92ec7cf7327fb8eded3.png) -->
 
 5.  Select **Save** to save the site setting record.
 
@@ -382,9 +384,9 @@ You can add a custom logo and title to your portal to align with your organizati
 
     3.  **Value**: Name of your logo image file. For example, specifying mylogo.png will make the portal look for this file at the root of the portal. We will later upload the logo file to our portal.
 
-      > [!div class="mx-imgBorder"] 
-      > ![???](media/?.png "???
-      ![](media/d460f4d07489234d94e6a1ed3baab92c.png)
+        > [!div class="mx-imgBorder"] 
+        > ![Create new site settings record](media/deploy-create-new-settings.png "[Create new site settings record")
+        <!-- ![](media/d460f4d07489234d94e6a1ed3baab92c.png) -->
 
 8.  Select **Save & Close** to save this record and close the page.
 
@@ -400,28 +402,28 @@ You can add a custom logo and title to your portal to align with your organizati
 
     4.  **Partial URL:** mylogo.png
 
-    > [!IMPORTANT]
-    > Ensure that this value matches the value you specified earlier for the **SiteLogoPath** site setting.
+      > [!IMPORTANT]
+      > Ensure that this value matches the value you specified earlier for the **SiteLogoPath** site setting.
 
     5.  **Publishing State**: Select **Published**
 
-      > [!div class="mx-imgBorder"] 
-      > ![???](media/?.png "???
-      ![](media/25f2af5fe56cb9a88bfff20d62012031.png)
+        > [!div class="mx-imgBorder"] 
+        > ![New Web File](media/deploy-new-web-file.png "New Web File")
+        <!-- ![](media/25f2af5fe56cb9a88bfff20d62012031.png) -->
 
 11.  Select **Save** to save the record.
 
 12.  Select the **Notes** tab, and then select **+** followed by **Note.**
 
-    > [!div class="mx-imgBorder"] 
-    > ![???](media/?.png "???
-    ![](media/071aa12449d8bea5f2957a1382a2ac38.png)
+      > [!div class="mx-imgBorder"] 
+      > ![Web File Notes](media/deploy-web-file-notes.png "Web File Notes")
+      <!-- ![](media/071aa12449d8bea5f2957a1382a2ac38.png) -->
 
 13.  In the **Title** field, enter mylogo.png. Select the attachment icon to select the logo image file from your computer.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-    ![](media/fed4426a0ddc4d8cc9b7cc2975afdfde.png)
+      > [!div class="mx-imgBorder"] 
+      > ![Attach logo image](media/deploy-attach-logo.png "Attach logo image")
+        <!-- ![](media/fed4426a0ddc4d8cc9b7cc2975afdfde.png) -->
 
 14.  Select the appropriate logo image from your computer (in the .PNG format).
     The selected image appears in the page.
@@ -442,21 +444,21 @@ You can add a custom About page in your portal to add/present information or res
 
 3.  Select **New page** \> **Fixed layouts** \> **About Us Page Template.**
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/53b8d54497d64095f2ec4a7bf6a95e8e.png)
+    > [!div class="mx-imgBorder"] 
+    > ![About Us Page](media/deploy-aboutus-page.png "About Us Page")
+    <!-- ![](media/53b8d54497d64095f2ec4a7bf6a95e8e.png) -->
 
 4.  On the new webpage, make sure you use **about** in the **Partial URL** field in the right pane. You can use a name of your choice in the **Name** field; we are using **About Contoso**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/1bd99fe95d7618e898763df49abc72fe.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Use about in the Partial URL](media/deploy-partial-url.png "Use about in the Partial URL")
+    <!-- ![](media/1bd99fe95d7618e898763df49abc72fe.png) -->
 
 5.  Click the left pane to edit the contents. You can either use the default editor or select the **\</\>** in the bottom-right corner to open the HTML editor.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/21c5a7709b8824aff85dd8a8a2cd6182.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Edit About Us page](media/deploy-edit-aboutus.png "Edit About Us page")
+    <!-- ![](media/21c5a7709b8824aff85dd8a8a2cd6182.png) -->
 
 6.  After making the required changes to the About page, save it, and select **Sync Configuration** on the top-right corner.
 
@@ -467,8 +469,8 @@ The newly created About page can be accessed by your portal users by using the *
 Server-side synchronization enables you to sync emails in Common Data Service with Microsoft Exchange Online, Microsoft Exchange Server (on-premises), and POP3 email server for web-hosted email like Gmail or Outlook.com.
 
 > [!div class="mx-imgBorder"] 
-> ![???](media/?.png "???
-![](media/59e7ae8524dbd8950d8d32a08c627378.png)
+> ![Set up email synchronization](media/deploy-email-synchronization.png "Set up email synchronization")
+<!-- ![](media/59e7ae8524dbd8950d8d32a08c627378.png) -->
 
 For detailed steps on setting server-side sync; see the following resources:
 
@@ -478,8 +480,8 @@ For detailed steps on setting server-side sync; see the following resources:
 
 -   [Connect to Exchange Server (on-premises)](https://docs.microsoft.com/en-us/power-platform/admin/connect-exchange-server-on-premises)
 
-> [!WARNING]
-> Make sure this user is not configured for server-side sync on any other Common Data Service or Dynamics 365 environment. If you have a server-side sync set in another environment, enabling the server-side sync here will disable it in the previously used environment.
+    > [!WARNING]
+    > Make sure this user is not configured for server-side sync on any other Common Data Service or Dynamics 365 environment. If you have a server-side sync set in another environment, enabling the server-side sync here will disable it in the previously used environment.
 
 ## Step 10: Fix the Send Invitation process
 
@@ -491,9 +493,9 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
 3.  On the Settings page, select the drop-down arrow next to **Settings** and select **Processes**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/2bc8c159c5350c976a7230beb18c080f.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Fix Send Invitation process](media/deploy-settings-processes.png "Fix Send Invitation process")
+    <!-- ![](media/2bc8c159c5350c976a7230beb18c080f.png) -->
 
 4.  On the **Processes** page, search for “Send Invitation”, and select the **Send Invitation** process to open it.
 
@@ -503,16 +505,16 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
     2.  Under the steps area, select **Set Properties** for the **Create Email** step:
 
-      > [!div class="mx-imgBorder"] 
-      > ![???](media/?.png "???
-      ![](media/4674cade4e71da24ccdad213324110be.png)
+        > [!div class="mx-imgBorder"] 
+        > ![Set properties for Create Email](media/deploy-email-properties.png "Set properties for Create Email")
+        <!-- ![](media/4674cade4e71da24ccdad213324110be.png) -->
 
 6.  In the **Create Email** step definition page:
 
     1.  Select the email ID in the **From** field that will be used to send the portal invitation links. The user account specified here must have the server-side synchronization enabled for the email to be sent out.
 
-      > [!TIP]
-      >  You might want to set up an account in your environment with the server-side synchronization enabled and an email address like no-reply\@[*customerdomain*].com to send portal invitation emails.
+        > [!TIP]
+        >  You might want to set up an account in your environment with the server-side synchronization enabled and an email address like no-reply\@[*customerdomain*].com to send portal invitation emails.
 
     2.  Update the “https://**regionaldev**.powerappsportals.com” string in the email body with the actual URL of your portal. Also, ensure you don’t change the **Encode Invitation Code** content highlighted in yellow.
 
@@ -520,15 +522,15 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
     3.  Select **Save and Close** to save your changes.
 
-      > [!div class="mx-imgBorder"] 
-      > ![???](media/?.png "???
-      ![](media/097a294cdee1a0aa24038e4738e78583.png)
+        > [!div class="mx-imgBorder"] 
+        > ![Update URL of your portal](media/deploy-update-url.png "Update URL of your portal")
+        <!-- ![](media/097a294cdee1a0aa24038e4738e78583.png) -->
 
 3.  You will return to the process definition page. Save the changes and **Activate** the process.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/1226e92d156c0756f09ad131563b8cf3.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Activate the process](media/deploy-activate-process.png "Activate the process")
+    <!-- ![](media/1226e92d156c0756f09ad131563b8cf3.png) -->
 
 ## Step 11: Fix the Send Password Reset To Contact process
 
@@ -540,9 +542,9 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
 3.  On the Settings page, select the drop-down arrow next to **Settings** and select **Processes**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/2ff3f6344a7ea9aa564592a15833fcb3.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Send Password Reset To Contact ](media/deploy-password-reset.png "Send Password Reset To Contact ")
+    <!-- ![](media/2ff3f6344a7ea9aa564592a15833fcb3.png) -->
 
 4.  On the **Processes** page, search for “Send Password Reset To Contact”, and select the **Send Password Reset To Contact** process in the search result to open it.
 
@@ -554,34 +556,33 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
     2.  Under the steps area, select **Set Properties** for the **Send Email**
         step:
 
-      > [!div class="mx-imgBorder"] 
-      > ![???](media/?.png "???
-      ![](media/4a3c0bbf3785cdb7bad4c671964f0220.png)
+        > [!div class="mx-imgBorder"] 
+        > ![Set Properties for Send Email](media/deploy-set-email-properties.png "[Set Properties for Send Email")
+        <!-- ![](media/4a3c0bbf3785cdb7bad4c671964f0220.png) -->
 
 6.  In the **Send Email** step definition page, remove the dynamic value (highlighted in yellow) in the **From** field.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/8838a0341e240cfe49741d64e761555d.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Send email step definition](media/deploy-email-step-definition.png "Send email step definition")
+    <!-- ![](media/8838a0341e240cfe49741d64e761555d.png) -->
 
 7.  Select the email ID in the **From** field that will be used to send the portal invitation links. The user account specified here must have the server-side synchronization enabled for the email to be sent out.
 
-> [!TIP]
-> >You might want to set up an account in your environment with the server-side synchronization enabled and an email address like no-reply\@[*customerdomain*].com to send password reset emails.
-> >
-> >Make sure you don’t update the dynamic values highlighted in yellow Optionally, you can update the email body content as required per your organization in the email body.
+    > [!TIP]
+    > >You might want to set up an account in your environment with the server-side synchronization enabled and an email address like no-reply\@[*customerdomain*].com to send password reset emails.
+    > >Make sure you don’t update the dynamic values highlighted in yellow. Optionally, you can update the email body content as required per your organization in the email body.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/35a0f7a386b2e5345158def083c62402.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Don’t update dynamic values](media/deploy-dynamic-values.png "Don’t update dynamic values")
+    <!-- ![](media/35a0f7a386b2e5345158def083c62402.png) -->
 
 8.  Select **Save and Close** to save your changes.
 
 9.  You will return to the process definition page. Save the changes and **Activate** the process.
 
     > [!div class="mx-imgBorder"] 
-    > ![???](media/?.png "???
-    ![](media/f0a492755b69dbffb3e122724b2994bf.png)
+    > ![Save changes and activate process](media/deploy-save-activate-process.png "Save changes and activate process")
+    <!-- ![](media/f0a492755b69dbffb3e122724b2994bf.png) -->
 
 ## Step 12: Verify Assign Web Roles to New Users process is enabled
 
@@ -591,15 +592,15 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
 3.  On the Settings page, select the drop-down arrow next to **Settings** and select **Processes**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/2bc8c159c5350c976a7230beb18c080f.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Assign web roles to new users](media/deploy-assign-webroles.png "Assign web roles to new users")
+    <!-- ![](media/2bc8c159c5350c976a7230beb18c080f.png) -->
 
 4.  On the **Processes** page, search for “Assign Web”, and ensure that the **Assign Web Roles to New Users** process is enabled.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/ace6171711ce07587d949ef28e494119.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Ensure process is enabled](media/deploy-process-enabled.png "Ensure process is enabled")
+    <!-- ![](media/ace6171711ce07587d949ef28e494119.png) -->
 
 5.  If it’s not enabled, select the process name to open the record, and then select **Activate**. Confirm to activate the process.
 
@@ -609,15 +610,15 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
 2.  In the left pane, select **Solutions.** From the list of solution, select **Regional Emergency Response Solution** to open the solution.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/744cfe55e31e3cf08da4041212d04841.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Open the solution](media/deploy-open-solution.png "Open the solution")
+    <!-- ![](media/744cfe55e31e3cf08da4041212d04841.png) -->
 
 3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record. Ensure that the status is set to **On**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/32dca65cb17da1d514e9ec66d50dd855.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Find the Flow Supply Tracking record](media/deploy-find-record.png "Find the Flow Supply Tracking record")
+    <!-- ![](media/32dca65cb17da1d514e9ec66d50dd855.png) -->
 
 4.  If it is not set to **On**, select the flow name to open the flow definition.
 
@@ -634,17 +635,15 @@ For your business admin users to use the admin app (model-driven app) to enter a
 
 2.  In the left navigation pane, select **Apps**, select the model-driven app (**Admin App – Regional Emergency Response App**) and select **Share** in the banner.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/3f3e8a618497e4f2e3aaeba6b98f8df0.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Share admin app](media/deploy-share-admin-app.png "Share admin app")
+    <!-- ![](media/3f3e8a618497e4f2e3aaeba6b98f8df0.png) -->
 
-3.  Specify the Azure AD group or admin users that you want to share this app
-    with, assign the **Regional Emergency Response Admin** security role, and
-    select **Share**.
+3.  Specify the Azure AD group or admin users that you want to share this app with, assign the **Regional Emergency Response Admin** security role, and select **Share**.
 
-  > [!div class="mx-imgBorder"] 
-  > ![???](media/?.png "???
-  ![](media/2189c2426c7a4338e79220e4ab7260f5.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Specify Azure AD group or admin users](media/deploy-specify-share.png "Specify Azure AD group or admin users")
+    <!-- ![](media/2189c2426c7a4338e79220e4ab7260f5.png) -->
 
 ## Next steps
 
