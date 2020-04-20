@@ -25,7 +25,7 @@ The main components of the Hospital Emergency Response solution are:
 - **Web app for Hospital admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
 - **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
 
-The Hospital Emergency Response sample solution is available in the following languages: English, French, German, Italian, Japanese, Portuguese - Brazil, and Spanish.
+[!include[cc-lang](includes/cc-lang.md)]
 
 
 ## Demo: Quick overview
