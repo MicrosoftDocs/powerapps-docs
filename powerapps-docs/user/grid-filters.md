@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/03/2019
+ms.date: 03/31/2020
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -45,74 +45,48 @@ You can also open primary field and lookup fields in a new tab or window.
 
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
-   
-   
-### Known issue
-
-If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter will not show your selected display format. The filters will still display in the system default format and in some cases filtering may not work at all. 
-
-To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
-
-1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
-
-2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Format settings](media/default-format.png "format settings")
-    
-    
-  We are working on the issue, please check back for availability. 
-
-
-
-## Preview: New grid filters and search option
-
-This section is for early-access features. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
-
-
-   > [!NOTE]
-   > Do not change the default display format for time, number, currency, time, or date as this causes an issue. For more information, see [Known issue](https://docs.microsoft.com/powerapps/user/grid-filters#known-issue).
-
-### Lookup field column
+  
+  
+## Lookup field column
 
 When you filter on a lookup column, you can select from a list of records to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of records to filter by.
 
    > [!div class="mx-imgBorder"]
    > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
 
-### Date filter
+## Date filter
 
 The robust **Date** filter includes many different values to choose from, such as **On** to search by an exact date, or **Next X fiscal year** or **In fiscal period** to search by year or quarter.
 
    > [!div class="mx-imgBorder"]
    > ![Date filtering](media/date-filter.png "Date filtering")
 
-### Filter the list of activities
+## Filter the list of activities
 
-You can filter the list of activities to see only the ones you’re interested in. For example, you can further limit the activities you are seeing in a view by using the activity type filter. The activity type filter allows you to filter activities based on the type, such as email, task, phone call, and so on.
+You can filter the list of activities to see only the ones you're interested in. For example, you can further limit the activities you are seeing in a view by using the activity type filter. The activity type filter allows you to filter activities based on the type, such as email, task, phone call, and so on.
 
 
    > [!div class="mx-imgBorder"]
    > ![Activities filter](media/activity_filter.png "Activities filter")
 
 
-#### Known issue
+### Known issue 
 
-If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter will not show your selected display format. The filters will still display in the system default format and in some cases filtering may not work at all. 
+If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter won't show your selected display format. The filters will still be displayed in the system default format, and in some cases filtering might not work at all. 
 
 To fix the issue, set the display format for number, currency, time, and date back to the default setting. 
 
 1. In the upper-right corner, select the gear icon ![Gear icon](media/selection-rule-gear-button.png), and then select **Personalization Settings**.
 
-2. On the **Formats** tab change the number, currency, time, and date value back to the default setting.
+2. On the **Formats** tab, change the number, currency, time, and date value back to the default setting.
 
     > [!div class="mx-imgBorder"] 
-    > ![Format settings](media/default-format.png "format settings")
+    > ![Format settings](media/default-format.png "Format settings")
     
-    
-We are working on the issue, please check back for availability. 
+We're working on this issue, please check back for information about the availability of a fix.
+
   
-### Use search on a grid
+## Use search on a grid
 
 When you use the **Search this view** option on a grid page, the system searches for data in the view that you're currently in. In the following example, you perform a search on the **Contacts** grid.
 
@@ -132,7 +106,7 @@ The system searches for data in the **My Active Contacts** view and displays sea
    > ![Search view](media/search-view2.png "Search results from the Search this view command")
 
 
-#### Use the quick-find search experience
+## Use the quick-find search experience
 
 To switch back to the old quick-find search experience that uses an entity's quick-find view definition to perform searches, you'll need admin permissions.
 

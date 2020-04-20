@@ -6,12 +6,12 @@ ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: "Nkrb" # GitHub ID
+ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
-search.audienceType: 
+search.audienceType:
   - developer
-search.app: 
+search.app:
   - PowerApps
   - D365CE
 ---
@@ -21,27 +21,27 @@ search.app:
 Split to just include MDA issues
  -->
 
-You can customize Model-driven apps by using tools that are available in the Power Apps portal or that are described in the documentation. These customizations are supported and can be upgraded.
+You can customize model-driven apps by using tools that are available in the Power Apps portal or that are described in the documentation. These customizations are supported and can be upgraded.
 
-Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Model-driven apps. For more information, see [Unsupported customizations](#unsupported-customizations) later in this topic.
+Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to model-driven apps. For more information, see [Unsupported customizations](#unsupported-customizations) later in this topic.
 
 Topics covered in technical articles published on Microsoft sites such as this one are supported, but might not be upgradable.
 
 
 ## Customizations using Power Apps portal
 
-There are a variety of tools included with Model-driven apps that you can use to customize them. Customizations made using the Model-driven apps tools are fully supported and fully upgradeable.
+There are a variety of tools included with model-driven apps that you can use to customize them. Customizations made using the model-driven apps tools are fully supported and fully upgradeable.
 
 The following customization methods can be used to produce fully supported customizations:
 
-- Customization in the Power Apps portal or solution explorer. For more information, see [Overview of building a Model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
+- Customization in the Power Apps portal or solution explorer. For more information, see [Overview of building model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
 
-- Settings in the web application. For more information, see [Administer Model-driven apps](/dynamics365/customer-engagement/admin/admin-guide).
+- Settings in the web application. For more information, see [Administer model-driven apps](/dynamics365/customer-engagement/admin/admin-guide).
 
-- Reporting Services. For more information, see [Reporting and Analytics Guide for Model-driven apps](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
+- Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
 
 > [!NOTE]
-> The behavior of Model-driven apps depend on customizations applied to the associated Common Data Service. More information: [Supported Customizations for Common Data Service](../common-data-service/supported-customizations.md)
+> The behavior of model-driven apps depend on customizations applied to the associated Common Data Service. More information: [Supported Customizations for Common Data Service](../common-data-service/supported-customizations.md)
 > *Fully supported* means that developer support can provide assistance for customizations and that application support can help customers running those modifications.
 
 
@@ -51,7 +51,7 @@ The documentation on this site for developers, technical articles, sample code p
 
 ### Client-side JavaScript
 
-You can use JavaScript within Model-driven apps in three areas:
+You can use JavaScript within model-driven apps in three areas:
 
 - **Form Script event handlers**: You can configure form event handlers to call functions defined in JavaScript web resources.
 
@@ -59,9 +59,9 @@ You can use JavaScript within Model-driven apps in three areas:
 
 - **Web resources and IFRAMEs**: You can use JavaScript web resources within HTML web resources. IFRAMES configured to allow cross-site scripting, or scripts within HTML web resources included in a form may interact with the documented `Xrm.Page` or `Xrm.Utility` methods within the form via the parent reference.
 
-All interaction with the application pages must only be performed through the methods documented in the [Client API Reference for Model-driven apps](clientapi/reference.md). Directly accessing the Document Object Model (DOM) of any Model-driven apps page is not supported. The use of jQuery in form scripts and commands is not recommended. More information: [Client scripting in Model-driven apps using JavaScript](client-scripting.md).
+All interaction with the application pages must only be performed through the methods documented in the [Client API Reference for model-driven apps](clientapi/reference.md). Directly accessing the Document Object Model (DOM) of any Model-driven apps page is not supported. The use of jQuery in form scripts and commands is not recommended. More information: [Client scripting in model-driven apps using JavaScript](client-scripting.md).
 
-You can open Model-driven apps forms, views, dialogs, and reports using the methods documented in [Open forms, views, dialogs, and reports with a URL](open-forms-views-dialogs-reports-url.md).
+You can open model-driven apps forms, views, dialogs, and reports using the methods documented in [Open forms, views, dialogs, and reports with a URL](open-forms-views-dialogs-reports-url.md).
 
 ### Ribbon customization
 
@@ -69,14 +69,14 @@ Use of `RibbonDiffXml` to add, remove, or hide ribbon elements is supported. Reu
 
 ## Unsupported customizations
 
-Modifications to Model-driven apps that are made without using either the methods described in this documentation or Power Apps portal tools are not supported and are not preserved during updates or upgrades of Model-driven apps. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade Model-driven apps.
+Modifications to Model-driven apps that are made without using either the methods described in this documentation or Power Apps portal tools are not supported and are not preserved during updates or upgrades of model-driven apps. Anything that is not documented in this documentation and supporting documents is not supported. Additionally, unsupported modifications could cause problems when you update through the addition of hotfixes or service packs or upgrade model-driven apps.
 
-The following is a list of unsupported action types that are frequently asked about: 
+The following is a list of unsupported action types that are frequently asked about:
 
-- The reuse of any Model-driven apps JavaScript code. This code may change or be overwritten during an upgrade.
+- The reuse of any model-driven apps JavaScript code. This code may change or be overwritten during an upgrade.
 - Editing a solutions file to edit any solution components other than ribbons, forms, SiteMap, or saved queries is not supported. For more information, see [When to edit the customizations file](when-edit-customization-file.md).
-    - Defining new solution components by editing the solutions file is not supported. 
-    - Editing web resource files exported with a solution is not supported. 
+    - Defining new solution components by editing the solutions file is not supported.
+    - Editing web resource files exported with a solution is not supported.
     - Except for the steps documented in [Maintain managed solutions](../common-data-service/maintain-managed-solutions.md), editing the contents of a managed solution is not supported.
 
 - Displaying an entity form within an IFrame embedded in another entity form is not supported.
@@ -86,4 +86,4 @@ The following is a list of unsupported action types that are frequently asked ab
 [Supported Customizations for Common Data Service](../common-data-service/supported-customizations.md)<br/>
 [Apply business logic using client scripting in Model-driven apps using JavaScript](client-scripting.md)<br/>
 [Customize commands and the ribbon](customize-commands-ribbon.md)<br/>
-[Web resources in Model-driven apps](web-resources.md)
+[Web resources in model-driven apps](web-resources.md)

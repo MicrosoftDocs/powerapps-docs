@@ -64,7 +64,7 @@ ms.custom:
                               </a>
                            </li>
                            <li>
-                              <a href="https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path">
+                              <a href="/powerapps/learning-catalog/get-started">
                                  <div class="cardSize">
                                     <div class="cardPadding">
                                        <div class="card">
@@ -74,8 +74,8 @@ ms.custom:
                                              </div>
                                           </div>
                                           <div class="cardText">
-                                             <h3>Learn Power Apps</h3>
-                                             <p>Explore learning paths on Microsoft Learn that provide step-by-step guidance to learn Power Apps. It's free!</p>
+                                             <h3>Learning catalog</h3>
+                                             <p>Find the right online training, in person workshops, and events for your role as a user of Power Apps.</p>
                                           </div>
                                        </div>
                                     </div>
@@ -344,11 +344,11 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Power Platform Admin center</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-guide">Administer Power Platform</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-documentation">Administer Power Platform</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/get-help-support">Get Help + Support</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/preview-april-2019-updates">Opt in to 2019 release wave 2</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-settings">Manage settings</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://aka.ms/powerappsadminwhitepaper">Whitepaper: Administering a low-code development platform</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/opt-in-early-access-updates">Opt in to early access updates</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/wp-security">Security concepts</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-settings">Manage settings</a></p>                                    
                                  </div>
                               </div>
                            </div>
@@ -405,9 +405,28 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Environment and security</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/environments-administration">Manage environments</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/database-security">Configure environment security</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-view-apps">View apps in your environment</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/environments-overview">Environments overview</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/trial-environments">Trial environements</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/database-security">Environment security</a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="cardSize">
+                           <div class="cardPadding">
+                              <div class="card">
+                                 <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                       <img alt="" src="media/index/i_guidelines.svg">
+                                    </div>
+                                 </div>
+                                 <div class="cardText">
+                                    <h3 style="font-size: 1.15rem">Resources</h3>
+                                    <hr/>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://aka.ms/powerappsadminwhitepaper">Whitepaper: Administering Power Apps and Power Automate Enterprise Deployment</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://docs.microsoft.com/power-platform/guidance/coe/starter-kit">Power Apps Center of Excellence (CoE) Starter Kit</a></p>
                                  </div>
                               </div>
                            </div>

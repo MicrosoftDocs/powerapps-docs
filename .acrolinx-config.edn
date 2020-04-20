@@ -1,2 +1,14 @@
 {:allowed-branchname-matches ["^master$"]
- :allowed-filename-matches ["powerapps-docs/maker/common-data-service"]}
+ :allowed-filename-matches ["powerapps-docs"]
+ :acrolinx-check-settings
+ {
+  "languageId" "en"
+  "ruleSetName" "Standard"
+  "requestedFlagTypes" ["SPELLING" "GRAMMAR" "STYLE"
+                        "TERMINOLOGY_DEPRECATED"
+                        "TERMINOLOGY_VALID"
+                        "VOICE_GUIDANCE"
+                        ]
+  "termSetNames" ["BAG" "Microsoft" "Products"]
+ }
+}

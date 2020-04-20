@@ -6,8 +6,8 @@ ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 70e5687f-4d0e-3d43-03f3-10e5aa5b0713
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -196,5 +196,5 @@ When configuring ribbon elements, you can define specific rules to control when 
 
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define Ribbon Enable Rules](define-ribbon-enable-rules.md)   
- [Define Ribbon Actions](define-ribbon-actions.md)
+ [Define Ribbon enable rules](define-ribbon-enable-rules.md)   
+ [Define Ribbon actions](define-ribbon-actions.md)

@@ -3,7 +3,7 @@ title: "Subscribe to SDK assembly updates using NuGet (Common Data Service) | Mi
 description: ".NET SDK assemblies and some command-line tools are available through a software distribution website called nuget.org. Use of NuGet packages in your application project enables you to keep your project up-to-date with the latest releases of the SDK assemblies and tools." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

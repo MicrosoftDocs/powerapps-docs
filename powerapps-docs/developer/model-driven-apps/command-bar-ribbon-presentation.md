@@ -6,8 +6,8 @@ ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 5b1d7633-ab0d-94ec-166f-f5bc1af2a657
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -100,6 +100,6 @@ Data defining commands in Common Data Service can be presented in several differ
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Ribbons Available](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365)   
- [Export Ribbon Definitions](export-ribbon-definitions.md)   
- [Developers guide for customization](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)
+ [Ribbons available](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365)   
+ [Export Ribbon definitions](export-ribbon-definitions.md)   
+ [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)

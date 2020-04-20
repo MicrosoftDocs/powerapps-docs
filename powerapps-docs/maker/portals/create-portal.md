@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 02/07/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -51,6 +51,9 @@ To create a portal:
 
 5.  In the **Portal from blank** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
 
+    > [!TIP]
+    > To create a portal using a different language, you must first [enable the language in the environment](https://docs.microsoft.com/power-platform/admin/enable-languages#enable-the-language) so that it becomes available in the language drop-down list.
+
     > [!div class=mx-imgBorder]
     > ![create new portal](media/create-new-portal.png "Create new portal")  
 
@@ -69,7 +72,7 @@ After the portal is provisioned successfully, the status is updated and the port
 To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
-> - You can create a maximum of five portals in a tenant. However, there can only be one portal of each type created in an environment.
+> - There can be only one portal of each type and for a language created in an environment.
 > - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have the System Administrator role in Common Data Service to create a portal. You must also have the **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** in the user record.
 > - If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page. More information: [Provision a portal using the older portal add-on](provision-portal-add-on.md)
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).

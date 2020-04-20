@@ -3,7 +3,7 @@ title: "IOrganizationService Interface (Common Data Service) | Microsoft Docs" #
 description: "Learn about the common methods exposed to perform data operations with Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -53,7 +53,7 @@ Each of the classes which implement the <xref:Microsoft.Xrm.Sdk.IOrganizationSer
 |<xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|Change the attribute values of an entity record.|
 
 > [!NOTE]
-> The Organization service exposes only a the `Execute` method. The other methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface are simply wrappers around the `Execute` method. These other methods are provided for convenience. You can perform all operations using only the `Execute` method. More information: [Use messages with the Organization service](use-messages.md)
+> The Organization service exposes only the `Execute` method. The other methods in the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface are simply wrappers around the `Execute` method. These other methods are provided for convenience. You can perform all operations using only the `Execute` method. More information: [Use messages with the Organization service](use-messages.md)
 
 ## See also
 

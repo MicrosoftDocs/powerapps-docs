@@ -2,23 +2,19 @@
 title: "View or download developer resources for Power Apps and Common Data Service | MicrosoftDocs"
 description: "Find developer resources and service endpoint URLs for Power Apps and Common Data Service"
 keywords: ""
-ms.date: 06/06/2018
+ms.date: 04/09/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 ms.assetid: e200d242-ff3f-48e5-af32-aed050e02441
 author: Mattp123
 ms.author: matp
 manager: kvivek
-ms.reviewer: 
+ms.reviewer: "pehecke"
 ms.suite: 
 ms.tgt_pltfrm: 
 search.audienceType: 
-  - maker
+  - developer
 search.app: 
   - PowerApps
   - D365CE
@@ -26,15 +22,25 @@ search.app:
 
 # View or download developer resources
 
-This page provides resources for developers and information about the specific instance you are working on. 
+This page provides resources for developers and information about the specific instance you're working on. 
 
 ## View the Developer Resources page for your environment
 
-1. From the Power Apps portal select the ![Settings Button](../../administrator/media/settings-button-nav-bar.png) Settings button and choose **Advanced customizations**.
+1. Sign into [Power Apps](https://make.powerapps.com), and select your environment in the top-right corner.
+
+1. Select the **Settings** button in the top-right corner, and select **Advanced Settings**.
 
     ![Advanced Customizations](media/advanced-customizations-menu.png)
 
-1. Within the **Advanced customizations** panel, choose the **Developer Resources** link:<br />![Developer Resources Link](media/developer-resources-link.png)
+1. On the **Settings** page, select the drop-down arrow next to **Settings**, and select **Customizations**.
+
+    ![Select Customizations](media/dev-customization.png)
+
+1. On the **Customizations** page, select **Developer Resources** to view the page with resources for developers.
+
+    ![Developer Resources page](media/developer-resources-page.png)
+
+The following sections explain the information available on the developer resources page.
 
 ## Getting Started 
 
@@ -45,9 +51,9 @@ This section provides links for developers to find resources. The following reso
 |---------|---------|
 |[Developer Center](https://go.microsoft.com/fwlink/?LinkId=551006)|The main entry point for documentation for developers.|
 |[Developer Forums](https://go.microsoft.com/fwlink/?LinkId=550993)|Ask and answer questions with other developers.|
-|[NuGet Packages](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
-|[Download Tools](https://go.microsoft.com/fwlink/?LinkID=512122)|Tools that you will need are available to download from NuGet. Use the PowerShell script on this page to get the latest versions.|
-|[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of samples available.|
+|[SDK NuGet Packages](https://go.microsoft.com/fwlink/?LinkId=550994)|Discover NuGet packages to add SDK assemblies to your projects.|
+|SDK Download|We no longer ship the SDK package as a download on Microsoft Download Center. Instead, the SDK assemblies and tools are available as [NuGet packages](https://go.microsoft.com/fwlink/?LinkId=550994). Use the PowerShell script in this article to get the latest version of SDK tools: [Download tools from NuGet](https://docs.microsoft.com/powerapps/developer/common-data-service/download-tools-nuget)|
+|[Sample Code](https://go.microsoft.com/fwlink/?LinkId=553007)|A list of code samples available.|
 |[Developer Overview](https://go.microsoft.com/fwlink/?LinkId=550995)|Link to a topic providing an overview for developers.|
 
 
@@ -76,7 +82,7 @@ More information: [Azure integration](/powerapps/developer/common-data-service/a
 
 Because people may have access to multiple Common Data Service environments, the discovery services allow for retrieving the available environments that a person can access based on their user credentials.
 
-### Discovery RESTful API
+### Discovery Web API
 
 This is the endpoint address for the RESTful OData v4 version of the Discovery Service to use for your instance. You can also download the service document here.
 More information: [Developer Documentation: Discover the URL for your organization using the Web API](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api)

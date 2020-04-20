@@ -8,18 +8,34 @@
     href: dev-community-plan.md
   - name: "What's new?"
     href: ../whats-new.md
+  - name: "Learning catalog"
+    items: 
+    - name: "Learning catalog"
+      href: ../learning-catalog/get-started.md
+    - name: Business Decision Maker
+      href: ../learning-catalog/bdm.md
+    - name: App maker
+      href: ../learning-catalog/app-maker.md
+    - name: Developer
+      href: ../learning-catalog/developer.md
+    - name: Administrator
+      href: ../learning-catalog/administrator.md
+    - name: Functional consultant
+      href: ../learning-catalog/functional-consultant.md
+    - name: Solution architect
+      href: ../learning-catalog/solution-architect.md
 - name: Find and run apps
   href: ../user/index.md
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
+  - name: On a phone (preview)
+    href: ../user/run-canvas-and-model-apps-on-mobile.md
   - name: On a phone (canvas)
     href: ../user/run-app-client.md
-  - name: On a phone (model-driven)
-    href: ../user/run-app-client-model-driven.md
-  - name: On a SharePoint Online page (canvas)
+  - name: On a SharePoint Online page (canvas apps)
     href: ../user/powerapps-web-part.md
-  - name: In Microsoft Teams (canvas)
+  - name: In Microsoft Teams (canvas apps)
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
@@ -35,6 +51,8 @@
         href: ../user/navigation.md
       - name: Use grid filters
         href: ../user/grid-filters.md
+      - name: Create personal views with advanced grid filters
+        href: ../user/grid-filters-advanced.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
@@ -53,7 +71,7 @@
         href: ../user/add-activities.md
       - name: FAQ about activities
         href: ../user/faq-for-timeline-and-activity.md
-      - name: View and create email through the Activities grid
+      - name: View and create email through the activities grid
         href: ../user/view-create-email.md
       - name: Send email using the enhanced email experience
         href: ../user/enhanced-email.md
@@ -75,8 +93,14 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
-      - name: Collaborate using SharePoint 
-        href: ../user/collaborate-using-sharepoint.md        
+    - name: Collaboration
+      items:
+      - name: Use OneDrive for Business     
+        href: ../user/one-drive.md
+      - name: Take notes by using OneNote      
+        href: ../user/onenote.md  
+      - name: Collaborate using SharePoint  
+        href: ../user/collaborate-using-sharepoint.md
     - name: Search records
       items:
       - name: Compare search options
@@ -121,6 +145,8 @@
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
+  - name: Use model-driven apps on mobile (preview)
+    href: ../user/use-custom-model-driven-app-on-mobile.md
   - name: 'Use Dynamics 365 App for Outlook'
     href: ../user/use-outlook-app.md
 - name: Create apps
@@ -146,7 +172,7 @@
     - name: Help Desk app
       href: ./canvas-apps/help-desk-install.md
     - name: Meeting Capture app
-      href: ./canvas-apps/sample-meeting-capture.md
+      href: ./canvas-apps/sample-meeting-capture.md    
   - name: Create your first app
     items:
     - name: 1 - Create an app from a template
@@ -184,7 +210,11 @@
         - name: Popular connectors
           items:
             - name: Common Data Service
-              href: canvas-apps/connections/connection-common-data-service.md
+              items:
+              - name: Overview
+                href: canvas-apps/connections/connection-common-data-service.md
+              - name: Improvements
+                href: canvas-apps/use-native-cds-connector.md
             - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
             - name: Dynamics 365
@@ -547,6 +577,8 @@
             href: ./canvas-apps/functions/function-hashtags.md
           - name: Hour
             href: ./canvas-apps/functions/function-datetime-parts.md
+          - name: Identifiers
+            href: ./canvas-apps/functions/operators.md
           - name: If
             href: ./canvas-apps/functions/function-if.md
           - name: IfError
@@ -799,6 +831,8 @@
       href: ./canvas-apps/edit-app.md
     - name: Delete an app
       href: ./canvas-apps/delete-app.md
+    - name: License designation for an app
+      href: ./canvas-apps/license-designation.md
     - name: Restore a previous version
       href: ./canvas-apps/restore-an-app.md
     - name: Change app name and tile
@@ -815,6 +849,12 @@
       href: ./canvas-apps/test-studio.md
     - name: Working with Test Studio
       href: ./canvas-apps/working-with-test-studio.md
+    - name: Automate tests with Azure DevOps Pipelines
+      items:
+      - name: Configure pipeline using classic editor
+        href: ./canvas-apps/test-studio-classic-pipeline-editor.md
+  - name: Debug an app with canvas app Monitor
+    href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes
@@ -849,6 +889,8 @@
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
       href: ./canvas-apps/transform-infopath.md
+    - name: Analyze app telemetry using Application Insights
+      href: ./canvas-apps/application-insights.md
   - name: For developers
     items:
     - name: Canvas apps for enterprise developers, partners, and ISVs
@@ -863,8 +905,10 @@
       href: ./canvas-apps/dev-appsource-test-drive.md
     - name: Create a component
       items:
-        - name: Overview
+        - name: Components overview
           href: ./canvas-apps/create-component.md
+        - name: Component library
+          href: ./canvas-apps/component-library.md
         - name: Behavior formulas
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
@@ -901,7 +945,7 @@
           href: ./model-driven-apps/create-site-map-app.md
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
-        - name: Add the team entity as a lookup option
+        - name: Add an entity as a lookup
           href: ./model-driven-apps/team-entity-lookup.md          
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
@@ -1010,14 +1054,14 @@
       - name: Work with views
         href: ./model-driven-apps/create-edit-views.md
         items:
-        - name: "Create or edit a view"
-          href: ./model-driven-apps/create-and-edit-views.md
         - name: "Access a view definition"
           href: ./model-driven-apps/accessing-view-definitions.md
         - name: Create and edit views
           href: ./model-driven-apps/create-edit-views-app-designer.md
         - name: Choose and configure columns in views
           href: ./model-driven-apps/choose-and-configure-columns.md
+        - name: Create or edit filters in app views
+          href: ./model-driven-apps/create-edit-view-filters.md
         - name: "How to guides: Views"
           items:
           - name: How to make grids editable
@@ -1203,6 +1247,8 @@
           href: ./portals/admin/portal-lifecycle.md
         - name: Upgrade a portal
           href: ./portals/admin/upgrade-portal.md
+        - name: Cookies used by portal
+          href: ./portals/admin/portal-cookies.md
     - name: Advanced portal configuration
       items:
         - name: Overview
@@ -1515,38 +1561,45 @@
     items:
     - name: Use solutions
       href: ./common-data-service/use-solution-explorer.md
-    - name: Use the Common Data Services default solution
+    - name: Use a solution to customize
       href: ./common-data-service/use-solutions-for-your-customizations.md
-    - name: Import solutions
-      href: ./common-data-service/import-update-export-solutions.md
-    - name: Update or upgrade solutions
-      href: ./common-data-service/update-solutions.md
-    - name: Export solutions
-      href: ./common-data-service/export-solutions.md      
-    - name: Navigate to a specific solution
-      href: ./common-data-service/navigate-specific-solution.md
-    - name: Create a solution
-      href: ./common-data-service/create-solution.md
-    - name: Use environment variables
-      href: ./common-data-service/EnvironmentVariables.md
-    - name: View solution layers
-      href: ./common-data-service/solution-layers.md
-    - name: View solution history
-      href: ./common-data-service/solution-history.md      
-    - name: Use solution checker
-      href: ./common-data-service/use-powerapps-checker.md
-    - name: "Common issues and resolutions: solution checker"
-      href: ./common-data-service/common-issues-resolutions-solution-checker.md
-    - name: Use segmented solutions
-      href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
     - name: Solution publisher overview
       href: ./common-data-service/change-solution-publisher-prefix.md
-    - name: Set managed properties in metadata
-      href: ./common-data-service/set-managed-properties-metadata.md
-    - name: Publish changes
-      href: ./common-data-service/publish-changes-for-use-customer-service-hub.md
+    - name: Use segmented solutions
+      href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md      
+    - name: How managed solutions are merged
+      href: ./common-data-service/how-managed-solutions-merged.md
+    - name: Use solution checker
+      href: ./common-data-service/use-powerapps-checker.md
+      items: 
+      - name: "Common issues and resolutions: solution checker"
+        href: ./common-data-service/common-issues-resolutions-solution-checker.md
     - name: Best practices
-      href: ./common-data-service/solution-best-practices.md
+      href: ./common-data-service/solution-best-practices.md        
+    - name: "How to"
+      items:
+      - name: Create solution patches
+        href: ./common-data-service/solution-patches.md      
+      - name: Create a solution
+        href: ./common-data-service/create-solution.md
+      - name: Update or upgrade solutions
+        href: ./common-data-service/update-solutions.md
+      - name: Import solutions
+        href: ./common-data-service/import-update-export-solutions.md
+      - name: Export solutions
+        href: ./common-data-service/export-solutions.md               
+      - name: Use environment variables
+        href: ./common-data-service/EnvironmentVariables.md
+      - name: View solution layers
+        href: ./common-data-service/solution-layers.md
+      - name: View solution history
+        href: ./common-data-service/solution-history.md      
+      - name: Set managed properties in metadata
+        href: ./common-data-service/set-managed-properties-metadata.md
+      - name: "Advanced topics"
+        items:
+        - name: Create solution patches
+          href: ./common-data-service/solution-patches.md
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
@@ -1586,6 +1639,20 @@
   items:
   - name: Use AI Builder in Power Apps
     href: ../use-ai-builder.md
+- name: Sample apps and solutions
+  items:
+  - name: Crisis communication
+    href: ./canvas-apps/sample-crisis-communication-app.md
+  - name: Hospital Emergency Response
+    items:
+    - name: Overview
+      href: ../sample-apps/emergency-response/overview.md
+    - name: Deploy the app
+      href: ../sample-apps/emergency-response/deploy-configure.md
+    - name: Use the admin app and dashboards
+      href: ../sample-apps/emergency-response/configure-data-reporting.md
+    - name: Use the mobile app
+      href: ../sample-apps/emergency-response/use.md
 - name: Learn from others
   items:
   - name: Webinars

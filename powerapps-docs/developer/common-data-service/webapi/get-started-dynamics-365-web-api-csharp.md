@@ -2,7 +2,7 @@
 title: "Get started with Common Data Service Web API (C#) (Common Data Service)| Microsoft Docs"
 description: "Learn how to access the Common Data Service Web API using the Microsoft Visual C# programming language"
 ms.custom: ""
-ms.date: 1/09/2019
+ms.date: 03/31/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,7 +13,7 @@ ms.assetid: 8105ff3d-4c8e-4f86-bbb9-e37bdb4c272e
 caps.latest.revision: 14
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "kvivek"
 search.audienceType: 
   - developer
@@ -29,7 +29,9 @@ After completing this guide, you will have learned enough to explore the many ot
   
 ## In this section
 
-[Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md)<br />
+[Quick Start: Web API sample](quick-start-console-app-csharp.md)  (Do this first)  
+[Enhanced quick start](enhanced-quick-start.md)  (Do this next)  
+[Start a Common Data Service Web API project in Visual Studio](start-web-api-project-visual-studio-csharp.md)
 
 ### See also
   

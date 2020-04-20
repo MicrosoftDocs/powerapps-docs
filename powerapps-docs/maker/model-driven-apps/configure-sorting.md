@@ -1,7 +1,7 @@
 ---
 title: "Sort records in a model-driven app view in Power Apps | MicrosoftDocs"
 ms.custom: ""
-ms.date: 06/27/2018
+ms.date: 04/17/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,12 +24,12 @@ search.app:
 ---
 # Sort records in a model-driven app view
 
- When you create or edit a view you can configure the sort order for either ascending or descending.   
+When you create or edit a view you can configure the sort order for either ascending or descending.   
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-
 2.  Expand **Data**, select **Entities**, and then select the entity that you want, such as **Accounts**.   
+
 3.  Select the **Views** tab, and if shown, select **Remove filter**, and then open the view you want, such as **Active Accounts**.
 
 4.  In the view designer, select **Configure Sorting**.  
@@ -39,7 +39,11 @@ search.app:
   
 5.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
   
-6.  Select **OK** to close the **Configure Sort Order** dialog box.  
+6.  Select **OK** to close the **Configure Sort Order** dialog box. 
+
+    > [!IMPORTANT]
+    > Grids in Unified Interface apps take the list of displayed columns from the underlying FetchXML of the view. If the FetchXML that is returned from Common Data Service does not have a column, then that column is not displayed. This is in contrast to the classic web application, where if a column is not present in FetchXML but is in LayoutXML, such a column is automatically added to the list of displayed columns. Unified Interface apps use OData directly with FetchXML to retrieve data from the server.
 
 ## Next steps
 [Create or edit a view](create-edit-views.md)
+[Use FetchXML to query data](../../developer/common-data-service/use-fetchxml-construct-query.md)

@@ -3,7 +3,7 @@ title: "Queue entities (Common Data Service) | Microsoft Docs" # Intent and prod
 description: "Queues in Power Apps are instrumental in organizing, prioritizing, and monitoring the progress of your work." 
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID Temp owner

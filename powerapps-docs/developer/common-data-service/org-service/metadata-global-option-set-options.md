@@ -3,7 +3,7 @@ title: "Insert, update, delete, and order global option set options (Common Data
 description: "Code samples to show you how to insert, update, delete, and order options in a global option set" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

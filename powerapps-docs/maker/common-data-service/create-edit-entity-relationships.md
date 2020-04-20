@@ -1,7 +1,7 @@
 ---
 title: "Entity relationships overview for Common Data Service | MicrosoftDocs"
 ms.custom: ""
-ms.date: 04/25/2019
+ms.date: 04/13/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -37,9 +37,9 @@ Beyond simply defining how records can be related to other records, 1:N entity r
 <a name="BKMK_Connections"></a>
 
 ## Decide whether to use entity relationships or connections 
-Entity relationships are metadata that make changes to the database. These relationships allow for queries to retrieve related data very efficiently. Use entity relationships to define formal relationships that define the entity or that most records can use. For example, an opportunity without a potential customer wouldn’t be very useful. The Opportunity entity also has a N:N relationship with the Competitor entity. This allows for multiple competitors to be added to the opportunity. You may want to capture this data and create a report that shows the competitors.  
+Entity relationships are metadata that make changes to the database. These relationships allow for queries to retrieve related data very efficiently. Use entity relationships to define formal relationships that define the entity or that most records can use. For example, an opportunity without a potential customer wouldn't be very useful. The Opportunity entity also has a N:N relationship with the Competitor entity. This allows for multiple competitors to be added to the opportunity. You may want to capture this data and create a report that shows the competitors.  
   
-There are other less formal kinds of relationships between records that are called *connections*. For example, it may be useful to know if two contacts are married, or perhaps they are friends outside of work, or perhaps a contact used to work for another account. Most businesses won’t generate reports using this kind of information or require that it is entered, so it’s probably not worthwhile to create entity relationships. More information: [Configure connection roles](configure-connection-roles.md)
+There are other less formal kinds of relationships between records that are called *connections*. For example, it may be useful to know if two contacts are married, or perhaps they are friends outside of work, or perhaps a contact used to work for another account. Most businesses won't generate reports using this kind of information or require that it is entered, so it's probably not worthwhile to create entity relationships. More information: [Configure connection roles](configure-connection-roles.md)
 
   
 <a name="BKMK_TypesOfRelationships"></a>
@@ -68,7 +68,7 @@ You can use the relationship behavior to define this according to the rules for 
 If the related entity doesn't support a primary entity, you can allow the primary entity to be deleted and the value of the lookup will be cleared.
 
 ### Automate business processes
-Let’s say that you have a new salesperson and you want to assign them a number of existing accounts currently assigned to another salesperson. Each account record may have a number of task activities associated with it. You can easily locate the active accounts you want to reassign and assign them to the new salesperson. But what should happen for any of the task activities that are associated with the accounts? Do you want to open each task and decide whether they should also be assigned to the new salesperson? Probably not. Instead, you can let the relationship apply some standard rules for you automatically. These rules only apply to task records associated to the accounts you are reassigning. Your options are:  
+Let's say that you have a new salesperson and you want to assign them a number of existing accounts currently assigned to another salesperson. Each account record may have a number of task activities associated with it. You can easily locate the active accounts you want to reassign and assign them to the new salesperson. But what should happen for any of the task activities that are associated with the accounts? Do you want to open each task and decide whether they should also be assigned to the new salesperson? Probably not. Instead, you can let the relationship apply some standard rules for you automatically. These rules only apply to task records associated to the accounts you are reassigning. Your options are:  
   
 - Reassign all active tasks.  
 - Reassign all tasks. 
@@ -102,6 +102,11 @@ These are the actions that can trigger certain behaviors:
 |**Merge**|What should happen when a primary entity record is merged?|Cascade All<br />Cascade None|
 |**Rollup View**|What is the desired behavior of the rollup view associated with this relationship? |Cascade All<br />Cascade Active<br />Cascade User-owned<br />Cascade None|
 
+> [!NOTE]
+> Assign, Delete, Merge, and Reparent actions will not execute in the following situations:
+> - If the original parent record and requested action contain the same values. Example: Attempting to trigger an Assign and 
+>   choosing a contact that is already the owner of the record
+> - Attempting to perform an action on a parent record that is already running a cascading action
 
 > [!NOTE]
 > When executing an assign, any workflows or business rules that are currently active on the records will automatically be 
@@ -134,7 +139,7 @@ Any activity entity has a similar set of parental entity relationships for entit
 ### Limitations on behaviors you can set
 Because of parental relationships there are some limitations you should keep in mind when you define entity relationships.  
   
-- A custom entity can’t be the primary entity in a relationship with a related system entity that cascades. This means you can’t have a relationship with any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned** between a primary custom entity and a related system entity.  
+- A custom entity can't be the primary entity in a relationship with a related system entity that cascades. This means you can't have a relationship with any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned** between a primary custom entity and a related system entity.  
 - No new relationship can have any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned** if the related entity in that relationship already exists as a related entity in another relationship that has any action set to **Cascade All**, **Cascade Active**, or **Cascade User-Owned**. This prevents relationships that create a multi-parent relationship.  
 
 ### See also

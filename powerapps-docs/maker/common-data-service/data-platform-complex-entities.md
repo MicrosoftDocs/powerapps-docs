@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
-ms.date: 09/26/2019
+ms.date: 04/15/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -18,14 +18,18 @@ search.app:
 # Complex entities and licensing
 
 > [!IMPORTANT]
-> This topic is out-of-date and will be updated soon to reflect the latest licensing changes that are applicable starting October 1, 2019. For the latest information on licensing requirements for entities, see the [Power Apps licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+> *This topic is applicable only for older Power Apps Plan 1 and Plan 2 licenses.* 
+>
+> Complex entities are applicable *only* for the older Power Apps Plan 1 and Plan 2 licenses, and not for the latest Power Apps per app and Power Apps per user plans.
+> 
+> For the latest information on licensing requirements for entities, see the [Power Apps licensing guide](https://go.microsoft.com/fwlink/p/?linkid=2085130).
 
 Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a Power Apps Plan 2 or Power Automate Plan 2 license:
 
 * Code plug-ins. More information: [Plug-in development](/powerapps/developer/common-data-service/plug-ins)
 * Real-time workflows. More information: [Workflow processes](/flow/workflow-processes)
 
-    > [!IMPORTANT]
+    > [!NOTE]
     >  Only workflows that are converted to a real-time workflow are considered real-time and synchronous. Workflows that are run in the background can still be used with the appropriate Power Apps plan and do not require additional licenses.
 
 To know whether or not you've added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment.
@@ -170,8 +174,4 @@ The following table lists entities that contain complex server-side logic out-of
 * Work Order Service Task
 * Work Order Sub-Status
 * Work template
-
-
-## Licensing
-For more information about Power Apps and Dynamics 365 licenses, see [Licensing overview](../../administrator/pricing-billing-skus.md) page.
 

@@ -1,7 +1,7 @@
 ---
 title: "SyncError Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SyncError entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the SyncError entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # SyncError Entity Reference
 
@@ -269,7 +270,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|account,activitymimeattachment,activityparty,annotation,appointment,attachment,attributeimageconfig,businessdatalocalizedlabel,businessunit,category,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,connection,connectionrole,connector,contact,customeraddress,duplicaterule,duplicaterulecondition,email,emailserverprofile,entityanalyticsconfig,entityimageconfig,environmentvariabledefinition,environmentvariablevalue,expiredprocess,externalparty,externalpartyitem,fax,feedback,fieldpermission,fieldsecurityprofile,fileattachment,flowsession,goal,goalrollupquery,holidaywrapper,importmap,internaladdress,kbarticle,kbarticletemplate,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailbox,mailmergetemplate,metric,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,newprocess,offlinecommanddefinition,organization,phonecall,position,postfollow,processsession,processstage,processtrigger,publisher,queue,queueitem,recurringappointmentmaster,report,reportcategory,role,rollupfield,savedquery,savedqueryvisualization,sharepointdocumentlocation,sharepointsite,sla,slaitem,slakpiinstance,socialactivity,socialprofile,solution,subject,syncerror,systemuser,task,team,teamtemplate,template,territory,transactioncurrency,translationprocess,userquery,userqueryvisualization,workflow,workflowbinary|
+|Targets|account,activitymimeattachment,activityparty,annotation,apisettings,appointment,attachment,attributeimageconfig,businessdatalocalizedlabel,businessunit,category,channelaccessprofile,channelaccessprofilerule,channelaccessprofileruleitem,connection,connectionreference,connectionrole,connector,contact,customeraddress,duplicaterule,duplicaterulecondition,email,emailserverprofile,entityanalyticsconfig,entityimageconfig,environmentvariabledefinition,environmentvariablevalue,expiredprocess,externalparty,externalpartyitem,fax,feedback,fieldpermission,fieldsecurityprofile,fileattachment,flowsession,goal,goalrollupquery,holidaywrapper,importmap,internaladdress,kbarticle,kbarticletemplate,knowledgearticle,knowledgearticleviews,knowledgebaserecord,letter,mailbox,mailmergetemplate,metric,msdyn_aibdataset,msdyn_aibdatasetfile,msdyn_aibdatasetrecord,msdyn_aibdatasetscontainer,msdyn_aibfile,msdyn_aibfileattacheddata,msdyn_aiconfiguration,msdyn_aifptrainingdocument,msdyn_aimodel,msdyn_aiodimage,msdyn_aiodlabel,msdyn_aiodtrainingboundingbox,msdyn_aiodtrainingimage,msdyn_aitemplate,msdyn_analysiscomponent,msdyn_analysisjob,msdyn_analysisresult,msdyn_analysisresultdetail,msdyn_dataflow,msdyn_helppage,msdyn_knowledgearticleimage,msdyn_knowledgearticletemplate,msdyn_solutionhealthrule,msdyn_solutionhealthruleargument,msdyn_solutionhealthruleset,newprocess,offlinecommanddefinition,organization,phonecall,position,postfollow,processsession,processstage,processstageparameter,processtrigger,publisher,queue,queueitem,recurringappointmentmaster,report,reportcategory,role,rollupfield,savedquery,savedqueryvisualization,serviceplan,sharepointdocumentlocation,sharepointsite,sla,slaitem,slakpiinstance,socialactivity,socialprofile,solution,solutioncomponentattributeconfiguration,solutioncomponentconfiguration,stagesolutionupload,subject,syncerror,systemuser,task,team,teamtemplate,template,territory,transactioncurrency,translationprocess,userquery,userqueryvisualization,workflow,workflowbinary|
 |Type|Lookup|
 
 
@@ -826,25 +827,39 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [Metric_SyncErrors](#BKMK_Metric_SyncErrors)
 - [ImportMap_SyncErrors](#BKMK_ImportMap_SyncErrors)
 - [EmailServerProfile_SyncErrors](#BKMK_EmailServerProfile_SyncErrors)
+- [solutioncomponentattributeconfiguration_SyncErrors](#BKMK_solutioncomponentattributeconfiguration_SyncErrors)
+- [solutioncomponentconfiguration_SyncErrors](#BKMK_solutioncomponentconfiguration_SyncErrors)
+- [stagesolutionupload_SyncErrors](#BKMK_stagesolutionupload_SyncErrors)
+- [serviceplan_SyncErrors](#BKMK_serviceplan_SyncErrors)
 - [Territory_SyncErrors](#BKMK_Territory_SyncErrors)
 - [msdyn_knowledgearticleimage_SyncErrors](#BKMK_msdyn_knowledgearticleimage_SyncErrors)
 - [msdyn_knowledgearticletemplate_SyncErrors](#BKMK_msdyn_knowledgearticletemplate_SyncErrors)
 - [attributeimageconfig_SyncErrors](#BKMK_attributeimageconfig_SyncErrors)
 - [entityimageconfig_SyncErrors](#BKMK_entityimageconfig_SyncErrors)
 - [entityanalyticsconfig_SyncErrors](#BKMK_entityanalyticsconfig_SyncErrors)
+- [msdyn_dataflow_SyncErrors](#BKMK_msdyn_dataflow_SyncErrors)
 - [connector_SyncErrors](#BKMK_connector_SyncErrors)
 - [msdyn_aiconfiguration_SyncErrors](#BKMK_msdyn_aiconfiguration_SyncErrors)
 - [msdyn_aimodel_SyncErrors](#BKMK_msdyn_aimodel_SyncErrors)
 - [msdyn_aitemplate_SyncErrors](#BKMK_msdyn_aitemplate_SyncErrors)
+- [msdyn_aibdataset_SyncErrors](#BKMK_msdyn_aibdataset_SyncErrors)
+- [msdyn_aibdatasetfile_SyncErrors](#BKMK_msdyn_aibdatasetfile_SyncErrors)
+- [msdyn_aibdatasetrecord_SyncErrors](#BKMK_msdyn_aibdatasetrecord_SyncErrors)
+- [msdyn_aibdatasetscontainer_SyncErrors](#BKMK_msdyn_aibdatasetscontainer_SyncErrors)
+- [msdyn_aibfile_SyncErrors](#BKMK_msdyn_aibfile_SyncErrors)
+- [msdyn_aibfileattacheddata_SyncErrors](#BKMK_msdyn_aibfileattacheddata_SyncErrors)
 - [msdyn_aifptrainingdocument_SyncErrors](#BKMK_msdyn_aifptrainingdocument_SyncErrors)
 - [msdyn_aiodimage_SyncErrors](#BKMK_msdyn_aiodimage_SyncErrors)
 - [msdyn_aiodlabel_SyncErrors](#BKMK_msdyn_aiodlabel_SyncErrors)
 - [msdyn_aiodtrainingboundingbox_SyncErrors](#BKMK_msdyn_aiodtrainingboundingbox_SyncErrors)
 - [msdyn_aiodtrainingimage_SyncErrors](#BKMK_msdyn_aiodtrainingimage_SyncErrors)
-- [flowsession_SyncErrors](#BKMK_flowsession_SyncErrors)
-- [workflowbinary_SyncErrors](#BKMK_workflowbinary_SyncErrors)
 - [environmentvariabledefinition_SyncErrors](#BKMK_environmentvariabledefinition_SyncErrors)
 - [environmentvariablevalue_SyncErrors](#BKMK_environmentvariablevalue_SyncErrors)
+- [processstageparameter_SyncErrors](#BKMK_processstageparameter_SyncErrors)
+- [flowsession_SyncErrors](#BKMK_flowsession_SyncErrors)
+- [workflowbinary_SyncErrors](#BKMK_workflowbinary_SyncErrors)
+- [connectionreference_SyncErrors](#BKMK_connectionreference_SyncErrors)
+- [msdyn_helppage_SyncErrors](#BKMK_msdyn_helppage_SyncErrors)
 - [msdyn_analysiscomponent_SyncErrors](#BKMK_msdyn_analysiscomponent_SyncErrors)
 - [msdyn_analysisjob_SyncErrors](#BKMK_msdyn_analysisjob_SyncErrors)
 - [msdyn_analysisresult_SyncErrors](#BKMK_msdyn_analysisresult_SyncErrors)
@@ -1162,6 +1177,30 @@ See importmap Entity [ImportMap_SyncErrors](importmap.md#BKMK_ImportMap_SyncErro
 
 See emailserverprofile Entity [EmailServerProfile_SyncErrors](emailserverprofile.md#BKMK_EmailServerProfile_SyncErrors) One-To-Many relationship.
 
+### <a name="BKMK_solutioncomponentattributeconfiguration_SyncErrors"></a> solutioncomponentattributeconfiguration_SyncErrors
+
+**Added by**: Solution Component Configuration Solution
+
+See solutioncomponentattributeconfiguration Entity [solutioncomponentattributeconfiguration_SyncErrors](solutioncomponentattributeconfiguration.md#BKMK_solutioncomponentattributeconfiguration_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_solutioncomponentconfiguration_SyncErrors"></a> solutioncomponentconfiguration_SyncErrors
+
+**Added by**: Solution Component Configuration Solution
+
+See solutioncomponentconfiguration Entity [solutioncomponentconfiguration_SyncErrors](solutioncomponentconfiguration.md#BKMK_solutioncomponentconfiguration_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_stagesolutionupload_SyncErrors"></a> stagesolutionupload_SyncErrors
+
+**Added by**: StageSolutionUpload Solution
+
+See stagesolutionupload Entity [stagesolutionupload_SyncErrors](stagesolutionupload.md#BKMK_stagesolutionupload_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_serviceplan_SyncErrors"></a> serviceplan_SyncErrors
+
+**Added by**: License Enforcement Solution
+
+See serviceplan Entity [serviceplan_SyncErrors](serviceplan.md#BKMK_serviceplan_SyncErrors) One-To-Many relationship.
+
 ### <a name="BKMK_Territory_SyncErrors"></a> Territory_SyncErrors
 
 **Added by**: Application Common Solution
@@ -1198,6 +1237,12 @@ See entityimageconfig Entity [entityimageconfig_SyncErrors](entityimageconfig.md
 
 See entityanalyticsconfig Entity [entityanalyticsconfig_SyncErrors](entityanalyticsconfig.md#BKMK_entityanalyticsconfig_SyncErrors) One-To-Many relationship.
 
+### <a name="BKMK_msdyn_dataflow_SyncErrors"></a> msdyn_dataflow_SyncErrors
+
+**Added by**: Dataflow Solution Solution
+
+See msdyn_dataflow Entity [msdyn_dataflow_SyncErrors](msdyn_dataflow.md#BKMK_msdyn_dataflow_SyncErrors) One-To-Many relationship.
+
 ### <a name="BKMK_connector_SyncErrors"></a> connector_SyncErrors
 
 **Added by**: Power Connector Solution Solution
@@ -1221,6 +1266,42 @@ See msdyn_aimodel Entity [msdyn_aimodel_SyncErrors](msdyn_aimodel.md#BKMK_msdyn_
 **Added by**: AISolution Solution
 
 See msdyn_aitemplate Entity [msdyn_aitemplate_SyncErrors](msdyn_aitemplate.md#BKMK_msdyn_aitemplate_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aibdataset_SyncErrors"></a> msdyn_aibdataset_SyncErrors
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aibdataset Entity [msdyn_aibdataset_SyncErrors](msdyn_aibdataset.md#BKMK_msdyn_aibdataset_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aibdatasetfile_SyncErrors"></a> msdyn_aibdatasetfile_SyncErrors
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aibdatasetfile Entity [msdyn_aibdatasetfile_SyncErrors](msdyn_aibdatasetfile.md#BKMK_msdyn_aibdatasetfile_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aibdatasetrecord_SyncErrors"></a> msdyn_aibdatasetrecord_SyncErrors
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aibdatasetrecord Entity [msdyn_aibdatasetrecord_SyncErrors](msdyn_aibdatasetrecord.md#BKMK_msdyn_aibdatasetrecord_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aibdatasetscontainer_SyncErrors"></a> msdyn_aibdatasetscontainer_SyncErrors
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aibdatasetscontainer Entity [msdyn_aibdatasetscontainer_SyncErrors](msdyn_aibdatasetscontainer.md#BKMK_msdyn_aibdatasetscontainer_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aibfile_SyncErrors"></a> msdyn_aibfile_SyncErrors
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aibfile Entity [msdyn_aibfile_SyncErrors](msdyn_aibfile.md#BKMK_msdyn_aibfile_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_aibfileattacheddata_SyncErrors"></a> msdyn_aibfileattacheddata_SyncErrors
+
+**Added by**: AI Solution default templates Solution
+
+See msdyn_aibfileattacheddata Entity [msdyn_aibfileattacheddata_SyncErrors](msdyn_aibfileattacheddata.md#BKMK_msdyn_aibfileattacheddata_SyncErrors) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_aifptrainingdocument_SyncErrors"></a> msdyn_aifptrainingdocument_SyncErrors
 
@@ -1252,18 +1333,6 @@ See msdyn_aiodtrainingboundingbox Entity [msdyn_aiodtrainingboundingbox_SyncErro
 
 See msdyn_aiodtrainingimage Entity [msdyn_aiodtrainingimage_SyncErrors](msdyn_aiodtrainingimage.md#BKMK_msdyn_aiodtrainingimage_SyncErrors) One-To-Many relationship.
 
-### <a name="BKMK_flowsession_SyncErrors"></a> flowsession_SyncErrors
-
-**Added by**: Power Automate Extensions package Solution
-
-See flowsession Entity [flowsession_SyncErrors](flowsession.md#BKMK_flowsession_SyncErrors) One-To-Many relationship.
-
-### <a name="BKMK_workflowbinary_SyncErrors"></a> workflowbinary_SyncErrors
-
-**Added by**: Power Automate Extensions package Solution
-
-See workflowbinary Entity [workflowbinary_SyncErrors](workflowbinary.md#BKMK_workflowbinary_SyncErrors) One-To-Many relationship.
-
 ### <a name="BKMK_environmentvariabledefinition_SyncErrors"></a> environmentvariabledefinition_SyncErrors
 
 **Added by**: Environment Variables Solution
@@ -1275,6 +1344,36 @@ See environmentvariabledefinition Entity [environmentvariabledefinition_SyncErro
 **Added by**: Environment Variables Solution
 
 See environmentvariablevalue Entity [environmentvariablevalue_SyncErrors](environmentvariablevalue.md#BKMK_environmentvariablevalue_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_processstageparameter_SyncErrors"></a> processstageparameter_SyncErrors
+
+**Added by**: Microsoft Flow Extensions core package Solution
+
+See processstageparameter Entity [processstageparameter_SyncErrors](processstageparameter.md#BKMK_processstageparameter_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_flowsession_SyncErrors"></a> flowsession_SyncErrors
+
+**Added by**: Microsoft Flow Extensions core package Solution
+
+See flowsession Entity [flowsession_SyncErrors](flowsession.md#BKMK_flowsession_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_workflowbinary_SyncErrors"></a> workflowbinary_SyncErrors
+
+**Added by**: Microsoft Flow Extensions core package Solution
+
+See workflowbinary Entity [workflowbinary_SyncErrors](workflowbinary.md#BKMK_workflowbinary_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_connectionreference_SyncErrors"></a> connectionreference_SyncErrors
+
+**Added by**: Power Platform Connection References Solution
+
+See connectionreference Entity [connectionreference_SyncErrors](connectionreference.md#BKMK_connectionreference_SyncErrors) One-To-Many relationship.
+
+### <a name="BKMK_msdyn_helppage_SyncErrors"></a> msdyn_helppage_SyncErrors
+
+**Added by**: Contextual Help Solution
+
+See msdyn_helppage Entity [msdyn_helppage_SyncErrors](msdyn_helppage.md#BKMK_msdyn_helppage_SyncErrors) One-To-Many relationship.
 
 ### <a name="BKMK_msdyn_analysiscomponent_SyncErrors"></a> msdyn_analysiscomponent_SyncErrors
 

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/10/2019
+ms.date: 04/10/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -71,16 +71,16 @@ This table has links to more information about our most popular connectors. For 
 ** Applies to Azure Blob, Box, Dropbox, Google Drive, OneDrive and OneDrive for Business
 
 ## Standard and custom connectors
-Power Apps provides *standard* connectors for many commonly used data sources, such as those listed above. If Power Apps has a standard connector for the type of data source that you want to use, you should use that connector. If you want to connect to other types of data sources, such as a service that you've built, see [Register and use custom connectors](../canvas-apps/register-custom-api.md).
+Power Apps provides *standard* connectors for many commonly used data sources. If Power Apps has a standard connector for the type of data source that you want to use, you should use that connector. If you want to connect to other types of data sources, such as a service that you've built, see [Register and use custom connectors](../canvas-apps/register-custom-api.md).
 
 ## All standard connectors
-See the [Microsoft Connector Reference](https://docs.microsoft.com/connectors/) for a list of all the standard connectors. Premium connectors require Power Apps per app plan or Power Apps per user plan. For more information, see [Power Apps Plans](https://powerapps.microsoft.com/pricing/).
+Standard connectors do not require special licensing. For more information, see [Power Apps Plans](https://powerapps.microsoft.com/pricing/).
 
 You can ask questions about a specific connector in the [Power Apps forums](https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1), and you can suggest connectors to add or other improvements to make in [Power Apps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
 
 ## Security and types of authentication
 
-As you author your app and create a connection to a data source, you may see that your choice of connector allows you to use different ways to authenticate. For instance, the SQL Server connector allows you to use Azure AD Integrated, SQL Server Authentication, and Windows Authentication. Each type of authentication has different levels of security associated with it.  It’s important to understand what information and rights you share with users who use your application. The primary example in this article is SQL Server, however the principles apply to all types of connections.
+As you author your app and create a connection to a data source, you may see that your choice of connector allows you to use different ways to authenticate. For instance, the SQL Server connector allows you to use Azure AD Integrated, SQL Server Authentication, and Windows Authentication. Each type of authentication has different levels of security associated with it.  It's important to understand what information and rights you share with users who use your application. The primary example in this article is SQL Server, however the principles apply to all types of connections.
 
 ### Azure AD Integrated
 
@@ -92,8 +92,8 @@ This type of connection is also secure.  For example Twitter uses this type of a
 
 ### SQL User name and password authentication
 
-This is type of connection is not very secure because it does not rely on end-user authentication.  SQL Server also allows for this type of authentication.  In SQL Server this type of authentication is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users do not need to supply a unique user name and password.  They are using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users cannot see the user name of password, but the connection will be available to them.  There are certainly valid scenarios for this type of connection.  For instance if you have a read-only database that is available to everyone in the company, this type of connection may be valid. 
+This type of connection is not very secure because it does not rely on end-user authentication.  SQL Server also allows for this type of authentication.  In SQL Server this type of authentication is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users do not need to supply a unique user name and password.  They are using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users cannot see the user name of password, but the connection will be available to them.  There are certainly valid scenarios for this type of connection.  For instance if you have a read-only database that is available to everyone in the company, this type of connection may be valid. 
 
 ### Windows Authentication
 
-This is type of connection is not very secure because it also doesn’t rely on end-user authentication.  You use Windows authentication when you need to connect to a data source that is **on-premises**.  An example of this type of connection is to an on-premises server that has a SQL Server.  The connection must go through a gateway.  Since it goes through a gateway, the connector has access to all of the data on that data source. As a result, any information that you can access with the Windows credentials you supply are available to the connector. And once the application is published, the connection is also published and available to your users.   This means that your end users can also create applications using this same connection and access the data on that machine.  Connections to the data source are also **Implicitly Shared** with users that the app is shared with.  This type of connection may be valid when your data source only lives on an on-premises server and the data on that source is freely shareable.
+This type of connection is not very secure because it doesn't rely on end-user authentication. Use Windows authentication when you need to connect to a data source that is **on-premises**. An example of this type of connection is to an on-premises server that has a SQL Server. The connection must go through a gateway. Since it goes through a gateway, the connector has access to all of the data on that data source. As a result, any information that you can access with the Windows credentials you supply are available to the connector. And once the application is published, the connection is also published and available to your users.  This means that your end users can also create applications using this same connection and access the data on that machine. Connections to the data source are also **Implicitly Shared** with users that the app is shared with. This type of connection may be valid when your data source only lives on an on-premises server and the data on that source is freely shareable.

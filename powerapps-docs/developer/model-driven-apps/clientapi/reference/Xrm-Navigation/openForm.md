@@ -6,7 +6,7 @@ ms.topic: "reference"
 ms.assetid: 0206c43b-b1fc-490d-a867-1d75331885a8
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -42,7 +42,7 @@ search.app:
 <li><b>cmdbar</b>: (Optional) Boolean. Indicates whether to display the command bar. If you do not specify this parameter, the command bar is displayed by default.</li>
 <li><b>createFromEntity</b>: (Optional) Lookup. Designates a record that will provide default values based on mapped attribute values. The lookup object has the following String properties: <code>entityType</code>, <code>id</code>, and <code>name</code> (optional).</li>
 <li><b>height</b>: (Optional) Number. Height of the form window to be displayed in pixels.</li>
-<li><b>navbar</b>: (Optional) String. Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid vlaues are: "on", "off", or "entity".<ul><li><code>on</code>: The navigation bar is displayed. This is the default behavior if the <b>navbar</b> parameter is not used.</li>
+<li><b>navbar</b>: (Optional) String. Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid values are: "on", "off", or "entity".<ul><li><code>on</code>: The navigation bar is displayed. This is the default behavior if the <b>navbar</b> parameter is not used.</li>
 <li><code>off</code>: The navigation bar is not displayed. People can navigate using other user interface elements or the back and forward buttons.</li><li><code>entity</code>: On an entity form, only the navigation options for related entities are available. After navigating to a related entity, a back button is displayed in the navigation bar to allow returning to the original record.</li></ul></li>
 <li><b>openInNewWindow</b>: (Optional) Boolean. Indicates whether to display form in a new window.</li>
 <li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>

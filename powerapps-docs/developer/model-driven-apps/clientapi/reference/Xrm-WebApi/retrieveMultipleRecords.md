@@ -1,13 +1,12 @@
 ---
 title: "retrieveMultipleRecords (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 01/20/2019
+ms.date: 04/13/2019
 ms.service: powerapps
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
 ms.assetid: d4e92999-3b79-4783-8cac-f656fc5f7fda
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -50,14 +49,15 @@ search.app:
 </ul>
 <p>NOTE: You must always use the <b>$select</b> system query option to limit the properties returned for an entity record by including a comma-separated list of property names. This is an important performance best practice. If properties aren’t specified using <b>$select</b>, all properties will be returned.</li>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple system query options by using <code>&</code> to separate the query options.
+<p>When you specify a FetchXML query for the <code>options</code> parameter, the query should not be encoded.
 <p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve multiple scenarios.</td>
 </tr>
 <tr>
 <td>maxPageSize</td>
 <td>Number</td>
 <td>No</td>
-<td><p>Specify a positive number that indicates the number of entity records to be returned per page. If you do not specify this parameter, the default value is passed as 5000.</p>
-<p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value, <code>nextLink</code> attribute in the returned promise object will contain a link to retrieve the next set of entities. </td>
+<td><p>Specify a positive number that indicates the number of entity records to be returned per page. If you do not specify this parameter, the value is defaulted to the maximum limit of 5000 records.</p> 
+<p>If the number of records being retrieved is more than the specified <code>maxPageSize</code> value or 5000 records, <code>nextLink</code> attribute in the returned promise object will contain a link to retrieve the next set of entities. </td>
 </tr>
 <tr>
 <td>successCallback</td>

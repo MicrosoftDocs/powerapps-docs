@@ -2,8 +2,8 @@
 title: "Impersonate another user (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use impersonation to execute business logic on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
-ms.reviewer: ""
+ms.date: 04/07/2020
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -46,7 +46,7 @@ More information: [Build web applications using Server-to-Server (S2S) authentic
 
 ## Impersonate another user using the Web API
 
-To impersonate a user, add a request header named `MSCRMCallerID` with a GUID value equal to the impersonated user’s `systemuserid` before sending the request to the web service. 
+To impersonate a user, add a request header named `CallerObjectId` with a GUID value equal to the impersonated user's Azure Active Directory (AAD) object id before sending the request to the web service. The user's AAD object id is included in the [SystemUser.AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId).
 
 More information: [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md).
 
@@ -70,3 +70,4 @@ More information: [Impersonate a user](impersonate-a-user.md).
 [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
 [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md)<br />
 [Write a plug-in](write-plug-in.md)
+ 

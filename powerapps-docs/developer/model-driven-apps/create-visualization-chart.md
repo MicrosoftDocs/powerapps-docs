@@ -6,8 +6,8 @@ ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 9dbed5ee-21a4-ab86-fc4c-08c3838e42f2
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -67,7 +67,7 @@ _orgOwnedVisualizationId = _serviceProxy.Create(newWebResourceVisualization);
   
 ```  
   
- If you want to create a web resource visualization by using the Dynamics 365 Common Data Service web application, you must create an XML file in the following format, and then use **Import Chart** in the ribbon to import the visualization.  
+ If you want to create a web resource visualization by using the Common Data Service, you must create an XML file in the following format, and then use **Import Chart** in the ribbon to import the visualization.  
   
 ```xml  
 <visualization>  

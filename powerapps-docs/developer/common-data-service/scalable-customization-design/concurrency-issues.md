@@ -3,7 +3,7 @@ title: "Scalable Customization Design: Concurrency issues (Common Data Service) 
 description: "The third in a series of topics. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 1/15/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "rogergilchrist" # GitHub ID

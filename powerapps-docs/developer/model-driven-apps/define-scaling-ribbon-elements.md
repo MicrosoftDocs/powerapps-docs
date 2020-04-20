@@ -8,8 +8,8 @@ ms.custom:
   - ""
 ms.topic: article
 ms.assetid: c2cc39d2-e540-0800-f04f-3fa66df21191
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -70,5 +70,5 @@ For application ribbons and updated entity form ribbons there is no scaling. Sca
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define Custom Actions to modify the Ribbon](define-custom-actions-modify-ribbon.md)   
- [Define Ribbon Tab Display Rules](define-ribbon-tab-display-rules.md)
+ [Define custom actions to modify the Ribbon](define-custom-actions-modify-ribbon.md)   
+ [Define Ribbon tab display rules](define-ribbon-tab-display-rules.md)
