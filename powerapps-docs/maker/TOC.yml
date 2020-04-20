@@ -1663,8 +1663,6 @@
       href: ../sample-apps/regional-emergency-response/portals-admin-reporting.md
     - name: "Portals: Frontline users"
       href: ../sample-apps/regional-emergency-response/portals-user.md
-    - name: Use the mobile app
-      href: ../sample-apps/emergency-response/use.md
 - name: Learn from others
   items:
   - name: Webinars

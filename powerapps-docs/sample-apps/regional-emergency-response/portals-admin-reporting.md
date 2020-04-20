@@ -24,7 +24,8 @@ portal, frontline workers can quickly view and add data for ventilators, staffin
 Browse to the Power Apps portal to work with staffing, equipment, supplies, patient and other areas. The following section walks you through what you can
 access, submit or update as the frontline user of the portal.
 
-![Portal at glance](media/portal-at-glance.png)
+> [!div class="mx-imgBorder"]
+> ![Portal at glance](media/portal-at-glance.png)
 
 You can use latest mobile devices and web browsers when using Regional Emergency Response portal except Apple iPad.
 
@@ -36,13 +37,15 @@ Read the user **Regional Emergency Response portal user guide** for component de
 
 When you visit the portal, you have an option to log in, or for the first time, redeem an invitation:
 
-![Portal getting started](media/portal-getting-started-screeen.png)
+> [!div class="mx-imgBorder"]
+> ![Portal getting started](media/portal-getting-started-screeen.png)
 
 ### Redeem invitation
 
 Select **Redeem invitation** if you received an email invitation with an invitation code:
 
-![Portal redeem invitation](media/portal-redeem-invitation.png)
+> [!div class="mx-imgBorder"]
+> ![Portal redeem invitation](media/portal-redeem-invitation.png)
 
 You can select the checkbox *I have an existing account* if you are aware of your account already being present in the solution.
 
@@ -55,16 +58,19 @@ check box if the device you use is not shared.
 
 If you forget your password, you can use the **Forgot your password?** option to receive password reset email:
 
-![Portal forgot your password](media/portal-forgot-your-password.png)
+> [!div class="mx-imgBorder"]
+> ![Portal forgot your password](media/portal-forgot-your-password.png)
 
 After you sign in the portal, you’ll see **Hospital System, Region** and **Facility** selector before you can begin to submit data:
 
-![Portal manage systems](media/portal-manage-your-resources.png)
+> [!div class="mx-imgBorder"]
+> ![Portal manage systems](media/portal-manage-your-resources.png)
 
 Enter your choices before you proceed to the next step. You can use the search button to lookup records and search for your desired hospital, region or
 facility:
 
-![Portal lookup systems](media/portal-lookup-for-hospital-systems.png)
+> [!div class="mx-imgBorder"]
+> ![Portal lookup systems](media/portal-lookup-for-hospital-systems.png)
 
 > [!NOTE] 
 > Administrators must select **Hospital System, Region** and **Facility** and select **Next** to view the administrative and dashboard settings. When using the portal only for administrative actions such as user management or dashboard reviews, you can select any location. However, if you want to use user components such as **Staff** or **Equipment**, ensure you have selected the correct location.
@@ -73,7 +79,8 @@ facility:
 
 You can view all administrative options available to you after selecting **Administration** on home screen:
 
-![Portal Administration](media/portal-admin-screen.png)
+> [!div class="mx-imgBorder"]
+> ![Portal Administration](media/portal-admin-screen.png)
 
 ### Options and description
 
@@ -88,7 +95,8 @@ You can view all administrative options available to you after selecting **Admin
 
 Go to **Add Users** to create new users that can administer the portal, view the dashboards or use the portal as the frontline staff:
 
-![Add users](media/portal-admin-add-user.png)
+> [!div class="mx-imgBorder"]
+> ![Add users](media/portal-admin-add-user.png)
 
 #### Search user details
 
@@ -118,7 +126,8 @@ To search for **Mobile Phone**, you can use similar text with wildcard replacing
 
 To create users, select **Create User** button when in **Add Users** form. And then, enter the new user details in the form:
 
-![Create user](media/portal-admin-create-user.png)
+> [!div class="mx-imgBorder"]
+> ![Create user](media/portal-admin-create-user.png)
 
 Enter **First Name**, **Last Name**, **Email** and **Mobile Phone** and then select a role for the user.
 
@@ -176,7 +185,8 @@ Members of Parent Organization Administrator role can:
 
 You can add, update or delete a **System** using the **Add System** form. When you select **Add System**, you can see all existing **Hospital Systems**:
 
-![Add system](media/portal-add-system.png)
+> [!div class="mx-imgBorder"]
+> ![Add system](media/portal-add-system.png)
 
 #### Search existing systems
 
@@ -187,11 +197,13 @@ Enter text in search box to search for system and filter the list of systems on 
 
 To view details of a system, select the drop-down menu for a system and then select **View Details**:
 
-![View System](media/portal-view-system-details.png)
+> [!div class="mx-imgBorder"]
+> ![View System](media/portal-view-system-details.png)
 
 System Details page shows **Parent Organization, System Name**, **Description** and **Regions** within the system:
 
-![System details](media/portal-system-details.png)
+> [!div class="mx-imgBorder"]
+> ![System details](media/portal-system-details.png)
 
 You can update a system’s **System Name** and the **Description** fields in the respective text boxes.
 
@@ -200,7 +212,8 @@ You can update a system’s **System Name** and the **Description** fields in th
 Use the **Add Region** button to add a region to the current system. When you select **Add Region**, you can add region details such as **Region Name** and
 **Description**:
 
-![Add region](media/portal-admin-add-region.png)
+> [!div class="mx-imgBorder"]
+> ![Add region](media/portal-admin-add-region.png)
 
 You can change **System** in the drop down before you add a region. However, prefer to add a region to a system by first viewing the system that you want to add region to. This is because once you select **Submit**, if the system you selected is different from the details page you have open, you can’t see the region listed in the region section.
 
@@ -208,23 +221,27 @@ You can change **System** in the drop down before you add a region. However, pre
 
 To create a system, select the **Create** button, select a **Parent Organization,** enter the **System Name** and **Description:**
 
-![Create system](media/portal-admin-create-system.png)
+> [!div class="mx-imgBorder"]
+> ![Create system](media/portal-admin-create-system.png)
 
 #### Delete System
 
 To delete a system, select the drop-down menu and then select **Delete** option:
 
-![Delete system](media/portal-admin-delete-system.png)
+> [!div class="mx-imgBorder"]
+> ![Delete system](media/portal-admin-delete-system.png)
 
 Select **Delete** to delete a system record. Note that you’re prompted confirming deletion before the system gets deleted:
 
-![Delete confirm](media/portal-delete-system-confirm.png)
+> [!div class="mx-imgBorder"]
+> ![Delete confirm](media/portal-delete-system-confirm.png)
 
 ### Add Region
 
 You can add or delete a **Region** using the **Add Region** form. When you select **Add Region**, you can see all existing **Hospital Systems**:
 
-![Add region](media/portal-add-region.png)
+> [!div class="mx-imgBorder"]
+> ![Add region](media/portal-add-region.png)
 
 #### Search existing regions
 
@@ -234,24 +251,28 @@ Enter text in search box to search for region and filter the list of regions on 
 
 To create a region, select the **Create** button, select a **System** and then enter **Region Name** and **Description:**
 
-![Create region](media/portal-admin-create-region.png)
+> [!div class="mx-imgBorder"]
+> ![Create region](media/portal-admin-create-region.png)
 
 #### Delete Region
 
 To delete a region, select the drop-down menu and then select **Delete** option:
 
-![Delete region](media/portal-admin-delete-region.png)
+> [!div class="mx-imgBorder"]
+> ![Delete region](media/portal-admin-delete-region.png)
 
 Note that you’re prompted confirming deletion before the region gets deleted:
 
-![Delete region confirm](media/portal-admin-delete-region-confirm.png)
+> [!div class="mx-imgBorder"]
+> ![Delete region confirm](media/portal-admin-delete-region-confirm.png)
 
 ### Add Facility
 
 You can add or delete a **Facility** using the **Add Facility** form. When you select **Add Facility**, you can see all existing **Facilities** with region,
 county and other details:
 
-![Delete confirm](media/portal-admin-add-facility.png)
+> [!div class="mx-imgBorder"]
+> ![Delete confirm](media/portal-admin-add-facility.png)
 
 #### Search existing facilities
 
@@ -261,7 +282,8 @@ Enter text in search box to search for system and filter the list of facilities 
 
 To create a facility, select the **Create** button:
 
-![Create facility](media/portal-admin-create-facility.png)
+> [!div class="mx-imgBorder"]
+> ![Create facility](media/portal-admin-create-facility.png)
 
 #### Options and description
 
@@ -285,17 +307,20 @@ To create a facility, select the **Create** button:
 To delete a facility, select the drop-down menu and then select **Delete**
 option:
 
-![Delete facility](media/portal-admin-delete-facility.png)
+> [!div class="mx-imgBorder"]
+> ![Delete facility](media/portal-admin-delete-facility.png)
 
 Note that you’re prompted confirming deletion before the facility gets deleted:
 
-![Delete facility confirm](media/portal-admin-delete-facility-confirm.png)
+> [!div class="mx-imgBorder"]
+> ![Delete facility confirm](media/portal-admin-delete-facility-confirm.png)
 
 #### Edit Facility
 
 To delete a facility, select the drop-down menu and then select **Edit** option:
 
-![Edit facility](media/portal-admin-edit-facility.png)
+> [!div class="mx-imgBorder"]
+> ![Edit facility](media/portal-admin-edit-facility.png)
 
 Update the fields and select **Submit** to save the changes.
 
@@ -303,7 +328,8 @@ Update the fields and select **Submit** to save the changes.
 
 If you are a member of **Report Viewer** role, you’ll see option to view **Dashboards**:
 
-![Get insights](media/portal-admin-get-insights.png)
+> [!div class="mx-imgBorder"]
+> ![Get insights](media/portal-admin-get-insights.png)
 
 ### Dashboards overview
 
@@ -339,7 +365,8 @@ Before you begin review of available dashboards, get familiar with general repor
 
 View entire **Hospital System** related statistics in one view with **System at a glance** dashboard:
 
-![Dashboard](media/portal-admin-powerbi-reports.png)
+> [!div class="mx-imgBorder"]
+> ![Dashboard](media/portal-admin-powerbi-reports.png)
 
 The dashboard displays summary for the following:
 
@@ -359,13 +386,15 @@ View COVID-19 related patient details such as summary of COVID PUIs, positives, 
 
 You can also view counties in map and the counties are color coded for segregation. A graph on the bottom right in dashboard shows COVID-19 positives and PUIs with timelines explaining the recent and past trends:
 
-![patient details](media/portal-admin-powerbi-patients.png)
+> [!div class="mx-imgBorder"]
+> ![patient details](media/portal-admin-powerbi-patients.png)
 
 #### Map
 
 Hover over a county inside the map to see the county specific COVID-19 PUIs, positives and intubation numbers:
 
-![Patient map](media/portal-admin-powerbi-map.png)
+> [!div class="mx-imgBorder"]
+> ![Patient map](media/portal-admin-powerbi-map.png)
 
 Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
 
@@ -373,13 +402,15 @@ Similarly, you can hover over the timeline chart to view date specific numbers i
 
 View bed related insights such as bed availability with licensed, acute, AIIR/non-AAIR, surge and ICU numbers. You can also view the details in tabular format at bottom with per-county bed data and in percentage format. The map is color coded for counties with lighter color for lower numbers and increasing in darkness as the number increases. The chart on bottom right shows occupancy differences based on dates for trend analysis:
 
-![Bed capacity](media/portal-admin-powerbi-bed-capacity.png)
+> [!div class="mx-imgBorder"]
+> ![Bed capacity](media/portal-admin-powerbi-bed-capacity.png)
 
 #### Map
 
 When you hover over map area and point to a county, you can see the county related information:
 
-![Bed capacity map](media/portal-admin-powerbi-map1.png)
+> [!div class="mx-imgBorder"]
+> ![Bed capacity map](media/portal-admin-powerbi-map1.png)
 
 Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
 
@@ -387,7 +418,8 @@ Similarly, you can hover over the timeline chart to view date specific numbers i
 
 View equipment details on a per-county basis such as ventilators availability and consumption with **Equipment details** dashboard:
 
-![Equipment details](media/portal-admin-powerbi-equipment.png)
+> [!div class="mx-imgBorder"]
+> ![Equipment details](media/portal-admin-powerbi-equipment.png)
 
 You can see the total numbers of equipment availability on top left and detailed table on bottom left. The map shows county-specific equipment data with lighter
 color with lesser and darker color with higher requirement numbers.
@@ -398,7 +430,8 @@ The timeline chart on bottom right shows equipment insights for trend analysis a
 
 When you hover over map area and point to a county, you can see the county related information:
 
-![Equipment map](media/portal-admin-powerbi-equipment-map.png)
+> [!div class="mx-imgBorder"]
+> ![Equipment map](media/portal-admin-powerbi-equipment-map.png)
 
 Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
 
@@ -406,7 +439,8 @@ Similarly, you can hover over the timeline chart to view date specific numbers i
 
 View supply details on a per-county basis such as ventilators availability and consumption with **Supply details** dashboard:
 
-![Supply details](media/portal-admin-powerbi-supply.png)
+> [!div class="mx-imgBorder"]
+> ![Supply details](media/portal-admin-powerbi-supply.png)
 
 You can see the supply details on the left based on **Health System,** map on the right and chart format supply break-up at the bottom.
 
@@ -414,7 +448,8 @@ You can see the supply details on the left based on **Health System,** map on th
 
 When you hover over map area and point to a county, you can see the county related information:
 
-![Supply map](media/portal-admin-powerbi-supply-map.png)
+> [!div class="mx-imgBorder"]
+> ![Supply map](media/portal-admin-powerbi-supply-map.png)
 
 Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
 
@@ -427,13 +462,15 @@ Explain any other options, including end of shift/sign out, feedback, switch fac
 After you submit any form, you’ll receive an acknowledgement for the submission and have an option to either go to the home page, or submit another record for
 the selected component:
 
-![Submit form](media/portal-admin-submit-form.png)
+> [!div class="mx-imgBorder"]
+> ![Submit form](media/portal-admin-submit-form.png)
 
 ### Sign out
 
 You can sign out from the app using the profile icon on the upper-right side of the screen.  
 
-![Sign out](media/portal-admin-signout.png)
+> [!div class="mx-imgBorder"]
+> ![Sign out](media/portal-admin-signout.png)
 
 > [!NOTE]
 > Sign-out may not be available if your IT administrator has disabled
@@ -443,21 +480,25 @@ device sharing.
 
 Switch facility anytime by selecting the facility name on the top-right side of the screen.
 
-![Switch facility](media/portal-admin-switch-facility.png)
+> [!div class="mx-imgBorder"]
+> ![Switch facility](media/portal-admin-switch-facility.png)
 
 If you use a mobile device, use the top right button and then select the name of the facility to switch:
 
-![Switch facility mobile](media/portal-admin-switch-facility-mobile.png)
+> [!div class="mx-imgBorder"]
+> ![Switch facility mobile](media/portal-admin-switch-facility-mobile.png)
 
 ### Navigation
 
 From any page, you can always go back to the home page by selecting the state department on top left of the screen:
 
-![navigation](media/portal-admin-navigation.png)
+> [!div class="mx-imgBorder"]
+> ![Navigation](media/portal-admin-navigation.png)
 
 You can also go back to the previous page, such as to **Facility** in the following example with link to **Add Facility:**
 
-![Add facility navigation](media/portal-admin-add-facility-navigation.png)
+> [!div class="mx-imgBorder"]
+> ![Add facility navigation](media/portal-admin-add-facility-navigation.png)
 
 ## Version history
 
