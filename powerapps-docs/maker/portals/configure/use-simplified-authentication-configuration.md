@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/20/2020
+ms.date: 04/21/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -77,10 +77,10 @@ You can configure the following general authentication settings by selecting the
 ![General authentication settings](media/use-simplified-authentication-configuration/general-authentication-settings.png)
 
 - **External login** - Turn External login for your portal *On* or *Off*. Setting to *Off* disables and hides external account registration and sign in.
-<br> *More information*: External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity provider. This includes OpenID based providers such as Yahoo! and Google and OAuth 2.0 based providers such as Twitter, Facebook, and Microsoft. Users sign up to the portal by selecting an external identity to register with the portal. After it is registered, an external identity has access to the same features as a local account. See [Manage external accounts](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity#manage-external-accounts) for related site settings.
+<br> *More information*: External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity provider. And includes providers LinkedIn, Google, Twitter, Facebook, and Microsoft. Users sign up to the portal by selecting an external identity to register with the portal. Once registered, an external identity has access to the same features as a local account. See [Manage external accounts](https://docs.microsoft.com/powerapps/maker/portals/configure/set-authentication-identity#manage-external-accounts) for related site settings.
 - **Open registration** - Turn [**Open registration**](configure-portal-authentication.md#open-registration) for your portal *On* or *Off*. Setting to *Off* disables and hides external account registration.
 
-You can also go to general authentication settings from **portal details** using **Settings** on top right in **Identity providers** section:
+You can also go to general authentication settings from **portal details** by using **Settings** on top-right side **Identity providers** section:
 
 ![General authentication settings from details](media/use-simplified-authentication-configuration/general-settings-from-details.png)
 
@@ -93,7 +93,7 @@ You can set any identity provider as **default**. When an identity provider is s
 > [!IMPORTANT]
 > If you set an identity provider as default, users won't have option to choose any other identity provider.
 
-After you set an identity provider as default, you can then use **Remove as default** to remove the set default identity provider. If you remove an identity provider from being the default, users will be redirected to portal sign in page and can choose from the identity providers you enable.
+Once you set an identity provider as default, you can then use **Remove as default** to remove the set default identity provider. If you remove an identity provider from being the default, users will be redirected to portal sign in page and can choose from the identity providers you enable.
 
 > [!NOTE]
 > You can only set **configured** identity provider as default. **Set as default** option becomes available after you configure an identity provider.
@@ -103,8 +103,9 @@ After you set an identity provider as default, you can then use **Remove as defa
 Several identity providers are added by default that you can configure. You can add additional *Azure Active Directory B2C* providers, or configure the available OAuth 2.0 providers such as LinkedIn and Microsoft.
 
 > [!NOTE]
-> - You can't change the configuration of the [**Local sign in**](configure-portal-authentication.md) and **Azure Active Directory** providers when using this interface. You can only **Enable** or **Disable** these two providers.
+> - You can't change the configuration of the [**Local sign in**](configure-portal-authentication.md) and **Azure Active Directory** providers when using this interface.
 > - You can have only one instance of each identity provider type for OAuth 2.0, such as **Facebook**, **LinkedIn**, **Google**, **Twitter**, and **Microsoft**.
+> - Updates to identity provider configuration may take a few minutes to reflect on the portal. To apply your changes immediately, you can [restart the portal](../admin/admin-overview.md#open-power-apps-portals-admin-center).
 
 ### Add or configure provider
 
@@ -120,12 +121,15 @@ You can select from the available list of providers, enter a name, and then sele
 
 ![Add new provider](media/use-simplified-authentication-configuration/add-provider.png)
 
+> [!NOTE]
+> The **Provider name** enter here is displayed on the sign in page for users as the button text when selecting this provider.
+
 To configure a provider, select **Click to Configure** or use **More Commands** (**...**) and then select **Configure**:
 
 ![Configure provider](media/use-simplified-authentication-configuration/configure-provider.png)
 
 > [!NOTE]
-> You can use **Add provider** or **Configure** to add/configure a provider for the first time. After you configure a provider, you can edit it.
+> You can use **Add provider** or **Configure** to add/configure a provider for the first time. After you configure a provider, you can edit it. You can also **left-click** on the provider name hyperlink to open the configuration options quickly.
 
 The configuration steps after you select **Next** depend on the identity provider type you select. For example, the *Azure Active Directory B2C* configuration is different from how you setup *LinkedIn*. Refer to the provider-specific sections later in this article to configure provider of your choice.
 
@@ -165,9 +169,7 @@ To use Azure AD B2C as an identity provider, you must:
     > [!NOTE]
     > You must choose **Yes** for the **Allow implicit flow** field and enter your portal URL in the **Reply URL** field.
 
-    For more details, read [create and configure Azure AD B2C application](azure-ad-b2c.md#use-azure-ad-b2c-as-an-identity-provider-for-your-portal).
-
-1. [**Create user flows**](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, [create password reset user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
+1. [**Create user flow**](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, [create password reset user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
 
 ### Step 2 - Configure site settings
 
@@ -175,28 +177,28 @@ Configure site settings and password reset policy for your Azure AD B2C provider
 
 ![Configure site settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step2.png)
 
-- **Authority** - The issuer URL defined in the metadata of the sign up & sign in policy user flow.​
+- **Authority** - The issuer URL defined in the metadata of the sign up and sign in policy user flow.​
 <br> To get issuer URL:
 
     1. Open the sign-up and sign-in user flow in created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
-    1. Select **Run user flow** and in the new window, select the URL from the top. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
-    1. Copy the URL value of the **Issuer** from the document that opens.
+    1. Select **Run user flow** and in the open dialog box, select the URL at the top to open the configuration document. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
+    1. Copy the URL of the **Issuer** from the configuration document that opens in a new browser.  
 
 - **Client ID​** - Enter the **Application ID** of the Azure AD B2C application created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
 - **Redirect URI** - Enter portal URL. <br> If your portal uses a custom domain name, you may have a different URL than the one provided here.​
 
 #### Password resets
 
-- **Default policy ID** - Enter the **Name** of the *sign up and sign in user flows* created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
+- **Default policy ID** - Enter the **Name** of the *sign up and sign in user flow* created in [step 1](#step-1---configure-azure-active-directory-b2c-application). The name is  prefixed with *B2C_1*.
 
-- **Password reset policy ID** - Enter the **Name** of the *password reset user flow* created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
+- **Password reset policy ID** - Enter the **Name** of the *password reset user flow* created in [step 1](#step-1---configure-azure-active-directory-b2c-application). The name is  prefixed with *B2C_1*.
 
-- **Valid issuers** - A comma-delimited list of issuer URLs for the *sign up and sign in user flows* and *password reset user flow* created in [step 1](#step-1---configure-azure-active-directory-b2c-application). 
+- **Valid issuers** - A comma-delimited list of issuer URLs for the *sign up and sign in user flow* and *password reset user flow* created in [step 1](#step-1---configure-azure-active-directory-b2c-application). 
 <br> To get issuer URL:
 
     1. Open the sign-up and sign-in user flow in created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
-    1. Select **Run user flow** and in the new window, select the URL from the top. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
-    1. Copy the URL value of the **Issuer** from the document that opens.
+    1. Select **Run user flow** and in the open dialog box, select the URL at the top to open the configuration document. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
+    1. Copy the URL of the **Issuer** from the configuration document that opens in a new browser.
     1. Repeat the above steps for *password reset user flow*.
 
 For more information about site settings, read [related site settings](azure-ad-b2c.md#related-site-settings).
@@ -207,10 +209,13 @@ Third step to configure Azure AD B2C identity provider is the optional additiona
 
 ![Configure additional settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png)
 
-- **Registration claims mapping​** - List of logical name/claim pairs to be used to map claim values returned from AD B2C created during sign up to the attributes in the contact record. Enter the values in the following format: ```attribute1=claim1,attribute2=claim2,attribute3=claim3​```
-- **Login claims mapping** - List of logical name/claim pairs to be used to map claim values returned from AD B2C after sign in to the attributes in the contact record. Enter the values in the following format: ```attribute1=claim1,attribute2=claim2,attribute3=claim3​```
+- **Registration claims mapping​** - List of logical name/claim pairs to be used to map claim values returned from AD B2C created during sign up to the attributes in the contact record. <br> 
+For example, if you have enabled *Job Title (jobTitle)* and *Postal Code (postalCode)* as **User Attributes** in your user flow and you want to update the corresponding *Contact* entity *Job Title (jobtitle)* and *Address 1: ZIP / Postal Code (address1_postalcode)* fields, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
+- **Login claims mapping** - List of logical name/claim pairs to be used to map claim values returned from AD B2C after sign in to the attributes in the contact record. <br> 
+For example, if you have enabled *Job Title (jobTitle)* and *Postal Code (postalCode)* as **Application Claims** in your user flow and you want to update the corresponding *Contact* entity *Job Title (jobtitle)* and *Address 1: ZIP / Postal Code (address1_postalcode)* fields, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 - **External logout** - Enables or disables federated sign out. When set to true, users are redirected to the federated sign out user experience when they sign out from the portal. When set to false, users are only signed out from the portal.
-- **Contact mapping with email** - Specify whether contacts are mapped to a corresponding email.  When set to true, this setting associates a unique contact record with a matching email address, and then automatically assigns the external identity provider to the contact after a successful user sign in.​- **Registration Enabled**​ - Enables or disables the registration requirement for the existing identity provider. When disabled, the user is denied registration with an error if no contact record exists for the user. When enabled, user registration is allowed for a new user only if the Site Setting Authentication/Registration/Enabled is set to true.​
+- **Contact mapping with email** - Specify whether contacts are mapped to a corresponding email.  When set to true, this setting associates a unique contact record with a matching email address, and then automatically assigns the external identity provider to the contact after a successful user sign in.
+- **Registration Enabled**​ - Turn [**Open registration**](configure-portal-authentication.md#open-registration) for your portal *On* or *Off*. Setting to *Off* disables and hides external account registration.
 - **Post Logout Redirect Uri** - URL within the portal that the user is redirected to after sign out.
 
 Select **Confirm** to view a summary of your configuration and complete the identity configuration.
@@ -314,8 +319,8 @@ Applies to authentication settings for **Facebook**, **Twitter**, **Microsoft**,
 - **Authentication mode** - The OWIN authentication middleware mode:  [AuthenticationOptions.AuthenticationMode](https://docs.microsoft.com/previous-versions/aspnet/mt152179(v=vs.113)?redirectedfrom=MSDN).
 - **Backchannel timeout** - Timeout value in milliseconds for back channel communications: [MicrosoftAccountAuthenticationOptions.BackchannelTimeout](https://docs.microsoft.com/previous-versions/aspnet/mt174421(v=vs.113)?redirectedfrom=MSDN).
 - **Callback path** - The request path within the application's base path where the user-agent will be returned: [MicrosoftAccountAuthenticationOptions.CallbackPath](https://docs.microsoft.com/previous-versions/aspnet/mt174433(v=vs.113)?redirectedfrom=MSDN).​
-- **Sign in As authentication type** - The name of another authentication middleware which will be responsible for actually issuing a user Claims Identity: [MicrosoftAccountAuthenticationOptions.SignInAsAuthenticationType](https://docs.microsoft.com/previous-versions/aspnet/mt174430(v=vs.113)?redirectedfrom=MSDN).​
-- **Scope** - A comma separated list of permissions to request: [MicrosoftAccountAuthenticationOptions.Scope](https://docs.microsoft.com/previous-versions/aspnet/mt174435(v=vs.113)?redirectedfrom=MSDN).​
+- **Sign in As authentication type** - The name of another authentication middleware that will be responsible for actually issuing a user Claims Identity: [MicrosoftAccountAuthenticationOptions.SignInAsAuthenticationType](https://docs.microsoft.com/previous-versions/aspnet/mt174430(v=vs.113)?redirectedfrom=MSDN).​
+- **Scope** - A comma-separated list of permissions to request: [MicrosoftAccountAuthenticationOptions.Scope](https://docs.microsoft.com/previous-versions/aspnet/mt174435(v=vs.113)?redirectedfrom=MSDN).​
 - ​**Registration Enabled**​ - Enables or disables the registration requirement for the existing identity provider. When disabled, the user is denied registration with an error if no contact record exists for the user. When enabled, user registration is allowed for a new user only if the Site Setting Authentication/Registration/Enabled is set to true.​
 
 For more information, read [OAuth2 site settings](configure-oauth2-settings.md#create-site-settings-by-using-oauth2).
