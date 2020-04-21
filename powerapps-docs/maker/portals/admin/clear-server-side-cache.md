@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/20/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -20,11 +20,11 @@ As a portal administrator, you can clear the server-side cache for the entire po
 
 To clear the server-side cache
 
-1.	Sign in to the portal as an administrator.
+1. Sign in to the portal as an administrator.
 
-2.	Navigate to the URL as follows: `<portal_path>/_services/about`
+1. Navigate to the URL as follows: `<portal_path>/_services/about`
 
-3.	Select **Clear Cache**. 
+1. Select **Clear Cache**.
 
 The server-side cache is deleted, and data is reloaded from Common Data Service. Note that clearing the portal server-side cache will temporarily cause poor portal performance while data is being reloaded from Common Data Service .
 
