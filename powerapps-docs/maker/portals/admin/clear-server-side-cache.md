@@ -27,18 +27,27 @@ To clear the server-side cache:
 
 1. Sign in to the portal as an administrator.
 
-1. Navigate to the URL as follows: `<portal_path>/_services/about`
+1. Navigate to the URL as follows: `<portal_path>/_services/about`.
 
 1. Select **Clear Cache**.
 
 The server-side cache is deleted, and data is reloaded from Common Data Service. 
 
-> [!div class=mx-imgBorder]
-> ![Clear the portal cache](../media/clear-portal-cache.png "Clear the portal cache")
+![Clear the portal cache](media\clear-server-side-cache/clear-portal-cache.png)
 
-## List of configuration entities
+## Configuration entity caching portals with capacity-based licenses
 
-Portal metadata is stored in entities called *configuration entities*. Clearing the server-side cache for a portal includes refreshing the data from the following *configuration entities*:
+[Capacity based](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) portals have more options on `<portal_path>/_services/about`:
+
+![Clear portal cache with capacity-based license](media\clear-server-side-cache/clear-config-capacity-license.png)
+
+To learn more about the differences between Power Apps portals and portal add-ons, read [Power Apps portal FAQ](../faq.md#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals).
+
+Portal metadata is stored in entities called *configuration entities*. If you change configuration entities using the *Unified Interface application*, you **must** select **Clear cache** to clear the configuration cache for changes to reflect in your Portal.  
+
+### List of configuration entities refreshed when you clear cache
+
+ Clearing the server-side cache for a portal includes refreshing the data from the following *configuration entities*:
 
 | Configuration entities:| | |
 |-------------------------------------------|---------------------------|--------------------------------------|
