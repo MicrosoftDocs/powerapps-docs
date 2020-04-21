@@ -1,6 +1,6 @@
 ---
 title: Connector certification from ISV Studio | Microsoft Docs
-description: Learn how to submit a custom connector for certification using ISV Studio.
+description: Learn how to submit a custom connector for certification by using ISV Studio.
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -21,40 +21,42 @@ search.app:
   - D365CE
 ---
 
-# Connector Certification
+# Connector certification
 
-If you own a service, API, or built a custom connector that you want to connect to Power Apps, Power Automate, Azure Logic Apps, or Power Query, you need to submit your connector to Microsoft for certification. 
+If you own a service or API&mdash;or you've built a custom connector that you want to connect to Power Apps, Power Automate, Azure Logic Apps, or Power Query&mdash;you need to submit your connector to Microsoft for certification. 
 
-Connector Certification is now in ISV Studio allowing the users to manage and track their connector certification submission. More information: [Get your connector certified](https://docs.microsoft.com/connectors/custom-connectors/submit-certification).
+Connector certification is now included in ISV Studio, so you can use it to manage and track your connector certification submission. More information: [Submit your connector for Microsoft certification](https://docs.microsoft.com/connectors/custom-connectors/submit-certification)
+<!--Suggest making the next paragraph a note, to emphasize the point. -->
+> ![NOTE]
+> Before you start submitting your connector for certification, see [Instructions on submitting your connector](https://docs.microsoft.com/connectors/custom-connectors/certification-submission) for submission requirements.
 
-Before you start submitting your connector for certification, see the [Instructions on submitting your connector](https://docs.microsoft.com/connectors/custom-connectors/certification-submission) article for submission requirements.
+**To certify your custom connector through ISV Studio**
 
-To certify your custom connector through ISV Studio:
+1. In ISV Studio, select **Connector certification** in the leftmost pane.
 
-1. In ISV Studio, select **Connector certification** tab in the left pane.
-2. Select the type of connector to certify and click on **Submit**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Connector certification](media/connector-certification-submit.png)
-
-3. In the **Connector submission** page, read the agreement details and check the **Accept terms** and click on **Next**.
+2. Select the type of connector to certify, and then select **Submit**.
 
    > [!div class="mx-imgBorder"]
-   > ![Connector certification Consent form](media/connector-certification-consent-form.png)
+   > ![Connector certification](media/connector-certification-submit.png "Connector certification")
+
+3. On the **Connector submission** page, read the agreement details, select the **Accept terms** check box, and then select **Next**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Consent form](media/connector-certification-consent-form.png "Consent form")
 
 4. Select **Choose a file** to upload the custom connector from your local machine. 
 
    > [!div class="mx-imgBorder"]
-   > ![Connector certification choose file](media/connector-certification-choose-file.png)
+   > ![Choose file](media/connector-certification-choose-file.png "Choose file")
 
-5. Enter the required details and click on **Submit for review**. 
+5. Enter the required details, and then select **Submit for review**. 
    
    > [!div class="mx-imgBorder"]
-   > ![Connector certification choose file](media/connector-certification-submit-for-review.png)
+   > ![Submit for review](media/connector-certification-submit-for-review.png "Submit for review")
 
-6. After you submit your connector for review, you'll receive an email from Microsoft.
+After you submit your connector for review, you'll receive an email from Microsoft.
 
-## See Also
+### See also
 
 [Home page](isv-app-management-homepage.md)<br/>
 [App page](isv-app-management-apppage.md)<br/>

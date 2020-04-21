@@ -1,7 +1,7 @@
 ---
 title: Test Studio for testing canvas app | Microsoft Docs
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
-author: tapanm-msft
+author: aengusheaney
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual

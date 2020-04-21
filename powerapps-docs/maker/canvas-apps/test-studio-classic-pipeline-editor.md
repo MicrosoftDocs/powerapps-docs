@@ -1,13 +1,13 @@
 ---
 title: Automate tests with Azure Pipeline using classic editor | Microsoft Docs
 description: Describes how to automate test suites and cases using the classic editor from Azure Pipeline.
-author: tapanm-msft
+author: aengusheaney
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/17/2020
+ms.date: 04/20/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -243,7 +243,7 @@ from the pipeline in this sequence:
 1. Select the task and update the following areas.
 
     1. **Title**: Run Power Apps Test Automation Tests via
-        \$(BrowserTypeFirefox) copy
+        \$(BrowserTypeFirefox)
 
     1.  **Override test run parameters**
 
@@ -261,7 +261,7 @@ you've added [earlier](#add-tasks-to-the-pipeline).
 
 1. Select the **Variables** tab.
 
-2. Select **Add** and repeat this step to configure the following variables:
+1. Select **Add** and repeat this step to configure the following variables:
 
 | Variable name             | Variable value                                                                                                                 |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------|
