@@ -20,15 +20,13 @@ Setting up authentication is a core customization in any portal. Simplified iden
 
 ## Overview
 
-You can enable, disable, and configure portal identity providers from [Power Apps](https://make.preview.powerapps.com) using simplified portal authentication configuration. 
-
-After you select an identity provider, you can then go through prompts to easily select and enter provider settings instead of setting up authentication [manually](set-authentication-identity.md).
+You can enable, disable, and configure portal identity providers from [Power Apps preview](https://make.preview.powerapps.com) using simplified portal authentication configuration. After you select an identity provider, you can then go through prompts to easily select and enter provider settings instead of setting up authentication [manually](set-authentication-identity.md).
 
 ### Authentication Settings
 
-To begin configuring identity provider for your portal: 
+To begin configuring identity provider for your portal:
 
-1. Go to [Power Apps](https://make.preview.powerapps.com).
+1. Go to [Power Apps preview](https://make.preview.powerapps.com).
 
 1. Select **Apps** from left pane:
 
