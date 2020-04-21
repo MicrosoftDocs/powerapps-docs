@@ -20,6 +20,9 @@ As a portal administrator, you can clear the server-side cache for the entire po
 
 ## Steps to clear portal server-side cache
 
+> [!IMPORTANT]
+> Clearing the portal server-side cache causes temporary performance degradation of the portal while data gets reloaded from Common Data Service.
+
 To clear the server-side cache:
 
 1. Sign in to the portal as an administrator.
@@ -29,9 +32,6 @@ To clear the server-side cache:
 1. Select **Clear Cache**.
 
 The server-side cache is deleted, and data is reloaded from Common Data Service. 
-
-> [!IMPORTANT]
-> Clearing the portal server-side cache causes temporary performance degradation of the portal while data gets reloaded from Common Data Service.
 
 > [!div class=mx-imgBorder]
 > ![Clear the portal cache](../media/clear-portal-cache.png "Clear the portal cache")
