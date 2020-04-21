@@ -30,7 +30,7 @@ The **formContext.getControl(arg)** method is a shortcut method to access **form
 
 **arg**: Optional. You can access a control on a form by passing an argument as either the **name** or the **index value** of the control on a form. For example: `formContext.getControl("firstname")` or `formContext.getControl(0)`.
 
-When it is not provided, it returns an array of all controls on the form.
+When the `arg` value is not provided, it returns an array of all the controls on the form.
 
 
 ## Return Value
