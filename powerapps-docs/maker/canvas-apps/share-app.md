@@ -121,6 +121,7 @@ If the group is not security enabled, you can enable it enable it using PowerShe
 
 > [!NOTE]
 > You must be the owner of the Office 365 group to enable security.
+> Setting SecurityEnabled property to *true* does not affect how Power Apps and Office 365 features work. This command is required as SecurityEnabled property is set to *false* by default when creating Office 365 Groups outside of Azure AD.
 
 After a while, you can discover this group in the Power Apps sharing panel and share apps with this group.
 
