@@ -45,7 +45,7 @@ For detailed information about the US Government plans for Power Apps and Power 
 
 ## Step 1: Download the deployment package
 
-Get the latest deployment package (.zip) from your Microsoft account representative.
+Download the latest deployment package (.zip) from <https://aka.ms/rer-solution>.
 
 Before extracting the .zip file, ensure that you unblock it.
 
@@ -112,7 +112,7 @@ After the portal is provisioned, it will appear in your **Apps** list in Power A
 > [!div class="mx-imgBorder"] 
 > ![View starter portal](media/deploy-view-starter-portal.png "View starter portal")
 
-  > [!NOTE]
+  > [!IMPORTANT]
   > Wait for the portal to be provisioned before proceeding to the next step.
 
 ## Step 4: Install the package
