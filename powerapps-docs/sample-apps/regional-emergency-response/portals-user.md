@@ -135,6 +135,8 @@ Submit COVID-19 specific details using the **COVID-19 stats** form:
 | Number of intubated patients                                      | Number of patients intubated  at this facility.                                      |
 | Number of patients with COVID-19 discharged in the prior 24 hours | Number of patients with COVID-19 discharged in the prior 24 hours at this facility. |
 
+## General portal options
+
 [!include[cc-general-options](includes/cc-general-options.md)]
 
 ## Report issues

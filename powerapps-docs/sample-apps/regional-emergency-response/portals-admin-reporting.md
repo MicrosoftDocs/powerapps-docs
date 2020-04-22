@@ -390,6 +390,8 @@ When you hover over map area and point to a county, you can see the county relat
 
 Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
 
+## General portal options
+
 [!include[cc-general-options](includes/cc-general-options.md)]
 
 ## Report issues

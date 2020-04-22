@@ -1,5 +1,3 @@
-## General portal options
-
 In this section, learn about general options available in the Regional Emergency Response portal.
 
 ### Submit form
