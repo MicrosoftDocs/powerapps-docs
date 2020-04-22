@@ -102,4 +102,4 @@ While work to provide full control coverage in Power Apps Test Studio is in prog
 
 ### See also
 
-- [Automate tests with Azure Pipeline using classic editor](test-studio-classic-pipeline-editor.md)
+- [Automate tests with Azure Pipelines using classic editor](test-studio-classic-pipeline-editor.md)
