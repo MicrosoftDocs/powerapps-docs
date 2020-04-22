@@ -1,6 +1,6 @@
 ---
-title: Configure Regional Hospital Emergency Response solution | Microsoft Docs
-description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
+title: Use the admin app and dashboard in Regional Emergency Response solution | Microsoft Docs
+description: Provides detailed instructions for regional organization business admins to configure master data, manage portal users, and view dashboards for key insights.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
@@ -12,13 +12,15 @@ ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Configure Regional Hospital Emergency Response solution
+# Use the admin app and dashboard
 
-This guide is meant for business admins in regional medical organizations to use the admin app (model-driven app) to perform the following activities:
+This article is meant for business admins in regional medical organizations to use the admin app (model-driven app) to perform the following activities:
 
--   Create and manage master data in entities required for the solution
+-   Add and manage master data in entities required for the solution
 
--   Create and manage portal users (contacts). These users are typically the admins from parent medical organizations that manage one or more hospital systems. These parent medical organization admins use the portal to add and manage users from their hospital system, add and manage data for their hospitals, and view embedded Power BI dashboards for the ir parenet organizations.
+-   Create and manage portal users (contacts). These users are typically the admins from parent medical organizations that manage one or more hospital systems.
+
+- View Power BI dashboards in their tenant.
 
 ## Prerequisites
 
@@ -28,34 +30,29 @@ This guide is meant for business admins in regional medical organizations to use
 
 ## Add and manage master data
 
-When you sign into the model-driven app, you will see the entities in the left pane where you need to populate the master data. Select the entity in the left navigation pane to view or manage the data.
+When you sign into the admin (model-driven) app, you will see the entities in the left pane where you need to populate the master data. Select the entity in the left navigation pane to view or manage the data.
 
 > [!div class="mx-imgBorder"] 
 > ![Populate the master data](media/config-entities-master-data.png "Populate the master data")
 
--   **Hierarchy area**: Entities in this area can be added either by importing data from the sample data files or manually. The entities under the **Hierarchy** area are listed in the order you should populate data. Also, parent org admins (hospital admins) can view and manage data under the following entities for their hospital from the portal: **Systems**, **Regions**, and **Facilities**.
+-   **Hierarchy area**: Data for entities in this area can be added either by importing data from the sample data files or manually. The entities under the **Hierarchy** area are listed in the order you should populate data. Also, parent org admins (hospital admins) can view and manage data under the following entities for their hospital from the portal: **Systems**, **Regions**, and **Facilities**.
 
     > [!NOTE]
-    > We provide name and FIPS code for all the counties in the Washington state as sample data that you can import. To obtain data for counties in other states, visit <https://www.census.gov/geographies/reference-files/2018/demo/popest/2018-fips.html>
+    > We provide name and FIPS code for all the counties in the Washington state as sample data that you can import. To obtain data counties in other states, visit <https://www.census.gov/geographies/reference-files/2018/demo/popest/2018-fips.html>
 
--   **Admin Entities** area: Data in the **Supplies** entity is added by importing data from the sample data file. You can manually add and manage supplies data later.
+-   **Admin Entities area**: Data in the **Supplies** entity is added by importing data from the sample data file. You can manually add and manage supplies data later.
 
--   **Customers** area: You use the **Portal Users** entity to add and manage portal users. More information: [Manage portal users](#manage-portal-users)
+-   **Customers area**: You use the **Portal Users** entity to add and manage portal users. More information: [Manage portal users](#manage-portal-users)
 
 There are two ways in which you can add master data to entities in the app:
 
-1.  Import data using the sample data files.
+-  Import data using the sample data files.
 
-2.  Manually configure and manage the data.
+-  Manually configure and manage the data.
 
-## Import data using sample files
+### Import data using sample files
 
 The sample data files are available in the deployment package (.zip). When you extract the .zip file, the sample data files are available under the **SampleData** folder.
-
-> [!NOTE]
-> We provide name and FIPS code for all the counties in the Washington state as sample data that you can import. You should import the **Counties** data using the sample data file into your system before proceeding with importing or managing data in any other entities.
-
-To obtain data about counties in other states, visit <https://www.census.gov/geographies/reference-files/2018/demo/popest/2018-fips.html>
 
 Under the **SampleData** folder, the files are named to denote the sequence in which data should be imported into your app. Otherwise, data import will fail.
 
@@ -73,7 +70,12 @@ Under the **SampleData** folder, the files are named to denote the sequence in w
 
 -   6_Facilities.xlsx
 
-### How to load data from data files
+> [!NOTE]
+> We provide name and FIPS code for all the counties in the Washington state as sample data that you can import. You should import the **Counties** data using the sample data file into your system before proceeding with importing or managing data in any other entities.
+> 
+> To obtain data about counties in other states, visit <https://www.census.gov/geographies/reference-files/2018/demo/popest/2018-fips.html>
+
+#### How to load data from data files
 
 To load sample data from the Excel file to an entity: 
 
@@ -84,37 +86,38 @@ To load sample data from the Excel file to an entity: 
        > [!div class="mx-imgBorder"] 
        > ![Import from Excel](media/config-import-excel.png "Import from Excel")
 
-3.  Browse to the **SampleData** folder and select the **2_ParentOrgs.xlsx** file and proceed with the wizard steps to import the data.  
+3.  Browse to the **SampleData** folder and select the **3_Parent Organizations.xlsx** file and proceed with the wizard steps to import the data.  
 
 4.  After the sample data is imported, you will see the imported records in the entity:
 
        > [!div class="mx-imgBorder"] 
        > ![Imported records in entity](media/config-imported-records.png "Imported records in entity")
 
-## Manually configure and manage master data for your organization
+### Manually configure and manage master data for your organization
 
 Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Emergency Response Solution to work.
 
 To start, you must add master data in the following entities:
 
--   Supplies
+-   [Supplies](#supplies-and-counties-data)
 
--   Counties
+-   [Counties](#supplies-and-counties-data)
 
--   Regional Org
+-   [Regional Org](#regional-org-data)
 
--   Parent Orgs
+-   [Parent Org](#parent-org-data)
 
--   Hospital systems managed by each parent org
+-   [Hospital systems](#systems-data) managed by each parent org
 
--   Regions for each hospital system
+-   [Regions](#regions-data)) for each hospital system
 
--   Facilities within each region of a hospital system
+-   [Facilities](#facilities-data)) within each region of a hospital system
 
-> [!IMPORTANT]
-> Use the sample data files to import data for **Supplies** and **Counties** entity.
+#### Supplies and Counties data
 
-### Regional Org data
+Use the sample data files (**0_Supplies.xlsx** and **1_Counties.xlsx**) in the deployment package to import data for **Supplies** and **Counties** entity.
+
+#### Regional Org data
 
 This is the regional network organization that will deploy the solution and manage data from various parent organizations.
 
@@ -134,7 +137,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close.**
 
-### Parent Org data
+#### Parent Org data
 
 The **Parent Org** entity stores the parent organization that will be using the portals set up by regional org to view and manage data related to parent organization’s hospital systems.
 
@@ -159,7 +162,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close.**
 
-### Systems data
+#### Systems data
 
 The **Systems** entity lets you create and manage entries for Hospital Systems. This allows you to manage multiple hospital systems within the same parent organization.
 
@@ -182,7 +185,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close.**
 
-### Regions data
+#### Regions data
 
 The **Regions** entity lets you manage the geographical regions for your hospital systems.
 
@@ -249,7 +252,7 @@ You can also view and manage the associated **Census**, **COVID**, **Equipment**
 
 Use the **Portal Users** entity to add and manage portal users. These portal users are the admins from the various parent organizations hospitals who enter and manage data in the Regional Emergency Response solution for their hospitals and also manage other admin, frontline, or report viewers using the portals.
 
-## Create a portal user
+### Create a portal user
 
 1.  Sign into the admin app.
 

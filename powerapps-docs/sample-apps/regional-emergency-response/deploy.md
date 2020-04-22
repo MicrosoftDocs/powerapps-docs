@@ -621,21 +621,21 @@ For your business admin users to use the admin app (model-driven app) to enter a
 
     > [!div class="mx-imgBorder"] 
     > ![Share admin app](media/deploy-share-admin-app.png "Share admin app")
-    <!-- ![](media/3f3e8a618497e4f2e3aaeba6b98f8df0.png) -->
 
 3.  Specify the Azure AD group or admin users that you want to share this app with, assign the **Regional Emergency Response Admin** security role, and select **Share**.
 
     > [!div class="mx-imgBorder"] 
     > ![Specify Azure AD group or admin users](media/deploy-specify-share.png "Specify Azure AD group or admin users")
-    <!-- ![](media/2189c2426c7a4338e79220e4ab7260f5.png) -->
 
 ## Next steps
 
-The deployment steps are complete now. Business admins can refer to the 03-Configuration guide for business admin document to perform the following steps:
+The deployment steps are complete now. Business admins can refer to the [configuration](configure.md) topic to perform the following steps:
 
-1.  Configure and manage the master data
+-  Configure and manage the master data
 
-2.	Create portal users to invite admin users from individual hospitals so that they can use portals to add and manage data and users.
+-	Create portal users to invite admin users from individual hospitals so that they can use portals to add and manage data and users.
+
+- View Power BI dashboard in your tenant.
 
 ## Report issues
 
