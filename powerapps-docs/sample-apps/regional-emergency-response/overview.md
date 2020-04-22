@@ -18,9 +18,9 @@ The Regional Emergency Response sample solution provides a set of capabilities
 
 The main components of the Regional Emergency Response solution are:
 
-- **Web app for regional organization admins**: Use the app to manage the master data for each parent medical organization in the state or region, where each parent medical organization has one or more hospital systems that report data to the regional medical organization. The regional organization admin can add and manage admin users for each parent organization so that the latter can can use a web portal to report data for their medical organization.
+- **Web app for regional organization admins**: Use the app to manage the master data for each parent medical organization in the state or region, where each parent medical organization has one or more hospital systems that report data to the regional medical organization. The regional organization admin can add and manage admin users for each parent organization so that the latter can use a web portal to report data for their medical organization.
 
-- **Web portal for parent organization admins and users**: Parent organization admins can use the web portal to quickly add and manage users in their organization and also add and manage master data for their hospital systems including regions and facilities. The web portal is also used by healthcare workers to quickly view, add and manage data related to bed capacity, staff, equipment supplies and COVID-19 patients.
+- **Web portal for parent organization admins and users**: Parent organization admins can use the web portal to quickly add and manage users in their organization and also add and manage master data for their hospital systems including regions and facilities. The web portal is also used by healthcare workers to quickly view, add, and manage data related to bed capacity, staff, equipment supplies, and COVID-19 patients.
 
 - **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
     - Regional organization admins can view the dashboard in their Power BI tenant.
@@ -40,7 +40,7 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 |Task | Target audience|See|
 |--|--|--|
 |Deploy the sample solution and set up users and security|Regional organization IT admin|[Deploy the Regional Hospital Emergency Response solution](deploy.md)|
-|Use the admin app to configure master data and create/manage portal users|Regional organization Business admin|[Add and manage master data](configure.md#add-and-manage-master-data)<br/><br/>[Manage portal users](configure.md#manage-portal-users)|
+|Use the admin app to configure master data, create/manage portal users, and view dashboard|Regional organization Business admin|[Use the admin app and dashboard](configure.md)|
 |Use the portal to add/manage portals users for their hospitals, set up and manage master data for their hospitals, and view dashboard for insights and metrics.|Parent organization Business admin|[Administer the Regional Emergency Response portal](portals-admin-reporting.md)|
 |Use the portal to quickly view and add data for bed capacity, staffing, equipment, supplies, and COVID-19 patients.|Healthcare workers|[Use the Regional Emergency Response portal](portals-user.md)|
 
