@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/20/2020
+ms.date: 04/22/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -43,11 +43,11 @@ The server-side cache is deleted, and data is reloaded from Common Data Service.
 
 To learn more about the differences between Power Apps portals and portal add-ons, read [Power Apps portal FAQ](../faq.md#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals).
 
-Portal metadata is stored in entities called *configuration entities*. If you change configuration entities using the *Unified Interface application*, you **must** select **Clear cache** to clear the configuration cache for changes to reflect in your Portal.  
+Portal metadata is stored in entities called *configuration entities*. If you change configuration entities using the *Unified Interface application*, you **must** select **Clear config** to clear the configuration cache for changes to reflect in your Portal.  
 
-### List of configuration entities refreshed when you clear cache
+### List of configuration entities refreshed when you clear config
 
- Clearing the server-side cache for a portal includes refreshing the data from the following *configuration entities*:
+Clearing the server-side configuration cache for a portal includes refreshing the data from the following *configuration entities*:
 
 | Configuration entities:| | |
 |-------------------------------------------|---------------------------|--------------------------------------|
@@ -56,7 +56,6 @@ Portal metadata is stored in entities called *configuration entities*. If you ch
 | adx_entityform                            | adx_shortcut              | adx_webpageaccesscontrolrule_webrole |
 | adx_entityformmetadata                    | adx_sitemarker            | adx_webpagehistory                   |
 | adx_entitylist                            | adx_sitesetting           | adx_webpagelog                       |
-| adx_entitypermission                      | adx_urlhistory            | adx_webrole                          |
 | adx_entitypermission_webrole              | adx_webfile               | adx_webrole_systemuser               |
 | adx_externalidentity                      | adx_webfilelog            | adx_website                          |
 | adx_pagealert                             | adx_webform               | adx_website_list                     |
@@ -66,5 +65,5 @@ Portal metadata is stored in entities called *configuration entities*. If you ch
 | adx_pagetemplate                          | adx_weblink               | adx_websitebinding                   |
 | adx_portallanguage                        | adx_weblinkset            | adx_websitelanguage                  |
 | adx_publishingstate                       | adx_webnotificationentity | adx_webtemplate                      |
-| adx_publishingstatetransitionrule         | adx_webnotificationurl    |                                      |
-| adx_publishingstatetransitionrule_webrole | adx_webpage               |                                      |
+| adx_publishingstatetransitionrule         | adx_webnotificationurl    | adx_urlhistory                       |
+| adx_publishingstatetransitionrule_webrole | adx_webpage               | adx_entitypermission                 |
