@@ -206,7 +206,7 @@ Importing the configuration data under the following entities in the admin app i
 
 To import data from one of the data files to an entity:
 
-1.  In the left navigation pane of the admin app, select an entity for which you want to load the data. For example, select **Administration** from the area picker and then select **Acuities**.
+1.  In the left navigation pane of the admin app, select an entity for which you want to load the data. For example, select **Locations** from the area picker and then select **Acuities**.
 
 2.  Select **Import from Excel** and select the **00 - Acuities Import.xlsx** file from the **Data Files** folder.
 
