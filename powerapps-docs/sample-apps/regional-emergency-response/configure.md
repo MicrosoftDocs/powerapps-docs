@@ -274,6 +274,3 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
 
 5.  In the lookup records page, press enter to displays the existing web roles.
 
-## Report issues
-
-To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.

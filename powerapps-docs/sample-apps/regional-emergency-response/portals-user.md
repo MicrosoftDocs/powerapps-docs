@@ -1,6 +1,6 @@
 ---
-title: Configure Regional Hospital Emergency Response app | Microsoft Docs
-description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
+title: Use the Regional Hospital Emergency Response portal | Microsoft Docs
+description: Learn how to use the Regional Hospital Emergency Response portal.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -12,25 +12,27 @@ ms.reviewer: tapanm
 searchScope:
   - PowerApps
 ---
-# Use the Regional Emergency Response Portal
+# Use the Regional Hospital Emergency Response portal
 
 ## Overview
 
-Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Emergency Response portal, frontline workers can quickly view and add data for ventilators, staffing, pending discharges, and COVID-19 related patients.
+Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Hospital Emergency Response portal, health care workers can quickly view and add data for ventilators, staffing, pending discharges, and COVID-19 related patients.
 
 ## Portal at a glance
 
-Browse to the Power Apps portal to work with staffing, equipment, supplies, patient and other areas. The following section walks you through what you can access, submit or update as the frontline user of the portal.
+Browse to the Power Apps portal to work with staffing, equipment, supplies, patient and other areas. The following section walks you through what you can access, submit or update as the health care user of the portal.
 
 ![Portal at glance ](media/portal-user-at-glance.png)
 
-You can use latest mobile devices and web browsers when using Regional Emergency Response portal except Apple iPad.
+You can use latest mobile devices and web browsers when using Regional Hospital Emergency Response portal except Apple iPad.
 
 [!include[cc-getting-started](includes/cc-getting-started.md)]
 
+[!include[cc-manage-user-profile](includes/cc-manage-user-profile.md)]
+
 ## Portal components
 
-The Regional Emergency Response sample solution app consists of multiple apps for enhanced user experience.
+The Regional Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience.
 
 - **Bed capacity**  
   Collect details regarding bed licenses, capacity, acuteness, staffed and surge data.
@@ -59,10 +61,10 @@ Select **Bed capacity** to update patient information, beds and staffing capacit
 | **Option name**                                               | **Description**                                                                       |
 |---------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | Number of licensed beds currently in use  | Number of licensed beds currently in use at this facility.                            |
-| Number of ICU beds (AIIR Room) currently in use               | Number of Intensive Care Unit beds in Airborne Infection Isolation Rooms currently in use at this facility.                                      |
-| Number of ICU beds (non-AIIR Room) currently in use           | Number of Intensive Care Unit beds Non-Airborne Infection Isolation Rooms currently in use at this facility.                                  |
-| Number of Acute Care beds (AIIR Room) currently in use        | Number of Acute Care beds in Airborne Infection Isolation Rooms currently in use at this facility.                               |
-| Number of Acute Care beds (non-AIIR Room) currently in use    | Number of Acute Care beds in Non-Airborne Infection Isolation Rooms currently in use at this facility.                           |
+| Number of ICU beds (AIIR Room) currently in use               | Number of ICU beds in Airborne Infection Isolation Rooms (AIIR) currently in use at this facility.                                      |
+| Number of ICU beds (non-AIIR Room) currently in use           | Number of ICU beds (non-AIIR) currently in use at this facility.                                  |
+| Number of Acute Care beds (AIIR Room) currently in use        | Number of Acute Care beds (AIIR)) currently in use at this facility.                               |
+| Number of Acute Care beds (non-AIIR Room) currently in use    | Number of Acute Care beds (non-AIIR) currently in use at this facility.                           |
 | Is your facility staffed to its full licensed bed capacity?    | Yes/No. If the answer is No, you have the option to select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
 | Are you able to surge beyond your licensed beds?              | Yes/No. If the answer is No, you have the option to select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
 | Number of surge beds currently in use                         | Number of surge beds currently in use at this facility. 
@@ -133,10 +135,4 @@ Submit COVID-19 specific details using the **COVID-19 stats** form:
 | Number of intubated patients                                      | Number of patients intubated  at this facility.                                      |
 | Number of patients with COVID-19 discharged in the prior 24 hours | Number of patients with COVID-19 discharged in the prior 24 hours at this facility. |
 
-## General portal options
-
 [!include[cc-general-options](includes/cc-general-options.md)]
-
-## Report issues
-
-To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.
