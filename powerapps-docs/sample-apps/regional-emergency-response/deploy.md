@@ -1,5 +1,5 @@
 ---
-title: Configure Regional Hospital Emergency Response app | Microsoft Docs
+title: Deploy the Regional Emergency Response solution | Microsoft Docs
 description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: KumarVivek
 manager: annbe
@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Deploy the Regional Hospital Emergency Response solution
+# Deploy the Regional Emergency Response solution
 
 Regional organization IT admins can use this article to deploy the Regional Emergency Response sample solution. At the end of this deployment process, you will have the following:
 
