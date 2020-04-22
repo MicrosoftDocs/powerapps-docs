@@ -391,3 +391,7 @@ When you hover over map area and point to a county, you can see the county relat
 Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
 
 [!include[cc-general-options](includes/cc-general-options.md)]
+
+## Report issues
+
+To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.

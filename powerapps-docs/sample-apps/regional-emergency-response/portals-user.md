@@ -136,3 +136,7 @@ Submit COVID-19 specific details using the **COVID-19 stats** form:
 | Number of patients with COVID-19 discharged in the prior 24 hours | Number of patients with COVID-19 discharged in the prior 24 hours at this facility. |
 
 [!include[cc-general-options](includes/cc-general-options.md)]
+
+## Report issues
+
+To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.
