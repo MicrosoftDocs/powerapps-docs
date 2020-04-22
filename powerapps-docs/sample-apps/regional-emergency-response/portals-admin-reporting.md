@@ -54,7 +54,7 @@ You can view all administrative options available to you after selecting **Admin
 
 ### Add Users
 
-Go to **Add Users** to create new users that can administer the portal, view the dashboards, or use the portal as the frontline staff:
+Go to **Add Users** to create new users that can administer the portal, view the dashboards, or use the portal as the healthcare worker:
 
 ![Add users](media/portal-admin-add-user.png)
 
@@ -96,7 +96,7 @@ The following section walks through each one of the roles with details of what t
 
 ##### Organizational HealthCare Worker
 
-A Frontline Worker is an employee of a hospital system such as a registered nurse. Frontline Worker works within one or more facilities. The frontline worker collects data across the following areas:
+A Healthcare Worker is an employee of a hospital system such as a registered nurse. Healthcare worker works within one or more facilities. The healthcare worker collects data across the following areas:
 
 - Bed capacity
 

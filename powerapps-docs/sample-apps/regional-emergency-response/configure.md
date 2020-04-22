@@ -113,6 +113,8 @@ To start, you must add master data in the following entities:
 
 -   [Facilities](#facilities-data)) within each region of a hospital system
 
+Sign into the admin app using the URL provided by your IT admin to add and manage data.
+
 #### Supplies and Counties data
 
 Use the sample data files (**0_Supplies.xlsx** and **1_Counties.xlsx**) in the deployment package to import data for **Supplies** and **Counties** entity.
@@ -237,6 +239,7 @@ To create a record:
     | Surge Bed Capacity           | Type the number of surge beds the facility can have. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                              |
     | Non-AIIR Acute Care Capacity | Type the total number of Acute care beds in non- AIIR (Airborne Infection Isolation Room).|
     | Non-AIIR ICU Capacity        | Type the total number of ICU beds in non-AIIR.              |
+    |Total Mortuary Capacity       | Type the total mortuary capacity for the facility.|
     | Facility Address    | Type the Street, City, County, State, Zip code, Latitude, and Longitude for the facility.   |
 
 3.  Select **Save & Close.** The newly created record will be available in the **Facilities** list.
@@ -250,11 +253,11 @@ You can also view and manage the associated **Census**, **COVID**, **Equipment**
 
 ## Manage portal users
 
-Use the **Portal Users** entity to add and manage portal users. These portal users are the admins from the various parent organizations hospitals who enter and manage data in the Regional Emergency Response solution for their hospitals and also manage other admin, frontline, or report viewers using the portals.
+Use the **Portal Users** entity to add and manage portal users. These portal users are the admins from the various parent organizations who report their hospital systems data to regional organizations and also manage other admins, healthcare workers, or report viewers using the portals.
 
 ### Create a portal user
 
-1.  Sign into the admin app.
+1.  Sign into the admin app using the URL provided by your IT admin.
 
 2.  In the left pane, select **Portal Users**. You see a list of portal users, if they are already added by other admins in your org. Selecting a user will open the details about the user.
 
@@ -269,13 +272,42 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
     | Last Name           | Last name of the user  |
     | Email     | Email of the user where the invitation will be sent.    |
     | Parent Organization | Select a parent organization that this portal user will be associated with. This ensures that the user has access only to the hospital systems data under the selected parent org. If you don’t specify a parent org for the user, she/she will have access to data for all the parent orgs under the regional org. |
-    | Hospital System     | Select a hospital for this user. |
-    | Region  | Select a region for this user.  |
-    | Facility            | Select a facility for this user. |
+    | Hospital System     | Select a hospital that this portal user will be associated with. |
+    | Region  | Select a region that this portal user will be associated with.  |
+    | Facility            | Select a facility that this portal user will be associated with. |
 
 4.  Save the record. On saving the record, the **Web Roles** area becomes available. Select **Add Existing Web Role.**
 
 5.  In the lookup records page, press enter to displays the existing web roles.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select a role](media/config-select-portal-role.png "Select a role")
+
+6. Select roles as per the portal access you need to provide to the user. To give access to all the features in the portal, select all the three roles: **Organization HealthCare Worker**, **Parent Organization Administrator**, and **Report Viewer**.
+
+    For information about portal access each of these roles provide, see the [Create user](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#create-user) section in the portal administration topic.
+
+    To grant a role, select the role, and select **Add**.
+
+7. Save the portal user record.
+
+Depending on the roles(s) you granted to the user, she/he will view respective areas in the portal. More information: [Portal for admins and report viewers](portals-admin-reporting.md) and [Portal for healthcare workers](portals-user.md)
+
+An email will be sent automatically to the newly created user with an invitation code to join portals. The portal user can redeem the invitation to sign in and start using the portal. More information: [Get started with the portal](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#getting-started-with-the-portal)
+
+## View the Power BI dashboard
+
+Business admins in the regional organization can view the Power BI dashboard in their Power BI tenant if the regional IT admin published the report as an app and granted access to business admins. More information: [Step 5: Configure and publish Power BI dashboard](deploy.md#step-5-configure-and-publish-power-bi-dashboard) 
+
+To view the Power BI dashboard:
+
+1. Sign into [Power BI](https://app.powerbi.com).
+
+2. The workspace where the app was published will be available for you to access the dashboard.
+
+3. The Power BI dashboard that is available to you in your Power BI tenant is the same as the one available to users of the portal. The **primary difference** is that as a business admin of a regional organization, you can view data for all the parent organizations that report data to the regional organization, whereas users viewing the dashboard embedded in portal can only view data for their parent organization and associated hospital systems.
+
+For detailed information presented in the Power BI dashboard, see [Get insights](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#get-insights) in the portal topic.
 
 ## Report issues
 
