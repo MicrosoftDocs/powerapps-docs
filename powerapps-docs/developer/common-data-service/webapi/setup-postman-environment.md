@@ -89,6 +89,80 @@ To connect using **OAuth 2.0**, you must have an access token. Use the following
 
 See [Test your connection](#test-your-connection) for steps to verify your connection.
 
+> [!IMPORTANT]
+> If you face issues when clicking the button to **Request Token** and are not able to get a token you may need to use different environment detials. If so, use details like the below when creating a new environment.
+
+1. In the dialog box that opens, type a name for the environment. Then add the following key-value pairs into the editing space. Make sure the `callbackurl` is listed in your Redirect URIs listed in the Authentication section of your Apps page udner App Registrations in the Azure Portal.<br>
+
+    | Variable name | Value |
+    |----|---|
+    |`url`|`https://<add your environment name, like 'myorg.crm'>.dynamics.com`|
+    |`clientid`|`<add your client id>`|
+    |`clientsecret`|`<add your client secret>`|
+    |`version`|`<your version>`|
+    |`webapiurl`|`{{url}}/api/data/v{{version}}/`|
+    |`callback`|`https://<use your callback url>`|
+    |`authurl`|`https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}`|
+    |`accesstokenurl`|`https://login.windows.net/<your tenant>.onmicrosoft.com/oauth2/token?resource={{url}}`|
+
+Your tenant name can be found by selecting the Azure Active Directory app in the Azure Portal.
+
+Instead of typing this in manually you can also import a JSON file to create a new environment. 
+Here's a template you can use below:
+
+```json
+{
+	"id": "d4f8ebec-579c-49c5-b554-0782c094bed5",
+	"name": "Microsoft Common Data Service",
+	"values": [
+		{
+			"key": "callback",
+			"value": "https://YOUR_CALL_BACK_URL_FROM_THE_APP_REGISTRAION_IN_THE_AZURE_PORTAL",
+			"enabled": true
+		},
+		{
+			"key": "url",
+			"value": "https://YOUR_ORG.api.crm.dynamics.com/",
+			"enabled": true
+		},
+		{
+			"key": "clientid",
+			"value": "YOUR_ID",
+			"enabled": true
+		},
+		{
+			"key": "clientsecret",
+			"value": "YOUR_SECRET",
+			"enabled": true
+		},
+		{
+			"key": "version",
+			"value": "YOUR_VERSION like 9.0",
+			"enabled": true
+		},
+		{
+			"key": "restapiurl",
+			"value": "{{url}}/api/data/v{{version}}",
+			"enabled": true
+		},
+		{
+			"key": "authurl",
+			"value": "https://login.microsoftonline.com/common/oauth2/authorize?resource={{url}}",
+			"enabled": true
+		},
+		{
+			"key": "accesstokenurl",
+			"value": "https://login.windows.net/YOUR_TENANT.onmicrosoft.com/oauth2/token?resource={{url}}",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2020-04-22T17:41:46.718Z",
+	"_postman_exported_using": "Postman/7.22.1"
+}
+```
+
+
 ## Test your connection
 
 Create a new Web API request to test the connection with your Common Data Service instance. Use the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI function" />:
