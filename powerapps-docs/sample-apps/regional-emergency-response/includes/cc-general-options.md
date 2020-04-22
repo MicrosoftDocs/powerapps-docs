@@ -12,9 +12,6 @@ You can sign out from the app using the profile icon on the upper-right side of 
 
 ![Sign Out](..\media\portal-user-signout.png)
 
-> [!NOTE]
-> Sign-out may not be available if your IT administrator has disabled device sharing.
-
 ### Switch facility
 
 Switch facility anytime by selecting the facility name on the top-right side of the screen.
