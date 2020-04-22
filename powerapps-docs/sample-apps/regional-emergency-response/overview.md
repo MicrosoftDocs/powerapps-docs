@@ -14,13 +14,13 @@ searchScope:
 ---
 # Regional Emergency Response - Power Platform sample solution
 
-The Regional Emergency Response sample solution provides a set of capabilities for regional medical organizations to collect and manage data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges from all the hospitals in a state or region.
+The Regional Emergency Response sample solution provides a set of capabilities for regional medical organizations to collect and manage data for situational awareness from all the parent organizations and associated hospitals in their network. The data includes information about available beds, supplies, equipment, COVID-19 patients, and staffing.
 
-The main components of the Hospital Emergency Response solution are:
+The main components of the Regional Emergency Response solution are:
 
 - **Web app for regional organization admins**: Use the app to manage the master data for each parent medical organization in the state or region, where each parent medical organization has one or more hospital systems that report data to the regional medical organization. The regional organization admin can add and manage admin users for each parent organization so that the latter can can use a web portal to report data for their medical organization.
 
-- **Web portal for parent organization admins and users**: Parent organization admins can use the web portal to quickly add and manage users in their organization and also add and manage master data for their hospital systems including regions and facilities. The web portal is also used by healthcare workers to quickly view, add and manage data related to bed capacity, staff, equipments supplies and COVID-19 patients.
+- **Web portal for parent organization admins and users**: Parent organization admins can use the web portal to quickly add and manage users in their organization and also add and manage master data for their hospital systems including regions and facilities. The web portal is also used by healthcare workers to quickly view, add and manage data related to bed capacity, staff, equipment supplies and COVID-19 patients.
 
 - **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
     - Regional organization admins can view the dashboard in their Power BI tenant.
@@ -40,8 +40,9 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 |Task | Target audience|See|
 |--|--|--|
 |Deploy the sample solution and set up users and security|Regional organization IT admin|[Deploy the Regional Hospital Emergency Response solution](deploy.md)|
-|Use the admin app to configure and manage master data and create/manage portal users|Regional organization Business admin|[Configure Regional Hospital Emergency Response solution](configure.md#configure-and-manage-master-data-for-your-organization)|
-|Use the portal to add/manage portals users for their hospitals, set up and manage master data for their hospitals, and view dashboard for insights and metrics.|Parent organization Business admin|[Administer the Regional Emergency Response portal](portals-admin-reporting.md)
+|Use the admin app to configure master data and create/manage portal users|Regional organization Business admin|[Add and manage master data](configure.md#add-and-manage-master-data)<br/><br/>[Manage portal users](configure.md#manage-portal-users)|
+|Use the portal to add/manage portals users for their hospitals, set up and manage master data for their hospitals, and view dashboard for insights and metrics.|Parent organization Business admin|[Administer the Regional Emergency Response portal](portals-admin-reporting.md)|
+|Use the portal to quickly view and add data for bed capacity, staffing, equipment, supplies, and COVID-19 patients.|Healthcare workers|[Use the Regional Emergency Response portal](portals-user.md)|
 
 
 ## Report issues
