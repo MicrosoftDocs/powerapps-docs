@@ -1661,7 +1661,7 @@
       href: ../sample-apps/regional-emergency-response/deploy.md
     - name: App and dashboard for regional admin
       href: ../sample-apps/regional-emergency-response/configure.md
-    - name: Portal for admins and report viewer
+    - name: Portal for admin and report viewer
       href: ../sample-apps/regional-emergency-response/portals-admin-reporting.md
     - name: Portal for healthcare worker
       href: ../sample-apps/regional-emergency-response/portals-user.md
