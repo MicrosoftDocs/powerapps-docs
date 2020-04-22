@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 04/22/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -178,7 +178,7 @@ Configure site settings and password reset policy for your Azure AD B2C provider
 - **Authority** - The issuer URL defined in the metadata of the sign up and sign in policy user flow.​
 <br> To get issuer URL:
 
-    1. Open the sign-up and sign-in user flow in created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
+    1. Open the sign-up and sign-in user flow in created in [step 1](#step-1---configure-azure-active-directory-b2c-application). For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
     1. Select **Run user flow** and in the open dialog box, select the URL at the top to open the configuration document. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
     1. Copy the URL of the **Issuer** from the configuration document that opens in a new browser.  
 
@@ -194,7 +194,7 @@ Configure site settings and password reset policy for your Azure AD B2C provider
 - **Valid issuers** - A comma-delimited list of issuer URLs for the *sign up and sign in user flow* and *password reset user flow* created in [step 1](#step-1---configure-azure-active-directory-b2c-application). 
 <br> To get issuer URL:
 
-    1. Open the sign-up and sign-in user flow in created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
+    1. Open the sign-up and sign-in user flow in created in [step 1](#step-1---configure-azure-active-directory-b2c-application). For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
     1. Select **Run user flow** and in the open dialog box, select the URL at the top to open the configuration document. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
     1. Copy the URL of the **Issuer** from the configuration document that opens in a new browser.
     1. Repeat the above steps for *password reset user flow*.
