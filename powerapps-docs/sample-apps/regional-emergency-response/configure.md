@@ -14,11 +14,11 @@ searchScope:
 ---
 # Configure Regional Hospital Emergency Response app
 
-This guide is meant for business admins in network hospital centers to use the admin app available in the Regional Emergency Response Network solution to do the following:
+This guide is meant for business admins in regional medical organizations to use the admin app (model-driven app) to perform the following activities:
 
 -   Create and manage master data in entities required for the solution
 
--   Create and manage portal users (contacts). These portal users are the admins from individual hospitals that enable them to use the portal for managing data for their hospitals and adding their hospital users who need to access the portal.
+-   Create and manage portal users (contacts). These users are typically the admins from parent medical organizations that manage one or more hospital systems. These parent medical organization admins use the portal to add and manage users from their hospital system, add and manage data for their hospitals, and view embedded Power BI dashboards for the ir parenet organizations.
 
 ## Prerequisites
 
