@@ -20,7 +20,7 @@ Hospital staff are challenged to meet an increase in number of patients while ma
 
 ## Portal at a glance
 
-Browse to the Power Apps portal to work with staffing, equipment, supplies, patient and other areas. The following section walks you through what you can access, submit or update as the health care user of the portal.
+Browse to the Power Apps portal to work with staffing, equipment, supplies, patient, and other areas. The following section walks you through what you can access, submit, or update as the health care user of the portal.
 
 ![Portal at glance ](media/portal-user-at-glance.png)
 
@@ -32,16 +32,16 @@ You can use latest mobile devices and web browsers when using Regional Hospital 
 
 ## Portal components
 
-The Regional Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience.
+The Regional Hospital Emergency Response portal consists of the following components:
 
 - **Bed capacity**  
-  Collect details regarding bed licenses, capacity, acuteness, staffed and surge data.
+  Collect details regarding bed licenses, capacity, acuteness, staffed beds, and surge data.
 
 - **Staff**  
   Collect status of the RNs by location in that facility.
 
 - **Equipment**  
-  Collect equipment details such as ventilators, PAPR belts/chargers/hoods.
+  Collect equipment details such as ventilators and NIPPV devices.
 
 - **Supplies**  
   Collect key supplies to track, manage, and forecast inventory more effectively. ​
@@ -52,7 +52,7 @@ The Regional Hospital Emergency Response sample solution app consists of multipl
 
 ## Bed capacity
 
-Select **Bed capacity** to update patient information, beds and staffing capacity for the selected location:
+Select **Bed capacity** to update patient information, beds, and staffing capacity for the selected location:
 
 ![Bed capacity](media/portal-user-bed-capacity.png)
 
@@ -65,14 +65,14 @@ Select **Bed capacity** to update patient information, beds and staffing capacit
 | Number of ICU beds (non-AIIR Room) currently in use           | Number of ICU beds (non-AIIR) currently in use at this facility.                                  |
 | Number of Acute Care beds (AIIR Room) currently in use        | Number of Acute Care beds (AIIR)) currently in use at this facility.                               |
 | Number of Acute Care beds (non-AIIR Room) currently in use    | Number of Acute Care beds (non-AIIR) currently in use at this facility.                           |
-| Is your facility staffed to its full licensed bed capacity?    | Yes/No. If the answer is No, you have the option to select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
-| Are you able to surge beyond your licensed beds?              | Yes/No. If the answer is No, you have the option to select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
+| Is your facility staffed to its full licensed bed capacity?    | Yes/No. If the answer is No, can select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
+| Are you able to surge beyond your licensed beds?              | Yes/No. If the answer is No, can select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
 | Number of surge beds currently in use                         | Number of surge beds currently in use at this facility. 
-| Number of decedent accommodations currently in use                                            | Number of decedent accommodations currently in use at this facility. <br> **Note**: Only visible if the *Total Mortuary Capacity* for the selected facility is greater than 0.
+| Number of decedent accommodations currently in use                                            | Number of decedent accommodations currently in use at this facility. <br> **Note**: Only visible if the *Total Mortuary Capacity* for the selected facility is at least 1.
 
 ### Previous submissions
 
-When you open **Bed capacity**, or any other components such as **Staff**, **Equipment**, **Supplies** or **COVID-19 stats**, you can see last submission date, time and submitter.
+When you open **Bed capacity**, or any other components such as **Staff**, **Equipment**, **Supplies, or **COVID-19 stats**, you can see last submission date, time, and submitter.
 
 If you select individual field, such as *Number of licensed beds currently in use* for **Bed capacity**, you can also see the previous value submitted for the field:
 
@@ -80,7 +80,7 @@ If you select individual field, such as *Number of licensed beds currently in us
 
 ## Staff
 
-Submit staff specific details such as absenteeism, and registered nurse related details such as *on duty* and *currently needed* with **Staff**
+Submit staff-specific details such as absenteeism, and registered nurse-related details such as *on duty* and *currently needed* with **Staff**
 form:
 
 ![Staff details](media/portal-user-staff-details.png)
@@ -95,7 +95,7 @@ form:
 
 ## Equipment
 
-Submit the equipment details such as ventilators, PAPR belts/chargers/hoods:
+Submit the equipment details such as ventilators and NIPPV devices:
 
 ![Equipment details](media/portal-user-equipment-details.png)
 
@@ -104,7 +104,7 @@ Submit the equipment details such as ventilators, PAPR belts/chargers/hoods:
 | **Option name** | **Description**                 |
 |-----------------|---------------------------------|
 | Ventilators     | Number of ventilators in use.   |
-| NIPPV (Non Invasive Positive Pressure Ventilation)          | Number of NIPPV (Non Invasive Positive Pressure Ventilation) devices in use. |
+| NIPPV (Non-Invasive Positive Pressure Ventilation)          | Number of NIPPV (Non-Invasive Positive Pressure Ventilation) devices in use. |
 
 ## Supplies
 

@@ -28,7 +28,6 @@ From any page, you can always go back to the home page by selecting the state de
 
 ![Navigation](..\media\portal-user-navigation.png)
 
-You can also go back to the previous page, such as to **Bed Capacity** in the
-following example with link to **Bed Capacity:**
+You can also go back to the previous page such as back to **Home**:
 
 ![Navigation](..\media\portal-user-bed-capacity-navigation.png)

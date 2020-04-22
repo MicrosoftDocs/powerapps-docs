@@ -20,7 +20,7 @@ portal, administrators can quickly view and update data related to **Users**, **
 ## Portal at a glance
 
 Browse to the Power Apps portal to add, edit or delete **Users**, **Systems**, **Regions**, and **Facilities**. The following section walks you through what you can
-access, submit or update as the administrator of the portal.
+access, submit, or update as the administrator of the portal.
 
 ![Portal at glance](media/portal-at-glance.png)
 
@@ -43,20 +43,22 @@ You can view all administrative options available to you after selecting **Admin
 
 ![Portal Administration](media/portal-admin-screen.png)
 
-### Options and description
+### Administrative tasks and description
 
 | **Option name** | **Description**                                                                                               |
 |-----------------|---------------------------------------------------------------------------------------------------------------|
-| Add Users       | Add users to the portal to different available roles.                                                         |
-| Add System      | System related tasks such as adding a new system, deleting an existing system or view/modify existing system. |
-| Add Region      | Region related tasks such as adding a new region or deleting an existing region.                              |
-| Add Facility    | Facility related tasks such as adding a new facility or deleting an existing facility.                        |
+| [Add Users](#add-users)       | Create, edit, or deactivate portal users.                                                         |
+| [Add System](#add-system)      | Create, edit, or delete systems. |
+| [Add Region](#add-region-1)      | Create or delete regions.                              |
+| [Add Facility](#add-facility)    | Create, edit, or delete facilities.                        |
 
 ### Add Users
 
-Go to **Add Users** to create new users that can administer the portal, view the dashboards or use the portal as the frontline staff:
+Go to **Add Users** to create new users that can administer the portal, view the dashboards, or use the portal as the frontline staff:
 
 ![Add users](media/portal-admin-add-user.png)
+
+You can also [view user details](#view-user-details), [change user role](#change-role-for-a-user) and [deactivate user](#deactivate-a-user) from **Add Users**.
 
 #### Search user details
 
@@ -88,7 +90,7 @@ To create users, select **Create User** button when in **Add Users** form. And t
 
 ![Create user](media/portal-admin-create-user.png)
 
-Enter **First Name**, **Last Name**, **Email** and **Mobile Phone** and then select a role for the user.
+Enter **First Name**, **Last Name**, **Email, and **Mobile Phone** and then select a role for the user.
 
 The following section walks through each one of the roles with details of what the member of the role can do:
 
@@ -130,19 +132,39 @@ A Parent Organization Administrator can create users that can access the organiz
 
 Members of Parent Organization Administrator role can:
 
-- Create new users and add them to the **Organizational HealthCare Worker, Report Viewer** or the **Parent Organization Administrator** roles.
+- Create new users and add them to the **Organizational HealthCare Worker, Report Viewer**, or the **Parent Organization Administrator** roles.
 
 - Change metadata for the organization with:
 
-    - Addition, updates and deletion of **System**
+    - Addition, updates, and deletion of **System**
 
     - Addition and deletion of **Region**
 
     - Addition and deletion of **Facility**
 
+#### View user details
+
+You can view user details by selecting the drop-down for the user and then selecting **View details**:
+
+![View user options](media/portal-user-view-user-options.png)
+
+##### Change role for a user
+
+You can add or remove user roles from the user details:
+
+![View user details](media/portal-user-view-details.png)
+
+#### Deactivate a user
+
+Select **Deactivate** from the user drop-down to deactivate a user account:
+
+![View user options](media/portal-user-view-user-options.png)
+
+Deactivated user is no longer shown in the list of users on **Add Users** page.
+
 ### Add System
 
-You can add, update or delete a **System** using the **Add System** form. When you select **Add System**, you can see all existing **Hospital Systems**:
+You can add, update, or delete a **System** using the **Add System** form. When you select **Add System**, you can see all existing **Hospital Systems**:
 
 ![Add system](media/portal-add-system.png)
 
@@ -157,7 +179,7 @@ To view details of a system, select the drop-down menu for a system and then sel
 
 ![View System](media/portal-view-system-details.png)
 
-System Details page shows **Parent Organization, System Name**, **Description** and **Regions** within the system:
+System Details page shows **Parent Organization, System Name**, **Description**, and **Regions** within the system:
 
 ![System details](media/portal-system-details.png)
 
@@ -170,7 +192,7 @@ Use the **Add Region** button to add a region to the current system. When you se
 
 ![Add region](media/portal-admin-add-region.png)
 
-You can change **System** in the drop down before you add a region. However, prefer to add a region to a system by first viewing the system that you want to add region to. This is because once you select **Submit**, if the system you selected is different from the details page you have open, you can’t see the region listed in the region section.
+You can change **System** in the drop-down before you add a region. However, prefer to add a region to a system by first viewing the system that you want to add region to. This is because once you select **Submit**, if the system you selected is different from the details page you have open, you can’t see the region listed in the region section.
 
 #### Create system
 
@@ -184,7 +206,7 @@ To delete a system, select the drop-down menu and then select **Delete** option:
 
 ![Delete system](media/portal-view-system-details.png)
 
-Select **Delete** to delete a system record. Note that you’re prompted confirming deletion before the system gets deleted:
+Select **Delete** to delete a system record. You're prompted confirming deletion before the system gets deleted:
 
 ![Delete confirm](media/portal-delete-system-confirm.png)
 
@@ -196,11 +218,11 @@ You can add or delete a **Region** using the **Add Region** form. When you selec
 
 #### Search existing regions
 
-Enter text in search box to search for region and filter the list of regions on the form. You can use wildcard search (**\***) combined with text characters for **Region Name, System** and **Description** fields.
+Enter text in search box to search for region and filter the list of regions on the form. You can use wildcard search (**\***) combined with text characters for **Region Name, System**, and **Description** fields.
 
 #### Create Region
 
-To create a region, select the **Create** button, select a **System** and then enter **Region Name** and **Description:**
+To create a region, select the **Create** button, select a **System**, and then enter **Region Name** and **Description:**
 
 ![Create region](media/portal-admin-create-region.png)
 
@@ -210,20 +232,20 @@ To delete a region, select the drop-down menu and then select **Delete** option:
 
 ![Delete region](media/portal-admin-delete-region.png)
 
-Note that you’re prompted confirming deletion before the region gets deleted:
+You're prompted confirming deletion before the region gets deleted:
 
 ![Delete region confirm](media/portal-admin-delete-region-confirm.png)
 
 ### Add Facility
 
 You can add or delete a **Facility** using the **Add Facility** form. When you select **Add Facility**, you can see all existing **Facilities** with region,
-county and other details:
+county, and other details:
 
 ![Delete confirm](media/portal-admin-add-facility.png)
 
 #### Search existing facilities
 
-Enter text in search box to search for system and filter the list of facilities on the form. You can use wildcard search (**\***) combined with text characters for **Facility Name, Region** and **County Name** fields.
+Enter text in search box to search for system and filter the list of facilities on the form. You can use wildcard search (**\***) combined with text characters for **Facility Name, Region, and **County Name** fields.
 
 #### Create Facility
 
@@ -241,14 +263,19 @@ To create a facility, select the **Create** button:
 | ICU Beds (AIIR Room) Total Capacity            | Number of total ICU beds in AIIR (Airborne Infect Isolation Room).                                                                                                                                         |
 | Acute Care Beds (AIIR Room) Total Capacity     | Total Acute Care beds (AIIR) capacity, in number format.                                                                                                                                                   |
 | Ventilators Total Capacity                     | Total ventilator capacity, in number format.                                                                                                                                                               |
-| Supplies List | Select **Supplies List** to choose items from the available supplies available at the facility. |
+| Supplies List | Select [Supplies List](#supplies-list-for-a-facility) to choose items from the available supplies available at the facility. |
 | DOH Number                                     | The Department of Health number for this facility.                                                                                                                                                         |
 | Follows Droplet Protocol                       | Select **Yes**/**No**. Relates to the facility following Droplet Precautions for patients known or suspected to be infected with pathogens transmitted by respiratory droplets, such as in COVID-19 cases. |
 | Surge Beds Total Capacity                      | Total surge beds capacity, in number format. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted                                               |
 | ICU Beds (non-AIIR Room) Total Capacity        | Number of total ICU beds (non-AIIR).                                                                                                                                                                       |
 | Acute Care Beds (non-AIIR Room) Total Capacity | Total Acute Care beds (non-AIIR) capacity, in number format.                                                                                                                                               |
-| Total Mortuary Capacity | Total mortuary capacity for the facility. **Note**: When set to 1 or greater, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form. 
-| Facility Address                               | Street, City, County, State and Zip code for the facility location.                                                                                                                                        |
+| Total Mortuary Capacity | Total mortuary capacity for the facility. **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form.
+| Facility Address                               | Street, City, County, State, and Zip code for the facility location.                                                                                                                                        |
+##### Supplies list for a facility
+
+When you select **Supplies List**, you can select individual supply and **Save** the list to associate the available supplies for the facility:
+
+![Supplies list for facility](media/portal-admin-add-facility-supplies.png)
 
 #### Delete Facility
 
@@ -257,7 +284,7 @@ option:
 
 ![Delete facility](media/portal-admin-delete-facility.png)
 
-Note that you’re prompted confirming deletion before the facility gets deleted:
+You're prompted confirming deletion before the facility gets deleted:
 
 ![Delete facility confirm](media/portal-admin-delete-facility-confirm.png)
 
@@ -279,15 +306,15 @@ If you are a member of **Report Viewer** role, you’ll see option to view **Das
 
 Dashboards are available for the following insights:
 
-- System at a glance
+- [System at a glance](#system-at-a-glance)
 
-- COVID-19 Patient Details
+- [COVID-19 patient details](#covid-19-patient-details)
 
-- Bed capacity details
+- [Bed capacity details](#bed-capacity-details)
 
-- Equipment details
+- [Equipment details](#equipment-details)
 
-- Supplies details
+- [Supplies details](#equipment-details)
 
 #### Working with reports in Power BI
 
@@ -295,7 +322,7 @@ Before you begin review of available dashboards, get familiar with general repor
 
 - Selecting the information icon (i) in any of the summarized area takes you to the respective details page for the area.
 
-- You can also perform other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports).
+- You can also do other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports).
 
 - The most recent or last updated columns in some of these reports show the date and time when the data was last refreshed. It's also easy to identify the freshness by viewing the color of the date and time values in these columns:
 
@@ -315,11 +342,11 @@ The dashboard displays summary for the following:
 
 - **COVID-19 stats**: View COVID-19 patient summary in numbers with total patients, patients under investigation, positive and intubated patients.
 
-- **Bed capacity**: View the summary data with **Availability** and **Occupancy** for licensed, ICU, Acute and Surge categories.
+- **Bed capacity**: View the summary data with **Availability** and **Occupancy** for licensed, ICU, Acute, and Surge categories.
 
 - **Beds Availability by County**: View bed availability with total number of beds, ICU/Acute/Surge bed availability and total of all bed availability across all counties.
 
-- **Supplies**: View supply information with days on-hand for each separately.
+- **Supplies**: View supply information with days-on-hand for each separately.
 
 - **Equipment**: View ventilators and equipment summary numbers with availability, in-use and needed.
 
@@ -333,25 +360,25 @@ You can also view counties in map and the counties are color coded for segregati
 
 #### Map
 
-Hover over a county inside the map to see the county specific COVID-19 PUIs, positives and intubation numbers:
+Hover over a county inside the map to see the county-specific COVID-19 PUIs, positives, and intubation numbers:
 
 ![Patient map](media/portal-admin-powerbi-map.png)
 
-Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
+Similarly, you can hover over the timeline chart to view date-specific numbers in tooltip as you move across dates.
 
 ### Bed capacity details
 
-View bed related insights such as bed availability with licensed, acute, AIIR/non-AAIR, surge and ICU numbers. You can also view the details in tabular format at bottom with per-county bed data and in percentage format. The map is color coded for counties with lighter color for lower numbers and increasing in darkness as the number increases. The chart on bottom right shows occupancy differences based on dates for trend analysis:
+View bed-related insights such as bed availability with licensed, acute, AIIR/non-AAIR, surge, and ICU numbers. You can also view the details in tabular format at bottom with per-county bed data and in percentage format. The map is color coded for counties with lighter color for lower numbers and increasing in darkness as the number increases. The chart on bottom right shows occupancy differences based on dates for trend analysis:
 
 ![Bed capacity](media/portal-admin-powerbi-bed-capacity.png)
 
 #### Map
 
-When you hover over map area and point to a county, you can see the county related information:
+When you hover over map area and point to a county, you can see the county-related information:
 
 ![Bed capacity map](media/portal-admin-powerbi-map1.png)
 
-Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
+Similarly, you can hover over the timeline chart to view date-specific numbers in tooltip as you move across dates.
 
 ### Equipment details
 
@@ -359,18 +386,18 @@ View equipment details on a per-county basis such as ventilators availability an
 
 ![Equipment details](media/portal-admin-powerbi-equipment.png)
 
-You can see the total numbers of equipment availability on top left and detailed table on bottom left. The map shows county-specific equipment data with lighter
+You can see the total amount of equipment availability on top left and detailed table on bottom left. The map shows county-specific equipment data with lighter
 color with lesser and darker color with higher requirement numbers.
 
 The timeline chart on bottom right shows equipment insights for trend analysis across dates.
 
 #### Map
 
-When you hover over map area and point to a county, you can see the county related information:
+When you hover over map area and point to a county, you can see the county-related information:
 
 ![Equipment map](media/portal-admin-powerbi-equipment-map.png)
 
-Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
+Similarly, you can hover over the timeline chart to view date-specific numbers in tooltip as you move across dates.
 
 ### Supply details
 
@@ -382,11 +409,11 @@ You can see the supply details on the left based on **Health System,** map on th
 
 #### Map
 
-When you hover over map area and point to a county, you can see the county related information:
+When you hover over map area and point to a county, you can see the county-related information:
 
 ![Supply map](media/portal-admin-powerbi-supply-map.png)
 
-Similarly, you can hover over the timeline chart to view date specific numbers in tooltip as you move across dates.
+Similarly, you can hover over the timeline chart to view date-specific numbers in tooltip as you move across dates.
 
 ## General portal options
 
