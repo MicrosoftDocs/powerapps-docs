@@ -628,3 +628,7 @@ The deployment steps are complete now. Business admins can refer to the 03-Confi
 1.  Configure and manage the master data
 
 2.	Create portal users to invite admin users from individual hospitals so that they can use portals to add and manage data and users.
+
+## Report issues
+
+To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.
