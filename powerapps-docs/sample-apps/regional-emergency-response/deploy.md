@@ -14,13 +14,15 @@ searchScope:
 ---
 # Deploy the Regional Hospital Emergency Response solution
 
-This guide is meant for IT admins in regional medical organizations to deploy the Regional Emergency Response Network solution. At the end of this deployment process, you will have an environment with the following:
+Regional organization IT admins can use this article to deploy the Regional Emergency Response sample solution. At the end of this deployment process, you will have the following:
 
-- A web portal that enables individual hospitals to add and manage data related to their hospitals, regions, facilities, patients, supplies, and staff.
+- An admin app (model-driven app) that lets you configure and view master data for parent organizations and their hospital systems, add and manage admin users from parent organizations so that they can use the portal to report data for their hospital systems.
 
-- An admin app that lets you configure and manage master data for the hospitals in your network and add/manage admin users from hospitals in your network who will be using the portals.
+- A web portal that enables individual parent organizations to add and manage data related to their users, hospital systems, regions, facilities, patients, supplies, and staff.
 
-- A Power BI dashboard embedded in the portal for healthcare decision makers to get key insights. Perform the following steps to deploy the Regional Emergency Response sample solution for your organization.
+- A Power BI dashboard that your regional admins can access in your Power BI tenant to view key data and insights for all the parent organizations that report data to your regional organization. The same dashboard is embedded in the portal for parent organization admins to view key data and insights just for their parent organizations and hospital systems.
+
+Perform the following steps to deploy the Regional Emergency Response sample solution for your organization.
 
 Estimated time to complete these steps: 35–40 minutes.
 
@@ -176,16 +178,10 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
 2.  Navigate to the location where you extracted the deployment package (.zip). Under the Power BI Template folder, you will find the **Regional Emergency Response App.pbit**.
 
-3.  Open the **Regional Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following values:
+3.  Open the **Regional Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following value: **CDS_base_solution_URL**. Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
 
-    1.  **Organization_name**: Type your organization name that will be populated on the top-left corner of each report page.
-
-    2.  **CDS_base_solution_URL**: Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment.
-
-        > [!div class="mx-imgBorder"] 
-        > ![Configure Power BI dashboard](media/deploy-config-dashboard.png "Configure Power BI dashboard")
-
-    3.  Select **Load.**
+    > [!div class="mx-imgBorder"] 
+    > ![Configure Power BI dashboard](media/deploy-config-dashboard.png "Configure Power BI dashboard")
 
 4.  You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** \> **Sign in** to specify your Common Data Service credentials.
 
@@ -194,12 +190,15 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
 5.  After signing in, select **Connect** to connect to your data in Common Data Service.
 
-6.  On successful connection, your data will be displayed in the Power BI report. You'll be prompted to apply pending changes to your query; select **Apply changes**.
+6.  On successful connection, Power BI report will be displayed. You'll be prompted to apply pending changes to your query; select **Apply changes**.
+
+    > [!NOTE]
+    > The report is blank because you haven't yet added data in the system.
 
 7.  Select **Publish** to publish data to your Power BI workspace. You'll be prompted to save your changes; select **Save**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Save Power BI workspace](media/deploy-save-workspace.png "Save Power BI workspace")
+     > [!div class="mx-imgBorder"] 
+     > ![Save Power BI workspace](media/deploy-save-workspace.png "Save Power BI workspace")
 
 8.  You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
 
@@ -235,7 +234,8 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
       > ![Schedule refresh data](media/deploy-schedule-refresh-data.png "Schedule refresh data")
 
       > [!NOTE]
-      > There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)</BR>We recommend setting the data to refresh every 30 mins.
+      > - There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
+      >- We recommend setting the data to refresh every 30 mins.
 
 15.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
 
@@ -243,9 +243,25 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
         > ![Open report in browser](media/deploy-open-report.png "Open report in browser")
 
 16.  The browser URL will be in the following format:
-    <https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1>
+    https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
+    Copy the Power BI report URL to a Notepad as you will need it in the next section to embed it in the portal.
 
-Copy the Power BI report URL to a Notepad as you will need it in the next section to embed it in the portal.
+17. If you want this Power BI report to be available to other users within your Power BI tenant, consider publishing the report as an app. Select your workspace name in the left pane, and then select **Create app** in the top-right corner.  
+
+18. On the app publishing page:
+
+    1. On the **Setup** tab, specify the name and description of your app.
+
+    2. On the **Navigation** tab, specify the location where you will publish it.
+
+    3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](https://docs.microsoft.com/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
+
+        > [!div class="mx-imgBorder"]
+        > ![select-install-apps-automatically](media/select-install-apps-automatically.png)
+
+18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
+
+
 
 ## Step 6: Embed Power BI report in portal
 
