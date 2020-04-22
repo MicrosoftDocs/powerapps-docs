@@ -247,21 +247,16 @@ The **TestSuiteResult** record contains the following properties:
 
 In this quickstart, you'll create two custom entities in the Common Data Service database to store the test results by customizing the **OnTestCaseComplete** and **OnTestSuiteComplete** properties:
 
+1. Select **Test** in the left pane or **View** on the suite header.
 
-
-
-
-
-1. Click **Test** in the left pane or click **View** on the suite header.
-
-    ![Test or view set property](./media/working-with-test-studio/test-or-view-to-set-property.png)
+    ![Test or view set property](./media/working-with-test-studio/test-or-view-to-set-property.png "Test or view set property")
 
 2. Select the **OnTestCaseComplete** action.
 
-3. Input an expression to process the results of your test. The following sample saves each test case results to the custom AppTestResults entity in Common Data Service. The test results can optionally be stored to SQL, SharePoint, or any other data source. You may need to set or increase the Trace field in your data source as required.
+3. Input an expression to process the results of your test. The following sample saves each test case's results to the custom AppTestResults entity in Common Data Service. The test results can optionally be stored to SQL, SharePoint, or any other data source. You might need to set or increase the Trace field in your data source as required.
 
     > [!NOTE]
-    > The following samples require a [Common Data Service connection](https://docs.microsoft.com/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Common Data Service. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in following samples.
+    > The following samples require a [Common Data Service connection](https://docs.microsoft.com/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Common Data Service. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in the following samples.
 
     ```
     //Save to Common Data Service
@@ -281,11 +276,11 @@ In this quickstart, you'll create two custom entities in the Common Data Service
     }
     );
     ```
-    ![OnTestCaseComplete example.png](./media/working-with-test-studio/ontestcasecomplete-example.png)
+    ![OnTestCaseComplete example](./media/working-with-test-studio/ontestcasecomplete-example.png "OnTestCaseComplete example")
 
 4. Select the **OnTestSuiteComplete** action.
 
-5. Input an expression to process the results of your test. In following sample, you'll saving each test suite results to the custom AppTestSuiteResults entity in Common Data Service. 
+5. Input an expression to process the results of your test. In the following sample, you'll save each test suite's results to the custom AppTestSuiteResults entity in Common Data Service. 
 
     ```
     //Save to Common Data Service
@@ -302,21 +297,21 @@ In this quickstart, you'll create two custom entities in the Common Data Service
     );
     ```
 
-    ![OnTestSuiteComplete example.png](./media/working-with-test-studio/ontestsuitecomplete-example.png)
+    ![OnTestSuiteComplete example](./media/working-with-test-studio/ontestsuitecomplete-example.png "OnTestSuiteComplete example")
 
-Other example of expressions you could use in these properties are:
+Other examples of expressions you could use in these properties are:
 
 - Send results to a flow in Power Automate.
 
     ```MyTestResultsFlow.Run(JSON(TestCaseResult))```
 
-- Email your results:
+- Email your results.
 
     ```Office365.SendMailV2("someone@example.com", "Test case results", JSON(TestCaseResult, JSONFormat.IndentFour))```
 
-- Receive an app notification of the test result:
+- Receive an app notification of the test result.
 
-  For example, receive a notification after the test completes when playing the test in a browser, outside of the Test Studio.
+  For example, receive a notification after the test completes when playing the test in a browser, outside of Test Studio.
 
     ```
     Notify(TestCaseResult.TestCaseName & " : "
@@ -331,7 +326,7 @@ Other example of expressions you could use in these properties are:
 
 ## Test Functions
 
-In addition to the [functions](formula-reference.md) available in Power Apps, following are common functions that you will typically use when authoring tests.
+In addition to the [functions](formula-reference.md) available in Power Apps, the following are common functions that you will typically use when authoring tests:
 
 - [Select](./functions/function-select.md)
 - [SetProperty](./functions/function-setproperty.md)
