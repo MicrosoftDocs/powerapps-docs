@@ -335,4 +335,4 @@ In addition to the [functions](formula-reference.md) available in Power Apps, th
 
 ## Next steps
 
-- [Automate tests with Azure DevOps pipeline classic editor](test-studio-classic-pipeline-editor.md)
+- [Automate tests with Azure Pipelines using classic editor](test-studio-classic-pipeline-editor.md)
