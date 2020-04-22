@@ -42,8 +42,7 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 |Deploy the sample solution and set up users and security|Regional organization IT admin|[Deploy the Regional Hospital Emergency Response solution](deploy.md)|
 |Use the admin app to configure and manage master data and create/manage portal users|Regional organization Business admin|[Configure Regional Hospital Emergency Response solution](configure.md#configure-and-manage-master-data-for-your-organization)|
 |Use the portal to add/manage portals users for their hospitals, set up and manage master data for their hospitals, and view dashboard for insights and metrics.|Parent organization Business admin|[Administer the Regional Emergency Response portal](portals-admin-reporting.md)
-|Use the admin app to track feedback from mobile app|Business/IT admin|[View and manage app feedback](configure-data-reporting.md#view-and-manage-app-feedback)|
-|Use dashboards for insights and decision making|Business admin|[View Common Data Service dashboards](configure-data-reporting.md#view-common-data-service-dashboards)<br/><br/>[View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)|
+
 
 
 ## Report issues
