@@ -1657,13 +1657,13 @@
     items:
     - name: Overview
       href: ../sample-apps/regional-emergency-response/overview.md
-      - name: Deploy the app
+      - name: Deploy the solution
       href: ../sample-apps/regional-emergency-response/deploy.md
-    - name: Configure the app
+    - name: Web app for regional admins
       href: ../sample-apps/regional-emergency-response/configure.md
-    - name: "Portals: Use admin features and dashboards"
+    - name: "Portal for admins and report viewer"
       href: ../sample-apps/regional-emergency-response/portals-admin-reporting.md
-    - name: "Portals: Frontline users"
+    - name: "Portal for healthcare workers"
       href: ../sample-apps/regional-emergency-response/portals-user.md
 - name: Learn from others
   items:
