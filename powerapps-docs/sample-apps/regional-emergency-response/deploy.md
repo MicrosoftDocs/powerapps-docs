@@ -361,8 +361,7 @@ You can add a custom logo and title to your portal to align with your organizati
 
         > [!div class="mx-imgBorder"] 
         > ![Portal Management Site Settings](media/deploy-portal-site-settings.png "Portal Management Site Settings")
-        <!-- ![](media/f4dc39b6861ea92ec7cf7327fb8eded3.png) -->
-
+        
 5.  Select **Save** to save the site setting record.
 
 6.  Select **New** to create another site setting record.
@@ -376,8 +375,7 @@ You can add a custom logo and title to your portal to align with your organizati
     3.  **Value**: Name of your logo image file. For example, specifying mylogo.png will make the portal look for this file at the root of the portal. We will later upload the logo file to our portal.
 
         > [!div class="mx-imgBorder"] 
-        > ![Create new site settings record](media/deploy-create-new-settings.png "[Create new site settings record")
-        <!-- ![](media/d460f4d07489234d94e6a1ed3baab92c.png) -->
+        > ![Create new site settings record](media/deploy-create-new-settings.png "[Create new site settings record")       
 
 8.  Select **Save & Close** to save this record and close the page.
 
@@ -400,7 +398,6 @@ You can add a custom logo and title to your portal to align with your organizati
 
         > [!div class="mx-imgBorder"] 
         > ![New Web File](media/deploy-new-web-file.png "New Web File")
-        <!-- ![](media/25f2af5fe56cb9a88bfff20d62012031.png) -->
 
 11.  Select **Save** to save the record.
 
@@ -408,13 +405,11 @@ You can add a custom logo and title to your portal to align with your organizati
 
       > [!div class="mx-imgBorder"] 
       > ![Web File Notes](media/deploy-web-file-notes.png "Web File Notes")
-      <!-- ![](media/071aa12449d8bea5f2957a1382a2ac38.png) -->
 
 13.  In the **Title** field, enter mylogo.png. Select the attachment icon to select the logo image file from your computer.
 
       > [!div class="mx-imgBorder"] 
       > ![Attach logo image](media/deploy-attach-logo.png "Attach logo image")
-        <!-- ![](media/fed4426a0ddc4d8cc9b7cc2975afdfde.png) -->
 
 14.  Select the appropriate logo image from your computer (in the .PNG format).
     The selected image appears in the page.
@@ -437,7 +432,7 @@ You can add a custom About page in your portal to add/present information or res
 
     > [!div class="mx-imgBorder"] 
     > ![About Us Page](media/deploy-aboutus-page.png "About Us Page")
-    <!-- ![](media/53b8d54497d64095f2ec4a7bf6a95e8e.png) -->
+    
 
 4.  On the new webpage, make sure you use **about** in the **Partial URL** field in the right pane. You can use a name of your choice in the **Name** field; we are using **About Contoso**.
 
@@ -486,7 +481,7 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
     > [!div class="mx-imgBorder"] 
     > ![Fix Send Invitation process](media/deploy-settings-processes.png "Fix Send Invitation process")
-    <!-- ![](media/2bc8c159c5350c976a7230beb18c080f.png) -->
+    
 
 4.  On the **Processes** page, search for “Send Invitation”, and select the **Send Invitation** process to open it.
 
@@ -599,21 +594,19 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
-2.  In the left pane, select **Solutions.** From the list of solution, select **Regional Emergency Response Solution** to open the solution.
+2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
 
     > [!div class="mx-imgBorder"] 
     > ![Open the solution](media/deploy-open-solution.png "Open the solution")
-    <!-- ![](media/744cfe55e31e3cf08da4041212d04841.png) -->
 
 3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record. Ensure that the status is set to **On**.
 
     > [!div class="mx-imgBorder"] 
     > ![Find the Flow Supply Tracking record](media/deploy-find-record.png "Find the Flow Supply Tracking record")
-    <!-- ![](media/32dca65cb17da1d514e9ec66d50dd855.png) -->
 
 4.  If it is not set to **On**, select the flow name to open the flow definition.
 
-5.  In the flow definition, select the **Turn On** in the toolbar.
+5.  In the flow definition, select **Turn On** in the toolbar.
 
 ## Step 14: Share admin app with other admin users
 
