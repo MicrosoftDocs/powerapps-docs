@@ -25,10 +25,10 @@ Form Items are available through any of the following:
  
     `formItem = formContext.ui.formSelector.items.get(arg);`
 
-    See [Collections](collections.md)) for information about the collection methods.
+    See [Collections](collections.md) for information about the collection methods.
  
-    >[!NOTE]
-    >This collection isn't available for Dynamics 365 mobile clients (phones and tablets).
+    > [!NOTE]
+    > This collection isn't available for [Dynamics 365 mobile clients (phones and tablets)](https://docs.microsoft.com/dynamics365/mobile-app/overview).
 
 - **formselector.getCurrentItem** method: Returns a reference to the form currently being shown. When only one form is available this method will return **null**. Example:
  
