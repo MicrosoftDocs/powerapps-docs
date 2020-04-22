@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 04/22/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 searchScope:
@@ -25,10 +25,6 @@ access, submit, or update as the administrator of the portal.
 ![Portal at glance](media/portal-at-glance.png)
 
 You can use latest mobile devices and web browsers when using Regional Emergency Response portal except Apple iPad.
-
-## Portal components
-
-Read [Use the Regional Emergency Response portal](portals-user.md) to learn about portal components.
 
 [!include[cc-getting-started](includes/cc-getting-started.md)]
 
@@ -92,6 +88,16 @@ To create users, select **Create User** button when in **Add Users** form. And t
 
 Enter **First Name**, **Last Name**, **Email**, and **Mobile Phone** and then select a role for the user.
 
+The role of the user defines components that show up on the portal:
+
+![Portal with roles](media/portal-with-roles.png)
+
+The highlighted components are visible to the users with the following roles assigned:
+
+1. [Organizational HealthCare Worker](#organizational-healthcare-worker)
+2. [Report Viewer](#report-viewer)
+3. [Parent Organization Administrator](#parent-organization-administrator)
+
 The following section walks through each one of the roles with details of what the member of the role can do:
 
 ##### Organizational HealthCare Worker
@@ -137,6 +143,9 @@ Members of Parent Organization Administrator role can:
     - Create or delete **Region**
 
     - Create, edit, or delete **Facility**
+
+> [!TIP]
+> Select all 3 roles to allow a user to access all components.
 
 #### View user details
 
