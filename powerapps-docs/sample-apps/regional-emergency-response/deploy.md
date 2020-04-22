@@ -34,9 +34,9 @@ The commercial version of the service URL is used throughout this article. If yo
 
 |Commercial version URL  |US Government version URL  |
 |------------------------|---------------------------|
-|<https://make.powerapps.com>     |  <https://make.gov.powerapps.us> (GCC)       |
-|<https://admin.powerplatform.microsoft.com>     |   <https://gcc.admin.powerplatform.microsoft.us> (GCC)      |
-|<https://app.powerbi.com/></br>- <https://make.high.powerapps.us> (GCC High)</br>- <https://high.admin.powerplatform.microsoft.us> (GCC High)</br>- <https://app.high.powerbigov.us> (GCC High)       |<https://app.powerbigov.us> (GCC)         |
+|<https://make.powerapps.com>     |  <https://make.gov.powerapps.us> (GCC)</br><https://make.high.powerapps.us> (GCC High)       |
+|<https://admin.powerplatform.microsoft.com>     |   <https://gcc.admin.powerplatform.microsoft.us> (GCC)</br><https://high.admin.powerplatform.microsoft.us> (GCC High)      |
+|<https://app.powerbi.com/>       |<https://app.powerbigov.us> (GCC)</br><https://app.high.powerbigov.us> (GCC High)         |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 
@@ -61,8 +61,8 @@ On extracting the .zip file, you will see the following in the extracted folder:
 |**Folder**  |**Description**  |
 |---------|---------|
 |**Package**     |  The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment.       |
-|**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting.        |
-|**SampleData**     |   Contains the sample master data files (.xlsx).      |
+|**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting. More information: [Step 5: Configure and publish Power BI dashboard](#step-5-configure-and-publish-power-bi-dashboard)        |
+|**SampleData**     |   Contains the sample master data files (.xlsx) that you can use to import sample data. More information:       |
 
 ## Step 2: Sign up for Power Apps and create an environment
 
@@ -260,7 +260,6 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
         > ![select-install-apps-automatically](media/select-install-apps-automatically.png)
 
 18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
-
 
 
 ## Step 6: Embed Power BI report in portal
