@@ -1655,7 +1655,9 @@
       href: ../sample-apps/emergency-response/use.md
   - name: Regional Emergency Response
     items:
-    - name: Deploy the app
+    - name: Overview
+      href: ../sample-apps/regional-emergency-response/overview.md
+      - name: Deploy the app
       href: ../sample-apps/regional-emergency-response/deploy.md
     - name: Configure the app
       href: ../sample-apps/regional-emergency-response/configure.md

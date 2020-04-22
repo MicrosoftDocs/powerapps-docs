@@ -1,5 +1,5 @@
 ---
-title: Administer the Regional Hospital Emergency Response portal | Microsoft Docs
+title: Administer the Regional Emergency Response portal | Microsoft Docs
 description: Learn how to configure the Regional Hospital Emergency Response portal.
 author: tapanm-msft
 manager: kvivek
@@ -13,8 +13,6 @@ searchScope:
   - PowerApps
 ---
 # Administer the Regional Emergency Response portal
-
-## Overview
 
 Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Emergency Response
 portal, administrators can quickly view and update data related to **Users**, **Systems**, **Regions**, and **Facilities**. Stakeholders can view the published insights through dashboards for current status of the health care system and take actions.

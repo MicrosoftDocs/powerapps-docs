@@ -1,5 +1,5 @@
 ---
-title: Configure Regional Hospital Emergency Response app | Microsoft Docs
+title: Configure Regional Hospital Emergency Response solution | Microsoft Docs
 description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: KumarVivek
 manager: annbe
@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Configure Regional Hospital Emergency Response app
+# Configure Regional Hospital Emergency Response solution
 
 This guide is meant for business admins in regional medical organizations to use the admin app (model-driven app) to perform the following activities:
 
