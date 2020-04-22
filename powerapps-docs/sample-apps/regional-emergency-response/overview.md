@@ -24,7 +24,7 @@ The main components of the Hospital Emergency Response solution are:
 
 - **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
     - Regional organization admins can view the dashboards in their Power BI tenant.
-    - Parent organization admins can view the dashboards from in the web portal.
+    - Parent organization admins can view the dashboards in the web portal.
 
 ## Licensing requirements
 
