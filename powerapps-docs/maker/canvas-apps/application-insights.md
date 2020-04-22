@@ -19,46 +19,40 @@ search.app:
 
 You can connect your app with [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview), a feature of [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview). Application Insights includes powerful analytics tools to help you diagnose issues and to understand what users actually do with your app. 
 
-With your app connected to Applications Insights, you can collect
-information to help you drive better business decisions and improve the quality of your apps.
+With your app connected to Applications Insights, you can collect information to help you drive better business decisions and improve the quality of your apps.
 
-In this quickstart, you'll instrument a canvas app called Kudos. This helps you explore, discover telemetry concepts, and apply them to your own canvas
-apps. The sample Kudos app is part of a suite of employee engagement apps
-available for download from [Employee Experience Starter
-Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit).
+In this quickstart, you'll instrument a canvas app called Kudos. This helps you explore, discover telemetry concepts, and apply them to your own canvas apps. The sample Kudos app is part of a suite of employee engagement apps available for download from [Employee Experience Starter Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit).
 
 ## Prerequisites
 
-- You must have access to [Azure portal](https://portal.azure.com).
+- You must have access to the [Azure portal](https://portal.azure.com).
 - You must have the permissions to [create Azure resources](https://docs.microsoft.com/azure/role-based-access-control/quickstart-assign-role-user-portal).
 
 ### Optional
 
-- Download and install Kudos app from [Employee Experience Starter
-Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit). You can also use an existing app instead.
+- Download and install the Kudos app from [Employee Experience Starter Kit](https://powerapps.microsoft.com/blog/powerapps-employee-experience-starter-kit). You can also use an existing app instead.
 
 ## Create an Application Insights resource
 
-Before you can send telemetry for an app, you'll need to create an Azure
-Application Insights resource to store the events.
+Before you can send telemetry for an app, you'll need to create an Application Insights resource to store the events.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Search for Application Insights:
 
-    ![Azure Application Insights](./media/application-insights/azureappinsights.png)
+    ![Application Insights](./media/application-insights/azureappinsights.png "Application Insights")
 
 1. Create an Application Insights resource:
 
-    ![Add an Azure Application Insights resource](./media/application-insights/azureappinsights-add.png)
+    ![Add an Application Insights resource](./media/application-insights/azureappinsights-add.png "Add an Application Insights resource")
 
 1. Enter the appropriate values and select **Review + create**. For more details, read [Create an Application Insights resource](https://docs.microsoft.com/azure/azure-monitor/app/create-new-resource). 
 
-    ![Create a resource](./media/application-insights/createresource.png)
+    ![Create a resource](./media/application-insights/createresource.png "Create a resource")
 
 1. After the Application Insights instance is created, you'll see the instance overview. Copy the **Instrumentation Key**. You'll need this key to configure your app.
 
-    ![Copy Instrumentation Key](./media/application-insights/instrumentation-key.png)
+    ![Copy Instrumentation Key](./media/application-insights/instrumentation-key.png "Copy Instrumentation Key")
 
 ## Connect your app to Application Insights
 
@@ -66,29 +60,27 @@ Application Insights resource to store the events.
 
 1. Select **Apps** from the left navigation. From the list of apps, select the **Kudos** app and then select **Edit**:
 
-    ![Edit Kudos App](./media/application-insights/edit-kudos-app.png)
+    ![Edit Kudos app](./media/application-insights/edit-kudos-app.png "Edit Kudos app")
 
     > [!NOTE]
     > You can also [create](open-and-run-a-sample-app.md) a new app or [edit](edit-app.md) any existing app instead.
 
-1. Select **App** object from the left navigation tree view and paste the **Instrumentation Key**:
+1. Select the **App** object from the left navigation tree view and paste the **Instrumentation Key**:
 
-    ![Add Instrumentation Key](./media/application-insights/add-instrumentation-key.png)
+    ![Add Instrumentation Key](./media/application-insights/add-instrumentation-key.png "Add Instrumentation Key")
 
-1. **Save** & **Publish** your app.
+1. **Save** and **Publish** your app.
 
 1. **Play** the published app and browse through different screens. 
 
-As you browse through different screens, events are automatically logged to Application Insights including the usage details such as:
+As you browse through different screens, events are automatically logged to Application Insights, including the usage details such as:
 
 - Where the app is accessed from.
-- Which are the devices used.
+- Which devices are used.
 - The browser types used.
 
 > [!IMPORTANT]
-> You must play the published app to send events to Application
-Insights. Events are not sent to Application Insights when you preview the
-app in Power Apps Studio.
+> You must play the published app to send events to Application Insights. Events are not sent to Application Insights when you preview the app in Power Apps Studio.
 
 ## View events in Application Insights
 
@@ -98,7 +90,7 @@ app in Power Apps Studio.
 
     > [!NOTE]
     > **Users** view shows usage details of the app, such as:
-    > - Number of users that viewed the app.
+    > - Number of users who viewed the app.
     > - Number of sessions by the users for the app.
     > - Number of events logged for the app.
     > - Operating systems and browser version details of the users.
@@ -108,16 +100,16 @@ app in Power Apps Studio.
 
 1. Select one of the user sessions to drill into specific details. You can see information such as the session length and the screens visited:
 
-    ![Usage details for users](./media/application-insights/appinsights-users.gif)
+    ![Usage details for users](./media/application-insights/appinsights-users.gif "Usage details for users")
 
-1. Select the **Events** view in left navigation pane under **Usage** section. You can see a summary of all the screens viewed across all app sessions:
+1. Select the **Events** view in left navigation pane under the **Usage** section. You can see a summary of all the screens viewed across all app sessions:
 
-    ![Event details for the app](./media/application-insights/appInsights-events.gif)
+    ![Event details for the app](./media/application-insights/appInsights-events.gif "Event details for the app")
 
 > [!TIP]
 > Some of the additional Application Insights features you can use are:  
-> - [**Funnels**](https://docs.microsoft.com/azure/azure-monitor/app/usage-funnels)
-> - [**Cohorts**](https://docs.microsoft.com/azure/azure-monitor/app/usage-cohorts)
+> - [Funnels](https://docs.microsoft.com/azure/azure-monitor/app/usage-funnels)
+> - [Cohorts](https://docs.microsoft.com/azure/azure-monitor/app/usage-cohorts)
 > - [**Impact analysis**](https://docs.microsoft.com/azure/azure-monitor/app/usage-impact)
 > - [**Retention analysis**](https://docs.microsoft.com/azure/azure-monitor/app/usage-retention)
 > - [**Usage flows**](https://docs.microsoft.com/azure/azure-monitor/app/usage-flows)
