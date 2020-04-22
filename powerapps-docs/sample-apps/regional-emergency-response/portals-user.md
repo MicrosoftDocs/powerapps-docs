@@ -6,15 +6,13 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/21/2020
+ms.date: 04/22/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 searchScope:
   - PowerApps
 ---
 # Use the Regional Hospital Emergency Response portal
-
-## Overview
 
 Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Hospital Emergency Response portal, health care workers can quickly view and add data for ventilators, staffing, pending discharges, and COVID-19 related patients.
 
