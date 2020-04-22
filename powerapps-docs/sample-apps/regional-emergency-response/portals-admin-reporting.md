@@ -90,7 +90,7 @@ To create users, select **Create User** button when in **Add Users** form. And t
 
 ![Create user](media/portal-admin-create-user.png)
 
-Enter **First Name**, **Last Name**, **Email, and **Mobile Phone** and then select a role for the user.
+Enter **First Name**, **Last Name**, **Email**, and **Mobile Phone** and then select a role for the user.
 
 The following section walks through each one of the roles with details of what the member of the role can do:
 
@@ -106,7 +106,7 @@ A Frontline Worker is an employee of a hospital system such as a registered nurs
 
 - Supplies
 
-- COVID-19 Stats
+- COVID-19 stats
 
 ##### Report Viewer
 
@@ -114,17 +114,13 @@ A Report Viewer role is for the users that can view the dashboards available on 
 
 - System at a glance
 
-- County
+- COVID-19 patient details
 
-- Facility Details
+- Bed capacity details
 
-- COVID Patient Details
+- Equipment details
 
-- Bed Management
-
-- Equipment Details
-
-- Supplies on Hand Details
+- Supplies details
 
 ##### Parent Organization Administrator
 
@@ -136,11 +132,11 @@ Members of Parent Organization Administrator role can:
 
 - Change metadata for the organization with:
 
-    - Addition, updates, and deletion of **System**
+    - Create, edit, or delete **System**
 
-    - Addition and deletion of **Region**
+    - Create or delete **Region**
 
-    - Addition and deletion of **Facility**
+    - Create, edit, or delete **Facility**
 
 #### View user details
 
@@ -245,7 +241,7 @@ county, and other details:
 
 #### Search existing facilities
 
-Enter text in search box to search for system and filter the list of facilities on the form. You can use wildcard search (**\***) combined with text characters for **Facility Name, Region, and **County Name** fields.
+Enter text in search box to search for system and filter the list of facilities on the form. You can use wildcard search (**\***) combined with text characters for **Facility Name**, **Region**, and **County Name** fields.
 
 #### Create Facility
 

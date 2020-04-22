@@ -72,7 +72,7 @@ Select **Bed capacity** to update patient information, beds, and staffing capaci
 
 ### Previous submissions
 
-When you open **Bed capacity**, or any other components such as **Staff**, **Equipment**, **Supplies, or **COVID-19 stats**, you can see last submission date, time, and submitter.
+When you open **Bed capacity**, or any other components such as **Staff**, **Equipment**, **Supplies**, or **COVID-19 stats**, you can see last submission date, time, and submitter.
 
 If you select individual field, such as *Number of licensed beds currently in use* for **Bed capacity**, you can also see the previous value submitted for the field:
 
