@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/15/2020
+ms.date: 04/22/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -20,7 +20,7 @@ The main components of the Regional Emergency Response solution are:
 
 - **Web app for regional organization admins**: Use the app to manage the master data for each parent medical organization in the state or region, where each parent medical organization has one or more hospital systems that report data to the regional medical organization. The regional organization admin can add and manage admin users for each parent organization so that the latter can use a web portal to report data for their medical organization.
 
-- **Web portal for parent organization admins and users**: Parent organization admins can use the web portal to quickly add and manage users in their organization and also add and manage master data for their hospital systems including regions and facilities. The web portal is also used by healthcare workers to quickly view, add, and manage data related to bed capacity, staff, equipment supplies, and COVID-19 patients.
+- **Web portal for parent organization admins and users**: Parent organization admins can use the web portal to quickly add and manage users in their organization and also add and manage master data for their hospital systems including regions and facilities. The web portal is also used by healthcare workers to quickly view, add, and manage data related to bed capacity, staff, equipment, supplies, and COVID-19 patients.
 
 - **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
     - Regional organization admins can view the dashboard in their Power BI tenant.
