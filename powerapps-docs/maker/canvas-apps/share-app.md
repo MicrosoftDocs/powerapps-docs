@@ -208,7 +208,10 @@ The following table outlines a few core capability differences between Power App
 ||
 
 #### Can guests access customized forms in SharePoint?
-Yes. Any user that can access a SharePoint list with a customized form can create and edit items in the list, using the form, without any Power Apps license.
+Yes. Any user that can access a SharePoint list with a customized form can create and edit items in the list, using the form. As long as the custom form only uses standard connectors, the guest isn't required to have any Power Apps license.
+
+#### Why is a guest accessing a customized form in SharePoint prompted for a trial?
+If the custom form uses a premium connector a guest must have a Power Apps license to access the custom form. If the custom form only uses standard connectors, your tenant must allow Power Platoform internal consent plans to be assigned to users. More about Power Platform internal consent plans can be found [here](https://docs.microsoft.com/en-us/power-platform/admin/powerapps-powershell#block-trial-licenses-commands).  
 
 #### Can guests access apps embedded in SharePoint? 
 Yes. Though, access to canvas standalone apps require a license with Power Apps use rights that matches the capability of the app, including apps that are embedded. When embedding a canvas app in SharePoint via the Microsoft Power Apps embed control, enter the app id. To do this, enter the app ID in the **App web link or ID** box. 
