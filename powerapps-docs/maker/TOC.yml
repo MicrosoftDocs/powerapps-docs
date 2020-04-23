@@ -1263,6 +1263,8 @@
           items:
             - name: Configure portal authentication
               href: ./portals/configure/configure-portal-authentication.md
+            - name: Use simplified authentication configuration (Preview)
+              href: ./portals/configure/use-simplified-authentication-configuration.md
             - name: Set authentication identity
               href: ./portals/configure/set-authentication-identity.md
             - name: Azure AD B2C provider settings for portals
