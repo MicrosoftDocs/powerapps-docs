@@ -62,7 +62,7 @@ On extracting the .zip file, you will see the following in the extracted folder:
 |---------|---------|
 |**Package**     |  The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment.       |
 |**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting. More information: [Step 5: Configure and publish Power BI dashboard](#step-5-configure-and-publish-power-bi-dashboard)        |
-|**SampleData**     |   Contains the sample master data files (.xlsx) that you can use to import sample data. More information:       |
+|**SampleData**     |   Contains the sample master data files (.xlsx) that you can use to import sample data. More information: [Import data using sample files](configure.md#import-data-using-sample-files)      |
 
 ## Step 2: Sign up for Power Apps and create an environment
 
