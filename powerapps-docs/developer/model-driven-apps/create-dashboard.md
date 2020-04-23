@@ -204,8 +204,8 @@ _dashboardId = _serviceProxy.Create(dashboard);
   
 ### See also  
  [Dashboards](analyze-data-with-dashboards.md)   
- [Using FormXML for Dashboards](understand-dashboards-dashboard-components-formxml.md)   
- [Actions on Dashboards](actions-dashboards.md)   
+ [Using FormXML for dashboards](understand-dashboards-dashboard-components-formxml.md)   
+ [Actions on dashboards](actions-dashboards.md)   
  [Sample dashboards](sample-dashboards.md)   
- [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard)   <!-- TODO relevant powerapps repo topic must be linked-->
- [Customize Entity Forms](customize-entity-forms.md)
+ [Sample: Create, Retrieve, Update and Delete (CRUD) a dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard)   <!-- TODO relevant powerapps repo topic must be linked-->
+ [Customize entity forms](customize-entity-forms.md)

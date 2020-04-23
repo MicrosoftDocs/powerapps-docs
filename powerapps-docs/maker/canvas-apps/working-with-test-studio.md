@@ -1,7 +1,7 @@
 ---
 title: Working with Test Studio for testing canvas app | Microsoft Docs
 description: Describes how to use Test Studio with example for testing canvas app.
-author: tapanm-msft
+author: aengusheaney
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual

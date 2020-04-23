@@ -84,8 +84,9 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
 |   `cmdbar`   |                                                                                                                Controls whether the command bar is displayed. **Note:**  This capability supports requirements for the Unified Service Desk application. Using this to display an entity form within an IFrame embedded in another entity form is not supported. <br /><br /> -   `true`<br />     The command bar is displayed. This is the default.<br />-   `false`<br />     The command bar is hidden.                                                                                                                |
 
 <a name="BKMK_CopyViewURL"></a>   
+
 ### Copy the URL for a View  
- Many views in Model-driven apps let a user copy the URL for a particular view or send an email with the URL for a particular view embedded in the message. This feature makes communication between users easier, and exposes a way for you to gain access to a URL for a view that users can include in another application, such as a SharePoint site.  
+ Many views in model-driven apps let a user copy the URL for a particular view or send an email with the URL for a particular view embedded in the message. This feature makes communication between users easier, and exposes a way for you to gain access to a URL for a view that users can include in another application, such as a SharePoint site.  
 
 > [!NOTE]
 >  Do not use this URL to include the view in application navigation using the site map. For more information, see [Display a View in the Application Navigation using the Site Map](open-forms-views-dialogs-reports-url.md#BKMK_DisplayViewInApplicationUsingSiteMap).  
@@ -96,7 +97,7 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
 
 1. Open the view you want to use.  
 
-2. On the command bar, click **Send a Link**, and then click **Of Current View**.  
+2. On the command bar, click on **Actions** and then click **Email a Link**.  
 
 3. Paste the link into Notepad and edit it to extract only the URL part of the text that you want.  
 
@@ -104,14 +105,16 @@ https://myorg.crm.dynamics.com/main.aspx?etn=contact&pagetype=entitylist&viewid=
 > - Views that use the user context as a parameter, such as **My Accounts**, cannot be copied.  
 >   - The GUID that represents system views for system entities will be the same for each installation. The GUID for custom entities and custom views will be unique for each  installation.  
 
-<a name="BKMK_DisplayViewInApplicationUsingSiteMap"></a>   
+<a name="BKMK_DisplayViewInApplicationUsingSiteMap"></a>  
+
 ### Display a View in the Application Navigation using the Site Map  
- When you customize the application navigation using the site map, do not use the view URL that you copied from the application using the steps in [Copy the URL for a View](open-forms-views-dialogs-reports-url.md#BKMK_CopyViewURL) to set as the URL. 
- That URL displays a page that includes the ribbon and produces undesirable results if used in a `<SubArea>` Url attribute.  
 
- To display a list of entity records within the application for a SubArea set the Entity attribute value. This displays the default view for that entity and provides the correct title and icon.  
+When you customize the application navigation using the site map, do not use the view URL that you copied from the application using the steps in [Copy the URL for a View](open-forms-views-dialogs-reports-url.md#BKMK_CopyViewURL) to set as the URL.
+That URL displays a page that includes the ribbon and produces undesirable results if used in a `<SubArea>` Url attribute.  
 
- However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
+To display a list of entity records within the application for a SubArea set the Entity attribute value. This displays the default view for that entity and provides the correct title and icon.  
+
+However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 
 ```xml  
 Url=“/_root/homepage.aspx?etn=<entity logical name >&amp;viewid=%7b<GUID value of view id>%7d”  
@@ -120,13 +123,15 @@ Url=“/_root/homepage.aspx?etn=<entity logical name >&amp;viewid=%7b<GUID value
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the entity.  
 
 > [!NOTE]
->  If you specify the view using the `/_root/homepage.aspx` page, the view selector will still be shown. If the user changes the view, Model-driven apps remembers the user’s most recent selection and the initial default view displays after they close and re-open their browser.  
+> If you specify the view using the `/_root/homepage.aspx` page, the view selector will still be shown. If the user changes the view, Model-driven apps remembers the user’s most recent selection and the initial default view displays after they close and re-open their browser.  
 
 <a name="BKMK_OpenADialogProcess"></a>   
-## Opening a Dialog Process by using a URL  
- A common customization is to enable a user to open a specific dialog process in the context of a specific record. For example, you might want to add a custom button to the ribbon for a specific entity using the id value for current record as an input parameter for the dialog process.  
 
- To open a dialog you need the following:  
+## Opening a Dialog Process by using a URL
+
+A common customization is to enable a user to open a specific dialog process in the context of a specific record. For example, you might want to add a custom button to the ribbon for a specific entity using the id value for current record as an input parameter for the dialog process.  
+
+To open a dialog you need the following:  
 
 -   The unique identifier for the dialog.  
 

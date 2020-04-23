@@ -45,7 +45,7 @@ From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitem
 
  
    > [!div class="mx-imgBorder"]
-   > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrate how to get to the site map screen")
+   > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrates how to get to the site map screen")
    
  *Refresh the page to restart the GIF action*.
 
@@ -77,7 +77,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 
    > [!div class="mx-imgBorder"]
-   > ![Pin a record to favorites](media/pin_favs.gif "This image demonstrate how to pin favorite records")
+   > ![Pin a record to favorites](media/pin_favs.gif "This image demonstrates how to pin favorite records")
    
 *Refresh the page to restart the GIF action*.
 
@@ -89,7 +89,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 
    > [!div class="mx-imgBorder"]
-   > ![Unpin a record](media/unpin_favs.gif "This image demonstrate how to unpin a record")
+   > ![Unpin a record](media/unpin_favs.gif "This image demonstrates how to unpin a record")
    
 *Refresh the page to restart the GIF action*.
 
@@ -99,7 +99,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 
    > [!div class="mx-imgBorder"]
-   > ![Change views](media/change_views_iphone.gif "This image demonstrate how to select a differnt view")
+   > ![Change views](media/change_views_iphone.gif "This image demonstrates how to select a different view")
 
 *Refresh the page to restart the GIF action*.
 
@@ -129,7 +129,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 2. On the open record, select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
 
    > [!div class="mx-imgBorder"]
-   > ![Commands on a record](media/pa_mobile_view_record_commands.gif "This image demonstrate how to access more commands on a record")
+   > ![Commands on a record](media/pa_mobile_view_record_commands.gif "This image demonstrates how to access more commands on a record")
 
 *Refresh the page to restart the GIF action*.
 
@@ -139,7 +139,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 2. When you're done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
    > [!div class="mx-imgBorder"]
-   > ![Edit a record](media/save_on_iphone.gif "This image demonstrate how to edit and then save a record")
+   > ![Edit a record](media/save_on_iphone.gif "This image demonstrates how to edit and then save a record")
 
 *Refresh the page to restart the GIF action*.
 
@@ -149,7 +149,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 - At any point, press and hold **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home screen. 
 
    > [!div class="mx-imgBorder"]
-   > ![Go back to the Home screen](media/go_back_home.gif "This image demonstrate how to go back to the home screen by pressing and holding the back icon")
+   > ![Go back to the Home screen](media/go_back_home.gif "This image demonstrates how to go back to the home screen by pressing and holding the back icon")
 
 *Refresh the page to restart the GIF action*.
 
