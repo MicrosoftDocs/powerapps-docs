@@ -169,6 +169,8 @@ To use Azure AD B2C as an identity provider, you must:
 
 1. [**Create user flow**](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, [create password reset user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
 
+1. [**Configure token compatibility**](https://docs.microsoft.com/azure/active-directory-b2c/configure-tokens#configure-token-compatibility) with **Issuer (iss) claim** value that includes **tfp**. For more information, read [token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/tokens-overview#compatibility).
+
 ### Step 2 - Configure site settings
 
 Configure site settings and password reset policy for your Azure AD B2C provider:
