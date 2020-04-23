@@ -1,7 +1,7 @@
 ---
 title: "Organization Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Organization entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the Organization entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # Organization Entity Reference
 
@@ -68,6 +69,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [AMDesignator](#BKMK_AMDesignator)
 - [AppDesignerExperienceEnabled](#BKMK_AppDesignerExperienceEnabled)
 - [AppointmentRichEditorExperience](#BKMK_AppointmentRichEditorExperience)
+- [AuditRetentionPeriod](#BKMK_AuditRetentionPeriod)
 - [AutoApplyDefaultonCaseCreate](#BKMK_AutoApplyDefaultonCaseCreate)
 - [AutoApplyDefaultonCaseUpdate](#BKMK_AutoApplyDefaultonCaseUpdate)
 - [AutoApplySLA](#BKMK_AutoApplySLA)
@@ -233,11 +235,13 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [IsReadAuditEnabled](#BKMK_IsReadAuditEnabled)
 - [IsRelationshipInsightsEnabled](#BKMK_IsRelationshipInsightsEnabled)
 - [IsResourceBookingExchangeSyncEnabled](#BKMK_IsResourceBookingExchangeSyncEnabled)
+- [IsRichTextNotesEnabled](#BKMK_IsRichTextNotesEnabled)
 - [IsSalesAssistantEnabled](#BKMK_IsSalesAssistantEnabled)
 - [IsSOPIntegrationEnabled](#BKMK_IsSOPIntegrationEnabled)
 - [IsTextWrapEnabled](#BKMK_IsTextWrapEnabled)
 - [IsUserAccessAuditEnabled](#BKMK_IsUserAccessAuditEnabled)
 - [ISVIntegrationCode](#BKMK_ISVIntegrationCode)
+- [IsWriteInProductsAllowed](#BKMK_IsWriteInProductsAllowed)
 - [KaPrefix](#BKMK_KaPrefix)
 - [KbPrefix](#BKMK_KbPrefix)
 - [KMSettings](#BKMK_KMSettings)
@@ -312,6 +316,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [RiErrorStatus](#BKMK_RiErrorStatus)
 - [SampleDataImportId](#BKMK_SampleDataImportId)
 - [SchemaNamePrefix](#BKMK_SchemaNamePrefix)
+- [SendBulkEmailInUCI](#BKMK_SendBulkEmailInUCI)
 - [ServeStaticResourcesFromAzureCDN](#BKMK_ServeStaticResourcesFromAzureCDN)
 - [SessionTimeoutEnabled](#BKMK_SessionTimeoutEnabled)
 - [SessionTimeoutInMins](#BKMK_SessionTimeoutInMins)
@@ -347,6 +352,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [TimeZoneRuleVersionNumber](#BKMK_TimeZoneRuleVersionNumber)
 - [TokenExpiry](#BKMK_TokenExpiry)
 - [TokenKey](#BKMK_TokenKey)
+- [TraceLogMaximumAgeInDays](#BKMK_TraceLogMaximumAgeInDays)
 - [TrackingPrefix](#BKMK_TrackingPrefix)
 - [TrackingTokenIdBase](#BKMK_TrackingTokenIdBase)
 - [TrackingTokenIdDigits](#BKMK_TrackingTokenIdDigits)
@@ -355,6 +361,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [UseInbuiltRuleForDefaultPricelistSelection](#BKMK_UseInbuiltRuleForDefaultPricelistSelection)
 - [UseLegacyRendering](#BKMK_UseLegacyRendering)
 - [UsePositionHierarchy](#BKMK_UsePositionHierarchy)
+- [UseQuickFindViewForGridSearch](#BKMK_UseQuickFindViewForGridSearch)
 - [UserAccessAuditingInterval](#BKMK_UserAccessAuditingInterval)
 - [UseReadForm](#BKMK_UseReadForm)
 - [UserGroupId](#BKMK_UserGroupId)
@@ -808,6 +815,23 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 **DefaultValue**: False
 
+
+
+### <a name="BKMK_AuditRetentionPeriod"></a> AuditRetentionPeriod
+
+|Property|Value|
+|--------|-----|
+|Description|Audit Retention Period settings stored in Organization Database.|
+|DisplayName|Audit Retention Period Settings|
+|Format|None|
+|IsValidForCreate|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|auditretentionperiod|
+|MaxValue|2147483647|
+|MinValue|30|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
 
 
 ### <a name="BKMK_AutoApplyDefaultonCaseCreate"></a> AutoApplyDefaultonCaseCreate
@@ -1870,8 +1894,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Enable Integration with Power Automate|
-|DisplayName|Enable Integration with Power Automate|
+|Description|Enable Integration with Microsoft Flow|
+|DisplayName|Enable Integration with Microsoft Flow|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|enablemicrosoftflowintegration|
@@ -1987,7 +2011,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |--------|-----|
 |Description|The default image for the entity.|
 |DisplayName|Entity Image|
-|IsPrimaryImage|False|
+|IsPrimaryImage|True|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|entityimage|
@@ -3124,8 +3148,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|Indicates whether Custom Controls in canvas Power Apps feature has been enabled for the organization.|
-|DisplayName|Enable Custom Controls in canvas Power Apps feature for this organization|
+|Description|Indicates whether Custom Controls in canvas PowerApps feature has been enabled for the organization.|
+|DisplayName|Enable Custom Controls in canvas PowerApps feature for this organization|
 |IsValidForForm|False|
 |IsValidForRead|True|
 |LogicalName|iscustomcontrolsincanvasappsenabled|
@@ -4126,6 +4150,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 
 
+### <a name="BKMK_IsRichTextNotesEnabled"></a> IsRichTextNotesEnabled
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether rich text editor for notes experience is enabled on this organization|
+|DisplayName|Indicates whether rich text editor for notes experience is enabled on this organization|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isrichtextnotesenabled|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsRichTextNotesEnabled Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
 ### <a name="BKMK_IsSalesAssistantEnabled"></a> IsSalesAssistantEnabled
 
 |Property|Value|
@@ -4242,6 +4289,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |5|Web; Outlook Laptop Client|
 |6|Outlook|
 |7|All|
+
+
+
+### <a name="BKMK_IsWriteInProductsAllowed"></a> IsWriteInProductsAllowed
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Write-in Products can be added to Opportunity/Quote/Order/Invoice or not.|
+|DisplayName|Indicates whether Write-in Products can be added to Opportunity/Quote/Order/Invoice or not|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|iswriteinproductsallowed|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsWriteInProductsAllowed Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: True
 
 
 
@@ -4602,8 +4672,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description|(Deprecated) Environment selected for Integration with Power Automate|
-|DisplayName|(Deprecated) Environment selected for Integration with Power Automate|
+|Description|(Deprecated) Environment selected for Integration with Microsoft Flow|
+|DisplayName|(Deprecated) Environment selected for Integration with Microsoft Flow|
 |FormatName|Text|
 |IsLocalizable|False|
 |IsValidForForm|False|
@@ -5532,6 +5602,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_SendBulkEmailInUCI"></a> SendBulkEmailInUCI
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether Send Bulk Email in UCI is enabled for the org.|
+|DisplayName|Send Bulk Email in UCI|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|sendbulkemailinuci|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### SendBulkEmailInUCI Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
 ### <a name="BKMK_ServeStaticResourcesFromAzureCDN"></a> ServeStaticResourcesFromAzureCDN
 
 |Property|Value|
@@ -6188,6 +6281,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_TraceLogMaximumAgeInDays"></a> TraceLogMaximumAgeInDays
+
+|Property|Value|
+|--------|-----|
+|Description|Tracelog record maximum age in days|
+|DisplayName|Tracelog record maximum age in days|
+|Format|None|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|tracelogmaximumageindays|
+|MaxValue|2147483647|
+|MinValue|0|
+|RequiredLevel|SystemRequired|
+|Type|Integer|
+
+
 ### <a name="BKMK_TrackingPrefix"></a> TrackingPrefix
 
 |Property|Value|
@@ -6334,6 +6443,29 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Boolean|
 
 #### UsePositionHierarchy Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_UseQuickFindViewForGridSearch"></a> UseQuickFindViewForGridSearch
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether searching in a grid should use the Quick Find view for the entity.|
+|DisplayName|Use Quick Find view when searching in grids|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|usequickfindviewforgridsearch|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### UseQuickFindViewForGridSearch Options
 
 |Value|Label|
 |-----|-----|
@@ -6610,6 +6742,7 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [EntityImage_URL](#BKMK_EntityImage_URL)
 - [EntityImageId](#BKMK_EntityImageId)
 - [FiscalSettingsUpdated](#BKMK_FiscalSettingsUpdated)
+- [IsAllMoneyDecimal](#BKMK_IsAllMoneyDecimal)
 - [IsDisabled](#BKMK_IsDisabled)
 - [MaxSupportedInternetExplorerVersion](#BKMK_MaxSupportedInternetExplorerVersion)
 - [MaxVerboseLoggingMailbox](#BKMK_MaxVerboseLoggingMailbox)
@@ -6974,6 +7107,29 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 |Type|Boolean|
 
 #### FiscalSettingsUpdated Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_IsAllMoneyDecimal"></a> IsAllMoneyDecimal
+
+|Property|Value|
+|--------|-----|
+|Description|Indicates whether all money attributes are converted to decimal.|
+|DisplayName|Set if all money attributes are converted to decimal|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|isallmoneydecimal|
+|RequiredLevel|SystemRequired|
+|Type|Boolean|
+
+#### IsAllMoneyDecimal Options
 
 |Value|Label|
 |-----|-----|
@@ -7413,8 +7569,11 @@ Listed by **SchemaName**.
 - [organization_saved_queries](#BKMK_organization_saved_queries)
 - [organization_tracelog](#BKMK_organization_tracelog)
 - [organization_solution](#BKMK_organization_solution)
+- [organization_solutioncomponentattributeconfiguration](#BKMK_organization_solutioncomponentattributeconfiguration)
+- [organization_solutioncomponentconfiguration](#BKMK_organization_solutioncomponentconfiguration)
 - [organization_territories](#BKMK_organization_territories)
 - [organization_entityanalyticsconfig](#BKMK_organization_entityanalyticsconfig)
+- [organization_msdyn_helppage](#BKMK_organization_msdyn_helppage)
 - [organization_msdyn_solutionhealthruleset](#BKMK_organization_msdyn_solutionhealthruleset)
 
 
@@ -8453,6 +8612,40 @@ Same as solution entity [organization_solution](solution.md#BKMK_organization_so
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_organization_solutioncomponentattributeconfiguration"></a> organization_solutioncomponentattributeconfiguration
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentattributeconfiguration entity [organization_solutioncomponentattributeconfiguration](solutioncomponentattributeconfiguration.md#BKMK_organization_solutioncomponentattributeconfiguration) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentattributeconfiguration|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_solutioncomponentattributeconfiguration|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_solutioncomponentconfiguration"></a> organization_solutioncomponentconfiguration
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentconfiguration entity [organization_solutioncomponentconfiguration](solutioncomponentconfiguration.md#BKMK_organization_solutioncomponentconfiguration) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentconfiguration|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|organization_solutioncomponentconfiguration|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_organization_territories"></a> organization_territories
 
 **Added by**: Application Common Solution
@@ -8485,6 +8678,23 @@ Same as entityanalyticsconfig entity [organization_entityanalyticsconfig](entity
 |ReferencedEntityNavigationPropertyName|organization_entityanalyticsconfig|
 |AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_organization_msdyn_helppage"></a> organization_msdyn_helppage
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_helppage entity [organization_msdyn_helppage](msdyn_helppage.md#BKMK_organization_msdyn_helppage) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_helppage|
+|ReferencingAttribute|organizationid|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|organization_msdyn_helppage|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
 ### <a name="BKMK_organization_msdyn_solutionhealthruleset"></a> organization_msdyn_solutionhealthruleset

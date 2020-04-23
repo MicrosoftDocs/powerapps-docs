@@ -1,24 +1,24 @@
 ---
-title: Deploy and configure the Hospital Emergency Response app | Microsoft Docs
+title: Deploy the Hospital Emergency Response app | Microsoft Docs
 description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/07/2020
+ms.date: 04/15/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Deploy and configure the Hospital Emergency Response app
+# Deploy the Hospital Emergency Response app
 
 The Hospital Emergency Response app requires a small amount of setup to adapt to your needs. This article provides step-by-step instructions for hospital IT admins to deploy and configure the application for their organization.
 
 Estimated time to complete these steps: **35–40 minutes**.
 
-## Demo: Deploy and configure the Hospital Emergency Response app
+## Demo: Deploy the Hospital Emergency Response app
 
 Watch how you can deploy and configure the Hospital Emergency Response app.
 
@@ -31,14 +31,14 @@ Watch how you can deploy and configure the Hospital Emergency Response app.
 
 The Hospital Emergency Response solution is also available for US Government customers. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
 
-The commercial version of the service URL is used throughout this article. If you are a US Government customer, use the respective US Government URL for your deployment as mentioned here:
+The commercial version of the service URL is used throughout this article. If you're a US Government customer, use the respective US Government URL for your deployment as mentioned here:
 
 
 | **Commercial version URL**                | **US Government version URL**  |
 |-------------------------------------------|--------------------------------|
-| https://make.powerapps.com                | https://make.gov.powerapps.us (GCC)<br/><br/>https://make.high.powerapps.us (GCC High)                |
-| https://admin.powerplatform.microsoft.com | https://gcc.admin.powerplatform.microsoft.us (GCC)<br/><br/>https://high.admin.powerplatform.microsoft.us (GCC High) |
-| https://app.powerbi.com/                  | <https://app.powerbigov.us> (GCC)<br/><br/>https://app.high.powerbigov.us (GCC High)                  |
+| [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us (GCC)](https://make.gov.powerapps.us) <br/><br/>[https://make.high.powerapps.us (GCC High)](https://make.high.powerapps.us)                |
+| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us (GCC)](https://gcc.admin.powerplatform.microsoft.us)<br/><br/>[https://high.admin.powerplatform.microsoft.us (GCC High)](https://high.admin.powerplatform.microsoft.us) |
+| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us (GCC)](https://app.powerbigov.us)<br/><br/>[https://app.high.powerbigov.us (GCC High)](https://app.high.powerbigov.us)                  |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
@@ -99,7 +99,7 @@ After unblocking the deployment file (.zip file), extract the file to a location
 |-----------------------|------------------|
 | **App Icons**         | Contains the default app icons for the mobile apps (canvas apps)|
 | **Data Files**        | Contains the master and sample data files (.xlsx) for the solution/app to work. You can import data from these files to start working on the app. More information: see [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization) |
-| **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization. More Information: [Get insights using Power BI dashboards](#get-insights-using-power-bi-dashboards)|
+| **Power BI Template** | Contains the Power BI Report template file (.pbit) that you will use to configure reporting for your organization. More Information: [Publish the Power BI dashboard](#publish-the-power-bi-dashboard)|
 | **PowerShell**        | Contains scripts that you'll use to configure your mobile apps (canvas apps). |
 | **Solution File**     | Contains the Common Data Service solution file that creates the apps and metadata required for the Hospital Emergency Response app.  |
 
@@ -179,13 +179,13 @@ The **Data Files** folder has the following files and folders:
 <li>Departments</li>
 </ul>
 <p>If you want to import your organization data instead of the sample data, you can replace the sample data in these Excel files with your organization data, and then import the data in the app.</p>
-<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="#manually-configure-and-manage-master-data-for-your-organization">Manually configure and manage master data for your organization</a></p></td>
+<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="configure-data-reporting.md#configure-and-manage-master-data-for-your-organization">Configure and manage master data for your organization</a></p></td>
 </tr>
 <tr>
 <td><strong>Data Template File for Master Data</strong> folder</td>
 <td><p>The folder contains "empty" data files (.xlsx) for master entities that you can use to populate your organization data, and then import it to the app.</p>
 <p>The files are named to denote the sequence in which the data should be imported into your app. It's the same list of entities that is mentioned earlier for the <strong>Sample Data</strong> folder.</p>
-<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="#manually-configure-and-manage-master-data-for-your-organization">Manually configure and manage master data for your organization</a></p>
+<p>You can also manually enter data for these entities. For information about each of these entities and fields in these entities, see <a href="configure-data-reporting.md#configure-and-manage-master-data-for-your-organization">Configure and manage master data for your organization</a></p>
 </td>
 </tr>
 </table>
@@ -206,7 +206,7 @@ Importing the configuration data under the following entities in the admin app i
 
 To import data from one of the data files to an entity:
 
-1.  In the left navigation pane of the admin app, select an entity for which you want to load the data. For example, select **Administration** from the area picker and then select **Acuities**.
+1.  In the left navigation pane of the admin app, select an entity for which you want to load the data. For example, select **Locations** from the area picker and then select **Acuities**.
 
 2.  Select **Import from Excel** and select the **00 - Acuities Import.xlsx** file from the **Data Files** folder.
 
@@ -222,7 +222,7 @@ To import data from one of the data files to an entity:
 
 Repeat the above steps with other configuration data entities.
 
-Alternatively, if you want to enter the master data manually, see [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization).
+Alternatively, if you want to enter the master data manually, see [Configure and manage master data for your organization](configure-data-reporting.md#configure-and-manage-master-data-for-your-organization).
 
 #### Step 4.2: Load master data
 
@@ -231,7 +231,7 @@ As explained earlier:
 
 - You can use the "empty" data files for master entities under the **Data Files/Data Template File for Master Data** folder that you can use to populate your organization data, and then import the data in the required entities.
 
-You can also manually add master data later. More information: [Manually configure and manage master data for your organization](#manually-configure-and-manage-master-data-for-your-organization)
+You can also manually add master data later. More information: [Configure and manage master data for your organization](configure-data-reporting.md#configure-and-manage-master-data-for-your-organization)
 
 ### Step 5: Update the mobile app branding
 
@@ -268,7 +268,7 @@ You do this using the **App** and **App Config** entities in the **Administratio
 1.  Open one of the app records by selecting it. Note that the **Power App ID** field is blank.
 
     > [!div class="mx-imgBorder"] 
-    > ![Power App ID field ](media/conf-powerapp-id-field.png "Power App ID field")
+    > ![Power App ID field ](media/conf-powerapp-id-field.png "Update app info")
 
 1.  In the app details page:
 
@@ -282,7 +282,9 @@ You do this using the **App** and **App Config** entities in the **Administratio
 
     5. If necessary, update the **App Display Rank** value to set the display position of app in the app list.
 
-    6. Select **Save**.
+    6. If necessary, select a value in the **Tracking Level** field to specify if you want to track data in this mobile app at a **Location** or **Facility** level. More information: [Manage tracking level for mobile apps](configure-data-reporting.md#manage-tracking-level-for-mobile-apps)
+
+    7. Select **Save**.
 
 1.  Repeat steps 8 and 9 for each canvas app record under **Apps**.
 
@@ -424,261 +426,24 @@ For your admin users to use the admin app (model-driven app), it must be shared 
 
 4. Specify the Azure AD group or admin users that you want to share this app with, assign the **Emergency Response Admin** security role, and select **Share**.
 
-
-## Manually configure and manage master data for your organization
-
-Admins can use the model-driven app in [Power Apps](https://make.powerapps.com) to create and manage master data for their organization. This data is required for the Hospital Emergency Response app to work.
-
-> [!NOTE]
-> You can also import your organization data into data files available in the deployment package and then import it to these entities. More information: [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization)
-
-You must add master data in these entities in the following sequence:
-
-1. [Systems](#systems-data)
-
-1. [Regions](#regions-data)
-
-1. [Facilities](#facilities-data)
-
-1. [Locations](#locations-data)
-
-1. [Departments](#departments-data)
-
-The master data is managed from the **Locations** area in the left navigation in the admin app:
-
-> [!div class="mx-imgBorder"]
-> ![locations-area](media/locations-area.png)
-
-The entities under the **Hierarchy** area are listed in the order you should populate data.
-
-### Systems data
-
-The **Systems** entity lets you create and manage entries for Hospital Systems. This allows you to manage multiple hospital systems within the same organization.
-
-To create a record:
-
-1. Select **Systems** in the left pane, and select **New**:  
-    > [!div class="mx-imgBorder"]
-    > ![select-systems-new](media/select-systems-new.png)
-
-2. In the **New System** page, specify appropriate values:  
-   > [!div class="mx-imgBorder"]
-   > ![enter-details-new-system](media/enter-details-new-system.png)
-
-   | **Field**            | **Description**                                    |
-   |----------------------|----------------------------------------------------|
-   | System Name          | Type a name for your Hospital.                     |
-   | Description          | Type an optional description.                      |
-   | Effective Start Data | Type start date and time for this hospital system. |
-   | Effective End Date   | Type end date and time for this hospital system.   |
-
-3. Select **Save & Close**. The newly created record will be available in the **Systems** list.
-
-To edit the record, select the record, update the values as required, and select **Save & Close**.
-
-### Regions data
-
-The **Regions** entity lets you manage the geographical regions for your hospital systems.
-
-To create a record:
-
-1. Select **Regions** in the left pane, and select **New**.
-
-2. In the **New Region** page, specify appropriate values:  
-
-    > [!div class="mx-imgBorder"]
-    > ![enter-details-new-region](media/enter-details-new-region.png)
-
-    | **Field**            | **Description**                                                                                          |
-    |----------------------|----------------------------------------------------------------------------------------------------------|
-    | System               | Select a hospital system. This list is populated based on the **Systems** data you have created earlier. |
-    | Region Name          | Type the region name. For example, Seattle.                                                              |
-    | Description          | Type an optional description.                                                                            |
-    | Effective Start Data | Type start date and time for this region.                                                       |
-    | Effective End Date   | Type end date and time for this region.                                                         |
-
-3. Select **Save & Close**. The newly created record will be available in the **Regions** list.
-
-To edit the record, select the record, update the values as required, and select **Save & Close**.
-
-### Facilities data
-
-The **Facilities** entity lets you manage the hospital locations within each region. For example, **Redmond** and **Bellevue** facilities within the
-**Seattle** region.
-
-To create a record:
-
-1. Select **Facilities** in the left pane, and select **New**.
-
-2. In the **New Facility** page, specify appropriate values: 
-
-    > [!div class="mx-imgBorder"] 
-    > ![enter-details-new-facility](media/enter-details-new-facility.png)
-
-    | **Field**            | **Description**                                                                                 |
-    |----------------------|-------------------------------------------------------------------------------------------------|
-    | Region               | Select a region. This list is populated based on the **Regions** data you have created earlier. |
-    | Facility Name        | Type the facility name. For example, Bellevue.                                                  |
-    | Description          | Type an optional description.                                                                   |
-    | Total Vents          | Type the total number of ventilators available in the facility                                  |
-    | Effective Start Data | Type start date and time for this facility.                                                     |
-    | Effective End Date   | Type end date and time for this facility.                                                       |
-
-    If required, enter facility address.
-
-3. Select **Save & Close**. The newly created record will be available in the **Facilities** list.
-
-To edit the record, select the record, update the values as required, and select **Save & Close**.
-
-### Locations data
-
-The **Locations** entity lets you manage specific locations within each hospital facility.
-
-> [!NOTE]
-> Before creating a **Locations** record, ensure that you have imported the acuity data using the **00 - Acuities Import.xlsx** file as explained earlier in [Step 4: Load configuration and master data for your organization](#step-4-load-configuration-and-master-data-for-your-organization). This is because acuity information is required to create a **Location** record.
-
-To create a record:
-
-1. Select **Locations** in the left pane, and select **New**.
-
-2. In the **New Location** page, specify appropriate values:  
- 
-    > [!div class="mx-imgBorder"]
-    > ![enter-details-new-location](media/enter-details-new-location.png)
-
-    | **Field**            | **Description**                                                                                      |
-    |----------------------|------------------------------------------------------------------------------------------------------|
-    | Location Name        | Type the name of the location.                                                                       |
-    | Facility             | Select a facility. This list is populated based on the **Facilities** data you have created earlier. |
-    | Floor                | Type the floor information for the facility.                                                         |
-    | Unit                 | Type the unit information for the facility                                                           |
-    | Acuity      | Select acuity record associated with this location.                                                                                                     |
-    | COVID Location      | Select whether this location is used to treat COVID patients (**Yes** or **No**.)                                                                                                      |
-    | Total Beds           | Type the total number of beds in the facility.                                                       |
-    | Surge Beds           | Type the number of surge beds in the facility. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                                      |
-    | Blocked beds         | Type the number of beds blocked in the facility.                                                     |
-    | Last Census          | Populates based on the last census record being created.                                             |
-    | Occupancy Percentage | Automatically calculated based on last census and total beds                                         |
-    | Effective Start Data | Type start date and time for this location.                                                   |
-    | Effective End Date   | Type end date and time for this location.                                                     |
-    | Location Order       | Type a number that sorts the location in the location drop-down lists.                               |
-    | Alternate Site Flag  | For internal use.                                                                                     |
-
-3. Select **Save & Close**. The newly created record will be available in the **Locations** list.
-
-To edit the record, select the record, update the values as required, and select **Save & Close**.
-
-### Departments data
-
-The **Departments** entity lets you manage departments information for a hospital.
-
-To create a record:
-
-1. Select **Departments** in the left pane, and select **New**.
-
-2. In the **New Department** page, specify appropriate values:
-
-    > [!div class="mx-imgBorder"]
-    > ![enter-details-new-department](media/enter-details-new-department.png)
-
-    | **Field**            | **Description**                                    |
-    |----------------------|----------------------------------------------------|
-    | Department Name      | Type a department name.                            |
-    | Description          | Type an optional description.                      |
-    | Effective Start Data | Type start date and time for this department. |
-    | Effective End Date   | Type end date and time for this department.   |
-
-3. Select **Save & Close**. The newly created record will be available in the **Departments** list.
-
-To edit the record, select the record, update the values as required, and select **Save & Close**.
-
-## Get insights using Common Data Service dashboards
-
-Following dashboards are available by default in the Hospital Emergency Response admin (model-driven) app:
-
-- **Bed Management**
-
-   Shows availability of beds, occupancy percentage and total number of beds across different facilities.
-
-- **Equipment and Supply**
-
-  Shows critical equipment in use and supplies available across different facilities.
-
-- **Staff Management**
-
-  Shows number of requested, assigned, and available staff members across different facilities.
-
-- **COVID Patients**
-
-  Shows number of patients under investigation and found positive with COVID-19 across different facilities.
-
-- **Discharges**
-
-  Shows number of patients anticipated for discharge and actual discharge.
-
-You can also create your own dashboards in addition to the dashboards available by default.
-
-### Manage dashboards
-
-To manage dashboards:
-
-1. Sign into [Power Apps](https://make.powerapps.com) and browse to your admin app.
-
-2. In the left navigation pane, select **Dashboards** from the area picker:
-
-    > [!div class="mx-imgBorder"]
-    > ![select-dashboards](media/select-dashboards.png)
-
-3. Select a dashboard name in the left navigation to view the charts:
-
-    > [!div class="mx-imgBorder"]
-    > ![view-charts](media/view-charts.png)
-
-    > [!NOTE]
-    > You can filter data at the bottom of the screen and the charts on top are automatically updated with filtered values.
-
-4. Select the **Expand** option to view a chart in full-screen mode:
-
-    > [!div class="mx-imgBorder"]
-    > ![select-expand](media/select-expand.png)
-
-### Additional analysis
-
-- **Drill down**: You can select chart area to drill down further with additional attributes (fields) for an entity:
-
-    > [!div class="mx-imgBorder"]
-    > ![select-chart-area-drill-down](media/select-chart-area-drill-down.png)
-
-- **Refresh**: You can refresh the dashboards to reflect updated data. You can either refresh all charts on a specific dashboard with **Refresh All**, or a selected chart with **Refresh**:
-
-    > [!div class="mx-imgBorder"]
-    > ![refresh-dashboards](media/refresh-dashboards.png)
-
-- **View records**: Select **More Commands** (**…**) and then **View Records** to view all records associated to a given chart:
-
-    > [!div class="mx-imgBorder"]
-    > ![select-more-commands](media/select-more-commands.png)
-
-    > [!NOTE] 
-    > When you select **View records**, you'll see the view of the entity split between chart and the records. Any change to filters for records on the right-side reflects with automatic updates to the chart on left-side of the screen.
-
-For more information about editing an existing dashboard and updating properties
-of charts, read [edit an existing dashboard](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-dashboards#edit-an-existing-dashboard).
-
-### Create new dashboards
-
-You can also create your own dashboards and customize to suite your needs. To create a new dashboard, select **New** and then select **Dynamics 365 Dashboard**:
-
-> [!div class="mx-imgBorder"]
-> ![select-new-dynamics-dashboard](media/select-new-dynamics-dashboard.png)
-
-For more information about creating a new dashboard, read [create new dashboard](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-dashboards#create-a-new-dashboard).
-
-## Get insights using Power BI dashboards
+## Publish the Power BI dashboard
 
 Publish the Power BI dashboard and share it with users in your organization so that they can use the dashboard for insights and decision making.
 
-### Prerequisites
+You can publish the Power BI dashboard using either of the following options: using the template app from the AppSource *or* using the **.pbit** file available in the deployment package.
+
+### Option A: Publish using the template app from AppSource (Preferred Option)
+
+Detailed information about using the template app from the AppSource is available here: [Connect to the Hospital Emergency Response Decision Support Dashboard](https://docs.microsoft.com/power-bi/connect-data/service-connect-to-health-emergency-response)
+
+> [!IMPORTANT]
+> This is an easier way to publish the Power BI dashboard than using the .pbit file option to publish. We recommend customers use this option instead of publishing using the .pbit file option. 
+
+### Option B: Publish using the .pbit file in the deployment package
+
+This section provides information on how you can use the **Emergency Response App.pbit** available in the deployment package to publish the dashboard.
+
+#### Prerequisites
 
 - Power BI Premium Capacity or Power BI Pro licenses assigned to users accessing the report. 
 
@@ -693,7 +458,7 @@ Publish the Power BI dashboard and share it with users in your organization so t
 
 - After installing Power BI Desktop from app store, run it, sign in using an account that has permission to publish Power BI apps in your organization.
 
-### Publish the Power BI dashboard
+#### Publish the dashboard using the .pbit file
 
 1. Navigate to the location where you extracted the deployment package. You will find the **Emergency Response App.pbit** file under the **Power BI Template** folder.
 
@@ -768,118 +533,9 @@ Publish the Power BI dashboard and share it with users in your organization so t
 
 18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
 
-### View the Power BI dashboard
+### After publishing the dashboard
 
-Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI dashboard.
-
-> [!div class="mx-imgBorder"]
-> ![View Power BI dashboard](media/view-power-dashboard.png)
-
-You can use the filters at the top of the report to filter data for hospital systems, regions, and facilities. You can also filter for COVID locations.
-
-> [!div class="mx-imgBorder"]
-> ![Report filters](media/report-filters.png)
-
-#### System at a glance page 
-
-The **Systems at a glance page** is the default or the top-level page that provides an overall view.  
-
-The page displays a summarized view of the following: 
-
-- **COVID patients**: Shows total number of COVID patients, number of patients found positive with COVID-19, and number of patients under investigation. 
-
-- **Bed Management**: Shows availability of beds, occupancy percentage, number of surge beds, and total number of beds. You can also use the grid below to view the numbers by acute units. 
-
-- **Nurse staffing management**: Shows number of patients in ICU, nurses assigned, and nurse to patient ratio.  
-
-- **Discharges**: Shows the number of total long stay patients, number of patients anticipated for discharge, and actual discharge. 
-
-- **Equipment**: Shows total number of vents, number of vents in use, and available vents. 
-
-- **Supplies**: Shows number of supplies on hand by days.
-
-> [!NOTE]
-> - Selecting the information icon (i) in any of the summarized area takes you to the respective details page for the area. 
-> - You can also perform other actions on reports such as filter and sort data, export the report to PDF and PowerPoint, add a spotlight, and so on. For detailed information about report features in Power BI, see [Reports in Power BI](https://docs.microsoft.com/power-bi/consumer/end-user-reports)
-> - The most recent or last updated columns in some of these reports show the date and time when the data was last refreshed. It's also easy to identify the freshness by viewing the color of the date and time values in these columns:
->    - Black: Data is refreshed less than 20 hours ago
->    - Gray: Data is refreshed 20 - 24 hours ago
->    - Red: Data is refreshed more than 24 hours ago 
- 
-#### System View page
-
-The **System View** page displays charts with the following information for a hospital system:
-- Vents in use and vents available
-- Availability of beds and acute care beds and occupancy percentage
-- Total staff requested, number of patients (census), nurse to patient ratio.
-- Supplies on hand in days
-
-> [!div class="mx-imgBorder"]
-> ![System View](media/report-system-view.png)
-
-#### Location Details page 
-
-To drill-down the report by location, click **Location Details** on the top-right corner. The **Location Details** page displays data by location such as total number of beds, available beds, surge beds, COVID patients, and so on. 
-
-> [!div class="mx-imgBorder"]
-> ![Location Details](media/report-location-details.png) 
-
-#### COVID Patient Details page 
-
-The **COVID Patient Details** page provides drill-down information about the COVID patients such as patients at each location, patient trend over time that shows peaks and valleys of number of patients under investigation (PUI), and number of patients found positive, and get a sense of where the patients are located within the hospital.
-
-> [!div class="mx-imgBorder"]
-> ![COVID Patient Details](media/report-covid-details.png)
-
-#### Bed Management page 
-
-The **Bed Management** page provides drill-down information by location such as total available beds and occupancy percentage.
-
-> [!div class="mx-imgBorder"]
-> ![Bed Management](media/report-bed-details.png)
-
-#### Staff Details page  
-
-The **Staff Details** page provides details about the staff by location, number of nurses assigned, total number of patients and number of COVID patients. It also displays nurse to patient ratio and ICU nurse to patient ratio over a period of time.
-
-> [!div class="mx-imgBorder"]
-> ![Staff Details](media/report-staff-details.png)
-
-#### Equipment Details page 
-
-The **Equipment Details** page provides details about the equipment by location, the total number of vents in use, overlaid by number of COVID patients, and other pieces of equipment, such as belts, chargers, and hoods in use.
-
-> [!div class="mx-imgBorder"]
-> ![Equipment Details](media/report-equipment-details.png)
-
-#### Discharge Details page 
-
-The **Discharge Details** page provides details about the long-term patients, discharge barriers over a period, and variance in terms of actual and anticipated discharges.
-
-> [!div class="mx-imgBorder"]
-> ![Equipment Details](media/report-discharge-details.png)
-
-#### Supplies on Hand Details page 
-
-The **Supplies on Hand Details** page provides details about the supplies by location and supply; it also provides data about the supply available on hand over a period of time.
-
-> [!div class="mx-imgBorder"]
-> ![Equipment Details](media/report-discharge-details.png)
-
-## View and manage app feedback
-
-All the feedback provided by frontline staff using canvas apps on their mobile devices is stored in the **App Feedback** entity, and admins can view and manage this using the **Administration** area on the left navigation pane in the admin app.
-
-To view and manage app feedback:
-
-1. Sign into [Power Apps](https://make.powerapps.com) and browse to your admin app.
-
-2. In the left navigation pane, select **Administration** from the area picker.
-
-3. Select **App Feedback** to view a list of app feedback submitted by users. You can click a record to view details and mark them as reviewed or not.  
-
-    > [!div class="mx-imgBorder"]
-    > ![select-app-feedback](media/select-app-feedback.png)
+To view the published Power BI dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)
 
 ## Issues and feedback
 

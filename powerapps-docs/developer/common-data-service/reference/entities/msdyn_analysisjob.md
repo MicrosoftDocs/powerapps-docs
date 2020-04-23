@@ -1,7 +1,7 @@
 ---
 title: "msdyn_analysisjob Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_analysisjob entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the msdyn_analysisjob entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # msdyn_analysisjob Entity Reference
 
@@ -37,6 +38,7 @@ search.app:
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_analysisjobs(*msdyn_analysisjobid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/msdyn_analysisjobs(*msdyn_analysisjobid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+
 
 ## Entity Properties
 

@@ -58,7 +58,7 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
 ## See also  
 
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define Ribbon Display Rules](define-ribbon-display-rules.md)   
- [Pass data from a page as a parameter to Ribbon Actions](pass-data-page-parameter-ribbon-actions.md)  
+ [Define Ribbon display rules](define-ribbon-display-rules.md)   
+ [Pass data from a page as a parameter to Ribbon actions](pass-data-page-parameter-ribbon-actions.md)  
 
 
