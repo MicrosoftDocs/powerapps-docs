@@ -38,12 +38,12 @@ When you perform the following procedures as an administrator, users will see an
 
 **Error:** Records could not be loaded because of an unexpected error.
 
-   > [!div class=mx-imgBorder] 
+   > [!div class="mx-imgBorder"] 
    > ![Records could not be loaded because of an unexpected error.](media/timeline-error1.png "Records could not be loaded because of an unexpected error.")
 
 This error is caused because the number of activity entities for the data retrieval has exceeded the maximum limit of 10.
 
-   > [!div class=mx-imgBorder] 
+   > [!div class="mx-imgBorder"] 
    > ![Number of link entities in query exceeded maximum limit](media/timeline-error2.png "[Number of link entities in query exceeded maximum limit")
 
 ### Workaround
@@ -62,15 +62,15 @@ To work around the issue, you must reduce the number of entities to 10 or fewer.
 
 6.   Select the **Account for Interactive experience** record that is a **Main** form type. The **Account for Interactive experience** form opens in a new browser window.
 
-   > [!div class=mx-imgBorder] 
-   > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
+      > [!div class="mx-imgBorder"] 
+      > ![Select the entity form with interactive experience in the name](media/account-interactive-experience.png "Select the entity form with interactive experience in the name")
 
-   For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`.
+      For Unified Interface, you need to use the form name that has `<Entity> for Interactive experience`.
 
 7.    Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
 
-    > [!div class=mx-imgBorder] 
-    > ![Double-click the field in the social pane](media/timeline-conversation-tabs-field.png "Double-click the field in the social pane")  
+      > [!div class="mx-imgBorder"] 
+      > ![Double-click the field in the social pane](media/timeline-conversation-tabs-field.png "Double-click the field in the social pane")  
 
 8.    Select the **Show selected** option for the **Show these activities** field in the **Filter by** container.
 
