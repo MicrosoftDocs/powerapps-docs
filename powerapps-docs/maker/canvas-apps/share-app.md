@@ -67,7 +67,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
     > [!div class="mx-imgBorder"]
     > ![Assign a security role](media/share-app/cds-assign-security-role.png)
 
-    For more information about managing security for an entity, see [Manage entity permissions](share-app.md#manage-entity-permissions) later in this topic.
+    For more information about managing security for an entity, see [Manage entity permissions](share-app.md#manage-entity-permissions) later in this article.
 
 1. If you want to help people find your app, select the **Send an email invitation to new users** check box.
 
@@ -82,7 +82,7 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     Co-owners who receive an invitation get another link that opens the app for editing in Power Apps Studio.
 
-You can change permissions for a user or a security group by selecting their name and then performing either of these steps:
+You can change permissions for a user or a security group by selecting their name and then following either of these steps:
 
 - To allow co-owners to run the app but no longer edit or share it, clear the **Co-owner** check box.
 - To stop sharing the app with that user or group, select the Remove (x) icon.
@@ -101,7 +101,7 @@ Follow these steps to check if an Office 365 group has security enabled:
 
 1. Ensure you have access to the [Azure AD cmdlets](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets).
 
-1. Go to [Azure Portal](https://portal.azure.com/) \> Azure Active
+1. Go to [Azure portal](https://portal.azure.com/) \> Azure Active
     Directory \> Groups \> Select the appropriate group \> Copy the Object Id.
 
 1. [Connect to Azure AD](https://docs.microsoft.com/powershell/module/azuread/connect-azuread) using PowerShell:
@@ -113,7 +113,7 @@ Follow these steps to check if an Office 365 group has security enabled:
 
     ![Check SecurityEnabled property](media/share-app/azure_cmdlet_get_azuread_group_details.png)
 
-If the group is not security enabled, you can enable it enable it using PowerShell cmdlet [Set-AzureADGroup](https://docs.microsoft.com/powershell/module/AzureAD/Set-AzureADGroup) by setting the **SecurityEnabled** property to **True**: 
+If the group isn't security enabled, you can enable it using PowerShell cmdlet [Set-AzureADGroup](https://docs.microsoft.com/powershell/module/AzureAD/Set-AzureADGroup) by setting the **SecurityEnabled** property to **True**: 
 
 ```Set-AzureADGroup -ObjectId <ObjectID> -SecurityEnabled $True```
 
@@ -195,7 +195,7 @@ After you share an app for guest access, guests can discover and access apps sha
 ### Frequently Asked Questions
 
 #### What’s the difference between canvas app guest access and Power Apps Portals? 
-Canvas apps enable building an app, tailored to digitizing a business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that may be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for Power Apps](/powerapps/maker/canvas-apps/connections-list).
+Canvas apps enable building an app, tailored to digitizing business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that may be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for Power Apps](/powerapps/maker/canvas-apps/connections-list).
 
 [Power Apps Portals](/powerapps/maker/portals/overview) provide the ability to build low-code, responsive websites that allow external users to interact with the data stored in Common Data Service. It allows organizations to create websites that can be shared with users external to their organization either anonymously or through the login provider of their choice, such as LinkedIn, Microsoft Account, or other commercial login providers. 
 
@@ -240,13 +240,13 @@ The same license that’s required for non-guests to run an app. For instance, i
 More details around pricing and capabilities of various plans can be found in [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 #### In Power Apps Mobile, how does a guest see apps for their home tenant?
-Any user that has accessed an canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign-out of Power Apps and sign back in to Power Apps Mobile.  
+Any user that has accessed a canvas app, on their mobile device, that’s published in an Azure AD tenant that isn’t their home tenant must sign out of Power Apps and sign back in to Power Apps Mobile.  
 
 #### In Power Apps Mobile, how does a guest see apps in the guest tenant?
 As the guest user, open the email received when an app in the guest tenant was shared, and select the **Open the app** button. This applies to both Azure Active Directory and Microsoft Account users.   
 
-#### Must a guest accept the Azure AD guest invitation prior to sharing an app with the guest?
-No. If a guest launches an app shared with them prior to accepting a guest invitation the guest will be prompted to accept the invitation as part of the sign-in experience while launching the app.  
+#### Must a guest accept the Azure AD guest invitation before sharing an app with the guest?
+No. If a guest launches an app shared with them before accepting a guest invitation the guest will be prompted to accept the invitation as part of the sign-in experience while launching the app.  
 
 #### What Azure AD tenant are connections for a guest user created in?
 Connections for an app are always made in the context of the Azure AD tenant the app is associated. For instance, if an app is created in the Contoso tenant then connections made for Contoso internal and guest users are made in the context of the Contoso tenant.
@@ -254,8 +254,8 @@ Connections for an app are always made in the context of the Azure AD tenant the
 #### Can guests use Microsoft Graph via Microsoft Security Graph connector or a custom connector using Microsoft Graph APIs?
 No, Azure AD guests can't query Microsoft Graph to retrieve information for a tenant in which they’re a guest.
 
-#### What InTune policies apply to guests using my Power Apps?
-InTune only applies policies of a user’s home tenant. For instance, if Alice@Contoso.com shares an app with Vikram@Fabrikam.com, InTune continues to apply Fabrikam.com policies on Virkam’s device regardless of the Power Apps he runs.
+#### What Intune policies apply to guests using my Power Apps?
+Intune only applies policies of a user’s home tenant. For instance, if Lesa@Contoso.com shares an app with Wanda@Fabrikam.com, Intune continues to apply Fabrikam.com policies on Wanda’s device regardless of the Power Apps Wanda runs.
 
 #### What connectors support guest access?
 All connectors that do not perform Azure AD authentication of any type supports guest access. The following table enumerates all connectors that perform Azure AD authentication and which connectors currently support guest access. Many of these will be updated leading up to general availability.
