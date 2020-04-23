@@ -25,7 +25,7 @@ In a canvas app, add and configure a **[Display](controls/control-form-detail.md
 - Upload the Excel file to a [cloud-storage account](connections/cloud-storage-blob-connections.md), such as OneDrive for Business.
 - Create or open an app for phones, [add a connection](add-data-connection.md) to the **FlooringEstimates** table in the Excel file.
 
-    You can add a form to a tablet app, but it won't match this topic because the form will have three columns by default.
+    You can add a form to a tablet app, but it won't match this article because the form will have three columns by default.
 
 - If you open an existing app, [add a screen](add-screen-context-variables.md) to it.
 
