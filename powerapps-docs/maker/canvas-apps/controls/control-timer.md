@@ -25,7 +25,7 @@ Timers can, for example, determine how long a control appears or change other pr
 
 
 ## Key properties
-**Duration** – How long a timer runs in milliseconds.  There is no maximum value.
+**Duration** – How long a timer runs in milliseconds. The maximum is 24 hours expressed in milliseconds. Default is 60 seconds.
 
 **OnTimerEnd** – How an app responds when a timer finishes running.
 

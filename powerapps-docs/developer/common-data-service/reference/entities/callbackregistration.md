@@ -1,7 +1,7 @@
 ---
 title: "CallbackRegistration Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the CallbackRegistration entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the CallbackRegistration entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # CallbackRegistration Entity Reference
 
@@ -59,6 +60,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [PostponeUntil](#BKMK_PostponeUntil)
+- [RunAs](#BKMK_RunAs)
 - [Scope](#BKMK_Scope)
 - [Url](#BKMK_Url)
 - [Version](#BKMK_Version)
@@ -211,6 +213,28 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_RunAs"></a> RunAs
+
+|Property|Value|
+|--------|-----|
+|Description|Specifies the user context under which the callback will run|
+|DisplayName|RunAs|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|runas|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### RunAs Options
+
+|Value|Label|
+|-----|-----|
+|1|Triggering User|
+|2|Record Owner|
+|3|Process Owner|
+
+
+
 ### <a name="BKMK_Scope"></a> Scope
 
 |Property|Value|
@@ -267,6 +291,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Value|Label|
 |-----|-----|
 |1|V1|
+|2|V2|
 
 
 <a name="read-only-attributes"></a>

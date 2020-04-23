@@ -2,7 +2,7 @@
 title: "Detect duplicate data using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read how to detect duplicates using MSCRM.SuppressDuplicateDetection header and Common Data Service Web API"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/06/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -39,7 +39,7 @@ Use preference header `MSCRM.SuppressDuplicateDetection` and set its value to `f
 
 
 > [!NOTE]
-> Make sure there are appropriate duplicate detection rules in place. Common Data Service includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you’ll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, [see Duplicate rule entities](../duplicaterule-entities.md) 
+> Make sure there are appropriate duplicate detection rules in place. Common Data Service includes default duplicate detection rules for accounts, contacts, and leads, but not for other types of records. If you want the system to detect duplicates for other record types, you'll need to create a new rule. <br/>- For information on how to create a duplicate detection rule using the UI, see [Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).<br/>- For information on creating duplicate detection rules using code, [see Duplicate rule entities](../duplicaterule-entities.md) 
 
 
 
@@ -60,9 +60,9 @@ Accept: application/json
 MSCRM.SuppressDuplicateDetection: false
 
 {
-	"firstname":"Monte",
-	"lastname":"Orton",
-	"emailaddress1":"monteorton@example.com"
+    "firstname":"Monte",
+    "lastname":"Orton",
+    "emailaddress1":"monteorton@example.com"
 }
 ```
 If a lead record with the same `emailaddress1` attribute already exists, the following Response is returned.
@@ -76,12 +76,7 @@ OData-Version: 4.0
 {
     "error": {
         "code": "0x80040333",
-        "message": "A record was not created or updated because a duplicate of the current record already exists.",
-        "innererror": {
-            "message": "A record was not created or updated because a duplicate of the current record already exists.",
-            "type": "Microsoft.Crm.CrmException",
-            [ Stack Trace and internal exception details omitted for brevity]
-        }
+        "message": "A record was not created or updated because a duplicate of the current record already exists."
     }
 }
 ```
@@ -108,9 +103,9 @@ Accept: application/json
 MSCRM.SuppressDuplicateDetection: false
 
 {
-	"firstname":"Monte",
-	"lastname":"Orton",
-	"emailaddress1":"monteorton@example.com"
+    "firstname":"Monte",
+    "lastname":"Orton",
+    "emailaddress1":"monteorton@example.com"
 }
 ```  
 
@@ -123,12 +118,7 @@ OData-Version: 4.0
 {
     "error": {
         "code": "0x80040333",
-        "message": "A record was not created or updated because a duplicate of the current record already exists.",
-        "innererror": {
-            "message": "A record was not created or updated because a duplicate of the current record already exists.",
-            "type": "Microsoft.Crm.CrmException",
-            [ Stack Trace and internal exception details omitted for brevity]
-        }
+        "message": "A record was not created or updated because a duplicate of the current record already exists."
     }
 }
 ```

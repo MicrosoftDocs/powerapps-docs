@@ -375,7 +375,7 @@
       href: appendix-app-design-best-practices-checklist.md
     - name: 'Appendix: App certification checklist'
       href: appendix-app-certification-checklist.md
-  - name: ISV app management and monitoring
+  - name: Monitor your app in ISV Studio
     items:
     - name: Introduction to ISV Studio
       href: isv-app-management.md
@@ -385,6 +385,10 @@
       href: isv-app-management-apppage.md
     - name: Tenant page
       href: isv-app-management-tenantpage.md
+    - name: AppSource checker
+      href: isv-app-management-appsource-checker.md
+    - name: Connector Certification 
+      href: isv-app-management-certification.md
 - name: Create client applications
   href: connect-cds.md
   items:

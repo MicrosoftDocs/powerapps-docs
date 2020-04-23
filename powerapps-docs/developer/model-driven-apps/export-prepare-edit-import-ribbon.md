@@ -21,24 +21,26 @@ search.app:
 
 To edit the ribbon, you must perform the following steps:  
   
-1.  [Export the ribbon](export-prepare-edit-import-ribbon.md#BKMK_ExportTheRibbon)  
+1. [Export the ribbon](export-prepare-edit-import-ribbon.md#BKMK_ExportTheRibbon)  
   
-2.  [Prepare to edit the XML](export-prepare-edit-import-ribbon.md#BKMK_PrepareToEditTheXML)  
+2. [Prepare to edit the XML](export-prepare-edit-import-ribbon.md#BKMK_PrepareToEditTheXML)  
   
-3.  Edit the `<RibbonDiffXml>`  
+3. Edit the `<RibbonDiffXml>`  
   
-4.  [Import the ribbon](export-prepare-edit-import-ribbon.md#BKMK_ImportTheRibbon)  
+4. [Import the ribbon](export-prepare-edit-import-ribbon.md#BKMK_ImportTheRibbon)  
   
-<a name="BKMK_ExportTheRibbon"></a>   
+<a name="BKMK_ExportTheRibbon"></a>
+
 ## Export the ribbon  
- You export the ribbon by including it in a solution and then exporting the solution. You can export all the customizations, but that can represent a large amount of data. We recommend that you use an existing unmanaged solution or create a new solution.  
+
+You export the ribbon by including it in a solution and then exporting the solution. You can export all the customizations, but that can represent a large amount of data. We recommend that you use an existing unmanaged solution or create a new solution.  
   
 #### Create a new solution  
   
 1. Go to **Settings > Customizations**.
 1. Go to **Settings > Solutions**.
 1. Click or tap **New**.  
-1. Type a meaningful **Display Name**, **Unique Name** and enter a **Publisher** and type a **Version** number.  
+1. Type a meaningful **Display Name**, **Name** and enter a **Publisher** and type a **Version** number.  
   
    > [!NOTE]
    >  You can usually use the default publisher for the organization.  
@@ -100,12 +102,13 @@ To edit the ribbon, you must perform the following steps:
 ## Prepare to edit the XML  
  For a better experience, edit the customizations.xml file with an application that can use schema validation to provide IntelliSense support. For more information, see [Edit the Customizations file with Schema Validation](edit-customizations-xml-file-schema-validation.md).  
   
-<a name="BKMK_ImportTheRibbon"></a>   
+<a name="BKMK_ImportTheRibbon"></a>
+
 ## Import the ribbon  
   
 1. After you have edited the customization.xml file, from Visual Studio or Visual Web Developer 2010 Express, right-click the customization.xml tab and select **Open Containing Folder**.  
   
-2. Select all of the files or folders that were included when you extracted the solution. Right-click the selected files, select **Send To**, and then select **Compressed (zipped) folder**.  
+2. Select all of the files or folders that were included when you extracted the solution. Right-click the selected files, select **Send to**, and then select **Compressed (zipped) folder**.  
   
    > [!NOTE]
    >  This creates a compressed .zip file in the same folder. The name of the file may vary, but it will be the same as one of the other files in the folder - except with a .zip file name extension.  
@@ -124,6 +127,7 @@ To edit the ribbon, you must perform the following steps:
 10. After you have successfully imported your solution, you must publish customizations before you can see the changes. In the Solutions list, click **Publish All Customizations**.  
   
 <a name="BKMK_DealWithErrorsOnImport"></a>   
+
 ### Dealing with errors on import  
   
 1.  If you receive a notification that there were errors that caused the import to fail, click **Export Log**.  
@@ -136,7 +140,11 @@ To edit the ribbon, you must perform the following steps:
     >  The most common type of failure is an error when referencing a dependent element in the RibbonDiffXml. Perhaps you forgot to include a LocLabel that was referenced somewhere. Perhaps there is an extra blank character included at the end of an XML attribute referencing another element. All references must match exactly.  
   
 4.  After you have corrected the error, complete the steps to import the Ribbon again.  
-  
+
+## Troubleshoot ribbon issues
+
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
+
 ### See also  
  [Customize the Ribbon](customize-commands-ribbon.md)   
  [Export Ribbon Definitions](export-ribbon-definitions.md)   

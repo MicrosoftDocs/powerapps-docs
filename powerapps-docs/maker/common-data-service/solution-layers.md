@@ -2,7 +2,7 @@
 title: "Solution layers  | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
-ms.date: 02/05/2020
+ms.date: 03/13/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -62,6 +62,12 @@ The solution layers feature:
 
    > [!div class="mx-imgBorder"] 
    > ![Solution layer all properties](media/solution-layers-all-prop.png "Solution layer all properties")
+5. Select the **LocalizedLabels** tab to display information for components that have label fields in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. If no labels exist the tab isn't displayed.  
+   > [!div class="mx-imgBorder"] 
+   > ![Solution layer localized labels](media/localized-labels.png "Solution layer localized labels")
+
+    Select a label to see its full layering.
 
 ### See also
+[Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md) <br />
 [Solutions overview](solutions-overview.md)
