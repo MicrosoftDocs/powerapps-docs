@@ -61,7 +61,7 @@ Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com
       > [!Note]
       > Ensure to the **Display in Activity menus** option before you create the entity.
 
-    f. Expand **Create and update settings** and select the **Enable quick create forms** check box. This option ensures, you can use the quick create form to crete a record.
+    f. Expand **Create and update settings** and select the **Enable quick create forms** check box. This option ensures, you can use the quick create form to create a record.
     
     g. When you're done, click **Create**.
      

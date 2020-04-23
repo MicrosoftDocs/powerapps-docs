@@ -80,7 +80,7 @@ On success, returns a promise containing a JSON object with the retrieved attrib
 
 ### Basic retrieve 
 
-Retrieves the name and revenue of an account record wwith record ID = 5531d753-95af-e711-a94e-000d3a11e605.
+Retrieves the name and revenue of an account record with record ID = 5531d753-95af-e711-a94e-000d3a11e605.
 
 ```JavaScript
 Xrm.WebApi.retrieveRecord("account", "a8a19cdd-88df-e311-b8e5-6c3be5a8b200", "?$select=name,revenue").then(

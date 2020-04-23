@@ -100,6 +100,6 @@ Data defining commands in Common Data Service can be presented in several differ
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Ribbons Available](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365)   
- [Export Ribbon Definitions](export-ribbon-definitions.md)   
+ [Ribbons available](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365)   
+ [Export Ribbon definitions](export-ribbon-definitions.md)   
  [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)

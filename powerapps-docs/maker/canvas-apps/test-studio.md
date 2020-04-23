@@ -1,7 +1,7 @@
 ---
 title: Test Studio for testing canvas app | Microsoft Docs
 description: Describes Test Studio with overview, terminology, best practices, and limitations.
-author: tapanm-msft
+author: aengusheaney
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
@@ -46,7 +46,7 @@ In the Test Studio, test steps are written using the Power Apps expression langu
 
 Test suites are used to organize or group test cases together. As the number of test cases in the app grows, you may consider organizing the test cases in specific features or functionality. For example, you may have one test suite with test cases to validate expense report submissions and another test suite that focuses just on expense approvals.
 
-Test cases contained in test suites are run sequentially. The app state is persisted across all test cases in a suite. For example, if you have a test case that completes on Screen 5 in your app, the next test case in your test suite will begin running from Screen 5. It allows you to break down a complex test scenario into multiple test cases within a single suite, and the state is shared across all test cases. If your second test case expects to begin at the start screen of the app, you can navigate to the start screen as the first step in your test case. It’s important to remember that the app is not reloaded at the beginning of every test case in a test suite when planning your test execution.
+Test cases contained in test suites are run sequentially. The app state is persisted across all test cases in a suite. For example, if you have a test case that completes on Screen 5 in your app, the next test case in your test suite will begin running from Screen 5. It allows you to break down a complex test scenario into multiple test cases within a single suite, and the state is shared across all test cases. If your second test case expects to begin at the start screen of the app, you can navigate to the start screen as the first step in your test case. It's important to remember that the app is not reloaded at the beginning of every test case in a test suite when planning your test execution.
 
 ### Test Assertions
 
@@ -60,7 +60,7 @@ When testing canvas app using Test Studio, consider the following best practices
 
 1. **Determine which test cases should be automated.**
 
-    It’s difficult to automate all tests and we do not recommend that you completely rely on test automation. Manual testing should be performed in addition to test automation. Tests best suited to automation are:
+    It's difficult to automate all tests and we do not recommend that you completely rely on test automation. Manual testing should be performed in addition to test automation. Tests best suited to automation are:
 
     - Repetitive tests.
     - High business impact functionality tests.
@@ -95,3 +95,11 @@ While work to provide full control coverage in Power Apps Test Studio is in prog
 - Formula-level-error management experimental feature needs to be turned on for the app.
 - Support for controls not listed in the [Select](./functions/function-select.md) and [SetProperty](./functions/function-setproperty.md) functions.
 - Person type columns.
+
+## Next steps
+
+- [Working with Test Studio](working-with-test-studio.md)
+
+### See also
+
+- [Automate tests with Azure DevOps pipeline classic editor](test-studio-classic-pipeline-editor.md)

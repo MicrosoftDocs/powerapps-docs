@@ -1,7 +1,7 @@
 ---
 title: "SLAItem Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SLAItem entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the SLAItem entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # SLAItem Entity Reference
 
@@ -41,7 +42,7 @@ Contains information about a tracked support KPI for a specific customer.
 |LogicalName|slaitem|
 |OwnershipType|None|
 |PrimaryIdAttribute|slaitemid|
-|PrimaryNameAttribute||
+|PrimaryNameAttribute|name|
 |SchemaName|SLAItem|
 
 <a name="writable-attributes"></a>
@@ -50,7 +51,13 @@ Contains information about a tracked support KPI for a specific customer.
 
 These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [actionflowuniquename](#BKMK_actionflowuniquename)
+- [ActionURL](#BKMK_ActionURL)
+- [AllowPauseResume](#BKMK_AllowPauseResume)
+- [ApplicableEntity](#BKMK_ApplicableEntity)
 - [ApplicableWhenXml](#BKMK_ApplicableWhenXml)
+- [BusinessHoursId](#BKMK_BusinessHoursId)
+- [ChangedAttributeList](#BKMK_ChangedAttributeList)
 - [Description](#BKMK_Description)
 - [FailureAfter](#BKMK_FailureAfter)
 - [Name](#BKMK_Name)
@@ -67,6 +74,88 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [WorkflowIdName](#BKMK_WorkflowIdName)
 
 
+### <a name="BKMK_actionflowuniquename"></a> actionflowuniquename
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Action Flow Unique Name|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|actionflowuniquename|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_ActionURL"></a> ActionURL
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Action URL|
+|DisplayName|Action URL|
+|FormatName|Url|
+|IsLocalizable|False|
+|IsValidForCreate|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|actionurl|
+|MaxLength|1024|
+|RequiredLevel|None|
+|Type|String|
+
+
+### <a name="BKMK_AllowPauseResume"></a> AllowPauseResume
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Select whether this SLA will allow pausing and resuming during the time calculation.|
+|DisplayName|Allow Pause and Resume|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|allowpauseresume|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### AllowPauseResume Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: True
+
+
+
+### <a name="BKMK_ApplicableEntity"></a> ApplicableEntity
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Applicable Entity|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|applicableentity|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
+
+
 ### <a name="BKMK_ApplicableWhenXml"></a> ApplicableWhenXml
 
 |Property|Value|
@@ -81,6 +170,41 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MaxLength|1073741823|
 |RequiredLevel|ApplicationRequired|
 |Type|Memo|
+
+
+### <a name="BKMK_BusinessHoursId"></a> BusinessHoursId
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description|Choose the business hours for calculating SLA item timelines.|
+|DisplayName|Business Hours|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|businesshoursid|
+|RequiredLevel|None|
+|Targets|calendar|
+|Type|Lookup|
+
+
+### <a name="BKMK_ChangedAttributeList"></a> ChangedAttributeList
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Changed Attribute List|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|changedattributelist|
+|MaxLength|4000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Description"></a> Description
@@ -302,6 +426,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 These attributes return false for both **IsValidForCreate** or **IsValidForUpdate**. Listed by **SchemaName**.
 
+- [businesshoursidName](#BKMK_businesshoursidName)
 - [ComponentState](#BKMK_ComponentState)
 - [CreatedBy](#BKMK_CreatedBy)
 - [CreatedByName](#BKMK_CreatedByName)
@@ -328,6 +453,24 @@ These attributes return false for both **IsValidForCreate** or **IsValidForUpdat
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 - [TransactionCurrencyIdName](#BKMK_TransactionCurrencyIdName)
 - [VersionNumber](#BKMK_VersionNumber)
+
+
+### <a name="BKMK_businesshoursidName"></a> businesshoursidName
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName||
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|businesshoursidname|
+|MaxLength|160|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_ComponentState"></a> ComponentState
@@ -768,6 +911,7 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [sla_slaitem_slaId](#BKMK_sla_slaitem_slaId)
 - [lk_slaitembase_modifiedby](#BKMK_lk_slaitembase_modifiedby)
 - [slaitembase_workflowid](#BKMK_slaitembase_workflowid)
+- [calendar_slaitem](#BKMK_calendar_slaitem)
 
 
 ### <a name="BKMK_lk_slaitembase_createdby"></a> lk_slaitembase_createdby
@@ -797,6 +941,10 @@ See systemuser Entity [lk_slaitembase_modifiedby](systemuser.md#BKMK_lk_slaitemb
 ### <a name="BKMK_slaitembase_workflowid"></a> slaitembase_workflowid
 
 See workflow Entity [slaitembase_workflowid](workflow.md#BKMK_slaitembase_workflowid) One-To-Many relationship.
+
+### <a name="BKMK_calendar_slaitem"></a> calendar_slaitem
+
+See calendar Entity [calendar_slaitem](calendar.md#BKMK_calendar_slaitem) One-To-Many relationship.
 
 ### See also
 

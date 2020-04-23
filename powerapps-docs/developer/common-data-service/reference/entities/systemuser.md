@@ -1,7 +1,7 @@
 ---
 title: "SystemUser Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SystemUser entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the SystemUser entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # SystemUser Entity Reference
 
@@ -1048,7 +1049,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|firstname|
-|MaxLength|64|
+|MaxLength|256|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -1287,7 +1288,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|lastname|
-|MaxLength|64|
+|MaxLength|256|
 |RequiredLevel|ApplicationRequired|
 |Type|String|
 
@@ -3290,6 +3291,23 @@ Listed by **SchemaName**.
 - [lk_ownermapping_createdby](#BKMK_lk_ownermapping_createdby)
 - [SystemUser_SyncErrors](#BKMK_SystemUser_SyncErrors)
 - [lk_duplicateruleconditionbase_createdby](#BKMK_lk_duplicateruleconditionbase_createdby)
+- [lk_solutioncomponentattributeconfiguration_createdby](#BKMK_lk_solutioncomponentattributeconfiguration_createdby)
+- [lk_solutioncomponentattributeconfiguration_createdonbehalfby](#BKMK_lk_solutioncomponentattributeconfiguration_createdonbehalfby)
+- [lk_solutioncomponentattributeconfiguration_modifiedby](#BKMK_lk_solutioncomponentattributeconfiguration_modifiedby)
+- [lk_solutioncomponentattributeconfiguration_modifiedonbehalfby](#BKMK_lk_solutioncomponentattributeconfiguration_modifiedonbehalfby)
+- [lk_solutioncomponentconfiguration_createdby](#BKMK_lk_solutioncomponentconfiguration_createdby)
+- [lk_solutioncomponentconfiguration_createdonbehalfby](#BKMK_lk_solutioncomponentconfiguration_createdonbehalfby)
+- [lk_solutioncomponentconfiguration_modifiedby](#BKMK_lk_solutioncomponentconfiguration_modifiedby)
+- [lk_solutioncomponentconfiguration_modifiedonbehalfby](#BKMK_lk_solutioncomponentconfiguration_modifiedonbehalfby)
+- [lk_stagesolutionupload_createdby](#BKMK_lk_stagesolutionupload_createdby)
+- [lk_stagesolutionupload_createdonbehalfby](#BKMK_lk_stagesolutionupload_createdonbehalfby)
+- [lk_stagesolutionupload_modifiedby](#BKMK_lk_stagesolutionupload_modifiedby)
+- [lk_stagesolutionupload_modifiedonbehalfby](#BKMK_lk_stagesolutionupload_modifiedonbehalfby)
+- [user_stagesolutionupload](#BKMK_user_stagesolutionupload)
+- [lk_serviceplan_createdby](#BKMK_lk_serviceplan_createdby)
+- [lk_serviceplan_createdonbehalfby](#BKMK_lk_serviceplan_createdonbehalfby)
+- [lk_serviceplan_modifiedby](#BKMK_lk_serviceplan_modifiedby)
+- [lk_serviceplan_modifiedonbehalfby](#BKMK_lk_serviceplan_modifiedonbehalfby)
 - [lk_territorybase_createdby](#BKMK_lk_territorybase_createdby)
 - [lk_territory_createdonbehalfby](#BKMK_lk_territory_createdonbehalfby)
 - [lk_territorybase_modifiedby](#BKMK_lk_territorybase_modifiedby)
@@ -3305,8 +3323,11 @@ Listed by **SchemaName**.
 - [lk_msdyn_knowledgearticletemplate_modifiedby](#BKMK_lk_msdyn_knowledgearticletemplate_modifiedby)
 - [lk_msdyn_knowledgearticletemplate_modifiedonbehalfby](#BKMK_lk_msdyn_knowledgearticletemplate_modifiedonbehalfby)
 - [user_msdyn_knowledgearticletemplate](#BKMK_user_msdyn_knowledgearticletemplate)
-- [user_attributeimageconfig](#BKMK_user_attributeimageconfig)
-- [user_entityimageconfig](#BKMK_user_entityimageconfig)
+- [lk_msdyn_dataflow_createdby](#BKMK_lk_msdyn_dataflow_createdby)
+- [lk_msdyn_dataflow_createdonbehalfby](#BKMK_lk_msdyn_dataflow_createdonbehalfby)
+- [lk_msdyn_dataflow_modifiedby](#BKMK_lk_msdyn_dataflow_modifiedby)
+- [lk_msdyn_dataflow_modifiedonbehalfby](#BKMK_lk_msdyn_dataflow_modifiedonbehalfby)
+- [user_msdyn_dataflow](#BKMK_user_msdyn_dataflow)
 - [lk_connector_createdby](#BKMK_lk_connector_createdby)
 - [lk_connector_createdonbehalfby](#BKMK_lk_connector_createdonbehalfby)
 - [lk_connector_modifiedby](#BKMK_lk_connector_modifiedby)
@@ -3327,6 +3348,36 @@ Listed by **SchemaName**.
 - [lk_msdyn_aitemplate_modifiedby](#BKMK_lk_msdyn_aitemplate_modifiedby)
 - [lk_msdyn_aitemplate_modifiedonbehalfby](#BKMK_lk_msdyn_aitemplate_modifiedonbehalfby)
 - [user_msdyn_aitemplate](#BKMK_user_msdyn_aitemplate)
+- [lk_msdyn_aibdataset_createdby](#BKMK_lk_msdyn_aibdataset_createdby)
+- [lk_msdyn_aibdataset_createdonbehalfby](#BKMK_lk_msdyn_aibdataset_createdonbehalfby)
+- [lk_msdyn_aibdataset_modifiedby](#BKMK_lk_msdyn_aibdataset_modifiedby)
+- [lk_msdyn_aibdataset_modifiedonbehalfby](#BKMK_lk_msdyn_aibdataset_modifiedonbehalfby)
+- [user_msdyn_aibdataset](#BKMK_user_msdyn_aibdataset)
+- [lk_msdyn_aibdatasetfile_createdby](#BKMK_lk_msdyn_aibdatasetfile_createdby)
+- [lk_msdyn_aibdatasetfile_createdonbehalfby](#BKMK_lk_msdyn_aibdatasetfile_createdonbehalfby)
+- [lk_msdyn_aibdatasetfile_modifiedby](#BKMK_lk_msdyn_aibdatasetfile_modifiedby)
+- [lk_msdyn_aibdatasetfile_modifiedonbehalfby](#BKMK_lk_msdyn_aibdatasetfile_modifiedonbehalfby)
+- [user_msdyn_aibdatasetfile](#BKMK_user_msdyn_aibdatasetfile)
+- [lk_msdyn_aibdatasetrecord_createdby](#BKMK_lk_msdyn_aibdatasetrecord_createdby)
+- [lk_msdyn_aibdatasetrecord_createdonbehalfby](#BKMK_lk_msdyn_aibdatasetrecord_createdonbehalfby)
+- [lk_msdyn_aibdatasetrecord_modifiedby](#BKMK_lk_msdyn_aibdatasetrecord_modifiedby)
+- [lk_msdyn_aibdatasetrecord_modifiedonbehalfby](#BKMK_lk_msdyn_aibdatasetrecord_modifiedonbehalfby)
+- [user_msdyn_aibdatasetrecord](#BKMK_user_msdyn_aibdatasetrecord)
+- [lk_msdyn_aibdatasetscontainer_createdby](#BKMK_lk_msdyn_aibdatasetscontainer_createdby)
+- [lk_msdyn_aibdatasetscontainer_createdonbehalfby](#BKMK_lk_msdyn_aibdatasetscontainer_createdonbehalfby)
+- [lk_msdyn_aibdatasetscontainer_modifiedby](#BKMK_lk_msdyn_aibdatasetscontainer_modifiedby)
+- [lk_msdyn_aibdatasetscontainer_modifiedonbehalfby](#BKMK_lk_msdyn_aibdatasetscontainer_modifiedonbehalfby)
+- [user_msdyn_aibdatasetscontainer](#BKMK_user_msdyn_aibdatasetscontainer)
+- [lk_msdyn_aibfile_createdby](#BKMK_lk_msdyn_aibfile_createdby)
+- [lk_msdyn_aibfile_createdonbehalfby](#BKMK_lk_msdyn_aibfile_createdonbehalfby)
+- [lk_msdyn_aibfile_modifiedby](#BKMK_lk_msdyn_aibfile_modifiedby)
+- [lk_msdyn_aibfile_modifiedonbehalfby](#BKMK_lk_msdyn_aibfile_modifiedonbehalfby)
+- [user_msdyn_aibfile](#BKMK_user_msdyn_aibfile)
+- [lk_msdyn_aibfileattacheddata_createdby](#BKMK_lk_msdyn_aibfileattacheddata_createdby)
+- [lk_msdyn_aibfileattacheddata_createdonbehalfby](#BKMK_lk_msdyn_aibfileattacheddata_createdonbehalfby)
+- [lk_msdyn_aibfileattacheddata_modifiedby](#BKMK_lk_msdyn_aibfileattacheddata_modifiedby)
+- [lk_msdyn_aibfileattacheddata_modifiedonbehalfby](#BKMK_lk_msdyn_aibfileattacheddata_modifiedonbehalfby)
+- [user_msdyn_aibfileattacheddata](#BKMK_user_msdyn_aibfileattacheddata)
 - [lk_msdyn_aifptrainingdocument_createdby](#BKMK_lk_msdyn_aifptrainingdocument_createdby)
 - [lk_msdyn_aifptrainingdocument_createdonbehalfby](#BKMK_lk_msdyn_aifptrainingdocument_createdonbehalfby)
 - [lk_msdyn_aifptrainingdocument_modifiedby](#BKMK_lk_msdyn_aifptrainingdocument_modifiedby)
@@ -3352,16 +3403,6 @@ Listed by **SchemaName**.
 - [lk_msdyn_aiodtrainingimage_modifiedby](#BKMK_lk_msdyn_aiodtrainingimage_modifiedby)
 - [lk_msdyn_aiodtrainingimage_modifiedonbehalfby](#BKMK_lk_msdyn_aiodtrainingimage_modifiedonbehalfby)
 - [user_msdyn_aiodtrainingimage](#BKMK_user_msdyn_aiodtrainingimage)
-- [lk_flowsession_createdby](#BKMK_lk_flowsession_createdby)
-- [lk_flowsession_createdonbehalfby](#BKMK_lk_flowsession_createdonbehalfby)
-- [lk_flowsession_modifiedby](#BKMK_lk_flowsession_modifiedby)
-- [lk_flowsession_modifiedonbehalfby](#BKMK_lk_flowsession_modifiedonbehalfby)
-- [user_flowsession](#BKMK_user_flowsession)
-- [lk_workflowbinary_createdby](#BKMK_lk_workflowbinary_createdby)
-- [lk_workflowbinary_createdonbehalfby](#BKMK_lk_workflowbinary_createdonbehalfby)
-- [lk_workflowbinary_modifiedby](#BKMK_lk_workflowbinary_modifiedby)
-- [lk_workflowbinary_modifiedonbehalfby](#BKMK_lk_workflowbinary_modifiedonbehalfby)
-- [user_workflowbinary](#BKMK_user_workflowbinary)
 - [lk_environmentvariabledefinition_createdby](#BKMK_lk_environmentvariabledefinition_createdby)
 - [lk_environmentvariabledefinition_createdonbehalfby](#BKMK_lk_environmentvariabledefinition_createdonbehalfby)
 - [lk_environmentvariabledefinition_modifiedby](#BKMK_lk_environmentvariabledefinition_modifiedby)
@@ -3372,6 +3413,30 @@ Listed by **SchemaName**.
 - [lk_environmentvariablevalue_modifiedby](#BKMK_lk_environmentvariablevalue_modifiedby)
 - [lk_environmentvariablevalue_modifiedonbehalfby](#BKMK_lk_environmentvariablevalue_modifiedonbehalfby)
 - [user_environmentvariablevalue](#BKMK_user_environmentvariablevalue)
+- [lk_processstageparameter_createdby](#BKMK_lk_processstageparameter_createdby)
+- [lk_processstageparameter_createdonbehalfby](#BKMK_lk_processstageparameter_createdonbehalfby)
+- [lk_processstageparameter_modifiedby](#BKMK_lk_processstageparameter_modifiedby)
+- [lk_processstageparameter_modifiedonbehalfby](#BKMK_lk_processstageparameter_modifiedonbehalfby)
+- [user_processstageparameter](#BKMK_user_processstageparameter)
+- [lk_flowsession_createdby](#BKMK_lk_flowsession_createdby)
+- [lk_flowsession_createdonbehalfby](#BKMK_lk_flowsession_createdonbehalfby)
+- [lk_flowsession_modifiedby](#BKMK_lk_flowsession_modifiedby)
+- [lk_flowsession_modifiedonbehalfby](#BKMK_lk_flowsession_modifiedonbehalfby)
+- [user_flowsession](#BKMK_user_flowsession)
+- [lk_workflowbinary_createdby](#BKMK_lk_workflowbinary_createdby)
+- [lk_workflowbinary_createdonbehalfby](#BKMK_lk_workflowbinary_createdonbehalfby)
+- [lk_workflowbinary_modifiedby](#BKMK_lk_workflowbinary_modifiedby)
+- [lk_workflowbinary_modifiedonbehalfby](#BKMK_lk_workflowbinary_modifiedonbehalfby)
+- [user_workflowbinary](#BKMK_user_workflowbinary)
+- [lk_connectionreference_createdby](#BKMK_lk_connectionreference_createdby)
+- [lk_connectionreference_createdonbehalfby](#BKMK_lk_connectionreference_createdonbehalfby)
+- [lk_connectionreference_modifiedby](#BKMK_lk_connectionreference_modifiedby)
+- [lk_connectionreference_modifiedonbehalfby](#BKMK_lk_connectionreference_modifiedonbehalfby)
+- [user_connectionreference](#BKMK_user_connectionreference)
+- [lk_msdyn_helppage_createdby](#BKMK_lk_msdyn_helppage_createdby)
+- [lk_msdyn_helppage_createdonbehalfby](#BKMK_lk_msdyn_helppage_createdonbehalfby)
+- [lk_msdyn_helppage_modifiedby](#BKMK_lk_msdyn_helppage_modifiedby)
+- [lk_msdyn_helppage_modifiedonbehalfby](#BKMK_lk_msdyn_helppage_modifiedonbehalfby)
 - [lk_msdyn_analysiscomponent_createdby](#BKMK_lk_msdyn_analysiscomponent_createdby)
 - [lk_msdyn_analysiscomponent_createdonbehalfby](#BKMK_lk_msdyn_analysiscomponent_createdonbehalfby)
 - [lk_msdyn_analysiscomponent_modifiedby](#BKMK_lk_msdyn_analysiscomponent_modifiedby)
@@ -12498,6 +12563,295 @@ Same as duplicaterulecondition entity [lk_duplicateruleconditionbase_createdby](
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_lk_solutioncomponentattributeconfiguration_createdby"></a> lk_solutioncomponentattributeconfiguration_createdby
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentattributeconfiguration entity [lk_solutioncomponentattributeconfiguration_createdby](solutioncomponentattributeconfiguration.md#BKMK_lk_solutioncomponentattributeconfiguration_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentattributeconfiguration|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_solutioncomponentattributeconfiguration_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_solutioncomponentattributeconfiguration_createdonbehalfby"></a> lk_solutioncomponentattributeconfiguration_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentattributeconfiguration entity [lk_solutioncomponentattributeconfiguration_createdonbehalfby](solutioncomponentattributeconfiguration.md#BKMK_lk_solutioncomponentattributeconfiguration_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentattributeconfiguration|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_solutioncomponentattributeconfiguration_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_solutioncomponentattributeconfiguration_modifiedby"></a> lk_solutioncomponentattributeconfiguration_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentattributeconfiguration entity [lk_solutioncomponentattributeconfiguration_modifiedby](solutioncomponentattributeconfiguration.md#BKMK_lk_solutioncomponentattributeconfiguration_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentattributeconfiguration|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_solutioncomponentattributeconfiguration_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_solutioncomponentattributeconfiguration_modifiedonbehalfby"></a> lk_solutioncomponentattributeconfiguration_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentattributeconfiguration entity [lk_solutioncomponentattributeconfiguration_modifiedonbehalfby](solutioncomponentattributeconfiguration.md#BKMK_lk_solutioncomponentattributeconfiguration_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentattributeconfiguration|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_solutioncomponentattributeconfiguration_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_solutioncomponentconfiguration_createdby"></a> lk_solutioncomponentconfiguration_createdby
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentconfiguration entity [lk_solutioncomponentconfiguration_createdby](solutioncomponentconfiguration.md#BKMK_lk_solutioncomponentconfiguration_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentconfiguration|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_solutioncomponentconfiguration_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_solutioncomponentconfiguration_createdonbehalfby"></a> lk_solutioncomponentconfiguration_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentconfiguration entity [lk_solutioncomponentconfiguration_createdonbehalfby](solutioncomponentconfiguration.md#BKMK_lk_solutioncomponentconfiguration_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentconfiguration|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_solutioncomponentconfiguration_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_solutioncomponentconfiguration_modifiedby"></a> lk_solutioncomponentconfiguration_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentconfiguration entity [lk_solutioncomponentconfiguration_modifiedby](solutioncomponentconfiguration.md#BKMK_lk_solutioncomponentconfiguration_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentconfiguration|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_solutioncomponentconfiguration_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_solutioncomponentconfiguration_modifiedonbehalfby"></a> lk_solutioncomponentconfiguration_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as solutioncomponentconfiguration entity [lk_solutioncomponentconfiguration_modifiedonbehalfby](solutioncomponentconfiguration.md#BKMK_lk_solutioncomponentconfiguration_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|solutioncomponentconfiguration|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_solutioncomponentconfiguration_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_stagesolutionupload_createdby"></a> lk_stagesolutionupload_createdby
+
+**Added by**: Active Solution Solution
+
+Same as stagesolutionupload entity [lk_stagesolutionupload_createdby](stagesolutionupload.md#BKMK_lk_stagesolutionupload_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|stagesolutionupload|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_stagesolutionupload_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_stagesolutionupload_createdonbehalfby"></a> lk_stagesolutionupload_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as stagesolutionupload entity [lk_stagesolutionupload_createdonbehalfby](stagesolutionupload.md#BKMK_lk_stagesolutionupload_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|stagesolutionupload|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_stagesolutionupload_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_stagesolutionupload_modifiedby"></a> lk_stagesolutionupload_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as stagesolutionupload entity [lk_stagesolutionupload_modifiedby](stagesolutionupload.md#BKMK_lk_stagesolutionupload_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|stagesolutionupload|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_stagesolutionupload_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_stagesolutionupload_modifiedonbehalfby"></a> lk_stagesolutionupload_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as stagesolutionupload entity [lk_stagesolutionupload_modifiedonbehalfby](stagesolutionupload.md#BKMK_lk_stagesolutionupload_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|stagesolutionupload|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_stagesolutionupload_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_stagesolutionupload"></a> user_stagesolutionupload
+
+**Added by**: Active Solution Solution
+
+Same as stagesolutionupload entity [user_stagesolutionupload](stagesolutionupload.md#BKMK_user_stagesolutionupload) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|stagesolutionupload|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|user_stagesolutionupload|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_serviceplan_createdby"></a> lk_serviceplan_createdby
+
+**Added by**: Active Solution Solution
+
+Same as serviceplan entity [lk_serviceplan_createdby](serviceplan.md#BKMK_lk_serviceplan_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceplan|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_serviceplan_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_serviceplan_createdonbehalfby"></a> lk_serviceplan_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as serviceplan entity [lk_serviceplan_createdonbehalfby](serviceplan.md#BKMK_lk_serviceplan_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceplan|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_serviceplan_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_serviceplan_modifiedby"></a> lk_serviceplan_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as serviceplan entity [lk_serviceplan_modifiedby](serviceplan.md#BKMK_lk_serviceplan_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceplan|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_serviceplan_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_serviceplan_modifiedonbehalfby"></a> lk_serviceplan_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as serviceplan entity [lk_serviceplan_modifiedonbehalfby](serviceplan.md#BKMK_lk_serviceplan_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|serviceplan|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_serviceplan_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_lk_territorybase_createdby"></a> lk_territorybase_createdby
 
 **Added by**: Application Common Solution
@@ -12753,36 +13107,87 @@ Same as msdyn_knowledgearticletemplate entity [user_msdyn_knowledgearticletempla
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_user_attributeimageconfig"></a> user_attributeimageconfig
+### <a name="BKMK_lk_msdyn_dataflow_createdby"></a> lk_msdyn_dataflow_createdby
 
 **Added by**: Active Solution Solution
 
-Same as attributeimageconfig entity [user_attributeimageconfig](attributeimageconfig.md#BKMK_user_attributeimageconfig) Many-To-One relationship.
+Same as msdyn_dataflow entity [lk_msdyn_dataflow_createdby](msdyn_dataflow.md#BKMK_lk_msdyn_dataflow_createdby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|attributeimageconfig|
-|ReferencingAttribute|owninguser|
+|ReferencingEntity|msdyn_dataflow|
+|ReferencingAttribute|createdby|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|user_attributeimageconfig|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_dataflow_createdby|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_user_entityimageconfig"></a> user_entityimageconfig
+### <a name="BKMK_lk_msdyn_dataflow_createdonbehalfby"></a> lk_msdyn_dataflow_createdonbehalfby
 
 **Added by**: Active Solution Solution
 
-Same as entityimageconfig entity [user_entityimageconfig](entityimageconfig.md#BKMK_user_entityimageconfig) Many-To-One relationship.
+Same as msdyn_dataflow entity [lk_msdyn_dataflow_createdonbehalfby](msdyn_dataflow.md#BKMK_lk_msdyn_dataflow_createdonbehalfby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|entityimageconfig|
+|ReferencingEntity|msdyn_dataflow|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_dataflow_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_dataflow_modifiedby"></a> lk_msdyn_dataflow_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_dataflow entity [lk_msdyn_dataflow_modifiedby](msdyn_dataflow.md#BKMK_lk_msdyn_dataflow_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dataflow|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_dataflow_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_dataflow_modifiedonbehalfby"></a> lk_msdyn_dataflow_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_dataflow entity [lk_msdyn_dataflow_modifiedonbehalfby](msdyn_dataflow.md#BKMK_lk_msdyn_dataflow_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dataflow|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_dataflow_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_msdyn_dataflow"></a> user_msdyn_dataflow
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_dataflow entity [user_msdyn_dataflow](msdyn_dataflow.md#BKMK_user_msdyn_dataflow) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_dataflow|
 |ReferencingAttribute|owninguser|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|user_entityimageconfig|
+|ReferencedEntityNavigationPropertyName|user_msdyn_dataflow|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -13123,6 +13528,516 @@ Same as msdyn_aitemplate entity [user_msdyn_aitemplate](msdyn_aitemplate.md#BKMK
 |IsHierarchical|False|
 |IsCustomizable|False|
 |ReferencedEntityNavigationPropertyName|user_msdyn_aitemplate|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdataset_createdby"></a> lk_msdyn_aibdataset_createdby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdataset entity [lk_msdyn_aibdataset_createdby](msdyn_aibdataset.md#BKMK_lk_msdyn_aibdataset_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdataset|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdataset_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdataset_createdonbehalfby"></a> lk_msdyn_aibdataset_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdataset entity [lk_msdyn_aibdataset_createdonbehalfby](msdyn_aibdataset.md#BKMK_lk_msdyn_aibdataset_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdataset|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdataset_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdataset_modifiedby"></a> lk_msdyn_aibdataset_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdataset entity [lk_msdyn_aibdataset_modifiedby](msdyn_aibdataset.md#BKMK_lk_msdyn_aibdataset_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdataset|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdataset_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdataset_modifiedonbehalfby"></a> lk_msdyn_aibdataset_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdataset entity [lk_msdyn_aibdataset_modifiedonbehalfby](msdyn_aibdataset.md#BKMK_lk_msdyn_aibdataset_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdataset|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdataset_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_msdyn_aibdataset"></a> user_msdyn_aibdataset
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdataset entity [user_msdyn_aibdataset](msdyn_aibdataset.md#BKMK_user_msdyn_aibdataset) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdataset|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|user_msdyn_aibdataset|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetfile_createdby"></a> lk_msdyn_aibdatasetfile_createdby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetfile entity [lk_msdyn_aibdatasetfile_createdby](msdyn_aibdatasetfile.md#BKMK_lk_msdyn_aibdatasetfile_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetfile|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetfile_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetfile_createdonbehalfby"></a> lk_msdyn_aibdatasetfile_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetfile entity [lk_msdyn_aibdatasetfile_createdonbehalfby](msdyn_aibdatasetfile.md#BKMK_lk_msdyn_aibdatasetfile_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetfile|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetfile_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetfile_modifiedby"></a> lk_msdyn_aibdatasetfile_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetfile entity [lk_msdyn_aibdatasetfile_modifiedby](msdyn_aibdatasetfile.md#BKMK_lk_msdyn_aibdatasetfile_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetfile|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetfile_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetfile_modifiedonbehalfby"></a> lk_msdyn_aibdatasetfile_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetfile entity [lk_msdyn_aibdatasetfile_modifiedonbehalfby](msdyn_aibdatasetfile.md#BKMK_lk_msdyn_aibdatasetfile_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetfile|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetfile_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_msdyn_aibdatasetfile"></a> user_msdyn_aibdatasetfile
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetfile entity [user_msdyn_aibdatasetfile](msdyn_aibdatasetfile.md#BKMK_user_msdyn_aibdatasetfile) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetfile|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|user_msdyn_aibdatasetfile|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetrecord_createdby"></a> lk_msdyn_aibdatasetrecord_createdby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetrecord entity [lk_msdyn_aibdatasetrecord_createdby](msdyn_aibdatasetrecord.md#BKMK_lk_msdyn_aibdatasetrecord_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetrecord|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetrecord_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetrecord_createdonbehalfby"></a> lk_msdyn_aibdatasetrecord_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetrecord entity [lk_msdyn_aibdatasetrecord_createdonbehalfby](msdyn_aibdatasetrecord.md#BKMK_lk_msdyn_aibdatasetrecord_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetrecord|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetrecord_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetrecord_modifiedby"></a> lk_msdyn_aibdatasetrecord_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetrecord entity [lk_msdyn_aibdatasetrecord_modifiedby](msdyn_aibdatasetrecord.md#BKMK_lk_msdyn_aibdatasetrecord_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetrecord|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetrecord_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetrecord_modifiedonbehalfby"></a> lk_msdyn_aibdatasetrecord_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetrecord entity [lk_msdyn_aibdatasetrecord_modifiedonbehalfby](msdyn_aibdatasetrecord.md#BKMK_lk_msdyn_aibdatasetrecord_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetrecord|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetrecord_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_msdyn_aibdatasetrecord"></a> user_msdyn_aibdatasetrecord
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetrecord entity [user_msdyn_aibdatasetrecord](msdyn_aibdatasetrecord.md#BKMK_user_msdyn_aibdatasetrecord) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetrecord|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|user_msdyn_aibdatasetrecord|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetscontainer_createdby"></a> lk_msdyn_aibdatasetscontainer_createdby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetscontainer entity [lk_msdyn_aibdatasetscontainer_createdby](msdyn_aibdatasetscontainer.md#BKMK_lk_msdyn_aibdatasetscontainer_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetscontainer|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetscontainer_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetscontainer_createdonbehalfby"></a> lk_msdyn_aibdatasetscontainer_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetscontainer entity [lk_msdyn_aibdatasetscontainer_createdonbehalfby](msdyn_aibdatasetscontainer.md#BKMK_lk_msdyn_aibdatasetscontainer_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetscontainer|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetscontainer_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetscontainer_modifiedby"></a> lk_msdyn_aibdatasetscontainer_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetscontainer entity [lk_msdyn_aibdatasetscontainer_modifiedby](msdyn_aibdatasetscontainer.md#BKMK_lk_msdyn_aibdatasetscontainer_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetscontainer|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetscontainer_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibdatasetscontainer_modifiedonbehalfby"></a> lk_msdyn_aibdatasetscontainer_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetscontainer entity [lk_msdyn_aibdatasetscontainer_modifiedonbehalfby](msdyn_aibdatasetscontainer.md#BKMK_lk_msdyn_aibdatasetscontainer_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetscontainer|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibdatasetscontainer_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_msdyn_aibdatasetscontainer"></a> user_msdyn_aibdatasetscontainer
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibdatasetscontainer entity [user_msdyn_aibdatasetscontainer](msdyn_aibdatasetscontainer.md#BKMK_user_msdyn_aibdatasetscontainer) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibdatasetscontainer|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|user_msdyn_aibdatasetscontainer|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibfile_createdby"></a> lk_msdyn_aibfile_createdby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfile entity [lk_msdyn_aibfile_createdby](msdyn_aibfile.md#BKMK_lk_msdyn_aibfile_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfile|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibfile_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibfile_createdonbehalfby"></a> lk_msdyn_aibfile_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfile entity [lk_msdyn_aibfile_createdonbehalfby](msdyn_aibfile.md#BKMK_lk_msdyn_aibfile_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfile|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibfile_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibfile_modifiedby"></a> lk_msdyn_aibfile_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfile entity [lk_msdyn_aibfile_modifiedby](msdyn_aibfile.md#BKMK_lk_msdyn_aibfile_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfile|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibfile_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibfile_modifiedonbehalfby"></a> lk_msdyn_aibfile_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfile entity [lk_msdyn_aibfile_modifiedonbehalfby](msdyn_aibfile.md#BKMK_lk_msdyn_aibfile_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfile|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibfile_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_msdyn_aibfile"></a> user_msdyn_aibfile
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfile entity [user_msdyn_aibfile](msdyn_aibfile.md#BKMK_user_msdyn_aibfile) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfile|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|user_msdyn_aibfile|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibfileattacheddata_createdby"></a> lk_msdyn_aibfileattacheddata_createdby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfileattacheddata entity [lk_msdyn_aibfileattacheddata_createdby](msdyn_aibfileattacheddata.md#BKMK_lk_msdyn_aibfileattacheddata_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfileattacheddata|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibfileattacheddata_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibfileattacheddata_createdonbehalfby"></a> lk_msdyn_aibfileattacheddata_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfileattacheddata entity [lk_msdyn_aibfileattacheddata_createdonbehalfby](msdyn_aibfileattacheddata.md#BKMK_lk_msdyn_aibfileattacheddata_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfileattacheddata|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibfileattacheddata_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibfileattacheddata_modifiedby"></a> lk_msdyn_aibfileattacheddata_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfileattacheddata entity [lk_msdyn_aibfileattacheddata_modifiedby](msdyn_aibfileattacheddata.md#BKMK_lk_msdyn_aibfileattacheddata_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfileattacheddata|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibfileattacheddata_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_msdyn_aibfileattacheddata_modifiedonbehalfby"></a> lk_msdyn_aibfileattacheddata_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfileattacheddata entity [lk_msdyn_aibfileattacheddata_modifiedonbehalfby](msdyn_aibfileattacheddata.md#BKMK_lk_msdyn_aibfileattacheddata_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfileattacheddata|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_aibfileattacheddata_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_msdyn_aibfileattacheddata"></a> user_msdyn_aibfileattacheddata
+
+**Added by**: Active Solution Solution
+
+Same as msdyn_aibfileattacheddata entity [user_msdyn_aibfileattacheddata](msdyn_aibfileattacheddata.md#BKMK_user_msdyn_aibfileattacheddata) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_aibfileattacheddata|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|user_msdyn_aibfileattacheddata|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
@@ -13552,6 +14467,261 @@ Same as msdyn_aiodtrainingimage entity [user_msdyn_aiodtrainingimage](msdyn_aiod
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
+### <a name="BKMK_lk_environmentvariabledefinition_createdby"></a> lk_environmentvariabledefinition_createdby
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariabledefinition entity [lk_environmentvariabledefinition_createdby](environmentvariabledefinition.md#BKMK_lk_environmentvariabledefinition_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariabledefinition|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_environmentvariabledefinition_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_environmentvariabledefinition_createdonbehalfby"></a> lk_environmentvariabledefinition_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariabledefinition entity [lk_environmentvariabledefinition_createdonbehalfby](environmentvariabledefinition.md#BKMK_lk_environmentvariabledefinition_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariabledefinition|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_environmentvariabledefinition_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_environmentvariabledefinition_modifiedby"></a> lk_environmentvariabledefinition_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariabledefinition entity [lk_environmentvariabledefinition_modifiedby](environmentvariabledefinition.md#BKMK_lk_environmentvariabledefinition_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariabledefinition|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_environmentvariabledefinition_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_environmentvariabledefinition_modifiedonbehalfby"></a> lk_environmentvariabledefinition_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariabledefinition entity [lk_environmentvariabledefinition_modifiedonbehalfby](environmentvariabledefinition.md#BKMK_lk_environmentvariabledefinition_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariabledefinition|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_environmentvariabledefinition_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_environmentvariabledefinition"></a> user_environmentvariabledefinition
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariabledefinition entity [user_environmentvariabledefinition](environmentvariabledefinition.md#BKMK_user_environmentvariabledefinition) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariabledefinition|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|user_environmentvariabledefinition|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_environmentvariablevalue_createdby"></a> lk_environmentvariablevalue_createdby
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariablevalue entity [lk_environmentvariablevalue_createdby](environmentvariablevalue.md#BKMK_lk_environmentvariablevalue_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariablevalue|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_environmentvariablevalue_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_environmentvariablevalue_createdonbehalfby"></a> lk_environmentvariablevalue_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariablevalue entity [lk_environmentvariablevalue_createdonbehalfby](environmentvariablevalue.md#BKMK_lk_environmentvariablevalue_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariablevalue|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_environmentvariablevalue_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_environmentvariablevalue_modifiedby"></a> lk_environmentvariablevalue_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariablevalue entity [lk_environmentvariablevalue_modifiedby](environmentvariablevalue.md#BKMK_lk_environmentvariablevalue_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariablevalue|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|lk_environmentvariablevalue_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_environmentvariablevalue_modifiedonbehalfby"></a> lk_environmentvariablevalue_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariablevalue entity [lk_environmentvariablevalue_modifiedonbehalfby](environmentvariablevalue.md#BKMK_lk_environmentvariablevalue_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariablevalue|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_environmentvariablevalue_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_environmentvariablevalue"></a> user_environmentvariablevalue
+
+**Added by**: Active Solution Solution
+
+Same as environmentvariablevalue entity [user_environmentvariablevalue](environmentvariablevalue.md#BKMK_user_environmentvariablevalue) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|environmentvariablevalue|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|user_environmentvariablevalue|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_processstageparameter_createdby"></a> lk_processstageparameter_createdby
+
+**Added by**: Active Solution Solution
+
+Same as processstageparameter entity [lk_processstageparameter_createdby](processstageparameter.md#BKMK_lk_processstageparameter_createdby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|processstageparameter|
+|ReferencingAttribute|createdby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_processstageparameter_createdby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_processstageparameter_createdonbehalfby"></a> lk_processstageparameter_createdonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as processstageparameter entity [lk_processstageparameter_createdonbehalfby](processstageparameter.md#BKMK_lk_processstageparameter_createdonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|processstageparameter|
+|ReferencingAttribute|createdonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_processstageparameter_createdonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_processstageparameter_modifiedby"></a> lk_processstageparameter_modifiedby
+
+**Added by**: Active Solution Solution
+
+Same as processstageparameter entity [lk_processstageparameter_modifiedby](processstageparameter.md#BKMK_lk_processstageparameter_modifiedby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|processstageparameter|
+|ReferencingAttribute|modifiedby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_processstageparameter_modifiedby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_lk_processstageparameter_modifiedonbehalfby"></a> lk_processstageparameter_modifiedonbehalfby
+
+**Added by**: Active Solution Solution
+
+Same as processstageparameter entity [lk_processstageparameter_modifiedonbehalfby](processstageparameter.md#BKMK_lk_processstageparameter_modifiedonbehalfby) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|processstageparameter|
+|ReferencingAttribute|modifiedonbehalfby|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_processstageparameter_modifiedonbehalfby|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_user_processstageparameter"></a> user_processstageparameter
+
+**Added by**: Active Solution Solution
+
+Same as processstageparameter entity [user_processstageparameter](processstageparameter.md#BKMK_user_processstageparameter) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|processstageparameter|
+|ReferencingAttribute|owninguser|
+|IsHierarchical|False|
+|IsCustomizable|False|
+|ReferencedEntityNavigationPropertyName|user_processstageparameter|
+|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
+|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
 ### <a name="BKMK_lk_flowsession_createdby"></a> lk_flowsession_createdby
 
 **Added by**: Active Solution Solution
@@ -13722,172 +14892,155 @@ Same as workflowbinary entity [user_workflowbinary](workflowbinary.md#BKMK_user_
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_lk_environmentvariabledefinition_createdby"></a> lk_environmentvariabledefinition_createdby
+### <a name="BKMK_lk_connectionreference_createdby"></a> lk_connectionreference_createdby
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariabledefinition entity [lk_environmentvariabledefinition_createdby](environmentvariabledefinition.md#BKMK_lk_environmentvariabledefinition_createdby) Many-To-One relationship.
+Same as connectionreference entity [lk_connectionreference_createdby](connectionreference.md#BKMK_lk_connectionreference_createdby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|environmentvariabledefinition|
+|ReferencingEntity|connectionreference|
 |ReferencingAttribute|createdby|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|lk_environmentvariabledefinition_createdby|
+|ReferencedEntityNavigationPropertyName|lk_connectionreference_createdby|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_lk_environmentvariabledefinition_createdonbehalfby"></a> lk_environmentvariabledefinition_createdonbehalfby
+### <a name="BKMK_lk_connectionreference_createdonbehalfby"></a> lk_connectionreference_createdonbehalfby
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariabledefinition entity [lk_environmentvariabledefinition_createdonbehalfby](environmentvariabledefinition.md#BKMK_lk_environmentvariabledefinition_createdonbehalfby) Many-To-One relationship.
+Same as connectionreference entity [lk_connectionreference_createdonbehalfby](connectionreference.md#BKMK_lk_connectionreference_createdonbehalfby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|environmentvariabledefinition|
+|ReferencingEntity|connectionreference|
 |ReferencingAttribute|createdonbehalfby|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|lk_environmentvariabledefinition_createdonbehalfby|
+|ReferencedEntityNavigationPropertyName|lk_connectionreference_createdonbehalfby|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_lk_environmentvariabledefinition_modifiedby"></a> lk_environmentvariabledefinition_modifiedby
+### <a name="BKMK_lk_connectionreference_modifiedby"></a> lk_connectionreference_modifiedby
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariabledefinition entity [lk_environmentvariabledefinition_modifiedby](environmentvariabledefinition.md#BKMK_lk_environmentvariabledefinition_modifiedby) Many-To-One relationship.
+Same as connectionreference entity [lk_connectionreference_modifiedby](connectionreference.md#BKMK_lk_connectionreference_modifiedby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|environmentvariabledefinition|
+|ReferencingEntity|connectionreference|
 |ReferencingAttribute|modifiedby|
 |IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|lk_environmentvariabledefinition_modifiedby|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|lk_connectionreference_modifiedby|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_lk_environmentvariabledefinition_modifiedonbehalfby"></a> lk_environmentvariabledefinition_modifiedonbehalfby
+### <a name="BKMK_lk_connectionreference_modifiedonbehalfby"></a> lk_connectionreference_modifiedonbehalfby
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariabledefinition entity [lk_environmentvariabledefinition_modifiedonbehalfby](environmentvariabledefinition.md#BKMK_lk_environmentvariabledefinition_modifiedonbehalfby) Many-To-One relationship.
+Same as connectionreference entity [lk_connectionreference_modifiedonbehalfby](connectionreference.md#BKMK_lk_connectionreference_modifiedonbehalfby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|environmentvariabledefinition|
+|ReferencingEntity|connectionreference|
 |ReferencingAttribute|modifiedonbehalfby|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|lk_environmentvariabledefinition_modifiedonbehalfby|
+|ReferencedEntityNavigationPropertyName|lk_connectionreference_modifiedonbehalfby|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_user_environmentvariabledefinition"></a> user_environmentvariabledefinition
+### <a name="BKMK_user_connectionreference"></a> user_connectionreference
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariabledefinition entity [user_environmentvariabledefinition](environmentvariabledefinition.md#BKMK_user_environmentvariabledefinition) Many-To-One relationship.
+Same as connectionreference entity [user_connectionreference](connectionreference.md#BKMK_user_connectionreference) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|environmentvariabledefinition|
+|ReferencingEntity|connectionreference|
 |ReferencingAttribute|owninguser|
 |IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|user_environmentvariabledefinition|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|user_connectionreference|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_lk_environmentvariablevalue_createdby"></a> lk_environmentvariablevalue_createdby
+### <a name="BKMK_lk_msdyn_helppage_createdby"></a> lk_msdyn_helppage_createdby
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariablevalue entity [lk_environmentvariablevalue_createdby](environmentvariablevalue.md#BKMK_lk_environmentvariablevalue_createdby) Many-To-One relationship.
+Same as msdyn_helppage entity [lk_msdyn_helppage_createdby](msdyn_helppage.md#BKMK_lk_msdyn_helppage_createdby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|environmentvariablevalue|
+|ReferencingEntity|msdyn_helppage|
 |ReferencingAttribute|createdby|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|lk_environmentvariablevalue_createdby|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_helppage_createdby|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_lk_environmentvariablevalue_createdonbehalfby"></a> lk_environmentvariablevalue_createdonbehalfby
+### <a name="BKMK_lk_msdyn_helppage_createdonbehalfby"></a> lk_msdyn_helppage_createdonbehalfby
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariablevalue entity [lk_environmentvariablevalue_createdonbehalfby](environmentvariablevalue.md#BKMK_lk_environmentvariablevalue_createdonbehalfby) Many-To-One relationship.
+Same as msdyn_helppage entity [lk_msdyn_helppage_createdonbehalfby](msdyn_helppage.md#BKMK_lk_msdyn_helppage_createdonbehalfby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|environmentvariablevalue|
+|ReferencingEntity|msdyn_helppage|
 |ReferencingAttribute|createdonbehalfby|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|lk_environmentvariablevalue_createdonbehalfby|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_helppage_createdonbehalfby|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_lk_environmentvariablevalue_modifiedby"></a> lk_environmentvariablevalue_modifiedby
+### <a name="BKMK_lk_msdyn_helppage_modifiedby"></a> lk_msdyn_helppage_modifiedby
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariablevalue entity [lk_environmentvariablevalue_modifiedby](environmentvariablevalue.md#BKMK_lk_environmentvariablevalue_modifiedby) Many-To-One relationship.
+Same as msdyn_helppage entity [lk_msdyn_helppage_modifiedby](msdyn_helppage.md#BKMK_lk_msdyn_helppage_modifiedby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|environmentvariablevalue|
+|ReferencingEntity|msdyn_helppage|
 |ReferencingAttribute|modifiedby|
 |IsHierarchical|False|
 |IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|lk_environmentvariablevalue_modifiedby|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_helppage_modifiedby|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 
-### <a name="BKMK_lk_environmentvariablevalue_modifiedonbehalfby"></a> lk_environmentvariablevalue_modifiedonbehalfby
+### <a name="BKMK_lk_msdyn_helppage_modifiedonbehalfby"></a> lk_msdyn_helppage_modifiedonbehalfby
 
 **Added by**: Active Solution Solution
 
-Same as environmentvariablevalue entity [lk_environmentvariablevalue_modifiedonbehalfby](environmentvariablevalue.md#BKMK_lk_environmentvariablevalue_modifiedonbehalfby) Many-To-One relationship.
+Same as msdyn_helppage entity [lk_msdyn_helppage_modifiedonbehalfby](msdyn_helppage.md#BKMK_lk_msdyn_helppage_modifiedonbehalfby) Many-To-One relationship.
 
 |Property|Value|
 |--------|-----|
-|ReferencingEntity|environmentvariablevalue|
+|ReferencingEntity|msdyn_helppage|
 |ReferencingAttribute|modifiedonbehalfby|
 |IsHierarchical|False|
 |IsCustomizable|True|
-|ReferencedEntityNavigationPropertyName|lk_environmentvariablevalue_modifiedonbehalfby|
-|AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
-|CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
-
-
-### <a name="BKMK_user_environmentvariablevalue"></a> user_environmentvariablevalue
-
-**Added by**: Active Solution Solution
-
-Same as environmentvariablevalue entity [user_environmentvariablevalue](environmentvariablevalue.md#BKMK_user_environmentvariablevalue) Many-To-One relationship.
-
-|Property|Value|
-|--------|-----|
-|ReferencingEntity|environmentvariablevalue|
-|ReferencingAttribute|owninguser|
-|IsHierarchical|False|
-|IsCustomizable|False|
-|ReferencedEntityNavigationPropertyName|user_environmentvariablevalue|
+|ReferencedEntityNavigationPropertyName|lk_msdyn_helppage_modifiedonbehalfby|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: NoCascade<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 

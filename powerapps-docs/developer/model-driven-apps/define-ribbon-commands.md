@@ -39,6 +39,6 @@ A *Ribbon* command creates a reusable definition that can be referenced by ribbo
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Use Localized Labels with Ribbons](use-localized-labels-ribbons.md)   
- [Define Ribbon Enable Rules](define-ribbon-enable-rules.md)<br/>
- [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163>)
+ [Use localized labels with Ribbons](use-localized-labels-ribbons.md)   
+ [Define Ribbon enable rules](define-ribbon-enable-rules.md)
+ [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)
