@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/06/2017
+ms.date: 04/22/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -50,7 +50,7 @@ In a canvas app, add and configure a **[Display](controls/control-form-detail.md
 
 1. Set the form's **[DataSource](controls/control-form-detail.md)** property to **FlooringEstimates** and its **[Item](controls/control-form-detail.md)** property to this formula:
 
-    `First(Filter(FlooringEstimates, Name=ChooseProduct.Selected.Value))`
+    `ChooseProduct.Selected`
 
    This formula specifies that, after you finish configuring the form, it will show the record that the user selects in **ChooseProduct**.
 
