@@ -183,7 +183,7 @@ Configure site settings and password reset policy for your Azure AD B2C provider
     1. Copy the URL of the **Issuer** from the configuration document that opens in a new browser.  
 
 - **Client ID​** - Enter the **Application ID** of the Azure AD B2C application created in [step 1](#step-1---configure-azure-active-directory-b2c-application).
-- **Redirect URI** - Enter portal URL. <br> If your portal uses a custom domain name, you may have a different URL than the one provided here.​
+- **Redirect URI** - Enter portal URL. <br> Change the **Redirect URI** only if you use custom domain name.
 
 #### Password resets
 
@@ -309,7 +309,7 @@ For more information about configuring OAuth 2 providers, see [OAuth 2 provider 
 
 ## Configure additional settings for OAuth 2 providers
 
-Applies to authentication settings for **Facebook**, **Twitter**, **Microsoft**, **LinkedIn, and **Google**:
+Applies to authentication settings for **Facebook**, **Twitter**, **Microsoft**, **LinkedIn**, and **Google**:
 
 ![Configure additional settings](media/use-simplified-authentication-configuration/additional-oauth-settings.png)
 
