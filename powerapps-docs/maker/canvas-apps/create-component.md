@@ -18,35 +18,35 @@ search.app:
 > [!IMPORTANT]
 > This feature is still in public preview. For more information, see [Experimental and preview features](working-with-experimental.md).
 
-Components are reusable building blocks for canvas apps so that app makers can create custom controls to use inside an app, or across app using [component library](component-library.md). Components can use advanced features, such as custom properties and enable complex capabilities. This article introduces component concepts and some examples.
+Components are reusable building blocks for canvas apps so that app makers can create custom controls to use inside an app, or across apps using a [component library](component-library.md). Components can use advanced features such as custom properties and enable complex capabilities. This article introduces component concepts and some examples.
 
 Components are useful in building larger apps that have similar control patterns. If you update a component definition inside the app, all instances in the app reflect your changes. Components also reduce duplication of efforts by eliminating the need to copy/paste controls and improve performance. Components also help create collaborative development and standardizes look-and-feel in an organization when you use a [component library](component-library.md).
 
-## Components in canvas app
+## Components in canvas apps
 
 You can create a component from within an app as explained in this article, or by creating a new component inside a [component library](component-library.md). A component library should be used for requirements to use components across multiple app screens. You can also copy the existing components into an existing or a new component library.
 
-To create a component within an app, go to **Tree View**, select **Components** tab, and then select **New Component**:
+To create a component within an app, go to **Tree View**, select the **Components** tab, and then select **New component**:
 
-![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png)
+![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png "Create new custom component using tree view")
 
 Selecting **New component** opens an empty canvas. You can add controls as part of the component definition on the canvas. If you edit a component in the canvas, you'll update instances of the same component in other app screens. Apps that reuse an already created component can also receive component updates after you publish component changes.
 
-You can select a component from the list of existing components in left navigation after you select a screen. When you select a component, you insert an instance of that component onto the screen; just as you insert a control.
+You can select a component from the list of existing components in the left navigation after you select a screen. When you select a component, you insert an instance of that component onto the screen, just as you insert a control.
 
-Components available inside the app are listed under **Custom** category in list of components inside tree view. Components imported component libraries are listed under **Library components** category:
+Components available inside the app are listed under the **Custom** category in a list of components inside the tree view. Components imported from component libraries are listed under the **Library components** category:
 
-![Insert components to the app](./media/create-component/insert-components.png)
+![Insert components to the app](./media/create-component/insert-components.png "Insert components to the app")
 
 > [!NOTE]
-> Components discussed in this article are different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, read [Power Apps component framework overview](https://docs.microsoft.com/powerapps/developer/component-framework/overview).
+> Components discussed in this article are different from the Power Apps component framework that enables developers and makers to create code components for model-driven and canvas apps. For more information, go to [Power Apps component framework overview](https://docs.microsoft.com/powerapps/developer/component-framework/overview).
 
 ## Scope
 
-Think of a component as an encapsulated black box with properties as the interface. You can't access controls in the component from outside of the component. And you can't refer to anything outside of the component from inside the component. Exception is data sources shared between app and its components. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable component-definition updates, especially across apps with component libraries. You can update the data contract of the component by creating one or more custom properties.
+Think of a component as an encapsulated black box with properties as the interface. You can't access controls in the component from outside of the component. And you can't refer to anything outside of the component from inside the component. The exception is data sources shared between an app and its components. Scope restrictions keep the data contract of a component simple and cohesive, and it helps enable component-definition updates, especially across apps with component libraries. You can update the data contract of the component by creating one or more custom properties.
 
 > [!NOTE]
-> You can insert instances of components into a screen within a component library, and preview that screen for testing purposes. Also, note that the component library does not display when using [Power Apps mobile](https://powerapps.microsoft.com/downloads/).
+> You can insert instances of components into a screen within a component library, and preview that screen for testing purposes. Also, note that the component library does not display when using [Power Apps Mobile](https://powerapps.microsoft.com/downloads/).
 
 ## Custom properties
 
@@ -62,10 +62,10 @@ The following walk-through further explains these concepts.
 
 In this example, you'll create a menu component that resembles the following graphic. And you can change the text later to use it in multiple screens, apps, or both:
 
-![Final gallery](./media/create-component/menu-instance-new.png)
+![Final gallery](./media/create-component/menu-instance-new.png "Final gallery")
 
 > [!NOTE]
-> We recommend that you use [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available inside the app. When you import components from one app to another, new updates to components in original app do not propagate to the app that imported those components earlier. When using component library, you get prompted to update components if components inside a library are updated and published.
+> We recommend that you use a [component library](component-library.md) when creating components for reuse. Updating components inside an app only makes the component updates available inside the app. When you import components from one app to another, new updates to components in the original app do not propagate to the app that imported those components earlier. When using a component library, you get prompted to update components if components inside a library are updated and published.
 
 ### Create a new component
 
@@ -75,33 +75,33 @@ In this example, you'll create a menu component that resembles the following gra
 
 1. Provide an app name, select any layout, and then select **Create**.
 
-1. In the **Tree View**, select **Components** and then select **New Component** to create a new component.
+1. In the **Tree View**, select **Components** and then select **New component** to create a new component.
 
-    ![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png)
+    ![Create new custom component using tree view](./media/create-component/insert-new-component-treeview.png "Create new custom component using tree view")
 
-1. Select the new component in left navigation, then select ellipsis (...) and select **Rename**. Type or paste the name as **MenuComponent**.
+1. Select the new component in the left navigation, select the ellipsis (**...**), and then select **Rename**. Type or paste the name as **MenuComponent**.
 
-1. In the right-hand pane, set the component's width to **150** and its height to **250**, and then select **New custom property**. You can also set the height & width to any other value as appropriate.
+1. In the right-hand pane, set the component's width as **150** and its height as **250**, and then select **New custom property**. You can also set the height and width to any other value as appropriate.
 
-    ![New property](./media/create-component/new-property.png)
+    ![New property](./media/create-component/new-property.png "New property")
 
 1. In the **Display name**, **Property name**, and **Description** boxes, type or paste text as *Items*.
 
-    ![Display name, property name, description boxes](./media/create-component/property-names.png)
+    ![Display name, property name, description boxes](./media/create-component/property-names.png "Display name, property name, description boxes")
 
-    Don't include spaces in property name as you'll refer to the component by this name when you write a formula. For example, **ComponentName.PropertyName**.
+    Don't include spaces in property name because you'll refer to the component by this name when you write a formula. For example, **ComponentName.PropertyName**.
 
     The display name appears on the **Properties** tab of the right-hand pane if you select the component. A descriptive display name helps you and other makers understand the purpose of this property. The **Description** appears in a tooltip if you hover over the display name of this property in the **Properties** tab.
 
 1. In the **Data type** list, select **Table**, and then select **Create**.
 
-    ![Data type of the property](./media/create-component/property-data-type.png)
+    ![Data type of the property](./media/create-component/property-data-type.png "Data type of the property")
 
-    The **Items** property is set to a default value based on the data type that you specified. You can set it to a value that suits your needs. If you specified a data type of **Table** or **Record**, you may want to change the value of the **Items** property to match the data schema that you want to input to the component. In this case, you'll change it to a list of strings.
+    The **Items** property is set to a default value based on the data type that you specified. You can set it to a value that suits your needs. If you specified a data type of **Table** or **Record**, you might want to change the value of the **Items** property to match the data schema that you want to input to the component. In this case, you'll change it to a list of strings.
 
     You can set the property's value in the formula bar if you select the name of the property on the **Properties** tab of the right-hand pane.
 
-    ![Custom input property on the Properties tab](./media/create-component/properties-tab.png)
+    ![Custom input property on the Properties tab](./media/create-component/properties-tab.png "Custom input property on the Properties tab")
 
     As the next graphic shows, you can also edit the property's value on the **Advanced** tab of the right-hand pane.
 
@@ -111,7 +111,7 @@ In this example, you'll create a menu component that resembles the following gra
     Table({Item:"SampleText"})
     ```
 
-    ![Formula](./media/create-component/set-component-items.png)
+    ![Formula](./media/create-component/set-component-items.png "Formula")
 
 1. In the component, insert a blank vertical **Gallery** control and select **Layout** on the property pane as **Title**.
 
@@ -124,6 +124,10 @@ In this example, you'll create a menu component that resembles the following gra
     This way, the **Items** property of the **Gallery** control reads and depends on the **Items** input property of the component.
 
 1. Optional - set the **Gallery** control's **BorderThickness** property to **1**  and its **TemplateSize** property to **50**. You can also update values for border thickness and template size to any other value as appropriate.
+
+
+
+
 
 ### Add component to a screen
 
