@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/08/2020
+ms.date: 04/23/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
