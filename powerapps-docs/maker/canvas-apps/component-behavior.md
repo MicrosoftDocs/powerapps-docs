@@ -13,9 +13,6 @@ search.app:
   - PowerApps
 ---
 
-<!-- See questions in lines 27 and 56. -->
-
-
 # Behavior formulas for components
 
 > [!IMPORTANT]
@@ -23,10 +20,7 @@ search.app:
 
 Specify one or more [behavior formulas](working-with-formulas-in-depth.md) that run when an event triggers a change in component instances. 
 
-
-<!-- The following sentence is confusing. Should it change to "initialization and clear input"? Or maybe "initialization to clear input"? -->
-
-For example, set a component's **OnReset** property to one or more formulas that do initialization, clear input. Reset values when the **Reset** function runs on the component instances.
+For example, set a component's **OnReset** property to one or more formulas that do initialization and clear input. Reset values when the **Reset** function runs on the component instances.
 
 ## OnReset
 
@@ -51,11 +45,6 @@ To trigger reset, go to a screen and insert an instance of the component. Add a 
 
 ## Update OnReset using custom property
 
-
-
-<!-- Below and in lines 68 and 70, I don't see a need for quotation marks around **Raise OnReset when value changes**. I didn't remove them in case there was something that makes them necessary. -->
-
-
 Besides resetting a component instance from outside of the component, there's another method to trigger the OnReset from the inside. "**Raise OnReset when value changes**" is an option when creating a custom input property. It allows the value changes of this property to trigger OnReset of the component. This method is designed to set and reset the default value easily. 
 
 > ![OnReset example](./media/component-behavior/property-trigger.png "OnReset example")
@@ -65,9 +54,9 @@ Besides resetting a component instance from outside of the component, there's an
 > [!div class="mx-imgBorder"]
 > ![OnReset example](./media/component-behavior/updateordernumber2.gif "OnReset example")
 
-The example above shows reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of the numeric up and down component is reset to display the order number of the selected tool. "**Raise OnReset when value changes**" made it possible to reset the default value when the input changes. 
+The example above shows reviewing order numbers and updating the numbers. The numeric up and down component is used to increase or decrease number of orders. When selecting the gallery on the left, the default number of the numeric up and down component is reset to display the order number of the selected tool. **Raise OnReset when value changes** made it possible to reset the default value when the input changes. 
 
-To do so, check "**Raise OnReset when value changes**" of the default input property. **OnReset** of the component is set to **Set(_numericValue,'Numeric up down'.DefaultValue)**. _numericValue is the variable to store the value of the current order value. Set the **Default** of the text input control to **If(IsBlank(_numericValue), 'Numeric up down'.DefaultValue, _numericValue)**. 
+To do so, check **Raise OnReset when value changes** of the default input property. **OnReset** of the component is set to **Set(_numericValue,'Numeric up down'.DefaultValue)**. _numericValue is the variable to store the value of the current order value. Set the **Default** of the text input control to **If(IsBlank(_numericValue), 'Numeric up down'.DefaultValue, _numericValue)**.
 
 ### See also
 

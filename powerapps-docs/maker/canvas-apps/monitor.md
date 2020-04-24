@@ -31,10 +31,7 @@ This gives you a better understanding of how the formulas contained in your app 
 
 The key to debugging an issue is to have a better understanding of what your app does, and how. Sometimes, it's difficult to isolate an issue when just looking at the app formulas, or even reviewing runtime errors. Watching the events as they occur in your app can help you understand the order and performance of events and errors, and diagnose issues faster.
 
-
-<!-- These seem more like issues and queries that you can explore than questions and answers. -->
-
-A few example questions and answers that you can uncover when using Monitor are:
+A few example issues and queries that you can uncover when using Monitor are:
 
 - **High number of network calls**
     - Is the app fetching data too frequently?

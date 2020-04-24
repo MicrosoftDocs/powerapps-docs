@@ -13,9 +13,6 @@ search.app:
   - PowerApps
 ---
 
-<!--editor's note: In line 66, I added the word "and" to the sentence. Is that correct? -->
-
-
 # Component library
 
 > [!IMPORTANT]

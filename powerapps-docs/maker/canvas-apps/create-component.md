@@ -13,9 +13,6 @@ search.app:
   - PowerApps
 ---
 
-<!--editor's note: Line 228 says "... select **Import file** instead of selecting any other components or apps." However, the UI in the image says "Upload file." Should the text change to match the image? -->
-
-
 # Create a component for canvas apps
 
 > [!IMPORTANT]
@@ -225,7 +222,7 @@ The downloaded component file uses the *.msapp* file name extension.
 
 ### Import components from exported components file
 
-To import components from an exported components file, select **Import components** from either **Insert** menu and then use the **Custom** drop-down menu or use **Components** in the tree view on the left navigation. From the components dialog box, select **Import file** instead of selecting any other components or apps:
+To import components from an exported components file, select **Import components** from either **Insert** menu and then use the **Custom** drop-down menu or use **Components** in the tree view on the left navigation. From the components dialog box, select **Upload file** instead of selecting any other components or apps:
 
 ![Import component file](./media/create-component/import-component-file.png "Import component file")
 
