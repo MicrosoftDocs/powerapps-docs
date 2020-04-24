@@ -15,12 +15,6 @@ search.app:
   - PowerApps
 ---
 
-<!--editor's note: I checked the MS style guide and they call it "Azure Pipelines," with "pipeline" being a generic use. So I've changed it here from Azure Pipeline to Azure Pipelines. https://styleguides.azurewebsites.net/Styleguide/Read?id=2696&topicid=44390 
-In line 278, why is there an angle bracket at the end of the sentence? 
-Also, thank you for blurring the PII in the images. -->
-
-
-
 # Automate tests with Azure Pipelines using classic editor
 
 In this article, you'll learn how to set up and run your canvas app tests built in Test Studio using the [Azure Pipelines classic editor](https://docs.microsoft.com/azure/devops/pipelines/get-started/pipelines-get-started?view=azure-devops#define-pipelines-using-the-classic-interface) in [Azure DevOps Services](https://docs.microsoft.com/azure/devops/user-guide/what-is-azure-devops?view=azure-devops).
@@ -275,7 +269,7 @@ You'll now configure the pipeline variables defined in the tasks you've added [e
 | OnlineUrl                 | <https://make.powerapps.com>                                                                                                   |
 | TestAutomationURLFilePath | ```$(Build.SourcesDirectory)\<test URL file>.json``` <br>**Note:** This is the [*Test URLs .json*](#step-2---create-test-url-json-file) file you created earlier.                      |
 | UsePrivateMode            | true                                                                                                                           |
-| OnlineUsername            | Enter the Azure Active Directory email address of the user context that will sign in to the application. Tests will run under the context of this user account.\> |
+| OnlineUsername            | Enter the Azure Active Directory email address of the user context that will sign in to the application. Tests will run under the context of this user account. |
 
 1. Select **Add** and enter **OnlinePassword** in the variable name.
 
