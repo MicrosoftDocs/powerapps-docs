@@ -28,10 +28,10 @@ The main components of the Regional Emergency Response solution are:
 
 ## Licensing requirements
 
-- Power Apps license
-- Power BI license
+- Power Apps plan along with Power Apps portal capacity
+- Power BI Premium or Pro license
 
-Contact your local Microsoft account representative for questions related to licensing.
+Contact your local Microsoft account representative for questions related to licensing as per your requirements.
 
 See also: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 
