@@ -403,7 +403,7 @@ To add a Power BI component to a web page:
 
     1. **Apply roles**: If you have defined roles in Power BI and assigned them to reports, you must enter appropriate roles in this field.
     
-        - You can enter multiple roles separated by a comma (for example, ```role_1,role_2```). For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls). <br>
+        - You can enter multiple roles separated by a comma (for example, ```role_1,role_2```). For more information on defining roles in Power BI, go to [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls). <br>
         - Only available for access type **Embed for your customer**.
 
     1. **Apply filter**: Allows user to load the report with pre-filtered values. User can provide filter condition in the field. 
@@ -411,7 +411,7 @@ To add a Power BI component to a web page:
         ![Apply filter](media/apply-filter-powerbi.png "Apply filter")
 
         - Filter parameter must be without ```?filter=``` prefix. For example, ```Table/Field eq 'value'```.
-        <br> For more information, read [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
+        <br> For more information, go to [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
         - Only available for **Reports** with access types **Embed for your customer** and **Embed for your organization**.
 
     1. **Embed code URL**: Enter embed code URL. 
@@ -440,7 +440,7 @@ The following highlights *Power BI access types* in brief. For more information,
     - Increased number of workspaces shared with user account used while editing the portal.
     - Increased number of users the Power BI workspace is shared with.
 - [Capture liquid variable](https://docs.microsoft.com/powerapps/maker/portals/liquid/portals-entity-tags#powerbi) is not supported in portal Studio while working with Power BI component.
-- If you [reset portal](https://docs.microsoft.com/powerapps/maker/portals/admin/reset-portal) and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, read [Set up Power BI integration](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#create-security-group-and-add-to-power-bi-account).  
+- If you [reset portal](https://docs.microsoft.com/powerapps/maker/portals/admin/reset-portal) and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, go to [Set up Power BI integration](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#create-security-group-and-add-to-power-bi-account).  
 
 ### Power BI performance and optimization considerations
 
