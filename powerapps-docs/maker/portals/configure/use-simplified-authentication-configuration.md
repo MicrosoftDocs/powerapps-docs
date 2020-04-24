@@ -228,7 +228,7 @@ For more information about configuring Azure AD B2C identity provider, read [Azu
 
 ![Configure Facebook app](media/use-simplified-authentication-configuration/configure-facebook.png)
 
-To use [Facebook](https://developers.facebook.com) as an identity provider, you need to create an app in Facebook with a redirect URL.
+To use **Facebook** as an identity provider, you need to [create an app in Facebook](https://developers.facebook.com) with a redirect URL.
 
 The Redirect URL is used by the Facebook app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you may have a different URL than the one provided here.​
 
@@ -245,7 +245,7 @@ For more information about configuring OAuth 2 providers, see [OAuth 2 provider 
 
 ![Configure LinkedIn app](media/use-simplified-authentication-configuration/configure-linkedin.png)
 
-To use [LinkedIn](https://www.linkedin.com/developers/apps) as an identity provider, you need to create an app in LinkedIn with a redirect URL.
+To use **LinkedIn** as an identity provider, you need to [create an app in LinkedIn](https://www.linkedin.com/developers/apps) with a redirect URL.
 
 The Redirect URL is used by the LinkedIn app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you may have a different URL than the one provided here.​
 
@@ -262,7 +262,7 @@ For more information about configuring OAuth 2 providers, see [OAuth 2 provider 
 
 ![Configure Google app](media/use-simplified-authentication-configuration/configure-google.png)
 
-To use [Google](https://console.developers.google.com/) as an identity provider, you need to create an app in Google with a redirect URL.
+To use **Google** as an identity provider, you need to [create an app in Google](https://console.developers.google.com/) with a redirect URL.
 
 The Redirect URL is used by the Google app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you may have a different URL than the one provided here.​
 
@@ -279,7 +279,7 @@ For more information about configuring OAuth 2 providers, see [OAuth 2 provider 
 
 ![Configure Twitter app](media/use-simplified-authentication-configuration/configure-twitter.png)
 
-To use [Twitter](https://developer.twitter.com/apps) as an identity provider, you need to create an app in Twitter with a redirect URL.
+To use **Twitter** as an identity provider, you need to [create an app in Twitter](https://developer.twitter.com/apps) with a redirect URL.
 
 The Redirect URL is used by the Twitter app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you may have a different URL than the one provided here.​
 
@@ -296,7 +296,7 @@ For more information about configuring OAuth 2 providers, see [OAuth 2 provider 
 
 ![Configure Microsoft app](media/use-simplified-authentication-configuration/configure-microsoft.png)
 
-To use [Microsoft](https://aka.ms/AppRegistrations) as an identity provider, you need to create an app in Azure portal with a redirect URL.
+To use **Microsoft** as an identity provider, you need to [create an app in Azure portal](https://aka.ms/AppRegistrations) with a redirect URL.
 
 The Redirect URL is used by the Microsoft app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you may have a different URL than the one provided here.​
 
