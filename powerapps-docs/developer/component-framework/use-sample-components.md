@@ -19,20 +19,23 @@ All the sample components listed under this section are available to download fr
 The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, and the manifest, code, and resources for the sample component.
 
 ## Before you can try the sample components
+
 To try the sample components, you must first:
+
 - [Download](https://go.microsoft.com/fwlink/?linkid=2088525) the sample components so that you have a local copy.
 - Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
 
 ## Try the sample components
+
 Follow the steps below to import and try the sample components in your model-driven or canvas app:
 
 1. Navigate to the folder on your computer where you have downloaded the sample components, and extract the .zip file.  
-1. Open Developer Command Prompt for Visual Studio 2017 and navigate to the sample component folder in the extracted folder that you want to see it in runtime. For example, navigate to the \<extracted_folder>/TS_IncrementComponent folder.
+1. Open Developer Command Prompt for Visual Studio 2017 and navigate to the sample component folder in the extracted folder that you want to see it in runtime. For example, navigate to the `/extracted_folder/TS_IncrementComponent` folder.
 1. Run the following command to get all the required dependencies:
     ```CLI
     npm install
     ```
-1. Create a new folder using the command `mkdir <folder name>` inside the sample component folder and navigate into the folder using the command `cd <folder name>`. 
+1. Create a new folder using the command `mkdir <folder name>` inside the sample component folder that has the `pcfproj` file and navigate into the folder using the command `cd <folder name>`. 
 1. Create a new solution project inside the folder using the following command:
     ```CLI
     pac solution init --publisher-name <Name of the publisher> --publisher-prefix <Publisher prefix>

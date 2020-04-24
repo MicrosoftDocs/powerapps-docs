@@ -59,7 +59,7 @@ This is not supported natively by the framework. You can use one of many third-p
 
 Currently, font resources (files with a .ttf file extension) are not supported by the framework.
 
-### Can I use img resource for canvas apps?
+### Can I use img resource property in canvas apps?
 
 Currently, [img](manifest-schema-reference/img.md) resources are not supported in canvas apps.
 
