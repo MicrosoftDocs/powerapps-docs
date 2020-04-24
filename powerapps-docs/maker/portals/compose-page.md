@@ -354,9 +354,7 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 
 ## Add Power BI
 
-You can add Power BI component on a page. When adding a Power BI component, you have different options to select for access type, workspace, and advanced settings:
-
-![Power BI options](media/powerbi-options.png)
+You can add Power BI component on a page. When adding a Power BI component, you have different options to select for access type, workspace, and advanced settings.
 
 > [!NOTE]
 > Before you begin, read [Power BI access types](#power-bi-access-types) and [Power BI considerations](#other-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portal.
@@ -372,9 +370,9 @@ To add a Power BI component to a web page:
 
 1. Select **Components** from the left side of the screen.
 
-    ![Components](media/components-powerbi.png)
-
 1. From Portal components, select **Power BI**. The Power BI placeholder is added to the canvas.
+
+    ![Components](media/components-powerbi.png)
 
 1. In the properties pane on the right side of the screen, enter the following information:
 
@@ -406,14 +404,16 @@ To add a Power BI component to a web page:
     1. **Apply roles** (only available for access type **Embed for your customer**): <br>If you have defined roles in Power BI and assigned them to reports, you must enter appropriate roles in this field. <br>
         You can enter multiple roles separated by a comma (for example, ```role_1,role_2```). For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls) 
 
-    1. **Apply filter** (only available for access types **Embed for your customer** and **Embed for your organization**): <br>
+    1. **Apply filter** (only available for access types **Embed for your customer** and **Embed for your organization**) with **Report** type: <br>
         Allows user to load the report with pre-filtered values. User can provide filter condition in the field.
-        This field requires filter parameter format without ```?filter=``` prefix. For more information, read [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
-        For example, ```Table/Field eq 'value'```.
+        This field requires filter parameter format without ```?filter=``` prefix. For example, ```Table/Field eq 'value'```.
+        <br> For more information, read [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
+
+        ![Apply filter](media/apply-filter-powerbi.png "Apply filter")
 
     1. **Embed code URL** (only available for access type **Publish to web**): <br> To get embed code URL that you can copy and paste, read [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
 
-        ![Embed Code URL](media/embed-code-url.png)
+        ![Embed Code URL](media/embed-code-url.png "Embed Code URL")
 
 ### Power BI access types
 
