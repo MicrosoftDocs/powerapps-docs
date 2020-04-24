@@ -402,6 +402,8 @@ To add a Power BI component to a web page:
         - **Report** - Allows you to select a **Report**, and then a **Page** from the report to dosplay on the web page.
 
     1. **Apply roles**: If you have defined roles in Power BI and assigned them to reports, you must enter appropriate roles in this field.
+
+        ![Apply roles](media/apply-roles-powerbi.png "Apply roles")
     
         - You can enter multiple roles separated by a comma (for example, ```role_1,role_2```). For more information on defining roles in Power BI, go to [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls). <br>
         - Only available for access type **Embed for your customer**.
