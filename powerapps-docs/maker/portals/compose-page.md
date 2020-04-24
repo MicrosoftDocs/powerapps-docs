@@ -370,7 +370,7 @@ To add a Power BI component to a web page:
 
 1. Select **Components** from the left side of the screen.
 
-1. From Portal components, select **Power BI**. The Power BI placeholder is added to the canvas.
+1. From Portal components, select **Power BI**. The Power BI placeholder is added to the canvas:
 
     ![Components](media/components-powerbi.png)
 
@@ -380,16 +380,15 @@ To add a Power BI component to a web page:
 
         ![Power BI Access type](media/powerbi-access-type.png "Power BI Access type")
 
-        1. **Embed for your customers**: Allows you to securely share the Power BI report or dashboard to external users without Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI chart into portal.
+        1. **Embed for your customers** - Allows you to securely share the Power BI report or dashboard to external users without Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI chart into portal.
             > [!NOTE]
             > Make sure [Power BI Embedded service is enabled](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service) and respective Power BI workspaces are selected, and shared with the maker or the logged-in user.
 
-        1. **Embed for your organization**: Allows you to securely share the Power BI report or dashboard to Azure Active Directory authenticated users. 
+        1. **Embed for your organization** - Allows you to securely share the Power BI report or dashboard to Azure Active Directory authenticated users. 
             > [!NOTE]
             > Make sure you've shared Power BI workspaces with maker and target portal users.
 
-        3. **Publish to web**
-            Allows you to share Power BI report or dashboard to anyone on the internet.
+        3. **Publish to web** - Allows you to share Power BI report or dashboard to anyone on the internet.
 
         For more information about access types, go to [access types](#power-bi-access-types).
 
@@ -397,23 +396,30 @@ To add a Power BI component to a web page:
 
     1. **Select type**: Select type as *Dashboard* or *Report* from the list.
 
-        If you selected the type as **Dashboard**, then **Select dashboard** option appears and you can select any one of the available dashboards from the list. You can then select a **Tile** to display on the web page.
+        ![Select type](media/type-powerbi.png "Select type")
 
-        If you selected the type as **Report**, then **Select report** option appears and you can select any one of the available reports from the list. You can then select a **Page** from the report to dosplay on the web page.
+        - **Dashboard** - Allows you to choose a **Dashboard**, and then a **Tile** from the selected dashboard to display on the web page.
+        - **Report** - Allows you to select a **Report**, and then a **Page** from the report to dosplay on the web page.
 
-    1. **Apply roles** (only available for access type **Embed for your customer**): <br>If you have defined roles in Power BI and assigned them to reports, you must enter appropriate roles in this field. <br>
-        You can enter multiple roles separated by a comma (for example, ```role_1,role_2```). For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls) 
+    1. **Apply roles**: If you have defined roles in Power BI and assigned them to reports, you must enter appropriate roles in this field.
+    
+        - You can enter multiple roles separated by a comma (for example, ```role_1,role_2```). For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls). <br>
+        - Only available for access type **Embed for your customer**.
 
-    1. **Apply filter** (only available for access types **Embed for your customer** and **Embed for your organization**) with **Report** type: <br>
-        Allows user to load the report with pre-filtered values. User can provide filter condition in the field.
-        This field requires filter parameter format without ```?filter=``` prefix. For example, ```Table/Field eq 'value'```.
-        <br> For more information, read [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
-
+    1. **Apply filter**: Allows user to load the report with pre-filtered values. User can provide filter condition in the field. 
+        
         ![Apply filter](media/apply-filter-powerbi.png "Apply filter")
 
-    1. **Embed code URL** (only available for access type **Publish to web**): <br> To get embed code URL that you can copy and paste, read [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
+        - Filter parameter must be without ```?filter=``` prefix. For example, ```Table/Field eq 'value'```.
+        <br> For more information, read [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
+        - Only available for **Reports** with access types **Embed for your customer** and **Embed for your organization**.
 
+    1. **Embed code URL**: Enter embed code URL. 
+    
         ![Embed Code URL](media/embed-code-url.png "Embed Code URL")
+
+        - To know how to get embed code URL, go to [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
+        - Only available for access type **Publish to web**. 
 
 ### Power BI access types
 
