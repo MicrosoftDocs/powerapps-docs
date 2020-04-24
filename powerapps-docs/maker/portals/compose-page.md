@@ -404,7 +404,7 @@ To add a Power BI component to a web page:
         If you selected the type as **Report**, then **Select report** option appears and you can select any one of the available reports from the list. You can then select a **Page** from the report to dosplay on the web page.
 
     1. **Apply roles** (only available for access type **Embed for your customer**): <br>If you have defined roles in Power BI and assigned them to reports, you must enter appropriate roles in this field. <br>
-        You can enter multiple roles separated by a comma (for example role_1,role_2). For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls) 
+        You can enter multiple roles separated by a comma (for example, ```role_1,role_2```). For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls) 
 
     1. **Apply filter** (only available for access types **Embed for your customer** and **Embed for your organization**): <br>
         Allows user to load the report with pre-filtered values. User can provide filter condition in the field.
