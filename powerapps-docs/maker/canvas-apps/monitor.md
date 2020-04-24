@@ -1,6 +1,6 @@
 ---
-title: Debugging an app with canvas app monitor | Microsoft Docs
-description: Describes canvas app monitor to debug a canvas app.
+title: Debugging an app with canvas app Monitor | Microsoft Docs
+description: Describes canvas app Monitor to debug a canvas app.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -15,23 +15,26 @@ search.app:
   - PowerApps
 ---
 
-# Debugging an app with canvas app monitor (Experimental)
+<!-- See comment in line 35. -->
 
-**Canvas app monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as the app runs.
+
+# Debugging an app with canvas app Monitor (Experimental)
+
+**Canvas app Monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as the app runs.
 
 This gives you a better understanding of how the formulas contained in your app work so you can improve performance and identify any errors or problems.
 
 > [!NOTE]
-> The canvas app monitor feature is still experimental. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
+> The canvas app Monitor feature is still experimental. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 ## Debugging an app
 
 The key to debugging an issue is to have a better understanding of what your app does, and how. Sometimes, it's difficult to isolate an issue when just looking at the app formulas, or even reviewing runtime errors. Watching the events as they occur in your app can help you understand the order and performance of events and errors, and diagnose issues faster.
 
 
-<!-- These seem more like issues and solutions than questions and answers. -->
+<!-- These seem more like issues and queries that you can explore than questions and answers. -->
 
-A few example questions and answers that you can uncover when using the monitor are:
+A few example questions and answers that you can uncover when using Monitor are:
 
 - **High number of network calls**
     - Is the app fetching data too frequently?
@@ -53,11 +56,11 @@ A few example questions and answers that you can uncover when using the monitor 
     - Have you configured the required permissions to run the app correctly?
     - Are your requests throttled by the platform?
 
-To see **monitor** in action, see the [example scenario](#example).
+To see **Monitor** in action, see the [example scenario](#example).
 
-## Open canvas app monitor
+## Open canvas app Monitor
 
-The canvas app monitor is available by default for all canvas apps. To open the monitor:
+Canvas app Monitor is available by default for all canvas apps. To open Monitor:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
@@ -65,29 +68,28 @@ The canvas app monitor is available by default for all canvas apps. To open the 
 
 1. Select **Advanced tools** in the left navigation pane.
 
-1. Select **Open Monitor** to open the monitor for this app. 
+1. Select **Open Monitor** to open Monitor for this app. 
 
     ![Open Monitor](./media/monitor/open-monitor.png "Open Monitor")
 
-This opens the monitor in a new browser tab and connects the monitor to your existing Studio session:
+This opens Monitor in a new browser tab and connects it to your existing Studio session:
 
-![Canvas app monitor](./media/monitor/canvas-app-monitor.png "Canvas app monitor")
+![Canvas app Monitor](./media/monitor/canvas-app-monitor.png "Canvas app Monitor")
 
 > [!NOTE]
-> The monitor has no impact on your app. You can use the monitor with any app in a test environment or in production.
+> Monitor has no impact on your app. You can use Monitor with any app in a test environment or in production.
 
-## View events in canvas app monitor
+## View events in canvas app Monitor
 
-To view events from your app, play the app in the Studio. The monitor will then
-display the table of events occurring along with specific details.
+To view events from your app, play the app in the Studio. Monitor will then display the table of events occurring along with specific details.
 
 ![View events as they occur](./media/monitor/view-events.gif "View events as they occur")
 
 Refresh the page to replay the media.
 
-You can review various properties for each event inside the monitor. Depending on the event category, some of these properties might not contain data.
+You can review various properties for each event inside Monitor. Depending on the event category, some of these properties might not contain data.
 
-Description of columns in canvas app monitor:
+Description of columns in canvas app Monitor:
 
 | Column name | Description
 | - | -
@@ -122,17 +124,17 @@ When you select an event in the grid, a panel displays containing additional det
 
     ![Table format - Response tab](./media/monitor/table-format-response-tab.png "Table format - Response tab")
 
-    Selecting *JSON tree* shows content in JSON format:
+    Selecting *Json tree* shows content in JSON format:
 
     ![JSON format - Response tab](./media/monitor/json-format-response-tab.png "JSON format - Response tab")
 
 ## Download and upload a trace file
 
-You can download the events that are shown in the  table for offline analysis. The downloaded trace file can be shared with others and it can be uploaded back into the monitor for review and analysis. You can also attach a trace file to support service requests helping expedite the solution to your problem.
+You can download the events that are shown in the  table for offline analysis. The downloaded trace file can be shared with others and it can be uploaded back into Monitor for review and analysis. You can also attach a trace file to support service requests helping expedite the solution to your problem.
 
 ![Download](./media/monitor/Download.png "Download")
 
-Select **Upload** to load a ```.json``` trace file to the monitor. The upload option will remove any events currently displayed in the monitor table, and replace the details with the events contained in the trace file.
+Select **Upload** to load a ```.json``` trace file to Monitor. The upload option will remove any events currently displayed in the Monitor table, and replace the details with the events contained in the trace file.
 
 ![Upload](./media/monitor/upload.png "Upload")
 
@@ -140,38 +142,31 @@ Select **Upload** to load a ```.json``` trace file to the monitor. The upload op
 
 In this example, you'll use the *Northwind Sample Data* app included with the [Northwind sample solution](https://docs.microsoft.com/powerapps/maker/canvas-apps/northwind-install).
 
-*Northwind sample solution* is a canvas app that loads sample data into the Common Data Service. You can also create a new app or use an existing app instead.
-
-
-
+*Northwind sample solution* is a canvas app that loads sample data into Common Data Service. You can also create a new app or use an existing app instead.
 
 ### Background
 
-Consider the scenario where the app is deployed and the initial app versions experiences performance degradation. The app also intermittently generates errors with no clear pattern. Loading data in app succeeds mostly and fails sometimes.
+Consider the scenario where the app is deployed and the initial app version experiences performance degradation. The app also intermittently generates errors with no clear pattern. Loading data in the app succeeds mostly and fails sometimes.
 
-When you check canvas app **Monitor**, you see data operations as expected. However, you also see several responses with HTTP status code 429 indicating too many requests in a specific timeframe.
+When you check canvas app Monitor, you see data operations as expected. However, you also see several responses with HTTP status code 429 indicating too many requests in a specific timeframe.
 
-When you select such event, you see the error as *Rate limit exceeded. Try again in XX seconds.*:
+When you select such an event, you see the error as *Rate limit exceeded. Try again in XX seconds.*
 
-![HTTP status code 429](./media/monitor/http-statuscode-429.png)
+![HTTP status code 429](./media/monitor/http-statuscode-429.png "HTTP status code 429")
 
 ### Analysis
 
-The issue needs further analysis to understand why requests are getting
-throttled. In the Monitor, you see that for each **createRow** call, there are several **getRows** requests from the **ProgressCount.Text** property; each to a different entity. These aren't the entities the app is creating rows for. The **ProgressCount.Text**  formula is seen in the Monitor:
+The issue needs further analysis to understand why requests are getting throttled. In Monitor, you see that for each **createRow** call, there are several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These aren't the entities the app is creating rows for. The **ProgressCount.Text**  formula is seen in Monitor:
 
-![ProgressCount.Text formula](./media/monitor/progresscount-text-formula.png)
+![ProgressCount.Text formula](./media/monitor/progresscount-text-formula.png "ProgressCount.Text formula")
 
-For each record added, the formula is evaluated again and **CountRows** is
-called on several entities. This resulted in **getRows** in the log,
-since **CountRows** isn't delegated for Common Data Service. For each single request to add a record, you're potentially making 12 additional requests to count the rows in each entity.
+For each record added, the formula is evaluated again and **CountRows** is called on several entities. This resulted in **getRows** in the log, since **CountRows** isn't delegated for Common Data Service. For each single request to add a record, you're potentially making 12 additional requests to count the rows in each entity.
 
 These extra requests intermittently cause errors due to the Common Data Service platform throttling the requests to the service. And it also explains the overall performance problem.
 
 ### Conclusion
 
-The permanent fix for this app is to do the **CountRows** manually for each
-entity as records are being created in it. Without using Monitor, it would have been difficult to diagnose and resolve this issue.
+The permanent fix for this app is to do the **CountRows** manually for each entity as records are being created in it. Without using Monitor, it would have been difficult to diagnose and resolve this issue.
 
 ### See also
 
