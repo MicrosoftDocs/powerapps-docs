@@ -36,7 +36,7 @@ The following pre-built components can be used to solve your mixed reality scena
 1. You need a PowerApps license that supports Common Data Service (CDS). If you [identify your current license](/powerapps/maker/signup-for-powerapps#identify-your-current-license) does not support CDS, you can sign up for a [free trial license for 30 days](http://web.powerapps.com/trial). Please note that in some circumstances this step may take 30 to 60 minutes. Please check periodically after requesting a trial license.
 2. If you don't have one already, you will need to [create an environment with Common Data Service instance installed](/power-platform/admin/create-environment). You will need to have system administrator privileges for this step.
 3. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
-
+4. You'll need a mixed reality-capable device. Any [ArCore capable device](https://developers.google.com/ar/discover/supported-device) is supported. 
 
 ### Enable the mixed reality features for each app
 
