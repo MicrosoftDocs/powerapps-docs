@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2020
+ms.date: 04/24/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -296,7 +296,7 @@ For more information about configuring OAuth 2 providers, see [OAuth 2 provider 
 
 ![Configure Microsoft app](media/use-simplified-authentication-configuration/configure-microsoft.png)
 
-To use [Microsoft](https://aka.ms/AppRegistrations) as an identity provider, you need to create an app in Twitter with a redirect URL.
+To use [Microsoft](https://aka.ms/AppRegistrations) as an identity provider, you need to create an app in Azure portal with a redirect URL.
 
 The Redirect URL is used by the Microsoft app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you may have a different URL than the one provided here.​
 
