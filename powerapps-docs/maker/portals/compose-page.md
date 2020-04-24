@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/06/2020
+ms.date: 04/24/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -388,34 +388,20 @@ To add a Power BI component to a web page:
 
             Make sure [Power BI Embedded service is enabled](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service) and respective Power BI workspaces are selected, and shared with the maker or the logged-in user.
 
-            <!-- > [!CAUTION]
-            > If you add Power BI with *Embed for your customers* on a Power Apps portal page that is available anonymously, anyone can view the dashboard. To secure a web page, read [web page access control in Power Apps portal](https://docs.microsoft.com/powerapps/maker/portals/configure/webpage-access-control).-->
-
         1. **Embed for your organization**
 
             Allows you to securely share the Power BI report or dashboard to Azure Active Directory authenticated users. ​
 
             Make sure you've shared Power BI workspaces with maker and target portal users.
 
-            <!-- > [!NOTE]
-            > **Embed for your customers** use Power BI Embedded service and **Embed for your organization** use Azure Active Directory authentication to allow user to see these charts. For more information, read [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).-->
-
         For more information, read [access types](#power-bi-access-types).
 
         3. **Publish to web**
             Allows you to share Power BI report or dashboard to anyone on the internet.
 
-            <!-- > [!CAUTION]
-            > When you use **Publish to web**, anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Do not publish confidential or proprietary information. When in doubt, check your organization's policies before publishing.-->
-
     1. **Workspace**
 
         Select the Power BI workspace from the list.
-
-        <!-- > [!NOTE]
-        > Values in the workspace list depend on the selected access type.
-        > - **Embed for your customers** shows the list of workspaces shared to logged in user and enabled for [Power BI Embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service).
-        > - **Embed for your organization** shows the list of workspaces shared with logged in user.-->
 
     1. **Select type**
         Select Dashboard or Report from the list.
