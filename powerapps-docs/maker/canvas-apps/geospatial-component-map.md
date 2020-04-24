@@ -24,13 +24,17 @@ Easily bring dynamic mapping capabilities into your canvas apps. View the physic
 
 The dynamic map component can be added to your canvas apps by following the instructions for [adding framework components](/powerapps/developer/component-framework/component-framework-for-canvas-apps#add-components-to-a-canvas-app). 
 
-## Use sample apps to explore the map component
+## Explore the sample app
 
-The dynamic map component appears in the following two sample apps:
-- Map Sample App: This sample canvas app shows a set of data points in a table, plots them as pins in the dynamic map and centers the map view to show all pins. The user can pan, tilt, zoom, and drag the map view. The map also clusters the data points when the map view is far away enough from the pins.
-- Address + Map Sample App: This sample canvas app lets the user type an address in the text input, showing suggestions to autocomplete the address. Once the user selects the address, the address is plotted as a pin in the dynamic map and the map view is centered at this pin. The user can pan, tilt, zoom, and drag the map view.
+## Use the component
 
-## Properties
+Insert the component into your app as you normally would for any other control or component.
+
+With an app open for editing in the Power Apps https://create.powerapps.com studio, you can select the component directly or drag and drop it onto an app screen.
+
+You can modify the component with a number of properties.
+
+### Properties
 
 The following properties can be defined and configured in the component's **Controls** pane. 
 
