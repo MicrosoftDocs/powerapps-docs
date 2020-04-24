@@ -34,7 +34,7 @@ The following pre-built components can be used to solve your mixed reality scena
 ## Prerequisites
 
 1. You need a PowerApps license that supports Common Data Service (CDS). If you [identify your current license](/powerapps/maker/signup-for-powerapps#identify-your-current-license) does not support CDS, you can sign up for a [free trial license for 30 days](http://web.powerapps.com/trial). Please note that in some circumstances this step may take 30 to 60 minutes. Please check periodically after requesting a trial license.
-2. If you don’t have one already, you will need to [create an environment with Common Data Service instance installed](/power-platform/admin/create-environment). You will need to have system administrator privileges for this step.
+2. If you don't have one already, you will need to [create an environment with Common Data Service instance installed](/power-platform/admin/create-environment). You will need to have system administrator privileges for this step.
 3. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
 
 
@@ -64,8 +64,8 @@ For each app you create, you need to enable the mixed reality features:
 ## Next steps
 Explore [example mixed reality apps](mixed-reality-example-apps.md) or start installing the components in your apps:
 
-- [View in 3D](mixed-reality-component-view-3d.md)
-- [View in mixed reality](mixed-reality-component-view-ar.md)
-- [Measure in measure reality](mixed-reality-component-measure-distance.md)
-- [View shape in mixed reality](mixed-reality-component-view-shape.md)
+- View 3D models with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
+- View 3D models in the real workld with the **[View in mixed reality](mixed-reality-component-view-ar.md)** component.
+- Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
+- Create and view pre-defined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
 
