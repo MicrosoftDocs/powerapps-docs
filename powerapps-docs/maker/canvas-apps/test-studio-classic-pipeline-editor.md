@@ -41,7 +41,7 @@ Before you begin, you must complete the following steps:
 
 ### Step 1 - Fork the PowerAppsTestAutomation project
 
-A [fork](https://help.github.com/github/getting-started-with-github/fork-a-repo) is a copy of a repository. By forking a repository, you can make changes without affecting the original project.
+A [Fork](https://help.github.com/github/getting-started-with-github/fork-a-repo) is a copy of a repository. By forking a repository, you can make changes without affecting the original project.
 
 1. Sign in to [GitHub](https://github.com/).
 
