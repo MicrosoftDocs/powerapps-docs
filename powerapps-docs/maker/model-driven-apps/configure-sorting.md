@@ -24,22 +24,23 @@ search.app:
 ---
 # Sort records in a model-driven app view
 
-When you create or edit a view you can configure the sort order for either ascending or descending.   
-  
-1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, and then select the entity that you want, such as **Accounts**.   
+When you create or edit a view you can configure the sort order for either ascending or descending.
 
-3.  Select the **Views** tab, and if shown, select **Remove filter**, and then open the view you want, such as **Active Accounts**.
+To change the sort order in the view designer, see [Create a public view in Power Apps](create-edit-views-app-designer.md#create-a-public-view-in-power-apps).
 
-4.  In the view designer, select **Configure Sorting**.  
+## Change the sort order using solution explorer
+
+1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the entity you want, select **Views**, and then open the view you want.
+
+2.  In the view designer, select **Configure Sorting**.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Configure sorting](media/configure-sorting.png)
+    > ![Configure sorting](media/configure-sorting.png "Configure sorting")
   
-5.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
+3.  In the **Configure Sort Order** dialog box, in the **Sort By** list, select the column you want to sort, then select **Ascending Order** or **Descending Order**.  
   
-6.  Select **OK** to close the **Configure Sort Order** dialog box. 
+4.  Select **OK** to close the **Configure Sort Order** dialog box. 
 
     > [!IMPORTANT]
     > Grids in Unified Interface apps take the list of displayed columns from the underlying FetchXML of the view. If the FetchXML that is returned from Common Data Service does not have a column, then that column is not displayed. This is in contrast to the classic web application, where if a column is not present in FetchXML but is in LayoutXML, such a column is automatically added to the list of displayed columns. Unified Interface apps use OData directly with FetchXML to retrieve data from the server.
