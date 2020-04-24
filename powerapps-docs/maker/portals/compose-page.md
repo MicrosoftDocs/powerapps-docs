@@ -301,7 +301,7 @@ Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker
 
     - **Empty list message**: Message to be displayed when there are no records to be displayed.
 
-    - **Number of records per page**: An integer value to specify the number of the records to display on a page.
+    - **Number of records per page**: Enter the number of the records to display on a page.
 
     - **Enable search in entity list**: Allows a user to search records in the list.
 
@@ -378,83 +378,58 @@ To add a Power BI component to a web page:
 
 1. In the properties pane on the right side of the screen, enter the following information:
 
-    1. **Access type**
+    1. **Access type**: Select appropriate option from the drop-down as per your requirement.
 
-        Select appropriate option from the drop-down as per your requirement.
+        ![Power BI Access type](media/powerbi-access-type.png "Power BI Access type")
 
-        1. **Embed for your customers**
+        1. **Embed for your customers**: Allows you to securely share the Power BI report or dashboard to external users without Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI chart into portal.
+            > [!NOTE]
+            > Make sure [Power BI Embedded service is enabled](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service) and respective Power BI workspaces are selected, and shared with the maker or the logged-in user.
 
-            Allows you to securely share the Power BI report or dashboard to external users without Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI chart into portal.
-
-            Make sure [Power BI Embedded service is enabled](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service) and respective Power BI workspaces are selected, and shared with the maker or the logged-in user.
-
-        1. **Embed for your organization**
-
-            Allows you to securely share the Power BI report or dashboard to Azure Active Directory authenticated users. ​
-
-            Make sure you've shared Power BI workspaces with maker and target portal users.
-
-        For more information, read [access types](#power-bi-access-types).
+        1. **Embed for your organization**: Allows you to securely share the Power BI report or dashboard to Azure Active Directory authenticated users. 
+            > [!NOTE]
+            > Make sure you've shared Power BI workspaces with maker and target portal users.
 
         3. **Publish to web**
             Allows you to share Power BI report or dashboard to anyone on the internet.
 
-    1. **Workspace**
+        For more information about access types, go to [access types](#power-bi-access-types).
 
-        Select the Power BI workspace from the list.
+    1. **Workspace**: Select the Power BI workspace from the list.
 
-    1. **Select type**
-        Select Dashboard or Report from the list.
+    1. **Select type**: Select type as *Dashboard* or *Report* from the list.
 
-    1. **Select dashboard / Select report**
+        If you selected the type as **Dashboard**, then **Select dashboard** option appears and you can select any one of the available dashboards from the list. You can then select a **Tile** to display on the web page.
 
-        If you selected the type as **Dashboard**, then **Select dashboard** option appears and you can select any one of the available dashboards from the list.
+        If you selected the type as **Report**, then **Select report** option appears and you can select any one of the available reports from the list. You can then select a **Page** from the report to dosplay on the web page.
 
-        If you selected the type as **Report**, then **Select report** option appears and you can select any one of the available reports from the list.
+    1. **Apply roles** (only available for access type **Embed for your customer**): <br>If you have defined roles in Power BI and assigned them to reports, you must enter appropriate roles in this field. <br>
+        You can enter multiple roles separated by a comma (for example role_1,role_2). For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls) 
 
-    1. **Select tile** and **Select page**
-
-        Select tile option allows user to add all or a specific tile in page.
-
-        Select page option allows user to select specific page as default page when Power BI report load in portal. 
-
-    1. **Apply roles**
-
-        This option is available for reports when access type **Embed for your customer** is selected.
-
-        If you have defined roles in Power BI and assigned them to reports, you must specify the appropriate roles in this field.
-
-        You can specify multiple roles separated by a comma (for example role_1,role_2). For more information on defining roles in Power BI, see [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls)
-
-    1. **Apply filter**
-
-        This option is available for report in **Embed for your customer** and **Embed for your organization** access types. This allows user to load the report with pre-filtered values. User can provide filter condition in the field.
-
+    1. **Apply filter** (only available for access types **Embed for your customer** and **Embed for your organization**): <br>
+        Allows user to load the report with pre-filtered values. User can provide filter condition in the field.
         This field requires filter parameter format without ```?filter=``` prefix. For more information, read [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
-
         For example, ```Table/Field eq 'value'```.
 
-    1. **Embed code URL**
-
-        This option is only available for **Publish to web** access type. To get embed code URL that you can copy and paste, read [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
+    1. **Embed code URL** (only available for access type **Publish to web**): <br> To get embed code URL that you can copy and paste, read [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
 
         ![Embed Code URL](media/embed-code-url.png)
 
 ### Power BI access types
 
+The following highlights *Power BI access types* in brief. For more information, go to [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
+
 - **Embed for your customers**:
     - Shows the list of workspaces shared to logged in user and enabled for [Power BI Embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service).
     - Uses Power BI Embedded service.
+    - If you add Power BI with *Embed for your customers* on a Power Apps portal page that is available **anonymously**, anyone can view the dashboard. To secure such a web page, read [web page access control in Power Apps portal](https://docs.microsoft.com/powerapps/maker/portals/configure/webpage-access-control).
 - **Embed for your organization**:
     - Shows the list of workspaces shared with logged in user.
     - Uses Azure Active Directory authentication.
-- If you add Power BI with **Embed for your customers** on a Power Apps portal page that is available anonymously, anyone can view the dashboard. To secure a web page, read [web page access control in Power Apps portal](https://docs.microsoft.com/powerapps/maker/portals/configure/webpage-access-control).
-
-For more information, read [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
+- **Publish to web**: Anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Do not publish confidential or sensitive information. When in doubt, check your organization's policies before publishing.
 
 ### Other Power BI considerations
 
-- When you use **Publish to web**, anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Do not publish confidential or sensitive information. When in doubt, check your organization's policies before publishing.
 - [Portal Studio](https://docs.microsoft.com/powerapps/maker/portals/portal-designer-anatomy) performance can degrade while working with Power BI workspaces due to the following Power BI workspace configurations:
     - Increased number of workspaces shared with user account used while editing the portal.
     - Increased number of users the Power BI workspace is shared with.
