@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/18/2019
+ms.date: 04/24/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
