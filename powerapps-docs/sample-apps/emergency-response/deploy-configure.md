@@ -332,9 +332,9 @@ Next do the following:
 
 2.  Replace the `APPGUIDHERE` value with the actual app ID of a canvas app.
 
-3.  Save the file as .ps file.
+3.  Save the file as .ps1 file.
 
-4.  Run PowerShell as an administrator and execute the .ps file you just created.
+4.  Run PowerShell as an administrator and execute the .ps1 file you just created.
 
 5.  Repeat steps 2 - 4 for each canvas app.
 
