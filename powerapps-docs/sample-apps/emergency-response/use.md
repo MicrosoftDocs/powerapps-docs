@@ -5,7 +5,7 @@ author: pankajarora-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/15/2020
+ms.date: 04/20/2020
 ms.author: pankar
 ms.reviewer: tapanm
 searchScope:
@@ -279,6 +279,14 @@ options to share a praise, an idea or report an issue with the app.
 ![Switch facility](media/use/switch-facility.png)
 
 Switch facility anytime by selecting the facility name on the top-right side of the screen. After you select the location name, you're taken to the **Hospital Emergency Response app** screen where you can select a different hospital, region, or facility.
+
+## View the mobile app in your language
+
+[!include[cc-lang](includes/cc-lang.md)]
+
+You can view the Emergency Response mobile app in one of the supported languages on your mobile device by setting the default language of your mobile device (Apple or Android) to a supported language. See the help documentation for your respective mobile device on how to change the default language for your device.
+
+If you are using the mobile apps on a browser on your computer, select the default language of your browser to a supported language for the Emergency Response app. More information: [Use Microsoft Edge in another language](https://support.microsoft.com/help/4532129).
 
 ## Issues and feedback
 

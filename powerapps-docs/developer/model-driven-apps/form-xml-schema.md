@@ -19,7 +19,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/form-xml-schema -->
 
-The following is the schema definition for form customizations for Model-driven apps. For more information, see [Customize Entity Forms](customize-entity-forms.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
+The following is the schema definition for form customizations for model-driven apps. For more information, see [Customize Entity Forms](customize-entity-forms.md). [!INCLUDE[schema_download](../../includes/schema-download.md)].  
   
 ## Schema  
   
@@ -1877,6 +1877,6 @@ The following is the schema definition for form customizations for Model-driven 
   
 ### See also  
  [Customize entity forms](customize-entity-forms.md)   
- [Create, Install, and Update a Managed Solution](../common-data-service/create-install-update-managed-solution.md)<br/>
- [Create, Export, or Import an Unmanaged Solution](../common-data-service/create-export-import-unmanaged-solution.md)<br/>
+ [Create, install, and update a managed solution](../common-data-service/create-install-update-managed-solution.md)<br/>
+ [Create, export, or import an Unmanaged solution](../common-data-service/create-export-import-unmanaged-solution.md)<br/>
  [Form XML schema](form-xml-schema.md)

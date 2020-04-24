@@ -1635,6 +1635,11 @@
       "source_path": "powerapps-docs/maker/common-data-service/view-download-developer-resources.md",
       "redirect_url": "https://docs.microsoft.com/powerapps/developer/common-data-service/view-download-developer-resources",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/use-web-services.md",
+      "redirect_url": "https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds",
+      "redirect_document_id": true
     }
   ]
 }

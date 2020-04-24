@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/15/2020
+ms.date: 04/23/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
@@ -25,7 +25,7 @@ The main components of the Hospital Emergency Response solution are:
 - **Web app for Hospital admins**: Hospital admins can use this app to add and manage system data required for the solution to work.
 - **Dashboards for healthcare decision makers**: Use dashboards to quickly view important data and metrics that will help you in efficient decision making.
 
-The Hospital Emergency Response sample solution is available in the following languages: English, French, German, Italian, Japanese, Portuguese - Brazil, and Spanish.
+[!include[cc-lang](includes/cc-lang.md)]
 
 
 ## Demo: Quick overview
@@ -64,5 +64,4 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 
 ### Disclaimer
 
-This is a sample solution and may be used with Microsoft Power Apps and Microsoft Power BI for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical
-requirements of any person.
+This app is a sample and may be used with Microsoft Power Platform for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person. Sample data included in this app are for illustration only and are fictitious. No real association is intended or inferred.

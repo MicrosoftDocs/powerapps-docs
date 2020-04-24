@@ -37,7 +37,7 @@ You can set default values for new records created by users by specifying attrib
   
 - The value can’t be a script.  
   
-  Any attempt to pass an invalid parameter or value will result in an error.  
+- Any attempt to pass an invalid parameter or value will result in an error.  
   
 - For Boolean fields, use either an integer value of `0` or `1`, or a text value of `true` or `false` to set the value.  
   

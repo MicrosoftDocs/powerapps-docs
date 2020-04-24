@@ -1,13 +1,13 @@
 ---
 title: Automate tests with Azure Pipeline using classic editor | Microsoft Docs
 description: Describes how to automate test suites and cases using the classic editor from Azure Pipeline.
-author: tapanm-msft
+author: aengusheaney
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/16/2020
+ms.date: 04/20/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -25,6 +25,9 @@ You can use a public project on GitHub - [Microsoft/PowerAppsTestAutomation](htt
 - Open a browser on the build agent and executing a set of test cases and suites.
 - View the status of the test execution in the Azure DevOps pipeline.
 
+> [!NOTE]
+> [Test Studio](test-studio.md) feature is still experimental and we recommend you use it to write tests for non-production apps. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
+
 ## Prerequisites
 
 Before you begin, you must complete the following steps:
@@ -38,7 +41,7 @@ Before you begin, you must complete the following steps:
 
 ### Step 1 - Fork the PowerAppsTestAutomation project
 
-A [Fork](https://help.github.com/github/getting-started-with-github/fork-a-repo) is a copy of a repository. By forking a repository, you can make changes without effecting the original project.
+A [Fork](https://help.github.com/github/getting-started-with-github/fork-a-repo) is a copy of a repository. By forking a repository, you can make changes without affecting the original project.
 
 1. Sign in to [GitHub](https://github.com/).
 
@@ -240,7 +243,7 @@ from the pipeline in this sequence:
 1. Select the task and update the following areas.
 
     1. **Title**: Run Power Apps Test Automation Tests via
-        \$(BrowserTypeFirefox) copy
+        \$(BrowserTypeFirefox)
 
     1.  **Override test run parameters**
 
@@ -258,7 +261,7 @@ you've added [earlier](#add-tasks-to-the-pipeline).
 
 1. Select the **Variables** tab.
 
-2. Select **Add** and repeat this step to configure the following variables:
+1. Select **Add** and repeat this step to configure the following variables:
 
 | Variable name             | Variable value                                                                                                                 |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------|
