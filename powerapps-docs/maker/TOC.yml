@@ -849,6 +849,12 @@
       href: ./canvas-apps/test-studio.md
     - name: Working with Test Studio
       href: ./canvas-apps/working-with-test-studio.md
+    - name: Automate tests with Azure DevOps Pipelines
+      items:
+      - name: Configure pipeline using classic editor
+        href: ./canvas-apps/test-studio-classic-pipeline-editor.md
+  - name: Debug an app with canvas app Monitor
+    href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes
@@ -1195,8 +1201,12 @@
           href: ./portals/compose-page.md
         - name: Work with templates
           href: ./portals/work-with-templates.md
-        - name: Edit CSS
-          href: ./portals/edit-css.md
+        - name: Work with themes
+          items:
+            - name: Create theme
+              href: ./portals/theme-overview.md
+            - name: Edit CSS
+              href: ./portals/edit-css.md
     - name: Manage existing portals
       href: ./portals/manage-existing-portals.md
     - name: Advanced portal administration
@@ -1253,6 +1263,8 @@
           items:
             - name: Configure portal authentication
               href: ./portals/configure/configure-portal-authentication.md
+            - name: Use simplified authentication configuration (Preview)
+              href: ./portals/configure/use-simplified-authentication-configuration.md
             - name: Set authentication identity
               href: ./portals/configure/set-authentication-identity.md
             - name: Azure AD B2C provider settings for portals
@@ -1271,6 +1283,8 @@
           items:
             - name: About search
               href: ./portals/configure/search.md
+            - name: Configure search for additional entities
+              href: ./portals/configure/search-additional-entities.md
             - name: Improve search by using faceted search
               href: ./portals/configure/improve-portal-search-faceted-search.md
             - name: Search within file attachments
@@ -1641,10 +1655,24 @@
     items:
     - name: Overview
       href: ../sample-apps/emergency-response/overview.md
-    - name: Deploy and configure the app
+    - name: Deploy the app
       href: ../sample-apps/emergency-response/deploy-configure.md
-    - name: Use the app
+    - name: Use the admin app and dashboards
+      href: ../sample-apps/emergency-response/configure-data-reporting.md
+    - name: Use the mobile app
       href: ../sample-apps/emergency-response/use.md
+  - name: Regional Emergency Response
+    items:
+    - name: Overview
+      href: ../sample-apps/regional-emergency-response/overview.md
+    - name: Deploy the solution
+      href: ../sample-apps/regional-emergency-response/deploy.md
+    - name: App and dashboard for regional admin
+      href: ../sample-apps/regional-emergency-response/configure.md
+    - name: Portal for admin and report viewer
+      href: ../sample-apps/regional-emergency-response/portals-admin-reporting.md
+    - name: Portal for healthcare worker
+      href: ../sample-apps/regional-emergency-response/portals-user.md
 - name: Learn from others
   items:
   - name: Webinars

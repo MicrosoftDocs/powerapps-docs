@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 10/28/2019
+ms.date: 03/30/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 68f68d5b-6c71-4b95-bb46-d48c59d9008e
@@ -26,15 +26,46 @@ A quick view control on a model-driven app form displays data from a record that
 > [!div class="mx-imgBorder"] 
 > ![Contact quick view form on the account form](media/quick-view-form-contact.png "Contact quick view form on the account form")  
 
-You can access **Quick view control properties** from the Power Apps site. 
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
+2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
+
+3.  Select a form, which **Type** is **Main**.
+
+4.  In the form designer, select **Add Component**.
+
+5.  In the left navigation pane, select **Quick view**.
+
+6.  In the **Select quick view forms** dialog box, select a **Lookup** field included in the form, and then select a quick view form for the related entities. The related entities shown depend on the **Lookup** field you choose.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Add quick view control](media/select-quick-view-form.png "Add quick view control to main form")
+
+7.  Select **Done** to close the **Select quick View forms** dialog box. The quick view form appears on the form, and the properties of the quick view appear in the Properties pane.
+
+|Property|Description|  
+|--------------|-----------------|  
+|**Label**|**Required**: A label to display for the quick view form.|  
+|**Name**|**Required**: The unique name for the quick view form that is used when referencing it in scripts.|  
+|**Hide label**|Displays the label on the form.| 
+|**Quick view forms**|Lists the quick view forms that you selected for the related entities. 
+|**Select forms**|Select or change the selected quick view forms for the related entities. The related entities shown depend on the **Lookup** field you choose.|  
+|**Components**|Properties to configure for the component. A quick view control component has no properties to configure, and by default is shown whether someone is using a web browser, Dynamics 365 for phones, or Dynamics 365 for tablets.
+
+## Quick view control properties in classic form designer
+
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab. 
 
-3. In the list of forms, open the form of type **Main**. Then on the **Insert** tab, select **Quick View Form** to view quick view control properties.
+3.  In the list of forms, open the form of type **Main**.
 
-    ![quick-view-control](media/quick-view-control.png)
+4.  On the command menu, select **Switch to classic**.
+
+5.  Then on the **Insert** tab, select **Quick View Form** to view quick view control properties.
+
+    > [!div class="mx-imgBorder"] 
+    > ![quick-view-control](media/quick-view-control.png)
   
 |Property|Description|  
 |--------------|-----------------|  

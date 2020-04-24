@@ -1,7 +1,7 @@
 ---
 title: "WorkflowLog Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the WorkflowLog entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the WorkflowLog entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # WorkflowLog Entity Reference
 
@@ -184,7 +185,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_ErrorText"></a> ErrorText
 
-**Added by**: Power Automate Extensions package Solution
+**Added by**: Microsoft Flow Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -218,7 +219,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_IterationCount"></a> IterationCount
 
-**Added by**: Power Automate Extensions package Solution
+**Added by**: Microsoft Flow Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -325,7 +326,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_RepetitionCount"></a> RepetitionCount
 
-**Added by**: Power Automate Extensions package Solution
+**Added by**: Microsoft Flow Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -343,7 +344,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 ### <a name="BKMK_RepetitionId"></a> RepetitionId
 
-**Added by**: Power Automate Extensions package Solution
+**Added by**: Microsoft Flow Extensions core package Solution
 
 |Property|Value|
 |--------|-----|
@@ -863,8 +864,6 @@ Each Many-To-One relationship is defined by a corresponding One-To-Many relation
 - [lk_translationprocess_workflowlogs](#BKMK_lk_translationprocess_workflowlogs)
 - [lk_expiredprocess_workflowlogs](#BKMK_lk_expiredprocess_workflowlogs)
 - [lk_workflowlog_modifiedonbehalfby](#BKMK_lk_workflowlog_modifiedonbehalfby)
-- [lk_workflowlog_flowsession_childworkflow](#BKMK_lk_workflowlog_flowsession_childworkflow)
-- [lk_workflowlog_flowsessions](#BKMK_lk_workflowlog_flowsessions)
 
 
 ### <a name="BKMK_business_unit_workflowlogs"></a> business_unit_workflowlogs
@@ -918,18 +917,6 @@ See expiredprocess Entity [lk_expiredprocess_workflowlogs](expiredprocess.md#BKM
 ### <a name="BKMK_lk_workflowlog_modifiedonbehalfby"></a> lk_workflowlog_modifiedonbehalfby
 
 See systemuser Entity [lk_workflowlog_modifiedonbehalfby](systemuser.md#BKMK_lk_workflowlog_modifiedonbehalfby) One-To-Many relationship.
-
-### <a name="BKMK_lk_workflowlog_flowsession_childworkflow"></a> lk_workflowlog_flowsession_childworkflow
-
-**Added by**: Power Automate Extensions package Solution
-
-See flowsession Entity [lk_workflowlog_flowsession_childworkflow](flowsession.md#BKMK_lk_workflowlog_flowsession_childworkflow) One-To-Many relationship.
-
-### <a name="BKMK_lk_workflowlog_flowsessions"></a> lk_workflowlog_flowsessions
-
-**Added by**: Power Automate Extensions package Solution
-
-See flowsession Entity [lk_workflowlog_flowsessions](flowsession.md#BKMK_lk_workflowlog_flowsessions) One-To-Many relationship.
 
 ### See also
 

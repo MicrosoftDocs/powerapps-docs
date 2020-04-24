@@ -63,6 +63,7 @@ The following is the list of blogs created by Power Apps community.
 - [Create code components](https://debajmecrm.com/2019/04/26/in-depth-end-end-walkthrough-develop-your-custom-controls-using-power-apps-component-framework-and-use-it-on-your-crm-interface/)
 - [Editing the DOM with supported code components](https://www.magnetismsolutions.com/blog/adammurchison/2019/05/29/editing-the-dom-with-supported-dynamics-365-custom-controls)
 - [How to configure Node.js and Typescript into your environment](https://capuanodanilo.com/2019/06/11/how-to-configure-node-js-and-typescript-into-your-environment-to-develop-powerapps-component-frameworks-pcf)
+- [How to simulate desired events using bound properties](https://technomancy.com.au/2020/03/27/how-to-handle-events-and-reset-component-in-pcf/)
 - [Localization of code components](https://dynamicsninja.blog/2020/01/21/pcf-localization)
 - [Power Apps component framework – Frosting on the Cake](https://stevemordue.com/powerapps-component-framework-frosting-on-the-cake/)
 - [Public availability of Power Apps component framework – An important milestone](https://crmindian.com/2019/04/24/public-availability-of-powerapps-component-framework-an-important-milestone-for-powerapps-and-d365/)

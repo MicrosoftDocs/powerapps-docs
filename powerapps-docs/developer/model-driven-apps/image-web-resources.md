@@ -17,7 +17,7 @@ search.app:
 ---
 # Image web resources
 
-Use image web resources to make images available for use in Model-driven apps.  
+Use image web resources to make images available for use in model-driven apps.  
 
 There are 5 types of image web resources: 
 * PNG Format
@@ -27,7 +27,7 @@ There are 5 types of image web resources:
 * Vector Format (SVG)
 
 > [!NOTE]
-> Vector Format (SVG) web resources were added with the Model-driven apps.
+> Vector Format (SVG) web resources were added with the model-driven apps.
 
   
 <a name="BKMK_Capabilities"></a>   
@@ -103,13 +103,13 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
 ```  
   
 > [!NOTE]
->  Using the `$webresource:` directive adds a solution dependency that prevents the referenced image web resources from being deleted as long as they are used by another solution component.  
+> Using the `$webresource:` directive adds a solution dependency that prevents the referenced image web resources from being deleted as long as they are used by another solution component.  
   
 ### See also  
- [Web Resources](web-resources.md)   
- [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
- [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   
- [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
- [Using Data (XML) Web Resources](data-xml-web-resources.md)   
- [Using Silverlight (XAP) Web Resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
- [Using Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)
+ [Web resources](web-resources.md)   
+ [Using Web Page (HTML) web resources](webpage-html-web-resources.md)   
+ [Using Style Sheet (CSS) web resources](css-web-resources.md)   
+ [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using Data (XML) web resources](data-xml-web-resources.md)   
+ [Using Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
+ [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)

@@ -94,7 +94,7 @@ If you add one or more **Image** controls to your app, you can show individual i
 
 **[Tooltip](properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**Transparency** – The degree to which controls behind an image remain visible.
+**Transparency** – The degree to which controls behind an image remain visible. Decimal values range from 0 to 1.  Where 0 is opaque, 0.5 is semi-transparent and 1 is transparent. 
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
 

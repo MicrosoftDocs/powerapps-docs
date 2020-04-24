@@ -38,7 +38,7 @@ The Home page summary section contains the following graphs and metrics.
 
 ## Successful app package installs by tenant
 
-The first graph visualizes the published apps and the tenants that the app’s packages are installed into, and they are displayed in descending order based on the number of package installs.
+The first graph visualizes the published apps and the tenants that the app's packages are installed into, and they are displayed in descending order based on the number of package installs.
 
 When hovering over a tenant tile in the graph, the following information is shown:
 
@@ -73,5 +73,7 @@ The App names and icons are from AppSource.
 ### See also
 
 [Introduction to ISV Studio for the Power Platform](isv-app-management.md)  
-[App page](isv-app-management-apppage.md)  
-[Tenant page](isv-app-management-tenantpage.md)
+[App page](isv-app-management-apppage.md)<br/>  
+[Tenant page](isv-app-management-tenantpage.md)<br/> 
+[AppSource checker](isv-app-management-appsource-checker.md)<br/> 
+[Connector Certification](isv-app-management-certification.md)

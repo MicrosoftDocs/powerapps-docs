@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 03/12/2020
+ms.date: 04/07/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -30,27 +30,28 @@ Use the Power Apps mobile app to run model-driven apps on your mobile device. Fo
 
 It's easy to get around in the Power Apps mobile app. The following illustration shows the primary navigation elements on the Home screen. 
 
-![Navigation controls, expanded view](media/pa_mobile_main_nav_android.png "Navigation controls, expanded view")
+![Navigation controls, expanded view](media/home_screen_iphone.png "Navigation controls, expanded view")
 
 Legend:
 
 1. **Site map**: Open the menu and move between apps, get to your favorite and recently used records, access settings, and more.
 2. **Search**: Search for app records in Common Data Service.
 3. **Quick Create**: Create a new record and quickly enter almost any type of information into the system.
-4. **Global commands**: Access global commands customized by your admin.
-5. **More**: Access more commands for the records that you're working with, like sort, search, delete, refresh, and more.<!--There really are "more"? Or can you end the list at "refresh"?-->
-6. **Sort records**: Sort and view records alphabetically.
+4. **Relationship Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
 
 ## Site map 
 
 From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to access entities, favorite or most-used records, other apps, and settings.
 
+ 
    > [!div class="mx-imgBorder"]
-   > ![Site map screen](media/pa_mobile_site_map.gif "Site map screen")
+   > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrates how to get to the site map screen")
+   
+ *Refresh the page to restart the GIF action*.
 
 The following illustration shows the primary navigation elements on the site map screen. 
 
-![Site map screen](media/pa_mobile_sitemap_android.png "Site map screen")
+![Site map screen](media/site_map_iphone.png "Site map screen")
 
 Legend
 
@@ -74,8 +75,11 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 3. To view the newly pinned records, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon"), and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
+
    > [!div class="mx-imgBorder"]
-   > ![Pin a record to favorites](media/pin_favs.gif "Pin a record to favorites")
+   > ![Pin a record to favorites](media/pin_favs.gif "This image demonstrates how to pin favorite records")
+   
+*Refresh the page to restart the GIF action*.
 
 ### Unpin a record
 
@@ -83,15 +87,21 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 2. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
 
+
    > [!div class="mx-imgBorder"]
-   > ![Unpin a record](media/unpin_favs.gif "Unpin a record")
+   > ![Unpin a record](media/unpin_favs.gif "This image demonstrates how to unpin a record")
+   
+*Refresh the page to restart the GIF action*.
 
 ## Change views
 
 - From the Home screen, select the down arrow ![Change view icon](media/mobile_view_selector_icon.png "Change view icon") next to the current view, and then select a new view.
 
+
    > [!div class="mx-imgBorder"]
-   > ![Change views](media/pa_mobile_change_view.gif "Change views")
+   > ![Change views](media/change_views_iphone.gif "This image demonstrates how to select a different view")
+
+*Refresh the page to restart the GIF action*.
 
 ## Add a record quickly
 
@@ -100,22 +110,28 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 3. After the record is created, you can view the new record. 
 
    > [!div class="mx-imgBorder"]
-   > ![Create a record](media/pamobile_add_record.gif "Create a record")
+   > ![Create a record](media/pamobile_add_record.gif "This image demonstrates how create a new record")
+
+*Refresh the page to restart the GIF action*.
 
 -  To save and open the record that you created, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon"), and then select **Save and Open**.
 
 - To save and create another record, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commands icon"), and then select **Save and Create new**.
 
    > [!div class="mx-imgBorder"]
-   > ![Create a record](media/pa_mobile_save_create_new.gif "Create a record")
+   > ![Create a record](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a record and open it or save and create a new record")
 
-## View commands for a record
+*Refresh the page to restart the GIF action*.
+
+## View commands for a record (Android)
 
 1. From the Home screen, open a record.
 2. On the open record, select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
 
    > [!div class="mx-imgBorder"]
-   > ![Commands on a record](media/pa_mobile_view_record_commands.gif "Commands on a record")
+   > ![Commands on a record](media/pa_mobile_view_record_commands.gif "This image demonstrates how to access more commands on a record")
+
+*Refresh the page to restart the GIF action*.
 
 ## Edit a record
 
@@ -123,7 +139,9 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 2. When you're done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
    > [!div class="mx-imgBorder"]
-   > ![Edit a record](media/pa_mobile_edit_record.gif "Edit a record")
+   > ![Edit a record](media/save_on_iphone.gif "This image demonstrates how to edit and then save a record")
+
+*Refresh the page to restart the GIF action*.
 
 ## Go back to the Home screen
 
@@ -131,7 +149,9 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 - At any point, press and hold **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home screen. 
 
    > [!div class="mx-imgBorder"]
-   > ![Go back to the Home screen](media/go_back_home.gif "Go back to the Home screen")
+   > ![Go back to the Home screen](media/go_back_home.gif "This image demonstrates how to go back to the home screen by pressing and holding the back icon")
+
+*Refresh the page to restart the GIF action*.
 
 ## Sign out
 

@@ -1,7 +1,7 @@
 ---
 title: "RibbonMetadataToProcess Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the RibbonMetadataToProcess entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the RibbonMetadataToProcess entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # RibbonMetadataToProcess Entity Reference
 
@@ -52,6 +53,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [RetryCount](#BKMK_RetryCount)
 - [RibbonMetadataRowId](#BKMK_RibbonMetadataRowId)
 - [SolutionId](#BKMK_SolutionId)
+- [SolutionName](#BKMK_SolutionName)
 - [Status](#BKMK_Status)
 
 
@@ -149,6 +151,23 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |LogicalName|solutionid|
 |RequiredLevel|SystemRequired|
 |Type|Uniqueidentifier|
+
+
+### <a name="BKMK_SolutionName"></a> SolutionName
+
+|Property|Value|
+|--------|-----|
+|Description|Solution Name of the ribbon entity|
+|DisplayName|Solution Name of the ribbon entity.|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|solutionname|
+|MaxLength|256|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_Status"></a> Status

@@ -1,7 +1,7 @@
 ---
 title: "SLAKPIInstance Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the SLAKPIInstance entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the SLAKPIInstance entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # SLAKPIInstance Entity Reference
 
@@ -56,24 +57,49 @@ Service level agreement (SLA) key performance indicator (KPI) instance that is t
 
 These attributes return true for either **IsValidForCreate** or **IsValidForUpdate** (usually both). Listed by **SchemaName**.
 
+- [ApplicableFromValue](#BKMK_ApplicableFromValue)
 - [ComputedFailureTime](#BKMK_ComputedFailureTime)
 - [ComputedWarningTime](#BKMK_ComputedWarningTime)
 - [Description](#BKMK_Description)
+- [ElapsedTime](#BKMK_ElapsedTime)
 - [FailureTime](#BKMK_FailureTime)
+- [LastResumeTime](#BKMK_LastResumeTime)
 - [Name](#BKMK_Name)
 - [OwnerId](#BKMK_OwnerId)
 - [OwnerIdType](#BKMK_OwnerIdType)
 - [OwningBusinessUnit](#BKMK_OwningBusinessUnit)
 - [OwningTeam](#BKMK_OwningTeam)
 - [OwningUser](#BKMK_OwningUser)
+- [PausedOn](#BKMK_PausedOn)
 - [Regarding](#BKMK_Regarding)
+- [RegardingEntityID](#BKMK_RegardingEntityID)
 - [RegardingObjectTypeCode](#BKMK_RegardingObjectTypeCode)
 - [SLAKPIInstanceId](#BKMK_SLAKPIInstanceId)
 - [Status](#BKMK_Status)
 - [SucceededOn](#BKMK_SucceededOn)
+- [SuccessCheckedAt](#BKMK_SuccessCheckedAt)
+- [TerminalStateReached](#BKMK_TerminalStateReached)
+- [TerminalStateTime](#BKMK_TerminalStateTime)
 - [TransactionCurrencyId](#BKMK_TransactionCurrencyId)
 - [WarningTime](#BKMK_WarningTime)
 - [WarningTimeReached](#BKMK_WarningTimeReached)
+
+
+### <a name="BKMK_ApplicableFromValue"></a> ApplicableFromValue
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description||
+|DisplayName|Applicable From Value|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|applicablefromvalue|
+|RequiredLevel|None|
+|Type|DateTime|
 
 
 ### <a name="BKMK_ComputedFailureTime"></a> ComputedFailureTime
@@ -122,6 +148,24 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|String|
 
 
+### <a name="BKMK_ElapsedTime"></a> ElapsedTime
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Elapsed Time|
+|Format|None|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|elapsedtime|
+|MaxValue|2147483647|
+|MinValue|-2147483648|
+|RequiredLevel|None|
+|Type|Integer|
+
+
 ### <a name="BKMK_FailureTime"></a> FailureTime
 
 |Property|Value|
@@ -133,6 +177,23 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|failuretime|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_LastResumeTime"></a> LastResumeTime
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description||
+|DisplayName|Last Resume Time|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|lastresumetime|
 |RequiredLevel|None|
 |Type|DateTime|
 
@@ -222,6 +283,23 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |Type|Lookup|
 
 
+### <a name="BKMK_PausedOn"></a> PausedOn
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description||
+|DisplayName|Paused On|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|pausedon|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
 ### <a name="BKMK_Regarding"></a> Regarding
 
 |Property|Value|
@@ -234,6 +312,25 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Targets|account,activitypointer,appointment,contact,email,fax,letter,phonecall,socialactivity,task|
 |Type|Lookup|
+
+
+### <a name="BKMK_RegardingEntityID"></a> RegardingEntityID
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Regarding ID|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|regardingentityid|
+|MaxLength|100|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_RegardingObjectTypeCode"></a> RegardingObjectTypeCode
@@ -299,6 +396,65 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|succeededon|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_SuccessCheckedAt"></a> SuccessCheckedAt
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|TimeZoneIndependent|
+|Description||
+|DisplayName|SuccessCheckedAt|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|successcheckedat|
+|RequiredLevel|None|
+|Type|DateTime|
+
+
+### <a name="BKMK_TerminalStateReached"></a> TerminalStateReached
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|Description||
+|DisplayName|Terminal State Reached|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|terminalstatereached|
+|RequiredLevel|None|
+|Type|Boolean|
+
+#### TerminalStateReached Options
+
+|Value|Label|
+|-----|-----|
+|1|Yes|
+|0|No|
+
+**DefaultValue**: False
+
+
+
+### <a name="BKMK_TerminalStateTime"></a> TerminalStateTime
+
+**Added by**: Service Level Agreement (SLA) Solution
+
+|Property|Value|
+|--------|-----|
+|DateTimeBehavior|UserLocal|
+|Description||
+|DisplayName|Terminal State Time|
+|Format|DateAndTime|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|terminalstatetime|
 |RequiredLevel|None|
 |Type|DateTime|
 
