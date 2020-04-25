@@ -119,7 +119,7 @@ After the portal is provisioned, it will appear in your **Apps** list in Power A
 
 After your portal is provisioned, follow these steps to install the package that will configure the portal and install the admin app (model-driven app).
 
-1.  Navigate to the location where you extracted the deployment file (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
+1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
 2.  On the next screen, select **Continue**.
 
@@ -186,7 +186,7 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
 1.  Run Power BI Desktop, and sign in using your account.
 
-2.  Navigate to the location where you extracted the deployment package (.zip). Under the Power BI Template folder, you will find the **Regional Emergency Response App.pbit**.
+2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the **Regional Emergency Response App.pbit**.
 
 3.  Open the **Regional Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following value: **CDS_base_solution_URL**. Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
 
