@@ -32,11 +32,11 @@ The Regional Emergency Response solution is also available for US Government org
 
 The commercial version of the service URL is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
 
-|Commercial version URL  |US Government version URL  |
-|------------------------|---------------------------|
-|<https://make.powerapps.com>     |  <https://make.gov.powerapps.us> (GCC)</br><https://make.high.powerapps.us> (GCC High)       |
-|<https://admin.powerplatform.microsoft.com>     |   <https://gcc.admin.powerplatform.microsoft.us> (GCC)</br><https://high.admin.powerplatform.microsoft.us> (GCC High)      |
-|<https://app.powerbi.com/>       |<https://app.powerbigov.us> (GCC)</br><https://app.high.powerbigov.us> (GCC High)         |
+| **Commercial version URL**                | **US Government version URL**  |
+|-------------------------------------------|--------------------------------|
+| [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us (GCC)](https://make.gov.powerapps.us) <br/><br/>[https://make.high.powerapps.us (GCC High)](https://make.high.powerapps.us)                |
+| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us (GCC)](https://gcc.admin.powerplatform.microsoft.us)<br/><br/>[https://high.admin.powerplatform.microsoft.us (GCC High)](https://high.admin.powerplatform.microsoft.us) |
+| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us (GCC)](https://app.powerbigov.us)<br/><br/>[https://app.high.powerbigov.us (GCC High)](https://app.high.powerbigov.us)                  |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 
