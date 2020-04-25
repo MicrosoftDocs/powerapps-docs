@@ -39,7 +39,7 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 
 |Task | Target audience|See|
 |--|--|--|
-|Deploy the sample solution and set up users and security|Regional organization IT admin|[Deploy the Regional Hospital Emergency Response solution](deploy.md)|
+|Download and deploy the sample solution and set up users and security|Regional organization IT admin|[Deploy the Regional Emergency Response solution](deploy.md)|
 |Use the admin app to configure master data, create/manage portal users, and view dashboard|Regional organization Business admin|[Use the admin app and dashboard](configure.md)|
 |Use the portal to add/manage portals users for their hospitals, set up and manage master data for their hospitals, and view dashboard for insights and metrics.|Parent organization Business admin|[Administer the Regional Emergency Response portal](portals-admin-reporting.md)|
 |Use the portal to quickly view and add data for bed capacity, staffing, equipment, supplies, and COVID-19 patients.|Healthcare workers|[Use the Regional Emergency Response portal](portals-user.md)|
