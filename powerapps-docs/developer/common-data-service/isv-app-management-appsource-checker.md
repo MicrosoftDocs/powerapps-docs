@@ -1,6 +1,6 @@
 ---
 title: Introduction to the AppSource checker | Microsoft Docs
-description: Learn how to use app source checker.
+description: Learn how to use AppSource checker
 services: ''
 suite: powerapps
 documentationcenter: na
@@ -25,39 +25,41 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-AppSource checker allows an ISV to check the certification criteria of their app prior to [AppSource](https://appsource.microsoft.com/) submission. The checker will let you know if your solution file has errors that need to be corrected or if AppSource certification criteria have not been met. 
+You can use the AppSource checker to verify whether your app has met certification criteria before you submit it to [AppSource](https://appsource.microsoft.com/). The checker lets you know whether your solution file has errors that need to be corrected and verifies whether AppSource certification criteria have been met. 
 
-In ISV Studio, an ISV can either upload a full [package](/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer) or solution(s) and be notified of any issues that need to be remediated. To do that:
+In ISV Studio, you can upload either a full [package](/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer) or solution(s). You'll be notified whether any issues need to be remediated.
 
-1. In ISV Studio, select **AppSource checker** tab in the left and then select **Validate your app**.
+**To run AppSource checker**
+
+1. In ISV Studio, select **AppSource checker** in the leftmost pane, and then select **Validate your app**.
 
     > [!div class="mx-imgBorder"]
-    > ![AppSource checker](media/appsource-checker.png)
+    > ![AppSource checker](media/appsource-checker.png "AppSource checker")
 
-2. Click on **Browse** to upload a solution file from your local machine and select **Run Check** to validate.
+2. Select **Browse** to upload a solution file from your local machine, and then select **Run Check**.
    
    > [!div class="mx-imgBorder"]
-   > ![AppSource checker](media/appsource-browse-solution-files.png)
+   > ![Run check command](media/appsource-browse-solution-files.png "Run check command")
  
    > [!NOTE]
-   > If a user has previously uploaded a solution for validation then you will see a history of submissions instead of the screenshot above.
+   > If you've previously uploaded a solution for validation, you'll see a history of submissions instead of the screenshot above.
 
-3. Once the solution checker completes validating, a summary of results will be displayed along with the number of issues present (if any). Double-click on the solution file to see the issues in detail.
+3. After the validation check is complete, a summary of results is displayed with the number of issues found (if any). Double-click to select the solution file to see the issues in detail.
 
    > [!div class="mx-imgBorder"]
-   > ![AppSource checker](media/appsource-results-page.png)
+   > ![Summary of AppSource checker results](media/appsource-results-page.png "Summary of AppSource checker results")
 
-4. If the submission has no errors, you will see the following message:
+4. If the submission has no errors, you'll see the following message:
  
    > [!div class="mx-imgBorder"]
-   > ![AppSource checker](media/appsource-no-error-page.png)
+   > ![AppSource checker success message](media/appsource-no-error-page.png "AppSource checker success message")
    
-5. An ISV can download the validation report for their app and include it with their AppSource submission. 
+Now you can download the validation report for your app and include it with your AppSource submission. 
 
-## See Also
+### See also
 
 [Home page](isv-app-management-homepage.md)<br/>
 [App page](isv-app-management-apppage.md)<br/>
 [Tenant page](isv-app-management-tenantpage.md)<br/>
-[Connector Certification](isv-app-management-certification.md)
+[Connector certification](isv-app-management-certification.md)
 

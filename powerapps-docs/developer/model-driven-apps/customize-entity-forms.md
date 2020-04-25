@@ -93,7 +93,17 @@ To open the main form in a dialog using client API, you need to invoke the call 
 In this example, the dialog opens a new account form for creating a new record. The dialog pops up in the center using up to 50% of the available window as a modal on top of the form it was invoked or called from.
 
 ```JavaScript
-Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 1, width: {value: 50, unit:"%"}});
+var pageInput = {
+    pageType: "entityrecord",
+    entityName: "account",
+    formType: 2,
+};
+var navigationOptions = {
+    target: 2,
+    width: {value: 50, unit:"%"},
+    position: 1
+};
+Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
 > ![Open a new record](media/open-new-record-mfd.png "Open a new record")
@@ -103,7 +113,18 @@ Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formTy
 In this example, the dialog opens an existing account record using the account entity id value over the contact form. Replace the entity id with any record id value you want to open the record in the dialog.
 
 ```JavaScript
-Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2, entityId:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"}, {target: 2, position: 1, width: {value: 80, unit:"%"}});
+var pageInput = {
+    pageType: "entityrecord",
+    entityName: "account",
+    formType: 2,
+    entityId: "5a57f2c3-5672-ea11-a812-000d3a339706" //replace with actual ID
+};
+var navigationOptions = {
+    target: 2,
+    width: {value: 80, unit:"%"},
+    position: 1
+};
+Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
 > ![Open an existing record](media/open-existing-record-mfd.png "Open an existing record")
@@ -113,7 +134,17 @@ Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formTy
 In this example, the dialog opens a new record in the right corner of the window. This can be achieved by using the pixel options.
 
 ```JavaScript
-Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2}, {target: 2, position: 2, width: {value: 500, unit:"px"}});
+var pageInput = {
+    pageType: "entityrecord",
+    entityName: "account",
+    formType: 2,
+};
+var navigationOptions = {
+    target: 2,
+    width: {value: 500, unit:"px"},
+    position: 2
+};
+Xrm.Navigation.navigateTo(pageInput, navigationOptions);
 ```
 > [!div class="mx-imgBorder"]
 > ![Open an existing record on side pane](media/open-record-side-pane-mfd.png "Open an existing record on side pane")
@@ -123,13 +154,26 @@ Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formTy
 This example shows how a main form dialog is invoked with a callback method after saving a record and closing the dialog.
 
 ```Javascript
-Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formType:2},{target: 2, position: 2, width: {value: 80, unit:"%"}}).then(
-    function (retVal) {
-        console.log(retVal.savedEntityReference[0].id + ", " + retVal.savedEntityReference[0].name)
+var pageInput = {
+    pageType: "entityrecord",
+    entityName: "account",
+    formType: 2
+};
+var navigationOptions = {
+    target: 2,
+    width: {value: 80, unit:"%"},
+    position: 2  
+};
+Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
+    function success(result) {
+            console.log("Record created with ID: " + result.savedEntityReference[0].id + 
+            " Name: " + result.savedEntityReference[0].name)
+            // Handle dialog closed
     },
-    function (error) {
-        console.log(error);
-    });
+    function error() {
+            // Handle errors
+    }
+);
 ```
 
 ### See also  
@@ -138,4 +182,3 @@ Xrm.Navigation.navigateTo({pageType:"entityrecord", entityName:"account", formTy
  [SystemForm Entity](../common-data-service/reference/entities/systemform.md)  
  [Form XML Schema](form-xml-schema.md)<br/>
  [Xrm.Navigation.navigateTo](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/xrm-navigation/navigateto)
- 

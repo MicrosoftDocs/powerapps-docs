@@ -1,6 +1,6 @@
 ---
 title: "Customize commands and the ribbon (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
-description: "Common Data Service displays commands in different ways depending on the entity and the client. In most places in the web application you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
+description: "Common Data Service displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a command bar instead of a ribbon. Dynamics 365 for tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
 ms.date: 03/27/2020
 ms.service: powerapps
@@ -19,20 +19,22 @@ search.app:
 
 # Customize commands and the ribbon
 
-Common Data Service displays commands in different ways depending on the entity and the client. In most places in the web application you will see a *command bar* instead of a ribbon. Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
+Common Data Service displays commands in different ways depending on the entity and the client. In most places in the web application, you will see a *command bar* instead of a ribbon. 
+
+Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available using a command bar that is optimized for touch.  
   
- The command bar provides better performance. The ribbon is still displayed in the web application for certain entity forms and it is still used for list views in Dynamics 365 for Outlook.  
+The command bar provides better performance. The ribbon is still displayed in the web application for certain entity forms and it is still used for list views in Dynamics 365 for Outlook.  
   
- Both the command bar and the ribbon use the same underlying XML data to define what commands to display, when the commands are enabled, and what the commands do.  
+Both the command bar and the ribbon use the same underlying XML data to define what commands to display, when the commands are enabled, and what the commands do.  
   
- The topics in this section introduce you to key concepts that you must understand, and common tasks you perform when you customize the command bar or the ribbon.  
+The articles in this section introduce you to key concepts that you must understand, and common tasks you perform when you customize the command bar or the ribbon.  
   
 > [!NOTE]
 >  Because the underlying XML schema was designed to display commands as ribbons, the term *ribbon* will continue to be used in the documentation.  
   
 ## Troubleshoot ribbon issues
 
-If you are experiencing an issue with a ribbon command bar button, use this troubleshooting guide to find and solve the problem: <https://support.microsoft.com/help/4552163>
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
 
 
 ## Community tool
@@ -48,4 +50,4 @@ The SDK describes the process of editing the ribbon by editing the customization
  [Ribbon Types Schema](ribbon-types-schema.md)  
  [Ribbon WSS Schema](ribbon-wss-schema.md)<br/> 
  [Sample: Export Ribbon Definitions](sample-export-ribbon-definitions.md)<br/> 
- [Apply business logic using client scripting in Model-driven apps](client-scripting.md)
+ [Apply business logic using client scripting in model-driven apps](client-scripting.md)
