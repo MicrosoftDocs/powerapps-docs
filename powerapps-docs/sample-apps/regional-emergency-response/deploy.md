@@ -179,8 +179,8 @@ This section provides information on how you can use the **Regional Emergency Re
 
     > [!NOTE]
     > If you have installed Power BI Desktop by downloading directly from the Download Center page as an executable in the past, remove it and use the one from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available.
-
-If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
+    >
+    > If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
 
 #### The process
 
