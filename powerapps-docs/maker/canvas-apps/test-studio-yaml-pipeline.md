@@ -37,11 +37,11 @@ Before you begin, you must complete the following steps:
     > [!NOTE]
     > Public forks can’t be made private. If you want to create a private repo, please [duplicate the repository](https://help.GitHub.com/GitHub/creating-cloning-and-archiving-repositories/duplicating-a-repository).
 
-- Create a new [*Test URLs .json file*](#step-2---create-test-url-json-file) in the repo with the App Test URLs you want to run from the pipeline.
+- Create a new [Test URLs .json file](#step-2---create-test-url-json-file) in the repo with the App Test URLs you want to run from the pipeline.
 
-- Create a new [*Pipelines YAML file*](#step-3---create-pipeline-yaml-file) in your repo. 
+- Create a new [Pipelines YAML file](#step-3---create-pipeline-yaml-file) in your repo. 
 
-- Create a [*GitHub service connection*](#step-4---create-GitHub-service-connection) to your repo. 
+- Create a [GitHub service connection](#step-4---create-github-service-connection) to your repo.
 
 ### Step 1 - Fork the PowerAppsTestAutomation project
 
@@ -153,15 +153,15 @@ You can find a sample file ```Samples/azure-pipelines.yml``` in the repo you cre
 
 1. Update **repositories name** to your repo. 
 
-1. Update **endpoint** to the name of the [GitHub service connection](#step-4---create-GitHub-service-connection) you created earlier.
+1. Update **endpoint** to the name of the [GitHub service connection](#step-4---create-github-service-connection) you created earlier.
     
     ![YAML endpoint](media/test-studio-yaml-pipeline/update-yaml-endpoint.png "YAML endpoint")
 
-1. Update the **TestAutomationURLs** file name. This is the [*Test URLs .json file*](#step-2---create-test-url-json-file) file name you created earlier.
+1. Update the **TestAutomationURLs** file name. This is the [Test URLs .json file](#step-2---create-test-url-json-file) file name you created earlier.
 
 1. Update the **LocalProjectName** value to your repo name, if you changed it.
     
-1. Update the **TestAutomationURLFilePath** to the location of the [*Test URLs .json file*](#step-2---create-test-url-json-file) file name in your repo:
+1. Update the **TestAutomationURLFilePath** to the location of the [Test URLs .json file](#step-2---create-test-url-json-file) file name in your repo:
     
     ![Test parameters](media/test-studio-yaml-pipeline/update-yaml-test-file.png "Test parameters")
 
