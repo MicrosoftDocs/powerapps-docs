@@ -91,7 +91,8 @@ The new calendar view allows you to create and delete records from the calendar.
     Depending on the entity on which the calendar control was added, an appropriate **New** form is opened. For example, if you're viewing leads, a form to create a new lead is opened. If you're viewing opportunities, a form to create a new opportunity is opened.
 
     > [!NOTE]
-    > - You can only create an appointment when creating a record from Activities.
+    > - When you add the new calendar control on the Activity entity, an appointment is created when you create a record from the calendar.
+    > - When you add the new calendar control on an entity other that Activity, the corresponding entity record is created when you create a record from the calendar.
     > - You can also create a new record by selecting and dragging across time slots in **Day** or **Week** view.
 
 2.  Enter the detail, and then save the record. 
