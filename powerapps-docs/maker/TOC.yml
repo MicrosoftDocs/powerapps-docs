@@ -1676,9 +1676,7 @@
     - name: Portal for healthcare worker
       href: ../sample-apps/regional-emergency-response/portals-user.md
 - name: Learn from others
-  items:
-  - name: Webinars
-    href: ./canvas-apps/webinars-listing.md
+  items:  
   - name: Blog
     href: https://powerapps.microsoft.com/blog/
   - name: Forums

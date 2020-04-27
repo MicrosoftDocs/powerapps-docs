@@ -441,7 +441,7 @@ Detailed information about using the template app from the AppSource is availabl
 
 ### Option B: Publish using the .pbit file in the deployment package
 
-This section provides information on how you can use the **Emergency Response App.pbit** available in the deployment package to publish the dashboard.
+This section provides information on how you can use the **Emergency Response App.pbit** file available in the deployment package to publish the dashboard.
 
 #### Prerequisites
 
