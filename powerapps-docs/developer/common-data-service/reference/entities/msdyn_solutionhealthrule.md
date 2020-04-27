@@ -1,7 +1,7 @@
 ---
 title: "msdyn_solutionhealthrule Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the msdyn_solutionhealthrule entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the msdyn_solutionhealthrule entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # msdyn_solutionhealthrule Entity Reference
 
@@ -37,6 +38,7 @@ search.app:
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules(*msdyn_solutionhealthruleid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/msdyn_solutionhealthrules(*msdyn_solutionhealthruleid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+
 
 ## Entity Properties
 
@@ -65,6 +67,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [msdyn_name](#BKMK_msdyn_name)
 - [msdyn_OwningSolutionId](#BKMK_msdyn_OwningSolutionId)
 - [msdyn_ResolutionAction](#BKMK_msdyn_ResolutionAction)
+- [msdyn_resolutionmessage](#BKMK_msdyn_resolutionmessage)
 - [msdyn_solutionhealthruleId](#BKMK_msdyn_solutionhealthruleId)
 - [msdyn_solutionhealthrulesetId](#BKMK_msdyn_solutionhealthrulesetId)
 - [msdyn_uniquename](#BKMK_msdyn_uniquename)
@@ -155,6 +158,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |RequiredLevel|None|
 |Targets|workflow|
 |Type|Lookup|
+
+
+### <a name="BKMK_msdyn_resolutionmessage"></a> msdyn_resolutionmessage
+
+|Property|Value|
+|--------|-----|
+|Description|This message will be visible to end use when he/she tried to resolve rule failure.|
+|DisplayName|Resolution Message|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|LogicalName|msdyn_resolutionmessage|
+|MaxLength|2000|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_msdyn_solutionhealthruleId"></a> msdyn_solutionhealthruleId

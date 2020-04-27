@@ -40,7 +40,7 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
 [!INCLUDE[ribbon_element_BoolParameter](../../includes/ribbon-element-boolparameter.md)]
   
  `<CrmParameter>`  
- [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] More information: [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo -->
+ [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] More information: [Pass data from a page as a parameter to Ribbon Actions](pass-data-page-parameter-ribbon-actions.md) 
   
  `<DecimalParameter>`  
  [!INCLUDE[ribbon_element_DecimalParameter](../../includes/ribbon-element-decimalparameter.md)]
@@ -51,13 +51,14 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
  `<StringParameter>`  
  [!INCLUDE[ribbon_element_StringParameter](../../includes/ribbon-element-stringparameter.md)]
   
- When parameters are passed to a `<Url>` element they are passed as a query string. Therefore, they must include a name value to represent the ”key” in the query string key/value pair.  
+ When parameters are passed to a `<Url>` element they are passed as a query string. Therefore, they must include a name value to represent the "key" in the query string key/value pair.  
   
  Parameters passed to a `<JavaScriptFunction>` do not require a name but they must be included in the order expected by the function and be of the correct data type.  
   
 ## See also  
 
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define Ribbon Display Rules](define-ribbon-display-rules.md)   
- [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  
-<!-- TODO need to update the relevant link from the powerapps repo-->
+ [Define Ribbon display rules](define-ribbon-display-rules.md)   
+ [Pass data from a page as a parameter to Ribbon actions](pass-data-page-parameter-ribbon-actions.md)  
+
+

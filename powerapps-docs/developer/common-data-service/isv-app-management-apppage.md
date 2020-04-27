@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-After the user selects an app, the user is navigated to the app’s detail page which provides a view to analyze the install history across tenants for that particular app. The app description is from [AppSource](https://appsource.microsoft.com/).
+After the user selects an app, the user is navigated to the app's detail page which provides a view to analyze the install history across tenants for that particular app. The app description is from [AppSource](https://appsource.microsoft.com/).
 
 ![App detail page](media/isv-portal-apppage-appname.png)
 
@@ -82,5 +82,7 @@ When hovering over any item of the graph, the following information is shown:
 ### See also
 
 [Introduction to ISV Studio for the Power Platform](isv-app-management.md)  
-[Home page](isv-app-management-homepage.md)  
-[Tenant page](isv-app-management-tenantpage.md)
+[Home page](isv-app-management-homepage.md)<br/>
+[Tenant page](isv-app-management-tenantpage.md)<br/>
+[AppSource checker](isv-app-management-appsource-checker.md)<br/>
+[Connector Certification](isv-app-management-certification.md)

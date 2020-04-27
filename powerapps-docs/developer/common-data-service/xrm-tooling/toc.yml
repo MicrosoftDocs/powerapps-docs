@@ -28,3 +28,5 @@
     href: sample-simplified-connection-quick-start.md
   - name: 'Sample: Quick start for XRM Tooling API'
     href: sample-quick-start-xrm-tooling-api.md
+  - name: 'Sample: Task Parallel Library with CrmServiceClient'
+    href: sample-tpl-crmserviceclient.md

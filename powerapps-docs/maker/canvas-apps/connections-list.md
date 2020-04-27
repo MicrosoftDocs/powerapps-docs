@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/19/2020
+ms.date: 04/23/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -56,7 +56,7 @@ For more information about how to customize your formula for custom updates, see
 
 ## Popular connectors
 
-This table has links to more information about our most popular connectors. For a complete list of connectors, see [All connectors](https://docs.microsoft.com/connectors/).
+This table has links to more information about our most popular connectors. For a complete list of connectors, see [All connectors](https://docs.microsoft.com/connectors/connector-reference/).
 
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | --- | --- | --- | --- | --- |
@@ -92,7 +92,7 @@ This type of connection is also secure.  For example Twitter uses this type of a
 
 ### SQL User name and password authentication
 
-This is type of connection is not very secure because it does not rely on end-user authentication.  SQL Server also allows for this type of authentication.  In SQL Server this type of authentication is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users do not need to supply a unique user name and password.  They are using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users cannot see the user name of password, but the connection will be available to them.  There are certainly valid scenarios for this type of connection.  For instance if you have a read-only database that is available to everyone in the company, this type of connection may be valid. 
+This type of connection is not very secure because it does not rely on end-user authentication.  SQL Server also allows for this type of authentication.  In SQL Server this type of authentication is called **SQL Server Authentication**.  Many other database data sources provide a similar capability.  When you publish your application, your users do not need to supply a unique user name and password.  They are using the user name and password you supply when you author the application.  The connection authentication to the data source is **Implicitly Shared** with your users.  Once the application is published, the connection is also published and available to your users.  Your end users can also create applications using any connection using SQL Server authentication that is shared with them.  Your users cannot see the user name or password, but the connection will be available to them.  There are certainly valid scenarios for this type of connection.  For instance if you have a read-only database that is available to everyone in the company, this type of connection may be valid. 
 
 ### Windows Authentication
 

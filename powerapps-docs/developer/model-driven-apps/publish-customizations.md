@@ -46,7 +46,7 @@ Publishing customizations makes the Web application aware of changes to the data
   
 <a name="BKMK_RetrieveUnpublishedMetadata"></a>   
 ## Retrieving unpublished metadata  
- If you want to create an application to edit customizable items in Model-driven apps, you must retrieve any unpublished definitions of those items. If a developer defines some changes but does not publish them, your application must be able to retrieve them to display them in the user interface. 
+ If you want to create an application to edit customizable items in model-driven apps, you must retrieve any unpublished definitions of those items. If a developer defines some changes but does not publish them, your application must be able to retrieve them to display them in the user interface. 
   
  Use the following two methods to retrieve unpublished metadata:  
   
@@ -73,11 +73,12 @@ Publishing customizations makes the Web application aware of changes to the data
 - <xref:Microsoft.Crm.Sdk.Messages.RetrieveUnpublishedMultipleRequest>  
   
 ### See also  
- [Customize Model-driven apps](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)<br/>
+
+ [Customize model-driven apps](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)<br/>
  [Extend the Metadata Model](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)<br/>
  [Publish request schema](publish-request-schema.md)<br/>
- [Customize Entity Forms](customize-entity-forms.md)<br/>
- [Customize Entity Views](customize-entity-views.md)<br/>
- [Customize Global Option Sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)<br/>
- [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)
+ [Customize entity forms](customize-entity-forms.md)<br/>
+ [Customize entity views](customize-entity-views.md)<br/>
+ [Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)<br/>
+ [Change application navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)
 

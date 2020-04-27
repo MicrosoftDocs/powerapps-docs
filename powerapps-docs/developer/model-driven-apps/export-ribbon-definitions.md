@@ -22,11 +22,15 @@ search.app:
 To effectively define changes to the default RibbonXml, you must be able to reference the RibbonXml data that defines those ribbons.  
   
 <a name="BKMK_AccessRibbonDefinitionsForYourOrganization"></a>   
+
 ## Access the ribbon definitions for your organization  
+
  If the Ribbon for your organization has been modified, you should export the current definitions if you intend to work with the customized ribbon elements. To do this, use the exportribbonxml sample located at `SampleCode\CS\Client\Ribbon\ExportRibbonXml`.  
   
 <a name="BKMK_AccessDefaultRibbonData"></a>   
+
 ## Access the default ribbon data  
+
  The default ribbon definitions for Model-driven apps can be downloaded from [Microsoft Downloads: ExportedRibbonXml.zip](https://download.microsoft.com/download/C/2/A/C2A79C47-DD2D-4938-A595-092CAFF32D6B/ExportedRibbonXml.zip). 
   
  The applicationRibbon.xml file contains the definition of the core application ribbons.  
@@ -42,6 +46,7 @@ To effectively define changes to the default RibbonXml, you must be able to refe
  This message retrieves the ribbon definition used for a specific entity.  
   
 ### Decompress the ribbon data  
+
  The ribbon data is exported as a compressed file. To decompress the file into XML you have to use the [System.IO.Packaging.ZipPackage](https://msdn.microsoft.com/library/system.io.packaging.zippackage.aspx) class. The following example is a helper method used in the SDK sample to decompress the file.  
  ``` C# 
 /// <summary>
@@ -69,7 +74,9 @@ public byte[] unzipRibbon(byte[] data)
 }
 
 ```
+
 ### Retrieve the application ribbon data  
+
  The application ribbon can be retrieved using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveApplicationRibbonRequest> as shown in the following sample.  
  ```C# 
  //Retrieve the Appliation Ribbon
@@ -81,6 +88,7 @@ File.WriteAllBytes(applicationRibbonPath, unzipRibbon(appribResp.CompressedAppli
 ```
   
 ### Retrieve entity ribbons  
+
  To retrieve the ribbon definition for entities, you can just include the name of the entity as a parameter to the <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>.  
   
  To retrieve the ribbon definitions for all entities that support the ribbon you need a list of those system entities that have ribbon definitions that vary from the entity ribbon template. The following sample shows an array of all the system entities that have ribbon definitions.  
@@ -167,7 +175,8 @@ File.WriteAllBytes(applicationRibbonPath, unzipRibbon(appribResp.CompressedAppli
 "userquery"};
  ```
   
- The following sample shows how to retrieve the ribbon definitions for a set of entities.  
+ The following sample shows how to retrieve the ribbon definitions for a set of entities. 
+
   ```C#
  //Retrieve system Entity Ribbons
 RetrieveEntityRibbonRequest entRibReq = new RetrieveEntityRibbonRequest() { RibbonLocationFilter = RibbonLocationFilters.All };
@@ -184,6 +193,7 @@ foreach (System.String entityName in entitiesWithRibbons)
 } 
  ``` 
  Any custom entities also support ribbon customizations. To get a list of custom entities, use the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveAllEntitiesRequest> and retrieve the names of custom entities. The following sample shows how to retrieve ribbon definitions for all custom entities.  
+
 ```C#  
 //Check for custom entities
  RetrieveAllEntitiesRequest raer = new RetrieveAllEntitiesRequest() { EntityFilters = EntityFilters.Entity };
@@ -204,8 +214,13 @@ foreach (System.String entityName in entitiesWithRibbons)
   }
  }
 }  
-```  
+``` 
+
+## Troubleshoot ribbon issues
+
+If you are experiencing an issue with a ribbon command bar button, use this [troubleshooting guide](https://support.microsoft.com/help/4552163) to find and solve the problem.
+
 ### See also  
  [Customize the Ribbon](customize-commands-ribbon.md)   
  [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)   
- [Export, Prepare to Edit, and Import the Ribbon](export-prepare-edit-import-ribbon.md)
+ [Export, prepare to edit, and import the Ribbon](export-prepare-edit-import-ribbon.md)
