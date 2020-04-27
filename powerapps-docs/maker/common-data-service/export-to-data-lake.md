@@ -2,7 +2,7 @@
 title: "Export to data lake | MicrosoftDocs"
 description: "Learn how to export entity data to an Azure data lake in Power Apps"
 ms.custom: ""
-ms.date: 03/04/2020
+ms.date: 04/27/2020
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -39,7 +39,7 @@ Export to Data Lake provides these features:
 
 ## How data and metadata are exported
 
-The Export to Data Lake service supports initial and incremental writes for entity data and metadata. Any data or metadata changes in Common Data Service are automatically pushed to the data lake without any additional action. This is a push, rather than pull, operation. Changes are pushed to the destination without your needing to set up refresh intervals. 
+The Export to Data Lake service supports initial and incremental writes for entity data and metadata. Any data or metadata changes in Common Data Service are automatically pushed to the data lake without any additional action. This is a push, rather than pull, operation. Changes are pushed to the destination without you needing to set up refresh intervals. 
 
 Both standard and custom entities can be exported. Notice that the change tracking entity attribute in Common Data Service is used to keep the data synchronized in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized. 
 
@@ -83,6 +83,9 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
    > ![Select entities for export](media/export-data-lake-select-entity.png "Select entities for export")
 
 Your Common Data Service environment is linked to the Azure Data Lake Storage Gen2 account. The file system in the Azure storage account is created with a folder for each entity selected to be replicated to the data lake. 
+
+> [!NOTE]
+> The data exported by Export to data lake service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 
 ## Manage entity data to the data lake
 
