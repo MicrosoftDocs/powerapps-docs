@@ -68,7 +68,7 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 The following limitations apply to the Power Apps visual:
 
-- Power Apps visual isn't supported in [GCC environments](https://docs.microsoft.com/power-platform/admin/powerapps-us-government). To check environment region for your app, go to [How to find where my app is deployed](https://docs.microsoft.com/power-platform/admin/regions-overview#how-do-i-find-out-where-my-app-is-deployed).
+- Power Apps visual isn't supported in sovereign cloud.
 - If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
 - The Power Apps visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
 - The Power Apps visual can't filter the data or send any data back to the report.
