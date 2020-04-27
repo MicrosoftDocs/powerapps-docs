@@ -2,7 +2,7 @@
 title: "Export to data lake | MicrosoftDocs"
 description: "Learn how to export entity data to an Azure data lake in Power Apps"
 ms.custom: ""
-ms.date: 03/04/2020
+ms.date: 04/27/2020
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -39,7 +39,7 @@ Export to Data Lake provides these features:
 
 ## How data and metadata are exported
 
-The Export to Data Lake service supports initial and incremental writes for entity data and metadata. Any data or metadata changes in Common Data Service are automatically pushed to the data lake without any additional action. This is a push, rather than pull, operation. Changes are pushed to the destination without your needing to set up refresh intervals. 
+The Export to Data Lake service supports initial and incremental writes for entity data and metadata. Any data or metadata changes in Common Data Service are automatically pushed to the data lake without any additional action. This is a push, rather than pull, operation. Changes are pushed to the destination without you needing to set up refresh intervals. 
 
 Both standard and custom entities can be exported. Notice that the change tracking entity attribute in Common Data Service is used to keep the data synchronized in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized. 
 
@@ -75,7 +75,8 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
    - **Storage account**. Select the Storage v2 (general-purpose v2) storage account to use for the export. 
 
     > [!NOTE]
-    > As part of linking the Common Data Service environment to a data lake, you grant the Export to Data Lake service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
+    > - As part of linking the Common Data Service environment to a data lake, you grant the Export to Data Lake service access to your storage account. Ensure that you followed the [prerequisites](#prerequisites) of creating and configuring the Azure data lake storage account, and granting yourself an owner role on the storage account. Additionally, you grant the Power Platform Dataflows service access to your storage account. More information: [Self-service data prep with dataflows](self-service-data-prep-with-dataflows.md).  
+    > - The data exported by Export to data lake service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. For more information, see [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
 
 4. Select the entities that you want to export to the data lake, and then select **Save**. Only entities with change tracking enabled can be exported. More information: [Enable change tracking](/dynamics365/customer-engagement/admin/enable-change-tracking-control-data-synchronization)
 
