@@ -6,20 +6,20 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/24/2020
 ms.author: tapanm
 ms.reviewer:
 ---
 
 # Portal checker
 
-Portal checker is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal checker helps to identify issues with your portal by looking at various configuration parameters and provides suggestions on how to fix them.
+Portal checker is a self-service diagnostic tool that can be used by portal administrators to identify common issues in their portal. Portal checker helps to identify issues with a portal by looking at various configuration parameters and it provides suggestions on how to fix them.
 
 When you run portal checker, the results are displayed in the **Diagnostic results** section in a grid format. The results grid has the following columns:
 
 - **Issue**: Displays the top-level issue faced by a customer; for example, performance issue.
-- **Category**: Displays the top-level area where issues can be categorized; for example, provisioning, solution upgrade, and so on.
-- **Result**: Displays the status of issue; for example, error, warning, and so on.
+- **Category**: Displays the top-level area where issues can be categorized; for example, provisioning or solution upgrade.
+- **Result**: Displays the status of the issue; for example, error or warning.
 
 By default, information in the grid is sorted by the **Result** column in this order: error, warning, and pass.
 

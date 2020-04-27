@@ -56,7 +56,7 @@ Model-driven apps
 </ul>
 <p>You specify the query options starting with <code>?</code>. You can also specify multiple query options by using <code>&amp;</code> to separate the query options. For example:</p>
 <code>?$select=name&amp;$expand=primarycontactid($select=contactid,fullname)</code>
-<p>See examples later in this topic to see how you can define the <code>options</code> parameter for various retrieve scenarios.</td>
+</td>
 </tr>
 <tr>
 <td>successCallback</td>

@@ -49,7 +49,7 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 
 |Task | Target audience|See|
 |--|--|--|
-|Deploy the sample app and dashboard|IT admin|[Deploy the Hospital Emergency Response app](deploy-configure.md)|
+|Download and deploy the sample app and dashboard|IT admin|[Deploy the Hospital Emergency Response app](deploy-configure.md)|
 |Use the admin app to add/manage master data|Business admin|[Configure and manage master data for your organization](configure-data-reporting.md#configure-and-manage-master-data-for-your-organization)|
 |Use dashboards for insights and decision making|Business admin|[View Common Data Service dashboards](configure-data-reporting.md#view-common-data-service-dashboards)<br/><br/>[View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)|
 |Use the mobile app to track data for ventilators, staffing, pending discharges, and COVID-19 related patients|Frontline staff|[Use the Hospital Emergency Response mobile app](use.md)
