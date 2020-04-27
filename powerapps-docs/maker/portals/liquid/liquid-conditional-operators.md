@@ -18,7 +18,7 @@ When used in conditional statements (**if**,**unless**), some Liquid values will
 In Liquid, null and the Boolean value false are treated as false;everything else is treated as true. Empty strings, empty arrays, etc. are treated as true. For examples,
 
 ```
-{% assign empty_string =  %}
+{% assign empty_string = "" %}
 {% if empty_string %}
 <p>This will render.</p>
 {% endif %}
