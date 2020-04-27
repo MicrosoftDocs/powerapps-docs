@@ -1,12 +1,12 @@
 ---
 title: Deploy the Regional Emergency Response solution | Microsoft Docs
-description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
+description: Provides provides detailed instructions for regional IT admins to deploy the Regional Emergency Response sample app for their organization.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/22/2020
+ms.date: 04/24/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -32,11 +32,11 @@ The Regional Emergency Response solution is also available for US Government org
 
 The commercial version of the service URL is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
 
-|Commercial version URL  |US Government version URL  |
-|------------------------|---------------------------|
-|<https://make.powerapps.com>     |  <https://make.gov.powerapps.us> (GCC)</br><https://make.high.powerapps.us> (GCC High)       |
-|<https://admin.powerplatform.microsoft.com>     |   <https://gcc.admin.powerplatform.microsoft.us> (GCC)</br><https://high.admin.powerplatform.microsoft.us> (GCC High)      |
-|<https://app.powerbi.com/>       |<https://app.powerbigov.us> (GCC)</br><https://app.high.powerbigov.us> (GCC High)         |
+| **Commercial version URL**                | **US Government version URL**  |
+|-------------------------------------------|--------------------------------|
+| [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us (GCC)](https://make.gov.powerapps.us) <br/><br/>[https://make.high.powerapps.us (GCC High)](https://make.high.powerapps.us)                |
+| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us (GCC)](https://gcc.admin.powerplatform.microsoft.us)<br/><br/>[https://high.admin.powerplatform.microsoft.us (GCC High)](https://high.admin.powerplatform.microsoft.us) |
+| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us (GCC)](https://app.powerbigov.us)<br/><br/>[https://app.high.powerbigov.us (GCC High)](https://app.high.powerbigov.us)                  |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 
@@ -119,7 +119,7 @@ After the portal is provisioned, it will appear in your **Apps** list in Power A
 
 After your portal is provisioned, follow these steps to install the package that will configure the portal and install the admin app (model-driven app).
 
-1.  Navigate to the location where you extracted the deployment file (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
+1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
 2.  On the next screen, select **Continue**.
 
@@ -157,11 +157,21 @@ After the package is installed, you will find a new admin app in your **Apps** l
 
 ## Step 5: Configure and publish Power BI dashboard
 
-In this step, we will configure and publish the Power BI dashboard so that it can be embedded within the portal.
+In this step, we will configure and publish the Power BI dashboard so that it can be embedded in the portal. At the end of this step, you will have a report URL that will be used to embed the report in portal.
 
-### Prerequisites
+You can publish the Power BI dashboard using either of the following options: using the template app from the AppSource or using the .pbit file available in the deployment package.
 
--   You must be a Global Admin and must have Power BI Pro license to configure and publish report. 
+### Option A: Publish using the template app from AppSource (Preferred Option)
+
+Detailed information about using the template app from the AppSource is available here: [Connect to the Regional Emergency Response Dashboard](https://docs.microsoft.com/power-bi/connect-data/service-connect-to-regional-emergency-response)
+
+### Option B: Publish using the .pbit file in the deployment package
+
+This section provides information on how you can use the **Regional Emergency Response App.pbit** file available in the deployment package to publish the dashboard.
+
+#### Prerequisites
+
+-   You must be a Global Admin and must have Power BI Pro license to configure and publish report.
 
 -   Create a workspace in Power BI where you will publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces)
 
@@ -169,14 +179,14 @@ In this step, we will configure and publish the Power BI dashboard so that it ca
 
     > [!NOTE]
     > If you have installed Power BI Desktop by downloading directly from the Download Center page as an executable in the past, remove it and use the one from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available.
+    >
+    > If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
 
-If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
-
-### The process
+#### The process
 
 1.  Run Power BI Desktop, and sign in using your account.
 
-2.  Navigate to the location where you extracted the deployment package (.zip). Under the Power BI Template folder, you will find the **Regional Emergency Response App.pbit**.
+2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the **Regional Emergency Response App.pbit**.
 
 3.  Open the **Regional Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following value: **CDS_base_solution_URL**. Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
 
@@ -242,7 +252,7 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
         > [!div class="mx-imgBorder"] 
         > ![Open report in browser](media/deploy-open-report.png "Open report in browser")
 
-16.  The browser URL will be in the following format:
+16.  The URL will be in the following format:
     https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
     Copy the Power BI report URL to a Notepad as you will need it in the next section to embed it in the portal.
 
@@ -264,7 +274,7 @@ If you can’t install from Microsoft Store, install the latest non-Microsoft St
 
 ## Step 6: Embed Power BI report in portal
 
-In this step, we will embed the Power BI report that you published to your portal.
+In this step, we will embed the Power BI report (published in the previous step) to your portal.
 
 ### Prerequisites
 
