@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/27/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -18,6 +18,7 @@ Power BI is one of the best tools to deliver insights with simple and interactiv
 > [!NOTE]
 > - You must have an appropriate Power BI license.
 > - To use Power BI Embedded service, you must have an appropriate Power BI Embedded license. For more information, see [Licensing](https://docs.microsoft.com/power-bi/developer/embedded-faq#licensing).
+> - Ensure [Developer setting](https://docs.microsoft.com/power-bi/guidance/admin-tenant-settings#developer-settings) of **Embed content in apps** is *Enabled* in your Power BI tenant. If disabled, portal doesn't render embedded Power BI dashboard or report.
 
 ## Enable Power BI visualization
 
