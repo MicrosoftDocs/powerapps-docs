@@ -316,3 +316,4 @@ Select **RunTestAutomation** test to drill into the details on what test case ha
 
 - [Test Studio overview](test-studio.md)
 - [Working with Test Studio](working-with-test-studio.md)
+- [Configure pipeline using YAML](test-studio-yaml-pipeline.md)
