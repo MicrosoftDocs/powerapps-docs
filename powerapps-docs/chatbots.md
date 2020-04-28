@@ -17,8 +17,8 @@ Power Virtual Agents allows you to quickly create and maintain intelligent chatb
 
 You can create and manage your chatbots using the **Chatbots** option in the left navigation pane.
 
-- To create a chatbot, select **Chatbots** > **Create**, and then select **New chatbot**. This will take you directly to Power Virtual Agents portal where you can create your chatbot. More information: [Create a bot in Power Virtual Agents](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot)
+- To create a chatbot, select **Chatbots** > **Create**, and then select **New chatbot**. This will take you directly to the Power Virtual Agents portal where you can create your chatbot. More information: [Create a bot in Power Virtual Agents](https://docs.microsoft.com/power-virtual-agents/authoring-first-bot)
 
-- After you have chatbots in your environment, you'll be able to view them by selecting **Chatbots** > **List**. You can navigate directly to Power Virtual Agents portal to update your bot or view analytics.
+- After you have chatbots in your environment, you'll be able to view them by selecting **Chatbots** > **List**. You can navigate directly to the Power Virtual Agents portal to update your bot or view analytics.
 
 More information: [Power Virtual Agents docs](https://docs.microsoft.com/power-virtual-agents)
