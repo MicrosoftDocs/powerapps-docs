@@ -1648,9 +1648,7 @@
 - name: Chatbots
   href: ../chatbots.md
 - name: AI Builder
-  items:
-  - name: Use AI Builder in Power Apps
-    href: ../use-ai-builder.md
+  href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
   - name: Crisis communication
