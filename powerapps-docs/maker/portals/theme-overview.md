@@ -1,6 +1,6 @@
 ---
-title: Overview of themes in Power Apps  portal | Microsoft Docs
-description: Introduction to the themes in Power Apps portals.
+title: Overview of themes in Power Apps portals | Microsoft Docs
+description: Introduction to themes in Power Apps portals.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -11,158 +11,148 @@ ms.author: tapanm
 ms.reviewer: tapanm
 ---
 
-# Overview of themes in Power Apps portal
+# Overview of themes in Power Apps portals
 
-Power Apps portal by default has **Enable basic theme** feature **Off**. Basic themes allow you to use themes available by default, called **Presets**. You can also create copies of default basic themes for additional customization.
+In Power Apps portals<!--Via Cloud Style Guide, the feature name is plural lowercase "portals"; a "portal" is a single instance.-->, the **Enable basic theme** feature is set to **Off**. When you turn on this feature, you can use default themes called **Presets**. You can also create copies of the preset themes for additional customization.
 
-In this article, you'll walk through basic themes feature. For more advanced theme customization, read [Edit CSS](edit-css.md).
+In this article, you'll walk through the basic themes feature. For advanced theme customization, see [Edit CSS](edit-css.md).
 
 > [!IMPORTANT]
-> **Basic theme** feature is in preview. For more information about preview features, read [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
+> The basic theme feature is in preview. For more information about preview features, see [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
 
-## Enable basic theme for existing portals (Preview)
-
-To enable basic theme and apply a preset theme on your existing portal:
+## Enable basic themes for existing portals (Preview)
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** from left pane and then select the portal:
+1. Select **Apps** from the left navigation pane, and then select the portal.
 
-    ![Select apps and portal](./media/theme-overview/select-app-portal.png)
+    ![Select Apps and a portal](./media/theme-overview/select-app-portal.png "Select Apps and a portal")
 
-1. Select **More Commands** (**...**) and then select **Edit** to edit the portal:
+1. Select **More Commands** (**...**), and then select **Edit**.
 
-    ![Edit portal](./media/theme-overview/edit-portal.png)
+    ![Edit a portal](./media/theme-overview/edit-portal.png "Edit a portal")
 
-1. Select **Themes** from left pane and then select **Enable basic theme** to enable basic theme:
+1. Select **Themes** from the left navigation pane, and then turn on the **Enable basic theme** toggle.
 
-    ![Enable basic theme](./media/theme-overview/enable-basic-theme.png)
+    ![Enable basic themes](./media/theme-overview/enable-basic-theme.png "Enable basic themes")
 
-Basic theme feature is enabled on your portal.
+## Change a preset theme
 
-## Change preset theme
-
-To change theme for your portal from an existing theme to any default theme:
+You can set any existing theme in your portal to a default theme.<!--The title "Change a preset theme" is confusing to me. You aren't actually changing the preset, are you? It's more that you're changing a theme that already existed in your portal to one of these new preset, default themes? -->
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** from left pane and then select the portal:
+1. Select **Apps** from the left navigation pane, and then select the portal.
 
-1. Select **More Commands** (**...**) and then select **Edit** to edit the portal:
+1. Select **More Commands** (**...**), and then select **Edit**.
 
-1. Select **Theme** from the components pane:
+1. Select **Theme** from the components pane.<!--It would be good to turn this into a small graphic so we could use it inline. -->
 
-    ![Select theme](./media/theme-overview/select-theme.png)
+    ![Select theme icon](./media/theme-overview/select-theme.png "Select theme icon")
 
-1. Select any default theme from the available presents, such as **Green**:
+1. Select any default theme from the available presets (in our example, we selected **Green**).
 
-    ![Select default theme](./media/theme-overview/basic-theme.png)
+    ![Select a default theme](./media/theme-overview/basic-theme.png "Select a default theme")
 
-Selected theme is applied to your portal:
+The selected theme is applied to your portal.
 
-![Applied theme](./media/theme-overview/theme-applied.png)
+![Applied theme](./media/theme-overview/theme-applied.png "Applied theme")
 
-## Create new theme
-
-To create a new theme:
+## Create a new theme
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** from left pane and then select the portal:
+1. Select **Apps** from the left navigation pane, and then select the portal.
 
-1. Select **More Commands** (**...**) and then select **Edit** to edit the portal:
+1. Select **More Commands** (**...**), and then select **Edit**.
 
 1. Select **Theme** from the components pane.
 
-1. Select **New Theme** to create a new theme:
+1. Select **New Theme**.
 
-    ![Create new theme](./media/theme-overview/new-theme.png)
+    ![Create a new theme](./media/theme-overview/new-theme.png "Create a new theme")
 
 ## Edit theme details
 
-You can update theme name, description, color, and other typography settings in the Power Apps portal Studio. 
+You can update theme name, description, color, and other typography settings in Power Apps Studio. 
 
-To edit theme details:
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. . Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **Apps** from the left navigation pane, and then select the portal.
 
-1. Select **Apps** from left pane and then select the portal:
-
-1. Select **More Commands** (**...**) and then select **Edit** to edit the portal:
+1. Select **More Commands** (**...**), and then select **Edit**.
 
 1. Select **Theme** from the components pane.
 
-1. Select theme currently applied, or select a new theme from the presets.
-   Selecting a theme opens the details pane on the right:
+1. Select the theme that's currently applied, or select a new theme from the presets.
+   Selecting a theme opens the details pane on the right side of your workspace.
 
-    ![Create new theme](./media/theme-overview/theme-details.png)
+    ![Theme details](./media/theme-overview/theme-details.png "Theme details")
 
-1. Edit theme details such as name, description, and color for different areas:
+1. Edit theme details such as name, description, and color for different areas.
 
-    |Color option | Impacted area
-    | - | - 
-    | Primary | Button and link colors.
-    | Header | Header background color.
-    | Header menu text | Text color for header menu.
-    | Header menu hover | Background color of menu items upon hover over.
-    | Body background |  Background color of body section.​
-    | Footer background | Background color for footer.​
-    | Footer text | Footer text color.​
+    |Color option | Affected area |
+    | --- | ---  |
+    | Primary | Button and link colors. |
+    | Header | Header background color. |
+    | Header menu text | Text color for the header menu. |
+    | Header menu hover | Background color of menu items when they're hovered over. |
+    | Body background |  Background color of the body section.​ |
+    | Footer background | Background color for the footer.​ |
+    | Footer text | Footer text color.​ |
 
 1. Save and publish the changes.
 
-## Copy preset theme
+## Copy a preset theme
 
-To copy preset theme:
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. . Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **Apps** from the left navigation pane, and then select the portal.
 
-1. Select **Apps** from left pane and then select the portal:
-
-1. Select **More Commands** (**...**) and then select **Edit** to edit the portal:
+1. Select **More Commands** (**...**), and then select **Edit**.
 
 1. Select **Theme** from the components pane.
 
-1. Select the theme from presets that you want to copy, select **...** (ellipsis) and then select **Save as Copy**:
+1. Select the theme from presets that you want to copy, select **...**, and then select **Save as Copy**.
 
-    ![Copy preset theme](./media/theme-overview/copy-preset-theme.png)
+    ![Copy preset theme](./media/theme-overview/copy-preset-theme.png "Copy a preset theme")
 
-1. Update the [theme details](#edit-theme-details) as needed and save.
+1. Update the theme details as described in the preceding section, and then save the theme.
 
-## Saas variables
+## Sass variables
 
-[Sass](https://sass-lang.com/) is a stylesheet language with fully CSS-compatible syntax. When you enable *Basic theme* feature, you can use [Sass variables](https://sass-lang.com/documentation/variables) instead of values to configure theme colors.
+[Sass](https://sass-lang.com/) is a stylesheet language with fully CSS-compatible syntax. When you enable the basic theme feature, you can use [Sass variables](https://sass-lang.com/documentation/variables) instead of values to configure theme colors.
 
-For example, if you want the **Header** color to be 25% lighter than the **Primary** color, you can use the following value instead of actual color:
+For example, if you want the **Header** color to be 25 percent lighter than the **Primary** color, you can use the following value instead of a specific color:
 
 ```
 lighten($primaryColor, 25%);
 ```
 
-![Sass example](./media/theme-overview/sass-example.png)
+![Sass example](./media/theme-overview/sass-example.png "Sass example")
 
-You can use the following Sass variables with *Basic theme*:
+You can use the following Sass variables with basic themes:
 
-|Color option | Sass variable name
-| - | -
-| Primary | ```$primaryColor```
-| Header | ```$headerColor```
-| Header menu text | ```$headerMenuTextColor```
-| Header menu hover | ```$headerMenuHoverColor```
-| Body background |  ```$bodyBackground```
-| Footer background | ```$footerColor​```
-| Footer text | ```$footerTextColor```
+|Color option | Sass variable name |
+| - | - |
+| Primary | ```$primaryColor``` |
+| Header | ```$headerColor``` |
+| Header menu text | ```$headerMenuTextColor``` |
+| Header menu hover | ```$headerMenuHoverColor``` |
+| Body background |  ```$bodyBackground``` |
+| Footer background | ```$footerColor​``` |
+| Footer text | ```$footerTextColor``` |
 
 ### Sass variable order
 
-Sass variables work from top to bottom. You can set *Header* color to ```lighten($primaryColor, 25%);```. But, you can't set *Primary* color to ```lighten($headerColor, 25%);``` as *Header* is below *Primary* in color options.
+Sass variables work from top to bottom. You can set the *Header* color to ```lighten($primaryColor, 25%);```. But, you can't set the *Primary* color to ```lighten($headerColor, 25%);``` because *Header* is below *Primary* in the list of color options.
 
 ## Basic theme considerations
 
-- You can't have two themes with same *theme name* or same *theme file name*. 
-- Color value manually entered must be for a valid color.
-- Changing CSS for preset themes isn't supported.
-- Theme foreground and background color contrast ratio is recommended at 4.5:1 for accessibility.
+- You can't have two themes with the same theme name or the same theme file name. 
+- Any color value you enter manually must be for a valid color.
+- Changing the CSS for preset themes isn't supported.
+- The recommended theme foreground and background color contrast ratio is 4.5:1, for accessibility.
 
 ### Next steps
 
