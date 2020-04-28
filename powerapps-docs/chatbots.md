@@ -1,7 +1,7 @@
 ---
 title: Create chatbots from Power Apps | Microsoft Docs
 description: Provides information about how you can use AI Builder in Power Apps.
-author: Dean-Haas
+author: iaanw
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
