@@ -66,7 +66,7 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
     using Microsoft.Xrm.Tooling.Connector;
     ```
 
-1. Replace the `Main` method with the following code. The supported values for *AuthType* are listed in [Connection string paramters](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect#connection-string-parameters).
+1. Replace the `Main` method with the following code. The supported values for *AuthType* are listed in [Connection string paramters](/dynamics365/customerengagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect#connection-string-parameters).
 
     ```csharp
     static void Main(string[] args)
