@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/24/2020
+ms.date: 04/29/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -28,7 +28,7 @@ Estimated time to complete these steps: 35–40 minutes.
 
 ## Service URLs for US Government customers
 
-The Regional Government Emergency Response and Monitoring solution is also available for US Government organizations. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
+There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants than the commercial version. The commercial version of the service URLs is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here
 
 The commercial version of the service URL is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
 
