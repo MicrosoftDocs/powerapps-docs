@@ -115,9 +115,46 @@ After the portal is provisioned, it will appear in your **Apps** list in Power A
   > [!IMPORTANT]
   > Wait for the portal to be provisioned before proceeding to the next step.
 
-## Step 4: Install the package
+## Step 4: Install the app
 
-After your portal is provisioned, follow these steps to install the package that will configure the portal and install the admin app (model-driven app).
+After your portal is provisioned, install the Regional Emergency Response app to configure the portal your created earlier and install the admin app (model-driven app).
+
+You can install the app from *either* of the following sources:
+
+- Microsoft AppSource. See [Option A: Install the app from Microsoft AppSource](#option-a-install-the-app-from-microsoft-appsource)
+
+- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-b-install-the-app-from-the-deployment-package)
+
+### Option A: Install the app from Microsoft AppSource
+
+1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Regional Emergency Response".<br/>Alternatively, navigate directly to the app on AppSource using this link: <https://appsource.microsoft.com/en-us/product/dynamics-365/mscrm.pprersapp>
+
+2.  On the Regional Emergency Response App page, select **Get It Now**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/deploy-appsource-01.png "App on AppSource")
+
+3.  You are prompted to review the AppSource agreement terms. The dialog also shows the account that is being used to sign in. Select **Continue**. You might be prompted to verify your credentials.
+
+4.  On the next page, select your environment where you want to install the app. Select the legal terms and privacy statements check boxes, and select **Agree**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/deploy-appsource-02.png "Select an environment to install")
+
+5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/deploy-appsource-03.png "Monitor app installation progress")
+
+    > [!IMPORTANT]
+    > It might take a while for the app to install.
+
+6.  After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
+
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+
+### Option B: Install the app from the deployment package
 
 1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
@@ -146,14 +183,14 @@ After your portal is provisioned, follow these steps to install the package that
 
 9.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
 
-1.  After the installation is complete, select **Next**.
+10. After the installation is complete, select **Next**.
 
-2.  On the next screen, select **Finish** to complete and close the setup.
+11.  On the next screen, select **Finish** to complete and close the setup.
 
-After the package is installed, you will find a new admin app in your **Apps** list.
+12. After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
 
-  > [!div class="mx-imgBorder"] 
-  > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
 
 ## Step 5: Configure and publish Power BI dashboard
 
