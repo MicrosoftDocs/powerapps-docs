@@ -853,6 +853,8 @@
       items:
       - name: Configure pipeline using classic editor
         href: ./canvas-apps/test-studio-classic-pipeline-editor.md
+      - name: Configure pipeline using YAML
+        href: ./canvas-apps/test-studio-yaml-pipeline.md
   - name: Debug an app with canvas app Monitor
     href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
@@ -1644,9 +1646,7 @@
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
 - name: AI Builder
-  items:
-  - name: Use AI Builder in Power Apps
-    href: ../use-ai-builder.md
+  href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
   - name: Crisis communication
@@ -1674,9 +1674,7 @@
     - name: Portal for healthcare worker
       href: ../sample-apps/regional-emergency-response/portals-user.md
 - name: Learn from others
-  items:
-  - name: Webinars
-    href: ./canvas-apps/webinars-listing.md
+  items:  
   - name: Blog
     href: https://powerapps.microsoft.com/blog/
   - name: Forums

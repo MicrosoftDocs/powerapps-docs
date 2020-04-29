@@ -1448,7 +1448,7 @@
     },
     {
       "source_path": "powerapps-docs/webinars-listing.md",
-      "redirect_url": "/powerapps/maker/canvas-apps/webinars-listing",
+      "redirect_url": "https://powerusers.microsoft.com/t5/Samples-Learning-and-Videos/ct-p/PA_Comm_Galleries",
       "redirect_document_id": true
     },
     {
@@ -1639,6 +1639,11 @@
     {
       "source_path": "powerapps-docs/developer/common-data-service/use-web-services.md",
       "redirect_url": "https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/maker/maker/canvas-apps/webinars-listing.md",
+      "redirect_url": "https://powerusers.microsoft.com/t5/Samples-Learning-and-Videos/ct-p/PA_Comm_Galleries",
       "redirect_document_id": true
     }
   ]

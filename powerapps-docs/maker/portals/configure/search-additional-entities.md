@@ -20,11 +20,11 @@ You can enable additional entities for search functionality. Configuring search 
 Following considerations apply when configuring additional entities for global search:
 
 - Ensure that the [site setting](#site-setting-for-additional-entities) for search for additional entities is enabled.
-- Configure a [search results page](#results-page-for-additional-entities) to display search results.
+- Create a view named **Portal Search** for any additional entity you want to enable search for. More information: [searchable fields in global search](search.md#fields-searchable-in-global-search)
 - Ensure an **Entity Permission** is created that provides Read privilege, and appropriate scope for the records to show in search results.
 - Associate the entity permission with required **Web Roles**.
 - Entity permissions must be associated with the **Anonymous Web Role** if you want to allow anonymous search for an entity.
-- Create a view named **Portal Search** for any additional entity you want to enable search for. More information: [Searchable fields in global search](search.md#fields-searchable-in-global-search)
+- Configure a [search results page](#results-page-for-additional-entities) to display search results.
 
 The explicit configuration explained above ensures that no records will accidentally be made available via global search.
 

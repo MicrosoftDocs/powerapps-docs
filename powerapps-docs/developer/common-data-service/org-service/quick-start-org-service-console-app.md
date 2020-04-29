@@ -1,6 +1,6 @@
 ---
-title: "Quick Start: Organization service sample (C#) (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "This quick start will show you how to connect to the organization service of the Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Quickstart: Organization service sample (C#) (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "This quickstart will show you how to connect to the organization service of the Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 04/25/2019
 ms.reviewer: "pehecke"
@@ -15,16 +15,16 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Quick Start: Organization service sample (C#)
+# Quickstart: Organization service sample (C#)
 
 This is where you begin working with the .NET SDK assemblies to work with data using Common Data Service.
 
-In this quick start you will create a minimum console application to connect to the Organization service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. You will pass  your connection information using a connection string passed to the constructor.
+In this quickstart, you will create a minimum console application to connect to the Organization service using the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class. You will pass  your connection information using a connection string passed to the constructor.
 
 You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method passing an instance of the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIRequest> class, and you will display the <xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse>.<xref:Microsoft.Crm.Sdk.Messages.WhoAmIResponse.UserId> value.
 
 > [!NOTE]
-> This quick start example does not include error handling. This is a minimum example of what you need to connect to and use the Organization service.
+> This quickstart example does not include error handling. This is a minimum example of what you need to connect to and use the Organization service.
 
 
 ## Prerequisites
@@ -66,7 +66,7 @@ You will use the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.X
     using Microsoft.Xrm.Tooling.Connector;
     ```
 
-1. Replace the `Main` method with the following code. The supported values for *AuthType* are listed in [Connection string paramters](/dynamics365/customer-engagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect#connection-string-parameters).
+1. Replace the `Main` method with the following code. The supported values for *AuthType* are listed in [Connection string parameters](/dynamics365/customerengagement/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect#connection-string-parameters).
 
     ```csharp
     static void Main(string[] args)
@@ -127,7 +127,7 @@ You have successfully connected to the organization service.
 
 ## Next Steps
 
-These topics will explain how to work with Common Data Service entities:
+These articles will explain how to work with Common Data Service entities:
 
 [Entity Operations using the Organization service](entity-operations.md)<br />
 [Create entities using the Organization Service](entity-operations-create.md)<br />

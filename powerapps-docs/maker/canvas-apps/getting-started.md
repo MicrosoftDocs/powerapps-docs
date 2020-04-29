@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 04/26/2018
+ms.date: 04/27/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -41,9 +41,9 @@ When you finish the app and save it to the cloud, [share it with others](share-a
 Run your own apps - and any apps shared with you - on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](../../user/run-app-client.md).
 
 ## Learn more
-* Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
-* Check out the [webinars](webinars-listing.md) that you can access on-demand to help you leverage the features and functions of Power Apps.
-* Review [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
+- Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
+- Review [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
+- Check out the [webinars and video gallery](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery?featured=yes) to help you leverage the features and functions of Power Apps.
 
 ## Share your experience
 * Read and post in the [Power Apps Community](https://aka.ms/powerapps-community), where anyone who uses Power Apps can post a question and others can answer. Before you post a question, search the community to see whether your question has already been answered.
