@@ -80,7 +80,10 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 ### Step 2: Install the app from Microsoft AppSource
 
-Follow the steps below to install Hospital Emergency Response app along with the configuration data and sample master data.
+Follow the steps below to install Hospital Emergency Response app along with the configuration and sample data.
+
+> [!NOTE]
+> The installation process installs sample data for new installation only. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure your existing data isn't overwritten.
 
 1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Hospital Emergency Response".<br/>Alternatively, navigate to the app directly using this link: <https://appsource.microsoft.com/product/dynamics-365/mscrm.pphersapp>
 
