@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/24/2020
+ms.date: 04/29/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -28,15 +28,15 @@ Estimated time to complete these steps: 35–40 minutes.
 
 ## Service URLs for US Government customers
 
-The Regional Government Emergency Response and Monitoring solution is also available for US Government organizations. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
+There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants than the commercial version. The commercial version of the service URLs is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here
 
 The commercial version of the service URL is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
 
 | **Commercial version URL**                | **US Government version URL**  |
 |-------------------------------------------|--------------------------------|
-| [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us (GCC)](https://make.gov.powerapps.us) <br/><br/>[https://make.high.powerapps.us (GCC High)](https://make.high.powerapps.us)                |
-| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us (GCC)](https://gcc.admin.powerplatform.microsoft.us)<br/><br/>[https://high.admin.powerplatform.microsoft.us (GCC High)](https://high.admin.powerplatform.microsoft.us) |
-| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us (GCC)](https://app.powerbigov.us)<br/><br/>[https://app.high.powerbigov.us (GCC High)](https://app.high.powerbigov.us)                  |
+| [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us](https://make.gov.powerapps.us) (GCC)<br/><br/>[https://make.high.powerapps.us](https://make.high.powerapps.us) (GCC High)                |
+| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us) (GCC)<br/><br/>[https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us) (GCC High) |
+| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us](https://app.powerbigov.us) (GCC)<br/><br/>[https://app.high.powerbigov.us](https://app.high.powerbigov.us) (GCC High)                 |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 
