@@ -18,6 +18,7 @@ The Hospital Emergency Response app requires a small amount of setup to adapt to
 
 Estimated time to complete these steps: **35–40 minutes**.
 
+<!--
 ## Demo: Deploy the Hospital Emergency Response app
 
 Watch how you can deploy and configure the Hospital Emergency Response app.
@@ -25,6 +26,7 @@ Watch how you can deploy and configure the Hospital Emergency Response app.
 <br/>
 
 > [!VIDEO https://www.youtube.com/embed/-1g44wNiuWI]
+-->
 
 
 ## Service URLs for US Government customers
