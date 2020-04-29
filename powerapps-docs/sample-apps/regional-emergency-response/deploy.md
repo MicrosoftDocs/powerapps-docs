@@ -1,6 +1,6 @@
 ---
-title: Deploy the Regional Emergency Response solution | Microsoft Docs
-description: Provides provides detailed instructions for regional IT admins to deploy the Regional Emergency Response sample app for their organization.
+title: Deploy the Regional Government Emergency Response and Monitoring solution | Microsoft Docs
+description: Provides provides detailed instructions for regional IT admins to deploy the Regional Government Emergency Response and Monitoring solution for their organization.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
@@ -12,9 +12,9 @@ ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Deploy the Regional Emergency Response solution
+# Deploy the Regional Government Emergency Response and Monitoring solution
 
-Regional organization IT admins can use this article to deploy the Regional Emergency Response sample solution. At the end of this deployment process, you will have the following:
+Regional organization IT admins can use this article to deploy the Regional Government Emergency Response and Monitoring solution. At the end of this deployment process, you will have the following:
 
 - An admin app (model-driven app) that lets you configure and view master data for parent organizations and their hospital systems, add and manage admin users from parent organizations so that they can use the portal to report data for their hospital systems.
 
@@ -22,13 +22,13 @@ Regional organization IT admins can use this article to deploy the Regional Emer
 
 - A Power BI dashboard that your regional admins can access in your Power BI tenant to view key data and insights for all the parent organizations that report data to your regional organization. The same dashboard is embedded in the portal for parent organization admins to view key data and insights just for their parent organizations and hospital systems.
 
-Perform the following steps to deploy the Regional Emergency Response sample solution for your organization.
+Perform the following steps to deploy the Regional Government Emergency Response and Monitoring solution for your organization.
 
 Estimated time to complete these steps: 35–40 minutes.
 
 ## Service URLs for US Government customers
 
-The Regional Emergency Response solution is also available for US Government organizations. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
+The Regional Government Emergency Response and Monitoring solution is also available for US Government organizations. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
 
 The commercial version of the service URL is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
 
@@ -649,4 +649,4 @@ The deployment steps are complete now. Business admins can refer to the [configu
 
 ## Report issues
 
-To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.
+To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
