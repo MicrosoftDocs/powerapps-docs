@@ -31,9 +31,12 @@ The main components of the Regional Government Emergency Response and Monitori
 - Power Apps plan along with Power Apps portal capacity
 - Power BI Premium or Pro license
 
-Contact your local Microsoft account representative for questions related to licensing as per your requirements.
+Contact your local Microsoft account representative for questions related to licensing as per your requirements. See
 
-See also: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+See also: 
+- [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+- [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
+- [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
 
 ## Start here
 
