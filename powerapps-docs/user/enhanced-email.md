@@ -1,7 +1,7 @@
 ---
 title: "Preview  Send email using the enhanced email experience in model-driven apps | MicrosoftDocs"
 description: "Use the enhanced email experience to compose an email without leaving the context of what you are working on."
-ms.date: 02/03/2020
+ms.date: 04/09/2020
 ms.service:
   - "dynamics-365-sales"
 ms.topic: article
@@ -10,9 +10,7 @@ ms.author: shujoshi
 manager: annbe
 ---
 
-# Preview: Send email using the enhanced email experience
-
-Send email using the enhanced email experience is an early-access feature. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
+# Send email using the enhanced email experience
 
 The enhanced email experience in model-driven apps allows you to compose an email without leaving the record that you’re working on. With the enhanced email experience, you can:
 

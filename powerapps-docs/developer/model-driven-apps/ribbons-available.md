@@ -19,24 +19,28 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365 -->
 
-This topic describes where ribbons are defined and modified in Model-driven apps.
+This topic describes where ribbons are defined and modified in model-driven apps.
 
-<a name="ribbon_defs"></a>   
-## Ribbon definitions  
- Model-driven apps contains default `<RibbonDiffXml>` definitions for all ribbons in the application. You can export and view the current XML defining the ribbon for your organization, but you cannot update the XML directly. You customize the ribbon by defining how you want it to be changed. The change definitions that you specify are applied at runtime when the ribbon is displayed in the application. 
- All of your changes will be in the `<CustomAction>` or `<HideCustomAction>` elements. These elements are applied over the default ribbon definitions provided by Model-driven apps.  
+<a name="ribbon_defs"></a>  
 
- When you write your change definitions, you will frequently need to reference the definitions of the default ribbons. For example, if you want to hide a specific ribbon element, you will need to know the unique Id of that element. If you want to position a new ribbon element within or next to an existing ribbon element, you will need to know the Id values for those elements, as well as the sequence order that will control the relative position of the elements.  
+## Ribbon definitions 
 
- Because of this requirement to reference the definitions of existing ribbon elements, it is very important to understand the current ribbon definitions in your organization. There are two messages you can use to export XML files representing the current state of your ribbons. These definitions include any customizations that have already been applied to your system so that you can customize any custom ribbons that were previously applied. For more information, see [Export Ribbon Definitions](export-ribbon-definitions.md).  
+Model-driven apps contains default `<RibbonDiffXml>` definitions for all ribbons in the application. You can export and view the current XML defining the ribbon for your organization, but you cannot update the XML directly. You customize the ribbon by defining how you want it to be changed. The change definitions that you specify are applied at runtime when the ribbon is displayed in the application. 
+ All of your changes will be in the `<CustomAction>` or `<HideCustomAction>` elements. These elements are applied over the default ribbon definitions provided by model-driven apps.  
 
- To help you get started, you can download the default ribbon definitions for MDA from [Microsoft Downloads: ExportedRibbonXml.zip](https://download.microsoft.com/download/C/2/A/C2A79C47-DD2D-4938-A595-092CAFF32D6B/ExportedRibbonXml.zip). The ExportedRibbonXml.zip file includes the output files you would have for an organization with a ribbon that has not been customized. You don’t need to run the sample application to export this data. If you have a customized ribbon, you should run the sample application to refresh the files in this folder with any customizations previously applied for your organization.  
+When you write your change definitions, you will frequently need to reference the definitions of the default ribbons. For example, if you want to hide a specific ribbon element, you will need to know the unique Id of that element. If you want to position a new ribbon element within or next to an existing ribbon element, you will need to know the Id values for those elements, as well as the sequence order that will control the relative position of the elements.  
 
- Within the exported ribbon XML files, the applicationRibbon.xml file includes all the ribbons that are not defined for a specific entity. These correspond to the **Application Ribbons** solution component. For each entity, you will find an *entity name*ribbon.xml file. This corresponds to the `RibbonDiffXml` that is included in each entity. If you want to edit the ribbon for a specific entity, you should locate the ribbon XML file for that entity.  
+Because of this requirement to reference the definitions of existing ribbon elements, it is very important to understand the current ribbon definitions in your organization. There are two messages you can use to export XML files representing the current state of your ribbons. These definitions include any customizations that have already been applied to your system so that you can customize any custom ribbons that were previously applied. For more information, see [Export Ribbon Definitions](export-ribbon-definitions.md).  
 
-<a name="entity_ribbons"></a>   
+To help you get started, you can download the default ribbon definitions for MDA from [Microsoft Downloads: ExportedRibbonXml.zip](https://download.microsoft.com/download/C/2/A/C2A79C47-DD2D-4938-A595-092CAFF32D6B/ExportedRibbonXml.zip). The ExportedRibbonXml.zip file includes the output files you would have for an organization with a ribbon that has not been customized. You don’t need to run the sample application to export this data. If you have a customized ribbon, you should run the sample application to refresh the files in this folder with any customizations previously applied for your organization.  
+
+Within the exported ribbon XML files, the applicationRibbon.xml file includes all the ribbons that are not defined for a specific entity. These correspond to the **Application Ribbons** solution component. For each entity, you will find an *entity name*ribbon.xml file. This corresponds to the `RibbonDiffXml` that is included in each entity. If you want to edit the ribbon for a specific entity, you should locate the ribbon XML file for that entity.  
+
+<a name="entity_ribbons"></a>  
+
 ## Entity ribbons  
- All entities use a common ribbon definition called the *Entity Ribbon Template*. The entity ribbon template definition is located in the applicationribbon.xml file. When you create a custom entity, the ribbon you see is the default ribbon defined by the entity ribbon template. 
+
+All entities use a common ribbon definition called the *Entity Ribbon Template*. The entity ribbon template definition is located in the `applicationribbon.xml` file. When you create a custom entity, the ribbon you see is the default ribbon defined by the entity ribbon template. 
  Each system entity has a separate `<RibbonDiffXml>` definition that builds upon the entity ribbon template definition.  
 
  Within the applicationribbon.xml file, you can see the following tabs that apply to all entities:  

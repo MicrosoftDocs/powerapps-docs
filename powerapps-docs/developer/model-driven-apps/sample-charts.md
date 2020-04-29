@@ -27,7 +27,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="ColumnChart"></a>   
 ## Column Chart  
- The following is a column chart that shows the account by industry. We modified the presentation description of the existing Account By Industry default chart available in Model-driven apps for the `Account` entity to change it to a column chart.  
+ The following is a column chart that shows the account by industry. We modified the presentation description of the existing Account By Industry default chart available in model-driven apps for the `Account` entity to change it to a column chart.  
   
  ![Sample column chart: Accounts by Industry](media/charts-accounts-by-industry.gif "Sample column chart: Accounts by Industry")  
   
@@ -582,9 +582,10 @@ This topic contains sample charts along with the respective data description and
 ```  
   
 ### See also  
+
  [Data Visualization and Analytics](customize-visualizations-dashboards.md)   
- [Visualization Data Description Schema](visualization-data-description-schema.md)   
- [Create a Chart](create-visualization-chart.md)   
- [View Data with Visualizations (Charts)](view-data-with-visualizations-charts.md)   
+ [Visualization data description schema](visualization-data-description-schema.md)   
+ [Create a chart](create-visualization-chart.md)   
+ [View data with visualizations (charts)](view-data-with-visualizations-charts.md)   
  
 

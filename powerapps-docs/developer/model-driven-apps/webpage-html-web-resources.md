@@ -136,13 +136,14 @@ Because of the capability for the HTML in web resources to be changed by using t
 |security||For internal use only.|
 |tabSet||For internal use only.|
 
- If multiple values are passed in the data parameter, they will be automatically encoded. Logic must also be included to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing Multiple Values to a Web Resource Through the Data Parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) topic demonstrates one approach to address passing multiple parameter values.  
+ If multiple values are passed in the data parameter, they will be automatically encoded. Logic must also be included to decode the multiple parameters using script in your HTML web resource. The [Sample: Passing multiple values to a web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md) topic demonstrates one approach to address passing multiple parameter values.  
 
 ### See also
- [Web Resources](web-resources.md)   
- [Create Accessible Web Resources](create-accessible-web-resources.md)   
- [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   
- [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
- [Using Data (XML) Web Resources](data-xml-web-resources.md)   
- [Using Image (JPG, PNG, GIF) Web Resources](image-web-resources.md)   
- [Using Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)
+
+ [Web resources](web-resources.md)   
+ [Create accessible web resources](create-accessible-web-resources.md)   
+ [Using Style Sheet (CSS) web resources](css-web-resources.md)   
+ [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using Data (XML) web resources](data-xml-web-resources.md)   
+ [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
+ [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)

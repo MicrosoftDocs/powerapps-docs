@@ -82,29 +82,32 @@ function EnableRule()
  > [!NOTE]
 >  Promises-based rules will only work on Unified Interface, so they cannot be used if classic Web Client is still being used.
  ```JavaScript
-function EnableRule()
-{
+// Old synchronous style
+/*
+function EnableRule() {
+    const request = new XMLHttpRequest();
+    request.open('GET', '/bar/foo', false);
+    request.send(null);
+    return request.status === 200 && request.responseText === "true";
+}
+*/
+
+// New asynchronous style
+function EnableRule() {
     const request = new XMLHttpRequest();
     request.open('GET', '/bar/foo');
 
-    return new Promise((resolve, reject) =>
-    {
-        request.onload = function (e)
-        {
-            if (request.readyState === 4)
-            {
-                if (request.status === 200)
-                {
+    return new Promise(function(resolve, reject) {
+        request.onload = function (e) {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
                     resolve(request.responseText === "true");
-                }
-                else
-                {
+                } else {
                     reject(request.statusText);
                 }
             }
         };
-        request.onerror = function (e)
-        {
+        request.onerror = function (e) {
             reject(request.statusText);
         };
 
@@ -161,5 +164,5 @@ Uses the `<ValueRule>` element. Use this rule to check the value of a specific f
 
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define Ribbon Commands](define-ribbon-commands.md)   
- [Define Ribbon Display Rules](define-ribbon-display-rules.md)
+ [Define Ribbon commands](define-ribbon-commands.md)   
+ [Define Ribbon display rules](define-ribbon-display-rules.md)
