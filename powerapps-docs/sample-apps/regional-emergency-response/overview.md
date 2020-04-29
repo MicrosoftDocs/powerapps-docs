@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2020
+ms.date: 04/29/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -14,7 +14,7 @@ searchScope:
 ---
 # Regional Government Emergency Response and Monitoring - Power Platform solution for state and local governments
 
-The Regional Emergency Response sample solution provides a set of capabilities for regional medical organizations to collect and manage data for situational awareness from all the parent organizations and associated hospitals in their network. The data includes information about available beds, supplies, equipment, COVID-19 patients, and staffing.
+The Regional Government Emergency Response and Monitoring solution provides a set of capabilities for state and local governments to collect and visualize health system data from all the parent organizations and associated hospitals in their network or region to establish situational awareness during emergency responses. The data includes information about available beds, supplies, equipment, COVID-19 patients, and staffing.
 
 The main components of the Regional Government Emergency Response and Monitoring solution are:
 
