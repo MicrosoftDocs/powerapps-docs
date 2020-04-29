@@ -61,7 +61,7 @@ On extracting the .zip file, you will see the following in the extracted folder:
 
 |**Folder**  |**Description**  |
 |---------|---------|
-|**Package**     |  The folder contains the Package Deployer tool and the package that you will deploy later to set up the solution in your environment.       |
+|**Package**     |  Contains the Package Deployer tool and the package that you will deploy later to set up the solution in your environment.       |
 |**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting. More information: [Step 10: Publish the Power BI dashboard](#step-10-publish-the-power-bi-dashboard)        |
 
 ## Step 2: Sign up for Power Apps and create an environment
