@@ -176,7 +176,7 @@ Configure the following site settings and password reset policy for your Azure A
 
 ![Configure site settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step2.png "Configure site settings")
 
-- **Authority**<a name="authority"></a> - The issuer URL defined in the metadata of the sign-up and sign-in policy user flow.​
+- **Authority** - The issuer URL defined in the metadata of the sign-up and sign-in policy user flow.​
 <br> To get the issuer URL:
 
    1. Open the sign-up and sign-in user flow you created in [step 1](#step-1-configure-azure-active-directory-b2c-application). For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
@@ -194,7 +194,7 @@ Configure the following site settings and password reset policy for your Azure A
 - **Password reset policy ID** - Enter the name of the password reset user flow you created in [step 1](#step-1-configure-azure-active-directory-b2c-application). The name is prefixed with *B2C_1*.
 
 - **Valid issuers** - A comma-delimited list of issuer URLs for the sign-up and sign-in user flow and password reset user flow you created in [step 1](#step-1-configure-azure-active-directory-b2c-application). 
-<br> To get the issuer URLs for the sign-up and sign-in user flow, and password reset user flow, open each flow and then follow the steps under [Authority](#authority), earlier in this section.
+<br> To get the issuer URLs for the sign-up and sign-in user flow, and password reset user flow, open each flow and then follow the steps under **Authority**, earlier in this section.
 
 For more information about site settings, see [related site settings](azure-ad-b2c.md#related-site-settings).
 
