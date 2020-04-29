@@ -47,20 +47,24 @@ For detailed information about the US Government plans for Power Apps and Power 
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
 
 
-## Deploy the Hospital Emergency Response app
+## Step 1: Download the deployment package
 
-Perform the following steps to deploy the Hospital Emergency Response sample app for your organization.
+Download the latest deployment package (.zip) from <https://aka.ms/emergency-response-solution>.
 
-- [Step 1: Sign up for Power Apps and create an environment](#step-1-sign-up-for-power-apps-and-create-an-environment)
-- [Step 2: Install the app from Microsoft AppSource](#step-2-install-the-app-from-microsoft-appsource)
-- [Step 3: Update the mobile app branding and tracking level](#step-3-update-the-mobile-app-branding-and-tracking-level)
-- [Step 4: Bypass consent for mobile apps](#step-4-bypass-consent-for-mobile-apps)
-- [Step 5: Add Azure Application Insights key to mobile apps for telemetry (optional)](#step-5-add-azure-application-insights-key-to-mobile-apps-for-telemetry-optional)
-- [Step 6: Share canvas apps with users in your organization](#step-6-share-canvas-apps-with-users-in-your-organization)
-- [Step 7: Set your mobile app as hero and featured app](#step-7-set-your-mobile-app-as-hero-and-featured-app)
-- [Step 8: Share model-driven app with admins in your organization](#step-8-share-model-driven-app-with-admins-in-your-organization)
+Before extracting the .zip file, ensure that you unblock it.
 
-### Step 1: Sign up for Power Apps and create an environment
+1.	Right click the .zip file, select **Properties**.
+
+2.	In the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
+
+On extracting the .zip file, you will see the following in the extracted folder:
+
+|**Folder**  |**Description**  |
+|---------|---------|
+|**Package**     |  The folder contains the Package Deployer tool and the package that you will deploy later to set up the solution in your environment.       |
+|**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting. More information: [Step 10: Publish the Power BI dashboard](#step-10-publish-the-power-bi-dashboard)        |
+
+## Step 2: Sign up for Power Apps and create an environment
 
 If you don't already have Power Apps, sign up for Power Apps and purchase an appropriate license.
 
@@ -80,12 +84,20 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 3.  Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
-### Step 2: Install the app from Microsoft AppSource
+## Step 3: Install the app
 
 Follow the steps below to install Hospital Emergency Response app along with the configuration and sample data.
 
 > [!NOTE]
-> The installation process installs sample data for new installation only. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure your existing data isn't overwritten.
+> The configuration and sample data is installed only for new installation. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure that your existing data isn't overwritten.
+
+You can install the app from *either* of the following sources:
+
+- Microsoft AppSource. See [Option A: Install the app from Microsoft AppSource](#option-a-install-the-app-from-microsoft-appsource)
+
+- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-b-install-the-app-from-the-deployment-package)
+
+### Option A: Install the app from Microsoft AppSource
 
 1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Hospital Emergency Response".<br/>Alternatively, navigate directly to the app on AppSource using this link: <https://appsource.microsoft.com/product/dynamics-365/mscrm.pphersapp>
 
@@ -118,12 +130,59 @@ Follow the steps below to install Hospital Emergency Response app along with the
 
 Select the **Admin App** to open the model-driven app that lets you configure the rest of the deployment settings. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
 
+The admin app has a number of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to select a different area.
+
 > [!div class="mx-imgBorder"] 
 > ![Open Admin app](media/conf-admin-app-open.png "Open the Admin app")
 
+
+### Option B: Install the app from the deployment package
+
+1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
+
+2.  On the next screen, select **Continue**.
+
+3.  You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Deploy package](media/deploy-connect-to-environment.png "Deploy package")
+
+4.  Select **Login** to continue.
+
+5.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select an environment](media/deploy-select-environment.png "Select an environment")
+
+6.  On the next screen, select **Next.**
+
+7.  The next screen displays you the environment name where the package will be installed. Review the information and select **Next**.
+
+8.  The next screen validates if the package can be installed on your environment. Select **Next** to continue with the installation.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Validate environment](media/conf-validate-env.png "Validate environment")
+
+8.	The next screen displays the installation status of the package. After the installation is complete, select **Next**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Installation status](media/conf-package-install.png "Installation status")
+
+    > [!NOTE]
+    > It might take a while for the package installation to complete. 
+
+9.  On the next screen, select **Finish** to complete and close the setup.
+
+    The installation also adds the configuration and sample data for the Hospital Emergency app.
+
+Select the **Admin App** to open the model-driven app that lets you configure the rest of the deployment settings. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
+
 The admin app has a number of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to select a different area.
 
-### Step 3: Update the mobile app branding and tracking level
+> [!div class="mx-imgBorder"] 
+> ![Open Admin app](media/conf-admin-app-open.png "Open the Admin app")
+
+## Step 4: Update the mobile app branding and tracking level
 
 You can change the app icon, color scheme, or display name of the mobile apps to match the branding of your organization. You can also specify whether frontline workers can track information by location or facility using the mobile apps. You use **App** and **App Config** entities in the **Administration** area for these.
 
@@ -166,7 +225,7 @@ You can change the app icon, color scheme, or display name of the mobile apps to
 
 1.  Select **Save** in the lower-right corner to save your changes.
 
-### Step 4: Bypass consent for mobile apps
+## Step 5: Bypass consent for mobile apps
 
 You can bypass the consent prompt for each mobile app You must be a Tenant Admin to complete this step. Also, before you perform this step, you will need app ID of each mobile app (canvas app).
 
@@ -203,11 +262,11 @@ Next do the following:
 
 5.  Repeat steps 2 - 4 for each canvas app.
 
-### Step 5: Add Azure Application Insights key to mobile apps for telemetry (optional)
+## Step 6: Add Azure Application Insights key to mobile apps for telemetry (optional)
 
 Optionally, you can use Azure Application Insights to collect detailed telemetry for your mobile apps (canvas apps) to get insights on the app usage. For detailed information about this, see [Analyze app telemetry using Application Insights](https://docs.microsoft.com/powerapps/maker/canvas-apps/application-insights)
 
-### Step 6: Share canvas apps with users in your organization
+## Step 7: Share canvas apps with users in your organization
 
 For your frontline users to use and consume data using the canvas apps in their
 mobile devices, the apps must be shared with them. It's easier to use Azure AD
@@ -235,7 +294,7 @@ groups to easily share apps with groups of users.
 
 Detailed information about sharing your apps: [Share a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app)
 
-### Step 7: Set your mobile app as hero and featured app
+## Step 8: Set your mobile app as hero and featured app
 
 This step lets you set your mobile app as the hero and featured app within the **Power Apps** mobile app. You must be a Tenant Admin to complete this step.
 
@@ -276,7 +335,7 @@ Next, do the following:
 4.  Run PowerShell as an administrator and execute the .ps file you just created.
  
 
-### Step 8: Share model-driven app with admins in your organization
+## Step 9: Share model-driven app with admins in your organization
 
 For your admin users to use the admin app (model-driven app), it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
@@ -291,7 +350,7 @@ For your admin users to use the admin app (model-driven app), it must be shared 
 
 4. Specify the Azure AD group or admin users that you want to share this app with, assign the **Emergency Response Admin** security role, and select **Share**.
 
-## Publish the Power BI dashboard
+## Step 10: Publish the Power BI dashboard
 
 Publish the Power BI dashboard and share it with users in your organization so that they can use the dashboard for insights and decision making.
 
