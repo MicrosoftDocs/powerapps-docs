@@ -59,7 +59,7 @@ You can also view the identity providers from the portal details page.
 
     ![Select details](media/use-simplified-authentication-configuration/select-details.png "Select details")
 
-The details page displays the **Identity providers** section.<!--You'll need to remove your name from this graphic. -->
+The details page displays the **Identity providers** section.
 
 ![Portal details](media/use-simplified-authentication-configuration/portal-details.png "Portal details")
 
