@@ -1,18 +1,18 @@
 ---
 title: Overview of Regional Government Emergency Response and Monitoring solution for Power Platform | Microsoft Docs
-description: Provides an overview of Regional Government Emergency Response and Monitoring solution.
+description: Provides an overview of Regional Government Emergency Response and Monitoring solution for state and local governments.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2020
+ms.date: 04/29/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Regional Government Emergency Response and Monitoring solution - Power Platform solution for state and local governments
+# Regional Government Emergency Response and Monitoring - Power Platform solution for state and local governments
 
 The Regional Government Emergency Response and Monitoring solution provides a set of capabilities for state and local governments to collect and visualize health system data from all the parent organizations and associated hospitals in their network or region to establish situational awareness during emergency responses. The data includes information about available beds, supplies, equipment, COVID-19 patients, and staffing.
 
@@ -50,6 +50,6 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
 
 
-### Disclaimer 
+### Disclaimer
 
 This app is a sample and may be used with Microsoft Power Platform for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person. Sample data included in this app are for illustration only and are fictitious. No real association is intended or inferred.
