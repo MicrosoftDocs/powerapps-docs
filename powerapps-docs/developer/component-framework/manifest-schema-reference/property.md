@@ -44,7 +44,7 @@ The `of-type` attribute value must be one of the following:
 
 |Element|Description|
 |--|--|
-|[manifest](manifest.md)|[!INCLUDE [manifest-description](includes/manifest-description.md)]|
+|[control](control.md)|[!INCLUDE [control-description](includes/control-description.md)]|
 
 
 ## Example
