@@ -17,8 +17,8 @@ search.app:
 ---
 # Removing dependencies
 
-Dependencies are records created automatically by the solutions framework to prevent actions, that if executed unchecked, could cause problems. As components are changed and extended, dependencies are created to indicate for example that a Field is required for a Form to function.
-If you ever try to execute an action that will result in the deletion of that Field, that will cause the Form to stop working.
+Dependencies are records created automatically by the solutions framework to prevent actions, that if executed unchecked, could cause problems. As components are changed and extended, dependencies are created to indicate for example that a field is required for a form to function.
+If you ever try to execute an action that will result in the deletion of that field, that will cause the form to stop working.
 
 Dependencies exist to prevent required components from being deleted while one or more dependent components still have a reference to it.
 
@@ -57,7 +57,7 @@ First, it’s important to make clear that dependencies only prevent operations 
 
 The dependency dialog is where you can list the dependencies for the selected solution. It can be invoked by:
 
-- Clicking the button `Show Dependencies` in the solution's page.
+- Clicking the button **Show Dependencies** in the solution's page.
 - Trying to uninstall a solution and the platform detects that dependencies exist.
 
 For example:
@@ -66,7 +66,7 @@ For example:
 
 The **Dependency Details** dialog has 6 columns described below:
 
-- **Display name**: Friendly name of the required component. Each component may show slightly different data to make the identification easier. In the example figure you can see that the Entity has only its name, while the Field has its name and the name of parent Entity.
+- **Display name**: Friendly name of the required component. Each component may show slightly different data to make the identification easier. In the example figure you can see that the entity has only its name, while the field has its name and the name of parent entity.
 - **Name/Id**: Internal name of the required component.
 - **Type**: The type of the required component.
 - **Required by**: Friendly name of the component that requires it (the dependent component). If the component has a customization page, it turns into a link that opens that page.
@@ -169,14 +169,14 @@ But the Attribute (new_numberfield) is no longer listed, even if it had more lay
 
 ## Actions to remove an unmanaged dependency
 
-To remove unmanaged dependencies, you need to act directly on the components, not in the solutions they belong to. For example, if you want to remove the dependencies between an attribute and a Form, you must edit it in the Form Editor and remove the attribute from the Form. The dependency will be removed after you Save and Publish.
+To remove unmanaged dependencies, you need to act directly on the components, not in the solutions they belong to. For example, if you want to remove the dependencies between an attribute and a form, you must edit it in the Form Editor and remove the attribute from the form. The dependency will be removed after you Save and Publish.
 
 > [!NOTE]
 > You can also delete the dependent component. That action deletes all dependencies along with the component.
 
 To see the dependencies of a component, you need to locate it in the customizations page and click the **Show dependencies** button.
 
-For example, given a Field:
+For example, given a field:
 
 ![Show dependencies](media/solution-dependency-layers-and-dependencies-component-show-dependencies.png "Show dependencies")
 
@@ -184,8 +184,8 @@ The dialog has two distinct parts:
 
 ![Component dependencies](media/solution-dependency-layers-and-dependencies-component-dependency-dialog.png "Show Component")
 
-  - Dependent components: List of components that depend on the selected Field. In other words, components that will have this Field as the required component.
-  - Required components: List of components that this Field require in order to work. In other words, components that will have this Field as the dependent component.
+  - Dependent components: List of components that depend on the selected field. In other words, components that will have this F=field as the required component.
+  - Required components: List of components that this field require in order to work. In other words, components that will have this field as the dependent component.
 
 The most common scenarios: (Required and Dependent)
 
