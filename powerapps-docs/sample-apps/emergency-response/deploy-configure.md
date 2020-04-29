@@ -96,7 +96,7 @@ Follow the steps below to install Hospital Emergency Response app along with the
     > [!div class="mx-imgBorder"] 
     > ![AppSource](media/appsource-02.png "App on AppSource")
 
-5.  You'll be take to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
 
     > [!div class="mx-imgBorder"] 
     > ![AppSource](media/appsource-03.png "Monitor app installation progress")
