@@ -77,6 +77,10 @@ A quick view control on a model-driven app form displays data from a record that
 |**Quick View Form**|If the **Related entity** has any quick view forms you can select them here. Otherwise, select **New** to create one.<br /><br /> Select **Edit** to change the selected quick view form.|  
 |**Additional Properties**|You can specify the default rendering style by selecting the check box.|
 
+>[!NOTE] 
+> When adding a multiline text field to a quick view form it will always have height of one regardless of how the field control hieght is set.  This is to ensure propoer UI rendering to to maintain compactness. This is not how multiline text fields work on other forms as they auto expand based on the amount of text in them.
+
+
 ## Next steps
 
 [Use the Main form and its components](use-main-form-and-components.md)
