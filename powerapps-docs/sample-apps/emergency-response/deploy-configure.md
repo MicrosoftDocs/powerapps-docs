@@ -109,7 +109,7 @@ Follow the steps below to install Hospital Emergency Response app along with the
     > [!div class="mx-imgBorder"] 
     > ![New apps](media/conf-apps-new-apps.png "New apps")
 
-The app installation also installs the configuration and sample data for the Hospital Emergency app.
+The installation also add the configuration and sample data for the Hospital Emergency app.
 
 Select the **Admin App** to open the model-driven app that lets you configure the rest of the deployment settings. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
 
