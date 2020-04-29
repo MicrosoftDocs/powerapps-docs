@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2020
+ms.date: 04/28/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -34,7 +34,7 @@ To begin configuring an identity provider for your portal:
 
 1. Select your portal from the list of available apps.
 
-1. Select **Settings** from the top menu. You can also select **More Commands** (**...**)<!--Is it actually uppercase "Commands"? If not (it shouldn't be!), please change to lowercase throughout. -->, and then select **Settings**.
+1. Select **Settings** from the top menu. You can also select **More Commands** (**...**), and then select **Settings**.
 
     ![Select Settings](media/use-simplified-authentication-configuration/select-settings.png "Select Settings")
 
@@ -42,7 +42,7 @@ To begin configuring an identity provider for your portal:
 
     ![Authentication Settings](media/use-simplified-authentication-configuration/portal-settings-right-pane.png "Authentication Settings")
 
-You'll see a list of identity providers that you can configure.<!--You need to provide the list of identity providers in alt text or in the note following this graphic. Information should never exist only in a graphic, it always needs to be available in text form too for accessibility. -->
+You'll see a list of identity providers that you can configure.
 
 ![Identity providers](media/use-simplified-authentication-configuration/portal-authentication-settings.png "Identity providers")
 
@@ -55,7 +55,7 @@ You can also view the identity providers from the portal details page.
 
 1. Select your portal from the list of available apps.
 
-1. Select **Details** from top menu. You can also select **More Commands** (**...**) and then select **Details**.<!--You don't need to provide two ways to accomplish something. I assume you're just trying to fully describe the feature, but all these alternatives are unnecessary. -->
+1. Select **Details** from top menu. You can also select **More Commands** (**...**) and then select **Details**.
 
     ![Select details](media/use-simplified-authentication-configuration/select-details.png "Select details")
 
@@ -73,7 +73,7 @@ You can configure the following general authentication settings by selecting **A
 ![General authentication settings](media/use-simplified-authentication-configuration/general-authentication-settings.png "General authentication settings")
 
 - **External login** - When set to **Off**, disables and hides external account registration and sign in.
-<br>External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity provider, including<!--Is this what "And includes" meant?--> providers Facebook, LinkedIn, Google, Twitter, and Microsoft. Users sign up for access to the portal by selecting an external identity to register with the portal. After it's registered, an external identity has access to the same features as a local account. See [Manage external accounts](set-authentication-identity.md#manage-external-accounts) for related site settings.
+<br>External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity providers such as Facebook, LinkedIn, Google, Twitter, and Microsoft. Users sign up for access to the portal by selecting an external identity to register with the portal. After it's registered, an external identity has access to the same features as a local account. See [Manage external accounts](set-authentication-identity.md#manage-external-accounts) for related site settings.
 
 - **[Open registration](configure-portal-authentication.md#open-registration)** - When set to **Off**, disables and hides external account registration.
 
@@ -100,7 +100,7 @@ After you set an identity provider as the default, you can select **Remove as de
 Several identity providers are added by default that you can configure. You can add additional Azure Active Directory (Azure AD) B2C providers, or configure the available OAuth 2.0 providers such as LinkedIn and Microsoft.
 
 > [!NOTE]
-> - You can't change the configuration of the [local sign-in](configure-portal-authentication.md) and Azure AD providers when using this interface.
+> - You can't change the configuration of the [Local sign in](configure-portal-authentication.md) and Azure Active Directory providers when using this interface.
 > - You can have only one instance of each identity provider type for OAuth 2.0, such as **Facebook**, **LinkedIn**, **Google**, **Twitter**, and **Microsoft**.
 > - Updates to identity provider configuration might take a few minutes to be reflected on the portal. To apply your changes immediately, you can [restart the portal](../admin/admin-overview.md#open-power-apps-portals-admin-center).
 
@@ -119,14 +119,14 @@ You can select from the available list of providers, enter a name, and then sele
 ![Add a new provider](media/use-simplified-authentication-configuration/add-provider.png "Add a new provider")
 
 > [!NOTE]
-> The provider name you enter here is displayed on the sign-in page for users as the text on the button they use when selecting this provider.
+> The **Provider name** you enter here is displayed on the sign-in page for users as the text on the button they use when selecting this provider.
 
-To configure a provider, select **Click to Configure**<!--Can you ask someone in the UI design group to change this to "select"? "Click" is against Microsoft style.--> (or select **More Commands** (**...**), and then select **Configure**).
+To configure a provider, select **Click to Configure** (or select **More Commands** (**...**), and then select **Configure**).
 
 ![Configure a provider](media/use-simplified-authentication-configuration/configure-provider.png "Configure a provider")
 
 > [!NOTE]
-> You can use **Add provider** or **Configure** to add or configure a provider for the first time. After you configure a provider, you can edit it. You can also left-click<!--Should this be "right-click"? If you do mean "left-click," this should just be "select." --> the provider name hyperlink to open the configuration options quickly.
+> You can use **Add provider** or **Configure** to add or configure a provider for the first time. After you configure a provider, you can edit it. You can also select the provider name hyperlink to open the configuration options quickly.
 
 The configuration steps after you select **Next** depend on the type of identity provider you select. For example, the Azure Active Directory B2C configuration is different from how you set up LinkedIn. See the provider-specific sections later in this article to configure the provider of your choice.
 
@@ -176,33 +176,26 @@ Configure the following site settings and password reset policy for your Azure A
 
 ![Configure site settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step2.png "Configure site settings")
 
-- **Authority** - The issuer URL defined in the metadata of the sign-up and sign-in policy user flow.​
+- **Authority**<a name="authority"></a> - The issuer URL defined in the metadata of the sign-up and sign-in policy user flow.​
 <br> To get the issuer URL:
 
-   1. Open the sign-up and sign-in user flow you created in [step 1](#step-1-configure-azure-active-directory-b2c-application)<!--Just a side note: Because you're in step 2, you don't really need to link to step 1. -->. For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
-   1. Select **Run user flow**, and in the **Open** dialog box, select the URL at the top to open the configuration document. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as<!--Why is this here? Is it something your reader is likely to be more familiar with than the name of the document?--> the *OpenID well-known configuration endpoint*.
+   1. Open the sign-up and sign-in user flow you created in [step 1](#step-1-configure-azure-active-directory-b2c-application). For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
+   1. Select **Run user flow**, and in the **Open** dialog box, select the URL at the top to open the configuration document. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
    1. Copy the URL of the **Issuer** from the configuration document that opens in a new browser.  
 
 - **Client ID​** - Enter the **Application ID** of the Azure AD B2C application created in [step 1](#step-1-configure-azure-active-directory-b2c-application).
 
-
 - **Redirect URI** - Enter the portal URL. <br> You only need to change the redirect URI if you use a custom domain name.
 
-#### Password resets
+#### Password reset settings<a name="password-resets"></a>
 
 - **Default policy ID** - Enter the name of the sign-up and sign-in user flow you created in [step 1](#step-1-configure-azure-active-directory-b2c-application). The name is prefixed with *B2C_1*.
 
 - **Password reset policy ID** - Enter the name of the password reset user flow you created in [step 1](#step-1-configure-azure-active-directory-b2c-application). The name is prefixed with *B2C_1*.
 
 - **Valid issuers** - A comma-delimited list of issuer URLs for the sign-up and sign-in user flow and password reset user flow you created in [step 1](#step-1-configure-azure-active-directory-b2c-application). 
-<br> <!--Didn't they already get the issuer URL for the sign-up and sign-in user flow earlier in this step? I suggest just referring them to the earlier procedure for the password reset user flow; otherwise, they're going to think there's a difference between that procedure and this one.-->To get the issuer URL for the password reset user flow, open the password reset user flow and then follow the steps under "Authority," earlier in this section.
+<br> To get the issuer URLs for the sign-up and sign-in user flow, and password reset user flow, open each flow and then follow the steps under [Authority](#authority), earlier in this section.
 
-<!--
-   1. Open the sign-up and sign-in user flow in created in [step 1](#step-1-configure-azure-active-directory-b2c-application). For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
-   1. Select **Run user flow** and in the open dialog box, select the URL at the top to open the configuration document. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
-   1. Copy the URL of the **Issuer** from the configuration document that opens in a new browser.
-   1. Repeat the above steps for *password reset user flow*.
--->
 For more information about site settings, see [related site settings](azure-ad-b2c.md#related-site-settings).
 
 ### Step 3 - Configure additional settings
@@ -215,10 +208,9 @@ You have the option of configuring additional setting for the Azure AD B2C ident
 For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
 - **Login claims mapping** - List of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign in to the attributes in the contact record. <br> 
 For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **Application Claims** in your user flow and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
-- **External logout** - Enables or disables federated sign-out. When set to **On**<!--Assuming the screenshot is current?-->, users are redirected to the federated sign-out user experience when they sign out from the portal. When set to **Off**, users are only signed out from the portal.
+- **External logout** - Enables or disables federated sign-out. When set to **On**, users are redirected to the federated sign-out user experience when they sign out from the portal. When set to **Off**, users are only signed out from the portal.
 - **Contact mapping with email** - Specifies whether contacts are mapped to a corresponding email. When set to **On**, this setting associates a unique contact record with a matching email address, and then automatically assigns the external identity provider to the contact after the user successfully signs in.
 - **Registration Enabled**​ - Turn [open registration](configure-portal-authentication.md#open-registration) for your portal on or off. Setting this toggle to **Off** disables and hides external account registration.
-- **Post Logout Redirect Uri** - URL within the portal that the user is redirected to after sign-out.<!--This doesn't appear on the screenshot, is that okay? -->
 
 Select **Confirm** to view a summary of your configuration and complete the identity configuration.
 
@@ -237,7 +229,7 @@ The redirect URL is used by the Facebook app to redirect users to the portal aft
 **Portal site settings** for Facebook:
 
 - **Client ID** - A unique app ID generated by Facebook for your app.​
-- **Client Secret** -  The app secret for your Facebook app.​<!--To match most of the others, should this be "The app secret generated by Facebook for your app"?-->
+- **Client Secret** -  The app secret for your Facebook app.​
 
 To configure additional settings for Facebook, see [configure additional settings for OAuth 2 providers](#configure-additional-settings-for-oauth-2-providers).
 
@@ -254,7 +246,7 @@ The redirect URL is used by the LinkedIn app to redirect users to the portal aft
 **Portal site settings** for LinkedIn:
 
 - **Client ID** - A unique app ID generated by LinkedIn for your app.​
-- **Client Secret** -  The app secret for your LinkedIn app.​<!--As above: "The app secret generated by LinkedIn for your app"? -->
+- **Client Secret** -  The app secret for your LinkedIn app.​
 
 To configure additional settings for LinkedIn, see [configure additional settings for OAuth 2 providers](#configure-additional-settings-for-oauth-2-providers).
 

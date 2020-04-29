@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2020
+ms.date: 04/28/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -26,7 +26,7 @@ Following considerations apply when configuring additional entities for global s
 - Entity permissions must be associated with the **Anonymous Web Role** if you want to allow anonymous search for an entity.
 - Create a view named **Portal Search** for any additional entity you want to enable search for. More information: [Searchable fields in global search](search.md#fields-searchable-in-global-search)
 
-The explicit configuration explained above<!--Does this refer to all the items in the list above? SELF --> ensures that no records will accidentally be made available via global search.
+The explicit configuration explained above ensures that no records will accidentally be made available via global search.
 
 ### Site setting for additional entities
 
@@ -106,7 +106,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
     ![Add the Portal Search view](media/search-additional-entities/portal-search-view.png "Add the Portal Search view")
 
-1. Ensure appropriate columns are added to the view for search.<!--Should this be "Ensure that you've added the appropriate columns to the view for search", in case the reader is working on a different entity besides Order Product? -->
+1. Ensure appropriate columns are added to the view for search.
 
     ![Add columns](media/search-additional-entities/add-columns.png "Add columns")
 
@@ -118,7 +118,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** in the left navigation pane, and locate<!--Should this be "select"? I don't know what it means to locate the app.--> the **Portal Management** model-driven app.  
+1. Select **Apps** in the left navigation pane, and then select to open the **Portal Management** model-driven app.  
 
 1. Select **Entity Permissions** in the left navigation pane.
 
@@ -126,7 +126,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
     ![New Entity Permission record](media/search-additional-entities/new-entity-permission.png "[New Entity Permission record")
 
-1. Enter the name as **Northwind Products Read All**, and then select the appropriate **Scope** and the **Read** privilege<!--Can you ask someone in the UI design team to make this "Permissions" rather than "Privileges"? -->.
+1. Enter the name as **Northwind Products Read All**, and then select the appropriate **Scope** and the **Read** privilege.
 
     For this example, the **Global** scope is provided to the **nwind_products** entity.
 
@@ -160,7 +160,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
     ![Add a form component](media/search-additional-entities/form-component.png "Add a form component")
 
-1. Select the **Use existing** option on the right side of your workspace, choose the **View Products** form for the **nwind_products** entity, and then set **Mode** to **ReadOnly**.<!--Can these three things be done in the same part of the UI? I couldn't really see the graphic very clearly.-->
+1. Select the **Use existing** option on the right side of your workspace, choose the **View Products** form for the **nwind_products** entity, and then set **Mode** to **ReadOnly**.
 
     ![Set the mode](media/search-additional-entities/mode.png "Set the mode")
 
@@ -168,7 +168,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. Select **Apps** in the left navigation pane, and locate the<!--As above: should this be "select"? --> **Portal Management** model-driven app.  
+1. Select **Apps** in the left navigation pane, and select to open the **Portal Management** model-driven app.  
 
 1. Select **Site Marker** from the left navigation pane.
 

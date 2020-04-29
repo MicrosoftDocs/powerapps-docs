@@ -6,14 +6,14 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2020
+ms.date: 04/28/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 ---
 
 # Overview of themes in Power Apps portals
 
-In Power Apps portals<!--Via Cloud Style Guide, the feature name is plural lowercase "portals"; a "portal" is a single instance.-->, the **Enable basic theme** feature is set to **Off**. When you turn on this feature, you can use default themes called **Presets**. You can also create copies of the preset themes for additional customization.
+In Power Apps portals, the **Enable basic theme** feature is set to **Off**. When you turn on this feature, you can use default themes called **Presets**. You can also create copies of the preset themes for additional customization.
 
 In this article, you'll walk through the basic themes feature. For advanced theme customization, see [Edit CSS](edit-css.md).
 
@@ -36,9 +36,9 @@ In this article, you'll walk through the basic themes feature. For advanced them
 
     ![Enable basic themes](./media/theme-overview/enable-basic-theme.png "Enable basic themes")
 
-## Change a preset theme
+## Change theme for your portal
 
-You can set any existing theme in your portal to a default theme.<!--The title "Change a preset theme" is confusing to me. You aren't actually changing the preset, are you? It's more that you're changing a theme that already existed in your portal to one of these new preset, default themes? -->
+You can set any existing theme in your portal to a default theme.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -46,7 +46,7 @@ You can set any existing theme in your portal to a default theme.<!--The title "
 
 1. Select **More Commands** (**...**), and then select **Edit**.
 
-1. Select **Theme** from the components pane.<!--It would be good to turn this into a small graphic so we could use it inline. -->
+1. Select **Theme** from the components pane.
 
     ![Select theme icon](./media/theme-overview/select-theme.png "Select theme icon")
 
