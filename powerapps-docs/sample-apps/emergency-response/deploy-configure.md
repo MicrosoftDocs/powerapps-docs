@@ -99,24 +99,26 @@ You can install the app from *either* of the following sources:
 
 ### Option A: Install the app from Microsoft AppSource
 
-1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Hospital Emergency Response".<br/>Alternatively, navigate directly to the app on AppSource using this link: <https://appsource.microsoft.com/product/dynamics-365/mscrm.pphersapp>
+1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
 
-2.  On the Hospital Emergency Response App page, select **Get It Now**.
+2.  In the left pane, select **Environments**, and then select the name of the environment you created in the previous step.
 
-    > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/appsource-01.png "App on AppSource")
-
-3.  You are prompted to review the AppSource agreement terms. The dialog also shows the account that is being used to sign in. Select **Continue**. You might be prompted to verify your credentials.
-
-4.  On the next page, select your environment where you want to install the app. Select the legal terms and privacy statements check boxes, and select **Agree**.
+3. In the environment details page, select **Manage Dynamics 365 apps**.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/appsource-02.png "App on AppSource")
+    > ![Environment settings](media/ppac-env-setting.png "Environment settings")
 
-5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+3.  On the Dynamics 365 apps page, select **Install app**. Next select **Power Platform Emergency Response App** in the right pane, and select **Next**.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/appsource-03.png "Monitor app installation progress")
+    > ![AppSource](media/ppac-install-app.png "Install app")
+
+4.  On the next page, agree to teh terms, and select **Install**.
+
+5.  The installation will start, and you can monitor the progress of your app installation.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
 
     > [!IMPORTANT]
     > It might take a while for the app to install.
