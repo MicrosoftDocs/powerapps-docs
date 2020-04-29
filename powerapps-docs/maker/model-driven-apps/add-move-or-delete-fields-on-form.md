@@ -74,6 +74,9 @@ These are the properties available to configure a field when you create or edite
 |**Display options** | **Hide on phone** | The field can be hidden to render a condensed version of the form on phone screens. |
 |**Formatting** | **Field width** |  When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has. |
 
+[!NOTE] 
+> In the Unified Interface, label size is not used in the settings due to how a form ajusts width for all fields to ensure a proper UI experience for all view port sizes from very small to extra large.
+
 ## Move fields on a form
 You can move a field on a form using drag and drop or cut and paste actions. 
 
