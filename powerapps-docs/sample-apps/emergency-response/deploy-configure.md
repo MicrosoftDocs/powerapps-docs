@@ -123,7 +123,7 @@ The admin app has a number of entities where you can add and manage data for you
 
 ### Step 3: Update the mobile app branding and tracking level
 
-You can change the app icon, color scheme, or display name of the mobile apps to match the branding of your organization. YOu can also set whether the data entered through these apps is tracked at the location or facility level. You do these by using the **App** and **App Config** entities in the **Administration** area.
+You can change the app icon, color scheme, or display name of the mobile apps to match the branding of your organization. You can also specify whether frontline workers can track information by location or facility using the mobile apps. You use **App** and **App Config** entities in the **Administration** area for these.
 
 1.  Open the Admin App, and in the left navigation pane of the admin app, select **Administration** from the area picker, and then select **Apps**. This will show all the canvas app records you imported from the **App Import.xlsx** file.
 
