@@ -85,9 +85,9 @@ Follow the steps below to install Hospital Emergency Response app along with the
 > [!NOTE]
 > The installation process installs sample data for new installation only. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure your existing data isn't overwritten.
 
-1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Hospital Emergency Response".<br/>Alternatively, navigate to the app directly using this link: <https://appsource.microsoft.com/product/dynamics-365/mscrm.pphersapp>
+1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Hospital Emergency Response".<br/>Alternatively, navigate directly to the app on AppSource using this link: <https://appsource.microsoft.com/product/dynamics-365/mscrm.pphersapp>
 
-2.  On the Hospital Emergency App page, select **Get It Now**.
+2.  On the Hospital Emergency Response App page, select **Get It Now**.
 
     > [!div class="mx-imgBorder"] 
     > ![AppSource](media/appsource-01.png "App on AppSource")
