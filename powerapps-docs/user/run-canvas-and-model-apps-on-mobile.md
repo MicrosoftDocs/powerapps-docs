@@ -142,11 +142,5 @@ Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map 
 
 ![Close a model-driven app](media/pa_mobile_close_app.png "Close a model-driven app")
 
-## Known issues
 
-We're still working through some known issues and will release fixes for them over time. Make sure to manually update to the latest preview build as soon as it's available. 
-
-known issues:
-
-- Icons inside model-driven apps sometimes disappear.
 
