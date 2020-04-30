@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/12/2017
+ms.date: 04/30/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -399,7 +399,7 @@ The completed screen should now look like the following image (if the fields are
 ![Update Details screen finished](./media/sharepoint-scenario-build-app/04-06-06-edit-final.png)
 
 ## Step 7: Run the app
-Now that the app is complete, let's run it to see how it works. We'll add a link on the SharePoint site to the app. You will be able to run the app in the browser, but you might need to share the app for other people to run it. For more information, see [Share your apps](https://powerapps.microsoft.com/guided-learning/learning-manage-share-apps).
+Now that the app is complete, let's run it to see how it works. We'll add a link on the SharePoint site to the app. You will be able to run the app in the browser, but you might need to share the app for other people to run it. For more information, see [Share your app](share-app.md).
 
 ### Add a link to the app
 1. In the Office 365 app launcher, click or tap **PowerApps**.
