@@ -68,5 +68,5 @@ Explore [example mixed reality apps](mixed-reality-example-apps.md) or start ins
 - View 3D models with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
 - View 3D models in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
 - Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view pre-defined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
 

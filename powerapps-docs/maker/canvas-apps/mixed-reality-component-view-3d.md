@@ -146,7 +146,7 @@ Loading models as attachments or media content works through the binary storage 
 1. In the created list, click + Add column and then click Show/hide columns.
 1. Make sure Attachments is checked and press Apply at the top.
 1. Create a new item in the List and press Add attachments.
-1. Select your 3D model (GLB file).
+1. Select your 3D model (.glb file).
 1. Create a new item in the list for each 3D model that you want to have in your Power App.
 1. In a canvas Power App, add a Gallery.
 1. Set the gallery data source to the SharePoint list created earlier.
@@ -187,7 +187,7 @@ Loading models as attachments or media content works through the binary storage 
 ## Other mixed reality components
 - View 3D models in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
 - Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view pre-defined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
 
 ## Next steps
 Explore [example MR apps](mixed-reality-example-apps.md) and see what sorts of scenarios MR controls can help solve

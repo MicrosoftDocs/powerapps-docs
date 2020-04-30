@@ -108,7 +108,7 @@ TabIndex | Order in which items on the app screen be tabbed between. | Integer |
 ## Other augmented reality controls
 - View 3D models with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
 - Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
-- Create and view pre-defined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
+- Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
 
 ## Next steps
 Explore [example AR apps](augmented-reality-example-apps.md) and see what sorts of scenarios AR controls can help solve
