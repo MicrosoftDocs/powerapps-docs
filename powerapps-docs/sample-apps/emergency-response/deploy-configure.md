@@ -113,7 +113,7 @@ You can install the app from *either* of the following sources:
     > [!div class="mx-imgBorder"] 
     > ![AppSource](media/ppac-install-app.png "Install app")
 
-4.  On the next page, agree to teh terms, and select **Install**.
+4.  On the next page, agree to the terms, and select **Install**.
 
 5.  The installation will start, and you can monitor the progress of your app installation.
 
