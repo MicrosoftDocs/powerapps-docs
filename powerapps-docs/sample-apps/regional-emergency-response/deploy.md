@@ -119,15 +119,19 @@ After the portal is provisioned, it will appear in your **Apps** list in Power A
 
 After your portal is provisioned, install the Regional Government Emergency Response and Monitoring app to configure the portal your created earlier and install the admin app (model-driven app).
 
-You can install the app from *either* of the following sources:
+You can install the app by using one of the following 3 options:
 
-- Microsoft AppSource. See [Option A: Install the app from Microsoft AppSource](#option-a-install-the-app-from-microsoft-appsource)
+- Microsoft AppSource (for Power Apps US Govt customers only). See [Option A: Install the app from Microsoft AppSource (US Govt customers)](#option-a-install-the-app-from-microsoft-appsource-us-govt-customers)
 
-- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-b-install-the-app-from-the-deployment-package)
+- Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](#option-b-install-the-app-from-microsoft-appsource)
 
-### Option A: Install the app from Microsoft AppSource
+- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
 
-1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
+### Option A: Install the app from Microsoft AppSource (US Govt customers)
+
+1.  Sign in to Power Platform admin center. Use the appropriate URL to sign in:
+    - **GCC**: [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us)
+    - **GCC High**: [https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us).
 
 2.  In the left pane, select **Environments**, and then select the name of the environment you created earlier.
 
@@ -156,7 +160,36 @@ You can install the app from *either* of the following sources:
     > [!div class="mx-imgBorder"] 
     > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
 
-### Option B: Install the app from the deployment package
+### Option B: Install the app from Microsoft AppSource
+
+1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Regional Govt Emergency Response".<br/>Alternatively, navigate directly to the app on AppSource using this link: <https://appsource.microsoft.com/product/dynamics-365/mscrm.pprersapp>
+
+2.  On the Regional Govt Emergency Response and Monitoring page, select **Get It Now**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/deploy-appsource-01.png "App on AppSource")
+
+3.  You are prompted to review the AppSource agreement terms. The dialog also shows the account that is being used to sign in. Select **Continue**. You might be prompted to verify your credentials.
+
+4.  On the next page, select your environment where you want to install the app. Select the legal terms and privacy statements check boxes, and select **Agree**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select an environment](media/deploy-appsource-02.png "Select an environment")
+
+5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/deploy-appsource-03.png "Monitor app installation progress")
+
+    > [!IMPORTANT]
+    > It might take a while for the app to install.
+
+6. After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
+
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+
+### Option C: Install the app from the deployment package
 
 1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 

@@ -18,17 +18,6 @@ The Hospital Emergency Response app requires a small amount of setup to adapt to
 
 Estimated time to complete these steps: **35–40 minutes**.
 
-<!--
-## Demo: Deploy the Hospital Emergency Response app
-
-Watch how you can deploy and configure the Hospital Emergency Response app.
-
-<br/>
-
-> [!VIDEO https://www.youtube.com/embed/-1g44wNiuWI]
--->
-
-
 ## Service URLs for US Government customers
 
 The Hospital Emergency Response solution is also available for US Government customers. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
@@ -91,15 +80,19 @@ Follow the steps below to install Hospital Emergency Response app along with the
 > [!NOTE]
 > The configuration and sample data is installed only for new installation. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure that your existing data isn't overwritten.
 
-You can install the app from *either* of the following sources:
+You can install the app by using one of the following 3 options:
 
-- Microsoft AppSource. See [Option A: Install the app from Microsoft AppSource](#option-a-install-the-app-from-microsoft-appsource)
+- Microsoft AppSource (for Power Apps US Govt customers only). See [Option A: Install the app from Microsoft AppSource (US Govt customers)](#option-a-install-the-app-from-microsoft-appsource-us-govt-customers)
 
-- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-b-install-the-app-from-the-deployment-package)
+- Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](#option-b-install-the-app-from-microsoft-appsource)
 
-### Option A: Install the app from Microsoft AppSource
+- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
 
-1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
+### Option A: Install the app from Microsoft AppSource (US Govt customers)
+
+1.  Sign in to Power Platform admin center. Use the appropriate URL to sign in:
+    - **GCC**: [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us)
+    - **GCC High**: [https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us)
 
 2.  In the left pane, select **Environments**, and then select the name of the environment you created in the previous step.
 
@@ -128,17 +121,40 @@ You can install the app from *either* of the following sources:
     > [!div class="mx-imgBorder"] 
     > ![New apps](media/conf-apps-new-apps.png "New apps")
 
-    The installation also adds the configuration and sample data for the Hospital Emergency app.
+    The installation also adds the configuration and sample data for the Hospital Emergency Response app.
 
-Select the **Admin App** to open the model-driven app that lets you configure the rest of the deployment settings. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
+### Option B: Install the app from Microsoft AppSource
 
-The admin app has a number of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to select a different area.
+1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Hospital Emergency Response App".<br/>Alternatively, navigate directly to the app on AppSource using this link: <https://appsource.microsoft.com/product/dynamics-365/mscrm.pphersapp>
 
-> [!div class="mx-imgBorder"] 
-> ![Open Admin app](media/conf-admin-app-open.png "Open the Admin app")
+2.  On the Hospital Emergency Response App page, select **Get It Now**.
 
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/appsource-01.png "App on AppSource")
 
-### Option B: Install the app from the deployment package
+3.  You are prompted to review the AppSource agreement terms. The dialog also shows the account that is being used to sign in. Select **Continue**. You might be prompted to verify your credentials.
+
+4.  On the next page, select your environment where you want to install the app. Select the legal terms and privacy statements check boxes, and select **Agree**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select an environment](media/appsource-02.png "Select an environment")
+
+5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/appsource-03.png "Monitor app installation progress")
+
+    > [!IMPORTANT]
+    > It might take a while for the app to install.
+
+6.  After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will see new apps under **Apps**:
+
+    > [!div class="mx-imgBorder"] 
+    > ![New apps](media/conf-apps-new-apps.png "New apps")
+
+    The installation also adds the configuration and sample data for the Hospital Emergency Response app.
+
+### Option C: Install the app from the deployment package
 
 1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
@@ -165,7 +181,7 @@ The admin app has a number of entities where you can add and manage data for you
     > [!div class="mx-imgBorder"] 
     > ![Validate environment](media/conf-validate-env.png "Validate environment")
 
-8.	The next screen displays the installation status of the package. After the installation is complete, select **Next**.
+9.	The next screen displays the installation status of the package. After the installation is complete, select **Next**.
 
     > [!div class="mx-imgBorder"] 
     > ![Installation status](media/conf-package-install.png "Installation status")
@@ -173,13 +189,16 @@ The admin app has a number of entities where you can add and manage data for you
     > [!NOTE]
     > It might take a while for the package installation to complete. 
 
-9.  On the next screen, select **Finish** to complete and close the setup.
+10.  On the next screen, select **Finish** to complete and close the setup.
 
-    The installation also adds the configuration and sample data for the Hospital Emergency app.
+11.  After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will see new apps under **Apps**:
 
-Select the **Admin App** to open the model-driven app that lets you configure the rest of the deployment settings. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
+        > [!div class="mx-imgBorder"] 
+        > ![New apps](media/conf-apps-new-apps.png "New apps")
 
-The admin app has a number of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to select a different area.
+        The installation also adds the configuration and sample data for the Hospital Emergency Response app.
+
+Select the **Admin App** to open the model-driven app that lets you configure the rest of the deployment settings. The admin app has a number of entities where you can add and manage data for your hospital system. You can use the area picker in the lower part of the left navigation pane to select a different area.
 
 > [!div class="mx-imgBorder"] 
 > ![Open Admin app](media/conf-admin-app-open.png "Open the Admin app")
