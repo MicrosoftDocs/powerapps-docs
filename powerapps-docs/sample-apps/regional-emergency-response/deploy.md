@@ -717,6 +717,8 @@ The deployment steps are complete now. Business admins can refer to the [configu
 
 - View Power BI dashboard in your tenant.
 
-## Report issues
+## Issues and feedback
 
-To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.

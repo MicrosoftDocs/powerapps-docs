@@ -56,9 +56,11 @@ See also:
 |Use the portal to quickly view and add data for bed capacity, staffing, equipment, supplies, and COVID-19 patients.|Healthcare workers|[Use the Regional Government Emergency Response and Monitoring portal](portals-user.md)|
 
 
-## Report issues
+## Issues and feedback
 
-To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.
 
 
 ### Disclaimer
