@@ -41,7 +41,7 @@ From the **Solutions** area in [Power Apps](https://make.powerapps.com/?utm_sour
 
 <a name="BKMK_SolutionComponents"></a>   
 
-## View solution components
+## View and edit solution components
 A component represents something that you can potentially customize. Anything that can be included in a solution is a component. To view the components included in a solution, open the solution you want. The components are listed in the **Components** list. Notice that you can't edit components contained in a managed solution. 
 
 > [!div class="mx-imgBorder"] 
@@ -109,6 +109,7 @@ The **Common Data Services Default Solution** is associated with the **Common Da
 We recommend that you create your own solution publisher and specify a solution publisher prefix that will be meaningful. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md)
   
 ### Next steps  
-[Import, update, and export solutions](import-update-export-solutions.md) <br/>
-[Navigate to a specific solution](navigate-specific-solution.md)
+[Create a solution](create-solution.md) <br/>
+[Create components in a solution](use-solution-explorer.md#create-components-in-a-solution) <br />
+[Upgrade or update a solution](update-solutions.md)
  
