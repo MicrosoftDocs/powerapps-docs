@@ -13,6 +13,8 @@ ms.reviewer:
 
 # Simplified authentication and identity provider configuration (Preview)
 
+[This topic is pre-release documentation and is subject to change.]
+
 Setting up authentication is a core customization in any portal. Simplified identity provider configuration in Power Apps portals provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal for supported identity providers.
 
 > [!NOTE]
