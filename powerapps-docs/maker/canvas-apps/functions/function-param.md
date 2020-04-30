@@ -94,7 +94,6 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 1. Select your app and then select **Edit**.
 1. Select **Insert** from the menu and then select **Label**.
 1. Move the label to the bottom right of the screen.
-1. From the properties pane on the right-side, select **Color** as *white* and set **Border thickness** at *1*.
 1. Select **Text** property for the label from top left.
 1. Enter formula as ```Param("browser")```. You can also use a different parameter of your choice.
 
