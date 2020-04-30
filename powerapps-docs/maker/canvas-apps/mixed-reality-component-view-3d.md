@@ -45,7 +45,7 @@ You can test the component in the sample view in 3D app:
 
     ![](./media/augmented-3d/augmented-3d-template.png)
 
-The sample app lets you view and manipulate 3D objects in the real world. You'll need to [publish your app](save-publish-app.md) and then [open it on a mixed reality-capable device](../../user/run-app-client.md).
+The sample app lets you view and manipulate 3D objects. You'll need to [publish your app](save-publish-app.md) and then [open it on a mixed reality-capable device](../../user/run-app-client.md).
 
 ## Use the component
 
@@ -185,9 +185,9 @@ Loading models as attachments or media content works through the binary storage 
 
 
 ## Other mixed reality components
-- [View in mixed reality](mixed-reality-component-view-mr.md)
-- [View shape in mixed reality](mixed-reality-component-view-shape.md)
-- - [Measure in mixed reality](mixed-reality-component-measure-distance.md)
+- View 3D models in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
+- Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
+- Create and view pre-defined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
 
 ## Next steps
 Explore [example MR apps](mixed-reality-example-apps.md) and see what sorts of scenarios MR controls can help solve
