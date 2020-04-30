@@ -26,11 +26,9 @@ search.app:
    
 # Solutions overview  
 
-In Power Apps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more.  You create your own solutions, or you can get solutions from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV). 
+In Power Apps solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more.  You create your own solutions or you can get solutions from [AppSource](https://appsource.microsoft.com/). 
  
-To create or view the solutions in your environment, sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions** on the left navigation pane. 
-
-From the **Solutions** area you can create or import a solution, or see a solution history summary. Additionally, you can visit AppSource or launch solution explore by selecting **Switch to classic**. 
+From the **Solutions** area in [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) you can create or import a solution, or see a solution history summary. Additionally, you can visit AppSource or launch solution explore by selecting **Switch to classic**. 
 
 > [!div class="mx-imgBorder"] 
 > ![Solutions area](media/solutions-area.png) 
@@ -49,7 +47,7 @@ A component represents something that you can potentially customize. Anything th
 > [!div class="mx-imgBorder"] 
 > ![Components in solution](media/components-in-solution.png "Components in solution") 
 
-To view a list of component types that can be added to any solution, see [ComponentType Options](../../developer/common-data-service/reference/entities/solutioncomponent.md#componenttype-options).
+To view a list of component types that can be added to a solution, see [ComponentType Options](../../developer/common-data-service/reference/entities/solutioncomponent.md#componenttype-options).
   
 Some components are nested within other components. For example, an entity contains forms, views, charts, fields, entity relationships, messages, and business rules. Each of those components requires an entity to exist. A field can’t exist outside of an entity. We say that the field is dependent on the entity.   
   
