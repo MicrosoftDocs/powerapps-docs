@@ -125,7 +125,7 @@ You can install the app by using one of the following 3 options:
 
 - Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](#option-b-install-the-app-from-microsoft-appsource)
 
-- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
+- Deployment package that you downloaded earlier. See [Option C: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
 
 ### Option A: Install the app from Microsoft AppSource (US Govt customers)
 

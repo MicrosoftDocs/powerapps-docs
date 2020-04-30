@@ -29,7 +29,7 @@ The commercial version of the service URL is used throughout this article. If yo
 |-------------------------------------------|--------------------------------|
 | [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us](https://make.gov.powerapps.us) (GCC) <br/><br/>[https://make.high.powerapps.us](https://make.high.powerapps.us) (GCC High)                |
 | [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us) (GCC)<br/><br/>[https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us)  (GCC High)|
-| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us](https://app.powerbigov.us) (GCC)<br/><br/>[https://app.high.powerbigov.us](https://app.high.powerbigov.us) (GCC High) (GCC High)                 |
+| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us](https://app.powerbigov.us) (GCC)<br/><br/>[https://app.high.powerbigov.us](https://app.high.powerbigov.us) (GCC High)                 |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
@@ -86,7 +86,7 @@ You can install the app by using one of the following 3 options:
 
 - Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](#option-b-install-the-app-from-microsoft-appsource)
 
-- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
+- Deployment package that you downloaded earlier. See [Option C: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
 
 ### Option A: Install the app from Microsoft AppSource (US Govt customers)
 
