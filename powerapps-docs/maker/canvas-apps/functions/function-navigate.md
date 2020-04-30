@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/16/2019
+ms.date: 04/30/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -48,6 +48,8 @@ You can use **Navigate** to create or update context variables of the new screen
 Set the **[OnHidden](../controls/control-screen.md)** property of the old screen, the **[OnVisible](../controls/control-screen.md)** property of the new screen, or both to make additional changes during the transition. The **App.ActiveScreen** property will be updated to reflect the change.
 
 **Navigate** normally returns **true** but will return **false** if an error is encountered.
+
+Context variables for navigation are explained in the article [navigate between screens](../add-screen-context-variables.md#add-navigation).
 
 ## Back
 
@@ -115,3 +117,7 @@ When the **Back** function runs, the inverse transition is used by default. For 
 1. Select the button on each screen repeatedly to bounce back and forth.
 
 [Another example](../add-screen-context-variables.md)
+
+### See also
+
+[Add screen context variables](../add-screen-context-variables.md)

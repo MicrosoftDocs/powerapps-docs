@@ -1,6 +1,6 @@
 ---
-title: Use the Regional Hospital Emergency Response portal | Microsoft Docs
-description: Learn how to use the Regional Hospital Emergency Response portal.
+title: Use the Regional Government Emergency Response and Monitoring portal | Microsoft Docs
+description: Learn how to use the Regional Government Emergency Response and Monitoring portal as a healthcare worker.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -12,9 +12,9 @@ ms.reviewer: tapanm
 searchScope:
   - PowerApps
 ---
-# Use the Regional Hospital Emergency Response portal
+# Use the Regional Government Emergency Response and Monitoring portal
 
-Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Hospital Emergency Response portal, health care workers can quickly view and add data for ventilators, staffing, pending discharges, and COVID-19 related patients.
+Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Government Emergency Response and Monitoring portal, health care workers can quickly view and add data for ventilators, staffing, pending discharges, and COVID-19 related patients.
 
 ## Portal at a glance
 
@@ -22,7 +22,7 @@ Browse to the Power Apps portal to work with staffing, equipment, supplies, pati
 
 ![Portal at glance ](media/portal-user-at-glance.png)
 
-You can use latest mobile devices and web browsers when using Regional Hospital Emergency Response portal except Apple iPad.
+You can use latest mobile devices and web browsers when using Regional Government Emergency Response and Monitoring portal except Apple iPad.
 
 [!include[cc-getting-started](includes/cc-getting-started.md)]
 
@@ -30,7 +30,7 @@ You can use latest mobile devices and web browsers when using Regional Hospital 
 
 ## Portal components
 
-The Regional Hospital Emergency Response portal consists of the following components:
+The Regional Government Emergency Response and Monitoring portal consists of the following components:
 
 - **Bed capacity**  
   Collect details regarding bed licenses, capacity, acuteness, staffed beds, and surge data.
@@ -137,6 +137,8 @@ Submit COVID-19 specific details using the **COVID-19 stats** form:
 
 [!include[cc-general-options](includes/cc-general-options.md)]
 
-## Report issues
+## Issues and feedback
 
-To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.
