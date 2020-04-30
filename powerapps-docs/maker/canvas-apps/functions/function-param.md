@@ -76,7 +76,7 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 1. From the properties pane on the right-side, select **Color** as *white* and set **Border thickness** at *1*.
 1. Select the **Text** property from right-side and enter text as *Download User Guide*.
 1. From property list on top left, select **OnSelect**.
-1. Enter formula such as ```Download("https://download.microsoft.com/download/2/9/B/29B20383-302C-4517-A006-B0186F04BE28/surface-pro-4-user-guide-EN.pdf")```. 
+1. Enter formula such as ```Download("https://go.microsoft.com/fwlink/?linkid=827480")```. 
 
     ![Download example](media/function-param/download-example-onselect.png "Download example")
 
@@ -85,7 +85,7 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 1. Select the **Download User Guide** button to download the guide.
 
 > [!NOTE]
-> If the host server processing the download request supports *Range* header, the file opens in a new browser with multiple [HTTP 206 Partial Content](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) responses. Check host server capabilities if Download function causes the file to open in new tab instead of prompt to download.
+> Your browser settings determine whether to download the file or open the file directly in a new tab.
 
 ### Param
 
@@ -139,4 +139,4 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 
 ### See also
 
-[Canvas app formula reference](formula-reference.md)
+[Canvas app formula reference](../formula-reference.md)
