@@ -121,7 +121,7 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 1. Select **App** from the Tree view on left navigation.
 1. Select **OnStart** property on top left.
 1. Enter the formula such as ```If(Param("screen")="techspecs",Navigate(TechSpecs,Fade))```.
-
+ 
     ![Param example for navigation](media/function-param/param-example-screen.png "Param example for navigation")
 
     [If function](function-if.md) in [OnStart](object-app.md#onstart-property) property checks if parameter equals a certain value, in this case the value *techspecs*. And if it matches, the app navigates to *TechSpecs* screen.
