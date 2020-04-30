@@ -114,7 +114,7 @@ Based on the data displayed, you can see the dependent component belongs to a so
 To remove this dependency, you can either:
 
 - Edit the definition of the Model-driven App to remove any reference to the entity or its sub-components. Since model-driven apps support publishing, you must publish your changes.
-- Delete the Model-driven App
+- Delete the Model-driven App.
 
 > [!NOTE]
 > Uninstalling an unmanaged solution is not an option to remove this dependency, because unmanaged solutions are just means to group components.
@@ -136,10 +136,10 @@ Next, retry the uninstall.
 
   If it was not intentional, fixing the new version of the solution by adding the component back is the correct approach. To do that you have to:
 
-    1. In the target org, uninstall the staged solution (the solution that ends in _Upgrade).
-    2. In the source org, add the required component(s) back to the solution.
-    3. Export the new version
-    4. Retry the Upgrade
+    1. In the target organization, uninstall the staged solution (the solution that ends in _Upgrade).
+    2. In the source organization, add the required component(s) back to the solution.
+    3. Export the new version.
+    4. Retry the Upgrade.
 
   If the deletion is intentional, you must remove the dependency. The possible steps are the same ones outlined in the previous bullet.
 
@@ -169,12 +169,12 @@ But the Attribute (new_numberfield) is no longer listed, even if it had more lay
 
 ## Actions to remove an unmanaged dependency
 
-To remove unmanaged dependencies, you need to act directly on the components, not in the solutions they belong to. For example, if you want to remove the dependencies between an attribute and a form, you must edit it in the Form Editor and remove the attribute from the form. The dependency will be removed after you Save and Publish.
+To remove unmanaged dependencies, you need to act directly on the components, not in the solutions they belong to. For example, if you want to remove the dependencies between an attribute and a form, you must edit it in the Form Editor and remove the attribute from the form. The dependency will be removed after you select **Save** and **Publish**.
 
 > [!NOTE]
 > You can also delete the dependent component. That action deletes all dependencies along with the component.
 
-To see the dependencies of a component, you need to locate it in the customizations page and click the **Show dependencies** button.
+To see the dependencies of a component, you need to locate it in the customizations page and click **Show dependencies**.
 
 For example, given a field:
 
@@ -193,7 +193,7 @@ The most common scenarios: (Required and Dependent)
 
 To remove dependencies between fields (attributes) and workflows (processes) you need to locate the workflow in the **Customizations** page.
 
-With the workflow open, you need to find the reference to the component you no longer wish the workflow no longer would depend on. In this example you can see the field (Number Field) being referenced in a step:
+With the workflow open, you need to find the reference to the component you no longer wish the workflow would depend on. In this example you can see the field (Number Field) being referenced in a step:
 
 ![Edit workflow](media/solution-dependency-component-workflow.png "Edit workflow")
 
@@ -211,7 +211,7 @@ Remove both, save, and then publish the view.
 
 ## Entity and model-driven apps
 
-To remove dependencies between entities and model-driven apps (App Module) you need to locate the app in the **Apps** list.
+To remove dependencies between entities and model-driven apps (App Module) you need to locate the app in the **Apps** list of the modern UI.
 
 ![Apps List](media/solution-dependency-component-appmodule-01.png "Apps List")
 
