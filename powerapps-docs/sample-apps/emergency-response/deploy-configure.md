@@ -38,6 +38,9 @@ For detailed information about the US Government plans for Power Apps and Power 
 
 ## Step 1: Download the deployment package
 
+> [!IMPORTANT]
+> If you are a commercial version user, you can skip this step and use the AppSource option instead to install the app and Power BI dashboard. 
+
 Download the latest deployment package (.zip) from <https://aka.ms/emergency-response-solution>.
 
 Before extracting the .zip file, ensure that you unblock it.
