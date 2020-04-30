@@ -129,21 +129,21 @@ You can install the app from *either* of the following sources:
 
 1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
 
-2.  In the left pane, select **Environments**, and then select the name of the environment you created in the previous step.
+2.  In the left pane, select **Environments**, and then select the name of the environment you created earlier.
 
 3. In the environment details page, select **Manage Dynamics 365 apps**.
 
     > [!div class="mx-imgBorder"] 
     > ![Environment settings](media/ppac-env-setting.png "Environment settings")
 
-3.  On the Dynamics 365 apps page, select **Install app**. Next select **Power Platform Emergency Response App** in the right pane, and select **Next**.
+3.  On the Dynamics 365 apps page, select **Install app**. Next select **Regional Govt Emergency Response and Monitoring** in the right pane, and select **Next**.
 
     > [!div class="mx-imgBorder"] 
     > ![AppSource](media/ppac-install-app.png "Install app")
 
 4.  On the next page, agree to teh terms, and select **Install**.
 
-5.  The installation will start, and you can monitor the progress of your app installation.
+5.  The installation will start, and you can monitor the progress of your app installation in the Dynamics 365 apps page.
 
     > [!div class="mx-imgBorder"] 
     > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
