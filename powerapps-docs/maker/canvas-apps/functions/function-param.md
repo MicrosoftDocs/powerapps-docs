@@ -99,6 +99,7 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 
     ![Param example](media/function-param/param-example.png "Param example")
 
+1. Save and publish the app.
 1. Go to [Power Apps](https://make.powerapps.com).
 1. Select **Apps** from left navigation pane.
 1. Select your app and then select **Details**. 
@@ -106,7 +107,6 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 
     ![Web link](media/function-param/param-example-web-link.png "Web link")
 
-1. Save and publish the app.
 1. Open a new browser.
 1. Paste the app web link in the browser and append ```&browser=Microsoft%20Edge``` at the end.
 
