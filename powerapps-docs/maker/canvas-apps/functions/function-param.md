@@ -55,7 +55,7 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 1. From the properties pane on the right-side, select **Color** as *white* and set **Border thickness** at *1*.
 1. Select the **Text** property from right-side and enter text as *Surface tablets in news*.
 1. From property list on top left, select **OnSelect**.
-1. Enter formula such as ```Launch("https://www.bing.com/news/search","q","Microsoft Surface tablets")```.
+1. Enter formula as ```Launch("https://www.bing.com/news/search","q","Microsoft Surface tablets")```. You can also use any other URL, parameter and keywords of your choice.
 
     ![Launch example](media/function-param/launch-example-onselect.png "Launch example")
 
@@ -76,7 +76,7 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 1. From the properties pane on the right-side, select **Color** as *white* and set **Border thickness** at *1*.
 1. Select the **Text** property from right-side and enter text as *Download User Guide*.
 1. From property list on top left, select **OnSelect**.
-1. Enter formula such as ```Download("https://go.microsoft.com/fwlink/?linkid=827480")```. 
+1. Enter formula as ```Download("https://go.microsoft.com/fwlink/?linkid=827480")```. You can also use any other URL of your choice.
 
     ![Download example](media/function-param/download-example-onselect.png "Download example")
 
@@ -96,7 +96,7 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 1. Move the label to the bottom right of the screen.
 1. From the properties pane on the right-side, select **Color** as *white* and set **Border thickness** at *1*.
 1. Select **Text** property for the label from top left.
-1. Enter formula such as ```Param("browser")```.
+1. Enter formula as ```Param("browser")```. You can also use a different parameter of your choice.
 
     ![Param example](media/function-param/param-example.png "Param example")
 
@@ -120,8 +120,8 @@ In these examples, we used the **Product Showcase** tablet layout template. To c
 1. Close the app player and edit the app.
 1. Select **App** from the Tree view on left navigation.
 1. Select **OnStart** property on top left.
-1. Enter the formula such as ```If(Param("screen")="techspecs",Navigate(TechSpecs,Fade))```.
- 
+1. Enter the formula as ```If(Param("screen")="techspecs",Navigate(TechSpecs,Fade))```.  
+
     ![Param example for navigation](media/function-param/param-example-screen.png "Param example for navigation")
 
     [If function](function-if.md) in [OnStart](object-app.md#onstart-property) property checks if parameter equals a certain value, in this case the value *techspecs*. And if it matches, the app navigates to *TechSpecs* screen.
