@@ -119,15 +119,19 @@ After the portal is provisioned, it will appear in your **Apps** list in Power A
 
 After your portal is provisioned, install the Regional Government Emergency Response and Monitoring app to configure the portal your created earlier and install the admin app (model-driven app).
 
-You can install the app from *either* of the following sources:
+You can install the app by using one of the following 3 options:
 
-- Microsoft AppSource. See [Option A: Install the app from Microsoft AppSource](#option-a-install-the-app-from-microsoft-appsource)
+- Microsoft AppSource (for Power Apps US Govt customers only). See [Option A: Install the app from Microsoft AppSource (US Govt customers)](#option-a-install-the-app-from-microsoft-appsource-us-govt-customers)
 
-- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-b-install-the-app-from-the-deployment-package)
+- Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](#option-b-install-the-app-from-microsoft-appsource)
 
-### Option A: Install the app from Microsoft AppSource
+- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
 
-1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
+### Option A: Install the app from Microsoft AppSource (US Govt customers)
+
+1.  Sign in to Power Platform admin center. Use the appropriate URL to sign in:
+    - **GCC**: [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us)
+    - **GCC High**: [https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us).
 
 2.  In the left pane, select **Environments**, and then select the name of the environment you created earlier.
 
@@ -143,7 +147,7 @@ You can install the app from *either* of the following sources:
 
 4.  On the next page, agree to the terms, and select **Install**.
 
-5.  The installation will start, and you can monitor the progress of your app installation in the Dynamics 365 apps page.
+5.  The installation will start, and you can monitor the progress of your app installation on the Dynamics 365 apps page.
 
     > [!div class="mx-imgBorder"] 
     > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
@@ -156,7 +160,36 @@ You can install the app from *either* of the following sources:
     > [!div class="mx-imgBorder"] 
     > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
 
-### Option B: Install the app from the deployment package
+### Option B: Install the app from Microsoft AppSource
+
+1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Regional Govt Emergency Response".<br/>Alternatively, navigate directly to the app on AppSource using this link: <https://appsource.microsoft.com/product/dynamics-365/mscrm.pprersapp>
+
+2.  On the Regional Govt Emergency Response and Monitoring page, select **Get It Now**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/deploy-appsource-01.png "App on AppSource")
+
+3.  You are prompted to review the AppSource agreement terms. The dialog also shows the account that is being used to sign in. Select **Continue**. You might be prompted to verify your credentials.
+
+4.  On the next page, select your environment where you want to install the app. Select the legal terms and privacy statements check boxes, and select **Agree**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select an environment](media/deploy-appsource-02.png "Select an environment")
+
+5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/deploy-appsource-03.png "Monitor app installation progress")
+
+    > [!IMPORTANT]
+    > It might take a while for the app to install.
+
+6. After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
+
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+
+### Option C: Install the app from the deployment package
 
 1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
@@ -486,14 +519,12 @@ You can add a custom About page in your portal to add/present information or res
 4.  On the new webpage, make sure you use **about** in the **Partial URL** field in the right pane. You can use a name of your choice in the **Name** field; we are using **About Contoso**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Use about in the Partial URL](media/deploy-partial-url.png "Use about in the Partial URL")
-    <!-- ![](media/1bd99fe95d7618e898763df49abc72fe.png) -->
+    > ![Use about in the Partial URL](media/deploy-partial-url.png "Use about in the Partial URL")    
 
 5.  Click the left pane to edit the contents. You can either use the default editor or select the **\</\>** in the bottom-right corner to open the HTML editor.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit About Us page](media/deploy-edit-aboutus.png "Edit About Us page")
-    <!-- ![](media/21c5a7709b8824aff85dd8a8a2cd6182.png) -->
+    > ![Edit About Us page](media/deploy-edit-aboutus.png "Edit About Us page")    
 
 6.  After making the required changes to the About page, save it, and select **Sync Configuration** on the top-right corner.
 
@@ -505,7 +536,6 @@ Server-side synchronization enables you to sync emails in Common Data Service wi
 
 > [!div class="mx-imgBorder"] 
 > ![Set up email synchronization](media/deploy-email-synchronization.png "Set up email synchronization")
-<!-- ![](media/59e7ae8524dbd8950d8d32a08c627378.png) -->
 
 For detailed steps on setting server-side sync; see the following resources:
 
@@ -542,7 +572,6 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
         > [!div class="mx-imgBorder"] 
         > ![Set properties for Create Email](media/deploy-email-properties.png "Set properties for Create Email")
-        <!-- ![](media/4674cade4e71da24ccdad213324110be.png) -->
 
 6.  In the **Create Email** step definition page:
 
@@ -559,13 +588,12 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
         > [!div class="mx-imgBorder"] 
         > ![Update URL of your portal](media/deploy-update-url.png "Update URL of your portal")
-        <!-- ![](media/097a294cdee1a0aa24038e4738e78583.png) -->
+        
 
 3.  You will return to the process definition page. Save the changes and **Activate** the process.
 
     > [!div class="mx-imgBorder"] 
-    > ![Activate the process](media/deploy-activate-process.png "Activate the process")
-    <!-- ![](media/1226e92d156c0756f09ad131563b8cf3.png) -->
+    > ![Activate the process](media/deploy-activate-process.png "Activate the process")    
 
 ## Step 11: Fix the Send Password Reset To Contact process
 
@@ -684,6 +712,8 @@ The deployment steps are complete now. Business admins can refer to the [configu
 
 - View Power BI dashboard in your tenant.
 
-## Report issues
+## Issues and feedback
 
-To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.
