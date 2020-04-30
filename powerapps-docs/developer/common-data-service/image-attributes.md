@@ -2,7 +2,7 @@
 title: "Image attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about image attributes that store image data, supporting attributes, retrieving image data, and Uploading image data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 02/11/2020
+ms.date: 04/27/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -19,7 +19,7 @@ search.app:
 
 Certain system entities and all custom entities support images. Those entities that do support images can contain both a thumbnail and a full-size primary image. The thumbnail image can be seen in the web application when viewing the entity's form data. There can be multiple image attributes in an entity instance but there can be only one primary image. However, you can change the primary image from one image to another by setting [IsPrimaryImage](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage) for that attribute to `true`. Each full-sized image attribute is limited to 30 MB in size. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the entity image attribute is `EntityImage`. More information: [Entity images](/dynamics365/customer-engagement/developer/introduction-entities#entity-images).
 
-Thumbail images and image metadata are stored in Common Data Service, which includes the information needed to retrieve the full image. Full images are stored in file storage on the Azure blob to reduce data storage consumption.
+Thumbnail images and image metadata are stored in Common Data Service, which includes the information needed to retrieve the full image. Full images are stored in file storage on the Azure blob to reduce data storage consumption.
 
 Web API (REST) | .NET API (SOAP) 
 ------- | -------
@@ -27,6 +27,9 @@ Web API (REST) | .NET API (SOAP)
 IsPrimaryImage, MaxHeight, MaxWidth | [IsPrimaryImage](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.isprimaryimage?view=dynamics-general-ce-9#Microsoft_Xrm_Sdk_Metadata_ImageAttributeMetadata_IsPrimaryImage), [MaxHeight](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.maxheight?view=dynamics-general-ce-9), [MaxWidth](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.imageattributemetadata.maxwidth?view=dynamics-general-ce-9)
 
 In addition to image attributes, custom entities support zero or more file attributes that can contain any file data. These file attributes can contain a much larger amount of data than image attributes. For more information see [File attributes](file-attributes.md).
+
+> [!NOTE]
+> The ability to store more than one image attribute in an entity instance, storage of image data in an Azure blob, a maximum image size of 30MB, and file attributes are supported in <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion> 9.0.45.329 or greater and Web API version 9.1 or greater.
 
 <a name="BKMK_SupportingAttributes"></a>   
 ## Supporting attributes  

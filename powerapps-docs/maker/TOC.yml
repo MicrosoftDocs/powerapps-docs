@@ -853,6 +853,8 @@
       items:
       - name: Configure pipeline using classic editor
         href: ./canvas-apps/test-studio-classic-pipeline-editor.md
+      - name: Configure pipeline using YAML
+        href: ./canvas-apps/test-studio-yaml-pipeline.md
   - name: Debug an app with canvas app Monitor
     href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
@@ -1644,9 +1646,7 @@
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
 - name: AI Builder
-  items:
-  - name: Use AI Builder in Power Apps
-    href: ../use-ai-builder.md
+  href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
   - name: Crisis communication
@@ -1661,7 +1661,7 @@
       href: ../sample-apps/emergency-response/configure-data-reporting.md
     - name: Use the mobile app
       href: ../sample-apps/emergency-response/use.md
-  - name: Regional Emergency Response
+  - name: Regional Government Emergency Response and Monitoring
     items:
     - name: Overview
       href: ../sample-apps/regional-emergency-response/overview.md
