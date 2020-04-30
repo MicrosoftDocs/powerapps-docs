@@ -33,12 +33,10 @@ Legend:
 1. **Model-driven apps**
 2. **Canvas apps**
 
-**To sign up for the Power Apps mobile preview**
+**Install Power Apps mobile**
 
-1. [Install Power Apps for iOS](https://go.microsoft.com/fwlink/?linkid=2125171) or [install Power Apps for Android](https://go.microsoft.com/fwlink/?linkid=2125172).
-2. If you've already installed the app, the app you installed will be replaced by the preview version of the app.
-3. Make sure to manually update to the latest version available, to benefit from the latest improvements. 
-3. After you've installed the app, you can start testing. For any feedback, please reach out to us at [pamobsup@microsoft.com](mailto:pamobsup@microsoft.com). 
+To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
+
 
 ## Open Power Apps, and sign in
 
