@@ -27,7 +27,3 @@ search.app:
 - View 3D models in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
 - Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 
-
-
-## Next steps
-Explore [example AR apps](augmented-reality-example-apps.md) and see what sorts of scenarios AR controls can help solve

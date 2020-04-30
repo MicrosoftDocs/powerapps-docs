@@ -189,5 +189,3 @@ Loading models as attachments or media content works through the binary storage 
 - Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
 
-## Next steps
-Explore [example MR apps](mixed-reality-example-apps.md) and see what sorts of scenarios MR controls can help solve

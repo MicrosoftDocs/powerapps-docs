@@ -21,9 +21,6 @@ You can use the **View in MR** component in your app to let users see how a part
 
 The component creates a button in your app. When app users click the button, it overlays a selected 3D object (in the .glb file format) or 2D image (in .jpg or .png file formats) onto the live camera feed of the device. 
 
-- Blah
-- Blahblah
-- Moreblahs
 
 >[!IMPORTANT]
 >Your 3D objects must be in the .glb file format.  
@@ -33,9 +30,9 @@ To use the component, you need to [enable the mixed reality (MR) features for ea
 
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
->![TIP]
->The MR controls work best in well-lit environments with flat-textured surfaces. 
->When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions.
+>[!TIP]
+>The MR controls work best in well-lit environments with flat-textured surfaces.  
+>When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions.  
 >If tracking fails, exit and enter the MR view to reset the tracking and try again.
 
 ## Explore the sample app
@@ -98,7 +95,7 @@ DisplayMode | The mode to use for data cards and controls within the component. 
 TabIndex | Order in which items on the app screen be tabbed between. | Integer | **Advanced**
 
 
->![CAUTION]
+>[!CAUTION]
 >How does it find the font?
 
 
@@ -110,5 +107,4 @@ TabIndex | Order in which items on the app screen be tabbed between. | Integer |
 - Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
 
-## Next steps
-Explore [example AR apps](augmented-reality-example-apps.md) and see what sorts of scenarios AR controls can help solve
+
