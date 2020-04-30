@@ -111,7 +111,7 @@ You can install the app from *either* of the following sources:
 3.  On the Dynamics 365 apps page, select **Install app**. Next select **Power Platform Emergency Response App** in the right pane, and select **Next**.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/ppac-install-app.png "Install app")
+    > ![Install app](media/ppac-install-app.png "Install app")
 
 4.  On the next page, agree to the terms, and select **Install**.
 
