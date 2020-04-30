@@ -106,7 +106,7 @@ The system tracks these dependencies between solutions. If you try to install a 
 
 The **Common Data Services Default Solution** is associated with the **Common Data Service Default Publisher**. The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items. 
 
-We recommend that you create your own solution publisher and specify a solution publisher prefix so that it will be more meaningful. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md)
+We recommend that you create your own solution publisher and specify a solution publisher prefix that will be meaningful. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md)
   
 ### Next steps  
 [Import, update, and export solutions](import-update-export-solutions.md) <br/>
