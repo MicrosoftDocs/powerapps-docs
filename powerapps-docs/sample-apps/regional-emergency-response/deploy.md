@@ -79,8 +79,8 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 2.  Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
-    >[!IMPORTANT] 
-    >While creating the database, if you select a security group for the database, the apps can be shared only with users that are members of the security group.
+    > [!IMPORTANT] 
+    > While creating the database, if you select a security group for the database, the apps can be shared only with users that are members of the security group.
 
 3.	Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
@@ -115,9 +115,48 @@ After the portal is provisioned, it will appear in your **Apps** list in Power A
   > [!IMPORTANT]
   > Wait for the portal to be provisioned before proceeding to the next step.
 
-## Step 4: Install the package
+## Step 4: Install the app
 
-After your portal is provisioned, follow these steps to install the package that will configure the portal and install the admin app (model-driven app).
+After your portal is provisioned, install the Regional Government Emergency Response and Monitoring app to configure the portal your created earlier and install the admin app (model-driven app).
+
+You can install the app from *either* of the following sources:
+
+- Microsoft AppSource. See [Option A: Install the app from Microsoft AppSource](#option-a-install-the-app-from-microsoft-appsource)
+
+- Deployment package that you downloaded earlier. See [Option B: Install the app from the deployment package](#option-b-install-the-app-from-the-deployment-package)
+
+### Option A: Install the app from Microsoft AppSource
+
+1.  Sign in to [Power Platform admin center](https://aka.ms/ppac).
+
+2.  In the left pane, select **Environments**, and then select the name of the environment you created earlier.
+
+3. In the environment details page, select **Manage Dynamics 365 apps**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Environment settings](media/ppac-env-setting.png "Environment settings")
+
+3.  On the Dynamics 365 apps page, select **Install app**. Next select **Regional Govt Emergency Response and Monitoring** in the right pane, and select **Next**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/ppac-install-app.png "Install app")
+
+4.  On the next page, agree to the terms, and select **Install**.
+
+5.  The installation will start, and you can monitor the progress of your app installation in the Dynamics 365 apps page.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
+
+    > [!IMPORTANT]
+    > It might take a while for the app to install.
+
+6.  After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
+
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+
+### Option B: Install the app from the deployment package
 
 1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
@@ -146,14 +185,14 @@ After your portal is provisioned, follow these steps to install the package that
 
 9.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
 
-1.  After the installation is complete, select **Next**.
+10. After the installation is complete, select **Next**.
 
-2.  On the next screen, select **Finish** to complete and close the setup.
+11.  On the next screen, select **Finish** to complete and close the setup.
 
-After the package is installed, you will find a new admin app in your **Apps** list.
+12. After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
 
-  > [!div class="mx-imgBorder"] 
-  > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
 
 ## Step 5: Configure and publish Power BI dashboard
 
@@ -589,14 +628,12 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 3.  On the Settings page, select the drop-down arrow next to **Settings** and select **Processes**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Assign web roles to new users](media/deploy-assign-webroles.png "Assign web roles to new users")
-    <!-- ![](media/2bc8c159c5350c976a7230beb18c080f.png) -->
+    > ![Assign web roles to new users](media/deploy-assign-webroles.png "Assign web roles to new users")    
 
 4.  On the **Processes** page, search for “Assign Web”, and ensure that the **Assign Web Roles to New Users** process is enabled.
 
     > [!div class="mx-imgBorder"] 
-    > ![Ensure process is enabled](media/deploy-process-enabled.png "Ensure process is enabled")
-    <!-- ![](media/ace6171711ce07587d949ef28e494119.png) -->
+    > ![Ensure process is enabled](media/deploy-process-enabled.png "Ensure process is enabled")    
 
 5.  If it’s not enabled, select the process name to open the record, and then select **Activate**. Confirm to activate the process.
 

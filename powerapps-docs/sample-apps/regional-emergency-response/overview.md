@@ -26,6 +26,14 @@ The main components of the Regional Government Emergency Response and Monitori
     - Regional organization admins can view the dashboard in their Power BI tenant.
     - Parent organization users can view the dashboard in the web portal.
 
+<!--## Demo: Quick overview
+
+Watch a quick overview of the solution.
+
+<br/>
+
+> [!VIDEO https://www.youtube.com/embed/4WaniuC7pWs] -->
+
 ## Licensing requirements
 
 - Power Apps plan along with Power Apps portal capacity
