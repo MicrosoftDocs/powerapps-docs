@@ -147,7 +147,7 @@ You can install the app by using one of the following 3 options:
 
 4.  On the next page, agree to the terms, and select **Install**.
 
-5.  The installation will start, and you can monitor the progress of your app installation in the Dynamics 365 apps page.
+5.  The installation will start, and you can monitor the progress of your app installation on the Dynamics 365 apps page.
 
     > [!div class="mx-imgBorder"] 
     > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
@@ -519,14 +519,12 @@ You can add a custom About page in your portal to add/present information or res
 4.  On the new webpage, make sure you use **about** in the **Partial URL** field in the right pane. You can use a name of your choice in the **Name** field; we are using **About Contoso**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Use about in the Partial URL](media/deploy-partial-url.png "Use about in the Partial URL")
-    <!-- ![](media/1bd99fe95d7618e898763df49abc72fe.png) -->
+    > ![Use about in the Partial URL](media/deploy-partial-url.png "Use about in the Partial URL")    
 
 5.  Click the left pane to edit the contents. You can either use the default editor or select the **\</\>** in the bottom-right corner to open the HTML editor.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit About Us page](media/deploy-edit-aboutus.png "Edit About Us page")
-    <!-- ![](media/21c5a7709b8824aff85dd8a8a2cd6182.png) -->
+    > ![Edit About Us page](media/deploy-edit-aboutus.png "Edit About Us page")    
 
 6.  After making the required changes to the About page, save it, and select **Sync Configuration** on the top-right corner.
 
@@ -538,7 +536,6 @@ Server-side synchronization enables you to sync emails in Common Data Service wi
 
 > [!div class="mx-imgBorder"] 
 > ![Set up email synchronization](media/deploy-email-synchronization.png "Set up email synchronization")
-<!-- ![](media/59e7ae8524dbd8950d8d32a08c627378.png) -->
 
 For detailed steps on setting server-side sync; see the following resources:
 
@@ -575,7 +572,6 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
         > [!div class="mx-imgBorder"] 
         > ![Set properties for Create Email](media/deploy-email-properties.png "Set properties for Create Email")
-        <!-- ![](media/4674cade4e71da24ccdad213324110be.png) -->
 
 6.  In the **Create Email** step definition page:
 
@@ -592,13 +588,12 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
         > [!div class="mx-imgBorder"] 
         > ![Update URL of your portal](media/deploy-update-url.png "Update URL of your portal")
-        <!-- ![](media/097a294cdee1a0aa24038e4738e78583.png) -->
+        
 
 3.  You will return to the process definition page. Save the changes and **Activate** the process.
 
     > [!div class="mx-imgBorder"] 
-    > ![Activate the process](media/deploy-activate-process.png "Activate the process")
-    <!-- ![](media/1226e92d156c0756f09ad131563b8cf3.png) -->
+    > ![Activate the process](media/deploy-activate-process.png "Activate the process")    
 
 ## Step 11: Fix the Send Password Reset To Contact process
 
