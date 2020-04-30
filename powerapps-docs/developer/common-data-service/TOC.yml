@@ -303,6 +303,8 @@
     items:
     - name: Dependency tracking for solution components
       href: dependency-tracking-solution-components.md
+    - name: Removing dependencies
+      href: removing-dependencies.md
     - name: Maintain managed solutions
       href: maintain-managed-solutions.md
     - name: Organize your solutions
