@@ -424,6 +424,8 @@ Similarly, you can hover over the timeline chart to view date-specific numbers i
 
 [!include[cc-general-options](includes/cc-general-options.md)]
 
-## Report issues
+## Issues and feedback
 
-To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.
