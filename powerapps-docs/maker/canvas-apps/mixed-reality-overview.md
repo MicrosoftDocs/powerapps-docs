@@ -25,9 +25,9 @@ Components are groups of controls that can answer the need for a specific scenar
 
 You can read more about components and how to build your own in [the Power Apps developer library](/powerapps/developer/component-framework/custom-controls-overview).
 
-The following pre-built components can be used to solve your mixed reality scenarios:
+The following pre-built components can be used for mixed reality scenarios:
 - [View in 3D](mixed-reality-component-view-3d.md)
-- [View in mixed reality](mixed-reality-component-view-ar.md)
+- [View in mixed reality](mixed-reality-component-view-mr.md)
 - [Measure in measure reality](mixed-reality-component-measure-distance.md)
 - [View shape in mixed reality](mixed-reality-component-view-shape.md)
 
@@ -37,6 +37,7 @@ The following pre-built components can be used to solve your mixed reality scena
 2. If you don't have one already, you will need to [create an environment with Common Data Service instance installed](/power-platform/admin/create-environment). You will need to have system administrator privileges for this step.
 3. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
 4. You'll need a mixed reality-capable device. Any [ArCore capable device](https://developers.google.com/ar/discover/supported-device) is supported. 
+5. You must use a modern web browser when creating the app. Any Chromium-based browser (such as Microsoft Edge or Google Chrome) will work. Internet Explorer is not supported.
 
 ### Enable the mixed reality features for each app
 
@@ -65,7 +66,7 @@ For each app you create, you need to enable the mixed reality features:
 Explore [example mixed reality apps](mixed-reality-example-apps.md) or start installing the components in your apps:
 
 - View 3D models with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
-- View 3D models in the real workld with the **[View in mixed reality](mixed-reality-component-view-ar.md)** component.
+- View 3D models in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
 - Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view pre-defined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
 

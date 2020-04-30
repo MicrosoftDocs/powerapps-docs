@@ -25,10 +25,12 @@ You can display a single 3D object, or you can let the user see [multiple object
 
 >[!IMPORTANT]
 >Your 3D objects must be in the .glb file format.  
->You can use the [AR Import Tool](/dynamics365/mixed-reality/import-tool/) to convert from a variety of industry 3D formats into .glb.
+>You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
 
 
-To use the component, you need to [enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
+To use the component, you need to [enable the mixed reality (MR) features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in. 
+
+Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
 ## Explore the sample app
 
@@ -43,13 +45,17 @@ You can test the component in the sample view in 3D app:
 
     ![](./media/augmented-3d/augmented-3d-template.png)
 
-The sample app lets you view and manipulate 3D objects in the real world. You'll need to [publish your app](save-publish-app.md) and then [open it on on a mixed reality-capable device](../../user/run-app-client.md).
+The sample app lets you view and manipulate 3D objects in the real world. You'll need to [publish your app](save-publish-app.md) and then [open it on a mixed reality-capable device](../../user/run-app-client.md).
 
 ## Use the component
 
 Insert the component into your app as you normally would for any other control or component.
 
-With an app open for editing in the Power Apps https://create.powerapps.com studio, you can select the component directly or drag and drop it onto an app screen.
+With an app open for editing in the Power Apps https://create.powerapps.com studio:
+
+1. Open the **Insert** tab.
+2. Expand **Media**.
+3. Select the component **View in 3D** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
 You can modify the component with a number of properties.
 
@@ -179,10 +185,9 @@ Loading models as attachments or media content works through the binary storage 
 
 
 ## Other mixed reality components
-- [View in mixed reality](mixed-reality-component-view-ar.md)
-- [Measure in mixed reality - distance](mixed-reality-component-measure-distance.md)
-- [Measure in mixed reality - advanced](mixed-reality-component-measure-advanced.md)
+- [View in mixed reality](mixed-reality-component-view-mr.md)
 - [View shape in mixed reality](mixed-reality-component-view-shape.md)
+- - [Measure in mixed reality](mixed-reality-component-measure-distance.md)
 
 ## Next steps
-Explore [example AR apps](mixed-reality-example-apps.md) and see what sorts of scenarios AR controls can help solve
+Explore [example MR apps](mixed-reality-example-apps.md) and see what sorts of scenarios MR controls can help solve
