@@ -28,9 +28,7 @@ Estimated time to complete these steps: 35–40 minutes.
 
 ## Service URLs for US Government customers
 
-There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants than the commercial version. The commercial version of the service URLs is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here
-
-The commercial version of the service URL is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
+There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants than the commercial version. The commercial version of the service URLs is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
 
 | **Commercial version URL**                | **US Government version URL**  |
 |-------------------------------------------|--------------------------------|
@@ -44,6 +42,9 @@ For detailed information about the US Government plans for Power Apps and Power 
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
 
 ## Step 1: Download the deployment package
+
+> [!IMPORTANT]
+> If you are a commercial version user, you can skip this step and use the AppSource option instead to install the app and Power BI dashboard. However, the deployment package also contains the sample data that you might need to import the data later.
 
 Download the latest deployment package (.zip) from <https://aka.ms/rer-solution>.
 
