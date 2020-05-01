@@ -35,20 +35,6 @@ Make sure to also [review the prerequisites for using MR components](mixed-reali
 >When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions.  
 >If tracking fails, exit and enter the MR view to reset the tracking and try again.
 
-## Explore the sample app
-
-You can test the component in the sample app:
-
-1. Go to https://create.powerapps.com to open the app studio.
-2. On the homepage, select either **Phone layout** or **App layout** under **App templates**.
-
-    ![](./media/augmented-overview/augmented-template.png)
-
-1. Select the **App name** app, confirm the right location for the storage of the sample data file (this will default to your currently logged in OneDrive account), and select **Use**.
-
-    ![](./media/augmented-3d/augmented-3d-template.png)
-
-The sample app lets you view and manipulate 3D objects in the real world. You'll need to [publish your app](save-publish-app.md) and then [open it on a mixed reality-capable device](../../user/run-app-client.md).
 
 
 ## Use the component

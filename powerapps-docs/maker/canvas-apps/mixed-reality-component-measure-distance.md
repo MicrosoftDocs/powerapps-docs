@@ -20,6 +20,12 @@ You can use the **Measure in MR** component in your app to let users measure dis
 
 The component creates a button in your app. When app users click the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distance is shown directly on the live camera feed.
 
+An example of how the component works inside an app is shown in the following video:
+
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vyoW]
+
+
 When the user exits the component, the measurements that were taken are captured in the **Measurements** and **MeasurementsDetailed** properties so they can be saved or stored.
 
 To use the component, you need to [enable the mixed reality (MR) features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in. 
