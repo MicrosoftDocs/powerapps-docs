@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: Use the View in 3D component in Power Apps
+description: View 3D models in Power Apps.
 author: iaanw
 manager: shellha
 ms.service: powerapps
@@ -21,7 +21,7 @@ search.app:
 
 Add 3D content to your canvas apps. Use the **View in 3D** component to rotate and zoom into the model with simple gestures.
 
-You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](#define-the-location-for-3d-objects).
+You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](#define-where-the-3d-content-is-stored).
 
 
 
@@ -49,7 +49,7 @@ You can modify the component with a number of properties.
 
 ### Properties
 
-The following properties can be found on the component's **View in 3D** pane on the **Properties** and **Advanced** tabs.
+The following properties are on the component's **View in 3D** pane on the **Properties** and **Advanced** tabs.
 
 ![](./media/augmented-3d/augmented-3d-viewer-controls.png)
 
@@ -66,7 +66,7 @@ Background fill | Set the background color for the component. | Color picker | *
 
 **[Height](./controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
-**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
 
 **[Visible](./controls/properties-core.md)** – Whether a control appears or is hidden.
 

@@ -1,13 +1,13 @@
 ---
-title: 
-description: 
+title: Use the View in MR component in Power Apps
+description: View 3D models and 2D images in the real world with augmented reality features in Power Apps.
 author: iaanw
 manager: shellha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 3/19/2020
+ms.date: 5/1/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -50,7 +50,7 @@ You can modify the component with a number of properties.
 
 ### Properties
 
-The following properties can be defined and configured in the component's **View in MR** pane on the **Properties** and **Advanced** tabs.
+The following properties are on the component's **View in MR** pane on the **Properties** and **Advanced** tabs.
 
 ![](./media/augmented-view-mr/augmented-view-mr-properties.png)
 
@@ -60,7 +60,7 @@ Property | Description | Type | Location
 - | - | - | -
 Text | Label for the button | String | Properties (also in **Advanced**)
 Display type | Whether the button shows just an icon, text, or both | Drop-down selection | Properties (also in **Advanced**)
-Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li></ul><br/>See [Define the location for 3D models](mixed-reality-component-view-3d.md#define-the-location-for-3d-models) in the **View in 3D** component's topic for more information. | Not applicable | **Properties** (also in **Advanced**)
+Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li></ul><br/>See [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic for more information. | Not applicable | **Properties** (also in **Advanced**)
 Object width | Width of the displayed image or 3D content | Integer | **Properties** (also in **Advanced**)
 Object height | Height of the displayed image or 3D content | Integer | **Properties** (also in **Advanced**)
 Object depth | The three-dimensional depth of the 3D content. | Integer | **Properties** (also in **Advanced**)
@@ -117,7 +117,7 @@ Photos | The photos captured during the mixed reality session. | | Not applicabl
 
 **[PressedFill](./controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
 
 **[TextAlignment](./controls/properties-text.md)** - The alignment of the text: **Center**, **Left**, **Right**, or Justify
 
@@ -129,9 +129,9 @@ Photos | The photos captured during the mixed reality session. | | Not applicabl
 
 **[Width](./controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or the screen if there's no parent container).
 
-**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).
 
 ## Other mixed reality controls
 

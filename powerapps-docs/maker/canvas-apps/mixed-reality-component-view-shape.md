@@ -1,6 +1,6 @@
 ---
-title: 
-description: 
+title: Use the View shape in MR component in Power Apps
+description: View a predefined digital 3D shape in the real world with augmented reality features in Power Apps.
 author: iaanw
 manager: shellha
 ms.service: powerapps
@@ -45,7 +45,7 @@ You can modify the component with a number of properties.
 
 ### Properties
 
-The following properties can be defined and configured in the component's **View shape in MR** pane on the **Properties** and **Advanced** tabs.
+The following properties are on the component's **View shape in MR** pane on the **Properties** and **Advanced** tabs.
 
 ![](./media/augmented-view-shape/augmented-view-shape-properties.png)
 
@@ -111,7 +111,7 @@ Photos | The photos captured during the mixed reality session. | | Not applicabl
 
 **[PressedFill](./controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
 
-**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
 
 **[TextAlignment](./controls/properties-text.md)** - The alignment of the text: **Center**, **Left**, **Right**, or Justify
 
@@ -123,9 +123,9 @@ Photos | The photos captured during the mixed reality session. | | Not applicabl
 
 **[Width](./controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or the screen if there's no parent container).
 
-**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).
 
 ## Other mixed reality controls
 
