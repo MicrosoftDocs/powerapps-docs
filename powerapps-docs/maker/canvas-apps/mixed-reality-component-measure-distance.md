@@ -16,6 +16,8 @@ search.app:
 ---
 # Take measurements in mixed reality
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
+
 You can use the **Measure in MR** component in your app to let users measure distance, area, and volume. During measurement, you create two-dimensional and three-dimensional polygons that can be used to confirm how a certain-sized object would fit within a space.
 
 The component creates a button in your app. When app users click the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distance of measured segments are shown directly on the live camera feed.
@@ -30,7 +32,7 @@ When the user exits the component, the measurements that were taken are captured
 
 Screenshots taken during the mixed reality experience are stored in the **Photos** property for viewing within the app.
 
-To use the component, you need to [enable the mixed reality (MR) features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
+To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
