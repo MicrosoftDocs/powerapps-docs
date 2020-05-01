@@ -51,7 +51,7 @@ You can test the component in the sample app:
 The sample app lets you view and manipulate 3D objects in the real world. You'll need to [publish your app](save-publish-app.md) and then [open it on a mixed reality-capable device](../../user/run-app-client.md).
 
 
-# Use the component
+## Use the component
 
 Insert the component into your app as you normally would for any other button control or component.
 
@@ -94,9 +94,9 @@ Tooltip | Descriptive text that appears when a user navigates to the component. 
 DisplayMode | The mode to use for data cards and controls within the component. `DisplayMode.Edit` allows users to edit the component's forms and controls, `DisplayMode.View` sets the component to read only | String | **Advanced**
 TabIndex | Order in which items on the app screen be tabbed between. | Integer | **Advanced**
 
-
 >[!CAUTION]
 >How does it find the font?
+
 
 
 
