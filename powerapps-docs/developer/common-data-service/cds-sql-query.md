@@ -16,13 +16,22 @@ search.app:
   - D365CE
 ---
 
-# Use SQL to query data
+# Use SQL to query data (Preview)
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 A SQL data connection is available on the Common Data Service endpoint. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
+> [!IMPORTANT]
+> - This is a preview feature.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
 ## Applications support
 
-The SQL data connection is available in Power BI Desktop through the **Data** > **Entities** > **Analyze in Power BI** button within the Power Apps maker experience. If you do not have this button in your Power Apps environment, then you do not yet have access to the SQL connection feature. More information: <link to related maker topic>
+You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the SQL connection feature to analyze data in Power BI Desktop. More information: [TODO: link to related maker topic]
+
+> [!NOTE]
+> If you don't have the **Analyze in Power BI** option in your Power Apps environment, you don't yet have access to the SQL connection feature.
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Common Data Service endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
@@ -64,9 +73,9 @@ The list of supported SQL operations includes:
 - UNIONs and JOINs
 - Filtering
 
-Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. CDS option sets are represented as \<OptionSet>Name and \<OptionSet>Label in a result set.
+Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. Common Data Service option sets are represented as \<OptionSet>Name and \<OptionSet>Label in a result set.
 
-The following CDS datatypes are not supported with the SQL connection: binary, image,
+The following Common Data Service datatypes are not supported with the SQL connection: binary, image,
 ntext, sql_variant, varbinary, virtual, hierarchyid, managedproperty, file, xml, party list, timestamp.
 
 ### See also
