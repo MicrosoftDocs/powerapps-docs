@@ -46,7 +46,7 @@ You can modify the component with a number of properties.
 
 ### Properties
 
-The following properties can be defined and configured in the component's **View in MR** pane on the **Properties** and **Advanced** tabs. 
+The following properties can be defined and configured in the component's **View shape in MR** pane on the **Properties** and **Advanced** tabs. 
 
 ![](./media/augmented-view-shape/augmented-view-shape-properties.png)
 
@@ -56,10 +56,9 @@ Property | Description | Type | Location
 - | - | - | -
 Text | Label for the button | String | Properties (also in **Advanced**)
 Display type | Whether the button shows just an icon, text, or both | Drop-down selection | Properties (also in **Advanced**)
-Source | Data source that identifies the .glb file to display. <br/>Within **model-driven apps**, the **View in 3D** component is bound to a *SingleLine.URL* field property. This means that you can only add the component to a *SingleLine.URL* field on the form. An example is the **Website** field on the **Account** entity. <br/>Within **canvas apps**, the **View in 3D** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li></ul>See [Define the location for 3D objects](mixed-reality-component-view-3d.md#define-the-location-for-3d-objects) in the **View in 3D** component's topic for more information. | Not applicable | **Properties** (also in **Advanced**)
-Object width | Width of the 3D object. | Integer | **Properties** (also in **Advanced**)
-Object height | Height of the 3D object. | Integer | **Properties** (also in **Advanced**)
-Object depth | The three-dimensional depth of the 3D object. | Integer | **Properties** (also in **Advanced**)
+Shape width | Width of the cube. | Integer | **Properties** (also in **Advanced**)
+Shape height | Height of the cube. | Integer | **Properties** (also in **Advanced**)
+Shape depth | The three-dimensional depth of the cube. | Integer | **Properties** (also in **Advanced**)
 Unit of measurement | The measurement unit used for the width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
 Visible | Whether the component is shown or not. | Boolean | **Properties** (also in **Advanced**)
 Position | X is the horizontal position of the component on the app screen. 0 is the leftmost edge of the screen. <br/>Y is the vertical position of the component on the app screen. 0 is the topmost edge of the screen. | Pixels | **Properties** (also in **Advanced** as individual X and Y values)
@@ -72,12 +71,6 @@ FillColor | Color of the button | RGBA or HTML hexadecimal color codes | **Advan
 Tooltip | Descriptive text that appears when a user navigates to the component. | String | **Advanced**
 DisplayMode | The mode to use for data cards and controls within the component. `DisplayMode.Edit` allows users to edit the component's forms and controls, `DisplayMode.View` sets the component to read only | String | **Advanced**
 TabIndex | Order in which items on the app screen be tabbed between. | Integer | **Advanced**
-
-
-
-
-
-
 
 
 ## Other augmented reality controls
