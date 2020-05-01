@@ -31,7 +31,7 @@ The following pre-built components can be used for mixed reality scenarios:
 
 - [View in 3D](mixed-reality-component-view-3d.md)
 - [View in mixed reality](mixed-reality-component-view-mr.md)
-- [Measure in measure reality](mixed-reality-component-measure-distance.md)
+- [Measure in mixed reality](mixed-reality-component-measure-distance.md)
 - [View shape in mixed reality](mixed-reality-component-view-shape.md)
 
 > [!NOTE]
@@ -40,7 +40,7 @@ The following pre-built components can be used for mixed reality scenarios:
 ## Prerequisites
 
 1. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
-2. You'll need a mixed reality-capable device. Any [ARCore capable device](https://developers.google.com/ar/discover/supported-devices) is supported.
+2. You'll need a mixed reality-capable device. Any [ARCore capable device](https://developers.google.com/ar/discover/supported-devices) is supported, as are [certain Apple iOS devices](https://www.apple.com/augmented-reality/).
 3. Use a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
 
 ### Enable the mixed reality features for each app

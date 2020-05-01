@@ -19,37 +19,25 @@ search.app:
 
 Add 3D content to your canvas apps. Use the **View in 3D** component to rotate and zoom into the model with simple gestures.
 
-You can display a single 3D object, or you can let the user see [multiple objects by connecting the component to the **Gallery** control](#define-the-location-for-3d-objects).
+You can display a single 3D model, or you can let the user select from a gallery of 3D models [by connecting the component to the **Gallery** control](#define-the-location-for-3d-objects).
 
 ![](./media/augmented-3d/augmented-3d-viewer.png)
 
->[!NOTE]
->Your 3D content must be in the .glb file format. You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
+>[!IMPORTANT]
+>Your 3D content must be in the .glb file format.  
+>You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
 
 To use the component, you need to [enable the mixed reality (MR) features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
-## Explore the sample app
 
-You can test the component in the sample view in 3D app:
-
-1. Go to https://create.powerapps.com to open the app studio.
-2. On the homepage, select either **Phone layout** or **App layout** under **App templates**.
-
-    ![](./media/augmented-overview/augmented-template.png)
-
-1. Select the **App name** app, confirm the right location for the storage of the sample data file (this will default to your currently logged in OneDrive account), and select **Use**.
-
-    ![](./media/augmented-3d/augmented-3d-template.png)
-
-The sample app lets you view and manipulate 3D objects. You'll need to [publish your app](save-publish-app.md) and then [open it on a mixed reality-capable device](../../user/run-app-client.md).
 
 ## Use the component
 
 Insert the component into your app as you normally would for any other control or component.
 
-With an app open for editing in the Power Apps https://create.powerapps.com studio:
+With an app open for editing in the [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Media**.
@@ -90,7 +78,7 @@ Background fill | Set the background color for the component. | Color picker | *
 
 You can set the source for 3D content as a direct URL to a .glb file, as a base64-encoded URI, or as attachments or media content.
 
-### Load objects from an URL
+### Load models from an URL
 
 The **Source** property can be an URL that points to a 3D model file (.glb).
 
@@ -98,14 +86,14 @@ You will not be able to view a 3D model in your app if the file resides on a ser
 
 You can use the following services to host and obtain a CORS-compliant URL.
 
-**To use Dropbox:**
+**To use Dropbox**
 
 1. Upload your file to Dropbox as you normally would.
 1. Select the **Share** button.
 1. Generate a public download link, for example *https://www.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb?dl=0*.
 1. Replace **www** in the URL with **dl**, and remove **?dl=0** at the end. You now have a direct access URL, for example *https://dl.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb*.
 
-**To use GitHub:**
+**To use GitHub**
 
 1. Ensure that your git repo is set to **Public**.
 1. Navigate to your file. For example *https://github.com/microsoft/experimental-pcf-control-assets/blob/master/robot_arm.glb*.
@@ -118,14 +106,14 @@ The **Source** property can be a base64-encoded 3D model data URI that is in the
 
 The following are two common ways you can create a base64-encoded URI of your model.
 
-**To use Power Automate:**
+**To use Power Automate**
 
 Power Automate can convert files to base64 using the dataUri(base64(*file content*)) expression. For example, if you want to store .glb files in a SharePoint Document Library, you could do the following to load them in power apps using the View In 3D:
 
 1. Create a **SharePoint Document Library** and a **SharePoint List**. The list should have a column which is of type **multiple line text**.
 1. From the **Document Library**, create a new flow using the **When a new file is added in SharePoint, complete a custom action** template.
 1. Add a new step to **Get file content from SharePoint**, setting **File Identifier** to **Identifier**.
-1. Add a new step to **Create item from Sharepoint**, setting **List Name** to the SharePoint list you created earlier, and the **Title** to the multiple line text column, with the following expression as the URI:  
+1. Add a new step to **Create item from SharePoint**, setting **List Name** to the SharePoint list you created earlier, and the **Title** to the multiple line text column, with the following expression as the URI:  
     `concat('data:base64,', Last(split(dataUri(base64(body('Get_file_content'))), ',')))`  
 
     ![Convert files with SharePoint](./media/augmented-3d/augmented-3d-convert-flow.png "Convert files with SharePoint")
@@ -152,7 +140,7 @@ Loading models as attachments or media content works through the binary storage 
 1. Set the gallery data source to the SharePoint list created earlier.
 1. Add the View In 3D control and in the Advanced tab set the Src property to First(Gallery1.Selected.Attachments).Value
 
-**To use Excel Online:**
+**To use Excel Online**
 
 1. Create an Excel Online workbook on OneDrive where you've also stored your .glb files.
 
@@ -169,7 +157,6 @@ Loading models as attachments or media content works through the binary storage 
 
 ## Known constraints
 
-- The **View In 3D** component only supports the .glb file format. You will need to [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/).
 - The security architecture of Power Apps requires HTTPS links, not HTTP.
 - The server that hosts the document must not require authentication and must be [CORS-compliant](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing).
 

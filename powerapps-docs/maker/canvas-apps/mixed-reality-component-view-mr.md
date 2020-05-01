@@ -19,7 +19,7 @@ search.app:
 
 You can use the **View in MR** component in your app to let users see how a particular item might fit within a specified space.
 
-The component creates a button in your app. When app users click the button, it overlays a selected 3D object (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
+The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
 
 >[!IMPORTANT]
 >Your 3D content must be in the .glb file format.  
@@ -36,7 +36,7 @@ Make sure to also [review the prerequisites for using MR components](mixed-reali
 
 Insert the component into your app as you normally would for any other button control or component.
 
-With an app open for editing in the Power Apps https://create.powerapps.com studio:
+With an app open for editing in the [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
@@ -58,7 +58,7 @@ Property | Description | Type | Location
 - | - | - | -
 Text | Label for the button | String | Properties (also in **Advanced**)
 Display type | Whether the button shows just an icon, text, or both | Drop-down selection | Properties (also in **Advanced**)
-Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li></ul><br/>See [Define the location for 3D objects](mixed-reality-component-view-3d.md#define-the-location-for-3d-objects) in the **View in 3D** component's topic for more information. | Not applicable | **Properties** (also in **Advanced**)
+Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li></ul><br/>See [Define the location for 3D models](mixed-reality-component-view-3d.md#define-the-location-for-3d-models) in the **View in 3D** component's topic for more information. | Not applicable | **Properties** (also in **Advanced**)
 Object width | Width of the displayed image or 3D content | Integer | **Properties** (also in **Advanced**)
 Object height | Height of the displayed image or 3D content | Integer | **Properties** (also in **Advanced**)
 Object depth | The three-dimensional depth of the 3D content. | Integer | **Properties** (also in **Advanced**)

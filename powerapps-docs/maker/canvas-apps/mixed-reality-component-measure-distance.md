@@ -41,7 +41,7 @@ Make sure to also [review the prerequisites for using MR components](mixed-reali
 
 Insert the component into your app as you normally would for any other button component.
 
-With an app open for editing in the [Power Apps studio](https://preview.create.powerapps.com):
+With an app open for editing in the [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.

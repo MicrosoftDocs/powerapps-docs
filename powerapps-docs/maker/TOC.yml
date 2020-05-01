@@ -309,22 +309,14 @@
             items:
             - name: Mixed reality components
               href: ./canvas-apps/mixed-reality-overview.md
-            - name: View and manipulate 3D objects
+            - name: View and manipulate 3D models
               href: ./canvas-apps/mixed-reality-component-view-3d.md
             - name: View predefined shapes in mixed reality
               href: ./canvas-apps/mixed-reality-component-view-shape.md
-            - name: View 3D objects and 2D images in mixed reality
+            - name: View 3D models and 2D images in mixed reality
               href: ./canvas-apps/mixed-reality-component-view-mr.md
             - name: Measure in mixed reality
               href: ./canvas-apps/mixed-reality-component-measure-distance.md
-          - name: Add geospatial components
-            items:
-            - name: Geospatial components
-              href: ./canvas-apps/geospatial-overview.md
-            - name: Input address
-              href: ./canvas-apps/geospatial-component-input-address.md
-            - name: Map
-              href: ./canvas-apps/geospatial-component-map.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Working with gallery
