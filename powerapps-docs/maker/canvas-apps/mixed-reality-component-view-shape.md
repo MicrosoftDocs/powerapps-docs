@@ -20,21 +20,18 @@ You can use the **View shape in MR** component in your app to let users see a si
 
 The component creates a button in your app. When app users click the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the component in Power Apps.
 
-
-To use the component, you need to [enable the mixed reality (MR) features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in. 
+To use the component, you need to [enable the mixed reality (MR) features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
 >[!TIP]
->The MR controls work best in well-lit environments with flat-textured surfaces.  
->When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions.  
->If tracking fails, exit and enter the MR view to reset the tracking and try again.
+> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
 
 ## Use the component
 
 Insert the component into your app as you normally would for any other button control or component.
 
-With an app open for editing in the Power Apps https://create.powerapps.com studio:
+With an app open for editing in the [Power Apps studio](https://preview.create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
@@ -46,7 +43,7 @@ You can modify the component with a number of properties.
 
 ### Properties
 
-The following properties can be defined and configured in the component's **View shape in MR** pane on the **Properties** and **Advanced** tabs. 
+The following properties can be defined and configured in the component's **View shape in MR** pane on the **Properties** and **Advanced** tabs.
 
 ![](./media/augmented-view-shape/augmented-view-shape-properties.png)
 
@@ -60,21 +57,76 @@ Shape width | Width of the cube. | Integer | **Properties** (also in **Advanced*
 Shape height | Height of the cube. | Integer | **Properties** (also in **Advanced**)
 Shape depth | The three-dimensional depth of the cube. | Integer | **Properties** (also in **Advanced**)
 Unit of measurement | The measurement unit used for the width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
-Visible | Whether the component is shown or not. | Boolean | **Properties** (also in **Advanced**)
-Position | X is the horizontal position of the component on the app screen. 0 is the leftmost edge of the screen. <br/>Y is the vertical position of the component on the app screen. 0 is the topmost edge of the screen. | Pixels | **Properties** (also in **Advanced** as individual X and Y values)
-Size | Width and height of the component in pixels. | Pixels | **Properties** (also in **Advanced** as individual width and height values)
-Padding top, bottom, left, right | How much padding between the associated edge and the label inside the button. | Pixels | **Properties** (also in **Advanced**)
-Font options | Font and styling that should be used for the button's text. | String | **Properties** (also in **Advanced**)
-Disabled options | How the button should appear if it's set to a disabled state, where the app user will not be able to interact with it. | **Properties** (also in **Advanced**)
-OnChange | Defines what happens when an event occurs within the component | Formula | **Advanced**
-FillColor | Color of the button | RGBA or HTML hexadecimal color codes | **Advanced**
-Tooltip | Descriptive text that appears when a user navigates to the component. | String | **Advanced**
-DisplayMode | The mode to use for data cards and controls within the component. `DisplayMode.Edit` allows users to edit the component's forms and controls, `DisplayMode.View` sets the component to read only | String | **Advanced**
-TabIndex | Order in which items on the app screen be tabbed between. | Integer | **Advanced**
+Photos | The photos captured during the mixed reality session. | | Not applicable (output property only)
 
+## Additional properties
 
-## Other augmented reality controls
-- View 3D models with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
-- View 3D models in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
-- Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
+**[BorderColor](./controls/properties-color-border.md)** – The color of a control's border.
 
+**[BorderStyle](./controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+
+**[BorderThickness](./controls/properties-color-border.md)** – The thickness of a control's border.
+
+**[Color](./controls/properties-color-border.md)** – The color of text in a control.
+
+**[DisplayMode](./controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+
+**[DisabledBorderColor](./controls/properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
+
+**[DisabledColor](./controls/properties-color-border.md)** – The color of text in a control if its **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
+
+**[DisabledFill](./controls/properties-color-border.md)** – The background color of a control if its **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
+
+**[FillColor](./controls/properties-color-border.md)** – The background color of a control.
+
+**[Font](./controls/properties-text.md)** – The name of the family of fonts in which text appears.
+
+**[FontStyle](./controls/properties-text.md)** - The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**
+
+**[FontSize](./controls/properties-text.md)** – The font size of the text that appears on a control.
+
+**[FontWeight](./controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+
+**[Height](./controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
+
+**[HoverBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+
+**[HoverColor](./controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+
+**[HoverFill](./controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+
+**[PaddingBottom](./controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
+
+**[PaddingLeft](./controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
+
+**[PaddingRight](./controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
+
+**[PaddingTop](./controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
+
+**[PressedBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+
+**[PressedColor](./controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+
+**[PressedFill](./controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+
+**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order in relation to other controls.
+
+**[TextAlignment](./controls/properties-text.md)** - The alignment of the text: **Center**, **Left**, **Right**, or Justify
+
+**[Tooltip](./controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+
+**[VerticalAlign](./controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**
+
+**[Visible](./controls/properties-core.md)** – Whether a control appears or is hidden.
+
+**[Width](./controls/properties-size-location.md)** – The distance between a control's left and right edges.
+
+**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+
+**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+
+## Other mixed reality controls
+
+- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
+- View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
+- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
