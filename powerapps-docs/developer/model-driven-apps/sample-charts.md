@@ -86,7 +86,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="BarChart"></a>   
 ## Bar Chart  
- The following is a bar chart that shows the top 10 customers. This is one of the default charts available in MDA for the `Opportunity` entity.  
+ The following is a bar chart that shows the top 10 customers. This is one of the default charts available in model-driven apps for the `Opportunity` entity.  
   
  ![Sample bar chart: Top 10 Customers](media/charts-top-10-customers.gif "Sample bar chart: Top 10 Customers")  
   
@@ -206,7 +206,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="LineChart"></a>   
 ## Line Chart  
- The following is a line chart that shows the number of leads generated in the last five months. This is one of the default charts available in MDA for the `Lead` entity. 
+ The following is a line chart that shows the number of leads generated in the last five months. This is one of the default charts available in model-driven apps for the `Lead` entity. 
   
 ![Sample line chart: Lead Generation Rate](media/lead-generation-rate-chart.png "Sample line chart: Lead Generation Rate") --> 
   
@@ -263,7 +263,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="PieChart"></a>   
 ## Pie Chart  
- The following is a pie chart that shows the total number of leads and their importance. This is one of the default charts available in MDA for the `Lead` entity.  
+ The following is a pie chart that shows the total number of leads and their importance. This is one of the default charts available in model-driven apps for the `Lead` entity.  
   
  ![Sample pie chart: Leads by Rating](media/leads-by-source-chart.png "Sample pie chart: Leads by Rating")  
   
@@ -317,7 +317,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="FunnelChart"></a>   
 ## Funnel Chart  
- The following is a funnel chart that shows the sum of estimated revenue in each stage of the sales pipeline. This is one of the default charts available in MDA for the `Opportunity` entity.  
+ The following is a funnel chart that shows the sum of estimated revenue in each stage of the sales pipeline. This is one of the default charts available in model-driven apps for the `Opportunity` entity.  
   
  ![Sample funnel chart: Sales Pipeline](media/charts-sales-pipeline-chart.png "Sample funnel chart: Sales Pipeline")  
   
@@ -373,7 +373,7 @@ This topic contains sample charts along with the respective data description and
   
 ## Multi-Series Chart  
 
- The following is a multi-series chart that shows the estimated vs. actual revenue closed by month. You can use the chart designer in MDA or methods described in the developer documentation to create these types of charts.  
+ The following is a multi-series chart that shows the estimated vs. actual revenue closed by month. You can use the chart designer in model-driven apps or methods described in the developer documentation to create these types of charts.  
   
  A multi-series chart has multiple `<measurecollection>` elements in the data description, each mapping to the corresponding `<Series>` element in the presentation description XML string.  
   
@@ -452,7 +452,7 @@ This topic contains sample charts along with the respective data description and
   
 <a name="ComparisonChart"></a>   
 ## Comparison Chart (Stacked Chart)  
- The following is a comparison chart that shows the number of activities by type and priority. You can use the chart designer in MDA or methods described in the developer documentation to create these types of charts.  
+ The following is a comparison chart that shows the number of activities by type and priority. You can use the chart designer in model-driven apps or methods described in the developer documentation to create these types of charts.  
   
  A comparison chart has two `groupby` clauses in the data description XML.  
   
@@ -519,7 +519,7 @@ This topic contains sample charts along with the respective data description and
 
 ## Comparison Chart (100% Stacked Chart)  
 
- The following is a comparison chart that shows the number of cases opened on any date, grouped by priority. You can use the chart designer in MDA or methods available in the Web Services to create these types of charts.  
+ The following is a comparison chart that shows the number of cases opened on any date, grouped by priority. You can use the chart designer in model-driven apps or methods available in the Web Services to create these types of charts.  
   
  A comparison chart has two `groupby` clauses in the data description XML.  
   
