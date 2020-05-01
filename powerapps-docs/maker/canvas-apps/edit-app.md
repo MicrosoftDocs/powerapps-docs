@@ -62,4 +62,4 @@ You can override the previous session, but you might lose any changes that you h
 
 ## Next Steps
 
-Learn more about how to add a [screen](add-screen-context-variables.md), a [control, or a [data connection](add-data-connection.md).
+Learn more about how to add a [screen](add-screen-context-variables.md), a [control](add-configure-controls.md), or a [data connection](add-data-connection.md).
