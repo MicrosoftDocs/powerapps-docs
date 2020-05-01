@@ -59,7 +59,7 @@ Shape depth | The three-dimensional depth of the cube. | Integer | **Properties*
 Unit of measurement | The measurement unit used for the width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
 Photos | The photos captured during the mixed reality session. | | Not applicable (output property only)
 
-## Additional properties
+### Additional properties
 
 **[BorderColor](./controls/properties-color-border.md)** – The color of a control's border.
 

@@ -23,9 +23,8 @@ You can display a single 3D object, or you can let the user see [multiple object
 
 ![](./media/augmented-3d/augmented-3d-viewer.png)
 
->[!IMPORTANT]
->Your 3D content must be in the .glb file format.  
->You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
+>[!NOTE]
+>Your 3D content must be in the .glb file format. You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
 
 To use the component, you need to [enable the mixed reality (MR) features for each app](#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
@@ -106,7 +105,7 @@ The following are two common ways you can create a base64-encoded URI of your mo
 
 **To use Power Automate:**
 
-Power Automate can convert files to base64 using the dataUri(base64(<file content>)) expression. For example, if you want to store .glb files in a SharePoint Document Library, you could do the following to load them in power apps using the View In 3D:
+Power Automate can convert files to base64 using the dataUri(base64(*file content*)) expression. For example, if you want to store .glb files in a SharePoint Document Library, you could do the following to load them in power apps using the View In 3D:
 
 1. Create a **SharePoint Document Library** and a **SharePoint List**. The list should have a column which is of type **multiple line text**.
 1. From the **Document Library**, create a new flow using the **When a new file is added in SharePoint, complete a custom action** template.
@@ -153,7 +152,7 @@ Loading models as attachments or media content works through the binary storage 
 1. Set the gallery data source to the Excel Online workbook.
 1. In the **Advanced** properties tab for the **View In 3D** component, set the **Src** property to **Gallery1.Selected.3DModel**.
 
-## Known issues
+## Known constraints
 
 - The **View In 3D** component only supports the .glb file format. You will need to [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/).
 - The security architecture of Power Apps requires HTTPS links, not HTTP.

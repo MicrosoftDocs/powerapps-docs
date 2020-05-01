@@ -65,7 +65,7 @@ Object depth | The three-dimensional depth of the 3D content. | Integer | **Prop
 Units | The unit used for the object width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
 Photos | The photos captured during the mixed reality session. | | Not applicable (output property only)
 
-## Additional properties
+### Additional properties
 
 **[BorderColor](./controls/properties-color-border.md)** – The color of a control's border.
 
