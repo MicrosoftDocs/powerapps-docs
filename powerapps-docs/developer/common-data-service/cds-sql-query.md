@@ -40,9 +40,17 @@ Only Azure Active Directory authentication is supported. SQL authentication and 
 
 Below are a couple of example queries composed in SSMS. The first image shows a simple query using aliases and result ordering.
 
+```tsql
+select top 5 a.name as [VIP customer], a.address1_postalcode as [ZIP code] from account a order by a.address1_postalcode desc
+```
+
 ![Simple query using aliases and ordering](media/ssms-simple-query.PNG)
 
 This next query shows a JOIN.
+
+```tsql
+select name, fullname from account a inner join contact c on a.primarycontactid = c.contactid
+```
 
 ![Another query using a JOIN](media/ssms-join-query.PNG)
 
