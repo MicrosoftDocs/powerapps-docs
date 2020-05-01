@@ -28,7 +28,7 @@ A SQL data connection is available on the Common Data Service endpoint. The SQL 
 
 ## Applications support
 
-You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the SQL connection feature to analyze data in Power BI Desktop. More information: [TODO: link to related maker topic]
+You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the SQL connection feature to analyze data in Power BI Desktop.
 
 > [!NOTE]
 > If you don't have the **Analyze in Power BI** option in your Power Apps environment, you don't yet have access to the SQL connection feature.
@@ -73,7 +73,7 @@ The list of supported SQL operations includes:
 - UNIONs and JOINs
 - Filtering
 
-Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. Common Data Service option sets are represented as \<OptionSet>Name and \<OptionSet>Label in a result set.
+Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. Common Data Service option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
 
 The following Common Data Service datatypes are not supported with the SQL connection: binary, image,
 ntext, sql_variant, varbinary, virtual, hierarchyid, managedproperty, file, xml, party list, timestamp.
