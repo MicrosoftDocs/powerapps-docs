@@ -52,7 +52,8 @@ Containers don't work within forms.
 
 ## Frequently asked questions
 
-**What is the difference between a container and a group?**
-The authoring group is a lightweight concept used for moving around controls and bulk editing similar properties of controls within the group. The authoring group doesn't affect the layout of the app. 
+### What is the difference between a container and a group?
+
+The authoring group is a lightweight concept used for moving around controls and bulk editing similar properties of controls within the group. The authoring group doesn't affect the layout of the app.
 
 The container control previously shipped in experimental as a replacement for the authoring group renamed as the enhanced group. It was renamed to the container control as there's value in both a lightweight authoring group and a structured container control with additional properties.
