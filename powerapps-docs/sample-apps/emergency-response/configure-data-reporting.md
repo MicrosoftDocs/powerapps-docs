@@ -492,9 +492,9 @@ After the required languages are enabled by your system administrator, each admi
 
 The admin app UI will switch to display in the language you selected.
 
-## Change mobile app labels (Experimental)
+## Extend mobile app labels (Experimental)
 
-You can change the Hospital Emergency Response mobile app labels. For instructions, go to [Extend Hospital Emergency Response mobile app labels (Experimental)](https://github.com/microsoft/powerapps-tools/tree/master/Apps/EmergencyResponse/Experimental/LabelCustomizations).
+You can extend the Hospital Emergency Response mobile app labels with custom text. For instructions, go to [Extend Hospital Emergency Response mobile app labels (Experimental)](https://github.com/microsoft/powerapps-tools/tree/master/Apps/EmergencyResponse/Experimental/LabelCustomizations).
 
 ## Issues and feedback
 
