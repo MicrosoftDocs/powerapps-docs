@@ -18,19 +18,19 @@ search.app:
 
 # Use SQL to query data
 
-A SQL data connection is available on the Common Data Service (CDS) endpoint. The SQL connection provides read-only access to the entity data of the target CDS environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
+A SQL data connection is available on the Common Data Service endpoint. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
 ## Applications support
 
 The SQL data connection is available in Power BI Desktop through the **Data** > **Entities** > **Analyze in Power BI** button within the Power Apps maker experience. If you do not have this button in your Power Apps environment, then you do not yet have access to the SQL connection feature. More information: <link to related maker topic>
 
-You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the CDS endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
+You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Common Data Service endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
 ![Expanded account table](media/ssms-table-expanded.PNG)
 
 ## Security and authentication
 
-The CDS endpoint SQL connection uses the CDS security model for data access. Data can be obtained for all entities to which a user has access to in CDS.
+The Common Data Service endpoint SQL connection uses the Common Data Service security model for data access. Data can be obtained for all entities to which a user has access to in Common Data Service.
 
 Only Azure Active Directory authentication is supported. SQL authentication and Windows authentication are not supported. Below is an example of how to logon to the SQL connection in SSMS. Notice the server name is the organization address URL followed by a comma and the port value of 5558.
 
