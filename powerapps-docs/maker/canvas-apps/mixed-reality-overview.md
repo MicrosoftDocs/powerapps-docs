@@ -16,6 +16,8 @@ search.app:
 ---
 # Add mixed reality components to your app
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 You can add a number of mixed reality (MR) components to your canvas app to support multiple 3D and mixed reality scenarios.
 
 Components are groups of controls that can answer the need for a specific scenario. For example, you can use these MR components to:
