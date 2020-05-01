@@ -494,7 +494,7 @@ The admin app UI will switch to display in the language you selected.
 
 ## Extend mobile app labels (Experimental)
 
-You can extend the Hospital Emergency Response mobile app labels with custom text. For instructions, go to [Extend Hospital Emergency Response mobile app labels (Experimental)](https://github.com/microsoft/powerapps-tools/tree/master/Apps/EmergencyResponse/Experimental/LabelCustomizations).
+You can extend Hospital Emergency Response mobile app labels with custom text. To do this, you have to import the **Canvas Apps Strings** solution. The solution adds model-driven app named **Canvas App Label Management** that you can use to customize the Hospital Emergency Response mobile app labels. Add new languages supported by the solution and text for corresponding mobile app labels using the model-driven app. For step by step instructions and solution download, go to [Extend Hospital Emergency Response mobile app labels (Experimental)](https://github.com/microsoft/powerapps-tools/tree/master/Apps/EmergencyResponse/Experimental/LabelCustomizations).
 
 ## Issues and feedback
 
