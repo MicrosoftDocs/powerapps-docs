@@ -71,7 +71,7 @@ The following properties can be defined and configured in the component's **View
 
 ![](./media/augmented-view-mr/augmented-view-mr-properties.png)
 
-Note that some properties are only available in the **Advanced** tab on the **View in MR** pane.
+Note that some properties are only available under **More options** in the **Advanced** tab on the **View in MR** pane.
 
 Property | Description | Type | Location
 - | - | - | -

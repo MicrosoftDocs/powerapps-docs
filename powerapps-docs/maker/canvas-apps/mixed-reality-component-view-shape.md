@@ -16,7 +16,7 @@ search.app:
 ---
 # Create and view predefined 3D shapes in mixed reality
 
-You can use the **View shape in MR** component in your app to let users see a simple cube might fit within a specified space. 
+You can use the **View shape in MR** component in your app to let users see a simple cube might fit within a specified space. They might want to do this to see how a certain object that you provide would fit in their space. If you have a 3D model of your object, you might like to use [the **View in MR** component](mixed-reality-component-view-mr.md) instead.
 
 The component creates a button in your app. When app users click the button, it overlays a cube onto the live camera feed of the device. You set up the dimensions of the cube when you edit the component in Power Apps.
 
