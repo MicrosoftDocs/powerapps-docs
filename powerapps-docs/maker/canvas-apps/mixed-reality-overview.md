@@ -14,36 +14,40 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add augmented reality components to your app
+# Add mixed reality components to your app
 
 You can add a number of mixed reality (MR) components to your canvas app to support multiple 3D and mixed reality scenarios.
 
-Components are groups of controls that can answer the need for a specific scenario. For example, you can use these AR components to:
-- View and manipulate 3D objects
-- Overlay 3D objects and 2D images onto the feed from the camera
-- Measure and identify spaces and objects in the real world with an AR overlay
+Components are groups of controls that can answer the need for a specific scenario. For example, you can use these MR components to:
+
+- View and manipulate 3D content
+- Overlay 3D content and 2D images onto the feed from the camera
+- Measure distance, area, and volume using your device with MR
+- Identify spaces in the real world through an MR overlay
 
 You can read more about components and how to build your own in [the Power Apps developer library](/powerapps/developer/component-framework/custom-controls-overview).
 
 The following pre-built components can be used for mixed reality scenarios:
+
 - [View in 3D](mixed-reality-component-view-3d.md)
 - [View in mixed reality](mixed-reality-component-view-mr.md)
 - [Measure in measure reality](mixed-reality-component-measure-distance.md)
 - [View shape in mixed reality](mixed-reality-component-view-shape.md)
 
+> [!NOTE]
+> Mixed reality components are currently an experimental preview feature that is only available in [https://preview.create.powerapps.com](https://preview.create.powerapps.com) on a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
+
 ## Prerequisites
 
-1. You need a PowerApps license that supports Common Data Service (CDS). If you [identify your current license](/powerapps/maker/signup-for-powerapps#identify-your-current-license) does not support CDS, you can sign up for a [free trial license for 30 days](http://web.powerapps.com/trial). Please note that in some circumstances this step may take 30 to 60 minutes. Please check periodically after requesting a trial license.
-2. If you don't have one already, you will need to [create an environment with Common Data Service instance installed](/power-platform/admin/create-environment). You will need to have system administrator privileges for this step.
-3. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
-4. You'll need a mixed reality-capable device. Any [ArCore capable device](https://developers.google.com/ar/discover/supported-device) is supported. 
-5. You must use a modern web browser when creating the app. Any Chromium-based browser (such as Microsoft Edge or Google Chrome) will work. Internet Explorer is not supported.
+1. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
+2. You'll need a mixed reality-capable device. Any [ARCore capable device](https://developers.google.com/ar/discover/supported-devices) is supported.
+3. Use a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
 
 ### Enable the mixed reality features for each app
 
 For each app you create, you need to enable the mixed reality features:
 
-1. Open the app for editing in the Power Apps studio at [https://create.powerapps.com](https://create.powerapps.com).
+1. Open the app for editing in the Power Apps studio at [https://preview.create.powerapps.com](https://preview.create.powerapps.com).
 
 2. Select **File** from the top menu.
 
@@ -61,12 +65,11 @@ For each app you create, you need to enable the mixed reality features:
 
     ![](./media/augmented-overview/augmented-overview-insert-all.png)
 
-
 ## Next steps
-Explore [example mixed reality apps](mixed-reality-example-apps.md) or start installing the components in your apps:
 
-- View 3D models with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
-- View 3D models in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
-- Take measurements and create 3D volumes with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
+Start installing the components in your apps:
+
+- View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
+- View images and 3D content in the real world with the **[View in mixed reality](mixed-reality-component-view-mr.md)** component.
+- Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
-
