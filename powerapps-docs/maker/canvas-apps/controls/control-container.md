@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.component: canvas
-ms.date: 9/20/2019
+ms.date: 05/01/2020
 ms.author: emcoope
 ms.reviewer: tapanm-msft
 search.audienceType: 
@@ -48,7 +48,7 @@ You can start with inserting a blank container, then customize it by adding cont
 
 ## Known limitations
 
-Containers do not work with canvas components or within forms. 
+Containers do not work within forms. 
 
 ## Frequently asked questions
 
