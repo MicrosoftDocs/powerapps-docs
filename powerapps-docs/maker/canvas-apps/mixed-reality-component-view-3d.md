@@ -21,7 +21,7 @@ search.app:
 
 Add 3D content to your canvas apps. Use the **View in 3D** component to rotate and zoom into the model with simple gestures.
 
-You can display a single 3D model, or you can let the user select from a gallery of 3D models [by connecting the component to the **Gallery** control](#define-the-location-for-3d-objects).
+You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](#define-the-location-for-3d-objects).
 
 
 
@@ -49,11 +49,11 @@ You can modify the component with a number of properties.
 
 ### Properties
 
-The following properties can be defined and configured in the component's **View in 3D** pane on the **Properties** and **Advanced** tabs.
+The following properties can be found on the component's **View in 3D** pane on the **Properties** and **Advanced** tabs.
 
 ![](./media/augmented-3d/augmented-3d-viewer-controls.png)
 
-Note that some properties are only available in the **Advanced** tab on the **View in 3D** pane.
+Some properties are only available in the **Advanced** tab on the **View in 3D** pane.
 
 Property | Description | Type | Location
 - | - | - | -
@@ -72,19 +72,19 @@ Background fill | Set the background color for the component. | Color picker | *
 
 **[Width](./controls/properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or the screen if there's no parent container).
 
-**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).
 
 ## Define where the 3D content is stored
 
 You can set the source for 3D content as a direct URL to a .glb file, as a base64-encoded URI, or as attachments or media content.
 
-### Load models from an URL
+### Load models from a URL
 
-The **Source** property can be an URL that points to a 3D model file (.glb).
+The **Source** property can be a URL that points to a 3D model file (.glb).
 
-You will not be able to view a 3D model in your app if the file resides on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the hosting server must permit cross-origin requests from *powerapps.com*.
+You can't view a 3D model in your app if the file is on a server that has restrictive cross-origin resource sharing (CORS) settings. To resolve this issue, the hosting server must permit cross-origin requests from *powerapps.com*.
 
 You can use the following services to host and obtain a CORS-compliant URL.
 
@@ -92,15 +92,15 @@ You can use the following services to host and obtain a CORS-compliant URL.
 
 1. Upload your file to Dropbox as you normally would.
 1. Select the **Share** button.
-1. Generate a public download link, for example *https://www.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb?dl=0*.
-1. Replace **www** in the URL with **dl**, and remove **?dl=0** at the end. You now have a direct access URL, for example *https://dl.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb*.
+1. Generate a public download link, for example, *https://www.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb?dl=0*.
+1. Replace **www** in the URL with **dl**, and remove **?dl=0** at the end. You now have a direct-access URL, for example, *https://dl.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb*.
 
 **To use GitHub**
 
 1. Ensure that your git repo is set to **Public**.
-1. Navigate to your file. For example *https://github.com/microsoft/experimental-pcf-control-assets/blob/master/robot_arm.glb*.
+1. Navigate to your file. For example, *https://github.com/microsoft/experimental-pcf-control-assets/blob/master/robot_arm.glb*.
 1. Remove **/blob/**.
-1. Replace **https://github.com** with **https://raw.githubusercontent.com**. You now have raw access to your file, for example *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*
+1. Replace **https://github.com** with **https://raw.githubusercontent.com**. You now have raw access to your file, for example, *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*
 
 ### Loading base64-encoded models
 
@@ -112,15 +112,15 @@ The following are two common ways you can create a base64-encoded URI of your mo
 
 Power Automate can convert files to base64 using the dataUri(base64(*file content*)) expression. For example, if you want to store .glb files in a SharePoint Document Library, you could do the following to load them in power apps using the View In 3D:
 
-1. Create a **SharePoint Document Library** and a **SharePoint List**. The list should have a column which is of type **multiple line text**.
+1. Create a **SharePoint Document Library** and a **SharePoint List**. The list should have a column of type **multiple-line text**.
 1. From the **Document Library**, create a new flow using the **When a new file is added in SharePoint, complete a custom action** template.
 1. Add a new step to **Get file content from SharePoint**, setting **File Identifier** to **Identifier**.
-1. Add a new step to **Create item from SharePoint**, setting **List Name** to the SharePoint list you created earlier, and the **Title** to the multiple line text column, with the following expression as the URI:  
+1. Add a new step to **Create item from SharePoint**, setting **List Name** to the SharePoint list you created earlier, and the **Title** to the multiple-line text column, with the following expression as the URI:  
     `concat('data:base64,', Last(split(dataUri(base64(body('Get_file_content'))), ',')))`  
 
     ![Convert files with SharePoint](./media/augmented-3d/augmented-3d-convert-flow.png "Convert files with SharePoint")
 
-When you add .glb files to the **Document Library**, they will be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** component, using the SharePoint data connector to access the list.
+When you add .glb files to the **Document Library**, they'll be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** component, using the SharePoint data connector to access the list.
 
 **To use Common Data Service (CDS):**
 
