@@ -16,7 +16,9 @@ search.app:
 ---
 # Edit a canvas app in Power Apps
 
-Edit any canvas app that you built, that you own, or for which you have **Co-owner** permissions. You can edit an app in Power Apps Studio. If you try to edit an app that's open for editing elsewhere, a message tells you whether you already have it open or another user does.
+Edit any canvas app that you created, or for which you have **Co-owner** permission. You can edit an app in Power Apps Studio. 
+
+If you try to edit an app that's open for editing elsewhere, a message tells you whether you already have it open or another user does.
 
 ## Edit an app
 
@@ -38,14 +40,26 @@ If you don't see the app that you want to edit, verify that you've selected the 
 
 ## Collaborate on an app
 
-Anybody who has **Can edit** permission for an app can edit it, but only one person can edit an app at a time. If you try to edit an app that someone else is already editing, this message appears. You can't proceed until the other person closes the app (or that person's session times out).
+An app can be shared with others. Any **Co-owner** for an app can edit it. Consider the following scenarios when collaborating over an app.
+
+### Edit an app already being edited
+
+Only one user can edit an app at a time.
+
+If you try to edit an app that someone else is already editing, you'll see the following message.
 
 ![App open by another user](./media/edit-app/applock-otheruser.png "App open by another user")
 
-In addition, this message appears if you open an app for editing and then try to open it on another device or in another browser window. You can override the previous session, but you might lose any changes that you haven't saved.
+You can't continue until the other user closes the app, or that user's session times out.
+
+### Edit an app across multiple sessions
+
+Consider that you already have an app open for editing. And then, you try to open the app for editing on another device, or in another browser window. In that case, you'll see the following message.
 
 ![App already open for editing by same user](./media/edit-app/applock-selfuser.png "App already open for editing by same user")
 
+You can override the previous session, but you might lose any changes that you haven't saved.
+
 ## Next Steps
 
-Learn more about how to add a [screen](add-screen-context-variables.md), a [control](add-configure-controls.md) or a [data connection](add-data-connection.md).
+Learn more about how to add a [screen](add-screen-context-variables.md), a [control, or a [data connection](add-data-connection.md).
