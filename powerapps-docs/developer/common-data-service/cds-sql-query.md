@@ -24,6 +24,7 @@ A SQL data connection is available on the Common Data Service endpoint. The SQL 
 
 > [!IMPORTANT]
 > - This is a preview feature.
+> - This preview feature is not available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Applications support
