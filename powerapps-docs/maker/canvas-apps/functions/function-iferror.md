@@ -70,7 +70,7 @@ IfError(
 
 ### Type compatibility
 
-The types of all values that might be returned from **IfError** must be compatible.  
+**IfError** will return the value of one of its arguments.  The types of all values that might be returned by **IfError** must be compatible.  
 
 In the last example, **Patch** will return a record which is not compatible with the Booleans used for the *Replacement* formulas or the *DefaultResult*.  This is fine since there is no situation in which the return value from these **Patch** calls would be returned by **IfError**.
 
@@ -96,6 +96,8 @@ Unfortunately this won't do the job.  The text string `"#DIV/0!"` will be coerce
 ```powerapps-dot
 IfError( Text( 1/x ), "#DIV/0!" )
 ```  
+
+As shown in this last example, **IfError** can return an error if the *Replacement* or *DefaultResult* is an error.
 
 ### ErrorInfo
 
@@ -145,8 +147,8 @@ Using **IsError** will prevent any further processing of the error.
 | --- | --- | --- |
 | **IfError( 1, 2 )** |The first argument isn't an error. The function has no other errors to check and no default return value. The function returns the last *value* argument evaluated.   | 1 |
 | **IfError( 1/0, 2 )** | The first argument returns an error value (due to division by zero). The function evaluates the second argument and returns it as the result. | 2 |
-| **IfError( 1, 2, 3 )** | The first argument isn't an error. The function has no other errors to check but does have a default return value. The function returns the *DefaultResult* argument. | 3 |
-| **IfError( 1, 2, 3, 4, 5 )** | The first argument isn't an error, so the function doesn't evaluate that argument's corresponding replacement. The third argument isn't an error either, so the function doesn't evaluate that argument's corresponding replacement. The fifth argument has no corresponding replacement and is the default result. The function returns that result because the formula contains no errors. | 5 |
+| **IfError( 10, 20, 30 )** | The first argument isn't an error. The function has no other errors to check but does have a default return value. The function returns the *DefaultResult* argument. | 30 |
+| **IfError( 10, 11, 20, 21, 300 )** | The first argument **10** isn't an error, so the function doesn't evaluate that argument's corresponding replacement **11**. The third argument **20** isn't an error either, so the function doesn't evaluate that argument's corresponding replacement **21**. The fifth argument **300** has no corresponding replacement and is the default result. The function returns that result because the formula contains no errors. | 300 |
 
 ### Simple IsError
 
