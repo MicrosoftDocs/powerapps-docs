@@ -1,5 +1,5 @@
 ---
-title: Use the View in MR component in Power Apps
+title: Use the View in MR component in Power Apps (Preview)
 description: View 3D models and 2D images in the real world with augmented reality features in Power Apps.
 author: iaanw
 manager: shellha
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# View 3D content or images in the real word
+# View 3D content or images in the real word (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
