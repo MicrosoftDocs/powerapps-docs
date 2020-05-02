@@ -181,12 +181,12 @@ function openDialogProcess(dialogId, entityName, objectId)
  Two possible values for this parameter are `run` or `filter`. When `run` is used, the report will be displayed using the default filters. When `filter` is used, the report will display a filter that the user can edit before choosing the **Run Report** button to view the report.  
 
  **helpID**  
- This parameter is optional. For reports that are included with Model-driven apps the value in this parameter allows the **Help** button to display appropriate content about this report when **Help on This Page** is chosen. The value should correspond to the report `FileName` attribute value.  
+ This parameter is optional. For reports that are included with model-driven apps the value in this parameter allows the **Help** button to display appropriate content about this report when **Help on This Page** is chosen. The value should correspond to the report `FileName` attribute value.  
 
  **id**  
  This parameter is the report `ReportId` attribute value.  
 
- The following examples show URLs that can be used to open reports in MDA.  
+ The following examples show URLs that can be used to open reports in model-driven apps.  
 
  Open the **Neglected Cases** report using the default filter:  
  ```  
