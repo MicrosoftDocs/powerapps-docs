@@ -111,15 +111,15 @@ Within in the replacement formulas, the **ErrorInfo** record provides informatio
 | **Notify** | Boolean | If not caught by IfError, whether an end user notification banner should be displayed. |
 | **Property** | Text string | Name of the current property, used to report where the error occured. |
 
-For example, this formula as a [**Button**](../controls/control-button.md) control's **OnSelect** property
+For example, this formula as a [**Button**](../controls/control-button.md) control's **OnSelect** property:
 
 ```powerapps-dot
 IfError( 1/0, Notify( "Internal error: " & ErrorInfo.Control & "." & ErrorInfo.Property ) )
 ```
 
-would display this banner when the button is activated
+would display this banner when the button is activated:
 
-![](media/function-iferror/notify-errorinfo.png)
+![Button control activated, showing a notification from the Notify function](media/function-iferror/notify-errorinfo.png)
  
 ### IsError
 
