@@ -33,7 +33,8 @@ To add sections to a form, use the **Components** pane.
 > ![](media/FormDesignerComponentsLayout.png "Layout components")
 
   > [!NOTE]
-  >   Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md)
+  >   Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md).
+  In Unified Interface, empty sections will not render in runtime and will be automatically hidden.
 
 ### Add sections to a form using drag and drop
 > [!NOTE]

@@ -108,7 +108,11 @@
     "master": [
       "Publish",
       "PDF"
-    ]
+    ],
+   "alm-guide": [
+      "Publish",
+      "PDF"
+    ] 
   },
   "need_generate_pdf_url_template": true,
   "Targets": {

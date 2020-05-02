@@ -57,5 +57,5 @@ The default, an application command bar or ribbon is defined by Common Data Serv
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions)<br/>   <!-- TODO need to update the relevant Power Apps repo link-->
- [Define Scaling for Ribbon Elements](define-scaling-ribbon-elements.md)
+ [Pass data from a page as a parameter to Ribbon actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions)<br/>   <!-- TODO need to update the relevant Power Apps repo link-->
+ [Define scaling for Ribbon elements](define-scaling-ribbon-elements.md)

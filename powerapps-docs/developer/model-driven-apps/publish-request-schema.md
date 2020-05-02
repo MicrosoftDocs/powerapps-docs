@@ -113,4 +113,4 @@ The following is the schema definition for the <xref:Microsoft.Crm.Sdk.Messages.
 ### See also  
  <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest>   
  [Publish Customizations](publish-customizations.md)   
- [Schemas used in Model-driven apps](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)
+ [Schemas used in model-driven apps](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)
