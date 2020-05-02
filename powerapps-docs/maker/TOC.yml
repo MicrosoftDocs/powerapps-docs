@@ -585,6 +585,8 @@
             href: ./canvas-apps/functions/function-isblank-isempty.md
           - name: IsEmpty
             href: ./canvas-apps/functions/function-isblank-isempty.md
+          - name: IsError
+            href: ./canvas-apps/functions/function-iferror.md            
           - name: IsMatch
             href: ./canvas-apps/functions/function-ismatch.md
           - name: IsNumeric
