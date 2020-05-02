@@ -305,7 +305,7 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
-          - name: Add mixed reality components
+          - name: Add mixed reality components (Preview)
             items:
             - name: Mixed reality components
               href: ./canvas-apps/mixed-reality-overview.md
