@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/02/2020
+ms.date: 04/23/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -28,7 +28,7 @@ Use the **RemoveIf** function to remove a record or records based on a condition
 
 **Remove** and **RemoveIf** return the modified data source as a [table](../working-with-tables.md). You can use both functions only in [behavior formulas](../working-with-formulas-in-depth.md).
 
-You can also use the **[Clear](function-clear-collect-clearcollect.md)** function to remove all of the records in a data source.
+You can also use the **[Clear](function-clear-collect-clearcollect.md)** function to remove all of the records in a collection.
 
 ### Delegation
 [!INCLUDE [delegation-no](../../../includes/delegation-no.md)]

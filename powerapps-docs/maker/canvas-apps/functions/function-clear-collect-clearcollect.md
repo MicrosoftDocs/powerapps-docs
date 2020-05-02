@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/14/2019
+ms.date: 04/23/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -53,6 +53,9 @@ You can use the **[Remove](function-remove-removeif.md)** function to selectivel
 The **ClearCollect** function deletes all the records from a collection and then adds a different set of records to the same collection.  With a single function, **ClearCollect** offers the combination of **Clear** and then **Collect**.
 
 **ClearCollect** returns the modified collection as a table.  **ClearCollect** can only be used in a behavior formula.
+
+### Delegation
+[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
 
 ## Syntax
 
