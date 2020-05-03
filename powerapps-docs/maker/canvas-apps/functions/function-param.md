@@ -20,7 +20,7 @@ Launches a webpage or a canvas app and provides access to launch parameters.
 ## Launch
 Launches a webpage or a canvas app.  The function supports:
 - **Address** (required), the URL of the webpage or App ID of the canvas app.
-- **Parameters** (optional), named values to pass to the webpage or canvas app.  In a canvas app, parameters can be read with the [**Param**](#Param) function.
+- **Parameters** (optional), named values to pass to the webpage or canvas app.  In a canvas app, parameters can be read with the [**Param**](#param) function.
 - **Target** (optional), the browser tab in which to launch the webpage or canvas app.
 
 ### Address
