@@ -542,7 +542,7 @@
           - name: Distinct
             href: ./canvas-apps/functions/function-distinct.md
           - name: Download
-            href: ./canvas-apps/functions/function-param.md
+            href: ./canvas-apps/functions/function-download.md
           - name: DropColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: EditForm
