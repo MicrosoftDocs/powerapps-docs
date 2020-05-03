@@ -21,20 +21,22 @@ Downloads a file from the web to the local device.
 ## Description
 The **Download** function downloads a file from the web to the local device. 
 
-In native players (Windows, Android, and iOS) the user is prompted for a location to save the file.  Only on Windows, **Download** returns the location where the file was stored locally as a text string.
+In native players (Windows, Android, and iOS) the user is prompted for a location to save the file.  
 
 When used on the web, **Download** is dependent on the browser's settings to determine what happens with the file.  For images, videos, and other file types that the browser natively supports, a new browser tab is opened to display the file and many browser support saving the contents to the local file system.   
+
+Only on Windows, **Download** returns the location where the file was stored locally as a text string.
 
 ## Syntax
 **Download**( *Address* )
 
-* *Address* – Required.  The address of a web resource to download.
+* *Address* – Required.  The URL address of a web resource to download.
 
 ## Examples
 
 ### Simple Download
 
-The following formula will download a PDF file, the user's guide for the Surface Book:
+The following formula will download the user's guide for the Surface Book, a PDF file:
 
 ```powerapps-dot
 Download( "https://go.microsoft.com/fwlink/?linkid=827480" )

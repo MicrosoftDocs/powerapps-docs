@@ -18,6 +18,10 @@ search.app:
 Launches a webpage or a canvas app and provides access to launch parameters.
 
 ## Launch
+Launches a webpage or a canvas app.  The function supports:
+- **Address** (required), the URL of the webpage or App ID of the canvas app.
+- **Parameters** (optional), named values to pass to the webpage or canvas app.  In a canvas app, parameters can be read with the **Param** function.
+- **Target** (optional), the browser tab in which to launch the webpage or canvas app.
 
 ### Address
 Webpages are launched via a URL address.  For example:
@@ -38,7 +42,7 @@ Canvas apps are launched with either their **Web link** or **App ID**.  To find 
     > [!div class="mx-imgBorder"]
     > ![App details showing web link and app id](media/function-param/portal-links.png)
 
-The **Web link** can be linked from any web page and will launch the canvas app.  It can also be used with the **Launch** function.
+The **Web link** can be used in any web page and will launch the canvas app.  It can also be used with the **Launch** function.
 
 The **App ID** can be used with the **Launch** function, but must be prefixed with `/providers/Microsoft.PowerApps/apps/`.  For example:
 
@@ -47,23 +51,6 @@ Launch( "/providers/Microsoft.PowerApps/apps/b26f2340-5b65-9271-2be4-365b295861e
 ```
 
 Native apps on a device cannot be directly launched.  There may be indirect options available on some platforms, such as a native app installing a custom URL scheme or registering with the web browser to offer an option for specific web sites.
-
-### LaunchTarget
-[!NOTE]
-The LaunchTarget argument is currently in Preview and will be released in all regions soon.
-
-Use the *LaunchTarget* argument to specify the target browser window in which to open the webpage or app.  Use one of the following **LaunchTarget** enum values or provide a custom window *name*.
-
-| LaunchTarget&nbsp;enum | Description | 
-| --- | --- | 
-| **Blank** | The webpage or app is opened in a new window or tab. |
-| **Self** | The webpage or app replaces the current window or tab. |
-| *name* | Instead of an enum value, use your own text string to *name* the window or tab.  This is an internal only name that is only used by the **Launch** function; it has no impact on nor will it match the title of the window that your users see.  If a window or tab with the given *name* already exists, its contents will be replaced, otherwise a new window or tab will be created.  *name* cannot begin with the underscore character "_". |
-
-**Blank** is the default when running in a web browser with **Self** and *name* as available options.  In a mobile player, **Blank** is the default for webpages with *name* as as available option, while **Self** will always be used for apps.
-
-> [!NOTE]
-> *LaunchTarget* enum names are in transition.  You can use **Blank** and **Self** today but these names will be changing in the weeks ahead.  Your app will automatically be updated when this occurs, your formulas will not require an update.
 
 ### Parameters
 **Launch** can pass parameters to the webpage or canvas app.  Parameters can be provided in two equivalent ways:
@@ -83,21 +70,38 @@ The record option for parameters is currently in Preview and will be released in
 
 The address and parameters are URL encoded before being passed to replace certain non-alphanumeric characters with `%` and a hexadecimal number as if the [**EncodeUrl**](function-encode-decode.md) function has been used on each.
 
+### Target
+[!NOTE]
+The *LaunchTarget* argument is currently in Preview and will be released in all regions soon.
+
+Use the *LaunchTarget* argument to specify the target browser window in which to open the webpage or app.  Use one of the following **LaunchTarget** enum values or provide a custom window *name*.
+
+| LaunchTarget&nbsp;enum | Description | 
+| --- | --- | 
+| **Blank** | The webpage or app is opened in a new window or tab. |
+| **Self** | The webpage or app replaces the current window or tab. |
+| *name* | Instead of an enum value, use your own text string to *name* the window or tab.  This is an internal only name that is only used by the **Launch** function; it has no impact on nor will it match the title of the window that your users see.  If a window or tab with the given *name* already exists, its contents will be replaced, otherwise a new window or tab will be created.  *name* cannot begin with the underscore character "_". |
+
+**Blank** is the default when running in a web browser with **Self** and *name* as available options.  In a mobile player, **Blank** is the default for webpages with *name* as as available option, while **Self** will always be used for apps.
+
+> [!NOTE]
+> *LaunchTarget* enum names are in transition.  You can use **Blank** and **Self** today but these names will be changing in the weeks ahead.  Your app will automatically be updated when this occurs, your formulas will not require an update.
+
 ### Security zones
 In Internet Explorer and classic Microsoft Edge, the **Launch** function opens a website or app only if its security settings are the same or higher than those of the app that contains the function. If, for example, you add the **Launch** function to an app that will run in the **Trusted sites** security zone, ensure that the website or app that you want the function to open is in the **Trusted sites** or **Local intranet** zone (not in **Restricted sites**). More information: [Change security and privacy settings for Internet Explorer 11](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings).  
 
 ## Param
 The **Param** function retrieves a parameter passed to the app when it was launched. If the named parameter wasn't passed, **Param** returns *blank*.
 
-Parameters can be passed to a canvas app in one of two ways:
-- If launching a canvas app from another canvas app, use the *Parameter* arguments to the **Launch** function.  Parameter names and values will be automatically URL encoded.
-- If launching a canvas app from a web page, add a [query string](https://en.wikipedia.org/wiki/Query_string) to the [canvas app address](#address).  For example, adding `?First%20Name=Fred&category=3` would pass two parameters: `First Name` with a value of `"Fred"` and `category` with a value of `"3"` (note it is a text string).  Only the first item after the canvas app address should have a `?`; after that use the `&` as illustrated here.  The parameter name and value must be URL encoded if they contains spaces or special characters, similar to using the [**EncodeURL**](function-encode-decode.md) function. 
+If launching a canvas app from another canvas app, use the *Parameter* arguments to the **Launch** function.  Parameter names and values will be automatically URL encoded.
+
+If launching a canvas app from a web page, add parameters to the [query string](https://en.wikipedia.org/wiki/Query_string) of the [canvas app web link](#address).  This involves adding `&parametername=parametervalue` assuming the query string has already been started for the `tenantId`.  For example, adding `&First%20Name=Fred&category=3` would pass two parameters: `First Name` with a value of `"Fred"` and `category` with a value of `"3"` (note it is a text string).  The parameter name and value must be URL encoded if they contains spaces or special characters, similar to using the [**EncodeURL**](function-encode-decode.md) function. 
 
 Param names are case sensitive.  
 
-Param names and values will be automatically URL decoded.
+Param names and values will be automatically URL decoded for use in your app.
 
-Even if the parameter contains a number, the type returned by **Param** will always be a text string.  Conversion to other types will automatically occur or use explicit conversions such as the [**Value**](function-value.md) function to convert to a number.
+Even if the parameter contains a number, the type returned by **Param** will always be a text string.  Conversion to other types will automatically occur or use explicit conversions such as the [**Value**](function-value.md) function to convert explicitly to a number.
 
 ## Syntax
 **Launch**( *Address* [, *ParameterName1*, *ParameterValue1*, ... ] )
@@ -121,7 +125,7 @@ Even if the parameter contains a number, the type returned by **Param** will alw
 
 ### Simple Launch
 
-From a canvas app to a web page:
+#### From a canvas app to a web page:
 
 | Formula | Description |
 | ------- | ----------- |
@@ -130,7 +134,9 @@ From a canvas app to a web page:
 | **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;},&nbsp;<br>LaunchTarget.Self&nbsp;)** | The same as the previous examples, replacing the current window or tab with the result if running in a web browser. | 
 | **Launch(&nbsp;"http://bing.com/search",&nbsp;<br>{&nbsp;q:&nbsp;"Power&nbsp;Apps",&nbsp;count:&nbsp;1&nbsp;},&nbsp;<br>"Search&nbsp;Results"&nbsp;)** | The same as the previous example, creating or replacing the contents of the window or tab named **Search Results**. |
 
-From a canvas app to a canvas app:
+#### From a canvas app to a canvas app
+
+Replace the App ID at the end of the first argument with the App ID from one of your canvas  apps.
 
 ```powerapps-dot
 Launch( "/providers/Microsoft.PowerApps/apps/b26f2340-5b65-9271-2be4-365b295861ef",
@@ -138,10 +144,16 @@ Launch( "/providers/Microsoft.PowerApps/apps/b26f2340-5b65-9271-2be4-365b295861e
 )
 ```
 
-From a web page to a canvas app:
+#### From a web page to a canvas app
+
+Replace the App ID at the end of the first argument with the App ID from one of your canvas  apps.
 
 ```html
-<a href="/providers/Microsoft.PowerApps/apps/b26f2340-5b65-9271-2be4-365b295861ef?Navigate=Second%20Screen&Record=34">
+<html><body>
+    <a href="https://apps.powerapps.com/play/b26f2340-5b65-9271-2be4-365b295861ef?tenantId=330aeeae-2c83-46d6-9a22-6e4e259806f5&Navigate=Second%20Screen&Record=34">
+        Launch canvas app
+    </a>
+</body></html>
 ```
 
 ### Simple Param
