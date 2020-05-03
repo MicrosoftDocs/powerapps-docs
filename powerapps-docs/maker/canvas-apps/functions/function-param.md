@@ -20,7 +20,7 @@ Launches a webpage or a canvas app and provides access to launch parameters.
 ## Launch
 Launches a webpage or a canvas app.  The function supports:
 - **Address** (required), the URL of the webpage or App ID of the canvas app.
-- **Parameters** (optional), named values to pass to the webpage or canvas app.  In a canvas app, parameters can be read with the **Param** function.
+- **Parameters** (optional), named values to pass to the webpage or canvas app.  In a canvas app, parameters can be read with the [**Param**](#Param) function.
 - **Target** (optional), the browser tab in which to launch the webpage or canvas app.
 
 ### Address
@@ -65,14 +65,14 @@ Native apps on a device cannot be directly launched.  There may be indirect opti
     ```
     This form can be easier to work with as it makes the association between name and value clearer.  It is the only form that supports the optional *LaunchTarget* argument.
 
-[!NOTE]
-The record option for parameters is currently in Preview and will be released in all regions soon.
+> [!NOTE]
+> The record option for parameters is currently in Preview and will be released in all regions soon.
 
 The address and parameters are URL encoded before being passed to replace certain non-alphanumeric characters with `%` and a hexadecimal number as if the [**EncodeUrl**](function-encode-decode.md) function has been used on each.
 
 ### Target
-[!NOTE]
-The *LaunchTarget* argument is currently in Preview and will be released in all regions soon.
+> [!NOTE]
+> The *LaunchTarget* argument is currently in Preview and will be released in all regions soon.
 
 Use the *LaunchTarget* argument to specify the target browser window in which to open the webpage or app.  Use one of the following **LaunchTarget** enum values or provide a custom window *name*.
 
