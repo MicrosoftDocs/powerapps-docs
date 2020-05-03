@@ -1603,11 +1603,7 @@
       - name: View solution history
         href: ./common-data-service/solution-history.md      
       - name: Set managed properties in metadata
-        href: ./common-data-service/set-managed-properties-metadata.md
-      - name: "Advanced topics"
-        items:
-        - name: Create solution patches
-          href: ./common-data-service/solution-patches.md
+        href: ./common-data-service/set-managed-properties-metadata.md      
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
