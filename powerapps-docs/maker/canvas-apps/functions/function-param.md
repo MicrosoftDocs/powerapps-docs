@@ -19,7 +19,7 @@ Launches a webpage or a canvas app and provides access to launch parameters.
 
 ## Launch
 
-### Adddress
+### Address
 Webpages are launched via a URL address.  For example:
 
 ```powerapps-dot
@@ -28,10 +28,15 @@ Launch( "https://bing.com" )
 
 Canvas apps are launched with either their **Web link** or **App ID**.  To find these values for an app, open the [Power Apps](https://make.powerapps.com) portal and follow these steps.
 
-1. Select Apps and then Details from the **...** menu for an app:
-    ![](media/function-param/portal-details.png)
-1. Copy and paste either the **Web link** or **App ID**:
-    ![](media/function-param/portal-links.png)
+1. Select **Apps** and then **Details** from the **...** menu for an app:
+
+    > [!div class="mx-imgBorder"]
+    > ![Power Apps portal, list of apps, elipses menu, and then select Details](media/function-param/portal-details.png)
+
+1. Copy either the **Web link** or **App ID**:
+
+    > [!div class="mx-imgBorder"]
+    > ![App details showing web link and app id](media/function-param/portal-links.png)
 
 The **Web link** can be linked from any web page and will launch the canvas app.  It can also be used with the **Launch** function.
 

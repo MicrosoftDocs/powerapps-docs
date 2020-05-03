@@ -21,7 +21,7 @@ Downloads a file from the web to the local device.
 ## Description
 The **Download** function downloads a file from the web to the local device. 
 
-In native players, such as Windows, Android, and iOS, the user is prompted for a location to save the file.  Only on Windows, **Download** returns the location where the file was stored locally as a text string.
+In native players (Windows, Android, and iOS) the user is prompted for a location to save the file.  Only on Windows, **Download** returns the location where the file was stored locally as a text string.
 
 When used on the web, **Download** is dependent on the browser's settings to determine what happens with the file.  For images, videos, and other file types that the browser natively supports, a new browser tab is opened to display the file and many browser support saving the contents to the local file system.   
 
@@ -33,6 +33,16 @@ When used on the web, **Download** is dependent on the browser's settings to det
 ## Examples
 
 ### Simple Download
+
+The following formula will download a PDF file, the user's guide for the Surface Book:
+
+```powerapps-dot
+Download( "https://go.microsoft.com/fwlink/?linkid=827480" )
+```
+
+When run in a mobile device, the user will be prompted for a location to save the file.  
+
+When run in most web browsers, a new tab will be opened to display the PDF file as most browsers natively support this file type. 
 
 ### Step by Step
 
@@ -46,7 +56,7 @@ The **Product Showcase** tablet layout template was used for the following examp
 1. From the properties pane on the right-side, select **Color** as *white* and set **Border thickness** at *1*.
 1. Select the **Text** property from right-side and enter text as *Download User Guide*.
 1. From property list on top left, select **OnSelect**.
-1. Enter formula as ```Download("https://go.microsoft.com/fwlink/?linkid=827480")```. You can also use any other URL of your choice.
+1. Enter formula as `Download("https://go.microsoft.com/fwlink/?linkid=827480")`. You can also use any other URL of your choice.
 
     ![Download example](media/function-download/download-example-onselect.png "Download example")
 
