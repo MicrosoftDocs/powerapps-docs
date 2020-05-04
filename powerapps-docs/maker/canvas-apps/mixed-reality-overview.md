@@ -1,5 +1,5 @@
 ---
-title: Use mixed reality components in Power Apps
+title: Use mixed reality components in Power Apps (Preview)
 description: Use augmented reality features in Power Apps to view and manipulate 3D models and 2D images in the real world, take measurements, and create and view 3D digital shapes.
 author: iaanw
 manager: shellha
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Add mixed reality components to your app
+# Add mixed reality components to your canvas app (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -27,7 +27,10 @@ Components are groups of controls that can answer the need for a specific scenar
 - Measure distance, area, and volume using your device with MR
 - Identify spaces in the real world through an MR overlay
 
-You can read more about components and how to build your own in [the Power Apps developer library](/powerapps/developer/component-framework/custom-controls-overview).
+You can read more about components and how to build your own in [Power Apps component framework docs](/powerapps/developer/component-framework/custom-controls-overview).
+
+> [!NOTE]
+> Mixed reality components are currently an experimental preview feature that is only available in [https://preview.create.powerapps.com](https://preview.create.powerapps.com) on a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
 
 The following pre-built components can be used for mixed reality scenarios:
 
@@ -35,9 +38,6 @@ The following pre-built components can be used for mixed reality scenarios:
 - [View in mixed reality](mixed-reality-component-view-mr.md)
 - [Measure in mixed reality](mixed-reality-component-measure-distance.md)
 - [View shape in mixed reality](mixed-reality-component-view-shape.md)
-
-> [!NOTE]
-> Mixed reality components are currently an experimental preview feature that is only available in [https://preview.create.powerapps.com](https://preview.create.powerapps.com) on a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
 
 ## Prerequisites
 

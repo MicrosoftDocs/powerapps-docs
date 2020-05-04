@@ -1,5 +1,5 @@
 ---
-title: Use the Measure in MR component in Power Apps
+title: Use the Measure in MR component in Power Apps (Preview)
 description: Digitally measure distances and creates areas and shapes in the real world with augmented reality features in Power Apps.
 author: iaanw
 manager: shellha
@@ -14,7 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# Take measurements in mixed reality
+# Take measurements in mixed reality (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
