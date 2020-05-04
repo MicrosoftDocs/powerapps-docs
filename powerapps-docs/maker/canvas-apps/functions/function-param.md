@@ -155,7 +155,7 @@ The **Param** function retrieves a parameter passed to the app when it was launc
 Update the app ID, screen name, and record number as appropriate.
 
 ```powerapps-dot
-Launch( "/providers/Microsoft.PowerApps/apps/b26f2340-5b65-9271-2be4-365b295861ef",
+Launch( "/providers/Microsoft.PowerApps/apps/YOUR-APP-ID",
         { Navigate: "Second Screen", Record: 34 }
 )
 ```
@@ -166,7 +166,7 @@ Update the app ID, tenant ID, screen name, and record number as appropriate.
 
 ```html
 <html><body>
-    <a href="https://apps.powerapps.com/play/b26f2340-5b65-9271-2be4-365b295861ef?tenantId=330aeeae-2c83-46d6-9a22-6e4e259806f5&Navigate=Second%20Screen&Record=34">
+    <a href="https://apps.powerapps.com/play/YOUR-APP-ID?tenantId=YOUR-TENANT-ID&Navigate=Second%20Screen&Record=34">
         Launch canvas app
     </a>
 </body></html>
