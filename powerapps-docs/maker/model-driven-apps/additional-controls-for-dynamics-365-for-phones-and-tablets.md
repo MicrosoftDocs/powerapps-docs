@@ -2,7 +2,7 @@
 title: "Additional controls for Dynamics 365 for phones and tablets | MicrosoftDocs"
 description: "A list of controls available for use with Dynamics 365 for phones and tablets"
 ms.custom: ""
-ms.date: 06/18/2018
+ms.date: 04/28/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -23,15 +23,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Additional controls for Dynamics 365 for phones and tablets 
+# Custom controls available 
 
- You can use a rich set of additional controls to create a more touch-friendly experience on Dynamics 365 for phones and tablets. These include sliders, switches, multimedia player, input masks, calendar, and other controls.  
+ You can use a rich set of additional controls to create a more touch-friendly experience on model-driven apps. These include sliders, switches, multimedia player, input masks, calendar, and other controls.  
 
- 
-> [!NOTE]
->  You can use these additional controls only with the mobile apps. They aren’t supported in the web app.  
-  
- To use these controls in the form editor:  
+  To use these controls in the form editor:  
   
 1.  Double-click the field or list you want to add the control to.  
   
@@ -44,16 +40,16 @@ search.app:
     > [!NOTE]
     >  Different controls are available depending on the field or list type. For example, slider controls might only be available for numerical or money fields, and the calendar control is only available for lists.  
   
-5.  Select the devices you want the control to appear on (phone, tablet, or both). Controls aren’t available for phone header fields.  
+5.  Select the devices you want the control to appear on. Controls aren’t available for phone header fields.  
   
 6.  Configure the values for each property.  
   
 7.  Click **OK** when you’re done configuring the control.  
   
- Following are descriptions for each control you can use on forms for Dynamics 365 for phones and tablets.  
+ Following are descriptions for each control you can use on forms.  
   
 ## Calendar control  
- Use this control to configure forms so they show up as a calendar view in Dynamics 365 for phones and tablets. You can also use this control to replace dashboards, lists, or entity grids for phones and tablets.  
+ Use this control to configure forms so they show up as a calendar view. You can also use this control to replace dashboards, lists, or entity grids.  
   
 |Property|Description|  
 |--------------|-----------------|  
