@@ -1,5 +1,5 @@
 ---
-title: IfError function | Microsoft Docs
+title: IfError and IsError functions in Power Apps | Microsoft Docs
 description: Reference information, including syntax and examples, for the IfError and IsError functions in Power Apps
 author: gregli-msft
 manager: kvivek
@@ -21,14 +21,12 @@ search.app:
 
 Detects errors and provides an alternative value or takes action.
 
-## Description
-
 > [!NOTE]
 > - IfError and IsError functions are part of an experimental feature and are subject to change. More information: [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
 > - The behavior that this topic describes is available only when the *Formula-level error management* experimental feature in [advanced settings](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
 > - Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
-### IfError
+## IfError
 
 The **IfError** function tests values until it finds an error. If the function discovers an error, the function evaluates and returns a corresponding replacement value and stops further evaluation.  A default value can also be supplied for when no errors are found.  The structure of **IfError** resembles that of the **If** function: **IfError** tests for errors, while **If** tests for **true**.
 
@@ -127,7 +125,7 @@ The example formula above would display the following banner when the button is 
 
 ![Button control activated, showing a notification from the Notify function](media/function-iferror/notify-errorinfo.png)
 
-### IsError
+## IsError
 
 The **IsError** function tests for an error value.  The return value is a Boolean *true* or *false*.
 
