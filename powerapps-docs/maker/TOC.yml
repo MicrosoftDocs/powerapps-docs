@@ -93,7 +93,7 @@
         href: ../user/enhanced-email.md
       - name: Insert an email template
         href: ../user/insert-email-template.md
-        - name: Send email to multiple recipients
+      - name: Send email to multiple recipients
         href: ../user/direct-email.md
       - name: Send email to unresolved email recipients
         href: ../user/unresolved-email-recipient.md
