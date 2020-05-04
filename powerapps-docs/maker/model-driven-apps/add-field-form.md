@@ -1,7 +1,7 @@
 ---
 title: "Add a field to a model-driven app form in Power Apps | MicrosoftDocs"
 ms.custom: ""
-ms.date: 03/18/2020
+ms.date: 05/04/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -44,7 +44,7 @@ In this topic, you add a field on to a form.
 6.  When you're done editing the form, click **Save and Close**.  
   
 > [!IMPORTANT]
->  In the Unified Interface, when setting field level security it is not recommended that a required field is set to read only using field level security rules when creating a record.  The save pipeline will ignore the setting on the required field and will save the record. The recommended approach is to set the entity to read-only using rolej-based security to ensure there is no conflict when creating or saving a record.
+>  In the Unified Interface, when you set field level security, we don’t recommend that you set read-only on a required field using field level security rules.  When the record is created, the save pipeline will ignore the read-only setting on the required field and will save the record. We recommend that you set the entity to read-only using role-based security. This helps ensure there is no conflict when creating or saving a record.
   
   
 > [!NOTE]
