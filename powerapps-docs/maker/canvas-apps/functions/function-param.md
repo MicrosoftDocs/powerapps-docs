@@ -65,13 +65,13 @@ Native apps on a device can't be launched directly. There may be indirect option
 
 - An argument list of name value pairs. For example:
 
-    ```powerappsfl
+    ```powerapps-dot
     Launch( "http://bing.com/search", "q", "Power Apps", "count", 1 )
     ```
 
 - A record of field values. For example:
 
-    ```powerappsfl
+    ```powerapps-dot
     Launch( "http://bing.com/search", { q: "Power Apps", count: 1 } )
     ```
 
