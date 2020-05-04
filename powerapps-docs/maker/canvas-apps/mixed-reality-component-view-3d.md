@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 3/19/2020
+ms.date: 5/4/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -23,7 +23,7 @@ Add 3D content to your canvas apps. Use the **View in 3D** component to rotate a
 
 You can display a single 3D model, or you can let the user select from a gallery [by connecting to a **Gallery** control](#define-where-the-3d-content-is-stored).
 
-
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vyoW]
 
 >[!IMPORTANT]
 >Your 3D content must be in the .glb file format.  

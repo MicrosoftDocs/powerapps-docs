@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 5/1/2020
+ms.date: 5/4/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -22,6 +22,10 @@ search.app:
 You can use the **View in MR** component in your app to let users see how a particular item might fit within a specified space.
 
 The component creates a button in your app. When app users click the button, it overlays a selected 3D model (in the .glb file format) or image (in .jpg or .png file formats) onto the live camera feed of the device.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vvwR]
+
+
 
 >[!IMPORTANT]
 >Your 3D content must be in the .glb file format.  
