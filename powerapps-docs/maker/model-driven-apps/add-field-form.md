@@ -44,7 +44,7 @@ In this topic, you add a field on to a form.
 6.  When you're done editing the form, click **Save and Close**.  
   
 > [!IMPORTANT]
->  In the Unified Interface, when setting field level security it is not recommended that a required field is set to read only using field level security rules when creating a record.  The save pipeline will ignore the read-only setting on the field and will save the record. The recommended approach is to set the entity to read-only using rolej-based security to ensure there is no conflict when creating or saving a record.
+>  In the Unified Interface, when setting field level security it is not recommended that a required field is set to read only using field level security rules when creating a record.  The save pipeline will ignore the setting on the required field and will save the record. The recommended approach is to set the entity to read-only using rolej-based security to ensure there is no conflict when creating or saving a record.
   
   
 > [!NOTE]
