@@ -19,8 +19,6 @@ search.app:
 ---
 # User guide for model-driven apps running on the Power Apps mobile app
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
 Use the Power Apps mobile app to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Run canvas apps and model-driven apps on a mobile device](run-canvas-and-model-apps-on-mobile.md).
 
 > [!IMPORTANT]

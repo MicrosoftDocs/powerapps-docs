@@ -29,10 +29,8 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: On a phone (preview)
+  - name: On a phone
     href: ../user/run-canvas-and-model-apps-on-mobile.md
-  - name: On a phone (canvas)
-    href: ../user/run-app-client.md
   - name: On a SharePoint Online page (canvas apps)
     href: ../user/powerapps-web-part.md
   - name: In Microsoft Teams (canvas apps)
@@ -145,7 +143,7 @@
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
-  - name: Use model-driven apps on mobile (preview)
+  - name: Use model-driven apps on mobile
     href: ../user/use-custom-model-driven-app-on-mobile.md
   - name: 'Use Dynamics 365 App for Outlook'
     href: ../user/use-outlook-app.md
@@ -1605,11 +1603,7 @@
       - name: View solution history
         href: ./common-data-service/solution-history.md      
       - name: Set managed properties in metadata
-        href: ./common-data-service/set-managed-properties-metadata.md
-      - name: "Advanced topics"
-        items:
-        - name: Create solution patches
-          href: ./common-data-service/solution-patches.md
+        href: ./common-data-service/set-managed-properties-metadata.md      
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
@@ -1661,7 +1655,7 @@
       href: ../sample-apps/emergency-response/configure-data-reporting.md
     - name: Use the mobile app
       href: ../sample-apps/emergency-response/use.md
-  - name: Regional Emergency Response
+  - name: Regional Government Emergency Response and Monitoring
     items:
     - name: Overview
       href: ../sample-apps/regional-emergency-response/overview.md

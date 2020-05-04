@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/user/run-app-client.md",
+      "redirect_url": "run-canvas-and-model-apps-on-mobile",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/user/run-app-client-model-driven.md",
+      "redirect_url": "https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide",
+      "redirect_document_id": "false"
+    },    
+    {
       "source_path": "powerapps-docs/administrator/app-analytics.md",
       "redirect_url": "/power-platform/admin/analytics-common-data-service",
       "redirect_document_id": "false"
