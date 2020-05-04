@@ -177,7 +177,7 @@ Other elements include:
 
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
-**[IsError](functions/function-iserror.md)** – Checks for an error.
+**[IsError](functions/function-iferror.md)** – Checks for an error.
 
 **[IsMatch](functions/function-ismatch.md)** – Checks a string against a pattern.  Regular expressions can be used.
 
