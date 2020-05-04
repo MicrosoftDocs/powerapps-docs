@@ -173,7 +173,9 @@ Using **IsError** will prevent any further processing of the error.
 
 1. Set the formula for **Label1**'s **Text** property to:
 
-	```IfError( Value( TextInput1.Text ), -1 )```
+	```powerapps-dot
+    IfError( Value( TextInput1.Text ), -1 )
+    ```
 
 1. In **TextInput1**, enter **1234**.  
 
