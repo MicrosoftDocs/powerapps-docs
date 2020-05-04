@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 03/30/2020
+ms.date: 05/04/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 68f68d5b-6c71-4b95-bb46-d48c59d9008e
@@ -78,7 +78,7 @@ A quick view control on a model-driven app form displays data from a record that
 |**Additional Properties**|You can specify the default rendering style by selecting the check box.|
 
 >[!NOTE] 
-> When adding a multiline text field to a quick view form it will always have height of one regardless of how the field control hieght is set.  This is to ensure propoer UI rendering to to maintain compactness. This is not how multiline text fields work on other forms as they auto expand based on the amount of text in them.
+> When you add a multi-line text field to a quick view form, the form will have a height of one regardless of how the field control height is set. This ensures proper rendering of the form while maintaining density. Notice that multi-line text fields on other form types, such as main forms, work differently as the form automatically expands based on the amount of text. 
 
 
 ## Next steps
