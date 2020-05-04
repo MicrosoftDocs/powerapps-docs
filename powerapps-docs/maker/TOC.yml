@@ -69,12 +69,6 @@
         href: ../user/add-activities.md
       - name: FAQ about activities
         href: ../user/faq-for-timeline-and-activity.md
-      - name: View and create email through the activities grid
-        href: ../user/view-create-email.md
-      - name: Send email using the enhanced email experience
-        href: ../user/enhanced-email.md
-      - name: Insert an email template
-        href: ../user/insert-email-template.md
       - name: Use the lookup field on a record
         href: ../user/lookup-field.md
       - name: View a profile card
@@ -91,6 +85,18 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
+    - name: Work with email
+      items:
+      - name: View and create email through the activities grid
+        href: ../user/view-create-email.md
+      - name: Send email using the enhanced email experience
+        href: ../user/enhanced-email.md
+      - name: Insert an email template
+        href: ../user/insert-email-template.md
+        - name: Send email to multiple recipients
+        href: ../user/direct-email.md
+      - name: Send email to unresolved email recipients
+        href: ../user/unresolved-email-recipient.md
     - name: Collaboration
       items:
       - name: Use OneDrive for Business     
