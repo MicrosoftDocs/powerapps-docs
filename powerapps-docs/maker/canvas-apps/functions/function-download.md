@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/02/2020
+ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -16,20 +16,23 @@ search.app:
 ---
 
 # Download function in Power Apps
+
 Downloads a file from the web to the local device.
 
 ## Description
-The **Download** function downloads a file from the web to the local device. 
 
-In native players (Windows, Android, and iOS) the user is prompted for a location to save the file.  
+The **Download** function downloads a file from the web to the local device.
 
-When used on the web, **Download** is dependent on the browser's settings to determine what happens with the file.  For images, videos, and other file types that the browser natively supports, a new browser tab is opened to display the file and many browser support saving the contents to the local file system.   
+In native players (Windows, Android, and iOS), the user is prompted for a location to save the file.  
+
+When used on the web, **Download** is dependent on the browser's settings to determine what happens with the file. For images, videos, and other file types that the browser natively supports, a new browser tab is opened to display the file.b Many browsers support saving the contents to the local file system.
 
 Only on Windows, **Download** returns the location where the file was stored locally as a text string.
 
 **Download** can only be used in [behavior formulas](../working-with-formulas-in-depth.md).
 
 ## Syntax
+
 **Download**( *Address* )
 
 * *Address* – Required.  The URL address of a web resource to download.
@@ -69,7 +72,7 @@ The **Product Showcase** tablet layout template was used for the following examp
 1. Select the **Download User Guide** button to download the guide.
 
 > [!NOTE]
-> Your browser settings determine whether to download the file or open the file directly in a new tab.
+> Your browser settings determine whether to download the file or open the file directly in a new tab. For more details, go to [Download function description](#description).
 
 ### See also
 
