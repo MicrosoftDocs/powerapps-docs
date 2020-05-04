@@ -2,7 +2,7 @@
 title: Use the View in 3D component in Power Apps (Preview)
 description: View 3D models in Power Apps.
 author: iaanw
-manager: shellha
+manager: shellyha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
