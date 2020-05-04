@@ -56,12 +56,12 @@ Native apps on a device cannot be directly launched.  There may be indirect opti
 **Launch** can pass parameters to the webpage or canvas app.  Parameters can be provided in two equivalent ways:
 - An argument list of name value pairs.  For example 
     ```
-    Launch( "http://bing.com/search", "q", "Power%20Apps", "count", 1 )
+    Launch( "http://bing.com/search", "q", "Power Apps", "count", 1 )
     ```
 
 - A record of field values.  For example:
     ```
-    Launch( "http://bing.com/search", { q: "Power%20Apps", count: 1 } )
+    Launch( "http://bing.com/search", { q: "Power Apps", count: 1 } )
     ```
     This form can be easier to work with as it makes the association between name and value clearer.  It is the only form that supports the optional *LaunchTarget* argument.
 
@@ -69,6 +69,8 @@ Native apps on a device cannot be directly launched.  There may be indirect opti
 > The record option for parameters is currently in Preview and will be released in all regions soon.
 
 The address and parameters are URL encoded before being passed to replace certain non-alphanumeric characters with `%` and a hexadecimal number as if the [**EncodeUrl**](function-encode-decode.md) function has been used on each.
+
+When launching a webpage, a [query string](https://en.wikipedia.org/wiki/Query_string) of parameters can be included at the end of the URL address.  Any additional parameters provided to **Launch** will be added to the end of the query string.  This does not work when launching a canvas app.
 
 ### Target
 > [!NOTE]
