@@ -309,6 +309,18 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
+          - name: "Add mixed reality components (Preview)"
+            items:
+            - name: Mixed reality components
+              href: ./canvas-apps/mixed-reality-overview.md
+            - name: View and manipulate 3D models
+              href: ./canvas-apps/mixed-reality-component-view-3d.md
+            - name: View predefined shapes in mixed reality
+              href: ./canvas-apps/mixed-reality-component-view-shape.md
+            - name: View 3D models and 2D images in mixed reality
+              href: ./canvas-apps/mixed-reality-component-view-mr.md
+            - name: Measure in mixed reality
+              href: ./canvas-apps/mixed-reality-component-measure-distance.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Working with gallery
@@ -1603,11 +1615,7 @@
       - name: View solution history
         href: ./common-data-service/solution-history.md      
       - name: Set managed properties in metadata
-        href: ./common-data-service/set-managed-properties-metadata.md
-      - name: "Advanced topics"
-        items:
-        - name: Create solution patches
-          href: ./common-data-service/solution-patches.md
+        href: ./common-data-service/set-managed-properties-metadata.md      
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
