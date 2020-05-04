@@ -24,7 +24,7 @@ Use the advanced filter options to create a personal view to see the records tha
 
 > [!NOTE]
 > - The advanced filter option is available only in English language versions.
-> - The advanced filter option don't work on Queues.
+> - The advanced filter option does not work on Queues.
 > - Grids do not prepopulate column filters based on the current view definition.
 
 When you create and save a personal view, it appears in your list of personal views under **My Views**.
