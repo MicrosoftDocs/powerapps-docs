@@ -20,7 +20,7 @@ search.app:
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
 > [!IMPORTANT]
-> Grids don't prepopulate column filters based on the current view definition.
+> In the Unified Interface grids  don't prepopulate column filters based on the current view definition.
 
    > [!div class="mx-imgBorder"]
    > ![Grid filtering](media/filter-options.png "Grid filtering")
