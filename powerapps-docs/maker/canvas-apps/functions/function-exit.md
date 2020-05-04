@@ -28,9 +28,6 @@ While authoring the app, calling **Exit** doesn't exit or sign out the user.  Ho
 
 **Exit** can only be used in [behavior formulas](../working-with-formulas-in-depth.md).
 
-> [!NOTE]
-> Signing out with the **Exit** function is not supported while running the app in a web browser.
-
 ## Syntax
 **Exit**( [*Signout*] )
 
