@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/02/2020
+ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -23,7 +23,7 @@ The **SaveData** function stores a collection for later use under a name.
 The **LoadData** function reloads a collection by name that was previously saved with **SaveData**. You can't use this function to load a collection from another source.  
 
 > [!NOTE]
-> The name shared between **SaveData** and **LoadData** is a key, not a file name.  It need not be complex as names are unique to each app and there is no danger of name conflict.  The name may not contain any of these characters: `*".?:\<>|/`. 
+> The name shared between **SaveData** and **LoadData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`.
 
 Use these functions to improve app-startup performance by:
 
@@ -54,8 +54,6 @@ The loaded data will be appended to the collection. Use the **[Clear](function-c
 The device's built in app sandbox facilities are used to isolate saved data from other apps. 
 
 The device may also encrypt the data; or you can use a mobile device management tool such as [Microsoft Intune](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune).
-
-
 
 ## Syntax
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])

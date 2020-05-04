@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/02/2020
+ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -17,12 +17,16 @@ search.app:
 
 # IfError and IsError functions in Power Apps
 
+[This topic is pre-release documentation and is subject to change.]
+
 Detects errors and provides an alternative value or takes action.
 
 ## Description
 
 > [!NOTE]
-> These functions are part of an experimental feature and are subject to change. The behavior that this topic describes is available only when the *Formula-level error management* feature is turned on. This app-level setting is off by default. To turn this feature on, open the *File* tab, select *App settings* in the left hand menu, and then select *Experimental features*. Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
+> - IfError and IsError functions are part of an experimental feature and are subject to change. More information: [Understand experimental, preview, and deprecated features in Power Apps](../working-with-experimental-preview.md).
+> - The behavior that this topic describes is available only when the *Formula-level error management* experimental feature in [advanced settings](../working-with-experimental-preview.md#controlling-which-features-are-enabled) is turned on (off by default).
+> - Your feedback is very valuable to us - please let us know what you think in the [Power Apps community forums](https://powerusers.microsoft.com/t5/Expressions-and-Formulas/bd-p/How-To).
 
 ### IfError
 
@@ -45,9 +49,9 @@ Patch( DS1, ... );
 Patch( DS2, ... )
 ```
 
-the second [**Patch**](function-patch.md) function to `DS2` will be attempted even if the **Patch** to `DS1` fails.  The scope of an error is limited to each formula that is chained.
+The second [**Patch**](function-patch.md) function to `DS2` will be attempted even if the **Patch** to `DS1` fails.  The scope of an error is limited to each formula that is chained.
 
-Use **IfError** to perform an action and only continue processing if the action was successful.  Applying **IfError** to this example:
+Use **IfError** to perform an action and only continue processing if the action was successful. Applying **IfError** to this example:
 
 ```powerapps-dot
 IfError(
@@ -56,9 +60,11 @@ IfError(
 )
 ```
 
-If the **Patch** of `DS1` encounters a problem, the first **Notify** executed, and no further processing occurs including the second **Patch** of `DS2`. If the first **Patch** succeeds, the second **Patch** will execute.  
+If the **Patch** of `DS1` encounters a problem, the first **Notify** is executed. No further processing occurs including the second **Patch** of `DS2`. If the first **Patch** succeeds, the second **Patch** will execute.  
 
-If supplied, the optional *DefaultResult* argument is returned if no errors are discovered.  Without this argument, the last *Value* argument is returned.  Building on the last example, the return value from **IfError** can be checked to determine if there were any problems:
+If supplied, the optional *DefaultResult* argument is returned if no errors are discovered.  Without this argument, the last *Value* argument is returned. 
+
+Building on the last example, the return value from **IfError** can be checked to determine if there were any problems:
 
 ```powerapps-dot
 IfError(
@@ -66,7 +72,7 @@ IfError(
     Patch( DS2, ... ), Notify( "problem in the second action" ); false,
     true
 )
-```    
+```
 
 ### Type compatibility
 
@@ -75,7 +81,7 @@ IfError(
 In the last example, **Patch** will return a record which is not compatible with the Booleans used for the *Replacement* formulas or the *DefaultResult*.  This is fine since there is no situation in which the return value from these **Patch** calls would be returned by **IfError**.
 
 > [!NOTE]
-> At present, the types of all arguments to **IfError** must be compatible.  This is in the process of being changed.
+> While the behavior in process for a change, the types of all arguments to **IfError** must be compatible currently.
 
 In the simple example described earlier:
 
@@ -83,21 +89,21 @@ In the simple example described earlier:
 IfError( 1/x, 0 )
 ```
 
-the types of `1/x` and `0` were compatible as both were text strings.  If they are not, the second argument will be coerced to match the type of the first argument. 
+The types of `1/x` and `0` were compatible as both were text strings.  If they're not, the second argument will be coerced to match the type of the first argument.
 
-Excel will display **#DIV/0!** when a division by zero occurs.  To accomplish this with **IfError** it is tempting to write:
+Excel will display **#DIV/0!** when a division by zero occurs. To accomplish this with **IfError** it is tempting to write:
 
 ```powerapps-dot
 IfError( 1/x, "#DIV/0!" )
 ```
 
-Unfortunately this won't do the job.  The text string `"#DIV/0!"` will be coerced to the type of the first argument to **IfError** which is a number.  The result of **IfError** will be yet another error since the text string cannot be coerced.  To remedy this situation, convert the first argument to a text string so that **IfError** always returns a text string:  
+Unfortunately this won't work. The text string `"#DIV/0!"` will be coerced to the type of the first argument to **IfError** which is a number.  The result of **IfError** will be yet another error since the text string cannot be coerced.  To fix this, convert the first argument to a text string so that **IfError** always returns a text string:  
 
 ```powerapps-dot
 IfError( Text( 1/x ), "#DIV/0!" )
 ```  
 
-As shown in this last example, **IfError** can return an error if the *Replacement* or *DefaultResult* is an error.
+As seen above, **IfError** can return an error if the *Replacement* or *DefaultResult* is an error.
 
 ### ErrorInfo
 
@@ -105,27 +111,27 @@ Within in the replacement formulas, the **ErrorInfo** record provides informatio
 
 | **ErrorInfo** field | Type | Description |
 |---------------------|------|-------------|
-| **Control** | Text string | Name of the current control, used to report where the error occured. |
+| **Control** | Text string | Name of the current control, used to report where the error occurred. |
 | **Kind** | **ErrorKind** enum (number) | Categorized kind of the error. |
 | **Message** | Text string | Message about the error, suitable to be displayed to the end user. |
 | **Notify** | Boolean | If not caught by IfError, whether an end user notification banner should be displayed. |
 | **Property** | Text string | Name of the current property, used to report where the error occured. |
 
-For example, this formula as a [**Button**](../controls/control-button.md) control's **OnSelect** property:
+For example, consider the following formula as a [**Button**](../controls/control-button.md) control's **OnSelect** property:
 
 ```powerapps-dot
 IfError( 1/0, Notify( "Internal error: " & ErrorInfo.Control & "." & ErrorInfo.Property ) )
 ```
 
-would display this banner when the button is activated:
+The example formula above would display the following banner when the button is activated:
 
 ![Button control activated, showing a notification from the Notify function](media/function-iferror/notify-errorinfo.png)
- 
+
 ### IsError
 
 The **IsError** function tests for an error value.  The return value is a Boolean *true* or *false*.
 
-Using **IsError** will prevent any further processing of the error. 
+Using **IsError** will prevent any further processing of the error.
 
 ## Syntax
 
@@ -162,20 +168,20 @@ Using **IsError** will prevent any further processing of the error.
 
 1. Add a **[Text input](../controls/control-text-input.md)** control, and name it **TextInput1** if it doesn't have that name by default.
 
-2. Add a **[Label](../controls/control-text-box.md)** control, and name it **Label1** if it doesn't have that name by default.
+1. Add a **[Label](../controls/control-text-box.md)** control, and name it **Label1** if it doesn't have that name by default.
 
-3. Set the formula for **Label1**'s **Text** property to:
+1. Set the formula for **Label1**'s **Text** property to:
 
-	**IfError( Value( TextInput1.Text ), -1 )**
+	```IfError( Value( TextInput1.Text ), -1 )```
 
-4. In **TextInput1**, type **1234**.  
+1. In **TextInput1**, enter **1234**.  
 
 	Label1 will show the value **1234** as this is a valid input to the Value function.
 
-5. In **TextInput1**, type **ToInfinity**.
+1. In **TextInput1**, enter **ToInfinity**.
 
 	Label1 will show the value **-1** as this is not a valid input to the Value function.  Without wrapping the Value function with IfError, the label would show no value as the error value is treated as a *blank*. 
 
+### See also
 
-
-
+[Formula reference for Power Apps](../formula-reference.md)
