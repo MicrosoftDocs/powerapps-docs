@@ -23,6 +23,8 @@ Launches a webpage or a canvas app.  The function supports:
 - **Parameters** (optional), named values to pass to the webpage or canvas app.  In a canvas app, parameters can be read with the [**Param**](#param) function.
 - **Target** (optional), the browser tab in which to launch the webpage or canvas app.
 
+**Launch** can only be used in [behavior formulas](../working-with-formulas-in-depth.md).
+
 ### Address
 Webpages are launched via a URL address.  For example:
 
@@ -90,7 +92,7 @@ Use the *LaunchTarget* argument to specify the target browser window in which to
 > *LaunchTarget* enum names are in transition.  You can use **Blank** and **Self** today but these names will be changing in the weeks ahead.  Your app will automatically be updated when this occurs, your formulas will not require an update.
 
 ### Security zones
-In Internet Explorer and classic Microsoft Edge, the **Launch** function opens a website or app only if its security settings are the same or higher than those of the app that contains the function. If, for example, you add the **Launch** function to an app that will run in the **Trusted sites** security zone, ensure that the website or app that you want the function to open is in the **Trusted sites** or **Local intranet** zone (not in **Restricted sites**). More information: [Change security and privacy settings for Internet Explorer 11](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings).  
+In Internet Explorer and classic Microsoft Edge, the **Launch** function opens a website or canvas app only if its security settings are the same or higher than those of the app that contains the function. If, for example, you add the **Launch** function to an app that will run in the **Trusted sites** security zone, ensure that the website or app that you want the function to open is in the **Trusted sites** or **Local intranet** zone (not in **Restricted sites**). More information: [Change security and privacy settings for Internet Explorer 11](https://support.microsoft.com/help/17479/windows-internet-explorer-11-change-security-privacy-settings).  
 
 ## Param
 The **Param** function retrieves a parameter passed to the app when it was launched. If the named parameter wasn't passed, **Param** returns *blank*.

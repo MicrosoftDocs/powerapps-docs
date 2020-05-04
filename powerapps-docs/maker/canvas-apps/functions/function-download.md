@@ -27,6 +27,8 @@ When used on the web, **Download** is dependent on the browser's settings to det
 
 Only on Windows, **Download** returns the location where the file was stored locally as a text string.
 
+**Download** can only be used in [behavior formulas](../working-with-formulas-in-depth.md).
+
 ## Syntax
 **Download**( *Address* )
 
