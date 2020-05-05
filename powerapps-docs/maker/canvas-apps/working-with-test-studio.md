@@ -116,7 +116,8 @@ To add test steps and test assertions in the Kudos app:
 
     You can use any supported expression. You can also query any data sources, collections, variables, or run flows that are contained in your app, as well as create new global variables or collections to use in your tests.
 
-    ```Set(kudosBeforeTest, CountRows(Filter(Kudos, Receiver.Email = "someone@example.com")))```
+    ```powerapps-dot
+    Set(kudosBeforeTest, CountRows(Filter(Kudos, Receiver.Email = "someone@example.com")))```
 
 5. Select Step 2 or the step above which you want to insert a new step.
 
@@ -124,17 +125,22 @@ To add test steps and test assertions in the Kudos app:
 
 7. Enter an expression or formula in the action input to [Trace](./functions/function-trace.md) and write the *kudosBeforeTest* value to the test results record.
 
-    ```Trace("kudosBeforeTest : " & kudosBeforeTest);```
+    ```powerapps-dot
+    Trace("kudosBeforeTest : " & kudosBeforeTest);
+    ```
 
     ![Kudos before test](./media/working-with-test-studio/kudos-before-test.png "Kudos before test")
 
 8. Go to the bottom of the test case and insert a new step to count the records in the database after the test has completed.
 
-    ```Set(kudosAfterTest, CountRows(Filter(Kudos, Receiver.Email = "someone@example.com")))```
+    ```powerapps-dot
+    Set(kudosAfterTest, CountRows(Filter(Kudos, Receiver.Email = "someone@example.com")))```
 
 9. Add a final step to validate that the record count in the database has increased by a count of 1 and enter the following assertion action to verify this:
 
-    ```Assert(kudosAfterTest = kudosBeforeTest + 1, "Kudos count incorrect. Expected : " & kudosBeforeTest + 1  & " Actual :" & kudosAfterTest)```
+    ```powerapps-dot
+    Assert(kudosAfterTest = kudosBeforeTest + 1, "Kudos count incorrect. Expected : " & kudosBeforeTest + 1  & " Actual :" & kudosAfterTest)
+    ```
 
     ![Kudos after test assert](./media/working-with-test-studio/kudos-after-test-assert.png "Kudos after test assert")
 
@@ -171,7 +177,9 @@ In this section, you'll change the test assertion to experience a failed test:
 
 2. Update ```+ 1``` to ```+ 2``` in test action. This means that the test  expects two records to be created, which is incorrect. If the test is successful, only one record should be created in the database.
 
-    ```Assert(kudosAfterTest = kudosBeforeTest + 2, "Kudos count incorrect. Expected : " & kudosBeforeTest + 2  & " Actual :" & kudosAfterTest)```
+    ```powerapps-dot
+    Assert(kudosAfterTest = kudosBeforeTest + 2, "Kudos count incorrect. Expected : " & kudosBeforeTest + 2  & " Actual :" & kudosAfterTest)
+    ```
 
     ![Assert count update](./media/working-with-test-studio/assert-count-update.png "Assert count update")
 
@@ -258,7 +266,7 @@ In this quickstart, you'll create two custom entities in the Common Data Service
     > [!NOTE]
     > The following samples require a [Common Data Service connection](https://docs.microsoft.com/connectors/commondataservice/). You can create a [simple app](data-platform-create-app.md) or [build an app from scratch](data-platform-create-app-scratch.md) using Common Data Service. Also, refer to the [Patch](./functions/function-patch.md) function reference for more details to modify records of a data source used in the following samples.
 
-    ```
+    ```powerapps-dot
     //Save to Common Data Service
     Patch(AppTestResults
     , Defaults(AppTestResults)
@@ -282,7 +290,7 @@ In this quickstart, you'll create two custom entities in the Common Data Service
 
 5. Input an expression to process the results of your test. In the following sample, you'll save each test suite's results to the custom AppTestSuiteResults entity in Common Data Service. 
 
-    ```
+    ```powerapps-dot
     //Save to Common Data Service
     Patch(AppTestSuiteResults
         , Defaults(AppTestSuiteResults)
@@ -303,17 +311,21 @@ Other examples of expressions you could use in these properties are:
 
 - Send results to a flow in Power Automate.
 
-    ```MyTestResultsFlow.Run(JSON(TestCaseResult))```
+    ```powerapps-dot
+    MyTestResultsFlow.Run(JSON(TestCaseResult))
+    ```
 
 - Email your results.
 
-    ```Office365.SendMailV2("someone@example.com", "Test case results", JSON(TestCaseResult, JSONFormat.IndentFour))```
+    ```powerapps-dot
+    Office365.SendMailV2("someone@example.com", "Test case results", JSON(TestCaseResult, JSONFormat.IndentFour))
+    ```
 
 - Receive an app notification of the test result.
 
   For example, receive a notification after the test completes when playing the test in a browser, outside of Test Studio.
 
-    ```
+    ```powerapps-dot
     Notify(TestCaseResult.TestCaseName & " : "
             & If( TestCaseResult.Success
                 , " Passed"
