@@ -26,6 +26,11 @@ You can send an email to multiple recipients using email templates. This is know
 
 4. In the **Send Email** pane, select an email template from the **Template** list.
 
+    > [!NOTE]
+    > If you have multiple records that span across multiple pages, you can select one of following options from the **To** list:
+    > - **All records on current page**: Sends the email to all records displayed on the current page.
+    > - **All records on all pages**: Send the email to all the stored records.
+
 5. Select **Send**.
 
     ![Send email to multiple recipients](media/direct-email.png "Send email to multiple recipients")
