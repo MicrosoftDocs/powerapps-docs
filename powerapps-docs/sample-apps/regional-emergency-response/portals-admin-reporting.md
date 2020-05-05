@@ -1,5 +1,5 @@
 ---
-title: Administer the Regional Emergency Response portal | Microsoft Docs
+title: Administer the Regional Government Emergency Response and Monitoring portal | Microsoft Docs
 description: Learn how to configure the Regional Hospital Emergency Response portal.
 author: tapanm-msft
 manager: kvivek
@@ -12,9 +12,9 @@ ms.reviewer: tapanm
 searchScope:
   - PowerApps
 ---
-# Administer the Regional Emergency Response portal
+# Administer the Regional Government Emergency Response and Monitoring portal
 
-Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Emergency Response
+Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Government Emergency Response and Monitoring
 portal, administrators can quickly view and update data related to **Users**, **Systems**, **Regions**, and **Facilities**. Stakeholders can view the published insights through dashboards for current status of the health care system and take actions.
 
 ## Portal at a glance
@@ -24,7 +24,7 @@ access, submit, or update as the administrator of the portal.
 
 ![Portal at glance](media/portal-at-glance.png)
 
-You can use latest mobile devices and web browsers when using Regional Emergency Response portal except Apple iPad.
+You can use latest mobile devices and web browsers when using Regional Government Emergency Response and Monitoring portal except Apple iPad.
 
 [!include[cc-getting-started](includes/cc-getting-started.md)]
 
@@ -424,6 +424,8 @@ Similarly, you can hover over the timeline chart to view date-specific numbers i
 
 [!include[cc-general-options](includes/cc-general-options.md)]
 
-## Report issues
+## Issues and feedback
 
-To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.

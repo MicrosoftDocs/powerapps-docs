@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/15/2020
+ms.date: 05/01/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
@@ -23,9 +23,7 @@ These tasks are typically performed by business admins in your organization.
 Use the admin app to create and manage master data for your organization. This data is required for the Hospital Emergency Response app to work.
 
 > [!IMPORTANT]
-> - Ensure that your IT Admin has deployed the solution in your organization and has granted appropriate permissions for business admins to use the admin app. More information: [Deploy the Hospital Emergency Response app](deploy-configure.md#deploy-the-hospital-emergency-response-app)
-> 
-> - You can also import your data from the data files available in the deployment package. More information: [Step 4: Load configuration and master data for your organization](deploy-configure.md#step-4-load-configuration-and-master-data-for-your-organization)
+> Ensure that your IT Admin has deployed the solution in your organization and has granted appropriate permissions for business admins to use the admin app. More information: [Deploy the Hospital Emergency Response app](deploy-configure.md)
 
 You must add master data in these entities in the following sequence:
 
@@ -47,7 +45,7 @@ The master data is managed from the **Locations** area in the left navigation in
 The entities under the **Hierarchy** area are listed in the order you should populate data.
 
 > [!NOTE]
-> Acuities data is imported during the deployment of the solution. More information: [Step 4: Load configuration and master data for your organization](deploy-configure.md#step-4-load-configuration-and-master-data-for-your-organization)
+> Acuities data is automatically imported during the fresh installation of the app. More information: [Install the app](deploy-configure.md#step-3-install-the-app)
 
 ### Systems data
 
@@ -142,7 +140,7 @@ To edit the record, select the record, update the values as required, and select
 The **Locations** entity lets you manage specific locations within each hospital facility.
 
 > [!NOTE]
-> Before creating a **Locations** record, ensure that you have imported the acuity data using the **00 - Acuities Import.xlsx** file as explained earlier in [Step 4: Load configuration and master data for your organization](deploy-configure.md#step-4-load-configuration-and-master-data-for-your-organization). This is because acuity information is required to create a **Location** record.
+> Before creating a **Locations** record, ensure that you have the acuity data. This is because acuity information is required to create a **Location** record.
 
 To create a record:
 
@@ -337,7 +335,7 @@ View the Power BI dashboards for insights and decision making.
 
 - Power BI Premium Capacity or Power BI Pro licenses assigned to users accessing the report. 
 
-- Your IT admin must have published the Power BI report and granted you permissions to access it. More information: [Publish the Power BI dashboard](deploy-configure.md#publish-the-power-bi-dashboard) 
+- Your IT admin must have published the Power BI report and granted you permissions to access it. More information: [Publish the Power BI dashboard](deploy-configure.md#step-10-publish-the-power-bi-dashboard) 
 
 ### View the dashboard
 
@@ -493,6 +491,10 @@ After the required languages are enabled by your system administrator, each admi
 4. Select **OK** in the lower-right corner.
 
 The admin app UI will switch to display in the language you selected.
+
+## Extend mobile app labels (Experimental)
+
+You can extend Hospital Emergency Response mobile app labels with custom text. To do this, you have to import the **Canvas Apps Strings** solution. The solution adds model-driven app named **Canvas App Label Management** that you can use to customize the Hospital Emergency Response mobile app labels. Add new languages supported by the solution and text for corresponding mobile app labels using the model-driven app. For step by step instructions and to download the solution, go to [Extend Hospital Emergency Response mobile app labels (Experimental)](https://github.com/microsoft/powerapps-tools/tree/master/Apps/EmergencyResponse/Experimental/LabelCustomizations).
 
 ## Issues and feedback
 

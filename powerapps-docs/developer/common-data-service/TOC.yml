@@ -27,6 +27,8 @@
       href: use-fetchxml-left-outer-join-query-records-not-in.md
     - name: Page large result sets with FetchXML
       href: org-service/page-large-result-sets-with-fetchxml.md
+  - name: "Use SQL to query data (Preview)"
+    href: cds-sql-query.md
   - name: Saved Queries
     href: saved-queries.md
   - name: Query Hierarchical data
@@ -303,6 +305,8 @@
     items:
     - name: Dependency tracking for solution components
       href: dependency-tracking-solution-components.md
+    - name: Removing dependencies
+      href: removing-dependencies.md
     - name: Maintain managed solutions
       href: maintain-managed-solutions.md
     - name: Organize your solutions

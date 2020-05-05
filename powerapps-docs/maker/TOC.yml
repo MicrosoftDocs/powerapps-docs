@@ -29,10 +29,8 @@
   items:
   - name: In a browser
     href: ../user/run-app-browser.md
-  - name: On a phone (preview)
+  - name: On a phone
     href: ../user/run-canvas-and-model-apps-on-mobile.md
-  - name: On a phone (canvas)
-    href: ../user/run-app-client.md
   - name: On a SharePoint Online page (canvas apps)
     href: ../user/powerapps-web-part.md
   - name: In Microsoft Teams (canvas apps)
@@ -145,7 +143,7 @@
         href: ../user/work-with-business-processes.md
       - name: Use flows
         href: ../user/use-flows.md
-  - name: Use model-driven apps on mobile (preview)
+  - name: Use model-driven apps on mobile
     href: ../user/use-custom-model-driven-app-on-mobile.md
   - name: 'Use Dynamics 365 App for Outlook'
     href: ../user/use-outlook-app.md
@@ -311,6 +309,18 @@
             href: ./canvas-apps/use-line-pie-bar-chart.md
           - name: Add multimedia
             href: ./canvas-apps/add-images-pictures-audio-video.md
+          - name: "Add mixed reality components (Preview)"
+            items:
+            - name: Mixed reality components
+              href: ./canvas-apps/mixed-reality-overview.md
+            - name: View and manipulate 3D models
+              href: ./canvas-apps/mixed-reality-component-view-3d.md
+            - name: View predefined shapes in mixed reality
+              href: ./canvas-apps/mixed-reality-component-view-shape.md
+            - name: View 3D models and 2D images in mixed reality
+              href: ./canvas-apps/mixed-reality-component-view-mr.md
+            - name: Measure in mixed reality
+              href: ./canvas-apps/mixed-reality-component-measure-distance.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Working with gallery
@@ -542,7 +552,7 @@
           - name: Distinct
             href: ./canvas-apps/functions/function-distinct.md
           - name: Download
-            href: ./canvas-apps/functions/function-param.md
+            href: ./canvas-apps/functions/function-download.md
           - name: DropColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: EditForm
@@ -587,6 +597,8 @@
             href: ./canvas-apps/functions/function-isblank-isempty.md
           - name: IsEmpty
             href: ./canvas-apps/functions/function-isblank-isempty.md
+          - name: IsError
+            href: ./canvas-apps/functions/function-iferror.md            
           - name: IsMatch
             href: ./canvas-apps/functions/function-ismatch.md
           - name: IsNumeric
@@ -1605,11 +1617,7 @@
       - name: View solution history
         href: ./common-data-service/solution-history.md      
       - name: Set managed properties in metadata
-        href: ./common-data-service/set-managed-properties-metadata.md
-      - name: "Advanced topics"
-        items:
-        - name: Create solution patches
-          href: ./common-data-service/solution-patches.md
+        href: ./common-data-service/set-managed-properties-metadata.md      
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
@@ -1646,9 +1654,7 @@
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
 - name: AI Builder
-  items:
-  - name: Use AI Builder in Power Apps
-    href: ../use-ai-builder.md
+  href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
   - name: Crisis communication
@@ -1663,7 +1669,7 @@
       href: ../sample-apps/emergency-response/configure-data-reporting.md
     - name: Use the mobile app
       href: ../sample-apps/emergency-response/use.md
-  - name: Regional Emergency Response
+  - name: Regional Government Emergency Response and Monitoring
     items:
     - name: Overview
       href: ../sample-apps/regional-emergency-response/overview.md
