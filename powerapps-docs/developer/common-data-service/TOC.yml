@@ -135,7 +135,7 @@
       href: data-import-entities.md
   - name: Data Export Service
     href: data-export-service.md
-  - name: Migrate data between CDS instances with OData dataflows
+  - name: Migrate data between Common Data Service instances with OData dataflows
     href: cds-odata-dataflows-migration.md
   - name: Synchronize data
     href: data-synchronization.md

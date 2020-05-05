@@ -16,17 +16,9 @@ search.app:
 
 # Migrate data between Common Data Service instances using the dataflows OData connector
 
-Common Data Service web API works with any technology that supports OData and OAuth.
+Common Data Service web API works with any technology that supports OData and OAuth. There are many options available to move data in and out of Common Data Service. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Common Data Service. 
 
-There are many options available to move data in and out of Common Data Service. OData connector is one of the native dataflows, which is designed to support migration and synchronization of large datasets in Common Data Service. 
-
-In this article, we will walk you through how to migrate data between Common Data Service instances using the dataflows OData connector. 
-
-## Scenarios
-
- - A one-time cross-environment or cross tenant migration is needed (for example, geo-migration)
-
- - Developer needs to update an app that is being used in production. Test data is needed in their development environment to easily build out changes. 
+In this article, we walk you through how to migrate data between Common Data Service instances using the dataflows OData connector. 
 
 ## Prerequisites
 
@@ -36,16 +28,24 @@ In this article, we will walk you through how to migrate data between Common Dat
 
 1. Two environments with Common Data Service instances provisioned.
 
+## Scenarios
+
+ - A one-time cross-environment or cross tenant migration is needed (for example, geo-migration)
+
+ - Developer needs to update an app that is being used in production. Test data is needed in their development environment to easily build out changes. 
+
+## Steps
+
 The following steps are required to migrate data:
 
 1. [Plan out the dataflow](#plan-out-the-dataflow)
 1. [Get the OData endpoint](#get-the-odata-endpoint)
 1. [Create a new OData dataflow](#create-a-new-odata-dataflow)
-1. [Select and transform data with the Power Query experience](#select-and-transform-data-with-power-query)
+1. [Select and transform data with the Power Query experience](#select-and-transform-data-with-the-power-query)
 1. [Configure destination environment settings](#configure-destination-environment-settings)
 1. [Run the dataflow](#run-the-dataflow)
 
-### Plan out the dataflow
+## Plan out the dataflow
 
 1. Identify the source and target environments.
 
@@ -53,6 +53,9 @@ The following steps are required to migrate data:
 
     - The **target environment** is where the data is migrated. 
 
+
+     > [!NOTE]
+     > Switch to **source** and **target** environments by selecting the **Environment** on the top right corner and select the appropriate environment from the list.
 1. Make sure that the entities are already defined in the target environment. Ideally both environments should have the same entities defined with the same solution.
 
 1. When importing relationships, multiple dataflows are required.
@@ -61,7 +64,7 @@ The following steps are required to migrate data:
 > [!NOTE]
 > The words to describe a Common Data Service `instance` and `environment` are used interchangeably in this article. Each environment in the Power Platform can have 0 or 1 Common Data Service instance(s). More information: [Create Common Data Service database](https://docs.microsoft.com/power-platform/admin/create-database).
 
-### Get the OData endpoint 
+## Get the OData endpoint 
 
 Common Data Service provides an OData endpoint that does not require any additional configuration to authenticate with the dataflows connector. It is relatively easy process to connect to the source instance. 
 
@@ -84,7 +87,7 @@ From the **source** environment, get the [OData endpoint](https://docs.microsoft
     > [!div class="mx-imgBorder"]
     > ![Copy the service root URL in the developer resources](./media/cds-migration-pic1.png)
  
-### Create a new OData dataflow
+## Create a new OData dataflow
 
 In the **target** environment, create a new dataflow with the OData connector.
 
@@ -121,7 +124,7 @@ In the **target** environment, create a new dataflow with the OData connector.
     
 1. Select **Next** in the bottom right.
 
-### Select and transform data with the Power Query 
+## Select and transform data with the Power Query 
 
 Use the Power Query, which allows to select the tables and also allows the transformation of data.
 
@@ -146,11 +149,11 @@ First, select the entities that need to be transferred. You can browse all entit
 
 1. Select **Next** in the bottom right.
 
-### Configure destination environment settings
+## Configure destination environment settings
 
 This section describes how to define the target instance settings.
 
-#### Map entities 
+### Map entities 
 
 For each entity chosen, select the behavior for importing that entity in these settings and select **Next**.
 
@@ -177,7 +180,7 @@ For each entity chosen, select the behavior for importing that entity in these s
 
 - There is an option to **Do not load**, but do not include entities in the dataflow that are not being loaded. You can select **Back** from this menu to return to the Power Query menu and remove the entities that are not needed.
 
-#### Refresh settings
+### Refresh settings
 
 Select **Refresh manually** since this is a one-time migration ad select **Create**. 
 
