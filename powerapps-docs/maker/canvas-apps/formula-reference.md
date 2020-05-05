@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/21/2020
+ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -176,6 +176,8 @@ Other elements include:
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
+
+**[IsError](functions/function-iferror.md)** – Checks for an error.
 
 **[IsMatch](functions/function-ismatch.md)** – Checks a string against a pattern.  Regular expressions can be used.
 
