@@ -1,8 +1,22 @@
 ## Getting started with the portal
 
-When you visit the portal, you have an option to log in, or for the first time, redeem an invitation:
+When you visit the portal, you have an option to sign in, or for the first time, request access:
+
+![Home screen](..\media\portal-home-screen.png)
+
+Select **Sign-In** when you already have signing credentials, or if you'd like to redeem an invitation.
 
 ![Getting started](..\media\portal-user-getting-started.png)
+
+### Request access
+
+Enter your first and last names, email address and mobile phone to request access to the portal. To select the parent organization, use the search icon and then select the parent organization or search as appropriate.
+
+You can select a role when you request access. The **Parent Organization Administrator** role lets you manage administrative tasks. **Organizational HealthCare Worker** role allows you to submit healthcare related information. And **Report Viewer** role is used to view various dashboards using the Regional Government Emergency Response and Monitoring portal. For more information about roles, go to **Users** section in **Administrative Tasks**.
+
+After you submit your access request, you'll receive an acknowledgement on portal and you'll receive an email once your access request is processed.
+
+![Request access acknowledgement](..\media\request-access-ack.png)
 
 ### Redeem invitation
 
