@@ -3,13 +3,10 @@ title: Migrate data between Common Data Service instances with dataflow OData co
 author: denisem-msft
 ms.reviewer: "nabuthuk"
 description: Migrate data between Common data Service instance using Power Platform OData connector.
-no-loc: [Title, Document]
 ms.date: 05/05/2020
 ms.service: powerapps
 ms.topic: "article"
 ms.author: demora
-search.audienceType: 
-  - developer, maker
 search.app: 
   - PowerApps
 ---
@@ -51,7 +48,7 @@ In this article, we walk you through how to migrate data between Common Data Ser
     - One (parent/independent) to many (children/dependent) entities require separate dataflows. Configure the parent dataflow to run before any child entities, since the data in the parent needs to be loaded first to correctly map to the fields in the corresponding child entities.
 
 > [!NOTE]
-> The words to describe a Common Data Service `instance` and `environment` are used interchangeably in this article. Each environment in the Power Platform can have 0 or 1 Common Data Service instance(s). More information: [Create Common Data Service database](https://docs.microsoft.com/power-platform/admin/create-database).
+> The words to describe a Common Data Service `instance` and `environment` are used interchangeably in this article. Each environment in Microsoft Power Platform can have 0 or 1 Common Data Service instance(s). More information: [Create Common Data Service database](https://docs.microsoft.com/power-platform/admin/create-database).
 
 ## Step 2: Get the OData endpoint 
 
