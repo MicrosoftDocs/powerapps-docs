@@ -85,7 +85,7 @@ From the **source** environment, get the [OData endpoint](https://docs.microsoft
 1. Copy the **Service Root URL** and save it in notepad.
 
     > [!div class="mx-imgBorder"]
-    > ![Copy the service root URL in the developer resources](./media/cds-migration-pic1.png)
+    > ![Copy the service root URL in the developer resources](./media/get-odata-endpoint-url.png)
  
 ## Create a new OData dataflow
 
@@ -101,7 +101,7 @@ In the **target** environment, create a new dataflow with the OData connector.
 
 1. Select **Create**.
    > [!div class="mx-imgBorder"]
-   > ![Prompt for a new dataflow](./media/cds-migration-pic2.png)
+   > ![Prompt for a new dataflow](./media/enter-name-for-new-dataflow.png)
 
 1. Select the OData connector, and enter the field values:
 
@@ -117,7 +117,7 @@ In the **target** environment, create a new dataflow with the OData connector.
     | Authentication kind | Organizational account. Select the Sign in button to open the login dialog that authenticates the account associated with the connection. |
 
     > [!div class="mx-imgBorder"]
-    > ![Confirm the field values are correct](./media/cds-migration-pic3.png)
+    > ![Confirm the field values are correct](./media/enter-odata-connector-parameters.png)
 
     > [!IMPORTANT] 
     > Disable pop-up and cookies blocker in your browser in order to configure the AAD authentication. This is orthogonal to the fact that you are using the Common Data Service OData endpoint or any other OAuth based authentication data source. 
@@ -131,7 +131,7 @@ Use the Power Query, which allows to select the tables and also allows the trans
 First, select the entities that need to be transferred. You can browse all entities in the source instance and preview some of the data in each entity.
 
 > [!div class="mx-imgBorder"]
-> ![Power query navigator](./media/cds-migration-pic4.png)
+> ![Power query navigator](./media/edit-queries-for-selected-entities.png)
 
 1. Select one or multiple entities as needed, then select **Transform data**.
 
@@ -158,7 +158,7 @@ This section describes how to define the target instance settings.
 For each entity chosen, select the behavior for importing that entity in these settings and select **Next**.
 
 > [!div class="mx-imgBorder"]
-> ![Map entities](./media/cds-migration-pic5.png)
+> ![Map entities](./media/map-entities-to-target.png)
 
 - **Load to existing Entity (recommended)**
 
@@ -188,11 +188,13 @@ Select **Refresh manually** since this is a one-time migration ad select **Creat
 
 The initial dataflow load initiates when you select the **Create** button. 
 
-![Refresh manually](./media/cds-migration-pic6.png)
+> [!div class="mx-imgBorder"]
+> ![Refresh manually](./media/initiate-dataflow-process.png)
 
 You can manually initiate a dataflow by selecting **(...)** in the dataflows list. Make sure to run dependent dataflows after the parent flows have completed.
 
-![Refresh manually](./media/cds-migration-pic7.png) 
+> [!div class="mx-imgBorder"]
+> ![Refresh manually](./media/refresh-dataflow-manually.png) 
 
 ## Tips
 
