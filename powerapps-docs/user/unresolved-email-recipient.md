@@ -14,7 +14,7 @@ manager: shujoshi
 
 An unresolved email recipient is one whose email address is not associated with any entity records in Common Data Service. By default, you cannot send an email to an unresolved email recipient. If you enter an unresolved email recipient, the email address is deleted as soon as you move the focus out of the **To**, **Cc**, or **Bcc** field. An administrator must enable the unresolved email recipient feature by selecting **Yes** for **Allow messages with unresolved email recipients to be sent** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
 
-After the feature is enabled, you can add an unresolved email recipient in the **To**, **Cc**, or **Bcc** field. The entered email address is shown in red. You can then select the email address, associate it with an entity record in Common Data Service without navigating away from the email form, and send the email.
+After the feature is enabled, you can add an unresolved email recipient in the **To**, **Cc**, or **Bcc** field. The entered email address is shown in red. You can then select the email address and associate it with an entity record in Common Data Service without navigating away from the email form.
 
 If you receive an email that has email addresses not associated with an entity record, the email addresses are shown in red. You can then individually select the email addresses and associate them with an entity record. You can then send emails to the newly added email addresses.
 
