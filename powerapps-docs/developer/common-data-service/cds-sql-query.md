@@ -23,8 +23,7 @@ search.app:
 A SQL data connection is available on the Common Data Service endpoint. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
 > [!IMPORTANT]
-> - This is a preview feature.
-> - This preview feature is not available in all regions.
+> - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 ## Applications support
