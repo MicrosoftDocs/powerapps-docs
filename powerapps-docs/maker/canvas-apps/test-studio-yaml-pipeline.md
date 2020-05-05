@@ -41,7 +41,7 @@ Before you begin, you must complete the following steps:
 
 - Create a new [Azure Pipelines YAML file](#step-3---create-an-azure-pipeline-yaml-file). 
 
-- Create a [GitHub service connection](#step-4---create-github-service-connection) to your repo.
+- Create a [GitHub service connection](#step-4---create-a-github-service-connection) to your repo.
 
 ### Step 1 - Fork the PowerAppsTestAutomation project
 
@@ -69,13 +69,13 @@ The test URL .json file will contain the test suite and test case URLs for valid
 
 You can find a sample file, Samples/TestAutomationURLs.json, in the repo you created earlier.
 
-1. Create a new TestURLs.json file in your repo, or use any other file name. The file name and location will be mapped in the pipeline variables later in the document.
+1. Create a new file named TestURLs.json file in your repo, or use any file name you want. The file name and location will be mapped in the pipeline variables later in the document.
 
 1. Copy the format from the Samples/TestAutomationURLs.json file.
 
-1. Update the Test URLs section with the tests that you want to validate in your app.
+1. Update the **Test URLs** section with the tests that you want to validate in your app.
 
-1. Commit the changes to your repo
+1. Commit the changes to your repo.
 
     ![Update the JSON file](media/test-studio-classic-pipeline-editor/json-update.png "Update the JSON file")
 
@@ -87,7 +87,7 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Copy the content from the Samples/azure-pipelines.yml file.
 
-1. Commit the changes to your repo. You'll reference and update the azure-pipelines.yml file when you're configuring your pipeline later in this procedure.
+1. Commit the changes to your repo. You'll reference and update the azure-pipelines.yml file when you're configuring your pipeline in Step 4.
 
 ### Step 4 - Create a GitHub service connection
 
@@ -141,7 +141,7 @@ You can find a sample file, Samples/azure-pipelines.yml, in the repo you created
 
 1. Select **Existing Azure Pipelines YAML file**.
 
-1. Set the path to the [Azure YAML pipeline file](#step-3---create-pipeline-yaml-file) you created earlier.
+1. Set the path to the [Azure YAML pipeline file](#step-3---create-an-azure-pipeline-yaml-file) you created earlier.
 
 1. Select **Continue**:
 
