@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/31/2020
+ms.date: 04/27/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -93,7 +93,7 @@ The app uses multiple lists to store its data. You can use the DeploySPLists flo
 1. Go to [flow.microsoft.com](https://flow.microsoft.com).
 1. Select **My flows** from the left navigation pane.
 1. Select **Import** on the command bar.
-1. Upload the **DeploySPLists.zip**<!--edit to the file name okay, here and in the following instances?--> package from the GitHub repository.
+1. Upload the **DeploySPLists.zip** package from the GitHub repository.
 
     ![Import package](media/sample-crisis-communication-app/import-package.png)
 
@@ -108,7 +108,7 @@ The app uses multiple lists to store its data. You can use the DeploySPLists flo
     ![Create a new connection](media/sample-crisis-communication-app/create-connection.png)
 
 1. Search for the name of the connection, for example *SharePoint*.
-1. Select the connection you created.<!--edit okay?-->
+1. Select the connection you created.
 1. Select **Save**.
 1. Select **Import**.
 
@@ -138,26 +138,26 @@ The app uses multiple lists to store its data. You can use the DeploySPLists flo
 
 > [!NOTE]
 > You might receive an error stating that location services are required.
-  If this occurs, allow location services to access<!--edit okay? I wasn't sure what this meant.--> Power Automate and refresh the page before trying again.
+  If this occurs, allow location services to access Power Automate and refresh the page before trying again.
 
-The flow creates the following SharePoint lists in your SharePoint site.<!--general note; You don't need to introduce tables or graphics with colons, only lists.-->
+The flow creates the following SharePoint lists in your SharePoint site.
 
 | **Display title**| **Purpose** | **Description** |
 |-|-|-|
 | CI_LogosAssets| To hold the logo and/or other images to be referenced from the app. The logo will be referenced in Power Apps by a direct link or via the ID number of the logo you want to use. | The library for related logos and other image assets for the *[App Name]* app. |
 | CI_configAdminSetup | Used for feature configuration by the admin of the app.<br>**Note**: This list should be read-only for all members who aren't admins. | Admin configuration list for the *[App Name]* app.
-| CI_Contacts | Using the default Contacts Content type to capture information about contacts. (No people picker is included, so this list might need to be manually maintained<!--edit okay?--> to ensure its data is up to date.)<br>**Note**: This depends on the global contact list type's being a default content type in the list. | The contacts list for the *[App Name]* app.|
-| CI_CompanyNews | Collection of **Company News** items. | A list for managing the news items that appear in the *[App Name]* app. You can use the **Deprecated** column to remove news items from the app views<!--edit okay, here and below? You use this pattern ("remove ___ from the app views") in the "Helpful tips" description, and it seems a bit more descriptive than "filter ___ out of the app".-->, while retaining them as a record. | 
+| CI_Contacts | Using the default Contacts Content type to capture information about contacts. (No people picker is included, so this list might need to be manually maintained to ensure its data is up to date.)<br>**Note**: This depends on the global contact list type's being a default content type in the list. | The contacts list for the *[App Name]* app.|
+| CI_CompanyNews | Collection of **Company News** items. | A list for managing the news items that appear in the *[App Name]* app. You can use the **Deprecated** column to remove news items from the app views, while retaining them as a record. | 
 | CI_FAQ  | Frequently asked questions. | The list of frequently asked questions for the *[App Name]* app. You can use the **Deprecated** column to remove FAQ items from the app views, while retaining them as a record. |
-| CI_UsefulLinks<!--edit okay? The sharepoint-lists.png screenshot later in this article shows it as "Usefulinks," which probably isn't correct either.--> | Useful hyperlinks list. | The list of useful hyperlinks for the *[App Name]* app. You can use the **Deprecated** column to remove hyperlink items from the app views, while retaining them as a record. |
-| CI_Employee | Tracking current employee presence status. Examples: **working from home**, **out sick**, **on personal leave**, and **out on vacation**.  **Note**: The status **coming to work** is assumed and not included in the list options. | <!--Please check the following edit carefully. This cell was duplicated by mistake from the previous row. Does the note about the "Deprecated" column apply here?-->The list of messages that indicate the status of an employee's presence for the *[App Name]* app. You can use the **Deprecated** column to remove status messages from the app views, while retaining them as a record. |
+| CI_UsefulLinks | Useful hyperlinks list. | The list of useful hyperlinks for the *[App Name]* app. You can use the **Deprecated** column to remove hyperlink items from the app views, while retaining them as a record. |
+| CI_Employee | Tracking current employee presence status. Examples: **working from home**, **out sick**, **on personal leave**, and **out on vacation**.  **Note**: The status **coming to work** is assumed and not included in the list options. | The list of messages that indicate the status of an employee's presence for the *[App Name]* app. You can use the **Deprecated** column to remove status messages from the app views, while retaining them as a record. |
 | CI_HelpfulTips             | Helpful tips that users have contributed for their peers. | List for the management of shared tips for the *[App Name]* App. You can use the **Deprecated** column to remove tips from the app views, while retaining them as a record.  |
 
 > [!NOTE]
 > - All these list columns should be considered as dependencies.
     Protect the lists from accidental schema changes (for example, adding
     new columns is allowed, but deleting columns might break the app.)
-> - Use caution when deleting list items; deleting list items deletes historical records. You can turn the deprecation value toggle <!--Style Guide-->from **No** to **Yes** to drop records from contacts, news, FAQs, or links.<!--Should this include status messages too?-->
+> - Use caution when deleting list items; deleting list items deletes historical records. You can turn the deprecation value toggle from **No** to **Yes** to drop records from contacts, news, FAQs, or links.
 
 ## Import and set up the Crisis Communication app
 
@@ -195,7 +195,7 @@ After all SharePoint lists have been created, you can import the app and connect
 
     ![Data sources](media/sample-crisis-communication-app/data-sources.png)
 
-1. Remove existing SharePoint lists inside the app<!--Alternatively, this could be "Right-click the name of each existing SharePoint list, and then select **Remove**" if that's how the context menu works here. I think the graphic will be clear enough for the reader, though.-->, because they don't point to your current SharePoint site.
+1. Remove existing SharePoint lists inside the app, because they don't point to your current SharePoint site.
 
     ![Remove data sources](media/sample-crisis-communication-app/remove-data-source.png)
 
@@ -223,7 +223,7 @@ After all SharePoint lists have been created, you can import the app and connect
 This app allows you to record a user's location and store it in your SharePoint site whenever a user sets their status. Your crisis management team can view this data in a Power BI report.
 
 > [!NOTE]
-> Enabling location updates is optional. You can skip this section if you don't want to track user location.
+> Enabling location updates is optional. You can skip this section if you don't want to track user location. Additionally, location tracking is currently not supported on Teams desktop.
 
 **To enable location updates**
 
@@ -318,7 +318,7 @@ This app allows you to record a user's location and store it in your SharePoint 
 
 ### Optional: Add additional work status messages
 
-If you want to add more work status<!--Interesting fact: there is no plural of "status."--> messages beyond **work from home** and **out of office**, you can do that by completing the following steps. To begin, you need to update your SharePoint site.
+If you want to add more work status messages beyond **work from home** and **out of office**, you can do that by completing the following steps. To begin, you need to update your SharePoint site.
 
 1. Go back to your SharePoint site, and then select **Site contents**.
 1. Select **CI_Employee Status**.
@@ -327,7 +327,7 @@ If you want to add more work status<!--Interesting fact: there is no plural of "
 
     ![Show/hide columns](media/sample-crisis-communication-app/36-hide-show-columns.png)
 
-1. Select<!--edit okay? I didn't know what "Check" meant here.--> **PresenceStatus**.
+1. Select **PresenceStatus**.
 1. Select **Apply**.
 1. Select the **PresenceStatus** column.
 
@@ -351,7 +351,7 @@ Now you need to make a few adjustments to the app itself to show your new work s
     ![Show presence](media/sample-crisis-communication-app/39-onvisible-for-screen.png)
 
 1. Edit the following template, and replace the values with your own.
-<!--I took the liberty of editing these strings to use contractions, which is Microsoft style now.-->
+
     ```
         ,"<Name of option in SharePoint list; case sensitive>",
         Table(
@@ -387,7 +387,7 @@ and bring it into your flow. More information about creating a Teams team: [Crea
 
     ![Copy the team link](media/sample-crisis-communication-app/18-Copy-link.png)
 
-1. Extract the **Team ID**, which is everything after `groupId=` and before `&tenantId=`. <br> For example, in the following URL, the channel ID is<!--suggest using a line break here and in the next step so you don't have to include any closing punctuation.--> <br>`8bc7c0c2-0d4c-4fb8-af99-32da74c9237b`
+1. Extract the **Team ID**, which is everything after `groupId=` and before `&tenantId=`. <br> For example, in the following URL, the group ID is <br>`8bc7c0c2-0d4c-4fb8-af99-32da74c9237b`
    
    `https://teams.microsoft.com/l/channel/19%3ab2fa9fc20f3042a9b63fc5890e1813f8%40thread.tacv2/General?groupId=8bc7c0c2-0d4c-4fb8-af99-32da74c9237b&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47`
    
@@ -471,7 +471,7 @@ To manage the app you imported, repeat the same steps for the admin app.
 
     ![Data sources](media/sample-crisis-communication-app/data-sources.png)
 
-1. Remove existing SharePoint lists inside the app, because they don't point to your current SharePoint site.<!--Please see previous editor's note.-->
+1. Remove existing SharePoint lists inside the app, because they don't point to your current SharePoint site.
 
     ![Remove data sources](media/sample-crisis-communication-app/remove-data-source.png)
 
@@ -519,7 +519,7 @@ Complete all the fields as shown in the following table, and then select **Save*
 |-|-|-|-|
 | Admin email | AdminContactEmail | This is where email requests are sent. They should be set to your email address. If you'd like to send notifications to another inbox, see [optional shared inbox configuration](#optional-configure-shared-inbox), earlier in this article. | admin@contoso.com |
 | Logo URL | Logo | The logo of your app that appears in the upper-left corner. | https://contoso.com/logo.png |
-| AAD group ID | AADGroupID | Used to send notifications to users about internal company updates via the **Notify users on new crisis communication news**<!--Can you rename this flow to "Notify users of new crisis communication news"? Or maybe even "Notify users of breaking news about the crisis"?--> flow. Follow the instructions below to get the Azure Active Directory (Azure AD) ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
+| AAD group ID | AADGroupID | Used to send notifications to users about internal company updates via the **Notify users on new crisis communication news** flow. Follow the instructions below to get the Azure Active Directory (Azure AD) ID of your group. | c0ddf873-b4fe-4602-b3a9-502dd944c8d5 |
 | APP URL | AppURL | The location of the user app, so that the **Notify users on new crisis communication news** flow can redirect users there after they select **Read more**. | https://apps.preview.powerapps.com/play/<app URL>?tenantId=<tenant ID>
 | Government RSS Feed | GovernmentRSSFeed | Used to populate the world news feature in the app. Useful if you want to provide additional information to your employees from a trusted source. | https://www.who.int/rss-feeds/news-english.xml |
 | Notification method | PreferredSentNotification | Used by the **Notify users on new crisis communication news** flow to determine which distribution channel it should use when sending out notifications. This field is required. | Email, Teams notification, push notification |
@@ -530,7 +530,7 @@ Complete all the fields as shown in the following table, and then select **Save*
 
 
 #### Finding the Azure AD ID for your distribution group
-<!--note from editor: The Cloud Style Guide says don't use "AAD" for "Azure AD."-->
+
 1. Go to [aad.portal.azure.com](https://aad.portal.azure.com).
 1. Select **Azure Active Directory** from the left navigation pane.
 1. Select **Groups**.
@@ -539,7 +539,7 @@ Complete all the fields as shown in the following table, and then select **Save*
 
     ![Getting the Azure AD ID](media/sample-crisis-communication-app/11-AAD-Group-ID.png)
 
-1. Paste the ID into the **AAD group ID** field in the admin app.<!--Can you have this changed to "Azure AD group ID"? -->
+1. Paste the ID into the **AAD group ID** field in the admin app.
 
 ### Set up emergency contacts
 
@@ -796,7 +796,7 @@ After the Power Query editor is opened, right-click the **CI_Employee Status** d
 
 This is where we use the site name and list ID from the SharePoint list.
 
-Copy the new SharePoint site into the SharePoint.Tables string as shown in the following illustration<!--Edit okay? This is a case where the image shows information that the text doesn't, so I'm not sure how to make this descriptive enough for people who aren't looking at the graphics, or people with low vision.--> and the list ID in the three places where the GUID is highlighted, and then select **Done**.
+Copy the new SharePoint site into the SharePoint.Tables string as shown in the following illustration and the list ID in the three places where the GUID is highlighted, and then select **Done**.
 
 ![Power Query Advanced Editor updates](media/sample-crisis-communication-app/005-PowerQuery-AdvancedEditorUpdates-nolines.PNG)
 
@@ -853,7 +853,7 @@ If you're a Teams admin, you can push the app to all your users in the Teams app
 1. Open Teams.
 1. Go to **Apps** on the app bar.
 1. Select **Upload a custom app**.
-1. If you're a Teams admin, you'll be able to upload an app for your entire tenant. Select **Upload for Contoso** (where *Contoso* represents the name of your tenant).<!--Edit okay? The screenshot said "Contoto," which I fixed.-->.
+1. If you're a Teams admin, you'll be able to upload an app for your entire tenant. Select **Upload for Contoso** (where *Contoso* represents the name of your tenant).
 
     ![Upload the app](media/sample-crisis-communication-app/26-Upload-for-Contoso.png)
 
@@ -942,6 +942,6 @@ you might want to pin the crisis management admin app or the Power BI report to 
 ***Disclaimer:*** *This app is a sample and may be used with Microsoft Power Apps and Teams for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes.  This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such.  Customer bears the sole risk and responsibility for any use of this app.  Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.* 
 
 ### See also
-<!--note from editor: "Next steps" would work if you gave the reader some action items, but reference topics are random access by nature, so the heading is rightly "See also." -->
+
 - [Formula reference](formula-reference.md)
 - [Controls reference](reference-properties.md)

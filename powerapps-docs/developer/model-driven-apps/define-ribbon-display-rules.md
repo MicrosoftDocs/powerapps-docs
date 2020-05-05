@@ -196,5 +196,5 @@ When configuring ribbon elements, you can define specific rules to control when 
 
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define Ribbon Enable Rules](define-ribbon-enable-rules.md)   
- [Define Ribbon Actions](define-ribbon-actions.md)
+ [Define Ribbon enable rules](define-ribbon-enable-rules.md)   
+ [Define Ribbon actions](define-ribbon-actions.md)

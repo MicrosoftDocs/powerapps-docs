@@ -42,11 +42,11 @@ Use cascading style sheet (CSS) web resources to create style sheets for use in 
 >  References included in code between web resources aren’t tracked as solution dependencies.  
   
 ### See also  
- [Web Resources](web-resources.md)   
- [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
- [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
- [Using Data (XML) Web Resources](data-xml-web-resources.md)   
- [Using Image (JPG, PNG, GIF) Web Resources](image-web-resources.md)   
- [Using Silverlight (XAP) Web Resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
- [Using Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)   
+ [Web resources](web-resources.md)   
+ [Using Web Page (HTML) web resources](webpage-html-web-resources.md)   
+ [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using Data (XML) web resources](data-xml-web-resources.md)   
+ [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
+ [Using Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
+ [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)   
  [WebResource Entity](../common-data-service/reference/entities/webresource.md)

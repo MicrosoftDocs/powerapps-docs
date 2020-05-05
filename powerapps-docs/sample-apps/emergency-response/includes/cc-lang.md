@@ -1,0 +1,1 @@
+The Hospital Emergency Response sample solution is available in the following languages: English, French, German, Italian, Japanese, Korean, Polish, Portuguese - Brazil, Portuguese-Portugal, Spanish, and Turkish.
