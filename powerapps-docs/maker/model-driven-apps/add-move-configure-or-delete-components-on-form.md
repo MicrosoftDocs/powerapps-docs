@@ -32,7 +32,7 @@ To add components to a form, use the **Components** pane. The **Components** pan
 > [!div class="mx-imgBorder"] 
 > ![](media/FormDesignerComponentsPane.PNG "Components pane")
 
-### Add components to a form using drag and drop
+### Add components using drag and drop
 > [!NOTE]
 > When adding or moving components using drag and drop, be aware that the form preview is responsive and might render multiple section columns as stacked. To ensure that the component that's added or moved is in the correct section column, drop or paste it anchored to another field or component that is already in that section column.
 1. Open the form designer to create or edit a form. More information: [Create a form](create-and-edit-forms.md#create-a-form) or [Edit a form](create-and-edit-forms.md#edit-a-form)
