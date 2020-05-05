@@ -4,7 +4,7 @@ When you visit the portal, you have an option to sign in, or for the first time,
 
 ![Home screen](..\media\portal-home-screen.png)
 
-Select **Sign-In** when you already have signing credentials, or if you'd like to redeem an invitation.
+Select **Sign In** when you already have signing credentials. Select **Redeem Invitation** if you'd like to redeem an invitation. You can also choose to request access using the **Request** option if you don't have an account alread.
 
 ![Getting started](..\media\portal-user-getting-started.png)
 

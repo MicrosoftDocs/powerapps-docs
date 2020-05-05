@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/04/2020
+ms.date: 05/05/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 searchScope:
@@ -383,6 +383,8 @@ Dashboards are available for the following insights:
 
 - [Supplies details](#equipment-details)
 
+- [Data health scorecard](#data-health-scorecard)
+
 #### Working with reports in Power BI
 
 Before you begin review of available dashboards, get familiar with general report viewing concepts and guidelines:
@@ -481,6 +483,16 @@ When you hover over map area and point to a county, you can see the county-relat
 ![Supply map](media/portal-admin-powerbi-supply-map.png)
 
 Similarly, you can hover over the timeline chart to view date-specific numbers in tooltip as you move across dates.
+
+### Data health scorecard
+
+View data hygiene for a selected facility using the **Data health scorecard** dashboard. Select a facility from the list of available facilities and then select **Click here to continue** to view the dashboard:
+
+![Select a facility](media/dashboard-data-health-facility-select.png)
+
+The dashboard shows data update ranking, data update in percentage and daily status across all components. A date-wise chart shows data completion of the selected facility in comparison to the average of all facilities for a given data set. The facility-wise data completeness information is also available in tabular format with listing all facilities for last one week:
+
+![Data health scorecard](media/data-health-scorecard-dashboard.png)
 
 ## General portal options
 
