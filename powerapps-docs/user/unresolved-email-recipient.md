@@ -20,7 +20,7 @@ If you enter an unresolved email recipient in the **To**, **Cc**, or **Bcc** fie
 
 If you receive an email from a new customer who is not associated with an entity record in Common Data Service, the email address is shown in red in the **From** field. You can then select the email address, and associate it with an entity record in Common Data Service. You can now send emails to the newly added customer.
 
-**To send email to unresolved email recipients**
+**To associate an unresolved email to an entity record**
 
 1. Open the email editor and select the unresolved email recipient.
 
