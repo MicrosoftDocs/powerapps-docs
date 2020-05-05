@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/07/2020
+ms.date: 05/04/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -25,13 +25,13 @@ To see a list of all portals for your tenant:
 
 1. Select **Resources** and then **Portals** from the left-side menu.
 
-    ![Portals option on Power Platform admin center](../media/manage-portals-all-environments.png)
+    ![Portals option on Power Platform admin center](media/power-platform-admin-center/manage-portals-all-environments.png "Portals option on Power Platform admin center")
 
 1. Select a portal.
 
 1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** from the top navigation:
 
-    ![Manage portal from Power Platform admin center](../media/portals-manage-ppac.png)
+    ![Manage portal from Power Platform admin center](media/power-platform-admin-center/portals-manage-ppac.png "Manage portal from Power Platform admin center")
 
 To continue and configure portal details, refer [portals details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
 
@@ -43,23 +43,23 @@ Follow these steps to see a list of all portals for your environment.
 
 1. Select **Environments** from the left navigation:
 
-    ![Environments list](../media/environments-list.png)
+    ![Environments list](media/power-platform-admin-center/environments-list.png "Environments list")
 
-1. Hover over and click on the environment name hyperlink to open environments details:
+1. Hover over and select the environment name hyperlink to open environments details:
 
-    ![Select environment](../media/select-environment.png)
+    ![Select environment](media/power-platform-admin-center/select-environment.png "Select environment")
 
 1. Select **Portals** under the **Resources** option from the right-side of the screen:
 
-    ![Environments details](../media/environment-details.png)
+    ![Environments details](media/power-platform-admin-center/environment-details.png "Environments details")
 
 1. You'll see a list of Portals installed in the selected environment.
 
-    ![Portals specific to an environment](../media/environments-portals.png)
+    ![Portals specific to an environment](media/power-platform-admin-center/environments-portals.png "Portals specific to an environment")
 
 1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** from the top navigation:
 
-    ![Manage portal specific to an environment](../media/manage-environments-portal.png)
+    ![Manage portal specific to an environment](media/power-platform-admin-center/manage-environments-portal.png "Manage portal specific to an environment")
 
 To continue and configure portal details, refer [portals details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
 
@@ -67,7 +67,7 @@ To continue and configure portal details, refer [portals details](https://docs.m
 
 The ability to manage portal as explained above using **Power Platform admin center** replaces the following earlier functionality:
 
-![Manage add-on portal](../media/old-admin-center.png)
+![Manage add-on portal](media/power-platform-admin-center/old-admin-center.png "Manage add-on portal")
 
 ### Portal types
 
@@ -93,10 +93,44 @@ A portal can be in *Configured*, *Suspended*, or *Not-configured* status. The fo
 > [!NOTE]
 > You can [create a new portal](https://docs.microsoft.com/powerapps/maker/portals/provision-portal-add-on) if the portal add-on status is *Not-configured*. The status will change to *Configured* after the portal is provisioned.
 
+## Update Power Apps portal solution
+
+You can update Power Apps portal solution using the Power Platform admin center.
+
+To update the portal solution:
+
+1. Go to manage your portal using one of the methods explained earlier in this article.
+
+1. Select **Manage Dynamics 365 Instance** from left navigation pane.
+
+1. Select **Update Dynamics 365 Instance**.
+
+    ![Update Dynamics 365 Instance](media/power-platform-admin-center/update-dynamics365-instance.png "Update Dynamics 365 Instance")
+
+1. Select your existing instance and portal.
+
+    ![Select Dynamics 365 Instance](media/power-platform-admin-center/select-dynamics365-instance.png "Select Dynamics 365 Instance")
+
+1. Select **OK**.
+
+1. Select **Submit** to confirm.
+
+    ![Submit Dynamics 365 solution update](media/power-platform-admin-center/submit-selection.png "Submit Dynamics 365 solution update")
+
+1. You'll see a confirmation of the update request in progress.
+
+    ![Request submitted to update](media/power-platform-admin-center/update-request-submitted.png "Request submitted to update")
+
+The update to portal solution may take a while once submitted.
+
+For additional information, go to [Upgrade a portal](upgrade-portal.md).
+
 ## Next steps
 
 Configure [portals details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
 
 ### See also
 
-Manage apps with [Power Platform admin center](https://docs.microsoft.com/power-platform/admin/manage-apps)
+- Manage apps with [Power Platform admin center](https://docs.microsoft.com/power-platform/admin/manage-apps)
+
+- [Upgrade a portal](upgrade-portal.md)
