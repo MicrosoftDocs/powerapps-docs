@@ -95,7 +95,7 @@
         href: ../user/insert-email-template.md
       - name: Send email to multiple recipients
         href: ../user/direct-email.md
-      - name: Send email to unresolved email recipients
+      - name: Resolve an unresolved email recipient
         href: ../user/unresolved-email-recipient.md
     - name: Collaboration
       items:

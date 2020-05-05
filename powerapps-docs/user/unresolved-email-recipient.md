@@ -10,17 +10,17 @@ ms.author: shjais
 manager: shujoshi
 ---
 
-# Send email to unresolved email recipients
+# Resolve an unresolved email recipient
 
 An unresolved email recipient is one whose email address is not associated with any entity records in Common Data Service. By default, you cannot send an email to an unresolved email recipient. If you enter an unresolved email recipient, the email address is deleted as soon as you move the focus out of the **To**, **Cc**, or **Bcc** field. An administrator must enable the unresolved email recipient feature by selecting **Yes** for **Allow messages with unresolved email recipients to be sent** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
 
-After the feature is enabled, you can associate the unresolved email address to an entity record in Common Data Service without navigating away from the email form.
+After the feature is enabled, you can add an unresolved email in the **To**, **Cc**, or **Bcc** field and also associate the unresolved email address to an entity record in Common Data Service without navigating away from the email form.
 
-If you enter an unresolved email recipient in the **To**, **Cc**, or **Bcc** field, the email address is shown in red. You can then select the email address, associate it with an entity record in Common Data Service, and then send the email.
+If you enter an unresolved email recipient in the **To**, **Cc**, or **Bcc** field, the email address is shown in red. You can then select the email address, associate it with an entity record, and send the email.
 
-If you receive an email from a new customer who is not associated with an entity record in Common Data Service, the email address is shown in red in the **From** field. You can then select the email address, and associate it with an entity record in Common Data Service. You can now send emails to the newly added customer.
+If you receive an email that has email addresses not associated with an entity record, the email addresses are shown in red. You can then individually select the email addresses and associate them with an entity record. You can then send emails to the newly added email addresses.
 
-**To associate an unresolved email to an entity record**
+**To resolve an unresolved email recipient**
 
 1. Open the email editor and select the unresolved email recipient.
 
