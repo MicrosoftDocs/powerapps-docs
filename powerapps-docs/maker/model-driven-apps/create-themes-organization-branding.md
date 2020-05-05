@@ -1,7 +1,7 @@
 ---
 title: "Change the color scheme or add a logo to match your organization’s brand  | MicrosoftDocs"
 ms.custom: ""
-ms.date: 04/31/2020
+ms.date: 04/30/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
