@@ -179,7 +179,7 @@ You'll now update your app and create a new component to collect feedback on eac
 
 1. Select **FrownIcon**, select the **OnSelect** property, and then enter the following expression in the formula bar:
 
-    ```
+    ```powerapps-dot
     Trace(
        "App Feedback",
        TraceSeverity.Information,
@@ -200,7 +200,7 @@ You'll now update your app and create a new component to collect feedback on eac
 
 1. Select **SmileIcon**, select the **OnSelect** property, and then enter the following expression in the formula bar:
     
-    ```
+    ```powerapps-dot
     Trace(
        "App Feedback",
        TraceSeverity.Information,
@@ -241,7 +241,7 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
 
 1. Enter the following query and select **Run**. The feedback received from your app is returned:
 
-    ```powerappsfl
+    ```kusto
     traces
     | where message == "App Feedback"
     | order by timestamp
@@ -258,7 +258,7 @@ You can now begin to analyze the data you sent using the [Trace](#create-custom-
 
 1. With the following example query, you can extend the properties of the JSON custom dimensions and project the columns in the results view.
 
-    ```powerappsfl
+    ```kusto
     traces
         | extend customdims = parse_json(customDimensions)
         | where message == "App Feedback"

@@ -42,7 +42,7 @@ Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>`
 [!INCLUDE[languagecode](../../includes/languagecode.md)]
   
 > [!NOTE]
->  We recommend that you use the entity name instead of the entity type code because the entity type code may be different between MDA installations.  
+>  We recommend that you use the entity name instead of the entity type code because the entity type code may be different between model-driven apps installations.  
   
 ### Example  
  The following sample shows the URL without parameters:  
