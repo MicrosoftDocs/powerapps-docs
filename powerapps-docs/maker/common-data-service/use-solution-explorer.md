@@ -69,7 +69,7 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
   
- With solutions that are managed, only certain commands are available and you’ll see the message as shown below. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](../../alm/managed-properties-alm.md)
+ With solutions that are managed, only certain commands are available and you’ll see the message as shown below. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
 > [!div class="mx-imgBorder"]  
 > ![Managed solution](media/managed-solution.PNG "Managed solution")  

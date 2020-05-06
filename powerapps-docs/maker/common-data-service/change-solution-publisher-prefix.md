@@ -28,7 +28,7 @@ Every app you create or customization you make is part of a solution. Every solu
 
 The solution publisher indicates who developed the app. For this reason, you should create a solution publisher that is meaningful. You can view the solution publisher for a solution by selecting **Settings** from the **Solutions** area in Power Apps.
 
-For more information about the solution publisher, see [Solution publisher](/powerplatform/alm/solution-concepts-alm#solution-publisher).
+For more information about the solution publisher, see [Solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher).
 
 ## Create a solution publisher
 1.	In the Power Apps portal, select **Solutions**. 

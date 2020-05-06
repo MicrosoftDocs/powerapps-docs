@@ -24,7 +24,7 @@ search.app:
   - D365CE
 ---
 # Create segmented solutions 
-Use solution segmentation so that you only include entity components that are updated when you distribute solution updates. With solution segmentation, you export solution updates with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. To create a segmented solution, you use the **Solutions** area in Power Apps. More information: [Use segmented solutions](../../alm/segmented-solutions-alm.md)
+Use solution segmentation so that you only include entity components that are updated when you distribute solution updates. With solution segmentation, you export solution updates with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. To create a segmented solution, you use the **Solutions** area in Power Apps. More information: [Use segmented solutions](/power-platform/alm/segmented-solutions-alm)
 
 ## Create a segmented solution with entity assets 
  To create a segmented solution, start with creating an unmanaged solution and add only the components that you've updated. The wizard-like setup takes you step by step through the process of adding entity assets. 
