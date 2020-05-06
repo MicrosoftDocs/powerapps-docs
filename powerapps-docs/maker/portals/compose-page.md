@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/24/2020
+ms.date: 05/06/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -438,11 +438,13 @@ The following highlights *Power BI access types* in brief. For more information,
 
 ### Other Power BI considerations
 
-- [Portal Studio](https://docs.microsoft.com/powerapps/maker/portals/portal-designer-anatomy) performance can degrade while working with Power BI workspaces due to the following Power BI workspace configurations:
-    - Increased number of workspaces shared with user account used while editing the portal.
-    - Increased number of users the Power BI workspace is shared with.
+- [Portals Studio](https://docs.microsoft.com/powerapps/maker/portals/portal-designer-anatomy) performance can degrade while working with Power BI workspaces due to the following Power BI workspace configurations:
+    - High number of workspaces shared with logged in maker user.
+    - Power BI workspaces are shared with many users.
 - [Capture liquid variable](https://docs.microsoft.com/powerapps/maker/portals/liquid/portals-entity-tags#powerbi) is not supported in portal Studio while working with Power BI component.
-- If you [reset portal](https://docs.microsoft.com/powerapps/maker/portals/admin/reset-portal) and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, go to [Set up Power BI integration](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#create-security-group-and-add-to-power-bi-account).  
+- If you [reset portal](https://docs.microsoft.com/powerapps/maker/portals/admin/reset-portal) and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, go to [Set up Power BI integration](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#create-security-group-and-add-to-power-bi-account).
+- If you make a change in Power Apps portals admin center, you must reload the portals Studio if you already have it open.
+- Adding users to Power BI reports and dashboards may take a while to reflect in the portals Studio.
 
 ### Power BI performance and optimization considerations
 
