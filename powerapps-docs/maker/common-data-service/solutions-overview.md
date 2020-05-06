@@ -28,7 +28,7 @@ search.app:
 
 In Power Apps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more.  You can get a solution from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
   
-More information: [Solutions concepts](/power-platform./alm/solution-concepts-alm)
+More information: [Solutions concepts](../../alm/solution-concepts-alm.md)
   
 > [!NOTE]
 >  If you’re an ISV creating an app that you will distribute, you’ll need to use solutions. For more information about using solutions, see [Developer Guide: Introduction to solutions](/powerapps/developer/common-data-service/introduction-solutions).  
@@ -44,13 +44,13 @@ More information: [Solutions concepts](/power-platform./alm/solution-concepts-al
 To view a list of component types that can be added to any solution, see [ComponentType Options](../../developer/common-data-service/reference/entities/solutioncomponent.md#componenttype-options). 
 
 For more information about solutions, see these articles: 
-- [Solutions concepts](/power-platform/alm/solution-concepts-alm)
-- [Solution layers](/power-platform/solution-layers-alm)
-- [Understand how managed solutions are merged](/power-platform/alm/how-managed-solutions-merged)
-- [Use a solution to customize](/power-platform/alm/use-solutions-for-your-customizations)
-- [Managed properties](/power-platform/alm/managed-properties-alm)
-- [Use segmented solutions](/power-platform/alm/segmented-solutions-alm.md)
-- [Update a solution](/power-platform/alm/update-solutions-alm.md)
+- [Solutions concepts](../../alm/solution-concepts-alm.md)
+- [Solution layers](../../alm/solution-layers-alm.md)
+- [Understand how managed solutions are merged](../../alm/how-managed-solutions-merged.md)
+- [Use a solution to customize](../../alm/use-solutions-for-your-customizations.md)
+- [Managed properties](../../alm/managed-properties-alm.md)
+- [Use segmented solutions](../../alm/segmented-solutions-alm.md)
+- [Update a solution](../../alm/update-solutions-alm.md)
 
 
 <!-- The following is a list of components that you can view in a solution:  
