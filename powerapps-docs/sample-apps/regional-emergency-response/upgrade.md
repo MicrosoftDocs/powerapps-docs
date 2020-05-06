@@ -15,7 +15,9 @@ searchScope:
 
 # Upgrade the Regional Government Emergency Response and Monitoring solution
 
-Perform the steps in this article to upgrade your existing installation of Regional Government Emergency Response and Monitoring solution to the latest version.
+Perform the steps in this article to upgrade your *existing* installation of Regional Government Emergency Response and Monitoring solution to the latest version.
+
+If you are installing this solution for the first time, see [Deploy the solution](deploy.md).
 
 ## Prerequisites
 
