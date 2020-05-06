@@ -44,13 +44,13 @@ More information: [Solutions concepts](../../alm/solution-concepts-alm.md)
 To view a list of component types that can be added to any solution, see [ComponentType Options](../../developer/common-data-service/reference/entities/solutioncomponent.md#componenttype-options). 
 
 For more information about solutions, see these articles: 
-- [Solutions concepts](../../alm/solution-concepts-alm.md)
-- [Solution layers](../../alm/solution-layers-alm.md)
-- [Understand how managed solutions are merged](../../alm/how-managed-solutions-merged.md)
-- [Use a solution to customize](../../alm/use-solutions-for-your-customizations.md)
-- [Managed properties](../../alm/managed-properties-alm.md)
-- [Use segmented solutions](../../alm/segmented-solutions-alm.md)
-- [Update a solution](../../alm/update-solutions-alm.md)
+- [Solutions concepts](/powerplatform/alm/solution-concepts-alm)
+- [Solution layers](/powerplatform/solution-layers-alm)
+- [Understand how managed solutions are merged](/powerplatform/alm/how-managed-solutions-merged)
+- [Use a solution to customize](/powerplatform/alm/use-solutions-for-your-customizations)
+- [Managed properties](/powerplatform/alm/managed-properties-alm)
+- [Use segmented solutions](/powerplatform/alm/segmented-solutions-alm.md)
+- [Update a solution](/powerplatform/alm/update-solutions-alm.md)
 
 
 <!-- The following is a list of components that you can view in a solution:  
