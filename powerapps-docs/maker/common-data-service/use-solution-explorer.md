@@ -69,7 +69,7 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
   
- With solutions that are managed, only certain commands are available and you’ll see the message as shown below. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](solutions-overview.md#managed-properties)
+ With solutions that are managed, only certain commands are available and you’ll see the message as shown below. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](../../alm/managed-properties-alm.md)
 
 > [!div class="mx-imgBorder"]  
 > ![Managed solution](media/managed-solution.PNG "Managed solution")  
@@ -87,12 +87,11 @@ In Power Apps, you can view the classic solution explorer by selecting **Solutio
 
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
-- Canvas app button triggered flows are currently not supported in solutions. Create the app and flow outside of a solution, and export the .msapp file to migrate canvas apps with an embedded button triggered flow. 
-- If a canvas app is packaged in a managed solution, it can't be edited and re-published in the target environment. Use unmanaged solutions if the apps require editing in the target environment. 
 - Connections require authentication and consent, which requires an interactive user session and therefore cannot be transported via solutions. After importing your solution, play the app to authenticate connections. You can also create the connections in the target environment prior to importing the solution. 
+- Canvas app button triggered flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
+  - The app and flow will not currently be connected in the target environment post deployment. First associate valid connections with the flow and activate the flow. Then edit the app and re-associate the flow to the button.
 -	Canvas apps shared as co-owner to an Azure Active Directory (AAD) security group can't be added to solutions. Unshare the app before adding it to a solution.
--	Canvas apps won't display in the classic solution explorer. Use the modern experience.
--	Canvas app access (CRUD and security) is managed entirely in Power Apps and not in the Common Data Service database.
+-	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
 - Database operations such as backup, restore, and copy are not supported for canvas apps and flows. These operations can corrupt canvas apps and flows.
 - Deleting a managed solution does not rollback to a different canvas app version. Instead, all versions of the app are deleted.
 - Importing a solution containing a flow will not automatically create or associate required connections. The flow must be edited to fix the connections.

@@ -1,5 +1,5 @@
 ---
-title: "Use segmented solutions with Power Apps | MicrosoftDocs"
+title: "Create segmented solutions with Power Apps | MicrosoftDocs"
 description: "Learn how to use solution segmentation to update your solutions"
 ms.custom: ""
 ms.date: 02/04/2020
@@ -23,21 +23,8 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use segmented solutions 
-
-Use solution segmentation so that you only include entity components that are updated when you distribute solution updates. With solution segmentation, you export solution updates with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. <!-- Depending on the complexity of your app, segmentation of the solution can be as simple as everything in a single solution to segmenting by component type, such as entities in one solution, canvas apps in another, and plugins in a third. --> To create a segmented solution, you use the **Solutions** area in Power Apps.  
-
-You can segment a solution when you select from the following options to add an existing entity to the solution: 
-- Include no components. When you don’t select any components or metadata, the minimal entity information is added to the solution. Therefore, apart from the friendly name, entity attributes (metadata) or components will not be included.   
-- **Select components**. You can segment your solution by individually selecting each component that’s associated with the entity, such as fields, relationships, business rules, views, forms, and charts. Use this option to select only the components that have been added or changed with the entity, such as a new custom field or adding a form.  
-- **Include entity metadata**. This option includes no components, such as related entities, but  does include *all* the metadata associated with the entity. Metadata includes the entity attributes, such as auditing, duplicate detection, or change tracking. 
-- **Include all components**. This option includes all components *and* metadata associated with the entity. It can include other entities or entity components such as business process flows, reports, connections, and queues. You should only use this option when you are distributing an unmanaged entity that doesn't exist in the target environment. 
-
-    > [!WARNING]
-    > Don't add components to your solution that you didn't intend to. When your update is imported to the target environment a solution with unintended components can cause unexpected behavior to the existing components that now lay below the layer you introduced with your solution update. For example, if you add a view for an entity that is not updated and the view in the existing layer has customizations, the existing customizations may become inactive. For more information, see [Solution layers](solution-layers.md).
-
-<!-- The below was from Per but I don't think it fits in this topic that is only about solution segmentation with entities. 
-Similar to the planning that goes into how you model the data that goes into your app, planning for segmentation should be considered before you distribute your solution. Segmenting solutions from a single solution into multiple solutions a month or two years after the initial app has been built can be complex and is prone to cause issues.  -->
+# Create segmented solutions 
+Use solution segmentation so that you only include entity components that are updated when you distribute solution updates. With solution segmentation, you export solution updates with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. To create a segmented solution, you use the **Solutions** area in Power Apps. More information: [Use segmented solutions](../../alm/segmented-solutions-alm.md)
 
 ## Create a segmented solution with entity assets 
  To create a segmented solution, start with creating an unmanaged solution and add only the components that you've updated. The wizard-like setup takes you step by step through the process of adding entity assets. 
