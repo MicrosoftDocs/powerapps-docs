@@ -79,11 +79,11 @@ If the attached file is an image, the control will display the image as a thumbn
 
 ## Processes for Azure Blob Storage
 
-There are two processes used to process the uploaded attachments and upload them to Azure Storage. **Azure Blob Storage Url** and **AzureBlobStorageEnabled**:
+Processes **Azure Blob Storage Url** and **AzureBlobStorageEnabled** are required for uploading attachments to Azure Storage:
 
 ![Blob storage processes](media/blob-storage-processes.png "Blob storage processes")
 
-During migration, the processes may get deactivated causing attachments to upload to Common Data Service instead of Azure Storage. In this scenario, ensure the processes mentioned above are activated to upload attachments to Azure Storage.
+During migration, the processes may get deactivated. This may cause attachments to upload to Common Data Service instead of Azure Storage after you follow steps to add web resource. Ensure these two processes are activated to upload attachments to Azure Storage.
 
 ## CORS protocol support
 
