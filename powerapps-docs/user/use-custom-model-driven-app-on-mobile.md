@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/07/2020
+ms.date: 05/06/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -22,7 +22,7 @@ search.app:
 Use the Power Apps mobile app to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Run canvas apps and model-driven apps on a mobile device](run-canvas-and-model-apps-on-mobile.md).
 
 > [!IMPORTANT]
-> Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service<!--For sure this list doesn't include Dynamics 365 Marketing, and Dynamics 365 Project Service Automation? That's the list of model-driven apps according to the Dynamics Style Guide.--> don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
+> Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
 
 ## Home screen 
 
@@ -45,7 +45,9 @@ From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitem
    > [!div class="mx-imgBorder"]
    > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrates how to get to the site map screen")
    
- *Refresh the page to restart the GIF action*.
+  > [!IMPORTANT]
+  > On Microsoft Edge, refresh the page to restart the GIF action. On other browsers you may have to navigate away and then back to this topic to restart the GIF image. 
+
 
 The following illustration shows the primary navigation elements on the site map screen. 
 
@@ -77,7 +79,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Pin a record to favorites](media/pin_to_fav.gif "This image demonstrates how to pin favorite records")
    
-*Refresh the page to restart the GIF action*.
+  *Refresh the page to restart the GIF action*.
 
 ### Unpin a record
 
