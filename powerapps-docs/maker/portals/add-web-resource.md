@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/11/2020
+ms.date: 05/05/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 ---
@@ -18,7 +18,7 @@ Attachments uploaded to Azure Storage instead of directly to Common Data Service
 To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form and you must [configure Azure Storage for your organization](enable-azure-storage.md).
 
 > [!NOTE]
-In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
+> In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
 
 When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it is represented by a note on an entity and a placeholder for the attachment.
 
@@ -65,7 +65,7 @@ The paper-clip icon has been replaced with a cloud icon to denote that this file
 > - **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com`.
 > - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
 > - **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*. For this scenario, you must specify *, otherwise the web resource will not render properly.
-> - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*.
+> - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. Examples - \* or x-ms-meta-\*. For this scenario, you must specify *, otherwise the web resource will not render properly.
 > - **Maximum age (seconds)**: Specify the maximum amount time that a browser should cache the preflight OPTIONS request. For example, 200.
 > 
 > [!include[More information](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services).
@@ -77,6 +77,14 @@ If the attached file is an image, the control will display the image as a thumbn
 
 ![Notes thumbnail](media/notes-thumbnail.png "Notes thumbnail")
 
+## Processes for Azure Blob Storage
+
+There are two processes used to process the uploaded attachments and upload them to Azure Storage. **Azure Blob Storage Url** and **AzureBlobStorageEnabled**:
+
+![Blob storage processes](media/blob-storage-processes.png "Blob storage processes")
+
+During migration, the processes may get deactivated causing attachments to upload to Common Data Service instead of Azure Storage. In this scenario, ensure the processes mentioned above are activated to upload attachments to Azure Storage.
+
 ## CORS protocol support
 
 The [cross-origin resource sharing (CORS)](https://www.w3.org/TR/cors/) protocol consists of a set of headers that indicates whether a response can be shared with another domain.
@@ -87,7 +95,7 @@ The following site settings are used to configure CORS:
 | HTTP/Access-Control-Allow-Credentials | Access-Control-Allow-Credentials | The only valid value for this header is true (case-sensitive). If you don't need credentials, omit this header entirely (rather than setting its value to false). 
 | HTTP/Access-Control-Allow-Headers | Access-Control-Allow-Headers | A comma-delimited list of the supported HTTP request headers.
 | HTTP/Access-Control-Allow-Methods | Access-Control-Allow-Methods | A comma-delimited list of the allowed HTTP request methods such as GET, POST, OPTIONS.
-| HTTP/Access-Control-Allow-Origin | Access-Control-Allow-Origin | To allow any resource to access your resources, you can specify \*. Otherwise, specify the URI that can access the resources.                   |
+| HTTP/Access-Control-Allow-Origin | Access-Control-Allow-Origin | URL of the Dynamics 365 instance, such as https://contoso.crm.dynamics.com to allow access. To allow any URI to access your resources, you can also specify \*.                 |
 |  HTTP/Access-Control-Expose-Headers | Access-Control-Expose-Headers | A comma-delimited list of HTTP header names other than the simple response headers that the resource might use and can be exposed.
 | HTTP/Access-Control-Max-Age | Access-Control-Max-Age |  Maximum number of seconds the results can be cached.
 | HTTP/Content-Security-Policy | Content-Security-Policy | Controls resources the user agent is allowed to load for a given page.
