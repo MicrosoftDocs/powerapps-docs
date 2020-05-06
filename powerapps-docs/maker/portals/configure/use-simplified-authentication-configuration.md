@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/28/2020
+ms.date: 05/05/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -155,7 +155,7 @@ Deleting a provider deletes your provider configuration for the selected provide
 
 ## Configure the Azure Active Directory B2C provider
 
-### Step 1 - Configure the Azure Active Directory B2C application<a name="step-1-configure-azure-active-directory-b2c-application"></a>
+### Step 1 - Configure the Azure Active Directory B2C application
 
 ![Configure the Azure AD B2C app](media/use-simplified-authentication-configuration/configure-ad-b2c-step1.png "Configure the Azure AD B2C app")
 
@@ -189,7 +189,7 @@ Configure the following site settings and password reset policy for your Azure A
 
 - **Redirect URI** - Enter the portal URL. <br> You only need to change the redirect URI if you use a custom domain name.
 
-#### Password reset settings<a name="password-resets"></a>
+#### Password reset settings
 
 - **Default policy ID** - Enter the name of the sign-up and sign-in user flow you created in [step 1](#step-1-configure-azure-active-directory-b2c-application). The name is prefixed with *B2C_1*.
 
