@@ -77,9 +77,9 @@ If the attached file is an image, the control will display the image as a thumbn
 
 ![Notes thumbnail](media/notes-thumbnail.png "Notes thumbnail")
 
-## Processes for Azure Blob Storage
+### Processes for Azure Blob Storage
 
-Processes **Azure Blob Storage Url** and **AzureBlobStorageEnabled** are required for uploading attachments to Azure Storage:
+There are two processes that are required to upload attachments to Azure Storage: **Azure Blob Storage Url** and **AzureBlobStorageEnabled**.
 
 ![Blob storage processes](media/blob-storage-processes.png "Blob storage processes")
 
