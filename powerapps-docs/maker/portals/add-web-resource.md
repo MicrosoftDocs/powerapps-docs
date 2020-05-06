@@ -95,7 +95,7 @@ The following site settings are used to configure CORS:
 | HTTP/Access-Control-Allow-Credentials | Access-Control-Allow-Credentials | The only valid value for this header is true (case-sensitive). If you don't need credentials, omit this header entirely (rather than setting its value to false). 
 | HTTP/Access-Control-Allow-Headers | Access-Control-Allow-Headers | A comma-delimited list of the supported HTTP request headers.
 | HTTP/Access-Control-Allow-Methods | Access-Control-Allow-Methods | A comma-delimited list of the allowed HTTP request methods such as GET, POST, OPTIONS.
-| HTTP/Access-Control-Allow-Origin | Access-Control-Allow-Origin | URL of the Dynamics 365 instance, such as https://contoso.crm.dynamics.com to allow access. To allow any URI to access your resources, you can also specify \*.                 |
+| HTTP/Access-Control-Allow-Origin | Access-Control-Allow-Origin | URL of the Dynamics 365 instance, such as https://contoso.crm.dynamics.com. To allow any URI to access your resources, use \*.                 |
 |  HTTP/Access-Control-Expose-Headers | Access-Control-Expose-Headers | A comma-delimited list of HTTP header names other than the simple response headers that the resource might use and can be exposed.
 | HTTP/Access-Control-Max-Age | Access-Control-Max-Age |  Maximum number of seconds the results can be cached.
 | HTTP/Content-Security-Policy | Content-Security-Policy | Controls resources the user agent is allowed to load for a given page.
