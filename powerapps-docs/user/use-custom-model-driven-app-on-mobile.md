@@ -75,7 +75,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 
    > [!div class="mx-imgBorder"]
-   > ![Pin a record to favorites](media/pin_to_favs.gif "This image demonstrates how to pin favorite records")
+   > ![Pin a record to favorites](media/pin_to_fav.gif "This image demonstrates how to pin favorite records")
    
 *Refresh the page to restart the GIF action*.
 
