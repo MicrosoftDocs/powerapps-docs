@@ -108,7 +108,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 3. After the record is created, you can view the new record. 
 
    > [!div class="mx-imgBorder"]
-   > ![Create a record](media/pamobile_add_record.gif "This image demonstrates how create a new record")
+   > ![Create a record](media/pamobile_add_record_1.gif "This image demonstrates how create a new record")
 
 *Refresh the page to restart the GIF action*.
 
