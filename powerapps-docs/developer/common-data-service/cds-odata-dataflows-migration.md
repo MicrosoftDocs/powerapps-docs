@@ -13,7 +13,7 @@ search.app:
 
 # Migrate data between Common Data Service environments using the dataflows OData connector
 
-Common Data Service Web API works with any technology that supports OData and OAuth. There are many options available to move data in and out of Common Data Service. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Common Data Service. 
+Common Data Service [Web API](/powerapps/developer/common-data-service/webapi/overview) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Common Data Service. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Common Data Service. 
 
 In this article, we walk you through how to migrate data between Common Data Service environments using the dataflows OData connector. 
 
@@ -21,7 +21,7 @@ In this article, we walk you through how to migrate data between Common Data Ser
 
 - System Administrator or System Customizer security role permission on both source and the target environments.
 
-- Power Apps, Power Automate, or Common Data Service license (per app or per user)
+- Power Apps, Power Automate, or Common Data Service license (per app or per user).
 
 - Two Common Data Service [environments with database](/power-platform/admin/create-environment#create-an-environment-with-a-database).
 
@@ -35,13 +35,9 @@ In this article, we walk you through how to migrate data between Common Data Ser
 
 1. Identify the source and target environments.
 
-    - The **source environment** is where the data comes from. 
+    - The **source environment** is where the data is migrated from. 
 
-    - The **target environment** is where the data is migrated. 
-
-
-     > [!NOTE]
-     > Switch to **source** and **target** environments by selecting the **Environment** on the top right corner and select the appropriate environment from the list.
+    - The **target environment** is where the data is migrated to. 
 
 1. Ensure that the entities are already defined in the target environment. Ideally both environments should have the same entities defined with the same solution.
 
