@@ -41,12 +41,13 @@ Legend:
 
 From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to access entities, favorite or most-used records, other apps, and settings.
 
+
+   > *On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
+
  
    > [!div class="mx-imgBorder"]
    > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrates how to get to the site map screen")
    
-  > [!IMPORTANT]
-  > On Microsoft Edge, refresh the page to restart the GIF action. On other browsers you may have to navigate away and then back to this topic to restart the GIF image. 
 
 
 The following illustration shows the primary navigation elements on the site map screen. 
