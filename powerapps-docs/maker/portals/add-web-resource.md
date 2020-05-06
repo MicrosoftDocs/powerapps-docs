@@ -1,6 +1,6 @@
 ---
-title: "Add azure storage web resource to a form | MicrosoftDocs"
-description: "Steps to add azure storage web resource to a form to enable uploading attachments to Azure Storage."
+title: "Add Azure storage web resource to a form | MicrosoftDocs"
+description: "Steps to add Azure storage web resource to a form to enable uploading attachments to Azure Storage."
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -13,18 +13,18 @@ ms.reviewer: tapanm
 
 # Add the Azure Storage web resource to a form
 
-Attachments uploaded to Azure Storage instead of directly to Common Data Service  can be managed by using notes in Common Data Service .
+Attachments uploaded to Azure Storage instead of directly to Common Data Service can be managed by using notes in Common Data Service.
 
 To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form and you must [configure Azure Storage for your organization](enable-azure-storage.md).
 
 > [!NOTE]
 > In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
 
-When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it is represented by a note on an entity and a placeholder for the attachment.
+When a file (for example, attachments.zip) is uploaded to Azure Storage by using the portal, it's represented by a note on an entity and a placeholder for the attachment.
 
 ![Attachment on a form](media/notes-attachment-lead-form.png "Placeholder for the attachment on a form")
 
-Note that the attachment file is now named attachment.zip.txt. By default, Common Data Service  has no conception of an Azure file, so this placeholder .txt file is stored in Common Data Service  instead. The Azure Storage context for the placeholder file shows details about the file.
+The attachment file is now named attachment.zip.txt. By default, Common Data Service  has no conception of an Azure file, so this placeholder .txt file is stored in Common Data Service  instead. The Azure Storage context for the placeholder file shows details about the file.
 ```
 {
  Name: attachment.zip,
@@ -34,7 +34,7 @@ Note that the attachment file is now named attachment.zip.txt. By default, Commo
 }
 ```
 
-To see and interact with the file stored in Azure, you must add the web resource adx.annotations.html to the form. As a pre-requisite, ensure that your users have read access to adx_setting. Otherwise, the web resource will not render properly.
+To see and interact with the file stored in Azure, you must add the web resource adx.annotations.html to the form. As a pre-requisite, ensure that your users have read access to adx_setting. Otherwise, the web resource won't render properly.
 
 1. In the form editor for the relevant form, select **Web Resource** on the **Insert** tab.
 
@@ -48,7 +48,7 @@ To see and interact with the file stored in Azure, you must add the web resource
 
 6. Select **OK** to save the resource.
 
-7. Optionally, you might want to remove the existing notes control, or move it to a tab or section that is marked to be not visible by default.
+7. Optionally, you can remove the existing notes control. Or move it to a tab or a section marked to be not visible by default.
 
 8. Save the form, and then publish the changes.
 
@@ -58,7 +58,7 @@ The new control will now be rendered on the page, giving you the ability to mana
 
 ![Azure file attachment on a form](media/azure-file-attachment-lead-form.png "Azure file attachment on a form")
 
-The paper-clip icon has been replaced with a cloud icon to denote that this file is stored in Azure Storage. You can continue to store attachments in Common Data Service ; those files will be denoted with the paper-clip icon.
+The paper-clip icon has been replaced with a cloud icon to denote that this file is stored in Azure Storage. You can continue to store attachments in Common Data Service; those files will be denoted with the paper-clip icon.
 
 > [!Note]
 > You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon.
@@ -70,7 +70,7 @@ The paper-clip icon has been replaced with a cloud icon to denote that this file
 > 
 > [!include[More information](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services).
 
-If the attached file is an image, the control will display the image as a thumbnail whether it is stored in Common Data Service  or Azure Storage.
+If the attached file is an image, the control will display the image as a thumbnail whether it's stored in Common Data Service  or Azure Storage.
 
 > [!Note]
 > The thumbnail feature is limited to images under 1 MB in size.
