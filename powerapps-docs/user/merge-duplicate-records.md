@@ -61,12 +61,12 @@ There are a few situations when duplicates may be found:
 
 > [!IMPORTANT]
 >  If a field or control matches any of the following conditions, it will not show up in the merge dialog:  
->   - The containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime.  It is possible to show using the  client API.
+>   - The containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
 >   - The control does not have a class property.
 >   - The attribute's metadata `ValidForUpdate` is False.
 >   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
 >   - The attribute's metadata `ValidForUpdate` is False. 
 >   - The attribute is `Picklist` or `MultiSelectPickList` and it has either a parent picklist or child picklist attribute.
->   - The attribute is ` parentaccountid` on the Account entity;  this is a system setting and cannot be changed. 
->   - The attribute is ` parentcustomerid` on the  Contact Entity;  this is a system setting and cannot be changed
+>   - The attribute is ` parentaccountid` on the Account entity; this is a system setting and cannot be changed. 
+>   - The attribute is ` parentcustomerid` on the  Contact Entity; this is a system setting and cannot be changed
 
