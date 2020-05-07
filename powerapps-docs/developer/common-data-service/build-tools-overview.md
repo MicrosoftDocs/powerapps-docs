@@ -28,6 +28,7 @@ Use Power Apps build tools to automate common build and deployment tasks related
 > - Power Apps build tools is a preview feature.
 > - [!INCLUDE [cc-preview-features-definition](../../includes/cc-preview-features-definition.md)]
 
+For more information about using the build tools with application lifecycle management see [Power Apps build tools for Azure DevOps](/power-platform/alm/devops-build-tools).
   
 ## What are Power Apps build tools?
 

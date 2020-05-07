@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/23/2019
+ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -21,6 +21,9 @@ Saves and reloads a [collection](../working-with-data-sources.md#collections) fr
 The **SaveData** function stores a collection for later use under a name.  
 
 The **LoadData** function reloads a collection by name that was previously saved with **SaveData**. You can't use this function to load a collection from another source.  
+
+> [!NOTE]
+> The name shared between **SaveData** and **LoadData** is a key, not a file name. It need not be complex as names are unique to each app and there is no danger of name conflict. The name must not contain any of these characters: `*".?:\<>|/`.
 
 Use these functions to improve app-startup performance by:
 
@@ -56,7 +59,7 @@ The device may also encrypt the data; or you can use a mobile device management 
 **SaveData**( *Collection*, *Name* )<br>**LoadData**( *Collection*, *Name* [, *IgnoreNonexistentFile* ])
 
 * *Collection* - Required.  Collection to be stored or loaded.
-* *Name* - Required.  Name of the storage. The name must be same to save and load same set of data. The name space isn't shared with other apps or users.
+* *Name* - Required.  Name of the storage. The name must be same to save and load same set of data. The name space isn't shared with other apps or users.  Names must not contain any of these characters: `*".?:\<>|/`.
 * *IgnoreNonexistentFile* - Optional. A Boolean value indicating what to do if the file doesn't already exist.  Use *false* (default) to return an error and *true* to suppress the error.   
 
 ## Examples

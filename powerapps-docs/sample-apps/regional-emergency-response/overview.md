@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/29/2020
+ms.date: 05/06/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -51,8 +51,9 @@ See also:
 |Task | Target audience|See|
 |--|--|--|
 |Download and deploy the sample solution and set up users and security|Regional organization IT admin|[Deploy the Regional Government Emergency Response and Monitoring solution](deploy.md)|
-|Use the admin app to configure master data, create/manage portal users, and view dashboard|Regional organization Business admin|[Use the admin app and dashboard](configure.md)|
-|Use the portal to add/manage portals users for their hospitals, set up and manage master data for their hospitals, and view dashboard for insights and metrics.|Parent organization Business admin|[Administer the Regional Government Emergency Response and Monitoring portal](portals-admin-reporting.md)|
+|Upgrade the sample solution (for orgs with existing installation of the solution)|Regional organization IT admin|[Upgrade the Regional Government Emergency Response and Monitoring solution](upgrade.md)|
+|Use the admin app to configure master data, create/manage portal users, and view dashboard|Regional organization business admin|[Use the admin app and dashboard](configure.md)|
+|Use the portal to add/manage portals users for their hospitals, set up and manage master data for their hospitals, and view dashboard for insights and metrics.|Parent organization business admin|[Administer the Regional Government Emergency Response and Monitoring portal](portals-admin-reporting.md)|
 |Use the portal to quickly view and add data for bed capacity, staffing, equipment, supplies, and COVID-19 patients.|Healthcare workers|[Use the Regional Government Emergency Response and Monitoring portal](portals-user.md)|
 
 

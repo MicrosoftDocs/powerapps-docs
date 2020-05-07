@@ -9,7 +9,7 @@ applies_to:
   - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 03/30/2020
+ms.date: 05/04/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 68f68d5b-6c71-4b95-bb46-d48c59d9008e
@@ -76,6 +76,10 @@ A quick view control on a model-driven app form displays data from a record that
 |**Related entity**|This value depends on the **Lookup Field** you choose. It is usually the primary entity for the 1:N entity relationship for the lookup.<br /><br /> If the entity includes a **Potential Customer** lookup that can accept either an account or contact, in the **Quick View Form** field you can choose a quick view form for both account and contact by changing this value and then choosing another quick view form.|  
 |**Quick View Form**|If the **Related entity** has any quick view forms you can select them here. Otherwise, select **New** to create one.<br /><br /> Select **Edit** to change the selected quick view form.|  
 |**Additional Properties**|You can specify the default rendering style by selecting the check box.|
+
+>[!NOTE] 
+> When you add a multi-line text field to a quick view form, the form will have a height of one regardless of how the field control height is set. This ensures proper rendering of the form while maintaining density. Notice that multi-line text fields on other form types, such as main forms, work differently as the form automatically expands based on the amount of text. 
+
 
 ## Next steps
 
