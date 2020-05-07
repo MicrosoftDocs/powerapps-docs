@@ -25,7 +25,7 @@ new `OptionMetadata` instance. When you define an option, it will contain an opt
 context of the publisher set for the solution that the option set is created in. 
 This prefix helps reduce the chance of creating duplicate option sets for a managed solution, 
 and in any option sets that are defined in organizations where your managed solution is installed. For more information, 
-see [Merge option set options](../../../maker/common-data-service/how-managed-solutions-merged.md).  
+see  [Merge option set options](/power-platform/alm/how-managed-solutions-merged).  
 
 You can download the sample from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkWithOptionSets).
 

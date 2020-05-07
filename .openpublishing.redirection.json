@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/common-data-service/how-managed-solutions-merged.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/how-managed-solutions-merged",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/use-solutions-for-your-customizations.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/use-solutions-for-your-customizations",
+      "redirect_document_id": "false"
+    },    
+    {
       "source_path": "powerapps-docs/user/run-app-client.md",
       "redirect_url": "run-canvas-and-model-apps-on-mobile",
       "redirect_document_id": "false"
