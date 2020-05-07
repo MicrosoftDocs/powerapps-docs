@@ -48,7 +48,7 @@ On extracting the .zip file, you will see the following in the extracted folder:
 |**Folder**  |**Description**  |
 |---------|---------|
 |**Package**     |  The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment.       |
-|**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting. More information: [Step 5: Configure and publish Power BI dashboard](#step-5-configure-and-publish-power-bi-dashboard)        |
+|**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting. More information: [Step 3: Publish the latest Power BI dashboard](#step-3-publish-the-latest-power-bi-dashboard)        |
 |**SampleData**     |   Contains the sample master data files (.xlsx) that you can use to import sample data.       |
 
 ## Step 2: Install the upgrade package
@@ -56,11 +56,11 @@ On extracting the .zip file, you will see the following in the extracted folder:
 Install the upgrade package in the **same environment** where you have the
 existing solution installed. You can install the upgrade package in one of the following 3 ways just like you did when deploying the solution for the **first time**.
 
-- Microsoft AppSource (for Power Apps US Govt customers only). See [Option A: Install the app from Microsoft AppSource (US Govt customers)](#option-a-install-the-app-from-microsoft-appsource-us-govt-customers) in the deployment topic
+- Microsoft AppSource (for Power Apps US Govt customers only). See [Option A: Install the app from Microsoft AppSource (US Govt customers)](deploy.md#option-a-install-the-app-from-microsoft-appsource-us-govt-customers) in the deployment topic
 
-- Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](#option-b-install-the-app-from-microsoft-appsource) in the deployment topic
+- Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](deploy.md#option-b-install-the-app-from-microsoft-appsource) in the deployment topic
 
-- Deployment package that you downloaded earlier. See [Option C: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package) in the deployment topic
+- Deployment package that you downloaded earlier. See [Option C: Install the app from the deployment package](deploy.md#option-c-install-the-app-from-the-deployment-package) in the deployment topic
 
 ## Step 3: Publish the latest Power BI dashboard
 

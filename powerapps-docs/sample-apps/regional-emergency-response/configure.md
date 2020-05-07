@@ -37,12 +37,11 @@ When you sign into the admin (model-driven) app, you will see the entities in th
 
 -   **Hierarchy area**: Data for entities in this area can be added either by importing data from the sample data files or manually. The entities under the **Hierarchy** area are listed in the order you should populate data. Also, parent org admins (hospital admins) can view and manage data under the following entities for their hospital from the portal: **Systems**, **Regions**, and **Facilities**.
 
-    > [!NOTE]
-    > We provide name and FIPS code for all the counties in the Washington state as sample data that you can import. To obtain data counties in other states, visit <https://www.census.gov/geographies/reference-files/2018/demo/popest/2018-fips.html>
-
 -   **Admin Entities area**: Data in the **Supplies** entity is added by importing data from the sample data file. You can manually add and manage supplies data later.
 
--   **Customers area**: You use the **Portal Users** entity to add and manage portal users. More information: [Manage portal users](#manage-portal-users)
+-   **Customers area**: You use **Portal Users** to [add and manage portal users](#manage-portal-users) and **User Requests** to [view and manage portal user requests](#view-and-manage-portal-user-requests).
+
+-   **Resources area**: Select **Documentation** to view this document.
 
 There are two ways in which you can add master data to entities in the app:
 
@@ -294,6 +293,42 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
 Depending on the roles(s) you granted to the user, she/he will view respective areas in the portal. More information: [Portal for admins and report viewers](portals-admin-reporting.md) and [Portal for healthcare workers](portals-user.md)
 
 An email will be sent automatically to the newly created user with an invitation code to join portals. The portal user can redeem the invitation to sign in and start using the portal. More information: [Get started with the portal](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#getting-started-with-the-portal)
+
+## View and manage portal user requests
+
+You can view, approve, and decline portal user requests using the **User Requests** option.
+
+Use the appropriate view to view a list of approved, declined, inactive, and pending user requests.
+
+> [!div class="mx-imgBorder"] 
+> ![Select a view](media/configure-portal-request-views.png "Select a view")
+
+### Approve or decline user request
+
+To approve or decline user requests:
+
+1.  Sign into the admin app using the URL provided by your IT admin.
+
+2.  In the left pane, select **User Requests**, and then select Pending Portal User Requests view. You see a list of portal user requests pending for approval.
+
+3.  Double-click a user request to open it.
+
+4.  On the user request form:
+
+    1. Select the appropriate roles for the user in the **Choose roles for the user** area. To grant or deny a role, select **Yes** or **No** respectively for each role.
+
+    1. From the **Request State** list, select **Approve** or **Decline**.
+
+    1. Select the save icon in the lower-right corner.
+
+        > [!div class="mx-imgBorder"] 
+        > ![Approve or reject a user request](media/user-request-manage.png "Approve or reject a user request")
+
+Based on the approval or decline, the following happens:
+
+- If you approve the access request, the user record is created with selected roles and the user receives an email with invitation code, User can redeem the invitation code to sign in to the portal. More information: [Redeem invitation](portals-admin-reporting.md#redeem-invitation)
+
+- If you decline the access request, the user record isn't created, and the user receives an email stating that the request is declined.
 
 ## View the Power BI dashboard
 
