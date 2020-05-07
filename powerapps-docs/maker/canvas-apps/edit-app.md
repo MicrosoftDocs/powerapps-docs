@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/19/2017
+ms.date: 04/30/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -15,33 +15,51 @@ search.app:
   - PowerApps
 ---
 # Edit a canvas app in Power Apps
-Edit any canvas app that you built, that you own, or for which you have **Can edit** permissions. You can edit an app in Power Apps Studio. If you try to edit an app that's open for editing elsewhere, a message tells you whether you already have it open or another user does.
 
-## Verify your permissions
-1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then click or tap **Apps** in the **File** menu (on the left edge).
-   
-    ![Apps option on the File menu](./media/edit-app/file-apps.png)
+Edit any canvas app that you created, or for which you have **Co-owner** permission. You can edit an app in Power Apps Studio. 
 
-2. In the app-category selector, click or tap **Apps I can edit**.
+If you try to edit an app that's open for editing elsewhere, a message tells you whether you already have it open or another user does.
 
-    You can edit any app in the list that appears. You can also search for an app by typing one or more characters in the search box near the upper-right corner.
+## Edit an app
 
-    > [!NOTE]
-    > If you still don't see the app that you want to edit, verify that you've selected the correct environment near the upper-right corner.
-   
-    ![Environment list](./media/edit-app/environment-list.png)
+1. Sign in to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. Click or tap the ellipsis icon (...) for the app you want to edit, and then click or tap **Edit**.
+1. Select **Apps** in the left navigation pane.
+
+    ![List of apps](./media/edit-app/file-apps.png "List of apps")
+
+1. Select an app.
+
+1. Select **Edit** from top menu. You can also use "**...**" (More Commands) for the app and then select **Edit** from the drop-down menu.
+
+    ![Edit an app](./media/edit-app/edit-app.png "Edit an app")
+
+If you don't see the app that you want to edit, verify that you've selected the correct environment.
+
+![Select environment](./media/edit-app/select-environment.png "Select environment")
 
 ## Collaborate on an app
-Anybody who has **Can edit** permission for an app can edit it, but only one person can edit an app at a time. If you try to edit an app that someone else is already editing, this message appears. You can't proceed until the other person closes the app (or that person's session times out).
 
-![](./media/edit-app/applock-otheruser.png)
+An app can be shared with others. Any **Co-owner** for an app can edit it. Consider the following scenarios when collaborating over an app.
 
-In addition, this message appears if you open an app for editing and then try to open it on another device or in another browser window. You can override the previous session, but you might lose any changes that you haven't saved.
+### Edit an app already being edited
 
-![](./media/edit-app/applock-selfuser.png)
+Only one user can edit an app at a time.
+
+If you try to edit an app that someone else is already editing, you'll see the following message.
+
+![App open by another user](./media/edit-app/applock-otheruser.png "App open by another user")
+
+You can't continue until the other user closes the app, or that user's session times out.
+
+### Edit an app across multiple sessions
+
+Consider that you already have an app open for editing. And then, you try to open the app for editing on another device, or in another browser window. In that case, you'll see the following message.
+
+![App already open for editing by same user](./media/edit-app/applock-selfuser.png "App already open for editing by same user")
+
+You can override the previous session, but you might lose any changes that you haven't saved.
 
 ## Next Steps
-Learn more about how to add a [screen](add-screen-context-variables.md), a [control](add-configure-controls.md) or a [data connection](add-data-connection.md).
 
+Learn more about how to add a [screen](add-screen-context-variables.md), a [control](add-configure-controls.md), or a [data connection](add-data-connection.md).

@@ -96,7 +96,7 @@ OData-Version: 4.0
 |LogoId|String|null|The name of a web resource to use as a logo. Recommended dimensions are a height of 50 pixels and a maximum width of 400 pixels.|  
 |LogoToolTip|String|Model-driven apps|The text that will be used as the tooltip and alt text for the logo.| 
 |MainColor|String|#3B79B7|The Unified Interface primary theme color to be used on main command bar, buttons and tabs.| 
-|Name|String|MDA Default Theme|The name of the Theme entity.|  
+|Name|String|Model-driven apps Default Theme|The name of the Theme entity.|  
 |NavBarBackgroundColor|String|#002050|The primary navigation bar color.|  
 |NavBarShelfColor|String|#DFE2E8|The secondary navigation bar color.|  
 |OverriddenCreatedOn|DateTime|null|Date and time that the record was migrated.|  

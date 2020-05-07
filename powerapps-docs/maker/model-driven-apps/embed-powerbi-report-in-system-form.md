@@ -3,22 +3,12 @@ title: "Embed a Power BI report in a model-driven system form | MicrosoftDocs"
 ms.custom: ""
 ms.date: 03/05/2019
 ms.reviewer: ""
-ms.service: crm-online
-ms.suite: ""
-ms.tgt_pltfrm: ""
+ms.service: powerapps
 ms.topic: "get-started-article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "PowerApps"
-ms.assetid: 99c795e0-9165-4112-85b1-6b5e1a4aa5ec
-caps.latest.revision: 1
-author: "prsi-msft"
-ms.author: "prsi"
+author: "adrianorth"
+ms.author: "aorth"
 manager: "kvivek"
 ms.reviewer: "matp"
-tags: 
-  - "Links to topic not migrated"
 search.audienceType: 
   - maker
 search.app: 
@@ -30,7 +20,7 @@ search.app:
 You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. This unlocks the power to aggregate data across systems, and tailor it down to the context of a single record.
  
 ## Prerequisites
-Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi?#enable--visualizations-in-the-organization).
+Embedding Power BI content is an optional feature and is disabled on all environments by default. You must enable it before you can embed Power BI content. More information: [Enable Power BI visualizations in the organization](/power-platform/admin/use-power-bi#embed--visualizations-on-personal-dashboards).
 
 This feature requires exporting a solution, modifying it to add the xml snippet, and then importing back into the environment. Be sure to import the changes on your target environment via a managed solution only. See [Import, update, and export solutions](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) for guidance on installing an update to an existing managed solution.
 
@@ -149,8 +139,8 @@ You can create more complex filter expressions by looking at examples from [Cons
 
 ### See also
 
-[Embed a Power BI dashboard in a Power Apps model-driven personal dashboard](https://docs.microsoft.com/dynamics365/customer-engagement/basics/add-edit-power-bi-visualizations-dashboard)
+[Embed a Power BI dashboard in a Power Apps model-driven personal dashboard](/powerapps/user/add-powerbi-dashboards)
 
-[Use Power BI with Dynamics 365 apps](https://docs.microsoft.com/dynamics365/customer-engagement/admin/use-power-bi)
+[Use Power BI with Dynamics 365 apps](/power-platform/admin/use-power-bi)
 
 [Import, update, and export solutions](../common-data-service/import-update-export-solutions.md)
