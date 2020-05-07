@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/06/2020
+ms.date: 05/07/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -41,9 +41,6 @@ Legend:
 
 From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map icon") to access entities, favorite or most-used records, other apps, and settings.
 
-
-*On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
-
  
    > [!div class="mx-imgBorder"]
    > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrates how to get to the site map screen")
@@ -76,7 +73,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 3. To view the newly pinned records, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon"), and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
-*On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
    
    > [!div class="mx-imgBorder"]
    > ![Pin a record to favorites](media/pin_to_fav.gif "This image demonstrates how to pin favorite records")
@@ -88,7 +84,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 2. Select the remove-pin icon ![Remove pin icon](media/pa_mobile_remove_pin_icon.png "Remove pin icon") next to a record to remove it from favorites (pinned records).
 
-*On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
 
    > [!div class="mx-imgBorder"]
    > ![Unpin a record](media/unpin_favs.gif "This image demonstrates how to unpin a record")
@@ -98,7 +93,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 - From the Home screen, select the down arrow ![Change view icon](media/mobile_view_selector_icon.png "Change view icon") next to the current view, and then select a new view.
 
-*On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
 
    > [!div class="mx-imgBorder"]
    > ![Change views](media/change_views_iphone.gif "This image demonstrates how to select a different view")
@@ -110,8 +104,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 2. Fill in the fields, and then select **Save**.
 3. After the record is created, you can view the new record. 
 
-*On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
-
    > [!div class="mx-imgBorder"]
    > ![Create a record](media/pamobile_add_record_1.gif "This image demonstrates how create a new record")
 
@@ -120,7 +112,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 - To save and create another record, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commands icon"), and then select **Save and Create new**.
 
-*On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
 
    > [!div class="mx-imgBorder"]
    > ![Create a record](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a record and open it or save and create a new record")
@@ -131,7 +122,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 1. From the Home screen, open a record.
 2. On the open record, select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
 
-*On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
 
    > [!div class="mx-imgBorder"]
    > ![Commands on a record](media/pa_mobile_view_record_commands.gif "This image demonstrates how to access more commands on a record")
@@ -142,7 +132,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 1. From the Home screen, open a record that you want to edit. 
 2. When you're done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
-*On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
 
    > [!div class="mx-imgBorder"]
    > ![Edit a record](media/save_on_iphone.gif "This image demonstrates how to edit and then save a record")
@@ -153,8 +142,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 - To get back to the Home screen when you're in a record, select **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon").
 - At any point, press and hold **Back** ![Back icon](media/pa_mobile_back_icon.png "Back icon") to go back to the Home screen. 
-
-*On Microsoft Edge, refresh the page to restart the GIF action. On Google Chrome and Firefox, navigate away and then back to this topic to restart the GIF action*. 
 
    > [!div class="mx-imgBorder"]
    > ![Go back to the Home screen](media/go_back_home.gif "This image demonstrates how to go back to the home screen by pressing and holding the back icon")
