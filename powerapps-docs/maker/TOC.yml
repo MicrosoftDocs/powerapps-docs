@@ -1597,9 +1597,7 @@
       - name: Best practices
         href: ./common-data-service/solution-best-practices.md        
       - name: "How to"
-        items:
-        - name: Create solution patches
-          href: ./common-data-service/solution-patches.md      
+        items:     
         - name: Create a solution
           href: ./common-data-service/create-solution.md
         - name: Update or upgrade solutions
