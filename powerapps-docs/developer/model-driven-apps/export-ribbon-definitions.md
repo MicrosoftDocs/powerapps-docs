@@ -41,7 +41,7 @@ If the Ribbon for your organization has been modified, you should export the cur
   
 ### Decompress the ribbon data  
 
- The ribbon data is exported as a compressed file. To decompress the file into XML you have to use the [System.IO.Packaging.ZipPackage](https://msdn.microsoft.com/library/system.io.packaging.zippackage.aspx) class. The following example is a helper method used in the SDK sample to decompress the file.  
+ The ribbon data is exported as a compressed file. To decompress the file into XML, you have to use the [System.IO.Packaging.ZipPackage](https://msdn.microsoft.com/library/system.io.packaging.zippackage.aspx) class. The following example is a helper method used in the SDK sample to decompress the file.  
 
  ``` C# 
 /// <summary>
@@ -87,7 +87,7 @@ File.WriteAllBytes(applicationRibbonPath, unzipRibbon(appribResp.CompressedAppli
 
  To retrieve the ribbon definition for entities, you can just include the name of the entity as a parameter to the <xref:Microsoft.Crm.Sdk.Messages.RetrieveEntityRibbonRequest>.  
   
- To retrieve the ribbon definitions for all entities that support the ribbon you need a list of those system entities that have ribbon definitions that vary from the entity ribbon template. The following sample shows an array of all the system entities that have ribbon definitions.  
+ To retrieve the ribbon definitions for all entities that support the ribbon, you need a list of those system entities that have ribbon definitions that vary from the entity ribbon template. The following sample shows an array of all the system entities that have ribbon definitions.  
 
  ```C# 
  //This array contains all of the system entities that use the ribbon.
