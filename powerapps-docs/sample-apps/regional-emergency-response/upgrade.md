@@ -26,9 +26,6 @@ If you are installing this solution for the first time, see [Deploy the solution
 
 -   Ensure all users are disconnected from your environment before you upgrade. You might have to plan the upgrade process at a time when there is minimal obstructions for your users.   
 
--   Ensure you have copied the Email contents to a Word file from the Send
-    Invitation, Send Password Reset To Contact processes
-
 ## Step 1: Download the upgrade deployment package
 
 Get the latest deployment package (.zip) from <https://aka.ms/rer-solution>. It's the same deployment package as the one you download during the fresh deployment step.
