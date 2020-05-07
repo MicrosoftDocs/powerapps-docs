@@ -78,11 +78,11 @@ This step is required only if your Power BI report URL has changed in the previo
 with the latest Power BI report URL.
 
 For detailed steps, see [Embed Power BI report in
-portal](https://docs.microsoft.com/en-us/powerapps/sample-apps/regional-emergency-response/deploy#the-process-1)
+portal](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#the-process-1)
 
 Make sure to restart our portal for the changes to take effect. More
 information: [Restart the
-portal](https://docs.microsoft.com/en-us/powerapps/sample-apps/regional-emergency-response/deploy#restart-the-portal)
+portal](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#restart-the-portal)
 
 ## Step 5: Verify the Send Invitation and Send Password Reset To Contact processes
 
@@ -93,29 +93,42 @@ that can send emails and the rest of the details are fine.
 For details about how to fix these processes, see:
 
 -   [Step 10: Fix the Send Invitation
-    process](https://docs.microsoft.com/en-us/powerapps/sample-apps/regional-emergency-response/deploy#step-10-fix-the-send-invitation-process)
+    process](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-10-fix-the-send-invitation-process)
 
 -   [Step 11: Fix the Send Password Reset To Contact
-    process](https://docs.microsoft.com/en-us/powerapps/sample-apps/regional-emergency-response/deploy#step-11-fix-the-send-password-reset-to-contact-process)
+    process](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-11-fix-the-send-password-reset-to-contact-process)
 
 ## Step 6: Verify the Flow supply tracking flow is enabled
-
 
 This flow enables the frontline user to add supplies through the portal that
 gets saved in Common Data Service.
 
 For details about how to fix these processes, see [Step 13: Verify the Flow
 supply tracking flow is
-enabled](https://docs.microsoft.com/en-us/powerapps/sample-apps/regional-emergency-response/deploy#step-13-verify-the-flow-supply-tracking-flow-is-enabled).
+enabled](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-13-verify-the-flow-supply-tracking-flow-is-enabled).
 
-## Step 7: Edit the 2 flows (check the recording)
+## Step 7: Update the details of flows for sending emails
 
--   Verifying the credentials to connect to CDS and send email
+In this step, we are going to do the following:
 
--   In the 2nd flow, we are Verifying the credentials to connect to CDS and send
-    email and also fixing the Portal URL in the email body
+|Flow name|Changes|
+|--|--|
+|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service as a user account that should be used for sending the emails, like no-reply\@[*customerdomain*].com. This user account must be already set up in your environment with the server-side synchronization enabled.|
+|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service as a user account that should be used for sending the emails, like no-reply\@[*customerdomain*].com. This user account must be already set up in your environment with the server-side synchronization enabled. Additionally, update the portal URL in the email body as per your Portal URL.| 
 
-After the flow is complete and next time Power BI report is refreshed (every 30
-mins as per our recommendation), you will see the historical data in your
-reports.
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Open the solution](media/deploy-open-solution.png "Open the solution")
+
+3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record. Ensure that the status is set to **On**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Find the Flow Supply Tracking record](media/deploy-find-record.png "Find the Flow Supply Tracking record")
+
+4.  If it is not set to **On**, select the flow name to open the flow definition.
+
+5.  In the flow definition, select **Turn On** in the toolbar.
 

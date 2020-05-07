@@ -666,7 +666,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
 5.  If it’s not enabled, select the process name to open the record, and then select **Activate**. Confirm to activate the process.
 
-## Step 13: Verify the Flow supply tracking flow is enabled
+## Step 13: Enable the Flow supply tracking flow
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
@@ -675,16 +675,59 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
     > [!div class="mx-imgBorder"] 
     > ![Open the solution](media/deploy-open-solution.png "Open the solution")
 
-3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record. Ensure that the status is set to **On**.
+3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record.
 
     > [!div class="mx-imgBorder"] 
     > ![Find the Flow Supply Tracking record](media/deploy-find-record.png "Find the Flow Supply Tracking record")
 
-4.  If it is not set to **On**, select the flow name to open the flow definition.
+4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
 
-5.  In the flow definition, select **Turn On** in the toolbar.
+5.  Fix the connection to connect to Common Data Service, and save the connection information.
 
-## Step 14: Share admin app with other admin users
+6. In the flow definition, select **Turn On**.
+
+## Step 14: Update the details of flows for sending emails
+
+In this step, we are going to do the following:
+
+|Flow name|Changes|
+|--|--|
+|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service and then should be used for sending the emails, like no-reply\@[*customerdomain*].com. This user account must be already set up in your environment with the server-side synchronization enabled.|
+|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service as a user account that should be used for sending the emails, like no-reply\@[*customerdomain*].com. This user account must be already set up in your environment with the server-side synchronization enabled. Additionally, update the portal URL in the email body as per your Portal URL.| 
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Open the solution](media/deploy-open-solution.png "Open the solution")
+
+3.  In the solution, filter on **Flow** to find the flows. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Find the Flow Supply Tracking record](media/deploy-find-record1.png "Find the flows")
+
+4.  Select the **Portal User Request: Send Email on Decline Request** name to open the flow definition. Select **Edit** on the toolbar.
+
+5.  Fix the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection using a new credential by selecting **Add new connection**.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Fix credential](media/deploy-specify-cred.png "Fix credentials")
+
+6.  using a user account that has the server-side synchronization enabled. and then save the flow.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Specify outlook credentials](media/deploy-fix-cred2.png "Specify outlook credentials")
+
+6. In the flow definition, select **Turn On**.
+
+7.  Next, go to the flows list, and select the **Portal User Request: Send Email to Admins on Request Creation** name to open the flow definition. Select **Edit** on the command bar.
+
+8.  Fix the connection to connect to Common Data Service using a user account that has the server-side synchronization enabled and then save the flow.
+
+
+
+## Step 15: Share admin app with other admin users
 
 For your business admin users to use the admin app (model-driven app) to enter and manage data, it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
