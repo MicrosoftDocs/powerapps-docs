@@ -20,6 +20,8 @@ This article is meant for business admins in regional medical organizations to u
 
 -   Create and manage portal users (contacts). These users are typically the admins from parent medical organizations that manage one or more hospital systems.
 
+- View approve, and decline portal user requests.
+
 - View Power BI dashboards in their tenant.
 
 ## Prerequisites
