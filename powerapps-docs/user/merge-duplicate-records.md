@@ -60,7 +60,7 @@ There are a few situations when duplicates may be found:
 - Duplicates aren't detected when you merge records, save an activity as completed, or change the status of a record, such as activating or reactivating a record.
 
 > [!IMPORTANT]
->  If a field or control matches any of the following conditions, it will not show up in merge dialog:  
+>  If a field or control matches any of the following conditions, it will not show up in the merge dialog:  
 >   - The containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime.  It is possible to show using the  client API.
 >   - The control does not have a class property.
 >   - The attribute's metadata `ValidForUpdate` is False.
