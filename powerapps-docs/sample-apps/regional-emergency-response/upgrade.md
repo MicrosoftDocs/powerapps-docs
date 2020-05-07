@@ -107,28 +107,14 @@ For details about how to fix these processes, see [Step 13: Verify the Flow
 supply tracking flow is
 enabled](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-13-verify-the-flow-supply-tracking-flow-is-enabled).
 
-## Step 7: Update the details of flows for sending emails
+## Step 7: Verify and update the details of flows for sending emails
 
 In this step, we are going to do the following:
 
 |Flow name|Changes|
 |--|--|
-|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service as a user account that should be used for sending the emails, like no-reply\@[*customerdomain*].com. This user account must be already set up in your environment with the server-side synchronization enabled.|
-|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service as a user account that should be used for sending the emails, like no-reply\@[*customerdomain*].com. This user account must be already set up in your environment with the server-side synchronization enabled. Additionally, update the portal URL in the email body as per your Portal URL.| 
+|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service and then specify a user account to send emails.|
+|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
 
-1.  Sign into [Power Automate](https://flow.microsoft.com/).
-
-2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Open the solution](media/deploy-open-solution.png "Open the solution")
-
-3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record. Ensure that the status is set to **On**.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Find the Flow Supply Tracking record](media/deploy-find-record.png "Find the Flow Supply Tracking record")
-
-4.  If it is not set to **On**, select the flow name to open the flow definition.
-
-5.  In the flow definition, select **Turn On** in the toolbar.
+For detailed information about this, see [Step 14: Update the details of flows for sending emails]
 
