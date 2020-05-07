@@ -22,6 +22,8 @@ In this article, you'll walk through the basic themes feature. For advanced them
 
 ## Enable basic themes for existing portals (Preview)
 
+[This topic is pre-release documentation and is subject to change.]
+
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** from the left navigation pane, and then select the portal.
