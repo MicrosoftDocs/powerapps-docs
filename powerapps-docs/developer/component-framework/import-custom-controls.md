@@ -136,6 +136,7 @@ Power Apps CLI now supports creating a plug-in project and packaging it in a sol
     ```
 
 6.    Run the command to build the solution and the referenced plug-in.
+
     ```CLI
     msbuild
     ```
