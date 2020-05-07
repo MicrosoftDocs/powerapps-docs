@@ -116,5 +116,5 @@ In this step, we are going to do the following:
 |**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service and then specify a user account to send emails.|
 |**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
 
-For detailed information about this, see [Step 14: Update the details of flows for sending emails]
+For detailed information about this, see [Step 14: Update the details of flows for sending emails](deploy.md#step-14-update-the-details-of-flows-for-sending-emails)
 
