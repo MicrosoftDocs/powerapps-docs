@@ -34,7 +34,7 @@ Legend:
 
 1. **Site map**: Open the menu and move between apps, get to your favorite and recently used records, access settings, and more.
 2. **Search**: Search for app records in Common Data Service.
-3. **Quick Create**: Create a new record and quickly enter almost any type of information into the system.
+3. **New**: Create a new record and quickly enter almost any type of information into the system.
 4. **Relationship Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
 
 ## Site map 
