@@ -132,5 +132,4 @@ Configure [portals details](https://docs.microsoft.com/powerapps/maker/portals/a
 ### See also
 
 - Manage apps with [Power Platform admin center](https://docs.microsoft.com/power-platform/admin/manage-apps)
-
 - [Upgrade a portal](upgrade-portal.md)
