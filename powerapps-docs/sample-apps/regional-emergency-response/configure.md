@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/22/2020
+ms.date: 05/06/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -39,7 +39,7 @@ When you sign into the admin (model-driven) app, you will see the entities in th
 
 -   **Admin Entities area**: Data in the **Supplies** entity is added by importing data from the sample data file. You can manually add and manage supplies data later.
 
--   **Customers area**: You use **Portal Users** to [add and manage portal users](#manage-portal-users) and **User Requests** to [view and manage portal user requests](#view-and-manage-portal-user-requests).
+-   **Customers area**: You use **Portal Users** to [manage portal users](#manage-portal-users) and **User Requests** to [manage portal user requests](#manage-portal-user-requests).
 
 -   **Resources area**: Select **Documentation** to view this document.
 
@@ -294,7 +294,7 @@ Depending on the roles(s) you granted to the user, she/he will view respective a
 
 An email will be sent automatically to the newly created user with an invitation code to join portals. The portal user can redeem the invitation to sign in and start using the portal. More information: [Get started with the portal](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#getting-started-with-the-portal)
 
-## View and manage portal user requests
+## Manage portal user requests
 
 You can view, approve, and decline portal user requests using the **User Requests** option.
 
@@ -309,7 +309,7 @@ To approve or decline user requests:
 
 1.  Sign into the admin app using the URL provided by your IT admin.
 
-2.  In the left pane, select **User Requests**, and then select Pending Portal User Requests view. You see a list of portal user requests pending for approval.
+2.  In the left pane, select **User Requests**, and then select **Pending Portal User Requests** view. You see a list of portal user requests pending for approval.
 
 3.  Double-click a user request to open it.
 
@@ -326,9 +326,9 @@ To approve or decline user requests:
 
 Based on the approval or decline, the following happens:
 
-- If you approve the access request, the user record is created with selected roles and the user receives an email with invitation code, User can redeem the invitation code to sign in to the portal. More information: [Redeem invitation](portals-admin-reporting.md#redeem-invitation)
+- If you *approve* the access request, the user record is created with selected roles and the user receives an email with invitation code. The user can redeem the invitation code to sign in to the portal. More information: [Redeem invitation](portals-admin-reporting.md#redeem-invitation)
 
-- If you decline the access request, the user record isn't created, and the user receives an email stating that the request is declined.
+- If you *decline* the access request, the user record isn't created, and the user receives an email stating that the request is declined.
 
 ## View the Power BI dashboard
 
