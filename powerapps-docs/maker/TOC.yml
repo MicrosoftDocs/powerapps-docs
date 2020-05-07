@@ -1677,6 +1677,8 @@
       href: ../sample-apps/regional-emergency-response/overview.md
     - name: Deploy the solution
       href: ../sample-apps/regional-emergency-response/deploy.md
+    - name: Upgrade the solution
+      href: ../sample-apps/regional-emergency-response/upgrade.md
     - name: App and dashboard for regional admin
       href: ../sample-apps/regional-emergency-response/configure.md
     - name: Portal for admin and report viewer
