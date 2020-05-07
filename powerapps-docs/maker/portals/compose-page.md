@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/06/2020
+ms.date: 05/07/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -357,7 +357,7 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 You can add Power BI component on a page. When adding a Power BI component, you have different options to select for access type, workspace, and advanced settings.
 
 > [!NOTE]
-> Before you begin, read [Power BI access types](#power-bi-access-types) and [Power BI considerations](#other-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portal.
+> Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portal.
 
 To add a Power BI component to a web page:
 
@@ -423,20 +423,23 @@ To add a Power BI component to a web page:
         - To know how to get embed code URL, go to [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
         - Only available for access type **Publish to web**. 
 
-### Power BI access types
+### Power BI access type considerations
 
 The following highlights *Power BI access types* in brief. For more information, go to [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
 
 - **Embed for your customers**:
     - Shows the list of workspaces shared to logged in user and enabled for [Power BI Embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service).
     - Uses Power BI Embedded service.
+    - If you've used Power BI Embedded service with Power Apps portals before, you'll see the following error when you select **Embed for your customers**:
+    <br> *This option requires you to disable the Power BI visualization from the admin center and enable again.*.
+    <br> When this happens, ensure you [disable](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#disable-power-bi-visualization) and then [enable](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-visualization) Power BI visualization again.
     - If you add Power BI with *Embed for your customers* on a Power Apps portal page that is available **anonymously**, anyone can view the dashboard. To secure such a web page, read [web page access control in Power Apps portal](https://docs.microsoft.com/powerapps/maker/portals/configure/webpage-access-control).
 - **Embed for your organization**:
     - Shows the list of workspaces shared with logged in user.
     - Uses Azure Active Directory authentication.
 - **Publish to web**: Anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Do not publish confidential or sensitive information. When in doubt, check your organization's policies before publishing.
 
-### Other Power BI considerations
+### General Power BI considerations
 
 - [Portals Studio](https://docs.microsoft.com/powerapps/maker/portals/portal-designer-anatomy) performance can degrade while working with Power BI workspaces due to the following Power BI workspace configurations:
     - High number of workspaces shared with logged in maker user.
