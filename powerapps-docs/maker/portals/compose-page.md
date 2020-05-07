@@ -390,7 +390,7 @@ To add a Power BI component to a web page:
 
         3. **Publish to web** - Allows you to share Power BI report or dashboard to anyone on the internet.
 
-        For more information about access types, go to [access types](#power-bi-access-types).
+        For more information about access types, go to [access types](#power-bi-access-type-considerations).
 
     1. **Workspace**: Select the Power BI workspace from the list.
 
