@@ -43,7 +43,7 @@ In the first argument, specify the name of the screen to display.
 | **ScreenTransition.UnCover** | The current screen slides out of view, moving right to left, to uncover the new screen. | ![screen transition uncover animation](media/function-navigate/uncover.gif) |
 | **ScreenTransition.UnCoverRight** | The current screen slides out of view, moving left to right, to uncover the new screen. | ![screen transition uncover right animation](media/function-navigate/uncoverright.gif) |
 
-You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](../working-with-tables.md#records) that contains the context-variable name as a [column](../working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
+You can use **Navigate** to create or update [context variables](../working-with-variables#use-a-context-variable) of the new screen. As an optional third argument, pass a [record](../working-with-tables.md#records) that contains the context-variable name as a [column](../working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
 
 Set the **[OnHidden](../controls/control-screen.md)** property of the old screen, the **[OnVisible](../controls/control-screen.md)** property of the new screen, or both to make additional changes during the transition. The **App.ActiveScreen** property will be updated to reflect the change.
 
@@ -71,7 +71,7 @@ When the **Back** function runs, the inverse transition is used by default. For 
 
 * *Screen* - Required. The screen to display.
 * *Transition* - Optional.  The visual transition to use between the current screen and the next screen. See the list of valid values for this argument earlier in this topic. The default value is **None**.
-* *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the context variables of the new screen as if passed to the **[UpdateContext](function-updatecontext.md)** function.
+* *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the [context variables](../working-with-variables#use-a-context-variable) of the new screen as if passed to the **[UpdateContext](function-updatecontext.md)** function.
 
 ## Examples
 
@@ -120,4 +120,4 @@ When the **Back** function runs, the inverse transition is used by default. For 
 
 ### See also
 
-[Add screen context variables](../add-screen-context-variables.md)
+[Using context variables](../working-with-variables#use-a-context-variable)
