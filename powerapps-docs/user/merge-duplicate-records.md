@@ -38,7 +38,7 @@ Common Data Service includes duplicate detection rules for accounts and contacts
 > [!NOTE]
 >  If available on your system, you may also be able to check for duplicates of other record types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
   
-## Merge duplicate records  
+### How to merge duplicate records  
   
 1. Select the duplicate records, and then select **Merge**.  
   
