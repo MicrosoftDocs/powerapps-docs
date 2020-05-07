@@ -431,8 +431,10 @@ The following highlights *Power BI access types* in brief. For more information,
     - Shows the list of workspaces shared to logged in user and enabled for [Power BI Embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service).
     - Uses Power BI Embedded service.
     - If you've used Power BI Embedded service with Power Apps portals before, you'll see the following error when you select **Embed for your customers**:
-    <br> ![Power BI Embed for your customers - enable visualization again](media/embed-power-bi-visualization-enable-again.png)
-    <br> When this happens, ensure you [disable](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#disable-power-bi-visualization) and then [enable](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-visualization) Power BI visualization again.
+
+        ![Power BI Embed for your customers - enable visualization again](media/embed-power-bi-visualization-enable-again.png)
+    
+        When this happens, ensure you [disable](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#disable-power-bi-visualization) and then [enable](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-visualization) Power BI visualization again.
     - If you add Power BI with *Embed for your customers* on a Power Apps portal page that is available **anonymously**, anyone can view the dashboard. To secure such a web page, read [web page access control in Power Apps portal](https://docs.microsoft.com/powerapps/maker/portals/configure/webpage-access-control).
 - **Embed for your organization**:
     - Shows the list of workspaces shared with logged in user.
