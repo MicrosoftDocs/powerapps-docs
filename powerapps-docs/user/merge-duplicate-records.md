@@ -60,7 +60,7 @@ Common Data Service includes duplicate detection rules for accounts and contacts
 > 
 >   Duplicates aren't detected when you merge records, save an activity as completed, or change the status of a record, such as activating or reactivating a record.
 
-> [!INFORMATION]
+> [!IMPORTANT]
 >  Some fields may not show in the merge record dialog
 > 
 > - If a field or control matches any of the following conditions, it will not show up in merge dialog:  
