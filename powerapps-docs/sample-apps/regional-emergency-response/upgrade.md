@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/29/2020
+ms.date: 05/06/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
