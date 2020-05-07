@@ -5,7 +5,7 @@ author: pankajarora-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/20/2020
+ms.date: 04/28/2020
 ms.author: pankar
 ms.reviewer: tapanm
 searchScope:
@@ -15,7 +15,7 @@ searchScope:
 # Use the Hospital Emergency Response mobile app
 
 Hospital staff are challenged to meet an increase in number of
-patients while managing supply chain during emergency. By using the Hospital Emergency Response mobile app, frontline workers can quickly view and add data for ventilators, staffing, pending discharges,and COVID-19 related patients.
+patients while managing supply chain during emergency. By using the Hospital Emergency Response mobile app, frontline workers can quickly view and add data for ventilators, staffing, pending discharges, and COVID-19 related patients.
 
 ## Prerequisites
 
@@ -25,7 +25,7 @@ device using the device's app store.
 - **Download** the [**Power Apps Mobile**](https://powerapps.microsoft.com/downloads)
     - For **Apple** devices with iOS such as iPhone and iPad, use [**App store**](https://aka.ms/powerappsios)
     - For **Android** devices, use [**Google Play**](https://aka.ms/powerappsandroid)
-- Ensure your organization has deployed and configured the Hospital Emergency Response app as explained in [Deploy and configure the app](deploy-configure.md).
+- Ensure your organization has deployed and configured the Hospital Emergency Response mobile app as explained in [Deploy and configure the app](deploy-configure.md).
 
 After you install the Power Apps Mobile, open the app from your device and
 sign in with your company's Azure Active Directory account. You can view all
@@ -34,7 +34,7 @@ in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and
 
 ## Demo: Use the Hospital Emergency Response mobile app
 
-Watch how to use the Hospital Emergency Response app.
+Watch how to use the Hospital Emergency Response mobile app.
 
 <br/>
 
@@ -42,7 +42,7 @@ Watch how to use the Hospital Emergency Response app.
 
 ## Hospital Emergency Response mobile app
 
-![Hospital Emergency Response app](media/use/app-launcher.png)
+![Hospital Emergency Response mobile app](media/use/app-launcher.png)
 
 The Hospital Emergency Response mobile app has a modular structure with different apps as applicable to your role. Open the Hospital Emergency Response mobile app from the Power Apps Mobile, select your **Hospital system**, **Region, Facility**, and select **Next** to get started.
 
@@ -54,19 +54,19 @@ its components for the *first time*, you will be asked for your consent to allow
 
 ![Hospital Emergency Response mobile app components](media/use/app-components.png)
 
-The Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more components in the **Hospital Emergency Response app**.
+The Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more components in the **Hospital Emergency Response mobile app**.
 
 - **Bed capacity**
-    <br> Collect bed information such as licensed beds, ICU beds other bed capacity data.
+    <br> Collect bed information such as licensed beds, ICU beds, pediatric ICU/Acute Care beds, and other bed capacity data.
 
 - **COVID-19 stats**
     <br> Collect status on how many patients are under investigation for COVID-19 and how many tested positive.
 
 - **Equipment**
-    <br> Track equipment information such as ventilators, NIPPV and PAPR.
+    <br> Track equipment information such as ventilators, NIPPV, and PAPR.
 
 - **Staff**
-    <br> Collect number of patients and RN status information such as partners, assigned, requested and unassigned.
+    <br> Collect number of patients and RN status information such as partners, assigned, requested, and unassigned.
 
 - **Supplies**
     <br> Track key supplies to track, manage, and forecast inventory more
@@ -85,24 +85,26 @@ The Hospital Emergency Response sample solution app consists of multiple apps fo
 
 ![Bed capacity](media/use/bed-capacity.png)
 
-Submit bed related information such as licensed beds, ICU (AIIR/non-AIIR) beds, Acute Care (AIIR/non-AIIR) beds and whether the selected facility is staffed to full license bed capacity.
+Submit bed-related information such as licensed beds, ICU (AIIR/non-AIIR) beds, Acute Care (AIIR/non-AIIR) beds and whether the selected facility is staffed to full license bed capacity.
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
-After you submit the data, you have the option to go back to the **Bed capacity** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+After you submit the data, select **Home** to go back to **Hospital Emergency Response app**.
 
 ### Fields and description
 
 | **Option name**                                               | **Description**                                                                       |
 |---------------------------------------------------------------|---------------------------------------------------------------------------------------|
 | How many licensed beds are currently in use in this facility? | Number of licensed beds currently in use at this facility.                            |
-| Number of ICU Beds (AIIR Room) currently in use               | Number of ICU Beds (AIIR Room) currently in use.                                      |
-| Number of ICU Beds (non-AIIR Room) currently in use           | Number of ICU Beds (non-AIIR Room) currently in use.                                  |
-| Number of Acute Care Beds (AIIR Room) currently in use        | Number of Acute Care Beds (AIIR Room) currently in use.                               |
-| Number of Acute Care Beds (non-AIIR Room) currently in use    | Number of Acute Care Beds (non-AIIR Room) currently in use.                           |
-| Is your facility staffed to its full license bed capacity?    | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume |
-| Are you able to surge beyond your licensed beds?              | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
-| Number of surge beds currently in use                         | Number of surge beds currently in use.                                                |
+| # of ICU Beds (AIIR Room) in use               | Number of ICU Beds in Airborne Infection Isolation Room (AIIR Room) currently in use.                                      |
+| # of ICU Beds (non-AIIR Room) in use           | Number of ICU Beds (non-AIIR Room) currently in use.                                  |
+| # of Acute Care Beds (AIIR Room) in use        | Number of Acute Care Beds (AIIR Room) currently in use.                               |
+| # of Acute Care Beds (non-AIIR Room) in use    | Number of Acute Care Beds (non-AIIR Room) currently in use.                           |
+| Is facility staffed to its full licensed bed capacity?    | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume |
+| Are you able to surge beyond licensed beds?              | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
+| # of surge beds currently in use                         | Number of surge beds currently in use.                                                |
+| # of Pediatric ICU Beds (AIIR and non-AIIR) currently in use | Number of Pediatric ICU Beds (AIIR and non-AIIR) currently in use at this facility. |
+| # of Pediatric Acute Care Beds (AIIR and non-AIIR) currently in use | Number of Pediatric Acute Care Beds (AIIR and non-AIIR) currently in use at this facility. |  
 
 ## COVID-19 stats
 
@@ -129,7 +131,7 @@ After you submit the data, you have the option to go back to the **COVID-19 stat
 
 ![Equipment](media/use/equipment.png)
 
-Submit location specific equipment details using the **Equipment** app. You can update the number of in-use equipment such as ventilators, NIPPV and PAPR.
+Submit location-specific equipment details using the **Equipment** app. You can update the amount of in-use equipment such as ventilators, NIPPV, and PAPR.
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
@@ -142,9 +144,9 @@ After you submit the data, you have the option to go back to the **Equipment** a
 | Location        | The name and type of the room, ward, or any other specialty location within the selected facility.  |
 | Ventilators            | Number of ventilators in use.                                                            |
 | NIPPV        | Number of Noninvasive Positive-Pressure Ventilators in use.                                                         |
-| PAPR belts        | Number of Powered Air-Purifying Respirator belts in use.                                                         |
-| PAPR chargers        | Number of Powered Air-Purifying Respirator chargers in use.                                                         |
-| PAPR hoods        | Number of Powered Air-Purifying Respirator hoods in use.                                                         |
+| PAPR hoods        | Number of Powered Air-Purifying Respirator (PAPR) hoods in use.                                                         |
+| PAPR belts        | Number of PAPR belts in use.                                                         |
+| PAPR chargers        | Number of PAPR chargers in use.                                                         |
 
 ## Staff
 
@@ -168,18 +170,18 @@ After you submit the data, you have the option to go back to the **Staff** app t
 | Location                      | The name and type of the room, ward, or any other specialty location within the selected facility. |
 | Number of patients            | Current total number of patients at the selected location.                                        |
 | **Registered nurses on duty** |                                                                                                   |
-| *Partners*                    | Number of Registered Nurse partners present at the selected location.                             |
-| *Requested*                   | Number of Registered Nurses requested for the selected location.                                  |
-| *Assigned*                    | Number of Registered Nurses assigned to the selected location.                                    |
-| *Unassigned*                  | Number of Registered Nurses not assigned to any task at the selected location.                    |
+| *Partners* <br> RN partners/extenders support RNs & patients                   | Number of Registered Nurse partners present at the selected location.                             |
+| *Requested* <br> # of RNs requested                  | Number of Registered Nurses requested for the selected location.                                  |
+| *Assigned* <br> # of RNs with an assignment                   | Number of Registered Nurses assigned to the selected location.                                    |
+| *Unassigned* <br> # of RNs unassigned to any task                  | Number of Registered Nurses not assigned to any task at the selected location.                    |
 | **Facility level tracking** |                                                                                                   |
-| % of essential care personnel currently absent in the this facility                  | Essential care personnel currently absent in percentage format of the total for **entire facility**.                    |
+| % of essential care personnel currently absent in this facility                  | Essential care personnel currently absent in percentage format of the total for **entire facility**.                    |
 
 ## Supplies
 
 ![Supplies](media/use/supplies.png)
 
-View the supplies inventory with the **Supplies** app. You can update the supply
+Collect the supplies inventory with the **Supplies** app. You can update the supply
 component quantities in the entire facility inventory and the daily burn rate
 from this app.
 
@@ -222,16 +224,16 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | How many                 | How many resources needed, in number format.                |
 | Details                  | Describe additional details or comments for the labor pool request.                        |
 
-
-
 ## Discharge planning
 
 ![Discharge](media/use/discharge.png)
 
 Submit discharge information and patient status with total number using
-the **Discharge planning** app. You can update the discharge details for last 24 hours, current discharge barriers, and the break-up for the barriers.
+the **Discharge planning** app. You can update the discharge details for last 24 hours, current discharge barriers, and the break-up for the barriers. 
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
+
+**Barriers to long stay discharge** automatically updates with total number of patients you enter on the form across all barriers.
 
 ### Fields and description
 
@@ -257,7 +259,7 @@ mobile app components.
 You can sign out from the app using the profile icon on the upper-left side of
 the screen.  
 
-![Sign-out](media/use/sign-out.png)
+![Sign out](media/use/sign-out.png)
 
 Select the **End shift** button to end your session and sign out.
 
@@ -267,7 +269,7 @@ device sharing.
 
 ### App feedback
 
-You can share your feedback with the **App feedback** option from any Emergency Response mobile app component. To share your feedback, select your profile from top-left and then select the **Submit feedback** button:
+You can share your feedback with the **App feedback** option from any Hospital Emergency Response mobile app component. To share your feedback, select your profile from top-left and then select the **Submit feedback** button:
 
 ![Provide feedback](media/use/give-feedback.png)
 
@@ -284,14 +286,12 @@ Switch facility anytime by selecting the facility name on the top-right side of 
 
 [!include[cc-lang](includes/cc-lang.md)]
 
-You can view the Emergency Response mobile app in one of the supported languages on your mobile device by setting the default language of your mobile device (Apple or Android) to a supported language. See the help documentation for your respective mobile device on how to change the default language for your device.
+You can view the Hospital Emergency Response mobile app in one of the supported languages on your mobile device by setting the default language of your mobile device (Apple or Android) to a supported language. See the help documentation for your respective mobile device on how to change the default language for your device.
 
-If you are using the mobile apps on a browser on your computer, select the default language of your browser to a supported language for the Emergency Response app. More information: [Use Microsoft Edge in another language](https://support.microsoft.com/help/4532129).
+If you're using the mobile apps on a browser on your computer, select the default language of your browser to a supported language for the Hospital Emergency Response mobile app. For more information, go to [Use Microsoft Edge in another language](https://support.microsoft.com/help/4532129).
 
 ## Issues and feedback
 
-- To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
+- To report an issue with the Hospital Emergency Response mobile app, visit <https://aka.ms/emergency-response-issues>.
 
-- For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
-
-
+- For feedback about the Hospital Emergency Response mobile app, visit <https://aka.ms/emergency-response-feedback>.

@@ -1,20 +1,20 @@
 ---
-title: Administer the Regional Emergency Response portal | Microsoft Docs
+title: Administer the Regional Government Emergency Response and Monitoring portal | Microsoft Docs
 description: Learn how to configure the Regional Hospital Emergency Response portal.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/22/2020
+ms.date: 05/06/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 searchScope:
   - PowerApps
 ---
-# Administer the Regional Emergency Response portal
+# Administer the Regional Government Emergency Response and Monitoring portal
 
-Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Emergency Response
+Hospital staff are challenged to meet an increase in number of patients while managing supply chain during emergency. By using the Regional Government Emergency Response and Monitoring
 portal, administrators can quickly view and update data related to **Users**, **Systems**, **Regions**, and **Facilities**. Stakeholders can view the published insights through dashboards for current status of the health care system and take actions.
 
 ## Portal at a glance
@@ -24,7 +24,7 @@ access, submit, or update as the administrator of the portal.
 
 ![Portal at glance](media/portal-at-glance.png)
 
-You can use latest mobile devices and web browsers when using Regional Emergency Response portal except Apple iPad.
+You can use latest mobile devices and web browsers when using Regional Government Emergency Response and Monitoring portal except Apple iPad.
 
 [!include[cc-getting-started](includes/cc-getting-started.md)]
 
@@ -43,18 +43,77 @@ You can view all administrative options available to you after selecting **Admin
 
 | **Option name** | **Description**                                                                                               |
 |-----------------|---------------------------------------------------------------------------------------------------------------|
-| [Add Users](#add-users)       | Create, edit, or deactivate portal users.                                                         |
-| [Add System](#add-system)      | Create, edit, or delete systems. |
-| [Add Region](#add-region-1)      | Create or delete regions.                              |
-| [Add Facility](#add-facility)    | Create, edit, or delete facilities.                        |
+| [User Requests](#user-requests) | View, approve or decline portal user requests.
+| [Users](#users)       | Create, edit, or deactivate portal users.                                                         |
+| [Systems](#systems)      | Create, edit, or delete systems. |
+| [Regions](#regions)      | Create or delete regions.                              |
+| [Facilities](#facilities)    | Create, edit, or delete facilities.                        |
 
-### Add Users
+### User Requests
 
-Go to **Add Users** to create new users that can administer the portal, view the dashboards, or use the portal as the healthcare worker:
+You can view, approve and decline portal user requests using the **User Requests** administrative task option.
 
-![Add users](media/portal-admin-add-user.png)
+When you select **User Requests**, you can see all existing portal user requests submitted pending review:
 
-You can also [view user details](#view-user-details), [change user role](#change-role-for-a-user) and [deactivate user](#deactivate-a-user) from **Add Users**.
+![View portal user requests](media/view-portal-user-requests.png)
+
+You can choose to change the view and see approved or declined requests:
+
+![Change portal user request view](media/portal-user-requests-views.png)
+
+#### Process pending requests
+
+To process pending portal user requests, select **View details** for a pending request from the **Pending Portal User Requests** view:
+
+![View request details](media/portal-user-requests-view-details.png)
+
+From the details view, you can check user contact information, roles and you can approve or decline the request. The roles selected on the form are the requested roles. You can add or remove roles using the checkbox before you approve or decline the request:
+
+![Approve or decline user request](media/approve-reject-user-request.png)
+
+For more information about the roles, go to [User Roles](#user-roles).
+
+Select **Approve Access Request** to approve or **Decline Access Request** to decline the request.
+
+When you decline a request, you must provide a reason:
+
+![Decline reason](media/decline-request-reason.png)
+
+#### Request approval or decline emails
+
+Depending on whether you approve a user request, or decline, the requestor receives an email with request process result. For approved requests, the email includes an invitation code that can be redeemed by the user when signing in for the first time. For declined requests the email includes decline reason entered while declining the request.
+
+### Review approved requests
+
+To view approved portal user requests, select **View details** for an approved request from the **Approved Portal User Requests** view:
+
+![View approved request](media/portal-user-requests-view-approved-details.png)
+
+Select **Decline Access Request** to decline an existing approved request:
+
+![Decline approved request](media/decline-approved-request.png)
+
+### Review declined requests
+
+To view approved portal user requests, select **View details** for an approved request from the **Approved Portal User Requests** view:
+
+![View approved request](media/portal-user-requests-view-declined-details.png)
+
+You can also view the mandatory **Declined Reason** for each request as the comment provided when the request was declined earlier.
+
+Select **Approve Access Request** to approve an existing declined request:
+
+![Approve declined request](media/approve-declined-request.png)
+
+### Users
+
+Go to **Users** to create new users that can administer the portal, view the dashboards, or use the portal as the healthcare worker:
+
+![Users](media/portal-admin-add-user.png)
+
+There are two views available, **All Active Users** and **My Active Users**. The **All Active Users** view shows all active users for the selected parent organization. The **My Active Users** view shows all active users for the selected parent organization that are created or approved by the currently logged in Parent Organization Administrator.
+
+You can also [view user details](#view-user-details), [change user role](#change-role-for-a-user) and [deactivate user](#deactivate-a-user) from **Users**.
 
 #### Search user details
 
@@ -82,11 +141,13 @@ To search for **Mobile Phone**, you can use similar text with wildcard replacing
 
 #### Create User
 
-To create users, select **Create User** button when in **Add Users** form. And then, enter the new user details in the form:
+To create users, select **Create User** button when in **Users** form. And then, enter the new user details in the form:
 
 ![Create user](media/portal-admin-create-user.png)
 
 Enter **First Name**, **Last Name**, **Email**, and **Mobile Phone** and then select a role for the user.
+
+##### User roles
 
 The role of the user defines components that show up on the portal:
 
@@ -165,13 +226,13 @@ Select **Deactivate** from the user drop-down to deactivate a user account:
 
 ![View user options](media/portal-user-view-user-options.png)
 
-Deactivated user is no longer shown in the list of users on **Add Users** page.
+Deactivated user is no longer shown in the list of users on **Users** view.
 
-### Add System
+### Systems
 
-You can add, update, or delete a **System** using the **Add System** form. When you select **Add System**, you can see all existing **Hospital Systems**:
+You can add, update, or delete a **System** using the **System** form. When you select **System**, you can see all existing **Hospital Systems**:
 
-![Add system](media/portal-add-system.png)
+![Systems](media/portal-add-system.png)
 
 #### Search existing systems
 
@@ -215,7 +276,7 @@ Select **Delete** to delete a system record. You're prompted confirming deletion
 
 ![Delete confirm](media/portal-delete-system-confirm.png)
 
-### Add Region
+### Regions
 
 You can add or delete a **Region** using the **Add Region** form. When you select **Add Region**, you can see all existing **Hospital Systems**:
 
@@ -241,9 +302,9 @@ You're prompted confirming deletion before the region gets deleted:
 
 ![Delete region confirm](media/portal-admin-delete-region-confirm.png)
 
-### Add Facility
+### Facilities
 
-You can add or delete a **Facility** using the **Add Facility** form. When you select **Add Facility**, you can see all existing **Facilities** with region,
+You can add or delete a **Facility** using the **Facilities** form. When you select **Facilities**, you can see all existing **Facilities** with region,
 county, and other details:
 
 ![Delete confirm](media/portal-admin-add-facility.png)
@@ -276,6 +337,7 @@ To create a facility, select the **Create** button:
 | Acute Care Beds (non-AIIR Room) Total Capacity | Total Acute Care beds (non-AIIR) capacity, in number format.                                                                                                                                               |
 | Total Mortuary Capacity | Total mortuary capacity for the facility. **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form.
 | Facility Address                               | Street, City, County, State, and Zip code for the facility location.                                                                                                                                        |
+
 ##### Supplies list for a facility
 
 When you select **Supplies List**, you can select individual supply and **Save** the list to associate the available supplies for the facility:
@@ -320,6 +382,8 @@ Dashboards are available for the following insights:
 - [Equipment details](#equipment-details)
 
 - [Supplies details](#equipment-details)
+
+- [Data health scorecard](#data-health-scorecard)
 
 #### Working with reports in Power BI
 
@@ -420,10 +484,22 @@ When you hover over map area and point to a county, you can see the county-relat
 
 Similarly, you can hover over the timeline chart to view date-specific numbers in tooltip as you move across dates.
 
+### Data health scorecard
+
+View data hygiene for a selected facility using the **Data health scorecard** dashboard. Select a facility from the list of available facilities and then select **Click here to continue** to view the dashboard:
+
+![Select a facility](media/dashboard-data-health-facility-select.png)
+
+The dashboard shows data update ranking, data update in percentage and daily status across all components. A date-wise chart shows data completion of the selected facility in comparison to the average of all facilities for a given data set. The facility-wise data completeness information is also available in tabular format with listing all facilities for last one week:
+
+![Data health scorecard](media/data-health-scorecard-dashboard.png)
+
 ## General portal options
 
 [!include[cc-general-options](includes/cc-general-options.md)]
 
-## Report issues
+## Issues and feedback
 
-To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.

@@ -38,7 +38,7 @@ Common Data Service includes duplicate detection rules for accounts and contacts
 > [!NOTE]
 >  If available on your system, you may also be able to check for duplicates of other record types, in addition to contacts and accounts. Check with your system administrator. [Find your administrator or support person](find-admin.md)  
   
-## Merge duplicate records  
+### How to merge duplicate records  
   
 1. Select the duplicate records, and then select **Merge**.  
   
@@ -51,11 +51,22 @@ Common Data Service includes duplicate detection rules for accounts and contacts
    > [!div class="mx-imgBorder"] 
    > ![Dialog box for merging records](media/merge-records-dialog.png "Dialog box for merging records")  
   
-> [!NOTE]
->  There are a few situations when duplicates may be found:  
-> 
-> - When a record is created or updated.  
->   - When  you're using Dynamics 365 for Outlook and you go from offline to online.  
->   - When you import data using the Import Data wizard.  
-> 
->   Duplicates aren't detected when you merge records, save an activity as completed, or change the status of a record, such as activating or reactivating a record.  
+
+There are a few situations when duplicates may be found:  
+
+- When a record is created or updated.  
+- When  you're using Dynamics 365 for Outlook and you go from offline to online.  
+- When you import data using the Import Data wizard.  
+- Duplicates aren't detected when you merge records, save an activity as completed, or change the status of a record, such as activating or reactivating a record.
+
+> [!IMPORTANT]
+>  If a field or control matches any of the following conditions, it will not show up in the merge dialog:  
+>   - The containing section is invisible in form descriptor or form XML regardless whether the section shows up in runtime. It is possible to show it using the client API.
+>   - The control does not have a class property.
+>   - The attribute's metadata `ValidForUpdate` is False.
+>   - The control is **Quick Form Collection Control** or **Reference Panel Quick Form Collection Control**.
+>   - The attribute's metadata `ValidForUpdate` is False. 
+>   - The attribute is `Picklist` or `MultiSelectPickList` and it has either a parent picklist or child picklist attribute.
+>   - The attribute is ` parentaccountid` on the Account entity; this is a system setting and cannot be changed. 
+>   - The attribute is ` parentcustomerid` on the  Contact Entity; this is a system setting and cannot be changed
+

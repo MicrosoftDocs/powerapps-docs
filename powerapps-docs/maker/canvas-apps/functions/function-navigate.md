@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/16/2019
+ms.date: 05/07/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -22,7 +22,7 @@ Changes which screen is displayed.
 
 Most apps contain multiple screens.  Use the **Back** and **Navigate** function to change which screen is displayed. For example, set the **[OnSelect](../controls/properties-core.md)** property of a button to a formula that includes a **Navigate** function if you want to show a different screen when a user selects that button. In that formula, you can specify a visual transition, such as **Fade**, to control how one screen changes to another.  
 
-**Back** and **Navigate** change only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on other screens. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and ascertain how it affects what happens in the new screen. The user can then navigate back to the original screen and confirm that the slider has retained its value.
+**Back** and **Navigate** change only which screen is displayed. Screens that aren't currently displayed continue to operate behind the scenes. You can build formulas that refer to properties of controls on other screens. For example, a user can change the value of a slider on one screen, navigate to a different screen that uses that value in a formula, and determine how it affects what happens in the new screen. The user can then navigate back to the original screen and confirm that the slider has kept its value.
 
 [Context variables](../working-with-variables.md#use-a-context-variable) are also preserved when a user navigates between screens. You can use **Navigate** to set one or more context variables for the screen that the formula will display, which is the only way to set a context variable from outside the screen. You can use this approach to pass parameters to a screen. If you've used another programming tool, this approach is similar to passing parameters to procedures.
 
@@ -43,11 +43,13 @@ In the first argument, specify the name of the screen to display.
 | **ScreenTransition.UnCover** | The current screen slides out of view, moving right to left, to uncover the new screen. | ![screen transition uncover animation](media/function-navigate/uncover.gif) |
 | **ScreenTransition.UnCoverRight** | The current screen slides out of view, moving left to right, to uncover the new screen. | ![screen transition uncover right animation](media/function-navigate/uncoverright.gif) |
 
-You can use **Navigate** to create or update context variables of the new screen. As an optional third argument, pass a [record](../working-with-tables.md#records) that contains the context-variable name as a [column](../working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
+You can use **Navigate** to create or update [context variables](../working-with-variables.md#use-a-context-variable) of the new screen. As an optional third argument, pass a [record](../working-with-tables.md#records) that contains the context-variable name as a [column](../working-with-tables.md#columns) name and the new value for the context variable.  This record is the same as the record that you use with the **[UpdateContext](function-updatecontext.md)** function.
 
 Set the **[OnHidden](../controls/control-screen.md)** property of the old screen, the **[OnVisible](../controls/control-screen.md)** property of the new screen, or both to make additional changes during the transition. The **App.ActiveScreen** property will be updated to reflect the change.
 
 **Navigate** normally returns **true** but will return **false** if an error is encountered.
+
+Context variables for navigation are explained in the article [navigate between screens](../add-screen-context-variables.md#add-navigation).
 
 ## Back
 
@@ -63,13 +65,13 @@ When the **Back** function runs, the inverse transition is used by default. For 
 
 **Back**( [ *Transition* ] )
 
-* *Transition* - Optional. The visual transition to use between the current screen and the previous screen. Refer to the list of valid values for this argument earlier in this topic. By default, the transition through which a screen returns is the inverse of the transition through which it appeared.
+* *Transition* - Optional. The visual transition to use between the current screen and the previous screen. Refer to the list of valid values for this argument earlier in this article. By default, the transition through which a screen returns is the inverse of the transition through which it appeared.
 
 **Navigate**( *Screen* [, *Transition* [, *UpdateContextRecord* ] ] )
 
 * *Screen* - Required. The screen to display.
-* *Transition* - Optional.  The visual transition to use between the current screen and the next screen. See the list of valid values for this argument earlier in this topic. The default value is **None**.
-* *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the context variables of the new screen as if passed to the **[UpdateContext](function-updatecontext.md)** function.
+* *Transition* - Optional.  The visual transition to use between the current screen and the next screen. See the list of valid values for this argument earlier in this article. The default value is **None**.
+* *UpdateContextRecord* - Optional.  A record that contains the name of at least one column and a value for each column. This record updates the [context variables](../working-with-variables.md#use-a-context-variable) of the new screen as if passed to the **[UpdateContext](function-updatecontext.md)** function.
 
 ## Examples
 
@@ -115,3 +117,7 @@ When the **Back** function runs, the inverse transition is used by default. For 
 1. Select the button on each screen repeatedly to bounce back and forth.
 
 [Another example](../add-screen-context-variables.md)
+
+### See also
+
+[Using context variables](../working-with-variables.md#use-a-context-variable)
