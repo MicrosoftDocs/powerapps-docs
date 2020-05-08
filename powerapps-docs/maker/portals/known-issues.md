@@ -16,7 +16,7 @@ ms.reviewer:
 
 ## General issues
 
-- Rich-text for notes in timeline isn't supported by Power Apps portals. Ensure you [disable rich-text editor for notes in timeline](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) when using on portals.
+- Rich-text for notes in timeline isn't supported by Power Apps portals. Ensure you [disable rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) when using on portals.
 
 - Due to ongoing compatibility issues between the updated Yahoo YDN OAuth provider endpoint and Power Apps portals, users are temporarily unable to authenticate with [Yahoo identity provider](./configure/configure-oauth2-settings.md#yahoo-ydn-app-settings).
 
