@@ -54,29 +54,32 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 You can modify the component with a number of properties.
 
+
+<!-- please check the following link. It doesn't work on the review page. -->
+
+
 > [!NOTE]
 > Your 3D content must be in the .glb file format. You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
-
-
 
 
 ### Properties
 
 The following properties are on the component's **Measure in MR** pane on the **Properties** and **Advanced** tabs.
 
-![](./media/augmented-measure/augmented-measure-properties.png)
+> [!div class="mx-imgBorder"]
+> ![The Measure in MR pane](./media/augmented-measure/augmented-measure-properties.png "The Measure in MR pane")
 
 Note that some properties are only available under **More options** in the **Advanced** tab on the **Measure in MR** pane.
 
 Property | Description | Type | Location
 - | - | - | -
-Text | Label for the button | String | Properties (also in **Advanced**)
-Display type | Whether the button shows just an icon, text, or both | Drop-down selection | Properties (also in **Advanced**)
+Text | Label for the button | String | **Properties** (also in **Advanced**)
+Display type | Whether the button shows just an icon, text, or both | Drop-down selection | **Properties** (also in **Advanced**)
 Unit of measurement | What unit the measurements should be shown and returned in | Drop-down selection | **Properties** (also in **Advanced**)
 Measurement type | What type of measurement the user can make, whether point-to-point distance, a complete area, or a three-dimensional volume (area plus height or depth). | Drop-down selection | **Properties** (also in **Advanced**)
-Measurements | Table containing the measured segments, comprised of: <ul><li>Length - Number representing the length of the segment</li><li>Unit - String describing the unit of this measurement</li></ul> | String | Not applicable (output property only)
-MeasurementsDetailed | Table describing the measured volumes and areas, comprised of:<ul><li>Units - String describing the base unit of this measurement</li><li>Height - Number representing the height of the captured volume, or 0 if no a completed volume or 2D area</li><li>PathLength - Number representing the total length of the path</li><li>Segments - Table describing all segments in the given measurement object with the following properties:<ul><li>Distance - Number representing the total distance of a given segment in the given units of measure (for example, .52).</li><li>Direction - Vector describing the direction of the segment, normalized</li><li>X - Number specifying the X direction of the segment in world space (for example, 0.5)</li><li>Y - Number specifying the Y direction of the measurement in world space (typically 0)</li><li>Z - Number specifying the Z direction of the measurement in world space (for example, 0.5)</li></ul></li></li> | | Not applicable (output property only)
-Photos | The photos captured during the mixed reality session. | | Not applicable (output property only)
+Measurements | Table containing the measured segments, composed of: <ul><li>Length - Number representing the length of the segment</li><li>Unit - String describing the unit of this measurement</li></ul> | String | Not applicable (output property only)
+MeasurementsDetailed | Table describing the measured volumes and areas, composed of:<ul><li>Units - String describing the base unit of this measurement</li><li>Height - Number representing the height of the captured volume, or 0 if not a completed volume or 2D area</li><li>PathLength - Number representing the total length of the path</li><li>Segments - Table describing all segments in the given measurement object with the following properties:<ul><li>Distance - Number representing the total distance of a given segment in the given units of measure (for example, .52)</li><li>Direction - Vector describing the direction of the segment, normalized</li><li>X - Number specifying the X direction of the segment in world space (for example, 0.5)</li><li>Y - Number specifying the Y direction of the measurement in world space (typically 0)</li><li>Z - Number specifying the Z direction of the measurement in world space (for example, 0.5)</li></ul></li></li> | | Not applicable (output property only)
+Photos | The photos captured during the mixed reality session | | Not applicable (output property only)
 
 ### Additional properties
 
@@ -100,11 +103,11 @@ Photos | The photos captured during the mixed reality session. | | Not applicabl
 
 **[Font](./controls/properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontStyle](./controls/properties-text.md)** - The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**
+**[FontStyle](./controls/properties-text.md)** – The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.
 
 **[FontSize](./controls/properties-text.md)** – The font size of the text that appears on a control.
 
-**[FontWeight](./controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
+**[FontWeight](./controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**
 
 **[Height](./controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
 
@@ -130,7 +133,7 @@ Photos | The photos captured during the mixed reality session. | | Not applicabl
 
 **[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
 
-**[TextAlignment](./controls/properties-text.md)** - The alignment of the text: **Center**, **Left**, **Right**, or Justify
+**[TextAlignment](./controls/properties-text.md)** – The alignment of the text: **Center**, **Left**, **Right**, or **Justify**
 
 **[Tooltip](./controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
