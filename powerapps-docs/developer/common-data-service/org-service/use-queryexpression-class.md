@@ -2,7 +2,7 @@
 title: "Use the QueryExpression class (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Use the QueryExpression class to build complex queries for use with the IOrganizationService.QueryBase) method or the RetrieveMultipleRequest message" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/17/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -20,18 +20,6 @@ search.app:
 In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to build complex queries for use with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple*> method or the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> message. You can set query parameters to the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> by using the <xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>, <xref:Microsoft.Xrm.Sdk.Query.ColumnSet>, and <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> classes.  
   
  The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class lets you create complex queries. The <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> class is designed to be a simple way to search for entities where attributes match specified values.  
-  
- The following table lists the properties that you set to create a query expression.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|<xref:Microsoft.Xrm.Sdk.Query.QueryExpression.EntityName>|Specifies which type of entity will be retrieved. A query expression can only retrieve a collection of one entity type.|  
-|<xref:Microsoft.Xrm.Sdk.Query.QueryExpression.ColumnSet>|Specifies the set of attributes (columns) to retrieve.|  
-|<xref:Microsoft.Xrm.Sdk.Query.QueryExpression.Criteria>|Specifies complex conditional and logical filter expressions that filter the results of the query.|  
-|<xref:Microsoft.Xrm.Sdk.Query.QueryExpression.Distinct>|Specifies whether the results of the query contain duplicate records.|  
-|<xref:Microsoft.Xrm.Sdk.Query.QueryExpression.LinkEntities>|Specifies the links between multiple entity types.|  
-|<xref:Microsoft.Xrm.Sdk.Query.QueryExpression.Orders>|Specifies the order in which the records are returned from the query.|  
-|<xref:Microsoft.Xrm.Sdk.Query.QueryExpression.PageInfo>|Specifies the number of pages and the number of records per page returned from the query.|  
   
 <a name="record_count"></a>   
 ## Record count  
@@ -63,7 +51,25 @@ foreach (var a in result1.Entities)
 }  
 Console.WriteLine("---------------------------------------");  
 ```  
-  
+## Use SQL hints in a query
+
+The <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class contains a property named <xref:Microsoft.Xrm.Sdk.Query.QueryExpression.QueryHints>. By setting this property to one of the supported string values shown below, you can provide a hint for generated SQL text which affects the query's execution.
+
+|QueryHint value | SQL Query Option and Hint |
+|---------|---------|
+|OptimizeForUnknown | Optimize For Unknown|
+|ForceOrder | Force Order |
+|Recompile | Recompile |
+|DisableRowGoal | use hint(‘Disable_Optimizer_RowGoal’) |
+|EnableOptimizerHotfixes | use hint('ENABLE_QUERY_OPTIMIZER_HOTFIXES') |
+|LoopJoin | Loop Join |
+|MergeJoin | Merge Join |
+|HashJoin | Hash Join |
+|NO_PERFORMANCE_SPOOL | NO_PERFORMANCE_SPOOL |
+|MaxRecursion | MAXRECURSION number |
+
+More information: [Hints (Transact-SQL) - Query](https://docs.microsoft.com/sql/t-sql/queries/hints-transact-sql-query)
+
 ### See also  
  [Building Queries with QueryExpression](build-queries-with-queryexpression.md)   
  [Use the ColumnSet Class](use-the-columnset-class.md)   

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/03/2020
+ms.date: 03/31/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -50,29 +50,14 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
     > [!div class="mx-imgBorder"] 
     > ![Create new button](media/newrecord2.png "Create new button")
   
-3. Fill in the appropriate details for new contact and then select **Save and Close**.
-
-    > [!NOTE]
-    > If you have unsaved changes and try to go to another record or form, a **Unsaved changes** dialog box will pop-up. If you select **Save and continue**, it will attempt to save your information and open the page you wanted to go to. If you choose to save and continue and there is an error on a field, the dialog will close and you will remain on the page to fix the error before you can navigate away.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Create new button](media/newrecord3.png "Create new button")
-
- 
- ## Preview: Use the Save or Save & Close option when editing a record 
- 
-Use the **Save** or **Save & Close** button on command bar when you edit an existing record. Before this release, the **Save** option was only available on the bottom right corner.
-
-> [!NOTE]
-> This is an early access feature. You can opt in early to enable this feature in your environment, which will allow you to test these features and then adopt them across your environments. 
-> For information on how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
-
-
-1. From the left navigation pane, select the record type that you want to edit. For example, select **Accounts**.
-2. Open the account record that you want to edit and make your changes to the record.
 3. To save your changes, on the command bar, select **Save** or **Save & Close**. The **Save** option is still available on the bottom right corner.
 
     > [!div class="mx-imgBorder"] 
     > ![Save option on a record](media/saveoptionalwaysvisible.png "Save option on a record")
+
+   > [!NOTE]
+   > If you have unsaved changes and try to go to another record or form, a **Unsaved changes** dialog box will pop-up. If you select **Save and continue**, it will attempt to save your information and open the page you wanted to go to. If you choose to save and continue and there is an error on a field, the dialog will close and you will remain on the page to fix the error before you can navigate away.
+
+ 
 
 

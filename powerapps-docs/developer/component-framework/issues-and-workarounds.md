@@ -80,8 +80,40 @@ Error  **Import Solution Failed: Web resource content size is too big**.
 
 **Workaround**
 
-- When you're creating the `bundle.js` file from the CLI tooling, it bundles lot of components that makes the file large. Remove some of the components that are not necessary.
-- Build the component in `production` mode by modifying the `node_modules/pcf-scripts/webpackconfig.js` file.
+- Build  the `.pcfproj` as release configuration which sets the webpack to production mode using the command 
+  ```CLI
+  msbuild /property:configuration=Release
+  ```
+- Run the msbuild command with an additional property as shown below: 
+  ```CLI
+  msbuild /p:PcfBuildMode=production
+  ```
+- Edit the `.pcfproj` to always build the webpack in production mode by setting the property `PcfBuildMode` to production:
+  ```XML
+  <PropertyGroup>
+    <Name>TS_ReactStandardControl</Name>
+    <ProjectGuid>0df84c56-2f55-4a80-ac9f-85b7a14bf378</ProjectGuid>
+    <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
+    <PcfBuildMode>production</PcfBuildMode>
+  </PropertyGroup>
+  ```
+
+## When running Power Apps checker with the solution built using CLI tooling in default configuration
+
+**Error: Do not use the eval function or its functional equivalents**
+This warning is by design since the default `msbuild` configuration is `Configuration=Debug`. This in turn instructs webpack (used to bundle the code component) to package in development mode, which emits `eval()`. 
+
+**Workaround**
+
+Re build the solution file using  the following either of the commands and reimport the solution into Common Data Service.
+
+```CLI
+msbuild/property:configuration:Release
+```
+
+```CLI
+npm run build -- --buildMode production
+```
 
 ## Power Apps component framework Datasets getValue by property alias doesn't work
 

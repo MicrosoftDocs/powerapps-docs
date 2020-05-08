@@ -491,8 +491,12 @@
         href: clientapi/reference/formcontext-ui-formselector/getId.md
       - name: getLabel
         href: clientapi/reference/formcontext-ui-formselector/getLabel.md
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-formselector/getVisible.md
       - name: navigate
         href: clientapi/reference/formcontext-ui-formselector/navigate.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-formselector/setVisible.md
     - name: formContext.ui.navigation
       href: clientapi/reference/formcontext-ui-navigation.md
       items:

@@ -2,7 +2,7 @@
 title: "Specify a model-driven app default view in Power Apps | MicrosoftDocs"
 description: "Learn how to specify a default view"
 ms.custom: ""
-ms.date: 06/12/2018
+ms.date: 03/30/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,9 +27,18 @@ search.app:
 
 <a name="BKMK_SetDefaultView"></a>   
 
-Unless someone has ‘pinned’ a different view in your app as their personal default, they will see the default view that you specify as the app maker. You can set any of the public views as the default view for an entity.  
+Unless someone has 'pinned' a different view in your app as their personal default, they will see the default view that you specify as the app maker. You can set any of the public views as the default view for an entity.  
   
-## Set the default view for an entity  
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
+
+2.  Expand **Data**, select **Entities**, select the entity you want, and then select the **Views** tab.
+
+3.  Select **More commands** ![More Commands button](media/more-commands.gif "More Commands button for Forms") next to the view you want, and then select **Set as default view**. You can also select **Set as default view** on the menu bar.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Set as default](media/set-as-default-menu-maker.png)
+
+## Set the default view for an entity in solution explorer 
   
 1.  Open [solution explorer](advanced-navigation.md#solution-explorer), expand **Entities**, select the entity that you want, and then select **Views**.    
   

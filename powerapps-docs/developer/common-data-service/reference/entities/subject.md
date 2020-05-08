@@ -1,7 +1,7 @@
 ---
 title: "Subject Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Subject entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the Subject entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # Subject Entity Reference
 
@@ -578,6 +579,7 @@ Listed by **SchemaName**.
 - [Subject_SyncErrors](#BKMK_Subject_SyncErrors)
 - [subject_parent_subject](#BKMK_subject_parent_subject)
 - [subject_kb_articles](#BKMK_subject_kb_articles)
+- [msdyn_subject_knowledgearticletemplate_subjectid](#BKMK_msdyn_subject_knowledgearticletemplate_subjectid)
 
 
 ### <a name="BKMK_Subject_AsyncOperations"></a> Subject_AsyncOperations
@@ -683,6 +685,23 @@ Same as kbarticle entity [subject_kb_articles](kbarticle.md#BKMK_subject_kb_arti
 |ReferencedEntityNavigationPropertyName|subject_kb_articles|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 |CascadeConfiguration|Assign: NoCascade<br />Delete: Restrict<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
+
+
+### <a name="BKMK_msdyn_subject_knowledgearticletemplate_subjectid"></a> msdyn_subject_knowledgearticletemplate_subjectid
+
+**Added by**: Knowledge Management Features Solution
+
+Same as msdyn_knowledgearticletemplate entity [msdyn_subject_knowledgearticletemplate_subjectid](msdyn_knowledgearticletemplate.md#BKMK_msdyn_subject_knowledgearticletemplate_subjectid) Many-To-One relationship.
+
+|Property|Value|
+|--------|-----|
+|ReferencingEntity|msdyn_knowledgearticletemplate|
+|ReferencingAttribute|msdyn_subjectid|
+|IsHierarchical|False|
+|IsCustomizable|True|
+|ReferencedEntityNavigationPropertyName|msdyn_subject_knowledgearticletemplate_subjectid|
+|AssociatedMenuConfiguration|Behavior: UseCollectionName<br />Group: Details<br />Label: <br />Order: 10000|
+|CascadeConfiguration|Assign: NoCascade<br />Delete: RemoveLink<br />Merge: NoCascade<br />Reparent: NoCascade<br />Share: NoCascade<br />Unshare: NoCascade|
 
 <a name="manytoone"></a>
 

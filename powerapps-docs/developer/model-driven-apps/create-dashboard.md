@@ -19,8 +19,6 @@ search.app:
 
 # Create a dashboard
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/create-dashboard -->
-
 Organization-owned dashboards can be created by using the Common Data Service or by customizing the entity form in Common Data Service by editing the customizations.xml file.  
   
 > [!NOTE]
@@ -141,7 +139,7 @@ SystemForm dashboard = new SystemForm
 _dashboardId = _serviceProxy.Create(dashboard);
  ``` 
   
- For a complete sample, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a User-Owned Dashboard to Another User](/dynamics365/customer-engagement/developer/customize-dev/sample-assign-user-owned-dashboard-another-user).  <!-- TODO relevant powerapps repo topic must be linked> 
+ For a complete sample, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a User-Owned Dashboard to Another User](/dynamics365/customer-engagement/developer/customize-dev/sample-assign-user-owned-dashboard-another-user).  
   
 <a name="UsingFormCustomization"></a>   
 ## Create an organization-owned dashboard by customizing the entity form  
@@ -206,8 +204,8 @@ _dashboardId = _serviceProxy.Create(dashboard);
   
 ### See also  
  [Dashboards](analyze-data-with-dashboards.md)   
- [Using FormXML for Dashboards](understand-dashboards-dashboard-components-formxml.md)   
- [Actions on Dashboards](actions-dashboards.md)   
+ [Using FormXML for dashboards](understand-dashboards-dashboard-components-formxml.md)   
+ [Actions on dashboards](actions-dashboards.md)   
  [Sample dashboards](sample-dashboards.md)   
- [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard)   <!-- TODO relevant powerapps repo topic must be linked-->
- [Customize Entity Forms](customize-entity-forms.md)
+ [Sample: Create, Retrieve, Update and Delete (CRUD) a dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard)   <!-- TODO relevant powerapps repo topic must be linked-->
+ [Customize entity forms](customize-entity-forms.md)
