@@ -24,7 +24,9 @@ search.app:
 ---
 # Create or edit model-driven app Power BI embedded page
 
-This topic will outline the setup of a system dashboard referencing a Power BI report or dashboard.  A new option has been added to the solution New > Dashboard menu called **Power BI embedded (preview)**
+This topic will outline the setup of a system dashboard referencing a Power BI report or dashboard.  A new option has been added to the solution New > Dashboard menu called **Power BI embedded (preview)**.
+
+To learn more about Power BI reports and dashboards, open <a href="https://docs.microsoft.com/power-bi/create-reports/">Create Power BI Reports</a>. 
 
 > [!IMPORTANT]
 > This feature is a preview so will evolve.
@@ -54,9 +56,26 @@ This examples sets up a Power BI embedded page for a single environment with one
 
 1. Click Create to save and publish the system dashboard
 
-## Create Power BI embedded page with Environment Variables
+<!-- Reference this section for "Use environment variable" Learn more link -->
+## Create Power BI embedded page with an Environment Variable
 
-1. TODO
+When a solution with a Power BI embedded component will be moved to other environments turning on "Use environment variable" allows configuring the dashboard.  Each environment can specify the workspace and either dashboard or report to reference.  This allows configuration without unmanaged customizations.
+
+1. Create or edit an existing Power BI embedded dashboard
+
+1. Select "Use environment variable"
+
+    > [!div class="mx-imgBorder"] 
+    > ![Use environment variable](media/power-bi-embedded-use-environment-variable.png "Use environment variable")
+
+1. Open "Power BI environment variable" selector and click **New environment variable**
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select new environment variable](media/power-bi-embedded-new-environment-variable.png  "Select new environment variable")
+
+1. Nested panel will open to allow creating the environment variable and will default the Display Name and Name based on the dashboard
+
+1. 
 
 ## Related
 
