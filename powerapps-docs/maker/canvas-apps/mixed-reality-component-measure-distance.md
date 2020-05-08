@@ -1,6 +1,6 @@
 ---
 title: Use the Measure in MR component in Power Apps (Preview)
-description: Digitally measure distances and creates areas and shapes in the real world with augmented reality features in Power Apps.
+description: Digitally measure distances and create areas and shapes in the real world with augmented reality features in Power Apps.
 author: iaanw
 manager: shellyha
 ms.service: powerapps
@@ -20,7 +20,7 @@ search.app:
 
 You can use the **Measure in MR** component in your app to let users measure distance, area, and volume. During measurement, you create two-dimensional and three-dimensional polygons that can be used to confirm how a certain-sized object would fit within a space.
 
-The component creates a button in your app. When app users click the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distance of measured segments are shown directly on the live camera feed.
+The component creates a button in your app. When app users click the button, it shows a live camera feed of the device. App users can then identify a starting point and then individual points to measure from. The distances of measured segments are shown directly on the live camera feed.
 
 An example of how the component works inside an app is shown in the following video:
 
@@ -32,29 +32,33 @@ When the user exits the component, the measurements that were taken are captured
 
 Screenshots taken during the mixed reality experience are stored in the **Photos** property for viewing within the app.
 
-To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
+To use the component, you need to [enable the mixed-reality features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
-Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
+Make sure to also [review the prerequisites for using mixed-reality components](mixed-reality-overview.md#prerequisites).
 
->[!TIP]
-> The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
+> [!TIP]
+> The mixed-reality components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the mixed-reality view to reset the tracking and try again.
 
 ## Use the component
 
 Insert the component into your app as you normally would for any other button component.
 
-With an app open for editing in the [Power Apps Studio](https://create.powerapps.com):
+With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
 3. Select the component **Measure in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
-  ![](./media/augmented-measure/augmented-measure.png)
+   > [!div class="mx-imgBorder"]
+   > ![Select Measure in MR](./media/augmented-measure/augmented-measure.png "Select Measure in MR")
 
 You can modify the component with a number of properties.
 
->[!NOTE]
->Your 3D content must be in the .glb file format. You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
+> [!NOTE]
+> Your 3D content must be in the .glb file format. You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
+
+
+
 
 ### Properties
 
