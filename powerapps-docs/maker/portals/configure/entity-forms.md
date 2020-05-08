@@ -26,10 +26,10 @@ To view existing entity forms or to create new entity forms, open the [Portal Ma
 When creating a new entity form, the first step is to decide the **Entity** and **Form Name** that you will be rendering, in addition to the **mode: Insert, Edit, or Read Only**. The mode selected will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
 
 > [!NOTE]
-> - [Image attributes](https://docs.microsoft.com/powerapps/developer/common-data-service/image-attributes) and [file attributes](https://docs.microsoft.com/powerapps/developer/common-data-service/file-attributes) aren't supported in [entity forms](entity-forms.md), [web forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 > - An **Entity Form** must be associated with a webpage for a given website for the form to be viewable within the site.
 > - The Connection entity subgrids aren't supported in entity forms. If you add a Connection entity subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection entity.
 > - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in entity forms.
+> - [Image attributes](https://docs.microsoft.com/powerapps/developer/common-data-service/image-attributes) and [file attributes](https://docs.microsoft.com/powerapps/developer/common-data-service/file-attributes) aren't supported in [entity forms](entity-forms.md), [web forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 > - Business rules and client API can enable locked fields on a read-only form.
 > - If you create an entity form in the Insert mode, you can't change a button's alignment or place an action button above the entity form.
 > - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
