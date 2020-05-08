@@ -1475,6 +1475,8 @@
       href: ./common-data-service/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer
       href: ./common-data-service/define-alternate-keys-solution-explorer.md
+    - name: "View entity data in Power BI Desktop (Preview)"
+      href: ./common-data-service/view-entity-data-power-bi.md
     - name: "How to guides: Entity"
       items:
       - name: How to create entities using Power Apps portal
@@ -1583,43 +1585,41 @@
   - name: Work with solutions
     href: ./common-data-service/solutions-overview.md
     items:
-    - name: Use solutions
-      href: ./common-data-service/use-solution-explorer.md
-    - name: Use a solution to customize
-      href: ./common-data-service/use-solutions-for-your-customizations.md
-    - name: Solution publisher overview
-      href: ./common-data-service/change-solution-publisher-prefix.md
-    - name: Use segmented solutions
-      href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md      
-    - name: How managed solutions are merged
-      href: ./common-data-service/how-managed-solutions-merged.md
-    - name: Use solution checker
-      href: ./common-data-service/use-powerapps-checker.md
-      items: 
-      - name: "Common issues and resolutions: solution checker"
-        href: ./common-data-service/common-issues-resolutions-solution-checker.md
-    - name: Best practices
-      href: ./common-data-service/solution-best-practices.md        
-    - name: "How to"
-      items:
-      - name: Create solution patches
-        href: ./common-data-service/solution-patches.md      
-      - name: Create a solution
-        href: ./common-data-service/create-solution.md
-      - name: Update or upgrade solutions
-        href: ./common-data-service/update-solutions.md
-      - name: Import solutions
-        href: ./common-data-service/import-update-export-solutions.md
-      - name: Export solutions
-        href: ./common-data-service/export-solutions.md               
-      - name: Use environment variables
-        href: ./common-data-service/EnvironmentVariables.md
-      - name: View solution layers
-        href: ./common-data-service/solution-layers.md
-      - name: View solution history
-        href: ./common-data-service/solution-history.md      
-      - name: Set managed properties in metadata
-        href: ./common-data-service/set-managed-properties-metadata.md      
+      - name: Use solutions
+        href: ./common-data-service/use-solution-explorer.md
+      - name: Solution publisher overview
+        href: ./common-data-service/change-solution-publisher-prefix.md
+      - name: Use segmented solutions
+        href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md      
+      - name: Use solution checker
+        href: ./common-data-service/use-powerapps-checker.md
+        items: 
+        - name: "Common issues and resolutions: solution checker"
+          href: ./common-data-service/common-issues-resolutions-solution-checker.md
+      - name: Best practices
+        href: ./common-data-service/solution-best-practices.md        
+      - name: "How to"
+        items:     
+        - name: Create a solution
+          href: ./common-data-service/create-solution.md
+        - name: Update or upgrade solutions
+          href: ./common-data-service/update-solutions.md
+        - name: Import solutions
+          href: ./common-data-service/import-update-export-solutions.md
+        - name: Export solutions
+          href: ./common-data-service/export-solutions.md               
+        - name: Use environment variables
+          href: ./common-data-service/EnvironmentVariables.md
+        - name: View solution layers
+          href: ./common-data-service/solution-layers.md
+        - name: View solution history
+          href: ./common-data-service/solution-history.md      
+        - name: Set managed properties in metadata
+          href: ./common-data-service/set-managed-properties-metadata.md
+        - name: "Advanced topics"
+          items:
+          - name: Create solution patches
+            href: ./common-data-service/solution-patches.md  
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
@@ -1677,6 +1677,8 @@
       href: ../sample-apps/regional-emergency-response/overview.md
     - name: Deploy the solution
       href: ../sample-apps/regional-emergency-response/deploy.md
+    - name: Upgrade the solution
+      href: ../sample-apps/regional-emergency-response/upgrade.md
     - name: App and dashboard for regional admin
       href: ../sample-apps/regional-emergency-response/configure.md
     - name: Portal for admin and report viewer

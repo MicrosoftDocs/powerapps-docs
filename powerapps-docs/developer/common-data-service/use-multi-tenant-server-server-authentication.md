@@ -203,7 +203,7 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
   
   For information about creating a Common Data Service solution, see the following topics:
   
-- [Use solutions for your customizations](../../maker/common-data-service/use-solutions-for-your-customizations.md)  
+- [Use solutions for your customizations](/power-platform/alm/use-solutions-for-your-customizations)  
 - [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)  
   
   However, the application user cannot be included with a solution so you will need to provide a way to create this application user and associate it with the custom security role.  

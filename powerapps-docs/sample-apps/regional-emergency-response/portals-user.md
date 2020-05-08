@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/22/2020
+ms.date: 05/04/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 searchScope:
@@ -63,6 +63,10 @@ Select **Bed capacity** to update patient information, beds, and staffing capaci
 | Number of ICU beds (non-AIIR Room) currently in use           | Number of ICU beds (non-AIIR) currently in use at this facility.                                  |
 | Number of Acute Care beds (AIIR Room) currently in use        | Number of Acute Care beds (AIIR)) currently in use at this facility.                               |
 | Number of Acute Care beds (non-AIIR Room) currently in use    | Number of Acute Care beds (non-AIIR) currently in use at this facility.                           |
+| Number of Pediatric ICU beds (AIIR Room) currently in use               | Number of Pediatric ICU beds (AIIR) currently in use at this facility.                                      |
+| Number of Pediatric ICU beds (non-AIIR Room) currently in use           | Number of Pediatric ICU beds (non-AIIR) currently in use at this facility.                                  |
+| Number of Pediatric Acute Care beds (AIIR Room) currently in use        | Number of Pediatric Acute Care beds (AIIR)) currently in use at this facility.                               |
+| Number of Pediatric Acute Care beds (non-AIIR Room) currently in use    | Number of Pediatric Acute Care beds (non-AIIR) currently in use at this facility.                           |
 | Is your facility staffed to its full licensed bed capacity?    | Yes/No. If the answer is No, can select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
 | Are you able to surge beyond your licensed beds?              | Yes/No. If the answer is No, can select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
 | Number of surge beds currently in use                         | Number of surge beds currently in use at this facility. 
