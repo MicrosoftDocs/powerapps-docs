@@ -3,11 +3,11 @@ title: "Browse the metadata for your organization (Common Data Service) | Micros
 description: "You can use the Entity Metadata Browser to view entities and their properties in Common Data Service. The Entity Metadata Browser is a managed solution you can download and install on your organization." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: "phecke" # GitHub ID
+ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -73,7 +73,7 @@ You can perform the following actions for a single entity:
     - Filter the displayed privilege using the `PrivilegeId`.
 
 > [!NOTE]
-> When viewing the entity detail properties, you’ll see that many complex properties are expandable. The most useful value is displayed with a link that allows toggling to a more detailed view. The detailed view reflects the structure of the data if you were to retrieve it programmatically. The detailed view also reveals other relevant data that can be retrieved in the same area, for example, if any localized labels are present for **Display Name** properties.
+> When viewing the entity detail properties, you'll see that many complex properties are expandable. The most useful value is displayed with a link that allows toggling to a more detailed view. The detailed view reflects the structure of the data if you were to retrieve it programmatically. The detailed view also reveals other relevant data that can be retrieved in the same area, for example, if any localized labels are present for **Display Name** properties.
 
 > [!TIP]
 > To copy text from the page, simply select the text and use the Ctrl+C keyboard shortcut or the context menu **Copy** command.
@@ -83,11 +83,11 @@ You can perform the following actions for a single entity:
 **Metadata Browser** is a tool that XrmToolbox community developed for Common Data Service. Please see the [Developer tools](developer-tools.md) topic for community developed tools.
 
 > [!NOTE]
-> The community tools are not a product of Common Data Service and does not extend support to the community tools. 
+> The community tools are not a product of Common Data Service and Microsoft does not provide support for the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also
 
  [Developer Tools for Common Data Service](developer-tools.md)<br />
  [Customize Entity Metadata](customize-entity-metadata.md)<br />
- 
+  

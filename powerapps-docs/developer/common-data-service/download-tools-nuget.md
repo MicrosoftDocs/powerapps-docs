@@ -3,7 +3,7 @@ title: "Download tools from NuGet (Common Data Service) | Microsoft Docs"
 description: "Download the Plugin Registration, Package Deployment, and other core tools from Nuget."
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,7 +13,7 @@ applies_to:
 ms.assetid: feb3e634-7c60-46fd-8b92-3f5682b1570b
 author: "shmcarth" # GitHub ID
 ms.author: "jdaly"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

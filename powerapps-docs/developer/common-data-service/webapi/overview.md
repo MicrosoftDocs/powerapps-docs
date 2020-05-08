@@ -2,7 +2,7 @@
 title: "Use the Common Data Service Web API (Common Data Service)| Microsoft Docs"
 description: "The Common Data Service Web API implements OData v4 and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
 ms.custom: ""
-ms.date: 04/22/2019
+ms.date: 03/31/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,7 +13,7 @@ ms.assetid: 15c4039e-a3ca-4116-ba1d-3ac88cba3ae1
 caps.latest.revision: 15
 author: "JimDaly" # GitHub ID
 ms.author: "susikka"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 manager: "shujoshi"
 search.audienceType: 
   - developer
@@ -28,7 +28,7 @@ The Web API is one of two web services you can use to work with data and metadat
 The Common Data Service Web API provides a development experience that can be used across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [https://www.odata.org/](https://www.odata.org/). Details about this standard are available at [https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0). 
 
 
-Because the Web API is built on open standards, we don’t provide assemblies for a specific developer experience. You can compose HTTP requests for specific operations or use third-party libraries to generate classes for whatever language or platform you want. You can find a list of libraries that support OData version 4.0 at [https://www.odata.org/libraries/](https://www.odata.org/libraries/).  
+Because the Web API is built on open standards, we don't provide assemblies for a specific developer experience. You can compose HTTP requests for specific operations or use third-party libraries to generate classes for whatever language or platform you want. You can find a list of libraries that support OData version 4.0 at [https://www.odata.org/libraries/](https://www.odata.org/libraries/).  
 
 ## Web API and the Organization service
 
@@ -36,6 +36,11 @@ It is valuable to recognize that the organization service is what defines the pl
 
 The Web API allows you to do all the same operations as the organization service but presents them in an RESTful style. OData v4 provides for named operations via *functions* or *actions*. Most messages available in the organization service are exposed as a corresponding named function or action. Those messages that correspond to CRUD operations are not available in the Web API because as a RESTful service they have implementations using GET, POST, PATCH, and DELETE HTTP methods, but within the platform the *retrieve*, *create*, *update*, and *delete* messages are invoked just as they are when the corresponding operations are performed using the .NET Framework assemblies.
 
+## Getting started
+
+Now that you have read an overview of the Web API, proceed to the [Get started with Common Data Service Web API](get-started-dynamics-365-web-api-csharp.md) topic to learn how to write your first C# program in Visual Studio that uses the Web API.
+
+If you are a JavaScript developer and want to use the Web API in model-driven apps, navigate to [Client-side JavaScript using Web API in model-driven apps](get-started-web-api-client-side-javascript.md).
   
 ### Related Sections
 

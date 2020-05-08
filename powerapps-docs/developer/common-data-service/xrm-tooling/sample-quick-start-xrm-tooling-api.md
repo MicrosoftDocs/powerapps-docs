@@ -3,7 +3,7 @@ title: "Sample: Quick start for XRM Tooling API (Common Data Service)| Microsoft
 description: ""
 ms.custom: ""
 ms.date: 03/27/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

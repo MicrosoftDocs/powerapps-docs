@@ -3,7 +3,7 @@ title: " Dump entity relationships to a file (Common Data Service) | Microsoft D
 description: "This sample showcases how to dump entity relationships to a file." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 12/20/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

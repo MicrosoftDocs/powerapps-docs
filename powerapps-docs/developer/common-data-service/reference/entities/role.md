@@ -1,7 +1,7 @@
 ---
 title: "Role Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the Role entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the Role entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # Role Entity Reference
 
@@ -128,7 +129,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |--------|-----|
 |Description|Role is inherited by users from team membership, if role associated with team.|
 |DisplayName|Is Inherited|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|isinherited|
 |RequiredLevel|SystemRequired|

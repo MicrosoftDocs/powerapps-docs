@@ -33,7 +33,7 @@ To update the app that was included in the managed solution, use update or patch
 
 
 ## Use security roles to manage app access
-Model-driven apps should have security roles assigned to control user access. More information: [Add security roles to the app](../model-driven-apps/share-model-driven-app.md#add-security-roles-to-the-app) 
+Model-driven apps should have security roles assigned to control user access. More information: [Share a model-driven app with Power Apps](../model-driven-apps/share-model-driven-app.md) 
 
 ## Delete the managed solution to delete a model-driven app 
 To delete a model-driven app that was installed in the default solution as part of a managed solution, delete the managed solution. 

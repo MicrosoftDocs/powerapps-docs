@@ -6,8 +6,8 @@ ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: "Nkrb" # GitHub ID
+ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer

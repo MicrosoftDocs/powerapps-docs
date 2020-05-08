@@ -9,7 +9,7 @@ applies_to:
 ms.assetid: 15272ad9-25d7-499e-9361-a65f789daf20
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

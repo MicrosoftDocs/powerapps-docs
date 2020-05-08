@@ -6,8 +6,8 @@ ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 339eb79d-5dec-885b-496f-bfa26e9cae08
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -51,6 +51,7 @@ You can perform actions such as create, retrieve, update, or delete, on organiza
   For a list of supported messages on the user-owned dashboard entity, see [UserForm Entity](../common-data-service/reference/entities/userform.md).  
   
 ### See also  
+
  [Dashboards for Microsoft Dynamics 365](analyze-data-with-dashboards.md)   
  [Using FormXML for Dashboards](understand-dashboards-dashboard-components-formxml.md)   
  [Create a Dashboard](create-dashboard.md)   

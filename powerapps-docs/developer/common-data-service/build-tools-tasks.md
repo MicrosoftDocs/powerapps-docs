@@ -3,7 +3,7 @@ title: "Build tools tasks| Microsoft Docs" # Intent and product brand in a uniqu
 description: "Power Apps build tools are a collection of Power Apps specific Azure DevOps build tasks that eliminate the need to manually download  tools and scripts to manage the application lifecycle of Power Apps. This topic describes the tasks that are available. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/21/2019
-ms.reviewer: "Dean-Haas"
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mikkelsen2000" # GitHub ID
@@ -32,7 +32,7 @@ The Power Apps checker task runs a static analysis check on your solution(s) aga
 
 | **Parameters** | **Description** |
 | --- | --- |
-| Power Apps checker service  |   Select the service endpoint for Power Apps checker. The service   endpoint is defined under **Service Connections** in **Project Settings**.  **NOTE:** The service connection type that must be used for this specific task only is ‘Power Apps Checker,’ which is a service principals connection. More information on how to configure Service Principals before you can use the  task is available [here](https://aka.ms/buildtoolsconnection).  |
+| Power Apps checker service  |   Select the service endpoint for Power Apps checker. The service   endpoint is defined under **Service Connections** in **Project Settings**.  **NOTE:** The service connection type that must be used for this specific task only is ‘Power Apps Checker,’ which is a service principals connection. More information on how to configure Service Principals before you can use the  task is available [here](build-tools-tasks#configure-service-connection-for-power-apps-checker).  |
 | Location of file to analyze  | Specify whether to reference a local file or a reference file from a Sas url. 
 | Local files to analyze/Sas uri for file to analyze |  Specify the path and file name of the zip files to analyze.   Wildcards can be used. For example, **\*.zip   for all zip files in all sub folders. You can choose to specify the files   directly or reference a File from a Sas uri.   |
 |  Rule set |   Specify which ruleset to apply. The following two rulesets are available:  **Solution Checker:** This is the same ruleset that is run from the [Maker Portal](https://make.powerapps.com/).    **AppSource:** This is the extended ruleset that is used to certify an application before it can be published to [AppSource](https://appsource.microsoft.com/).   |

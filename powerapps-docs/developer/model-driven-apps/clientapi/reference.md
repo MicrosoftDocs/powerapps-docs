@@ -9,7 +9,7 @@ applies_to:
 ms.assetid: 
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

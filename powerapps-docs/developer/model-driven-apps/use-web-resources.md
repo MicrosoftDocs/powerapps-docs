@@ -4,7 +4,7 @@ description: Learn how developers use web resources within model-driven apps.
 services: ''
 suite: powerapps
 documentationcenter: na
-author: JimDaly
+author: Nkrb
 manager: kvivek
 editor: ''
 tags: ''
@@ -14,7 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: na
 ms.workload: na
 ms.date: 10/31/2018
-ms.author: jdaly
+ms.author: nabuthuk
 search.audienceType: 
   - developer
 search.app: 

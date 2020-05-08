@@ -3,7 +3,7 @@ title: "Sample: Bulk delete records in bulk that match common criteria (Common D
 description: "This sample shows how to delete records in bulk that match common criteria" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

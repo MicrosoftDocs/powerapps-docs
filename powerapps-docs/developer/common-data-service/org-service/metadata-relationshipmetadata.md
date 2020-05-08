@@ -3,7 +3,7 @@ title: "Create and retrieve entity relationship (Common Data Service) | Microsof
 description: "Shows code samples to create and retrieve entity relationships." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/28/2020
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

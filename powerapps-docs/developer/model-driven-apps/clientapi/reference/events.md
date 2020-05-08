@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 89123cde-7c66-4c7d-94e4-e287285019f8
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -45,7 +45,9 @@ Events occur in Custom Engagement forms and grids whenever a form or grid loads,
 - [PostSearch](events/postsearch.md)
 
 ## Lookup control event
+- [OnLookupTagClick](events/onlookuptagclick.md)
 - [PreSearch](events/presearch.md)
+
 
 ## Process events
 - [OnProcessStatusChange](events/onprocessstatuschange.md)

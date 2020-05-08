@@ -1,13 +1,11 @@
 ---
 title: "getGlobalContext (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 03/18/2020
 ms.service: powerapps
 ms.topic: "reference"
-applies_to: "Dynamics 365 (online)"
-ms.assetid: d87e0614-f365-4ed1-992a-741575bb2b7e
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -45,6 +43,7 @@ Use the following properties of global context to return information about the c
 |[getCurrentAppProperties](getGlobalContext/getCurrentAppProperties.md) |Returns the properties of the current business app in model-driven apps.|
 |[getCurrentAppUrl](getGlobalContext/getCurrentAppUrl.md) |Returns the URL of the current business app in model-driven apps.|
 |[getVersion](getGlobalContext/getVersion.md) |Returns the version number of the model-driven apps instance.|
+|[getWebResourceUrl](getGlobalContext/getWebResourceUrl.md) |Returns the relative URL with the caching token for the specified web resource.|
 |[isOnPremises](getGlobalContext/isOnPremises.md) |Returns a boolean value indicating if the model-driven apps instance is hosted on-premises or online.|
 |[prependOrgName](getGlobalContext/prependOrgName.md) |Prefixes the current organization's unique name to a string, typically a URL path.|
 

@@ -3,7 +3,7 @@ title: "Analyze plug-in performance (Common Data Service) | Microsoft Docs"
 description: "Learn how to find and analyze data about how your registered plug-ins are performing."
 ms.custom: ""
 ms.date: 1/29/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly"

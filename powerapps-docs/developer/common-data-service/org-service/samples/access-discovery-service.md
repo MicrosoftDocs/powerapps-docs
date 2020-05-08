@@ -3,7 +3,7 @@ title: "Sample: Work with discovery service <Topic Title> (Common Data Service) 
 description: "This sample code shows how to use discovery services" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

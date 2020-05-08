@@ -4,7 +4,7 @@ description: "Learn about creating auto-number attribute in the same way you cre
 keywords: "Auto-number attributes" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/24/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "nhelgren" # GitHub ID

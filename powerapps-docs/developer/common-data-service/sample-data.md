@@ -3,7 +3,7 @@ title: "Add and remove sample data (Common Data Service) | Microsoft Docs" # Int
 description: "How to install or uninstall sample data using the Web API or Organization service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

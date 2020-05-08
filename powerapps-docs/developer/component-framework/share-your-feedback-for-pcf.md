@@ -16,3 +16,7 @@ ms.assetid: 5d100dc3-bd82-4b45-964c-d90eaebc0735
 # Share your feedback
 
 Read and post in the [Power Apps component framework forum](https://powerusers.microsoft.com/t5/PowerApps-Component-Framework/bd-p/pa_component_framework). This is a great resource where anyone who uses Power Apps component framework can read and discuss questions with other users. Before you post a new question, search the discussion forum to see whether your question already has been answered.
+
+## See also
+
+[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)

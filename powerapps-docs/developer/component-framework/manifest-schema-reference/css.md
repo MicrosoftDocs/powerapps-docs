@@ -22,14 +22,14 @@ ms.assetid: b6119424-c0a4-4412-b25c-8239da6cbe36
 
 ## Available for
 
-Model-driven apps and canvas apps (experimental preview)
+Model-driven apps and canvas apps (public preview)
 
 ## Attributes
 
 |Name|Description|Type|Required|Available for|
 |--|--|--|--|-----|
-|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven apps and canvas apps (experimental preview) |
-|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven apps and canvas apps (experimental preview) |
+|`path`|Relative path w.r.t manifest where CSS files are located|`string`|Yes|Model-driven apps and canvas apps (public preview) |
+|`order`|The order in which the CSS files Should load|`Positive integer`|Optional|Model-driven apps and canvas apps (public preview) |
 
 ## Parent Elements
 
@@ -40,7 +40,10 @@ Model-driven apps and canvas apps (experimental preview)
 ## Example
 
 ```xml
-<css path="css/JS_HelloWorldControl.css" order="1" />
+<resources>
+  <code path="TS_LocalizationAPI.js" order="1" />
+	<css path="css/TS_LocalizationAPI.css" order="1" />
+ </resources>
 ```
 
 ### Related topics

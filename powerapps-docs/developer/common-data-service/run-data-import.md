@@ -3,7 +3,7 @@ title: "Run data import (Common Data Service) | Microsoft Docs" # Intent and pro
 description: "Data importation runs directly on the Dynamics 365 server, and requires three asynchronous jobs for parsing, map-guided transformation, and uploading." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

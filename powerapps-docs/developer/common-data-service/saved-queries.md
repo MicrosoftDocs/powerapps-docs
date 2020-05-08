@@ -3,7 +3,7 @@ title: "Saved queries (Common Data Service) | Microsoft Docs" # Intent and produ
 description: "Learn how saved queries augment the search environment in Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

@@ -3,7 +3,7 @@ title: "Build tools tutorial and FAQ| Microsoft Docs" # Intent and product brand
 description: "Power Apps build tools are a collection of Power Apps specific Azure DevOps build tasks that eliminate the need to manually download  scripts to manage the development of Power Apps. This topic describes the tutorial and FAQs that you can access to learn more about these tools. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/21/2019
-ms.reviewer: "Dean-Haas"
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mikkelsen2000" # GitHub ID

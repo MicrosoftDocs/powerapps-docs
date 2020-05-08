@@ -3,7 +3,7 @@ title: "Sample: Override goal total count and close the goal (Common Data Servic
 description: "This sample shows how to override the goal total count and close the goal." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

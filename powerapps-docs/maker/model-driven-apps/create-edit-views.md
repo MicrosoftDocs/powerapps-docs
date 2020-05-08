@@ -2,7 +2,7 @@
 title: "Create or edit a model-driven app view in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a view"
 ms.custom: ""
-ms.date: 06/11/2018
+ms.date: 03/19/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -36,7 +36,7 @@ With Power Apps apps, use views to define how a list of records for a specific e
 
 A drop-down list of views is frequently displayed in the application so that people have options for different views of entity data.
 
-The records that are visible in individual views are displayed in a list, sometimes called a grid, which frequently provides options so that people can change the default sorting, column widths, and filters to more easily see the data that’s important to them. Views also define the data source for charts that are used in the application.  
+The records that are visible in individual views are displayed in a list, sometimes called a grid, which frequently provides options so that people can change the default sorting, column widths, and filters to more easily see the data that's important to them. Views also define the data source for charts that are used in the application.  
   
 ## Types of Views  
   
@@ -61,7 +61,7 @@ As a system administrator or system customizer, you can edit system views. Syste
 |Associated     |  The default view that lists the related entities for a record.       |
 |Lookup     | The view you see when you select a record to set for a lookup field.        |
 
-These views are not shown in the view selector and you can’t use them in sublists in a form or as a list in a dashboard. You cannot delete or deactivate these views. More information: [Remove views](remove-views.md)
+These views are not shown in the view selector and you can't use them in sublists in a form or as a list in a dashboard. You cannot delete or deactivate these views. More information: [Remove views](remove-views.md)
 
 System views are owned by the organization so that everyone can see them. For example, everyone has organization-level access to read records for the View (savedquery) entity. These views are associated with specific entities and are visible within the solution explorer. You can include these views in solutions because they are associated with the entity.
 
@@ -83,15 +83,15 @@ You can create custom public views. You can delete any custom public views you c
 
 ## Places where you can access the view editor to create or edit views
 
-- Power Apps site: You can access the view designer in the **Model-driven** area > **Data** > **Entities** > **View** tab. Open an existing view or create a new one. More information: [Create or edit a view](create-and-edit-views.md)
-- App Designer: If you’re working in an app, you may want to use the App Designer, which provides a simple and intuitive UI with drag-and-drop capabilities for created views. More information: [Tutorial: Create and edit public or system views by using the app designer](create-edit-views-app-designer.md)
-- Solution explorer: If you’re already experienced with Dynamics 365, you may want to use the solution explorer. More information: [Navigate to advanced app making and customization areas](advanced-navigation.md#solution-explorer)
+- Power Apps site: To access the view designer, select **Data** > **Entities**, select an entity, and then select the **View** tab. Open an existing view or create a new one. More information: [Create or edit a view](create-and-edit-views.md)
+- App Designer: If you're working in an app, you may want to use the App Designer, which provides a simple and intuitive UI with drag-and-drop capabilities for created views. More information: [Tutorial: Create and edit public or system views by using the app designer](create-edit-views-app-designer.md)
+- Solution explorer: If you're already experienced with Dynamics 365, you may want to use the solution explorer. More information: [Navigate to advanced app making and customization areas](advanced-navigation.md#solution-explorer)
  
 ## Customize views
 
 As a system customizer you can customize the views through controls by making grids (lists) editable and compatible for Unified Interface. The following controls are used:
 
-- Editable Grid: Allows users to do rich in-line editing directly from grids and sub-grids whether they’re using a web app, tablet, or phone. More information: [Make grids editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md)
+- Editable Grid: Allows users to do rich in-line editing directly from grids and sub-grids whether they're using a web app, tablet, or phone. More information: [Make grids editable using the Editable Grid custom control](make-grids-lists-editable-custom-control.md)
 - Read Only Grid: Provides users an optimal viewing and interaction experience for any screen size or orientation such as mobiles and tablets by using responsive design principles. More information: [Specify properties for Unified Interface apps](specify-properties-for-unified-interface-apps.md)
 
 ## Next steps

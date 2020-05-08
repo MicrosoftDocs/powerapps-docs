@@ -12,8 +12,8 @@ ms.assetid: 6df7cccb-071d-4853-8acb-01bceef973ca
 caps.latest.revision: 22
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
-manager: "amyla"
+ms.reviewer: "pehecke"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 

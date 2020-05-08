@@ -15,7 +15,7 @@ ms.assetid: d2cbf58a-9112-45c2-b823-2c07a310714c
 
 # Create and build a code component
 
-This topic demonstrates how to create and deploy code components using Power Apps CLI. Ensure that you have installed [Microsoft Power Apps CLI](https://aka.ms/PowerAppsCLI).
+This article demonstrates how to create and deploy code components using Power Apps CLI. Ensure that you have installed [Microsoft Power Apps CLI](https://aka.ms/PowerAppsCLI).
 
 ## Create a new component
 
@@ -34,11 +34,13 @@ To begin, open **Developer Command Prompt for VS 2017** after installing Power A
 
 4. To retrieve all the required project dependencies, run the command `npm install`.
 5. Open your project folder `C:\Users\<your name>\Documents\<My_code_Component>` in any developer environment of your choice and get started with your code component development. The quickest way to get started is by running `code .` from your command prompt once you are in the `C:\Users\<your name>\Documents\<My_code_Component>` directory. This command opens your component project in Visual Studio Code.
-6. Implement the required artifacts for the component like manifest, component logic and styling and then build the component project. More information: [Create your first code component](implementing-controls-using-typescript.md)
+6. Implement the required artifacts for the component like manifest, component logic, and styling and then build the component project. More information: [Create your first code component](implementing-controls-using-typescript.md)
 
 ## Build your component
 
-To build the component project, open the project folder that contains `package.json` in Visual Studio Code and use the (Ctrl-Shift-B) command, then select the build options. Alternatively, you can build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window.
+To build the component project, open the project folder that contains `package.json` in Visual Studio Code and use the (Ctrl-Shift-B) command, then select the build options. 
+
+Alternatively, you can build the component quickly using the `npm run build` command in the Developer Command Prompt for VS 2017 window.
 
 > [!TIP]
 > To debug the component during or after the build operation, see [Debug a code component](debugging-custom-controls.md).

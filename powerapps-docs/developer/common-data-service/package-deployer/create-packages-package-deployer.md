@@ -3,7 +3,7 @@ title: "Create packages for the Package Deployer (Common Data Service) | Microso
 description: "Create packages that administrators can deploy on Common Data Service instances." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID

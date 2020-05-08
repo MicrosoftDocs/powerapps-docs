@@ -1,7 +1,7 @@
 ---
 title: Power Apps Community Plan -- a free development environment for individual use | Microsoft Docs
 description: Sign up to build skills and learn more about Power Apps, Power Automate, and the Common Data Service.
-author: dileepsinghmsft
+author: dileepsinghmicrosoft 
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual

@@ -3,7 +3,7 @@ title: "Query hierarchical data (Common Data Service) | Microsoft Docs" # Intent
 description: "Read how you can use the new query condition operators to query entities with explicit hierarchical relationships." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

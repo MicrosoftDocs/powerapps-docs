@@ -3,7 +3,7 @@ title: "Sample: Create and retrieve Outlook filters (Common Data Service)| Micro
 description: "This sample shows how to retrieve filters for Microsoft Dynamics 365 for Outlook"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "sriharibs" # GitHub ID

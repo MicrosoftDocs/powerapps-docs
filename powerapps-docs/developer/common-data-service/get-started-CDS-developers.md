@@ -7,7 +7,7 @@ manager: ryjones
 ms.service: powerapps
 ms.date: 08/05/2019
 ms.author: jdaly
-ms.reviewer: kvivek
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 

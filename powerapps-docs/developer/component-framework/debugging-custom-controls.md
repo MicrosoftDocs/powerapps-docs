@@ -21,7 +21,7 @@ As the image above shows, the browser window opens with four sections. The code 
 
 - **Context Inputs** provides a way to specify the form factor and test the code component with each form factor (web, tablet, phone). This is helpful when the code component is dependent on a particular form factor capability.
 - **Data Inputs** is an interactive UI that displays all the properties and their [types](manifest-schema-reference/types.md) or [type-groups](manifest-schema-reference/type-group.md) defined in the [manifest](manifest-schema-reference/manifest.md) file. It allows you to key in the mock data for each property. 
-- **Outputs** renders the output whenever a component's [getOutputs](reference/control/getoutputs.md) method gets called.  
+- **Outputs** render the output whenever a component's [getOutputs](reference/control/getoutputs.md) method gets called.  
 
      > [!div class="mx-imgBorder"]
      > ![Test harness 2](media/test-harness-2.png "Test harness 2")
@@ -56,14 +56,14 @@ As the image above shows, the browser window opens with four sections. The code 
 
 The test harness supports the `watch` mode, which you can take advantage of for Power Apps component framework projects. To enable `watch` mode, start the test harness using the command `npm start watch`. In `watch` mode, the changes made to any of the following component assets are automatically reflected in the test harness without having to restart it:
 
-1.	`index.ts` file.
-2.	`ControlManifest.Input.xml` file.
-3.	Imported libraries in `index.ts`.
-4.	All the resources listed in the manifest file.
+1.    `index.ts` file.
+2.    `ControlManifest.Input.xml` file.
+3.    Imported libraries in `index.ts`.
+4.    All the resources listed in the manifest file.
 
 ## Debug code components using native browsers
 
-You can use the browser’s debugging capabilities to observe the component behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. 
+You can use the browser's debugging capabilities to observe the component behavior. Each browser provides you with a debugging tool to help you debug your code natively in the browser. 
 
 Typically, you can activate debugging in your browser by pressing the **F12** key to display the native developer tool used for debugging.
 

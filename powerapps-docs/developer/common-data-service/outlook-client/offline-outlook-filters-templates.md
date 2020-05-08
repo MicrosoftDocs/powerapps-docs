@@ -3,7 +3,7 @@ title: "Offline and Outlook filters and templates (Common Data Service)| Microso
 description: "Data that should be synchronized between the Common Data Service and Dynamics 365 for Outlook is determined by Data Filters for Office Outlook"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "sriharibs" # GitHub ID

@@ -3,7 +3,7 @@ title: "Use a left outer join in QueryExpression to query for records &quot;not 
 description: "Read how to use a left outer join by using the QueryExpression class to perform a query that filters on the join table and build a query to find records &quot;not in&quot; a set" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

@@ -2,16 +2,12 @@
 title: "Unified Interface Playbook | MicrosoftDocs"
 description: "Learn how to plan and execute your transition from the legacy web client to the Unified Interface"
 ms.custom: ""
-ms.date: 08/29/2019
+ms.date: 03/13/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "Mattp123"
 ms.assetid: 
 caps.latest.revision: 25
@@ -43,3 +39,5 @@ In summary, the Unified Interface Playbook documents will help you:
 | [Chapter 3: Transition](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch3-transition.pptx)|  PowerPoint     |
 | [Chapter 4: Optimize](https://download.microsoft.com/download/A/F/3/AF3D45A7-4F38-41BE-8956-1DF7A4A5AFDB/playbook-ch4-optimize.pptx)  | PowerPoint  |
 
+### See also
+[Dynamics 365 Project Service Automation Upgrade playbook](https://aka.ms/PSAUCIUpgrade)

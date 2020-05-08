@@ -6,12 +6,12 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 04/07/2020
 ms.author: tapanm
 ms.reviewer:
 ---
 
-# Edit CSS
+# Edit CSS for themes in Power Apps portal
 
 Cascading Style Sheets (CSS) allows you to control the formatting of your website. By default, bootstrap.min.css and theme.css files are available. You can edit the existing CSS files and upload new CSS files. When you upload a new CSS file, it will be available as a web file in the Portal Management app.
 
@@ -24,8 +24,7 @@ To open a CSS in code editor:
 
 2.  Select **Theme** ![Theme icon](media/theme-icon.png "Theme icon") from the toolbelt on the left side of the screen. The available themes are displayed.  
 
-    > [!div class=mx-imgBorder]
-    > ![Theme pane](media/theme-pane.png "Theme pane")  
+    ![Theme](./media/edit-css/themes.png)
 
 3.  Select the required CSS to open it in the code editor.
 
@@ -39,8 +38,7 @@ To upload a new CSS file:
 
 3. Select **Upload custom CSS**.
 
-    > [!div class=mx-imgBorder]
-    > ![Theme pane](media/upload-css.png "Theme pane")  
+    ![Upload custom CSS](./media/edit-css/upload-custom-css.png) 
 
 4. Browse and select the CSS file to upload.
 

@@ -3,7 +3,7 @@ title: "Configure Azure integration (Common Data Service) | Microsoft Docs" # In
 description: "The topic describes configuring Azure integration with Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

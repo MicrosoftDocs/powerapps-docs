@@ -3,7 +3,7 @@ title: "Impersonate a user (Common Data Service) | Microsoft Docs" # Intent and 
 description: "Learn how to write plug-in code to act on behalf of a specific user."
 ms.custom: ""
 ms.date: 1/24/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: JimDaly

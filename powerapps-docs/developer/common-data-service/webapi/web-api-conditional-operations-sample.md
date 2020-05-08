@@ -13,7 +13,7 @@ ms.assetid: f2e5d22b-93fe-43b7-af15-3e281f3b3084
 caps.latest.revision: 13
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
-ms.reviewer: "susikka"
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 

@@ -3,7 +3,7 @@ title: "Build web applications using Server-to-Server (S2S) authentication (Comm
 description: "Use server-to-server (S2S) authentication to securely and seamlessly communicate with Common Data Service with your web applications and services. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the Common Data Service  data of their subscribers." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID

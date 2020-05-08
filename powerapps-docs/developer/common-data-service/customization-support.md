@@ -2,7 +2,7 @@
 title: "Common Data Service app building practices | MicrosoftDocs"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

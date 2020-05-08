@@ -3,7 +3,7 @@ title: "Authentication with .NET Framework applications (Common Data Service) | 
 description: "How .NET Framework applications can authenticate with Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 01/25/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID

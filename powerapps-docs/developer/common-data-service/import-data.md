@@ -3,7 +3,7 @@ title: "Import Data (Common Data Service) | Microsoft Docs" # Intent and product
 description: "If you want to import data into Common Data Service, you can use the *data import* feature. Data import lets you upload data from various customer relationship management systems and data sources into Common Data Service" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

@@ -9,7 +9,7 @@ ms.assetid: cf68e0a9-c240-59e7-c501-68cbfa0df455
 author: JimDaly # GitHub ID
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -25,7 +25,7 @@ This topic describes how to write an Azure solution  listener application that c
 
 ## Write a queue listener
 
-A message *queue* is a repository of messages received at a service bus endpoint. A *queue listener* is an application that reads and processes these queued messages. Because the service bus messages are stored in a queue, a listener doesn’t have to be actively listening for messages to be received in the queue. A queue listener can be started after messages have arrived in the queue and still process those messages. Other types of listeners discussed in the next section must be actively listening or they will miss the opportunity to read a message. These messages can originate from Common Data Service or from some other source. 
+A message *queue* is a repository of messages received at a service bus endpoint. A *queue listener* is an application that reads and processes these queued messages. Because the service bus messages are stored in a queue, a listener doesn't have to be actively listening for messages to be received in the queue. A queue listener can be started after messages have arrived in the queue and still process those messages. Other types of listeners discussed in the next section must be actively listening or they will miss the opportunity to read a message. These messages can originate from Common Data Service or from some other source. 
   
 > [!IMPORTANT]
 >  When writing a queue listener, check each message header action to determine if the message originated from Common Data Service. For information on how to do this see [Filter messages](write-listener-application-azure-solution.md#filter).  
@@ -43,7 +43,7 @@ Use of queues and topics in your multi-system software design can result in the 
 
 ## Write a one-way, two-way, or REST listener
 
-In addition to the queue listener described previously, you can write a listener for three other service bus contracts that are supported by Common Data Service: one-way, two-way, and REST. A one-way listener can read and process a message posted to the service bus. A two-way listener can do the same but can also return a string of some information back to Common Data Service. A REST listener is the same as the two-way listener except that it works with a REST endpoint. Notice that these listeners must be actively listening at a service endpoint to read a message sent over the service bus. If the listener isn’t listening when Common Data Service attempts to post a message to the service bus, the message doesn’t get sent.
+In addition to the queue listener described previously, you can write a listener for three other service bus contracts that are supported by Common Data Service: one-way, two-way, and REST. A one-way listener can read and process a message posted to the service bus. A two-way listener can do the same but can also return a string of some information back to Common Data Service. A REST listener is the same as the two-way listener except that it works with a REST endpoint. Notice that these listeners must be actively listening at a service endpoint to read a message sent over the service bus. If the listener isn't listening when Common Data Service attempts to post a message to the service bus, the message doesn't get sent.
   
 Writing a listener is structured around what is known as ABC: address, binding, and contract. 
 
@@ -55,7 +55,7 @@ Writing a listener is structured around what is known as ABC: address, binding, 
   
 - Contract: <xref:Microsoft.Xrm.Sdk.IServiceEndpointPlugin>  
   
-After your listener is registered with an endpoint, the listener’s <xref:Microsoft.Xrm.Sdk.IServiceEndpointPlugin.Execute*> method is invoked whenever a message is posted to the service bus by Common Data Service. The `Execute` method doesn’t return any data from the method call. For more information, see the one-way listener sample, [Sample: One-way Listener](org-service/samples/one-way-listener.md).  
+After your listener is registered with an endpoint, the listener's <xref:Microsoft.Xrm.Sdk.IServiceEndpointPlugin.Execute*> method is invoked whenever a message is posted to the service bus by Common Data Service. The `Execute` method doesn't return any data from the method call. For more information, see the one-way listener sample, [Sample: One-way Listener](org-service/samples/one-way-listener.md).  
   
 ### Two-way listener
   
@@ -78,9 +78,9 @@ For this two-way contract, the <xref:Microsoft.Xrm.Sdk.ITwoWayServiceEndpointPlu
 For the REST contract, the <xref:Microsoft.Xrm.Sdk.IWebHttpServiceEndpointPlugin.Execute*>  method returns a string from the method call. Refer to the REST listener sample, [Sample: REST Listener](org-service/samples/rest-listener.md), for more information. Notice that in the REST listener sample, a <xref:System.ServiceModel.Web.WebServiceHost> is instantiated and not a <xref:System.ServiceModel.ServiceHost> as was done in the two-way sample.
   
 > [!NOTE]
->  When using the out-of-box (ServiceBusPlugin) plug-in with a two-way or REST listener, the plug-in doesn’t use any string data returned from the listener. However, a custom Azure-aware plug-in could make use of this information.  
+>  When using the out-of-box (ServiceBusPlugin) plug-in with a two-way or REST listener, the plug-in doesn't use any string data returned from the listener. However, a custom Azure-aware plug-in could make use of this information.  
 > 
->  When you run the listener samples, the issuer secret you’re prompted for is the Azure Service Bus management key. The WS2007 Federation HTTP binding uses `token` mode and the WS-Trust 1.3 protocol.  
+>  When you run the listener samples, the issuer secret you're prompted for is the Azure Service Bus management key. The WS2007 Federation HTTP binding uses `token` mode and the WS-Trust 1.3 protocol.  
   
 <a name="filter"></a>
 
@@ -135,3 +135,4 @@ else if (receivedMessage.ContentType = "application/xml")
 [Sample: REST Listener](org-service/samples/rest-listener.md)<br />
 [Work with Common Data Service data in your Azure solution](work-data-azure-solution.md)<br />
 [Work with Common Data Service event data in your Azure Event Hub solution](work-event-data-azure-event-hub-solution.md)
+ 

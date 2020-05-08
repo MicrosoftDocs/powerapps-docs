@@ -2,7 +2,7 @@
 title: "Image web resources (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about using image web resources to make images available for use" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 03/11/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -17,9 +17,7 @@ search.app:
 ---
 # Image web resources
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/image-web-resources -->
-
-Use image web resources to make images available for use in Model-driven apps.  
+Use image web resources to make images available for use in model-driven apps.  
 
 There are 5 types of image web resources: 
 * PNG Format
@@ -29,7 +27,7 @@ There are 5 types of image web resources:
 * Vector Format (SVG)
 
 > [!NOTE]
-> Vector Format (SVG) web resources were added with the Model-driven apps.
+> Vector Format (SVG) web resources were added with the model-driven apps.
 
   
 <a name="BKMK_Capabilities"></a>   
@@ -42,6 +40,9 @@ There are 5 types of image web resources:
 - Background images that are used by CSS web resources.  
 
 Use Vector Format (SVG) web resources for any icon presented in the application. Vector images are defined as Scalable Vector Graphics (SVG) an XML-based vector image format. The advantage of vector images over other image web resources is that they scale. You can define one vector image and re-use it rather than provide multiple sizes of images. You will use these in with a new <xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata>.<xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IconVectorName> property to define the icon for a custom entity instead of the `IconLargeName`, `IconMediumName`, or `IconSmallName` properties.
+
+> [!NOTE]
+> Vector Format (SVG) web resources are treated like the [Script (JScript)](/powerapps/developer/model-driven-apps/script-jscript-web-resources) web resources, and carry the same security risks as Script (JScript) web resources because SVG files allow JScript embedding.
   
 <a name="BKMK_Limitations"></a>   
 ## Limitations of image web resources  
@@ -102,13 +103,13 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
 ```  
   
 > [!NOTE]
->  Using the `$webresource:` directive adds a solution dependency that prevents the referenced image web resources from being deleted as long as they are used by another solution component.  
+> Using the `$webresource:` directive adds a solution dependency that prevents the referenced image web resources from being deleted as long as they are used by another solution component.  
   
 ### See also  
- [Web Resources](web-resources.md)   
- [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
- [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   
- [Using Script (JScript) Web Resources](script-jscript-web-resources.md)   
- [Using Data (XML) Web Resources](data-xml-web-resources.md)   
- [Using Silverlight (XAP) Web Resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
- [Using Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)
+ [Web resources](web-resources.md)   
+ [Using Web Page (HTML) web resources](webpage-html-web-resources.md)   
+ [Using Style Sheet (CSS) web resources](css-web-resources.md)   
+ [Using Script (JScript) web resources](script-jscript-web-resources.md)   
+ [Using Data (XML) web resources](data-xml-web-resources.md)   
+ [Using Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
+ [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)

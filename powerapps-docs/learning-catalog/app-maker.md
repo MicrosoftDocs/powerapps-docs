@@ -1,13 +1,13 @@
 ---
-title: App maker learning catalog
+title: App Maker learning catalog
 description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
-ms.date: 01/27/2020
+ms.date: 03/25/2020
 ms.author: v-lshann
 ---
 
-# App maker learning catalog
+# App Maker Learning Catalog
 
 Are you interested in quickly creating custom business apps without writing code? 
 
@@ -16,7 +16,7 @@ The following catalog is organized from core knowledge to specific domains, and 
 ## Get started<a name="get-started"></a>
 | Content   | Description  | Format  | Length    |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------|
-| [Introduction to Power Apps](https://docs.microsoft.com/learn/modules/introduction-power-apps/)                                              | Learn about the value and capabilities of Power Apps, and ways other organizations have leverage this technology to build simple applications for their business.                                             | Free, self-paced online learning path | 18 minutes         |
+| [Introduction to Power Apps](https://docs.microsoft.com/learn/modules/introduction-power-apps/)                                              | Learn about the value and capabilities of Power Apps, and ways other organizations have leveraged this technology to build simple applications for their business.                                             | Free, self-paced online learning path | 18 minutes         |
 | [Automate a business process using Power Automate](https://docs.microsoft.com/learn/paths/automate-process-power-automate/)                 | This learning path introduces you to Power Automate, teaches you how to build workflows, and how to administer flows.                                                                                        | Free, self-paced online learning path | 3 hours 11 minutes |
 | [Tutorial: Create a business process flow to standardize processes](https://docs.microsoft.com/power-automate/create-business-process-flow) | This tutorial shows you how to create a business process flow with Power Apps.                                                                                                                               | Free, self-paced online learning path | 14 minutes to read |
 | [Create a canvas app in Power Apps](https://docs.microsoft.com/learn/paths/create-powerapps/)                                               | Do you want to create apps to help make your business more efficient? Then this path is for you. It introduces you to Power Apps, helps you create and customize an app, and then manage and distribute it. | Free, self-paced online learning path | 2 hr 11 min        |

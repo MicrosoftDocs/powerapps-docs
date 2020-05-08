@@ -2,7 +2,7 @@
 title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: " A list of common issues and resolutions within solution checker"
 keywords: ""
-ms.date: 02/11/2019
+ms.date: 04/07/2020
 ms.service: powerapps
 ms.custom:
   - ""
@@ -40,6 +40,12 @@ Failures that occur during background processing of the analysis will fail with 
 Selecting the portal notification will link to this page of common issues for further troubleshooting. If one of the provided common issues does not resolve the problem, a reference number is also returned. Provide this reference number to Microsoft Support for further investigation.
 
 ![Failure notification](media/solution-checker-failure-notification.png)
+
+
+## Solution Checker fails to check Default solution
+
+Solution checker exports the solution from the Common Data Service environment for analysis. Exporting the Default Solution is not supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
+
 
 ## Solution checker fails due to unsupported version of Power Apps Checker
 
@@ -216,9 +222,9 @@ Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing
 
 ## Solution Checker fails to export patched solutions
 
-If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can’t be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
+If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
-To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see [Clone a Solution](use-segmented-solutions-patches-simplify-updates.md#clone-a-solution).
+To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](solution-patches.md#clone-a-solution).
 
 ## Solution checker will not analyze empty solutions
 

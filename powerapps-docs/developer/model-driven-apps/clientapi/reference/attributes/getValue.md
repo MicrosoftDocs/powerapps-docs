@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: acc78a1e-212a-4eef-88c5-8272f9ba3009
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -40,6 +40,7 @@ All
 | lookup | [Array](https://msdn.microsoft.com/library/k4h76zbx.aspx) <br/>An array of lookup objects.<br/><br/>NOTE: Certain lookups allow for multiple records to be associated in a lookup, such as the To: field for an email entity record. Therefore, all lookup data values use an array of lookup objects – even when the lookup attribute does not support more than one record reference to be added. <br/><br/>Each lookup has the following properties:<br/>- *entityType*: String. The name of the entity displayed in the lookup.<br/>- *id*: String: The string representation of the GUID value for the record displayed in the lookup.<br/>- *name*: String: The text representing the record to be displayed in the lookup.|
 | memo  | [String](https://msdn.microsoft.com/library/ecczf11c.aspx)  |
 | money| [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)  |
+|multiselectoptionset|[Array](https://msdn.microsoft.com/library/k4h76zbx.aspx) <br/> An array of numbers.|
 | optionset | [Number](https://msdn.microsoft.com/library/dwab3ed2.aspx)  |
 | string | [String](https://msdn.microsoft.com/library/ecczf11c.aspx) |
 

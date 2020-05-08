@@ -3,15 +3,15 @@ title: Functional application sonsultant learning catalog
 description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
-ms.date: 01/27/2020
+ms.date: 02/19/2020
 ms.author: v-lshann
 ---
 
-# Functional application sonsultant learning catalog
+# Functional application consultant learning catalog
 
 Are you an implementation expert for a business domain? 
 
-The following catalog is organized from core knowledge to specific domains, and from most basic to most advanced. If content exists in multiple formats, we'll let you know, so that you can choose the training format that best meets your needs. For more information, see Training content formats. 
+The following catalog is organized from core knowledge to specific domains, and from most basic to most advanced. If content exists in multiple formats, we'll let you know, so that you can choose the training format that best meets your needs.
 
 For functional consultants, our job-task analysis research showed that everyone must understand the core content set as well as a domain area. 
 

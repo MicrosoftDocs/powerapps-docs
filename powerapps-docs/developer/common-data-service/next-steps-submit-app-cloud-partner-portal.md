@@ -3,7 +3,7 @@ title: "Next steps: Submit your app on Partner Center (Common Data Service) | Mi
 description: "Learn about how to submit an app on Cloud Partner Portal to be listed on AppSource." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 07/25/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "KumarVivek" # GitHub ID

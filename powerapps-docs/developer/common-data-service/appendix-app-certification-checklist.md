@@ -3,7 +3,7 @@ title: "Appendix: App certification checklist (PowerApps) | Microsoft Docs"
 description: "The app certification checklist provides you information about the checks that your model-driven, canvas apps and flows have to go through before it can be published on AppSoutce."
 ms.custom: ""
 ms.date: 03/20/2019
-ms.reviewer: "kvivek"
+ms.reviewer: "pehecke"
 ms.service: "powerapps"
 ms.topic: "article"
 author: "omarcdoc" 

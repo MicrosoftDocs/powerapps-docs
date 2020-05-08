@@ -3,7 +3,7 @@ title: "Use Multi-Tenant Server-to-server authentication (Common Data Service) |
 description: "Describes how to configure an application user for server-to-server authentication with Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 2/28/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -203,7 +203,7 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
   
   For information about creating a Common Data Service solution, see the following topics:
   
-- [Use solutions for your customizations](../../maker/common-data-service/use-solutions-for-your-customizations.md)  
+- [Use solutions for your customizations](/power-platform/alm/use-solutions-for-your-customizations)  
 - [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)  
   
   However, the application user cannot be included with a solution so you will need to provide a way to create this application user and associate it with the custom security role.  

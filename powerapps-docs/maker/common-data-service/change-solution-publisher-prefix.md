@@ -26,22 +26,9 @@ search.app:
 
 Every app you create or customization you make is part of a solution. Every solution has a publisher. You specify the publisher when you create a solution. 
 
-> [!div class="mx-imgBorder"] 
-> <img src="media/solution-publisher-select.png" alt="Select solution publisher" height="731" width="416">
-
 The solution publisher indicates who developed the app. For this reason, you should create a solution publisher that is meaningful. You can view the solution publisher for a solution by selecting **Settings** from the **Solutions** area in Power Apps.
 
-## Solution publisher prefix
-A solution publisher includes a prefix. The prefix can help determine which publisher is responsible for the component. For example, the solution that contains the fundraiser sample app uses *sample* as the publisher prefix. 
-
-> [!div class="mx-imgBorder"] 
-> ![Fundraiser solution publisher prefix](media/fundraiser-sample-app-prefix.png)
-
-> [!NOTE]
-> When you change a solution publisher prefix, you should do it before you create any new apps or metadata items. You can't change the names of metadata items. 
-
-## Common Data Services Default Solution
-The default solution in Power Apps is the Common Data Services Default Solution, which is associated with the Common Data Service Default Publisher. The default publisher prefix will be randomly assigned for this publisher, for example it could be *cr8a3*. This means that the name of every new item of metadata created in the default solution will have this prepended to the names used to uniquely identify the items. If you create a new entity named *Animal*, the unique name used by Common Data Service would be *cr8a3_animal*. The same is true for any new fields (attributes), relationships, or optionset options. If you will be customizing the default solution, consider changing the publisher prefix. 
+For more information about the solution publisher, see [Solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher).
 
 ## Create a solution publisher
 1.	In the Power Apps portal, select **Solutions**. 

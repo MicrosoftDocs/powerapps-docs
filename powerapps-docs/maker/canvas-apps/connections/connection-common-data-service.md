@@ -6,9 +6,9 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 11/27/2019
-ms.author: tapanm
+ms.reviewer: tapanm
+ms.date: 03/04/2020
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
@@ -16,6 +16,8 @@ search.app:
 ---
 
 # Connect to Common Data Service
+
+## Overview
 
 You can securely store your business data in Common Data Service and build rich apps in Power Apps so that users can manage that data. You can also integrate that data into solutions that include Power Automate, Power BI, and data from Dynamics 365.
 
@@ -35,4 +37,6 @@ The name of the selected environment appears under the entities list.
 
 The Common Data Service connector is more robust than the Dynamics 365 connector and approaching feature parity.
 
-More information: [What is Common Data Service?](../../common-data-service/data-platform-intro.md)
+### Common Data Service and the improved data source experience
+
+If you created a canvas app with a Common Data Service connector prior to November 2019, then you might not have the benefit of the most current version of the Common Data Service. Read [Common Data Service connection improvements](../use-native-cds-connector.md) for more details and to upgrade your connection.

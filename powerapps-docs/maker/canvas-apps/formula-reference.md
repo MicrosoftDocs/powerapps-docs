@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/19/2019
+ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -24,7 +24,7 @@ Formulas combine many elements.  Listed below are:
 
 Other elements include:
 
-* [All operators](functions/operators.md)
+* [Operators and identifiers](functions/operators.md)
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 
@@ -128,7 +128,7 @@ Other elements include:
 
 **[Distinct](functions/function-distinct.md)** – Summarizes records of a table, removing duplicates.  
 
-**[Download](functions/function-param.md)** – Downloads a file from the web to the local device.
+**[Download](functions/function-download.md)** – Downloads a file from the web to the local device.
 
 **[DropColumns](functions/function-table-shaping.md)** – Returns a table with one or more columns removed.
 
@@ -143,7 +143,7 @@ Other elements include:
 
 **[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
 
-**[Exit](functions/function-exit.md)** – Exits the currently running app.
+**[Exit](functions/function-exit.md)** – Exits the currently running app and optionally signs out the current user.
 
 **[Exp](functions/function-numericals.md)** - Returns *e* raised to a power.
 
@@ -177,6 +177,8 @@ Other elements include:
 
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
+**[IsError](functions/function-iferror.md)** – Checks for an error.
+
 **[IsMatch](functions/function-ismatch.md)** – Checks a string against a pattern.  Regular expressions can be used.
 
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
@@ -195,7 +197,7 @@ Other elements include:
 
 **[LastN](functions/function-first-last.md)** – Returns the last set of records (N records) of a table.
 
-**[Launch](functions/function-param.md)** – Launches a web address or an app.
+**[Launch](functions/function-param.md)** – Launches a webpage or a canvas app.
 
 **[Left](functions/function-left-mid-right.md)** – Returns the left-most portion of a string.
 
@@ -203,7 +205,7 @@ Other elements include:
 
 **[Ln](functions/function-numericals.md)** – Returns the natural log.
 
-**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from Power Apps private storage.
+**[LoadData](functions/function-savedata-loaddata.md)** – Loads a collection from a local device's storage.
 
 **[Location](functions/signals.md)** – Returns your location as a map coordinate by using the Global Positioning System (GPS) and other information.
 
@@ -243,7 +245,7 @@ Other elements include:
 **[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](functions/operators.md).
 
 ## P
-**[Param](functions/function-param.md)** – Provides access to parameters passed to the app when the user opened it.
+**[Param](functions/function-param.md)** – Access parameters passed to a canvas app when launched.
 
 **[Parent](functions/operators.md#parent-operator)** – Provides access to a container control's properties.
 
@@ -291,7 +293,7 @@ Other elements include:
 **[RoundUp](functions/function-round.md)** – Rounds up to the smallest next number.
 
 ## S
-**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to Power Apps private storage.
+**[SaveData](functions/function-savedata-loaddata.md)** – Saves a collection to a local device's storage.
 
 **[Search](functions/function-filter-lookup.md)** – Finds records in a table that contain a string in one of their columns.  
 

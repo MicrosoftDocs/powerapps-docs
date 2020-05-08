@@ -21,7 +21,7 @@ Update the component version (minor or patch) in the component manifest file (fo
 Every update in the component needs a component version bump to be reflected on the Common Data Service server.
 
 > [!NOTE]
-> - A new solutio must be created everytime if you wish to have a major version bump. Incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade.
+> - A new solution must be created everytime if you wish to have a major version bump. Incrementing the major version number (eg 1.0 to 2.0) is not supported as an upgrade.
 > - Only three version sections are supported (i.e. MAJOR.MINOR.PATCH). These version number sections should be between 0 and 65536.
 
 ### What are the things to be considered from a performance perspective?
@@ -58,6 +58,10 @@ This is not supported natively by the framework. You can use one of many third-p
 ### Can I bundle font resources?
 
 Currently, font resources (files with a .ttf file extension) are not supported by the framework.
+
+### Can I use img resource property in canvas apps?
+
+Currently, [img](manifest-schema-reference/img.md) resources are not supported in canvas apps.
 
 ## Related topics
 

@@ -3,7 +3,7 @@ title: "Use FetchXML aggregation (Common Data Service) | Microsoft Docs" # Inten
 description: "Read about the grouping and aggregation features of FetchXML that let you calculate sum, average min, max and count" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 06/18/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

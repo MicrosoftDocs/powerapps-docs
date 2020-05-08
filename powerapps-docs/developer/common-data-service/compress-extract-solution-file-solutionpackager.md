@@ -3,7 +3,7 @@ title: "SolutionPackager tool (Common Data Service) | Microsoft Docs" # Intent a
 description: "SolutionPackager is a tool that can reversibly decompose a Common Data Service compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
