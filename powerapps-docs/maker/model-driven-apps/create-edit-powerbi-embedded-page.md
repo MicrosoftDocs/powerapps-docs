@@ -37,11 +37,14 @@ This examples sets up a Power BI embedded page for a single environment with one
 
 1. Click **New** > **Dashboards** > **Power BI embedded**
 
-    > ADD SCREENSHOT OF MENU
+    > [!div class="mx-imgBorder"] 
+    > ![New Dashboard Power BI embedded menu](media/new-dashboard-powerbi-embedded-preview.png "New Dashboard Power BI embedded menu")
+
 
 1. New Power BI embedded dialog appears
 
-    > ADD SCREENSHOT OF EMPTY DIALOG
+    > [!div class="mx-imgBorder"] 
+    > ![New Dashboard Power BI embedded panel](media/new-dashboard-powerbi-embedded-panel.png "New Dashboard Power BI embedded panel")
 
 1. Enter name for the dashboard which will be shown to the user in the selector on the **Dashboards** page
 
@@ -58,3 +61,5 @@ This examples sets up a Power BI embedded page for a single environment with one
 ## Related
 
 * [Create or edit model-driven app dashboards](create-edit-dashboards.md)
+
+* [View entity data in Power BI Desktop](../common-data-service/view-entity-data-power-bi.md)
