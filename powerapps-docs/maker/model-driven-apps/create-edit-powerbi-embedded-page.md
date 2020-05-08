@@ -1,7 +1,7 @@
 ---
 title: "Create or edit model-driven app Power BI embedded page | MicrosoftDocs"
 ms.custom: ""
-ms.date: 05/23/2018
+ms.date: 05/08/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -22,14 +22,18 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create or edit model-driven app Power BI embedded page
+# Create or edit model-driven app Power BI embedded page (preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This topic will outline the setup of a system dashboard referencing a Power BI report or dashboard.  A new option has been added to the solution New > Dashboard menu called **Power BI embedded (preview)**.
 
 To learn more about Power BI reports and dashboards, open <a href="https://docs.microsoft.com/power-bi/create-reports/">Create Power BI Reports</a>. 
 
 > [!IMPORTANT]
-> This feature is a preview so will evolve.
+> - This is a preview feature, and isn't available in all regions.
+> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
 
 ## Create system dashboard with Power BI embedded
 
