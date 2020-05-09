@@ -145,12 +145,13 @@ The following example uses a Common Data Service database with [sample data](htt
 You can follow the same steps with content snippet of **Text** type instead of HTML, for example:
 
 ```
-{% assign account = entities.account['f4f25307-d284-ea11-a816-000d3a36ff29'] %}<br>
-{% if account %}<br>
+{% assign account = entities.account['f4f25307-d284-ea11-a816-000d3a36ff29'] %}
+{% if account %}
 Account Name is: {{ account.name }} 
 Account State: {{ account.statecode.label }}
 {% endif %}
 ```
+Replace the GUID of the record with an account entity record from your Common Data Service database.
 
 When you browse the page with this content snippet, the entity information is displayed using liquid object along with text instead of HTML. Likewise, you can also use only HTML to display content without using liquid objects.
 
