@@ -2,7 +2,7 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 01/30/2020
+ms.date: 05/11/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -26,7 +26,10 @@ search.app:
 # Import solutions 
 
  You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources.   
-  
+ 
+> [!NOTE]
+> The system administrator security role is required to import a solution that includes a plug-in assembly. 
+ 
 1.  Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
   
 2.  On the command bar, select **Import**.  
