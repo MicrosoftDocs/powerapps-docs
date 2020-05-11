@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # Add code components to a field or entity in model-driven apps
 
-Code components let you transform fields that traditionally contain text into visualizations. Similarly, you can use code components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. code components can appear as visualizations on forms, dashboards, views, and homepage grids. 
+Code components let you transform fields that traditionally contain text into visualizations. Similarly, you can use code components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. Code components can appear as visualizations on forms, dashboards, views, and homepage grids. 
 
 
    > [!div class="mx-imgBorder"] 
