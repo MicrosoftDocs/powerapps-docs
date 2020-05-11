@@ -505,7 +505,7 @@ Download the latest label customization solution package (.zip) from https://aka
 
 ### Import the Canvas App Strings solution
 
-Download the **Canvas App Strings** solution and import to your environment. For instructions on how to import solution, read [Import a solution](../../maker/model-driven-apps/distribute-model-driven-app#import-a-solution.md).
+Download the **Canvas App Strings** solution and import to your environment. For instructions on how to import solution, read [Import a solution](../../maker/model-driven-apps/distribute-model-driven-app.md#import-a-solution).
 
 The **Canvas App Strings** solution contains:
 
@@ -594,9 +594,9 @@ If you uninstall Canvas App Strings solution, the apps will continue to run, eve
 
 You can restore canvas apps to previous version that didn't use Canvas App Strings solution in two different ways:
 
-1. Note the current live version of the app before you import the solution. You can restore the app to this version after you uninstall the solution. For more information: [Restore a canvas app to a previous version in Power Apps](../../maker/canvas-apps/restore-an-app).
+1. Note the current live version of the app before you import the solution. You can restore the app to this version after you uninstall the solution. For more information: [Restore a canvas app to a previous version in Power Apps](../../maker/canvas-apps/restore-an-app.md).
 
-1. Create a new solution and the existing apps. Export the solution as backup. If you uninstall the Canvas App Strings solution, you can import your backup solution with default apps. To learn how to add apps to solution and export, go to [Link an existing canvas app to a solution](../../maker/canvas-apps/add-app-solution#link-an-existing-canvas-app-to-a-solution).
+1. Create a new solution and the existing apps. Export the solution as backup. If you uninstall the Canvas App Strings solution, you can import your backup solution with default apps. To learn how to add apps to solution and export, go to [Link an existing canvas app to a solution](../../maker/canvas-apps/add-app-solution.md#link-an-existing-canvas-app-to-a-solution).
 
 ### Considerations when extending mobile app labels
 
