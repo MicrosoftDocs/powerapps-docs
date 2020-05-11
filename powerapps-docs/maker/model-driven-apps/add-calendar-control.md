@@ -1,7 +1,7 @@
 ---
 title: "Add the calendar control to entities in model-driven apps | MicrosoftDocs"
 description: "Learn how to add the calendar control to entities in model-driven apps."
-ms.date: 04/15/2020
+ms.date: 05/11/2020
 ms.service:
   - "dynamics-365-sales"
 ms.topic: article
@@ -12,7 +12,7 @@ manager: shujoshi
 
 # Add the calendar control to entities
 
-The **Calendar Control v2** control displays scheduled activities and their associated details in a calendar. You can view, create, and delete your activities in a day, week, or month view. You must be a system customizer or a system administrator to add the **Calendar Control v2** control.
+The **Calendar Control V2** control displays scheduled activities and their associated details in a calendar. You can view, create, and delete your activities in a day, week, or month view. You must be a system customizer or a system administrator to add the **Calendar Control V2** control.
 
 **To add the control**
 
@@ -34,7 +34,7 @@ The **Calendar Control v2** control displays scheduled activities and their asso
     > [!div class="mx-imgBorder"]
     > ![Add control command](media/add-control.png "Add control command") 
 
-6.  In the **Add Control** dialog box, select **Calendar Control v2**, and then select **Add**.
+6.  In the **Add Control** dialog box, select **Calendar Control V2**, and then select **Add**.
 
     > [!div class="mx-imgBorder"]
     > ![Add control dialog box](media/add-cal-control.png "Add control dialog box")
@@ -44,7 +44,7 @@ The **Calendar Control v2** control displays scheduled activities and their asso
     > [!div class="mx-imgBorder"]
     > ![Calendar control added](media/cal-control-added.png "Calendar control added")
 
-8.  **Read-only grid** is the default option, so when users select an entity from the site map, they'll see a read-only grid of opportunities. To make the calendar view the default view instead, select the corresponding **Calendar Control v2** option buttons.
+8.  **Read-only grid** is the default option, so when users select an entity from the site map, they'll see a read-only grid of opportunities. To make the calendar view the default view instead, select the corresponding **Calendar Control V2** option buttons.
 
 9.  Select the edit icon for each of the mandatory fields, and then select the binding values.
 

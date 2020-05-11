@@ -1,7 +1,7 @@
 ---
 title: "Work with records in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
-ms.date: 04/15/2020
+ms.date: 05/11/2020
 ms.service:
   - "dynamics-365-sales"
 ms.topic: article
@@ -12,9 +12,9 @@ manager: shujoshi
 
 # Work with records in the new calendar view
 
-The new calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control v2** control must be added to an entity view by a system customizer or a system administrator. The **Calendar Control v2** control can be added to any entity.
+The new calendar view displays scheduled activities and their associated details. You can view, create, and delete your activities in a day, week, or month view. For the new calendar view to be visible, the **Calendar Control V2** control must be added to an entity view by a system customizer or a system administrator. The **Calendar Control V2** control can be added to any entity.
 
-By default, records are displayed in a read-only grid. When the **Calendar Control v2** control is added to an entity and the view is changed to the calendar view, records associated with the entity will be displayed in an interactive calendar.
+By default, records are displayed in a read-only grid. When the **Calendar Control V2** control is added to an entity and the view is changed to the calendar view, records associated with the entity will be displayed in an interactive calendar.
 
 ## Switch to the new calendar view
 
@@ -24,7 +24,7 @@ The calendar view is made available when the calendar control is added to an ent
 
 1.  In the site map, select an item. For example, **Activities**.
 
-2.  On the command bar, select the **More commands** icon, and then select **Show As** > **Calendar Control v2**.
+2.  On the command bar, select the **More commands** icon, and then select **Show As** > **Calendar Control V2**.
 
     > [!div class="mx-imgBorder"]
     > ![Switch to calendar view](media/switch-calendar-view.png "Switch to calendar view") 
