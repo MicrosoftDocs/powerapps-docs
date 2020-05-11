@@ -54,10 +54,6 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 You can modify the component with a number of properties.
 
-
-<!-- please check the following link. It doesn't work on the review page. -->
-
-
 > [!NOTE]
 > Your 3D content must be in the .glb file format. You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
 
