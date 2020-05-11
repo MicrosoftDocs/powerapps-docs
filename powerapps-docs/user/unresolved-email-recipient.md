@@ -1,6 +1,6 @@
 ---
-title: "Send email to unresolved email recipients | MicrosoftDocs"
-description: "Learn how to send email to unresolved email recipients."
+title: "Resolve an unresolved email recipient | MicrosoftDocs"
+description: "Learn how to resolve an unresolved email recipient."
 ms.date: 05/11/2020
 ms.service:
   - "dynamics-365-sales"
