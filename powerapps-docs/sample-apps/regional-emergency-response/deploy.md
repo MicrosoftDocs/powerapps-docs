@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/29/2020
+ms.date: 05/06/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -25,6 +25,9 @@ Regional organization IT admins can use this article to deploy the Regional Gove
 Perform the following steps to deploy the Regional Government Emergency Response and Monitoring solution for your organization.
 
 Estimated time to complete these steps: 35–40 minutes.
+
+> [!IMPORTANT]
+> If you have an existing installation of this solution, follow the steps here instead to upgrade to the latest version: [Upgrade the solution](upgrade.md)
 
 ## Service URLs for US Government customers
 
@@ -50,7 +53,7 @@ Download the latest deployment package (.zip) from <https://aka.ms/rer-solution>
 
 Before extracting the .zip file, ensure that you unblock it.
 
-1.	Right click the .zip file, select **Properties**.
+1.	Right-click the .zip file, select **Properties**.
 
 2.	In the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
 
@@ -645,8 +648,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 9.  You will return to the process definition page. Save the changes and **Activate** the process.
 
     > [!div class="mx-imgBorder"] 
-    > ![Save changes and activate process](media/deploy-save-activate-process.png "Save changes and activate process")
-    <!-- ![](media/f0a492755b69dbffb3e122724b2994bf.png) -->
+    > ![Save changes and activate process](media/deploy-save-activate-process.png "Save changes and activate process")    
 
 ## Step 12: Verify Assign Web Roles to New Users process is enabled
 
@@ -666,7 +668,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
 5.  If it’s not enabled, select the process name to open the record, and then select **Activate**. Confirm to activate the process.
 
-## Step 13: Verify the Flow supply tracking flow is enabled
+## Step 13: Enable the Flow supply tracking flow
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
@@ -675,16 +677,72 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
     > [!div class="mx-imgBorder"] 
     > ![Open the solution](media/deploy-open-solution.png "Open the solution")
 
-3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record. Ensure that the status is set to **On**.
+3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record.
 
     > [!div class="mx-imgBorder"] 
     > ![Find the Flow Supply Tracking record](media/deploy-find-record.png "Find the Flow Supply Tracking record")
 
-4.  If it is not set to **On**, select the flow name to open the flow definition.
+4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
 
-5.  In the flow definition, select **Turn On** in the toolbar.
+5.  Fix the connection to connect to Common Data Service, and save the connection information.
 
-## Step 14: Share admin app with other admin users
+6. In the flow definition, select **Turn On**.
+
+## Step 14: Update the details of flows for sending emails
+
+In this step, we are going to do the following:
+
+|Flow name|Changes|
+|--|--|
+|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service and then specify a user account to send emails.|
+|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Open the solution](media/deploy-open-solution.png "Open the solution")
+
+3.  In the solution, filter on **Flow** to find the flows. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Find the Flow Supply Tracking record](media/deploy-find-record1.png "Find the flows")
+
+4.  Select the **Portal User Request: Send Email on Decline Request** name to open the flow definition. Select **Edit** on the toolbar.
+
+5.  Specify the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Fix credential](media/deploy-specify-cred.png "Fix credentials")
+
+6.  After fixing the connection to connect to Common Data Service, select **IfRequestState ==**, and specify the user account that has a mailbox enabled account to send emails.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Specify outlook credentials](media/deploy-fix-cred2.png "Specify outlook credentials")
+
+7. Select **Save** to save the changes, and then select **Turn On**.
+
+8.  Next, go to the flows list, and select the **Portal User Request: Send Email to Admins on Request Creation** name to open the flow definition. Select **Edit** on the command bar.
+
+9.  Fix the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.
+
+10. After fixing the connection to connect to Common Data Service:
+     1. Select **IfRequestState ==**
+     2. Select **Connections** to specify the connection to connect to Common Data Service 
+     3. Select **Connections** to specify the user account credentials that has a mailbox enabled account to send emails
+
+    > [!div class="mx-imgBorder"] 
+    > ![Specify outlook credentials](media/deploy-fix-cred3.png "Specify outlook credentials")
+
+11. In **Send an email**, ensure that you fix the URL as per your portal URL. For example, in this case, change rer6 to your URL value.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Specify outlook credentials](media/deploy-fix-cred4.png "Specify outlook credentials")
+
+12. Select **Save** to save the changes, and then select **Turn On**.
+
+## Step 15: Share admin app with other admin users
 
 For your business admin users to use the admin app (model-driven app) to enter and manage data, it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 

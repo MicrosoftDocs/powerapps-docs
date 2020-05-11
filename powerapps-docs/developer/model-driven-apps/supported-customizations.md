@@ -18,7 +18,7 @@ search.app:
 # Get started with Model-driven apps customization using code
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions
-Split to just include MDA issues
+Split to just include model-driven apps issues
  -->
 
 You can customize model-driven apps by using tools that are available in the Power Apps portal or that are described in the documentation. These customizations are supported and can be upgraded.

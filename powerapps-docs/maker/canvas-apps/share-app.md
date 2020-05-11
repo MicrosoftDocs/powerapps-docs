@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 04/23/2020
+ms.date: 05/08/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -23,7 +23,7 @@ After you build a canvas app that addresses a business need, specify which users
 
 ## Prerequisites
 
-Before you share an app, you must save it to the cloud (not locally) and then publish the app.
+Before you share an app, you must [save it to the cloud](save-publish-app.md#save-changes-to-an-app) (not locally) and then [publish](save-publish-app.md#publish-an-app) the app.
 
 - Give your app a meaningful name and a clear description, so that people know what your app does and they can easily find it in a list. On the **File** menu in Power Apps Studio, select **App settings**, specify a name, and then type or paste a description.
 
@@ -31,7 +31,9 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
 ## Share an app
 
-1. [Sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) to Power Apps, and then select **Apps** near the left edge.
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. Select **Apps** from the left pane.
 
     ![Show list of apps](./media/share-app/file-apps.png)
 
@@ -39,21 +41,28 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     ![Select an app](./media/share-app/select-app.png)
 
-1. In the banner, select **Share**.
+1. Select **Share** from the top menu. You can also select **More Commands** (**..**) and then select **Share** from the drop-down menu:
 
-    ![Open share screen](./media/share-app/banner-share.png)
+    ![Share an app](./media/share-app/share-app.png)
 
 1. Specify by name or alias the users or security groups in Azure Active Directory with which you want to share the app.
 
-    - To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
-    - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Jane Doe &lt;jane.doe@contoso.com>**) if the items are separated by semi-colons. If more than one person has the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved. 
 
-    ![Specify users and co-owners](./media/share-app/share-everyone.png)
+
+    - To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
+
+        ![Everyone](./media/share-app/everyone.png)
+
+    - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Meghan Holmes &lt;meghan.holmes@contoso.com>**) if the items are separated by semi-colons. If more than one person has the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved.
+
+        ![Individual user](./media/share-app/individual-user.png)
 
     > [!NOTE]
     > You can't share an app with a distribution group in your organization or with a group outside your organization.
 
 1. If you want to allow those with whom you're sharing the app to edit and share it (in addition to running it), select the **Co-owner** check box.
+
+    ![Co-owner](./media/share-app/co-owner.png)
 
     You can't grant **Co-owner** permission to a security group if you [created the app from within a solution](add-app-solution.md).
 
@@ -64,12 +73,19 @@ Before you share an app, you must save it to the cloud (not locally) and then pu
 
     For example, your app might connect to an entity in a Common Data Service database. When you share such an app, the sharing panel prompts you to manage security for that entity.
 
-    > [!div class="mx-imgBorder"]
-    > ![Assign a security role](media/share-app/cds-assign-security-role.png)
+    ![Assign a security role](media/share-app/data-permissions-common-data-servicel.png)
 
-    For more information about managing security for an entity, see [Manage entity permissions](share-app.md#manage-entity-permissions) later in this article.
+    For more information about managing security for an entity, go to [Manage entity permissions](share-app.md#manage-entity-permissions).
+
+    If your app uses connection to other data sources such as an Excel file hosted on OneDrive for Business, ensure you share such data source with users that you share app with.
+
+    ![Share Excel on OneDrive for Business](media/share-app/data-permissions-odb-excel.png)
+
+    For more information about sharing canvas app resources and connections, go to [share canvas app resources](share-app-resources.md).
 
 1. If you want to help people find your app, select the **Send an email invitation to new users** check box.
+
+    ![Send email invitation](media/share-app/send-email-invitation.png)
 
 1. At the bottom of the share panel, select **Share**.
 
