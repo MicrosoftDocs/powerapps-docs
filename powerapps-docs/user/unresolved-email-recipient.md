@@ -1,7 +1,7 @@
 ---
 title: "Send email to unresolved email recipients | MicrosoftDocs"
 description: "Learn how to send email to unresolved email recipients."
-ms.date: 05/04/2020
+ms.date: 05/11/2020
 ms.service:
   - "dynamics-365-sales"
 ms.topic: article
@@ -17,6 +17,9 @@ An *unresolved email recipient* is one whose email address isn't associated with
 After the feature is enabled, you can add an unresolved email recipient in the **To**, **Cc**, or **Bcc** field. The entered email address is shown in red. You can then select the email address and associate it with an entity record in Common Data Service without navigating away from the email form.
 
 If you receive an email that has email addresses that aren't associated with an entity record, the email addresses are shown in red. You can then individually select the email addresses and associate them with an entity record. You can then send emails to the newly added email addresses.
+
+> [!NOTE]
+> You can also resolve emails to existing records.
 
 **To resolve an unresolved email recipient**
 

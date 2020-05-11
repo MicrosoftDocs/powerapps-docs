@@ -1,7 +1,7 @@
 ---
 title: "Send email to multiple recipients | MicrosoftDocs"
 description: "Learn how to send email to multiple recipients."
-ms.date: 05/04/2020
+ms.date: 05/11/2020
 ms.service:
   - "dynamics-365-sales"
 ms.topic: article
@@ -16,7 +16,7 @@ You can send an email to multiple recipients by using email templates. This is k
 
 **To send email to multiple recipients**
   
-1. In the site map for the model-driven app, select an entity to which you want to send email.<!--Edit okay?--> For example, **Contacts**.  
+1. In the site map for the model-driven app, select an entity to which you want to send email. For example, **Contacts**.  
   
 2. In the list of records, select the contacts you want to send an email to.  
   
