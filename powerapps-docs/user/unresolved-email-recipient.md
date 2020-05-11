@@ -18,9 +18,6 @@ After the feature is enabled, you can add an unresolved email recipient in the *
 
 If you receive an email that has email addresses that aren't associated with an entity record, the email addresses are shown in red. You can then individually select the email addresses and associate them with an entity record. You can then send emails to the newly added email addresses.
 
-> [!NOTE]
-> You can also resolve emails to existing records.
-
 **To resolve an unresolved email recipient**
 
 1. Open the email editor and select the unresolved email recipient.
@@ -30,6 +27,9 @@ If you receive an email that has email addresses that aren't associated with an 
 2. In the **Lookup Records** pane, select **New Record**.
 
     ![Lookup Records pane for unresolved email recipient](media/unresolved-email-lookup.png "Lookup Records pane for unresolved email recipient")
+
+    > [!NOTE]
+    > If records are displayed in search results, you can resolve the email to one of the existing records.
 
 3. Select the record type to create. For example, **Contacts**.
 
@@ -46,6 +46,7 @@ If you receive an email that has email addresses that aren't associated with an 
 6. The unresolved email recipient is resolved and shown in the **To** field in the email editor.
 
     ![Resolved email recipient](media/resolved-email-recipient.png "Resolved email recipient")
+
 
 ### See also
 
