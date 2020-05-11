@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/07/2020
+ms.date: 05/11/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -354,15 +354,15 @@ The source code is displayed in the **Code Editor** pane at the bottom of the sc
 
 ## Add Power BI
 
-You can add Power BI component on a page. When adding a Power BI component, you have different options to select for access type, workspace, and advanced settings.
+You can add Power BI component on a page to display Power BI dashboards and reports on your portal. When adding a Power BI component, you have different options such as access type, workspace, and advanced settings.
 
 > [!NOTE]
-> Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portal.
+> Before you begin, read [Power BI access type considerations](#power-bi-access-type-considerations) and [general Power BI considerations](#general-power-bi-considerations) to get familiar with important Power BI terms and considerations for Power Apps portals.
 
 To add a Power BI component to a web page:
 
 1. [Edit the
-    portal](https://docs.microsoft.com/powerapps/maker/portals/manage-existing-portals#edit).
+    portal](../portals/manage-existing-portals.md#edit).
 
 1. Select the page to add a component to.
 
@@ -370,7 +370,7 @@ To add a Power BI component to a web page:
 
 1. Select **Components** from the left side of the screen.
 
-1. From Portal components, select **Power BI**. The Power BI placeholder is added to the canvas:
+1. From Portal components section, select **Power BI**. The Power BI placeholder is added to the canvas:
 
     ![Components](media/components-powerbi.png)
 
@@ -380,13 +380,14 @@ To add a Power BI component to a web page:
 
         ![Power BI Access type](media/powerbi-access-type.png "Power BI Access type")
 
-        1. **Embed for your customers** - Allows you to securely share the Power BI report or dashboard to external users without Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI chart into portal.
+        1. **Embed for your customers** - Allows you to securely share the Power BI dashboards or reports to external users without Power BI license or Azure Active Directory authentication setup. This option uses Power BI Embedded services to integrate Power BI dashboards or reports into portal.
             > [!NOTE]
-            > Make sure [Power BI Embedded service is enabled](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service) and respective Power BI workspaces are selected, and shared with the maker or the logged-in user.
+            > Ensure [Power BI Embedded service is enabled](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service) and respective Power BI workspaces are selected, and shared with the maker or the logged-in user.
 
-        1. **Embed for your organization** - Allows you to securely share the Power BI report or dashboard to Azure Active Directory authenticated users. 
+        1. **Embed for your organization** - Allows you to securely share the Power BI dashboards or reports to Azure Active Directory authenticated users.
+
             > [!NOTE]
-            > Make sure you've shared Power BI workspaces with maker and target portal users.
+            > Ensure you've shared Power BI workspaces with maker and target portal users.
 
         3. **Publish to web** - Allows you to share Power BI report or dashboard to anyone on the internet.
 
@@ -399,7 +400,7 @@ To add a Power BI component to a web page:
         ![Select type](media/type-powerbi.png "Select type")
 
         - **Dashboard** - Allows you to choose a **Dashboard**, and then a **Tile** from the selected dashboard to display on the web page.
-        - **Report** - Allows you to select a **Report**, and then a **Page** from the report to dosplay on the web page.
+        - **Report** - Allows you to select a **Report**, and then a **Page** from the report to display on the web page.
 
     1. **Apply roles**: If you have defined roles in Power BI and assigned them to reports, you must enter appropriate roles in this field.
 
@@ -420,36 +421,39 @@ To add a Power BI component to a web page:
     
         ![Embed Code URL](media/embed-code-url.png "Embed Code URL")
 
-        - To know how to get embed code URL, go to [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
-        - Only available for access type **Publish to web**. 
+        - To learn how to get embed code URL, go to [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
+        - Only available for access type **Publish to web**.
 
 ### Power BI access type considerations
 
-The following highlights *Power BI access types* in brief. For more information, go to [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
+The following explains Power BI access types in brief and lists access type considerations for Power Apps portals. For more information, go to [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
 
 - **Embed for your customers**:
-    - Shows the list of workspaces shared to logged in user and enabled for [Power BI Embedded service](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-embedded-service).
+    - Shows the list of workspaces shared to logged in user and enabled for [Power BI Embedded service](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-embedded-service).
     - Uses Power BI Embedded service.
     - If you've used Power BI Embedded service with Power Apps portals before, you'll see the following error when you select **Embed for your customers**:
 
         ![Power BI Embed for your customers - enable visualization again](media/embed-power-bi-visualization-enable-again.png)
     
-        When this happens, ensure you [disable](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#disable-power-bi-visualization) and then [enable](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#enable-power-bi-visualization) Power BI visualization again.
-    - If you add Power BI with *Embed for your customers* on a Power Apps portal page that is available **anonymously**, anyone can view the dashboard. To secure such a web page, read [web page access control in Power Apps portal](https://docs.microsoft.com/powerapps/maker/portals/configure/webpage-access-control).
+        When this happens, ensure you [disable](../portals/admin/set-up-power-bi-integration.md#disable-power-bi-visualization) and then [enable](../portals/admin/set-up-power-bi-integration.md#enable-power-bi-visualization) Power BI visualization again.
+    - If you add Power BI with **Embed for your customers** on a Power Apps portal page that is available **anonymously**, anyone can view the dashboard. To secure such a web page, read [web page access control in Power Apps portal](../portals/configure/webpage-access-control.md).
+
 - **Embed for your organization**:
+
     - Shows the list of workspaces shared with logged in user.
     - Uses Azure Active Directory authentication.
+
 - **Publish to web**: Anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Do not publish confidential or sensitive information. When in doubt, check your organization's policies before publishing.
 
 ### General Power BI considerations
 
-- [Portals Studio](https://docs.microsoft.com/powerapps/maker/portals/portal-designer-anatomy) performance can degrade while working with Power BI workspaces due to the following Power BI workspace configurations:
+- [Portals Studio](../portals/portal-designer-anatomy.md) performance can degrade while working with Power BI workspaces due to the following Power BI workspace configurations:
     - High number of workspaces shared with logged in maker user.
     - Power BI workspaces are shared with many users.
-- [Capture liquid variable](https://docs.microsoft.com/powerapps/maker/portals/liquid/portals-entity-tags#powerbi) is not supported in portal Studio while working with Power BI component.
-- If you [reset portal](https://docs.microsoft.com/powerapps/maker/portals/admin/reset-portal) and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, go to [Set up Power BI integration](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#create-security-group-and-add-to-power-bi-account).
+- [Capture liquid variable](../portals/liquid/portals-entity-tags.md#powerbi) is not supported in portals Studio while working with Power BI component.
+- If you [reset portal](../portals/admin/reset-portal.md) and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, go to [Set up Power BI integration](../portals/admin/set-up-power-bi-integration.md#create-security-group-and-add-to-power-bi-account).
 - If you make a change in Power Apps portals admin center, you must reload the portals Studio if you already have it open.
-- Adding users to Power BI reports and dashboards may take a while to reflect in the portals Studio.
+- Adding users to Power BI dashboards and reports may take a while to reflect in the portals Studio.
 
 ### Power BI performance and optimization considerations
 
