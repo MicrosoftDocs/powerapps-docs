@@ -124,7 +124,7 @@ When you select an event in the grid, a panel displays containing additional det
 
 
 
-## Invite other users to your Monitor session
+## Invite others to your session
 Inviting other user(s) to your Monitor session enables you to quickly collaborate and debug an app together, without the need to share your screen. When you invite others to participate in a session, they see the exact same app events in their own browser, without having to open the app or the need to reproduce the specific scenario you are debugging. This allows you and other participants to navigate, view and inspect the app events independently without stepping on each other or handing control back-and-forth to identify the problem. 
 
 > [!NOTE]
@@ -132,20 +132,21 @@ Inviting other user(s) to your Monitor session enables you to quickly collaborat
 
 1. Select **Invite** in the top menu.
 
-1. Specify by name or alias of the users in Azure Active Directory with which you want to invite to the Monitor session.  
+2. Specify by name or alias of the users in Azure Active Directory with which you want to invite to the Monitor session.  
 
     ![Invite user](./media/monitor/invite-user.png "Invite user")
 
-1. Select the user to generate a link to the current Monitor diagnostics session. 
+3. Select the user to generate a link to the current Monitor session. 
 
 > [!NOTE]
 > The link is unique for each user. It cannot be shared between users. The link expires after 60 minutes.
 
-1. Select the link icon to copy the session link and send it to the user you have invited to the session.
+4. Select the link icon to copy the session link and send it to the user you have invited to the session.
 
     ![Session link](./media/monitor/session-link.png "Session link")
 
-1. The link opens the Monitor and connects the user to your Monitor session.
+5. The link opens the Monitor and connects the user to your Monitor session.
+   
 
 ## Download and upload a trace file
 
