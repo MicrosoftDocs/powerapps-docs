@@ -28,7 +28,7 @@ search.app:
  You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources.   
  
 > [!NOTE]
-> The system administrator security role is required to import a solution that includes a plug-in assembly. 
+> To import a solution that includes a plug-in assembly requires the Create privilege on the Plug-In Assembly entity. By default, the System Administrator security role has this privilege. By default, the System Customer security role doesn’t. 
  
 1.  Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
   
