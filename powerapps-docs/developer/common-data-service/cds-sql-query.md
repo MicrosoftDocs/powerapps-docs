@@ -25,6 +25,7 @@ A SQL data connection is available on the Common Data Service endpoint. The SQL 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - Instructions to enable the feature can be found here: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi).
 
 ## Applications support
 
