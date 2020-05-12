@@ -28,6 +28,40 @@ entity record data using a Power Apps app.
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
+
+    To enable TDS endpoint for CDS in an enviroment you have to be an administrator and perform the following steps (this is only required during the preview; administrative UI comming soon):
+    
+      1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
+      
+      2. Verify that your enviroment has version 9.1.0.17437 by navigating to Settings --> Advanced Settings, wait for advanced settings tab to open, then click on Settings --> About
+      
+      3. Download the OrgDBOrgSettimgs tool from https://www.microsoft.com/en-us/download/details.aspx?id=56131. You will need download 
+CRM2016-Tools-KB4046795-ENU-amd64.exe to complete this step. Extract application.
+
+      4. Update following settings inside Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config file:
+
+     - Setting Name: OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService    
+     - Setting Value: https://disco.<domain of your org E.g. crm3.dyanics.com>/XrmServices/2011/Discovery.svc
+
+      - Setting Name: OrgDBOrgSettingsTool_SKU   
+      - Setting Value: Online
+      
+      - Setting Name: OrgDBOrgSettingsTool_UserName 
+      - Setting Value: <admin user login>
+      
+      - Setting Name: OrgDBOrgSettingsTool_OrgServiceUri 
+      - Setting Value: https://<Full org host name with domain>/XrmServices/2011/Organization.svc
+      
+     5. Add the following node under <configuration> in Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config
+      <runtime>
+          <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=false"/>
+      </runtime>
+      
+     6. Run the command     
+          - Microsoft.Crm.SE.OrgDBOrgSettingsTool Update /u <org unique name> EnableTDSEndpoint true
+          
+To view the data:
+
 1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the
     appropriate environment from the top-right corner.
 
