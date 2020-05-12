@@ -31,7 +31,7 @@ entity record data using a Power Apps app.
 
 For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Data Service in an environment you must be an administrator and perform the following steps:
     
-1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
+1. Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
       
 2. Verify that your enviroment has version 9.1.0.17437. To do this, go to **Settings** > **Advanced Settings**. Then, on the new browser tab that opens select the **Settings** gear on the toolbar, and then select **About**.
       
@@ -40,26 +40,26 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
 4. Open the **Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config** file and make the following changes. 
 
    ```xml
-   Setting Name: OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService    
-   Setting Value: https://disco. <!-- *https://disco* should be replaced with the discovery URL for your environment, such as *crm3.dynamics.com>/XrmServices/2011/Discovery.svc*.-->
+      Setting Name: OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService    
+      Setting Value: https://disco. <!-- *https://disco* should be replaced with the discovery URL for your environment, such as *crm3.dynamics.com>/XrmServices/2011/Discovery.svc*.-->
 
-   Setting Name: OrgDBOrgSettingsTool_SKU   
-   Setting Value: Online
+      Setting Name: OrgDBOrgSettingsTool_SKU   
+      Setting Value: Online
       
-   Setting Name: OrgDBOrgSettingsTool_UserName 
-   Setting Value: <!-- admin user login-->
+      Setting Name: OrgDBOrgSettingsTool_UserName 
+      Setting Value: <!-- admin user login-->
       
-   Setting Name: OrgDBOrgSettingsTool_OrgServiceUri 
-   Setting Value: https://<!-- Full org host name with domain>/XrmServices/2011/Organization.svc -->
+      Setting Name: OrgDBOrgSettingsTool_OrgServiceUri 
+      Setting Value: https://<!-- Full org host name with domain>/XrmServices/2011/Organization.svc -->
    ```
   
 5. Add the following node under <configuration> in Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config: 
-   ```xml
+   
+    ```xml
       <runtime>
           <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=false"/>
       </runtime>
     ```
-
       
 6. Open a command window and run the following command:      
     - Microsoft.Crm.SE.OrgDBOrgSettingsTool Update /u <org unique name> EnableTDSEndpoint true
