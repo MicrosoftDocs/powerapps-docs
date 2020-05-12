@@ -124,7 +124,7 @@ When you select an event in the grid, a panel displays containing additional det
 
 
 
-## Invite others to your session
+## Collaborative debugging 
 Inviting other user(s) to your Monitor session enables you to quickly collaborate and debug an app together, without the need to share your screen. When you invite others to participate in a session, they see the exact same app events in their own browser, without having to open the app or the need to reproduce the specific scenario you are debugging. This allows you and other participants to navigate, view and inspect the app events independently without stepping on each other or handing control back-and-forth to identify the problem. 
 
 > [!NOTE]
