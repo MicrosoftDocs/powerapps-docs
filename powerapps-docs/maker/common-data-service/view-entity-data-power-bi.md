@@ -28,39 +28,43 @@ entity record data using a Power Apps app.
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-
-    For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Data Service in an environment you must be an administrator and perform the following steps:
+## Prerequisite
+For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Data Service in an environment you must be an administrator and perform the following steps:
     
-      1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
+1. Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
       
-      2. Verify that your enviroment has version 9.1.0.17437. To do this, go to Settings > Advanced Settings. Then, on the new browser tab that opens select the Settings gear on the toolbar, and then select About.
+2. Verify that your enviroment has version 9.1.0.17437. To do this, go to **Settings** > **Advanced Settings**. Then, on the new browser tab that opens select the **Settings** gear on the toolbar, and then select **About**.
       
-      3. Download the OrgDBOrgSettimgs tool from https://www.microsoft.com/en-us/download/details.aspx?id=56131. Download 
-CRM2016-Tools-KB4046795-ENU-amd64.exe to complete this step. After the download is completed, extract the package contents.
+3. Download the [OrgDBOrgSettingsTool](https://www.microsoft.com/en-us/download/details.aspx?id=56131). During the download, select **CRM2016-Tools-KB4046795-ENU-amd64.exe**. After the download is completed, install the tool.
 
-      4. Update following settings inside the Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config file:
+4. Open the **Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config** file and make the following changes. 
 
-     - Setting Name: OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService    
-     - Setting Value: https://disco.<domain of your org E.g. crm3.dyanics.com>/XrmServices/2011/Discovery.svc
+   ```xml
+      Setting Name: OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService    
+      Setting Value: https://disco. <!-- *https://disco* should be replaced with the discovery URL for your environment, such as *crm3.dynamics.com>/XrmServices/2011/Discovery.svc*.-->
 
-      - Setting Name: OrgDBOrgSettingsTool_SKU   
-      - Setting Value: Online
+      Setting Name: OrgDBOrgSettingsTool_SKU   
+      Setting Value: Online
       
-      - Setting Name: OrgDBOrgSettingsTool_UserName 
-      - Setting Value: <admin user login>
+      Setting Name: OrgDBOrgSettingsTool_UserName 
+      Setting Value: <!-- admin user login-->
       
-      - Setting Name: OrgDBOrgSettingsTool_OrgServiceUri 
-      - Setting Value: https://<Full org host name with domain>/XrmServices/2011/Organization.svc
-      
-     5. Add the following node under <configuration> in Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config: 
+      Setting Name: OrgDBOrgSettingsTool_OrgServiceUri 
+      Setting Value: https://<!-- Full org host name with domain>/XrmServices/2011/Organization.svc -->
+   ```
+  
+5. Add the following node within the &lt;configuration&gt; node in the Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config file: 
+   
+    ```xml
       <runtime>
           <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=false"/>
       </runtime>
+    ```
       
-     6. Run the following command:      
-          - Microsoft.Crm.SE.OrgDBOrgSettingsTool Update /u <org unique name> EnableTDSEndpoint true
+6. Open a command window, move to the folder where the OrgDBOrgSettingsTool contents are located, and run the following command:      
+    - Microsoft.Crm.SE.OrgDBOrgSettingsTool Update /u <org unique name> EnableTDSEndpoint true
           
-To view the data:
+## View entity data
 
 1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the
     appropriate environment from the top-right corner.
