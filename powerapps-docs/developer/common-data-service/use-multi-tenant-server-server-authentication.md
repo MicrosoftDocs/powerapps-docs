@@ -62,12 +62,12 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
  You will create a multi-tenant web application or service which uses Azure AD as the authentication provider.  
   
  Exactly how you do this will not be the focus of this topic. There are a number of ways you can approach this and make choices that fit your requirements or preferences. See the following links for more information and samples:  
+
+- [Build a multi-tenant SaaS web application using Azure AD & OpenID Connect](https://github.com/Azure-Samples/active-directory-dotnet-webapp-multitenant-openidconnect)
   
-- [Build a multi-tenant SaaS web application using Azure AD &amp; OpenID Connect](https://azure.microsoft.com/documentation/samples/active-directory-dotnet-webapp-multitenant-openidconnect/)  
+- [An ASP.NET Core Web app signing-in users in any org with the Microsoft identity platform](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/1-WebApp-OIDC/1-2-AnyOrg)  
   
-- [Build a multi-tenant SaaS web application that calls a web API using Azure AD](https://azure.microsoft.com/documentation/samples/active-directory-webapp-webapi-multitenant-openidconnect-aspnetcore/)  
-  
-  Azure AD requires the following values to register your application:  
+Azure AD requires the following values to register your application:  
   
 |Value|Description|  
 |-----------|-----------------|  
