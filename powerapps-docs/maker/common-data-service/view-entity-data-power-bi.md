@@ -35,7 +35,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
       
 2. Verify that your enviroment has version 9.1.0.17437. To do this, go to **Settings** > **Advanced Settings**. Then, on the new browser tab that opens select the **Settings** gear on the toolbar, and then select **About**.
       
-3. Download the [OrgDBOrgSettimgs tool](https://www.microsoft.com/en-us/download/details.aspx?id=56131). During the download, select **CRM2016-Tools-KB4046795-ENU-amd64.exe**. After the download is completed, install the tool.
+3. Download the [OrgDBOrgSettingsTool](https://www.microsoft.com/en-us/download/details.aspx?id=56131). During the download, select **CRM2016-Tools-KB4046795-ENU-amd64.exe**. After the download is completed, install the tool.
 
 4. Open the **Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config** file and make the following changes. 
 
@@ -61,7 +61,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
       </runtime>
     ```
       
-6. Open a command window and run the following command:      
+6. Open a command window, move to the folder where the OrgDBOrgSettingsTool contents are located, and run the following command:      
     - Microsoft.Crm.SE.OrgDBOrgSettingsTool Update /u <org unique name> EnableTDSEndpoint true
           
 ## View entity data
