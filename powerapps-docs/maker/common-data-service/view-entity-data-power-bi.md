@@ -28,7 +28,7 @@ entity record data using a Power Apps app.
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
-
+## Prerequisite
 For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Data Service in an environment you must be an administrator and perform the following steps:
     
 1. Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
@@ -64,7 +64,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
 6. Open a command window and run the following command:      
     - Microsoft.Crm.SE.OrgDBOrgSettingsTool Update /u <org unique name> EnableTDSEndpoint true
           
-To view the data:
+## View entity data
 
 1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the
     appropriate environment from the top-right corner.
