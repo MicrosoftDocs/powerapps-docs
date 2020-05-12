@@ -37,7 +37,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
       
 3. Download the [OrgDBOrgSettingsTool](https://www.microsoft.com/en-us/download/details.aspx?id=56131). During the download, select **CRM2016-Tools-KB4046795-ENU-amd64.exe**. After the download is completed, install the tool.
 
-4. Open the **Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config** file and make the following changes. If your advanced settings environment URL is *https://orgbb33fb45f.crm3.dynamics.com/main.aspx* the OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService value will be *https://disco.crm3.dynamics.com/XRMServices/2011/Discovery.svc* and the OrgDBOrgSettingsTool_OrgServiceUri value will be *https://orgbb33fb45f.crm3.dynamics.com/XrmServices/2011/Organization.svc*. 
+4. Open the **Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config** file and make the following changes. For example, if your advanced settings environment URL is `https://orgbb33fb45f.crm3.dynamics.com/main.aspx` the OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService value will be `https://disco.crm3.dynamics.com/XRMServices/2011/Discovery.svc` and the OrgDBOrgSettingsTool_OrgServiceUri value will be `https://orgbb33fb45f.crm3.dynamics.com/XrmServices/2011/Organization.svc`. 
 
    ```xml
       Setting Name: OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService    
