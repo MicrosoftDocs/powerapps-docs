@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/08/2020
+ms.date: 05/11/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 ---
@@ -22,6 +22,7 @@ To export configuration data, you would need to use the Configuration Migration 
 > [!NOTE]
 > - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget).
 > - The minimum solution version of portals supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
+> - Source and destination organizations must have same default language for the migration to work successfully.
 
 Schema files are available for the following portal types:
 
