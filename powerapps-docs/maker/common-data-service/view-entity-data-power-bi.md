@@ -53,7 +53,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
       Setting Value: https://<!-- Full org host name with domain>/XrmServices/2011/Organization.svc -->
    ```
   
-5. Add the following node under the &lt;configuration&gt; node in the Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config file: 
+5. Add the following node within the &lt;configuration&gt; node in the Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config file: 
    
     ```xml
       <runtime>
