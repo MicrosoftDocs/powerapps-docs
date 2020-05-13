@@ -5,7 +5,7 @@ author: pankajarora-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/28/2020
+ms.date: 05/12/2020
 ms.author: pankar
 ms.reviewer: tapanm
 searchScope:
@@ -77,6 +77,9 @@ The Hospital Emergency Response sample solution app consists of multiple apps fo
 
 - **Discharge planning**
     <br> Collect status and projections on ​patient discharges.
+
+- **Dashboard**
+    <br> View the Power BI dashboards for insights and decision making.
 
 > [!NOTE]
 > By default, you can track information in the following apps at a *location* level: **COVID-19 stats**, **Equipment**, and **Staff**. In rest of the apps, you can track information at the *facility* level by default. Your admin can change the default tracking level, if required. More information: [Manage tracking level for mobile apps](configure-data-reporting.md#manage-tracking-level-for-mobile-apps)
@@ -248,6 +251,14 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | **Discharges**            |                                                                    |
 | Past 24 h                 | Number of patients expected to be discharged in last 24 hours.  |
 | Likely next 24 h          | Number of patients discharged in last 24 hours.                    |
+
+## Dashboards
+
+View the Power BI dashboards for insights and decision making. 
+
+For more details about dashboards, go to [View Power BI dashboards](configure-data-reporting.md#view-power-bi-dashboard).
+
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change.
 
 ## Other options
 
