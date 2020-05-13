@@ -245,6 +245,10 @@ As an admin, you can change the default tracking level of mobile apps.
 
 1. Select **Save** in the lower-right corner to save your changes.
 
+## Set the Power BI report URL for Dashboard mobile app
+
+The **Dashboard** mobile app lets frontline worker view the Power BI dashboard in the browser of their mobile app. More information:  
+
 ## View Common Data Service dashboards
 
 Following dashboards are available by default in the Hospital Emergency Response admin (model-driven) app:
