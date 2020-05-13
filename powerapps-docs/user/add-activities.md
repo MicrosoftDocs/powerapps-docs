@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 03/10/2020
+ms.date: 05/11/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -215,6 +215,25 @@ Manage activities directly from the timeline wall including assigning an activit
   ![Timeline command bar options](media/timeline-options2.png "Timeline command bar options")
   ![Timeline command bar options](media/timeline-options3.png "Timeline command bar options")
   ![Timeline command bar options](media/timeline-options4.png "Timeline command bar options")
+
+## See activities in List or Calendar view
+
+You can see the activities in the following views:
+
+- **List**: Shows a list of all activities.
+
+  > [!div class="mx-imgBorder"]
+  > ![List view](media/grid-view.png "List view") 
+
+- **Calendar**: Shows a calendar with a list of the day's scheduled activities and the associated deals.
+
+  > [!div class="mx-imgBorder"]
+  > ![Old calendar view](media/old-cal-view.png "Old calendar view") 
+
+- **New Calendar**: Shows an interactive calendar with a list of the day's scheduled activities and the associated deals. More information: [Work with records in the new calendar view](calendar-view.md)
+
+    > [!div class="mx-imgBorder"]
+    > ![New calendar view](media/cal-view.png "New calendar view") 
 
 ## See also
 
