@@ -252,7 +252,7 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | Past 24 h                 | Number of patients expected to be discharged in last 24 hours.  |
 | Likely next 24 h          | Number of patients discharged in last 24 hours.                    |
 
-## Dashboards
+## Dashboard
 
 View the Power BI dashboards for insights and decision making. 
 
