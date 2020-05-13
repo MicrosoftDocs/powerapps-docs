@@ -323,37 +323,7 @@ Lists use [Common Data Service views](https://docs.microsoft.com/powerapps/maker
 
 5.  Under **Portal components**, select **Breadcrumb**.
 
-## Add a custom menu
-
-By default, the menu on the website is created automatically based on the hierarchy of the webpages. It's called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](configure/manage-web-links.md)
-
-After you create the web link set:
-
-1.    [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
-
-2.    Select the header component. 
-
-3.    In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
-
-    > [!div class=mx-imgBorder]
-    > ![Navigation menu](media/navigation-menu.png "Navigation menu")
-
-## Use code editor
-
-To view the source of a component on the canvas, select the component, and then select the source code editor icon **&lt;/&gt;** in the footer.
-
-> [!div class=mx-imgBorder]
-> ![code editor icon](media/code-editor-icon.png "Code editor icon")  
-
-The source code is displayed in the **Code Editor** pane at the bottom of the screen. The changes you made earlier are updated in the source code. To make changes, update the source code and select **Save**. The changes are reflected on the canvas.
-
-> [!div class=mx-imgBorder]
-> ![code editor](media/code-editor.png "Code editor") 
-
-> [!NOTE]
-> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)
-
-## Add Power BI
+### Add Power BI
 
 You can add Power BI component on a page to display Power BI dashboards and reports on your portal.
 
@@ -425,7 +395,7 @@ To add a Power BI component to a web page:
         - To learn about how to get embed code URL, go to [Publish to web from Power BI](https://docs.microsoft.com/power-bi/service-publish-to-web)
         - Only available for access type **Publish to web**.
 
-### Power BI access type considerations
+#### Power BI access type considerations
 
 The following list explains Power BI access types in brief. And lists access type considerations for Power Apps portals. For more information about Power BI access types, go to [Difference between Power BI service and Power BI embedded](https://docs.microsoft.com/power-bi/developer/embedded/embedded-faq#how-is-power-bi-embedded-different-from-power-bi-the-service).
 
@@ -446,7 +416,7 @@ The following list explains Power BI access types in brief. And lists access typ
 
 - **Publish to web**: Anyone on Internet can view your published report or visual. This requires no authentication and includes viewing detail level data your reports aggregate. Before publishing a report, make sure you can share the data and visualizations publicly. Don't publish confidential or sensitive information. Refer to your organization's policies before publishing.
 
-### General Power BI considerations
+#### General Power BI considerations
 
 - [Portals Studio](../portals/portal-designer-anatomy.md) performance can degrade while working with Power BI workspaces because of the following Power BI workspace configurations:
     - High number of workspaces shared with logged in maker user.
@@ -456,13 +426,43 @@ The following list explains Power BI access types in brief. And lists access typ
 - If you make a change in Power Apps portals admin center, you must reload the portals Studio if you already have it open.
 - Adding users to Power BI dashboards and reports may take a while to reflect in the portals Studio.
 
-### Power BI performance and optimization considerations
+#### Power BI performance and optimization considerations
 
 Embedding multiple Power BI workspaces may need additional considerations. Refer to the following resources for Power BI embed scenario troubleshooting, optimization, and best practices:
 
 - [Troubleshooting Power BI Embedded application content rendering](https://docs.microsoft.com/power-bi/developer/embedded/embedded-troubleshoot#content-rendering).
 - [Power BI Embedded performance best practices](https://docs.microsoft.com/power-bi/developer/embedded/embedded-performance-best-practices).
 - [Power BI optimization guide](https://docs.microsoft.com/power-bi/guidance/power-bi-optimization).
+
+## Add a custom menu
+
+By default, the menu on the website is created automatically based on the hierarchy of the webpages. It's called the **default** menu. To create a custom menu, you must create the web link set in the Portal Management app. More information: [Manage web links](configure/manage-web-links.md)
+
+After you create the web link set:
+
+1.    [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
+
+2.    Select the header component. 
+
+3.    In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
+
+    > [!div class=mx-imgBorder]
+    > ![Navigation menu](media/navigation-menu.png "Navigation menu")
+
+## Use code editor
+
+To view the source of a component on the canvas, select the component, and then select the source code editor icon **&lt;/&gt;** in the footer.
+
+> [!div class=mx-imgBorder]
+> ![code editor icon](media/code-editor-icon.png "Code editor icon")  
+
+The source code is displayed in the **Code Editor** pane at the bottom of the screen. The changes you made earlier are updated in the source code. To make changes, update the source code and select **Save**. The changes are reflected on the canvas.
+
+> [!div class=mx-imgBorder]
+> ![code editor](media/code-editor.png "Code editor") 
+
+> [!NOTE]
+> You can also add Liquid tags in source code editor for advanced configuration. More information: [Work with Liquid templates](liquid/liquid-overview.md)
 
 ## Next steps
 
