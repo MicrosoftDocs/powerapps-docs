@@ -22,7 +22,7 @@ search.app:
  You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources.   
  
 > [!NOTE]
-> To import a solution that includes a plug-in assembly, the **Create** privilege on the Plug-In Assembly entity is required. By default, the System Administrator security role has this privilege, but the System Customizer security role doesn’t. 
+> To import a solution that includes a plug-in assembly, the **Create** privilege on the **Plug-In Assembly** entity is required. By default, the System Administrator security role has this privilege, but the System Customizer security role doesn’t. 
  
 1.  Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
   
