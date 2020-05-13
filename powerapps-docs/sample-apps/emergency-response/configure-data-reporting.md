@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/11/2020
+ms.date: 05/13/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
@@ -245,9 +245,26 @@ As an admin, you can change the default tracking level of mobile apps.
 
 1. Select **Save** in the lower-right corner to save your changes.
 
-## Set the Power BI report URL for Dashboard mobile app
+## Configure the Power BI report URL for the Dashboard mobile app
 
-The **Dashboard** mobile app lets frontline worker view the Power BI dashboard in the browser of their mobile app. More information:  
+You can set the Power BI report URL for the **Dashboard** mobile app so that frontline workers can view the dashboard in the browser of their mobile app. More information:
+
+> [!NOTE]
+> Ensure that you have the Power BI report URL from your IT admin. The Power BI report URL is available after publishing the Power BI dashboard. More information: [Step 10: Publish the Power BI dashboard](deploy-configure.md#step-10-publish-the-power-bi-dashboard)
+
+
+1.  Sign into the admin app (model-driven app) using the URL provided by your IT admin.
+
+1.  In the left navigation, select the **Administration** area, and then select **Apps**.
+
+1.  Select **Emergency Response App - Dashboard** to open the record.
+
+1.  In the app record, specify the report URL in the **Launch URL** field.
+
+    > [!div class="mx-imgBorder"]
+    > ![dashboard-launch-url](media/dashboard-launch-url.png)
+
+1.  Save the record.
 
 ## View Common Data Service dashboards
 
@@ -349,6 +366,9 @@ Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI 
 > ![View Power BI dashboard](media/view-powerbi-dashboard.png)
 
 You can use the filters on the right side to filter data for COVID locations, facilities, regions and hospital systems.
+
+> [!NOTE]
+> The Power BI dashboard is also optimized to view in the Power BI mobile app. For information about using the Power BI mobile app to view dashboards, see [Explore dashboards and reports in the Power BI mobile apps](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-quickstart-view-dashboard-report) in Power BI docs.
 
 #### System at a glance page 
 
@@ -498,30 +518,12 @@ The admin app UI will switch to display in the language you selected.
 
 ## Extend mobile app labels
 
-You can extend Hospital Emergency Response mobile app labels with custom text. To do this, you have to import the **Canvas Apps Strings** solution. The solution adds model-driven app named **Canvas App Label Management** that you can use to customize the Hospital Emergency Response mobile app labels. Add new languages supported by the solution and text for corresponding mobile app labels using the model-driven app.
+You can extend Hospital Emergency Response mobile app labels with custom text. To do this, you model-driven app named **Canvas App Label Management** to customize the mobile app labels. Add new languages supported by the solution and text for corresponding mobile app labels using the model-driven app. You can create and edit strings across different languages for use in the mobile app.
 
-Download the latest label customization solution package (.zip) from https://aka.ms/emergency-response-solution.
+> [!div class="mx-imgBorder"]
+> ![canvas-app-label-app](media/canvas-app-label-app.png)
 
-### Prerequisites
-
-- You must have [Hospital Emergency Response - Power Platform sample solution](overview.md) already deployed.
-- Before you deploy the solution, take a note of the current live version of your canvas apps for Hospital Emergency Response solution. For more details, go to [Uninstalling the Canvas App Strings solution](#uninstalling-the-canvas-app-strings-solution).
-
-### Import the Canvas App Strings solution
-
-Download the **Canvas App Strings** solution and import to your environment. For instructions on how to import solution, read [Import a solution](../../maker/model-driven-apps/distribute-model-driven-app.md#import-a-solution).
-
-The **Canvas App Strings** solution contains:
-
-- Canvas app string entities.
-- Model-driven app to manage strings.
-- Updated set of canvas apps.
-
-### Working with the Canvas App Label Management app
-
-Canvas App Label Management app is a model-driven app imported when you import the **Canvas App Strings** solution. You can create and edit strings across different languages for use in the Hospital Emergency Response mobile app.
-
-#### Add new language record
+### Add new language record
 
 Create a new language record for labels in mobile app. After you add the language record, you can add custom labels for Hospital Emergency Response mobile app.
 
@@ -536,7 +538,7 @@ Create a new language record for labels in mobile app. After you add the languag
 
 1. Select **Save**.
 
-#### Add new string record
+### Add new string record
 
 1. Select **Canvas App Strings** from the left pane.
 1. Select **New**.
@@ -549,7 +551,7 @@ Create a new language record for labels in mobile app. After you add the languag
 
 1. Select **Save**.
 
-#### Add your canvas app label
+### Add your canvas app label
 
 1. Select **Canvas App String Values** from the left pane.
 1. Select **New**.
@@ -567,7 +569,7 @@ Create a new language record for labels in mobile app. After you add the languag
 
 You can also follow the steps to add your canvas app label using the sub-grid on the **Canvas App Strings** record.
 
-#### View your changes
+### View your changes
 
 Play the app to view your changes using your mobile device.
 

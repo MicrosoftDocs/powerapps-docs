@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/29/2020
+ms.date: 05/13/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
@@ -222,9 +222,12 @@ You can change the app icon, color scheme, or display name of the mobile apps to
 
 1.  In the app details page:
  
-    1. Double-click the app icon, and select an icon file for the app from the **App Icons** folder. The image files are named intuitively so that you can easily select the correct icon. For example, select the "Emergency Response App.png" file for **Emergency Response App**. You can also select a custom image as per your organization branding.
+    1. To select a custom image for the app icon as per your organization branding, double-click the app icon, and select an icon file of your choice.
 
     3. If necessary, update the **Description** or **Display Name** of the app.
+
+    > [!TIP]
+    > You might want to choose a different display name to identify apps in your test environment. For example: **Test - Bed capacity**.
 
     4. If necessary, update the **Hide App from Menu** value to set if the app should be displayed in the app list. As **Emergency Response App** is a container app, the value is set to **No** by default.
 
@@ -240,9 +243,12 @@ You can change the app icon, color scheme, or display name of the mobile apps to
 
 1.  Select the **Emergency Response App** record to open it for editing.
 
-    1.  If necessary, update the colors for your app.
+1.  If necessary, update the colors for your mobile app.
 
-    2.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in mobile apps or not. Selecting **Yes** will make the **Sign Out** option available. More information: [End shift - sign out](use.md#end-shift---sign-out) in the user guide.
+    > [!TIP]
+    > You might want to specify a different primary color to identify apps in your test environment.
+
+2.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in mobile apps or not. Selecting **Yes** will make the **Sign Out** option available. More information: [End shift - sign out](use.md#end-shift---sign-out) in the user guide.
 
     > [!div class="mx-imgBorder"] 
     > ![Device Sharing Enabled field](media/conf-device-sharing-enabled-field.png "Device Sharing Enabled field")
@@ -415,6 +421,9 @@ This section provides information on how you can use the **Emergency Response Ap
 2. Open the **Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following values:
 
     - **Organization_name**: Type your organization name that will be populated on the top-left corner of each report page.
+        > [!TIP]
+        > You might want to specify a different value for **Organization_name** to identify Power BI dashboard in your test environment. For example, **Contoso Test System**.
+
     - **CDS_base_solution_URL**: Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com
 
     > [!div class="mx-imgBorder"]
