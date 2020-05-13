@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/22/2019
+ms.date: 05/13/2019
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -14,7 +14,10 @@ ms.reviewer:
 
 # Add a Power BI report or dashboard to a web page in portal
 
-You can add a Power BI report or dashboard to a web page in portal by using the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag. You can add the tag in the **Copy** field on a web page or in the **Source** field on a web template. If you adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as **powerbiembedded** in the powerbi Liquid tag.
+You can add a Power BI report or dashboard to a web page in portal by using the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag. You can add the tag in the **Copy** field on a web page or in the **Source** field on a web template. If you adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as **powerbiembedded** in the *powerbi* Liquid tag.
+
+> [!TIP]
+> This article explains how to add a Power BI report or dashboard using *powerbi* liquid tag. To add **Power BI component** on a webpage in your portal using the portals Studio, go to [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi).
 
 For example: 
 
@@ -55,6 +58,6 @@ For example:
 
 ### See also
 
-
-[powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)<br> 
-[Set up Power BI integration](set-up-power-bi-integration.md)
+- [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi)
+- [Set up Power BI integration](set-up-power-bi-integration.md)
+- [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
