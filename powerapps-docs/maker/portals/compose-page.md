@@ -108,6 +108,7 @@ You can add the following components on a webpage:
 - [Form](#add-form)
 - [List](#add-list)
 - [Breadcrumb](#add-breadcrumb)
+- [Power BI](#add-power-bi)
 
 
 ### Add text box
