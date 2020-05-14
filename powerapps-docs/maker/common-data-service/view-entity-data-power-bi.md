@@ -62,7 +62,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
     ```
       
 6. Open a command window, move to the folder where the OrgDBOrgSettingsTool contents are located, and run the following command:      
-    - Microsoft.Crm.SE.OrgDBOrgSettingsTool Update /u <org unique name> EnableTDSEndpoint true
+    - Microsoft.Crm.SE.OrgDBOrgSettingsTool Update /u \<org-unique-name\> EnableTDSEndpoint true
           
 ## View entity data
 
