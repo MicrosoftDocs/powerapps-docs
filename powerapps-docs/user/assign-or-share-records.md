@@ -76,7 +76,7 @@ Use advanced find to search for records and then reassign them to someone else. 
   > [!NOTE]
    > - The **Reassign Records** option will reassign all records regardless of their status. Inactive and active records will be reassigned to the other user or team. This will also deactivate all activated processes including business rules and workflows when the record is reassigned to another user or team. The new owner must activate the processes that was deactivated when the record is reassigned.  
    > - When there is a large amount records to reassign, the system may take a while to process. 
-   > - If there is an issue during the reassignment process such as the user that the records are being resigned to doesn't required  privileges then the **Reassign Records** process will stop. The records that are processed before the issue are updated and saved. For the other records that were not saved will need to be reassigned again using the **Reassign Records** option.
+   > - If there is an issue during the reassignment process such as the user that the records are being reassigned to doesn't required  privileges then the **Reassign Records** process will stop. The records that are processed before the issue will be updated and saved. For the other records that were not saved will need to be reassigned again using the **Reassign Records** option.
    
  
    > [!div class="mx-imgBorder"]
