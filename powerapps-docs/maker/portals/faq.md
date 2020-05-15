@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/11/2020
+ms.date: 05/14/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -152,7 +152,7 @@ After you've provisioned a portal, the option to change the portal audience is d
 However, you can change the audience and type of portal after it's provisioned by following the steps in [Change the Dynamics 365 instance, audience, or type of portal](admin/change-dynamics-instance.md).
 
 > [!NOTE]
-> - it's recommended to reset and provision your portal again to change the audience, type of portal, organization, and so on. More information: [Reset a portal](admin/reset-portal.md)
+> - It's recommended to reset and provision your portal again to change the audience, type of portal, organization, and so on. More information: [Reset a portal](admin/reset-portal.md)
 > - The changing of Dynamics 365 instance is applicable only to the portals provisioned using the older portal add-ons.
 
 ### How do I change the base URL of a portal after it's provisioned?
@@ -191,11 +191,11 @@ When a Common Data Service environment is restored from a backup, various change
 
 - If the organization ID is the same after the restore operation, and portal solutions are also available:
 
-1. Open [Power Apps Portals admin center](admin/admin-overview.md).
-2. Go to the **Portal Details** tab.
-3. In the **Portal State** drop-down list, choose **Off**.
-4. Select **Update**. 
-5. Once the update operation is complete, set the **Portal State** drop-down list to **On** and then select **Update**.
+    1. Open [Power Apps Portals admin center](admin/admin-overview.md).
+    2. Go to the **Portal Details** tab.
+    3. In the **Portal State** drop-down list, choose **Off**.
+    4. Select **Update**. 
+    5. Once the update operation is complete, set the **Portal State** drop-down list to **On** and then select **Update**.
 
   Your portal will be restarted and a connection will be created with the organization again.
 
@@ -225,7 +225,7 @@ Whenever a server error occurs while trying to render a portal, a generic error 
 
 - **Disable the custom error page on the portal**: This will turn off the custom error page and will allow you to see the complete stack trace of any error when browsing to that page. You can disable the custom error by following the steps in [Disable custom error](admin/view-portal-error-log.md#disable-custom-error).
 
-it's advisable to use this only when you're developing a portal. Once your portal is live for your users, you should enable custom errors again. More information: [View portal error logs](admin/view-portal-error-log.md)
+It's advisable to use this only when you're developing a portal. Once your portal is live for your users, you should enable custom errors again. More information: [View portal error logs](admin/view-portal-error-log.md)
 
 - **Enable diagnostic logging**: This will allow you to get all the portal errors in an Azure Blob storage account. You can enable diagnostic logging by following the steps in [Access portal error logs](admin/view-portal-error-log.md#access-portal-error-logs).
 
@@ -267,7 +267,9 @@ Below is a list of most common causes and their corresponding mitigation steps:
 This happens when the URL of Common Data Service environment is changed by a user after portal is provisioned against the organization. To fix this issue, update the Dynamics 365 URL:
 
 1. Open [Power Apps Portals admin center](admin/admin-overview.md).
-2. Go to **Portal Actions** > **Update Dynamics 365 URL**. Once this action is successfully executed, your Common Data Service environment URL will be updated and portal will start working.
+2. Go to **Portal Actions** > **Update Dynamics 365 URL**. 
+
+Once this action is successfully executed, your Common Data Service environment URL will be updated and portal will start working.
 
 #### Common Data Service environment connected to your portal is in administration mode
 
@@ -310,11 +312,14 @@ Once you complete the above steps, your portal will restart and will recreate we
 There are situations in which portal won't be able to recreate website binding record automatically when the GUID of the website record available in your instance is different than the one created during default installation of portal. In this situation, do the following steps:
 
 1. Delete all website binding records related to your portal.
+
 2. Create a website binding record manually with following values:
-  - **Name**: Can be any string
-  - **Website**: Select the website record that you want to be rendered on portal
-  - **Sitename**: Type in the hostname of your portal i.e Portal URL without https:// in the beginning. If your Portal is using custom domain name, then use custom domain name here.
-  - Leave all other fields blank.
+
+      - **Name**: Can be any string
+      - **Website**: Select the website record that you want to be rendered on portal
+      - **Sitename**: Type in the hostname of your portal i.e Portal URL without ```https://``` in the beginning. If your Portal is using custom domain name, then use custom domain name here.
+      - Leave all other fields blank.
+
 3. Once website binding record is recreated, restart your portal from Power Apps Portals admin center.
 
 #### An unexpected error has occurred while trying to connect to your Common Data Service environment
@@ -461,10 +466,10 @@ This issue occurs when the **Home** site marker isn't available in your portal c
 
 1.	Open the [Portal Management app](configure/configure-portal.md).
 2.	In the left pane, select **Site Markers**.
-3.	Create a new site marker with following values: 
-  - **Name**: Home
-  - **Website**: Select the website of your portal host.
-  - **Page**: Select the webpage record that is set as the home page of your portal.
+3.	Create a new site marker with following values:
+    - **Name**: Home
+    - **Website**: Select the website of your portal host.
+    - **Page**: Select the webpage record that is set as the home page of your portal.
 
 ### The Home site marker isn't pointing to any webpage
 
@@ -500,9 +505,9 @@ This issue occurs when the **Profile** site marker isn't available in your porta
 1.	Open the [Portal Management app](configure/configure-portal.md).
 2.	In the left pane, select **Site Markers**.
 3.	Create a new site marker with following values: 
-  - **Name**: Profile
-  - **Website**: Select the website of your portal host.
-  - **Page**: Select the webpage record that is set as the profile page of your portal.
+    - **Name**: Profile
+    - **Website**: Select the website of your portal host.
+    - **Page**: Select the webpage record that is set as the profile page of your portal.
 
 ### The Profile site marker isn't pointing to any webpage
 
@@ -529,9 +534,9 @@ This issue occurs when the **Page Not Found** site marker isn't available in you
 1.	Open the [Portal Management app](configure/configure-portal.md).
 2.	In the left pane, select **Site Markers**.
 3.	Create a new site marker with following values: 
-  - **Name**: Page Not Found
-  - **Website**: Select the website of your portal host.
-  - **Page**: Select the webpage record that is set as the Page Not Found page of your portal.
+    - **Name**: Page Not Found
+    - **Website**: Select the website of your portal host.
+    - **Page**: Select the webpage record that is set as the Page Not Found page of your portal.
 
 ### The Page Not Found site marker isn't pointing to any webpage
 
@@ -558,9 +563,9 @@ This issue occurs when the **Access Denied** site marker isn't available in your
 1.	Open the [Portal Management app](configure/configure-portal.md).
 2.	In the left pane, select **Site Markers**.
 3.	Create a new site marker with following values: 
-  - **Name**: Access Denied
-  - **Website**: Select the website of your portal host.
-  - **Page**: Select the webpage record that is set as the Access Denied page of your portal.
+    - **Name**: Access Denied
+    - **Website**: Select the website of your portal host.
+    - **Page**: Select the webpage record that is set as the Access Denied page of your portal.
 
 ### The Access Denied site marker isn't pointing to any webpage
 
