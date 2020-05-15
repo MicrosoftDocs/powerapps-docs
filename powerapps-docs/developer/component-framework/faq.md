@@ -63,6 +63,11 @@ Currently, font resources (files with a .ttf file extension) are not supported b
 
 Currently, [img](manifest-schema-reference/img.md) resources are not supported in canvas apps.
 
+### TabIndex support for components in canvas apps
+
+Currently code components do not support `tabindex` property in canvas apps. For model-driven apps the tab assignment is assigned automatically using `tabIndex = 0`, so elements are navigated in the order they appear. 
+
+
 ## Related topics
 
 [Power Apps component framework API reference](reference/index.md)<br/>

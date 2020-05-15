@@ -6,7 +6,7 @@ ms.date: 05/05/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "phecke" # GitHub ID
+author: "mayadumesh" # GitHub ID
 ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "kvivek" # MSFT alias of manager or PM counterpart
 search.audienceType: 
@@ -25,13 +25,16 @@ A SQL data connection is available on the Common Data Service endpoint. The SQL 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> - Instructions to enable the feature can be found here: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi).
 
 ## Applications support
 
 You can use the **Analyze in Power BI** option (**Data** > **Entities** > **Analyze in Power BI**) in Power Apps (https://make.powerapps.com) to use the SQL connection feature to analyze data in Power BI Desktop. More information: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi)
 
 > [!NOTE]
-> If you don't have the **Analyze in Power BI** option in your Power Apps environment, you don't yet have access to the SQL connection feature.
+> To verify if your target environment has the Common Data Service SQL connection feature enabled, do the following:
+> 1. Sign into Power Apps, on the left navigation pane expand **Data**, and then select **Entities**.
+> 2. On the command bar, you should see a button **Analyze in Power BI**. If you do not see this button, your environment does not yet have the feature.
 
 You can also use [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) (SSMS) version 18.4 or later with the Common Data Service endpoint SQL connection. Examples of using SSMS with the SQL data connection are provided below.
 
