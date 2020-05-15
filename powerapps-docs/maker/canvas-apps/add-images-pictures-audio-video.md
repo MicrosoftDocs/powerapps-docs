@@ -16,42 +16,53 @@ search.app:
 ---
 # Using multimedia files in Power Apps
 
-This topic shows you how to embed multimedia files in your canvas app, upload pen drawings to a data source, and show images from a data source in your canvas app. The data source used in this topic is an Excel file in OneDrive for Business.
+This article shows you how to embed multimedia files in your canvas app, upload pen drawings to a data source, and show images from a data source in your canvas app. The data source used in this article is an Excel file in OneDrive for Business.
 
 ## Prerequisites
 
 [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
-## Add media from a file or the cloud
+## Add images
 
-You can choose the kind of media file to add (for example, images, video, or audio).
+You can choose the kind of images such as .jpeg, .png, .bmp to add to your app screen. You can add images using the media pane, or using the images control.
 
-1. On the **Content** tab, select **Media**.
+![Add Images](./media/add-images-pictures-audio-video/insert-images.gif "Add Images")
 
-2. Under **Media**, select **Images**, **Videos**, or **Audio**, and then select **Browse**:
+### Add images using media pane
 
-    ![Browse media][1]
+To use the **Media** pane to add, remove or use media files in your app:
 
-3. Select the file that you want to add, and then select **Open**.
+1. Select **Media** from the left pane.
 
-    The **Pictures** folder on your computer opens, and you can select an image from there or navigate to another folder.
+    ![Media](./media/add-images-pictures-audio-video/media-panel.png "Media")
 
-4. When you finish adding files, press Esc to return to the default workspace.
+1. Select **Upload** from the media panel.
 
-5. On the **Insert** tab, select **Media**, and then select **Image**, **Video**, or **Audio**:
+    ![Upload media](./media/add-images-pictures-audio-video/upload-media.png "Upload media")
 
-    ![Select media type][8]
+1. Select the file(s) that you want to add, and then select **Open**.
 
-6. If you added an image control, set its **[Image](controls/properties-visual.md)** property to the file that you added:  
+1. Select the file from the media pane to insert into the screen.
 
-    ![Set image property](./media/add-images-pictures-audio-video/imageproperty.png)
+    ![Select image](./media/add-images-pictures-audio-video/select-image.png "Select image")
 
-    > [!NOTE]
-   > Specify the file name only, without the extension, inside single quotes.
+### Add images using the images control
 
-7. If you added a video or audio control, set its **Media** property to the file that you added:  
+To add image using the [Image control](./controls/control-image.md):
 
-    ![Set media property](./media/add-images-pictures-audio-video/mediaproperty.png)
+1. Select **Insert** from the top menu.
+
+1. Select **Media** drop-down.
+
+1. Choose **Image** to add the image control.
+
+1. Select the **Image** property from the property list on top-left, or from the property pane on the right side. 
+
+1. Select the image to insert.
+
+    ![Image control](./media/add-images-pictures-audio-video/image-control.png "Image control")
+
+## Add 
 
     > [!NOTE]
    > Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
@@ -102,6 +113,7 @@ This scenario uses the [CreateFirstApp.zip](https://pwrappssamples.blob.core.win
     In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
 
 ## Upload pen drawings to the cloud
+
 In this scenario, you learn how to upload pen drawings to your data source, OneDrive for Business, and examine how the drawings are stored there.
 
 1. In Excel, add **Image [image]** to cell A1.
@@ -116,7 +128,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
        ![Create a table](./media/add-images-pictures-audio-video/create-table.png)
 
-       Your Excel file is now in a table format. See [Format the data as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370) for more information about table formatting in Excel.
+       Your Excel file is now in a table format. For more information about table formatting in Excel, see [Format the data as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370).
 
    4. Name the table **Drawings**:
 
@@ -156,7 +168,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 9. Add an **Image gallery** control (**Insert** tab > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
 
-    Arrange the controls so that your screen resembles the following:  
+    Arrange the controls so that your screen resembles as shown below:  
 
     ![Sample screen](./media/add-images-pictures-audio-video/screen.png)
 
