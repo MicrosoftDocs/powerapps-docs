@@ -102,6 +102,7 @@ Finally the model-driven app can be saved and published.
 
 
 
+
 <!-- Reference this section for "Use environment variable" Learn more link -->
 ## Create Power BI embedded page with an Environment Variable
 
@@ -119,12 +120,22 @@ When a solution with a Power BI embedded component will be moved to other enviro
     > [!div class="mx-imgBorder"] 
     > ![Select new environment variable](media/create-edit-powerbi-embedded-page/power-bi-embedded-new-environment-variable.png  "Select new environment variable")
 
-1. Nested panel will open to allow creating the environment variable and will default the Display Name and Name based on the dashboard
+1. Nested panel will open to allow creating the environment variable and will default the **Display Name** and **Name** based on the dashboard name
 
-1. 
+    > [!div class="mx-imgBorder"] 
+    > ![Power BI embedded Environment Variable panel](media/create-edit-powerbi-embedded-page/powerbi-embedded-env-var-panel.png  "Power BI embedded Environment Variable panel")
+
+1. Power BI embedded environment variable panel allows configuring workspace and report/dashboard whcih is stored as JSON with both values.  This is done for either the default value or the current value.
+
+1. Saving the environment variable will then show the default and/or current values for workspace and report/dashboard
+
+    > [!div class="mx-imgBorder"] 
+    > ![Power BI embedded environment variable value preview](media/create-edit-powerbi-embedded-page/power-bi-embedded-environment-variable-value-preview.png  "Power BI embedded environment variable value preview")
 
 ## Related
 
 * [Create or edit model-driven app dashboards](create-edit-dashboards.md)
 
 * [View entity data in Power BI Desktop](../common-data-service/view-entity-data-power-bi.md)
+
+* [Environment variables overview](../common-data-service/environmentvariables.md)
