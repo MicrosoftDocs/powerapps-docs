@@ -48,6 +48,10 @@ To use the **Media** pane to add, remove or use media files in your app:
 
     ![Add media](./media/add-images-pictures-audio-video/add-media.png "Add media")
 
+1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
+
+1. [Share app](share-app.md) with others.
+
 ### Add images, audio, or video using the controls
 
 To add images, audio or video using the [Image](./controls/control-image.md), [Audio or Video](./controls/control-audio-video.md) controls:
@@ -64,15 +68,19 @@ For **Image** control, update the *Image* property with the image file name, wit
 
 1. From your Azure Media Services account, upload and publish your video asset from **AMS > Settings > Assets**.
 
-2. After the video is published, copy its URL.
+1. After the video is published, copy its URL.
 
-3. From Power Apps, add the **Video** control from **Insert > Media**.
+1. From Power Apps, add the **Video** control from **Insert > Media**.
 
-4. Set the **Media** property to the URL that you copied.
+1. Set the **Media** property to the URL that you copied.
 
     As this graphic shows, you can choose any streaming URL that Azure Media Services supports:
 
     ![Set media property](./media/add-images-pictures-audio-video/ams-with-powerapps.png)
+
+1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
+
+1. [Share app](share-app.md) with others.
 
 ## Add Microsoft Stream media
 
@@ -124,6 +132,10 @@ This scenario uses the [CreateFirstApp.zip](https://pwrappssamples.blob.core.win
     ![Jacket images](./media/add-images-pictures-audio-video/images.png)
 
     When you set the **Items** property, a column named **PowerAppsId** is automatically added to the Excel table.
+
+1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
+
+1. [Share app](share-app.md) with others.
 
 ## Upload pen drawings to the cloud
 
@@ -219,7 +231,7 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 ## Known limitations
 
 - The total size of all media files uploaded to an app can't exceed 200 MB.
-- Maximum size of an individual media file can't exceed 64 MB.
+- Maximum size of an individual media file in an app can't exceed 64 MB.
 - Supported media file types: `.jpg, .jpeg, .gif, .png, .bmp, .tif, .tiff, .svg, .wav, .mp3, .mp4, .wma, .wmv`.
 - [Cloud-storage known limitations](connections/cloud-storage-blob-connections.md#known-limitations) apply when connecting your app with cloud-based storage.
 
