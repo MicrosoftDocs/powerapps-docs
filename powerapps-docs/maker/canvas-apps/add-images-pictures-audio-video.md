@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/12/2017
+ms.date: 05/15/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -16,19 +16,21 @@ search.app:
 ---
 # Using multimedia files in Power Apps
 
-This article shows you how to embed multimedia files in your canvas app, upload pen drawings to a data source, and show images from a data source in your canvas app. The data source used in this article is an Excel file in OneDrive for Business.
+You can add images, audio and video files to a canvas app. Add video from streaming services such as [Microsoft Stream](https://docs.microsoft.com/stream/), [Azure Media Services](https://docs.microsoft.com/azure/media-services/), or 3rd party streaming services, such as YouTube. Or use input controls such as **Pen Input** to collect signatures.
+
+This article walks you through working with multimedia, streaming, and input control scenarios. The data source used in this article is an Excel file in OneDrive for Business.
 
 ## Prerequisites
 
 [Sign up](../signup-for-powerapps.md) for Power Apps, and then [sign in](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) using the same credentials that you used to sign up.
 
-## Add images
+## Add media from a file or the cloud
 
-You can choose the kind of images such as .jpeg, .png, .bmp to add to your app screen. You can add images using the media pane, or using the images control.
+You can choose the kind of media file to add (for example, images, video, or audio). You can add images using the media pane, or using the images control.
 
-![Add Images](./media/add-images-pictures-audio-video/insert-images.gif "Add Images")
+![Media pane](./media/add-images-pictures-audio-video/media-pane.gif "Media pane")
 
-### Add images using media pane
+### Add images, audio, or video using the media pane
 
 To use the **Media** pane to add, remove or use media files in your app:
 
@@ -44,30 +46,22 @@ To use the **Media** pane to add, remove or use media files in your app:
 
 1. Select the file from the media pane to insert into the screen.
 
-    ![Select image](./media/add-images-pictures-audio-video/select-image.png "Select image")
+    ![Add media](./media/add-images-pictures-audio-video/add-media.png "Add media")
 
-### Add images using the images control
+### Add images, audio, or video using the controls
 
-To add image using the [Image control](./controls/control-image.md):
+To add images, audio or video using the [Image](./controls/control-image.md), [Audio or Video](./controls/control-audio-video.md) controls:
 
 1. Select **Insert** from the top menu.
 
 1. Select **Media** drop-down.
 
-1. Choose **Image** to add the image control.
+1. Choose from **Image**, **Audio**, or **Video** controls.
 
-1. Select the **Image** property from the property list on top-left, or from the property pane on the right side. 
-
-1. Select the image to insert.
-
-    ![Image control](./media/add-images-pictures-audio-video/image-control.png "Image control")
-
-## Add 
-
-    > [!NOTE]
-   > Play a YouTube video by setting the **Media** property of a video control to the appropriate URL, enclosed in double quotation marks.
+For **Image** control, update the *Image* property with the image file name, without extension. For **Audio** or **Video** control, update the *Media* property with the file name, or the URL such as YouTube video URL in double quotation marks.
 
 ## Add media from Azure Media Services
+
 1. From your Azure Media Services account, upload and publish your video asset from **AMS > Settings > Assets**.
 
 2. After the video is published, copy its URL.
@@ -80,7 +74,12 @@ To add image using the [Image control](./controls/control-image.md):
 
     ![Set media property](./media/add-images-pictures-audio-video/ams-with-powerapps.png)
 
+## Add Microsoft Stream media
+
+To learn how to add a Microsoft Stream video control, go to [Microsoft Stream video control example](controls/control-stream-video.md#example).
+
 ## Add images from the cloud to your app
+
 In this scenario, you save images in a cloud storage account, OneDrive for Business. You use an Excel table to contain the path to the images, and you display the images in a gallery control in your app.
 
 This scenario uses the [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip) that contains some .jpeg files.
@@ -90,19 +89,35 @@ This scenario uses the [CreateFirstApp.zip](https://pwrappssamples.blob.core.win
 
 1. Download [CreateFirstApp.zip](https://pwrappssamples.blob.core.windows.net/samples/CreateFirstApp.zip), and extract the **Assets** folder to your cloud storage account.
 
-2. Rename the **Assets** folder to **Assets_images**.
+1. Rename the **Assets** folder to **Assets_images**.
 
-3. In an Excel spreadsheet, create a one-column table, and fill it with the following data:
+1. In an Excel spreadsheet, create a one-column table, and fill it with the following data.
 
     ![Jackets table](./media/add-images-pictures-audio-video/jackets.png)
 
-4. Name the table **Jackets**, and name the Excel file **Assets.xlsx**.
+    To copy the file path from **OneDrive for Business**, select a file, and then select **Path** (*Copy direct link*) from the details pane on the right side of the screen.
 
-5. In your app, add the **Jackets** table as a data source.  
+1. Name the table **Jackets**, and name the Excel file **Assets.xlsx**.
 
-6. Add an **Image only** control (**Insert** tab > **Gallery**), and set its **Items** property to `Jackets`:  
+1. In your app, add the **Jackets** table as a [data source](add-data-connection.md).  
+
+1. Optionally, update your app [orientation](set-aspect-ratio-portrait-landscape.md) to Landscape.
+
+1. Select **Insert** > **Gallery**, and then select **Horizontal**.
+
+1. Optionally, select text field and then the heading field under the first image, and delete them to keep only images on the screen.
+
+    ![Delete fields](./media/add-images-pictures-audio-video/delete-fields.png)
+
+    If you see a formula error, press **Ctrl+Z** to undo the delete and then ensure to first delete the *Subtitle* field and then the *Title* field.
+
+1. Set the gallery's **Items** property of the gallery to `Jackets`.
 
     ![Items property](./media/add-images-pictures-audio-video/items-jackets.png)
+
+1. Select the first image in the gallery, and set its **Image** property to `ThisItem.Images`:
+
+    ![Items images](./media/add-images-pictures-audio-video/image-this-item.png)
 
     The gallery is automatically updated with the images:  
 
@@ -110,101 +125,105 @@ This scenario uses the [CreateFirstApp.zip](https://pwrappssamples.blob.core.win
 
     When you set the **Items** property, a column named **PowerAppsId** is automatically added to the Excel table.
 
-    In the Excel table, the image path can also be the URL to an image. An example is the [Flooring Estimates](https://pwrappssamples.blob.core.windows.net/samples/FlooringEstimates.xlsx) sample file. You can download it to your cloud storage account, add the `FlooringEstimates` table as a data source in your app, and then set the gallery control to `FlooringEstimates`. The gallery is automatically updated with the images.
-
 ## Upload pen drawings to the cloud
 
 In this scenario, you learn how to upload pen drawings to your data source, OneDrive for Business, and examine how the drawings are stored there.
 
 1. In Excel, add **Image [image]** to cell A1.
 
-2. Create a table using the following steps:    
+1. Create a table using the following steps:
 
    1. Select cell A1.
 
-   2. On the **Insert** ribbon, select **Table**.
+   1. On the **Insert** ribbon, select **Table**.
 
-   3. In the dialog box, select **My table has headers**, and then select **OK**.
+   1. In the dialog box, select **My table has headers**, and then select **OK**.
 
        ![Create a table](./media/add-images-pictures-audio-video/create-table.png)
 
        Your Excel file is now in a table format. For more information about table formatting in Excel, see [Format the data as a table](https://support.office.com/article/Format-an-Excel-table-6789619F-C889-495C-99C2-2F971C0E2370).
 
-   4. Name the table **Drawings**:
+   1. Name the table **Drawings**:
 
        ![Rename table to Drawings](./media/add-images-pictures-audio-video/name-media-table.png)
 
-3. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
+1. Save the Excel file to OneDrive for Business as **SavePen.xlsx**.
 
-4. In Power Apps, create a [blank app](get-started-create-from-blank.md).
+1. In Power Apps, create a [blank app](get-started-create-from-blank.md) with Tablet layout.
 
-5. In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
+1. In your app, add the OneDrive for Business account as a [data source](add-data-connection.md):
 
-   1. Click or tap the **View** tab, and then click or tap **Data sources**.
+   1. Select **View** menu, and then select **Data sources**.
 
-       ![](./media/add-images-pictures-audio-video/choose-data-sources.png)
+       ![Choose data source](./media/add-images-pictures-audio-video/choose-data-sources.png)
 
-   2. Click or tap **Add data source**, and then click or tap **OneDrive for Business**.
+   1. Select **Add data source**, and then select **OneDrive for Business**.
 
-       ![](./media/add-images-pictures-audio-video/select-source.png)
+   1. Select **SavePen.xlsx**.
 
-   3. Click or tap **SavePen.xlsx**.
-
-   4. Select the **Drawings** table, and then click or tap **Connect**.
+   1. Select the **Drawings** table, and then select **Connect**.
 
        ![Connect](./media/add-images-pictures-audio-video/savepen.png)  
 
        Now, the Drawings table is listed as a data source.
 
-6. On the **Insert** tab, select **Text**, and then select **Pen input**.
+1. Select **Insert** > **Input**, and then select **Pen Input**.
 
-7. Rename the new control **MyPen**:  
+1. Rename the new control **MyPen**:  
 
     ![Rename](./media/add-images-pictures-audio-video/rename-mypen.png)
 
-8. On the **Insert** tab, add a **Button** control, and set its **OnSelect** property to this formula:
+1. On the **Insert** tab, add a **Button** control, and set its **OnSelect** property to this formula:
 
     **Patch(Drawings, Defaults(Drawings), {Image:MyPen.Image})**
 
-9. Add an **Image gallery** control (**Insert** tab > **Gallery**), and set its **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
+    ![Button OnSelect](./media/add-images-pictures-audio-video/button-on-select.png)
+
+1. Add a **Horizontal** gallery control (**Insert** tab > **Gallery**).
+
+1. Optionally, select text field and then the heading field under the first image, and delete them to keep only images on the screen.
+
+    ![Delete fields](./media/add-images-pictures-audio-video/delete-fields.png)
+
+    If you see a formula error, press **Ctrl+Z** to undo the delete and then ensure to first delete the *Subtitle* field and then the *Title* field.
+
+1. Set gallery **Items** property to `Drawings`. The **Image** property of the gallery control is automatically set to `ThisItem.Image`.
 
     Arrange the controls so that your screen resembles as shown below:  
 
     ![Sample screen](./media/add-images-pictures-audio-video/screen.png)
 
-10. Press F5, or select Preview ( ![Preview button](./media/add-images-pictures-audio-video/preview.png) ).
+1. Press F5, or select Preview ( ![Preview button](./media/add-images-pictures-audio-video/preview.png) ).
 
-11. Draw something in MyPen, and then select the button.
+1. Draw something in MyPen, and then select the button.
 
     The first image in the gallery control displays what you drew.
 
-12. Add something else to your drawing, and select the button.
+1. Add something else to your drawing, and select the button.
 
     The second image in the gallery control displays what you drew.
 
-13. Close the preview window by pressing Esc.
+1. Close the preview window by pressing Esc.
 
     In your cloud storage account, a **SavePen_images** folder has been automatically created. This folder contains your saved images with IDs for their file names. To show the folder, you may need to  refresh the browser window by, for example, pressing F5.
 
+    > [!NOTE]
+    > The folder name may be different if your Excel file name is different. For example, if your file name is Pen.xlsx, the folder name will be Pen_images.
+
     In **SavePen.xlsx**, the **Image** column specifies the path to the new images.
 
-### Known limitations
-For information about how to share Excel data within your organization, [review these limitations](connections/cloud-storage-blob-connections.md#known-limitations).
+1. [Save](save-publish-app.md#save-changes-to-an-app) and [Publish](save-publish-app.md#publish-an-app) you app.
 
-## For more information
-Be sure to test your app on different platforms, including in [a browser window](https://home.dynamics.com/) and on a phone.
+1. [Share app](share-app.md) with others.
 
-For information about more advanced scenarios that involve uploading multimedia directly to a different data source, see [image capture pro tips](https://powerapps.microsoft.com/blog/image-capture-pro-tips/) and [custom connectors for image upload](https://powerapps.microsoft.com/blog/custom-api-for-image-upload/).
+## Known limitations
 
-Another way to upload files to a data source is to use the [Patch](functions/function-patch.md) function.
+- The total size of all media files uploaded to an app can't exceed 200 MB.
+- Maximum size of an individual media file can't exceed 64 MB.
+- Supported media file types: `.jpg, .jpeg, .gif, .png, .bmp, .tif, .tiff, .svg, .wav, .mp3, .mp4, .wma, .wmv`.
+- [Cloud-storage known limitations](connections/cloud-storage-blob-connections.md#known-limitations) apply when connecting your app with cloud-based storage.
 
-[1]: ./media/add-images-pictures-audio-video/add-image-video-audio-file.png
-[3]: ./media/add-images-pictures-audio-video/add-intro-sound.png
-[4]: ./media/add-images-pictures-audio-video/add-picture.png
-[5]: ./media/add-images-pictures-audio-video/camera-gallery.png
-[6]: ./media/add-images-pictures-audio-video/audio-gallery.png
-[7]: ./media/add-images-pictures-audio-video/pen-gallery.png
-[8]: ./media/add-images-pictures-audio-video/mediaoptions.png
-[9]: ./media/add-images-pictures-audio-video/imageproperty.png
-[10]: ./media/add-images-pictures-audio-video/mediaproperty.png
-[11]: ./media/add-images-pictures-audio-video/renamecamera.png
+## See also
+
+- [Control reference](reference-properties.md)
+- [Working with formulas](working-with-formulas.md)
