@@ -29,7 +29,7 @@ The following steps are required to build a linear slider code component:
 
 To create a new project:
 
-1. Open a **Developer Command Prompt for VS 2017** window. Create a new folder for the project using the following command: 
+1. Open a **Developer Command Prompt for VS 2017 or higher** window. Create a new folder for the project using the following command: 
     ```CLI
      mkdir LinearComponent
     ```
@@ -369,12 +369,12 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     ```
     > [!TIP]
     > You will be hit with the error: *Do not use the `eval` function or its functional equivalents*, when you build the solution file using the `msbuild` command and import it into Common Data Service and run the solution checker.
-    > Re build the solution file using the command `msbuild/property:configuration:Release` and reimport the solution into Common Data Service and run the solution checker.
+    > Re build the solution file using the command `msbuild/property:configuration=Release` and reimport the solution into Common Data Service and run the solution checker.
       
     > [!NOTE]
     > Make sure that **NuGet targets & Build Tasks** is checked. To enable it:
     > - Open **Visual Studio Installer**.
-    > - For Visual Studio 2017, select **Modify**.
+    > - For Visual Studio 2017 or higher, select **Modify**.
     > - Select **Individual Components**.
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 

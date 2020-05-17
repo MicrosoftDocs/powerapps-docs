@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 1/28/2020
+ms.date: 5/07/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -38,7 +38,8 @@ Relevance search brings the following enhancements and benefits:
 
     > [!NOTE]
     > - Certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify records. Because they're ignored during search, these words are also not highlighted in results.
-    > - Highlighted terms are often returned as a portion of the full value in a field because only the matched terms are highlighted.  
+    > - Highlighted terms are often returned as a portion of the full value in a field because only the matched terms are highlighted.
+    > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a field has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results where part of the matched field is truncated.
 
 - Includes search results for text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
   
