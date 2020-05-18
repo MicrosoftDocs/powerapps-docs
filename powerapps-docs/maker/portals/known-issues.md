@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/07/2020
+ms.date: 05/18/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -15,6 +15,12 @@ ms.reviewer:
 
 
 ## General issues
+
+- When you edit Grid Configuration for Entity Form Metadata, you receive following error message:
+
+    ***Field Name**: You have exceeded the maximum number of 100000 characters in this field.*
+
+    This can occur if the referenced field for Entity Form Metadata exceeds 100000 characters limit. To increase this limit, go to your Dynamics 365 instance > **Settings** > **Customization** > **Customize this system** > **Components** > **Entities**. Select applicable entity and then select the field. Increase the **Maximum Length** field value for the field to a higher value.
 
 - Rich-text for notes in timeline isn't supported by Power Apps portals. Ensure you [disable rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) when using on portals.
 
