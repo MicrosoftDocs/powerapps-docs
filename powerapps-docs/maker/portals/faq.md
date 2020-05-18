@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/14/2020
+ms.date: 05/18/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -16,6 +16,10 @@ ms.reviewer:
 We've compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### I see a warning with missing Publishing State association for the page(s) while editing my portal in [Studio](portal-designer-anatomy.md).
+
+The Web Page records may have missing [Publishing State](configure/publishing-states.md) associations, such as after data import when no Publishing State is selected as default for your Website record. When this happens, you’ll see a warning with missing Publishing State associations for the page(s) while editing your portal in Studio. The page(s) with no associated Publishing State may cause issues with the navigation menu and affect page visibility. To fix this warning, select a Publishing State for each [Web Page record](configure/web-page.md) using the Portal Management app.
 
 ### Does Power Apps portals support TLS 1.2?
 

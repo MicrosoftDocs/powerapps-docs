@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/22/2019
+ms.date: 05/18/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -42,7 +42,6 @@ Publishing states can be created, edited, and deleted within portals.
 
 8. Select **Save & Close**.
 
-
 ### Publishing state attributes
 
 |Name|Description|
@@ -53,6 +52,9 @@ Publishing states can be created, edited, and deleted within portals.
 |Is Visible|If checked, designates that entities associated with this state will be considered visible (or published) on the portal.<br>While an entity associated with a non-visible state will not be visible on the portal, an entity associated with a visible state may also not be visible, due to security permissions, expiration dates, or other visibility rules.<br>Users with content management permissions may be granted the ability to use Preview Mode, which allows these users to see (preview) unpublished content.|
 |Display Order|An integer value indicating the order in which the state will be placed, in menus and drop-down lists for selecting a Publishing State – mostly found in the portal front-side editing interfaces.|
 |||
+
+> [!IMPORTANT]
+> Creating new pages using portals [Studio](../portal-designer-anatomy.md) will fail if you don't have any default publishing state. Ensure that you have a default publishing state by selecting a publishing state record and set the **Is Default** attribute value to **Yes**.
 
 ## Publishing state transition rules
 
