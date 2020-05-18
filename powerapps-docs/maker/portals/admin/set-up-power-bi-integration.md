@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/27/2020
+ms.date: 05/13/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -193,5 +193,6 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 
 ### See also
 
-[powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)<br> 
-[Add a Power BI report or dashboard to a webpage in portal](add-powerbi-report.md)
+- [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi)
+- [Add a Power BI report or dashboard to a webpage using liquid tag in portal](add-powerbi-report.md)
+- [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
