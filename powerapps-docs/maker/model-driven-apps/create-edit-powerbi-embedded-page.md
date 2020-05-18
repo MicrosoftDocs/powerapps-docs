@@ -31,7 +31,7 @@ This topic will outline the setup of a system dashboard referencing a Power BI r
 To learn more about Power BI reports and dashboards, open <a href="https://docs.microsoft.com/power-bi/create-reports/">Create Power BI Reports</a>. 
 
 > [!IMPORTANT]
-> - This is a private preview feature and requires an environment feature flag to be enabled to view a Power BI embedded page in a model-driven app.
+> - This is a private preview feature and requires an maker & environment feature flags to be enabled to author and view a Power BI embedded page in a model-driven app.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 
@@ -40,6 +40,9 @@ To learn more about Power BI reports and dashboards, open <a href="https://docs.
 This examples sets up a Power BI embedded page for a single environment connected to a Power BI workspace.  The next example would need to be used with Environment Variables for managed solution ALM which has a different workspace for prod.
 
 1. Create or edit a solution in <a href="https://make.powerapps.com">make.powerapps.com</a>
+
+    > [!NOTE]
+    > Append "?powerappsPortal.powerbiAllowAsSystemDashboard=true" to the URL to enable the private preview
 
 1. Click **New** > **Dashboards** > **Power BI embedded**
 
@@ -92,7 +95,7 @@ Finally the model-driven app can be saved and published.
 ## Selecting the Power BI embedded page in the model-driven app 
 
   > [!Note]
-  > During the private preview phase, a  feature flag needs to be enabled per environment to allow viewing the Power BI embedded page in a model-driven app 
+  > During the private preview phase, a server feature flag needs to be enabled per environment to allow viewing the Power BI embedded page in a model-driven app 
 
 1. Play the model-driven app
 
