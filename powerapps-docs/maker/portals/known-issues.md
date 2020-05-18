@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/07/2020
+ms.date: 05/18/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -33,6 +33,12 @@ ms.reviewer:
 - In certain cases, when you create a portal, the styles are not applied properly to the portal, and the website is displayed without the styles when opened through **Browse website**. This rarely happens and styles can be recovered by restarting the portal from Power Apps Portals admin center.
 
 ## Power Apps portals Studio issues
+
+- When you try to edit a portal, the operation fails with following error message:
+
+    *Portal edit operation failed. Contact with email address portaluser@powerappsportals.com couldn’t be created due to additional mandatory field requirement(s). To edit the portal, create a contact with email address portaluser@powerappsportals.com and any values in other mandatory fields.*
+
+    To resolve this error, create a contact with email address portaluser@powerappsportals.com. Enter any value in rest of the mandatory fields for the contact record and save the contact.
 
 - If a portal has page hierarchy of more than three levels, the pages from fourth level onwards are not displayed in Power Apps portals Studio.
 
