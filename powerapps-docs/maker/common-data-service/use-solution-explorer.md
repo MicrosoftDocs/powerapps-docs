@@ -3,7 +3,7 @@ title: "Use solutions in Power Apps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
 ms.date: 10/28/2019
-ms.reviewer: tapanm
+ms.reviewer: matp
 ms.service: powerapps
 ms.topic: "article"
 author: "caburk"
@@ -25,7 +25,7 @@ search.app:
 > ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
  
 > [!NOTE]
->  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[Power Apps admin center](https://admin.powerapps.com/)> **Environments** > select your environment > **Details** tab. For earlier version environments, selecting a solution opens it in the classic experience.  
+>  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[Power Platform admin center](https://admin.powerplatform.microsoft.com/) > **Environments** > select your environment, and locate the **Database version** in the **Details** area. For earlier version environments, selecting a solution opens it in the classic experience.  
  
  You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
