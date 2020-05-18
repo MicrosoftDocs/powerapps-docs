@@ -41,6 +41,25 @@ search.app:
 |successCallback |Function |Yes |A function to call when the lookup control is invoked. An array of objects with the following properties is passed:<br/><ul><li>**entityType**: String. Entity type of the record selected in the lookup control.</li><li>**id**: String. ID of the record selected in the lookup control.</li><li>**name**: String. Name of the record selected in the lookup control.</li>|
 |errorCallback |Function |Yes |A function to call when you cancel the lookup control or the operation fails.  |
 
+## Examples
+A basic example of setting up a lookup control with fetchXml filter:-
+
+```
+var lookupOptions = {
+	defaultEntityType: "account",
+	entityTypes: ["account"],
+	allowMultiSelect: false,
+	filters: [{
+		filterXml: "<filter type='and'><condition attribute='name' operator='eq' value='test' /></filter>",
+		entityLogicalName: "account"
+	}]
+};
+
+Xrm.Utility.lookupObjects(lookupOptions).then(function(result){
+	})
+	.fail(function(error){
+	});
+```
 
 ### Related topics
 
