@@ -26,7 +26,7 @@ Read-only and editable grids
 
 ## Syntax
 
-`var result = gridContext.getfetchXml();`
+`var result = gridContext.getFetchXml();`
 
 ## Return Value
 

@@ -3,7 +3,7 @@ title: App Maker learning catalog
 description: Find all the training options for Power Apps
 author: loreleishannonmsft
 ms.topic: article
-ms.date: 03/25/2020
+ms.date: 04/28/2020
 ms.author: v-lshann
 ---
 
@@ -13,6 +13,7 @@ Are you interested in quickly creating custom business apps without writing code
 
 The following catalog is organized from core knowledge to specific domains, and from most basic to most advanced. If content exists in multiple formats, we'll let you know, so that you can choose the training format that best meets your needs. 
 
+
 ## Get started<a name="get-started"></a>
 | Content   | Description  | Format  | Length    |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------|
@@ -21,6 +22,9 @@ The following catalog is organized from core knowledge to specific domains, and 
 | [Tutorial: Create a business process flow to standardize processes](https://docs.microsoft.com/power-automate/create-business-process-flow) | This tutorial shows you how to create a business process flow with Power Apps.                                                                                                                               | Free, self-paced online learning path | 14 minutes to read |
 | [Create a canvas app in Power Apps](https://docs.microsoft.com/learn/paths/create-powerapps/)                                               | Do you want to create apps to help make your business more efficient? Then this path is for you. It introduces you to Power Apps, helps you create and customize an app, and then manage and distribute it. | Free, self-paced online learning path | 2 hr 11 min        |
 | [Create a model-driven application in Power Apps](https://docs.microsoft.com/learn/paths/create-app-models-business-processes/)             | This learning path introduces you to creating a model-driven app in Power Apps that uses Common Data Service.                                                                                                | Free, self-paced online learning path | 2 hr 35 min        |
+| [Power Apps Top innovation areas ](https://www.youtube.com/watch?v=oFuQ1R8IJis&feature=youtu.be&t=4936)|	Demo from a summit 	|Video | 10 minutes |
+
+
 ## App Creation<a name="app-creation"></a>
 | Content   | Description  | Format  | Length    |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------|
@@ -31,3 +35,10 @@ The following catalog is organized from core knowledge to specific domains, and 
 | [Use basic formulas to make better Power Apps canvas apps](https://docs.microsoft.com/learn/paths/use-basic-formulas-powerapps-canvas-app/)                    | Do you want to use formulas to improve functionality and change a behavior in your Power Apps canvas app? This learning path can help you accomplish your goal. | Free, self-paced online learning path | 2 hr 16 min       |
 | [Use the UI and controls in a canvas app in Power Apps](https://docs.microsoft.com/learn/paths/ui-controls-canvas-app-powerapps/)                              | The app user experience often defines the success of your app. This learning path will focus on how to provide the best app navigation, and build the best UI using themes, icons, images, personalization, different form factors, and controls.  | Free, self-paced online learning path | 1 hr 58 min       |
 | [Work with data in a Power Apps canvas app](https://docs.microsoft.com/learn/paths/work-with-data-in-a-canvas-app/)                                            | Do you need to connect an app to access data? Then this learning path is for you. It will focus on how to connect to data sources. It also will show you how to use filtering, conditions, and other functions to shape your data and write data to your data source.   | Free, self-paced online learning path | 2 hr 14 min       |
+| [AIAD App in a day](https://aka.ms/appinaday)                                                                      | Full instructor and atendee packadge to learn Power Apps | Instructor Led Trianing | Workday   |
+| [Formula reference for Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference) | Glossarry   | Free  reference |
+
+## Flow Creation<a name="flow-creation"></a>
+| Content   | Description  | Format  | Length    |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|-----------|
+| [Flow in a day](https://aka.ms/flowinaday)	|Full instructor and attendee package to learn Flow |Free, instructor led workshop|	Workday |
