@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/28/2020
+ms.date: 05/19/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -24,7 +24,7 @@ Following considerations apply when configuring additional entities for global s
 - Ensure an **Entity Permission** is created that provides Read privilege, and appropriate scope for the records to show in search results.
 - Associate the entity permission with required **Web Roles**.
 - Entity permissions must be associated with the **Anonymous Web Role** if you want to allow anonymous search for an entity.
-- Configure a [search results page](#results-page-for-additional-entities) to display search results.
+- Configure a [record details page](#record-details-page-for-additional-entities) to show search results.
 
 The explicit configuration explained above ensures that no records will accidentally be made available via global search.
 
@@ -37,13 +37,32 @@ The site setting **Search/EnableAdditionalEntities** is required when configurin
 
 You can also configure other related site settings similar to the search configuration for default entities. For example, you can use the **Search/Filters** setting to configure additional entities and add a drop-down filter option to the global search. More information: [Site setting](search.md#related-site-settings)
 
-### Results page for additional entities
+### Record details page for additional entities
 
-The search result page is configured via a **Site Marker** named ```<entitylogicalname>_SearchResultPage```.
+The record details page is configured using a **Site Marker** named ```<entitylogicalname>_SearchResultPage```.
 
-For example, if your entity logical name is *nwind_products*, the site marker will be ```nwind_products_SearchResultPage```. The value of the site marker is the page that you want to open when that search result is selected. By default, a record ID is passed in the *id* querystring parameter to the search results page.
+For example, if your entity logical name is *nwind_products*, the site marker will be ```nwind_products_SearchResultPage```. The value of the site marker is the page that you want to open when that search result is selected. By default, a record ID is passed in the *id* querystring parameter to the record details page.
 
-Ensure that your search results page has an entity form, or has logic written to show the search result details.
+Ensure that your record details page has an entity form, or has logic written to show the search result details.
+
+## Steps to configure search for additional entities
+
+To configure search for additional entities:
+
+1. [Enable additional entities search](#step-1-add-or-update-search-site-settings) for the first time by adding a new setting **Search/EnableAdditionalEntities** and set it to *true*. This is a one-time step that enables search for all custom entities.
+
+1. [Create **Portal Search** view](#step-2-create-or-verify-the-portal-search-view) for each additional entity with columns that needs to be searchable. Skip this step if you already have the view with correct columns for each entity.
+
+1. [Allow **Authenticated Users** Web Role access](#step-3-create-entity-permissions) to each additional entity, with at least read privileges to crawl and index the additional entity details. Skip this step if you already have the permissions configured for each entity.
+
+1. [Create a record details page](#step-4-add-record-details-webpage)  for each entity to show the details of the selected additional entity search result record selected from the search results page. Skip this step if you already have created separate results record details page for each entity.
+
+1. [Create a site marker](#step-5-add-a-site-marker-for-record-details-webpage) named *<entitylogicalname>_SearchResultPage* for each entity and bind it to the record details page created earlier with portals search feature. When users select a record for your additional entity from the search results page, your portal can use the marker to identify which web page to show with the details of the selected results record. Skip this step if you have already configured site marker binding each additional entity with respective record details page.
+
+> [!WARNING]
+> If you don't create a record details page, or if you don't bind the record details page with site marker for search, you won't be able to select the additional entity records from search results page to view the record details.
+
+The following walkthrough explains each step in detail with a sample database and solution to configure search for additional entities.
 
 ## Walkthrough - configure search for additional entities with sample database
 
@@ -144,7 +163,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
     ![Add authenticated users](media/search-additional-entities/add-authenticated-users.png "Add authenticated users")
 
-## Step 4: Add a webpage
+## Step 4: Add record details webpage
 
 1. Go to [Power Apps](https://make.powerapps.com), and select **Apps** in the left navigation pane.
 
@@ -154,7 +173,10 @@ For more information about sample databases, see [Install Northwind Traders data
 
     ![New page](media/search-additional-entities/new-page.png "New page")
 
-1. Enter the webpage name as **Order Products**. This page will be configured as the search results page.
+1. Enter the webpage name as **Order Products**. 
+
+    > [!NOTE] 
+    > This page will be shown when users select a record from the search results page to view the details of the selected record.
 
 1. Select **Components** in the left navigation pane, and then add a **Form** component to this webpage.
 
@@ -164,7 +186,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
     ![Set the mode](media/search-additional-entities/mode.png "Set the mode")
 
-## Step 5: Add a site marker for the search results details page
+## Step 5: Add a site marker for record details webpage
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -197,7 +219,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
 1. Go to the search toolbar or the search page, and search for a known record.
 
-   For example, use the search keyword **Northwind Clam Chowder** to display results associated with the **nwind_products** entity.
+   For example, use the search keyword **Northwind Clam Chowder** to get the results associated with the **nwind_products** entity.
 
    ![Search results](media/search-additional-entities/search-results.png "Search results")
 
