@@ -59,6 +59,10 @@ To configure search for additional entities:
 
 1. [Create a site marker](#step-5-add-a-site-marker-for-record-details-webpage) named *<entitylogicalname>_SearchResultPage* for each entity and bind it to the record details page created earlier with portals search feature. When users select a record for your additional entity from the search results page, your portal can use the marker to identify which web page to show with the details of the selected results record. Skip this step if you have already configured site marker binding each additional entity with respective record details page.
 
+1. [Rebuild the search index](#step-6-rebuild-the-search-index).
+
+1. [Verify the search results](#step-7-verify-that-global-search-works-with-the-custom-entity).
+
 > [!WARNING]
 > If you don't create a record details page, or if you don't bind the record details page with site marker for search, you won't be able to select the additional entity records from search results page to view the record details.
 
