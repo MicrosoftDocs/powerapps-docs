@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/18/2020
+ms.date: 05/19/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -24,7 +24,7 @@ We've compiled a list of frequently asked questions and provided brief answers t
 This can happen due to multiple reasons such as:
 
 - Your [Power BI Embedded configuration](admin/set-up-power-bi-integration.md) is incorrect.
-- [Row-level security](https://docs.microsoft.com/power-bi/admin/service-admin-rls) in Power BI is enabled but you didn't pass roles in [Power BI component configuration](compose-page.md#add-power-bi) (Advanced settings).
+- [Row-level security](https://docs.microsoft.com/power-bi/admin/service-admin-rls) in Power BI is enabled but you didn't pass roles in [Power BI component configuration](compose-page.md#add-power-bi) (Advanced settings), or *roles* parameter in the [powerbi liquid tag](/liquid/portals-entity-tags.md#powerbi).
 - **Embed content in apps** in Power BI [Developer Settings](https://docs.microsoft.com/power-bi/admin/service-admin-portal#developer-settings) is not enabled.
 
 ### Does Power Apps portals support TLS 1.2?
