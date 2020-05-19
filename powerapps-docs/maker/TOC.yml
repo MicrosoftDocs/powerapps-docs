@@ -1617,15 +1617,15 @@
         - name: Export solutions
           href: ./common-data-service/export-solutions.md               
         - name: Use environment variables
-          href: ./common-data-service/EnvironmentVariables.md
-        - name: View solution layers
-          href: ./common-data-service/solution-layers.md
-        - name: View solution history
-          href: ./common-data-service/solution-history.md      
+          href: ./common-data-service/EnvironmentVariables.md      
         - name: Set managed properties in metadata
           href: ./common-data-service/set-managed-properties-metadata.md
         - name: "Advanced topics"
           items:
+          - name: View solution layers
+            href: ./common-data-service/solution-layers.md
+          - name: View solution history
+            href: ./common-data-service/solution-history.md            
           - name: Create solution patches
             href: ./common-data-service/solution-patches.md  
   - name: Work with dataflows
