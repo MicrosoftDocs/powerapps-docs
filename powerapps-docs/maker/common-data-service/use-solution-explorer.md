@@ -2,7 +2,7 @@
 title: "Use solutions in Power Apps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
-ms.date: 10/28/2019
+ms.date: 05/19/2020
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: "article"
@@ -19,20 +19,25 @@ search.app:
 ---
 # Use solutions in Power Apps
 
- Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
+ Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. Additionally, you can perform these tasks: 
+- **New solution**: To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, you can easily distribute your solution to other environments. More information: [Create a solution](create-solution.md) 
+- **Import**: Import a solution into your environment. More information: [Import solutions](import-update-export-solutions.md) 
+- **Open AppSource**: [Microsoft AppSource](https://appsource.microsoft.com/) is where you can go to get solutions tailored to your industry that work with the products you already use. 
+- **Publish All Customizations**: Publish all active customizations in your environment. 
+- **Switch to classic**: Open the classic solution explorer. 
+- **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
+
+## Open and work in a solution.
+From the **Solutions** area, select a solution to view all of its components. 
  
 > [!div class="mx-imgBorder"]  
-> ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
- 
-> [!NOTE]
->  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[Power Platform admin center](https://admin.powerplatform.microsoft.com/) > **Environments** > select your environment, and locate the **Database version** in the **Details** area. For earlier version environments, selecting a solution opens it in the classic experience.  
- 
+> ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")   
  You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
 > [!div class="mx-imgBorder"]  
 > ![Load more components](media/load-more.PNG "Load more components")  
 
- ## Search and filter in a solution
+ ### Search and filter in a solution
  
  You can also search for a specific component by its name. 
  
@@ -44,7 +49,8 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Filter component by type](media/solution-filter.PNG "Filter component by type")  
  
- ## Contextual commands
+
+ ### Contextual commands
  
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
@@ -56,13 +62,13 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Solution specific commands](media/solution-commands.PNG "Solution specific commands")  
  
- ## Create components in a solution
+ ### Create components in a solution
  With solutions that are unmanaged or the default one, you can use the **New** command to create different types of components. This takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
  
 > [!div class="mx-imgBorder"]  
 > ![Create new component in a solution](media/solution-new-component.PNG "Create new component in a solution")  
  
- ## Add an existing component to a solution
+ ### Add an existing component to a solution
  
  With solutions that are unmanaged and not the default one, you can use the **Add existing** command to bring in components that aren’t already in the solution.  
  
@@ -76,9 +82,6 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Demo solution showing expanded account entity](media/solution-entity-account.png "Demo solution showing expanded account entity")  
 
-## Classic solution explorer
-
-In Power Apps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** on the command bar.  
 
 ## Known limitations
 
