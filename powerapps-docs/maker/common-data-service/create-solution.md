@@ -61,7 +61,7 @@ When you select entity components, we recommend that you use solution segmentati
 
 ## Publish changes 
 
- Certain customizations that make changes to the user interface require that they be published before people can use them in the application. 
+ Certain customizations that make changes to the user interface in an unmanaged solution require that they be published before they can be exported (or before they can be used). 
  
 ### Publish your customizations
 
