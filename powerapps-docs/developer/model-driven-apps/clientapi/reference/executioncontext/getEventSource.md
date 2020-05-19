@@ -29,7 +29,26 @@ Returns a reference to the object that the event occurred on.
 
 **Type**: Object
 
-**Description**: Returns the object from the **Xrm** object model that is the source of the event, not an HTML DOM object. For example, in an [OnChange](../events/attribute-onchange.md) event, this method returns the **formContext.data.entity** attribute object that represents the changed attribute.
+**Description**: Returns the object from the **Xrm** object model that is the source of the event, not an HTML DOM object. For example, in an [OnChange](../events/attribute-onchange.md) event, this method returns the **formContext.Attributes.Attribute** attribute object that represents the changed attribute.
+
+|Events|Return Object|
+|-------|------------|
+|[OnDataLoad](../events/form-data-onload.md)|fromContext.data.Entity|
+|[OnGridDataLoad](../events/subgrid-onload.md)	|fromContext.Controls.SubGridControl|
+|[OnPostSearch](../events/postsearch.md)	|fromContext.Controls.SearchWidgetControl|
+|[OnResultOpened](../events/onresultopened.md)	|fromContext.Controls.SearchWidgetControl|
+|[OnSelection](../events/onselection.md)|None|
+|[OnChange](../events/attribute-onchange.md)|fromContext.Attributes.Attribute|
+|[OnLoad](../events/form-onload.md)	|fromContext.FormUi|
+|[OnLookupTagClick](../events/onlookuptagclick)	|fromContext.Controls.LookupControl|
+|[OnProcessStatusChange](../events/onprocessstatuschange.md)|fromContext.Process.Process|
+|[OnReadyStateComplete](../events/onreadystatecomplete.md)	|fromContext.Controls.FramedControl|
+|[OnRecordSelect](../events/grid-onrecordselect.md)	|fromContext.Entity|
+|[OnSave](../events/form-onsave.md)	|fromContext.Entity|
+|[OnStageChange](../events/onstagechange.md)|	fromContext.Process.Stage|
+|[OnStageSelected](../events/onstageselected.md)|	fromContext.Process.Stage|
+|[OnTabStateChange](../events/tabstatechange.md)|fromContext.Controls.Tab|
+|[PreSearch](../events/presearch.md)|	fromContext.Controls.LookupControl|
 
 
 ### Related topics
