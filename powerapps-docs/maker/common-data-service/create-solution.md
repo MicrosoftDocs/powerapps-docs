@@ -47,7 +47,7 @@ For more information about solution concepts, see [Working with solutions](solut
 <a name="BKMK_AddSolutionComponents"></a>   
 
 ## Add solution components  
- After you’ve created your solution, it won’t contain any solution components. You can create new solution components or use the **Add Existing** button in the list menu to add any solution components from the default solution.  
+ After you’ve created your solution, it won’t contain any solution components. You can create new solution components or use the **Add Existing** command in the list menu to add any solution components from the default solution.  
   
  When you do this you may see a **Missing Required Components** dialog.  
    

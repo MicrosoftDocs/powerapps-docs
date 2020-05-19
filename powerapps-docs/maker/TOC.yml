@@ -1625,7 +1625,11 @@
           - name: View solution layers
             href: ./common-data-service/solution-layers.md
           - name: View solution history
-            href: ./common-data-service/solution-history.md            
+            href: ./common-data-service/solution-history.md
+          - name: Translate customized entity and field text
+            href: ./common-data-service/export-customized-entity-field-text-translation.md
+          - name: Import translated entity and field text
+            href: ./common-data-service/import-translated-entity-field-text.md               
           - name: Create solution patches
             href: ./common-data-service/solution-patches.md  
   - name: Work with dataflows
@@ -1650,10 +1654,6 @@
     href: ./common-data-service/sharepoint-onedrive-onenote-intro.md
   - name: Create a Power BI report
     href: ./common-data-service/data-platform-powerbi-connector.md
-  - name: Translate customized entity and field text
-    href: ./common-data-service/export-customized-entity-field-text-translation.md
-  - name: Import translated entity and field text
-    href: ./common-data-service/import-translated-entity-field-text.md
   - name: Export to data lake
     href: ./common-data-service/export-to-data-lake.md    
   - name: Security in Common Data Service
