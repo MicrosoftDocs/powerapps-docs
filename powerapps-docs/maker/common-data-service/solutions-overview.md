@@ -55,7 +55,14 @@ An unmanaged solution is one that is still under development or isn't intended t
 >  You cannot import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
 
 ## The default solutions
+We recommend that you create a solution to manage your customizations. By using a custom solution, you can easily find just the solution components you've customized, consistently apply your [solution publisher prefix](create-solution.md#solution-publisher), and export your solution for distribution to other environments.
 
+If you don't use a custom solution, you'll be working in one of these default solutions in the unmanaged layer:
+
+- Common Data Service Default Solution. This solution is available for makers to use by default for their customizations in an environment. The Common Data Service Default Solution is useful when you want to evaluate or learn Power Apps. However, we recommend that app makers work in their own unmanaged solutions. 
+- Default solution. This is a special solution that contains all components in the system. The default solution is useful for discovering all the components and configurations in your system.- 
+
+For more information about the default solutions, see [Use a solution to customize](/power-platform/alm/use-solutions-for-your-customizations).
 
 ## Solution dependencies  
 Because of the way that managed solutions are layered, some managed solutions can be dependent on solution components in other managed solutions. Some solution publishers will take advantage of this to build solutions that are modular. You may need to install a “base” managed solution first and then you can install a second managed solution that will further customize the components in the base managed solution. The second managed solution depends on solution components that are part of the first solution.  
