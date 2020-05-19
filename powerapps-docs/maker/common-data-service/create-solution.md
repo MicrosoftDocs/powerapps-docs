@@ -2,7 +2,7 @@
 title: "Create a solution | MicrosoftDocs"
 description: "Learn how to create a solution"
 ms.custom: ""
-ms.date: 03/20/2020
+ms.date: 05/19/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -37,7 +37,7 @@ For more information about solution concepts, see [Working with solutions](solut
     |-----------|-----------------|  
     |**Display Name**|The name shown in the list of solutions. You can change this later.|  
     |**Name**|The unique name of the solution. This is generated using the value you enter in the Display Name field. You can edit this before you save the solution, but after you save the solution, you can’t change it.|  
-    |**Publisher**|You can select the default publisher or create a new publisher. We recommend that you create a publisher for your organization to use consistently across your environments that you will use the solution in. More information: [Solution publisher overview](change-solution-publisher-prefix.md) |  
+    |**Publisher**|You can select the default publisher or create a new publisher. We recommend that you create a publisher for your organization to use consistently across your environments that you will use the solution in. More information: [Solution publisher](#solution-publisher) |  
     |**Version**|Enter a number for the version of your solution. This is only important if you export your solution. The version number will be included in the file name when you export the solution.|  
   
 3.  Select **Save**.  
@@ -59,10 +59,6 @@ When you select entity components, we recommend that you use solution segmentati
   
  If you don’t intend to export the solution, or if you only intend to export it as an unmanaged solution and import it back into the same organization, it isn’t necessary to include required components. If you ever export the solution you’ll see another warning indicating that some required components are missing. If you are only going to import this solution back into the same organization, it is OK to disregard this warning. The steps to edit application navigation or the ribbon without using a third-party editing tool expect that you’ll export the solution back into the same organization.  
 
-<!-- >
-> [!IMPORTANT]
->  If you plan to include appointments in solutions, we strongly recommend that you don’t include only appointments and only recurring appointments in separate solutions. If you install and uninstall separate solutions with different appointment types, you’ll encounter a SQL Server error and you’ll have to re-create the appointments.  -->
-
 ## Publish changes 
 
  Certain customizations that make changes to the user interface require that they be published before people can use them in the application. 
@@ -79,6 +75,32 @@ When you select entity components, we recommend that you use solution segmentati
   
 > [!IMPORTANT]
 >  Preparing customizations may take some time. If you see a message that the browser page has become unresponsive, wait for the page to become responsive, and don't close it.  
+
+## Solution publisher
+Every app you create or customization you make is part of a solution. Every solution has a publisher. You specify the publisher when you create a solution. 
+
+The solution publisher indicates who developed the app. For this reason, you should create a solution publisher that is meaningful. You can view the solution publisher for a solution by selecting **Settings** from the **Solutions** area in Power Apps. For more information about the solution publisher, see [Solution publisher](/power-platform/alm/solution-concepts-alm#solution-publisher).
+
+### Create a solution publisher
+1.	In the Power Apps portal, select **Solutions**. 
+2.	On the command bar, select **New solution**, in the right pane select the **Publisher** drop down list, and then select **+ Publisher**. 
+    > [!div class="mx-imgBorder"] 
+    > <img src="media/create-new-pubisher.png" alt="Create a new publisher" height="738" width="400">
+3.	In the **New Publisher** form, enter the required and optional information: 
+   - **Display Name**. Enter the display name for the publisher. 
+   - **Name**. Enter the unique name for the publisher. 
+   - **Prefix**. Enter the publisher prefix you want. 
+   -	**Option Value Prefix**. This field generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
+   - **Contact Details**. Optionally, you can add contact and address information.
+4. Select **Save and Close**.
+
+### Change a solution publisher
+You can change a solution publisher for an unmanaged solution by following these steps:
+1.	In the Power Apps portal, select **Solutions**, select **…** next to the solution you want, and then select **Settings**. 
+2.	In the **Solution settings** pane, select **Edit publisher**. 
+3.	Edit the **Display name** and **Prefix** fields to the values you want. The **Option Value Prefix** field generates a number based on the publisher prefix. This number is used when you add options to option sets and provides an indicator of which solution was used to add the option. 
+4.	In addition to the prefix, you can also change the solution publisher display name, contact information, and address in the **Contact Details** section. 
+5.	Select **Save and Close**.
 
 ### See also
  [Use solutions](use-solution-explorer.md)

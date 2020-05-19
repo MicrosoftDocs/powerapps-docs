@@ -1597,8 +1597,6 @@
     items:
       - name: Use solutions
         href: ./common-data-service/use-solution-explorer.md
-      - name: Solution publisher overview
-        href: ./common-data-service/change-solution-publisher-prefix.md
       - name: Use segmented solutions
         href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md      
       - name: Use solution checker
