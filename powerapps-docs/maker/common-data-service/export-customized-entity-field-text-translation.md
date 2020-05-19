@@ -30,7 +30,7 @@ After you create customized entity and field text in your unmanaged solution, yo
   
 2. Select the solution you want, on the command bar select **…**, select **Translations**, and then select **Export translations**.  
 
-3. After the export completes the exported translations compressed (zip) file is downloaded to your browser’s default download folder and contain the exported labels.
+3. After the export completes the exported translations compressed (zip) file is downloaded to your browser’s default download folder and contains the exported labels.
   
 4. Extract the XML file from the compressed (.zip) file and translate it.  
 

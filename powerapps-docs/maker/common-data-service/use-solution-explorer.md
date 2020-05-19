@@ -42,8 +42,7 @@ From the **Solutions** area, select a solution to view all of its components.
 > ![Load more components](media/load-more.PNG "Load more components")  
 
  ### Search and filter in a solution
- 
- You can also search for a specific component by its name. 
+  You can also search for a specific component by its name. 
  
 > [!div class="mx-imgBorder"]  
 > ![Search component](media/solution-search-box.png "Search component")  
@@ -55,7 +54,6 @@ From the **Solutions** area, select a solution to view all of its components.
  
 
  ### Contextual commands
- 
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
 > [!div class="mx-imgBorder"]  
@@ -81,11 +79,12 @@ From the **Solutions** area, select a solution to view all of its components.
   
  With solutions that are managed, only certain commands are available and you’ll see the message "You cannot directly edit the components within a managed solution." You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
+When you add an existing entity, rather than select **Include all components** or **Include entity metadata**, use the **Select components** option to only add the entity components that have been updated. With solution segmentation, you export solution updates with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. [Create a segmented solution with entity assets](use-segmented-solutions-patches-simplify-updates.md#create-a-segmented-solution-with-entity-assets)
+
  Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot. 
    
 > [!div class="mx-imgBorder"]  
 > ![Demo solution showing expanded account entity](media/solution-entity-account.png "Demo solution showing expanded account entity")  
-
 
 ## Known limitations
 
