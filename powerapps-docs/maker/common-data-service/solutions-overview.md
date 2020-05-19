@@ -69,6 +69,14 @@ Because of the way that managed solutions are layered, some managed solutions ca
   
 The system tracks these dependencies between solutions. If you try to install a solution that requires a base solution that isn’t installed, you won’t be able to install the solution. You will get a message saying that the solution requires another solution to be installed first. Similarly, because of the dependencies, you can’t uninstall the base solution while a solution that depends on it is still installed. You have to uninstall the dependent solution before you can uninstall the base solution.  
 
+## Solution component dependencies
+A solution component represents something that you can potentially customize. Anything that can be included in a solution is a solution component and some components are dependant on other components. For example, the website field and account summary report are both dependant on the account entity. 
+
+### View dependencies for a component
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
+2. Open the solution you want, select the component you want, on the command bar select **...,** and then select **Show dependencies**. 
+
+    ![Component dependency for the account entity](media/component-dependencies-account.png)
 
 <!-- Move this to ALM guide  ## View and edit solution components
 A component represents something that you can potentially customize. Anything that can be included in a solution is a component. To view the components included in a solution, open the solution you want. The components are listed in the **Components** list. Notice that you can't edit components contained in a managed solution. 
