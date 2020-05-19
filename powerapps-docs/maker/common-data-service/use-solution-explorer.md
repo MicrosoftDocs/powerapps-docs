@@ -3,7 +3,7 @@ title: "Use solutions in Power Apps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
 ms.date: 10/28/2019
-ms.reviewer: tapanm
+ms.reviewer: matp
 ms.service: powerapps
 ms.topic: "article"
 author: "caburk"
@@ -25,7 +25,7 @@ search.app:
 > ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
  
 > [!NOTE]
->  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[Power Apps admin center](https://admin.powerapps.com/)> **Environments** > select your environment > **Details** tab. For earlier version environments, selecting a solution opens it in the classic experience.  
+>  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[Power Platform admin center](https://admin.powerplatform.microsoft.com/) > **Environments** > select your environment, and locate the **Database version** in the **Details** area. For earlier version environments, selecting a solution opens it in the classic experience.  
  
  You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
@@ -69,10 +69,7 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
   
- With solutions that are managed, only certain commands are available and you’ll see the message as shown below. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
-
-> [!div class="mx-imgBorder"]  
-> ![Managed solution](media/managed-solution.PNG "Managed solution")  
+ With solutions that are managed, only certain commands are available and you’ll see the message "You cannot directly edit the components within a managed solution." You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
 
  Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot. 
    
@@ -81,7 +78,7 @@ search.app:
 
 ## Classic solution explorer
 
-In Power Apps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** in the command bar. Classic solution explorer is the one that was previously available through the **Settings > Advanced customizations** area in Power Apps. 
+In Power Apps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** on the command bar.  
 
 ## Known limitations
 
