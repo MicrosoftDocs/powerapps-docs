@@ -40,7 +40,7 @@ Returns a reference to the object that the event occurred on.
 |[OnSelection](../events/onselection.md)|None|
 |[OnChange](../events/attribute-onchange.md)|fromContext.Attributes.Attribute|
 |[OnLoad](../events/form-onload.md)	|fromContext.FormUi|
-|[OnLookupTagClick](../events/onlookuptagclick)	|fromContext.Controls.LookupControl|
+|[OnLookupTagClick](../events/onlookuptagclick.md)	|fromContext.Controls.LookupControl|
 |[OnProcessStatusChange](../events/onprocessstatuschange.md)|fromContext.Process.Process|
 |[OnReadyStateComplete](../events/onreadystatecomplete.md)	|fromContext.Controls.FramedControl|
 |[OnRecordSelect](../events/grid-onrecordselect.md)	|fromContext.Entity|
