@@ -225,5 +225,5 @@ To use these controls in the form editor:
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
   
 ## Next steps
-[Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)
-[Work with records in the new calendar view](calendar-view.md)
+[Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)</br>
+[Work with records in the new calendar view](../../user/calendar-view.md)
