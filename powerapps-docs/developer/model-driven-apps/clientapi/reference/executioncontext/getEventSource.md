@@ -38,7 +38,7 @@ Returns a reference to the object that the event occurred on.
 |[OnPostSearch](../events/postsearch.md)|[formContext.ui.Controls](../controls.md#kbsearch-knowledge-base-search-control-type)|
 |[OnResultOpened](../events/onresultopened.md)|[formContext.ui.Controls](../controls.md#kbsearch-knowledge-base-search-control-type)|
 |[OnSelection](../events/onselection.md)|None|
-|[OnChange](../events/attribute-onchange.md)|[formContext.data.entity](../../formcontext-data-entity.md)|
+|[OnChange](../events/attribute-onchange.md)|[formContext.data.entity](../formcontext-data-entity.md)|
 |[OnLoad](../events/form-onload.md)|[formContext.ui](../formcontext-ui.md)|
 |[OnLookupTagClick](../events/onlookuptagclick.md)|[formContext.ui.Controls](../controls.md#lookup-control-type)|
 |[OnProcessStatusChange](../events/onprocessstatuschange.md)|[formContext.data.process](../formcontext-data-process.md)|
