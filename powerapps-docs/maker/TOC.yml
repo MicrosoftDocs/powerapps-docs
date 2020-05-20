@@ -1596,9 +1596,7 @@
     href: ./common-data-service/solutions-overview.md
     items:
       - name: Use solutions
-        href: ./common-data-service/use-solution-explorer.md
-      - name: Use segmented solutions
-        href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md      
+        href: ./common-data-service/use-solution-explorer.md     
       - name: Use solution checker
         href: ./common-data-service/use-powerapps-checker.md
         items: 
@@ -1610,6 +1608,8 @@
         items:     
         - name: Create a solution
           href: ./common-data-service/create-solution.md
+        - name: Use segmented solutions
+          href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md           
         - name: Update or upgrade solutions
           href: ./common-data-service/update-solutions.md
         - name: Import solutions
