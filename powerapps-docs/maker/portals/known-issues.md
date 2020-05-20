@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/18/2020
+ms.date: 05/20/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -34,11 +34,11 @@ ms.reviewer:
 
 ## Power Apps portals Studio issues
 
-- When you try to edit a portal, the operation fails with following error message:
+- You see the following error message when you try to edit the portal:
 
-    *Portal edit operation failed. Contact with email address portaluser@powerappsportals.com couldn’t be created due to additional mandatory field requirement(s). To edit the portal, create a contact with email address portaluser@powerappsportals.com and any values in other mandatory fields.*
+    *An unexpected error occurred. Contact with email address portaluser@powerappsportals.com couldn’t be created. To edit the portal, create a contact with email address portaluser@powerappsportals.com.*
 
-    To resolve this error, create a contact with email address portaluser@powerappsportals.com. Enter any value in rest of the mandatory fields for the contact record and save the contact.
+    To resolve this issue, create a contact with email address portaluser@powerappsportals.com.
 
 - If a portal has page hierarchy of more than three levels, the pages from fourth level onwards are not displayed in Power Apps portals Studio.
 
