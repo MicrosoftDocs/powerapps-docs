@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/19/2020
+ms.date: 05/20/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -15,18 +15,28 @@ ms.reviewer: tapanm
 
 ## Overview
 
-You can enable additional entities for search functionality. Configuring search for additional entities requires additional actions, which are described in this article.
+You can enable additional entities for search functionality. Configuring search for additional entities requires additional actions, which are described in this article. These explicit configuration steps ensure that no records will accidentally be made available using global search.
 
-Following considerations apply when configuring additional entities for global search:
+## Steps to configure search for additional entities
 
-- Ensure that the [site setting](#site-setting-for-additional-entities) for search for additional entities is enabled.
-- Create a view named **Portal Search** for any additional entity you want to enable search for. More information: [searchable fields in global search](search.md#fields-searchable-in-global-search)
-- Ensure an **Entity Permission** is created that provides Read privilege, and appropriate scope for the records to show in search results.
-- Associate the entity permission with required **Web Roles**.
-- Entity permissions must be associated with the **Anonymous Web Role** if you want to allow anonymous search for an entity.
-- Configure a [record details page](#record-details-page-for-additional-entities) to show search results.
+To configure search for additional entities:
 
-The explicit configuration explained above ensures that no records will accidentally be made available via global search.
+1. [Enable additional entities search](#step-1-add-or-update-search-site-settings) for the first time by adding a new setting [Search/EnableAdditionalEntities](#site-setting-for-additional-entities) and set it to *true*. This is a one-time step that enables search for all additional out-of-the-box and custom entities.
+
+1. [Create **Portal Search** view](#step-2-create-or-verify-the-portal-search-view) for each additional entity with the required filters and columns that needs to be searchable.
+
+1. [Configure entity permissions](#step-3-create-entity-permissions) for each additional entity with a Web Role to have at least read privilege. Skip this step if you already have the read permissions configured for each entity.
+
+1. [Create a record details page](#step-4-add-record-details-webpage) for each entity to show the details of the selected record from the search results page. Skip this step if you already have created separate results record details page for each entity.
+
+1. [Create a site marker](#step-5-add-a-site-marker-for-record-details-webpage) named ```<entitylogicalname>_SearchResultPage``` for each entity with the associated [record details page](#site-marker-for-record-details-page).
+
+1. [Rebuild the search index](#step-6-rebuild-the-search-index).
+
+1. [Verify the search results](#step-7-verify-that-global-search-works-with-the-custom-entity).
+
+> [!WARNING]
+> If you don't create a record details page, or if you don't bind the record details page with site marker for search, you won't be able to select the additional entity records from search results page to view the record details.
 
 ### Site setting for additional entities
 
@@ -35,36 +45,16 @@ The site setting **Search/EnableAdditionalEntities** is required when configurin
 > [!IMPORTANT]
 > **Search/EnableAdditionalEntities** is explicitly for enabling search for additional entities. The main search site setting **Search/Enabled** must be set to **true** when using search functionality.
 
-You can also configure other related site settings similar to the search configuration for default entities. For example, you can use the **Search/Filters** setting to configure additional entities and add a drop-down filter option to the global search. More information: [Site setting](search.md#related-site-settings)
+You can also configure other related site settings similar to the search configuration for default entities. For example, you can use the **Search/Filters** setting to configure additional entities and add a drop-down filter option to the global search. More information: [Site setting](search.md#related-site-settings).
 
-### Record details page for additional entities
+### Site marker for record details page
 
 The record details page is configured using a **Site Marker** named ```<entitylogicalname>_SearchResultPage```.
 
-For example, if your entity logical name is *nwind_products*, the site marker will be ```nwind_products_SearchResultPage```. The value of the site marker is the page that you want to open when that search result is selected. By default, a record ID is passed in the *id* querystring parameter to the record details page.
+For example, if your entity logical name is *nwind_products*, the site marker will be ```nwind_products_SearchResultPage```. The value of the site marker is the record details page that you want to open when that search result is selected. By default, a record ID is passed in the *id* querystring parameter to the record details page. For more information about adding forms on a page, go to [Compose a page](../compose-page.md#add-form).
 
-Ensure that your record details page has an entity form, or has logic written to show the search result details.
-
-## Steps to configure search for additional entities
-
-To configure search for additional entities:
-
-1. [Enable additional entities search](#step-1-add-or-update-search-site-settings) for the first time by adding a new setting **Search/EnableAdditionalEntities** and set it to *true*. This is a one-time step that enables search for all custom entities.
-
-1. [Create **Portal Search** view](#step-2-create-or-verify-the-portal-search-view) for each additional entity with columns that needs to be searchable. Skip this step if you already have the view with correct columns for each entity.
-
-1. [Allow **Authenticated Users** Web Role access](#step-3-create-entity-permissions) to each additional entity, with at least read privileges to crawl and index the additional entity details. Skip this step if you already have the permissions configured for each entity.
-
-1. [Create a record details page](#step-4-add-record-details-webpage)  for each entity to show the details of the selected additional entity search result record selected from the search results page. Skip this step if you already have created separate results record details page for each entity.
-
-1. [Create a site marker](#step-5-add-a-site-marker-for-record-details-webpage) named ```<entitylogicalname>_SearchResultPage``` for each entity and bind it to the record details page created earlier with portals search feature. When users select a record for your additional entity from the search results page, your portal can use the marker to identify which web page to show with the details of the selected results record. Skip this step if you have already configured site marker binding each additional entity with respective record details page.
-
-1. [Rebuild the search index](#step-6-rebuild-the-search-index).
-
-1. [Verify the search results](#step-7-verify-that-global-search-works-with-the-custom-entity).
-
-> [!WARNING]
-> If you don't create a record details page, or if you don't bind the record details page with site marker for search, you won't be able to select the additional entity records from search results page to view the record details.
+> [!IMPORTANT]
+> Ensure that your record details page has an entity form, or has logic written to show the search result details. For example, [Step 4 - Add record details page](#step-4-add-record-details-webpage) in the following walkthrough.
 
 The following walkthrough explains each step in detail with a sample database and solution to configure search for additional entities.
 
