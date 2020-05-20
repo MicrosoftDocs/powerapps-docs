@@ -27,8 +27,8 @@ To reset a configured portal:
 
 2.    Go to **Portal Actions** > **Reset Portal**.
 
-    > [!div class=mx-imgBorder]
-    > ![Reset a portal](../media/reset-portal.png "Reset a portal")
+        > [!div class=mx-imgBorder]
+        > ![Reset a portal](../media/reset-portal.png "Reset a portal")
 
 3.    Select **Reset** in the confirmation window.
 
