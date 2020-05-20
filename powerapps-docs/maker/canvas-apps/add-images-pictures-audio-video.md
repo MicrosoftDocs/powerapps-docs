@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/15/2020
+ms.date: 05/20/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -230,8 +230,9 @@ In this scenario, you learn how to upload pen drawings to your data source, OneD
 
 ## Known limitations
 
-- The total size of all media files uploaded to an app can't exceed 200 MB.
-- Maximum size of an individual media file in an app can't exceed 64 MB.
+- To enable better performance while loading an app, following size restrictions apply:
+    - The total size of all media files uploaded to an app can't exceed 200 MB.
+    - Maximum size of an individual media file in an app can't exceed 64 MB.
 - Supported media file types: `.jpg, .jpeg, .gif, .png, .bmp, .tif, .tiff, .svg, .wav, .mp3, .mp4, .wma, .wmv`.
 - [Cloud-storage known limitations](connections/cloud-storage-blob-connections.md#known-limitations) apply when connecting your app with cloud-based storage.
 
