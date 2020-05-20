@@ -78,7 +78,7 @@ It is often convenient to reference another property of the same control when wr
 
 Some controls host other controls. For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../controls/control-card.md)**, **[Edit form](../controls/control-form-detail.md)**, and **[Display form](../controls/control-form-detail.md)** controls are all containers for controls. We call the hosting control the "parent" of the controls within.
 
-Similar to **Selff**, the **Parent** operator provides access to the current control's container control .  For our label to automatically track with the same fill color as its container, set its **Fill** property to **Parent.Fill**.   
+Similar to **Selff**, the **Parent** operator provides access to the current control's container control .  For our label to automatically use the same fill color as its container, set its **Fill** property to **Parent.Fill**.   
 
 **Self** and **Parent** are operators and not properties on the controls themselves.    Referring to **Parent.Parent** is not supported, nor is **Self.Parent** or **Parent.Self**. 
 
