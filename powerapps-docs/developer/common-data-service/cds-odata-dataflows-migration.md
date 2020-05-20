@@ -12,8 +12,6 @@ search.app:
 ---
 
 
-<!-- From the editor: In the title and first two paragraphs, I'm trying to understand if "dataflows" should be possessive when it comes before OData connector, and if so, if it's multiple dataflows. In that case, the punctuation would be "the dataflows' OData connector." Or is dataflows just a descriptor of the connector, in which case you don't need the punctuation. Confusing, I know. Please let me know what you think. -->
-
 
 # Migrate data between Common Data Service environments using the dataflows OData connector
 
@@ -56,10 +54,7 @@ Common Data Service provides an OData endpoint that does not require additional 
 This article will walk through how to set up a new dataflow with the OData connector. For information on connecting to all data sources supported by dataflows, see [Create and use dataflows](https://docs.microsoft.com/powerapps/maker/common-data-service/create-and-use-dataflows). 
 
 
-<!-- What does aka mean here - also known as? I suggest not using the acronym, which might not be understood by all readers. -->
-
-
-From the **source** environment, get the [OData endpoint](https://docs.microsoft.com/powerapps/developer/common-data-service/view-download-developer-resources) (aka Service Root URL) for that environment:
+From the **source** environment, get the [OData endpoint](https://docs.microsoft.com/powerapps/developer/common-data-service/view-download-developer-resources) for that environment:
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -107,14 +102,10 @@ In the **target** environment, create a new dataflow with the OData connector.
     | Connection | Create new connection. This will be automatically chosen if you have not made an OData connection in dataflows before. |
     | Connection name | Optionally, rename the connection name, but a value is automatically populated. |  |
     | On-premises data gateway | None. An on-premises data gateway is not needed for connections to this cloud service. |
-    | Authentication kind | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |    
-
-
-    <!-- What does orthogonal mean here? -->
-
+    | Authentication kind | Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |     
 
     > [!IMPORTANT] 
-    > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is orthogonal to the fact that you are using the Common Data Service OData endpoint or any other OAuth-based authentication data source. 
+    > Disable pop-up and cookies blockers in your browser in order to configure the Azure AD authentication. This is similar to the fact that you are using the Common Data Service OData endpoint or any other OAuth-based authentication data source. 
     
 1. Select **Next** in the lower right.
 
@@ -164,11 +155,6 @@ For each entity chosen, select the behavior for importing that entity in these s
     
     - If the schema is identical in both source and target tables, you can select **Auto map** to quickly map the fields.
 
-
-
-    <!-- Need to clarify "what" requires a key configuration. Is it "This choice"? -->
-
-
     - Requires a key configuration in the target environment (as the unique identifier fields are not available to modify).
 
 - **Load to new entity (not recommended)**
@@ -187,10 +173,6 @@ Select **Refresh manually** since this is a one-time migration and then select *
 
 The initial dataflow load initiates when you select **Create**. 
 
-
-<!-- Does this image show what you're describing? It's mostly blank. Also, the following two images use the same alt-text - is that correct? -->
-
-
 > [!div class="mx-imgBorder"]
 > ![Refresh manually](./media/initiate-dataflow-process.png "Refresh manually")
 
@@ -205,12 +187,7 @@ You can manually initiate a dataflow by selecting **(...)** in the dataflows lis
 
 - If there are more entities that contain larger amounts of data, consider configuring multiple separate dataflows for individual entities.
 
-
-
-<!-- Same concern as above about the use of aka.  -->
-
-
-- One-to-many relationships will require separate dataflows for each entity. Configure and run the parent (aka one, or independently) entity dataflow before the child (aka many, or dependent) entity.
+- One-to-many relationships will require separate dataflows for each entity. Configure and run the parent (aka one, or independently) entity dataflow before the child entity.
 
 - If there are errors with the dataflow refresh, you can view the refresh history in the **(...)** menu in the dataflows list and download each refresh log.
 
