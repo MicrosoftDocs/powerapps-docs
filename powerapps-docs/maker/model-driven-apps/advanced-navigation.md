@@ -68,4 +68,3 @@ Use the settings area to configure environment settings, activate or deactivate 
 
 ## See also
 [Create or edit a model-driven app by using the app designer](create-edit-app.md)
-[Create or edit apps in Power Apps Studio for web](../canvas-apps/create-app-browser.md)
