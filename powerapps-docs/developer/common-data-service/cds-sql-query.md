@@ -81,6 +81,10 @@ Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work 
 The following Common Data Service datatypes are not supported with the SQL connection: binary, image,
 ntext, sql_variant, varbinary, virtual, HierarchyId, managedproperty, file, xml, partylist, timestamp.
 
+## Plugins
+
+Querying data using SQL does not trigger any plugins registered on the `RetrieveMultiple` or `Retrieve` messages. Any re-writing of the query or results that would normally be performed by such a plugin will therefore not take effect for a SQL query.
+
 ### See also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
