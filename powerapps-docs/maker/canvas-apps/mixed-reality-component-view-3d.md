@@ -33,8 +33,6 @@ To use the component, you need to [enable the mixed reality (MR) features for ea
 
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
-
-
 ## Use the component
 
 Insert the component into your app as you normally would for any other control or component.

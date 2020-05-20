@@ -29,9 +29,6 @@ Components are groups of controls that can answer the need for a specific scenar
 
 You can read more about components and how to build your own in [Power Apps component framework docs](/powerapps/developer/component-framework/custom-controls-overview).
 
-> [!NOTE]
-> Mixed reality components are currently an experimental preview feature that is only available in [https://preview.create.powerapps.com](https://preview.create.powerapps.com) on a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
-
 The following pre-built components can be used for mixed reality scenarios:
 
 - [View in 3D](mixed-reality-component-view-3d.md)
@@ -43,13 +40,12 @@ The following pre-built components can be used for mixed reality scenarios:
 
 1. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
 2. You'll need a mixed reality-capable device. Any [ARCore capable device](https://developers.google.com/ar/discover/supported-devices) is supported, as are [certain Apple iOS devices](https://www.apple.com/augmented-reality/).
-3. Use a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
 
 ### Enable the mixed reality features for each app
 
 For each app you create, you need to enable the mixed reality features:
 
-1. Open the app for editing in the Power Apps studio at [https://preview.create.powerapps.com](https://preview.create.powerapps.com).
+1. Open the app for editing in the Power Apps studio at [https://create.powerapps.com](https://create.powerapps.com).
 
 2. Select **File** from the top menu.
 
