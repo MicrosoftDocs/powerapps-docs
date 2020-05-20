@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/25/2016
+ms.date: 04/10/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -78,6 +78,10 @@ If you add a **Date Picker** control instead of a **[Text input](control-text-in
 **[Italic](properties-text.md)** – Whether the text in a control is italic.
 
 **[OnSelect](properties-core.md)** – How the app responds when the user taps or clicks a control.
+
+**[OnChange](properties-core.md)** – How the app responds when the user changes the value of a control. 
+
+Difference between **OnChange** and **OnSelect**: OnSelect and OnChange trigger on the same user action if the user's *click* causes the change. In this case, OnSelect triggers **before** OnChange.
 
 **[PaddingBottom](properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
 

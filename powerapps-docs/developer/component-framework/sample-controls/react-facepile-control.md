@@ -42,7 +42,7 @@ Model-driven apps and canvas apps (public preview)
 </manifest>
 ```
 
-## overview
+## Overview
 
 This sample provides examples on how to add dependencies for third-party libraries and Office UI Fabric, showcasing how to utilize the Office UI Fabric components for React for UI and perform bi-directional data-binding between the Power Apps component framework and the React state model.
 

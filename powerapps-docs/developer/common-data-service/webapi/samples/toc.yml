@@ -10,6 +10,16 @@
       href: conditional-operations-csharp.md
     - name: Functions and Actions
       href: functions-actions-csharp.md
+- name: (C#)  CDSWebApiService Samples
+  items:
+    - name: CDSWebApiService class
+      href: cdswebapiservice.md
+    - name: CDSWebApiService Basic Operations
+      href: cdswebapiservice-basic-operations.md
+    - name: CDSWebApiService Parallel Operations
+      href: cdswebapiservice-parallel-operations.md
+    - name: CDSWebApiService Async Parallel Operations
+      href: cdswebapiservice-async-parallel-operations.md
 - name: Client-side JavaScript  Data operations Samples
   items:
   - name: Get started with Client-side JavaScript samples

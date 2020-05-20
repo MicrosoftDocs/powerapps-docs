@@ -13,12 +13,7 @@ search.app:
 ---
 # clearGlobalNotification (Client API reference)
 
-[This topic is pre-release documentation and is subject to change.]
-
 [!INCLUDE[./includes/clearGlobalNotification-description.md](./includes/clearGlobalNotification-description.md)]
-
-> [!NOTE]
-> This is a preview feature, and is supported only on Unified Interface.
 
 ## Syntax
 

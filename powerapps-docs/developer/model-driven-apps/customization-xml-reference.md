@@ -41,7 +41,7 @@ The customizations.xml file is one of the files included in an exported unmanage
 ## Related Sections
 
  [Schemas used in Dynamics 365](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)<br/> <!-- TODO need to fix the link--> 
- [When to Edit the Customizations File](../common-data-service/when-edit-customization-file.md)  
-[Edit the Customizations file with Schema Validation](edit-customizations-xml-file-schema-validation.md)  
+ [When to edit the customizations file](../common-data-service/when-edit-customization-file.md)  
+[Edit the Customizations file with schema validation](edit-customizations-xml-file-schema-validation.md)  
  [Customize the Ribbon for Dynamics 365](customize-commands-ribbon.md)  
- [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap) <!-- TODO need to fix the link--> 
+ [Change application navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap) <!-- TODO need to fix the link--> 

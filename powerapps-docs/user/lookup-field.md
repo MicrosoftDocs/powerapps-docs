@@ -63,7 +63,7 @@ To browse a lookup, select the lookup icon (magnifying glass). A full list of it
 The most recently used list of records shows an image to help distinguish between record types.
 
 >[!NOTE] 
->Recent records are not filtered by search term or selected view.
+>Recent records are not filtered by search term, selected view or related records.
 
   > [!div class="mx-imgBorder"]
   > ![Lookup fields shows image](media/Lookup_03-MRU_Entity_Images_56[1].png "Lookup fields shows image")  
