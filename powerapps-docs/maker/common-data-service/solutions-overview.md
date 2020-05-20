@@ -25,13 +25,13 @@ search.app:
 ---
    
 # Solutions overview  
-
-In Power Apps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more.  You can get a solution from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
-  
-More information: [Solutions concepts](/power-platform/alm/solution-concepts-alm)
+In Power Apps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more. Solutions play an important role in application lifecycle management.
   
 > [!NOTE]
->  If you’re an ISV creating an app that you will distribute, you’ll need to use solutions. For more information about using solutions, see [Developer Guide: Introduction to solutions](/powerapps/developer/common-data-service/introduction-solutions).  -->
+> For more information about solutions and application lifecycle management, see [Overview of application lifecycle management with the Power Platform](/power-platform/alm/overview-alm). 
+> If you’re an ISV creating an app that you will distribute, you’ll need to use solutions. For more information about using solutions, see [Developer Guide: Introduction to solutions](/powerapps/developer/common-data-service/introduction-solutions). 
+
+ You can get a solution from [AppSource](https://appsource.microsoft.com) or from an independent software vendor (ISV).
   
 ## Unmanaged and managed solutions
 There are two types of solutions: *managed* and *unmanaged*. A managed solution is a completed solution that is intended to be distributed and installed.
@@ -76,7 +76,8 @@ A solution component represents something that you can potentially customize. An
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
 2. Open the solution you want, select the component you want, on the command bar select **...,** and then select **Show dependencies**. 
 
-    ![Component dependency for the account entity](media/component-dependencies-account.png)
+  > [!div class="mx-imgBorder"] 
+  > ![Component dependency for the account entity](media/component-dependencies-account.png)
 
 <!-- Move this to ALM guide  ## View and edit solution components
 A component represents something that you can potentially customize. Anything that can be included in a solution is a component. To view the components included in a solution, open the solution you want. The components are listed in the **Components** list. Notice that you can't edit components contained in a managed solution. 
@@ -85,16 +86,6 @@ A component represents something that you can potentially customize. Anything th
 > ![Components in solution](media/components-in-solution.png "Components in solution") 
 
 To view a list of component types that can be added to any solution, see [ComponentType Options](../../developer/common-data-service/reference/entities/solutioncomponent.md#componenttype-options). 
-
-For more information about solutions, see these articles: 
-- [Solutions concepts](/power-platform/alm/solution-concepts-alm)
-- [Solution layers](/power-platform/alm/solution-layers-alm)
-- [Understand how managed solutions are merged](/power-platform/alm/how-managed-solutions-merged)
-- [Use a solution to customize](/power-platform/alm/use-solutions-for-your-customizations)
-- [Managed properties](/power-platform/alm/managed-properties-alm)
-- [Use segmented solutions](/power-platform/alm/segmented-solutions-alm)
-- [Update a solution](/power-platform/alm/update-solutions-alm)
-
 
 Some components are nested within other components. For example, an entity contains forms, views, charts, fields, entity relationships, messages, and business rules. Each of those components requires an entity to exist. A field can’t exist outside of an entity. We say that the field is dependent on the entity.   
   
