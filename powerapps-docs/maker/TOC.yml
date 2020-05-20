@@ -1123,7 +1123,7 @@
           href: ./model-driven-apps/faqs-timeline-control.md           
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
-        - name: Additional controls for Dynamics 365 for phones and tablets
+        - name: Custom controls available
           href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
         - name: Timer control overview
           href: ./model-driven-apps/timer-control-legacy.md
