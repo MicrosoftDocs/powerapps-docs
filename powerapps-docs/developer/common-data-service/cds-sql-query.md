@@ -48,6 +48,9 @@ Only Azure Active Directory authentication is supported. SQL authentication and 
 
 ![Connec dialog](media/ssms-connect-dialog.PNG)
 
+> [!NOTE]
+> If you receive the error message "TDS protocol endpoint is disabled for this organization", please refer to the instructions above to enable it: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi).
+
 ## Example entity data queries
 
 Below are a couple of example queries composed in SSMS. The first image shows a simple query using aliases and result ordering.
