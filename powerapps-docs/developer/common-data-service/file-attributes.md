@@ -38,8 +38,8 @@ When a file attribute is added to an entity some additional attributes are creat
 
  This value represents the maximum size (in kilobytes) of the file data that the attribute can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
  
- >[!NOTE]
- >MaxSizeInKB is set when the File attribute is added to an entity. This cannot be changed after it is set.
+ > [!NOTE]
+ > MaxSizeInKB is set when the File attribute is added to an entity. This cannot be changed after it is set.
   
 <a name="BKMK_RetrievingFiles"></a>
 
