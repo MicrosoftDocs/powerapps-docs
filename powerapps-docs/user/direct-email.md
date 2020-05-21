@@ -10,6 +10,11 @@ ms.author: shjais
 manager: shujoshi
 ---
 
+
+<!-- Editor note: If the feature is enabled by default, why tell readers how to enable it? -->
+
+
+
 # Send email to multiple recipients
 
 You can send an email to multiple recipients by using email templates. This is known as *direct* or *bulk* emailing. By default, the direct email feature is enabled. To enable this feature, an administrator must select **Yes** for **Enable Send Direct Email Action in Unified Interface for Send Email enabled entities** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
@@ -22,19 +27,21 @@ You can send an email to multiple recipients by using email templates. This is k
   
 3. On the command bar, select **Send Direct Email**.  
 
-    ![Select multiple contacts and then select Send Direct Email](media/select-contacts.png "Select multiple contacts and then select Send Direct Email")
+    > [!div class="mx-imgBorder"]
+    > ![Select multiple contacts and then select Send Direct Email](media/select-contacts.png "Select multiple contacts and then select Send Direct Email")
 
 4. In the **Send Email** pane, select an email template from the **Template** list.
 
     > [!NOTE]
-    > - If you have multiple records that span across multiple pages, you can select one of following options from the **To** list:
+    > - If you have multiple records that span multiple pages, you can select one of following options from the **To** list:
     >   - **All records on current page**: Sends the email to all records displayed on the current page.
-    >   - **All records on all pages**: Send the email to all the stored records.
+    >   - **All records on all pages**: Sends the email to all the stored records.
     > - If a few records don't have an email address or they have an invalid email address, those records will be skipped from sending the email.
 
 5. Select **Send**.
 
-    ![Send email to multiple recipients](media/direct-email.png "Send email to multiple recipients")
+    > [!div class="mx-imgBorder"]
+    > ![Send email to multiple recipients](media/direct-email.png "Send email to multiple recipients")
 
 ## Check the status of bulk email action
 
@@ -56,14 +63,14 @@ You can check the status of bulk email action on the **System Jobs** page. You c
     > [!div class="mx-imgBorder"]
     > ![List of system jobs](media/filter-jobs.png "List of system jobs") 
 
-3. In the grid header, select the **Filter** ![Filter icon to filter system jobs](media/filter-icon.png "Filter icon to filter system jobs") icon.
+3. In the grid header, select **Filter** ![Filter icon to filter system jobs](media/filter-icon.png "Filter icon to filter system jobs").
 
 4. In the **System Job Type** column header, select the down arrow, select **Bulk Email**, and then select **OK**.
 
     > [!div class="mx-imgBorder"]
     > ![Bulk email filter](media/bulk-email-filter.png "Bulk email filter") 
 
-    A list of bulk email jobs are displayed with their corresponding status.
+    Bulk email jobs are displayed with their corresponding status.
 
     > [!div class="mx-imgBorder"]
     > ![Bulk email jobs](media/bulk-email-jobs.png "Bulk email jobs") 
@@ -72,4 +79,4 @@ You can check the status of bulk email action on the **System Jobs** page. You c
 
 ### See also
 
-[Enable direct email](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
+[System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
