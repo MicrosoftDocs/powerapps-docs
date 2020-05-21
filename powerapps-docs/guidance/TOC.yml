@@ -6,3 +6,7 @@
     href: overview.md
   - name: Test app
     href: create-app.md  
+- name: Plan a Power Apps Project
+  items:
+  - name: Introduction
+    href: planning/introduction.md
