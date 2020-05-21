@@ -2,7 +2,7 @@
 title: "Checklist: Unified Interface transition | MicrosoftDocs"
 description: "Checklist to ensure that you're prepared for transition to the Unified Interface."
 ms.custom: ""
-ms.date: 05/11/2020
+ms.date: 05/21/2020
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -110,6 +110,10 @@ Flows](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsof
 -   **Service scheduling**: Consider using [Universal Resource Scheduling](https://docs.microsoft.com/dynamics365/common-scheduler/schedule-anything-with-universal-resource-scheduling) to replace legacy service scheduling.
 
 -   **Dynamics 365 for Outlook (COM Add-in)**: Consider replacing the [deprecated](/power-platform/important-changes-coming#dynamic-365-for-outlook-is-deprecated) Dynamics 365 for Outlook (COM Add-in) with the modern, lightweight [Dynamics 365 App for Outlook](https://docs.microsoft.com/dynamics365/outlook-app/overview). For further information and steps to make a smooth transition, download [Dynamics 365 for Outlook (COM add-in) Playbook](https://aka.ms/OutlookCOMPlaybook)
+
+- **Dynamics 365 Customer Service**
+    - [Deprecated knowledge management entities](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn265924(v=crm.8)#some-knowledge-management-entities-are-deprecated): See this topic to work with the latest knowledge management entities: [Work with knowledge article](https://docs.microsoft.com/dynamics365/customer-service/work-knowledge-articles)
+    - [Deprecated contract entities](https://docs.microsoft.com/power-platform/important-changes-coming#contracts-contract-line-items-and-contract-templates-entities-are-deprecated): See this topic to migrate to entitlements: [Contracts to entitlements migration strategy](https://docs.microsoft.com/dynamics365/customer-service/contract-to-entitlement-migration) 
 
 ## Test your application in Unified Interface
 
