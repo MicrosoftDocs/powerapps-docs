@@ -76,8 +76,8 @@ A solution component represents something that you can potentially customize. An
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
 2. Open the solution you want, select the component you want, on the command bar select **...,** and then select **Show dependencies**. 
 
-  > [!div class="mx-imgBorder"] 
-  > ![Component dependency for the account entity](media/component-dependencies-account.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Component dependency for the account entity](media/component-dependencies-account.png)
 
 <!-- Move this to ALM guide  ## View and edit solution components
 A component represents something that you can potentially customize. Anything that can be included in a solution is a component. To view the components included in a solution, open the solution you want. The components are listed in the **Components** list. Notice that you can't edit components contained in a managed solution. 
