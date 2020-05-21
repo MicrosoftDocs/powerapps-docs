@@ -69,7 +69,6 @@ Use this property to show a confirmation dialog box if the user has made changes
 The confirmation dialog box appears in any situation where data could be lost, as in these examples:
 
 - Running the [**Exit**](function-exit.md) function.
-
 - If the app is running in a browser:
   - Closing the browser or the browser tab in which the app is running.
   - Selecting the browser's back button.
@@ -77,7 +76,7 @@ The confirmation dialog box appears in any situation where data could be lost, a
 - If the app is running in Power Apps Mobile (iOS or Android):
   - Swiping to switch to a different app in Power Apps Mobile.
   - Selecting the back button on an Android device.
-  - Running the [**Launch**](function-param.md) function to launch another canvas app. 
+  - Running the [**Launch**](function-param.md) function to launch another canvas app.
 
 The exact look of the confirmation dialog box might vary across devices and versions of Power Apps.
 

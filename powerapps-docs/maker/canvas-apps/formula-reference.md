@@ -301,7 +301,7 @@ Other elements include:
 
 **[Select](functions/function-select.md)** – Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
 
-**[Self](functions/operators.md#self-and-parent-operators)** – Provides access to the   current control's properties.
+**[Self](functions/operators.md#self-and-parent-operators)** – Provides access to the properties of the current control.
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
