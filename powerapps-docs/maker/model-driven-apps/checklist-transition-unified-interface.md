@@ -111,8 +111,8 @@ Flows](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsof
 
 - **Dynamics 365 Customer Service**:
     -   Service scheduling: Consider using [Universal Resource Scheduling](https://docs.microsoft.com/dynamics365/common-scheduler/schedule-anything-with-universal-resource-scheduling) instead of legacy service scheduling.
-    - [Deprecated knowledge management entities](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn265924(v=crm.8)#some-knowledge-management-entities-are-deprecated): See this topic to work with the latest knowledge management entities: [Work with knowledge articles](https://docs.microsoft.com/dynamics365/customer-service/work-knowledge-articles)
-    - [Deprecated contract entities](https://docs.microsoft.com/power-platform/important-changes-coming#contracts-contract-line-items-and-contract-templates-entities-are-deprecated): See this topic to migrate to entitlements: [Contracts to entitlements migration strategy](https://docs.microsoft.com/dynamics365/customer-service/contract-to-entitlement-migration) 
+    - [Deprecated knowledge management entities](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn265924(v=crm.8)#some-knowledge-management-entities-are-deprecated): See this topic to work with the latest knowledge management entities: [Work with knowledge articles](https://docs.microsoft.com/dynamics365/customer-service/work-knowledge-articles).
+    - [Deprecated contract entities](https://docs.microsoft.com/power-platform/important-changes-coming#contracts-contract-line-items-and-contract-templates-entities-are-deprecated): See this topic to migrate to entitlements: [Contracts to entitlements migration strategy](https://docs.microsoft.com/dynamics365/customer-service/contract-to-entitlement-migration). 
 
 ## Test your application in Unified Interface
 
