@@ -41,14 +41,14 @@ Before you start to follow this topic:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-1. In the navigation pane, click or tap **Data** to expand it, and then click or tap **Entities**. 
+1. In the navigation pane, select **Data** to expand it, and then select **Entities**. 
 
     > [!div class="mx-imgBorder"] 
     > ![Power Apps home page](./media/data-platform-cds-newentity-pq/entities-get-data.png)
 
 1. In the command menu, select **Get data**.
 
-1. In the list of data sources, click or tap **OData**.
+1. In the list of data sources, select **OData**.
 
     > [!div class="mx-imgBorder"] 
     > ![Choose the OAuth connector](./media/data-platform-cds-newentity-pq/choose-odata.png)

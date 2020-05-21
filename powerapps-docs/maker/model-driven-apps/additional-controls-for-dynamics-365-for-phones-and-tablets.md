@@ -30,11 +30,11 @@ To use these controls in the form editor:
   
 1.  Double-click the field or list you want to add the control to.  
   
-2.  Click the **Controls** tab.  
+2.  Select the **Controls** tab.  
   
-3.  Click **Add control**.  
+3.  Select **Add control**.  
   
-4.  Select the control you want and then click **Add**.  
+4.  Select the control you want and then select **Add**.  
   
     > [!NOTE]
     >  Different controls are available depending on the field or list type. For example, slider controls might only be available for numerical or money fields.  
@@ -43,7 +43,7 @@ To use these controls in the form editor:
   
 6.  Configure the values for each property.  
   
-7.  Click **OK** when you’re done configuring the control.  
+7.  Select **OK** when you’re done configuring the control.  
   
  Following are descriptions for each control you can use on forms.  
   
