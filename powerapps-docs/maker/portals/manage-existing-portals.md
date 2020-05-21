@@ -30,11 +30,11 @@ Opens the [Power Apps portals Studio](portal-designer-anatomy.md) to edit the co
 > [!div class=mx-imgBorder]
 > ![portal maker](media/portal-maker.png "Portal maker")  
 
-You may see the following error when you try to edit the portal: <br>
+Portals Studio requires a contact record with the email address *portaluser@powerappsportals.com* for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time. However, the contact record may fail to create if you've one or more fields for the Contact entity set as **Required**. Or, you've any business logic, such as synchronous plug-ins or workflows, that restrict contact creation. This may cause the creation of the contact record to fail and you'll see the following error message when editing the portal:
 
-*Something went wrong. Contact with email address portaluser@powerappsportals.com couldn’t be created. To edit the portal, create a contact with email address portaluser@powerappsportals.com.* <br>
+`Something went wrong. Contact with email address portaluser@powerappsportals.com couldn’t be created. To edit the portal, create a contact with email address portaluser@powerappsportals.com.`
 
-Portals Studio requires a contact record for some of its functionality to work. This error usually shows up if that contact couldn't be created when the Studio loads for the first time. This may happen because of the fields set as *required*, business logic such as synchronous plugins or workflows that restrict contact creation. When this happens, create a contact record manually with the email address *portaluser@powerappsportals.com*.
+When you see this error message, create a contact record manually with the email address *portaluser@powerappsportals.com*.
 
 ## Browse
 
