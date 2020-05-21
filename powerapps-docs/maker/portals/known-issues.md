@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/20/2020
+ms.date: 05/07/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -33,12 +33,6 @@ ms.reviewer:
 - In certain cases, when you create a portal, the styles are not applied properly to the portal, and the website is displayed without the styles when opened through **Browse website**. This rarely happens and styles can be recovered by restarting the portal from Power Apps Portals admin center.
 
 ## Power Apps portals Studio issues
-
-- You see the following error message when you try to edit the portal:
-
-    *An unexpected error occurred. Contact with email address portaluser@powerappsportals.com couldn’t be created. To edit the portal, create a contact with email address portaluser@powerappsportals.com.*
-
-    To resolve this issue, create a contact with email address portaluser@powerappsportals.com.
 
 - If a portal has page hierarchy of more than three levels, the pages from fourth level onwards are not displayed in Power Apps portals Studio.
 
