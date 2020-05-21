@@ -89,7 +89,7 @@ Unified Interface.
     path to replace these features with either native platform capabilities or
     alternative solutions that are compatible.
 
-## Identify replacements for deprecated client API code and features
+## Identify replacements for deprecated features
 
 Based on the outputs of the **Power Apps Solution Checker** and the information
 contained in [Important changes (deprecations) coming](https://docs.microsoft.com/power-platform/important-changes-coming) on deprecated client APIs and
