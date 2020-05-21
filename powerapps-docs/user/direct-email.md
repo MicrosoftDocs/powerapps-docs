@@ -10,11 +10,6 @@ ms.author: shjais
 manager: shujoshi
 ---
 
-
-<!-- Editor note: If the feature is enabled by default, why tell readers how to enable it? -->
-
-
-
 # Send email to multiple recipients
 
 You can send an email to multiple recipients by using email templates. This is known as *direct* or *bulk* emailing. By default, the direct email feature is enabled. To disable this feature, an administrator must select **No** for **Enable Send Direct Email Action in Unified Interface for Send Email enabled entities** on the **Email** tab in the **System Settings** dialog box. More information: [System Settings Email tab](https://docs.microsoft.com/power-platform/admin/system-settings-dialog-box-email-tab)
