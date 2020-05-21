@@ -135,6 +135,7 @@ PowerAppsNotification.SendPushNotification(
 * Currently, we don't provide push notifications for users who run apps only in a web browser.
 * Notifications show the generic Power Apps icon instead of a specific app icon.
 * When you use Power Automate, you can send a push notification to only one recipient at a time.
+* Push notifications aren't currently supported for Model Driven apps. 
 
 For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
 
