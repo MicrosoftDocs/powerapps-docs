@@ -35,21 +35,21 @@ Returns a reference to the object that the event occurred on.
 |-------|------------|
 |[OnChange](../events/attribute-onchange.md)|[attribute](../attributes.md)|
 |[OnDataLoad](../events/form-data-onload.md)|[formContext.data.entity](../formcontext-data-entity.md)|
-|[OnGridDataLoad](../events/subgrid-onload.md)|[formContext.ui.SubGridControl](../controls.md#subgrid-control-type)|
+|[OnGridDataLoad](../events/subgrid-onload.md)|[SubGrid](../controls.md#subgrid-control-type) control|
 |[OnLoad](../events/form-onload.md)|[formContext.ui](../formcontext-ui.md)|
-|[OnLookupTagClick](../events/onlookuptagclick.md)|[formContext.ui.LookupControl](../controls.md#lookup-control-type)|
-|[OnPostSearch](../events/postsearch.md)|[formContext.ui.kbSearchControl](../controls.md#kbsearch-knowledge-base-search-control-type)|
+|[OnLookupTagClick](../events/onlookuptagclick.md)|[Lookup](../controls.md#lookup-control-type) control|
+|[OnPostSearch](../events/postsearch.md)|[kbSearch](../controls.md#kbsearch-knowledge-base-search-control-type) control|
 |[OnProcessStatusChange](../events/onprocessstatuschange.md)|[formContext.data.process](../formcontext-data-process.md)|
 |[OnProcessStatusChange](../events/onprocessstatuschange.md)|[formContext.data.process](../formcontext-data-process.md)|
-|[OnReadyStateComplete](../events/onreadystatecomplete.md)|[formContext.ui.IFrameControl](../controls.md#iframe-control-type)|
+|[OnReadyStateComplete](../events/onreadystatecomplete.md)|[IFrame](../controls.md#iframe-control-type) control|
 |[OnRecordSelect](../events/grid-onrecordselect.md)|[formContext.data.entity](../formcontext-data-entity.md)|
-|[OnResultOpened](../events/onresultopened.md)|[formContext.ui.kbSearchControl](../controls.md#kbsearch-knowledge-base-search-control-type)|
+|[OnResultOpened](../events/onresultopened.md)|[kbSearch](../controls.md#kbsearch-knowledge-base-search-control-type) control|
 |[OnSave](../events/form-onsave.md)|[formContext.data.entity](../formcontext-data-entity.md)|
 |[OnSelection](../events/onselection.md)|None|
 |[OnStageChange](../events/onstagechange.md)|[formContext.data.process](../formcontext-data-process.md)|
 |[OnStageSelected](../events/onstageselected.md)|[formContext.data.process](../formcontext-data-process.md)|
-|[OnTabStateChange](../events/tabstatechange.md)|[formContext.ui.tab](../formcontext-ui-tabs.md)|
-|[PreSearch](../events/presearch.md)|[formContext.ui.LookupControl](../controls.md#lookup-control-type)|
+|[OnTabStateChange](../events/tabstatechange.md)|[tab](../formcontext-ui-tabs.md) object|
+|[PreSearch](../events/presearch.md)|[Lookup](../controls.md#lookup-control-type) control|
 
 
 ### Related topics
