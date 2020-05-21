@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Manage existing portals in Power Apps
 
-Once you've created a portal, it is visible under the **Recent apps** section on the Power Apps home page.
+Once you've created a portal, it's visible under the **Recent apps** section on the Power Apps home page.
 
 > [!div class=mx-imgBorder]
 > ![recent apps](media/recent-apps.png "Recent apps")  
@@ -34,7 +34,7 @@ You may see the following error when you try to edit the portal: <br>
 
 *Something went wrong. Contact with email address portaluser@powerappsportals.com couldn’t be created. To edit the portal, create a contact with email address portaluser@powerappsportals.com.* <br>
 
-Portals Studio requires a contact record for some of it's functionality to work. This error usually shows up if that contact couldn't be created when the Studio loads for the first time. This may happen because of the fields set as *required*, business logic such as synchronous plugins or workflows that restrict contact creation. When this happens, create a contact record manually with the email address *portaluser@powerappsportals.com*.
+Portals Studio requires a contact record for some of its functionality to work. This error usually shows up if that contact couldn't be created when the Studio loads for the first time. This may happen because of the fields set as *required*, business logic such as synchronous plugins or workflows that restrict contact creation. When this happens, create a contact record manually with the email address *portaluser@powerappsportals.com*.
 
 ## Browse
 
@@ -54,7 +54,7 @@ Share your portal with internal or external users. Follow the steps mentioned in
 
 ### Share with internal users
 
-To share the portal with internal users you must first create a security role and then assign users to the security role so they can use the portal.
+To share the portal with internal users, you must first create a security role and then assign users to the security role so they can use the portal.
 
 > [!NOTE]
 > As a user in Common Data Service, if you do not have appropriate privileges on portal entities, you might see errors such as “You do not have access to view solutions in this environment.” or “You do not have access to view Website in this environment”. It is recommended that you are in a System Administrator security role in the corresponding Common Data Service database.
@@ -92,14 +92,14 @@ Your portal should work anonymously and should be accessible by the external use
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also perform advanced actions such as administering the portal though the Power Apps Portals admin center and working with site settings. Settings provides links to the Power Apps Portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
+Displays the portal settings and allows you to change the name of the portal. You can also do advanced actions such as administering the portal though the Power Apps Portals admin center and working with site settings. Settings provides links to the Power Apps Portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
 
 > [!div class=mx-imgBorder]
 > ![portal settings](media/portal-settings.png "Portal settings")  
 
 ## Delete
 
-Deletes the portal and hosted resources. When you delete a portal, its URL becomes inaccessible. Deleting a portal does not affect any portal configurations or solutions present in your environment, and they will remain as-is.
+Deletes the portal and hosted resources. When you delete a portal, its URL becomes inaccessible. Deleting a portal doesn't affect any portal configurations or solutions present in your environment, and they'll remain as-is.
 You must delete the portal configurations manually to completely remove portal configurations from your environment. To do this, use the Portal Management app, and delete the corresponding website record for the portal.
 
 > [!NOTE]
@@ -107,7 +107,7 @@ You must delete the portal configurations manually to completely remove portal c
 
 ## Details
 
-Displays details such as owner of the portal, date and time when it was created and last modified, and the URL of the portal.
+Displays details such as owner of the portal, date, and time when it was created and last modified, and the URL of the portal.
 
 > [!div class=mx-imgBorder]
 > ![portal details](media/portal-details.png "Portal details")  
