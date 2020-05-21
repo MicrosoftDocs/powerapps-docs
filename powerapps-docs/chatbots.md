@@ -5,7 +5,7 @@ author: iaanw
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/27/2020
+ms.date: 05/20/2020
 ms.author: iawilt
 ms.reviewer: mvakoc
 ---
