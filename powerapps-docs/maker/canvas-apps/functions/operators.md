@@ -73,13 +73,14 @@ Use the **[ThisItem](operators.md#thisitem-operator)** operator to specify the [
 For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
 
 ## Self and Parent operators
-Any control in Power Apps can be referenced by name from anywhere within the app. **Label1** may be the name of a [**Label**](../controls/control-text-box.md) control in your app. To retrieve the background color of this control, you can use **Label1.Fill** anywhere in your app.
 
-It is often convenient to reference another property of the same control when writing a formula.  The **Self** operator provides access to the current control.  For example, to link the **DisabledFill** property to the **Fill** property of our label control, set the **DisabledFill** property to **Self.Fill**.  The control's  **DisabledFill** property will always have the same value as its **Fill** property, even if this control is copy and pasted across applications.
+There are multiple ways to refer to a control within a formula:
 
-Some controls host other controls. For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../controls/control-card.md)**, **[Edit form](../controls/control-form-detail.md)**, and **[Display form](../controls/control-form-detail.md)** controls are all containers for controls. We call the hosting control the "parent" of the controls within.
-
-Similar to **Selff**, the **Parent** operator provides access to the current control's container control .  For our label to automatically use the same fill color as its container, set its **Fill** property to **Parent.Fill**.   
+| Method | Description |
+|--------|-------------|
+| By control name |  Any control can be referenced by name from anywhere within the app.<br><br>For example, **Label1** may be the name of a [**Label**](../controls/control-text-box.md) control.  use **Label1.Fill** anywhere in your app to retrieve the background color of this control.  | 
+| **Self** operator | It is often convenient to reference another property of the same control when writing a formula.  Instead of using an absolute reference by name, it is easier and more portable to use a relative reference to one*self*.  The **Self** operator provides that easy access to the current control.<br><br>For example, to link the **DisabledFill** property to the **Fill** property of our label control, set the **DisabledFill** property to the formula **Self.Fill**.  |
+| **Parent** operator | Some controls host other controls, such as the **[Screen](../controls/control-screen.md)** and **[Gallery](../controls/control-gallery.md)** controls. We call the hosting control the *parent* of the controls within it.  Like the **Self** operator, the **Parent** operator provides an easy relative reference to the container control.<br><br>For example, our label control could take the **DisabledFill** property from the **Fill** property of its container with the formula **Parent.Fill**.
 
 **Self** and **Parent** are operators and not properties on the controls themselves.    Referring to **Parent.Parent** is not supported, nor is **Self.Parent** or **Parent.Self**. 
 

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/04/2020
+ms.date: 05/20/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -20,7 +20,7 @@ Formulas combine many elements.  Listed below are:
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
 * **Signals** return information about the environment. For example, **[Location](functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
 * **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
-* **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Parent](functions/operators.md#parent-operator)**, provide access to information from within a container.
+* **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Self](functions/operators.md#self-and-parent-operators)**, provide access to information from within a container.
 
 Other elements include:
 
@@ -247,7 +247,7 @@ Other elements include:
 ## P
 **[Param](functions/function-param.md)** – Access parameters passed to a canvas app when launched.
 
-**[Parent](functions/operators.md#parent-operator)** – Provides access to a container control's properties.
+**[Parent](functions/operators.md#self-and-parent-operators)** – Provides access to a container control's properties.
 
 **[Patch](functions/function-patch.md)** – Modifies or creates a record in a data source, or merges records outside of a data source.
 
@@ -300,6 +300,8 @@ Other elements include:
 **[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
 
 **[Select](functions/function-select.md)** – Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
+
+**[Self](functions/operators.md#self-and-parent-operators)** – Provides access to the current control's properties.
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
