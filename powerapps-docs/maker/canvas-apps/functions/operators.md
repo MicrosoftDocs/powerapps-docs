@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/29/2020
+ms.date: 05/20/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -48,7 +48,8 @@ Some of these operators are dependent on the language of the author.  See [Globa
 |                                **@**                                |                       &nbsp;                        |                                                                              **[@MyVariable]**                                                                               |                                                                                                                      Global disambiguation                                                                                                                       |
 | **,**<br>[[language dependent](../global-apps.md)]  |                   List separator                    | **If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]** | Separates: <ul><li>arguments in function calls</li><li>fields in a [record](../working-with-tables.md#elements-of-a-table)</li><li>records in a [table](../working-with-tables.md#inline-value-tables)</li></ul> This character depends on the language. |
 | **;**<br>[[language dependent](../global-apps.md)] |                  Formula chaining                   |                                     **Collect(T, A); Navigate(S1, &quot;&quot;)**                                     |                                                                          Separate invocations of functions in behavior properties. The chaining operator depends on the language.                                                                          |
-|                             **Parent**                              |         [Parent operator](#parent-operator)         |                                                                               **Parent.Fill**                                                                                |                                                                                                           Access to properties of a control container                                                                                                            |
+|                             **Self**                              |         [Self operator](#self-and-parent-operators)         |                                                                               **Self.Fill**                                                                                |                                                                                                           Access to properties of the current control                                                                                                             |
+|                             **Parent**                              |         [Parent operator](#self-and-parent-operators)         |                                                                               **Parent.Fill**                                                                                |                                                                                                           Access to properties of a control container                                                                                                            |
 |                            **ThisItem**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisItem.FirstName**                                                                            |                                                                                                          Access to fields of a Gallery or form control                                                                                                           |
 
 ## in and exactin operators
@@ -71,12 +72,17 @@ Use the **[ThisItem](operators.md#thisitem-operator)** operator to specify the [
 
 For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
 
-## Parent operator
-Some controls host other controls. For example, **[Screen](../controls/control-screen.md)**, **[Gallery](../controls/control-gallery.md)**, **[Card](../controls/control-card.md)**, **[Edit form](../controls/control-form-detail.md)**, and **[Display form](../controls/control-form-detail.md)** controls are all containers for controls. We call the hosting control the "parent" of the controls within.
+## Self and Parent operators
 
-Any control in Power Apps can be referenced by name from anywhere within the app. **Screen1** may be the name of a screen in your app. To retrieve the background color of this screen, you can use **Screen1.Fill**.
+There are three ways to refer to a control and its properties within a formula:
 
-Controls on this screen have another option. They can use a relative reference: **Parent.Fill**. The **[Parent](operators.md#parent-operator)** operator refers to the control that hosts this control, making available all of its properties. Using **[Parent](operators.md#parent-operator)** is helpful because it doesn't depend on the name of the control. You can copy and paste a container control without needing to adjust any references within the container. This operator also makes the relationship between child and parent controls clearer when reading formulas.
+| Method | Description |
+|--------|-------------|
+| By control name |  Any control can be referenced by name from anywhere within the app.<br><br>For example, **Label1.Fill** refers to the fill property of the control who's name is **Label1**.  | 
+| **Self** operator | It's often convenient to reference another property of the same control when writing a formula.  Instead of using an absolute reference by name, it's easier and more portable to use a relative reference to one*self*.  The **Self** operator provides that easy access to the current control.<br><br>For example, **Self.Fill** refers to the fill color of the current control.   |
+| **Parent** operator | Some controls host other controls, such as the **[Screen](../controls/control-screen.md)** and **[Gallery](../controls/control-gallery.md)** controls. The hosting control of the controls within it is called the *parent*.  Like the **Self** operator, the **Parent** operator provides an easy relative reference to the container control.<br><br>For example, **Parent.Fill** refers to the fill property of the control that is the container for the current control. |
+
+**Self** and **Parent** are operators and not properties on the controls themselves. Referring to **Parent.Parent**, **Self.Parent** or **Parent.Self** is not supported.
 
 ## Identifier names
 
