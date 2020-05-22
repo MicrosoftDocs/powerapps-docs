@@ -18,6 +18,13 @@ search.app:
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
+
+1. **Problems downloading attachments in SharePoint custom forms** (May 21, 2020)
+   When using the attachment control to download an attachment the click will have no response using Chrome 83 and Microsoft Edge 83. To work around this issue change to use the default SharePoint form, or use another browser. The team is actively working to fix this issue.
+   
+1. **Problems downloading attachments in embedded Power Apps** (May 21, 2020)
+  When using the attachment control to download an attachment the click will have no response, when using Chrome 83 and Microsoft Edge 83. To work around use another browser. The team is actively working to fix this issue.
+  
 1. **Camera images when imported via Edge are flipped** (January 20, 2020)
 
     When using the camera and the Edge browser, the image may be flipped.  This is due to an Edge defect.  To mitigate this issue, please use the new Edge Chromium or a different browser.
