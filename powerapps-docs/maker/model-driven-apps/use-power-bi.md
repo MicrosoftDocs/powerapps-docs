@@ -51,19 +51,6 @@ The Dynamics 365 apps content packs for Power BI allow you to easily access and 
 > [!TIP]
 >  If the content pack you select does not open in your web browser, in the left pane of your Power BI workspace click the content pack under **Dashboards**.  
   
-### Content packs available for download.  
- The Dynamics 365 content packs support the app's default out-of-box entities. However, you can customize  the following content packs by downloading the .PBIX file and then using Power BI Desktop to customize the content pack before uploading it to the Power BI service.  
-  
-- [Download the Dynamics CRM Online Sales Manager .PBIX](https://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Sales%20Manager.pbix)  
-  
-- [Download the Dynamics 365 for Customer Engagement apps (online) Service Manager .PBIX](https://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Customer%20Service%20Manager.pbix)  
-  
-  The Power BI Report Template for Connected Field Service enables users to publish a Power BI report that displays the live heart beat of connected devices.  
-  
-- [Download the Power BI Report Template for Connected Field Service for Dynamics 365 for Customer Engagement](https://download.microsoft.com/download/E/B/5/EB5ED97A-A36A-4CAE-8C04-333A1E463B4F/PowerBI%20Report%20Template%20for%20Connected%20Field%20Service%20for%20Microsoft%20Dynamics%20365.pbix)  
-  
- For information about how to customize the content packs, see [Customize Power BI content packs](customize-power-bi-content-packs.md). 
-  
 <a name="BPI_embed"></a>   
 ## Embed Power BI visualizations on personal dashboards  
  Before users can embed Power BI visualizations on personal dashboards, the organization-wide setting must be enabled.  
