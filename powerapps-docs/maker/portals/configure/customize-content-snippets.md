@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/08/2020
+ms.date: 05/21/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -34,21 +34,21 @@ Enter values for the following fields:
 | Name    | The name can be used by a developer to place the snippet value into a page template within the portal's code. |
 | Website | The website that is associated with the snippet.                                                              |
 | Display Name | Display name for the content snippet. |
-| Type | Type of content snippet, Text or HTML.
+| Type | Type of content snippet, Text, or HTML.
 | Content Snippet Language | Select a language for the content snippet. To add more languages, go to [enable multiple language support](enable-multiple-language-support.md).
-| Value   | The content of the snippet to be displayed in the portal. This can contain plain text or HTML markup. You can also use [liquid objects](../liquid/liquid-objects.md) with both text or HTML markup values.    |
+| Value   | The content of the snippet to be displayed in the portal. You can enter plain text or HTML markup. You can also use [liquid objects](../liquid/liquid-objects.md) with both text or HTML markup values.    |
 
 ## Use snippet
 
-You can use snippets to show text or HTML. In addition, the content snippets can also use [liquid objects](../liquid/liquid-objects.md) and reference other content such as [entities](../liquid/liquid-objects.md#entities).
+You can use snippets to show text or HTML. The content snippets can also use [liquid objects](../liquid/liquid-objects.md), and reference other content such as [entities](../liquid/liquid-objects.md#entities).
 
 For example, you can use the steps explained earlier in this article to create/edit a content snippet. While editing the snippet, you can include sample code to [an entity record](../liquid/liquid-objects.md#entities). Ensure you replace the ID of the Account entity record with the correct ID from your environment. You can also use another entity instead of Account.
 
-After you create a snippet with text, HTML and/or liquid objects like in the example above, you can use it in a portal page.
+After you create a snippet with text, HTML, or liquid objects shown in the example above, you can use it in a portal page.
 
-To do this:
+To do add snippet on a portal page:
 
-1. Create a [web template](../liquid/store-content-web-templates.md) and use [snippets liquid object](../liquid/liquid-objects.md#snippets) to call the snippet you just created.
+1. Create a [web template](../liquid/store-content-web-templates.md) and use [snippets liquid object](../liquid/liquid-objects.md#snippets) to call the snippet you created.
 
 2. Create a [page template](page-templates.md) using the web template created earlier.
 
@@ -64,13 +64,13 @@ The following example uses a Common Data Service database with [sample data](htt
 
 1. To create a new snippet, select **New**.
 
-1. Enter name, such as AccountData.
+1. Enter name. For example, AccountData.
 
 1. Select your website.
 
-1. Enter Display Name, such as AccountData.
+1. Enter Display Name. For example, AccountData.
 
-1. Select type as HTML for this example. You can also select text and the sample liquid code will still work without 
+1. Select type as HTML for this example. You can also select text instead.
 
 1. Select a language.
 
@@ -94,7 +94,7 @@ The following example uses a Common Data Service database with [sample data](htt
 
 1. Select **New**.
 
-1. Enter name, such as account-web-template.
+1. Enter name. For example, account-web-template.
 
 1. Select your website.
 
@@ -112,13 +112,13 @@ The following example uses a Common Data Service database with [sample data](htt
 
 1. Select **New**.
 
-1. Enter name, such as Account Data Snippet.
+1. Enter name. For example, Account Data Snippet.
 
 1. Select your website.
 
 1. Select Type as *Web Template*.
 
-1. Select the web template created earlier, such as account-web-template.
+1. Select the web template created earlier. In this example, it's account-web-template.
 
 1. Select Save.
 
@@ -130,11 +130,11 @@ The following example uses a Common Data Service database with [sample data](htt
 
     ![New blank page](./media/customize-content-snippets/new-blank-page.png)
 
-1. Enter name for the page, such as Accounts Data.
+1. Enter name for the page. For example, Accounts Data.
 
-1. Enter Partial URL, such as accounts-data.
+1. Enter Partial URL. For example, accounts-data.
 
-1. Select the **Page Template** created earlier, such as Account Data Snippet.
+1. Select the **Page Template** created earlier. In this example, it's Account Data Snippet.
 
     ![Web page metadata](./media/customize-content-snippets/webpage-metadata.png)
 
