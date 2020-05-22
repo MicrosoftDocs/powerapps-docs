@@ -13,28 +13,28 @@
   - name: Planning phase
     items:
     - name: Identifying the business problem to solve (the use case)
-      href: identifying-business-problem-to-solve
+      href: planning/identifying-business-problem-to-solve
     - name: Understanding the current business process
       items:
       - name: Overview and identifying key contributors
-        href: understanding-current-business-process
+        href: planning/understanding-current-business-process
       - name: Documenting the business process
         items:
         - name: Overview
-          href: documenting-business-process
+          href: planning/documenting-business-process
         - name: What is the task?
-          href: what-is-task
+          href: planning/what-is-task
         - name: Who is doing the work?
-          href: who-is-doing-work
+          href: planning/who-is-doing-work
         - name: What activities are being performed?
-          href: what-activities
+          href: planning/what-activities
         - name: What data is needed?
-          href: what-data-needed
+          href: planning/what-data-needed
         - name: What data is created or edited?
-          href: create-edit-data
+          href: planning/create-edit-data
         - name: What decisions, approvals, or rules are there?
-          href: decisions-approvals
+          href: planning/decisions-approvals
         - name: What is the next task?
-          href: next-task
+          href: planning/next-task
         - name: Visually mapping the process
-          href: visually-map-process
+          href: planning/visually-map-process
