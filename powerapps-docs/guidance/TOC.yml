@@ -13,44 +13,44 @@
   - name: Planning phase
     items:
     - name: Identifying the business problem to solve (the use case)
-      href: planning/identifying-business-problem-to-solve
+      href: planning/identifying-business-problem-to-solve.md
     - name: Understanding the current business process
       items:
       - name: Overview and identifying key contributors
-        href: planning/understanding-current-business-process
+        href: planning/understanding-current-business-process.md
       - name: Documenting the business process
         items:
         - name: Overview
-          href: planning/documenting-business-process
+          href: planning/documenting-business-process.md
         - name: What is the task?
-          href: planning/what-is-task
+          href: planning/what-is-task.md
         - name: Who is doing the work?
-          href: planning/who-is-doing-work
+          href: planning/who-is-doing-work.md
         - name: What activities are being performed?
-          href: planning/what-activities
+          href: planning/what-activities.md
         - name: What data is needed?
-          href: planning/what-data-needed
+          href: planning/what-data-needed.md
         - name: What data is created or edited?
-          href: planning/create-edit-data
+          href: planning/create-edit-data.md
         - name: What decisions, approvals, or rules are there?
-          href: planning/decisions-approvals
+          href: planning/decisions-approvals.md
         - name: What is the next task?
-          href: planning/next-task
+          href: planning/next-task.md
         - name: Visually mapping the process
-          href: planning/visually-map-process
+          href: planning/visually-map-process.md
     - name: Optimizing your business process
-      href: planning/optimizing-business-process
+      href: planning/optimizing-business-process.md
     - name: Is it worth automating this process?
       items:
       - name: The cost of doing nothing
-        href: planning/worth-automating-process
+        href: planning/worth-automating-process.md
       - name: Defining the business value of solving the problem
-        href: planning/defining-business-value
+        href: planning/defining-business-value.md
       - name: Measuring success against the business value
-        href: planning/measuring-success
+        href: planning/measuring-success.md
     - name: Creating a project plan
       items:
       - name: Overview
-        href: planning/creating-project-plan
+        href: planning/creating-project-plan.md
       - name: Defining the app project objective
-        href: planning/defining-app-project-objective
+        href: planning/defining-app-project-objective.md
