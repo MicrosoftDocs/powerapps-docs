@@ -41,20 +41,12 @@ Before you customize a content pack, read  the information here and perform each
   
 - [Power BI Desktop](https://powerbi.microsoft.com/desktop) application for editing Power BI reports.  
   
-- PBIX file for the content pack that you want to customize.  
-  
-  -   [Download the Dynamics CRM Online Sales Manager PBIX](https://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Sales%20Manager.pbix)  
-  
-  -   [Download the Dynamics CRM Online Service Manager PBIX](https://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Customer%20Service%20Manager.pbix)  
-  
-  -   [Download the Microsoft Dynamics 365 Process Analyzer PBIX](https://download.microsoft.com/download/9/2/B/92BCBDCE-CE01-4BC9-A306-2A92653B683E/Process%20Analyzer%20-1.34b.pbix)  
-  
   Dynamics 365 content packs are currently only supported in the U.S. English language.  
   
 ### Prepare a content pack for customization  
   
 > [!IMPORTANT]
->  To connect the OData feed to your instance you must follow the steps described here before you customize the content pack.  
+>  To connect the OData feed to your instance, you must follow the steps described here before you customize the content pack.  
 > 
 > Currently, the Power BI service isn’t compatible with the Dynamics 365 version 9.0 OData endpoint. When you try to use the version 9.0 OData endpoint with the Power BI service the error message “The feed's metadata document appears to be invalid” is displayed. To work around this incompatibility, use the Dynamics 365 version 8.2 OData endpoint.For more information about the different endpoint versions, see [Compose HTTP requests and handle errors](../../developer/common-data-service/webapi/compose-http-requests-handle-errors.md).
   
@@ -345,4 +337,4 @@ Before you customize a content pack, read  the information here and perform each
 3. If multiple destinations are available, select the one you want, and then select **Publish**.  
   
 ### See also  
- [Use Power BI with Dynamics 365 Customer Engagement (on-premises)](use-power-bi.md)
+ [Use Power BI](use-power-bi.md)
