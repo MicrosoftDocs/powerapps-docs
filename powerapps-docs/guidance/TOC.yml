@@ -38,3 +38,19 @@
           href: planning/next-task
         - name: Visually mapping the process
           href: planning/visually-map-process
+    - name: Optimizing your business process
+      href: planning/optimizing-business-process
+    - name: Is it worth automating this process?
+      items:
+      - name: The cost of doing nothing
+        href: planning/worth-automating-process
+      - name: Defining the business value of solving the problem
+        href: planning/defining-business-value
+      - name: Measuring success against the business value
+        href: planning/measuring-success
+    - name: Creating a project plan
+      items:
+      - name: Overview
+        href: planning/creating-project-plan
+      - name: Defining the app project objective
+        href: planning/defining-app-project-objective
