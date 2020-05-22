@@ -45,44 +45,44 @@ your boss, especially when you need to ask for cooperation when making or using
 the apps. The list below shows the kinds of issues that could be solved by the
 platform:
 
--   Availability – Accessing apps at any time, anywhere
+- Availability – Accessing apps at any time, anywhere
 
--   Mobility – Allowing people to work with an app while on the move
+- Mobility – Allowing people to work with an app while on the move
 
--   Consolidation – Gathering data in a more automated way to minimize manual
+- Consolidation – Gathering data in a more automated way to minimize manual
     consolidation
 
--   Training – Getting people up to speed and tracking their training results &
+- Training – Getting people up to speed and tracking their training results &
     certifications
 
--   Democratization – Enhancing the ability to self-solve problems within the
+- Democratization – Enhancing the ability to self-solve problems within the
     department/section
 
--   Inclusion – Reducing friction for employees who have different work
+- Inclusion – Reducing friction for employees who have different work
     environments from other employees (such as remote workers or people with
     disabilities)
 
--   Efficiency – Reducing time required to get the desired outcome, reducing
+- Efficiency – Reducing time required to get the desired outcome, reducing
     unnecessary steps
 
--   Productivity – Increasing throughput of a process
+- Productivity – Increasing throughput of a process
 
--   Timeliness – Increasing the speed of end-to-end collaboration between
+- Timeliness – Increasing the speed of end-to-end collaboration between
     different stakeholders
 
--   Scalability – Allowing more throughput
+- Scalability – Allowing more throughput
 
--   Analysis – Gathering required additional information, storing it in such way
+- Analysis – Gathering required additional information, storing it in such way
     that allows for easier analysis
 
--   Reporting – Enabling faster or more complete reporting to management
+- Reporting – Enabling faster or more complete reporting to management
 
--   Security – Securely store and work with data
+- Security – Securely store and work with data
 
--   Compliance – Issues around handling personal information, meeting legal or
+- Compliance – Issues around handling personal information, meeting legal or
     accounting requirements
 
--   Sustainability – Reducing waste (such as paper, electricity) and pollution
+- Sustainability – Reducing waste (such as paper, electricity) and pollution
 
 Considering the cost of solving the problem manually
 ----------------------------------------------------
@@ -117,7 +117,7 @@ Example: Expense Reporting
 The example below shows how a typical paper-based expense approval within the
 organization has inefficiencies for multiple departments and employees.
 
-![A close up of a piece of paper Description automatically generated](media/093448e40b59160f93c3a52f9461f079.png)
+![Various team members explain the drawbacks of the current paper-based process](media/process-problem.png)
 
 As you can see from the example, every person has their own issues, but the
 common issue here is that the expense approval process is done on paper, which
@@ -134,9 +134,9 @@ throughout this set of articles.
 
 The business problem the team has decided to solve is:
 
->   Expense reporting: Create a process that is efficient for employees and the
->   accounting department, allows faster budget tracking, and reduces our
->   exposure in audits.
+> Expense reporting: Create a process that is efficient for employees and the
+> accounting department, allows faster budget tracking, and reduces our
+> exposure in audits.
 
 We think it’s pretty obvious that it’s worth going digital. As a quick
 calculation, the auditing team told us they process about 150 expense reports a

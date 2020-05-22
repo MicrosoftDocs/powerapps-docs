@@ -6,7 +6,35 @@
     href: overview.md
   - name: Test app
     href: create-app.md  
-- name: Plan a Power Apps Project
+- name: Planning a Power Apps Project
   items:
   - name: Introduction
     href: planning/introduction.md
+  - name: Planning phase
+    items:
+    - name: Identifying the business problem to solve (the use case)
+      href: identifying-business-problem-to-solve
+    - name: Understanding the current business process
+      items:
+      - name: Overview and identifying key contributors
+        href: understanding-current-business-process
+      - name: Documenting the business process
+        items:
+        - name: Overview
+          href: documenting-business-process
+        - name: What is the task?
+          href: what-is-task
+        - name: Who is doing the work?
+          href: who-is-doing-work
+        - name: What activities are being performed?
+          href: what-activities
+        - name: What data is needed?
+          href: what-data-needed
+        - name: What data is created or edited?
+          href: create-edit-data
+        - name: What decisions, approvals, or rules are there?
+          href: decisions-approvals
+        - name: What is the next task?
+          href: next-task
+        - name: Visually mapping the process
+          href: visually-map-process

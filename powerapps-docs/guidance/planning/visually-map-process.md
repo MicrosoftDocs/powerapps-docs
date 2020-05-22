@@ -14,7 +14,7 @@ process accurately.
 
 Here’s an example business process map:
 
-![Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports.](media/0605a427e0f673493ea5fc96cfd63edf.png)
+![Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports.](media/original-business-process.png)
 
 List each activity in order and link it to the next part of the process​:
 
@@ -24,7 +24,7 @@ List each activity in order and link it to the next part of the process​:
     work from this event to your goal​.
 
 3.  When you reach a point that requires a decision, draw a diamond around the
-    question which must be answered.  Usually this is written as a true/false
+    question that must be answered.  Usually this is written as a true/false
     question. Two lines should proceed from the diamond leading to the activity
     that is done based on the decision – one line is for ‘true’ the other is for
     ‘false’.​

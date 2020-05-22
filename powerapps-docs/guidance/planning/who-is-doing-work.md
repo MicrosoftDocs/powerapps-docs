@@ -18,10 +18,9 @@ For example
 
 -   “CFO” reviewing aggregated financials (specific title is the key)
 
-A single person may at times play each of these roles but the key is to
+A single person may at times play each of these roles, but the key is to
 understand *the role they’re playing when they do the task*. Understanding roles
-will help you design the app screens as well as configure access and security;
-we’ll get to those in the Design phase.
+will help you design the app screens as well as configure access and security. (We’ll get to those in the Design phase.)
 
 In IT terms, each person or group of people that perform the same function are
 referred to as a “Job Role” and a description of their relevant characteristics
@@ -35,15 +34,14 @@ After you identify the “who”, consider:
     sections.)
 
 -   What other systems are used regularly? (Knowing this will be useful in the
-    Design phase. For example a manager who lives in Teams may want to get
+    Design phase. For example, a manager who lives in Teams may want to get
     approval requests there vs email.)
 
 -   What would this person gain by using the app or cooperating to work with
     this new process?
 
-The last point is very important as there may be objections or hesitations from
-the people involved in the steps before or after the ones handled by your app –
-which could result in not being able to use the app due to the lack of
+The last point is very important because there may be objections or hesitations from
+the people involved in the steps before or after the ones handled by your app. That could result in not being able to use the app due to the lack of
 cooperation.
 
 **Tip:** Knowing who will be impacted by a change to the business process is
@@ -63,7 +61,7 @@ Also write down how often the task is done. (Daily, weekly, occasionally,
 seasonally?)
 
 An app that is used daily has different design considerations than one that is
-used occasionally. (For example, the former might need to be very streamlined
+used occasionally. (For example, the former might need to be streamlined
 and the latter might need to have more explanatory text.)
 
 Where are they doing the work?
@@ -78,8 +76,8 @@ how they do their work
 
 -   Do they move from location to location in the field?
 
-It’s good to understand how each of the users work so that the solution that is
-created is conducive to the work environment.
+It’s good to understand how each of the users works so that the solution that is
+created works for them.
 
 -   Will this be a mobile application?
 
@@ -96,7 +94,7 @@ the automated solution to capture the data real-time and have the data sync up
 when they do establish connectivity?
 
 What do the other participants in the process need to know, if anything, while
-the colleague performing this step is offline?
+the person performing this step is offline?
 
 Understanding this helps determine if you need processes that capture data
 locally so that the user can be ‘disconnected’ while they do their part of the
@@ -117,7 +115,7 @@ Example: Personas for expense reporting process
 These are the types of roles, work styles, and preferences we found when we
 looked into our expense reporting process:
 
-![Illustration of Lee in Sales](media/5fcf3dda1b2179afc968010366055d10.png)
+![Illustration of Lee in Sales](media/lee.png)
 
 **Lee – Salesperson**
 
@@ -130,7 +128,7 @@ looked into our expense reporting process:
 -   Prefers to capture his expenses and receipts as soon after they happen as
     possible
 
-![Illustration of Nick the Sales Manager](media/3cee23b9c5d687898638b738b0fb802e.png)
+![Illustration of Nick the Sales Manager](media/nick.png)
 
 **Nick – Sales Manager**
 
@@ -142,14 +140,14 @@ looked into our expense reporting process:
 
 -   Responsible for approving the expense reports of all of his direct reports
 
-![Illustration of Shawna in Customer Support](media/89750b2905694d391e2f10ac3f63a1bc.png)
+![Illustration of Shawna in Customer Support](media/shawna.png)
 
 **Shawna – Customer Support**
 
 -   Mainly uses desktopUsual expenses are for team morale and must identify
     employees included
 
-![Illustration of Rebecca the Auditor](media/35099b07efad1663fcaec273897a25cb.png)
+![Illustration of Rebecca the Auditor](media/rebecca.png)
 
 **Rebecca – Auditor**
 
@@ -164,7 +162,7 @@ looked into our expense reporting process:
 -   Responsible for ensuring overall employee compliance with reporting
     procedures
 
-![Illustration of Abhay in Accounting](media/45ab54dad423ed6be55a105e10398056.png)
+![Illustration of Abhay in Accounting](media/abhay.png)
 
 **Abhay - Accountant**
 
@@ -176,7 +174,7 @@ looked into our expense reporting process:
 
 -   Must be able to report on how expenses are balancing up to the budget
 
-![Illustration of Charlotte the CFO](media/dad9c5dbe0155528511536a79b37122b.png)
+![Illustration of Charlotte the CFO](media/charlotte.png)
 
 **Charlotte - CFO**
 

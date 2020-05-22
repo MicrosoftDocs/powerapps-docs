@@ -29,4 +29,4 @@ Also, consider diverse perspectives in work preferences and constraints.
 
 In our example scenario, we identified these key contributors:
 
-![Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO](media/090010346b44cfeb560566f8dc12ce4f.png)
+![Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO](media/contributors.png)

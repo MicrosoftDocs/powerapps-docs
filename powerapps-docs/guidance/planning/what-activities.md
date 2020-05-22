@@ -24,7 +24,7 @@ When we spoke to Lee, Shawna, and Rebecca, they told us the steps were:
 
 2.  Find a blank copy of or print the expense report form.
 
-3.  Enter personal information (name, employee ID etc) and expense purpose.
+3.  Enter personal information (name, employee ID etc.) and expense purpose.
 
 4.  Gather receipts to get expense info from (and turn in if needed).
 

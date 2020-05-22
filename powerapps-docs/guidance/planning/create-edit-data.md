@@ -72,7 +72,7 @@ should be provided? Or a number calculated based on other entries?
 
 **Dates:** What format for the date? Include both date and time? Are there rules
 for the date (a minimum, or maximum, can’t be before today)? Is it calculated
-(eg, 7 days from today)? Is there a default date that should be populated?
+(eg, seven days from today)? Is there a default date that should be populated?
 
 **Choices:** Should the response be limited to a specific set of responses? What
 are the valid responses? Are the responses dependent on another data element? Is
@@ -85,7 +85,7 @@ captured from a camera on the user’s device? Is this an image/video that is
 coming in via e-mail? Is there any AI that should be run on this image
 (detecting elements of the image, for example)?
 
-Where do we put the data today?
+Where do you put the data today?
 -------------------------------
 
 Today as you solve the business problem, where does the data get captured? Does
