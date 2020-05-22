@@ -20,10 +20,10 @@ This article lists some common issues that you might encounter while using Power
 
 
 1. **Problems downloading attachments in SharePoint custom forms** (May 22, 2020)
-   When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83. As a workaround, change to use the default SharePoint form or use another browser. The team is actively working to fix this issue.
+   When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, change to use the default SharePoint form or use another browser. The team is actively working to fix this issue.
    
 1. **Problems downloading attachments in embedded Power Apps** (May 22, 2020)
-  When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83. As a workaround, use another browser. The team is actively working to fix this issue.
+  When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, use another browser. The team is actively working to fix this issue.
   
 1. **Camera images when imported via Edge are flipped** (January 20, 2020)
 
