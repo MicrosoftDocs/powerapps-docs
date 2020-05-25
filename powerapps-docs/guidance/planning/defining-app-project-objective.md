@@ -1,12 +1,11 @@
-Defining the app project objective
-==================================
+Defining the app project goals
+==============================
 
-Having a clear project objective for what you and your project team are trying
-to achieve is important so that your project members have the same views and
-goals. Writing down your goals is a good way of clarifying what the app you’re
-considering making will achieve. It also ensures you do not lose focus on what
-you need to create and what features to prioritize (see section on prioritizing
-features).
+Having a clear objective for what you and your project team are trying to
+achieve is important so that your project members have the same goals. Writing
+down your goals is a good way of clarifying what the app you’re considering
+making will achieve. It also ensures you don’t lose focus on what you need to
+create and what features to prioritize (see section on prioritizing features).
 
 If you have very ambitious goals, you may want to start thinking about how to
 break down the project into incremental releases. (In a later section, we’ll
