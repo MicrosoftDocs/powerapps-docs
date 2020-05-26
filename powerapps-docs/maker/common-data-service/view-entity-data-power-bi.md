@@ -2,7 +2,7 @@
 title: "View entity data in Power BI Desktop (Preview) | MicrosoftDocs"
 description: "Learn how access and view entity data in Power BI Desktop"
 ms.custom: ""
-ms.date: 05/01/2020
+ms.date: 05/26/2020
 ms.reviewer: "matp"
 ms.service: powerapps
 author: "Mattp123"
@@ -35,7 +35,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
       
 2. Verify that your environment has at least version 9.1.0.17437. To do this, select the **Settings** gear on the toolbar, and then select **Advanced Settings**. Then, on the new browser tab that opens select the **Settings** gear on the toolbar, and then select **About**.
       
-3. Enable TDS endpoint. To do this, sign in to [Power Platform](https://admin.powerplatform.microsoft.com). On the left pane, select **Environments**, select the environment you want, then go to **Settings** > **Features**. Under **TDS endpoint (Preview)**, set **Enable TDS endpoint** to **On**.
+3. Enable TDS endpoint. see the**TDS endpoint (Preview)** setting in this topic  [Manage feature settings](/power-platform/admin/settings-features).
           
 ## View entity data
 
