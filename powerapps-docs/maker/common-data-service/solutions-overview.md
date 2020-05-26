@@ -1,17 +1,11 @@
 ---
-title: "Work with solutions in Power Apps | MicrosoftDocs"
-description: "Learn how solutions are distributed"
+title: "Solutions in Power Apps | MicrosoftDocs"
+description: "Provides an overview of solutions in Power Apps"
 ms.custom: ""
 ms.date: 05/19/2020
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "Mattp123"
 ms.assetid: ece68f5f-ad40-4bfa-975a-3e5bafb854aa
 caps.latest.revision: 55
@@ -25,91 +19,34 @@ search.app:
 ---
    
 # Solutions overview  
-In Power Apps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more. Solutions play an important role in application lifecycle management.
-  
-> [!NOTE]
-> For more information about solutions and application lifecycle management, see [Overview of application lifecycle management with the Power Platform](/power-platform/alm/overview-alm). 
-> If you’re an ISV creating an app that you will distribute, you’ll need to use solutions. For more information about using solutions, see [Developer Guide: Introduction to solutions](/powerapps/developer/common-data-service/introduction-solutions). 
 
- You can get a solution from [AppSource](https://appsource.microsoft.com) or from an independent software vendor (ISV).
-  
-## Unmanaged and managed solutions
-There are two types of solutions: *managed* and *unmanaged*. A managed solution is a completed solution that is intended to be distributed and installed.
+Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, flows, and more.
 
-- You cannot edit the components of a managed solution.
-- You cannot export a managed solution.
-- You can add unmanaged customizations to components of a managed solution. When you do this, you create a dependency between your unmanaged customizations and the managed solution. When a dependency exists, the managed solution cannot be uninstalled until you remove the dependency.
-- When a managed solution is deleted (uninstalled), all the customizations and extensions included with it are removed.
+Solutions are the mechanism for implementing application lifecycle management (ALM) in Power Apps and other Power Platform products, such as Power Automate. For detailed information about the solution concepts and how solutions are used for application lifecycle management, see [Overview of ALM with Microsoft Power Platform](/power-platform/alm/overview-alm) in the Power Platform ALM guide.
 
-> [!IMPORTANT]
-> When you uninstall a managed solution, the following data is lost: data stored in custom entities that are part of the managed solution and data stored in custom attributes that are part of the managed solution on other entities that are not part of the managed solution.
+This section will focus on the **manual** tasks that app makers need to perform while working with solutions in Power Apps.
 
-An unmanaged solution is one that is still under development or isn't intended to be distributed. 
+## Get started: solution concepts
 
-- While a solution is unmanaged, you can continue to add and remove components to it.
-- You can export an unmanaged solution to transport unmanaged customizations from one environment to another.
-- When an unmanaged solution is deleted, only the solution container of any customizations included in it is deleted. All the unmanaged customizations remain in effect and belong to the default solution.
-- When the unmanaged solution is complete and you want to distribute it, export it as a managed solution.
+Before you work with solutions, it's important that you get acquainted with the following solution concepts:
+- Two types of solutions (managed and unmanaged)
+- Solution components
+- Lifecycle of a solution (create, update, upgrade, and patch a solution)
+- Solution publisher
+- Solution and solution component dependencies
 
-> [!NOTE]
->  You cannot import a managed solution into the same environment that contains the originating unmanaged solution. To test a managed solution, you need a separate environment to import it into.
+For detailed information, see [Solution concepts](/power-platform/alm/solution-concepts-alm) in the Power Platform ALM guide.
 
-## The default solutions
-We recommend that you create a solution to manage your customizations. By using a custom solution, you can easily find just the solution components you've customized, consistently apply your [solution publisher prefix](create-solution.md#solution-publisher), and export your solution for distribution to other environments.
+## Default solutions
 
-If you don't use a custom solution, you'll be working in one of these default solutions in the unmanaged layer:
+Power Apps provides you the following default [unmanaged](/power-platform/alm/solution-concepts-alm) solutions:
 
-- Common Data Service Default Solution. This solution is available for makers to use by default for their customizations in an environment. The Common Data Service Default Solution is useful when you want to evaluate or learn Power Apps. However, we recommend that app makers work in their own unmanaged solutions. 
-- Default solution. This is a special solution that contains all components in the system. The default solution is useful for discovering all the components and configurations in your system.- 
+- **Common Data Service Default Solution**. This solution is available for makers to use by default for their customizations in an environment. The Common Data Service Default Solution is useful when you want to evaluate or learn Power Apps. However, we recommend that app makers work in their own unmanaged solutions. 
+- **Default Solution**. This is a special solution that contains all components in the system. The default solution is useful for discovering all the components and configurations in your system.
 
-For more information about the default solutions, see [Use a solution to customize](/power-platform/alm/use-solutions-for-your-customizations).
-
-## Solution dependencies  
-Because of the way that managed solutions are layered, some managed solutions can be dependent on solution components in other managed solutions. Some solution publishers will take advantage of this to build solutions that are modular. You may need to install a “base” managed solution first and then you can install a second managed solution that will further customize the components in the base managed solution. The second managed solution depends on solution components that are part of the first solution.  
-  
-The system tracks these dependencies between solutions. If you try to install a solution that requires a base solution that isn’t installed, you won’t be able to install the solution. You will get a message saying that the solution requires another solution to be installed first. Similarly, because of the dependencies, you can’t uninstall the base solution while a solution that depends on it is still installed. You have to uninstall the dependent solution before you can uninstall the base solution.  
-
-## Solution component dependencies
-A solution component represents something that you can potentially customize. Anything that can be included in a solution is a solution component and some components are dependant on other components. For example, the website field and account summary report are both dependant on the account entity. 
-
-### View dependencies for a component
-1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
-2. Open the solution you want, select the component you want, on the command bar select **...,** and then select **Show dependencies**. 
-
-   > [!div class="mx-imgBorder"] 
-   > ![Component dependency for the account entity](media/component-dependencies-account.png)
-
-<!-- Move this to ALM guide  ## View and edit solution components
-A component represents something that you can potentially customize. Anything that can be included in a solution is a component. To view the components included in a solution, open the solution you want. The components are listed in the **Components** list. Notice that you can't edit components contained in a managed solution. 
-
-> [!div class="mx-imgBorder"] 
-> ![Components in solution](media/components-in-solution.png "Components in solution") 
-
-To view a list of component types that can be added to any solution, see [ComponentType Options](../../developer/common-data-service/reference/entities/solutioncomponent.md#componenttype-options). 
-
-Some components are nested within other components. For example, an entity contains forms, views, charts, fields, entity relationships, messages, and business rules. Each of those components requires an entity to exist. A field can’t exist outside of an entity. We say that the field is dependent on the entity.   
-  
- Some components are nested within other components. For example, an entity contains forms, views, charts, fields, entity relationships, messages, and business rules. Each of those components requires an entity to exist. A field can’t exist outside of an entity. We say that the field is dependent on the entity. There are actually twice as many types of components as shown in the preceding list, but most of them are not nested within other components and not visible in the application.  
-  
- The purpose of having components is to keep track of any limitations on what can be customized using managed properties and all the dependencies so that it can be exported, imported, and (in managed solutions) deleted without leaving anything behind.  -->
+However, we recommend that you create a solution to manage your customizations. More information: [Use a solution to customize](/power-platform/alm/use-solutions-for-your-customizations) in the Power Platform ALM guide.
 
 <!--  
-<a name="BKMK_ManagedAndUnmanagedSolutions"></a>   
-
-## Managed and unmanaged solutions  
-There are **managed** and **unmanaged** solutions. A **managed** solution can't be modified and can be uninstalled after it is imported. All the components of that solution are deleted by uninstalling the solution.  
-  
-When you import an **unmanaged** solution, you add all the components of that solution into your environment. You can’t delete the components by uninstalling the solution.  
-  
-When you import an **unmanaged** solution that contains components that you have already customized, your customizations will be overwritten by the customizations in the imported unmanaged solution. You can’t undo this.  
-  
-> [!IMPORTANT]
->  Install an unmanaged solution only if you want to add all the components to your environment and overwrite any existing customizations.  
-  
-Even if you don’t plan on distributing your apps or customizations, you should create and use an unmanaged solution to have a separate view that only includes those parts of the application that you have customized. Whenever you customize something, just add it to the unmanaged solution that you created.  
-  
-To create a **managed** solution, you choose the **As managed** option when you export the solution. When you create a managed solution, you can’t import it back into the same environment you used to create it. You can only import it into a different environment.  
-  
 <a name="BKMK_HowSolutionsAreApplied"></a>   
 
 ### How solutions are applied  
@@ -129,22 +66,103 @@ Managed solutions can modify the system solution components and add new componen
 Unmanaged customizations are any change you have made to your environment through an unmanaged solution. The system solution defines what you can or can't customize by using managed properties. Publishers of managed solutions have the same ability to limit your ability to customize solution components that they add in their solution. You can customize any of the solution components that do not have managed properties that prevent you from customizing them.  
   
 **Application Behavior**  
-The application or runtime behavior is what you actually see in your environment. The default system solution plus any managed solutions, plus any unmanaged customizations you have applied.  
-  
-<a name="BKMK_ManagedProperties"></a>   
+The application or runtime behavior is what you actually see in your environment. The default system solution plus any managed solutions, plus any unmanaged customizations you have applied. --> 
 
-## Managed properties  
-Some components can’t be customized. These components in the system solution have metadata that prevents you from customizing them. These are called **managed properties**. The publisher of a managed solution can also set the managed properties to prevent you from customizing their solution in ways they don’t want you to.  
-  
-<a name="BKMK_Dependencies"></a>   
+## Work with solutions in Power Apps
+
+ Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can perform these solution tasks: 
+- **New solution**: To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, you can easily distribute your solution to other environments. More information: [Create a solution](create-solution.md) 
+- **Import**: Import a solution into your environment. More information: [Import solutions](import-update-export-solutions.md) 
+- **Open AppSource**: [Microsoft AppSource](https://appsource.microsoft.com/) is where you can go to get solutions tailored to your industry that work with the products you already use. 
+- **Publish all customizations**: Publish all active customizations in your environment. 
+- **Switch to classic**: Open the classic solution explorer. 
+- **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
+
+    > [!div class="mx-imgBorder"]
+    > ![Solutions area](media/solutions-area-tasks.png)
+
+From the **Solutions** area, select a solution to view all of its components. 
  
-## Solution publisher 
+> [!div class="mx-imgBorder"]  
+> ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")   
+ 
+ You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
+ 
+> [!div class="mx-imgBorder"]  
+> ![Load more components](media/load-more.PNG "Load more components")  
 
-The **Common Data Services Default Solution** is associated with the **Common Data Service Default Publisher**. The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items. 
-
-We recommend that you change the solution publisher prefix so that it will be more meaningful. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) -->
+ ## Search and filter in a solution
+  You can also search for a specific component by its name. 
+ 
+> [!div class="mx-imgBorder"]  
+> ![Search component](media/solution-search-box.png "Search component")  
+ 
+ Or filter all items in the list by the component type.
   
+> [!div class="mx-imgBorder"]  
+> ![Filter component by type](media/solution-filter.PNG "Filter component by type")  
+ 
+
+ ## Contextual commands
+ As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
+ 
+> [!div class="mx-imgBorder"]  
+> ![Component specific commands](media/component-commands.png "Component specific commands")  
+ 
+ When you don't select any component, the command bar will show actions applied to the solution itself. 
+ 
+> [!div class="mx-imgBorder"]  
+> ![Solution specific commands](media/solution-commands.PNG "Solution specific commands")  
+ 
+With solutions that are unmanaged or the default one, you can use the **New** or **Add Existing** command to create or add different types of components. More information: [Add solution components](create-solution.md#add-solution-components)
+ 
+> [!NOTE]
+> You can't add components to a managed solution. When you try to, you’ll see the following message:<br/>
+`"You cannot directly edit the components within a managed solution. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable."`
+
+## View dependencies for a component
+
+
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
+2. Open the solution you want, select the component you want, on the command bar select **...,** and then select **Show dependencies**. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![Component dependency for the account entity](media/component-dependencies-account.png)
+
+## Known limitations
+
+The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
+
+- Connections require authentication and consent, which requires an interactive user session and therefore cannot be transported via solutions. After importing your solution, play the app to authenticate connections. You can also create the connections in the target environment prior to importing the solution. 
+- Canvas app button triggered flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
+  - The app and flow will not currently be connected in the target environment post deployment. First associate valid connections with the flow and activate the flow. Then edit the app and re-associate the flow to the button.
+-	Canvas apps shared as co-owner to an Azure Active Directory (AAD) security group can't be added to solutions. Unshare the app before adding it to a solution.
+-	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
+- Database operations such as backup, restore, and copy are not supported for canvas apps and flows. These operations can corrupt canvas apps and flows.
+- Deleting a managed solution does not rollback to a different canvas app version. Instead, all versions of the app are deleted.
+- Importing a solution containing a flow will not automatically create or associate required connections. The flow must be edited to fix the connections.
+  - If using managed solutions, this creates an active customization in the unmanaged layer. Therefore subsequent solution updates to the flow will not be reflected. 
+- Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
+- Button triggered flows are not available in solutions.
+- Flows triggered from Microsoft 365 applications such as Excel are not available in solutions.
+- Flows that connect to SharePoint are not available in solutions.
+- Flows in solutions don't support delegated authentication. For example, access to a flow is not automatically granted based on having access to the SharePoint list the flow was created from.
+- Custom connectors created outside solutions cannot be added to solutions at this time.
+
+
+ For details about customizing the individual components in a solution, see the following topics:  
+  
+-   For entity, entity relationships, field and message customizations, see [Metadata](create-edit-metadata.md).  
+  
+-   For entity forms, see [Forms](../model-driven-apps/create-design-forms.md).  
+  
+-   For processes, see [Processes](../model-driven-apps/guide-staff-through-common-tasks-processes.md).  
+  
+-   For business rules, see [Business Rules](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md).
+ 
+ 
 ### Next steps  
-[Use solutions in Power Apps](use-solution-explorer.md) <br/>
+[Create a solution](create-solution.md) <br/>
 
  

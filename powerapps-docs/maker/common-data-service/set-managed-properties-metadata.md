@@ -5,13 +5,7 @@ ms.custom: ""
 ms.date: 03/03/2020
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "Mattp123"
 ms.assetid: edaa7d4a-a95f-4d66-a9d9-2ad6051332f7
 caps.latest.revision: 41
@@ -24,13 +18,10 @@ search.app:
   - D365CE
 ---
 # Set managed properties in Common Data Service metadata 
-You can control which of your managed solution components are customizable by using managed properties. ISVs should allow customization for solution components where it makes sense. This lets organizations customize your solution to their unique requirements. Limit or eliminate customization of critical solution components that provide the core functionality of your solution so that you can predictably support and maintain it. For most non-ISV development environments, we recommend that you don't allow customization for your managed solution components. 
 
-Managed properties are intended to protect your solution from modifications that may cause it to break. Managed properties do not provide digital rights management (DRM), or capabilities to license your solution or control who may install it.
+You can control which of your managed solution components are customizable by using managed properties. Managed properties are intended to protect your solution from modifications that may cause it to break.
 
-You apply managed properties when the solution is unmanaged in the unmanaged layer of your development environment. The managed properties will take effect after you package the managed solution and install it in a different environment. After the managed solution is imported, the managed properties can't be updated except by an update of the solution by the original publisher. 
-
-Most solution components have a **Managed properties** menu item available when viewing a list of solution components. When you import the managed solution that contains the components, you can view but not change their managed properties.
+More information: [Managed properties](/power-platform/alm/managed-properties-alm) in the Power Platform ALM guide
 
 ## View and edit entity managed properties
 1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left pane. 
