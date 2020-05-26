@@ -24,7 +24,7 @@ search.app:
 ---
 
 # Export solutions  
-We recommend that you create an unmanaged solution to use for exporting your customizations. Then, export your customizations periodically so that you have a backup in case anything happens. You can't export managed solutions or the default solution. 
+You can manually export solutions using the steps in this article. We recommend that you create an unmanaged solution to use for exporting your customizations, and then export your customizations periodically so that you have a backup in case anything happens. You can't export [managed](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) solutions or the [Default Solution](solutions-overview.md#default-solutions). 
  
 > [!NOTE]
 > To implement healthy application lifecycle management (ALM) in your organization, consider using a source control system to store and collaborate on your solutions, and automate the solution export process. More information: [ALM basics](/power-platform/alm/basics-alm) in the Power Platform ALM guide. 
