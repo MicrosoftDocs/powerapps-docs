@@ -21,7 +21,7 @@ Common Data Service allows you to connect directly to your data using Power BI D
 
 ## Prerequisites
 
-To use Power BI with the Common Data Service, you need the following items:
+To use Power BI with Common Data Service, you need the following items:
 
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
 * Common Data Service environment with maker permissions to access the portal and read permissions to access data within entities.
@@ -54,7 +54,7 @@ To use Power BI with the Common Data Service, you need the following items:
 
 4. The **Navigator** displays all entities available for your environment grouped into two folders. 
 
-    * Entities - are standard and custom entities that you have created or imported in your environment.
+    * Entities - are standard entities and custom entities that you have created or imported in your environment.
     * System - contains all entities in your environment, including system entities.
 
    <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport4.png "Power BI Desktop") -->
