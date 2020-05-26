@@ -34,7 +34,6 @@ Before you work with solutions, it's important that you get acquainted with the 
 - Lifecycle of a solution (create, update, upgrade, and patch a solution)
 - Solution publisher
 - Solution and solution component dependencies
-- Managed properties
 
 For detailed information, see [Solution concepts](/power-platform/alm/solution-concepts-alm) in the Power Platform ALM guide.
 
