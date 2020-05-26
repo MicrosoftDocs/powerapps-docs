@@ -1,6 +1,6 @@
 ---
 title: Create a PowerBI report using the Common Data Service connector | Microsoft Docs
-description: Connecting to your data from PowerBI Desktop using the Common Data Service connector.
+description: Connecting to your data from Power BI Desktop using the Common Data Service connector.
 author: Mattp123
 manager: kvivek
 ms.service: powerapps
@@ -15,24 +15,24 @@ search.app:
   - D365CE
 ---
 # Create a Power BI report using the Common Data Service connector
-Common Data Service allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users and accessed cross platform on Power BI mobile apps.
+Common Data Service allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users, and accessed cross platform on Power BI mobile apps.
 
 ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/PBIDesktop.png "Power BI Desktop")
 
 ## Prerequisites
 
-To use Power BI with the Common Data Service, you need the following:
+To use Power BI with the Common Data Service, you need the following items:
 
 * Download and install Power BI Desktop, which is a free application that runs on your local computer. You can download Power BI desktop [here](https://powerbi.microsoft.com/desktop/).
 * Common Data Service environment with maker permissions to access the portal and read permissions to access data within entities.
 
 ## Finding your Common Data Service Environment URL
 
-1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the top right corner, and then select **Advanced settings**
+1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the top-right corner, and then select **Advanced settings**.
 
    <!-- ![Common Data Service Environment](./media/data-platform-cds-powerbi-connector/CDSEnv1.png "Common Data Service Environment") -->
 
-2. In the new browser tab that opens, copy the root of the URL. This is the unique URL for your environment. The URL will be in the format of **https://yourenvironmentid.crm.dynamics.com/** make sure not to copy the rest of the URL. Keep this somewhere handy so you can use it when creating your Power BI reports.
+2. In the new browser tab that opens, copy the root of the URL. This is the unique URL for your environment. The URL will be in the format of **https://yourenvironmentid.crm.dynamics.com/**. Make sure not to copy the rest of the URL. Keep this somewhere handy so you can use it when creating your Power BI reports.
 
     > [!div class="mx-imgBorder"] 
     > ![Common Data Service Environment](./media/data-platform-cds-powerbi-connector/CDSEnv3.png "Common Data Service environment URL")
@@ -68,7 +68,7 @@ To use Power BI with the Common Data Service, you need the following:
 
    <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport6.png "Power BI Desktop") -->
 
-7. In **Fields** pane select the **name** field and then select the **numberofemployees** field. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
+7. In **Fields** pane, select the **name** field and then select the **numberofemployees** field. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
 
         > [!div class="mx-imgBorder"] 
         > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization)
@@ -76,7 +76,7 @@ To use Power BI with the Common Data Service, you need the following:
 
 ## Using option sets
 
-Options sets are used in entities to provide a drop down list of values to a user in apps and flows. When using the Power BI connector option set fields will be presented as two columns to show both the unique value, and the display value.
+Options sets are used in entities to provide a drop-down list of values to a user in apps and flows. When using the Power BI connector option set fields will be presented as two columns to show both the unique value, and the display value.
 
 As an example, if you had an option set on your entity called ApprovalStatus, you would see two fields in Power BI:
 
@@ -92,12 +92,12 @@ As an example, if you had an option set on your entity called ApprovalStatus, yo
 
 ## Navigating Relationships
 
-Relationships in Common Data Service require you to create a relationship within Power BI desktop between the two entities using a GUID field, this is a system generated unique identifier that ensures relationships are created for the create records where ambiguity or duplication may exist with other fields. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
+Relationships in Common Data Service require you to create a relationship within Power BI desktop between the two entities using a GUID field, this is a system-generated unique identifier that ensures relationships are created for the create records where ambiguity or duplication may exist with other fields. You can read more about managing relationships in Power BI desktop [here](https://docs.microsoft.com/power-bi/desktop-create-and-manage-relationships).
 
-While some relationships may be automatically created, you can still review and ensure the correct relationships are established when creating your report :
+While some relationships may be automatically created, you can still review and ensure the correct relationships are established when creating your report:
 
 * The lookup field on the entity will contain the GUID of the record in the related entity.
-* The related entity will have a field in the format "[EntityName]id" which contains the GUID, for example Accountid or MyCustomEntityid
+* The related entity will have a field in the format "[EntityName]ID" that contains the GUID, for example Accountid or MyCustomEntityid
 * Using the Power BI desktop Manage Relationships feature, you would create a new relationship between your lookup field, and the id field on the related entity.
 
 
