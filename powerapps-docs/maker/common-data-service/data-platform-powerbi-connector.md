@@ -71,7 +71,7 @@ To use Power BI with Common Data Service, you need the following items:
 7. In **Fields** pane, select the **name** field and then select the **numberofemployees** field. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization)
+    > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
 
 
 ## Using option sets
