@@ -128,7 +128,7 @@ You can change a solution publisher for an unmanaged solution by following these
 
 Use solution segmentation so that you only include entity components that are updated when you distribute solution updates. More information: [Use segmented solutions](/power-platform/alm/segmented-solutions-alm) in the Power Platform ALM guide
 
-## Create a segmented solution with entity assets 
+### Create a segmented solution with entity assets 
  To create a segmented solution, start with creating an unmanaged solution and add only the components that you've updated. The wizard-like setup takes you step by step through the process of adding entity assets. 
 
 For example, imagine that you've created a new custom entity that doesn't exist in any other environment named *Custom entity* and also added a new field named *topten* for the account entity. To create a segmented solution, follow these steps. 
