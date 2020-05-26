@@ -64,11 +64,7 @@ To use Power BI with Common Data Service, you need the following items:
     > [!div class="mx-imgBorder"] 
     > ![Load account entity records](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account entity records")
 
-6. Your entity is now loaded into your report, and you can begin building reports, or repeat the previous steps to add additional entities.
-
-   <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport6.png "Power BI Desktop") -->
-
-7. In the **Fields** pane, select the **name** field and then select the **numberofemployees** field. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
+6. Your entity is now loaded into your report, and you can begin building reports, or repeat the previous steps to add additional entities. For example, in the **Fields** pane, select the **name** field and then select the **numberofemployees** field. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
 
     > [!div class="mx-imgBorder"] 
     > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization")
