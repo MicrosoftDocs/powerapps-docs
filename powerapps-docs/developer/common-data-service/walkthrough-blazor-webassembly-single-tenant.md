@@ -28,7 +28,7 @@ This walkthrough depends on the instructions in the [Secure an ASP.NET Core Blaz
 
 When you complete this walkthrough, you will have a Blazor WebAssembly app that displays data from the CDS Account entity which the authenticated user has access to.
 
-:::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="todo":::
+:::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="Represents the goal of this walkthrough.":::
 
 
 ## Prerequisites
@@ -52,7 +52,7 @@ Let’s make sure that your environment is configured properly, and you understa
 1. Open https://make.powerapps.com/ 
 1. Select **Solutions** in the navigation pane.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-maker-portal.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-maker-portal.png" alt-text="The maker portal showing an environment without a CDS database.":::
 
 1. If you don’t see a list of installed solutions, use the environment selector at the top to choose a different environment which has a database. Otherwise create a new environment.
 
@@ -63,32 +63,34 @@ Let’s make sure that your environment is configured properly, and you understa
 
 1. When you have an environment with the database you want to connect to, select the **Settings** (Gear) icon and choose **Advanced settings**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-advanced-settings.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-advanced-settings.png" alt-text="Navigating to the Advanced settings are from the maker portal":::
 
 1. The Dynamics 365 settings app will open. Select **Settings** > **Customizations**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-settings-customizations.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-settings-customizations.png" alt-text="Navigating to the customizations area in the Dynamics 365 settings area.":::
 
 1. Then select **Developer Resources**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-instance-web-api.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-developer-resources.png" alt-text="Navigating to the developer resources page.":::
 
 1. Then copy the **Instance Web API Service Root URL**. You will need this in the [Step 3: Apply code changes](#step-3-apply-code-changes).
+
+    :::image type="content" source="media/blazor-webassembly-walkthrough-instance-web-api.png" alt-text="The developer resources page showing the Instance Web API URL":::
 
 ### Navigate to the Azure Active Directory portal
 
 1. Return to https://make.powerapps.com/.
 1. In the ‘waffle’ icon at the top left and select **Admin**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-admin-center.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-admin-center.png" alt-text="Navigating to the Microsoft 365 admin center.":::
 
 1. This will take you to the Microsoft 365 admin center. In the left navigation, click **Show all** and select **Azure Active Directory**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-AAD-from-admin-center.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-AAD-from-admin-center.png" alt-text="Navigating to the Azure Active Directory Admin center.":::
 
 1. This will take you to the Azure Active Directory admin center. Expand the left navigation pane and select **Azure Active Directory**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-aad-admin-center.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-aad-admin-center.png" alt-text="Navigating to the Azure Active Directory page.":::
 
 This takes you to the starting point for Step 2.
 
@@ -105,7 +107,7 @@ The rest of the content in this section provides supplemental information to ass
 
 Registering the application involves completing a form. The default value for the Redirect URI includes a placeholder for the port value. You must replace the placeholder with a number value to complete the registration, for example, just add `1111` for now. You can provide the randomly generated port value later after you open the project in Visual Studio. See [Update callback URL](#update-callback-url).
 
-:::image type="content" source="media/blazor-webassembly-walkthrough-register-application.png" alt-text="todo":::
+:::image type="content" source="media/blazor-webassembly-walkthrough-register-application.png" alt-text="The form to register an application in Azure Active Directory.":::
 
 This will generate two ID values that you will need to include in the .NET Core CLI command. The following placeholders will be used in the content. You must use the values generated by the application registration process.
 
@@ -127,11 +129,11 @@ dotnet new blazorwasm^
 
 After you have run the command, navigate to the output folder and open the .csproj file using Visual Studio 2019.
 
-:::image type="content" source="media/blazor-webassembly-walkthrough-application-files-folder.png" alt-text="todo":::
+:::image type="content" source="media/blazor-webassembly-walkthrough-application-files-folder.png" alt-text="The files generated by the template viewed in windows explorer.":::
 
 Within Visual Studio 2019 the project looks like this:
 
-:::image type="content" source="media/blazor-webassembly-walkthrough-application-solution-explorer.png" alt-text="todo":::
+:::image type="content" source="media/blazor-webassembly-walkthrough-application-solution-explorer.png" alt-text="The project generated by the template viewedin the Visual Studio solution explorer":::
 
 The rest of the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic describes the components of the app template.
 
@@ -141,18 +143,18 @@ The port setting used by Visual Studio is randomly generated. The callback URI i
 
 1. In Visual Studio, open the project properties and select **Debug**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-project-debug-settings.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-project-debug-settings.png" alt-text="The Visual Studio project Debug page.":::
 
 1. Under **Web Server Settings** copy the **Enable SSL** value that includes the random port assigned for debugging
 1. Return to your app registration in AAD, In the **Authentication** section, change the **Redirect URI** to include this root Uri, then save your changes
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-application-redirect-uri.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-application-redirect-uri.png" alt-text="The registered application Authentication information.":::
 
 ### Verify that the app runs
 
 Now that the Redirect URI has been updated; you should be able to press F5 in Visual Studio to run the app.
 
-:::image type="content" source="media/blazor-webassembly-walkthrough-application-before-code-changes.png" alt-text="todo":::
+:::image type="content" source="media/blazor-webassembly-walkthrough-application-before-code-changes.png" alt-text="The default behavior of the Blazor WebAssembly app before changes are made.":::
 
 At this point, all the capabilities of the app work whether you log-in or not. Only members of the AAD tenant can log in.
 
@@ -162,16 +164,16 @@ To connect to CDS, you must configure permissions for the app to connect.
 
 1. Return to your app registration in AAD, In the **API permissions** section, click **Add a permission**.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-add-permissions.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-add-permissions.png" alt-text="The registered application API Permissions settings page.":::
 
 1. In the **Request API permissions** area, select **APIs my organization uses** and search for *Common Data Service*.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-search-common-data-service-api.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-search-common-data-service-api.png" alt-text="Searching for the Common Data Service permissions.":::
 
 1. Select **Common Data Service**. 
 1. Select the **user_impersonation** permission
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-user-impersonation-permission.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-user-impersonation-permission.png" alt-text="Adding the CDS user_impersonation permission.":::
 
     > [!NOTE]
     > Dynamics CRM and Common Data Service refer to the same service.
@@ -179,7 +181,7 @@ To connect to CDS, you must configure permissions for the app to connect.
 1. Click **Add permissions**.
 1. (Optional) For the **Configured permissions**, click **Grant Admin consent for [Your Azure Active Directory tenant name]**. In the screenshot below the tenant name is ‘Default Directory’. Yours may be different.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-grant-admin-consent.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-grant-admin-consent.png" alt-text="The button showing the optional button to grant admin consent for the registered application.":::
 
 ## Step 3: Apply code changes
 
@@ -490,13 +492,13 @@ In Visual Studio, press F5 to launch the app with the code changes.
     > [!NOTE]
     > If you did not grant admin consent in [Grant API permissions](#grant-api-permissions), users can expect to see a dialog like this:
     > 
-    > :::image type="content" source="media/blazor-webassembly-walkthrough-request-consent-dialog.png" alt-text="todo":::
+    > :::image type="content" source="media/blazor-webassembly-walkthrough-request-consent-dialog.png" alt-text="The dialog to prompt the user to grant consent to the application.":::
     >
     > You must click **Accept** to continue.
 
 1. Navigate to **Fetch Accounts** and verify that the Account data is displayed as expected:
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="todo":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="The final expected behavior for successfully completing the walkthrough.":::
 
 ### See also
 
