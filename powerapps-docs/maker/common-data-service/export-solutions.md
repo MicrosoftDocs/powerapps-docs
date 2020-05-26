@@ -2,7 +2,7 @@
 title: "Export solutions | MicrosoftDocs"
 description: "Learn how to export a solution in Power Apps"
 ms.custom: ""
-ms.date: 01/30/2020
+ms.date: 05/26/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
