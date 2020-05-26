@@ -1595,9 +1595,7 @@
   - name: Work with solutions
     items:
       - name: Solutions overview
-        href: ./common-data-service/solutions-overview.md
-      - name: Use solutions
-        href: ./common-data-service/use-solution-explorer.md     
+        href: ./common-data-service/solutions-overview.md           
       - name: Create a solution
         href: ./common-data-service/create-solution.md
       - name: Export solutions
