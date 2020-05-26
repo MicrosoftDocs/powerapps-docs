@@ -20,9 +20,9 @@ search.app:
    
 # Solutions overview  
 
-Solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more. 
+Solutions are used to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, flows, and more.
 
-Solutions are the mechanism for implementing application lifecycle management (ALM) in Power Apps and other Power Platform products, such as Power Automate. For detailed information about the solution concepts and how solutions are used for application lifecycle management in Power Apps and other supported Power Platform products, see [Overview of application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm/overview-alm) the Power Platform ALM guide.
+Solutions are the mechanism for implementing application lifecycle management (ALM) in Power Apps and other Power Platform products, such as Power Automate. For detailed information about the solution concepts and how solutions are used for application lifecycle management, see [Overview of application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm/overview-alm) the Power Platform ALM guide.
 
 This section will focus on the **manual** tasks that app makers need to perform while working with solutions in Power Apps.
 
@@ -36,7 +36,7 @@ Before you work with solutions, it's important that you get acquainted with the 
 
 For detailed information, see [Solution concepts](/power-platform/alm/solution-concepts-alm) in the Power Platform ALM guide.
 
-## The default solutions
+## Default solutions
 
 Power Apps provides you the following default [unmanaged](/power-platform/alm/solution-concepts-alm) solutions:
 
