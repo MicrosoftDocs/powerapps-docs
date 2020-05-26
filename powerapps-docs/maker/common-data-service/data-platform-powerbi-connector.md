@@ -39,7 +39,7 @@ To use Power BI with the Common Data Service, you need the following:
 
 ## Connecting to Common Data Service from Power BI Desktop
 
-1. Open **Power BI Desktop**. Select **File** > **Get Data** and then select *Get data to get started** to open the full list of data sources available for Power BI Desktop.
+1. Open **Power BI Desktop**. Select **File** > **Get Data** and then select **Get data to get started** to open the full list of data sources available for Power BI Desktop.
 
     <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport1.png "Power BI Desktop") -->
 
@@ -47,11 +47,11 @@ To use Power BI with the Common Data Service, you need the following:
 
     ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport2.png "Power BI Desktop")
 
-3. Paste in your Common Data Service environment URL into the **Server Url** box and select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Common Data Service. Select **Connect**.
+3. In the **Common Data Service** dialog box that appears, paste in your Common Data Service environment URL into the **Server Url** box and select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Common Data Service. Select **Connect**.
 
    <!-- ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport3.png "Power BI Desktop") -->
 
-4. The Navigator displays all entities available for your environment grouped into two folders. 
+4. The **Navigator** displays all entities available for your environment grouped into two folders. 
 
     * Entities - are standard and custom entities that you have created or imported in your environment.
     * System - contains all entities in your environment, including system entities.
