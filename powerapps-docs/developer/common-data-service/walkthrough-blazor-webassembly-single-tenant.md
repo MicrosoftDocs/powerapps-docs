@@ -75,8 +75,6 @@ Let’s make sure that your environment is configured properly, and you understa
 
 1. Then copy the **Instance Web API Service Root URL**. You will need this in the [Step 3: Apply code changes](#step-3-apply-code-changes).
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-admin-center.png" alt-text="todo":::
-
 ### Navigate to the Azure Active Directory portal
 
 1. Return to https://make.powerapps.com/.
@@ -185,7 +183,7 @@ To connect to CDS, you must configure permissions for the app to connect.
 
 ## Step 3: Apply code changes
 
-Apply changes to the following files
+Apply changes to the following files to enable displaying CDS data in the application.
 
 ### \wwwroot\appsettings.json
 
@@ -236,7 +234,7 @@ Update the file to include a new `CDSWebAPI` section that includes the root of t
     );
     ```
 
-1. Add the following line within the section where MSAL authentication options are configured.
+1. Add the the second line within the section where MSAL authentication options are configured. This will include access to CDS data to the scope of accesstoken.
 
     ```csharp
     builder.Services.AddMsalAuthentication(options =>
@@ -449,17 +447,18 @@ This is a new page that will display the account information.
         }
     }
     ```
+
 This code does the following:
 
-1. Ensures that only authenticated users can view it
+1. Ensures that only authenticated users can view the page with data.
 1. Defines a table to display Account data after it is retrieved.
-1. Displays error information if there is an error retrieving the Account data
-1. Requests an accesstoken and then uses that token with an HttpRequestMessage to retrieve data from CDS
+1. Displays error information if there is an error retrieving the Account data.
+1. Requests an accesstoken and then uses that token with an HttpRequestMessage to retrieve data from CDS.
 1. Defines classes to enable strongly typed data when the JSON returned from the service is deserialized.
 
 ### \Shared\NavMenu.razor
 
-Edit this file to remove the navigation option for Fetch Data and replace it with one to fetch Account data.
+Edit this file to remove the navigation option for **Fetch Data** and replace it with one to **Fetch Accounts** data.
 
 Replace this:
 
@@ -485,13 +484,15 @@ With this:
 
 In Visual Studio, press F5 to launch the app with the code changes.
 
-1. Before logging in, navigate to **Fetch Accounts**. You should expect to see the notification failure.
+1. Before logging in, navigate to **Fetch Accounts**. You should expect to see the failure notification.
 1. Log-in as a user who has access to the CDS data.
 
     > [!NOTE]
     > If you did not grant admin consent in [Grant API permissions](#grant-api-permissions), users can expect to see a dialog like this:
     > 
     > :::image type="content" source="media/blazor-webassembly-walkthrough-request-consent-dialog.png" alt-text="todo":::
+    >
+    > You must click **Accept** to continue.
 
 1. Navigate to **Fetch Accounts** and verify that the Account data is displayed as expected:
 
