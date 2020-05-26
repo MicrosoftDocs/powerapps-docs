@@ -41,7 +41,7 @@ For detailed information, see [Solution concepts](/power-platform/alm/solution-c
 Power Apps provides you the following default [unmanaged](/power-platform/alm/solution-concepts-alm) solutions:
 
 - **Common Data Service Default Solution**. This solution is available for makers to use by default for their customizations in an environment. The Common Data Service Default Solution is useful when you want to evaluate or learn Power Apps. However, we recommend that app makers work in their own unmanaged solutions. 
-- **Default solution**. This is a special solution that contains all components in the system. The default solution is useful for discovering all the components and configurations in your system.
+- **Default Solution**. This is a special solution that contains all components in the system. The default solution is useful for discovering all the components and configurations in your system.
 
 However, we recommend that you create a solution to manage your customizations. More information: [Use a solution to customize](/power-platform/alm/use-solutions-for-your-customizations) in the Power Platform ALM guide.
 
