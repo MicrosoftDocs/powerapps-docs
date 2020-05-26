@@ -1,5 +1,5 @@
 ---
-title: Create a PowerBI report | Microsoft Docs
+title: Create a PowerBI report using the Common Data Service connector | Microsoft Docs
 description: Connecting to your data from PowerBI Desktop using the Common Data Service connector.
 author: Mattp123
 manager: kvivek
@@ -14,7 +14,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create a Power BI report
+# Create a Power BI report using the Common Data Service connector
 Common Data Service allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users and accessed cross platform on Power BI mobile apps.
 
 ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/PBIDesktop.png "Power BI Desktop")
