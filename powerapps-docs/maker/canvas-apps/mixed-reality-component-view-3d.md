@@ -130,17 +130,13 @@ Loading models as attachments or media content works through the binary storage 
 
 **To use a SharePoint list**
 
-
-<!-- In lines 144 and 145, can "Power App" change to "app"? Our style guide says to "use app to refer to something created using Power Apps. Don’t use Power App or Power Apps app."  -->
-
-
 1. Create a SharePoint list.
 1. In the created list, select the **+ Add** column and then select **Show/hide columns**.
 1. Make sure **Attachments** is selected and press **Apply** at the top.
 1. Create a new item in the list and press **Add attachments**.
 1. Select your 3D model (.glb file).
-1. Create a new item in the list for each 3D model that you want to have in your Power App.
-1. In a canvas Power App, add a Gallery.
+1. Create a new item in the list for each 3D model that you want to have in your app.
+1. In a canvas app, add a Gallery.
 1. Set the gallery data source to the SharePoint list created earlier.
 1. Add the **View in 3D** control and in the **Advanced** tab, set the **Src** property to **First(Gallery1.Selected.Attachments).Value**.
 
