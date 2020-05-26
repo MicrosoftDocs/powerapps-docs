@@ -25,7 +25,7 @@ search.app:
 ---
 # Create a solution
 
-To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, always remember to work in the context of the custom solution as you add, edit, and create components. This makes it easy to export your solution for import to another environment or as a backup.   
+To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, always remember to work in the context of the custom solution as you add, edit, and create components. This makes it easy to export your solution for import to another environment or as a backup.  
   
 For more information about solution concepts, see [Working with solutions](solutions-overview.md).  
   
@@ -44,10 +44,32 @@ For more information about solution concepts, see [Working with solutions](solut
   
  After you save the solution, you may wish to add information to fields that aren’t required. These steps are optional. Use the **Description** field to describe the solution and choose an HTML web resource as a **Configuration Page** for the solution. The configuration page is typically used by ISVs who distribute solutions. When this is set, a new **Configuration** node appears below the **Information** node to display this web resource. Developers will use this page to include instructions or controls to allow you to set configuration data or launch their solution.  
   
-<a name="BKMK_AddSolutionComponents"></a>   
+<a name="BKMK_AddSolutionComponents"></a>
 
-## Add solution components  
- After you’ve created your solution, it won’t contain any solution components. You can create new solution components or use the **Add Existing** command in the list menu to add any solution components from the default solution.  
+## Add solution components
+
+ After you’ve created your solution, it won’t contain any solution components. You can create new components to be added to the solution or add existing components to your new solution.
+ 
+ ### Create components in a solution
+
+ You can use the **New** command to create different types of components. This takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
+ 
+> [!div class="mx-imgBorder"]  
+> ![Create new component in a solution](media/solution-new-component.PNG "Create new component in a solution")  
+ 
+ ### Add an existing component to a solution
+ 
+ With solutions that are unmanaged and not the default one, you can use the **Add existing** command to bring in components that aren’t already in the solution.  
+ 
+> [!div class="mx-imgBorder"]  
+> ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
+  
+When you add an existing entity, rather than select **Include all components** or **Include entity metadata**, use the **Select components** option to only add the entity components that have been updated. With solution segmentation, you export solution updates with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. [Create a segmented solution with entity assets](use-segmented-solutions-patches-simplify-updates.md#create-a-segmented-solution-with-entity-assets)
+
+ Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot. 
+   
+> [!div class="mx-imgBorder"]  
+> ![Demo solution showing expanded account entity](media/solution-entity-account.png "Demo solution showing expanded account entity")  
   
  When you do this you may see a **Missing Required Components** dialog.  
    

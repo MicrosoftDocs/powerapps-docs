@@ -31,7 +31,7 @@ Additionally, you can perform these tasks:
 
 ![Solutions area](media/solutions-area-tasks.png)
 
-## Open and work in a solution.
+## Open and work with a solution
 From the **Solutions** area, select a solution to view all of its components. 
  
 > [!div class="mx-imgBorder"]  
@@ -41,7 +41,7 @@ From the **Solutions** area, select a solution to view all of its components.
 > [!div class="mx-imgBorder"]  
 > ![Load more components](media/load-more.PNG "Load more components")  
 
- ### Search and filter in a solution
+ ## Search and filter in a solution
   You can also search for a specific component by its name. 
  
 > [!div class="mx-imgBorder"]  
@@ -53,7 +53,7 @@ From the **Solutions** area, select a solution to view all of its components.
 > ![Filter component by type](media/solution-filter.PNG "Filter component by type")  
  
 
- ### Contextual commands
+ ## Contextual commands
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
 > [!div class="mx-imgBorder"]  
@@ -64,27 +64,11 @@ From the **Solutions** area, select a solution to view all of its components.
 > [!div class="mx-imgBorder"]  
 > ![Solution specific commands](media/solution-commands.PNG "Solution specific commands")  
  
- ### Create components in a solution
- With solutions that are unmanaged or the default one, you can use the **New** command to create different types of components. This takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
+With solutions that are unmanaged or the default one, you can use the **New** or **Add Existing** command to create or add different types of components. More information: [Add solution components](create-solutions.md#add-solution-components)
  
-> [!div class="mx-imgBorder"]  
-> ![Create new component in a solution](media/solution-new-component.PNG "Create new component in a solution")  
- 
- ### Add an existing component to a solution
- 
- With solutions that are unmanaged and not the default one, you can use the **Add existing** command to bring in components that aren’t already in the solution.  
- 
-> [!div class="mx-imgBorder"]  
-> ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
-  
- With solutions that are managed, only certain commands are available and you’ll see the message "You cannot directly edit the components within a managed solution." You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
-
-When you add an existing entity, rather than select **Include all components** or **Include entity metadata**, use the **Select components** option to only add the entity components that have been updated. With solution segmentation, you export solution updates with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. [Create a segmented solution with entity assets](use-segmented-solutions-patches-simplify-updates.md#create-a-segmented-solution-with-entity-assets)
-
- Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot. 
-   
-> [!div class="mx-imgBorder"]  
-> ![Demo solution showing expanded account entity](media/solution-entity-account.png "Demo solution showing expanded account entity")  
+> [!NOTE]
+> You can't add components to a managed solution. When you try to, you’ll see the following message:<br/>
+`"You cannot directly edit the components within a managed solution. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable."`
 
 ## Known limitations
 
