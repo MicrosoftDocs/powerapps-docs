@@ -19,9 +19,9 @@ This article demonstrates how to create and deploy code components using Power A
 
 ## Create a new component
 
-To begin, open **Developer Command Prompt for VS 2017** after installing Power Apps CLI.
+To begin, open **Developer Command Prompt for VS 2017 or higher** after installing Power Apps CLI.
 
-1. In the Developer Command Prompt for VS 2017, create a new folder on your local machine, for example, *C:\Users\your name\Documents\My_code_Component* using the command `mkdir <Specify the folder name>`.
+1. In the Developer Command Prompt, create a new folder on your local machine, for example, *C:\Users\your name\Documents\My_code_Component* using the command `mkdir <Specify the folder name>`.
 2. Go to the newly created folder using the command `cd <specify your new folder path>`.
 3. Create a new component project by passing some basic parameters using the command:
 

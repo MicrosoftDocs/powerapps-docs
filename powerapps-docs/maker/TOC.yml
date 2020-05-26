@@ -67,14 +67,10 @@
         href: ../user/create-a-record.md
       - name: Add activities to the timeline
         href: ../user/add-activities.md
+      - name: Work with records in the new calendar view
+        href: ../user/calendar-view.md
       - name: FAQ about activities
         href: ../user/faq-for-timeline-and-activity.md
-      - name: View and create email through the activities grid
-        href: ../user/view-create-email.md
-      - name: Send email using the enhanced email experience
-        href: ../user/enhanced-email.md
-      - name: Insert an email template
-        href: ../user/insert-email-template.md
       - name: Use the lookup field on a record
         href: ../user/lookup-field.md
       - name: View a profile card
@@ -91,6 +87,18 @@
         href: ../user/track-your-progress-with-dashboard-and-charts.md
       - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
+    - name: Work with email
+      items:
+      - name: View and create email through the activities grid
+        href: ../user/view-create-email.md
+      - name: Send email using the enhanced email experience
+        href: ../user/enhanced-email.md
+      - name: Insert an email template
+        href: ../user/insert-email-template.md
+      - name: Send email to multiple recipients
+        href: ../user/direct-email.md
+      - name: Resolve an unresolved email recipient
+        href: ../user/unresolved-email-recipient.md
     - name: Collaboration
       items:
       - name: Use OneDrive for Business     
@@ -1115,10 +1123,12 @@
           href: ./model-driven-apps/faqs-timeline-control.md           
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
-        - name: Additional controls for Dynamics 365 for phones and tablets
+        - name: Custom controls available
           href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
         - name: Timer control overview
           href: ./model-driven-apps/timer-control-legacy.md
+        - name: Add the calendar control to entities
+          href: ./model-driven-apps/add-calendar-control.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
@@ -1136,7 +1146,7 @@
         href: ./model-driven-apps/rdl-sandboxing.md 
       - name: Use Power BI
         href: ./model-driven-apps/use-power-bi.md 
-      - name: Customize Power BI content packs
+      - name: Create Power BI reports
         href: ./model-driven-apps/customize-power-bi-content-packs.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md

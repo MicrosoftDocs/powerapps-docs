@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 5/4/2020
+ms.date: 5/22/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -32,8 +32,6 @@ You can display a single 3D model, or you can let the user select from a gallery
 To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
-
-
 
 ## Use the component
 
