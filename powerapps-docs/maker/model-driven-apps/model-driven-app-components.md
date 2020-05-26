@@ -55,7 +55,7 @@ Determines the business processes, rules, and automation the app will have. Powe
 |Workflow     |  Workflows automate business processes without a user interface. Designers use workflows to initiate automation that doesn't require any user interaction.       | Workflow designer        |
 |Actions    |  Actions are a type of process that let you manually invoke actions, including custom actions, directly from a workflow.       |  Process designer       |
 |Business rule     | Used to apply rule or recommendation logic to a form, such as to set field requirements, hide fields, or validate data. App designers use a simple interface to implement and maintain fast-changing and commonly used rules.         |  Business rule designer       |
-|Flow     | Flow is a cloud-based service that lets you create automated workflows between apps and services to get notifications, synchronize files, collect data, and more.        | Power Automate        |
+|Flow     | Power Automate is a cloud-based service that lets you create automated workflows between apps and services to get notifications, synchronize files, collect data, and more.        | Power Automate        |
 
 > [!div class="mx-imgBorder"]
 > ![Workflow, action, and business process flow designers](media/model-driven-app-overview/designer-mash.png "Workflow, action, and business process flow designers")
