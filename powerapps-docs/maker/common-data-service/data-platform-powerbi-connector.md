@@ -45,7 +45,8 @@ To use Power BI with the Common Data Service, you need the following:
 
 2. Type *common* in the **Search** box, select **Common Data Service**, and then select **Connect**.
 
-    ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport2.png "Power BI Desktop")
+        > [!div class="mx-imgBorder"] 
+        > ![Power BI Desktop connect to Common Data Service](./media/data-platform-cds-powerbi-connector/CreateReport2.png "Power BI Desktop connect to Common Data Service")
 
 3. In the **Common Data Service** dialog box that appears, paste in your Common Data Service environment URL into the **Server Url** box and select **OK**. You might be prompted to sign in using the same credentials you use to connect to Power Apps and Common Data Service. Select **Connect**.
 
@@ -60,7 +61,8 @@ To use Power BI with the Common Data Service, you need the following:
 
 5. Select the **Account** entity to see a preview of your data in the right pane. Select **Load**.
 
-    ![Power BI Desktop](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Power BI Desktop")
+        > [!div class="mx-imgBorder"] 
+        > ![Load account entity records](./media/data-platform-cds-powerbi-connector/CreateReport5.png "Load account entity records")
 
 6. Your entity is now loaded into your report, and you can begin building reports, or repeat the previous steps to add additional entities.
 
@@ -68,7 +70,8 @@ To use Power BI with the Common Data Service, you need the following:
 
 7. In **Fields** pane select the **name** field and then select the **numberofemployees** field. In the **Visualizations** pane, select **Pie chart**. This adds a new visualization to your report canvas. 
 
-    ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization)
+        > [!div class="mx-imgBorder"] 
+        > ![Power BI Desktop visualization](./media/data-platform-cds-powerbi-connector/CreateReport7.png "Power BI Desktop visualization)
 
 
 ## Using option sets
