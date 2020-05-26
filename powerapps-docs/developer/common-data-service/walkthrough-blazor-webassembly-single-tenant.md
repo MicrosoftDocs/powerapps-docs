@@ -115,7 +115,7 @@ This will generate two ID values that you will need to include in the .NET Core 
 - Directory (Tenant) Id : Placeholder: `22222222-2222-2222-2222-222222222222`
 
 > [!IMPORTANT]
-> Follow the instructions in the topic to enable Access Tokens and ID tokens to enable the implicit grant and save your changes.
+> Follow the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic to enable Access Tokens and ID tokens to enable the implicit grant and save your changes.
 
 The .NET Core CLI command can be formatted this way and include a parameter to specify where the project should be created. You can run the command in an ordinary command window.
 
