@@ -142,6 +142,8 @@
     href: dump-global-option-set.md
   - name: Export ribbon definitions
     href: export-ribbon-definitions.md
+  - name: Query and detect metadata changes
+    href: query-metadata-changes.md
   - name: Retrieve valid status transitions
     href: retrieve-valid-status-transitions.md
   - name: Work with attributes

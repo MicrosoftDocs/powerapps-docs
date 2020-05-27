@@ -30,7 +30,7 @@ The following table outlines the designations and which license an end user must
 |-|-|
 | Standard​ | An app that only uses standard connectors. An end user must have a Power Apps for Office 365 plan, per app plan, or a per user plan to access this app.
 | Extended​ | An app allowed to use connectors promoted to premium on October 1, 2019.​ An end user must have a Power Apps for Office 365 plan, per app plan or per user plan. [Power Apps licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#office-365) outlines which connectors were promoted to premium on October 1, 2019.
-| Premium​ | An app that uses at least one premium connector. An end user must have a per app plan or per user plan to access.
+| Premium​ | An app that uses at least one premium connector, a custom connector or an on-premise gateway. An end user must have a per app plan or per user plan to access.
 
 ## Check app license designation from app settings
 

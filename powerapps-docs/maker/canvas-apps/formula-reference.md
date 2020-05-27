@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/21/2020
+ms.date: 05/20/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -20,7 +20,7 @@ Formulas combine many elements.  Listed below are:
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
 * **Signals** return information about the environment. For example, **[Location](functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
 * **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
-* **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Parent](functions/operators.md#parent-operator)**, provide access to information from within a container.
+* **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Self](functions/operators.md#self-and-parent-operators)**, provide access to information from within a container.
 
 Other elements include:
 
@@ -128,7 +128,7 @@ Other elements include:
 
 **[Distinct](functions/function-distinct.md)** – Summarizes records of a table, removing duplicates.  
 
-**[Download](functions/function-param.md)** – Downloads a file from the web to the local device.
+**[Download](functions/function-download.md)** – Downloads a file from the web to the local device.
 
 **[DropColumns](functions/function-table-shaping.md)** – Returns a table with one or more columns removed.
 
@@ -177,6 +177,8 @@ Other elements include:
 
 **[IsEmpty](functions/function-isblank-isempty.md)** – Checks for an empty table.
 
+**[IsError](functions/function-iferror.md)** – Checks for an error.
+
 **[IsMatch](functions/function-ismatch.md)** – Checks a string against a pattern.  Regular expressions can be used.
 
 **[IsNumeric](functions/function-isnumeric.md)** – Checks for a numeric value.
@@ -195,7 +197,7 @@ Other elements include:
 
 **[LastN](functions/function-first-last.md)** – Returns the last set of records (N records) of a table.
 
-**[Launch](functions/function-param.md)** – Launches a web address or an app.
+**[Launch](functions/function-param.md)** – Launches a webpage or a canvas app.
 
 **[Left](functions/function-left-mid-right.md)** – Returns the left-most portion of a string.
 
@@ -243,9 +245,9 @@ Other elements include:
 **[Or](functions/function-logicals.md)** – Boolean logic OR.  Returns **true** if any of its arguments are **true**.  You can also use the [**||** operator](functions/operators.md).
 
 ## P
-**[Param](functions/function-param.md)** – Provides access to parameters passed to the app when the user opened it.
+**[Param](functions/function-param.md)** – Access parameters passed to a canvas app when launched.
 
-**[Parent](functions/operators.md#parent-operator)** – Provides access to a container control's properties.
+**[Parent](functions/operators.md#self-and-parent-operators)** – Provides access to a container control's properties.
 
 **[Patch](functions/function-patch.md)** – Modifies or creates a record in a data source, or merges records outside of a data source.
 
@@ -298,6 +300,8 @@ Other elements include:
 **[Second](functions/function-datetime-parts.md)** – Retrieves the second portion of a date/time value.
 
 **[Select](functions/function-select.md)** – Simulates a select action on a control, causing the **OnSelect** formula to be evaluated.
+
+**[Self](functions/operators.md#self-and-parent-operators)** – Provides access to the properties of the current control.
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 

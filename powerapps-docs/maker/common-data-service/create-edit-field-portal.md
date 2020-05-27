@@ -43,7 +43,7 @@ The portal enables configuring the most common options, but certain options can 
 
 ## Create a field
 
-While viewing fields, in the command bar, click **Add field** which will show the **Field properties** panel.
+While viewing fields, in the command bar, select **Add field** which will show the **Field properties** panel.
 
 ![Field Properties](media/field-properties.png)
 
@@ -131,13 +131,13 @@ More information: [Behavior and format of the Date and Time field](behavior-form
 
 ## Save new field
 
-Once you have set the **Display Name**, **Name** and **Data type** properties you can click **Done** to close the **Field properties** panel. 
+Once you have set the **Display Name**, **Name** and **Data type** properties you can select **Done** to close the **Field properties** panel. 
 
-You can continue to edit the entity and add additional fields or return and continue editing this field. The fields will not be created until you click **Save Entity** to save all the changes to the entity.
+You can continue to edit the entity and add additional fields or return and continue editing this field. The fields will not be created until you select **Save Entity** to save all the changes to the entity.
 
 ![Save Entity Button](media/save-entity-button.png)
 
-You can also click **Discard** to discard the changes you have made.
+You can also select **Discard** to discard the changes you have made.
  
 ## Edit a field
 
@@ -198,7 +198,7 @@ If you choose **New option set** the default behavior is to create a new global 
 > [!NOTE]
 > While you are editing options for a new global option set, the **Display name** and **Name** values are for the global option set rather than for the field. The default values match the field values, but you can edit them while you edit the global option set to be different from the field you are currently creating.
 
-If you want to create a local option set you must click **View more** and choose **Local option set**.
+If you want to create a local option set you must select **View more** and choose **Local option set**.
 
 ![Local option set](media/local-option-set.png)
 

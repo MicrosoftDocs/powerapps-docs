@@ -1,7 +1,7 @@
 ---
 title: "AppModule Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the AppModule entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the AppModule entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,6 +12,7 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # AppModule Entity Reference
 
@@ -70,6 +71,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [IsFeatured](#BKMK_IsFeatured)
 - [Name](#BKMK_Name)
 - [NavigationType](#BKMK_NavigationType)
+- [OptimizedFor](#BKMK_OptimizedFor)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [PublishedOn](#BKMK_PublishedOn)
 - [PublisherId](#BKMK_PublisherId)
@@ -333,6 +335,22 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |0|Single session|
 |1|Multi session|
 
+
+
+### <a name="BKMK_OptimizedFor"></a> OptimizedFor
+
+|Property|Value|
+|--------|-----|
+|Description|The client that this app is optimized for|
+|DisplayName|Optimized Client|
+|FormatName|Text|
+|IsLocalizable|False|
+|IsValidForForm|False|
+|IsValidForRead|True|
+|LogicalName|optimizedfor|
+|MaxLength|200|
+|RequiredLevel|None|
+|Type|String|
 
 
 ### <a name="BKMK_OverriddenCreatedOn"></a> OverriddenCreatedOn
@@ -894,6 +912,9 @@ See systemuser Entity [lk_appmodule_createdonbehalfby](systemuser.md#BKMK_lk_app
 
 Relationship details provided where the AppModule entity is the first entity in the relationship. Listed by **SchemaName**.
 
+- [appmoduleroles_association](#BKMK_appmoduleroles_association)
+- [serviceplan_appmodule](#BKMK_serviceplan_appmodule)
+
 
 ### <a name="BKMK_appmoduleroles_association"></a> appmoduleroles_association
 
@@ -917,6 +938,10 @@ IntersectEntityName: appmoduleroles<br />
 |NavigationPropertyName|appmoduleroles_association|
 |AssociatedMenuConfiguration|Behavior: DoNotDisplay<br />Group: Details<br />Label: <br />Order: |
 
+
+### <a name="BKMK_serviceplan_appmodule"></a> serviceplan_appmodule
+
+See serviceplan Entity [serviceplan_appmodule](serviceplan.md#BKMK_serviceplan_appmodule) Many-To-Many Relationship.
 
 ### See also
 

@@ -19,7 +19,7 @@ search.app:
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/customize-dev/pass-parameters-url-by-using-ribbon -->
 
-Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>` element. There are several ways to pass contextual Model-driven apps information as query string parameters to a URL by using the ribbon.  
+Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>` element. There are several ways to pass contextual model-driven apps information as query string parameters to a URL by using the ribbon.  
   
 -   Use a `<Url>` element. Within the `Url` element, use the **PassParams** attribute.  
   
@@ -42,7 +42,7 @@ Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>`
 [!INCLUDE[languagecode](../../includes/languagecode.md)]
   
 > [!NOTE]
->  We recommend that you use the entity name instead of the entity type code because the entity type code may be different between MDA installations.  
+>  We recommend that you use the entity name instead of the entity type code because the entity type code may be different between model-driven apps installations.  
   
 ### Example  
  The following sample shows the URL without parameters:  
@@ -73,7 +73,7 @@ https://myserver/mypage.aspx?orgname=AdventureWorksCycle&userlcid=1033&orglcid=1
 
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Open Forms And Views with a URL](open-forms-views-dialogs-reports-url.md)    
- [Define Ribbon Tab Display Rules](define-ribbon-tab-display-rules.md)   
- [Sample: Export Ribbon Definitions](sample-export-ribbon-definitions.md)
+ [Define Ribbon tab display rules](define-ribbon-tab-display-rules.md)   
+ [Sample: Export Ribbon definitions](sample-export-ribbon-definitions.md)
 
 

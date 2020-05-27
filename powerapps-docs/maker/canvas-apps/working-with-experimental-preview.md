@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/08/2019
+ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -57,9 +57,9 @@ Experimental features are different.  They are works in progress, and we don't c
 
 ## Controlling which features are enabled
 
-Experimental and preview features are listed in the app's **Advanced settings**.  From within the app, select the **File** menu, select **App settings**, and then select **Advanced settings**. Scroll down to the **Preview features** and **Experimental features** sections:
+Experimental and preview features are listed in the app's **Advanced settings**.  From within the app, select the **File** menu, select **Settings**, and then select **Advanced settings**. Scroll down to the **Preview features** and **Experimental features** sections:
 
-![](media/working-with-experimental/advanced-settings.png)
+![Advanced settings for canvas app](media/working-with-experimental/advanced-settings.png "Advanced settings for canvas app")
 
 Each feature has a toggle switch.  **Off** means that the feature is disabled.  Having all switches turned off is the baseline and safest way to run your app.
 

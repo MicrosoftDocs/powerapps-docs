@@ -29,7 +29,7 @@ You can set default values for new records created by users by specifying attrib
   
  When you open a new form by using the URL address, you can include arguments in the `extraqs` parameter to set field values. The following requirements must be met:  
   
-- You must encode the parameters passed in the `extraqs` parameter. To encode the parameters, use [encodeURIComponent](https://msdn.microsoft.com/library/aeh9cef7\(VS.85\).aspx).  
+- You must encode the parameters passed in the `extraqs` parameter. To encode the parameters, use [encodeURIComponent](https://msdn.microsoft.com/library/aeh9cef7\(VS.85\).aspx).  To use special characters like "=" or "&" in the parameter values, you must double encode (e.g. to set `name` to `A=B&C`, it would be `extraqs=name%3DA%253DB%2526C`).
   
 - The names of the query string arguments must match or include the names of attributes for the entity.  
   
@@ -37,7 +37,7 @@ You can set default values for new records created by users by specifying attrib
   
 - The value can’t be a script.  
   
-  Any attempt to pass an invalid parameter or value will result in an error.  
+- Any attempt to pass an invalid parameter or value will result in an error.  
   
 - For Boolean fields, use either an integer value of `0` or `1`, or a text value of `true` or `false` to set the value.  
   

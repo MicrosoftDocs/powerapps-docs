@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/03/2019
+ms.date: 03/31/2020
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -19,6 +19,8 @@ search.app:
 
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
+> [!IMPORTANT]
+> In the Unified Interface grids  don't prepopulate column filters based on the current view definition.
 
    > [!div class="mx-imgBorder"]
    > ![Grid filtering](media/filter-options.png "Grid filtering")
@@ -27,6 +29,7 @@ Grids in the Unified Interface have been improved to increase the amount of data
 ## Grid and filter navigation
 
 When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same when data is filtered on quick find, column filtering, page number, and more. 
+
 
    > [!div class="mx-imgBorder"]
    > ![Navigating back to the page opens it in the same state](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
@@ -46,30 +49,24 @@ You can also open primary field and lookup fields in a new tab or window.
    > [!div class="mx-imgBorder"]
    > ![Open in a new window](media/newtab.png "[Open in a new window")
   
-
-## Preview: New grid filters and search option
-
-This section is for early-access features. You can opt in early to enable these features in your environment. This will allow you to test these features and then adopt them across your environments. For information about how to enable these features, see [Opt in to 2020 release wave 1 updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates).
-
-
-   > [!NOTE]
-   > Don't change the default display format for time, number, currency, time, or date, because this causes an issue. For more information, see [Known issue](https://docs.microsoft.com/powerapps/user/grid-filters#known-issue).
-
-### Lookup field column
+  
+## Lookup field column
 
 When you filter on a lookup column, you can select from a list of records to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of records to filter by.
+
+The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the entity being looked up and will include all records with no filter.
 
    > [!div class="mx-imgBorder"]
    > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
 
-### Date filter
+## Date filter
 
 The robust **Date** filter includes many different values to choose from, such as **On** to search by an exact date, or **Next X fiscal year** or **In fiscal period** to search by year or quarter.
 
    > [!div class="mx-imgBorder"]
    > ![Date filtering](media/date-filter.png "Date filtering")
 
-### Filter the list of activities
+## Filter the list of activities
 
 You can filter the list of activities to see only the ones you're interested in. For example, you can further limit the activities you are seeing in a view by using the activity type filter. The activity type filter allows you to filter activities based on the type, such as email, task, phone call, and so on.
 
@@ -78,7 +75,7 @@ You can filter the list of activities to see only the ones you're interested in.
    > ![Activities filter](media/activity_filter.png "Activities filter")
 
 
-### Known issue
+### Known issue 
 
 If you change the default display format for number, currency, time, or date and then filter data on a grid, the filter won't show your selected display format. The filters will still be displayed in the system default format, and in some cases filtering might not work at all. 
 
@@ -94,7 +91,7 @@ To fix the issue, set the display format for number, currency, time, and date ba
 We're working on this issue, please check back for information about the availability of a fix.
 
   
-### Use search on a grid
+## Use search on a grid
 
 When you use the **Search this view** option on a grid page, the system searches for data in the view that you're currently in. In the following example, you perform a search on the **Contacts** grid.
 
@@ -114,7 +111,7 @@ The system searches for data in the **My Active Contacts** view and displays sea
    > ![Search view](media/search-view2.png "Search results from the Search this view command")
 
 
-#### Use the quick-find search experience
+## Use the quick-find search experience
 
 To switch back to the old quick-find search experience that uses an entity's quick-find view definition to perform searches, you'll need admin permissions.
 
@@ -123,6 +120,8 @@ To switch back to the old quick-find search experience that uses an entity's qui
 2. Go to **Settings** > **Administration** > **System Settings**.
 
 3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
+
+
 
 
 
