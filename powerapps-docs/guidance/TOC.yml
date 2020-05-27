@@ -54,3 +54,18 @@
         href: planning/creating-project-plan.md
       - name: Defining the app project goals
         href: planning/defining-app-project-objective.md
+      - name: Defining the project scope
+        href: planning/defining-project-scope.md
+      - name: Prioritizing features and requests
+        href: planning/prioritizing-features.md
+      - name: Identifying project members
+        href: planning/identifying-project-members.md
+      - name: Listing project tasks and owners
+        href: planning/project-tasks-owners.md
+      - name: Defining the project schedule
+        href: planning/defining-project-schedule.md
+      - name: Identifying the risks
+        href: planning/identifying-risks.md
+      - name: Getting support and sponsorship from management
+        href: planning/gaining-support.md
+        
