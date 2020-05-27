@@ -27,7 +27,7 @@ search.app:
 
 In this topic you learn how to configure a custom control for a field.
 
-To add a control using the Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form#add-components-to-a-form).
+To add a control using the Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).
 
 ## Use a custom control using the classic form designer
 
