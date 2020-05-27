@@ -1612,8 +1612,6 @@
           href: ./common-data-service/solution-history.md
         - name: Use environment variables
           href: ./common-data-service/EnvironmentVariables.md
-        - name: Set managed properties in metadata
-          href: ./common-data-service/set-managed-properties-metadata.md
         - name: Translate customized entity and field text
           href: ./common-data-service/export-customized-entity-field-text-translation.md
         - name: Import translated entity and field text
