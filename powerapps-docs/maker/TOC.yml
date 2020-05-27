@@ -1620,8 +1620,6 @@
           href: ./common-data-service/import-translated-entity-field-text.md               
         - name: Create solution patches
           href: ./common-data-service/solution-patches.md
-      - name: Best practices
-        href: ./common-data-service/solution-best-practices.md
       - name: Use solution checker
         href: ./common-data-service/use-powerapps-checker.md
         items: 
