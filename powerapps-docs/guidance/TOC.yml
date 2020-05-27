@@ -10,6 +10,8 @@
   items:
   - name: Introduction
     href: planning/introduction.md
+  - name: Differences between Power Apps and traditional app development approaches
+    href: planning/app-development-approaches.md
   - name: Planning phase
     items:
     - name: Identifying the business problem to solve (the use case)
