@@ -104,7 +104,7 @@ static public string getEncodedFileContents(String pathToFile)
 ## Example  
  The following portion of the ImportWebResources.cs file expects the following variables:  
   
-- `_customizationPrefix` : The customization prefix of the **MDA SDK Samples** publisher. If this publisher does not exist it will be created with the customization prefix of “sample”.  
+- `_customizationPrefix` : The customization prefix of the **SDK Samples** publisher. If this publisher does not exist it will be created with the customization prefix of “sample”.  
   
 - `_ImportWebResourcesSolutionUniqueName` : The unique name of the **Import Web Resources Sample Solution** created in this sample. The value is `ImportWebResourcesSample`.  
   

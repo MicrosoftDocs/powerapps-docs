@@ -2,7 +2,7 @@
 title: "Web API Functions and Actions Sample (Common Data Service)| Microsoft Docs"
 description: "This group of samples demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service Web API. These are implemented using Client-side JavaScript and C#"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 04/06/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -187,7 +187,7 @@ Content-Length: 154
   
 ```  
 Unbound function: GetTimeZoneCodeByLocalizedName  
-	Function returned time zone Pacific Standard Time, with code '4'.  
+    Function returned time zone Pacific Standard Time, with code '4'.  
 ```  
   
 <a name="bkmk_boundFunctionWithParams"></a>
@@ -224,7 +224,7 @@ Content-Length: 148
   
 ```  
 Bound function: CalculateTotalTimeIncident  
-	Function returned 90 minutes - total duration of tasks associated with the incident.  
+    Function returned 90 minutes - total duration of tasks associated with the incident.  
 ```  
   
 <a name="bkmk_workingWithActions"></a> 
@@ -267,7 +267,7 @@ OData-Version: 4.0
   
 ```  
 Unbound Action: WinOpportunity  
-	Opportunity won.  
+    Opportunity won.  
 ```  
   
 <a name="bkmk_boundActionWithParams"></a>
@@ -311,7 +311,7 @@ Content-Length: 170
   
 ```  
 Bound Action: AddToQueue  
-	QueueItemId returned from AddToQueue Action: 67bdfabd-fc4a-e611-80d5-00155da84802  
+    QueueItemId returned from AddToQueue Action: 67bdfabd-fc4a-e611-80d5-00155da84802  
 ```  
   
 <a name="bkmk_customActions"></a> 
@@ -405,7 +405,7 @@ Content-Length: 450
   
 ```http  
 Custom action: sample_AddNoteToContact  
-	A note with the title 'The Title of the Note' and the content 'The text content of the note.' was created and associated with the contact Jon Fogg.  
+    A note with the title 'The Title of the Note' and the content 'The text content of the note.' was created and associated with the contact Jon Fogg.  
 ```  
   
 <a name="bkmk_unboundCustomActionWithParams"></a> 
@@ -469,11 +469,7 @@ Content-Length: 2760
 {  
    "error":{  
       "code":"",  
-      "message":"ContactFirstName and ContactLastName are required when CustomerType is contact.",  
-      "innererror":{  
-         "message":"ContactFirstName and ContactLastName are required when CustomerType is contact.",  
-         ...[truncated]  
-      }  
+      "message":"ContactFirstName and ContactLastName are required when CustomerType is contact."
    }  
 }  
 ```  

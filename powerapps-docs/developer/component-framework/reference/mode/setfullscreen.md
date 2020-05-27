@@ -22,7 +22,7 @@ ms.assetid: 1faf3e79-969e-4c1e-ac01-8e2155c609fa
 
 ## Syntax
 
-`context.mode.setControlState(mode);`
+`context.mode.setFullScreen(value);`
 
 ## Available for 
 

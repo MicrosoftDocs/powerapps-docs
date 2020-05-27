@@ -2,7 +2,7 @@
 title: "Checklist: Unified Interface transition | MicrosoftDocs"
 description: "Checklist to ensure that you're prepared for transition to the Unified Interface."
 ms.custom: ""
-ms.date: 11/04/2019
+ms.date: 05/21/2020
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -89,7 +89,7 @@ Unified Interface.
     path to replace these features with either native platform capabilities or
     alternative solutions that are compatible.
 
-## Identify replacements for deprecated client API code and features
+## Identify replacements for deprecated features
 
 Based on the outputs of the **Power Apps Solution Checker** and the information
 contained in [Important changes (deprecations) coming](https://docs.microsoft.com/power-platform/important-changes-coming) on deprecated client APIs and
@@ -107,10 +107,12 @@ Here are some of the most common areas needing attention:
 -   **Task flows**: Consider using [Business Process
 Flows](https://docs.microsoft.com/power-platform-release-plan/2019wave2/microsoft-flow/business-process-immersive-experiences) to replace task flows.
 
--   **Service scheduling**: Consider using [Universal Resource Scheduling](https://docs.microsoft.com/dynamics365/common-scheduler/schedule-anything-with-universal-resource-scheduling) to replace legacy service scheduling.
+-   **Dynamics 365 for Outlook (COM Add-in)**: Consider replacing the [deprecated](/power-platform/important-changes-coming#dynamic-365-for-outlook-is-deprecated) Dynamics 365 for Outlook (COM Add-in) with the modern, lightweight [Dynamics 365 App for Outlook](https://docs.microsoft.com/dynamics365/outlook-app/overview). For further information and steps to make a smooth transition, download [Dynamics 365 for Outlook (COM add-in) Playbook](https://aka.ms/OutlookCOMPlaybook)
 
-> [!NOTE]
-> You might also consider replacing the Dynamics 365 for Outlook (COM Add-in) with the lightweight [Dynamics 365 App for Outlook](https://docs.microsoft.com/dynamics365/outlook-app/overview).
+- **Dynamics 365 Customer Service**:
+    -   Service scheduling: Consider using [Universal Resource Scheduling](https://docs.microsoft.com/dynamics365/common-scheduler/schedule-anything-with-universal-resource-scheduling) instead of legacy service scheduling.
+    - [Deprecated knowledge management entities](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn265924(v=crm.8)#some-knowledge-management-entities-are-deprecated): See this topic to work with the latest knowledge management entities: [Work with knowledge articles](https://docs.microsoft.com/dynamics365/customer-service/work-knowledge-articles).
+    - [Deprecated contract entities](https://docs.microsoft.com/power-platform/important-changes-coming#contracts-contract-line-items-and-contract-templates-entities-are-deprecated): See this topic to migrate to entitlements: [Contracts to entitlements migration strategy](https://docs.microsoft.com/dynamics365/customer-service/contract-to-entitlement-migration). 
 
 ## Test your application in Unified Interface
 
@@ -147,7 +149,7 @@ Instead of using the **Dynamics 365 – Custom** app, which isn‘t optimized fo
 Unified Interface but rather runs in compatibility mode, we suggest that you
 leverage either first-party apps made by Microsoft or create your owns apps.
 
-The Dynamics 365 first-party apps that have already been optimized for Unified
+The Dynamics 365 apps that have already been optimized for Unified
 Interface are the following:
 
 -   Dynamics 365 Sales Hub
@@ -164,7 +166,7 @@ Interface are the following:
 
 **Model-driven apps** are a type of app you can create using Power Apps that helps you provide tailored experience to your users depending on their role in the organization. For example, a salesperson can have a completely different experience than a customer service representative through different model-driven apps even though they are using data from the same environment. Multiple model-driven apps can be created in a Common Data Service environment. More information: [What are model-driven apps?](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
 
-The Dynamics 365 first-party apps listed earlier are examples of model-driven apps.
+The Dynamics 365 apps listed earlier are examples of model-driven apps.
 
 ### How to define your app strategy?
 
@@ -290,7 +292,7 @@ flow.
 
 ## Check your transition date
 
-On October 1, 2020, [the legacy web client will no longer be
+On December 1, 2020, [the legacy web client will no longer be
 available](https://docs.microsoft.com/power-platform/important-changes-coming#legacy-web-client-is-deprecated).
 Be sure to migrate well in advance to ensure there’s time for any issues to be
 addressed.

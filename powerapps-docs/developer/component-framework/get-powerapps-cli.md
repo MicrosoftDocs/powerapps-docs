@@ -20,6 +20,7 @@ Use **Microsoft Power Apps CLI** (command-line interface) to create, debug, and 
 > [!IMPORTANT]
 > To deploy your code component using Power Apps CLI, you must have a Common Data Service environment with system administrator or system customizer privileges.
 
-### See also
+## See also
 
 [Create your first code component](implementing-controls-using-typescript.md)<br/>
+[Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)

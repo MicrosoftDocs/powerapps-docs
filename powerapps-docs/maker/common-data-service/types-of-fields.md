@@ -2,7 +2,7 @@
 title: "Field data types in Common Data Service | MicrosoftDocs"
 description: "Understand the different field data types available for your app"
 keywords: ""
-ms.date: 09/30/2019
+ms.date: 05/27/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -140,7 +140,7 @@ However, you should be aware that not every lookup behaves this way. There are s
 |-----------------|-----------------|  
 |**Simple**|Allows for a single reference to a specific entity. All custom lookups are this type.|  
 |**Customer**|Allows for a single reference to either an account or a contact record.|  
-|**Owner**|Allows for a single reference to either a team or a user record. All team or user-owned entities have one of these. More information: [Add the team entity as a lookup option in your app](../model-driven-apps/team-entity-lookup.md)|  
+|**Owner**|Allows for a single reference to either a team or a user record. All team or user-owned entities have one of these. More information: [Add an entity as a lookup option in your app](../model-driven-apps/team-entity-lookup.md)|  
 |**PartyList**|Allows for multiple references to multiple entities. These lookups are found on the Email entity **To** and **Cc** fields. They’re also used in the Phone and Appointment entities.|  
 |**Regarding**|Allows for a single reference to multiple entities. These lookups are found in the regarding field used in activities.|  
 

@@ -140,4 +140,4 @@ For more information, see [Package and Distribute Extensions with Solutions](/dy
  [Ribbon core schema](ribbon-core-schema.md)<br/>
  [Ribbon types schema](ribbon-types-schema.md)<br/>
  [Ribbon WSS schema](ribbon-wss-schema.md)<br/>
- [Customization Solutions File Schema](../common-data-service/customization-solutions-file-schema.md)
+ [Customization solutions file schema](../common-data-service/customization-solutions-file-schema.md)

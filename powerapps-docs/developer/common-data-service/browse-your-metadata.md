@@ -6,8 +6,8 @@ ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
+author: "phecke" # GitHub ID
+ms.author: "pehecke" # MSFT alias of Microsoft employees only
 manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -83,7 +83,7 @@ You can perform the following actions for a single entity:
 **Metadata Browser** is a tool that XrmToolbox community developed for Common Data Service. Please see the [Developer tools](developer-tools.md) topic for community developed tools.
 
 > [!NOTE]
-> The community tools are not a product of Common Data Service and does not extend support to the community tools. 
+> The community tools are not a product of Common Data Service and Microsoft does not provide support for the community tools. 
 > If you have questions pertaining to the tool, please contact the publisher. More Information: [XrmToolBox](https://www.xrmtoolbox.com).
 
 ### See also

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2016
+ms.date: 04/17/2020
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -97,6 +97,8 @@ See the [Image control reference](control-image.md) for **Image** properties.
 
 **[Underline](properties-text.md)** – Whether a line appears under the text that appears on a control.
 
+**UseMobileCamera** – Whether to use a mobile camera directly, when available.
+
 **[VerticalAlign](properties-text.md)** – The location of text on a control in relation to the vertical center of that control.
 
 **[Visible](properties-core.md)** – Whether a control appears or is hidden.
@@ -115,19 +117,20 @@ See the [Image control reference](control-image.md) for **Image** properties.
 1. Add an **Add picture** control, and then triple-click it.
    
     Don't know how to [add, name, and configure a control](../add-configure-controls.md)?
-2. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
-3. Add a **[Button](control-button.md)** control, move it under the **Add picture** control, and set the **[OnSelect](properties-core.md)** property for the **[Button](control-button.md)** control to this formula:<br>
+1. In the **Open** dialog box, click or tap an image file, and then click or tap **Open**.
+1. Add a **[Button](control-button.md)** control, move it under the **Add picture** control, and set the **[OnSelect](properties-core.md)** property for the **[Button](control-button.md)** control to this formula:<br>
    **Collect(MyPix, AddMediaButton1.Media)**
    
     Want more information about the **[Collect](../functions/function-clear-collect-clearcollect.md)** function or [other functions](../formula-reference.md)?
-4. Add an **Image gallery** control, and set its **[Items](properties-core.md)** property to **MyPix**.
-5. Press F5, and then click or tap the **[Button](control-button.md)** control.
+1. Add a **Vertical gallery** control, and set its **[Items](properties-core.md)** property to **MyPix**.
+1. Select the **[Image](control-image.md)** control in the gallery and set it's **Image** property to **ThisItem.Value**.
+1. Press F5, and then click or tap the **[Button](control-button.md)** control.
    
-    The image from the **Add picture** control appears in the **Image gallery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Image gallery** control, set the **[ImagePosition](properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
-6. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **[Button](control-button.md)** control that you added.
+    The image from the **Add picture** control appears in the **Vertical allery** control. If your image doesn't have the same aspect ratio as the **[Image](control-image.md)** control in the **Vertical gallery** control, set the **[ImagePosition](properties-visual.md)** property of the **[Image](control-image.md)** control to **Fit**.
+1. Click or tap the **Add picture** control, click or tap another image file, click or tap **Open**, and then click or tap the **[Button](control-button.md)** control that you added.
    
     The second image appears in the **Image gallery** control.
-7. (optional) Repeat the previous step one or more times, and then return to the default workspace by pressing Esc.
+1. (optional) Repeat the previous step one or more times, and then return to the default workspace by pressing Esc.
 
 Use the **[SaveData](../functions/function-savedata-loaddata.md)** function to save the images locally or the **[Patch](../functions/function-patch.md)** function to update a data source.
 

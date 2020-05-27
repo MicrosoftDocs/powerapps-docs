@@ -26,9 +26,9 @@ search.app:
    
 # Solutions overview  
 
-  In Power Apps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more.  You can get a solution from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
+In Power Apps, solutions are leveraged to transport apps and components from one environment to another or to apply a set of customizations to existing apps. A solution can contain one or more apps as well as other components such as site maps, entities, processes, web resources, option sets, and more.  You can get a solution from [AppSource](https://appsource.microsoft.com/) or from an independent software vendor (ISV).
   
-More information: [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/download/details.aspx?id=57777)  
+More information: [Solutions concepts](/power-platform/alm/solution-concepts-alm)
   
 > [!NOTE]
 >  If you’re an ISV creating an app that you will distribute, you’ll need to use solutions. For more information about using solutions, see [Developer Guide: Introduction to solutions](/powerapps/developer/common-data-service/introduction-solutions).  
@@ -41,7 +41,17 @@ More information: [Whitepaper: Solution Lifecycle Management](https://www.micros
 > [!div class="mx-imgBorder"] 
 > ![Components in solution](media/components-in-solution.png "Components in solution") 
 
-To view a list of component types that can be added to any solution, see [ComponentType Options](../../developer/common-data-service/reference/entities/solutioncomponent.md#componenttype-options).
+To view a list of component types that can be added to any solution, see [ComponentType Options](../../developer/common-data-service/reference/entities/solutioncomponent.md#componenttype-options). 
+
+For more information about solutions, see these articles: 
+- [Solutions concepts](/power-platform/alm/solution-concepts-alm)
+- [Solution layers](/power-platform/alm/solution-layers-alm)
+- [Understand how managed solutions are merged](/power-platform/alm/how-managed-solutions-merged)
+- [Use a solution to customize](/power-platform/alm/use-solutions-for-your-customizations)
+- [Managed properties](/power-platform/alm/managed-properties-alm)
+- [Use segmented solutions](/power-platform/alm/segmented-solutions-alm)
+- [Update a solution](/power-platform/alm/update-solutions-alm)
+
 
 <!-- The following is a list of components that you can view in a solution:  
   
@@ -114,7 +124,8 @@ To view a list of component types that can be added to any solution, see [Compon
  Some components are nested within other components. For example, an entity contains forms, views, charts, fields, entity relationships, messages, and business rules. Each of those components requires an entity to exist. A field can’t exist outside of an entity. We say that the field is dependent on the entity. There are actually twice as many types of components as shown in the preceding list, but most of them are not nested within other components and not visible in the application.  
   
  The purpose of having components is to keep track of any limitations on what can be customized using managed properties and all the dependencies so that it can be exported, imported, and (in managed solutions) deleted without leaving anything behind.  
-  
+
+<!--  
 <a name="BKMK_ManagedAndUnmanagedSolutions"></a>   
 ## Managed and unmanaged solutions  
  There are **managed** and **unmanaged** solutions. A **managed** solution cannot be modified and can be uninstalled after it is imported. All the components of that solution are deleted by uninstalling the solution.  
@@ -164,9 +175,9 @@ To view a list of component types that can be added to any solution, see [Compon
 
 By default, the solution you will work with in Power Apps will be the **Common Data Services Default Solution** which is associated with the **Common Data Service Default Publisher**. The default customization prefix will be randomly assigned for this publisher, for example it could be `cr8a3`. This means that the name of every new item of metadata created for your organization will have this prepended to the names used to uniquely identify the items. 
 
-We recommend that you change the solution publisher prefix so that it will be more meaningful. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md)
+We recommend that you change the solution publisher prefix so that it will be more meaningful. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) -->
   
 ### Next steps  
-[Import, update, and export solutions](import-update-export-solutions.md) <br/>
-[Navigate to a specific solution](navigate-specific-solution.md)
+[Use solutions in Power Apps](use-solution-explorer.md) <br/>
+
  
