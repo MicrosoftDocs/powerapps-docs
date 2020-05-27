@@ -250,7 +250,7 @@ When HTML web resources are processed within solution checker, the HTML web reso
 
 ## Web-avoid-eval error for Power Apps component framework code components
 
- If a web-avoid-eval error is reported for a Power Apps component framework code component created using CLI tooling, package your control with 'msbuild /p:configuration=Release' or 'npm run build -- --buildMode production' to produce a release build that does not include 'eval' usage.
+If a web-avoid-eval error is reported for a Power Apps component framework code component created using CLI tooling, package your control with `msbuild /p:configuration=Release` or `npm run build -- --buildMode production` to produce a release build that does not include 'eval' usage.
 
 ## Web-unsupported-syntax issue for web resources
 
