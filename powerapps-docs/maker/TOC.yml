@@ -1618,8 +1618,6 @@
           href: ./common-data-service/export-customized-entity-field-text-translation.md
         - name: Import translated entity and field text
           href: ./common-data-service/import-translated-entity-field-text.md               
-        - name: Create solution patches
-          href: ./common-data-service/solution-patches.md
       - name: Use solution checker
         href: ./common-data-service/use-powerapps-checker.md
         items: 
