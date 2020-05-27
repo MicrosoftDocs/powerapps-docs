@@ -58,9 +58,9 @@ You must add cross-origin resource sharing (CORS) rule on your Azure Storage acc
 - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*, or just \* to allow all.
 - **Maximum age (seconds)**: Specify the maximum amount time that a browser should cache the preflight OPTIONS request. For example, 200.
 
-Sample CORS configuration:
+CORS rule example:
 
-![Sample CORS configuration](media/portals-cors-azure.png "Sample CORS configuration")
+![CORS rule example](media/portals-cors-azure.png "CORS rule example")
 
 [!include[More information:](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services)
 
