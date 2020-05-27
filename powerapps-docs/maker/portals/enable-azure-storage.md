@@ -55,7 +55,7 @@ You must add cross-origin resource sharing (CORS) rule on your Azure Storage acc
 - **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com` <br> Ensure the allowed origin doesn't have trailing `/`. For example, `https://contoso.crm.dynamics.com/` is incorrect.
 - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
 - **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*, or \* to allow all.
-- **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*, or just \* to allow all.
+- **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*, or \* to allow all.
 - **Maximum age (seconds)**: Specify the maximum amount time that a browser should cache the preflight OPTIONS request. For example, 200.
 
 CORS rule example:
