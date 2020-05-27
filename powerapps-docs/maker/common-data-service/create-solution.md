@@ -59,6 +59,9 @@ To create a solution:
  
 > [!div class="mx-imgBorder"]  
 > ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
+
+> [!NOTE]
+> The list of existing components will be different depending on the version and solutions imported in your environment. 
   
 When you add an existing entity, rather than select **Include all components** or **Include entity metadata**, use the **Select components** option to only add the entity components that have been updated. With solution segmentation, you export solution updates with selected entity assets, such as entity fields, forms, and views, rather than entire entities with all the assets. [Create a segmented solution with entity assets](#create-a-segmented-solution-with-entity-assets)
 
