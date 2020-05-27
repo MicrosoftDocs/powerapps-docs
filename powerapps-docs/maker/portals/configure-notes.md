@@ -157,7 +157,7 @@ After adding the configuration, the Note control will be rendered by using the a
 You must create and assign the appropriate entity permission to the records as follows, otherwise the **Add**, **Edit**, and **Delete** buttons for the note will be hidden:
 
 - Read, Write, Create, Append, and Append To privileges for the **Annotation** entity with the scope as **Global**. This entity permission must be associated with a web role for the user.
-- Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled in it. The scope should be set to **Global**. This entity permission must be associated with a web role for the user.
+- Read, Write, Create, Append, and Append To privileges for the entity that has the Notes control enabled in it. For example, Account, Contact or Lead entities that show notes on their entity forms. The scope should be set to **Global**. This entity permission must be associated with a web role for the user.
 
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
