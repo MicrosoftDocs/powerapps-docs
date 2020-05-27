@@ -2,7 +2,7 @@
 title: "Field data types in Common Data Service | MicrosoftDocs"
 description: "Understand the different field data types available for your app"
 keywords: ""
-ms.date: 09/30/2019
+ms.date: 05/27/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -216,7 +216,7 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 11.	On the form editor ribbon, select **Save**, and then select **Publish**. Close the form editor. 
 
 >[!NOTE]
->Once the maximum file size has been saved it cannot be changed.
+>Once the maximum file size has been saved it can't be changed.
 
 App users can now select the image to display on the form. When an app user opens the form for a record, they can choose the image that they want displayed on the form. 
 
@@ -250,6 +250,6 @@ The **File** field is used for storing binary data. The primary intended use of 
 The default **Maximum file size** is 32 MB and the largest size you can set is 128 MB. The file size limit can be set individually for each field of file type added to an entity. 
 
 >[!NOTE]
->Once the maximum file size has been saved it cannot be changed.
+>Once the maximum file size has been saved it can't be changed.
 
 More information for developers working with file data: [File attributes](/powerapps/developer/common-data-service/file-attributes)
