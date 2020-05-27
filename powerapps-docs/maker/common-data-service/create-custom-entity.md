@@ -17,7 +17,7 @@ search.app:
 
 # Create a custom entity that has components in Power Apps
 
-With Power Apps you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
+With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
 
 In this topic you create an entity and then add or customize key components such as fields, relationships, views, and forms. You learn how to:
 
@@ -124,7 +124,7 @@ Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium
 
 3. Select the **Created On** column, and then select **Remove**.
 
-4. To arrange the columns, select the column you want to move and then use **Move Left** and **Move Left** until your view looks like this.
+4. To arrange the columns, select the column you want to move and then use **Move Left** and **Move Right** until your view looks like this.
     > [!div class="mx-imgBorder"] 
     > ![Active pets view](media/create-custom-entity/active-pets-view.png)
 

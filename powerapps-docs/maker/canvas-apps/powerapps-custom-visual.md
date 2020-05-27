@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/16/2020
+ms.date: 04/27/2020
 ms.author: ropur
 search.audienceType: 
   - maker
@@ -23,7 +23,7 @@ Power BI enables data insights and better decision-making, while Power Apps enab
 
 Let's look at the steps required to use the Power Apps visual in your Power BI report.
 
-1. Power Apps visual is available by default in the Power BI service. If you are using Power BI Desktop and don't see it, you must upgrade to the latest version of Power BI Desktop.
+1. Power Apps visual is available by default in the Power BI service. If you're using Power BI Desktop and don't see it, you must upgrade to the latest version of Power BI Desktop.
 
 2. Add the Power Apps visual to your report, and set the data fields associated with it.
 
@@ -50,17 +50,17 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
     This formula joins Power BI data with the Customer data source: `LookUp(Customer,Customer_x0020_Name=First(PowerBIIntegration.Data).Customer_Name)`
 
-   The Power BI report and the instance of Power Apps Studio that was launched share a live data connection. While they are both open, you can filter or change the data in your report to see the updated data reflect immediately in your app in Power Apps Studio.
+   The Power BI report and the instance of Power Apps Studio that was launched share a live data connection. While they're both open, you can filter or change the data in your report to see the updated data reflect immediately in your app in Power Apps Studio.
 
 5. After you have completed building or making changes to your app, save and publish the app in Power Apps to see your app in the Power BI report.
 
-6. Once you are satisfied with your changes, make sure to share the Power Apps app with users of your report and then save your report.
+6. Once you're satisfied with your changes, make sure to share the Power Apps app with users of your report and then save your report.
 
-7. And with that, you have created a report in which your users can take actions as they gain insights from your data.
+7. You've created a report in which your users can take actions as they gain insights from your data.
 
     ![Working report](./media/powerapps-custom-visual/working-report.gif)
 
-    If you need to makes changes to an app, open the report in edit mode, click or tap **More options** (**. . .**) on the Power Apps visual and select **Edit**.
+    If you need to make changes to an app, open the report in edit mode, select **More options** (**. . .**) on the Power Apps visual and select **Edit**.
 
     ![Edit app](./media/powerapps-custom-visual/edit-app.png)
 
@@ -68,23 +68,24 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 
 The following limitations apply to the Power Apps visual:
 
+- Power Apps visual isn't supported in sovereign clouds.
 - If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
 - The Power Apps visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
 - The Power Apps visual can't filter the data or send any data back to the report.
 - You'll need to share the Power Apps app separately from your report. Learn about [sharing apps in Power Apps](share-app.md).
-- Power BI Report Server does not support the Power Apps visual.
+- Power BI Report Server doesn't support the Power Apps visual.
 - Following limitations apply when using the `PowerBIIntegration.Refresh()` function:
     - You must create a new app from Power Apps visual in Power BI report for this function to be available in the app.
     - You must use a source that supports [DirectQuery](https://docs.microsoft.com/power-bi/desktop-directquery-data-sources) and the data connection must be created using DirectQuery method.
 - Power Apps in Power BI Desktop provides data to Power Apps Studio when creating apps but not while editing. Use Power BI Web to preview the data while editing apps.
-- The Power BI mobile app does not support microphone control in Power Apps visuals.
+- The Power BI mobile app doesn't support microphone control in Power Apps visuals.
 
 > [!NOTE]
 > We recommend that you first publish your report to the Power BI service and then create or modify apps.
 
 ## Browser support
 
-The following table lists the browser supportability for view, create and modify actions of the Power Apps visual. Supported browsers and actions are identified by a check mark ( &check; ).
+The following table lists the browser supportability for view, create, and modify actions of the Power Apps visual. Supported browsers and actions are identified by a check mark ( &check; ).
 
 |Browser|View|Create|Modify
 |-|-|-|-
@@ -99,14 +100,14 @@ The following table lists the browser supportability for view, create and modify
 
 ## Accessibility support
 
-To navigate the Power Apps visual using the keyboard follow these steps:
+To navigate the Power Apps visual using the keyboard, follow these steps:
 
-1. Focus selection on the Power BI Report for the desired Power Apps visual.
+1. Focus selection on the Power BI Report for the Power Apps visual that you want.
 2. Use the **Tab** key on the keyboard until the visual is highlighted.
 3. Use the **Ctrl+Right** key on the keyboard to enter the visual.
-3. Use the  **Tab** key on the keyboard until the desired component of the visual is selected.
+3. Use the  **Tab** key on the keyboard until the component of the visual you want is selected.
 
-For more information see: [Power BI Accessibility Documentation]( https://docs.microsoft.com/power-bi/desktop-accessibility)
+For more information, go to [Power BI Accessibility Documentation]( https://docs.microsoft.com/power-bi/desktop-accessibility)
 
 
 ## Next steps

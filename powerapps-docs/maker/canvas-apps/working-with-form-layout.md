@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/10/2020
+ms.date: 05/06/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -24,15 +24,15 @@ In this tutorial, we'll walk through the steps to create this form. We'll also l
 
 ## Before you start
 
-If you're new to Power Apps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this topic. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this topic.
+If you're new to Power Apps (or have only generated apps automatically), you'll want to [build an app from scratch](get-started-create-from-blank.md) before you dive into this article. By building an app from scratch, you'll become familiar with required concepts, such as adding data sources and controls, that are mentioned but not explained in this article.
 
-This topic is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a Power Apps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service and add similar fields. 
+This article is written as though you have a data source that's named **Sales order** and that contains the fields in the previous graphic. If you have a Power Apps Plan 2 license or a [trial license](../signup-for-powerapps.md) and system administrator or system customizer permissions, you can [create an entity](../common-data-service/data-platform-create-entity.md) in Common Data Service and add similar fields.
 
 ## Add a gallery
 
 1. Create a tablet app from scratch, and add your data source.
 
-    Everything discussed in this topic also applies to phone layouts, but phone apps often have only one vertical column.
+    Everything discussed in this article also applies to phone layouts, but phone apps often have only one vertical column.
     
 2. Add a vertical **Gallery** control, and set its **Items** property to **'Sales order'**.
    
@@ -43,7 +43,7 @@ This topic is written as though you have a data source that's named **Sales orde
    
     ![Sales order list](./media/working-with-form-layout/sales-order-gallery-screen.png)
    
-    This record will appear in the form that you build by following steps later in this topic.
+    This record will appear in the form that you build by following steps later in this article.
 
 ## Add a title bar
 1. Add a blank screen where you'll put the form.
@@ -92,7 +92,7 @@ This topic is written as though you have a data source that's named **Sales orde
     ![Sales order in a basic, three-column layout](./media/working-with-form-layout/sales-order-form-screen-3.png)
 
 ## Select a data card
-Each field displayed has a corresponding data card on the form. This card comprises a set of controls for the field title, an input box, a star (which appears if the field is required), and a validation error message.
+Each field displayed has a corresponding data card on the form. This card includes a set of controls for the field title, an input box, a star (which appears if the field is required), and a validation error message.
 
 You can also select cards directly on the form. When a card is selected, a black caption appears above it.
 
@@ -102,7 +102,7 @@ You can also select cards directly on the form. When a card is selected, a black
 > To delete a card (not just hide it), select it, and then press Delete.
 
 ## Arrange cards in columns
-By default, forms in tablet apps have three columns, and those in phone apps have one. You can specify not only how many columns a form has but also whether all cards should fit within column borders.
+By default, forms in tablet apps have three columns, and in phone apps have one. You can specify not only how many columns a form has but also whether all cards should fit within column borders.
 
 In this graphic, the number of columns in the form was changed from three to four with the **Snap to columns** check box selected. The cards in the form were arranged automatically to fit the new layout.
 
@@ -111,7 +111,7 @@ In this graphic, the number of columns in the form was changed from three to fou
 ## Resize cards across multiple columns
 Depending on the data in each card, you might want some cards to fit in a single column and other cards to span multiple columns. If a card contains more data than you want to show in a single column, you can widen the card by selecting it and then dragging the grab handle on the left or right border of its selection box. As you drag the handle, the card will "snap" to column boundaries.
 
-To make your design more flexible but retain some structure, you can increase the number of columns to 12. With that change, you can easily configure each card to span the entire form, half of the form, one-third, one-quarter, one-sixth, and so forth. Let's see this in action.
+To make your design more flexible but keep some structure, you can increase the number of columns to 12. With that change, you can easily configure each card to span the entire form, half of the form, one-third, one-quarter, one-sixth, and so forth. Let's see this in action.
 
 1. In the right-hand pane, set the number of columns in the form to **12**.
    
@@ -133,17 +133,17 @@ To make your design more flexible but retain some structure, you can increase th
 
 All done. We have our desired form, mixing rows with different numbers of columns:
 
-![Sales order in 12 column layout with resizing](./media/working-with-form-layout/card-resize-done.png)
+![Sales order in 12-column layout with resizing](./media/working-with-form-layout/card-resize-done.png)
 
 ## Manipulate controls in a card
-The delivery address comprises several pieces of information that we want to visually group together for the user. Each field will remain in its own data card, but we can manipulate the controls within the card to make them fit better together.
+The delivery address includes several pieces of information that we want to visually group together for the user. Each field will remain in its own data card, but we can manipulate the controls within the card to make them fit better together.
 
 1. Select the **First line of Delivery address** card, select the label within that card, and then delete the first three words from the text.
    
     ![Sales order delivery address renaming the first line label](./media/working-with-form-layout/delivery-address-rename.png)
 2. Select the **Second line of Delivery address** card, select the label within that card, and then delete all of the text in it.
    
-    It may be tempting to simply remove the label control and, in many cases, that will work fine. But formulas might depend on that control being present. The safer approach is to remove the text or to set the **Visible** property of the control to **false**.
+    It may be tempting to remove the label control and, in many cases, that will work fine. But formulas might depend on that control being present. The safer approach is to remove the text or to set the **Visible** property of the control to **false**.
    
     ![Sales order delivery address renaming the second line label](./media/working-with-form-layout/delivery-address-rename-2.png)
 3. In the same card, move the text input box over the label to reduce the space between the first and second lines of the address.
@@ -162,19 +162,19 @@ Now let's turn our attention to the third line of the address. Similar to what w
 | 4 |Using the grab handles on the sides, size the label control to fit the new text size. |![Resize a control within a card](./media/working-with-form-layout/state-morph-4b.png) |
 | 5 |Select the text input control within this card. |![Select a different control within the card](./media/working-with-form-layout/state-morph-6.png) |
 | 6 |Using the grab handles on the sides, size the text input control to the size that you want. |![Resize a control within a card](./media/working-with-form-layout/state-morph-6b.png) |
-| 7 |Drag the text input box up and to the right of the label control, and then drop the text input box. |![Move a control within a card](./media/working-with-form-layout/state-morph-7b.png) |
+| 7 |Drag up the text input box and to the right of the label control, and then drop the text input box. |![Move a control within a card](./media/working-with-form-layout/state-morph-7b.png) |
 | Our modifications to the **State** card are now complete. |![Modifications to the card are complete](./media/working-with-form-layout/state-morph-8.png) | |
 
 The result for the complete third address line:
 
 ![Sales order delivery address with more concise third line](./media/working-with-form-layout/delivery-address-resize-city-1.png)
 
-Note that many of the cards start out with dynamic formulas for their properties. For example, the Text input control that we resized and moved above had a **Width** property based on the width of its parent. When you move or resize a control, these dynamic formulas are replaced with static values. If you want, you can restore the dynamic formulas by using the formula bar.
+Many of the cards start out with dynamic formulas for their properties. For example, the Text input control that we resized and moved above had a **Width** property based on the width of its parent. When you move or resize a control, these dynamic formulas are replaced with static values. If you want, you can restore the dynamic formulas by using the formula bar.
 
 ## Turning off Snap to columns
-Sometimes you'll want finer control than the standard 12 columns can provide. For these cases, you can turn off **Snap to columns** and then position cards manually. The form will continue snapping to 12 columns, but you can also hold down the Alt or Ctrl+Shift keys after starting a resize or reposition to override the snap points.  For more details, see [alternate behavior keyboard shortcuts](keyboard-shortcuts.md#alternate-behavior). 
+Sometimes you'll want finer control than the standard 12 columns can provide. For these cases, you can turn off **Snap to columns** and then position cards manually. The form will continue snapping to 12 columns, but you can also hold down the Alt or Ctrl+Shift keys after starting a resize or reposition to override the snap points.  For more information, see [alternate behavior keyboard shortcuts](keyboard-shortcuts.md#alternate-behavior). 
 
-In our example, the four components that make up the third line of the address all have exactly the same width. But this may not be the best layout, as city names are longer than state abbreviations, and the Text input box for countries/regions is short due to the length of its label.  To optimize this space, turn off **Snap to columns** in the right-hand pane and then hold down the Alt or Ctrl+Shift keys after starting to size and position these cards. For
+In our example, the four components that make up the third line of the address all have exactly the same width. But this may not be the best layout, as city names are longer than state abbreviations, and the Text input box for countries/regions is short because of the length of its label.  To optimize this space, turn off **Snap to columns** in the right-hand pane and then hold down the Alt or Ctrl+Shift keys after starting to size and position these cards.
 
 After careful positioning, the result has appropriate sizes for each field and even spacing horizontally between fields:
 
@@ -185,8 +185,8 @@ In summary, what are the differences when **Snap to columns** is on versus off?
 | Behavior | Snap to columns On | Snap to columns Off |
 | --- | --- | --- |
 | Resize snaps to |Number of columns you select:<br>1, 2, 3, 4, 6, or 12 |12 columns |
-| Resize snap can be overriden |No |Yes, with Alt or Ctrl+Shift keys after starting the resize |
-| Cards automatically re-layout between rows (more on this later) |Yes |No |
+| Resize snap can be overridden |No |Yes, with Alt or Ctrl+Shift keys after starting the resize |
+| Cards automatically relayout between rows (more on this later) |Yes |No |
 
 ## Set width and height
 As with everything in Power Apps, the form's layout is governed by properties on the card controls. As already described, you can change the values of these properties by dragging controls to different locations or dragging grab handles to resize controls. But you'll discover situations in which you'll want to understand and manipulate these properties more precisely, especially when making your forms dynamic with formulas.
@@ -217,7 +217,7 @@ You can use this behavior to create a fully dynamic layout, where cards are plac
 ### Filling spaces: WidthFit
 The overflow in the last example created a space after the **Order status** card, which was the second card in the first row. We could manually adjust the **Width** properties of the two remaining cards to fill this space, but this approach is tedious.
 
-As an alternative, use the **WidthFit** property. If this property is set to **true** for one or more cards in a row, any remaining space on the row will be evenly divided between them. This behavior is why we said earlier that the **Width** property of a card is a *minimum*, and what is actually seen can be wider. This property will never cause a card to shrink, only expand.
+As an alternative, use the **WidthFit** property. If this property is set to **true** for one or more cards in a row, any remaining space on the row will be evenly divided between them. This behavior is why we said earlier that the **Width** property of a card is a *minimum*, and what is seen can be wider. This property will never cause a card to shrink, only expand.
 
 If we set **WidthFit** to **true** on the **Order status** card, it fills the available space, while the first card remains unchanged:
 
@@ -227,7 +227,7 @@ If we also set **WidthFit** to **true** on the **Order date** card, both cards w
 
 ![WidthFit set to true on first and second cards](./media/working-with-form-layout/manual-widthfit-2.png)
 
-Note that grab handles on these cards take into account the extra width provided by **WidthFit**, not the minimum width provided by the **Width** property. It can be confusing to manipulate the **Width** property while **WidthFit** is turned on;     you may want to turn it off, make changes to **Width**, and then turn it back on.
+Grab handles on these cards take into account the extra width provided by **WidthFit**, not the minimum width provided by the **Width** property. It can be confusing to manipulate the **Width** property while **WidthFit** is turned on;     you may want to turn it off, make changes to **Width**, and then turn it back on.
 
 When might **WidthFit** be useful? If you have a field that is used  only in certain situations, you can set its **Visible** property to **false**, and the other cards on the row will automatically fill the space around it. You might want to use a formula that shows a field only when another field has a particular value.
 
@@ -263,7 +263,7 @@ The **Text** property of this control is set to **Parent.Error**, which is used 
 
 ![With an error message, the control and card automatically grow](./media/working-with-form-layout/autoheight-2.png)
 
-Let's make the error message a little longer, and again the control and the card grow to accommodate. Note that the row overall grows in height, retaining vertical alignment between the cards:
+Let's make the error message a little longer, and again the control and the card grow to accommodate. The row overall grows in height, keeping vertical alignment between the cards:
 
 ![With a longer error message, the control and card grow even more, and note that the cards on the same row all grow together](./media/working-with-form-layout/autoheight-3.png)
 

@@ -1,20 +1,20 @@
 ---
-title: Deploy the Regional Emergency Response solution | Microsoft Docs
-description: Provides provides detailed instructions for regional IT admins to deploy the Regional Emergency Response sample app for their organization.
+title: Deploy the Regional Government Emergency Response and Monitoring solution | Microsoft Docs
+description: Provides provides detailed instructions for regional IT admins to deploy the Regional Government Emergency Response and Monitoring solution for their organization.
 author: KumarVivek
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/24/2020
+ms.date: 05/06/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Deploy the Regional Emergency Response solution
+# Deploy the Regional Government Emergency Response and Monitoring solution
 
-Regional organization IT admins can use this article to deploy the Regional Emergency Response sample solution. At the end of this deployment process, you will have the following:
+Regional organization IT admins can use this article to deploy the Regional Government Emergency Response and Monitoring solution. At the end of this deployment process, you will have the following:
 
 - An admin app (model-driven app) that lets you configure and view master data for parent organizations and their hospital systems, add and manage admin users from parent organizations so that they can use the portal to report data for their hospital systems.
 
@@ -22,21 +22,22 @@ Regional organization IT admins can use this article to deploy the Regional Emer
 
 - A Power BI dashboard that your regional admins can access in your Power BI tenant to view key data and insights for all the parent organizations that report data to your regional organization. The same dashboard is embedded in the portal for parent organization admins to view key data and insights just for their parent organizations and hospital systems.
 
-Perform the following steps to deploy the Regional Emergency Response sample solution for your organization.
+Perform the following steps to deploy the Regional Government Emergency Response and Monitoring solution for your organization.
 
 Estimated time to complete these steps: 35–40 minutes.
 
+> [!IMPORTANT]
+> If you have an existing installation of this solution, follow the steps here instead to upgrade to the latest version: [Upgrade the solution](upgrade.md)
+
 ## Service URLs for US Government customers
 
-The Regional Emergency Response solution is also available for US Government organizations. There is a different set of URLs to access Power Apps US Government environments and Power BI than the commercial version.
-
-The commercial version of the service URL is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
+There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants than the commercial version. The commercial version of the service URLs is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
 
 | **Commercial version URL**                | **US Government version URL**  |
 |-------------------------------------------|--------------------------------|
-| [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us (GCC)](https://make.gov.powerapps.us) <br/><br/>[https://make.high.powerapps.us (GCC High)](https://make.high.powerapps.us)                |
-| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us (GCC)](https://gcc.admin.powerplatform.microsoft.us)<br/><br/>[https://high.admin.powerplatform.microsoft.us (GCC High)](https://high.admin.powerplatform.microsoft.us) |
-| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us (GCC)](https://app.powerbigov.us)<br/><br/>[https://app.high.powerbigov.us (GCC High)](https://app.high.powerbigov.us)                  |
+| [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us](https://make.gov.powerapps.us) (GCC)<br/><br/>[https://make.high.powerapps.us](https://make.high.powerapps.us) (GCC High)                |
+| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us) (GCC)<br/><br/>[https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us) (GCC High) |
+| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us](https://app.powerbigov.us) (GCC)<br/><br/>[https://app.high.powerbigov.us](https://app.high.powerbigov.us) (GCC High)                 |
 
 For detailed information about the US Government plans for Power Apps and Power BI, see:
 
@@ -45,11 +46,14 @@ For detailed information about the US Government plans for Power Apps and Power 
 
 ## Step 1: Download the deployment package
 
+> [!IMPORTANT]
+> If you are a commercial version user, you can use the AppSource option instead of using the deployment package to install the app and Power BI dashboard. You still need to download the deployment package to use the [sample data](configure.md##add-and-manage-master-data).
+
 Download the latest deployment package (.zip) from <https://aka.ms/rer-solution>.
 
 Before extracting the .zip file, ensure that you unblock it.
 
-1.	Right click the .zip file, select **Properties**.
+1.	Right-click the .zip file, select **Properties**.
 
 2.	In the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
 
@@ -79,8 +83,8 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 2.  Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
-    >[!IMPORTANT] 
-    >While creating the database, if you select a security group for the database, the apps can be shared only with users that are members of the security group.
+    > [!IMPORTANT] 
+    > While creating the database, if you select a security group for the database, the apps can be shared only with users that are members of the security group.
 
 3.	Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
@@ -115,9 +119,81 @@ After the portal is provisioned, it will appear in your **Apps** list in Power A
   > [!IMPORTANT]
   > Wait for the portal to be provisioned before proceeding to the next step.
 
-## Step 4: Install the package
+## Step 4: Install the app
 
-After your portal is provisioned, follow these steps to install the package that will configure the portal and install the admin app (model-driven app).
+After your portal is provisioned, install the Regional Government Emergency Response and Monitoring app to configure the portal your created earlier and install the admin app (model-driven app).
+
+You can install the app by using one of the following 3 options:
+
+- Microsoft AppSource (for Power Apps US Govt customers only). See [Option A: Install the app from Microsoft AppSource (US Govt customers)](#option-a-install-the-app-from-microsoft-appsource-us-govt-customers)
+
+- Microsoft AppSource (for Power Apps commercial version customers). See [Option B: Install the app from Microsoft AppSource](#option-b-install-the-app-from-microsoft-appsource)
+
+- Deployment package that you downloaded earlier. See [Option C: Install the app from the deployment package](#option-c-install-the-app-from-the-deployment-package)
+
+### Option A: Install the app from Microsoft AppSource (US Govt customers)
+
+1.  Sign in to Power Platform admin center. Use the appropriate URL to sign in:
+    - **GCC**: [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us)
+    - **GCC High**: [https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us).
+
+2.  In the left pane, select **Environments**, and then select the name of the environment you created earlier.
+
+3. In the environment details page, select **Manage Dynamics 365 apps**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Environment settings](media/ppac-env-setting.png "Environment settings")
+
+3.  On the Dynamics 365 apps page, select **Install app**. Next select **Regional Govt Emergency Response and Monitoring** in the right pane, and select **Next**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/ppac-install-app.png "Install app")
+
+4.  On the next page, agree to the terms, and select **Install**.
+
+5.  The installation will start, and you can monitor the progress of your app installation on the Dynamics 365 apps page.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
+
+    > [!IMPORTANT]
+    > It might take a while for the app to install.
+
+6.  After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
+
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+
+### Option B: Install the app from Microsoft AppSource
+
+1.  Navigate to [AppSource](https://appsource.microsoft.com/), and search for "Regional Govt Emergency Response".<br/>Alternatively, navigate directly to the app on AppSource using this link: <https://appsource.microsoft.com/product/dynamics-365/mscrm.pprersapp>
+
+2.  On the Regional Govt Emergency Response and Monitoring page, select **Get It Now**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/deploy-appsource-01.png "App on AppSource")
+
+3.  You are prompted to review the AppSource agreement terms. The dialog also shows the account that is being used to sign in. Select **Continue**. You might be prompted to verify your credentials.
+
+4.  On the next page, select your environment where you want to install the app. Select the legal terms and privacy statements check boxes, and select **Agree**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select an environment](media/deploy-appsource-02.png "Select an environment")
+
+5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+
+    > [!div class="mx-imgBorder"] 
+    > ![AppSource](media/deploy-appsource-03.png "Monitor app installation progress")
+
+    > [!IMPORTANT]
+    > It might take a while for the app to install.
+
+6. After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
+
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+
+### Option C: Install the app from the deployment package
 
 1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
@@ -146,14 +222,14 @@ After your portal is provisioned, follow these steps to install the package that
 
 9.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
 
-1.  After the installation is complete, select **Next**.
+10. After the installation is complete, select **Next**.
 
-2.  On the next screen, select **Finish** to complete and close the setup.
+11.  On the next screen, select **Finish** to complete and close the setup.
 
-After the package is installed, you will find a new admin app in your **Apps** list.
+12. After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
 
-  > [!div class="mx-imgBorder"] 
-  > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
 
 ## Step 5: Configure and publish Power BI dashboard
 
@@ -447,14 +523,12 @@ You can add a custom About page in your portal to add/present information or res
 4.  On the new webpage, make sure you use **about** in the **Partial URL** field in the right pane. You can use a name of your choice in the **Name** field; we are using **About Contoso**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Use about in the Partial URL](media/deploy-partial-url.png "Use about in the Partial URL")
-    <!-- ![](media/1bd99fe95d7618e898763df49abc72fe.png) -->
+    > ![Use about in the Partial URL](media/deploy-partial-url.png "Use about in the Partial URL")    
 
 5.  Click the left pane to edit the contents. You can either use the default editor or select the **\</\>** in the bottom-right corner to open the HTML editor.
 
     > [!div class="mx-imgBorder"] 
-    > ![Edit About Us page](media/deploy-edit-aboutus.png "Edit About Us page")
-    <!-- ![](media/21c5a7709b8824aff85dd8a8a2cd6182.png) -->
+    > ![Edit About Us page](media/deploy-edit-aboutus.png "Edit About Us page")    
 
 6.  After making the required changes to the About page, save it, and select **Sync Configuration** on the top-right corner.
 
@@ -466,7 +540,6 @@ Server-side synchronization enables you to sync emails in Common Data Service wi
 
 > [!div class="mx-imgBorder"] 
 > ![Set up email synchronization](media/deploy-email-synchronization.png "Set up email synchronization")
-<!-- ![](media/59e7ae8524dbd8950d8d32a08c627378.png) -->
 
 For detailed steps on setting server-side sync; see the following resources:
 
@@ -503,7 +576,6 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
         > [!div class="mx-imgBorder"] 
         > ![Set properties for Create Email](media/deploy-email-properties.png "Set properties for Create Email")
-        <!-- ![](media/4674cade4e71da24ccdad213324110be.png) -->
 
 6.  In the **Create Email** step definition page:
 
@@ -520,13 +592,12 @@ In this step, we will fix the **Send Invitation** process to specify the email a
 
         > [!div class="mx-imgBorder"] 
         > ![Update URL of your portal](media/deploy-update-url.png "Update URL of your portal")
-        <!-- ![](media/097a294cdee1a0aa24038e4738e78583.png) -->
+        
 
 3.  You will return to the process definition page. Save the changes and **Activate** the process.
 
     > [!div class="mx-imgBorder"] 
-    > ![Activate the process](media/deploy-activate-process.png "Activate the process")
-    <!-- ![](media/1226e92d156c0756f09ad131563b8cf3.png) -->
+    > ![Activate the process](media/deploy-activate-process.png "Activate the process")    
 
 ## Step 11: Fix the Send Password Reset To Contact process
 
@@ -577,8 +648,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 9.  You will return to the process definition page. Save the changes and **Activate** the process.
 
     > [!div class="mx-imgBorder"] 
-    > ![Save changes and activate process](media/deploy-save-activate-process.png "Save changes and activate process")
-    <!-- ![](media/f0a492755b69dbffb3e122724b2994bf.png) -->
+    > ![Save changes and activate process](media/deploy-save-activate-process.png "Save changes and activate process")    
 
 ## Step 12: Verify Assign Web Roles to New Users process is enabled
 
@@ -589,18 +659,16 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 3.  On the Settings page, select the drop-down arrow next to **Settings** and select **Processes**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Assign web roles to new users](media/deploy-assign-webroles.png "Assign web roles to new users")
-    <!-- ![](media/2bc8c159c5350c976a7230beb18c080f.png) -->
+    > ![Assign web roles to new users](media/deploy-assign-webroles.png "Assign web roles to new users")    
 
 4.  On the **Processes** page, search for “Assign Web”, and ensure that the **Assign Web Roles to New Users** process is enabled.
 
     > [!div class="mx-imgBorder"] 
-    > ![Ensure process is enabled](media/deploy-process-enabled.png "Ensure process is enabled")
-    <!-- ![](media/ace6171711ce07587d949ef28e494119.png) -->
+    > ![Ensure process is enabled](media/deploy-process-enabled.png "Ensure process is enabled")    
 
 5.  If it’s not enabled, select the process name to open the record, and then select **Activate**. Confirm to activate the process.
 
-## Step 13: Verify the Flow supply tracking flow is enabled
+## Step 13: Enable the Flow supply tracking flow
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
@@ -609,16 +677,72 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
     > [!div class="mx-imgBorder"] 
     > ![Open the solution](media/deploy-open-solution.png "Open the solution")
 
-3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record. Ensure that the status is set to **On**.
+3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record.
 
     > [!div class="mx-imgBorder"] 
     > ![Find the Flow Supply Tracking record](media/deploy-find-record.png "Find the Flow Supply Tracking record")
 
-4.  If it is not set to **On**, select the flow name to open the flow definition.
+4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
 
-5.  In the flow definition, select **Turn On** in the toolbar.
+5.  Fix the connection to connect to Common Data Service, and save the connection information.
 
-## Step 14: Share admin app with other admin users
+6. In the flow definition, select **Turn On**.
+
+## Step 14: Update the details of flows for sending emails
+
+In this step, we are going to do the following:
+
+|Flow name|Changes|
+|--|--|
+|**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service and then specify a user account to send emails.|
+|**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Open the solution](media/deploy-open-solution.png "Open the solution")
+
+3.  In the solution, filter on **Flow** to find the flows. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Find the Flow Supply Tracking record](media/deploy-find-record1.png "Find the flows")
+
+4.  Select the **Portal User Request: Send Email on Decline Request** name to open the flow definition. Select **Edit** on the toolbar.
+
+5.  Specify the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Fix credential](media/deploy-specify-cred.png "Fix credentials")
+
+6.  After fixing the connection to connect to Common Data Service, select **IfRequestState ==**, and specify the user account that has a mailbox enabled account to send emails.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Specify outlook credentials](media/deploy-fix-cred2.png "Specify outlook credentials")
+
+7. Select **Save** to save the changes, and then select **Turn On**.
+
+8.  Next, go to the flows list, and select the **Portal User Request: Send Email to Admins on Request Creation** name to open the flow definition. Select **Edit** on the command bar.
+
+9.  Fix the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.
+
+10. After fixing the connection to connect to Common Data Service:
+     1. Select **IfRequestState ==**
+     2. Select **Connections** to specify the connection to connect to Common Data Service 
+     3. Select **Connections** to specify the user account credentials that has a mailbox enabled account to send emails
+
+    > [!div class="mx-imgBorder"] 
+    > ![Specify outlook credentials](media/deploy-fix-cred3.png "Specify outlook credentials")
+
+11. In **Send an email**, ensure that you fix the URL as per your portal URL. For example, in this case, change rer6 to your URL value.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Specify outlook credentials](media/deploy-fix-cred4.png "Specify outlook credentials")
+
+12. Select **Save** to save the changes, and then select **Turn On**.
+
+## Step 15: Share admin app with other admin users
 
 For your business admin users to use the admin app (model-driven app) to enter and manage data, it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
@@ -647,6 +771,8 @@ The deployment steps are complete now. Business admins can refer to the [configu
 
 - View Power BI dashboard in your tenant.
 
-## Report issues
+## Issues and feedback
 
-To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/07/2020
+ms.date: 05/07/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -19,12 +19,10 @@ search.app:
 ---
 # User guide for model-driven apps running on the Power Apps mobile app
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
-
 Use the Power Apps mobile app to run model-driven apps on your mobile device. For more information about how to install and get started with an app, see [Run canvas apps and model-driven apps on a mobile device](run-canvas-and-model-apps-on-mobile.md).
 
 > [!IMPORTANT]
-> Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service<!--For sure this list doesn't include Dynamics 365 Marketing, and Dynamics 365 Project Service Automation? That's the list of model-driven apps according to the Dynamics Style Guide.--> don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
+> Model-driven apps for Dynamics 365 Sales, Dynamics 365 Customer Service, and Dynamics 365 Field Service don't run in the Power Apps mobile app. Instead, you use the Dynamics 365 for phones and tablets app. For more information, see [User Guide for Dynamics 365 for phones and tablets](https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide).
 
 ## Home screen 
 
@@ -47,7 +45,7 @@ From the Home screen, select the site map ![Site map icon](media/pa_mobile_sitem
    > [!div class="mx-imgBorder"]
    > ![Site map screen](media/go_to_sitemap_iphone.gif "This image demonstrates how to get to the site map screen")
    
- *Refresh the page to restart the GIF action*.
+
 
 The following illustration shows the primary navigation elements on the site map screen. 
 
@@ -75,11 +73,10 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 3. To view the newly pinned records, select ![Go back icon](media/mobile_go_back_icon.png "Go back icon"), and then select **Pinned** ![Pinned favorites icon](media/mobile_pinned_favs_icon.png "Pinned favorites icon").
 
-
-   > [!div class="mx-imgBorder"]
-   > ![Pin a record to favorites](media/pin_favs.gif "This image demonstrates how to pin favorite records")
    
-*Refresh the page to restart the GIF action*.
+   > [!div class="mx-imgBorder"]
+   > ![Pin a record to favorites](media/pin_to_fav.gif "This image demonstrates how to pin favorite records")
+   
 
 ### Unpin a record
 
@@ -91,7 +88,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Unpin a record](media/unpin_favs.gif "This image demonstrates how to unpin a record")
    
-*Refresh the page to restart the GIF action*.
 
 ## Change views
 
@@ -101,7 +97,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Change views](media/change_views_iphone.gif "This image demonstrates how to select a different view")
 
-*Refresh the page to restart the GIF action*.
 
 ## Add a record quickly
 
@@ -110,38 +105,38 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 3. After the record is created, you can view the new record. 
 
    > [!div class="mx-imgBorder"]
-   > ![Create a record](media/pamobile_add_record.gif "This image demonstrates how create a new record")
+   > ![Create a record](media/pamobile_add_record_1.gif "This image demonstrates how create a new record")
 
-*Refresh the page to restart the GIF action*.
 
 -  To save and open the record that you created, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commnads icon"), and then select **Save and Open**.
 
 - To save and create another record, select **More** ![More commands icon](media/pa_mobile_more_commands_icon.png "More commands icon"), and then select **Save and Create new**.
 
+
    > [!div class="mx-imgBorder"]
    > ![Create a record](media/pa_mobile_save_create_new.gif "This image demonstrates how to save a record and open it or save and create a new record")
 
-*Refresh the page to restart the GIF action*.
 
 ## View commands for a record (Android)
 
 1. From the Home screen, open a record.
 2. On the open record, select **More** ![More record commands icon"](media/access_record_commands_icon.png "More record commands icon") to access more commands.
 
+
    > [!div class="mx-imgBorder"]
    > ![Commands on a record](media/pa_mobile_view_record_commands.gif "This image demonstrates how to access more commands on a record")
 
-*Refresh the page to restart the GIF action*.
 
 ## Edit a record
 
 1. From the Home screen, open a record that you want to edit. 
 2. When you're done editing the record, select **Save**. To cancel your changes, select **Discard**.
 
+
    > [!div class="mx-imgBorder"]
    > ![Edit a record](media/save_on_iphone.gif "This image demonstrates how to edit and then save a record")
 
-*Refresh the page to restart the GIF action*.
+
 
 ## Go back to the Home screen
 
@@ -151,7 +146,6 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
    > [!div class="mx-imgBorder"]
    > ![Go back to the Home screen](media/go_back_home.gif "This image demonstrates how to go back to the home screen by pressing and holding the back icon")
 
-*Refresh the page to restart the GIF action*.
 
 ## Sign out
 

@@ -22,7 +22,7 @@ To create and import a solution file:
 2. Create a new solutions project using the following command. The solution project is used for bundling the code component into a solution zip file that is used for importing into Common Data Service.
    
    ```CLI
-   pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher prefix>
+   pac solution init --publisher-name developer --publisher-prefix dev
    ```
 
    > [!NOTE]
@@ -31,7 +31,7 @@ To create and import a solution file:
 3. Once the new solution project is created, refer the **Solutions** folder to the location where the created sample component is located. You can add the reference using the command shown below. This reference informs the solution project about which code components should be added during the build. You can add references to multiple components in a single solution project.
 
    ```CLI   
-    pac solution add-reference --path <path to your Power Apps component framework project>
+    pac solution add-reference --path c:\downloads\mysamplecomponent
    ```
 
 3. To generate a zip file from the solution project, go into your solution project directory and build the project using the following command. This command uses *MSBuild* to build the solution project by pulling down the *NuGet* dependencies as part of the restore. Use the `/restore` only for the first time when the solution project is built. For every build after that, you can run the command `msbuild`.
@@ -53,12 +53,12 @@ To create and import a solution file:
 
 You can deploy the code components directly from the Power Apps CLI by connecting to the Common Data Service environment and then pushing the updated components.
 
-Use the following steps to create the authentication profile, connect to Common Data Service, and push the updated components. 
+Follow the steps below to create the authentication profile, connect to Common Data Service, and push the updated components. 
  
 1. Create your authentication profile using the command: 
  
     ```CLI
-    pac auth create --url <https://xyz.crm.dynamics.com> 
+    pac auth create --url https://xyz.crm.dynamics.com 
     ```
  
 2. If you have previously created an authentication profile, you can view all the existing profiles using the command: 
@@ -84,7 +84,11 @@ Use the following steps to create the authentication profile, connect to Common 
 
 ## Deploying code components 
 
-After you have successfully created an authentication profile, you can start pushing the code components to the Common Data Service instance with all the latest changes. The `push` capability speeds up the inner-developer cycle development because it bypasses the code component versioning requirements and does not require that you build your solution (cdsproj) to import the code component. To use the `push` capability, do the following:
+After you have successfully created an authentication profile, you can start pushing the code components to the Common Data Service instance with all the latest changes. 
+
+The `push` capability speeds up the inner-developer cycle development because it bypasses the code component versioning requirements and does not require that you build your solution (cdsproj) to import the code component. 
+
+To use the `push` capability, do the following:
 
 1. Ensure that you have a valid authentication profile created.
 2. Navigate to the root directory where the code component project is created.
@@ -105,8 +109,11 @@ To create a solution project based on an existing solution in Common Data Servic
 2. Run the command 
 
    ```CLI
-   pac solution clone –name(-n) <name of the solution to be exported> --version(-v) <version of your solution> --include(-i) <settings that should be included>
+   pac solution clone –-name(-n) <name of the solution to be exported> --targetversion(-v) <version of your solution> --include(-i) <settings that should be included>
    ```
+
+   > [!NOTE]
+   > Settings Values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales.
 
 More information: [Settings options](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
 
@@ -136,6 +143,7 @@ Power Apps CLI now supports creating a plug-in project and packaging it in a sol
     ```
 
 6.    Run the command to build the solution and the referenced plug-in.
+
     ```CLI
     msbuild
     ```
