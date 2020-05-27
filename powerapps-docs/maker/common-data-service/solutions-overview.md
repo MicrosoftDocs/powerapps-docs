@@ -68,6 +68,11 @@ Unmanaged customizations are any change you have made to your environment throug
 **Application Behavior**  
 The application or runtime behavior is what you actually see in your environment. The default system solution plus any managed solutions, plus any unmanaged customizations you have applied. --> 
 
+## Managed properties
+You can control which of your managed solution components are customizable by using managed properties. We recommend that you set managed properties so that your managed components can’t be modified. This helps protect your solution from modifications that may cause it to break after it's imported into another environment, such as test or production. 
+
+More information: [Managed properties in the Power Platform](/power-platform/alm/managed-properties-alm)
+
 ## Work with solutions in Power Apps
 
  Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can perform these solution tasks: 
