@@ -51,7 +51,7 @@ The procedure to import the updated solution is similar to installing a new mana
         This option upgrades your solution to the latest version and rolls up all previous patches in one step.  Any components associated to the previous solution version that are not in the newer solution version will be deleted. This is the recommended option as it will ensure that your resulting configuration state is consistent with the importing solution including removal of components that are no longer part of the solution.
         
    - **Stage for Upgrade**
-        This option upgrades your solution to the higher version, but defers the deletion of the previous version and any related parches until you apply a solution upgrade later.  This option should only be selected if you want to have both the old and new solutions installed in the system concurrently so that you can do some data migration before you complete the solution upgrade. This will delete the old solution and any components that are not included in the new solution.
+        This option upgrades your solution to the higher version, but defers the deletion of the previous version and any related patches until you apply a solution upgrade later.  This option should only be selected if you want to have both the old and new solutions installed in the system concurrently so that you can do some data migration before you complete the solution upgrade. Applying the upgrade will delete the old solution and any components that are not included in the new solution.
         
    - **Update (not recommended)**
         This option replaces your solution with this version.  Components that are not in the newer solution won't be deleted and will remain in the system.  This option is not recommended as your destination environment will differ in configuration from your source environment and could cause issues that are difficult to reproduce and diagnose.
@@ -74,7 +74,7 @@ The procedure to import the updated solution is similar to installing a new mana
 
 10. You may need to wait a few moments while the solution import completes. If it's successful, you can view the results and select **Close**.  
 
-   If you have imported any changes that require publishing, you must publish customizations before they'll be available. 
+   Managed customizations are always imported in a published state, so there is no need to publish customizations after import in this scenario.
 
 **Completing Solution Upgrade**
 If you chose to stage for upgrade, or if the system had an issue completing an upgrade, you will see that you have the original solution still installed in your system as well as a new solution that has the same solution name as the base solution suffixed with \_Upgrade.  To complete the upgrade, select the base solution in the solution list and select **Apply Solution Upgrade**.  This will uninstall all previous patches and the base solution then rename the \_Upgrade solution to be the same name as the previous base solution.  Any components that were in the original solution and patches that are not present in the \_Upgrade solution will be deleted as part of this process.
