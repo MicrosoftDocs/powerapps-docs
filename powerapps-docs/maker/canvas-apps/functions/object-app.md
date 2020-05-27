@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/29/2019
+ms.date: 05/20/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -72,10 +72,11 @@ The confirmation dialog box appears in any situation where data could be lost, a
 - If the app is running in a browser:
   - Closing the browser or the browser tab in which the app is running.
   - Selecting the browser's back button.
+  - Running the [**Launch**](function-param.md) function with a *LaunchTarget* of **Self**.
 - If the app is running in Power Apps Mobile (iOS or Android):
-  - Running the [**Launch**](function-param.md) function.<br>The **Launch** function doesn't trigger the dialog box in a browser because another tab opens so that data isn't lost.
   - Swiping to switch to a different app in Power Apps Mobile.
   - Selecting the back button on an Android device.
+  - Running the [**Launch**](function-param.md) function to launch another canvas app.
 
 The exact look of the confirmation dialog box might vary across devices and versions of Power Apps.
 

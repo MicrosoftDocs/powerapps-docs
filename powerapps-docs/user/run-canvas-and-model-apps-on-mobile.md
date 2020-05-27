@@ -19,7 +19,7 @@ search.app:
 
 # Run canvas apps and model-driven apps on a mobile device
 
-When you create an app, or someone shares an app with you&mdash;either a canvas app or model-driven app&dash;you can run that app on iOS and Android devices by using the Power Apps mobile app. If you're on a Windows device, you can only run canvas apps; model-driven apps aren't supported on the Power App mobile app for Windows devices. In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device. 
+When you create an app, or someone shares an app with you&mdash;either a canvas app or model-driven app&mdash;you can run that app on iOS and Android devices by using the Power Apps mobile app. If you're on a Windows device, you can only run canvas apps; model-driven apps aren't supported on the Power App mobile app for Windows devices. In this topic, you'll learn how to get started and run a canvas app and a model-driven app on your mobile device. 
 
 To learn how to use model-driven apps running on the Power Apps mobile app, see [User Guide for model-driven apps running on the Power Apps mobile app](use-custom-model-driven-app-on-mobile.md).
 

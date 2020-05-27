@@ -2,7 +2,7 @@
 title: "View entity data in Power BI Desktop (Preview) | MicrosoftDocs"
 description: "Learn how access and view entity data in Power BI Desktop"
 ms.custom: ""
-ms.date: 05/01/2020
+ms.date: 05/26/2020
 ms.reviewer: "matp"
 ms.service: powerapps
 author: "Mattp123"
@@ -20,13 +20,24 @@ search.app:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can use Power BI Desktop to view entities in Common Data Service. The entity
-record data that you can access from your environment is ready-only. Data access
+record data that you can access from your environment is read-only. Data access
 uses the Common Data Service security model that is the same used to access
 entity record data using a Power Apps app.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+
+## Prerequisite
+For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Data Service in an environment you must be an administrator and perform the following steps:
+    
+1. Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
+      
+2. Verify that your environment has at least version 9.1.0.17437. To do this, select the **Settings** gear on the toolbar, and then select **Advanced Settings**. Then, on the new browser tab that opens select the **Settings** gear on the toolbar, and then select **About**.
+      
+3. Enable the TDS endpoint feature in Power Platform admin center. For more information, see the **TDS endpoint (Preview)** setting in [Manage feature settings](/power-platform/admin/settings-features).
+          
+## View entity data
 
 1.  Sign into [Power Apps](https://make.powerapps.com/), and then select the
     appropriate environment from the top-right corner.
