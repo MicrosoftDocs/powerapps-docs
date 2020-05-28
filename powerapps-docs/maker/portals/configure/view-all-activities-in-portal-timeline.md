@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 12/12/2019
+ms.date: 05/27/2020
 ms.author: dileeps
 ms.reviewer: tapanm
 ---
@@ -33,3 +33,6 @@ To view all activities in a portal Timeline:
     > Preparing customizations may take some time. If you see a message that the browser page has become unresponsive, wait for the page to become responsive, and don't close it.
 
 3. Since this is a portal metadata change , [clear the server-side cache](../admin/clear-server-side-cache.md) to ensure the updated data is displayed on the portal.
+
+> [!NOTE]
+> Portal timeline doesn't show inline images from emails.
