@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
-ms.date: 04/30/2019
+ms.date: 05/28/2020
 ms.author: dileeps
 ms.reviewer:
 searchScope:
@@ -124,4 +124,4 @@ If you reach one or more capacity limits, we recommend you purchase a plan that 
 
 **Q:** Can I delete my individual environment?
 
-**A:** You can't delete this environment on your own. Your tenant admin has permissions to delete the environment.
+**A:** You can't delete this environment on your own. Your tenant admin has permissions to delete the environment. Admins, note that the deleted environment will be recreated automatically as long as the Community Plan remains assigned to the user. At present, the only way to remove the Community Plan from a user is to block all trial plans in the tenant. You can block all trial plans in the tenant using PowerShell. See [Block trial licenses commands](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#block-trial-licenses-commands)
