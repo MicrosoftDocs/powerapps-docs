@@ -20,7 +20,7 @@ search.app:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can use Power BI Desktop to view entities in Common Data Service. The entity
-record data that you can access from your environment is ready-only. Data access
+record data that you can access from your environment is read-only. Data access
 uses the Common Data Service security model that is the same used to access
 entity record data using a Power Apps app.
 
