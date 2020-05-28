@@ -73,7 +73,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Loading Message       | Overrides the message shown while the list of notes is loading.                                                                                              |
 | Error Message         | Overrides the message shown when an error occurs while trying to load the list of notes.                                                                     |
 | Access Denied Message | Overrides the message shown when the user doesn't have sufficient permissions to view the list of notes.                                                    |
-| Empty Message         | Overrides the message shown when the current entity does not have any notes that can be viewed.                                                              |
+| Empty Message         | Overrides the message shown when the current entity doesn't have any notes that can be viewed.                                                              |
 | List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders")   To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
 
@@ -89,7 +89,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Attach File Accept                 | The MIME type accepted by the file upload input.                                                                                            |
 | **Advanced settings**              |                                                                                                                                             |
 | Note Field Label                   | Overrides the label for the Note field in the Add Note dialog box.                                                                              |
-| Note Field Columns                 | Sets the cols value in the Note &lt;textarea&gt;                                                                                            |
+| Note Field Columns                 | Sets the columns value in the Note &lt;textarea&gt;                                                                                            |
 | Note Field Rows                    | Sets the rows value in the Note &lt;textarea&gt;                                                                                            |
 | Privacy Option Field Label         | Overrides the label for the Privacy Option field (if enabled).                                                                              |
 | Attach File Label                  | Overrides the label for the Attach File field (if enabled)                                                                                  |
@@ -117,7 +117,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Attach File Accept                 | The MIME type accepted by the file upload input. |
 | **Advanced settings**              |                                                                                              |
 | Note Field Label                   | Overrides the label for the Note field in the Edit Note dialog box.|
-| Note Field Columns                 | Sets the cols value in the Note &lt;textarea&gt;                                                                                             |
+| Note Field Columns                 | Sets the columns value in the Note &lt;textarea&gt;                                                                                             |
 | Note Field Rows                    | Sets the rows value in the Note &lt;textarea&gt;                                                                                             |
 | Privacy Option Field Label         | Overrides the label for the Privacy Option field (if enabled).                                                                                
 | Attach File Label                  | Overrides the label for the Attach File field (if enabled)                                                                                   |
