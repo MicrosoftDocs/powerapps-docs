@@ -23,7 +23,7 @@ The Power BI cloud service works with Common Data Service apps to provide a self
 - [How app users can add or edit Power BI visualizations on their dashboards](../../user/add-powerbi-dashboards.md) 
  
 ### See also
-[Use Power BI with Common Data Service data](../common-data-service/use-powerbi-with-cds.md)
+[Use Power BI with Common Data Service data](../common-data-service/use-powerbi-with-cds.md) <br />
 [Connect to Power BI from Power Apps canvas apps](../canvas-apps/connections/connection-powerbi.md)
  
   
