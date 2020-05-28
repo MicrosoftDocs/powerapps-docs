@@ -26,14 +26,14 @@ search.app:
 
 # Use Power BI with Common Data Service data
 
-Power BI is a comprehensive collection of services and  tools that you use to visualize your business data.  The following connector and templates are available that make it easy to visualize and analyze Common Data Service data or the Dynamics 365 Sales and Dynamics 365 Customer Service apps data with Power BI. 
+Power BI is a comprehensive collection of services and  tools that you use to visualize your business data.  The following connector, templates, and features are available that make it easy to visualize and analyze Common Data Service data or the Dynamics 365 Sales and Dynamics 365 Customer Service apps data with Power BI. 
 - **Common Data Service connector**: Common Data Service allows you to connect directly to your data using Power BI Desktop to create reports and publish them to Power BI. From Power BI, reports can be used in dashboards, shared to other users and accessed cross platform on Power BI mobile apps. More information: [Create a Power BI report](../common-data-service/data-platform-powerbi-connector.md) 
 - **Dataflow templates**: Dataflows help organizations unify data from disparate sources and prepare it for consumption. You can easily create dataflows using familiar, self-service tools to ingest, transform, integrate, and enrich big data. Once you create a dataflow in Power Apps, you can get data from it using the Common Data Service connector or Power BI Desktop Dataflow connector. More information: [Create and use dataflows in Power Apps](../common-data-service/create-and-use-dataflows.md)  
 - **Power BI template apps**: Power BI template apps are integrated packages of pre-built Power BI dashboards and reports. Using Power BI template apps with Dynamics 365 Sales provides a convenient, powerful, and quick way to access and analyze your sales data. For more information, see these articles: 
    - [Sales analytics](/dynamics365/sales-enterprise/introduction-sales-template-apps)
    - [Service analytics](/dynamics365/customer-service/configure-customer-service-analytics-dashboard)  
-- Embed a Power BI report in a model-driven system form. You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. More information: [Embed a Power BI report in a model-driven system form](../model-driven-apps/embed-powerbi-report-in-system-form.md)
-- Use the Tabular Data Stream (TDS) endpoint for Common Data Service to view entity data in Power BI Desktop. More information: [View entity data in Power BI Desktop (Preview)](view-entity-data-power-bi.md) 
+- **Embed Power BI reports on a form**: You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. More information: [Embed a Power BI report in a model-driven system form](../model-driven-apps/embed-powerbi-report-in-system-form.md)
+- **Tabular Data Stream (TDS) endpoint**: Use the TDS endpoint for Common Data Service to view entity data in Power BI Desktop. More information: [View entity data in Power BI Desktop (Preview)](view-entity-data-power-bi.md) 
 
 
 ### See also  
