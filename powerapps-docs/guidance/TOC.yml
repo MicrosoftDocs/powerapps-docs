@@ -70,4 +70,25 @@
         href: planning/identifying-risks.md
       - name: Getting support and sponsorship from management
         href: planning/gaining-support.md
-        
+  - name: Designing phase
+    items:
+    - name: Overview
+      href: planning/designing-phase.md
+    - name: Conceptual Design
+      items:
+      - name: Tasks to be done in the app
+        href: planning/app-tasks.md
+      - name: Sketching the screens
+        href: planning/sketching.md
+    - name: Architectural Design
+      items:
+      - name: Handling data
+        items:
+        - name: Topic goes here
+          href: 
+        - name: Working with enterprise systems
+          href: planning/enterprise-systems.md
+  - name: Making phase
+    href: planning/making-phase.md
+  - name: Testing phase
+    href: planning/testing-phase.md
