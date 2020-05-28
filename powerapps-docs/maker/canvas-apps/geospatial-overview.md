@@ -89,9 +89,13 @@ The geospatial features require additional terms of use that must be reviewed an
 
     ![Select the back arrow icon](./media/augmented-overview/augmented-overview-back.png "Select the back arrow icon")
 
-5. Open the **Insert** pane to see the geospatial components.
+5. Open the **Insert** pane to see the geospatial components:
+    - **Address input** is under **Input**
+    - **Map** is under **Media**
 
-    ![See the mixed reality components under Media and Mixed Reality](./media/augmented-overview/augmented-overview-insert-all.png "See the mixed reality components under Media and Mixed Reality")
+    ![See the address input component under Input](./media/geospatial/insert-address-input.png "See the address input component under Input")  
+    
+    ![See the map component under Media](./media/geospatial/insert-map.png "See the map component under Media")
 
 ## Next steps
 
