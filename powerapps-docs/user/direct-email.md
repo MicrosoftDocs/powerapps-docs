@@ -1,7 +1,7 @@
 ---
 title: "Send email to multiple recipients | MicrosoftDocs"
 description: "Learn how to send email to multiple recipients."
-ms.date: 05/27/2020
+ms.date: 05/28/2020
 ms.service:
   - "dynamics-365-sales"
 ms.topic: article
