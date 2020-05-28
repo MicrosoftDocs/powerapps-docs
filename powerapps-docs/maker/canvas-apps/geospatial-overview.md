@@ -83,7 +83,7 @@ The geospatial features require additional terms of use that must be reviewed an
 
 3. Go to the **Settings** tab, select **Advanced settings**, and scroll down to find the **Geospatial features** option. Set the option to **On**.
 
-  
+    ![Set the Geospatial features switch to on](./media/geospatial/enable-geo.png "Set the Geospatial features switch to on")
 
 4. Return to editing your app by selecting the back arrow icon.
 
