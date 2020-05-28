@@ -14,6 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
+
 # Add augmented reality components to your app
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]

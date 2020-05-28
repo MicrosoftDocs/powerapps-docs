@@ -14,6 +14,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
+
 # Create and view predefined 3D shapes in mixed reality (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]

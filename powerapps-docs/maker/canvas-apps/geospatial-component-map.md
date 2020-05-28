@@ -24,7 +24,6 @@ Easily bring dynamic mapping capabilities into your canvas apps. View the physic
 
 The dynamic map component can be added to your canvas apps by following the instructions for [adding framework components](/powerapps/developer/component-framework/component-framework-for-canvas-apps#add-components-to-a-canvas-app). 
 
-## Explore the sample app
 
 ## Use the component
 

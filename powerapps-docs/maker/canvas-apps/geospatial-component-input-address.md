@@ -14,31 +14,42 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
+
 # Address input component
 
 Easily bring dynamic mapping capabilities into your canvas apps. View the physical position of entities by linking to a data source, or by inputting new physical locations. Customize your map view by changing its default location and adding map components. Pan, tilt, zoom, and drag to center your map view.
 
-![](./media/augmented-geospatial/geospatial-map-component.png)
 
-The dynamic map component can be added to your canvas apps by following the instructions for [adding framework components](/powerapps/developer/component-framework/component-framework-for-canvas-apps#add-components-to-a-canvas-app). 
 
+
+To use the component, you should [review the prerequisites](geospatial-overview.md#prerequisites).
 
 
 ## Use the component
 
 Insert the component into your app as you normally would for any other control or component.
 
-With an app open for editing in the Power Apps https://create.powerapps.com studio, you can select the component directly or drag and drop it onto an app screen.
+With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
+
+1. Open the **Insert** tab. 
+
+2. Expand **Input**.
+
+3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
+
+4. Select **Allow** on the prompt that asks to know your location
+
+    ![Allow highlighted on the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted on the window that asks to know your location")
 
 You can modify the component with a number of properties.
 
 ### Properties
 
-The following properties can be defined and configured in the component's **Controls** pane. 
+The following properties are on the component's **Address Input** pane on the **Properties** and **Advanced** tabs.
 
-![](./media/augmented-geospatial/geospatial-controls.png)
+![The properties are in the side panel](./media/geospatial/address-properties.png "The properties are in the side panel")
 
-Note that some properties are only available in the **Advanced** tab on the **Controls** pane, under the **More options** button.
+Some properties are only available in the **Advanced** tab, under the **More options** section.
 
 Property | Description | Type | Location
 - | - | - | -
