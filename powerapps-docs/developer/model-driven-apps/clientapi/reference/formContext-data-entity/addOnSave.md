@@ -16,8 +16,6 @@ search.app:
 ---
 # addOnSave (Client API reference)
 
-
-
 [!INCLUDE[./includes/addOnSave-description.md](./includes/addOnSave-description.md)]
 
 ## Syntax

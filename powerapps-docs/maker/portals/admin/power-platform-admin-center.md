@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/04/2020
+ms.date: 05/20/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -23,13 +23,13 @@ To see a list of all portals for your tenant:
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-1. Select **Resources** and then **Portals** from the left-side menu.
+1. Select **Resources** and then **Portals** from the left pane.
 
     ![Portals option on Power Platform admin center](media/power-platform-admin-center/manage-portals-all-environments.png "Portals option on Power Platform admin center")
 
 1. Select a portal.
 
-1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** from the top navigation:
+1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** option from the top:
 
     ![Manage portal from Power Platform admin center](media/power-platform-admin-center/portals-manage-ppac.png "Manage portal from Power Platform admin center")
 
@@ -41,7 +41,7 @@ Follow these steps to see a list of all portals for your environment.
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
 
-1. Select **Environments** from the left navigation:
+1. Select **Environments** from the left pane:
 
     ![Environments list](media/power-platform-admin-center/environments-list.png "Environments list")
 
@@ -57,7 +57,7 @@ Follow these steps to see a list of all portals for your environment.
 
     ![Portals specific to an environment](media/power-platform-admin-center/environments-portals.png "Portals specific to an environment")
 
-1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** from the top navigation:
+1. To manage a portal, select **More portal actions** (**...**) and then select **Manage**. Alternatively, you can also select the portal and then select **Manage** option from the top:
 
     ![Manage portal specific to an environment](media/power-platform-admin-center/manage-environments-portal.png "Manage portal specific to an environment")
 
@@ -101,7 +101,7 @@ To update the portal solution:
 
 1. Go to manage your portal using one of the methods explained earlier in this article.
 
-1. Select **Manage Dynamics 365 Instance** from left navigation pane.
+1. Select **Manage Dynamics 365 Instance** from the left pane.
 
 1. Select **Update Dynamics 365 Instance**.
 

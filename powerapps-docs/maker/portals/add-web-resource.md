@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/05/2020
+ms.date: 05/27/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 ---
@@ -60,9 +60,9 @@ The new control will now be rendered on the page, giving you the ability to mana
 
 The paper-clip icon has been replaced with a cloud icon to denote that this file is stored in Azure Storage. You can continue to store attachments in Common Data Service; those files will be denoted with the paper-clip icon.
 
-> [!Note]
+> [!NOTE]
 > You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon.
-> - **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com`.
+> - **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com`  <br> Ensure the allowed origin doesn't have trailing `/`. For example, `https://contoso.crm.dynamics.com/` is incorrect.
 > - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
 > - **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*. For this scenario, you must specify *, otherwise the web resource will not render properly.
 > - **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. Examples - \* or x-ms-meta-\*. For this scenario, you must specify *, otherwise the web resource will not render properly.
@@ -72,7 +72,7 @@ The paper-clip icon has been replaced with a cloud icon to denote that this file
 
 If the attached file is an image, the control will display the image as a thumbnail whether it's stored in Common Data Service  or Azure Storage.
 
-> [!Note]
+> [!NOTE]
 > The thumbnail feature is limited to images under 1 MB in size.
 
 ![Notes thumbnail](media/notes-thumbnail.png "Notes thumbnail")

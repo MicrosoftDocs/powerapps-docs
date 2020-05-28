@@ -4,8 +4,9 @@ description: "Use environment variables to migrate application configuration dat
 Keywords: environment variables, variables, model-driven app, configuration data
 author: caburk
 ms.author: caburk
+ms.reviewer: matp
 manager: kvivek
-ms.date: 02/10/2020
+ms.date: 05/27/2020
 ms.service: powerapps
 ms.topic: article
 search.audienceType: 
@@ -49,6 +50,9 @@ Environment variables can be created and managed through the modern solution int
    - **Current Value**. Also known as the override value. This field is optional and is a part of the environment variable value entity. Set the value when you'd like to override the default value in your current environment. Remove the value from your solution if you don't want to use it in the next environment. The values are also separated into a separate JSON file within the solution.zip file that is exported. 
 
       Separation of default value and current value allows you to service the definition and the default value separately from the current value. It also allows us to extend the functionality in the future to support multiple values scoped to a specific run time context.
+
+      > [!div class="mx-imgBorder"] 
+      > ![New environment variable](media/new-environment-variable.png)
 
       >[!NOTE]
       > A value can't exist without a definition. The interface only allows creation of one value per definition. 
