@@ -123,30 +123,30 @@ More information: [Settings options](https://docs.microsoft.com/dotnet/api/micro
 > The plugin command is in public preview and 
 Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
-1.    Ensure that you have a valid authentication profile created.
-2.    Navigate to the root directory where you want the project to be created.
-3.    Run the command 
+1. Ensure that you have a valid authentication profile created.
+2. Navigate to the root directory where you want the project to be created.
+3. Run the command 
 
-     ```CLI
-     pac auth create –url <https://xyz.crm.dynamics.com>
-     ```
-4.    Run the command to create the plug-in project
+   ```CLI
+   pac auth create –url <https://xyz.crm.dynamics.com>
+   ```
+4. Run the command to create the plug-in project
 
-    ```CLI
-    pac plugin init
-    ```
+   ```CLI
+   pac plugin init
+   ```
 
-5.    Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
+5. Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
 
-    ```CLI
-    pac solution add-reference –path <path to your plugin project>
-    ```
+   ```CLI
+   pac solution add-reference –path <path to your plugin project>
+   ```
 
-6.    Run the command to build the solution and the referenced plug-in.
+6. Run the command to build the solution and the referenced plug-in.
 
-    ```CLI
-    msbuild
-    ```
+   ```CLI
+   msbuild
+   ```
 
 ## Remove components from a solution
 
