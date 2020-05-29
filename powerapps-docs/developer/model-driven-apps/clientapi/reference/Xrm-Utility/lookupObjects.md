@@ -41,6 +41,28 @@ search.app:
 |successCallback |Function |Yes |A function to call when the lookup control is invoked. An array of objects with the following properties is passed:<br/><ul><li>**entityType**: String. Entity type of the record selected in the lookup control.</li><li>**id**: String. ID of the record selected in the lookup control.</li><li>**name**: String. Name of the record selected in the lookup control.</li>|
 |errorCallback |Function |Yes |A function to call when you cancel the lookup control or the operation fails.  |
 
+## Example
+
+```javascript
+//define data for lookupOptions
+var lookupOptions = 
+{
+  defaultEntityType: "account",
+	entityTypes: ["account"],
+  allowMultiSelect: false,
+	defaultViewId:"0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10",
+	viewIds:["0D5D377B-5E7C-47B5-BAB1-A5CB8B4AC10","00000000-0000-0000-00AA-000010001003"],
+	searchText:"Allison",
+	filters: [{filterXml: "<filter type='or'><condition attribute='name' operator='like' value='A%' /></filter>",entityLogicalName: "account"}]
+};
+
+// Get account records based on the lookup Options
+Xrm.Utility.lookupObjects(lookupOptions).then(
+  function(success){
+console.log(success);},
+function(error){console.log(error);});
+}
+```
 
 ### Related topics
 
