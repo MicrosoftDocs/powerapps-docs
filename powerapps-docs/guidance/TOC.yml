@@ -82,20 +82,18 @@
         href: planning/sketching.md
     - name: Architectural Design
       items:
-      - name: Handling data
-        items:
-        - name: Where is the data?
-          href: planning/where-is-data.md
-        - name: Working with enterprise systems
-          href: planning/enterprise-systems.md
-        - name: Data modeling
-          href: planning/data-modeling.md
-        - name: Determining which type of app to make
-          href: planning/app-type.md
-        - name: Determining where to place the logic
-          href: planning/logic.md
-        - name: Securing the app and data
-          href: planning/security.md
+      - name: Where is the data?
+        href: planning/where-is-data.md
+      - name: Working with enterprise systems
+        href: planning/enterprise-systems.md
+      - name: Data modeling
+        href: planning/data-modeling.md
+      - name: Determining which type of app to make
+        href: planning/app-type.md
+      - name: Determining where to place the logic
+        href: planning/logic.md
+      - name: Securing the app and data
+        href: planning/security.md
   - name: Making phase
     href: planning/making-phase.md
   - name: Testing phase
