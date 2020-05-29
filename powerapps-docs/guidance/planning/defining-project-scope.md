@@ -5,9 +5,7 @@ Make sure you scope the project so that you know how much you will be trying to
 achieve from the project. Keep a clear roadmap on what you define as
 complete, what is outside the scope (and possibly to be done in the next
 version). Your scope directly impacts and determines which [features to include and not
-to
-include](https://review.docs.microsoft.com/en-us/powerapps/guidance/envisioning-design-prioritize-features)
-when making the app.
+to include](prioritizing-features.md) when making the app.
 
 To define the project scope, you should consider the following constraints.
 

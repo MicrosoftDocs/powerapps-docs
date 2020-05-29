@@ -16,5 +16,5 @@ On to the next task!
 --------------------
 
 Now that this task has been inspected, continue with the next task in the
-process starting back at What is the task? until all of the tasks have been
+process starting back at [What is the task?](what-is-task.md) until all of the tasks have been
 inspected.

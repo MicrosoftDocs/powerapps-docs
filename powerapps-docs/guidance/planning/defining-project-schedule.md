@@ -37,7 +37,7 @@ As your plans and scope become more clear, you can refine your schedule
 estimate.
 
 One way to shorten development time while maintaining (and even enhancing)
-quality is to use an existing app as a template. Whether you’re using a template
+quality is to [use an existing app as a template](../../maker/canvas-apps/get-started-test-drive). Whether you’re using a template
 provide with Power Apps or Power Automate, another app developed in your
 organization, or an example you found elsewhere, templates and reference designs
 can help with screen design, interactions, and data architecture.

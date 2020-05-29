@@ -1,6 +1,10 @@
 Defining the app project goals
 ==============================
 
+Having a project plan ensures you have the right resources (time, people, and
+funds) and follow a consistent approach to ensure a good level of quality for
+the apps you make.
+
 Having a clear objective for what you and your project team are trying to
 achieve is important so that your project members have the same goals. Writing
 down your goals is a good way of clarifying what the app you’re considering

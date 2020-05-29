@@ -1,6 +1,6 @@
 Who is doing the work? When? And where?
 =======================================
-
+<!---Editor team: Two things I was unable to achieve: Make the people images smaller; and widen the first column in the table at the bottom of the article -->
 For this specific step, understand who is doing the work. What is their role?
 
 It may be easiest to start with the named people, but you’ll want to understand
@@ -44,11 +44,13 @@ The last point is very important because there may be objections or hesitations 
 the people involved in the steps before or after the ones handled by your app. That could result in not being able to use the app due to the lack of
 cooperation.
 
-**Tip:** Knowing who will be impacted by a change to the business process is
+> [!TIP]
+> Knowing who will be impacted by a change to the business process is
 essential. Identify who will be using the app and who will be impacted by this
 change even if they are not using the app.
 
-**Tip:** When going through this analysis, for the information you may not know,
+> [!TIP]
+> When going through this analysis, for the information you may not know,
 the best thing to do is to talk with the person and get their perspective. You
 can certainly make an assumption about how they do the work, but it’s amazing
 what you can learn in a quick conversation – not just how they do it today, but
@@ -115,87 +117,107 @@ Example: Personas for expense reporting process
 These are the types of roles, work styles, and preferences we found when we
 looked into our expense reporting process:
 
-![Illustration of Lee in Sales](media/lee.png)
 
-**Lee – Salesperson**
+:::row:::
+    :::column:::
+       ![Illustration of Lee in Sales](media/lee.png)
 
--   Almost always on the move
+       **Lee – Salesperson**
 
--   Prefers to work with a tablet when meeting with customers
+       -   Almost always on the move
 
--   Does not always have internet connectivity so must be able to work offline
+       -   Prefers to work with a tablet when meeting with customers
 
--   Prefers to capture his expenses and receipts as soon after they happen as
-    possible
+       -   Does not always have internet connectivity so must be able to work offline
 
-![Illustration of Nick the Sales Manager](media/nick.png)
+       -   Prefers to capture his expenses and receipts as soon after they happen as
+       possible
+    :::column-end:::
+    :::column:::
+       ![Illustration of Nick the Sales Manager](media/nick.png)
 
-**Nick – Sales Manager**
+        **Nick – Sales Manager**
 
--   Almost always on the move
+        -   Almost always on the move
 
--   Needs just touch screen
+      -   Needs just touch screen
 
--   Requires offline support for remote locations
+      -   Requires offline support for remote locations
 
--   Responsible for approving the expense reports of all of his direct reports
+      -   Responsible for approving the expense reports of all of his direct reports
+    :::column-end:::
+:::row-end:::
 
-![Illustration of Shawna in Customer Support](media/shawna.png)
+:::row:::
+    :::column:::
+       ![Illustration of Shawna in Customer Support](media/shawna.png)
 
-**Shawna – Customer Support**
+        **Shawna – Customer Support**
 
--   Mainly uses desktopUsual expenses are for team morale and must identify
-    employees included
+        -   Mainly uses desktop
+        
+        - Usual expenses are for team morale and must identify
+        employees included
+    :::column-end:::
+    :::column:::
+       ![Illustration of Rebecca the Auditor](media/rebecca.png)
+       
+       **Rebecca – Auditor**
 
-![Illustration of Rebecca the Auditor](media/rebecca.png)
+       -   Needs to interact with all employees in all locations
 
-**Rebecca – Auditor**
+        -   Occasional travel expenses
 
--   Needs to interact with all employees in all locations
+        -   Mainly uses desktop but prefers to use her mobile phone
 
--   Occasional travel expenses
+        -   Usually has access to the Internet
 
--   Mainly uses desktop but prefers to use her mobile phone
+        -   Responsible for ensuring overall employee compliance with reporting
+       procedures
+    :::column-end:::
+:::row-end:::
 
--   Usually has access to the Internet
+:::row:::
+    :::column:::
+        ![Illustration of Abhay in Accounting](media/abhay.png)
 
--   Responsible for ensuring overall employee compliance with reporting
-    procedures
+        **Abhay - Accountant**
 
-![Illustration of Abhay in Accounting](media/abhay.png)
+        -   Must be able to review all expense reports and receipts
 
-**Abhay - Accountant**
+        -   Responsible for ensuring compliance for every expense report
 
--   Must be able to review all expense reports and receipts
+        -   Large volume of work; needs to be able to process information quickly
 
--   Responsible for ensuring compliance for every expense report
+        -   Must be able to report on how expenses are balancing up to the budget
 
--   Large volume of work; needs to be able to process information quickly
+    :::column-end:::
+    :::column:::
+        ![Illustration of Charlotte the CFO](media/charlotte.png)
 
--   Must be able to report on how expenses are balancing up to the budget
+        **Charlotte - CFO**
 
-![Illustration of Charlotte the CFO](media/charlotte.png)
+        -   Must keep an eye on the overall expense budget and help section managers
+        stay within budget
 
-**Charlotte - CFO**
+        -   Travels to the various offices and has external meetings and conferences and
+        must capture her own expenses
 
--   Must keep an eye on the overall expense budget and help section managers
-    stay within budget
+        -   Works from the office, remotely and from home from various devices, desktop,
+        tablet, and her phone
 
--   Travels to the various offices and has external meetings and conferences and
-    must capture her own expenses
+        -   Is not always connected to the internet
+    :::column-end:::
+:::row-end:::
 
--   Works from the office, remotely and from home from various devices, desktop,
-    tablet, and her phone
-
--   Is not always connected to the internet
 
 When we looked specifically at step 1 in our process (actually creating the
 expense report), here’s what we documented:
 
-Task 1: Create expense report
+**Task 1: Create expense report**
 
-| **Who does this?**              | All employees                                                                                                                                                                                                                                                                 |
-|---------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Who does this?**                         | All employees                                                                                                                                                                                                                                              |
+|--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Where does the work happen?** | At the office, at client sites, and on the road (and in the air)                                                                                                                                                                                                              |
 | **When does the work happen?**  | Ad hoc. Some employees are doing this at least weekly. Others may do this once or twice a year.                                                                                                                                                                               |
 | **Online or offline?**          | This is currently done on paper but the team wants to do digitally. Data entry may be done offline when no connectivity available. Salespeople don’t want to have to be online to start recording their receipts and expenses. (For instance may do this on plane ride home.) |

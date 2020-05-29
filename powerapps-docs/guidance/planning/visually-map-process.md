@@ -2,7 +2,10 @@ Visually map the process
 ========================
 
 The next step is to draw the business process of the use case you are trying to
-solve. You can draw your map on paper or with a tool such as Microsoft Visio or
+solve. 
+
+> [!TIP]
+> You can draw your map on paper or with a tool such as Microsoft Visio or
 PowerPoint.
 
 This business process should include not only the steps that directly relate to

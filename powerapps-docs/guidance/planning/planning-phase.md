@@ -15,12 +15,12 @@ Knowing the answers helps you stay on track when you design the app. It's easy t
 
 In this section, you’ll learn about:
 
--   Identifying the business problem to solve (the use case)
+-   [Identifying the business problem to solve (the use case)](identifying-business-problem-to-solve.md)
 
--   Deeply understanding the business process
+-   [Deeply understanding the business process](understanding-current-business-process.md)
 
--   Optimizing the business process with your solution
+-   [Optimizing the business process with your solution](optimizing-business-process.md)
 
--   Deciding if it’s worthwhile to automate the process
+-   [Deciding if it’s worthwhile to automate the process](worth-automating-process.md)
 
--   Creating a project plan
+-   [Creating a project plan](creating-project-plan.md)

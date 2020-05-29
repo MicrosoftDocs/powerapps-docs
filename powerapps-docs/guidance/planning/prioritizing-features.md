@@ -11,13 +11,9 @@ even requests that you may feel that are unimportant. This will help you create
 a backlog for improvement when you start working on making new versions of your
 app after you finished your first version.
 
-Tips:
+> [!TIP]
+> Use your project goals as a guide to what features need to be prioritized.
 
--   Use your project goals as a guide to what features need to be prioritized.
-
--   Avoid mixing up "necessities" with "nice to haves." Ask yourself (or your
-    users): “If this feature takes 4 weeks to add, is it worth delaying launch
-    by 4 weeks?”
 
 The table below shows an example of how you could record each feature.
 
@@ -29,6 +25,11 @@ The table below shows an example of how you could record each feature.
 | Draft save feature for non-submitted expense applications                             | No                      | Hard                             | Medium                 |
 | Integrate with ERP system                                                             | No                      | Hard                             | Very High              |
 
+> [!TIP]
+> Avoid mixing up *necessities* with *nice to haves.* Ask yourself (or your
+    users): “If this feature takes 4 weeks to add, is it worth delaying launch
+    by 4 weeks?”
+
 Priority Quadrant
 -----------------
 
@@ -36,9 +37,6 @@ Once you have listed all your feature requests, you should triage the requests
 into the quadrant below.
 
 ![Priority quadrant with an axis for low to high impact and an axis for low to high effort](media/priority-quadrant.png)
-
-Tip: Have users requesting the features review (or even create!) this Priority
-Quadrant for mutual understanding.
 
 ### Quick Wins
 
@@ -66,10 +64,14 @@ before you start working on Little Satisfiers. Be careful not to be too heavily
 into these Little Satisfiers, as working on too many of these will in turn into
 a Big Investment.
 
-###### Time Consumers
+### Time Consumers
 
 Time Consumers take up a lot of time but provide a little impact. These may come
 from management who don’t directly use the app. When facing these situations,
 you can share the idea of Priority Quadrant to explain how the decisions were
 made. You may help them understand, or you may learn that something is more
 impactful than you thought.
+
+> [!TIP]
+> Have users requesting the features review (or even create!) this Priority
+Quadrant for mutual understanding.

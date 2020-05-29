@@ -16,16 +16,16 @@ working solution using Power Apps.
 
 The basics of making a Power Apps app are as follows:
 
-1. **Plan:** Identify the who, what, when & why
+1. [**Plan**](planning-phase.md): Identify the who, what, when & why
 
-2. **Design:** Model the data (decide how the data you need and create will be
+2. [**Design**](planning-phase.md): Model the data (decide how the data you need and create will be
     organized, accessed and stored) and sketch out the app screens
 
-3. **Make:** Create the app
+3. [**Make**](making-phase.md): Create the app
 
-4. **Test:** Try the app with users
+4. [**Test**](testing-phase.md): Try the app with users
 
-5. **Deploy and Refine:** Get your app into the hands of users, get feedback,
+5. [**Deploy and Refine**](refining-phase.md): Get your app into the hands of users, get feedback,
     and decide what to change or add
 
 In this set of articles, you will learn about each of these steps in detail.

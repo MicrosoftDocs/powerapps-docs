@@ -15,9 +15,9 @@ of the app.
 
 In this section, you’ll consider:
 
--   What are the tasks involved in the app?
+-   [What are the tasks involved in the app?](app-tasks.md)
 
--   What will the user experience be?
+-   [What will the user experience be?](sketching.md)
 
 Architectural design 
 ---------------------
@@ -28,10 +28,12 @@ Apps (and other Power platform products) to automate your business process.
 
 This is where you will consider things like:
 
--   What platform(s) users will use the app on
+- [How to store your data](where-is-data.md)
 
--   How to store your data
+- [How to integrate with existing systems and apps you use already](enterprise-systems.md)
 
--   How to integrate with existing systems and apps you use already
+- [Determining which type of app to make](app-type.md)
 
--   How to secure your data
+- [Determining where to place your logic](logic.md)
+
+- [How to secure your data](security.md)

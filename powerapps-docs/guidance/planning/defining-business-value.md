@@ -81,7 +81,7 @@ report App:
     the receipts when a receipt was required. The fully loaded cost also remains
     the same.
 
-    -   (140 expense reports a week \* 20 minutes) \* \$90/hr = \$4,158 a week =
+    > (140 expense reports a week \* 20 minutes) \* \$90/hr = \$4,158 a week =
         \$216,216 a year
 
 -   Nick will be reviewing the expense reports of his team (roughly 100
@@ -91,12 +91,10 @@ report App:
     include guests at meals and distribution of the hotel expenses into the
     appropriate categories — will be controlled by the app.
 
-    -   (100 expense reports a week \* 5 minutes) \* \$90/hr = \$750 a week =
-        \$39,000 a year
+    >   (100 expense reports a week \* 5 minutes) \* \$90/hr = \$750 a week =  \$39,000 a year
 
 -   Other managers will review and approve the expense reports from their
-    departments going forward – so the remaining 40 expense reports will cost
-    \$15,600 a year.
+    departments going forward – so the remaining 40 expense reports will cost \$15,600 a year.
 
 -   Abhay and his team’s work has now shifted to spot checking and there
     shouldn’t be any rework required – in fact, it may be that Abhay’s team can
@@ -117,8 +115,8 @@ report App:
 
 -   The new cost to the company using the automated app is roughly:
 
-    -   \$216,216 + \$39,000 + \$15,600 = \$270,816 a year
-
-    -   Saving the company roughly **\$777,738 each year**
+    >   \$216,216 + \$39,000 + \$15,600 = \$270,816 a year
+    >
+    >   Saving the company roughly **\$777,738 each year**
 
 ![Business process flowchart showing the updated costs for the optimized process and the total savings to be gained.](media/optimized-flow-costs.png)

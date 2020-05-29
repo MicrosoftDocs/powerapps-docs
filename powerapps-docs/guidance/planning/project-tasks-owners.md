@@ -8,7 +8,7 @@ responsible for each task along with the targeted date of completion.
 You may want to use Microsoft Planner to manage your tasks together with your
 project team.
 
-See Developing solutions collaboratively for information about how to enable
+See [Developing solutions collaboratively](making-phase.md) for information about how to enable
 multiple people to build one Power Apps project.
 
 Example: Expense report project tasks and owners

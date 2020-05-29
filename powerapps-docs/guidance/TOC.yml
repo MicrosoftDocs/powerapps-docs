@@ -14,16 +14,18 @@
     href: planning/app-development-approaches.md
   - name: Planning phase
     items:
+    - name: Overview
+      href: planning/planning-phase.md
     - name: Identifying the business problem to solve (the use case)
       href: planning/identifying-business-problem-to-solve.md
+    - name: Example: Expense reporting
+      href: planning/example-expense-reporting.md
     - name: Understanding the current business process
       items:
       - name: Overview and identifying key contributors
         href: planning/understanding-current-business-process.md
       - name: Documenting the business process
         items:
-        - name: Overview
-          href: planning/documenting-business-process.md
         - name: What is the task?
           href: planning/what-is-task.md
         - name: Who is doing the work?
@@ -52,8 +54,6 @@
         href: planning/measuring-success.md
     - name: Creating a project plan
       items:
-      - name: Overview
-        href: planning/creating-project-plan.md
       - name: Defining the app project goals
         href: planning/defining-app-project-objective.md
       - name: Defining the project scope
@@ -84,10 +84,18 @@
       items:
       - name: Handling data
         items:
-        - name: Topic goes here
-          href: 
+        - name: Where is the data?
+          href: planning/where-is-data.md
         - name: Working with enterprise systems
           href: planning/enterprise-systems.md
+        - name: Data modeling
+          href: planning/data-modeling.md
+        - name: Determining which type of app to make
+          href: planning/app-type.md
+        - name: Determining where to place the logic
+          href: planning/logic.md
+        - name: Securing the app and data
+          href: planning/security.md
   - name: Making phase
     href: planning/making-phase.md
   - name: Testing phase

@@ -5,19 +5,19 @@ Understanding the tasks in this step, is there any data that the solution needs
 to capture? What is the data that needs to be captured? Here are some things to
 consider for each data element that is captured by the solution.
 
-Is there an existing form that is used?
+Is there an existing form?
 ---------------------------------------
 
-Is there a current paper form or electronic form that is being used to capture
-this data today? This can serve as a great beginning point as you think about
+Is there a current paper form or electronic form used to capture
+this data today? This form can serve as a great beginning point as you think about
 the layout of screens and how the data is being captured.
 
 Also think about the form critically:
 
--   Should the data elements be presented in a different order that is more in
+- Should the data elements be presented in a different order that is more in
     line with how you capture it?
 
--   Can the form be divided into separate smaller forms that allow the process
+- Can the form be divided into separate smaller forms that allow the process
     to happen in parallel, rather than one part at a time?
 
 What data is captured? 
@@ -59,28 +59,28 @@ What type of data is it?
 
 What type of data is being captured?
 
-**Free-form text:** Is there a set length that is allowed? Is the entry of this
+- **Free-form text:** Is there a set length that is allowed? Is the entry of this
 field dependent on another field (an associated field value such as a dropdown
 with an option of ‘other’, for example)? Is there a default entry that should be
 populated? Is the text derived from other data?
 
-**Numbers:** Is it a percent? Is it a whole number? Are there a certain number
+- **Numbers:** Is it a percent? Is it a whole number? Are there a certain number
 of decimal positions required? Is there a set minimum or maximum that is allowed
 for this number? Is this number dependent on another number (eg: it cannot be
 greater than, or less than, another entry). Is there a default number that
 should be provided? Or a number calculated based on other entries?
 
-**Dates:** What format for the date? Include both date and time? Are there rules
+- **Dates:** What format for the date? Include both date and time? Are there rules
 for the date (a minimum, or maximum, can’t be before today)? Is it calculated
 (eg, seven days from today)? Is there a default date that should be populated?
 
-**Choices:** Should the response be limited to a specific set of responses? What
+- **Choices:** Should the response be limited to a specific set of responses? What
 are the valid responses? Are the responses dependent on another data element? Is
 there a default choice, or a default based on another data element? Do you allow
 only a single choice to be selected, or can multiple be selected at the same
 time?
 
-**Images/Video:** Should an image or video be captured? Is the image/video being
+- **Images/Video:** Should an image or video be captured? Is the image/video being
 captured from a camera on the user’s device? Is this an image/video that is
 coming in via e-mail? Is there any AI that should be run on this image
 (detecting elements of the image, for example)?
@@ -93,7 +93,7 @@ the data go back into an existing system? Does it go into a spreadsheet? Does it
 get captured at all?
 
 If the data doesn’t already get stored digitally, you will be creating a data
-repository for it, which is discussed in Handling information and data.
+repository for it, which is discussed in [Handling information and data](where-is-data.md).
 
 Another thing to consider is whether this data can be valuable to other
 processes in the organization. Could other processes be automated if this data
@@ -131,22 +131,16 @@ Example: Expense report data creation
 Here are some of the data elements in the worksheet for the expense report
 capture process:
 
-| **Data level** | **Data item**         | **Item Type** | **Editable?** | **Format Allowed**                                                  | **Validation**                                            | **Default/**                     |
-|                |                       |               |               |                                                                     |                                                           | **Calculation**                  |
-|----------------|-----------------------|---------------|---------------|---------------------------------------------------------------------|-----------------------------------------------------------|----------------------------------|
-| Expense Report | Expense Report Number | Text          | No            |                                                                     | Cannot be blank                                           | “EXP” + Date (YYYYMMDD) + UserID |
-| Expense Item   | Date of Expense       | Date          | Yes           | MM-DD-YYYY                                                          | Cannot be in the future                                   |                                  |
-| Expense Item   | Type of Expense       | Choice        | Yes           | Select from list:                                                   | Cannot be blank                                           |                                  |
-|                |                       |               |               | -Travel                                                             |                                                           |                                  |
-|                |                       |               |               | -Meal                                                               |                                                           |                                  |
-|                |                       |               |               | -Hotel                                                              |                                                           |                                  |
-|                |                       |               |               | -Transportation                                                     |                                                           |                                  |
-|                |                       |               |               | -Parking                                                            |                                                           |                                  |
-|                |                       |               |               | -Supplies                                                           |                                                           |                                  |
-| Expense Item   | Amount                | Number        | Yes           | \#\#\#,\#\#\#.\#\#                                                  | Cannot be blank, can be negative                          |                                  |
-| Expense Item   | Receipt               | Image         | Yes           | JPG, PNG                                                            | Required if the Amount \> \$74.99                         |                                  |
-| Expense Item   | Reimbursable          | Yes/No        | Yes           | Yes/No                                                              |                                                           | Defaults to 'No'                 |
-| Expense Detail | Guest Name            | Text          | Yes           | Anything                                                            | Required for 'Meal' type expense where the amount \> \$75 |                                  |
+| **Data level** | **Data item**         | **Item Type** | **Editable?** | **Format Allowed**                                                       | **Validation**                                            | **Default /            Calculation**                  |
+|----------------|-----------------------|---------------|---------------|--------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------------|
+| Expense Report | Expense Report Number | Text          | No            |                                                                          | Cannot be blank                                           | “EXP” + Date (YYYYMMDD) + UserID |
+| Expense Item   | Date of Expense       | Date          | Yes           | MM-DD-YYYY                                                               | Cannot be in the future                                   |                                  |
+| Expense Item   | Type of Expense       | Choice        | Yes           | Select from list: Travel, Meal, Hotel, Transportation, Parking, Supplies | Cannot be blank                                           |                                  |
+| Expense Item   | Amount                | Number        | Yes           | \#\#\#,\#\#\#.\#\#                                                       | Cannot be blank, can be negative                          |                                  |
+| Expense Item   | Receipt               | Image         | Yes           | JPG, PNG                                                                 | Required if the Amount \> \$74.99                         |                                  |
+| Expense Item   | Reimbursable          | Yes/No        | Yes           | Yes/No                                                                   |                                                           | Defaults to 'No'                 |
+| Expense Detail | Guest Name            | Text          | Yes           | Anything                                                                 | Required for 'Meal' type expense where the amount \> \$75 |                                  |
+
 
 In this example there are three levels of data that is being captured. (This
 will become very important in the Design section for both screen design and data
