@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/model-driven-apps/customize-power-bi-content-packs.md",
+      "redirect_url": "../common-data-service/use-powerbi-with-cds",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "powerapps-docs/maker/common-data-service/how-managed-solutions-merged.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/how-managed-solutions-merged",
       "redirect_document_id": "false"
