@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 26/05/2020
+ms.date: 05/29/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -37,11 +37,11 @@ Articles in this SharePoint scenarios integration section explain individual and
 Some additional samples and step-by-step guides available for different SharePoint integration areas are:
 
 - Install and configure the [Help Desk](https://docs.microsoft.com/powerapps/maker/canvas-apps/help-desk-install) sample in Power Apps.
-- Link SharePoint lists using a [lookup field](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/sharepoint-lookup-fields) in Power Apps.
+- Link SharePoint lists using a [lookup field](https://docs.microsoft.com/powerapps/maker/canvas-apps/sharepoint-lookup-fields) in Power Apps.
 - Add SharePoint list to a [collection](https://docs.microsoft.com/powerapps/maker/canvas-apps/create-update-collection#put-a-sharepoint-list-into-a-collection).
 
-## Next steps
+### See also
 
-Get started with SharePoint integration scenarios.
-
+- [Formula reference](formula-reference.md) for Power Apps
+- [Control reference](reference-properties.md) for Power Apps
 
