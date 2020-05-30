@@ -3,13 +3,9 @@ title: Understand model-driven app components in Power Apps | MicrosoftDocs
 description: "Understand various components of a model-driven app such as data, UI, logic, and visualization."
 Keywords: fields, attributes, model-driven app
 author: Mattp123
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 ms.author: matp
 manager: kvivek
-ms.date: 10/17/2019
+ms.date: 05/26/2020
 ms.service: powerapps
 ms.topic: article
 search.audienceType: 
@@ -29,10 +25,10 @@ These components determine what data the app will be based upon and what designe
 
 |Component  |Description  |Designer  |
 |---------|---------|---------|
-|Entity     |An item with properties that you track, such as a contact or account. Many standard entities are available. You can customize a non-system standard entity (production entity) or create a custom entity from scratch.     | [!INCLUDE [powerapps](../../includes/powerapps.md)] entity designer        |
-|Relationship     | Entity relationships define how entities can be related to each other. There are 1:N (one-to-many), N:1 (many-to-one), and N:N (many-to-many) types of relationships . For example, adding a lookup field to an entity creates a new 1:N relationship between the two entities and lets you put that lookup field on a form.   | [!INCLUDE [powerapps](../../includes/powerapps.md)] entity designer        |
-|Field     | A property that is associated with an entity. A field is defined by a data type, which determines the type of data that can be entered or selected. Examples include text, number, date and time, currency, or lookup (creates a relationship with another entity). Fields typically are used with forms, views, and searches.        | [!INCLUDE [powerapps](../../includes/powerapps.md)] entity designer   |
-|Option set field     | This is a special type of field, which provides the user a set of predetermined options. Each option has a number value and label. When added to a form, this field displays a control for the user to select an option.  There are two kinds of option sets; option sets, where the user can only select one option, and multi-select options sets, which allow more than one selection.  | [!INCLUDE [powerapps](../../includes/powerapps.md)] option set designer     |
+|Entity     |An item with properties that you track, such as a contact or account. Many standard entities are available. You can customize a non-system standard entity (production entity) or create a custom entity from scratch.     | Power Apps entity designer        |
+|Relationship     | Entity relationships define how entities can be related to each other. There are 1:N (one-to-many), N:1 (many-to-one), and N:N (many-to-many) types of relationships . For example, adding a lookup field to an entity creates a new 1:N relationship between the two entities and lets you put that lookup field on a form.   | Power Apps entity designer        |
+|Field     | A property that is associated with an entity. A field is defined by a data type, which determines the type of data that can be entered or selected. Examples include text, number, date and time, currency, or lookup (creates a relationship with another entity). Fields typically are used with forms, views, and searches.        | Power Apps entity designer   |
+|Option set field     | This is a special type of field, which provides the user a set of predetermined options. Each option has a number value and label. When added to a form, this field displays a control for the user to select an option.  There are two kinds of option sets; option sets, where the user can only select one option, and multi-select options sets, which allow more than one selection.  | Power Apps option set designer     |
 
 More information: [Define data for your model-driven app](define-data-model-driven-app.md) 
 
@@ -50,7 +46,7 @@ These components determine how users interact with the app.
 > ![App designer and form designer](media/model-driven-app-overview/app-and-form-designers.png "App designer and form designer")
 
 ## Logic
-Determines the business processes, rules, and automation the app will have. [!INCLUDE [powerapps](../../includes/powerapps.md)] makers use a designer that is specific to the type of process or rule. 
+Determines the business processes, rules, and automation the app will have. Power Apps makers use a designer that is specific to the type of process or rule. 
 
 
 |Type of logic  |Description  |Designer  |
@@ -59,9 +55,10 @@ Determines the business processes, rules, and automation the app will have. [!IN
 |Workflow     |  Workflows automate business processes without a user interface. Designers use workflows to initiate automation that doesn't require any user interaction.       | Workflow designer        |
 |Actions    |  Actions are a type of process that let you manually invoke actions, including custom actions, directly from a workflow.       |  Process designer       |
 |Business rule     | Used to apply rule or recommendation logic to a form, such as to set field requirements, hide fields, or validate data. App designers use a simple interface to implement and maintain fast-changing and commonly used rules.         |  Business rule designer       |
-|Flow     | Flow is a cloud-based service that lets you create automated workflows between apps and services to get notifications, synchronize files, collect data, and more.        | Power Automate        |
+|Flow     | Power Automate is a cloud-based service that lets you create automated flows between apps and services to get notifications, synchronize files, collect data, and more.        | Power Automate        |
 
-![Workflow, action, and business process flow designers](media/model-driven-app-overview/designer-mash.png "Workflow, action, and business process flow designers")
+> [!div class="mx-imgBorder"]
+> ![Workflow, action, and business process flow designers](media/model-driven-app-overview/designer-mash.png "Workflow, action, and business process flow designers")
 
 More information: [Apply business logic in your model-driven app](guide-staff-through-common-tasks-processes.md) 
 
