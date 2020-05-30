@@ -907,16 +907,6 @@
         href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
       - name: Walk through the completed scenario
         href: ./canvas-apps/sharepoint-scenario-summary.md
-      - name: SharePoint integration scenarios
-        items:
-        - name: Overview
-          href: ./canvas-apps/sharepoint-scenarios-intro.md
-        - name: How to use lookup columns?
-          href: ./canvas-apps/sharepoint-scenarios-choice-to-lookup.md
-        - name: How to filter records using search box?
-          href: ./canvas-apps/sharepoint-scenarios-filter-search-list.md
-        - name: How to work with list permissions when using lookup columns?
-          href: ./canvas-apps/sharepoint-scenarios-lookup-list-permissions.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
