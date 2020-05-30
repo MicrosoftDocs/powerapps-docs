@@ -1,7 +1,7 @@
 Are there decisions being made based on the data? Or business rules to follow?
 ==============================================================================
 
-Do you have any “If \___, then \___” logic?
+Do you have any “If ___ , then ___” logic?
 
 At the conclusion of this activity in the process, is a decision being made? Is
 there a way that the solution can make the decision automatically based on the

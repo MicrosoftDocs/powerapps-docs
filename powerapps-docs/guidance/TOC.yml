@@ -98,3 +98,9 @@
     href: planning/making-phase.md
   - name: Testing phase
     href: planning/testing-phase.md
+  - name: Deploying and refining phase
+    items:
+    - name: Making your app discoverable
+      href: planning/discoverability.md
+    - name: Collecting feedback and analyzing telemetry
+      href: planning/feedback-telemtry.md

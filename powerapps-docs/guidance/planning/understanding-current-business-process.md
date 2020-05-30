@@ -23,10 +23,15 @@ to rely on these people to help you understand each step. You’ll most likely
 learn along the way, and you may need to add new people to your project team to
 provide their perspectives.
 
-Tip: Avoid blind spots! If you get to a step in the process where “and then, a
+>[!TIP]
+> Avoid blind spots! If you get to a step in the process where “and then, a
 miracle occurs!” you’ll need to find someone who can shine a light on that.
 Also, consider diverse perspectives in work preferences and constraints.
 
 In our example scenario, we identified these key contributors:
 
 ![Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO](media/contributors.png)
+
+
+> [!div class="nextstepaction"]
+> [Get started documenting the business process](what-is-task.md)
