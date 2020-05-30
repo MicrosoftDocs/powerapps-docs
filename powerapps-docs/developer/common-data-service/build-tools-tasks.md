@@ -20,6 +20,8 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
+For more up to date information about using the build tools, including application lifecycle management, see [Microsoft Power Platform Build Tools for Azure DevOps](/power-platform/alm/devops-build-tools).
+
 Several types of build tasks are available as part of the Power Apps build tools to help automate your application lifecycle, using Azure DevOps.
   
 ## Helper task
