@@ -488,7 +488,7 @@ In Visual Studio, press F5 to launch the app with the code changes.
 1. Log-in as a user who has access to the CDS data.
 
     > [!NOTE]
-    > If you did not grant admin consent in [Grant API permissions](#grant-api-permissions), users can expect to see a dialog like this:
+    > If you did not grant admin consent in [Step 3: Grant API permissions](#step-3-grant-api-permissions), users can expect to see a dialog like this:
     > 
     > :::image type="content" source="media/blazor-webassembly-walkthrough-request-consent-dialog.png" alt-text="The dialog to prompt the user to grant consent to the application.":::
     >
