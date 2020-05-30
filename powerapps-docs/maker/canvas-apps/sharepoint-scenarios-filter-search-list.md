@@ -26,7 +26,7 @@ In this scenario article, you'll learn how to filter a search list in a canvas a
 
 You can use text input control in a canvas app to input text and filter the list such as a data table to filter list items from the connected SharePoint list.
 
-To use the ability to search using a text input and filter the records, you have to use the function [filter](../functions/functions/function-filter-lookup.md). For example, `Filter([@Colors], StartsWith(Title, TextInput1.Text))` uses the SharePoint list connection **Colors** and the column **Title** to filter the records.
+To use the ability to search using a text input and filter the records, you have to use the function [filter](./functions/functions/function-filter-lookup.md). For example, `Filter([@Colors], StartsWith(Title, TextInput1.Text))` uses the SharePoint list connection **Colors** and the column **Title** to filter the records.
 
 ## Example
 

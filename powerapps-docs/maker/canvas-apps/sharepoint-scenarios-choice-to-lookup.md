@@ -26,7 +26,7 @@ In this scenario article, you'll learn how to use a drop down list with choices 
 
 You can use lookup columns in SharePoint that consume values from other lists or libraries. When using such column as a field in a canvas app, you can use drop down list with choices.
 
-To use the choices in a drop down list, you have to use the function [choices](../functions/function-choices.md). For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration** and the column **Vehicle type** for the lookup of the type of the vehicle.
+To use the choices in a drop down list, you have to use the function [choices](./functions/function-choices.md). For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration** and the column **Vehicle type** for the lookup of the type of the vehicle.
 
 ## Example
 
