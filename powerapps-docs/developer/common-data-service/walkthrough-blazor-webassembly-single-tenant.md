@@ -232,7 +232,6 @@ Update the file to include a new `CDSWebAPI` section that includes the root of t
     var timeoutSeconds = int.Parse(CDSWebApiConfig.GetSection("TimeoutSeconds").Value);
 
     // Create an named definition of an HttpClient that can be created in a component page
-    // using IHttpClientFactory.CreateClient("CDSClient")
     builder.Services.AddHttpClient("CDSClient", client =>
     {
         // See https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors
