@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/20/2020
+ms.date: 05/29/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -62,7 +62,7 @@ To configure portal details, see [Portal details](portal-details.md).
 ## Manage the portal add-on
 
 Using the Power Platform admin center to manage portals as described in this article replaces earlier functionality, which is illustrated in the following image.
-<!--Please check the alt text. I wanted to say "Deprecated functionality" but that can be a hotbutton term. -->
+
 ![Older functionality for managing a portal add-on](media/power-platform-admin-center/old-admin-center.png "Older functionality for managing a portal add-on")
 
 ### Portal types
@@ -84,7 +84,7 @@ A portal can have the following status: *Configured*, *Suspended*, or *Not-confi
 |----------------|-----------------|
 | Configured     | This portal has been configured to an environment.     |
 | Suspended      | This portal has been suspended because its trial period is over. It will be deleted in seven days, unless it's converted to a production portal. |
-| Not-configured | This portal<!--Edit okay? --> is ready to be configured to an environment.   |
+| Not-configured | This portal is ready to be configured to an environment.   |
 
 > [!NOTE]
 > You can [create a new portal](https://docs.microsoft.com/powerapps/maker/portals/provision-portal-add-on) if the portal add-on status is *Not-configured*. The status will change to *Configured* after the portal is provisioned.
@@ -93,7 +93,7 @@ A portal can have the following status: *Configured*, *Suspended*, or *Not-confi
 
 You can use the Power Platform admin center to update your Power Apps portal solution.
 
-1. Open your portal to the **Manage** page<!--Edit okay? I wasn't sure what this meant.--> by using one of the methods explained earlier in this article.
+1. Select **Manage** to manage your portal by using one of the methods explained earlier in this article.
 
 1. In the left pane, select **Manage Dynamics 365 Instance**.
 

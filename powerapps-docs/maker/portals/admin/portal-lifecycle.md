@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/20/2020
+ms.date: 05/29/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 ---
@@ -15,7 +15,7 @@ ms.reviewer: tapanm
 
 A portal is always created as a trial. A trial portal, which expires after 30 days, is useful for trying out its capabilities at no cost. After it expires, the portal is suspended and shut down. Seven days after it's suspended, the trial portal is deleted. You'll be notified at every stage of the portal lifecycle&mdash;nearing suspension, suspended, deleted, and converted from trial to production&mdash;through toast notifications and email.
 
-As an administrator, you can convert a trial or suspended portal to a production portal.<!--note from editor: I disagree with using "production" alone as a noun, even though it's used this way in the UI. It should always be a modifier. Instead of "convert a trial portal to production," it should be "convert a portal from trial to production" or "convert a trial portal to a production portal." --> When converting a portal from trial to production, you must ensure that the environment is also a production environment. You can't convert a trial portal to a production portal in a trial environment. If you delete the environment in which a trial portal is created, the portal is also deleted.
+As an administrator, you can convert a trial or suspended portal to a production portal. When converting a portal from trial to production, you must ensure that the environment is also a production environment. You can't convert a trial portal to a production portal in a trial environment. If you delete the environment in which a trial portal is created, the portal is also deleted.
 
 The first portal is free to be created in an environment in a tenant. If you need to create more than one portal, you must have 1 GB of unused storage space in the tenant.
 
@@ -23,7 +23,7 @@ The first portal is free to be created in an environment in a tenant. If you nee
 
 ### Trial portal
 
-Every portal begins as a trial portal that expires after 30 days. You can convert it to a production portal from the Power Apps Portals admin center<!--Tapan, can you ask the PM for the UI to change the name to "Power Apps portals admin center"? If these are current screenshots, the UI is violating our branding guidelines, not only for lowercase "portals" but for "Power Apps" as two words.--> if you have the required licenses. More information: [Convert a portal from trial to production](#convert-a-portal-from-trial-to-production)
+Every portal begins as a trial portal that expires after 30 days. You can convert it to a production portal from the Power Apps Portals admin center if you have the required licenses. More information: [Convert a portal from trial to production](#convert-a-portal-from-trial-to-production)
 
 To convert a trial portal to a production portal, the environment should have required add-ons for external users or a license for internal users. More information: [Power Apps and Power Automate licensing FAQs](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq) and [Power Apps portals licensing](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing)
 
@@ -72,7 +72,7 @@ To convert your portal from trial to production:
 
 You can convert your existing portal license to [capacity-based licensing model](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). To change your portal license to capacity-based model:
 
-1. Go to **Portal Details**.<!--note from editor: We don't usually supply "further information"-type links like this in a procedure.-->
+1. Go to [Portal Details](portal-details.md).
 1. Select **Change License**.
 
     ![Convert an existing portal to a capacity-based model](media/portal-lifecycle/convert-to-capacity-based-licensing.gif "Convert an existing portal to a capacity-based model")
@@ -86,22 +86,22 @@ Consider the following before changing your portal license:
 
 ## Considerations for add-on portals
 
-The following sections describe the conditions that apply to portals that were [provisioned by using the older portal add-on plan](../provision-portal-add-on.md)<!--Suggested. "Purchased earlier" is a bit ambiguous.-->.
+The following sections describe the conditions that apply to portals that were [provisioned by using the portal add-on plan](../provision-portal-add-on.md).
 
 ### Trial add-on portal
 
-A trial add-on portal expires after 30 days. An expired portal is suspended for seven days. The portal is deleted after the suspension period ends. A trial add-on portal can still be converted to a production portal during the period when it has either been configured to an environment<!--Suggested. In other instances, we've called this the trial period. I think "configured" needs a bit of explaining at first usage.--> or suspended.
+A trial add-on portal expires after 30 days. An expired portal is suspended for seven days. The portal is deleted after the suspension period ends. A trial add-on portal can still be converted to a production portal during the period when it has either been configured to an environment or suspended.
 
 ### Production add-on portal
 
 A production add-on portal expires at the end of the purchased license period. The suspension period for a production add-on portal can vary depending on the license plan you purchased. The portal is deleted after the suspension period ends. You can extend the license of a production add-on portal while the portal is in a configured or suspended state. If it has been suspended, the portal can be converted to a configured state after you extend the license period.
 
 > [!IMPORTANT]
-> The suspension or deletion<!--Is this worth saying? It seems obvious that deleting the portal will cause it not to work very well!--> of a portal might cause loss of functionality. To avoid having your portal suspended or deleted, ensure that you've extended the license period in a timely manner, well before expiry.<!--Suggested-->
+> To avoid functionality loss by having your portal suspended or deleted, ensure that you've extended the license period in a timely manner, well before expiry.
 
 ### Reset add-on portal
 
-Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was provisioned by using a previously purchased, older portal add-on plan.
+Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was provisioned by using a previously purchased, portal add-on plan.
 
 ### See also
 
