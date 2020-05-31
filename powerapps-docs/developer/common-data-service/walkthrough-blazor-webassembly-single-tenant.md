@@ -22,7 +22,7 @@ Use the steps in this tutorial to create a Blazor WebAssembly app that connects 
 
 Blazor WebAssembly is one of two hosting models available for ASP.NET Core Blazor, the other is Blazor Server. For a complete description of the differences, see [ASP.NET Core Blazor hosting models](/aspnet/core/blazor/hosting-models).
 
-This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic. Because Common Data Service uses Azure Active Directory (AAD) for authentication, this tutorial will describe how to modify the basic app created using the app template provided so that it can connect to Common Data Service.
+This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic. Because Common Data Service uses Azure Active Directory (Azure AD) for authentication, this tutorial will describe how to modify the basic app created using the app template provided so that it can connect to Common Data Service.
 
 ## Goal
 
@@ -37,7 +37,7 @@ To complete this tutorial, you must have:
 
 - Access to a [Common Data Service environment with a database](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database)
 - A Common Data Service user with a security role that provides read access to the Account and Contact entities
-- Application Administrator, Application Developer, Cloud Application Administrator, or Hybrid Identity Administrator role access to the AAD tenant that the Common Data Service environment uses.
+- Application Administrator, Application Developer, Cloud Application Administrator, or Hybrid Identity Administrator role access to the Azure AD tenant that the Common Data Service environment uses.
 - Understanding of the C# programming language
 - Understanding of ASP.NET Core Blazor is helpful but not required
 - The latest version of Visual Studio 2019 with the **ASP.NET and web development** workload installed.
@@ -81,11 +81,11 @@ It will look something like this: `https://yourorgname.api.crm.dynamics.com/api/
 
 This takes you to the starting point for Step 2.
 
-## Step 2: Create a Blazor WebAssembly standalone app using AAD for authentication
+## Step 2: Create a Blazor WebAssembly standalone app using Azure AD for authentication
 
 The [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic provides a complete set of instructions to create the app.
 
-These steps will describe how to create an app registration in AAD and run a .NET Core CLI command to generate the scaffold for the basic app with support for AAD authentication.
+These steps will describe how to create an app registration in Azure AD and run a .NET Core CLI command to generate the scaffold for the basic app with support for Azure AD authentication.
 
 > [!NOTE]
 > At this time, you must use the .NET Core CLI command to generate the app. There is no template for this specific type of app when creating a project using Visual Studio.
@@ -138,7 +138,7 @@ The port setting used by Visual Studio is randomly generated. The callback URI i
     :::image type="content" source="media/blazor-webassembly-walkthrough-project-debug-settings.png" alt-text="The Visual Studio project Debug page.":::
 
 1. Under **Web Server Settings** copy the **Enable SSL** value that includes the random port assigned for debugging
-1. Return to your app registration in AAD, In the **Authentication** section, change the **Redirect URI** to include this root Uri, then save your changes
+1. Return to your app registration in Azure AD, In the **Authentication** section, change the **Redirect URI** to include this root Uri, then save your changes
 
     :::image type="content" source="media/blazor-webassembly-walkthrough-application-redirect-uri.png" alt-text="The registered application Authentication information.":::
 
@@ -148,13 +148,13 @@ Now that the Redirect URI has been updated; you should be able to press F5 in Vi
 
 :::image type="content" source="media/blazor-webassembly-walkthrough-application-before-code-changes.png" alt-text="The default behavior of the Blazor WebAssembly app before changes are made.":::
 
-At this point, all the capabilities of the app work whether you log-in or not. Only members of the AAD tenant can log in.
+At this point, all the capabilities of the app work whether you log-in or not. Only members of the Azure AD tenant can log in.
 
 ## Step 3: Grant API permissions
 
 To connect to Common Data Service, you must configure permissions for the app to connect.
 
-1. Return to your app registration in AAD, In the **API permissions** section, click **Add a permission**.
+1. Return to your app registration in Azure AD, In the **API permissions** section, click **Add a permission**.
 
     :::image type="content" source="media/blazor-webassembly-walkthrough-add-permissions.png" alt-text="The registered application API Permissions settings page.":::
 
