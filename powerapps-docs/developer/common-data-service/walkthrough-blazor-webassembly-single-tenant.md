@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service | Microsoft Docs"
+title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service | Microsoft Docs"
 description: ""
 keywords: ""
 ms.date: 05/25/2020
@@ -16,28 +16,28 @@ search.app:
   - D365CE
 ---
 
-# Walkthrough: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service
+# Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service
 
-Use the steps in this walkthrough to create a Blazor WebAssembly app that connects to the Common Data Service (CDS). The focus of this topic is to understand the necessary steps to authenticate a user with a specific CDS instance and retrieve data.
+Use the steps in this tutorial to create a Blazor WebAssembly app that connects to the Common Data Service. The focus of this topic is to understand the necessary steps to authenticate a user with a specific Common Data Service instance and retrieve data.
 
 Blazor WebAssembly is one of two hosting models available for ASP.NET Core Blazor, the other is Blazor Server. For a complete description of the differences, see [ASP.NET Core Blazor hosting models](/aspnet/core/blazor/hosting-models).
 
-This walkthrough depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic. Because CDS uses Azure Active Directory (AAD) for authentication, this walkthrough will describe how to modify the basic app created using the app template provided so that it can connect to CDS.
+This tutorial depends on the instructions in the [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory) topic. Because Common Data Service uses Azure Active Directory (AAD) for authentication, this tutorial will describe how to modify the basic app created using the app template provided so that it can connect to Common Data Service.
 
 ## Goal
 
-When you complete this walkthrough, you will have a Blazor WebAssembly app that displays data from the CDS Account entity which the authenticated user has access to.
+When you complete this tutorial, you will have a Blazor WebAssembly app that displays data from the Common Data Service Account entity that the authenticated user has access to.
 
-:::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="Represents the goal of this walkthrough.":::
+:::image type="content" source="media/blazor-webassembly-walkthrough-goal.png" alt-text="Represents the goal of this tutorial.":::
 
 
 ## Prerequisites
 
-To complete this walkthrough you must have:
+To complete this tutorial, you must have:
 
-- Access to a Power Apps environment with a CDS database
-- A CDS user with a security role that provides read access to the Account and Contact entities
-- Application Administrator, Application Developer, Cloud Application Administrator, or Hybrid Identity Administrator role access to the AAD tenant that the CDS environment uses.
+- Access to a [Common Data Service environment with a database](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database)
+- A Common Data Service user with a security role that provides read access to the Account and Contact entities
+- Application Administrator, Application Developer, Cloud Application Administrator, or Hybrid Identity Administrator role access to the AAD tenant that the Common Data Service environment uses.
 - Understanding of the C# programming language
 - Understanding of ASP.NET Core Blazor is helpful but not required
 - The latest version of Visual Studio 2019 with the **ASP.NET and web development** workload installed.
@@ -47,18 +47,18 @@ To complete this walkthrough you must have:
 
 Let’s make sure that your environment is configured properly, and you understand where to perform the actions in Step 2.
 
-### Verify CDS database
+### Verify Common Data Service database
 
-1. Open https://make.powerapps.com/ 
+1. Sign in to [Power Apps](https://make.powerapps.com/).
 1. Select **Solutions** in the navigation pane.
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-maker-portal.png" alt-text="The maker portal showing an environment without a CDS database.":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-maker-portal.png" alt-text="The maker portal showing an environment without a Common Data Service database.":::
 
-1. If you don’t see a list of installed solutions, use the environment selector at the top to choose a different environment which has a database. Otherwise create a new environment.
+1. If you don’t see a list of installed solutions, use the environment selector at the top to choose a different environment that has a database. Otherwise create a new environment.
 
-### Get the CDS Web API URI
+### Get the Common Data Service Web API URI
 
-You will need the Instance Web API Service Root URL. This is found on the Developer Resources page of your CDS environment.
+You will need the Instance Web API Service Root URL. This is found on the Developer Resources page of your Common Data Service environment.
 
 Follow the instructions found in [View or download developer resources](view-download-developer-resources.md) to copy the Url. 
 
@@ -66,7 +66,7 @@ It will look something like this: `https://yourorgname.api.crm.dynamics.com/api/
 
 ### Navigate to the Azure Active Directory portal
 
-1. Return to https://make.powerapps.com/.
+1. Sign in to [Power Apps](https://make.powerapps.com).
 1. In the ‘waffle’ icon at the top left and select **Admin**.
 
     :::image type="content" source="media/blazor-webassembly-walkthrough-navigate-admin-center.png" alt-text="Navigating to the Microsoft 365 admin center.":::
@@ -152,7 +152,7 @@ At this point, all the capabilities of the app work whether you log-in or not. O
 
 ## Step 3: Grant API permissions
 
-To connect to CDS, you must configure permissions for the app to connect.
+To connect to Common Data Service, you must configure permissions for the app to connect.
 
 1. Return to your app registration in AAD, In the **API permissions** section, click **Add a permission**.
 
@@ -165,7 +165,7 @@ To connect to CDS, you must configure permissions for the app to connect.
 1. Select **Common Data Service**. 
 1. Select the **user_impersonation** permission
 
-    :::image type="content" source="media/blazor-webassembly-walkthrough-user-impersonation-permission.png" alt-text="Adding the CDS user_impersonation permission.":::
+    :::image type="content" source="media/blazor-webassembly-walkthrough-user-impersonation-permission.png" alt-text="Adding the Common Data Service user_impersonation permission.":::
 
     > [!NOTE]
     > Dynamics CRM and Common Data Service refer to the same service.
@@ -177,7 +177,7 @@ To connect to CDS, you must configure permissions for the app to connect.
 
 ## Step 4: Apply code changes
 
-Apply changes to the following files to enable displaying CDS data in the application.
+Apply changes to the following files to enable displaying Common Data Service data in the application.
 
 ### \wwwroot\appsettings.json
 
@@ -193,7 +193,7 @@ You will find that this file already has configuration information generated by 
 }
 ```
 
-Update the file to include a new `CDSWebAPI` section that includes the root of the **Instance Web API Service Root URL** you copied in the [Get the CDS Web API URI](#get-the-cds-web-api-uri) step.
+Update the file to include a new `CDSWebAPI` section that includes the root of the **Instance Web API Service Root URL** you copied in the [Get the Common Data Service Web API URI](#get-the-cds-web-api-uri) step.
 
 > [!NOTE]
 > You don’t need the full URL, just the root.
@@ -245,7 +245,7 @@ Update the file to include a new `CDSWebAPI` section that includes the root of t
 1. Add the following code below the line that starts with `builder.Configuration.Bind("AzureAd" ...`
 
     ```csharp
-    // Add access to CDS to the scope of the access token when the user signs in
+    // Add access to Common Data Service to the scope of the access token when the user signs in
     options.ProviderOptions.DefaultAccessTokenScopes.Add($"{resourceUrl}/user_impersonation");
     ```
 
@@ -462,7 +462,7 @@ This code does the following:
 
 1. Ensures that only authenticated users can view the page with data.
 1. Defines a table to display Account data after it is retrieved.
-1. Requests an accesstoken and then uses that token with an HttpRequestMessage to retrieve data from CDS.
+1. Requests an accesstoken and then uses that token with an HttpRequestMessage to retrieve data from Common Data Service.
 1. Defines classes to enable strongly typed data when the JSON returned from the service is deserialized.
 
 ### \Shared\NavMenu.razor
@@ -484,7 +484,7 @@ Add this node where ever you like within the `<ul class="nav flex-column">` elem
 In Visual Studio, press F5 to launch the app with the code changes.
 
 1. Before logging in, navigate to **Fetch Accounts**. You should expect to see the failure notification.
-1. Log-in as a user who has access to the CDS data.
+1. Log-in as a user who has access to the Common Data Service data.
 
     > [!NOTE]
     > If you did not grant admin consent in [Step 3: Grant API permissions](#step-3-grant-api-permissions), users can expect to see a dialog like this:
@@ -500,6 +500,6 @@ In Visual Studio, press F5 to launch the app with the code changes.
 ### See also
 
 [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
-[Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)<br />
+[Walkthrough: Register an app with Azure Active Directory](tutorial-register-app-azure-active-directory.md)<br />
 [Use OAuth with Common Data Service](authenticate-oauth.md)<br />
 [Use the Common Data Service Web API](webapi/overview.md)
