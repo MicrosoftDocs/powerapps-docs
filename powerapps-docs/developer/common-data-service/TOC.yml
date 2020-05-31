@@ -408,7 +408,9 @@
     - name: Office365 authentication with WS-Trust
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
-    href: walkthrough-register-app-azure-active-directory.md      
+    href: walkthrough-register-app-azure-active-directory.md
+  - name: "Walkthrough: Create an ASP.NET Core Blazor WebAssembly App"
+    href: walkthrough-blazor-webassembly-single-tenant.md
   - name: Build web applications using Server-to-Server (S2S) authentication
     href: build-web-applications-server-server-s2s-authentication.md
     items:
