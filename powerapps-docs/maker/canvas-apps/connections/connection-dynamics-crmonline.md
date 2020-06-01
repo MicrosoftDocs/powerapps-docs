@@ -17,7 +17,7 @@ search.app:
 # Connect to Dynamics 365 from Power Apps
 
 > [!IMPORTANT]
-> The Dynamics 365 Connector is deprecated. For more information see [Dynamics 365 Connector is deprecated](/power-platform/important-changes-coming#dynamics-365-connector-is-deprecated).
-> 
-> Use the [Common Data Service connector](connection-common-data-service.md) when connecting to the Common Data Service used for Dynamics 365 (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation)
-
+> The Dynamics 365 connector is deprecated. For more information, see [Dynamics 365 connector deprecation announcement](/power-platform/important-changes-coming#dynamics-365-connector-is-deprecated).
+>
+> - Use the [Common Data Service connector](connection-common-data-service.md) when connecting to the Common Data Service used for Microsoft Dynamics 365 Sales, Microsoft Dynamics 365 Customer Service, Microsoft Dynamics 365 Field Service, Microsoft Dynamics 365 Marketing, and Microsoft Dynamics 365 Project Service Automation. 
+> - To convert your app that uses the deprecated Dynamics 365 connector, go to [Converting canvas apps with the Dynamics 365 connector](../use-native-cds-connector.md#converting-canvas-apps-with-the-dynamics-365-connector).
