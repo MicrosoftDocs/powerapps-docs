@@ -331,9 +331,9 @@
             items:
             - name: Geospatial components
               href: ./canvas-apps/geospatial-overview.md
-            - name: Insert Azure maps
+            - name: Insert interactive maps
               href: ./canvas-apps/geospatial-component-map.md
-            - name: Insert address lookup
+            - name: Use address lookup
               href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
