@@ -223,8 +223,6 @@
                 href: canvas-apps/use-native-cds-connector.md
             - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
-            - name: Dynamics 365
-              href: canvas-apps/connections/connection-dynamics-crmonline.md
             - name: Dynamics AX
               href: canvas-apps/connections/connection-dynamicsax.md
             - name: Excel
@@ -1123,7 +1121,7 @@
           href: ./model-driven-apps/faqs-timeline-control.md           
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
-        - name: Additional controls for Dynamics 365 for phones and tablets
+        - name: Custom controls available
           href: ./model-driven-apps/additional-controls-for-dynamics-365-for-phones-and-tablets.md
         - name: Timer control overview
           href: ./model-driven-apps/timer-control-legacy.md
@@ -1146,8 +1144,6 @@
         href: ./model-driven-apps/rdl-sandboxing.md 
       - name: Use Power BI
         href: ./model-driven-apps/use-power-bi.md 
-      - name: Customize Power BI content packs
-        href: ./model-driven-apps/customize-power-bi-content-packs.md
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
@@ -1485,8 +1481,6 @@
       href: ./common-data-service/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer
       href: ./common-data-service/define-alternate-keys-solution-explorer.md
-    - name: "View entity data in Power BI Desktop (Preview)"
-      href: ./common-data-service/view-entity-data-power-bi.md
     - name: "How to guides: Entity"
       items:
       - name: How to create entities using Power Apps portal
@@ -1648,10 +1642,16 @@
       href: ./common-data-service/data-platform-complex-entities.md
     - name: Restricted entities requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
+  - name: Use Power BI with Common Data Service
+    items: 
+    - name: Overview
+      href: ./common-data-service/use-powerbi-with-cds.md
+    - name: Create a Power BI report
+      href: ./common-data-service/data-platform-powerbi-connector.md
+    - name: View entity data in Power BI Desktop
+      href: ./common-data-service/view-entity-data-power-bi.md  
   - name: SharePoint, OneNote, and OneDrive integration
     href: ./common-data-service/sharepoint-onedrive-onenote-intro.md
-  - name: Create a Power BI report
-    href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Translate customized entity and field text
     href: ./common-data-service/export-customized-entity-field-text-translation.md
   - name: Import translated entity and field text
