@@ -1,7 +1,7 @@
 ---
 title: "Add, configure, move, or delete fields on a form | MicrosoftDocs"
 ms.custom: ""
-ms.date: 08/26/2019
+ms.date: 05/04/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -73,6 +73,9 @@ These are the properties available to configure a field when you create or edite
 |**Display options** | **Hide field** | When selected, the field is hidden by default and can be shown using code. |
 |**Display options** | **Hide on phone** | The field can be hidden to render a condensed version of the form on phone screens. |
 |**Formatting** | **Field width** |  When the section containing the fields has more than one column you can set the field to occupy up to the number of columns that the section has. |
+
+[!NOTE] 
+> In the Unified Interface, the label size setting is ignored because the form adjusts width for all fields to ensure proper rendering for screen sizes from very small to extra-large.
 
 ## Move fields on a form
 You can move a field on a form using drag and drop or cut and paste actions. 

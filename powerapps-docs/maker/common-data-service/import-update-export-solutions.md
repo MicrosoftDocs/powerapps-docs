@@ -2,16 +2,10 @@
 title: "Import solutions | MicrosoftDocs"
 description: "Learn how to import a solution in Power Apps"
 ms.custom: ""
-ms.date: 01/30/2020
+ms.date: 05/11/2020
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "Mattp123"
 ms.assetid: 56363ea3-ea76-4311-9b7a-b71675e446fb
 caps.latest.revision: 57
@@ -26,7 +20,10 @@ search.app:
 # Import solutions 
 
  You can import solutions manually using the steps below. Only import solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources.   
-  
+ 
+> [!NOTE]
+> To import a solution that includes a plug-in assembly, the **Create** privilege on the **Plug-In Assembly** entity is required. By default, the System Administrator security role has this privilege, but the System Customizer security role doesn’t. 
+ 
 1.  Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
   
 2.  On the command bar, select **Import**.  

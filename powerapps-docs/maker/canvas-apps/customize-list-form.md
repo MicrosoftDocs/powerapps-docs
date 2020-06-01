@@ -22,7 +22,7 @@ To follow the steps in this topic, you'll create a simple list so that you can s
 
 > [!NOTE]
 > - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md). 
-> - Custom forms for lists are only supported in generic lists. Support for generic document libraries is coming soon. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
+> - Custom forms for lists are only supported in generic lists and generic document libraries. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 > - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
 
 ## Create a list

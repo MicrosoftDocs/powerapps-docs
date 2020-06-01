@@ -23,7 +23,9 @@ Use the advanced filter options to create a personal view to see the records tha
 
 
 > [!NOTE]
-> The advanced filter option is available only in English language versions.
+> - The advanced filter option is available only in English language versions. We plan to support more languages in future releases.
+> - The advanced filter option on the Queues entity does not work and displays this error messsage: We are unable to display the filter conditions for this view.
+> - In the Unified Interface grids do not prepopulate column filters based on the current view definition.
 
 When you create and save a personal view, it appears in your list of personal views under **My Views**.
 

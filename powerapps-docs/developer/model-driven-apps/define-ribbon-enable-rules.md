@@ -2,7 +2,7 @@
 title: "Define ribbon enable rules (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about defining specific rules to control when the ribbon elements are enabled during configuration of ribbon elements." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 02/08/2019
+ms.date: 05/07/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 201f5db9-be65-7c3b-8202-822d78338bd6
@@ -65,7 +65,7 @@ Uses the  `<CrmClientTypeRule>` element to allow definition of rules depending o
 -   `CrmForOutlookOfflineAccess`  
 
 ### Custom Rule
- Uses the `<CustomRule>` element. Use this kind of rule to call a function in a JavaScript library that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
+ Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [Script (JScript) web resource](/powerapps/developer/model-driven-apps/script-jscript-web-resources) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
 
 ```JavaScript
 function EnableRule()

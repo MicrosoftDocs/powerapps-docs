@@ -32,7 +32,7 @@ When you write your change definitions, you will frequently need to reference th
 
 Because of this requirement to reference the definitions of existing ribbon elements, it is very important to understand the current ribbon definitions in your organization. There are two messages you can use to export XML files representing the current state of your ribbons. These definitions include any customizations that have already been applied to your system so that you can customize any custom ribbons that were previously applied. For more information, see [Export Ribbon Definitions](export-ribbon-definitions.md).  
 
-To help you get started, you can download the default ribbon definitions for MDA from [Microsoft Downloads: ExportedRibbonXml.zip](https://download.microsoft.com/download/C/2/A/C2A79C47-DD2D-4938-A595-092CAFF32D6B/ExportedRibbonXml.zip). The ExportedRibbonXml.zip file includes the output files you would have for an organization with a ribbon that has not been customized. You don’t need to run the sample application to export this data. If you have a customized ribbon, you should run the sample application to refresh the files in this folder with any customizations previously applied for your organization.  
+To help you get started, you can download the default ribbon definitions for model-driven apps from [Export Ribbon Definitions sample](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ExportRibbonDefinitions). `The ExportedRibbonXml` file includes the output files you would have for an organization.  
 
 Within the exported ribbon XML files, the applicationRibbon.xml file includes all the ribbons that are not defined for a specific entity. These correspond to the **Application Ribbons** solution component. For each entity, you will find an *entity name*ribbon.xml file. This corresponds to the `RibbonDiffXml` that is included in each entity. If you want to edit the ribbon for a specific entity, you should locate the ribbon XML file for that entity.  
 
@@ -131,7 +131,7 @@ All entities use a common ribbon definition called the *Entity Ribbon Template*.
 
 <a name="BKMK_BasicHomeTab"></a>   
 ## Basic home tab  
- The basic home tab is displayed on the main application ribbon whenever an alternative tab is not defined because of entity context or a display rule that suppresses it for specific pages. For example, this tab is displayed when you view the MDA**Help**. The Id of the basic home tab is `Mscrm.BasicHomeTab`.  
+ The basic home tab is displayed on the main application ribbon whenever an alternative tab is not defined because of entity context or a display rule that suppresses it for specific pages. For example, this tab is displayed when you view the model-driven apps **Help**. The Id of the basic home tab is `Mscrm.BasicHomeTab`.  
 
 <!-- [!NOTE]-->
 <!-- >  The Jewel that was shown in [!INCLUDE[pn_crm2011_and_online](../../includes/pn-crm2011-and-online.md)] is no longer displayed. Changes to the Jewel will not appear in [!INCLUDE[pn_dynamics_crm_online](../../includes/pn-dynamics-crm-online.md)]  -->
@@ -148,7 +148,7 @@ All entities use a common ribbon definition called the *Entity Ribbon Template*.
 
 <a name="other_ribbons"></a>   
 ## Other ribbons  
- Several other special purpose ribbon tabs and a contextual group are defined by MDA.
+ Several other special purpose ribbon tabs and a contextual group are defined by model-driven apps.
  Each tab is associated with a specific `<TabDisplayRule>` that controls when they will display. The following table lists these tabs.  
 
 
