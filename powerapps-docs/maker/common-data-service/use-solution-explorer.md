@@ -70,7 +70,7 @@ With solutions that are unmanaged or the default one, you can use the **New** or
 > You can't add components to a managed solution. When you try to, you’ll see the following message:<br/>
 `"You cannot directly edit the components within a managed solution. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable."`
 
-## View dependencies for a component
+<!-- ## View dependencies for a component
 
 
 
@@ -78,7 +78,7 @@ With solutions that are unmanaged or the default one, you can use the **New** or
 2. Open the solution you want, select the component you want, on the command bar select **...,** and then select **Show dependencies**. 
 
    > [!div class="mx-imgBorder"] 
-   > ![Component dependency for the account entity](media/component-dependencies-account.png)
+   > ![Component dependency for the account entity](media/component-dependencies-account.png)  -->
 
 ## Known limitations
 

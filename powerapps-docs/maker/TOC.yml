@@ -1619,7 +1619,9 @@
         - name: View solution layers
           href: ./common-data-service/solution-layers.md
         - name: View solution history
-          href: ./common-data-service/solution-history.md      
+          href: ./common-data-service/solution-history.md
+        - name: View solution component dependencies
+          href: ./common-data-service/view-component-dependencies.md             
         - name: Set managed properties in metadata
           href: ./common-data-service/set-managed-properties-metadata.md
         - name: "Advanced topics"
