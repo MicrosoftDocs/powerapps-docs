@@ -327,6 +327,14 @@
               href: ./canvas-apps/mixed-reality-component-view-mr.md
             - name: Measure in mixed reality
               href: ./canvas-apps/mixed-reality-component-measure-distance.md
+          - name: "Add geospatial components (Preview)"
+            items:
+            - name: Geospatial components
+              href: ./canvas-apps/geospatial-overview.md
+            - name: Insert interactive maps
+              href: ./canvas-apps/geospatial-component-map.md
+            - name: Use address lookup
+              href: ./canvas-apps/geospatial-component-input-address.md
           - name: Add Power BI data
             href: ./canvas-apps/powerapps-custom-visual.md
           - name: Working with gallery
