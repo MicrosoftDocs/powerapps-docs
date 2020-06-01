@@ -17,13 +17,13 @@ search.app:
 
 # Address input component
 
-Easily bring dynamic mapping capabilities into your canvas apps. View the physical position of entities by linking to a data source, or by inputting new physical locations. Customize your map view by changing its default location and adding map components. Pan, tilt, zoom, and drag to center your map view.
+Entering addresses is frustrating and error prone, particularly in mobile scenarios. With the new address input component, you can see dynamic address suggestions as you type. Using fuzzy matching logic, the component suggests multiple potential address matches that the user can select â€“ making it quicker and easier to enter accurate addresses.
 
+The component returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude, in a format friendly to many locales and international address formats.
 
+To use the component, you need to [enable the geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment) as well as [enable the geospatial features for each app](geospatial-overview.md#enable-the-geospatial-features-for-each-app) that you want to use it in.
 
-
-To use the component, you should [review the prerequisites](geospatial-overview.md#prerequisites).
-
+Make sure to also [review the prerequisites for using geospatial components](geospatial-overview.md#prerequisites).
 
 ## Use the component
 
@@ -37,7 +37,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 3. Select the component **Address input (preview)** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
-4. Select **Allow** on the prompt that asks to know your location
+4. (Optional) Select **Allow** on the prompt that asks to know your location. This enables the component to bias results by the user's current location.
 
     ![Allow highlighted on the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted on the window that asks to know your location")
 
@@ -53,108 +53,97 @@ Some properties are only available in the **Advanced** tab, under the **More opt
 
 Property | Description | Type | Location
 - | - | - | -
-Data source(Items) | Data source (table) that lists a pre-defined set of longitudes and latitudes to display as map pin on the map when it's loaded. Map each of the columns in your data with the *ItemsLongitudes*, *ItemsLatitudes*, and *ItemLabels*. | Not applicable | Properties
-Transparency | Set the transparency of the map. | Percentage | Properties
-Visible | Whether the map should show or not. | Boolean | Properties
-Position | Location of the map component (top left corner) on the app's screen, in pixels from the top left corner of the app screen. | Pixels | Properties
-Size | The size of the map component on the app's screen. | Pixels | Properties
-Use custom location | Whether the map initializes at a custom location set by the user or not. | Boolean | Properties
-Custom longitude | Longitude at which the map would go to when it's loaded if **Use custom location** is enabled. | Floating point number | Properties
-Custom latitude | Latitude at which the map would go to when it's loaded if **Use custom location** is enabled. | Floating point number | Properties
-Custom zoom level | Zoom level at which the map would be set to when it's loaded if **Use custom location** is enabled. | Integer | Properties
-Satellite view | Whether the style of the map is a satellite view or a road view. | Boolean | Properties
-Cluster pins | Whether the map pins are clustered or not. | Boolean | Properties
-Zoom control | Whether the zoom component appears on the map or not. | Boolean | Properties
-Compass control | Whether the compass component appears on the map or not. | Boolean | Properties
-Pitch control | Whether the pitch component appears on the map or not. | Boolean | Properties
-Maximum map pins | Maximum number of pins displayed on the map | Integer | Properties
-Border radius | How curved the corners of the map component should appear; higher numbers result in a more distinct curve. | Integer | Properties
-Border | Style, thickness, and color of the border. | Multiple | Properties
-Tab index | Order in which items on the app screen be tabbed between. | Integer | Properties
-ItemsLabels | A column in Items with the strings you want to use as labels for the pins. | TableName.ColumnName | Advanced
-ItemsLongitudes | Name of the column in the table in your data source with floating-point numbers that represent the longitude position of the pins. | TableName.ColumnName | Advanced
-ItemsLatitudes | Name of the column in the table in your data source with floating-point numbers that represent the latitude position of the pins. | TableName.ColumnName | Advanced
-Items_Items | Name of the table in your data source that contains all the records that you want to plot in the map using pins. Each row must have an entry for the label, longitude, and latitude for each row. | TableName | Advanced
-
-
+Enable autofill | Whether the component gives address suggestions. | Boolean | Properties
+Search result limit | The number of suggested addresses the component displays. | Integer | Properties
+Search within radius | Whether the component should suggest addresses within the user-defined **Radius** of the **Latitude** and **Longitude**. | Boolean | Properties
+Latitude | The latitude of the center point used to geobias address suggestions. Requires **Search within radius** to be on. | Decimal between -180 and 180 | Properties
+Longitude | The longitude of the center point used to geobias address suggestions. Requires **Search within radius** to be on. | Decimal between -180 and 180 | Properties
+Radius | The radius in meters around the **Latitude** and **Longitude** to constrain the address suggestions. Requires **Search within radius** to be on. | Decimal | Properties
+Language | The language the address suggestions are returned in | String | Properties
+Country set | Comma separate list of countries to constrain the address suggestions to, in ISO 3166 alpha-2 country codes - for example "US, FR, KW". | String | Properties
 
 ### Additional properties
 
-**[BorderColor](./controls/properties-color-border.md)** – The color of a control's border.
+**[Default](properties-core.md)** â€“ The initial value of a control before it is changed by the user.
 
-**[BorderStyle](./controls/properties-color-border.md)** – Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
+**[Text](properties-core.md)** â€“ Text that appears on a control or that the user types into a control.
 
-**[BorderThickness](./controls/properties-color-border.md)** – The thickness of a control's border.
+**[BorderColor](properties-color-border.md)** â€“ The color of a control's border.
 
-**[Color](./controls/properties-color-border.md)** – The color of text in a control.
+**BorderRadius** â€“ The radius of a control's border.
 
-**[DisplayMode](./controls/properties-core.md)** – Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
+**[BorderStyle](properties-color-border.md)** â€“ Whether a control's border is **Solid**, **Dashed**, **Dotted**, or **None**.
 
-**[DisabledBorderColor](./controls/properties-color-border.md)** – The color of a control's border if the control's **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
+**[BorderThickness](properties-color-border.md)** â€“ The thickness of a control's border.
 
-**[DisabledColor](./controls/properties-color-border.md)** – The color of text in a control if its **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
+**[Color](properties-color-border.md)** â€“ The color of text in a control.
 
-**[DisabledFill](./controls/properties-color-border.md)** – The background color of a control if its **[DisplayMode](./controls/properties-core.md)** property is set to **Disabled**.
+**[DisplayMode](properties-core.md)** â€“ Whether the control allows user input (**Edit**), only displays data (**View**), or is disabled (**Disabled**).
 
-**[FillColor](./controls/properties-color-border.md)** – The background color of a control.
+**[DisabledBorderColor](properties-color-border.md)** â€“ The color of a control's border if the control's **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[Font](./controls/properties-text.md)** – The name of the family of fonts in which text appears.
+**[DisabledColor](properties-color-border.md)** â€“ The color of text in a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[FontStyle](./controls/properties-text.md)** – The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.
+**[DisabledFill](properties-color-border.md)** â€“ The background color of a control if its **[DisplayMode](properties-core.md)** property is set to **Disabled**.
 
-**[FontSize](./controls/properties-text.md)** – The font size of the text that appears on a control.
+**[Fill](properties-color-border.md)** â€“ The background color of a control.
 
-**[FontWeight](./controls/properties-text.md)** – The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**
+**[FocusedBorderColor](properties-color-border.md)** â€“ The color of a control's border when the control is focused.
 
-**[Height](./controls/properties-size-location.md)** – The distance between a control's top and bottom edges.
+**[FocusedBorderThickness](properties-color-border.md)** â€“ The thickness of a control's border when the control is focused.
 
-**[HoverBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user keeps the mouse pointer on that control.
+**[Font](properties-text.md)** â€“ The name of the family of fonts in which text appears.
 
-**[HoverColor](./controls/properties-color-border.md)** – The color of the text in a control when the user keeps the mouse pointer on it.
+**[FontWeight](properties-text.md)** â€“ The weight of the text in a control: **Bold**, **Semibold**, **Normal**, or **Lighter**.
 
-**[HoverFill](./controls/properties-color-border.md)** – The background color of a control when the user keeps the mouse pointer on it.
+**[Height](properties-size-location.md)** â€“ The distance between a control's top and bottom edges.
 
-**[PaddingBottom](./controls/properties-size-location.md)** – The distance between text in a control and the bottom edge of that control.
+**HintText** â€“ Light-grey text that appears in an input-text control if it's empty.
 
-**[PaddingLeft](./controls/properties-size-location.md)** – The distance between text in a control and the left edge of that control.
+**[HoverBorderColor](properties-color-border.md)** â€“ The color of a control's border when the user keeps the mouse pointer on that control.
 
-**[PaddingRight](./controls/properties-size-location.md)** – The distance between text in a control and the right edge of that control.
+**[HoverColor](properties-color-border.md)** â€“ The color of the text in a control when the user keeps the mouse pointer on it.
 
-**[PaddingTop](./controls/properties-size-location.md)** – The distance between text in a control and the top edge of that control.
+**[HoverFill](properties-color-border.md)** â€“ The background color of a control when the user keeps the mouse pointer on it.
 
-**[PressedBorderColor](./controls/properties-color-border.md)** – The color of a control's border when the user taps or clicks that control.
+**[Italic](properties-text.md)** â€“ Whether the text in a control is italic.
 
-**[PressedColor](./controls/properties-color-border.md)** – The color of text in a control when the user taps or clicks that control.
+**[LineHeight](properties-text.md)** â€“ The distance between, for example, lines of text or items in a list.
 
-**[PressedFill](./controls/properties-color-border.md)** – The background color of a control when the user taps or clicks that control.
+**[OnChange](properties-core.md)** â€“ How the app responds when the user changes the value of a control (for example, by adjusting a slider).
 
-**[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
+**[PaddingBottom](properties-size-location.md)** â€“ The distance between text in a control and the bottom edge of that control.
 
-**[TextAlignment](./controls/properties-text.md)** – The alignment of the text: **Center**, **Left**, **Right**, or **Justify**
+**[PaddingLeft](properties-size-location.md)** â€“ The distance between text in a control and the left edge of that control.
 
-**[Tooltip](./controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
+**[PaddingRight](properties-size-location.md)** â€“ The distance between text in a control and the right edge of that control.
 
-**[VerticalAlign](./controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**
+**[PaddingTop](properties-size-location.md)** â€“ The distance between text in a control and the top edge of that control.
 
-**[Visible](./controls/properties-core.md)** – Whether a control appears or is hidden.
+**[PressedBorderColor](properties-color-border.md)** â€“ The color of a control's border when the user taps or clicks that control.
 
-**[Width](./controls/properties-size-location.md)** – The distance between a control's left and right edges.
+**[PressedColor](properties-color-border.md)** â€“ The color of text in a control when the user taps or clicks that control.
 
-**[X](./controls/properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (or the screen if there's no parent container).
+**[PressedFill](properties-color-border.md)** â€“ The background color of a control when the user taps or clicks that control.
 
-**[Y](./controls/properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (or the screen if there's no parent container).
+**[Size](properties-text.md)** â€“ The font size of the text that appears on a control.
 
+**[Strikethrough](properties-text.md)** â€“ Whether a line appears through the text that appears on a control.
 
-## Known issues
+**[TabIndex](properties-accessibility.md)** â€“ Keyboard navigation order in relation to other controls.
 
-- Localization is not yet supported.
-- Model-driven apps are not yet supported.
+**[Tooltip](properties-core.md)** â€“ Explanatory text that appears when the user hovers over a control.
 
+**[Underline](properties-text.md)** â€“ Whether a line appears under the text that appears on a control.
 
+**[Visible](properties-core.md)** â€“ Whether a control appears or is hidden.
 
+**[Width](properties-size-location.md)** â€“ The distance between a control's left and right edges.
+
+**[X](properties-size-location.md)** â€“ The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+
+**[Y](properties-size-location.md)** â€“ The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
 
 ## Other geospatial components
-- [Map](geospatial-component-map.md)
 
-## Next steps
-Explore [example AR apps](augmented-reality-example-apps.md) and see what sorts of scenarios AR controls can help solve
+- Visualize and interpret location data with the **[Interactive map](geospatial-component-map.md)** component.
