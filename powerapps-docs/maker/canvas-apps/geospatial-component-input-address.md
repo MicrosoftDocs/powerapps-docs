@@ -18,7 +18,7 @@ ms.custom: ceX
 
 # Address input component
 
-Entering addresses is frustrating and error prone, particularly in mobile scenarios. 
+Entering addresses can be frustrating and error prone, particularly in mobile scenarios. 
 
 The address input component lets you see dynamic address suggestions as you type. Using fuzzy matching logic, the component suggests multiple potential address matches that the user can select – making it quicker and easier to enter accurate addresses.
 
