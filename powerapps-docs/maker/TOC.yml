@@ -1,4 +1,4 @@
-- name: Get started
+- name: Get started   
   items:
   - name: What is Power Apps?
     href: ../powerapps-overview.md
@@ -9,7 +9,7 @@
   - name: "What's new?"
     href: ../whats-new.md
   - name: "Learning catalog"
-    items:
+    items: 
     - name: "Learning catalog"
       href: ../learning-catalog/get-started.md
     - name: Business Decision Maker
@@ -37,13 +37,13 @@
     href: ../user/open-app-embedded-in-teams.md
   - name: From AppSource
     href: ../user/app-source.md
-  - name: 'Use model-driven apps'
+  - name: 'Use model-driven apps'    
     items:
     - name: Overview
       href: ../user/use-model-driven-apps.md
     - name: Unified Interface
       href: ../user/unified-interface.md
-    - name: Navigation and basics
+    - name: Navigation and basics      
       items:
       - name: Basic navigation
         href: ../user/navigation.md
@@ -79,13 +79,13 @@
         href: ../user/assign-or-share-records.md
       - name: Share records using Access Team
         href: ../user/Access-team.md
-      - name: Add a connection role
+      - name: Add a connection role 
         href: ../user/add-connection-role.md
       - name: Deactivate accounts or contacts
         href: ../user/deactivate-activate-account-contact.md
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
-      - name: Add Power BI dashboards
+      - name: Add Power BI dashboards 
         href: ../user/add-powerbi-dashboards.md
     - name: Work with email
       items:
@@ -101,11 +101,11 @@
         href: ../user/unresolved-email-recipient.md
     - name: Collaboration
       items:
-      - name: Use OneDrive for Business
+      - name: Use OneDrive for Business     
         href: ../user/one-drive.md
-      - name: Take notes by using OneNote
-        href: ../user/onenote.md
-      - name: Collaborate using SharePoint
+      - name: Take notes by using OneNote      
+        href: ../user/onenote.md  
+      - name: Collaborate using SharePoint  
         href: ../user/collaborate-using-sharepoint.md
     - name: Search records
       items:
@@ -144,7 +144,7 @@
       - name: Edit the default filter of a report
         href: ../user/edit-report-filter.md
       - name: Troubleshoot reports
-        href: ../user/troubleshoot-reports.md
+        href: ../user/troubleshoot-reports.md   
     - name: Automate processes
       items:
       - name: Work with business processes
@@ -178,7 +178,7 @@
     - name: Help Desk app
       href: ./canvas-apps/help-desk-install.md
     - name: Meeting Capture app
-      href: ./canvas-apps/sample-meeting-capture.md
+      href: ./canvas-apps/sample-meeting-capture.md    
   - name: Create your first app
     items:
     - name: 1 - Create an app from a template
@@ -223,8 +223,6 @@
                 href: canvas-apps/use-native-cds-connector.md
             - name: Cloud storage
               href: canvas-apps/connections/cloud-storage-blob-connections.md
-            - name: Dynamics 365
-              href: canvas-apps/connections/connection-dynamics-crmonline.md
             - name: Dynamics AX
               href: canvas-apps/connections/connection-dynamicsax.md
             - name: Excel
@@ -244,7 +242,7 @@
             - name: SQL Server
               href: canvas-apps/connections/connection-azure-sqldatabase.md
             - name: Twitter
-              href: canvas-apps/connections/connection-twitter.md
+              href: canvas-apps/connections/connection-twitter.md 
         - name: Add a connection
           href: ./canvas-apps/add-data-connection.md
         - name: Manage connections
@@ -306,7 +304,7 @@
             - name: Understand form layout
               href: ./canvas-apps/working-with-form-layout.md
             - name: Understand cards
-              href: ./canvas-apps/working-with-cards.md
+              href: ./canvas-apps/working-with-cards.md              
           - name: Add a list
             items:
             - name: Add a list box, a drop-down list, or radio buttons
@@ -464,7 +462,7 @@
         - name: Add a flow
           href: ./canvas-apps/using-logic-flows.md
         - name: Create a rule in canvas apps
-          href: ./canvas-apps/working-with-rules.md
+          href: ./canvas-apps/working-with-rules.md  
         - name: Formula reference
           items:
           - name: Overview
@@ -614,7 +612,7 @@
           - name: IsEmpty
             href: ./canvas-apps/functions/function-isblank-isempty.md
           - name: IsError
-            href: ./canvas-apps/functions/function-iferror.md
+            href: ./canvas-apps/functions/function-iferror.md            
           - name: IsMatch
             href: ./canvas-apps/functions/function-ismatch.md
           - name: IsNumeric
@@ -806,7 +804,7 @@
           - name: Weekday
             href: ./canvas-apps/functions/function-datetime-parts.md
           - name: With
-            href: ./canvas-apps/functions/function-with.md
+            href: ./canvas-apps/functions/function-with.md            
           - name: Year
             href: ./canvas-apps/functions/function-datetime-parts.md
       - name: Create an app in a solution
@@ -943,7 +941,7 @@
           href: ./canvas-apps/component-behavior.md
     - name: Embed canvas apps in your applications
       href: ./canvas-apps/embedding-sdk.md
-- name: Model-driven apps
+- name: Model-driven apps  
   items:
   - name: What are model-driven apps?
     href: ./model-driven-apps/model-driven-app-overview.md
@@ -976,7 +974,7 @@
         - name: Add or edit app components
           href: ./model-driven-apps/add-edit-app-components.md
         - name: Add an entity as a lookup
-          href: ./model-driven-apps/team-entity-lookup.md
+          href: ./model-driven-apps/team-entity-lookup.md          
       - name: Work with forms
         href: ./model-driven-apps/create-design-forms.md
         items:
@@ -992,9 +990,9 @@
           - name: "Add, move or delete sections"
             href: ./model-driven-apps/add-move-or-delete-sections-on-form.md
           - name: "Add, move or delete tabs"
-            href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md
+            href: ./model-driven-apps/add-move-or-delete-tabs-on-form.md            
           - name: "Configure header properties"
-            href: ./model-driven-apps/form-designer-header-properties.md
+            href: ./model-driven-apps/form-designer-header-properties.md  
           - name: "Add and configure sub-grid component"
             href: ./model-driven-apps/form-designer-add-configure-subgrid.md
           - name: "Add and configure quick view component"
@@ -1002,7 +1000,7 @@
           - name: "Configure lookup component"
             href: ./model-driven-apps/form-designer-add-configure-lookup.md
           - name: "Using the tree view"
-            href: ./model-driven-apps/using-tree-view-on-form.md
+            href: ./model-driven-apps/using-tree-view-on-form.md  
         - name: Type of forms
           href: ./model-driven-apps/types-forms.md
           items:
@@ -1059,7 +1057,7 @@
           - name: How to disable auto-save in a form
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
-            href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+            href: ./model-driven-apps/add-documents-tab-entity-main-form.md            
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
@@ -1128,7 +1126,7 @@
         - name: Set up timeline control
           href: ./model-driven-apps/set-up-timeline-control.md
         - name: FAQs for timeline control
-          href: ./model-driven-apps/faqs-timeline-control.md
+          href: ./model-driven-apps/faqs-timeline-control.md           
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
         - name: Custom controls available
@@ -1146,16 +1144,14 @@
     - name: Create guided help for your app
       href: ./common-data-service/create-custom-help-pages.md
     - name: Add reporting to your app
-      href: ./model-driven-apps/add-reporting-to-app.md
-      items:
-      - name: Report considerations
-        href: ./model-driven-apps/reporting-considerations.md
+      href: ./model-driven-apps/add-reporting-to-app.md    
+      items: 
+      - name: Report considerations 
+        href: ./model-driven-apps/reporting-considerations.md  
       - name: RDL sandboxing
-        href: ./model-driven-apps/rdl-sandboxing.md
+        href: ./model-driven-apps/rdl-sandboxing.md 
       - name: Use Power BI
-        href: ./model-driven-apps/use-power-bi.md
-      - name: Create Power BI reports
-        href: ./model-driven-apps/customize-power-bi-content-packs.md
+        href: ./model-driven-apps/use-power-bi.md 
   - name: Validate and publish an app
     href: ./model-driven-apps/validate-app.md
   - name: Share an app
@@ -1182,15 +1178,15 @@
     - name: Distribute an app using solutions
       href: ./model-driven-apps/distribute-model-driven-app.md
     - name: Enable customizable help
-      href: ./model-driven-apps/use-customizable-help.md
+      href: ./model-driven-apps/use-customizable-help.md  
     - name: Create guided help
-      href: ./model-driven-apps/create-guided-help-learning-path.md
+      href: ./model-driven-apps/create-guided-help-learning-path.md      
   - name: Transition to Unified Interface
-    items:
+    items: 
     - name: Transition quick start
       href: ./model-driven-apps/transition-web-app.md
     - name: Use an existing environment to transition quick start
-      href: ./model-driven-apps/transition-web-app-existing.md
+      href: ./model-driven-apps/transition-web-app-existing.md  
     - name: Unified Interface Playbook
       href: ./model-driven-apps/unified-interface-playbook.md
     - name: Approaching a Unified Interface transition
@@ -1198,7 +1194,7 @@
     - name: "Checklist: Unified Interface transition"
       href: ./model-driven-apps/checklist-transition-unified-interface.md
     - name: "FAQs: Unified Interface transition"
-      href: ./model-driven-apps/faqs-transition-unified-interface.md
+      href: ./model-driven-apps/faqs-transition-unified-interface.md    
   - name: Accessibility in Power Apps app designer
     href: ./model-driven-apps/Accessibility-app-designer-site-map-designer-my-apps-page.md
   - name: Customize Dynamics 365 App for Outlook
@@ -1302,15 +1298,15 @@
             - name: Set authentication identity
               href: ./portals/configure/set-authentication-identity.md
             - name: Azure AD B2C provider settings for portals
-              href: ./portals/configure/azure-ad-b2c.md
+              href: ./portals/configure/azure-ad-b2c.md 
             - name: Configure OAuth2 provider settings
-              href: ./portals/configure/configure-oauth2-settings.md
+              href: ./portals/configure/configure-oauth2-settings.md 
             - name: Configure OpenID provider settings
-              href: ./portals/configure/configure-openid-settings.md
+              href: ./portals/configure/configure-openid-settings.md 
             - name: Configure WS-Federation provider settings
-              href: ./portals/configure/configure-ws-federation-settings.md
+              href: ./portals/configure/configure-ws-federation-settings.md 
             - name: Configure SAML 2.0 provider settings
-              href: ./portals/configure/configure-saml2-settings.md
+              href: ./portals/configure/configure-saml2-settings.md 
             - name: Migrate identity providers to Azure AD B2C
               href: ./portals/configure/migrate-identity-providers.md
         - name: Search
@@ -1423,11 +1419,11 @@
                   href: ./portals/liquid/create-custom-template.md
                 - name: Use hybrid navigation to render page hierarchy
                   href: ./portals/liquid/hybrid-navigation-render-page-hierachy.md
-                - name: Render the entity list for a page
-                  href: ./portals/liquid/render-entity-list-current-page.md
-                - name: Render an RSS feed by using a custom page template
-                  href: ./portals/liquid/render-rss-custom-page-template.md
-                - name: Render a site header and primary navigation bar
+                - name: Render the entity list for a page 
+                  href: ./portals/liquid/render-entity-list-current-page.md 
+                - name: Render an RSS feed by using a custom page template   
+                  href: ./portals/liquid/render-rss-custom-page-template.md 
+                - name: Render a site header and primary navigation bar   
                   href: ./portals/liquid/render-site-header-primary-navigation.md
         - name: OAuth 2.0 implicit grant flow
           href: ./portals/oauth-implicit-grant-flow.md
@@ -1465,11 +1461,11 @@
       href: ./portals/faq.md
     - name: Legacy Adxstudio Portals v7 FAQ
       href: ./portals/legacy-portal-faq.md
-- name: Common Data Service
+- name: Common Data Service  
   items:
   - name: What is Common Data Service?
     href: ./common-data-service/data-platform-intro.md
-  - name: Work with entities
+  - name: Work with entities    
     items:
     - name: Entity overview
       href: ./common-data-service/entity-overview.md
@@ -1493,8 +1489,6 @@
       href: ./common-data-service/define-alternate-keys-portal.md
     - name: Define alternate keys using solution explorer
       href: ./common-data-service/define-alternate-keys-solution-explorer.md
-    - name: "View entity data in Power BI Desktop (Preview)"
-      href: ./common-data-service/view-entity-data-power-bi.md
     - name: "How to guides: Entity"
       items:
       - name: How to create entities using Power Apps portal
@@ -1568,7 +1562,7 @@
     - name: Global option sets overview
       href: ./common-data-service/create-edit-global-option-sets.md
     - name: Autonumber fields
-      href: ./common-data-service/autonumber-fields.md
+      href: ./common-data-service/autonumber-fields.md  
     - name: Set managed properties for fields
       href: ./common-data-service/set-managed-properties-for-field.md
     - name: Behavior and format of the Date and Time field
@@ -1608,16 +1602,16 @@
       - name: Solution publisher overview
         href: ./common-data-service/change-solution-publisher-prefix.md
       - name: Use segmented solutions
-        href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md
+        href: ./common-data-service/use-segmented-solutions-patches-simplify-updates.md      
       - name: Use solution checker
         href: ./common-data-service/use-powerapps-checker.md
-        items:
+        items: 
         - name: "Common issues and resolutions: solution checker"
           href: ./common-data-service/common-issues-resolutions-solution-checker.md
       - name: Best practices
-        href: ./common-data-service/solution-best-practices.md
+        href: ./common-data-service/solution-best-practices.md        
       - name: "How to"
-        items:
+        items:     
         - name: Create a solution
           href: ./common-data-service/create-solution.md
         - name: Update or upgrade solutions
@@ -1625,19 +1619,19 @@
         - name: Import solutions
           href: ./common-data-service/import-update-export-solutions.md
         - name: Export solutions
-          href: ./common-data-service/export-solutions.md
+          href: ./common-data-service/export-solutions.md               
         - name: Use environment variables
           href: ./common-data-service/EnvironmentVariables.md
         - name: View solution layers
           href: ./common-data-service/solution-layers.md
         - name: View solution history
-          href: ./common-data-service/solution-history.md
+          href: ./common-data-service/solution-history.md      
         - name: Set managed properties in metadata
           href: ./common-data-service/set-managed-properties-metadata.md
         - name: "Advanced topics"
           items:
           - name: Create solution patches
-            href: ./common-data-service/solution-patches.md
+            href: ./common-data-service/solution-patches.md  
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
@@ -1646,8 +1640,8 @@
     - name: Add data to an entity using Power Query
       href: ./common-data-service/data-platform-cds-newentity-pq.md
     - name: Connect Azure Data Lake for dataflow storage
-      href: ./common-data-service/connect-azure-data-lake-storage-for-dataflow.md
-    - name: Use an on-premises data gateway
+      href: ./common-data-service/connect-azure-data-lake-storage-for-dataflow.md      
+    - name: Use an on-premises data gateway      
       href: ./common-data-service/using-dataflows-with-on-premises-data.md
   - name: License requirements for entities
     href: ./common-data-service/data-platform-entity-licenses.md
@@ -1656,16 +1650,22 @@
       href: ./common-data-service/data-platform-complex-entities.md
     - name: Restricted entities requiring Dynamics 365 licenses
       href: ./common-data-service/data-platform-restricted-entities.md
+  - name: Use Power BI with Common Data Service
+    items: 
+    - name: Overview
+      href: ./common-data-service/use-powerbi-with-cds.md
+    - name: Create a Power BI report
+      href: ./common-data-service/data-platform-powerbi-connector.md
+    - name: View entity data in Power BI Desktop
+      href: ./common-data-service/view-entity-data-power-bi.md  
   - name: SharePoint, OneNote, and OneDrive integration
     href: ./common-data-service/sharepoint-onedrive-onenote-intro.md
-  - name: Create a Power BI report
-    href: ./common-data-service/data-platform-powerbi-connector.md
   - name: Translate customized entity and field text
     href: ./common-data-service/export-customized-entity-field-text-translation.md
   - name: Import translated entity and field text
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: Export to data lake
-    href: ./common-data-service/export-to-data-lake.md
+    href: ./common-data-service/export-to-data-lake.md    
   - name: Security in Common Data Service
     href: /power-platform/admin/wp-security
   - name: API limits overview
@@ -1704,7 +1704,7 @@
     - name: Portal for healthcare worker
       href: ../sample-apps/regional-emergency-response/portals-user.md
 - name: Learn from others
-  items:
+  items:  
   - name: Blog
     href: https://powerapps.microsoft.com/blog/
   - name: Forums
