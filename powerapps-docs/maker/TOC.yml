@@ -1599,9 +1599,7 @@
         href: ./common-data-service/use-powerapps-checker.md
         items: 
         - name: "Common issues and resolutions: solution checker"
-          href: ./common-data-service/common-issues-resolutions-solution-checker.md
-      - name: Best practices
-        href: ./common-data-service/solution-best-practices.md        
+          href: ./common-data-service/common-issues-resolutions-solution-checker.md  
       - name: "How to"
         items:     
         - name: Create a solution
