@@ -7,12 +7,14 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 3/19/2020
+ms.date: 6/01/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+ms.custom: ceX
+
 ---
 
 # Add geospatial components to your app

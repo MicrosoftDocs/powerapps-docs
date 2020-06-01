@@ -7,19 +7,22 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 3/19/2020
+ms.date: 6/01/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
+ms.custom: ceX
 ---
 
 # Address input component
 
-Entering addresses is frustrating and error prone, particularly in mobile scenarios. With the new address input component, you can see dynamic address suggestions as you type. Using fuzzy matching logic, the component suggests multiple potential address matches that the user can select – making it quicker and easier to enter accurate addresses.
+Entering addresses is frustrating and error prone, particularly in mobile scenarios. 
 
-The component returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude, in a format friendly to many locales and international address formats.
+The address input component lets you see dynamic address suggestions as you type. Using fuzzy matching logic, the component suggests multiple potential address matches that the user can select – making it quicker and easier to enter accurate addresses.
+
+The component returns the address as structured data, allowing your application to extract information like city, street, municipality, and even latitude and longitude. The data is in a format friendly to many locales and international address formats.
 
 To use the component, you need to [enable the geospatial features for the environment](geospatial-overview.md#enable-the-geospatial-features-for-the-environment) as well as [enable the geospatial features for each app](geospatial-overview.md#enable-the-geospatial-features-for-each-app) that you want to use it in.
 
@@ -60,7 +63,7 @@ Latitude | The latitude of the center point used to geobias address suggestions.
 Longitude | The longitude of the center point used to geobias address suggestions. Requires **Search within radius** to be on. | Decimal between -180 and 180 | Properties
 Radius | The radius in meters around the **Latitude** and **Longitude** to constrain the address suggestions. Requires **Search within radius** to be on. | Decimal | Properties
 Language | The language the address suggestions are returned in | String | Properties
-Country set | Comma separate list of countries to constrain the address suggestions to, in ISO 3166 alpha-2 country codes - for example "US, FR, KW". | String | Properties
+Country set | Comma separate list of countries to constrain the address suggestions to, in ISO 3166 alpha-2 country codes, for example, "US, FR, KW". | String | Properties
 
 ### Additional properties
 
