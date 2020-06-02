@@ -15,7 +15,7 @@ search.app:
 ---
 # How to work with permissions in a lookup list from SharePoint site?
 
-In this scenario article, you'll learn how to configure permissions for fields that use lookup columns from SharePoint lists. When you create a canvas app that connects to SharePoint, the app follows permissions configured inside SharePoint. Unique permissions at different levels inside SharePoint can become confusing when surfacing lists, libraries or items on a canvas app screen.
+In this scenario article, you'll learn how to configure permissions for fields that use lookup columns from SharePoint lists. When you create a canvas app that connects to SharePoint, the app follows permissions configured inside SharePoint. Unique permissions at different levels inside SharePoint can become confusing when surfacing lists, libraries, or items on a canvas app screen.
 
 The example in this tutorial explains how you can work with a canvas app that connects to SharePoint with such broken inheritance.
 
@@ -32,7 +32,7 @@ You can customize permissions for a SharePoint list or list item when you [stop 
 
 ## Example
 
-1. Create two SharePoint lists with one list consuming columns as lookups from the other list. For the purpose of this tutorial, we'd use two lists:
+1. Create two SharePoint lists with one list consuming columns as lookups from the other list. In this tutorial, we'd use two lists:
 
     | List | Columns
     | - | - |
@@ -41,7 +41,7 @@ You can customize permissions for a SharePoint list or list item when you [stop 
 
      Shapes list has a Color lookup column. This lookup column is connected to the Color column from the Colors list for values. You can also use your own lists instead.
 
-1. If required, create sample items:
+1. If necessary, create sample items:
 
     | Shapes | Color |
     | - | - |
@@ -53,13 +53,13 @@ You can customize permissions for a SharePoint list or list item when you [stop 
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. [Create](app-from-sharepoint.md) a new app.
+1. [Create](../app-from-sharepoint.md) a new app.
 
     ![List items](./media/sharepoint-scenarios-lookup-list-permissions/list-items.png "List items")
 
-1. [Save and publish](save-publish-app.md) the app.
+1. [Save and publish](../save-publish-app.md) the app.
 
-1. [Share the app](share-app.md) with another user. For example, Kenny Smith.
+1. [Share the app](../share-app.md) with another user. For example, Kenny Smith.
 
 1. Run the app as the user that you shared the app with (Kenny Smith in this example).
 

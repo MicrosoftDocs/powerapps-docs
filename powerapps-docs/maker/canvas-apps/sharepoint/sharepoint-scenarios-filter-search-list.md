@@ -32,7 +32,7 @@ To use the ability to search using a text input and filter the records, you have
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. [Create](app-from-sharepoint.md) a new app, or [edit](edit-app.md) an existing app.
+1. [Create](../app-from-sharepoint.md) a new app, or [edit](../edit-app.md) an existing app.
 
     > [!NOTE]
     > Ensure the app uses SharePoint connection and connects to a SharePoint list as described in the prerequisites.

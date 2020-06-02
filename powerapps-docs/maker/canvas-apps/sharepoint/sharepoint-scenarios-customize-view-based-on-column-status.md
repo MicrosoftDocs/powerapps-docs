@@ -1,6 +1,6 @@
 ---
 title: How to customize an app screen baed on column status inside SharePoint list. | Microsoft Docs
-description: This article explains how to how to customize an app screen baed on column status inside SharePoint list.
+description: This article explains how to customize an app screen based on column status inside SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,9 +13,15 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# How to customize an app screen baed on column status inside SharePoint list?
+# How to customize an app screen based on column status inside SharePoint list?
 
-In this scenario article, you'll learn how to how to customize an app screen baed on column status inside SharePoint list. You can customize forms for supported lists or libraries; and you can also create app for lists or libraries. Limiting access to SharePoint objects can be achieved using fine-grained permissions inside SharePoint. However, it becomes difficult to scan through all items in your app screen especially when using different devices. One of the most common problem is how to limit the items in a canvas app screen based on status of columns, instead of controlling access using the permissions. This method allows you to create multiple screens to show different SharePoint objects based on column status, while at the same time without customizing permissions or overwhelming the app user with the entire list.
+In this scenario article, you'll learn how to customize an app screen based on column status inside SharePoint list. You can customize forms for supported lists or libraries; and you can also create app for lists or libraries.
+
+Limiting access to SharePoint objects can be achieved using fine-grained permissions inside SharePoint. However, it becomes difficult to scan through all items in your app screen especially when using different devices. 
+
+One of the most common problems is how to limit the items in a canvas app screen based on status of columns, instead of controlling access using the permissions.
+
+This method allows you to create multiple screens to show different SharePoint objects based on column status, while at the same time without customizing permissions or overwhelming the app user with the entire list.
 
 ## Prerequisites
 
@@ -49,7 +55,7 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
 
     ![List of issues](./media/sharepoint-scenarios-customize-view-based-on-column-status/app-list-of-issues.png "List of issues")
 
-    The sample list only has two items. However, when the number of issues increase, it becomes overwhelming to scan through issues or search them. Especially when the objective is to only show active issues that need help.
+    The sample list only has two items. However, when the number of issues increase, it becomes overwhelming to scan through issues or search them. Especially when the objective is to only show active issues.
 
 1. Select the items gallery, by default named BrowseGallery1.
 
@@ -76,9 +82,9 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
     - [StartsWith](../functions/function-startswith.md) to allow search based on entered text in search box on the top.
     - [If](../functions/function-if.md) for sorting items based on sort icon selection.
 
-1. [Save and publish](save-publish-app.md) the app.
+1. [Save and publish](../save-publish-app.md) the app.
 
-1. [Share the app](share-app.md) with another user. For example, Kenny Smith.
+1. [Share the app](../share-app.md) with another user. For example, Kenny Smith.
 
 1. Run the app as the user that you shared the app with (Kenny Smith in this example).
 

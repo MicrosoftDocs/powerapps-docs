@@ -1,6 +1,6 @@
 ---
 title: How to use drop down list with choices from lookup column in a SharePoint list | Microsoft Docs
-description: This article explains how to use the drop down list in your app to show choices from a lookup column in a SharePoint list.
+description: This article explains how to use the drop-down list in your app to show choices from a lookup column in a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -15,7 +15,7 @@ search.app:
 ---
 # How to use drop down list with choices from lookup column in a SharePoint list?
 
-In this scenario article, you'll learn how to use a drop down list with choices from a lookup column in a SharePoint list.
+In this scenario article, you'll learn how to use a drop-down list with choices from a lookup column in a SharePoint list.
 
 ## Prerequisites
 
@@ -24,15 +24,17 @@ In this scenario article, you'll learn how to use a drop down list with choices 
 
 ## Scenario details
 
-You can use lookup columns in SharePoint that consume values from other lists or libraries. When using such column as a field in a canvas app, you can use drop down list with choices.
+You can use lookup columns in SharePoint that consume values from other lists or libraries.
 
-To use the choices in a drop down list, you have to use the function [choices](../functions/function-choices.md). For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration** and the column **Vehicle type** for the lookup of the type of the vehicle.
+When using such column as a field in a canvas app, you can use drop down list with choices.
+
+To use the choices in a drop-down list, you have to use the function [choices](../functions/function-choices.md). For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration** and the column **Vehicle type** for the lookup of the type of the vehicle.
 
 ## Example
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
-1. [Create](app-from-sharepoint.md) a new app, or [edit](edit-app.md) an existing app.
+1. [Create](../app-from-sharepoint.md) a new app, or [edit](../edit-app.md) an existing app.
 
     > [!NOTE]
     > Ensure the app uses SharePoint connection and connects to a SharePoint list as described in the prerequisites.
@@ -41,7 +43,7 @@ To use the choices in a drop down list, you have to use the function [choices](.
 
 1. Select **Drop down**.
 
-    ![Insert drop down](./media/sharepoint-scenarios-choice-to-lookup/insert-drop-down.png "Insert drop down")
+    ![Insert drop-down](./media/sharepoint-scenarios-choice-to-lookup/insert-drop-down.png "Insert drop down")
 
 1. Update the **Items** property with the following formula:
 
@@ -51,7 +53,7 @@ To use the choices in a drop down list, you have to use the function [choices](.
 
     ![Choices formula](./media/sharepoint-scenarios-choice-to-lookup/choices-formula.png "Choices formula")
 
-1. Play the app, or press the **Alt** key on the keyboard and select the drop down.
+1. Play the app, or press the **Alt** key on the keyboard and select the drop-down.
 
     ![Drop down choices](./media/sharepoint-scenarios-choice-to-lookup/drop-down-choices.png "Drop down choices")
 

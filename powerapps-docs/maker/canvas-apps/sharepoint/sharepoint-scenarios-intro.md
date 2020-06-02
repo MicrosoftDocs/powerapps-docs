@@ -22,7 +22,7 @@ In this article, you'll learn about common scenarios when working with an app th
 
 ## Getting started with scenarios
 
-Articles in this SharePoint scenarios integration section explain individual and short scenarios when working with SharePoint integration with canvas app. For a more detailed information about different SharePoint integration topics with canvas apps, refer to the links in the following table.
+Articles in this SharePoint scenarios integration section explain individual and short scenarios when working with SharePoint integration with canvas app. For a more detailed information about different SharePoint integration articles with canvas apps, refer to the links in the following table.
 
 | Documentation | Description |
 |--|--|
