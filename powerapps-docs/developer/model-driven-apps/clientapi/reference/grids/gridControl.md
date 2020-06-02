@@ -31,7 +31,7 @@ GridControl or the gridContext is the instance of grid or subgrid on a form agai
 |[getFetchXml](gridcontrol/getFetchXml.md)|[!INCLUDE[gridcontrol/includes/getFetchXml-description.md](gridcontrol/includes/getFetchXml-description.md)]|Read-only and editable grids|
 |[getGrid](gridcontrol/getGrid.md)|[!INCLUDE[gridcontrol/includes/getGrid-description.md](gridcontrol/includes/getGrid-description.md)]|Read-only and editable grids|
 |[getGridType](gridcontrol/getGridType.md)|[!INCLUDE[gridcontrol/includes/getGridType-description.md](gridcontrol/includes/getGridType-description.md)]|Read-only and editable grids|
-|[getName](../controls/getName)|Returns the name assigned to the control.|Read-only and editable grids|
+|[getName](../controls/getName.md)|Returns the name assigned to the control.|Read-only and editable grids|
 |[getParent](../controls/getParent.md)|Returns a reference to the section object that contains the control.|Read-only and editable grids|
 |[getRelationship](gridcontrol/getRelationship.md)|[!INCLUDE[gridcontrol/includes/getRelationship-description.md](gridcontrol/includes/getRelationship-description.md)]|Read-only and editable grids|
 |[getUrl](gridcontrol/getUrl.md)|[!INCLUDE[gridcontrol/includes/getUrl-description.md](gridcontrol/includes/getUrl-description.md)]|Read-only and editable grids|
