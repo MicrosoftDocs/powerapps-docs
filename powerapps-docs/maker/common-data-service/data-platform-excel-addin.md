@@ -22,12 +22,19 @@ By opening entity data in Microsoft Excel, you can quickly and easily view and e
 To install the Power Apps Excel Add-in, see [Microsoft PowerApps Office Add-in](https://appsource.microsoft.com/en-us/product/office/WA104380330?tab=Overview). For more information about how to add or remove an Office Excel Add-in, see [Add or remove add-ins in Excel](https://support.office.com/en-us/article/add-or-remove-add-ins-in-excel-0af570c4-5cf3-4fa9-9b88-403625a0b460).
 
 ## Open entity data in Excel
-1. On [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), expand the **Data** section and select **Entities** in the left navigation pane. All the entities are shown.
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+
+1. In the left pane, expand the **Data** section, and select **Entities**. All the entities are shown.
+
 2. Select the ellipsis (...) to the right of the entity that you're interested in.
+
 3. Select **Open in Excel**, and then open the workbook that is generated. This workbook has binding information for the entity, a pointer to your environment, and a pointer to the Power Apps Excel Add-in.  
+
 4. In Excel, select **Enable editing** to enable the Power Apps Excel Add-in to run. The Excel Add-in runs in a pane on the right side of the Excel window.
+
 5. If this is the first time that you've run the Power Apps Excel Add-in, select **Trust this Add-in** to allow the Excel Add-in to run.
-6. If you're prompted to sign in, select **Sign in**, and then sign in by using the same credentials that you used on [powerapps.com](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). The Excel Add-in will use a previous sign-in context and automatically sign you in if it can. Therefore, verify the user name in the upper right of the Excel Add-in.
+
+6. If you're prompted to sign in, select **Sign in**, and then sign in by using the same credentials that you used on [Power Apps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). The Excel Add-in will use a previous sign-in context and automatically sign you in if it can. Therefore, verify the user name in the upper right of the Excel Add-in.
 
 The Excel Add-in automatically reads the data for the entity that you selected. Note that there will be no data in the workbook until the Excel Add-in reads it in.
 
@@ -54,12 +61,16 @@ To delete a record, follow one of these steps:
 You can use the designer to adjust the columns and entities that are automatically added to the worksheet.
 
 1. Enable the data source designer of the Excel Add-in by selecting the **Options** button (the gear symbol) and then selecting the **Enable design** check box.
+
 2. Select **Design** in the Excel Add-in. All the data sources are listed.
+
 3. Next to the data source, select the **Edit** button (the pencil symbol).
+
 4. Adjust the list in the **Selected fields** field as you require:
    * To add a field from the **Available fields** field to the **Selected fields** field, select the field, and then select **Add**. Alternatively, double-click the field.
    * To remove a field from the **Selected fields** field, select the field, and then select **Remove**. Alternatively, double-click the field.
    * To change the order of fields, select the field in the **Selected fields** field, and then select **Up** or **Down**.
+
 5. Apply your changes to the data source by selecting **Update**, and then select **Done** to exit the designer. If you added a field (column), select **Refresh** to pull in an updated set of data.
 
 > [!NOTE]
