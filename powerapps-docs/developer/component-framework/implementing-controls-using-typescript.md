@@ -379,7 +379,7 @@ Follow these steps to create and import a [solution](https://docs.microsoft.com/
     > - Under **Code Tools**, check **NuGet targets & Build Tasks**.
 
 6. The generated solution zip file is located in the `Solution\bin\debug` folder.
-7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or automatically using the [Power Apps Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerApps-BuildTools).
+7. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal once the zip file is ready or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerApps-BuildTools).
 
 ## Adding code components in model-driven apps
 
@@ -394,6 +394,6 @@ To add the code components to a canvas app, follow the steps in the article [Add
 [Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [Learn Power Apps component framework](https://docs.microsoft.com/learn/paths/use-power-apps-component-framework)<br/>
 [Update existing Power Apps component framework components](updating-existing-controls.md)<br/>
-[Power Apps build tools](https://docs.microsoft.com/powerapps/developer/common-data-service/build-tools-overview)<br/>
+[Microsoft Power Platform Build Tools](https://docs.microsoft.com/powerapps/developer/common-data-service/build-tools-overview)<br/>
 [Power Apps component framework API reference](reference/index.md)<br/>
 [Power Apps component framework overview](overview.md)
