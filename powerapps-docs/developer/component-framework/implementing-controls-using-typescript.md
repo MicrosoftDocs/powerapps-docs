@@ -315,6 +315,11 @@ Developers and app makers can define their styling to represent their code compo
     </resources> 
      ```
 
+> [!NOTE]
+> Power Apps component framework uses the concept of implementing String(resx) web resources that is used to manage the localized strings shown on any user interface. More information: [String(Resx) web resources](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/resx-web-resources).
+> See [Localization API](sample-controls/localization-api-control.md) sample, to learn how to localize  code components using `resx` web resources. 
+
+
 ## Build your code components
 
 After you finish adding manifest, component logic, and styling, build the code components using the command:
