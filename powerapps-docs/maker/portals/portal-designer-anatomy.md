@@ -19,11 +19,11 @@ You can use Power Apps portals Studio to create and customize your website. It c
 
 | **Annotation** | **Name**        | **Description**                                                                              |
 |----------------|-----------------|----------------------------------------------------------------------------------------------|
-| 1              | Command bar     | Allows you to create a webpage, delete a component, synchronize portal configuration* and browse the website you are creating.  |
+| 1              | Command bar     | Allows you to create a webpage, delete a component, synchronize portal configuration*, and browse the website you're creating.  |
 | 2              | Toolbelt        | Allows you to:<ul><li>View and manage webpages</li><li>Add components</li><li>Edit templates</li></ul>  |
 | 3              | Canvas          | Contains components that build a webpage.                                                    |
-| 4              | Footer          | Displays auto-save status and allows you to open source code editor.                         |
-| 5              | Properties pane | Displays properties of webpage and selected components and allows you edit them as required. |
+| 4              | Footer          | Displays autosave status and allows you to open-source code editor.                         |
+| 5              | Properties pane | Displays properties of webpage and selected components and lets you edit them as required. |
 
 \* Sync Configuration synchronizes the latest portal configuration changes with your current Studio session. For example, configuration or site setting updated using the Portal Management app.
 
