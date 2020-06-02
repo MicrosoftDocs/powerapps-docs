@@ -2,7 +2,7 @@
 title: "File attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about File attributes that store file data within the application, supporting attributes, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/04/2019
+ms.date: 05/08/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -21,12 +21,14 @@ A file attribute is used for storing file data up to a specified maximum size. A
 
 Web API (REST) | .NET API (SOAP)
 ------- | -------
-FileAttributeMetadata | <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>
+[FileAttributeMetadata](/dynamics365/customer-engagement/web-api/fileattributemetadata) | <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata>
 
 For information about types of files that are not allowed, see [System Settings General tab](/power-platform/admin/system-settings-dialog-box-general-tab) under the **Set blocked file extensions for attachments** setting.
 
 > [!IMPORTANT]
-> Some restrictions do apply when using the File and enhanced Image data-types of the Common Data Service. If Customer Managed Keys (CMK) is enabled on the tenant, then File, Image, and IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.
+> Some restrictions do apply when using the File and enhanced Image data-types of the Common Data Service. If Customer Managed Keys (CMK) is enabled on the tenant, then File, Image, and IoT data-types are not available to the tenant's organizations. Solutions that contain excluded data-types will not install. Customers must opt-out of CMK in order to make use of these data-types.<p/>
+> File attributes are supported in <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy.SdkClientVersion> 9.0.45.329 or greater and Web API version 9.1 or greater.
+
 
 <!--File data is not passed to plug-ins for performance reasons. You must retrieve the file data in plug-in code using an explicit retrieve call. -->
   
@@ -37,6 +39,9 @@ When a file attribute is added to an entity some additional attributes are creat
 ### MaxSizeInKB attribute
 
  This value represents the maximum size (in kilobytes) of the file data that the attribute can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
+ 
+ > [!NOTE]
+ > MaxSizeInKB is set when the File attribute is added to an entity. This cannot be changed after it is set.
   
 <a name="BKMK_RetrievingFiles"></a>
 

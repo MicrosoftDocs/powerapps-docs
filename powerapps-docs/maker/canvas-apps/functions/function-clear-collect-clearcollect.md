@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/14/2019
+ms.date: 05/04/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -26,13 +26,13 @@ The **Collect** function adds records to a data source. The items to be added ca
 
 - A single value: The value is placed in the **[Value](function-value.md)** field of a new record.  All other properties are left [blank](function-isblank-isempty.md).
 - A record: Each named property is placed in the corresponding property of a new record.  All other properties are left blank.
-- A [table](../working-with-tables.md): Each record of the table is added as a separate record of the data source as described above. The table is not added as a nested table to a record. To accomplish this, wrap the table in a record first.
+- A [table](../working-with-tables.md): Each record of the table is added as a separate record of the data source as described above. The table isn't added as a nested table to a record. To do this, wrap the table in a record first.
 
-When used with a collection, additional [columns](../working-with-tables.md#columns) will be created as needed. The columns for other data sources are fixed by the data source and new columns cannot be added.  
+When used with a collection, additional [columns](../working-with-tables.md#columns) will be created as needed. The columns for other data sources are fixed by the data source and new columns can't be added.  
 
 If the data source doesn't already exist, a collection is created.
 
-Collections are sometimes used to hold global variables or make a temporary copy of a data source. Power Apps are based on formulas that automatically recalculate as the user interacts with an app. Collections do not enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../working-with-variables.md).
+Collections are sometimes used to hold global variables or make a temporary copy of a data source. Canvas apps are based on formulas that automatically recalculate as the user interacts with an app. Collections don't enjoy this benefit and their use can make your app harder to create and understand. Before using a collection in this manner, review [working with variables](../working-with-variables.md).
 
 You can also use the **[Patch](function-patch.md)** function to create records in a data source.
 
@@ -50,15 +50,18 @@ You can use the **[Remove](function-remove-removeif.md)** function to selectivel
 
 ### ClearCollect
 
-The **ClearCollect** function deletes all the records from a collection and then adds a different set of records to the same collection.  With a single function, **ClearCollect** offers the combination of **Clear** and then **Collect**.
+The **ClearCollect** function deletes all the records from a collection. And then adds a different set of records to the same collection.  With a single function, **ClearCollect** offers the combination of **Clear** and then **Collect**.
 
 **ClearCollect** returns the modified collection as a table.  **ClearCollect** can only be used in a behavior formula.
+
+### Delegation
+[!INCLUDE [delegation-no](../../../includes/delegation-no.md)]
 
 ## Syntax
 
 **Collect**( *DataSource*, *Item*, ... )
 
-* *DataSource* – Required. The data source that you want to add data to.  If it does not already exist, a new collection is created.
+* *DataSource* – Required. The data source that you want to add data to.  If it doesn't already exist, a new collection is created.
 * *Item(s)* - Required.  One or more records or tables to add to the data source.  
 
 **Clear**( *Collection* )
@@ -94,5 +97,5 @@ These examples examine how record and table arguments to **Collect** and **Clear
 | --- | --- | --- |
 | **ClearCollect( IceCream, {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;}  )** | Clear all data and then adds two records to the **IceCream** collection that includes a quantity of chocolate and vanilla ice cream.  The records to be added are provided as individual arguments to the function.| ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream.png) <br><br>The **IceCream** collection has also been modified. |
 | **ClearCollect( IceCream, Table( {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;} ) )** | Same as the previous example except that the records are combined in a table and passed in through a single argument. The contents of the table are extracted record by record before being added to the **IceCream** collection. | ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream.png)<br><br>The **IceCream** collection has also been modified. |
-| **ClearCollect( IceCream,<br>{&nbsp;MyFavorites: Table( {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;} ) } )** | Same as the previous example except that the table is wrapped in a record.  The records of the table are not extracted and instead the entire table is added as a sub-table of the record. | ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream-myfavorites.png)<br><br>The **IceCream** collection has also been modified. |
+| **ClearCollect( IceCream,<br>{&nbsp;MyFavorites: Table( {&nbsp;Flavor:&nbsp;"Chocolate",&nbsp;Quantity:&nbsp;100&nbsp;}, {&nbsp;Flavor:&nbsp;"Vanilla",&nbsp;Quantity:&nbsp;200&nbsp;} ) } )** | Same as the previous example except that the table is wrapped in a record.  The records of the table aren't extracted and instead the entire table is added as a cell of the record. | ![Chocolate and Vanilla records added to collection](media/function-clear-collect-clearcollect/icecream-myfavorites.png)<br><br>The **IceCream** collection has also been modified. |
 

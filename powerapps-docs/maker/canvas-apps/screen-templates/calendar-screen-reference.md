@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/31/2018
+ms.date: 04/28/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -104,6 +104,19 @@ Familiarity with how to add and configure screens and other controls as you [cre
     - **\_maxDate**: Set to the last viewable day in the calendar. The formula is `_firstDayInView + 40`. The calendar displays a maximum of 41 days, so the **\_maxDate** variable always reflects the last viewable day, and determines what events have already been retrieved from Outlook and cached in the app.
     - **MyCalendarEvents**: Set to a collection of the user's events from the selected calendar, ranging from **\_minDate** to **\_maxDate**.
     - **\_showLoading**: Set to **false**; **\_calendarVisible** is set to **true** after everything else has been loaded.
+
+### Color properties
+
+For general color properties, refer to [Color and border properties in Power Apps](../controls/properties-color-border.md).
+
+Unique color properties for calendar drop-down control:
+
+- **ChevronBackground** - Background color for the calendar drop-down.
+- **ChevronDisabledBackground** - Background color for the disabled calendar drop-down.
+- **ChevronFill** - Fill color for calendar drop-down.
+- **ChevronDisabledFill** - Fill color for disabled calendar drop-down.
+- **ChevronHoverBackground** - Background color of calendar drop-down when the user keeps the mouse pointer on it.
+- **ChevronHoverFill** - Fill color of calendar drop-down when the user keeps the mouse pointer on it.
 
 ## Calendar icon
 

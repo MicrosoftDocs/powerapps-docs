@@ -41,6 +41,8 @@ Find the right online training, in-person workshops, and events for your role as
 
     [App Creation](learning-catalog-app-maker.md#app-creation)
 
+    [Flow Creation](learning-catalog-app-maker.md#flow-creation)
+
       :::column-end:::
 :::row-end:::
 :::row:::
