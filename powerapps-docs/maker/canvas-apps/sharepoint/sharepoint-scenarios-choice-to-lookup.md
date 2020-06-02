@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/29/2020
+ms.date: 06/01/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -26,7 +26,7 @@ In this scenario article, you'll learn how to use a drop down list with choices 
 
 You can use lookup columns in SharePoint that consume values from other lists or libraries. When using such column as a field in a canvas app, you can use drop down list with choices.
 
-To use the choices in a drop down list, you have to use the function [choices](./functions/function-choices.md). For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration** and the column **Vehicle type** for the lookup of the type of the vehicle.
+To use the choices in a drop down list, you have to use the function [choices](../functions/function-choices.md). For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration** and the column **Vehicle type** for the lookup of the type of the vehicle.
 
 ## Example
 
@@ -34,7 +34,7 @@ To use the choices in a drop down list, you have to use the function [choices](.
 
 1. [Create](app-from-sharepoint.md) a new app, or [edit](edit-app.md) an existing app.
 
-    > [!TIP]
+    > [!NOTE]
     > Ensure the app uses SharePoint connection and connects to a SharePoint list as described in the prerequisites.
 
 1. Select **+** (Insert) from the left pane.
@@ -57,5 +57,5 @@ To use the choices in a drop down list, you have to use the function [choices](.
 
 ### See also
 
-- [Formula reference](formula-reference.md) for Power Apps
-- [Control reference](reference-properties.md) for Power Apps
+- [Formula reference](../formula-reference.md) for Power Apps
+- [Control reference](../reference-properties.md) for Power Apps

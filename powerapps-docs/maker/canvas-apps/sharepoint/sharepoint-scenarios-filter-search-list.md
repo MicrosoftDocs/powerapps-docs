@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/29/2020
+ms.date: 06/01/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -26,7 +26,7 @@ In this scenario article, you'll learn how to filter a search list in a canvas a
 
 You can use text input control in a canvas app to input text and filter the list such as a data table to filter list items from the connected SharePoint list.
 
-To use the ability to search using a text input and filter the records, you have to use the function [filter](./functions/function-filter-lookup.md). For example, `Filter([@Colors], StartsWith(Title, TextInput1.Text))` uses the SharePoint list connection **Colors** and the column **Title** to filter the records.
+To use the ability to search using a text input and filter the records, you have to use the function [filter](../functions/function-filter-lookup.md). For example, `Filter([@Colors], StartsWith(Title, TextInput1.Text))` uses the SharePoint list connection **Colors** and the column **Title** to filter the records.
 
 ## Example
 
@@ -34,7 +34,7 @@ To use the ability to search using a text input and filter the records, you have
 
 1. [Create](app-from-sharepoint.md) a new app, or [edit](edit-app.md) an existing app.
 
-    > [!TIP]
+    > [!NOTE]
     > Ensure the app uses SharePoint connection and connects to a SharePoint list as described in the prerequisites.
 
 1. Select **+** (Insert) from the left pane.
@@ -63,5 +63,5 @@ To use the ability to search using a text input and filter the records, you have
 
 ### See also
 
-- [Formula reference](formula-reference.md) for Power Apps
-- [Control reference](reference-properties.md) for Power Apps
+- [Formula reference](../formula-reference.md) for Power Apps
+- [Control reference](../reference-properties.md) for Power Apps
