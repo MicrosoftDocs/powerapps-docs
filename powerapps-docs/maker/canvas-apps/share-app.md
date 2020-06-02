@@ -400,4 +400,4 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | Windows Defender Advanced Threat Protection (ATP) | No                                                                     |
 | Word Online (Business)                            | No                                                                     |
 
-\* When using the Common Data Service connector, ensure the guest user is licensed from the same tenant where you have Common Data Service.
+\* When using the Common Data Service connector, ensure the guest user is licensed from the same tenant where you have Common Data Service located.
