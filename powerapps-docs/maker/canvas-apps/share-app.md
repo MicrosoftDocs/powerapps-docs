@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/11/2020
+ms.date: 06/01/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -223,17 +223,17 @@ After you share an app for guest access, guests can discover and access apps sha
 
 ### Frequently Asked Questions
 
-#### What’s the difference between canvas app guest access and Power Apps Portals?
+#### What’s the difference between canvas app guest access and Power Apps portals?
 
 Canvas apps enable building an app, tailored to digitizing business processes, without writing code in a traditional programming language such as C#. Guest access for canvas apps enables teams of individuals made up of different organizations participating in a common business process to access the same app resources that may be integrated with a wide variety of Microsoft and third-party sources. More information: [Overview of canvas-app connectors for Power Apps](/powerapps/maker/canvas-apps/connections-list).
 
-[Power Apps Portals](/powerapps/maker/portals/overview) provide the ability to build low-code, responsive websites that allow external users to interact with the data stored in Common Data Service. It allows organizations to create websites that can be shared with users external to their organization either anonymously or through the login provider of their choice, such as LinkedIn, Microsoft Account, or other commercial login providers. 
+[Power Apps portals](/powerapps/maker/portals/overview) provide the ability to build low-code, responsive websites that allow external users to interact with the data stored in Common Data Service. It allows organizations to create websites that can be shared with users external to their organization either anonymously or through the login provider of their choice, such as LinkedIn, Microsoft Account, or other commercial login providers. 
 
-The following table outlines a few core capability differences between Power Apps Portals and canvas apps.  
+The following table outlines a few core capability differences between Power Apps portals and canvas apps.  
 
 | | Interface | Authentication | Accessible data sources |
 |------|--------|----------|-------------------|
-| Power Apps Portals | Browser only experience | Allows anonymous and authenticated access | Common Data Service |
+| Power Apps portals | Browser only experience | Allows anonymous and authenticated access | Common Data Service |
 | Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any ~150 out-of-box connectors and any custom connector  |
 ||
 
@@ -298,7 +298,7 @@ Intune only applies policies of a user’s home tenant. For instance, if Lesa@Co
 
 #### What connectors support guest access?
 
-All connectors that do not perform Azure AD authentication of any type supports guest access. The following table enumerates all connectors that perform Azure AD authentication and which connectors currently support guest access. Many of these will be updated leading up to general availability.
+All connectors that don't use Azure AD authentication of any type supports guest access. The following table enumerates all connectors that use Azure AD authentication and which connectors currently support guest access.
 
 | **Connector**                                     | **Supports guest access**                                              |
 |---------------------------------------------------|------------------------------------------------------------------------|
@@ -330,7 +330,7 @@ All connectors that do not perform Azure AD authentication of any type supports 
 | Capsule CRM                                       | No                                                                     |
 | Cloud PKI Management                              | No                                                                     |
 | Cognito Forms                                     | No                                                                     |
-| Common Data Service                               | No                                                                     |
+| Common Data Service                               | Yes*                                                                     |
 | Common Data Service (Legacy)                      | No                                                                     |
 | D&B Optimizer                                     | No                                                                     |
 | Derdack SIGNL4                                    | No                                                                     |
@@ -399,3 +399,5 @@ All connectors that do not perform Azure AD authentication of any type supports 
 | Webex Teams                                       | No                                                                     |
 | Windows Defender Advanced Threat Protection (ATP) | No                                                                     |
 | Word Online (Business)                            | No                                                                     |
+
+\* When using the Common Data Service connector, ensure the guest user is licensed from the same tenant where you have Common Data Service.
