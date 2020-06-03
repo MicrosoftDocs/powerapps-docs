@@ -13,11 +13,11 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
-ms.custom: ceX
+ms.custom: ce06032020
 ---
 
 
-# Interactive map component
+# Interactive map component (Preview)
 
 Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of entities from a data source, or by inputting new physical locations. 
 

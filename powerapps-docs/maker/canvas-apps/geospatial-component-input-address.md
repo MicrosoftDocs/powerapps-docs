@@ -13,10 +13,10 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
-ms.custom: ceX
+ms.custom: ce06032020
 ---
 
-# Address input component
+# Address input component (Preview)
 
 Entering addresses can be frustrating and error prone, particularly in mobile scenarios. 
 

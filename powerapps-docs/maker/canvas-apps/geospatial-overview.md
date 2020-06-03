@@ -13,11 +13,11 @@ search.audienceType:
   - maker
 search.app: 
   - PowerApps
-ms.custom: ceX
+ms.custom: ce06032020
 
 ---
 
-# Add geospatial components to your app
+# Add geospatial components to your app (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
