@@ -140,7 +140,7 @@ Render the Entity List associated with the current page as a paginated sortable 
                 {% else %}
                   {{ attr }}
                 {% endif -%}
-              </th>
+              </td>
             {% endfor -%}
 
             <td>
@@ -165,69 +165,71 @@ Render the Entity List associated with the current page as a paginated sortable 
       {% assign page_slice_first_page = page_offset | plus:1 %}
       {% assign page_slice_last_page = page_offset | plus:10 %}
 
-      <ul class="pagination">
-        <li {% unless first_page and entityview.page > 1 %}class="disabled"{% endunless %}>
-          <a
-            {% if first_page and entityview.page > 1 %}
-              href="{{ request.url | add_query:'page', first_page | path_and_query }}"
-            {% endif %}>
-            &laquo;
-          </a>
-        </li>
-
-        <li {% unless entityview.previous_page %}class="disabled"{% endunless %}>
-          <a
-            {% if entityview.previous_page %}
-              href="{{ request.url | add_query:'page', entityview.previous_page | path_and_query }}"
-            {% endif %}>
-            &lsaquo;
-          </a>
-        </li>
-
-        {% if page_slice_first_page > 1 %}
-          {% assign previous_slice_last_page = page_slice_first_page | minus:1 %}
-          <li>
-            <a href="{{ request.url | add_query:'page', previous_slice_last_page | path_and_query }}">
-              &hellip;
+      <div class="jquery-bootstrap-pagination">
+        <ul class="pagination">
+          <li {% unless first_page and entityview.page > 1 %}class="disabled"{% endunless %}>
+            <a
+              {% if first_page and entityview.page > 1 %}
+                href="{{ request.url | add_query:'page', first_page | path_and_query }}"
+              {% endif %}>
+              &laquo;
             </a>
           </li>
-        {% endif %}
 
-        {% for page in entityview.pages offset:page_offset limit:10 -%}
-          <li{% if page == entityview.page %} class="active"{% endif %}>
-            <a href="{{ request.url | add_query:'page', page | path_and_query }}">
-              {{ page }}
+          <li {% unless entityview.previous_page %}class="disabled"{% endunless %}>
+            <a
+              {% if entityview.previous_page %}
+                href="{{ request.url | add_query:'page', entityview.previous_page | path_and_query }}"
+              {% endif %}>
+              &lsaquo;
             </a>
           </li>
-        {% endfor -%}
 
-        {% if page_slice_last_page < entityview.pages.size %}
-          {% assign next_slice_first_page = page_slice_last_page | plus:1 %}
-          <li>
-            <a href="{{ request.url | add_query:'page', next_slice_first_page | path_and_query }}">
-              &hellip;
+          {% if page_slice_first_page > 1 %}
+            {% assign previous_slice_last_page = page_slice_first_page | minus:1 %}
+            <li>
+              <a href="{{ request.url | add_query:'page', previous_slice_last_page | path_and_query }}">
+                &hellip;
+              </a>
+            </li>
+          {% endif %}
+
+          {% for page in entityview.pages offset:page_offset limit:10 -%}
+            <li{% if page == entityview.page %} class="active"{% endif %}>
+              <a href="{{ request.url | add_query:'page', page | path_and_query }}">
+                {{ page }}
+              </a>
+            </li>
+          {% endfor -%}
+
+          {% if page_slice_last_page < entityview.pages.size %}
+            {% assign next_slice_first_page = page_slice_last_page | plus:1 %}
+            <li>
+              <a href="{{ request.url | add_query:'page', next_slice_first_page | path_and_query }}">
+                &hellip;
+              </a>
+            </li>
+          {% endif %}
+
+          <li {% unless entityview.next_page %}class="disabled"{% endunless %}>
+            <a
+              {% if entityview.next_page %}
+                href="{{ request.url | add_query:'page', entityview.next_page | path_and_query }}"
+              {% endif %}>
+              &rsaquo;
             </a>
           </li>
-        {% endif %}
 
-        <li {% unless entityview.next_page %}class="disabled"{% endunless %}>
-          <a
-            {% if entityview.next_page %}
-              href="{{ request.url | add_query:'page', entityview.next_page | path_and_query }}"
-            {% endif %}>
-            &rsaquo;
-          </a>
-        </li>
-
-        <li {% unless last_page and entityview.page < last_page %}class="disabled"{% endunless %}>
-          <a
-            {% if last_page and entityview.page < last_page %}
-              href="{{ request.url | add_query:'page', last_page | path_and_query }}"
-            {% endif %}>
-            &raquo;
-          </a>
-        </li>
-      </ul>
+          <li {% unless last_page and entityview.page < last_page %}class="disabled"{% endunless %}>
+            <a
+              {% if last_page and entityview.page < last_page %}
+                href="{{ request.url | add_query:'page', last_page | path_and_query }}"
+              {% endif %}>
+              &raquo;
+            </a>
+          </li>
+        </ul>
+      </div>
 
     {% endif %}
     
