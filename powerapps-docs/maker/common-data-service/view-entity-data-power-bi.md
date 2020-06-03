@@ -35,7 +35,7 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
       
 2. Verify that your environment has at least version 9.1.0.17437. To do this, select the **Settings** gear on the toolbar, and then select **Advanced Settings**. Then, on the new browser tab that opens select the **Settings** gear on the toolbar, and then select **About**.
       
-3. Enable the TDS endpoint feature in Power Platform admin center. For more information, see the **TDS endpoint (Preview)** setting in [Manage feature settings](/power-platform/admin/settings-features).
+3. Enable the TDS endpoint. For more information, see the **TDS endpoint (Preview)** setting in this topic [Manage feature settings](/power-platform/admin/settings-features).
           
 ## View entity data
 
