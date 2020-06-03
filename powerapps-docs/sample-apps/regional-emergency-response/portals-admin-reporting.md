@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/06/2020
+ms.date: 06/02/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 searchScope:
@@ -43,16 +43,16 @@ You can view all administrative options available to you after selecting **Admin
 
 | **Option name** | **Description**                                                                                               |
 |-----------------|---------------------------------------------------------------------------------------------------------------|
-| [User Requests](#user-requests) | View, approve or decline portal user requests.
+| [User Requests](#user-requests) | View, approve, or decline portal user requests.
 | [Users](#users)       | Create, edit, or deactivate portal users.                                                         |
 | [Systems](#systems)      | Create, edit, or delete systems. |
 | [Regions](#regions)      | Create or delete regions.                              |
 | [Facilities](#facilities)    | Create, edit, or delete facilities.                        |
-| CDC Data Feed | View or download CDC data feed.
+| [CDC Data Feed](#cdc-data-feed) | View or download CDC data feed.
 
 ### User Requests
 
-You can view, approve and decline portal user requests using the **User Requests** administrative task option.
+You can view, approve, and decline portal user requests using the **User Requests** administrative task option.
 
 When you select **User Requests**, you can see all existing portal user requests submitted pending review:
 
@@ -159,6 +159,7 @@ The highlighted components are visible to the users with the following roles ass
 1. [Organizational HealthCare Worker](#organizational-healthcare-worker)
 2. [Report Viewer](#report-viewer)
 3. [Parent Organization Administrator](#parent-organization-administrator)
+4. [Regional Report Viewer](#regional-report-viewer)
 
 The following section walks through each one of the roles with details of what the member of the role can do:
 
@@ -207,7 +208,11 @@ Members of Parent Organization Administrator role can:
     - Create, edit, or delete **Facility**
 
 > [!TIP]
-> Select all 3 roles to allow a user to access all components.
+> Select all roles to allow a user to access all components.
+
+##### Regional Report Viewer
+
+A Regional Report Viewer can view and download the CDC Data feed. Members of this role can't have any other capability.
 
 #### View user details
 
@@ -326,17 +331,24 @@ To create a facility, select the **Create** button:
 |------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Facility Name                                  | Name of the facility.                                                                                                                                                                                      |
 | Region                                         | Select a region this facility is associated with.                                                                                                                                                          |
-| Licensed Beds Total Capacity                   | Total licensed bed capacity, in number format.                                                                                                                                                             |
+| Total Inpatient Bed Capacity | Total inpatient bed capacity at this facility. |
+| Neonatal Bed Capacity | Total neonatal bed capacity at this facility. |
 | ICU Beds (AIIR Room) Total Capacity            | Number of total ICU beds in AIIR (Airborne Infect Isolation Room).                                                                                                                                         |
+| ICU Beds (non-AIIR Room) Total Capacity            | Number of total ICU beds in non-AIIR (Non-Airborne Infect Isolation Room).                                                                                                                                         |
 | Acute Care Beds (AIIR Room) Total Capacity     | Total Acute Care beds (AIIR) capacity, in number format.                                                                                                                                                   |
-| Ventilators Total Capacity                     | Total ventilator capacity, in number format.                                                                                                                                                               |
+| Acute Care Beds (non-AIIR Room) Total Capacity     | Total Acute Care beds (non-AIIR) capacity, in number format.                                                                                                                                                   |
+| Total Mortuary Capacity | Total mortuary capacity for the facility. **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form.
 | Supplies List | Select [Supplies List](#supplies-list-for-a-facility) to choose items from the available supplies available at the facility. |
 | DOH Number                                     | The Department of Health number for this facility.                                                                                                                                                         |
 | Follows Droplet Protocol                       | Select **Yes**/**No**. Relates to the facility following Droplet Precautions for patients known or suspected to be infected with pathogens transmitted by respiratory droplets, such as in COVID-19 cases. |
-| Surge Beds Total Capacity                      | Total surge beds capacity, in number format. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted                                               |
-| ICU Beds (non-AIIR Room) Total Capacity        | Number of total ICU beds (non-AIIR).                                                                                                                                                                       |
-| Acute Care Beds (non-AIIR Room) Total Capacity | Total Acute Care beds (non-AIIR) capacity, in number format.                                                                                                                                               |
-| Total Mortuary Capacity | Total mortuary capacity for the facility. **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form.
+| Total Outpatient Bed Capacity | Total outpatient bed capacity at this facility. |
+| Total Overflow/Surge/Expansion Bed Capacity | Total overflow, surge, or expansion bed capacity at this facility. |
+| Total Pediatric ICU Beds (AIIR Room) Capacity | Total pediatric ICU beds (AIIR) at this facility. |
+| Total Pediatric ICU Beds (Non-AIIR Room) Capacity | Total pediatric ICU beds (non-AIIR) at this facility. |
+| Total Pediatric Acute Care Beds (Non-AIIR) Capacity | Total pediatric Acute Care beds (non-AIIR) at this facility. |
+| Total Pediatric Acute Care Beds (AIIR) Capacity | Total pediatric Acute Care beds (AIIR) at this facility. |
+| Does this facility have an Emergency Department/Overflow location? | Select **Yes**/**No** to confirm if the facility has emergency department or overflow location(s). | 
+| Ventilators Total Capacity                     | Total ventilator capacity, in number format.                                                                                                                                                               |
 | Facility Address                               | Street, City, County, State, and Zip code for the facility location.                                                                                                                                        |
 
 ##### Supplies list for a facility
@@ -354,7 +366,7 @@ option:
 
 You're prompted confirming deletion before the facility gets deleted:
 
-![Delete facility confirm](media/portal-admin-delete-facility-confirm.png)
+![Confirm facility deletion](media/portal-admin-delete-facility-confirm.png)
 
 #### Edit Facility
 
@@ -364,9 +376,17 @@ To delete a facility, select the drop-down menu and then select **Edit** option:
 
 Update the fields and select **Submit** to save the changes.
 
+### CDC Data Feed
+
+Select a facility and a CDC Pathway to view the data feed.
+
+![CDC Data Feed](media/portal-regional-report-viewer-cdc-data-feed.png)
+
+Members of **Regional Report Viewer** role can view and download the selected data feeds.
+
 ## Get Insights
 
-If you are a member of **Report Viewer** role, you’ll see option to view **Dashboards**:
+If you're a member of **Report Viewer** role, you’ll see option to view **Dashboards**:
 
 ![Get insights](media/portal-admin-get-insights.png)
 
