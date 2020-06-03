@@ -1,5 +1,18 @@
-Planning Phase
-==============
+---
+title: Planning Phase | Microsoft Docs
+description: Planning Phase
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Planning Phase
 
 Planning is the most important part of the app making process. When planning,
 you should consider the following:

@@ -1,5 +1,18 @@
-Sketching the screens
-=====================
+---
+title: Sketching the screens | Microsoft Docs
+description: Sketching the screens
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+## Sketching the screens
 
 Once you have identified the tasks and your thoughts are organized, the next
 step is to sketch the screens you envision needing within your app. By drawing

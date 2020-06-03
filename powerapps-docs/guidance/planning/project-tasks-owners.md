@@ -1,5 +1,18 @@
-Listing the project tasks and owners
-====================================
+---
+title: Listing the project tasks and owners | Microsoft Docs
+description: Listing the project tasks and owners
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Listing the project tasks and owners
 
 Based on the five project phases (Plan, Design, Make, Test, Deploy and refine),
 list out the tasks that needs to be done at each phase. Assign who will be
@@ -11,8 +24,7 @@ project team.
 See [Developing solutions collaboratively](making-phase.md) for information about how to enable
 multiple people to build one Power Apps project.
 
-Example: Expense report project tasks and owners
-------------------------------------------------
+## Example: Expense report project tasks and owners
 
 Abhay, who has visibility across the whole process as well as a passion for
 solving this problem, is taking the lead on this project.

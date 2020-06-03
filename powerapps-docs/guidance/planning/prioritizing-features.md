@@ -1,5 +1,18 @@
-Prioritizing features and requests
-==================================
+---
+title: Prioritizing features and requests | Microsoft Docs
+description: Prioritizing features and requests
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Prioritizing features and requests
 
 Prioritizing different requests can sometimes be difficult and intimidating.
 Following a relatively quantifiable approach will not only help you prioritize
@@ -30,8 +43,7 @@ The table below shows an example of how you could record each feature.
     users): “If this feature takes 4 weeks to add, is it worth delaying launch
     by 4 weeks?”
 
-Priority Quadrant
------------------
+## Priority Quadrant
 
 Once you have listed all your feature requests, you should triage the requests
 into the quadrant below.

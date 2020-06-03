@@ -1,13 +1,25 @@
-Securing the app and data
-=========================
+---
+title: Securing the app and data | Microsoft Docs
+description: Securing the app and data
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Securing the app and data
 
 Once you have determined what data structure to use, the next step is to
 consider about how to secure your data. You should consider what data will be
 accessed by who, and refer back to tasks, business processes and personas that
 you have listed in the planning phase.
 
-Layers of security
-------------------
+## Layers of security
 
 When setting up security, there are four different layers of security you could
 set up in a Power Apps app.
@@ -82,8 +94,7 @@ below shows what each security level would control in the behavior of an app.
 
 ![Security levels](media/security-levels.png)
 
-The 5 steps for designing security
-----------------------------------
+## The 5 steps for designing security
 
 Different security levels may seem quite complex and overwhelming but is easier
 when considered in the following five steps:
@@ -107,8 +118,8 @@ of those systems, seek advice from those service administrators.
 groups will be managed. Microsoft provides “security groups” to manage these
 groups.
 
-Example: Expense Report solution security
------------------------------------------
+## Example: Expense Report solution security
+
 
 In an expense approval scenario, all employees can submit expense reports so
 they all need to have access to the Expense Report Creation app. Additionally,
@@ -139,6 +150,4 @@ reports (but not change them).
 
 ![Diagram of expense report example security groups](media/expense-report-security.png)
 
-For details about the security setting and concepts, you should read through the
-[Power Apps Administration and Governance
-whitepaper](https://aka.ms/powerappsadminwhitepaper).
+For details about the security, see [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security).

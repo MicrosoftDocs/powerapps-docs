@@ -1,12 +1,24 @@
-Testing Phase
-=============
+---
+title: Testing Phase | Microsoft Docs
+description: Testing Phase
+author: taiki-yoshida
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: tayoshi
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Testing Phase
 
 Now that your app is built, the next step is to start testing out the app. In
 this section you will learn about the basics of how testing should be carried
 out.
 
-Types of tests
---------------
+## Types of tests
 
 ### Unit tests
 
@@ -68,8 +80,8 @@ feature list described in [Prioritizing features and
 requests](https://review.docs.microsoft.com/en-us/powerapps/guidance/envisioning-design-prioritize-features)
 section.
 
-Creating test cases and scenarios
----------------------------------
+## Creating test cases and scenarios
+
 
 In order to write comprehensive test scenarios and test cases, you should refer
 back to the Planning and Design phases to make sure you test all the important
@@ -85,8 +97,8 @@ the table below:
 | 1-2               | Check PDF is generated and is attached to the record | N/A                     | PDF file attached to the record              |            |
 | 1-3               | Check email notification is sent to user             | test\@contoso.com       | Email is received by the specified recipient |            |
 
-Tools to help you test (Canvas Apps)
-------------------------------------
+## Tools to help you test canvas apps
+
 
 ### Power Apps Test Studio (Experimental)
 
@@ -105,8 +117,7 @@ Monitor tool, have a look at this [blog post: “Introducing Monitor to debug ap
 and improve
 performance](https://powerapps.microsoft.com/en-us/blog/introducing-monitor-to-debug-apps-and-improve-performance/)”.
 
-Tools to help you test (Model-driven Apps)
-------------------------------------------
+## Tools to help you test model-driven apps
 
 ### EasyRepro
 
