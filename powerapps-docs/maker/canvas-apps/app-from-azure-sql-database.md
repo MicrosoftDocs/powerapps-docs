@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 03/30/2020
+ms.date: 06/03/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -16,9 +16,9 @@ search.app:
 ---
 # Preview: Create a canvas app from Azure SQL Database
 
-[This topic is pre-release documentation and is subject to change.]
+[This article is pre-release documentation and is subject to change.]
 
-In this topic, you'll use data in your Azure SQL Database to create an app with Power Apps in minutes. You'll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
+In this article, you'll use data in your Azure SQL Database to create an app with Power Apps in minutes. You'll have a fully functional app with your data that you can customize to fit your business needs and share  on any device.
 
 > [!IMPORTANT]
 > - This is a preview feature.
@@ -29,7 +29,7 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 - Your browser must have pop-ups enabled.
 - You need an Azure subscription. </br>If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/).
 - You need access to an existing SQL Database. </br> If you don't have an existing SQL Database, [create a new database](https://docs.microsoft.com/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal).
-- You need to allow Power Apps region [IP addresses or Azure services](#app-access-to-sql-database) access to SQL Database in firewall settings.
+- You must allow Power Apps region [IP addresses or Azure services](#app-access-to-sql-database) access to SQL Database in firewall settings.
 - The SQL Database table must have at least one column with text data type.
 
 ## Create an app from Azure portal
@@ -37,27 +37,29 @@ In this topic, you'll use data in your Azure SQL Database to create an app with 
 > [!TIP]
 > You can also create an app that uses Azure SQL database from [Power Apps](https://make.powerapps.com). For more information, read [SQL Server connector for Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-azure-sqldatabase).
 
-1. Sign into [Azure portal](https://portal.azure.com).
-2. Navigate to your SQL Database.
-3. Select Power Apps.
+1. Sign in to [Azure portal](https://portal.azure.com).
+1. Go to your SQL Database.
+1. Select **Power Apps**.
     
     ![Power Apps option in SQL Database options](./media/app-from-azure-sql-database/powerapps-link-azure-portal.png "Power Apps option inside SQL Database")
 
-4. Type a name for the app such as "Site Inspection", "Fundraiser", or "Budget Tracker".
+1. Select **Get started**.
 
-5. Enter a SQL authentication password and if necessary, change the username.
+1. App name is autofilled, but you can change it if necessary.
+    
+
+1. Enter a SQL authentication password and if necessary, change the autofilled username.
     
     > [!NOTE]
     > If you want to use Azure AD Integrated authentication instead of SQL authentication with Azure SQL database, create an app from [Power Apps](https://make.powerapps.com) instead, and use [SQL Server connector](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-azure-sqldatabase).
 
-6. Select a table from the dropdown list that you want to use to create the app.
+1. Select a table from the dropdown list that you want to use to create the app.
 
-7. Select **Create**.
-
+1. Select **Create**.
 
     ![Specify the information for your app](./media/app-from-azure-sql-database/powerapps-create-page-azure-portal.png "Specify the information for your app")
 
-    The [Power Apps Studio](https://create.powerapps.com/studio/) opens in a new tab. If the pop-up is blocked, update the browser to allow pop-ups and try again. Once created, you'll have a 3-page app with data from your SQL Database.
+    The [Power Apps Studio](https://create.powerapps.com/studio/) opens in a new tab. If the pop-up is blocked, update the browser to allow pop-ups and try again. Once created, you'll have a three-page app with data from your SQL Database.
 
 ## Accessing your app
 
