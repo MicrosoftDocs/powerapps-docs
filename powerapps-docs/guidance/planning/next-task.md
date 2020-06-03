@@ -1,13 +1,13 @@
 ---
 title: How does this task pass to the next task | Microsoft Docs
 description: How does this task pass to the next task
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---

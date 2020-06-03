@@ -1,13 +1,13 @@
 ---
 title: Is it worth automating this process | Microsoft Docs
 description: Is it worth automating this process
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---

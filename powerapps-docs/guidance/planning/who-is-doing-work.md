@@ -1,13 +1,13 @@
 ---
 title: Who is doing the work, when, and where | Microsoft Docs
 description: Who is doing the work, when, and where
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---

@@ -1,13 +1,13 @@
 ---
 title: Where to place logic | Microsoft Docs
 description: Where to place logic - canvas apps, model-driven apps, Common Data Service or Power Automate flows?
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---

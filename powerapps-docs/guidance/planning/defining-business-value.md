@@ -1,13 +1,13 @@
 ---
 title: Defining the business value of solving the problem | Microsoft Docs
 description: Defining the business value of solving the problem
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---

@@ -1,13 +1,13 @@
 ---
 title: Introduction to Planning a Power Apps project | Microsoft Docs
 description: Introduction to Planning a Power Apps project
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---

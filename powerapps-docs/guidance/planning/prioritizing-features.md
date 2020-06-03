@@ -1,13 +1,13 @@
 ---
 title: Prioritizing features and requests | Microsoft Docs
 description: Prioritizing features and requests
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---

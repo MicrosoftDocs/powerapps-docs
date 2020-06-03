@@ -1,13 +1,13 @@
 ---
 title: Differences between Power Apps and traditional app development approaches | Microsoft Docs
 description: Differences between Power Apps and traditional app development approaches
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---

@@ -1,13 +1,13 @@
 ---
 title: Is there data or information that they start with or need access to | Microsoft Docs
 description: Is there data or information that they start with or need access to
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---

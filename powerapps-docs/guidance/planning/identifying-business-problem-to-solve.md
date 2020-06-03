@@ -1,13 +1,13 @@
 ---
 title: Identifying the business problem to solve (the use case) | Microsoft Docs
 description: Identifying the business problem to solve (the use case)
-author: TGround
+author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
-ms.reviewer: kvivek
+ms.reviewer: kathyos
 searchScope:  
   - PowerApps
 ---
