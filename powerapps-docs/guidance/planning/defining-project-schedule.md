@@ -1,5 +1,18 @@
-Defining the project schedule
-=============================
+---
+title: Defining the project schedule | Microsoft Docs
+description: Defining the project schedule
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Defining the project schedule
 
 You should have at least a rough idea of how much time you will be spending on
 the project. The phases should be split to:

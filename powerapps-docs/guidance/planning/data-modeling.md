@@ -1,5 +1,18 @@
-Data modeling: designing your data structure
-============================================
+---
+title: Do they create or edit data | Microsoft Docs
+description: Do they create or edit data
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Data modeling: designing your data structure
 
 When you are storing or viewing data for your app, an important part of the
 design is the data structure. Consider not just how the data will be used in one
@@ -7,11 +20,9 @@ specific app or screen but also how others will use the data. Referring back to
 your personas, tasks, business process and goals will help you define what data
 to store and how to structure it.
 
->[!TIP]
-> Although it is written for the Access database, [this article about data
-design
-basics](https://support.office.com/article/Database-design-basics-EB2159CF-1E30-401A-8084-BD4F9C9CA1F5)
-has a good general discussion of data modeling principles.
+> [!TIP]
+> Although it is written for the Access database, this article about data
+design basics has a good general discussion of data modeling principles: [Database design basics](https://support.office.com/article/Database-design-basics-EB2159CF-1E30-401A-8084-BD4F9C9CA1F5)
 
 Let's take the expense report below as an example.
 
@@ -26,16 +37,14 @@ can say for every expense report, there are several line items.
 To store this kind of data to a database, we need to model the data structure in
 the database design.
 
-One to Many (1:N) Data Structure
---------------------------------
+## One to Many (1:N) Data Structure
 
 This is the type of data structure that was described with the example above
 with expenses. The main part of the expense report is linked to several line
 items. (You can also see the relationship from the perspective of the line
 items: many line items to one expense report (N:1).)
 
-Many to Many (N:N) Data Structure
----------------------------------
+## Many to Many (N:N) Data Structure
 
 Multiple to multiple data structure is a special type. This is for cases where
 multiple records can be associated with multiple set of other records. A good
@@ -45,8 +54,7 @@ also work with multiple of your colleagues.
 
 ![Multiple people connected by lines](media/many-to-many.png)
 
-Data modeling examples
-----------------------
+## Data modeling examples
 
 There are several types of modeling which could happen with a system. Let's go
 through couple of examples below.

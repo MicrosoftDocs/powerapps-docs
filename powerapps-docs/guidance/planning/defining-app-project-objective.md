@@ -1,5 +1,18 @@
-Defining the app project goals
-==============================
+---
+title: Defining the app project goals | Microsoft Docs
+description: Defining the app project goals
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Defining the app project goals
 
 Having a project plan ensures you have the right resources (time, people, and
 funds) and follow a consistent approach to ensure a good level of quality for
@@ -20,13 +33,12 @@ want to create additional goals related to the adoption, functionality, and
 usability of the app and its non-financial impacts on the business (such as
 increasing job satisfaction).
 
-Example: Expense report solution goals
---------------------------------------
+## Example: Expense report solution goals
 
 When we looked at the overall business goals, we decided to divide them into
 releases so that we could deliver value incrementally:
 
-Release 1:
+**Release 1:**
 
 -   For at least 80% of expense reports, expense report creators spend no more
     than 20 minutes actively working on creating reports.
@@ -34,7 +46,7 @@ Release 1:
 -   Within 1 month of solution availability, 100% of expense reports use the
     digital system.
 
-Release 2:
+**Release 2:**
 
 -   For at least 90% of expense reports, the time between submitting the report
     and having a payment logged in the finance system is less than 3 business
@@ -45,7 +57,7 @@ Release 2:
 
 -   Reduce errors found in semi-annual audit by 50%.
 
-Additional goals for release 1 of the solution:
+A**dditional goals for release 1 of the solution:**
 
 -   80% of salespeople surveyed report being able to meet all of their expense
     reporting needs using the mobile app

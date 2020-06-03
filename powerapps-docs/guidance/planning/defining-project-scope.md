@@ -1,5 +1,18 @@
-Defining the project scope
-==========================
+---
+title: Defining the project scope | Microsoft Docs
+description: Defining the project scope
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Defining the project scope
 
 Make sure you scope the project so that you know how much you will be trying to
 achieve from the project. Keep a clear roadmap on what you define as
@@ -29,8 +42,7 @@ deliver each component in a working end-to-end form. Even if it doesn’t yet ha
 every feature you want, deliver something that can be used. Your project plan
 should specify what will be delivered in each phase.
 
-Example: Expense Report project scope
--------------------------------------
+## Example: Expense Report project scope
 
 Looking at our business process, it is divided into 5 main tasks:
 

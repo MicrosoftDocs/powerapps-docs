@@ -1,3 +1,17 @@
+---
+title: Making apps discoverable | Microsoft Docs
+description: Making apps discoverable
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
 # Making apps discoverable
 
 Congratulations! You made your first app and it’s tested and ready to go!

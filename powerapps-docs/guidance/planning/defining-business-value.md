@@ -1,5 +1,18 @@
-Defining the business value of solving the problem
-==================================================
+---
+title: Defining the business value of solving the problem | Microsoft Docs
+description: Defining the business value of solving the problem
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Defining the business value of solving the problem
 
 Business value falls into one of 4 categories – easily remembered as
 REVO:
@@ -64,8 +77,7 @@ Once the category has been defined, then we need to define the value that we'll 
     -   Determine the penalty that can be avoided by having the information
         captured and available in the solution
 
-Example: The business value of automating the expense process
--------------------------------------------------------------
+## Example: The business value of automating the expense process
 
 In this case, the category of saving is ‘Efficiency’. The new App will reduce
 the amount of time it takes to process the same number of expense reports each

@@ -1,5 +1,18 @@
-Designing Phase
-===============
+---
+title: Designing Phase | Microsoft Docs
+description: Designing Phase
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Designing Phase
 
 Designing the app is an important part of the process where you will start to
 specify what you will be creating in the making phase based on the information
@@ -7,8 +20,8 @@ you have gathered in the Planning phase.
 
 In this phase, you will prepare the specifications and designs of your app.
 
-Conceptual design 
-------------------
+## Conceptual design 
+
 
 Conceptual design is about coming up with the design for the overall blueprint
 of the app.
@@ -19,8 +32,8 @@ In this section, you’ll consider:
 
 -   [What will the user experience be?](sketching.md)
 
-Architectural design 
----------------------
+## Architectural design 
+
 
 Once you have completed your conceptual design, it is time to move on to the
 architectural design. The architecture design specifies how you will use Power

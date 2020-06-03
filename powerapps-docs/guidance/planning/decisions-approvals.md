@@ -1,5 +1,19 @@
-Are there decisions being made based on the data? Or business rules to follow?
-==============================================================================
+---
+title: Are there decisions being made based on the data Or business rules to follow | Microsoft Docs
+description: Are there decisions being made based on the data Or business rules to follow
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Are there decisions being made based on the data Or business rules to follow?
+
 
 Do you have any “If ___ , then ___” logic?
 
@@ -16,8 +30,7 @@ For example, *if* a meal cost \$75 or more, *then* employees need to attach
 receipts for meals; and *if* the total amount is greater than \$500, *then* our
 expense reports need an extra level of approval.
 
-Does the decision require approvals?
-------------------------------------
+## Does the decision require approvals?
 
 Are approvals needed before the next step of the process begins? How are those
 approvals captured? Is there a specific user or role that can approve the next
@@ -34,8 +47,7 @@ been worked in the allotted timeframe?
 As you consider these different methods, always look for the most optimal method
 to help reduce the time to respond to an approval.
 
-Are there escalations required?
--------------------------------
+## Are there escalations required?
 
 Does the business process require escalations?
 
@@ -52,8 +64,8 @@ worker know that there are activities that are behind?
 
 Are there alerts or notifications that need to be generated?
 
-Example: Expense report approvals
----------------------------------
+## Example: Expense report approvals
+
 
 The Expense report process requires approvals. All Salespeople must have the
 expense report approved by Nick, their manager. When the employee submits the
