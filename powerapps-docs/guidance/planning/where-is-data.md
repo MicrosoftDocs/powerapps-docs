@@ -1,5 +1,18 @@
-Where is the data?
-==================
+---
+title: Where is the data | Microsoft Docs
+description: Where is the data
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Where is the data?
 
 There are three different ways you can retrieve and store data:
 
@@ -33,8 +46,8 @@ There are three different ways you can retrieve and store data:
 :::row-end:::
 
 
-Accessing existing data
------------------------
+## Accessing existing data
+
 
 Power Apps have two ways of using existing data. One is connectors which allows
 you to directly connect to a data source, and the other is dataflow which copies
@@ -61,8 +74,7 @@ the method based on some of the items below.
 | Modify existing data | Yes                                          | No                                            |
 | Use cases            | Production order, Timesheet, Sales Quotation | Customer master, Past invoices, Employee list |
 
-Example: Expense Report data
-----------------------------
+## Example: Expense Report data
 
 Our expense report project includes each of the three types of data storage
 needs:

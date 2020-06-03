@@ -1,5 +1,18 @@
-What activities are being performed in this step?
-=================================================
+---
+title: What activities are being performed in this step | Microsoft Docs
+description: What activities are being performed in this step
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# What activities are being performed in this step?
 
 Write down the activities that the user is doing to complete the tasks in this
 step of the business process. Get into the details of the activities.
@@ -13,8 +26,7 @@ Activities can be sequential or parallel, meaning either one
 activity cannot occur until the other is completed or two activities can occur
 at the same time within the process​.
 
-Example: Filling out an expense report
---------------------------------------
+## Example: Filling out an expense report
 
 When we spoke to Lee, Shawna, and Rebecca, they told us the steps were:
 

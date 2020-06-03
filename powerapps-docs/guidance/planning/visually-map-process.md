@@ -1,5 +1,18 @@
-Visually map the process
-========================
+---
+title: Visually map the process | Microsoft Docs
+description: Visually map the process
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Visually map the process
 
 The next step is to draw the business process of the use case you are trying to
 solve. 

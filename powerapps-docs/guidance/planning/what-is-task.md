@@ -1,5 +1,18 @@
-What is the task?
-=================
+---
+title: What is the task | Microsoft Docs
+description: What is the task
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# What is the task?
 
 In your business process document, write down what the task is. This should be
 the big picture task, not the individual activities done to complete it. (We’ll
@@ -11,8 +24,7 @@ for one task at a time. You may discover new tasks as you go.
 Your Power Apps project doesn’t have to tackle each step, but it’s good to know
 what they are.
 
-Example: Expense reporting tasks
---------------------------------
+## Example: Expense reporting tasks
 
 For our expense report example, we wrote down these tasks:
 

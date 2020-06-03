@@ -1,4 +1,18 @@
-Who is doing the work? When? And where?
+---
+title: Who is doing the work, when, and where | Microsoft Docs
+description: Who is doing the work, when, and where
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+Who is doing the work, when, and where?
 =======================================
 <!---Editor team: Two things I was unable to achieve: Make the people images smaller; and widen the first column in the table at the bottom of the article -->
 For this specific step, understand who is doing the work. What is their role?

@@ -1,5 +1,18 @@
-Is there data or information that they start with or need access to?
-====================================================================
+---
+title: Is there data or information that they start with or need access to | Microsoft Docs
+description: Is there data or information that they start with or need access to
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Is there data or information that they start with or need access to?
 
 What data, if any, does this person have presented to them as they begin these
 activities?
@@ -20,8 +33,8 @@ Where did this data come from?
 employee ID, manager’s name, and the date; they gather their receipts; and they
 need access to the list of expense types and the rules for each.
 
-Data privacy/permission considerations
---------------------------------------
+## Data privacy/permission considerations
+
 
 Thinking about the user executing these steps of the process:
 
@@ -49,8 +62,7 @@ app:
 > - Audit (Abhay) – Abhay should have the authority to review ALL of the expense
     reports
 
-Data refresh considerations
----------------------------
+## Data refresh considerations
 
 How often does the incoming data change? How often should it be refreshed? Is
 this data real-time coming from a device or a system, or does this data change

@@ -12,7 +12,7 @@ searchScope:
   - PowerApps
 ---
 
-## Introduction: Planning a Power Apps project
+# Introduction: Planning a Power Apps project
 
 
 If you just started using Power Apps, it may be a little overwhelming trying to

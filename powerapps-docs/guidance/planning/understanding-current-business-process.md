@@ -1,5 +1,18 @@
-Understanding the current business process
-==========================================
+---
+title: Understanding the current business process | Microsoft Docs
+description: Understanding the current business process
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Understanding the current business process
 
 Now it’s time to break down the business process that is currently solving the
 business problem, inspecting each step of the process down to the details.
@@ -10,7 +23,7 @@ In this section, you’ll learn about:
 
 -   Documenting the business process
 
-Identifying key contributors
+## Identifying key contributors
 ----------------------------
 
 Think through everyone who contributes to this process. This includes people in
@@ -23,7 +36,7 @@ to rely on these people to help you understand each step. You’ll most likely
 learn along the way, and you may need to add new people to your project team to
 provide their perspectives.
 
->[!TIP]
+> [!TIP]
 > Avoid blind spots! If you get to a step in the process where “and then, a
 miracle occurs!” you’ll need to find someone who can shine a light on that.
 Also, consider diverse perspectives in work preferences and constraints.

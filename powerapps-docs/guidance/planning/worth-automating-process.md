@@ -1,5 +1,18 @@
-Is it worth automating this process?
-====================================
+---
+title: Is it worth automating this process | Microsoft Docs
+description: Is it worth automating this process
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Is it worth automating this process?
 
 Now it is time to consider the effort it will take to build the solution and
 whether it is justified.
@@ -7,7 +20,7 @@ whether it is justified.
 Business Value is the ongoing benefit that the business receives from the
 project.
 
-The cost of doing nothing
+## The cost of doing nothing
 -------------------------
 
 To figure out if it is worth automating the process, you first must understand
@@ -32,8 +45,8 @@ of ‘what does it cost me to NOT automate the process’. You should consider t
 before deciding to build an automated solution. (And can also be helpful to know
 when celebrating the impact of your achievement when you are done!)
 
-Example: The cost of the current expense process
-------------------------------------------------
+## Example: The cost of the current expense process
+
 
 The first thing we need to understand is what is it costing the organization to
 continue to do the expense report process manually? Here is what we discovered
