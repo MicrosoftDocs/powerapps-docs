@@ -1,5 +1,18 @@
-Identifying the project members
-===============================
+---
+title: Identifying the project members | Microsoft Docs
+description: Identifying the project members
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Identifying the project members
 
 Anyone who is involved when designing, making, and testing the apps will be a
 project member.

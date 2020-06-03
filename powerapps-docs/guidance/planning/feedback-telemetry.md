@@ -1,3 +1,17 @@
+---
+title: Collecting feedback and analyzing telemetry | Microsoft Docs
+description: Collecting feedback and analyzing telemetry
+author: taiki-yoshida
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: tayoshi
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
 # Collecting feedback and analyzing telemetry
 
 To help you refine and improve your app, collecting feedback and analyzing the
@@ -55,4 +69,4 @@ telemetry you can gain from setting this up are as follows:
 ![A screenshot of Azure Application Insights](media/app-insights.png)
 
 You can also set up custom telemetry by using the [trace
-function](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/functions/function-trace).
+function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-trace).

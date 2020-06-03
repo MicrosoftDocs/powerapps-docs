@@ -1,12 +1,12 @@
 ---
 title: Making apps discoverable | Microsoft Docs
 description: Making apps discoverable
-author: TGround
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kvivek
 searchScope:  
   - PowerApps

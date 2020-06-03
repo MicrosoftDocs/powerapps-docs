@@ -1,12 +1,12 @@
 ---
 title: Designing Phase | Microsoft Docs
 description: Designing Phase
-author: TGround
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kvivek
 searchScope:  
   - PowerApps

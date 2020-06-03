@@ -1,3 +1,17 @@
+---
+title: Identifying the business problem to solve (the use case) | Microsoft Docs
+description: Identifying the business problem to solve (the use case)
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
 # Identifying the business problem to solve (the use case)
 
 The first step of using the Power Platform to solve a business problem is

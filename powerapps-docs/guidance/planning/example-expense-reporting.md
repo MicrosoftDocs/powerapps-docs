@@ -1,3 +1,17 @@
+---
+title: Example Expense Reporting | Microsoft Docs
+description: "Example: Expense Reporting"
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
 # Example: Expense Reporting
 
 The example below shows how a typical paper-based expense approval within the

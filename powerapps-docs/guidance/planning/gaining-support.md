@@ -1,5 +1,18 @@
-Gaining support/sponsorship from management
-===========================================
+---
+title: Gaining support and sponsorship from management | Microsoft Docs
+description: Gaining support and sponsorship from management
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Gaining support and sponsorship from management
 
 To ensure your company is supportive of making your app and using it to replace
 any existing business process, make sure to gain support or sponsorship from

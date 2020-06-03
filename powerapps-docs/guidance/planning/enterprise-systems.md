@@ -1,5 +1,18 @@
-Working with enterprise systems
-===============================
+---
+title: Working with enterprise systems | Microsoft Docs
+description: Working with enterprise systems
+author: taiki-yoshida
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: tayoshi
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Working with enterprise systems
 
 When you need to work and integrate with existing enterprise systems such as
 SAP, Oracle, Web Ordering system, you should seek cooperation and support from
@@ -9,16 +22,15 @@ Even if you aren’t in a technical role, read this section to understand some o
 the things that typically need to be taken into consideration when integrating
 with enterprise systems.
 
-Frequency and time of data integration
---------------------------------------
+## Frequency and time of data integration
+
 
 When integrating with other systems, you need to consider frequency of
 integration, and time zones if the integration has cross-time-zone use cases.
 The frequency of integration will depend on two aspects: the data volume and the
 time-related requirements of the business.
 
-Method of integrating with enterprise systems
----------------------------------------------
+## Method of integrating with enterprise systems
 
 There are several ways of integrating with enterprise systems.
 
@@ -36,8 +48,7 @@ There are several ways of integrating with enterprise systems.
     import the file that was exported. This method is used in situations where
     the data source cannot be accessed directly via database or APIs.
 
-Connecting to on-premise systems
---------------------------------
+## Connecting to on-premises systems
 
 On-premise data gateway allows Power Apps and services to connect to systems
 that are not open to the internet in a secure manner. Setting up is easy using
