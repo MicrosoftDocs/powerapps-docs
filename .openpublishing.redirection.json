@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/common-data-service/solution-best-practices.md",
+      "redirect_url": "https://docs.microsoft.com/en-us/power-platform/alm/solution-concepts-alm",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "powerapps-docs/developer/common-data-service/build-tools-tutorial-faq.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/devops-build-tools#frequently-asked-question-faq",
       "redirect_document_id": "false"
