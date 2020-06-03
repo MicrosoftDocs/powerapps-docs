@@ -2,7 +2,7 @@
 title: "Use solutions in Power Apps | MicrosoftDocs"
 description: "Learn how to use solution to create or customize apps"
 ms.custom: ""
-ms.date: 10/28/2019
+ms.date: 05/19/2020
 ms.reviewer: matp
 ms.service: powerapps
 ms.topic: "article"
@@ -19,22 +19,30 @@ search.app:
 ---
 # Use solutions in Power Apps
 
- Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. You can then select a solution to view all of its components. 
+ Within Power Apps, you can view a list of solutions by selecting **Solutions** in the left navigation. 
+
+Additionally, you can perform these tasks: 
+- **New solution**: To locate and work with just the components you’ve customized, create a solution and do all your customization there. Then, you can easily distribute your solution to other environments. More information: [Create a solution](create-solution.md) 
+- **Import**: Import a solution into your environment. More information: [Import solutions](import-update-export-solutions.md) 
+- **Open AppSource**: [Microsoft AppSource](https://appsource.microsoft.com/) is where you can go to get solutions tailored to your industry that work with the products you already use. 
+- **Publish all customizations**: Publish all active customizations in your environment. 
+- **Switch to classic**: Open the classic solution explorer. 
+- **See history**: View details about solution operations over time, such as import, export, and uninstall. More information: [View the history of a solution](solution-history.md)
+
+![Solutions area](media/solutions-area-tasks.png)
+
+## Open and work with a solution
+From the **Solutions** area, select a solution to view all of its components. 
  
 > [!div class="mx-imgBorder"]  
-> ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")  
- 
-> [!NOTE]
->  The solutioning experience is available only online and for environment version 9.1.0.267 and later. To check your version, please go to …[Power Platform admin center](https://admin.powerplatform.microsoft.com/) > **Environments** > select your environment, and locate the **Database version** in the **Details** area. For earlier version environments, selecting a solution opens it in the classic experience.  
- 
+> ![Demo solution with all components](media/solution-all-items-list.PNG "Demo solution with all components")   
  You can browse through all the components in a solution by scrolling through the items. If there are more then 100 items in the list you can select **Load the next 100 items** to see more. 
  
 > [!div class="mx-imgBorder"]  
 > ![Load more components](media/load-more.PNG "Load more components")  
 
  ## Search and filter in a solution
- 
- You can also search for a specific component by its name. 
+  You can also search for a specific component by its name. 
  
 > [!div class="mx-imgBorder"]  
 > ![Search component](media/solution-search-box.png "Search component")  
@@ -44,8 +52,8 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Filter component by type](media/solution-filter.PNG "Filter component by type")  
  
+
  ## Contextual commands
- 
  As you select each component, the actions available in the command bar will change depending on the type of the component you have selected and if the solution is the default or a managed one. 
  
 > [!div class="mx-imgBorder"]  
@@ -56,29 +64,21 @@ search.app:
 > [!div class="mx-imgBorder"]  
 > ![Solution specific commands](media/solution-commands.PNG "Solution specific commands")  
  
- ## Create components in a solution
- With solutions that are unmanaged or the default one, you can use the **New** command to create different types of components. This takes you to a different create experience depending on the component type that you choose. After you finish creating the component, it will be added to the solution. 
+With solutions that are unmanaged or the default one, you can use the **New** or **Add Existing** command to create or add different types of components. More information: [Add solution components](create-solution.md#add-solution-components)
  
-> [!div class="mx-imgBorder"]  
-> ![Create new component in a solution](media/solution-new-component.PNG "Create new component in a solution")  
- 
- ## Add an existing component to a solution
- 
- With solutions that are unmanaged and not the default one, you can use the **Add existing** command to bring in components that aren’t already in the solution.  
- 
-> [!div class="mx-imgBorder"]  
-> ![Add existing component to a solution](media/solution-add-existing-component.PNG "Add existing component to a solution")  
-  
- With solutions that are managed, only certain commands are available and you’ll see the message "You cannot directly edit the components within a managed solution." You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable. More information: [Managed properties](/power-platform/alm/managed-properties-alm)
+> [!NOTE]
+> You can't add components to a managed solution. When you try to, you’ll see the following message:<br/>
+`"You cannot directly edit the components within a managed solution. You’ll need to add it to another unmanaged solution that you’ve created to customize the component. The component might not be customizable."`
 
- Many of the customizations you’ll want to do will involve entities. You can use the **Entity** filter to show a list of all the entities in the current solution that can be customized in some way. Once you drill into an entity, you can see the components that are part of the entity as shown with the account entity in the following screenshot. 
-   
-> [!div class="mx-imgBorder"]  
-> ![Demo solution showing expanded account entity](media/solution-entity-account.png "Demo solution showing expanded account entity")  
+<!-- ## View dependencies for a component
 
-## Classic solution explorer
 
-In Power Apps, you can view the classic solution explorer by selecting **Solutions** in the left navigation pane, and then selecting **Switch to classic** on the command bar.  
+
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 
+2. Open the solution you want, select the component you want, on the command bar select **...,** and then select **Show dependencies**. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![Component dependency for the account entity](media/component-dependencies-account.png)  -->
 
 ## Known limitations
 
