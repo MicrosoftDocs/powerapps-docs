@@ -29,7 +29,7 @@ In this article, you'll use data in your Azure SQL Database to create an app wit
 - Your browser must have pop-ups enabled.
 - You need an Azure subscription. </br>If you don't have an Azure subscription, [create a free account](https://azure.microsoft.com/free/).
 - You need access to an existing SQL database. </br> If you don't have an existing SQL database, [create a new database](https://docs.microsoft.com/azure/sql-database/sql-database-single-database-get-started?tabs=azure-portal).
-- You must allow [Azure services](#app-access-to-sql-database-server) access to SQL database server in firewall settings.
+- You must allow [Azure services](#app-access-to-sql-database-server) access to SQL Database server in firewall settings.
 - The SQL database table must have at least one column with text data type.
 
 ## Create an app from Azure portal
