@@ -48,6 +48,7 @@ You can view all administrative options available to you after selecting **Admin
 | [Systems](#systems)      | Create, edit, or delete systems. |
 | [Regions](#regions)      | Create or delete regions.                              |
 | [Facilities](#facilities)    | Create, edit, or delete facilities.                        |
+| CDC Data Feed | View or download CDC data feed.
 
 ### User Requests
 

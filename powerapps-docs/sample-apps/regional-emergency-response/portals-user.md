@@ -141,12 +141,25 @@ names.
 - More information about conservation strategy available at [Conservation Strategies for Personal Protective Equipment](https://www.doh.wa.gov/Portals/1/Documents/1600/coronavirus/ConservationStrat-PPE.pdf).
 - **Extended use**: Wearing for repeated close contact encounters with several patients without removing between patients.
 - **Reuse**: Using same PPE for multiple encounters with patients but removing it (‘doffing’) after each encounter.
-- **Ventilator Disposables use/reuse**: When considering definitions for extended use or reusing ventilator supplies, please refer to the [Scarce Resource Management and Crisis Standards of Care Overview](https://nwhrn.org/wp-content/uploads/2018/10/Scarce_Resource_Management_and_Crisis_Standards_of_Care_Overview_and_Materials-2020-04-10.pdf) document. <br>
-    | WA Health | Scarce Resource Mgmt and Crisis Standards of Care Overview |
-    | - | - |
-    | *Standard* | Conventional |
-    | *Conservation* | Contingency |
-    | *Extreme* | Crisis |
+- **Ventilator Disposables use/reuse**: When considering definitions for extended use or reusing ventilator supplies, please refer to the [Scarce Resource Management and Crisis Standards of Care Overview](https://nwhrn.org/wp-content/uploads/2018/10/Scarce_Resource_Management_and_Crisis_Standards_of_Care_Overview_and_Materials-2020-04-10.pdf) document.
+    <table>
+      <tr>
+        <th>WA Health</th>
+        <th>Scarce Resource Mgmt and Crisis Standards of Care Overview</th>
+      </tr>
+      <tr>
+        <td><i>Standard</i></td>
+        <td>Conventional</td>
+      </tr>
+        <tr>
+        <td><i>Conservation</i></td>
+        <td>Contingency</td>
+      </tr>
+        <tr>
+        <td><i>Extreme</i></td>
+        <td>Crisis</td>
+      </tr>
+    </table>
 - **Ventilator supplies (disposables)**: When considering definitions for “ventilator supplies (disposable)” please refer to [CDC NHSN](https://www.cdc.gov/nhsn/) website.
 
 ## COVID-19 stats
