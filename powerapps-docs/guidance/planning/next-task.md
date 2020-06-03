@@ -1,5 +1,18 @@
-How does this task pass to the next task?
-=========================================
+---
+title: How does this task pass to the next task | Microsoft Docs
+description: How does this task pass to the next task
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# How does this task pass to the next task?
 
 Now it is time to move to the next task in the process. What does that look
 like?
@@ -12,8 +25,7 @@ Is the next task performed by the same person who completed this task? Is the
 next task completed by a different person? How does that person know that they
 can begin the next task?
 
-On to the next task!
---------------------
+## On to the next task!
 
 Now that this task has been inspected, continue with the next task in the
 process starting back at [What is the task?](what-is-task.md) until all of the tasks have been

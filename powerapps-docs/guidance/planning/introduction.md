@@ -1,5 +1,19 @@
-Introduction
-============
+---
+title: Introduction to Planning a Power Apps project | Microsoft Docs
+description: Introduction to Planning a Power Apps project
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+## Introduction: Planning a Power Apps project
+
 
 If you just started using Power Apps, it may be a little overwhelming trying to
 create an app from a blank screen.
@@ -57,6 +71,7 @@ these articles are for you, too.
 If you are a **“full stack” developer**, this methodology will cover projects
 more suited for rapid development vs the traditional large-scale development.
 
-**Note**: If your intention is to create a very large and complex solution,
+> [!NOTE]
+>  If your intention is to create a very large and complex solution,
 [SureStep](https://mbs.microsoft.com/customersource/Global/SureStep) is the
 recommended guide to use.

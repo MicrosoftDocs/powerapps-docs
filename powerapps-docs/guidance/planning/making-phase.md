@@ -1,5 +1,18 @@
-Making Phase
-============
+---
+title: Making Phase | Microsoft Docs
+description: Making Phase
+author: taiki-yoshida
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: tayoshi
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Making Phase
 
 You have now planned and designed your app. The next step is to actually make
 the app.
@@ -8,8 +21,8 @@ the app.
 > In addition to the links below, you’ll find a curated collection of
 learning resources here: <https://aka.ms/PowerPlatformResources>.
 
-Basic steps for making Canvas Apps
-----------------------------------
+## Basic steps for making Canvas Apps
+
 
 Below are the basic steps when creating canvas apps.
 
@@ -45,8 +58,7 @@ Below are the basic steps when creating canvas apps.
 5.  [Create Power Automate
     flows](https://docs.microsoft.com/power-automate/get-started-logic-flow)
 
-Basic steps for making Model-driven Apps
-----------------------------------------
+## Basic steps for making Model-driven Apps
 
 Below are the basic steps when creating Model-driven apps. If you are unfamiliar
 with the components, you should have a look at [Understand model-driven app
@@ -80,8 +92,7 @@ components](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-d
 8.  Set up [Power Automate
     flows](https://docs.microsoft.com/power-automate/connection-cds)
 
-Developing solutions collaboratively
-------------------------------------
+## Developing solutions collaboratively
 
 When developing your solutions with multiple app makers, there are ways of
 collaborating depending on which application type you are making.

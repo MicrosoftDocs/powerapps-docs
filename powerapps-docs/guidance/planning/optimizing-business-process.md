@@ -1,5 +1,18 @@
-Optimizing your business process
-================================
+---
+title: Optimizing your business process | Microsoft Docs
+description: Optimizing your business process
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Optimizing your business process
 
 Now that you have inspected the entire business process, challenge yourself to
 optimize the process. Streamlining the process avoids having so many steps that it
@@ -58,8 +71,7 @@ Some key questions to ask:
     -   [Use AI](https://docs.microsoft.com/ai-builder/overview) to replace
         human attention?
 
-Example: Optimizing the expense report process
-----------------------------------------------
+## Example: Optimizing the expense report process
 
 We reviewed the current expense process and there were some obvious improvements
 to make:

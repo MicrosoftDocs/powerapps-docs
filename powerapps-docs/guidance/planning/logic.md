@@ -1,5 +1,18 @@
-Where to place logic - Canvas apps, Model Driven Apps, Common Data Service or Power Automate flows?
-===================================================================================================
+---
+title: Where to place logic | Microsoft Docs
+description: Where to place logic - canvas apps, model-driven apps, Common Data Service or Power Automate flows?
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Where to place logic: canvas apps, model-driven apps, Common Data Service or Power Automate flows?
 
 Your app will have business logic, such as data validation (using the right
 format for an email address, for example), calculations, selecting the next
@@ -7,8 +20,7 @@ process step based on data, enabling a button when all required fields have
 data, and so forth. This article explains some considerations for deciding where
 to place the logic in your system.
 
-Power Apps - Canvas Apps
-------------------------
+## Power Apps - canvas apps
 
 You set logic in Canvas apps using formulas.
 
@@ -32,8 +44,7 @@ in Canvas apps:
 [Learn more about formulas in Canvas
 apps](../../maker/canvas-apps/working-with-formulas).
 
-Power Apps – Model-Driven Apps
-------------------------------
+## Power Apps – Model-Driven Apps
 
 Model-driven apps provide several ways to run logic. There are four types of
 logic using low-code methods that are aimed for all developers:
@@ -70,8 +81,7 @@ Model-driven apps instead of trying to do everything using Canvas apps.
 [Learn more about business logic in Model-driven
 apps](../../maker/model-driven-apps/guide-staff-through-common-tasks-processes).
 
-Power Automate flows
---------------------
+## Power Automate flows
 
 For use cases where there is complex logic to run, you need multiple connectors
 or you don’t want the user to wait for the action to finish, Power Automate
@@ -89,8 +99,7 @@ if:
 [Learn more about Power
 Automate](https://docs.microsoft.com/power-automate/).
 
-Common Data Service
--------------------
+## Common Data Service
 
 You can set logic in Common Data Service so that all of the logic is run in the
 service rather than the devices. This makes the app more performant and also
@@ -102,7 +111,7 @@ and flows that use the Account entity, you should set this logic in Common Data
 Service rather than in each app and flow.
 
 There are several ways of applying logic to Common Data Service. Using low code,
-you can set up things such as autonumbering fields, calculated fields, and
+you can set up things such as auto numbering fields, calculated fields, and
 roll-up fields. For pro-developers, you can apply business logic using code by
 creating a plugin, or developing workflow extensions.
 

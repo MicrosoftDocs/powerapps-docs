@@ -1,5 +1,18 @@
-Identifying the risks
-=====================
+---
+title: Identifying the risks | Microsoft Docs
+description: Identifying the project members
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Identifying the risks
 
 It’s a good idea to identify risk to your project. You should identify what kind
 of risks are involved when making the app. It may sound a little over the top,
@@ -33,8 +46,8 @@ might also want to include the risk level to understand the potential impact.
 -   **Minor risk**: A risk that may impact the project but will not stop it from
     continuing, or a risk that affects only at an individual level.
 
-Example: Expense report project risks
--------------------------------------
+## Example: Expense report project risks
+
 
 We created a table like this for our expense report project:
 

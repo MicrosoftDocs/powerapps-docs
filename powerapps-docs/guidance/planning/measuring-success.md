@@ -1,5 +1,18 @@
-Measuring success against the business value
-============================================
+---
+title: Measuring success against the business value | Microsoft Docs
+description: Measuring success against the business value
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Measuring success against the business value
 
 Once the Business Value you think is achievable has been identified, now you
 must figure out how to measure progress toward realizing that value. To do this,
@@ -40,8 +53,7 @@ Key Result is the way you’ll measure progress toward that goal. For example,
 “Objective: Increase retention in Accounting team. Key result: 20% increase in
 survey-measured job satisfaction after app launch.”
 
-Return on investment
---------------------
+## Return on investment
 
 Return on Investment (ROI) calculation is reviewing the cost of building the
 solution to ensure that the value is more than that cost.
@@ -52,8 +64,7 @@ However, if there is a need to determine the return on the investment (ROI),
 then understanding the time it will take to build the solution is important. To
 help you estimate that, proceed to the next section, Creating a project plan.
 
-Example: Measuring success for the expense reporting solution
--------------------------------------------------------------
+## Example: Measuring success for the expense reporting solution
 
 To decide on our goals, we looked back at our project objective:
 
