@@ -1,8 +1,21 @@
-Determining which type of app to make
-=====================================
+---
+title: Determining which type of app to make | Microsoft Docs
+description: Determining which type of app to make
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Determining which type of app to make
 
 In Power Apps, you have two options when creating apps for your employees to
-use: Model-driven apps and Canvas apps.
+use: model-driven apps and canvas apps.
 
 [This article goes into detail about types of Power Apps apps.](../../maker/index.md)
 
@@ -47,8 +60,6 @@ experience.
 :::row-end:::
 
 
-
-
 Consider creating a model-driven app unless there is a specific need for a
 canvas app. Model-driven apps enable you to make your app quickly because they
 don’t require you to build out the UI yourself.
@@ -58,8 +69,7 @@ don’t require you to build out the UI yourself.
 can also create a third type of app: [portal apps](../../maker/portals/overview).
 
 
-Building an end-to-end solution with multiple apps
---------------------------------------------------
+## Building an end-to-end solution with multiple apps
 
 Your business process may require more than one app.
 

@@ -1,5 +1,19 @@
-Differences between Power Apps and traditional app development approaches
-=========================================================================
+---
+title: Differences between Power Apps and traditional app development approaches | Microsoft Docs
+description: Differences between Power Apps and traditional app development approaches
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Differences between Power Apps and traditional app development approaches
+
 
 Compared to traditional app development, Power Apps projects have differences in
 two areas:
@@ -8,8 +22,7 @@ two areas:
 
 -   Development methodology
 
-Differences in who develops
----------------------------
+## Differences in who develops
 
 Power Apps is a platform that benefits both “pro developers” and “citizen
 developers.”
@@ -23,8 +36,7 @@ apps without writing code.
 
 ![The Power Platform and Azure ecosystem](media/ecosystem.png)
 
-Differences in development methodology
---------------------------------------
+## Differences in development methodology
 
 With traditional app development such as “waterfall,” there is a long lead time
 until a user actually “sees” a working app. As a result, it increases the risk

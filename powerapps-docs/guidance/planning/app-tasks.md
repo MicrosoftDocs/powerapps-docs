@@ -1,5 +1,18 @@
-Identifying the tasks to be done in the app
-===========================================
+---
+title: Identifying the tasks to be done in the app | Microsoft Docs
+description: Identifying the tasks to be done in the app
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Identifying the tasks to be done in the app
 
 To identify the tasks that are required in the app, you should refer to the
 business process flow chart that you created in the planning phase and add
@@ -17,8 +30,8 @@ If you are working with multiple people, using tools like Microsoft Planner or
 Whiteboard app would help you efficiently collaborate and work together on
 listing the tasks.
 
-Example: Tasks for creating and viewing expense reports
--------------------------------------------------------
+## Example: Tasks for creating and viewing expense reports
+
 
 We considered the tasks done by people who will be creating and viewing the
 expense reports. We’ll separately consider the tasks for approvals and for

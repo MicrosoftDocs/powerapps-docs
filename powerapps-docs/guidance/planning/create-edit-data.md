@@ -1,12 +1,25 @@
-Do they create or edit data?
-============================
+---
+title: Do they create or edit data | Microsoft Docs
+description: Do they create or edit data
+author: TGround
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 06/02/2020
+ms.author: thground
+ms.reviewer: kvivek
+searchScope:  
+  - PowerApps
+---
+
+# Do they create or edit data?
 
 Understanding the tasks in this step, is there any data that the solution needs
 to capture? What is the data that needs to be captured? Here are some things to
 consider for each data element that is captured by the solution.
 
-Is there an existing form?
----------------------------------------
+## Is there an existing form?
+
 
 Is there a current paper form or electronic form used to capture
 this data today? This form can serve as a great beginning point as you think about
@@ -20,8 +33,7 @@ Also think about the form critically:
 - Can the form be divided into separate smaller forms that allow the process
     to happen in parallel, rather than one part at a time?
 
-What data is captured? 
------------------------
+## What data is captured? 
 
 What is the data that is being captured?
 
@@ -33,8 +45,7 @@ Is there a hierarchy of the data? (For example, each expense report can have
 multiple expenses, and some expense types require specific additional
 information.)
 
-What data is created from a formula or calculation?
----------------------------------------------------
+## What data is created from a formula or calculation?
 
 Are there calculations that are done to create the data?
 
@@ -47,15 +58,15 @@ date and the employee name; it needs to be stored so it never changes. We’ll
 also calculate expense subtotals and totals; since those can be recalculated any
 time from the other data in the report, we don’t need to save them separately.
 
-Is the data required?
----------------------
+## Is the data required?
+
 
 For this step of the process, is this data *required* to complete the process?
 If it is required, why is it required? Is data only required in certain
 situations?
 
-What type of data is it?
-------------------------
+## What type of data is it?
+
 
 What type of data is being captured?
 
@@ -85,8 +96,8 @@ captured from a camera on the user’s device? Is this an image/video that is
 coming in via e-mail? Is there any AI that should be run on this image
 (detecting elements of the image, for example)?
 
-Where do you put the data today?
--------------------------------
+## Where do you put the data today?
+
 
 Today as you solve the business problem, where does the data get captured? Does
 the data go back into an existing system? Does it go into a spreadsheet? Does it
@@ -99,8 +110,7 @@ Another thing to consider is whether this data can be valuable to other
 processes in the organization. Could other processes be automated if this data
 were available to them?
 
-Does someone use this data later in the process?
-------------------------------------------------
+## Does someone use this data later in the process?
 
 Is there a step later in this process that uses this data? How do they use this
 data? If this data was available earlier in the process, could a process further
@@ -111,8 +121,7 @@ business problem because data becomes available earlier and other participants
 in solving the problem can act sooner. This may contribute to the business value
 that automating the business process provides.
 
-Can anyone else benefit from this data outside of this process? 
-----------------------------------------------------------------
+## Can anyone else benefit from this data outside of this process? 
 
 Is there another team or process that can use the data captured in this process?
 (Not a step later in this process, but a process elsewhere in the business that
@@ -125,8 +134,7 @@ manual because a process in another area does not have a means by which to get
 data. Now that this process is being automated, is there an opportunity for
 other processes to build on this one?
 
-Example: Expense report data creation
--------------------------------------
+## Example: Expense report data creation
 
 Here are some of the data elements in the worksheet for the expense report
 capture process:
