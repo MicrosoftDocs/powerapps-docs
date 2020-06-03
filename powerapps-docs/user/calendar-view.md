@@ -74,6 +74,9 @@ You can view a summary of a record by selecting it in the calendar. A pop-up win
 
 If you want to view complete details about the record, select **More Details** in the pop-up window.
 
+> [!NOTE]
+> This view is not customizable. If you would like to customize this view, add your suggestion [here](https://ideas.powerapps.com).
+
 ### Create and delete records from the calendar
 
 The new calendar view allows you to create and delete records from the calendar.
