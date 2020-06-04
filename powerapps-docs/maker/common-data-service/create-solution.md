@@ -83,7 +83,7 @@ When you select entity components, we recommend that you use solution segmentati
 
 ## Publish changes 
 
- Certain customizations that make changes to the user interface in an unmanaged solution require that they be published before they can be exported (or before they can be used). 
+When you make unmanaged changes in an environment, some components, such as forms, entities, model-driven apps, site maps, and views are saved in an unpublished state. The publish action promotes these changes to an active state and makes them available to end users and for export. 
  
 ### Publish your customizations
 
