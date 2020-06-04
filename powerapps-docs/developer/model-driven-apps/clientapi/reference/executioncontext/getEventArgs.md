@@ -49,7 +49,6 @@ Returns an object with methods to manage the events.
 |[OnTabStateChange](../events/tabstatechange.md)|None|
 |[PreSearch](../events/presearch.md)|None|
 
-
 ### Related topics
 
 [Execution context](../execution-context.md)

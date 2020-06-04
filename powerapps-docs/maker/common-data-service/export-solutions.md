@@ -2,7 +2,7 @@
 title: "Export solutions | MicrosoftDocs"
 description: "Learn how to export a solution in Power Apps"
 ms.custom: ""
-ms.date: 01/30/2020
+ms.date: 05/26/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,10 +24,10 @@ search.app:
 ---
 
 # Export solutions  
- We recommend that you create an unmanaged solution to use for exporting your customizations. Then, export your customizations periodically so that you have a backup in case anything happens. You cannot export managed solutions. You can either export solutions from Power Apps or you can export using the classic experience. 
+You can manually export solutions using the steps in this article. We recommend that you create an unmanaged solution to use for exporting your customizations, and then export your customizations periodically so that you have a backup in case anything happens. You can't export [managed](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) solutions or the [Default Solution](solutions-overview.md#default-solutions). 
  
-> [!IMPORTANT]
-> Exporting the Default Solution is not supported. 
+> [!NOTE]
+> To implement healthy application lifecycle management (ALM) in your organization, consider using a source control system to store and collaborate on your solutions, and automate the solution export process. More information: [ALM basics](/power-platform/alm/basics-alm) in the Power Platform ALM guide. 
 
 ## Export from Power Apps
   
@@ -41,16 +41,16 @@ search.app:
 
 4.  The **Export this solution** right pane appears. Enter or select from the following options, and then select **Export**:  
     - **Version number**: Power Apps automatically increments your solution version while displaying the current version. You can accept the default version or enter your own. 
-    - **Export as**: Select the package type, either **Managed** or **Unmanaged**. 
+    - **Export as**: Select the package type, either **Managed** or **Unmanaged**. More information: [Managed and unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions)
 
-   <!-- UI has changed  [!div class="mx-imgBorder"]  
-    > ![Export solution](media/solution-export.png "Export solution")  -->
+    > [!div class="mx-imgBorder"]  
+    > ![Export solution](media/solution-export.png "Export solution")
 
 The export can take several minutes to complete. Once finished, the export .zip file is available in the download folder specified by your web browser.
 
-## Export from the classic experience
+## Export using the classic experience
 
-1.  Select **Solutions** from the left navigation and then select **Switch to classic**. 
+1.  Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. Select **Switch to classic**. 
   
 2.  In the list select the solution you want to export and then select **Export**. 
   
