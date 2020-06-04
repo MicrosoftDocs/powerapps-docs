@@ -39,13 +39,13 @@ Below are the basic steps when creating canvas apps.
         (when using SharePoint)
 
 2.  [Create a new
-    app](../../maker/canvas-apps/getting-started#build-an-app.md)
+    app](../../maker/canvas-apps/getting-started.md#build-an-app)
 
 3.  [Add
     connectors](../../maker/canvas-apps/add-manage-connections.md)
 
 4.  [Create
-    screens](../../maker/canvas-apps/add-screen-context-variables)
+    screens](../../maker/canvas-apps/add-screen-context-variables.md)
 
     -   Home Screen
 
