@@ -217,6 +217,45 @@ To play tests in your browser:
 
 6. View your test playing back.
 
+## Setup your tests
+
+The **OnTestCaseStart** property of a Test Suite can be used to setup your test. The expression entered for this property triggers for every test case in a suite before the case begins executing. **OnTestCaseStart** helps you avoid writing the same test steps at the beginning of every case. You can customize this property to run set up tasks that are common to all cases in the suite such as:
+
+- Always starting test execution from the first screen. 
+- Initializing common collections or variables. 
+- Fetching test data from a data source for the current executing test 
+
+The **TestCaseInfo** record contains details for the current test that is executing. It contains the following properties:
+
+- *TestCaseName* – the name of the test case.
+- *TestCaseDescription* – the description of the test case.
+- *TestCaseId* – the ID of the test case.
+- *TestSuiteName* – the test suite name that the case belongs to.
+- *TestSuiteDescription* – the description of the test suite.
+- *TestSuiteId* – the test suite ID that the case belongs to.
+
+In the below example, you will customize the **OnTestCaseStart** property so every test case begins from the first screen in your app. You will also fetch the test data from a data source that can be referenced in the steps for the test case.
+
+1. Select **Test** in the left pane or **View** on the suite header.
+
+    ![Test or view set property](./media/working-with-test-studio/test-or-view-to-set-property.png "Test or view set property")
+
+2. Select the **OnTestCaseStart** action.
+
+3. Input an expression to Navigate to first screen and fetch the test data for your test. 
+
+    ```powerapps-dot
+    //Start every cases on the first screen in the Kudos app
+    Navigate('Dashboard Screen');
+
+    //Initialize my test data for the current case. 
+    Set(currentTestData, LookUp(KudosTestData, TestCase = TestCaseInfo.TestCaseName));
+
+    //Set kudosBeforeTest to 0
+    Set(kudosBeforeTest, 0)
+    ```
+    ![OnTestCaseStart example](./media/working-with-test-studio/ontestcasestart-example.png "OnTestCaseStart example")
+
 ## Processing test results
 
 The test panel visible when playing back tests in Test Studio is not visible when using a browser. Due to this, you cannot determine the specific test step that executes, or if a test passes or fails.
@@ -235,8 +274,10 @@ These settings apply to every test suite or test case in your app. After each te
 The **TestCaseResult** record contains the following properties:
 
 - *TestCaseName* – the name of the test case.
+- *TestCaseDescription* – the description of the test case.
 - *TestCaseId* – the ID of the test case.
 - *TestSuiteName* – the test suite name that the case belongs to.
+- *TestSuiteDescription* – the description of the test suite.
 - *TestSuiteId* – the test suite ID that the case belongs to.
 - *StartTime* – the start execution time of the test.
 - *EndTime* – the end execution time of the test.
@@ -247,6 +288,7 @@ The **TestCaseResult** record contains the following properties:
 The **TestSuiteResult** record contains the following properties: 
 
 - *TestSuiteName* – the test suite name.
+- *TestSuiteDescription* – the description of the test suite. 
 - *TestSuiteId* – the test suite ID.
 - *StartTime* – the start execution time of the test suite.
 - *EndTime* – the end execution time of the test suite.
