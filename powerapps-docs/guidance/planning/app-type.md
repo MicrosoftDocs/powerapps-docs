@@ -66,7 +66,7 @@ don’t require you to build out the UI yourself.
 
 > [!NOTE]
 > If you are creating an app to be used by your customers on the web, you
-can also create a third type of app: [portal apps](../../maker/portals/overview).
+can also create a third type of app: [portal apps](../../maker/portals/overview.md).
 
 
 ## Building an end-to-end solution with multiple apps

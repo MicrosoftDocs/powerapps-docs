@@ -38,10 +38,10 @@ Follow the instructions for your app type:
         **Model-driven apps**
 
         -   [Publishing a model-driven
-    app](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/validate-app)
+    app](../../maker/model-driven-apps/validate-app.md)
 
         -   [Sharing a model-driven
-    app](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/share-model-driven-app)
+    app](../../maker/model-driven-apps/share-model-driven-app.md)
 
 
     :::column-end:::
@@ -49,10 +49,10 @@ Follow the instructions for your app type:
         **Canvas apps**
 
         -   [Publishing a Canvas
-    app](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/save-publish-app)
+    app](../../maker/canvas-apps/save-publish-app.md)
 
         -   [Sharing a canvas
-    app](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/share-app)
+    app](../../maker/canvas-apps/share-app.md)
 
     :::column-end:::
 :::row-end:::
@@ -107,7 +107,7 @@ exit the first app, return to the player, and search for another app. It’s
 faster and makes the experience more immersive.
 
 To deep link, you can use the [Launch
-equation](../../maker/canvas-apps/functions/function-param)
+equation](../../maker/canvas-apps/functions/function-param.md)
 and Param equation in Power Apps.
 
 [This blog post explains how to deep
@@ -123,7 +123,7 @@ process.
 ![A screenshot of a Power App embedded in Teams](media/teams-embedding.png)
 
 [Learn how to embedd an app in
-Teams](../../maker/canvas-apps/embed-teams-app).
+Teams](../../maker/canvas-apps/embed-teams-app.md).
 
 ## Tie-Ins to Existing Web Apps and Portals
 
