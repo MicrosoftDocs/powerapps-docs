@@ -81,14 +81,15 @@ Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work 
 The following Common Data Service datatypes are not supported with the SQL connection: `binary`, `image`,
 `ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`.
 
-`partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.
-
-```tsql
-select act.activityid, act.subject, string_agg([to].partyidname, ', ')
-from activitypointer as act
-left outer join activityparty as [to] on act.activityid = [to].activityid and [to].participationtypemask = 2
-group by act.activityid, act.subject
-```
+> [!TIP]
+> `partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.
+> 
+> ```tsql
+> select act.activityid, act.subject, string_agg([to].partyidname, ', ')
+> from activitypointer as act
+> left outer join activityparty as [to] on act.activityid = [to].activityid and [to].participationtypemask = 2
+> group by act.activityid, act.subject
+> ```
 
 ### See also
 
