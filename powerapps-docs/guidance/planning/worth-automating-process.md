@@ -37,7 +37,7 @@ business problem to focus on?
 
 Now, if the business value you receive by solving the business problem is
 greater than the cost of doing nothing plus your development time and the
-monthly cost of any [software license](https://docs.microsoft.com/en-us/power-platform/admin/pricing-billing-skus), then it makes sense to automate the
+monthly cost of any [software license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus), then it makes sense to automate the
 process.
 
 Before we decide to automate this business process, we can answer the question

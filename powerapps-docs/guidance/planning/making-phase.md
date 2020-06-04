@@ -29,7 +29,7 @@ Below are the basic steps when creating canvas apps.
 1.  Set up the data source
 
     -   [Set up
-        entities](../../maker/common-data-service/create-edit-entities)
+        entities](../../maker/common-data-service/create-edit-entities.md)
         (when using Common Data Service)
 
     -   Set up tables (when using a database)
@@ -39,13 +39,13 @@ Below are the basic steps when creating canvas apps.
         (when using SharePoint)
 
 2.  [Create a new
-    app](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started#build-an-app)
+    app](../../maker/canvas-apps/getting-started#build-an-app.md)
 
 3.  [Add
-    connectors](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-manage-connections)
+    connectors](../../maker/canvas-apps/add-manage-connections.md)
 
 4.  [Create
-    screens](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-screen-context-variables)
+    screens](../../maker/canvas-apps/add-screen-context-variables)
 
     -   Home Screen
 
@@ -62,32 +62,32 @@ Below are the basic steps when creating canvas apps.
 
 Below are the basic steps when creating Model-driven apps. If you are unfamiliar
 with the components, you should have a look at [Understand model-driven app
-components](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-components).
+components](../../maker/model-driven-apps/model-driven-app-components.md).
 
 1.  Create a
-    [Solution](https://docs.microsoft.com/powerapps/maker/model-driven-apps/distribute-model-driven-app)
+    [Solution](../../maker/model-driven-apps/distribute-model-driven-app.md)
 
 2.  Set up data models by defining
-    [Entities](https://docs.microsoft.com/powerapps/maker/common-data-service/entity-overview)
+    [Entities](../../maker/common-data-service/entity-overview.md)
     and
-    [Fields](https://docs.microsoft.com/powerapps/maker/common-data-service/fields-overview)
+    [Fields](../../maker/common-data-service/fields-overview.md)
 
 3.  Set up [Security
     models](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
 4.  Create a Sitemap by setting up a new [Model-driven
-    app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app)
+    app](../../maker/model-driven-apps/build-first-model-driven-app.md)
 
 5.  Customize
-    [Forms](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-design-forms)
+    [Forms](../../maker/model-driven-apps/create-design-forms.md)
     and
-    [Views](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-views)
+    [Views](../../maker/model-driven-apps/create-edit-views.md)
 
 6.  Set up [Business Process
     Flows](https://docs.microsoft.com/power-automate/business-process-flows-overview)
 
 7.  Setup [Business
-    Rules](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form)
+    Rules](../../maker/model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
 8.  Set up [Power Automate
     flows](https://docs.microsoft.com/power-automate/connection-cds)
@@ -100,7 +100,7 @@ collaborating depending on which application type you are making.
 ### Canvas Apps
 
 You can develop canvas apps collaboratively by using [Power Apps
-components](https://docs.microsoft.com/powerapps/maker/canvas-apps/create-component)
+components](../../maker/canvas-apps/create-component.md)
 — a reusable set of building blocks — and also component libraries — a
 repository that allows you to share and collaborate with others on Power Apps
 components you have created. Have a look at the blog post about [Collaborative

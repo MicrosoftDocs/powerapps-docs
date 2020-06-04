@@ -69,4 +69,4 @@ telemetry you can gain from setting this up are as follows:
 ![A screenshot of Azure Application Insights](media/app-insights.png)
 
 You can also set up custom telemetry by using the [trace
-function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-trace).
+function](../../maker/canvas-apps/functions/function-trace.md).

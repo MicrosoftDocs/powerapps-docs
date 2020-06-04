@@ -42,7 +42,7 @@ underlying data.
 
 For [Model-driven apps (apps that allow you to quickly create workflows with a
 templatized
-UI)](../../maker/model-driven-apps/model-driven-app-overview),
+UI)](../../maker/model-driven-apps/model-driven-app-overview.md),
 form-level security allows you to allow only specific security groups to access
 specific forms. This is useful if you want to restrict how people enter or view
 data by job role.
@@ -52,7 +52,7 @@ and submit the approval request, and a separate form for the approvers to review
 what was submitted. Form-level security would be a good fit for this scenario.
 For more information on form-level security, see [Control access to
 model-driven app
-forms.](../../maker/model-driven-apps/control-access-forms)
+forms.](../../maker/model-driven-apps/control-access-forms.md)
 
 ### Record-level security
 

@@ -55,14 +55,14 @@ a snapshot of data.
 
 - **Using a connector**: A connector is a feature in Power Apps where you can connect to various systems,
 and sources such as SharePoint, SQL Server, Office 365 etc. and directly
-retrieve or save data to them. You can [read more about what a connector is](../../maker/canvas-apps/connections-list).
+retrieve or save data to them. You can [read more about what a connector is](../../maker/canvas-apps/connections-list.md).
 
 - **Using a dataflow**: Dataflow is a feature in Power Apps where you can extract, transform and load
 data from another system to Common Data Service or Azure Data Lake storage.
 Unlike a connector, it fetches data in a scheduled batch. Instead of just
 retrieving the data as it is from the data source, you can use Power Query
 Online to manipulate, cleanse and transform data before you store it to the
-target storage. You can [read more about what a dataflow is](../../maker/common-data-service/self-service-data-prep-with-dataflows).
+target storage. You can [read more about what a dataflow is](../../maker/common-data-service/self-service-data-prep-with-dataflows.md).
 
 Depending on the use-cases and how data needs to be handled, you should choose
 the method based on some of the items below.

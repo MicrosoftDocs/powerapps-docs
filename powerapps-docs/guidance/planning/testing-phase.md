@@ -106,8 +106,7 @@ For testing inside Canvas apps, there is a tool built-in called Power Apps Test
 studio that allows you to write, organize, and automate tests for canvas apps.
 The Power Apps test studio should be used when setting up a unit test to ensure
 features and functions are correctly functioning. You can find more information
-about it in [the test Studio
-documentation](https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/test-studio).
+about it in [the test Studio documentation](../../maker/canvas-apps/test-studio.md).
 
 ### Monitor (Experimental)
 
@@ -115,7 +114,7 @@ When you are testing for performance issues, Monitor allows you to check the
 network activity similar to a network trace in the browser. For details on the
 Monitor tool, have a look at this [blog post: “Introducing Monitor to debug apps
 and improve
-performance](https://powerapps.microsoft.com/en-us/blog/introducing-monitor-to-debug-apps-and-improve-performance/)”.
+performance](https://powerapps.microsoft.com/blog/introducing-monitor-to-debug-apps-and-improve-performance/)”.
 
 ## Tools to help you test model-driven apps
 
@@ -125,7 +124,7 @@ EasyRepro is the tool provided for Dynamics 365 and Power Apps Model-driven
 apps. It not only provides the testing tool but also has over 200+ sample test
 cases to help you speed up the testing process. You can find more information
 about it in [this blog post: "EasyRepro automated testing
-framework"](https://powerapps.microsoft.com/en-us/blog/easyrepro-automated-testing-framework-june-update-is-now-available/)
+framework"](https://powerapps.microsoft.com/blog/easyrepro-automated-testing-framework-june-update-is-now-available/)
 and also access to [the EasyRepro GitHub
 repository](https://github.com/Microsoft/EasyRepro).
 
@@ -134,4 +133,4 @@ repository](https://github.com/Microsoft/EasyRepro).
 Solution Checker is a tool that checks whether the solution you have created is healthy. You
 can quickly review issues and see recommended fixes. For more information, have
 a look at [the Solution Checker
-documentation](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/use-powerapps-checker).
+documentation](../../maker/common-data-service/use-powerapps-checker.md).

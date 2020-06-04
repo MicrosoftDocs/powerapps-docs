@@ -12,7 +12,7 @@ searchScope:
   - PowerApps
 ---
 
-## Sketching the screens
+# Sketching the screens
 
 Once you have identified the tasks and your thoughts are organized, the next
 step is to sketch the screens you envision needing within your app. By drawing

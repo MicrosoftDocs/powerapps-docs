@@ -42,7 +42,7 @@ in Canvas apps:
 -   Avoid processing multiple records at a time (for example, avoid using ForAll)
 
 [Learn more about formulas in Canvas
-apps](../../maker/canvas-apps/working-with-formulas).
+apps](../../maker/canvas-apps/working-with-formulas.md).
 
 ## Power Apps – Model-Driven Apps
 
@@ -79,7 +79,7 @@ In general, if you are making apps with complex logic, consider using
 Model-driven apps instead of trying to do everything using Canvas apps.
 
 [Learn more about business logic in Model-driven
-apps](../../maker/model-driven-apps/guide-staff-through-common-tasks-processes).
+apps](../../maker/model-driven-apps/guide-staff-through-common-tasks-processes.md).
 
 ## Power Automate flows
 
@@ -116,4 +116,4 @@ roll-up fields. For pro-developers, you can apply business logic using code by
 creating a plugin, or developing workflow extensions.
 
 [Learn more about applying business logic in Common Data
-Service](../../maker/common-data-service/cds-processes).
+Service](../../maker/common-data-service/cds-processes.md).

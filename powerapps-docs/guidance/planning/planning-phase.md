@@ -36,4 +36,4 @@ In this section, you’ll learn about:
 
 -   [Deciding if it’s worthwhile to automate the process](worth-automating-process.md)
 
--   [Creating a project plan](creating-project-plan.md)
+-   [Creating a project plan]<!--(creating-project-plan.md) File doesn't exist.-->
