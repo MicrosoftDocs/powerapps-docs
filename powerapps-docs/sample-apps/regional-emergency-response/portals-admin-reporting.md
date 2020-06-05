@@ -157,9 +157,8 @@ The role of the user defines components that show up on the portal:
 The highlighted components are visible to the users with the following roles assigned:
 
 1. [Organizational HealthCare Worker](#organizational-healthcare-worker)
-2. [Report Viewer](#report-viewer)
+2. [Report Viewer](#report-viewer) and [Regional Report Viewer](#regional-report-viewer)
 3. [Parent Organization Administrator](#parent-organization-administrator)
-4. [Regional Report Viewer](#regional-report-viewer)
 
 The following section walks through each one of the roles with details of what the member of a role can do:
 
@@ -208,11 +207,14 @@ Members of Parent Organization Administrator role can:
     - Create, edit, or delete **Facility**
 
 > [!TIP]
-> Select all roles to allow a user to access all components.
+> Select all 3 roles to allow a user to access all components.
 
 ##### Regional Report Viewer
 
-A Regional Report Viewer role is for the users who can view the [dashboards](#get-insights) available for the entire region. Regional Report Viewers don't have a parent organization associated with, and are only approved using the [admin model-driven app](configure.md#manage-portal-user-requests).
+A Regional Report Viewer role is for the users who can view the [dashboards](#get-insights) available for the entire region. Regional Report Viewers don't have a parent organization associated with.
+
+> [!NOTE]
+> A user with Regional Report Viewer role can only be created or approved using the admin model-driven app. More information: [Create a portal user](configure.md#create-a-portal-user) and [Manage portal user requests](configure.md#manage-portal-user-requests).
 
 Members of Regional Report Viewer role can view the following dashboards for the entire region:
 
