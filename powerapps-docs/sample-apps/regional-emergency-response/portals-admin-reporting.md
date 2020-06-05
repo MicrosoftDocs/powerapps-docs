@@ -161,7 +161,7 @@ The highlighted components are visible to the users with the following roles ass
 3. [Parent Organization Administrator](#parent-organization-administrator)
 4. [Regional Report Viewer](#regional-report-viewer)
 
-The following section walks through each one of the roles with details of what the member of the role can do:
+The following section walks through each one of the roles with details of what the member of a role can do:
 
 ##### Organizational HealthCare Worker
 
@@ -179,7 +179,7 @@ A Healthcare Worker is an employee of a hospital system such as a registered nur
 
 ##### Report Viewer
 
-A Report Viewer role is for the users that can view the dashboards available on this portal. Members of Report Viewer role can view the following dashboards:
+A Report Viewer role is for the users who can view the dashboards available on this portal. Members of Report Viewer role can view the following dashboards:
 
 - System at a glance
 
@@ -193,7 +193,7 @@ A Report Viewer role is for the users that can view the dashboards available on 
 
 ##### Parent Organization Administrator
 
-A Parent Organization Administrator can create users that can access the organization details using this portal.
+A Parent Organization Administrator can create users who can access the organization details using this portal.
 
 Members of Parent Organization Administrator role can:
 
@@ -212,9 +212,9 @@ Members of Parent Organization Administrator role can:
 
 ##### Regional Report Viewer
 
-A Regional Report Viewer role is for the users that can view the [dashboards](#get-insights) available for the entire region. Regional Report Viewers don't have a parent organization associated with, and are only approved using the model-driven app.
+A Regional Report Viewer role is for the users who can view the [dashboards](#get-insights) available for the entire region. Regional Report Viewers don't have a parent organization associated with, and are only approved using the [admin model-driven app](configure.md#manage-portal-user-requests).
 
-Members of Regional Report Viewer role can view the following dashboards:
+Members of Regional Report Viewer role can view the following dashboards for the entire region:
 
 - System at a glance
 
