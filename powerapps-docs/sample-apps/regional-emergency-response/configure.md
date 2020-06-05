@@ -39,7 +39,7 @@ When you sign into the admin (model-driven) app, you will see the entities in th
 
 -   **Hierarchy area**: Data for entities in this area can be added either by importing data from the sample data files or manually. The entities under the **Hierarchy** area are listed in the order you should populate data. Also, parent org admins (hospital admins) can view and manage data under the following entities for their hospital from the portal: **Systems**, **Regions**, and **Facilities**.
 
--   **Admin Entities area**: Data in the **Supplies** entity is added by importing data from the sample data file. You can manually add and manage supplies data later.
+-   **Admin Entities area**: Data in the **Supplies** entity is added by importing data from the sample data file. You can also manually add and manage supplies data later.
 
 -   **Customers area**: You use **Portal Users** to [manage portal users](#manage-portal-users) and **User Requests** to [manage portal user requests](#manage-portal-user-requests).
 
@@ -211,7 +211,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close.**
 
-### Facilities data
+#### Facilities data
 
 The **Facilities** entity lets you manage the hospital locations within each region. For example, **Redmond** and **Bellevue** facilities within the **Seattle** region.
 
@@ -228,11 +228,13 @@ To create a record:
     |------------------------------|---------------------------------------------------|
     | Region    | Select a region this facility is associated with. This list is populated based on the **Regions** data you have created earlier.          |
     | Facility Name | Type the facility name.                 |
-    | DOH Number    | Type Department of Health number for this facility.     |
+    | DOH Number    | Type Department of Health (DOH) number for this facility.     |
     | Follows Droplet Protocol     | Indicates whether the facility follows Droplet Precautions for patients known or suspected to be infected with pathogens transmitted by respiratory droplets, such as in COVID-19 cases. Select **Yes** or **No**. |
     | Description    | Type an optional description.              |
     | Effective Start Data         | Type start date and time for this facility.    |
-    | Licensed Bed Capacity    | Type the total licensed bed capacity.    |
+    | Total Inpatient Bed Capacity    | Type the total inpatient bed capacity.    |
+    | Neonatal Bed Capacity    | Type the total neonatal bed capacity.    |
+    | Total Mortuary Capacity    | Type the total mortuary capacity. <br/> **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form in the [portal](/powerapps/sample-apps/regional-emergency-response/portals-user#bed-capacity).    |
     | AIIR Acute Care Capacity     | Type the total number of Acute care beds in AIIR (Airborne Infection Isolation Room).     |
     | AIIR ICU Capacity            | Type the total number of ICU beds in AIIR.       |
     | Total Vents       | Type the number of total vents in the facility.   |
