@@ -235,14 +235,19 @@ To create a record:
     | Total Inpatient Bed Capacity    | Type the total inpatient bed capacity.    |
     | Neonatal Bed Capacity    | Type the total neonatal bed capacity.    |
     | Total Mortuary Capacity    | Type the total mortuary capacity. <br/> **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form in the [portal](/powerapps/sample-apps/regional-emergency-response/portals-user#bed-capacity).    |
-    | AIIR Acute Care Capacity     | Type the total number of Acute care beds in AIIR (Airborne Infection Isolation Room).     |
-    | AIIR ICU Capacity            | Type the total number of ICU beds in AIIR.       |
-    | Total Vents       | Type the number of total vents in the facility.   |
+    | AIIR ICU Capacity            | Type the total number of ICU beds in AIIR (Airborne Infection Isolation Room).       |
+    | Non-AIIR ICU Capacity        | Type the total number of ICU beds in non-AIIR.      |
+    | Total Pediatric Acute Care Beds (AIIR) Capacity    | Type the total pediatric acute care beds in AIIR.    |
+    | Total Pediatric ICU Beds (AIIR) Capacity    | Type the total pediatric ICU beds in AIIR.    |
     | Effective End Date           | Type end date and time for this facility.       |
-    | Surge Bed Capacity           | Type the number of surge beds the facility can have. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                              |
+    | Total Outpatient Bed Capacity       | Type the total number of outpatient bed capacity in the facility.   |
+    | Total Outflow/Surge/Expansion Bed Capacity           | Type the total number of outflow.surge/expansion beds the facility can have. These beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                              |
+    | Does this facility have an Emergency Department/Overflow location?           | Select **Yes**/**No** to confirm if the facility has emergency department or overflow location(s).   |
+    | AIIR Acute Care Capacity     | Type the total number of Acute care beds in AIIR .     |
     | Non-AIIR Acute Care Capacity | Type the total number of Acute care beds in non- AIIR (Airborne Infection Isolation Room).|
-    | Non-AIIR ICU Capacity        | Type the total number of ICU beds in non-AIIR.              |
-    |Total Mortuary Capacity       | Type the total mortuary capacity for the facility.|
+    | Total Pediatric Acute Care Beds (Non-AIIR) Capacity    | Type the total pediatric acute care beds in non-AIIR.    |
+    | Total Pediatric ICU Beds (Non-AIIR) Capacity    | Type the total pediatric ICU beds in non-AIIR.    |
+    | Total Vents    | Type the total number of ventilators in the facility.    |
     | Facility Address    | Type the Street, City, County, State, Zip code, Latitude, and Longitude for the facility.   |
 
 3.  Select **Save & Close.** The newly created record will be available in the **Facilities** list.
