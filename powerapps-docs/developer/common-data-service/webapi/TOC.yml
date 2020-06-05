@@ -40,6 +40,8 @@
     href: update-delete-entities-using-web-api.md
   - name: Associate and disassociate entities
     href: associate-disassociate-entities-using-web-api.md
+  - name: Merge entities 
+    href: merge-entity-using-web-api.md
   - name: Use functions
     href: use-web-api-functions.md
   - name: Use actions
