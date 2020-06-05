@@ -291,9 +291,9 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
     > [!div class="mx-imgBorder"] 
     > ![Select a role](media/config-select-portal-role.png "Select a role")
 
-6. Select roles as per the portal access you need to provide to the user. To give access to all the features in the portal, select all the three roles: **Organization HealthCare Worker**, **Parent Organization Administrator**, and **Report Viewer**.
+6. Select roles as per the portal access you need to provide to the user. To give access to all the features in the portal, select all the four roles: **Organization HealthCare Worker**, **Parent Organization Administrator**, **Regional Report Viewer**, and **Report Viewer**.
 
-    For information about portal access each of these roles provide, see the [Create user](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#create-user) section in the portal administration topic.
+    For information about each of these roles, see the [User roles](portals-admin-reporting.md#user-roles) section in the portal administration topic.
 
     To grant a role, select the role, and select **Add**.
 
