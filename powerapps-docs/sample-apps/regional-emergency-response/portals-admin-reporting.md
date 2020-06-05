@@ -178,7 +178,7 @@ A Healthcare Worker is an employee of a hospital system such as a registered nur
 
 ##### Report Viewer
 
-A Report Viewer role is for the users who can view the dashboards available on this portal. Members of Report Viewer role can view the following dashboards:
+The Report Viewer role is for the users who can view the dashboards available on this portal. Members of Report Viewer role can view the following dashboards:
 
 - System at a glance
 
@@ -211,7 +211,7 @@ Members of Parent Organization Administrator role can:
 
 ##### Regional Report Viewer
 
-A Regional Report Viewer role is for the users who can view the [dashboards](#get-insights) available for the entire region. Regional Report Viewers don't have a parent organization associated with.
+The Regional Report Viewer role is for the users who can view the [dashboards](#get-insights) available for the entire region. Regional Report Viewers don't have a parent organization associated with.
 
 > [!NOTE]
 > A user with Regional Report Viewer role can only be created or approved using the admin model-driven app. More information: [Create a portal user](configure.md#create-a-portal-user) and [Manage portal user requests](configure.md#manage-portal-user-requests).
