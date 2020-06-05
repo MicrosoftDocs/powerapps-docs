@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/02/2020
+ms.date: 06/04/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 searchScope:
@@ -212,7 +212,19 @@ Members of Parent Organization Administrator role can:
 
 ##### Regional Report Viewer
 
-A Regional Report Viewer can view and download the CDC Data feed. Members of this role can't have any other capability.
+A Regional Report Viewer role is for the users that can view the [dashboards](#get-insights) available for the entire region. Regional Report Viewers don't have a parent organization associated with, and are only approved using the model-driven app.
+
+Members of Regional Report Viewer role can view the following dashboards:
+
+- System at a glance
+
+- COVID-19 patient details
+
+- Bed capacity details
+
+- Equipment details
+
+- Supplies details
 
 #### View user details
 
@@ -378,15 +390,45 @@ Update the fields and select **Submit** to save the changes.
 
 ### CDC Data Feed
 
-Select a facility and a CDC Pathway to view the data feed.
+Parent Organization Administrators can use **CDC Data Feed** to view, edit and download the data feed for upload to CDC web site.
 
 ![CDC Data Feed](media/portal-regional-report-viewer-cdc-data-feed.png)
 
-Members of **Regional Report Viewer** role can view and download the selected data feeds.
+The CDC data feed is shown for each facility separately. After you select a facility, you have the option to select one from the three available **CDC Pathways**.
+
+![CDC Pathway](media/portal-admin-cdc-pathway.png)
+
+#### CDC Pathway
+
+CDC requires data to be uploaded in a three specific formats, shown as the **CDC Pathway**. Each pathway includes data for the respective category as explained in the following table:
+
+| CDC Pathway | Description |
+| - | - |
+| **Patient Impact And Hospital Capacity** | Includes Bed Capacity, Equipment and COVID-19 statistics.
+| **Healthcare Supply** | Includes Supplies inventory statistics.
+| **Healthcare Worker Staffing** | Includes Staffing statistics.
+
+#### Edit CDC Data Feed
+
+Select the drop-down option for the feed, and then select **Edit** to update the selected feed statistics.
+
+![Edit CDC feed](media/portal-admin-cdc-edit.png)
+
+After updating the feed statistics, select **Submit** to save the changes.
+
+![Edit CDC feed details](media/portal-admin-cdc-edit-feed.png)
+
+#### Download CDC Data Feed
+
+When ready to download the CDC Data Feed for uploading to CDC web site, select the appropriate data feeds, and then select **Download Data For Selected Date Range**.
+
+![Edit CDC feed details](media/portal-admin-cdc-download.png)
+
+The CDC Data Feed is downloaded in CSV format to your Downloads folder. You can now upload the downloaded files to the CDC web site.
 
 ## Get Insights
 
-If you're a member of **Report Viewer** role, you’ll see option to view **Dashboards**:
+If you're a member of **Report Viewer**, or **Regional Report Viewer** roles, you’ll see option to view **Dashboards**:
 
 ![Get insights](media/portal-admin-get-insights.png)
 
