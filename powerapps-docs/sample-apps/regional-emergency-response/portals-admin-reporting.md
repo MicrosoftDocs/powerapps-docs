@@ -160,7 +160,7 @@ The highlighted components are visible to the users with the following roles ass
 2. [Report Viewer](#report-viewer) and [Regional Report Viewer](#regional-report-viewer)
 3. [Parent Organization Administrator](#parent-organization-administrator)
 
-The following section walks through each one of the roles with details of what the member of a role can do:
+Here are the details of what the member of each role can do:
 
 ##### Organizational HealthCare Worker
 
