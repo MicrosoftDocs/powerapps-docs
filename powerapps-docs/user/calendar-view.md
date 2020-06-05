@@ -1,7 +1,7 @@
 ---
 title: "Work with records in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
-ms.date: 05/11/2020
+ms.date: 06/05/2020
 ms.service:
   - "dynamics-365-sales"
 ms.topic: article
@@ -69,8 +69,15 @@ If you want to set a calendar view as the default view, you do that through pers
 
 You can view a summary of a record by selecting it in the calendar. A pop-up window opens and displays the summary information.
 
+**Record details for an activity**
+
 > [!div class="mx-imgBorder"]
-> ![Details of a calendar item](media/details-pop-up.png "Details of a calendar item") 
+> ![Details of a calendar item for an activity](media/details-pop-up.png "Details of a calendar item for an activity") 
+
+**Record details for an opportunity**
+
+> [!div class="mx-imgBorder"]
+> ![Details of a calendar item for an opportunity](media/opportunity-details-pop-up.png "Details of a calendar item for an opportunity") 
 
 If you want to view complete details about the record, select **More Details** in the pop-up window.
 
@@ -83,7 +90,7 @@ The new calendar view allows you to create and delete records from the calendar.
 
 **To create a record**
 
-1.  In the calendar, select a date tile (in **Month** view) or a time slot (in **Day** or **Week** view) in which you want to create a record.
+1.  In the calendar, double-click a date tile (in **Month** view) or select a time slot (in **Day** or **Week** view) in which you want to create a record.
 
     > [!div class="mx-imgBorder"]
     > ![Select a date tile in Month view](media/date-tile.png "Select a date tile in Month view")
@@ -94,7 +101,7 @@ The new calendar view allows you to create and delete records from the calendar.
     Depending on the entity on which the calendar control was added, an appropriate **New** form is opened. For example, if you're viewing leads, a form to create a new lead is opened. If you're viewing opportunities, a form to create a new opportunity is opened.
 
     > [!NOTE]
-    > - When you add the new calendar control on the Activity entity, an appointment is created when you create a record from the calendar.
+    > - When you add the new calendar control on the Activity entity, an appointment is created when you create a record from the calendar. The start and end times are filled-in automatically as per the selected date tile or time slots. By default, the duration is set to 30 minutes.
     > - When you add the new calendar control on an entity other than Activity, the corresponding entity record is created when you create a record from the calendar.
     > - You can also create a new record by selecting and dragging across time slots in **Day** or **Week** view.
 
