@@ -211,10 +211,10 @@ Members of Parent Organization Administrator role can:
 
 ##### Regional Report Viewer
 
-The Regional Report Viewer role is for the users who can view the [dashboards](#get-insights) available for the entire region. Regional Report Viewers don't have a parent organization associated with.
+The Regional Report Viewer role is for the users who can view the [dashboards](#get-insights) available for the entire region. Typically, Regional Report Viewer role users don't have a parent organization associated with them.
 
 > [!NOTE]
-> A user with Regional Report Viewer role can only be created or approved using the admin model-driven app. More information: [Create a portal user](configure.md#create-a-portal-user) and [Manage portal user requests](configure.md#manage-portal-user-requests).
+> Using the portal, you can request a user with Regional Report Viewer role to be created. However, user request approvals for this role can only be done by regional admins using the admin model-driven app. More information: [Manage portal user requests](configure.md#manage-portal-user-requests).
 
 Members of Regional Report Viewer role can view the following dashboards for the entire region:
 
