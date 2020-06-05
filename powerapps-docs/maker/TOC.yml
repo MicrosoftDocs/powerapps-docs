@@ -1431,6 +1431,8 @@
           href: ./portals/oauth-implicit-grant-flow.md
         - name: Manage webpages
           href: ./portals/configure/web-page.md
+        - name: Web API
+          href: ./portals/configure/web-api.md
     - name: User management and security in portal
       items:
         - name: Configure contacts
