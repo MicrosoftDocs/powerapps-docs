@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 06/05/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -981,8 +981,9 @@ Contains information about the current HTTP request.
 <a href={{ request.url | add_query: 'foo', 1 }}>Link</a>
 ```
 
-> [!Note]
-> You can build URLs dynamically in Liquid by using URL Filters. 
+> [!NOTE]
+> - You can build URLs dynamically in Liquid by using URL Filters.
+> - The URL used in request.url can be any requested value, and gets [cached](../configure/enable-header-footer-output-caching.md) for subsequent requests. To ensure correct value in request.url, consider using [substitution tag](../liquid/template-tags#substitution.md), partial URL such as ~\{WebFile path} or storing the portal URL in [Site Settings](../configure/configure-site-settings.md).
 
 ### Attributes
 
