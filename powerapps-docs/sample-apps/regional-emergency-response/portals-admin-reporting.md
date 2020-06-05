@@ -48,7 +48,7 @@ You can view all administrative options available to you after selecting **Admin
 | [Systems](#systems)      | Create, edit, or delete systems. |
 | [Regions](#regions)      | Create or delete regions.                              |
 | [Facilities](#facilities)    | Create, edit, or delete facilities.                        |
-| [CDC Data Feed](#cdc-data-feed) | View, edit or download CDC data feed.
+| [CDC Data Feed](#cdc-data-feed) | View, edit or download the Centers for Disease Control and Prevention (CDC) data feed so that you can upload the data to the CDC web site.
 
 ### User Requests
 
@@ -390,7 +390,7 @@ Update the fields and select **Submit** to save the changes.
 
 ### CDC Data Feed
 
-Parent Organization Administrators can use **CDC Data Feed** to view, edit and download the data feed for upload to CDC web site.
+Parent Organization Administrators can use **CDC Data Feed** to view, edit and download the data feed for upload to the Centers for Disease Control and Prevention (CDC) web site.
 
 ![CDC Data Feed](media/portal-regional-report-viewer-cdc-data-feed.png)
 
