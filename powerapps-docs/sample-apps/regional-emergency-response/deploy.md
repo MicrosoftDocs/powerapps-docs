@@ -794,7 +794,7 @@ In this step, we will authorize the connection information for the flows that he
     - Populate CDC Data - Patients and Hospitals Capacities
     - Process new Staffing Entry for the Portal
 
-## Step 15: Share admin app with other admin users
+## Step 12: Share admin app with other admin users
 
 For your business admin users to use the admin app (model-driven app) to enter and manage data, it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
