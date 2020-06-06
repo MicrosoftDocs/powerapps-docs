@@ -32,7 +32,7 @@ Get the latest deployment package (.zip) from <https://aka.ms/rer-solution>. It'
 
 **IMPORTANT:** Before extracting the .zip file, ensure that you unblock it.
 
-1.  Right click the .zip file, select **Properties**.
+1.  Right-click the .zip file, select **Properties**.
 
 2.  In the properties dialog box, select **Unblock**, and then select **Apply**
     followed by **OK.**
