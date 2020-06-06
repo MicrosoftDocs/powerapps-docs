@@ -30,10 +30,10 @@ Portals Web API offers a subset of capabilities for Common Data Service operatio
 | - | - |
 | [Associate and disassociate entities](../../developer/common-data-service/webapi/associate-disassociate-entities-using-web-api.md) | &check; |
 | [Create an entity](../../developer/common-data-service/webapi/create-entity-web-api.md) | &check; |
-| [Detect duplicate data](../../developer/common-data-service/webapi/manage-duplicate-detection-create-update)  | &cross; |
-| [Execute batch operations](../../developer/common-data-service/webapi/execute-batch-operations-using-web-api) | &cross; |
-| [Impersonate another user](../../developer/common-data-service/webapi/impersonate-another-user-web-api) | &cross; |
-| [Perform conditional operations](../../developer/common-data-service/webapi/perform-conditional-operations-using-web-api) | &cross; |
+| [Detect duplicate data](../../developer/common-data-service/webapi/manage-duplicate-detection-create-update.md)  | &cross; |
+| [Execute batch operations](../../developer/common-data-service/webapi/execute-batch-operations-using-web-api.md) | &cross; |
+| [Impersonate another user](../../developer/common-data-service/webapi/impersonate-another-user-web-api.md) | &cross; |
+| [Perform conditional operations](../../developer/common-data-service/webapi/perform-conditional-operations-using-web-api.md) | &cross; |
 | [Query Data](../..//developer/common-data-service/webapi/query-data-web-api.md) | &check; |
 | [Retrieve an entity](../../developer/common-data-service/webapi/retrieve-entity-using-web-api.md) | &check; |
 | [Retrieve and execute predefined queries](../../developer/common-data-service/webapi/retrieve-and-execute-predefined-queries.md) | &cross; |
@@ -55,7 +55,7 @@ When you configure inner error site setiing, the Web API response includes **@Ne
 
 ## Sample code
 
-You can perform the [available Web API operations](#web-api-operations) in portals. Web API operations consist of [HTTP requests and responses](../..developer/common-data-service/webapi/compose-http-requests-handle-errors). The following table shows sample operations, methods, URI and the sample JSON you can use in the HTTP request. 
+You can perform the [available Web API operations](#web-api-operations) in portals. Web API operations consist of [HTTP requests and responses](../..developer/common-data-service/webapi/compose-http-requests-handle-errors.md). The following table shows sample operations, methods, URI and the sample JSON you can use in the HTTP request.
 
 <table style="text-align:left">
   <tr>
