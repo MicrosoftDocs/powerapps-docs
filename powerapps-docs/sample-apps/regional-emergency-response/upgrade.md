@@ -81,19 +81,13 @@ Make sure to restart our portal for the changes to take effect. More
 information: [Restart the
 portal](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#restart-the-portal)
 
-## Step 5: Verify the Send Invitation and Send Password Reset To Contact processes
+## Step 5: Verify the processes
 
 Verify that the **Send Invitation** and **Send Password Reset To Contact**
 processes are still valid, that is, they have an account in the **From** field
 that can send emails and the rest of the details are fine.
 
-For details about how to fix these processes, see:
-
--   [Step 10: Fix the Send Invitation
-    process](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-10-fix-the-send-invitation-process)
-
--   [Step 11: Fix the Send Password Reset To Contact
-    process](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-11-fix-the-send-password-reset-to-contact-process)
+For details about how to fix these processes, see [Step 10: Fix the processes for the app]/powerapps/sample-apps/regional-emergency-response/deploy#step-10-fix-the-processes-for-the-app)
 
 ## Step 6: Verify the Flow supply tracking flow is enabled
 
