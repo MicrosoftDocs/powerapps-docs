@@ -1,11 +1,11 @@
 ---
 title: "Set up the timeline control (section) in PowerApps | MicrosoftDocs"
 description: "Learn how to set up the timeline control (section) in PowerApps"
-ms.date: 03/10/2020
+ms.date: 06/08/2020
 ms.service: powerapps
-author: "kabala123"
+author: "lalexms"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
-ms.author: "kabala"
+ms.author: "laalexan"
 manager: "shujoshi"
 search.audienceType: 
   - maker
@@ -128,7 +128,7 @@ As a customizer, you can choose which entities you want to show activities to us
 
 9.	Select the activities you want to display to the users.
 
-10. Select an option from the list for the **Sort timeline by** option in the **Data** container. For example, select the **Last Updated** option.
+10. Select an option from the list for the **Sort activities by** option in the **Data** container. For example, select the **Last Updated** option.
 
 11.	Specify the following in the **Additional Options** container.
     
