@@ -31,7 +31,6 @@ Returns an object with methods to manage the **Save** event.
 
 **Description**: See [Save Event Arguments](../save-event-arguments.md).
 
-
 ### Related topics
 [Execution context](../execution-context.md)
 
