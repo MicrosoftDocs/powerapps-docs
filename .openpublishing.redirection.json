@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/common-data-service/solution-patches.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/update-solutions-alm#create-solution-patches",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/set-managed-properties-metadata.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/managed-properties-alm",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "powerapps-docs/maker/common-data-service/use-solution-explorer.md",
       "redirect_url": "solutions-overview",
       "redirect_document_id": "false"
@@ -12,7 +22,7 @@
     }, 
     {
       "source_path": "powerapps-docs/maker/common-data-service/solution-best-practices.md",
-      "redirect_url": "https://docs.microsoft.com/en-us/power-platform/alm/solution-concepts-alm",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-concepts-alm",
       "redirect_document_id": "false"
     }, 
     {
