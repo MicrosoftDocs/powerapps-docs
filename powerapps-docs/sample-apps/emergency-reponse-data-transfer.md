@@ -27,11 +27,17 @@ Hospitals with the Hospital Emergency Response sample solution installed can rev
 
 ## Prerequisites
 
-For the data transfer to work from the Hospital Emergency Response solution, the regional health organization must have an SFTP server, and provide access to a folder per hospital on the SFTP server where the hospital can publish their data.
+For the data transfer to work from the Hospital Emergency Response solution, the regional health organization must have an SFTP server configured with a folder for each hospital on the SFTP server where the hospital can publish their data.
 
 This article assumes that the hospital system already has access to a folder on a secure FTP server hosted by their regional medical organization. Make sure you have the credentials to establish a connection to the secure FTP folder as you will require it later.
 
 ## Configure your solution for data transfer
+
+IT admins need to perform some steps to configure the data transfer from Hospital Emergency Response solution to SFTP server and from SFTP server to Regional Government Emergency Response and Monitoring solution.
+
+> [Step 1: Create connections](#step-1-create-connections)
+
+> [Step 2: Enable flows for publishing data to SFTP (Hospital)](#step-2-enable-flows-for-publishing-data-to-sftp-hospital)
 
 ### Step 1: Create connections
 
@@ -69,26 +75,54 @@ This step is required for both hospital and regional solutions.
 
 At the end of this step, you should have 2 connections: 1 for Common Data Service and another one for SFTP.
 
-### Step 2: Enable flows for transferring data to SFTP (Hospital)
+### Step 2: Enable flows for publishing data to SFTP (Hospital)
 
-In this step, we will enable the following flows that will transfer reviewed data from the hospital solution to SFTP server:
+In this step, we will enable the following flows that will publish reviewed data from the hospital solution to SFTP server on a set schedule and on-demand:
+- Publish Bed Census Data
+- Publish COVID Data
+- Publish Data for All Facilities
+- Publish Equipment Needs Data
+- Publish Staff Updates
+- Publish Supply Item Details
+
+To enable these flows:
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+1.  From the left pane, select **Solutions.** From the solution list, select **Hospital Emergency Response Solution** to open the solution.
+
+1.  In the solution, filter on **Flow** to find all the flows.
+
+    > [!div class="mx-imgBorder"] 
+    > ![All flows](media/all-flows-hospital.png)
+
+1.  Select a flow name to open the flow definition. For example, select **Publish Bed Census Data**. 
+
+1.  Verify the embedded connections for this flow. These should be the same connections that you created earlier. If required, select **Edit** on the toolbar to authorize/fix the connections for the flow.
+
+1.  Select **Save** to save the changes, and then select **Turn On**.
+
+1.  Repeat steps 4-6 for other flows listed earlier.
+
+## Review and publish data
+
+After your IT admin has configured the solution for data transfer from the hospital solution, you can use the **Review and Publish Data** model-driven app to review the data and mark it as completed for publishing to the folder on the SFTP server.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. From the top-right corner, select your hospital environment.
+
+1. Select **Apps** in the left navigation pane, and then select the **Review and Publish Data** app.
+
+1. In the app, all the facilities are listed. Select a facility for which you want to review the data and publish. This will open the facility record.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Facility review](media/facility-review.png)
+
+1. 
 
 
-
- You can run these flows at a set schedule or on-demand.
-
-
-IT admins need to perform some steps to configure the data transfer from Hospital Emergency Response solution to SFTP server and from SFTP server to Regional Government Emergency Response and Monitoring solution.
-
-|Task | Target audience|See|
-|--|--|--|
-|Download and deploy the sample app and dashboard|IT admin|[Deploy the Hospital Emergency Response app](deploy-configure.md)|
-|Use the admin app to add/manage master data|Business admin|[Configure and manage master data for your organization](configure-data-reporting.md#configure-and-manage-master-data-for-your-organization)|
-|Use dashboards for insights and decision making|Business admin|[View Common Data Service dashboards](configure-data-reporting.md#view-common-data-service-dashboards)<br/><br/>[View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)|
-|Use the mobile app to track data for ventilators, staffing, pending discharges, and COVID-19 related patients|Frontline staff|[Use the Hospital Emergency Response mobile app](use.md)
-|Use the admin app to track feedback from mobile app|Business/IT admin|[View and manage app feedback](configure-data-reporting.md#view-and-manage-app-feedback)|
-
-
+facility-review.png
 ## Issues and feedback
 
 - To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
