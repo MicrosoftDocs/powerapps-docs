@@ -13,42 +13,62 @@ searchScope:
 ---
 
 # Introduction: Planning a Power Apps project
-<!--Note from editor: I modified the end of lines, because I find it easier to troubleshoot links when the markdown wraps rather than is split across line endings. -->
-If you just started using Power Apps, it may be a little overwhelming trying to create an app from a blank screen.
 
-You may have some idea in your mind but have not fully thought through all the details and information you need in order to create an app. You may be a business user or IT Pro who has never designed or built an app before. Or you may be a pro developer who wants to know what is different from traditional app development.
+If you just started using Power Apps, you might find it a little overwhelming <!--Suggested, to fix misplaced modifier.-->to
+create an app from a blank screen.
 
-In these articles, regardless of your background or how much you know about app development, you'll learn about the steps to convert your ideas into a fully working solution using Power Apps.
+You might have an idea in your mind, but perhaps you haven't fully thought through all the
+details and information you need to create an app. You might be a
+business user or IT pro who has never designed or built an app before. Or you
+might be a pro<!--Should this be "full stack," to match the occurrence later in this article?--> developer who wants to know how working with Power Apps is different from traditional app
+development.<!--Suggested.-->
 
-The basics of making a Power Apps app are as follows:
+In these articles, regardless of your background or how much you know about app
+development, you'll learn about the steps to convert your ideas into a fully
+working solution by using Power Apps.
 
-1. [**Plan**](planning-phase.md): Identify the who, what, when & why
+The basics of making an app by using Power Apps are as follows:
 
-2. [**Design**](planning-phase.md): Model the data (decide how the data you need and create will be organized, accessed and stored) and sketch out the app screens
+1. [**Plan**](planning-phase.md): Identify the who, what, when, and why.
 
-3. [**Make**](making-phase.md): Create the app
+2. [**Design**](designing-phase.md): Model the data (decide how the data you need and create will be
+    organized, accessed, and stored) and sketch out the app screens.
 
-4. [**Test**](testing-phase.md): Try the app with users
+3. [**Make**](making-phase.md): Create the app.
 
-5. [**Deploy and Refine**]<!--(refining-phase.md) This file doesn't exist. Should the link go to discoverability.md?-->: Get your app into the hands of users, get feedback, and decide what to change or add
+4. [**Test**](testing-phase.md): Have users try the app.<!--Suggested.-->
 
-In this set of articles, you will learn about each of these steps in detail. We’ve included a detailed example to help clarify the concepts.
+5. [**Deploy and refine**](discoverability.md)<!--Edit okay? The refining-phase.md file gives a 404 error; doesn't seem to exist yet.-->: Get your app into the hands of users, get feedback,
+    and decide what to change or add.
 
-If you are a **business person**, these articles are intended to help you plan and execute what may be your first app project.
+In this set of articles, you'll learn about each of these steps in detail.
+We've included a detailed example&mdash;an expense reporting app&mdash;<!--Suggested, just to set the stage.--> to help clarify the concepts.<!--Suggest linking to the relevant sections in the paragraphs that follow.-->
 
-- The Planning section should help you whether you’re planning to build an app yourself or creating requirements to pass along to another app maker. You’ll be very familiar with many of the Planning steps and some may be new to you.
+If you're a **businessperson**, <!--Following an introduction like this, the rest of the sentence needs to be addressed to "you" also.-->you'll find that these articles help you plan
+and execute what might be your first app project:
 
-- The Design \> Conceptual Design section will help you begin to turn your business process into the screens and features of an app.
+- The [Planning](planning-phase.md) section should help you whether you're planning to build an app
+    yourself or create requirements to pass along to another app maker. You'll
+    be very familiar with many of the planning steps, though<!--Suggested. I didn't understand "and" here.--> some might be new to you.
 
-- If you’re going to make your own app, we’ve tried to make the Design \> Architectural Design, Making, Testing, and Refining sections easy to follow for new app makers.
+- The [Designing \> Conceptual design](app-tasks.md) section will help you begin to turn your
+    business process into the screens and features of an app.
 
-If you’re a **dedicated app maker** who isn’t an expert in the business process, these articles are for you, too.
+- For those who plan to make their own app, we've tried to make the [Designing phase \> Architectural design](where-is-data.md), [Making](making-phase.md), [Testing](testing-phase.md), and [Deploying and refining phase](discoverability.md) sections easy to follow
+    for new app makers.
 
-- Follow the Planning steps while interviewing your future app users to help you deeply understand the business process.
+If you're a **dedicated app maker** who isn't an expert in the business process,
+you'll find that these articles are for you, too:
 
-- The Design, Making, Testing, and Refining sections all include Power Apps-specific information to help make your project successful.
+- Follow the [planning](planning-phase.md) steps while interviewing your future app users, to help
+    you deeply understand the business process.
 
-If you are a **“full stack” developer**, this methodology will cover projects more suited for rapid development vs the traditional large-scale development.
+- The [Designing phase](designing-phase.md), [Making phase](making-phase.md), [Testing phase](testing-phase.md), and [Deploying and refining](discoverability.md) sections all include Power
+    Apps&ndash;specific information to help make your project successful.
+
+If you're a **"full stack" developer**, you'll find that this methodology covers projects that are
+more suited for rapid development than traditional, large-scale development.<!--Suggested, to avoid dangling modifier.-->
 
 > [!NOTE]
->  If your intention is to create a very large and complex solution, we recommend that you use the [SureStep](https://mbs.microsoft.com/customersource/Global/SureStep) guide.<!--Suggested, to follow Style Guide. -->
+> If your intention is to create a very large and complex solution, we recommend that you use the
+[Sure Step](https://mbs.microsoft.com/customersource/Global/SureStep) guide.<!--Suggested, to more closely follow Writing Style Guide (WSG). -->

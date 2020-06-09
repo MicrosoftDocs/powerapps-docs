@@ -26,7 +26,7 @@ Along with the tasks that users need to do, refer to your notes on what
 information is required to complete each task. That will help you define what
 information you need to store and display.
 
-If you are working with multiple people, using tools like Microsoft Planner or
+If you're working with multiple people, using tools like Microsoft Planner or
 Whiteboard app would help you efficiently collaborate and work together on
 listing the tasks.
 
@@ -37,19 +37,19 @@ We considered the tasks done by people who will be creating and viewing the
 expense reports. We’ll separately consider the tasks for approvals and for
 weekly budget reporting.
 
-![Business process flowchart with tasks for the Expense Report creating and view app](media/app-tasks.png)
+![Business process flowchart with tasks for the Expense Report creating and view app](media/app-tasks.png "Business process flowchart with tasks for the Expense Report creating and view app")
 
 Based on the above, we think the Expense Report create/view app needs these
 screens/components:
 
--   List of reports with filtering
+- List of reports with filtering
 
--   Single report view with edit and view-only modes
+- Single report view with edit and view-only modes
 
--   Buttons to cancel/save/submit in editing view 
+- Buttons to cancel/save/submit in editing view 
 
--   Button for Accounting to export data 
+- Button for Accounting to export data 
 
--   Various submit/cancel/save messages
+- Various submit/cancel/save messages
 
--   Attach a receipt photo/ view attachments
+- Attach a receipt photo/ view attachments

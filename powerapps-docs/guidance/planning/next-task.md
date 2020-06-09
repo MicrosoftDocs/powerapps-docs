@@ -14,10 +14,10 @@ searchScope:
 
 # How does this task pass to the next task?
 
-Now it is time to move to the next task in the process. What does that look
+Now it's time to move to the next task in the process. What does that look
 like?
 
-Does it build on the data that is used by this task? Are there different next
+Does it build on the data that's used by this task? Are there different next
 tasks depending on different data? (For example, an extra layer of approval for
 expense reports over \$500.)
 

@@ -12,28 +12,28 @@ searchScope:
   - PowerApps
 ---
 
-# Planning Phase
+# Planning phase
 
 Planning is the most important part of the app making process. When planning,
 you should consider the following:
 
--   **What** problem will the app solve?
+- **What** problem will the app solve?
 
--   **Who** will use this app?
+- **Who** will use this app?
 
--   **What** goals and objectives will it meet for the users?
+- **What** goals and objectives will it meet for users?
 
 Knowing the answers helps you stay on track when you design the app. It's easy to fall into the trap of *making the app* as the objective, rather than
 *solving the issue*.
 
-In this section, you’ll learn about:
+In this section, you'll learn about:
 
--   [Identifying the business problem to solve (the use case)](identifying-business-problem-to-solve.md)
+- [Identifying the business problem to solve (the use case)](identifying-business-problem-to-solve.md)
 
--   [Deeply understanding the business process](understanding-current-business-process.md)
+- [Deeply understanding the business process](understanding-current-business-process.md)
 
--   [Optimizing the business process with your solution](optimizing-business-process.md)
+- [Optimizing the business process with your solution](optimizing-business-process.md)
 
--   [Deciding if it’s worthwhile to automate the process](worth-automating-process.md)
+- [Deciding whether it's worthwhile to automate the process](worth-automating-process.md)
 
--   [Creating a project plan]<!--(creating-project-plan.md) File doesn't exist.-->
+- [Creating a project plan](defining-app-project-objective.md)<!--Edit okay? The file creating-project-plan.md doesn't exist.-->

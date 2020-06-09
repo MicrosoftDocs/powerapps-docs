@@ -12,8 +12,7 @@ searchScope:
   - PowerApps
 ---
 
-# Are there decisions being made based on the data Or business rules to follow?
-
+# Are there decisions being made based on the data or business rules to follow?
 
 Do you have any “If ___ , then ___” logic?
 
@@ -34,8 +33,8 @@ expense reports need an extra level of approval.
 
 Are approvals needed before the next step of the process begins? How are those
 approvals captured? Is there a specific user or role that can approve the next
-step in the process? Should this person have access to the app or is there
-another method that is used (such as an e-mail sent to the user to get approval
+step in the process? Should this person have access to the app or is
+another method used (such as an email sent to the user to get approval
 to move forward)?
 
 How is the next person in the process alerted of the response so they can move
@@ -66,17 +65,16 @@ Are there alerts or notifications that need to be generated?
 
 ## Example: Expense report approvals
 
-
 The Expense report process requires approvals. All Salespeople must have the
 expense report approved by Nick, their manager. When the employee submits the
 report, an alert needs to be sent to Nick to review and approve the expense
 report.
 
 We know that Nick is a busy manager – so we should consider an escalation if
-expense reports wait for his approval longer than 5 days. We can consider
+expense reports wait for his approval longer than five days. We can consider
 several escalation methods
 
--   We can send another alert to Nick – perhaps rather than e-mail, we consider
+-   We can send another alert to Nick – perhaps rather than email, we consider
     sending a text message
 
 -   If Nick still hasn’t responded, then perhaps we send them to Nick’s manager

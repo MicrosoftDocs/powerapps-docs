@@ -14,10 +14,10 @@ searchScope:
 
 # Securing the app and data
 
-Once you have determined what data structure to use, the next step is to
+After you've determined what data structure to use, the next step is to
 consider about how to secure your data. You should consider what data will be
-accessed by who, and refer back to tasks, business processes and personas that
-you have listed in the planning phase.
+accessed by who, and refer back to tasks, business processes, and personas that
+you listed in the planning phase.
 
 ## Layers of security
 
@@ -40,7 +40,7 @@ underlying data.
 
 ### Form-level security
 
-For [Model-driven apps (apps that allow you to quickly create workflows with a
+For [model-driven apps (apps that allow you to quickly create workflows with a
 templatized
 UI)](../../maker/model-driven-apps/model-driven-app-overview.md),
 form-level security allows you to allow only specific security groups to access
@@ -81,59 +81,58 @@ Service](https://docs.microsoft.com/power-platform/admin/security-roles-privileg
 
 ### Field-level security
 
-Field level security is a finer grain of security within a single record. It is
+Field level security is a finer grain of security within a single record. It's
 like setting up security for a single column in Excel. This usually has similar
 levels of access as record-level security but at the field level instead of
 record level.
 
-### How different levels of security inter-relate to each other
+### How different levels of security relate to each other
 
 The security levels mentioned above is more like a layer. The design of your app
 should consider one or more of these security levels to fit the needs. Example
 below shows what each security level would control in the behavior of an app.
 
-![Security levels](media/security-levels.png)
+![Security levels](media/security-levels.png "Security levels")
 
-## The 5 steps for designing security
+## The five steps for designing security
 
 Different security levels may seem quite complex and overwhelming but is easier
 when considered in the following five steps:
 
 **Step 1** - Identify, who or what groups of people (such as departments,
 sections, teams) will have access to the app itself. This should be the same set
-of people you had identified in the planning phase.
+of people you identified in the planning phase.
 
-**Step 2** – Amongst those users you have identified in step 1, divide these
+**Step 2** – Among those users you identified in step 1, divide these
 users into groups who will (or won’t) have access to restricted types of
 information.
 
 **Step 3** – Identify the requirements for who can see the records.
 
 **Step 4** – If you’re using data sources other than Common Data Service or
-services that do not have Office 365/Azure Active Directory logins, you should
-consider on how you will allow access to those systems. If you are not in charge
+services that don't have Office 365/Azure Active Directory logins, you should
+consider on how you'll allow access to those systems. If you aren't in charge
 of those systems, seek advice from those service administrators.
 
-**Step 5** – Based on above steps, you should consider how these different
+**Step 5** – Based on the above steps, you should consider how these different
 groups will be managed. Microsoft provides “security groups” to manage these
 groups.
 
 ## Example: Expense Report solution security
 
-
 In an expense approval scenario, all employees can submit expense reports so
 they all need to have access to the Expense Report Creation app. Additionally,
 Approvers need access to the Approval app.
 
--   We need an All Employees security group that has access to the expense
+- We need an All Employees security group that has access to the expense
     reporting app and the data it uses.
 
--   We need an Approvers security group that has access to the Approvals app.
+- We need an Approvers security group that has access to the Approvals app.
 
 The Accounting department might need access to more sensitive data, such as the
 employees' bank account for reimbursement.
 
--   We need an Accounting team security group that is the only security group
+- We need an Accounting team security group that's the only security group
     that has access to Employee Bank Routing information.
 
 We are most likely not going to want employees to be able to see each other’s
@@ -144,10 +143,10 @@ However, we also need to ensure the approvers can see the reports that go to
 them for approval. And we need the Auditors team to be able to see all expense
 reports (but not change them).
 
--   We need the Approvers security group and an Auditors security group that
+- We need the Approvers security group and an Auditors security group that
     each has access to all records, and we need to give the All Employees group
     access only to “records I create.”
 
-![Diagram of expense report example security groups](media/expense-report-security.png)
+![Diagram of expense report example security groups](media/expense-report-security.png "Diagram of expense report example security groups")
 
 For details about the security, see [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security).

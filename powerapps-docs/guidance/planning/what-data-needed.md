@@ -19,12 +19,12 @@ activities?
 
 Where did this data come from?
 
--   Does this data come from a previous step?
+- Does this data come from a previous step?
 
--   Did this data come from an existing system? Does the user need to be signed
+- Did this data come from an existing system? Does the user need to be signed
     in to access the data?
 
--   Is there data being pulled from an external system, such as market or
+- Is there data being pulled from an external system, such as market or
     weather data?
 
 > Example:
@@ -33,16 +33,15 @@ Where did this data come from?
 employee ID, manager’s name, and the date; they gather their receipts; and they
 need access to the list of expense types and the rules for each.
 
-## Data privacy/permission considerations
-
+## Data privacy and permission considerations
 
 Thinking about the user executing these steps of the process:
 
--   What existing data do they need access to?
+- What existing data do they need access to?
 
--   Do they need access to data that other users should not have access to?
+- Do they need access to data that other users should not have access to?
 
--   Can they do tasks that other users shouldn’t be able to do?
+- Can they do tasks that other users shouldn’t be able to do?
 
 Understanding what data users should be able to access helps to define what, if
 any, security, and privacy controls need to be in the solution.
@@ -72,6 +71,6 @@ infrequently? How often should the app be updated with new data?
 >
 > The data coming from Active Directory isn’t changed very often,
 however, it does change on occasion as people move from role to role within the
-organization as well as the reporting structure – so for this app it is
+organization as well as the reporting structure – so for this app it's
 appropriate to look up the information at the time the user creates the expense
 report. There is no need to go check the information again.

@@ -14,7 +14,7 @@ searchScope:
 
 # Sketching the screens
 
-Once you have identified the tasks and your thoughts are organized, the next
+After you've identified the tasks and your thoughts are organized, the next
 step is to sketch the screens you envision needing within your app. By drawing
 out each task and the business process, you already have enough information
 about how to get from point A to point B. Sketching the screens will allow you
@@ -48,4 +48,4 @@ idea with the user will also eliminate any differences in expectations. Ideally,
 use the sketches as a “paper prototype” and have your user pretend to actually
 use it.
 
-![A sketch of some app screen ideas](media/sketch.png)
+![A sketch of some app screen ideas](media/sketch.png "A sketch of some app screen ideas")

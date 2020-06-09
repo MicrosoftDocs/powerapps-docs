@@ -30,43 +30,43 @@ collect valuable feedback. Microsoft Forms have Net Promoter Score built in.
 To ensure healthy app usage, you should leverage the analytics features of the
 app. The Power Apps analytics provides you information such as:
 
--   Number of active users
+- Number of active users
 
--   Devices / Browsers used
+- Devices / Browsers used
 
--   Locations
+- Locations
 
--   App diagnostics
+- App diagnostics
 
--   Service performance
+- Service performance
 
-As an app maker, you can access your analytics by accessing the App usage
-report at [https://make.powerapps.com](https://make.powerapps.com). This report is available if you are the owner or co-owner of the Canvas
+As an app maker, you can access your analytics by accessing the app usage
+report at [https://make.powerapps.com](https://make.powerapps.com). This report is available if you're the owner or co-owner of the canvas
 app. Data is available for 30 days to view usage information such as app launch
-counts, unique users by day etc.
+counts, unique users by day, and so on.
 
-![A screenshot of App Usage Report](media/telemetry.png)
+![A screenshot of an app usage report](media/telemetry.png "A screenshot of an app usage report")
 
-If you are an administrator, you can access analytics at overall tenant level.
+If you're an administrator, you can access analytics at overall tenant level.
 For more information for administrators, see [Admin Analytics for Power
 Apps](https://docs.microsoft.com/power-platform/admin/analytics-powerapps).
 
 ### Adding manual telemetry using Azure Application Insights
 
 You can gain additional insights/telemetry about the app by setting up
-connection to Azure Application Insights - a feature that is part of [Azure
+connection to Azure Application Insights - a feature that's part of [Azure
 Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) Some of the
 telemetry you can gain from setting this up are as follows:
 
--   Number of active users using the app
+- Number of active users using the app
 
--   Location of where the app is used
+- Location of where the app is used
 
--   What screens are used the most
+- What screens are used the most
 
--   User flow from one screen to another
+- User flow from one screen to another
 
-![A screenshot of Azure Application Insights](media/app-insights.png)
+![A screenshot of Application Insights](media/app-insights.png "A screenshot of Application Insights")
 
 You can also set up custom telemetry by using the [trace
 function](../../maker/canvas-apps/functions/function-trace.md).

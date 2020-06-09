@@ -34,38 +34,38 @@ time-related requirements of the business.
 
 There are several ways of integrating with enterprise systems.
 
--   **Database** integration is a direct integration with a database. This is
+- **Database** integration is a direct integration with a database. This is
     not a very common way of integrating with external systems
     as there is a risk of exposure of data.
 
--   **API** (Application Programming Interface) integration is a method of
+- **API** (Application Programming Interface) integration is a method of
     integrating with systems using APIs. The majority of web systems provide APIs to integrate with, but there are some systems that don't.
 
--   **File** integration is a method of integrating with other systems using
+- **File** integration is a method of integrating with other systems using
     files. One system exports a file with sets of data. This file could be CSV,
     TSV, XML etc. The system to integrate to then either detects there is a new
     file, or is set up with a timer to periodically scan if new files exist to
     import the file that was exported. This method is used in situations where
-    the data source cannot be accessed directly via database or APIs.
+    the data source can't be accessed directly via database or APIs.
 
 ## Connecting to on-premises systems
 
-On-premise data gateway allows Power Apps and services to connect to systems
-that are not open to the internet in a secure manner. Setting up is easy using
+An on-premises data gateway allows Power Apps and services to connect to systems
+that aren't open to the internet in a secure manner. Setting up is easy using
 an installer, but there are several factors to consider:
 
--   Network bandwidth of the datacenter/server location
+- Network bandwidth of the datacenter/server location
 
--   Database tuning of data source
+- Database tuning of data source
 
--   Server specification of on-premise systems
+- Server specification of on-premises systems
 
--   Volume and frequency of data transmission
+- Volume and frequency of data transmission
 
 ### Network bandwidth of the datacenter/server location
 
 The speed of the app will depend on whether the network bandwidth between the
-on-premise datacenter/server and the cloud service is sufficient. If there are
+on-premises datacenter/server and the cloud service is sufficient. If there are
 many people using the app simultaneously, not having enough bandwidth will cause
 the app to take a long time to respond. [See this document for minimum
 requirements for network
@@ -80,9 +80,9 @@ specifically for model-driven apps.
 
 ### Database tuning of data source
 
-Database tuning also plays an important role especially if you are going to
-connect to a data source with lots of data. It is easy to start facing problems
-if you have created an app that uses data in a way that it was not used
+Database tuning also plays an important role especially if you're going to
+connect to a data source with lots of data. It's easy to start facing problems
+if you've created an app that uses data in a way that it wasn't used
 previously.
 
 For example, suppose your existing customer management system is optimized to
@@ -96,16 +96,16 @@ additional indexes. For more details on indexing with Microsoft SQL server, have
 a look at the [SQL Server Index Architecture and Design
 Guide](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide?view=sql-server-ver15).
 
-### Server specification of on-premise systems
+### Server specification of on-premises systems
 
 Another aspect to consider is your server specification that handles the
-on-premise gateway. If you have too many users accessing the app simultaneously,
+on-premises gateway. If you have too many users accessing the app simultaneously,
 your server may not be able to cope with all the requests. In these situations,
-you should consider setting up your on-premise gateway to multiple servers to
+you should consider setting up your on-premises gateway to multiple servers to
 form a cluster. [This document explains the steps to set up a
 cluster.](https://docs.microsoft.com/data-integration/gateway/service-gateway-high-availability-clusters)
 
 ### Volume and frequency of data transmission 
 
 For high volume requests, an approach like dataflows can provide better
-performance while still allowing integration with on-premise data.
+performance while still allowing integration with on-premises data.

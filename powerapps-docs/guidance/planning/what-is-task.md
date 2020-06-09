@@ -15,43 +15,41 @@ searchScope:
 # What is the task?
 
 In your business process document, write down what the task is. This should be
-the big picture task, not the individual activities done to complete it. (We’ll
+the big picture, not the individual activities done to complete the task. (We'll
 get to those!)
 
-Write down all the tasks you know, and then work all these documentation steps
-for one task at a time. You may discover new tasks as you go.
+Write down all the tasks you know of, and then work all these documentation steps
+for one task at a time. You might discover new tasks as you go.
 
-Your Power Apps project doesn’t have to tackle each step, but it’s good to know
+Your Power Apps project doesn't have to tackle each step, but it's good to know
 what they are.
 
 ## Example: Expense reporting tasks
 
 For our expense report example, we wrote down these tasks:
+<!--SELF: Okay to keep telegraphic style?-->
+- Employee creates expense report
 
--   Employee creates expense report
+- Employee submits expense report to manager
 
--   Employee submits expense report to manager
+- Manager approves or denies expense report
 
--   Manager approves/denies expense report
+- Manager sends expense report to Accounting for payment
 
--   Manager sends expense report to Accounting for payment
+- Accounting verifies expense report compliance
 
--   Accounting verifies expense report compliance
+- Accounting posts expenses to Contoso Finance software
 
--   Accounting posts expenses to Contoso Finance software
+- Accounting creates weekly expense spreadsheet for quick reporting
 
--   Accounting creates weekly expense spreadsheet for quick reporting
+- Accounting delivers weekly spreadsheet to CFO and department managers
 
--   Accounting delivers weekly spreadsheet to CFO and department managers
+- CFO reviews spreadsheet weekly and provides any<!--Edit okay?--> notices regarding budget overage
 
--   CFO reviews spreadsheet weekly and provides and notices regarding budget
-    overage
+We later discovered additional tasks through talking with other<!--Suggested.--> team members:
 
-We later discovered additional tasks through talking with additional team
-members:
+- Accounting looks up and records GL codes for each expense item
 
--   Accounting looks up and records GL codes for each expense item
+- Accounting archives the paper expense report in accordance with retention policy
 
--   Accounting archives the paper expense report per retention policy
-
--   Audit team conducts semi-annual compliance audit
+- Audit team conducts semiannual compliance audit

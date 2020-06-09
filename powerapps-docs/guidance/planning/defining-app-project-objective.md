@@ -14,7 +14,7 @@ searchScope:
 
 # Defining the app project goals
 
-Having a project plan ensures you have the right resources (time, people, and
+Having a project plan ensures that you have the right resources (time, people, and
 funds) and follow a consistent approach to ensure a good level of quality for
 the apps you make.
 
@@ -40,27 +40,27 @@ releases so that we could deliver value incrementally:
 
 **Release 1:**
 
--   For at least 80% of expense reports, expense report creators spend no more
+- For at least 80&nbsp;percent of expense reports, expense report creators spend no more
     than 20 minutes actively working on creating reports.
 
--   Within 1 month of solution availability, 100% of expense reports use the
+- Within one month of solution availability, 100&nbsp;percent of expense reports use the
     digital system.
 
 **Release 2:**
 
--   For at least 90% of expense reports, the time between submitting the report
-    and having a payment logged in the finance system is less than 3 business
+- For at least 90&nbsp;percent of expense reports, the time between submitting the report
+    and having a payment logged in the finance system is less than three business
     days.
 
--   Department managers can access a Weekly Budget report that is up to date for
-    all expenses within 1 hour of their approval, by the end of this year.
+- Department managers can access a weekly budget report that's up to date for
+    all expenses within one hour of their approval, by the end of this year.
 
--   Reduce errors found in semi-annual audit by 50%.
+- Reduce errors found in semi-annual audit by 50&nbsp;percent.
 
-A**dditional goals for release 1 of the solution:**
+**Additional goals for release 1 of the solution:**
 
--   80% of salespeople surveyed report being able to meet all of their expense
-    reporting needs using the mobile app
+- 80&nbsp;percent of salespeople surveyed report being able to meet all their expense
+    reporting needs by using the mobile app
 
--   80% of users can do the top priority tasks in the app without any
+- 80&nbsp;percent of users can do the top-priority tasks in the app without any
     instruction
