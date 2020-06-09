@@ -132,7 +132,7 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
 1.  Select **Save** to save the changes, and then select **Turn On**.
 
 
-## Review and publish data
+## Review and publish data to SFTP
 
 After your IT admin has configured the solution for data transfer from the hospital solution, you can use the **Review and Publish Data** model-driven app to review the data and mark it as completed for publishing to the folder on the SFTP server.
 
@@ -150,7 +150,6 @@ After your IT admin has configured the solution for data transfer from the hospi
 1. 
 
 
-facility-review.png
 ## Issues and feedback
 
 - To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
