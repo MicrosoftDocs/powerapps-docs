@@ -134,10 +134,10 @@ As a customizer, you can choose which entities you want to show activities to us
     
     | Field/option | Description |Value |
     |------------------------------------------|------------------------------------------------------------|-------------------|
-    | Create activities using | Select on how you want the users to create activities. Possible values are **Quick Create Form** and **Main Form**. | Quick Create Form |
+    | Create activities using | Select on how you want the users to create activities. Possible values are **Quick Create Form** (if you have enabled it on the activity entity first) and **Main Form**. | Quick Create Form |
     | Display activities using | Select how you want to display the activities. Possible values are **Default Fields** and **Card Form**.  If you select **Card Form**, then you need to select a card form for the activity.  | |
     | Select activity | Select an activity from the list.  <br><br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field.| Email |
-    | Select Card Form | Select a card form from the list.  <br><br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field. | Email Card form |
+    | Select Card Form | Select a card form from the list.  <br><br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field. <br><br> Select each activity and choose the choose the corresponding card form to use. Each activity and corresponding card form you choose is automatically retained as you select them. | Email Card form |
 
     > [!div class=mx-imgBorder] 
     > ![Customize timeline module](media/timeline-activity1.png "Customize timeline module")
