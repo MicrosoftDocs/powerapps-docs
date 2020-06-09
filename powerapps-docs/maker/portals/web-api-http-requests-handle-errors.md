@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## Web API URL and versioning
 
-https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors#web-api-url-and-versions
+https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors#web-api-url-and-versions
 
 Construct the Web API URL with the following format:
 
@@ -32,7 +32,7 @@ For example, use this format when referring a case: https://contoso.powerappspor
 @Neeraj - how can we know all available versions?
 
 For entity resources [portal’s entity
-permission](https://docs.microsoft.com/en-us/dynamics365/portals/assign-entity-permissions)
+permission](https://docs.microsoft.com/dynamics365/portals/assign-entity-permissions)
 configuration will be owner. <br> @Neeraj - please explain or elaborate above sentence.
 
 ### Getting portal base URL
@@ -107,7 +107,7 @@ xhttp.send(body);
 
 ### Identify status codes
 
-https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors#identify-status-codes
+https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors#identify-status-codes
 
 | Code | Description | Type |
 | - | - | - |

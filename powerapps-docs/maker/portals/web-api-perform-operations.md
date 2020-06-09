@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## Retrieve an entity record 
 
-https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api
+https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/retrieve-entity-using-web-api
 
 Difference:
 
@@ -23,7 +23,7 @@ Difference:
 
 ## Create an entity record
 
-https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/create-entity-web-api
+https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/create-entity-web-api
 
 Difference:
 
@@ -59,7 +59,7 @@ Example JSON for creating annotation via Web API
 
 ## Update and delete entities using the Web API
 
-https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api
+https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api
 
 Difference:
 
@@ -67,7 +67,7 @@ Difference:
 
 ## Associate and disassociate entities using Web API
 
-https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/associate-disassociate-entities-using-web-api
+https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/associate-disassociate-entities-using-web-api
 
 Difference:
 
@@ -75,7 +75,7 @@ Difference:
 
 ## Use Web API actions
 
-https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/use-web-api-actions 
+https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/use-web-api-actions 
 
 Difference:
 
