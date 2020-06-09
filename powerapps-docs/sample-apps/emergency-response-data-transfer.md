@@ -1,6 +1,6 @@
 ---
 title: Transfer data from Hospital to Regional System | Microsoft Docs
-description: Provides an overview of Hospital Emergency Response Solution.
+description: Provides information on transferring data from hospital to regional solution using SFTP server.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
