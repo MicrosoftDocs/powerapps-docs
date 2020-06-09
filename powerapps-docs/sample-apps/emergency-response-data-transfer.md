@@ -45,11 +45,11 @@ For information about creating an SFTP server, see [SFTP on Azure](https://docs.
 
 IT admins need to perform some steps to configure the data transfer from Hospital Emergency Response solution to SFTP server and from SFTP server to Regional Government Emergency Response and Monitoring solution.
 
-> [Step 1: Create connections](#step-1-create-connections)
+> - [Step 1: Create connections](#step-1-create-connections)
 
-> [Step 2: Enable flows for publishing data to SFTP (Hospital)](#step-2-enable-flows-for-publishing-data-to-sftp-hospital)
+> - [Step 2: Enable flows for publishing data to SFTP (Hospital)](#step-2-enable-flows-for-publishing-data-to-sftp-hospital)
 
-> [Step 3: Enable flow for pulling hospital data data from SFTP (Regional)](#step-3-enable-flow-for-pulling-hospital-data-data-from-sftp-regional)
+> - [Step 3: Enable flow for pulling hospital data data from SFTP (Regional)](#step-3-enable-flow-for-pulling-hospital-data-data-from-sftp-regional)
 
 ### Step 1: Create connections
 
