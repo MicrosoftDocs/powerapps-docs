@@ -75,7 +75,7 @@ Other data you can expect to find passed to your service is in the table below:
 |Key|Value Description|
 |---------|---------|
 |`x-request-id`|A unique identifier for the request|
-|`x-ms-dynamics-organization`|The name of the tenant sending the request|
+|`x-ms-dynamics-organization`|The domain name of the instance sending the request|
 |`x-ms-dynamics-entity-name`|The logical name of the entity passed in the execution context data.|
 |`x-ms-dynamics-request-name`|The name of the Event that the webhook step was registered for.|
 |`x-ms-correlation-request-id`|Unique identifier for tracking any type of extension. This property is used by the platform for infinite loop prevention. In most cases, this property can be ignored. This value may be used when working with technical support because it can be used to query telemetry to understand what occurred during the entire operation.
