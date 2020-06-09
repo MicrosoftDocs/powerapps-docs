@@ -1439,8 +1439,6 @@
             href: ./portals/web-api-perform-operations.md
           - name: Compose HTTP requests and handle errors
             href: ./portals/web-api-http-requests-handle-errors.md
-          - name: Web API samples
-            href: ./portals/web-api-samples.md
     - name: User management and security in portal
       items:
         - name: Configure contacts

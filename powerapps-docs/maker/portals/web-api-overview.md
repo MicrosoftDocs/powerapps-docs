@@ -1,6 +1,6 @@
 ---
 title: Use the Web API for portals | Microsoft Docs
-description: Learn how to use the portals Web API to create, read, update and delete Common Data Service entities.
+description: Learn how to use the portals Web API to create, read, update, and delete Common Data Service entities.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
@@ -24,7 +24,7 @@ For example, you can create a new account, update a contact, or change the [enti
 
 ## Web API operations
 
-Portals Web API offers a subset of capabilities for Common Data Service operations that you can do using Common Data Service API. The following list explains the operations available in portal Web API in addition to Common Data Service Web API:
+Portals Web API offers a subset of capabilities for Common Data Service operations that you can do using Common Data Service API. The following list explains the Common Data Service operations available in portal Web API.
 
 | Common Data Service operation | Available in portals Web API |
 | - | - |
@@ -50,7 +50,7 @@ When you configure inner error site setting, the Web API response includes **wha
 | Site Setting Name | Description|
 | - |- |
 | *webapi/\<entity name\>/enabled* | Enables or disables OData API for \<entity name\>. <br> **Default:** `False` <br> **Valid values:** `True, False` |
-| *webapi/\<entity name\>/fields*  | Defines the comma separated list of attributes that can be modified using Web API. <br>  **Possible values:**  <br> - *All attributes:* `*` <br> - *Specific attributes:* `attr1,attr2,attr3` <br> **Note**: **\*** takes precedence over individual attribute names. For example, **\*** is considered and all attributes are allowed if the value is: `attr1,*,attr3`. <br> **Important**: Mandatory site setting. When this setting is missing, you'll see this error: *No field define for this entity.* |
+| *webapi/\<entity name\>/fields*  | Defines the comma-separated list of attributes that can be modified using Web API. <br>  **Possible values:**  <br> - *All attributes:* `*` <br> - *Specific attributes:* `attr1,attr2,attr3` <br> **Note**: **\*** takes precedence over individual attribute names. For example, **\*** is considered and all attributes are allowed if the value is: `attr1,*,attr3`. <br> **Important**: Mandatory site setting. When this setting is missing, you'll see this error: *No fields defined for this entity.* |
 | *webapi/error/innererror* | Enables or disables innererror. <br> **Default:** `False` <br> **Valid values:** `True, False`
 
 > [!NOTE]
@@ -66,20 +66,20 @@ users are allowed to perform CRUD operation on this entity, the site settings ar
 
 ## Security with portals Web API
 
-You can configure record-based security to individual records in portals using [entity permissions](configure/assign-entity-permissions.md). Portals Web API access entity records and follow the entity permissions given to users through the assocciated [web role](configure/create-web-roles.md).
+You can configure record-based security to individual records in portals using [entity permissions](configure/assign-entity-permissions.md). Portals Web API access entity records and follow the entity permissions given to users through the associated [web role](configure/create-web-roles.md).
 
 ![Portals Web API security](media/web-api/portals-webapi-security.png)
 
-@Neeraj - is the modified image acceptable? Also, it had 'MS confidential' ealier, removed now. So just to be sure, are we sure it's intended for public use and no longer MS confidential? Also, is the image on the right 'complete'? It appears the vertical line to the inward circle needs a title or a legend.
+@Neeraj - is the modified image acceptable? Also, it had 'MS confidential' earlier, removed now. So just to be sure, are we sure it's intended for public use and no longer MS confidential? Also, is the image on the right 'complete'? It appears the vertical line to the inward circle needs a title or a legend.
 
 ## Authenticating portals Web API requests
 
 You don't need to include authentication code since authentication and authorization are managed by the application. Portals API must use cookie for authentication and authorization. All POST call must include CSRF token.
 
-## GDPR
+## General Data Protection Regulation (GDPR)
 
 All request header should have contact id passed for auditing purpose. For
-anonymous user, it'll be passed as `null`.
+anonymous user, it will be passed as `null`.
 
 If audit logging is enabled, then user can see all the audit events in [Office 365 audit log](https://protection.office.com/unifiedauditlog).
 
@@ -95,11 +95,11 @@ CORS is an HTTP feature that enables a web application running under one domain 
 
 @Neeraj - where is this telemetry logged?
 
-Portals Web API logs the following telemtry:
+Portals Web API logs the following telemetry.
 
 | Action | Description |
 | - | - |
-| Web API uses | Web API uses that include request rate, and request data complexity. <br> The request data complexity details include: <br> - Type of request, such as Create, Update or Delete. <br> - Number attribute with data type. (@Neeaj - needs better explanation) <br> - Nested entity depth. (@Neeaj - needs better explanation) |
+| Web API uses | Web API uses that include request rate, and request data complexity. <br> The request data complexity details include: <br> - Type of request, such as Create, Update, or Delete. <br> - Number attribute with data type. (@Neeaj - needs better explanation) <br> - Nested entity depth. (@Neeaj - needs better explanation) |
 | Web API response code | [HTTP response codes](https://www.w3.org/Protocols/HTTP/HTRESP.html) such as 2xx, 4xx, and 5xx to identify the request and success rate. |
 | Response time (performance) | Describes the response time for the Web API request, for performance considerations. |
 
@@ -132,7 +132,7 @@ limit values with the following HTTP response headers:
 
 Portals Web API utilizes existing licensing behavior, including the API calls for each user type.
 
-We will be utilizing existing licensing, behavior which includes the API calls
+Portals uses existing license behavior, that includes the API calls
 for each user type. For more information about API limits for Power Apps portals, download and read [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 ## Next steps
@@ -141,5 +141,4 @@ for each user type. For more information about API limits for Power Apps portals
 
 ### See also
 
-- [Web API samples](web-api-samples.md)
 - [Compose HTTP requests and handle errors](web-api-http-requests-handle-errors.md)

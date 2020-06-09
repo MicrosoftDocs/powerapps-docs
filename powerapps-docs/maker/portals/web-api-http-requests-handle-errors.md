@@ -1,23 +1,23 @@
 ---
-title: Use the Web API for portals | Microsoft Docs
-description: Learn how to use the portals Web API to create, read, update and delete Common Data Service entities.
+title: Compose HTTP requests and handle errors for portals Web API | Microsoft Docs
+description: Learn how to construct HTTP requests, headers, and handle errors for portals Web API.
 author: tapanm-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/05/2020
+ms.date: 06/08/2020
 ms.author: tapanm
 ms.reviewer:
 ---
 
-# Portals Web API
+# Compose HTTP requests and handle errors for portals Web API
+
+Interacting with the Web API includes composing HTTP requests with required headers and handling HTTP responses, including any errors.
 
 ## Web API URL and versioning
 
-https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors#web-api-url-and-versions
-
-Construct the Web API URL with the following format:
+Construct the Web API URL with the format in the following table.
 
 | Part | Description |
 | - | - |
@@ -27,7 +27,9 @@ Construct the Web API URL with the following format:
 | Versioning | v[major].[minor][patch]                  |
 | Resource     | Name of entity or action you want to use |
 
-For example, use this format when referring a case: https://contoso.powerappsportal.com/api/data/v1.0/case.
+For example, use this format when referring a case:
+
+`https://contoso.powerappsportal.com/api/data/v1.0/case`
 
 @Neeraj - how can we know all available versions?
 
@@ -35,23 +37,25 @@ For entity resources [portal’s entity
 permission](https://docs.microsoft.com/dynamics365/portals/assign-entity-permissions)
 configuration will be owner. <br> @Neeraj - please explain or elaborate above sentence.
 
-### Getting portal base URL
+## Get portal base URL
 
 Use `GetAPIBaseURL()` JavaScript Client API to get your portal's base URL for API endpoint. For example, the result of a *Get* request is: `https://\<portal name\>/_api`.
 
-#### HTTP methods
+## HTTP methods
+
+HTTP requests can use different kinds of methods. However, portals Web API only supports the methods in the following table.
 
 | Method | Usage |
 | - | - |
 | Get    | Use when retrieving data. |
 | Post   | Creating entities and calling actions. |
-| Patch  | Use when updating entities or performing upsert operation. |
+| Patch  | Use when updating entities or doing upsert operation. |
 | Delete | Use when deleting entities or individual properties of entities. |
 | Put    | @Neeraj - need description/usage |
 
-### HTTP headers
+## HTTP headers
 
-Web API only supports JSON. Each HTTP headers must include:
+Web API only supports JSON. Each HTTP header must include:
 
 - *Accept* header value of *application/json*, even when no response body is expected.
 - *If-None-Match* null header in the request body to override browser
@@ -60,10 +64,10 @@ caching of Web API request.
 *Content-Type* header with a value of `application/json`.
 
 The current OData version is 4.0, but future versions may allow for new
-capabilities. To ensure that there is no ambiguity about the OData version that will be applied to your code at that point in the future. 
+capabilities. To ensure no ambiguity about the OData version that will be applied to your code at that point in the future. 
 <br> @Neeraj - what's the above OData version/future versions note regarding?
 
-#### Syntax
+### Syntax
 
 ```http
 Accept: application/json  
@@ -72,7 +76,7 @@ OData-Version: 4.0
 If-None-Match: null
 ```
 
-##### Example: Get entity data
+### Example: Get entity data
 
 ```http
 var portalUrl = GetAPIBaseURL(); //Returns portal’s Data API base URL
@@ -84,7 +88,7 @@ xhttp.setRequestHeader("OData-Version", "4.0");
 xhttp.send();
 ```
 
-##### Example: Create entity data
+### Example: Create entity data
 
 ```http
 var portalUrl = GetAPIBaseURL(); //Returns portal’s Data API base URL
@@ -105,23 +109,23 @@ var body = JSON.stringify ({
 xhttp.send(body);
 ```
 
-### Identify status codes
+## Identify status codes
 
-https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/compose-http-requests-handle-errors#identify-status-codes
+Each HTTP request response includes a status code. Status codes returned by the portals Web API include the following.
 
 | Code | Description | Type |
 | - | - | - |
-| 200 OK | Expect this when your operation will return data in the response body. | Success |
-| 204 No Content | Expect this when your operation succeeds, but doesn't return data in the response body. | Success |
-| 403 Forbidden | Expect this for the following types of errors: <br> - AccessDenied <br> - AttributePermissionIsMissing <br> - EntityPermissionWriteIsMissingDuringUpdate <br> - EntityPermissionCreateIsMissing <br> - EntityPermissionDeleteIsMissing <br> - EntityPermissionAppendIsMissngDuringAssociationChange - <br> - EntityPermissionAppendToIsMissingDuringAssociateChange | Client Error |
-| 401 Unauthorized | Expect this for the following types of errors: <br> - MissingPortalRequestVerificationToken <br> - MissingPortalSessionCookie | Client Error |
-| 413 Payload Too Large | Expect this when the request length is too large. | Client Error |
-| 400 BadRequest | Expect this when an argument is invalid. <br> InvalidAttribute | Client Error |
-| 404 Not Found | - Expect this when the resource doesn’t exist. <br> - Entity is not expose for web api. | Client Error |
+| 200 OK | Expect this response when your operation will return data in the response body. | Success |
+| 204 No Content | Expect this response when your operation succeeds, but doesn't return data in the response body. | Success |
+| 403 Forbidden | Expect this response for the following types of errors: <br> - AccessDenied <br> - AttributePermissionIsMissing <br> - EntityPermissionWriteIsMissingDuringUpdate <br> - EntityPermissionCreateIsMissing <br> - EntityPermissionDeleteIsMissing <br> - EntityPermissionAppendIsMissngDuringAssociationChange - <br> - EntityPermissionAppendToIsMissingDuringAssociateChange | Client Error |
+| 401 Unauthorized | Expect this response for the following types of errors: <br> - MissingPortalRequestVerificationToken <br> - MissingPortalSessionCookie | Client Error |
+| 413 Payload Too Large | Expect this response when the request length is too large. | Client Error |
+| 400 BadRequest | Expect this response when an argument is invalid. <br> InvalidAttribute | Client Error |
+| 404 Not Found | - Expect this response when the resource doesn’t exist. <br> - Entity isn't exposed for web api. | Client Error |
 | 405 Method Not Allowed | This error occurs for incorrect method and resource combinations. For example, you can’t use DELETE or PATCH on a collection of entities. This situation can happen for the following types of errors: <br> - CannotDeleteDueToAssociation <br> - InvalidOperation <br> - NotSupported | Client Error |
-| 429 Too Many Requests  | Expect this when API limits are exceeded. More information: [Service Protection API Limits](../../developer/common-data-service/api-limits.md). | Client Error |
-| 501 Not Implemented | Expect this when some requested operation isn't implemented. | Server Error |
-| 503 Service Unavailable | Expect this when the web API service isn’t available. | Server Error |
+| 429 Too Many Requests  | Expect this response when API limits are exceeded. More information: [Service Protection API Limits](../../developer/common-data-service/api-limits.md). | Client Error |
+| 501 Not Implemented | Expect this response when some requested operation isn't implemented. | Server Error |
+| 503 Service Unavailable | Expect this response when the web API service isn’t available. | Server Error |
 
 @Neeraj: need more information about what the following table illustrates: (I've formatted table anyways but needs elaboration)
 
@@ -147,11 +151,11 @@ https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/compos
 | date: Mon, 18 May 2020 10:38:54 GMT | No |
 | X-Firefox-Spdy: h2 | No |
 
-### Parse errors from the response 
+## Parse errors from the response 
 
 The property [*innererror*](../../developer/common-data-service/webapi/compose-http-requests-handle-errors.md#parse-errors-from-the-response) is going to be deprecated. 
 
-Consider the following example response that still includes the innererror:
+Consider the following example response that still includes the innererror.
 
 ```json
 {
@@ -167,7 +171,7 @@ Consider the following example response that still includes the innererror:
     }
   }
 ```
-In the above example, Common Data Service shows the following error:
+In this example, Common Data Service shows the following error.
 
 ```json
 {
@@ -178,7 +182,7 @@ In the above example, Common Data Service shows the following error:
 }
 ```
 
-Portals Web API error response includes:
+In this example, portals shows the following error.
 
 ```json
 {
@@ -195,8 +199,6 @@ Portals Web API error response includes:
 ```
 
 ## Error codes
-
-@Neeraj - errors are shown in HTTP responses? And do errors only show code, or message are displayed too?
 
 Error codes are displayed in hexadecimal format for all handled scenarios. The following table explains the error code, and the respective error name and message.
 
@@ -218,14 +220,9 @@ Error codes are displayed in hexadecimal format for all handled scenarios. The f
 | 9004010C | ResourceDoesNotExists | Resource not found for the segment '{0}'. |
 | 9004010D | CDSError | CDS error occurred. |
 
-Response for unhandled errors with HTTP status code 500 will return the error *An unexpected error occurred while processing the request*.
-
-## Next steps
-
-[Web API samples](web-api-samples.md)
+Response for unhandled errors with HTTP status code 500 will return the error - *An unexpected error occurred while processing the request*.
 
 ### See also
 
 - [Web API overview](web-api-overview.md)
 - [Perform Web API operations](web-api-perform-operations.md)
-- [Compose HTTP requests and handle errors](web-api-http-requests-handle-errors.md)
