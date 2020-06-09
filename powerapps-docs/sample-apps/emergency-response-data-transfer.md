@@ -20,7 +20,7 @@ Microsoft provides you the following solutions for emergency response:
 
 - The *Regional Government Emergency Response and Monitoring solution* enables you to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges at a **regional health organization level**. Each hospital under the regional organization jurisdiction can submit their data by using the regional organization's portal, which is also part of the *Regional Government Emergency Response and Monitoring solution*.
 
-Now, hospitals with the Hospital Emergency Response solution can submit their data to the regional organization by publishing their data, such as information about beds, supplies, equipments, and staff, to a Secure File Transfer Protocol (SFTP) server hosted by their regional medical organization. You can publish data on a set schedule and on-demand to the SFT server. 
+Now, hospitals with the Hospital Emergency Response solution installed can submit their data to the regional organization by publishing their data, such as information about beds, supplies, equipments, and staff, to a Secure File Transfer Protocol (SFTP) server hosted by their regional medical organization. You can publish data on a set schedule and on-demand to the SFT server. 
 
 Further, if the regional medical organization has the Regional Government Emergency Response and Monitoring solution installed, the hospital data is automatically downloaded from the SFTP server and stored as hospital data in the regional solution. This helps in integrating the hospital and regional emergency response solutions.
 
@@ -159,7 +159,7 @@ After your IT admin has configured the solution for data transfer from the hospi
     > [!div class="mx-imgBorder"] 
     > ![Review completed](media/review-completed.png)
 
-
+The scheduled flows will pick up the completed items for publishing to the SFTP folder that you configured earlier.
 
 ## Issues and feedback
 
@@ -167,6 +167,3 @@ After your IT admin has configured the solution for data transfer from the hospi
 
 - For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
-### Disclaimer
-
-This app is a sample and may be used with Microsoft Power Platform for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person. Sample data included in this app are for illustration only and are fictitious. No real association is intended or inferred.
