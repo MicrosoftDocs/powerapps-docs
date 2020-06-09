@@ -166,7 +166,6 @@ Complete request and response details: [Basic update](../../developer/common-dat
     <th>Operation</th>
     <th>Method</th>
     <th>URI</th>
-    <th>JSON Sample</th>
   </tr>
   <tr>
     <td>Update with data returned</td>
