@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2020
+ms.date: 06/09/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
@@ -27,7 +27,7 @@ Now, hospitals with the Hospital Emergency Response solution can transfer their 
 2. The hospital data published on the SFTP server is automatically downloaded to the regional solution and is used to create respective data records (beds, supplies, equipment, and staff) for the hospital in the regional solution. 
 
 > [!NOTE]
-> This article demonstrates how you can use an SFTP server to transfer data from hospital to regional solutions. You can also use other ways to transfer data in and out of these solution, such as [import and export data as CSV files](/powerapps/maker/common-data-service/data-platform-import-export) and [use web services](/powerapps/developer/common-data-service/work-with-data-cds). 
+> This article demonstrates how you can use an SFTP server to transfer data from hospital to regional solutions. You can also use other ways to transfer data to/from these solutions, such as [import and export data as CSV files](/powerapps/maker/common-data-service/data-platform-import-export) and [use web services](/powerapps/developer/common-data-service/work-with-data-cds). 
 
 
 ## Prerequisites
