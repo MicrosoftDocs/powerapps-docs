@@ -15,7 +15,7 @@ ms.reviewer:
 
 ## Web API JSON samples
 
-You can perform the [available Web API operations](#web-api-operations) in portals. Web API operations consist of [HTTP requests and responses](../..developer/common-data-service/webapi/compose-http-requests-handle-errors.md). The following table shows sample operations, methods, URI and the sample JSON you can use in the HTTP request.
+You can perform the [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of [HTTP requests and responses](../..developer/common-data-service/webapi/compose-http-requests-handle-errors.md). The following table shows sample operations, methods, URI and the sample JSON you can use in the HTTP request.
 
 <!--- Consider in format of https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/create-entity-web-api - ## title for each operation and URI/JSON samples in code blocks of HTTP-->
 
