@@ -1698,6 +1698,8 @@
       href: ../sample-apps/regional-emergency-response/portals-admin-reporting.md
     - name: Portal for healthcare worker
       href: ../sample-apps/regional-emergency-response/portals-user.md
+  - name: Transfer data from hospital to regional
+    href: ../sample-apps/emregency-response-data-transfer.md
 - name: Learn from others
   items:
   - name: Blog
