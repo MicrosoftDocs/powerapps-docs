@@ -147,7 +147,18 @@ After your IT admin has configured the solution for data transfer from the hospi
     > [!div class="mx-imgBorder"] 
     > ![Facility review](media/facility-review.png)
 
-1. 
+1. Scroll down the page to review the following data for your facility: Bed Census, COVID Stats, Equipment Needs, Supply Tracking, and Staff Updates. If required, update the data in grids, and then select the save icon to save your changes.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Update values](media/update-values.png)
+
+1. Once reviewed, you can select a row of data, and select **Mark Complete**. Select **OK** in the confirmation dialog box to complete the action.
+
+    The record's review status changes to **Completed**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Review completed](media/review-completed.png)
+
 
 
 ## Issues and feedback
