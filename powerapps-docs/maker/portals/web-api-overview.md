@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/05/2020
+ms.date: 06/08/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -72,7 +72,7 @@ You can configure record-based security to individual records in portals using [
 
 @Neeraj - is the modified image acceptable? Also, it had 'MS confidential' ealier, removed now. So just to be sure, are we sure it's intended for public use and no longer MS confidential? Also, is the image on the right 'complete'? It appears the vertical line to the inward circle needs a title or a legend.
 
-### Authentication
+## Authenticating portals Web API requests
 
 You don't need to include authentication code since authentication and authorization are managed by the application. Portals API must use cookie for authentication and authorization. All POST call must include CSRF token.
 
@@ -87,11 +87,11 @@ If audit logging is enabled, then user can see all the audit events in [Office 3
 
 More information: [Enable and use Activity Logging](https://docs.microsoft.com/power-platform/admin/enable-use-comprehensive-auditing), [Export, configure, and view audit log records](https://docs.microsoft.com/microsoft-365/compliance/export-view-audit-log-records).
 
-### CORS
+## CORS
 
 CORS is an HTTP feature that enables a web application running under one domain to access resources in another domain. Portals Web API calls made from outside the portals pages aren't allowed.
 
-### Telemetry
+## Telemetry
 
 @Neeraj - where is this telemetry logged?
 
@@ -102,3 +102,44 @@ Portals Web API logs the following telemtry:
 | Web API uses | Web API uses that include request rate, and request data complexity. <br> The request data complexity details include: <br> - Type of request, such as Create, Update or Delete. <br> - Number attribute with data type. (@Neeaj - needs better explanation) <br> - Nested entity depth. (@Neeaj - needs better explanation) |
 | Web API response code | [HTTP response codes](https://www.w3.org/Protocols/HTTP/HTRESP.html) such as 2xx, 4xx, and 5xx to identify the request and success rate. |
 | Response time (performance) | Describes the response time for the Web API request, for performance considerations. |
+
+## Throttling 
+
+@Neeraj - what are the error codes?
+
+| **Error code** | **Error message** |
+| - | - |
+| | Number of requests exceeded the limit of 6000, measured over time window of 300 seconds. |
+| | Combined execution time of incoming requests exceeded limit of 1,200,000 milliseconds over time window of 300 seconds. Decrease number of concurrent requests or reduce the duration of requests and try again later. |
+| | Number of concurrent requests exceeded the limit of 52. |
+
+If you use HTTP requests with the Web API, the response will include the same
+messages, but with status code 429.
+
+All requests will return these error responses until the volume of API requests falls below the limit. If you get these responses, your application should stop sending API requests until the volume of requests is below the limit.
+
+### Check remaining limit
+
+If you're using HTTP requests with the Web API, you can track the remaining
+limit values with the following HTTP response headers:
+
+| Header | Value Description |
+| - | - |
+| x-ms-ratelimit-burst-remaining-xrm-requests | The remaining number of requests for this connection. |
+| x-ms-ratelimit-time-remaining-xrm-requests | The remaining combined duration for all connections using the same user account. |
+
+## Web API and licensing
+
+Portals Web API utilizes existing licensing behavior, including the API calls for each user type.
+
+We will be utilizing existing licensing, behavior which includes the API calls
+for each user type. For more information about API limits for Power Apps portals, download and read [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+
+## Next steps
+
+[Perform Web API operations](web-api-perform-operations.md)
+
+### See also
+
+- [Web API samples](web-api-samples.md)
+- [Compose HTTP requests and handle errors](web-api-http-requests-handle-errors.md)

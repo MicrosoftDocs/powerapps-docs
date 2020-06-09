@@ -1432,7 +1432,15 @@
         - name: Manage webpages
           href: ./portals/configure/web-page.md
         - name: Web API
-          href: ./portals/web-api.md
+          items:
+          - name: Web API Overview
+            href: ./portals/web-api-overview.md
+          - name: Perform operations
+            href: ./portals/web-api-perform-operations.md
+          - name: Compose HTTP requests and handle errors
+            href: ./portals/web-api-http-requests-handle-errors.md
+          - name: Web API samples
+            href: ./portals/web-api-samples.md
     - name: User management and security in portal
       items:
         - name: Configure contacts
