@@ -52,7 +52,7 @@ A few example issues and queries that you can uncover when using Monitor are:
 
 To see **Monitor** in action, see the [example scenario](#example).
 
-## Open app Monitor for Preview app
+## Open app Monitor for preview app
 
 Canvas app Monitor is available by default for all canvas apps. To open Monitor when authoring an app:
 
