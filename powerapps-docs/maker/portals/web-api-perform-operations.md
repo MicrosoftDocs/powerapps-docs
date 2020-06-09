@@ -13,7 +13,7 @@ ms.reviewer:
 
 # Portals operations using the Web API
 
-You can perform the [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of [HTTP requests and responses](../..developer/common-data-service/webapi/compose-http-requests-handle-errors.md). This article shows sample operations, methods, URI, and the sample JSON you can use in the HTTP request.
+You can perform the [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of [HTTP requests and responses](../../developer/common-data-service/webapi/compose-http-requests-handle-errors.md). This article shows sample operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
 ## Retrieve an entity record
 
@@ -74,7 +74,7 @@ Complete request and response details: [Basic Create](../../developer/common-dat
   </tr>
 </table>
 
-Complete request and response details: [Create related entity records in one operation](../../developer/common-data-service/webapi/create-entity-web-ap.mdi#create-related-entity-records-in-one-operation)
+Complete request and response details: [Create related entity records in one operation](../../developer/common-data-service/webapi/create-entity-web-api.md#create-related-entity-records-in-one-operation)
 
 
 ### Associate entity records on create
@@ -175,7 +175,7 @@ Complete request and response details: [Basic update](../../developer/common-dat
   </tr>
 </table>
 
-Complete request and response details: [Update with data returned](../../developer/common-data-service/webapi/update-delete-entities-using-web-api#update-with-data-returned)
+Complete request and response details: [Update with data returned](../../developer/common-data-service/webapi/update-delete-entities-using-web-api.md#update-with-data-returned)
 
 ### Update a single property value
 
@@ -234,7 +234,7 @@ For more details about `upsert` operation, go to [Upsert an entity](../../develo
   </tr>
 </table>
 
-Complete request and response details: [Prevent create in upsert](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/perform-conditional-operations-using-web-api.md#prevent-create-in-upsert)
+Complete request and response details: [Prevent create in upsert](../../developer/common-data-service/webapi/perform-conditional-operations-using-web-api.md#prevent-create-in-upsert)
 
 #### Prevent update in upsert
 
@@ -251,7 +251,7 @@ Complete request and response details: [Prevent create in upsert](https://docs.m
   </tr>
 </table>
 
-Complete request and response details: [Prevent update in upsert](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/webapi/perform-conditional-operations-using-web-api.md#prevent-update-in-upsert)
+Complete request and response details: [Prevent update in upsert](../../developer/common-data-service/webapi/perform-conditional-operations-using-web-api.md#prevent-update-in-upsert)
 
 ### Basic delete
 
