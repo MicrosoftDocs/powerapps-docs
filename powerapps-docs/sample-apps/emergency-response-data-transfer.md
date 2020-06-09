@@ -29,9 +29,11 @@ Further, if the regional medical organization has the Regional Government Emerge
 
 ## Prerequisites
 
-For the data transfer to work from the Hospital Emergency Response solution, the regional health organization must have an SFTP server configured with a folder for each hospital on the SFTP server where the hospital can publish their data.
+These are the prerequisites for the data transfer to work successfully.
 
-This article assumes that the hospital system already has access to a folder on a secure FTP server hosted by their regional medical organization. Make sure you have the credentials to establish a connection to the secure FTP folder as you will require it later.
+- **SFTP server**: The regional health organization must have an SFTP server configured with a folder for each hospital on the SFTP server where the hospital can publish their data. The hospital must get the credentials from regional health organization to connect to the folder on the SFTP server.
+
+- **CDC Short Name**: Each **Supply** and **Staffing Type** record must have the **CDC Short Name** value. You can create and mage these records in the Admin app of hospital and regional solutions.
 
 ## Configure your solutions for data transfer
 
@@ -160,6 +162,27 @@ After your IT admin has configured the solution for data transfer from the hospi
     > ![Review completed](media/review-completed.png)
 
 The scheduled flows will pick up the completed items for publishing to the SFTP folder that you configured earlier.
+
+### Manually publish data
+
+The scheduled flow publishes data at a certain time, but what if you want to manually or immediately publish the data after reviewing it. 
+
+1.  In the **Review and Publish Data** app, select the record that you want to publish from the **Published History** in the left pane. All the published data for the selected entity are displayed. If you want to view the active records for the entity, use the view selector.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Review completed](media/manual-data-publish.png)
+
+1. In this case, we will publish the data that we just reviewed in the previous section. So, select the **Active Bed Census** view, select the row that was marked as completed, and then select **Flow** > **Publish Bed Census Data**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Manually run flow](media/manually-run-flow.png)
+
+1. On the next screen, review that the connections are valid, and select Continue
+
+    > [!div class="mx-imgBorder"] 
+    > ![Manually run flow](media/publish-data-flow.png)
+
+1. On the next screen select **Run flow**. A message appears stating that the flow run started successfully and how you can monitor the progress.
 
 ## Issues and feedback
 
