@@ -1431,9 +1431,9 @@
           href: ./portals/oauth-implicit-grant-flow.md
         - name: Manage webpages
           href: ./portals/configure/web-page.md
-        - name: Web API
+        - name: Portals Web API
           items:
-          - name: Web API Overview
+          - name: Overview
             href: ./portals/web-api-overview.md
           - name: Perform operations
             href: ./portals/web-api-perform-operations.md
