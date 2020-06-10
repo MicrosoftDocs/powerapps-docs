@@ -14,7 +14,7 @@ searchScope:
 ---
 # Configure master data and view dashboards
 
-This article provides information on how you can use the admin app (model-driven app) to add and manage master data for your solution and use the Power BI dashboard to view key insights and metrics.
+This article provides information on how you can use the **Admin app** (model-driven app) to add and manage master data for your solution, use the Power BI dashboard to view key insights and metrics, and download the CDC data.
 
 These tasks are typically performed by business admins in your organization.
 
@@ -609,6 +609,10 @@ You can restore canvas apps to previous version that didn't use Canvas App Strin
 - Some TextIDs (labels) can be found in the **OnVisible** property of a screen as a part of a collection.
 - HomeScreen, SplashScreen, FeedbackScreen, MeScreen, Buttons and the timestamp for last submitted data share the same TextIDs across apps. Other screens use separate values for TextIDs, even if the Default Text is same across apps; for example *Location*.
 - Canvas App Strings solution supports the following languages: German, Spanish, French, Italian, Japanese,  Korean, Polish, Portuguese (Portugal), Portuguese (Brazil), and Turkish.
+
+## Download CDC data
+
+You can view, edit or download the Centers for Disease Control and Prevention (CDC) data that is captured by your frontline workers using the mobile appsso that you can upload the data to the CDC web site.
 
 ## Issues and feedback
 
