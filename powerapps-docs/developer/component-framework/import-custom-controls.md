@@ -47,7 +47,7 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or automatically using the [Power Apps Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerApps-BuildTools).
+5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerApps-BuildTools).
 
 ## Connecting to your environment
 
@@ -123,30 +123,30 @@ More information: [Settings options](https://docs.microsoft.com/dotnet/api/micro
 > The plugin command is in public preview and 
 Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
-1.    Ensure that you have a valid authentication profile created.
-2.    Navigate to the root directory where you want the project to be created.
-3.    Run the command 
+1. Ensure that you have a valid authentication profile created.
+2. Navigate to the root directory where you want the project to be created.
+3. Run the command 
 
-     ```CLI
-     pac auth create –url <https://xyz.crm.dynamics.com>
-     ```
-4.    Run the command to create the plug-in project
+   ```CLI
+   pac auth create –url <https://xyz.crm.dynamics.com>
+   ```
+4. Run the command to create the plug-in project
 
-    ```CLI
-    pac plugin init
-    ```
+   ```CLI
+   pac plugin init
+   ```
 
-5.    Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
+5. Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
 
-    ```CLI
-    pac solution add-reference –path <path to your plugin project>
-    ```
+   ```CLI
+   pac solution add-reference –path <path to your plugin project>
+   ```
 
-6.    Run the command to build the solution and the referenced plug-in.
+6. Run the command to build the solution and the referenced plug-in.
 
-    ```CLI
-    msbuild
-    ```
+   ```CLI
+   msbuild
+   ```
 
 ## Remove components from a solution
 

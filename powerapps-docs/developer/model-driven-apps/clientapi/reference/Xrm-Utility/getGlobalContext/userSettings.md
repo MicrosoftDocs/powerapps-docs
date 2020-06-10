@@ -118,7 +118,7 @@ Returns a collection of lookup objects containing the GUID and display name of e
  
 ### Return Value
 
-**Type**: Array of objects
+**Type**: Collection
 
 **Description**: Object containing `id` and `name` of each of the security role or teams that the user is associated with.
 

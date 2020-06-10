@@ -335,14 +335,6 @@
         href: create-patches-simplify-solution-updates.md
       - name: When to edit the customizations file
         href: when-edit-customization-file.md
-  - name: Build tools for Azure DevOps 
-    items:
-    - name: Overview
-      href: build-tools-overview.md
-    - name: Tasks
-      href: build-tools-tasks.md
-    - name: Tutorial and FAQ
-      href: build-tools-tutorial-faq.md
   - name: SolutionPackager tool
     href: compress-extract-solution-file-solutionpackager.md
     items:
@@ -408,7 +400,9 @@
     - name: Office365 authentication with WS-Trust
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
-    href: walkthrough-register-app-azure-active-directory.md      
+    href: walkthrough-register-app-azure-active-directory.md
+  - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
+    href: walkthrough-blazor-webassembly-single-tenant.md
   - name: Build web applications using Server-to-Server (S2S) authentication
     href: build-web-applications-server-server-s2s-authentication.md
     items:
