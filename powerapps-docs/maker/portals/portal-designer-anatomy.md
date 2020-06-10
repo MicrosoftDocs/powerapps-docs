@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/02/2020
+ms.date: 06/09/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -25,7 +25,7 @@ You can use Power Apps portals Studio to create and customize your website. It c
 | 4              | Footer          | Displays autosave status and allows you to open-source code editor.                         |
 | 5              | Properties pane | Displays properties of webpage and selected components and lets you edit them as required. |
 
-\* Sync Configuration synchronizes the latest portal configuration changes with your current Studio session. For example, configuration or site setting updated using the Portal Management app.
+\* Sync Configuration synchronizes the latest portal configuration changes in Common Data Service database with your current Studio session. For example, configuration changes to pages, forms or any other object using the Portal Management app. Use Sync Configuration to reflect these changes in Studio.
 
 > [!NOTE]
 > Editing a portal through Power Apps portals Studio will temporarily cause poor portal performance due to multiple background processes. For example, the clear cache process runs and reloads data from Common Data Service.
