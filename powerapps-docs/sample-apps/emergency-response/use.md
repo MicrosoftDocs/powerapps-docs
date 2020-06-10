@@ -5,7 +5,7 @@ author: pankajarora-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2020
+ms.date: 06/09/2020
 ms.author: pankar
 ms.reviewer: tapanm
 searchScope:
@@ -56,6 +56,10 @@ its components for the *first time*, you will be asked for your consent to allow
 
 The Hospital Emergency Response sample solution app consists of multiple apps for enhanced user experience. Depending on your role, you may see one or more components in the **Hospital Emergency Response mobile app**.
 
+### Hospital operations
+
+Use the hospital operations apps to collect hospital and facility specific data for hospital management.
+
 - **Bed capacity**
     <br> Collect bed information such as licensed beds, ICU beds, pediatric ICU/Acute Care beds, and other bed capacity data.
 
@@ -83,6 +87,22 @@ The Hospital Emergency Response sample solution app consists of multiple apps fo
 
 > [!NOTE]
 > By default, you can track information in the following apps at a *location* level: **COVID-19 stats**, **Equipment**, and **Staff**. In rest of the apps, you can track information at the *facility* level by default. Your admin can change the default tracking level, if required. More information: [Manage tracking level for mobile apps](configure-data-reporting.md#manage-tracking-level-for-mobile-apps)
+
+### Government reporting
+
+Use the government reporting apps to collect hospital and facility specific data for CDC reporting.
+
+- **COVID-19 patient impact**
+    <br> Collect COVID-19 patient details such as hospitalized, on ventilator, or awaiting beds in emergency department.
+
+- **Healthcare worker staffing**
+    <br> Collect shortage data for staff such as physicians, RNs, pharmacists, therapists or other personnel.
+
+- **Bed capacity**
+    <br> Collect bed information such as ICU, Acute Care and surge capacity.
+
+- **Supply planning**
+    <br> Collect supplies data such as masks, shields, gloves, gowns, PAPRs.
 
 ## Bed capacity
 
@@ -251,6 +271,146 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | **Discharges**            |                                                                    |
 | Past 24 h                 | Number of patients expected to be discharged in last 24 hours.  |
 | Likely next 24 h          | Number of patients discharged in last 24 hours.                    |
+## COVID-19 patient impact - CDC reporting
+
+![COVID-19 patient impact - CDC reporting](media/use/cdc-covid-19-patient-impact.png)
+
+Use the **COVID-19 patient impact** app to submit COVID-19 suspected and confirmed patient information such as hospitalized patients, onset numbers, emergency department and overflow information. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
+
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
+
+### Fields and description
+
+COVID-19 stats include details for both COVID-19 *suspected* and COVID-19 *confirmed* patients.
+
+#### Inpatient beds
+
+Submit inpatient bed information:
+
+| **Option name**                                                   | **Description**                                                    |
+|-------------------------------------------------------------------|--------------------------------------------------------------------|
+| Hospitalized patients | Total number of patients hospitalized currently. |
+| Previous day’s hospitalized patients | Number of new patients admitted to the hospital. |
+| Hospitalized and ventilated | Patients currently hospitalized using mechanical ventilators. |
+| Hospital onset | Total number of patients with onset of suspected or confirmed COVID-19 (after 14 or more days) for a condition other than COVID-19.
+| Previous day’s hospital onset | Number of patients with onset of suspected or confirmed COVID-19 on the previous day; and the previous day is 14 or more days since admission.
+
+#### Emergency department / Overflow location
+
+Only available if the facility is enabled for emergency department or overflow location.
+
+| **Option name**                                                   | **Description**                                                    |
+|-------------------------------------------------------------------|--------------------------------------------------------------------|
+| Awaiting inpatient bed | Number of patients awaiting an inpatient bed. |
+| Awaiting inpatient bed ventilated | Number of patients on a mechanical ventilator awaiting inpatient bed. |
+
+#### All locations
+
+| **Option name**                                                   | **Description**                                                    |
+|-------------------------------------------------------------------|--------------------------------------------------------------------|
+| Deaths. | Previous day's mortality number for patients suspected or confirmed with COVID-19 (includes hospital, emergency department, and all overflow locations). |
+
+## Healthcare worker staffing - CDC reporting
+
+![Healthcare worker staffing - CDC reporting](media/use/cdc-healthcare-worker-staffing.png)
+
+Collect shortage information for staffing such as physicians, RNs, licensed practitioners, pharmacists or therapists using the **Healthcare worker staffing** app. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
+
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
+
+### Fields and description
+
+The **Healthcare worker staffing** app fields may be different depending on your organization requirements. Refer to your organization resources for descriptions of staffing requirements.
+
+IT Administrators can add or update the **Healthcare worker staffing** app items list using the model-driven app for Power Apps. For more information, see [configuration guide](deploy-configure.md).
+
+## Bed capacity - CDC reporting
+
+![Bed capacity - CDC reporting](media/use/cdc-bed-capacity.png)
+
+Collect bed information such as ICU/AIIR availability, occupancy in other areas or inpatient staffing/surge capacity using the **Bed capacity** app. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
+
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
+
+### Fields and description
+
+#### Staffed Inpatient ICU and Acute Care Bed Occupancy
+
+Occupancy for staffed adult and pediatric inpatient beds that are in the ICU or Acute care locations.
+
+| **Option name**                                               | **Description**                                                                       |
+|---------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| ICU beds (AIIR Room) | Number of Intensive Care Unit (ICU) beds in Airborne Infection Isolation Rooms occupied currently. |
+| ICU beds (non-AIIR Room) | Number of ICU beds in non-AIIR rooms occupied currently.
+| Acute Care beds (AIIR Room) | Number of Acute Care beds (AIIR Room) occupied currently. |
+| Acure Care beds (non-AIIR Room) | Number of Acure Care beds (non-AIIR Room) occupied currently.
+
+> [!NOTE]
+> Pediatric occupancy options are disabled if the capacity isn't set to at least 1 at the selected facility.
+
+#### Staffed Inpatient Bed Occupancy in other areas
+
+Occupancy of staffed inpatient beds in areas other than ICU and Acute Care.
+
+| **Option name**                                               | **Description**                                                                       |
+|---------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Neonatal ICU beds | Neonatal ICU beds occupied currently.
+| Beds in Overflow/Surge/Expansion areas | Number of beds in Overflow/Surge/Expansion areas occupied currently. |
+| Beds in other inpatient areas (CCU/L&D etc) | Number of beds in other inpatient areas occupied currently. |
+| Decedent accommodations | Number of decedent accommodations occupied currently. <br> **Note**: Only visible if the *Total Mortuary Capacity* for the selected facility is at least 1. |
+
+#### Inpatient Beds Staffing and Surge Capacity
+
+Select whether your facility is staffed for its inpatient bed capacity, and if your facility can surge beyond your staffed inpatient bed capacity. If not, select the appropriate reasons.
+
+| **Option name**                                               | **Description**                                                                       |
+|---------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| Is your facility staffed to its full licensed bed capacity?    | Yes/No. If the answer is No, can select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
+| Are you able to surge beyond your licensed beds?              | Yes/No. If the answer is No, can select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
+
+## Supply planning - CDC reporting
+
+![Supply planning - CDC reporting](media/use/cdc-supply-planning.png)
+
+Collect the supplies inventory with the **Supply planning** app. You can update the supply component quantities in the entire facility inventory, burn rate, extended use/reuse methods and ability to source inventory. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
+
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
+
+### Fields and description
+
+The supplies app items list may be different depending on your organization
+requirements. Refer to your organization resources for descriptions of supply
+names.
+
+IT Administrators can add or update the supplies app items list using the
+model-driven app for Power Apps. For more information, see [configuration guide](deploy-configure.md).
+
+#### Supply considerations
+
+- For calculation of on hand supply, we recommend using the [Personal Protective Equipment (PPE) Burn Rate Calculator](https://www.cdc.gov/coronavirus/2019-ncov/hcp/ppe-strategy/burn-calculator.html).
+- More information about conservation strategy available at [Conservation Strategies for Personal Protective Equipment](https://www.doh.wa.gov/Portals/1/Documents/1600/coronavirus/ConservationStrat-PPE.pdf).
+- **Extended use**: Wearing for repeated close contact encounters with several patients without removing between patients.
+- **Reuse**: Using same PPE for multiple encounters with patients but removing it (*doffing*) after each encounter.
+- **Ventilator Disposables use/reuse**: When considering definitions for extended use or reusing ventilator supplies, please refer to the [Scarce Resource Management and Crisis Standards of Care Overview](https://nwhrn.org/wp-content/uploads/2018/10/Scarce_Resource_Management_and_Crisis_Standards_of_Care_Overview_and_Materials-2020-04-10.pdf) document.
+    <table>
+      <tr>
+        <th>WA Health</th>
+        <th>Scarce Resource Mgmt and Crisis Standards of Care Overview</th>
+      </tr>
+      <tr>
+        <td><i>Standard</i></td>
+        <td>Conventional</td>
+      </tr>
+        <tr>
+        <td><i>Conservation</i></td>
+        <td>Contingency</td>
+      </tr>
+        <tr>
+        <td><i>Extreme</i></td>
+        <td>Crisis</td>
+      </tr>
+    </table>
+- **Ventilator supplies (disposables)**: When considering definitions for *ventilator supplies (disposable)*, please refer to [CDC NHSN](https://www.cdc.gov/nhsn/) website.
 
 ## Dashboard
 
