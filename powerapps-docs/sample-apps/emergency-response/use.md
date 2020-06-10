@@ -60,29 +60,29 @@ The Hospital Emergency Response sample solution app consists of multiple apps fo
 
 Use the hospital operations apps to collect hospital and facility specific data for hospital management.
 
-- **Bed capacity**
+- [Bed capacity](#bed-capacity)
     <br> Collect bed information such as licensed beds, ICU beds, pediatric ICU/Acute Care beds, and other bed capacity data.
 
-- **COVID-19 stats**
+- [COVID-19 stats](#covid-19-stats)
     <br> Collect status on how many patients are under investigation for COVID-19 and how many tested positive.
 
-- **Equipment**
+- [Equipment](#equipment)
     <br> Track equipment information such as ventilators, NIPPV, and PAPR.
 
-- **Staff**
+- [Staff](#staff)
     <br> Collect number of patients and RN status information such as partners, assigned, requested, and unassigned.
 
-- **Supplies**
+- [Supplies](#supplies)
     <br> Track key supplies to track, manage, and forecast inventory more
     effectively. ​
 
-- **Staffing needs**
+- [Staffing needs](#staffing-needs)
     <br> Collect requests for personnel by department, role, and urgency.
 
-- **Discharge planning**
+- [Discharge planning](#discharge-planning)
     <br> Collect status and projections on ​patient discharges.
 
-- **Dashboard**
+- [Dashboard](#dashboard)
     <br> View the Power BI dashboard for insights and decision making.
 
 > [!NOTE]
@@ -92,16 +92,16 @@ Use the hospital operations apps to collect hospital and facility specific data 
 
 Use the government reporting apps to collect hospital and facility specific data for CDC reporting.
 
-- **COVID-19 patient impact**
+- [COVID-19 patient impact](#covid-19-patient-impact---cdc-reporting)
     <br> Collect COVID-19 patient details such as hospitalized, on ventilator, or awaiting beds in emergency department.
 
-- **Healthcare worker staffing**
+- [Healthcare worker staffing](#healthcare-worker-staffing---cdc-reporting)
     <br> Collect shortage data for staff such as physicians, RNs, pharmacists, therapists or other personnel.
 
-- **Bed capacity**
+- [Bed capacity](#bed-capacity---cdc-reporting)
     <br> Collect bed information such as ICU, Acute Care and surge capacity.
 
-- **Supply planning**
+- [Supply planning](#supply-planning---cdc-reporting)
     <br> Collect supplies data such as masks, shields, gloves, gowns, PAPRs.
 
 ## Bed capacity
@@ -271,6 +271,15 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | **Discharges**            |                                                                    |
 | Past 24 h                 | Number of patients expected to be discharged in last 24 hours.  |
 | Likely next 24 h          | Number of patients discharged in last 24 hours.                    |
+
+## Dashboard
+
+View the Power BI dashboards for insights and decision making. Selecting this option will open the Power BI dashboard in your mobile device browser.
+
+For detailed info about teh dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard).
+
+Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change.
+
 ## COVID-19 patient impact - CDC reporting
 
 ![COVID-19 patient impact - CDC reporting](media/use/cdc-covid-19-patient-impact.png)
@@ -411,14 +420,6 @@ model-driven app for Power Apps. For more information, see [configuration guide]
       </tr>
     </table>
 - **Ventilator supplies (disposables)**: When considering definitions for *ventilator supplies (disposable)*, please refer to [CDC NHSN](https://www.cdc.gov/nhsn/) website.
-
-## Dashboard
-
-View the Power BI dashboards for insights and decision making. Selecting this option will open the Power BI dashboard in your mobile device browser.
-
-For detailed info about teh dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard).
-
-Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change.
 
 ## Other options
 
