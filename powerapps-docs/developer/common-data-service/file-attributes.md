@@ -166,7 +166,7 @@ Location: api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken
 PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken 
 
 Headers: 
-Content-Range: 0-4095/8192 
+Content-Range: bytes 0-4095/8192 
 Content-Type: application/octet-stream
 x-ms-file-name: sample.png
 
