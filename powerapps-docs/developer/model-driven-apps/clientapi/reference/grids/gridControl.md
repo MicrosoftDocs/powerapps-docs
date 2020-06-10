@@ -37,8 +37,7 @@ GridControl or the gridContext is the instance of grid or subgrid on a form agai
 |[refreshRibbon](gridcontrol/refreshRibbon.md)|[!INCLUDE[gridcontrol/includes/refreshRibbon-description.md](gridcontrol/includes/refreshRibbon-description.md)]|Read-only and editable grids|
 |[removeOnLoad](gridcontrol/removeOnLoad.md)|[!INCLUDE[gridcontrol/includes/removeOnLoad-description.md](gridcontrol/includes/removeOnLoad-description.md)]|Read-only grid|
 
-
-## Additional Methods for subgrids
+## Additional methods for subgrids
 
 Along with the methods mentioned above, subgrid also have the following methods:
 
