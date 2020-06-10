@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2020
+ms.date: 06/09/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -203,18 +203,6 @@ After you configure the notes and enable notes attachments, you can see the **At
 
 ![Attach file option](media/configure-notes/attach-file-option.png)
 
-
-### Notes created with rich-text editor
-
-Notes created using the [rich-text editor in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) will show up in portal with the HTML tags.
-
-For example, the note shows rich-text format in the model-driven app:
-
-![Dynamics 365 form](media/configure-notes/dynamics-365-form.png)
-
-When added to the portal page, the note won't show rich-text format. Instead, the note is displayed with HTML tags:
-
-![Portals form](media/configure-notes/portals-form.png)
 ## Notes configuration for web forms
 
 Web form notes are configured in the same way as [entity form notes](#notes-configuration-for-entity-forms). You must create a metadata record for the Web Form Step that has notes first, and then add the notes configuration metadata.
