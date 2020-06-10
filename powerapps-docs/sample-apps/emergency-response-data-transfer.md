@@ -130,6 +130,9 @@ To enable these flows:
 
 1.  Repeat steps 4-6 for other flows listed earlier.
 
+If you see any issues working with flows, try [Troubleshooting a flow](https://docs.microsoft.com/power-automate/fix-flow-failures)
+- 
+
 ### Step 3: Specify the data publish schedule (Hospital)
 
 The **Publish Data for All Facilities** flow contains the information about the data publish schedule. You can define the recurrence schedule when the flow will run automatically and publish the data that you have reviewed and marked as ready for publish.  
@@ -213,7 +216,7 @@ After your IT admin has configured the solution for data transfer from the hospi
     > [!div class="mx-imgBorder"] 
     > ![Review completed](media/review-completed.png)
 
-The scheduled flows will pick up the completed items for publishing to the SFTP folder that you configured earlier.
+The scheduled flows will pick up the completed items for publishing to the SFTP folder that you configured earlier ([Step 3: Specify the data publish schedule (Hospital)](#step-3-specify-the-data-publish-schedule-hospital)).
 
 ### Manually publish data
 
