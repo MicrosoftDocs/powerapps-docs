@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 06/04/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -140,7 +140,7 @@ Render the Entity List associated with the current page as a paginated sortable 
                 {% else %}
                   {{ attr }}
                 {% endif -%}
-              </th>
+              </td>
             {% endfor -%}
 
             <td>

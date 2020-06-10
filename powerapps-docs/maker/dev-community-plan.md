@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
-ms.date: 05/28/2020
+ms.date: 06/04/2020
 ms.author: dileeps
 ms.reviewer:
 searchScope:
@@ -125,4 +125,13 @@ No, you can only sign up with your [work or school account](signup-for-powerapps
 
 ### Can I delete my individual environment?
 
-You can't delete this environment on your own. Your tenant admin has permissions to delete the environment. Admins, note that the deleted environment will be recreated automatically as long as the Community Plan remains assigned to the user. At present, the only way to remove the Community Plan from a user is to block all "internal" consent plans in the tenant using PowerShell. See [Block trial licenses commands](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#block-trial-licenses-commands)
+Tenant-level admins have the permissions needed to delete an individual environment through the user interface. An end user can delete an individual environment through a [Power Apps PowerShell admin cmdlet](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview).
+
+```powershell
+Remove-AdminPowerAppEnvironment -EnvironmentName <environmentGuid>
+```
+
+### Can I reset my developer environment
+
+Resetting a developer environment is not currently supported; however, it can be deleted. The next time the Community Plan licensed user signs into the Power Apps Maker portal a new developer environment will be created. The user can then provision a Common Database Service database in the environment. At present, the only way to remove the Community Plan from a user is for a tenant-level admin to block all "internal" consent plans in the tenant using PowerShell. See [Block trial licenses commands](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#block-trial-licenses-commands)
+

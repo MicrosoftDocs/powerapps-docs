@@ -1,6 +1,36 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/common-data-service/create-edit-entities.md",
+      "redirect_url": "data-platform-create-entity",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/solution-patches.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/update-solutions-alm#create-solution-patches",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/set-managed-properties-metadata.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/managed-properties-alm",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/use-solution-explorer.md",
+      "redirect_url": "solutions-overview",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/use-segmented-solutions-patches-simplify-updates.md",
+      "redirect_url": "create-solution#create-a-segmented-solution",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/solution-best-practices.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-concepts-alm",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "powerapps-docs/developer/common-data-service/build-tools-tutorial-faq.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/devops-build-tools#frequently-asked-question-faq",
       "redirect_document_id": "false"

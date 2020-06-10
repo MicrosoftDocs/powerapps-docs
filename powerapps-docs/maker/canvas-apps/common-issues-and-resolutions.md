@@ -25,9 +25,9 @@ This article lists some common issues that you might encounter while using Power
 1. **Problems downloading attachments in embedded Power Apps** (May 22, 2020)
   When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, use another browser. The team is actively working to fix this issue.
   
-1. **Camera images when imported via Edge are flipped** (January 20, 2020)
+1. **Camera images when imported via Microsoft Edge are flipped** (January 20, 2020)
 
-    When using the camera and the legacy Microsoft Edge browser, the image may be flipped. This is due to legacy Edge browser defect. To mitigate this issue, use the new Microsoft Edge or a different browser.
+    When using the camera and the legacy Microsoft Edge browser, the image may be flipped. This is due to legacy Microsoft Edge browser defect. To mitigate this issue, use the new Microsoft Edge or a different browser.
     
 1. **Camera images do not contain meta-data information** (January 20, 2020)
 

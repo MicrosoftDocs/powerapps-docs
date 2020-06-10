@@ -86,4 +86,5 @@ A solution’s version has the following format: major.minor.build.revision. An 
 ### See also
 [Add solution components](create-solution.md#add-solution-components) <br />
 [Export solutions](export-solutions.md) <br />
-[Import solutions](import-update-export-solutions.md)
+[Import solutions](import-update-export-solutions.md) <br />
+[Create solution patches](/powerapps/maker/common-data-service/solution-patches)
