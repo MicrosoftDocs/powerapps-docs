@@ -54,7 +54,7 @@ This procedure shows you how to setup a Power BI embedded page for a single envi
     > [!div class="mx-imgBorder"] 
     > ![New Dashboard Power BI embedded panel](media/create-edit-powerbi-embedded-page/new-dashboard-powerbi-embedded-panel.png "New Dashboard Power BI embedded panel")
 
-4. Select **Create** to save and publish the system dashboard. 
+4. Select **Save** to save and publish the system dashboard. 
 
 ## Add a Power BI embedded page to a model-driven app
 
