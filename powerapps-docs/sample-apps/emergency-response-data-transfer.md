@@ -130,8 +130,7 @@ To enable these flows:
 
 1.  Repeat steps 4-6 for other flows listed earlier.
 
-If you see any issues working with flows, try [Troubleshooting a flow](https://docs.microsoft.com/power-automate/fix-flow-failures)
-- 
+If you face any issues working with flows, try [Troubleshooting a flow](https://docs.microsoft.com/power-automate/fix-flow-failures).
 
 ### Step 3: Specify the data publish schedule (Hospital)
 
