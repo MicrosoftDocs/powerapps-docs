@@ -181,9 +181,7 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
 
 1.  If regional admins are expecting data from multiple hospitals, they will have to create a folder on the SFTP server for each such hospital, replicate the flow for each such hospital, and update the folder name accordingly in the replicated flow instance. To do this:
 
-    1. Select Save as 
-    
-    1. select **Edit** on the toolbar.
+    1. TO DO: Add details.
 
 1.  Select **Save** to save the changes, and then select **Turn On**.
 
