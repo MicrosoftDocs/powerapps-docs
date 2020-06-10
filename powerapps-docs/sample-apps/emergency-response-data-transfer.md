@@ -231,7 +231,7 @@ The scheduled flow publishes data at a certain time, but what if you want to man
     > [!div class="mx-imgBorder"] 
     > ![Manually run flow](media/manually-run-flow.png)
 
-1. On the next screen, review that the connections are valid, and select Continue
+1. On the next screen, review that the connections are valid, and select **Continue**.
 
     > [!div class="mx-imgBorder"] 
     > ![Manually run flow](media/publish-data-flow.png)
