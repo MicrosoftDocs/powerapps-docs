@@ -32,7 +32,7 @@ Data visualization and analytics in model-driven apps enable you to graphically 
 ## Related topics  
 
 [Analyze Data with Dashboards](analyze-data-with-dashboards.md)<br/>
-[View Data with Visualizations (Charts)](view-data-with-visualizations-charts.md)<br/>  
+[View Data with Visualizations (Charts)](view-data-with-visualizations-charts.md)<br/>
 [Visualization Data Description Schema](visualization-data-description-schema.md)  
   
 
