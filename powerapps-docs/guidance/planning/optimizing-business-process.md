@@ -15,37 +15,37 @@ searchScope:
 # Optimizing your business process
 
 Now that you've inspected the entire business process, challenge yourself to
-optimize the process. Streamlining the process avoids having so many steps that it
-is overwhelming or confusing to the employees​.
+optimize it. Streamlining the process avoids having so many steps that employees
+are overwhelmed or confused​.
 
 Some helpful ways to approach optimizing the process:
 
-- Start with the goal: Identify the goals you would like to achieve with your
+- Start with the goal. Identify the goals you'd like to achieve with your
     business process. These goals should provide a general vision of your hopes for the future
     process.
 
-- Consider whether something can be completed more efficiently, more cheaply
+- Consider whether something can be completed more efficiently, more cheaply,
     or with higher quality.
 
-- Look for key performance indicators to identify what is functioning well and
-    what needs work toward improvement.
+- Look for key performance indicators to identify what's functioning well and
+    what needs improvement.
 
-- Step back and get an outside eye by sharing the process with your team​.
+- Step back and get an outside perspective by sharing the process with your team​.
 
-- Share the process with management to get a higher-level perspective and
+- Share the process with management to get higher-level input<!--Suggested, to vary the wording.--> and
     provide transparent accountability for each step within the process. ​
 
-- Look at your process from the point of view of the user or customer who may
-    benefit from the process and consider ways you can improve their experience
+- Look at your process from the point of view of the user or customer who might
+    benefit from the process, and consider ways you can improve their experience
     and overall satisfaction​.
 
 Some key questions to ask:
 
-- Are there any remaining activities which could be cut from the process to
-    increase efficiency or quality, or decrease cost?
+- Can any remaining activities be cut from the process to
+    increase efficiency or quality, or decrease costs?
 
 - If the cut activity is important to the overall business, can it be
-        handled in a separate business process​?
+    handled in a separate business process​?
 
 - Can a step be improved to accomplish your objective in a better way?​
 
@@ -60,39 +60,39 @@ Some key questions to ask:
 - Can you change how you notify the next person in the process so that they
     respond more quickly?
 
-- Are there aspects of the process you can further automate?
+- Are there aspects of the process you can automate further? Such as:
 
-  - Capturing data automatically verus manual entry
+  - Capturing data automatically versus manual entry
 
-  - Automate decisions based on data?
+  - Automating decisions based on data
 
-  - Automate the action taken?
+  - Automating the action taken
 
-  - [Use AI](https://docs.microsoft.com/ai-builder/overview) to replace
-        human attention?
+  - [Using AI](https://docs.microsoft.com/ai-builder/overview) to replace
+        human attention
 
 ## Example: Optimizing the expense report process
 
-We reviewed the current expense process and there were some obvious improvements
+We reviewed the current expense process and found some obvious improvements
 to make:
-<!--Should this be bulleted also? SELF-->
-1. Go paperless for entire process. (We noted the savings and environmental
+<!--Made this list bulleted because I couldn't see a clear sequence that merited numbers.-->
+- Go paperless for the entire process. (We noted the savings and environmental
     impact as a project benefit as well.)
 
-2. Do all possible compliance checks before enabling submission of the report
+- Do all possible compliance checks before enabling the report to be submitted
     for approval. (Greatly reduces rework and end-to-end process time.)
 
-3. Automatically look up and add accounting codes when expense report is
+- Automatically look up and add accounting codes when the expense report is
     submitted.
 
-4. Enable Accounting to move the approved expenses to the financial system
+- Enable Accounting to move the approved expenses to the financial system
     without re-entering any data.
 
-5. Create weekly expense reports automatically from the digital data.
+- Create weekly expense reports automatically from the digital data.
 
-Charlotte is considering further optimizations of the budget review process. And
-Rebecca is researching ways the semi-annual audit can be optimized with AI.
+Charlotte is considering further ways to optimize the budget review process. And
+Rebecca is researching how the semiannual audit might be optimized by using AI.<!--Suggested.-->
 
-Our proposed optimized process looks like this:
+Our proposed optimized process looks like the following illustration.
 
 ![Optimized business process flowchart that removes extra steps in the accounting process, as described in the article](media/optimized-business-process.png "Optimized business process flowchart that removes extra steps in the accounting process, as described in the article")

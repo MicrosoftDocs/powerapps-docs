@@ -14,7 +14,7 @@ searchScope:
 
 # Who is doing the work, when, and where?
 <!---Editor team: Two things I was unable to achieve: Make the people images smaller; and widen the first column in the table at the bottom of the article -->
-<!--note from editor: I used HTML for the bottommost table. What do you think? For the graphics in the first table, I just experimented with making them narrower by cropping out the names and titles, which might not be what you wanted. (The localization load for all the graphics in this docset is going to be plenty big! Just cropping out a few phrases won't help much at all.) SVG graphics are nice and scalable. I used a free converter to convert the Abhay graphic to SVG just for proof of concept.It looks terrible, but maybe someone with a real converter can generate nice-looking SVGs for you?-->
+<!--note from editor: I used HTML for the bottommost table, I think it looks good now (What do you think?) For the graphics in the first table, I just experimented with making them narrower by cropping out the names and titles, which might not be what you wanted. SVG graphics are scalable. I tried to use a free converter to convert these graphics to SVG but they looked terrible. Maybe someone with a real converter can generate nice-looking SVGs for you?-->
 For this step, you need to understand who is doing the work. What is their role?
 
 It might be easiest to start with the names of people, but you'll want to understand
@@ -32,7 +32,7 @@ what their role is when they're doing the task. For example:<!--Suggest italics 
 
 A single person might at times play each of these roles, but the key is to
 understand *the role they're playing when they do the task*. Understanding roles
-will help you design the app screens, and configure access and security. (We'll get to those in the design phase.)
+will help you design the app screens, and configure access and security. (We'll get to those in the designing phase.)
 
 In IT terms, each person or group of people who perform the same function are
 referred to as a *job role*, and a description of their relevant characteristics
@@ -46,7 +46,7 @@ After you identify the "who," consider:
     sections.)
 
 - What other systems are used regularly? (Knowing this will be useful in the
-    design phase. For example, a manager who "lives" in Microsoft Teams might want to get
+    designing phase. For example, a manager who "lives" in Microsoft Teams might want to get
     approval requests there versus email.)
 
 - What would this person gain by using the app or cooperating to work with
@@ -184,7 +184,7 @@ looked into our expense reporting process.
 
 :::row:::
     :::column:::
-        ![Illustration of Abhay in Accounting](media/abhay.svg "Illustration of Abhay in Accounting")
+        ![Illustration of Abhay in Accounting](media/abhay-small.png "Illustration of Abhay in Accounting")
 
         **Abhay - Accountant**
 

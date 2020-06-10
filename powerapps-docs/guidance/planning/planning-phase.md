@@ -14,7 +14,7 @@ searchScope:
 
 # Planning phase
 
-Planning is the most important part of the app making process. When planning,
+Planning is the most important part of the app-making process. When planning,
 you should consider the following:
 
 - **What** problem will the app solve?

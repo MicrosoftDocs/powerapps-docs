@@ -14,7 +14,7 @@ searchScope:
 
 # Identifying the business problem to solve (the use case)
 
-The first step of using Microsoft Power Platform to solve a business problem is
+The first step in using Microsoft Power Platform to solve a business problem is
 deciding what problem you want to tackle.
 
 In IT terms, the business problem to solve is commonly referred to as the *use case*.
@@ -24,7 +24,8 @@ the problem; in many cases, it will become the name of the app that you
 build!) When you define the problem, break it down into a problem statement and
 the result that you'd like to achieve.
 
-For example,<!--SELF: Something like "For example, this is how we formulated the business problem we want to solve with our example app:" or something --> "Expense reporting: Create a process that's efficient for
+For the app that we'll use as an example in these articles, we came up with
+the following statement:<!--Edit okay? I wanted to explicitly introduce the app somewhere in here.--> "Expense reporting: Create a process that's efficient for
 employees and the accounting department, allows faster budget tracking, and
 reduces our exposure in audits."
 

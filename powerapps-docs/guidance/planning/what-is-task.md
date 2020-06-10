@@ -27,7 +27,7 @@ what they are.
 ## Example: Expense reporting tasks
 
 For our expense report example, we wrote down these tasks:
-<!--SELF: Okay to keep telegraphic style?-->
+
 - Employee creates expense report
 
 - Employee submits expense report to manager
@@ -48,7 +48,7 @@ For our expense report example, we wrote down these tasks:
 
 We later discovered additional tasks through talking with other<!--Suggested.--> team members:
 
-- Accounting looks up and records GL codes for each expense item
+- Accounting looks up and records general ledger codes for each expense item
 
 - Accounting archives the paper expense report in accordance with retention policy
 

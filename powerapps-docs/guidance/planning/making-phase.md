@@ -14,52 +14,48 @@ searchScope:
 
 # Making phase
 
-You have now planned and designed your app. The next step is to actually make
-the app.
+You have now planned and designed your app. The next step is to actually make it.
 
 > [!TIP]
-> In addition to the links below, you’ll find a curated collection of
-learning resources here: <https://aka.ms/PowerPlatformResources>.
+> In addition to the links below, you'll find a curated collection of links
+at [Microsoft Power Platform: Learning Resources](https://aka.ms/PowerPlatformResources).
 
 ## Basic steps for making canvas apps
 
-Below are the basic steps when creating canvas apps.
+The following are the basic steps for creating canvas apps.
 
-1. Set up the data source
+1. Set up the data source.
 
    - [Set up entities](../../maker/common-data-service/create-edit-entities.md)
-        (when using Common Data Service)
+        (when using Common Data Service).
 
-   - Set up tables (when using a database)
+   - Set up tables (when using a database).
 
-   - [Set up
-        lists](https://support.office.com/article/create-a-list-in-sharepoint-0d397414-d95f-41eb-addd-5e6eff41b083)
-        (when using SharePoint)
+   - [Set up lists](https://support.office.com/article/create-a-list-in-sharepoint-0d397414-d95f-41eb-addd-5e6eff41b083)
+        (when using SharePoint).
 
 2. [Create a new
-    app](../../maker/canvas-apps/getting-started.md#build-an-app)
+    app](../../maker/canvas-apps/getting-started.md#build-an-app).
 
 3. [Add
-    connectors](../../maker/canvas-apps/add-manage-connections.md)
+    connectors](../../maker/canvas-apps/add-manage-connections.md).
 
 4. [Create
-    screens](../../maker/canvas-apps/add-screen-context-variables.md)
+    the following screens](../../maker/canvas-apps/add-screen-context-variables.md):
 
-   - Home Screen
+   - Home screen
 
-   - List View
+   - List view
 
    - View form
 
    - Edit form
 
-5. [Create Power Automate flows](https://docs.microsoft.com/power-automate/get-started-logic-flow)
+5. [Create Power Automate flows](https://docs.microsoft.com/power-automate/get-started-logic-flow).
 
 ## Basic steps for making model-driven apps
 
-Below are the basic steps when creating model-driven apps. If you're unfamiliar
-with the components, you should have a look at [Understand model-driven app
-components](../../maker/model-driven-apps/model-driven-app-components.md).
+The following are the basic steps for creating model-driven apps.
 
 1. Create a [solution](../../maker/model-driven-apps/distribute-model-driven-app.md).
 
@@ -67,7 +63,7 @@ components](../../maker/model-driven-apps/model-driven-app-components.md).
     [entities](../../maker/common-data-service/entity-overview.md)
     and [fields](../../maker/common-data-service/fields-overview.md).
 
-3. Set up [security models](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).
+3. Set up [security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).<!--Edit okay?-->
 
 4. Create a site map by setting up a new [model-driven app](../../maker/model-driven-apps/build-first-model-driven-app.md).
 
@@ -80,24 +76,22 @@ components](../../maker/model-driven-apps/model-driven-app-components.md).
 
 8. Set up [Power Automate flows](https://docs.microsoft.com/power-automate/connection-cds).
 
+More information: [Understand model-driven app components](../../maker/model-driven-apps/model-driven-app-components.md)
+
 ## Developing solutions collaboratively
 
-When developing your solutions with multiple app makers, there are ways of
+When developing your solutions with multiple app makers, you can  ways of
 collaborating depending on which type of application you're making.
 
 ### Canvas apps
 
-You can develop canvas apps collaboratively by using [Power Apps
-components](../../maker/canvas-apps/create-component.md)
-— a reusable set of building blocks — and also component libraries — a
-repository that allows you to share and collaborate with others on Power Apps
-components you've created. Have a look at the blog post about [collaborative
-development for canvas
-apps](https://powerapps.microsoft.com/blog/collaborative-development-for-powerapps-canvas-apps/)
-for further information.
+You can develop canvas apps collaboratively by using [Power Apps components](../../maker/canvas-apps/create-component.md)&mdash;a
+set of reusable building blocks&mdash;and also by using component libraries, which are a
+repository you can use to share and collaborate with others on Power Apps
+components you've created. More information: [Collaborative Development for PowerApps Canvas Apps](https://powerapps.microsoft.com/blog/collaborative-development-for-powerapps-canvas-apps/)
 
 ### Model-driven apps
 
 When developing model-driven apps, consider using solutions and
-environments designated for multiple app makers. This document<!--Which document, the present one? SELF--> has detailed
+environments designated for multiple app makers. This document<!--Looks like a link is missing.--> has detailed
 explanation on the strategies for development.

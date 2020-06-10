@@ -14,9 +14,9 @@ searchScope:
 
 # Designing phase
 
-Designing the app is an important part of the process where you start to
+Designing the app is an important part of the process, where you start to
 specify what you'll be creating in the making phase based on the information
-you've gathered in the Planning phase.
+you've gathered in the planning phase.
 
 In this phase, you'll prepare the specifications and designs of your app.
 
@@ -25,7 +25,7 @@ In this phase, you'll prepare the specifications and designs of your app.
 Conceptual design is about coming up with the design for the overall blueprint
 of the app.
 
-In this section, you’ll consider:
+In this section, you'll consider:
 
 - [What are the tasks involved in the app?](app-tasks.md)
 

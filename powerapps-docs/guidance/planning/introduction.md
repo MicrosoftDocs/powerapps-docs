@@ -47,11 +47,11 @@ We've included a detailed example&mdash;an expense reporting app&mdash;<!--Sugge
 If you're a **businessperson**, <!--Following an introduction like this, the rest of the sentence needs to be addressed to "you" also.-->you'll find that these articles help you plan
 and execute what might be your first app project:
 
-- The [Planning](planning-phase.md) section should help you whether you're planning to build an app
+- The [Planning phase](planning-phase.md) section<!--Left this title case because it's the name of a section --> should help you whether you're planning to build an app
     yourself or create requirements to pass along to another app maker. You'll
     be very familiar with many of the planning steps, though<!--Suggested. I didn't understand "and" here.--> some might be new to you.
 
-- The [Designing \> Conceptual design](app-tasks.md) section will help you begin to turn your
+- The [Designing phase \> Conceptual design](app-tasks.md) section will help you begin to turn your
     business process into the screens and features of an app.
 
 - For those who plan to make their own app, we've tried to make the [Designing phase \> Architectural design](where-is-data.md), [Making](making-phase.md), [Testing](testing-phase.md), and [Deploying and refining phase](discoverability.md) sections easy to follow

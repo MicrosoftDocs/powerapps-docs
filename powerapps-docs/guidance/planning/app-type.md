@@ -14,12 +14,10 @@ searchScope:
 
 # Determining which type of app to make
 
-In Power Apps, you have two options when creating apps for your employees<!--SELF: "your employees"? Who is the reader?--> to
-use: model-driven apps and canvas apps.
+In Power Apps, you have two options when creating apps for your users:<!--Suggested. "Your employees" threw me for a bit of a loop, made me think that a business owner was creating the app.--> model-driven apps and canvas apps. 
+<!--[This article goes into detail about types of Power Apps apps.](../../maker/index.md) Note from editor: I recommend against having a link structured like this. It doesn't prepare the user for leaving the current page (as a "For more information, see..." or "More information:" structure does). Also, it's too high up in the article; you're encouraging the user to leave before they've even read two paragraphs. I suggest moving the link to the next paragraph (which see).-->
 
-<!--[This article goes into detail about types of Power Apps apps.](../../maker/index.md) Note from editor: Recommend against having a link structured like this. It doesn't prepare the user for leaving the current page as a "For this, click this" (or a "More information") structure does. Also, it's too prominent a spot; you're encouraging the user to leave before they've even read two paragraphs.-->
-
-The following is a basic, high-level comparison. For much more detail, see [Overview of creating apps in Power Apps](../../maker/index.md).<!--Suggested.-->
+The following is a basic, high-level comparison. For much more detail about these two types of apps, see  [Overview of creating apps in Power Apps](../../maker/index.md).<!--Suggested.-->
 <!--The graphics should be sentence case: "Power Apps model-driven apps" and "Power Apps canvas apps."-->
 :::row:::
     :::column:::
@@ -28,7 +26,7 @@ The following is a basic, high-level comparison. For much more detail, see [Over
         Model-driven apps require a Common Data Service database. They're built on top of
 the data modeled in that database environment. Views and detail screens for model-driven
 apps<!--Suggested.--> are based on the data structure. Because of this, they offer
-users a more consistent look and feel from one screen to the next without much
+users a more consistent look and feel from one screen to the next without requiring much
 effort from the app creator.
 
         Model-driven apps are good for scenarios where the [business logic](logic.md) is complex, such as:<!--Suggested. Lists need introductions.-->
@@ -46,7 +44,7 @@ effort from the app creator.
 database. They use connectors to access data and services. Canvas apps start
 with a blank screen, like an artist's canvas, and the creator manually lays out
 each screen. This gives the creator complete control over the placement of
-controls on the canvas.
+each element<!--Suggested, just to vary the wording.--> on the canvas.
 
         Use canvas apps if the user is expecting a customized user
 experience. They offer:
@@ -81,12 +79,12 @@ As you can see from the example above, there are multiple types of people
 handling the same set of data. Canvas apps would be the best fit for employees
 filling in the expense form, which enables people like Lee to submit an expense
 report using an attractive mobile app that's intuitive to use and can be used
-when offline.
+when he's offline.
 
 ![A canvas app for expense report creation](media/expense-canvas-app.png "A canvas app for expense report creation")
 
-Referring back to the section on [Documenting the business proces](understanding-current-business-process.md), you could see
-that Abhay's requirements were:
+Referring back to the section on [Documenting the business process](understanding-current-business-process.md), you can see
+that Abhay's requirements are:
 
 - Must be able to review all expense reports and receipts
 
@@ -96,15 +94,15 @@ that Abhay's requirements were:
 
 - Must be able to report on how expenses are balancing up to the budget
 
-To be able to process large volume of work and process information quickly, the
-best fit would be a model-driven app. It allows Abhay to quickly view all of the
+To be able to process a large volume of work and process information quickly, the
+best fit would be a model-driven app. It allows Abhay to quickly view all the
 details of the submitted expense report, see how it affects the budget, and look
-for related information such as vendor information.
+for related information such as vendor details.
 
 ![A model-driven app for processing expense reports](media/expense-canvas-app.png "A model-driven app for processing expense reports")
 
 In this example scenario, you can see a combination of both canvas app and
 model-driven app. Although they're two different types of apps, all the data
-can be centralized to one place (Common Data Service).
+can be centralized in one place (Common Data Service).
 
 ![Two apps with data in Common Data Service](media/end-to-end-apps.png "Two apps with data in Common Data Service")

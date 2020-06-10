@@ -14,63 +14,61 @@ searchScope:
 
 # Is there data or information that they start with or need access to?
 
-What data, if any, does this person have presented to them as they begin these
-activities?
+What data, if any, has been presented to this person as they begin these
+activities? Where did this data come from? Ask yourself:
 
-Where did this data come from?
-
-- Does this data come from a previous step?
+- Did this data come from a previous step?
 
 - Did this data come from an existing system? Does the user need to be signed
     in to access the data?
 
-- Is there data being pulled from an external system, such as market or
+- Is data being pulled from an external system, such as market or
     weather data?
 
 > Example:
 >
 > To fill out their expense reports, employees start with their name,
-employee ID, manager’s name, and the date; they gather their receipts; and they
+employee ID, manager's name, and the date; they gather their receipts; and they
 need access to the list of expense types and the rules for each.
 
 ## Data privacy and permission considerations
 
-Thinking about the user executing these steps of the process:
+Think about the user executing these steps of the process, and ask:
 
 - What existing data do they need access to?
 
-- Do they need access to data that other users should not have access to?
+- Do they need access to data that other users shouldn't have access to?
 
-- Can they do tasks that other users shouldn’t be able to do?
+- Can they do tasks that other users shouldn't be able to do?
 
-Understanding what data users should be able to access helps to define what, if
-any, security, and privacy controls need to be in the solution.
+Understanding what data users should be able to access helps to define what&mdash;and
+whether&mdash;any security and privacy controls need to be included the solution.
 
 Understanding the user also helps determine how much data the user can see. If
-the user is a manager, will they be able to see all work items of all workers?
+the user is a manager, will they be able to see all the work items of all workers?
 And if the user is a worker, should they only see their own work items?
 
 > Example:
 > 
 > Data privacy is different depending on the role of the person using the
 app:
-> - Originator of the expense report – they should be able to see only their own
-    expense reports
-> - Managers (Nick) – Nick should only be able to see the expense reports of his
-    direct reports
-> - Audit (Abhay) – Abhay should have the authority to review ALL of the expense
-    reports
+> - The originator of the expense report: they should be able to see only their own
+    expense reports.
+> - Managers (Nick): Nick should only be able to see the expense reports of his
+    direct reports.
+> - Accountant<!--Edit okay? This is what Abhay was called in who-is-doing-work.md. Rebecca is the auditor in that article.--> (Abhay): Abhay should have the authority to review *all* the expense
+    reports.
 
 ## Data refresh considerations
 
 How often does the incoming data change? How often should it be refreshed? Is
-this data real-time coming from a device or a system, or does this data change
+this data coming from a device or a system in real time, or does this data change
 infrequently? How often should the app be updated with new data?
 
-> Example: 
+> Example:
 >
-> The data coming from Active Directory isn’t changed very often,
+> The data coming from Azure Active Directory doesn't change very often;
 however, it does change on occasion as people move from role to role within the
-organization as well as the reporting structure – so for this app it's
+organization and in the reporting structure. So, for this app, it's
 appropriate to look up the information at the time the user creates the expense
-report. There is no need to go check the information again.
+report. There's no need to check the information again.

@@ -43,7 +43,7 @@ Here are some tips for getting good results from UATs:
 
 - Test with the real users.
 
-- Try to choose users with diversity in terms of IT skill levels. This way, you can gain a variety of feedback.<!--SELF-->
+- Try to choose users with diversity in terms of IT skill levels. This way, you can gain a variety of feedback.
 
 - Don't give the user instructions; see whether they can understand the app
     intuitively.
@@ -56,7 +56,7 @@ Here are some tips for getting good results from UATs:
 
 - Try out different devices to make sure the test cases behave the same.
 
-- Ideally,<!--SELF--> test the app in the user's actual environment or location if the app uses offline
+- Ideally, you'll test the app in the user's actual environment or location if the app uses offline
     capabilities.
 
 - Ask your users to try to "break" your app, such as by entering unusual
@@ -80,7 +80,7 @@ feature list described in [Prioritizing features and requests](prioritizing-feat
 ## Creating test cases and scenarios
 
 To write comprehensive test scenarios and test cases, you should refer
-back to the [Planning](planning-phase.md) and [Designing](designing-phase.md) phases to make sure you test all the important
+back to the [Planning phase](planning-phase.md) and [Designing phase](designing-phase.md) sections to make sure you test all the important
 scenarios.
 
 The first step is to write the unit tests. Make sure you break the tests down to

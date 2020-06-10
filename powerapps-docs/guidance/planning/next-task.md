@@ -17,9 +17,9 @@ searchScope:
 Now it's time to move to the next task in the process. What does that look
 like?
 
-Does it build on the data that's used by this task? Are there different next
-tasks depending on different data? (For example, an extra layer of approval for
-expense reports over \$500.)
+Does it build on the data that's used by this task? Can the next task be different
+depending on the data (for example, an extra layer of approval required for
+expense reports over \$500)?
 
 Is the next task performed by the same person who completed this task? Is the
 next task completed by a different person? How does that person know that they
@@ -28,5 +28,4 @@ can begin the next task?
 ## On to the next task!
 
 Now that this task has been inspected, continue with the next task in the
-process starting back at [What is the task?](what-is-task.md) until all of the tasks have been
-inspected.
+process&mdash;starting back at [What is the task?](what-is-task.md)&mdash;until you've inspected all the tasks.

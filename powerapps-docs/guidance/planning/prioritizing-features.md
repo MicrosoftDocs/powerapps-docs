@@ -33,11 +33,11 @@ The following table shows an example of how you can record each feature.
 |----------------------------|---------------------|------------------------------|------------------------|
 | View the list of approval requests    | Yes         |               |                        |
 | Real-time push notification to users on their mobile phone when an approval request is received | No                      | Easy                             | High                   |
-| Draft save feature for expense applications<!--SELF: S/b "reports"?--> that haven't been submitted | No        | Hard      | Medium                 |
+| Draft save feature for expense reports<!--Edit okay?--> that haven't been submitted | No        | Hard      | Medium                 |
 | Integrate with ERP system     | No               | Hard                     | Very high      |
 
 > [!TIP]
-> Avoid mixing up *necessities* with *nice-to-haves.* Ask yourself (or your users): "If this feature takes four weeks to add, will it be<!--Suggested.--> worth delaying launch  by four weeks?”
+> Avoid mixing up *necessities* with *nice-to-haves.* Ask yourself (or your users): "If this feature takes four weeks to add, will it be<!--Suggested.--> worth delaying launch by four weeks?”
 
 ## Priority Quadrants chart
 

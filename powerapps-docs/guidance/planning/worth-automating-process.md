@@ -15,55 +15,52 @@ searchScope:
 # Is it worth automating this process?
 
 Now it's time to consider the effort it will take to build the solution and
-decide whether it's justified.
-
-Business Value is the ongoing benefit that the business receives from the
+decide whether it's justified. This involves weighing business value against the cost of automating the process.<!--Suggested, just to use "business value" before you define it.-->
+*Business value* is the ongoing benefit that the business receives from the
 project.
 
 ## The cost of doing nothing
 
 To figure out whether it's worth automating the process, you first must understand
-the cost of **NOT solving the problem**.
+the cost of *not* solving the problem.
 
 As a byproduct of defining the business value that you hope to achieve from the Microsoft
-Power Platform solution, you should have a better understanding of what it's
+Power Platform solution, you should get a better understanding of what it's
 costing your organization to solve the problem in the current manner. In other
-words, the cost of doing nothing.
+words, measure the cost of doing nothing.
 
 If the business value you'll receive by automating the process is less than
-the cost of doing nothing, you must ask yourself if this is the right
-business problem to focus on?
+the cost of doing nothing, you must ask yourself whether this is the right
+business problem to focus on.
 
-Now, if the business value you receive by solving the business problem is
-greater than the cost of doing nothing plus your development time and the
-monthly cost of any [software license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus), it makes sense to automate the
+However, if the business value you receive by solving the business problem is
+greater than the cost of doing nothing&mdash;plus your development time and the
+monthly cost of any [software license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)&mdash;it makes sense to automate the
 process.
 
-Before we decide to automate this business process, we can answer the question
-of ‘what does it cost me to NOT automate the process’. You should consider this
-before deciding to build an automated solution. (And can also be helpful to know
-when celebrating the impact of your achievement when you're done!)
+Before we decide to automate this business process, we'll answer the question
+"what does it cost me to *not* automate the process." <!--Suggest deleting the following sentences. This has been said a few times already, and the point about celebrating achievement is just kind of confusing here. You should consider this before deciding to build an automated solution. (And can also be helpful to know when celebrating the impact of your achievement when you're done!)-->
 
 ## Example: The cost of the current expense process
 
-The first thing we need to understand is what is it costing the organization to
-continue to do the expense report process manually? Here is what we discovered
+The first thing we need to understand is, what is it costing the organization to
+continue to do the expense report process manually? Here's what we discovered
 when we talked to our colleagues:
 
-- When we spoke to our colleagues, we found that it takes them roughly an hour
+- We found that it takes them roughly an hour
     each week to pull together all their receipts and fill out the manual
-    expense report. Abhay indicated that there are roughly 140 expense reports
+    expense report. Abhay indicated that there are about 140 expense reports
     per week. We also learned that the fully loaded cost of each team member is
     roughly \$90/hr.
 
     >   (140 expense reports &times; 1 hour/week) &times; \$90 = \$12,600/week
-    >   
+    >
     >   52 weeks &times; \$12,600 = \$655,200 a year
 
-- Nick isn’t reviewing or approving the expense reports – that's all falling
-    to Abhay and his team to complete. Because he’s not regularly monitoring the
-    team’s expenses, he’s missing an important opportunity to sanity-check the
-    expenses, watch for fraud, and optimize his team’s spending habits.
+- Nick isn't reviewing or approving the expense reports; that's all falling
+    to Abhay and his team to complete. Because he's not regularly monitoring the
+    team's expenses, Nick is missing an important opportunity to sanity-check the
+    expenses, watch for fraud, and optimize his team's spending habits.
 
 - Abhay shared with us that his team spends roughly 15 minutes per expense
     report, receives on average 140 reports a week, and sends back 25&nbsp;percent of those
@@ -85,7 +82,7 @@ when we talked to our colleagues:
     minutes per expense report to look up the general ledger codes for each
     expense category and write them on each expense line of the report.
 
-    >   140 expense reports &times; 7-minute coding = 16.5 hours/week =
+    >   140 expense reports &times; 7 minutes of coding = 16.5 hours/week =
         \$1,485/week = \$77,220/year
 
 - It takes roughly 10 minutes per expense report to create a payment journal
@@ -95,9 +92,9 @@ when we talked to our colleagues:
     >   140 expense reports &times; 10 minutes = 23.8 hours/week = \$2,142/week =
         \$111,384/year
 
-- Charlotte would like to review the budget each week but isn't able to get
+- Charlotte would like to review the budget each week, but isn't able to get
     her report until Thursday, after Abhay has completed his review and
-    gotten back the reports that had missing information. (While this
+    gotten back the reports that had missing information. (Although this
     isn't a monetary cost, it does have an impact on the business.)
 
 The entire process is costing the company:

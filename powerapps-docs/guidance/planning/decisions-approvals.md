@@ -12,70 +12,72 @@ searchScope:
   - PowerApps
 ---
 
-# Are there decisions being made based on the data or business rules to follow?
+# Are there decisions being made based on the data, or business rules to follow?
+<!--I'm a bit confused by this heading and the first section of this article. I suggest adding a heading for the first section and adding bullets throughout. Otherwise, the effect of all these questions gets rather dizzying after a while. -->
+## Does the data determine the outcome of any decisions?
 
-Do you have any “If ___ , then ___” logic?
-
-At the conclusion of this activity in the process, is a decision being made? Is
+- At the conclusion of this activity in the process, is a decision being made? Is
 there a way that the solution can make the decision automatically based on the
 data?
 
-Is this decision communicated to anyone? How is it communicated?
+- Is this decision communicated to anyone? How is it communicated?
 
-Does this decision determine if the next step of the process is executed? How is
-that communicated?
+- Does this decision determine whether the next step of the process will be executed? How is that communicated?
 
+- Do you have any "if/then" logic?
 For example, *if* a meal cost \$75 or more, *then* employees need to attach
 receipts for meals; and *if* the total amount is greater than \$500, *then* our
 expense reports need an extra level of approval.
 
 ## Does the decision require approvals?
 
-Are approvals needed before the next step of the process begins? How are those
+- Are approvals needed before the next step of the process begins? How are those
 approvals captured? Is there a specific user or role that can approve the next
-step in the process? Should this person have access to the app or is
-another method used (such as an email sent to the user to get approval
+step in the process? Should this person have access to the app or can
+another method be used (such as an email sent to the user to get approval
 to move forward)?
 
-How is the next person in the process alerted of the response so they can move
-forward with their next step of the process (or not)? Is there a certain way
-that the next person in the process is alerted? is there a way that a user
-should be made aware when a work item is going to be escalated because it hasn’t
+- How is the next person in the process alerted about the response, so they can move
+forward (or not) with their next step of the process? Is there a particular way
+that the next person in the process is alerted
+
+- Is there a way for a user
+to be made aware when a work item is going to be escalated because it hasn't
 been worked in the allotted timeframe?
 
-As you consider these different methods, always look for the most optimal method
-to help reduce the time to respond to an approval.
+> [!TIP]
+> As you consider these different aspects, always look for the most optimal method
+to help reduce the time to respond to an approval.<!--Suggested, though maybe you don't want to call this out so distinctly? It seems like an important-enough point (and also, it isn't a question so it doesn't fit into the bulleted list).-->
 
-## Are there escalations required?
+## Are escalations required?
 
-Does the business process require escalations?
+- Does this business process require escalations?
 
-Should items automatically escalate under certain conditions? Are there
+- Should items automatically be escalated under certain conditions? Are there
 timeframes that this solution must be completed within? If a worker who uses the
 solution missed an approval, how long do you wait before the activity moves to
 another worker? Or do you send another notice?
 
-Should users be able to escalate an issue?
+- Should users be able to escalate an issue?
 
-If an escalation is required, how will it be presented? Do work items that are
-overdue float to the top to be worked? Does the solution change color to let a
-worker know that there are activities that are behind?
+- If an escalation is required, how will it be presented? Do work items that are
+overdue float to the top to be worked on? Does the solution change color to let a
+worker know that some activities are behind schedule?
 
-Are there alerts or notifications that need to be generated?
+- Do any alerts or notifications need to be generated?
 
 ## Example: Expense report approvals
 
-The Expense report process requires approvals. All Salespeople must have the
-expense report approved by Nick, their manager. When the employee submits the
+The expense report process requires approvals. All salespeople must have the
+expense report approved by Nick, their manager. When an employee submits a
 report, an alert needs to be sent to Nick to review and approve the expense
 report.
 
-We know that Nick is a busy manager – so we should consider an escalation if
-expense reports wait for his approval longer than five days. We can consider
-several escalation methods
+We know that Nick is a busy manager, so we should consider escalation for
+expense reports that wait for his approval longer than five days. We can consider
+several escalation methods:
 
--   We can send another alert to Nick – perhaps rather than email, we consider
-    sending a text message
+- We can send another alert to Nick&mdash;perhaps rather than email, we consider
+    sending a text message.
 
--   If Nick still hasn’t responded, then perhaps we send them to Nick’s manager
-    for approval – or even to Abhay to review and approve.
+- If Nick still hasn't responded, perhaps we send the report to Nick's manager&mdash;or even to Abhay&mdash;to review and approve.

@@ -37,7 +37,7 @@ apps without writing code.
 
 ## Differences in development methodology
 
-With traditional app development such as the "waterfall" model, where the process flows downward from the design phase through release, there's a long lead time
+With traditional app development such as the "waterfall" model, where the process flows downward from the designing phase through release, there's a long lead time
 before a user actually sees the working app. As a result, there's an increased risk
 that there will be gaps between what the user initially requested as a requirement and what
 the app developer created.<!--Suggested.-->

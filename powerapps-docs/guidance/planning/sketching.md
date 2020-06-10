@@ -14,38 +14,36 @@ searchScope:
 
 # Sketching the screens
 
-After you've identified the tasks and your thoughts are organized, the next
+After you've identified the tasks and organized your thoughts<!--Suggested.-->, the next
 step is to sketch the screens you envision needing within your app. By drawing
 out each task and the business process, you already have enough information
 about how to get from point A to point B. Sketching the screens will allow you
 to visualize the journey.
 
-Don’t be intimidated by the sketching. You don’t have to be an artist to throw a
-few boxes and lines on some paper. To avoid getting into too much detail, use
-boxes to represent icons and images, and use lines to represent text. You could
+Don't be intimidated by the sketching. You don't have to be an artist to throw a
+few boxes and lines on paper. To avoid getting into too much detail, use
+boxes to represent icons and images, and use lines to represent text. You can
 use a tool like PowerPoint to efficiently draw the sketch as well.
 
 > [!TIP]
-> Focus more on the overall flow of the business rather than the details on
-screen. Power Apps allows you to easily adjust later.
+> Focus more on the overall flow of the business rather than the details on-screen.
+With Power Apps, you can easily adjust later.
 
-Note that you don’t have to be restrictive and draw just one version of the
-sketch. Try out drawing different versions of the screen. Keep sketching until
+Note that you don't have to restrict yourself to drawing<!--Suggested.--> just one version of the
+sketch. Try drawing different versions of the screen. Keep sketching until
 you run out of ideas.
 
-A good way to get ideas of each screen is to look at the apps you normally use
-and “borrow” the ideas. These apps are often created by professional designers.
-We also provide [customer
-stories](https://customers.microsoft.com/search?sq=&ff=story_product_categories%26%3EPower%20Apps&p=0&so=story_publish_date%20desc)
-and samples of apps in [Power Apps
-community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1)
-that you could look into. Trying out app templates also shows great variety of
-different styles of apps too.
+A good way to get ideas for each screen is to look at the apps you normally use
+and "borrow" their ideas. These apps are often created by professional designers.
+You can find [customer stories](https://powerapps.microsoft.com/customer-stories)<!--Link okay? The other gave an error. -->
+and samples of apps from the [Power Apps community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1)
+that you might look into. App templates also show a great variety of
+different styles of apps.
 
-Check with the actual user to see if the sketches match with their
-expectations. Showing the sketches you drew and sharing the
-idea with the user will also eliminate any differences in expectations. Ideally,
-use the sketches as a “paper prototype” and have your user pretend to actually
+Check with actual users to see whether your sketches match their
+expectations. Showing them the sketches and sharing your
+ideas can help eliminate any difference in expectations. Ideally, you can
+use the sketches as a "paper prototype" and have your user pretend to actually
 use it.
-
+<!--The sketch includes "Checkout" and "Return" buttons, neither of which has been mentioned in any of the other articles (nor makes sense for this app). Can you modify the sketch to have "Save", "Cancel", and "Submit" buttons instead?-->
 ![A sketch of some app screen ideas](media/sketch.png "A sketch of some app screen ideas")
