@@ -20,15 +20,19 @@ Microsoft provides you the following solutions for emergency response:
 
 - The *Regional Government Emergency Response and Monitoring solution* enables you to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges at a **regional health organization level**. Each hospital under the regional organization jurisdiction can submit their data by using the regional organization's portal, which is also part of the *Regional Government Emergency Response and Monitoring solution*.
 
-Now, hospitals with the Hospital Emergency Response solution can transfer their data to the Regional Government Emergency Response and Monitoring solution. 
+Hospitals with the Hospital Emergency Response solution can transfer their data to the regional medical organizations that have Regional Government Emergency Response and Monitoring solution.
 
-1. Hospitals can publish their data in the hospital solution, such as information about beds, supplies, equipment, and staff, to a Secure File Transfer Protocol (SFTP) server hosted by their regional medical organization. You can schedule data publish and publish on-demand. 
+The out-of-box solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. Customers can use other ways to transfer data to/from these solutions such as [importing and exporting data as CSV files](/powerapps/maker/common-data-service/data-platform-import-export) and [using web services](/powerapps/developer/common-data-service/work-with-data-cds) to interact with data in Common Data Service, which is the underlying data store for these solutions.
 
-2. The hospital data published on the SFTP server is automatically downloaded to the regional solution and is used to create respective data records (beds, supplies, equipment, and staff) for the hospital in the regional solution. 
+This article provides information about how to use SFTP to do the data transfer.
 
-> [!NOTE]
-> This article demonstrates how you can use an SFTP server to transfer data from hospital to regional solutions. You can also use other ways to transfer data to/from these solutions, such as [import and export data as CSV files](/powerapps/maker/common-data-service/data-platform-import-export) and [use web services](/powerapps/developer/common-data-service/work-with-data-cds). 
+## How does the data transfer happen?
 
+This is how the data transfer happens:
+
+1. Hospitals can publish their data from the hospital solution, such as information about beds, supplies, equipment, and staff, to a folder in an SFTP server hosted by their regional medical organization. Hospitals can publish data on-demand or can schedule it.
+
+2. The hospital data published in the folder on the SFTP server is automatically downloaded to the regional solution and is used to create respective data records (beds, supplies, equipment, and staff) for the hospital in the regional solution.
 
 ## Prerequisites
 
@@ -46,19 +50,18 @@ For information about creating an SFTP server, see [SFTP on Azure](https://docs.
 IT admins need to perform some steps to configure the data transfer from Hospital Emergency Response solution to SFTP server and from SFTP server to Regional Government Emergency Response and Monitoring solution.
 
 > - [Step 1: Create connections](#step-1-create-connections)
-
 > - [Step 2: Enable flows for publishing data to SFTP (Hospital)](#step-2-enable-flows-for-publishing-data-to-sftp-hospital)
-
-> - [Step 3: Enable flow for pulling hospital data data from SFTP (Regional)](#step-3-enable-flow-for-pulling-hospital-data-data-from-sftp-regional)
+> - [Step 3: Specify the data publish schedule (Hospital)](#step-3-specify-the-data-publish-schedule-hospital)
+> - [Step 4: Enable flow for pulling hospital data from SFTP (Regional)](#step-4-enable-flow-for-pulling-hospital-data-from-sftp-regional)
 
 ### Step 1: Create connections
 
-Both the hospital and regional systems use Power Automate flows to transfer data between the hospital/regional solutions and SFTP server. In this step, we will create connections for Common Data Service and SFTP to be used by the flows for data transfer.
+Both the hospital and regional systems use Power Automate flows to transfer data between the hospital/regional solutions and SFTP server. In this step, we will create connections for Common Data Service and SFTP to be used by flows for data transfer.
 
 This step is required for both hospital and regional solutions.
 
 > [!IMPORTANT]
-> Create connections before installing the hospital and regional emergency response app solutions or upgrading to the latest version. This will save you a lot of steps later while enabling flows that get installed as part of these solutions. 
+> Make sure that you create connections in your Power Apps environment before installing the hospital and regional emergency response solutions or upgrading to the latest version. This will save you a lot of steps later while enabling flows that get installed as part of these solutions. 
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -68,14 +71,18 @@ This step is required for both hospital and regional solutions.
 
 1. Select **New Connection**, and then type **Common Data Service** in the search box. 
 
-1. From the search results, select **+** next to **Common Data Service (current environment)** connector to add a connection.
+1. From the search results, select **+** next to **Common Data Service** connector to add a connection.
 
     > [!div class="mx-imgBorder"] 
     > ![Common Data Service connector](media/cds-connector.png)
 
-1. On the next screen, select **Create**. 
+1. On the next screen, select **Create**. Select or specify the credentials to create the connector. On successful authentication, your connection will be created.
 
-1. Select or specify the credentials to create the connector. On successful authentication, your connection will be created.
+1. Select **New Connection**, and then type **Common Data Service** in the search box.
+
+1. From the search results, select **+** next to **Common Data Service (current environment)** connector to add a connection.
+
+1. On the next screen, select **Create**. Select or specify the credentials to create the connector. On successful authentication, your connection will be created.
 
 1. Select **New Connection**, and then type **SFTP** in the search box.
 
@@ -88,7 +95,7 @@ This step is required for both hospital and regional solutions.
 
 1. Select **Create**. Power Apps validates the connection details, and on successful authentication, creates an SFTP connection.
 
-At the end of this step, you should have two connections: 1 for Common Data Service and another one for SFTP.
+At the end of this step, you should have three connections: two for Common Data Service and one for SFTP.
 
 ### Step 2: Enable flows for publishing data to SFTP (Hospital)
 
@@ -101,8 +108,8 @@ In this step, we will enable the following flows that will publish reviewed data
 - Publish Equipment Needs Data
 - Publish Staff Updates
 - Publish Supply Item Details
-- Update Sync Status
-- Update Equipment
+- Update Sync Census
+- Update Sync Equipment Needs
 
 To enable these flows:
 
@@ -123,11 +130,41 @@ To enable these flows:
 
 1.  Repeat steps 4-6 for other flows listed earlier.
 
-### Step 3: Enable flow for pulling hospital data from SFTP (Regional)
+### Step 3: Specify the data publish schedule (Hospital)
+
+The **Publish Data for All Facilities** flow contains the information about the data publish schedule. You can define the recurrence schedule when the flow will run automatically and publish the data that you have reviewed and marked as ready for publish.  
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+1.  From the left pane, select **Solutions.** From the solution list, select **Hospital Emergency Response Solution** to open the solution.
+
+1.  In the solution, search for "Publish Data for". The **Publish Data for All Facilities** flow appears in the search result.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Publish Data for All Facilities flow](media/publish-all-data-flow.png)
+
+1.  Select the flow name to open the flow definition, and then select **Edit** in the toolbar.
+
+1.  In the flow definition, select **Recurrence** and then select **Edit**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Update the data publish recurrence schedule](media/update-publish-schedule1.png)
+
+1. Specify the data publish recurrence schedule. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Update the data publish recurrence schedule](media/update-publish-schedule2.png)
+
+1.  Select **Save** to save your changes.
+
+### Step 4: Enable flow for pulling hospital data from SFTP (Regional)
 
 This step has to be performed by the admins of the Regional Government Emergency Response and Monitoring solution.
 
 In this step, we will enable the **Create Record when a File is Created in SFTP Location** flow that will automatically create a record for hospital in the regional solution based on the data uploaded from the hospital system in the SFTP server.
+
+> [!IMPORTANT]
+> Regional admins would need to create a copy of the **Create Record when a File is Created in SFTP Location** flow for each Hospital registering with them to send data, and in each flow instance change the folder path on the SFTP server for each hospital. We'll show you how to do this.
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
@@ -138,9 +175,13 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
     > [!div class="mx-imgBorder"] 
     > ![Flows in the app](media/conf-all-flows.png "Flows in the app")
 
-1.  Select a **Create Record when a File is Created in SFTP Location** flow to open the flow definition. 
+1.  Select the **Create Record when a File is Created in SFTP Location** flow to open the flow definition. 
 
-1.  Verify the embedded connections for this flow. These should be the same connections that you created earlier. If necessary, select **Edit** on the toolbar to authorize/fix the connections for the flow.
+1.  Verify the embedded connections for this flow. These should be the same connections that you created earlier. 
+
+1.  If regional admins are expecting data from multiple hospitals, they will have to create a folder on the SFTP server for each such hospital, replicate the flow for each such hospital, and update the folder name accordingly in the replicated flow instance. To do this:
+
+    1. select **Edit** on the toolbar.
 
 1.  Select **Save** to save the changes, and then select **Turn On**.
 
