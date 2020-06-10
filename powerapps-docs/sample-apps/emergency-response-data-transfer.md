@@ -20,7 +20,7 @@ Microsoft provides you the following solutions for emergency response:
 
 - The *Regional Government Emergency Response and Monitoring solution* enables you to collect data for situational awareness of available beds and supplies, COVID-19 related patients, staffing, and pending discharges at a **regional health organization level**. Each hospital under the regional organization jurisdiction can submit their data by using the regional organization's portal, which is also part of the *Regional Government Emergency Response and Monitoring solution*.
 
-Hospitals with the Hospital Emergency Response solution can transfer their data to the regional medical organizations that have Regional Government Emergency Response and Monitoring solution.
+Hospital Emergency Response solution customers can transfer their hospital data to the regional medical organizations that have Regional Government Emergency Response and Monitoring solution.
 
 The out-of-box solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. Customers can use other ways to transfer data to/from these solutions such as [importing and exporting data as CSV files](/powerapps/maker/common-data-service/data-platform-import-export) and [using web services](/powerapps/developer/common-data-service/work-with-data-cds) to programmatically interact with data in Common Data Service, which is the underlying data store for these solutions.
 
