@@ -29,22 +29,10 @@ Data visualization and analytics in model-driven apps enable you to graphically 
   
 - **Dashboard**. Dashboards act as a business intelligence tool in model-driven apps by providing a snapshot of your data in various forms. You can use a dashboard to simultaneously present data from up to six charts, grids, IFrames, or web resources.  
   
-## In This Section  
+## Related topics  
 
-[View Data with Visualizations (Charts)](view-data-with-visualizations-charts.md)  
-[Analyze Data with Dashboards](analyze-data-with-dashboards.md)  
+[Analyze Data with Dashboards](analyze-data-with-dashboards.md)<br/>
+[View Data with Visualizations (Charts)](view-data-with-visualizations-charts.md)<br/>  
 [Visualization Data Description Schema](visualization-data-description-schema.md)  
   
-## Related Sections 
 
-[Extend the metadata model](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)
-[Customize entity forms](customize-entity-forms.md)  
-[Customize Entity Views](customize-entity-views.md) 
-[Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)<br/>
-[Change application navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)<br/>  
-[Customize commands and the ribbon](customize-commands-ribbon.md)  
-[Service calendar appearance configuration](/dynamics365/customer-engagement/developer/customize-dev/service-calendar-appearance-configuration) 
-[Publish customizations](publish-customizations.md)  
-[When to edit the customizations file](when-edit-customization-file.md)  
-[Extend Client](/dynamics365/customer-engagement/developer/extend-client)  
-[Web Resources](web-resources.md)
