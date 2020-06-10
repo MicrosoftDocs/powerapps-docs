@@ -167,8 +167,8 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
 
 > [!IMPORTANT]
 > For each hospital registering with regional organization to send data, the regional admins would need to do one of the following to ensure data for each hospital is copied from the SFTP server to the regional solution:
-> - Copy data from all the hospitals to a single folder on the SFTP server
-> - Create a copy of the **Create Record when a File is Created in SFTP Location** flow for each Hospital registering with them to send data, and in each flow instance change the folder path on the SFTP server for each hospital. We'll show you how to do this.
+> - Copy data from all the hospitals to a single folder on the SFTP server to enable the **Create Record when a File is Created in SFTP Location** flow to copy all the data.
+> - Create a copy of the **Create Record when a File is Created in SFTP Location** flow for each Hospital registering with them to send data, and in each flow instance change the folder path on the SFTP server for each hospital. We'll show you how to do this below.
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
@@ -183,9 +183,16 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
 
 1.  Verify the embedded connections for this flow. These should be the same connections that you created earlier. 
 
-1.  If regional admins are expecting data from multiple hospitals, they will have to create a folder on the SFTP server for each such hospital, replicate the flow for each such hospital, and update the folder name accordingly in the replicated flow instance. To do this:
+1.  Select **Save** to save the changes, and then select **Turn On**.
 
-    1. TO DO: Add details.
+1.  If regional admins are expecting data from multiple hospitals that are stored in different folders on SFTP server, they can create copies of the **Create Record when a File is Created in SFTP Location** flow to create one for each hospital, and update the SFTP folder name accordingly in the copied flow instance. To do this:
+
+    1. Select **Save As** on the toolbar to create a copy of the flow.
+    1. Rename the flow accordingly and save it. This flow will become available under **My flows**.
+    1. Select the flow to open it for editing. Select **Edit** on the toolbar.
+    1. Select **When a file is added or modified**, and select appropriate value in the **Folder** field:
+        > [!div class="mx-imgBorder"] 
+        > ![Edit the flow](media/edit-flow.png "Edit the flow")
 
 1.  Select **Save** to save the changes, and then select **Turn On**.
 
@@ -235,7 +242,7 @@ The scheduled flow publishes data at a certain time, but what if you want to man
 
 1. On the next screen, review that the connections are valid, and select **Continue**.
 
-    > [!div class="mx-imgBorder"] 
+    > [!div class="mx-imgBorder"]
     > ![Manually run flow](media/publish-data-flow.png)
 
 1. On the next screen select **Run flow**. A message appears stating that the flow run started successfully and how you can monitor the progress.
