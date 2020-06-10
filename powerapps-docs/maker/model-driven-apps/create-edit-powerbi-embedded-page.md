@@ -22,7 +22,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This article outlines the setup of a system dashboard that references a Power BI report or dashboard. 
+This article explains how to setup a system dashboard that references a Power BI report or dashboard and use it in a model-driven app. 
 
 To learn more about Power BI reports and dashboards, see <a href="https://docs.microsoft.com/power-bi/create-reports/">Create Power BI Reports</a>. 
 
@@ -33,22 +33,23 @@ To learn more about Power BI reports and dashboards, see <a href="https://docs.m
 
 ## Create a system dashboard with Power BI embedded
 
-This example sets up a Power BI embedded page for a single environment connected to a Power BI workspace. 
+This procedure shows you how to setup a Power BI embedded page for a single environment connected to a Power BI workspace. 
 
 1. Go to the **Solutions** area in <a href="https://make.powerapps.com">make.powerapps.com</a>, then create or edit a solution. 
 
     > [!NOTE]
     > Append "?powerappsPortal.powerbiAllowAsSystemDashboard=true" to the URL to enable the private preview
 
-2. Select **New** > **Dashboards** > **Power BI embedded**
+2. Select **New** > **Dashboards** > **Power BI embedded**.
 
     > [!div class="mx-imgBorder"] 
     > ![New Dashboard Power BI embedded menu](media/create-edit-powerbi-embedded-page/new-dashboard-powerbi-embedded-preview.png "New Dashboard Power BI embedded menu")
 
-3. Enter the following information **New Power BI embedded** dialog that appears: 
+3. Enter the following information in the **New Power BI embedded** dialog that appears: 
    -  Enter a name for the dashboard, which will be shown to the user in the selector on the **Dashboards** page. 
    - Select the Power BI type of **Report** or **Dashboard**. 
-   - Select a Power BI workspace, and then select a Power BI report or dashboard.
+   - Select a Power BI workspace. 
+   - Select a Power BI report or dashboard.
 
     > [!div class="mx-imgBorder"] 
     > ![New Dashboard Power BI embedded panel](media/create-edit-powerbi-embedded-page/new-dashboard-powerbi-embedded-panel.png "New Dashboard Power BI embedded panel")
@@ -64,7 +65,7 @@ This example sets up a Power BI embedded page for a single environment connected
     > [!div class="mx-imgBorder"] 
     > ![App designer select dashboards element](media/create-edit-powerbi-embedded-page/app-designer-select-dashboards-element.png "App designer select dashboards element")
 
-3. In the dashboards property pane, there is a **Power BI embedded page** category. By clearing **All**, specific dashboards can be selected. Optionally, the Power BI embedded page can be set as the default dashboard in the sitemap.
+3. In the dashboards property pane, there is a **Power BI embedded page** category. Clear **All** to select specific dashboards. Optionally, the Power BI embedded page can be set as the default dashboard in the sitemap.
 
     > [!div class="mx-imgBorder"] 
     > ![App designer dashboards Power BI embedded category](media/create-edit-powerbi-embedded-page/app-designer-dashboards-powerbi-embedded-category.png "App designer dashboards Power BI embedded category")
@@ -91,7 +92,7 @@ This example sets up a Power BI embedded page for a single environment connected
 <!-- Reference this section for "Use environment variable" Learn more link -->
 ## Create Power BI embedded page with an Environment Variable
 
-When a solution with a Power BI embedded component will be moved to other environments, you can turn on **Use environment variable** to configure the dashboard. Each environment, you can specify the workspace and either a dashboard or report to reference. Environment variables allow configuration without unmanaged customizations.
+When a solution with a Power BI embedded component will be moved to other environments, you can turn on **Use environment variable** to configure the dashboard. For each environment, you can specify the workspace and either a dashboard or report to reference. Environment variables allow configuration without unmanaged customizations.
 
 1. Create or edit an existing Power BI embedded dashboard.
 
@@ -100,7 +101,7 @@ When a solution with a Power BI embedded component will be moved to other enviro
     > [!div class="mx-imgBorder"] 
     > ![Use environment variable](media/create-edit-powerbi-embedded-page/power-bi-embedded-use-environment-variable.png "Use environment variable")
 
-3. Open the **Power BI environment variable** selector and select **New environment variable**.
+3. Open the **Power BI environment variable** selector and then select **New environment variable**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select new environment variable](media/create-edit-powerbi-embedded-page/power-bi-embedded-new-environment-variable.png  "Select new environment variable")
