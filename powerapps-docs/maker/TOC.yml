@@ -1479,8 +1479,6 @@
       href: ./common-data-service/create-edit-metadata.md
     - name: Types of entities
       href: ./common-data-service/types-of-entities.md
-    - name: Create and edit entities
-      href: ./common-data-service/create-edit-entities.md
     - name: Edit an entity
       href: ./common-data-service/edit-entities.md
     - name: Create and edit virtual entities
