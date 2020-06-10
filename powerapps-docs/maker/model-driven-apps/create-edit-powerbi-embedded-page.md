@@ -47,7 +47,7 @@ This procedure shows you how to setup a Power BI embedded page for a single envi
 
 3. Enter the following information in the **New Power BI embedded** dialog that appears: 
    -  Enter a name for the dashboard, which will be shown to the user in the selector on the **Dashboards** page. 
-   - Select the Power BI type of **Report** or **Dashboard**. 
+   - Select the type, either **Power BI report** or **Power BI dashboard**. 
    - Select a Power BI workspace. 
    - Select a Power BI report or dashboard.
 
@@ -72,7 +72,7 @@ This procedure shows you how to setup a Power BI embedded page for a single envi
 
 4. Open **Sitemap** from the app designer, then select the existing **Dashboards** subarea or insert one.
 
-5. Open the **Default Dashboard** property and then select the Power BI embedded page name.
+5. Open the **Default Dashboard** property and then select the Power BI embedded dashboard name.
 
     > [!div class="mx-imgBorder"] 
     > ![Sitemap designer subarea property default dashboard](media/create-edit-powerbi-embedded-page/sitemap-designer-subarea-property-default-dashboard.png "Sitemap designer subarea property default dashboard")
