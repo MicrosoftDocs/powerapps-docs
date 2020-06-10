@@ -1,18 +1,14 @@
 ---
 title: "Create or edit model-driven app Power BI embedded page | MicrosoftDocs"
 ms.custom: ""
-ms.date: 05/08/2020
-ms.reviewer: ""
+ms.date: 06/10/2020
+ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
   - "PowerApps"
-ms.assetid: 641885d2-4a08-41b8-b914-d9a244e4d5b1
-caps.latest.revision: 10
 ms.author: "aorth"
 manager: "kvivek"
 author: "adrianorth"
@@ -22,115 +18,102 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create or edit model-driven app Power BI embedded page (preview)
+# Create or edit a Power BI embedded dashboard (preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-This topic will outline the setup of a system dashboard referencing a Power BI report or dashboard.  A new option has been added to the solution New > Dashboard menu called **Power BI embedded (preview)**.
+This article explains how to setup and use a system dashboard that references a Power BI report or dashboard in a model-driven app. 
 
-To learn more about Power BI reports and dashboards, open <a href="https://docs.microsoft.com/power-bi/create-reports/">Create Power BI Reports</a>. 
+To learn more about Power BI reports and dashboards, see <a href="https://docs.microsoft.com/power-bi/create-reports/">Create Power BI Reports</a>. 
 
 > [!IMPORTANT]
 > - This is a private preview feature and requires an maker & environment feature flags to be enabled to author and view a Power BI embedded page in a model-driven app.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 
-## Create system dashboard with Power BI embedded
+## Create a system dashboard with Power BI embedded
 
-This examples sets up a Power BI embedded page for a single environment connected to a Power BI workspace.  The next example would need to be used with Environment Variables for managed solution ALM which has a different workspace for prod.
+This procedure shows you how to setup a Power BI embedded page for a single environment connected to a Power BI workspace. 
 
-1. Create or edit a solution in <a href="https://make.powerapps.com">make.powerapps.com</a>
+1. Go to the **Solutions** area in <a href="https://make.powerapps.com">make.powerapps.com</a>, then create or edit a solution. 
 
     > [!NOTE]
     > Append "?powerappsPortal.powerbiAllowAsSystemDashboard=true" to the URL to enable the private preview
 
-1. Click **New** > **Dashboards** > **Power BI embedded**
+2. Select **New** > **Dashboards** > **Power BI embedded**.
 
     > [!div class="mx-imgBorder"] 
     > ![New Dashboard Power BI embedded menu](media/create-edit-powerbi-embedded-page/new-dashboard-powerbi-embedded-preview.png "New Dashboard Power BI embedded menu")
 
-
-1. New Power BI embedded dialog appears
+3. Enter the following information in the **New Power BI embedded** dialog that appears: 
+   -  Enter a name for the dashboard, which will be shown to the user in the selector on the **Dashboards** page. 
+   - Select the type, either **Power BI report** or **Power BI dashboard**. 
+   - Select a Power BI workspace. 
+   - Select a Power BI report or dashboard.
 
     > [!div class="mx-imgBorder"] 
     > ![New Dashboard Power BI embedded panel](media/create-edit-powerbi-embedded-page/new-dashboard-powerbi-embedded-panel.png "New Dashboard Power BI embedded panel")
 
-1. Enter name for the dashboard which will be shown to the user in the selector on the **Dashboards** page
+4. Select **Save** to save and publish the system dashboard. 
 
-1. Select the Power BI type of Report or Dashboard
+## Add a Power BI embedded page to a model-driven app
 
-1. Select a Power BI workspace then select a Power BI report/dashboard
+1. Create or edit an existing model-driven app using the app designer.
 
-1. Click Create to save and publish the system dashboard
-
-## Add Power BI embedded page into the model-driven app
-
-1. Create or edit an existing model-driven app in the app designer
-
-1. Select the **Dashboards** element on the canvas
+2. Select the **Dashboards** subarea on the app designer canvas. 
 
     > [!div class="mx-imgBorder"] 
     > ![App designer select dashboards element](media/create-edit-powerbi-embedded-page/app-designer-select-dashboards-element.png "App designer select dashboards element")
 
-1. In the Dashboards property pane there is a **Power BI embedded page** category
+3. In the dashboards property pane, there is a **Power BI embedded page** category. Clear **All** to select specific dashboards. Optionally, the Power BI embedded page can be set as the default dashboard in the sitemap.
 
     > [!div class="mx-imgBorder"] 
-    > ![App designer dashboards powerbi embedded category](media/create-edit-powerbi-embedded-page/app-designer-dashboards-powerbi-embedded-category.png "App designer dashboards powerbi embedded category")
+    > ![App designer dashboards Power BI embedded category](media/create-edit-powerbi-embedded-page/app-designer-dashboards-powerbi-embedded-category.png "App designer dashboards Power BI embedded category")
 
-1. By unselecting **All**, then specific dashboards can be selected.
+4. Open **Sitemap** from the app designer, then select the existing **Dashboards** subarea or insert one.
 
-Optionally, the Power BI embedded page can be set as the default dashboard in the sitemap.
-
-1. Open **Sitemap** from the app designer
-
-1. Select the existing "Dashboards" subarea or insert one
-
-1. Open the **Default Dashboard** property and select the Power BI embedded page name
+5. Open the **Default Dashboard** property and then select the Power BI embedded dashboard name.
 
     > [!div class="mx-imgBorder"] 
     > ![Sitemap designer subarea property default dashboard](media/create-edit-powerbi-embedded-page/sitemap-designer-subarea-property-default-dashboard.png "Sitemap designer subarea property default dashboard")
 
-Finally the model-driven app can be saved and published.
+6. To save your changes and make them available to users, save and publish the model-driven app.
 
-## Selecting the Power BI embedded page in the model-driven app 
+## Select the Power BI embedded page in the model-driven app 
 
   > [!Note]
   > During the private preview phase, a server feature flag needs to be enabled per environment to allow viewing the Power BI embedded page in a model-driven app 
 
-1. Play the model-driven app
+1. Play the model-driven app, and then select a dashboard from the left navigation pane. 
 
-1. Select the dashboards page in the navigation
-
-1. Open the dashboard selector and select the Power BI embedded page
-
-
+2. Open the dashboard selector and select the Power BI embedded page. 
 
 
 <!-- Reference this section for "Use environment variable" Learn more link -->
 ## Create Power BI embedded page with an Environment Variable
 
-When a solution with a Power BI embedded component will be moved to other environments turning on "Use environment variable" allows configuring the dashboard.  Each environment can specify the workspace and either dashboard or report to reference.  This allows configuration without unmanaged customizations.
+When a solution with a Power BI embedded component will be moved to other environments, you can turn on **Use environment variable** to configure the dashboard. For each environment, you can specify the workspace and either a dashboard or report to reference. Environment variables allow configuration without unmanaged customizations.
 
-1. Create or edit an existing Power BI embedded dashboard
+1. Create or edit an existing Power BI embedded dashboard.
 
-1. Select "Use environment variable"
+2. Select **Use environment variable**.
 
     > [!div class="mx-imgBorder"] 
     > ![Use environment variable](media/create-edit-powerbi-embedded-page/power-bi-embedded-use-environment-variable.png "Use environment variable")
 
-1. Open "Power BI environment variable" selector and click **New environment variable**
+3. Open the **Power BI environment variable** selector and then select **New environment variable**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select new environment variable](media/create-edit-powerbi-embedded-page/power-bi-embedded-new-environment-variable.png  "Select new environment variable")
 
-1. Nested panel will open to allow creating the environment variable and will default the **Display Name** and **Name** based on the dashboard name
+    A nested panel opens where you create the environment variable. The environment variable properties are automatically filled using the dashboard **Display Name** and **Name**.
+
+    You can configure the workspace and report or dashboard. The values are stored as JSON. 
 
     > [!div class="mx-imgBorder"] 
     > ![Power BI embedded Environment Variable panel](media/create-edit-powerbi-embedded-page/powerbi-embedded-env-var-panel.png  "Power BI embedded Environment Variable panel")
 
-1. Power BI embedded environment variable panel allows configuring workspace and report/dashboard whcih is stored as JSON with both values.  This is done for either the default value or the current value.
-
-1. Saving the environment variable will then show the default and/or current values for workspace and report/dashboard
+4. Save the environment variable. The default and current values for workspace and report or dashboard are displayed. 
 
     > [!div class="mx-imgBorder"] 
     > ![Power BI embedded environment variable value preview](media/create-edit-powerbi-embedded-page/power-bi-embedded-environment-variable-value-preview.png  "Power BI embedded environment variable value preview")
