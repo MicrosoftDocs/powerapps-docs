@@ -132,7 +132,7 @@ To create a record:
     | Effective End Date           | Type end date and time for this facility.       |
     | Does have an Emergency            | Select **Yes**/**No** to confirm if the facility has emergency department.   |
     | Ventilators Total Capacity    | Type the total number of ventilators in the facility.    |
-    | Excluded Supplies    |     |    
+    | Excluded Supplies    | List of supplies not available at this facility.    |    
     | Total Inpatient Bed Capacity in other areas    | Type the total inpatient bed capacity in other areas.    |
     | Acute Care Beds (AIIR Room) Total Capacity     | Type the total number of Acute care beds in AIIR (Airborne Infection Isolation Room).     |
     | ICU Beds (AIIR Room) Total Capacity    | Type the total number of ICU beds in AIIR.    |
