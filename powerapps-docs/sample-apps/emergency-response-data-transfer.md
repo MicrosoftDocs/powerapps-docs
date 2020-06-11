@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/09/2020
+ms.date: 06/10/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
@@ -166,9 +166,9 @@ This step has to be performed by the admins of the Regional Government Emergency
 In this step, we will enable the **Create Record when a File is Created in SFTP Location** flow that will automatically create a record for hospital in the regional solution based on the data uploaded from the hospital system in the SFTP server.
 
 > [!IMPORTANT]
-> For each hospital registering with regional organization to send data, the regional admins would need to do one of the following to ensure data for each hospital is copied from the SFTP server to the regional solution:
+> For each hospital registering with regional organization to send data, the regional admins will need to do one of the following to ensure data for each hospital is copied from the SFTP server to the regional solution:
 > - Copy data from all the hospitals to a single folder on the SFTP server to enable the **Create Record when a File is Created in SFTP Location** flow to copy all the data.
-> - Create a copy of the **Create Record when a File is Created in SFTP Location** flow for each Hospital registering with them to send data, and in each flow instance change the folder path on the SFTP server for each hospital. We'll show you how to do this below.
+> - Create a copy of the **Create Record when a File is Created in SFTP Location** flow for each Hospital registering with them to send data, and in each flow instance change the SFTP server folder path as per the hospital. We'll show you how to do this later in this section.
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
