@@ -18,9 +18,11 @@ search.app:
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
-
+1. **Black box covering part of embedded canvas app** (June 11, 2020)
+   When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users many see a black box when scrolling covering part of the app. This issue happens with chromium based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround.
+   
 1. **Problems downloading attachments in SharePoint custom forms** (May 22, 2020)
-   When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, change to use the default SharePoint form or use another browser. The team is actively working to fix this issue.
+   When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, change to use the default SharePoint form or use another browser. The team is actively working to fix this issue. **Fix has been deployed weeek of 6/8/2020**
    
 1. **Problems downloading attachments in embedded Power Apps** (May 22, 2020)
   When using the attachment control to download an attachment, the click won't have any response when using Google Chrome version 83 or the new Microsoft Edge version 83 browser. As a workaround, use another browser. The team is actively working to fix this issue.
