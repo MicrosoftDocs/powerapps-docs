@@ -116,9 +116,9 @@ You can also open Monitor for the published without having to open the app in Po
 
 1. In Monitor, select **Play published app** from the top menu.
 
-![Open published app](./media/monitor/play-published-app.png "Open published app")
+    ![Open published app](./media/monitor/play-published-app.png "Open published app")
 
-This opens the published app in a new browser tab, and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
+    This opens the published app in a new browser tab, and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
 
 ## View events in canvas app Monitor
 
