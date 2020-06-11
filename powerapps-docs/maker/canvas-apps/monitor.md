@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/13/2020
+ms.date: 06/12/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -17,12 +17,14 @@ search.app:
 
 # Debugging an app with canvas app Monitor (Preview)
 
+[This article is pre-release documentation and is subject to change.]
+
 **Canvas app Monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as the app runs.
 
-This gives you a better understanding of how the formulas contained in your app work so you can improve performance and identify any errors or problems.
+This feature gives you a better understanding of how the formulas contained in your app work so you can improve performance and identify any errors or problems.
 
-> [!NOTE]
-> The canvas app Monitor feature is still preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
+> [!IMPORTANT]
+> The canvas app Monitor feature is in preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 ## Debugging an app
 
@@ -52,7 +54,7 @@ A few example issues and queries that you can uncover when using Monitor are:
 
 To see **Monitor** in action, see the [example scenario](#example).
 
-## Open app Monitor for preview app
+## Open app Monitor while editing an app in Power Apps Studio
 
 Canvas app Monitor is available by default for all canvas apps. To open Monitor when authoring an app:
 
@@ -60,59 +62,63 @@ Canvas app Monitor is available by default for all canvas apps. To open Monitor 
 
 1. Create a [new app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive) or [edit an existing app](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app).
 
-1. Select **Advanced tools** in the left navigation pane.
+1. Select **Advanced tools** in the left pane.
 
 1. Select **Open Monitor** to open Monitor for this app. 
 
     ![Open Monitor](./media/monitor/open-monitor.png "Open Monitor")
 
-This opens Monitor in a new browser tab and connects it to your existing Studio session:
+This action opens Monitor in a new browser tab and connects it to your existing Studio session:
 
 ![Canvas app Monitor](./media/monitor/canvas-app-monitor.png "Canvas app Monitor")
 
 > [!NOTE]
 > Monitor has no impact on your app. You can use Monitor with any app in a test environment or in production.
 
-
 ## Open app Monitor for published app
+
 You can also use Monitor to debug the published app in the web player. There are two options to open Monitor for the published app.
 
- - **From Canvas Studio**
-   1. Open Monitor following the same steps you took [earlier](#Open-app-Monitor-from-Canvas-Studio).
+### Open app Monitor for published app using Power Apps Studio
 
-   2. In Monitor, select **Play published app**  in the top menu.
+1. Sign in to [Power Apps](https://make.powerapps.com/).
+
+1. Create a [new app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive) or [edit an existing app](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app).
+
+1. Select **Advanced tools** in the left pane.
+
+1. Select **Open Monitor** to open Monitor for this app.
+
+1. Select **Play published app** from the top menu.
 
    ![Open published app](./media/monitor/play-published-app.png "Open published app")
 
-   This opens the published app in a new browser tab and connects it to your current Monitor session. You will immediately see events in the Monitor when the app loads in the web player and you interact with the published app.
+   This opens the published app in a new browser tab, and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
 
    > [!NOTE]
-   > If you open the published app using this method, you will have 2 apps connected to the same Monitor session. The preview app in Canvas Studio and also the Published app in the web player. Events from the preview app and the published app will be shown in Monitor if you play these apps at the same time.  
+   > If you open the published app using this method, you'll have your app connected to the same Monitor session twice. The app being edited in Power Apps Studio and the published app in the web player. Events from both the Power Apps Studio and the published app will be shown in the Monitor if you interact with the apps at the same time.
 
-
- - **From Power Apps portal**
+### Open app Monitor for published app from Power Apps
  
-     You can also open Monitor for the published without having to open the app in Canvas studio. 
+You can also open Monitor for the published without having to open the app in Power Apps Studio.
    
-   1. Sign in to [Power Apps](https://make.powerapps.com/).    
-   
-   1. Select **Apps** in the left navigation pane.
+1. Sign in to [Power Apps](https://make.powerapps.com/).
 
-   1. Select an App from the app list. 
+1. Select **Apps** in the left pane.
 
-   1. Select **Monitor** in the top menu or from the ... (ellipsis).
+1. Select an app from the list.
 
-   ![Open Monitor](./media/monitor/open-monitor-portal.png "Open Monitor")
+1. Select **Monitor** from the menu. You can also select **More Commands** (**...**), and then select **Monitor** instead.
 
-   This opens Monitor in a new browser tab. 
+    ![Open Monitor](./media/monitor/open-monitor-portal.png "Open Monitor")
 
-   1. In Monitor, select **Play published app**  in the top menu.
+    This action opens the Monitor in a new browser tab.
 
-   ![Open published app](./media/monitor/play-published-app.png "Open published app")
+1. In Monitor, select **Play published app** from the top menu.
 
-   This opens the published app in a new browser tab and connects it to your current Monitor session. You will immediately see events in the Monitor when the app loads in the web player and you interact with the published app.
+![Open published app](./media/monitor/play-published-app.png "Open published app")
 
-   
+This opens the published app in a new browser tab, and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
 
 ## View events in canvas app Monitor
 
@@ -215,7 +221,7 @@ When you select such an event, you see the error as *Rate limit exceeded. Try ag
 
 ### Analysis
 
-The issue needs further analysis to understand why requests are getting throttled. In Monitor, you see that for each **createRow** call, there are several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These aren't the entities the app is creating rows for. The **ProgressCount.Text**  formula is seen in Monitor:
+The issue needs further analysis to understand why requests are getting throttled. In Monitor, you see that for each **createRow** call, there are several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These entities aren't the entities the app is creating rows for. The **ProgressCount.Text** formula is seen in Monitor:
 
 ![ProgressCount.Text formula](./media/monitor/progresscount-text-formula.png "ProgressCount.Text formula")
 
