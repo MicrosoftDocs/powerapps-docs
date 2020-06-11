@@ -5,7 +5,7 @@ author: pankajarora-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 ms.author: pankar
 ms.reviewer: tapanm
 searchScope:
@@ -58,9 +58,6 @@ The Hospital Emergency Response sample solution app consists of multiple apps fo
 
 Use the hospital operations apps to collect hospital and facility specific data for hospital management.
 
-- [Bed capacity](#bed-capacity)
-    <br> Collect bed information such as licensed beds, ICU beds, pediatric ICU/Acute Care beds, and other bed capacity data.
-
 - [COVID-19 stats](#covid-19-stats)
     <br> Collect status on how many patients are under investigation for COVID-19 and how many tested positive.
 
@@ -80,36 +77,8 @@ Use the hospital operations apps to collect hospital and facility specific data 
 - [Discharge planning](#discharge-planning)
     <br> Collect status and projections on ​patient discharges.
 
-- [Dashboard](#dashboard)
-    <br> View the Power BI dashboard for insights and decision making.
-
 > [!NOTE]
 > By default, you can track information in the following apps at a *location* level: **COVID-19 stats**, **Equipment**, and **Staff**. In rest of the apps, you can track information at the *facility* level by default. Your admin can change the default tracking level, if required. More information: [Manage tracking level for mobile apps](configure-data-reporting.md#manage-tracking-level-for-mobile-apps)
-
-### Bed capacity
-
-![Bed capacity](media/use/bed-capacity.png)
-
-Submit bed-related information such as licensed beds, ICU (AIIR/non-AIIR) beds, Acute Care (AIIR/non-AIIR) beds and whether the selected facility is staffed to full license bed capacity.
-
-Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
-
-After you submit the data, select **Home** to go back to **Hospital Emergency Response app**.
-
-#### Fields and description
-
-| **Option name**                                               | **Description**                                                                       |
-|---------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| How many licensed beds are currently in use in this facility? | Number of licensed beds currently in use at this facility.                            |
-| # of ICU Beds (AIIR Room) in use               | Number of ICU Beds in Airborne Infection Isolation Room (AIIR Room) currently in use.                                      |
-| # of ICU Beds (non-AIIR Room) in use           | Number of ICU Beds (non-AIIR Room) currently in use.                                  |
-| # of Acute Care Beds (AIIR Room) in use        | Number of Acute Care Beds (AIIR Room) currently in use.                               |
-| # of Acute Care Beds (non-AIIR Room) in use    | Number of Acute Care Beds (non-AIIR Room) currently in use.                           |
-| Is facility staffed to its full licensed bed capacity?    | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume |
-| Are you able to surge beyond licensed beds?              | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
-| # of surge beds currently in use                         | Number of surge beds currently in use.                                                |
-| # of Pediatric ICU Beds (AIIR and non-AIIR) currently in use | Number of Pediatric ICU Beds (AIIR and non-AIIR) currently in use at this facility. |
-| # of Pediatric Acute Care Beds (AIIR and non-AIIR) currently in use | Number of Pediatric Acute Care Beds (AIIR and non-AIIR) currently in use at this facility. |  
 
 ### COVID-19 stats
 
@@ -179,8 +148,6 @@ After you submit the data, you have the option to go back to the **Staff** app t
 | *Requested* <br> # of RNs requested                  | Number of Registered Nurses requested for the selected location.                                  |
 | *Assigned* <br> # of RNs with an assignment                   | Number of Registered Nurses assigned to the selected location.                                    |
 | *Unassigned* <br> # of RNs unassigned to any task                  | Number of Registered Nurses not assigned to any task at the selected location.                    |
-| **Facility level tracking** |                                                                                                   |
-| % of essential care personnel currently absent in this facility                  | Essential care personnel currently absent in percentage format of the total for **entire facility**.                    |
 
 ### Supplies
 
@@ -254,9 +221,9 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | Past 24 h                 | Number of patients expected to be discharged in last 24 hours.  |
 | Likely next 24 h          | Number of patients discharged in last 24 hours.                    |
 
-## Dashboard
+## Insights
 
-View the Power BI dashboards for insights and decision making. Selecting this option will open the Power BI dashboard in your mobile device browser.
+View the Power BI dashboards for insights and decision making using the **Dashboard** app. Selecting this option will open the Power BI dashboard in your mobile device browser.
 
 For detailed info about teh dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard).
 
