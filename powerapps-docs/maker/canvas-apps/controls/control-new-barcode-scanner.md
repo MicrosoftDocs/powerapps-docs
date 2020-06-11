@@ -1,6 +1,6 @@
 ---
-title: 'Barcode-scanner control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the barcode-scanner control
+title: 'Barcode scanner control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the barcode scanner control
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -14,13 +14,16 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Barcode-scanner control for canvas apps
+# Barcode scanner control for canvas apps
 
-Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device. Not supported in a web browser.
+Scans barcodes, QR codes, and data-matrix codes on an Android or iOS device.
 
 ## Description
 
 The control opens a native scanner on an Android or iOS device. The scanner automatically detects a barcode, a QR code, or a data-matrix code when in view. The control doesn't support scanning in a web browser.
+
+> [!NOTE]
+> The barcode scanner control is supported only on Android and iOS apps. On browsers and other platforms, users will see a warning that some features of the app won't work.
 
 ## Key properties
 

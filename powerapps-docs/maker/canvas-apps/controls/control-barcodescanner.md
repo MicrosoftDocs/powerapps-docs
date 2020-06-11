@@ -1,6 +1,6 @@
 ---
-title: 'Web barcode-scanner control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the barcode-scanner control
+title: 'Web barcode scanner control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the web barcode scanner control
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
@@ -14,17 +14,20 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Web barcode-scanner control (experimental) in Power Apps
+# Web barcode scanner control (experimental) in Power Apps
 
-The legacy barcode-scanning control, which is obsolete but might be useful for scanning codes in a web browser.
+The legacy barcode scanning control, which is obsolete but might be useful for scanning codes in a web browser.
 
 ## Description
 
 The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete due to poor performance, and the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control replaces this control.
 
+> [!NOTE]
+> The web barcode scanner control is supported only on Chrome, Edge, Firefox, and Opera. On other browsers and platforms, users will see a warning that some features of the app won't work.
+
 ## Key properties
 
-**barcode scanner** – On a device that has more than one barcode scanner, the numeric ID of the barcode scanner that the app uses.
+**Camera** – On a device that has more than one camera, the numeric ID of the camera that the app uses for scanning barcodes.
 
 ## Additional properties
 
