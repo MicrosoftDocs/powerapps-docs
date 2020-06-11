@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/06/2020
+ms.date: 06/05/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -32,7 +32,7 @@ Get the latest deployment package (.zip) from <https://aka.ms/rer-solution>. It'
 
 **IMPORTANT:** Before extracting the .zip file, ensure that you unblock it.
 
-1.  Right click the .zip file, select **Properties**.
+1.  Right-click the .zip file, select **Properties**.
 
 2.  In the properties dialog box, select **Unblock**, and then select **Apply**
     followed by **OK.**
@@ -66,52 +66,38 @@ Power BI dashboard.
 
 Steps to use the .pbit file are the same as the original deployment; make sure you use the same workspace to overwrite the existing Power BI dashboard if you want to preserver the Power BI report URL that is used for embedding it into Power Apps portal. 
 
-More information: [Step 5: Configure and publish Power BI
-dashboard](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-5-configure-and-publish-power-bi-dashboard)
+More information: [Step 5: Configure and publish Power BI dashboard](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-5-configure-and-publish-power-bi-dashboard) in the deployment topic.
 
 ## Step 4: Verify the Power BI report URL in your portal
 
-This step is required only if your Power BI report URL has changed in the previous step owing to you publishing the dashboard in a new worksoaceVerify the **PowerBI Path** site setting in your portal and update the value
-with the latest Power BI report URL.
+This step is required only if your Power BI report URL has changed in the previous step owing to you publishing the dashboard in a new workspace. Verify the **PowerBI Path** site setting in your portal and update the value with the latest Power BI report URL.
 
-For detailed steps, see [Embed Power BI report in
-portal](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#the-process-1)
+For detailed steps, see [Embed Power BI report in portal](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#the-process-1) in the deployment topic.
 
 Make sure to restart our portal for the changes to take effect. More
-information: [Restart the
-portal](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#restart-the-portal)
+information: [Restart the portal](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#restart-the-portal) in the deployment topic.
 
-## Step 5: Verify the Send Invitation and Send Password Reset To Contact processes
+## Step 5: Verify the processes
 
 Verify that the **Send Invitation** and **Send Password Reset To Contact**
 processes are still valid, that is, they have an account in the **From** field
 that can send emails and the rest of the details are fine.
 
-For details about how to fix these processes, see:
+For details about how to fix these processes, see [Step 10: Fix the processes for the app](/powerapps/sample-apps/regional-emergency-response/deploy#step-10-fix-the-processes-for-the-app) in the deployment topic.
 
--   [Step 10: Fix the Send Invitation
-    process](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-10-fix-the-send-invitation-process)
+## Step 6: Verify the flows for sending emails
 
--   [Step 11: Fix the Send Password Reset To Contact
-    process](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-11-fix-the-send-password-reset-to-contact-process)
-
-## Step 6: Verify the Flow supply tracking flow is enabled
-
-This flow enables the frontline user to add supplies through the portal that
-gets saved in Common Data Service.
-
-For details about how to fix these processes, see [Step 13: Verify the Flow
-supply tracking flow is
-enabled](https://docs.microsoft.com/powerapps/sample-apps/regional-emergency-response/deploy#step-13-verify-the-flow-supply-tracking-flow-is-enabled).
-
-## Step 7: Verify and update the details of flows for sending emails
-
-In this step, we are going to do the following:
+Do the following:
 
 |Flow name|Changes|
 |--|--|
 |**Portal User Request: Send Email on Decline Request**|Update the connection to connect to Common Data Service and then specify a user account to send emails.|
 |**Portal User Request: Send Email to Admins on Request Creation**|Update the connection to connect to Common Data Service and then specify a user account to send emails. Additionally, update the portal URL in the email body as per your Portal URL.| 
 
-For detailed information about this, see [Step 14: Update the details of flows for sending emails](deploy.md#step-14-update-the-details-of-flows-for-sending-emails)
+For detailed information about this, see [Step 11.1: Fix the flows for sending emails](deploy.md##step-111-fix-the-flows-for-sending-emails) in the deployment topic.
 
+## Step 7: Verify the flows for performing tasks
+
+Verify and authorize the connection information of the flows for performing specific tasks.
+
+For details about how to do this, see [Step 11.2: Fix the flows for performing specific tasks](/powerapps/sample-apps/regional-emergency-response/deploy#step-112-fix-the-flows-for-performing-specific-tasks) in the deployment topic.

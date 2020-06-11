@@ -2,7 +2,7 @@
 title: "Use SQL to query data (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Common Data Service entity data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/05/2020
+ms.date: 05/26/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -25,7 +25,7 @@ A SQL data connection is available on the Common Data Service endpoint. The SQL 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
-> - Instructions to enable the feature can be found here: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi).
+> - Instructions to enable the feature can be found here: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi), and [Manage feature settings](/power-platform/admin/settings-features) (see TDS endpoint setting).
 
 ## Applications support
 
@@ -78,8 +78,18 @@ The list of supported SQL operations includes:
 
 Any operation that attempts to modify data (i.e., INSERT, UPDATE) will not work as this is a read-only SQL data connection. Common Data Service option sets are represented as \<OptionSet\>Name and \<OptionSet\>Label in a result set.
 
-The following Common Data Service datatypes are not supported with the SQL connection: binary, image,
-ntext, sql_variant, varbinary, virtual, HierarchyId, managedproperty, file, xml, partylist, timestamp.
+The following Common Data Service datatypes are not supported with the SQL connection: `binary`, `image`,
+`ntext`, `sql_variant`, `varbinary`, `virtual`, `HierarchyId`, `managedproperty`, `file`, `xml`, `partylist`, `timestamp`.
+
+> [!TIP]
+> `partylist` attributes can instead be queried by joining to the `activityparty` table as shown below.
+> 
+> ```tsql
+> select act.activityid, act.subject, string_agg([to].partyidname, ', ')
+> from activitypointer as act
+> left outer join activityparty as [to] on act.activityid = [to].activityid and [to].participationtypemask = 2
+> group by act.activityid, act.subject
+> ```
 
 ### See also
 

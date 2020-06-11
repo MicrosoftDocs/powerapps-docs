@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/06/2020
+ms.date: 06/05/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 searchScope:
@@ -552,7 +552,17 @@ For detailed steps on setting server-side sync; see the following resources:
     > [!WARNING]
     > Make sure this user is not configured for server-side sync on any other Common Data Service or Dynamics 365 environment. If you have a server-side sync set in another environment, enabling the server-side sync here will disable it in the previously used environment.
 
-## Step 10: Fix the Send Invitation process
+## Step 10: Fix the processes for the app
+
+In this step, we will be fixing the following processes:
+
+- Send Invitation
+
+- Send Password Reset To Contact
+
+- Assign Web Roles to New Users
+
+### Step 10.1: Fix the Send Invitation process
 
 In this step, we will fix the **Send Invitation** process to specify the email address from which the portal invitation will be sent out to individual hospital admins and the invitation URL sent out in the invitation email.
 
@@ -599,7 +609,7 @@ In this step, we will fix the **Send Invitation** process to specify the email a
     > [!div class="mx-imgBorder"] 
     > ![Activate the process](media/deploy-activate-process.png "Activate the process")    
 
-## Step 11: Fix the Send Password Reset To Contact process
+### Step 10.2: Fix the Send Password Reset To Contact process
 
 In this step, we will fix the **Send Password Reset To Contact** process to specify the email address from which the portal password reset email will be sent to the portal user when she/he requests to reset the password using the **Forgot password** link in the portal.
 
@@ -611,7 +621,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
     > [!div class="mx-imgBorder"] 
     > ![Send Password Reset To Contact ](media/deploy-password-reset.png "Send Password Reset To Contact ")
-    <!-- ![](media/2ff3f6344a7ea9aa564592a15833fcb3.png) -->
+   
 
 4.  On the **Processes** page, search for “Send Password Reset To Contact”, and select the **Send Password Reset To Contact** process in the search result to open it.
 
@@ -625,13 +635,13 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
         > [!div class="mx-imgBorder"] 
         > ![Set Properties for Send Email](media/deploy-set-email-properties.png "[Set Properties for Send Email")
-        <!-- ![](media/4a3c0bbf3785cdb7bad4c671964f0220.png) -->
+       
 
 6.  In the **Send Email** step definition page, remove the dynamic value (highlighted in yellow) in the **From** field.
 
     > [!div class="mx-imgBorder"] 
     > ![Send email step definition](media/deploy-email-step-definition.png "Send email step definition")
-    <!-- ![](media/8838a0341e240cfe49741d64e761555d.png) -->
+    
 
 7.  Select the email ID in the **From** field that will be used to send the portal invitation links. The user account specified here must have the server-side synchronization enabled for the email to be sent out.
 
@@ -641,7 +651,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
     > [!div class="mx-imgBorder"] 
     > ![Don’t update dynamic values](media/deploy-dynamic-values.png "Don’t update dynamic values")
-    <!-- ![](media/35a0f7a386b2e5345158def083c62402.png) -->
+    
 
 8.  Select **Save and Close** to save your changes.
 
@@ -650,7 +660,7 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
     > [!div class="mx-imgBorder"] 
     > ![Save changes and activate process](media/deploy-save-activate-process.png "Save changes and activate process")    
 
-## Step 12: Verify Assign Web Roles to New Users process is enabled
+### Step 10.3: Verify Assign Web Roles to New Users process is enabled
 
 1.  Sign into [Power Apps](https://make.powerapps.com).
 
@@ -668,7 +678,9 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
 
 5.  If it’s not enabled, select the process name to open the record, and then select **Activate**. Confirm to activate the process.
 
-## Step 13: Enable the Flow supply tracking flow
+## Step 11: Fix the flows for the app
+
+In this step, we will fix the flows that are required by the app. You can view all the flows used by the app using the following steps:
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
 
@@ -677,18 +689,31 @@ In this step, we will fix the **Send Password Reset To Contact** process to spec
     > [!div class="mx-imgBorder"] 
     > ![Open the solution](media/deploy-open-solution.png "Open the solution")
 
-3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record.
+3.  In the solution, filter on **Flow** to find all the flows.
 
     > [!div class="mx-imgBorder"] 
-    > ![Find the Flow Supply Tracking record](media/deploy-find-record.png "Find the Flow Supply Tracking record")
+    > ![Flows in the app](media/conf-all-flows.png "Flows in the app")
 
-4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
+There are two sets of flows:
 
-5.  Fix the connection to connect to Common Data Service, and save the connection information.
+- First set of flows help with sending emails:
+    - Portal User Request: Send Email on Decline Request
+    - Portal User Request: Send Email to Admins on Request Creation
+    
+    For these flows, we have to authorize the connection and then specify a user account to send emails, and then enable the flow.
 
-6. In the flow definition, select **Turn On**.
+- Second set of flows help complete a task:
+    - Process new Supplies Entry records
+    - Flow supply tracking
+    - Populate CDC Data - Healthcare Staff
+    - Populate CDC Data - Healthcare Supply
+    - Populate CDC Data - Patients and Hospitals Capacities
+    - Process new Staffing Entry for the Portal 
 
-## Step 14: Update the details of flows for sending emails
+    For these flows, we have to authorize the connection and then enable the flow.
+
+
+### Step 11.1: Fix the flows for sending emails
 
 In this step, we are going to do the following:
 
@@ -742,7 +767,34 @@ In this step, we are going to do the following:
 
 12. Select **Save** to save the changes, and then select **Turn On**.
 
-## Step 15: Share admin app with other admin users
+### Step 11.2: Fix the flows for performing specific tasks
+
+In this step, we will authorize the connection information for the flows that help perform specific tasks, and then enable them.
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+2.  In the left pane, select **Solutions.** From the solution list, select **Regional Emergency Response Solution** to open the solution.
+
+3.  In the solution, filter on **Flow** to find the **Flow supply tracking** record.
+
+4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
+
+5.  Specify the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Fix credential](media/authorize-cred.png "Fix credentials")
+
+6. Select **Save** to save the changes, and then select **Turn On**.
+
+7. Perform steps 4-6 with each of the following flows to authorize the connection, and then enable the flow:
+
+    - Process new Supplies Entry records
+    - Populate CDC Data - Healthcare Staff
+    - Populate CDC Data - Healthcare Supply
+    - Populate CDC Data - Patients and Hospitals Capacities
+    - Process new Staffing Entry for the Portal
+
+## Step 12: Share admin app with other admin users
 
 For your business admin users to use the admin app (model-driven app) to enter and manage data, it must be shared with them. It's easier to use Azure AD groups to easily share apps with a group of admin users.
 
@@ -767,7 +819,7 @@ The deployment steps are complete now. Business admins can refer to the [configu
 
 -  Configure and manage the master data
 
--	Create portal users to invite admin users from individual hospitals so that they can use portals to add and manage data and users.
+-  Create portal users to invite admin users from individual hospitals so that they can use portals to add and manage data and users.
 
 - View Power BI dashboard in your tenant.
 

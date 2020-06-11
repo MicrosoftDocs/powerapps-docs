@@ -406,7 +406,7 @@ ms.custom:
                                     <h3 style="font-size: 1.15rem">Environment and security</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/environments-overview">Environments overview</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/trial-environments">Trial environements</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/trial-environments">Trial environments</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/database-security">Environment security</a></p>
                                  </div>
                               </div>
@@ -615,7 +615,7 @@ ms.custom:
                                     <h3 style="font-size: 1.15rem">Package and distribute apps/extensions</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/introduction-solutions">Using solutions</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/build-tools-overview">Power Apps build tools for Azure DevOps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/build-tools-overview">Microsoft Power Platform Build Tools for Azure DevOps</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager">SolutionPackager tool</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer tool</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/checker/webapi/overview">Use the Power Apps checker</a></p>

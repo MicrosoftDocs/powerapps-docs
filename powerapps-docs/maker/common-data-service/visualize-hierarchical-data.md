@@ -40,7 +40,7 @@ Important things to remember when you create visualizations:
   
 - Only one (1:N) self-referential relationship per entity can be set as hierarchical. In a self-referential relationship the primary entity and the related entity must be of the same type.  
 - A hierarchy or visualization is based on one entity only. You can depict the account hierarchy showing accounts at multiple levels, but you can’t show accounts and contacts in the same hierarchy visualization. 
-- The maximum number of fields that can be displayed in a tile is four. If you add more fields to the Quick Form that is used for the tile view, only the first four fields will be displayed. 
+- The maximum number of fields that can be displayed in a tile is three. If you add more fields to the Quick Form that is used for the tile view, only the first three fields will be displayed. 
 
 ## Hierarchy settings
 
