@@ -86,22 +86,6 @@ Use the hospital operations apps to collect hospital and facility specific data 
 > [!NOTE]
 > By default, you can track information in the following apps at a *location* level: **COVID-19 stats**, **Equipment**, and **Staff**. In rest of the apps, you can track information at the *facility* level by default. Your admin can change the default tracking level, if required. More information: [Manage tracking level for mobile apps](configure-data-reporting.md#manage-tracking-level-for-mobile-apps)
 
-## Government reporting
-
-Use the government reporting apps to collect hospital and facility specific data for CDC reporting.
-
-- [COVID-19 patient impact](#covid-19-patient-impact---cdc-reporting)
-    <br> Collect COVID-19 patient details such as hospitalized, on ventilator, or awaiting beds in emergency department.
-
-- [Healthcare worker staffing](#healthcare-worker-staffing---cdc-reporting)
-    <br> Collect shortage data for staff such as physicians, RNs, pharmacists, therapists or other personnel.
-
-- [Bed capacity](#bed-capacity---cdc-reporting)
-    <br> Collect bed information such as ICU, Acute Care and surge capacity.
-
-- [Supply planning](#supply-planning---cdc-reporting)
-    <br> Collect supplies data such as masks, shields, gloves, gowns, PAPRs.
-
 ### Bed capacity
 
 ![Bed capacity](media/use/bed-capacity.png)
@@ -277,6 +261,22 @@ View the Power BI dashboards for insights and decision making. Selecting this op
 For detailed info about teh dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard).
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change.
+
+## Government reporting
+
+Use the government reporting apps to collect hospital and facility specific data for CDC reporting.
+
+- [COVID-19 patient impact](#covid-19-patient-impact---cdc-reporting)
+    <br> Collect COVID-19 patient details such as hospitalized, on ventilator, or awaiting beds in emergency department.
+
+- [Healthcare worker staffing](#healthcare-worker-staffing---cdc-reporting)
+    <br> Collect shortage data for staff such as physicians, RNs, pharmacists, therapists or other personnel.
+
+- [Bed capacity](#bed-capacity---cdc-reporting)
+    <br> Collect bed information such as ICU, Acute Care and surge capacity.
+
+- [Supply planning](#supply-planning---cdc-reporting)
+    <br> Collect supplies data such as masks, shields, gloves, gowns, PAPRs.
 
 ### COVID-19 patient impact - CDC reporting
 

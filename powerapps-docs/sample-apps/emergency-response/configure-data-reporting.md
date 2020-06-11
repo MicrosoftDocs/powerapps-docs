@@ -612,7 +612,9 @@ You can restore canvas apps to previous version that didn't use Canvas App Strin
 
 ## Download CDC data
 
-You can view, edit or download the Centers for Disease Control and Prevention (CDC) data that is captured by your frontline workers using the mobile appsso that you can upload the data to the CDC web site.
+You can view, edit or download the Centers for Disease Control and Prevention (CDC) data that is captured by your healthcare workers using the mobile app.
+
+sso that you can upload the data to the CDC web site.
 
 ## Issues and feedback
 
