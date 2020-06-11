@@ -17,7 +17,6 @@ search.app:
 # addPreSearch (Client API reference)
 
 
-
 Applies changes to lookups based on values current just as the user is about to view results for the lookup.
 
 ## Control types supported
