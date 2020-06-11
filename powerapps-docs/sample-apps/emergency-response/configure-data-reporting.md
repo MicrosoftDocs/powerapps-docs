@@ -616,9 +616,9 @@ You can restore canvas apps to previous version that didn't use Canvas App Strin
 
 ## Download CDC data
 
-You can download the Centers for Disease Control and Prevention (CDC) data in the **Download Data for CDC** app, which is entered by your healthcare workers [using the mobile app](use.md#government-reporting).
+Centers for Disease Control and Prevention (CDC) expects each hospital to report data in a certain format. The **Download Data for CDC** app lets you download the data for your facilities as in the CDC format. 
 
-After downloading the data as CSV files from the **Download Data for CDC** app, you can upload them to the CDC web site.
+This data is collated from various areas of the hospital solution such as informatiuon specified for each facility in the admin app, data reported by healthcare workers [using the mobile app](use.md).
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -630,6 +630,8 @@ After downloading the data as CSV files from the **Download Data for CDC** app, 
 
     > [!div class="mx-imgBorder"]
     > ![Download CDC data](media/download-cdc-data.png)
+
+After downloading the data as CSV files from the **Download Data for CDC** app, you can review and upload them to the CDC web site.
 
 ## Issues and feedback
 

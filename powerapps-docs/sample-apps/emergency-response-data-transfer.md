@@ -124,7 +124,7 @@ To enable these flows:
 
 1.  Select a flow name to open the flow definition. For example, select **Publish Bed Census Data**. 
 
-1.  Verify the embedded connections for this flow. These should be the same connections that you created earlier. If necessary, select **Edit** on the toolbar to authorize/fix the connections for the flow.
+1.  Select **Edit** on the toolbar and verify the embedded connections for this flow. These should be the same connections that you created earlier.
 
 1.  Select **Save** to save the changes, and then select **Turn On**.
 
@@ -167,7 +167,9 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
 
 > [!IMPORTANT]
 > For each hospital registering with regional organization to send data, the regional admins will need to do one of the following to ensure data for each hospital is copied from the SFTP server to the regional solution:
+>
 > - Copy data from all the hospitals to a single folder on the SFTP server to enable the **Create Record when a File is Created in SFTP Location** flow to copy all the data.
+>
 > - Create a copy of the **Create Record when a File is Created in SFTP Location** flow for each Hospital registering with them to send data, and in each flow instance change the SFTP server folder path as per the hospital. We'll show you how to do this later in this section.
 
 1.  Sign into [Power Automate](https://flow.microsoft.com/).
@@ -188,8 +190,11 @@ In this step, we will enable the **Create Record when a File is Created in SFTP 
 1.  If regional admins are expecting data from multiple hospitals that are stored in different folders on SFTP server, they can create copies of the **Create Record when a File is Created in SFTP Location** flow to create one for each hospital, and update the SFTP folder name accordingly in the copied flow instance. To do this:
 
     1. Select **Save As** on the toolbar to create a copy of the flow.
+    
     1. Rename the flow accordingly and save it. This flow will become available under **My flows**.
+    
     1. Select the flow to open it for editing. Select **Edit** on the toolbar.
+    
     1. Select **When a file is added or modified**, and select appropriate value in the **Folder** field:
         > [!div class="mx-imgBorder"] 
         > ![Edit the flow](media/edit-flow.png "Edit the flow")
