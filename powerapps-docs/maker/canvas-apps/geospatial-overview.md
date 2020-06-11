@@ -36,6 +36,12 @@ The following pre-built components can be used for geospatial and mapping scenar
 
 1. An admin must [enable the geospatial features in the Power Platform Admin Center](#enable-the-geospatial-features-for-the-environment) for the environment. This requires reviewing and agreeing to specific terms of service.
 2. [Enable the geospatial features for each app](#enable-the-geospatial-features-for-each-app).
+    
+    >[!IMPORTANT]
+    >The components require the default **Organizations** data source to be present. This data source is included whenever you insert the components into an app, but if you manually delete it you will need to add it before the components will work:
+    >1. With the component selected, go to the **Data sources** tab on the side navigation menu.
+    >2. In the search field, type **Organizations** and select the data source that appears. This will add it to the component.
+
 
 >[!NOTE]
 > These geospatial components are currently an experimental preview feature that is only available in [https://preview.create.powerapps.com](https://preview.create.powerapps.com) on a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
