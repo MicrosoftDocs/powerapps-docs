@@ -81,7 +81,10 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 Follow the steps below to install Hospital Emergency Response app along with the configuration and sample data.
 
 > [!NOTE]
-> The configuration and sample data is installed only for new installation. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure that your existing data isn't overwritten.
+> 
+> - The configuration and sample data is installed only for new installation. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure that your existing data isn't overwritten.
+>
+> - If you intend to transfer data from hospital to regional, make sure you create the connections as described in [Create connections](/powerapps/sample-apps/emergency-response-data-transfer#step-1-create-connections) before installing the solution. 
 
 You can install the app by using one of the following 3 options:
 
