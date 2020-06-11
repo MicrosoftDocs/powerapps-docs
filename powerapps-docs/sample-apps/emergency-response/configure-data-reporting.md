@@ -628,6 +628,9 @@ After downloading the data as CSV files from the **Download Data for CDC** app, 
  
 1. The following CDC data is available for each facility: **Patient Impact And Hospital Capacity**, **Healthcare Supplies**, and **Healthcare Worker Staffings**. Select a row, and then select **Download CSV** to download the data.
 
+    > [!div class="mx-imgBorder"]
+    > ![Download CDC data](media/download-cdc-data.png)
+
 ## Issues and feedback
 
 - To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
