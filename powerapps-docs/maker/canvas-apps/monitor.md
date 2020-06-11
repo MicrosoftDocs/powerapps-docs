@@ -96,7 +96,7 @@ You can also use Monitor to debug the published app in the web player. There are
    This opens the published app in a new browser tab, and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
 
    > [!NOTE]
-   > If you open the published app using this method, you'll have your app connected to the same Monitor session twice. The app being edited in Power Apps Studio and the published app in the web player. Events from both the Power Apps Studio and the published app will be shown in the Monitor if you interact with the apps at the same time.
+   > If you open the published app using this method, you'll have your app connected to the same Monitor session twice. The app being edited in Power Apps Studio and the published app in the web player. Events from both the Power Apps Studio and the published app will be shown in the Monitor if you interact with the app using both options at the same time.
 
 ### Open app Monitor for published app from Power Apps
  
