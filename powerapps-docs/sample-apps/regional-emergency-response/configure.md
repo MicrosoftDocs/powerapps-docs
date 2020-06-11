@@ -241,7 +241,7 @@ To create a record:
     | Total Pediatric ICU Beds (AIIR) Capacity    | Type the total pediatric ICU beds in AIIR.    |
     | Effective End Date           | Type end date and time for this facility.       |
     | Total Outpatient Bed Capacity       | Type the total number of outpatient bed capacity in the facility.   |
-    | Total Outflow/Surge/Expansion Bed Capacity           | Type the total number of outflow.surge/expansion beds the facility can have. These beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                              |
+    | Total Outflow/Surge/Expansion Bed Capacity           | Type the total number of outflow/surge/expansion beds the facility can have. These beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                              |
     | Does this facility have an Emergency Department/Overflow location?           | Select **Yes**/**No** to confirm if the facility has emergency department or overflow location(s).   |
     | AIIR Acute Care Capacity     | Type the total number of Acute care beds in AIIR .     |
     | Non-AIIR Acute Care Capacity | Type the total number of Acute care beds in non- AIIR (Airborne Infection Isolation Room).|
