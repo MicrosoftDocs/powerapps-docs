@@ -339,7 +339,7 @@ Select whether your facility is staffed for its inpatient bed capacity, and if y
 
 | **Option name**                                               | **Description**                                                                       |
 |---------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Is your facility staffed to its full licensed bed capacity?    | Yes/No. If the answer is No, can select one or more reasons from the  options: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
+| Is your facility staffed to its full licensed bed capacity?    | Yes/No. If the answer is No, can select one or more reasons from the following options: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
 | Are you able to surge beyond your licensed beds?              | Yes/No. If the answer is No, can select one or more reasons from the following options: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
 
 ### Supply planning - CDC reporting
