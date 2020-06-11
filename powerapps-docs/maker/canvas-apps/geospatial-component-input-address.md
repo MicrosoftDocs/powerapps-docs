@@ -7,16 +7,18 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 6/01/2020
+ms.date: 6/11/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-ms.custom: ceX
+ms.custom: ce06032020
 ---
 
-# Address input component
+# Address input component (Preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Entering addresses can be frustrating and error prone, particularly in mobile scenarios. 
 
