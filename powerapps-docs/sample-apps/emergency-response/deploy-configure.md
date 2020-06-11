@@ -496,6 +496,36 @@ This section provides information on how you can use the **Emergency Response Ap
 
 To view the published Power BI dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)
 
+## Enable flows for populating CDC data
+
+You must enable the following flows that help in collating the data in the format that Centers for Disease Control and Prevention (CDC) expects each hospital to report:
+
+- Populate CDC Data - Healthcare Staff
+- Populate CDC Data - Healthcare Supply
+- Populate CDC Data - Patients and Hospitals Capacities
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+2.  In the left pane, select **Solutions.** From the solution list, select **Hospital Emergency Response Solution** to open the solution.
+
+3.  In the solution, filter on **Flow** to find all the flows.
+
+4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
+
+5.  Specify the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
+
+    > [!div class="mx-imgBorder"] 
+    > ![Fix credential](media/authorize-cred.png "Fix credentials")
+
+6. Select **Save** to save the changes, and then select **Turn On**.
+
+7. Perform steps 4-6 with each of the following flows to authorize the connection, and then enable the flow:
+
+    - Process new Supplies Entry records
+    - Populate CDC Data - Healthcare Staff
+    - Populate CDC Data - Healthcare Supply
+    - Populate CDC Data - Patients and Hospitals Capacities
+
 ## Issues and feedback
 
 - To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
