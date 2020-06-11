@@ -1,20 +1,24 @@
 ---
-title: Configure master data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
+title: Configure data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
 description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2020
+ms.date: 06/10/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
   - PowerApps
 ---
-# Configure master data and view dashboards
+# Configure data and view dashboards
 
-This article provides information on how you can use the **Admin app** (model-driven app) to add and manage master data for your solution, use the Power BI dashboard to view key insights and metrics, and download the CDC data.
+This article provides information on how you can use:
+- **Admin** app to add and manage master data for your solution and configure the Power BI report URL 
+- **Power BI dashboard** to view key insights and metrics
+- **Canvas App Label Management** app to extend mobile app labels
+- **Download Data for CDC** app to download the CDC data
 
 These tasks are typically performed by business admins in your organization.
 
@@ -612,9 +616,17 @@ You can restore canvas apps to previous version that didn't use Canvas App Strin
 
 ## Download CDC data
 
-You can view, edit or download the Centers for Disease Control and Prevention (CDC) data that is captured by your healthcare workers using the mobile app.
+You can download the Centers for Disease Control and Prevention (CDC) data in the **Download Data for CDC** app, which is entered by your healthcare workers [using the mobile app](use.md#government-reporting).
 
-sso that you can upload the data to the CDC web site.
+After downloading the data as CSV files from the **Download Data for CDC** app, you can upload them to the CDC web site.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. From the left navigation pane, select **Apps** and then select **Download Data for CDC**.
+
+1. In the app, select one of the facilities to view the CDC data.
+ 
+1. The following CDC data is available for each facility: **Patient Impact And Hospital Capacity**, **Healthcare Supplies**, and **Healthcare Worker Staffings**. Select a row, and then select **Download CSV** to download the data.
 
 ## Issues and feedback
 
