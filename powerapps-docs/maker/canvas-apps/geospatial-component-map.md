@@ -48,10 +48,6 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 
     ![Allow highlighted on the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted on the window that asks to know your location")
 
->[!IMPORTANT]
->The component requires the default **Organizations** data source to be present. This data source is included whenever you insert the component into an app, but if you manually delete it you will need to add it before the component will work:
->1. With the component selected, go to the **Data sources** tab on the side navigation menu.
->2. In the search field, type **Organizations** and select the data source that appears. This will add it to the component.
 
 You can modify the component with a number of properties.
 
