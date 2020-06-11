@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2020
+ms.date: 06/10/2020
 ms.author: pankar
 ms.reviewer: kvivek
 searchScope:
@@ -496,9 +496,9 @@ This section provides information on how you can use the **Emergency Response Ap
 
 To view the published Power BI dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)
 
-## Enable flows for populating CDC data
+## Step 11: Enable flows for populating CDC data
 
-You must enable the following flows that help in collating the data in the format that Centers for Disease Control and Prevention (CDC) expects each hospital to report:
+You must enable the following flows that help in collating the data from various sources in the solution in the format that Centers for Disease Control and Prevention (CDC) expects each hospital to report:
 
 - Populate CDC Data - Healthcare Staff
 - Populate CDC Data - Healthcare Supply
@@ -510,19 +510,17 @@ You must enable the following flows that help in collating the data in the forma
 
 3.  In the solution, filter on **Flow** to find all the flows.
 
-4.  Select the flow name to open the flow definition. In the flow definition, select **Edit** on the toolbar.
+    > [!div class="mx-imgBorder"]
+    > ![all-flows](media/all-flows.png)
 
-5.  Specify the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
+4.  Select the flow name to open the flow definition. For example, **Populate CDC Data - Healthcare Staff**.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Fix credential](media/authorize-cred.png "Fix credentials")
+5.  Select **Edit** on the toolbar, and verify the connection information.  
 
 6. Select **Save** to save the changes, and then select **Turn On**.
 
-7. Perform steps 4-6 with each of the following flows to authorize the connection, and then enable the flow:
+7. Perform steps 4-6 with each of the following flows to verify the connection, and then enable the flow:
 
-    - Process new Supplies Entry records
-    - Populate CDC Data - Healthcare Staff
     - Populate CDC Data - Healthcare Supply
     - Populate CDC Data - Patients and Hospitals Capacities
 
@@ -534,4 +532,4 @@ You must enable the following flows that help in collating the data in the forma
 
 ## Next step
 
-[Use the Hospital Emergency Response app](use.md)
+[Configure the data and view reporting](configure-data-reporting.md)
