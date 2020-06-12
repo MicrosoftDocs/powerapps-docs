@@ -7,13 +7,13 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 6/11/2020
+ms.date: 6/12/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-ms.custom: ce06032020
+ms.custom: ce06122020
 
 ---
 
