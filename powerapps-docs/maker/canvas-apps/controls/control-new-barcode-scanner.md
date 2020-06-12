@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 11/25/2018
+ms.date: 06/12/2020
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
