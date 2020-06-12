@@ -38,7 +38,7 @@ Format of the recorded audio:
 Captured media is referenced by a text string URI. For more information, read the [data type documentation](../functions/data-types.md#uris-for-images-and-other-media).
 
 > [!NOTE]
-> The microphone control is supported only on Chrome, Edge Chromium, and Firefox as well as Android and iOS apps. On other browsers and platforms, users will see a warning that some features of the app won't work.
+> The microphone control is supported only on Microsoft Edge based on Chromium, Chrome, and Firefox browsers; and Android and iOS devices. All other browsers and platforms will show a warning that some of the app features won't work.
 
 ## Key properties
 
