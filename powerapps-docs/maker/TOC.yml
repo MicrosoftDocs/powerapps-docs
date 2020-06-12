@@ -910,15 +910,15 @@
       - name: SharePoint integration scenarios
         items:
         - name: SharePoint scenarios overview
-          href: ./canvas-apps/sharepoint/sharepoint-scenarios-intro.md
+          href: ./canvas-apps/sharepoint/scenarios-intro.md
         - name: How to filter a search list in an app?
-          href: ./canvas-apps/sharepoint/sharepoint-scenarios-filter-search-list.md
+          href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
         - name: How to use drop down list with choices from lookup column in a SharePoint list?
-          href: ./canvas-apps/sharepoint/sharepoint-scenarios-choice-to-lookup.md
+          href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
         - name: How to customize an app screen baed on column status inside SharePoint list?
-          href: ./canvas-apps/sharepoint/sharepoint-scenarios-customize-view-based-on-column-status.md
+          href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
         - name: How to work with permissions in a lookup list from SharePoint site?
-          href: ./canvas-apps/sharepoint/sharepoint-scenarios-lookup-list-permissions.md
+          href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps

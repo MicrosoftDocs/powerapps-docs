@@ -41,11 +41,11 @@ To use the ability to search using a text input and filter the records, you have
 
 1. Select **Text Input**.
 
-    ![Insert text input](./media/sharepoint-scenarios-filter-search-list/insert-text-input.png "Insert text input")
+    ![Insert text input](./media/scenarios-filter-search-list/insert-text-input.png "Insert text input")
 
 1. Likewise, insert a **Data table**.
 
-    ![Insert data table](./media/sharepoint-scenarios-filter-search-list/insert-data-table.png "Insert data table")
+    ![Insert data table](./media/scenarios-filter-search-list/insert-data-table.png "Insert data table")
 
 1. Update the **Items** property of the data table with the following formula:
 
@@ -53,13 +53,13 @@ To use the ability to search using a text input and filter the records, you have
 
     Replace **Colors** with the name of your SharePoint list, **Title** with the name of column in the list, and **TextInput1** with your text input control name.
 
-    ![Filter formula](./media/sharepoint-scenarios-filter-search-list/filter-formula.png "Filter formula")
+    ![Filter formula](./media/scenarios-filter-search-list/filter-formula.png "Filter formula")
 
 1. Play the app.
 
 1. Enter text, such as 'B' to filter items starting with 'B'.
 
-    ![Colors](./media/sharepoint-scenarios-filter-search-list/colors.png "Colors")
+    ![Colors](./media/scenarios-filter-search-list/colors.png "Colors")
 
 ### See also
 
