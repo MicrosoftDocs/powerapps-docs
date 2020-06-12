@@ -20,7 +20,7 @@ A control that enables app users to record sounds from their device.
 
 ## Description
 
-Use the **Microphone** control to capture audio with a device's microphone.  The device must have a microphone and the user must authorize the app to use the microphone. 
+Use the **Microphone** control to capture audio with a device's microphone. The device must have a microphone and the user must authorize the app to use the microphone. 
 
 The most recently recorded audio clip is available through the **Audio** property. With this property, recorded audio can be:
 
