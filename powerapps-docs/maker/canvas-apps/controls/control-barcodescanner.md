@@ -20,7 +20,7 @@ The legacy barcode scanning control, which is obsolete but might be useful for s
 
 ## Description
 
-The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete due to poor performance, and the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control replaces this control.
+The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete because of poor performance, and the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control replaces this control.
 
 > [!NOTE]
 > The web barcode scanner control is supported only on Chrome, Edge, Firefox, and Opera. On other browsers and platforms, users will see a warning that some features of the app won't work.
@@ -83,7 +83,7 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
 ### Video alternatives
 
-* Consider adding a **[Label](control-text-box.md)** with its **[Text](properties-core.md)** set to the barcode scanner's **Text**. Since the barcode scanner does not display the identified barcode value, doing the above makes the scanner accessible to everyone, not just those with visual disabilities.
+* Consider adding a **[Label](control-text-box.md)** with its **[Text](properties-core.md)** set to the barcode scanner's **Text**. Since the barcode scanner doesn't display the identified barcode value, doing the above makes the scanner accessible to everyone, not just those with visual disabilities.
 
 ### Screen reader support
 
