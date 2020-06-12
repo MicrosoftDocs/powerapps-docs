@@ -57,9 +57,9 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen, if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen, if no parent container).
 
 ## Related functions
 
