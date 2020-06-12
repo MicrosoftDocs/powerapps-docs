@@ -7,17 +7,19 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 6/01/2020
+ms.date: 6/11/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
-ms.custom: ceX
+ms.custom: ce06032020
 ---
 
 
-# Interactive map component
+# Interactive map component (Preview)
+
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of entities from a data source, or by inputting new physical locations. 
 
@@ -45,6 +47,7 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 4. (Optional) Select **Allow** on the prompt that asks to know your location. This enables the component to display the user's current location.
 
     ![Allow highlighted on the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted on the window that asks to know your location")
+
 
 You can modify the component with a number of properties.
 

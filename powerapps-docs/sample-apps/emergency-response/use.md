@@ -5,7 +5,7 @@ author: pankajarora-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 ms.author: pankar
 ms.reviewer: tapanm
 searchScope:
@@ -56,10 +56,7 @@ The Hospital Emergency Response sample solution app consists of multiple apps fo
 
 ## Hospital operations
 
-Use the hospital operations apps to collect hospital and facility specific data for hospital management.
-
-- [Bed capacity](#bed-capacity)
-    <br> Collect bed information such as licensed beds, ICU beds, pediatric ICU/Acute Care beds, and other bed capacity data.
+Use the hospital operations apps to collect hospital and facility-specific data for hospital management.
 
 - [COVID-19 stats](#covid-19-stats)
     <br> Collect status on how many patients are under investigation for COVID-19 and how many tested positive.
@@ -80,36 +77,8 @@ Use the hospital operations apps to collect hospital and facility specific data 
 - [Discharge planning](#discharge-planning)
     <br> Collect status and projections on ​patient discharges.
 
-- [Dashboard](#dashboard)
-    <br> View the Power BI dashboard for insights and decision making.
-
 > [!NOTE]
 > By default, you can track information in the following apps at a *location* level: **COVID-19 stats**, **Equipment**, and **Staff**. In rest of the apps, you can track information at the *facility* level by default. Your admin can change the default tracking level, if required. More information: [Manage tracking level for mobile apps](configure-data-reporting.md#manage-tracking-level-for-mobile-apps)
-
-### Bed capacity
-
-![Bed capacity](media/use/bed-capacity.png)
-
-Submit bed-related information such as licensed beds, ICU (AIIR/non-AIIR) beds, Acute Care (AIIR/non-AIIR) beds and whether the selected facility is staffed to full license bed capacity.
-
-Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
-
-After you submit the data, select **Home** to go back to **Hospital Emergency Response app**.
-
-#### Fields and description
-
-| **Option name**                                               | **Description**                                                                       |
-|---------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| How many licensed beds are currently in use in this facility? | Number of licensed beds currently in use at this facility.                            |
-| # of ICU Beds (AIIR Room) in use               | Number of ICU Beds in Airborne Infection Isolation Room (AIIR Room) currently in use.                                      |
-| # of ICU Beds (non-AIIR Room) in use           | Number of ICU Beds (non-AIIR Room) currently in use.                                  |
-| # of Acute Care Beds (AIIR Room) in use        | Number of Acute Care Beds (AIIR Room) currently in use.                               |
-| # of Acute Care Beds (non-AIIR Room) in use    | Number of Acute Care Beds (non-AIIR Room) currently in use.                           |
-| Is facility staffed to its full licensed bed capacity?    | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume |
-| Are you able to surge beyond licensed beds?              | Yes/No If the answer is No, you have the option to select all the reasons that apply: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
-| # of surge beds currently in use                         | Number of surge beds currently in use.                                                |
-| # of Pediatric ICU Beds (AIIR and non-AIIR) currently in use | Number of Pediatric ICU Beds (AIIR and non-AIIR) currently in use at this facility. |
-| # of Pediatric Acute Care Beds (AIIR and non-AIIR) currently in use | Number of Pediatric Acute Care Beds (AIIR and non-AIIR) currently in use at this facility. |  
 
 ### COVID-19 stats
 
@@ -120,7 +89,7 @@ update the location-specific patient details such as PUIs, positives, intubated,
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
-After you submit the data, you have the option to go back to the **COVID-19 stats** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+After you submit the data, you can go back to the **COVID-19 stats** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
 
 #### Fields and description
 
@@ -140,7 +109,7 @@ Submit location-specific equipment details using the **Equipment** app. You 
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
-After you submit the data, you have the option to go back to the **Equipment** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+After you submit the data, you can go back to the **Equipment** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
 
 #### Fields and description
 
@@ -166,7 +135,7 @@ enter 3 in the **Registered nurses on duty - Requested** field and select
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered.
 
-After you submit the data, you have the option to go back to the **Staff** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
+After you submit the data, you can go back to the **Staff** app to create another record using the **Track another** button. Select **Home** to go back to **Hospital Emergency Response app**.
 
 #### Fields and description
 
@@ -179,8 +148,6 @@ After you submit the data, you have the option to go back to the **Staff** app t
 | *Requested* <br> # of RNs requested                  | Number of Registered Nurses requested for the selected location.                                  |
 | *Assigned* <br> # of RNs with an assignment                   | Number of Registered Nurses assigned to the selected location.                                    |
 | *Unassigned* <br> # of RNs unassigned to any task                  | Number of Registered Nurses not assigned to any task at the selected location.                    |
-| **Facility level tracking** |                                                                                                   |
-| % of essential care personnel currently absent in this facility                  | Essential care personnel currently absent in percentage format of the total for **entire facility**.                    |
 
 ### Supplies
 
@@ -254,26 +221,26 @@ Select **Back** from top-left if you want to go back to the **Hospital Emergency
 | Past 24 h                 | Number of patients expected to be discharged in last 24 hours.  |
 | Likely next 24 h          | Number of patients discharged in last 24 hours.                    |
 
-## Dashboard
+## Insights
 
-View the Power BI dashboards for insights and decision making. Selecting this option will open the Power BI dashboard in your mobile device browser.
+View the Power BI dashboards for insights and decision making using the **Dashboard** app. Selecting this option will open the Power BI dashboard in your mobile device browser.
 
-For detailed info about teh dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard).
+For detailed info about the dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard).
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change.
 
 ## Government reporting
 
-Use the government reporting apps to collect hospital and facility specific data for CDC reporting.
+Use the government reporting apps to collect hospital and facility-specific data for CDC reporting.
 
 - [COVID-19 patient impact](#covid-19-patient-impact---cdc-reporting)
     <br> Collect COVID-19 patient details such as hospitalized, on ventilator, or awaiting beds in emergency department.
 
 - [Healthcare worker staffing](#healthcare-worker-staffing---cdc-reporting)
-    <br> Collect shortage data for staff such as physicians, RNs, pharmacists, therapists or other personnel.
+    <br> Collect shortage data for staff such as physicians, RNs, pharmacists, therapists, or other personnel.
 
 - [Bed capacity](#bed-capacity---cdc-reporting)
-    <br> Collect bed information such as ICU, Acute Care and surge capacity.
+    <br> Collect bed information such as ICU, Acute Care, and surge capacity.
 
 - [Supply planning](#supply-planning---cdc-reporting)
     <br> Collect supplies data such as masks, shields, gloves, gowns, PAPRs.
@@ -282,7 +249,7 @@ Use the government reporting apps to collect hospital and facility specific data
 
 ![COVID-19 patient impact - CDC reporting](media/use/cdc-covid-19-patient-impact.png)
 
-Use the **COVID-19 patient impact** app to submit COVID-19 suspected and confirmed patient information such as hospitalized patients, onset numbers, emergency department and overflow information. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
+Use the **COVID-19 patient impact** app to submit COVID-19 suspected and confirmed patient information such as hospitalized patients, onset numbers, emergency department, and overflow information. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
 
@@ -321,7 +288,7 @@ Only available if the facility is enabled for emergency department or overflow l
 
 ![Healthcare worker staffing - CDC reporting](media/use/cdc-healthcare-worker-staffing.png)
 
-Collect shortage information for staffing such as physicians, RNs, licensed practitioners, pharmacists or therapists using the **Healthcare worker staffing** app. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
+Collect shortage information for staffing such as physicians, RNs, licensed practitioners, pharmacists, or therapists using the **Healthcare worker staffing** app. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
 
@@ -335,7 +302,7 @@ IT Administrators can add or update the **Healthcare worker staffing** app items
 
 ![Bed capacity - CDC reporting](media/use/cdc-bed-capacity.png)
 
-Collect bed information such as ICU/AIIR availability, occupancy in other areas or inpatient staffing/surge capacity using the **Bed capacity** app. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
+Collect bed information such as ICU/AIIR availability, occupancy in other areas, or inpatient staffing/surge capacity using the **Bed capacity** app. After you submit the data using this app, model-driven app can be used to download and save data for governmental reporting, such as upload to the CDC web site.
 
 Select **Back** from top-left if you want to go back to the **Hospital Emergency Response app** without submitting any change. **Submit** button submits values you entered. Select **Home** to go back to **Hospital Emergency Response app** after you submit.
 
@@ -350,7 +317,7 @@ Occupancy for staffed adult and pediatric inpatient beds that are in the ICU or 
 | ICU beds (AIIR Room) | Number of Intensive Care Unit (ICU) beds in Airborne Infection Isolation Rooms occupied currently. |
 | ICU beds (non-AIIR Room) | Number of ICU beds in non-AIIR rooms occupied currently.
 | Acute Care beds (AIIR Room) | Number of Acute Care beds (AIIR Room) occupied currently. |
-| Acure Care beds (non-AIIR Room) | Number of Acure Care beds (non-AIIR Room) occupied currently.
+| Acute Care beds (non-AIIR Room) | Number of Acute Care beds (non-AIIR Room) occupied currently.
 
 > [!NOTE]
 > Pediatric occupancy options are disabled if the capacity isn't set to at least 1 at the selected facility.
@@ -372,8 +339,8 @@ Select whether your facility is staffed for its inpatient bed capacity, and if y
 
 | **Option name**                                               | **Description**                                                                       |
 |---------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Is your facility staffed to its full licensed bed capacity?    | Yes/No. If the answer is No, can select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
-| Are you able to surge beyond your licensed beds?              | Yes/No. If the answer is No, can select one or more reasons from the following: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
+| Is your facility staffed to its full licensed bed capacity?    | Yes/No. If the answer is No, can select one or more reasons from the following options: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
+| Are you able to surge beyond your licensed beds?              | Yes/No. If the answer is No, can select one or more reasons from the following options: <br> - Staff <br> - Space <br> - PPE <br> - Equipment <br> - Low Patient Volume  |
 
 ### Supply planning - CDC reporting
 
@@ -398,7 +365,7 @@ model-driven app for Power Apps. For more information, see [configuration guide]
 - More information about conservation strategy available at [Conservation Strategies for Personal Protective Equipment](https://www.doh.wa.gov/Portals/1/Documents/1600/coronavirus/ConservationStrat-PPE.pdf).
 - **Extended use**: Wearing for repeated close contact encounters with several patients without removing between patients.
 - **Reuse**: Using same PPE for multiple encounters with patients but removing it (*doffing*) after each encounter.
-- **Ventilator Disposables use/reuse**: When considering definitions for extended use or reusing ventilator supplies, please refer to the [Scarce Resource Management and Crisis Standards of Care Overview](https://nwhrn.org/wp-content/uploads/2018/10/Scarce_Resource_Management_and_Crisis_Standards_of_Care_Overview_and_Materials-2020-04-10.pdf) document.
+- **Ventilator Disposables use/reuse**: When considering definitions for extended use or reusing ventilator supplies, refer to the [Scarce Resource Management and Crisis Standards of Care Overview](https://nwhrn.org/wp-content/uploads/2018/10/Scarce_Resource_Management_and_Crisis_Standards_of_Care_Overview_and_Materials-2020-04-10.pdf) document.
     <table>
       <tr>
         <th>WA Health</th>
@@ -417,7 +384,7 @@ model-driven app for Power Apps. For more information, see [configuration guide]
         <td>Crisis</td>
       </tr>
     </table>
-- **Ventilator supplies (disposables)**: When considering definitions for *ventilator supplies (disposable)*, please refer to [CDC NHSN](https://www.cdc.gov/nhsn/) website.
+- **Ventilator supplies (disposables)**: When considering definitions for *ventilator supplies (disposable)*, refer to [CDC NHSN](https://www.cdc.gov/nhsn/) website.
 
 ## Other options
 
