@@ -229,7 +229,9 @@ Use the **Delete field** command to delete the field. After deleting the field y
 
 > [!WARNING]
 > IME mode is obsolete. Power Apps is based on web technologies and this feature has been [removed from industry standards](https://drafts.csswg.org/css-ui-3/#input-method-editor). Unified Interface apps do not support IME mode.
+>
 > IME mode does not make sense with modern IMEs, which include touchscreen keyboards. Browsers that still support this may end support at any time. Hence, this feature may stop working even for legacy Web Client apps.
+>
 > Consider using features provided by your operating system for convenient text entry. For example, in Windows 10 and Mac OS X, users with a physical keyboard can automatically switch between Japanese kana and Roman characters. Set input method to romaji. Press Shift+_letter_ key to immediately enter a Roman character. Focusing on another text field will automatically switch back to kana input.
 
 IME (input method editor) mode specifies how a physical keyboard can be used to enter characters for text fields. IMEs are tools provided by the operating system for composing text. They are commonly used to enter Chinese, Japanese, and Korean words.
