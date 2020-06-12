@@ -171,7 +171,7 @@ Use the [SaveData](../functions/function-savedata-loaddata.md) function to save 
     
 1. [Add](../add-configure-controls.md) a [Drop down](control-drop-down.md) control.
 
-1. Set the **Items** prroperty of the dropdown to:
+1. Set the **Items** property of the dropdown to:
 
     ```powerapps-dot
     Camera1.AvailableDevices
