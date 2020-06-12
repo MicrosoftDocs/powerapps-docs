@@ -31,10 +31,15 @@
       "redirect_document_id": "false"
     }, 
     {
+      "source_path": "powerapps-docs/developer/common-data-service/package-deployer/create-packages-package-deployer.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/package-deployer-tool",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "powerapps-docs/maker/common-data-service/create-edit-entities.md",
       "redirect_url": "data-platform-create-entity",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/common-data-service/solution-patches.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/update-solutions-alm#create-solution-patches",
