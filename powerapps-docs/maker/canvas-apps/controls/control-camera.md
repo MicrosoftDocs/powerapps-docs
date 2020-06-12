@@ -21,7 +21,7 @@ A control that enables users to take pictures using the camera on a device.
 
 ## Description
 
-Use the **Camera** control to capture pictures with a device's camera.  The device must have a camera and the user must authorize the app to use the camera.
+Use the **Camera** control to capture pictures with a device's camera. The device must have a camera and the user must authorize the app to use the camera.
 
 The most recently captured picture is available through the **Photo** property. With this property, the images can be:
 
