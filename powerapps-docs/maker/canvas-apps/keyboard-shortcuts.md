@@ -1,14 +1,14 @@
 ---
 title: Keyboard shortcuts for canvas apps | Microsoft Docs
 description: Keyboard shortcuts for canvas apps
-author: tapanm-msft
+author: adrianorth
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 02/09/2020
-ms.author: tapanm
+ms.reviewer: tapanm
+ms.date: 06/12/2020
+ms.author: aorth
 search.audienceType: 
   - maker
 search.app: 
