@@ -18,7 +18,7 @@ ms.custom: ce06032020
 
 
 # Interactive map component (Preview)
-<!--note from editor: Where applicable, please see geospatial-component-input-address.md for explanations of edits in this article.-->
+
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 Easily bring dynamic mapping capabilities into your canvas apps by viewing the physical position of entities from a data source, or by inputting new physical locations.
@@ -52,11 +52,11 @@ You can modify the component by using a number of properties.
 
 ### Properties
 
-The following properties can be defined and configured in the component's **Properties** pane.<!--Please check the alt text and make it better!-->
+The following properties can be defined and configured in the component's **Properties** pane.
 
 ![Map component displayed next to its Properties pane](./media/augmented-geospatial/geospatial-controls.png "Map component displayed next to its Properties pane")
 
-Note that some properties are only available on the **Advanced** tab in the **Properties** pane, in the **More options** section.<!--Edit okay? If it is a button you have to select, this should be worded as a procedure step. -->
+Note that some properties are only available on the **Advanced** tab in the **Properties** pane, in the **More options** section.
 
 | Property | Description | Type | Location |
 | - | - | - | - |
@@ -111,4 +111,4 @@ Note that some properties are only available on the **Advanced** tab in the **Pr
 
 ## Other geospatial components
 
-To see dynamic address suggestions as you type, use <!--Suggested.-->the **[Address input](geospatial-component-input-address.md)** component.
+To see dynamic address suggestions as you type, use the **[Address input](geospatial-component-input-address.md)** component.
