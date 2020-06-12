@@ -9,9 +9,6 @@ ms.custom:
 ms.date: 06/04/2020
 ms.author: dileeps
 ms.reviewer:
-searchScope:
-  - GetStarted
-  - PowerApps
 ---
 # Power Apps Community Plan: a free development environment for individual use
 If you want to build skills and learn more about Power Apps, Power Automate, and the Common Data Service, the Power Apps Community Plan is the right plan for you. The Power Apps Community Plan gives you a free development environment for individual use, where you can:
