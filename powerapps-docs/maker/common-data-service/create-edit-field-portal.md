@@ -227,9 +227,20 @@ Use the **Delete field** command to delete the field. After deleting the field y
 
 ## IME Mode
 
-Any of the fields that provide direct text input have an IME Mode. The Input Method Editor (IME) is used for east asian languages like Japanese. IMEs allow the user to enter the thousands of different characters used in east asian written languages using a standard 101-key keyboard.
+> [!WARNING]
+> IME mode is obsolete. Power Apps is based on web technologies and this feature has been [removed from industry standards](https://drafts.csswg.org/css-ui-3/#input-method-editor). Unified Interface apps do not support IME mode.
+> IME mode does not make sense with modern IMEs, which include touchscreen keyboards. Browsers that still support this may end support at any time. Hence, this feature may stop working even for legacy Web Client apps.
+> Consider using features provided by your operating system for convenient text entry. For example, in Windows 10 and Mac OS X, users with a physical keyboard can automatically switch between Japanese kana and Roman characters. Set input method to romaji. Press Shift+_letter_ key to immediately enter a Roman character. Focusing on another text field will automatically switch back to kana input.
 
+IME (input method editor) mode specifies how a physical keyboard can be used to enter characters for text fields. IMEs are tools provided by the operating system for composing text. They are commonly used to enter Chinese, Japanese, and Korean words.
 
+When IME mode is auto, Power Apps will not interfere with the IME. This is the recommended setting.
+
+Disable IME mode to bypass the IME. This can be useful for entering alphanumeric characters.
+
+IME mode does not restrict the characters that users can enter. For example, when IME mode is disabled, users can still enter Japanese characters by pasting in a text input.
+
+IME mode is supported only in Internet Explorer and partially supported in Firefox.
 
 ### See also  
 [Create and edit fields for Common Data Service](create-edit-fields.md)<br />
