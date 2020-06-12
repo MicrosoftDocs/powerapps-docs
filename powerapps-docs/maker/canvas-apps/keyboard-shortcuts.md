@@ -36,8 +36,6 @@ search.app:
 |--|--|
 | Enter | Run the selected command. |
 | Tab | Move between commands on the selected tab and then to the next tab. |
-| Ctrl+F6 | Navigate to the next landmark. |
-| Ctrl+Shift+F6 | Navigate to the previous landmark. |
 | Alt+I | Select the **Insert** tab. |
 
 ## Editing
@@ -133,6 +131,8 @@ The Alt key can also be used *after* a control has been selected to override sna
 | Shortcut | Action |
 |--|--|
 | F1 | Open documentation. |
+| Ctrl+F6 | Navigate to the next landmark. |
+| Ctrl+Shift+F6 | Navigate to the previous landmark. |
 | Shift+F10 | Open a shortcut menu in, for example, **Tree view**. |
 
 
