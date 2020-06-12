@@ -23,7 +23,7 @@ The legacy barcode scanning control, which is obsolete but might be useful for s
 The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete because of poor performance, and the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control replaces this control.
 
 > [!NOTE]
-> The web barcode scanner control is supported only on Chrome, Edge, Firefox, and Opera. On other browsers and platforms, users will see a warning that some features of the app won't work.
+> The web barcode scanner control is only supported on Microsoft Edge, Chrome, Firefox and Opera browsers. All other browsers will show a warning that some features of the app won't work.
 
 ## Key properties
 
