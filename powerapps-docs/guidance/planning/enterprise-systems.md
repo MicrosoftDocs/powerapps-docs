@@ -69,7 +69,7 @@ many people use the app simultaneously, not having enough bandwidth will cause
 the app to take a long time to respond. More information:[Web application requirements](https://docs.microsoft.com/power-platform/admin/web-application-requirements)
 
 To find out the network speed of your organization, use the [Network Speed Test](https://www.microsoft.com/p/network-speed-test/9wzdncrfhx52)
-from Microsoft Store (free of charge) and also [diagnostic tools](https://docs.microsoft.com/en-us/power-platform/admin/verify-network-capacity-throughput-clients)
+from Microsoft Store (free of charge) and also [diagnostic tools](https://docs.microsoft.com/power-platform/admin/verify-network-capacity-throughput-clients)
 specifically for model-driven apps.
 
 ### Database tuning of the data source
@@ -85,8 +85,7 @@ app that searches by using phone number. The data won't have been indexed to hel
 Indexing helps your apps speed up searches, and when an index is missing
 it takes longer to search and query for data. You might need to contact the IT
 team for the data source to discuss how you'll access the data and add
-additional indexes. For more information about indexing with SQL Server, see [SQL Server Index Architecture and Design
-Guide](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide?view=sql-server-ver15).
+additional indexes. For more information about indexing with SQL Server, see [SQL Server Index Architecture and Design Guide](https://docs.microsoft.com/sql/relational-databases/sql-server-index-design-guide?view=sql-server-ver15).
 
 ### Server specification of on-premises systems
 

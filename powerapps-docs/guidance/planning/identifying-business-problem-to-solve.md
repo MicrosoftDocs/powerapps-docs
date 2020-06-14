@@ -1,7 +1,6 @@
 ---
 title: Power Apps - Identifying the business problem to solve | Microsoft Docs
-description: The first step in using Microsoft Power Platform to solve a business problem is
-deciding what problem you want to tackle. Learn about common Power Apps use cases.
+description: The first step in using Microsoft Power Platform to solve a business problem is deciding what problem you want to tackle. Learn about common Power Apps use cases.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual

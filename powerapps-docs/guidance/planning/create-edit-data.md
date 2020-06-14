@@ -1,5 +1,5 @@
 ---
-title: Planning - Will yor app create or edit data? | Microsoft Docs
+title: Planning - Will your app create or edit data? | Microsoft Docs
 description: As part of the planning phase of a Power Apps project, here are some things to consider for each data element your solution needs to capture.
 author: TGrounds
 ms.service: powerapps
