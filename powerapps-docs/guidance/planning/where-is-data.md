@@ -1,12 +1,12 @@
 ---
-title: Where is the data | Microsoft Docs
-description: Where is the data
-author: TGrounds
+title: Accessing and storing data for a Power Apps project | Microsoft Docs
+description: As part of the design phase of a Power Apps project, document where and how you'll access existing data you need, and decide where you'll store data you create.
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kathyos
 searchScope:  
   - PowerApps
@@ -22,7 +22,9 @@ You can retrieve and store data three different ways.
 
         **New data** If your app is creating data that doesn't already exist anywhere, such
         as in situations where the existing business process was done using paper, we recommend storing
-        the data either in Common Data Service or a SharePoint custom list.
+        the data either in Common Data Service or a SharePoint custom list. 
+        
+        We'll discuss this topic in [Data modeling: Designing your data structure](data-modeling.md).
     :::column-end:::
    :::column:::
         ![Read/write from existing system](media/read-write.png "Read/write from existing system")
@@ -61,7 +63,7 @@ retrieving the data as-is from the data source, you can use Power Query
 Online to manipulate, cleanse, and transform data before you store it to the
 target storage. More information: [Self-service data prep with dataflows](../../maker/common-data-service/self-service-data-prep-with-dataflows.md)
 
-The method you choose depends on your use cases and how data needs to be handled. The following table lists some items to use for comparison.<!--Suggested.-->
+The method you choose depends on your use cases and how data needs to be handled. The following table lists some items to use for comparison.
 
 |   Item to compare     | Connectors                                   | Dataflow                                           |
 |-----------------------|----------------------------------------------|----------------------------------------------------|
@@ -69,6 +71,8 @@ The method you choose depends on your use cases and how data needs to be handled
 | Direction             | Bidirectional                                | One direction (from origin to Common Data Service) |
 | Modify existing data? | Yes                                          | No                                                 |
 | Use cases             | Production order, Timesheet, Sales quotation | Customer master, Past invoices, Employee list      |
+
+We provide additional technical information in the next article, [Working with enterprise systems](enterprise-systems.md).
 
 ## Example: Expense report data
 

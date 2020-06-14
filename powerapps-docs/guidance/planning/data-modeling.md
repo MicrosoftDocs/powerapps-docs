@@ -1,12 +1,13 @@
 ---
 title: Designing your data structure | Microsoft Docs
-description: Designing your data structure
-author: TGrounds
+description: When you're storing or viewing data with your app, an important part of the
+design is the data structure. Learn key considerations for data modeling.
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kathyos
 searchScope:  
   - PowerApps
@@ -14,7 +15,7 @@ searchScope:
 
 # Data modeling: Designing your data structure
 
-When you're storing or viewing data for your app, an important part of the
+When you're storing or viewing data with your app, an important part of the
 design is the data structure. Consider not just how the data will be used in one
 specific app or screen, but how others will use the data. Referring back to
 your personas, tasks, business process, and goals will help you define what data

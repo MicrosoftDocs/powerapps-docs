@@ -1,6 +1,6 @@
 ---
-title: Making apps discoverable | Microsoft Docs
-description: Making apps discoverable
+title: Deploying a Power Apps project - Discoverability | Microsoft Docs
+description: Get your app into the hands of your users by making it available for production use. Then, explore various ways to make your app discoverable.
 author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
@@ -17,7 +17,7 @@ searchScope:
 Congratulations! You made your first app, and it's tested and ready to go!
 
 However, making the first version of your app isn't the end of the Power Apps journey.
-You need to get your app into the hands of your users by making it ready for production use. 
+You need to get your app into the hands of your users by making it available for production use. 
 
 After you launch the app, you'll want to make sure it's working well and meeting your objectives. In the majority of cases, you can expect to get requests for new features or fixes, or you'll need to accommodate a business process that has changed. 
 
@@ -68,13 +68,6 @@ to make apps discoverable, as described in the following sections.
 The [Featured Apps](https://powerapps.microsoft.com/blog/powerapps-discoverability-in-the-enterprise/) list
 is a good way to showcase your app if it was meant to be used
 by the entire company&mdash;for example, for employee search or company news.
-<!-- The change of voice and level of detail in this next paragraph is jarring. Since you've linked to the blog post whence it comes, suggest deleting it from here.-->
-<!--When a user opens the Power Apps mobile player for the first time, they'll see
-the My Apps view, showing any apps that they've launched in the past. If this is
-their first exposure to Power Apps, this might be a lonely place. A quick tap on
-the dropdown at the top reveals different views for ‘All apps', ‘Sample apps',
-‘Favorites', and ‘Featured apps'. Getting your enterprise apps into the Featured
-App list is a great way to increase your discoverability.-->
 
 For information about how to use PowerShell scripts with Power Apps to set up Featured
 Apps, see [PowerShell support for Power Apps](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview)
@@ -87,7 +80,7 @@ hold the Home button while using the camera to recognize QR codes.
 
 Bing has a QR code generator where you can paste in a URL and it
 will instantly generate a QR code image for you. Right-click the
-QR code image, copy it, and then paste it into your communications as you advertize your app.<!--Suggest deleting this, we're not talking about campaigns in this docset. You can also create unique URLs and QR codes for each method of communication so you can measure the effectiveness of your campaigns.-->
+QR code image, copy it, and then paste it into your communications as you advertize your app.
 
 ![The Bing QR code generator](media/qr-codes.png "The Bing QR code generator")
 
@@ -107,8 +100,8 @@ You can embed your app as one of the tabs inside of Teams.
 This is a great way of increasing user satisfaction if this app is to be used in
 scenarios that require going back and forth between Teams and the existing
 process.
-<!--This screenshot uses the name "CT Electronics," which I don't find in the list of approved fictitious company names. Can you change it to "Contoso" or another name on CELAweb's list?-->
-![A screenshot of an app embedded in Teams](media/teams-embedding.png "A screenshot of an app embedded in Teams")
+
+![A screenshot of an app embedded in Teams](media/add-app-as-tab.png "A screenshot of an app embedded in Teams")
 
 More information: [Embed an app in Teams](../../maker/canvas-apps/embed-teams-app.md)
 

@@ -1,6 +1,7 @@
 ---
-title: Collecting feedback and analyzing telemetry | Microsoft Docs
-description: Collecting feedback and analyzing telemetry
+title: Power Apps projects - Feedback and telemetry | Microsoft Docs
+description: As a way to help you refine and improve your app, collecting feedback and analyzing the
+telemetry is an important part of the refining process.
 author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual

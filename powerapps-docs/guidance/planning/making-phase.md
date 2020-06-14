@@ -1,6 +1,6 @@
 ---
-title: Making Phase | Microsoft Docs
-description: Making Phase
+title:  Making Phase - Planning a Power Apps project | Microsoft Docs
+description: You've now planned and designed your app. The next step is to actually make it. This article provides an overview of steps for creating canvas apps and model-driven apps.
 author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
@@ -63,7 +63,7 @@ The following are the basic steps for creating model-driven apps.
     [entities](../../maker/common-data-service/entity-overview.md)
     and [fields](../../maker/common-data-service/fields-overview.md).
 
-3. Set up [security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).<!--Edit okay?-->
+3. Set up [security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).
 
 4. Create a site map by setting up a new [model-driven app](../../maker/model-driven-apps/build-first-model-driven-app.md).
 
@@ -80,8 +80,8 @@ More information: [Understand model-driven app components](../../maker/model-dri
 
 ## Developing solutions collaboratively
 
-When developing your solutions with multiple app makers, you can  ways of
-collaborating depending on which type of application you're making.
+When developing your solutions with multiple app makers, 
+collaboration techniques depend on which type of application you're making.
 
 ### Canvas apps
 

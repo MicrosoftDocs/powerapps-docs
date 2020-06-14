@@ -1,6 +1,6 @@
 ---
-title: Identifying the tasks to be done in the app | Microsoft Docs
-description: Identifying the tasks to be done in the app
+title: Designing - Tasks to be done in an app | Microsoft Docs
+description: As part of the design phase of a Power Apps project, learn how to identify the tasks to be done in the app.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual

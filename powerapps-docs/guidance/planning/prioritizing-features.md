@@ -1,12 +1,12 @@
 ---
-title: Prioritizing features and requests | Microsoft Docs
-description: Prioritizing features and requests
-author: TGrounds
+title: Planning - Prioritizing features and requests | Microsoft Docs
+description: Following a systematic approach to prioritizing feature requests for your Power Apps project will  help you prioritize the right features and explain your decisions.
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kathyos
 searchScope:  
   - PowerApps
@@ -16,7 +16,7 @@ searchScope:
 
 Prioritizing different requests can sometimes be difficult and intimidating.
 Following a relatively quantifiable approach will not only help you prioritize
-the right<!--Suggested.--> features, but also help you explain your decisions to the
+the right features, but also help you explain your decisions to the
 people who requested the features.
 
 The first step in prioritizing features is to make sure you record every request,
@@ -33,11 +33,11 @@ The following table shows an example of how you can record each feature.
 |----------------------------|---------------------|------------------------------|------------------------|
 | View the list of approval requests    | Yes         |               |                        |
 | Real-time push notification to users on their mobile phone when an approval request is received | No                      | Easy                             | High                   |
-| Draft save feature for expense reports<!--Edit okay?--> that haven't been submitted | No        | Hard      | Medium                 |
+| Draft save feature for expense reports that haven't been submitted | No        | Hard      | Medium                 |
 | Integrate with ERP system     | No               | Hard                     | Very high      |
 
 > [!TIP]
-> Avoid mixing up *necessities* with *nice-to-haves.* Ask yourself (or your users): "If this feature takes four weeks to add, will it be<!--Suggested.--> worth delaying launch by four weeks?”
+> Avoid mixing up *necessities* with *nice-to-haves.* Ask yourself (or your users): "If this feature takes four weeks to add, will it be worth delaying launch by four weeks?”
 
 ## Priority Quadrants chart
 
@@ -70,7 +70,7 @@ This type of request can be easy to implement, but only provides limited impact
 to the business. You should prioritize Quick Wins and Big Investments first
 before you start working on Little Satisfiers. Be careful not to get too heavily
 attached to these Little Satisfiers; working on too many at once will turn them into
-a Big Investment.<!--Suggested.-->
+a Big Investment.
 
 ### Time Consumers
 

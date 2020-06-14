@@ -1,12 +1,12 @@
 ---
-title: Listing the project tasks and owners | Microsoft Docs
-description: Listing the project tasks and owners
-author: TGrounds
+title: Planning - Power Apps project tasks and owners | Microsoft Docs
+description: List the tasks to be done during each project phase (planning, designing, making, testing, and deploying and refining) and who will be responsible for each task.
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kathyos
 searchScope:  
   - PowerApps
@@ -15,7 +15,7 @@ searchScope:
 # Listing the project tasks and owners
 
 Based on the five project phases (planning, designing, making, testing, and deploying and refining),
-list the tasks that needs to be done during each phase. Assign who will be
+list the tasks that need to be done during each phase. Assign who will be
 responsible for each task, along with the targeted date of completion.
 
 You might want to use Microsoft Planner to manage your tasks together with your

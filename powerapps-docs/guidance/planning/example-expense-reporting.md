@@ -1,6 +1,6 @@
 ---
-title: Example Expense Reporting | Microsoft Docs
-description: "Example: Expense Reporting"
+title: Planning a Power Apps project example | Microsoft Docs
+description: This expense reporting example shows how a typical paper-based expense approval within the organization has inefficiencies for multiple departments and employees.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual

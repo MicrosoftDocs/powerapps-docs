@@ -1,6 +1,6 @@
 ---
-title: Testing Phase | Microsoft Docs
-description: Testing Phase
+title: Testing Phase - Planning a Power Apps project | Microsoft Docs
+description: Now that your app is built, the next step is to start testing it. You'll learn the basics of testing an app and discover Power Apps testing tools.
 author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
@@ -43,7 +43,7 @@ Here are some tips for getting good results from UATs:
 
 - Test with the real users.
 
-- Try to choose users with diversity in terms of IT skill levels. This way, you can gain a variety of feedback.
+- Try to choose users with diversity in terms of IT skill levels. This way, you can get a variety of feedback.
 
 - Don't give the user instructions; see whether they can understand the app
     intuitively.
@@ -56,7 +56,7 @@ Here are some tips for getting good results from UATs:
 
 - Try out different devices to make sure the test cases behave the same.
 
-- Ideally, you'll test the app in the user's actual environment or location if the app uses offline
+- Ideally, test the app in the user's actual environment or location if the app uses offline
     capabilities.
 
 - Ask your users to try to "break" your app, such as by entering unusual
@@ -74,8 +74,8 @@ what they expected to happen instead, and any relevant information about their
 testing environment (such as device type and browser).
 
 It's natural and OK for the user to request changes to the specifications or
-ask for additional features<!--Suggested.-->. These requests should be recorded in the
-feature list described in [Prioritizing features and requests](prioritizing-features.md).<!--Edit okay?-->
+ask for additional features. These requests should be recorded in the
+feature list described in [Prioritizing features and requests](prioritizing-features.md).
 
 ## Creating test cases and scenarios
 
@@ -98,9 +98,7 @@ the table below:
 ### Power Apps Test Studio (experimental)
 
 For testing inside canvas apps, you can use a built-in tool named Power Apps Test
-Studio to write, organize, and automate tests for canvas apps.
-You should use Test Studio when setting up a unit test to ensure that
-features and functions are working correctly.<!--Suggested.--> More information:
+Studio to write, organize, and automate tests for canvas apps. More information:
 [Test Studio (experimental)](../../maker/canvas-apps/test-studio.md)
 
 ### Azure Monitor (experimental)

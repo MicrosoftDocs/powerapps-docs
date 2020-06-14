@@ -1,12 +1,12 @@
 ---
-title: Securing the app and data | Microsoft Docs
-description: Securing the app and data
-author: TGrounds
+title: Design - Securing the app and data | Microsoft Docs
+description: This article explains general security concepts for people undertaking a Power Apps project, explaining security layers and how to apply them.
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kathyos
 searchScope:  
   - PowerApps
@@ -36,10 +36,7 @@ underlying data.
 
 ### Form-level security
 
-For model-driven apps, which allow you to quickly create workflows by using a
-templatized UI<!--I don't think you need to explain model-driven apps at this point.-->,
-form-level security allows you to allow only specific security groups to access
-specific forms. This is useful if you want to restrict how people enter or view
+For model-driven apps, form-level security allows you to allow only specific security groups to access specific forms. This is useful if you want to restrict how people enter or view
 data by their job role.
 
 For example, an approval process app might have one form for employees to create
@@ -79,15 +76,20 @@ levels of access as record-level security, but at the field level.
 ### How different levels of security relate to each other
 
 The security levels mentioned above are like layers. The design of your app
-should consider one or more of these security levels to fit your needs. The example
-below shows what each security level controls in the behavior of an app.
-<!--Can you make the alt text reflect what's going on in the graphic?-->
-![Security levels](media/security-levels.png "Security levels")
+should consider one or more of these security levels to fit your needs. The following table shows what each security level controls in the behavior of an app.
+
+
+|Security Level  |Example |
+|---------|---------|
+|App-level security     |    Access to "Sales app"     |
+|Form-level security    |      Access to "Customer card"   |
+|Record-level security     |     Access to "Contoso Ltd."    |
+|Field-level security     |     Access to "Revenue amount"    |
+
 
 ## The five steps for designing security
 
-Different security levels might seem quite complex and overwhelming, but try
-considering just the following five steps:
+Different security levels might seem quite complex and overwhelming, but you can break it down into the following five steps:
 
 **Step 1**: Identify who or what groups of people (such as departments,
 sections, or teams) will have access to the app itself. This should be the same set
@@ -100,12 +102,12 @@ information.
 **Step 3**: Identify the requirements for who can see the records.
 
 **Step 4**: If you're using data sources other than Common Data Service&mdash;or
-services that don't have Office 365 or Azure Active Directory sign-ins&mdash;you should
+services that don't have Office 365 or Azure Active Directory authentication&mdash;you should
 consider how you'll allow access to those systems. If you aren't in charge
 of those systems, seek advice from those service administrators.
 
 **Step 5**: Based on the above steps, you should consider how these different
-groups will be managed. We recommend that you use security groups.<!--Edit okay? I didn't know what this really was saying.-->
+groups will be managed. We recommend that you use security groups.
 
 ## Example: Expense report solution security
 
@@ -132,9 +134,7 @@ However, we also need to ensure that approvers can see the reports they get
 for approval. And we need the auditors team to be able to see all expense
 reports (but not change them).
 
-- We need to give the Approvers security group and the Auditors security group
-    access to all records<!--Edit okay? I wasn't sure what this was saying.-->, and we need to give the All Employees group
-    access only to "records I create."
+- We need an Auditors security group. We need to give it and the Approvers security group access to all records, and we need to give the All Employees group access only to "records I create."
 
 ![Diagram of expense report security groups](media/expense-report-security.png "Diagram of expense report security groups")
 

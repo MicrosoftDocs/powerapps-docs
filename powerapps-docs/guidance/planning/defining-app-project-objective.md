@@ -1,12 +1,13 @@
 ---
-title: Defining the app project goals | Microsoft Docs
-description: Defining the app project goals
-author: TGrounds
+title: Planning - Defining the app project goals | Microsoft Docs
+description: Having a clear objective for what your Power Apps project team is trying to
+achieve is important so that your project team members share the same goals.
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kathyos
 searchScope:  
   - PowerApps
@@ -55,7 +56,7 @@ releases so that we could deliver value incrementally:
 - By the end of the year, department managers can access a weekly budget report that's up to date for
     all expenses within one hour of their approval.
 
-- Errors found in the semiannual audit are reduced by 50&nbsp;percent.
+- The number of errors found in the semiannual audit is reduced by 50&nbsp;percent.
 
 **Additional goals for release 1 of the solution:**
 

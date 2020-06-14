@@ -1,12 +1,12 @@
 ---
-title: Defining the project scope | Microsoft Docs
-description: Defining the project scope
-author: TGrounds
+title: Planning - Defining the Power Apps project scope | Microsoft Docs
+description: Your scope directly affects and determines which features to include and not to include when making the app. Learn about scope constraints to consider.
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kathyos
 searchScope:  
   - PowerApps
@@ -36,7 +36,7 @@ To define the project scope, you should consider the following constraints:
     organization has appetite for.
 
 You should also consider what functional pieces you can deliver in usable
-chunks. It won't do anybody any good if your app only delivers halfway on several features;<!--Suggested.--> plan to
+chunks. It won't do anybody any good if your app only delivers halfway on several features; plan to
 deliver each component in a working form, end to end. Even if it doesn't yet have
 every feature you want, deliver something that can be used. Your project plan
 should specify what you'll deliver in each phase.
@@ -51,7 +51,7 @@ Looking at our business process, we see that it's divided into five main tasks:
 
 3. Getting the data into the financial payment system
 
-4. Reviewing<!--Suggested, to be parallel.--> weekly budget analytics
+4. Reviewing weekly budget analytics
 
 5. Auditing
 

@@ -1,6 +1,6 @@
 ---
-title: Are there decisions being made based on the data Or business rules to follow | Microsoft Docs
-description: Are there decisions being made based on the data Or business rules to follow
+title: Planning - Data-driven decisions (business rules) | Microsoft Docs
+description: As part of the planning phase of a Power Apps project, determine what decisions are being made based on the data and what business rules need to be followed.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,7 +13,7 @@ searchScope:
 ---
 
 # Are there decisions being made based on the data, or business rules to follow?
-<!--I'm a bit confused by this heading and the first section of this article. I suggest adding a heading for the first section and adding bullets throughout. Otherwise, the effect of all these questions gets rather dizzying after a while. -->
+
 ## Does the data determine the outcome of any decisions?
 
 - At the conclusion of this activity in the process, is a decision being made? Is
@@ -47,7 +47,7 @@ been worked in the allotted timeframe?
 
 > [!TIP]
 > As you consider these different aspects, always look for the most optimal method
-to help reduce the time to respond to an approval.<!--Suggested, though maybe you don't want to call this out so distinctly? It seems like an important-enough point (and also, it isn't a question so it doesn't fit into the bulleted list).-->
+to help reduce the time to respond to an approval.
 
 ## Are escalations required?
 

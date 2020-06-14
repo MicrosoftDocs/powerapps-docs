@@ -1,6 +1,6 @@
 ---
-title: Is it worth automating this process | Microsoft Docs
-description: Is it worth automating this process
+title: Is it worth automating this process? | Microsoft Docs
+description: As part of the planning phase of a Power Apps project, consider the effort it will take to build the solution and decide whether it's justified by business value.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -15,8 +15,7 @@ searchScope:
 # Is it worth automating this process?
 
 Now it's time to consider the effort it will take to build the solution and
-decide whether it's justified. This involves weighing business value against the cost of automating the process.<!--Suggested, just to use "business value" before you define it.-->
-*Business value* is the ongoing benefit that the business receives from the
+decide whether it's justified. This involves weighing business value against the cost of automating the process. *Business value* is the ongoing benefit that the business receives from the
 project.
 
 ## The cost of doing nothing
@@ -39,7 +38,7 @@ monthly cost of any [software license](https://docs.microsoft.com/power-platform
 process.
 
 Before we decide to automate this business process, we'll answer the question
-"what does it cost me to *not* automate the process." <!--Suggest deleting the following sentences. This has been said a few times already, and the point about celebrating achievement is just kind of confusing here. You should consider this before deciding to build an automated solution. (And can also be helpful to know when celebrating the impact of your achievement when you're done!)-->
+"what does it cost me to *not* automate the process."
 
 ## Example: The cost of the current expense process
 
@@ -78,7 +77,7 @@ when we talked to our colleagues:
     >
     >   Total annual cost: \$204,750
 
-- After the expense report is verified to be accurate, it takes roughly seven
+- After the expense report is verified to be accurate, it takes roughly 7
     minutes per expense report to look up the general ledger codes for each
     expense category and write them on each expense line of the report.
 

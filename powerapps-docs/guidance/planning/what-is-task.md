@@ -1,6 +1,6 @@
 ---
-title: What is the task | Microsoft Docs
-description: What is the task
+title: Documenting the tasks in a business process | Microsoft Docs
+description: As part of the planning phase of a Power Apps project, document all the tasks needed to perform the business process from start to finish.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -44,9 +44,9 @@ For our expense report example, we wrote down these tasks:
 
 - Accounting delivers weekly spreadsheet to CFO and department managers
 
-- CFO reviews spreadsheet weekly and provides any<!--Edit okay?--> notices regarding budget overage
+- CFO reviews spreadsheet weekly and provides any notices regarding budget overage
 
-We later discovered additional tasks through talking with other<!--Suggested.--> team members:
+We later discovered additional tasks through talking with other team members:
 
 - Accounting looks up and records general ledger codes for each expense item
 

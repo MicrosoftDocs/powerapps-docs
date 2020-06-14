@@ -1,6 +1,6 @@
 ---
-title: Visually map the process | Microsoft Docs
-description: Visually map the process
+title: Visually map the current business process | Microsoft Docs
+description: After you have documented the current business process you want to automate with a Power Apps project, visualize it by drawing a flowchart.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -28,7 +28,7 @@ Use your map to confirm with your team that you've captured the business
 process accurately.
 
 Here's an example business process map:
-<!--That's excellent alt text!-->
+
 ![Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports](media/original-business-process.png "Example business process flowchart showing the steps of filling in the expense report, getting it approved, entering the data into the accounting system, and creating reports")
 
 List each activity in order, and link it to the next part of the process​:
@@ -39,10 +39,10 @@ List each activity in order, and link it to the next part of the process​:
     work from this event to your goal​.
 
 3. When you reach a point that requires a decision, draw a diamond around the
-    decision that must be made.<!--Suggested.--> Usually this is written as a true/false
+    decision that must be made. Usually this is written as a true/false
     question. Two lines should proceed from the diamond, each leading to the activity
     that will occur depending on the decision&mdash;one line for "true" and the other for
-    "false."<!--Suggested.-->​
+    "false."
 
 4. Link each activity sequentially. Some might run simultaneously through
     different departments within your business​.

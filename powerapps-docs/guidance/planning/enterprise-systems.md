@@ -1,6 +1,6 @@
 ---
-title: Working with enterprise systems | Microsoft Docs
-description: Working with enterprise systems
+title: Data design - Working with enterprise systems | Microsoft Docs
+description: Read this article to understand some of the things to consider when integrating with enterprise systems for a Power Apps project.
 author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
@@ -15,7 +15,7 @@ searchScope:
 # Working with enterprise systems
 
 When you need to work and integrate with existing enterprise systems such as
-SAP and Oracle<!--I can't find "Web Ordering system" anywhere, can you give a bit more context?-->, you should seek cooperation and support from
+SAP and Oracle, you should seek cooperation and support from
 your IT administration team or the team in charge of the system.
 
 Even if you aren't in a technical role, read this section to understand some of
@@ -25,7 +25,7 @@ with enterprise systems.
 ## Frequency and time of data integration
 
 When integrating with other systems, you need to consider the frequency of
-integration and take time zones into account if the integration has use cases that cross time zones<!--Suggested.-->.
+integration and take time zones into account if the integration has use cases that cross time zones.
 The frequency of integration will depend on two aspects: data volume and the
 time-related requirements of the business.
 
@@ -41,7 +41,7 @@ There are several ways of integrating with enterprise systems:
     integrating with systems by using APIs. The majority of web systems provide APIs to integrate with, but some don't.
 
 - **File** integration is a method of integrating with other systems by using
-    files. One system exports a file that includes datasets.<!--Edit okay?--> This file might be in CSV,
+    files. One system exports a data file. This file might be in CSV,
     TSV, XML, or another format. The system it's integrating to then either detects that there's a new
     file, or is set up with a timer to periodically scan to check whether new files exist and then
     import the file that was exported. This method is used in situations where
@@ -69,18 +69,18 @@ many people use the app simultaneously, not having enough bandwidth will cause
 the app to take a long time to respond. More information:[Web application requirements](https://docs.microsoft.com/power-platform/admin/web-application-requirements)
 
 To find out the network speed of your organization, use the [Network Speed Test](https://www.microsoft.com/p/network-speed-test/9wzdncrfhx52)
-from Microsoft Store (free of charge) and also [diagnostic tools](https://docs.microsoft.com/power-platform/admin/web-application-requirements)<!--This is the same article linked to in the previous paragraph. I can't find anything perfect to suggest... how about https://docs.microsoft.com/en-us/power-platform/admin/performance-tuning-and-optimization? -->
+from Microsoft Store (free of charge) and also [diagnostic tools](https://docs.microsoft.com/en-us/power-platform/admin/verify-network-capacity-throughput-clients)
 specifically for model-driven apps.
 
 ### Database tuning of the data source
 
 Database tuning also plays an important role, especially if you're going to
 connect to a data source that includes lots of data. It's easy to run into problems
-if you've created an app that uses data in a way that it wasn't used before.<!--Suggested.-->
+if you've created an app that uses data in a way that it wasn't used before.
 
 For example, suppose your existing customer management system is optimized to
 search by using a first name, last name, and email address, but you made a new
-app that searches by using phone number. The data won't have been indexed to help your app search efficiently.<!--Edit okay? There needs to be a bridge between these paragraphs -->
+app that searches by using phone number. The data won't have been indexed to help your app search efficiently.
 
 Indexing helps your apps speed up searches, and when an index is missing
 it takes longer to search and query for data. You might need to contact the IT

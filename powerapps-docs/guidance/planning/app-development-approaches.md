@@ -1,12 +1,12 @@
 ---
-title: Differences between Power Apps and traditional app development approaches | Microsoft Docs
-description: Differences between Power Apps and traditional app development approaches
-author: TGrounds
+title: Power Apps vs. traditional app development approaches | Microsoft Docs
+description: Learn how Power Apps development compares to traditional app development in two key areas - how team members collaborate and the development process methodology
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kathyos
 searchScope:  
   - PowerApps
@@ -15,7 +15,7 @@ searchScope:
 # Differences between Power Apps and traditional app development approaches
 
 Compared to traditional app development, Power Apps projects are different in
-two key areas:<!--Suggested.-->
+two key areas:
 
 - How various members of the organization work together to create the solution
 
@@ -26,7 +26,7 @@ two key areas:<!--Suggested.-->
 Power Apps is a platform that benefits both "pro developers" and "citizen
 developers."
 
-In a traditional development environment<!--Suggested.-->, only pro developers could be involved with the
+In a traditional development environment, only pro developers could be involved with the
 actual making of an app. With Power Apps, everyone has the power to build
 the apps they need by using advanced functionality that was previously available only to
 professional developers. Power Apps "democratizes" the custom business app
@@ -37,15 +37,15 @@ apps without writing code.
 
 ## Differences in development methodology
 
-With traditional app development such as the "waterfall" model, where the process flows downward from the designing phase through release, there's a long lead time
+With traditional app development such as the "waterfall" model, where the process flows downward from the design phase through release, there's a long lead time
 before a user actually sees the working app. As a result, there's an increased risk
 that there will be gaps between what the user initially requested as a requirement and what
-the app developer created.<!--Suggested.-->
+the app developer created.
 
 ![Waterfall development: Design, develop, test, and release](media/waterfall.png "Waterfall development: Design, develop, test, and release")
 
 Even with more modern development approaches such as agile development,
-a significant amount time can pass<!--Suggested.--> before the first minimum viable product (MVP) is
+a significant amount time can pass before the first minimum viable product (MVP) is
 delivered to users.
 
 ![Agile development: Design, iterate several times, then release the first MVP](media/agile.png "Agile development: Design, iterate several times, then release the first MVP]")

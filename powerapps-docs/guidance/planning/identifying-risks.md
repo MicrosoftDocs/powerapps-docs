@@ -1,6 +1,6 @@
 ---
-title: Identifying the risks | Microsoft Docs
-description: Identifying the project members
+title: Planning - Identifying Power Apps project risks | Microsoft Docs
+description: When planning a Power Apps project, identify what might present a risk to your project, what kind of risks are created by the app, and what you'll do to address them.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -15,7 +15,7 @@ searchScope:
 # Identifying the risks
 
 It's a good idea to identify what might present a risk to your project and what kind
-of risks are involved with making the app. It might sound a little over the top,
+of risks are created by the app. It might sound a little over the top,
 but your apps could potentially create risks if those apps are mission-critical,
 have high business impact, or use or create sensitive data.
 
@@ -35,7 +35,7 @@ Here are some of the examples of risks that you might need to consider:
     you create your solutions with Power Apps.
 
 After you've identified the risks, consider what you'll do to address them. You
-might also want to assess their<!--Suggested.--> risk level to understand the potential impact.
+might also want to assess their risk level to understand the potential impact.
 
 - **Severe risk**: A risk that might negatively affect the entire company
 
@@ -52,4 +52,4 @@ We created a table like this for our expense report project:
 | Risk         | Risk level | Plan to reduce risk       |
 |--------------|------------|-------------------------------|
 | We can't confidently move data into the finance system without an expert in the system on the team       | Significant    | Move ERP integration to phase 2, when an expert from IT will be available.       |
-| To move off the paper system, we need to educate several hundred employees about the new system for filing expense reports. | Significant    | Engage the HR communications team for educational sessions.<!--Suggested.--> Create a deck that managers can use at their team meetings. |
+| To move off the paper system, we need to educate several hundred employees about the new system for filing expense reports. | Significant    | Engage the HR communications team for educational sessions. Create a deck that managers can use at their team meetings. |

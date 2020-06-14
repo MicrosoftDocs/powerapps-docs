@@ -1,6 +1,7 @@
 ---
-title: Identifying the business problem to solve (the use case) | Microsoft Docs
-description: Identifying the business problem to solve (the use case)
+title: Power Apps - Identifying the business problem to solve | Microsoft Docs
+description: The first step in using Microsoft Power Platform to solve a business problem is
+deciding what problem you want to tackle. Learn about common Power Apps use cases.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -25,7 +26,7 @@ build!) When you define the problem, break it down into a problem statement and
 the result that you'd like to achieve.
 
 For the app that we'll use as an example in these articles, we came up with
-the following statement:<!--Edit okay? I wanted to explicitly introduce the app somewhere in here.--> "Expense reporting: Create a process that's efficient for
+the following statement: "Expense reporting: Create a process that's efficient for
 employees and the accounting department, allows faster budget tracking, and
 reduces our exposure in audits."
 
@@ -38,7 +39,7 @@ tackle your original inspiration, read on.
 
 If you're making your first app with Power Apps, think about your business and the
 work that you and your team do day to day, and identify a business problem that
-you currently are using a manual process to solve.<!--Suggested.-->
+you currently are using a manual process to solve.
 
 Potential use cases for automation are gaps, complaints, or inefficiencies that
 exist in your current work environment. Processes that still require paper or
@@ -112,8 +113,6 @@ the process is run, you can calculate the annual cost.
 Be aware that not all projects result in time or cost savings. Sometimes automating
 a process can provide cleaner or more timely data, or cost avoidance (for
 example, capturing data allows for an audit trail that could help avoid a fine if an audit occurred.)
-<!-- Recommend deleting this: See the list in the previous section for many types
-of benefits your organization can achieve.-->
 
 This will be a "back of the napkin" estimate to ensure it's worth undertaking
 your app project. In another article, we'll go into detail about [analyzing cost versus business value](worth-automating-process.md).

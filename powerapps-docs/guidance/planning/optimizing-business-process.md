@@ -1,6 +1,6 @@
 ---
-title: Optimizing your business process | Microsoft Docs
-description: Optimizing your business process
+title: Planning - Optimizing your business process | Microsoft Docs
+description: Now that you've documented the business process you want to automate with Power Apps, optimize it. Learn some helpful approaches and key questions for optimization.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -30,9 +30,9 @@ Some helpful ways to approach optimizing the process:
 - Look for key performance indicators to identify what's functioning well and
     what needs improvement.
 
-- Step back and get an outside perspective by sharing the process with your team​.
+- Step back and get input by sharing the process document with your team​.
 
-- Share the process with management to get higher-level input<!--Suggested, to vary the wording.--> and
+- Share the process document with management to get higher-level perspective and
     provide transparent accountability for each step within the process. ​
 
 - Look at your process from the point of view of the user or customer who might
@@ -75,7 +75,7 @@ Some key questions to ask:
 
 We reviewed the current expense process and found some obvious improvements
 to make:
-<!--Made this list bulleted because I couldn't see a clear sequence that merited numbers.-->
+
 - Go paperless for the entire process. (We noted the savings and environmental
     impact as a project benefit as well.)
 
@@ -91,7 +91,7 @@ to make:
 - Create weekly expense reports automatically from the digital data.
 
 Charlotte is considering further ways to optimize the budget review process. And
-Rebecca is researching how the semiannual audit might be optimized by using AI.<!--Suggested.-->
+Rebecca is researching how the semiannual audit might be optimized by using AI.
 
 Our proposed optimized process looks like the following illustration.
 

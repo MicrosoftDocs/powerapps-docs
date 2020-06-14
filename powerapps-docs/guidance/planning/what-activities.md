@@ -1,6 +1,6 @@
 ---
-title: What activities are being performed in this step | Microsoft Docs
-description: What activities are being performed in this step
+title: Document the activities in a business process | Microsoft Docs
+description: As part of the planning phase of a Power Apps project, document the activities  currently performed in each step of the business process you want to automate.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -36,7 +36,7 @@ When we spoke to Lee, Shawna, and Rebecca, they told us the steps were:
 
 2. Find a blank copy of, or print, the expense report form.
 
-3. Enter personal information (name, employee ID, and so on) and the reason for<!--Suggested. The "purpose of the expense" somehow sounded odd to me.--> the expense.
+3. Enter personal information (name, employee ID, and so on) and the reason for the expense.
 
 4. Gather receipts to get the expense information from (and turn them in, if needed).
 
@@ -45,11 +45,11 @@ When we spoke to Lee, Shawna, and Rebecca, they told us the steps were:
 6. Figure out expense categories and which expenses will need extra detail. (Often
     by looking up this information in the Expense Reporting manual.)
 
-7. For travel-related expenses, list any *per diem* the company already paid, if any.
+7. For travel-related expenses, list any *per diem* the company already paid.
 
 8. Calculate subtotals and totals.
 
 9. Figure out which receipts need to be attached, and paper-clip them to the
-    report form. (Often they'll make copies (photo or photocopy) for their own records.)<!--Suggested.-->
+    report form. (Often they'll make copies (photo or photocopy) for their own records.)
 
 10. Get the form and receipts to the manager (either by walking to their desk, interoffice mail, or postal mail).

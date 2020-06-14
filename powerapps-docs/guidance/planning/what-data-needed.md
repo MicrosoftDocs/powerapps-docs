@@ -1,6 +1,6 @@
 ---
-title: Is there data or information that they start with or need access to | Microsoft Docs
-description: Is there data or information that they start with or need access to
+title: Data needs for each step of a business process | Microsoft Docs
+description: As part of the planning phase of a Power Apps project, document the data required for each step of the business process you want to automate.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -41,8 +41,7 @@ Think about the user executing these steps of the process, and ask:
 
 - Can they do tasks that other users shouldn't be able to do?
 
-Understanding what data users should be able to access helps to define what&mdash;and
-whether&mdash;any security and privacy controls need to be included the solution.
+Understanding what data users should be able to access helps to define what security and privacy controls need to be included the solution.
 
 Understanding the user also helps determine how much data the user can see. If
 the user is a manager, will they be able to see all the work items of all workers?
@@ -56,7 +55,7 @@ app:
     expense reports.
 > - Managers (Nick): Nick should only be able to see the expense reports of his
     direct reports.
-> - Accountant<!--Edit okay? This is what Abhay was called in who-is-doing-work.md. Rebecca is the auditor in that article.--> (Abhay): Abhay should have the authority to review *all* the expense
+> - Accountant (Abhay): Abhay should have the authority to review *all* the expense
     reports.
 
 ## Data refresh considerations

@@ -1,6 +1,6 @@
 ---
-title: Do they create or edit data | Microsoft Docs
-description: Do they create or edit data
+title: Planning - Will yor app create or edit data? | Microsoft Docs
+description: As part of the planning phase of a Power Apps project, here are some things to consider for each data element your solution needs to capture.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -141,10 +141,10 @@ Here are some of the data elements in the worksheet for the expense report captu
 | Expense detail | Guest name            | Text          | Yes           | Anything     | Required for a **Meal**-type expense where the amount is greater than \$75 |                                  |
 
 In this example, three levels of data are being captured. (This
-will become very important in the designing phase for both screen design and data
+will become very important in the design phase for both screen design and data
 storage design.)
 
-- **Expense report**: These elements are captured once<!--Edit okay?--> for the overall expense
+- **Expense report**: These elements are captured once for the overall expense
     report .
 
 - **Expense item**: These elements are captured for each expense being
@@ -154,7 +154,7 @@ storage design.)
 - **Expense detail**: These elements are associated with the specific expense
     items **Meal** and **Hotel**, and helps break down those two expense types. If the
     expense item is **Meal**, **Guest name** and **Guest company** are required. If
-    the expense item is **Hotel**, **Type of expense**<!--Edit okay?--> and **Amount** are required&mdash;and the amount of each of these entries must equal the amount of the expense item.
+    the expense item is **Hotel**, **Type of expense** and **Amount** are required&mdash;and the amount of each of these entries must equal the amount of the expense item.
 
 Data that will be displayed in the app but not stored anywhere are these
 on-the-fly calculations:
@@ -176,4 +176,4 @@ this data in; we'll have to create one.
 Having all this expense data would lend itself to future analysis if we were
 capturing it digitally. For example, if all employees stay at the
 same hotel when they travel, Procurement can pull expense data and potentially
-negotiate better rates<!--Suggested.-->. We'll note this in our project plan.
+negotiate better rates. We'll note this in our project plan.

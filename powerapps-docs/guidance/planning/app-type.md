@@ -1,12 +1,12 @@
 ---
-title: Determining which type of app to make | Microsoft Docs
-description: Determining which type of app to make
-author: TGrounds
+title: Designing - Which type of app to make | Microsoft Docs
+description: As part of the design phase of a Power Apps project, determine whether to make a model-driven app or a canvas app.
+author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
 ms.date: 06/02/2020
-ms.author: thground
+ms.author: tayoshi
 ms.reviewer: kathyos
 searchScope:  
   - PowerApps
@@ -14,22 +14,21 @@ searchScope:
 
 # Determining which type of app to make
 
-In Power Apps, you have two options when creating apps for your users:<!--Suggested. "Your employees" threw me for a bit of a loop, made me think that a business owner was creating the app.--> model-driven apps and canvas apps. 
-<!--[This article goes into detail about types of Power Apps apps.](../../maker/index.md) Note from editor: I recommend against having a link structured like this. It doesn't prepare the user for leaving the current page (as a "For more information, see..." or "More information:" structure does). Also, it's too high up in the article; you're encouraging the user to leave before they've even read two paragraphs. I suggest moving the link to the next paragraph (which see).-->
+In Power Apps, you have two options when creating apps: model-driven apps and canvas apps.
 
-The following is a basic, high-level comparison. For much more detail about these two types of apps, see  [Overview of creating apps in Power Apps](../../maker/index.md).<!--Suggested.-->
-<!--The graphics should be sentence case: "Power Apps model-driven apps" and "Power Apps canvas apps."-->
+The following is a basic, high-level comparison. For much more detail about these two types of apps, see  [Overview of creating apps in Power Apps](../../maker/index.md).
+
 :::row:::
     :::column:::
         ![Model-driven apps](media/model-apps.png "Model-driven apps")
         
         Model-driven apps require a Common Data Service database. They're built on top of
 the data modeled in that database environment. Views and detail screens for model-driven
-apps<!--Suggested.--> are based on the data structure. Because of this, they offer
+apps are based on the data structure. Because of this, they offer
 users a more consistent look and feel from one screen to the next without requiring much
 effort from the app creator.
 
-        Model-driven apps are good for scenarios where the [business logic](logic.md) is complex, such as:<!--Suggested. Lists need introductions.-->
+        Model-driven apps are good for scenarios where the [business logic](logic.md) is complex, such as:
 
         -   Sophisticated data models
 
@@ -44,20 +43,20 @@ effort from the app creator.
 database. They use connectors to access data and services. Canvas apps start
 with a blank screen, like an artist's canvas, and the creator manually lays out
 each screen. This gives the creator complete control over the placement of
-each element<!--Suggested, just to vary the wording.--> on the canvas.
+each element on the canvas.
 
         Use canvas apps if the user is expecting a customized user
 experience. They offer:
 
         -   A graphical, intuitive interface
 
-        -   The ability to create a tailor-made UI based on user requirements<!--Suggested, to be parallel.-->
+        -   The ability to create a tailor-made UI based on user requirements
 
         -   Integration spanning multiple systems by using connectors
     :::column-end:::
 :::row-end:::
 
-Consider creating a model-driven app unless your users<!--Suggested.--> have a specific need for a
+Consider creating a model-driven app unless your users have a specific need for a
 canvas app. Model-driven apps enable you to make your app quickly because they
 don't require you to build out the UI yourself.
 

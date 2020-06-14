@@ -1,6 +1,6 @@
 ---
-title: How does this task pass to the next task | Microsoft Docs
-description: How does this task pass to the next task
+title: Planning  - How does this task pass to the next one | Microsoft Docs
+description: When you are deeply inspecting a step in business process you want to automate by using Power Apps, the last question is how does this step end and the next step begin?
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual

@@ -1,6 +1,6 @@
 ---
-title: Who is doing the work, when, and where | Microsoft Docs
-description: Who is doing the work, when, and where
+title: Understanding job roles and personas for your app project | Microsoft Docs
+description: As part of the planning phase of a Power Apps project, document who is doing the work, when, and where.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -13,12 +13,10 @@ searchScope:
 ---
 
 # Who is doing the work, when, and where?
-<!---Editor team: Two things I was unable to achieve: Make the people images smaller; and widen the first column in the table at the bottom of the article -->
-<!--note from editor: I used HTML for the bottommost table, I think it looks good now (What do you think?) For the graphics in the first table, I just experimented with making them narrower by cropping out the names and titles, which might not be what you wanted. SVG graphics are scalable. I tried to use a free converter to convert these graphics to SVG but they looked terrible. Maybe someone with a real converter can generate nice-looking SVGs for you?-->
 For this step, you need to understand who is doing the work. What is their role?
 
 It might be easiest to start with the names of people, but you'll want to understand
-what their role is when they're doing the task. For example:<!--Suggest italics because these phrases are acting as prose placeholders. -->
+what their role is when they're doing the task. For example:
 
 - *Any employee* submitting an expense report
 
@@ -53,12 +51,12 @@ After you identify the "who," consider:
     this new process?
 
 The last point is very important, because there might be objections or hesitation from
-the people involved in the process<!--Suggested.--> before or after the steps handled by your app. That could result in your app's not being used due to the lack of
+the people involved in the process before or after the steps handled by your app. That could result in your app's not being used due to the lack of
 cooperation.
 
 > [!TIP]
 > It's essential to know who will be affected by a change to a business process. Identify who will be using the app and who will be affected by this
-change, even if they don't use<!--Suggested.--> the app.
+change, even if they don't use the app.
 
 > [!TIP]
 > When going through this analysis for the information you might not know,
@@ -72,7 +70,7 @@ how they'd prefer to do it in the future.
 Also write down how often the task is done. Daily, weekly, occasionally,
 seasonally?
 
-An app that's used daily has different design considerations than one that's only<!--Suggested.-->
+An app that's used daily has different design considerations than one that's only
 used occasionally. (For example, the former might need to be streamlined
 and the latter might need to include more explanatory text.)
 
@@ -233,12 +231,3 @@ expense report), here's what we documented.
 <tr><td><b>Devices?</b></td><td>Phone, tablet, laptop, or desktop</td></tr>
 </tbody>
 </table>
-
-<!--note from editor: Leaving this table here for comparison.
-| Who does this?                  | All employees                                    |
-|---------------------------------|--------------------------------------------------|
-| **Where does the work happen?** | At the office, at client sites, and on the road (and in the air)   |
-| **When does the work happen?**  | Ad hoc. Some employees are doing this at least weekly. Others may do this once or twice a year.   |
-| **Online or offline?**          | This is currently done on paper but the team wants to do digitally. Data entry may be done offline when no connectivity available. Salespeople don't want to have to be online to start recording their receipts and expenses. (For instance may do this on plane ride home.) |
-| **Devices**                     | Phone, tablet, laptop, or desktop     |
--->

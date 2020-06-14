@@ -1,6 +1,6 @@
 ---
-title: Measuring success against the business value | Microsoft Docs
-description: Measuring success against the business value
+title: Planning a Power Apps project - Measuring success | Microsoft Docs
+description: As part of planning a Power Apps project, identify SMART measures to track progress against realizing the business value you think is achievable for your app.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -29,7 +29,7 @@ identify SMART measures. SMART measures stand for:
     achieve the goal. Many times, changes in behavior are triggered by the fact
     that the person knows that something is being measured. The **A** is sometimes
     defined as Achievable, but Assignable acknowledges that the Realistic measure
-    has something to do with whether the goal is Achievable.<!--Suggested. Style Guide says don't use first person unless you need to speak from the point of view of the customer. -->
+    has something to do with whether the goal is Achievable.
 
 - **R**ealistic: Is what's being measured even feasible? Realistic goals are
     challenging yet attainable within the given timeframe.
@@ -42,11 +42,10 @@ business value that we've identified? Don't spend time measuring activities
 that don't help achieve business value.
 
 Some measures will be a dollar amount, but others might just be a number. Those
-values can be converted to a dollar amount with a bit of effort. Take the amount of time that doing
-the process was reduced by. To get this value, multiply the amount of time by the loaded
-cost of the person doing the process. The result is the dollar amount that was saved.<!--Edit okay? I was a bit confused -->
+values can be converted to a dollar amount with a bit of effort. For example, if you know the amount of time that will be saved per person, multiply the amount of time by the loaded
+cost of the person doing the process. The result is the dollar amount that was saved.
 
-Another goal-setting methodology you can use is objectives and key results
+Another goal-setting methodology you can use is to define objectives and key results
 (OKRs). The objective is the big-picture vision you're trying to achieve. The
 key result is the way you'll measure progress toward that goal. For example, an
 objective might be "Increase retention in the Accounting team," and the key result might be "20&nbsp;percent increase in survey-measured job satisfaction after app launch."
@@ -101,9 +100,9 @@ The SMART goals we decided on are:
     days.
 
 - By the end of this year, department managers access a weekly budget report that's up-to-date
-    for all expenses within one hour of their approval.<!--Suggested.-->
+    for all expenses within one hour of their approval.
 
 - Within one month of solution availability, 100&nbsp;percent of expense reports use the
     digital system.
 
-- Errors found in the semiannual audit are reduced by 50&nbsp;percent.
+- The number of errors found in the semiannual audit is reduced by 50&nbsp;percent.

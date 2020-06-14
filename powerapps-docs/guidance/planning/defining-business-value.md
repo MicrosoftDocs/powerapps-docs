@@ -1,6 +1,6 @@
 ---
-title: Defining the business value of solving the problem | Microsoft Docs
-description: Defining the business value of solving the problem
+title: Planning - Defining the project's business value | Microsoft Docs
+description: Business value falls into one of four categories - Revenue, Efficiency, Volume, Other. Define the business value for your Power Apps project.
 author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
@@ -27,8 +27,7 @@ REVO:
 - **Volume**: Cost avoidance is achieved by enabling current users to process more
     transactions, in turn avoiding the cost of additional resources.
 
-- **Other**: Cost avoidance is also achieved by avoiding penalties, which are traditionally associated with lack of
-    compliance.
+- **Other**: The solution helps the organization comply with its "must do" requirements, which may result in avoiding financial penalties.
 
 After the category has been defined, we need to define the value that we'll achieve:
 
@@ -53,22 +52,22 @@ After the category has been defined, we need to define the value that we'll achi
 
   - Determine the amount of direct time it will take to use the new solution ("new time")
 
-  - Time savings = old time &ndash; new time<!--Edit okay?--> (To convert this to dollars, multiply
-        the time savings by the fully loaded cost of the people per the time unit.<!--What does "per the time unit" mean here?-->)
+  - Time savings = old time &ndash; new time (To convert this to dollars, multiply
+        the time savings by the fully loaded cost of the people for the time unit you're measuring in (for example, hours).)
 
 - Volume
 
   - Determine the volume of transactions that a single person can
-        process ("transactions per person")
+        process for a certain unit of time ("transactions per person")
 
   - Determine the volume of transactions that the new solution will be able
-        to process ("new volume of transactions")
+        to process in that time ("new transactions per person")
 
-  - Determine the new volume of transactions that need to be processed
+  - Determine the volume of transactions that need to be processed in that time ("volume")
 
-  - Cost avoidance = (new volume of transactions &divide; transactions per person) &times; cost per person<br>
+  - Cost avoidance = (volume &divide; transactions per person) &ndash; (volume &divide; new transactions per person)<br>
         This calculates the number of people who won't have to process
-        transactions to achieve the volume processed by the solution.<!--This undoubtedly isn't right, but I don't think the original made sense either. Can you please rewrite?-->
+        transactions to achieve the volume processed by the solution.
 
 - Other
 
@@ -94,7 +93,7 @@ report app.
     >   (140 expense reports a week &times; 20 minutes) &times; \$90/hr = \$4,158 a week = \$216,216 a year
 
 - Nick will be reviewing the expense reports of his team (roughly 100
-    salespeople) and estimated that it will take roughly five minutes to review
+    salespeople) and estimated that it will take roughly 5 minutes to review
     each expense report. His review is limited to the type of expenses being
     submitted, recognizing that the need for receipts&mdash;and the need to
     include the names of guests at meals and distribute hotel expenses into the
