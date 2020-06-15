@@ -24,10 +24,13 @@ search.app:
 Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
   
 <a name="BKMK_DifferentPresentations"></a>   
-## Different presentations of commands  
- There are three different ways that command data can be displayed.  
+
+## Different presentations of commands 
+
+There are three different ways that command data can be displayed.  
   
 ### Updated user experience  
+
  This is the presentation of the command bar throughout the application and for forms for entities that have the updated user experience.  
   
  ![Account command bar](media/customization-account-grid-command-bar.PNG "Account command bar in Dynamics 365")
@@ -45,6 +48,7 @@ Data defining commands in Common Data Service can be presented in several differ
  For more information about the behavior of subgrid controls and how they can be customized, see [Sub Grid Ribbons](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365#BKMK_SubGridRibbons).  
   
 ### Classic user experience  
+
  This is the presentation using the ribbon. It is used for lists within the Outlook client and for the forms of entities that do not use the updated user experience.  
   
  ![Article ribbon](media/customization-article-ribbon.PNG "Article ribbon in Dynamics 365")  
@@ -99,6 +103,7 @@ Data defining commands in Common Data Service can be presented in several differ
   There is also a pre-existing `<CrmClientTypeRule>` element, but the `Type` attribute for element can only differentiate between `Web` and `Outlook` clients. This rule will evaluate the Dynamics 365 for tablets client as the web client.  
   
 ### See also  
+
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
  [Ribbons available](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365)   
  [Export Ribbon definitions](export-ribbon-definitions.md)   

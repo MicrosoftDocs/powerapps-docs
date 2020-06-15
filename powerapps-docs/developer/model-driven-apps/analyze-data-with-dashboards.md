@@ -25,6 +25,7 @@ The dashboard entities in Common Data Service enable you to present data
 from various charts, grids, IFRAMES, or web resources simultaneously. Dashboards allow you to compare and analyze various pieces of customer information, and give you data snapshots.  
   
 ## Types of dashboards  
+
 There are two types of dashboards: organization-owned dashboards and user-owned dashboards.  
   
 **Organization-owned dashboard.**
@@ -44,12 +45,13 @@ A user-owned dashboard is represented by the `UserForm` entity, can be assigned 
 > For information about working with interactive dashboards using the web client, see [Configure interactive experience dashboards](../../maker/model-driven-apps/configure-interactive-experience-dashboards.md) 
   
 ### See also  
+
  [Using FormXML for Dashboards](understand-dashboards-dashboard-components-formxml.md)   
  [Actions on Dashboards](actions-dashboards.md)   
  [Create a Dashboard](create-dashboard.md)   
  [Sample Dashboards](sample-dashboards.md)   
  [Dashboard Entities](/dynamics365/customer-engagement/developer/customize-dev/dashboard-entities)   <!-- TODO: Need to find the topic in powerapps repo to link-->
- [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard) <!-- TODO: Need to find the topic in powerapps repo to link-->  
- [Sample: Assign a User-Owned Dashboard to Another User](/dynamics365/customer-engagement/developer/customize-dev/sample-assign-user-owned-dashboard-another-user)  <!-- TODO: Need to find the topic in powerapps repo to link--> 
+ [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard) <
+ [Sample: Assign a User-Owned Dashboard to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother)  
  [Visualization data description schema](visualization-data-description-schema.md)     
  [Customize visualizations and dashboards](customize-visualizations-dashboards.md)

@@ -45,6 +45,6 @@ The appropriate string value will be determined by the individual user’s langu
 [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
 [Data (XML) Web resources](data-xml-web-resources.md)<br />
 [CSS web resources](css-web-resources.md)<br />
-[WebResource entity messages and methods](/dynamics365/customer-engagement/developer/webresource-entity-messages-methods)<br />
+[WebResource entity messages and methods](https://docs.microsoft.com/powerapps/developer/common-data-service/reference/entities/webresource)<br />
 [Sample: Pass multiple values to a  web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)<br />
-[Sample: Import files as web resources](sample-import-files-web-resources.md)<br />
+[Sample: Import files as web resources](sample-import-files-web-resources.md)
