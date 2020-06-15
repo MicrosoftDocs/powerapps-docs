@@ -51,7 +51,7 @@ A user-owned dashboard is represented by the `UserForm` entity, can be assigned 
  [Create a Dashboard](create-dashboard.md)   
  [Sample Dashboards](sample-dashboards.md)   
  [Dashboard Entities](/dynamics365/customer-engagement/developer/customize-dev/dashboard-entities)   <!-- TODO: Need to find the topic in powerapps repo to link-->
- [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard) <
+ [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard)
  [Sample: Assign a User-Owned Dashboard to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother)  
  [Visualization data description schema](visualization-data-description-schema.md)     
  [Customize visualizations and dashboards](customize-visualizations-dashboards.md)
