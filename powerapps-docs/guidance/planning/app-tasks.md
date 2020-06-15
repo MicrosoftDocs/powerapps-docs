@@ -52,3 +52,6 @@ screens and components:
 - Various submit/cancel/save messages
 
 - The ability to attach a photo of a receipt and to view attachments
+
+> [!div class="nextstepaction"]
+> [Next step: Sketching the screens](sketching.md)

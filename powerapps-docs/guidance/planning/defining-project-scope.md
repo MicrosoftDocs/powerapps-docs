@@ -75,3 +75,6 @@ Always coming back to our overall project mission ("Create a process that's
 efficient for employees and the accounting department, allows faster budget
 tracking, and reduces our exposure in audits"), we think our project scope is
 appropriate.
+
+> [!div class="nextstepaction"]
+> [Next step: Prioritzing features](prioritizing-features.md)

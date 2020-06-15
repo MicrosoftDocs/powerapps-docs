@@ -106,3 +106,6 @@ The SMART goals we decided on are:
     digital system.
 
 - The number of errors found in the semiannual audit is reduced by 50&nbsp;percent.
+
+> [!div class="nextstepaction"]
+> [Next step: Creating a project plan](defining-app-project-objective.md)

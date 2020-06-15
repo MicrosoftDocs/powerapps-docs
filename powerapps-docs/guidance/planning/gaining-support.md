@@ -34,3 +34,6 @@ Charlotte. Each of their departments can realize a significant cost savings from
 the project. Nick's sponsorship will ensure that employees adopt the new
 process. Charlotte's sponsorship will provide some funds in addition to permission
 to access key data.
+
+> [!div class="nextstepaction"]
+> [Next step: Design the app](designing-phase.md)

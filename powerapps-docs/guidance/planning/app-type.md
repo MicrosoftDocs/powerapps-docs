@@ -105,3 +105,6 @@ model-driven app. Although they're two different types of apps, all the data
 can be centralized in one place (Common Data Service).
 
 ![Two apps with data in Common Data Service](media/end-to-end-apps.png "Two apps with data in Common Data Service")
+
+> [!div class="nextstepaction"]
+> [Next step: Determine where to place logic](logic.md)

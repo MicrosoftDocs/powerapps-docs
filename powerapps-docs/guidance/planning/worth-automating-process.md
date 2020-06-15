@@ -37,9 +37,6 @@ greater than the cost of doing nothing&mdash;plus your development time and the
 monthly cost of any [software license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)&mdash;it makes sense to automate the
 process.
 
-Before we decide to automate this business process, we'll answer the question
-"what does it cost me to *not* automate the process."
-
 ## Example: The cost of the current expense process
 
 The first thing we need to understand is, what is it costing the organization to
@@ -65,7 +62,7 @@ when we talked to our colleagues:
     report, receives on average 140 reports a week, and sends back 25&nbsp;percent of those
     due to missing information.
 
-    >   Initial review:<br> 140 expense reports &times; 15-minute review = 35 hours
+    >   Initial review: 140 expense reports &times; 15-minute review = 35 hours
     >
     >   Initial review: 35 hours &times; \$90 = \$3,150 a week = \$163,800/year
     >
@@ -101,3 +98,6 @@ The entire process is costing the company:
 > \$655,200 + \$204,750 + \$77,220 + \$111,384 = \$1,048,554
 
 ![Business process flowchart showing the employee cost for each task and the total cost of the process](media/cost-of-process.png "Business process flowchart showing the employee cost for each task and the total cost of the process")
+
+> [!div class="nextstepaction"]
+> [Next step: Defining the business value](defining-business-value.md)

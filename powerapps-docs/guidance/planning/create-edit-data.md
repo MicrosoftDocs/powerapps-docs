@@ -177,3 +177,6 @@ Having all this expense data would lend itself to future analysis if we were
 capturing it digitally. For example, if all employees stay at the
 same hotel when they travel, Procurement can pull expense data and potentially
 negotiate better rates. We'll note this in our project plan.
+
+> [!div class="nextstepaction"]
+> [Next step: What are the business rules?](decisions-approvals.md)

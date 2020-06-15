@@ -81,3 +81,10 @@ several escalation methods:
     sending a text message.
 
 - If Nick still hasn't responded, perhaps we send the report to Nick's manager&mdash;or even to Abhay&mdash;to review and approve.
+
+> [!div class="nextstepaction"]
+> [Next step: Moving to the next task in the process](next-task.md)
+
+
+> [!div class="nextstepaction"]
+> [I've documented all the tasks](visually-map-process.md)

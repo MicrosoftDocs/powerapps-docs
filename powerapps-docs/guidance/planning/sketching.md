@@ -47,3 +47,6 @@ use the sketches as a "paper prototype" and have your user pretend to actually
 use it.
 
 ![A sketch of some app screen ideas](media/sketch.png "A sketch of some app screen ideas")
+
+> [!div class="nextstepaction"]
+> [Next step: Architectural design](where-is-data.md)

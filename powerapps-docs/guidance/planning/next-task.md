@@ -29,3 +29,6 @@ can begin the next task?
 
 Now that this task has been inspected, continue with the next task in the
 process&mdash;starting back at [What is the task?](what-is-task.md)&mdash;until you've inspected all the tasks.
+
+> [!div class="nextstepaction"]
+> [Next step: Documenting the next task in the process](what-is-task.md)

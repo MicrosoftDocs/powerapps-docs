@@ -53,3 +53,6 @@ We created a table like this for our expense report project:
 |--------------|------------|-------------------------------|
 | We can't confidently move data into the finance system without an expert in the system on the team       | Significant    | Move ERP integration to phase 2, when an expert from IT will be available.       |
 | To move off the paper system, we need to educate several hundred employees about the new system for filing expense reports. | Significant    | Engage the HR communications team for educational sessions. Create a deck that managers can use at their team meetings. |
+
+> [!div class="nextstepaction"]
+> [Next step: Get support from management](gaining-support.md)

@@ -53,16 +53,16 @@ security allows you to set up security for each individual row.
 There are four different types of access, known as CRUD (create, read,
 update, and delete) that you can set up for record-level security:
 
--   **Create** Allows the user to create new data (like adding a new row in
+- **Create** Allows the user to create new data (like adding a new row in
     Excel).
 
--   **Read** Allows the user to view the data.
+- **Read** Allows the user to view the data.
 
--   **Update** Allows a user to change data that already exists.
+- **Update** Allows a user to change data that already exists.
     This is different from creating, because to create is to add *new*
     data.
 
--   **Delete** Allows the user to delete data (like removing a row in Excel).
+- **Delete** Allows the user to delete data (like removing a row in Excel).
 
 For Common Data Service, there are four more types of access: append,
 append-to, assign, and share. More information: [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
@@ -78,14 +78,12 @@ levels of access as record-level security, but at the field level.
 The security levels mentioned above are like layers. The design of your app
 should consider one or more of these security levels to fit your needs. The following table shows what each security level controls in the behavior of an app.
 
-
 |Security Level  |Example |
 |---------|---------|
 |App-level security     |    Access to "Sales app"     |
 |Form-level security    |      Access to "Customer card"   |
 |Record-level security     |     Access to "Contoso Ltd."    |
 |Field-level security     |     Access to "Revenue amount"    |
-
 
 ## The five steps for designing security
 
@@ -115,27 +113,26 @@ In an expense approval scenario, all employees can submit expense reports, so
 they all need to have access to the expense report creation app. Additionally,
 approvers need access to the approval app.
 
-- We need an All Employees security group that has access to the expense
+> We need an All Employees security group that has access to the expense
     reporting app and the data it uses.
-
-- We need an Approvers security group that has access to the Approvals app.
+> We need an Approvers security group that has access to the Approvals app.
 
 The Accounting department might need access to more sensitive data, such as the
 employees' bank account for reimbursement.
 
-- We need an Accounting team security group that's the only security group
+> We need an Accounting team security group that's the only security group
     that has access to employee bank routing information.
 
 We're most likely not going to want employees to be able to see each other's
 expense reports, so we need to set up record-level security to allow employees
-to access only their own records.
-
-However, we also need to ensure that approvers can see the reports they get
-for approval. And we need the auditors team to be able to see all expense
+to access only their own records. However, we also need to ensure that approvers can see the reports they get for approval. And we need the auditors team to be able to see all expense
 reports (but not change them).
 
-- We need an Auditors security group. We need to give it and the Approvers security group access to all records, and we need to give the All Employees group access only to "records I create."
+> We need an Auditors security group. We need to give it and the Approvers security group access to all records, and we need to give the All Employees group access only to "records I create."
 
 ![Diagram of expense report security groups](media/expense-report-security.png "Diagram of expense report security groups")
 
 More information: [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security)
+
+> [!div class="nextstepaction"]
+> [Next step: Make the app](making-phase.md)

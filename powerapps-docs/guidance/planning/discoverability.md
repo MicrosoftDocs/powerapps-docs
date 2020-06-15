@@ -17,9 +17,9 @@ searchScope:
 Congratulations! You made your first app, and it's tested and ready to go!
 
 However, making the first version of your app isn't the end of the Power Apps journey.
-You need to get your app into the hands of your users by making it available for production use. 
+You need to get your app into the hands of your users by making it available for production use.
 
-After you launch the app, you'll want to make sure it's working well and meeting your objectives. In the majority of cases, you can expect to get requests for new features or fixes, or you'll need to accommodate a business process that has changed. 
+After you launch the app, you'll want to make sure it's working well and meeting your objectives. In the majority of cases, you can expect to get requests for new features or fixes, or you'll need to accommodate a business process that has changed.
 
 In this section, you'll learn how to:
 
@@ -27,7 +27,7 @@ In this section, you'll learn how to:
 
 - Get [feedback and usage information](feedback-telemetry.md) to help refine your app.
 
-## Sharing the app
+## Publishing and sharing the app
 
 As soon as your app is ready to use, you need to publish and share it.
 
@@ -132,3 +132,6 @@ An administrator configures the Bing search engine so that when signed-in
 employees in certain groups or locales&mdash;or using certain devices&mdash;search for
 specific terms, they'll get the app in a pane at the top of their
 search results.
+
+> [!div class="nextstepaction"]
+> [Next step: Collect feedback and telemetry](feedback-telemetry.md)

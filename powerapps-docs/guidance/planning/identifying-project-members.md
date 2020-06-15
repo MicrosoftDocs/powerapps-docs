@@ -1,7 +1,6 @@
 ---
 title: Planning - Identify your Power Apps project team | Microsoft Docs
-description: Anyone who is involved in designing, making, and testing apps will be a
-project team member. Consider who will fill these project roles.
+description: Anyone who is involved in designing, making, and testing apps will be a project team member. Consider who will fill these project roles.
 author: taiki-yoshida
 ms.service: powerapps
 ms.topic: conceptual
@@ -14,6 +13,7 @@ searchScope:
 ---
 
 # Identifying project team members
+
 Anyone who is involved in designing, making, and testing apps will be a
 project team member.
 
@@ -42,3 +42,6 @@ documentation, training, or other roles.
 
 For a small project, one person might be the subject matter expert, manage the
 project, and make the app.
+
+> [!div class="nextstepaction"]
+> [Next step: Listing project tasks and owners](project-tasks-owners.md)

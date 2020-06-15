@@ -111,3 +111,6 @@ roll-up fields. Pro developers can apply business logic that uses code by
 creating a plug-in or developing workflow extensions.
 
 More information: [Apply business logic in Common Data Service](../../maker/common-data-service/cds-processes.md)
+
+> [!div class="nextstepaction"]
+> [Next step: Secure the app and data](security.md)

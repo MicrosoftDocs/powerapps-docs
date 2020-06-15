@@ -45,4 +45,4 @@ In our example scenario, we identified these key contributors:
 ![Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO](media/contributors.png "Lee -Sales, Nick - Sales manager, Gibson - Operations, Rebecca - Auditor, Abhay - Accountant, Charlotte - CFO")
 
 > [!div class="nextstepaction"]
-> [Get started documenting the business process](what-is-task.md)
+> [Next step: Documenting the business process](what-is-task.md)

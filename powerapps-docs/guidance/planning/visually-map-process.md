@@ -52,3 +52,6 @@ List each activity in order, and link it to the next part of the process​:
 You can also add data to your map, such as time taken or the cost of the task. Then
 you'll be able to compare and gain insights about which areas need improvement. You
 can also use this for comparing the money or time saved by the new process.
+
+> [!div class="nextstepaction"]
+> [Next step: Optimize the process](optimizing-business-process.md)

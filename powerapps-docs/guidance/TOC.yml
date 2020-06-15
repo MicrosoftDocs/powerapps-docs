@@ -1,11 +1,3 @@
-- name: Power Apps guidance
-  href: /powerapps/guidance
-- name: Get started    
-  items:
-  - name: Overview
-    href: overview.md
-  - name: Test app
-    href: create-app.md  
 - name: Planning a Power Apps Project
   items:
   - name: Introduction
@@ -58,7 +50,7 @@
         href: planning/defining-app-project-objective.md
       - name: Defining the project scope
         href: planning/defining-project-scope.md
-      - name: Prioritizing features and requests
+      - name: Prioritizing feature requests
         href: planning/prioritizing-features.md
       - name: Identifying project team members
         href: planning/identifying-project-members.md

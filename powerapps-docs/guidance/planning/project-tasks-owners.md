@@ -41,3 +41,6 @@ solving this problem, is taking the lead on this project.
 | Create an updated process explainer for managers to use with employees  | Nick      | February 15                     |
 | Auditor sign-off on business rules and report storage implementation    | Rebecca   | February 22                     |
 | Roll out expense report create/view app in production                   | Gibson    | March 15                        |
+
+> [!div class="nextstepaction"]
+> [Next step: Defining the project schedule](defining-project-schedule.md)

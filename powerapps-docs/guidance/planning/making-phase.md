@@ -80,8 +80,7 @@ More information: [Understand model-driven app components](../../maker/model-dri
 
 ## Developing solutions collaboratively
 
-When developing your solutions with multiple app makers, 
-collaboration techniques depend on which type of application you're making.
+When developing your solutions with multiple app makers, collaboration techniques depend on which type of application you're making.
 
 ### Canvas apps
 
@@ -95,3 +94,6 @@ components you've created. More information: [Collaborative Development for Powe
 When developing model-driven apps, consider using solutions and
 environments designated for multiple app makers. This document<!--Looks like a link is missing.--> has detailed
 explanation on the strategies for development.
+
+> [!div class="nextstepaction"]
+> [Next step: Test the app](testing-phase.md)

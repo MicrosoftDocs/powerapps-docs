@@ -71,3 +71,6 @@ however, it does change on occasion as people move from role to role within the
 organization and in the reporting structure. So, for this app, it's
 appropriate to look up the information at the time the user creates the expense
 report. There's no need to check the information again.
+
+> [!div class="nextstepaction"]
+> [Next step: What data is created?](create-edit-data.md)

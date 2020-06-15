@@ -47,3 +47,6 @@ development time, but the CFO did mention that the improvement in budget
 visibility and reporting compliance was worth investing in.
 
 Throughout the process of planning a Power Apps project, we'll refer back to this example.
+
+> [!div class="nextstepaction"]
+> [Next step: Understanding the current business process](understanding-current-business-process.md)

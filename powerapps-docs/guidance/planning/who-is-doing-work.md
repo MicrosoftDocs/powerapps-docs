@@ -231,3 +231,6 @@ expense report), here's what we documented.
 <tr><td><b>Devices?</b></td><td>Phone, tablet, laptop, or desktop</td></tr>
 </tbody>
 </table>
+
+> [!div class="nextstepaction"]
+> [Next step: What activities are being done?](what-activities.md)

@@ -37,3 +37,6 @@ In this section, you'll learn about:
 - [Deciding whether it's worthwhile to automate the process](worth-automating-process.md)
 
 - [Creating a project plan](defining-app-project-objective.md)
+
+> [!div class="nextstepaction"]
+> [Next step: Identifying the business problem to solve](identifying-business-problem-to-solve.md)

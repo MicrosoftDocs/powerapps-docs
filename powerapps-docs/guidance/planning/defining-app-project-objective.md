@@ -64,3 +64,6 @@ releases so that we could deliver value incrementally:
 
 - 80&nbsp;percent of users can do their top-priority tasks in the app without any
     instruction.
+
+> [!div class="nextstepaction"]
+> [Next step: Defining the project scope](defining-project-scope.md)

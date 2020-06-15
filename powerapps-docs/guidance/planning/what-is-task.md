@@ -53,3 +53,6 @@ We later discovered additional tasks through talking with other team members:
 - Accounting archives the paper expense report in accordance with retention policy
 
 - Audit team conducts semiannual compliance audit
+
+> [!div class="nextstepaction"]
+> [Next step: Who's doing the work?](who-is-doing-work.md)

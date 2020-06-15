@@ -31,7 +31,7 @@ In this section, you'll consider:
 
 - [What will the user experience be?](sketching.md)
 
-## Architectural design 
+## Architectural design
 
 After you've completed your conceptual design, it's time to move on to the
 architectural design. The architecture design specifies how you'll use Power
@@ -50,3 +50,6 @@ This is where you'll consider things like:
 - [Determining where to place your logic](logic.md)
 
 - [How to secure your data](security.md)
+
+> [!div class="nextstepaction"]
+> [Next step: Identifying tasks to be done in the app](app-tasks.md)

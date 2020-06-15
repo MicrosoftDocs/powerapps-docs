@@ -54,3 +54,6 @@ quality is to [use an existing app as a template](../../maker/canvas-apps/get-st
 provide with Power Apps or Power Automate, another app developed in your
 organization, or an example you found elsewhere, templates and reference designs
 can help with screen design, interactions, and data architecture.
+
+> [!div class="nextstepaction"]
+> [Next step: Identifying the risks](identifying-risks.md)

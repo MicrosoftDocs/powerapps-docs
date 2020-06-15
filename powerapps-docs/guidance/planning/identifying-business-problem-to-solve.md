@@ -119,3 +119,6 @@ your app project. In another article, we'll go into detail about [analyzing cost
 Assuming you've decided this project is worth pursuing, the next step is to
 fully understand the current process and look for optimizations you can make to
 it.
+
+> [!div class="nextstepaction"]
+> [Next step: The expense reporting example](example-expense-reporting.md)

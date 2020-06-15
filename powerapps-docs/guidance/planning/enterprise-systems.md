@@ -95,7 +95,10 @@ your server might not be able to cope with all the requests. In these situations
 you should consider setting up your on-premises gateway to multiple servers, to
 form a cluster. More information: [Manage on-premises data gateway high-availability clusters and load balancing](https://docs.microsoft.com/data-integration/gateway/service-gateway-high-availability-clusters)
 
-### Volume and frequency of data transmission 
+### Volume and frequency of data transmission
 
 For high-volume requests, using an approach like dataflows can provide better
 performance while still allowing integration with on-premises data.
+
+> [!div class="nextstepaction"]
+> [Next step: Data modeling](data-modeling.md)

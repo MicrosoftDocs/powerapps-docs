@@ -85,3 +85,6 @@ Hence, the relationship between employees and vendors is many-to-many.
 ### Example 3: Expense reporting
 
 ![Example expense reporting data structure](media/expense-report-data.png "Example expense reporting data structure")
+
+> [!div class="nextstepaction"]
+> [Next step: Determine which type of app to make](app-type.md)
