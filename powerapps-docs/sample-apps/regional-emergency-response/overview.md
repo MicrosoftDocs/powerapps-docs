@@ -9,8 +9,6 @@ ms.custom:
 ms.date: 05/06/2020
 ms.author: kvivek
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
 # Regional Government Emergency Response and Monitoring - Power Platform solution for state and local governments
 
