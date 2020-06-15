@@ -74,6 +74,14 @@ After the category has been defined, we need to define the value that we'll achi
   - Determine the penalty that can be avoided by having the information
         captured and available in the solution
 
+If the business value you'll receive by automating the process doesn't compare favorably to
+[the cost of doing nothing](worth-automating-process.md), you must ask yourself whether this is the right business problem to focus on.
+
+However, if the business value you receive by solving the business problem is
+greater than the cost of doing nothing&mdash;plus your development time and the
+monthly cost of any [software license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)&mdash;it makes sense to automate the
+process.
+
 ## Example: The business value of automating the expense process
 
 In the case of our example app, the main category of business value is efficiency. The new app will reduce

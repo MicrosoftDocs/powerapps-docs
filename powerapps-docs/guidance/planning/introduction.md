@@ -63,8 +63,11 @@ you'll find that these articles are for you, too:
 - The [Designing phase](designing-phase.md), [Making phase](making-phase.md), [Testing phase](testing-phase.md), and [Deploying and refining](discoverability.md) sections all include Power
     Apps&ndash;specific information to help make your project successful.
 
-If you're a **"full stack" developer**, you'll find that this methodology covers projects that are
-more suited for rapid development than traditional, large-scale development.
+If you're a **"full stack" developer**:
+
+- See the next article, [Differences between Power Apps and traditional app development approaches](app-development-approaches.md).
+
+- Then, if you're already familiar with app project planning, you may want to jump right to the [Designing phase \> Architectural design](where-is-data.md) section, which is where the material specific to Power Platform starts.
 
 > [!NOTE]
 > If your intention is to create a very large and complex solution, we recommend that you use the

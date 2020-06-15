@@ -92,8 +92,7 @@ components you've created. More information: [Collaborative Development for Powe
 ### Model-driven apps
 
 When developing model-driven apps, consider using solutions and
-environments designated for multiple app makers. This document<!--Looks like a link is missing.--> has detailed
-explanation on the strategies for development.
+environments designated for multiple app makers. More information: [Introduction to solutions](../../developer/common-data-service/introduction-solutions)
 
 > [!div class="nextstepaction"]
 > [Next step: Test the app](testing-phase.md)

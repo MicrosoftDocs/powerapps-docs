@@ -23,19 +23,12 @@ project.
 To figure out whether it's worth automating the process, you first must understand
 the cost of *not* solving the problem.
 
-As a byproduct of defining the business value that you hope to achieve from the Microsoft
+As a part of defining the business value that you hope to achieve from the Microsoft
 Power Platform solution, you should get a better understanding of what it's
 costing your organization to solve the problem in the current manner. In other
 words, measure the cost of doing nothing.
 
-If the business value you'll receive by automating the process is less than
-the cost of doing nothing, you must ask yourself whether this is the right
-business problem to focus on.
-
-However, if the business value you receive by solving the business problem is
-greater than the cost of doing nothing&mdash;plus your development time and the
-monthly cost of any [software license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)&mdash;it makes sense to automate the
-process.
+To calculate the current cost, identify the time spent doing the current process and multiply by the cost of the people performing it. You can measure the annual cost by determining the cost of running the process end-to-end once, then multiply by the number of times you do the process in a year. Add in any other costs such as software licenses, paper, postage, and so forth.
 
 ## Example: The cost of the current expense process
 

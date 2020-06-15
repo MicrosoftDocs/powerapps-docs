@@ -21,7 +21,7 @@ The following is a basic, high-level comparison. For much more detail about thes
 :::row:::
     :::column:::
         ![Model-driven apps](media/model-apps.png "Model-driven apps")
-        
+
         Model-driven apps require a Common Data Service database. They're built on top of
 the data modeled in that database environment. Views and detail screens for model-driven
 apps are based on the data structure. Because of this, they offer

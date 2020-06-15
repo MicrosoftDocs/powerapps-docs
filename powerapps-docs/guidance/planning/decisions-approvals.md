@@ -85,6 +85,5 @@ several escalation methods:
 > [!div class="nextstepaction"]
 > [Next step: Moving to the next task in the process](next-task.md)
 
-
 > [!div class="nextstepaction"]
 > [I've documented all the tasks](visually-map-process.md)
