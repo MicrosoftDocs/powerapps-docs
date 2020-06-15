@@ -23,7 +23,7 @@ After you launch the app, you'll want to make sure it's working well and meeting
 
 In this section, you'll learn how to:
 
-- [Deploy your app](#sharing-the-app) and [help users discover it](#featured-apps).
+- [Deploy your app](#publishing-and-sharing-the-app) and [help users discover it](#featured-apps).
 
 - Get [feedback and usage information](feedback-telemetry.md) to help refine your app.
 
