@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/08/2020
+ms.date: 06/15/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 ---
@@ -105,6 +105,21 @@ You can export portal configuration data from a source system by using portal-sp
     > [!div class=mx-imgBorder]
     > ![Progress of configuration data import](../media/import-config-status.png "Progress of configuration data import")
 
-5.	The next screen displays the import status of your records. The data import is done in multiple passes to first import the foundation data while queuing up the dependent data, and then import the dependent data in the subsequent passes to handle any data dependencies or linkages. This ensures clean and consistent data import. 
+5.	The next screen displays the import status of your records. The data import is done in multiple passes to first import the foundation data while queuing up the dependent data, and then import the dependent data in the subsequent passes to handle any data dependencies or linkages. This action ensures clean and consistent data import. 
 
 6.	Select **Exit** to close the tool. 
+
+## Tenant to tenant migration
+
+Power Apps portals doesn't support tenant to tenant migration. To migrate a portal from one tenant to another, you must follow these steps:
+
+1. [Reset](reset-portal.md) your portal in the source tenant.
+
+1. Provision a new portal in an environment [with Common Data Service](../create-portal.md) or [containing model-driven apps in Dynamics 365](../create-dynamics-portal.md).
+
+1. Migrate portal configurations and customizations using the [export](#export-portal-configuration-data) and [import](#import-portal-configuration-data) steps explained in this article earlier.
+
+### See also
+
+- Tenant to tenant migration of a [Power Platform environment](https://docs.microsoft.com/power-platform/admin/move-environment-tenant).
+- Tenant to tenant migration of [model-driven apps](https://docs.microsoft.com/dynamics365/admin/move-instance-tenant) in Dynamics 365 such as Sales, Customer Service, Marketing, Field Service, and Project Service Automation.
