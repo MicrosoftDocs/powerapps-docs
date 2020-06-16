@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Power Apps best practices guidance
-summary: Power Apps guidance documentation provides best practice information from the team that builds Power Apps and the folks that work with our enterprise customers. We'll add and update information as they become available. 
+title: Power Apps guidance documentation
+summary: Power Apps guidance documentation provides best practice information from the team that builds Power Apps and work with our enterprise customers. We'll and and update information as they become available. 
 
 metadata:
   title: Power Apps guidance
-  description: Provides best practice information from the team that builds Power Apps and the folks that work with our enterprise customers.
+  description: Provides best practice guidance information for Power Apps.
   services: service
   ms.service: powerapps 
   ms.subservice: subservice
@@ -13,68 +13,43 @@ metadata:
   ms.collection: collection
   author: KumarVivek
   ms.author: kvivek
-  ms.date: 03/31/2020 
+  ms.date: 06/15/2020 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
   # Card 
-  - title: Power Apps guidance
+  - title: Planning Power Apps project
     linkLists:
        - linkListType: overview
          links:
-          - text: Overview
-            url: overview.md
-
+          - text: Introduction
+            url: planning/introduction.md       
+          - text: Planning phase
+            url: planning/planning-phase.md
+          - text: Designing phase
+            url: planning/designing-phase.md
+          - text: Making phase
+            url: planning/making-phase.md
+          - text: Testing phase
+            url: planning/testing-phase.md
+          - text: Deploying and refining phase
+            url: planning/discoverability.md
 
   # Card
-  - title: Power Apps architecture
+  - title: Related resources
     linkLists:
-       - linkListType: how-to-guide
+       - linkListType: overview
          links:
-          - text: TO DO
-            url: overview.md
-          - text: TO DO
-            url: overview.md
+          - text: Create apps in Power Apps
+            url: /powerapps/maker
+          - text: What are canvas apps?
+            url: /powerapps/maker/canvas-apps/getting-started
+          - text: What are model-driven apps?
+            url: /powerapps/maker/model-driven-apps/model-driven-app-overview
 
           
-  # Card
-  - title: Data management
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: TO DO
-            url: overview.md
-          - text: TO DO
-            url: overview.md
 
-  # Card
-  - title: Build apps
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: TO DO
-            url: overview.md
-          - text: TO DO
-            url: overview.md
 
-  # Card
-  - title: Power Apps for enterprises
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: TO DO
-            url: overview.md
-          - text: TO DO
-            url: overview.md
 
-  # Card
-  - title: Power Apps customer stories
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: TO DO
-            url: overview.md
-          - text: TO DO
-            url: overview.md
