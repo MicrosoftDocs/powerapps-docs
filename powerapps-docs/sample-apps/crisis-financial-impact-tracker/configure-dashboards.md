@@ -31,7 +31,7 @@ To use this Power BI template, you need these prerequisites:
 
 -  Common Data Service environment with maker permissions to access the portal and read permissions to access data within the entities.
 
-You can configure Powwer BI dashboards in two ways:
+You can configure Power BI dashboards in two ways:
 
 1. Configure from blank report canvas](#configure-from-blank-report-canvas)
 1. Using Power BI template(#using-power-bi-template)
@@ -198,7 +198,7 @@ an image to the page and then copying it to the other pages.More information:  [
 
 To utilize your own data collected by the Higher Education Crisis Financial Impact
 Tracker app, you need to update the data connection within the template. More information: [Create a Power BI report using the Common Data Services
-connector](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-powerbi-connector)
+connector](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector)
 
 To change the data source, select **Transform data** to open the Power Query Editor. Within the Applied Steps of the Query Editor, change the Source for each Entity. Use the Common Data Service environment url. 
 

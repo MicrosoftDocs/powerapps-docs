@@ -1,5 +1,5 @@
 ---
-title: Overview of Higher Education Financial Crisis Impact Tracker - Sample solution | Microsoft Docs
+title: Overview of Higher Education Crisis Financial Impact Tracker - Sample solution | Microsoft Docs
 description: Provides an overview of Higher Education Financial Crisis Impact Tracker - Sample solution.
 author: ramanasridhar
 ms.service: powerapps
@@ -10,11 +10,11 @@ ms.author: ramanasr
 ms.reviewer: nkrb
 ---
 
-# Higher Education Financial Crisis Impact Tracker - Sample solution
+# Higher Education Crisis Financial Impact Tracker - Sample solution
 
-In this unprecedented time, universities are struggling to understand the impact of COVID-19, especially research centers. Research grants are one of the most substantial sources of incoming revenue for universities. By reporting the monetary implications, universities can assess and pursue their eligibility for relief funding. The financial impact of COVID-19 on the research grants and budgets of these schools is in the millions.
+In this unprecedented time, universities are struggling to understand the impact of COVID-19, especially research centers. Research grants are one of the most substantial sources of incoming revenue for universities. By reporting the monetary implications, universities can assess and pursue their eligibility for relief funding. The financial impact of COVID-19 on the research grants and budgets of these schools is in millions.
 
-The Higher Education Financial Crisis Impact Tracker solution help researchers or co-researchers to track their employees' effort loss due to the crisis scenario and the departments to track and report the loss.
+The Higher Education Crisis Financial Impact Tracker solution help researchers or co-researchers to track their employees' effort loss due to the crisis scenario and departments to track and report the loss.
 
 ## Demo: Quick overview
 
@@ -38,7 +38,7 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 |Task|Target audience|See|
 |-----|--------|-------|
 |Download and deploy the sample app and dashboard|IT admin|[Download and deploy](deploy-solution.md)|
-|Use the admin app to add/manage master data|Business admin|[Configure and manage master data](admin-configuration.md)|
+|Use the admin app to add/manage master data|Business admin|[Configure and manage master data](configure-data.md)|
 |Use dashboards for insights and decision making|Business admin|[View Power BI dashboard](configure-dashboards.md)|
 |Use the mobile app to track and report loss|Staff|[Use the Higher Education Crisis Financial Impact Tracker app](use-mobile-app.md)|
 |||

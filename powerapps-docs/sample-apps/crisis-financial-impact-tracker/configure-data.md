@@ -28,11 +28,11 @@ Watch a quick overview on how to configure master data.
 
 ## Step 1: Configure and manage setup data for your organization
 
-Use the admin app to create and manage master data for your organization. This data is required for the **Crisis Financial Impact Tracker** app to work.
+Use the admin app to create and manage master data for your organization. This data is required for the **Higher Education Crisis Financial Impact Tracker** app to work.
 
 > [!IMPORTANT]
 > Ensure that your IT admin has deployed the solution into your organization and has granted appropriate permissions for business admins to use the admin app.
-More information: [Deploy the Crisis Financial Impact Tracker app](deployment.md).
+More information: [Deploy the Higher Education Crisis Financial Impact Tracker app](deploy-solution.md).
 
 You must add master data in to these entities in the following sequence:
 

@@ -26,15 +26,13 @@ Watch the quick overview on how to download and deploy the solution.
 
 ## Step 1: Download the deployment package
 
-Download the latest deployment package (.zip) from [here](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/CrisisFinancialImpactTracker.zip).
+Download the latest deployment package (.zip) from [here](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/CrisisFinancialImpactTracker.zip).Before extracting the .zip file, ensure that you unblock it. To unblock:
 
-Before extracting the .zip file, ensure that you unblock it.
+- Right-click on the .zip file and select **Properties**.
 
-1. Right-click on the .zip file and select **Properties**.
+- On the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
 
-1. On the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
-
-On extracting the .zip file, you will see the following in the extracted folder:
+On extracting the .zip file, you will see the following components in the extracted folder:
 
 |Component|	Filename |Description
 |-------|-------|------|
@@ -42,7 +40,7 @@ On extracting the .zip file, you will see the following in the extracted folder:
 | Data|Import Templates  | Individual entity template for data load files in .xlsx (Excel) format. The files are arranged in the order they should be imported.|
 | Data|Sample Data  | Individual entity sample data in .xlsx (Excel) format. The files are arranged in the order they should be imported.|
 | Package |Crisis Financial Impact Tracker app package-related files.|Complete list of files required to deploy the Crisis Financial Impact Tracker app.|
-| Power BI Template | PBITemplate.pbix | A sample Power BI Template to connect to the app's CDS instance.|
+| Power BI Template | PBITemplate.pbix | A sample Power BI Template to connect to the app's Common Data Service instance.|
 |||
 
 ## Step 2: Sign up for Power Apps and create an environment
