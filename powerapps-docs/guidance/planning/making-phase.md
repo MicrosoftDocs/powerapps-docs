@@ -92,7 +92,7 @@ components you've created. More information: [Collaborative Development for Powe
 ### Model-driven apps
 
 When developing model-driven apps, consider using solutions and
-environments designated for multiple app makers. More information: [Introduction to solutions](../../developer/common-data-service/introduction-solutions)
+environments designated for multiple app makers. More information: [Solutions overview](/powerapps/maker/common-data-service/solutions-overview)
 
 > [!div class="nextstepaction"]
 > [Next step: Test the app](testing-phase.md)

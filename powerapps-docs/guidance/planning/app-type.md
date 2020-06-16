@@ -8,8 +8,6 @@ ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: tayoshi
 ms.reviewer: kathyos
-searchScope:  
-  - PowerApps
 ---
 
 # Determining which type of app to make
@@ -98,7 +96,7 @@ best fit would be a model-driven app. It allows Abhay to quickly view all the
 details of the submitted expense report, see how it affects the budget, and look
 for related information such as vendor details.
 
-![A model-driven app for processing expense reports](media/expense-canvas-app.png "A model-driven app for processing expense reports")
+![A model-driven app for processing expense reports](media/expense-model-app.png "A model-driven app for processing expense reports")
 
 In this example scenario, you can see a combination of both canvas app and
 model-driven app. Although they're two different types of apps, all the data
