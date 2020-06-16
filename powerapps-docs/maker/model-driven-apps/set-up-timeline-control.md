@@ -116,7 +116,7 @@ As a customizer, you can choose which entities you want to show activities to us
     | Entity | Name |
     |--------------------------|----------------------------------|
     | Account | Account for Interactive experience |
-    | Case | Case for Interactive experience <br><br> **Note**: The Case entity is only available if you have the Dynamics 365 Customer Service application.|
+    | Case | Case for Interactive experience <br><br> **Note**: The Case entity is only available if your environment includes the Dynamics 365 Customer Service application.|
     | Contact | Contact for Interactive experience |
 
 7.	Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
