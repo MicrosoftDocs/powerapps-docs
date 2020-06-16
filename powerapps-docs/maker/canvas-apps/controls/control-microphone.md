@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/16/2020
+ms.date: 06/12/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -20,7 +20,7 @@ A control that enables app users to record sounds from their device.
 
 ## Description
 
-Use the **Microphone** control to capture audio with a device's microphone.  The device must have a microphone and the user must authorize the app to use the microphone.  The microphone control is supported when running in a web browser.  
+Use the **Microphone** control to capture audio with a device's microphone. The device must have a microphone and the user must authorize the app to use the microphone. 
 
 The most recently recorded audio clip is available through the **Audio** property. With this property, recorded audio can be:
 
@@ -36,6 +36,9 @@ Format of the recorded audio:
 - *OGG* format for *web browsers*.
 
 Captured media is referenced by a text string URI. For more information, read the [data type documentation](../functions/data-types.md#uris-for-images-and-other-media).
+
+> [!NOTE]
+> The microphone control is supported only on Microsoft Edge based on Chromium, Chrome, and Firefox browsers; and Android and iOS devices. All other browsers and platforms will show a warning that some features of the app won't work.
 
 ## Key properties
 
