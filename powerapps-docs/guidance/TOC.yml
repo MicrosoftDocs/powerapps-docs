@@ -2,7 +2,7 @@
   items: 
   - name: Power Apps guidance documentation
     href: index.yml
-  - name: Planning a Power Apps Project
+  - name: Planning a Power Apps project
     items:
     - name: Introduction
       href: planning/introduction.md
