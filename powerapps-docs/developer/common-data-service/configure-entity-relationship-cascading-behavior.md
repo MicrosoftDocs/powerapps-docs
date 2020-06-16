@@ -59,6 +59,13 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 |Unshare|When sharing is removed for the referenced entity record.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
 
 > [!NOTE]
+> Assign, Delete, Merge, and Reparent actions will not execute in the following situations:
+> - If the original parent record and requested action contain the same values. Example: Attempting to trigger an Assign and 
+>   choosing a contact that is already the owner of the record
+> - Attempting to perform an action on a parent record that is already running a cascading action
+
+
+> [!NOTE]
 > When executing an assign, any workflows or business rules that are currently active on the records will automatically be 
 > deactivated when the reassignment occurs. The new owner of the record will need to reactivate the workflow or business rule 
 > if they want to continue using it.

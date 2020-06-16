@@ -1,6 +1,6 @@
 ---
 title: Import components  | Microsoft Docs
-description: This topic describes how to import code components
+description: This article describes how to import code components
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -13,16 +13,16 @@ author: Nkrb
 
 # Package a code component
 
-This topic describes how to import code components into Common Data Service. After implementing the code components using the Power Apps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Common Data Service so that you can see the code components in runtime.
+This article describes how to import code components into Common Data Service. After implementing the code components using the Power Apps CLI, the next step is to bundle all the code component elements into a solution file and import the solution file into Common Data Service so that you can see the code components in runtime.
 
 To create and import a solution file:
 
-1. Create a new folder inside the folder that has the `cdsproj` file and name it as **Solutions** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
+1. Create a new folder inside the folder that has the `pcfproj` file and name it as **Solutions** (or any name of your choice) using the command `mkdir Solutions`. Navigate into the directory using the command `cd Solutions`.
 
 2. Create a new solutions project using the following command. The solution project is used for bundling the code component into a solution zip file that is used for importing into Common Data Service.
    
    ```CLI
-   pac solution init --publisher-name <enter your publisher name> --publisher-prefix <enter your publisher prefix>
+   pac solution init --publisher-name developer --publisher-prefix dev
    ```
 
    > [!NOTE]
@@ -31,7 +31,7 @@ To create and import a solution file:
 3. Once the new solution project is created, refer the **Solutions** folder to the location where the created sample component is located. You can add the reference using the command shown below. This reference informs the solution project about which code components should be added during the build. You can add references to multiple components in a single solution project.
 
    ```CLI   
-    pac solution add-reference --path <path to your Power Apps component framework project>
+    pac solution add-reference --path c:\downloads\mysamplecomponent
    ```
 
 3. To generate a zip file from the solution project, go into your solution project directory and build the project using the following command. This command uses *MSBuild* to build the solution project by pulling down the *NuGet* dependencies as part of the restore. Use the `/restore` only for the first time when the solution project is built. For every build after that, you can run the command `msbuild`.
@@ -47,16 +47,18 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or automatically using the [Power Apps Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerApps-BuildTools).
+5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerApps-BuildTools).
 
 ## Connecting to your environment
 
-You can deploy the code components directly from the Power Apps CLI by connecting to the Common Data Service environment and then pushing the updated components. Use the following steps to create the authentication profile, connect to Common Data Service, and push the updated components. 
+You can deploy the code components directly from the Power Apps CLI by connecting to the Common Data Service environment and then pushing the updated components.
+
+Follow the steps below to create the authentication profile, connect to Common Data Service, and push the updated components. 
  
 1. Create your authentication profile using the command: 
  
     ```CLI
-    pac auth create --url <https://xyz.crm.dynamics.com> 
+    pac auth create --url https://xyz.crm.dynamics.com 
     ```
  
 2. If you have previously created an authentication profile, you can view all the existing profiles using the command: 
@@ -82,7 +84,11 @@ You can deploy the code components directly from the Power Apps CLI by connectin
 
 ## Deploying code components 
 
-After you have successfully created an authentication profile, you can start pushing the code components to the Common Data Service instance with all the latest changes. The `push` capability speeds up the inner-developer cycle development because it bypasses the code component versioning requirements and does not require that you build your solution (cdsproj) to import the code component. To use the `push` capability, do the following:
+After you have successfully created an authentication profile, you can start pushing the code components to the Common Data Service instance with all the latest changes. 
+
+The `push` capability speeds up the inner-developer cycle development because it bypasses the code component versioning requirements and does not require that you build your solution (cdsproj) to import the code component. 
+
+To use the `push` capability, do the following:
 
 1. Ensure that you have a valid authentication profile created.
 2. Navigate to the root directory where the code component project is created.
@@ -103,8 +109,11 @@ To create a solution project based on an existing solution in Common Data Servic
 2. Run the command 
 
    ```CLI
-   pac solution clone –name(-n) <name of the solution to be exported> --version(-v) <version of your solution> --include(-i) <settings that should be included>
+   pac solution clone –-name(-n) <name of the solution to be exported> --targetversion(-v) <version of your solution> --include(-i) <settings that should be included>
    ```
+
+   > [!NOTE]
+   > Settings Values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales.
 
 More information: [Settings options](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.exportsolutionrequest?view=dynamics-general-ce-9)
 
@@ -114,29 +123,30 @@ More information: [Settings options](https://docs.microsoft.com/dotnet/api/micro
 > The plugin command is in public preview and 
 Power Apps CLI now supports creating a plug-in project and packaging it in a solution by adding a reference to the plug-in project. The `pac plugin init` command creates the template files (csproj, Plugin.cs & ServiceHelper.cs) in the directory. To do so: 
 
-1.	Ensure that you have a valid authentication profile created.
-2.	Navigate to the root directory where you want the project to be created.
-3.	Run the command 
+1. Ensure that you have a valid authentication profile created.
+2. Navigate to the root directory where you want the project to be created.
+3. Run the command 
 
-     ```CLI
-     pac auth create –url <https://xyz.crm.dynamics.com>
-     ```
-4.	Run the command to create the plug-in project
+   ```CLI
+   pac auth create –url <https://xyz.crm.dynamics.com>
+   ```
+4. Run the command to create the plug-in project
 
-    ```CLI
-    pac plugin init
-    ```
+   ```CLI
+   pac plugin init
+   ```
 
-5.	Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
+5. Add a reference to your solution project  using the following command so that the plug-in project gets built when the solution is built.
 
-    ```CLI
-    pac solution add-reference –path <path to your plugin project>
-    ```
+   ```CLI
+   pac solution add-reference –path <path to your plugin project>
+   ```
 
-6.	Run the command to build the solution and the referenced plug-in.
-    ```CLI
-    msbuild
-    ```
+6. Run the command to build the solution and the referenced plug-in.
+
+   ```CLI
+   msbuild
+   ```
 
 ## Remove components from a solution
 

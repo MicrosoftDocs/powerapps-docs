@@ -3,7 +3,7 @@ title: "Configure Exchange folder-level tracking rules (Common Data Service) | M
 description: "Learn how to configure Exchange folder-level tracking rules" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

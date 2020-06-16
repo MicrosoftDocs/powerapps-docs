@@ -3,7 +3,7 @@ title: "Dependency tracking for solution components (Common Data Service) | Micr
 description: "Solution component dependencies help make sure you have a reliable experience working with solutions. They can be viewed in the application by clicking Show Dependencies" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID
@@ -173,6 +173,7 @@ Solutions are made of solution components. You’ll use the **Solutions** area i
 >  Web resources may depend on other web resources based on relative links. For example, an HTML web resource may use a CSS or script web resource. A Silverlight web resource displayed outside of an entity form or chart must have an HTML web resource to host it. These dependencies aren’t tracked as solution dependencies.  
   
 ### See also  
+ [Removing dependencies](removing-dependencies.md)   
  [Package and Distribute Extensions with Dynamics 365 Solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
  [Introduction to Solutions](introduction-solutions.md)   
  [Plan For Solution Development](/dynamics365/customer-engagement/developer/plan-solution-development)   

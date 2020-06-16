@@ -3,7 +3,7 @@ title: "Customize entity and attribute mappings in Power Apps (Common Data Servi
 description: "Learn about mapping attributes between entities that have an entity relationship in Power Apps. This lets you set default values for a record that is created in the context of another record." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

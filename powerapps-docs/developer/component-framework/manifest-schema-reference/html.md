@@ -37,6 +37,15 @@ Model-driven apps
 |--|--|
 |[resources](resources.md)|[!INCLUDE [resources-description](includes/resources-description.md)]|
 
+## Example
+
+```XML
+<resources>
+   <code path="TS_LocalizationAPI.js" order="1" />
+	 <html path="html/default.html" order="1" />
+  </resources>
+```
+
 ### Related topics
 
 [Power Apps component framework manifest schema reference](index.md)<br/>

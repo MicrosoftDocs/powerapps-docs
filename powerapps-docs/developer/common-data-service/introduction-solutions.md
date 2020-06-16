@@ -11,9 +11,9 @@ tags: ''
 ms.service: powerapps
 ms.devlang: na
 ms.topic: article
-ms.reviewer: kvivek
+ms.reviewer: "pehecke"
 ms.workload: na
-ms.date: 01/28/2019
+ms.date: 05/06/2020
 ms.author: jdaly
 search.audienceType: 
   - developer
@@ -31,7 +31,7 @@ Every customization that you make to Common Data Service, or to a previously ins
 If you intend to transport customizations or extensions between different Common Data Service environments or distribute solutions using AppSource, you must understand the solution framework.
 
 > [!NOTE]
-> For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Whitepaper: Solution Lifecycle Management](https://www.microsoft.com/download/details.aspx?id=57777)
+> For detailed information about how to effectively use solutions for a successful application lifecycle management (ALM) implementation, see [Application lifecycle management (ALM) with Microsoft Power Platform](/power-platform/alm).
 
 ## Managed and unmanaged solutions
 
@@ -46,7 +46,7 @@ A **managed** solution is a completed solution that is intended to be distribute
   > [!IMPORTANT]
   > When you uninstall a managed solution, the following data is lost: data stored in custom entities that are part of the managed solution and data stored in custom attributes that are part of the managed solution on other entities that are not part of the managed solution.
 
-An **unmanaged** solution is one that is still under development or isn’t intended to be distributed. 
+An **unmanaged** solution is one that is still under development or isn't intended to be distributed. 
 - While a solution is unmanaged, you can continue to add and remove components to it. 
 - You can export an unmanaged solution to transport unmanaged customizations from one environment to another.
 - When an unmanaged solution is deleted, only the solution container of any customizations included in it is deleted. All the unmanaged customizations remain in effect and belong to the default solution. 
@@ -125,15 +125,15 @@ More information: [Introduction to solutions > Unmanaged and managed solutions](
 
 ## Managed properties
 
-When you distribute a managed solution, anyone who installs your solution can include their own unmanaged customizations to it. Those unmanaged customizations can then be added to a solution that they distributed as a managed solution that depends on your solution. But what if you don’t want people to do this? As the publisher of the managed solution you can use managed properties to disable specific customizations for the components of your managed solution.
+When you distribute a managed solution, anyone who installs your solution can include their own unmanaged customizations to it. Those unmanaged customizations can then be added to a solution that they distributed as a managed solution that depends on your solution. But what if you don't want people to do this? As the publisher of the managed solution you can use managed properties to disable specific customizations for the components of your managed solution.
 
 More information: [Use managed properties](use-managed-properties.md)
 
 ## Modular solutions
 
-You can use the solution framework to create a discrete set of components that provide a set of functionalities. Each managed solution can be installed and uninstalled to return the customer’s deployment to its original state. Each managed solution you create runs on top of the system solution and can access the capabilities of that underlying solution.
+You can use the solution framework to create a discrete set of components that provide a set of functionalities. Each managed solution can be installed and uninstalled to return the customer's deployment to its original state. Each managed solution you create runs on top of the system solution and can access the capabilities of that underlying solution.
 
-You can also build managed solutions that run on top of other solutions to create a set of functionalities that can be shared by different solutions. In this way, you can build and maintain a common module as a solution to support multiple solutions. Because of this, customers only need to install the solutions that are right for them and you don’t need to include the same shared functionality in every solution. If you need to push out an update to solution that supports multiple solutions, you only need to update the common module.
+You can also build managed solutions that run on top of other solutions to create a set of functionalities that can be shared by different solutions. In this way, you can build and maintain a common module as a solution to support multiple solutions. Because of this, customers only need to install the solutions that are right for them and you don't need to include the same shared functionality in every solution. If you need to push out an update to solution that supports multiple solutions, you only need to update the common module.
 
 Customers, System Implementers, and other ISVs can then build solutions on top of your solutions to achieve the specific customizations they require.
 
@@ -147,7 +147,7 @@ Use the *Package Deployer* to create a custom installer for a package that can i
 - Custom code that can run before, while, or after the package is deployed.
 - HTML content specific to the package that can display at the beginning and end of the deployment process. This can be useful to provide a description of the solutions and files that are deployed in the package.
 
-More information: [Create packages for the Common Data Service Package Deployer](package-deployer/create-packages-package-deployer.md).
+More information: [Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool).
 
 ## Team development of solutions
 

@@ -3,7 +3,7 @@ title: "Query data using LINQ (Common Data Service) | Microsoft Docs" # Intent a
 description: "This sample showcases how to assign records to a team." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/05/2020
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "phecke" # GitHub ID

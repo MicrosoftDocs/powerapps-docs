@@ -3,7 +3,7 @@ title: "Create patches to simplify solution updates (Common Data Service) | Micr
 description: "Patches help you manage entities and all of its related assets when you add an entity to a solution and export that solution" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID

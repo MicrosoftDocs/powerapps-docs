@@ -1,7 +1,7 @@
 ---
 title: "Create or edit model-driven app dashboards | MicrosoftDocs"
 ms.custom: ""
-ms.date: 05/23/2018
+ms.date: 04/08/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,47 +24,47 @@ search.app:
 ---
 # Create or edit model-driven app dashboards
 
-There are two types of dashboards, user dashboards and system dashboards. An app user can create a dashboard visible only to them in the app areas that they have privileges to. An admin or customizer creates or customizes system dashboards that, when published, are visible to all app users. A user can choose to set their user dashboard as their default dashboard and override the system dashboard. This topic focuses on system dashboards.  
+There are two types of dashboards, user dashboards and system dashboards. An app user can create a dashboard visible only to them in the app areas that they have privileges to. An admin or customizer creates or customizes system dashboards that, when published, are visible to all app users. A user can choose to set their user dashboard as their default dashboard and override the system dashboard.   
+
+Dashboards can be standard or interactive. Standard dashboards support adding one or more unrelated components such as charts or lists. Interactive dashboards provide the capability for users to act on a particular record directly from the dashboard. This topic focuses on standard system dashboards. For information about interactive dashboards, see [Configure model-driven app interactive experience dashboards](configure-interactive-experience-dashboards.md).
   
 <a name="BKMK_createdashboard"></a>   
-## Create a new dashboard  
+## Create a new standard dashboard  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
-
-    > [!IMPORTANT]
-    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).   
   
-2. Expand **Data**, select **Entities**, select the entity that you want base the dashboard on, such as the **Account** entity, and then select the **Dashboards** tab. 
+2. Select **Solutions**, and then open the solution you want.
 
-3. On the toolbar select **Add a dashboard**, and then choose a 2, 3, or 4 column layout.  
+3. On the toolbar select **New**, select **Dashboard**, and then choose a 2, 3, or 4 column layout.  
   
-4.  In the **Dashboard: New** dialog box enter a name for the dashboard.  
+4.  In the **Dashboard: New** page enter a name for the dashboard.  
   
 5.  Select one of the component areas and then select the icon for a chart or a list.  
   
      You can have up to six components in the dashboard.  
   
-6.  For example, to add a chart, in the **Add Component** dialog box, select values for **Record Type**, **View**, and **Chart**, and then select **Add** to add the chart to the dashboard.  
+6.  For example, to add a chart, select the chart icon on the tile of the dashboard canvas where you want the chart to appear. Then, in the **Add Component** dialog box select values for **Record Type**, **View**, and **Chart**, and then select **Add** to add the chart to the dashboard. For information about how to create a chart, see [Create a model-driven app system chart](create-edit-system-chart.md).
   
-7.  When you are finished adding components to your dashboard, select **Save** and then **Publish**.  
+7.  When you are finished adding components to your dashboard, select **Save** and then **Close**.  
+
+8. On the solution toolbar, select **Publish**. 
   
 <a name="BKMK_editdashboard"></a>   
 ## Edit an existing dashboard  
   
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
-    > [!IMPORTANT]
-    > “If the **Model-driven** design mode isn't available, you may need to [Create an environment](https://docs.microsoft.com/powerapps/administrator/create-environment).    
-  
-2. Expand **Data**, select **Entities**, select the entity that you want base the dashboard on, such as the **Account** entity, and then select the **Dashboards** tab.  
+2. Select **Solutions**, and then open the solution you want.  
 
-3. Open a dashboard, select one of the component areas, and then on the toolbar select **Edit Component**.  
+3. In the list of solution components, open the dashboard, select one of the component areas, and then on the toolbar select **Edit Component**.  
   
-4.  In the **Set Properties** dialog box, you can make changes to a chart or list such as change the entity, default view, add a chart selector, or make the dashboard available on the mobile apps. When you’re done, select **Set**.  
+4.  In the **Set Properties** dialog box, you can make changes to a chart or list such as change the entity, default view, add a chart selector, or make the dashboard available on the mobile apps. When you’re done, select **OK**.  
   
      For more information about setting dashboard component properties, see [Set properties for a chart or list included in a dashboard](set-properties-chart-list-included-dashboard.md).  
   
-4.  When you’ve completed your changes be sure to save them, and then publish them.  
+5.  When you’ve completed your changes on the toolbar select **Save**, and then select **Close**. 
+
+6. On the solution toolbar, select **Publish**.  
   
 Additional system dashboards tasks you can perform include:  
   

@@ -7,7 +7,7 @@ manager: ryjones
 ms.service: powerapps
 ms.date: 08/05/2019
 ms.author: jdaly
-ms.reviewer: kvivek
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -58,7 +58,7 @@ If you are going to distribute the extensions you create or any customizations t
 
  - [Introduction to solutions](introduction-solutions.md)
  - [SolutionPackager tool](compress-extract-solution-file-solutionpackager.md)
- - [Package Deployer tool](./package-deployer/create-packages-package-deployer.md)
+ - [Package Deployer tool](/power-platform/alm/package-deployer-tool)
  - [Publish your app on AppSource](publish-app-appsource.md)
 
 ## Create client applications and authentication

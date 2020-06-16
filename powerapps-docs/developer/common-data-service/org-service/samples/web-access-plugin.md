@@ -3,7 +3,7 @@ title: "Sample: Web access from a plug-in (Common Data Service) | Microsoft Docs
 description: "This sample shows how to write a plug-in that can access resources on the web (network)." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 8/19/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly"

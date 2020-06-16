@@ -3,7 +3,7 @@ title: "Use the ConditionExpression class (Common Data Service) | Microsoft Docs
 description: "Read how you can use the ConditionExpression class to compare an attribute to a value or set of values by using an operator, such as &quot;equal to&quot; or &quot;greater than&quot;" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

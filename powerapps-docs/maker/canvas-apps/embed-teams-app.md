@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 10/29/2019
+ms.date: 03/16/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -16,7 +16,7 @@ search.app:
 ---
 # Embed an app in Teams
 
-You can share a Power Apps you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
+You can share an app you've created by embedding it directly into Microsoft Teams. When completed, users can select **+** to add your app to any of **your** team channels or conversations in the team you are in. The app appears as a tile under **Tabs for your team**.
 
 An admin can upload the app so it shows up for **all** teams in your tenant under the **All tabs section**. See [Share an app in Microsoft Teams](https://docs.microsoft.com/power-platform/admin/embed-app-teams).
 
@@ -53,9 +53,75 @@ An admin can upload the app so it shows up for **all** teams in your tenant unde
 
 2. Select **Add** to add the app as a personal app or select **Add to team** to add the app as a tab within an existing channel or conversation.
 
-## Publish the app to the Teams catalogue
+## Publish the app to the Teams catalog
 
-If you are an admin, you can also [publish the app](https://docs.microsoft.com/microsoftteams/tenant-apps-catalog-teams) to the Microsoft Teams catalogue.
+If you're an admin, you can also [publish the app](https://docs.microsoft.com/microsoftteams/tenant-apps-catalog-teams) to the Microsoft Teams catalog.
+
+## Use context from Teams
+
+To build deeply integrated apps with Teams, you can use Team's context variables with the `Param()` function. For example, use the following formula in screen's **Fill** property to change the background of app based on user's theme within Teams:
+
+```
+Switch(
+        Param("theme"),
+        "dark",
+        RGBA(
+            32,
+            31,
+            31,
+            1
+        ),
+        "contrast",
+        RGBA(
+            0,
+            0,
+            0,
+            1
+        ),
+        RGBA(
+            243,
+            242,
+            241,
+            1
+        )
+    )
+```
+
+To test the app, publish it and then play it within Teams.
+
+The following context variables from Teams are supported:
+
+- locale
+- channelId
+- channelType
+- chatId
+- groupId
+- hostClientType
+- subEntityId
+- teamId
+- teamType
+- theme
+- userTeamRole
+
+> [!NOTE]
+> This feature was added in March, 2020. If you embedded your app within Teams before this, you may need to re-add your app to Teams to use this functionality.
+
+## Improve the performance of your app
+
+You can optionally preload your app within Teams to increase performance.
+
+1. Sign in to [make.powerapps.com](https://make.powerapps.com), and then select **Apps** in the menu.
+
+2. Select **More actions** (...) for the app you want to share in Teams, and then select **Settings**.
+
+3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. App will then pre-load whenever embedded in Teams.
+
+    ![App details](./media/embed-teams-app/preload-app.png "Preload app for enhanced performance")
+
+4. For the changes to take effect, remove and add your app into Teams again.
+
+> [!NOTE]
+> This allows users to download the app file while authentication is in progress for embedded scenarios. However, the users can run your app only after successful authentication. This ensures that your app data will not be available to unauthenticated users.
 
 ### See also
 

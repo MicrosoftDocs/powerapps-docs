@@ -3,7 +3,7 @@ title: "Customize labels to support multiple languages (Common Data Service) | M
 description: "Learn about customizing labels to support multiple languages." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

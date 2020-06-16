@@ -45,11 +45,8 @@
         "AshleyWoodruff"
       ],
       "breadcrumb_path": "breadcrumb/toc.yml",
-      "extendBreadcrumb": true,
-      "searchScope": [
-        "PowerApps"
-      ],
-      "titleSuffix": "PowerApps",
+      "extendBreadcrumb": true,      
+      "titleSuffix": "Power Apps",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/powerapps-docs",
       "feedback_product_url": "https://ideas.powerapps.com",
@@ -78,6 +75,9 @@
         "**/*.md": [
           "powerapps"
         ]
+      },
+      "searchScope": {
+        "**.*": [ "Power Platform", "Power Apps" ]
       }
     },
     "template": [],

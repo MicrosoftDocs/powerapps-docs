@@ -2,12 +2,12 @@
 title: "Define ribbon commands (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "A Ribbon command creates a reusable definition that can be referenced by ribbon control elements." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 10/31/2018
+ms.date: 03/27/2020
 ms.service: powerapps
 ms.topic: article
 ms.assetid: 60933770-8c7c-499c-12b4-8b64f6eedb35
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -39,5 +39,6 @@ A *Ribbon* command creates a reusable definition that can be referenced by ribbo
   
 ### See also  
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Use Localized Labels with Ribbons](use-localized-labels-ribbons.md)   
- [Define Ribbon Enable Rules](define-ribbon-enable-rules.md)
+ [Use localized labels with Ribbons](use-localized-labels-ribbons.md)   
+ [Define Ribbon enable rules](define-ribbon-enable-rules.md)
+ [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)

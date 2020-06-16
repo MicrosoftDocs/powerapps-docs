@@ -3,7 +3,7 @@ title: "Visual Studio and the .NET Framework (Common Data Service) | Microsoft D
 description: "Learn about managed code development tools and requirements."
 ms.custom: ""
 ms.date: 07/03/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

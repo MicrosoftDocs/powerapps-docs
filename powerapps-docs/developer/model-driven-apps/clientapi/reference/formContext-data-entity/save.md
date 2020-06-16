@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: a27f8267-9b24-42b7-a075-420a26db6693
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -23,6 +23,9 @@ search.app:
 ## Syntax
 
 `formContext.data.entity.save(saveOption);`
+
+> [!NOTE]
+> This method is deprecated and we recommend to use the [formContext.entity.save](../formContext-data/save.md) method.
 
 ## Parameters
 

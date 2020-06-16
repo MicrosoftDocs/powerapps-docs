@@ -3,7 +3,7 @@ title: "Fiscal date and older than datetime query operators in FetchXML (Common 
 description: "Read how to use FetchXML fiscal data conditional operators and &quot;older than&quot; clauses for date and time values" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

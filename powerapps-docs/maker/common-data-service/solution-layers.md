@@ -2,7 +2,7 @@
 title: "Solution layers  | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
-ms.date: 02/05/2020
+ms.date: 03/13/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -24,9 +24,9 @@ search.app:
 
 # Solution layers
 
-Managed and unmanaged solutions exist at different layers within a Common Data Service environment. In Common Data Service, there are two distinct layers:  
+Managed and unmanaged solutions exist at different levels within a Common Data Service environment. In Common Data Service, there are two distinct layer levels:  
 - Unmanaged layer. All imported unmanaged solutions and unmanaged customizations exist at this layer. The unmanaged layer is a single layer.  
-- Managed layer. All imported managed solutions and the system solution exist at this layer. When multiple managed solutions are installed, the first one installed is below the managed solution installed later. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the general rule is “Last one wins.” If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solutions, the default behavior defined within the system solution is applied. At the base of the managed layer is the system layer. The system layer contains the system solution, which includes all the standard entities and components. The system solution defines what you can or can't customize by using managed properties. Publishers of managed solutions have the same ability to limit your ability to customize solution components that they add in their solution. You can customize any of the solution components that do not have managed properties that prevent you from customizing them. More information: [Set managed properties in Common Data Service metadata](set-managed-properties-metadata.md) 
+- Managed layers. All imported managed solutions and the system solution exist at this level. When multiple managed solutions are installed, the last one installed is above the managed solution installed previously. This means that the second solution installed can customize the one installed before it. When two managed solutions have conflicting definitions, the runtime behavior is either “Last one wins” or a merge logic is implemented.  If you uninstall a managed solution, the managed solution below it takes effect. If you uninstall all managed solutions, the default behavior defined within the system solution is applied. At the base of the managed layers level is the system layer. The system layer contains the entities and components that are required for the platform to function. 
 
 ![Solution layers](media/solution-layers.png)
 
@@ -62,6 +62,12 @@ The solution layers feature:
 
    > [!div class="mx-imgBorder"] 
    > ![Solution layer all properties](media/solution-layers-all-prop.png "Solution layer all properties")
+5. Select the **LocalizedLabels** tab to display information for components that have label fields in the solution layer. The base language and any imported translation text are displayed as indicated in the **languageid** column. If no labels exist the tab isn't displayed.  
+   > [!div class="mx-imgBorder"] 
+   > ![Solution layer localized labels](media/localized-labels.png "Solution layer localized labels")
+
+    Select a label to see its full layering.
 
 ### See also
+[Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md) <br />
 [Solutions overview](solutions-overview.md)

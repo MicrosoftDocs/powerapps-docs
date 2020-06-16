@@ -6,8 +6,8 @@ ms.date: 10/31/2018
 ms.service: powerapps
 ms.topic: article
 ms.assetid: c7eb3bdf-9d6f-9bcc-8114-4c3dc5be2976
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -23,8 +23,9 @@ search.app:
 
 Using the Common Data Service Web Services, you can perform the following actions on the visualization entities.  
   
-## Actions on organization-owned visualizations  
- To perform actions on an organization-owned visualization (`SavedQueryVisualization`), you must have the System Administrator or the System Customizer role. You can perform the following actions on an organization-owned visualization:  
+## Actions on organization-owned visualizations 
+
+To perform actions on an organization-owned visualization (`SavedQueryVisualization`), you must have the System Administrator or the System Customizer role. You can perform the following actions on an organization-owned visualization:  
   
 - Create, retrieve, update, and delete an organization-owned visualization. More information: [Create a Visualization](create-visualization-chart.md)  
   

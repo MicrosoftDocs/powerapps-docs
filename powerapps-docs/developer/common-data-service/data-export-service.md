@@ -3,7 +3,7 @@ title: "Data export service (Common Data Service) | Microsoft Docs" # Intent and
 description: "Capabilities, prerequisites, API, and programming of the Data Export Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "sabinn-msft" # GitHub ID
@@ -104,7 +104,7 @@ Because only Common Data Service System Administrators are authorized to perform
   
 ```csharp  
   
-//Reference Azure AD authentication Library (ADAL)    
+//Reference Azure AD authentication Library (ADAL v2.29)    
 using Microsoft.IdentityModel.Clients.ActiveDirectory;  
    . . .  
     string yourAppClientID = "[app-associated-GUID]";   //Your AAD-registered AppId   

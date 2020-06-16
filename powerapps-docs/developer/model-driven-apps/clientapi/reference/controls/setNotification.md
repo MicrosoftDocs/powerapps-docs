@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -16,13 +16,11 @@ search.app:
 ---
 # setNotification (Client API reference)
 
-
-
 Displays an error message for the control to indicate that data isn’t valid. When this method is used,  a red "X" icon appears next to the control. On Dynamics 365 mobile clients, tapping on the icon will display the message. 
 
 ## Control types supported
 
-All
+Standard, lookup, multiselectoptionset and optionset control types.
 
 ## Syntax
 

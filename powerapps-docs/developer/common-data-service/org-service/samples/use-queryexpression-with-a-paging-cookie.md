@@ -3,7 +3,7 @@ title: "Sample: Use QueryExpresion with a paging cookie (Common Data Service) | 
 description: "This sample shows how to use the paging cookie in a QueryExpresion" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

@@ -3,7 +3,7 @@ title: "Connect with Microsoft Office 365 and Common Data Service (Common Data S
 description: "The Microsoft Office 365 portal provides a single sign-on experience for Office 365 customers where they can sign in once and access any Office 365 application, including Dynamics 365 (online)" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID

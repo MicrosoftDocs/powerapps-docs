@@ -3,7 +3,7 @@ title: "Data import entities (Common Data Service) | Microsoft Docs" # Intent an
 description: "Lists the data import entities used to create data maps, configure and run data imports, and log failure information." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "mayadumesh" # GitHub ID

@@ -3,7 +3,7 @@ title: "Sample: Calculate a credit score with a custom workflow activity (Common
 description: "The sample demonstrates workflow activity calculates the credit score based on the Social Security Number (SSN) and name."
 ms.custom: ""
 ms.date: 1/28/2020
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

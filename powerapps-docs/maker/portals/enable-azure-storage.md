@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/07/2020
+ms.date: 05/27/2020
 ms.author: tapanm
 ms.reviewer: tapanm
 ---
@@ -19,6 +19,8 @@ You must create a storage account with **Resource manager** as the deployment mo
 
 After the storage account is running, portals require certain global settings that tell the application how to locate your storage account. In the Portal Management app, go to **Settings** > **New**, and add a new setting named **FileStorage/CloudStorageAccount**.
 
+Azure storage integration only works with **Notes** configured in Entity Form Metadata. Azure Blob as a storage is not used if you use **Portal Comments** that can be setup using **Timeline**. Though Portal Comments also provide capability for files to be uploaded as attachments, these files are only stored in Common Data Service.
+ 
 > [!NOTE]
 > The maximum file upload size is 125 MB.
 
@@ -50,12 +52,16 @@ In the [Portal Management app](configure/configure-portal.md), go to **Settings*
 
 You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon:
 
-- **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com`.
+- **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com` <br> Ensure the allowed origin doesn't have trailing `/`. For example, `https://contoso.crm.dynamics.com/` is incorrect.
 - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
-- **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*. 
-- **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*.
+- **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*, or \* to allow all.
+- **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*, or \* to allow all.
 - **Maximum age (seconds)**: Specify the maximum amount time that a browser should cache the preflight OPTIONS request. For example, 200.
- 
+
+CORS rule example:
+
+![CORS rule example](media/portals-cors-azure.png "CORS rule example")
+
 [!include[More information:](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services)
 
 ## Add site settings

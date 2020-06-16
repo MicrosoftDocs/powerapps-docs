@@ -633,7 +633,7 @@ On successful retrieve of the records, the code component has logic to count how
 
 ### Related topics
 
-[Download sample components](https://go.microsoft.com/fwlink/?linkid=2088525)<br/>
+[Download sample components](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework)<br/>
 [How to use the sample components](../use-sample-components.md)<br/>
 [Power Apps component framework API reference](../reference/index.md)<br/>
 [Power Apps component framework manifest schema reference](../manifest-schema-reference/index.md)

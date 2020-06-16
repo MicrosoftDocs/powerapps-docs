@@ -2,13 +2,13 @@
 title: "Define ribbon actions (model-driven apps) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: "Learn about defining the actions to be performed by a command bar or ribbon control in a <CommandDefinition> element together with rules that control whether the control is enabled or visible in the ribbon." # 115-145 characters including spaces. This abstract displays in the search result."
 keywords: ""
-ms.date: 10/31/2018
+ms.date: 05/07/2020
 ms.service:
   - PowerApps
 ms.topic: article
 ms.assetid: fbb7ff68-e4be-d8c2-069f-6a4a69665b56
-author: JimDaly # GitHub ID
-ms.author: jdaly # MSFT alias of Microsoft employees only
+author: Nkrb # GitHub ID
+ms.author: nabuthuk # MSFT alias of Microsoft employees only
 manager: shilpas # MSFT alias of manager or PM counterpart
 ms.reviewer: 
 search.audienceType: 
@@ -26,7 +26,7 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
   
  A Ribbon control can perform two types actions and may include multiple actions:  
   
-- **JavaScript Functions**: A `<JavaScriptFunction>` element references a function defined in a Script Web resource.  
+- **JavaScript Functions**: A `<JavaScriptFunction>` element references a function defined in a [Script (JScript) web resource](/powerapps/developer/model-driven-apps/script-jscript-web-resources).  
   
 - **Open a URL**: The ribbon opens a URL using the value from an Address attribute in the `<Url>` element. Additional parameters can pass information about how what querystring parameters are passed and the mode in which the window opens.  
   
@@ -40,7 +40,7 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
 [!INCLUDE[ribbon_element_BoolParameter](../../includes/ribbon-element-boolparameter.md)]
   
  `<CrmParameter>`  
- [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] More information: [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  <!-- TODO need to update the relevant link from the powerapps repo -->
+ [!INCLUDE[ribbon_element_CrmParameter](../../includes/ribbon-element-crmparameter.md)] More information: [Pass data from a page as a parameter to Ribbon Actions](pass-data-page-parameter-ribbon-actions.md) 
   
  `<DecimalParameter>`  
  [!INCLUDE[ribbon_element_DecimalParameter](../../includes/ribbon-element-decimalparameter.md)]
@@ -51,13 +51,14 @@ Define the actions to be performed by a command bar or ribbon control in a `<Com
  `<StringParameter>`  
  [!INCLUDE[ribbon_element_StringParameter](../../includes/ribbon-element-stringparameter.md)]
   
- When parameters are passed to a `<Url>` element they are passed as a query string. Therefore, they must include a name value to represent the ”key” in the query string key/value pair.  
+ When parameters are passed to a `<Url>` element they are passed as a query string. Therefore, they must include a name value to represent the "key" in the query string key/value pair.  
   
  Parameters passed to a `<JavaScriptFunction>` do not require a name but they must be included in the order expected by the function and be of the correct data type.  
   
 ## See also  
 
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Define Ribbon Display Rules](define-ribbon-display-rules.md)   
- [Pass data from a page as a parameter to Ribbon Actions](/dynamics365/customer-engagement/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actionsd)  
-<!-- TODO need to update the relevant link from the powerapps repo-->
+ [Define Ribbon display rules](define-ribbon-display-rules.md)   
+ [Pass data from a page as a parameter to Ribbon actions](pass-data-page-parameter-ribbon-actions.md)  
+
+

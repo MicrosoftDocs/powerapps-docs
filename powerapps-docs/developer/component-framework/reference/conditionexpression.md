@@ -25,7 +25,7 @@ Model-driven apps
 
 ### attributeName
 
-The name of the data-set column to apply the filter on.
+The name of the dataset column to apply the filter on.
 
 **Type**: `string`
 

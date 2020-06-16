@@ -3,7 +3,7 @@ title: "Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Ap
 description: "Learn how to use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""

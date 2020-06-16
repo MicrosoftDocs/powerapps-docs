@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 44296667-f1cd-49be-a300-7259bc3b41e0
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -36,7 +36,7 @@ Returns the date formatting information for the current user.
 
 **Type**: Object
 
-**Description**: An object with informatiuon about date formatting such as **FirstDayOfWeek**, **LongDatePattern**, **MonthDayPattern**, **TimeSeparator**, and so on.
+**Description**: An object with information about date formatting such as **FirstDayOfWeek**, **LongDatePattern**, **MonthDayPattern**, **TimeSeparator**, and so on.
 
 ## defaultDashboardId 
 
@@ -118,7 +118,7 @@ Returns a collection of lookup objects containing the GUID and display name of e
  
 ### Return Value
 
-**Type**: Array of objects
+**Type**: Collection
 
 **Description**: Object containing `id` and `name` of each of the security role or teams that the user is associated with.
 

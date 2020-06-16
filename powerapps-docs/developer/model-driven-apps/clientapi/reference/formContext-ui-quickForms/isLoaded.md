@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 1870151d-6029-4733-ac35-6ee4d43f9553
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -51,7 +51,7 @@ function getAttributeValue(executionContext) {
         }
         else {
             // Wait for some time and check again
-            setTimeout(getAttributeValue, 10);
+            setTimeout(getAttributeValue, 10, executionContext);
         }
     }
     else {

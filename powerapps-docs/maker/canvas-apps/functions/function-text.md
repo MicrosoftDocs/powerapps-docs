@@ -29,19 +29,21 @@ The **Text** function can also convert any data type to a text representation us
 
 ### <a name="predefined-datetime-formats"></a> Predefined date/time formats
 
-| Predefined Format | Description |
-| --- | --- |
-| **DateTimeFormat.LongDate** |Full year, month, day of the month, and day of the week. The names of the month and the day of the week aren't abbreviated. |
-| **DateTimeFormat.LongDateTime** |Full year, month, day of the month, and day of the week, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. The names of the month and the day of the week aren't abbreviated. |
-| **DateTimeFormat.LongDateTime24** |Full year, month, day of the month, and day of the week, plus hour (24-hour clock), minutes, and seconds. The names of the month and the day of the week aren't abbreviated. |
-| **DateTimeFormat.LongTime** |Hour (12-hour clock), minutes, seconds, and AM/PM designation. Same as ShortTime. |
-| **DateTimeFormat.LongTime24** |Hour (24-hour clock), minutes, seconds. Same as ShortTime24. |
-| **DateTimeFormat.ShortDate** |Four-digit year with two-digit month and day of the month. |
-| **DateTimeFormat.ShortDateTime** |Four-digit year with two-digit month and day of the month, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. |
-| **DateTimeFormat.ShortDateTime24** |Four-digit year with two-digit month and day of the month, plus hour (24-hour clock), minutes, and seconds. |
-| **DateTimeFormat.ShortTime** |Hour (12-hour clock), minutes, seconds, and AM/PM designation.  Same as LongTime. |
-| **DateTimeFormat.ShortTime24** |Hour (24-hour clock), minutes, and seconds.  Same as LongTime24. |
-| **DateTimeFormat.UTC** |The date/time value is converted to UTC based on the current user's time zone and formatted according to the ISO 8601 standard. |
+For these examples, date and time used is Tuesday, April 7, 2020 8:26:59.180 PM, in the time zone UTC-7 hours.
+ 
+| DateTimeFormat enum | Description | Examples (using **en-US**) |
+| --- | --- | --- |
+| **LongDate** |Four-digit year, month name, day of the month, and day of the week. The names of the month and day of the week aren't abbreviated. | "Tuesday, April 7, 2020" |
+| **LongDateTime** |Four-digit year, month name, day of the month, and day of the week, plus hour (12-hour clock), minutes, seconds, and AM/PM designation. The names of the month and day of the week aren't abbreviated. | "Tuesday, April 7, 2020 8:26:59 PM" |
+| **LongDateTime24** |Four-digit year, month, day of the month, and day of the week, plus hour (24-hour clock), minutes, and seconds. The names of the month and day of the week aren't abbreviated. | "Tuesday, April 7, 2020 20:26:59" |
+| **LongTime** |Hour (12-hour clock), minutes, seconds, and AM/PM designation.  | "8:26:59 PM" |
+| **LongTime24** |Hour (24-hour clock), minutes, seconds.  | "20:26:59" | 
+| **ShortDate** |Four-digit year with numerical month and day of the month. | "4/7/2020" | 
+| **ShortDateTime** |Four-digit year with numerical month and day of the month, plus hour (12-hour clock), minutes, and AM/PM designation. | "4/7/2020 8:26 PM" |
+| **ShortDateTime24** |Four-digit year with numerical month and day of the month, plus hour (24-hour clock) and minutes. | "4/7/2020 20:26" |
+| **ShortTime** |Hour (12-hour clock), minutes, and AM/PM designation.   | "8:26 PM" |
+| **ShortTime24** |Hour (24-hour clock) and minutes.   | "20:26" |
+| **UTC** |The date/time value is converted to UTC based on the current user's time zone and formatted according to the ISO 8601 standard. | "2020-04-08T03:26:59.180Z" |
 
 ### Number placeholders
 

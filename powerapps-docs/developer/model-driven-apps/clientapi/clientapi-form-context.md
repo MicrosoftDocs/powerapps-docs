@@ -8,7 +8,7 @@ applies_to:
 ms.assetid: 0cf94e8d-801a-451f-98c3-130e912f963b
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -111,6 +111,8 @@ reference)](reference/collections.md).
 
 [getFormContext method](reference/executioncontext/getFormContext.md)<br/>
 [getGlobalContext method](reference/xrm-utility/getGlobalContext.md)<br/>
+[getAttribute method](reference/attributes.md)<br/>
+[getControl method](reference/controls/getcontrol.md)<br/>
 [Execution context methods](reference/execution-context.md) 
 
  

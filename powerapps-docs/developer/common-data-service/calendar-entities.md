@@ -3,7 +3,7 @@ title: "Calendar entities (Common Data Service) | Microsoft Docs" # Intent and p
 description: "Read how you can store data for customer service calendars and holiday schedules using calendar entities." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner

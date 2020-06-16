@@ -3,7 +3,7 @@ title: "Apply SLAs to entities (Common Data Service) | Microsoft Docs" # Intent 
 description: "Learn about applying SLAs to custom entities by enabling entities for applying SLAs. Also, you can create SLA KPIs."
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" #TODO: NoOwner

@@ -3,7 +3,7 @@ title: "Use Multi-Tenant Server-to-server authentication (Common Data Service) |
 description: "Describes how to configure an application user for server-to-server authentication with Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 2/28/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "paulliew" # GitHub ID
@@ -62,12 +62,12 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
  You will create a multi-tenant web application or service which uses Azure AD as the authentication provider.  
   
  Exactly how you do this will not be the focus of this topic. There are a number of ways you can approach this and make choices that fit your requirements or preferences. See the following links for more information and samples:  
+
+- [Build a multi-tenant SaaS web application using Azure AD & OpenID Connect](https://github.com/Azure-Samples/active-directory-dotnet-webapp-multitenant-openidconnect)
   
-- [Build a multi-tenant SaaS web application using Azure AD &amp; OpenID Connect](https://azure.microsoft.com/documentation/samples/active-directory-dotnet-webapp-multitenant-openidconnect/)  
+- [An ASP.NET Core Web app signing-in users in any org with the Microsoft identity platform](https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-openidconnect-v2/tree/master/1-WebApp-OIDC/1-2-AnyOrg)  
   
-- [Build a multi-tenant SaaS web application that calls a web API using Azure AD](https://azure.microsoft.com/documentation/samples/active-directory-webapp-webapi-multitenant-openidconnect-aspnetcore/)  
-  
-  Azure AD requires the following values to register your application:  
+Azure AD requires the following values to register your application:  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -203,14 +203,14 @@ In this scenario any Common Data Service tenant can potentially use your multi-t
   
   For information about creating a Common Data Service solution, see the following topics:
   
-- [Use solutions for your customizations](../../maker/common-data-service/use-solutions-for-your-customizations.md)  
+- [Use solutions for your customizations](/power-platform/alm/use-solutions-for-your-customizations)  
 - [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)  
   
   However, the application user cannot be included with a solution so you will need to provide a way to create this application user and associate it with the custom security role.  
   
   There are several ways that you can achieve this, including writing your own program using the web services and having the subscriber run the program.  
   
-  The Dynamics 365 Package Deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different Common Data Service organization. More information: [Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)  
+  The Dynamics 365 Package Deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different Common Data Service organization. More information: [Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)  
   
 ### See also  
  [Use Single-Tenant Server-to-server authentication](use-single-tenant-server-server-authentication.md)   

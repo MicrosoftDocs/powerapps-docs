@@ -3,7 +3,7 @@ title: "Use managed properties (Common Data Service) | Microsoft Docs" # Intent 
 description: "Managed properties help you define which of the managed solution components can be customized" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "shmcarth" # GitHub ID

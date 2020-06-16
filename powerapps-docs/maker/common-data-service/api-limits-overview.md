@@ -2,7 +2,7 @@
 title: "API limits overview (Common Data Service) | Microsoft Docs" 
 description: "Understand the limits for Common Data Service API requests." 
 ms.custom: ""
-ms.date: 12/08/2019
+ms.date: 03/05/2020
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -49,9 +49,9 @@ To ensure consistent availability and performance for everyone we apply some lim
 We limit the number of concurrent connections per user account, the number of API requests per connection, and the amount of execution time that can be used for each connection. These are evaluated within a five minute sliding window. When one of these limits is exceeded, an exception will be thrown by the platform.
 
 > [!NOTE]
-> Service protection limits apply to all requests, not only the CRUD operations on entities counted against entitlement limits.
+> Service protection limits apply to all external web service requests, not only the CRUD operations on entities counted against entitlement limits.
 > 
-> Since plug-ins and custom workflow activities execute on the server independent of a logged on user, service protection API limits are not applied against API calls made from plug-in code.
+> Service protection API limits are not applied against API calls made within workflows, custom workflow activities, or plug-in code. These operations are invoked internally.
 
 Because service protection limits are usually only encountered by applications that perform a high volume of data operations, we recommend that developers building those applications apply patterns to re-try operations after a period of time when these exceptions are returned. This will allow the application to respond to exceptions the service sends and reduce the total number of requests and achieve the highest possible throughput.
 

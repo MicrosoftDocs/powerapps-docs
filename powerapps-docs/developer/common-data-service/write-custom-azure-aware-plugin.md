@@ -9,7 +9,7 @@ ms.assetid: 93d0442e-5fc9-c43c-c8c1-a433687f3d0a
 author: JimDaly # GitHub ID
 ms.author: jdaly # MSFT alias of Microsoft employees only
 manager: ryjones # MSFT alias of manager or PM counterpart
-ms.reviewer: 
+ms.reviewer: "pehecke"
 search.audienceType: 
   - developer
 search.app: 
@@ -131,7 +131,7 @@ For a plug-in registered to execute in asynchronous mode, this also means that t
 The expected behavior from a failed service bus post is dependent on whether the plug-in was registered for synchronous or asynchronous execution. For asynchronous plug-ins, the system job that actually posts the execution context to the service bus will retry the post. For a synchronous registered plug-in, an exception is returned. More information [Management and Notification of Run-time Errors](azure-integration.md)  
   
 > [!IMPORTANT]
->  For asynchronous registered plug-ins only, when the asynchronous job that posts to the Azure Service Bus is retried after a post failure, the entire plug-in logic is executed again. Because of this, don’t add any other logic to the custom Azure aware plug-in other than just modifying the context and posting to the service bus.  
+>  For asynchronous registered plug-ins only, when the asynchronous job that posts to the Azure Service Bus is retried after a post failure, the entire plug-in logic is executed again. Because of this, don't add any other logic to the custom Azure aware plug-in other than just modifying the context and posting to the service bus.  
   
 For a plug-in registered to execute asynchronously, the <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> contained in the body of the message that is sent over the service bus includes a <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext.OperationId> property and a <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext.OperationCreatedOn> property. These properties contain the same data as the `AsyncOperationId` and `CreatedOn` attributes of the related System Job (`AsyncOperation`) record. These additional properties facilitate sequencing and duplicate detection if the Azure Service Bus post must be retried.  
   
@@ -142,3 +142,4 @@ For a plug-in registered to execute asynchronously, the <xref:Microsoft.Xrm.Sdk.
 [Write a Plug-In](write-plug-in.md)<br />
 [Event Execution Pipeline](event-framework.md)<br />
 [Register and Deploy Plug-Ins](register-plug-in.md)
+ 

@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: d69a432a-1d74-4782-bedd-f9f30d3d7d9c
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,7 +15,6 @@ search.app:
   - D365CE
 ---
 # addPreSearch (Client API reference)
-
 
 
 Applies changes to lookups based on values current just as the user is about to view results for the lookup.

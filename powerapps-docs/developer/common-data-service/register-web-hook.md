@@ -3,7 +3,7 @@ title: "Register a webhook (Common Data Service) | Microsoft Docs" # Intent and 
 description: "This topic will describe how to register a webhook using the plug-in registration tool" 
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

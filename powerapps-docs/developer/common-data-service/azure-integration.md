@@ -3,7 +3,7 @@ title: "Azure Integration (Common Data Service) | Microsoft Docs"
 description: "<Description>" 
 ms.custom: ""
 ms.date: 06/01/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly"

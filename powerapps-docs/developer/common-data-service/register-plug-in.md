@@ -3,7 +3,7 @@ title: "Register a plug-in (Common Data Service) | Microsoft Docs" # Intent and 
 description: "Learn how to register a plug-in to apply custom business logic to Common Data Service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 02/19/2019
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
@@ -41,6 +41,7 @@ Content in this topic describes the steps **in bold** above and supports the fol
 - [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)
 - [Tutorial: Debug a plug-in](tutorial-debug-plug-in.md)
 - [Tutorial: Update a plug-in](tutorial-update-plug-in.md)
+
 
 ## Plugin registration tool (PRT)
 
@@ -164,10 +165,6 @@ When you register a step, there are many options available to you which depend o
 |**Execution Order**|Multiple steps can be registered for the same stage of the same message. The number in this field determines the order in which they will be applied from lowest to highest. <br/> **Note**: You should set this to control the order in which plug-ins are applied in the stage. It not recommended to simply accept the default value. If all plug-ins for the same stage, entity, and message have the same value, the [SdkMessageProcessingStep.SdkMessageFilterId](/dynamics365/customer-engagement/developer/entities/sdkmessageprocessingstep#BKMK_SdkMessageFilterId) value will determine the order in which they are executed.|
 |**Description**|A description for step. This value is pre-populated but can be overwritten.|
 
-> [!NOTE]
-> There are certain cases where plug-ins registered for the `Update` event can be called twice. More information: [Behavior of specialized update operations](special-update-operation-behavior.md)
-
-
 ### Event Pipeline Stage of execution
 
 Choose the stage in the event pipeline that best suites the purpose for your plug-in.
@@ -189,7 +186,13 @@ There are two modes of execution asynchronous, and synchronous.
 |**Asynchronous**|The execution context and the definition of the business logic to apply is moved to system job which will execute after the operation completes.|
 |**Synchronous**|Plug-ins execute immediately according to the stage of execution and execution order. The entire operation will wait until they complete.|
 
-Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md)
+Asynchronous plug-ins can only be registered for the **PostOperation** stage. For more information about how system jobs work, see [Asynchronous service](asynchronous-service.md)       
+
+### Special step registration scenarios
+There are certain scenarios where step registration for a message and entity combination is not obvious. This is the result of how the system is designed internally where there is a special relationship between entities or operations. The information below identifies these cases and provides step registration guidance.
+
+- There are certain cases where plug-ins registered for the _Update_ event can be called twice. More information: [Behavior of specialized update operations](https://github.com/MicrosoftDocs/powerapps-docs-pr/blob/8c969ed391d6fc8e423bde15c65db1f60f5fab2f/powerapps-docs/developer/common-data-service/special-update-operation-behavior.md)
+- Register a plug-in step on **account** or **contact** when you want to handle data changes to **customeraddress**, **leadaddress**, **publisheraddress**, or **competitoraddress** entity instances.
 
 ### Deployment
 

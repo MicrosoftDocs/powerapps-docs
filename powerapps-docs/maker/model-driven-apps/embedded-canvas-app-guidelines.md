@@ -7,11 +7,7 @@ ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "PowerApps"
-author: "Aneesmsft"
+author: "RichdiMSFT"
 ms.author: "matp"
 manager: "kvivek"
 tags: 
@@ -19,7 +15,7 @@ tags:
 search.audienceType: 
   - maker
 search.app: 
-  - "PowerApps"
+  - PowerApps
   - D365CE
 ---
 

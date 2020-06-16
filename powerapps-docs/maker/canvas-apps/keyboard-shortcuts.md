@@ -1,14 +1,14 @@
 ---
 title: Keyboard shortcuts for canvas apps | Microsoft Docs
 description: Keyboard shortcuts for canvas apps
-author: tapanm-msft
+author: adrianorth
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 02/09/2020
-ms.author: tapanm
+ms.reviewer: tapanm
+ms.date: 06/12/2020
+ms.author: aorth
 search.audienceType: 
   - maker
 search.app: 
@@ -26,6 +26,7 @@ search.app:
 | Ctrl+O (or Alt+F) | Open a file. |
 | Ctrl+Shift+S (or Alt+P) | Save the app with a different name. |
 | Ctrl+S | Save the app with the same name or for the first time. |
+| Ctrl+Shift+P | Save the app and activate the publish dialog. |
 | F12 | Download the app file (.msapp). |
 | Alt+F | Open the **File** menu. |
 
@@ -35,8 +36,6 @@ search.app:
 |--|--|
 | Enter | Run the selected command. |
 | Tab | Move between commands on the selected tab and then to the next tab. |
-| Ctrl+F6 | Navigate to the next landmark. |
-| Ctrl+Shift+F6 | Navigate to the previous landmark. |
 | Alt+I | Select the **Insert** tab. |
 
 ## Editing
@@ -132,6 +131,8 @@ The Alt key can also be used *after* a control has been selected to override sna
 | Shortcut | Action |
 |--|--|
 | F1 | Open documentation. |
+| Ctrl+F6 | Navigate to the next landmark. |
+| Ctrl+Shift+F6 | Navigate to the previous landmark. |
 | Shift+F10 | Open a shortcut menu in, for example, **Tree view**. |
 
 

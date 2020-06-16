@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: 13731ab8-e850-49d4-94c0-eae6135745c7
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -22,7 +22,7 @@ search.app:
 
 ## Syntax
 
-`contextObj.setDisplayState(state);`
+`tabObj.setDisplayState(state);`
 
 ## Parameter
 

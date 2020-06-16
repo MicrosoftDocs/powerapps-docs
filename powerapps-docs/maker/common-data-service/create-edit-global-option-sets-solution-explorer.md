@@ -71,6 +71,9 @@ While viewing global option sets, select the option set you want to edit to open
 
 Except for changing the **Name** field value or the number **Value** assigned to an option, you can make any of the changes you can when creating the global option set.
 
+> [!NOTE]
+> You cannot edit an option set if it is part of a managed solution. To edit managed solution option sets, you will have to contact the solution owner.
+
 [!INCLUDE [cc_remove-option-warning](../../includes/cc_remove-option-warning.md)]
 
 ## Delete a global option set

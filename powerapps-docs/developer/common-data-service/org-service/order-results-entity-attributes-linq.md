@@ -3,7 +3,7 @@ title: "Order results using entity attributes with LINQ (Common Data Service) | 
 description: "Read how you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query"
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID

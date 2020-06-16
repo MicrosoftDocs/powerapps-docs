@@ -7,15 +7,15 @@ ms.topic: conceptual
 ms.assetid: 63600a55-a1f0-491f-83f6-b3252566d27e
 author: KumarVivek
 ms.author: kvivek
-manager: amyla
+manager: annbe
 search.audienceType: 
   - developer
 search.app: 
   - PowerApps
 ---
-# Quick Start Sample: Retrieve Common Data Service environements using Online Management API 
+# Quick Start Sample: Retrieve Common Data Service environments using Online Management API 
 
-The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environements from your Office 365 tenant.
+The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environments from your Office 365 tenant.
 
 The sample uses the authentication [helper code](sample-authentication-helper.md) to easily authenticate to Online Management API using the OAuth 2.0 protocol and pass in the access token in header of your request.
 
@@ -30,7 +30,7 @@ The sample performs the following tasks:
     b. Uses an HttpClient instance to connect to Online Management API service.
 
     c. Specifies the API service base address and the max period of execution time.
-1. Uses the **RetrieveInstancesAsync** method to execute a http request to retrieve all Customer Enagement instances in your Office 365 tenant, and then displays the reponse.
+1. Uses the **RetrieveInstancesAsync** method to execute a http request to retrieve all Customer Engagement instances in your Office 365 tenant, and then displays the response.
 
 ## Run this sample
 Before you can run this sample, make sure that you have:

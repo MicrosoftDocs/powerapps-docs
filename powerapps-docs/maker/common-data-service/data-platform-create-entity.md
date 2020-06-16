@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.component: cds
 ms.topic: quickstart
-ms.date: 12/23/2019
+ms.date: 06/05/2020
 ms.author: matp
 search.audienceType: 
   - maker
@@ -17,99 +17,51 @@ search.app:
 # Create a custom entity
 In Power Apps, an *entity* defines information that you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. You can then surface that data by developing an app that refers to the entity. Power Apps offers standard "out-of-the-box" entities to cover typical scenarios within an organization (such as tracking appointments), but there may be times when you need to create custom entities to store data that's specific to your organization.
 
-In this topic, you'll learn how to create a custom entity called Product Review that you can use to create an app that displays ratings and comments for products that your company sells.
-
 ## Prerequisites
-To follow this procedure, you must have either a System Administrator or System Customizer security role within Common Data Service.
+To create an entity, you must have either a System Administrator or System Customizer security role within Common Data Service.
 
 ## Sign in to Power Apps
 Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
 
 ## Create an entity
-1. In the navigation pane, click or tap **Data** to expand it, and then click or tap **Entities**.
+1. In the navigation pane, expand **Data**, and then select **Entities**.
 
-    ![List of entities and their details](./media/data-platform-cds-create-entity/entitylist.png "Entity List")
-
-2. in the command bar, click or tap **New entity**.
+2. On the command bar, select **New entity**.
 
     Before you create an entity, check out the [entity reference](../../developer/common-data-service/reference/about-entity-reference.md) for a description of available standard entities. These entities cover typical scenarios. If one of these entities meets your requirements as is or after minor changes, you can save time by starting with that entity. 
 
-3. In the **New entity** panel, do the following:
-
-    a. In the **Display name** box, enter **Product review**.
-
-    Observe that the following boxes are autopopulated as you enter a display name:
-
-    * **Plural display name** - This box is autopopulated when you enter a display name, but you can change it if needed. The plural display name is the name of the entity in the Common Data Service WebAPI and is used when interacting with this entity from Power Apps or Flow.
-    * **Name** - This box is also autopopulated when you enter a display name. The prefix was set up when the environment was created and ensures that the entities you create can be exported and imported into other environments without conflicting with other entity names. You can change this prefix by updating the prefix on your Publisher for the Common Data Service Default Solution. To keep existing apps from breaking, you cannot change the name after saving the entity.
-
-       > [!NOTE]
-       > In order for the entity name to work with [Dynamics 365 for Customer Service embedded knowledge search](/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), the maximum entity name length including the publisher prefix can’t exceed 24 characters.
-
-    b. In the **Primary Field** section, in the **Display name** box, replace **Name** with **Product Review**. 
-
-    By default, every entity contains a **Primary Field**, which is used by lookup fields when establishing relationships with other entities. Typically the primary field stores the name or primary description of the data stored in the entity. You may update the name and display name of the primary field before saving the entity for the first time.
-
-    Also, observe that the primary field also has its own **Name** box, which functions similarly to the entity name described above. The primary field name is autopopulated when a display name is entered, uses the same prefix as the entity, and cannot be changed after the entity is created.
-
-    c. Open the **More settings** section and expand the **Description** accordion. You may enter a description for your entity if you wish (descriptions are helpful if other people will use this entity). 
-
-    d. Select **Activity** entity option from the **Choose entity type** drop-down list to enable an entity as an activity.
-
-    e. Ensure **Display in Activity menus** check box is selected. This option ensures the activity is made available in the activity menu.
-
-      > [!Note]
-      > Ensure to the **Display in Activity menus** option before you create the entity.
-
-    f. Expand **Create and update settings** and select the **Enable quick create forms** check box. This option ensures, you can use the quick create form to crete a record.
-    
-    g. When you're done, click **Create**.
-     
-    ![New Entity](./media/data-platform-cds-create-entity/newentitypanel.png "New Entity Panel")
-
-4. On the entity details page, observe that the entity is now being provisioned in the background. Once provisioning is completed, your entity will be saved and available for use in apps. Fields, relationships, and keys can be added to your entity at any time (even while provisioning is still in progress), but views, forms, charts, dashboards, and business rules can only be added to the entity after provisioning is completed.
-
-    ![Entity Details](./media/data-platform-cds-create-entity/newentitydetails.png "New Entity Details")
-
-5. Under the **Fields** tab, observe the **Primary Field** that you named in the previous step. Click or tap the **Primary Field** field to open the **Primary Field** panel if you would like to make any additional customizations to the field. Notice that the **Name** can no longer be changed, since the entity has already been saved.
-
-5. To add a field to the entity, do the following:
- 
-    a. In the command bar, click or tap **Add field** to open the **Field properties** panel.
-
-    b. In the **Display name** box, enter **Review Date**.
-
-    c. From the **Data type** drop-down list, select **Date Only**.
-
-    d. Click or tap the **Required** check box.
-    
-    e. Click or tap **Done**.
-     
-    For more information, see [Manage fields in an entity](data-platform-manage-fields.md).
-
+3. In the **New entity** panel, enter the following information fields. Required fields are designated with an asterisk (*) next to the field label. 
     > [!div class="mx-imgBorder"] 
-    > ![New Field](./media/data-platform-cds-create-entity/newfieldpanel-2.png "New Field Panel")
+    > ![Create new entity](media/data-platform-cds-create-entity/newentitypanel.png)
+    
+    |Section  |Field  |Description  |
+    |---------|---------|---------|
+    |Required fields   | **Display name &#42;**      | This is the singular name for the entity that will be shown in the app. This can be changed later.     |
+    |Required fields      |  **Plural display name &#42;**        | This is the plural name for the entity that will be shown in the app. This can be changed later.      |
+    |Required fields      | **Name &#42;**    |  This field is pre-populated based on the **Display** name you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the entity is saved. <br /> <br /> In order for the entity name to work with [Dynamics 365 for Customer Service embedded knowledge search](/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), the maximum entity name length including the publisher prefix can’t exceed 24 characters.         |
+    |Required fields     |  **Display Name &#42;** (Primary field)     | By default, every entity contains a Primary Field, which is used by lookup fields when establishing relationships with other entities. Typically the primary field stores the name or primary description of the data stored in the entity. You may update the name and display name of the primary field before saving the entity for the first time. Also, observe that the primary field also has its own **Name** box, which functions similarly to the entity name described above. The primary field name is autopopulated when a display name is entered, uses the same prefix as the entity, and cannot be changed after the entity is created.      |
+    |**Description**     | **Description**      | Expand **More settings** > **Description**.  You can enter a description for your entity if you wish. Descriptions are helpful if other people will use this entity.     |
+    |**Entity type and ownership**   |  **Choose entity type**    | Switch the entity type to **Activity Entity** to create entities that can manage tasks.      |
+    |**Entity type and ownership**   |  **Ownership**     | The type of ownership defines who can perform operations on a record. **User or team** ownership allows the entity records to contain data that relates to customers, such as accounts or contacts. Security can be defined according to the business unit for the user or team.  **Organization** owership entity records contain data involving something that belongs to or that can be viewed by the whole organization. *Organization-owned entity records can't be assigned or shared.*      |
+    |**Collaboration**     |  **Allow feedback**     |  Let customers write feedback for any entity record, or rate entity records within a defined rating range. Once enabled this setting can't be disabled. More information: [Configure an entity for feedback/ratings](configure-entity-feedback.md)    |
+    |**Collaboration**     | **Enable for activities**    | Associate activities to records for this entity.  Once enabled this setting can't be disabled.      |
+    |**Collaboration**     | **Enable connections**    | Use the connections feature to show how records for this entity have connections to records of other entities that also have connections enabled. Once enabled this setting can't be disabled.    |
+    |**Collaboration**     |  **Send email to entity**     | Send emails using an email address stored in one of the fields for this entity. If a **Single Line** of **Text field** with format set to email doesn’t already exist for this entity, a new one will be created when you enable sending email. Once enabled this setting can't be disabled.   |
+    |**Collaboration**     | **Support mail merge**   | Allows people to use this entity with mail merge.     |
+    |**Collaboration**     | **Enable SharePoint document management**  |  After other tasks have been performed to enable document management for your organization, enabling this feature allows for this entity to participate in integration with SharePoint.       |
+    |**Collaboration**     | **Auto create access teams**     |  Create team templates for this entity.      |
+    |**Collaboration**     |  **Enable queues**       | Use the entity with queues. Queues improve routing and sharing of work by making records for this entity available in a central place that everyone can access. Once enabled this setting can't be disabled.      |
+    |**Create and update settings**     | **Enable quick create forms**     | After you have created and published a quick create form for this entity, people will have the option to create a new record using the **Create** button in the navigation pane. <br /> <br />When this is enabled for a custom activity entity, the custom activity will be visible in the group of activity entities when people use the **Create** button. However, because activities don’t support quick create forms, the main form will be used when the custom entity icon is selected.      |
+    |**Create and update settings**     | **Duplicate detection**     | Enabling this allows you to create duplicate detection rules for this entity.     |
+    |**Create and update settings**     |  **Enable change tracking**     | Enables data synchronization in a performant way by detecting what data has changed since the data was initially extracted or last synchronized.     |  
+    | **Dynamics 365 for Outlook**  | **Enable offline capabilities**  | Enables record data for this entity to be available while the Dynamics 365 for Outlook application is not connected to the network.  |
 
-6. Repeat the previous step to add three more fields with the following configurations:
-    * **Display name** = Product Rating; **Data type** = Whole Number; click or tap **Required** check box
-    * **Display name** = Reviewer Name; **Data type** = Text
-    * **Display name** = Reviewer Comment; **Data type** = Text
-
-    When you're done, you should have five fields listed on your entity details page.
-
-    ![Field list](./media/data-platform-cds-create-entity/addedfields.png "List of fields")
-
-    Note that all entities have read-only system fields. By default, system fields are not shown in the list of fields even though they exist in the entity. To see all fields, change the filter on the command bar from **Default** to **All**. For more information on the metadata related to an entity, see [Entity metadata](../../developer/common-data-service/entity-metadata.md).
-
-7. Click **Save Entity** to save the latest changes to your entity.
-
-    The Product Review entity should appear in the list of entities in your database. If you don't see it, change the filter in the command bar from **Default** to **Custom**.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Filter](./media/data-platform-cds-create-entity/filter.png "Filter selection")
+4. Select  **Create**.
+     
+On the entity details page, observe that the entity is now being provisioned in the background. Once provisioning is completed, your entity will be saved and available for use in apps. Fields, relationships, and keys can be added to your entity at any time (even while provisioning is still in progress), but views, forms, charts, dashboards, and business rules can only be added to the entity after provisioning is completed.
 
 ## Next steps
-In this topic, you learned how to create a custom entity called Product Review that can be used to create an app that displays ratings and comments for each product sold by a particular company. Next, learn how to define relationships between entities (in this case between the standard Product entity and your custom Product Review entity) so you can associate each product with the reviews and comments it receives.
+In this topic, you learned how to create a custom entity. Next, learn how to define relationships between entities.
 
 > [!div class="nextstepaction"]
 > [Create a relationship](data-platform-entity-lookup.md)

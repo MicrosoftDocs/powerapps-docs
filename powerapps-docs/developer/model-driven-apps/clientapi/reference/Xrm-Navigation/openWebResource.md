@@ -50,7 +50,7 @@ An HTML web resource can accept the parameter values described in [Pass paramete
 - Open an HTML web resource, setting the windowOptions:
 
   ```
-  var windowOptions = { height: 400, width: 400 }
+  var windowOptions = { height: 400, width: 400 };
   Xrm.Navigation.openWebResource("new_webResource.htm",windowOptions);
   ```
 

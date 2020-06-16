@@ -3,7 +3,7 @@ title: "Start a Common Data Service Web API project in Visual Studio (C#) (Commo
 description: "Create a new project in Visual Studio to build a console application that uses Common Data Service Web API"
 ms.custom: 
 ms.date: 04/22/2019
-ms.reviewer: 
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -49,9 +49,9 @@ The following procedure demonstrates how to create a console application project
   
    ![A new console app project dialog in Common Data Service](media/new-project.PNG "A new console app project dialog in Common Data Service")  
   
-5. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name “StartWebAPI-CS” was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
+5. In the text boxes near the bottom of the form, supply the project name and location, and then select OK. (For this topic, the solution name "StartWebAPI-CS" was used.) The initial solution files will be generated and the solution loaded into Visual Studio.  
   
-6. Under the **Project** menu, open the project’s properties form and verify the target framework is set to **.NET Framework 4.6.2**.  
+6. Under the **Project** menu, open the project's properties form and verify the target framework is set to **.NET Framework 4.6.2**.  
   
 #### Install and verify the required assembly references  
 

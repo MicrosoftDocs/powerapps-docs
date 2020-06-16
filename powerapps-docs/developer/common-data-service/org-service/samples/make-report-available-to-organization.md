@@ -3,7 +3,7 @@ title: "Sample: Make a report available or unavailable to organization (Common D
 description: "This sample shows how to make a report available or unavailable to an organization.." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "samples"
 author: "JimDaly" # GitHub ID

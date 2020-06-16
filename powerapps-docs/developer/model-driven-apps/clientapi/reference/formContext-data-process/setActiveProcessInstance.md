@@ -7,7 +7,7 @@ applies_to: "Dynamics 365 (online)"
 ms.assetid: c01a9445-00b6-4152-a482-df830f91a3ea
 author: "KumarVivek"
 ms.author: "kvivek"
-manager: "amyla"
+manager: "annbe"
 search.audienceType: 
   - developer
 search.app: 
@@ -28,7 +28,7 @@ search.app:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|processInstanceId|String|Yes|The Id of the process instance to set as the active instance.|
+|processId|String|Yes|The Id of the process instance to set as the active instance.|
 |callbackFunction|Function|No|A function to call when the operation is complete. This callback function is passed one of the following string values to indicate whether the operation succeeded:<br/>- **success**: The operation succeeded.<br/>- **invalid**: The processInstanceId isn’t valid or the process isn’t enabled.|
 
 ### Related topics

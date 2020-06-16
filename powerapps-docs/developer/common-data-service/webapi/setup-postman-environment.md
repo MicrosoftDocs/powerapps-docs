@@ -3,7 +3,7 @@ title: "Set up a Postman environment (Common Data Service for Apps)| MicrosoftDo
 description: "Learn how to set up and configure a Postman environment that connects with Common Data Service environments."
 ms.custom: 
 ms.date: 04/09/2019
-ms.reviewer: 
+ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -52,7 +52,7 @@ Use these steps to create a Postman environment that you can use to connect with
 
     | Variable name | Value |
     |----|---|
-    |`url`|`https://<add your environment name, like ‘myorg.crm’>.dynamics.com`|
+    |`url`|`https://<add your environment name, like 'myorg.crm'>.dynamics.com`|
     |`clientid`|`51f81489-12ee-4a9e-aaae-a2591f45987d`|
     |`version`|`9.0`|
     |`webapiurl`|`{{url}}/api/data/v{{version}}/`|

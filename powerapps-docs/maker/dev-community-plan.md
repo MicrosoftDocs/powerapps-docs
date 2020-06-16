@@ -1,17 +1,14 @@
 ---
 title: Power Apps Community Plan -- a free development environment for individual use | Microsoft Docs
 description: Sign up to build skills and learn more about Power Apps, Power Automate, and the Common Data Service.
-author: dileepsinghmsft
+author: dileepsinghmicrosoft 
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
-ms.date: 04/30/2019
+ms.date: 06/04/2020
 ms.author: dileeps
 ms.reviewer:
-searchScope:
-  - GetStarted
-  - PowerApps
 ---
 # Power Apps Community Plan: a free development environment for individual use
 If you want to build skills and learn more about Power Apps, Power Automate, and the Common Data Service, the Power Apps Community Plan is the right plan for you. The Power Apps Community Plan gives you a free development environment for individual use, where you can:
@@ -86,9 +83,10 @@ You cannot apply add-ons to the quantities that we include. If you hit capacity 
 Do you have an app you would like to share with customers? We now support a Power Apps Test Drive solution on [AppSource.com](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Let customers test drive your apps on AppSource](./canvas-apps/dev-appsource-test-drive.md).
 
 ## Frequently Asked Questions
-**Q:** What should I do if reach the capacity limits of the environment?
 
-**A:** There is a limited capacity provided because this environment is meant for individual use, not for a team or production use. The capacity provided is:
+### What should I do if reach the capacity limits of the environment?
+
+There is a limited capacity provided because this environment is meant for individual use, not for a team or production use. The capacity provided is:
 
 | **Capacity** |  |
 | --- | --- |
@@ -98,30 +96,39 @@ Do you have an app you would like to share with customers? We now support a Powe
 
 If you reach one or more capacity limits, we recommend you purchase a plan that supports production use. Learn more about our plans and their limits on the [Power Apps pricing page](https://powerapps.microsoft.com/pricing/).
 
-**Q:** Can I transfer the apps, flows, and other resources created in the individual environment, to another environment?
+### Can I transfer the apps, flows, and other resources created in the individual environment, to another environment?
 
-**A:** Yes, you should be able to export the resources from this environment to other environments. For more information, see [Environment and tenant app migration](../administrator/environment-and-tenant-migration.md).
+Yes, you should be able to export the resources from this environment to other environments. For more information, see [Environment and tenant app migration](../administrator/environment-and-tenant-migration.md).
 
-**Q:** Will my Power Apps Community Plan subscription ever expire?
+### Will my Power Apps Community Plan subscription ever expire?
 
-**A:** You can use your Power Apps Community Plan subscription perpetually for free. If you are actively using an individual environment, then you won't lose access to any of the resources or functionality in that environment. You may, however, notice a delay when accessing your Common Data Service Database for the first time after a long period of inactivity.  This delay does not impact the data or entities stored in the Common Data Service.
+You can use your Power Apps Community Plan subscription perpetually for free. If you are actively using an individual environment, then you won't lose access to any of the resources or functionality in that environment. You may, however, notice a delay when accessing your Common Data Service Database for the first time after a long period of inactivity.  This delay does not impact the data or entities stored in the Common Data Service.
 
-**Q:** Can I get or create multiple individual environments?
+### Can I get or create multiple individual environments?
 
-**A:** No, you can only have one individual environment, which is created for you by Power Apps when you sign up for the Community Plan.
+No, you can only have one individual environment, which is created for you by Power Apps when you sign up for the Community Plan.
 
-**Q:** What's the difference between Power Apps Plan Trial and Power Apps Community Plan; and which one should I sign up for?
+### What's the difference between Power Apps Plan Trial and Power Apps Community Plan; and which one should I sign up for?
 
-**A:** Both Power Apps Plan Trial and Power Apps Community Plan are free, but are created for different purposes:
+Both Power Apps Plan Trial and Power Apps Community Plan are free, but are created for different purposes:
 
 **Power Apps Plan Trial** gives you Power Apps Plan 2 for 30 days. This is meant for trying out Power Apps, Common Data Service, and Power Automate. Once your trial expires, you can purchase a plan. If you are already using Power Apps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of Power Apps, which are available with Power Apps Per User Plan.
 
 **Power Apps Community Plan** gives you access to Power Apps premium functionalities, Common Data Service, and Power Automate for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](./canvas-apps/dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on Power Apps, Common Data Services, and Power Automate.
 
-**Q:** Can I sign up with my personal account?
+### Can I sign up with my personal account?
 
-**A:** No, you can only sign up with your [work or school account](signup-for-powerapps.md#faq). We currently do not support signing up with a personal account.
+No, you can only sign up with your [work or school account](signup-for-powerapps.md#faq). We currently do not support signing up with a personal account.
 
-**Q:** Can I delete my individual environment?
+### Can I delete my individual environment?
 
-**A:** You can't delete this environment on your own. Your tenant admin has permissions to delete the environment.
+Tenant-level admins have the permissions needed to delete an individual environment through the user interface. An end user can delete an individual environment through a [Power Apps PowerShell admin cmdlet](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#power-apps-cmdlets-for-administrators-preview).
+
+```powershell
+Remove-AdminPowerAppEnvironment -EnvironmentName <environmentGuid>
+```
+
+### Can I reset my developer environment
+
+Resetting a developer environment is not currently supported; however, it can be deleted. The next time the Community Plan licensed user signs into the Power Apps Maker portal a new developer environment will be created. The user can then provision a Common Database Service database in the environment. At present, the only way to remove the Community Plan from a user is for a tenant-level admin to block all "internal" consent plans in the tenant using PowerShell. See [Block trial licenses commands](https://docs.microsoft.com/power-platform/admin/powerapps-powershell#block-trial-licenses-commands)
+
