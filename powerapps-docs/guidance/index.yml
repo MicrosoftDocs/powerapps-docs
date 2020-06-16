@@ -48,6 +48,10 @@ landingContent:
             url: /powerapps/maker/canvas-apps/getting-started
           - text: What are model-driven apps?
             url: /powerapps/maker/model-driven-apps/model-driven-app-overview
+          - text: Power Platform Center of Excellence (CoE) kit
+            url: /power-platform/guidance/coe/starter-kit
+          - text: Power Platform ALM guide
+            url: /power-platform/alm/          
 
           
 
