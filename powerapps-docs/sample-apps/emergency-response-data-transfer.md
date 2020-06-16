@@ -9,8 +9,7 @@ ms.custom:
 ms.date: 06/10/2020
 ms.author: pankar
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
+
 ---
 # Transfer data from Hospital to Regional System
 
