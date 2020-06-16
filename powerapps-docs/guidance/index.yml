@@ -20,7 +20,7 @@ metadata:
 landingContent:
 
   # Card 
-  - title: Planning Power Apps project
+  - title: Planning a Power Apps project
     linkLists:
        - linkListType: overview
          links:
@@ -38,7 +38,7 @@ landingContent:
             url: planning/discoverability.md
 
   # Card
-  - title: Related resources
+  - title: Related content
     linkLists:
        - linkListType: overview
          links:
