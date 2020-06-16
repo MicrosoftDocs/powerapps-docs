@@ -1471,7 +1471,7 @@
     href: ./common-data-service/why-cds-overview.md  
     items: 
       - name: Work with any data
-        href: ../common-data-service/why-cds-work-with-data.md
+        href: ./common-data-service/why-cds-work-with-data.md
   - name: Work with entities
     items:
     - name: Entity overview
