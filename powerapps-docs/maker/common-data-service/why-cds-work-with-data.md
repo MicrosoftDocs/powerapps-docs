@@ -34,20 +34,13 @@ If you've ever had to bring data from multiple systems and applications together
 
 Common Data Model provides reference architecture that is intended to streamline this process by providing a shared data language for business and analytical applications to use. The Common Data Model metadata system makes it possible for data and its meaning to be shared across applications and business processes such as Microsoft Power Apps, Power BI, Dynamics 365, and Azure.
 
-Common Data Model includes a set of standardized, extensible data schemas that
-Microsoft and its partners have published. This collection of predefined schemas
-includes entities, attributes, semantic metadata, and relationships. The schemas
-represent commonly used concepts and activities, such
-as **Account** and **Campaign**, to simplify the creation, aggregation, and
-analysis of data.
+Common Data Model includes a set of standardized, extensible data schemas that  Microsoft and its partners have published. This collection of predefined schemas includes entities, attributes, semantic metadata, and relationships. The schemas represent commonly used concepts and activities, such as **Account** and **Campaign**, to simplify the creation, aggregation, and analysis of data.
 
-The CDM schemas can be used to inform the creation of entities in CDS. The
-resulting entities would then be compatible with applications and analytics that
-targeted this CDM definition.
+The Common Data Model schemas can be used to inform the creation of entities in Common Data Service. The resulting entities would then be compatible with applications and analytics that targeted this Common Data Model definition.
 
 This graphic shows some elements of the standard entities. 
 
-![](media/16b42d0a2049f6dc98eebd4abae252b0.png)
+![Common Data Model](media/common-data-model.png)
 
 **Entities**
 
