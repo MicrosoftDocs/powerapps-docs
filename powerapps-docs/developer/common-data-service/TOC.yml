@@ -300,7 +300,7 @@
     href: customize-labels-support-multiple-languages.md
   - name: Best Practices
     href: best-practices/work-with-metadata/index.md
-- name: Package and distribute extensions using solutions
+- name: Publish and monitor your (ISV) app
   items:
   - name: Introduction to solutions
     href: introduction-solutions.md
@@ -335,11 +335,6 @@
         href: create-patches-simplify-solution-updates.md
       - name: When to edit the customizations file
         href: when-edit-customization-file.md
-  - name: SolutionPackager tool
-    href: compress-extract-solution-file-solutionpackager.md
-    items:
-    - name: Source control with solution files
-      href: use-source-control-solution-files.md       
   - name: Publish your app on AppSource
     href: publish-app-appsource.md
     items:
