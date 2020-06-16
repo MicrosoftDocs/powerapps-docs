@@ -53,6 +53,19 @@ landingContent:
           - text: Power Platform ALM guide
             url: /power-platform/alm/          
 
+
+  # Card
+  - title: Other resources
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Power Apps licensing
+            url: /power-platform/admin/powerapps-flow-licensing-faq
+          - text: Power Apps US Government plans
+            url: /power-platform/admin/powerapps-us-government
+          - text: Power Apps Support
+            url: https://powerapps.microsoft.com/support/
+        
           
 
 
