@@ -8,7 +8,6 @@ ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -19,7 +18,7 @@ search.app:
 
 You can extend the options available within the designer for workflows used in Common Data Service. These extensions are added by adding an assembly that contains a class the extends the [CodeActivity](/dotnet/api/system.activities.codeactivity) class. These extensions are commonly called *workflow assemblies* or *workflow activities*.
 
-You can use these custom extensions within the designer used for workflows, custom actions, and dialogs.
+You can use these custom extensions within the designer used for workflows, custom actions, and dialogs (deprecated).
 
 > [!IMPORTANT]
 > Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service](../../../maker/common-data-service/cds-processes.md)

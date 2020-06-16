@@ -3,7 +3,8 @@ layout: HubPage
 title: Microsoft Power Apps Documentation | Microsoft Docs
 description: Microsoft Power Apps Documentation
 searchScope:
-  - "PowerApps"
+  - "Power Platform"
+  - "Power Apps"
 featureFlags: 
 - clicktale
 ms.service: powerapps
@@ -617,7 +618,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/introduction-solutions">Using solutions</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/build-tools-overview">Microsoft Power Platform Build Tools for Azure DevOps</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager">SolutionPackager tool</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer tool</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/alm/package-deployer-tool">Package Deployer tool</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/checker/webapi/overview">Use the Power Apps checker</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/isv-app-management">ISV app management and monitoring</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/publish-app-appsource">Publish your app on AppSource</a></p>

@@ -340,8 +340,6 @@
     items:
     - name: Source control with solution files
       href: use-source-control-solution-files.md       
-  - name: Package Deployer tool
-    href: package-deployer/create-packages-package-deployer.md
   - name: Publish your app on AppSource
     href: publish-app-appsource.md
     items:
