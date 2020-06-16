@@ -8,8 +8,7 @@ ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: tayoshi
 ms.reviewer: kathyos
-searchScope:  
-  - PowerApps
+
 ---
 
 # Defining the project scope

@@ -8,8 +8,7 @@ ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
 ms.reviewer: kathyos
-searchScope:  
-  - PowerApps
+
 ---
 
 # Identifying the tasks to be done in the app

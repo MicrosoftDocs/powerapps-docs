@@ -8,8 +8,7 @@ ms.custom: guidance
 ms.date: 06/02/2020
 ms.author: thground
 ms.reviewer: kathyos
-searchScope:  
-  - PowerApps
+
 ---
 
 # Is there data or information that they start with or need access to?
