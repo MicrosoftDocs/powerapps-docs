@@ -57,7 +57,7 @@ The following checklist provides the list of validations performed by Microsoft 
 <td>Deployment Validation</td>
 <td>
 <ul>
-<li>Solution will be installed to a Power Apps studio using <a href="https://docs.microsoft.com/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer</a>. Installed canvas apps will be manually located in the solution as well as on Apps section after installation and will make sure the app is opened in edit and run mode. Canvas App will be manually deleted from Power Apps studio to validate successful uninstallation</li>
+<li>Solution will be installed to a Power Apps studio using <a href="https://docs.microsoft.com/power-platform/alm/package-deployer-tool">Package Deployer</a>. Installed canvas apps will be manually located in the solution as well as on Apps section after installation and will make sure the app is opened in edit and run mode. Canvas App will be manually deleted from Power Apps studio to validate successful uninstallation</li>
 <li>Check the canvas app successfully connects through the connectors provided by the publishers. For example, Common Data Service or any other connections.</li>
 <li>Check all Common Data Service components (entities, web resources, plug-ins and other components) are available in the solution.</li>
 <li>Manually uninstall the solution and check if all the components associated to the managed solution is removed.</li>
