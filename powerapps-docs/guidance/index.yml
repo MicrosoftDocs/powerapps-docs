@@ -1,0 +1,72 @@
+### YamlMime:Landing
+
+title: Power Apps guidance documentation
+summary: Power Apps guidance documentation provides best practice information from the team that builds Power Apps and work with our enterprise customers. We'll and and update information as they become available. 
+
+metadata:
+  title: Power Apps guidance
+  description: Provides best practice guidance information for Power Apps.
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: KumarVivek
+  ms.author: kvivek
+  ms.date: 06/15/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Planning a Power Apps project
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: Introduction
+            url: planning/introduction.md       
+          - text: Planning phase
+            url: planning/planning-phase.md
+          - text: Designing phase
+            url: planning/designing-phase.md
+          - text: Making phase
+            url: planning/making-phase.md
+          - text: Testing phase
+            url: planning/testing-phase.md
+          - text: Deploying and refining phase
+            url: planning/discoverability.md
+
+  # Card
+  - title: Related content
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: Create apps in Power Apps
+            url: /powerapps/maker
+          - text: What are canvas apps?
+            url: /powerapps/maker/canvas-apps/getting-started
+          - text: What are model-driven apps?
+            url: /powerapps/maker/model-driven-apps/model-driven-app-overview
+          - text: Power Platform Center of Excellence (CoE) kit
+            url: /power-platform/guidance/coe/starter-kit
+          - text: Power Platform ALM guide
+            url: /power-platform/alm/          
+
+
+  # Card
+  - title: Other resources
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Power Apps licensing
+            url: /power-platform/admin/powerapps-flow-licensing-faq
+          - text: Power Apps US Government plans
+            url: /power-platform/admin/powerapps-us-government
+          - text: Power Apps Support
+            url: https://powerapps.microsoft.com/support/
+        
+          
+
+
+
