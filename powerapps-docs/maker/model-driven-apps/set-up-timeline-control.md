@@ -1,7 +1,7 @@
 ---
 title: "Set up the timeline control (section) in PowerApps | MicrosoftDocs"
 description: "Learn how to set up the timeline control (section) in PowerApps"
-ms.date: 06/08/2020
+ms.date: 06/16/2020
 ms.service: powerapps
 author: "lalexms"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
@@ -116,7 +116,7 @@ As a customizer, you can choose which entities you want to show activities to us
     | Entity | Name |
     |--------------------------|----------------------------------|
     | Account | Account for Interactive experience |
-    | Case | Case for Interactive experience |
+    | Case | Case for Interactive experience <br><br> **Note**: The Case entity is only available if you have the Dynamics 365 Customer Service application.|
     | Contact | Contact for Interactive experience |
 
 7.	Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
