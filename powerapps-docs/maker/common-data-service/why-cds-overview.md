@@ -234,3 +234,4 @@ As many organizations do business globally, their data needs are also global in 
 The current list of data center regions can be found in this article: [Datacenter regions](/power-platform/admin/new-datacenter-regions).
 
 ### See also
+[Work with any data](why-cds-work-with-data.md)

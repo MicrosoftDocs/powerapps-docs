@@ -1469,6 +1469,9 @@
     href: ./common-data-service/data-platform-intro.md
   - name: Why choose Common Data Service? 
     href: ./common-data-service/why-cds-overview.md  
+    items: 
+      - name: Work with any data
+        href: ../common-data-service/why-cds-work-with-data.md
   - name: Work with entities
     items:
     - name: Entity overview
