@@ -9,8 +9,6 @@ ms.custom:
 ms.date: 06/05/2020
 ms.author: kvivek
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
 # Use the admin app and dashboard
 

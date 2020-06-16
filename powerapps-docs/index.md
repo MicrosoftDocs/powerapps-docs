@@ -3,7 +3,8 @@ layout: HubPage
 title: Microsoft Power Apps Documentation | Microsoft Docs
 description: Microsoft Power Apps Documentation
 searchScope:
-  - "PowerApps"
+  - "Power Platform"
+  - "Power Apps"
 featureFlags: 
 - clicktale
 ms.service: powerapps
