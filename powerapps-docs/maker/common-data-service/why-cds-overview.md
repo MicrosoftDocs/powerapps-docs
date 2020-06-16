@@ -9,7 +9,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 applies_to: 
   - "powerapps"
-author: ""
+author: "mmercuri"
 ms.author: "mmercuri"
 manager: "kvivek"
 search.audienceType: 
@@ -99,6 +99,116 @@ that knowledge workers and professional developers use as well. To help them be
 even more productive, Common Data Service is integrated into popular tools such as Excel,
 Outlook, Dynamics 365 Customer Engagement apps, Power BI Desktop, Power Query, Azure Data Factory, Data
 Export Service, and SQL Server Management Studio. 
+
+## Analytics and Reporting
+
+Data in Common Data Service can be used to gain insights and drive business action using
+analytics and reporting, and it also includes a variety of ways to deliver data
+and insight to key decision makers.
+
+![Analytics and reporting features with Common Data Service](media/analytics-and-reporting.png)
+
+Common Data Service includes the ability to create lightweight charts and paginated reports. Common Data Service data can also be used with Power BI to create rich, interactive reports and dashboards.
+
+For organizations that are interested in employing AI to analyze their data,  AI Builder can enable everyone in the organization - regardless of their technical expertise—the ability to add AI capabilities to the business process flows they create and use. Delivered as part of the Power Platform, AI Builder includes six
+pre-built AI models that can be used in Power Automate and Power Apps and to evaluate data within Common Data Service.
+
+![AI Builder and Common Data Service](media/ai-builder-and-cds.png)
+
+To support advanced analytics and machine learning, Common Data Service includes a managed data
+lake. Data within the lake can be used to run Power BI reporting, machine learning, data warehousing, and other downstream data processing.
+
+One of the benefits of the data being in Azure Data Lake is that organizations can leverage Azure Synapse Analytics. This service can deliver added productivity by bringing together enterprise data warehousing, data exploration, code-free data orchestration, deeply integrated Apache Spark and SQL engines,
+and integrated AI and BI.
+
+## Security
+
+Common Data Service uses Azure Active Directory identity and access management mechanisms to help ensure that only authorized users can access the environment, data, and reports.
+
+Common Data Service uses role-based security to group together a collection of privileges. These security roles can be associated directly to users, or they can be associated with Common Data Service teams and business units.
+
+In Common Data Service, individual records can be shared on a one-by-one basis with another user. As record-level control of access is not adequate for some business scenarios, Common Data Service has a field-level security feature to allow more granular control of security at the field level.
+
+Common Data Service also includes two security models that can be used for hierarchies, the *manager* hierarchy and the *position* hierarchy. With the manager hierarchy, a manager must be within the same business unit as the report, or in the parent business unit of the report’s business unit, to have access to the report’s data. The position hierarchy allows data access across business units. 
+
+As Common Data Service is built on Microsoft Azure, it benefits from the Azure platform’s powerful security technologies. Encryption of data, at rest and in transit, preserves confidentiality.
+
+Common Data Service is governed by the [Microsoft Online Service Terms](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31) and the [Microsoft Online Services Privacy Statement](https://www.microsoft.com/privacystatement/OnlineServices/Default.aspx).
+
+More information about the security concepts in Common Data Service can be found in this article: 
+[Security concepts in Common Data Service](/power-platform/admin/wp-security-cds).
+
+Compliance
+----------
+
+Compliance is a key concern for organizations, and Microsoft regularly engages
+with dozens of regulators around the world. Organizations can be assured that
+the data placed in Common Data Service is held in accordance with stringent
+industry safeguards. The Common Data Service complies with the numerous
+standards and compliance is verified by third-party audits and certifications.
+
+The list of currently supported standards can be found
+[here](https://www.microsoft.com/en-us/trust-center/compliance/compliance-overview).
+
+## Availability and Scalability
+
+Common Data Service is designed to meet enterprise-level scalability needs and offers a service level agreement of 99.x uptime.
+
+To help ensure service levels, availability and quality, there are entitlement limits to the number of requests users can make each day which are governed by licenses. There are also service protection limits put in place against malicious behavior that would otherwise disrupt service for all customers.
+
+### Microsoft Power Platform Requests
+
+Microsoft Power Platform requests consist of actions which a user makes across various products.
+
+At a high level, below is what constitute an API call:
+
+- **Connectors**: All API requests to connectors from Power Apps or Power Automate.
+
+- **Microsoft Power Automate**: All Power Automate step actions.
+
+- **Common Data Service**: All create, update, delete (CRUD) operations, as well as special operations
+    like "share" or "assign". These can be from any client or application and using any endpoint SOAP or REST. These include but are not limited to plug-ins, async workflows, and custom controls making the above-mentioned operations.
+
+The specific number of allowed APIs that a user can make in a 24-hour period is governed by the user's license.
+
+### Entitlement limits
+
+Entitlement limits represent the number of requests users are entitled to make each day. The allocated limit depends on the type of license assigned to each user.
+
+For information about these entitlement limits, see [Microsoft Power Platform requests allocations based on licenses](/power-platform/adminapi-request-limits-allocations#microsoft-power-platform-requests-allocations-based-on-licenses).
+
+For information about viewing and allocating capacity add-ons, see [Capacity add-ons](/power-platform/admin/capacity-add-on).
+
+For information about purchasing individual capacity add-ons see the [Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+
+### Service protection limits
+
+Service protection limits exist to protect the health of the service for everyone. These limits provide a level of protection against random and unexpected surges in request volumes that threaten the availability and
+performance characteristics of the Common Data Service platform.
+
+The service limits the number of concurrent connections per user account, the number of API requests per connection, and the amount of execution time that can be used for each connection. These are evaluated within a five-minute sliding window. When one of these limits is exceeded, an exception is returned by the platform.
+
+Service limits are not expected to impact normal usage of the Common Data Service.
+
+Information on *current* service protection limits for each service:
+
+- [Common Data Service API request limits](/powerapps/developer/common-data-service/api-limits): Applicable for model-driven apps in Dynamics 365 Customer Engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, as well as Power Apps and Power Automate connecting to Common Data Service.
+
+- [Microsoft Power Automate limits](/flow/limits-and-config#looping-and-debatching-limits): Applicable for Power Automate. 
+
+- [Limits in connectors](https://docs.microsoft.com/connectors/): Applicable for Power Automate and Power Apps.
+
+Additional information about how service protection limits are enforced can be found in this article: 
+[Service Protection API Limits](/powerapps/developer/common-data-service/api-limits).
+
+### Capacity add-ons
+
+The specific number of allowed Microsoft Power Platform Requests that a user can make in a 24-hour period is governed by a user’s license. For scenarios where additional capacity is required, a Power Apps and Power Automate capacity add-on allows customers to purchase additional requests.
+
+Each capacity add-on provides an additional 10,000 requests every 24 hours, which can be assigned to any user. Multiple capacity add-ons can also be assigned to the same user.
+
+Common Data Service has entitlement limits that will evaluate the number of requests made against the number allowed by their current license.
+
 
 
 ### See also
