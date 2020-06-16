@@ -1467,6 +1467,8 @@
   items:
   - name: What is Common Data Service?
     href: ./common-data-service/data-platform-intro.md
+  - name: Why choose Common Data Service? 
+    href: ./common-data-service/why-cds-overview.md  
   - name: Work with entities
     items:
     - name: Entity overview
