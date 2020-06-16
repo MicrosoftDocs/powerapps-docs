@@ -8,8 +8,6 @@ ms.custom:
 ms.date: 06/11/2020
 ms.author: pankar
 ms.reviewer: tapanm
-searchScope:
-  - PowerApps
 ---
 
 # Use the Hospital Emergency Response mobile app
