@@ -98,7 +98,17 @@ To use these controls in the form editor:
   
 ## Flip switch  
  The flip switch is like an on/off switch, providing a choice between two values.  
-  
+ 
+> [!NOTE]
+>  This control is being deprecated in April 2021, please use the Toggle control.
+ 
+|Property|Description|  
+|--------------|-----------------|  
+|Field|Shows the field that the control is mapped to.|  
+
+## Toggle
+ The toggle control allows users to switch between on/off values, by toggling the button.
+ 
 |Property|Description|  
 |--------------|-----------------|  
 |Field|Shows the field that the control is mapped to.|  
@@ -195,7 +205,10 @@ To use these controls in the form editor:
   
 ## Input mask  
  With the input mask control, you set the formatting for a field like phone number or credit card to prevent entering invalid data. For example, if you want users to enter a United States phone number in the format +1-222-555-1011, use the input mask +1-000-000-0000.  
-  
+
+> [!NOTE]
+>  This only sets formatting to a single line text field.  It does not contain virtual actions like phone calling.  If these actions are required, continue to use the default control.
+
 |Property|Description|  
 |--------------|-----------------|  
 |Mask|Enter the mask to use for validating data as users enter it. You can use a combination of the following characters for the mask:<br /><br /> 0 – Digit<br /><br /> 9 – Digit or space<br /><br /> # – Digit, sign, or space<br /><br /> L – Letter<br /><br /> I – Letter or space<br /><br /> A – Alphanumeric<br /><br /> A – Alphanumeric or space<br /><br /> < – Converts characters that follow to lower case<br /><br /> > – Converts characters that follow to upper case<br /><br /> &#124; – Disables case conversion<br /><br /> \ – Escapes any character, turning it into a literal<br /><br /> All others – Literals|  
@@ -223,7 +236,7 @@ To use these controls in the form editor:
 |Min|Set the minimum value to display on the gauge.|  
 |Value|Get or set the value to display on the gauge.|  
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
-  
+
 ## Next steps
 [Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)</br>
 [Work with records in the new calendar view](../../user/calendar-view.md)
