@@ -61,7 +61,7 @@ Getting started with model-driven apps is simple, and you can begin with these t
 
 [Portals](portals/overview.md) help you create external-facing websites that allow users outside your organization to sign in with a wide variety of identities, create and view data in Common Data Service, or even browse content anonymously.
 
-Use these topics to quickly get started with pprtals:
+Use these topics to quickly get started with portals:
 
 - [Create a starter portal](/powerapps/maker/portals/create-portal)
 - [About the portal lifecycle](/powerapps/maker/portals/admin/portal-lifecycle)
