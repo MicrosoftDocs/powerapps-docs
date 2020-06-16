@@ -40,153 +40,93 @@ The Common Data Model schemas can be used to inform the creation of entities in 
 
 This graphic shows some elements of the standard entities. 
 
-![Common Data Model](media/common-data-model.png)
+![Common Data Model schema](media/common-data-model.png)
 
-**Entities**
+## Entities
 
-In CDS, Entities are used to model and manage business data.
+In Common Data Service, entities are used to model and manage business data. To increase productivity, Common Data Service includes a set of entities known as standard entities. These entities are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization. Standard entities follow Common Data Model.
 
-To increase productivity, CDS includes a set of entities known as standard
-entities. These entities are designed, in accordance with best practices, to
-capture the most common concepts and scenarios within an organization. OOB
-entities follow CDM.
+There are a set of entities that are commonly used across industries, such as user and team, that are included in Common Data Service and referred to as standard entities. These out-of-the-box entities can also be customized, such as including additional fields. In addition, Common Data Service provides the ability to easily create your own custom entities.
 
-There are a set of entities that are commonly used across industries, such as
-user, team, etc., that are included in CDS and referred to as standard entities.
-These out of the box entities can also be customized to include additional
-fields. In addition, CDS provides the ability to easily create your own custom
-entities.
+![View entities](media/standard-entities.png)
 
-![View entities](media/6bd605ec43c6626e58d4c37868a9d063.png)
+## Fields
 
-**Fields**
+Fields define the individual data items that can be used to store data in an entity. Fields are sometimes called attributes by developers. An entity representing a course at a university could contain fields such as “Name”, “Location”, “Department”, “Registered Students”, and so on.
 
-Fields define the individual data items that can be used to store data in an
-entity. Fields are sometimes called attributes by developers. An entity
-representing a course at a university could contain fields such as “Name”,
-“Location”, “Department”, “Registered Students”, etc.
+Fields may have different types of data such as strings, digital data, images, and files. There is no need to keep relational and non-relational data separated artificially if it is part of the same business process or flow. Common Data Service stores the data in the best storage type for the model created.
 
-Fields may have different types of data such as strings, digital data, images
-and files. There is no need to keep relational and non-relational data separated
-artificially if it is part of the same business process or flow. CDS will store
-the data in best storage type per the model created.
+Each of these fields can associated with one of many data types supported by Common Data Service. 
 
-Each of these fields can associated with one of many data types supported by
-CDS. Additional information on data type supported in CDS can be found here.
+![Create a field](media/entity-field.png)
 
-![New Field](media/9a1904352915bf6fcad64b7eaa89917e.png)
+More information: [Types of fields](/powerapps/maker/common-data-service/types-of-fields).
 
-**Relationships**
+## Relationships
 
-![Account entity relationships](media/3f23b81fb6e607e9edcbdc52799e19af.png)
+Data in one entity often relates to data in another entity. Entity relationships define how records can be related to each other in the CDS model.
 
-Data in one entity often relates to data in another entity.
+Common Data Service provides easy to use visual designers to create several types of relationships from one entity to another (or between an entity and itself). Each entity can have a relationship with more than one entity, and each entity can have more than one relationship to another entity.
 
-Entity relationships define how records can be related to each other in the CDS
-model.
+![Account entity relationships](media/entity-relationships.png)
 
-CDS provides easy to use visual designers to create several types of
-relationships from one entity to another (or between an entity and itself). Each
-entity can have a relationship with more than one entity, and each entity can
-have more than one relationship to another entity.
+The relationship types are:
 
-Some common relationship types are:
+- **Many-to-one**: In this type of relationship, each record in entity A can match more than one record in entity B, but each record in entity B can match only one record in entity A. For example, a class has a single classroom.
 
--   **Many-to-one** - In this type of relationship, each record in entity A can
-    match more than one record in entity B, but each record in entity B can
-    match only one record in entity A. For example, a class has a single
-    classroom.
+- **One-to-many**: In this type of relationship, each record in entity B can match more than one record in entity A, but each record in entity A can match only one record in entity B. For example, a single teacher, teaches many classes.
 
--   **One-to-many** - In this type of relationship, each record in entity B can
-    match more than one record in entity A, but each record in entity A can
-    match only one record in entity B. For example, a single teacher, teaches
-    many classes.
+- **Many-to-many**: In this type of relationship, each record in entity A can match more than one record in entity B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
--   **Many-to-many** - In this type of relationship, each record in entity A can
-    match more than one record in entity B, and vice versa. For example,
-    students attend many classes, and each class can have multiple students.
+As many-to-one relationships are the most common, Common Data Service provides a specific data type named Lookup, which makes it easy to not just define this relationship but also adds productivity to building forms and applications.
 
-As many-to-one relationships are the most common, CDS provides a specific data
-type named Lookup which makes it easy to not just define this relationship but
-also adds productivity to building forms and applications.
+Additional information on creating entity relationships can be found in this article: [Create a relationship between entities](/powerapps/maker/common-data-service/data-platform-entity-lookup).
 
-Additional information on creating entity relationships can be found
-[here](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-entity-lookup).
+Organizations often need to be in compliance with various regulations to ensure availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations may want to track changes in Common Data Service data for security and analytical purpose.
 
-Organizations often need to be in compliance with various regulations to ensure
-availability of customer interaction history, audit logs, access reports, and
-security incident tracking reports. Organizations may want to track changes in
-Common Data Service data for security and analytical purpose.
+Common Data Service provides an auditing capability where entity and attribute data changes within an organization can be recorded over time for use in analysis and reporting purposes. Auditing is supported on all custom and most customizable entities and attributes. Auditing is not supported on metadata
+changes, retrieve operations, export operations, or during authentication. For information on how to configure auditing, see [Configure Entities and Attributes for Auditing](/powerapps/developer/common-data-service/configure-entities-attributes-auditing).
 
-Common Data Service provides an auditing capability in CDS where entity and
-attribute data changes within an organization can be recorded over time for use
-in analysis and reporting purposes. Auditing is supported on all custom and most
-customizable entities and attributes. Auditing is not supported on metadata
-changes, retrieve operations, export operations, or during authentication. For
-information on how to configure auditing, see [Configure Entities and Attributes
-for
-Auditing](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/configure-entities-attributes-auditing).
-
-CDS supports analytics by providing capability to choose entities for the ML
-models to run. It has a prebuilt AI capability through AI builder.
+Common Data Service supports analytics by providing capability to choose entities for the ML models to run. It has a prebuilt AI capability through AI builder. 
 
 ### Search
 
 The Common Data Services provides three ways to query records:
 
--   Relevance Search
+- Relevance Search
 
--   Quick Find (single-entity or multi-entity)
+- Quick Find (single-entity or multi-entity)
 
--   Advanced Find
+- Advanced Find
 
-Note - Multi-entity Quick Find is also called Categorized Search.
+> [!NOTE]
+> Multi-entity Quick Find is also called *categorized search*.
 
-![](media/4398ed73db27261d591574e85da9a0ac.png)
+![Search methods in Common Data Service](media/cds-search-methods.png)
 
 #### Relevance Search
 
-Relevance search delivers fast and comprehensive results across multiple
-entities, in a single list, sorted by relevance. It uses a dedicated search
-service external to Common Data Service (powered by Azure) to boost search
-performance.
+Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by Azure) to boost search performance.
 
 Relevance search brings the following enhancements and benefits:
 
--   Improves performance by using external indexing and Azure search technology.
+- Improves performance by using external indexing and Azure search technology.
 
--   Finds matches to any word in the search term in any field in the entity,
-    compared to quick find where all words from the search term must be found in
-    one field.
+- Finds matches to any word in the search term in any field in the entity, compared to quick find where all words from the search term must be found in one field.
 
--   Finds matches that include inflectional words
-    like **stream**, **streaming**, or **streamed**.
+- Finds matches that include inflectional words like **stream**, **streaming**, or **streamed**.
 
--   Returns results from all searchable entities in a single list sorted by
-    relevance, so the better the match, the higher the result appears in the
-    list. A match has a higher relevancy if more words from the search term are
-    found in close proximity to each other. The smaller the amount of text where
-    the search words are found, the higher the relevancy. For example, if you
-    find the search words in a company name and address, it might be a better
-    match than finding the same words in a long article, far apart from each
-    other.
+- Returns results from all searchable entities in a single list sorted by relevance, so the better the match, the higher the result appears in the list. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than finding the same words in a long article, far apart from each other.
 
--   Highlights matches in the results list. When a search term matches a term in
-    a record, the term appears as bold and italicized text in your search
-    results.
+- Highlights matches in the results list. When a search term matches a term in a record, the term appears as bold and italicized text in your search results.
 
-Additional information on relevance search can be found
-[here](https://docs.microsoft.com/en-us/powerapps/user/relevance-search).
+Additional information on relevance search can be found in this article: [Using relevance search to search for records](/powerapps/user/relevance-search).
 
 #### Quick Find
 
-CDS includes the ability to find records quickly and has approaches that will
-search just one type of entity, e.g. Customer, or be used to search across
-multiple types of entities at the same time, e.g. Contacts, Users, Customers,
-etc.
+Common Data Service includes the ability to find records quickly and has approaches that will search just one type of entity, such as customer, or be used to search across multiple types of entities at the same time, such as contacts, users, customers, and so on.
 
-**Single-entity quick find** is used to find records of only one type. This
-search option is available from within a view.
+*Single-entity quick find* is used to find records of only one type. This search option is available from within a view.
 
 ![Single-entity Quick Find](media/bf2a54673326e94b4cf2f72bf0f84789.png)
 
@@ -200,14 +140,8 @@ Common Data Service supports continuous replication of entity data to Azure Data
 Lake Gen 2 which can then be used to run analytics such as Power BI reporting,
 ML, Data Warehousing and other downstream integration purposes.
 
-![](media/7a3c53d429be80aee99f9ef11b903581.png)
+![Single entity quick find](media/single-entity-quick-find.png)
 
-This feature is designed for enterprise big data analytics, cost-effective,
-scalable, has high availability/disaster recover capabilities and enables best
-in class analytics performance.
+This feature is designed for enterprise big data analytics, cost-effective, scalable, has high availability/disaster recover capabilities and enables best in class analytics performance.
 
-Data is stored in the Common Data Model (CDM) format which provides semantic
-consistency across apps and deployments. CDM’s standardized metadata and
-self-describing data facilitates metadata discovery and interoperability between
-data producers and consumers such as Power BI, Azure Data Factory, Azure
-Databricks, and Azure Machine Learning service.
+Data is stored in the Common Data Model format which provides semantic consistency across apps and deployments. Common Data Model’s standardized metadata and self-describing data facilitates metadata discovery and interoperability between data producers and consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning service.

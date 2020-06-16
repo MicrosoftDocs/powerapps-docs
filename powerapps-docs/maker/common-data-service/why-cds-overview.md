@@ -129,7 +129,7 @@ Common Data Service also includes two security models that can be used for hiera
 
 As Common Data Service is built on Microsoft Azure, it benefits from the Azure platform’s powerful security technologies. Encryption of data, at rest and in transit, preserves confidentiality.
 
-Common Data Service is governed by the [Microsoft Online Service Terms](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31) and the [Microsoft Online Services Privacy Statement](https://www.microsoft.com/privacystatement/OnlineServices/Default.aspx).
+Common Data Service is governed by the [Microsoft Online Service Terms](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=31) and the [Microsoft Online Services Privacy Statement](https://www.microsoft.com/privacystatement/OnlineServices/Default.aspx).
 
 More information about the security concepts in Common Data Service can be found in this article: 
 [Security concepts in Common Data Service](/power-platform/admin/wp-security-cds).
