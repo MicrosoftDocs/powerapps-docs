@@ -5,7 +5,7 @@ author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 06/02/2020
+ms.date: 06/16/2020
 ms.author: thground
 ms.reviewer: kathyos
 
