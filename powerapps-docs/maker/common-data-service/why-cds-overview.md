@@ -209,6 +209,32 @@ Each capacity add-on provides an additional 10,000 requests every 24 hours, whic
 
 Common Data Service has entitlement limits that will evaluate the number of requests made against the number allowed by their current license.
 
+## Backups
 
+Common Data Service provides two types of backups - automatic backups, referred to as system backups, and manual backups.
+
+### System backups
+System backups back up all environments. They take place automatically and continuously. The underlying technology used is Azure SQL Database. For more information about Azure SQL automated backups, see [Automated backups](/azure/sql-database/sql-database-automated-backups). 
+
+System backups for production environments that have been created with a database and have one or more Dynamics 365 applications installed are retained up to 28 days. System backups for production environments which do not have Dynamics 365 applications deployed in them are retained for 7 days. System backups for sandbox environments are retained for 7 days.
+
+### Manual backups 
+Manual backups are user initiated, typically done before making a significant customization change or applying a version update.
+
+Both sandbox and production environments can be manually backed up. Sandbox backups are retained for up to 7 days. Manual backups for production environments that have been created with a database and have one or more Dynamics 365 applications installed are retained up to 28 days. Manual backups for production environments, which do not have Dynamics 365 applications deployed in them will be retained
+for 7 days.
+
+There is no limit to the number of manual backups that can be made and manual backups do not count against storage limits.
+
+> [!NOTE]
+> Both system and manual backups may only be restored to an environment to the same region in which it was backed up.
+
+More information: [Back up and restore environments](/power-platform/admin/backup-restore-environments)
+
+## Datacenter regions
+
+As many organizations do business globally, their data needs are also global in nature. With Common Data Service deployed and supported in regions across the world, organizations can have confidence that Common Data Servie is available when and where they need it.
+
+The current list of data center regions can be found in this topic: [Datacenter regions](/power-platform/admin/new-datacenter-regions).
 
 ### See also
