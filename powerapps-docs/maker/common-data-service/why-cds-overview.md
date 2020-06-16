@@ -35,11 +35,8 @@ needed to create these technologies can be both hard to find and expensive. Deve
 understanding of how to deploy, configure, manage, and integrate these different
 data technologies.
 
-Common Data Service addresses these concerns with an easy to use, easy
-to manage, compliant, secure, scalable, and globally available SaaS data service.
-Common Data Service empowers organizations to work with any type of data,
-any type of app, and use the data within it to gain insights and drive business
-action.
+Common Data Service addresses these concerns with an easy to use, easy to manage, compliant, secure, scalable, and globally available SaaS data service. Common Data Service empowers organizations to work with any type of data,
+any type of app, and use the data within it to gain insights and drive business action.
 
 As part of the Power Platform, Common Data Service requires no or little code to be written,
 enabling it to easily be used by everyone from knowledge workers to professional
@@ -71,13 +68,12 @@ days and weeks can now often be measured in minutes and hours.
 
 In addition to providing the ability to create data in Common Data Service or import it from
 other systems, Common Data Service also supports virtual entities. Virtual entities provide the ability to
-map data in an external data source so that it appears to be in Common Data Service and enables using Common Data Service to execute real time data operations against the external data source.
+map data in an external data source so that it appears to be in Common Data Service and enables using Common Data Service to execute real-time data operations against the external data source.
 
 ## Work with any type of app
 
 When an organization wants to create a new application, additional
-productivity gains can be had by using Common Data Service with Power Apps. Power Apps
-understands the rich metadata included in Common Data Service and utilize it in multiple ways
+productivity gains can be had by using Common Data Service with Power Apps. Power Apps understands the rich metadata included in Common Data Service and utilizes it in multiple ways
 to help you rapidly build great looking apps that are secure, scalable
 and that can be delivered available across desktop, web, mobile, and Microsoft Teams.
 
@@ -86,7 +82,7 @@ iOS and Android. You can also take advantage of Common Data Service's mobile off
 functionality, which enables applications to collect, query, and interact with data when offline.
 
 For organizations that want to integrate Common Data Service data into existing applications or
-write new apps using custom code, Common Data Service provides a powerful REST based API, a
+write new apps using custom code, Common Data Service provides a powerful REST-based API, a
 developer SDK, and a growing list of samples for common scenarios.
 
 Common Data Service can also be used in bot-based applications that deliver intuitive,
@@ -154,11 +150,11 @@ The list of currently supported standards can be found
 
 Common Data Service is designed to meet enterprise-level scalability needs and offers a service level agreement of 99.x uptime.
 
-To help ensure service levels, availability and quality, there are entitlement limits to the number of requests users can make each day which are governed by licenses. There are also service protection limits put in place against malicious behavior that would otherwise disrupt service for all customers.
+To help ensure service levels, availability and quality, there are entitlement limits to the number of requests users can make each day, which are governed by licenses. There are also service protection limits put in place against malicious behavior that would otherwise disrupt service for all customers.
 
 ### Microsoft Power Platform Requests
 
-Microsoft Power Platform requests consist of actions which a user makes across various products.
+Microsoft Power Platform requests consist of actions, which a user makes across various products.
 
 At a high level, below is what constitute an API call:
 
@@ -216,13 +212,13 @@ Common Data Service provides two types of backups - automatic backups, referred 
 ### System backups
 System backups back up all environments. They take place automatically and continuously. The underlying technology used is Azure SQL Database. For more information about Azure SQL automated backups, see [Automated backups](/azure/sql-database/sql-database-automated-backups). 
 
-System backups for production environments that have been created with a database and have one or more Dynamics 365 applications installed are retained up to 28 days. System backups for production environments which do not have Dynamics 365 applications deployed in them are retained for 7 days. System backups for sandbox environments are retained for 7 days.
+System backups for production environments that have been created with a database and have one or more Dynamics 365 applications installed are retained up to 28 days. System backups for production environments, which do not have Dynamics 365 applications deployed in them are retained for seven days. System backups for sandbox environments are retained for seven days.
 
 ### Manual backups 
 Manual backups are user initiated, typically done before making a significant customization change or applying a version update.
 
-Both sandbox and production environments can be manually backed up. Sandbox backups are retained for up to 7 days. Manual backups for production environments that have been created with a database and have one or more Dynamics 365 applications installed are retained up to 28 days. Manual backups for production environments, which do not have Dynamics 365 applications deployed in them will be retained
-for 7 days.
+Both sandbox and production environments can be manually backed up. Sandbox backups are retained for up to seven days. Manual backups for production environments that have been created with a database and have one or more Dynamics 365 applications installed are retained up to 28 days. Manual backups for production environments, which do not have Dynamics 365 applications deployed in them will be retained
+for seven days.
 
 There is no limit to the number of manual backups that can be made and manual backups do not count against storage limits.
 
@@ -233,8 +229,8 @@ More information: [Back up and restore environments](/power-platform/admin/backu
 
 ## Datacenter regions
 
-As many organizations do business globally, their data needs are also global in nature. With Common Data Service deployed and supported in regions across the world, organizations can have confidence that Common Data Servie is available when and where they need it.
+As many organizations do business globally, their data needs are also global in nature. With Common Data Service deployed and supported in regions across the world, organizations can have confidence that Common Data Service is available when and where they need it.
 
-The current list of data center regions can be found in this topic: [Datacenter regions](/power-platform/admin/new-datacenter-regions).
+The current list of data center regions can be found in this article: [Datacenter regions](/power-platform/admin/new-datacenter-regions).
 
 ### See also
