@@ -84,11 +84,10 @@ Getting started with Common Data Service is easy. For example, you can start wit
 
 ## Planning a Power Apps app or project
 
-It's easy to try building out your first app. We have a 30-day trial plan and a free community plan; find out which one is best for you and get started.
+It's easy to try building out your first app. We have a [30-day trial plan](signup-for-powerapps.md) and a free [community plan](dev-community-plan.md); find out which one is best for you and get started.
 
-If you just started using Power Apps, you might have questions before creating an app such as which app type (canvas app or a model-driven app) you should start with or which app will address your requirement. You might have an idea in your mind, but perhaps you haven't fully thought through all the details and information you need to create an app. 
+If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
 
-You can find answers to all these and many more questions as you start using Power Apps to quickly build apps for your business needs here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
 
 <!--## Canvas and model-driven artifacts
 
