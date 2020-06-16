@@ -12,7 +12,7 @@ ms.reviewer: nkrb
 
 # Use the Higher Education Crisis Financial Impact tracker mobile app
 
-Higher Education Crisis Financial Impact Tracker app allows users to review the sponsored programs they are working on and report loss of effort because of the pandemic or a crisis. 
+The Higher Education Crisis Financial Impact Tracker app allows users to review the sponsored programs they are working on and report loss of effort because of the pandemic or a crisis. 
 
 ## Prerequisites 
 
