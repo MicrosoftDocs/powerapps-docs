@@ -9,15 +9,49 @@ ms.date: 06/15/2020
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---
+
 # Higher Education Financial Crisis Impact Tracker - Sample solution
 
-[TO DO]
+In this unprecedented time, universities are struggling to understand the impact of COVID-19, especially research centers. Research grants are one of the most substantial sources of incoming revenue for universities. By reporting the monetary implications, universities can assess and pursue their eligibility for relief funding. The financial impact of COVID-19 on the research grants and budgets of these schools is in the millions.
 
+The Higher Education Financial Crisis Impact Tracker solution help researchers or co-researchers to track their employees' effort loss due to the crisis scenario and the departments to track and report the loss.
+
+## Demo: Quick overview
+
+Watch a quick overview of the Higher Education Crisis Financial Impact tracker solution.
+
+<br/>
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4xfQs]
+
+## Licensing requirements
+
+- Power Apps license.
+- Power BI License if you'll be using the Power BI dashboard available as part of this solution.
+
+Contact your local Microsoft account representative for questions related to licensing.
+
+See also: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+
+## Start here
+
+|Task|Target audience|See|
+|-----|--------|-------|
+|Download and deploy the sample app and dashboard|IT admin|[Download and deploy](deploy-solution.md)|
+|Use the admin app to add/manage master data|Business admin|[Configure and manage master data](admin-configuration.md)|
+|Use dashboards for insights and decision making|Business admin|[View Power BI dashboard](configure-dashboards.md)|
+|Use the mobile app to track and report loss|Staff|[Use the Higher Education Crisis Financial Impact Tracker app](use-mobile-app.md)|
+|||
 
 ## Issues and feedback
 
+- To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
 
+- For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
 
 ### Disclaimer
+
+*This app is a sample and may be used with Microsoft Power Apps for dissemination of reference information only.*
+
 
 

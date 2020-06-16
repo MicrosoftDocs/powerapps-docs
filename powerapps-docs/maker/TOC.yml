@@ -1682,6 +1682,16 @@
       href: ../sample-apps/emergency-response/configure-data-reporting.md
     - name: Use the mobile app
       href: ../sample-apps/emergency-response/use.md
+  - name: Higher Education Crisis Financial Impact Tracker
+    items:
+    - name: Overview
+      href: ../sample-apps/crisis-financial-impact-tracker/overview.md
+    - name: Deploy the solution
+      href: ../sample-apps/crisis-financial-impact-tracker/deploy-solution.md
+    - name: Use the admin app
+      href: ../sample-apps/crisis-financial-impact-tracker/configure-data.md
+    - name: Use the mobile app
+      href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
   - name: Regional Government Emergency Response and Monitoring
     items:
     - name: Overview
