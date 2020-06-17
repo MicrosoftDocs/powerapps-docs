@@ -130,7 +130,7 @@ Common Data Service includes the ability to find records quickly and has approac
 
 ![Single-entity Quick Find](media/bf2a54673326e94b4cf2f72bf0f84789.png)
 
-**Multiple-entity quick find (categorized search)** is also used to find
+*Multiple-entity quick find (categorized search)* is also used to find
 records, but will find them across different types of entities, such as accounts
 or contacts.
 
@@ -145,3 +145,5 @@ ML, Data Warehousing and other downstream integration purposes.
 This feature is designed for enterprise big data analytics, cost-effective, scalable, has high availability/disaster recover capabilities and enables best in class analytics performance.
 
 Data is stored in the Common Data Model format which provides semantic consistency across apps and deployments. Common Data Model’s standardized metadata and self-describing data facilitates metadata discovery and interoperability between data producers and consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning service.
+
+### See also
