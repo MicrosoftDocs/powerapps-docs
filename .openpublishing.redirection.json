@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/compress-extract-solution-file-solutionpackager.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-packager-tool",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/use-source-control-solution-files.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/use-source-control-solution-files",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/checker/webapi/overview.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/checker-api/overview",
       "redirect_document_id": "false"
