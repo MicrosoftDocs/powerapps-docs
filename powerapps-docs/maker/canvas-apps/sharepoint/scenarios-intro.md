@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/01/2020
+ms.date: 06/17/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -18,11 +18,20 @@ search.app:
 
 You can connect a canvas app with sites from SharePoint Online, or on-premises SharePoint 2013 or 2016 farm using the On-Premises Data Gateway. Create different connections for different lists or libraries from the SharePoint sites.
 
-In this article, you'll learn about common scenarios when working with an app that connects to SharePoint.
+In this section, you'll learn about common scenarios when working with an app that connects to SharePoint.
 
 ## Getting started with scenarios
 
-Articles in this SharePoint scenarios integration section explain individual and short scenarios when working with SharePoint integration with canvas app. For a more detailed information about different SharePoint integration articles with canvas apps, refer to the links in the following table.
+Articles in this section explain individual and short scenarios when working with SharePoint integration with canvas app.
+
+- [How to filter a search list in an app?](scenarios-filter-search-list.md)
+- [How to use drop down list with choices from lookup column in a SharePoint list?](scenarios-choice-to-lookup.md)
+- [How to customize an app screen based on column status inside SharePoint list?](scenarios-customize-view-based-on-column-status.md)
+- [How to work with permissions in a lookup list from SharePoint site?](scenarios-lookup-list-permissions.md)
+
+## SharePoint integration documentation
+
+In addition to the SharePoint integration scenarios, refer to the following articles about different SharePoint integration features with canvas apps.
 
 | Documentation | Description |
 |--|--|
