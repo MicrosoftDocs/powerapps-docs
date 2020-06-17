@@ -24,7 +24,7 @@ To follow the steps in this topic, you'll create a simple list so that you can s
 > - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md). 
 > - Custom forms for lists are only supported in generic lists and generic document libraries. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 > - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
-> - Additional actions are needed when changing SharePoint site address with a list or a library using Power Apps customized form. More information: [Effects of changing a SharePoint site address on Power Apps](https://docs.microsoft.com/sharepoint/change-site-address#effects-of-changing-a-site-address).
+> - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](https://docs.microsoft.com/sharepoint/change-site-address#effects-of-changing-a-site-address).
 
 ## Create a list
 
