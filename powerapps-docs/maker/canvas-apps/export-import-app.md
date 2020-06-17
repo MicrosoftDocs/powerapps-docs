@@ -20,7 +20,7 @@ search.app:
 
 In this article, you'll learn how to export and import canvas apps. You can export and import apps within same environment, across environments within same tenants or across tenants.
 
-> [!IMPORTANT]
+> [!IMPORTANT]
 > This feature is in preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 One common scenario where you may want to migrate resources is where you have Test or Dev environments and a production environment. Developers and testers have wide access to the apps in their environments. But when it comes time to migrate a new app to production, that environment has rigorous control over permissions to update and change it.
