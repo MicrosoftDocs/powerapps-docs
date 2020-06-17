@@ -100,7 +100,7 @@ To import a canvas app package, select **Import canvas app**. Ensure to select c
 
 ![Import package animation](media/export-import-app/import-app.gif)
 
-If you're updating existing app or resource, be sure to publish the app for changes to reflect to the users.
+If you're updating existing app or resource, be sure to [publish](save-publish-app.md#publish-an-app) the app for changes to reflect to the users.
 
 ## Step-by-step: Importing a canvas app package
 
@@ -148,7 +148,7 @@ If you're updating existing app or resource, be sure to publish the app for chan
     ![View comment](media/export-import-app/view-comment.png)
 
     > [!TIP]
-    > You can quickly confirm selections before importing an app package by viewing the icon changes for each resource type. <br>
+    > You can quickly confirm selections before importing an app package by viewing the icon changes for each resource type.
     > <table>
       <tr>
         <th>Icon</th>
