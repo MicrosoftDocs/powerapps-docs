@@ -1,6 +1,6 @@
 ---
-title: Export and import canvas app | Microsoft Docs
-description: Learn how to export and import canvas app
+title: Export and import canvas app (preview) | Microsoft Docs
+description: Learn how to export and import canvas app (preview)
 author: jimholtz
 manager: kvivek
 ms.service: powerapps
@@ -14,9 +14,14 @@ search.app:
   - PowerApps
 ---
 
-# Export and import canvas app package
+# Export and import canvas app package (preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 In this article, you'll learn how to export and import canvas apps. You can export and import apps within same environment, across environments within same tenants or across tenants.
+
+> [!IMPORTANT]
+> This feature is in preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 One common scenario where you may want to migrate resources is where you have Test or Dev environments and a production environment. Developers and testers have wide access to the apps in their environments. But when it comes time to migrate a new app to production, that environment has rigorous control over permissions to update and change it.
 
@@ -39,9 +44,7 @@ The following table explains different resource types, supportability, and impor
 
 ## Permissions required to export a canvas app package
 
-The ability to export an app is available to any user with "Can edit" permission to the app.
-
-The ability to import an app is available to any user with "Environment Maker" permission in the destination environment.
+Only **Owner** or **Co-owner** of an app can export a canvas app package. To import an app, **Environment Maker** permission is required on the destination environment.
 
 > [!NOTE]
 > While packaging is in preview, any user with a valid Power Apps license will be able to try out packaging for their apps and environments.
