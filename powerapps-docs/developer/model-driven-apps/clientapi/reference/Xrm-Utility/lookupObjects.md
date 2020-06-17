@@ -64,7 +64,6 @@ Xrm.Utility.lookupObjects(lookupOptions).then(
   function(success){
 console.log(success);},
 function(error){console.log(error);});
-}
 ```
 
 ### Related topics

@@ -32,4 +32,4 @@ Most commonly, you will use JavaScript web resources to add event handler functi
 
 More information:
 - [Client scripting with Model-driven apps](client-scripting.md)
-- [Web resources](/dynamics365/customer-engagement/developer/web-resources)
+- [Web resources](web-resources.md)
