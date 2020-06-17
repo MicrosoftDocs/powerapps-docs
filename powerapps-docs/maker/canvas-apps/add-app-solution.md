@@ -115,7 +115,7 @@ If you want to link an app to a solution, both must be in the same environment, 
 
 ## Known limitations
 
-For information about known limitations, see [Use solutions in Power Apps](../common-data-service/use-solution-explorer.md#known-limitations). 
+For information about known limitations, see [Solutions overview](/powerapps/maker/common-data-service/solutions-overview#known-limitations). 
 
 ## Next steps
 

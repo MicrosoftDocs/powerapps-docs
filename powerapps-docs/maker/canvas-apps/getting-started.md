@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: overview
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 04/27/2020
+ms.date: 06/16/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -18,6 +18,8 @@ search.app:
 Design and build a business app from a canvas in Microsoft Power Apps without writing code in a traditional programming language such as C#. Design the app by dragging and dropping elements onto a canvas, just as you would design a slide in PowerPoint. Create Excel-like expressions for specifying logic and working with data. Build apps that integrate business data from a [wide variety of Microsoft and third-party sources](connections-list.md). Share your app so that users can run it in a browser or on a mobile device, and embed your app so that users can run it in SharePoint, Power BI, or Teams.
 
 If you don't need a custom design and your data is in Common Data Service, you can automatically generate a model-driven app from your business data and processes. This type of app can model forms, views, and other components, and the default UI automatically adjusts to phones, laptops, and other devices. For more information about this type of app, see [Overview of building a model-driven app](../model-driven-apps/model-driven-app-overview.md).
+
+If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
 
 ## Build an app
 To get started, automatically generate an app from one of these sources, among others:
@@ -51,6 +53,6 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 * Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a Power Apps administrator for your organization, you can also open a support ticket in the [Power Apps admin center](https://admin.microsoft.com/Support/Support.aspx).
 
 ## Next steps
-- [Sign up for a free license.](../signup-for-powerapps.md)
-- [Sign in to Power Apps.](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
-- [Open a sample app.](open-and-run-a-sample-app.md)
+- [Sign up for a free license](../signup-for-powerapps.md)
+- [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
+- [Open a sample app](open-and-run-a-sample-app.md)
