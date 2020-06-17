@@ -62,7 +62,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
    | Entity | Name |
    |--------------------------|----------------------------------|
    | Account | Account for Interactive experience |
-   | Case | Case for Interactive experience |
+   | Case | Case for Interactive experience <br><br> **Note**: The Case entity is only available if your environment includes the Dynamics 365 Customer Service application.|
    | Contact | Contact for Interactive experience |
 
 7.	Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
