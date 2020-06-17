@@ -37,13 +37,15 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 
 |Task|Target audience|See|
 |-----|--------|-------|
-|Download and deploy the sample app and dashboard|IT admin|[Download and deploy](deploy-solution.md)|
+|Download and deploy the sample solution|IT admin|[Download and deploy](deploy-solution.md)|
 |Use the admin app to add/manage master data|Business admin|[Configure and manage master data](configure-data.md)|
 |Use dashboards for insights and decision making|Business admin|[View Power BI dashboard](configure-dashboards.md)|
 |Use the mobile app to track and report loss|Staff|[Use the Higher Education Crisis Financial Impact Tracker app](use-mobile-app.md)|
 |||
 
 ## Issues and feedback
+
+<!-- For Editor: Need to update the feedback link, work is still in progress -->
 
 - To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
 
@@ -52,6 +54,3 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 ### Disclaimer
 
 *This app is a sample and may be used with Microsoft Power Apps for dissemination of reference information only.*
-
-
-
