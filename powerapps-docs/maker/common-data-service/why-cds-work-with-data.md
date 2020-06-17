@@ -30,7 +30,7 @@ Warehouse.
 
 ### Common Data Model
 
-If you've ever had to bring data from multiple systems and applications together, you know what an expensive and time-consuming task that can be. Without being able to share and understand the same data easily, each application or data integration project requires a custom implementation.
+If you've ever had to bring data from multiple systems and applications together, you know what an expensive and time-consuming task that can be. Without being able to share and understand the same data easily, each application, or data integration project requires a custom implementation.
 
 Common Data Model provides reference architecture that is intended to streamline this process by providing a shared data language for business and analytical applications to use. The Common Data Model metadata system makes it possible for data and its meaning to be shared across applications and business processes such as Microsoft Power Apps, Power BI, Dynamics 365, and Azure.
 
@@ -56,7 +56,7 @@ Fields define the individual data items that can be used to store data in an ent
 
 Fields may have different types of data such as strings, digital data, images, and files. There is no need to keep relational and non-relational data separated artificially if it is part of the same business process or flow. Common Data Service stores the data in the best storage type for the model created.
 
-Each of these fields can associated with one of many data types supported by Common Data Service. 
+Each of these fields can be associated with one of many data types supported by Common Data Service. 
 
 ![Create a field](media/entity-field.png)
 
@@ -137,13 +137,14 @@ or contacts.
 ### Data Lake
 
 Common Data Service supports continuous replication of entity data to Azure Data
-Lake Gen 2 which can then be used to run analytics such as Power BI reporting,
+Lake Gen 2, which can then be used to run analytics such as Power BI reporting,
 ML, Data Warehousing and other downstream integration purposes.
 
 ![Single entity quick find](media/single-entity-quick-find.png)
 
 This feature is designed for enterprise big data analytics, cost-effective, scalable, has high availability/disaster recover capabilities and enables best in class analytics performance.
 
-Data is stored in the Common Data Model format which provides semantic consistency across apps and deployments. Common Data Model’s standardized metadata and self-describing data facilitates metadata discovery and interoperability between data producers and consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning service.
+Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments. Common Data Model’s standardized metadata and self-describing data facilitates metadata discovery and interoperability between data producers and consumers such as Power BI, Azure Data Factory, Azure Databricks, and Azure Machine Learning service.
 
 ### See also
+[Importing and exporting data](why-cds-import-export.md)
