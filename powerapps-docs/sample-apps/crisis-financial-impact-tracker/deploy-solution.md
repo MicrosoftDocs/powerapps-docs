@@ -5,7 +5,7 @@ author: ramanasridhar
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/15/2020
+ms.date: 06/23/2020
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---
@@ -26,7 +26,7 @@ Watch the quick overview on how to download and deploy the solution.
 
 ## Step 1: Download the deployment package
 
-Download the latest deployment package (.zip) from [here](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/CrisisFinancialImpactTracker.zip).Before extracting the .zip file, ensure that you unblock it. To unblock:
+Download the latest deployment package (.zip) from [here](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/CrisisFinancialImpactTracker.zip). Before extracting the .zip file, ensure that you unblock it. To unblock:
 
 - Right-click on the .zip file and select **Properties**.
 
@@ -41,7 +41,7 @@ When you extract the .zip file, you see the following components in the extracte
 | Data|Sample Data  | Individual entity sample data in .xlsx (Excel) format. The files are arranged in the order they should be imported.|
 | Package |Higher Education Crisis Financial Impact Tracker app package-related files.|Complete list of files required to deploy the app.|
 | Power BI Template | PBITemplate.pbix | A sample Power BI Template to connect to the app's Common Data Service instance.|
-|||
+
 
 ## Step 2: Sign up for Power Apps and create an environment
 
