@@ -1,13 +1,13 @@
 ---
 title: Debugging an app with canvas app Monitor | Microsoft Docs
 description: Describes canvas app Monitor to debug a canvas app.
-author: tapanm-msft
+author: aengusheaney
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/24/2020
+ms.date: 06/12/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -15,14 +15,16 @@ search.app:
   - PowerApps
 ---
 
-# Debugging an app with canvas app Monitor (Experimental)
+# Debugging an app with canvas app Monitor (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 **Canvas app Monitor** can help you debug and diagnose problems faster, and help you build faster, reliable apps. Monitor provides a deep view into how an app runs by providing a log of all activities in your app as the app runs.
 
-This gives you a better understanding of how the formulas contained in your app work so you can improve performance and identify any errors or problems.
+This feature gives you a better understanding of how the formulas contained in your app work so you can improve performance and identify any errors or problems.
 
-> [!NOTE]
-> The canvas app Monitor feature is still experimental. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
+> [!IMPORTANT]
+> The canvas app Monitor feature is in preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 
 ## Debugging an app
 
@@ -52,26 +54,71 @@ A few example issues and queries that you can uncover when using Monitor are:
 
 To see **Monitor** in action, see the [example scenario](#example).
 
-## Open canvas app Monitor
+## Open app Monitor while editing an app in Power Apps Studio
 
-Canvas app Monitor is available by default for all canvas apps. To open Monitor:
+Canvas app Monitor is available by default for all canvas apps. To open Monitor when authoring an app:
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
 
 1. Create a [new app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive) or [edit an existing app](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app).
 
-1. Select **Advanced tools** in the left navigation pane.
+1. Select **Advanced tools** in the left pane.
 
 1. Select **Open Monitor** to open Monitor for this app. 
 
     ![Open Monitor](./media/monitor/open-monitor.png "Open Monitor")
 
-This opens Monitor in a new browser tab and connects it to your existing Studio session:
+This action opens Monitor in a new browser tab and connects it to your existing Studio session:
 
 ![Canvas app Monitor](./media/monitor/canvas-app-monitor.png "Canvas app Monitor")
 
 > [!NOTE]
 > Monitor has no impact on your app. You can use Monitor with any app in a test environment or in production.
+
+## Open app Monitor for published app
+
+You can also use Monitor to debug the published app in the web player. There are two options to open Monitor for the published app.
+
+### Open app Monitor for published app using Power Apps Studio
+
+1. Sign in to [Power Apps](https://make.powerapps.com/).
+
+1. Create a [new app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive) or [edit an existing app](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app).
+
+1. Select **Advanced tools** in the left pane.
+
+1. Select **Open Monitor** to open Monitor for this app.
+
+1. Select **Play published app** from the top menu.
+
+   ![Open published app](./media/monitor/play-published-app.png "Open published app")
+
+   This opens the published app in a new browser tab, and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
+
+   > [!NOTE]
+   > If you open the published app using this method, you'll have your app connected to the same Monitor session twice. The app being edited in Power Apps Studio and the published app in the web player. Events from both the Power Apps Studio and the published app will be shown in the Monitor if you interact with the app using both options at the same time.
+
+### Open app Monitor for published app from Power Apps
+ 
+You can also open Monitor for the published without having to open the app in Power Apps Studio.
+   
+1. Sign in to [Power Apps](https://make.powerapps.com/).
+
+1. Select **Apps** in the left pane.
+
+1. Select an app from the list.
+
+1. Select **Monitor** from the menu. You can also select **More Commands** (**...**), and then select **Monitor** instead.
+
+    ![Open Monitor](./media/monitor/open-monitor-portal.png "Open Monitor")
+
+    This action opens the Monitor in a new browser tab.
+
+1. In Monitor, select **Play published app** from the top menu.
+
+    ![Open published app](./media/monitor/play-published-app.png "Open published app")
+
+    This opens the published app in a new browser tab, and connects it to your current Monitor session. You'll immediately see events in the Monitor when the app loads in the web player, and as you interact with the published app.
 
 ## View events in canvas app Monitor
 
@@ -122,9 +169,33 @@ When you select an event in the grid, a panel displays containing additional det
 
     ![JSON format - Response tab](./media/monitor/json-format-response-tab.png "JSON format - Response tab")
 
+## Collaborative debugging
+
+Inviting other users to your Monitor session enables you to quickly collaborate and debug an app together, without the need to share your screen. When you invite others to participate in a session, they see the exact same app events in their own browser, without having to open the app or the need to reproduce the specific scenario that you're debugging. This allows you and other participants to browse, view, and inspect the app events independently without stepping on each other or handing control back-and-forth to identify the problem.
+
+> [!NOTE]
+> You can invite any user in your organization to a Monitor session. Users joining the session will see all the events generated by the app, including any data.
+
+1. Select **Invite** from the top.
+
+1. Enter Azure Active Directory user name or alias of the users that you want to invite to the Monitor session.
+
+    ![Invite user](./media/monitor/invite-user.png "Invite user")
+
+1. Select the user to generate a link to the current Monitor session.
+
+    > [!NOTE]
+    > The link is unique for each user. It can't be shared between users. The link expires after 60 minutes.
+
+1. Select the link icon to copy the session link and send it to the users you've invited to the session.
+
+    ![Session link](./media/monitor/session-link.png "Session link")
+
+Recipient users can use the link to open the Monitor and connect to your Monitor session.
+
 ## Download and upload a trace file
 
-You can download the events that are shown in the  table for offline analysis. The downloaded trace file can be shared with others and it can be uploaded back into Monitor for review and analysis. You can also attach a trace file to support service requests helping expedite the solution to your problem.
+You can download the events that are shown in the  table for offline analysis. Events can be downloaded in a ```.json``` or a ```.csv``` format, and can be shared with others. The ```.csv``` files can only be downloaded. But if you export the events in ```.json``` format, you can them back into the monitor tool for analysis. You can also attach a trace file to support service requests helping speed up the solution to your problem.
 
 ![Download](./media/monitor/Download.png "Download")
 
@@ -150,13 +221,13 @@ When you select such an event, you see the error as *Rate limit exceeded. Try ag
 
 ### Analysis
 
-The issue needs further analysis to understand why requests are getting throttled. In Monitor, you see that for each **createRow** call, there are several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These aren't the entities the app is creating rows for. The **ProgressCount.Text**  formula is seen in Monitor:
+The issue needs further analysis to understand why requests are getting throttled. In Monitor, you see that for each **createRow** call, there are several **getRows** requests from the **ProgressCount.Text** property, each to a different entity. These entities aren't the entities the app is creating rows for. The **ProgressCount.Text** formula is seen in Monitor:
 
 ![ProgressCount.Text formula](./media/monitor/progresscount-text-formula.png "ProgressCount.Text formula")
 
 For each record added, the formula is evaluated again and **CountRows** is called on several entities. This resulted in **getRows** in the log, since **CountRows** isn't delegated for Common Data Service. For each single request to add a record, you're potentially making 12 additional requests to count the rows in each entity.
 
-These extra requests intermittently cause errors due to the Common Data Service platform throttling the requests to the service. And it also explains the overall performance problem.
+These extra requests intermittently cause errors because of the Common Data Service platform throttling the requests to the service. And it also explains the overall performance problem.
 
 ### Conclusion
 

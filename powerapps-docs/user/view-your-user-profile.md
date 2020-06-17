@@ -17,9 +17,8 @@ search.app:
   - PowerApps
   - D365CE
 ---
----
-# View your user profile  
 
+# View your user profile  
 
 Your user profile displays useful information about you to your entire organization; for example, your contact information, your organization, and your security role. Depending on your security role, you might be able to make changes to your user profile.  
   

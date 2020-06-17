@@ -16,8 +16,6 @@ search.app:
 ---
 # getGlobalContext.userSettings (Client API reference)
 
-
-
 Returns information about the current user settings.
 
 `var userSettings = Xrm.Utility.getGlobalContext().userSettings`
@@ -110,7 +108,7 @@ Returns the language ID for the current user.
 
 ## roles 
 
-Returns a collection of lookup objects containing the GUID and display name of each of the security role or teams that the user is associated with.
+Returns a collection of lookup objects containing the GUID and display name of each of the security role or teams that the user is associated with. This method is supported only on the Unified Interface.
 
 ### Syntax
 
@@ -118,7 +116,7 @@ Returns a collection of lookup objects containing the GUID and display name of e
  
 ### Return Value
 
-**Type**: Array of objects
+**Type**: Collection
 
 **Description**: Object containing `id` and `name` of each of the security role or teams that the user is associated with.
 
@@ -156,7 +154,7 @@ Deprecated; use [userSettings.roles](#roles) instead to view the display names o
 
 ## transactionCurrency 
 
-Returns a lookup object containing the ID, display name, and entity type of the transaction currency for the current user.
+Returns a lookup object containing the ID, display name, and entity type of the transaction currency for the current user. This method is supported only on the Unified Interface.
 
 ### Syntax
 
