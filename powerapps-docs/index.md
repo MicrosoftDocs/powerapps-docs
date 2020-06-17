@@ -3,7 +3,8 @@ layout: HubPage
 title: Microsoft Power Apps Documentation | Microsoft Docs
 description: Microsoft Power Apps Documentation
 searchScope:
-  - "PowerApps"
+  - "Power Platform"
+  - "Power Apps"
 featureFlags: 
 - clicktale
 ms.service: powerapps
@@ -614,14 +615,13 @@ ms.custom:
                                  <div class="cardText">
                                     <h3 style="font-size: 1.15rem">Package and distribute apps/extensions</h3>
                                     <hr/>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/introduction-solutions">Using solutions</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/build-tools-overview">Microsoft Power Platform Build Tools for Azure DevOps</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/compress-extract-solution-file-solutionpackager">SolutionPackager tool</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer">Package Deployer tool</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/checker/webapi/overview">Use the Power Apps checker</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/alm/solution-concepts-alm">Solution concepts</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/alm/devops-build-tools">Microsoft Power Platform Build Tools for Azure DevOps</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/alm/solution-packager-tool">SolutionPackager tool</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/alm/package-deployer-tool">Create packages for the Package Deployer tool</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/alm/checker-api/overview">Use the Power Apps checker Web API</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/isv-app-management">ISV app management and monitoring</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/publish-app-appsource">Publish your app on AppSource</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/download/details.aspx?id=57777">Whitepaper: ALM using solutions</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/developer/common-data-service/powerapps-cli"> Get Power Apps CLI</a></p>
                                  </div>
                               </div>

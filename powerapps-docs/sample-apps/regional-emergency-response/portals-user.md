@@ -6,11 +6,9 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/05/2020
+ms.date: 06/09/2020
 ms.author: tapanm
 ms.reviewer: tapanm
-searchScope:
-  - PowerApps
 ---
 # Use the Regional Government Emergency Response and Monitoring portal
 
@@ -68,7 +66,7 @@ Occupancy for staffed adult and pediatric inpatient beds that are in the ICU or 
 | Acure Care beds (non-AIIR Room) currently occupied | Number of Acure Care beds (non-AIIR Room) occupied currently.
 
 > [!NOTE]
-> Pediatric occupancy options are disabled if the capacity isn't set to at least 1 at the selected faciltity.
+> Pediatric occupancy options are disabled if the capacity isn't set to at least 1 at the selected facility.
 
 #### Staffed Inpatient Bed Occupancy in other areas
 

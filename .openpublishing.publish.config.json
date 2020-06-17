@@ -39,10 +39,6 @@
           "ReferenceTOCUrl": "/dotnet/api/ce-9-general/toc.json"
         },
         {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/package-deployer/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-packagedeployer/toc.json"
-        },
-        {
           "ConceptualTOC": "powerapps-docs/developer/common-data-service/workflow/toc.yml",
           "ReferenceTOCUrl": "/dotnet/api/ce-9-workflow/toc.json"
         },
