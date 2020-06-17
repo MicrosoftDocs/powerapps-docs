@@ -1,7 +1,7 @@
 ---
 title: "Work with records in the new calendar view in model-driven apps | MicrosoftDocs"
 description: "Learn how to view, create, and delete activities in the new calendar view."
-ms.date: 06/05/2020
+ms.date: 06/17/2020
 ms.service:
   - "dynamics-365-sales"
 ms.topic: article
