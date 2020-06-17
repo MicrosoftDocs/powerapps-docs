@@ -5,7 +5,7 @@ author: jimholtz
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.date: 06/11/2020
+ms.date: 06/16/2020
 ms.author: jimholtz
 ms.reviewer: tapanm
 search.audienceType: 
@@ -16,28 +16,28 @@ search.app:
 
 # Export and import canvas app package
 
+In this article, you'll learn how to export and import canvas apps. You can export and import apps within same environment, across environments within same tenants or across tenants.
+
 One common scenario where you may want to migrate resources is where you have Test or Dev environments and a production environment. Developers and testers have wide access to the apps in their environments. But when it comes time to migrate a new app to production, that environment has rigorous control over permissions to update and change it.
 
 Another scenario is one where each customer has their own environment and data. When a new customer is added, a new environment is created for them, and you would migrate apps into their environment.
 
-In this article, you'll learn how to export and import canvas apps. You can export and import apps within same environment, across environments within same tenants or across tenants.
-
 ## Resources included in the package
 
-An app can consume different resources. For example, most apps use connections. Some apps may use Power Automate, have custom connectors or connect using gateways to on-premises resources. Some apps may have Common Data Service customizations.
+An app can consume different resources. For example, most apps use connections. Other apps may use Power Automate, have custom connectors or connect using gateways to on-premises resources. Some apps may also use Common Data Service customizations.
 
-The following table explains different resource types, supportability and import options.
+The following table explains different resource types, supportability, and import options.
 
 | Resource type | Supported | Import options |
 | --- | --- | --- |
 | App |Yes, for canvas apps |There are two options to import an app into an environment: <ol><li><b>Create new</b> – The app will be created as a new app in the environment where the package is imported.</li> <li><b>Update</b> - the app already exists in the environment and will be updated when this package is imported.</li></ol> |
-| Power Automate |Yes |There are two options to import a flow into an environment: <ol><li><b>Create new</b> – The flow will be created as a new flow in the environment where the package is imported.</li> <li><b>Update</b> - The flow already exists in the environment and will be updated when this package is imported.</li></ol> <b>Note: </b>All resources that the flow depends on will also be included within the app package that is exported and will need to be configured with the package is imported. <br> You can also export and import flows using solutions. More information: [Power Automate solutions](https://docs.microsoft.com/power-automate/overview-solution-flows). |
-| Custom Connectors |No |If an app depends on a custom connector <b>we do not</b> currently support exporting the connector as a part of the package. <p></p> If you have an app that relies on a custom connector, your only current option is to manually re-create or update the connector in your target environment and select that connector when you import the package. |
-| Connections |No |If an app depends on a connection (such as a SQL connection w/ credentials), we do not currently support exporting the connection or credentials as a part of the package. <p></p> If you have an app that relies on a shared connection (like SQL), your only current option is to manually re-create that connection with the appropriate credentials in your target environment and select that connection when you import the package. |
-| Common Data Service Customizations |No |Exporting Common Data Service customizations is no longer supported as a part of packaging. This is now supported through export and importing the environment default solution as outlined in the article below. |
-| Gateways |No |Gateways are only supported in the default (and {tenant name} (from preview) ) environments, so export/migration is not supported. |
+| Power Automate |Yes |There are two options to import a flow into an environment: <ol><li><b>Create new</b> – The flow will be created as a new flow in the environment where the package is imported.</li> <li><b>Update</b> - The flow already exists in the environment and will be updated when this package is imported.</li></ol><br> <b>Note: </b>All resources that the flow depends on will also be included within the app package that is exported and will need to be configured with the package is imported. <br> <br> You can also export and import flows using solutions. More information: [Power Automate solutions](https://docs.microsoft.com/power-automate/overview-solution-flows). |
+| Custom Connectors |No |Exporting a custom connector isn't supported. You'll need to re-create custom connector on target environment. |
+| Connections |No |Exporting a connection isn't supported. You'll need to re-create connections on target environment. |
+| Common Data Service Customizations |No |Exporting Common Data Service customizations as a part of canvas app package isn't supported. You'll need to use Common Data Service solutions instead. More information: [Common Data Service solutions](https://docs.microsoft.com/powerapps/developer/common-data-service/introduction-solutions) |
+| Gateways |No | You can't export or import gateways. You'll need to re-create gateways on target environment. |
 
-## How do I get access to packaging for my app?
+## Permissions required to export a canvas app package
 
 The ability to export an app is available to any user with "Can edit" permission to the app.
 
@@ -46,96 +46,136 @@ The ability to import an app is available to any user with "Environment Maker" p
 > [!NOTE]
 > While packaging is in preview, any user with a valid Power Apps license will be able to try out packaging for their apps and environments.
 
-## Exporting a canvas app
+## Exporting a canvas app package
+
+To export a canvas app package, select your app and then select **Export Package**.
+
+![Export package animation](media/export-import-app/export-app.gif)
+
+You can change the default **IMPORT ACTION** for each resource that your canvas app uses. The default action for resources in canvas app package including the app is **Update**. You can choose to **Create as new** instead, during import. However, the import action that you select will become the default action during the app import.
+
+> [!IMPORTANT]
+> You can only import the exported package. Changes to the the exported package file aren't supported.
+
+## Step-by-step: Exporting a canvas app package
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** from the left pane.
 
-1. Select the app you want to export.
+1. Select the app that you want to export.
 
 1. Select **Export Package** from the top menu. You can also select **More Commands** (**..**), and then select **Export Package** from the drop-down menu instead.
 
-    ![Select export](media/export-import-app/select-export.png)
+    ![Select export](media/export-import-app/export-app.png)
 
 1. Enter package **Name** and **Description**. You can also change the **Environment** name, if needed.
 
-    ![Review package details](media/export-import-app/package-details.png)
+    ![Review package details](media/export-import-app/export-app-details.png)
 
-1. Within the **Review Package Content** section, you can optionally add comments or notes or change the setting for how each individual resource will be imported into the target environment during package import.
+1. Select **Update** to choose import action for the app package resource. You can also select the wrench icon instead.
 
-    ![Configure package content](media/export-import-app/export-package-content.png)
+    ![Configure package content action](media/export-import-app/import-app-package-content-action.png)
 
+1. Select **Create as new** if the app should be created during import, or **Update** to update an existing app.
+
+    ![Import setup](media/export-import-app/import-setup.png)
+
+    > [!NOTE]
+    > The **IMPORT SETUP** action text changes depending on your new selection.
+
+1. Repeat the previous step for each additional resource in the app package.
+
+1. (Optional) Select comment icon to insert comment for each resource.
+
+    ![Import comment](media/export-import-app/add-comment.png)
+    
 1. Select **Export** to export the package.
 
 The package is downloaded to your browser's default downloads folder.
 
-## Importing a canvas app
+## Importing a canvas app package
 
-1. In https://make.powerapps.com, click or tap **Apps**, and then select **Import canvas app**.
+To import a canvas app package, select **Import canvas app**. Ensure to select correct actions for each app package resource. For example, create a new instance of an app or a flow. You can also read comments entered while exporting the app package for additional information.
 
-    ![Select import](media/export-import-app/select-import.png)
-2. Select **Upload** and select the app package file that you want to import.
+![Import package animation](media/export-import-app/import-app.gif)
 
-    ![Select package file](media/export-import-app/select-file.png)
-3. Once the package has been uploaded you will need to review the package contents and will need to provide additional input for any item marked with a red icon by selecting the wrench icon for each item and entering the required information.
+If you're updating existing app or resource, be sure to publish the app for changes to reflect to the users.
 
-    ![Review package content](media/export-import-app/import-package-content.png)
-4. Once you have provided all of the required information select **Import**.
+## Step-by-step: Importing a canvas app package
 
-    ![Updated packaged content](media/export-import-app/import-package-content-dirty.png)
-5. When import completes you will be automatically redirected to a page (similar to the one below) that outlines whether or not the import operation was successful.
+1. Sign in to [Power Apps](https://make.powerapps.com).
 
-    ![Review import results](media/export-import-app/import-results.png)
+1. Select **Apps** from the left pane.
 
-> [!NOTE]
->  If you are importing an app and chose to **Update** an existing app, the new changes will be saved as a draft of the applications.  You will need to [publish](https://powerapps.microsoft.com/tutorials/save-publish-app/#publish-an-app) those changes in order for them to be available all other users of the applications.
->
->
+1. Select **Import canvas app**.
 
-## Exporting Common Data Service customizations and model-driven apps
-Exporting any entity or option set customizations or any model-driven apps that you have built in https://make.powerapps.com is supported by exporting the default environment solution as follows:
-> [!NOTE]
->  If you would like to learn more about solutions in Power Apps, please see [Introduction to solutions](/powerapps/developer/common-data-service/introduction-solutions).
->
->
+    ![Select import](media/export-import-app/import-app.png)
 
-1. In https://make.powerapps.com, select the **Model-driven (preview)** design mode in your environment.
+1. Select **Upload** and select the app package file that you want to import.
 
-    ![Select model-driven design mode](media/export-import-app/select-model-driven.png)
+1. Select **IMPORT SETUP** action for the app. You can also select the wrench icon instead.
 
-2. Select **Advanced** in the left-navigation bar to launch the solution explorer for this environment's default solution
+    ![Select import action](media/export-import-app/update-import-action-when-importing.png)
 
-    ![Select advanced](media/export-import-app/select-advanced.png)
+    1. If you select **Create as new**, you have the option to change the resource name.
 
-3. Select **Export Solution** and complete the required steps.  A solution package file will begin downloading within a few seconds.
+        ![Select import action - resource name](media/export-import-app/create-as-new-resource-name.png)
 
-    ![Select export](media/export-import-app/select-export-solution.png)
+    1. If you select **Update**, select an app that you want to update during the import.
 
-## Importing Common Data Service customization and model-driven apps
-Importing a Common Data Service solution package unfortunately requires a manual workaround in the experience, one that we are actively working to fix:
+        ![Select import action - update](media/export-import-app/update-import-action-select-app-to-update.png)
 
-1. In https://make.powerapps.com, select the **Model-driven (preview)** design mode in your environment.
+1. Repeat the previous step for each additional resource in the app package.
 
-    ![Select model-driven design mode](media/export-import-app/select-model-driven.png)
+1. (Optional) If the app package contains references to [connection(s)](connections-list.md), you'll have the option to choose the connection from available connections list.
 
-2. Select **Advanced** in the left-navigation bar to launch the solution explorer for this environment's default solution.
+    ![Select connection during import](media/export-import-app/select-connection-during-import.png)
 
-    ![Select advanced](media/export-import-app/select-advanced.png)
+    Select **Select during import** to choose the appropriate connection.
 
-3. Copy the Url from your browser, make the following changes and then navigate to the new URL in your browser:
+    ![Select connection](media/export-import-app/select-or-create-connection-during-import.png)
 
-    * Current URL structure: `https://{orguniquename}.crm.dynamics.com/tools/solution/edit.aspx?id={solutionname}`
+    > [!NOTE]
+    > If no connections are available, or the connection you want is not listed, select **Create new** to create a new connection in a new browser tab. Ensure you create the connection for the correct resource type. After creating the connection, return to import app browser tab and select **Refresh list** to reflect and choose the newly created connection.
 
-        ![Edit url](media/export-import-app/edit-url.png)
+1. (Optional) If a resource has comments entered during the export of the app package, it will show with comment icon filled, and shows *Comment yes* when you hover over. Select the comment to view.
 
-    * New URL structure:
-  `https://{orguniquename}.crm.dynamics.com/tools/solution/import/SolutionImportWizard.aspx`
+    ![Comment available to view](media/export-import-app/comment-yes-during-import.png)
 
-        ![Select package](media/export-import-app/select-package.png)
+    If available, select comment icon to view the comment.
 
-4. Select the Common Data Service solution package file that you want to import, and complete the wizard.
+    ![View comment](media/export-import-app/view-comment.png)
 
-5. If import is successful you will see the following confirmation dialog. In order for the solution changes to be available to other customizers within the environment select **Publish All Customizations**
+    > [!TIP]
+    > You can quickly confirm selections before importing an app package by viewing the icon changes for each resource type. <br>
+    > <table>
+      <tr>
+        <th>Icon</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><img src="media/export-import-app/icon-new.png" alt="Create as new"></td>
+        <td><b>Create as new</b> - a new resource will be created.</td>
+      </tr>
+      <tr>
+        <td><img src="media/export-import-app/icon-changed.png" alt="Create as new"></td>
+        <td><b>Import action changed</b> - import action for the resource is modified.</td>
+      </tr>
+      <tr>
+        <td><img src="media/export-import-app/icon-action-required.png" alt="Create as new"></td>
+        <td><b>Action required</b> - you must select an import action before the app package can be imported.</td>
+      </tr>
+    </table>
 
-    ![Successful import](media/export-import-app/successful-import.png)
+1. Select **Import** to import the app package.
+
+    > [!IMPORTANT]
+    > If you select to **Update** an existing app, the new changes will be saved as a draft of the applications. You'll need to [publish](save-publish-app.md#publish-an-app) the app for changes to reflect for users.
+
+### See also
+
+- [Save and publish an app](save-publish-app.md)
+- [Edit an app](edit-app.md)
+- [Delete an app](delete-app.md)
+- [Share an app](share-app.md)

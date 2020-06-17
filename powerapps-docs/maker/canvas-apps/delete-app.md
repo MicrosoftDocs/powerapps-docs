@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/08/2020
+ms.date: 06/16/2020
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -59,6 +59,7 @@ To set a user as the owner of an app, use the [Power Apps cmdlets for administra
 
 ### See also
 
-[Share an app](share-app.md)  
-[Change app name and tile](set-name-tile.md)  
-[Restore an app to a previous version](restore-an-app.md)
+- [Share an app](share-app.md)  
+- [Change app name and tile](set-name-tile.md)  
+- [Restore an app to a previous version](restore-an-app.md)
+- [Export and import an app](export-import-app.md)

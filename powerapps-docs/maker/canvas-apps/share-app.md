@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -401,3 +401,10 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | Word Online (Business)                            | No                                                                     |
 
 \* When using the Common Data Service connector, ensure the guest user is licensed from the same tenant where you have Common Data Service located.
+
+### See also
+
+- [Edit an app](edit-app.md)
+- [Restore an app to a previous version](restore-an-app.md)
+- [Export and import an app](export-import-app.md)
+- [Delete an app](delete-app.md)
