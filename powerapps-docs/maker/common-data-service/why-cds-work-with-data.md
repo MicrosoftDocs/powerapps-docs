@@ -128,7 +128,7 @@ Common Data Service includes the ability to find records quickly and has approac
 
 *Single-entity quick find* is used to find records of only one type. This search option is available from within a view.
 
-![Single-entity Quick Find](media/bf2a54673326e94b4cf2f72bf0f84789.png)
+![Single-entity Quick Find](media/single-entity-quick-find.png)
 
 *Multiple-entity quick find (categorized search)* is also used to find
 records, but will find them across different types of entities, such as accounts
@@ -136,11 +136,9 @@ or contacts.
 
 ### Data Lake
 
-Common Data Service supports continuous replication of entity data to Azure Data
-Lake Gen 2, which can then be used to run analytics such as Power BI reporting,
-ML, Data Warehousing and other downstream integration purposes.
+Common Data Service supports continuous replication of entity data to Azure Data Lake Gen 2, which can then be used to run analytics such as Power BI reporting, ML, data warehousing and other downstream integration purposes.
 
-![Single entity quick find](media/single-entity-quick-find.png)
+![Single entity quick find](media/cds-with-data-lake.png)
 
 This feature is designed for enterprise big data analytics, cost-effective, scalable, has high availability/disaster recover capabilities and enables best in class analytics performance.
 
