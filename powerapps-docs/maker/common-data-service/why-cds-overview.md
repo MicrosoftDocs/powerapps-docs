@@ -26,21 +26,13 @@ insights that can drive what it should do tomorrow. To thrive and grow,
 businesses need to capture, analyze, predict, present, and report data and do
 all of this with a high level of agility.
 
-Building out the data infrastructure to enable this can be both time consuming
-and expensive as the data originates from a variety of devices, applications,
-systems, services, and SaaS. These large and growing number of sources often
-consist of multiple data technologies that store different types of data,
-expose different APIs, and can use a mixture of security models. The developers
-needed to create these technologies can be both hard to find and expensive. Developers often must have a deep
-understanding of how to deploy, configure, manage, and integrate these different
-data technologies.
+Building out the data infrastructure to enable business insight can be both time consuming
+and expensive. The data originates from a variety of devices, applications, systems, services, and SaaS. These large and growing number of sources often consist of multiple data technologies that store different types of data, expose different APIs, and use a mixture of security models. The developers needed to create these technologies can be both hard to find and expensive. Developers often must have a deep understanding of how to deploy, configure, manage, and integrate these different data technologies.
 
-Common Data Service addresses these concerns with an easy to use, easy to manage, compliant, secure, scalable, and globally available SaaS data service. Common Data Service empowers organizations to work with any type of data,
-any type of app, and use the data within it to gain insights and drive business action.
+Common Data Service addresses these concerns with an easy to use, easy to manage, compliant, secure, scalable, and globally available SaaS data service. Common Data Service empowers organizations to work with any type of data, any type of app, and use the data within it to gain insights and drive business action.
 
 As part of the Power Platform, Common Data Service requires no or little code to be written,
-enabling it to easily be used by everyone from knowledge workers to professional
-developers.
+enabling it to easily be used by everyone from knowledge workers to professional developers.
 
 Built on Microsoft Azure, organizations choosing Common Data Service can be confident that it's
 globally available, compliant, scalable, and secure.
@@ -49,16 +41,12 @@ globally available, compliant, scalable, and secure.
 --------------------------
 
 Common Data Service is designed to work with any type of data and incorporates all the major
-categories of data technologies that your organization needs – relational,
-non-relational, file, image, search, and data lake.
+categories of data technologies that your organization needs – relational, non-relational, file, image, search, and data lake.
 
 Common Data Service includes a set of visual designers to create, edit, and interact with data. This makes it easy to quickly define the entities, relationships, business rules, forms, and workflows, that represent your business.
 
 With the easy to configure integration features built into Common Data Service, deep integration
-with Microsoft’s clouds, such as Dynamics, Office, and Azure, plus access to over 200
-connectors in Power Automate and Logic Apps, Common Data Service can connect to the devices,
-apps, systems, services, and popular SaaS offerings that contain the data for
-your business.
+with Microsoft’s clouds, such as Dynamics, Office, and Azure, plus access to over  connectors in Power Automate and Logic Apps, Common Data Service can connect to the devices, apps, systems, services, and popular SaaS offerings that contain the data for your business.
 
 As a result, a wide range of enterprise integration scenarios - from retrieving
 data sent in a spreadsheet as an email attachment to emerging scenarios like
@@ -68,7 +56,7 @@ days and weeks can now often be measured in minutes and hours.
 
 In addition to providing the ability to create data in Common Data Service or import it from
 other systems, Common Data Service also supports virtual entities. Virtual entities provide the ability to
-map data in an external data source so that it appears to be in Common Data Service and enables using Common Data Service to execute real-time data operations against the external data source.
+map data in an external data source so that it appears to be in Common Data Service and enables using Common Data Service to execute real-time data operations against the external data source. More information: [Work with any data](why-cds-work-with-data.md)
 
 ## Work with any type of app
 
@@ -94,7 +82,7 @@ The goal of Common Data Service working with any app means it should also work w
 that knowledge workers and professional developers use as well. To help them be
 even more productive, Common Data Service is integrated into popular tools such as Excel,
 Outlook, Dynamics 365 Customer Engagement apps, Power BI Desktop, Power Query, Azure Data Factory, Data
-Export Service, and SQL Server Management Studio. 
+Export Service, and SQL Server Management Studio. More information: [Work with any type of app](why-cds-any-type-app.md)
 
 ## Analytics and Reporting
 
