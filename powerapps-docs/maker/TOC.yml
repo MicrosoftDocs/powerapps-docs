@@ -1468,8 +1468,9 @@
   - name: What is Common Data Service?
     href: ./common-data-service/data-platform-intro.md
   - name: Why choose Common Data Service? 
-    href: ./common-data-service/why-cds-overview.md  
-    items: 
+    items:
+      - name: Overview
+        href: ./common-data-service/why-cds-overview.md  
       - name: Work with any data
         href: ./common-data-service/why-cds-work-with-data.md
       - name: Importing and exporting data
