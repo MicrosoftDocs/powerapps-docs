@@ -1472,6 +1472,10 @@
     items: 
       - name: Work with any data
         href: ./common-data-service/why-cds-work-with-data.md
+      - name: Importing and exporting data
+        href: ./common-data-service/why-cds-import-export.md
+      - name: Work with any app
+        href: ./common-data-service/why-cds-any-type-app.md                
   - name: Work with entities
     items:
     - name: Entity overview
