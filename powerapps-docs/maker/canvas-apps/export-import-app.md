@@ -149,24 +149,24 @@ If you're updating existing app or resource, be sure to [publish](save-publish-a
 
     > [!TIP]
     > You can quickly confirm selections before importing an app package by viewing the icon changes for each resource type.
-    > <table>
-      <tr>
-        <th>Icon</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td><img src="media/export-import-app/icon-new.png" alt="Create as new"></td>
-        <td><b>Create as new</b> - a new resource will be created.</td>
-      </tr>
-      <tr>
-        <td><img src="media/export-import-app/icon-changed.png" alt="Create as new"></td>
-        <td><b>Import action changed</b> - import action for the resource is modified.</td>
-      </tr>
-      <tr>
-        <td><img src="media/export-import-app/icon-action-required.png" alt="Create as new"></td>
-        <td><b>Action required</b> - you must select an import action before the app package can be imported.</td>
-      </tr>
-    </table>
+    > <table >
+    >  <tr>
+    >    <th>Icon</th>
+    >    <th>Description</th>
+    >  </tr>
+    >  <tr>
+    >    <td><img src="media/export-import-app/icon-new.png" alt="Create as new"></td>
+    >    <td><b>Create as new</b> - a new resource will be created.</td>
+    >  </tr>
+    >  <tr>
+    >    <td><img src="media/export-import-app/icon-changed.png" alt="Create as new"></td>
+    >    <td><b>Import action changed</b> - import action for the resource is modified.</td>
+    >  </tr>
+    >  <tr>
+    >    <td><img src="media/export-import-app/icon-action-required.png" alt="Create as new"></td>
+    >    <td><b>Action required</b> - you must select an import action before the app package can be imported.</td>
+    >  </tr>
+    > </table>
 
 1. Select **Import** to import the app package.
 
