@@ -16,7 +16,7 @@ search.app:
 
 # SharePoint integration scenarios
 
-You can connect a canvas app with sites from SharePoint Online, or on-premises SharePoint 2013 or 2016 farm using the On-Premises Data Gateway. Create different connections for different lists or libraries from the SharePoint sites.
+You can connect a canvas app with sites from SharePoint Online, or on-premises SharePoint farms using the on-premises data gateway. Create different connections for different lists or libraries from the SharePoint sites.
 
 In this section, you'll learn about common scenarios when working with an app that connects to SharePoint.
 
