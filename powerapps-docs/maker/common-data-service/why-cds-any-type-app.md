@@ -83,7 +83,7 @@ For more information about the service bus, see [Service Bus](https://azure.mic
 
 Logic Apps, offered via Azure, and Power Automate, offered via the Power Platform, can trigger a workflow that can be used to integrate with application events and data on a schedule or by activity in a database, system, service, or SaaS.
 
-![Logic Apps and Power Automate with Common Data Service](media/logic-apps-power-automate.png)
+![Logic Apps and Power Automate with Common Data Service](media/logic-apps-and-power-automate.png)
 
 These workflows can execute logic and interact with these systems using the hundreds of connectors to databases, PaaS, and SaaS.
 
@@ -143,7 +143,7 @@ One constraint with plug-ins is that they must be self-contained. If integration
 
 Integration can also be done using Azure Functions. Functions provide a serverless code execution option for business and integration logic.
 
-![Common Data Service with Azure Functions](media/azure-funtions.png)
+![Common Data Service with Azure Functions](media/azure-functions.png)
 
 Functions are triggered by a call from an external system, service or code. For Common Data Service, that trigger could be directly from Common Data Service using Service Bus, webhook, or a call from a plug-in. Additionally, the Azure Function call can be initiated via a flow in either Logic Apps or Power Automate that involves the Common Data Service connector.
 
