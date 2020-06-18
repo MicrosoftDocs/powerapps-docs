@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/24/2020
+ms.date: 06/04/2020
 ms.author: aheaney
 search.audienceType: 
   - maker
@@ -24,7 +24,7 @@ In this quickstart, you'll create tests for a canvas app called Kudos. You can a
 
 ## Open Test Studio
 
-You do not need to enable this in your app like other experimental features. Test Studio is available by default for all canvas apps.
+You don't need to enable this feature in your app like other experimental features. Test Studio is available by default for all canvas apps.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -37,7 +37,7 @@ You do not need to enable this in your app like other experimental features. Tes
 
 4. Select **Advanced tools** in the left navigation.
 
-5. Select **Open tests** to open the Test Studio for this application. This  opens Test Studio in a new browser tab.
+5. Select **Open tests** to open the Test Studio for this application. This action opens Test Studio in a new browser tab.
 
     ![Open Test Studio](./media/working-with-test-studio/open-tests.png "Open Test Studio")
 
@@ -70,7 +70,7 @@ A test case consists of test steps that contain actions. Test actions are writte
 > [!NOTE]
 > Only a published app plays in record mode. Publish any recent changes to the app before you start recording a test case. Recording without publishing recent changes causes the last published version of the app to play in record mode.
 
-1. Select **Record** from the top menu. This opens the published app with recording mode in a new browser tab.
+1. Select **Record** from the top menu. This action opens the published app with recording mode in a new browser tab.
 
     > [!IMPORTANT]
     > Recording on an existing test case overrides any existing test steps already present.
@@ -85,25 +85,25 @@ A test case consists of test steps that contain actions. Test actions are writte
 
 4. View the test steps and the expressions that were automatically generated for you in Test Studio.
 
-5. Edit the step description text in the main grid if required. You can also update the test step actions by selecting the formula on the main grid.
+5. Edit the step description text in the main grid if necessary. You can also update the test step actions by selecting the formula on the main grid.
 
     ![Update test case](./media/working-with-test-studio/update-test-case.png "Update test case")
 
 ### Add test steps and test assertions
 
-Every test case should have an expected result. In the Kudos example, one of the expected results of sending a kudo is creating a new record in the Common Data Service (Common Data Service) database. You will now update the test case and add additional test steps to validate that a record was created successfully.
+Every test case should have an expected result. In the Kudos example, one of the expected results of sending a kudo is creating a new record in the Common Data Service (Common Data Service) database. You'll now update the test case and add additional test steps to validate that a record was created successfully.
 
 Follow these steps to verify a successful record creation:
 
 - Initialize a variable for the kudo record count in the database at the beginning of the test case.
 - Initialize a variable for the kudo record count in the database at the end of the test case.
-- Write a test assertion expression to validate it incremented by one count. If the count does not increase by one, the test assertion fails, and your test case fails.
+- Write a test assertion expression to validate it incremented by one count. If the count doesn't increase by one, the test assertion fails, and your test case fails.
 
 To add test steps and test assertions in the Kudos app:
 
 1. Select Step 1 or the step above which you want to insert a new step. 
 
-2. Select **Insert a step above** from the top menu or by selecting the option from the active row. This creates an empty step.
+2. Select **Insert a step above** from the top menu or by selecting the option from the active row. This action creates an empty step.
 
     ![Insert step](./media/working-with-test-studio/insert-step-above.png "Insert step")
 
@@ -114,14 +114,14 @@ To add test steps and test assertions in the Kudos app:
 
 4. Enter an expression or formula into the action input to count the records in the database before executing the test.
 
-    You can use any supported expression. You can also query any data sources, collections, variables, or run flows that are contained in your app, as well as create new global variables or collections to use in your tests.
+    You can use any supported expression. You can also query any data sources, collections, variables, or run flows that are contained in your app, and create new global variables or collections to use in your tests.
 
     ```powerapps-dot
     Set(kudosBeforeTest, CountRows(Filter(Kudos, Receiver.Email = "someone@example.com")))```
 
 5. Select Step 2 or the step above which you want to insert a new step.
 
-6. Select **Insert a step above** from the top menu or by selecting the option from the active row. This creates an empty step.
+6. Select **Insert a step above** from the top menu or by selecting the option from the active row. This action creates an empty step.
 
 7. Enter an expression or formula in the action input to [Trace](./functions/function-trace.md) and write the *kudosBeforeTest* value to the test results record.
 
@@ -136,7 +136,7 @@ To add test steps and test assertions in the Kudos app:
     ```powerapps-dot
     Set(kudosAfterTest, CountRows(Filter(Kudos, Receiver.Email = "someone@example.com")))```
 
-9. Add a final step to validate that the record count in the database has increased by a count of 1 and enter the following assertion action to verify this:
+9. Add a final step to validate that the record count in the database has increased by a count of 1, and enter the following assertion action to verify:
 
     ```powerapps-dot
     Assert(kudosAfterTest = kudosBeforeTest + 1, "Kudos count incorrect. Expected : " & kudosBeforeTest + 1  & " Actual :" & kudosAfterTest)
@@ -157,7 +157,7 @@ Before you play the recording back with recent changes, you must publish the app
 > [!IMPORTANT]
 > If you skip publishing, the recording  playback will not contain your recent test changes. The last published test case or suite will play  against the app.
 
-1. Select **Publish**. This automatically saves and publishes your test.
+1. Select **Publish** to automatically save and publish your test.
 
     ![Publish changes](./media/working-with-test-studio/publish-button.png "Publish changes")
 
@@ -175,7 +175,7 @@ In this section, you'll change the test assertion to experience a failed test:
 
 1. Edit the assertion step by selecting the expression box.
 
-2. Update ```+ 1``` to ```+ 2``` in test action. This means that the test  expects two records to be created, which is incorrect. If the test is successful, only one record should be created in the database.
+2. Update ```+ 1``` to ```+ 2``` in test action. This update means that the test  expects two records to be created, which is incorrect. If the test is successful, only one record should be created in the database.
 
     ```powerapps-dot
     Assert(kudosAfterTest = kudosBeforeTest + 2, "Kudos count incorrect. Expected : " & kudosBeforeTest + 2  & " Actual :" & kudosAfterTest)
@@ -193,7 +193,7 @@ In this section, you'll change the test assertion to experience a failed test:
 
 ### Playing tests in a browser
 
-You have the option to copy a link to play a test in separate browser outside Test Studio. This helps integrate your tests in a continuous build and release pipeline such as **Azure DevOps**.
+You can copy a link to play a test in separate browser outside Test Studio. It helps integrate your tests in a continuous build and release pipeline such as **Azure DevOps**.
 
 The play link for the selected test is persisted. It doesn't change for the test suite or test case. You can update your tests  without the need to modify build and release processes.
 
@@ -205,11 +205,11 @@ To play tests in your browser:
 
     ![Copy play link](./media/working-with-test-studio/copy-play-link.png "Copy play link")
 
-3. You are prompted to publish your tests if there are any unpublished changes.
+3. You're prompted to publish your tests if there are any unpublished changes.
 
     ![Publish before copy link](./media/working-with-test-studio/publish-before-copy-link.png "Publish before copy link")
 
-4. You can select to skip the publish process and copy the play link. New test changes do not play if you skip.
+4. You can select to skip the publish process and copy the play link. New test changes don't play if you skip.
 
     ![Play link copied](./media/working-with-test-studio/copy-play-link-ack.png "Play link copied")
 
@@ -217,9 +217,48 @@ To play tests in your browser:
 
 6. View your test playing back.
 
+## Setup your tests
+
+The **OnTestCaseStart** property of a Test Suite can be used to setup your test. The expression entered for this property triggers for every test case in a suite before the case begins executing. **OnTestCaseStart** helps you avoid writing the same test steps at the beginning of every case. You can customize this property to run set up tasks that are common to all cases in the suite such as:
+
+- Always starting test execution from the first screen. 
+- Initializing common collections or variables. 
+- Fetching test data from a data source for the current executing test 
+
+The **TestCaseInfo** record contains details for the current test that is executing. It contains the following properties:
+
+- *TestCaseName* – the name of the test case.
+- *TestCaseDescription* – the description of the test case.
+- *TestCaseId* – the ID of the test case.
+- *TestSuiteName* – the test suite name that the case belongs to.
+- *TestSuiteDescription* – the description of the test suite.
+- *TestSuiteId* – the test suite ID that the case belongs to.
+
+In the below example, you'll customize the **OnTestCaseStart** property so every test case begins from the first screen in your app. You'll also fetch the test data from a data source that can be referenced in the steps for the test case.
+
+1. Select **Test** in the left pane or **View** on the suite header.
+
+    ![Test or view set property](./media/working-with-test-studio/test-or-view-to-set-property.png "Test or view set property")
+
+2. Select the **OnTestCaseStart** action.
+
+3. Input an expression to Navigate to first screen and fetch the test data for your test. 
+
+    ```powerapps-dot
+    //Start every cases on the first screen in the Kudos app
+    Navigate('Dashboard Screen');
+
+    //Initialize my test data for the current case. 
+    Set(currentTestData, LookUp(KudosTestData, TestCase = TestCaseInfo.TestCaseName));
+
+    //Set kudosBeforeTest to 0
+    Set(kudosBeforeTest, 0)
+    ```
+    ![OnTestCaseStart example](./media/working-with-test-studio/ontestcasestart-example.png "OnTestCaseStart example")
+
 ## Processing test results
 
-The test panel visible when playing back tests in Test Studio is not visible when using a browser. Due to this, you cannot determine the specific test step that executes, or if a test passes or fails.
+The test panel visible when playing back tests in Test Studio isn't visible when using a browser. Because of this behavior, you can't determine the specific test step that executes, or if a test passes or fails.
 
 To determine test results outside of Test Studio, there are two properties called **OnTestCaseComplete** and **OnTestSuiteComplete** available in the test object that you can use to process the results of your tests. When integrating tests into a continuous build and release pipeline like **Azure DevOps**, these properties can be used to determine if you should proceed with the app deployment.
 
@@ -235,8 +274,10 @@ These settings apply to every test suite or test case in your app. After each te
 The **TestCaseResult** record contains the following properties:
 
 - *TestCaseName* – the name of the test case.
+- *TestCaseDescription* – the description of the test case.
 - *TestCaseId* – the ID of the test case.
 - *TestSuiteName* – the test suite name that the case belongs to.
+- *TestSuiteDescription* – the description of the test suite.
 - *TestSuiteId* – the test suite ID that the case belongs to.
 - *StartTime* – the start execution time of the test.
 - *EndTime* – the end execution time of the test.
@@ -247,6 +288,7 @@ The **TestCaseResult** record contains the following properties:
 The **TestSuiteResult** record contains the following properties: 
 
 - *TestSuiteName* – the test suite name.
+- *TestSuiteDescription* – the description of the test suite. 
 - *TestSuiteId* – the test suite ID.
 - *StartTime* – the start execution time of the test suite.
 - *EndTime* – the end execution time of the test suite.
@@ -338,7 +380,7 @@ Other examples of expressions you could use in these properties are:
 
 ## Test Functions
 
-In addition to the [functions](formula-reference.md) available in Power Apps, the following are common functions that you will typically use when authoring tests:
+In addition to the [functions](formula-reference.md) available in Power Apps, the following are common functions that you'll typically use when authoring tests:
 
 - [Select](./functions/function-select.md)
 - [SetProperty](./functions/function-setproperty.md)

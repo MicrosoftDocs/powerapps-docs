@@ -18,7 +18,7 @@ search.app:
 ---
 
 # View dependencies for a component
-Solution components often depend on other solution components. You can’t delete any solution component that has dependencies on another solution component. You can view the dependent components from the **Solutions** area of Power Apps.  
+Solution components often depend on other solution components. You can’t delete any solution component that has dependencies from another solution component. You can view the dependent components from the **Solutions** area of Power Apps.  
 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation. 

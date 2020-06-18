@@ -31,4 +31,4 @@ This list below contains all of the best practices and guidance around integrati
 |[Service Protection API Limits (Common Data Service)](../../api-limits.md)     |Understand the limits for API requests.         |
 
 ### See Also
-[Work with data using code in Common Data Service (PowerApps)](../../work-with-data-cds.md)<br />
+[Work with data using code in Common Data Service (Power Apps)](../../work-with-data-cds.md)<br />

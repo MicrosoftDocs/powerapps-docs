@@ -19,7 +19,7 @@ search.app:
 ---
 # Use Power Automate to automate processes
 
-Power Automate lets you create automated processes between your favorite apps and services. From within your app, you can run a Flow on one or more records. 
+Power Automate lets you create automated processes between your favorite apps and services. From within your app, you can run a flow on one or more records. 
 
 Also, you can open Power Automate from your app to view, edit, or create new flows.  More information: [Get started with Power Automate](https://docs.microsoft.com/flow/getting-started)
 

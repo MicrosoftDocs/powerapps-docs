@@ -915,6 +915,18 @@
         href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
       - name: Walk through the completed scenario
         href: ./canvas-apps/sharepoint-scenario-summary.md
+      - name: SharePoint integration scenarios
+        items:
+        - name: SharePoint scenarios overview
+          href: ./canvas-apps/sharepoint/scenarios-intro.md
+        - name: How to filter a search list in an app?
+          href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
+        - name: How to use drop down list with choices from lookup column in a SharePoint list?
+          href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
+        - name: How to customize an app screen baed on column status inside SharePoint list?
+          href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
+        - name: How to work with permissions in a lookup list from SharePoint site?
+          href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
@@ -1479,8 +1491,6 @@
       href: ./common-data-service/create-edit-metadata.md
     - name: Types of entities
       href: ./common-data-service/types-of-entities.md
-    - name: Create and edit entities
-      href: ./common-data-service/create-edit-entities.md
     - name: Edit an entity
       href: ./common-data-service/edit-entities.md
     - name: Create and edit virtual entities
@@ -1698,6 +1708,8 @@
       href: ../sample-apps/regional-emergency-response/portals-admin-reporting.md
     - name: Portal for healthcare worker
       href: ../sample-apps/regional-emergency-response/portals-user.md
+  - name: Transfer data from hospital to regional
+    href: ../sample-apps/emergency-response-data-transfer.md
 - name: Learn from others
   items:
   - name: Blog
