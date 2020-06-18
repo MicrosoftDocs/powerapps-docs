@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/20/2020
+ms.date: 06/18/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -275,6 +275,8 @@ Other elements include:
 **[RenameColumns](functions/function-table-shaping.md)** – Renames columns of a table.
 
 **[Replace](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by starting position of the string.
+
+**[RequestHide](functions/function-requesthide.md)** – Hides a SharePoint form.
 
 **[Reset](functions/function-reset.md)** – Resets an input control to its default value, discarding any user changes.
 

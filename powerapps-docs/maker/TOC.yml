@@ -711,6 +711,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Revert
             href: ./canvas-apps/functions/function-revert.md
+          - name: RequestHide
+            href: ./canvas-apps/functions/function-requesthide.md
           - name: RGBA
             href: ./canvas-apps/functions/function-colors.md
           - name: Right
