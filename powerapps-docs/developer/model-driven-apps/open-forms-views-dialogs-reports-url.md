@@ -223,5 +223,5 @@ function getReportURL(action,fileName,id) {
  [Customize the Ribbon](customize-commands-ribbon.md)<br/>
  [Client scripting using JavaScript](client-scripting.md)<br/>
  [Web Resources](web-resources.md)<br/> 
- [Change Application Navigation using the SiteMap](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/customize-dev/change-application-navigation-using-sitemap)
+ [Change Application Navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)
  

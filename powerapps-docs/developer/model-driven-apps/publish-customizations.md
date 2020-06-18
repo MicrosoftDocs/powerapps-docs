@@ -78,5 +78,5 @@ Publishing customizations makes the Web application aware of changes to the data
  [Publish request schema](publish-request-schema.md)<br/>
  [Customize entity forms](customize-entity-forms.md)<br/>
  [Customize entity views](customize-entity-views.md)<br/>
- [Change application navigation using the SiteMap](/dynamics365/customerengagement/on-premises/developer/customize-dev/change-application-navigation-using-sitemap)
+ [Change application navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)
 
