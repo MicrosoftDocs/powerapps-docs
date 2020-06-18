@@ -22,23 +22,26 @@ search.app:
 # Importing and exporting data
 ----------------------------
 
-There are multiple ways to import and export data into Common Data Service, including Dataflows, Power Query, Azure Data Factory, Logic Apps, and Power Automate.
+There are multiple ways to import and export data into Common Data Service. You can use Dataflows, Power Query, Azure Data Factory, Logic Apps, and Power Automate.
 
 Dynamics customers also have access to the Data Export Service.
 
-## Dataflows and Power Query
+## Dataflows 
+
+Dataflows enable you to connect with business data from various sources, clean the data, transform it, and then load it into Common Data Service. 
+Dataflows supports tens of popular on-premises, cloud, and SaaS data sources.
+
+Power Query is a data connection technology that enables you to discover, connect, combine, and refine data sources to meet your analysis needs. Features in Power Query are available in Excel and Power BI Desktop. 
 
 ![Datflows and Power Query with Common Data Service](media/dataflows-power-query-with-cds.png)
 
-Dataflows enable you to connect with business data from various sources, clean the data, transform it, and then load it into Common Data Service.
+More information: [Create and use dataflows in Power Apps](/powerapps/maker/common-data-service/create-and-use-dataflows). 
 
-Dataflows supports tens of popular on-premises, cloud, and SaaS data sources.
-
-More information: [Create and use dataflows in Power Apps](/powerapps/maker/common-data-service/create-and-use-dataflows).
+More information: [Add data to an entity in Common Data Service by using Power Query](/powerapps/maker/common-data-service/data-platform-cds-newentity-pq)
 
 ## Azure Data Factory
 
-Azure Data Factory (ADF) is a data integration service that provides a low code / no code approach to construct ETL (Extract, Transform and Load) and ETL (extract, transform, load) processes within a visual environment or by writing your own code. 
+Azure Data Factory (ADF) is a data integration service that provides a low code / no code approach to construct ETL (extract, transform and load) processes within a visual environment or by writing your own code. 
 
 ![Azure Data Factory](media/azure-data-factory.png)
 
@@ -58,3 +61,4 @@ Dynamics customers that are targeting SQL Server or Microsoft Azure SQL Database
 Data Service schema and data initially and thereafter synchronizes on a continuous basis as changes occur (delta changes) in Common Data Service.
 
 ### See also
+[Work with any type of app](why-cds-any-type-app.md)
