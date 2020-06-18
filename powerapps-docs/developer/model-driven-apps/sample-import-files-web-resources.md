@@ -78,7 +78,8 @@ When you develop a large number of files to use as Web resources you can save yo
 ## Demonstrates  
   
 ### Creating Web Resources in the Context of a Solution  
- Web Resources are organization-owned records so they can be created using either the<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method or by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message and the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. This sample will show how to use the `SolutionUniqueName` optional parameter to associate a Web resource with a specific solution when it is created. This requires using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message.  
+
+Web Resources are organization-owned records so they can be created using either the<xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Create*> method or by using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message and the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*> method. This sample will show how to use the `SolutionUniqueName` optional parameter to associate a Web resource with a specific solution when it is created. This requires using the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message.  
   
 ### Uploading Files from Disk  
  The WebResource.Content property requires a Base 64 string representing the binary contents of the file. The following sample is the method used to convert the file into the required type.  
