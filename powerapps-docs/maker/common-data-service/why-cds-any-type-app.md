@@ -36,15 +36,15 @@ Entities within Common Data Service can leverage rich server-side logic and vali
 
 - **Workflows**: Allow you to automate business processes without user interaction. More information: [Classic Common Data Service workflows](/power-automate/workflow-processes).
 
-- **Business logic with code**: Supports advanced developer scenarios to extend the application directly through code. For more information, see [Apply business logic with code](/powerapps/developer/common-data-service/apply-business-logic-with-code).
+- **Business logic with code**: Supports advanced developer scenarios to extend the application directly through code. More information: [Apply business logic with code](/powerapps/developer/common-data-service/apply-business-logic-with-code).
 
 ## Integrating with applications using events
 
 A common approach of application integration is through the use of events. For example, an event occurs within Common Data Service, such as adding a new record, and this should be communicated to an associated system so that an action could be taken. For example, if a new support request was raised, it might trigger an SMS message to be sent to the assigned support staff.
 
-This interactivity can also occur in the opposite direction – an update in an external system may result in data being added, updated, or deleted from a Common Data Service instance.
+This interactivity can also occur in the opposite direction – an update in an external system may result in data being added, updated, or deleted from a Common Data Service environment.
 
-The most populate approaches in Common Data Service involve Web Hooks, Azure Messaging (Service Bus, Event Hubs), Logic Apps, or Power Automate.
+The most populate approaches in Common Data Service involve webhooks, Azure Messaging (Service Bus, Event Hubs), Logic Apps, or Power Automate.
 
 ![Events in Common Data Service](media/cds-events.png)
 
@@ -141,7 +141,7 @@ One constraint with plug-ins is that they must be self-contained. If integration
 
 ### Azure Functions
 
-Integration can also be done using Azure Functions. Functions provide a serverless code execution option for business and integration logic.
+Azure Functions provide a serverless code execution option for business and integration logic.
 
 ![Common Data Service with Azure Functions](media/azure-functions.png)
 
