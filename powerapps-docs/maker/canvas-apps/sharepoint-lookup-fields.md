@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/20/2017
+ms.date: 06/18/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -34,14 +34,20 @@ Data in an enterprise is large and complex. Data in one SharePoint list often re
 For example, you might have an **Orders** list which has a lookup field that links to a **Customers** list, to show which customer placed the order. The lookup field in the **Orders** list lets you get other data from the **Customers** list as well. You might also use a lookup field to connect the **Orders** list to a **Product** list, and bring in information you need about the product ordered, such as product pictures, specifications, manufacturer details, etc.
 
 ### What are Choice fields used for?
+
 **Choice** fields are used for very short lists, but instead of actually creating a separate list, you include the list values in a small menu, which appears when you click or tap on the **Choice** field, and you select one of the values.
 
 Examples include data like Customer Status Code, Product Availability, State Codes; basically any fixed list that is relatively short. This data could in fact be implemented as separate lists, and then you would use a **Lookup** field to link to them, but it is usually easier and quicker to implement them as **Choice** fields.
 
+>[!TIP]
+> For more SharePoint and Power Apps integration tutorials, go to [SharePoint integration scenarios](sharepoint/scenarios-intro.md).
+
 ## Create the lists in SharePoint
+
 In this tutorial, you link two SharePoint custom lists together, **Assets** and **RepairShop**. The **Assets** list is used to track hardware equipment in a team. Since hardware gets broken from time to time, we use the **RepairShop** list to track the local shops which can fix it.
 
 ### The lookup fields used in this example
+
 The **RepairShop** list uses the *ContactEmail* field to identify the shop. This list is defined first so that each row in the **Assets** list has something to point to.
 
 The **Assets** list has two lookup fields:
@@ -52,6 +58,7 @@ The **Assets** list has two lookup fields:
 You most likely would define additional fields, depending on the information you need to track.
 
 ### Define the RepairShop list and add data
+
 You do this first, so that when you add data to the **Assets** list, **RepairShop** entries are available for you to choose from the *Assets.RepairShop* lookup field.
 
 1. On your SharePoint site, create a new **RepairShop** list.
@@ -69,6 +76,7 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
     ![](./media/sharepoint-lookup-fields/add-repair-shops.png)
 
 ### Define the Assets list
+
 1. On your SharePoint site, create a new **Assets** list.
 
 2. Click or tap the plus sign and choose **More**.
@@ -88,6 +96,7 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 6. Add any additional fields you want.
 
 ## Create an app from the Assets list
+
 You use this app to add data to the **Assets** list.
 
 1. [Sign in to Power Apps Studio](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). If you are new to Power Apps, [sign up for free](https://powerapps.microsoft.com) using your organizational email address.
@@ -106,6 +115,7 @@ You use this app to add data to the **Assets** list.
 
 
 ## Add data to the Assets list
+
 Now you can run the app and see how the view details screen looks for the lookup fields.
 
 1. Press F5 or select Preview ( ![](./media/sharepoint-lookup-fields/preview.png) ).
@@ -128,8 +138,13 @@ Now you can run the app and see how the view details screen looks for the lookup
 
 8. Press Esc to return to the default workspace.
 
-## For more information
+## Next steps
+
 * [Introducing support for lookups and a new sample app](https://powerapps.microsoft.com/blog/support-for-lookups/)
 * [Performance, Refresh button, ForAll, and multiple field lookups](https://powerapps.microsoft.com/blog/performance-refresh-forall-multiple-field-lookups-531/)
 * [Generate an app by using a Common Data Service database](data-platform-create-app.md)
 * [Create an app from scratch using a Common Data Service database](data-platform-create-app-scratch.md)
+
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
