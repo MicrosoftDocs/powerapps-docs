@@ -101,5 +101,4 @@ However, semantic HTML can only go so far. Modern web applications typically inc
 ### See also  
 
 [Web Page (HTML) web resources](webpage-html-web-resources.md)   
-[Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)<br/>   <!--TODO No relevant topic in powerapps repo-->
 [Web resources](web-resources.md)

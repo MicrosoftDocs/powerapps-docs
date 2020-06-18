@@ -117,5 +117,5 @@ OData-Version: 4.0
 ### See also
 
  [Theme Entity](../common-data-service/reference/entities/theme.md) <br/>
- [Create a theme](/dynamics365/customer-engagement/customize/change-color-scheme-add-logo-match-organizations-brand) <br/>
+ [Create a theme](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-themes-organization-brandingd) <br/>
  [Developers guide to customization](overview.md)

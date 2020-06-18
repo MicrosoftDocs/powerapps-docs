@@ -36,10 +36,8 @@ The appropriate string value will be determined by the individual user’s langu
 ### See also
 [Web resources](web-resources.md)<br />
 [Create accessible web resources](create-accessible-web-resources.md)<br />
-[Create web resources and IFrame content for use with the Dynamics 365 for mobile clients](/dynamics365/customer-engagement/developer/create-web-resources-iframe-mobile)<br />
 [Web resource dependencies](web-resource-dependencies.md)<br />
 [Webpage (HTML) web resources](webpage-html-web-resources.md)<br />
-[Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)<br />
 [Script (JScript) web resources](script-jscript-web-resources.md)<br />
 [Image (JPG, PNG, GIF, ICO) web resources](image-web-resources.md)<br />
 [Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)<br />
