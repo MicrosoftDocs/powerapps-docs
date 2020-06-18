@@ -453,3 +453,7 @@ To create the record:
 
 To edit the record, select the record, update the values as required, and select
 **Save & Close.**
+
+## Report issues 
+
+To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.

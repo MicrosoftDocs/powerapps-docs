@@ -180,3 +180,6 @@ You can review frequently asked questions by selecting the icon from any screen.
 > [!div class="mx-imgBorder"]
 > ![Frequently Asked Question details](./media/frequently-asked-questions-record-with-details.png "Frequently Asked Question details")
 
+## Report issues 
+
+To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.

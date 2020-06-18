@@ -43,13 +43,11 @@ See also: [Licensing overview for Power Platform](https://docs.microsoft.com/pow
 |Use the mobile app to track and report loss|Staff|[Use the Higher Education Crisis Financial Impact Tracker app](use-mobile-app.md)|
 |||
 
-## Issues and feedback
+## Report issues 
 
 <!-- For Editor: Need to update the feedback link, work is still in progress -->
 
-- To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
-
-- For feedback about the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-feedback>.
+To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
 
 ### Disclaimer
 
