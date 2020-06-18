@@ -39,7 +39,9 @@
       - name: Actions on dashboards
         href: actions-dashboards.md
       - name: Create a dashboard
-        href: create-dashboard.md
+        href: create-dashboard.md    
+      - name: Sample dashboards
+        href: sample-dashboards.md
     - name: View data with visualizations (charts)
       href: view-data-with-visualizations-charts.md
       items:
@@ -48,7 +50,9 @@
       - name: Actions on visualizations (charts)
         href: actions-visualizations-charts.md
       - name: Create a visualization (chart)
-        href: create-visualization-chart.md      
+        href: create-visualization-chart.md 
+      - name: Sample charts
+        href: sample-charts.md     
 - name: Apply business logic using client scripting
   href: client-scripting.md
   items:
@@ -877,11 +881,7 @@
   - name: Pass multiple values to a  web resource through the data parameter
     href: sample-pass-multiple-values-web-resource-through-data-parameter.md
   - name: Import files as web resources
-    href: sample-import-files-web-resources.md
-  - name: Sample charts
-    href: sample-charts.md
-  - name: Sample dashboards
-    href: sample-dashboards.md
+    href: sample-import-files-web-resources.md  
 - name: Resources
   items:
   - name: Developer Tools

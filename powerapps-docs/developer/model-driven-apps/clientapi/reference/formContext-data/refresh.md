@@ -28,7 +28,7 @@ search.app:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|save|Boolean|No|true if the data should be saved after it is refreshed, otherwise false.|
+|save|Boolean|No|true if the data should be saved before it is refreshed, otherwise false.|
 |successCallback|Function|No|A function to call when the operation succeeds.|
 |errorCallback|Function|No|A function to call when the operation fails.|
 

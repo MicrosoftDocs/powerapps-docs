@@ -24,6 +24,9 @@ search.app:
 
 `formContext.data.entity.save(saveOption);`
 
+> [!NOTE]
+> This method is deprecated and we recommend to use the [formContext.entity.save](../formContext-data/save.md) method.
+
 ## Parameters
 
 |Name|Type|Required|Description|
