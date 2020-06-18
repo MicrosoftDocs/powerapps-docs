@@ -21,14 +21,14 @@ search.app:
 
 # Work with any data
 
-Common Data Service provides obstruction that makes it possible to work with any type of data, including relational, non-relational, image, file, relative search, or data lake. There is no need to understand the type of data as Common Data Service exposes a set of data types that allow you to build up your model. The type of storage is optimized for the data type chosen.
+Common Data Service provides flexibility that makes it possible to work with any type of data, including relational, non-relational, image, file, relative search, or data lake. There is no need to understand the type of data as Common Data Service exposes a set of data types that allow you to build up your model. The type of storage is optimized for the data type chosen.
 
 Data can be easily imported and exported with dataflows, Power Query, and Azure Data Factory. Dynamics customers can also utilize the Data Export Service.
 
 Common Data Service also has a connector for Power Automate and Logic Apps provide that can be used with the hundreds of other connectors in those services for on-premises, IaaS, PaaS, and SaaS services. This includes sources in Azure, Microsoft 365, Dynamics 365, SAP ERP, Salesforce, Amazon Redshift, Microsoft Access, Microsoft Excel, Text/CSV, SharePoint lists, SQL Server database, Oracle, MySQL, PostgreSQL, Blockchain, and Azure SQL Data. 
 Warehouse.
 
-### Common Data Model
+## Common Data Model
 
 If you've ever had to bring data from multiple systems and applications together, you know what an expensive and time-consuming task that can be. Without being able to share and understand the same data easily, each application, or data integration project requires a custom implementation.
 
@@ -64,9 +64,9 @@ More information: [Types of fields](/powerapps/maker/common-data-service/types-o
 
 ## Relationships
 
-Data in one entity often relates to data in another entity. Entity relationships define how records can be related to each other in the CDS model.
+Data in one entity often relates to data in another entity. Entity relationships define how records can be related to each other in the Common Data Service model.
 
-Common Data Service provides easy to use visual designers to create several types of relationships from one entity to another (or between an entity and itself). Each entity can have a relationship with more than one entity, and each entity can have more than one relationship to another entity.
+Common Data Service provides easy to use visual designers to create the different types of relationships from one entity to another (or between an entity and itself). Each entity can have a relationship with more than one entity, and each entity can have more than one relationship to another entity.
 
 ![Account entity relationships](media/entity-relationships.png)
 
@@ -78,7 +78,7 @@ The relationship types are:
 
 - **Many-to-many**: In this type of relationship, each record in entity A can match more than one record in entity B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
-As many-to-one relationships are the most common, Common Data Service provides a specific data type named Lookup, which makes it easy to not just define this relationship but also adds productivity to building forms and applications.
+As many-to-one relationships are the most common, Common Data Service provides a specific data type named *lookup*, which makes it easy to not just define this relationship but also adds productivity to building forms and applications.
 
 Additional information on creating entity relationships can be found in this article: [Create a relationship between entities](/powerapps/maker/common-data-service/data-platform-entity-lookup).
 
@@ -91,13 +91,13 @@ Common Data Service supports analytics by providing capability to choose entitie
 
 ### Search
 
-The Common Data Services provides three ways to query records:
+Common Data Service provides three ways to query records:
 
-- Relevance Search
+- Relevance Search.
 
-- Quick Find (single-entity or multi-entity)
+- Quick Find (single-entity or multi-entity).
 
-- Advanced Find
+- Advanced Find.
 
 > [!NOTE]
 > Multi-entity Quick Find is also called *categorized search*.
@@ -114,7 +114,7 @@ Relevance search brings the following enhancements and benefits:
 
 - Finds matches to any word in the search term in any field in the entity, compared to quick find where all words from the search term must be found in one field.
 
-- Finds matches that include inflectional words like **stream**, **streaming**, or **streamed**.
+- Finds matches that include inflectional words like *stream*, *streaming*, or *streamed*.
 
 - Returns results from all searchable entities in a single list sorted by relevance, so the better the match, the higher the result appears in the list. A match has a higher relevancy if more words from the search term are found in close proximity to each other. The smaller the amount of text where the search words are found, the higher the relevancy. For example, if you find the search words in a company name and address, it might be a better match than finding the same words in a long article, far apart from each other.
 
@@ -138,7 +138,7 @@ or contacts.
 
 Common Data Service supports continuous replication of entity data to Azure Data Lake Gen 2, which can then be used to run analytics such as Power BI reporting, ML, data warehousing and other downstream integration purposes.
 
-![Single entity quick find](media/cds-with-data-lake.png)
+![Common Data Service data replication to Azure Data Lake Gen 2](media/cds-with-data-lake.png)
 
 This feature is designed for enterprise big data analytics, cost-effective, scalable, has high availability/disaster recover capabilities and enables best in class analytics performance.
 
