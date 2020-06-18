@@ -52,11 +52,9 @@ As a result, a wide range of enterprise integration scenarios - from retrieving
 data sent in a spreadsheet as an email attachment to emerging scenarios like
 using Common Data Service data in a blockchain network - can be achieved with ease and with
 little to no code required. Integration efforts that previously were measured in
-days and weeks can now often be measured in minutes and hours.
+days and weeks can now often be measured in hours and minutes.
 
-In addition to providing the ability to create data in Common Data Service or import it from
-other systems, Common Data Service also supports virtual entities. Virtual entities provide the ability to
-map data in an external data source so that it appears to be in Common Data Service and enables using Common Data Service to execute real-time data operations against the external data source. More information: [Work with any data](why-cds-work-with-data.md)
+In addition to providing the ability to create data in Common Data Service or import it from other systems, Common Data Service also supports virtual entities. Virtual entities provide the ability to map data in an external data source so that it appears to be in Common Data Service. This enables Common Data Service to execute real-time data operations against the external data source. More information: [Work with any data](why-cds-work-with-data.md)
 
 ## Work with any type of app
 
@@ -86,21 +84,18 @@ Export Service, and SQL Server Management Studio. More information: [Work with a
 
 ## Analytics and Reporting
 
-Data in Common Data Service can be used to gain insights and drive business action using
-analytics and reporting, and it also includes a variety of ways to deliver data
-and insight to key decision makers.
+Data in Common Data Service can be used to gain insights and drive business action using analytics and reporting. It also includes a variety of ways to deliver data and insight to key decision makers.
 
 ![Analytics and reporting features with Common Data Service](media/analytics-and-reporting.png)
 
 Common Data Service includes the ability to create lightweight charts and paginated reports. Common Data Service data can also be used with Power BI to create rich, interactive reports and dashboards.
 
-For organizations that are interested in employing AI to analyze their data,  AI Builder can enable everyone in the organization - regardless of their technical expertise—the ability to add AI capabilities to the business process flows they create and use. Delivered as part of the Power Platform, AI Builder includes six
+For organizations that are interested in employing AI to analyze their data,  AI Builder can enable everyone in the organization—regardless of their technical expertise—the ability to add AI capabilities to the business process flows they create and use. Delivered as part of the Power Platform, AI Builder includes six
 pre-built AI models that can be used in Power Automate and Power Apps and to evaluate data within Common Data Service.
 
-![AI Builder and Common Data Service](media/ai-builder-and-cds.png)
+To support advanced analytics and machine learning, Common Data Service includes a managed data lake. Data within the lake can be used to run Power BI reporting, machine learning, data warehousing, and other downstream data processing.
 
-To support advanced analytics and machine learning, Common Data Service includes a managed data
-lake. Data within the lake can be used to run Power BI reporting, machine learning, data warehousing, and other downstream data processing.
+![Common Data Service with Azure services](media/ai-builder-and-cds.png)
 
 One of the benefits of the data being in Azure Data Lake is that organizations can leverage Azure Synapse Analytics. This service can deliver added productivity by bringing together enterprise data warehousing, data exploration, code-free data orchestration, deeply integrated Apache Spark and SQL engines,
 and integrated AI and BI.
@@ -150,8 +145,7 @@ At a high level, below is what constitute an API call:
 
 - **Microsoft Power Automate**: All Power Automate step actions.
 
-- **Common Data Service**: All create, update, delete (CRUD) operations, as well as special operations
-    like "share" or "assign". These can be from any client or application and using any endpoint SOAP or REST. These include but are not limited to plug-ins, async workflows, and custom controls making the above-mentioned operations.
+- **Common Data Service**: All create, update, delete (CRUD) operations, as well as special operations like "share" or "assign." These can be from any client or application and using any endpoint SOAP or REST. These include but are not limited to plug-ins, async workflows, and custom controls making the above-mentioned operations.
 
 The specific number of allowed APIs that a user can make in a 24-hour period is governed by the user's license.
 
@@ -163,7 +157,7 @@ For information about these entitlement limits, see [Microsoft Power Platform r
 
 For information about viewing and allocating capacity add-ons, see [Capacity add-ons](/power-platform/admin/capacity-add-on).
 
-For information about purchasing individual capacity add-ons see the [Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+For information about purchasing individual capacity add-ons, see [Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 ### Service protection limits
 
@@ -176,7 +170,7 @@ Service limits are not expected to impact normal usage of the Common Data Servic
 
 Information on *current* service protection limits for each service:
 
-- [Common Data Service API request limits](/powerapps/developer/common-data-service/api-limits): Applicable for model-driven apps in Dynamics 365 Customer Engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, as well as Power Apps and Power Automate connecting to Common Data Service.
+- [Common Data Service API request limits](/powerapps/developer/common-data-service/api-limits): Applicable to Dynamics 365 Customer Engagement apps, such as Dynamics 365 Sales and Dynamics 365 Customer Service, as well as Power Apps and Power Automate connecting to Common Data Service.
 
 - [Microsoft Power Automate limits](/flow/limits-and-config#looping-and-debatching-limits): Applicable for Power Automate. 
 
@@ -187,7 +181,7 @@ Additional information about how service protection limits are enforced can be f
 
 ### Capacity add-ons
 
-The specific number of allowed Microsoft Power Platform Requests that a user can make in a 24-hour period is governed by a user’s license. For scenarios where additional capacity is required, a Power Apps and Power Automate capacity add-on allows customers to purchase additional requests.
+The specific number of allowed Microsoft Power Platform requests that a user can make in a 24-hour period is governed by a user’s license. For scenarios where additional capacity is required, a Power Apps and Power Automate capacity add-on allows customers to purchase additional requests.
 
 Each capacity add-on provides an additional 10,000 requests every 24 hours, which can be assigned to any user. Multiple capacity add-ons can also be assigned to the same user.
 
@@ -195,7 +189,7 @@ Common Data Service has entitlement limits that will evaluate the number of requ
 
 ## Backups
 
-Common Data Service provides two types of backups - automatic backups, referred to as system backups, and manual backups.
+Common Data Service provides two types of backups - automatic backups, referred to as *system* backups, and *manual* backups.
 
 ### System backups
 System backups back up all environments. They take place automatically and continuously. The underlying technology used is Azure SQL Database. For more information about Azure SQL automated backups, see [Automated backups](/azure/sql-database/sql-database-automated-backups). 
