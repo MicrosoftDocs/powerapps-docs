@@ -2,7 +2,7 @@
 title: "Removing dependencies (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Dependencies sometimes can block operations. This article describes how dependencies can be removed." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 04/28/2018
+ms.date: 06/17/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -15,9 +15,10 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Removing dependencies
-<!--Many edits throughout are based on the Writing Style Guide directive to use active voice as often as possible.-->
-Dependencies are records created automatically by the solutions framework to prevent actions that, if executed unchecked, can<!--Via Writing Style Guide, don't substitute "could" for "can" unless you're referring to the past. Or this could be "might" (not "may"), if that works better.--> cause problems. As components are changed and extended, dependencies are created to indicate that&mdash;for example&mdash;a field is required for a form to function. If you ever try to execute an action that will result in the deletion of that field, the form will stop working.
+
+Dependencies are records created automatically by the solutions framework to prevent actions that, if executed unchecked, can cause problems. As components are changed and extended, dependencies are created to indicate that&mdash;for example&mdash;a field is required for a form to function. If you ever try to execute an action that will result in the deletion of that field, the form will stop working.
 
 Dependencies exist to prevent required components from being deleted while one or more dependent components still include references to them.
 
@@ -26,31 +27,27 @@ Dependencies exist to prevent required components from being deleted while one o
 
 In this article, we'll discuss how to handle these dependencies and the strategies you can use to remove dependencies that you no longer need.
 
-## Unmanaged vs. managed components
-<!--Suggest adding this heading so we can promote everything in this section up a level. The information is great, but the way the graphics were situated above the bullet points confused me until I realized that the graphics were serving as a type of heading. This is opposite of what we usually do. Graphics should augment the text but never be a substitute for it, so I've added introductions to duplicate the alt text. The thinking is, people should be able to read our content with graphics turned off (due to bandwidth concerns, device form factor, or low vision) and still understand it.-->
+## Dependencies of unmanaged vs. managed components
+
 First, it's important to understand that dependencies only prevent operations that will delete a required component. The actions that can delete a component are different, depending on whether it's unmanaged or managed.
 
-<!--Please see the note in line 71. If scenario 4 does indeed address deleting an unmanaged component, these two headings need to be rethought because that would mean the scenarios don't apply strictly to managed components. If that's the case, I'd suggest deleting the H3s below and combining them into one paragraph, and then making each scenario an H3 instead. Something like:
-
-*Unmanaged* components are represented by a single layer in the active solution. Any **Delete** operation on such a component results in the complete removal of the component. The deletion of *managed* components depends on multiple factors: the number of solution layers, the relative position of the layer that's being uninstalled, and the component publishers. 
-
-The following scenarios show whether components will be deleted as a result of uninstalling solution layers.
-
-THEN, SKIP TO THE SCENARIOS AS H3s.
--->
 ### Unmanaged components
 
 These components are represented by a single layer in the active solution. Any **Delete** operation on such a component results in the complete removal of the component.
 
-### Managed
+### Managed components
 
-The deletion of managed components depends on multiple factors: the number of solution layers, the relative position of the layer that's being uninstalled, and the component publishers. For example, when a component is deleted, consider the following<!--Via Style Guide: not "below"--> scenarios and what will be the expected behavior<!--Is this what "what is expected" means?--> when you uninstall the various layers.<!--The thing that sparked this major reorganization is how subtle this little intro was. It took me too long to figure out that all the bulleted items below were completing the phrase "uninstall:" If you think there are too many "Uninstall"s now, the scenario headings might simply say "Scenario 1: Single solution layer," "Scenario 2: Two layers from different publishers," and so on.-->
+The deletion of managed components depends on multiple factors: the number of solution layers, the relative position of the layer that's being uninstalled, and the component publishers. For example, when a component is deleted, consider the following scenarios and what will be the expected behavior when you uninstall the various layers.
 
+### Example scenarios
+
+The following example scenarios illustrate what happens to solution layers when solutions are uninstalled.
+ 
 #### Scenario 1: Uninstall a single solution layer<!--Is this what "Uninstall with a single layer" means?-->
 
   ![Uninstall with a single layer](media/solution-managed-uninstall-scenario-01.png "Uninstall with a single layer")
 
-Uninstalling Solution 1 causes a component deletion because<!--Via Style Guide.--> it's the only layer for the component.
+Uninstalling Solution 1 causes a component deletion because it's the only layer for the component.
 
 #### Scenario 2: Uninstall solution layers from different publishers
 
@@ -65,21 +62,21 @@ Uninstalling Solution 1 causes a component deletion because<!--Via Style Guide.-
     
    - Uninstalling Solution 3 doesn't cause a component deletion. Only that layer will be removed.
    - Uninstalling Solution 2 doesn't cause a component deletion. Only that layer will be removed.
-   - Uninstalling Solution 1 doesn't cause a component deletion, because in this case there's another solution from the same publisher<!--I think the graphic is wrong. It says the Solution 3 publisher is Publisher C, whereas Solution 1 is from Publisher A.--> (Solution 3). The platform removes the layer from Solution 1 and replaces it with the layer from Solution 3.
+   - Uninstalling Solution 1 doesn't cause a component deletion, because in this case there's another solution from the same publisher (Publisher A = Publisher C)). The platform removes the layer from Solution 1 and replaces it with the layer from Solution 3.
 
 #### Scenario 4: Uninstall solution layers in an unmanaged customization
-<!--Is this the same as an unmanaged component? If so, please see above because it changes the nature of this whole "Managed components" section.-->
+
    ![Uninstall with two layers - Unmanaged customization](media/solution-managed-uninstall-scenario-04.png "Uninstall with two layers - Unmanaged customization")
 
-   - Uninstalling the Active layer<!--Term okay?--> doesn't cause a component deletion. Only that layer will be removed. Note that you can't uninstall the Active solution, but you can remove components by using the **Remove Active Customization** feature.
-   - Uninstalling Solution 1 causes a component deletion. The action happens in the base layer. Unlike scenario 2, you can uninstall Solution 1. The Active solution isn't considered an extension, and both rows<!--What is a "row" here?--> will be removed.
+   - Uninstalling the Active (unmanaged) layer doesn't cause a component deletion. Only that layer will be removed. Note that you can't uninstall the Active solution, but you can remove components by using the **Remove Active Customization** feature.
+   - Uninstalling Solution 1 causes a component deletion. The action happens in the base layer. Unlike scenario 2, you can uninstall Solution 1. The Active solution isn't considered an extension, and both layers will be removed.
 
 ## Dependency Details page
-<!--The Style Guide would have this be "dialog box," but that doesn't look like it fits.-->
+
 The **Dependency Details**page lists the dependencies for the selected solution. It can be invoked by:
 
 - Selecting **Show Dependencies** on the solution page.
-- Trying to uninstall a solution, which will cause the platform to detect that dependencies exist.<!--Edit okay? To be parallel with the other bullet. -->
+- Trying to uninstall a solution, which will cause the platform to detect that dependencies exist.
 
 ![Example of a Dependency Details page](media/dependency-dialog-with-dependencies.png "Example of a Dependency Details page")
 
@@ -101,20 +98,20 @@ Let's consider the following scenario. The organization below has two solutions:
 
 ![Solution list with two solutions](media/solution-list-custom-entity-workflow.png "Solution list with two solutions")
 
-The owner of the organization decided that they no longer require **Solution - Custom Entity**, tried to delete it, and was presented with the following page:<!--Edit to alt text suggested because this graphic occurs above, don't want the same alt text.-->
+The owner of the organization decided that they no longer require **Solution - Custom Entity**, tried to delete it, and was presented with the following page:
 
 ![Dependency Details after trying to delete a solution](media/dependency-dialog-with-dependencies.png "Dependency Details after trying to delete a solution")
 
 Without going into detail, we can conclude that the uninstall of the solution is trying to delete an entity named **Custom Entity** and three fields&mdash;**Custom Entity**, **Name**, and **Number Field**&mdash;and all four components have dependencies.
 
 > [!NOTE]
-> Uninstalling the solution might potentially delete more components<!--Edit okay? I assume it's not really the solution that's deleting anything.-->, but because they don't have dependencies, they won't appear on the list.
+> Uninstalling the solution might potentially delete more components, but because they don't have dependencies, they won't appear on the list.
 
 The next step is to check the **Solution Layers** link (rightmost column) for each dependency. That will help you decide what to do to remove the dependency.
 
-The following figure shows dependency details between the Entity (Custom Entity) and Process (Test Workflow).<!--Can you please sync the alt text with this introduction-->
+The following figure shows dependency details between the Entity (Custom Entity) and Process (Test Workflow).
 
-![Dependency between Entity (Custom Entity) and Workflow (My App)](media/solution-dependency-solution-history-02.png "Dependency between Entity (Custom Entity) and Site Map (My App)")
+![Custom Entity dependency details](media/solution-dependency-solution-history-02.png "Custom Entity dependency details")
 
 Based on the data displayed, you can see that the dependent component belongs to a solution named SolutionWorkflow. To remove this dependency, we can either:
 
@@ -124,9 +121,9 @@ Based on the data displayed, you can see that the dependent component belongs to
 
 Because any one dependent component can prevent the removal of the solution, we recommend that you check all the dependencies and make all the required changes in a single operation.
 
-The following figure shows dependency details between the Entity (Custom Entity) and Model-driven App (My App).<!--Alt text should say "Model-driven app," yes? -->
+The following figure shows dependency details between the Entity (Custom Entity) and a model-driven App (My App).
 
-![Dependency between Entity (Custom Entity) and Site Map (My App)](media/solution-dependency-solution-history-01.png "Dependency between Entity (Custom Entity) and Site Map (My App)")
+![Dependency between Entity (Custom Entity) and App (My App)](media/solution-dependency-solution-history-01.png "Dependency between Entity (Custom Entity) and App (My App)")
 
 Based on the data displayed, you can see that the dependent component belongs to a solution named Active. This indicates that the dependency was created by importing an unmanaged solution, or through an unmanaged customization that was executed through the modern UI or API.
 
@@ -141,7 +138,7 @@ To remove this dependency, you can either:
 ## Actions to remove a managed dependency
 
 Managed dependencies are the ones where the dependent component is associated to a managed solution. To resolve this kind of the dependency, you must act on the solution where the component was added. That action can be different depending on what you're trying to do.
-<!--As happened earlier in this article, making bullets creates a structure that's a bit awkward. In this case, the line "Next, retry the install" doesn't land in a logical place. Also, the call back to the "previous bullet" would be crisper if it referred to a section name.-->
+
 **If you're trying to uninstall a solution**
 
 Follow these steps:
@@ -154,7 +151,7 @@ Follow these steps:
 
 **If you're trying to upgrade a solution**
 
-In this case, you must confirm that you wanted to delete the required component<!--Edit okay? If not, please recast this in active voice because it's unclear who the agent of action is.--> (remember that dependencies are enforced only on components that are being deleted).
+In this case, you must confirm that you wanted to delete the required component (remember that dependencies are enforced only on components that are being deleted).
 
 If you didn't want to delete the component, you can fix the new version of the solution by adding the component back by doing the following:
 
@@ -163,21 +160,21 @@ If you didn't want to delete the component, you can fix the new version of the s
    3. Export the new version.
    4. Retry the upgrade.
 
-If the deletion is intentional, you must remove the dependency. Try the steps outlined in the preceding section, "If you're trying to uninstall a solution."<!--Edit okay? -->
+If the deletion is intentional, you must remove the dependency. Try the steps outlined in the preceding section, "If you're trying to uninstall a solution."
 
 ### Layers and dependencies
 
 The dependent components can be layered, so you might need to change more than one solution to completely remove a dependency. The dependency framework only calculates dependencies between the topmost layers for the required and dependent components. That means you need to work your way from the top to the bottom of the solutions of the dependent component.
 
 Consider the following scenario:
-<!--Please sync the alt text.-->
-![Dependency between Entity (Custom Entity) and Site Map (My App)](media/solution-dependency-multiple-layers.png "Dependency between Entity (Custom Entity) and Site Map (My App)")
+
+![Choosing a solution to uninstall](media/solution-dependency-multiple-layers.png "Choosing a solution to uninstall")
 
 You try to uninstall **Solution - Custom Entity**, and the operation is blocked by dependencies.
 
-![Dependencies blocking the uninstall of Solution - Custom Entity](media/solution-dependency-layers-and-dependencies-dependency-dialog-01.png "Dependencies blocking the uninstall of Solution - Custom Entity")
+![Dependencies blocking the uninstall of the solution](media/solution-dependency-layers-and-dependencies-dependency-dialog-01.png "Dependencies blocking the uninstall of the solution")
 
-You start diagnosing the dependency by selecting **Solution Layers** on the **new_numberfield** attribute<!--I see later that you equate attributes with fields. Should this be "field" here? Also, this edit assumes that you don't select "Solution layers" for the workflow separately, it's this one row that you're talking about? Please verify alt text also.-->. You see the following screen:
+You start diagnosing the dependency by selecting **Solution Layers** on the **new_numberfield** attribute. You see the following screen:
 
 ![Dependency between the new_numberfield attribute and Test Workflow workflow](media/solution-dependency-layers-and-dependencies-solution-history-01.png "Dependency between the new_numberfield attribute and Test Workflow workflow")
 
@@ -187,7 +184,7 @@ To remove the dependency, you decide to uninstall SolutionWorkflow3. You do so, 
 
 ![Dependencies blocking the uninstall of Solution - Custom Entity](media/solution-dependency-layers-and-dependencies-dependency-dialog-02.png "Dependencies blocking the uninstall of Solution - Custom Entity")
 
-However, the **new_numberfield** attribute is no longer listed, even if it had more layers.<!--What does "even if it had more layers" mean? -->
+However, the **new_numberfield** attribute is no longer listed, even if it existed in more layers.
 
 ## Actions to remove an unmanaged dependency
 
@@ -196,9 +193,9 @@ To remove unmanaged dependencies, you need to act directly on the components, no
 > [!NOTE]
 > You can also delete the dependent component. That action deletes all dependencies, along with the component.
 
-To see the dependencies of a component, locate it in the customizations page<!--I don't see this page title in the screenshots, should it be plain or bold text? -->, and then select **Show dependencies**.
+To see the dependencies of a component, locate it in the customizations page, and then select **Show dependencies**.
 
-![Show dependencies](media/solution-dependency-layers-and-dependencies-component-show-dependencies.png "Show dependencies")
+![Customizations page](media/solution-dependency-layers-and-dependencies-component-show-dependencies.png "Customizations page")
 
 The page of dependencies has two distinct parts:
 
@@ -209,11 +206,11 @@ The page of dependencies has two distinct parts:
 
 ## Field and workflow
 
-To remove dependencies between fields (attributes) and workflows (processes), locate the workflow in the customizations<!--To match earlier instance. --> page.
+To remove dependencies between fields (attributes) and workflows (processes), locate the workflow in the customizations page.
 
-With the workflow open, find the reference to the component you no longer want the workflow to depend on. In this example, you can see the field **Number Field** being referenced in a step.
+When viewing the workflow details, find the reference to the component you no longer want the workflow to depend on. In this example, you can see the field **Number Field** being referenced in a process step.
 
-![Edit workflow](media/solution-dependency-component-workflow.png "Edit workflow")
+![Finding the workflow dependency](media/solution-dependency-component-workflow.png "Finding the workflow dependency")
 
 Delete (or change) the step, and then save the workflow.
 
@@ -233,12 +230,12 @@ To remove dependencies between entities and model-driven apps (App Module), loca
 
 ![Apps list](media/solution-dependency-component-appmodule-01.png "Apps list")
 
-In the app designer<!--Edit okay? -->, find the reference to the component you no longer want the app to depend on. In this example, you see the entity **Custom Entity** under **Entity View**.
+In the app designer, find the reference to the component you no longer want the app to depend on. In this example, you see the entity **Custom Entity** under **Entity View**.
 
 ![App designer](media/solution-dependency-component-appmodule-02.png "App designer")
 
 Also, inspect the site map associated with the app, because it's likely that you'll find references there.
-<!--Please check alt text.-->
+
 ![Sitemap designer](media/solution-dependency-component-appmodule-03.png "Sitemap designer")
 
 Remove all references, and then save and publish both the app and the site map.
@@ -248,11 +245,9 @@ Remove all references, and then save and publish both the app and the site map.
   
 ### See also
 
- [Package and distribute extensions using solutions](/dynamics365/customer-engagement/developer/package-distribute-extensions-use-solutions)   
- [Introduction to solutions](introduction-solutions.md)   
- [Plan for solution development](/dynamics365/customer-engagement/developer/plan-solution-development)   
- [Create, export, or import an unmanaged solution](create-export-import-unmanaged-solution.md)   
- [Create, install, and update a managed solution](create-install-update-managed-solution.md)   
- [Uninstall or delete a solution](uninstall-delete-solution.md)   
- [Solution entities](/dynamics365/customer-engagement/developer/solution-entities)   
- [Solution entity reference](reference/entities/solution.md)<!--Edit okay? You provided both flavors (CE and Power Apps) of the intro topics, I thought maybe you'd want to do the same here.-->
+ [Solution concepts](/power-platform/alm/solution-concepts-alm)  
+ [Solution layers](/power-platform/alm/solution-layers-alm)  
+ [Create, export, or import an unmanaged solution](create-export-import-unmanaged-solution.md)  
+ [Create, install, and update a managed solution](create-install-update-managed-solution.md)  
+ [Uninstall or delete a solution](uninstall-delete-solution.md)  
+ [Solution entity reference](reference/entities/solution.md)
