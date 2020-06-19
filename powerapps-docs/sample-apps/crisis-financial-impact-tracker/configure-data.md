@@ -12,29 +12,26 @@ ms.reviewer: nkrb
 
 # Configure master data in the admin app
 
-This article provides information on how you can use the admin app (model-driven app) to add and manage master data for your solution.
+This article provides information about how you can use the admin app (a model-driven app) to add and manage master data for your solution. These tasks are typically performed by business admins in your organization.
 
-These tasks are typically performed by business admins in your organization.
+See the overview video about how to configure master data, or follow the steps in this article.<!--Suggested, to match deploy-solution.md.--> Estimated time to complete these steps: **35–40 minutes**
 
-See the overview video or follow the steps to configure master data. Estimated time to complete these steps: **35–40 minutes.**
+## Demo: Quick overview of how to configure master data 
 
-## Demo: Quick overview on how to configure master data 
-
-Watch a quick overview on how to configure master data. 
-
+Watch a quick overview about how to configure master data. 
+<!--note from editor: I see that Ramana's full name and alias are in some of the screens in this video. That should be changed.-->
 <br/>
 
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4xijh]
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xijh]
 
 ## Step 1: Configure and manage setup data for your organization
 
-Use the admin app to create and manage master data for your organization. This data is required for the **Higher Education Crisis Financial Impact Tracker** app to work.
+Use the admin app to create and manage master setup<!--Edit okay? The Step 2 section uses "master data" everywhere; I was confused about what the difference was between these sections.--> data for your organization. This data is required for the Higher Education Crisis Financial Impact Tracker app to work.
 
 > [!IMPORTANT]
-> Ensure that your IT admin has deployed the solution into your organization and has granted appropriate permissions for business admins to use the admin app.
-More information: [Deploy the Higher Education Crisis Financial Impact Tracker app](deploy-solution.md).
+> Ensure that your IT admin has deployed the solution into your organization and has granted appropriate permissions for business admins to use the admin app. More information: [Deploy the Higher Education Crisis Financial Impact Tracker app](deploy-solution.md)
 
-You must add master data in to these entities in the following sequence:
+You must add master setup data to these entities in the following sequence:
 
 1. [App Configs](#app-configs)
 
@@ -48,89 +45,88 @@ You must add master data in to these entities in the following sequence:
 
 6. [Loss Reasons](#loss-reasons)
 
-7. [Pay Period](#pay-periods)
+7. [Pay Periods](#pay-periods)
 
-The master data is managed from the **Administration** area in the left navigation pane in the admin app:
+Master data is managed from the **Administration** area on the left pane in the admin app.<!--note from editor: Throughout this article, for consistency I've assumed that these are literally the entity names (that is, they're all plural). I hope this is correct?-->
 
 > [!div class="mx-imgBorder"]
 > ![Administration area](./media/administration-area.png "Administration area")
 
 ### App Configs
 
-The App Configs entity lets you manage key configurations of the applications. To
-update the App Configs entity record:
+Use the App Configs entity to manage key configurations of the apps. 
 
-1. Sign in to the admin app using the url provided by your IT admin.
+To update the App Configs entity record:
 
-1. Select **Administration** > **App Configs** in the left navigation pane.
+1. Sign in to the admin app by using the URL provided by your IT admin.
+
+1. On the left pane, select **Administration** > **App Configs**.
 
    > [!div class="mx-imgBorder"]
    > ![Select App Configs](./media/select-app-config-record.png "Select App Configs")
 
-1. Select the record.
+1. Select the record you want to update.<!--Edit okay? Once again, "Select the record" seemed a bit vague.-->
     
     > [!div class="mx-imgBorder"]
-    > ![Select record](./media/cfit-app-config-record.png "Select record")
+    > ![Select the record](./media/cfit-app-config-record.png "Select record")
 
-1. Enter or update the fields with appropriate values:
+1. Enter or update the fields by using appropriate values.
 
     | Field | Description|
     |------------|--------------|
     | App Name  | Enter the name of the app. |
     | Primary Color| Enter the primary color for the app.|
     | Secondary Color | Enter the secondary color for the app.|
-    | Welcome Message | Enter the HTML based welcome message that you want to display on the app.|
-    | Owner| The owner field automatically default to your user. |
+    | Welcome Message | Enter the HTML-based welcome message that you want to display on the app.|
+    | Owner| The owner field automatically defaults to your user. |
     |||
 
-1. Double-click on the image on the form to update with the new one.
-    
+1. Double-click to select the image on the form to update it with a new one.<!--What does "change the record image" mean? If this is all about the app icon, can we say "Double-click the app icon to select and update it.", and then have the alt text be "Change the app icon that appears on the mobile app" or something similar? -->
     > [!div class="mx-imgBorder"]
-    > ![Change record image](./media/change-record-image.png "Change record image")
+    > ![Change the record image](./media/change-record-image.png "Change the record image")
 
-1. Select the **Upload Image** to select a new image for your app.
+1. Select **Upload Image**, to display a new icon for your app.
     
     > [!div class="mx-imgBorder"]
     > ![Upload image](./media/upload-image-for-the-record.png "Upload image")
 
-### Frequently asked questions 
+### Frequently Asked Questions 
 
-The Frequently Asked Questions entity lets you manage and maintain frequently asked questions, which help the app users to create records. To create a new frequently asked questions record:
+Use the Frequently Asked Questions entity to manage and maintain a list of answers to questions that your users might have as they create records.<!--Suggested.--> 
 
-1. Sign in to the admin app using the url provided by your IT admin.
+To create a new record in Frequently Asked Questions:
 
-1. Select **Administration** > **Frequently Asked Questions** in the left  navigation pane and select **New**.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Enter the following field value to create a new record:
+1. On the left pane, select **Administration** > **Frequently Asked Questions**, and then select **New**.
+
+1. Enter values for the fields as described in the following table.<!--Suggest switching the table and image, otherwise you're directing the reader to a graphic for information. The table actually contains the important information.-->
+
+   | Field    | Description |
+   |----------|----------------|
+   | Question | Enter a question that app users might commonly ask.|
+   | Answer   | Enter an answer to the question that will be helpful for app users.|
+   | Owner| The owner field automatically defaults to the user.|
+   |||
 
    > [!div class="mx-imgBorder"]
    > ![Frequently Asked Questions details](./media/enter-frequently-asked-questions-details.png "Frequently Asked Questions details")
 
-   | Field    | Description |
-   |----------|----------------|
-   | Question | Enter the frequently asked question for the app users.|
-   | Answer   |Enter the answer for the question above, which is suitable for the app users.|
-   | Owner| The owner field automatically defaults to the user.|
-   |||
-1. Select **Save & Close**. The newly created record will be available in the
-    **Frequently asked questions** list.
+1. Select **Save & Close**. The newly created record will be available in the **Frequently asked questions** list.
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+To edit the record, select it, update the values as required, and then select **Save & Close**.
 
 ### Campuses
 
-The Campuses entity lets you manage and maintain university campuses, which will
-be participated in this program. To create the record:
+Use the Campuses entity to manage and maintain a list of university campuses that will participate in this program. 
 
-1. Sign in to the admin app using the url provided by your IT admin.
+To create a record in Campuses:
 
-1. Select **Administration** > **Campuses** in the left navigation pane and select **New**.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Enter the following field values to create a new record:
+1. On the left pane, select **Administration** > **Campuses**, and then select **New**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Campuses details](./media/enter-campus-record-details.png "Campuses details")
+1. Enter the following field values to create a new record.
 
    | Field  | Description |
    |---------|-----|
@@ -139,126 +135,129 @@ be participated in this program. To create the record:
    | Owner| The owner field automatically defaults to your user. |
    |||
 
-1. Select **Save & Close**. The newly created record will be available on the
-    **Campus** list.
+   > [!div class="mx-imgBorder"]
+   > ![Campuses details](./media/enter-campus-record-details.png "Campuses details")
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+1. Select **Save & Close**. The newly created record will be available in the **Campuses** list.
+
+To edit the record, select it, update the values as required, and then select **Save & Close**.
 
 ### Colleges
 
-The colleges entity lets you manage and maintain colleges of the University campuses, which will be participated in this program. To create
-the record:
+Use the Colleges entity to manage and maintain a list of the colleges at university campuses that will participate in this program.
 
-1. Sign in to the admin app using the url provided by your IT admin.
+To create a record in Colleges:
 
-1. Select **Administration** > **Colleges** in the left navigation pane and select **New**.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Enter the following field values to create a new record:
+1. On the left pane, select **Administration** > **Colleges**, and then select **New**.
+
+1. Enter the following field values to create a new record.
+
+    | Field  | Description  |
+    |------------|-------------|
+    | College Name | Enter the name of the college or school. |
+    | College Description | Enter the description of the college or school.|
+    | Campus | Select a campus this college or school is associated with. This list is populated based on the **Campus** data you created earlier. |
+    | Owner | The owner field automatically defaults to your user.|
+    |||
 
     > [!div class="mx-imgBorder"]
     > ![College details](./media/enter-college-record-details.png "College details")
 
-    | Field  | Description  |
-    |------------|-------------|
-    | College Name | Enter the name of the college/school. |
-    | College Description | Enter the description of the college/school.|
-    | Campus | Select a campus this college/school is associated with this college. This list is populated based on the **Campus** data you have created earlier. |
-    | Owner | The owner field automatically defaults to your user.|
-    |||
-
 1. Select **Save & Close**. The newly created record will be available in the
-    **College** list.
+    **Colleges** list.
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+To edit the record, select it, update the values as required, and then select **Save & Close**.
 
 ### Departments
 
-The Department entity lets you manage and maintain departments of each college, which will be participated in this program. To create the
-record:
+Use the Departments entity to manage and maintain a list of the departments for each college that will participate in this program.
 
-1. Sign in to the admin app using the url provided by your IT admin.
+To create a record in Departments:
 
-1. Select **Administration** > **Departments** in the left navigation pane and select **New**.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Enter the following field values to create a new record:
+1. On the left pane, select **Administration** > **Departments**, and then select **New**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Department details](./media/enter-department-record-details.png "Department details")
+1. Enter the following field values to create a new record.
 
     | Field  | Description   |
     |-------------|---------|
     | Department | Enter the name of the department.|
-    | Department Description | Enter the description of the department.|
-    | College | Select a college this department is associated with. This list is populated based on the **College** data you have created earlier. |
+    | Department Description | Enter a description of the department.|
+    | College | Select the college that this department is associated with. This list is populated based on the **Colleges** data you created earlier. |
     | Owner  | The owner will automatically default to your user. |
     |||
 
-1. Select **Save & Close**. The newly created record will be available in the
-    **Department** list.
+   > [!div class="mx-imgBorder"]
+   > ![Department details](./media/enter-department-record-details.png "Department details")
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+1. Select **Save & Close**. The newly created record will be available in the
+    **Departments** list.
+
+To edit the record, select it, update the values as required, and then select **Save & Close**.
 
 ### Loss Reasons
 
-The Loss Reason entity lets you manage and maintain loss reason associated
-with the effort impact. To create the record:
+Use the Loss Reasons entity to manage and maintain a list of loss reasons associated with the effort impact.<!--I don't know what this means.-->
 
-1. Sign in to the admin app using the url provided by your IT admin.
+To create a record in Loss Reasons:
 
-1. Select **Administration** > **Loss Reason** in the left navigation pane and select **New**.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Enter the following field values to create a new record:
+1. On the left pane, select **Administration** > **Loss Reasons**, and then select **New**.
+
+1. Enter the following field values to create a new record.
+
+   | Field   | Description |
+   |-----------|--------------|
+   | Loss Reason Code | Enter the code for the loss reason.|
+   | Loss Reason Description | Enter the description of the loss reason.|
+   | Owner | The owner field automatically defaults to your user. |
+   |||
 
    > [!div class="mx-imgBorder"]
    > ![Loss Reason details](./media/enter-loss-reason-record-details.png "Loss Reason details")
 
-   | Field   | Description |
-   |-----------|--------------|
-   | Loss Reason Code | Enter the code for the Loss Reason.|
-   | Loss Reason Description | Enter the description of the Loss Reason.|
-   | Owner | The owner field automatically defaults to your user. |
-   |||
-
 1. Select **Save & Close**. The newly created record will be available in the
-    **Loss Reason** list.
+    **Loss Reasons** list.
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+To edit the record, select it, update the values as required, and then select **Save & Close**.
 
 ### Pay Periods
 
-The Pay Period entity lets you manage and maintain the reporting
-period associated with the effort impact. To create the record:
+Use the Pay Periods entity to manage and maintain a list of reporting
+periods associated with the effort impact.
 
-1. Sign in to the admin app using the url provided by your IT admin.
+To create a record in Pay Periods:
 
-1. Select **Administration** > **Pay Period** in the left navigation pane and select **New**.
-1. Enter the following field values to create a new record:
+1. Sign in to the admin app by using the URL provided by your IT admin.
+
+1. On the left pane, select **Administration** > **Pay Period**, and then select **New**.
+
+1. Enter the following field values to create a new record.
 
    > [!div class="mx-imgBorder"]
    > ![Pay Period details](./media/enter-pay-period-record-details.png "Pay Period details")
 
     | Field | Description |
     |-----------|--------------|
-    | Pay Period Code | Enter the code of the Loss Reason.|
-    | Pay Period Description | Enter the description of the Loss Reason.|
+    | Pay Period Code | Enter the code for the pay period.|
+    | Pay Period Description | Enter a description of the pay period.|
     | Owner  | The owner field automatically defaults to your user. |
     |||
 
 1. Select **Save & Close**. The newly created record will be available in the
-    **Loss Reason** list.
+    **Pay Periods**<!--Edit okay? --> list.
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+To edit the record, select it, update the values as required, and then select **Save & Close**.
 
 ## Step 2: Configure and manage master data for your organization
 
-Use the admin app to create and manage master data for your organization. This data is required for the **Crisis Financial Impact Tracker** app to work.
+Use the admin app to create and manage master data for your organization. This data is required for the Higher Education Crisis Financial Impact Tracker app to work.
 
-You must add master data in these entities in the following sequence:
+You must add master data to these entities in the following sequence:
 
 1. [Employees](#employees)
 
@@ -268,67 +267,62 @@ You must add master data in these entities in the following sequence:
 
 4. [Sponsored Programs](#sponsored-programs)
 
-5. [Employee Compensation](#employee-compensation)
+5. [Employee Compensations](#employee-compensation)<!--Plural to echo the video. Edit okay?-->
 
-The master data is managed from the **Crisis Financial Impact Tracker** area in the left navigation pane in the admin app:
+Master data is managed from the **Higher Education Crisis Financial Impact Tracker** area on the left pane in the admin app.<!--Edit okay? The video - and all the other references to the product name in these articles - shows it as **Higher Education Crisis Financial Impact Tracker**. Also, please check my edit to the alt text for the following image. The original didn't seem to fit.-->
 
 > [!div class="mx-imgBorder"]
-> ![CFIT Employee compensation](./media/cfit-employee-compensation.png "CFIT Employee Compensation")
+> ![Higher Education Crisis Financial Impact Tracker area on the left pane](./media/cfit-employee-compensation.png "Higher Education Crisis Financial Impact Tracker area on the left pane")
 
 ### Employees
 
-The Employees entity lets you manage and maintain the employees that are associated with the sponsored program in different roles like Principal
-Investigator, Co-Principal Investigator, Researcher, etc.
+Use the Employees entity to manage and maintain the list of employees who are associated with the sponsored program in different roles, such as Principal Investigator, Co-Principal Investigator, and Researcher.<!--No "etc." via Writing Style Guide.-->
 
-To create the record:
+To create a record in Employees:
 
-1. Sign in to the admin app using the url provided by your IT admin.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Select **Crisis Financial Impact Tracker** > **Employees** in the left navigation pane and select **New**.
+1. On the left pane, select **Higher Education Crisis Financial Impact Tracker** > **Employees**, and then select **New**.
 
-1. Enter the following field values to create a new record:
-
-   > [!div class="mx-imgBorder"]
-   > ![Employee details](./media/enter-employee-record-details.png "Employee details")
+1. Enter the following field values to create a new record.
 
    | Field  | Description |
    |--------|-----------|
    | Contact Type | Enter the type of contact. |
-   | Employee ID  | Enter the employee id or number for the contact for reference in orders, service cases, or other communications with the contact's organization.|
-   | User ID  | Enter the user id. |
+   | Employee ID  | Enter the employee ID or number for the contact for reference in orders, service cases, or other communications with the contact's organization.|
+   | User ID  | Enter the user ID. |
    | Email| Enter the primary email address for the contact. |
-   | First Name | Enter the employee's first name to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns.|
-   | Last Name   | Enter the employee's last name to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns.|
-   | Middle Name | Enter the employee's middle name or initial to make sure the contact is addressed correctly.|
-   | Employment Class | Enter the classification of employees. |
+   | First Name | Enter the employee's first name, to make sure the contact is addressed correctly in sales calls, emails, and marketing campaigns.|
+   | Last Name   | Enter the employee's last name, to make sure the contact is addressed correctly in sales calls, emails, and marketing campaigns.|
+   | Middle Name | Enter the employee's middle name or initial, to make sure the contact is addressed correctly.|
+   | Employment Class | Enter the classification of the employee. |
    | Department | Enter the department where the employee works.|
    | Annual Base Salary | Enter the annual base salary of the employee.|
    | Annual Tuition Reimbursement | Enter the annual tuition reimbursement of the employee.|
    |||
 
    > [!NOTE] 
-   > Email address of the employee must match the employee email id of the user accessing the app.
+   > The email address of the employee must match the employee email ID of the user accessing the app.
 
-1. Select **Save & Close**. The newly created record will be available on the **Employee** list.
+   > [!div class="mx-imgBorder"]
+   > ![Employee details](./media/enter-employee-record-details.png "Employee details")
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+1. Select **Save & Close**. The newly created record will be available in the **Employees** list.
+
+To edit the record, select it, update the values as required, and then select **Save & Close**.
 
 ### Sponsors
 
-The Sponsor entity lets you manage and maintain the sponsors that are
+Use the Sponsors entity to manage and maintain a list of the sponsors that are
 associated with the sponsored program.
 
-To create the record:
+To create a record in Sponsors:
 
-1. Sign in to the admin app using the url provided by your IT admin.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Select **Crisis Financial Impact Tracker** > **Sponsors** in the left navigation pane, and select **New**.
+1. On the left pane, select **Higher Education Crisis Financial Impact Tracker** > **Sponsors**, and then select **New**.
 
-1. Enter the following field values to create a new record:
-
-   > [!div class="mx-imgBorder"]
-   > ![Sponsors details](./media/enter-sponsors-record-details.png "Sponsors details")
+1. Enter the following field values to create a new record.
 
     | Field   | Description |
     |---------|------------|
@@ -339,98 +333,95 @@ To create the record:
     | Parent Account | Select the parent account associated with this sponsor.|
     |||
 
-1. Select **Save & Close**. The newly created record will be available on the
-    **Sponsor** list.
+   > [!div class="mx-imgBorder"]
+   > ![Sponsors details](./media/enter-sponsors-record-details.png "Sponsors details")
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+1. Select **Save & Close**. The newly created record will be available in the
+    **Sponsors** list.
+
+To edit the record, select it, update the values as required, and then select **Save & Close**.
 
 ### Grants
 
-The Grants entity lets you manage and maintain the grants that are associated with the sponsored program.
+Use the Grants entity to manage and maintain a list of the grants that are associated with the sponsored program.
 
-To create the record:
+To create a record in Grants:
 
-1. Sign in to the admin app using the URL provided by your IT admin.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Select **Crisis Financial Impact Tracker** > **Grants** in the left navigation pane and select **New**.
+1. On the left pane, select **Higher Education Crisis Financial Impact Tracker** > **Grants**, and then select **New**.
 
-1. Enter the following values to create a new record:
-
-   > [!div class="mx-imgBorder"]
-   > ![Grant details](./media/enter-grant-record-details.png "Grant details")
+1. Enter the following values to create a new record.
 
     | Field  | Description |
     |---------|--------------|
     | Grant Number | Enter the grant number.|
     | Grant Title | Enter the title of the grant.|
     | Grant Description| Enter the description of the grant.|
-    | Grant Status | Select the status for the grant.|
+    | Grant Status | Select the status of the grant.|
     | Principal Investigator | Select the principal investigator.|
     | Start Date | Enter the start date of the grant.|
     | End Date| Enter the end date of the grant|
     | Owner | The owner field automatically defaults to your user. |
     |||
 
-1. Select **Save & Close**. The newly created record will be available on the
-**Grant** list.
+   > [!div class="mx-imgBorder"]
+   > ![Grant details](./media/enter-grant-record-details.png "Grant details")
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+1. Select **Save & Close**. The newly created record will be available in the **Grants** list.
+
+To edit the record, select it, update the values as required, and then select **Save & Close**.
 
 ### Sponsored Programs
 
-The Sponsored Program entity lets you manage and maintain the sponsored program that is associated with the Grants entity.
+Use the Sponsored Programs entity to manage and maintain the list of sponsored programs that are associated with the Grants entity.
 
-To create the record:
+To create a record in Sponsored Programs:
 
-1. Sign in to the admin app using the url provided by your IT admin.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Select **Crisis Financial Impact Tracker** > **Sponsored Program** in the left navigation pane and select **New**.
+1. On the left pane, select **Higher Education Crisis Financial Impact Tracker** > **Sponsored Program**, and then select **New**.
 
-1. Enter the following values to create a new record:
-
-    > [!div class="mx-imgBorder"]
-    > ![Sponsored Programs](./media/enter-sponsored-program-record-details.png "Sponsored Programs")
+1. Enter the following values to create a new record.
 
     | Field  | Description  |
     |-------------|--------------|
     | Sponsored Program Number  | Enter the number of the sponsored program.|
     | Sponsored Program Description | Enter the description of the sponsored program.|
     | Award Amount | Enter of the award amount for the sponsored program.|
-    | Available Balance  | Enter of the balance amount for the sponsored program.|
+    | Available Balance  | Enter the balance for the sponsored program.|
     | Effort Loss Impact Percentage | Enter the percentage of total loss impact.|
-    | Effort Loss Impact Amount | Enter of the total loss impact amount for the sponsored program.|
-    | Grant | select the grant this sponsored program is associated with.|
+    | Effort Loss Impact Amount | Enter the total loss impact amount for the sponsored program.|
+    | Grant | Select the grant this sponsored program is associated with.|
     | Department | Select the department of the sponsored program.|
-    | Sponsor Name | Select the sponsor name of the sponsored program.|
-    | Prime Sponsor Name | Select the prime sponsor name of the sponsored program.|
+    | Sponsor Name | Select the sponsor name for the sponsored program.|
+    | Prime Sponsor Name | Select the prime sponsor name for the sponsored program.|
     | Co-Principal Investigator| Select the co-principal investigator name of the sponsored program. |
     | Owner  | The owner field automatically defaults to your user. |
     |||
 
-1. Select **Save & Close**. The newly created record will be available on the
+    > [!div class="mx-imgBorder"]
+    > ![Sponsored Programs](./media/enter-sponsored-program-record-details.png "Sponsored Programs")
+
+1. Select **Save & Close**. The newly created record will be available in the
     **Sponsored Programs** list.
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+To edit the record, select it, update the values as required, and then select
+**Save & Close**.
 
-### Employee Compensation 
+### Employee Compensations 
 
-The Employee Compensation entity lets you manage and maintain the employee
-effort amount, effort loss, and reason by pay period for each
+Use the Employee Compensations<!--In the video, it looks like this is plural also. Is that the case?--> entity to manage and maintain the employee
+effort amount, effort loss, and loss reason<!--Edit okay?--> by pay period for each
 sponsored program.
 
-To create the record:
+To create a record in Employee Compensation:
 
-1. Sign in to the admin app using the url provided by your IT admin.
+1. Sign in to the admin app by using the URL provided by your IT admin.
 
-1. Select **Crisis Financial Impact Tracker** > **Employee Compensation** in the left navigation pane and select **New**.
+1. On the left pane, select **Higher Education Crisis Financial Impact Tracker** > **Employee Compensation**, and then select **New**.
 
-1. Enter the following values to create a new record:
-
-   > [!div class="mx-imgBorder"]
-   > ![Employee Compensation](./media/enter-employee-compensation-record-details.png "Employee Compensation")
+1. Enter the following values to create a new record.
 
    | Field     | Description  |
    |-------------|----------------------|
@@ -442,14 +433,21 @@ To create the record:
    | Pay Rate    | Enter the pay rate. |
    | Effort Percentage | Enter the effort percentage. |
    | Effort Amount     | Enter the effort amount. |
-   | Loss Percentage   | Enter the effort percentage. |
+   | Loss Percentage   | Enter the loss percentage. |
    | Loss Amount  | Enter the loss amount.|
    | Loss Reason  | Select the loss reason. |
    | Owner   | The owner field automatically defaults to your user. |
    |||
 
-1. Select **Save & Close**. The newly created record will be available on the
+   > [!div class="mx-imgBorder"]
+   > ![Employee Compensation](./media/enter-employee-compensation-record-details.png "Employee Compensation")
+
+1. Select **Save & Close**. The newly created record will be available in the
     **Sponsored Programs** list.
 
-To edit the record, select the record, update the values as required, and select
-**Save & Close.**
+To edit the record, select it, update the values as required, and then select
+**Save & Close**.
+
+## Report issues 
+
+To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
