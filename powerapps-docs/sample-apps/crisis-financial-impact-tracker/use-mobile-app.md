@@ -57,9 +57,9 @@ On the **Sponsored Program** tab, you can review the list of sponsored programs 
 
 Select **>** to view details about the sponsored program.
 <!--I took the liberty of creating a little symbol to use inline. The Writing Style Guide says to use "symbol" (rather than icon) for a graphic that doesn't have any text associated with it. If there's a tooltip that says "Information" for this graphic, then it should be "You can also select **Information** in the upper-left corner..." We could also use the graphic in a case like this, in parentheses after "Information."-->
-You can select **Grants** to view [grant details](#grant-details) and, similarly, **Employees** to view [employee details](#employee-detail). You can also select the information symbol ![information](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
+You can select **Grants** to view [grant details](#grant-details) and, similarly, **Employees** to view [employee details](#employee-details). You can also select the information symbol ![information](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
 
-### Sponsored Programs details
+### Sponsored Program details
 
 You can use the **Sponsored Programs** details form to review the summary of the sponsored program and report the effort loss for each employee.
 
@@ -97,9 +97,9 @@ On the **Grants** tab, you can review the list of grants associated with you as 
 
 Select **>** next to the grant record to view details about the grant.<!--Edit okay?-->
 
-You can select **Sponsored Programs** to view [sponsored program details](#sponsored-program-details) and, similarly, **Employees** to view [employee details](#employee-detail). You can select the information symbol ![information](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
+You can select **Sponsored Programs** to view [sponsored program details](#sponsored-program-details) and, similarly, **Employees** to view [employee details](#employee-details). You can select the information symbol ![information](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
 
-### Grants details
+### Grant details
 
 You can use the **Grants** details form to review the summary of the grants and sponsored programs associated with the selected grant.
 
@@ -140,7 +140,7 @@ Select **>** next to the employee record to view details about the employee.
 
 You can select **Sponsored Programs** to view [sponsored program details](#sponsored-program-details) and, similarly, select **Grants** to see [grant details](#grant-details). You can also select the information symbol ![information](./media/information-icon.png) in the upper-right corner to view [frequently asked questions](#frequently-asked-questions).
 
-### Employees details
+### Employee details
 
 You can use the **Employees** details form to review the summary of the employee and effort impact associated with the employee.
 
@@ -149,7 +149,7 @@ You can use the **Employees** details form to review the summary of the employee
 
 Select **<** in the upper-left corner to go back to the employee list page.
 
-**Fields and descriptions for the Employees**
+**Fields and descriptions for Employees**
 
 | Field   | Description  |
 |---------|--------------|

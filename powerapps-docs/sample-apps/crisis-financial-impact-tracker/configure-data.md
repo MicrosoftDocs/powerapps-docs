@@ -267,7 +267,7 @@ You must add master data to these entities in the following sequence:
 
 4. [Sponsored Programs](#sponsored-programs)
 
-5. [Employee Compensations](#employee-compensation)<!--Plural to echo the video. Edit okay?-->
+5. [Employee Compensations](#employee-compensations)<!--Plural to echo the video. Edit okay?-->
 
 Master data is managed from the **Higher Education Crisis Financial Impact Tracker** area on the left pane in the admin app.<!--Edit okay? The video - and all the other references to the product name in these articles - shows it as **Higher Education Crisis Financial Impact Tracker**. Also, please check my edit to the alt text for the following image. The original didn't seem to fit.-->
 
@@ -409,7 +409,7 @@ To create a record in Sponsored Programs:
 To edit the record, select it, update the values as required, and then select
 **Save & Close**.
 
-### Employee Compensations 
+### Employee Compensations
 
 Use the Employee Compensations<!--In the video, it looks like this is plural also. Is that the case?--> entity to manage and maintain the employee
 effort amount, effort loss, and loss reason<!--Edit okay?--> by pay period for each

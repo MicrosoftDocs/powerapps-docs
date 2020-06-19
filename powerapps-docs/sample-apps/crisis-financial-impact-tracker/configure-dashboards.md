@@ -35,7 +35,7 @@ You can configure Power BI dashboards in two ways:
 * [Using a blank report canvas](#configure-from-blank-report-canvas)
 * [Using a Power BI template](#using-power-bi-template)
 
-## Configure a Power BI report by using a blank report canvas
+## Configure a Power BI report by using a blank report canvas<a name="configure-from-blank-report-canvas"></a>
 
 To configure a Power BI report by using a blank report canvas:
 <!--I numbered these steps because bullets didn't seem right.-->
@@ -283,7 +283,7 @@ The following screenshot shows the Entity Relationship Diagram in the Model view
   > [!div class="mx-imgBorder"]
   > ![Entity relationship](./media/entityrelationshipdiagram.png "Entity relationship")
 
-## Configure a Power BI report by using a Power BI template
+## Configure a Power BI report by using a Power BI template<a name="using-power-bi-template"></a>
 
 The Power BI template contains sample data and interactive graphics in a .pbix file format that you can further edit and update in Power BI Desktop. Download the template from [GitHub](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/PBITemplate.pbix).
 
