@@ -446,8 +446,9 @@ To create a record in Employee Compensation:
     **Sponsored Programs** list.
 
 To edit the record, select it, update the values as required, and then select
-**Save & Close**.
+**Save & Close.**
 
 ## Report issues 
 
 To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
+

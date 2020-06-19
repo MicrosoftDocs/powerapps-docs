@@ -43,7 +43,7 @@ More information: [Licensing overview for Power Platform](https://docs.microsoft
 |Use the mobile app to track and report loss|Staff|[Use the Higher Education Crisis Financial Impact Tracker app](use-mobile-app.md)|
 |||
 
-## Report issues
+## Report issues 
 
 <!-- For Editor: Need to update the feedback link, work is still in progress -->
 
