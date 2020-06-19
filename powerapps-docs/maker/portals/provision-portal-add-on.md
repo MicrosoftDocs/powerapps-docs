@@ -1,14 +1,13 @@
 ---
 title: "Provision a portal using the older portal add-on | MicrosoftDocs"
 description: "Instructions to provision a portal using the older portal add-on."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/11/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Provision a portal using the older portal add-on
