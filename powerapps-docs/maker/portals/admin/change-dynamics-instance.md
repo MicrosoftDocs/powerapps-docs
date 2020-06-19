@@ -1,14 +1,13 @@
 ---
 title: "Change the Dynamics 365 instance, audience, or type of portal | MicrosoftDocs"
 description: "Learn how to change the Dynamics 365 instance, audience, or type of a portal."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/12/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
  
 # Change the Dynamics 365 instance, audience, or type of portal

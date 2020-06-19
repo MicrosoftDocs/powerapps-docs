@@ -1,14 +1,13 @@
 ---
 title: "Add record-based security by using Entity Permissions for a portal | MicrosoftDocs"
 description: "Instructions to add an entity permission and assign web roles to it."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Add record-based security by using entity permissions for portals

@@ -1,14 +1,13 @@
 ---
 title: "Details of the provisioned portal | MicrosoftDocs"
 description: "Know what details are captured when portal is provisioned and what you can use."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Portal details

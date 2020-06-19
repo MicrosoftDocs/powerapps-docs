@@ -1,14 +1,13 @@
 ---
 title: "Global search for additional entities in Power Apps portal | MicrosoftDocs"
 description: "Learn how global search works for additional entities in a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/28/2020
 ms.author: sandhan
-ms.reviewer: tapanm
+ms.reviewer: tapanm tapanm
 ---
 
 # Walkthrough: Configuring additional entities for global search  

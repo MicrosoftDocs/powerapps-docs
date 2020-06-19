@@ -1,14 +1,13 @@
 ---
 title: Portal Power Apps portals Studio anatomy | Microsoft Docs
 description: Learn about the anatomy of Power Apps portals Studio.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/16/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Power Apps portals Studio anatomy

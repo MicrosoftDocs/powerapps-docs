@@ -1,8 +1,7 @@
 ---
 title: Compose webpages | Microsoft Docs
 description: Instructions to compose webpages in portal.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
