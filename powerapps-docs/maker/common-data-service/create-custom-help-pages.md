@@ -2,7 +2,7 @@
 title: "Create custom help pages | MicrosoftDocs"
 description: "Create custom help pages on UCI"
 ms.custom: ""
-ms.date: 01/15/2020
+ms.date: 06/19/2020
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.suite: ""
