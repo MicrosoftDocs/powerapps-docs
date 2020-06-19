@@ -178,3 +178,4 @@ You can review frequently asked questions by selecting the information symbol ![
 ## Report issues 
 
 To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
+
