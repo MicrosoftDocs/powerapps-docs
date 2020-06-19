@@ -175,5 +175,6 @@ You can display custom pages in the application navigation using the SiteMap. Th
 It is not possible to use a `<PageRule>` to enable or display custom ribbon components on custom pages.  
 
 ### See also  
+
  [Customize the Ribbon](customize-commands-ribbon.md)   
  [Command bar or ribbon presentation](command-bar-ribbon-presentation.md)
