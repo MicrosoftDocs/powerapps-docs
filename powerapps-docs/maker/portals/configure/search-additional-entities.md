@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 04/28/2020
 ms.author: sandhan
-ms.reviewer: tapanm tapanm
+ms.reviewer: tapanm
 ---
 
 # Walkthrough: Configuring additional entities for global search  

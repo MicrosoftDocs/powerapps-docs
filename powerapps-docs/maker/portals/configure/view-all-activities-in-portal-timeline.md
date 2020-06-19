@@ -6,8 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 12/12/2019
-ms.author: dileeps
-ms.reviewer: tapanm tapanm
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # View activities in a portal timeline
