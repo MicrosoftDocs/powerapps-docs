@@ -30,7 +30,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 ![Opening screen of the Help Desk Tickets app](./media/help-desk-install/login-screen.png)
 
 > [!TIP]
-> Watch this [video](https://youtu.be/sl5fXwwnvzI) to see how to use the Help Desk PowerApp Sample.
+> Watch this [video](https://youtu.be/sl5fXwwnvzI) to see how to use the Help Desk Tickets sample app.
 
 ## Prerequisites
 
@@ -306,7 +306,7 @@ This list stores the Help Desk tickets.
     ![Play the app](./media/help-desk-install/play-app.png) 
 
 > [!TIP]
-> Watch this [video](https://youtu.be/sl5fXwwnvzI) to see how to use the Help Desk PowerApp Sample.
+> Watch this [video](https://youtu.be/sl5fXwwnvzI) to see how to use the Help Desk Tickets sample app.
 
 ## Next steps
 
