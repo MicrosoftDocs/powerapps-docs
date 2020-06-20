@@ -1,14 +1,13 @@
 ---
 title: Create a portal in an environment containing model-driven apps in Dynamics 365 | Microsoft Docs
 description: Instructions to create a a portal in an environment containing model-driven apps in Dynamics 365.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Create a portal in an environment containing model-driven apps in Dynamics 365
