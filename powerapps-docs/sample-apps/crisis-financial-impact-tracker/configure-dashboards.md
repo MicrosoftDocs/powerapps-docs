@@ -12,16 +12,15 @@ ms.reviewer: nkrb
 
 # Configure Power BI dashboards
 
-The Higher Education Crisis Financial Impact Tracker is an app that is designed to collect data pertaining to sponsored research programs, or projects. More specifically,
-the app enables researchers to submit the projected Lost Effort and Loss Reason by grant, employee, and pay period.
+The Higher Education Crisis Financial Impact Tracker app is designed to collect data pertaining to sponsored research programs or projects. Researchers can use the app to submit projected lost effort and loss reasons organized by grant, employee, and pay period.
 
-By using Power BI, you can analyze and visualize the data from the app. This Power BI template pulls in the data that is collected by the Higher Education Crisis Financial Impact Tracker.
+By using Power BI, you can analyze and visualize the data from the app. The Power BI template described in this article pulls in the data that's collected by the Higher Education Crisis Financial Impact Tracker.
 
-These reports are intended to be used by Directors, Deans, and Research Administrators who will monitor the data collected, on behalf of their respective Departments, Sponsors, Colleges and/or Schools.
+These reports are intended to be used by directors, deans, and research administrators who will monitor the data collected on behalf of their respective departments, sponsors, and colleges or schools.
 
 ## Prerequisites
 
-The Higher Education Crisis Financial Impact Tracker app uses Power Apps that work on top of Common Data Service. Data is pulled from Common Data Service into this Power BI template, which empowers you to securely store, integrate and automate the data for use with other business applications, including Power BI, Dynamics 365, Power Automate, and others.
+The Higher Education Crisis Financial Impact Tracker app pulls data from Common Data Service into this Power BI template,<!--Suggested.--> which empowers you to securely store, integrate, and automate the data for use with other business apps, including Power BI, Dynamics 365, and Power Automate.<!--You don't need "and others" when you introduce the list with "including."-->
 
 To use this Power BI template, you need these prerequisites:
 
@@ -29,47 +28,44 @@ To use this Power BI template, you need these prerequisites:
 
 -  Sign up for the [Power BI service](https://powerbi.microsoft.com/get-started/).
 
--  Common Data Service environment with maker permissions to access the portal and read permissions to access data within the entities.
+-  Create a Common Data Service environment with maker permissions to access the portal and read permissions to access data within the entities.
 
 You can configure Power BI dashboards in two ways:
 
-1. Configure from blank report canvas](#configure-from-blank-report-canvas)
-1. Using Power BI template(#using-power-bi-template)
+* [Using a blank report canvas](#configure-from-blank-report-canvas)
+* [Using a Power BI template](#using-power-bi-template)
 
-## Configure from  blank report canvas
+## Configure a Power BI report by using a blank report canvas<a name="configure-from-blank-report-canvas"></a>
 
-To configure Power Bi report  from a blank report canvas:
+To configure a Power BI report by using a blank report canvas:
+<!--I numbered these steps because bullets didn't seem right.-->
+1. Open Power BI Desktop. You might be prompted to **Sign in** to the Power BI service by using your work or school account.
 
-- Open the Power BI, you are greeted with a Power BI splash screen when you open it for the first time. You may also be prompted to **Sign in** to Power BI service using your work or school account.
+   > [!div class="mx-imgBorder"]
+   > ![Power BI Desktop](./media/powerbidesktop.png "Power BI Desktop")
 
-  > [!div class="mx-imgBorder"]
-  > ![Power BI Desktop](./media/powerbidesktop.png "Power BI Desktop")
-
-- Select **Get data**, select **Power Platform** and then select Common Data Service and select **Connect**.
+2. Select **Get data** > **Power Platform** > **Common Data Service**, and then select **Connect**.
   
-  > [!div class="mx-imgBorder"]
-  > ![Get Data](./media/pbigetdata1.png "Get data")
+   > [!div class="mx-imgBorder"]
+   > ![Get Data](./media/pbigetdata1.png "Get data")
 
-  > [!div class="mx-imgBorder"]
-  > ![Get Data](./media/pbigetdata.png "Get data")
+   > [!div class="mx-imgBorder"]
+   > ![Get Data](./media/pbigetdata.png "Get data")
 
-- Enter the **Server Url** that is specific to your Common Data Service environment. To get the Common Data Service environment url:
+3. Enter the **Server Url** that's specific to your Common Data Service environment. To get the Common Data Service environment URL, do the following:
 
-  - Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the top-right corner, and then select **Advanced settings**.
+   1. Open [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select the environment you're going to connect to, select **Settings** in the upper-right corner, and then select **Advanced settings**.
 
-  - In the new browser tab that opens, *copy the root of the url*. This is the unique url for your environment. The url will be in the format of
-    <https://yourenvironmentid.crm.dynamics.com/>. Make sure not to copy the rest of the url.
+   2. In the new browser tab that opens, copy the root of the URL. This is the unique URL for your environment. The URL will be in the format
+    <https://yourenvironmentid.crm.dynamics.com/>. Be sure not to copy the rest of the URL.
 
     > [!div class="mx-imgBorder"]
-    > ![Common Data Service Environment](./media/cdsenvironment.png "Common Data Service Environment")
+    > ![Common Data Service environment](./media/cdsenvironment.png "Common Data Service environment")
 
-  > [!div class="mx-imgBorder"]
-  > ![Service URL](./media/ppserviceurl.png "Service URL")
+    > [!div class="mx-imgBorder"]
+    > ![Service URL](./media/ppserviceurl.png "Service URL")
 
-- After you successfully  connect to your environment, you can see the folders for **Entities** and System in the **Navigator**. Expand **Entities** and select the following tables from the list of Entities (check the boxes):
-
-  ![Choose Entities](./media/chooseentities.png)
-
+4. After you successfully connect to your environment, you can see the folders for **Entities** and **System**<!--Edit okay? I assume this is a UI string also?--> in the **Navigator**. Expand **Entities**, and select the check boxes for the following entities:<!--In this article even more so than in configure-data.md (which see), I think it's essential to put the text before the graphic.-->
 
    - Account
 
@@ -91,17 +87,111 @@ To configure Power Bi report  from a blank report canvas:
 
    - msft_SponsoredProgram
 
-- Select **Transform Data** after you finish selecting the list of entities. The Power Query Editor window is opened with the selected tables and data loaded.
+<!--I don't see the reason for this graphic. Suggest deleting.
+    > [!div class="mx-imgBorder"]
+    > ![Choose entities](./media/chooseentities.png "Choose entities")
+-->
+5. After you finish selecting the list of entitites, select **Transform Data**. The Query Editor window opens with the selected tables and data loaded.
   
-  > [!div class="mx-imgBorder"]
-  > ![Select tables](./media/selecttables.png "Select tables")
+   > [!div class="mx-imgBorder"]
+   > ![Select tables](./media/selecttables.png "Select tables")
 
-- For each entity, select **Choose Columns** tab within the ribbon to open the console and select which fields to use in the data model and in reports.
+6. For each entity, select **Choose Columns** in the ribbon to open the console and select which fields to use in the data model and in reports.<!--Please note that images should never include information that isn't also available in text, either the main content or alt text.  This is an accessibility requirement. Unfortunately, some of these lists are too long for alt text (which has a maximum of 220 characters), so I've converted them to lists. I'd appreciate your double-checking that they're accurate.-->
 
-  > [!div class="mx-imgBorder"]
-  > ![Choose column](./media/choosecolumn.png "Choose column")
+   > [!div class="mx-imgBorder"]
+   > ![Choose Columns](./media/choosecolumn.png "Choose Columns")
 
-   - Here are suggested fields for each Entity:
+   - The following are suggested fields for the Contact entity:
+      - msft_annualbasesalary
+      - msft_annualbasesalary_base
+      - msft_annualtuitionreimbursement
+      - msft_annualtuitionreimbursement_base
+      - msft_contacttype
+      - msft_department
+      - msft_employmentclass
+      - msft_showwelcomemessage
+      - msft_userid
+
+   - The following are suggested fields for the msft_Campus entity:
+      - msft_campusdescription
+      - msft_campusid
+      - msft_campusname
+
+   - The following are suggested fields for the msft_College entity:
+      - msft_campus
+      - msft_collegedescription
+      - msft_collegeid
+      - msft_collegename
+
+   - The following are suggested fields for the msft_Department entity:
+      - msft_college
+      - msft_departmentdescription
+      - msft_departmentid
+      - msft_departmentname
+
+   - The following are suggested fields for the msft_EmployeeCompensation entity:
+      - msft_effortamount
+      - msft_effortamount_base
+      - msft_effortpercentage
+      - msft_employee
+      - msft_employeecompensationid
+      - mstf_fte
+      - msft_lossamount
+      - msft_lossamount_base
+      - msft_losspercentage
+      - msft_lossreason
+      - msft_name
+      - msft_paygroup
+      - msft_paygroup_display
+      - msft_payperiod
+      - msft_payrate
+      - msft_payrate_base
+      - msft_sponsoredprogram
+
+   - The following are suggested fields for the msft_Grant entity:
+      - msft_enddate
+      - msft_grantdescription
+      - msft_grantid
+      - msft_grantnumber
+      - msft_grantstatus
+      - msft_grantstatus_display
+      - msft_granttitle
+      - msft_principalinvestigator
+      - msft_startdate
+
+   - The following are suggested fields for the msft_LossReason entity:
+      - msft_lossreasoncode
+      - msft_lossreasondescription
+      - msft_lossreasonid
+
+   - The following are suggested fields for the msft_PayPeriod entity:
+      - msft_enddate
+      - msft_payperiodcode
+      - msft_payperioddescription
+      - msft_payperiodid
+      - msft_startdate
+
+   - The following are suggested fields for the msft_SponsoredProgram entity:
+      - msft_availablebalance
+      - msft_availablebalance_base
+      - msft_awardamount
+      - msft_awardamount_base
+      - msft_coprincipalinvestigator
+      - msft_department
+      - msft_effortlossimpactamount
+      - msft_effortlossimpactamount_base
+      - msft_effortlossimpactamount_date
+      - msft_effortlossimpactamount_state
+      - msft_effortlossimpactpercentage
+      - msft_grant
+      - msft_primesponsorname
+      - msft_sponsoredprogramdescription
+      - msft_sponsoredprogramid
+      - msft_sponsoredprogramnumber
+      - msft_sponsorname
+
+<!--
+ - Here are suggested fields for each Entity:
 
      - Contact
       > [!div class="mx-imgBorder"]
@@ -138,81 +228,93 @@ To configure Power Bi report  from a blank report canvas:
     - msft_SponsoredProgram
       > [!div class="mx-imgBorder"]
       > ![Sponsored Program](media/msftsponsoredprogram.png "Sponsored Program")
+-->
 
-- Select **Close & Apply** to close the Power Query Editor and apply the changes made.
+7. Select **Close & Apply** to close the Query Editor and apply the changes you made.
 
-- You will see the following screen within the Power BI report canvas. It may take several minutes for the queries to run. 
+8. You'll see the following screen in the Power BI report canvas. It might take several minutes for the queries to run.
 
-  > [!div class="mx-imgBorder"]
-  > ![Close and Apply](./media/closeandapply.png "Close and Apply")
+   > [!div class="mx-imgBorder"]
+   > ![Close and Apply](./media/closeandapply.png "Close and Apply")
 
-- After the changes are applied, the report canvas within Power BI looks
-similar to what is shown in the screenshot, including the tables listed within the **Fields** panel on the
+9. After the changes are applied, the Power BI report canvas looks
+similar to the following screenshot, including the tables listed in the **Fields** panel on the
 right side of the page.
 
-  > [!div class="mx-imgBorder"]
-  > ![Applied Report](./media/appliedreport.png "Applied Report")
+   > [!div class="mx-imgBorder"]
+   > ![Applied Report](./media/appliedreport.png "Applied Report")
 
-  > [!div class="mx-imgBorder"]
-  > ![Click Left](./media/clickleft.png "Click Left")
+10. Select the icon on the left side of the page to open the **Model** view. You will see the tables that you selected. Use the slider in the lower-right corner to adjust the view size.<!--Edit okay? I moved the "Click Left" graphic here because it seems to apply to this step, not the previous one. (Also, I didn't think "Click left" was the best alt text.)-->
 
-- Select the icon on the left side of the page to open the **Model** view. You will see the tables that you selected. Use the slider in the bottom right to adjust the view size.
+    > [!div class="mx-imgBorder"]
+    > ![Open the Model view](./media/clickleft.png "Open the Model view")
 
-  > [!div class="mx-imgBorder"]
-  > ![Tables](./media/tables.png "Tables")
+    > [!div class="mx-imgBorder"]
+    > ![Tables](./media/tables.png "Tables")
 
-- In the **Home** tab, select  **Manage Relationships** to
-open the console, where you will create new relationships between the entities.
+11. On the **Home** tab, select  **Manage Relationships** to open the console where you'll create new relationships among the entities.
 
-  > [!div class="mx-imgBorder"]
-  > ![Report Home](./media/reporthome.png "Report Home")
+    > [!div class="mx-imgBorder"]
+    > ![Report Home](./media/reporthome.png "Report Home")
 
-- When creating or editing relationships between entities, select the tables and
-the columns to be joined, as well as the **Cardinality** and **Cross-filter** direction for the relationship.
+    When creating or editing relationships among entities, you select the tables and columns to be joined, in addition to the **Cardinality** and **Cross-filter** direction for the relationship.
 
-  > [!div class="mx-imgBorder"]
-  > ![Create Relationship](./media/createrelationship.png "Create Relationship")
+    > [!div class="mx-imgBorder"]
+    > ![Create relationship](./media/createrelationship.png "Create relationship")
 
-- To use the suggested fields within the Common Data Service that are pertinent to the Power BI template, your relationship mapping between tables should look like this:
- 
-  > [!div class="mx-imgBorder"]
-  > ![Manage Relationship](./media/managerelationship.png "Manage Relationship")
+13. To use the suggested fields in Common Data Service that are pertinent to the Power BI template, your relationship mapping between tables should look like the following.<!--Are these literally what the entity mappings should be? If so, this needs to be explicit in text, it can't only be captured in a graphic. Will this table work?-->
 
-- Here is a screenshot of the Entity Relationship Diagram, within the Model view:
+     |From: Table | To: Table | 
+     |---|---|---|
+     | msft_College (msft_campus) | msft_Campus (msft_campusid) |
+     | msft_Department (msft_college) | msft_College (msft_collegeid) |
+     | msft_EmployeeCompensation (msft_lossreason) | msft_LossReason (msft_lossreasonid) |
+     | msft_EmployeeCompensation (msft_payperiod) | msft_PayPeriod (msft_payperiodid) |
+     | msft_EmployeeCompensation (msft_sponsoredprogram) | msft_SponsoredProgram (msft_sponsoredprogramid) |
+     | msft_SponsoredProgram (msft_coprincipalinvestigator) | Contact (contactid) |
+     | msft_SponsoredProgram (msft_department) | msft_Department (msft_departmentid) |
+     | msft_SponsoredProgram (msft_grant) | msft_Grant (msft_grantid) |
+
+    > [!div class="mx-imgBorder"]
+    > ![Manage relationships](./media/managerelationship.png "Manage relationships")
+
+The following screenshot shows the Entity Relationship Diagram in the Model view.
 
   > [!div class="mx-imgBorder"]
   > ![Entity relationship](./media/entityrelationshipdiagram.png "Entity relationship")
 
+## Configure a Power BI report by using a Power BI template<a name="using-power-bi-template"></a>
 
-## Using Power BI template
-
-The Power BI template contains sample data and interactive graphics in a .pbix file format that you can further edit and update in Power BI Desktop. Download the template from [here](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/PBITemplate.pbix).
+The Power BI template contains sample data and interactive graphics in a .pbix file format that you can further edit and update in Power BI Desktop. Download the template from [GitHub](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/PBITemplate.pbix).
 
 ### Open the Power BI template
 
-When you open the Power BI, you are greeted with a Power BI splash screen. You may also be prompted to **Sign in** to the Power BI service using the work or
-school account.
+When you open the template, you're greeted with a Power BI splash screen. You might also be prompted to **Sign in** to the Power BI service by using your work or school account.
 
-When you open the Power BI template, you notice a series of tabs at the bottom of the report:
+When you open the Power BI template, you'll see a series of tabs at the bottom of the report:
 
 - **Legal**: Contains Microsoft legal disclaimer.
-- **Home**: The **Home** tab at the bottom of the workbook contains sample text which can be utilized and modified according to preference. 
+- **Home**: Contains sample text that you can use and modify according to yoru preference. 
 - **Information**: Contains general information.
 - **FAQ**: Contains frequently asked questions.
-- **Submissions**: Launches the **Submissions Report** page.
+- **Submissions**: Opens the **Submissions Report** page.
 
-- **Sponsors**: Launches the **Impact by Sponsor Report** page.
+- **Sponsors**: Opens the **Impact by Sponsor Report** page.
 
-- **Department**: Launches the **Department** View.
+- **Department**: Opens the **Department** view.
 
-Institutions can add their logos to all pages within the template by inserting
-an image to the page and then copying it to the other pages.More information:  [Copy and paste a report visualization.](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-copy-paste)
+Your organization can add its logos to all pages in the template by inserting
+an image on the page and then copying it to other pages. More information:  [Copy and paste a report visualization](https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-copy-paste)
 
-## Connect to the Common Data Service
+## Connect to Common Data Service
 
-To utilize your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection within the template. More information: [Create a Power BI report using the Common Data Service connector](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector)
+To use your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection in the template. More information: [Create a Power BI report using the Common Data Service connector](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector)
 
-To change the data source, select **Transform data** to open the Power Query Editor. Within the Applied Steps of the Query Editor, change the Source for each Entity. Use the Common Data Service environment url. 
+To change the data source, select **Transform data** to open Query Editor. In the **Applied Steps** of Query Editor, change the **Source** for each entity.<!--Edit okay? Assuming these are UI strings.--> Use the Common Data Service environment URL. 
+
+## Report issues 
+
+To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
 
 ## Report issues 
 

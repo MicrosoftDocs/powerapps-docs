@@ -12,34 +12,34 @@ ms.reviewer: nkrb
 
 # Higher Education Crisis Financial Impact Tracker - Sample solution
 
-In this unprecedented time, universities are struggling to understand the impact of COVID-19, especially research centers. Research grants are one of the most substantial sources of incoming revenue for universities. By reporting the monetary implications, universities can assess and pursue their eligibility for relief funding. The financial impact of COVID-19 on the research grants and budgets of these schools is in millions.
+In these unprecedented times<!--Suggested.-->, universities&mdash;especially research centers&mdash;are struggling to understand the impact of COVID-19. Research grants are one of the most substantial sources of revenue for universities. By reporting the monetary implications, universities can assess and pursue their eligibility for relief funding. The financial impact of COVID-19 on the research grants and budgets of these schools runs in the millions.
 
-The Higher Education Crisis Financial Impact Tracker solution help researchers or co-researchers to track their employees' effort loss due to the crisis scenario and departments to track and report the loss.
+The Higher Education Crisis Financial Impact Tracker solution helps researchers or co-researchers to track their employees' effort loss<!--note from editor: I don't know what "effort loss" means. Can you provide a brief definition here?--> due to the crisis scenario, and departments to track and report the loss.
 
 ## Demo: Quick overview
 
-Watch a quick overview of the Higher Education Crisis Financial Impact tracker solution.
-
+Watch a quick overview of the Higher Education Crisis Financial Impact Tracker solution.
+<!--note from editor: I see that the fictitious employee names in the video are included with sample data for the app. However, the email address format ("Tricia.Potter@email.com") doesn't comply with CELA guidelines, which say to use first name followed by an approved fictitious domain name (e.g. "tricia@contoso.com"). It does look like having just the first name might not work for this content, but is there any way to double-check to make sure that the "email.com" domain is copacetic with CELA? (Please see https://microsoft.sharepoint.com/sites/CELAWeb-Copyrights-Trademarks-And-Patents/sitepages/trademarks-fictitious-names.aspx under **Guidance for using fictitious content** > **Email addresses**.)-->
 <br/>
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4xfQs]
+<!--note from editor: Can we create different opening screens for these videos? They all look exactly alike in the beginning; I had to double-check to see whether I was opening the same one each time. -->
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xfQs]
 
 ## Licensing requirements
 
-- Power Apps license.
-- Power BI License if you'll be using the Power BI dashboard available as part of this solution.
+- Power Apps license
+- Power BI license, if you'll be using the Power BI dashboard that's available as part of this solution
 
 Contact your local Microsoft account representative for questions related to licensing.
 
-See also: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
+More information: [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 
 ## Start here
 
 |Task|Target audience|See|
 |-----|--------|-------|
 |Download and deploy the sample solution|IT admin|[Download and deploy](deploy-solution.md)|
-|Use the admin app to add/manage master data|Business admin|[Configure and manage master data](configure-data.md)|
-|Use dashboards for insights and decision making|Business admin|[View Power BI dashboard](configure-dashboards.md)|
+|Use the admin app to add or manage master data|Business admin|[Configure and manage master data](configure-data.md)|
+|Use dashboards for insights and decision making|Business admin|[View the Power BI dashboard](configure-dashboards.md)|
 |Use the mobile app to track and report loss|Staff|[Use the Higher Education Crisis Financial Impact Tracker app](use-mobile-app.md)|
 |||
 
