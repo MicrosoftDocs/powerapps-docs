@@ -22,7 +22,7 @@ Watch a quick overview about how to configure master data.
 
 <br/>
 
-> [!VIDEO https://youtu.be/QOJVe6ONH74]
+> [!VIDEO https://www.youtube.com/watch?v=QOJVe6ONH74]
 
 ## Step 1: Configure and manage setup data for your organization
 

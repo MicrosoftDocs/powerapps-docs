@@ -22,7 +22,7 @@ Watch a quick overview of the Higher Education Crisis Financial Impact Tracker s
 <!--note from editor: I see that the fictitious employee names in the video are included with sample data for the app. However, the email address format ("Tricia.Potter@email.com") doesn't comply with CELA guidelines, which say to use first name followed by an approved fictitious domain name (e.g. "tricia@contoso.com"). It does look like having just the first name might not work for this content, but is there any way to double-check to make sure that the "email.com" domain is copacetic with CELA? (Please see https://microsoft.sharepoint.com/sites/CELAWeb-Copyrights-Trademarks-And-Patents/sitepages/trademarks-fictitious-names.aspx under **Guidance for using fictitious content** > **Email addresses**.)-->
 <br/>
 
-> [!VIDEO https://youtu.be/oJynCh3rX_Y]
+> [!VIDEO https://www.youtube.com/embed/oJynCh3rX_Y]
 
 ## Licensing requirements
 
