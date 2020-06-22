@@ -36,7 +36,7 @@ Model-driven apps and canvas apps (public preview).
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <manifest>
   <control namespace="PcfSample" constructor="TestDataSetCtrl" version="0.0.6" display-name-key="TestDataSetCtrl" description-key="TestDataSetCtrl description" control-type="standard" api-version="1.2.1">
-    <data-set name="simpleTableGrid" display-name-key="Dataset_Display_Key">
+    <data-set name="sampleDataSet" display-name-key="Dataset_Display_Key">
       <property-set name="samplePropertySet" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true"/>
       <property-set name="samplePropertySet2" display-name-key="Property_Display_Key2" description-key="Property_Desc_Key2" of-type="SingleLine.Text" usage="bound" required="true"/>
     </data-set>
