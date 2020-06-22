@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2020
+ms.date: 06/22/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -201,6 +201,22 @@ To enable attachment on an entity form:
 After you configure the notes and enable notes attachments, you can see the **Attach File** option on the form:
 
 ![Attach file option](media/configure-notes/attach-file-option.png)
+
+### Notes created with rich-text editor
+
+You can view the notes created using the [rich-text editor in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
+
+For example, the note shows rich-text format in the model-driven app.
+
+![Dynamics 365 form](media/configure-notes/dynamics-365-form.png)
+
+Portal web page shows the note in rich-text format.
+
+![Portals form](media/configure-notes/portals-form.png)
+
+However, when editing the note from portal web page, you'll see the note in HTML markup format.
+
+![Portals form in HTML when editing](media/configure-notes/portals-form-edit.png)
 
 ## Notes configuration for web forms
 
