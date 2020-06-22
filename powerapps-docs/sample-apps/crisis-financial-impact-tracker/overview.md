@@ -5,7 +5,7 @@ author: ramanasridhar
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/15/2020
+ms.date: 06/22/2020
 ms.author: ramanasr
 ms.reviewer: nkrb
 ---
