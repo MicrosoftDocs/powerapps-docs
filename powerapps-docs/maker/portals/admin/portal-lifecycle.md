@@ -5,7 +5,7 @@ author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/29/2020
+ms.date: 06/22/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -66,12 +66,9 @@ To convert your portal from trial to production:
 
 ## Convert an existing portal to a capacity-based model
 
-> [!IMPORTANT]
-> This feature is being deployed. During the deployment period, this feature may not be available.
-
 You can convert your existing portal license to [capacity-based licensing model](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). To change your portal license to capacity-based model:
 
-1. Go to [Portal Details](portal-details.md).
+1. Go to [Portal details](portal-details.md).
 1. Select **Change License**.
 
     ![Convert an existing portal to a capacity-based model](media/portal-lifecycle/convert-to-capacity-based-licensing.gif "Convert an existing portal to a capacity-based model")
