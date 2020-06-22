@@ -26,7 +26,7 @@ Watch a quick overview about how to download and deploy the solution.
 
 ## Step 1: Download the deployment package
 
-Download the latest deployment package (.zip) from [GitHub](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/CrisisFinancialImpactTracker.zip). Before extracting the .zip file, ensure that you unblock it. 
+Download the latest deployment package (.zip) from [here](https://aka.ms/HECFIT). Before extracting the .zip file, ensure that you unblock it. 
 
 To unblock the .zip file:
 
