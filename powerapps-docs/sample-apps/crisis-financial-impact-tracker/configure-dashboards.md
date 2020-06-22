@@ -316,10 +316,6 @@ To change the data source, select **Transform data** to open Query Editor. In th
 
 To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
 
-## Report issues 
-
-To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
-
 ## Disclaimer
 
 This report and data are provided "as is", "with all faults", and without warranty of any kind. Microsoft gives no express warranties or guarantees and
