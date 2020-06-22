@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2020
+ms.date: 06/22/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -161,6 +161,9 @@ You must create and assign the appropriate entity permission to the records as f
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
     ![Add web roles to an entity permission](media/entity-permission-web-roles.png "Add web roles to an entity permission")
+
+> [!IMPORTANT]
+> A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them entity permissions.
 
 If you created a custom form and added the notes section to it, be sure to select **Notes** as the default tab you want to be visible.
 
