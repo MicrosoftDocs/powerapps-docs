@@ -41,7 +41,7 @@ Model-driven apps and canvas apps (public preview).
       <property-set name="samplePropertySet2" display-name-key="Property_Display_Key2" description-key="Property_Desc_Key2" of-type="SingleLine.Text" usage="bound" required="true"/>
     </data-set>
     <resources>
-      <code path="bundle.js" order="1"/>
+      <code path="index.ts" order="1"/>
       <css path="css/TestDataSetCtrl.css" order="1"/>
       <resx path="strings/TestDataSetCtrl.1033.resx" version="1.0.0"/>
     </resources>
