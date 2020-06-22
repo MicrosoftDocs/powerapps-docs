@@ -12,17 +12,17 @@ ms.reviewer: nkrb
 
 # Higher Education Crisis Financial Impact Tracker - Sample solution
 
-In these unprecedented times<!--Suggested.-->, universities&mdash;especially research centers&mdash;are struggling to understand the impact of COVID-19. Research grants are one of the most substantial sources of revenue for universities. By reporting the monetary implications, universities can assess and pursue their eligibility for relief funding. The financial impact of COVID-19 on the research grants and budgets of these schools runs in the millions.
+In these unprecedented times, universities especially research centers are struggling to understand the impact of COVID-19. Research grants are one of the most substantial sources of revenue for universities. By reporting the monetary implications, universities can assess and pursue their eligibility for relief funding. The financial impact of COVID-19 on the research grants and budgets of these schools runs in the millions.
 
-The Higher Education Crisis Financial Impact Tracker solution helps researchers or co-researchers to track their employees' effort loss<!--note from editor: I don't know what "effort loss" means. Can you provide a brief definition here?--> due to the crisis scenario, and departments to track and report the loss.
+The Higher Education Crisis Financial Impact Tracker solution helps researchers or co-researchers to track their employees' effort loss due to the crisis scenario, and departments to track and report the loss.
 
 ## Demo: Quick overview
 
 Watch a quick overview of the Higher Education Crisis Financial Impact Tracker solution.
 <!--note from editor: I see that the fictitious employee names in the video are included with sample data for the app. However, the email address format ("Tricia.Potter@email.com") doesn't comply with CELA guidelines, which say to use first name followed by an approved fictitious domain name (e.g. "tricia@contoso.com"). It does look like having just the first name might not work for this content, but is there any way to double-check to make sure that the "email.com" domain is copacetic with CELA? (Please see https://microsoft.sharepoint.com/sites/CELAWeb-Copyrights-Trademarks-And-Patents/sitepages/trademarks-fictitious-names.aspx under **Guidance for using fictitious content** > **Email addresses**.)-->
 <br/>
-<!--note from editor: Can we create different opening screens for these videos? They all look exactly alike in the beginning; I had to double-check to see whether I was opening the same one each time. -->
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xfQs]
+
+> [!VIDEO https://youtu.be/oJynCh3rX_Y]
 
 ## Licensing requirements
 
@@ -45,10 +45,8 @@ More information: [Licensing overview for Power Platform](https://docs.microsoft
 
 ## Report issues 
 
-<!-- For Editor: Need to update the feedback link, work is still in progress -->
-
-To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
+To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
 
 ### Disclaimer
 
-*This app is a sample and may be used with Microsoft Power Apps for dissemination of reference information only.*
+This solution is a sample and may be used with Microsoft Power Platform for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person.

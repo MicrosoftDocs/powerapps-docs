@@ -22,11 +22,11 @@ Watch a quick overview about how to download and deploy the solution.
 
 <br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xkRM]
+> [!VIDEO https://youtu.be/IZhgSWfRh4g]
 
 ## Step 1: Download the deployment package
 
-Download the latest deployment package (.zip) from [GitHub](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/CrisisFinancialImpactTracker.zip).<!--note from editor: You don't want to use generic link text like "here." The reader needs some idea of where they'll land when they follow the link.--> Before extracting the .zip file, ensure that you unblock it. 
+Download the latest deployment package (.zip) from [GitHub](https://github.com/microsoft/powerapps-tools/blob/master/Apps/CrisisFinancialImpactTracker/CrisisFinancialImpactTracker.zip). Before extracting the .zip file, ensure that you unblock it. 
 
 To unblock the .zip file:
 
@@ -39,7 +39,7 @@ When you extract the .zip file, you see the following components in the extracte
 |Component|	File name |Description
 |-------|-------|------|
 | AppIcons | Higher Education Crisis Financial Impact Tracker.png| Sample app icon.|
-| Data|Import Templates  | Individual entity template for data load files<!--What does "data load files" mean? --> in .xlsx (Excel) format. The files are arranged in the order in which they should be imported.|
+| Data|Import Templates  | Individual entity template for data load files in .xlsx (Excel) format. The files are arranged in the order in which they should be imported.|
 | Data|Sample Data  | Individual entity sample data in .xlsx (Excel) format. The files are arranged in the order in which they should be imported.|
 | Package |Higher Education Crisis Financial Impact Tracker app package-related files.|Complete list of files required to deploy the app.|
 | Power BI Template | PBITemplate.pbix | A sample Power BI template to connect to the app's Common Data Service instance.|
@@ -65,7 +65,7 @@ Follow the steps below to install and configure the Higher Education Crisis Fina
 
 ### Install the app from the deployment package
 
-1. Go to the folder where you extracted the deployment package (.zip file).<!--I assume the following link is an artifact?](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/deploy-configure#step-1-download-the-deployment-package)--> You'll find a **Package** folder. Open the **Package** folder, and then double-click to select **PackageDeployer.exe**.
+1. Go to the folder where you extracted the deployment package (.zip file). You'll find a **Package** folder. Open the **Package** folder, and then double-click to select **PackageDeployer.exe**.
 
 1. On the next screen, select **Continue**.
 
@@ -103,14 +103,14 @@ Follow the steps below to install and configure the Higher Education Crisis Fina
 
 1. On the next screen, select **Finish** to complete and close the setup.
 
-1. After the app is installed, go to [Power Apps](https://make.powerapps.com/) and select your environment from the upper-right corner. You'll see the new app<!--Edit okay? We seem to just be talking about one app here.--> under **Apps**.
+1. After the app is installed, go to [Power Apps](https://make.powerapps.com/) and select your environment from the upper-right corner. You'll see the new app under **Apps**.
 
    > [!div class="mx-imgBorder"]
    > ![Select app](./media/select-app-from-list-of-apps.png "Select app")
 
 The installation also adds the configuration data for the Higher Education Crisis Financial Impact Tracker app.
 
-Select **Higher Education Crisis Financial Impact Tracker App** to open the model-driven app and configure the rest of the deployment settings.<!--note from editor: Here and throughout these articles, I tried to avoid "lets," "allows," "enables" in favor of "focusing on what the user is trying to do," as Writing Style Guide puts it.--> This app has several entities where you can add and manage data for your university system. You can use the area picker on the lower part of the left pane<!--note from editor: "on the left pane" is via Writing Style Guide.--> to select a different area.
+Select **Higher Education Crisis Financial Impact Tracker App** to open the model-driven app and configure the rest of the deployment settings. This app has several entities where you can add and manage data for your university system. You can use the area picker on the lower part of the left pane to select a different area.
 
 ## Step 4: Update the app branding and tracking level
 
@@ -121,7 +121,7 @@ You can change the app icon, color scheme, or display name to match the branding
    > [!div class="mx-imgBorder"]
    > ![App Config record](./media/select-app-config-record.png "App Config record")
 
-1. Select the **Higher Education Crisis Financial Impact Tracker**<!--Edit okay? Seems important to specify which record here, in case there could be more than one..--> record.
+1. Select the **Higher Education Crisis Financial Impact Tracker** record.
 
     > [!div class="mx-imgBorder"]
     > ![Select record](./media/cfit-app-config-record.png "Select record")
@@ -171,5 +171,5 @@ For admin users to use the admin app (the model-driven app), it must be shared w
 
 ## Report issues 
 
-To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
+To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
 

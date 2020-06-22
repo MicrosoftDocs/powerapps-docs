@@ -20,7 +20,7 @@ These reports are intended to be used by directors, deans, and research administ
 
 ## Prerequisites
 
-The Higher Education Crisis Financial Impact Tracker app pulls data from Common Data Service into this Power BI template,<!--Suggested.--> which empowers you to securely store, integrate, and automate the data for use with other business apps, including Power BI, Dynamics 365, and Power Automate.<!--You don't need "and others" when you introduce the list with "including."-->
+The Higher Education Crisis Financial Impact Tracker app pulls data from Common Data Service into this Power BI template, which empowers you to securely store, integrate, and automate the data for use with other business apps, including Power BI, Dynamics 365, and Power Automate.
 
 To use this Power BI template, you need these prerequisites:
 
@@ -38,7 +38,7 @@ You can configure Power BI dashboards in two ways:
 ## Configure a Power BI report by using a blank report canvas<a name="configure-from-blank-report-canvas"></a>
 
 To configure a Power BI report by using a blank report canvas:
-<!--I numbered these steps because bullets didn't seem right.-->
+
 1. Open Power BI Desktop. You might be prompted to **Sign in** to the Power BI service by using your work or school account.
 
    > [!div class="mx-imgBorder"]
@@ -65,7 +65,7 @@ To configure a Power BI report by using a blank report canvas:
     > [!div class="mx-imgBorder"]
     > ![Service URL](./media/ppserviceurl.png "Service URL")
 
-4. After you successfully connect to your environment, you can see the folders for **Entities** and **System**<!--Edit okay? I assume this is a UI string also?--> in the **Navigator**. Expand **Entities**, and select the check boxes for the following entities:<!--In this article even more so than in configure-data.md (which see), I think it's essential to put the text before the graphic.-->
+4. After you successfully connect to your environment, you can see the folders for **Entities** and **System** in the **Navigator**. Expand **Entities**, and select the check boxes for the following entities:
 
    - Account
 
@@ -87,10 +87,10 @@ To configure a Power BI report by using a blank report canvas:
 
    - msft_SponsoredProgram
 
-<!--I don't see the reason for this graphic. Suggest deleting.
+
     > [!div class="mx-imgBorder"]
     > ![Choose entities](./media/chooseentities.png "Choose entities")
--->
+
 5. After you finish selecting the list of entitites, select **Transform Data**. The Query Editor window opens with the selected tables and data loaded.
   
    > [!div class="mx-imgBorder"]
@@ -244,7 +244,7 @@ right side of the page.
    > [!div class="mx-imgBorder"]
    > ![Applied Report](./media/appliedreport.png "Applied Report")
 
-10. Select the icon on the left side of the page to open the **Model** view. You will see the tables that you selected. Use the slider in the lower-right corner to adjust the view size.<!--Edit okay? I moved the "Click Left" graphic here because it seems to apply to this step, not the previous one. (Also, I didn't think "Click left" was the best alt text.)-->
+10. Select the icon on the left side of the page to open the **Model** view. You will see the tables that you selected. Use the slider in the lower-right corner to adjust the view size.
 
     > [!div class="mx-imgBorder"]
     > ![Open the Model view](./media/clickleft.png "Open the Model view")
@@ -262,7 +262,7 @@ right side of the page.
     > [!div class="mx-imgBorder"]
     > ![Create relationship](./media/createrelationship.png "Create relationship")
 
-13. To use the suggested fields in Common Data Service that are pertinent to the Power BI template, your relationship mapping between tables should look like the following.<!--Are these literally what the entity mappings should be? If so, this needs to be explicit in text, it can't only be captured in a graphic. Will this table work?-->
+13. To use the suggested fields in Common Data Service that are pertinent to the Power BI template, your relationship mapping between tables should look like the following.
 
      |From: Table | To: Table | 
      |---|---|---|
@@ -310,14 +310,10 @@ an image on the page and then copying it to other pages. More information:  [Cop
 
 To use your own data collected by the Higher Education Crisis Financial Impact Tracker app, you need to update the data connection in the template. More information: [Create a Power BI report using the Common Data Service connector](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector)
 
-To change the data source, select **Transform data** to open Query Editor. In the **Applied Steps** of Query Editor, change the **Source** for each entity.<!--Edit okay? Assuming these are UI strings.--> Use the Common Data Service environment URL. 
+To change the data source, select **Transform data** to open Query Editor. In the **Applied Steps** of Query Editor, change the **Source** for each entity. Use the Common Data Service environment URL. 
 
 ## Report issues 
 
-To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
+To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
 
-## Disclaimer
 
-This report and data are provided "as is", "with all faults", and without warranty of any kind. Microsoft gives no express warranties or guarantees and
-expressly disclaims all implied warranties, including merchantability, fitness
-for a particular purpose, and non-infringement.

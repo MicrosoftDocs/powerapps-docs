@@ -14,19 +14,19 @@ ms.reviewer: nkrb
 
 This article provides information about how you can use the admin app (a model-driven app) to add and manage master data for your solution. These tasks are typically performed by business admins in your organization.
 
-See the overview video about how to configure master data, or follow the steps in this article.<!--Suggested, to match deploy-solution.md.--> Estimated time to complete these steps: **35–40 minutes**
+See the overview video about how to configure master data, or follow the steps in this article. Estimated time to complete these steps: **35–40 minutes**
 
 ## Demo: Quick overview of how to configure master data 
 
 Watch a quick overview about how to configure master data. 
-<!--note from editor: I see that Ramana's full name and alias are in some of the screens in this video. That should be changed.-->
+
 <br/>
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4xijh]
+> [!VIDEO https://www.youtube.com/watch?v=QOJVe6ONH74]
 
 ## Step 1: Configure and manage setup data for your organization
 
-Use the admin app to create and manage master setup<!--Edit okay? The Step 2 section uses "master data" everywhere; I was confused about what the difference was between these sections.--> data for your organization. This data is required for the Higher Education Crisis Financial Impact Tracker app to work.
+Use the admin app to create and manage master setup data for your organization. This data is required for the Higher Education Crisis Financial Impact Tracker app to work.
 
 > [!IMPORTANT]
 > Ensure that your IT admin has deployed the solution into your organization and has granted appropriate permissions for business admins to use the admin app. More information: [Deploy the Higher Education Crisis Financial Impact Tracker app](deploy-solution.md)
@@ -47,7 +47,7 @@ You must add master setup data to these entities in the following sequence:
 
 7. [Pay Periods](#pay-periods)
 
-Master data is managed from the **Administration** area on the left pane in the admin app.<!--note from editor: Throughout this article, for consistency I've assumed that these are literally the entity names (that is, they're all plural). I hope this is correct?-->
+Master data is managed from the **Administration** area on the left pane in the admin app.
 
 > [!div class="mx-imgBorder"]
 > ![Administration area](./media/administration-area.png "Administration area")
@@ -65,7 +65,7 @@ To update the App Configs entity record:
    > [!div class="mx-imgBorder"]
    > ![Select App Configs](./media/select-app-config-record.png "Select App Configs")
 
-1. Select the record you want to update.<!--Edit okay? Once again, "Select the record" seemed a bit vague.-->
+1. Select the record you want to update.
     
     > [!div class="mx-imgBorder"]
     > ![Select the record](./media/cfit-app-config-record.png "Select record")
@@ -100,7 +100,7 @@ To create a new record in Frequently Asked Questions:
 
 1. On the left pane, select **Administration** > **Frequently Asked Questions**, and then select **New**.
 
-1. Enter values for the fields as described in the following table.<!--Suggest switching the table and image, otherwise you're directing the reader to a graphic for information. The table actually contains the important information.-->
+1. Enter values for the fields as described in the following table.
 
    | Field    | Description |
    |----------|----------------|
@@ -200,7 +200,7 @@ To edit the record, select it, update the values as required, and then select **
 
 ### Loss Reasons
 
-Use the Loss Reasons entity to manage and maintain a list of loss reasons associated with the effort impact.<!--I don't know what this means.-->
+Use the Loss Reasons entity to manage and maintain a list of loss reasons associated with the effort impact.
 
 To create a record in Loss Reasons:
 
@@ -249,7 +249,7 @@ To create a record in Pay Periods:
     |||
 
 1. Select **Save & Close**. The newly created record will be available in the
-    **Pay Periods**<!--Edit okay? --> list.
+    **Pay Periods** list.
 
 To edit the record, select it, update the values as required, and then select **Save & Close**.
 
@@ -267,16 +267,16 @@ You must add master data to these entities in the following sequence:
 
 4. [Sponsored Programs](#sponsored-programs)
 
-5. [Employee Compensations](#employee-compensations)<!--Plural to echo the video. Edit okay?-->
+5. [Employee Compensations](#employee-compensations)
 
-Master data is managed from the **Higher Education Crisis Financial Impact Tracker** area on the left pane in the admin app.<!--Edit okay? The video - and all the other references to the product name in these articles - shows it as **Higher Education Crisis Financial Impact Tracker**. Also, please check my edit to the alt text for the following image. The original didn't seem to fit.-->
+Master data is managed from the **Higher Education Crisis Financial Impact Tracker** area on the left pane in the admin app.
 
 > [!div class="mx-imgBorder"]
 > ![Higher Education Crisis Financial Impact Tracker area on the left pane](./media/cfit-employee-compensation.png "Higher Education Crisis Financial Impact Tracker area on the left pane")
 
 ### Employees
 
-Use the Employees entity to manage and maintain the list of employees who are associated with the sponsored program in different roles, such as Principal Investigator, Co-Principal Investigator, and Researcher.<!--No "etc." via Writing Style Guide.-->
+Use the Employees entity to manage and maintain the list of employees who are associated with the sponsored program in different roles, such as Principal Investigator, Co-Principal Investigator, and Researcher.
 
 To create a record in Employees:
 
@@ -411,8 +411,7 @@ To edit the record, select it, update the values as required, and then select
 
 ### Employee Compensations
 
-Use the Employee Compensations<!--In the video, it looks like this is plural also. Is that the case?--> entity to manage and maintain the employee
-effort amount, effort loss, and loss reason<!--Edit okay?--> by pay period for each
+Use the Employee Compensation entity to manage and maintain the employee effort amount, effort loss, and loss reason by pay period for each
 sponsored program.
 
 To create a record in Employee Compensation:
@@ -450,5 +449,5 @@ To edit the record, select it, update the values as required, and then select
 
 ## Report issues 
 
-To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/emergency-response-issues>.
+To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
 
