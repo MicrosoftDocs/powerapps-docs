@@ -1,14 +1,13 @@
 ---
 title: "Connect a portal to a Common Data Service environment | MicrosoftDocs"
 description: "Learn how to connect a portal to a Common Data Service environment and how to renew the authentication key."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/20/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Connect to a Common Data Service environment using a portal
