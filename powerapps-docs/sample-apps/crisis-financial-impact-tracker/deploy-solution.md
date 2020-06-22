@@ -22,7 +22,7 @@ Watch a quick overview about how to download and deploy the solution.
 
 <br/>
 
-> [!VIDEO https://www.youtube.com/watch?v=IZhgSWfRh4g]
+> [!VIDEO https://www.youtube.com/embed/IZhgSWfRh4g]
 
 ## Step 1: Download the deployment package
 
