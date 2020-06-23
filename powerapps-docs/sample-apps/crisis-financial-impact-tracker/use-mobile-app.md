@@ -12,9 +12,9 @@ ms.reviewer: nkrb
 
 # Use the Higher Education Crisis Financial Impact Tracker mobile app
 
-With the Higher Education Crisis Financial Impact Tracker app, users can review the sponsored programs they're working on and report loss of effort caused by the pandemic or other crisis. 
+With the Higher Education Crisis Financial Impact Tracker app, users can review the sponsored programs they're working on and report loss of effort caused by the pandemic or other crisis.
 
-## Prerequisites 
+## Prerequisites
 
 To get started with the mobile app, you need to download the Power Apps Mobile app on your device using the device's app store.
 
@@ -172,7 +172,8 @@ You can review frequently asked questions by selecting the information symbol ![
 > [!div class="mx-imgBorder"]
 > ![Frequently Asked Questions details](./media/frequently-asked-questions-record-with-details.png "Frequently Asked Questions details")
 
-## Report issues 
+## Issues and feedback 
 
-To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
+- To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
+- For feedback about Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-feedback>.
 
