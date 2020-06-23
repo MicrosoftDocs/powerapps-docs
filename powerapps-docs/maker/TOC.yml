@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 - name: Get started
   items:
   - name: What is Power Apps?
@@ -1729,7 +1728,6 @@
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support
     href: https://powerapps.microsoft.com/support/
-=======
 - name: Get started
   items:
   - name: What is Power Apps?
@@ -3474,4 +3472,3 @@
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support
     href: https://powerapps.microsoft.com/support/
->>>>>>> ae864535ae5aab1966c3c5bd8c4250316a788d91
