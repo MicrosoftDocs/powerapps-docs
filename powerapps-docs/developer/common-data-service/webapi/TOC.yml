@@ -10,6 +10,8 @@
       href: get-started-dynamics-365-web-api-csharp.md
     - name: 'Quick Start: Web API sample (C#)'
       href: quick-start-console-app-csharp.md
+    - name: 'Quick Start: Blazor Server sample (C#)'
+      href: quick-start-blazor-server-app.md
     - name: Enhanced quick start (C#)
       href: enhanced-quick-start.md
     - name: Start Web API project in Visual Studio
