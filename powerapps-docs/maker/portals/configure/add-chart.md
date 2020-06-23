@@ -1,14 +1,13 @@
 ---
 title: "Add a chart to a webpage in a portal | MicrosoftDocs"
 description: "Instructions to add a chart created in a model-driven app to a webpage in the portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 01/29/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Add a chart created in a model-driven app to a webpage in portal

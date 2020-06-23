@@ -43,7 +43,7 @@ The Export to Data Lake service supports initial and incremental writes for enti
 
 Both standard and custom entities can be exported. Notice that the change tracking entity attribute in Common Data Service is used to keep the data synchronized in an efficient manner by detecting what data has changed since it was initially extracted or last synchronized. 
 
-All create, update, delete operations are exported from Common Data Service to the data lake. For example, when a user deletes an Account entity record in Common Data Service, the transaction is replicated to the destination data lake.
+All create, update, and delete operations are exported from Common Data Service to the data lake. For example, when a user deletes an Account entity record in Common Data Service, the transaction is replicated to the destination data lake.
 
 ## Prerequisites
 

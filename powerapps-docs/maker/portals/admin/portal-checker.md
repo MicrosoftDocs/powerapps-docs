@@ -1,14 +1,13 @@
 ---
 title: "Identify and fix customer issues with a portal | MicrosoftDocs"
 description: "Learn to identify and fix customer issues with a portal."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/24/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Portal checker
