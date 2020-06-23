@@ -131,7 +131,7 @@ The list of currently supported standards can be found
 
 ## Availability and Scalability
 
-Common Data Service is designed to meet enterprise-level scalability needs and offers a service level agreement of 99.x uptime.
+Common Data Service is designed to meet enterprise-level scalability needs and offers a service level agreement of 99.9 uptime.
 
 To help ensure service levels, availability and quality, there are entitlement limits to the number of requests users can make each day, which are governed by licenses. There are also service protection limits put in place against malicious behavior that would otherwise disrupt service for all customers.
 
