@@ -169,7 +169,8 @@ For admin users to use the admin app (the model-driven app), it must be shared w
 
 4. Specify the Azure AD group or admin users who you want to share this app with, assign them the **Higher Education Crisis Financial Impact Tracker App User** security role, and then select **Share**.
 
-## Report issues 
+## Issues and feedback 
 
-To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
+- To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
+- For feedback about Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-feedback>.
 
