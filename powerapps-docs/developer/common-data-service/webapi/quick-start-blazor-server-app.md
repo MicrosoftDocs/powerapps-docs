@@ -1,5 +1,5 @@
 ---
-title: "Quick Start: Web API sample (C#) (Common Data Service)| Microsoft Docs"
+title: "Quickstart: Web API sample (C#) (Common Data Service)| Microsoft Docs"
 description: "This sample demonstrates how to authenticate with a Common Data Service Server and then call a basic Web API operation, the WhoAmI Function"
 ms.custom: ""
 ms.date: 06/23/2020
@@ -15,19 +15,19 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Quick Start: Blazor Server Web API sample (C#)
+# Quickstart: Blazor Server Web API sample (C#)
 
-In this quick start you will create a simple Blazor Server application to connect to your Common Data Service environment using the Web API.
+In this quickstart, you'll create a Blazor Server application to connect to your Common Data Service environment using the Web API.
 
-You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value.
+You'll authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value.
 
 > [!NOTE]
-> This is a very simple example to show how to get connected with a minimum of code. The following [Enhanced quick start](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
+> This is a very simple example to show how to get connected with a minimum of code. The following [Enhanced quickstart](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
 
 ## Prerequisites
 
 - Visual Studio (2019 16.6.2 recommended)
-- Familiarity with the Azure Portal
+- Familiarity with the Azure portal
 - Internet connection
 - Valid user account for a Common Data Service instance
 - Admin access to grant application registrations
@@ -35,11 +35,11 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 - Basic understanding of the Visual C# language
 
 > [!NOTE]
-> To authenticate you must have an app registered in Azure Active Directory. The registration will happen automatically as part of the template creation, but will require additional updates in the Azure Portal.
+> To authenticate you must have an app registered in Azure Active Directory. The registration will happen automatically as part of the template creation, but will require additional updates in the Azure portal.
 
 ## Create Visual Studio project
 
-1. Create a new Blazor Server App using **.NET Core 3.1** - do _not_ click "Create" yet
+1. Create a new Blazor Server App using **.NET Core 3.1** - _don't_ click "Create" yet
 
     ![Start a Blazor Server project](../media/quick-start-blazor-server-app-csharp-1.png)
 
@@ -51,11 +51,11 @@ You will authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GE
 
 ## Configure the Application in Active Directory
 
-By default, the template will create a registered application. To connect to Common Data Services requires additional permissions. Open the Azure Portal and log in with your credentials. Navigate to "Active Directory" and "App Registrations" and choose the entry with the same name as your application.
+By default, the template will create a registered application. Connecting to Common Data Services will require additional permissions. Open the Azure portal and log in with your credentials. Navigate to "Active Directory" and "App Registrations" and choose the entry with the same name as your application.
 
 1. Choose "Authentication" and check "Access tokens" under "Implicit grant" then click "Save".
 
-    ![Implicit grant](..media/quick-start-blazor-server-app-csharp-3.png)
+    ![Implicit grant](../media/quick-start-blazor-server-app-csharp-3.png)
 
 1. Choose "Certificates & secrets" and click "New client secret"
 
@@ -127,10 +127,10 @@ The application requires some extra steps to capture the authentication token an
 
 1. Open `Pages/_Host.cshtml` and add the following using statements after the namespace declaration:
 
-```razor
-@using BlazorCommonDataService.Data
-@using Microsoft.AspNetCore.Authentication
-```
+    ```razor
+    @using BlazorCommonDataService.Data
+    @using Microsoft.AspNetCore.Authentication
+    ```
 
 1. After the `<body>` tag, add the following code and update the app component to acquire and pass the token:
 
@@ -146,7 +146,7 @@ The application requires some extra steps to capture the authentication token an
     </app>
     ```
 
-1. Obtain the domain for the Common Data Services management API. One way to do this is to open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), navigate to "environments" then choose "open environment." You should see a URL like: `https://{org}.crm.dynamics.com`
+1. Obtain the organization name for the Common Data Services management API. If you're not sure what the name is, open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), navigate to "environments" then choose "open environment." You will see a URL like this: `https://{org}.crm.dynamics.com`
 
 1. Add an entry to `appsettings.json` named `CDSAPI` with the URL. Add `/api/data/v.9.0/` to the end, so it looks like this:
 
@@ -257,13 +257,18 @@ Press F5 to run the program. The output should look like this:
 
 **Congratulations!** You have successfully connected to the Web API.
 
-The quick start sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. You can expand on the example to perform more complex operations, and wrap the `HttpClient` in a service class to handle the permissions.
+This quickstart sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. You can expand on the example to perform more complex operations, and wrap the `HttpClient` in a service class to handle the permissions.
 
-The [Enhanced quick start](enhanced-quick-start.md) topic shows how to implement exception handling methods, basic authentication method using connection string, a re-usable method to refresh the access token, and introduces how to build re-usable methods to perform data operations.
+The [Enhanced quickstart](enhanced-quick-start.md) topic shows how to:
+
+- implement exception handling methods
+- basic authentication method using a connection string
+- create a reusable method to refresh the access token
+- build reusable methods for data operations
 
 ## Next steps
 
 Learn how to structure your code for a better design.
 
 > [!div class="nextstepaction"]
-> [Enhanced quick start](enhanced-quick-start.md)<br/>
+> [Enhanced quickstart](enhanced-quick-start.md)<br/>
