@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/use-managed-properties.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/use-managed-properties",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/organize-team-develop-solutions.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/team-development-alm",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/dependency-tracking-solution-components.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/dependency-tracking-solution-components",
       "redirect_document_id": "false"

@@ -307,12 +307,6 @@
     href: maintain-managed-solutions.md
   - name: Organize your solutions
     href: organize-solutions.md
-  - name: Organize your team to develop solutions
-    href: organize-team-develop-solutions.md
-  - name: Use managed properties
-    href: use-managed-properties.md
-  - name: Understand how managed solutions are merged
-    href: understand-managed-solutions-merged.md
   - name: Create solutions that support multiple languages
     href: create-solutions-support-multiple-languages.md
   - name: How to manage solutions
