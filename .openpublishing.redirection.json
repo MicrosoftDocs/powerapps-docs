@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/create-solutions-support-multiple-languages.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/create-solutions-support-multiple-languages",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/use-managed-properties.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/use-managed-properties",
       "redirect_document_id": "false"

@@ -307,8 +307,6 @@
     href: maintain-managed-solutions.md
   - name: Organize your solutions
     href: organize-solutions.md
-  - name: Create solutions that support multiple languages
-    href: create-solutions-support-multiple-languages.md
   - name: How to manage solutions
     items:
     - name: Create, export, or import an unmanaged solution
