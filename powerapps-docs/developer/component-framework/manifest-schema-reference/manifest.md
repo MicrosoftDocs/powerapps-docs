@@ -30,6 +30,7 @@ Model-driven apps and canvas apps (public preview)
 |[property](property.md)|[!INCLUDE [property-description](includes/property-description.md)]|0 or more|Model-driven apps and canvas apps (public preview) |
 |[data-set](data-set.md)|[!INCLUDE [data-set-description](includes/data-set-description.md)]|0 or more|Model-driven apps|
 |[resources](resources.md)|[!INCLUDE [resource-description](includes/resources-description.md)]|1 or more|Model-driven apps and canvas apps (public preview) |
+|[feature-usage](feature-usage.md)|[!INCLUDE [feature-usage-description](includes/feature-usage-description.md)]|0 or more|Model-driven apps and canvas apps (public preview) |
 
 ## Example
 
