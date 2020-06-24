@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/27/2020
+ms.date: 06/22/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -73,7 +73,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Error Message         | Overrides the message shown when an error occurs while trying to load the list of notes.                                                                     |
 | Access Denied Message | Overrides the message shown when the user doesn't have sufficient permissions to view the list of notes.                                                    |
 | Empty Message         | Overrides the message shown when the current entity does not have any notes that can be viewed.                                                              |
-| List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders")   To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
+| List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders") <br>  To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
 
 
@@ -161,6 +161,9 @@ You must create and assign the appropriate entity permission to the records as f
     ![Add entity permissions](media/configure-notes/entity-permission.png "Add entity permissions")
 
     ![Add web roles to an entity permission](media/entity-permission-web-roles.png "Add web roles to an entity permission")
+
+> [!IMPORTANT]
+> A user must sign-in and must be the creator of the note to edit or delete it using the portal. Users can't edit or delete a note created by others, even if you assign them entity permissions.
 
 If you created a custom form and added the notes section to it, be sure to select **Notes** as the default tab you want to be visible.
 
