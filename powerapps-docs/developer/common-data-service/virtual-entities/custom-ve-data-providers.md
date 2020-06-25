@@ -9,7 +9,7 @@ applies_to:
 ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d22
 author: "Sunil-Garg" # GitHub ID
 ms.author: "pehecke"
-manager: "kvivek"
+manager: "ryjones"
 search.audienceType: 
   - developer
 search.app: 
