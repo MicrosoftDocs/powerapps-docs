@@ -37,9 +37,9 @@ For example, if the manifest has a property `value` that is an `input-output`, a
 ```TypeScript
 public getOutputs(): IOutputs
 {
-	return {
-		value: this._value
-	};
+    return {
+        value: this._value
+    };
 }
 ```
 
