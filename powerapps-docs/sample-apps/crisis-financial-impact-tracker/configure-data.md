@@ -447,7 +447,8 @@ To create a record in Employee Compensation:
 To edit the record, select it, update the values as required, and then select
 **Save & Close.**
 
-## Report issues 
+## Issues and feedback 
 
-To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
+- To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
+- For feedback about Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-feedback>.
 

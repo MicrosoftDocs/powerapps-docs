@@ -312,8 +312,9 @@ To use your own data collected by the Higher Education Crisis Financial Impact T
 
 To change the data source, select **Transform data** to open Query Editor. In the **Applied Steps** of Query Editor, change the **Source** for each entity. Use the Common Data Service environment URL. 
 
-## Report issues 
+## Issues and feedback 
 
-To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
+- To report an issue with the Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-issues>.
+- For feedback about Higher Education Crisis Financial Impact Tracker app, visit <https://aka.ms/crisis-financial-impact-tracker-feedback>.
 
 

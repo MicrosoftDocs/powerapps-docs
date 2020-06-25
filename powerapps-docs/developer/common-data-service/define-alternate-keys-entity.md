@@ -2,7 +2,7 @@
 title: "Work with alternate keys (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The topic explains about how to create alternate keys for an entity. Alternate keys can be created programmatically or by using the customization tools" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 03/16/2020
+ms.date: 06/24/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -54,7 +54,7 @@ You should be aware of the following constraints when creating alternate keys:
 
 - **Unicode characters in key value**
 
-  If the data within a field that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\` then get or patch actions will not work.  If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with those characters.
+  If the data within a field that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\` then update or upsert (PATCH) actions will not work.  If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with those characters.
 
 <a name="BKMK_crud"></a>   
 
