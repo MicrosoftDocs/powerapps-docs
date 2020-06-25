@@ -25,7 +25,7 @@ Here are some common issues that you might come across while using the Power App
 **Workaround**:
 
 - Open Visual Studio Installer.
-- For Visual Studio 2017, select **Modify**.
+- For Visual Studio 2017 or higher, select **Modify**.
 - Select **Individual Components**.
 - Under Code Tools, check **NuGet targets & Build Tasks**.
 

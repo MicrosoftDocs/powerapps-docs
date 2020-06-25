@@ -1,16 +1,14 @@
 ---
-title: Use the admin app and dashboard in Regional Emergency Response solution | Microsoft Docs
+title: Use the admin app and dashboard in Regional Government Emergency Response and Monitoring solution | Microsoft Docs
 description: Provides detailed instructions for regional organization business admins to configure master data, manage portal users, and view dashboards for key insights.
-author: KumarVivek
+author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/22/2020
-ms.author: kvivek
+ms.date: 06/05/2020
+ms.author: pankar
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
 # Use the admin app and dashboard
 
@@ -19,6 +17,8 @@ This article is meant for business admins in regional medical organizations to u
 -   Add and manage master data in entities required for the solution
 
 -   Create and manage portal users (contacts). These users are typically the admins from parent medical organizations that manage one or more hospital systems.
+
+- View approve, and decline portal user requests.
 
 - View Power BI dashboards in their tenant.
 
@@ -37,12 +37,11 @@ When you sign into the admin (model-driven) app, you will see the entities in th
 
 -   **Hierarchy area**: Data for entities in this area can be added either by importing data from the sample data files or manually. The entities under the **Hierarchy** area are listed in the order you should populate data. Also, parent org admins (hospital admins) can view and manage data under the following entities for their hospital from the portal: **Systems**, **Regions**, and **Facilities**.
 
-    > [!NOTE]
-    > We provide name and FIPS code for all the counties in the Washington state as sample data that you can import. To obtain data counties in other states, visit <https://www.census.gov/geographies/reference-files/2018/demo/popest/2018-fips.html>
+-   **Admin Entities area**: Data in the **Supplies** entity is added by importing data from the sample data file. You can also manually add and manage supplies data later.
 
--   **Admin Entities area**: Data in the **Supplies** entity is added by importing data from the sample data file. You can manually add and manage supplies data later.
+-   **Customers area**: You use **Portal Users** to [manage portal users](#manage-portal-users) and **User Requests** to [manage portal user requests](#manage-portal-user-requests).
 
--   **Customers area**: You use the **Portal Users** entity to add and manage portal users. More information: [Manage portal users](#manage-portal-users)
+-   **Resources area**: Select **Documentation** to view this document.
 
 There are two ways in which you can add master data to entities in the app:
 
@@ -210,7 +209,7 @@ To create a record:
 
 To edit the record, select the record, update the values as required, and select **Save & Close.**
 
-### Facilities data
+#### Facilities data
 
 The **Facilities** entity lets you manage the hospital locations within each region. For example, **Redmond** and **Bellevue** facilities within the **Seattle** region.
 
@@ -227,19 +226,26 @@ To create a record:
     |------------------------------|---------------------------------------------------|
     | Region    | Select a region this facility is associated with. This list is populated based on the **Regions** data you have created earlier.          |
     | Facility Name | Type the facility name.                 |
-    | DOH Number    | Type Department of Health number for this facility.     |
+    | DOH Number    | Type Department of Health (DOH) number for this facility.     |
     | Follows Droplet Protocol     | Indicates whether the facility follows Droplet Precautions for patients known or suspected to be infected with pathogens transmitted by respiratory droplets, such as in COVID-19 cases. Select **Yes** or **No**. |
     | Description    | Type an optional description.              |
     | Effective Start Data         | Type start date and time for this facility.    |
-    | Licensed Bed Capacity    | Type the total licensed bed capacity.    |
-    | AIIR Acute Care Capacity     | Type the total number of Acute care beds in AIIR (Airborne Infection Isolation Room).     |
-    | AIIR ICU Capacity            | Type the total number of ICU beds in AIIR.       |
-    | Total Vents       | Type the number of total vents in the facility.   |
+    | Total Inpatient Bed Capacity    | Type the total inpatient bed capacity.    |
+    | Neonatal Bed Capacity    | Type the total neonatal bed capacity.    |
+    | Total Mortuary Capacity    | Type the total mortuary capacity. <br/> **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form in the [portal](/powerapps/sample-apps/regional-emergency-response/portals-user#bed-capacity).    |
+    | AIIR ICU Capacity            | Type the total number of ICU beds in AIIR (Airborne Infection Isolation Room).       |
+    | Non-AIIR ICU Capacity        | Type the total number of ICU beds in non-AIIR.      |
+    | Total Pediatric Acute Care Beds (AIIR) Capacity    | Type the total pediatric acute care beds in AIIR.    |
+    | Total Pediatric ICU Beds (AIIR) Capacity    | Type the total pediatric ICU beds in AIIR.    |
     | Effective End Date           | Type end date and time for this facility.       |
-    | Surge Bed Capacity           | Type the number of surge beds the facility can have. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                              |
+    | Total Outpatient Bed Capacity       | Type the total number of outpatient bed capacity in the facility.   |
+    | Total Outflow/Surge/Expansion Bed Capacity           | Type the total number of outflow/surge/expansion beds the facility can have. These beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                              |
+    | Does this facility have an Emergency Department/Overflow location?           | Select **Yes**/**No** to confirm if the facility has emergency department or overflow location(s).   |
+    | AIIR Acute Care Capacity     | Type the total number of Acute care beds in AIIR .     |
     | Non-AIIR Acute Care Capacity | Type the total number of Acute care beds in non- AIIR (Airborne Infection Isolation Room).|
-    | Non-AIIR ICU Capacity        | Type the total number of ICU beds in non-AIIR.              |
-    |Total Mortuary Capacity       | Type the total mortuary capacity for the facility.|
+    | Total Pediatric Acute Care Beds (Non-AIIR) Capacity    | Type the total pediatric acute care beds in non-AIIR.    |
+    | Total Pediatric ICU Beds (Non-AIIR) Capacity    | Type the total pediatric ICU beds in non-AIIR.    |
+    | Total Vents    | Type the total number of ventilators in the facility.    |
     | Facility Address    | Type the Street, City, County, State, Zip code, Latitude, and Longitude for the facility.   |
 
 3.  Select **Save & Close.** The newly created record will be available in the **Facilities** list.
@@ -283,9 +289,9 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
     > [!div class="mx-imgBorder"] 
     > ![Select a role](media/config-select-portal-role.png "Select a role")
 
-6. Select roles as per the portal access you need to provide to the user. To give access to all the features in the portal, select all the three roles: **Organization HealthCare Worker**, **Parent Organization Administrator**, and **Report Viewer**.
+6. Select roles as per the portal access you need to provide to the user. To give access to all the features in the portal, select all the four roles: **Organization HealthCare Worker**, **Parent Organization Administrator**, **Regional Report Viewer**, and **Report Viewer**.
 
-    For information about portal access each of these roles provide, see the [Create user](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#create-user) section in the portal administration topic.
+    For information about each of these roles, see the [User roles](portals-admin-reporting.md#user-roles) section in the portal administration topic.
 
     To grant a role, select the role, and select **Add**.
 
@@ -294,6 +300,42 @@ Use the **Portal Users** entity to add and manage portal users. These portal use
 Depending on the roles(s) you granted to the user, she/he will view respective areas in the portal. More information: [Portal for admins and report viewers](portals-admin-reporting.md) and [Portal for healthcare workers](portals-user.md)
 
 An email will be sent automatically to the newly created user with an invitation code to join portals. The portal user can redeem the invitation to sign in and start using the portal. More information: [Get started with the portal](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#getting-started-with-the-portal)
+
+## Manage portal user requests
+
+You can view, approve, and decline portal user requests using the **User Requests** option.
+
+Use the appropriate view to view a list of approved, declined, inactive, and pending user requests.
+
+> [!div class="mx-imgBorder"] 
+> ![Select a view](media/configure-portal-request-views.png "Select a view")
+
+### Approve or decline user request
+
+To approve or decline user requests:
+
+1.  Sign into the admin app using the URL provided by your IT admin.
+
+2.  In the left pane, select **User Requests**, and then select **Pending Portal User Requests** view. You see a list of portal user requests pending for approval.
+
+3.  Double-click a user request to open it.
+
+4.  On the user request form:
+
+    1. Select the appropriate roles for the user in the **Choose roles for the user** area. To grant or deny a role, select **Yes** or **No** respectively for each role.
+
+    1. From the **Request State** list, select **Approve** or **Decline**.
+
+    1. Select the save icon in the lower-right corner.
+
+        > [!div class="mx-imgBorder"] 
+        > ![Approve or reject a user request](media/user-request-manage.png "Approve or reject a user request")
+
+Based on the approval or decline, the following happens:
+
+- If you *approve* the access request, the user record is created with selected roles and the user receives an email with invitation code. The user can redeem the invitation code to sign in to the portal. More information: [Redeem invitation](portals-admin-reporting.md#redeem-invitation)
+
+- If you *decline* the access request, the user record isn't created, and the user receives an email stating that the request is declined.
 
 ## View the Power BI dashboard
 
@@ -309,6 +351,9 @@ To view the Power BI dashboard:
 
 For detailed information presented in the Power BI dashboard, see [Get insights](/powerapps/sample-apps/regional-emergency-response/portals-admin-reporting#get-insights) in the portal topic.
 
-## Report issues
+## Issues and feedback
 
-To report an issue with the Regional Emergency Response sample app, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Regional Government Emergency Response and Monitoring solution, visit <https://aka.ms/rer-feedback>.
+

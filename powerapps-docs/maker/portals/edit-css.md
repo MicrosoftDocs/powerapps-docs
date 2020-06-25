@@ -1,14 +1,13 @@
 ---
 title: Edit CSS in a portal | Microsoft Docs
 description: Instructions on editing CSS in a portal.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/07/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Edit CSS for themes in Power Apps portal

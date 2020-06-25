@@ -28,6 +28,7 @@ Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>`
 -   Use a `<JavaScriptFunction>` element together with a `<CrmParameter>` element.  
   
 ## Use the PassParams attribute to set dynamic values  
+
  Passing parameters to the target URL by using the **PassParams** attribute provides information to the target application about the context of the record or the user. All the parameters are passed if the ribbon control is configured by using the **PassParams** attribute. The following table lists the parameters that are passed.  
   
 |Parameter|Name|Description|  
@@ -42,7 +43,7 @@ Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>`
 [!INCLUDE[languagecode](../../includes/languagecode.md)]
   
 > [!NOTE]
->  We recommend that you use the entity name instead of the entity type code because the entity type code may be different between MDA installations.  
+>  We recommend that you use the entity name instead of the entity type code because the entity type code may be different between model-driven apps installations.  
   
 ### Example  
  The following sample shows the URL without parameters:  

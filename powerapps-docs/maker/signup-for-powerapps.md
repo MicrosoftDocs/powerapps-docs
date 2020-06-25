@@ -9,9 +9,6 @@ ms.custom: canvas
 ms.date: 02/28/2020
 ms.author: kvivek
 ms.reviewer: kvivek
-searchScope:
-  - GetStarted
-  - PowerApps
 ---
 # Explore Power Apps for free for 30 days
 

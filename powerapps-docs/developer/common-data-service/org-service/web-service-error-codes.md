@@ -66,9 +66,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />AppConfigFeatureNotEnabled<br />**Hex**:<br />80072200<br />**Number**:<br />-2147016192|In-App Customization App Configuration feature is not enabled.|
 > |**Name**:<br />AppEntityLimitExceeded<br />**Hex**:<br />80048547<br />**Number**:<br />-2147187385|{0}|
 > |**Name**:<br />ApplicationMetadataConverterFailed<br />**Hex**:<br />8005F231<br />**Number**:<br />-2147093967|Sorry, something went wrong. Please try again, or restart the app.|
-> |**Name**:<br />ApplicationMetadatadaCreateFailed<br />**Hex**:<br />8005F233<br />**Number**:<br />-2147093965|Sorry, something went wrong. Please try again, or restart the app.|
-> |**Name**:<br />ApplicationMetadatadaNullData<br />**Hex**:<br />8005F232<br />**Number**:<br />-2147093966|Sorry, something went wrong. Please try again, or restart the app.|
-> |**Name**:<br />ApplicationMetadatadaUpdateFailed<br />**Hex**:<br />8005F234<br />**Number**:<br />-2147093964|Sorry, something went wrong. Please try again, or restart the app.|
+> |**Name**:<br />ApplicationMetadataCreateFailed<br />**Hex**:<br />8005F233<br />**Number**:<br />-2147093965|Sorry, something went wrong. Please try again, or restart the app.|
+> |**Name**:<br />ApplicationMetadataNullData<br />**Hex**:<br />8005F232<br />**Number**:<br />-2147093966|Sorry, something went wrong. Please try again, or restart the app.|
+> |**Name**:<br />ApplicationMetadataUpdateFailed<br />**Hex**:<br />8005F234<br />**Number**:<br />-2147093964|Sorry, something went wrong. Please try again, or restart the app.|
 > |**Name**:<br />ApplicationMetadataFailedWithContinue<br />**Hex**:<br />8005F241<br />**Number**:<br />-2147093951|There was a problem with the server configuration changes.  You can continue using the application, but may experience difficulties, including the inability to save changes. Please contact your Dynamics 365 administrator and give them the information available in ‘more information’.|
 > |**Name**:<br />ApplicationMetadataGetPreviewMetadataUnknownError<br />**Hex**:<br />8005F230<br />**Number**:<br />-2147093968|Sorry, something went wrong. Please try again, or restart the app.|
 > |**Name**:<br />ApplicationMetadataPrepareCustomizationsAppLock<br />**Hex**:<br />8005F237<br />**Number**:<br />-2147093961|We encountered some issues when we tried to prepare your customizations for your users. Users on some clients won't be able to download your customization updates until this issue is resolved.|
@@ -683,9 +683,9 @@ This topic lists the error codes you might encounter when you debug your code.
 > |**Name**:<br />CanvasAppsExpectedFileMissing<br />**Hex**:<br />80072356<br />**Number**:<br />-2147015850|The solution specified an expected assets file but that file was missing or invalid.|
 > |**Name**:<br />CanvasAppsInvalidSolutionFileContent<br />**Hex**:<br />80072354<br />**Number**:<br />-2147015852|The request to import a canvas app should contain at least one asset file.|
 > |**Name**:<br />CanvasAppsNotEnabled<br />**Hex**:<br />80072351<br />**Number**:<br />-2147015855|Creation and editing of Canvas Apps is not enabled.|
-> |**Name**:<br />CanvasAppsServiceRequestClientFailure<br />**Hex**:<br />80072352<br />**Number**:<br />-2147015854|The request to the PowerApps service failed with a client failure.|
-> |**Name**:<br />CanvasAppsServiceRequestServerFailure<br />**Hex**:<br />80072353<br />**Number**:<br />-2147015853|The request to the PowerApps service failed with a server failure.|
-> |**Name**:<br />CanvasAppsUnexpectedCanvasAppId<br />**Hex**:<br />80072355<br />**Number**:<br />-2147015851|The request to the PowerApps service resulted in a new canvasappid when the previously existing value was expected.|
+> |**Name**:<br />CanvasAppsServiceRequestClientFailure<br />**Hex**:<br />80072352<br />**Number**:<br />-2147015854|The request to the Power Apps service failed with a client failure.|
+> |**Name**:<br />CanvasAppsServiceRequestServerFailure<br />**Hex**:<br />80072353<br />**Number**:<br />-2147015853|The request to the Power Apps service failed with a server failure.|
+> |**Name**:<br />CanvasAppsUnexpectedCanvasAppId<br />**Hex**:<br />80072355<br />**Number**:<br />-2147015851|The request to the Power Apps service resulted in a new canvasappid when the previously existing value was expected.|
 > |**Name**:<br />CanvasAppVersionDoesNotMatchLatestPublishedVersion<br />**Hex**:<br />80072358<br />**Number**:<br />-2147015848|The latest published version of the canvas app does not match the version known by the Dynamics service.|
 > |**Name**:<br />CanvasAppVersionMissingOrInvalid<br />**Hex**:<br />80072357<br />**Number**:<br />-2147015849|The app version of the canvas app was not set or was an invalid value.|
 > |**Name**:<br />CAPolicyValidationFailedLateBind<br />**Hex**:<br />80072561<br />**Number**:<br />-2147015327|The user is in an admin restricted location.|

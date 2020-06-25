@@ -1,14 +1,13 @@
 ---
 title: "Enable maintenance mode for a portal | MicrosoftDocs"
 description: "Learn how to enable maintenance mode with your portal."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/11/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Maintenance mode for a portal

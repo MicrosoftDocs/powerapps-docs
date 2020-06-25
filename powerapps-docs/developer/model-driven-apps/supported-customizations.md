@@ -18,7 +18,7 @@ search.app:
 # Get started with Model-driven apps customization using code
 
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-extensions
-Split to just include MDA issues
+Split to just include model-driven apps issues
  -->
 
 You can customize model-driven apps by using tools that are available in the Power Apps portal or that are described in the documentation. These customizations are supported and can be upgraded.
@@ -36,9 +36,9 @@ The following customization methods can be used to produce fully supported custo
 
 - Customization in the Power Apps portal or solution explorer. For more information, see [Overview of building model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
 
-- Settings in the web application. For more information, see [Administer model-driven apps](/dynamics365/customer-engagement/admin/admin-guide).
+- Settings in the web application. For more information, see [Administer model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
 
-- Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
+- Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-reporting-to-app).
 
 > [!NOTE]
 > The behavior of model-driven apps depend on customizations applied to the associated Common Data Service. More information: [Supported Customizations for Common Data Service](../common-data-service/supported-customizations.md)

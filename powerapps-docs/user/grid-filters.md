@@ -19,6 +19,10 @@ search.app:
 
 Grids in the Unified Interface have been improved to increase the amount of data you can see on your screen. Now you can choose from many different filtering options for a column; the type of data in the column determines which filter options are available. For example, the **Full Name** column in the **Contacts** grid has different filter options than the **Activity Type** column in the **Activities** grid.
 
+Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in Advanced Find. 
+
+> [!IMPORTANT]
+> In the Unified Interface grids  don't prepopulate column filters based on the current view definition.
 
    > [!div class="mx-imgBorder"]
    > ![Grid filtering](media/filter-options.png "Grid filtering")
@@ -27,6 +31,7 @@ Grids in the Unified Interface have been improved to increase the amount of data
 ## Grid and filter navigation
 
 When you filter data on a grid, the main grid page remembers the filter, sort order, and the page state when you navigate away and then return to the page. This works the same when data is filtered on quick find, column filtering, page number, and more. 
+
 
    > [!div class="mx-imgBorder"]
    > ![Navigating back to the page opens it in the same state](media/grid-remember-state-on-back-navigate.gif "Navigating back to the page opens it in the same state")
@@ -50,6 +55,8 @@ You can also open primary field and lookup fields in a new tab or window.
 ## Lookup field column
 
 When you filter on a lookup column, you can select from a list of records to filter by rather than manually typing in the data. For example, on a **Primary Contact** lookup column, you can select the contact name from the list of records to filter by.
+
+The filter on a lookup column helps you complete the search by suggesting results inline. These results are based the entity being looked up and will include all records with no filter.
 
    > [!div class="mx-imgBorder"]
    > ![Lookup filtering](media/lookup-filter.png "Lookup filtering")
@@ -115,6 +122,8 @@ To switch back to the old quick-find search experience that uses an entity's qui
 2. Go to **Settings** > **Administration** > **System Settings**.
 
 3. On the **General** tab, under **Set up Quick Find**, select **Yes** for **Use quick find view of an entity for searching on grids and sub-grids**.
+
+
 
 
 

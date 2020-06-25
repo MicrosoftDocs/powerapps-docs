@@ -223,7 +223,7 @@ After all SharePoint lists have been created, you can import the app and connect
 This app allows you to record a user's location and store it in your SharePoint site whenever a user sets their status. Your crisis management team can view this data in a Power BI report.
 
 > [!NOTE]
-> Enabling location updates is optional. You can skip this section if you don't want to track user location.
+> Enabling location updates is optional. You can skip this section if you don't want to track user location. Additionally, location tracking is currently not supported on Teams desktop.
 
 **To enable location updates**
 
@@ -232,7 +232,7 @@ This app allows you to record a user's location and store it in your SharePoint 
 1. Copy and paste the following snippet in the formula bar for the **OnSelect** property.
 
     > [!NOTE]
-    > The following snippet is intended to work with versions of the solution that are older than 2020.03.16.
+    > The following snippet is intended to work with versions of the solution that are older than 2020.03.16. For newer versions, edit the code after *// To implement location* comment.
 
 
     ```

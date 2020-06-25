@@ -2,7 +2,7 @@
 title: "Create custom help pages | MicrosoftDocs"
 description: "Create custom help pages on UCI"
 ms.custom: ""
-ms.date: 09/13/2019
+ms.date: 06/19/2020
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.suite: ""
@@ -51,7 +51,7 @@ Custom help panes don't provide the following key features that are available wi
 To author custom help panes, you need the following: 
 - Version 9.1.0.10300 or later.
 - Global create, read, write, delete, append, and append to permissions on the **Help Page** privilege. By default, System Administrator and System Customizer security roles both have this privilege.  
-- [Your environment must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment)
+- [Your environment must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment) 
 
 ## Enable custom help panes for your environment
 1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
@@ -63,7 +63,8 @@ To author custom help panes, you need the following:
     > ![Enable custom help panes](media/enable-custom-help-panes.png "Enable custom help panes")
 
 > [!IMPORTANT]
-> You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are both set to **No**.  
+> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are both set to **No**.  
+> - Some environments may require that you also set **Enable Learning Path** to **Yes**.
  
 ## Context-sensitive custom help
 Each help pane is unique for these contexts: 
@@ -88,9 +89,6 @@ By default, a help pane stays open and on the help content you first opened it w
     - Enter text by typing directly in the help pane area. 
     - Format text by using the rich text commands, such as bold, italic, strikethrough, and create lists. 
     - Select the **Insert** tab to add sections, video, images, links, coach marks, and balloon help. 
-<!-- confirm the image is safe for use
-    > [!div class="mx-imgBorder"] 
-    > ![Custom help pane edit](media/custom-help-pane-edit.png)  -->
 4.	To save your changes, select **Save**.  
 
 ### Free-form text

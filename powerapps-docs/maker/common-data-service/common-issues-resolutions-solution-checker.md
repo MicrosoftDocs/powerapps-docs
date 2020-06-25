@@ -224,7 +224,7 @@ Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
-To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](solution-patches.md#clone-a-solution).
+To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](/power-platform/alm/update-solutions-alm#clone-a-solution).
 
 ## Solution checker will not analyze empty solutions
 
@@ -247,6 +247,10 @@ The workaround is to create smaller solutions with fewer components to be analyz
 ## Line number references for issues in HTML resources with embedded JavaScript are not correct
 
 When HTML web resources are processed within solution checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
+
+## Web-avoid-eval error for Power Apps component framework code components
+
+If a web-avoid-eval error is reported for a Power Apps component framework code component created using CLI tooling, package your control with `msbuild /p:configuration=Release` or `npm run build -- --buildMode production` to produce a release build that does not include 'eval' usage.
 
 ## Web-unsupported-syntax issue for web resources
 

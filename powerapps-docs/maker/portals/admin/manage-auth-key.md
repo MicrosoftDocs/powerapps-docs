@@ -1,14 +1,13 @@
 ---
 title: "Connect a portal to a Common Data Service environment | MicrosoftDocs"
 description: "Learn how to connect a portal to a Common Data Service environment and how to renew the authentication key."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-ms
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 05/20/2020
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Connect to a Common Data Service environment using a portal
@@ -17,9 +16,9 @@ A portal connects to a Common Data Service environment using an Azure Active Dir
 
 ![Connecting a portal with Common Data Service environment](../media/connect-with-dynamics.png "Connecting a portal with Common Data Service environment")
 
-Each portal has a separate Azure Active Directory application associated with it, whether it is connected to the same Common Data Service environment or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
+Each portal has a separate Azure Active Directory application associated with it, whether it's connected to the same Common Data Service environment or not. The default Azure Active Directory authentication provider created for a portal uses the same Azure Active Directory application to authenticate the portal. Authorization is enforced by web roles assigned to the user accessing the portal.
 
-You can see the associated portal application in Azure Active Directory. The name of this application will be Microsoft CRM Portals, and the portal ID is in the **App ID URI** field in the Azure Active Directory application. The person who provisions the portal owns this application. You should not delete or modify this application, or you might break the portal functionality. You must be the application owner to manage a portal from the Power Apps Portals admin center.
+You can see the associated portal application in Azure Active Directory. The name of this application will be Microsoft CRM Portals, and the portal ID is in the **App ID URI** field in the Azure Active Directory application. The person who provisions the portal owns this application. Don't delete or modify this application, or you might break the portal functionality. You must be the application owner to manage a portal from the Power Apps Portals admin center.
 
 ## Authentication key
 
@@ -30,7 +29,7 @@ For a portal to connect to Common Data Service using an Azure Active Directory a
 
 ### Authentication key details
 
-The details of an authentication key is displayed on Power Apps Portals admin center and portal.
+The details of an authentication key are displayed on Power Apps Portals admin center and portal.
 
 **Power Apps Portals admin center**
 
@@ -55,11 +54,11 @@ The details of an authentication key is displayed on Power Apps Portals admin ce
 
 ### Authentication key expiration notification
 
-Before the authentication key expires, you will be notified by emails, Power Apps Portals admin center, and portal.
+Before the authentication key expires, you'll be notified by emails, Power Apps Portals admin center, and portal.
 
 **Email**
 
-Email will be sent to people who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-email-notifications)
+Email will be sent to those users who have signed up for email notification for the organization connected to their portal. More information about signing up for email notification: [Manage email notifications to admins](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-email-notifications)
 
 Email notifications are sent at the following intervals: 
 - 90 days 
@@ -77,7 +76,7 @@ Email notifications are sent at the following intervals:
 - 6 hours 
 - 3 hours
 
-You will also be notified after the key expires every day until 1 week after key expiration.
+You'll also be notified after the key expires every day until 1 week after key expiration.
 
 > [!NOTE]
 > - Intervals are calculated in UTC from the key expiration date.
@@ -120,8 +119,9 @@ You must renew the key every two years to ensure that your portal can connect to
 
 > [!NOTE]
 > - While this process runs in the background, the portal will restart once.
-> - When you update a key, it is updated for two years.
+> - When you update a key, it's valid for next two years.
 > - This process will take five to seven minutes.
+> - Updating authentication key doesn't change any other portal configuration or the portal state.
 
 ### Troubleshooting
 

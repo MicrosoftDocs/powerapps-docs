@@ -14,15 +14,15 @@ ms.topic: "article"
 
 # How to use the sample components?
 
-All the sample components listed under this section are available to download from [here](https://go.microsoft.com/fwlink/?linkid=2088525) so that you can try them out in your model-driven or canvas apps.
+All the sample components listed under this section are available to download from [here](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework) so that you can try them out in your model-driven or canvas apps.
 
-The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, and the manifest, code, and resources for the sample component.
+The individual sample component topics under this section provide you an overview of the sample component, it's visual appearance, manifest, code, and resources for the sample component.
 
 ## Before you can try the sample components
 
 To try the sample components, you must first:
 
-- [Download](https://go.microsoft.com/fwlink/?linkid=2088525) the sample components so that you have a local copy.
+- [Download](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework) the sample components so that you have a local copy.
 - Install [Power Apps CLI](https://aka.ms/PowerAppsCLI).
 
 ## Try the sample components
@@ -30,7 +30,11 @@ To try the sample components, you must first:
 Follow the steps below to import and try the sample components in your model-driven or canvas app:
 
 1. Navigate to the folder on your computer where you have downloaded the sample components, and extract the .zip file.  
-1. Open Developer Command Prompt for Visual Studio 2017 and navigate to the sample component folder in the extracted folder that you want to see it in runtime. For example, navigate to the `/extracted_folder/TS_IncrementComponent` folder.
+1. Open Developer Command Prompt for Visual Studio 2017 or higher and navigate to the sample component folder in the extracted folder that you want to see it in runtime. For example, navigate to the `/extracted_folder/TS_IncrementComponent` folder.
+
+   >[!NOTE]
+   > You need to go into the specific component folder if you wish to see that particular component in runtime. You can add multiple components into a single solution file during the build process.
+
 1. Run the following command to get all the required dependencies:
     ```CLI
     npm install

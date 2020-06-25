@@ -34,14 +34,12 @@ The customizations.xml file is one of the files included in an exported unmanage
  [Ribbon core schema](ribbon-core-schema.md) 
  [Ribbon types schema](ribbon-types-schema.md)  
  [Ribbon WSS schema](ribbon-wss-schema.md)  
- [SiteMap schema](/dynamics365/customer-engagement/developer/customize-dev/sitemap-schema)<br/> <!-- TODO need to fix the link--> 
- [Form XML schema](form-xml-schema.md)<br/> 
+ [Form XML schema](form-xml-schema.md)  
  [FetchXML schema](../common-data-service/fetchxml-schema.md) 
 
 ## Related Sections
 
- [Schemas used in Dynamics 365](/dynamics365/customer-engagement/developer/schemas-used-dynamics-365)<br/> <!-- TODO need to fix the link--> 
- [When to edit the customizations file](../common-data-service/when-edit-customization-file.md)  
+[When to edit the customizations file](../common-data-service/when-edit-customization-file.md)  
 [Edit the Customizations file with schema validation](edit-customizations-xml-file-schema-validation.md)  
- [Customize the Ribbon for Dynamics 365](customize-commands-ribbon.md)  
- [Change application navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap) <!-- TODO need to fix the link--> 
+[Customize the Ribbon for Dynamics 365](customize-commands-ribbon.md)  
+[Change application navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app) 
