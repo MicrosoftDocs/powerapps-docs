@@ -26,7 +26,7 @@ Model-driven apps and canvas apps (public preview)
 The output will contain a value for each property marked as `input-output` or `bound` in the manifest.
 For example, if the manifest has a property `value` that is an `input-output`, and you want to set that to the local variable `myvalue` you should return:
 
-```javascript
+```TypeScript
 {
     value: myvalue
 }
@@ -34,13 +34,13 @@ For example, if the manifest has a property `value` that is an `input-output`, a
 
 ## Example
 
-```javascript
-MyControl.prototype.getOutputs = function () {
-    var result = {
-        value: this._value
-    };
-    return result;
-};
+```TypeScript
+public getOutputs(): IOutputs
+{
+	return {
+		value: this._value
+	};
+}
 ```
 
 
