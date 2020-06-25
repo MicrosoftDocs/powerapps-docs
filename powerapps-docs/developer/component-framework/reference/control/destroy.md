@@ -25,7 +25,7 @@ Model-driven apps and canvas apps (public preview)
 ```TypeScript
 public destroy(): void
 {
-	this.button.removeEventListener("click", this.onButtonClick);
+    this.button.removeEventListener("click", this.onButtonClick);
 }
 ```
 
