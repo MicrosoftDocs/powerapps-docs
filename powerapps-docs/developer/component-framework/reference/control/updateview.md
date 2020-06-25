@@ -32,7 +32,7 @@ Model-driven apps and canvas apps (public preview)
 ```TypeScript
 public updateView(context: ComponentFramework.Context<IInputs>): void
 {
-	this._labelElement.innerText = "Hello World! (TS)";
+    this._labelElement.innerText = "Hello World! (TS)";
 }
 ```
 
