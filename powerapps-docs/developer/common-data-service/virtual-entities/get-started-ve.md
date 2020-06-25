@@ -1,13 +1,13 @@
 ---
 title: "Get started with virtual entities (Common Data Service) | Microsoft Docs"
 description: "Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service, without replication of data and often without custom coding."
-ms.date: 10/31/2018
+ms.date: 06/24/2020
 ms.service: powerapps
 ms.topic: "get-started-article"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 14c5fbbc-98db-4e49-b245-2c84c1cd11cd
-author: "mayadumesh" # GitHub ID
+author: "Sunil-Garg" # GitHub ID
 ms.author: "jdaly"
 manager: "annbe"
 search.audienceType: 
