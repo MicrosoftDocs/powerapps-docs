@@ -29,10 +29,11 @@ Model-driven apps and canvas apps (public preview)
 
 ## Example
 
-```JavaScript
-MyNameSpace.JSHelloWorldControl.prototype.updateView = function (context) {
-	this._labelElement.innerText = "Hello World! (JS)";
-};
+```TypeScript
+public updateView(context: ComponentFramework.Context<IInputs>): void
+{
+	this._labelElement.innerText = "Hello World! (TS)";
+}
 ```
 
 ## Remarks
