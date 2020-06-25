@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2020
+ms.date: 06/24/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -62,7 +62,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Delete Enabled        | Enables the ability to delete notes from the entity.                                                                                                         |
 | Delete Dialog Options | Contains settings for configuring the dialog box when **DeleteEnabled** is true. See Delete Dialog Options for more details.                                     |
 |File Attachment Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>|
-|Accept MIME Types(s) | Allows you to specify a list of accepted MIME types. |
+|Accept MIME Type(s) | Allows you to specify a list of accepted MIME types. |
 |Restrict MIME Types | Select whether to allow or restrict MIME types.|
 |Maximum File Size (in KB) |Allows you to specify the maximum size of a file that can be attached. |
 | **Advanced settings** |                                                                                                                                                              |
@@ -75,7 +75,6 @@ After adding the configuration, the Note control will be rendered by using the a
 | Empty Message         | Overrides the message shown when the current entity doesn't have any notes that can be viewed.                                                              |
 | List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders")   To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
-
 
 ## Create Dialog Options
 
@@ -217,6 +216,9 @@ Portal web page shows the note in rich-text format.
 However, when editing the note from portal web page, you'll see the note in HTML markup format.
 
 ![Portals form in HTML when editing](media/configure-notes/portals-form-edit.png)
+
+> [!IMPORTANT]
+> If you try to save a note with HTML markup using the portal, you'll see this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation impacts the entire web site record. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
 
 ## Notes configuration for web forms
 

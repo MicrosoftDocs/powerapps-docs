@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2020
+ms.date: 06/24/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
