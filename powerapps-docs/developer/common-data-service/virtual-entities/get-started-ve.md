@@ -8,8 +8,8 @@ applies_to:
   - "Dynamics 365 (online)"
 ms.assetid: 14c5fbbc-98db-4e49-b245-2c84c1cd11cd
 author: "Sunil-Garg" # GitHub ID
-ms.author: "jdaly"
-manager: "annbe"
+ms.author: "pehecke"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
