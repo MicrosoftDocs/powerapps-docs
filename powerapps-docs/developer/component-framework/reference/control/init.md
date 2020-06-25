@@ -35,9 +35,9 @@ Model-driven apps and canvas apps (public preview)
 ```TypeScript
 public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 {
-	this._labelElement = document.createElement("label");
-	this._labelElement.setAttribute("class", "HelloWorldColor");
-	container.appendChild(this._labelElement);
+    this._labelElement = document.createElement("label");
+    this._labelElement.setAttribute("class", "HelloWorldColor");
+    container.appendChild(this._labelElement);
 }
 ```
 
