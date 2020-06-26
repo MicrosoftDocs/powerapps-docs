@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/24/2020
+ms.date: 06/25/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -221,7 +221,7 @@ However, when editing the note from portal web page, you'll see the note in HTML
 ![Portals form in HTML when editing](media/configure-notes/portals-form-edit.png)
 
 > [!IMPORTANT]
-> If you try to save a note with HTML markup using the portal, you'll see this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation impacts the entire web site record. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
+> If you try to save a note with HTML markup using the portal, you'll see this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation applies to entire web site. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
 
 ## Notes configuration for web forms
 

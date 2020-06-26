@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/24/2020
+ms.date: 06/25/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -34,4 +34,4 @@ To view all activities in a portal Timeline:
 3. Since this change is a portal metadata change, [clear the server-side cache](../admin/clear-server-side-cache.md) to ensure the updated data is displayed on the portal.
 
 > [!NOTE]
-> Portal timeline doesn't show inline images embedded within emails.
+> Portal timeline doesn't show inline images in the timeline control. For example, images embedded within emails.
