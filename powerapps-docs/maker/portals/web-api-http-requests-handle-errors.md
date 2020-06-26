@@ -65,7 +65,7 @@ OData-Version: 4.0
 
 ### Example: Wrapper ajax function for CSRF token
 
-```http
+```javascript
 	(function(webapi, $){
 		function safeAjax(ajaxOptions) {
 			var deferredAjax = $.Deferred();
@@ -97,7 +97,7 @@ OData-Version: 4.0
 
 ### Example: Create entity data
 
-```http
+```javascript
 	webapi.safeAjax({
 		type: "POST",
 		url: "/_api/accounts",
@@ -113,7 +113,7 @@ OData-Version: 4.0
 
 ### Example: Update entity data
 
-```http
+```javascript
 		webapi.safeAjax({
 		type: "PATCH",
 		url: "/_api/accounts(00000000-0000-0000-0000-000000000001)",
@@ -129,7 +129,7 @@ OData-Version: 4.0
 
 ### Example: Delete entity data
 
-```http
+```javascript
 		webapi.safeAjax({
 		type: "DELETE",
 		url: "/_api/accounts(00000000-0000-0000-0000-000000000001)",
