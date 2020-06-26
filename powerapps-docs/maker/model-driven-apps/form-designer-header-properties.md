@@ -1,7 +1,7 @@
 ---
 title: "Configure header properties in the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 09/30/2019
+ms.date: 06/26/2020
 ms.reviewer: ""
 ms.service: crm-online
 ms.suite: ""
@@ -88,7 +88,7 @@ To show or hide the header flyout for a model-driven form, follow these steps:
 > - The visibility of header flyout can only be controlled when using high-density form header. When using low-density header, the header flyout is automatically displayed or hidden based on the number of fields in the header and the width of the form.
 > - An image for an entity will be displayed in the header only if the **Primary Imagine** attribute is defined for the entity and the form property **Show image in the form** is enabled. More information: [Image fields](../common-data-service/types-of-fields.md#image-fields). <br />
     Developers can specify an image for an entity by using the [EntityMetadata.PrimaryImageAttribute](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.primaryimageattribute?view=dynamics-general-ce-9) attribute.
-> - When using a high-density header on a form, controls are limited in what is displayed that include a checkbox, datetime, decimal, duration, emailaddress, float, integer, languagepicker, lookup, money, phonenumber, picklist, radio, regarding, textbox, ticker and timezonepicklist.  Any other type of control including custom PCF will not be displayed.  You will need to switch to the high-density header with flyout to ensure your users can access controls in the header that are not in the supported list. 
+> - When using a high-density header on a form, controls are limited in what is displayed that include a checkbox, datetime, decimal, duration, emailaddress, float, integer, languagepicker, lookup, money, phonenumber, picklist, radio, regarding, textbox, ticker and timezonepicklist.  Any other type of control, including custom Power Apps control framework controls, will not be displayed.  You'll need to switch to the high-density header with flyout to ensure your users can access controls in the header that aren't in the supported list. 
 
 
 ## Form designer messages related to form headers
