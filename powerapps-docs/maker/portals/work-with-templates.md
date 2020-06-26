@@ -1,14 +1,13 @@
 ---
 title: Work with templates | Microsoft Docs
 description: Instructions to work with templates in portal.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Work with templates

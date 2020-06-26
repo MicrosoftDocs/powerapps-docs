@@ -1,14 +1,13 @@
 ---
 title: "Use simplified authentication and identity provider configuration (Preview) | MicrosoftDocs"
 description: "Learn how to use quick, easy, and simplified portal configuration for authentication."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/05/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Simplified authentication and identity provider configuration (Preview)
