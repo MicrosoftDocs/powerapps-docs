@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2020
+ms.date: 06/25/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -14,7 +14,7 @@ ms.reviewer: tapanm
 
 Similar to subgrids, adding notes to your managed forms on the portal is easy&mdash;just add the notes control to the model-drive app forms through the [form designer](../model-driven-apps/create-design-forms.md) and you're done. You can configure the behavior of the notes control by using metadata.
 
-> [!NOTE]                                                           
+> [!NOTE]
 > Explicit [Entity Permissions](configure/assign-entity-permissions.md) are required for any notes to appear on the portal. For read and edit, the Read and Write privileges must be granted. For create, two permissions must exist: a permission with the Create and Append privileges must be granted for the note (annotation) entity, the second permission must be assigned to the entity type the note is being attached to with the Append To privilege granted. The **Enable Entity Permissions** check box must be selected on the corresponding entity form or web form step for the entity permissions to take effect.
 
 ## Notes configuration for Entity Forms
@@ -62,7 +62,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Delete Enabled        | Enables the ability to delete notes from the entity.                                                                                                         |
 | Delete Dialog Options | Contains settings for configuring the dialog box when **DeleteEnabled** is true. See Delete Dialog Options for more details.                                     |
 |File Attachment Location | Select the location of the file attachment:<ul><li>Note attachment</li><li>Azure Blob Storage</li></ul>|
-|Accept MIME Types(s) | Allows you to specify a list of accepted MIME types. |
+|Accept MIME Type(s) | Allows you to specify a list of accepted MIME types. |
 |Restrict MIME Types | Select whether to allow or restrict MIME types.|
 |Maximum File Size (in KB) |Allows you to specify the maximum size of a file that can be attached. |
 | **Advanced settings** |                                                                                                                                                              |
@@ -76,7 +76,6 @@ After adding the configuration, the Note control will be rendered by using the a
 | List Orders           | Allows you to set the order in which notes will be displayed. The List Orders setting allows you to set the following: <ul><li>Attribute: the logical name of the column by which you wish to sort</li><li>Alias: the alias for the attribute in the query</li><li>Direction: Ascending (smallest to largest, or first to last), or Descending (largest to smallest, or last to first).</li></ul>  ![Set attributes for list orders](media/set-attributes-list-orders.png "Set attributes for list orders") <br>  To add a sorting rule, select "Column" (4) and fill in the details. List Orders will be processed in order from the top of the list having highest priority.|
 ||
 
-
 ## Create Dialog Options
 
 | Name                               | Description                                                                                                                                 |
@@ -88,7 +87,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Attach File Accept                 | The MIME type accepted by the file upload input.                                                                                            |
 | **Advanced settings**              |                                                                                                                                             |
 | Note Field Label                   | Overrides the label for the Note field in the Add Note dialog box.                                                                              |
-| Note Field Columns                 | Sets the cols value in the Note &lt;textarea&gt;                                                                                            |
+| Note Field Columns                 | Sets the columns value in the Note &lt;textarea&gt;                                                                                            |
 | Note Field Rows                    | Sets the rows value in the Note &lt;textarea&gt;                                                                                            |
 | Privacy Option Field Label         | Overrides the label for the Privacy Option field (if enabled).                                                                              |
 | Attach File Label                  | Overrides the label for the Attach File field (if enabled)                                                                                  |
@@ -116,7 +115,7 @@ After adding the configuration, the Note control will be rendered by using the a
 | Attach File Accept                 | The MIME type accepted by the file upload input. |
 | **Advanced settings**              |                                                                                              |
 | Note Field Label                   | Overrides the label for the Note field in the Edit Note dialog box.|
-| Note Field Columns                 | Sets the cols value in the Note &lt;textarea&gt;                                                                                             |
+| Note Field Columns                 | Sets the columns value in the Note &lt;textarea&gt;                                                                                             |
 | Note Field Rows                    | Sets the rows value in the Note &lt;textarea&gt;                                                                                             |
 | Privacy Option Field Label         | Overrides the label for the Privacy Option field (if enabled).                                                                                
 | Attach File Label                  | Overrides the label for the Attach File field (if enabled)                                                                                   |
@@ -204,6 +203,25 @@ To enable attachment on an entity form:
 After you configure the notes and enable notes attachments, you can see the **Attach File** option on the form:
 
 ![Attach file option](media/configure-notes/attach-file-option.png)
+
+### Notes created with rich-text editor
+
+You can view the notes created using the [rich-text editor in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) on your portal web page. However, when you try to edit, you'll see the text in HTML markup format.
+
+For example, the note shows rich-text format in the model-driven app.
+
+![Dynamics 365 form](media/configure-notes/dynamics-365-form.png)
+
+Portal web page shows the note in rich-text format.
+
+![Portals form](media/configure-notes/portals-form.png)
+
+However, when editing the note from portal web page, you'll see the note in HTML markup format.
+
+![Portals form in HTML when editing](media/configure-notes/portals-form-edit.png)
+
+> [!IMPORTANT]
+> If you try to save a note with HTML markup using the portal, you'll see this error: *We're sorry, but something went wrong. Please try again, and if this persists, contact the website administrator.* To save the notes with HTML markup using the portal, you'll have to disable the request validation. However, disabling request validation applies to the entire web site. For the steps to disable the request validation, and to understand its impact, go to [request validation](configure/entity-forms.md#request-validation).
 
 ## Notes configuration for web forms
 
