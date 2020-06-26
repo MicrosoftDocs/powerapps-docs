@@ -39,7 +39,6 @@ HTTP requests can use different kinds of methods. However, portals Web API only 
 
 | Method | Usage |
 | - | - |
-| Get    | Use when retrieving data. |
 | Post   | Creating entities and calling actions. |
 | Patch  | Use when updating entities or doing upsert operation. |
 | Delete | Use when deleting entities or individual properties of entities. |
@@ -190,11 +189,8 @@ Error codes are displayed in hexadecimal format for all handled scenarios. The f
 | 90040104 | EntityPermissionDeleteIsMissing | You don’t have permission to delete {0) entity. |
 | 90040105 | EntityPermissionAppendIsMissngDuringAssociationChange | You don’t have permission to associate or disassociate entity {0} with {1}. |
 | 90040106 | EntityPermissionAppendToIsMissingDuringAssociationChange | You don’t have permission to associate or disassociate entity {1} to {0} |
-| 90040107 | CannotDeleteDueToAssociation | The object you tried to delete is associated with another object and cannot be deleted. |
-| 90040108 | MissingPortalRequestVerificationToken | An invalid request verification token was passed. |
+| 90040107 | HttpAntiForgeryException | The anti-forgery cookie token and form field token do not match. |
 | 90040109 | MissingPortalSessionCookie | An Invalid session token was passed into the throwing method. |
-| 9004010A | InvalidOperation | Invalid Operation performed. |
-| 9004010B | NotSupported | This action is not supported. |
 | 9004010C | ResourceDoesNotExists | Resource not found for the segment '{0}'. |
 | 9004010D | CDSError | CDS error occurred. |
 
