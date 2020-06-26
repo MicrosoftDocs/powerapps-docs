@@ -141,18 +141,6 @@ Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $fa
 
 More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)
 
-### I'm getting an error that I don't have appropriate license to access this website.
-
-> Remove June 2020 ->>>  With the June 2020 update of Power Apps portals, internal users with Azure Active Directory credentials trying to sign-in without a valid license assigned will see this message on the sign-in page: *You don't have a valid license to access this website. Please contact your system administrator*.
-
-![Portal login error](media/portal-login-error.png "Portal login error")
-
-Depending on the SKU type purchased, an administrator will need to either provide an appropriate license to the user, or have app passes available to the environment. If app passes are allocated to the environment, the portal will have to be restarted for changes to take effect.
-
-[!NOTE] Guest users added for [B2B collaboration](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator) in the Azure Active Directory won't be considered as internal users, and will require logins.
-
-For details about licensing of internal users, go to [Portal Licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). For use rights to portals for internal users, go to [use rights to portals for internal users](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users).
-
 ## Licensing and provisioning
 
 ### How do I get a portal subscription?
@@ -186,6 +174,21 @@ Deleting a portal completely requires deleting the Portal website host and as un
 To reset the portal host, follow the steps in [Reset a portal](admin/reset-portal.md). It's important to note that resetting a portal host doesn't affect the configuration done in your Common Data Service environment.
 
 To delete portal solutions, you'll have to delete solutions from the Dynamics 365 solution explorer UI. The order in which Portal solutions should be uninstalled is provided in [Uninstalling Portal Solutions](https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/02/27/portal-troubleshooting-part-three-uninstalling-portal-solutions).
+
+### I'm getting an error that I don't have appropriate license to access this website.
+
+Internal users with Azure Active Directory credentials trying to sign-in without a valid license assigned will see this message on the sign-in page: *You don't have a valid license to access this website. Please contact your system administrator*.
+
+![Portal login error](media/portal-login-error.png "Portal login error")
+
+Depending on the SKU type purchased, an administrator will need to either provide an appropriate license to the user, or have app passes available to the environment. If app passes are allocated to the environment, the portal will have to be restarted for changes to take effect.
+
+> [!NOTE]
+> Guest users added for [B2B collaboration](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator) in the Azure Active Directory won't be considered as internal users, and will require logins.
+
+For details about licensing of internal users, go to [Portal Licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). 
+
+For details about use rights to portals for internal users, go to [use rights to portals for internal users](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users).
 
 ## Common Data Service environment lifecycle
 
