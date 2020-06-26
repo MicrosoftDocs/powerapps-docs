@@ -22,24 +22,16 @@ Construct the Web API URL with the format in the following table.
 | Part | Description |
 | - | - |
 | Protocol | https://                                 |
-| Base URL | \<portal name\>                          |
+| Base URL | \<portal URL\>                          |
 | Web API Path | \_api                                    |
-| Versioning | v[major].[minor][patch]                  |
-| Resource     | Name of entity or action you want to use |
+| Resource     | Name of entity you want to use |
 
 For example, use this format when referring a case:
 
-`https://contoso.powerappsportal.com/api/data/v1.0/case`
+`https://contoso.powerappsportals.com/_api/entity`
 
-@Neeraj - how can we know all available versions?
-
-For entity resources [portal’s entity
-permission](https://docs.microsoft.com/dynamics365/portals/assign-entity-permissions)
-configuration will be owner. <br> @Neeraj - please explain or elaborate above sentence.
-
-## Get portal base URL
-
-Use `GetAPIBaseURL()` JavaScript Client API to get your portal's base URL for API endpoint. For example, the result of a *Get* request is: `https://\<portal name\>/_api`.
+All Web API resources will follow respective [portal’s entity
+permissions](https://docs.microsoft.com/dynamics365/portals/assign-entity-permissions) in context with Web Roles. 
 
 ## HTTP methods
 
@@ -51,21 +43,18 @@ HTTP requests can use different kinds of methods. However, portals Web API only 
 | Post   | Creating entities and calling actions. |
 | Patch  | Use when updating entities or doing upsert operation. |
 | Delete | Use when deleting entities or individual properties of entities. |
-| Put    | @Neeraj - need description/usage |
+| Put    | Use in limited situations to update individual properties of entities. |
 
 ## HTTP headers
 
 Web API only supports JSON. Each HTTP header must include:
 
 - *Accept* header value of *application/json*, even when no response body is expected.
-- *If-None-Match* null header in the request body to override browser
-caching of Web API request.
 - If the request includes JSON data in the request body, you must include a
 *Content-Type* header with a value of `application/json`.
 
 The current OData version is 4.0, but future versions may allow for new
 capabilities. To ensure no ambiguity about the OData version that will be applied to your code at that point in the future. 
-<br> @Neeraj - what's the above OData version/future versions note regarding?
 
 ### Syntax
 
@@ -73,40 +62,83 @@ capabilities. To ensure no ambiguity about the OData version that will be applie
 Accept: application/json  
 OData-MaxVersion: 4.0  
 OData-Version: 4.0
-If-None-Match: null
 ```
 
-### Example: Get entity data
+### Example: Wrapper ajax function for CSRF token
 
 ```http
-var portalUrl = GetAPIBaseURL(); //Returns portal’s Data API base URL
-var xhttp = new XMLHttpRequest()
-xhttp.open("GET", encodeURI(portalUrl + "/_api/entityname(GUID)"), true);
-xhttp.setRequestHeader("Accept", "application/json");
-xhttp.setRequestHeader("OData-MaxVersion", "4.0");
-xhttp.setRequestHeader("OData-Version", "4.0");
-xhttp.send();
+	(function(webapi, $){
+		function safeAjax(ajaxOptions) {
+			var deferredAjax = $.Deferred();
+	
+			shell.getTokenDeferred().done(function (token) {
+				// add headers for ajax
+				if (!ajaxOptions.headers) {
+					$.extend(ajaxOptions, {
+						headers: {
+							"__RequestVerificationToken": token
+						}
+					}); 
+				} else {
+					ajaxOptions.headers["__RequestVerificationToken"] = token;
+				}
+				$.ajax(ajaxOptions)
+					.done(function(data, textStatus, jqXHR) {
+						validateLoginSession(data, textStatus, jqXHR, deferredAjax.resolve);
+					}).fail(deferredAjax.reject); //ajax
+			}).fail(function () {
+				deferredAjax.rejectWith(this, arguments); // on token failure pass the token ajax and args
+			});
+	
+			return deferredAjax.promise();	
+		}
+		webapi.safeAjax = safeAjax;
+})(window.webapi = window.webapi || {}, jQuery)
 ```
 
 ### Example: Create entity data
 
 ```http
-var portalUrl = GetAPIBaseURL(); //Returns portal’s Data API base URL
-var xhttp = new XMLHttpRequest()
-xhttp.open("POST", encodeURI(portalUrl + "/_api/entityname"), true);
-xhttp.setRequestHeader("Accept", "application/json");
-xhttp.setRequestHeader("Content-Type", "application/json; charset=utf-8");
-xhttp.setRequestHeader("OData-MaxVersion", "4.0");
-xhttp.setRequestHeader("OData-Version", "4.0");
-var body = JSON.stringify ({
-    "name": "Sample entity name",
-    "creditonhold": false,
-    "address1_latitude": 47.639583,
-    "description": "This is the description of the sample account",
-    "revenue": 5000000,
-    "accountcategorycode": 1
-});
-xhttp.send(body);
+	webapi.safeAjax({
+		type: "POST",
+		url: "/_api/accounts",
+		contentType: "application/json",
+		data: JSON.stringify({
+			"name": "Sample Account"
+		}),
+		success: function (res, status, xhr) {
+			console.log("entityID: "+ xhr.getResponseHeader("entityid"))
+		}
+	});
+```
+
+### Example: Update entity data
+
+```http
+		webapi.safeAjax({
+		type: "PATCH",
+		url: "/_api/accounts(00000000-0000-0000-0000-000000000001)",
+		contentType: "application/json",
+		data: JSON.stringify({
+			"name": "Sample Account - Updated"
+		}),
+		success: function (res) {
+			console.log(res);
+		}
+	});
+```
+
+### Example: Delete entity data
+
+```http
+		webapi.safeAjax({
+		type: "DELETE",
+		url: "/_api/accounts(00000000-0000-0000-0000-000000000001)",
+		contentType: "application/json",
+		success: function (res) {
+			console.log(res);
+		}
+	});
 ```
 
 ## Identify status codes
@@ -117,43 +149,16 @@ Each HTTP request response includes a status code. Status codes returned by the 
 | - | - | - |
 | 200 OK | Expect this response when your operation will return data in the response body. | Success |
 | 204 No Content | Expect this response when your operation succeeds, but doesn't return data in the response body. | Success |
-| 403 Forbidden | Expect this response for the following types of errors: <br> - AccessDenied <br> - AttributePermissionIsMissing <br> - EntityPermissionWriteIsMissingDuringUpdate <br> - EntityPermissionCreateIsMissing <br> - EntityPermissionDeleteIsMissing <br> - EntityPermissionAppendIsMissngDuringAssociationChange - <br> - EntityPermissionAppendToIsMissingDuringAssociateChange | Client Error |
+| 403 Forbidden | Expect this response for the following types of errors: <br> - AccessDenied <br> - AttributePermissionIsMissing <br> - EntityPermissionWriteIsMissingDuringUpdate <br> - EntityPermissionCreateIsMissing <br> - EntityPermissionDeleteIsMissing <br> - EntityPermissionAppendIsMissngDuringAssociationChange <br> - EntityPermissionAppendToIsMissingDuringAssociateChange | Client Error |
 | 401 Unauthorized | Expect this response for the following types of errors: <br> - MissingPortalRequestVerificationToken <br> - MissingPortalSessionCookie | Client Error |
 | 413 Payload Too Large | Expect this response when the request length is too large. | Client Error |
 | 400 BadRequest | Expect this response when an argument is invalid. <br> InvalidAttribute | Client Error |
 | 404 Not Found | - Expect this response when the resource doesn’t exist. <br> - Entity isn't exposed for web api. | Client Error |
-| 405 Method Not Allowed | This error occurs for incorrect method and resource combinations. For example, you can’t use DELETE or PATCH on a collection of entities. This situation can happen for the following types of errors: <br> - CannotDeleteDueToAssociation <br> - InvalidOperation <br> - NotSupported | Client Error |
-| 429 Too Many Requests  | Expect this response when API limits are exceeded. More information: [Service Protection API Limits](../../developer/common-data-service/api-limits.md). | Client Error |
+| 405 Method Not Allowed | This error occurs for incorrect method and resource combinations. For example, you can’t use DELETE or PATCH on a collection of entities. This situation can happen for the following types of errors: <br> - InvalidOperation <br> - NotSupported | Client Error |
 | 501 Not Implemented | Expect this response when some requested operation isn't implemented. | Server Error |
 | 503 Service Unavailable | Expect this response when the web API service isn’t available. | Server Error |
 
-@Neeraj: need more information about what the following table illustrates: (I've formatted table anyways but needs elaboration)
-
-| Header Name | Is CDS specific? |
-| - | - |
-| cache-control: no-cache | No |
-| allow: OPTIONS,GET,HEAD,POST | No |
-| expires: -1 | No |
-| --location: https://YourOrg.crm.dynamics.com/_api/v9.1/entityName(GUID) | Yes |
-| --x-ms-service-request-id: GUID, GUID | Yes |
-| strict-transport-security: max-age=31536000; includeSubDomains | No |
-| req_id: GUID | No |
-| access-control-allow-origin: * | No |
-| access-control-expose-headers: Preference-Applied,OData-EntityId,Location,ETag,OData-Version,Content-Encoding,Transfer-Encoding,Content-Length,Retry-After | No |
-| --authactivityid: GUID | Yes |
-| odata-version: 4.0 | No |
-| --odata-entityid: https://YourOrg.crm.dynamics.com/_api/v9.1/entityName(GUID) | Yes |
-| --x-ms-ratelimit-burst-remaining-xrm-requests: 5993 | Yes |
-| --x-ms-ratelimit-time-remaining-xrm-requests: 1,199.46 | Yes |
-| public: OPTIONS,GET,HEAD,POST | No |
-| timing-allow-origin: * | No |
-| x-source: 1274022621962271406513018456102176233138130371162212021413319206254117391372519213849 | No |
-| date: Mon, 18 May 2020 10:38:54 GMT | No |
-| X-Firefox-Spdy: h2 | No |
-
 ## Parse errors from the response 
-
-The property [*innererror*](../../developer/common-data-service/webapi/compose-http-requests-handle-errors.md#parse-errors-from-the-response) is going to be deprecated. 
 
 Consider the following example response that still includes the innererror.
 
@@ -162,40 +167,13 @@ Consider the following example response that still includes the innererror.
   "error":{
     "code": "\<This code is not related to the http status code and is frequently empty\>",
     "message": "\<A message describing the error\>",
+    "cdscode": "\<CDS error code\>",
     "innererror": {
-        “code”: “800xxxx”,
-        "message": "\<A message describing the error, this is frequently the same as the outer message\>",
-        "type": "Microsoft.Crm.CrmHttpException",
-        "stacktrace": "\<Details from the server about where the error occurred\>"
+        "code": "800xxxx",
+        "message": "\<A message describing the error, this is frequently the same as the outer message\>"
       }
     }
   }
-```
-In this example, Common Data Service shows the following error.
-
-```json
-{
-  "error":{
-  "code": "800XXX
-  "message": " error message
-  }
-}
-```
-
-In this example, portals shows the following error.
-
-```json
-{
-  "error":{
-  "code": "9004010D"
-  "message": "CDS error occurred",
-  “cdscode”: “800xxx”,
-  "innererror": {
-      "code": "800XXX
-      "message": " error message
-    }
-  }
-}
 ```
 
 ## Error codes
