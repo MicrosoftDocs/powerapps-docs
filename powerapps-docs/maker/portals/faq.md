@@ -143,10 +143,15 @@ More information: [Disable portal creation in a tenant](create-portal.md#disable
 
 ### I'm getting an error that I don't have appropriate license to access this website.
 
-Internal users of an organization that use portals for accessing authenticated pages require that licenses be assigned to the environment that a portal is connected to. You  can read more about the user rights for portals for internal users [here](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users). When an environment doesn't have licenses assigned, internal users will get an error such as follows:
+With the June 2020 update of Power Apps portals, internal users with Azure Active Directory credentials trying to sign-in without a valid license assigned will see this message on the sign-in page: *You don't have a valid license to access this website. Please contact your system administrator*.
 
-> [!div class=mx-imgBorder]
-> ![Portal login error](media/portal-login-error.png "Portal login error")
+  ![Portal login error](media/portal-login-error.png "Portal login error")
+
+Depending on the SKU type purchased, an administrator will need to either provide an appropriate license to the user, or have app passes available to the environment. If app passes are allocated to the environment, the portal will have to be restarted for changes to take effect.
+
+> [!NOTE] Guest users added for [B2B collaboration](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator) in the Azure Active Directory won't be considered as internal users, and will require logins.
+
+For details about licensing of internal users, go to [Portal Licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). For use rights to portals for internal users, go to [use rights to portals for internal users](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users).
 
 ## Licensing and provisioning
 
