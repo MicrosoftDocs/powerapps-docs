@@ -10,9 +10,14 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Portals operations using the Web API
+# Portals operations using the Web API (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 You can perform the [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of [HTTP requests and responses](../../developer/common-data-service/webapi/compose-http-requests-handle-errors.md). This article shows sample operations, methods, URI, and the sample JSON you can use in the HTTP request.
+
+> [!IMPORTANT]
+> This feature is in preview. For more information, see [experimental and preview features](../canvas-apps/working-with-experimental-preview.md).
 
 ## Create an entity record
 
@@ -44,8 +49,8 @@ For example, the following request body posted to the Account entity set will cr
  "name": "Sample Account",
  "primarycontactid":
  {
-     "firstname": "John",
-     "lastname": "Smith"
+     "firstname": "Alton",
+     "lastname": "Stott"
  },
  "opportunity_customer_accounts":
  [
@@ -297,9 +302,11 @@ You can associate entities on update using the same message described in [Basic 
 
 Complete request and response details: [Associate entities on update using single-valued navigation property](../../developer/common-data-service/webapi/associate-disassociate-entities-using-web-api.md#associate-entities-on-update-using-single-valued-navigation-property)
 
-## Web API Ajax samples
+## Web API AJAX samples
 
-### Wrapper Ajax function 
+This sample demonstrates how to create, update and delete entity records using Asynchronous JavaScript and XML (AJAX).
+
+### Wrapper AJAX function
 
 ```javascript
 	(function(webapi, $){
@@ -307,7 +314,7 @@ Complete request and response details: [Associate entities on update using singl
 			var deferredAjax = $.Deferred();
 	
 			shell.getTokenDeferred().done(function (token) {
-				// add headers for ajax
+				// add headers for AJAX
 				if (!ajaxOptions.headers) {
 					$.extend(ajaxOptions, {
 						headers: {
@@ -320,9 +327,9 @@ Complete request and response details: [Associate entities on update using singl
 				$.ajax(ajaxOptions)
 					.done(function(data, textStatus, jqXHR) {
 						validateLoginSession(data, textStatus, jqXHR, deferredAjax.resolve);
-					}).fail(deferredAjax.reject); //ajax
+					}).fail(deferredAjax.reject); //AJAX
 			}).fail(function () {
-				deferredAjax.rejectWith(this, arguments); // on token failure pass the token ajax and args
+				deferredAjax.rejectWith(this, arguments); // on token failure pass the token AJAX and args
 			});
 	
 			return deferredAjax.promise();	
@@ -354,7 +361,7 @@ Complete request and response details: [Associate entities on update using singl
 ```javascript
   webapi.safeAjax({
     type: "PATCH",
-    url: "/_api/accounts(1da81c42-ee99-ea11-a811-000d3a37ed0b)",
+    url: "/_api/accounts(00000000-0000-0000-0000-000000000001)",
     contentType: "application/json",
     data: JSON.stringify({
       "name": "Sample Account - Updated"
@@ -370,7 +377,7 @@ Complete request and response details: [Associate entities on update using singl
 ```javascript
 	webapi.safeAjax({
 		type: "DELETE",
-		url: "/_api/accounts(1da81c42-ee99-ea11-a811-000d3a37ed0b)",
+		url: "/_api/accounts(00000000-0000-0000-0000-000000000001)",
 		contentType: "application/json",
 		success: function (res) {
 			console.log(res);

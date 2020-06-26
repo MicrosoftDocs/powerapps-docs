@@ -10,7 +10,9 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Portals Web API
+# Portals Web API (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 ## Overview
 
@@ -19,11 +21,9 @@ Portals Web API enables building a richer user experience inside Power Apps port
 For example, you can create a new account, update a contact, or change the [entity permissions](configure/assign-entity-permissions.md) for a product using portals Web API instead of using Portal Management app.
 
 > [!IMPORTANT]
-> Portals Web APIs are build for creating rich user experience inside portal pages. And it is not optimized for 3rd party services or application integration.
-> Portals Web API operations are limited to entities related to data. For example, entities such as Accounts, Contacts or your custom entity. Configuration of entity metadata, or portal configuration entity data isn't supported when using the portals Web API. For example, configuring portals entities such as adx_contentsnippet, adx_entityform or adx_entitylist isn't supported using portals Web API. 
-
-> [!Known bug]
-> With current release Web APIs operations are not block on configuration entities, however this issue will be fix in upcoming releases. 
+> - Portals Web APIs are build for creating rich user experience inside portal pages. And it is not optimized for 3rd party services or application integration.
+> - Portals Web API operations are limited to entities related to data. For example, entities such as Accounts, Contacts or your custom entity. Configuration of entity metadata, or portal configuration entity data isn't supported when using the portals Web API. For example, configuring portals entities such as adx_contentsnippet, adx_entityform or adx_entitylist isn't supported using portals Web API.
+> - This feature is in preview. For more information, see [experimental and preview features](../canvas-apps/working-with-experimental-preview.md).
 
 ## Web API operations
 
@@ -81,6 +81,10 @@ More information: [Enable and use Activity Logging](https://docs.microsoft.com/p
 
 Portals uses existing license behavior, that includes the API calls
 for each user type. For more information about API limits for Power Apps portals, download and read [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+
+## Known issues
+
+With the current release, Web API operations aren't blocked on configuration entities. However, this issue will be fixed in upcoming releases.
 
 ## Next steps
 

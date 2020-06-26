@@ -10,9 +10,14 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Compose HTTP requests and handle errors for portals Web API
+# Compose HTTP requests and handle errors for portals Web API (Preview)
+
+[This article is pre-release documentation and is subject to change.]
 
 Interacting with the Web API includes composing HTTP requests with required headers and handling HTTP responses, including any errors.
+
+> [!IMPORTANT]
+> This feature is in preview. For more information, see [experimental and preview features](../canvas-apps/working-with-experimental-preview.md).
 
 ## Web API URL and versioning
 
@@ -62,7 +67,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-### Example: Wrapper ajax function for CSRF token
+### Example: Wrapper AJAX function for CSRF token
 
 ```javascript
 	(function(webapi, $){
@@ -158,17 +163,17 @@ Each HTTP request response includes a status code. Status codes returned by the 
 
 ## Parse errors from the response 
 
-Consider the following example response that still includes the innererror.
+Consider the following example response that still includes the inner error.
 
 ```json
 {
   "error":{
-    "code": "\<This code is not related to the http status code and is frequently empty\>",
-    "message": "\<A message describing the error\>",
-    "cdscode": "\<CDS error code\>",
+    "code": "This code is not related to the http status code and is frequently empty",
+    "message": "A message describing the error",
+    "cdscode": "CDS error code",
     "innererror": {
         "code": "800xxxx",
-        "message": "\<A message describing the error, this is frequently the same as the outer message\>"
+        "message": "A message describing the error, this is frequently the same as the outer message."
       }
     }
   }
