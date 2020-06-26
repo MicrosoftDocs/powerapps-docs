@@ -46,7 +46,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
     ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
-You can modify the component by using a number of properties.
+You can modify the component by using a number of [properties](#properties).
 
 ### Set a default search radius
 
