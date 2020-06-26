@@ -60,7 +60,7 @@ The component will start searching at the latitude and longitude, out to the dis
 
 ### Use the map component with the input address component
 
-You can save addresses that a user inputs into the address component as a data collection. You can then retrieve these addresses and display them in the map component.
+You can save addresses that a user inputs into the address component as a data collection. You can then retrieve these addresses and display them in [the map component](geospatial-component-map.md).
 
 1. App the map component and the input address component to your app.
 2. On the **Insert** menu, select **Button** and move it into your app.
