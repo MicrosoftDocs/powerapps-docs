@@ -152,13 +152,11 @@ Complete request and response details: [Update a single property value](../../de
     <th>Operation</th>
     <th>Method</th>
     <th>URI</th>
-    <th>JSON Sample</th>
   </tr>
   <tr>
     <td>Delete a single property value</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000001)/description</i></td>
-    <td><code>@Neeraj: need sample</code></td>
   </tr>
 </table>
 
@@ -172,13 +170,11 @@ Complete request and response details: [Delete a single property value](../../de
     <th>Operation</th>
     <th>Method</th>
     <th>URI</th>
-    <th>JSON Sample</th>
   </tr>
   <tr>
     <td>Basic delete</td>
     <td>DELETE</td>
-    <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000001)</i></td>
-    <td><code>@Neeraj: need sample</code></td>
+    <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000001)</i></td>    
   </tr>
 </table>
 
@@ -212,13 +208,11 @@ Complete request and response details: [Add a reference to a collection-valued n
     <th>Operation</th>
     <th>Method</th>
     <th>URI</th>
-    <th>JSON Sample</th>
   </tr>
   <tr>
     <td>Remove a reference to an entity</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000002)/opportunity_customer_accounts/$ref?$id=[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)</i></td>
-    <td><code>@Neeraj: need sample</code></td>
   </tr>
 </table>
 
@@ -242,19 +236,17 @@ Complete request and response details: [Remove a reference to an entity](../../d
 Complete request and response details: [Change the reference in a single-valued navigation property](../../developer/common-data-service/webapi/associate-disassociate-entities-using-web-api.md#change-the-reference-in-a-single-valued-navigation-property)
 
 ### Remove a reference to an entity for a single-valued navigation property
-
+For a single-valued navigation property, remove the $id query string parameter.
 <table style="text-align:left">
   <tr>
     <th>Operation</th>
     <th>Method</th>
     <th>URI</th>
-    <th>JSON Sample</th>
   </tr>
   <tr>
     <td>Remove a reference to an entity for a single-valued navigation property</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)/customerid_account/$ref</i></td>
-    <td><code>For a single-valued navigation property, remove the $id query string parameter. @Neeraj: please elaborate or share sample</code></td>
   </tr>
 </table>
 
@@ -308,7 +300,7 @@ Complete request and response details: [Associate entities on update using singl
 
 ## Web API Ajax samples
 
-@Neeraj - need prologue of how to use AJAX sample. And is the format/spacing/line breaks correct? There seem to be more or less semicolons/line breaks in code so please confirm if the formatted code is correct/works.
+### Wrapper Ajax function 
 
 ```javascript
 	(function(webapi, $){
