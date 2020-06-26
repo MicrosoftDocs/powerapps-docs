@@ -1,14 +1,13 @@
 ---
 title: "Configure portal authentication | MicrosoftDocs"
 description: "Learn about how to configure authentication for a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/18/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Configure portal authentication

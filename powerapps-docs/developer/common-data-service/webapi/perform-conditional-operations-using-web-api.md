@@ -2,7 +2,7 @@
 title: "Perform conditional operations using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
 ms.custom: ""
-ms.date: 04/06/2020
+ms.date: 06/19/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -79,6 +79,12 @@ GET [Organization URI]/api/data/v9.0/EntityDefinitions(LogicalName='<Entity Logi
 ### Query must not include $expand
 
 The Etag can only detect if the single record that is being retrieved has changed. When you use `$expand` in your query, additional records may be returned and it is not possible to detect whether or not any of those records have changed. If the query includes `$expand` it will never return `304 Not Modified`.
+
+### Query must not include annotations
+
+When the `Prefer: odata.include-annotations` header is included with a `GET` request it will never return `304 Not Modified`. The values of annotations can refer to values from related records. These records may have changed and this change could not be detected, so it would be incorrect to indicate that nothing has changed.
+
+
   
 <a name="bkmk_limitUpsertOperations"></a>
   
