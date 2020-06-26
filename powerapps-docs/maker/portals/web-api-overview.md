@@ -1,14 +1,13 @@
 ---
 title: Use the Web API for portals | Microsoft Docs
 description: Learn how to use the portals Web API to create, read, update, and delete Common Data Service entities.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/08/2020
-ms.author: tapanm
-ms.reviewer:
+ms.date: 06/26/2020
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Portals Web API

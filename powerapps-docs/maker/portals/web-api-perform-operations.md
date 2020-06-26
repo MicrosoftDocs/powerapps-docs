@@ -1,14 +1,13 @@
 ---
 title: Perform portals Web API operations | Microsoft Docs
 description: Learn how to perform different Web API operations on Power Apps portals.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/08/2020
-ms.author: tapanm
-ms.reviewer:
+ms.date: 06/26/2020
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Portals operations using the Web API
@@ -273,7 +272,7 @@ Complete request and response details: [Remove a reference to an entity for a si
 
 ### Associate entities on create
 
-As described in [Create related entities in one operation](#create-related-entity-records-in-one-operation), new entities can be created with relationships using *deep* insert.
+As described in [Create related entities in one operation](../../developer/common-data-service/webapi/create-entity-web-api.md#create-related-entity-records-in-one-operation), new entities can be created with relationships using *deep* insert.
 
 ### Associate entities on update using single-valued navigation property
 

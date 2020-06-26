@@ -1,14 +1,13 @@
 ---
 title: Compose HTTP requests and handle errors for portals Web API | Microsoft Docs
 description: Learn how to construct HTTP requests, headers, and handle errors for portals Web API.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/08/2020
-ms.author: tapanm
-ms.reviewer:
+ms.date: 06/26/2020
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Compose HTTP requests and handle errors for portals Web API
