@@ -1,7 +1,7 @@
 ---
 title: "Power Apps portals settings on the Power Platform admin center | MicrosoftDocs"
 description: "Information about Power Apps portals settings on Power Platform admin center."
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

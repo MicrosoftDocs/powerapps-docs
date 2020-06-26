@@ -1,7 +1,7 @@
 ---
 title: "Clear the server-side cache for a portal | MicrosoftDocs"
 description: "Instructions to force the portal to refresh its cache immediately."
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
