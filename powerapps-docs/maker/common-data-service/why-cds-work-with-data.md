@@ -21,7 +21,8 @@ search.app:
 
 # Work with any data
 
-Common Data Service provides flexibility that makes it possible to work with any type of data, including relational, non-relational, image, file, relative search, or data lake. There's no need to understand the type of data because Common Data Service exposes a set of data types that you can use to build up your model. The type of storage is optimized for the data type chosen.
+Common Data Service provides an abstraction that makes it possible to work with any type of data, including relational, non-relational, image, file, relative search, or data lake. There is no need to understand the type of data as Common Data Service exposes a set of data types that allow you to build up your model. The type of storage is optimized for the data type chosen.
+
 
 Data can be easily imported and exported with dataflows, Power Query, and Azure Data Factory. Dynamics customers can also use the Data Export Service.
 
@@ -43,7 +44,7 @@ The following image shows some elements of the standard Common Data Model entiti
 
 ## Entities
 
-In Common Data Service, entities are used to model and manage business data. To increase productivity, Common Data Service includes a set of entities known as standard entities. These entities are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization. Standard entities follow Common Data Model.
+In Common Data Service, entities are used to model and manage business data. To increase productivity, Common Data Service includes a set of entities known as standard entities. These entities are designed, in accordance with best practices, to capture the most common concepts and scenarios within an organization. The standard entities adhere to Common Data Model.
 
 A set of entities that are commonly used across industries, such as **User** and **Team**, are included in Common Data Service and referred to as *standard entities*. These out-of-the-box entities can also be customized, such as including additional fields. In addition, you can easily create your own custom entities in Common Data Service.
 

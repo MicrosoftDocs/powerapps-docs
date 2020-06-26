@@ -125,7 +125,11 @@ The list of currently supported standards can be found at
 
 ## Availability and scalability
 
+
 Common Data Service is designed to meet enterprise-level scalability needs and offers a service level agreement of 99.x uptime.<!--Is this going to be meaningful to the reader? The x looks like a placeholder. -->
+
+Common Data Service is designed to meet enterprise-level scalability needs and offers a service level agreement of 99.9% uptime.
+
 
 To help ensure service levels, availability, and quality, entitlement limits to the number of requests users can make each day are governed by licenses.<!--Edit okay? I was a bit confused by this wording.--> Service protection limits have also been put in place against malicious behavior that would otherwise disrupt service for all customers.
 

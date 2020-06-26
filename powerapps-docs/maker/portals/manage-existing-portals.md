@@ -1,14 +1,13 @@
 ---
 title: Manage existing portals in Power Apps | Microsoft Docs
 description: Instructions to manage a portal in Power Apps.
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Manage existing portals in Power Apps
