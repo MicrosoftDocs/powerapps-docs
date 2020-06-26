@@ -1,14 +1,13 @@
 ---
 title: "Reset a portal | MicrosoftDocs"
 description: "Learn how to reset a portal."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/11/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Reset a portal

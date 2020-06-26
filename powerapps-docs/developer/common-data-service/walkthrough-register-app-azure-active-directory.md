@@ -1,6 +1,6 @@
 ---
-title: "Walkthrough: Register an app with Azure Active Directory (Common Data Service) | Microsoft Docs"
-description: "This walkthrough describes how to register an application with Azure Active Directory so that it can connect to the Common Data Service environment, authenticate using OAuth, and access the web services."
+title: "Tutorial: Register an app with Azure Active Directory (Common Data Service) | Microsoft Docs"
+description: "This tutorial describes how to register an application with Azure Active Directory so that it can connect to the Common Data Service environment, authenticate using OAuth, and access the web services."
 keywords: ""
 ms.date: 04/01/2019
 ms.service: powerapps
@@ -17,9 +17,9 @@ search.app:
   - D365CE
 ---
 
-# Walkthrough: Register an app with Azure Active Directory
+# Tutorial: Register an app with Azure Active Directory
 
-This walkthrough describes how to register an application with Azure Active Directory, which enables a user with Power Apps user account to connect to their Common Data Service environment from external client applications using OAuth authentication.
+This tutorial describes how to register an application with Azure Active Directory, which enables a user with Power Apps user account to connect to their Common Data Service environment from external client applications using OAuth authentication.
 
 > [!IMPORTANT]
 > Power Apps also provides you with Server-to-Server (S2S) authentication option to connect to Common Data Service environment from external applications and services using the special application user account. S2S authentication is the common way that apps registered on Microsoft AppSource use to access the data of their subscribers. More information: [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md).
@@ -78,7 +78,7 @@ This completes the registration of your application in Azure Active Directory.
 ## Additional configuration options
 
 If your application will be a Single Page Application (SPA) that depends on CORS you must configure the app registration to support the implicit flow. 
-More information: [Walkthrough: Registering and configuring a SPA application with adal.js](walkthrough-registering-configuring-simplespa-application-adal-js.md)
+More information: [Tutorial: Registering and configuring a SPA application with adal.js](walkthrough-registering-configuring-simplespa-application-adal-js.md)
 
 If your application will support server-to-server connections, see [Use Multi-Tenant Server-to-server authentication](use-multi-tenant-server-server-authentication.md)
   

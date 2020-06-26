@@ -1,13 +1,12 @@
 ---
 title: "Enable Azure storage for portals | MicrosoftDocs"
 description: "Instructions to enable Azure storage for portals to take advantage of the greater file storage capability of Azure."
-author: tapanm-msft
-manager: kvivek
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/12/2020
-ms.author: tapanm
+ms.date: 05/27/2020
+ms.author: gisingh
 ms.reviewer: tapanm
 ---
 
@@ -52,12 +51,16 @@ In the [Portal Management app](configure/configure-portal.md), go to **Settings*
 
 You must add cross-origin resource sharing (CORS) rule on your Azure Storage account as follows, otherwise you will see the regular attachment icon rather than the cloud icon:
 
-- **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com`.
+- **Allowed origins**: Specify your domain. For example, `https://contoso.crm.dynamics.com` <br> Ensure the allowed origin doesn't have trailing `/`. For example, `https://contoso.crm.dynamics.com/` is incorrect.
 - **Allowed verbs**: GET, PUT, DELETE, HEAD, POST
-- **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*. 
-- **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*.
+- **Allowed headers**: Specify the request headers that the origin domain may specify on the CORS request. For example, x-ms-meta-data\*, x-ms-meta-target\*, or \* to allow all.
+- **Exposed headers**: Specify the response headers that may be sent in the response to the CORS request and exposed by the browser to the request issuer. For example, x-ms-meta-\*, or \* to allow all.
 - **Maximum age (seconds)**: Specify the maximum amount time that a browser should cache the preflight OPTIONS request. For example, 200.
- 
+
+CORS rule example:
+
+![CORS rule example](media/portals-cors-azure.png "CORS rule example")
+
 [!include[More information:](../../includes/proc-more-information.md)] [CORS support for the Azure Storage Services](https://docs.microsoft.com/rest/api/storageservices/cross-origin-resource-sharing--cors--support-for-the-azure-storage-services)
 
 ## Add site settings

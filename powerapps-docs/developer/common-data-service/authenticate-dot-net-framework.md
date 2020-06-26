@@ -18,7 +18,7 @@ search.app:
 
 # Authentication with .NET Framework applications
 
-If you are using the .NET Framework you can use classes within the [Xrm.Tooling](/dotnet/api/?view=dynamics-xrmtooling-ce-9) namespace to authenticate and connect to the Organization service and the Web Api.
+If you are using the .NET Framework you can use classes within the [Xrm.Tooling](/dotnet/api/?view=dynamics-xrmtooling-ce-9) namespace to authenticate and connect to the Organization service and the Web API.
 
 With `Xrm.Tooling` classes you can use the SDK assemblies using the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface methods. This is the same style of programming used by plug-ins and workflow activities, making it one style that you can use everywhere for .NET Framework applications.
 
@@ -48,7 +48,7 @@ More information: [Build Windows client applications using the XRM tools](xrm-to
 Use .NET Framework version 4.6.2 or higher when you create client applications. Only applications using Transport Level Security (TLS) 1.2 or better security can connect. TLS 1.2 is not the default protocol used by .NET Framework 4.5.2, but it is in .NET Framework 4.6.2.
 
 > [!NOTE]
-> The SDK APIs available in [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) and other "CrmSdk" NuGet packages do not support .NET Core code development. Revised packages (containing refactored APIs) that do support .NET Core development can be found here: [Microsoft.Powerplatform.Cds.Client](https://www.nuget.org/packages/Microsoft.Powerplatform.Cds.Client/) and [Microsoft.Dynamics.Sdk.Messages](https://www.nuget.org/packages/Microsoft.Dynamics.Sdk.Messages/).<p/>
+> The SDK APIs available in [Microsoft.CrmSdk.XrmTooling.CoreAssembly](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.CoreAssembly/) and other "CrmSdk" NuGet packages do not support .NET Core code development.<p/>
 > **Known Issue with Visual Studio 2015**
 > 
 > When you are running your project/solution in VS 2015 in debug mode, you may not be able to connect. This happens regardless of whether you are using a Target Framework of 4.6.2 or higher. This can occur because the Visual Studio hosting process is compiled against .NET 4.5 which means by default it does not support TLS 1.2. You can disable the Visual Studio hosting process as a work around. 

@@ -1,11 +1,11 @@
 ---
 title: "Set up the timeline control (section) in PowerApps | MicrosoftDocs"
 description: "Learn how to set up the timeline control (section) in PowerApps"
-ms.date: 03/10/2020
+ms.date: 06/16/2020
 ms.service: powerapps
-author: "kabala123"
+author: "lalexms"
 ms.assetid: 7F495EE1-1208-49DA-9B02-17855CEB2FDF
-ms.author: "kabala"
+ms.author: "laalexan"
 manager: "shujoshi"
 search.audienceType: 
   - maker
@@ -62,7 +62,7 @@ The modules are Activities, Posts, and Notes. As a customizer, you can choose wh
    | Entity | Name |
    |--------------------------|----------------------------------|
    | Account | Account for Interactive experience |
-   | Case | Case for Interactive experience |
+   | Incident (Case) | Case for Interactive experience <br><br> **Note**: The Incident (Case) entity is only available if your environment includes Dynamics 365 Customer Service.|
    | Contact | Contact for Interactive experience |
 
 7.	Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
@@ -116,7 +116,7 @@ As a customizer, you can choose which entities you want to show activities to us
     | Entity | Name |
     |--------------------------|----------------------------------|
     | Account | Account for Interactive experience |
-    | Case | Case for Interactive experience |
+    | Incident (Case) | Case for Interactive experience <br><br> **Note**: The Incident (Case) entity is only available if your environment includes Dynamics 365 Customer Service.|
     | Contact | Contact for Interactive experience |
 
 7.	Double-click the **Conversation Tabs** field in the **Timeline** section. The **Activities Tab Properties** dialog is displayed.
@@ -128,17 +128,16 @@ As a customizer, you can choose which entities you want to show activities to us
 
 9.	Select the activities you want to display to the users.
 
-10. Select an option from the list for the **Sort timeline by** option in the **Data** container. For example, select the **Last Updated** option.
+10. Select an option from the list for the **Sort activities by** option in the **Data** container. For example, select the **Last Updated** option.
 
 11.	Specify the following in the **Additional Options** container.
     
     | Field/option | Description |Value |
     |------------------------------------------|------------------------------------------------------------|-------------------|
-    | Display activity header using |  Possible values are **Default format** and **Field Labels**. <br><br> **Note:** <ul><li> If you select **Default format**, then you should always select **Default Fields** for the **Display activities using** field. <br> ![Default format and Default fields](media/default-format-default-fields.png "Default format and Default fields") </li> <li> If you select **Field Labels**, then you can either select the **Default Fields** or **Card Form** for the **Display activities using** field. <br> ![Field labels and Default home](media/field-label-card-form.png "Default format and Default fields") </li> <li> When you select **Default format** and select **Card Form** for the **Display activities using** field, then the system ignores the **Card Form** value and uses the **Defaults Fields** to display the activities. </li> <ul>| Default format |
-    | Create activities using | Select on how you want the users to create activities. Possible values are **Quick Create Form** and **Main Form**. | Quick Create Form |
+    | Create activities using | Select on how you want the users to create activities. Possible values are **Quick Create Form** (if you previously enabled it on the activity entity) and **Main Form**. | Quick Create Form |
     | Display activities using | Select how you want to display the activities. Possible values are **Default Fields** and **Card Form**.  If you select **Card Form**, then you need to select a card form for the activity.  | |
     | Select activity | Select an activity from the list.  <br><br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field.| Email |
-    | Select Card Form | Select a card form from the list.  <br><br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field. | Email Card form |
+    | Select Card Form | Select a card form from the list.  <br><br> **Note:** This field appears only when you select **Card Form** for the **Display activities using** field. <br><br> Select each activity and choose the corresponding card form to use. Each activity and corresponding card form that you choose is automatically saved as you select them. | Email Card form |
 
     > [!div class=mx-imgBorder] 
     > ![Customize timeline module](media/timeline-activity1.png "Customize timeline module")

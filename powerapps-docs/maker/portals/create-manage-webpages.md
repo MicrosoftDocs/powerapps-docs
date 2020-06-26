@@ -1,14 +1,13 @@
 ---
 title: Create and manage webpages | Microsoft Docs
 description: Instructions to create and manage webpages in portal.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Create and manage webpages

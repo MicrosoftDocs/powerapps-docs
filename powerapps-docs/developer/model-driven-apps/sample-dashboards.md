@@ -6,8 +6,8 @@ ms.date: 10/31/2018
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
-author: "Kumarvivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
+author: "Nkrb" # GitHub ID
+ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
 manager: "shilpas" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -207,5 +207,5 @@ This topic contains sample dashboards along with the respective FormXML strings.
   
 ### See also  
  [Dashboards](analyze-data-with-dashboards.md)   
- [Dashboard Entities](/dynamics365/customer-engagement/developer/customize-dev/dashboard-entities)
+ 
 

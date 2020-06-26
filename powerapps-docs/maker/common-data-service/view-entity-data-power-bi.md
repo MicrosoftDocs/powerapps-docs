@@ -2,7 +2,7 @@
 title: "View entity data in Power BI Desktop (Preview) | MicrosoftDocs"
 description: "Learn how access and view entity data in Power BI Desktop"
 ms.custom: ""
-ms.date: 05/01/2020
+ms.date: 05/26/2020
 ms.reviewer: "matp"
 ms.service: powerapps
 author: "Mattp123"
@@ -20,7 +20,7 @@ search.app:
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can use Power BI Desktop to view entities in Common Data Service. The entity
-record data that you can access from your environment is ready-only. Data access
+record data that you can access from your environment is read-only. Data access
 uses the Common Data Service security model that is the same used to access
 entity record data using a Power Apps app.
 
@@ -33,36 +33,9 @@ For this preview, to enable the Tabular Data Stream (TDS) endpoint for Common Da
     
 1. Sign into [Power Apps](https://make.powerapps.com/), and then select the appropriate environment from the top-right corner.
       
-2. Verify that your enviroment has version 9.1.0.17437. To do this, select the **Settings** gear on the toolbar, and then select **Advanced Settings**. Then, on the new browser tab that opens select the **Settings** gear on the toolbar, and then select **About**.
+2. Verify that your environment has at least version 9.1.0.17437. To do this, select the **Settings** gear on the toolbar, and then select **Advanced Settings**. Then, on the new browser tab that opens select the **Settings** gear on the toolbar, and then select **About**.
       
-3. Download the [OrgDBOrgSettingsTool](https://www.microsoft.com/en-us/download/details.aspx?id=56131). During the download, select **CRM2016-Tools-KB4046795-ENU-amd64.exe**. After the download is completed, install the tool.
-
-4. Open the **Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config** file and make the following changes. For example, if your advanced settings environment URL is `https://orgbb33fb45f.crm3.dynamics.com/main.aspx` the OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService value will be `https://disco.crm3.dynamics.com/XRMServices/2011/Discovery.svc` and the OrgDBOrgSettingsTool_OrgServiceUri value will be `https://orgbb33fb45f.crm3.dynamics.com/XrmServices/2011/Organization.svc`. 
-
-   ```xml
-      Setting Name: OrgDBOrgSettingsTool_CrmDiscoveryService_CrmDiscoveryService    
-      Setting Value: https://disco. <!-- See step 4 in this procedure.-->
-
-      Setting Name: OrgDBOrgSettingsTool_SKU   
-      Setting Value: Online
-      
-      Setting Name: OrgDBOrgSettingsTool_UserName 
-      Setting Value: <!-- admin user login-->
-      
-      Setting Name: OrgDBOrgSettingsTool_OrgServiceUri 
-      Setting Value: https://<!-- Full org host name. See step 4 in this procedure. -->
-   ```
-  
-5. Add the following node within the &lt;configuration&gt; node in the Microsoft.Crm.SE.OrgDBOrgSettingsTool.exe.config file: 
-   
-    ```xml
-      <runtime>
-          <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=false"/>
-      </runtime>
-    ```
-      
-6. Open a command window, move to the folder where the OrgDBOrgSettingsTool contents are located, and run the following command:      
-    - Microsoft.Crm.SE.OrgDBOrgSettingsTool Update /u \<org-unique-name\> EnableTDSEndpoint true
+3. Enable the TDS endpoint. For more information, see the **TDS endpoint (Preview)** setting in this topic [Manage feature settings](/power-platform/admin/settings-features).
           
 ## View entity data
 
