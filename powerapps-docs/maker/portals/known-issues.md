@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/25/2020
+ms.date: 06/26/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -18,7 +18,7 @@ ms.reviewer: tapanm
 
     ***Field Name**: You have exceeded the maximum number of 100000 characters in this field.*
 
-    This can happen if the referenced field for the entity exceeds 100000 characters limit. To increase this limit, go to your Dynamics 365 instance > **Settings** > **Customization** > **Customize this system** > **Components** > **Entities**. Select applicable entity and then select the field. Increase the **Maximum Length** field value for the field to a higher value.
+    This can happen if the referenced field for the entity exceeds 100000 characters limit. To increase this limit, go to your Dynamics 365 instance > **Settings** > **Customization** > **Customize this system** > **Components** > **Entities**. Select applicable entity and then select the field. Increase the **Maximum Length** field value for the field to a higher value. Allowed values: 1 through 1,048,576.
 
     Fields where limit may need to be increased:
 
