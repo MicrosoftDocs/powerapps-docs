@@ -51,7 +51,7 @@ A set of entities that are commonly used across industries, such as **User** and
 
 ## Fields
 
-Fields define the individual data items that can be used to store data in an entity. Fields are sometimes called attributes by developers. An entity representing a course at a university might<!--Writing Style Guide says only use "could" to refer to the past.--> contain fields such as "Name," "Location," "Department," "Registered Students," and so on.
+Fields define the individual data items that can be used to store data in an entity. Fields are sometimes called attributes by developers. An entity representing a course at a university might contain fields such as "Name," "Location," "Department," "Registered Students," and so on.
 
 Fields might have different types of data such as strings, digital data, images, and files. There's no need to keep relational and non-relational data separated artificially if it's part of the same business process or flow. Common Data Service stores the data in the best storage type for the model created.
 
@@ -65,13 +65,13 @@ More information: [Types of fields](/powerapps/maker/common-data-service/types-o
 
 Data in one entity often relates to data in another entity. Entity relationships define how records can be related to each other in the Common Data Service model.
 
-Common Data Service provides easy-to-use visual designers to define<!--Suggested.--> the different types of relationships from one entity to another (or between an entity and itself). Each entity can have a relationship with more than one entity, and each entity can have more than one relationship to another entity.
+Common Data Service provides easy-to-use visual designers to define the different types of relationships from one entity to another (or between an entity and itself). Each entity can have a relationship with more than one entity, and each entity can have more than one relationship to another entity.
 
 ![Account entity relationships](media/entity-relationships.png "Account entity relationships")
 
 The relationship types are:
 
-- **Many-to-one**: In this type of relationship, each record in entity A can match more than one record in entity B, but each record in entity B can match only one record in entity A. For example, a class of students have a single classroom.<!--Is this what you meant by "a class"?-->
+- **Many-to-one**: In this type of relationship, each record in entity A can match more than one record in entity B, but each record in entity B can match only one record in entity A. For example, a class of students have a single classroom.
 
 - **One-to-many**: In this type of relationship, each record in entity B can match more than one record in entity A, but each record in entity A can match only one record in entity B. For example, one single teacher teaches many classes.
 
@@ -83,10 +83,10 @@ For more information about creating entity relationships, see [Create a relation
 
 Organizations often need to be in compliance with various regulations to ensure the availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations might want to track changes in Common Data Service data for security and analytical purposes.
 
-Common Data Service provides an auditing capability where changes to entities and attribute data<!--Edit okay?--> in an organization can be recorded over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;entities and attributes. Auditing isn't supported on metadata
+Common Data Service provides an auditing capability where changes to entities and attribute data in an organization can be recorded over time for use in analysis and reporting. Auditing is supported on all custom&mdash;and most customizable&mdash;entities and attributes. Auditing isn't supported on metadata
 changes, retrieve operations, export operations, or during authentication. For information about how to configure auditing, see [Configure entities and attributes for auditing](/powerapps/developer/common-data-service/configure-entities-attributes-auditing).
 
-Common Data Service supports analytics by providing the capability to choose entities for machine learning<!--No abbreviation, via Cloud Style Guide.--> models to run. It has a prebuilt AI capability through AI Builder.
+Common Data Service supports analytics by providing the capability to choose entities for machine learning models to run. It has a prebuilt AI capability through AI Builder.
 
 ### Search
 
@@ -101,8 +101,6 @@ Common Data Service provides three ways to query records:
 > [!NOTE]
 > Multi-entity quick find is also called *categorized search*.
 
-<!--This shouldn't be a graphic; all the information is unavailable to screen readers and people who have turned off (or can't easily see) graphics. It either needs to be duplicated here, or simply linked to. 
-![Search methods in Common Data Service](media/cds-search-methods.png "Search methods in Common Data Service")-->
 For more information, see [Compare searches](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#compare-model-driven-apps-in-dynamics-365-searches).
 
 #### Relevance search
@@ -136,7 +134,7 @@ records, but will find them across different types of entities, such as accounts
 
 ### Data Lake
 
-Common Data Service supports continuous replication of entity data to Azure Data Lake Storage<!--This guidance was very recently updated; I think this is correct now, because you're not mentioning the old versus the new version. Please see https://styleguides.azurewebsites.net/Styleguide/Read?id=2696&topicid=43944-->, which can then be used to run analytics such as Power BI reporting, machine learning, data warehousing, and other downstream integration processes<!--Edit okay?-->.
+Common Data Service supports continuous replication of entity data to Azure Data Lake Storage, which can then be used to run analytics such as Power BI reporting, machine learning, data warehousing, and other downstream integration processes.
 
 ![Common Data Service data replication to Azure Data Lake Storage](media/cds-with-data-lake.png "Common Data Service data replication to Azure Data Lake Storage")
 

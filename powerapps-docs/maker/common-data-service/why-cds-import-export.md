@@ -27,8 +27,7 @@ Dynamics customers also have access to the Data Export Service.
 
 ## Dataflows 
 
-Dataflows enable you to connect with business data from various sources, clean the data, transform it, and then load it into Common Data Service. 
-Dataflows support dozens<!--Suggested--> of popular on-premises, cloud, and software as a service (SaaS) data sources.
+Dataflows enable you to connect with business data from various sources, clean the data, transform it, and then load it into Common Data Service. Dataflows support dozens of popular on-premises, cloud, and software as a service (SaaS) data sources.
 
 Power Query is a data connection technology you can use to discover, connect, combine, and refine data sources to meet your analysis needs. Features in Power Query are available in Excel and Power BI Desktop. 
 

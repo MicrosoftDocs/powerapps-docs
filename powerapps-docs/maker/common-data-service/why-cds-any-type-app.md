@@ -28,7 +28,7 @@ In some cases, integration with an app can be achieved by using business logic c
 
 ## Defining business logic
 
-Entities in Common Data Service can use<!--Via WSG--> rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in an entity.
+Entities in Common Data Service can use rich server-side logic and validation to ensure data quality and reduce repetitive code in each app that creates and uses data in an entity.
 
 - **Business rules**: Validate data across multiple fields and entities, and provide warning and error messages, regardless of the app used to create the data. More information: [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule)
 
@@ -52,7 +52,7 @@ The most popular approaches in Common Data Service involve webhooks, Azure messa
 
 With Common Data Service, you can send data about events that occur on the service to a web app by using webhooks. A webhook is a lightweight HTTP pattern for connecting web APIs and services with a publish-and-subscribe model. Webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events.
 
-Webhooks enable developers and ISVs to integrate Common Data Service data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the shared access signature<!--No caps, no abbreviation via Cloud Style Guide.--> authentication model used with Azure Service Bus integration.
+Webhooks enable developers and ISVs to integrate Common Data Service data with their own custom code hosted on external services. By using the webhook model, you can secure your endpoint by using authentication header or query string parameter keys. This is simpler than the shared access signature<!--Was SAS. Should be no caps, no abbreviation via Cloud Style Guide.--> authentication model used with Azure Service Bus integration.
 
 - Webhooks can only scale to the point at which your hosted web service can handle the messages.
 
@@ -64,7 +64,7 @@ Webhooks enable developers and ISVs to integrate Common Data Service data with t
 
 ### Azure Service Bus
 
-Service Bus provides a secure and reliable communication channel between Common Data Service runtime data and external, cloud-based line-of-business<!--Don't abbreviate, via Writing Style Guide.--> apps. This capability is especially useful in keeping disparate Common Data Service systems or other Common Data Service servers synchronized with business data changes.
+Service Bus provides a secure and reliable communication channel between Common Data Service runtime data and external, cloud-based line-of-business apps. This capability is especially useful in keeping disparate Common Data Service systems or other Common Data Service servers synchronized with business data changes.
 
 The sequence of events is as follows:
 
@@ -93,7 +93,7 @@ With the ability to create custom connectors by using Open API (formerly known a
 
 ## Integrating Common Data Service into apps with the OData API
 
-All popular programming languages support a form of integration with REST-based APIs<!--Don't spell out via Cloud Style Guide.-->.
+All popular programming languages support a form of integration with REST-based APIs.
 
 ![Common Data Service with the OData API](media/cds-with-odata.png "Common Data Service with the OData API")
 
@@ -141,7 +141,7 @@ One constraint with plug-ins is that they must be self-contained. If integration
 
 ### Azure Functions
 
-Azure Functions provides<!--I guess? It seems to be a service name, so alas, it probably takes a singular verb.--> a serverless code execution option for business and integration logic.
+Azure Functions provides a serverless code execution option for business and integration logic.
 
 ![Common Data Service with Azure Functions](media/azure-functions.png "Common Data Service with Azure Functions")
 
