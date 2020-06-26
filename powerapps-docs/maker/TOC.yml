@@ -1722,6 +1722,10 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
+  - name: Return to Work
+    items:
+    - name: Overview
+      href: ../sample-apps/return-to-work/overview.md
 - name: Learn from others
   items:
   - name: Blog
