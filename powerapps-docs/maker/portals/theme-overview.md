@@ -1,7 +1,7 @@
 ---
 title: Overview of themes in Power Apps portals | Microsoft Docs
 description: Introduction to themes in Power Apps portals.
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
