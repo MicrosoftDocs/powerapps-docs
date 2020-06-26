@@ -143,9 +143,9 @@ More information: [Disable portal creation in a tenant](create-portal.md#disable
 
 ### I'm getting an error that I don't have appropriate license to access this website.
 
-With the June 2020 update of Power Apps portals, internal users with Azure Active Directory credentials trying to sign-in without a valid license assigned will see this message on the sign-in page: *You don't have a valid license to access this website. Please contact your system administrator*.
+> Remove June 2020 ->>>  With the June 2020 update of Power Apps portals, internal users with Azure Active Directory credentials trying to sign-in without a valid license assigned will see this message on the sign-in page: *You don't have a valid license to access this website. Please contact your system administrator*.
 
-  ![Portal login error](media/portal-login-error.png "Portal login error")
+![Portal login error](media/portal-login-error.png "Portal login error")
 
 Depending on the SKU type purchased, an administrator will need to either provide an appropriate license to the user, or have app passes available to the environment. If app passes are allocated to the environment, the portal will have to be restarted for changes to take effect.
 
