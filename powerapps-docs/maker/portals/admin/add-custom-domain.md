@@ -1,7 +1,7 @@
 ---
 title: "Add a custom domain name | MicrosoftDocs"
 description: "Instructions to add a custom domain name."
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
