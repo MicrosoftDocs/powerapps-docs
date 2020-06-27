@@ -289,7 +289,7 @@ OData-Version: 4.0
             "fullname":"Yvonne McKay (sample)"
          },
          "Account_Tasks":[],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5b9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5b9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       },
       {  
          "@odata.etag":"W/\"550615\"",
@@ -300,11 +300,10 @@ OData-Version: 4.0
             "fullname":"Susanna Stubberod (sample)"
          },
          "Account_Tasks":[],
-         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5d9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select=subject,scheduledstart"
+         "Account_Tasks@odata.nextLink":"[Organization URI]/api/data/v9.1/accounts(5d9648c3-68f7-e511-80d3-00155db53318)/Account_Tasks?$select%20=%20subject,%20scheduledstart"
       }
    ]
 }
-  
 ```
 
 ## Filter collection values based on data in related entities
