@@ -309,14 +309,6 @@
     href: organize-solutions.md
   - name: How to manage solutions
     items:
-    - name: Create, export, or import an unmanaged solution
-      href: create-export-import-unmanaged-solution.md
-    - name: Uninstall or delete a solution
-      href: uninstall-delete-solution.md
-    - name: Work with solutions
-      href: work-solutions.md
-    - name: Create, install, and update a managed solution
-      href: create-install-update-managed-solution.md
     - name: Create patches to simplify solution updates
       href: create-patches-simplify-solution-updates.md
     - name: When to edit the customizations file
