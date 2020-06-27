@@ -2,7 +2,7 @@
 title: "Retrieve an entity record using the Web API (Common Data Service)| Microsoft Docs"
 description: "Read how to form a GET request using the Common Data Service Web API to retrieve data for an entity specified as the resource with a unique identifier"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/27/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -14,7 +14,7 @@ caps.latest.revision: 21
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly"
 ms.reviewer: "pehecke"
-manager: "annbe"
+manager: "ryjones"
 search.audienceType: 
   - developer
 search.app: 
@@ -76,7 +76,7 @@ OData-Version: 4.0
 "revenue": 10000,  
 "accountid": "00000000-0000-0000-0000-000000000001",  
 "_transactioncurrencyid_value":"b2a6b689-9a39-e611-80d2-00155db44581"  
-}  
+}
 
 ```
 
@@ -178,18 +178,14 @@ HTTP/1.1 200 OK
 Content-Type: application/json; odata.metadata=minimal
 OData-Version: 4.0
   
-{  
-"@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Collection($ref)",  
-"value": [  
-{  
-"@odata.id": "[Organization URI]/api/data/v9.0/tasks(6b5941dd-d175-e511-80d4-00155d2a68d1)"  
-},  
-{  
-"@odata.id": "[Organization URI]/api/data/v9.0/tasks(fcbb60ed-d175-e511-80d4-00155d2a68d1)"  
-}  
-]  
-}  
-  
+{
+    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#Collection($ref)",
+    "value": 
+  [
+    { "@odata.id": "[Organization URI]/api/data/v9.0/tasks(6b5941dd-d175-e511-80d4-00155d2a68d1)" },
+    { "@odata.id": "[Organization URI]/api/data/v9.0/tasks(fcbb60ed-d175-e511-80d4-00155d2a68d1)" }
+  ]
+}
 ```
 The following example returns the number of tasks related to a specific account using the Account_Tasks collection-valued navigation property with `/$count` appended.  
 
@@ -226,64 +222,63 @@ If you simply include the name of the navigation property, you’ll receive all 
 
   **Request**
   ```http
-    GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid($select=contactid,fullname) HTTP/1.1  
-    Accept: application/json  
-    OData-MaxVersion: 4.0  
-    OData-Version: 4.0  
+  GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid($select=contactid,fullname) HTTP/1.1  
+  Accept: application/json  
+  OData-MaxVersion: 4.0  
+  OData-Version: 4.0  
   ```
 
   **Response**
   ```http
-    HTTP/1.1 200 OK  
-    Content-Type: application/json; odata.metadata=minimal  
-    OData-Version: 4.0  
+  HTTP/1.1 200 OK  
+  Content-Type: application/json; odata.metadata=minimal  
+  OData-Version: 4.0  
 
-    {  
+  {  
     "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid,primarycontactid(contactid,fullname))/$entity",  
     "@odata.etag":"W/\"550616\"",  
     "name":"Adventure Works (sample)",  
     "accountid":"00000000-0000-0000-0000-000000000001",  
-    "primarycontactid":{  
+    "primarycontactid":
+    {  
     "@odata.etag":"W/\"550626\"",  
     "contactid":"c59648c3-68f7-e511-80d3-00155db53318",  
     "fullname":"Nancy Anderson (sample)"  
     }  
-    }  
-  
+  }    
   ```
   Instead of returning the related entities for entity instances, you can also return references (links) to the related entities by expanding the single-valued navigation property with the `$ref` option. The following example returns links to the contact record for the account entity.  
 
   **Request**
   ```http
-    GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid/$ref HTTP/1.1  
-    Accept: application/json  
-    OData-MaxVersion: 4.0  
-    OData-Version: 4.0  
+  GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000001)?$select=name&$expand=primarycontactid/$ref HTTP/1.1  
+  Accept: application/json  
+  OData-MaxVersion: 4.0  
+  OData-Version: 4.0  
   ```
 
   **Response**
   ```http
-    HTTP/1.1 200 OK  
-    Content-Type: application/json; odata.metadata=minimal  
-    OData-Version: 4.0  
+  HTTP/1.1 200 OK  
+  Content-Type: application/json; odata.metadata=minimal  
+  OData-Version: 4.0  
   
-    {  
+  {  
     "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,primarycontactid)/$entity",  
     "@odata.etag":"W/\"550616\"",  
     "name":"Adventure Works (sample)",  
     "accountid":"00000000-0000-0000-0000-000000000001",  
     "_primarycontactid_value":"c59648c3-68f7-e511-80d3-00155db53318",  
-    "primarycontactid":{  
-    "@odata.id":"[Organization URI]/api/data/v9.0/contacts(c59648c3-68f7-e511-80d3-00155db53318)"  
-    }  
-    }
+    "primarycontactid": { "@odata.id":"[Organization URI]/api/data/v9.0/contacts(c59648c3-68f7-e511-80d3-00155db53318)" }
+  }
   ```
 - **Retrieve related entities for an entity instance by expanding collection-valued navigation properties**:<br /> The following example demonstrates how you can retrieve all the tasks assigned to an account record.
 
   **Request**
 
   ```http
-  GET [Organization URI]/api/data/v9.0/accounts(915e89f5-29fc-e511-80d2-00155db07c77)?$select=name&$expand=Account_Tasks($select=subject,scheduledstart)
+  GET [Organization URI]/api/data/v9.0/accounts(915e89f5-29fc-e511-80d2-00155db07c77)?$select=name
+  &$expand=Account_Tasks($select=subject,scheduledstart)
   Accept: application/json
   OData-MaxVersion: 4.0
   OData-Version: 4.0
@@ -297,21 +292,25 @@ If you simply include the name of the navigation property, you’ll receive all 
   OData-Version: 4.0
 
   {
-  "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))/$entity",  
-    "@odata.etag":"W/\"514069\"","name":"Sample Child Account 1","accountid":"915e89f5-29fc-e511-80d2-00155db07c77",  
-    "Account_Tasks":[  
-    {  
-    "@odata.etag":"W/\"514085\"",  
-    "subject":"Sample Task 1",  
-    "scheduledstart":"2016-04-11T15:00:00Z",  
-    "activityid":"a983a612-3ffc-e511-80d2-00155db07c77"  
-    },{  
-    "@odata.etag":"W/\"514082\"",  
-    "subject":"Sample Task 2",  
-    "scheduledstart":"2016-04-13T15:00:00Z",  
-    "activityid":"7bcc572f-3ffc-e511-80d2-00155db07c77"  
-   }  
-  ]  
+    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(name,Account_Tasks,Account_Tasks(subject,scheduledstart))/$entity",
+    "@odata.etag": "W/\"514069\"",
+    "name": "Sample Child Account 1",
+    "accountid": "915e89f5-29fc-e511-80d2-00155db07c77",
+    "Account_Tasks":
+     [
+      {
+        "@odata.etag": "W/\"514085\"",
+        "subject": "Sample Task 1",
+        "scheduledstart": "2016-04-11T15:00:00Z",
+        "activityid": "a983a612-3ffc-e511-80d2-00155db07c77"
+      },
+      {
+        "@odata.etag": "W/\"514082\"",
+        "subject": "Sample Task 2",
+        "scheduledstart": "2016-04-13T15:00:00Z",
+        "activityid": "7bcc572f-3ffc-e511-80d2-00155db07c77"
+      }
+     ]
   }
   ```
   
@@ -323,40 +322,47 @@ If you simply include the name of the navigation property, you’ll receive all 
   **Request**
 
   ```http 
-    GET [Organization URI]/api/data/v9.0/accounts(99390c24-9c72-e511-80d4-00155d2a68d1)?$select=accountid&$expand=parentaccountid($select%20=%20createdon,%20name),Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
-    Accept: application/json  
-    Content-Type: application/json; charset=utf-8  
-    OData-MaxVersion: 4.0  
-    OData-Version: 4.0
+  GET [Organization URI]/api/data/v9.0/accounts(99390c24-9c72-e511-80d4-00155d2a68d1)?$select=accountid
+  &$expand=parentaccountid($select%20=%20createdon,%20name),Account_Tasks($select%20=%20subject,%20scheduledstart) HTTP/1.1  
+  Accept: application/json
+  OData-MaxVersion: 4.0
+  OData-Version: 4.0
   ```
 
   **Response**
 
   ```http
-    HTTP/1.1 200 OK  
-    Content-Type: application/json; odata.metadata=minimal  
-    OData-Version: 4.0  
+  HTTP/1.1 200 OK  
+  Content-Type: application/json; odata.metadata=minimal  
+  OData-Version: 4.0  
 
-    {  
-    "@odata.context":"[Organization URI]/api/data/v9.0/$metadata#accounts(accountid,parentaccountid,Account_Tasks,parentaccountid(createdon,name),Account_Tasks(subject,scheduledstart))/$entity","@odata.etag":"W/\"514069\"","accountid":"915e89f5-29fc-e511-80d2-00155db07c77",  
-    "parentaccountid":{  
-    "@odata.etag":"W/\"514074\"","createdon":"2016-04-06T00:29:04Z",  
-    "name":"Adventure Works (sample)",  
-    "accountid":"3adbf27c-8efb-e511-80d2-00155db07c77"  
-    },"Account_Tasks":[  
-    {  
-    "@odata.etag":"W/\"514085\"",  
-    "subject":"Sample Task 1",  
-    "scheduledstart":"2016-04-11T15:00:00Z",  
-    "activityid":"a983a612-3ffc-e511-80d2-00155db07c77"  
-    },{  
-    "@odata.etag":"W/\"514082\"",  
-    "subject":"Sample Task 2",  
-    "scheduledstart":"2016-04-13T15:00:00Z",  
-    "activityid":"7bcc572f-3ffc-e511-80d2-00155db07c77"  
-    }  
-    ]  
-    }
+  {
+   "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts(accountid,parentaccountid,Account_Tasks,parentaccountid(createdon,name),Account_Tasks(subject,scheduledstart))/$entity",
+   "@odata.etag": "W/\"514069\"",
+   "accountid": "915e89f5-29fc-e511-80d2-00155db07c77",
+   "parentaccountid": 
+      {
+        "@odata.etag": "W/\"514074\"",
+        "createdon": "2016-04-06T00:29:04Z",
+        "name": "Adventure Works (sample)",
+        "accountid": "3adbf27c-8efb-e511-80d2-00155db07c77"
+      },
+    "Account_Tasks":
+      [
+        {
+          "@odata.etag": "W/\"514085\"",
+          "subject": "Sample Task 1",
+          "scheduledstart": "2016-04-11T15:00:00Z",
+          "activityid": "a983a612-3ffc-e511-80d2-00155db07c77"
+        },
+        {
+          "@odata.etag": "W/\"514082\"",
+          "subject": "Sample Task 2",
+          "scheduledstart": "2016-04-13T15:00:00Z",
+          "activityid": "7bcc572f-3ffc-e511-80d2-00155db07c77"
+        }
+      ]
+  }
   ```
 
 > [!NOTE]
@@ -387,7 +393,7 @@ GET [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-0000000000
 ```
 
 > [!NOTE]
-> This is a subset of the system query options described in the “11.2.4.2.1 Expand Options” section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, `$expand` and `$levels` aren’t supported for the Web API.
+> This is a subset of the system query options described in the “11.2.4.2.1 Expand Options” section of [OData Version 4.0 Part 1: Protocol Plus Errata 02](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html). The options `$skip`, `$count`, `$search`, and `$levels` aren’t supported for the Web API.
 
 <a name="bkmk_DetectIfChanged"></a>
 
