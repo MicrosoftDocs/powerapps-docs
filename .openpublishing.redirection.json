@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/create-patches-simplify-solution-updates.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/create-patches-simplify-solution-updates",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/when-edit-customization-file.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/when-edit-customization-file",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/create-export-import-unmanaged-solution.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-api",
       "redirect_document_id": "false"

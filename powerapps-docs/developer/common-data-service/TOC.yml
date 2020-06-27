@@ -307,12 +307,6 @@
     href: maintain-managed-solutions.md
   - name: Organize your solutions
     href: organize-solutions.md
-  - name: How to manage solutions
-    items:
-    - name: Create patches to simplify solution updates
-      href: create-patches-simplify-solution-updates.md
-    - name: When to edit the customizations file
-      href: when-edit-customization-file.md
 - name: Publish and monitor your (ISV) app
   items:
   - name: Publish your app on AppSource
