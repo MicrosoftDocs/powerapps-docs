@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/create-export-import-unmanaged-solution.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-api",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/uninstall-delete-solution.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-api",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/work-solutions.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-api",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/create-install-update-managed-solution.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-api",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/create-solutions-support-multiple-languages.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/create-solutions-support-multiple-languages",
       "redirect_document_id": "false"
