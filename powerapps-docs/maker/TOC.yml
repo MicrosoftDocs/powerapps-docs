@@ -1735,11 +1735,11 @@
     - name: User Guide for Leadership Dashboard
       href: ../sample-apps/return-to-work/user-guide-for-leadership-dashboard.md
       name: User Guide for Facility Manager
-      href: ../sample-apps/return-to-work/user-guide-for-facility-manager
+      href: ../sample-apps/return-to-work/user-guide-for-facility-manager.md
       name: User Guide for Employee
-      href: ../sample-apps/return-to-work/user-guide-for-employee
+      href: ../sample-apps/return-to-work/user-guide-for-employee.md
       name: User Guide for Health and Safety Lead
-      href: ../sample-apps/return-to-work/user-guide-for-health-and-safety Lead
+      href: ../sample-apps/return-to-work/user-guide-for-health-and-safety Lead.md
 - name: Learn from others
   items:
   - name: Blog
