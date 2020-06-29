@@ -319,4 +319,4 @@ Let's recreate our adding machine by using a collection:
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons. Select the **Save** button. Close and reload the app, and select the **Load** button to reload your collection.
 
 > [!NOTE]
-> **SaveData** and **LoadData** function in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.
+> **SaveData** and **LoadData** function work in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.
