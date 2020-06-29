@@ -1726,13 +1726,13 @@
     items:
     - name: Overview
       href: ../sample-apps/return-to-work/overview.md
-      name: Start Here
+    - name: Start Here
       href: ../sample-apps/return-work/start-here.md
-      name: Deployment Guide for IT Admin
+    - name: Deployment Guide for IT Admin
       href: ../sample-apps/return-to-work/deployment-guide-for-it-admin.md   
-      name: Configuration Guide for Solution Administrators
+    - name: Configuration Guide for Solution Administrators
       href: ../sample-apps/configuration-guide-for-solution-administrator.md
-      name: User Guide for Leadership Dashboard
+    - name: User Guide for Leadership Dashboard
       href: ../sample-apps/user-guide-for-leadership-dashboard.md
 - name: Learn from others
   items:
