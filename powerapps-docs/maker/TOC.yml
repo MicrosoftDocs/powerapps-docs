@@ -1727,7 +1727,9 @@
     - name: Overview
       href: ../sample-apps/return-to-work/overview.md`
       name: Deployment Guide for IT Admin
-      href: ../sample-apps/return-to-work/deployment-guide-for-it-admin.md     
+      href: ../sample-apps/return-to-work/deployment-guide-for-it-admin.md   
+      name: Configuration Guide for Solution Administrators
+      href: ../sample-apps/configuration-guide-for-solution-administrator.md 
 - name: Learn from others
   items:
   - name: Blog

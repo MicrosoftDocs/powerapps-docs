@@ -116,7 +116,7 @@ After your environment is ready, you can install the solution via the package.
       
     
 
-    ![](media/147fba48bb75777a5af09f8f746638ca.png)
+    ![](media/deploy-connect-crm.png)
 
 4.  Select **Login** to continue.
 
@@ -126,7 +126,7 @@ After your environment is ready, you can install the solution via the package.
       
     
 
-    ![](media/f0b90f77792a59e4ead1e4e690179bc0.png)
+    ![](media/deploy-connect-crm-organization.png)
 
 6.  On the next screen, select **Next.**
 
@@ -138,7 +138,7 @@ After your environment is ready, you can install the solution via the package.
       
     
 
-    ![](media/105bdee45b829611842663a2e4e358cb.png)
+    ![](media/deploy-setup-installer-configuration-dependencies.png)
 
 9.  The next screen displays the installation status of the package. Please note
     that it might take a while for the package installation to complete.
@@ -150,7 +150,7 @@ After your environment is ready, you can install the solution via the package.
 After the package is installed, you will find a new admin app in your **Apps**
 list.
 
-![](media/9de9063ee9e5bd1541ab32ccc0db8ebb.png)
+![](media/deploy-model-app-facilities.png)
 
 ## Step 4: Install Sample Data
 
@@ -170,17 +170,17 @@ Contoso data and another with State Street data.
     credentials. Select **Display list of available organizations** to select
     the right organization.
 
-![](media/a90a78d19b4f75b9a56710b6fadb3eed.png)
+![](media/deploy-cds-config-migration-login.png)
 
 1.  On the next screen select the right environment.
 
-![](media/3febb184fe5b551333cf2abd15db0f77.png)
+![](media/deploy-cds-config-migration-organization.png)
 
 1.  After validation, select the sample file you want to import. You will see
     the status in the middle. After you press **Import** the sample data will be
     imported.
 
-![](media/a491300e12cf2e93cb1bf28a510c9952.png)
+![](media/deploy-cds-config-import.png)
 
 ## Step 5: Configure and publish Power BI dashboard
 
@@ -192,22 +192,22 @@ another one for the Facility Managers.
     dashboard. The same steps need to be repeated for the Return to Workplace –
     Facility Manager dashboard.
 
-![](media/a7b9ad10cddb2d815798557899b1f4c0.png)
+![](media/solution-admin-pbi-transform-data.png)
 
 1.  In Power BI desktop, select **Transform data** and press **Edit
     Parameters**.
 
-![](media/655fbefd99be7767d27ae48f617ea447.png)
+![](deploy-pbi-.png)
 
 1.  Edit the **CDS Environment** parameter, to your environment. Press **ok**,
     you will then be prompted to login.
 
-![](media/465506a2b08add690ff6ba6c03628383.png)
+![](media/deploy-edit-parameters.png)
 
 1.  After all data is loaded and you are ready with the Dashboard, press
     **Publish**.
 
-![](media/b11fc8b0d47f59b42fbeaaf882b1e002.png)
+![](media/deploy-pbi-publish-report.png)
 
 ## Step 5: Embed Power BI report in the Model Driven App
 
@@ -218,7 +218,7 @@ changed.
 1.  First enable Power BI integration by going to the environment and selecting
     Administration.
 
-![](media/e2af681cef1fc30c1af493acf7b259db.png)
+![](media/deploy-settings-admin.png)
 
 1.  Select **System Settings** and then on the **Reporting** tab, press **Yes**.
 
@@ -227,13 +227,13 @@ changed.
     **Facility** from the list and then in **Forms** open the **Information
     Form**.
 
-![](media/dc19561ee9ad15e05174df94c9695549.png)
+![](media/deploy-new-facility-form.png)
 
 1.  Click **Switch to classic** to move back to the old interface. Click on the
     Power BI Report control and select the right **Workspace aka Group** and
     **Dashboard**. Afterwards press **Save** and **Publish**.
 
-![](media/a795b848d443d1b68f395838b8d7e8dc.png)
+![](media/deploy-pbi-set-tile.png)
 
 For ease of implementation, you can also use the Power BI embedder in the
 XRMToolbox. (<https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/>)
@@ -247,22 +247,22 @@ do this via theming.
 
 2.  From **Settings**, select **Customizations**.
 
-![](media/9e96b0df0d5132f637d0077e72cdb48e.png)
+![](media/deploy-settings-customizations.png)
 
 1.  Then select **Themes**.
 
-![](media/49f86c9f1c6cc72225fdc95a489e38bd.png)
+![](media/deploy-settings-solutions.png)
 
 1.  Select **New** create a **new** Theme. Fill in the **Name** and determine
     which colors you want to use. You can also specify the logo which is used in
     the sitemap.
 
-    ![](media/e0e708a7ad722387a061cdeadfec2398.png)
+    ![](media/deploy-themes.png)
 
 2.  After you are done, select **Save**. Then **Publish** the Theme. Below an
     example theme.
 
-![](media/3f86dbe31ad9154875fe739f12f63dd9.png)
+![](media/deploy-theme-colors.png)
 
 ## Step 7: Share the Canvas App
 
@@ -273,18 +273,18 @@ everybody.
 
 2.  Select the **Employee Questionnaire App**.
 
-![](media/bb9e2de6b94e125f546104cf8035f368.png)
+![](media/deploy-select-app-employee-questionnaire.png)
 
 1.  Select **Share** in the command bar
 
-![](media/042bb5521987783f82a2ed09ee47b4ca.png)
+![](media/deploy-share-app.png)
 
 1.  In the bar where you would like to invite people, enter **Everybody** to
     share the app with everybody available.
 
 2.  Repeat this process also for the **Checklist App**.
 
-![](media/ea4af4a13477b1b857f1384359808eb5.png)
+![](media/deploy-app-checklist.png)
 
 ## Step 8: Set the Security Roles
 
@@ -302,17 +302,17 @@ roles:
 
 1.  Open your environment and select **Settings** and **Security**.
 
-![](media/78a841ce847056b91146255ed84f4717.png)
+![](media/deploy-settings-security.png)
 
 1.  Open **Users** and select the user which you want to give permissions.
 
-![](media/c6861aa4776957b70129c8d0bbbf8c42.png)
+![](media/deploy-settings-security-users.png)
 
 1.  When selecting the user, press **Manage Roles** in the Command Bar. You will
     find all the roles as indicated above here. After selecting the right roles,
     press **ok**.
 
-![](media/99e6352f4cf7b84dc212f9aaf9d154c5.png)
+![](media/deploy-settings-security-enabled-users.png)
 
 ## Next steps 
 

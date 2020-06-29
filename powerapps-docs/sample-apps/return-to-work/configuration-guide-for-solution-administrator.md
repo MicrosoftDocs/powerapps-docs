@@ -49,7 +49,7 @@ taken in that phase.
 In the model-driven app, you select the **Setup** module, which allow you to
 configure the plan.
 
-![](media/77d5316901485b262b8eefce12890e13.png)
+![](media/solution-admin-new-setting-phase-planning.png)
 
 When planning a reopening you need to step through the following steps:
 
@@ -71,11 +71,11 @@ create a new key metric, follow the below steps:
 
 1.  Select **Key Metrics** in the left pane and select **New**.
 
-    ![A screenshot of a cell phone Description automatically generated](media/c20214ce90ef7c2fc5abc80990d8dc32.png)
+    ![A screenshot of a cell phone Description automatically generated](media/solution-admin-key-metric.png)
 
 2.  I n the **Key Metrics** page, specify a Name.
 
-    ![](media/a8282fc2535b3537cabb00ef9a41bfe0.png)
+    ![](media/solution-admin-key-metric-form.png)
 
 | **Field** | **Description**           |
 |-----------|---------------------------|
@@ -94,11 +94,11 @@ you want add a category, follow the below steps:
 
 1.  Select **Categories** in the left pane and select **New**.
 
-    ![A screenshot of a social media post Description automatically generated](media/b6c143054737add03e932bc8318b678e.png)
+    ![A screenshot of a social media post Description automatically generated](media/solution-admin-new-readiness-category.png)
 
 2.  In the New **Category** screen, specify a Category.
 
-![](media/16a490b932a55eb1e857a694457a225e.png)
+![](media/solution-admin-new-readiness-category-form.png)
 
 | **Field** | **Description**             |
 |-----------|-----------------------------|
@@ -118,13 +118,13 @@ want more readiness factors, follow the below steps:
 
 1.  Select Readiness Factors in the left pane and Select New.
 
-![](media/9f5aa4fb744270d7b23c17dd3c9a0d2d.png)
+![](media/solution-admin-new-readiness-factor.png)
 
 >   A screenshot of a cell phone Description automatically generated
 
 1.  In the New **Readiness Factor** screen specify the appropriate values:
 
-![](media/24ebcf4480a814572f8fd2882ddc6413.png)
+![](media/solution-admin-new-readiness-factor-form.png)
 
 | **Field**   | **Description**                                                     |
 |-------------|---------------------------------------------------------------------|
@@ -146,11 +146,11 @@ these phases, follow the following steps:
 
 1.  Select **Reopen Phases** in the left pane and select **New**.
 
-    ![A screenshot of a social media post Description automatically generated](media/d5f220cab773b922143d8e281896c774.png)
+    ![A screenshot of a social media post Description automatically generated](media/solution-admin-new-reopen-phase.png)
 
 2.  In the **New Reopen Phase** page, specify the Index, Name, and Description:
 
-    ![](media/efca16c7e05697b120b1c01c9c5538ac.png)
+    ![](media/solution-admin-new-reopen-phase-form.png)
 
 | **Field**     | **Description**                                                                                                                                       |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -170,15 +170,15 @@ required, and select **Save & Close**.
 1.  Select **Reopen Phases** in the left pane and select the Reopen Phase for
     which you need to add a new goal (example below – “**Initial Return**”)
 
-![](media/ca6543abbe4e992b16c2c78860c9491c.png)
+![](media/solution-reopen-phases-active.png)
 
 1.  In the section “Key Metrics” select **+ New Goal.**
 
-    ![A screenshot of a social media post Description automatically generated](media/23c6e70b07639de243577355d5164d5b.png)
+    ![A screenshot of a social media post Description automatically generated](media/solution-admin-new-goal.png)
 
 2.  In the **Goals** page, specify the appropriate values:
 
-![](media/c6f2e7cc86d46c064c2cf1417e88c069.png)
+![](media/solution-admin-new-goal-form.png)
 
 | **Field**    | **Description**                                |
 |--------------|------------------------------------------------|
@@ -204,11 +204,11 @@ required, and select **Save & Close**.
 1.  To set Readiness Factors for your new Reopen phase select the **Readiness
     Factors** tab
 
-![](media/b40ab14811ebed5267621bad0d8a0369.png)
+![](media/solution-admin-reopen-phase-view-readiness-factors.png)
 
 1.  Select the button **Add Existing Readiness Factor**
 
-![](media/69da9d109bbbeae76207ecd7e0dec3fd.png)
+![](media/solution-admin-reopen-phase-add-existing-factor.png)
 
 >   A screenshot of a cell phone Description automatically generated
 
@@ -216,12 +216,10 @@ required, and select **Save & Close**.
     You can select multiple factors from the list prior to pressing the **Add**
     button.
 
-![](media/cac7e1f784398d565a13fc62869f439f.png)
-
 1.  Select the **Add** button to complete the selection process to link your
     selected **Readiness Factors** to your new **Reopen Phase**
 
-![](media/c49264bf5cade8d3aac412355883d53f.png)
+![](media/solution-admin-reopen-phase-add-factor.png)
 
 # Manage Facilities
 
@@ -246,13 +244,13 @@ following the following steps:
 
 1.  Select **Facility Types** in the left pane and select **New**.
 
-![](media/33cfe610f9bf9050dac90133eb04dc10.png)
+![](media/solution-admin-facility-type.png)
 
 >   A screenshot of a cell phone Description automatically generated
 
 1.  In the New **Facility Type** screen, specify the appropriate values:
 
-![](media/af1cb99b2734de0251863c5e4ec566fa.png)
+![](media/solution-admin-facility-type-form.png)
 
 | **Field**   | **Description**                     |
 |-------------|-------------------------------------|
@@ -280,7 +278,7 @@ To load sample Facility data from the Excel file to the Facility entity:
 
 2.  Select **Import from Excel** to select the Facilities data file
 
-![](media/f623d079aa6bbc33443265ab38d9dcea.png)
+![](media/solution-admin-facilities-excel-import.png)
 
 >   A screenshot of a social media post Description automatically generated
 
@@ -291,7 +289,7 @@ To load sample Facility data from the Excel file to the Facility entity:
 2.  After the sample data is imported, you will see the imported records in the
     entity:
 
-![](media/7545d1af9f2e5dda47ae3642928c5943.png)
+![](media/solution-admin-facilities-active.png)
 
 # Specify Solution Settings
 
@@ -313,11 +311,11 @@ company guidelines and culture.
 
 1.  Select **Settings** in the left pane and select **New**.
 
-![](media/f7aec2cd9aca0f38f7ba6a60fbc8669e.png)
+![](media/solution-admin-view-solution-settings.png)
 
 1.  In the New Setting screen, specify the appropriate values
 
-![](media/3ea26c7508a4628c0346b27fb6044a9d.png)
+![](media/solution-admin-new-setting.png)
 
 Disclaimer: the following isn’t implemented yet; this will come in new releases.
 
@@ -327,19 +325,19 @@ Theming allows you to change the experience of the employee.
 
 1.  Select **Settings** and then **Customizations**.
 
-![](media/e7a1660fd13d334c33563ba91aaf4e77.png)
+![](media/solution-admin-settings-themes.png)
 
 1.  Under Customizations select **Themes**.
 
-![](media/8a8b301ea23b309614018d79b50f71ce.png)
+![](media/solution-admin-settings.png)
 
 1.  From the list select the default theme.
 
-![](media/9516b6b752bacadaaec4280dd687ec70.png)
+![](media/solution-admin-settings-all-themes.png)
 
 1.  You can select the different colors from the theme.
 
-![](media/911da9fe409af6e29bd2a9456469235e.png)
+![](media/deploy/theme-colors.png)
 
 *Disclaimer*
 
