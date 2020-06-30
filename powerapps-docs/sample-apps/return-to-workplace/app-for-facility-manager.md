@@ -6,18 +6,16 @@ title: User Guide for Facility Manager
 
 The following prerequisites apply to this guide:   
 
-1.  The environment has all the Return to Workplace components in place with the
+- The environment has all the Return to Workplace components in place with the
     Model Driven App, Canvas Apps and Power BI Dashboards. 
 
-2.  Business Admin has completed all required setup (configurations and master
+- Solution Administrator has completed all required setup (configurations and master
     date)
 
-3.  Execution of how to steps require users have the required security role(s)
-    in place. 
+- Execution of how to steps require users have the required security role(s)
+    in place. Contact your IT Administrator if you are unable to access.
 
->   Contact your IT Admin if you are unable to access or use the admin app.
-
-1.  The sample data is in the package and needs to be installed on the
+- The sample data is in the package and needs to be installed on the
     environment. 
 
 # Overview
@@ -30,13 +28,13 @@ employees to return to, using this Return to Workplace solution.
 Processes that Facility Manger can support that are covered in this document
 include:
 
--   Manage and monitor facilities
+-   [Manage and monitor facilities](#Manage-and-monitor-facilities)
 
--   Manage transitions of a facility’s phases
+-   [Moving a facility to a new phase](#Moving-a-facility-to-a-new-phase)
 
--   Monitor employee attestations
+-   [Monitor employee attestations](#Monitor-employee-attestations)
 
--   Monitor employee sentiments
+-   [Monitor employee sentiments](#Monitor-employee-sentiments)
 
 # Model app at a glance
 

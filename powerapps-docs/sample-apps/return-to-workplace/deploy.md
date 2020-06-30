@@ -38,6 +38,23 @@ in the document:
 
 Estimated time to complete these steps: 60–90 minute
 
+
+## Service URLs for US Government customers
+
+There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants than the commercial version. The commercial version of the service URLs is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
+
+| **Commercial version URL**                | **US Government version URL**  |
+|-------------------------------------------|--------------------------------|
+| [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us](https://make.gov.powerapps.us) (GCC)<br/><br/>[https://make.high.powerapps.us](https://make.high.powerapps.us) (GCC High)                |
+| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us) (GCC)<br/><br/>[https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us) (GCC High) |
+| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us](https://app.powerbigov.us) (GCC)<br/><br/>[https://app.high.powerbigov.us](https://app.high.powerbigov.us) (GCC High)                 |
+
+For detailed information about the US Government plans for Power Apps and Power BI, see:
+
+- [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
+- [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
+
+
 ## Step 1: Download the deployment package
 
 Get the latest deployment package (.zip) from your Microsoft account
@@ -307,17 +324,16 @@ roles:
 
 ![](media/deploy-settings-security-enabled-users.png)
 
-## Next steps 
 
-The deployment steps are complete now. Business admins can refer to the
-**03-Configuration guide for business admin** document to perform the following
-steps:
+## Next steps
 
-1.  Configure and manage the master data
+The deployment steps are complete now. Business admins can refer to the [Configuration Guide for Solution Administrator](configure.md) topic to perform the following steps:
 
-*Disclaimer*
+-  Configure and manage the master data
 
-*Customer bears the sole risk and responsibility for any use of this app.*
 
-*Sample data included in this app are for illustration only and are fictitious*.
-*No real association is intended or inferred*
+## Issues and feedback
+
+- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.

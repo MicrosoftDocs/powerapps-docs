@@ -11,28 +11,28 @@ The following prerequisites apply to this guide:
 
 -   For the following steps you need to have the right security roles in place.
 
-    Contact your IT Admin if you are unable to access or use the admin app.
+    Contact your IT Administrator if you are unable to access.
 
 -   The sample data is in the package and needs to be installed on the
     environment.
 
 # Overview
 
-This guide provides business administrators a guide on how they need to
-configure the Return to Workplace solution. A business administrator is
+This guide provides solution administrators a guide on how they need to
+configure the Return to Workplace solution. A solution administrator is
 responsible for making sure the facility manager can guide their facilities
 throughout their phases. This means that the following steps are needed and will
 be covered in the document:
 
--   Plan Reopening Phases
+-   [Plan Reopening Phase](#Plan-Reopening-Phase)
 
--   Manage Facilities
+-   [Manage Facilities](#Manage-Facilities)
 
--   Specify Solution Settings
+-   [Specify Solution Settings](#Specify-Solution-Settings)
 
 # Plan Reopening Phases
 
-Plan reopening requires the business administrator to define Reopen Phases to
+Plan reopening requires the solution administrator to define Reopen Phases to
 reopen. Within these phases you define a goal upon which track progress on a
 certain metric. These metrics can be sorted via categories to ease use. In the
 phases you also define readiness factors which defines the steps required to be
@@ -45,15 +45,15 @@ configure the plan.
 
 When planning a reopening you need to step through the following steps:
 
-1.  Define Key Metrics
+1.  [Define Key Metrics](#Define-Key-Metrics)
 
-2.  Setup Readiness Categories
+2.  [Setup Readiness Categories](#Setup-Readiness-Categories)
 
-3.  Define Readiness Factors
+3.  [Define Readiness Factors](#Define-Readiness-Factors)
 
-4.  Setup a Readiness Phase
+4.  [Setup a Reopen Phase](#Setup-a-Reopen-Phase)
 
-5.  Set the Goals and Readiness Factors for a Phase
+5.  [Set the Goals and Readiness Factors for a Phase](#Set-the-Goals-and-Readiness-Factors-for-a-Phase)
 
 ## Define Key Metrics
 
@@ -217,10 +217,10 @@ required, and select **Save & Close**.
 
 Facilities are an important part of the Return to Workplace solution. Various
 facility types are available like a building or conference center define the
-types of facilities which are stored. The Business Admin has the responsibility
+types of facilities which are stored. The Solution Administrator has the responsibility
 to manage Facility Types which shall include creating new and updating existing.
 The facilities creation that is responsibility of the Facility Manager can be
-supported by Business Admins through an import record process where needed.
+supported by Solution Administrators through an import record process where needed.
 
 When managing facilities, you will step through the following steps:
 
@@ -337,3 +337,11 @@ Theming allows you to change the experience of the employee.
 
 *Sample data included in this app are for illustration only and are fictitious.
 No real association is intended or inferred.*
+
+
+
+## Issues and feedback
+
+- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.

@@ -11,7 +11,7 @@ The following prerequisites apply to this guide:
 
 -   For the following steps you need to have the right security roles in place.
 
-    Contact your IT Admin if you are unable to access or use the admin app.
+    Contact your IT Administrator if you are unable to access.
 
 -   The sample data is in the package and needs to be installed on the
     environment.
@@ -24,13 +24,13 @@ the processes established to get their employees back to their office locations
 using the Return to Workplace solution. The following steps will be covered in
 this document:
 
--   System at a Glance
+-   [System at a Glance](#System-at-a-Glance)
 
--   Virus Spread
+-   [Virus Spread](#Virus-Spread)
 
--   Facility at a Glance
+-   [Facility at a Glance](#Facility-at-a-Glance)
 
--   Employee Activity
+-   [Employee Activity](#Employee-Activity)
 
 # How to view the Leadership dashboard?
 
@@ -136,9 +136,18 @@ insight on number changes on tooltip.
 
 ![](media/pbi-dash-transition-hover-metrics.png)
 
+
+## Issues and feedback
+
+- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.
+
+
 *Disclaimer*
 
 *Customer bears the sole risk and responsibility for any use of this app.*
 
 *Sample data included in this app are for illustration only and are fictitious.
 No real association is intended or inferred.*
+
