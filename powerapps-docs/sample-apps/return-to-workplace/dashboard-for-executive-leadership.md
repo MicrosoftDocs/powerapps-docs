@@ -1,20 +1,15 @@
 ---
 title: User Guide for Leadership Dashboard
+description: Provides an overview of Return to Workplace Solution.
+author: pankajarora-msft
+manager: annbe
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 06/30/2020
+ms.author: pankar
+ms.reviewer: kvivek
 ---
-
-# Prerequisites
-
-The following prerequisites apply to this guide:
-
--   The environment needs to have all the Return to Workplace components in
-    place with the Model Driven Apps, Canvas Apps and Power BI Dashboards.
-
--   For the following steps you need to have the right security roles in place.
-
--   Contact your IT Administrator if you are unable to access.
-
--   The sample data is in the package and needs to be installed on the
-    environment.
 
 # Overview
 
@@ -32,8 +27,16 @@ this document:
 
 -   [Employee Activity](#Employee-Activity)
 
-## How to view the Leadership dashboard?
+## Prerequisites
+The following prerequisites apply to this guide:
+-   The environment needs to have all the Return to Workplace components in
+    place with the Model Driven Apps, Canvas Apps and Power BI Dashboards.
+-   For the following steps you need to have the right security roles in place.
+-   Contact your IT Administrator if you are unable to access.
+-   The sample data is in the package and needs to be installed on the
+    environment.
 
+## How to view the Leadership dashboard?
 The Leadership dashboard is available on Power BI. To access the dashboard you
 follow the following steps:
 
@@ -42,7 +45,7 @@ follow the following steps:
 2.  In the top bar search for **Return to Workplace – Leadership** and select if
     from the dropdown.
 
-![](media/pbi-dash-command-bar.png)
+    ![](media/pbi-dash-command-bar.png)
 
 ## System at a Glance
 
@@ -129,25 +132,9 @@ where numbers were raised or lower compared to previous days.
 
 ![](media/pbi-dash-employee-activity.png)
 
->   **Tooltip**
+   **Tooltip**
 
 By hovering over the transition part of ribbon chart, users can quickly get an
 insight on number changes on tooltip.
 
 ![](media/pbi-dash-transition-hover-metrics.png)
-
-
-## Issues and feedback
-
-- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
-
-- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.
-
-
-*Disclaimer*
-
-*Customer bears the sole risk and responsibility for any use of this app.*
-
-*Sample data included in this app are for illustration only and are fictitious.
-No real association is intended or inferred.*
-

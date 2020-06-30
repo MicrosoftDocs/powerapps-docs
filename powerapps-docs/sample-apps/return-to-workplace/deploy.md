@@ -1,8 +1,35 @@
 ---
 title: Deployment Guide for IT Admin
+description: Provides an overview of Return to Workplace Solution.
+author: pankajarora-msft
+manager: annbe
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 06/30/2020
+ms.author: pankar
+ms.reviewer: kvivek
 ---
 
-# Prerequisites
+
+
+# Overview
+
+This document provides IT administrators a guide on how they need to install the
+Return to Workplace solution. The following steps are needed and will be covered
+in the document:
+
+-   Create an environment and install the package
+
+-   Setup the Power BI Dashboards
+
+-   Configure the Canvas App
+
+-   Set Security Roles
+
+Estimated time to complete these steps: 60–90 minute
+
+## Prerequisites
 
 The following prerequisites apply to this document:
 
@@ -21,22 +48,6 @@ The following prerequisites apply to this document:
     automatically as new releases are available. If you can’t install from
     Microsoft Store, install the latest non-Microsoft Store version from the
     Download Center page.
-
-# Overview
-
-This document provides IT administrators a guide on how they need to install the
-Return to Workplace solution. The following steps are needed and will be covered
-in the document:
-
--   Create an environment and install the package
-
--   Setup the Power BI Dashboards
-
--   Configure the Canvas App
-
--   Set Security Roles
-
-Estimated time to complete these steps: 60–90 minute
 
 
 ## Step 1: Download the deployment package
@@ -165,11 +176,11 @@ Contoso data and another with State Street data.
 
     ![](media/deploy-cds-config-migration-login.png)
 
-1.  On the next screen select the right environment.
+4.  On the next screen select the right environment.
 
     ![](media/deploy-cds-config-migration-organization.png)
 
-1.  After validation, select the sample file you want to import. You will see
+5.  After validation, select the sample file you want to import. You will see
     the status in the middle. After you press **Import** the sample data will be
     imported.
 
@@ -187,17 +198,17 @@ another one for the Facility Managers.
 
 ![](media/solution-admin-pbi-transform-data.png)
 
-1.  In Power BI desktop, select **Transform data** and press **Edit
+2.  In Power BI desktop, select **Transform data** and press **Edit
     Parameters**.
 
 ![](deploy-pbi-.png)
 
-1.  Edit the **CDS Environment** parameter, to your environment. Press **ok**,
+3.  Edit the **CDS Environment** parameter, to your environment. Press **ok**,
     you will then be prompted to login.
 
 ![](media/deploy-edit-parameters.png)
 
-1.  After all data is loaded and you are ready with the Dashboard, press
+4.  After all data is loaded and you are ready with the Dashboard, press
     **Publish**.
 
 ![](media/deploy-pbi-publish-report.png)
@@ -213,16 +224,16 @@ changed.
 
 ![](media/deploy-settings-admin.png)
 
-1.  Select **System Settings** and then on the **Reporting** tab, press **Yes**.
+2.  Select **System Settings** and then on the **Reporting** tab, press **Yes**.
 
-2.  Go to **make.powerapps.com** and select **Data** and **Entities**. On the
+3.  Go to **make.powerapps.com** and select **Data** and **Entities**. On the
     right top, remove the **Default** filter and put this on **All**. Select
     **Facility** from the list and then in **Forms** open the **Information
     Form**.
 
 ![](media/deploy-new-facility-form.png)
 
-1.  Click **Switch to classic** to move back to the old interface. Click on the
+4.  Click **Switch to classic** to move back to the old interface. Click on the
     Power BI Report control and select the right **Workspace aka Group** and
     **Dashboard**. Afterwards press **Save** and **Publish**.
 
@@ -240,22 +251,22 @@ do this via theming.
 
 2.  From **Settings**, select **Customizations**.
 
-![](media/deploy-settings-customizations.png)
+    ![](media/deploy-settings-customizations.png)
 
-1.  Then select **Themes**.
+3.  Then select **Themes**.
 
 ![](media/deploy-settings-solutions.png)
 
-1.  Select **New** create a **new** Theme. Fill in the **Name** and determine
+4.  Select **New** create a **new** Theme. Fill in the **Name** and determine
     which colors you want to use. You can also specify the logo which is used in
     the sitemap.
 
     ![](media/deploy-themes.png)
 
-2.  After you are done, select **Save**. Then **Publish** the Theme. Below an
+5.  After you are done, select **Save**. Then **Publish** the Theme. Below an
     example theme.
 
-![](media/deploy-theme-colors.png)
+    ![](media/deploy-theme-colors.png)
 
 ## Step 7: Share the Canvas App
 
@@ -266,18 +277,18 @@ everybody.
 
 2.  Select the **Employee Questionnaire App**.
 
-![](media/deploy-select-app-employee-questionnaire.png)
+     ![](media/deploy-select-app-employee-questionnaire.png)
 
-1.  Select **Share** in the command bar
+3.  Select **Share** in the command bar
 
-![](media/deploy-share-app.png)
+    ![](media/deploy-share-app.png)
 
-1.  In the bar where you would like to invite people, enter **Everybody** to
+4.  In the bar where you would like to invite people, enter **Everybody** to
     share the app with everybody available.
 
-2.  Repeat this process also for the **Checklist App**.
+5.  Repeat this process also for the **Checklist App**.
 
-![](media/deploy-app-checklist.png)
+    ![](media/deploy-app-checklist.png)
 
 ## Step 8: Set the Security Roles
 
@@ -295,17 +306,17 @@ roles:
 
 1.  Open your environment and select **Settings** and **Security**.
 
-![](media/deploy-settings-security.png)
+    ![](media/deploy-settings-security.png)
 
-1.  Open **Users** and select the user which you want to give permissions.
+2.  Open **Users** and select the user which you want to give permissions.
 
-![](media/deploy-settings-security-users.png)
+    ![](media/deploy-settings-security-users.png)
 
-1.  When selecting the user, press **Manage Roles** in the Command Bar. You will
+3.  When selecting the user, press **Manage Roles** in the Command Bar. You will
     find all the roles as indicated above here. After selecting the right roles,
     press **ok**.
 
-![](media/deploy-settings-security-enabled-users.png)
+    ![](media/deploy-settings-security-enabled-users.png)
 
 
 
@@ -332,8 +343,4 @@ The deployment steps are complete now. Business admins can refer to the [Configu
 -  Configure and manage the master data
 
 
-## Issues and feedback
 
-- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
-
-- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.

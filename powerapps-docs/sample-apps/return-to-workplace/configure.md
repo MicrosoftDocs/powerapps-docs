@@ -1,23 +1,17 @@
 ---
 title: Configuration Guide for Solution Administrator
+description: Provides an overview of Return to Workplace Solution.
+author: pankajarora-msft
+manager: annbe
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 06/30/2020
+ms.author: pankar
+ms.reviewer: kvivek
 ---
 
-# Prerequisites
-
-The following prerequisites apply to this guide:
-
--   The environment needs to have all the Return to Workplace components in
-    place with the Model Driven Apps, Canvas Apps and Power BI Dashboards.
-
--   For the following steps you need to have the right security roles in place.
-
-    Contact your IT Administrator if you are unable to access.
-
--   The sample data is in the package and needs to be installed on the
-    environment.
-
 # Overview
-
 This guide provides solution administrators a guide on how they need to
 configure the Return to Workplace solution. A solution administrator is
 responsible for making sure the facility manager can guide their facilities
@@ -30,7 +24,21 @@ be covered in the document:
 
 -   [Specify Solution Settings](#Specify-Solution-Settings)
 
-# Plan Reopening Phases
+## Prerequisites
+The following prerequisites apply to this guide:
+
+-   The environment needs to have all the Return to Workplace components in
+    place with the Model Driven Apps, Canvas Apps and Power BI Dashboards.
+
+-   For the following steps you need to have the right security roles in place.
+
+    Contact your IT Administrator if you are unable to access.
+
+-   The sample data is in the package and needs to be installed on the
+    environment.
+
+
+## Plan Reopening Phases
 
 Plan reopening requires the solution administrator to define Reopen Phases to
 reopen. Within these phases you define a goal upon which track progress on a
@@ -90,13 +98,13 @@ you want add a category, follow the below steps:
 
 2.  In the New **Category** screen, specify a Category.
 
-![](media/solution-admin-new-readiness-category-form.png)
+    ![](media/solution-admin-new-readiness-category-form.png)
 
 | **Field** | **Description**             |
 |-----------|-----------------------------|
 | Name      | A name for the new Category |
 
-1.  Select **Save & Close**. The newly created record will be available in the
+3.  Select **Save & Close**. The newly created record will be available in the
     **Active Categories** list.
 
 To edit the record, select the newly created record, update the values as
@@ -110,13 +118,11 @@ want more readiness factors, follow the below steps:
 
 1.  Select Readiness Factors in the left pane and Select New.
 
-![](media/solution-admin-new-readiness-factor.png)
+    ![](media/solution-admin-new-readiness-factor.png)
 
->   A screenshot of a cell phone Description automatically generated
+2.  In the New **Readiness Factor** screen specify the appropriate values:
 
-1.  In the New **Readiness Factor** screen specify the appropriate values:
-
-![](media/solution-admin-new-readiness-factor-form.png)
+    ![](media/solution-admin-new-readiness-factor-form.png)
 
 | **Field**   | **Description**                                                     |
 |-------------|---------------------------------------------------------------------|
@@ -124,11 +130,11 @@ want more readiness factors, follow the below steps:
 | Description | A description of your Readiness Factor.                             |
 | Category    | Select the appropriate Category to assign to your Readiness Factor. |
 
-1.  Select **Save & Close**. The newly created record will be available in the
+3.  Select **Save & Close**. The newly created record will be available in the
     **Active Readiness Factors** list.
 
->   To edit the record, select the newly created record, update the values as
->   required, and select **Save & Close**.
+    To edit the record, select the newly created record, update the values as
+    required, and select **Save & Close**.
 
 ## Setup a Reopen Phase
 
@@ -162,15 +168,15 @@ required, and select **Save & Close**.
 1.  Select **Reopen Phases** in the left pane and select the Reopen Phase for
     which you need to add a new goal (example below – “**Initial Return**”)
 
-![](media/solution-reopen-phases-active.png)
+    ![](media/solution-reopen-phases-active.png)
 
-1.  In the section “Key Metrics” select **+ New Goal.**
+2.  In the section “Key Metrics” select **+ New Goal.**
 
     ![A screenshot of a social media post Description automatically generated](media/solution-admin-new-goal.png)
 
-2.  In the **Goals** page, specify the appropriate values:
+3.  In the **Goals** page, specify the appropriate values:
 
-![](media/solution-admin-new-goal-form.png)
+    ![](media/solution-admin-new-goal-form.png)
 
 | **Field**    | **Description**                                |
 |--------------|------------------------------------------------|
@@ -187,34 +193,31 @@ required, and select **Save & Close**.
 
 -   Equal or Higher
 
-1.  Select **Save & Close**. The newly created record will be available in the
+4.  Select **Save & Close**. The newly created record will be available in the
     **Key Metrics** list.
 
 To edit the record, select the newly created record, update the values as
 required, and select **Save & Close**.
 
-1.  To set Readiness Factors for your new Reopen phase select the **Readiness
+5.  To set Readiness Factors for your new Reopen phase select the **Readiness
     Factors** tab
 
-![](media/solution-admin-reopen-phase-view-readiness-factors.png)
+    ![](media/solution-admin-reopen-phase-view-readiness-factors.png)
 
-1.  Select the button **Add Existing Readiness Factor**
+6.  Select the button **Add Existing Readiness Factor**
 
 ![](media/solution-admin-reopen-phase-add-existing-factor.png)
 
->   A screenshot of a cell phone Description automatically generated
-
-1.  Select your desired Readiness Factor(s) to link to your new Reopen Phase.
+7.  Select your desired Readiness Factor(s) to link to your new Reopen Phase.
     You can select multiple factors from the list prior to pressing the **Add**
     button.
 
-1.  Select the **Add** button to complete the selection process to link your
+8.  Select the **Add** button to complete the selection process to link your
     selected **Readiness Factors** to your new **Reopen Phase**
 
-![](media/solution-admin-reopen-phase-add-factor.png)
+    ![](media/solution-admin-reopen-phase-add-factor.png)
 
-# Manage Facilities
-
+## Manage Facilities
 Facilities are an important part of the Return to Workplace solution. Various
 facility types are available like a building or conference center define the
 types of facilities which are stored. The Solution Administrator has the responsibility
@@ -238,18 +241,16 @@ following the following steps:
 
 ![](media/solution-admin-facility-type.png)
 
->   A screenshot of a cell phone Description automatically generated
+2.  In the New **Facility Type** screen, specify the appropriate values:
 
-1.  In the New **Facility Type** screen, specify the appropriate values:
-
-![](media/solution-admin-facility-type-form.png)
+    ![](media/solution-admin-facility-type-form.png)
 
 | **Field**   | **Description**                     |
 |-------------|-------------------------------------|
 | Type        | A name for your type of Facility    |
 | Description | A description of your Facility Type |
 
-1.  Select **Save & Close**. The newly created record will be available in the
+3.  Select **Save & Close**. The newly created record will be available in the
     **Active Facility Types** list.
 
 To edit the record, select the newly created record, update the values as
@@ -270,20 +271,18 @@ To load sample Facility data from the Excel file to the Facility entity:
 
 2.  Select **Import from Excel** to select the Facilities data file
 
-![](media/solution-admin-facilities-excel-import.png)
+    ![](media/solution-admin-facilities-excel-import.png)
 
->   A screenshot of a social media post Description automatically generated
-
-1.  Browse to the **SampleData** folder and select the **Facilities.xlsx** file.
+3.  Browse to the **SampleData** folder and select the **Facilities.xlsx** file.
     Change this file according to your own needs and proceed with the wizard
     steps to import the data.
 
-2.  After the sample data is imported, you will see the imported records in the
+4.  After the sample data is imported, you will see the imported records in the
     entity:
 
-![](media/solution-admin-facilities-active.png)
+    ![](media/solution-admin-facilities-active.png)
 
-# Specify Solution Settings
+## Specify Solution Settings
 
 The overall solution requires certain configurations to make sure that the user
 has the correct guidance. Via solution settings, settings like contact emails or
@@ -303,11 +302,11 @@ company guidelines and culture.
 
 1.  Select **Settings** in the left pane and select **New**.
 
-![](media/solution-admin-view-solution-settings.png)
+    ![](media/solution-admin-view-solution-settings.png)
 
-1.  In the New Setting screen, specify the appropriate values
+2.  In the New Setting screen, specify the appropriate values
 
-![](media/solution-admin-new-setting.png)
+    ![](media/solution-admin-new-setting.png)
 
 Disclaimer: the following isn’t implemented yet; this will come in new releases.
 
@@ -317,31 +316,16 @@ Theming allows you to change the experience of the employee.
 
 1.  Select **Settings** and then **Customizations**.
 
-![](media/solution-admin-settings-themes.png)
+    ![](media/solution-admin-settings-themes.png)
 
-1.  Under Customizations select **Themes**.
+2.  Under Customizations select **Themes**.
 
-![](media/solution-admin-settings.png)
+    ![](media/solution-admin-settings.png)
 
-1.  From the list select the default theme.
+3.  From the list select the default theme.
 
-![](media/solution-admin-settings-all-themes.png)
+    ![](media/solution-admin-settings-all-themes.png)
 
-1.  You can select the different colors from the theme.
+4.  You can select the different colors from the theme.
 
-![](media/deploy/theme-colors.png)
-
-*Disclaimer*
-
-*Customer bears the sole risk and responsibility for any use of this app.*
-
-*Sample data included in this app are for illustration only and are fictitious.
-No real association is intended or inferred.*
-
-
-
-## Issues and feedback
-
-- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
-
-- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.
+    ![](media/deploy/theme-colors.png)

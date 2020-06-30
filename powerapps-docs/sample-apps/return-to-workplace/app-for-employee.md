@@ -1,9 +1,30 @@
 ---
 title: User Guide for Employee
+description: Provides an overview of Return to Workplace Solution.
+author: pankajarora-msft
+manager: annbe
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 06/30/2020
+ms.author: pankar
+ms.reviewer: kvivek
 ---
 
-# Prerequisites
+# Overview
 
+This guide provides employees a guide on how they can use the Employee App. An employee will check in and provide for example sentiment. In this
+document we will cover the following steps:
+
+-   [Getting started with the App](#Getting-started-with-the-App)
+
+-   [See the reopen status of a facility](#See-the-reopen-status-of-a-facility)
+
+-   [Check in to a facility](#Check-in-to-a-facility)
+
+-   [Share sentiment](#Share-sentiment)
+
+## Prerequisites
 The following prerequisites apply to this guide:
 
 -   To get started with the mobile app, you need to download the Power Apps
@@ -29,21 +50,7 @@ The following prerequisites apply to this guide:
 -   The sample data is in the package and needs to be installed on the
     environment.
 
-# Overview
-
-This guide provides employees a guide on how they can use the Employee App. An employee will check in and provide for example sentiment. In this
-document we will cover the following steps:
-
--   [Getting started with the App](#Getting-started-with-the-App)
-
--   [See the reopen status of a facility](#See-the-reopen-status-of-a-facility)
-
--   [Check in to a facility](#Check-in-to-a-facility)
-
--   [Share sentiment](#Share-sentiment)
-
-# Getting started with the App
-
+## Getting started with the App
 Open the app from your device and sign in with your company's Azure Active
 Directory account. You can view all apps shared to you by your organization once
 you sign in. For more information, see [Power Apps mobile device sign
@@ -55,7 +62,7 @@ answer the employee sentiment question:
 
 ![](media/employee-welcome.png)
 
-# See the reopen status of a Facility
+## See the reopen status of a Facility
 
 You can a reopen status of a facility, here you will find for all the facilities
 to status and the guidance around.
@@ -72,7 +79,7 @@ Select <b>Cancel</b> to return to the home screen
 
 ![A screenshot of a cell phone Description automatically generated](media/employee-facility-list.png)
 
-# Check in to a Facility
+## Check in to a Facility
 
 An Employee is able to complete the steps required to select a particular
 facility that is “open” to employees returning to work. The employee is able to
@@ -91,7 +98,7 @@ a check in attempt.
 
 ![](media/employee-facility-droplist.png)
 
-## Symptom Check 1
+### Symptom Check 1
 
 Review the Symptom Check 1 question. Select “Yes” is you are currently
 experiencing any of the listed symptoms and “No” if you are not.
@@ -103,7 +110,7 @@ experiencing any of the listed symptoms and “No” if you are not.
 Select the Next button to continue to the next survey stage (Temp Check
 2)
 
-## Temperature Check
+### Temperature Check
 
 Select “Yes” if your temperature is over the given number and select
 “No” if it is not. Press the **Next** button to continue to the next survey
@@ -111,7 +118,7 @@ stage (Symptom Check 3)
 
 ![](media/employee-temperature-check.png)
 
-## Symptom Check 2
+### Symptom Check 2
 
 Review the Symptom Check 2 question. Select “Yes” is you are currently
 experiencing any of the listed symptoms and “No” if you are not.
@@ -122,7 +129,7 @@ experiencing any of the listed symptoms and “No” if you are not.
 
 Press **Next** to submit questionnaire responses.
 
-## Employee Pass
+### Employee Pass
 
 If your responses to the questionnaire shows you are healthy, you will receive a
 pass to enter the selected facility. This pass expires in 24 hours. If not, you
@@ -133,7 +140,7 @@ company health and safety department if needed.
 
 ![](media/employee-pass-negative.png)
 
-# Share Sentiment
+## Share Sentiment
 
 This section covers the Share Sentiment feature where employees can share how
 they are feeling about returning to work.
@@ -142,4 +149,3 @@ On the home page there is a question that asks “Do you feel safe returning to
 work?” You can select a response from three options: Yes, Not sure, and No.
 
 ![](media/employee-share-sentiment.png)
-

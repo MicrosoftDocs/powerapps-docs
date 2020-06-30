@@ -1,22 +1,15 @@
 ---
 title: User Guide for Case Management
+description: Provides an overview of Return to Workplace Solution.
+author: pankajarora-msft
+manager: annbe
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 06/30/2020
+ms.author: pankar
+ms.reviewer: kvivek
 ---
-
-# Prerequisites
-
-The following prerequisites apply to this guide:   
-
-- The environment has all the Return to Workplace components in place with the
-    Model Driven App, Canvas Apps and Power BI Dashboards. 
-
-- Solution Administrator has completed all required setup (configurations and master
-    data)
-
-- Execution of how to steps require users have the required security role(s)
-    in place. Contact your IT Admininstrtaor if you are unable to access.
-
-- The sample data is in the package and needs to be installed on the
-    environment. 
 
 # Overview
 
@@ -50,14 +43,26 @@ Health & Safety Leads will use this app to:
 
 -   [Monitor Employee Cases (dashboard)](#Monitor-employee-cases-(dashboard))
 
-# Case Management app at a glance
 
+## Prerequisites
+
+The following prerequisites apply to this guide:   
+- The environment has all the Return to Workplace components in place with the
+    Model Driven App, Canvas Apps and Power BI Dashboards. 
+- Solution Administrator has completed all required setup (configurations and master
+    data)
+- Execution of how to steps require users have the required security role(s)
+    in place. Contact your IT Admininstrtaor if you are unable to access.
+- The sample data is in the package and needs to be installed on the
+    environment. 
+
+## Case Management app at a glance
 The left-hand side menu lists all the components available in the ‘Employee
 Cases ’ Area.
 
 ![](media/health-safety-employee-case-view.png)
 
-# Case Management app components
+## Case Management app components
 
 For the Health & Safety Leads one area called ‘Employee Cases’ is available with
 the following components.
@@ -71,7 +76,7 @@ the following components.
 
 ![](media/health-safety-master-data.png)
 
-## Employee Cases
+### Employee Cases
 
 -   Employee Cases  
     Lists of all cases that have been created
@@ -84,7 +89,7 @@ the following components.
 
 -   Workload
 
-# Getting started with the Case Management app
+## Getting started with the Case Management app
 
 Employee Safety is the main goal for the Health & Safety Lead. Therefor the
 Employee Case allows the Health & Safety Lead to revoke the employee's ability
@@ -252,17 +257,3 @@ with in a proper fashion.
 -   Case duration
 
 -   Cases per facility
-
-## Issues and feedback
-
-- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
-
-- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.
-
-
-*Disclaimer*
-
-*Customer bears the sole risk and responsibility for any use of this app.*
-
-*Sample data included in this app are for illustration only and are fictitious.
-No real association is intended or inferred.*

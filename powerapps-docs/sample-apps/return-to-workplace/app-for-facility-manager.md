@@ -1,9 +1,17 @@
 ---
 title: User Guide for Facility Manager
+description: Provides an overview of Return to Workplace Solution.
+author: pankajarora-msft
+manager: annbe
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 06/30/2020
+ms.author: pankar
+ms.reviewer: kvivek
 ---
 
 # Overview
-
 This document provides Facility Managers in organizations a guide on how to use
 the App for Facility Managers to manage reopening and readiness of facilities. This will
 help organizations ensure that they can provide a safe working environment for
@@ -21,7 +29,6 @@ include:
 -   [Monitor employee sentiments](#Monitor-employee-sentiments)
 
 ## Prerequisites
-
 The following prerequisites apply to this guide:   
 - The environment has all the Return to Workplace components in place with the
     Model Driven App, Canvas Apps and Power BI Dashboards. 
@@ -33,14 +40,12 @@ The following prerequisites apply to this guide:   
     environment. 
 
 ## Facility Manager app at a glance
-
 The left-hand side menu lists all the components available in the ‘Facility’
 Area.
 
 ![](media/facility-manager-facility-active-facilities.png)
 
 ## Facility Manager app components
-
 For facility management one area called ‘Facility’ is available with the
 following components.
 
@@ -135,11 +140,11 @@ Select the Facility from left pane to see the list of active facilities
 
 Select a desired facility to access the Facility data
 
->   The default display is the General tab for each facility shows the facility
->   manager dashboard. The dashboard shows COVID-19 data based on the address
->   details of the Facility, checklist completion for the current phase,
->   employee attestation and employee sentiment. (please refer to the PowerBI
->   Dashboard guide for more information.)
+    The default display is the General tab for each facility shows the facility
+    manager dashboard. The dashboard shows COVID-19 data based on the address
+    details of the Facility, checklist completion for the current phase,
+    employee attestation and employee sentiment. (please refer to the PowerBI
+    Dashboard guide for more information.)
 
 ![](media/facility-manager-facility-at-glance.png)
 
