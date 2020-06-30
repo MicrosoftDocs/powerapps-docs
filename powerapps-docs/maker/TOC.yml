@@ -133,7 +133,7 @@
         href: ../user/export-excel-pivottable.md
       - name: Merge duplicate records
         href: ../user/merge-duplicate-records.md
-      - name: Troubleshoot Export to Excel  
+      - name: Troubleshoot export to Excel  
         href: ../user/ts-export-to-excel.md
     - name: Reports
       items:
