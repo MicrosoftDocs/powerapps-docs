@@ -9,13 +9,13 @@ The following prerequisites apply to this guide:
 -   To get started with the mobile app, you need to download the Power Apps
     Mobile on your device using the device's app store.
 
-    -   Download the**Return to WOrkplace**[Power Apps
+    -   Download the [Power Apps
         Mobile](https://powerapps.microsoft.com/downloads)
 
         -   For **Apple** devices with iOS such as iPhone and iPad, use [App
             store](https://aka.ms/powerappsios)
 
-        -   For **Android**devices, use [Google
+        -   For **Android** devices, use [Google
             Play](https://aka.ms/powerappsandroid)
 
     -   Ensure your organization has deployed and configured the Return to Workplace
@@ -143,16 +143,3 @@ work?” You can select a response from three options: Yes, Not sure, and No.
 
 ![](media/employee-share-sentiment.png)
 
-## Issues and feedback
-
-- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
-
-- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.
-
-
-*Disclaimer*
-
-*Customer bears the sole risk and responsibility for any use of this app.*
-
-*Sample data included in this app are for illustration only and are fictitious.
-No real association is intended or inferred.*
