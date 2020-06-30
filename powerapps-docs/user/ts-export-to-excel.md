@@ -10,7 +10,7 @@ ms.author: udag
 manager: shujoshi
 ---
 
-# Troubleshooting export to Excel
+# Troubleshoot export to Excel
 
 ## Data disappears after I refresh the imported Excel file
 
