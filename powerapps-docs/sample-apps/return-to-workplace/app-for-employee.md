@@ -18,39 +18,38 @@ The following prerequisites apply to this guide:
         -   For **Android **devices, use [Google
             Play](https://aka.ms/powerappsandroid)
 
-    -   Ensure your organization has deployed and configured the Back to Work
+    -   Ensure your organization has deployed and configured the Return to Workplace
         mobile app as explained in [Deploy and configure the
         app](https://docs.microsoft.com/en-us/powerapps/sample-apps/emergency-response/deploy-configure).
 
 -   For the following steps you need to have the right security roles in place.
 
-    Contact your IT Admin if you are unable to access or use the admin app.
+    Contact your IT Administrator if you are unable to access.
 
 -   The sample data is in the package and needs to be installed on the
     environment.
 
 # Overview
 
-This guide provides employees a guide on how they can use the Back to Work
-solution. An employee will check in and provide for example sentiment. In this
+This guide provides employees a guide on how they can use the Employee App. An employee will check in and provide for example sentiment. In this
 document we will cover the following steps:
 
--   Getting started with the App
+-   [Getting started with the App](#Getting-started-with-the-App)
 
--   See the reopening status of a facility
+-   [See the reopen status of a facility](#See-the-reopen-status-of-a-facility)
 
--   Check in to a facility
+-   [Check in to a facility](#Check-in-to-a-facility)
 
--   Share their sentiment
+-   [Share sentiment](#Share-sentiment)
 
-# Getting started with the canvas app
+# Getting started with the App
 
 Open the app from your device and sign in with your company's Azure Active
 Directory account. You can view all apps shared to you by your organization once
 you sign in. For more information, see [Power Apps mobile device sign
 in](https://docs.microsoft.com/en-us/powerapps/user/run-app-client#open-power-apps-and-sign-in).
 
-When you successfully login and launch the **Back to Work** app from your mobile
+When you successfully login and launch the **Return to Workplace** app from your mobile
 device you will have an option to check into a facility, look up a facility, or
 answer the employee sentiment question:
 
@@ -81,11 +80,11 @@ find a facility and then complete a health survey that determines if they are
 eligible to check into the facility they have selected. If eligible the employee
 will be provided with a pass to their selected building for that day
 
-Step 1: Select Check in Facility
+Select Check in Facility
 
-Step 2: Select an available facility form the Facility droplist
+Select an available facility form the Facility droplist
 
-Step 3: Select Start Health Survey to be the questionnaire required to complete
+Select Start Health Survey to be the questionnaire required to complete
 a check in attempt.
 
 ![](media/employee-start-survey.png)
@@ -94,19 +93,19 @@ a check in attempt.
 
 ## Symptom Check 1
 
-Step 4: Review the Symptom Check 1 question. Select “Yes” is you are currently
+Review the Symptom Check 1 question. Select “Yes” is you are currently
 experiencing any of the listed symptoms and “No” if you are not.
 
 ![](media/employee-symptom-check-1-no.png)
 
 ![](media/employee-symptom-check-1-yes.png)
 
-Step 5: Select the Next button to continue to the next survey stage (Temp Check
+Select the Next button to continue to the next survey stage (Temp Check
 2)
 
 ## Temperature Check
 
-Step 6: Select “Yes” if your temperature is over the given number and select
+Select “Yes” if your temperature is over the given number and select
 “No” if it is not. Press the **Next** button to continue to the next survey
 stage (Symptom Check 3)
 
@@ -114,14 +113,14 @@ stage (Symptom Check 3)
 
 ## Symptom Check 2
 
-Step 7: Review the Symptom Check 2 question. Select “Yes” is you are currently
+Review the Symptom Check 2 question. Select “Yes” is you are currently
 experiencing any of the listed symptoms and “No” if you are not.
 
 ![](media/employee-symptom-check-2-no.png)
 
 ![](media/employee-symptom-check-2-yes.png)
 
-Step 8: Press **Next** to submit questionnaire responses.
+Press **Next** to submit questionnaire responses.
 
 ## Employee Pass
 
@@ -143,6 +142,13 @@ On the home page there is a question that asks “Do you feel safe returning to
 work?” You can select a response from three options: Yes, Not sure, and No.
 
 ![](media/employee-share-sentiment.png)
+
+## Issues and feedback
+
+- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
+
+- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.
+
 
 *Disclaimer*
 

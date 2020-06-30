@@ -11,7 +11,7 @@ The following prerequisites apply to this guide:
 
 -   For the following steps you need to have the right security roles in place.
 
-    Contact your IT Administrator if you are unable to access.
+-   Contact your IT Administrator if you are unable to access.
 
 -   The sample data is in the package and needs to be installed on the
     environment.

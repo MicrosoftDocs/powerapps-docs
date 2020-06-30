@@ -309,7 +309,8 @@ roles:
 ![](media/deploy-settings-security-enabled-users.png)
 
 
-## Service URLs for US Government customers (optonal - for government agencies only)
+
+## Service URLs for US Government customers (optional - for government agencies only)
 
 There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants than the commercial version. The commercial version of the service URLs is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
 

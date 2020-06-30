@@ -16,13 +16,11 @@ The Return to Workplace solution provides a set of capabilities for organization
 
 The main components of the Return to Workplace solution:
 
-- **Solution Administrator App** used to setup and configure master data related to workplaces and users that will use this solution.
+- **Dashboard for Executive Leadership** to review current data related to all of their workplaces as it relates to Covid-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated to established goals/targets for facilities in their locations and respective phase rules/guidelines set for them by government agencies.
 
-- **Leadership Dashboard for Executive Leaders** to review current data related to all of their workplaces as it relates to Covid-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated to established goals/targets for facilities in their locations and respective phase rules/guidelines set for them by government agencies.
+- **Facility Manager App** used to develop and execute on reopening plans.
 
-- **Facility Managers App** used to develop and execute on reopening plans.
-
-- **Employee App)** used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms prior to returning to a reopened workplace.
+- **Employee App** used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms prior to returning to a reopened workplace.
 
 - **Case Management App** used to manage cases for employees under investigation.
 
