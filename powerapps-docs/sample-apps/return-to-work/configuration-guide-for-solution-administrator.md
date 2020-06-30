@@ -71,7 +71,7 @@ create a new key metric, follow the below steps:
 
 1.  Select **Key Metrics** in the left pane and select **New**.
 
-    ![A screenshot of a cell phone Description automatically generated](media/solution-admin-key-metric.png)
+    ![A screenshot of a cell phone Description automatically generated](media/solution-admin-key-metrics.png)
 
 2.  I n the **Key Metrics** page, specify a Name.
 
