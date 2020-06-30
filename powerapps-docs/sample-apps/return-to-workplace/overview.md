@@ -25,15 +25,18 @@ The main components of the Return to Workplace solution:
 - **Case Management App** used to manage cases for employees under investigation.
 
 
-# Demo: Quick overview
+<!--
+## Demo: Quick overview
 
 Watch a quick overview of the solution.
 
 <br/>
 
-> [!VIDEO https://www.youtube.com/embed/4WaniuC7pWs]
+> add video embed link
 
-# Licensing requirements
+-->
+
+## Licensing requirements
 
 For people to use the system a couple of licenses are required:​
 
@@ -60,7 +63,7 @@ See also:
 |Used to manage cases for employees under investigation|Health & Safety Leaders|[User Guide for Health & Safety Lead](app-for-health-and-safety-lead.md)
 
 
-# Issues and feedback
+## Issues and feedback
 
 - To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
 
