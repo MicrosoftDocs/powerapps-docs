@@ -1,7 +1,7 @@
 ---
 title: Edit CSS in a portal | Microsoft Docs
 description: Instructions on editing CSS in a portal.
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

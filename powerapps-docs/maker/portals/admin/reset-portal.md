@@ -1,7 +1,7 @@
 ---
 title: "Reset a portal | MicrosoftDocs"
 description: "Learn how to reset a portal."
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

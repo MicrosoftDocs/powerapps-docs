@@ -1,7 +1,7 @@
 ---
 title: "Import metadata translation | MicrosoftDocs"
 description: "Instructions to import metadata translation."
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
