@@ -1737,7 +1737,7 @@
     - name: Emoployee App
       href: ../sample-apps/return-to-workplace/app-for-employee.md
     - name: Case Management App
-      href: ../sample-apps/return-to-workplace/app-for-health-and-safety Lead.md
+      href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
 - name: Learn from others
   items:
   - name: Blog
