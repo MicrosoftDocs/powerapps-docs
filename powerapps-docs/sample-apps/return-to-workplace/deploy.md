@@ -106,8 +106,7 @@ After your environment is ready, you can install the solution via the package.
 
 3.  You’ll be prompted to connect to your environment. Select **Office 365** as
     the **Deployment Type**, select **Show Advanced**, and then type your
-    credentials to connect to your environment.  
-      
+    credentials to connect to your environment.      
     
 
     ![](media/deploy-connect-crm.png)
@@ -164,17 +163,17 @@ Contoso data and another with State Street data.
     credentials. Select **Display list of available organizations** to select
     the right organization.
 
-![](media/deploy-cds-config-migration-login.png)
+    ![](media/deploy-cds-config-migration-login.png)
 
 1.  On the next screen select the right environment.
 
-![](media/deploy-cds-config-migration-organization.png)
+    ![](media/deploy-cds-config-migration-organization.png)
 
 1.  After validation, select the sample file you want to import. You will see
     the status in the middle. After you press **Import** the sample data will be
     imported.
 
-![](media/deploy-cds-config-import.png)
+    ![](media/deploy-cds-config-import.png)
 
 ## Step 5: Configure and publish Power BI dashboard
 
