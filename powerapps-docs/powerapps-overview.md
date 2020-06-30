@@ -6,13 +6,15 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/15/2019
+ms.date: 06/30/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 ---
 # What is Power Apps?
 
 Power Apps is a suite of apps, services, connectors and data platform that provides a rapid application development environment to build custom apps for your business needs. Using Power Apps, you can quickly build custom business apps that connect to your business data stored *either* in the underlying data platform ([Common Data Service](/powerapps/maker/common-data-service/data-platform-intro)) *or* in various online and on-premises data sources (SharePoint, Excel, Office 365, Dynamics 365, SQL Server, and so on). 
+
+![Power Apps](media/PowerApps-intro.png "Power Apps")
 
 Apps built using Power Apps provide rich business logic and workflow capabilities to transform your manual business processes to digital, automated processes. Further, apps built using Power Apps have a responsive design, and can run seamlessly in browser or on mobile devices (phone or tablet). Power Apps "democratizes" the custom business app building experience by enabling users to build feature-rich, custom business apps without writing code.
 
@@ -30,19 +32,18 @@ To create an app, you start with [make.powerapps.com](https://make.powerapps.com
 
 - **App designer** for model-driven apps lets you define the sitemap and add components to build a model-driven app. More information: [Design model-driven apps using app designer](maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
 
+Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction)
+
 ## Power Apps for app users
 
 You can run apps that you created, or that someone else created and shared with you, in browser or on mobile devices (phone or tablet). More information: [Find and run apps](user/index.md)
 
 ## Power Apps for admins
 
-Power Apps admins can use:
+Power Apps admins can use **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to create and manage environments, get real-time, self-help recommendations and support for Power Apps and Power Automate, and view Common Data Service analytics. More information: [Administer Power Platform](/power-platform/admin/admin-guide)
 
-- **Power Apps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies. 
+> [!NOTE] Admins can also use **Power Apps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies.
 
-- **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to manage environments, get real-time, self-help recommendations and support for Power Apps and Power Automate, and view Common Data Service analytics. 
-
-More information: [Administer Power Apps](/power-platform/admin/admin-guide)
 
 ## Power Apps for developers
 
