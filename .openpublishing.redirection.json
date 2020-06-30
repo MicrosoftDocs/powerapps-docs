@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/maintain-managed-solutions.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/maintain-managed-solutions",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/organize-solutions.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/organize-solutions",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/create-patches-simplify-solution-updates.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/create-patches-simplify-solution-updates",
       "redirect_document_id": "false"

@@ -302,11 +302,6 @@
     href: best-practices/work-with-metadata/index.md
 - name: Introduction to solutions
   href: introduction-solutions.md
-  items:
-  - name: Maintain managed solutions
-    href: maintain-managed-solutions.md
-  - name: Organize your solutions
-    href: organize-solutions.md
 - name: Publish and monitor your (ISV) app
   items:
   - name: Publish your app on AppSource

@@ -121,7 +121,7 @@ The following is a list of unsupported action types that are frequently asked ab
 
 - Creating a plug-in assembly for a standard Common Data Service assembly (Microsoft.Crm.*.dll) or performing an update or delete of a platform created `pluginassembly` is not supported.
 
-- Editing a solutions file to edit any solution components other than ribbons, forms, SiteMap, or saved queries is not supported. For more information, see [When to edit the customizations file](/power-platform/alm/when-edit-customization-file). Defining new solution components by editing the solutions file is not supported. Editing web resource files exported with a solution is not supported. Except for the steps documented in [Maintain managed solutions](maintain-managed-solutions.md), editing the contents of a managed solution is not supported.
+- Editing a solutions file to edit any solution components other than ribbons, forms, SiteMap, or saved queries is not supported. For more information, see [When to edit the customizations file](/power-platform/alm/when-edit-customization-file). Defining new solution components by editing the solutions file is not supported. Editing web resource files exported with a solution is not supported. Except for the steps documented in [Maintain managed solutions](/power-platform/alm/maintain-managed-solutions), editing the contents of a managed solution is not supported.
 
 ### Outlook Client
 - Modifications to any one of the Dynamics 365 forms or adding new forms, such as custom .aspx pages, directly to Office Outlook or making changes to .pst files. These changes will not be upgraded.
