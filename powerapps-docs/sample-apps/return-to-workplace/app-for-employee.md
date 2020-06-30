@@ -9,13 +9,13 @@ The following prerequisites apply to this guide:
 -   To get started with the mobile app, you need to download the Power Apps
     Mobile on your device using the device's app store.
 
-    -   Download the** **[Power Apps
+    -   Download the**Return to WOrkplace**[Power Apps
         Mobile](https://powerapps.microsoft.com/downloads)
 
-        -   For **Apple **devices with iOS such as iPhone and iPad, use [App
+        -   For **Apple** devices with iOS such as iPhone and iPad, use [App
             store](https://aka.ms/powerappsios)
 
-        -   For **Android **devices, use [Google
+        -   For **Android**devices, use [Google
             Play](https://aka.ms/powerappsandroid)
 
     -   Ensure your organization has deployed and configured the Return to Workplace

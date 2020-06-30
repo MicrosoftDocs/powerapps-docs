@@ -32,7 +32,7 @@ this document:
 
 -   [Employee Activity](#Employee-Activity)
 
-# How to view the Leadership dashboard?
+## How to view the Leadership dashboard?
 
 The Leadership dashboard is available on Power BI. To access the dashboard you
 follow the following steps:
@@ -44,7 +44,7 @@ follow the following steps:
 
 ![](media/pbi-dash-command-bar.png)
 
-# System at a Glance
+## System at a Glance
 
 System at a Glance section surfaces main key metrics regarding returning to
 work, including current value, goal values and if they meet goals or not. These
@@ -90,7 +90,7 @@ You will see details of interested facility next:
 
 ![](media/pbi-dash-selected-facility-details.png)
 
-# Virus Spread
+## Virus Spread
 
 Virus Spread section has COVID cases and Reproductive number for country and
 state/province level.
@@ -112,7 +112,7 @@ Example 2 (on Virus Spread Page):
 
 ![](media/pbi-dash-toggle-button-virus-spread-page.png)
 
-# Facility at a Glance
+## Facility at a Glance
 
 Different from System at a glance’s overall view, Facility at a Glance tab will
 let user drill down to each facility, track details of facility open readiness
@@ -121,7 +121,7 @@ all kinds of key metrics and decide facility’s opening phase.
 
 ![](media/90833c570221a889779cab75d3dd1f39.png)
 
-# Employee Activity 
+## Employee Activity 
 
 Employee Activity provides an overall time-series view for employee sentiment
 and attestation on daily basis. Executive Leaders can check every day and see
