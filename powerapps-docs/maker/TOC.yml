@@ -917,6 +917,18 @@
         href: ./canvas-apps/sharepoint-scenario-alerts-flow.md
       - name: Walk through the completed scenario
         href: ./canvas-apps/sharepoint-scenario-summary.md
+      - name: SharePoint integration scenarios
+        items:
+        - name: SharePoint scenarios overview
+          href: ./canvas-apps/sharepoint/scenarios-intro.md
+        - name: How to filter a search list in an app?
+          href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
+        - name: How to use drop down list with choices from lookup column in a SharePoint list?
+          href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
+        - name: How to customize an app screen baed on column status inside SharePoint list?
+          href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
+        - name: How to work with permissions in a lookup list from SharePoint site?
+          href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
@@ -1469,16 +1481,16 @@
   items:
   - name: What is Common Data Service?
     href: ./common-data-service/data-platform-intro.md
-  - name: Why choose Common Data Service? 
-    items:
-      - name: Overview
-        href: ./common-data-service/why-cds-overview.md  
-      - name: Work with any data
-        href: ./common-data-service/why-cds-work-with-data.md
-      - name: Importing and exporting data
-        href: ./common-data-service/why-cds-import-export.md
-      - name: Work with any app
-        href: ./common-data-service/why-cds-any-type-app.md                
+  - name: Why choose Common Data Service? 	
+    items:	
+    - name: Overview	
+      href: ./common-data-service/why-cds-overview.md  	
+    - name: Work with any data	
+      href: ./common-data-service/why-cds-work-with-data.md	
+    - name: Importing and exporting data	
+      href: ./common-data-service/why-cds-import-export.md	
+    - name: Work with any app	
+      href: ./common-data-service/why-cds-any-type-app.md
   - name: Work with entities
     items:
     - name: Entity overview
@@ -1678,6 +1690,8 @@
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
+- name: Chatbots
+  href: ../chatbots.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
@@ -1710,6 +1724,18 @@
       href: ../sample-apps/regional-emergency-response/portals-user.md
   - name: Transfer data from hospital to regional
     href: ../sample-apps/emergency-response-data-transfer.md
+  - name: Higher Education Crisis Financial Impact Tracker
+    items:
+    - name: Overview
+      href: ../sample-apps/crisis-financial-impact-tracker/overview.md
+    - name: Deploy the solution
+      href: ../sample-apps/crisis-financial-impact-tracker/deploy-solution.md
+    - name: Use the admin app
+      href: ../sample-apps/crisis-financial-impact-tracker/configure-data.md
+    - name: Use the mobile app
+      href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
+    - name: Use dashboards
+      href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
 - name: Learn from others
   items:
   - name: Blog
