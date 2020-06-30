@@ -2,22 +2,6 @@
 title: User Guide for Facility Manager
 ---
 
-# Prerequisites
-
-The following prerequisites apply to this guide:   
-
-- The environment has all the Return to Workplace components in place with the
-    Model Driven App, Canvas Apps and Power BI Dashboards. 
-
-- Solution Administrator has completed all required setup (configurations and master
-    date)
-
-- Execution of how to steps require users have the required security role(s)
-    in place. Contact your IT Administrator if you are unable to access.
-
-- The sample data is in the package and needs to be installed on the
-    environment. 
-
 # Overview
 
 This document provides Facility Managers in organizations a guide on how to use
@@ -36,21 +20,31 @@ include:
 
 -   [Monitor employee sentiments](#Monitor-employee-sentiments)
 
-# Facility Manager app at a glance
+## Prerequisites
+
+The following prerequisites apply to this guide:   
+- The environment has all the Return to Workplace components in place with the
+    Model Driven App, Canvas Apps and Power BI Dashboards. 
+- Solution Administrator has completed all required setup (configurations and master
+    date)
+- Execution of how to steps require users have the required security role(s)
+    in place. Contact your IT Administrator if you are unable to access.
+- The sample data is in the package and needs to be installed on the
+    environment. 
+
+## Facility Manager app at a glance
 
 The left-hand side menu lists all the components available in the ‘Facility’
 Area.
 
 ![](media/facility-manager-facility-active-facilities.png)
 
-# Facility Manager app components
+## Facility Manager app components
 
 For facility management one area called ‘Facility’ is available with the
 following components.
 
-## Facility
-
-### Facility Management
+<b>Facility Management</b>
 
 -   Facilities  
     Lists the facilities (e.g. buildings, plants, etc.) that require monitoring
@@ -60,11 +54,11 @@ following components.
     Provides a flexible way to group facilities. For example, by campus or
     geographical region
 
-    -   Areas  
-        Areas are subcomponents of a facility. This item is used to distinguish
-        capacity of these subcomponents over the various phases.
+-   Areas  
+    Areas are subcomponents of a facility. This item is used to distinguish
+    capacity of these subcomponents over the various phases.
 
-## Reopen Readiness
+<b>Reopen Readiness</b>
 
 -   Phase Transitions  
     A Phase transition models a request to transition to a new phase. When the
@@ -78,7 +72,7 @@ following components.
     The actual values for a Metric. This allows to track parameters over time.
     For a single Metric, measurements can be entered per facility.
 
-## Employee 
+<b>Employee</b>
 
 -   Employee Sentiment  
     Keeps track of general employee wellbeing. This is self-reported
@@ -92,8 +86,6 @@ following components.
     of questions presented to and answered by the employee. This data will
     typically be enter through employee’s use of the Return to Workplace
     solution’s canvas app.
-
-# Getting started with the Facility Manager app
 
 ## Manage and monitor facilities 
 
@@ -302,8 +294,10 @@ For rejections, select the **Rejected** status value and enter in any
 Select the Save & Close button. Transition **Review Status** updated to
     Rejected and appropriate no updates are processed to move the facility to
     the requested Reopen Phase. Facility remains in current phase and status.
+    
+## Employee
 
-## Monitor employee attestations
+### Monitor employee attestations
 
 Facility managers can monitor whether or not their organization’s employees are
 feeling healthy enough to be eligible to return to their facility. They are able
@@ -315,7 +309,7 @@ Attestations** sub-area.
 
 ![A screen shot of a computer Description automatically generated](media/facility-manager-employee-attestations.png)
 
-## Monitor employee sentiments
+### Monitor employee sentiments
 
 Keeps track of general employee sentiment on how they are feeling about the
 prospect of returning to their workplace facility. This information is
@@ -327,17 +321,3 @@ Sentiment** sub-area.
 
 ![A screenshot of a computer Description automatically generated](media/facility-manager-employee-sentiment.png)
 
-
-## Issues and feedback
-
-- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
-
-- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.
-
-
-*Disclaimer*
-
-*Customer bears the sole risk and responsibility for any use of this app.*
-
-*Sample data included in this app are for illustration only and are fictitious.
-No real association is intended or inferred.*
