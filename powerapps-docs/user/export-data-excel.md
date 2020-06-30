@@ -66,5 +66,9 @@ The error message occurs due to a setting in Excel. To fix the issue, do this:
 4. Select **Protected view** and then clear the check boxes for the first two options.  
   
 5. Select **OK** and then close the **Options** dialog box.  
-  
+
+
+### See also
+
+[Troubleshoot export to excel](ts-export-to-excel.md)  
 
