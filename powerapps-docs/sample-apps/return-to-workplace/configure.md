@@ -2,14 +2,6 @@
 title: Configuration Guide for Solution Administrator
 ---
 
-## Version History
-
-| Version | Release Date | Comments                                               |
-|---------|--------------|--------------------------------------------------------|
-| 0.1     | 19-06-2020   | Initial Draft for Review                               |
-| 0.2     | 19-06-2020   | Updates to initial draft                               |
-| 0.3     | 26-06-2020   | Updating screenshot and changes to support updated ERD |
-
 # Prerequisites
 
 The following prerequisites apply to this guide:

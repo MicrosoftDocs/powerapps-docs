@@ -1722,24 +1722,22 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
-  - name: Return to Work
+  - name: Return to Workplace
     items:
     - name: Overview
-      href: ../sample-apps/return-to-work/overview.md
-    - name: Start Here
-      href: ../sample-apps/return-to-work/start-here.md
-    - name: Deployment Guide for IT Admin
-      href: ../sample-apps/return-to-work/deployment-guide-for-it-admin.md   
-    - name: Configuration Guide for Solution Administrators
-      href: ../sample-apps/return-to-work/configuration-guide-for-solution-administrator.md
-    - name: User Guide for Leadership Dashboard
-      href: ../sample-apps/return-to-work/user-guide-for-leadership-dashboard.md
-    - name: User Guide for Facility Manager
-      href: ../sample-apps/return-to-work/user-guide-for-facility-manager.md
-    - name: User Guide for Employee
-      href: ../sample-apps/return-to-work/user-guide-for-employee.md
-    - name: User Guide for Health and Safety Lead
-      href: ../sample-apps/return-to-work/user-guide-for-health-and-safety Lead.md
+      href: ../sample-apps/return-to-workplace/overview.md
+    - name: Deploy the solution
+      href: ../sample-apps/return-to-workplace/deploy.md   
+    - name: Setup the solution
+      href: ../sample-apps/return-to-workplace/configure.md
+    - name: Dashboard for Executive Leadership
+      href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
+    - name: App for Facility Manager
+      href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
+    - name: App for Employee
+      href: ../sample-apps/return-to-workplace/app-for-employee.md
+    - name: App for Health and Safety Lead
+      href: ../sample-apps/return-to-workplace/app-for-health-and-safety Lead.md
 - name: Learn from others
   items:
   - name: Blog

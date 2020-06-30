@@ -2,13 +2,6 @@
 title: User Guide for Leadership Dashboard
 ---
 
-# Version History
-
-| Version | Release Date | Comments                 |
-|---------|--------------|--------------------------|
-| 0.1     | 19-06-2020   | Initial Draft for Review |
-| 0.2     | 24-06-2020   | Updates added            |
-
 # Prerequisites
 
 The following prerequisites apply to this guide:

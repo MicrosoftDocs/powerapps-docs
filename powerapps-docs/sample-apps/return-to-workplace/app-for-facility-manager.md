@@ -2,13 +2,6 @@
 title: User Guide for Facility Manager
 ---
 
-# Version History
-
-| Version | Release Date | Comments                 |
-|---------|--------------|--------------------------|
-| 0.1     | 19-06-2020   | Initial draft for review |
-| 0.2     | 26-06-2020   | Updates                  |
-
 # Prerequisites
 
 The following prerequisites apply to this guide:   

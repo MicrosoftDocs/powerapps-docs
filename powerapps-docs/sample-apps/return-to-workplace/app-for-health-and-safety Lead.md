@@ -2,13 +2,6 @@
 title: User Guide for Health & Safety Lead
 ---
 
-# Version History
-
-| Version | Release Date | Comments                 |
-|---------|--------------|--------------------------|
-| 0.1     | 24-06-2020   | Initial draft for review |
-| 0.2     | 25-06-2020   | Updates to initial draft |
-
 # Prerequisites
 
 The following prerequisites apply to this guide:   

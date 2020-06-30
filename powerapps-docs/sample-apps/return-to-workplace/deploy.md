@@ -2,13 +2,6 @@
 title: Deployment Guide for IT Admin
 ---
 
-## Version History
-
-| Version | Release Date | Comments                 |
-|---------|--------------|--------------------------|
-| 0.1     | 19-06-2020   | Initial Draft for Review |
-| 0.2     | 24-06-2020   | Udpates                  |
-
 # Prerequisites
 
 The following prerequisites apply to this document:

@@ -2,13 +2,6 @@
 title: User Guide for Employee
 ---
 
-# Version History
-
-| Version | Release Date | Comments                    |
-|---------|--------------|-----------------------------|
-| 0.1     | 19-06-2020   | Initial draft for review    |
-| 0.2     | 26-06-2020   | Updates after initial draft |
-
 # Prerequisites
 
 The following prerequisites apply to this guide:
@@ -68,13 +61,13 @@ answer the employee sentiment question:
 You can a reopen status of a facility, here you will find for all the facilities
 to status and the guidance around.
 
-Step 1:  Select **Look up Facility** to look up facilities and view details such
+Select **Look up Facility** to look up facilities and view details such
 as whether the facility is open and what phase of reopening it is in.
 
-Step 2: Select a Facility from the droplist and the current facility status and
+Select a Facility from the droplist and the current facility status and
 associated details are displayed
 
-Step 3:  Select Cancel to return to the home screen
+Select <b>Cancel</b> to return to the home screen
 
 ![A screenshot of a cell phone Description automatically generated](media/employee-facility-details.png)
 
