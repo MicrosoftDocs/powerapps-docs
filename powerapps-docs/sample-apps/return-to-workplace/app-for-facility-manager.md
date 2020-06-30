@@ -294,10 +294,8 @@ For rejections, select the **Rejected** status value and enter in any
 Select the Save & Close button. Transition **Review Status** updated to
     Rejected and appropriate no updates are processed to move the facility to
     the requested Reopen Phase. Facility remains in current phase and status.
-    
-## Employee
 
-### Monitor employee attestations
+## Monitor employee attestations
 
 Facility managers can monitor whether or not their organization’s employees are
 feeling healthy enough to be eligible to return to their facility. They are able
@@ -309,7 +307,7 @@ Attestations** sub-area.
 
 ![A screen shot of a computer Description automatically generated](media/facility-manager-employee-attestations.png)
 
-### Monitor employee sentiments
+## Monitor employee sentiments
 
 Keeps track of general employee sentiment on how they are feeling about the
 prospect of returning to their workplace facility. This information is
