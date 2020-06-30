@@ -117,7 +117,7 @@ Coho Winery (sample) | -116.97751 | 32.87466
     - **ItemLatitudes** as *TestData.Latitude*
     - **ItemsLongitudes** as *TestData.Longitude*
 
-1. The map component will now show the each row in the table as a pin, labeled with its *Name* as defined in the Excel table.
+1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table.
 
     ![](./media/geospatial/map-expanded.png)
 
@@ -127,7 +127,7 @@ The following properties can be defined and configured in the component's **Prop
 
 ![Map component displayed next to its Properties pane](./media/augmented-geospatial/geospatial-controls.png "Map component displayed next to its Properties pane")
 
-Note that some properties are only available on the **Advanced** tab in the **Properties** pane, in the **More options** section.
+Some properties are only available on the **Advanced** tab in the **Properties** pane, in the **More options** section.
 
 | Property | Description | Type | Location |
 | - | - | - | - |
