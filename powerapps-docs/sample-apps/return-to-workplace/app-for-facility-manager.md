@@ -19,7 +19,7 @@ This article has the following sections:
 
 - [Manage and monitor facilities](#manage-and-monitor-facilities)
 
-- [Moving a facility to a new phase](#moving-a-facility-to-a-new-phase)
+- [Moving facility to a new phase](#moving-facility-to-a-new-phase)
 
 - [Monitor employee attestations](#monitor-employee-attestations)
 
@@ -177,108 +177,93 @@ in a facility group, can find the backlog in the phase transitions sub area. For
 
 To create a transition request:
 
-1. Select **Facilities** in the left pane and select an active facility.
+1. Select **Facilities** in the left pane and select a facility record from the active facilities list.
 
-2. Select the **Transitions** tab from the selected facility. If there are any
-    existing/previous transition requests established they will appear in the
-    sub-grid displayed.
+2. Select **Transitions** tab from the selected facility. If there are any existing or previous transition requests established they will appear in the
+subgrid.
 
-Select the **+New Reopen Phase Transition** button
+3. Select **New Reopen Phase Transition**.
 
-![](media/facility-manager-reopen-phase-transition-subgrid.png)
+   > [!div class="mx-imgBorder"]
+   > ![New reopen phase transition](media/facility-manager-reopen-phase-transition-subgrid.png"New reopen phase transition")
 
 
-In the New Transition screen enter the appropriate details:
+4. Enter appropriate values in the fields:
 
-![](media/facility-manager-phase-transition-form.png)
+   > [!div class="mx-imgBorder"]
+   > ![](media/facility-manager-phase-transition-form.png)
 
-| **Field**             | **Description**                                                                                                             |
-|-----------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| Proposed Reopen Phase | Field to select the desired next Reopen Phase to transition to                                                              |
-| Summary               | Field allowing summary information regarding any supporting information to support moving to the next/targeted Reopen Phase |
-| Reviewer              | Lookup and select an appropriate resource to review and approve the new Transition                                          |
+   | **Field**    | **Description**    |
+   |-----------------------|---------------|
+   | Proposed Reopen Phase | Select the desired next reopen phase to transition to.|
+   | Summary | Enter the summary information regarding moving to the next or targeted reopen phase. |
+   | Reviewer | Select appropriate resource to review and approve the new transition. |
 
-Select **Save & Close**. The newly created record will be available in the
+5. Select **Save & Close**. The newly created record is available in the
     **Transitions** tab sub-grid for the facility.
 
 To edit the record, select the newly created record, update the values as
 required, and select **Save & Close**.
 
-### Approve Transition
+### Approve transition
 
-Select **Phase Transitions** in the left pane
+To approve transition requests:
 
-If not already selected choose the **Reopen Transitions** view
+1. Select **Phase Transitions** in the left pane.
 
-![](media/facility-manager-phase-transition-reopen-transitions.png)
+   > [!div class="mx-imgBorder"]
+   > ![Phase transition](media/facility-manager-phase-transition-reopen-transitions.png "Phase transition")
 
 
-As a Reviewer you need to locate those Transitions with your name identified
-    on the **Reviewer** column.
+2. Filter the transitions with the name on the **Reviewer** column.
 
-Select/Open the **Transition** record
+3. Select the **Transition** record. Complete any analysis required prior to selecting an **Approved** or **Rejected** value in the **Review Status** field 
 
-Complete any analysis you require prior to selecting an Approved or Rejected
-    value in the **Review Status** filed select the appropriate.
+4. For approvals, select **Approved** status value and enter in any associated comments in the **Review Comments** field.
 
-For Approvals, select the **Approved** status value and enter in any
+   > [!div class="mx-imgBorder"]
+   > ![Approved transitions](media/facility-manager-phase-transition-form-approved.png  "Approve transitions")
+
+5. Select **Save & Close**. Transition **Review Status** is updated and appropriate back end process are triggered to move the facility to the targeted reopen phase.
+
+### Reject transitions
+
+A reviewer must **Accept** or **Reject** transitions. To review and perform approve or reject the transition:
+
+1. Select **Phase Transitions** in the left pane.
+
+   > [!div class="mx-imgBorder"]
+   > ![Phase transition](media/facility-manager-phase-transition-reopen-transitions.png "Phase transition")
+
+2. Filter the transitions with the name on the **Reviewer** column.
+
+3. Select **Transition** record. Complete any analysis required prior to selecting an **Approved** or **Rejected** value in the **Review Status** field .
+
+4. For rejections, select **Rejected** status value and enter in any
     associated comments in the **Review Comments** field.
 
-![](media/facility-manager-phase-transition-form-approved.png)
+   > [!div class="mx-imgBorder"]
+   > ![Rejected transitions](media/facility-manager-phase-transition-form-rejected.png "Rejected transitions")
 
-Select the Save & Close button. Transition **Review Status** updated and
-    appropriate back end process triggered to move the facility to the targeted
-    Reopen Phase.
-
-### Reject Transitions
-
-A reviewer must Accept or Reject transitions. The following are the steps to
-review and take approve/reetc action on that request.
-
-Select **Phase Transitions** in the left pane
-
-If not already selected choose the **Reopen Transitions** view
-
-![A screenshot of a cell phone Description automatically generated](media/facility-manager-phase-transition-reopen-transitions.png)
-
-As a Reviewer you need to locate those Transitions with your name identified
-    on the **Reviewer** column.
-
-Select/Open the **Transition** record
-
-Complete any analysis you require prior to selecting an Approved or Rejected
-    value in the **Review Status** filed select the appropriate.
-
-For rejections, select the **Rejected** status value and enter in any
-    associated comments in the **Review Comments** field.
-
-![](media/facility-manager-phase-transition-form-rejected.png)
-
-Select the Save & Close button. Transition **Review Status** updated to
-    Rejected and appropriate no updates are processed to move the facility to
-    the requested Reopen Phase. Facility remains in current phase and status.
+5. Select **Save & Close**. Transition **Review Status** is updated are processed to move the facility to the requested reopen phase. Facility remains in current phase and status.
 
 ## Monitor employee attestations
 
 Facility managers can monitor whether or not their organization’s employees are
 feeling healthy enough to be eligible to return to their facility. They are able
 to track employee self-attestations of their health based upon a series of
-questions presented to and answered by the employees. This data will typically
-be entered through employee’s use of the Return to Workplace solution’s canvas
-app and available at a summary level in the Facility Manager App’s **Employee
-Attestations** sub-area.
+questions answered by the employees. This data is typically entered by employee using the employee app. Facility managers can view the summary of the responses in **Employee Attestations** sub-area in facility manager app.
 
-![A screen shot of a computer Description automatically generated](media/facility-manager-employee-attestations.png)
+> [!div class="mx-imgBorder"]
+> ![Employee Attestations](media/facility-manager-employee-attestations.png "Employee Attestations")
 
 ## Monitor employee sentiments
 
 Keeps track of general employee sentiment on how they are feeling about the
 prospect of returning to their workplace facility. This information is
 self-reported information, but it is a valuable parameter when tracked
-consistently over time and with bigger groups. This data will typically be enter
-through employee’s use of the Return to Workplace solution’s canvas app and can
-be viewed by Facility Managers at a summary level in the Facility Manager App’s **Employee
-Sentiment** sub-area.
+consistently over time and with bigger groups. This data is typically entered by employee using the employee app. Facility managers can view the summary of the responses in **Employee Attestations** sub-area in facility manager app.
 
-![A screenshot of a computer Description automatically generated](media/facility-manager-employee-sentiment.png)
+> [!div class="mx-imgBorder"]
+![Employee sentiment](media/facility-manager-employee-sentiment.png "Employee sentiment")
 

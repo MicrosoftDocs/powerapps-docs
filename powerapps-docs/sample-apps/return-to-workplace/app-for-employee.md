@@ -17,13 +17,13 @@ This article provides step-by-step instructions to employees on how to use the e
 
 This article has the following sections:
 
-- [Getting started with the app](#Getting-started-with-the-App)
+- [Getting started with the app](#getting-started-with-the-app)
 
-- [See the reopen status of a facility](#See-the-reopen-status-of-a-facility)
+- [See the reopen status of a facility](#see-the-reopen-status-of-a-facility)
 
-- [Check in to a facility](#Check-in-to-a-facility)
+- [Check in to a facility](#check-in-to-a-facility)
 
-- [Share sentiment](#Share-sentiment)
+- [Share sentiment](#share-sentiment)
 
 ## Prerequisites
 

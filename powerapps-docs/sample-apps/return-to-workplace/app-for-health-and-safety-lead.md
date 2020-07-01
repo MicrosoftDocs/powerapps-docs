@@ -1,6 +1,6 @@
 ---
-title: User Guide for Case Management
-description: Provides an overview of Return to Workplace Solution.
+title: User the case management app
+description: Provides an overview on how to use the case management app.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
@@ -11,146 +11,130 @@ ms.author: pankar
 ms.reviewer: kvivek
 ---
 
-# Overview
+# Use the case management app
 
-This document provides Case Managers in organizations a guide on
-how to use the Case Management App to manage employee cases.
+This article provides step-by-step instructions to case managers in organization on how to use the case management app to manage employee cases. In this article, Health & Safety lead is the case manager.
 
-These cases will be managed through the following process stages:
+The employee cases will be managed through the following process stages:
 
-![](media/health-safety-employee-case-bpf.png)
+![Business process flow](media/health-safety-employee-case-bpf.png "Business process flow")
 
-1.  Open – In this stage the Health & Safety lead can record basic information
+1. **Open** – In this stage, the Health & Safety lead can record basic information
     regarding the case.
 
-2.  Investigating – In this stage the Health & Safety Lead is performing steps
-    to ensure the employee checks and screenings are being completed as per
-    their company policy. The end result of these checks is a clear instruction
-    to the employee. When this is communicated to the employee, the case can
-    move towards the next stage.
+2. **Investigating** – In this stage, the Health & Safety Lead perform steps
+    to ensure employee checks and screenings are being completed as per the
+    company policy. The end result of these checks is a clear instruction
+    to the employee. When this is communicated to the employee, case is
+    moved to the next stage.
 
-3.  Monitoring – After the investigating stage is complete and employee has been
-    provided with instructions/guidelines they are monitored until they are
-    healthy enough to be eligible to return to the workplace
+3. **Monitoring** – After the investigating stage is complete and employee is provided with the instructions or guidelines, they are monitored until they are
+healthy enough to be eligible to return to the workplace.
 
-4.  Resolve – case is closed
-
-Health & Safety Leads will use this app to:
-
--   [Manage Employee and Case Managers Master Data](#Manage-Employee-and-Case-Managers-master-data)
-
--   [Manage Employee Cases](#Manage-Employee-Cases)
-
--   [Monitor Employee Cases (dashboard)](#Monitor-employee-cases-(dashboard))
+4. **Resolve** – Case is closed.
 
 
-## Prerequisites
+Health & Safety lead use this app to:
 
-The following prerequisites apply to this guide:   
-- The environment has all the Return to Workplace components in place with the
-    Model Driven App, Canvas Apps and Power BI Dashboards. 
-- Solution Administrator has completed all required setup (configurations and master
-    data)
-- Execution of how to steps require users have the required security role(s)
-    in place. Contact your IT Admininstrtaor if you are unable to access.
-- The sample data is in the package and needs to be installed on the
-    environment. 
+- [Manage employee and case managers master data](#manage-employee-and-case-managers-master-data)
 
-## Case Management app at a glance
-The left-hand side menu lists all the components available in the ‘Employee
-Cases ’ Area.
+- [Manage employee cases](#manage-employee-cases)
 
-![](media/health-safety-employee-case-view.png)
+- [Monitor employee cases dashboard](#Monitor-employee-cases-dashboard)
 
-## Case Management app components
+## Case management app at a glance
 
-For the Health & Safety Leads one area called ‘Employee Cases’ is available with
-the following components.
+The left pane lists all the components available in the **Employee Cases** area.
+
+> [!div class="mx-imgBorder"]
+> ![Employee case view](media/health-safety-employee-case-view.png "Employee case view")
+
+## Case management app components
+
+The case management app has the following components:
 
 ### Master Data
 
--   Employee - List of all employees. These are the basic contacts
+- Employee - List of all employees. Employees are basically contacts.
 
--   Case Managers - List of all users that have access to the Employee Cases
-    area.
+- Case managers - List of all the users that have access to the **Employee Cases** area.
 
-![](media/health-safety-master-data.png)
+   > [!div class="mx-imgBorder"]
+   > ![Master data](media/health-safety-master-data.png "Master data")
 
 ### Employee Cases
 
--   Employee Cases  
-    Lists of all cases that have been created
+Employee Cases - Lists of all cases that have been created.
 
-![](media/health-safety-employee-cases.png)
+> [!div class="mx-imgBorder"]
+> ![Employee cases](media/health-safety-employee-cases.png "Employee cases")
 
 ### Employee Cases Dashboard
 
--   Cases
+- Cases
 
--   Workload
+- Workload
 
-## Getting started with the Case Management app
+## Getting started with the case management app
 
-Employee Safety is the main goal for the Health & Safety Lead. Therefor the
-Employee Case allows the Health & Safety Lead to revoke the employee's ability
-to check into a workplace facility. The goal of case management is to provide
-clear insight into the work backlog and to make sure that the managing of all
-cases follow the same process.
+Employee Safety is the main goal for the Health & Safety Lead. Therefore the
+employee cases allows the Health & Safety Lead to revoke the employee's ability
+to check in to the workplace. The goal of the case management is to provide a
+clear insight into the work backlog and to make sure that managing all the cases follow the same process.
 
-**At the case level, no additional personal or privacy related information is
+At the case level, no additional personal or privacy-related information is
 stored or gathered. The case must be regarded as a checklist that proper
-procedures have been applied**
+procedures have been applied.
 
-## Manage Employee and Case Managers Master Data
+## Manage employee and case managers master data
 
-### Manage Employee
+### Manage employee
 
-Case Managers are able to create a new Employee contact, if one does not exist.
-To add an Employee refer to the following steps:
+Case managers can create a new employee contact, if the contact doesn't exist.
+To create an employee contact:
 
-Select **Employee** in the left pane and then select **+New**.
+1. Select **Employee** in the left pane and then select **New**.
 
-![A screenshot of a cell phone Description automatically generated](media/health-safety-employee-new.png)
+   > [!div class="mx-imgBorder"]
+   > ![Create contact](media/health-safety-employee-new.png "Create contact")
 
-In the **New Contact** screen, enter your new Employee by entering the
-    appropriate values:
+2. Enter appropriate values in the fields:
 
-| **Field**                   | **Description**                                        |
-|-----------------------------|--------------------------------------------------------|
-| First Name                  | First name for the new employee                        |
-| Last Name                   | Last name for the employee                             |
-| Email                       | The employee email                                     |
-| Business Phone              | The employee business phone numer                      |
-| Mobile Phone                | The employee mobile/cell phone number                  |
-| Preferred Method of Contact | Select the desired method of contact from the droplist |
+| **Field**   | **Description**  |
+|---------------|------------------|
+| First Name | Enter the first name of the employee. |
+| Last Name | Enter the last name of the employee.  |
+| Email | Enter employee email address. |
+| Business Phone| Enter the employee mobile or phone number. |
+| Preferred Method of Contact | Select the desired method of contact from the drop-list. |
 
-Select **Save & Close**. The newly created record will be available in the
-    **Active Contacts** list.
+3. Select **Save & Close**. The newly created record is available in the
+    **Active Contacts** view.
 
 To edit the record, select the newly created record, update the values as
 required, and select **Save & Close**.
 
-### Manage Case Managers
+### Manage case managers
 
-Case Managers are able to view a list of employees that are able to manage
-employee cases. This list of users can be accessed by the following steps:
+Case managers can view a list of managers who can manage employee cases. To view the list:
 
-Select **Case Managers** in the left pane.
+1. Select **Case Managers** in the left pane.
 
-![](media/health-safety-case-manager-view.png)
+   > [!div class="mx-imgBorder"]
+   > ![View case managers](media/health-safety-case-manager-view.png "View case managers")
 
-Specific details of a selected Case Manager can be viewed by selecting the
-    desired user record form the view provided.
+2. Specific details of a case manager can be seen by selecting the desired user record form the view provided.
 
-![](media/health-safety-case-manager-form.png)
+   > [!div class="mx-imgBorder"]
+   > ![Select user](media/health-safety-case-manager-form.png "Select user")
 
-Select **Save & Close**. The newly created record will be available in the
+3. Select **Save & Close**. The newly created record is available in the
     **Enabled Users** list.
 
 To edit the record, select the newly created record, update the values as
 required, and select **Save & Close**.
 
-## Manage Employee Cases
+## Manage employee cases
 
 ### Process Flow
 
@@ -160,100 +144,88 @@ required, and select **Save & Close**.
 
 -   Employee is not feeling well and contacts a case manager via email.
 
-### Employee Case Creation
+### Employee case creation
 
-Case managers will be the resource managing employee cases. When notified they
-will need to open a new case record to be managed. A new case can be created by
-performing the following steps:
+Case managers are the resource who manages employee cases. To create a new case:
 
-Select the Module “Employee Cases” and then select the **Employee Cases**
-    sub-area from the left pane and Select **+New**
+1. Select **Employee Cases** from the left pane and Select **New**
 
-![A screenshot of a social media post Description automatically generated](media/health-safety-employee-case-new.png)
+   > [!div class="mx-imgBorder"]
+   > ![New case](media/health-safety-employee-case-new.png "New case")
 
-Case Manager opens the case and capture the Employee name for the new case.
+2. Enter the employee name for the new case.
 
-![A screenshot of a social media post Description automatically generated](media/health-safety-employee-case-form.png)
+   > [!div class="mx-imgBorder"]
+   > ![Enter name](media/health-safety-employee-case-form.png "Enter name")
 
 ### Managing a case – moving a case through the process stages
 
 #### Open Stage
 
-   In this process stage the Case Manger makes contact with the employee that
-   notified the case management team that he/she is not feeling well. The key
-   pieces of data to be captured and recorded prior to moving to the next stage
-   are:
+In this process stage, the case manager contacts the employee notified by the case management team to verify if employee is feeling well or not. The key pieces of data to be captured and recorded prior to moving to the next stage are:
 
--   Employee Contacted – Yes/No, to be set to Yes once the Case manager has
-    contacted the employee about their notification.
+- Employee Contacted – Set to **Yes** once the case manager has contacted the employee about their notification.
 
--   Health & Safety Lead - Case Manager owning this case
+- Health & Safety Lead - Case Manager owning the case.
 
-![](media/health-safety-bpf-open.png)
+  > [!div class="mx-imgBorder"]
+  > ![Open stage](media/health-safety-bpf-open.png "Open stage")
 
 ### Investigating
 
-   In this process stage the Case Manger continues to investigate capturing and
-   recording case related data and updating the fields on the case form.
+In this process stage, the case manager continues to investigate capturing and recording the case-related data and updating the fields on the case form.
+The key pieces of data to be captured and recorded prior to moving to the next stage are:
 
-   The key pieces of data to be captured and recorded prior to moving to the
-   next stage are:
+- Screened (Yes/No)
 
--   Screened (Yes/No)
+- Public Health Official Notified
 
--   Public Health Official Notified
+- Risk Assessment
 
--   Risk Assessment
-
-![](media/health-safety-bpf-investigating.png)
+  > [!div class="mx-imgBorder"]
+  > ![Investigation stage](media/health-safety-bpf-investigating.png "Investigation stage")
 
 ### Monitoring
 
-   In this process stage the Case Manger monitors the case and manages the case
-   ensuring that employee provided guidance/instructions are being followed and
-   expected target dates for return to work eligibility are updated for the
-   employee.
+In this process stage, the case manager monitors and manages the cases
+ensuring that provided guidance or instructions are being followed and expected target dates for return to work eligibility are updated for the employee. The key pieces of data to be captured and recorded prior to moving to the next stage are:
 
-   The key pieces of data to be captured and recorded prior to moving to the
-   next stage are:
+- Employee Instructions Provided (Yes/No)
 
--   Employee Instructions Provided (Yes/No)
-
-![](media/health-safety-bpf-monitoring.png)
+  > [!div class="mx-imgBorder"]
+  > ![Monitoring](media/health-safety-bpf-monitoring.png "Monitoring")
 
 ### Resolve
 
-   In this process stage the Case Manger completes the process by resolving the
-   case. Selecting Finish.
+In this process stage, the case manager completes the process by resolving the
+case and selects **Finish**. The key pieces of data to be captured and recorded are:
 
-   The key pieces of data to be captured and recorded prior to moving to the
-   next stage are:
+- Employee Instructions Provided (Yes/No)
 
--   Employee Instructions Provided (Yes/No)
+  > [!div class="mx-imgBorder"]
+  > ![resolve](media/health-safety-bpf-resolve.png "Resolve")
 
-![](media/health-safety-bpf-resolve.png)
+## Monitor employee cases dashboard
 
-## Monitor Employee Cases (Dashboard)
+The dashboard consists of two tabs, both with a distinctive set of information.
 
-The dashboard consists out of two tabs, both with a distinctive set of
-information.
+**Cases**
 
-### Cases
-
-On this tab the Health & Safety Lead will see insights in all the cases.
+On this tab, the Health & Safety Lead can see insights of all the cases.
 Insights in the workload and work composition:
 
--   New cases per day
+- New cases per day
 
--   Resolved cases per day
+- Resolved cases per day
 
--   Number of active cases per phases
+- Number of active cases per phases
 
-Workload  
-This tab of the dashboard will display information regarding the progression of
-the cases. That way the Health & Safety leads can monitor if cases are dealt
-with in a proper fashion.
+**Workload**
+  
+This tab of the dashboard displays information regarding the progression of
+the cases so that the Health & Safety leads can monitor if the cases are dealt 
+with in a proper way.
 
--   Case duration
+- Case duration
 
--   Cases per facility
+- Cases per facility

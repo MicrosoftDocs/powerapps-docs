@@ -15,7 +15,7 @@ ms.reviewer: kvivek
 
 This article provides step-by-step instructions for IT administrators to configure the Return to Workplace solution. IT administrators are responsible for making sure the facility manager can guide their facilities throughout the phases. Follow the steps in this article to configure the solution:
 
-- [Plan reopening phase](#plan-reopening-phase)
+- [Plan reopening phase](#plan-reopening-phases)
 
 - [Manage facilities](#manage-facilities)
 
@@ -29,7 +29,7 @@ The following prerequisites apply to this guide:
 
 - The sample data file to import facilities in to the organization. Make sure that you have appropriate security roles to import the data
 
-## Plan Reopening Phases
+## Plan reopening phases
 
 Reopening the workplaces safely requires certain planning in phases to ensure the safety of the employees. To open a workplace safely, you need to define phases. Within these phases, you need to define goals, metrics, and readiness factors. These metrics can be sorted via categories.
 
