@@ -16,7 +16,7 @@ The Return to Workplace solution provides a set of capabilities for organization
 
 The main components of the Return to Workplace solution:
 
-- **Dashboard for Executive Leadership** to review current data related to all of their workplaces as it relates to Covid-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated to established goals/targets for facilities in their locations and respective phase rules/guidelines set for them by government agencies.
+- **Dashboard for Executive Leadership** to review current data related to all of their workplaces as it relates to COVID-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated to established goals/targets for facilities in their locations and respective phase rules/guidelines set for them by government agencies.
 
 - **Facility Manager App** used to develop and execute on reopening plans.
 
@@ -42,11 +42,12 @@ For people to use the system a couple of licenses are required:​
 
 - PowerApps per App or a PowerApps per User Plan
 - Power BI Premium or Pro license
-- Common Data Service Capacitiy; to store the actual data within your environment.
+- Common Data Service Capacity to store the actual data within your environment.
 
 Contact your local Microsoft account representative for questions related to licensing as per your requirements.
 
 See also: 
+
 - [Licensing overview for Power Platform](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus)
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
@@ -57,8 +58,8 @@ See also:
 |--|--|--|
 |Used by IT Administrators to deploy the Return to Workplace solution and set up users and security|Organization IT Administrator|[Deployment Guide for IT Administrator](deploy.md)|
 |Used by Solution Administrator to setup and configure master data related to workplaces and users that will use this solution|Organization Solution Administrator|[Configuration Guide for Solution Administrator](configure.md)
-|Used by Executive Leaders to review current data related to all of their workplaces as it relates to Covid-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated to established goals/targets for facilities in their locations and respective phase rules/guidelines set for them by government agencies.|Executive Leadership|[User Guide for Leadership Dashboard](dashboard-for-executive-leadership.md)|
-|Used by Facility Managers to develop and execute on reopening plans|Faciltiy Managers|[User Guide for Facility Manager](app-for-facility-manager.md)
+|Used by Executive Leaders to review current data related to all of their workplaces as it relates to COVID-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated to established goals/targets for facilities in their locations and respective phase rules/guidelines set for them by government agencies.|Executive Leadership|[User Guide for Leadership Dashboard](dashboard-for-executive-leadership.md)|
+|Used by Facility Managers to develop and execute on reopening plans|Facility Managers|[User Guide for Facility Manager](app-for-facility-manager.md)
 |Used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms prior to returning to a reopened workplace|Employees|[User Guide for Employee](app-for-employee.md)
 |Used to manage cases for employees under investigation|Case Managers|[User Guide for Case Management](app-for-health-and-safety-lead.md)
 

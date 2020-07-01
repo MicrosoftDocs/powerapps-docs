@@ -11,179 +11,171 @@ ms.author: pankar
 ms.reviewer: kvivek
 ---
 
-# Overview
-This guide provides solution administrators a guide on how they need to
-configure the Return to Workplace solution. A solution administrator is
-responsible for making sure the facility manager can guide their facilities
-throughout their phases. This means that the following steps are needed and will
-be covered in the document:
+# Configure the Return to Workplace solution
 
--   [Plan Reopening Phase](#Plan-Reopening-Phase)
+This article provides step-by-step instructions for IT administrators to configure the Return to Workplace solution. IT administrators are responsible for making sure the facility manager can guide their facilities throughout the phases. Follow the steps in this article to configure the solution:
 
--   [Manage Facilities](#Manage-Facilities)
+- [Plan reopening phase](#plan-reopening-phase)
 
--   [Specify Solution Settings](#Specify-Solution-Settings)
+- [Manage facilities](#manage-facilities)
+
+- [Specify solution settings](#specify-solution-settings)
 
 ## Prerequisites
+
 The following prerequisites apply to this guide:
 
--   The environment needs to have all the Return to Workplace components in
-    place with the Model Driven Apps, Canvas Apps and Power BI Dashboards.
+- The environment needs to have all the Return to Workplace components in place with the model-driven apps, canvas apps, and Power BI dashboards.
 
--   For the following steps you need to have the right security roles in place.
-
-    Contact your IT Administrator if you are unable to access.
-
--   The sample data is in the package and needs to be installed on the
-    environment.
-
+- The sample data file to import facilities in to the organization. Make sure that you have appropriate security roles to import the data
 
 ## Plan Reopening Phases
 
-Plan reopening requires the solution administrator to define Reopen Phases to
-reopen. Within these phases you define a goal upon which track progress on a
-certain metric. These metrics can be sorted via categories to ease use. In the
-phases you also define readiness factors which defines the steps required to be
-taken in that phase.
+Reopening the workplaces safely requires certain planning in phases to ensure the safety of the employees. To open a workplace safely, you need to define phases. Within these phases, you need to define goals, metrics, and readiness factors. These metrics can be sorted via categories.
 
-In the model-driven app, you select the **Setup** module, which allow you to
-configure the plan.
+In the model-driven app, you select the **Setup** module, that allows you to configure the plan.
 
-![](media/solution-admin-new-setting-phase-planning.png)
+> [!div class="mx-imgBorder"]
+> ![Phase planning](media/solution-admin-new-setting-phase-planning.png "Phase planning")
 
-When planning a reopening you need to step through the following steps:
+To define a reopen phase, you need define the following:
 
-1.  [Define Key Metrics](#Define-Key-Metrics)
+1. [Define key metrics](#define-key-metrics)
 
-2.  [Setup Readiness Categories](#Setup-Readiness-Categories)
+2. [Setup readiness categories](#setup-readiness-categories)
 
-3.  [Define Readiness Factors](#Define-Readiness-Factors)
+3. [Define readiness factors](#define-readiness-factors)
 
-4.  [Setup a Reopen Phase](#Setup-a-Reopen-Phase)
+4. [Setup a reopen phase](#setup-a-reopen-phase)
 
-5.  [Set the Goals and Readiness Factors for a Phase](#Set-the-Goals-and-Readiness-Factors-for-a-Phase)
+5. [Set the goals and readiness factors for a phase](#set-the-goals-and-readiness-factors-for-a-phase)
 
-## Define Key Metrics
+## Define key metrics
 
-We have 5 key metrics which are tracked, and they will be provided within the
-default set of data. When you have more, you can define your own key metrics. To
-create a new key metric, follow the below steps:
+There are five key metrics that are tracked and provided within the default solution. You can define more metrics if you want. To create a new key metric:
 
-1.  Select **Key Metrics** in the left pane and select **New**.
+1. Select **Key Metrics** in the left pane and select **New**.
 
-    ![A screenshot of a cell phone Description automatically generated](media/solution-admin-key-metrics.png)
+   > [!div class="mx-imgBorder"]
+   > ![Create key metrics](media/solution-admin-key-metrics.png "Create key metrics")
 
-2.  I n the **Key Metrics** page, specify a Name.
+2. Enter a meaningful name in the field.
 
-    ![](media/solution-admin-key-metric-form.png)
+    | **Field** | **Description**           |
+   |-----------|---------------------------|
+   | Name      | Enter a name for the key metric. |
+   |||
 
-| **Field** | **Description**           |
-|-----------|---------------------------|
-| Name      | A name for the Key Metric |
+   > [!div class="mx-imgBorder"]
+   > ![Key metric form](media/solution-admin-new-key-metric-form.png "Key metric form")
 
-3.  Select **Save & Close**. The newly created record will be available in the
-    **Active Key Metrics** list.
+  
+3. Select **Save & Close**. The newly created record is available in the **Active Key Metrics** view.
 
-To edit the record, select the newly created record, update the values as
-required, and select **Save & Close**.
+To edit the record, select the newly created record, update the values as required, and select **Save & Close**.
 
-## Setup Readiness Categories
+## Setup readiness categories
 
-Categories organize readiness factors. By default, we provide 6 categories, when
-you want add a category, follow the below steps:
+Categories organize readiness factors. By default, there are six categories defined. To create a new category:
 
-1.  Select **Categories** in the left pane and select **New**.
+1. Select **Readiness Categories** in the left pane and select **New**.
 
-    ![A screenshot of a social media post Description automatically generated](media/solution-admin-new-readiness-category.png)
+   > [!div class="mx-imgBorder"]
+   > ![Readiness categories](media/solution-admin-new-readiness-category.png "Readiness categories")
 
-2.  In the New **Category** screen, specify a Category.
+2. Enter a meaningful name for the category.
 
-    ![](media/solution-admin-new-readiness-category-form.png)
+    | **Field** | **Description**             |
+   |-----------|-----------------------------|
+   | Name      | Enter name for the new Category.|
+   |||
 
-| **Field** | **Description**             |
-|-----------|-----------------------------|
-| Name      | A name for the new Category |
+   > [!div class="mx-imgBorder"]
+   > ![Readiness category form](media/solution-admin-new-readiness-category-form.png "Readiness category form")
 
-3.  Select **Save & Close**. The newly created record will be available in the
-    **Active Categories** list.
+3. Select **Save & Close**. The newly created record is available in the **Active Categories** view.
 
-To edit the record, select the newly created record, update the values as
-required, and select **Save & Close**.
+To edit the record, select the newly created record, update the values as required and, select **Save & Close**.
 
-## Define Readiness Factors 
+## Define readiness factors 
 
-Readiness Factors will be used to check off when you want to move through
-phases. By default, numerous readiness factors will be in the solution. When you
-want more readiness factors, follow the below steps:
+Readiness Factors are used to determine if the workplaces can move through phases. By default, there are few readiness factors defined in the solution. To create a new readiness factor:
 
-1.  Select Readiness Factors in the left pane and Select New.
+1. Select **Readiness Factors** in the left pane, and select **New**.
 
-    ![](media/solution-admin-new-readiness-factor.png)
+   > [!div class="mx-imgBorder"]
+   > ![Readiness Factors](media/solution-admin-new-readiness-factor.png "Readiness Factors")
 
-2.  In the New **Readiness Factor** screen specify the appropriate values:
+2. Enter appropriate values in the fields:
 
-    ![](media/solution-admin-new-readiness-factor-form.png)
+   | **Field** |  **Description** |
+   |-------------|------------------------------|
+   | Factor | Enter a name for factor.  |
+   | Description | Enter the description for the readiness factor. |
+   | Category | Select the appropriate category to assign to your readiness factor. |
 
-| **Field**   | **Description**                                                     |
-|-------------|---------------------------------------------------------------------|
-| Factor      | Type a name for your Factor                                         |
-| Description | A description of your Readiness Factor.                             |
-| Category    | Select the appropriate Category to assign to your Readiness Factor. |
+   > [!div class="mx-imgBorder"]
+   > ![Readiness factors form](media/solution-admin-new-readiness-factor-form.png "Readiness factors forms")
 
-3.  Select **Save & Close**. The newly created record will be available in the
-    **Active Readiness Factors** list.
+   
+3. Select **Save & Close**. The newly created record is available in the **Active Readiness Factors** view.
 
-    To edit the record, select the newly created record, update the values as
-    required, and select **Save & Close**.
+To edit the record, select the newly created record, update the values as required, and select **Save & Close**.
 
-## Setup a Reopen Phase
+## Setup a reopen phase
 
-In your reopen plan you define a couple of phases through which a facility will
-walk. The phases will be in the solution by default. If you want to add or edit
-these phases, follow the following steps:
+In the reopen plan, you define a couple of phases through that guides a facility to safely reopen the workplace. The phases are defined in the solution by default. To create or edit a reopen phase:
 
-1.  Select **Reopen Phases** in the left pane and select **New**.
+1. Select **Reopen Phases** in the left pane and select **New**.
 
-    ![A screenshot of a social media post Description automatically generated](media/solution-admin-new-reopen-phase.png)
+   > [!div class="mx-imgBorder"]
+   > ![Reopen phase](media/solution-admin-new-reopen-phase.png "reopen phase")
 
-2.  In the **New Reopen Phase** page, specify the Index, Name, and Description:
+2. Enter appropriate values in the fields:
 
-    ![](media/solution-admin-new-reopen-phase-form.png)
+    | **Field**   | **Description**       |
+   |---------------|------------------------------|
+   | Index | Enter a unique index number such that it can be placed in appropriate phase order.|
+   | Name | Enter a name for the reopen phase.|
+   | Description   | Enter the description for the readiness factor. |
+   | Process Stage | Select the appropriate process stage to assign to the new reopen phase. This identifies which stage in the business process flow should be activated. |
 
-| **Field**     | **Description**                                                                                                                                       |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Index         | Type a unique index number to establish where in the sequence of the phases that the new phase shall be placed                                        |
-| Name          | Type a name for your new Reopen Phase                                                                                                                 |
-| Description   | A description of your Readiness Factor.                                                                                                               |
-| Process Stage | Select the appropriate Process Stage to assign to your new Reopen Phase. This identifies which stage in the business process flow should be activated |
+   > [!div class="mx-imgBorder"]
+   > ![Reopen phase form](media/solution-admin-new-reopen-phase-form.png "Reopen phase form")
 
-3.  Select **Save & Close**. The newly created record will be available in the
-    **Active Reopen Phases** list.
+  
+3. Select **Save & Close**. The newly created record is available in the **Active Reopen Phases** view.
 
-To edit the record, select the newly created record, update the values as
-required, and select **Save & Close**.
+To edit the record, select the newly created record, update the values as required, and select **Save & Close**.
 
-## Set the Goals and Readiness Factors for a Phase
+## Set the goals and readiness factors for a phase
 
-1.  Select **Reopen Phases** in the left pane and select the Reopen Phase for
-    which you need to add a new goal (example below – “**Initial Return**”)
+To set goals and readiness factors for a phase: 
 
-    ![](media/solution-reopen-phases-active.png)
+1. Select **Reopen Phases** in the left pane and select the reopen phase record for which you need to add a new goal (for example, **Initial Return**)
 
-2.  In the section “Key Metrics” select **+ New Goal.**
+   > [!div class="mx-imgBorder"]
+   > ![New goal](media/solution-reopen-phases-active.png "New goal")
 
-    ![A screenshot of a social media post Description automatically generated](media/solution-admin-new-goal.png)
+2. In the section “Key Metrics” select **+ New Goal.**
 
-3.  In the **Goals** page, specify the appropriate values:
+   > [!div class="mx-imgBorder"]
+   > ![A screenshot of a social media post Description automatically generated](media/solution-admin-new-goal.png)
 
-    ![](media/solution-admin-new-goal-form.png)
+3. Enter appropriate filed values:
 
-| **Field**    | **Description**                                |
-|--------------|------------------------------------------------|
-| Reopen Phase | Type a name for your Reopen Phase              |
-| Key Metric   | Select a Key Metric for the goal.              |
-| Type         | Select an appropriate goal type from the list: |
-| Value        | Enter a numerical target value for the goal    |
+   | **Field**    | **Description**     |
+   |--------------|--------------------|
+   | Reopen Phase | Enter a name for the reopen phase.  |
+   | Key Metric   | Select a key metric for the goal.  |
+   | Type         | Select an appropriate goal type from the list. |
+   | Value        | Enter a numerical target value for the goal. |
+
+
+   > [!div class="mx-imgBorder"]
+   > ![New goal form](media/solution-admin-new-goal-form.png "New goal form")
+
+   
 
 -   Lower
 
@@ -193,139 +185,132 @@ required, and select **Save & Close**.
 
 -   Equal or Higher
 
-4.  Select **Save & Close**. The newly created record will be available in the
-    **Key Metrics** list.
+4. Select **Save & Close**. The newly created record is available in the **Key Metrics** view.
 
-To edit the record, select the newly created record, update the values as
-required, and select **Save & Close**.
+To edit the record, select the newly created record, update the values as required, and select **Save & Close**.
 
-5.  To set Readiness Factors for your new Reopen phase select the **Readiness
-    Factors** tab
+5. To set the readiness factors for the new reopen phase record, select the **Readiness Factors** tab
 
-    ![](media/solution-admin-reopen-phase-view-readiness-factors.png)
+   > [!div class="mx-imgBorder"]
+   > ![Readiness factors](media/solution-admin-reopen-phase-view-readiness-factors.png "Readiness factors")
 
-6.  Select the button **Add Existing Readiness Factor**
+6. Select **Add Existing Readiness Factor**
 
-![](media/solution-admin-reopen-phase-add-existing-factor.png)
+   > [!div class="mx-imgBorder"]
+   ![Add existing factors](media/solution-admin-reopen-phase-add-existing-factor.png "Add existing factors")
 
-7.  Select your desired Readiness Factor(s) to link to your new Reopen Phase.
-    You can select multiple factors from the list prior to pressing the **Add**
-    button.
+7. Select the readiness factor that you want to add to your new reopen phase record. You can select multiple records.
 
-8.  Select the **Add** button to complete the selection process to link your
-    selected **Readiness Factors** to your new **Reopen Phase**
+8. Select **Add** to complete the selection process to add the selected **Readiness Factors** to your new **Reopen Phase** record.
 
-    ![](media/solution-admin-reopen-phase-add-factor.png)
+   > [!div class="mx-imgBorder"]
+   > ![Add readiness factors](media/solution-admin-reopen-phase-add-factors.png "Add readiness factors")
 
-## Manage Facilities
-Facilities are an important part of the Return to Workplace solution. Various
-facility types are available like a building or conference center define the
-types of facilities which are stored. The Solution Administrator has the responsibility
-to manage Facility Types which shall include creating new and updating existing.
-The facilities creation that is responsibility of the Facility Manager can be
-supported by Solution Administrators through an import record process where needed.
+## Manage facilities
 
-When managing facilities, you will step through the following steps:
+Facilities are an important part of the Return to Workplace solution. Various facility types such as buildings, conference centers are defined in the solution by default. The IT administrator is responsible to create or update the existing facility types. The IT administrator can import records to help the facility manager who is responsible for creating facilities.
 
-1.  Define Facility Types
+To manage facilities:
 
-2.  Import Facilities
+1. [Define facility types](#define-facility-types)
 
-## Define Facility Types
+2. [Import facilities](#import-facilities)
 
-Facility types are defined as the types of facilities we support in the
-solution. By default, two are provided as an example, you can define more by
-following the following steps:
+## Define facility types
 
-1.  Select **Facility Types** in the left pane and select **New**.
+By default, two facility types are provided as an example. To create a new facility type:
 
-![](media/solution-admin-facility-type.png)
+1. Select **Facility Types** in the left pane and select **New**.
 
-2.  In the New **Facility Type** screen, specify the appropriate values:
+   > [!div class="mx-imgBorder"]
+   > ![Facility type](media/solution-admin-facility-type.png "facility type")
 
-    ![](media/solution-admin-facility-type-form.png)
+2. Enter appropriate values in the fields:
 
-| **Field**   | **Description**                     |
-|-------------|-------------------------------------|
-| Type        | A name for your type of Facility    |
-| Description | A description of your Facility Type |
+    | **Field**   | **Description**                     |
+   |-------------|-------------------------------------|
+   | Type        | Enter a name for the type of facility.    |
+   | Description | Enter the description for the facility type. |
+   |||
 
-3.  Select **Save & Close**. The newly created record will be available in the
-    **Active Facility Types** list.
+   > [!div class="mx-imgBorder"]
+   > ![Facility type form](media/solution-admin-facility-type-form.png "Facility type for,")
 
-To edit the record, select the newly created record, update the values as
-required, and select **Save & Close**.
+  
 
-## Import Facilities 
+3. Select **Save & Close**. The newly created record is available in the **Active Facility Types** view.
 
-The Facility sample data file is available in the deployment package (.zip).
-When you extract the .zip file, the sample data files are available under the
+To edit the record, select the newly created record, update the values as required, and select **Save & Close**.
+
+## Import facilities 
+
+The Facility sample data file is available in the deployment package (.zip). When you extract the .zip file, the sample data files are available under the
 **SampleData** folder.
 
-**How to load Facility data from data files**
+### How to import facility data from data files
 
-To load sample Facility data from the Excel file to the Facility entity:
+To import sample facility data from the Excel file to the facility entity:
 
-1.  In the left navigation pane select **Facilities** (in the area of Facility
-    Management)
+1. On the left navigation pane, select **Facilities** (in the area of Facility Management)
 
-2.  Select **Import from Excel** to select the Facilities data file
+2. Select **Import from Excel** to select the facilities data file.
+ 
+   > [!div class="mx-imgBorder"]
+   > ![Import data](media/solution-admin-facilities-excel-import.png "Import data")
 
-    ![](media/solution-admin-facilities-excel-import.png)
+3. Browse the **SampleData** folder and select the **Facilities.xlsx** file. Change this file according to your own needs and proceed with the steps to import the data.
 
-3.  Browse to the **SampleData** folder and select the **Facilities.xlsx** file.
-    Change this file according to your own needs and proceed with the wizard
-    steps to import the data.
+4. After the sample data is imported, you will see the imported records in the entity.
 
-4.  After the sample data is imported, you will see the imported records in the
-    entity:
+   > [!div class="mx-imgBorder"]
+   > ![Active facilities](media/solution-admin-facilities-active.png "Active facilities")
 
-    ![](media/solution-admin-facilities-active.png)
+## Specify solution settings
 
-## Specify Solution Settings
-
-The overall solution requires certain configurations to make sure that the user
-has the correct guidance. Via solution settings, settings like contact emails or
-attestations are configured. Via themes, it is possible to tailor the experience
-of an employee according to the company branding.
+The overall solution requires certain configurations to be made to make sure that the user has the correct information. Through solution settings, contacts, emails, and attestations can be configured. Through themes, you can tailor the experience of an employee according to the company branding.
 
 When setting up the solution, you step through the following steps:
 
-1.  Set Solution Settings
+1. [Set solution settings](#set-solution-settings)
 
-2.  Define Theming
+2. [Define theming](#define-theming)
 
 ## Set Solution Settings
 
-Via Solution Settings you can tailor the experience for employees to match the
-company guidelines and culture.
+Through the solution settings, you can tailor the experience for the employees to match the company guidelines and culture.
 
-1.  Select **Settings** in the left pane and select **New**.
+1. Select **Solution Settings** in the left pane and select **New**.
 
-    ![](media/solution-admin-view-solution-settings.png)
+   > [!div class="mx-imgBorder"]
+   > ![Solution Settings](media/solution-admin-view-solution-settings.png)
 
-2.  In the New Setting screen, specify the appropriate values
+2. Enter the appropriate values in the fields:
 
-    ![](media/solution-admin-new-setting.png)
+   > [!div class="mx-imgBorder"]
+   > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
 
 Disclaimer: the following isn’t implemented yet; this will come in new releases.
 
-## Define Theming
+## Define theming
 
 Theming allows you to change the experience of the employee.
 
-1.  Select **Settings** and then **Customizations**.
+1. Select **Settings** and then **Customizations**.
 
-    ![](media/solution-admin-settings-themes.png)
+   > [!div class="mx-imgBorder"]
+   > ![Settings](media/solution-admin-settings-themes.png "Settings")
 
-2.  Under Customizations select **Themes**.
+2. Under Customizations, select **Themes**.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Themes](media/solution-admin-settings.png "Themes")
 
-    ![](media/solution-admin-settings.png)
+3. From the list, select the default theme.
 
-3.  From the list select the default theme.
+    > [!div class="mx-imgBorder"]
+    > ![All themes](media/solution-admin-settings-all-themes.png "All themes")
 
-    ![](media/solution-admin-settings-all-themes.png)
+4. You can select the different colors from the theme.
 
-4.  You can select the different colors from the theme.
-
-    ![](media/deploy/theme-colors.png)
+   > [!div class="mx-imgBorder"]
+   > ![Theme color](media/deploy/theme-colors.png "Theme color")

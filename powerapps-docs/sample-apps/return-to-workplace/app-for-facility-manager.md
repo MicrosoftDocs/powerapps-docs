@@ -1,6 +1,6 @@
 ---
-title: User Guide for Facility Manager
-description: Provides an overview of Return to Workplace Solution.
+title: Use the facility manager app
+description: Provides an overview of Return to Workplace facility manager app.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
@@ -11,217 +11,175 @@ ms.author: pankar
 ms.reviewer: kvivek
 ---
 
-# Overview
-This document provides Facility Managers in organizations a guide on how to use
-the App for Facility Managers to manage reopening and readiness of facilities. This will
-help organizations ensure that they can provide a safe working environment for
-employees to return to, using this Return to Workplace solution.
+# Use the facility manager app
 
-Processes that Facility Manger can support that are covered in this document
-include:
+The facility manager app provides step-by-step instructions to facility managers in organizations on how to use the app to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to Workplace solution.
 
--   [Manage and monitor facilities](#Manage-and-monitor-facilities)
+This article has the following sections:
 
--   [Moving a facility to a new phase](#Moving-a-facility-to-a-new-phase)
+- [Manage and monitor facilities](#manage-and-monitor-facilities)
 
--   [Monitor employee attestations](#Monitor-employee-attestations)
+- [Moving a facility to a new phase](#moving-a-facility-to-a-new-phase)
 
--   [Monitor employee sentiments](#Monitor-employee-sentiments)
+- [Monitor employee attestations](#monitor-employee-attestations)
 
-## Prerequisites
-The following prerequisites apply to this guide:   
-- The environment has all the Return to Workplace components in place with the
-    Model Driven App, Canvas Apps and Power BI Dashboards. 
-- Solution Administrator has completed all required setup (configurations and master
-    date)
-- Execution of how to steps require users have the required security role(s)
-    in place. Contact your IT Administrator if you are unable to access.
-- The sample data is in the package and needs to be installed on the
-    environment. 
+- [Monitor employee sentiments](#monitor-employee-sentiments)
 
-## Facility Manager app at a glance
-The left-hand side menu lists all the components available in the ‘Facility’
-Area.
 
-![](media/facility-manager-facility-active-facilities.png)
+## Facility manager app at a glance
 
-## Facility Manager app components
-For facility management one area called ‘Facility’ is available with the
-following components.
+The left pane lists all the components available in the **Facility Management** area.
 
-<b>Facility Management</b>
+> [!div class="mx-imgBorder"]
+> ![Facility management](media/facility-manager-facility-active-facilities.png "Facility management")
 
--   Facilities  
-    Lists the facilities (e.g. buildings, plants, etc.) that require monitoring
-    of reopening.
+## Facility manager app components
 
--   Facility Groups  
-    Provides a flexible way to group facilities. For example, by campus or
-    geographical region
+The facility manager app has the following components:
 
--   Areas  
-    Areas are subcomponents of a facility. This item is used to distinguish
-    capacity of these subcomponents over the various phases.
+**Facility Management**
 
-<b>Reopen Readiness</b>
+-  **Facilities**-  List of the facilities (e.g. buildings, plants, etc.) that require monitoring to reopen.
 
--   Phase Transitions  
-    A Phase transition models a request to transition to a new phase. When the
-    transition is approved, the facility will be updated with the proposed phase
+-  **Facility Groups** - Provides a flexible way to group facilities. For example, by campus, or geographical region.
 
--   Readiness Factors  
-    Readiness Factors are basically yes/no type questions regarding reopening a
-    building. They are linked per Reopening Phase to a checklist on a facility.
+-  **Areas** - Areas are sub components of a facility. This is used to distinguish
+    the capacity of these sub components over the various phases.
 
--   Measurements  
-    The actual values for a Metric. This allows to track parameters over time.
-    For a single Metric, measurements can be entered per facility.
+**Reopen Readiness**
 
-<b>Employee</b>
+-  **Phase Transitions** - A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase.
 
--   Employee Sentiment  
-    Keeps track of general employee wellbeing. This is self-reported
-    information, but it is a valuable parameter when tracked consistently over
-    time and with bigger groups. This data will typically be enter through
-    employee’s use of the Return to Workplace solution’s canvas app.
+-  **Readiness Factors** -  Readiness Factors are basically yes/no type questions regarding reopening a building. They are linked per Reopening Phase to a checklist on a facility.
 
--   Employee Attestation
+- **Measurements** -  The actual values for a metric. This allows to track parameters over time. For a single metric, measurements can be entered per facility.
 
-    Keeps track of employee health assessments/attestations based upon a series
-    of questions presented to and answered by the employee. This data will
-    typically be enter through employee’s use of the Return to Workplace
-    solution’s canvas app.
+**Employee**
+
+- **Employee Sentiment** -  Keeps track of general employee wellbeing. This is self-reported information, but it is a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees using the employee app.
+
+- **Employee Attestation** - Keeps track of employee health assessments or attestations based upon a series of questions answered by the employee. This data is typically entered by employees using the employee app.
 
 ## Manage and monitor facilities 
 
-### Create a Facility 
+This section covers how to manage and monitor facilities.
 
-Facility types are defined as the types of facilities we support in the
-solution. By default, two are provided as an example, you can define more by
-following the following steps:
+### Create a facility 
 
-Select **Facilities** in the left pane and select **+New**.
+By default, two facilities are provided as an example. To  create anew facility:
 
-![](media/facility-manager-facility-new.png)
+1. Select **Facilities** in the left pane and select **New**.
 
-In the **New Facility** screen, select the **Details** tab and then specify
-    appropriate values:
+   > [!div class="mx-imgBorder"]
+   > ![New facility ](media/facility-manager-facility-new.png "New facility")
 
-![](media/facility-manager-facility-form.png)
+2. Enter appropriate values in the fields:
+ 
+   > [!div class="mx-imgBorder"]
+   > ![New facility form](media/facility-manager-facility-form.png "New facility form")
 
-| **Field**              | **Description**                                |
-|------------------------|------------------------------------------------|
-| Facility Number        | A number for the new Facility                  |
-| Name                   | A name for the new Facility                    |
-| Description            | A description of the new Facility              |
-| Facility Type          | Field to link the appropriate Facility Type    |
-| Facility Group         | Field to link to an appropriate Facility Group |
-| Reopen Phase           | Field to link to an appropriate Reopen Phase   |
-| Address Street 1       | Text box for address street 1 data             |
-| Address Street 2       | Text box for address street 2 data             |
-| Address Postal Code    | Text box for address’ postal code data         |
-| Address City           | Text box for address’ City data                |
-| Address State/Province | Text box for address’ State/Province data      |
-| Address Country        | Text box for address’ Country data             |
+   | **Field**              | **Description**                                |
+   |------------------------|------------------------------------------------|
+   | Facility Number        | Enter a number for the new facility.                  |
+   | Name                   | Enter a  name for the new facility.                    |
+   | Description            | Enter the description for the new facility.              |
+   | Facility Type          | Select the appropriate facility type.   |
+   | Facility Group         | Select appropriate facility group. |
+   | Reopen Phase           | Select appropriate reopen phase.  |
+   | Address Street 1       | Enter the address street 1 information.            |
+   | Address Street 2       | Enter the address street 2 information.             |
+   | Address Postal Code    | Enter postal code.         |
+   | Address City           | Enter the city.               |
+   | Address State/Province | Enter state or province.      |
+   | Address Country        | Enter country.        |
 
-Select **Save & Close**. The newly created record will be available in the
-    **Active Facility Types** list.
+3. Select **Save & Close**. The newly created record is available in the
+    **Active Facility Types** view.
 
 To edit the record, select the newly created record, update the values as
 required, and select **Save & Close**.
 
 ### Monitor Facility
 
-Facility Manager can monitor and assesses the current status of their facilities
-by reviewing a selected facility’s associated dashboard, details, Checklist, and
-Transitions. Top access each of these areas the following steps can be followed.
+Facility manager can monitor and assesses the current status of their facilities
+by reviewing the facility’s associated dashboard, details, checklist, and
+transitions. To monitor a facility.
 
-Select the Facility from left pane to see the list of active facilities
+1. Select **Facility** from  the left pane to see the list of active facilities
 
-Select a desired facility to access the Facility data
+2. Select a desired facility record to access the facility data. The **General** tab shows the facility manager dashboard. The dashboard shows the COVID-19 data based on the address details of the facility, checklist completion for the current phase, employee attestation, and employee sentiment. More information: [Power BI dashboard]().
 
-    The default display is the General tab for each facility shows the facility
-    manager dashboard. The dashboard shows COVID-19 data based on the address
-    details of the Facility, checklist completion for the current phase,
-    employee attestation and employee sentiment. (please refer to the PowerBI
-    Dashboard guide for more information.)
+   > [!div class="mx-imgBorder"]
+   > ![Facility at glance](media/facility-manager-facility-at-glance.png "Facility at glance")
 
-![](media/facility-manager-facility-at-glance.png)
+3. Select **Details** tab for the selected facility
+ 
+   > [!div class="mx-imgBorder"]
+   > ![Select details ](media/facility-manager-facility-form-populated.png "Select details")
 
-Select the **Details** tab for the selected facility
+4. Select **Checklist** tab for the selected facility to see checklist items and their completion status.
 
-![](media/facility-manager-facility-form-populated.png)
+    > [!div class="mx-imgBorder"]
+    > ![](media/facility-manager-checklist-2.png)
 
-Select the **Checklist** tab for the selected facility to see checklist
-    items and their completion status
+5. Select **Transitions** tab for the selected facility to see any related transition requests and their status.
 
-![](media/facility-manager-checklist-2.png)
-
-Select the **Transitions** tab for the selected facility to see any related
-    transition requests and their status
-
-![](media/facility-manager-facility-transitions.png)
+   > [!div class="mx-imgBorder"]
+   > ![](media/facility-manager-facility-transitions.png)
 
 ### Updating the checklist
 
-Facility managers can manage their building associated checklist form the
-Checklist tab of the facility. This tab contains a canvas app displaying the
-checks in the checklist for the current facility/phase combination. The App
-provides an easy way for users to find checks by category and then update
-individual checks, where applicable. The following are the steps you can follow
-to locate and update checks.
+The **Checklist** tab contains a canvas app displaying the check in the checklist for the current facility or phase combination. The app provides an easy way for the users to find checks by category and then update the individual checks, where applicable. To locate and update checks:
 
-Select the **Facilities** from left pane to see the list of active
-    facilities
+1. Select **Facilities** from the left pane to see the list of active facilities
 
-Select a desired facility to access the Facility data
+2. Select a desired facility to access the facility data
 
-Select the **Checklist** tab for the selected facility to see checklist
-    items and their completion status
+3. Select **Checklist** tab for the selected facility to see the checklist items and their completion status.
 
-![](media/facility-manager-checklist-1.png)
+   > [!div class="mx-imgBorder"]
+   > ![Checklist](media/facility-manager-checklist-1.png "Checklist")
 
-Select the category from the **Categories** droplist that you want to search
-    within to locate the checks you want to review and/or update.
+4. Select the category from the **Categories** drop-list that you want to search
+    within to locate the checks you want to review or update.
 
-![A screenshot of a cell phone Description automatically generated](media/facility-manager-categories-droplist.png)
+   > [!div class="mx-imgBorder"]
+   > ![Category drop-list](media/facility-manager-categories-droplist.png "Category drop-list")
 
-To mark a **Check** complete you simply mark the checkbox as checked
+5. Select the checkbox to confirm the check is completed.
 
-Should you need to add comments in the provided text box just enter your
-    test and select **Save** that appears next to your text entered.
+6. Add comments in the provided text box and select **Save** that appears next to the text entered.
 
-![](media/facility-manager-facility-completed-check.png)
+    > [!div class="mx-imgBorder"]
+    > ![Add comments](media/facility-manager-facility-completed-check.png "Add comments")
 
-## Moving a facility to a new phase
+## Moving facility to a new phase
 
-When a Facility manager asserts that a facility should be moved to a new phase,
-the manager can apply for a transition. Only the facility the manager can create
+When a facility manager asserts that a facility should be moved to a new phase,
+the manager can apply for a transition. Only the facility manager can create
 a new transition record that indicates the new phase and his rationale to do so.
-A reviewer must Accept or Reject this transition. Either way the Transition
+A reviewer must **Accept** or **Reject** the transition. Either way the transition
 record is closed and stored as a historical track record. When the transition is
 accepted, the proposed phase is applied to the facility.
 
-The new phase will come with its own set of metrics, goals, and checklist. These
+The new phase comes with its own set of metrics, goals, and checklist. These
 will be made available on the facility by a background process. So there will be
 a small delay between accepting a transition and the actual changes on the
 facility record.
 
 A reviewer, for instance a facility manager supervising many facility managers
-in a facility group, can find the backlog of to be considered phase transitions
-in the Phase Transitions sub area. For example, the list can be filtered on
-Facility Group or by Reviewer to find that phase transitions that require his or
-hers attention.
+in a facility group, can find the backlog in the phase transitions sub area. For example, the list can be filtered by facility group or by reviewer to find out that the phase transitions requires his or her attention.
 
-![](media/facility-manager-open-phase-transitions.png)
+> [!div class="mx-imgBorder"]
+> ![Open phase transitions](media/facility-manager-open-phase-transitions.png "Open phase transitions")
 
-### Create Transition Request
+### Create transition request
 
-Below are the steps to create a transition request (**Reopen Transitions**):
+To create a transition request:
 
-Select **Facilities** in the left pane and select an active facility.
+1. Select **Facilities** in the left pane and select an active facility.
 
-Select the **Transitions** tab from the selected facility. If there are any
+2. Select the **Transitions** tab from the selected facility. If there are any
     existing/previous transition requests established they will appear in the
     sub-grid displayed.
 

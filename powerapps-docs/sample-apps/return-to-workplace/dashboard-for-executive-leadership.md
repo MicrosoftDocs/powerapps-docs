@@ -13,22 +13,21 @@ ms.reviewer: kvivek
 
 # Overview
 
-This guide is meant for Executive Leaders that will use PBI Dashboard to assist
-them with analysis of data to support their roles in their organization within
-the processes established to get their employees back to their office locations
-using the Return to Workplace solution. The following steps will be covered in
+This guide is meant for Executive Leaders that will use PBI Dashboard to assist them with analysis of data to support their roles in their organization within the processes established to get their employees back to their office locations using the Return to Workplace solution. The following steps will be covered in
 this document:
 
--   [System at a Glance](#System-at-a-Glance)
+-  [System at a Glance](#System-at-a-Glance)
 
--   [Virus Spread](#Virus-Spread)
+-  [Virus Spread](#Virus-Spread)
 
--   [Facility at a Glance](#Facility-at-a-Glance)
+-  [Facility at a Glance](#Facility-at-a-Glance)
 
--   [Employee Activity](#Employee-Activity)
+-  [Employee Activity](#Employee-Activity)
 
 ## Prerequisites
+
 The following prerequisites apply to this guide:
+
 -   The environment needs to have all the Return to Workplace components in
     place with the Model Driven Apps, Canvas Apps and Power BI Dashboards.
 -   For the following steps you need to have the right security roles in place.
@@ -37,6 +36,7 @@ The following prerequisites apply to this guide:
     environment.
 
 ## How to view the Leadership dashboard?
+
 The Leadership dashboard is available on Power BI. To access the dashboard you
 follow the following steps:
 
@@ -51,9 +51,9 @@ follow the following steps:
 
 System at a Glance section surfaces main key metrics regarding returning to
 work, including current value, goal values and if they meet goals or not. These
-key metrics are local number of COVID new cases per day, local number of COVID
-fatal cases per day, local number of COVID new cases per day/Million POP., local
-number of COVID fatal cases per day/Million POP., local Effective reproductive
+key metrics are local number of COVID-19 new cases per day, local number of COVID-19
+fatal cases per day, local number of COVID-19 new cases per day/Million POP., local
+number of COVID-19 fatal cases per day/Million POP., local Effective reproductive
 number, facility Readiness checklist completion percentage.
 
 A Map highlights facilities’ location, along with number of facilities in
