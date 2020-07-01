@@ -21,7 +21,7 @@ Boolean logic functions, commonly used to manipulate the results of comparisons 
 
 ## Description
 
-The **And** function returns **true** if all of its arguments are **true**.
+The **And** function returns **true** if all arguments do not contain **false**.
 
 The **Or** function returns **true** if any of its arguments are **true**.
 
