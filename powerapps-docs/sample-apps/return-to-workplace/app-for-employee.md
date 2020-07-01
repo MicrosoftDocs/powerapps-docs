@@ -1,5 +1,5 @@
 ---
-title: User the Return to Workplace employee app
+title: Use the Return to Workplace employee app
 description: Provides information to track symptoms of the employees and determine if they are eligible to enter into a facility.
 author: pankajarora-msft
 manager: annbe
