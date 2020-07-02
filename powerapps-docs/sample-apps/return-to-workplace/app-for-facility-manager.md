@@ -13,7 +13,7 @@ ms.reviewer: kvivek
 
 # Use the facility manager app
 
-The facility manager app provides step-by-step instructions to facility managers in organizations on how to use the app to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
+The facility manager app provides step-by-step instructions to facility managers in the organizations on how to use the app to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
 
 ## Facility manager app at a glance
 
@@ -174,13 +174,13 @@ subgrid.
 3. Select **New Reopen Phase Transition**.
 
    > [!div class="mx-imgBorder"]
-   > ![New reopen phase transition](media/facility-manager-reopen-phase-transition-subgrid.png"New reopen phase transition")
+   > ![New reopen phase transition](media/facility-manager-reopen-phase-transition-subgrid.png "New reopen phase transition")
 
 
 4. Enter appropriate values in the fields:
 
    > [!div class="mx-imgBorder"]
-   > ![](media/facility-manager-phase-transition-form.png)
+   > ![Phase transition form](media/facility-manager-phase-transition-form.png "Phase transition form")
 
    | **Field**    | **Description**    |
    |-----------------------|---------------|

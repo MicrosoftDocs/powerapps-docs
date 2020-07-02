@@ -20,7 +20,7 @@ The main components of the Return to the Workplace solution:
 
 - **Facility manager app** used to develop and execute on reopening plans.
 
-- **Employee app** used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms prior to returning to a reopened workplace.
+- **Employee app** used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms before returning to a reopened workplace.
 
 - **Case management app** used to manage cases for employees under investigation.
 
@@ -56,10 +56,10 @@ See also:
 |Task | Description|Target audience|See|
 |--|--|-----|--|
 |Download and deploy the solution| Used by IT administrators to deploy the Return to the Workplace solution and set up users and security.|IT administrator|[Deployment Guide for IT Administrator](deploy.md)|
-|Configure the Return to the Workplace solution.| Used by IT administrator to set up and configure master data related to workplaces and users that will use this solution.|It administrator|[Configure the Return to the Workplace solution](configure.md)|
-|Use dashboards for insights and decision making|Used by executive leaders to review the current data related to all of their workplaces as it relates to COVID-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations and respective phase rules or guidelines set for them by government agencies.|Executive Leadership|[Use dashboard](dashboard-for-executive-leadership.md)|
+|Configure the Return to the Workplace solution.| Used by IT administrator to set up and configure master data related to workplaces and users that will use this solution.|IT administrator|[Configure the Return to the Workplace solution](configure.md)|
+|Use dashboards for insights and decision making|Used by executive leaders to review the current data related to all of their workplaces as it relates to COVID-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations and respective phase rules or guidelines set for them by government agencies.|Executive leadership|[Use dashboard](dashboard-for-executive-leadership.md)|
 |Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Use the facility manager app](app-for-facility-manager.md)
-|Use the employee app|Used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms prior to returning to a reopened workplace.|Employees|[Use the employee app](app-for-employee.md)
+|Use the employee app|Used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms before returning to a reopened workplace.|Employees|[Use the employee app](app-for-employee.md)
 |Use the case management app|Used to manage cases for employees under investigation.|Case managers|[Use the case management app](app-for-health-and-safety-lead.md)
 
 

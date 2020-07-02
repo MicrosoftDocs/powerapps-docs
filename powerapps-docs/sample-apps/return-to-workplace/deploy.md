@@ -13,7 +13,7 @@ ms.reviewer: kvivek
 
 # Deploy the Return to the Workplace solution
 
-This article provides step-by-step instructions to IT administrators on how to deploy the Return to the Workplace solution. Following the steps in this article to deploy Return to the Workplace solution.
+This article provides step-by-step instructions to IT administrators on how to deploy the Return to the Workplace solution. Follow the steps in this article to deploy Return to the Workplace solution.
 
 Estimated time to complete these steps: 60–90 minutes
 
@@ -21,16 +21,16 @@ Estimated time to complete these steps: 60–90 minutes
 
 - You should be a Global Administrator or Dynamics 365 Administrator or Power Platform administrator to perform the installation.
 
-- Create a workspace in Power BI where you will publish the report. Sign in to Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
+- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
 
-- Install Power BI Desktop from the Microsoft Store: https://aka.ms/pbidesktop
+- Install Power BI Desktop from the Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
 
   > [!NOTE]
   > If you have installed Power BI Desktop by downloading directly from the download center page in the past, remove it and download it from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available. If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the download center page.
 
 ## Step 1: Download the deployment package
 
-Get the latest deployment package (.zip) from your Microsoft account representative.
+Get the latest deployment package (.zip) from your Microsoft account representative. Before extracting the .zip file, ensure that you unblock it.
 
 To unblock the .zip file:
 
@@ -42,14 +42,14 @@ When you extract the .zip file, you see the following components in the extracte
 
 | **Folder**    | **Description**                                                                                                                      |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Package       | The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment. |
+| Package       | This folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment. |
 | Power BI      | Contains the Power BI report template file (.pbit) that you will use to configure reporting.                                         |
 | Sample Data   | Contains the sample master data files (.xlsx).                                                                                       |
 | Documentation | Contains all the documentation needed.                                                                                               |
 
-## Step 2: Sign up for Power Apps and create an environment
+## Step 2: Sign up for Power Apps, and create an environment
 
-Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps Pricing](https://powerapps.microsoft.com/pricing/)
+Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
 
 After you have purchased Power Apps, create an environment with a Common Data Service database.
 
@@ -58,36 +58,36 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 2. Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
 
    > [!IMPORTANT]
-   > While creating the database, if you select a security group for the database, the apps can be shared only with users that are members of the security group.
+   > If you select a security group for the database while creating it, remember that any apps can be shared only with users who are members of that security group.
 
-3. Create appropriate users in your environment. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
+3. Create users, and assign appropriate security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
 After you have created your environment, you can access it using the following URL: `https://[myenv].crm.dynamics.com`, where `myenv` is the name of your environment. 
 
 ## Step 3: Install the package
 
-After your environment is ready, you can install the solution via the package.
+Follow the steps below to install the Return to the Workplace solution:
 
-1. Go to the folder where you extracted the deployment file (.zip). You'll find a **Package** folder. Open the **Package** folder, and then double-click to select
+1. Go to the folder where you extracted the deployment package (.zip file). You'll find a **Package** folder. Open the **Package** folder, and then double-click to select
     **PackageDeployer.exe**.
 
 2. On the next screen, select **Continue**.
 
-3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced** and then type your credentials to connect to your environment.      
+3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then enter your credentials to connect to your environment.      
     
     > [!div class="mx-imgBorder"]
     > ![Connect to environment](media/deploy-connect-crm.png "Connect to environment")
 
 4. Select **Login** to continue.
 
-5. If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.  
+5. If you have access to more than one Common Data Service environment, the next screen prompts you to select from the list of available environments where you want to install the package. Select the environment you want, and then select **Login**.  
 
    > [!div class="mx-imgBorder"]
    > ![Select environment](media/deploy-connect-crm-organization.png "Select environment")
 
 6. On the next screen, select **Next.**
 
-7. The next screen displays the environment name where the package will be installed. Review the information and select **Next**.
+7. The next screen displays the environment name where the package is installed. Review the information, and then select **Next**.
 
 8. The next screen validates whether the package can be installed on your environment. Select **Next** to continue with the installation.  
       
@@ -100,25 +100,25 @@ After your environment is ready, you can install the solution via the package.
 
 11. On the next screen, select **Finish** to complete and close the setup.
 
-After the package is installed, you will find a new admin app in your **Apps** list.
+12. After the app is installed, go to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. You'll see the new app under **Apps**.
 
-> [!div class="mx-imgBorder"]
-> ![List of Apps](media/deploy-model-app-facilities.png "List of Apps")
+    > [!div class="mx-imgBorder"]
+    > ![List of Apps](media/deploy-model-app-facilities.png "List of Apps")
 
 ## Step 4: Install Sample Data
 
-You can install sample data in the environment by importing the data files available in the **Sample Data** folder. In the **Sample Data** folder, there are two files available, one with Contoso data and another with State Street data. To install sample data:
+You can install sample data in the environment by importing the data files available in the **Sample Data** folder. In the **Sample Data** folder, you'll see two files available, one with Contoso data and another with state street data. To install sample data:
 
-1. Go to the location where you extracted the deployment file (.zip). You'll find a **Sample Data** folder. Open the **Sample Data** folder, and then double-click on the **DataMigrationUtility.exe**.
+1. Go to the folder where you extracted the deployment package (.zip file). You'll find a **Sample Data** folder. Open the **Sample Data** folder, and then double-click on the **DataMigrationUtility.exe**.
 
-2. On the next screen, select **Import data**.
+2. On the next screen, select **Import data**, and then select **Continue**.
 
-3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced** and then type your credentials. Select **Display list of available organizations** to select the right organization.
+3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then enter your credentials. Select **Display list of available organizations** to select the right organization, and then select  **Login**.
 
     > [!div class="mx-imgBorder"]
     > ![Configuration manager](media/deploy-cds-config-migration-login.png "Configuration manager")
 
-4. Select the environment from the list of environments if you have access to more than one.
+4. If you have access to more than one Common Data Service environment, the next screen prompts you to select from the list of available environments where you want to install the package. Select the environment you want, and then select **Login**.
  
     > [!div class="mx-imgBorder"]
     > ![List of environments](media/deploy-cds-config-migration-organization.png "List of environments")
@@ -132,7 +132,7 @@ You can install sample data in the environment by importing the data files avail
 
 The Return to the Workplace solution contains two Power BI dashboards, one for executive leadership, and another one for the facility managers.
 
-1. Go to the location where you extracted the deployment file (.zip). You'll find a **Power BI** folder. Open the **Return to the Workplace – Leadership** dashboard. The same steps need to be repeated for the **Return to the Workplace – Facility Manager** dashboard.
+1. Go to the folder where you extracted the deployment package (.zip file). You'll find a **Power BI** folder. Open the **Return to the Workplace – Leadership** dashboard. The same steps need to be repeated for the **Return to the Workplace – Facility Manager** dashboard.
 
    > [!div class="mx-imgBorder"]
    > ![Open dashboards](media/solution-admin-pbi-transform-data.png "Open dashboards")
@@ -142,7 +142,7 @@ The Return to the Workplace solution contains two Power BI dashboards, one for e
    > [!div class="mx-imgBorder"]
    > ![Transform data](media/deploy-pbi.png "Transform data")
 
-3. Edit the **CDS Environment** parameter, to your environment. Select **ok**, you will then be prompted to sign in.
+3. Edit the **CDS Environment** parameter, to enter the environment you want to connect. Select **ok**, you will then be prompted to sign in.
 
    > [!div class="mx-imgBorder"]
    >![Edit parameters](media/deploy-edit-prameters.png "edit parameters")
@@ -154,16 +154,16 @@ The Return to the Workplace solution contains two Power BI dashboards, one for e
 
 ## Step 5: Embed Power BI report in the model-driven app
 
-The Facility Manager Power BI dashboard is used in the model-driven app. Since these reports are published in a different location, you need to change the location.
+The facility manager Power BI dashboard is used in the model-driven app. Since these reports are published in a different location, you need to change the location.
 
 1. Go to **Settings** > **Administrator** to enable Power BI integration.
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-admin.png "Enable Power BI")
 
-2. Select **System Settings** and then on the **Reporting** tab, select **Yes**.
+2. Select **System Settings** , and then on the **Reporting** tab, select **Yes**.
 
-3. Go to [Power Apps](https://make.powerapps.com), select **Data** in the left pane, and select **Entities**. On the top-right corner, remove the **Default** filter and select **All**. Select the **Facility** entity from the list and then in the **Forms** tab, select the **Information Form**.
+3. Go to [Power Apps](https://make.powerapps.com), select **Data** in the left pane, and then select **Entities**. On the top-right corner, remove the **Default** filter and select **All**. Select the **Facility** entity from the list and then in the **Forms** tab, select the **Information Form**.
 
    > [!div class="mx-imgBorder"]
    > ![Facility form](media/deploy-new-facility-form.png "Facility form")
@@ -173,11 +173,11 @@ The Facility Manager Power BI dashboard is used in the model-driven app. Since t
    > [!div class="mx-imgBorder"]
    > ![Power BI tile](media/deploy-pbi-set-tile.png "Power BI tile")
 
-For ease of implementation, you can also use the Power BI embedder in the XRMToolbox. (<https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/>)
+For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
 
 ## Step 6: Publish theme
 
-You can always change the look and feel of the app by applying different themes to match the company branding. To select a theme:
+You can always change the look and feel of the app by applying themes to match the company branding. To select a theme:
 
 1. Go to **Settings** > **Customizations**.
 
@@ -203,9 +203,9 @@ You can always change the look and feel of the app by applying different themes 
 
 To share canvas apps to the users:
 
-1. Sign in to [Power Apps](https://make.powerapps.com). Select the **Environment** from the top-right corner.
+1. Sign in to [Power Apps](https://make.powerapps.com). Select the **Environment** from the upper-right corner.
 
-2. On the left pane, select *Apps** to view the list of all your apps.
+2. On the left pane, select **Apps** to view the list of all your apps.
 
 3. Select the **Employee Questionnaire App**.
  
@@ -217,23 +217,22 @@ To share canvas apps to the users:
    > [!div class="mx-imgBorder"]
    > ![Share app](media/deploy-share-app.png "Share app")
 
-4. In the bar where you would like to invite people, select **Everybody** to share the app.
+4. Select users from the list of available users to whom you want to share the app.
 
-5. Repeat this process for the **Checklist App** too.
+5. Repeat this process for other apps too.
 
    > [!div class="mx-imgBorder"]
    > ![Checklist app](media/deploy-app-checklist.png)
 
 ## Step 8: Set the security roles
 
-In the default solution we have defined the following roles, which have their own security roles:
+In the Return to the Workplace solution, you'll see the following security roles are defined:
 
-- Return to the Workplace - Employee, which is used to check-in and look at the details of a location
+- Return to the Workplace - Employee, which is used to check-in and look at the details of a location.
 
 - Return to the Workplace - Facility Manager, which allows people to look at the facilities and plan phasing.
 
 - Return to the Workplace - Leadership, which allows you to view the details over the entire system.
-
 
 To assign security roles:
 
@@ -242,12 +241,12 @@ To assign security roles:
    > [!div class="mx-imgBorder"]
    > ![Security](media/deploy-settings-security.png "Security")
 
-2. Select **Users** and then select the user that you want to give permissions.
+2. Select **Users**, and then select the user that you want to give permissions.
 
    > [!div class="mx-imgBorder"]
    > ![Select user](media/deploy-settings-security-users.png "Select user")
 
-3. Select the user, and then select **Manage Roles**. You will find all the roles as indicated above. After selecting the right roles, select **ok**.
+3. Select the user, and then select **Manage Roles**. After assigning the roles, select **ok**.
 
    > [!div class="mx-imgBorder"]
    > ![Select roles](media/deploy-settings-security-enabled-users.png "Select roles")

@@ -35,7 +35,7 @@ Health & Safety lead uses this app to:
 
 - [Manage employee cases](#manage-employee-cases)
 
-- [Monitor employee cases dashboard](#Monitor-employee-cases-dashboard)
+- [Monitor employee cases dashboard](#monitor-employee-cases-dashboard)
 
 ## Case management app at a glance
 

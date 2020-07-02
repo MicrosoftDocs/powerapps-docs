@@ -13,7 +13,7 @@ ms.reviewer: kvivek
 
 # Configure the Return to the Workplace solution
 
-This article provides step-by-step instructions for IT administrators to configure the Return to the Workplace solution. IT administrators are responsible for making sure the facility manager can guide their facilities throughout the phases. Follow the steps in this article to configure the solution:
+This article provides step-by-step instructions for IT administrators to configure the Return to the Workplace solution. IT administrators are responsible for making sure the facility manager can guide their facilities throughout the phases. The following steps will be covered in this article:
 
 - [Plan reopening phase](#plan-reopening-phases)
 
@@ -76,7 +76,7 @@ To edit the record, select the newly created record, update the values as requir
 
 ## Setup readiness categories
 
-Categories organize readiness factors. By default, there are six categories defined. To create a new category:
+Readiness categories organize the readiness factors. By default, there are six categories defined. To create a new readiness category:
 
 1. Select **Readiness Categories** in the left pane and select **New**.
 
@@ -99,7 +99,7 @@ To edit the record, select the newly created record, update the values as requir
 
 ## Define readiness factors 
 
-Readiness Factors are used to determine if the workplaces can move through phases. By default, there are few readiness factors defined in the solution. To create a new readiness factor:
+Readiness factors are used to determine if the workplaces can move through phases. By default, there are few readiness factors defined in the solution. To create a new readiness factor:
 
 1. Select **Readiness Factors** in the left pane and select **New**.
 
@@ -175,16 +175,6 @@ To set goals and readiness factors for a phase:
    > [!div class="mx-imgBorder"]
    > ![New goal form](media/solution-admin-new-goal-form.png "New goal form")
 
-   
-
--   Lower
-
--   Higher
-
--   Equal or Lower
-
--   Equal or Higher
-
 4. Select **Save & Close**. The newly created record is available in the **Key Metrics** view.
 
 To edit the record, select the newly created record, update the values as required, and select **Save & Close**.
@@ -223,7 +213,7 @@ By default, two facility types are provided as an example. To create a new facil
 1. Select **Facility Types** in the left pane and select **New**.
 
    > [!div class="mx-imgBorder"]
-   > ![Facility type](media/solution-admin-facility-type.png "facility type")
+   > ![Facility type](media/solution-admin-new-facility-type.png "facility type")
 
 2. Enter appropriate values in the fields:
 
@@ -234,7 +224,7 @@ By default, two facility types are provided as an example. To create a new facil
    |||
 
    > [!div class="mx-imgBorder"]
-   > ![Facility type form](media/solution-admin-facility-type-form.png "Facility type for,")
+   > ![Facility type form](media/solution-admin-new-facility-type-form.png "Facility type for,")
 
   
 
@@ -244,7 +234,7 @@ To edit the record, select the newly created record, update the values as requir
 
 ## Import facilities 
 
-The Facility sample data file is available in the deployment package (.zip). When you extract the .zip file, the sample data files are available under the
+The facility sample data file is available in the deployment package (.zip file). When you extract the .zip file, the sample data files are available under the
 **SampleData** folder.
 
 ### How to import facility data from data files
@@ -260,7 +250,7 @@ To import sample facility data from the Excel file to the facility entity:
 
 3. Browse the **SampleData** folder and select the **Facilities.xlsx** file. Change this file according to your own needs and proceed with the steps to import the data.
 
-4. After the sample data is imported, you will see the imported records in the entity.
+4. After the sample data is imported, you'll see the imported records in the entity.
 
    > [!div class="mx-imgBorder"]
    > ![Active facilities](media/solution-admin-facilities-active.png "Active facilities")
@@ -269,7 +259,7 @@ To import sample facility data from the Excel file to the facility entity:
 
 The overall solution requires certain configurations to be made to make sure that the user has the correct information. Through solution settings, contacts, emails, and attestations can be configured. Through themes, you can tailor the experience of an employee according to the company branding.
 
-When setting up the solution, you step through the following steps:
+When setting up the solution, you go through the following steps:
 
 1. [Set solution settings](#set-solution-settings)
 
@@ -277,7 +267,7 @@ When setting up the solution, you step through the following steps:
 
 ## Set Solution Settings
 
-Through the solution settings, you can tailor the experience for the employees to match the company guidelines and culture.
+With solution settings, you can tailor the experience for the employees to match the company guidelines and culture. To set solution settings:
 
 1. Select **Solution Settings** in the left pane and select **New**.
 
@@ -288,8 +278,6 @@ Through the solution settings, you can tailor the experience for the employees t
 
    > [!div class="mx-imgBorder"]
    > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
-
-Disclaimer: the following isn’t implemented yet; this will come in new releases.
 
 ## Define theming
 

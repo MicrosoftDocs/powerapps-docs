@@ -41,9 +41,9 @@ When you successfully sign in and launch the **Return to the Workplace** app fro
 
 ## See the reopen status of a facility
 
-You can set the reopen status for a facility, you can find all the available facilities.
+You can see the reopen status for a facility, you can find all the available facilities.
 
-Select **Look up Facility** to look up for facilities and view the details such as whether the facility is open and what phase of reopening it is in.
+Select **Facility** to lookup for facilities and view the details such as whether the facility is open and what phase of reopening it is in.
 
 Select a facility from the drop-list and the current status of the facility and associated details are displayed. Select **Cancel** to return to the home screen.
 
