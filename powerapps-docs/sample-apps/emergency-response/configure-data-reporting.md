@@ -1,20 +1,22 @@
 ---
-title: Configure master data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
+title: Configure data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
 description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/01/2020
+ms.date: 06/10/2020
 ms.author: pankar
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
-# Configure master data and view dashboards
+# Configure data and view dashboards
 
-This article provides information on how you can use the admin app (model-driven app) to add and manage master data for your solution and use the Power BI dashboard to view key insights and metrics.
+This article provides information on how you can use:
+- **Admin** app to add and manage master data for your solution and configure the Power BI report URL 
+- **Power BI dashboard** to view key insights and metrics
+- **Canvas App Label Management** app to extend mobile app labels
+- **Download Data for CDC** app to download the CDC data
 
 These tasks are typically performed by business admins in your organization.
 
@@ -117,19 +119,33 @@ To create a record:
     > [!div class="mx-imgBorder"] 
     > ![enter-details-new-facility](media/enter-details-new-facility.png)
 
-    | **Field**            | **Description**                                                                                 |
-    |----------------------|-------------------------------------------------------------------------------------------------|
-    | Region               | Select a region this facility is associated with. This list is populated based on the **Regions** data you have created earlier. |
-    | Facility Name        | Type the facility name. For example, Bellevue.                                                  |
-    | Total Vents          | Type the total number of ventilators available in the facility.                                  |
-    | Description          | Type an optional description.                                                                   |
-    | Effective Start Data | Type start date and time for this facility.                                                     |
-    | Effective End Date   | Type end date and time for this facility.                                                       |
-    |Total Beds      | Automatically calculated.|
-    |Total Occupied      | Automatically calculated.|
-    |Facility Address      | Type the Street, City, County, State, Zip code, Latitude, and Longitude for the facility.|
+    | **Field**                    | **Description**            |
+    |------------------------------|---------------------------------------------------|
+    | Region    | Select a region this facility is associated with. This list is populated based on the **Regions** data you have created earlier.          |
+    | Facility Name | Type the facility name.                 |
+    | Description    | Type an optional description.              |
+    | Effective Start Data         | Type start date and time for this facility.|    
+    | DOH Number    | Type Department of Health (DOH) number for this facility.     |
+    | Follows Droplet Protocol     | Indicates whether the facility follows Droplet Precautions for patients known or suspected to be infected with pathogens transmitted by respiratory droplets, such as in COVID-19 cases. Select **Yes** or **No**. |
+    | Effective End Date           | Type end date and time for this facility.       |
+    | Does have an Emergency            | Select **Yes**/**No** to confirm if the facility has emergency department.   |
+    | Ventilators Total Capacity    | Type the total number of ventilators in the facility.    |
+    | Excluded Supplies    | List of supplies not available at this facility.    |    
+    | Total Inpatient Bed Capacity in other areas    | Type the total inpatient bed capacity in other areas.    |
+    | Acute Care Beds (AIIR Room) Total Capacity     | Type the total number of Acute care beds in AIIR (Airborne Infection Isolation Room).     |
+    | ICU Beds (AIIR Room) Total Capacity    | Type the total number of ICU beds in AIIR.    |
+    | Total Pediatric Acute Care Beds (AIIR) Capacity    | Type the total pediatric acute care beds in AIIR.    |
+    | Total Pediatric ICU Beds (AIIR) Capacity    | Type the total pediatric ICU beds in AIIR.    |
+    | Total Outpatient Bed Capacity    | Type the total number of outpatient bed capacity in the facility.    |
+    | Total Overflow/Surge/Expansion Bed Capacity           | Type the total number of overflow/surge/expansion beds the facility can have. These beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                              |
+    | Acute Care Beds (non-AIIR Room) Capacity | Type the total number of Acute care beds in non- AIIR.|
+    | ICU Beds (non-AIIR Room) Total Capacity        | Type the total number of ICU beds in non-AIIR.      |   
+    | Total Pediatric Acute Care Beds (Non-AIIR) Capacity    | Type the total pediatric acute care beds in non-AIIR.    |
+    | Total Pediatric ICU Beds (Non-AIIR Room) Capacity    | Type the total pediatric ICU beds in non-AIIR.    |
+    | Total Mortuary Capacity    | Type the total mortuary capacity.|    
+    | Facility Address    | Type the Street, City, County, State, Zip code, Latitude, and Longitude for the facility.   |
 
-    If required, enter facility address.
+    
 
 1. Select **Save & Close**. The newly created record will be available in the **Facilities** list.
 
@@ -245,6 +261,27 @@ As an admin, you can change the default tracking level of mobile apps.
 
 1. Select **Save** in the lower-right corner to save your changes.
 
+## Configure the Power BI report URL for the Dashboard mobile app
+
+You can set the Power BI report URL for the **Dashboard** mobile app so that frontline workers can view the dashboard in the browser of their mobile app. More information:
+
+> [!NOTE]
+> Ensure that you have the Power BI report URL from your IT admin. The Power BI report URL is available after publishing the Power BI dashboard. More information: [Step 10: Publish the Power BI dashboard](deploy-configure.md#step-10-publish-the-power-bi-dashboard)
+
+
+1.  Sign into the admin app (model-driven app) using the URL provided by your IT admin.
+
+1.  In the left navigation, select the **Administration** area, and then select **Apps**.
+
+1.  Select **Emergency Response App - Dashboard** to open the record.
+
+1.  In the app record, specify the report URL in the **Launch URL** field.
+
+    > [!div class="mx-imgBorder"]
+    > ![dashboard-launch-url](media/dashboard-launch-url.png)
+
+1.  Save the record.
+
 ## View Common Data Service dashboards
 
 Following dashboards are available by default in the Hospital Emergency Response admin (model-driven) app:
@@ -345,6 +382,9 @@ Sign in to [Power BI](https://apps.powerbi.com) to access and view the Power BI 
 > ![View Power BI dashboard](media/view-powerbi-dashboard.png)
 
 You can use the filters on the right side to filter data for COVID locations, facilities, regions and hospital systems.
+
+> [!NOTE]
+> The Power BI dashboard is also optimized to view in the Power BI mobile app. For information about using the Power BI mobile app to view dashboards, see [Explore dashboards and reports in the Power BI mobile apps](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-quickstart-view-dashboard-report) in Power BI docs.
 
 #### System at a glance page 
 
@@ -492,9 +532,118 @@ After the required languages are enabled by your system administrator, each admi
 
 The admin app UI will switch to display in the language you selected.
 
-## Extend mobile app labels (Experimental)
+## Extend mobile app labels
 
-You can extend Hospital Emergency Response mobile app labels with custom text. To do this, you have to import the **Canvas Apps Strings** solution. The solution adds model-driven app named **Canvas App Label Management** that you can use to customize the Hospital Emergency Response mobile app labels. Add new languages supported by the solution and text for corresponding mobile app labels using the model-driven app. For step by step instructions and to download the solution, go to [Extend Hospital Emergency Response mobile app labels (Experimental)](https://github.com/microsoft/powerapps-tools/tree/master/Apps/EmergencyResponse/Experimental/LabelCustomizations).
+You can extend Hospital Emergency Response mobile app labels with custom text. To do this, you model-driven app named **Canvas App Label Management** to customize the mobile app labels. Add new languages supported by the solution and text for corresponding mobile app labels using the model-driven app. You can create and edit strings across different languages for use in the mobile app.
+
+> [!div class="mx-imgBorder"]
+> ![canvas-app-label-app](media/canvas-app-label-app.png)
+
+### Add new language record
+
+Create a new language record for labels in mobile app. After you add the language record, you can add custom labels for Hospital Emergency Response mobile app.
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **Apps** from the left pane.
+1. Select the **Canvas App Label Management** app to open.
+1. Select **Canvas App Languages** from the left pane.
+1. Select **New**.
+1. Enter values for Name, Language Tag and Display Name. For example, 'English' as the name and display name, with 'en' as the language tag.
+
+    ![Create new language record](media/01-create-language-tag.png "Create new language record")
+
+1. Select **Save**.
+
+### Add new string record
+
+1. Select **Canvas App Strings** from the left pane.
+1. Select **New**.
+1. Enter TextID and Description. For example, *SplashScreenFacilityDropdownLabel* and *Facility selection on splash screen*.
+
+    ![Add new string record](media/02-create-string-record.png "Add new string record")
+
+    > [!NOTE]
+    > To find TextID in Hospital Emergency Response mobile app, go to [Find TextID of a label](#find-the-textid-value-of-the-label).
+
+1. Select **Save**.
+
+### Add your canvas app label
+
+1. Select **Canvas App String Values** from the left pane.
+1. Select **New**.
+1. Select TextID, for example *SplashScreenFacilityDropdownLabel*.
+1. Enter Default Text, for example *Facility*.
+1. Select Language Tag, for example *English*.
+1. Enter Override Text, for example *Center*.
+
+    > [!NOTE]
+    > **Override Text** is the new label value to be displayed in your Hospital Emergency Response mobile app.
+
+    ![Add custom string value](media/03-create-string-value.png "Add custom string value")
+
+1. Select **Save**.
+
+You can also follow the steps to add your canvas app label using the sub-grid on the **Canvas App Strings** record.
+
+### View your changes
+
+Play the app to view your changes using your mobile device.
+
+To play the app in browser:
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **Apps** from the left pane.
+1. Select the canvas app to play.
+
+![Play the app with custom label](media/05-play-app-with-change.png "Play the app with custom label")
+
+### Find the TextID value of the label
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Select **Apps** from the left pane.
+1. Select the canvas app.
+1. Select **Edit** from top menu.
+1. Select the label that you want to customize text for.
+1. From the property list on top left, select the **Text** property.
+
+    ![Check TextID of a label](media/04-get-canvasapp-textid.png "Check TextID of a label")
+
+The **Text** property formula bar on top shows the **TextID**. And the **Text** property on the right side property pane shows the **Default Text** value.
+
+### Uninstalling the Canvas App Strings solution
+
+If you uninstall Canvas App Strings solution, the apps will continue to run, even though the entity that the app is looking for doesn't exist.
+
+You can restore canvas apps to previous version that didn't use Canvas App Strings solution in two different ways:
+
+1. Note the current live version of the app before you import the solution. You can restore the app to this version after you uninstall the solution. For more information: [Restore a canvas app to a previous version in Power Apps](../../maker/canvas-apps/restore-an-app.md).
+
+1. Create a new solution and the existing apps. Export the solution as backup. If you uninstall the Canvas App Strings solution, you can import your backup solution with default apps. To learn how to add apps to solution and export, go to [Link an existing canvas app to a solution](../../maker/canvas-apps/add-app-solution.md#link-an-existing-canvas-app-to-a-solution).
+
+### Considerations when extending mobile app labels
+
+- Some TextIDs (labels) can be found in the **OnVisible** property of a screen as a part of a collection.
+- HomeScreen, SplashScreen, FeedbackScreen, MeScreen, Buttons and the timestamp for last submitted data share the same TextIDs across apps. Other screens use separate values for TextIDs, even if the Default Text is same across apps; for example *Location*.
+- Canvas App Strings solution supports the following languages: German, Spanish, French, Italian, Japanese,  Korean, Polish, Portuguese (Portugal), Portuguese (Brazil), and Turkish.
+
+## Download CDC data
+
+Centers for Disease Control and Prevention (CDC) expects each hospital to report data in a certain format. The **Download Data for CDC** app lets you download the data for your facilities in the CDC format. 
+
+This data is collated from various areas of the hospital solution such as information specified for each facility in the admin app, data reported by healthcare workers [using the mobile app](use.md).
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. From the left navigation pane, select **Apps** and then select **Download Data for CDC**.
+
+1. In the app, select one of the facilities to view the CDC data.
+ 
+1. The following CDC data is available for each facility: **Patient Impact And Hospital Capacity**, **Healthcare Supplies**, and **Healthcare Worker Staffings**. Select a row, and then select **Download CSV** to download the data.
+
+    > [!div class="mx-imgBorder"]
+    > ![Download CDC data](media/download-cdc-data.png)
+
+After downloading the data as CSV files from the **Download Data for CDC** app, you can review and upload them to the CDC web site.
 
 ## Issues and feedback
 

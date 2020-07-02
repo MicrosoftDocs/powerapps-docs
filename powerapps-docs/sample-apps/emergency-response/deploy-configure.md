@@ -6,11 +6,9 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/29/2020
+ms.date: 06/10/2020
 ms.author: pankar
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
 # Deploy the Hospital Emergency Response app
 
@@ -81,7 +79,10 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 Follow the steps below to install Hospital Emergency Response app along with the configuration and sample data.
 
 > [!NOTE]
-> The configuration and sample data is installed only for new installation. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure that your existing data isn't overwritten.
+> 
+> - The configuration and sample data is installed only for new installation. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure that your existing data isn't overwritten.
+>
+> - If you intend to transfer data from the hospital to [regional](/powerapps/sample-apps/regional-emergency-response/overview) solution, make sure you create the connections in your environment as described in [Create connections](/powerapps/sample-apps/emergency-response-data-transfer#step-1-create-connections) before installing the solution. The out-of-box solution to [transfer data from hospital to regional](../emergency-response-data-transfer.md) solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. 
 
 You can install the app by using one of the following 3 options:
 
@@ -210,7 +211,7 @@ Select the **Admin App** to open the model-driven app that lets you configure th
 
 You can change the app icon, color scheme, or display name of the mobile apps to match the branding of your organization. You can also specify whether frontline workers can track information by location or facility using the mobile apps. You use **App** and **App Config** entities in the **Administration** area for these.
 
-1.  Open the Admin App, and in the left navigation pane of the admin app, select **Administration** from the area picker, and then select **Apps**. This will show all the canvas app records you imported from the **App Import.xlsx** file.
+1.  Open the Admin App, and in the left navigation pane of the admin app, select **Administration** from the area picker, and then select **Apps**.
 
     > [!div class="mx-imgBorder"] 
     > ![Admin apps](media/conf-admin-app-records.png "Admin apps")
@@ -222,9 +223,12 @@ You can change the app icon, color scheme, or display name of the mobile apps to
 
 1.  In the app details page:
  
-    1. Double-click the app icon, and select an icon file for the app from the **App Icons** folder. The image files are named intuitively so that you can easily select the correct icon. For example, select the "Emergency Response App.png" file for **Emergency Response App**. You can also select a custom image as per your organization branding.
+    1. To select a custom image for the app icon as per your organization branding, double-click the app icon, and select an icon file of your choice.
 
     3. If necessary, update the **Description** or **Display Name** of the app.
+
+    > [!TIP]
+    > You might want to choose a different display name to identify apps in your test environment. For example: **Test - Bed capacity**.
 
     4. If necessary, update the **Hide App from Menu** value to set if the app should be displayed in the app list. As **Emergency Response App** is a container app, the value is set to **No** by default.
 
@@ -240,9 +244,12 @@ You can change the app icon, color scheme, or display name of the mobile apps to
 
 1.  Select the **Emergency Response App** record to open it for editing.
 
-    1.  If necessary, update the colors for your app.
+1.  If necessary, update the colors for your mobile app.
 
-    2.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in mobile apps or not. Selecting **Yes** will make the **Sign Out** option available. More information: [End shift - sign out](use.md#end-shift---sign-out) in the user guide.
+    > [!TIP]
+    > You might want to specify a different primary color to identify apps in your test environment.
+
+2.  Select **Yes** or **No** in the **Device Sharing Enabled** field to specify whether a **Sign Out** option will be available in mobile apps or not. Selecting **Yes** will make the **Sign Out** option available. More information: [End shift - sign out](use.md#end-shift---sign-out) in the user guide.
 
     > [!div class="mx-imgBorder"] 
     > ![Device Sharing Enabled field](media/conf-device-sharing-enabled-field.png "Device Sharing Enabled field")
@@ -280,9 +287,9 @@ Next do the following:
 
 2.  Replace the `APPGUIDHERE` value with the actual app ID of a canvas app.
 
-3.  Save the file as .ps file.
+3.  Save the file as .ps1 file.
 
-4.  Run PowerShell as an administrator and execute the .ps file you just created.
+4.  Run PowerShell as an administrator and execute the .ps1 file you just created.
 
 5.  Repeat steps 2 - 4 for each canvas app.
 
@@ -415,6 +422,9 @@ This section provides information on how you can use the **Emergency Response Ap
 2. Open the **Emergency Response App.pbit** file in Power BI Desktop. You'll will be prompted to type the following values:
 
     - **Organization_name**: Type your organization name that will be populated on the top-left corner of each report page.
+        > [!TIP]
+        > You might want to specify a different value for **Organization_name** to identify Power BI dashboard in your test environment. For example, **Contoso Test System**.
+
     - **CDS_base_solution_URL**: Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com
 
     > [!div class="mx-imgBorder"]
@@ -487,6 +497,34 @@ This section provides information on how you can use the **Emergency Response Ap
 
 To view the published Power BI dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)
 
+## Step 11: Enable flows for populating CDC data
+
+You must enable the following flows that help in collating the data from various sources in the solution in the format that Centers for Disease Control and Prevention (CDC) expects each hospital to report:
+
+- Populate CDC Data - Healthcare Staff
+- Populate CDC Data - Healthcare Supply
+- Populate CDC Data - Patients and Hospitals Capacities
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+2.  In the left pane, select **Solutions.** From the solution list, select **Hospital Emergency Response Solution** to open the solution.
+
+3.  In the solution, filter on **Flow** to find all the flows.
+
+    > [!div class="mx-imgBorder"]
+    > ![all-flows](media/all-flows.png)
+
+4.  Select the flow name to open the flow definition. For example, **Populate CDC Data - Healthcare Staff**.
+
+5.  Select **Edit** on the toolbar, and verify the connection information.  
+
+6. Select **Save** to save the changes, and then select **Turn On**.
+
+7. Perform steps 4-6 with each of the following flows to verify the connection, and then enable the flow:
+
+    - Populate CDC Data - Healthcare Supply
+    - Populate CDC Data - Patients and Hospitals Capacities
+
 ## Issues and feedback
 
 - To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
@@ -495,4 +533,4 @@ To view the published Power BI dashboard, see [View Power BI dashboard](configur
 
 ## Next step
 
-[Use the Hospital Emergency Response app](use.md)
+[Configure the data and view reporting](configure-data-reporting.md)

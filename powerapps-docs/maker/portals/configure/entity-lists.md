@@ -1,14 +1,13 @@
 ---
 title: "Add a webpage to render a list of records on a portal | MicrosoftDocs"
 description: "Instructions to add and configure entity lists to render a list of records on a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/05/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # About entity lists

@@ -6,9 +6,9 @@ ms.date: 01/17/2019
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
-author: "KumarVivek" # GitHub ID
-ms.author: "kvivek" # MSFT alias of Microsoft employees only
-manager: 
+author: "Nkrb" # GitHub ID
+ms.author: "nabuthuk" # MSFT alias of Microsoft employees only
+manager: kvivek
 search.audienceType: 
   - developer
 search.app: 

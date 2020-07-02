@@ -300,70 +300,41 @@
     href: customize-labels-support-multiple-languages.md
   - name: Best Practices
     href: best-practices/work-with-metadata/index.md
-- name: Package and distribute extensions using solutions
+- name: Introduction to solutions
+  href: introduction-solutions.md
   items:
-  - name: Introduction to solutions
-    href: introduction-solutions.md
+  - name: Dependency tracking for solution components
+    href: dependency-tracking-solution-components.md
+  - name: Removing dependencies
+    href: removing-dependencies.md
+  - name: Maintain managed solutions
+    href: maintain-managed-solutions.md
+  - name: Organize your solutions
+    href: organize-solutions.md
+  - name: Organize your team to develop solutions
+    href: organize-team-develop-solutions.md
+  - name: Use managed properties
+    href: use-managed-properties.md
+  - name: Understand how managed solutions are merged
+    href: understand-managed-solutions-merged.md
+  - name: Create solutions that support multiple languages
+    href: create-solutions-support-multiple-languages.md
+  - name: How to manage solutions
     items:
-    - name: Dependency tracking for solution components
-      href: dependency-tracking-solution-components.md
-    - name: Removing dependencies
-      href: removing-dependencies.md
-    - name: Maintain managed solutions
-      href: maintain-managed-solutions.md
-    - name: Organize your solutions
-      href: organize-solutions.md
-    - name: Organize your team to develop solutions
-      href: organize-team-develop-solutions.md
-    - name: Use managed properties
-      href: use-managed-properties.md
-    - name: Understand how managed solutions are merged
-      href: understand-managed-solutions-merged.md
-    - name: Create solutions that support multiple languages
-      href: create-solutions-support-multiple-languages.md
-    - name: How to manage solutions
-      items:
-      - name: Create, export, or import an unmanaged solution
-        href: create-export-import-unmanaged-solution.md
-      - name: Uninstall or delete a solution
-        href: uninstall-delete-solution.md
-      - name: Work with solutions
-        href: work-solutions.md
-      - name: Create, install, and update a managed solution
-        href: create-install-update-managed-solution.md
-      - name: Create patches to simplify solution updates
-        href: create-patches-simplify-solution-updates.md
-      - name: When to edit the customizations file
-        href: when-edit-customization-file.md
-  - name: Build tools for Azure DevOps 
-    items:
-    - name: Overview
-      href: build-tools-overview.md
-    - name: Tasks
-      href: build-tools-tasks.md
-    - name: Tutorial and FAQ
-      href: build-tools-tutorial-faq.md
-  - name: SolutionPackager tool
-    href: compress-extract-solution-file-solutionpackager.md
-    items:
-    - name: Source control with solution files
-      href: use-source-control-solution-files.md       
-  - name: Package Deployer tool
-    href: package-deployer/create-packages-package-deployer.md
-  - name: Verify quality of solutions and packages
-    items:
-    - name: Use the Power Apps checker web API 
-      href: checker/webapi/overview.md
-    - name: Invoke the analysis
-      href: checker/webapi/analyze.md
-    - name: Check for analysis status
-      href: checker/webapi/check-status.md
-    - name: Retrieve the list of rules
-      href: checker/webapi/retrieve-rules.md
-    - name: Retrieve the list of rulesets
-      href: checker/webapi/retrieve-rulesets.md
-    - name: Upload a file for analysis
-      href: checker/webapi/upload-file.md
+    - name: Create, export, or import an unmanaged solution
+      href: create-export-import-unmanaged-solution.md
+    - name: Uninstall or delete a solution
+      href: uninstall-delete-solution.md
+    - name: Work with solutions
+      href: work-solutions.md
+    - name: Create, install, and update a managed solution
+      href: create-install-update-managed-solution.md
+    - name: Create patches to simplify solution updates
+      href: create-patches-simplify-solution-updates.md
+    - name: When to edit the customizations file
+      href: when-edit-customization-file.md
+- name: Publish and monitor your (ISV) app
+  items:
   - name: Publish your app on AppSource
     href: publish-app-appsource.md
     items:
@@ -408,7 +379,9 @@
     - name: Office365 authentication with WS-Trust
       href: authenticate-office365-deprecation.md
   - name: "Tutorial: Register an app with Azure Active Directory"
-    href: walkthrough-register-app-azure-active-directory.md      
+    href: walkthrough-register-app-azure-active-directory.md
+  - name: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App"
+    href: walkthrough-blazor-webassembly-single-tenant.md
   - name: Build web applications using Server-to-Server (S2S) authentication
     href: build-web-applications-server-server-s2s-authentication.md
     items:
