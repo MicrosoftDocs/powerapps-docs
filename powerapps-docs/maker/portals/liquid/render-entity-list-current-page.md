@@ -1,14 +1,13 @@
 ---
 title: "Render the entity list associated with the current page in a portal | MicrosoftDocs"
 description: "Sample code to render the entity list associated with the current page in a portal."
-author: tapanm-msft
-manager: kvivek
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 06/04/2020
+ms.author: gisingh
+ms.reviewer: tapanm
 ---
 
 # Render the entity list associated with the current page
@@ -140,7 +139,7 @@ Render the Entity List associated with the current page as a paginated sortable 
                 {% else %}
                   {{ attr }}
                 {% endif -%}
-              </th>
+              </td>
             {% endfor -%}
 
             <td>

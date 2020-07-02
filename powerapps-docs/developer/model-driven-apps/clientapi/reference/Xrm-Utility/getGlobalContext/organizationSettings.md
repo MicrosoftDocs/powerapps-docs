@@ -56,7 +56,7 @@ Deprecated; use [organizationSettings.baseCurrency](#basecurrency) instead to ac
 
 ## baseCurrency 
 
-Returns a lookup object containing the ID, name, and entity type of the base currency for the current organization.
+Returns a lookup object containing the ID, name, and entity type of the base currency for the current organization. This method is supported only on the Unified Interface.
 
 ### Syntax
 

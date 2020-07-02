@@ -15,7 +15,7 @@ ms.assetid: 87f5e921-4114-4710-a362-db741426a69b
 
 # feature-usage element
 
-The feature-usage element acts as a wrapper around the `uses-feature` elements, which themselves allow developers to declare which features their component wants to use. If there are no uses-feature elements defined, the feature-usage element is not required.
+[!INCLUDE [feature-usage-description](includes/feature-usage-description.md)]
 
 ## Available for
 

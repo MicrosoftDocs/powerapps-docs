@@ -110,6 +110,5 @@ Use Vector Format (SVG) web resources for any icon presented in the application.
  [Using Web Page (HTML) web resources](webpage-html-web-resources.md)   
  [Using Style Sheet (CSS) web resources](css-web-resources.md)   
  [Using Script (JScript) web resources](script-jscript-web-resources.md)   
- [Using Data (XML) web resources](data-xml-web-resources.md)   
- [Using Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)  
+ [Using Data (XML) web resources](data-xml-web-resources.md)     
  [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)

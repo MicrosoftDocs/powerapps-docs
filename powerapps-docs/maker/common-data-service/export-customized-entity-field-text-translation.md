@@ -2,7 +2,7 @@
 title: "Export customized entity and field text for translation with Power Apps | MicrosoftDocs"
 description: "Learn how to export entity and field text for translation"
 ms.custom: ""
-ms.date: 06/19/2018
+ms.date: 06/15/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -24,15 +24,15 @@ search.app:
   - D365CE
 ---
 # Translate customized entity and field text into other languages
+After you create customized entity and field text in your unmanaged solution, you may want to translate it into other languages.  
+  
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.    
+  
+2. Select the unmanaged solution you want, on the command bar select **…**, select **Translations**, and then select **Export translations**.  
 
-After you create customized entity and field text, you may want to translate it into other languages.  
+3. After the export completes the exported translations compressed (zip) file is downloaded to your browser’s default download folder and contains the exported labels.
   
-1. Open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer).    
-  
-2. In the solution explorer, on the Actions toolbar, select **Export Translations**.  
-3.  After completing the export, open or save the compressed (.zip) file that contains the exported labels to your local computer or network.  
-  
-4.  Extract the XML file from the compressed (.zip) file and translate it.  
+4. Extract the XML file from the compressed (.zip) file and translate it.  
 
 ## Community tools
 
