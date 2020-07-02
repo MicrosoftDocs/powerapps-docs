@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/03/2018
+ms.date: 07/01/2020
 ms.author: fikaradz
 search.audienceType: 
   - maker
