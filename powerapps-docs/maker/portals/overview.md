@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/17/2020
+ms.date: 07/02/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -16,21 +16,12 @@ Power Apps makers can now create a powerful new type of experience: external-fac
 
 These capabilities feature a revamped end-to-end experience for makers to quickly create a website and customize it with pages, layout, and content. Makers can reuse page designs through templates, add forms and views to display key data from Common Data Service, and publish to users.
 
-> [!NOTE]
-> - Power Apps portals are based on Bootstrap 3.3.x with the exception of [Event portal](https://docs.microsoft.com/dynamics365/marketing/developer/event-management-web-application). Portal developers should not replace Bootstrap 3 with other CSS libraries as some of the scenarios in Power Apps portals are dependent on Bootstrap 3.3.x.
-> - Certain experiences might have known issues. These issues are mentioned in the [Known issues](known-issues.md) section later in this document.  
-
 ## Next steps
 
 [Creating a starter portal](create-portal.md)
 
 ### See also
 
-#### Advanced portal administration
-
 - [Portal admin center](admin/admin-overview.md)
-
-#### Advanced portal customization
-
 - [Portal management app](configure/configure-portal.md)
 - [Portal site settings](configure/configure-site-settings.md)
