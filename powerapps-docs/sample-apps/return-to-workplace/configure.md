@@ -27,18 +27,18 @@ The following prerequisites apply to this guide:
 
 - The environment needs to have all the Return to Workplace components in place with the model-driven apps, canvas apps, and Power BI dashboards.
 
-- The sample data file to import facilities in to the organization. Make sure that you have appropriate security roles to import the data
+- The sample data file to import facilities into the organization. Make sure that you have appropriate security roles to import the data
 
 ## Plan reopening phases
 
-Reopening the workplaces safely requires certain planning in phases to ensure the safety of the employees. To open a workplace safely, you need to define phases. Within these phases, you need to define goals, metrics, and readiness factors. These metrics can be sorted via categories.
+Reopening the workplaces safely requires certain planning in phases to ensure the safety of the employees. To open a workplace, you need to define phases. Within these phases, you need to define goals, metrics, and readiness factors. These metrics can be sorted via categories.
 
 In the model-driven app, you select the **Setup** module, that allows you to configure the plan.
 
 > [!div class="mx-imgBorder"]
 > ![Phase planning](media/solution-admin-new-setting-phase-planning.png "Phase planning")
 
-To define a reopen phase, you need define the following:
+To define a reopen phase, you need to define the following:
 
 1. [Define key metrics](#define-key-metrics)
 
@@ -101,7 +101,7 @@ To edit the record, select the newly created record, update the values as requir
 
 Readiness Factors are used to determine if the workplaces can move through phases. By default, there are few readiness factors defined in the solution. To create a new readiness factor:
 
-1. Select **Readiness Factors** in the left pane, and select **New**.
+1. Select **Readiness Factors** in the left pane and select **New**.
 
    > [!div class="mx-imgBorder"]
    > ![Readiness Factors](media/solution-admin-new-readiness-factor.png "Readiness Factors")
@@ -110,7 +110,7 @@ Readiness Factors are used to determine if the workplaces can move through phase
 
    | **Field** |  **Description** |
    |-------------|------------------------------|
-   | Factor | Enter a name for factor.  |
+   | Factor | Enter a name for the factor.  |
    | Description | Enter the description for the readiness factor. |
    | Category | Select the appropriate category to assign to your readiness factor. |
 
@@ -124,7 +124,7 @@ To edit the record, select the newly created record, update the values as requir
 
 ## Setup a reopen phase
 
-In the reopen plan, you define a couple of phases through that guides a facility to safely reopen the workplace. The phases are defined in the solution by default. To create or edit a reopen phase:
+In the reopening plan, you define a couple of phases that guides a facility to safely reopen the workplace. The phases are defined in the solution by default. To create or edit a reopen phase:
 
 1. Select **Reopen Phases** in the left pane and select **New**.
 

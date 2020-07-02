@@ -1,6 +1,6 @@
 ---
 title: User the case management app
-description: Provides an overview on how to use the case management app.
+description: Provides an overview of how to use the case management app.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
@@ -13,20 +13,15 @@ ms.reviewer: kvivek
 
 # Use the case management app
 
-This article provides step-by-step instructions to case managers in organization on how to use the case management app to manage employee cases. In this article, Health & Safety lead is the case manager.
+This article provides step-by-step instructions to case managers in the organization on how to use the case management app to manage employee cases. In this article, Health & Safety lead is the case manager.
 
 The employee cases will be managed through the following process stages:
 
 ![Business process flow](media/health-safety-employee-case-bpf.png "Business process flow")
 
-1. **Open** – In this stage, the Health & Safety lead can record basic information
-    regarding the case.
+1. **Open** – In this stage, the Health & Safety lead can record basic information regarding the case.
 
-2. **Investigating** – In this stage, the Health & Safety Lead perform steps
-    to ensure employee checks and screenings are being completed as per the
-    company policy. The end result of these checks is a clear instruction
-    to the employee. When this is communicated to the employee, case is
-    moved to the next stage.
+2. **Investigating** – In this stage, the Health & Safety Lead performs steps to ensure employee checks and screenings are being completed as per the company policy. The result of these checks is a clear instruction to the employee. When this is communicated to the employee, the case is moved to the next stage.
 
 3. **Monitoring** – After the investigating stage is complete and employee is provided with the instructions or guidelines, they are monitored until they are
 healthy enough to be eligible to return to the workplace.
@@ -34,7 +29,7 @@ healthy enough to be eligible to return to the workplace.
 4. **Resolve** – Case is closed.
 
 
-Health & Safety lead use this app to:
+Health & Safety lead uses this app to:
 
 - [Manage employee and case managers master data](#manage-employee-and-case-managers-master-data)
 
@@ -55,7 +50,7 @@ The case management app has the following components:
 
 ### Master Data
 
-- Employee - List of all employees. Employees are basically contacts.
+- Employee - List of all employees. Employees are contacts.
 
 - Case managers - List of all the users that have access to the **Employee Cases** area.
 
@@ -78,7 +73,7 @@ Employee Cases - Lists of all cases that have been created.
 ## Getting started with the case management app
 
 Employee Safety is the main goal for the Health & Safety Lead. Therefore the
-employee cases allows the Health & Safety Lead to revoke the employee's ability
+employee cases allow the Health & Safety Lead to revoke the employee's ability
 to check in to the workplace. The goal of the case management is to provide a
 clear insight into the work backlog and to make sure that managing all the cases follow the same process.
 
@@ -90,7 +85,7 @@ procedures have been applied.
 
 ### Manage employee
 
-Case managers can create a new employee contact, if the contact doesn't exist.
+Case managers can create new employee contact if the contact doesn't exist.
 To create an employee contact:
 
 1. Select **Employee** in the left pane and then select **New**.
@@ -104,7 +99,7 @@ To create an employee contact:
 |---------------|------------------|
 | First Name | Enter the first name of the employee. |
 | Last Name | Enter the last name of the employee.  |
-| Email | Enter employee email address. |
+| Email | Enter an employee email address. |
 | Business Phone| Enter the employee mobile or phone number. |
 | Preferred Method of Contact | Select the desired method of contact from the drop-list. |
 
@@ -142,7 +137,7 @@ required, and select **Save & Close**.
 
 ### Case Triggers / Pre-requisites
 
--   Employee is not feeling well and contacts a case manager via email.
+The employee is not feeling well and contacts a case manager via email.
 
 ### Employee case creation
 
@@ -162,7 +157,7 @@ Case managers are the resource who manages employee cases. To create a new case:
 
 #### Open Stage
 
-In this process stage, the case manager contacts the employee notified by the case management team to verify if employee is feeling well or not. The key pieces of data to be captured and recorded prior to moving to the next stage are:
+In this process stage, the case manager contacts the employee notified by the case management team to verify if the employee is feeling well or not. The key pieces of data to be captured and recorded before moving to the next stage are:
 
 - Employee Contacted – Set to **Yes** once the case manager has contacted the employee about their notification.
 
@@ -174,7 +169,7 @@ In this process stage, the case manager contacts the employee notified by the ca
 ### Investigating
 
 In this process stage, the case manager continues to investigate capturing and recording the case-related data and updating the fields on the case form.
-The key pieces of data to be captured and recorded prior to moving to the next stage are:
+The key pieces of data to be captured and recorded before moving to the next stage are:
 
 - Screened (Yes/No)
 
@@ -188,7 +183,7 @@ The key pieces of data to be captured and recorded prior to moving to the next s
 ### Monitoring
 
 In this process stage, the case manager monitors and manages the cases
-ensuring that provided guidance or instructions are being followed and expected target dates for return to work eligibility are updated for the employee. The key pieces of data to be captured and recorded prior to moving to the next stage are:
+ensuring that provided guidance or instructions are being followed and expected target dates for return to work eligibility are updated for the employee. The key pieces of data to be captured and recorded before moving to the next stage are:
 
 - Employee Instructions Provided (Yes/No)
 
@@ -211,7 +206,7 @@ The dashboard consists of two tabs, both with a distinctive set of information.
 
 **Cases**
 
-On this tab, the Health & Safety Lead can see insights of all the cases.
+On this tab, the Health & Safety Lead can see insights into all the cases.
 Insights in the workload and work composition:
 
 - New cases per day
@@ -222,9 +217,8 @@ Insights in the workload and work composition:
 
 **Workload**
   
-This tab of the dashboard displays information regarding the progression of
-the cases so that the Health & Safety leads can monitor if the cases are dealt 
-with in a proper way.
+This tab of the dashboard displays information regarding the progression of the cases so that the Health & Safety leads can monitor if the cases are dealt 
+within a proper way.
 
 - Case duration
 

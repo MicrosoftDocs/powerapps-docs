@@ -1,5 +1,5 @@
 ---
-title: User the Return to Workplace employee app
+title: Use the Return to Workplace employee app
 description: Provides information to track symptoms of the employees and determine if they are eligible to enter into a facility.
 author: pankajarora-msft
 manager: annbe
@@ -13,7 +13,7 @@ ms.reviewer: kvivek
 
 # Use the Return to Workplace employee app
 
-This article provides step-by-step instructions to employees on how to use the employee app. Employee can check in  answer the questions to determine whether they are eligible to enter into a facility and provide a response how they feel about returning to the workplace.
+This article provides step-by-step instructions to employees on how to use the employee app. Employees can check-in, answer the questions to determine whether they are eligible to enter into a facility, and respond to how they feel about returning to the workplace.
 
 This article has the following sections:
 
@@ -29,22 +29,22 @@ This article has the following sections:
 
 To get started with the employee app, you need to download the Power Apps Mobile on your device using the device's app store.
 
-- Download the [Power Apps Mobile](https://powerapps.microsoft.com/downloads)
+- Download the [Power Apps Mobile](https://powerapps.microsoft.com/downloads)
 
-  - For **Apple** devices with iOS such as iPhone and iPad, use [App store](https://aka.ms/powerappsios)
+  - For **Apple** devices with iOS such as iPhone and iPad, use [App store](https://aka.ms/powerappsios)
 
-  - For **Android** devices, use [Google Play](https://aka.ms/powerappsandroid)
+  - For **Android** devices, use [Google Play](https://aka.ms/powerappsandroid)
 
-- Ensure your organization has deployed and configured the Return to Workplace employee app as explained in [Deploy and configure the app](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/deploy-configure).
+- Ensure your organization has deployed and configured the Return to Workplace employee app as explained in [Deploy and configure the app](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/deploy-configure).
 
 - Appropriate security roles to import facility data file.
 
 ## Getting started with the app
 
-Open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared to you by your organization once
+Open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization once
 you sign in. More information: [Power Apps mobile device sign in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in).
 
-When you successfully sign in and launch the **Return to Workplace** app from your mobile device you have an option to check into a facility, look up for a facility, or answer the employee sentiment question:
+When you successfully sign in and launch the **Return to Workplace** app from your mobile device you have an option to check into a facility, lookup for a facility, or answer the employee sentiment question:
 
 > [!div class="mx-imgBorder"]
 > ![Welcome screen](media/employee-welcome.png "Welcome screen")
@@ -65,13 +65,13 @@ Select a facility from the drop-list and the current status of the facility and 
 
 ## Check in to a facility
 
-Employee can complete the steps required to select a particular facility that is `open` to employees returning to work. Employee can find a facility and then complete a health survey that determines if they are eligible to check in to the facility they have selected. If eligible the employee will be provided with a pass to their selected building for that day. To check in to a facility:
+Employees can complete the steps required to select a particular facility that is `open` to employees returning to work. Employees can find a facility and then complete a health survey that determines if they are eligible to check in to the facility they have selected. If eligible the employee will be provided with a pass to their selected building for that day. To check in to a facility:
 
 1. Select **Facility**.
 
 2. Select an available facility form the drop-list.
 
-3. Select **Start Health Survey** to complete the check in process.
+3. Select **Start Health Survey** to complete the check-in process.
 
    > [!div class="mx-imgBorder"]
    > ![Start survey](media/employee-start-survey.png "Start survey")
@@ -114,7 +114,7 @@ Select **Next** to submit questionnaire responses.
 
 If your responses to the questionnaire show you are healthy, you will receive a pass to enter into the selected facility. The pass expires in 24 hours. 
 
-If your responses shows you are not healthy, you will not receive a pass and will be given the contact information for the company health and safety department if needed.
+If your responses show you are not healthy, you will not receive a pass and will be given the contact information for the company health and safety department if needed.
 
 > [!div class="mx-imgBorder"]
 > ![Employee pass](media/employee-pass.png)
@@ -124,7 +124,7 @@ If your responses shows you are not healthy, you will not receive a pass and wil
 
 ## Share sentiment
 
-Employees can share their opinion on how they are feeling about returning to workplace.
+Employees can share their opinion on how they are feeling about returning to the workplace.
 
 On the home page you can give your response for the **Do you feel safe returning to work?** by selecting one of the options available.  
 

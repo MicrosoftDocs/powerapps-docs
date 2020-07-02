@@ -15,11 +15,11 @@ ms.reviewer: kvivek
 
 This article provides step-by-step instructions to IT administrators on how to deploy the Return to Workplace solution. Following the steps in this article to deploy Return to Workplace solution.
 
-Estimated time to complete these steps: 60–90 minute
+Estimated time to complete these steps: 60–90 minutes
 
 ## Prerequisites
 
-- You must a Global Administrator or Dynamics 365 Administrator or Power Platform administrator to perform the installation.
+- You should be a Global Administrator or Dynamics 365 Administrator or Power Platform administrator to perform the installation.
 
 - Create a workspace in Power BI where you will publish the report. Sign in to Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
 
@@ -38,7 +38,7 @@ To unblock the .zip file:
 
 2. In the **Properties** dialog box, select **Unblock**, and then select **Apply** followed by **OK**
 
-When you extract the .zip file, you see the following  components in the extracted folder.
+When you extract the .zip file, you see the following components in the extracted folder.
 
 | **Folder**    | **Description**                                                                                                                      |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -73,7 +73,7 @@ After your environment is ready, you can install the solution via the package.
 
 2. On the next screen, select **Continue**.
 
-3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.      
+3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced** and then type your credentials to connect to your environment.      
     
     > [!div class="mx-imgBorder"]
     > ![Connect to environment](media/deploy-connect-crm.png "Connect to environment")
@@ -87,14 +87,14 @@ After your environment is ready, you can install the solution via the package.
 
 6. On the next screen, select **Next.**
 
-7. The next screen displays you the environment name where the package will be installed. Review the information and select **Next**.
+7. The next screen displays the environment name where the package will be installed. Review the information and select **Next**.
 
-8. The next screen validates Whether the package can be installed on your environment. Select **Next** to continue with the installation.  
+8. The next screen validates whether the package can be installed on your environment. Select **Next** to continue with the installation.  
       
     > [!div class="mx-imgBorder"]
     > ![Installer configuration](media/deploy-setup-installer-configuration-dependencies.png "Installer configuration")
 
-9. The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
+9. The next screen displays the installation status of the package. Note that it might take a while for the package installation to complete.
 
 10. After the installation is complete, select **Next**.
 
@@ -107,13 +107,13 @@ After the package is installed, you will find a new admin app in your **Apps** l
 
 ## Step 4: Install Sample Data
 
-You can install sample data in the environment by importing the data files available in the **Sample Data** folder. In the **Sample Data** folder, there are t3o files available, one with Contoso data and another with State Street data. To install sample data:
+You can install sample data in the environment by importing the data files available in the **Sample Data** folder. In the **Sample Data** folder, there are two files available, one with Contoso data and another with State Street data. To install sample data:
 
 1. Go to the location where you extracted the deployment file (.zip). You'll find a **Sample Data** folder. Open the **Sample Data** folder, and then double-click on the **DataMigrationUtility.exe**.
 
 2. On the next screen, select **Import data**.
 
-3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials. Select **Display list of available organizations** to select the right organization.
+3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced** and then type your credentials. Select **Display list of available organizations** to select the right organization.
 
     > [!div class="mx-imgBorder"]
     > ![Configuration manager](media/deploy-cds-config-migration-login.png "Configuration manager")
@@ -130,7 +130,7 @@ You can install sample data in the environment by importing the data files avail
 
 ## Step 5: Configure and publish Power BI dashboard
 
-The Return to Workplace solution contains two Power BI dashboard, one for executive leadership and another one for the facility managers.
+The Return to Workplace solution contains two Power BI dashboards, one for executive leadership, and another one for the facility managers.
 
 1. Go to the location where you extracted the deployment file (.zip). You'll find a **Power BI** folder. Open the **Return to Workplace – Leadership** dashboard. The same steps need to be repeated for the **Return to Workplace – Facility Manager** dashboard.
 
@@ -142,7 +142,7 @@ The Return to Workplace solution contains two Power BI dashboard, one for execut
    > [!div class="mx-imgBorder"]
    > ![Transform data](media/deploy-pbi.png "Transform data")
 
-3. Edit the **CDS Environment** parameter, to your environment. Select **ok**, you will then be prompted to login.
+3. Edit the **CDS Environment** parameter, to your environment. Select **ok**, you will then be prompted to sign in.
 
    > [!div class="mx-imgBorder"]
    >![Edit parameters](media/deploy-edit-prameters.png "edit parameters")
@@ -152,9 +152,9 @@ The Return to Workplace solution contains two Power BI dashboard, one for execut
    > [!div class="mx-imgBorder"]
    > ![Publish dashboard](media/deploy-pbi-publish-report.png "Publish dashboard")
 
-## Step 5: Embed Power BI report in model-driven app
+## Step 5: Embed Power BI report in the model-driven app
 
-The Facility Manager Power BI dashboard is mainly used in the model-driven app. Since these reports are published on a different location, you need to change the location.
+The Facility Manager Power BI dashboard is used in the model-driven app. Since these reports are published in a different location, you need to change the location.
 
 1. Go to **Settings** > **Administrator** to enable Power BI integration.
 
@@ -163,12 +163,12 @@ The Facility Manager Power BI dashboard is mainly used in the model-driven app. 
 
 2. Select **System Settings** and then on the **Reporting** tab, select **Yes**.
 
-3. Go to [Power Apps](https://make.powerapps.com), select **Data** in the left pane and select **Entities**. On the top right corner, remove the **Default** filter and select **All**. Select the **Facility** entity from the list and then in the **Forms** tab, select the **Information Form**.
+3. Go to [Power Apps](https://make.powerapps.com), select **Data** in the left pane, and select **Entities**. On the top-right corner, remove the **Default** filter and select **All**. Select the **Facility** entity from the list and then in the **Forms** tab, select the **Information Form**.
 
    > [!div class="mx-imgBorder"]
    > ![Facility form](media/deploy-new-facility-form.png "Facility form")
 
-4. Click **Switch to classic** to move back to the old interface. In the Power BI select the appropriate **Workspace aka Group** and **Dashboard**. Select **Save** and **Publish**.
+4. Click **Switch to classic** to move back to the old interface. In Power BI, select the appropriate **Workspace aka Group** and **Dashboard**. Select **Save** and **Publish**.
 
    > [!div class="mx-imgBorder"]
    > ![Power BI tile](media/deploy-pbi-set-tile.png "Power BI tile")
@@ -177,7 +177,7 @@ For ease of implementation, you can also use the Power BI embedder in the XRMToo
 
 ## Step 6: Publish theme
 
-You can always the change the look and feel of the app by applying different themes to match the company branding. To select a theme:
+You can always change the look and feel of the app by applying different themes to match the company branding. To select a theme:
 
 1. Go to **Settings** > **Customizations**.
 
@@ -189,7 +189,7 @@ You can always the change the look and feel of the app by applying different the
    > [!div class="mx-imgBorder"]
    > ![Select themes](media/deploy-settings-solutions.png "Select themes")
 
-4. Select **New**  to create a **new** theme. Enter the **Name** and determine which colors you want to use. You can also specify the logo which is used in the sitemap.
+4. Select **New**  to create a **new** theme. Enter the **Name** and determine which colors you want to use. You can also specify the logo, which is used in the sitemap.
 
    > [!div class="mx-imgBorder"]
    > ![Deploy themes](media/deploy-themes.png "Deploy themes")
@@ -226,43 +226,43 @@ To share canvas apps to the users:
 
 ## Step 8: Set the security roles
 
-In the default solution we have defined the following roles, which has their own security roles:
+In the default solution we have defined the following roles, which have their own security roles:
 
-- Return to Workplace - Employee, which is used to check in and look at the details of a location
+- Return to Workplace - Employee, which is used to check-in and look at the details of a location
 
 - Return to Workplace - Facility Manager, which allows people to look at the facilities and plan phasing.
 
 - Return to Workplace - Leadership, which allows you to view the details over the entire system.
 
 
-To create or update security roles:
+To assign security roles:
 
 1. Go to **Settings** > **Security**.
 
    > [!div class="mx-imgBorder"]
    > ![Security](media/deploy-settings-security.png "Security")
 
-2. Select **Users** and then select the user which you want to give permissions.
+2. Select **Users** and then select the user that you want to give permissions.
 
    > [!div class="mx-imgBorder"]
    > ![Select user](media/deploy-settings-security-users.png "Select user")
 
-3. Select the user, and the select **Manage Roles** . You will find all the roles as indicated above. After selecting the right roles, select **ok**.
+3. Select the user, and then select **Manage Roles**. You will find all the roles as indicated above. After selecting the right roles, select **ok**.
 
    > [!div class="mx-imgBorder"]
    > ![Select roles](media/deploy-settings-security-enabled-users.png "Select roles")
 
 ## Service URLs for US Government customers (optional - for government agencies only)
 
-There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants than the commercial version. The commercial version of the service URLs is used throughout this article. If you are a US Government organization, use the respective US Government URL for your deployment as mentioned here:
+There is a different set of urls to access Power Apps US government environments and Power BI US government tenants. The commercial version of the service urls are used throughout the article. If you have a US Government organization, use the respective US government url for your deployment:
 
-| **Commercial version URL**                | **US Government version URL**  |
-|-------------------------------------------|--------------------------------|
-| [https://make.powerapps.com](https://make.powerapps.com)                | [https://make.gov.powerapps.us](https://make.gov.powerapps.us) (GCC)<br/><br/>[https://make.high.powerapps.us](https://make.high.powerapps.us) (GCC High)                |
+| **Commercial version URL**| **US Government version URL**  |
+|-------------------|--------------------------------|
+| [https://make.powerapps.com](https://make.powerapps.com)  | [https://make.gov.powerapps.us](https://make.gov.powerapps.us) (GCC)<br/><br/>[https://make.high.powerapps.us](https://make.high.powerapps.us) (GCC High)                |
 | [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us) (GCC)<br/><br/>[https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us) (GCC High) |
 | [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us](https://app.powerbigov.us) (GCC)<br/><br/>[https://app.high.powerbigov.us](https://app.high.powerbigov.us) (GCC High)                 |
 
-For detailed information about the US Government plans for Power Apps and Power BI, see:
+More information:
 
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
@@ -270,9 +270,7 @@ For detailed information about the US Government plans for Power Apps and Power 
 
 ## Next steps
 
-The deployment steps are complete now. Business admins can refer to the [Configuration Guide for Solution Administrator](configure.md) topic to perform the following steps:
-
--  Configure and manage the master data
+[Configure the Return to Workplace solution](configure.md)
 
 
 
