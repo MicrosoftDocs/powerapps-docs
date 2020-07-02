@@ -15,16 +15,6 @@ ms.reviewer: kvivek
 
 This article provides step-by-step instructions to employees on how to use the employee app. Employees can check-in, answer the questions to determine whether they are eligible to enter into a facility, and respond to how they feel about returning to the workplace.
 
-This article has the following sections:
-
-- [Getting started with the app](#getting-started-with-the-app)
-
-- [See the reopen status of a facility](#see-the-reopen-status-of-a-facility)
-
-- [Check in to a facility](#check-in-to-a-facility)
-
-- [Share sentiment](#share-sentiment)
-
 ## Prerequisites
 
 To get started with the employee app, you need to download the Power Apps Mobile on your device using the device's app store.
