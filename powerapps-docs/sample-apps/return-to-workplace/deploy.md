@@ -267,6 +267,11 @@ More information:
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
 
+## Issues and feedback
+
+- To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
+
+- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
 
 ## Next steps
 

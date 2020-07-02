@@ -120,3 +120,9 @@ On the home page you can give your response for the **Do you feel safe returning
 
 > [!div class="mx-imgBorder"]
 > ![Share sentiment](media/employee-share-sentiment.png "Share sentiment")
+
+## Issues and feedback
+
+- To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
+
+- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.

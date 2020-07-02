@@ -314,3 +314,9 @@ Theming allows you to change the experience of the employee.
 
    > [!div class="mx-imgBorder"]
    > ![Theme color](media/deploy/theme-colors.png "Theme color")
+
+## Issues and feedback
+
+- To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
+
+- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
