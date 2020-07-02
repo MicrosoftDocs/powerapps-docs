@@ -1744,13 +1744,13 @@
       href: ../sample-apps/return-to-workplace/deploy.md   
     - name: Configure the solution
       href: ../sample-apps/return-to-workplace/configure.md
-    - name: Use dashboards
+    - name: Dashboards forexecutive leaders
       href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
-    - name: Use the facility manager app
+    - name: Facility manager app
       href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
-    - name: Use the employee app
+    - name: Employee app
       href: ../sample-apps/return-to-workplace/app-for-employee.md
-    - name: Use the case management app
+    - name: Case management app
       href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
 - name: Learn from others
   items:

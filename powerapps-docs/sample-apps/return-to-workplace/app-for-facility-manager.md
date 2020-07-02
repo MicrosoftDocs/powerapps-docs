@@ -206,7 +206,7 @@ To approve transition requests:
 
 2. Filter the transitions with the name on the **Reviewer** column.
 
-3. Select the **Transition** record. Complete any analysis required prior to selecting an **Approved** or **Rejected** value in the **Review Status** field 
+3. Select the **Transition** record. Complete any analysis required before selecting an **Approved** or **Rejected** value in the **Review Status** field 
 
 4. For approvals, select **Approved** status value and enter in any associated comments in the **Review Comments** field.
 
@@ -226,7 +226,7 @@ A reviewer must **Accept** or **Reject** transitions. To review and perform appr
 
 2. Filter the transitions with the name on the **Reviewer** column.
 
-3. Select **Transition** record. Complete any analysis required prior to selecting an **Approved** or **Rejected** value in the **Review Status** field.
+3. Select **Transition** record. Complete any analysis required before selecting an **Approved** or **Rejected** value in the **Review Status** field.
 
 4. For rejections, select **Rejected** status value and enter in any
     associated comments in the **Review Comments** field.
@@ -239,8 +239,7 @@ A reviewer must **Accept** or **Reject** transitions. To review and perform appr
 ## Monitor employee attestations
 
 Facility managers can monitor whether or not their organization’s employees are
-feeling healthy enough to be eligible to return to their facility. They are able
-to track employee self-attestations of their health based upon a series of
+feeling healthy enough to be eligible to return to their facility. They can track employee self-attestations of their health based upon a series of
 questions answered by the employees. This data is typically entered by the employee using the employee app. Facility managers can view the summary of the responses in **Employee Attestations** subarea in the facility manager app.
 
 > [!div class="mx-imgBorder"]
