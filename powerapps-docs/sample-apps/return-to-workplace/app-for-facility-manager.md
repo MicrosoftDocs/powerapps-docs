@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/30/2020
-ms.author: pankar
+ms.author: garybird
 ms.reviewer: kvivek
 ---
 
