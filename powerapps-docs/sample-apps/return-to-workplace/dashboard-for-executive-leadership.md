@@ -13,7 +13,7 @@ ms.reviewer: kvivek
 
 # Use the Power BI dashboard
 
-This article is for executive leaders who use the Power BI dashboard to analyze data to get their employees back to their office locations using the Return to Workplace solution. The following steps will be covered in
+This article is for executive leaders who use the Power BI dashboard to analyze data to get their employees back to their office locations using the Return to the Workplace solution. The following steps will be covered in
 this document:
 
 - [System at a glance](#system-at-a-glance)
@@ -31,7 +31,7 @@ To access the dashboard:
 
 1.  Open the [Power BI dashboard]().
 
-2.  In the top bar search for **Return to Workplace – Leadership** and select it from the dropdown.
+2.  In the top bar search for **Return to the Workplace – Leadership** and select it from the dropdown.
 
     > [!div class="mx-imgBorder"]
     > ![Search for dashboard](media/pbi-dash-command-bar.png "Search for dashboard")

@@ -1,6 +1,6 @@
 ---
 title: Configuration Guide for Solution Administrator
-description: Provides an overview of Return to Workplace Solution.
+description: Provides an overview of Return to the Workplace Solution.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
@@ -11,9 +11,9 @@ ms.author: pankar
 ms.reviewer: kvivek
 ---
 
-# Configure the Return to Workplace solution
+# Configure the Return to the Workplace solution
 
-This article provides step-by-step instructions for IT administrators to configure the Return to Workplace solution. IT administrators are responsible for making sure the facility manager can guide their facilities throughout the phases. Follow the steps in this article to configure the solution:
+This article provides step-by-step instructions for IT administrators to configure the Return to the Workplace solution. IT administrators are responsible for making sure the facility manager can guide their facilities throughout the phases. Follow the steps in this article to configure the solution:
 
 - [Plan reopening phase](#plan-reopening-phases)
 
@@ -25,7 +25,7 @@ This article provides step-by-step instructions for IT administrators to configu
 
 The following prerequisites apply to this guide:
 
-- The environment needs to have all the Return to Workplace components in place with the model-driven apps, canvas apps, and Power BI dashboards.
+- The environment needs to have all the Return to the Workplace components in place with the model-driven apps, canvas apps, and Power BI dashboards.
 
 - The sample data file to import facilities into the organization. Make sure that you have appropriate security roles to import the data
 
@@ -208,7 +208,7 @@ To edit the record, select the newly created record, update the values as requir
 
 ## Manage facilities
 
-Facilities are an important part of the Return to Workplace solution. Various facility types such as buildings, conference centers are defined in the solution by default. The IT administrator is responsible to create or update the existing facility types. The IT administrator can import records to help the facility manager who is responsible for creating facilities.
+Facilities are an important part of the Return to the Workplace solution. Various facility types such as buildings, conference centers are defined in the solution by default. The IT administrator is responsible to create or update the existing facility types. The IT administrator can import records to help the facility manager who is responsible for creating facilities.
 
 To manage facilities:
 

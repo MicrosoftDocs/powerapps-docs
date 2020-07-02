@@ -13,7 +13,7 @@ ms.reviewer: kvivek
 
 # Use the facility manager app
 
-The facility manager app provides step-by-step instructions to facility managers in organizations on how to use the app to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to Workplace solution.
+The facility manager app provides step-by-step instructions to facility managers in organizations on how to use the app to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
 
 ## Facility manager app at a glance
 

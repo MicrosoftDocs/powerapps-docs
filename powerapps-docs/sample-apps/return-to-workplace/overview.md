@@ -1,6 +1,6 @@
 ---
 title: Overview of Return to the Workplace solution for Power Platform | Microsoft Docs
-description: Provides an overview of Return to Workplace Solution.
+description: Provides an overview of Return to the Workplace Solution.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
@@ -12,9 +12,9 @@ ms.reviewer: kvivek
 ---
 # Return to the Workplace solution
 
-The Return to Workplace solution provides a set of capabilities for organizations to set up and manage plans to get their employees to return to their workplace while aligning with governmental COVID-19 mandates and guidelines. This solution is focused on enabling organizations to open their offices and providing employees with a healthy and safe workplace.
+The Return to the Workplace solution provides a set of capabilities for organizations to set up and manage plans to get their employees to return to their workplace while aligning with governmental COVID-19 mandates and guidelines. This solution is focused on enabling organizations to open their offices and providing employees with a healthy and safe workplace.
 
-The main components of the Return to Workplace solution:
+The main components of the Return to the Workplace solution:
 
 - **Dashboard for executive leadership** to review the current data related to all of their workplaces as it relates to COVID-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations and respective phase rules or guidelines set for them by government agencies.
 
@@ -55,8 +55,8 @@ See also:
 
 |Task | Description|Target audience|See|
 |--|--|-----|--|
-|Download and deploy the solution| Used by IT administrators to deploy the Return to Workplace solution and set up users and security.|IT administrator|[Deployment Guide for IT Administrator](deploy.md)|
-|Configure the Return to Workplace solution.| Used by IT administrator to set up and configure master data related to workplaces and users that will use this solution.|It administrator|[Configure the Return to Workplace solution](configure.md)|
+|Download and deploy the solution| Used by IT administrators to deploy the Return to the Workplace solution and set up users and security.|IT administrator|[Deployment Guide for IT Administrator](deploy.md)|
+|Configure the Return to the Workplace solution.| Used by IT administrator to set up and configure master data related to workplaces and users that will use this solution.|It administrator|[Configure the Return to the Workplace solution](configure.md)|
 |Use dashboards for insights and decision making|Used by executive leaders to review the current data related to all of their workplaces as it relates to COVID-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations and respective phase rules or guidelines set for them by government agencies.|Executive Leadership|[Use dashboard](dashboard-for-executive-leadership.md)|
 |Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Use the facility manager app](app-for-facility-manager.md)
 |Use the employee app|Used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms prior to returning to a reopened workplace.|Employees|[Use the employee app](app-for-employee.md)
@@ -65,9 +65,9 @@ See also:
 
 ## Issues and feedback
 
-- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rtw-issues>.
+- To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
 
-- For feedback about the Return to Workplace solution, visit <https://aka.ms/rtw-feedback>.
+- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
 
 
 ### Disclaimer

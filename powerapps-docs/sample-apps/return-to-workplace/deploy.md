@@ -1,6 +1,6 @@
 ---
 title: Deploy the Return ti Workplace solution
-description: Provides an overview of how to deploy the Return to Workplace Solution.
+description: Provides an overview of how to deploy the Return to the Workplace Solution.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
@@ -11,9 +11,9 @@ ms.author: pankar
 ms.reviewer: kvivek
 ---
 
-# Deploy the Return to Workplace solution
+# Deploy the Return to the Workplace solution
 
-This article provides step-by-step instructions to IT administrators on how to deploy the Return to Workplace solution. Following the steps in this article to deploy Return to Workplace solution.
+This article provides step-by-step instructions to IT administrators on how to deploy the Return to the Workplace solution. Following the steps in this article to deploy Return to the Workplace solution.
 
 Estimated time to complete these steps: 60–90 minutes
 
@@ -130,9 +130,9 @@ You can install sample data in the environment by importing the data files avail
 
 ## Step 5: Configure and publish Power BI dashboard
 
-The Return to Workplace solution contains two Power BI dashboards, one for executive leadership, and another one for the facility managers.
+The Return to the Workplace solution contains two Power BI dashboards, one for executive leadership, and another one for the facility managers.
 
-1. Go to the location where you extracted the deployment file (.zip). You'll find a **Power BI** folder. Open the **Return to Workplace – Leadership** dashboard. The same steps need to be repeated for the **Return to Workplace – Facility Manager** dashboard.
+1. Go to the location where you extracted the deployment file (.zip). You'll find a **Power BI** folder. Open the **Return to the Workplace – Leadership** dashboard. The same steps need to be repeated for the **Return to the Workplace – Facility Manager** dashboard.
 
    > [!div class="mx-imgBorder"]
    > ![Open dashboards](media/solution-admin-pbi-transform-data.png "Open dashboards")
@@ -228,11 +228,11 @@ To share canvas apps to the users:
 
 In the default solution we have defined the following roles, which have their own security roles:
 
-- Return to Workplace - Employee, which is used to check-in and look at the details of a location
+- Return to the Workplace - Employee, which is used to check-in and look at the details of a location
 
-- Return to Workplace - Facility Manager, which allows people to look at the facilities and plan phasing.
+- Return to the Workplace - Facility Manager, which allows people to look at the facilities and plan phasing.
 
-- Return to Workplace - Leadership, which allows you to view the details over the entire system.
+- Return to the Workplace - Leadership, which allows you to view the details over the entire system.
 
 
 To assign security roles:
@@ -270,7 +270,7 @@ More information:
 
 ## Next steps
 
-[Configure the Return to Workplace solution](configure.md)
+[Configure the Return to the Workplace solution](configure.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Use the Return to Workplace employee app
+title: Use the Return to the Workplace employee app
 description: Provides information to track symptoms of the employees and determine if they are eligible to enter into a facility.
 author: pankajarora-msft
 manager: annbe
@@ -11,7 +11,7 @@ ms.author: pankar
 ms.reviewer: kvivek
 ---
 
-# Use the Return to Workplace employee app
+# Use the Return to the Workplace employee app
 
 This article provides step-by-step instructions to employees on how to use the employee app. Employees can check-in, answer the questions to determine whether they are eligible to enter into a facility, and respond to how they feel about returning to the workplace.
 
@@ -25,7 +25,7 @@ To get started with the employee app, you need to download the Power Apps Mobile
 
   - For **Android** devices, use [Google Play](https://aka.ms/powerappsandroid)
 
-- Ensure your organization has deployed and configured the Return to Workplace employee app as explained in [Deploy and configure the app](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/deploy-configure).
+- Ensure your organization has deployed and configured the Return to the Workplace employee app as explained in [Deploy and configure the app](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/deploy-configure).
 
 - Appropriate security roles to import facility data file.
 
@@ -34,7 +34,7 @@ To get started with the employee app, you need to download the Power Apps Mobile
 Open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization once
 you sign in. More information: [Power Apps mobile device sign in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in).
 
-When you successfully sign in and launch the **Return to Workplace** app from your mobile device you have an option to check into a facility, lookup for a facility, or answer the employee sentiment question:
+When you successfully sign in and launch the **Return to the Workplace** app from your mobile device you have an option to check into a facility, lookup for a facility, or answer the employee sentiment question:
 
 > [!div class="mx-imgBorder"]
 > ![Welcome screen](media/employee-welcome.png "Welcome screen")
