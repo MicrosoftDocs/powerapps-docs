@@ -1,5 +1,5 @@
 ---
-title: Overview of Return to Workplace sample solution for Power Platform | Microsoft Docs
+title: Overview of Return to the Workplace solution for Power Platform | Microsoft Docs
 description: Provides an overview of Return to Workplace Solution.
 author: pankajarora-msft
 manager: annbe
@@ -10,7 +10,7 @@ ms.date: 06/30/2020
 ms.author: pankar
 ms.reviewer: kvivek
 ---
-# Return to Workplace sample solution
+# Return to the Workplace solution
 
 The Return to Workplace solution provides a set of capabilities for organizations to set up and manage plans to get their employees to return to their workplace while aligning with governmental COVID-19 mandates and guidelines. This solution is focused on enabling organizations to open their offices and providing employees with a healthy and safe workplace.
 
