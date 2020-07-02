@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/dev-appsource-test-drive.md",
+      "redirect_url": "dev-enterprise-intro",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "powerapps-docs/developer/common-data-service/compress-extract-solution-file-solutionpackager.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-packager-tool",
       "redirect_document_id": "false"
