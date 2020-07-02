@@ -39,8 +39,9 @@ Watch a quick overview of the solution.
 ## Licensing requirements
 
 - Power Apps license
-- Power BI license, if you'll be using the Power BI dashboard that's available as part of this solution Premium or Pro license
-- Common Data Service to store the data within your environment.
+
+- Power BI Premium or Pro license, if you'll be using the Power BI dashboard that's available as part of this solution 
+
 
 Contact your local Microsoft account representative for questions related to licensing as per your requirements.
 
@@ -64,9 +65,9 @@ See also:
 
 ## Issues and feedback
 
-- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rer-issues>.
+- To report an issue with the Return to Workplace solution, visit <https://aka.ms/rtw-issues>.
 
-- For feedback about the Return to Workplace solution, visit <https://aka.ms/rer-feedback>.
+- For feedback about the Return to Workplace solution, visit <https://aka.ms/rtw-feedback>.
 
 
 ### Disclaimer
