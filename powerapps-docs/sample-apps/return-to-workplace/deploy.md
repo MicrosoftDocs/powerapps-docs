@@ -73,7 +73,7 @@ Follow the steps below to install the Return to the Workplace solution:
     > [!div class="mx-imgBorder"]
     > ![Installation Page](media/return-to-workplace-installationpage.png "Installation Page")
 
-2. Press *GET IT NOW** to install the solution on your environment. You will be redirected to the actual installation page, where you can select the environment on which to install it on. After selecting the environment and accepting the terms of agreement the installation will start.
+2. Press **GET IT NOW** to install the solution on your environment. You will be redirected to the actual installation page, where you can select the environment on which to install it on. After selecting the environment and accepting the terms of agreement the installation will start.
 
 3. After the app is installed, go to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. You'll see the new app under **Apps**.
 
