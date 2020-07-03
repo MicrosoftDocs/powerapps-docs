@@ -68,39 +68,14 @@ After you have created your environment, you can access it using the following U
 
 Follow the steps below to install the Return to the Workplace solution:
 
-1. Go to the folder where you extracted the deployment package (.zip file). You'll find a **Package** folder. Open the **Package** folder, and then double-click to select
-    **PackageDeployer.exe**.
+1. Go to AppSource [(link)](https://aka.ms/rtw-app) to install the **Return to the Workplace solution**.
 
-2. On the next screen, select **Continue**.
-
-3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then enter your credentials to connect to your environment.      
-    
     > [!div class="mx-imgBorder"]
-    > ![Connect to environment](media/deploy-connect-crm.png "Connect to environment")
+    > ![Installation Page](media/return-to-workplace-installationpage.png "Installation Page")
 
-4. Select **Login** to continue.
+2. Press *GET IT NOW** to install the solution on your environment. You will be redirected to the actual installation page, where you can select the environment on which to install it on. After selecting the environment and accepting the terms of agreement the installation will start.
 
-5. If you have access to more than one Common Data Service environment, the next screen prompts you to select from the list of available environments where you want to install the package. Select the environment you want, and then select **Login**.  
-
-   > [!div class="mx-imgBorder"]
-   > ![Select environment](media/deploy-connect-crm-organization.png "Select environment")
-
-6. On the next screen, select **Next.**
-
-7. The next screen displays the environment name where the package is installed. Review the information, and then select **Next**.
-
-8. The next screen validates whether the package can be installed on your environment. Select **Next** to continue with the installation.  
-      
-    > [!div class="mx-imgBorder"]
-    > ![Installer configuration](media/deploy-setup-installer-configuration-dependencies.png "Installer configuration")
-
-9. The next screen displays the installation status of the package. Note that it might take a while for the package installation to complete.
-
-10. After the installation is complete, select **Next**.
-
-11. On the next screen, select **Finish** to complete and close the setup.
-
-12. After the app is installed, go to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. You'll see the new app under **Apps**.
+3. After the app is installed, go to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. You'll see the new app under **Apps**.
 
     > [!div class="mx-imgBorder"]
     > ![List of Apps](media/deploy-model-app-facilities.png "List of Apps")
