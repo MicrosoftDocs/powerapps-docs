@@ -131,13 +131,10 @@ required, and select **Save & Close**.
 
 ## Manage employee cases
 
-### Process Flow
 
 ![](media/health-safety-process-flow.png)
 
-### Case Triggers / Pre-requisites
-
-The employee is not feeling well and contacts a case manager via email.
+The case manager process follows the steps defines as above shown. Where when a case manager is notified, an employee case is created. The employee case is taken through a couple of stages where we get more details and perform a screening (investigating), provide instructions (monitoring) and close the case (resolved). These steps are further explained below.
 
 ### Employee case creation
 
