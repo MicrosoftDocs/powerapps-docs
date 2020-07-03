@@ -28,26 +28,7 @@ Estimated time to complete these steps: 60–90 minutes
   > [!NOTE]
   > If you have installed Power BI Desktop by downloading directly from the download center page in the past, remove it and download it from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available. If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the download center page.
 
-## Step 1: Download the deployment package
-
-Get the latest deployment package (.zip) from your Microsoft account representative. Before extracting the .zip file, ensure that you unblock it.
-
-To unblock the .zip file:
-
-1. Right-click to select the .zip file, and then select **Properties**.
-
-2. In the **Properties** dialog box, select **Unblock**, and then select **Apply** followed by **OK**
-
-When you extract the .zip file, you see the following components in the extracted folder.
-
-| **Folder**    | **Description**                                                                                                                      |
-|---------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Package       | This folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment. |
-| Power BI      | Contains the Power BI report template file (.pbit) that you will use to configure reporting.                                         |
-| Sample Data   | Contains the sample master data files (.xlsx).                                                                                       |
-| Documentation | Contains all the documentation needed.                                                                                               |
-
-## Step 2: Sign up for Power Apps, and create an environment
+## Step 1: Sign up for Power Apps, and create an environment
 
 Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
 
@@ -64,7 +45,7 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 After you have created your environment, you can access it using the following URL: `https://[myenv].crm.dynamics.com`, where `myenv` is the name of your environment. 
 
-## Step 3: Install the package
+## Step 2: Install the package
 
 Follow the steps below to install the Return to the Workplace solution:
 
@@ -82,14 +63,14 @@ Follow the steps below to install the Return to the Workplace solution:
 
 ## Step 4: Configure and publish Power BI dashboard
 
-The Return to the Workplace solution contains two Power BI dashboards, one for executive leadership, and another one for the facility managers.
+The Return to the Workplace solution contains three Power BI dashboards, one for executive leadership, one for the facility managers and for case managers.
 
-1. Go to the folder where you extracted the deployment package (.zip file). You'll find a **Power BI** folder. Open the **Return to the Workplace – Leadership** dashboard. The same steps need to be repeated for the **Return to the Workplace – Facility Manager** dashboard.
+1. Go to AppSource [(link)](https://aka.ms/rtw-app) to install the **Return to the Workplace solution**. Open the **Return to the Workplace – Leadership** dashboard.
 
    > [!div class="mx-imgBorder"]
    > ![Open dashboards](media/deploy-pbi-dashboard-view.png "Open dashboards")
 
-2. In Power BI desktop, select **Transform data** and select **Edit Parameters**.
+2. In Power BI service or Power BI desktop, select **Transform data** and select **Edit Parameters**.
 
    > [!div class="mx-imgBorder"]
    > ![Transform data](media/deploy-pbi.png "Transform data")
