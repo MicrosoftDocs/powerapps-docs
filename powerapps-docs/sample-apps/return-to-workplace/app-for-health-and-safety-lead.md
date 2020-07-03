@@ -164,7 +164,7 @@ This is the first process stage, the case manager starts the case and can verify
   > [!div class="mx-imgBorder"]
   > ![Open stage](media/health-safety-bpf-open.png "Open stage")
 
-### Investigating
+#### Investigating
 
 In this process stage, the case manager contacts the employee to verify if the employee is feeling well or not and continues to investigate capturing and recording the case-related data and updating the fields on the case form.
 The key pieces of data to be captured and recorded before moving to the next stage are:
@@ -178,7 +178,7 @@ The key pieces of data to be captured and recorded before moving to the next sta
   > [!div class="mx-imgBorder"]
   > ![Investigation stage](media/health-safety-bpf-investigating.png "Investigation stage")
 
-### Monitoring
+#### Monitoring
 
 In this process stage, the case manager monitors and manages the cases
 ensuring that provided guidance or instructions are being followed and expected target dates for return to work eligibility are updated for the employee. This stage can be regarded as a holding stage, meaning that is clear when the next moment of contact will be and when the case needs to be followed up. The key pieces of data to be captured and recorded before moving to the next stage are:
@@ -188,7 +188,7 @@ ensuring that provided guidance or instructions are being followed and expected 
   > [!div class="mx-imgBorder"]
   > ![Monitoring](media/health-safety-bpf-monitoring.png "Monitoring")
 
-### Resolve
+#### Resolve
 
 In this process stage, the case manager completes the process by resolving the
 case and selects **Finish**. The key pieces of data to be captured and recorded are:
@@ -197,6 +197,29 @@ case and selects **Finish**. The key pieces of data to be captured and recorded 
 
   > [!div class="mx-imgBorder"]
   > ![resolve](media/health-safety-bpf-resolve.png "Resolve")
+
+### Case Facilities
+
+As part of the investigation, a case manager might need to register which facilities are involved in this case. This can be done on the Case Facilities tab.
+
+Open the Case Facilities tab and click New Case Facility to relate a facility to this case. When the record is created, further details can be entered:
+
+| **Field**   | **Description**  |
+|---------------|------------------|
+| Date From | Enter start date of employee visiting that facility. |
+| Date To | Enter end date of employee visiting that facility.  |
+| Comment | Enter additional information when applicable. |
+
+### Case Contacts
+
+An employee under investigation might have had contact with one or more colleagues. This type of information can be logged on the Case Contacts tab.
+
+Open the Case Contacts tab and click New Case Contact to relate an Employee to this case. When the record is created, further details can be entered:
+
+| **Field**   | **Description**  |
+|---------------|------------------|
+| Risk Assesment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
+| Comment | Enter additional information when applicable. |
 
 ## Monitor employee cases dashboard
 
