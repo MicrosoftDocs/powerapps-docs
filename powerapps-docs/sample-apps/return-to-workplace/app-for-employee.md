@@ -25,9 +25,7 @@ To get started with the employee app, you need to download the Power Apps Mobile
 
   - For **Android** devices, use [Google Play](https://aka.ms/powerappsandroid)
 
-- Ensure your organization has deployed and configured the Return to the Workplace employee app as explained in [Deploy and configure the app](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/deploy-configure).
-
-- Appropriate security roles to import facility data file.
+- Ensure your organization has deployed and configured the Return to the Workplace employee app as explained in [Deploy the app](https://docs.microsoft.com/powerapps/sample-apps/return-to-the-workplace/deploy).
 
 ## Getting started with the app
 
