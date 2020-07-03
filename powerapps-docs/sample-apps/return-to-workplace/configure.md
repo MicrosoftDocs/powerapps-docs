@@ -27,8 +27,6 @@ The following prerequisites apply to this guide:
 
 - The environment needs to have all the Return to the Workplace components in place with the model-driven apps, canvas apps, and Power BI dashboards.
 
-- The sample data file to import facilities into the organization. Make sure that you have appropriate security roles to import the data
-
 ## Plan reopening phases
 
 Reopening the workplaces safely requires certain planning in phases to ensure the safety of the employees. To open a workplace, you need to define phases. Within these phases, you need to define goals, metrics, and readiness factors. These metrics can be sorted via categories.
@@ -301,7 +299,7 @@ Theming allows you to change the experience of the employee.
 4. You can select the different colors from the theme.
 
    > [!div class="mx-imgBorder"]
-   > ![Theme color](media/deploy/theme-colors.png "Theme color")
+   > ![Theme color](media/deploy-theme-colors.png "Theme color")
 
 ## Issues and feedback
 

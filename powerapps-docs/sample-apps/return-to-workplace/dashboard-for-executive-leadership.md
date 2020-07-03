@@ -104,7 +104,7 @@ Different from the system at a glance’s overall view, facility at a glance tab
 and employee sentiment, and attestation. It helps executive leaders to monitor all kinds of key metrics and decide the facility’s opening phase.
 
 > [!div class="mx-imgBorder"]
-> ![Facility view](media/90833c570221a889779cab75d3dd1f39.png "Facility view")
+> ![Facility view](media/pbi-dash-selected-facility-details.png "Facility view")
 
 ## Employee activity 
 
