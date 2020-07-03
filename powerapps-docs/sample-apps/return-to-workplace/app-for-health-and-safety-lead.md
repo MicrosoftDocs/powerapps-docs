@@ -13,15 +13,15 @@ ms.reviewer: kvivek
 
 # Use the case management app
 
-This article provides step-by-step instructions to case managers in the organization on how to use the Employee Case - Return to the Workplace app to manage employee cases. In this article, Health & Safety lead is the case manager.
+This article provides step-by-step instructions to case managers in the organization on how to use the Employee Case - Return to the Workplace app to manage employee cases. 
 
 To assist the Health & Safety lead and to ensure proper case handling, a 4 step process is implemented. The current stage of an employee case is clearly depicted in the business process flow on the employee case form. The employee cases will be managed through the following process stages:
 
 ![Business process flow](media/health-safety-employee-case-bpf.png "Business process flow")
 
-1. **Open** – In this stage, the Health & Safety lead can record basic information regarding the case.
+1. **Open** – In this stage, the Health & Safety lead can record basic information regarding the case. At this moment the Health & Safety lead will become also the case manager for this employee case.
 
-2. **Investigating** – In this stage, the Health & Safety Lead performs steps to ensure employee checks and screenings are being completed as per the company policy. The result of these checks is a clear instruction to the employee. When this is communicated to the employee, the case is moved to the next stage.
+2. **Investigating** – In this stage, the case manager performs steps to ensure employee checks and screenings are being completed as per the company policy. The result of these checks is a clear instruction to the employee. When this is communicated to the employee, the case is moved to the next stage.
 
 3. **Monitoring** – After the investigating stage is complete and employee is provided with the instructions or guidelines, they are monitored until they are
 healthy enough to be eligible to return to the workplace.
@@ -72,7 +72,7 @@ Employee Cases - Lists of all cases that have been created.
 
 ## Getting started with the Employee Case - Return to the Workplace app
 
-Employee Safety is the main goal for the Health & Safety Lead. Therefore the
+Employee Safety is the main goal for the Health & Safety lead. Therefore the
 employee cases allows the Health & Safety Lead to revoke the employee's ability
 to check in to the workplace. The goal of the case management is to provide a
 clear insight into the work backlog and to make sure that managing all the cases follow the same process.
@@ -85,7 +85,7 @@ procedures have been applied.
 
 ### Manage employee
 
-Case managers can create a new employee contact if the contact doesn't exist.
+A Health & Safety lead can create a new employee contact if the contact doesn't exist.
 To create an employee contact:
 
 1. Select **Employee** in the left pane and then select **New**.
@@ -111,7 +111,8 @@ required, and select **Save & Close**.
 
 ### Manage case managers
 
-Case managers can view a list of managers who can manage employee cases. To view the list:
+Since employee cases are restricted to be shown only to a part of the organization. You can view a list of case managers who can manage employee cases.
+To view the list:
 
 1. Select **Case Managers** in the left pane.
 
@@ -154,7 +155,7 @@ Case managers are the resource who manages employee cases. To create a new case:
 
 #### Open
 
-This is the first process stage, the case manager starts the case and can verify if all basic information is available. For example, the case manager can verify the employee details and asign the case to a different case manager. The key pieces of data to be captured and recorded before moving to the next stage are:
+This is the first process stage, the Health and Safety lead starts the case and can verify if all basic information is available. The Health and Safety lead becomes the case manager and will verify the employee details and / or assign the case to a different case manager. The key pieces of data to be captured and recorded before moving to the next stage are:
 
 - Health & Safety Lead - Case Manager owning the case.
 
