@@ -301,7 +301,7 @@ Theming allows you to change the experience of the employee.
 4. You can select the different colors from the theme.
 
    > [!div class="mx-imgBorder"]
-   > ![Theme color](media/deploy/theme-colors.png "Theme color")
+   > ![Theme color](media/deploy-theme-colors.png "Theme color")
 
 ## Issues and feedback
 

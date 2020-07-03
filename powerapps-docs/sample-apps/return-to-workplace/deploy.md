@@ -135,7 +135,7 @@ The Return to the Workplace solution contains two Power BI dashboards, one for e
 1. Go to the folder where you extracted the deployment package (.zip file). You'll find a **Power BI** folder. Open the **Return to the Workplace – Leadership** dashboard. The same steps need to be repeated for the **Return to the Workplace – Facility Manager** dashboard.
 
    > [!div class="mx-imgBorder"]
-   > ![Open dashboards](media/solution-admin-pbi-transform-data.png "Open dashboards")
+   > ![Open dashboards](media/deploy-pbi-dashboard-view.png "Open dashboards")
 
 2. In Power BI desktop, select **Transform data** and select **Edit Parameters**.
 
@@ -222,7 +222,7 @@ To share canvas apps to the users:
 5. Repeat this process for other apps too.
 
    > [!div class="mx-imgBorder"]
-   > ![Checklist app](media/deploy-app-checklist.png)
+   > ![Checklist app](media/deploy-select-app-checklist.png)
 
 ## Step 8: Set the security roles
 
