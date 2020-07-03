@@ -105,30 +105,7 @@ Follow the steps below to install the Return to the Workplace solution:
     > [!div class="mx-imgBorder"]
     > ![List of Apps](media/deploy-model-app-facilities.png "List of Apps")
 
-## Step 4: Install Sample Data
-
-You can install sample data in the environment by importing the data files available in the **Sample Data** folder. In the **Sample Data** folder, you'll see two files available, one with Contoso data and another with state street data. To install sample data:
-
-1. Go to the folder where you extracted the deployment package (.zip file). You'll find a **Sample Data** folder. Open the **Sample Data** folder, and then double-click on the **DataMigrationUtility.exe**.
-
-2. On the next screen, select **Import data**, and then select **Continue**.
-
-3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then enter your credentials. Select **Display list of available organizations** to select the right organization, and then select  **Login**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Configuration manager](media/deploy-cds-config-migration-login.png "Configuration manager")
-
-4. If you have access to more than one Common Data Service environment, the next screen prompts you to select from the list of available environments where you want to install the package. Select the environment you want, and then select **Login**.
- 
-    > [!div class="mx-imgBorder"]
-    > ![List of environments](media/deploy-cds-config-migration-organization.png "List of environments")
-
-5. After validation, select the sample file you want to import. You will see the status in the middle. Select **Import Data**  to import the sample data.
-
-   > [!div class="mx-imgBorder"]
-   > ![Configure import](media/deploy-cds-config-import.png "Configure import")
-
-## Step 5: Configure and publish Power BI dashboard
+## Step 4: Configure and publish Power BI dashboard
 
 The Return to the Workplace solution contains two Power BI dashboards, one for executive leadership, and another one for the facility managers.
 
