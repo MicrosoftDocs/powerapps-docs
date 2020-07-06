@@ -60,7 +60,7 @@ Follow the steps below to install the Return to the Workplace solution:
     > [!div class="mx-imgBorder"]
     > ![List of Apps](media/rtw-apps.png "List of Apps")
 
-## Step 4: Configure and publish Power BI dashboard
+## Step 3: Configure and publish Power BI dashboard
 
 The Return to the Workplace solution contains three Power BI dashboards, one for executive leadership, one for the facility managers and for case managers.
 
@@ -84,7 +84,7 @@ The Return to the Workplace solution contains three Power BI dashboards, one for
    > [!div class="mx-imgBorder"]
    > ![Publish dashboard](media/deploy-pbi-publish-report.png "Publish dashboard")
 
-## Step 5: Embed Power BI report in the model-driven app
+## Step 4: Embed Power BI report in the model-driven app
 
 The facility manager Power BI dashboard is used in the model-driven app. Since these reports are published in a different location, you need to change the location.
 
@@ -107,7 +107,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Since t
 
 For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
 
-## Step 6: Publish theme
+## Step 5: Publish theme
 
 You can always change the look and feel of the app by applying themes to match the company branding. To select a theme:
 
@@ -131,7 +131,7 @@ You can always change the look and feel of the app by applying themes to match t
    > [!div class="mx-imgBorder"]
    > ![Sample theme](media/deploy-theme-colors.png "Sample theme")
 
-## Step 7: Share canvas app
+## Step 6: Share canvas app
 
 To share canvas apps to the users:
 
@@ -156,7 +156,7 @@ To share canvas apps to the users:
    > [!div class="mx-imgBorder"]
    > ![Checklist app](media/deploy-select-app-checklist.png)
 
-## Step 8: Set the security roles
+## Step 7: Set the security roles
 
 In the Return to the Workplace solution, you'll see the following security roles are defined:
 
