@@ -1,30 +1,20 @@
 ---
 title: User the Power BI dashboard
 description: Provides an overview of insights through dashboards.
-author: pankajarora-msft
-manager: annbe
+author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/30/2020
+ms.date: 07/06/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
 
 # Use the Power BI dashboard
 
-This article is for executive leaders who use the Power BI dashboard to analyze data to get their employees back to their office locations using the Return to the Workplace solution. The following steps will be covered in this article:
+This article is for executive leaders who use the Power BI dashboard to analyze data to get their employees back to their office locations using the Return to the Workplace solution. 
 
-- [System at a glance](#system-at-a-glance)
-
-- [Virus spread](#virus-spread)
-
--  [Facility at a glance](#facility-at-a-glance)
-
--  [Employee activity](#employee-activity)
-
-
-## How to view the leadership dashboard
+## How to view the leadership dashboard?
 
 To access the dashboard:
 
