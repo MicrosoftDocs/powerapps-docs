@@ -58,7 +58,7 @@ Follow the steps below to install the Return to the Workplace solution:
 3. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
 
     > [!div class="mx-imgBorder"]
-    > ![List of Apps](media/rtw-apps "List of Apps")
+    > ![List of Apps](media/rtw-apps.png "List of Apps")
 
 ## Step 4: Configure and publish Power BI dashboard
 
