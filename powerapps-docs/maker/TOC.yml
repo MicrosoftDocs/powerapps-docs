@@ -1225,6 +1225,8 @@
       href: ./portals/overview.md
     - name: Release updates
       href: ./portals/release-updates.md
+    - name: "Microsoft Learn: Get Started with Power Apps portals"
+      href: https://docs.microsoft.com/learn/modules/intro-portals/
     - name: Design and build a portal
       items:
         - name: Portal templates

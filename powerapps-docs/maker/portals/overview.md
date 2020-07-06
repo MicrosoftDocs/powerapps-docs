@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/17/2020
+ms.date: 07/06/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -25,6 +25,8 @@ These capabilities feature a revamped end-to-end experience for makers to quickl
 [Creating a starter portal](create-portal.md)
 
 ### See also
+
+[Microsoft Learn: Get started with Power Apps portals](https://docs.microsoft.com/earn/paths/get-started-power-apps-portals/)
 
 #### Advanced portal administration
 
