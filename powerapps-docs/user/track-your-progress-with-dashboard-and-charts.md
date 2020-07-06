@@ -23,7 +23,7 @@ search.app:
 Dashboards take a collection of app data and provide insights to show key performance indicators (KPI) and other important data in easy-to-read interactive charts and graphs. Dashboards are available for all record types.
 
 > [!div class="mx-imgBorder"]
-> ![Dashboard](media/Dashboard.png "Dashboard") 
+> ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
 
 -  To see a different dashboard layout, select the down arrow next to the name of the dashboard, and then select the layout you want.
 -  To choose a default dashboard, display the dashboard you want, and then select **Set as Default** at the top of the screen.
@@ -31,7 +31,7 @@ Dashboards take a collection of app data and provide insights to show key perfor
    > [!div class="mx-imgBorder"]
    > ![Add or change dashboard](media/add_dashboard.png "Add or change dashboard") 
 
-## Create a new dashboard
+## Add charts to the dashboard
 
 1. To create a new dashboard, select **Create a Dynamics 365 Dashboard**. 
 
@@ -58,7 +58,64 @@ The dashboard that you created will appear in the drop-down menu of available da
 
 ## Use charts 
 
-Charts provide you with a quick view of how you’re tracking to your goals. They’re also interactive, so you can click or tap an area of a chart to get more info.
+Charts provide you with a quick view of how you’re tracking to your goals. They’re also interactive, so you can select different areas of a chart to get more info. Charts are aviable on the dashboard page, grid and associated home page, and on edit form page. 
+
+
+### Charts on dashboard page
+
+When you add a chart on a dashboard page, you can configure view selector and view title or chart selector and chart title.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -   Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.
 -   Click on the area of a chart to see a grid view with more details about the data in the chart.
