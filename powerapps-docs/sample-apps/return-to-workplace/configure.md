@@ -157,7 +157,7 @@ To set goals and readiness factors for a phase:
 2. In the section “Key Metrics” select **+ New Goal.**
 
    > [!div class="mx-imgBorder"]
-   > ![A screenshot of a social media post Description automatically generated](media/solution-admin-new-goal.png)
+   > ![Select new goal](media/solution-admin-new-goal.png "Select new goal")
 
 3. Enter appropriate filed values:
 

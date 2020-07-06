@@ -14,11 +14,11 @@ ms.reviewer: kvivek
 
 This article provides step-by-step instructions to case managers in the organization on how to use the Employee Case - Return to the Workplace app to manage employee cases. 
 
-To assist the Health & Safety lead and to ensure proper case handling, a 4 step process is implemented. The current stage of an employee case is clearly depicted in the business process flow on the employee case form. The employee cases will be managed through the following process stages:
+To assist the Health & Safety Lead and to ensure proper case handling, a 4 step process is implemented. The current stage of an employee case is clearly depicted in the business process flow on the employee case form. The employee cases will be managed through the following process stages:
 
 ![Business process flow](media/health-safety-employee-case-bpf.png "Business process flow")
 
-1. **Open** – In this stage, the Health & Safety lead can record basic information regarding the case. At this moment the Health & Safety lead will become also the case manager for this employee case.
+1. **Open** – In this stage, the Health & Safety Lead records the basic information regarding the case. At this moment the Health & Safety Lead also becomes the case manager for the employee cases.
 
 2. **Investigating** – In this stage, the case manager performs steps to ensure employee checks and screenings are being completed as per the company policy. The result of these checks is a clear instruction to the employee. When this is communicated to the employee, the case is moved to the next stage.
 
@@ -28,7 +28,7 @@ healthy enough to be eligible to return to the workplace.
 4. **Resolve** – Case is in wrap-up stage and the Health & Safety Lead can enter closing remarks.
 
 
-Health & Safety lead uses this app to:
+Health & Safety Lead uses this app to:
 
 - [Manage employee and case managers master data](#manage-employee-and-case-managers-master-data)
 
@@ -71,7 +71,7 @@ Employee Cases - Lists of all cases that have been created.
 
 ## Getting started with the Employee Case - Return to the Workplace app
 
-Employee Safety is the main goal for the Health & Safety lead. Therefore the
+Employee Safety is the main goal for the Health & Safety Lead. Therefore the
 employee cases allows the Health & Safety Lead to revoke the employee's ability
 to check in to the workplace. The goal of the case management is to provide a
 clear insight into the work backlog and to make sure that managing all the cases follow the same process.
@@ -84,7 +84,7 @@ procedures have been applied.
 
 ### Manage employee
 
-A Health & Safety lead can create a new employee contact if the contact doesn't exist.
+A Health & Safety Lead can create a new employee contact if the contact doesn't exist.
 To create an employee contact:
 
 1. Select **Employee** in the left pane and then select **New**.
@@ -131,10 +131,10 @@ required, and select **Save & Close**.
 
 ## Manage employee cases
 
+The case manager process explains how a case is created and managed by capturing different data at various stages to identify, investigate, and resolve the case. When a case manager is notified, an employee case is created. The employee case is taken through a couple of stages where you get more details and perform a screening (investigating), provide instructions (monitoring), and close the case (resolved).
 
-![](media/health-safety-process-flow.png)
-
-The case manager process follows the steps defines as above shown. Where when a case manager is notified, an employee case is created. The employee case is taken through a couple of stages where we get more details and perform a screening (investigating), provide instructions (monitoring) and close the case (resolved). These steps are further explained below.
+> [!div class="mx-imgBorder"]
+> ![Process flow](media/health-safety-process-flow.png "Process flow")
 
 ### Employee case creation
 
@@ -235,7 +235,7 @@ Insights in the workload and work composition:
 
 **Workload**
   
-This tab of the dashboard displays information regarding the progression of the cases so that the Health & Safety leads can monitor if the cases are dealt 
+This tab of the dashboard displays information regarding the progression of the cases so that the Health & Safety Lead can monitor if the cases are dealt 
 within a proper way.
 
 - Case duration

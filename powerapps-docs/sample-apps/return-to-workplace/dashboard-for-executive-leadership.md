@@ -54,7 +54,7 @@ From the system at a glance tab, we can drill down data to related **Facility at
    > [!div class="mx-imgBorder"]
    > ![Drill through](media/pbi-dash-facility-glance-drillthru.png "Drill through")
 
-2.  Select the data point and then select the drill through function.
+2. Select the data point and then select the drill through function.
 
     > [!div class="mx-imgBorder"]
     > ![Select data point](media/pbi-dash-select-map-location-view-details.png "Select data point")
