@@ -1,12 +1,11 @@
 ---
 title: Deploy the Return ti Workplace solution
 description: Provides an overview of how to deploy the Return to the Workplace Solution.
-author: pankajarora-msft
-manager: annbe
+author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/30/2020
+ms.date: 07/06/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -19,7 +18,7 @@ Estimated time to complete these steps: 60–90 minutes
 
 ## Prerequisites
 
-- You should be a Global Administrator or Dynamics 365 Administrator or Power Platform administrator to perform the installation.
+- You should be a Global Administrator, Dynamics 365 Administrator, or Power Platform Administrator to perform the installation.
 
 - Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
 
