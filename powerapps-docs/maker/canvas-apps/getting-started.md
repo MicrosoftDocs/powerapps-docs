@@ -43,6 +43,7 @@ When you finish the app and save it to the cloud, [share it with others](share-a
 Run your own apps - and any apps shared with you - on Windows, in a [web browser](../../user/run-app-browser.md), or on an [iOS or Android device](../../user/run-app-client.md).
 
 ## Learn more
+- Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction)
 - Explore the step-by-step, conceptual, and reference topics in the navigation pane on the left.
 - Review [coding standards](https://aka.ms/powerappscanvasguidelines) for maximizing app performance and keeping apps easier to maintain.
 - Check out the [webinars and video gallery](https://powerusers.microsoft.com/t5/Webinars-and-Video-Gallery/bd-p/VideoGallery?featured=yes) to help you leverage the features and functions of Power Apps.
@@ -53,6 +54,7 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 * Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a Power Apps administrator for your organization, you can also open a support ticket in the [Power Apps admin center](https://admin.microsoft.com/Support/Support.aspx).
 
 ## Next steps
+- [Planning a Power Apps project](/powerapps/guidance/planning/introduction)
 - [Sign up for a free license](../signup-for-powerapps.md)
 - [Sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)
 - [Open a sample app](open-and-run-a-sample-app.md)
