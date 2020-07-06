@@ -33,10 +33,10 @@ Dashboards take a collection of app data and provide insights to show key perfor
    > [!div class="mx-imgBorder"]
    > ![Add a new dashboard](media/add_new_dashboard.png "Add a new dashboard")
    
-2. Choose a dashboard layout and select **Create**.  
+2. Choose a layout. It's the way the dashboard displays your charts, graphics, and numbers and then select **Create**.  
 
    > [!div class="mx-imgBorder"]
-   > ![Create a dashboard](media/create_dashboard.png "Create a dashboard")
+   > ![Choose a dashboard layout](media/dashboard_layout.png "Choose a dashboard layout")
  
 3. Type in a name for the dashboard. 
 4. Add what you want to each area of your dashboard. For example, let's add a chart. 
