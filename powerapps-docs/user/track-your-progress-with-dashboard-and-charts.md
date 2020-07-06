@@ -25,18 +25,13 @@ Dashboards take a collection of app data and provide insights to show key perfor
 > [!div class="mx-imgBorder"]
 > ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
 
--  To see a different dashboard layout, select the down arrow next to the name of the dashboard, and then select the layout you want.
--  To choose a default dashboard, display the dashboard you want, and then select **Set as Default** at the top of the screen.
+
+## Create a dashbaord and add charts
+
+1. On the left under **My Work** select the **Dashboard** work area and then on the command bar select **New** > **Dynamics 365 Dashboard**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Add or change dashboard](media/add_dashboard.png "Add or change dashboard") 
-
-## Add charts to the dashboard
-
-1. To create a new dashboard, select **Create a Dynamics 365 Dashboard**. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Add a new dashboard](media/new_dashboard.png "Add a new dashboard")
+   > ![Add a new dashboard](media/add_new_dashboard.png "Add a new dashboard")
    
 2. Choose a dashboard layout and select **Create**.  
 
