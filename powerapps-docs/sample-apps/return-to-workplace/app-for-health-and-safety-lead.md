@@ -1,12 +1,11 @@
 ---
 title: User the case management app
 description: Provides an overview of how to use the case management app.
-author: pankajarora-msft
-manager: annbe
+author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/30/2020
+ms.date: 07/06/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---

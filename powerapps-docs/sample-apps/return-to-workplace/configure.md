@@ -1,12 +1,11 @@
 ---
 title: Configuration Guide for Solution Administrator
 description: Provides an overview of Return to the Workplace Solution.
-author: pankajarora-msft
-manager: annbe
+author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/30/2020
+ms.date: 07/06/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
