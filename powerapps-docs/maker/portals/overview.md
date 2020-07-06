@@ -26,13 +26,7 @@ These capabilities feature a revamped end-to-end experience for makers to quickl
 
 ### See also
 
-[Microsoft Learn: Get started with Power Apps portals](https://docs.microsoft.com/earn/paths/get-started-power-apps-portals/)
-
-#### Advanced portal administration
-
+- [Microsoft Learn: Get started with Power Apps portals](https://docs.microsoft.com/earn/paths/get-started-power-apps-portals/)
 - [Portal admin center](admin/admin-overview.md)
-
-#### Advanced portal customization
-
 - [Portal management app](configure/configure-portal.md)
 - [Portal site settings](configure/configure-site-settings.md)
