@@ -1,6 +1,6 @@
 ---
-title: User the case management app
-description: Provides an overview of how to use the case management app.
+title: User the Employee Case - Return to the Workplace app
+description: Provides an overview of how to use the Employee Case - Return to the Workplace app.
 author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Use the case management app
+# Use the Employee Case - Return to the Workplace app
 
 This article provides step-by-step instructions to case managers in the organization on how to use the Employee Case - Return to the Workplace app to manage employee cases. 
 
@@ -47,14 +47,14 @@ The left pane lists all the components available in the **Employee Cases** area.
 
 The case management app has the following components:
 
-### Employee Cases
+### Employee cases
 
 Employee Cases - Lists of all cases that have been created.
 
 > [!div class="mx-imgBorder"]
 > ![Employee cases](media/health-safety-employee-cases.png "Employee cases")
 
-### Master Data
+### Master data
 
 - Employee - List of all employees. Employees are contacts.
 
@@ -63,7 +63,7 @@ Employee Cases - Lists of all cases that have been created.
    > [!div class="mx-imgBorder"]
    > ![Master data](media/health-safety-master-data.png "Master data")
 
-### Employee Cases Dashboard
+### Employee cases dashboard
 
 - Cases
 
@@ -195,7 +195,7 @@ case and selects **Finish**. The key pieces of data to be captured and recorded 
   > [!div class="mx-imgBorder"]
   > ![resolve](media/health-safety-bpf-resolve.png "Resolve")
 
-### Case Facilities
+### Case facilities
 
 As part of the investigation, a case manager might need to register which facilities are involved in this case. This can be done on the Case Facilities tab.
 
@@ -207,7 +207,7 @@ Open the Case Facilities tab and click New Case Facility to relate a facility to
 | Date To | Enter end date of employee visiting that facility.  |
 | Comment | Enter additional information when applicable. |
 
-### Case Contacts
+### Case contacts
 
 An employee under investigation might have had contact with one or more colleagues. This type of information can be logged on the Case Contacts tab.
 

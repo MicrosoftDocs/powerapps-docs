@@ -262,7 +262,7 @@ When setting up the solution, you go through the following steps:
 
 2. [Define theming](#define-theming)
 
-## Set Solution Settings
+## Set solution settings
 
 With solution settings, you can tailor the experience for the employees to match the company guidelines and culture. To set solution settings:
 

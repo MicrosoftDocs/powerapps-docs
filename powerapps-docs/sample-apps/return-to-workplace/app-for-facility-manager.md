@@ -87,7 +87,7 @@ By default, two facilities are provided as an example. To  create anew facility:
 To edit the record, select the newly created record, update the values as
 required, and select **Save & Close**.
 
-### Monitor Facility
+### Monitor facility
 
 The facility manager can monitor and assesses the current status of their facilities
 by reviewing the facility’s associated dashboard, details, checklist, and
@@ -108,12 +108,12 @@ transitions. To monitor a facility.
 4. Select **Checklist** tab for the selected facility to see checklist items and their completion status.
 
     > [!div class="mx-imgBorder"]
-    > ![](media/facility-manager-checklist-2.png)
+    > ![Checklist two](media/facility-manager-checklist-2.png "Checklist two") 
 
 5. Select **Transitions** tab for the selected facility to see any related transition requests and their status.
 
    > [!div class="mx-imgBorder"]
-   > ![](media/facility-manager-facility-transitions.png)
+   > ![Facility transition](media/facility-manager-facility-transitions.png "Facility transition")
 
 ### Updating the checklist
 

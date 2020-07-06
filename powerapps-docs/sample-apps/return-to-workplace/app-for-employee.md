@@ -40,7 +40,7 @@ When you successfully sign in and launch the **Return to the Workplace** app fro
 
 You can see the reopen status for a facility, you can find all the available facilities.
 
-Select **Facility** to lookup for facilities and view the details such as whether the facility is open and what phase of reopening it is in.
+Select **Look Up Facility** to lookup for facilities and view the details such as whether the facility is open and what phase of reopening it is in.
 
 Select a facility from the drop-list and the current status of the facility and associated details are displayed. Select **Cancel** to return to the home screen.
 
@@ -58,7 +58,7 @@ Employees can complete the steps required to select a particular facility that i
 
 2. Select an available facility form the drop-list.
 
-3. Select **Start Health Survey** to complete the check-in process.
+3. Select **Start Health Survey** to complete the check-in process. Accept the terms & agreements.
 
    > [!div class="mx-imgBorder"]
    > ![Start survey](media/employee-start-survey.png "Start survey")
@@ -66,7 +66,7 @@ Employees can complete the steps required to select a particular facility that i
    > [!div class="mx-imgBorder"]
    > ![Facility drop-list](media/employee-facility-droplist.png "Facility drop-list")
 
-### Symptom Check 1
+### Symptom check 1
 
 Review the **Symptom Check 1** question. Select **Yes**  if you are currently experiencing any of the listed symptoms and **No** if you don't have any of the symptoms.
 
@@ -78,14 +78,14 @@ Review the **Symptom Check 1** question. Select **Yes**  if you are currently ex
 
 Select **Next** to continue to the next survey question.
 
-### Temperature Check
+### Temperature check (Symptom check 2)
 
 Select **Yes** if your temperature is above the given number and select **No** if the temperature is below the given number. Select **Next** to continue to the next survey question.
 
 > [!div class="mx-imgBorder"]
 > ![Temperature check](media/employee-temperature-check.png "Temperature check")
 
-### Symptom Check 3
+### Symptom check 3
 
 Review the **Symptom Check 2** question. Select **Yes** if you are currently experiencing any of the listed symptoms and **No** if you don't have any of the symptoms.
 
@@ -97,7 +97,7 @@ Review the **Symptom Check 2** question. Select **Yes** if you are currently exp
 
 Select **Next** to submit questionnaire responses.
 
-### Employee Pass
+### Employee pass
 
 If your responses to the questionnaire show you are healthy, you will receive a pass to enter into the selected facility. The pass expires in 24 hours. 
 
