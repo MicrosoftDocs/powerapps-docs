@@ -35,7 +35,7 @@ Dashboards are available for all record types.
    > [!div class="mx-imgBorder"]
    > ![Add a new dashboard](media/add_new_dashboard.png "Add a new dashboard")
    
-2. Choose the way your dashboard displays the charts, graphics, and numbers and then select **Create**.  
+2. Choose a layout and then select **Create**. This is how your dashboard displays the charts, graphics, and numbers. 
 
    > [!div class="mx-imgBorder"]
    > ![Choose a dashboard layout](media/dashboard_layout.png "Choose a dashboard layout")
