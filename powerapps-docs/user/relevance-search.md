@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 5/07/2020
+ms.date: 7/07/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -22,11 +22,11 @@ search.app:
 
 ## What is relevance search?
 
-Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)]) to boost search performance.
+Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
   
 Relevance search brings the following enhancements and benefits:  
-<!--note from editor: Edits to these list items are suggested, so they can be parallel throughout this section.-->  
-- Improves performance by using external indexing and [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)] search technology.  
+
+- Improved performance compared to Categorized search.  
   
 - Finds matches to any word in the search term in any field in the entity, compared to quick find where all words from the search term must be found in one field. 
 
