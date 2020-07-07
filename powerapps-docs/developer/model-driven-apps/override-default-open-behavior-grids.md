@@ -171,7 +171,7 @@ Ribbon Workbench tool allows developers to quickly create custom buttons on form
 8. Similarly, select **+** next to **Button** and enter the details as shown below:
 
     > [!div class="mx-imgBorder"]
-    > ![Button Window](media/toolbox-rwb.png "Button Window")
+    > ![Button Window](media/button-properties-window.png "Button Window")
 
 9. Select **Publish** to push the changes.
 
