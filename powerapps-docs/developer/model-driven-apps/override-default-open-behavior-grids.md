@@ -51,7 +51,7 @@ Create a web resource to change the default behavior. For example, if you wish t
 
 4. Enter the name of the web resource and select the **Type** as **Script(JScript)**.
 
-5. Select the text editor, copy-paste the code shown below:
+5. Select the text editor, copy-paste the code shown below and  enter the url value:
 
    ```JavaScript
    function ChangeBehavior(){
@@ -67,7 +67,7 @@ Create a web resource to change the default behavior. For example, if you wish t
 
 ### Step2: Create a custom button
 
-You need to create a custom button on the entity form where you want to change the default behavior. You can create buttons by editing the customization.xml file:
+You need to create a custom button on the entity form where you want to change the default behavior. For example, if you have a subgrid on accounts form that displays contact records in the subgrid, you need to create a button and add custom action on the contact form. You can create buttons by editing the customization.xml file:
 
 1. Create a new solution and add the entity where you want to create the button. 
 
@@ -177,5 +177,5 @@ Ribbon Workbench tool allows developers to quickly create custom buttons on form
 
 ## See also
 
-[Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx)
+[Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx)<br/>
 [Customize the ribbon](customize-commands-ribbon.md)
