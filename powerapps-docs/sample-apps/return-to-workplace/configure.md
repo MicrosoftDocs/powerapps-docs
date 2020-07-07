@@ -300,6 +300,33 @@ Theming allows you to change the experience of the employee.
    > [!div class="mx-imgBorder"]
    > ![Theme color](media/deploy-theme-colors.png "Theme color")
 
+## Bulk record deletion
+
+Due to privacy regulations we strongly recommend creating bulk record delete jobs to delete personal data after a certain period. This can be achieved by creating bulk record delete jobs.
+
+1.	Select **Settings** and then **Data Management**
+
+   > [!div class="mx-imgBorder"]
+   > ![Data Management](media/solution-admin-dm.png "Data Management")
+
+2.	Under Data Management select **Bulk record deletion**
+
+3.	Click **New**
+
+4.	Navigate through the **Bulk Deletion Wizard**
+
+5.	Select the appropriate **entity** and **criteria** 
+
+   > [!div class="mx-imgBorder"]
+   > ![Criteria](media/solution-admin-criteria.png "Criteria")
+
+6.	Add a name and a schedule for the bulk record delete job to run
+
+   > [!div class="mx-imgBorder"]
+   > ![Brd](media/solution-admin-brd.png "Brd")
+
+7.	Submit the bulk record delete job
+
 ## Issues and feedback
 
 - To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.

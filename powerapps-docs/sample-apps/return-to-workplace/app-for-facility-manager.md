@@ -87,6 +87,17 @@ By default, two facilities are provided as an example. To  create anew facility:
 To edit the record, select the newly created record, update the values as
 required, and select **Save & Close**.
 
+4. A facility can be assigned to a user, to do so switch to the **Active Facilities** view.
+
+   > [!div class="mx-imgBorder"]
+   > ![Active Facilities](media/facility-manager-active-facilities.png "Active Facilities")
+
+5. Select a facility and click **Assign**, select the **User** to assign the facility to.
+
+   > [!div class="mx-imgBorder"]
+   > ![Assign](media/facility-manager-assign.png "Assign")
+
+
 ### Monitor facility
 
 The facility manager can monitor and assesses the current status of their facilities
