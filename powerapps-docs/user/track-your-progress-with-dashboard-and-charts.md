@@ -80,9 +80,9 @@ Dashboards are available for all record types.
    > ![View your dashboards](media/my_dashboards.png "View your dashboards")
 
 
-## Use charts 
+## Work with charts 
 
-Charts provide you with a quick view of how you’re tracking to your goals. They’re also interactive, so you can select different areas of a chart to get more info. Charts are aviable on the dashboard page, grid and associated home page, and on edit form page. 
+Charts provide you with a quick view of how you’re tracking to your goals. You can select different areas of a chart to get more info. Charts are aviable on the dashboard page, grid page, associated home page, and on edit form page. 
 
 
 ### Charts on dashboard page
