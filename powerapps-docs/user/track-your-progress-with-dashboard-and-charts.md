@@ -51,9 +51,22 @@ Dashboards are available for all record types.
    > [!div class="mx-imgBorder"]
    > ![Add a chart](media/insert_chart.png "Add a chart")
  
- 5. Select the **Record Type** for the chart.
- 6. Select a **View** that the data in the chart will display.
- 7. Choose the chart and then select **Add**.
+ 5. On the **Add Componet** dialog box, select your options. 
+ 
+ |  |  |
+| --- | --- |
+| **Record Type** |Select a record.  |
+| **View** |Select a view for the record.  |
+| **Chart** |Select the type of chart that you want use. |
+
+
+   > [!div class="mx-imgBorder"]
+   > ![Add componets](media/add_componet_to_dashboard.png "Add componets")
+
+ 
+ 6. When you're done adding each compoent, select **Add**.
+ 
+
  8. Continue adding components to the dashboard and when you are done, select **Save**. 
  
 The dashboard that you created will appear in the drop-down menu of available dashboards.
