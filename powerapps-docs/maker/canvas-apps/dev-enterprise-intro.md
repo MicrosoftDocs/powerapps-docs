@@ -1,14 +1,13 @@
 ---
 title: Power Apps for enterprise developers, partners, and ISVs | Microsoft Docs
 description: An introduction to developing solutions with canvas apps.
-author: ImadYanni
-manager: kvivek
+author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
+ms.reviewer: tapanm
 ms.date: 07/07/2020
-ms.author: iyanni
+ms.author: tapanm
 search.audienceType: 
   - maker
 search.app: 
