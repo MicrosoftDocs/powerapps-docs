@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
-ms.date: 06/04/2020
+ms.date: 07/07/2020
 ms.author: dileeps
 ms.reviewer:
 ---
@@ -16,7 +16,7 @@ If you want to build skills and learn more about Power Apps, Power Automate, and
 * Learn to build business apps and workflows with the full functionality of Power Apps and Power Automate.
 * Connect to any data source by using our 100+ [out of the box connectors](./canvas-apps/connections-list.md) or by creating your own [custom connectors](./canvas-apps/register-custom-api.md).
 * Explore how you can use [the Common Data Service](https://docs.microsoft.com/common-data-service/entity-reference/introduction) to build powerful business apps with the common data model and [the SDK](https://aka.ms/eek20s).
-* Export the solutions you create in your individual environment, and [list them on AppSource](./canvas-apps/dev-appsource-test-drive.md) so your customers can test-drive them.
+* Export the solutions you create in your individual environment, and [publish them on AppSource](../developer/common-data-service/publish-app-appsource.md) so your customers can test-drive them.
 
 ## Who can sign up for the Power Apps Community Plan?
 Anyone with a [work or school account](signup-for-powerapps.md#faq) can sign up for the Power Apps Community Plan. But we especially recommend this plan if you:
@@ -80,7 +80,7 @@ You cannot apply add-ons to the quantities that we include. If you hit capacity 
 > The capacity of the individual environment, whether or not it's used, doesn't contribute to your company's overall quota.
 
 ## Publishing to AppSource
-Do you have an app you would like to share with customers? We now support a Power Apps Test Drive solution on [AppSource.com](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Let customers test drive your apps on AppSource](./canvas-apps/dev-appsource-test-drive.md).
+Do you have an app you would like to share with customers? We now support a Power Apps solutions on [AppSource.com](https://appsource.microsoft.com) as a way for you to share apps and flows with customers, and generate leads for your business. For more information, see [Publish your app on AppSource](../developer/common-data-service/publish-app-appsource.md).
 
 ## Frequently Asked Questions
 
@@ -114,7 +114,7 @@ Both Power Apps Plan Trial and Power Apps Community Plan are free, but are creat
 
 **Power Apps Plan Trial** gives you Power Apps Plan 2 for 30 days. This is meant for trying out Power Apps, Common Data Service, and Power Automate. Once your trial expires, you can purchase a plan. If you are already using Power Apps with Office 365 or Dynamics 365, this is the right plan to try out the premium functionalities of Power Apps, which are available with Power Apps Per User Plan.
 
-**Power Apps Community Plan** gives you access to Power Apps premium functionalities, Common Data Service, and Power Automate for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource Test Drive](./canvas-apps/dev-appsource-test-drive.md). This plan is perpetually available, but only for learning and building your skills on Power Apps, Common Data Services, and Power Automate.
+**Power Apps Community Plan** gives you access to Power Apps premium functionalities, Common Data Service, and Power Automate for individual use. This plan is primarily meant for learning purposes or creating business solutions to be distributed for [AppSource.com](https://appsource.microsoft.com). This plan is perpetually available, but only for learning and building your skills on Power Apps, Common Data Services, and Power Automate.
 
 ### Can I sign up with my personal account?
 
