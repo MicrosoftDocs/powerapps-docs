@@ -1,13 +1,13 @@
 ---
-title: "Quickstart: Web API sample (C#) (Common Data Service)| Microsoft Docs"
-description: "This sample demonstrates how to authenticate with a Common Data Service Server and then call a basic Web API operation, the WhoAmI Function"
+title: "Quickstart: Blazor Server Web API sample (C#) (Common Data Service)| Microsoft Docs"
+description: "This sample demonstrates how to authenticate with a Common Data Service from a Blazor Server application and then call a basic WhoAmI Web API function."
 ms.custom: ""
-ms.date: 06/23/2020
+ms.date: 07/07/2020
 ms.service: powerapps
 ms.topic: "article"
 author: "JeremyLikness" # GitHub ID
 ms.author: "jeliknes" # MSFT alias of Microsoft employees only
-ms.reviewer: ""
+ms.reviewer: "pehecke"
 manager: "" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
@@ -19,49 +19,51 @@ search.app:
 
 In this quickstart, you'll create a Blazor Server application to connect to your Common Data Service environment using the Web API.
 
-You'll authenticate and use an <xref:System.Net.Http.HttpClient> to send a `GET` request to the <xref href="Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function" /> the response will be a <xref href="Microsoft.Dynamics.CRM.WhoAmIResponse?text=WhoAmIResponse ComplexType" />. You will display the `UserId` property value.
+You'll authenticate and use <xref:System.Net.Http.HttpClient> to send a `GET` request containing the [WhoAmI](/dynamics365/customer-engagement/web-api/whoami) function. The response will be a [WhoAmIResponse](/dynamics365/customer-engagement/web-api/whoamiresponse) complex type. After call completion, the `UserId` property value is displayed.
 
 > [!NOTE]
-> This is a very simple example to show how to get connected with a minimum of code. The following [Enhanced quickstart](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
+> This is a very simple example to show how to get connected with a minimum of code. The [Enhanced quickstart](enhanced-quick-start.md) will build upon this sample to apply better design patterns.
 
 ## Prerequisites
 
-- Visual Studio (2019 16.6.2 recommended)
-- Familiarity with the Azure portal
+- Visual Studio 2019 (version 16.6.2 or later recommended)
+- Familiarity with the Microsoft Azure portal
 - Internet connection
 - Valid user account for a Common Data Service instance
-- Admin access to grant application registrations
+- Administrator access to grant application registrations
 - URL to the Common Data Service environment you want to connect with
 - Basic understanding of the Visual C# language
 
 > [!NOTE]
 > To authenticate you must have an app registered in Azure Active Directory. The registration will happen automatically as part of the template creation, but will require additional updates in the Azure portal.
 
-## Create Visual Studio project
+## Create a Visual Studio project
 
-1. Create a new Blazor Server App using **.NET Core 3.1** - _don't_ click "Create" yet
+1. Create a new Blazor Server app using .NET Core 3.1 but don't choose **Create** just yet.
 
     ![Start a Blazor Server project](../media/quick-start-blazor-server-app-csharp-1.png)
 
-1. Click "Change" under "Authentication" and choose "Work or School Accounts." Choose the appropriate dropdown. Replace `CRM520451` in the example with your organization name.
+1. Select **Change** under **Authentication** and then choose **Work or School Accounts**. 
 
-    ![Choose Authentication](../media/quick-start-blazor-server-app-csharp-2.png)
+    ![Choose authentication](../media/quick-start-blazor-server-app-csharp-2.png)
 
-1. Click "Create"
+1. Choose the appropriate dropdown and then replace `CRM520451` in the example with your environment's name.
 
-## Configure the Application in Active Directory
+1. Select **Create**.
 
-By default, the template will create a registered application. Connecting to Common Data Services will require additional permissions. Open the Azure portal and log in with your credentials. Navigate to "Active Directory" and "App Registrations" and choose the entry with the same name as your application.
+## Configure the application in Active Directory
 
-1. Choose "Authentication" and check "Access tokens" under "Implicit grant" then click "Save".
+By default, the template will create a registered application. Connecting to Common Data Service will require additional permissions. Open the Azure portal and log in with your credentials. Navigate to **Active Directory** and **App Registrations**, and then choose the entry with the same name as your application.
+
+1. Choose **Authentication**, select (check) **Access tokens** under **Implicit grant**, and then click **Save**.
 
     ![Implicit grant](../media/quick-start-blazor-server-app-csharp-3.png)
 
-1. Choose "Certificates & secrets" and click "New client secret"
+1. Choose **Certificates & secrets** and then select **New client secret**.
 
-1. Give it a name (for example, "Blazor Server client") and expiration and click "Add"
+1. Assign the secret a name (for example, "Blazor Server client") and expiration date, and then select **Add**.
 
-1. Tap the clipboard next to your secret to copy it
+1. Select the clipboard icon next to your secret to copy it.
 
     ![Copy secret](../media/quick-start-blazor-server-app-csharp-4.png)
 
@@ -80,23 +82,23 @@ By default, the template will create a registered application. Connecting to Com
     }
     ```
     
-1. Open API permissions
+1. Navigate to **API permissions**
 
-1. Click "Add a permission" and choose "Dynamics CRM"
+1. Select **Add a permission** and choose **Dynamics CRM**
 
-1. Choose "Delegated permissions" and check `user_impersonation` then click "Add permissions"
+1. Choose **Delegated permissions** and select (check) **user_impersonation**, and then click **Add permissions**
 
-    ![Add Permission](../media/quick-start-blazor-server-app-csharp-5.png)
+    ![Add permission](../media/quick-start-blazor-server-app-csharp-5.png)
 
-1. Click on the newly created permission to highlight it and click "Grant admin consent for organization" (organization will have your organization name).
+1. Select the newly created permission to highlight it, and then shoose **Grant admin consent for organization** (your environment name is shown)
 
-1. Verify the permissions have green checkboxes in the "status" column
+1. Verify the permissions have green checkboxes in the **status** column
 
 ## Prepare the app to use Azure AD tokens
 
 The application requires some extra steps to capture the authentication token and pass it to the Web API request.
 
-1. Right-click on the `Data` folder and add a new class named `TokenProvider`
+1. Right-click on the **Data** folder and add a new class named `TokenProvider`.
 
     ```csharp
     public class TokenProvider
@@ -105,14 +107,14 @@ The application requires some extra steps to capture the authentication token an
     }
     ```
 
-1. Open `App.razor` and add these statements to the top. Change the namespace to match the name of your application.
+1. Open the App.razor file and add the following statements to the top of the file. Change the namespace to match the name of your application.
 
     ```razor
     @using BlazorWebAPIExample.Data
     @inject TokenProvider Service
     ```
 
-1. Add a `@code` block to accept a parameter and move the token into the service
+1. Add a `@code` block to accept a parameter and move the token into the service.
 
     ```csharp
     [Parameter]
@@ -125,14 +127,14 @@ The application requires some extra steps to capture the authentication token an
     }
     ```
 
-1. Open `Pages/_Host.cshtml` and add the following using statements after the namespace declaration:
+1. Open the Pages/\_Host.cshtml file and add the following using statements after the namespace declaration.
 
     ```razor
     @using BlazorCommonDataService.Data
     @using Microsoft.AspNetCore.Authentication
     ```
 
-1. After the `<body>` tag, add the following code and update the app component to acquire and pass the token:
+1. After the `<body>` tag, add the following code and update the app component to acquire and pass the token.
 
     ```razor
     @{
@@ -146,21 +148,21 @@ The application requires some extra steps to capture the authentication token an
     </app>
     ```
 
-1. Obtain the organization name for the Common Data Services management API. If you're not sure what the name is, open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), navigate to "environments" then choose "open environment." You will see a URL like this: `https://{org}.crm.dynamics.com`
+1. Obtain the environment name for the Common Data Services management API. If you're not sure what the name is, open the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments), navigate to **Environments** then choose **Open environment**. You will see a URL like this: `https://{org}.crm.dynamics.com` where {org} is the environment name.
 
-1. Add an entry to `appsettings.json` named `CDSAPI` with the URL. Add `/api/data/v.9.0/` to the end, so it looks like this:
+1. Add an entry named `CDSAPI` to the appsettings.json file with the environment URL as the value. Append `/api/data/v.9.0/` to the end of the URL so it looks like this:
 
     ```json
     { "CDSAPI": "https://{org}.crm.dynamics.com/api/data/v9.0/" }
     ```
 
-1. Add this using statement to `Startup.cs`
+1. Add this `using` statement to the file Startup.cs.
 
     ```csharp
     using Microsoft.AspNetCore.Authentication.OpenIdConnect;
     ```
 
-1. In the `Startup.cs` class, add registrations to retrieve the tokens and configure a client ready to use the token. Place this code between `services.AddAuthentication` and `services.AddControllersWithViews`.
+1. In the `Startup.cs` class, add registrations to retrieve the authentication token and configure a client ready to use the token. Place this code between `services.AddAuthentication` and `services.AddControllersWithViews`.
 
     ```csharp
     services.Configure<OpenIdConnectOptions>(AzureADDefaults.OpenIdScheme,
@@ -181,13 +183,13 @@ The application requires some extra steps to capture the authentication token an
     });
     ```
 
-    The first registration allows requesting the token with the proper scope. The second registers the service that tracks the token, and the third creates a client with the base API address pre-configured.
+The first registration allows requesting the token with the proper scope. The second registers the service that tracks the token, and the third creates a client with the base API address pre-configured.
 
 ## Make a call to the Web API
 
 Next, you'll update the `Index.razor` component to call the Web API. 
 
-1. Open `Index.razor` and add these statements to the top:
+1. Open the Index.razor file and add these statements to the top:
 
     ```razor
     @using System.Text.Json
@@ -247,7 +249,7 @@ Next, you'll update the `Index.razor` component to call the Web API.
     }
     ```
 
-The application is ready!
+The application is now ready!
 
 ## Run the program
 
@@ -257,14 +259,14 @@ Press F5 to run the program. The output should look like this:
 
 **Congratulations!** You have successfully connected to the Web API.
 
-This quickstart sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. You can expand on the example to perform more complex operations, and wrap the `HttpClient` in a service class to handle the permissions.
+This quickstart sample shows a simple approach to create a Visual Studio project without any exception handling or method to refresh the access token. You can expand on the example to perform more complex operations, and wrap the `HttpClient` object in a service class to handle the permissions.
 
 The [Enhanced quickstart](enhanced-quick-start.md) topic shows how to:
 
-- implement exception handling methods
-- basic authentication method using a connection string
-- create a reusable method to refresh the access token
-- build reusable methods for data operations
+- Implement exception handling methods
+- Use basic authentication with a connection string
+- Create a reusable method to refresh the access token
+- Build reusable methods for data operations
 
 ## Next steps
 
