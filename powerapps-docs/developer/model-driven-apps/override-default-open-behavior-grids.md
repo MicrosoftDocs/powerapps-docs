@@ -28,11 +28,11 @@ There might be situations where you do not want the entity record to open, such 
 > [!NOTE] 
 > This feature is supported only for Unified Interface.
 
-You can now create a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the Id attribute (<CommandDefinition>(RibbonDiffXml)), and define custom action for the command <Actions> (RibbonDiffXml). Application looks for this command Id for an entity when you try to open a record from the entity-bound grid, and if present, will execute the custom action instead of opening the entity record (default behavior).
+You can now create a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the Id attribute `CommandDefinition`, and define custom action in the `Actions` tab. The application looks for this command Id for an entity when you try to open a record from the entity-bound grid, and if present, will execute the custom action instead of opening the entity record (default behavior).
 
 You can override the default open behavior of data rows in two ways:
 
-1. [Customizing xml file](#customizing-xm-file)
+1. [Customizing XML file](#customizing-xml-file)
 2. [Using Ribbon Workbench](#using-ribbon-workbench)
 
 ## Customizing XML file
@@ -51,14 +51,15 @@ Create a web resource to change the default behavior. For example, if you wish t
 
 4. Enter the name of the web resource and select the **Type** as **Script(JScript)**.
 
-5. Select the text editor, copy paste the code shown below:
+5. Select the text editor, copy-paste the code shown below:
 
    ```JavaScript
    function ChangeBehavior(){
-	
-	var url =  "Https://Google.com";
-	var OpenUrlOptions = {height: 800, width: 1000, openInNewWindow:true};
-	Xrm.Navigation.openUrl(url, openUrlOptions);
+    
+    // Enter the SharePoint url
+    var url =  "Enter SharePoint URL";
+    var OpenUrlOptions = {height: 800, width: 1000, openInNewWindow:true};
+    Xrm.Navigation.openUrl(url, openUrlOptions);
    }
    ```
 
@@ -90,9 +91,12 @@ You need to create a custom button on the entity form where you want to change t
 
 11. The customizations.xml file is the file that you will edit.
 
+> [!NOTE]
+> You can enable or disable the button, doing either of the ones will still override the open default behavior.
+
 #### Edit the XML file
 
-Open the customization.xml file and copy paste the code shown below:
+Open the customization.xml file and copy-paste the code shown below:
 
 ```XML
 <CustomActions>
@@ -101,7 +105,6 @@ Open the customization.xml file and copy paste the code shown below:
         <Button Alt="$LocLabels:Mscrm.OpenRecordItem.Alt" Command="Mscrm.OpenRecordItem" Id="Mscrm.OpenRecordItem" LabelText="$LocLabels:Mscrm.OpenRecordItem.LabelText" Sequence="28" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.OpenRecordItem.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.OpenRecordItem.ToolTipDescription" />
       </CommandUIDefinition>
     </CustomAction>
-    <HideCustomAction HideActionId="cr5c1.Mscrm.OpenRecordItem.Hide" Location="Mscrm.OpenRecordItem" />
   </CustomActions>
   <Templates>
     <RibbonTemplates Id="Mscrm.Templates" />
@@ -147,7 +150,7 @@ Open the customization.xml file and copy paste the code shown below:
  
 ## Using Ribbon Workbench
 
-Ribbon Workbench tool allows developers to quickly create custom buttons on forms. Before you create custom button to override the default open behavior, create a web resource as mentioned above to perform the custom action instead of the default open behavior. To create custom button:
+Ribbon Workbench tool allows developers to quickly create custom buttons on forms. Before you create a custom button to override the default open behavior, create a web resource as mentioned above to perform the custom action instead of the default open behavior. To create a custom button:
 
 1. Create a new solution and add the entity where you want to create the button.
 
@@ -155,7 +158,7 @@ Ribbon Workbench tool allows developers to quickly create custom buttons on form
 
 3. Save and publish the solution.
 
-4. Open Ribbon workbench tool and sign in to the environment where you want to create the button.
+4. Open the Ribbon workbench tool and sign in to the environment where you want to create the button.
 
 5. Select **Open Solution** and select the solution from the list of available solutions.
 
