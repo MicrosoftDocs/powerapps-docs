@@ -51,7 +51,7 @@ Dashboards are available for all record types.
    > [!div class="mx-imgBorder"]
    > ![Add a chart](media/insert_chart.png "Add a chart")
  
- 5. On the **Add Componet** dialog box, select your options. 
+5. On the **Add Componet** dialog box, select your options. 
  
       |  |  |
       | --- | --- |
@@ -64,12 +64,21 @@ Dashboards are available for all record types.
     > ![Add componets](media/add_componet_to_dashboard.png "Add componets")
 
  
- 6. When you're done adding each compoent, select **Add**.
+6. When you're done adding each compoent, select **Add**.
  
 
- 8. Continue adding components to the dashboard and when you are done, select **Save**. 
+7. Continue adding components to the dashboard. You can add up to six components.   
  
-The dashboard that you created will appear in the drop-down menu of available dashboards.
+   > [!div class="mx-imgBorder"]
+   > ![Add more charts](media/add_more_charts.png "Add more charts")
+ 
+8. When you are done, on the command bar select **Save**. 
+ 
+9. The dashboard that you created will appear in the drop-down menu under **My Dashbaords**.
+
+   > [!div class="mx-imgBorder"]
+   > ![View your dashboards](media/my_dashboards.png "View your dashboards")
+
 
 ## Use charts 
 
