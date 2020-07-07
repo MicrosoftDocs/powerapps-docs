@@ -274,3 +274,7 @@ Learn how to structure your code for a better design.
 
 > [!div class="nextstepaction"]
 > [Enhanced quickstart](enhanced-quick-start.md)<br/>
+
+### See Also
+
+[Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service](,,/walkthrough-blazor-webassembly-single-tenant.md)
