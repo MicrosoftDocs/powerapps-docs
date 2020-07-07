@@ -306,10 +306,10 @@ Due to privacy regulations we strongly recommend creating bulk record delete job
 
 1.	Select **Settings** and then **Data Management**
 
+2.	Under Data Management select **Bulk record deletion**
+
    > [!div class="mx-imgBorder"]
    > ![Data Management](media/solution-admin-dm.png "Data Management")
-
-2.	Under Data Management select **Bulk record deletion**
 
 3.	Click **New**
 
