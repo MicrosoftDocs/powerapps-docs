@@ -53,15 +53,15 @@ Dashboards are available for all record types.
  
  5. On the **Add Componet** dialog box, select your options. 
  
-  |  |  |
-  | --- | --- |
-  | **Record Type** |Select a record.  |
-  | **View** |Select a view for the record.  |
-  | **Chart** |Select the type of chart that you want use. |
+      |  |  |
+      | --- | --- |
+      | **Record Type** |Select a record.  |
+      | **View** |Select a view for the record.  |
+      | **Chart** |Select the type of chart that you want use. |
 
 
-   > [!div class="mx-imgBorder"]
-   > ![Add componets](media/add_componet_to_dashboard.png "Add componets")
+    > [!div class="mx-imgBorder"]
+    > ![Add componets](media/add_componet_to_dashboard.png "Add componets")
 
  
  6. When you're done adding each compoent, select **Add**.
