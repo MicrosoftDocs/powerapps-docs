@@ -97,29 +97,36 @@ To edit the chart properties, you need to be edit the dashboard that the chart i
    > [!div class="mx-imgBorder"]
    > ![Select the chart to edit](media/select_chart_to_edit.png "Select the chart to edit")
 
-3. On the **Set Properties** dialog box select **Vie Selector** options.
+3. On the **Set Properties** dialog box select a **View Selector** option. 
 
 	- **Off**: Do not show view selector, show the view title only.
 	- **Show All Views**: Show the view selector on chart and display all views in the view selector.
-        - **Show Selected Views**: Show the view selector on chart and display only the selected views in the view selector.
-
+	- **Show Selected Views**: Show the view selector on chart and display only the selected views in the view selector.
+ 
   > [!div class="mx-imgBorder"]
   > ![Edit view selector](media/edit_view_selector.png "Edit view selector")
 
+4. Once **View Selector** is turned on, you can select different view, to see how the chart renders with different data associated with the view.
 
-## Work with charts 
-
-
-
-
+   > [!div class="mx-imgBorder"]
+   > ![Select views](media/charts_select_views.png "Select views")
 
 
-Charts provide you with a quick view of how you’re tracking to your goals. You can select different areas of a chart to get more info. Charts are aviable on the dashboard page, grid page, associated home page, and on edit form page. 
+
+5. Select the **Display Chart Selection**  check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity, to see a different visualization of the data. If the box is unchecked then you only see the chart title.
+
+
+
+
+
+
 
 
 ### Charts on dashboard page
 
 When you add a chart on a dashboard page, you can configure view selector and view title or chart selector and chart title.
+
+Charts provide you with a quick view of how you’re tracking to your goals. You can select different areas of a chart to get more info. Charts are aviable on the dashboard page, grid page, associated home page, and on edit form page. 
 
 
 
