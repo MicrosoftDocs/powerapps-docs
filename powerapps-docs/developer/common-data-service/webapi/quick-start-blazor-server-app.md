@@ -277,4 +277,4 @@ Learn how to structure your code for a better design.
 
 ### See Also
 
-[Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service](,,/walkthrough-blazor-webassembly-single-tenant.md)
+[Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service](../walkthrough-blazor-webassembly-single-tenant.md)
