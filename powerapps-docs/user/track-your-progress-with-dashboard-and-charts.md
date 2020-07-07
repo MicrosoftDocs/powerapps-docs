@@ -20,7 +20,7 @@ search.app:
 ---
 # Track your progress with dashboards and charts
 
-Dashboards provide interactive charts and graphs that display important app data that gives you a 360 degree view of your business. Dashboards help you to understand key performance indicators (KPI) in real-time. A dashboard is made up of a collection of easy-to-read charts that provide visual representation of filtered app data.
+A dashboard is made up of a collection of easy-to-read charts and graphs that provide visual representation of filtered app data. The interactive charts and graphs on a dashboard displays important data that gives you a 360 degree view of your business and helps you to understand key performance indicators (KPI).
 
 Dashboards are available for all record types. 
 
@@ -30,7 +30,7 @@ Dashboards are available for all record types.
 
 ## Create a dashbaord and add charts
 
-1. On the left under **My Work** select the **Dashboard** work area and then on the command bar select **New** > **Dynamics 365 Dashboard**. 
+1. On the left nav under **My Work** select **Dashboards** and then on the command bar select **New** > **Dynamics 365 Dashboard**. 
 
    > [!div class="mx-imgBorder"]
    > ![Add a new dashboard](media/add_new_dashboard.png "Add a new dashboard")
