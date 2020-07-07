@@ -80,7 +80,39 @@ Dashboards are available for all record types.
    > ![View your dashboards](media/my_dashboards.png "View your dashboards")
 
 
+## Edit chart properties
+
+When you add a chart on a dashboard you can edit the chart properites and modify the chart view and dispaly options. 
+
+To edit the chart properties, you need to be edit the dashboard that the chart is in. If you're in the process of of adding a new chart on a dashboard, then you're aleady in edit mode and can skip to step 2.
+
+
+1. Go to the dashboard that the chart is in and on the command bar, select **Edit**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Edit dashboard](media/edit_dashboard_prop.png "Edit your dashboard")
+   
+2. Double select the chart that you want to edit. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Select the chart to edit](media/select_chart_to_edit.png "Select the chart to edit")
+
+3. On the **Set Properties** dialog box select **Vie Selector** options.
+
+	- **Off**: Do not show view selector, show the view title only.
+	- **Show All Views**: Show the view selector on chart and display all views in the view selector.
+  - **Show Selected Views**: Show the view selector on chart and display only the selected views in the view selector.
+
+  > [!div class="mx-imgBorder"]
+  > ![Edit view selector](media/edit_view_selector.png "Edit view selector")
+
+
 ## Work with charts 
+
+
+
+
+
 
 Charts provide you with a quick view of how you’re tracking to your goals. You can select different areas of a chart to get more info. Charts are aviable on the dashboard page, grid page, associated home page, and on edit form page. 
 
