@@ -20,8 +20,6 @@ search.app:
 
 # Using relevance search to search for records
 
-## What is relevance search?
-
 Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
   
 Relevance search brings the following enhancements and benefits:  
