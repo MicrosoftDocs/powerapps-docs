@@ -49,7 +49,7 @@ Dashboards are available for all record types.
 4. Add what you want to each area of your dashboard. For example, let's add a chart. 
 
    > [!div class="mx-imgBorder"]
-   > ![Add a chart](media/add_chart.png "Add a chart")
+   > ![Add a chart](media/insert_chart.png "Add a chart")
  
  5. Select the **Record Type** for the chart.
  6. Select a **View** that the data in the chart will display.
