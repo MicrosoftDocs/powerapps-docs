@@ -20,7 +20,7 @@ search.app:
 ---
 # Track your progress with dashboards and charts
 
-Dashboards provide interactive charts and graphs that display important app data which gives you a 360 degree view of your business. Dashboards help you to understand key performance indicators (KPI) in real-time. A dashboard is made up of a collection of easy-to-read charts that provide visual representation of filtered app data.
+Dashboards provide interactive charts and graphs that display important app data that gives you a 360 degree view of your business. Dashboards help you to understand key performance indicators (KPI) in real-time. A dashboard is made up of a collection of easy-to-read charts that provide visual representation of filtered app data.
 
 Dashboards are available for all record types. 
 
