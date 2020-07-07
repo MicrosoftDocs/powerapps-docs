@@ -15,6 +15,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
+
 # Override the default open behavior of data rows in an entity-bound grid
 
 This article provides step-by-step instructions on how to override the default open behavior of data rows in an entity-bound grid. Currently, performing any of the following actions in a data row in an entity-bound grid opens the entity record by default:
@@ -30,48 +31,45 @@ There might be situations where you do not want the entity record to open, such 
 
 You can now create a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the Id attribute `CommandDefinition`, and define custom action in the `Actions` tab. The application looks for this command Id for an entity when you try to open a record from the entity-bound grid, and if present, will execute the custom action instead of opening the entity record (default behavior).
 
-You can override the default open behavior of data rows in two ways:
+> [!NOTE]
+> - Ribbon Workbench is a third party tool that allows you to quickly create button on forms.
+> - Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
-1. [Customizing XML file](#customizing-xml-file)
-2. [Using Ribbon Workbench](#using-ribbon-workbench)
+To override the default open behavior of data rows in entity-bound grids, follow the steps below:
 
-## Customizing XML file
+## Step 1: Create a web resource
 
-To customize the xml file to override the default behavior, follow steps below:
-
-### Step1: Create a web resource
-
-Create a web resource to change the default behavior. For example, if you wish to open a SharePoint site instead of displaying the record, you need to create a JavaScript web resource. To create a web resource:
+Create a web resource to change the default behavior. For example, if you wish to open a SharePoint site instead of displaying the record, you need to create a JavaScript web resource to perform that action. To create a web resource:
 
 1. Open solution explorer, and then select **Web Resources**.
 
-2. Under **Components**, choose **Web Resources**.
+2. Under **Components**, select **Web Resources**.
 
 3. To create a web resource select **New**.
 
 4. Enter the name of the web resource and select the **Type** as **Script(JScript)**.
 
-5. Select the text editor, copy-paste the code shown below and  enter the url value:
+5. Select **Text Editor**, copy-paste the code shown below and enter the url value:
 
    ```JavaScript
    function ChangeBehavior(){
     
     // Enter the SharePoint url
     var url =  "Enter SharePoint URL";
-    var OpenUrlOptions = {height: 800, width: 1000, openInNewWindow:true};
+    var OpenUrlOptions = {height: 800, width: 1000};
     Xrm.Navigation.openUrl(url, openUrlOptions);
    }
    ```
-
+ 
 6. Save and publish the web resource.
 
-### Step2: Create a custom button
+## Step 2: Create a custom button
 
-You need to create a custom button on the entity form where you want to change the default behavior. For example, if you have a subgrid on accounts form that displays contact records in the subgrid, you need to create a button and add custom action on the contact form. You can create buttons by editing the customization.xml file:
+Create a custom button on the entity form where you want to change the default behavior. For example, if you have a subgrid on accounts form that displays contact records in the subgrid, you need to create a button and add it on the contact form. You can create a button by editing the customization.xml file:
 
 1. Create a new solution and add the entity where you want to create the button. 
 
-2. Add the SiteMap to the newly creates solution. 
+2. Add the SiteMap to the newly created solution. 
 
 3. Add the web resource that we created earlier in the article. 
 
@@ -85,7 +83,7 @@ You need to create a custom button on the entity form where you want to change t
 
 8. Select **Save** in the file download dialog box and then select **Open Folder** in the download complete dialog box.
 
-9. Right-click the compressed .zip file that you downloaded and select **Extract All**.
+9. Right-click on the compressed .zip file that you downloaded, and select **Extract All**.
 
 10. Select a location to extract the files and then select **Extract**.
 
@@ -98,28 +96,27 @@ You need to create a custom button on the entity form where you want to change t
 
      ```XML
     <CustomActions>
-    <CustomAction Id="Mscrm.OpenRecordItem.CustomAction" Location="Mscrm.SubGrid.account.MainTab.Management.Controls._children" Sequence="28">
-      <CommandUIDefinition>
-        <Button Alt="$LocLabels:Mscrm.OpenRecordItem.Alt" Command="Mscrm.OpenRecordItem" Id="Mscrm.OpenRecordItem" LabelText="$LocLabels:Mscrm.OpenRecordItem.LabelText" Sequence="28" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.OpenRecordItem.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.OpenRecordItem.ToolTipDescription" />
-      </CommandUIDefinition>
-      </CustomAction>
-     </CustomActions>
+    <CustomAction Id="cr5c1.Mscrm.OpenRecordItem.CustomAction" Location="Mscrm.SubGrid.account.MainTab.Management.Controls._children" Sequence="28">
+        <CommandUIDefinition>
+            <Button Alt="$LocLabels:Mscrm.OpenRecordItem.Alt" Command="Mscrm.OpenRecordItem" Id="Mscrm.OpenRecordItem" LabelText="$LocLabels:Mscrm.OpenRecordItem.LabelText" Sequence="28" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.OpenRecordItem.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.OpenRecordItem.ToolTipDescription" />
+        </CommandUIDefinition>
+    </CustomAction>
+    </CustomActions>
     <Templates>
-     <RibbonTemplates Id="Mscrm.Templates" />
+    <RibbonTemplates Id="Mscrm.Templates" />
     </Templates>
-    <CommandDefinitions>
-    <CommandDefinition Id="Mscrm.OpenRecordItem">
-      <EnableRules />
-      <DisplayRules />
-      <Actions>
-        <JavaScriptFunction FunctionName="sampleoperations" Library="$webresource:cr5c1_samplescript" />
-      </Actions>
-      </CommandDefinition>
-       </CommandDefinitions>
+     <CommandDefinitions>
+        <CommandDefinition Id="Mscrm.OpenRecordItem">
+        <EnableRules />
+        <DisplayRules />
+        <Actions>
+            <JavaScriptFunction FunctionName="sampleoperations" Library="$webresource:cr5c1_samplescript" />
+        </Actions>
+       </CommandDefinition>
+    </CommandDefinitions>
      ```
 
-### Step 3: Import the XML file
-
+## Step 3: Import the XML file
 
 1. After you have edited the customization.xml file, right-click the customization.xml tab and select **Open Containing Folder**.  
 2. Select all of the files or folders that were included when you extracted the solution. Right-click the selected files, select **Send To**, and then select **Compressed (zipped) folder**.  
@@ -142,38 +139,6 @@ You need to create a custom button on the entity form where you want to change t
 9. After the import has finished, you will see the message indicating that the import completed successfully. Select Close.  
   
 10. After you have successfully imported your solution, you must publish customizations before you can see the changes. In the Solutions list, select **Publish All Customizations**.  
-
- 
-## Using Ribbon Workbench
-
-Ribbon Workbench tool allows developers to quickly create custom buttons on forms. Before you create a custom button to override the default open behavior, create a web resource as mentioned above to perform the custom action instead of the default open behavior. To create a custom button:
-
-1. Create a new solution and add the entity where you want to create the button.
-
-2. Add the web resource that we created earlier in the article.
-
-3. Save and publish the solution.
-
-4. Open the Ribbon workbench tool and sign in to the environment where you want to create the button.
-
-5. Select **Open Solution** and select the solution from the list of available solutions.
-
-6. Drag and drop the **Button** from the **ToolBox** tab and place it on the subgrid section.
-
-   > [!div class="mx-imgBorder"]
-   > ![ToolBox](media/toolbox-rwb.png "ToolBox")
-
-7. Select **+** next to **Commands** and enter the details as shown below:
-
-    > [!div class="mx-imgBorder"]
-    > ![Command Window](media/command-windows.png "Command Window")
-
-8. Similarly, select **+** next to **Button** and enter the details as shown below:
-
-    > [!div class="mx-imgBorder"]
-    > ![Button Window](media/button-properties-window.png "Button Window")
-
-9. Select **Publish** to push the changes.
 
 ## See also
 
