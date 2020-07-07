@@ -91,36 +91,32 @@ You need to create a custom button on the entity form where you want to change t
 
 11. The customizations.xml file is the file that you will edit.
 
-> [!NOTE]
-> You can enable or disable the button, doing either of the ones will still override the open default behavior.
+    > [!NOTE]
+    > You can enable or disable the button, doing either of the ones will still override the open default behavior.
 
-#### Edit the XML file
+12. Open the customization.xml file and copy-paste the code shown below:
 
-Open the customization.xml file and copy-paste the code shown below:
-
-```XML
-<CustomActions>
+     ```XML
+    <CustomActions>
     <CustomAction Id="Mscrm.OpenRecordItem.CustomAction" Location="Mscrm.SubGrid.account.MainTab.Management.Controls._children" Sequence="28">
       <CommandUIDefinition>
         <Button Alt="$LocLabels:Mscrm.OpenRecordItem.Alt" Command="Mscrm.OpenRecordItem" Id="Mscrm.OpenRecordItem" LabelText="$LocLabels:Mscrm.OpenRecordItem.LabelText" Sequence="28" TemplateAlias="o1" ToolTipTitle="$LocLabels:Mscrm.OpenRecordItem.ToolTipTitle" ToolTipDescription="$LocLabels:Mscrm.OpenRecordItem.ToolTipDescription" />
       </CommandUIDefinition>
-    </CustomAction>
-  </CustomActions>
-  <Templates>
-    <RibbonTemplates Id="Mscrm.Templates" />
-  </Templates>
-  <CommandDefinitions>
+      </CustomAction>
+     </CustomActions>
+    <Templates>
+     <RibbonTemplates Id="Mscrm.Templates" />
+    </Templates>
+    <CommandDefinitions>
     <CommandDefinition Id="Mscrm.OpenRecordItem">
       <EnableRules />
       <DisplayRules />
       <Actions>
         <JavaScriptFunction FunctionName="sampleoperations" Library="$webresource:cr5c1_samplescript" />
       </Actions>
-    </CommandDefinition>
-  </CommandDefinitions>
-
-
-```
+      </CommandDefinition>
+       </CommandDefinitions>
+     ```
 
 ### Step 3: Import the XML file
 
@@ -164,9 +160,22 @@ Ribbon Workbench tool allows developers to quickly create custom buttons on form
 
 6. Drag and drop the **Button** from the **ToolBox** tab and place it on the subgrid section.
 
-7. Select **+** next to **Commands** and enter the details as shown in the screenshot below:
+   > [!div class="mx-imgBorder"]
+   > ![ToolBox](media/toolbox-rwb.png "ToolBox")
 
-8. Similarly, select **+** next to **Button** and enter the details as shown in the screenshot below:
+7. Select **+** next to **Commands** and enter the details as shown below:
+
+    > [!div class="mx-imgBorder"]
+    > ![Command Window](media/command-windows.png "Command Window")
+
+8. Similarly, select **+** next to **Button** and enter the details as shown below:
+
+    > [!div class="mx-imgBorder"]
+    > ![Button Window](media/toolbox-rwb.png "Button Window")
 
 9. Select **Publish** to push the changes.
 
+## See also
+
+[Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx)
+[Customize the ribbon](customize-commands-ribbon.md)
