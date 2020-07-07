@@ -41,14 +41,14 @@ Model-driven apps and canvas apps (public preview)
 |[type](type.md)|[!INCLUDE [type-description](includes/type-description.md)]|1 or more|
 
 
-Type-group has a limited support for canvas apps in this experimental preview . The following issues occur when you try to import components:
+The `type-group` has a limited support for canvas apps in this experimental preview . The following issues occur when you try to import components into Common Data Service:
 
-1. If all types listed in the type group are of compatible javascript types, the developer attempt to choose the most generic option listed. The types that are considered compatible are :
-   - Strings: SingleLine.Text, Multiple, SingleLine.TextArea, SingleLine.Email, SingleLine.Phone, SingleLine.URL, SingleLine.Ticker.
-   - Numbers: Decimal, Floating Point, Whole.None, Currency.
-   - Dates: DateAndTime.DateAndTime, DateAndTime.DateOnly.
+1. All the types listed in the in the type-group are of compatible in canvas apps. The types that are compatible are:
+   - **Strings**: SingleLine.Text, Multiple, SingleLine.TextArea, SingleLine.Email, SingleLine.Phone, SingleLine.URL, SingleLine.Ticker.
+   - **Numbers**: Decimal, Floating Point, Whole.None, Currency.
+   - **Dates**: DateAndTime.DateAndTime, DateAndTime.DateOnly.
 
-2. If the types listed in the group are not considered compatible, then the parameter will be treated as the first type listed in the type-group.
+2. If the types listed in the `type-group` are mix of compatible and non compatible types, then the first compatible type listed in the `type-group` is considered.
 
 ### Example
 

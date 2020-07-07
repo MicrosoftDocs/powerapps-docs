@@ -300,48 +300,41 @@
     href: customize-labels-support-multiple-languages.md
   - name: Best Practices
     href: best-practices/work-with-metadata/index.md
-- name: Package and distribute extensions using solutions
+- name: Introduction to solutions
+  href: introduction-solutions.md
   items:
-  - name: Introduction to solutions
-    href: introduction-solutions.md
+  - name: Dependency tracking for solution components
+    href: dependency-tracking-solution-components.md
+  - name: Removing dependencies
+    href: removing-dependencies.md
+  - name: Maintain managed solutions
+    href: maintain-managed-solutions.md
+  - name: Organize your solutions
+    href: organize-solutions.md
+  - name: Organize your team to develop solutions
+    href: organize-team-develop-solutions.md
+  - name: Use managed properties
+    href: use-managed-properties.md
+  - name: Understand how managed solutions are merged
+    href: understand-managed-solutions-merged.md
+  - name: Create solutions that support multiple languages
+    href: create-solutions-support-multiple-languages.md
+  - name: How to manage solutions
     items:
-    - name: Dependency tracking for solution components
-      href: dependency-tracking-solution-components.md
-    - name: Removing dependencies
-      href: removing-dependencies.md
-    - name: Maintain managed solutions
-      href: maintain-managed-solutions.md
-    - name: Organize your solutions
-      href: organize-solutions.md
-    - name: Organize your team to develop solutions
-      href: organize-team-develop-solutions.md
-    - name: Use managed properties
-      href: use-managed-properties.md
-    - name: Understand how managed solutions are merged
-      href: understand-managed-solutions-merged.md
-    - name: Create solutions that support multiple languages
-      href: create-solutions-support-multiple-languages.md
-    - name: How to manage solutions
-      items:
-      - name: Create, export, or import an unmanaged solution
-        href: create-export-import-unmanaged-solution.md
-      - name: Uninstall or delete a solution
-        href: uninstall-delete-solution.md
-      - name: Work with solutions
-        href: work-solutions.md
-      - name: Create, install, and update a managed solution
-        href: create-install-update-managed-solution.md
-      - name: Create patches to simplify solution updates
-        href: create-patches-simplify-solution-updates.md
-      - name: When to edit the customizations file
-        href: when-edit-customization-file.md
-  - name: SolutionPackager tool
-    href: compress-extract-solution-file-solutionpackager.md
-    items:
-    - name: Source control with solution files
-      href: use-source-control-solution-files.md       
-  - name: Package Deployer tool
-    href: package-deployer/create-packages-package-deployer.md
+    - name: Create, export, or import an unmanaged solution
+      href: create-export-import-unmanaged-solution.md
+    - name: Uninstall or delete a solution
+      href: uninstall-delete-solution.md
+    - name: Work with solutions
+      href: work-solutions.md
+    - name: Create, install, and update a managed solution
+      href: create-install-update-managed-solution.md
+    - name: Create patches to simplify solution updates
+      href: create-patches-simplify-solution-updates.md
+    - name: When to edit the customizations file
+      href: when-edit-customization-file.md
+- name: Publish and monitor your (ISV) app
+  items:
   - name: Publish your app on AppSource
     href: publish-app-appsource.md
     items:

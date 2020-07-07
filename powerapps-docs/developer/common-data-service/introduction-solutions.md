@@ -147,7 +147,7 @@ Use the *Package Deployer* to create a custom installer for a package that can i
 - Custom code that can run before, while, or after the package is deployed.
 - HTML content specific to the package that can display at the beginning and end of the deployment process. This can be useful to provide a description of the solutions and files that are deployed in the package.
 
-More information: [Create packages for the Common Data Service Package Deployer](package-deployer/create-packages-package-deployer.md).
+More information: [Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool).
 
 ## Team development of solutions
 
