@@ -53,11 +53,11 @@ Dashboards are available for all record types.
  
  5. On the **Add Componet** dialog box, select your options. 
  
- |  |  |
-| --- | --- |
-| **Record Type** |Select a record.  |
-| **View** |Select a view for the record.  |
-| **Chart** |Select the type of chart that you want use. |
+  |  |  |
+  | --- | --- |
+  | **Record Type** |Select a record.  |
+  | **View** |Select a view for the record.  |
+  | **Chart** |Select the type of chart that you want use. |
 
 
    > [!div class="mx-imgBorder"]
