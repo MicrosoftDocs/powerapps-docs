@@ -101,7 +101,7 @@ To edit the chart properties, you need to be edit the dashboard that the chart i
 
 	- **Off**: Do not show view selector, show the view title only.
 	- **Show All Views**: Show the view selector on chart and display all views in the view selector.
-  - **Show Selected Views**: Show the view selector on chart and display only the selected views in the view selector.
+        - **Show Selected Views**: Show the view selector on chart and display only the selected views in the view selector.
 
   > [!div class="mx-imgBorder"]
   > ![Edit view selector](media/edit_view_selector.png "Edit view selector")
