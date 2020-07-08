@@ -96,7 +96,7 @@ Legend:
 
 ## Edit the properties of a chart
 
-When you add a chart on a dashboard you can edit the chart properites and modify the chart view and dispaly options. 
+When you add a chart on a dashboard you can edit the chart properties and modify the chart view and dispaly options. The screenshot below shows how a chart will display based on the chart properties that you selected.
 
    > [!div class="mx-imgBorder"]
    > ![Select views](media/all_chart_views.png "Select views")
@@ -104,7 +104,7 @@ When you add a chart on a dashboard you can edit the chart properites and modify
 Legend:
 
  1. View title with **View Selector** turned off. You cannont toggle between differt views. You only see the title.
- 2. Chart title with **Display Chart Selection** turned off. You cannot toggle between differnt charts for the entity. You only see the title.
+ 2. Chart title with **Display Chart Selection** turned off. You cannot toggle between different charts for the entity. You only see the title.
  3. Only **View Selector** is turned. You can toggle to a different views and the chart will render based on the underline data for the selected view.
  4. Both **View Selector** and **Display Chart Selection** is turned. You can toggle a different views and chart for the entity
 
@@ -132,13 +132,18 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
    > [!div class="mx-imgBorder"]
    > ![Edit view selector](media/edit_view_selector.png "Edit view selector")
 
-4. Once **View Selector** is turned on, you can select different view, to see how the chart renders with different data associated with the view.
+4. Once **View Selector** is turned on, you can select different views, to see how the chart renders with different data associated with the view.
 
    > [!div class="mx-imgBorder"]
    > ![Select views](media/charts_select_views.png "Select views")
 
 
 5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity, to see a different visualization of the data. If the box is unchecked then you only see the chart title.
+
+   > [!div class="mx-imgBorder"]
+   > ![Display chart selection](media/charts_options_1.png "Display chart selection")
+
+6. When you're done, select **OK**.
 
 
 ## Drill down in a chart
