@@ -127,33 +127,19 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity, to see a different visualization of the data. If the box is unchecked then you only see the chart title.
 
 
-## Expand Chart
-
-To expand a chart, select **Expand Chart**  ![Expand chart view](media/expandviewbutton.png "Expand chart view") button.
+## Expand, refresh, and view records
 
 
+![Expand chart view](media/chart_more_buttons.png "Expand chart view") button.
 
 
+Legend:
 
+1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
+2. **Refresh**: Refreshes the records in the chart.
+3. **View Records**: To view the chart and the underlying records together.The chart navigate to the entity's grid home page, with the corresponding view and chart. 
+4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
-
--   Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.
--   Click on the area of a chart to see a grid view with more details about the data in the chart.
--   To expand a chart, select the **Expand Chart**  ![Expand chart view](media/expandviewbutton.png "Expand chart view") button.
--   To view records in the chart or refresh the chart, select ![More commands](media/MoreButton.png "More commands") and then choose an  action: **Refresh** or **View Records**.
-     
-     > [!div class="mx-imgBorder"]
-     > ![View of charts in Power Apps](media/ViewOfCharts.png "View of charts in Power Apps")  
-       
-
-**Change the chart view**
- 
-Changing the chart view shows you a different breakdown of your data, such as opportunities opened within a specific time period. You can change a chart view by selecting the View selector on the Grid page.
-
-For example, choose "All Opportunities," then select a different view, and both chart and grid will get refreshed.
-
-> [!div class="mx-imgBorder"]
-> ![Change a chart view in Power Apps](media/ChangeChartView.png "Change a chart view in Power Apps")
 
 ## Known issues  
 In the chart designer, adding a order by on certain calculated fields are not supported and will cause an error.  The calculated fields causing this are using another calculated fields, a related entity field, or a local field on the entity.
