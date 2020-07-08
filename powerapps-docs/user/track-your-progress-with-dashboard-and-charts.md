@@ -22,7 +22,7 @@ search.app:
 
 A dashboard is made up of a collection of easy-to-read charts and graphs that provide visual representation of filtered app data. The interactive charts and graphs on a dashboard displays important data that gives you a 360 degree view of your business and helps you to understand key performance indicators (KPI).
 
-Dashboards are available for all record types. 
+Dashboards are available for all record types. Charts are aviable on the Dashboard page, Grid page, Associated Home page, and on Edit Form page. 
 
 > [!div class="mx-imgBorder"]
 > ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
@@ -85,7 +85,7 @@ Dashboards are available for all record types.
 When you add a chart on a dashboard you can edit the chart properites and modify the chart view and dispaly options. 
 
    > [!div class="mx-imgBorder"]
-   > ![Select views](media/charts_select_views.png "Select views")
+   > ![Select views](media/all_chart_views.png "Select views")
 
 Legend:
 
@@ -95,12 +95,11 @@ Legend:
  4. Both **View Selector** and **Display Chart Selection** is turned. You can toggle a different views and chart for the entity
 
 
-
-
 To edit the chart properties, you need to edit the dashboard that the chart is in. If you're in the process of of adding a new chart on a dashboard, then you're aleady in edit mode and can skip to step 2.
 
 
 1. Go to the dashboard that the chart is in and on the command bar, select **Edit**.
+
 
    > [!div class="mx-imgBorder"]
    > ![Edit dashboard](media/edit_dashboard_prop.png "Edit your dashboard")
@@ -128,62 +127,9 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity, to see a different visualization of the data. If the box is unchecked then you only see the chart title.
 
 
+## Expand Chart
 
-
-
-
-
-### Charts on dashboard page
-
-When you add a chart on a dashboard page, you can configure view selector and view title or chart selector and chart title.
-
-Charts provide you with a quick view of how you’re tracking to your goals. You can select different areas of a chart to get more info. Charts are aviable on the dashboard page, grid page, associated home page, and on edit form page. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+To expand a chart, select **Expand Chart**  ![Expand chart view](media/expandviewbutton.png "Expand chart view") button.
 
 
 
