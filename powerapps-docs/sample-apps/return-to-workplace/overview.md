@@ -19,7 +19,7 @@ The main components of the Return to the Workplace solution:
 
 - **Facility manager app** used to develop and execute on reopening plans.
 
-- **Employee app** to empower employees to use self-service tools for returning confidently to the reopened workplace and work safely. Employees can use the app to identify open buildings and self-attest to no symptoms before returning to a reopened workplace.
+- **Employee return to workplace app** to empower employees to use self-service tools for returning confidently to the reopened workplace and work safely. Employees can use the app to identify open buildings and self-attest to no symptoms before returning to a reopened workplace.
 
 - **Case management app** used to manage cases for employees under investigation.
 
