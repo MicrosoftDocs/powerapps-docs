@@ -42,7 +42,7 @@ Legend:
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
-## Create a dashbaord and add charts
+## Create a dashboards with charts
 
 1. On the left nav under **My Work** select **Dashboards** and then on the command bar select **New** > **Dynamics 365 Dashboard**. 
 
@@ -94,7 +94,7 @@ Legend:
    > ![View your dashboards](media/my_dashboards.png "View your dashboards")
 
 
-## Edit chart properties
+## Edit the properties of a chart
 
 When you add a chart on a dashboard you can edit the chart properites and modify the chart view and dispaly options. 
 
@@ -129,8 +129,8 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 	- **Show All Views**: Show the view selector on chart and display all views in the view selector.
 	- **Show Selected Views**: Show the view selector on chart and display only the selected views in the view selector.
  
-  > [!div class="mx-imgBorder"]
-  > ![Edit view selector](media/edit_view_selector.png "Edit view selector")
+   > [!div class="mx-imgBorder"]
+   > ![Edit view selector](media/edit_view_selector.png "Edit view selector")
 
 4. Once **View Selector** is turned on, you can select different view, to see how the chart renders with different data associated with the view.
 
@@ -141,8 +141,38 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity, to see a different visualization of the data. If the box is unchecked then you only see the chart title.
 
 
-## Drilldown in a chart
+## Drill down in a chart
 
+You can drill down into a segment on a chart to filter chart data for that segment. For example, you can drill down on one segment of a sales pipeline chart. You can also change the chart type as you drill down.
+
+The chart drilldown feature is only available on browser. It is not available on a mobile phone or tablet.
+
+In the example below, let's further drill down into the chart and see only the opportunities in the Develop stage by the Account name.
+
+1. Select a data point on the chart to bring the **Drill down by** dialog box.
+
+   > [!div class="mx-imgBorder"]
+   > ![Drill down box](media/chart_drilldown.png "Drill down on a chart box")
+
+2. Select the drop down menu and choose how to want to group the data.
+
+   > [!div class="mx-imgBorder"]
+   > ![Drill down box](media/chart_drilldown_1.png "Drill down on a chart box")
+   
+3. Select the type of chart that you want to see the drill down data.
+
+   > [!div class="mx-imgBorder"]
+   > ![Drill down box](media/chart_drilldown_2.png "Drill down on a chart box")
+
+4. The drilldowned chart will show up, together with a breadcrumb on top of the chart showing the filter criteria of the drilldown. You can select a breadcrumb to go back to the Home or previous screen.
+
+   > [!div class="mx-imgBorder"]
+   > ![Drill down box](media/chart_drilldown_3.png "Drill down on a chart box")
+
+
+You can further drill down into the chart data. As you drill down, the breadcrumb will let you keep going back to the previous screen or Home.
+
+ ![Drill down further](media/chart_drilldown_4.png "Drill down further")
 
 ## Known issues  
 In the chart designer, adding a order by on certain calculated fields are not supported and will cause an error.  The calculated fields causing this are using another calculated fields, a related entity field, or a local field on the entity.
