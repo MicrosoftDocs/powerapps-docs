@@ -141,7 +141,7 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity, to see a different visualization of the data. If the box is unchecked then you only see the chart title.
 
    > [!div class="mx-imgBorder"]
-   > ![Display chart selection](media/charts_options_1.png "Display chart selection")
+   > ![Display chart selection](media/chart_options_1.png "Display chart selection")
 
 6. When you're done, select **OK**.
 
