@@ -169,13 +169,13 @@ In the example below, let's further drill down into the chart and see only the o
    > [!div class="mx-imgBorder"]
    > ![Drill down box](media/chart_drilldown_2.png "Drill down on a chart box")
 
-4. The drilldowned chart will show up, together with a breadcrumb on top of the chart showing the filter criteria of the drilldown. You can select a breadcrumb to go back to the Home or previous screen.
+4. The drilldowned chart will show up, with the breadcrumb at the top showing the filter criteria of the drilldown. You can select the breadcrumb to go back Home or previous screen.
 
    > [!div class="mx-imgBorder"]
    > ![Drill down box](media/chart_drilldown_3.png "Drill down on a chart box")
 
 
-You can continue drilling further into the chart data. As you drill down deeper, the breadcrumb will expand and you can go back to the previous screen or select the Home button to go back to the home screen.
+You can continue drilling further into the chart data. As you drill down deeper, the breadcrumb will expand and you can go back to the previous screen or select the Home button to go back to the Home screen.
 
    ![Drill down further](media/chart_drilldown_4.png "Drill down further")
 
