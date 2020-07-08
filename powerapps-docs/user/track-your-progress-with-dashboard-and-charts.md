@@ -148,9 +148,9 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 
 ## Drill down in a chart
 
-You can drill down into a segment on a chart to filter chart data for that segment. For example, you can drill down on one segment of a sales pipeline chart. You can also change the chart type as you drill down.
+You can drill down into a segment on a chart and filter the data for that segment. For example, you can drill down on one segment of a sales pipeline chart. You can also change the chart type as you drill down.
 
-The chart drilldown feature is only available on browser. It is not available on a mobile phone or tablet.
+The chart drilldown feature is only available on the browser. It is not available on the mobile app for phones or tablets.
 
 In the example below, let's further drill down into the chart and see only the opportunities in the Develop stage by the Account name.
 
