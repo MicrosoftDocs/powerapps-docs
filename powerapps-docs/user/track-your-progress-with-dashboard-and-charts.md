@@ -31,7 +31,7 @@ Dashboards are available for all record types. Charts are aviable on the Dashboa
 ## Expand, refresh, and view records
 
 
-![Expand chart view](media/chart_more_buttons.png "Expand chart view") button.
+![Expand chart view](media/chart_more_buttons.png "Expand chart view")
 
 
 Legend:
