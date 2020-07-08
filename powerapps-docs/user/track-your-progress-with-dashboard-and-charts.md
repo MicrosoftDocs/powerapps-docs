@@ -170,7 +170,7 @@ In the example below, let's further drill down into the chart and see only the o
    > ![Drill down box](media/chart_drilldown_3.png "Drill down on a chart box")
 
 
-You can continue drilling further into the chart data. As you drill down deeper, the breadcrumb will expand and you can go back select the Home button or drill down chart name to go to the previous screen.
+You can continue drilling further into the chart data. As you drill down deeper, the breadcrumb will expand and you can go back to the previous screen or select the Home button to go back to the home screen.
 
    ![Drill down further](media/chart_drilldown_4.png "Drill down further")
 
