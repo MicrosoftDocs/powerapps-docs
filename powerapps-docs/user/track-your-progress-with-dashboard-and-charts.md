@@ -84,7 +84,20 @@ Dashboards are available for all record types.
 
 When you add a chart on a dashboard you can edit the chart properites and modify the chart view and dispaly options. 
 
-To edit the chart properties, you need to be edit the dashboard that the chart is in. If you're in the process of of adding a new chart on a dashboard, then you're aleady in edit mode and can skip to step 2.
+   > [!div class="mx-imgBorder"]
+   > ![Select views](media/charts_select_views.png "Select views")
+
+Legend:
+
+ 1. View title with **View Selector** turned off. You cannont toggle between differt views. You only see the title.
+ 2. Chart title with **Display Chart Selection** turned off. You cannot toggle between differnt charts for the entity. You only see the title.
+ 3. Only **View Selector** is turned. You can toggle to a different views and the chart will render based on the underline data for the selected view.
+ 4. Both **View Selector** and **Display Chart Selection** is turned. You can toggle a different views and chart for the entity
+
+
+
+
+To edit the chart properties, you need to edit the dashboard that the chart is in. If you're in the process of of adding a new chart on a dashboard, then you're aleady in edit mode and can skip to step 2.
 
 
 1. Go to the dashboard that the chart is in and on the command bar, select **Edit**.
@@ -112,9 +125,7 @@ To edit the chart properties, you need to be edit the dashboard that the chart i
    > ![Select views](media/charts_select_views.png "Select views")
 
 
-
-5. Select the **Display Chart Selection**  check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity, to see a different visualization of the data. If the box is unchecked then you only see the chart title.
-
+5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity, to see a different visualization of the data. If the box is unchecked then you only see the chart title.
 
 
 
