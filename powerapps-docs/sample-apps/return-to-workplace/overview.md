@@ -11,7 +11,7 @@ ms.reviewer: kvivek
 ---
 # Return to the Workplace solution
 
-The Return to the Workplace solution enables organizations to repoen workplaces responsibly and empower their employees to return to the workplace confidently by providing a healthy and safe workplace as per the governmental COVID-19 guidelines to ensure their care and wellbeing.
+The Return to the Workplace solution enables organizations to reopen workplaces responsibly and empower their employees to return to the workplace confidently by providing a healthy and safe workplace as per the governmental COVID-19 guidelines to ensure their wellbeing.
 
 The main components of the Return to the Workplace solution:
 
@@ -19,7 +19,7 @@ The main components of the Return to the Workplace solution:
 
 - **Facility manager app** used to develop and execute on reopening plans.
 
-- **Employee app** used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms before returning to a reopened workplace.
+- **Employee app** to empower employees to use self-service tools for returning confidently to the reopened workplace and work safely. Employees can use the app to identify open buildings and self-attest to no symptoms before returning to a reopened workplace.
 
 - **Case management app** used to manage cases for employees under investigation.
 
