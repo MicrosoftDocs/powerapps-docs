@@ -19,7 +19,7 @@ Liquid objects can return one of seven basic types: **String**, **Number**, **Bo
 A String is declared by wrapping text in single or double quotes.
 
 ```
-{% assign string_a = Hello World! %}
+{% assign string_a = "Hello World!" %}
 
 {% assign string_b = 'Single quotes work too.' %}
 ```

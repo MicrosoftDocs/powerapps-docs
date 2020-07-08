@@ -24,7 +24,7 @@ aiming for basic compatibility or redesigning to take full advantage of new
 capabilities. For more detailed information, see the [Unified Interface playbook](https://docs.microsoft.com/powerapps/maker/model-driven-apps/unified-interface-playbook)
 and [user experience white paper](https://docs.microsoft.com/powerapps/maker/model-driven-apps/approaching-unified-interface).
 
-The instructions apply to the following model-driven apps in Dynamics 365:
+The instructions apply to the following Dynamics 365 apps:
 
 - Dynamics 365 Sales
 

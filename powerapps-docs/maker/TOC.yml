@@ -925,7 +925,7 @@
           href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
         - name: How to use drop down list with choices from lookup column in a SharePoint list?
           href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: How to customize an app screen baed on column status inside SharePoint list?
+        - name: How to customize an app screen based on column status inside SharePoint list?
           href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
         - name: How to work with permissions in a lookup list from SharePoint site?
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
@@ -1225,6 +1225,8 @@
       href: ./portals/overview.md
     - name: Release updates
       href: ./portals/release-updates.md
+    - name: "Microsoft Learn: Get started with Power Apps portals"
+      href: https://docs.microsoft.com/learn/modules/intro-portals/
     - name: Design and build a portal
       items:
         - name: Portal templates
@@ -1484,7 +1486,7 @@
   - name: Why choose Common Data Service? 
     items:
     - name: Overview
-      href: ./common-data-service/why-cds-overview.md  
+      href: ./common-data-service/why-cds-overview.md
     - name: Work with any data
       href: ./common-data-service/why-cds-work-with-data.md
     - name: Importing and exporting data
