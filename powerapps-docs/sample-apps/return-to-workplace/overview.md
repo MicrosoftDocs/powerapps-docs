@@ -11,7 +11,7 @@ ms.reviewer: kvivek
 ---
 # Return to the Workplace solution
 
-The Return to the Workplace solution enables organizations to return to the workplace with confidence by repoening workplaces responsibly, monitoring intelligently, and protecting employees continuously by providing them a healthy and safe workplace as per the governmental COVID-19 mandates and guidelines.
+The Return to the Workplace solution enables organizations to repoen workplaces responsibly and empower their employees to return to the workplace confidently by providing a healthy and safe workplace as per the governmental COVID-19 guidelines to ensure their care and wellbeing.
 
 The main components of the Return to the Workplace solution:
 
