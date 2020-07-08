@@ -22,7 +22,7 @@ search.app:
 
 A dashboard is made up of a collection of easy-to-read charts and graphs that provide visual representation of filtered app data. The interactive charts and graphs on a dashboard displays important data that gives you a 360 degree view of your business and helps you to understand key performance indicators (KPI).
 
-Dashboards are available for all record types. Charts are aviable on the Dashboard page, Grid page, Associated Home page, and on Edit Form page. 
+Dashboards are available for all record types. Charts are available on the Dashboard page, Grid page, Associated Home page, and on Edit Form page. 
 
 > [!div class="mx-imgBorder"]
 > ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
