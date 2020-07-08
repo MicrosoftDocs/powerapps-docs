@@ -38,7 +38,7 @@ Legend:
 
 1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
 2. **Refresh**: Refreshes the records in the chart.
-3. **View Records**: To view the chart and the underlying records together.The chart navigate to the entity's grid home page, with the corresponding view and chart. 
+3. **View Records**: See the chart and the underlying records together. This opens the chart and the corresponding records.
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
