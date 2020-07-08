@@ -28,6 +28,20 @@ Dashboards are available for all record types. Charts are aviable on the Dashboa
 > ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
 
 
+## Expand, refresh, and view records
+
+
+![Expand chart view](media/chart_more_buttons.png "Expand chart view") button.
+
+
+Legend:
+
+1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
+2. **Refresh**: Refreshes the records in the chart.
+3. **View Records**: To view the chart and the underlying records together.The chart navigate to the entity's grid home page, with the corresponding view and chart. 
+4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
+
+
 ## Create a dashbaord and add charts
 
 1. On the left nav under **My Work** select **Dashboards** and then on the command bar select **New** > **Dynamics 365 Dashboard**. 
@@ -127,18 +141,7 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity, to see a different visualization of the data. If the box is unchecked then you only see the chart title.
 
 
-## Expand, refresh, and view records
 
-
-![Expand chart view](media/chart_more_buttons.png "Expand chart view") button.
-
-
-Legend:
-
-1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
-2. **Refresh**: Refreshes the records in the chart.
-3. **View Records**: To view the chart and the underlying records together.The chart navigate to the entity's grid home page, with the corresponding view and chart. 
-4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
 ## Known issues  
