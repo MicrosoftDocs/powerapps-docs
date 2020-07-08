@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/09/2020
+ms.date: 07/06/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -70,3 +70,7 @@ The table below summarizes the features associated with each portal template:
 | Web Forms|  *| *|    *| *| *|* |*
 | Feedback|   *|  *|  *| *| *|* |*
 ||
+
+### See also
+
+[Microsoft Learn: Explore Power Apps portals](https://docs.microsoft.com/learn/modules/explore-portals)
