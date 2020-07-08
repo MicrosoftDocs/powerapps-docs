@@ -196,6 +196,132 @@ Xrm.WebApi.online.execute(whoAmIRequest).then(
 );
 ```
 
+The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.CalculateRollupFieldRequest> function:
+
+```JavaScript
+var Sdk = window.Sdk || {};
+	 
+Sdk.CalculateRollupFieldRequest = function (target, fieldName) {
+    this.Target = target;
+    this.FieldName = fieldName;
+};
+	 
+Sdk.CalculateRollupFieldRequest.prototype.getMetadata = function () {
+    return {
+                    boundParameter: null,
+                    parameterTypes: {
+                        "Target": {
+                            "typeName": "mscrm.crmbaseentity",
+                            "structuralProperty": 5
+                        },
+                        "FieldName": {
+                            "typeName": "Edm.String",
+                            "structuralProperty": 1
+                        }
+                    },
+                    operationType: 1,
+                    operationName: "CalculateRollupField"
+                };
+};
+ 
+function myTestFunction() {
+	 
+    //create variables to point to a quote record and to a specific field
+    var quoteId = {
+        "@odata.type": "Microsoft.Dynamics.CRM.quote",
+        "quoteid": "7bb01e55-2394-ea11-a811-000d3ad97943"
+    };
+    var fieldName = "new_test_rollup";
+	   
+    //create variable calculateRollupFieldRequest and pass those variables created above
+    var calculateRollupFieldRequest = new Sdk.CalculateRollupFieldRequest(quoteId, fieldName);
+	   
+    // Use the request object to execute the function
+    Xrm.WebApi.online.execute(calculateRollupFieldRequest).then(
+        function (result) {
+        if (result.ok) {
+            result.json().then(
+                function (response) {
+                console.log("The response is: %s", response);
+            });
+        }
+    },
+        function (error) {
+        console.log(error.message);
+        // handle error conditions
+    });
+}
+```
+
+The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicatesRequest> function:
+
+```JavaScript
+var Sdk = window.Sdk || {};
+ 
+Sdk.RetrieveDuplicatesRequest = function (businessEntity, matchingEntityName, pagingInfo) {
+    this.BusinessEntity = businessEntity;
+    this.MatchingEntityName = matchingEntityName;
+    this.PagingInfo = pagingInfo;
+ 
+};
+ 
+Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function () {
+    return {
+        boundParameter: null,
+        parameterTypes: {
+            "BusinessEntity": {
+                "typeName": "mscrm.crmbaseentity",
+                "structuralProperty": 5 // Entity Type
+            },
+            "MatchingEntityName": {
+                "typeName": "Edm.String",
+                "structuralProperty": 1 // Primitive Type
+            },
+            "PagingInfo": {
+                "typeName:": "mscrm.PagingInfo",
+                "structuralProperty": 5
+            }
+        },
+        operationType: 1, // This is an action. Use '1' for functions and '2' for CRUD
+        operationName: "RetrieveDuplicates",
+    };
+};
+ 
+function myTestFunction() {
+ 
+    var contactRecord = {
+        "@odata.type": "Microsoft.Dynamics.CRM.contact",
+        "firstname": "Test",
+        "lastname": "Acc"
+    };
+ 
+    var pagingInfo = {
+        "PageNumber": 1,
+        "Count": 10
+    };
+ 
+    // Construct a request object from the metadata
+    var retrieveDuplicatesRequest = new Sdk.RetrieveDuplicatesRequest(contactRecord, "contact", pagingInfo);
+ 
+    // Use the request object to execute the function
+    Xrm.WebApi.online.execute(retrieveDuplicatesRequest).then(
+        function (result) {
+        if (result.ok) {
+            result.json().then(
+                function (response) {
+                console.log("The response is: %s", response);
+            });
+        }
+    },
+        function (error) {
+        console.log(error.message);
+        // handle error conditions
+    });
+ 
+}
+
+```
+
 ### Perform CRUD operations
 
 #### Create a record
