@@ -11,11 +11,11 @@ ms.reviewer: kvivek
 ---
 # Return to the Workplace solution
 
-The Return to the Workplace solution provides a set of capabilities for organizations to set up and manage plans to get their employees to return to their workplace while aligning with governmental COVID-19 mandates and guidelines. This solution is focused on enabling organizations to open their offices and providing employees with a healthy and safe workplace.
+The Return to the Workplace solution enables organizations to return to the workplace with confidence by repoening workplaces responsibly, monitoring intelligently, and protecting employees continuously by providing them a healthy and safe workplace as per the governmental COVID-19 mandates and guidelines.
 
 The main components of the Return to the Workplace solution:
 
-- **Dashboard for executive leadership** to review the current data related to all of their workplaces as it relates to COVID-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations and respective phase rules or guidelines set for them by government agencies.
+- **Dashboard for location readiness** to review and determine readiness of their workplaces for COVID-19 conditions and efficiently manage their safe reopening. These dashboards allow facility managers and task force leaders to make informed decision by comparing selected measures and metrics associated with established goals or targets for facilities in their locations and respective COVID guidelines set by government agencies.
 
 - **Facility manager app** used to develop and execute on reopening plans.
 
