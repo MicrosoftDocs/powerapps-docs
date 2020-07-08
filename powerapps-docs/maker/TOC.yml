@@ -1481,15 +1481,15 @@
   items:
   - name: What is Common Data Service?
     href: ./common-data-service/data-platform-intro.md
-  - name: Why choose Common Data Service? 	
-    items:	
-    - name: Overview	
-      href: ./common-data-service/why-cds-overview.md  	
-    - name: Work with any data	
-      href: ./common-data-service/why-cds-work-with-data.md	
-    - name: Importing and exporting data	
-      href: ./common-data-service/why-cds-import-export.md	
-    - name: Work with any app	
+  - name: Why choose Common Data Service? 
+    items:
+    - name: Overview
+      href: ./common-data-service/why-cds-overview.md  
+    - name: Work with any data
+      href: ./common-data-service/why-cds-work-with-data.md
+    - name: Importing and exporting data
+      href: ./common-data-service/why-cds-import-export.md
+    - name: Work with any app
       href: ./common-data-service/why-cds-any-type-app.md
   - name: Work with entities
     items:
