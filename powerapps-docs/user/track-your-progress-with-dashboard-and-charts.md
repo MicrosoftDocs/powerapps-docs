@@ -20,7 +20,7 @@ search.app:
 ---
 # Track your progress with dashboards and charts
 
-A dashboard is made up of a collection of easy-to-read charts and graphs that provide visual representation of filtered app data. The interactive charts and graphs on a dashboard displays important data that gives you a 360 degree view of your business and helps you to understand key performance indicators (KPI).
+A dashboard is made up of a collection of easy-to-read charts and graphs that provide visual representation of filtered app data. The interactive charts and graphs on a dashboard display important data that gives you a 360 degree view of your business and helps you to understand key performance indicators (KPI).
 
 Dashboards are available for all record types. Charts are available on the Dashboard page, Grid page, Associated Home page, and on Edit Form page. 
 
@@ -42,7 +42,7 @@ Legend:
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
-## Create a dashboards with charts
+## Create a dashboard with charts
 
 1. On the left nav under **My Work** select **Dashboards** and then on the command bar select **New** > **Dynamics 365 Dashboard**. 
 
@@ -65,7 +65,7 @@ Legend:
    > [!div class="mx-imgBorder"]
    > ![Add a chart](media/insert_chart.png "Add a chart")
  
-5. On the **Add Componet** dialog box, select your options. 
+5. On the **Add Component** dialog box, select your options. 
  
       |  |  |
       | --- | --- |
@@ -78,7 +78,7 @@ Legend:
       > ![Add componets](media/add_componet_to_dashboard.png "Add componets")
 
  
-6. When you're done adding each compoent, select **Add**.
+6. When you're done adding each component, select **Add**.
  
 
 7. Continue adding components to the dashboard. You can add up to six components.   
@@ -88,7 +88,7 @@ Legend:
  
 8. When you are done, on the command bar select **Save**. 
  
-9. The dashboard that you created will appear in the drop-down menu under **My Dashbaords**.
+9. The dashboard that you created will appear in the drop-down menu under **My Dashboards**.
 
    > [!div class="mx-imgBorder"]
    > ![View your dashboards](media/my_dashboards.png "View your dashboards")
@@ -103,13 +103,13 @@ When you add a chart on a dashboard you can edit the chart properties and modify
 
 Legend:
 
- 1. View title with **View Selector** turned off. You cannont toggle between differt views. You only see the title.
+ 1. View title with **View Selector** turned off. You connot toggle between different views. You only see the title.
  2. Chart title with **Display Chart Selection** turned off. You cannot toggle between different charts for the entity. You only see the title.
- 3. Only **View Selector** is turned. You can toggle to a different views and the chart will render based on the underline data for the selected view.
+ 3. Only **View Selector** is turned. You can toggle to a different view and the chart will render based on the underline data for the selected view.
  4. Both **View Selector** and **Display Chart Selection** is turned. You can toggle a different views and chart for the entity
 
 
-To edit the chart properties, you need to edit the dashboard that the chart is in. If you're in the process of of adding a new chart on a dashboard, then you're aleady in edit mode and can skip to step 2.
+To edit the chart properties, you need to edit the dashboard that the chart is in. If you're in the process of adding a new chart on a dashboard, then you're already in edit mode and can skip to step 2.
 
 
 1. Go to the dashboard that the chart is in and on the command bar, select **Edit**.
@@ -138,7 +138,7 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
    > ![Select views](media/charts_select_views.png "Select views")
 
 
-5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity and see  different visualizations of the data. If the box is unchecked then you only see the chart title.
+5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity and see  different visualizations of the data. If the box is unchecked, then you only see the chart title.
 
    > [!div class="mx-imgBorder"]
    > ![Display chart selection](media/chart_options_1.png "Display chart selection")
@@ -159,7 +159,7 @@ In the example below, let's further drill down into the chart and see only the o
    > [!div class="mx-imgBorder"]
    > ![Drill down box](media/chart_drilldown.png "Drill down on a chart box")
 
-2. Select the drop down menu and choose how to want to group the data.
+2. Select the drop-down menu and choose how to want to group the data.
 
    > [!div class="mx-imgBorder"]
    > ![Drill down box](media/chart_drilldown_1.png "Drill down on a chart box")
@@ -169,7 +169,7 @@ In the example below, let's further drill down into the chart and see only the o
    > [!div class="mx-imgBorder"]
    > ![Drill down box](media/chart_drilldown_2.png "Drill down on a chart box")
 
-4. The drilldowned chart will show up, with the breadcrumb at the top showing the filter criteria of the drilldown. You can select the breadcrumb to go back Home or previous screen.
+4. The chart with the drilled down data will show. The breadcrumb at the top show the filter criteria of the drilldown. You can select the breadcrumb to go back Home or to the previous screen.
 
    > [!div class="mx-imgBorder"]
    > ![Drill down box](media/chart_drilldown_3.png "Drill down on a chart box")
@@ -180,7 +180,7 @@ You can continue drilling further into the chart data. As you drill down deeper,
    ![Drill down further](media/chart_drilldown_4.png "Drill down further")
 
 ## Known issues  
-In the chart designer, adding a order by on certain calculated fields is not supported and will cause an error. The calculated fields causing this are using another calculated fields, a related entity field, or a local field on the entity.
+In the chart designer, adding an order by on certain calculated fields is not supported and will cause an error. The calculated fields causing this are using another calculated fields, a related entity field, or a local field on the entity.
 
 
 
