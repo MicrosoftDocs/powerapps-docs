@@ -10,7 +10,7 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Use the Employee Case - Return to the Workplace app
+# Use the workplace care management app
 
 This article provides step-by-step instructions to case managers in the organization on how to use the Employee Case - Return to the Workplace app to manage employee cases. 
 
@@ -36,14 +36,14 @@ Health & Safety Lead uses this app to:
 
 - [Monitor employee cases dashboard](#monitor-employee-cases-dashboard)
 
-## Employee Case - Return to the Workplace app at a glance
+## Workplace care management app at a glance
 
 The left pane lists all the components available in the **Employee Cases** area.
 
 > [!div class="mx-imgBorder"]
 > ![Employee case view](media/health-safety-employee-case-view.png "Employee case view")
 
-## Employee Case - Return to the Workplace app components
+## Workplace care management app components
 
 The case management app has the following components:
 
@@ -69,7 +69,7 @@ Employee Cases - Lists of all cases that have been created.
 
 - Workload
 
-## Getting started with the Employee Case - Return to the Workplace app
+## Getting started with the Workplace care management app
 
 Employee Safety is the main goal for the Health & Safety Lead. Therefore the
 employee cases allows the Health & Safety Lead to revoke the employee's ability

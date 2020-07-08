@@ -14,7 +14,7 @@ ms.reviewer: kvivek
 
 This article is for executive leaders who use the Power BI dashboard to analyze data to get their employees back to their office locations using the Return to the Workplace solution. 
 
-## How to view the leadership dashboard?
+## How to view the location readiness dashboard?
 
 To access the dashboard:
 

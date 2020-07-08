@@ -10,18 +10,18 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Use the facility manager app
+# Use the facility safety management app
 
-The facility manager app provides step-by-step instructions to facility managers in the organizations on how to use the app to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
+The facility safety management app provides step-by-step instructions to facility managers in the organizations on how to use the app to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
 
-## Facility manager app at a glance
+## Facility safety management app at a glance
 
 The left pane lists all the components available in the **Facility Management** area.
 
 > [!div class="mx-imgBorder"]
 > ![Facility management](media/facility-manager-facility-active-facilities.png "Facility management")
 
-## Facility manager app components
+## Facility safety management app components
 
 The facility manager app has the following components:
 

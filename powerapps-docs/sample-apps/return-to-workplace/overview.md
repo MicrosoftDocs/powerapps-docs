@@ -11,17 +11,17 @@ ms.reviewer: kvivek
 ---
 # Return to the Workplace solution
 
-The Return to the Workplace solution enables organizations to reopen workplaces responsibly and empower their employees to return to the workplace confidently by providing a healthy and safe workplace as per the governmental COVID-19 guidelines to ensure their wellbeing.
+Reopen responsibly, monitor intelligently, and protect continuously with solutions for a safer work environment. Equip facility managers and task force leaders to make informed decisions to safely reopen locations. Empower employees to return confidently with self-service tools for working safely and productively. Help health and safety leaders ensure the care and well being of your workforce.
 
 The main components of the Return to the Workplace solution:
 
-- **Dashboard for location readiness** to review and determine readiness of their workplaces for COVID-19 conditions and efficiently manage their safe reopening. These dashboards allow facility managers and task force leaders to make informed decision by comparing selected measures and metrics associated with established goals or targets for facilities in their locations and respective COVID guidelines set by government agencies.
+- **Dashboard for location readiness** determine the readiness of your facilities and efficiently manage their safe reopening. Location Readiness allows facility managers and task force leaders to quickly make informed decisions using critical factors like COVID infection rates and supplies availibility.
 
-- **Facility manager app** used to develop and execute on reopening plans.
+- **Facility safety management** give facility managers the tools they need to keep your locations open safely. Facility safety management helps you maintain a safe environment with tools for monitoring occupancy, health supplies, safety procedures, and other facility-related best practices.
 
-- **Employee return to workplace app** to empower employees to use self-service tools for returning confidently to the reopened workplace and work safely. Employees can use the app to identify open buildings and self-attest to no symptoms before returning to a reopened workplace.
+- **Employee return to the workplace** offer your workfoce the self-service tools they need to feel confident about returning and remain productive while onsite. Employee return to the workplace allows them to check in to work remotely, self-screen before entering a building, and reserve a workspace virtually (coming soon).
 
-- **Case management app** used to manage cases for employees under investigation.
+- **Workplace care management** gives health and safety leaders tools to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. Executive dashboards enable monitoring of all Workplace Care Management data.
 
 
 <!--
