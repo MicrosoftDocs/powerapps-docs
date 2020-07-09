@@ -106,4 +106,4 @@ Listed below are the limitations for the current Common Data Service column comp
 ### See Also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
-<xref:microsoft.xrm.sdk.query.conditionexpression>
+<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>
