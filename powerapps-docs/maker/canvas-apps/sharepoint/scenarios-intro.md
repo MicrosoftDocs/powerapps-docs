@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/17/2020
+ms.date: 07/09/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -28,6 +28,7 @@ Articles in this section explain individual and short scenarios when working wit
 - [How to use drop down list with choices from lookup column in a SharePoint list?](scenarios-choice-to-lookup.md)
 - [How to customize an app screen based on column status inside SharePoint list?](scenarios-customize-view-based-on-column-status.md)
 - [How to work with permissions in a lookup list from SharePoint site?](scenarios-lookup-list-permissions.md)
+- [How to create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items?](scenarios-sharepoint-form-from-scratch.md)
 
 ## SharePoint integration documentation
 
