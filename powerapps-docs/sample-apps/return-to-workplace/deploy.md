@@ -48,7 +48,7 @@ After you have created your environment, you can access it using the following U
 
 Follow the steps below to install the Return to the Workplace solution:
 
-1. Go to [Microsoft AppSource](https://aka.ms/rtw-app) to install the **Return to the Workplace solution**.
+1. Go to Microsoft AppSource (TODO: Link to be available soon) to install the **Return to the Workplace solution**.
 
     > [!div class="mx-imgBorder"]
     > ![Installation Page](media/return-to-workplace-installationpage.png "Installation Page")
