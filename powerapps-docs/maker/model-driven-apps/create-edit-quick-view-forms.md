@@ -85,6 +85,9 @@ A quick view form can be added to another form as a quick view control. It provi
 
 7.  To save the form select **Save**.  
 
+    > [!IMPORTANT]
+    > If you have a parential relationship with the same entity, for example if Account has a relationship to Account and you create a lookup that is used by a Quick Create form and is used to create a parent record, the first record will not be saved with the lookup having the parent record value due to the circular reference.  If you experience this issue you can mitigate it by removing the parent record id in the quick create form, which should be optional, and save the record.
+
 ## Next steps   
  [Create and design forms](create-design-forms.md)   
  [Create or edit quick create forms](create-edit-quick-create-forms.md)
