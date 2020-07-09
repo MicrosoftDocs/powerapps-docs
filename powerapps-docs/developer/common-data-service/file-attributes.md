@@ -2,7 +2,7 @@
 title: "File attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about File attributes that store file data within the application, supporting attributes, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 06/17/2020
+ms.date: 07/09/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -150,6 +150,18 @@ Headers:
 x-ms-transfer-mode: chunked 
 x-ms-file-name: sample.png
 ```
+
+**Request** (alternate form)
+
+This form of the request uses a query string parameter and supports non-ASCII language file names.
+
+```http
+PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute?x-ms-file-name=测试.txt
+
+Headers: 
+x-ms-transfer-mode: chunked
+```
+
 **Response**
 ```http
 200 OK 
