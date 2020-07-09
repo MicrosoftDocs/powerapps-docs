@@ -111,14 +111,14 @@ The examples in this section use a [data source](../working-with-data-sources.md
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Cos(&nbsp;ValueTable&nbsp;)** |Returns the cosine of each number in the table. |<style> img { max-width: none } </style> ![](media/function-trig/values-cos.png) |
-| **Cot(&nbsp;ValueTable&nbsp;)** |Returns the cotangent of each number in the table. |<style> img { max-width: none } </style> ![](media/function-trig/values-cot.png) |
-| **Sin(&nbsp;ValueTable&nbsp;)** |Returns the sine of each number in the table. |<style> img { max-width: none } </style> ![](media/function-trig/values-sin.png) |
-| **Tan(&nbsp;ValueTable&nbsp;)** |Returns the tangent of each number in the table. |<style> img { max-width: none } </style> ![](media/function-trig/values-tan.png) |
-| **Acos(&nbsp;ValueTable&nbsp;)** |Returns the arccosine of each number in the table. |<style> img { max-width: none } </style> ![](media/function-trig/values-acos.png) |
-| **Acot(&nbsp;ValueTable&nbsp;)** |Returns the arccotangent of each number in the table. |<style> img { max-width: none } </style> ![](media/function-trig/values-acot.png) |
-| **Asin(&nbsp;ValueTable&nbsp;)** |Returns the arcsine of each number in the table. |<style> img { max-width: none } </style> ![](media/function-trig/values-asin.png) |
-| **Atan(&nbsp;ValueTable&nbsp;)** |Returns the arctangent of each number in the table. |<style> img { max-width: none } </style> ![](media/function-trig/values-atan.png) |
-| **Degrees(&nbsp;ValueTable&nbsp;)** |Returns the equivalent number of degrees for each number in the table, assumed to be angles in radians. |<style> img { max-width: none } </style> ![](media/function-trig/values-degrees.png) |
-| **Radians(&nbsp;ValueTable&nbsp;)** |Returns the equivalent number of radians for each number in the table, assumed to be angles in degrees. |<style> img { max-width: none } </style> ![](media/function-trig/values-radians.png) |
+| **Cos(&nbsp;ValueTable&nbsp;)** |Returns the cosine of each number in the table. | ![](media/function-trig/values-cos.png) |
+| **Cot(&nbsp;ValueTable&nbsp;)** |Returns the cotangent of each number in the table. | ![](media/function-trig/values-cot.png) |
+| **Sin(&nbsp;ValueTable&nbsp;)** |Returns the sine of each number in the table. | ![](media/function-trig/values-sin.png) |
+| **Tan(&nbsp;ValueTable&nbsp;)** |Returns the tangent of each number in the table. | ![](media/function-trig/values-tan.png) |
+| **Acos(&nbsp;ValueTable&nbsp;)** |Returns the arccosine of each number in the table. | ![](media/function-trig/values-acos.png) |
+| **Acot(&nbsp;ValueTable&nbsp;)** |Returns the arccotangent of each number in the table. | ![](media/function-trig/values-acot.png) |
+| **Asin(&nbsp;ValueTable&nbsp;)** |Returns the arcsine of each number in the table. | ![](media/function-trig/values-asin.png) |
+| **Atan(&nbsp;ValueTable&nbsp;)** |Returns the arctangent of each number in the table. | ![](media/function-trig/values-atan.png) |
+| **Degrees(&nbsp;ValueTable&nbsp;)** |Returns the equivalent number of degrees for each number in the table, assumed to be angles in radians. | ![](media/function-trig/values-degrees.png) |
+| **Radians(&nbsp;ValueTable&nbsp;)** |Returns the equivalent number of radians for each number in the table, assumed to be angles in degrees. | ![](media/function-trig/values-radians.png) |
 

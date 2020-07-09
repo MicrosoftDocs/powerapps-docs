@@ -1,14 +1,13 @@
 ---
 title: "Release updates in Power Apps portals | MicrosoftDocs"
 description: "Learn about release updates of Power Apps portals."
-author: tapanm-msft
-manager: kvivek
+author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/22/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: dileeps
+ms.reviewer: tapanm
 ---
 
 # Release updates

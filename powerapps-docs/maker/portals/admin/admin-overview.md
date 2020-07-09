@@ -1,14 +1,13 @@
 ---
 title: "Overview of Power Apps Portals admin center | MicrosoftDocs"
 description: "Information about Power Apps Portals admin center."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 07/06/2020
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Power Apps Portals admin center
@@ -53,3 +52,7 @@ If you are not a global administrator and you try to manage a portal that has al
     > This task can be performed either by a global administrator of your organization or the existing owner of this application.
 
 6. After you've added yourself as an owner, reopen the Power Apps Portals admin center page.
+
+### See also
+
+[Microsoft Learn: Power Apps portals architecture](https://docs.microsoft.com/learn/modules/portals-architecture)

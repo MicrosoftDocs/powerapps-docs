@@ -210,7 +210,7 @@ Azure AD requires the following values to register your application:
   
   There are several ways that you can achieve this, including writing your own program using the web services and having the subscriber run the program.  
   
-  The Dynamics 365 Package Deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different Common Data Service organization. More information: [Create packages for the Dynamics 365 Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)  
+  The Dynamics 365 Package Deployer is an application which can be used to prepare a package to automate transferring solutions and data to a different Common Data Service organization. More information: [Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)  
   
 ### See also  
  [Use Single-Tenant Server-to-server authentication](use-single-tenant-server-server-authentication.md)   

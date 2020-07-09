@@ -2,7 +2,7 @@
 title: "Create and edit public or system model-driven app views with Power Apps | MicrosoftDocs"
 description: "Learn now to create or edit views by using the app designer"
 keywords: ""
-ms.date: 03/23/2020
+ms.date: 06/23/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -45,9 +45,13 @@ More information: [Understand views](create-edit-views.md)
 
 ## Create a public view in Power Apps
 As an app maker, you can create and edit public views by using Power Apps.
+
+> [!NOTE]
+> Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in Advanced Find.
+
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
 
-2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab. 
+2. Expand **Data**, select **Entities**, select the entity that you want, and then select the **Views** tab. 
 
 3. On the toolbar, select **Add view**. 
 
@@ -66,7 +70,7 @@ As an app maker, you can create and edit public views by using Power Apps.
     > [!NOTE]
     > You can also change column order by clicking on the column header and selecting **Move Right** or **Move Left**.
 
-10. Select **Publish** to save the view and make it available for other users in your organization. 
+7. Select **Publish** to save the view and make it available for other users in your organization. 
    
 
 ## Work with views in app designer
