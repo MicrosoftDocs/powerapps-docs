@@ -53,7 +53,7 @@ This scenario example walks you through the steps to create an app and connect i
 
 Create a SharePoint list with columns and list items. In this scenario, we've used a list with the following columns and list items:
 
-  ![SharePoint list structure](./media/scenarios-sharepoint-form-from-scratch/1-sharepoint-list.png "SharePoint list structure")
+  ![SharePoint list structure](./media/scenarios-sharepoint-form-from-scratch/sharepoint-list.png "SharePoint list structure")
 
 > [!NOTE]
 > Both columns are *Single line of text*.
@@ -64,23 +64,23 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
 1. Select **Canvas app from blank**.
 
-    ![Canvas app from blank](./media/scenarios-sharepoint-form-from-scratch/2-create-from-blank.png "Canvas app from blank")
+    ![Canvas app from blank](./media/scenarios-sharepoint-form-from-scratch/create-from-blank.png "Canvas app from blank")
 
 1. Enter app name of your choice. For example, *SharePoint list from scratch*.
 
 1. Select layout of your choice. This scenario uses *Tablet* layout.
 
-    ![App name and layout](./media/scenarios-sharepoint-form-from-scratch/3-create-app-name.png "App name and layout")
+    ![App name and layout](./media/scenarios-sharepoint-form-from-scratch/create-app-name.png "App name and layout")
 
 1. Select **Create**. The app opens in canvas app Studio for authoring.
 
-    ![Blank app](./media/scenarios-sharepoint-form-from-scratch/4-blank-app.png "Blank app")
+    ![Blank app](./media/scenarios-sharepoint-form-from-scratch/blank-app.png "Blank app")
 
 ## Step 3 - Connect app to SharePoint
 
 1. Select **Data sources** from the left pane.
 
-    ![Select data sources](./media/scenarios-sharepoint-form-from-scratch/6-select-data-sources.png "Select data sources")
+    ![Select data sources](./media/scenarios-sharepoint-form-from-scratch/select-data-sources.png "Select data sources")
 
 1. Select **SharePoint** data source. You can also search for the name in search box.
 
@@ -110,7 +110,7 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
 1. Select "**+**" (Insert) from the left pane.
 
-    ![Select insert](./media/scenarios-sharepoint-form-from-scratch/5-step-1-1.png "Select insert")
+    ![Select insert](./media/scenarios-sharepoint-form-from-scratch/step-1-1.png "Select insert")
 
 1. Expand **Layout**.
 
