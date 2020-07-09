@@ -1,14 +1,13 @@
 ---
 title: Frequently asked questions | Microsoft Docs
 description: Frequently asked questions in Power Apps portals.
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/21/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Power Apps portals FAQ

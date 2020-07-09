@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 6/12/2020
+ms.date: 7/7/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -46,7 +46,43 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
     ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
-You can modify the component by using a number of properties.
+You can modify the component by using a number of [properties](#properties).
+
+### Set a default search radius
+
+By default, the component will search around the user's location (providing the user has consented for the app to access their location). However, you can refine the default search area to help narrow or change initial results when users input an address.
+
+1. On the **Properties** pane, set the **Search within radius** switch to **On**.
+
+1. Enter a longitude, latitude, and radius (in meters).
+
+The component will start searching at the latitude and longitude, out to the distance specified in the radius field.
+
+### Use the map component with the input address component
+
+You can save addresses that a user inputs into the address component as a data collection. You can then retrieve these addresses and display them in [the map component](geospatial-component-map.md).
+
+1. App the map component and the input address component to your app.
+2. On the **Insert** menu, select **Button** and move it into your app.
+3. Go to the **Advanced** tab on the **Properties** pane. Under **OnSelect**, enter the following:
+
+    ```json
+    If(IsBlank(AddressInput1.SearchResultJson), "", Collect(locations, {Latitude: AddressInput1.SelectedLatitude, Longitude: AddressInput1.SelectedLongitude}))
+    ```
+
+    This causes the button to save the current latitude and longitude to a collection named *locations*, as long as the search results are not blank
+
+    ![](./media/geospatial/input-code.png)
+
+4. Select the map component, and go to the **Advanced** tab on the **Properties** pane.
+
+5. Set the following properties:
+
+    - **ItemsLabels** as *locations*
+    - **ItemLatitudes** as *locations.Latitude*
+    - **ItemsLongitudes** as *locations.Longitude*
+
+Each time a user selects the button, the result from the address input component will be added to the map as a new pin.
 
 ### Properties
 
