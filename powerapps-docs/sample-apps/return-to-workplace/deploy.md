@@ -64,7 +64,7 @@ Follow the steps below to install the Return to the Workplace solution:
 
 The Return to the Workplace solution has three Power BI dashboards, one for executive leadership, one for the facility managers, and one for the case managers.
 
-1. Go to [AppSource](https://aka.ms/rtw-app) to install the **Return to the Workplace solution**. Open the **Return to the Workplace – Leadership** dashboard.
+1. Go to Microsoft AppSource (TODO: Link to be available soon) to install the **Return to the Workplace solution**. Open the **Return to the Workplace – Leadership** dashboard.
 
    > [!div class="mx-imgBorder"]
    > ![Open dashboards](media/deploy-pbi-dashboard-view.png "Open dashboards")
