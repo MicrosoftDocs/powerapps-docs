@@ -77,7 +77,7 @@ The following is a list of unsupported action types that are frequently asked ab
 - Editing a solutions file to edit any solution components other than ribbons, forms, SiteMap, or saved queries is not supported. For more information, see [When to edit the customizations file](when-edit-customization-file.md).
     - Defining new solution components by editing the solutions file is not supported.
     - Editing web resource files exported with a solution is not supported.
-    - Except for the steps documented in [Maintain managed solutions](../common-data-service/maintain-managed-solutions.md), editing the contents of a managed solution is not supported.
+    - Except for the steps documented in [Maintain managed solutions](/power-platform/alm/maintain-managed-solutions), editing the contents of a managed solution is not supported.
 
 - Displaying an entity form within an IFrame embedded in another entity form is not supported.
 
