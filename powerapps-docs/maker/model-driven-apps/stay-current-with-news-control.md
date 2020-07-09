@@ -91,7 +91,8 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
 6. To show news by account name, drag and drop the **Account Name** field from the right **Field Explorer** pane to the newly created section.
 
-   ![Account name on account form](media/account-name-form.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Account name on account form](media/account-name-form.png)
 
 7. Select the section and then select **Change properties.** Enter a descriptive section a **Name**, such as *Company news*. You might want to check **Show the label of this section on the form** to provide heading to the section. Select **OK**.
 
