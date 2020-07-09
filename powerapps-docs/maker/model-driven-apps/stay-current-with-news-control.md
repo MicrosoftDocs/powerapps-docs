@@ -91,7 +91,7 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
 6. To show news by account name, drag and drop the **Account Name** field from the right **Field Explorer** pane to the newly created section.
 
-![Account name on account form](media/account-name-form.png)
+   ![Account name on account form](media/account-name-form.png)
 
 7. Select the section and then select **Change properties.** Enter a descriptive section a **Name**, such as *Company news*. You might want to check **Show the label of this section on the form** to provide heading to the section. Select **OK**.
 
@@ -122,7 +122,7 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
 11. In the business rule designer, select **Condition** on the designer canvas,     set **Field** to **Account Name** and **Operator** to **Contains data,** and     then select **Apply**. Then, select the **Components** tab, drag a **Set Field Value** action, and provide a field value where **Field** is **newsapikey** and the value is the **Key** you copied from the Azure Cognitive Services properties. Create another **Set Field Value** action where **Field** is **newsurl** and add the value as the **Endpoint** you copied from the Azure Cognitive Services properties. Make sure to append *bing/v7.0/news/search* at the end of the news URL. The final URL should look like https://<yourservicename\>.cognitiveservices.azure.com/bing/v7.0/news/search. 
 
-![Create a business rule for the api key and URL](media/business-rule-for-fields.png)
+    ![Create a business rule for the api key and URL](media/business-rule-for-fields.png)
 
 12. Save and activate the rule. Close the business rule designer.
 
