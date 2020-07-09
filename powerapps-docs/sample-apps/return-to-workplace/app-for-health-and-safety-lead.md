@@ -242,9 +242,10 @@ within a proper way.
 
 - Cases per facility
 
-
+<!--
 ## Issues and feedback
 
 - To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
 
 - For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
+-->
