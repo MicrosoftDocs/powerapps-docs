@@ -31,24 +31,25 @@ To get started with the employee app, you need to download the Power Apps Mobile
 Open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization once
 you sign in. More information: [Power Apps mobile device sign in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in).
 
-When you successfully sign in and launch the **Return to the Workplace** app from your mobile device you have an option to check into a facility, lookup for a facility, or answer the employee sentiment question:
+When you successfully sign in and launch the **Return to the Workplace** app from your mobile device you have an option to get day pass, look up facility status, or answer the employee sentiment question:
 
 > [!div class="mx-imgBorder"]
-> ![Welcome screen](media/employee-welcome.png "Welcome screen")
+> ![Welcome screen](media/employee-welcome2.png "Welcome screen")
 
 ## See the reopen status of a facility
 
 You can see the reopen status for a facility, you can find all the available facilities.
 
-Select **Look Up Facility** to lookup for facilities and view the details such as whether the facility is open and what phase of reopening it is in.
+Select **Look Up Status** to lookup for facilities and view the details such as whether the facility is open and what phase of reopening it is in.
 
-Select a facility from the drop-list and the current status of the facility and associated details are displayed. Select **Cancel** to return to the home screen.
-
-> [!div class="mx-imgBorder"]
-> ![Facility details](media/employee-facility-details.png "Facility details")
+Select a facility from the facility list and the current status of the facility and associated details are displayed. Select **Top Arrow** to return to the home screen.
 
 > [!div class="mx-imgBorder"]
-> ![List of facilities](media/employee-facility-list.png "List of facilities")
+> ![List of facilities](media/employee-facility-list2.png "List of facilities")
+
+> [!div class="mx-imgBorder"]
+> ![Facility details](media/employee-facility-details2.png "Facility details")
+
 
 ## Check in to a facility
 
@@ -56,50 +57,28 @@ Employees can complete the steps required to select a particular facility that i
 
 1. Select **Facility**.
 
-2. Select an available facility form the drop-list.
+2. Select an available facility form the facility list.
 
 3. Select **Start Health Survey** to complete the check-in process. Accept the terms & agreements.
 
    > [!div class="mx-imgBorder"]
-   > ![Start survey](media/employee-start-survey.png "Start survey")
+   > ![Start survey](media/employee-start-survey2.png "Start survey")
 
-   > [!div class="mx-imgBorder"]
-   > ![Facility drop-list](media/employee-facility-droplist.png "Facility drop-list")
+    > [!div class="mx-imgBorder"]
+   > ![Term and agreements](media/employee-termandagreement.png "Term and Agreements")
 
-### Symptom check 1
 
-Review the **Symptom Check 1** question. Select **Yes**  if you are currently experiencing any of the listed symptoms and **No** if you don't have any of the symptoms.
+### Symptom check 
 
-> [!div class="mx-imgBorder"]
-> ![Symptom check no](media/employee-symptom-check-1-no.png "Symptom check no")
+Review the **Symptom Check** statements. Select **I Agree**  if you agree with the statements and **I Disagree** if you don't.
 
 > [!div class="mx-imgBorder"]
-> ![Symptom check yes](media/employee-symptom-check-1-yes.png "Symptom check yes")
+> ![Symptom check](media/employee-agreement.png "Symptom check")
 
-Select **Next** to continue to the next survey question.
-
-### Temperature check (Symptom check 2)
-
-Select **Yes** if your temperature is above the given number and select **No** if the temperature is below the given number. Select **Next** to continue to the next survey question.
-
-> [!div class="mx-imgBorder"]
-> ![Temperature check](media/employee-temperature-check.png "Temperature check")
-
-### Symptom check 3
-
-Review the **Symptom Check 2** question. Select **Yes** if you are currently experiencing any of the listed symptoms and **No** if you don't have any of the symptoms.
-
-> [!div class="mx-imgBorder"]
-> ![Symptom check no](media/employee-symptom-check-2-no.png "Symptom check no")
-
-> [!div class="mx-imgBorder"]
-> ![Symptom check yes](media/employee-symptom-check-2-yes.png "Symptom check yes")
-
-Select **Next** to submit questionnaire responses.
 
 ### Employee pass
 
-If your responses to the questionnaire show you are healthy, you will receive a pass to enter into the selected facility. The pass expires in 24 hours. 
+If your responses to the statement show you are healthy, you will receive a pass to enter into the selected facility. The pass expires in 24 hours. 
 
 If your responses show you are not healthy, you will not receive a pass and will be given the contact information for the company health and safety department if needed.
 
@@ -116,7 +95,10 @@ Employees can share their opinion on how they are feeling about returning to the
 On the home page you can give your response for the **Do you feel safe returning to work?** by selecting one of the options available.  
 
 > [!div class="mx-imgBorder"]
-> ![Share sentiment](media/employee-share-sentiment.png "Share sentiment")
+> ![Share sentiment](media/employee-share-sentiment2.png "Share sentiment")
+
+> [!div class="mx-imgBorder"]
+> ![Share sentiment](media/employee-share-sentiment2-2.png "Share sentiment")
 
 ## Issues and feedback
 
