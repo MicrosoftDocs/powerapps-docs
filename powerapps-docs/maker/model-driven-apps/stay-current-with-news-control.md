@@ -51,7 +51,7 @@ account. Once created, you will get the API key and API URL under the **Keys and
 > [!div class="mx-imgBorder"] 
 > ![Azure Cognitive Services API key and endpoint](media/azure-apikey-endpoint.png)
 
-## Import the company news solution. For more information about 
+### Import the company news solution 
 
 1. Go to the [news control GitHub repo](https://github.com/microsoft/companynewspcfcontrol).
 
@@ -66,7 +66,7 @@ account. Once created, you will get the API key and API URL under the **Keys and
 
 6. Select **Next,** and then select **Next** again to complete the import.
 
-## Add the control to the account main form
+### Add the control to the account main form
 
 1. In Power Apps, select **Solutions** on the left pane, select **Settings** (gear) on the upper right, and then select **Advanced settings**.
 
@@ -131,3 +131,5 @@ account. Once created, you will get the API key and API URL under the **Keys and
 14. Clear **Visible by default** for the form tab properties where the newsapikey and newsurl fields are added.
 
 15. In the form designer, select **Save** and then select **Publish**.
+
+### See also [Use custom controls for model-driven app data visualizations](use-custom-controls-data-visualizations.md)
