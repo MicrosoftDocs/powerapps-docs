@@ -62,12 +62,13 @@ See also:
 |Use the case management app|Used to manage cases for employees under investigation.|Case managers|[Case management app](app-for-health-and-safety-lead.md)
 
 
+<!--
 ## Issues and feedback
 
 - To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
 
 - For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
-
+-->
 
 ### Disclaimer
 
