@@ -458,32 +458,32 @@
     {
       "source_path": "powerapps-docs/guided-learning/create-app-sharepoint.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/manage-apps.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/get-started.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/index.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/manage-data.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/create-app-cds.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/postman-collection.md",
@@ -1808,7 +1808,7 @@
     {
       "source_path": "powerapps-docs/maker/common-data-service/publish-changes-for-use-customer-service-hub.md",
       "redirect_url": "create-solution#publish-changes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/embed-powerapps-powerbi.md",
