@@ -112,8 +112,10 @@ insight on number changes on the tooltip.
 > [!div class="mx-imgBorder"]
 > ![Tooltip](media/pbi-dash-transition-hover-metrics.png "Tooltip")
 
+<!--
 ## Issues and feedback
 
 - To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
 
 - For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
+-->
