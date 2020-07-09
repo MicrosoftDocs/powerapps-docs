@@ -169,7 +169,7 @@ In the example below, let's further drill down into the chart and see only the o
    > [!div class="mx-imgBorder"]
    > ![Drill down box](media/chart_drilldown_2.png "Drill down on a chart box")
 
-4. The chart with the drilled down data will show. The breadcrumb at the top show the filter criteria of the drilldown. You can select the breadcrumb to go back Home or to the previous screen.
+4. The chart with the drilled down data will show. The breadcrumb at the top shows the filter criteria of the drilldown. You can select the breadcrumb to go back Home or to the previous screen.
 
    > [!div class="mx-imgBorder"]
    > ![Drill down box](media/chart_drilldown_3.png "Drill down on a chart box")
