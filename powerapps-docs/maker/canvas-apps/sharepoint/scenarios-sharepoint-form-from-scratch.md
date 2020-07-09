@@ -186,7 +186,11 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     ![Edit-form data source](./media/scenarios-sharepoint-form-from-scratch/edit-form-data-source.png "Edit-form data source")
 
-1. From the right-side of the Studio screen, set **Edit fields** for the edit form control and add the **Shape** and **Color** fields.
+1. Select **Edit fields** for the edit form control and remove any other fields such as **Attachments**, if present.
+
+    ![Remove attachments field](./media/scenarios-sharepoint-form-from-scratch/remove-attachments.png "Remove attachments field")
+
+1. Ensure the **Shape** and **Color** fields are present. If not, add them using **Add field**.
 
     ![Add shape and color fields](./media/scenarios-sharepoint-form-from-scratch/add-fields-edit-form.png "Add shape and color fields")
 
