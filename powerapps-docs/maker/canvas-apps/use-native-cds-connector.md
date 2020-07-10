@@ -18,7 +18,7 @@ search.app:
 
 ## Overview
 
-If you created a canvas app with a Common Data Service connector before November 2019, then you might not have the benefit of the most current version of the Common Data Service. 
+If you created a canvas app with a Common Data Service connector before November 2019, then you might not have the benefits of the using the current native connection experience for the Common Data Service.  This article shows the steps on how to convert from the legacy CDS and D365 connectors to the current native connection experience which is used in the **Improve data source experience and Common Data Service views** experience.
 
 The **Improve data source experience and Common Data Service views** option has following benefits:
 
