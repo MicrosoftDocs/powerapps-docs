@@ -1,5 +1,5 @@
 ---
-title: Use the Return to the Workplace employee app
+title: Use the Employee Return to the Workplace app
 description: Provides information to track symptoms of the employees and determine if they are eligible to enter into a facility.
 author: wbakker
 ms.service: powerapps
@@ -10,7 +10,7 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Use the employee return to the workplace app
+# Use the Employee Return to the Workplace app
 
 This article provides step-by-step instructions to employees on how to use the employee app. Employees can check-in, answer the questions to determine whether they are eligible to enter into a facility, and respond to how they feel about returning to the workplace.
 
@@ -24,7 +24,7 @@ To get started with the employee app, you need to download the Power Apps Mobile
 
   - For **Android** devices, use [Google Play](https://aka.ms/powerappsandroid)
 
-- Ensure your organization has deployed and configured the Return to the Workplace employee app as explained in [Deploy the app](https://docs.microsoft.com/powerapps/sample-apps/return-to-the-workplace/deploy).
+- Ensure your organization has deployed and configured the Employee Return to the Workplace app as explained in [Deploy the app](https://docs.microsoft.com/powerapps/sample-apps/return-to-the-workplace/deploy).
 
 ## Getting started with the app
 
@@ -100,8 +100,9 @@ On the home page you can give your response for the **Do you feel safe returning
 > [!div class="mx-imgBorder"]
 > ![Share sentiment](media/employee-share-sentiment2-2.png "Share sentiment")
 
+<!--
 ## Issues and feedback
 
 - To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
 
-- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
+- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>. 
