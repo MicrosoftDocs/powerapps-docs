@@ -109,6 +109,14 @@ where numbers were raised or lower compared to previous days.
 By hovering over the transition part of the ribbon chart, users can quickly get an
 insight on number changes on the tooltip.
 
+## Data Source
+
+The dashboard consist of data from the model-driven app and the canvas app, but also consist of external data. The following data sources are used:
+
+1. World Health Organization ([link](https://covid19.who.int/WHO-COVID-19-global-data.csv))
+2. USAFacts ([link](https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv) and [link](https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv))
+3. Bing COVID Tracker ([link](https://raw.githubusercontent.com/microsoft/Bing-COVID-19-Data/master/data/Bing-COVID19-Data.csv))
+
 > [!div class="mx-imgBorder"]
 > ![Tooltip](media/pbi-dash-transition-hover-metrics.png "Tooltip")
 
