@@ -116,9 +116,9 @@ insight on number changes on the tooltip.
 
 The dashboard consist of data from the model-driven app and the canvas app, but also consist of external data. The following data sources are used:
 
-- World Health Organization ([link](https://covid19.who.int/WHO-COVID-19-global-data.csv))
-- USAFacts ([link](https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv) and [link](https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv))
-- Bing COVID Tracker ([link](https://raw.githubusercontent.com/microsoft/Bing-COVID-19-Data/master/data/Bing-COVID19-Data.csv))
+- World Health Organization ([source](https://covid19.who.int/WHO-COVID-19-global-data.csv))
+- USAFacts ([source](https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_deaths_usafacts.csv) and [source](https://usafactsstatic.blob.core.windows.net/public/data/covid-19/covid_confirmed_usafacts.csv))
+- Bing COVID Tracker ([source](https://raw.githubusercontent.com/microsoft/Bing-COVID-19-Data/master/data/Bing-COVID19-Data.csv))
 
 <!--
 ## Issues and feedback
