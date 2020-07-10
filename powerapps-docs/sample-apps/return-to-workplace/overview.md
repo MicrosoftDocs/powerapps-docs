@@ -62,13 +62,16 @@ See also:
 |Use the case management app|Used to manage cases for employees under investigation.|Case managers|[Case management app](app-for-health-and-safety-lead.md)
 
 
+<!--
 ## Issues and feedback
 
 - To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
 
 - For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
-
+-->
 
 ### Disclaimer
 
-This app is a sample and may be used with Microsoft Power Platform for dissemination of reference information only. This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgment and should not be used as such. Customer bears the sole risk and responsibility for any use of this app. Microsoft does not warrant that the app or any materials provided in connection therewith will be sufficient for any medical purposes or meet the health or medical requirements of any person. Sample data included in this app are for illustration only and are fictitious. No real association is intended or inferred.
+This app is a sample and is provided "as is" without warranty of any kind.  Customer bears the sole risk and responsibility for any use of this app.  Customer is expected to update and customize this app as appropriate for its own needs, and is responsible for ensuring that its implementation complies with all laws and regulations applicable to Customer's use.  Microsoft is not responsible for the performance, accuracy or results from the use of the app or any modifications to the app.  
+
+This app is not intended or made available for use as a medical device, clinical support, diagnostic tool, or other technology intended to be used in the diagnosis, cure, mitigation, treatment, or prevention of disease or other conditions, and no license or right is granted by Microsoft to use this app for such purposes. This app is not designed or intended to be a substitute for professional medical advice, diagnosis, treatment, or judgement and should not be used as such. Sample data included in this app are for illustration only and are fictitious.  No real association is intended or inferred. 
