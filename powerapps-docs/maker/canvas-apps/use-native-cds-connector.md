@@ -18,7 +18,7 @@ search.app:
 
 ## Overview
 
-If you created a canvas app with a Common Data Service connector before November 2019, then you might not have the benefits of the using the current and native connection experience for the Common Data Service. This article explains how to convert from the legacy Common Data Service and Dynamics 365 connectors to this current and native connection experience used by the **Improve data source experience and Common Data Service views** option.
+If you created a canvas app with either the Common Data Service or the Dynamics 365 connector before November 2019, then you might not have the benefits of using the current native connection experience for the Common Data Service. This article explains both the benefits of using the new experience and how to convert from the legacy Common Data Service or Dynamics 365 connectors to this current and native connection experience enabled by the **Improve data source experience and Common Data Service views** option.
 
 The **Improve data source experience and Common Data Service views** option has following benefits:
 
