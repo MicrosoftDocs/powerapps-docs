@@ -1,6 +1,6 @@
 ---
-title: Use the facility manager app
-description: Provides an overview of Return to the Workplace facility manager app.
+title: Use the facility safety management app
+description: Provides an overview of facility safety management app.
 author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,20 +10,20 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Use the facility safety management app
+# Use the Facility Safety Management app
 
 The facility safety management app provides step-by-step instructions to facility managers in the organizations on how to use the app to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
 
-## Facility safety management app at a glance
+## App at a glance
 
 The left pane lists all the components available in the **Facility Management** area.
 
 > [!div class="mx-imgBorder"]
 > ![Facility management](media/facility-manager-facility-active-facilities.png "Facility management")
 
-## Facility safety management app components
+## App components
 
-The facility manager app has the following components:
+The Facility Safety Management app has the following components:
 
 **Facility Management**
 

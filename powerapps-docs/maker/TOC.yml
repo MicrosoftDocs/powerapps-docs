@@ -1748,13 +1748,13 @@
       href: ../sample-apps/return-to-workplace/deploy.md   
     - name: Configure the solution
       href: ../sample-apps/return-to-workplace/configure.md
-    - name: Dashboard for location readiness
+    - name: Use the Location Readiness dashboard
       href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
-    - name: Facility safety management
+    - name: Use the Facility Safety Management app
       href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
-    - name: Employee return to the workplace
+    - name: Use the Employee Return to the Workplace app
       href: ../sample-apps/return-to-workplace/app-for-employee.md
-    - name: Workplace care management
+    - name: Use the Workplace Care Management app
       href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
 - name: Learn from others
   items:

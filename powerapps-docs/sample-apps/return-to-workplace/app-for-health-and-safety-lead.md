@@ -1,6 +1,6 @@
 ---
-title: User the Employee Case - Return to the Workplace app
-description: Provides an overview of how to use the Employee Case - Return to the Workplace app.
+title: User the Workplace Care Management app
+description: Provides an overview of how to use the Workplace Care Management app.
 author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,9 +10,9 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Use the workplace care management app
+# Use the Workplace Care Management app
 
-This article provides step-by-step instructions to case managers in the organization on how to use the Employee Case - Return to the Workplace app to manage employee cases. 
+This article provides step-by-step instructions to case managers in the organization on how to use the Workplace Care Management app app to manage employee cases. 
 
 To assist the Health & Safety Lead and to ensure proper case handling, a 4 step process is implemented. The current stage of an employee case is clearly depicted in the business process flow on the employee case form. The employee cases will be managed through the following process stages:
 
@@ -36,16 +36,16 @@ Health & Safety Lead uses this app to:
 
 - [Monitor employee cases dashboard](#monitor-employee-cases-dashboard)
 
-## Workplace care management app at a glance
+## App at a glance
 
 The left pane lists all the components available in the **Employee Cases** area.
 
 > [!div class="mx-imgBorder"]
 > ![Employee case view](media/health-safety-employee-case-view.png "Employee case view")
 
-## Workplace care management app components
+## App components
 
-The case management app has the following components:
+The Workplace Care Management app has the following components:
 
 ### Employee cases
 
