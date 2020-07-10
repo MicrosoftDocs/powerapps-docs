@@ -42,7 +42,13 @@ Some important statistics are provided at the top, which includes the number of 
 In the dashboard we have a number of key metrics on which you can focus in system at a glance.
 
 1. Phases
-.....
+
+
+Review facility phases
+
+> [!div class="mx-imgBorder"]
+> ![System at glance](media/pbi-dash-system-at-a-glance-phases.png "Phases")
+
 
 2. New COVID cases per day
 .....
