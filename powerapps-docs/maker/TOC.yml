@@ -1151,6 +1151,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
         - name: Add the calendar control to entities
           href: ./model-driven-apps/add-calendar-control.md
+        - name: Add the news control to an entity
+          href: ./model-driven-apps/stay-current-with-news-control.md          
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
