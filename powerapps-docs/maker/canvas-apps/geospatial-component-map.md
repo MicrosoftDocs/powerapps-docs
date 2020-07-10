@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 6/12/2020
+ms.date: 7/7/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -48,7 +48,78 @@ With an app open for editing in the [Power Apps studio](https://create.powerapps
 
     ![Allow highlighted in the window that asks to know your location](./media/geospatial/address-allow.png "Allow highlighted in the window that asks to know your location")
 
-You can modify the component by using a number of properties.
+You can modify the component by using a number of [properties](#properties).
+
+### Use the map component with data from Excel
+
+You can load a table that contains existing data from an Excel workbook into the map component. The component will then plot each row in your table as a map pin.
+
+Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
+
+Column description | Maps to property
+-- | -- 
+Label for the pin | ItemsLabels
+Longitude of the pin | ItemsLongitudes
+Latitude of the pin | ItemsLattitudes
+
+You can also use a string to denote the address, in which case ItemsLongitudes and ItemsLatitudes won't work.
+
+
+The following is an example of an Excel table with the required columns:
+
+![Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns](./media/geospatial/sample-excel.png)
+
+You can copy the following sample data to test this functionality:
+
+Name | Longitude | Latitude
+-- | -- | --
+Fourth Coffee (sample) | -98.29277 | 26.2774
+Litware, Inc. (sample) | -96.85572 | 32.55253
+Adventure Works (sample) | -96.99952 | 32.72058
+Fabrikam, Inc. (sample) | -118.30746 | 34.86543
+Blue Yonder Airlines (sample) | -118.66184 | 34.17553
+City Power & Light (sample) | -113.46184 | 37.15363
+Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918
+Alpine Ski House (sample) | -102.63908 | 35.20919
+A. Datum Corporation (sample) | -89.39433 | 40.71025
+Coho Winery (sample) | -116.97751 | 32.87466
+
+
+
+
+1. Copy and paste the table into a new Excel workbook.
+
+1. Select one of the cells, and then on the Home tab in the ribbon, select **Format as Table** and choose any style, and then **OK**.
+
+    ![](./media/geospatial/convert-table.png)
+
+1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**, for example *TestData*.
+
+    ![](./media/geospatial/table-name.png)
+
+1. Save the workbook.
+
+1. Open or create a new app in Power Apps, and insert the map component.
+
+1. On the **Properties** pane, select the **Data source(Items)** field and then search for *excel* and select **Import from Excel**.
+
+    ![](./media/geospatial/select-excel.png)
+
+1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
+
+    ![](./media/geospatial/select-table.png)
+
+1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
+
+1. Set the following properties:
+
+    - **ItemsLabels** as *TestData.Name*
+    - **ItemLatitudes** as *TestData.Latitude*
+    - **ItemsLongitudes** as *TestData.Longitude*
+
+1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table.
+
+    ![](./media/geospatial/map-expanded.png)
 
 ### Properties
 
@@ -56,7 +127,7 @@ The following properties can be defined and configured in the component's **Prop
 
 ![Map component displayed next to its Properties pane](./media/augmented-geospatial/geospatial-controls.png "Map component displayed next to its Properties pane")
 
-Note that some properties are only available on the **Advanced** tab in the **Properties** pane, in the **More options** section.
+Some properties are only available on the **Advanced** tab in the **Properties** pane, in the **More options** section.
 
 | Property | Description | Type | Location |
 | - | - | - | - |
