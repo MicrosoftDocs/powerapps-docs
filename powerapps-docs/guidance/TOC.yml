@@ -4,14 +4,14 @@
     href: index.yml
   - name: Power Apps patterns
     items:
-    - name: Patterns Overview
+    - name: Patterns overview
       href: patterns/patterns-overview.md
     - name: Calculation or Transformation pattern
       href: patterns/calculator-pattern.md
     - name: Communication or Announcement pattern
       href: patterns/communication-pattern.md
     - name: Inspection, Audit, or Questionnaire pattern
-      href: inspection-pattern.md
+      href: patterns/inspection-pattern.md
     - name: More patterns
       href: patterns/more-patterns.md
   - name: Planning a Power Apps project
