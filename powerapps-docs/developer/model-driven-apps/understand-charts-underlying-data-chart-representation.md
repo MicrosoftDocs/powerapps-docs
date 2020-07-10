@@ -40,7 +40,8 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 > Microsoft Chart Controls lets you create various types of charts such as column, bar, area, line, pie, funnel, bubble, and radar. The chart designer in Model-driven apps lets you create only certain types of charts. However, using the SDK, you can create most of the chart types that are supported by Microsoft Chart Controls.  
   
 ## Use the data description XML string to specify chart data  
- The data description XML string defines the data that will displayed on the chart. The contents of the XML string are validated against the visualization data description schema. For more information about the schema, see [Visualization Data Description Schema](visualization-data-description-schema.md).  
+
+ The data description XML string defines the data that is displayed on the chart. The contents of the XML string are validated against the visualization data description schema. For more information about the schema, see [Visualization Data Description Schema](visualization-data-description-schema.md).  
   
  You can specify the data description XML string while you are creating a chart using the `SavedQueryVisualization.DataDescription` or the `UserQueryVisualization.DataDescription` attribute for the organization-owned or user-owned chart respectively.  
   
@@ -55,9 +56,10 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 > [!NOTE]
 >  Although the data description XML string is validated again the visualization data description schema, the FetchXML query inside the `<FetchCollection>` element is not. The FetchXML query is validated against the FetchXML schema. For more information, see [FetchXML schema](../common-data-service/fetchxml-schema.md).  
   
- If the chart is a comparison chart, the `<FetchCollection>` element will contain two *group by* clauses.  
+ If the chart is a comparison chart, the `<FetchCollection>` element will contain two groups by* clauses.  
   
 ### The \<CategoryCollection> element  
+
  The `<CategoryCollection>` element contains information about the category (horizontal) and the series (vertical) axes in a chart.  
   
 -   Each `<Category>` sub-element has a child element called `<MeasureCollection>` that maps to the `<Series>` element in the presentation description XML. A single series chart has a single `<MeasureCollection>` child element whereas a multi-series chart will have multiple `<MeasureCollection>` child elements, each mapped to the respective `<Series>` element in the presentation description XML.  
@@ -88,13 +90,52 @@ Charts display data visually by mapping textual values on two axes: horizontal (
   
  For more sample data description XML strings, see [Sample Charts](sample-charts.md).  
   
-## Use the presentation description XML string to specify data representation  
- The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx) class in Microsoft Chart Controls. More information: [Chart Controls](https://go.microsoft.com/fwlink/p/?LinkId=128301)  
-  
- You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.  
-  
-### Example  
- The following is a sample presentation description XML string:  
+## Use the presentation description XML string to specify data representation in web client
+
+The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx) class in Microsoft Chart Controls. More information: [Chart Controls](https://go.microsoft.com/fwlink/p/?LinkId=128301)  
+
+In web client, presentation description XML uses the .NET API schema and in the runtime it uses the .NET chart library to render charts. In Unified Interface, it uses the combination of the legacy chart designer (with .NET chart metadata schema – the presentation xml), and the runtime chart with [Highcharts](https://api.highcharts.com/highcharts/) schema.
+
+You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.  
+
+The following table shows how different properties behave in Unified Interface:
+
+|Property|Behavior in Unified Interface|
+|--------|------------------|
+|[PalletCustomColor](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.chart.palettecustomcolors?view=netframework-4.8)|The difference is how the color pattern is picked in Unified Interface. It follows the priority as shown below: <br/><br/> - Renders the color defined in the [Series](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series?view=netframework-4.8) node. <br/> - If the color pallet is specified, each chart picks the color from the color pallet. <br/> - If none is specified, Unified Interface picks up the default color pallet.|
+|[CharType](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series.charttype?view=netframework-4.8#System_Web_UI_DataVisualization_Charting_Series_ChartType)|The following charts types are only supported.<br/> - Column <br/> - StackedColumn <br/> - StackedColumn100 <br/> - Bar <br/>- StackedBar <br/> - StackedBar100 <br/> - Area <br/> - StackedArea <br/> - StackedArea100 <br/> - Line <br/> - Pie <br/> - Funnel <br/> - Tag <br/> - Doughnut <br/> - Point|
+|[LegendText](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.datapointcustomproperties.legendtext?view=netframework-4.8)| This property is not supported for funnel and pie charts. For funnel and pie charts, the legend displays each individual data point's value in a series, instead of displaying the name.|
+|[YAxisType](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series.yaxistype?view=netframework-4.8)|In Unified Interface, only `Secondary` Y-axis type is supported and not for X-axis. For example, if you create a multiple series, by default, `YAxisType=Secondary` is added to the second series of the chart.|
+|[LabelFormat](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.datapointcustomproperties.labelformat?view=netframework-4.8)|It supports the [Chart supported numeric format](#unified-interface-chart-supported-numeric-format).|
+|[LabelStyle.Format](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.labelstyle.format?view=netframework-4.8)|It supports the [Chart supported numeric format](#unified-interface-chart-supported-numeric-format).|
+|[IsReversed](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.isreversed?view=netframework-4.8)|This property is only supported for X-axis.|
+|[Interval](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.interval?view=netframework-4.8#System_Web_UI_DataVisualization_Charting_Axis_Interval)|This property is only supported for Y-axis.|
+|[Maximum](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.maximum?view=netframework-4.8)|This property is only supported for Y-axis.|
+|[Minimum](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.minimum?view=netframework-4.8)|This property is only supported for Y-axis.|
+|||
+
+### Unified Interface chart supported numeric format
+
+|Formatting values|Description|
+|------------|----------------|
+|`#,0` | No scaling, No decimals, leading zero|
+|`#,0,.##K`|Thousands, up to 2 decimals, leading zero|
+|`#,0,,.##M`|Millions, up to 2 decimals, leading zero|
+|`#,0,,,.##B` |Billions, up to 2 decimals, leading zero|
+|`C `|Currency with default decimals|
+|`C0 `| Currency with no decimals|
+|`C2`|Currency with 2 decimals|
+|`F0`|Fixed point|
+|`#,0;(#,0);' '`| No scaling, no decimals, leading zero, negative value shown in braces, suppress zeros|
+|#,0,.##K;(#,0,.##K);' ' | Thousands, up to 2 decimals, leading zero negative value shown in braces, suppress zeros|
+|#,0,,.##M;(#,0,,.##M);' ' | Millions,  up to 2 decimals, leading zero negative value shown in braces, suppress zeros|
+|#,0,,,.##B;(#,0,,,.##B);' ' | Billions, up to 2 decimals, leading zero negative value shown in braces, suppress zeros|
+|%|Percent sign (%) in a format string causes a number to be multiplied by 100 before it is formatted|
+|||
+
+### Example 
+
+The following is a sample presentation description XML string:  
   
 ```xml  
 <Chart Palette="BrightPastel">  
@@ -123,7 +164,7 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 ```  
   
  For more sample presentation description XML strings, see [Sample Charts](sample-charts.md).  
-  
+
 ### See also  
  [Visualizations (Charts)](view-data-with-visualizations-charts.md)   
  [Actions on Visualizations (Charts)](actions-visualizations-charts.md)   
