@@ -30,12 +30,62 @@ To access the dashboard:
 The system at a glance section provides main key metrics regarding returning to work, including current value, goal values, and if they have met the goals or not. These key metrics are the number of COVID-19 new cases per day, fatality cases per day, new cases per day for million population, fatality cases per day for million population, reproductive
 number, and facility Readiness checklist completion percentage.
 
-A map highlights facilities location, along with the number of facilities in a certain phase.
+A map highlights facilities location, along with the number of facilities in a certain phase. Hovering over a facilities gives you insights in the virus spread on that location.
 
-Some important statistics are provided on the left side, which includes the number of facilities, facility groups, attestations, and the number of employees for happy, Neutral, and Sad sentiments.
+Some important statistics are provided at the top, which includes the number of facilities, new COVID cases, new Fatal COVID cases and reproductive numbers.
 
 > [!div class="mx-imgBorder"]
 > ![System at glance](media/pbi-dash-system-at-a-glance.png "System at glance")
+
+### Key Metrics
+
+In the dashboard we have a number of key metrics on which you can focus in system at a glance.
+
+1. Phases
+.....
+
+2. New COVID cases per day
+.....
+
+3. New fatal COVID cases per day
+......
+
+4. Effective reproductive numbers
+......
+
+### Filter on a region
+
+When you want to drill down in the facilities, you can filter on them based on the country.
+........
+
+
+## Facility at a glance
+
+Different from the system at a glance’s overall view, facility at a glance tab will let users drill down to each facility, track details of facility open readiness
+and employee sentiment, and attestation. It helps executive leaders to monitor all kinds of key metrics and decide the facility’s opening phase.
+
+> [!div class="mx-imgBorder"]
+> ![Facility view](media/pbi-dash-selected-facility-details.png "Facility view")
+
+### Key metrics
+
+1. Phases / readiness
+......
+
+2. Readiness checklist
+......
+
+## Employee activity 
+
+Employee activity provides an overall time-series view for employee sentiment and attestation daily. Executive leaders can check every day and see
+where numbers were raised or lower compared to previous days.
+
+> [!div class="mx-imgBorder"]
+> ![Employee activity](media/pbi-dash-employee-activity.png "Employee activity")
+
+## Tools
+
+Through the report there are numerous tools ...................
 
 ### Slicer
 
@@ -59,50 +109,6 @@ From the system at a glance tab, we can drill down data to related **Facility at
     > [!div class="mx-imgBorder"]
     > ![Select data point](media/pbi-dash-select-map-location-view-details.png "Select data point")
 
-3. You will see details of interested facility next:
-
-   > [!div class="mx-imgBorder"]
-   > ![Facility at glance](media/pbi-dash-selected-facility-details.png "Facility at glance")
-
-## Virus spread
-
-Virus spread section has COVID-19 cases and reproductive numbers for the country and the state or province level.
-
-> [!div class="mx-imgBorder"]
-> ![Virus spread](media/pbi-dash-virus-spread-cases.png "Virus spread")
-
-> [!div class="mx-imgBorder"]
-> ![Reproductive factor](media/pbi-dash-virus-spread-reproductive-number.png "Reproductive factor")
-
-### Toggle button
-
-The toggle button helps to navigate to another section or topic quickly. The highlighted color indicates the current section or topic.
-
-Example 1 (on top of each page):
-
-> [!div class="mx-imgBorder"]
-> ![Toggle button one](media/pbi-dash-toggle-button1.png "Toggle button one")
-
-Example 2 (on Virus Spread Page):
-
-> [!div class="mx-imgBorder"]
-> ![Toggle button two](media/pbi-dash-toggle-button-virus-spread-page.png "Toggle button two")
-
-## Facility at a glance
-
-Different from the system at a glance’s overall view, facility at a glance tab will let users drill down to each facility, track details of facility open readiness
-and employee sentiment, and attestation. It helps executive leaders to monitor all kinds of key metrics and decide the facility’s opening phase.
-
-> [!div class="mx-imgBorder"]
-> ![Facility view](media/pbi-dash-selected-facility-details.png "Facility view")
-
-## Employee activity 
-
-Employee activity provides an overall time-series view for employee sentiment and attestation daily. Executive leaders can check every day and see
-where numbers were raised or lower compared to previous days.
-
-> [!div class="mx-imgBorder"]
-> ![Employee activity](media/pbi-dash-employee-activity.png "Employee activity")
 
 ### Tooltip
 
