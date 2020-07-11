@@ -110,7 +110,7 @@ Employee activity provides an overall time-series view for employee sentiment an
 
 ## Tools
 
-Through the report there are numerous tools ...................
+Through the report there are numerous tools like sliders, date filters and bookmarks. Some of the visualizations are bar and column charts, cards, gauge charts, maps and more.
 
 ### Slicer
 
