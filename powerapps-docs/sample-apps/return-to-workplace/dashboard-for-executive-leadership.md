@@ -77,8 +77,6 @@ When you want to drill down in the facilities, you can filter on them based on t
 > [!div class="mx-imgBorder"]
 > ![System at glance](media/pbi-dash-report-filter-region.png "Filter by Region")
 
-> [!div class="mx-imgBorder"]
-> ![System at glance](media/pbi-dash-report-filter-region2.png "Filter by Region with Map")
 
 ## Facility at a glance
 
