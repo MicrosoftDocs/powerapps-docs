@@ -35,7 +35,7 @@ A map highlights facilities location, along with the number of facilities in a c
 Some important statistics are provided at the top, which includes the number of facilities, new COVID cases, new Fatal COVID cases and reproductive numbers.
 
 > [!div class="mx-imgBorder"]
-> ![System at glance](media/pbi-dash-system-at-a-glance.png "System at glance")
+> ![System at glance](media/pbi-dash-system-at-a-glance2.png "System at glance")
 
 ### Key Metrics
 
@@ -43,51 +43,72 @@ In the dashboard we have a number of key metrics on which you can focus in syste
 
 1. Phases
 
-
-Review facility phases
+Review phases in which facilities are, number of facilities, new cases, new fatal cases and reproductive number.
 
 > [!div class="mx-imgBorder"]
 > ![System at glance](media/pbi-dash-system-at-a-glance-phases.png "Phases")
 
-
 2. New COVID cases per day
-.....
 
-3. New fatal COVID cases per day
-......
+New confirmed cases and average cases information is available as well for the most active spread states.
+
+> [!div class="mx-imgBorder"]
+> ![System at glance](media/pbi-dash-report-covidcases.png "Covid Cases")
+
+3. Fatal COVID cases per day
+
+The data on confirmed deaths shown in these visualizations. Have easy access to information on the most active spread by states, new fatal cases and total fatal covid cases.
+
+> [!div class="mx-imgBorder"]
+> ![System at glance](media/pbi-dash-report-fatalcovidcases.png "Fatal Covid Cases")
 
 4. Effective reproductive numbers
-......
+
+These are key measure of how fast the virus is growing or decreasing. Showing average number of people who become infected. 
+
+> [!div class="mx-imgBorder"]
+> ![System at glance](media/pbi-dash-report-reproductivenumber.png "Repdroductive Numbers")
+
 
 ### Filter on a region
 
 When you want to drill down in the facilities, you can filter on them based on the country.
-........
 
+> [!div class="mx-imgBorder"]
+> ![System at glance](media/pbi-dash-report-filter-region.png "Filter by Region")
+
+> [!div class="mx-imgBorder"]
+> ![System at glance](media/pbi-dash-report-filter-region2.png "Filter by Region with Map")
 
 ## Facility at a glance
 
-Different from the system at a glance’s overall view, facility at a glance tab will let users drill down to each facility, track details of facility open readiness
-and employee sentiment, and attestation. It helps executive leaders to monitor all kinds of key metrics and decide the facility’s opening phase.
+Different from the system at a glance’s overall view, facility at a glance tab will let users drill down to each facility, track details of facility open readiness, employee sentiment, and attestation. It helps executive leaders to monitor all kinds of key metrics and decide the facility’s opening phase.
 
 > [!div class="mx-imgBorder"]
-> ![Facility view](media/pbi-dash-selected-facility-details.png "Facility view")
+> ![Facility view](media/pbi-dash-selected-facility-details2.png "Facility view")
 
 ### Key metrics
 
-1. Phases / readiness
-......
+1. Phases / Readiness
+
+In this area find employees average sentiment, reproductive numbers, facilities and current phases.
+
+> [!div class="mx-imgBorder"]
+> ![Facility view](media/pbi-dash-report-facility-at-a-galance-PhaseReadiness.png "Phase Readiness")
 
 2. Readiness checklist
-......
+
+The checklist appears with the needed steps to move through the facilities phases.
+
+> [!div class="mx-imgBorder"]
+> ![Facility view](media/pbi-dash-report-facility-at-a-galance-checklist.png "Readiness Checklist")
 
 ## Employee activity 
 
-Employee activity provides an overall time-series view for employee sentiment and attestation daily. Executive leaders can check every day and see
-where numbers were raised or lower compared to previous days.
+Employee activity provides an overall time-series view for employee sentiment and attestation daily. Executive leaders can check every day and see where numbers were raised or lower compared to previous days.
 
 > [!div class="mx-imgBorder"]
-> ![Employee activity](media/pbi-dash-employee-activity.png "Employee activity")
+> ![Employee activity](media/pbi-dash-employee-activity2.png "Employee activity")
 
 ## Tools
 
@@ -99,21 +120,8 @@ Slicer helps the user to quickly slice and dice the data, focusing on only inter
 selections.
 
 > [!div class="mx-imgBorder"]
-> ![Slicer](media/pbi-dash-slicer-country-state.png "slicer")
+> ![Slicer](media/pbi-dash-report-filter-region2.png "slicer")
 
-### Drill through page
-
-From the system at a glance tab, we can drill down data to related **Facility at a Glance** tab. Two ways getting to  the **Drill-Through Facility at a Glance** page:
-
-1. Right-click and select **Drill through**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Drill through](media/pbi-dash-facility-glance-drillthru.png "Drill through")
-
-2. Select the data point and then select the drill through function.
-
-    > [!div class="mx-imgBorder"]
-    > ![Select data point](media/pbi-dash-select-map-location-view-details.png "Select data point")
 
 
 ### Tooltip
@@ -122,7 +130,8 @@ By hovering over the transition part of the ribbon chart, users can quickly get 
 insight on number changes on the tooltip.
 
 > [!div class="mx-imgBorder"]
-> ![Tooltip](media/pbi-dash-transition-hover-metrics.png "Tooltip")
+> ![Tooltip](media/pbi-dash-transition-hover-metrics3.png "Tooltip")
+
 
 ## Data Sources
 
