@@ -1,5 +1,14 @@
 ---
-title: "Pattern: Communication / Announcement"
+title: "Power Apps Pattern: Communication | Microsoft Docs"
+description: Learn how Communication apps help you quickly share news, event announcements, and the latest up-to-date info with your employees no matter where they are.
+author: kathyos
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 07/20/2020
+ms.author: vabhavir
+ms.reviewer: kathyos
+
 ---
 
 

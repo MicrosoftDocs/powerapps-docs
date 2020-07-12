@@ -1,5 +1,14 @@
 ---
-title: "Pattern: Calculation"
+title: "Power Apps Pattern: Calculation | Microsoft Docs"
+description: Learn how Calculation apps make work easier and more accurate. For example, help someone select the right part, adjust equipment, or provide a price estimate.
+author: kathyos
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 07/20/2020
+ms.author: phtopnes
+ms.reviewer: kathyos
+
 ---
 
 # Pattern: Calculation

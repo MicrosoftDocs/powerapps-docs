@@ -1,5 +1,14 @@
 ---
-title: "Pattern: Inspection, Audit, Questionnaire"
+title: "Power Apps Pattern: Inspection | Microsoft Docs"
+description: See real-world examples of how customers have used Power Apps to create timely, efficient, and actionable inspections, from aircraft maintenance to elementary school.
+author: kathyos
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 07/20/2020
+ms.author: kathyos
+ms.reviewer: kathyos
+
 ---
 
 # Pattern: Inspection, Audit, Questionnaire

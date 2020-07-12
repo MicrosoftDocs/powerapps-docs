@@ -1,4 +1,17 @@
-# Power Platform Patterns
+---
+title: "Power Apps Patterns: Overview | Microsoft Docs"
+description: Learn about some of the most common enterprise uses for Power Platform and the patterns that successful makers have used to bring these solutions to life.
+author: kathyos
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: guidance
+ms.date: 07/20/2020
+ms.author: kathyos
+ms.reviewer: kathyos
+
+---
+
+# Power Apps Patterns
 
 With Power Platform, you can easily create apps that are tailored to your
 organization’s specific needs.  While your needs might be unique, we see some
@@ -26,7 +39,7 @@ We’ll continue to add patterns over time.
    :::column span="":::
       **Calculation/Transformation**
     
-      [Read more about the Calculator pattern, including real-world uses cases](communication-pattern.md)
+      [Read more about the Calculator pattern, including real-world uses cases](calculator-pattern.md)
    :::column-end:::
    :::column span="":::
       In a typical calculation scenario: 
@@ -105,7 +118,7 @@ We’ll continue to add patterns over time.
     :::column:::
        **Approvals**
 
-       [Find real-world use cases](more-patterns.md)
+       [Find real-world approvals use cases](more-patterns.md#approvals)
     :::column-end:::
     :::column:::
         Collect approval from one or more sources
@@ -122,7 +135,7 @@ We’ll continue to add patterns over time.
     :::column:::
        **Asset management**
 
-       [Find real-world use cases](more-patterns.md)
+       [Find real-world asset management use cases](more-patterns.md)
     :::column-end:::
     :::column:::
         Manage inventory or other assets
@@ -139,7 +152,7 @@ We’ll continue to add patterns over time.
     :::column:::
        **Event management**
 
-       [Find real-world use cases](more-patterns.md)
+       [Find real-world event management use cases](more-patterns.md#event-management)
     :::column-end:::
     :::column:::
         Manage registration, planning, and/or conducting an event
@@ -154,26 +167,9 @@ We’ll continue to add patterns over time.
 :::row-end:::
 :::row:::
     :::column:::
-       **Knowledge base**
-
-       [Find real-world use cases](more-patterns.md)
-    :::column-end:::
-    :::column:::
-        Collect information to be searched and displayed
-    :::column-end:::
-    :::column:::
-        Example use cases: 
-      - Business card scanner
-      - Customer notebook
-      - Product knowledge base
-
-    :::column-end:::
-:::row-end:::
-:::row:::
-    :::column:::
        **Lifecycle or workflow management**
 
-       [Find real-world use cases](more-patterns.md)
+       [Find real-world workflow management use cases](more-patterns.md#lifecycle-or-workflow-management)
     :::column-end:::
     :::column:::
         Track and move a record through a well-defined process
@@ -195,7 +191,7 @@ We’ll continue to add patterns over time.
     :::column:::
        **Scheduling**
 
-       [Find real-world use cases](more-patterns.md)
+       [Find real-world scheduling use cases](more-patterns.md#scheduling)
     :::column-end:::
     :::column:::
         Assign resources based on calendar availability
