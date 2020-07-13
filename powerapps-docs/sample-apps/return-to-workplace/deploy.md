@@ -62,14 +62,14 @@ Follow the steps below to install the Return to the Workplace solution:
 
 ## Step 3: Configure and publish Power BI dashboard
 
-The Return to the Workplace solution has three Power BI dashboards, one for executive leadership, one for the facility managers, and one for the case managers.
+The Return to the Workplace solution has two Power BI dashboards, one for executive leadership and one for the facility managers.
 
-1. Go to Microsoft AppSource (TODO: Link to be available soon) to install the **Return to the Workplace solution**. Open the **Return to the Workplace – Leadership** dashboard.
+1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install the **Return to the Workplace solution**. Then open the **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard in Power BI service or desktop.
 
    > [!div class="mx-imgBorder"]
    > ![Open dashboards](media/deploy-pbi-dashboard-view.png "Open dashboards")
 
-2. In Power BI service or Power BI desktop, select **Transform data** and select **Edit Parameters**.
+2. After opening, select **Transform data** and select **Edit Parameters**.
 
    > [!div class="mx-imgBorder"]
    > ![Transform data](media/deploy-pbi.png "Transform data")
@@ -95,12 +95,12 @@ The facility manager Power BI dashboard is used in the model-driven app. Since t
 
 2. Select **System Settings** , and then on the **Reporting** tab, select **Yes**.
 
-3. Go to [Power Apps](https://make.powerapps.com), select **Data** in the left pane, and then select **Entities**. On the top-right corner, remove the **Default** filter and select **All**. Select the **Facility** entity from the list and then in the **Forms** tab, select the **Information Form**.
+3. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, press **add existing**, then select entity. From the list of entities select **Facility** and in **select components**, select in the **Forms** tab the **Information Form**.
 
    > [!div class="mx-imgBorder"]
    > ![Facility form](media/deploy-new-facility-form.png "Facility form")
 
-4. Click **Switch to classic** to move back to the old interface. In Power BI, select the appropriate **Workspace aka Group** and **Dashboard**. Select **Save** and **Publish**.
+4. Export the solution and then apply the following changes in the FormXML [link](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form). Reimport the solution and then **publish all customizations**.
 
    > [!div class="mx-imgBorder"]
    > ![Power BI tile](media/deploy-pbi-set-tile.png "Power BI tile")
