@@ -109,7 +109,7 @@ transitions. To monitor a facility.
 2. Select the desired facility record to access the facility data. The **General** tab shows the facility manager dashboard. The dashboard shows the COVID-19 data based on the address details of the facility, checklist completion for the current phase, employee attestation, and employee sentiment. More information: [Power BI dashboard]().
 
    > [!div class="mx-imgBorder"]
-   > ![Facility at glance](media/facility-manager-facility-at-glance.png "Facility at glance")
+   > ![Facility at glance](media/facility-manager-facility-at-glance1.png "Facility at glance")
 
 3. Select **Details** tab for the selected facility
  
@@ -119,7 +119,7 @@ transitions. To monitor a facility.
 4. Select **Checklist** tab for the selected facility to see checklist items and their completion status.
 
     > [!div class="mx-imgBorder"]
-    > ![Checklist two](media/facility-manager-checklist-2.png "Checklist two") 
+    > ![Checklist two](media/facility-manager-checklist-2-1.png "Checklist two") 
 
 5. Select **Transitions** tab for the selected facility to see any related transition requests and their status.
 
@@ -128,7 +128,7 @@ transitions. To monitor a facility.
 
 ### Updating the checklist
 
-The **Checklist** tab contains a canvas app displaying the check-in the checklist for the current facility or phase combination. The app provides an easy way for the users to find checks by category and then update the individual checks, where applicable. To locate and update checks:
+The **Checklist** tab contains a editable grid displaying the check-in the checklist for the current facility or phase combination. The editable grid provides an easy way for the users to find checks by category and then update the individual checks, where applicable. To locate and update checks:
 
 1. Select **Facilities** from the left pane to see the list of active facilities
 
@@ -137,20 +137,21 @@ The **Checklist** tab contains a canvas app displaying the check-in the checklis
 3. Select **Checklist** tab for the selected facility to see the checklist items and their completion status.
 
    > [!div class="mx-imgBorder"]
-   > ![Checklist](media/facility-manager-checklist-1.png "Checklist")
+   > ![Checklist](media/facility-manager-checklist-2-1.png "Checklist")
 
 4. Select the category from the **Categories** drop-list that you want to search
     within to locate the checks you want to review or update.
 
    > [!div class="mx-imgBorder"]
-   > ![Category drop-list](media/facility-manager-categories-droplist.png "Category drop-list")
+   > ![Category drop-list](media/facility-manager-categories-droplist1.png "Category drop-list")
 
-5. Select the checkbox to confirm the check is completed.
+5. Select the dropdown and select **Yes** to confirm the check is completed, add the **date** in the completion 
+   date column.
 
-6. Add comments in the provided text box and select **Save** that appears next to the text entered.
+6. Select **Save** to update the checklist.
 
     > [!div class="mx-imgBorder"]
-    > ![Add comments](media/facility-manager-facility-completed-check.png "Add comments")
+    > ![Add comments](media/facility-manager-facility-completed-check1.png "Add comments")
 
 ## Moving facility to a new phase
 
