@@ -231,8 +231,7 @@ To edit the record, select the newly created record, update the values as requir
 
 ## Import facilities 
 
-The facility sample data file is available in the deployment package (.zip file). When you extract the .zip file, the sample data files are available under the
-**SampleData** folder.
+The facility sample data file is available in the package. When you want to import your own facilities, you can download a template for facility. ([link](https://docs.microsoft.com/en-us/power-platform/admin/download-template-data-import))
 
 ### How to import facility data from data files
 
