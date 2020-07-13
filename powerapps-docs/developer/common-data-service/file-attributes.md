@@ -153,7 +153,7 @@ x-ms-file-name: sample.png
 
 **Request** (alternate form)
 
-This form of the request uses a query string parameter and supports non-ASCII language file names.
+This form of the request uses a query string parameter and supports non-ASCII language file names. If the file name is specified in both the header and as a query string parameter, the header value has precedence.
 
 ```http
 PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute?x-ms-file-name=测试.txt
