@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/21/2020
+ms.date: 07/13/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -181,14 +181,13 @@ Internal users with Azure Active Directory credentials trying to sign-in without
 
 ![Portal login error](media/portal-login-error.png "Portal login error")
 
-Depending on the SKU type purchased, an administrator will need to either provide an appropriate license to the user, or have app passes available to the environment. If app passes are allocated to the environment, the portal will have to be restarted for changes to take effect.
+Depending on the purchased SKU type - such as different *Dynamics 365 SKUs*, *Power Apps per app plan* or *Power Apps per user plan*, an administrator will need to either provide an appropriate license to the users, or have appropriate number of app passes available to the environment. For more information about app passes, go to [Allocate or change capacity in an environment](https://docs.microsoft.com/power-platform/admin/capacity-add-on#allocate-or-change-capacity-in-an-environment). Once app passes are allocated to the environment, the portal will have to be restarted for changes to take effect.
 
-> [!NOTE]
-> Guest users added for [B2B collaboration](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator) in the Azure Active Directory won't be considered as internal users, and will require logins.
+Guest users added for [B2B collaboration](https://docs.microsoft.com/azure/active-directory/b2b/add-users-administrator) in the Azure Active Directory won't be considered as internal users, and will require logins.
 
 For details about licensing of internal users, go to [Portal Licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). 
 
-For details about use rights to portals for internal users, go to [use rights to portals for internal users](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users).
+For details about use rights to portals for internal users, go to FAQ [use rights to portals for internal users](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users) and [Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) section **Power Apps Portals – Use rights for Internal users**.
 
 ## Common Data Service environment lifecycle
 
