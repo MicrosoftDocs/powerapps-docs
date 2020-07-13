@@ -62,8 +62,8 @@ To create this data source as a collection, set the **OnSelect** property of a *
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **ForAll(&nbsp;Squares, Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** |For all the records of the input table, calculates the square root of the **Value** column.  The **Sqrt** function can also be used with a single-column table, making it possible perform this example without using **ForAll**. |<style> img { max-width: none } </style> ![](media/function-forall/sqrt.png) |
-| **ForAll(&nbsp;Squares, Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** |For all the records of the input table, raises the **Value** column to the third power.  The **Power** function does not support single-column tables. Therefore, **ForAll** must be used in this case. |<style> img { max-width: none } </style> ![](media/function-forall/power3.png) |
+| **ForAll(&nbsp;Squares, Sqrt(&nbsp;Value&nbsp;)&nbsp;)**<br><br>**Sqrt(&nbsp;Squares&nbsp;)** |For all the records of the input table, calculates the square root of the **Value** column.  The **Sqrt** function can also be used with a single-column table, making it possible perform this example without using **ForAll**. | ![](media/function-forall/sqrt.png) |
+| **ForAll(&nbsp;Squares, Power(&nbsp;Value,&nbsp;3&nbsp;)&nbsp;)** |For all the records of the input table, raises the **Value** column to the third power.  The **Power** function does not support single-column tables. Therefore, **ForAll** must be used in this case. | ![](media/function-forall/power3.png) |
 
 ### Using a connection
 The following examples use the **Expressions** [data source](../working-with-data-sources.md):
@@ -78,8 +78,8 @@ This example also uses a [Microsoft Translator](../connections/connection-micros
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **ForAll( Expressions, MicrosoftTranslator.Translate( Value, "es" ) )** |For all the records in the Expressions table, translate the contents of the **Value** column into Spanish (abbreviated "es"). |<style> img { max-width: none } </style> ![](media/function-forall/translate-es.png) |
-| **ForAll( Expressions, MicrosoftTranslator.Translate( Value, "fr" ) )** |For all the records in the Expressions table, translate the contents of the **Value** column into French (abbreviated "fr"). |<style> img { max-width: none } </style> ![](media/function-forall/translate-fr.png) |
+| **ForAll( Expressions, MicrosoftTranslator.Translate( Value, "es" ) )** |For all the records in the Expressions table, translate the contents of the **Value** column into Spanish (abbreviated "es"). | ![](media/function-forall/translate-es.png) |
+| **ForAll( Expressions, MicrosoftTranslator.Translate( Value, "fr" ) )** |For all the records in the Expressions table, translate the contents of the **Value** column into French (abbreviated "fr"). | ![](media/function-forall/translate-fr.png) |
 
 ### Copying a table
 Sometimes you need to filter, shape, sort, and manipulate data.  Power Apps provides a number of functions for doing this, such as **Filter**, **AddColumns**, and **Sort**.  Power Apps treats each table as a value, allowing it to flow through formulas and be consumed easily.      

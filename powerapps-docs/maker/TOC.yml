@@ -133,6 +133,8 @@
         href: ../user/export-excel-pivottable.md
       - name: Merge duplicate records
         href: ../user/merge-duplicate-records.md
+      - name: Troubleshoot export to Excel  
+        href: ../user/ts-export-to-excel.md
     - name: Reports
       items:
       - name: Work with reports
@@ -923,7 +925,7 @@
           href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
         - name: How to use drop down list with choices from lookup column in a SharePoint list?
           href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: How to customize an app screen baed on column status inside SharePoint list?
+        - name: How to customize an app screen based on column status inside SharePoint list?
           href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
         - name: How to work with permissions in a lookup list from SharePoint site?
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
@@ -1149,6 +1151,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
         - name: Add the calendar control to entities
           href: ./model-driven-apps/add-calendar-control.md
+        - name: Add the news control to an entity
+          href: ./model-driven-apps/stay-current-with-news-control.md          
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
@@ -1223,6 +1227,8 @@
       href: ./portals/overview.md
     - name: Release updates
       href: ./portals/release-updates.md
+    - name: "Microsoft Learn: Get started with Power Apps portals"
+      href: https://docs.microsoft.com/learn/modules/intro-portals/
     - name: Design and build a portal
       items:
         - name: Portal templates
@@ -1479,6 +1485,16 @@
   items:
   - name: What is Common Data Service?
     href: ./common-data-service/data-platform-intro.md
+  - name: Why choose Common Data Service? 
+    items:
+    - name: Overview
+      href: ./common-data-service/why-cds-overview.md
+    - name: Work with any data
+      href: ./common-data-service/why-cds-work-with-data.md
+    - name: Importing and exporting data
+      href: ./common-data-service/why-cds-import-export.md
+    - name: Work with any app
+      href: ./common-data-service/why-cds-any-type-app.md
   - name: Work with entities
     items:
     - name: Entity overview
@@ -1678,6 +1694,8 @@
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
+- name: Chatbots
+  href: ../chatbots.md
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
