@@ -18,7 +18,7 @@ search.app:
 
 # Override the default open behavior of data rows in an entity-bound grid
 
-This article provides step-by-step instructions on how to override the default open behavior of data rows in an entity-bound grid. Currently, performing any of the following actions in a data row in an entity-bound grid opens the entity record by default:
+Performing any of the following actions in a data row in an entity-bound grid opens the entity record by default:
 
 - Double-clicking the data row or clicking the primary attribute link in the row.
 - Selecting a data row, and pressing ENTER.
