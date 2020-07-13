@@ -58,7 +58,7 @@ Follow the steps below to install the Return to the Workplace solution:
 3. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
 
     > [!div class="mx-imgBorder"]
-    > ![List of Apps](media/rtw-apps.png "List of Apps")
+    > ![List of Apps](media/rtw-apps1.png "List of Apps")
 
 ## Step 3: Configure and publish Power BI dashboard
 
@@ -67,7 +67,7 @@ The Return to the Workplace solution has two Power BI dashboards, one for execut
 1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard. Open the **Return to the Workplace** dashboards in the Power BI service or Power BI desktop.
 
    > [!div class="mx-imgBorder"]
-   > ![Open dashboards](media/deploy-pbi-dashboard-view.png "Open dashboards")
+   > ![Open dashboards](media/deploy-pbi-dashboard-view1.png "Open dashboards")
 
 2. After opening, select **Transform data** and select **Edit Parameters**.
 
@@ -139,10 +139,10 @@ To share canvas apps to the users:
 
 2. On the left pane, select **Apps** to view the list of all your apps.
 
-3. Select the **Employee Questionnaire App**.
+3. Select the **Employee Return to the Workplace App**.
  
    > [!div class="mx-imgBorder"]
-   > ![Select app](media/deploy-select-app-employee-questionnaire.png "Select app")
+   > ![Select app](media/deploy-select-app-employee.png "Select app")
 
 3. Select the app you want, and select **Share**.
 
@@ -150,11 +150,6 @@ To share canvas apps to the users:
    > ![Share app](media/deploy-share-app.png "Share app")
 
 4. Select users from the list of available users to whom you want to share the app.
-
-5. Repeat this process for other apps too.
-
-   > [!div class="mx-imgBorder"]
-   > ![Checklist app](media/deploy-select-app-checklist.png)
 
 ## Step 7: Set the security roles
 
