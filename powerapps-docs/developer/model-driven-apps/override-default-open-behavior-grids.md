@@ -24,7 +24,7 @@ This article provides step-by-step instructions on how to override the default o
 - Selecting a data row, and pressing ENTER.
 - On a touch-enabled device, selecting a data row.
 
-There might be situations where you do not want the entity record to open, but want to open a URL in a new tab instead of displaying the record. You can override the default behavior to define your own custom behavior by creating a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the Id attribute `CommandDefinition`, and defining custom action in the `Actions` tab. The application looks for the `Mscrm.OpenRecordItem` command Id for an entity when you try to open a record from the entity-bound grid, and if present, will execute the custom action instead of opening the entity record (default behavior).
+There might be situations where you don't want the entity record to open (default behavior), but want a custom action to be performed such as open a URL or execute JavaScript functions. You can override the default behavior to define your own custom behavior by creating a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the Id attribute `CommandDefinition`, and define custom action in the `Actions` tab. The application looks for the `Mscrm.OpenRecordItem` command Id for an entity when you try to open a record from the entity-bound grid, and if present, will execute the custom action instead of opening the entity record (default behavior).
 
 > [!NOTE] 
 > - This feature is supported only for Unified Interface.
