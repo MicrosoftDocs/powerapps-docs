@@ -102,9 +102,6 @@ The facility manager Power BI dashboard is used in the model-driven app. Since t
 
 4. Export the solution and then apply the following changes in the FormXML [link](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form). Reimport the solution and then **publish all customizations**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Power BI tile](media/deploy-pbi-set-tile.png "Power BI tile")
-
 For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
 
 ## Step 5: Publish theme
