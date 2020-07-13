@@ -90,11 +90,13 @@ Charts display data visually by mapping textual values on two axes: horizontal (
   
  For more sample data description XML strings, see [Sample Charts](sample-charts.md).  
   
-## Use the presentation description XML string to specify data representation in web client
+## Use the presentation description XML string to specify data representation 
 
 The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx) class in Microsoft Chart Controls. More information: [Chart Controls](https://go.microsoft.com/fwlink/p/?LinkId=128301)  
 
-In web client, presentation description XML uses the .NET API schema and in the runtime it uses the .NET chart library to render charts. In Unified Interface, it uses the combination of the legacy chart designer (with .NET chart metadata schema – the presentation xml), and the runtime chart with [Highcharts](https://api.highcharts.com/highcharts/) schema.
+> [!IMPORTANT]
+> In web client, presentation description XML uses the .NET API schema and in the runtime it uses the .NET chart library to render charts. <br/>
+> In Unified Interface, it uses the combination of the legacy chart designer (with .NET chart metadata schema – the presentation xml), and the runtime chart with [Highcharts](https://api.highcharts.com/highcharts/) schema.
 
 You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.  
 
@@ -102,19 +104,19 @@ The following table shows how different properties behave in Unified Interface:
 
 |Property|Behavior in Unified Interface|
 |--------|------------------|
-|[PalletCustomColor](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.chart.palettecustomcolors?view=netframework-4.8)|The difference is how the color pattern is picked in Unified Interface. It follows the priority as shown below: <br/><br/> - Renders the color defined in the [Series](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series?view=netframework-4.8) node. <br/> - If the color pallet is specified, each chart picks the color from the color pallet. <br/> - If none is specified, Unified Interface picks up the default color pallet.|
+|[PalletCustomColor](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.chart.palettecustomcolors?view=netframework-4.8)|The difference is how the color pattern is picked in Unified Interface. It follows the priority as shown below: <br/> - Renders the color defined in the [Series](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series?view=netframework-4.8) node. <br/> - If the color pallet is specified, chart picks the color from the color pallet. <br/> - If none is specified, it picks up the default color pallet.|
 |[CharType](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series.charttype?view=netframework-4.8#System_Web_UI_DataVisualization_Charting_Series_ChartType)|The following charts types are only supported.<br/> - Column <br/> - StackedColumn <br/> - StackedColumn100 <br/> - Bar <br/>- StackedBar <br/> - StackedBar100 <br/> - Area <br/> - StackedArea <br/> - StackedArea100 <br/> - Line <br/> - Pie <br/> - Funnel <br/> - Tag <br/> - Doughnut <br/> - Point|
 |[LegendText](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.datapointcustomproperties.legendtext?view=netframework-4.8)| This property is not supported for funnel and pie charts. For funnel and pie charts, the legend displays each individual data point's value in a series, instead of displaying the name.|
-|[YAxisType](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series.yaxistype?view=netframework-4.8)|In Unified Interface, only `Secondary` Y-axis type is supported and not for X-axis. For example, if you create a multiple series, by default, `YAxisType=Secondary` is added to the second series of the chart.|
-|[LabelFormat](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.datapointcustomproperties.labelformat?view=netframework-4.8)|It supports the [Chart supported numeric format](#unified-interface-chart-supported-numeric-format).|
-|[LabelStyle.Format](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.labelstyle.format?view=netframework-4.8)|It supports the [Chart supported numeric format](#unified-interface-chart-supported-numeric-format).|
+|[YAxisType](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series.yaxistype?view=netframework-4.8)|In Unified Interface, only `Secondary` Y-axis type is supported and not the `Secondary` X-axis. For example, if you create a multiple series, by default, `YAxisType=Secondary` is added to the second series of the chart.|
+|[LabelFormat](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.datapointcustomproperties.labelformat?view=netframework-4.8)|It supports the [Chart supported numeric format](#supported-numeric-format-for-charts-in-unified-interface).|
+|[LabelStyle.Format](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.labelstyle.format?view=netframework-4.8)|It supports the [Chart supported numeric format](#supported-numeric-format-for-charts-in-unified-interface).|
 |[IsReversed](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.isreversed?view=netframework-4.8)|This property is only supported for X-axis.|
 |[Interval](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.interval?view=netframework-4.8#System_Web_UI_DataVisualization_Charting_Axis_Interval)|This property is only supported for Y-axis.|
 |[Maximum](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.maximum?view=netframework-4.8)|This property is only supported for Y-axis.|
 |[Minimum](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.minimum?view=netframework-4.8)|This property is only supported for Y-axis.|
 |||
 
-### Unified Interface chart supported numeric format
+### Supported numeric format for charts in Unified Interface
 
 |Formatting values|Description|
 |------------|----------------|
@@ -122,8 +124,8 @@ The following table shows how different properties behave in Unified Interface:
 |`#,0,.##K`|Thousands, up to 2 decimals, leading zero|
 |`#,0,,.##M`|Millions, up to 2 decimals, leading zero|
 |`#,0,,,.##B` |Billions, up to 2 decimals, leading zero|
-|`C `|Currency with default decimals|
-|`C0 `| Currency with no decimals|
+|`C`|Currency with default decimals|
+|`C0`| Currency with no decimals|
 |`C2`|Currency with 2 decimals|
 |`F0`|Fixed point|
 |`#,0;(#,0);' '`| No scaling, no decimals, leading zero, negative value shown in braces, suppress zeros|
