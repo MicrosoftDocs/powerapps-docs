@@ -299,6 +299,21 @@ Theming allows you to change the experience of the employee.
 
    > [!div class="mx-imgBorder"]
    > ![Theme color](media/deploy-theme-colors.png "Theme color")
+   
+## Sample Data
+
+For demo purpose the solution includes sample data around the different entities in the solution. The data from the following entities is adviced to be removed to import your own data:
+
+- Facilities
+- Facility Groups
+- Facility Types
+- Employees
+- Solution Settings
+
+The sample data is also expended with two flows, these need to be disabled when you are not using the sample data.
+
+- Sample Data - Generate Employee Records
+- Sample Data - Generate Facility transitions
 
 ## Bulk record deletion
 
