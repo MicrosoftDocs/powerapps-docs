@@ -159,7 +159,7 @@ This is the first process stage, the Health and Safety lead starts the case and 
 - Health & Safety Lead - Case Manager owning the case.
 
   > [!div class="mx-imgBorder"]
-  > ![Open stage](media/health-safety-bpf-open.png "Open stage")
+  > ![Open stage](media/health-safety-bpf-open1.png "Open stage")
 
 #### Investigating
 
@@ -173,7 +173,7 @@ The key pieces of data to be captured and recorded before moving to the next sta
 - Risk Assessment
 
   > [!div class="mx-imgBorder"]
-  > ![Investigation stage](media/health-safety-bpf-investigating.png "Investigation stage")
+  > ![Investigation stage](media/health-safety-bpf-investigating1.png "Investigation stage")
 
 #### Monitoring
 
