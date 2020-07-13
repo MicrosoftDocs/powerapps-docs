@@ -100,21 +100,43 @@ The presentation description XML string contains information about the appearanc
 
 You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.  
 
-The following table shows how different properties behave in Unified Interface:
+The following table shows the methods and properties that are supported in Unified Interface:
 
-|Property|Behavior in Unified Interface|
-|--------|------------------|
-|[PalletCustomColor](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.chart.palettecustomcolors?view=netframework-4.8)|The difference is how the color pattern is picked in Unified Interface. It follows the priority as shown below: <br/> - Renders the color defined in the [Series](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series?view=netframework-4.8) node. <br/> - If the color pallet is specified, chart picks the color from the color pallet. <br/> - If none is specified, it picks up the default color pallet.|
-|[CharType](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series.charttype?view=netframework-4.8#System_Web_UI_DataVisualization_Charting_Series_ChartType)|The following charts types are only supported.<br/> - Column <br/> - StackedColumn <br/> - StackedColumn100 <br/> - Bar <br/>- StackedBar <br/> - StackedBar100 <br/> - Area <br/> - StackedArea <br/> - StackedArea100 <br/> - Line <br/> - Pie <br/> - Funnel <br/> - Tag <br/> - Doughnut <br/> - Point|
-|[LegendText](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.datapointcustomproperties.legendtext?view=netframework-4.8)| This property is not supported for funnel and pie charts. For funnel and pie charts, the legend displays each individual data point's value in a series, instead of displaying the name.|
-|[YAxisType](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series.yaxistype?view=netframework-4.8)|In Unified Interface, only `Secondary` Y-axis type is supported and not the `Secondary` X-axis. For example, if you create a multiple series, by default, `YAxisType=Secondary` is added to the second series of the chart.|
-|[LabelFormat](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.datapointcustomproperties.labelformat?view=netframework-4.8)|It supports the [Chart supported numeric format](#supported-numeric-format-for-charts-in-unified-interface).|
-|[LabelStyle.Format](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.labelstyle.format?view=netframework-4.8)|It supports the [Chart supported numeric format](#supported-numeric-format-for-charts-in-unified-interface).|
-|[IsReversed](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.isreversed?view=netframework-4.8)|This property is only supported for X-axis.|
-|[Interval](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.interval?view=netframework-4.8#System_Web_UI_DataVisualization_Charting_Axis_Interval)|This property is only supported for Y-axis.|
-|[Maximum](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.maximum?view=netframework-4.8)|This property is only supported for Y-axis.|
-|[Minimum](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.axis.minimum?view=netframework-4.8)|This property is only supported for Y-axis.|
-|||
+## Chart
+
+The root class for the charts. 
+
+### Properties
+
+|Property Name|Description|
+|-------------|------------|
+|PaletteCustomColor|Gets or sets an array of custom palette colors.  It follows the priority as shown below: <br/> - Renders the color defined in the [Series](https://docs.microsoft.com/dotnet/api/system.web.ui.datavisualization.charting.series?view=netframework-4.8) node. <br/> - If the color pallet is specified, chart picks the color from the color pallet. <br/> - If none is specified, it picks up the default color pallet.|
+
+#### Example
+
+```xml
+<Chart Palette="None" PaletteCustomColors="91, 151, 213; #4169E1, red, 127,97,142,206">
+```
+
+## Legend
+
+Represents the legend for the chart image.
+
+### Properties
+
+|Property Name| Description|
+|-------------|------------|
+|Enabled| Defines whether the legend is enabled. By default it is set to `True`.|
+
+## Series
+
+Stores data points and series attributes.
+
+### Properties
+
+|Property Name| Description|
+|-------------|------------|
+|ChartType| An enumeration value that indicates the chart type that is used to represent the series. The default value is Column.|
 
 ### Supported numeric format for charts in Unified Interface
 
