@@ -254,7 +254,7 @@ To import sample facility data from the Excel file to the facility entity:
 
 ## Specify solution settings
 
-The overall solution requires certain configurations to be made to make sure that the user has the correct information. Through solution settings, contacts, emails, and attestations can be configured. Through themes, you can tailor the experience of an employee according to the company branding.
+The overall solution requires certain configurations to be made to make sure that the user has the correct information. Through solution settings, your own terms of agreement, health terms of agreement and contact email can be configured. Theming allows you to not only define your own settings, but also to tailor the experience to your company branding.
 
 When setting up the solution, you go through the following steps:
 
@@ -264,7 +264,7 @@ When setting up the solution, you go through the following steps:
 
 ## Set solution settings
 
-With solution settings, you can tailor the experience for the employees to match the company guidelines and culture. To set solution settings:
+With solution settings, you define the terms of agreement which is applicable to your company. Solution settings are linked to groups or to the entire organization, this makes it possible to differentiate per facilities. One solution setting will act as default and will be applicable for every facility, which will be the solution setting that has an empty group. To set solution settings:
 
 1. Select **Solution Settings** in the left pane and select **New**.
 
