@@ -19,7 +19,7 @@ The main components of the Return to the Workplace solution:
 
 - **Facility safety management** give facility managers the tools they need to keep your locations open safely. Facility safety management helps you maintain a safe environment with tools for monitoring occupancy, health supplies, safety procedures, and other facility-related best practices.
 
-- **Employee return to the workplace** offer your workfoce the self-service tools they need to feel confident about returning and remain productive while onsite. Employee return to the workplace allows them to check in to work remotely, self-screen before entering a building, and reserve a workspace virtually (coming soon).
+- **Employee return to the workplace** offer your workfoce the self-service tools they need to feel confident about returning and remain productive while onsite. Employee return to the workplace allows them to check in to work remotely and self-screen before entering a building.
 
 - **Workplace care management** gives health and safety leaders tools to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. Executive dashboards enable monitoring of all Workplace Care Management data.
 
