@@ -24,18 +24,11 @@ This article provides step-by-step instructions on how to override the default o
 - Selecting a data row, and pressing ENTER.
 - On a touch-enabled device, selecting a data row.
 
-There might be situations where you do not want the entity record to open, but want to open a URL in a new tab instead of displaying the record. You can now override the default behavior to define your own custom behavior.
+There might be situations where you do not want the entity record to open, but want to open a URL in a new tab instead of displaying the record. You can override the default behavior to define your own custom behavior by creating a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the Id attribute `CommandDefinition`, and defining custom action in the `Actions` tab. The application looks for the `Mscrm.OpenRecordItem` command Id for an entity when you try to open a record from the entity-bound grid, and if present, will execute the custom action instead of opening the entity record (default behavior).
 
 > [!NOTE] 
-> This feature is supported only for Unified Interface.
-
-You can now create a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the Id attribute `CommandDefinition`, and define custom action in the `Actions` tab. The application looks for this command Id for an entity when you try to open a record from the entity-bound grid, and if present, will execute the custom action instead of opening the entity record (default behavior).
-
-> [!NOTE]
-> - Ribbon Workbench is a third-party tool that allows you to quickly create buttons on forms.
-> - Tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
-
-To override the default open behavior of data rows in entity-bound grids, follow the steps below:
+> - This feature is supported only for Unified Interface.
+> - You can also use, Ribbon Workbench, a community tool to visually edit ribbons using the UI. Note that tools created by the community are not supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
 ## Step 1: Create a web resource
 
