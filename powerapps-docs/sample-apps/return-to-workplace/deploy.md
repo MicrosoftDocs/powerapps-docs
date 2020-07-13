@@ -48,7 +48,7 @@ After you have created your environment, you can access it using the following U
 
 Follow the steps below to install the Return to the Workplace solution:
 
-1. Go to Microsoft AppSource (TODO: Link to be available soon) to install the **Return to the Workplace solution**.
+1. Go to Microsoft AppSource ([link](https://aka.ms/rtw-app)) to install the **Return to the Workplace solution**.
 
     > [!div class="mx-imgBorder"]
     > ![Installation Page](media/return-to-workplace-installationpage.png "Installation Page")
@@ -64,7 +64,7 @@ Follow the steps below to install the Return to the Workplace solution:
 
 The Return to the Workplace solution has two Power BI dashboards, one for executive leadership and one for the facility managers.
 
-1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install the **Return to the Workplace solution**. Then open the **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard in Power BI service or desktop.
+1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard. Open the **Return to the Workplace** dashboards in the Power BI service or Power BI desktop.
 
    > [!div class="mx-imgBorder"]
    > ![Open dashboards](media/deploy-pbi-dashboard-view.png "Open dashboards")
@@ -165,6 +165,8 @@ In the Return to the Workplace solution, you'll see the following security roles
 - Return to the Workplace - Facility Manager, which allows people to look at the facilities and plan phasing.
 
 - Return to the Workplace - Leadership, which allows you to view the details over the entire system.
+
+- Return to the Workplace - Health & Safety Leader, which managers employee cases.
 
 To assign security roles:
 
