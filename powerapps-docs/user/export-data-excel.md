@@ -87,7 +87,7 @@ OData-Version: 4.0
 ```
 
 > [!NOTE]
-> If the value of `maxrecordsforexporttoexcel` attribute is increased to more than 100000, then timeouts may occur and export may fail. It is recommended to split the records into multiple views and then upload.
+> The default value of `maxrecordsforexporttoexcel` attribute is 100000. If the value of `maxrecordsforexporttoexcel` attribute is increased to more than 100000, then timeouts may occur and export may fail. It is recommended to split the records into multiple views and then upload.
 
 ### See also
 
