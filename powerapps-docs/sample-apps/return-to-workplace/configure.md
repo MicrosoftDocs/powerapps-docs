@@ -244,9 +244,7 @@ To import sample facility data from the Excel file to the facility entity:
    > [!div class="mx-imgBorder"]
    > ![Import data](media/solution-admin-facilities-excel-import.png "Import data")
 
-3. Browse the **SampleData** folder and select the **Facilities.xlsx** file. Change this file according to your own needs and proceed with the steps to import the data.
-
-4. After the sample data is imported, you'll see the imported records in the entity.
+3. After the sample data is imported, you'll see the imported records in the entity.
 
    > [!div class="mx-imgBorder"]
    > ![Active facilities](media/solution-admin-facilities-active.png "Active facilities")
