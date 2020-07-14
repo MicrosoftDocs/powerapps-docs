@@ -32,6 +32,15 @@ This will allow the comparison of an attribute against a specific value and
 return all found records, or allow the comparison of two attributes to return
 all records with a matching value.
 
+## Limitations
+
+Listed below are the limitations for the current Common Data Service column comparison support.
+
+- Only two columns may be compared at a time.
+- Multi-value condition operators are not supported (i.e., "in").
+- Extended condition operators are not supported (i.e., "creditlimit \> spends+1000").
+- Incompatible attribute comparison is not supported. For example, "int vs. int" attributes is a valid comparison but "int vs. string" attributes is not valid comparison.
+
 ## Column comparison using FetchXML
 
 The following example shows how to compare columns using FetchXML:
@@ -53,57 +62,8 @@ to the selected attribute. In the above example, the 'firstname' column is being
 compared against the 'lastname' column and will return any records that contain
 the same value across both attributes.
 
-
-## Column comparison using the Web API
-
-The following example shows how to compare columns using the Web API:
-
-```http
-https://<environment-root>/contacts?$select=firstname&$filter=firstname eq lastname
-```
-
-## Column comparison using the SDK API
-
-The following example shows how to compare columns using SDK API and the Organization service:
-
-```csharp
-public ConditionExpression
-(
-  string attributeName,
-  ConditionOperator conditionOperator,
-  bool compareColumns,
-  object value
-)
-
-public ConditionExpression
-(
-  string attributeName,
-  ConditionOperator conditionOperator,
-  bool compareColumns,
-  object[] values
-)
-```
-
-In the SDK, two APIs are introduced to support column comparison. The
-first identifies the original attribute, the second allows
-for the inclusion of the attribute you want to compare it against.
-
-If `compareColumns` is passed in as `true`, it will compare the two attributes
-and return all records that match.
-
-If a `false` value is passed, it will return all records for one attribute and
-return values that match the provided value.
-
-## Limitations
-
-Listed below are the limitations for the current Common Data Service column comparison support.
-
-- Only two columns may be compared at a time.
-- Multi-value condition operators are not supported (i.e., "in").
-- Extended condition operators are not supported (i.e., "creditlimit \> spends+1000").
-- Incompatible attribute comparison is not supported. For example, "int vs. int" attributes is a valid comparison but "int vs. string" attributes is not valid comparison.
-
 ### See Also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
-<xref:Microsoft.Xrm.Sdk.Query.ConditionExpression>
+[Column comparison using the Web API](webapi/query-data-web-api.md)  
+[Column comparison using the SDK API](org-service/use-conditionexpression-class.md)
