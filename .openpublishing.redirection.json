@@ -1,6 +1,76 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/maintain-managed-solutions.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/maintain-managed-solutions",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/organize-solutions.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/organize-solutions",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/create-patches-simplify-solution-updates.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/create-patches-simplify-solution-updates",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/when-edit-customization-file.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/when-edit-customization-file",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/create-export-import-unmanaged-solution.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-api",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/uninstall-delete-solution.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-api",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/work-solutions.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-api",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/create-install-update-managed-solution.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-api",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/create-solutions-support-multiple-languages.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/create-solutions-support-multiple-languages",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/use-managed-properties.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/use-managed-properties",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/organize-team-develop-solutions.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/team-development-alm",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/dependency-tracking-solution-components.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/dependency-tracking-solution-components",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/removing-dependencies.md",
+      "redirect_url": "https://docs.microsoft.com/power-platform/alm/removing-dependencies",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/dev-appsource-test-drive.md",
+      "redirect_url": "dev-enterprise-intro",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "powerapps-docs/developer/common-data-service/compress-extract-solution-file-solutionpackager.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-packager-tool",
       "redirect_document_id": "false"

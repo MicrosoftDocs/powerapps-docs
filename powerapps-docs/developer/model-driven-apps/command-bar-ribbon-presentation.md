@@ -23,7 +23,7 @@ search.app:
 
 Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
   
-<a name="BKMK_DifferentPresentations"></a>   
+<a name="BKMK_DifferentPresentations"></a>
 
 ## Different presentations of commands 
 
