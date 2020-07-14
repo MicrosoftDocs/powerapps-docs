@@ -149,6 +149,8 @@ Case managers are the resource who manages employee cases. To create a new case:
 
    > [!div class="mx-imgBorder"]
    > ![Enter name](media/health-safety-employee-case-form.png "Enter name")
+   
+3. Save the record.
 
 ### Managing a case – moving a case through the process stages
 
@@ -197,9 +199,9 @@ case and selects **Finish**. The key pieces of data to be captured and recorded 
 
 ### Case facilities
 
-As part of the investigation, a case manager might need to register which facilities are involved in this case. This can be done on the Case Facilities tab.
+As part of the investigation, a case manager might need to register which facilities are involved in this case. When you open an employee case, then this can be done on the **Case Facilities** tab.
 
-Open the Case Facilities tab and click New Case Facility to relate a facility to this case. When the record is created, further details can be entered:
+Open the **Case Facilities** tab and click **New Case Facility** to relate a facility to this case. When the record is created, further details can be entered:
 
 | **Field**   | **Description**  |
 |---------------|------------------|
@@ -211,36 +213,12 @@ Open the Case Facilities tab and click New Case Facility to relate a facility to
 
 An employee under investigation might have had contact with one or more colleagues. This type of information can be logged on the Case Contacts tab.
 
-Open the Case Contacts tab and click New Case Contact to relate an Employee to this case. When the record is created, further details can be entered:
+Open the **Case Contacts** tab and click **New Case Contact** to relate an employee to this case. When the record is created, further details can be entered:
 
 | **Field**   | **Description**  |
 |---------------|------------------|
 | Risk Assesment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
 | Comment | Enter additional information when applicable. |
-
-## Monitor employee cases dashboard
-
-The dashboard consists of two tabs, both with a distinctive set of information.
-
-**Cases**
-
-On this tab, the Health & Safety Lead can see insights into all the cases.
-Insights in the workload and work composition:
-
-- New cases per day
-
-- Resolved cases per day
-
-- Number of active cases per phases
-
-**Workload**
-  
-This tab of the dashboard displays information regarding the progression of the cases so that the Health & Safety Lead can monitor if the cases are dealt 
-within a proper way.
-
-- Case duration
-
-- Cases per facility
 
 <!--
 ## Issues and feedback
