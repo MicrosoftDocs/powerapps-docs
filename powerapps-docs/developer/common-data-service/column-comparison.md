@@ -65,5 +65,5 @@ the same value across both attributes.
 ### See Also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
-[Column comparison using the Web API](webapi/query-data-web-api#column-comparison-using-the-web-api)  
-[Column comparison using the SDK API](/org-service/use-conditionexpression-class#column-comparison-using-the-sdk-api)
+[Column comparison using the Web API](webapi/query-data-web-api.md#column-comparison-using-the-web-api)  
+[Column comparison using the SDK API](org-service/use-conditionexpression-class.md#column-comparison-using-the-sdk-api)
