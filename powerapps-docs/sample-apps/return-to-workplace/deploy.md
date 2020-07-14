@@ -16,17 +16,6 @@ This article provides step-by-step instructions to IT administrators on how to d
 
 Estimated time to complete these steps: 60–90 minutes
 
-## Prerequisites
-
-- You should be a Global administrator or Power Platform administrator to perform the installation.
-
-- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
-
-- Install Power BI Desktop from the Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
-
-  > [!NOTE]
-  > If you have installed Power BI Desktop by downloading directly from the download center page in the past, remove it and download it from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available. If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the download center page.
-
 ## Service URLs for US Government customers (optional - for government agencies only)
 
 There is a different set of urls to access Power Apps US government environments and Power BI US government tenants. The commercial version of the service urls are used throughout the article. If you have a US Government organization, use the respective US government url for your deployment:
@@ -41,6 +30,17 @@ More information:
 
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
+
+## Prerequisites
+
+- You should be a Global administrator or Power Platform administrator to perform the installation.
+
+- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
+
+- Install Power BI Desktop from the Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
+
+  > [!NOTE]
+  > If you have installed Power BI Desktop by downloading directly from the download center page in the past, remove it and download it from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available. If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the download center page.
 
 ## Step 1: Sign up for Power Apps, and create an environment
 
