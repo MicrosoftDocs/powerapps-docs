@@ -88,19 +88,21 @@ The Return to the Workplace solution has two Power BI dashboards, one for execut
 
 The facility manager Power BI dashboard is used in the model-driven app. Since these reports are published in a different location, you need to change the location.
 
-1. Go to **Settings** > **Administrator** to enable Power BI integration.
+1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+
+2. Select the correct **environment** and then select **Settings**.
+
+3. Select **Product** > **Behaviour**, set Power BI visualization embedding to **On**.
 
    > [!div class="mx-imgBorder"]
-   > ![Enable Power BI](media/deploy-settings-admin.png "Enable Power BI")
+   > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
 
-2. Select **System Settings** , and then on the **Reporting** tab, select **Yes**.
-
-3. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, press **add existing**, then select entity. From the list of entities select **Facility** and in **select components**, select in the **Forms** tab the **Information Form**.
+4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, press **add existing**, then select entity. From the list of entities select **Facility** and in **select components**, select in the **Forms** tab the **Information Form**.
 
    > [!div class="mx-imgBorder"]
    > ![Facility form](media/deploy-new-facility-form.png "Facility form")
 
-4. Export the solution and then apply the following changes in the FormXML ([link](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form)). Reimport the solution and then **publish all customizations**.
+4. Export the solution, unpack the solution and then apply the following changes in the FormXML ([link](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form)). Pack the solution, reimport the solution and then **publish all customizations**.
 
 For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
 
