@@ -17,7 +17,7 @@ The main modules of the Return to the Workplace solution:
 
 - **Dashboard for location readiness** determine the readiness of your facilities and efficiently manage their safe reopening. Location Readiness allows facility managers and task force leaders to quickly make informed decisions using critical factors like COVID infection rates and supplies availibility.
 
-- **Facility safety management** give facility managers the tools they need to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
+- **Facility safety management** gives facility managers the tools they need to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
 
 - **Workplace care management** gives health and safety leaders tools to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. Executive dashboards enable monitoring of all Workplace Care Management data.
 
