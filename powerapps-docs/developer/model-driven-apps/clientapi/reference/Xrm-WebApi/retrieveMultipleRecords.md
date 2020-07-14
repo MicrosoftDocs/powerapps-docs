@@ -235,7 +235,91 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=prim
     }
 );
 ```
+The above piece of code returns a result with a schema like:
+```JSON
+{
+	"entities": [
+		{
+			"@odata.etag": "W/\"1459919\"",
+			"name": "Test Account",
+			"accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
+			"primarycontactid": {
+				"contactid": "6c63a1b7-19c6-ea11-a81a-000d3af5e732",
+				"fullname": "Test Contact"
+			}
+		}
+	]
+}
+```
 
+#### For mobile offine scenario
+When doing an **$expand** operation while working offline, the structure of the result object is different from the online scenario and a different approach is needed to get to the linked data in this case. The following example demonstrates this:
+
+```JavaScript
+Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)", 3).then(
+    function success(result) {
+        for (var i = 0; i < result.entities.length; i++) {
+            console.log(result.entities[i]);
+        }        
+        // perform additional operations on retrieved records
+    },
+    function (error) {
+        console.log(error.message);
+        // handle error conditions
+    }
+);
+```
+
+The above piece of code returns a result with a schema like:
+```JSON
+{
+	"entities": [
+		{
+			"accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
+			"name": "Test Account",
+			"primarycontactid@odata.nextLink": {
+				"API": "{Xrm.Mobile.offline}.{retrieveRecord}",
+				"id": "119edfac-19c6-ea11-a81a-000d3af5e732",
+				"entityType": "account",
+				"options": "?$select=accountid&$expand=primarycontactid($select=contactid,fullname)&$getOnlyRelatedEntity=true"
+			},
+			"primarycontactid": {}
+		}
+	]
+}
+```
+
+Notice the empty `primarycontactid` property but an additional `primaricontactid@odata.nextLink` property that let's us know how to get to the linked data that we need. Use the `id`, `entityType`, and `options` parameter of that property to construct an inner `Xrm.WebApi.offline.retrieveRecord` request. The following piece of code provides a complete example of how to do this:
+
+```JavaScript
+Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)").then(function(resultSet) {
+    var promises = resultSet.entities.map(function(outerItem) {
+        // We do a retrieveRecord for every item in the resultSet of retrieveMultipleRecords() and then
+        // hydrate the retrieveMultipleRecords resultSet itself.
+       return Xrm.WebApi.offline.retrieveRecord(
+           outerItem["primarycontactid@odata.nextLink"].entityType, 
+           outerItem["primarycontactid@odata.nextLink"].id,
+           outerItem["primarycontactid@odata.nextLink"].options
+        ).then(function(innerResult) {            
+            if(innerResult.value.length === 0) {
+                return outerItem;
+            }
+            outerItem.primarycontactid = innerResult.value[0];
+            return outerItem;
+        });
+    });
+
+    return Promise.all(promises);
+}).then(function(allResults) {
+    for (var i = 0; i < allResults.length; i++) {
+        console.log(allResults[i]);
+    }
+    // perform additional operations on retrieved records
+}, function(error) {
+    console.error(error);
+    // handle error conditions
+});
+```
 
 For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md).
 
