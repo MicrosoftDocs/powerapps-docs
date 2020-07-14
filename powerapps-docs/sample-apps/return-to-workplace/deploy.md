@@ -27,7 +27,32 @@ Estimated time to complete these steps: 60–90 minutes
   > [!NOTE]
   > If you have installed Power BI Desktop by downloading directly from the download center page in the past, remove it and download it from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available. If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the download center page.
 
-## Step 1: Sign up for Power Apps, and create an environment
+## Step 1: Download the deployment package
+
+> [!IMPORTANT]
+> If you are a commercial version user, you can use the AppSource option instead of using the deployment package to install the app and Power BI dashboard. You still need to download the deployment package to use the [sample data](configure.md##sample-data).
+
+Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>.
+
+Before extracting the .zip file, ensure that you unblock it.
+
+1.	Right-click the .zip file, select **Properties**.
+
+2.	In the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Solution package properties](media/deploy-deployment-package.png "Solution package properties")
+
+On extracting the .zip file, you will see the following in the extracted folder:
+
+|**Folder**  |**Description**  |
+|---------|---------|
+|**Package**     |  The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment.       |
+|**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting. More information: [Step 4: Configure and publish Power BI dashboard](deploy.md##step-4-configure-and-publish-power-bi-dashboard) 
+|**SampleData**     |   Contains the sample master data files (.xlsx) that you can use to import sample data. More information: [Sample Data](https://review.docs.microsoft.com/en-us/powerapps/sample-apps/return-to-workplace/configure?branch=rtw-docs#sample-data) 
+
+
+## Step 2: Sign up for Power Apps, and create an environment
 
 Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
 
@@ -44,9 +69,11 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 
 After you have created your environment, you can access it using the following URL: `https://[myenv].crm.dynamics.com`, where `myenv` is the name of your environment. 
 
-## Step 2: Install the package
+## Step 3: Install the package
 
 Follow the steps below to install the Return to the Workplace solution:
+
+### Option A - install the app from Microsoft AppSource
 
 1. Go to Microsoft AppSource ([link](https://aka.ms/rtw-app)) to install the **Return to the Workplace solution**.
 
@@ -60,31 +87,165 @@ Follow the steps below to install the Return to the Workplace solution:
     > [!div class="mx-imgBorder"]
     > ![List of Apps](media/rtw-apps1.png "List of Apps")
 
-## Step 3: Configure and publish Power BI dashboard
+### Option B - install the app from the deployment package
+
+1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
+
+2.  On the next screen, select **Continue**.
+
+3.  You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Deploy package](media/deploy-connect-to-environment.png "Deploy package")
+
+4.  Select **Login** to continue.
+
+5.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select an environment](media/deploy-select-environment.png "Select an environment")
+
+6.  On the next screen, select **Next.**
+
+7.  The next screen displays you the environment name where the package will be installed. Review the information and select **Next**.
+
+8.  The next screen validates if a starter portal is available on your environment. Select **Next** to continue with the installation.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Validate starter portal](media/deploy-validate-starter-portal.png "Validate starter portal")
+
+9.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
+
+10. After the installation is complete, select **Next**.
+
+11.  On the next screen, select **Finish** to complete and close the setup.
+
+12. After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
+
+    > [!div class="mx-imgBorder"] 
+    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+
+
+## Step 4: Configure and publish Power BI dashboard
 
 The Return to the Workplace solution has two Power BI dashboards, one for executive leadership and one for the facility managers.
 
-1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard. Open the **Return to the Workplace** dashboards in the Power BI service or Power BI desktop.
+You can publish the Power BI dashboard using either of the following options: using the template app from the AppSource or using the .pbit file available in the deployment package.
 
-   > [!div class="mx-imgBorder"]
-   > ![Open dashboards](media/deploy-pbi-dashboard-view1.png "Open dashboards")
+### Option A: Publish using the template app from AppSource (Preferred Option)
 
-2. After opening, select **Transform data** and select **Edit Parameters**.
+1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard. 
+2.	Select **GET IT NOW** to install the solution on your environment. You're redirected to the actual installation page, where you can select the environment on which to install it on. Installation starts after selecting the environment and accepting the terms and agreement.
+3.	After the app is installed, sign in to Power Apps and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
 
-   > [!div class="mx-imgBorder"]
-   > ![Transform data](media/deploy-pbi.png "Transform data")
+### Option B: Publish using the .pbit file in the deployment package
 
-3. Edit the **CDS Environment** parameter, to enter the environment you want to connect. Select **ok**, you will then be prompted to sign in.
+This section provides information on how you can use the **Return to Workplace App.pbit** file available in the deployment package to publish the dashboard.
 
-   > [!div class="mx-imgBorder"]
-   >![Edit parameters](media/deploy-edit-prameters.png "edit parameters")
+#### Prerequisites
 
-4. After all data is loaded and you're ready with the dashboard, select **Publish**.
+-   You must be a Global Admin and must have Power BI Pro license to configure and publish report.
 
-   > [!div class="mx-imgBorder"]
-   > ![Publish dashboard](media/deploy-pbi-publish-report.png "Publish dashboard")
+-   Create a workspace in Power BI where you will publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces)
 
-## Step 4: Embed Power BI report in the model-driven app
+-   Install Power BI Desktop from the Microsoft Store: <https://aka.ms/pbidesktop>
+
+    > [!NOTE]
+    > If you have installed Power BI Desktop by downloading directly from the Download Center page as an executable in the past, remove it and use the one from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available.
+    >
+    > If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
+
+#### The process
+
+1.  Run Power BI Desktop, and sign in using your account.
+
+2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the **Return to Workplace App.pbit**.
+
+3.  Open the **Return to Workplace App.pbit** file in Power BI Desktop. You'll will be prompted to type the following value: **CDS_base_solution_URL**. Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
+
+    > [!div class="mx-imgBorder"] 
+    > ![Configure Power BI dashboard](media/deploy-config-dashboard.png "Configure Power BI dashboard")
+
+4.  You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** \> **Sign in** to specify your Common Data Service credentials.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Connect to Common Data Service environment](media/deploy-connect-cds.png "Connect to Common Data Service environment")
+
+5.  After signing in, select **Connect** to connect to your data in Common Data Service.
+
+6.  On successful connection, Power BI report will be displayed. You'll be prompted to apply pending changes to your query; select **Apply changes**.
+
+    > [!NOTE]
+    > The report is blank because you haven't yet added data in the system.
+
+7.  Select **Publish** to publish data to your Power BI workspace. You'll be prompted to save your changes; select **Save**.
+
+     > [!div class="mx-imgBorder"] 
+     > ![Save Power BI workspace](media/deploy-save-workspace.png "Save Power BI workspace")
+
+8.  You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
+
+9.  After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Publish to Power BI](media/deploy-publish-workspace.png "Publish to Power BI")
+
+10.  The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Under the **Datasets** tab of your workspace, select the **Schedule refresh** icon for the dataset of your report you just published.
+
+      > [!div class="mx-imgBorder"] 
+      > ![Report available in workspace](media/deploy-report-workspace.png "Report available in workspace")
+
+11.  The first time you try to set the data refresh setting, you'll see the **Settings** page with a message stating that your credentials aren't valid. Under **Data source credentials**, select **Edit credentials** to specify your credentials.
+
+      > [!div class="mx-imgBorder"] 
+      > ![Data source credentials](media/deploy-datasource-credentials.png "Data source credentials")
+
+12.  In the next screen:
+
+      1.  Select **Authentication** method as **OAuth2**.
+
+      2.  Select **Privacy level setting for this data source** as
+          **Organizational**.
+
+      3.  Select **Sign in**.
+
+13.  You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
+
+14.  In the **Settings** page, expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule. Select **Apply**.
+
+      > [!div class="mx-imgBorder"] 
+      > ![Schedule refresh data](media/deploy-schedule-refresh-data.png "Schedule refresh data")
+
+      > [!NOTE]
+      > - There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
+      >- We recommend setting the data to refresh every 30 mins.
+
+15.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
+
+        > [!div class="mx-imgBorder"] 
+        > ![Open report in browser](media/deploy-open-report.png "Open report in browser")
+
+16.  The URL will be in the following format:
+    https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
+    Copy the Power BI report URL to a Notepad as you will need it in the next section to embed it in the portal.
+
+17. If you want this Power BI report to be available to other users within your Power BI tenant, consider publishing the report as an app. Select your workspace name in the left pane, and then select **Create app** in the top-right corner.  
+
+18. On the app publishing page:
+
+    1. On the **Setup** tab, specify the name and description of your app.
+
+    2. On the **Navigation** tab, specify the location where you will publish it.
+
+    3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](https://docs.microsoft.com/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
+
+        > [!div class="mx-imgBorder"]
+        > ![select-install-apps-automatically](media/select-install-apps-automatically.png)
+
+18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
+
+
+## Step 5: Embed Power BI report in the model-driven app
 
 The facility manager Power BI dashboard is used in the model-driven app. Since these reports are published in a different location, you need to change the location.
 
@@ -106,7 +267,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Since t
 
 For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
 
-## Step 5: Publish theme
+## Step 6: Publish theme
 
 You can always change the look and feel of the app by applying themes to match the company branding. To select a theme:
 
@@ -130,7 +291,7 @@ You can always change the look and feel of the app by applying themes to match t
    > [!div class="mx-imgBorder"]
    > ![Sample theme](media/deploy-theme-colors.png "Sample theme")
 
-## Step 6: Share canvas app
+## Step 7: Share canvas app
 
 To share canvas apps to the users:
 
@@ -150,7 +311,7 @@ To share canvas apps to the users:
 
 4. Select users from the list of available users to whom you want to share the app.
 
-## Step 7: Set the security roles
+## Step 8: Set the security roles
 
 In the Return to the Workplace solution, you'll see the following security roles are defined:
 
