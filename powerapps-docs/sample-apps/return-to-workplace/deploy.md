@@ -18,7 +18,7 @@ Estimated time to complete these steps: 60–90 minutes
 
 ## Prerequisites
 
-- You should be a Global administrator or Dynamics 365 administrator or Power Platform administrator to perform the installation.
+- You should be a Global administrator or Power Platform administrator to perform the installation.
 
 - Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
 
