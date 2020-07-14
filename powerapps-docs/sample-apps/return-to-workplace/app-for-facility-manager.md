@@ -54,7 +54,7 @@ This section covers how to manage and monitor facilities.
 
 ### Create a facility 
 
-By default, two facilities are provided as an example. To  create anew facility:
+By default, two facilities are provided as an example. To  create a new facility:
 
 1. Select **Facilities** in the left pane and select **New**.
 
