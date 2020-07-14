@@ -104,7 +104,7 @@ The facility manager can monitor and assesses the current status of their facili
 by reviewing the facility’s associated dashboard, details, checklist, and
 transitions. To monitor a facility.
 
-1. Select **Facility** from  the left pane to see the list of active facilities
+1. Select **Facility** from  the left pane to see the list of facilities. The default view, My Facilities, shows only your facilities. When switching view you can see either all active or inactive facilities. 
 
 2. Select the desired facility record to access the facility data. The **General** tab shows the facility manager dashboard. The dashboard shows the COVID-19 data based on the address details of the facility, checklist completion for the current phase, employee attestation, and employee sentiment. More information: [Power BI dashboard]().
 
