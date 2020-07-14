@@ -53,37 +53,36 @@ Select a facility from the facility list and the current status of the facility 
 
 ## Check in to a facility
 
-Employees can complete the steps required to select a particular facility that is `open` to employees returning to work. Employees can find a facility and then complete a health survey that determines if they are eligible to check in to the facility they have selected. If eligible the employee will be provided with a pass to their selected building for that day. To check in to a facility:
+Employees can complete the steps required to select a particular facility that is open to employees returning to work. Employees can find a facility and then complete a health survey that determines if they are eligible to check in to the facility they have selected. If eligible the employee will be provided with a pass to their selected building for that day. To check in to a facility:
 
-1. Select **Facility**.
+1. Select **GET DAY PASS**.
 
-2. Select an available facility form the facility list.
+2. Select an available facility from the facility list.
 
-3. Select **Start Health Survey** to complete the check-in process. Accept the terms & agreements.
+3. Select **Start Health Survey** to complete the check-in process.
 
    > [!div class="mx-imgBorder"]
    > ![Start survey](media/employee-start-survey2.png "Start survey")
+   
+4. Accept the terms & agreements.
 
     > [!div class="mx-imgBorder"]
    > ![Term and agreements](media/employee-termandagreement.png "Term and Agreements")
 
 
-### Symptom check 
-
-Review the **Symptom Check** statements. Select **I Agree**  if you agree with the statements and **I Disagree** if you don't.
+5. Review the **Symptom Check** statements. Select **I Agree**  if you agree with the statements and **I Disagree** if you don't.
 
 > [!div class="mx-imgBorder"]
 > ![Symptom check](media/employee-agreement.png "Symptom check")
-
 
 ### Employee pass
 
 If your responses to the statement show you are healthy, you will receive a pass to enter into the selected facility. The pass expires in 24 hours. 
 
-If your responses show you are not healthy, you will not receive a pass and will be given the contact information for the company health and safety department if needed.
-
 > [!div class="mx-imgBorder"]
 > ![Employee pass](media/employee-pass.png)
+
+If your responses show you are not healthy, you will not receive a pass and will be given the contact information for the company health and safety department if needed.
 
 > [!div class="mx-imgBorder"]
 > ![Negative results](media/employee-pass-negative.png "Negative results")
@@ -92,10 +91,12 @@ If your responses show you are not healthy, you will not receive a pass and will
 
 Employees can share their opinion on how they are feeling about returning to the workplace.
 
-On the home page you can give your response for the **Do you feel safe returning to work?** by selecting one of the options available.  
+On the home page you can give your response for the **Do you feel safe returning to work?** by selecting one of the options available.   
 
 > [!div class="mx-imgBorder"]
 > ![Share sentiment](media/employee-share-sentiment2.png "Share sentiment")
+
+After selecting one of the options, the selected option will become visible. This option will reset itself after reopening the app.
 
 > [!div class="mx-imgBorder"]
 > ![Share sentiment](media/employee-share-sentiment2-2.png "Share sentiment")
