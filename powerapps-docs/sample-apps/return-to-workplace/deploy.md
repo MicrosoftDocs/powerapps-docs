@@ -27,12 +27,44 @@ Estimated time to complete these steps: 60–90 minutes
   > [!NOTE]
   > If you have installed Power BI Desktop by downloading directly from the download center page in the past, remove it and download it from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available. If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the download center page.
 
-## Step 1: Download the deployment package
+## Step 1: Sign up for Power Apps, and create an environment
 
-> [!IMPORTANT]
-> If you are a commercial version user, you can use the AppSource option instead of using the deployment package to install the app and Power BI dashboard. You still need to download the deployment package to use the [sample data](configure.md##sample-data).
+Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
 
-Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>.
+After you have purchased Power Apps, create an environment with a Common Data Service database.
+
+1. Sign in to [Power Platform admin center](https://aka.ms/ppac).
+
+2. Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
+
+   > [!IMPORTANT]
+   > If you select a security group for the database while creating it, remember that any apps can be shared only with users who are members of that security group.
+
+3. Create users, and assign appropriate security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
+
+After you have created your environment, you can access it using the following URL: `https://[myenv].crm.dynamics.com`, where `myenv` is the name of your environment. 
+
+## Step 2: Install the package
+
+Follow the steps below to install the Return to the Workplace solution:
+
+### Option A - Install the app from Microsoft AppSource
+
+1. Go to Microsoft AppSource ([link](https://aka.ms/rtw-app)) to install the **Return to the Workplace solution**.
+
+    > [!div class="mx-imgBorder"]
+    > ![Installation Page](media/return-to-workplace-installationpage.png "Installation Page")
+
+2. Select **GET IT NOW** to install the solution on your environment. You're redirected to the actual installation page, where you can select the environment on which to install it on. Installation starts after selecting the environment and accepting the terms and agreement.
+
+3. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
+
+    > [!div class="mx-imgBorder"]
+    > ![List of Apps](media/rtw-apps1.png "List of Apps")
+
+### Option B - Install the app from the deployment package
+
+1. Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>.
 
 Before extracting the .zip file, ensure that you unblock it.
 
@@ -51,79 +83,38 @@ On extracting the .zip file, you will see the following in the extracted folder:
 |**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting. More information: [Step 4: Configure and publish Power BI dashboard](deploy.md##step-4-configure-and-publish-power-bi-dashboard) 
 |**SampleData**     |   Contains the sample master data files (.xlsx) that you can use to import sample data. More information: [Sample Data](https://review.docs.microsoft.com/en-us/powerapps/sample-apps/return-to-workplace/configure?branch=rtw-docs#sample-data) 
 
+3.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
-## Step 2: Sign up for Power Apps, and create an environment
+4.  On the next screen, select **Continue**.
 
-Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
-
-After you have purchased Power Apps, create an environment with a Common Data Service database.
-
-1. Sign in to [Power Platform admin center](https://aka.ms/ppac).
-
-2. Create a Common Data Service environment with the database. More information: [Create and manage environments](https://docs.microsoft.com/power-platform/admin/create-environment)
-
-   > [!IMPORTANT]
-   > If you select a security group for the database while creating it, remember that any apps can be shared only with users who are members of that security group.
-
-3. Create users, and assign appropriate security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
-
-After you have created your environment, you can access it using the following URL: `https://[myenv].crm.dynamics.com`, where `myenv` is the name of your environment. 
-
-## Step 3: Install the package
-
-Follow the steps below to install the Return to the Workplace solution:
-
-### Option A - install the app from Microsoft AppSource
-
-1. Go to Microsoft AppSource ([link](https://aka.ms/rtw-app)) to install the **Return to the Workplace solution**.
-
-    > [!div class="mx-imgBorder"]
-    > ![Installation Page](media/return-to-workplace-installationpage.png "Installation Page")
-
-2. Select **GET IT NOW** to install the solution on your environment. You're redirected to the actual installation page, where you can select the environment on which to install it on. Installation starts after selecting the environment and accepting the terms and agreement.
-
-3. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
-
-    > [!div class="mx-imgBorder"]
-    > ![List of Apps](media/rtw-apps1.png "List of Apps")
-
-### Option B - install the app from the deployment package
-
-1.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
-
-2.  On the next screen, select **Continue**.
-
-3.  You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.
+5.  You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.
 
     > [!div class="mx-imgBorder"] 
     > ![Deploy package](media/deploy-connect-to-environment.png "Deploy package")
 
-4.  Select **Login** to continue.
+6.  Select **Login** to continue.
 
-5.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
+7.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/deploy-select-environment.png "Select an environment")
 
-6.  On the next screen, select **Next.**
+8.  On the next screen, select **Next.**
 
-7.  The next screen displays you the environment name where the package will be installed. Review the information and select **Next**.
+9.  The next screen displays you the environment name where the package will be installed. Review the information and select **Next**.
 
-8.  The next screen validates if a starter portal is available on your environment. Select **Next** to continue with the installation.
+10.  The next screen validates if all the dependencies are available on your environment. Select **Next** to continue with the installation.
 
-    > [!div class="mx-imgBorder"] 
-    > ![Validate starter portal](media/deploy-validate-starter-portal.png "Validate starter portal")
+11.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
 
-9.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
+12. After the installation is complete, select **Next**.
 
-10. After the installation is complete, select **Next**.
+13.  On the next screen, select **Finish** to complete and close the setup.
 
-11.  On the next screen, select **Finish** to complete and close the setup.
+14. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
 
-12. After the app is installed, navigate to [Power Apps](https://make.powerapps.com), and select your environment from the top-right corner. You will find a new admin app in your **Apps** list.
-
-    > [!div class="mx-imgBorder"] 
-    > ![New admin app in Apps list](media/deploy-new-admin-app.png "New admin app in Apps list")
+    > [!div class="mx-imgBorder"]
+    > ![List of Apps](media/rtw-apps1.png "List of Apps")
 
 
 ## Step 4: Configure and publish Power BI dashboard
