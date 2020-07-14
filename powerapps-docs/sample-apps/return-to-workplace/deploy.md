@@ -133,21 +133,6 @@ You can publish the Power BI dashboard using either of the following options: us
 
 This section provides information on how you can use the **Return to Workplace App.pbit** file available in the deployment package to publish the dashboard.
 
-#### Prerequisites
-
--   You must be a Global Admin and must have Power BI Pro license to configure and publish report.
-
--   Create a workspace in Power BI where you will publish the report. Sign into Power BI and create a workspace. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/service-create-the-new-workspaces)
-
--   Install Power BI Desktop from the Microsoft Store: <https://aka.ms/pbidesktop>
-
-    > [!NOTE]
-    > If you have installed Power BI Desktop by downloading directly from the Download Center page as an executable in the past, remove it and use the one from the Microsoft Store. The Microsoft Store version will be updated automatically as new releases are available.
-    >
-    > If you can’t install from Microsoft Store, install the latest non-Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
-
-#### The process
-
 1.  Run Power BI Desktop, and sign in using your account.
 
 2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the **Return to Workplace App.pbit**.
