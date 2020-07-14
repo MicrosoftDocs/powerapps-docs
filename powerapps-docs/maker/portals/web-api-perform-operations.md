@@ -385,6 +385,106 @@ This sample demonstrates how to create, update and delete entity records using A
   });
 ```
 
+## Example
+
+In this example, you'll use a sample script to view, edit, create and delete **contacts** using the fields *firstname*,*lastname*, *fullname*, *emailaddress1* and *telephone1*.
+
+You can change the field names, or use a different entity while following the steps in this example.
+
+### Step 1 - Create Site Settings
+
+Before you can use portals Web API, you have to enable the required Site Settings using the Portal Management app. The Site Settings depend on the entity that you want to use when interacting with the Web API.
+
+1. Go to [Power Apps](https://make.powerapps.com).
+
+1. Select **Apps** from the left pane.
+
+1. Select **Portal Management** app.
+
+    ![Portal Management app](media/web-api/portal-management.png "Portal Management app")
+
+1. In the **Portal Management** app, select **Site Settings** from the left pane.
+
+    ![Site Settings](media/web-api/site-settings.png "Site Settings")
+
+1. Select **New**.
+
+1. Enter Name as `Webapi/contact/enabled`.
+
+1. Select your *Website* record.
+
+1. Enter Value as `true`.
+
+   ![Web API contact enabled setting](media/web-api/webapi-contact-enabled.png "Web API contact enabled setting") 
+
+1. Select **Save & Close**.
+
+1. Select **New**.
+
+1. Enter Name as `Webapi/contact/fields`.
+
+1. Select your *Website* record.
+
+1. Enter Value as `firstname,lastname,fullname,emailaddress1,telephone1`.
+
+   ![Web API contact fields](media/web-api/webapi-contact-fields.png "Web API contact fields")
+
+1. Select **Save & Close**.
+
+1. Select **New**.
+
+1. Enter Name as `Webapi/error/innererror`.
+
+1. Select your *Website* record.
+
+1. Enter Value as `true`.
+
+   ![Web API error](media/web-api/webapi-error.png "Web API error") 
+
+1. Select **Save & Close**.
+
+1. Verify **Site Settings** for **Web API**.
+
+    ![Web API Site Settings](media/web-api/site-settings-complete.png "Web API Site Settings") 
+
+### Step 2 - Configure permissions
+
+You'll have to configure permissions so that the users are able to use the Web API feature. In this example, you'll enable the **Contact** entity for entity permissions, create a Web Role for using Web API, add the entity permissions for **Contact** entity to this Web Role, and then, add the Web Role to users to allow users to use the Web API.
+
+1. In the **Portal Management** app, select **Entity Permissions** from the left pane.
+
+1. Select **New**.
+
+1. Enter Name as *Contact Entity Permission*.
+
+1. Select Entity Name as *Contact (contact)*.
+
+1. Select your Website record.
+
+1. Select Scope as *Global*.
+
+1. Select *Read*, *Write*, *Create*, and *Delete* privileges.
+
+1. Select **Save & Close**.
+
+    ![Entity Permissions](media/web-api/entity-permissions.png "Entity Permissions")
+
+1. Select **Web Roles** from the left pane.
+
+1. Select **New**.
+
+1. Enter Name as *Web API User*.
+
+1. Select your Website record.
+
+1. Select *Yes* for Authenticated Users Role.
+
+    ![Web Role](media/web-api/web-role.png "Web Role")
+
+1. Select **Save & Close**.
+
+
+
 ## Next steps
 
 [Compose HTTP requests and handle errors](web-api-http-requests-handle-errors.md)
