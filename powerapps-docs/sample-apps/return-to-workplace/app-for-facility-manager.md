@@ -203,7 +203,7 @@ subgrid.
     **Transitions** tab subgrid for the facility.
 
 To edit the record, select the newly created record, update the values as
-required, and select **Save & Close**.
+required, and select **Save & Close**. After approving or rejecting a phase transition, the record can't be updated.
 
 ### Approve transition
 
