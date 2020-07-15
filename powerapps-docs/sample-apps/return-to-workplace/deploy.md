@@ -95,38 +95,37 @@ On extracting the .zip file, you will see the following in the extracted folder:
 |**Folder**  |**Description**  |
 |---------|---------|
 |**Package**     |  The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment.       |
-|**Power BI Template**     | Contains the Power BI Report template file (.pbit) that you will use to configure reporting. More information: [Step 4: Configure and publish Power BI dashboard](deploy.md##step-4-configure-and-publish-power-bi-dashboard) 
-|**SampleData**     |   Contains the sample master data files (.xlsx) that you can use to import sample data. More information: [Sample Data](https://review.docs.microsoft.com/en-us/powerapps/sample-apps/return-to-workplace/configure?branch=rtw-docs#sample-data) 
+|**Power BI**     | Contains the Power BI Reports that will be used to configure reporting. More information: [Step 4: Configure and publish Power BI dashboard](deploy.md##step-4-configure-and-publish-power-bi-dashboard) 
 
-3.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
+2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
-4.  On the next screen, select **Continue**.
+3.  On the next screen, select **Continue**.
 
-5.  You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.
+4.  You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.
 
     > [!div class="mx-imgBorder"] 
     > ![Deploy package](media/deploy-connect-to-environment.png "Deploy package")
 
-6.  Select **Login** to continue.
+5.  Select **Login** to continue.
 
-7.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
+6.  If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/deploy-select-environment.png "Select an environment")
 
-8.  On the next screen, select **Next.**
+7.  On the next screen, select **Next.**
 
-9.  The next screen displays you the environment name where the package will be installed. Review the information and select **Next**.
+8.  The next screen displays you the environment name where the package will be installed. Review the information and select **Next**.
 
-10.  The next screen validates if all the dependencies are available on your environment. Select **Next** to continue with the installation.
+9.  The next screen validates if all the dependencies are available on your environment. Select **Next** to continue with the installation.
 
-11.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
+10.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
 
-12. After the installation is complete, select **Next**.
+11. After the installation is complete, select **Next**.
 
-13.  On the next screen, select **Finish** to complete and close the setup.
+12.  On the next screen, select **Finish** to complete and close the setup.
 
-14. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
+13. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
 
     > [!div class="mx-imgBorder"]
     > ![List of Apps](media/rtw-apps1.png "List of Apps")
