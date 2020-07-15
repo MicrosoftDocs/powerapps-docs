@@ -5,7 +5,7 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/06/2020
+ms.date: 07/20/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -15,13 +15,13 @@ Reopen responsibly, monitor intelligently, and protect continuously with solutio
 
 The main modules of the Return to the Workplace solution:
 
-- **Dashboard for location readiness** determine the readiness of your facilities and efficiently manage their safe reopening. Location Readiness allows facility managers and task force leaders to quickly make informed decisions using critical factors like COVID infection rates and supplies availibility.
+- **Dashboard for location readiness** determine the readiness of your facilities and efficiently manage safe reopening of the facilities. Location readiness dashboard allows facility managers and task force leaders to quickly make informed decisions using critical factors like COVID-19 infection rates and supplies availability.
 
 - **Facility safety management** gives facility managers the tools they need to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
 
-- **Workplace care management** gives health and safety leaders tools to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. Executive dashboards enable monitoring of all Workplace Care Management data.
+- **Workplace care management** gives health and safety leaders the tools they need to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. Location readiness dashboards enable monitoring of all the Workplace Care Management data.
 
-- **Employee return to the workplace** offer your workfoce the self-service tools they need to feel confident about returning and remain productive while onsite. Employee return to the workplace allows them to check in to work remotely and self-screen before entering a building.
+- **Employee return to the workplace** offers your workforce with the self-service tool that they need to feel confident about returning and remain productive while onsite. Employee return to the workplace allows them to check-in to work remotely and self-screen before entering a building.
 
 
 <!--
@@ -56,10 +56,10 @@ See also:
 |--|--|-----|--|
 |Download and deploy the solution| Used by IT administrators to deploy the Return to the Workplace solution and set up users and security.|IT administrator|[Deploy the solution](deploy.md)|
 |Configure the Return to the Workplace solution.| Used by IT administrator to set up and configure master data related to workplaces and users that will use this solution.|IT administrator|[Configure the solution](configure.md)|
-|Use dashboards for insights and decision making|Used by executive leaders to review the current data related to all of their workplaces as it relates to COVID-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations and respective phase rules or guidelines set for them by government agencies.|Executive leadership|[Dashboard for executive leaders](dashboard-for-executive-leadership.md)|
-|Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Facility manager app](app-for-facility-manager.md)
-|Use the employee app|Used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms before returning to a reopened workplace.|Employees|[Employee app](app-for-employee.md)
-|Use the case management app|Used to manage cases for employees under investigation.|Case managers|[Case management app](app-for-health-and-safety-lead.md)
+|Use dashboards for insights and decision making|Used by executive leaders to review the current data related to all of their workplaces as it relates to COVID-19 conditions and facility readiness factors. Theses dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations and respective phase rules or guidelines set for them by government agencies.|Executive leadership|[Location Readiness dashboard](dashboard-for-executive-leadership.md)|
+|Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Facility Safety Management app](app-for-facility-manager.md)
+|Use the employee app|Used by employees that are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to no symptoms before returning to a reopened workplace.|Employees|[Employee Return to the Workplace app](app-for-employee.md)
+|Use the case management app|Used to manage cases for employees under investigation.|Case managers|[Workplace Case Management app](app-for-health-and-safety-lead.md)
 
 
 <!--
