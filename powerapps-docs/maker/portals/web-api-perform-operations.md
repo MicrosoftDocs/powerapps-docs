@@ -559,7 +559,7 @@ Now that you have enabled Web API and configured user permissions, create a Web 
 1. Copy the following sample code snippet and paste it in the HTML Designer.
 
     ```html
-            //This is sample is for webapi demostration purpose
+    <!-- This is sample is for webapi demostration purpose -->
     <style>
         #processingMsg {
             width: 150px;
@@ -571,11 +571,18 @@ Now that you have enabled Web API and configured user permissions, create a Web 
             position: fixed;
             -webkit-border-radius: 0 0 2px 2px;
             border-radius: 0 0 2px 2px;
-            -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            display: none;
+        }
+        table td[data-attribute] .glyphicon-pencil{
+            margin-left: 5px;
+            opacity: 0;
+        }
+        table td[data-attribute]:hover .glyphicon-pencil{
+            opacity: 0.7;
         }
     </style>
-    
     {% fetchxml contactList %}
     <fetch version="1.0" mapping="logical">
         <entity name="contact">
@@ -588,265 +595,267 @@ Now that you have enabled Web API and configured user permissions, create a Web 
             <order attribute="contactid" descending="false"></order>
         </entity>
     </fetch>
-    {% endfetchxml %}
+    {% endfetchxml %} 
     <script>
-        //Adding the contact data in json object
-        var contactList = [
-            {% for entity in contactList.results.entities %}
+    //Adding the contact data in json object
+    var contactList = [
+    {% for entity in contactList.results.entities %} 
         {
             id: "{{entity.contactid}}",
-                fullname: "{{entity.fullname}}",
-                    firstname: "{{ entity.firstname }}",
-                        lastname: "{{ entity.lastname }}",
-                            emailaddress1: "{{ entity.emailaddress1 }}",
-                                telephone1: "{{ entity.telephone1 }}"
-        } {% unless forloop.last %}, {% endunless %}
+            fullname: "{{entity.fullname}}",
+            firstname: "{{ entity.firstname }}",
+            lastname: "{{ entity.lastname }}",
+            emailaddress1: "{{ entity.emailaddress1 }}",
+            telephone1: "{{ entity.telephone1 }}"
+        }{% unless forloop.last %},{% endunless %}
         {% endfor %}  
     ];
-    
-        $(function () {
-            //Web API ajax wrapper
-            (function (webapi, $) {
-                function safeAjax(ajaxOptions) {
-                    var deferredAjax = $.Deferred();
-                    shell.getTokenDeferred().done(function (token) {
-                        // add headers for ajax
-                        if (!ajaxOptions.headers) {
-                            $.extend(ajaxOptions, {
-                                headers: {
-                                    "__RequestVerificationToken": token
-                                }
-                            });
-                        } else {
-                            ajaxOptions.headers["__RequestVerificationToken"] = token;
+
+    $(function(){
+        //Web API ajax wrapper
+        (function(webapi, $){
+            function safeAjax(ajaxOptions) {
+                var deferredAjax = $.Deferred();
+                shell.getTokenDeferred().done(function (token) {
+                // add headers for ajax
+                if (!ajaxOptions.headers) {
+                    $.extend(ajaxOptions, {
+                        headers: {
+                            "__RequestVerificationToken": token
                         }
-                        $.ajax(ajaxOptions)
-                            .done(function (data, textStatus, jqXHR) {
-                                validateLoginSession(data, textStatus, jqXHR, deferredAjax.resolve);
-                            }).fail(deferredAjax.reject); //ajax
-                    }).fail(function () {
-                        deferredAjax.rejectWith(this, arguments); // on token failure pass the token ajax and args
-                    });
-                    return deferredAjax.promise();
+                    }); 
+                } else {
+                    ajaxOptions.headers["__RequestVerificationToken"] = token;
                 }
-                webapi.safeAjax = safeAjax;
-            })(window.webapi = window.webapi || {}, jQuery)
-    
-            // Notification component
-            var notificationMsg = (function () {
-                var $processingMsgEl = $('#processingMsg'),
-                    stack = 0,
-                    endTimeout;
-                $processingMsgEl.hide();
-                return {
-                    show: function () {
-                        if (stack === 0) {
-                            clearTimeout(endTimeout);
-                            $processingMsgEl.show();
-                        }
-                        stack++;
-                    },
-                    hide: function () {
-                        stack--;
-                        if (stack <= 0) {
-                            stack = 0;
-                            clearTimeout(endTimeout);
-                            endTimeout = setTimeout(function () {
-                                $processingMsgEl.hide();
-                            }, 500);
-                        }
-                    }
-                }
-            })();
-    
-            // Inline editable table component
-            var webAPIExampleTable = (function () {
-                var trTpl = '<% _.forEach(data, function(data){ %>' +
-                    '<tr data-id="<%=data.id%>" data-name="<%=data.fullname%>">' +
-                    '<% _.forEach(columns, function(col){ %>' +
-                    '<td data-attribute="<%=col.name%>" data-label="<%=col.label%>" data-value="<%=data[col.name]%>"><%-data[col.name]%></td>' +
-                    '<% }) %>' +
-                    '<td>' +
-                    '<button class="btn btn-default delete" type="submit"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></button>' +
-                    '</td>' +
-                    '</tr>' +
-                    '<% }) %>';
-                var tableTpl = '<table class="table table-hover">' +
-                    '<thead>' +
-                    '<tr>' +
-                    '<% _.forEach(columns, function(col){ %>' +
-                    '<th><%=col.label%></th>' +
-                    '<% }) %>' +
-                    '<th>' +
-                    '<button class="btn btn-default add" type="submit">' +
-                    '<i class="glyphicon glyphicon-plus" aria-hidden="true"></i> Add Sample Record' +
-                    '</button>' +
-                    '</th>' +
-                    '</tr>' +
-                    '</thead>' +
-                    '<tbody>' +
-                    trTpl +
-                    '</tbody>' +
-                    '</table>';
-    
-                function getDataObject(rowEl) {
-                    var $rowEl = $(rowEl),
-                        attrObj = {
-                            id: $rowEl.attr('data-id'),
-                            name: $rowEl.attr('data-name')
-                        };
-                    $rowEl.find('td').each(function (i, el) {
-                        var $el = $(el),
-                            key = $el.attr('data-attribute'),
-                            value = $el.attr('data-value'),
-                            label = $el.attr('data-label');
-                        if (key) {
-                            attrObj[key] = value;
-                            attrObj.label = label;
-                        }
-                    })
-                    return attrObj;
-                }
-    
-                function bindRowEvents(tr, config) {
-                    var $row = $(tr),
-                        $deleteButton = $row.find('button.delete'),
-                        dataObj = getDataObject($row);
-                    $.each(config.columns, function (i, col) {
-                        var $el = $row.find('td[data-attribute="' + col.name + '"]');
-                        $el.on('click', $.proxy(col.handler, $el, col.name, dataObj));
-                    });
-                    //user can delete record using this button
-                    $deleteButton.on('click', $.proxy(config.deleteHandler, $row, dataObj));
-                }
-    
-                function bindTableEvents($table, config) {
-                    $table.find('tbody tr').each(function (i, tr) {
-                        bindRowEvents(tr, config);
-                    });
-                    $table.find('thead button.add').on('click', $.proxy(config.addHandler, $table));
-                }
-    
-                return function (config) {
-                    var me = this,
-                        columns = config.columns,
-                        data = config.data,
-                        addHandler = config.addHandler,
-                        deleteHandler = config.deleteHandler,
-                        $table;
-                    me.render = function (el) {
-                        $table = $(el).html(_.template(tableTpl)({ columns: columns, data: data })).find('table');
-                        bindTableEvents($table, { columns: columns, addHandler: addHandler, deleteHandler: deleteHandler });
-                    }
-                    me.addRecord = function (record) {
-                        $table.find('tbody tr:first').before(_.template(trTpl)({ columns: columns, data: [record] }));
-                        bindRowEvents($table.find('tbody tr:first'), config);
-                    }
-                    me.updateRecord = function (attributeName, newValue, record) {
-                        $table.find('tr[data-id="' + record.id + '"] td[data-attribute="' + attributeName + '"]').text(newValue);
-                    }
-                    me.removeRecord = function (record) {
-                        $table.find('tr[data-id="' + record.id + '"]').fadeTo("slow", 0.7, function () {
-                            $(this).remove();
-                        });
-                    }
-                };
-            })();
-    
-            //Applicaton ajax wrapper 
-            function appAjax(ajaxOptions) {
-                notificationMsg.show();
-                return webapi.safeAjax(ajaxOptions)
-                    .fail(function (response) {
-                        alert("Error: " + response.responseJSON.error.message)
-                    }).always(function () {
-                        notificationMsg.hide();
-                    });
+                $.ajax(ajaxOptions)
+                    .done(function(data, textStatus, jqXHR) {
+                        validateLoginSession(data, textStatus, jqXHR, deferredAjax.resolve);
+                    }).fail(deferredAjax.reject); //ajax
+                }).fail(function () {
+                    deferredAjax.rejectWith(this, arguments); // on token failure pass the token ajax and args
+                });
+                return deferredAjax.promise();    
             }
-    
-            function addSampleRecord() {
-                //sample data
-                var recordObj = {
+            webapi.safeAjax = safeAjax;
+        })(window.webapi = window.webapi || {}, jQuery)
+        
+        // Notification component
+        var notificationMsg = (function(){
+            var $processingMsgEl = $('#processingMsg'),
+                _msg = 'Processing...',
+                _stack = 0,
+                _endTimeout;
+            return {
+                show: function(msg){
+                    $processingMsgEl.text(msg||_msg);
+                    if(_stack === 0){
+                        clearTimeout(_endTimeout);            
+                        $processingMsgEl.show();
+                    }
+                    _stack++;
+                },
+                hide: function(){
+                    _stack--;
+                    if(_stack <= 0){
+                        _stack =0;
+                        clearTimeout(_endTimeout);
+                        _endTimeout = setTimeout(function(){
+                            $processingMsgEl.hide();
+                        }, 500);          
+                    }
+                }
+            }
+        })();    
+        
+        // Inline editable table component
+        var webAPIExampleTable = (function(){
+            var trTpl = '<% _.forEach(data, function(data){ %>'+
+                            '<tr data-id="<%=data.id%>" data-name="<%=data.fullname%>">'+
+                            '<% _.forEach(columns, function(col){ %>'+                            
+                                '<td data-attribute="<%=col.name%>" data-label="<%=col.label%>" data-value="<%=data[col.name]%>">'+
+                                    '<%-data[col.name]%><i class="glyphicon glyphicon-pencil"></i>'+
+                                '</td>'+
+                            '<% }) %>'+                                
+                                '<td>'+
+                                    '<button class="btn btn-default delete" type="submit"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></button>'+
+                                '</td>'+
+                            '</tr>'+
+                        '<% }) %>';
+            var tableTpl = '<table class="table table-hover">'+
+                            '<thead>'+
+                                '<tr>'+
+                                    '<% _.forEach(columns, function(col){ %>'+
+                                    '<th><%=col.label%></th>'+
+                                    '<% }) %>'+
+                                    '<th>'+
+                                        '<button class="btn btn-default add" type="submit">'+
+                                            '<i class="glyphicon glyphicon-plus" aria-hidden="true"></i> Add Sample Record'+                    
+                                        '</button>'+
+                                    '</th>'+
+                                '</tr>'+
+                            '</thead>'+
+                            '<tbody>'+trTpl+'</tbody>'+
+                        '</table>';
+                            
+            function getDataObject(rowEl){
+                var $rowEl = $(rowEl),
+                    attrObj = {
+                        id: $rowEl.attr('data-id'),
+                        name: $rowEl.attr('data-name')
+                    };
+                $rowEl.find('td').each(function(i, el){
+                    var $el = $(el),
+                        key = $el.attr('data-attribute');
+                    if(key){
+                        attrObj[key] = $el.attr('data-value');
+                    }
+                })
+                return attrObj;
+            }    
+            
+            function bindRowEvents(tr, config){        
+                var $row = $(tr),
+                    $deleteButton = $row.find('button.delete'),          
+                    dataObj = getDataObject($row);
+                $.each(config.columns, function(i, col){
+                    var $el = $row.find('td[data-attribute="'+col.name+'"]');
+                    $el.on('click', $.proxy(col.handler, $el, col, dataObj));                
+                });
+                //user can delete record using this button
+                $deleteButton.on('click', $.proxy(config.deleteHandler, $row, dataObj));
+            }
+            
+            function bindTableEvents($table, config){                
+                $table.find('tbody tr').each(function(i, tr){
+                    bindRowEvents(tr, config);
+                });
+                $table.find('thead button.add').on('click', $.proxy(config.addHandler, $table));
+            }
+            
+            return function(config){
+                var me = this,
+                    columns = config.columns,
+                    data = config.data,
+                    addHandler = config.addHandler,
+                    deleteHandler = config.deleteHandler,
+                    $table;
+                me.render = function(el){
+                    $table = $(el).html(_.template(tableTpl)({columns: columns, data: data})).find('table');
+                    bindTableEvents($table, {columns: columns, addHandler: addHandler, deleteHandler: deleteHandler});
+                }
+                me.addRecord = function(record){                
+                    $table.find('tbody tr:first').before(_.template(trTpl)({columns: columns, data: [record]}));
+                    bindRowEvents($table.find('tbody tr:first'), config);
+                }
+                me.updateRecord = function(attributeName, newValue, record){
+                    $table.find('tr[data-id="'+record.id+'"] td[data-attribute="'+attributeName+'"]').text(newValue);
+                }
+                me.removeRecord = function(record){
+                    $table.find('tr[data-id="'+record.id+'"]').fadeTo("slow",0.7, function(){
+                        $(this).remove();
+                    });
+                }
+            };
+        })();  
+        
+        //Applicaton ajax wrapper 
+        function appAjax(processingMsg, ajaxOptions){
+            notificationMsg.show(processingMsg);
+            return webapi.safeAjax(ajaxOptions)
+                    .fail(function(response) {
+                        if(response.responseJSON){
+                            alert("Error: "+response.responseJSON.error.message)                    
+                        } else {
+                            alert("Error: Web API is not available... ")                    
+                        }
+                    }).always(notificationMsg.hide);
+        }
+        
+        function addSampleRecord(){
+            //sample data
+            var recordObj = {
                     firstname: "Sample Contact",
-                    lastname: (new Date()).toLocaleString(),
+                    lastname: "Last Name-"+_.random(100, 999),
                     emailaddress1: "someone@contoso.com",
-                    telephone1: "123-456-789"
+                    telephone1: "123-456-7890"
                 };
-                appAjax({
-                    type: "POST",
-                    url: "/_api/contacts",
+            appAjax('Adding...', {
+                type: "POST",
+                url: "/_api/contacts",
+                contentType: "application/json",
+                data: JSON.stringify(recordObj),
+                success: function (res, status, xhr) {
+                    recordObj.id = xhr.getResponseHeader("entityid");
+                    recordObj.fullname = recordObj.firstname + " "+ recordObj.lastname;
+                    table.addRecord(recordObj);
+                }
+            });
+            return false;
+        }
+
+        function deleteRecord(recordObj){    
+            var response = confirm("Are you sure, you want to delete \""+recordObj.name+"\" ?");
+            if(response == true){    
+                appAjax('Deleting...', {
+                    type: "DELETE",
+                    url: "/_api/contacts("+recordObj.id+")",
                     contentType: "application/json",
-                    data: JSON.stringify(recordObj),
-                    success: function (res, status, xhr) {
-                        recordObj.id = xhr.getResponseHeader("entityid");
-                        recordObj.fullname = recordObj.firstname + " " + recordObj.lastname;
-                        table.addRecord(recordObj);
+                    success: function (res) {
+                        table.removeRecord(recordObj);
                     }
                 });
-                return false;
             }
-    
-            function deleteRecord(recordObj) {
-                var response = confirm("Are you sure, you want to delete \"" + recordObj.name + "\" ?");
-                if (response == true) {
-                    appAjax({
-                        type: "DELETE",
-                        url: "/_api/contacts(" + recordObj.id + ")",
-                        contentType: "application/json",
-                        success: function (res) {
-                            table.removeRecord(recordObj);
-                        }
-                    });
-                }
-                return false;
+            return false;
+        }
+
+        function updateRecordAttribute(col, recordObj){
+            var attributeName = col.name,
+                value = recordObj[attributeName],
+                newValue = prompt("Please enter \""+col.label+"\"", value);
+            if(newValue != null && newValue !== value){        
+                appAjax('Updating...', {
+                    type: "PUT",
+                    url: "/_api/contacts("+recordObj.id+")/"+attributeName,
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        "value": newValue
+                    }),
+                    success: function (res) {                    
+                        table.updateRecord(attributeName, newValue, recordObj);
+                    }
+                });
             }
+            return false;
+        }
     
-            function updateRecordAttribute(attributeName, recordObj) {
-                var newValue = prompt("Please enter \"" + recordObj.label + "\"", recordObj[attributeName]);
-                if (newValue != null) {
-                    appAjax({
-                        type: "PUT",
-                        url: "/_api/contacts(" + recordObj.id + ")/" + attributeName,
-                        contentType: "application/json",
-                        data: JSON.stringify({
-                            "value": newValue
-                        }),
-                        success: function (res) {
-                            table.updateRecord(attributeName, newValue, recordObj);
-                        }
-                    });
-                }
-                return false;
-            }
-    
-            var table = new webAPIExampleTable({
-                columns: [{
-                    name: 'firstname',
-                    label: 'First Name',
-                    handler: updateRecordAttribute
-                }, {
-                    name: 'lastname',
-                    label: 'Last Name',
-                    handler: updateRecordAttribute
-                }, {
-                    name: 'emailaddress1',
-                    label: 'Email',
-                    handler: updateRecordAttribute
-                }, {
-                    name: 'telephone1',
-                    label: 'Telephone',
-                    handler: updateRecordAttribute
-                }],
-                data: contactList,
-                addHandler: addSampleRecord,
-                deleteHandler: deleteRecord
-            });
-    
-            table.render($('#dataTable'));
-    
+        var table = new webAPIExampleTable({
+            columns: [{
+                name: 'firstname',
+                label: 'First Name',
+                handler: updateRecordAttribute
+            },{
+                name: 'lastname',
+                label: 'Last Name',
+                handler: updateRecordAttribute
+            },{
+                name: 'emailaddress1',
+                label: 'Email',
+                handler: updateRecordAttribute
+            },{
+                name: 'telephone1',
+                label: 'Telephone',
+                handler: updateRecordAttribute
+            }],
+            data: contactList,
+            addHandler: addSampleRecord,
+            deleteHandler: deleteRecord
         });
+        
+        table.render($('#dataTable'));
+    
+    });
     </script>
-    <div id="processingMsg" class="alert alert-warning" role="alert">Processing...</div>
+    <div id="processingMsg" class="alert alert-warning" role="alert"></div>
     <div id="dataTable"></div>
     ```
 1. Select **Save & Close**.
