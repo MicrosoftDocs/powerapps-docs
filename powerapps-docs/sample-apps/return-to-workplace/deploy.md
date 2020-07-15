@@ -37,7 +37,7 @@ More information:
 
 - You must be a Global Admin and must have Power BI Pro license to configure and publish reports.
 
-- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
+- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces) and [share the workspace with others](https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace)
 
 - Install Power BI Desktop from the Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
 
@@ -132,6 +132,7 @@ On extracting the .zip file, you will see the following in the extracted folder:
     > [!div class="mx-imgBorder"]
     > ![List of Apps](media/rtw-apps1.png "List of Apps")
 
+(**Quick tip:** After installing the Return to Workplace solution, take note of the URL of your Common Data Service environment instance. You will need it to connect the template app to the data.)
 
 ## Step 3: Configure and publish Power BI dashboard
 
@@ -141,13 +142,8 @@ You can publish the Power BI dashboard using either of the following options: us
 
 ### Option A: Publish using the template app from AppSource (Preferred Option)
 
-#### Prerequisites
-Before installing this template app, you must first install and set up the Return to Workplace solution. Installing this solution creates the datasource references necessary to populate the app with data.
-
-When installing Return to Workplace solution solution, take note of the URL of your Common Data Service environment instance. You will need it to connect the template app to the data.
-
 #### Install the app
-1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard. 
+1. Go to Microsoft AppSource ([location readiness](https://aka.ms/rtw-leadershippbi) and [location management](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Location Readiness** and **Return to the Workplace - Location Management** dashboard. 
 
 2.	Select **GET IT NOW** to install the solution on your environment. 
     > [!div class="mx-imgBorder"]
@@ -155,43 +151,40 @@ When installing Return to Workplace solution solution, take note of the URL of y
 
     You're directed to an agreement pop-up, where you select **Continue** to agree to the terms provided.
     
-3. Select **Install**.  
+3. Login to PowerBI and select **Install**.  
     > [!div class="mx-imgBorder"]
     > ![Install](media/deploy-install-install-app.png)
 
-4. Create workspace for your app
+4. Enter the name for the workspace for your app and select **Continue**.
     > [!div class="mx-imgBorder"]
     > ![Workspace](media/deploy-create-workspace.png)
 
-5. Enter workspace details and select **Continue**
-
+(**Note:** Share the workspace with other users who require access. [link](https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace))
 
 #### Connect to data sources
-1. Select the icon in your Apps page to open the App
+5. Select the icon in your Apps page to open the App.
 
-2. On the splash screen select **Explore**, the app opens showing sample data
+6. On the splash screen select **Connect**.
     > [!div class="mx-imgBorder"]
     > ![Explore](media/deploy-connect-data-source.png)
 
-3. Select the **Connect your data** link in the banner at the top of the page
-
-4. In the dialog box that appears, type the URL of your Common Data Service environment instance. For example: https://[myenv].crm.dynamics.com. When done, click **Next**.
+7. In the dialog box that appears, type the URL of your Common Data Service environment instance. For example: https://[myenv].crm.dynamics.com. When done, click **Next**.
     > [!div class="mx-imgBorder"]
     > ![CDS](media/deploy-connect-CDS.png)
 
-5. In the next dialog that appears determine where the dispalyed URL is pointing to and take the following step, where appropriate:
-    - if pointing to CDS, then set the authentication method to **Microsoft account**. Set privacy level setting to **Organizational**. 
+8. In the next dialog that appears determine where the displayed URL is pointing to and take the following step, where appropriate:
+    - if pointing to CDS, then set the authentication method to **OAuth2**. Set privacy level setting to **Organizational**. 
     - if not pointing to CDS, then set the authentication method to **Anonymous**.  Set privacy level setting to **Public**.
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png)
 
-6. After you have completed configurations of your data sources the report will be populated with your data.
+9. After you have completed configurations of your data sources the report will be populated with your data. Repeat these steps for both dashboards.
 
 ### Option B: Publish using the .pbit file in the deployment package (GCC Customers only)
 
-This section provides information on how GCC custimers can use the Return to Workplace Leadership and Facility Manager dashboard pbit files available in the deployment package to publish the dashboards.
-    - Leadership dashboard pbit filename:  **Return to Workspace - Leadership.pbit**
-    - Facility Manager pbit filename:  **Return to Workspace - Facility Manager.pbit**
+This section provides information on how GCC custimers can use the **Return to the Workplace - Location Readiness** and **Return to the Workplace - Facility Manager** dashboard pbit files available in the deployment package to publish the dashboards.
+    - Location Readiness dashboard pbit filename:  **Return to Workspace - Leadership.pbit**
+    - Location Management dashboard pbit filename:  **Return to Workspace - Facility Manager.pbit**
 
 You will need to execute steps 1-9 below for each pbit file.
 
@@ -255,7 +248,7 @@ You will need to execute steps 1-9 below for each pbit file.
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-gcc-select-destination.png "Publish to Power BI")
 
-    The report becomes available in your workspace.  
+    The report becomes available in your workspace.
 
 10. [Step for Facility Manager dashbaord only] The URL will be in the following format:
     https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
