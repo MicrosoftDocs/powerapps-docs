@@ -188,30 +188,52 @@ When installing Return to Workplace solution solution, take note of the URL of y
 ### Option B: Publish using the .pbit file in the deployment package (GCC Customers only)
 
 This section provides information on how GCC custimers can use the Return to Workplace Leadership and Facility Manager dashboard pbit files available in the deployment package to publish the dashboards.
-    - Leadership dashboard pbit filename:
-    - Facility Manager pbit filename:
+    - Leadership dashboard pbit filename:  **Return to Workspace - Leadership.pbit**
+    - Facility Manager pbit filename:  **Return to Workspace - Facility Manager.pbit**
 
 You will need to execute steps 1-9 below for each pbit file.
 
 1.  Run Power BI Desktop, and sign in using your account.
 
-2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the appropriate pbit file (Leadesrship or Facility Manager file).
+2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the appropriate pbit file (Leadesrship.pbit or Facility Manager.pbit file).
 
 3.  Open the pbit file in Power BI Desktop. You'll will be prompted to type the following value: **CDS Environment**. Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
 
     > [!div class="mx-imgBorder"] 
-    > ![Configure Power BI dashboard](media/deploy-config-dashboard.png "Configure Power BI dashboard")
+    > ![Configure Power BI dashboard](media/deploy-gcc-cds-env.png "Configure Power BI dashboard")
 
 4.  You will be prompted to enter credentials to connect to your Common Data Service environment. Select **Organizational account** \> **Sign in** to specify your Common Data Service credentials.
 
     > [!div class="mx-imgBorder"] 
-    > ![Connect to Common Data Service environment](media/deploy-connect-cds.png "Connect to Common Data Service environment")
+    > ![Connect to Common Data Service environment](media/deploy-gcc-cds-singin.png "Connect to Common Data Service environment")
 
 5.  After signing in, select **Connect** to connect to your data in Common Data Service.
 
-6.  After connecting to CDS you will see the pop-up Access Web content.   Here you select theh highest level of access available from the droplist provided.
+6.  After connecting to CDS you will see a series of pop-ups to configure access to data sources.   These access level and privacy level settings need to be configured to connect to the public data sources for the COVID-19 report data.  Complete access level and privacy selections as shown in the below screen captures.
+     
     > [!div class="mx-imgBorder"] 
     > ![Access Web Content level](media/deploy-access-web-content-level.png)
+
+    > [!div class="mx-imgBorder"] 
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-level-connect.png)
+
+    > [!div class="mx-imgBorder"] 
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-level.png)
+
+    > [!div class="mx-imgBorder"] 
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels.png)
+
+    > [!div class="mx-imgBorder"] 
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-select-anonymous.png)
+    
+    > [!div class="mx-imgBorder"] 
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels-blob-storage-public.png)
+
+    After you have configured the access and privacy levels for COVID-19 public data, you must set the privacy level for CDS data to Organizational. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels-CDS.png)
+
 
 6.  On successful connection, Power BI report will be displayed. You'll be prompted to apply pending changes to your query; select **Apply changes**.
 
@@ -221,7 +243,7 @@ You will need to execute steps 1-9 below for each pbit file.
 7.  Select **Publish** to publish data to your Power BI workspace. You'll be prompted to save your changes; select **Save**.
 
      > [!div class="mx-imgBorder"] 
-     > ![Save Power BI workspace](media/deploy-save-workspace.png "Save Power BI workspace")
+     > ![Save Power BI workspace](media/deploy-gcc-publish.png "Save Power BI workspace")
 
 8.  You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
     (**Note:** The filename you enter will be displayed text in your Power BI website)
@@ -229,7 +251,7 @@ You will need to execute steps 1-9 below for each pbit file.
 9.  After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Publish to Power BI](media/deploy-publish-workspace.png "Publish to Power BI")
+    > ![Publish to Power BI](media/deploy-gcc-select-destination.png "Publish to Power BI")
 
     The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset, [Step 4: Schedule report refresh](#step-4-schedule-report-refresh). 
 
