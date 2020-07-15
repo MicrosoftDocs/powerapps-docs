@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/26/2020
+ms.date: 07/15/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -18,6 +18,7 @@ Interacting with the Web API includes composing HTTP requests with required head
 
 > [!IMPORTANT]
 > This feature is in preview. For more information, see [experimental and preview features](../canvas-apps/working-with-experimental-preview.md).
+> Your portal version must be 9.2.6.x or higher for this feature to work.
 
 ## Web API URL and versioning
 
