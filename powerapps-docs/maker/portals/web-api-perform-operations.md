@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/26/2020
+ms.date: 07/14/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -481,9 +481,393 @@ You'll have to configure permissions so that the users are able to use the Web A
 
     ![Web Role](media/web-api/web-role.png "Web Role")
 
+1. Select **Save**.
+
+1. Select **Related** > **Entity Permissions**.
+
+    ![Related Entity Permissions](media/web-api/related-entity-permissions.png "Related Entity Permissions")
+
+1. Select **Add Existing Entity Permission**.
+
+1. Select *Contact Entity Permission* created earlier.
+
+1. Select **Add**.
+
+    ![Add Contact Entity Permission to Web API User Web Role](media/web-api/add-contact-entity-permission.png "Add Contact Entity Permission to Web API User Web Role")
+
 1. Select **Save & Close**.
 
+    ![Web API User Web Role Entity Permissions](media/web-api/web-api-user-role-entity-permissions.png "Web API User Web Role Entity Permissions")
 
+1. Select **Contacts** from the left pane.
+
+1. Select a contact that you want to use in this example for Web API.
+
+    > [!NOTE]
+    > This contact is the user account used in this example for testing Web API. Ensure you select the correct contact in your portal.
+
+1. Select **Related** > **Web Roles**.
+
+    ![Web Roles for user](media/web-api/web-roles-for-user.png "Web Roles for user")
+
+1. Select **Add Existing Web Role**.
+
+1. Select *Web API User* role created earlier.
+
+1. Select **Add**.
+
+    ![Web Role added for user](media/web-api/web-role-added-to-user.png "Web Role added for user")
+
+1. Select **Save & Close**.
+
+### Step 3 - Create a Web Page
+
+Now that you have enabled Web API and configured user permissions, create a Web Page with sample code to view, edit, create and delete records.
+
+1. In the **Portal Management** app, select **Web Pages** from the left pane.
+
+1. Select **New**.
+
+1. Enter Name as *webapi*.
+
+1. Select your Website record.
+
+1. Select Parent Page as *Home*.
+
+1. Enter Partial URL as *webapi*.
+
+1. Select Page Template as *Hope*.
+
+1. Select Publishing State as *Published*.
+
+1. Select **Save**.
+
+    ![Web Page](media/web-api/webpage.png "Web Page")
+
+1. Select **Related** > **Web Pages**.
+
+    ![Related Web Pages](media/web-api/webpages-related.png "Related Web Pages")
+
+1. From **Web Page Associated View**, select *webapi*.
+
+    ![Web Page Associated View](media/web-api/webpages-related.png "Web Page Associated View")
+
+1. Scroll down to the **Content** section and then go to **Copy (HTML)** (HTML Designer).
+
+    ![HTML designer](media/web-api/copy-content.png "HTML designer")
+
+1. Copy the following sample code snippet and paste it in the HTML Designer.
+
+    ```html
+            //This is sample is for webapi demostration purpose
+    <style>
+        #processingMsg {
+            width: 150px;
+            text-align: center;
+            padding: 6px 10px;
+            z-index: 9999;
+            top: 0;
+            left: 40%;
+            position: fixed;
+            -webkit-border-radius: 0 0 2px 2px;
+            border-radius: 0 0 2px 2px;
+            -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+    
+    {% fetchxml contactList %}
+    <fetch version="1.0" mapping="logical">
+        <entity name="contact">
+            <attribute name="fullname"></attribute>
+            <attribute name="firstname"></attribute>
+            <attribute name="lastname"></attribute>
+            <attribute name="contactid"></attribute>
+            <attribute name="emailaddress1"></attribute>
+            <attribute name="telephone1"></attribute>
+            <order attribute="contactid" descending="false"></order>
+        </entity>
+    </fetch>
+    {% endfetchxml %}
+    <script>
+        //Adding the contact data in json object
+        var contactList = [
+            {% for entity in contactList.results.entities %}
+        {
+            id: "{{entity.contactid}}",
+                fullname: "{{entity.fullname}}",
+                    firstname: "{{ entity.firstname }}",
+                        lastname: "{{ entity.lastname }}",
+                            emailaddress1: "{{ entity.emailaddress1 }}",
+                                telephone1: "{{ entity.telephone1 }}"
+        } {% unless forloop.last %}, {% endunless %}
+        {% endfor %}  
+    ];
+    
+        $(function () {
+            //Web API ajax wrapper
+            (function (webapi, $) {
+                function safeAjax(ajaxOptions) {
+                    var deferredAjax = $.Deferred();
+                    shell.getTokenDeferred().done(function (token) {
+                        // add headers for ajax
+                        if (!ajaxOptions.headers) {
+                            $.extend(ajaxOptions, {
+                                headers: {
+                                    "__RequestVerificationToken": token
+                                }
+                            });
+                        } else {
+                            ajaxOptions.headers["__RequestVerificationToken"] = token;
+                        }
+                        $.ajax(ajaxOptions)
+                            .done(function (data, textStatus, jqXHR) {
+                                validateLoginSession(data, textStatus, jqXHR, deferredAjax.resolve);
+                            }).fail(deferredAjax.reject); //ajax
+                    }).fail(function () {
+                        deferredAjax.rejectWith(this, arguments); // on token failure pass the token ajax and args
+                    });
+                    return deferredAjax.promise();
+                }
+                webapi.safeAjax = safeAjax;
+            })(window.webapi = window.webapi || {}, jQuery)
+    
+            // Notification component
+            var notificationMsg = (function () {
+                var $processingMsgEl = $('#processingMsg'),
+                    stack = 0,
+                    endTimeout;
+                $processingMsgEl.hide();
+                return {
+                    show: function () {
+                        if (stack === 0) {
+                            clearTimeout(endTimeout);
+                            $processingMsgEl.show();
+                        }
+                        stack++;
+                    },
+                    hide: function () {
+                        stack--;
+                        if (stack <= 0) {
+                            stack = 0;
+                            clearTimeout(endTimeout);
+                            endTimeout = setTimeout(function () {
+                                $processingMsgEl.hide();
+                            }, 500);
+                        }
+                    }
+                }
+            })();
+    
+            // Inline editable table component
+            var webAPIExampleTable = (function () {
+                var trTpl = '<% _.forEach(data, function(data){ %>' +
+                    '<tr data-id="<%=data.id%>" data-name="<%=data.fullname%>">' +
+                    '<% _.forEach(columns, function(col){ %>' +
+                    '<td data-attribute="<%=col.name%>" data-label="<%=col.label%>" data-value="<%=data[col.name]%>"><%-data[col.name]%></td>' +
+                    '<% }) %>' +
+                    '<td>' +
+                    '<button class="btn btn-default delete" type="submit"><i class="glyphicon glyphicon-trash" aria-hidden="true"></i></button>' +
+                    '</td>' +
+                    '</tr>' +
+                    '<% }) %>';
+                var tableTpl = '<table class="table table-hover">' +
+                    '<thead>' +
+                    '<tr>' +
+                    '<% _.forEach(columns, function(col){ %>' +
+                    '<th><%=col.label%></th>' +
+                    '<% }) %>' +
+                    '<th>' +
+                    '<button class="btn btn-default add" type="submit">' +
+                    '<i class="glyphicon glyphicon-plus" aria-hidden="true"></i> Add Sample Record' +
+                    '</button>' +
+                    '</th>' +
+                    '</tr>' +
+                    '</thead>' +
+                    '<tbody>' +
+                    trTpl +
+                    '</tbody>' +
+                    '</table>';
+    
+                function getDataObject(rowEl) {
+                    var $rowEl = $(rowEl),
+                        attrObj = {
+                            id: $rowEl.attr('data-id'),
+                            name: $rowEl.attr('data-name')
+                        };
+                    $rowEl.find('td').each(function (i, el) {
+                        var $el = $(el),
+                            key = $el.attr('data-attribute'),
+                            value = $el.attr('data-value'),
+                            label = $el.attr('data-label');
+                        if (key) {
+                            attrObj[key] = value;
+                            attrObj.label = label;
+                        }
+                    })
+                    return attrObj;
+                }
+    
+                function bindRowEvents(tr, config) {
+                    var $row = $(tr),
+                        $deleteButton = $row.find('button.delete'),
+                        dataObj = getDataObject($row);
+                    $.each(config.columns, function (i, col) {
+                        var $el = $row.find('td[data-attribute="' + col.name + '"]');
+                        $el.on('click', $.proxy(col.handler, $el, col.name, dataObj));
+                    });
+                    //user can delete record using this button
+                    $deleteButton.on('click', $.proxy(config.deleteHandler, $row, dataObj));
+                }
+    
+                function bindTableEvents($table, config) {
+                    $table.find('tbody tr').each(function (i, tr) {
+                        bindRowEvents(tr, config);
+                    });
+                    $table.find('thead button.add').on('click', $.proxy(config.addHandler, $table));
+                }
+    
+                return function (config) {
+                    var me = this,
+                        columns = config.columns,
+                        data = config.data,
+                        addHandler = config.addHandler,
+                        deleteHandler = config.deleteHandler,
+                        $table;
+                    me.render = function (el) {
+                        $table = $(el).html(_.template(tableTpl)({ columns: columns, data: data })).find('table');
+                        bindTableEvents($table, { columns: columns, addHandler: addHandler, deleteHandler: deleteHandler });
+                    }
+                    me.addRecord = function (record) {
+                        $table.find('tbody tr:first').before(_.template(trTpl)({ columns: columns, data: [record] }));
+                        bindRowEvents($table.find('tbody tr:first'), config);
+                    }
+                    me.updateRecord = function (attributeName, newValue, record) {
+                        $table.find('tr[data-id="' + record.id + '"] td[data-attribute="' + attributeName + '"]').text(newValue);
+                    }
+                    me.removeRecord = function (record) {
+                        $table.find('tr[data-id="' + record.id + '"]').fadeTo("slow", 0.7, function () {
+                            $(this).remove();
+                        });
+                    }
+                };
+            })();
+    
+            //Applicaton ajax wrapper 
+            function appAjax(ajaxOptions) {
+                notificationMsg.show();
+                return webapi.safeAjax(ajaxOptions)
+                    .fail(function (response) {
+                        alert("Error: " + response.responseJSON.error.message)
+                    }).always(function () {
+                        notificationMsg.hide();
+                    });
+            }
+    
+            function addSampleRecord() {
+                //sample data
+                var recordObj = {
+                    firstname: "Sample Contact",
+                    lastname: (new Date()).toLocaleString(),
+                    emailaddress1: "someone@contoso.com",
+                    telephone1: "123-456-789"
+                };
+                appAjax({
+                    type: "POST",
+                    url: "/_api/contacts",
+                    contentType: "application/json",
+                    data: JSON.stringify(recordObj),
+                    success: function (res, status, xhr) {
+                        recordObj.id = xhr.getResponseHeader("entityid");
+                        recordObj.fullname = recordObj.firstname + " " + recordObj.lastname;
+                        table.addRecord(recordObj);
+                    }
+                });
+                return false;
+            }
+    
+            function deleteRecord(recordObj) {
+                var response = confirm("Are you sure, you want to delete \"" + recordObj.name + "\" ?");
+                if (response == true) {
+                    appAjax({
+                        type: "DELETE",
+                        url: "/_api/contacts(" + recordObj.id + ")",
+                        contentType: "application/json",
+                        success: function (res) {
+                            table.removeRecord(recordObj);
+                        }
+                    });
+                }
+                return false;
+            }
+    
+            function updateRecordAttribute(attributeName, recordObj) {
+                var newValue = prompt("Please enter \"" + recordObj.label + "\"", recordObj[attributeName]);
+                if (newValue != null) {
+                    appAjax({
+                        type: "PUT",
+                        url: "/_api/contacts(" + recordObj.id + ")/" + attributeName,
+                        contentType: "application/json",
+                        data: JSON.stringify({
+                            "value": newValue
+                        }),
+                        success: function (res) {
+                            table.updateRecord(attributeName, newValue, recordObj);
+                        }
+                    });
+                }
+                return false;
+            }
+    
+            var table = new webAPIExampleTable({
+                columns: [{
+                    name: 'firstname',
+                    label: 'First Name',
+                    handler: updateRecordAttribute
+                }, {
+                    name: 'lastname',
+                    label: 'Last Name',
+                    handler: updateRecordAttribute
+                }, {
+                    name: 'emailaddress1',
+                    label: 'Email',
+                    handler: updateRecordAttribute
+                }, {
+                    name: 'telephone1',
+                    label: 'Telephone',
+                    handler: updateRecordAttribute
+                }],
+                data: contactList,
+                addHandler: addSampleRecord,
+                deleteHandler: deleteRecord
+            });
+    
+            table.render($('#dataTable'));
+    
+        });
+    </script>
+    <div id="processingMsg" class="alert alert-warning" role="alert">Processing...</div>
+    <div id="dataTable"></div>
+    ```
+1. Select **Save & Close**.
+
+### Step 4 - Use Web API to view, edit, create and delete
+
+The sample Web Page with the URL *webapi* created earlier in this example is now ready for testing.
+
+To test the Web API functionality:
+
+1. Open a new browser and browse to the *webapi* Web Page created earlier. For example, *https://contoso.powerappsportals.com/webapi*.
+
+    ![Sample webapi Web Page](media/web-api/sample-page.png "Sample webapi Web Page")
+
+1. Select **Add Sample Record** to add the sample record from the script.
+
+1. Select a field, such as **Email** to change the email address of a contact.
+
+1. Select ![Delete](media/web-api/delete.png "Delete") (Trash icon) to delete a record.
+
+Now that you've created a web page with a sample in this example to view, edit, create and delete records, you can customize the forms and layout.
 
 ## Next steps
 
