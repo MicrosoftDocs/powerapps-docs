@@ -198,7 +198,7 @@ You will need to execute steps 1-9 below for each pbit file.
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-publish-workspace.png "Publish to Power BI")
 
-    The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset, [Step 4: Schedule reprot refresh](deploy.md##step-4-schedule-report-refresh). 
+    The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset, [Step 4: Schedule report refresh](#step-4-schedule-report-refresh). 
 
 **Note:** Steps 1-9 above need to be completed for each dashboard (pbit file)
 
