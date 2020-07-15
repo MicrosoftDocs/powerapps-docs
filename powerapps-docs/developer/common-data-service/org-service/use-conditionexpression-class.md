@@ -105,15 +105,23 @@ public ConditionExpression
 )
 ```
 
-In the SDK, two APIs are introduced to support column comparison. The
-first identifies the original attribute, the second allows
-for the inclusion of the attribute you want to compare it against.
+By passing in `true` as the value for the `compareColumns` parameter, the `value` is treated as the
+name of the second attribute to compare the values in `attributeName` to. Pass in `false` to treat it
+as a literal value instead.
 
-If `compareColumns` is passed in as `true`, it will compare the two attributes
-and return all records that match.
+For example:
 
-If a `false` value is passed, it will return all records for one attribute and
-return values that match the provided value.
+```csharp
+new ConditionExpression("firstname", ConditionOperator.Equal, true, "lastname");
+```
+
+creates a condition to return only records where the first and last names are the same, while
+
+```csharp
+new ConditionExpression("firstname", ConditionOperator.Equal, false, "John");
+```
+
+creates a condition to return only records where the first name is John.
 
 More information: [Use column comparison in queries](../column-comparison.md)
 
