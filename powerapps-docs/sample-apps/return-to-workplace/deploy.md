@@ -95,7 +95,7 @@ On extracting the .zip file, you will see the following in the extracted folder:
 |**Folder**  |**Description**  |
 |---------|---------|
 |**Package**     |  The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment.       |
-|**Power BI**     | Contains the Power BI Reports that will be used to configure reporting. More information: [Step 4: Configure and publish Power BI dashboard](deploy.md##step-4-configure-and-publish-power-bi-dashboard) 
+|**Power BI**     | Contains the Power BI Reports that will be used to configure reporting. More information: [Step 3: Configure and publish Power BI dashboard](deploy.md##step-3-configure-and-publish-power-bi-dashboard) 
 
 2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
