@@ -161,6 +161,7 @@ When installing Return to Workplace solution solution, take note of the URL of y
     - a. if pointing to CDSs, then set the authentication method to **OAuth2**. Set privacy level setting to **Organizational**. 
     - b. for URLs not pointing to CDS, then set the authentication method to **Anonymous**.  Set privacy level setting to **Public**.
 
+6. After you have completed configurations of your data sources the report will be populated with your data.
 
 ### Option B: Publish using the .pbit file in the deployment package
 
