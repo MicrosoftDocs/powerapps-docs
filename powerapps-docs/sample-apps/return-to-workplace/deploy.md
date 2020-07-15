@@ -35,6 +35,8 @@ More information:
 
 - You should be a Global administrator or Power Platform administrator to perform the installation.
 
+- You must be a Global Admin and must have Power BI Pro license to configure and publish reports.
+
 - Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
 
 - Install Power BI Desktop from the Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
@@ -178,8 +180,8 @@ When installing Return to Workplace solution solution, take note of the URL of y
     > ![CDS](media/deploy-connect-CDS.png)
 
 5. In the next dialog that appears determine where the dispalyed URL is pointing to and take the following step, where appropriate:
-    - a. if pointing to CDSs, then set the authentication method to **OAuth2**. Set privacy level setting to **Organizational**. 
-    - b. for URLs not pointing to CDS, then set the authentication method to **Anonymous**.  Set privacy level setting to **Public**.
+    - if pointing to CDS, then set the authentication method to **Microsoft account**. Set privacy level setting to **Organizational**. 
+    - if not pointing to CDS, then set the authentication method to **Anonymous**.  Set privacy level setting to **Public**.
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png)
 
@@ -265,38 +267,48 @@ You will need to execute steps 1-9 below for each pbit file.
 1.  The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Under the **Datasets** tab of your workspace, select the **Schedule refresh** icon for the dataset of your report you just published.
 
       > [!div class="mx-imgBorder"] 
-      > ![Report available in workspace](media/deploy-report-workspace.png "Report available in workspace")
+      > ![Report available in workspace](media/deploy-schedule-refresh-dataset.png "Report available in workspace")
 
 2.  The first time you try to set the data refresh setting, you'll see the **Settings** page with a message stating that your credentials aren't valid. Under **Data source credentials**, select **Edit credentials** to specify your credentials.
 
       > [!div class="mx-imgBorder"] 
-      > ![Data source credentials](media/deploy-datasource-credentials.png "Data source credentials")
+      > ![Data source credentials](media/deploy-schedule-refresh-edit-credentials.png "Data source credentials")
 
-3.  In the next screen:
+3.  In the next screen for CDS datasource:
 
-      1.  Select **Authentication** method as **OAuth2**.
+      1.  Select **Authentication** method as **Microsoft account**.
 
       2.  Select **Privacy level setting for this data source** as
           **Organizational**.
-
+          
       3.  Select **Sign in**.
 
-4.  You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
+          > [!div class="mx-imgBorder"] 
+          > ![Data source credentials](media/deploy-schedule-refresh-cds-credentials.png "Data source credentials")
 
-5.  In the **Settings** page, expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule. Select **Apply**.
+    You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
+
+    For all other datasources:
+      1.  Select **Authentication** method as **Anonymous**.
+
+      2.  Select **Privacy level setting for this data source** as
+          **Public**.
+          
+      3.  Select **Sign in**.
+
+          > [!div class="mx-imgBorder"] 
+          > ![Data source credentials](media/deploy-schedule-refresh-web-credentials.png "Data source credentials")
+
+4.  In the **Settings** page, expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule. Select **Apply**.
 
       > [!div class="mx-imgBorder"] 
-      > ![Schedule refresh data](media/deploy-schedule-refresh-data.png "Schedule refresh data")
+      > ![Schedule refresh data](media/deploy-schedule-refresh.png "Schedule refresh data")
 
       > [!NOTE]
       > - There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
       >- We recommend setting the data to refresh every 30 mins.
 
-6.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
-
-        > [!div class="mx-imgBorder"] 
-        > ![Open report in browser](media/deploy-open-report.png "Open report in browser")
-
+5.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
 
 ## Step 5: Embed Power BI report in the model-driven app
 
