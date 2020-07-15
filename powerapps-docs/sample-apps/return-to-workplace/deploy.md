@@ -173,7 +173,7 @@ You can publish the Power BI dashboard using either of the following options: us
     > ![CDS](media/deploy-connect-CDS.png)
 
 8. In the next dialog that appears determine where the displayed URL is pointing to and take the following step, where appropriate:
-    - if pointing to CDS, then set the authentication method to **OAuth2**. Set privacy level setting to **Organizational**. 
+    - if pointing to CDS, then set the authentication method to **Microsoft account**. Set privacy level setting to **Organizational**. 
     - if not pointing to CDS, then set the authentication method to **Anonymous**.  Set privacy level setting to **Public**.
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png)
