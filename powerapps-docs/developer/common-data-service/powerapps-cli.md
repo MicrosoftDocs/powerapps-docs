@@ -44,7 +44,91 @@ To get Power Apps CLI, do the following:
 
 ## Common commands
 
-This table lists some common commands used in the CLI:
+This table lists some of the common commands used in the CLI:
+
+|Command|Description|
+|-------|-----------|
+|[pcf](#pcf)|Commands to work with [Power Apps component framework](/powerapps/developer/component-framework/overview).|
+|[push](#push)|Pushes the code component to the Common Data Service instance with all the latest changes.|
+|[solution](#solution)|Commands for working with [Common Data Service solution projects](/powerapps/maker/common-data-service/solutions-overview).|
+|[auth](#auth)|Commands to [authenticate to Common Data Service](/powerapps/developer/component-framework/import-custom-controls#connecting-to-your-environment).|
+|[telemetry](#telemetry)|Manages the telemetry settings.|
+|[plugin](#plugin)|Manages to create a [plug-in](/powerapps/developer/common-data-service/plug-ins) project.|
+|[org](#org)|Command to work with Common Data Service environment.|
+
+### pcf
+
+Commands to work with [Power Apps component framework](/powerapps/developer/component-framework/overview). It has the following parameters:
+
+#### Parameters
+
+|Property Name|Description|Example|
+|-------------|-----------|-------|
+|init|Initializes the code component project. It has the following parameters <br/> - *namespace*: Namespace of the code component. <br/> - *name*: Name of the code component. <br/> - *template*: Field or dataset| `pac pcf init --namespace<SampleNameSpace --name SampleComponent --template field`|
+|push|Pushes the code component to the Common Data Service instance with all the latest changes. It has the following parameter: <br/> - *publisher-prefix*: Publisher prefix of the organization.|`pac pcf push --publisher-prefix dev`|
+|version|Updates the component manifest file with the specified patch version. It has the following parameters: <br/> - *patchversion*: Patch version of the code component. `patchversion` will only take value of the third part of the version tuple: `Major.Minor.Patch`.<br/> - *path*: Absolute or relative path of the component manifest file.<br/> - *allmanifests*: Updates the patch version for all the component manifest files. <br/> - *strategy*: Updates patch version for the manifest files using specified strategy values. It has two values: <br/> - *gittags*: we use git tags to decide if a particular control’s patch version needs to be updated.<br/> *filetracking*: we use a csv file to decide if a particular control’s patch version needs to be updated.|`pac pcf version --patchversion 1.0.0.0 --path c:\Users\Downloads\SampleComponent --allmanifests`  <br/><br/> `pac pcf version --strategy gittags`|
+
+
+### solution
+
+Commands for working with [Common Data Service solution projects](/powerapps/maker/common-data-service/solutions-overview). It has the following parameters:
+
+#### Parameters
+
+|Property Name|Description|Example|
+|-------------|-----------|-------|
+|init|Initializes the solution project.  It has the following parameters:<br/>  - *publisher-name*: Publisher name of the organization. <br/>  - *publisher-prefix*: Publisher prefix of the organization.|`pac solution init --publisher-name developer --publisher-prefix dev`  |
+|add-reference|Sets the reference path to the component project folder by passing the `path` parameter.|`pac solution add-reference --path c:\Users\Downloads\SampleComponent`|
+|clone|Creates a solution project based up on the existing solution project. It has the following parameters:<br/> -*name*: The name of the solution to be exported.<br/> -*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported. <br/> It has the following values: autonumbering, calendar, customization, emailtracking, externalapplications, general, isvconfig, marketing, outlooksynchronization, relationshiproles, sales|`pac solution clone -–name  sampleSolution --version 1.0.0.2 --include general`|
+|Export|Exports a Common Data Service solution project from the current organization. It has the following parameters:<br/> -*path*: Place where the exported solution zip file will be saved.<br/> - *name*: Name oft he solution that needs to be exported.<br/> - *managed*: Defines whether the solution should be exported as a managed solution or not.<br/>-*targetversion*: The version that the exported solution supports.<br/> -*include*: Settings that should be included in the solution being exported.|`pac solution export --path c:\Users\Documents -- name SampleComponentSolution -- managed true -- targetversion 10.0.03 --include general`|
+
+### auth
+
+Commands to [authenticate to Common Data Service](/powerapps/developer/component-framework/import-custom-controls#connecting-to-your-environment). It has the following parameters:
+
+#### Parameters
+
+|Parameter Name|Description|Example|
+|-------------|-----------|-------|
+|create| Creates the authentication profile for your organization by passing the `url` parameter. Pass the organization url for the `url` parameter.|`pac auth create --url https://Myorg.crm.dynamics.com`|
+|list|Provides the list of authentication profiles.|`pac auth list`|
+|select|Provides a way to switch between previously created authentication profiles by passing the `index` parameter.|`pac auth select --index 2`|
+|delete|Deletes the authentication profile created by passing  the `index` parameter.|`pac auth delete --index 2`|
+|clear|Clears all the authentication profile created on the local machine.|  `pac auth clear`|
+
+### telemetry
+
+Manages the telemetry settings. It has the following parameters:
+
+#### Parameters
+
+|Parameter Name|Description|Example|
+|------------|------------|---------|
+|enable|Enables the telemetry option.|`pac telemetry enable`|
+|disable|Disables the telemetry option.| `pac telemetry disable`|
+|status|Returns whether the telemetry is enabled or disabled.|`pac telemetry status`|
+
+### org
+
+Command to work with Common Data Service organizations.
+
+#### Parameters
+
+|Parameter Name|Description|Example|
+|-------------|-----------|--------|
+|who|Displays information about the current Common Data Service organizations.|`pac org who`|
+
+
+### plugin
+
+Manages to create a [plug-in](/powerapps/developer/common-data-service/plug-ins) project.
+
+#### Parameters
+
+|Parameter Name|Description|Example|
+|-------------|-----------|--------|
+|init|Initializes a directory with a new plugin class library.|`pac plugin init`|
+
 
 |Command|Description|Examples|
 |------|-----------|--------|
