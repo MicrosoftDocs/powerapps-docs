@@ -139,17 +139,17 @@ You can publish the Power BI dashboard using either of the following options: us
 
 ### Option A: Publish using the template app from AppSource (Preferred Option)
 
-## Prerequisites
+#### Prerequisites
 Before installing this template app, you must first install and set up the Return to Workplace solution. Installing this solution creates the datasource references necessary to populate the app with data.
 
 When installing Return to Workplace solution solution, take note of the URL of your Common Data Service environment instance. You will need it to connect the template app to the data.
 
-### Install the app
+#### Install the app
 1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard. 
 2.	Select **GET IT NOW** to install the solution on your environment. You're redirected to the actual installation page, where you can select the environment on which to install it on. Installation starts after selecting the environment and accepting the terms and agreement.
 3.	After the app is installed, sign in to Power Apps and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
 
-### Connect to data sources
+#### Connect to data sources
 1. Select the icon your Apps page to open the App
 2. On the splash screen selecct **Explore**, the app oepns showing sample data
 3. Select the **Connect your data** link n the banner at the top of the page
@@ -198,11 +198,11 @@ You will need to execute steps 1-9 below for each pbit file.
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-publish-workspace.png "Publish to Power BI")
 
-The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset, [Step 4:  Schedule reprot refresh](#deploy.md#step-4-schedule-report-refresh). 
+    The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset, [Step 4:  Schedule reprot refresh](#deploy.md#step-4-schedule-report-refresh). 
 
 **Note:** Steps 1-9 above need to be completed for each dashboard (pbit file)
 
-10. The URL will be in the following format:
+10. [Step for Facility Manager dashbaord only] The URL will be in the following format:
     https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
     Copy the Power BI report URL to a Notepad as you will need it in Step 5 to embed it in the model-driven app.
 
@@ -265,7 +265,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Since t
 
 For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
 
-## Step 5: Publish theme
+## Step 6: Publish theme
 
 You can always change the look and feel of the app by applying themes to match the company branding. To select a theme:
 
@@ -289,7 +289,7 @@ You can always change the look and feel of the app by applying themes to match t
    > [!div class="mx-imgBorder"]
    > ![Sample theme](media/deploy-theme-colors.png "Sample theme")
 
-## Step 6: Share canvas app
+## Step 7: Share canvas app
 
 To share canvas apps to the users:
 
@@ -309,7 +309,7 @@ To share canvas apps to the users:
 
 4. Select users from the list of available users to whom you want to share the app.
 
-## Step 7: Set the security roles
+## Step 8: Set the security roles
 
 In the Return to the Workplace solution, you'll see the following security roles are defined:
 
