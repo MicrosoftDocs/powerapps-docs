@@ -144,7 +144,7 @@ Before installing this template app, you must first install and set up the Retur
 
 When installing Return to Workplace solution solution, take note of the URL of your Common Data Service environment instance. You will need it to connect the template app to the data.
 
-### Instal the app
+### Install the app
 1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard. 
 2.	Select **GET IT NOW** to install the solution on your environment. You're redirected to the actual installation page, where you can select the environment on which to install it on. Installation starts after selecting the environment and accepting the terms and agreement.
 3.	After the app is installed, sign in to Power Apps and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
@@ -160,7 +160,9 @@ When installing Return to Workplace solution solution, take note of the URL of y
 
 ### Option B: Publish using the .pbit file in the deployment package
 
-This section provides information on how you can use the **Return to Workplace App.pbit** file available in the deployment package to publish the dashboard.
+This section provides information on how you can use the Return to Workplace Leadership and Facility Manager dashboard pbut files file available in the deployment package to publish the dashboards.
+
+You will need to execute steps 1-9 below for each pbit file.
 
 1.  Run Power BI Desktop, and sign in using your account.
 
@@ -189,23 +191,33 @@ This section provides information on how you can use the **Return to Workplace A
      > ![Save Power BI workspace](media/deploy-save-workspace.png "Save Power BI workspace")
 
 8.  You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer.
+    (**Note:** The filename you enter will be displayed text in your Power BI website)
 
 9.  After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
 
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-publish-workspace.png "Publish to Power BI")
 
-10.  The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Under the **Datasets** tab of your workspace, select the **Schedule refresh** icon for the dataset of your report you just published.
+The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset, [Step 4:  Schedule reprot refresh](#deploy.md#step-4-schedule-report-refresh). 
+
+**Note:** Steps 1-9 above need to be completed for each dashboard (pbit file)
+
+10. The URL will be in the following format:
+    https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
+    Copy the Power BI report URL to a Notepad as you will need it in Step 5 to embed it in the model-driven app.
+
+## Step 4:  Schedule report refresh
+1.  The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Under the **Datasets** tab of your workspace, select the **Schedule refresh** icon for the dataset of your report you just published.
 
       > [!div class="mx-imgBorder"] 
       > ![Report available in workspace](media/deploy-report-workspace.png "Report available in workspace")
 
-11.  The first time you try to set the data refresh setting, you'll see the **Settings** page with a message stating that your credentials aren't valid. Under **Data source credentials**, select **Edit credentials** to specify your credentials.
+2.  The first time you try to set the data refresh setting, you'll see the **Settings** page with a message stating that your credentials aren't valid. Under **Data source credentials**, select **Edit credentials** to specify your credentials.
 
       > [!div class="mx-imgBorder"] 
       > ![Data source credentials](media/deploy-datasource-credentials.png "Data source credentials")
 
-12.  In the next screen:
+3.  In the next screen:
 
       1.  Select **Authentication** method as **OAuth2**.
 
@@ -214,9 +226,9 @@ This section provides information on how you can use the **Return to Workplace A
 
       3.  Select **Sign in**.
 
-13.  You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
+4.  You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
 
-14.  In the **Settings** page, expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule. Select **Apply**.
+5.  In the **Settings** page, expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule. Select **Apply**.
 
       > [!div class="mx-imgBorder"] 
       > ![Schedule refresh data](media/deploy-schedule-refresh-data.png "Schedule refresh data")
@@ -225,32 +237,13 @@ This section provides information on how you can use the **Return to Workplace A
       > - There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
       >- We recommend setting the data to refresh every 30 mins.
 
-15.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
+6.  Next, go back to your workspace, select the **Reports** tab, and then select the report to open it in browser.
 
         > [!div class="mx-imgBorder"] 
         > ![Open report in browser](media/deploy-open-report.png "Open report in browser")
 
-16.  The URL will be in the following format:
-    https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
-    Copy the Power BI report URL to a Notepad as you will need it in the next section to embed it in the portal.
 
-17. If you want this Power BI report to be available to other users within your Power BI tenant, consider publishing the report as an app. Select your workspace name in the left pane, and then select **Create app** in the top-right corner.  
-
-18. On the app publishing page:
-
-    1. On the **Setup** tab, specify the name and description of your app.
-
-    2. On the **Navigation** tab, specify the location where you will publish it.
-
-    3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](https://docs.microsoft.com/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
-
-        > [!div class="mx-imgBorder"]
-        > ![select-install-apps-automatically](media/select-install-apps-automatically.png)
-
-18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
-
-
-## Step 4: Embed Power BI report in the model-driven app
+## Step 5: Embed Power BI report in the model-driven app
 
 The facility manager Power BI dashboard is used in the model-driven app. Since these reports are published in a different location, you need to change the location.
 
@@ -258,7 +251,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Since t
 
 2. Select the correct **environment** and then select **Settings**.
 
-3. Select **Product** > **Behaviour**, set Power BI visualization embedding to **On**.
+3. Select **Product** > **Feature**, set Power BI visualization embedding to **On**.  Then select **Save** lcoated at the bottom of the screen.
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
