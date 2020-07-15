@@ -166,7 +166,7 @@ You can publish the Power BI dashboard using either of the following options: us
 
 6. On the splash screen select **Connect**.
     > [!div class="mx-imgBorder"]
-    > ![Explore](media/deploy-connect-data-source.png)
+    > ![Connect](media/deploy-connect-data-source.png)
 
 7. In the dialog box that appears, type the URL of your Common Data Service environment instance. For example: https://[myenv].crm.dynamics.com. When done, click **Next**.
     > [!div class="mx-imgBorder"]
