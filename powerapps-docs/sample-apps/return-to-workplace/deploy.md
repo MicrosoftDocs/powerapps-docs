@@ -95,7 +95,7 @@ On extracting the .zip file, you will see the following in the extracted folder:
 |**Folder**  |**Description**  |
 |---------|---------|
 |**Package**     |  The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment.       |
-|**Power BI**     | Contains the Power BI Reports that will be used to configure reporting. More information: [Step 3: Configure and publish Power BI dashboard](deploy.md##step-3-configure-and-publish-power-bi-dashboard) 
+|**Power BI**     | Contains the Power BI Reports that will be used to configure reporting. More information: [Step 3: Configure and publish Power BI dashboard](#step-3-configure-and-publish-power-bi-dashboard) 
 
 2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
@@ -198,7 +198,7 @@ You will need to execute steps 1-9 below for each pbit file.
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-publish-workspace.png "Publish to Power BI")
 
-    The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset, [Step 4:  Schedule reprot refresh](#deploy.md#step-4-schedule-report-refresh). 
+    The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset, [Step 4: Schedule reprot refresh](deploy.md##step-4-schedule-report-refresh). 
 
 **Note:** Steps 1-9 above need to be completed for each dashboard (pbit file)
 
@@ -206,7 +206,7 @@ You will need to execute steps 1-9 below for each pbit file.
     https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
     Copy the Power BI report URL to a Notepad as you will need it in Step 5 to embed it in the model-driven app.
 
-## Step 4:  Schedule report refresh
+## Step 4: Schedule report refresh
 1.  The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Under the **Datasets** tab of your workspace, select the **Schedule refresh** icon for the dataset of your report you just published.
 
       > [!div class="mx-imgBorder"] 
