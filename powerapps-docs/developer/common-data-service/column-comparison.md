@@ -40,7 +40,7 @@ Listed below are the limitations for the current Common Data Service column comp
 - Only two columns may be compared at a time.
 - Multi-value condition operators are not supported (i.e., "in").
 - Extended condition operators are not supported (i.e., "creditlimit \> spends+1000").
-- Incompatible attribute comparison is not supported. For example, "int vs. int" attributes is a valid comparison but "int vs. string" attributes is not valid comparison.
+- Incompatible attribute comparison is not supported. For example, "int vs. int" attributes is a valid comparison but "int vs. string" attributes is not a valid comparison.
 
 ## Column comparison using FetchXML
 
