@@ -13,30 +13,30 @@
 - name: (C#) samples
   items:
     - name: About the samples
-      href: cdswebapiservice.md
+      href: samples/cdswebapiservice.md
     - name: Basic Operations
-      href: cdswebapiservice-basic-operations.md
+      href: samples/cdswebapiservice-basic-operations.md
     - name: Query Data
       href: 
     - name: Conditional Operations
       href: 
     - name: Functions and Actions
-      href: functions-actions-csharp.md
+      href: samples/functions-actions-csharp.md
     - name: Parallel Operations
-      href: cdswebapiservice-parallel-operations.md
+      href: samples/cdswebapiservice-parallel-operations.md
     - name: Async Parallel Operations
-      href: cdswebapiservice-async-parallel-operations.md
+      href: samples/cdswebapiservice-async-parallel-operations.md
     - name: Global Discovery Service
-      href: global-discovery-service-csharp.md
+      href: samples/global-discovery-service-csharp.md
 - name: (JavaScript) samples
   items:
   - name: About the client-side samples
-    href: ../web-api-samples-client-side-javascript.md
+    href: web-api-samples-client-side-javascript.md
   - name: Basic Operations
-    href: basic-operations-client-side-javascript.md
+    href: samples/basic-operations-client-side-javascript.md
   - name: Query Data
-    href: query-data-client-side-javascript.md
+    href: samples/query-data-client-side-javascript.md
   - name: Conditional Operations
-    href: conditional-operations-client-side-javascript.md
+    href: samples/conditional-operations-client-side-javascript.md
   - name: Functions and Actions
-    href: functions-actions-client-side-javascript.md
+    href: samples/functions-actions-client-side-javascript.md
