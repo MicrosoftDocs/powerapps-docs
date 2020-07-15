@@ -137,7 +137,7 @@ You can install the app by using one of the following 3 options:
 
 2.  In the left pane, select **Environments**, and then select the name of the environment you created earlier.
 
-3. In the environment details page, select **Manage Dynamics 365 apps**.
+3. In the environment details page, select **Dynamics 365 apps** under **Resources**.
 
     > [!div class="mx-imgBorder"] 
     > ![Environment settings](media/ppac-env-setting.png "Environment settings")

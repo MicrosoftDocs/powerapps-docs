@@ -861,6 +861,16 @@ The change tracking feature allows you to keep the data synchronized in an effic
 
 More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md).
 
+## Column comparison using the Web API
+
+The following example shows how to compare columns using the Web API:
+
+```http
+https://<environment-root>/contacts?$select=firstname&$filter=firstname eq lastname
+```
+
+More information: [Use column comparison in queries](../column-comparison.md)
+
 ### See also
 
 [Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
