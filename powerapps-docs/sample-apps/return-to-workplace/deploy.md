@@ -146,34 +146,58 @@ When installing Return to Workplace solution solution, take note of the URL of y
 
 #### Install the app
 1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard. 
-2.	Select **GET IT NOW** to install the solution on your environment. You're redirected to the actual installation page, where you can select the environment on which to install it on. Installation starts after selecting the environment and accepting the terms and agreement.
+
+2.	Select **GET IT NOW** to install the solution on your environment. 
+    > [!div class="mx-imgBorder"]
+    > ![Get it Now](media/deploy-install-get-it-now.png)
+
+    You're directed to an agreement pop-up, where you select **Continue** to agree to the terms provided.
+    
+3. Select **Install**.  
+    > [!div class="mx-imgBorder"]
+    > ![Install](media/deploy-install-install-app.png)
+
+4. Create workspace for your app
+    > [!div class="mx-imgBorder"]
+    > ![Workspace](media/deploy-create-workspace.png)
+
+5. Enter workspace details and select **Continue**
+
 
 #### Connect to data sources
-1. Select the icon your Apps page to open the App
+1. Select the icon in your Apps page to open the App
 
 2. On the splash screen select **Explore**, the app opens showing sample data
+    > [!div class="mx-imgBorder"]
+    > ![Explore](media/deploy-connect-data-source.png)
 
 3. Select the **Connect your data** link in the banner at the top of the page
 
 4. In the dialog box that appears, type the URL of your Common Data Service environment instance. For example: https://[myenv].crm.dynamics.com. When done, click **Next**.
+    > [!div class="mx-imgBorder"]
+    > ![CDS](media/deploy-connect-CDS.png)
 
 5. In the next dialog that appears determine where the dispalyed URL is pointing to and take the following step, where appropriate:
     - a. if pointing to CDSs, then set the authentication method to **OAuth2**. Set privacy level setting to **Organizational**. 
     - b. for URLs not pointing to CDS, then set the authentication method to **Anonymous**.  Set privacy level setting to **Public**.
+    > [!div class="mx-imgBorder"]
+    > ![Privacy](media/deploy-privacy-level.png)
 
 6. After you have completed configurations of your data sources the report will be populated with your data.
 
-### Option B: Publish using the .pbit file in the deployment package
+### Option B: Publish using the .pbit file in the deployment package (GCC Customers only)
 
-This section provides information on how you can use the Return to Workplace Leadership and Facility Manager dashboard pbut files file available in the deployment package to publish the dashboards.
+This section provides information on how GCC custimers can use the Return to Workplace Leadership and Facility Manager dashboard pbit files available in the deployment package to publish the dashboards.
+    - Leadership dashboard pbit filename:
+    - Facility Manager pbit filename:
 
 You will need to execute steps 1-9 below for each pbit file.
 
 1.  Run Power BI Desktop, and sign in using your account.
 
-2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the **Return to Workplace App.pbit**.
+2.  Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip). Under the Power BI Template folder, you will find the appropriate pbit file (Leadesrship or Facility Manager file).
 
-3.  Open the **Return to Workplace App.pbit** file in Power BI Desktop. You'll will be prompted to type the following value: **CDS_base_solution_URL**. Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
+3.  Open the pbit file in Power BI Desktop. You'll will be prompted to type the following value: **CDS Environment**. Type the URL of your Common Data Service environment instance. For example: https://*[myenv]*.crm.dynamics.com, where *[myenv]* is the name of your environment. Select **Load.**
 
     > [!div class="mx-imgBorder"] 
     > ![Configure Power BI dashboard](media/deploy-config-dashboard.png "Configure Power BI dashboard")
@@ -184,6 +208,10 @@ You will need to execute steps 1-9 below for each pbit file.
     > ![Connect to Common Data Service environment](media/deploy-connect-cds.png "Connect to Common Data Service environment")
 
 5.  After signing in, select **Connect** to connect to your data in Common Data Service.
+
+6.  After connecting to CDS you will see the pop-up Access Web content.   Here you select theh highest level of access available from the droplist provided.
+    > [!div class="mx-imgBorder"] 
+    > ![Access Web Content level](media/deploy-access-web-content-level.png)
 
 6.  On successful connection, Power BI report will be displayed. You'll be prompted to apply pending changes to your query; select **Apply changes**.
 
