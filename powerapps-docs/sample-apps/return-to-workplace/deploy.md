@@ -155,7 +155,7 @@ When installing Return to Workplace solution solution, take note of the URL of y
 4. In the dialog box that appears, type the URL of your Common Data Service environment instance. For example: https://[myenv].crm.dynamics.com. When done, click **Next**.
 5. In the next dialog that appears determine where the dispalyed URL is pointing to and take the following step, where appropriate:
     a. if pointing to CDSs, then set the authentication method to **OAuth2**. Set privacy level setting to **Organizational**. 
-    b. for URLs not pointing to CDS, then set the authentication method to **Anonymous**.  Set privacy level setting to **Public**
+    b. for URLs not pointing to CDS, then set the authentication method to **Anonymous**.  Set privacy level setting to **Public**.
 
 
 ### Option B: Publish using the .pbit file in the deployment package
