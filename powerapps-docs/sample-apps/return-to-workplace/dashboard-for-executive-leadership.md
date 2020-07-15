@@ -1,5 +1,5 @@
 ---
-title: User the Power BI dashboard
+title: Use the Power BI dashboard
 description: Provides an overview of insights through dashboards.
 author: wbakker
 ms.service: powerapps
