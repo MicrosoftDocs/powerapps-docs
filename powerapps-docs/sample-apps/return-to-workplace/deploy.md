@@ -255,13 +255,15 @@ You will need to execute steps 1-9 below for each pbit file.
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-gcc-select-destination.png "Publish to Power BI")
 
-    The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset, [Step 4: Schedule report refresh](#step-4-schedule-report-refresh). 
-
-**Note:** Steps 1-9 above need to be completed for each dashboard (pbit file)
+    The report becomes available in your workspace.  
 
 10. [Step for Facility Manager dashbaord only] The URL will be in the following format:
     https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
     Copy the Power BI report URL to a Notepad as you will need it in Step 5 to embed it in the model-driven app.
+
+**Note:** Steps 1-10 above need to be completed for each dashboard (pbit file)
+
+Now, we will configure the data refresh settings for the dataset, [Step 4: Schedule report refresh](#step-4-schedule-report-refresh).
 
 ## Step 4: Schedule report refresh
 1.  The report becomes available in your workspace. Now, we will configure the data refresh settings for the dataset. Under the **Datasets** tab of your workspace, select the **Schedule refresh** icon for the dataset of your report you just published.
