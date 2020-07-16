@@ -885,8 +885,6 @@
         href: ./canvas-apps/test-studio-classic-pipeline-editor.md
       - name: Configure pipeline using YAML
         href: ./canvas-apps/test-studio-yaml-pipeline.md
-  - name: Debug an app with canvas app Monitor
-    href: ./canvas-apps/monitor.md
   - name: Customize a SharePoint list form
     items:
       - name: Make basic changes
@@ -1748,6 +1746,12 @@
     href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
 - name: Troubleshoot
   items:
+    items:
+    - name: Debug Power Apps with Monitor
+    - name: Monitor Overview
+      href: monitor-overview.md
+    - name: Debug canvas apps with Monitor
+      href: monitor-canvasapps.md
   - name: Performance tips for canvas apps
     href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions
