@@ -1,14 +1,14 @@
 ---
 title: Customize a SharePoint list form | Microsoft Docs
 description: Use Power Apps to customize the form with which users create and update entries in a SharePoint list.
-author: tapanm-msft
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
+ms.reviewer: tapanm
 ms.date: 07/16/2020
-ms.author: tapanm
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
