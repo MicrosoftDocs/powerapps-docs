@@ -25,6 +25,7 @@ For example, you can create a new account, update a contact, or change the [enti
 > - This feature is in preview. For more information, see [experimental and preview features](../canvas-apps/working-with-experimental-preview.md).
 > - Portals Web APIs are build for creating rich user experience inside portal pages. And not optimized for 3rd party services or application integration.
 > - Portals Web API operations are limited to entities related to data. For example, entities such as Accounts, Contacts or your custom entity. Configuration of entity metadata, or portal configuration entity data isn't supported when using the portals Web API. For example, configuring portals entities such as adx_contentsnippet, adx_entityform or adx_entitylist isn't supported using portals Web API. For a complete list, go to [configuration entities](#configuration-entities).
+> - Portals Web APIs benefit from the [server-side caching](admin/clear-server-side-cache.md) and hence, subsequent calls to the Web APIs will be faster than the initial calls. Note that clearing the portal server-side cache causes temporary performance degradation.
 
 ## Web API operations
 
