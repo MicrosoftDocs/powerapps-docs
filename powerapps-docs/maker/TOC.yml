@@ -1748,12 +1748,12 @@
     href: https://powerusers.microsoft.com/t5/PowerApps-Community/ct-p/PowerApps1
 - name: Troubleshoot
   items:
-    items:
     - name: Debug Power Apps with Monitor
-    - name: Monitor Overview
-      href: monitor-overview.md
-    - name: Debug canvas apps with Monitor
-      href: monitor-canvasapps.md
+      items:
+      - name: Monitor Overview
+        href: monitor-overview.md
+      - name: Debug canvas apps with Monitor
+        href: monitor-canvasapps.md
   - name: Performance tips for canvas apps
     href: ./canvas-apps/performance-tips.md
   - name: Common issues and resolutions

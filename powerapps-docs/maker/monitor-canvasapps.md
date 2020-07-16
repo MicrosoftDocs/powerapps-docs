@@ -24,7 +24,7 @@ search.app:
 This feature gives you a better understanding of how the formulas contained in your app work so you can improve performance and identify any errors or problems.
 
 > [!IMPORTANT]
-> The canvas app Monitor feature is in preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
+> The canvas app Monitor feature is in preview. For more information, see [Experimental and preview features](canvas-apps/working-with-experimental-preview.md).
 
 ## Debugging an app
 
@@ -235,4 +235,4 @@ The permanent fix for this app is to do the **CountRows** manually for each en
 
 ### See also
 
-[Canvas app Test Studio](test-studio.md)
+[Canvas app Test Studio](/canvas-apps/test-studio.md)
