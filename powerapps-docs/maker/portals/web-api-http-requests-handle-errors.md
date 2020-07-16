@@ -17,7 +17,7 @@ ms.reviewer: tapanm
 Interacting with the Web API includes composing HTTP requests with required headers and handling HTTP responses, including any errors.
 
 > [!IMPORTANT]
-> - **Your portal version must be 9.2.6.x or higher for this feature to work.**
+> - **Your portal version must be 9.2.6.41 or higher for this feature to work.**
 > - This feature is in preview. For more information, see [experimental and preview features](../canvas-apps/working-with-experimental-preview.md).
 
 ## Web API URL and versioning
