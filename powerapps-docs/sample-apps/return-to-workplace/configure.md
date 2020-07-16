@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 
 # Configure the Return to the Workplace solution
 
-This article provides step-by-step instructions for IT administrators to configure the Return to the Workplace solution. IT administrators are responsible for making sure the facility manager can guide their facilities throughout the phases. The following steps will be covered in this article:
+This article provides step-by-step instructions to IT administrators for configuring the Return to the Workplace solution. IT administrators are responsible for making sure the facility manager can guide their facilities throughout the phases. The following steps will be covered in this article:
 
 - [Plan reopening phases](#plan-reopening-phases)
 

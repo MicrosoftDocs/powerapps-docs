@@ -78,112 +78,110 @@ By default, two facilities are provided as an example.
    | Facility Group         | Select an appropriate group for the facility. |
    | Reopen Phase           | Select an appropriate reopen phase.  |
    | Address Street 1       | Enter the first line of the street address.            |
-   | Address Street 2       | Enter the address street 2 information.             |
-   | Address Postal Code    | Enter postal code.         |
+   | Address Street 2       | Enter the second line of the street address.             |
+   | Address Postal Code    | Enter the postal code.         |
    | Address City           | Enter the city.               |
-   | Address State/Province | Enter state or province.      |
+   | Address State/Province | Enter the state or province.      |
    | Address Country        | Enter a country.        |
 
 3. Select **Save & Close**. The newly created record is available in the
     **Active Facility Types** view.
 
-To edit the record, select the newly created record, update the values as
-required, and select **Save & Close**.
+To edit the record, select it, update the values, and then select **Save & Close**.
 
-4. A facility can be assigned to a user, to do so switch to the **Active Facilities** view.
+**To assign a facility to a user**
+
+1. A facility can be assigned to a user, to do so switch to the **Active Facilities** view.
 
    > [!div class="mx-imgBorder"]
    > ![Active Facilities](media/facility-manager-active-facilities.png "Active Facilities")
 
-5. Select a facility and click **Assign**, select the **User** to assign the facility to.
+2. Select a facility, select **Assign**, and then select a **User** to assign the facility to.
 
    > [!div class="mx-imgBorder"]
-   > ![Assign](media/facility-manager-assign.png "Assign")
+   > ![Assign a facility to a user](media/facility-manager-assign.png "Assign a facility to a user")
 
-
-### Monitor facility
+### Monitor a facility
 
 The facility manager can monitor and assesses the current status of their facilities
 by reviewing the facility's associated dashboard, details, checklist, and
-transitions. To monitor a facility.
+transitions.
 
-1. Select **Facility** from  the left pane to see the list of facilities. The default view, My Facilities, shows only your facilities. When switching view, you can see either all active or inactive facilities. 
+**To monitor a facility**
 
-2. Select the desired facility record to access the facility data. The **General** tab shows the facility manager dashboard. The dashboard shows the COVID-19 data based on the address details of the facility, checklist completion for the current phase, employee attestation, and employee sentiment. More information: [Power BI dashboard]().
+1. Select **Facility** from the left pane. The default view, My Facilities, shows only your facilities. When switching views, you can see either all active or inactive facilities. 
+
+2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard. The dashboard shows the COVID-19 data based on the address details of the facility, checklist completion for the current phase, employee attestation, and employee sentiment. More information: [Power BI dashboard]().<!--note from editor: I don't know what the target should be for this link.-->
 
    > [!div class="mx-imgBorder"]
-   > ![Facility at glance](media/facility-manager-facility-at-glance1.png "Facility at glance")
+   > ![Facility at a glance](media/facility-manager-facility-at-glance1.png "Facility at a glance")
 
-3. Select **Details** tab for the selected facility
+3. Select the **Details** tab for the facility.<!--This and the next few "steps" should be either bullets or regular paragraphs. And maybe they don't need to be illustrated at all. I found it confusing to see the exact same images in this section and the following sections; I thought I'd lost my place somehow.-->
  
    > [!div class="mx-imgBorder"]
    > ![Select details ](media/facility-manager-facility-form-populated.png "Select details")
 
-4. Select **Checklist** tab for the selected facility to see checklist items and their completion status.
+4. Select the **Checklist** tab to see checklist items and their completion status.
 
     > [!div class="mx-imgBorder"]
-    > ![Checklist two](media/facility-manager-checklist-2-1.png "Checklist two") 
+    > ![Checklist items](media/facility-manager-checklist-2-1.png "Checklist items") 
 
-5. Select **Transitions** tab for the selected facility to see any related transition requests and their status.
+5. Select the **Transitions** tab to see any related transition requests and their status.
 
    > [!div class="mx-imgBorder"]
    > ![Facility transition](media/facility-manager-facility-transitions.png "Facility transition")
 
 ### Updating the checklist
 
-The **Checklist** tab contains an editable grid displaying the check-in the checklist for the current facility or phase combination. The editable grid provides an easy way for the users to find checks by category and then update the individual checks, where applicable. To locate and update checks:
+The **Checklist** tab contains an editable grid displaying the checklist<!--By "check-in" you don't mean an employee's check-in to a facility, right?--> for the current facility or phase combination. The editable grid provides an easy way for to find checklist items<!--We won't be calling them "checks" in content, even if the UI does.--> by category and then update the individual items, where applicable. 
 
-1. Select **Facilities** from the left pane to see the list of active facilities
+**To find and update checklist items**
 
-2. Select a desired facility to access the facility data
+1. Select **Facilities** from the left pane.
 
-3. Select **Checklist** tab for the selected facility to see the checklist items and their completion status.
+2. Select the facility for which you want to find and update checklist items.
 
-   > [!div class="mx-imgBorder"]
-   > ![Checklist](media/facility-manager-checklist-2-1.png "Checklist")
-
-4. Select the category from the **Categories** drop-list that you want to search
-    within to locate the checks you want to review or update.
+3. Select the **Checklist** tab.
 
    > [!div class="mx-imgBorder"]
-   > ![Category drop-list](media/facility-manager-categories-droplist1.png "Category drop-list")
+   > ![Checklist items and status](media/facility-manager-checklist-2-1.png "Checklist items and status")
 
-5. Select the dropdown and select **Yes** to confirm the check is completed, add the **date** in the completion 
-   date column.
+4. Select **Category**, and then select the category you want to search
+    in.
 
-6. Select **Save** to update the checklist.
+   > [!div class="mx-imgBorder"]
+   > ![Category drop-down list](media/facility-manager-categories-droplist1.png "Category drop-down list")
+
+5. Select the drop-down<!--What does this mean?--> and select **Yes** to confirm the check is completed. 
+
+6. Add the date in the **Completion date** column, and then select **Save** to update the checklist.
 
     > [!div class="mx-imgBorder"]
-    > ![Add comments](media/facility-manager-facility-completed-check1.png "Add comments")
+    > ![Update the completion date for a checklist item](media/facility-manager-facility-completed-check1.png "Update the completion date for a checklist item")
 
 ## Moving facility to a new phase
 
 When a facility manager asserts that a facility should be moved to a new phase, the manager can apply for a transition. Only the facility manager can create
-a new transition record that indicates the new phase. A reviewer must **Accept** or **Reject** the transition. Either way, the transition record is closed and stored as a historical track record. When the transition is accepted, the proposed phase is applied to the facility.
+a new transition record that indicates the new phase. A reviewer must **Accept** or **Reject** the transition. Either way, the transition record is closed and stored as a historical record. When the transition is accepted, the proposed phase is applied to the facility.
 
-The new phase comes with its own set of metrics, goals, and checklist. These will be made available on the facility by a background process. So there will be
+The new phase comes with its own checklist and set of metrics and goals. These will be made available on the facility by a background process. So there will be
 a small delay between accepting a transition and the actual changes on the facility record.
 
-A reviewer, for instance, a facility manager supervising many facility managers
-in a facility group, can find the backlog in the phase transitions subarea. For example, the list can be filtered by the facility group or by the reviewer to find out that the phase transitions require attention.
+A reviewer&mdash;for instance, a facility manager supervising many facility managers in a facility group&mdash;can find the backlog in **Phase transitions**. For example, the list can be filtered by the facility group or by the reviewer to find the phase transitions that require attention.
 
 > [!div class="mx-imgBorder"]
 > ![Open phase transitions](media/facility-manager-open-phase-transitions.png "Open phase transitions")
 
-### Create transition request
+### Create a transition request
 
-To create a transition request:
+1. Select **Facilities** in the left pane, and select a facility record from the active facilities list.
 
-1. Select **Facilities** in the left pane and select a facility record from the active facilities list.
-
-2. Select **Transitions** tab from the selected facility. If there are any existing or previous transition requests established, they will appear in the
-subgrid.
+2. Select the **Transitions** tab. If any existing or previous transition request were established, they'll appear in the subgrid.
 
 3. Select **New Reopen Phase Transition**.
 
    > [!div class="mx-imgBorder"]
    > ![New reopen phase transition](media/facility-manager-reopen-phase-transition-subgrid.png "New reopen phase transition")
-
 
 4. Enter appropriate values in the fields:
 
@@ -192,73 +190,69 @@ subgrid.
 
    | **Field**    | **Description**    |
    |-----------------------|---------------|
-   | Proposed Reopen Phase | Select the desired next reopen phase to transition to.|
-   | Summary | Enter the summary information regarding moving to the next or targeted reopen phase. |
+   | Proposed Reopen Phase | Select the next reopen phase you want to transition to.|
+   | Summary | Enter the summary information about moving to the next or targeted reopen phase. |
    | Reviewer | Select appropriate resources to review and approve the new transition. |
 
-5. Select **Save & Close**. The newly created record is available in the
-    **Transitions** tab subgrid for the facility.
+5. Select **Save & Close**. The newly created record is available in the **Transitions** tab subgrid for the facility.
 
-To edit the record, select the newly created record, update the values as
-required, and select **Save & Close**. After approving or rejecting a phase transition, the record can't be updated.
+To edit the record, select it, update the values, and then select **Save & Close**. After the phase transition is approved or rejected, the record can't be updated.
 
-### Approve transition
-
-To approve transition requests:
+<!--These next two procedures could be combined much more gracefully. Too many vertical inches to explain something that isn't complex, almost as if they're just here to show off pictures of the UI.-->
+### Approve a transition
 
 1. Select **Phase Transitions** in the left pane.
 
    > [!div class="mx-imgBorder"]
    > ![Phase transition](media/facility-manager-phase-transition-reopen-transitions.png "Phase transition")
 
+2. Filter the transitions by name on the **Reviewer** column.
 
-2. Filter the transitions with the name on the **Reviewer** column.
+3. Select the **Transition** record. Complete any analysis required before selecting **Approved** or **Rejected** in the **Review Status** field.
 
-3. Select the **Transition** record. Complete any analysis required before selecting an **Approved** or **Rejected** value in the **Review Status** field 
-
-4. For approvals, select **Approved** status value and enter in any associated comments in the **Review Comments** field.
+4. For approvals, select **Approved** and enter any comments in the **Review Comments** field.
 
    > [!div class="mx-imgBorder"]
    > ![Approved transitions](media/facility-manager-phase-transition-form-approved.png  "Approve transitions")
 
-5. Select **Save & Close**. Transition **Review Status** is updated and appropriate back-end processes are triggered to move the facility to the targeted reopen phase.
+5. Select **Save & Close**.
 
-### Reject transitions
+The review status for the transition is updated, and appropriate back-end processes are triggered to move the facility to the targeted reopen phase.
 
-A reviewer must **Accept** or **Reject** transitions. To review, and approve or reject the transition:
+### Reject a transition
 
 1. Select **Phase Transitions** in the left pane.
 
    > [!div class="mx-imgBorder"]
    > ![Phase transition](media/facility-manager-phase-transition-reopen-transitions.png "Phase transition")
 
-2. Filter the transitions with the name on the **Reviewer** column.
+2. Filter the transitions by name on the **Reviewer** column.
 
-3. Select **Transition** record. Complete any analysis required before selecting an **Approved** or **Rejected** value in the **Review Status** field.
+3. Select the **Transition** record. Complete any analysis required before selecting an **Approved** or **Rejected** value in the **Review Status** field.
 
-4. For rejections, select **Rejected** status value and enter in any
-    associated comments in the **Review Comments** field.
+4. For rejections, select **Rejected** and enter any comments in the **Review Comments** field.
 
    > [!div class="mx-imgBorder"]
    > ![Rejected transitions](media/facility-manager-phase-transition-form-rejected.png "Rejected transitions")
 
-5. Select **Save & Close**. Transition **Review Status** is updated and is processed to move the facility to the requested reopen phase. The facility remains in the current phase and status.
+5. Select **Save & Close**.
+
+The review status for the transition is updated and processed to move the facility to the requested reopen phase<!--This contradicts the next sentence.-->. The facility remains in the current phase and status.
 
 ## Monitor employee attestations
 
-Facility managers can monitor whether or not their organization's employees are
-feeling healthy enough to be eligible to return to their facility. They can track employee self-attestations of their health based upon a series of
-questions answered by the employees. This data is typically entered by the employee using the employee app. Facility managers can view the summary of the responses in **Employee Attestations** subarea in the facility manager app.
+Facility managers can monitor whether their organization's employees are
+feeling healthy enough to be eligible to return to their facility. They can track employee self-attestations of their health based on a series of
+questions the employees answer. This data is typically entered by the employee using the employee app. Facility managers can view the summary of the responses in the **Employee Attestations** area of the facility manager app.
 
 > [!div class="mx-imgBorder"]
 > ![Employee Attestations](media/facility-manager-employee-attestations.png "Employee Attestations")
 
 ## Monitor employee sentiments
 
-Keeps track of general employee sentiment on how they are feeling about the
-prospect of returning to their workplace facility. This information is
-self-reported, but it is a valuable parameter when tracked
-consistently over time and with bigger groups. This data is typically entered by the employee using the employee app. Facility managers can view the summary of the responses in **Employee Attestations** subarea in the facility manager app.
+This area of the facility manager app keeps track of general employee sentiment about the prospect of returning to their workplace. This information is
+self-reported, but it's a valuable parameter when tracked
+consistently over time and with bigger groups. This data is typically entered by the employee using the employee app. Facility managers can view the summary of the responses in the **Employee Attestations** area of the facility manager app.
 
 > [!div class="mx-imgBorder"]
 ![Employee sentiment](media/facility-manager-employee-sentiment.png "Employee sentiment")

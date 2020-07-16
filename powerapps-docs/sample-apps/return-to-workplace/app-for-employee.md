@@ -22,7 +22,7 @@ This article provides step-by-step instructions about how to use the Employee Re
 
   - For Android devices, use [Google Play](https://aka.ms/powerappsandroid).
 
-- Ensure that your organization has deployed and configured the Employee Return to the Workplace app as described in [Deploy the solution](deploy.md).<!--SELF, why doesn't this work as a relative link??? -->
+- Ensure that your organization has deployed and configured the Employee Return to the Workplace app, as described in [Deploy the solution](deploy.md).
 
 ## Getting started with the app
 

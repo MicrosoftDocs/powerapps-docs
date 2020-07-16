@@ -22,7 +22,7 @@ Estimated time to complete these steps: 60&ndash;90 minutes
 
 - You must be a Global administrator and must have a Power BI Pro license to configure and publish reports.
 
-- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces) and [Share the workspace with others](https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace)
+- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces) and [Share the workspace with others](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace)
 
 - Install Power BI Desktop from Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
 
@@ -52,7 +52,7 @@ You can install the Return to the Workplace solution by using either of the foll
 
 ### Option A - Install the app from AppSource
 
-1. Go to [AppSource](https://aka.ms/rtw-app)<!--SELF: Not working at this moment.--> to install the **Return to the Workplace solution**.
+1. Go to [AppSource](https://aka.ms/rtw-app)<!--Not working yet, but that's probably expected?--> to install the **Return to the Workplace solution**.
 
     > [!div class="mx-imgBorder"]
     > ![Installation page](media/return-to-workplace-installationpage.png "Installation page")
@@ -66,7 +66,7 @@ You can install the Return to the Workplace solution by using either of the foll
 
 ### Option B - Install the app from the deployment package
 
-Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>.<!--SELF not working --> Before extracting the .zip file, you must unblock it.
+Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>.<!--Okay that this doesn't work yet, I assume.--> Before extracting the .zip file, you must unblock it.
 
 **To unblock the .zip file**
 
@@ -313,7 +313,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
    > [!div class="mx-imgBorder"]
    > ![Facility form](media/deploy-new-facility-form.png "Facility form")
 
-5. Export the solution, unpack the solution, and then apply the changes in the form XML listed in this article: [Embed a Power BI report in a model-driven system form](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form).<!--Edit okay?--> Pack the solution, reimport the solution, and then select **Publish all customizations**.
+5. Export the solution, unpack the solution, and then apply the changes in the form XML listed in this article: [Embed a Power BI report in a model-driven system form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form).<!--Edit okay?--> Pack the solution, reimport the solution, and then select **Publish all customizations**.
 
 For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
 
