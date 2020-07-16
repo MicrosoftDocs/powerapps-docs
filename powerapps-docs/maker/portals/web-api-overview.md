@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/15/2020
+ms.date: 07/16/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -78,11 +78,6 @@ If audit logging is enabled, then user can see all the audit events in [Office 3
 ![Office 365 audit log](media/web-api/office365-security-compliance-audit-log.png)
 
 More information: [Enable and use Activity Logging](https://docs.microsoft.com/power-platform/admin/enable-use-comprehensive-auditing), [Export, configure, and view audit log records](https://docs.microsoft.com/microsoft-365/compliance/export-view-audit-log-records).
-
-## Web API and licensing
-
-Portals uses existing license behavior, that includes the API calls
-for each user type. For more information about API limits for Power Apps portals, download and read [Microsoft Power Apps and Power Automate Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 ## Configuration entities
 
