@@ -33,7 +33,7 @@ You use this app to:
 
 - [Manage employee cases](#manage-employee-cases).
 
-- [Monitor the employee cases dashboard](#monitor-the-employee-cases-dashboard).
+<!-- Removing this, as we don't have any reference for this section[Monitor the employee cases dashboard](#monitor-the-employee-cases-dashboard).-->
 
 ## App at a glance
 

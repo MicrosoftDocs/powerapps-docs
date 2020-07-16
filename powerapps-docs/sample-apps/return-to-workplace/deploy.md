@@ -86,7 +86,7 @@ After extracting the .zip file, you'll see the following in the extracted folder
 
 #### Install the app by using the deployment package
 
-1. Go to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip file). Open the **Package** folder, and then run **PackageDeployer.exe**.
+1. Go to the location where you extracted the deployment package (.zip file). Open the **Package** folder, and then run **PackageDeployer.exe**.
 
 2. On the next screen, select **Continue**.
 
@@ -182,7 +182,7 @@ Follow the steps below for each .pbit file.
 
 1. Run Power BI Desktop, and sign in using your account.
 
-2. Go to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip file). In the **Power BI Template** folder, you'll find the appropriate .pbit file.
+2. Go to the location where you extracted the deployment package (.zip file). In the **Power BI Template** folder, you'll find the appropriate .pbit file.
 
 3. Open the .pbit file in Power BI Desktop. You'll be prompted to enter the following value: **Common Data Service Environment**. Enter the URL of the Common Data Service environment (for example, https://*[myenv]*.crm.dynamics.com, where [myenv] is the name of your environment). Select **Load**.
 
