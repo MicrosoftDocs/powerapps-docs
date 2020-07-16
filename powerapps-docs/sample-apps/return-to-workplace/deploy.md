@@ -16,21 +16,6 @@ This article provides step-by-step instructions to IT administrators for deployi
 
 Estimated time to complete these steps: 60&ndash;90 minutes
 
-## Service URLs for US Government customers (optional - for government agencies only)
-
-You use a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants. The commercial version of the service URLs is used throughout this article. If you have a US Government organization, use the respective US Government URL for your deployment.
-
-| **Commercial version URL**| **US Government version URL**  |
-|-------------------|--------------------------------|
-| [https://make.powerapps.com](https://make.powerapps.com)  | [https://make.gov.powerapps.us](https://make.gov.powerapps.us) (GCC)<br/><br/>[https://make.high.powerapps.us](https://make.high.powerapps.us) (GCC High)                |
-| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us) (GCC)<br/><br/>[https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us) (GCC High) |
-| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us](https://app.powerbigov.us) (GCC)<br/><br/>[https://app.high.powerbigov.us](https://app.high.powerbigov.us) (GCC High)                 |
-
-More information:
-
-- [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
-- [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
-
 ## Prerequisites
 
 - You should<!--note from editor: Should this be "must"?--> be a Global administrator or Microsoft Power Platform administrator to perform the installation.
@@ -402,6 +387,21 @@ In the Return to the Workplace solution, the following security roles are define
 
    > [!div class="mx-imgBorder"]
    > ![Select roles](media/deploy-settings-security-enabled-users.png "Select roles")
+   
+## Service URLs for US Government customers (optional - for government agencies only)
+
+There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants. The commercial version of the service URLs is used throughout the article. If you have a US Government organization, use the respective US Government URL for your deployment:
+
+| **Commercial version URL**| **US Government version URL**  |
+|-------------------|--------------------------------|
+| [https://make.powerapps.com](https://make.powerapps.com)  | [https://make.gov.powerapps.us](https://make.gov.powerapps.us) (GCC)<br/><br/>[https://make.high.powerapps.us](https://make.high.powerapps.us) (GCC High)                |
+| [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com) | [https://gcc.admin.powerplatform.microsoft.us](https://gcc.admin.powerplatform.microsoft.us) (GCC)<br/><br/>[https://high.admin.powerplatform.microsoft.us](https://high.admin.powerplatform.microsoft.us) (GCC High) |
+| [https://app.powerbi.com/](https://app.powerbi.com/)                  | [https://app.powerbigov.us](https://app.powerbigov.us) (GCC)<br/><br/>[https://app.high.powerbigov.us](https://app.high.powerbigov.us) (GCC High)                 |
+
+For detailed information about the US Government plans for Power Apps and Power BI, see:
+
+- [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
+- [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
 
 <!--
 ## Issues and feedback
