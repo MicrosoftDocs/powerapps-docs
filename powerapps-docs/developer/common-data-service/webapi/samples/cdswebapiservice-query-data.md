@@ -44,7 +44,7 @@ The following is required to build and run the sample:
 
 1. Navigate to the cds/webapi/C#/[QueryData](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/webapi/C%23/QueryData) folder and load the solution file into Visual Studio.
 
-1. Edit the App.config file that is shared by several of the samples and set appropriate values for the Common Data Service environment you intend to use: connectionString `Url`, `UserPrincipalName`, and `Password`.
+1. Edit the App.config file that is shared by several of the samples and set appropriate values for the Common Data Service environment you intend to use: connectionString `Url`, `UserPrincipalName`, and `Password`. You only need to perform this step once for all samples that share this file.
 
 1. Press F5 to build and run the program in debug mode.
 
@@ -832,6 +832,6 @@ namespace PowerApps.Samples
 
 ### See also
 
-[Query Data using the Web API](../query-data-web-ap.md)  
+[Query Data using the Web API](../query-data-web-api.md)  
 [Web API Query Data Sample](../web-api-query-data-sample.md)  
 [Use the Common Data Service Web API](../overview.md)

@@ -333,3 +333,5 @@ The following C# samples use this class:
 - [Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)
 - [Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)
 - [Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)
+- [Conditional Operations sample (C#)](cdswebapiservice-conditional-operations.md)
+- [Query Data sample (C#)](cdswebapiservice-query-data.md)
