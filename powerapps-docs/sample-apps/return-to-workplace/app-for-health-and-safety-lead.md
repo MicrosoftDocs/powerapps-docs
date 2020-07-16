@@ -5,20 +5,20 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/06/2020
+ms.date: 07/20/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
 
 # Use the Workplace Care Management app
 
-This article provides step-by-step instructions to case managers in the organization on how to use the Workplace Care Management app app to manage employee cases. 
+This article provides step-by-step instructions to case managers in the organization on how to use the Workplace Care Management app to manage employee cases. 
 
-To assist the Health & Safety Lead and to ensure proper case handling, a 4 step process is implemented. The current stage of an employee case is clearly depicted in the business process flow on the employee case form. The employee cases will be managed through the following process stages:
+To assist the Health & Safety Lead and to ensure proper case handling, a four-step process is implemented. The current stage of an employee case is clearly depicted in the business process flow on the employee case form. The employee cases will be managed through the following process stages:
 
 ![Business process flow](media/health-safety-employee-case-bpf.png "Business process flow")
 
-1. **Open** – In this stage, the Health & Safety Lead records the basic information regarding the case. At this moment the Health & Safety Lead also becomes the case manager for the employee cases.
+1. **Open** – In this stage, the Health & Safety Lead records the basic information regarding the case. At this moment, the Health & Safety Lead also becomes the case manager for the employee cases.
 
 2. **Investigating** – In this stage, the case manager performs steps to ensure employee checks and screenings are being completed as per the company policy. The result of these checks is a clear instruction to the employee. When this is communicated to the employee, the case is moved to the next stage.
 
@@ -26,7 +26,6 @@ To assist the Health & Safety Lead and to ensure proper case handling, a 4 step 
 healthy enough to be eligible to return to the workplace.
 
 4. **Resolve** – Case is in wrap-up stage and the Health & Safety Lead can enter closing remarks.
-
 
 Health & Safety Lead uses this app to:
 
@@ -94,13 +93,13 @@ To create an employee contact:
 
 2. Enter appropriate values in the fields:
 
-| **Field**   | **Description**  |
-|---------------|------------------|
-| First Name | Enter the first name of the employee. |
-| Last Name | Enter the last name of the employee.  |
-| Email | Enter an employee email address. |
-| Business Phone| Enter the employee mobile or phone number. |
-| Preferred Method of Contact | Select the desired method of contact from the drop-list. |
+   | **Field**   | **Description**  |
+   |---------------|------------------|
+   | First Name | Enter the first name of the employee. |
+   | Last Name | Enter the last name of the employee.  |
+   | Email | Enter an employee email address. |
+   | Business Phone| Enter the employee mobile or phone number. |
+   | Preferred Method of Contact | Select the desired method of contact from the drop-list. |
 
 3. Select **Save & Close**. The newly created record is available in the
     **Active Contacts** view.
@@ -156,7 +155,7 @@ Case managers are the resource who manages employee cases. To create a new case:
 
 #### Open
 
-This is the first process stage, the Health and Safety lead starts the case and can verify if all basic information is available. The Health and Safety lead becomes the case manager and will verify the employee details and / or assign the case to a different case manager. The key pieces of data to be captured and recorded before moving to the next stage are:
+This is the first process stage, the Health & Safety Lead starts the case and can verify if all basic information is available. The Health and Safety Lead becomes the case manager and will verify the employee details and assign the case to a different case manager. The key pieces of data to be captured and recorded before moving to the next stage are:
 
 - Health & Safety Lead - Case Manager owning the case.
 
@@ -217,7 +216,7 @@ Open the **Case Contacts** tab and click **New Case Contact** to relate an emplo
 
 | **Field**   | **Description**  |
 |---------------|------------------|
-| Risk Assesment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
+| Risk Assessment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
 | Comment | Enter additional information when applicable. |
 
 <!--

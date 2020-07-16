@@ -5,14 +5,16 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/06/2020
+ms.date: 07/20/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
 
 # Use the Facility Safety Management app
 
-The facility safety management app provides step-by-step instructions to facility managers in the organizations on how to use the app to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
+The facility safety management app provides step-by-step instructions to facility managers in the organizations on how to use the app to manage the reopening and readiness of the facilities. 
+
+This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
 
 ## App at a glance
 
@@ -27,12 +29,12 @@ The Facility Safety Management app has the following components:
 
 **Facility Management**
 
--  **Facilities**-  List of the facilities (for example, buildings, plants, etc.) that require monitoring to reopen.
+-  **Facilities**- List of the facilities (for example, buildings, plants, etc.) that require monitoring to reopen.
 
 -  **Facility Groups** - Provides a flexible way to group facilities. For example, by campus, or geographical region.
 
--  **Areas** - Areas are sub-components of a facility used to distinguish
-    the capacity of these sub-components over the various phases.
+-  **Areas** - Areas are subcomponents of a facility used to distinguish
+    the capacity of these subcomponents over the various phases.
 
 **Reopen Readiness**
 
@@ -104,7 +106,7 @@ The facility manager can monitor and assesses the current status of their facili
 by reviewing the facility’s associated dashboard, details, checklist, and
 transitions. To monitor a facility.
 
-1. Select **Facility** from  the left pane to see the list of facilities. The default view, My Facilities, shows only your facilities. When switching view you can see either all active or inactive facilities. 
+1. Select **Facility** from  the left pane to see the list of facilities. The default view, My Facilities, shows only your facilities. When switching view, you can see either all active or inactive facilities. 
 
 2. Select the desired facility record to access the facility data. The **General** tab shows the facility manager dashboard. The dashboard shows the COVID-19 data based on the address details of the facility, checklist completion for the current phase, employee attestation, and employee sentiment. More information: [Power BI dashboard]().
 
@@ -128,7 +130,7 @@ transitions. To monitor a facility.
 
 ### Updating the checklist
 
-The **Checklist** tab contains a editable grid displaying the check-in the checklist for the current facility or phase combination. The editable grid provides an easy way for the users to find checks by category and then update the individual checks, where applicable. To locate and update checks:
+The **Checklist** tab contains an editable grid displaying the check-in the checklist for the current facility or phase combination. The editable grid provides an easy way for the users to find checks by category and then update the individual checks, where applicable. To locate and update checks:
 
 1. Select **Facilities** from the left pane to see the list of active facilities
 
@@ -155,20 +157,14 @@ The **Checklist** tab contains a editable grid displaying the check-in the check
 
 ## Moving facility to a new phase
 
-When a facility manager asserts that a facility should be moved to a new phase,
-the manager can apply for a transition. Only the facility manager can create
-a new transition record that indicates the new phase.
-A reviewer must **Accept** or **Reject** the transition. Either way, the transition
-record is closed and stored as a historical track record. When the transition is
-accepted, the proposed phase is applied to the facility.
+When a facility manager asserts that a facility should be moved to a new phase, the manager can apply for a transition. Only the facility manager can create
+a new transition record that indicates the new phase. A reviewer must **Accept** or **Reject** the transition. Either way, the transition record is closed and stored as a historical track record. When the transition is accepted, the proposed phase is applied to the facility.
 
-The new phase comes with its own set of metrics, goals, and checklist. These
-will be made available on the facility by a background process. So there will be
-a small delay between accepting a transition and the actual changes on the
-facility record.
+The new phase comes with its own set of metrics, goals, and checklist. These will be made available on the facility by a background process. So there will be
+a small delay between accepting a transition and the actual changes on the facility record.
 
 A reviewer, for instance, a facility manager supervising many facility managers
-in a facility group, can find the backlog in the phase transitions sub-area. For example, the list can be filtered by the facility group or by the reviewer to find out that the phase transitions require attention.
+in a facility group, can find the backlog in the phase transitions subarea. For example, the list can be filtered by the facility group or by the reviewer to find out that the phase transitions require attention.
 
 > [!div class="mx-imgBorder"]
 > ![Open phase transitions](media/facility-manager-open-phase-transitions.png "Open phase transitions")
@@ -228,7 +224,7 @@ To approve transition requests:
 
 ### Reject transitions
 
-A reviewer must **Accept** or **Reject** transitions. To review and perform approve or reject the transition:
+A reviewer must **Accept** or **Reject** transitions. To review, and approve or reject the transition:
 
 1. Select **Phase Transitions** in the left pane.
 

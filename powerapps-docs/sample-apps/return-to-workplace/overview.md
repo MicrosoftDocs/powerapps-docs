@@ -11,17 +11,17 @@ ms.reviewer: kvivek
 ---
 # Return to the Workplace solution
 
-Reopen responsibly, monitor intelligently, and protect continuously with solutions for a safer work environment. Equip facility managers and task force leaders to make informed decisions to safely reopen locations. Empower employees to return confidently with self-service tools for working safely and productively. Help health and safety leaders ensure the care and well being of your workforce.
+Reopen responsibly, monitor intelligently, and protect continuously with solutions for a safer work environment. Equip facility managers and task force leaders to make informed decisions to safely reopen locations. Empower employees to return confidently with self-service tools for working safely and productively. Help health and safety leaders ensure the care and well-being of your workforce.
 
 The main modules of the Return to the Workplace solution:
 
-- **Dashboard for location readiness** determine the readiness of your facilities and efficiently manage safe reopening of the facilities. Location readiness dashboard allows facility managers and task force leaders to quickly make informed decisions using critical factors like COVID-19 infection rates and supplies availability.
+- **Dashboard for location readiness** determines the readiness of the facilities and efficiently manage safe reopening of the facilities. Location readiness dashboard allows facility managers and task force leaders to quickly make informed decisions using critical factors like COVID-19 infection rates and supplies availability.
 
-- **Facility safety management** gives facility managers the tools they need to manage the reopening and readiness of the facilities. This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
+- **Facility safety management** gives facility managers the tools they need to manage the reopening and readiness of the facilities. This helps organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
 
 - **Workplace care management** gives health and safety leaders the tools they need to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. Location readiness dashboards enable monitoring of all the Workplace Care Management data.
 
-- **Employee return to the workplace** offers your workforce with the self-service tool that they need to feel confident about returning and remain productive while onsite. Employee return to the workplace allows them to check-in to work remotely and self-screen before entering a building.
+- **Employee return to the workplace** offers your workforce with the self-service tool that they need to feel confident about returning and remain productive while onsite. Employee return to the workplace allows them to check in to work remotely and self-screen before entering a building.
 
 
 <!--

@@ -5,7 +5,7 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/06/2020
+ms.date: 07/20/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -119,7 +119,7 @@ Readiness factors are used to determine if the workplaces can move through phase
 
 To edit the record, select the newly created record, update the values as required, and select **Save & Close**.
 
-## Setup a reopen phase
+## Set up a reopen phase
 
 In the reopening plan, you define a couple of phases that guides a facility to safely reopen the workplace. The phases are defined in the solution by default. To create or edit a reopen phase:
 
@@ -261,7 +261,7 @@ When setting up the solution, you go through the following steps:
 
 ## Set solution settings
 
-With solution settings, you define the terms of agreement which is applicable to your company. Solution settings are linked to groups or to the entire organization, this makes it possible to differentiate per facilities. One solution setting will act as default and will be applicable for every facility, which will be the solution setting that has an empty group. To set solution settings:
+With solution settings, you define the terms of agreement, which is applicable to your company. Solution settings are linked to groups or to the entire organization, this makes it possible to differentiate per facilities. One solution setting will act as default and will be applicable for every facility, which will be the solution setting that has an empty group. To set solution settings:
 
 1. Select **Solution Settings** in the left pane and select **New**.
 
@@ -299,7 +299,7 @@ Theming allows you to change the experience of the employee.
    
 ## Sample Data
 
-For demo purpose the solution includes sample data around the different entities in the solution. The data from the following entities is adviced to be removed to import your own data:
+For demo purpose, the solution includes sample data around the different entities in the solution. The data from the following entities is advised to be removed to import your own data:
 
 - Facilities
 - Facility Groups
@@ -314,11 +314,11 @@ The sample data is also expended with two flows, these need to be disabled when 
 
 ## Bulk record deletion
 
-Due to privacy regulations we strongly recommend creating bulk record delete jobs to delete personal data after a certain period. This can be achieved by creating bulk record delete jobs.
+Due to privacy regulations, we strongly recommend creating bulk record delete jobs to delete personal data after a certain period. This can be achieved by creating bulk record delete jobs.
 
 1.	Select **Settings** and then **Data Management**
 
-2.	Under Data Management select **Bulk record deletion**
+2.	Under Data Management, select **Bulk record deletion**
 
    > [!div class="mx-imgBorder"]
    > ![Data Management](media/solution-admin-dm.png "Data Management")

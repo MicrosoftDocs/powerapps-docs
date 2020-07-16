@@ -5,14 +5,14 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/06/2020
+ms.date: 07/20/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
 
 # Use the Employee Return to the Workplace app
 
-This article provides step-by-step instructions to employees on how to use the employee app. Employees can check-in, answer the questions to determine whether they are eligible to enter into a facility, and respond to how they feel about returning to the workplace.
+This article provides step-by-step instructions to employees on how to use the employee app. Employees can check in, answer the questions to determine whether they are eligible to enter into a facility, and respond to how they feel about returning to the workplace.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ When you successfully sign in and launch the **Return to the Workplace** app fro
 
 You can see the reopen status for a facility, you can find all the available facilities.
 
-Select **Look Up Status** to lookup for facilities and view the details such as whether the facility is open and what phase of reopening it is in.
+Select **Look Up Status** to look up for facilities and view the details such as whether the facility is open and what phase of reopening it is in.
 
 Select a facility from the facility list and the current status of the facility and associated details are displayed. Select **Top Arrow** to return to the home screen.
 
@@ -53,7 +53,9 @@ Select a facility from the facility list and the current status of the facility 
 
 ## Check in to a facility
 
-Employees can complete the steps required to select a particular facility that is open to employees returning to work. Employees can find a facility and then complete a health survey that determines if they are eligible to check in to the facility they have selected. If eligible the employee will be provided with a pass to their selected building for that day. To check in to a facility:
+Employees can complete the steps required to select a particular facility that is open to employees returning to work. Employees can find a facility and then complete a health survey that determines if they are eligible to check in to the facility they have selected. 
+
+If eligible the employee will be provided with a pass to their selected building for that day. To check in to a facility:
 
 1. Select **GET DAY PASS**.
 
@@ -67,13 +69,13 @@ Employees can complete the steps required to select a particular facility that i
 4. Accept the terms & agreements.
 
     > [!div class="mx-imgBorder"]
-   > ![Term and agreements](media/employee-termandagreement.png "Term and Agreements")
+    > ![Term and agreements](media/employee-termandagreement.png "Term and Agreements")
 
 
 5. Review the **Symptom Check** statements. Select **I Agree**  if you agree with the statements and **I Disagree** if you don't.
 
-> [!div class="mx-imgBorder"]
-> ![Symptom check](media/employee-agreement.png "Symptom check")
+   > [!div class="mx-imgBorder"]
+   > ![Symptom check](media/employee-agreement.png "Symptom check")
 
 ### Employee pass
 
