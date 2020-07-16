@@ -18,7 +18,7 @@ Estimated time to complete these steps: 60–90 minutes
 
 ## Service URLs for US Government customers (optional - for government agencies only)
 
-There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants. The commercial version of the service URLs are used throughout the article. If you have a US Government organization, use the respective US Government URL for your deployment:
+There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants. The commercial version of the service URLs is used throughout the article. If you have a US Government organization, use the respective US Government URL for your deployment:
 
 | **Commercial version URL**| **US Government version URL**  |
 |-------------------|--------------------------------|
@@ -37,7 +37,7 @@ For detailed information about the US Government plans for Power Apps and Power 
 
 - You must be a Global Admin and must have Power BI Pro license to configure and publish reports.
 
-- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces)
+- Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces) and [share the workspace with others](https://docs.microsoft.com/en-us/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace)
 
 - Install Power BI Desktop from the Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
 
@@ -63,7 +63,7 @@ After you have created your environment, you can access it using the following U
 
 ## Step 2: Install the package
 
-This section provides information on how install the Return to the Workplace solution.
+This section provides information on how to install the Return to the Workplace solution.
 
 You can install the Return to the Workplace solution using either of the following options: installing from AppSource or installing using Package Deployer.
 
@@ -74,7 +74,7 @@ You can install the Return to the Workplace solution using either of the followi
     > [!div class="mx-imgBorder"]
     > ![Installation Page](media/return-to-workplace-installationpage.png "Installation Page")
 
-2. Select **GET IT NOW** to install the solution on your environment. You're redirected to the actual installation page, where you can select the environment on which to install it on. Installation starts after selecting the environment and accepting the terms and agreement.
+2. Select **GET IT NOW** to install the solution on your environment. You're redirected to the actual installation page, where you can select the environment where you want to install it. Installation starts after selecting the environment and accepting the terms and agreement.
 
 3. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
 
@@ -83,58 +83,62 @@ You can install the Return to the Workplace solution using either of the followi
 
 ### Option B - Install the app from the deployment package
 
-1. Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>.
+Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>. Before extracting the .zip file, ensure that you unblock it.
 
-Before extracting the .zip file, ensure that you unblock it.
+To unblock it:
 
-1. Right-click the .zip file, select **Properties**.
+- Right-click the .zip file, select **Properties**.
 
-2. In the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
+- In the properties dialog box, select **Unblock**, and then select **Apply** followed by **OK**.
 
     > [!div class="mx-imgBorder"] 
     > ![Solution package properties](media/deploy-deployment-package.png "Solution package properties")
 
 
-   On extracting the .zip file, you will see the following in the extracted folder:
+On extracting the .zip file, you will see the following in the extracted folder:
 
-   |**Folder**  |**Description**  |
-   |---------|---------|
-   |**Package** |  The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment.       |
-   |**Power BI** | Contains the Power BI Reports that will be used to configure reporting. More information: [Step 3: Configure and publish Power BI dashboard](#step-3-configure-and-publish-power-bi-dashboard) 
+|**Folder**  |**Description**  |
+|---------|---------|
+|**Package** |  The folder contains the Package Deployer tool and the package that you will import later to set up the solution in your environment.       |
+|**Power BI** | Contains the Power BI Reports that will be used to configure reporting. More information: [Step 3: Configure and publish Power BI dashboard](#step-3-configure-and-publish-power-bi-dashboard) 
 
-3. Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
+#### Install the app using deployment package
 
-4. On the next screen, select **Continue**.
+1. Navigate to the location where you extracted the [deployment package](#step-1-download-the-deployment-package) (.zip); you'll find a **Package** folder. Under the **Package** folder, run the **PackageDeployer.exe** file to run the tool to deploy the package.
 
-5. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.
+2. On the next screen, select **Continue**.
+
+3. You’ll be prompted to connect to your environment. Select **Office 365** as the **Deployment Type**, select **Show Advanced**, and then type your credentials to connect to your environment.
 
     > [!div class="mx-imgBorder"] 
     > ![Deploy package](media/deploy-connect-to-environment.png "Deploy package")
 
-6. Select **Login** to continue.
+4. Select **Login** to continue.
 
-7. If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
+5. If you have access to more than one Common Data Service environment, the next screen will prompt you to select the environment where you want to install the package. Select an environment and select **Login**.
 
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/deploy-select-environment.png "Select an environment")
 
-8. On the next screen, select **Next.**
+6. On the next screen, select **Next.**
 
-9. The next screen displays you the environment name where the package will be installed. Review the information and select **Next**.
+7. The next screen displays you the environment name where the package will be installed. Review the information and select **Next**.
 
-10. The next screen validates if all the dependencies are available on your environment. Select **Next** to continue with the installation.
+8. The next screen validates if all the dependencies are available on your environment. Select **Next** to continue with the installation.
 
-11.	The next screen displays the installation status of the package. Please note that it might take a while for the package installation to complete.
+9. The next screen displays the installation status of the package. Note that it might take a while for the package installation to complete.
 
-12. After the installation is complete, select **Next**.
+10. After the installation is complete, select **Next**.
 
-13. On the next screen, select **Finish** to complete and close the setup.
+11. On the next screen, select **Finish** to complete and close the setup.
 
-14. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
+12. After the app is installed, sign in to [Power Apps](https://make.powerapps.com) and select your environment from the upper-right corner. In the left navigation pane, select **Apps** to see the new apps.
 
     > [!div class="mx-imgBorder"]
     > ![List of Apps](media/rtw-apps1.png "List of Apps")
 
+    > [!TIP]
+    > After installing the Return to Workplace solution, take note of the URL of your Common Data Service environment instance. You will need it to connect the template app to the data.)
 
 ## Step 3: Configure and publish Power BI dashboard
 
@@ -144,17 +148,9 @@ You can publish the Power BI dashboard using either of the following options: us
 
 ### Option A: Publish using the template app from AppSource (Preferred Option)
 
-This section provides information on how to use dashboards.
-
-#### Prerequisites
-
-Before installing this template app, you must first install and set up the Return to Workplace solution. Installing this solution creates the data source references necessary to populate the app with data.
-
-When installing the Return to Workplace solution, make a note of the URL of your Common Data Service environment. You will need it to connect the template app to the data.
-
 #### Install the app
 
-1. Go to Microsoft AppSource ([executive leadership](https://aka.ms/rtw-leadershippbi) and [facility manager](https://aka.ms/rtw-facilitypbi)) to install **Return to the Workplace – Leadership** and **Return to the Workplace - Facility Manager** dashboard. 
+1. Go to Microsoft AppSource to install [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi) and [Return to the Workplace - Location Management](https://aka.ms/rtw-facilitypbi) dashboards. 
 
 2. Select **GET IT NOW** to install the solution on your environment. 
     > [!div class="mx-imgBorder"]
@@ -162,45 +158,44 @@ When installing the Return to Workplace solution, make a note of the URL of your
 
     You're directed to an agreement pop-up, where you select **Continue** to agree to the terms provided.
     
-3. Select **Install**.  
+3. Sign in to Power BI and select **Install**.  
     > [!div class="mx-imgBorder"]
     > ![Install](media/deploy-install-install-app.png)
 
-4. Create workspace for your app
+4. Enter the name for the workspace, and then select **Continue**.
     > [!div class="mx-imgBorder"]
     > ![Workspace](media/deploy-create-workspace.png)
 
-5. Enter workspace details and select **Continue**.
 
+   > [!NOTE]
+   > Share the workspace with other users who require access. More information: [Give access to workspace](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace)
 
 #### Connect to data sources
 
 1. Select the icon in your apps page to open the app.
 
-2. On the splash screen, select **Explore app**.
+2. On the splash screen, select **Connect**.
     > [!div class="mx-imgBorder"]
-    > ![Explore](media/deploy-connect-data-source.png)
+    > ![Connect](media/deploy-connect-data-source.png)
 
-3. Select **Connect your data** link in the banner at the top of the page.
-
-4. In the dialog box, enter the URL of the Common Data Service environment. For example, https://[myenv].crm.dynamics.com. When done, select **Next**.
+3. In the dialog box, enter the URL of the Common Data Service environment. For example, https://[myenv].crm.dynamics.com. When done, select **Next**.
     > [!div class="mx-imgBorder"]
     > ![CDS](media/deploy-connect-CDS.png)
 
-5. In the next dialog, determine where the displayed URL is pointing to a Common Data Service environment, if not, follow the step below:
+4. In the next dialog, determine where the displayed URL is pointing to the Common Data Service environment:
 
-    - If pointing to Common Data Service, then set the **Authentication method** to **Microsoft account**. Set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
-    - If not pointing to Common Data Service, then set the *8Authentication method** to **Anonymous**.  Set **Privacy level setting for this data source** to **Public**. Select **Sign in**.
+    - If pointing to Common Data Service, set the **Authentication method** to **Microsoft account**. Set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
+    - If not pointing to Common Data Service, set the **Authentication method** to **Anonymous**.  Set **Privacy level setting for this data source** to **Public**. Select **Sign in**
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png)
 
-6. After you have completed configurations of your data sources the report will be populated with your data.
+5. After you have completed configurations of your data sources, the report will be populated with your data. Repeat these steps for both dashboards.
 
 ### Option B: Publish using the .pbit file in the deployment package (GCC Customers only)
 
-This section provides information on how GCC customers can use the Return to Workplace Leadership and Facility Manager dashboard .pbit files available in the deployment package to publish the dashboards.
-   <!-- - Leadership dashboard pbit filename:  **Return to Workspace - Leadership.pbit**
-    - Facility Manager pbit filename:  **Return to Workspace - Facility Manager.pbit**-->
+This section provides information on how GCC customers can use the **Return to the Workplace - Location Readiness** and **Return to the Workplace - Facility Manager** dashboard .pbit files available in the deployment package to publish the dashboards.
+   <!-- - Location Readiness dashboard pbit filename:  **Return to Workspace - Leadership.pbit**
+    - Location Management dashboard pbit filename:  **Return to Workspace - Facility Manager.pbit**-->
 
 You need to follow the steps below for each .pbit file.
 
@@ -246,30 +241,31 @@ You need to follow the steps below for each .pbit file.
     > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels-CDS.png)
 
 
-6. On successful connection, Power BI report will be displayed. You'll be prompted to apply pending changes to your query, select **Apply changes**.
+7. On successful connection, Power BI report will be displayed. You'll be prompted to apply pending changes to your query, select **Apply changes**.
 
     > [!NOTE]
     > The report is blank because you haven't yet added data in the system.
 
-7. Select **Publish** to publish data to your Power BI workspace. You'll be prompted to save your changes, select **Save**.
+8. Select **Publish** to publish data to your Power BI workspace. You'll be prompted to save your changes, select **Save**.
 
      > [!div class="mx-imgBorder"] 
      > ![Save Power BI workspace](media/deploy-gcc-publish.png "Save Power BI workspace")
 
-8. You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer. The filename you enter is displayed in your Power BI website)
+9. You'll be prompted to save the file as a .pbix file along with your Common Data Service environment information. Provide a name and save it on your computer. The filename you enter is displayed in your Power BI website)
 
-9. After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
+10. After saving the .pbix file, you'll be prompted to publish the report. In the **Publish to Power BI** page, select the workspace where you want to publish, and then click **Select**.
 
     > [!div class="mx-imgBorder"] 
     > ![Publish to Power BI](media/deploy-gcc-select-destination.png "Publish to Power BI")
 
-    The report becomes available in your workspace.  
+    The report becomes available in your workspace.
 
-10. [Step for Facility Manager dashboard only] The URL will be in the following format:
+11. For the facility manager dashboard, the URL will be in the following format:
     https://app.powerbi.com/groups/3d6db5d0-22c7-4674-b957-0605c021511d/reports/bf9cd5a1-c176-4786-9c4e-684a79678575/ReportSection?redirectedFromSignup=1<br/>
     Copy the Power BI report URL to a Notepad as you will need it to embed it in the model-driven app.
 
-**Note:** Steps 1-10 above need to be completed for each dashboard (pbit file)
+    > [!NOTE]
+    > You need to follow the steps mentioned above for each dashboard.
 
 Now, we will configure the data refresh settings for the dataset, [Step 4: Schedule report refresh](#step-4-schedule-report-refresh).
 
@@ -285,7 +281,7 @@ Now, we will configure the data refresh settings for the dataset, [Step 4: Sched
       > [!div class="mx-imgBorder"] 
       > ![Data source credentials](media/deploy-schedule-refresh-edit-credentials.png "Data source credentials")
 
-3.  In the next screen for Common Data Service data source:
+3. In the next screen for Common Data Service data source:
 
       - Select **Authentication** method as **Microsoft account**.
 
@@ -297,9 +293,9 @@ Now, we will configure the data refresh settings for the dataset, [Step 4: Sched
         > [!div class="mx-imgBorder"] 
         > ![Data source credentials](media/deploy-schedule-refresh-cds-credentials.png "Data source credentials")
 
-    You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
+      You'll be prompted to specify your credentials and sign in. Upon successful sign in, you'll return to the **Settings** page.
 
-    For all other datasources:
+      For all other data sources:
       - Select **Authentication** method as **Anonymous**.
 
       - Select **Privacy level setting for this data source** as
@@ -329,7 +325,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Since t
 
 2. Select the correct **environment**, and then select **Settings**.
 
-3. Select **Product** > **Feature**, set Power BI visualization embedding to **On**. Select **Save**.
+3. Select **Product** > **Feature**, set **Power BI visualization embedding** to **On**. Select **Save**.
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
@@ -339,7 +335,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Since t
    > [!div class="mx-imgBorder"]
    > ![Facility form](media/deploy-new-facility-form.png "Facility form")
 
-5. Export the solution, unpack the solution and then apply the following changes in the FormXML ([link](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form)). Pack the solution, reimport the solution and then **publish all customizations**.
+5. Export the solution, unpack the solution, and then apply the following changes in the FormXML ([link](https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form)). Pack the solution, reimport the solution, and then select **Publish all customizations**.
 
 For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
 
@@ -391,7 +387,7 @@ To share canvas apps to the users:
 
 In the Return to the Workplace solution, you'll see the following security roles are defined:
 
-- Return to the Workplace - Employee, which is used to check-in and look at the details of a location.
+- Return to the Workplace - Employee, which is used to check in and look at the details of a location.
 
 - Return to the Workplace - Facility Manager, which allows people to look at the facilities and plan phasing.
 
