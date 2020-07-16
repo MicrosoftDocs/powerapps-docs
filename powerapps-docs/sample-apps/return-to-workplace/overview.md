@@ -15,7 +15,7 @@ Reopen responsibly, monitor intelligently, and protect continuously with solutio
 
 The main modules of the Return to the Workplace solution include:
 
-- **Location Readiness dashboard** helps determine the readiness of the facilities and efficiently manage their safe reopening. Facility managers and task force leaders can use the Location Readiness dashboard to quickly make informed decisions by using critical factors like COVID-19 infection rates and the availability of supplies<!--note from editor: Is this what "supplies availability" means? In either case, the Location Readiness dashboard topic doesn't actually talk about supplies at all. Or "supplies availability" either.-->.
+- **Location Readiness dashboard** helps determine the readiness of the facilities and efficiently manage their safe reopening. Facility managers and task force leaders can use the Location Readiness dashboard to quickly make informed decisions by using critical factors like COVID-19 infection rates and the availability of supplies.
 
 - **Facility Safety Management** gives facility managers the tools they need to manage the reopening and readiness of the facilities. This helps organizations ensure that they can provide a safe working environment for employees to return to the workplace.
 
@@ -58,7 +58,7 @@ See also:
 |Use dashboards for insights and decision making|Used by executive leaders to review current data about all their workplaces as it relates to COVID-19 conditions and facility readiness. These dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations, and respective phase rules or guidelines set for them by government agencies.|Executive leadership|[Location Readiness dashboard](dashboard-for-executive-leadership.md)|
 |Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Facility Safety Management app](app-for-facility-manager.md)
 |Use the employee app|Used by employees who are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to having no symptoms before returning to a reopened workplace.|Employees|[Employee Return to the Workplace app](app-for-employee.md)
-|Use the care management app|Used to manage cases for employees under investigation.<!--note from editor: Are you sure you want to say this? Maybe it could at least say something like "Used to manage employee health and safety cases"?-->|Case managers|[Workplace Care Management app](app-for-health-and-safety-lead.md)
+|Use the care management app|Used to manage employee cases.|Case managers|[Workplace Care Management app](app-for-health-and-safety-lead.md)
 
 
 <!--

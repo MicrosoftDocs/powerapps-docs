@@ -18,7 +18,7 @@ To assist Health and Safety Leads, and to help ensure proper case handling, this
 
 ![Business process flow](media/health-safety-employee-case-bpf.png "Business process flow")
 
-1. **Open** – In this stage, you record basic information about the case. At this moment, you as a Health and Safety Lead also become the case manager<!--Edit okay? Plural "cases" implied to me that the Health and Safety Lead becomes case manager for all employee cases, but that doesn't seem right.-->.
+1. **Open** – In this stage, you record basic information about the case. At this moment, you as a Health and Safety Lead also become the case manager.
 
 2. **Investigating** – In this stage, you perform steps to ensure that employee checks and screenings are being completed in accordance with company policy. The result of these checks is a clear instruction to the employee. When this is communicated to the employee, the case is moved to the next stage.
 
@@ -122,7 +122,7 @@ Access to employee cases is restricted to only part of the organization. You can
    > [!div class="mx-imgBorder"]
    > ![Select a user](media/health-safety-case-manager-form.png "Select a user")
 
-3. Select **Save & Close**. The newly created record is available in the **Enabled Users** list.<!--You haven't created anything, have you? -->
+3. Select **Save & Close**.
 
 To edit the record, select it, update the values, and then select **Save & Close**.
 

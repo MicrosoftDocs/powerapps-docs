@@ -35,9 +35,9 @@ When you successfully sign in and open the **Return to the Workplace** app from 
 
 ## See the reopen status of a facility
 
-You can find all available facilities and see the reopen status for them<!--note from editor: Suggested.-->. Select **Look Up Status** to look for facilities and view details such as whether the facility is open and what phase of reopening it's in.
+You can find all available facilities and see the reopen status for them. Select **Look Up Status** to look for facilities and view details such as whether the facility is open and what phase of reopening it's in.
 
-When you select a facility from the facility list, the current status of the facility and associated details are displayed. Select the top arrow<!--note from editor: Can we get an inline graphic for this? I took off the bold formatting because I'm pretty sure "Top Arrow" isn't the name that shows up in a tooltip for the graphic.--> to return to the home screen.
+When you select a facility from the facility list, the current status of the facility and associated details are displayed. Select **<** to return to the home screen.
 
 > [!div class="mx-imgBorder"]
 > ![List of facilities](media/employee-facility-list2.png "List of facilities")
@@ -79,19 +79,19 @@ If your responses to the symptom check statements show that you're healthy, you'
 > [!div class="mx-imgBorder"]
 > ![Employee pass](media/employee-pass.png "Employee pass")
 
-If your responses show you aren't healthy, you won't receive a pass and you'll be given contact information for the company health and safety department to use if you need.<!--note from editor: Edit suggested, if the contact information is always provided. Another note: I think the alt text for the following image could be better, since "negative results" these days means that you don't have COVID-19. How about "Message to stay home" or something similar?-->
+If your responses show you aren't healthy, you won't receive a pass and you'll be given contact information for the company health and safety department to use if you need.
 
 > [!div class="mx-imgBorder"]
-> ![Negative results](media/employee-pass-negative.png "Negative results")
+> ![Not feeling well](media/employee-pass-negative.png "Not feeling well")
 
 ## Share sentiment
 
-You can say how you're feeling about returning to the workplace. On the home page, select one of the options to answer the question **Do you feel safe returning to work?**<!--Suggested.-->  
+You can say how you're feeling about returning to the workplace. On the home page, select one of the options to answer the question **Do you feel safe returning to work?**
 
 > [!div class="mx-imgBorder"]
 > ![Share sentiment](media/employee-share-sentiment2.png "Share sentiment")
 
-After you select one of the options, the option will become visible.<!--But it must have been visible for someone to select it in the first place, right? I don't understand what happens here, but maybe it will be clear to the person using the app. I also don't know why there's a percentage in the following screenshot. Can people say that they feel 75% "yes" about returning to work?--> This option will reset itself after you reopen the app.<!--note from editor: The alt text for the following screenshot needs to be different from the previous screenshot, but I'm not sure what to suggest.-->
+ This option will reset itself after you reopen the app.
 
 > [!div class="mx-imgBorder"]
 > ![Share sentiment](media/employee-share-sentiment2-2.png "Share sentiment")

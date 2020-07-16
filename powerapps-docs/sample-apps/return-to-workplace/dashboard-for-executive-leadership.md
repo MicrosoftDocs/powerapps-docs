@@ -25,7 +25,7 @@ This article is for executive leaders who use the Power BI dashboard to analyze 
 
 ## System at a glance
 
-The **System at a Glance** tab<!--note from editor: To match later references to these areas of the UI.--> provides key metrics for returning to work, including current value, goal values, and whether locations have met the goals. These key metrics are the number of COVID-19 new cases per day, fatality cases per day, new cases per day per million population, fatality cases per day per million population, reproductive number, and facilities' Readiness Checklist completion percentage.
+The **System at a Glance** tab provides key metrics for returning to work, including current value, goal values, and whether locations have met the goals. These key metrics are the number of COVID-19 new cases per day, fatality cases per day, new cases per day per million population, fatality cases per day per million population, reproductive number, and facilities' Readiness Checklist completion percentage.
 
 A map highlights locations of facilities, along with the number of facilities that are in a certain phase. Hovering over a facility gives you insights into the virus spread at that location.
 
@@ -55,21 +55,22 @@ The data on confirmed deaths is shown in these visualizations, giving you easy a
 > ![System at a Glance fatal COVID cases](media/pbi-dash-report-fatalcovidcases.png "System at a Glance fatal COVID cases")
 
 #### Effective Reproductive Number
-This is a key measure of how fast the virus is growing or decreasing<!--, showing the average number of people who become infected.-->.<!--note from editor: Suggest deleting this clause or stealing a better definition from Wikipedia.-->
+
+This is a key measure of how fast the virus is growing or decreasing, showing the average number of people who are infected.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance reproductive number](media/pbi-dash-report-reproductivenumber.png "System at a Glance reproductive number")
 
 ### Filter on a region
 
-When you want to drill down on certain facility locations<!--note from editor: Suggested.-->, you can filter on them based on country/region<!--note from editor: Suggested, since the heading mentions regions.-->.
+When you want to drill down on certain facility locations, you can filter on them based on country/region.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance filter by region](media/pbi-dash-report-filter-region.png "System at a Glance filter by region")
 
 ## Facility at a Glance
 
-Different from the overall view of **System at a Glance**, the **Facility at a Glance**<!--note from editor: Screenshots show this as "Facilities at a Glance"--> tab lets you drill down to each facility and track details about facility open readiness, employee sentiment, and employee attestation. It helps executive leaders to monitor all kinds of key metrics and determine the facility's opening phase.
+Different from the overall view of **System at a Glance**, the **Facility at a Glance** tab lets you drill down to each facility and track details about facility open readiness, employee sentiment, and employee attestation. It helps executive leaders to monitor all kinds of key metrics and determine the facility's opening phase.
 
 > [!div class="mx-imgBorder"]
 > ![Facility view](media/pbi-dash-selected-facility-details2.png "Facility view")
@@ -77,12 +78,14 @@ Different from the overall view of **System at a Glance**, the **Facility at a G
 ### Key metrics
 
 #### Phases/Readiness
+
 In this area, you can find employees average sentiment, reproductive numbers, facilities, and current phases.
 
 > [!div class="mx-imgBorder"]
 > ![Phase readiness](media/pbi-dash-report-facility-at-a-glance-PhaseReadiness.png "Phase readiness")
 
 #### Readiness Checklist
+
 The checklist shows the steps needed to move facilities through phases.
 
 > [!div class="mx-imgBorder"]
@@ -101,14 +104,14 @@ Throughout the report you can use numerous tools like sliders, date filters, and
 
 ### Slicer
 
-Slicer helps you quickly "slice and dice" the data, focusing only on data points you're interested in. You can use the country or state slicer to select the country and state you're interested in. This slicer supports functions like multiple selections, hierarchy category selections, search, and clean selections.<!--note from editor: What does "clean selections" mean?-->
+Slicer helps you quickly "slice and dice" the data, focusing only on data points you're interested in. You can use the country or state slicer to select the country and state you're interested in. This slicer supports functions like multiple selections, hierarchy category selections, search, and clean selections.
 
 > [!div class="mx-imgBorder"]
 > ![Slicer](media/pbi-dash-report-filter-region2.png "Slicer")
 
 ### Tooltip
 
-When you hover over the transition part of the ribbon chart, tooltips give you quick insights into the numbers.<!--note from editor: Is this what "number changes on the tooltip" means? -->
+When you hover over the transition part of the ribbon chart, tooltips give you quick insights into the numbers.
 
 > [!div class="mx-imgBorder"]
 > ![Tooltip](media/pbi-dash-transition-hover-metrics3.png "Tooltip")
@@ -125,7 +128,7 @@ WHO supports open access to the published output of its activities as a fundamen
    - The WHO logo can't be used without written authorization from WHO.
    - WHO provides no warranty of any kind, either expressed or implied. In no event shall WHO be liable for damage arising from the use of WHO publications.
 
-   For further information, visit [WHO Copyright, Licensing, and Permissions](https://www.who.int/about/who-we-are/publishing-policies/copyright).<!--note from editor: Edit okay?-->
+   For further information, visit [WHO Copyright, Licensing, and Permissions](https://www.who.int/about/who-we-are/publishing-policies/copyright).
 
 2. USAFACTS (cases/deaths US only): https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/  
 

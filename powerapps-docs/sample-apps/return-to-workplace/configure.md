@@ -56,7 +56,7 @@ By default, the solution provides and tracks five key metrics. You can define mo
    > [!div class="mx-imgBorder"]
    > ![Create key metrics](media/solution-admin-key-metrics.png "Create key metrics")
 
-2. Enter a meaningful name for the metric.<!--note from editor: This doesn't have to be so elaborate! People know where to enter a name.-->
+2. Enter a meaningful name for the metric.
 
    > [!div class="mx-imgBorder"]
    > ![Key metric form](media/solution-admin-new-key-metric-form.png "Key metric form")
@@ -102,7 +102,7 @@ Readiness factors are used to determine whether the workplaces can move through 
    |-------------|------------------------------|
    | Factor | Enter a name for the factor.  |
    | Description | Enter the description for the readiness factor. |
-   | Category | Select the appropriate category to assign your readiness factor to.<!--Suggested. In my mind, you assign a thing to a category, not the other way around. Same as below, I think you assign a phase TO a stage in the process.--> |
+   | Category | Select the appropriate thing to assign your readiness factor to.|
 
    > [!div class="mx-imgBorder"]
    > ![Readiness factors form](media/solution-admin-new-readiness-factor-form.png "Readiness factors forms")
@@ -156,7 +156,7 @@ To edit the record, select it, update the values, and then select **Save & Close
 
    | **Field**    | **Description**     |
    |--------------|--------------------|
-   | Reopen Phase | The name of the phase you're adding a goal to will appear here.<!--Edit okay? It doesn't look like you name the phase here, I thought you were adding to an existing phase.--> |
+   | Reopen Phase | The name of the phase you're adding a goal to will appear here.|
    | Key Metric   | Select a key metric for the goal.  |
    | Type         | Select an appropriate goal type from the list. |
    | Value        | Enter a numerical target value for the goal. |
@@ -175,21 +175,21 @@ To edit the record, select it, update the values, and then select **Save & Close
    > [!div class="mx-imgBorder"]
    > ![Readiness factors](media/solution-admin-reopen-phase-view-readiness-factors.png "Readiness factors")
 
-6. Select **Add Existing Readiness Factor**.
+2. Select **Add Existing Readiness Factor**.
 
    > [!div class="mx-imgBorder"]
    ![Add existing factors](media/solution-admin-reopen-phase-add-existing-factor.png "Add existing factors")
 
-7. Select the readiness factor that you want to add to your reopen phase record<!--If this is wrong, please excuse. This section started off talking about adding goals and readiness factors to a phase, but it seems to have morphed into creating a new one?-->. You can select multiple records.
+3. Select the readiness factor that you want to add to your reopen phase record. You can select multiple records.
 
-8. Select **Add** to complete the selection process to add the selected readiness factors to your Reopen Phase record.
+4. Select **Add** to complete the selection process to add the selected readiness factors to your Reopen Phase record.
 
    > [!div class="mx-imgBorder"]
    > ![Add readiness factors](media/solution-admin-reopen-phase-add-factors.png "Add readiness factors")
 
 ## Manage facilities
 
-Facilities are an important part of the Return to the Workplace solution. Various<!--Are there just two? If so, might as well just say "By default, the solution includes two facility types&mdash;buildings and conference centers&mdash.--> facility types such as buildings and conference centers are defined in the solution by default. The IT administrator is responsible for creating or updating the existing facility types. The IT administrator can import records to help the facility manager, who is responsible for creating facilities.<!--I don't see the difference here.-->
+Facilities are an important part of the Return to the Workplace solution. By default, the solution includes two facility types&mdash;buildings and conference centers&mdash. The IT administrator is responsible for creating, updating the existing facility types, and importing records. 
 
 **To manage facilities**
 
@@ -266,7 +266,7 @@ With solution settings, you define the terms of agreement that are applicable to
 
 ## Define a theme
 
-You can use a theme to enhance the user experience<!--Edit assumes that the theme doesn't only apply to the employee app.-->.
+You can use a theme to enhance the user experience.
 
 1. Select **Settings**, and then select **Customizations**.
 

@@ -18,7 +18,7 @@ Estimated time to complete these steps: 60&ndash;90 minutes
 
 ## Prerequisites
 
-- You should<!--note from editor: Should this be "must"?--> be a Global administrator or Microsoft Power Platform administrator to perform the installation.
+- You should be a Global administrator or Microsoft Power Platform administrator to perform the installation.
 
 - You must be a Global administrator and must have a Power BI Pro license to configure and publish reports.
 
@@ -48,11 +48,11 @@ After you've created your environment, you can access it by using the following 
 
 ## Step 2: Install the package
 
-You can install the Return to the Workplace solution by using either of the following options: installing from AppSource or installing with the deployment package.<!--To settle on one term for this.-->
+You can install the Return to the Workplace solution by using either of the following options: installing from AppSource or installing with the deployment package.
 
 ### Option A - Install the app from AppSource
 
-1. Go to [AppSource](https://aka.ms/rtw-app)<!--Not working yet, but that's probably expected?--> to install the **Return to the Workplace solution**.
+1. Go to [AppSource](https://aka.ms/rtw-app) to install the **Return to the Workplace solution**.
 
     > [!div class="mx-imgBorder"]
     > ![Installation page](media/return-to-workplace-installationpage.png "Installation page")
@@ -66,13 +66,13 @@ You can install the Return to the Workplace solution by using either of the foll
 
 ### Option B - Install the app from the deployment package
 
-Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>.<!--Okay that this doesn't work yet, I assume.--> Before extracting the .zip file, you must unblock it.
+Download the latest deployment package (.zip) from <https://aka.ms/rtw-solution>. Before extracting the .zip file, you must unblock it.
 
 **To unblock the .zip file**
 
 1. Right-click the .zip file, and then select **Properties**.
 
-2. In the **Properties** dialog box, select the **Unblock** check box<!--Edit okay? -->, select **Apply**, and then select **OK**.
+2. In the **Properties** dialog box, select the **Unblock** check box, select **Apply**, and then select **OK**.
 
     > [!div class="mx-imgBorder"] 
     > ![Solution package properties](media/deploy-deployment-package.png "Solution package properties")
@@ -82,7 +82,7 @@ After extracting the .zip file, you'll see the following in the extracted folder
 |Folder  |Description |
 |---------|---------|
 |Package | Contains the Package Deployer tool and the package that you'll import later to set up the solution in your environment.       |
-|Power BI | Contains the Power BI Reports that will be used to configure reporting. More information: [Step 3: Configure and publish Power BI dashboards](#step-3-configure-and-publish-power-bi-dashboards)<!--Recommend not including this "More information" link. You don't want people following links, they should just stick with the sequence.--> |
+|Power BI | Contains the Power BI Reports that will be used to configure reporting. More information: [Step 3: Configure and publish Power BI dashboards](#step-3-configure-and-publish-power-bi-dashboards)|
 
 #### Install the app by using the deployment package
 
@@ -144,7 +144,7 @@ You can publish the Power BI dashboards by using either of the following options
     > [!div class="mx-imgBorder"]
     > ![Install](media/deploy-install-install-app.png "Install")
 
-4. Enter a<!--Edit okay? The user can decide on this name, correct?--> name for the workspace, and then select **Continue**.
+4. Enter a name for the workspace, and then select **Continue**.
     > [!div class="mx-imgBorder"]
     > ![Workspace](media/deploy-create-workspace.png "Workspace")
 
@@ -308,12 +308,12 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
 
-4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**. From the list of entities, select **Facility** and in **select components**, select **Information Form** from the **Forms** tab.<!--note from editor: I don't know what to suggest here, I can't see what's going on.-->
+4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**. From the list of entities, select **Facility** > **select components**, under the **Forms** tab, select **Information Form**.
 
    > [!div class="mx-imgBorder"]
    > ![Facility form](media/deploy-new-facility-form.png "Facility form")
 
-5. Export the solution, unpack the solution, and then apply the changes in the form XML listed in this article: [Embed a Power BI report in a model-driven system form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form).<!--Edit okay?--> Pack the solution, reimport the solution, and then select **Publish all customizations**.
+5. Export the solution, unpack the solution, and then apply the changes in the form XML listed in this article: [Embed a Power BI report in a model-driven system form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form). Pack the solution, reimport the solution, and then select **Publish all customizations**.
 
 For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
 
@@ -352,7 +352,7 @@ You can change the look and feel of the app by applying themes to match your com
    > [!div class="mx-imgBorder"]
    > ![Select app](media/deploy-select-app-employee.png "Select app")
 
-4. Select the app you want<!--What does this mean? Aren't we talking about Employee Return to the Workplace?-->, and then select **Share**.
+4. Select the app, and then select **Share**.
 
    > [!div class="mx-imgBorder"]
    > ![Share app](media/deploy-share-app.png "Share app")
@@ -361,7 +361,7 @@ You can change the look and feel of the app by applying themes to match your com
 
 ## Step 8: Set the security roles
 
-In the Return to the Workplace solution, the following security roles are defined:<!--I think passive voice is okay here, since we have several different audiences so "you" doesn't exactly work.-->
+In the Return to the Workplace solution, the following security roles are defined:
 
 - Return to the Workplace - Employee, which is used to check in and look at the details of a location.
 
