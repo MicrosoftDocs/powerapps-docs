@@ -14,11 +14,11 @@ ms.reviewer: tapanm
 
 [This article is pre-release documentation and is subject to change.]
 
-You can perform the [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of [HTTP requests and responses](../../developer/common-data-service/webapi/compose-http-requests-handle-errors.md). This article shows sample operations, methods, URI, and the sample JSON you can use in the HTTP request.
+You can perform the [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
 > [!IMPORTANT]
+> - **Your portal version must be 9.2.6.x or higher for this feature to work.**
 > - This feature is in preview. For more information, see [experimental and preview features](../canvas-apps/working-with-experimental-preview.md).
-> - Your portal version must be 9.2.6.x or higher for this feature to work.
 
 ## Create an entity record
 
@@ -66,8 +66,6 @@ For example, the following request body posted to the Account entity set will cr
 }
 ```
 
-Complete request and response details: [Basic Create](../../developer/common-data-service/webapi/create-entity-web-api.md#basic-create)
-
 ### Associate entity records on create
 
 <table style="text-align:left">
@@ -108,8 +106,6 @@ Complete request and response details: [Basic Create](../../developer/common-dat
 
 `documentbody` will contain the attachment as base64 string.
 
-Complete request and response details: [Associate entity records on create](../../developer/common-data-service/webapi/create-entity-web-api.md#associate-entity-records-on-create)
-
 ## Update and delete entities using the Web API
 
 ### Basic update
@@ -129,8 +125,6 @@ Complete request and response details: [Associate entity records on create](../.
   </tr>
 </table>
 
-Complete request and response details: [Basic update](../../developer/common-data-service/webapi/update-delete-entities-using-web-api.md#basic-update)
-
 ### Update a single property value
 
 <table style="text-align:left">
@@ -148,8 +142,6 @@ Complete request and response details: [Basic update](../../developer/common-dat
   </tr>
 </table>
 
-Complete request and response details: [Update a single property value](../../developer/common-data-service/webapi/update-delete-entities-using-web-api.md#update-a-single-property-value)
-
 ### Delete a single property value
 
 <table style="text-align:left">
@@ -165,9 +157,6 @@ Complete request and response details: [Update a single property value](../../de
   </tr>
 </table>
 
-Complete request and response details: [Delete a single property value](../../developer/common-data-service/webapi/update-delete-entities-using-web-api.md#delete-a-single-property-value)
-
-
 ### Basic delete
 
 <table style="text-align:left">
@@ -182,8 +171,6 @@ Complete request and response details: [Delete a single property value](../../de
     <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000001)</i></td>    
   </tr>
 </table>
-
-Complete request and response details: [Basic delete](../../developer/common-data-service/webapi/update-delete-entities-using-web-api.md#basic-delete)
 
 ## Associate and disassociate entities using Web API
 
@@ -204,8 +191,6 @@ Complete request and response details: [Basic delete](../../developer/common-dat
   </tr>
 </table>
 
-Complete request and response details: [Add a reference to a collection-valued navigation property](../../developer/common-data-service/webapi/associate-disassociate-entities-using-web-api.md#add-a-reference-to-a-collection-valued-navigation-property)
-
 ### Remove a reference to an entity
 
 <table style="text-align:left">
@@ -220,8 +205,6 @@ Complete request and response details: [Add a reference to a collection-valued n
     <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000002)/opportunity_customer_accounts/$ref?$id=[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)</i></td>
   </tr>
 </table>
-
-Complete request and response details: [Remove a reference to an entity](../../developer/common-data-service/webapi/associate-disassociate-entities-using-web-api.md#remove-a-reference-to-an-entity)
 
 ### Change the reference in a single-valued navigation property
 
@@ -238,8 +221,6 @@ Complete request and response details: [Remove a reference to an entity](../../d
   </tr>
 </table>
 
-Complete request and response details: [Change the reference in a single-valued navigation property](../../developer/common-data-service/webapi/associate-disassociate-entities-using-web-api.md#change-the-reference-in-a-single-valued-navigation-property)
-
 ### Remove a reference to an entity for a single-valued navigation property
 For a single-valued navigation property, remove the $id query string parameter.
 <table style="text-align:left">
@@ -254,8 +235,6 @@ For a single-valued navigation property, remove the $id query string parameter.
     <td><i>[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)/customerid_account/$ref</i></td>
   </tr>
 </table>
-
-Complete request and response details: [Remove a reference to an entity for a single-valued navigation property](../../developer/common-data-service/webapi/associate-disassociate-entities-using-web-api.md#remove-a-reference-to-an-entity)
 
 ### Change the reference in a single-valued navigation property
 
@@ -274,11 +253,9 @@ Complete request and response details: [Remove a reference to an entity for a si
   </tr>
 </table>
 
-Complete request and response details: [Remove a reference to an entity for a single-valued navigation property](../../developer/common-data-service/webapi/associate-disassociate-entities-using-web-api.md#change-the-reference-in-a-single-valued-navigation-property)
-
 ### Associate entities on create
 
-As described in [Create related entities in one operation](../../developer/common-data-service/webapi/create-entity-web-api.md#create-related-entity-records-in-one-operation), new entities can be created with relationships using *deep* insert.
+New entities can be created with relationships using *deep* insert.
 
 ### Associate entities on update using single-valued navigation property
 
@@ -300,8 +277,6 @@ You can associate entities on update using the same message described in [Basic 
     <td><code>{"customerid_account@odata.bind":"[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000002)"}</code></td>
   </tr>
 </table>
-
-Complete request and response details: [Associate entities on update using single-valued navigation property](../../developer/common-data-service/webapi/associate-disassociate-entities-using-web-api.md#associate-entities-on-update-using-single-valued-navigation-property)
 
 ## Web API AJAX samples
 
