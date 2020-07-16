@@ -1,6 +1,6 @@
 ---
-title: Use the facility safety management app
-description: Provides an overview of facility safety management app.
+title: Use the Facility Safety Management app
+description: Provides an overview of the Facility Safety Management app.
 author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.reviewer: kvivek
 
 # Use the Facility Safety Management app
 
-The facility safety management app provides step-by-step instructions to facility managers in the organizations on how to use the app to manage the reopening and readiness of the facilities. 
+The Facility Safety Management app provides step-by-step instructions to facility managers in the organization for using the app to manage the reopening and readiness of the facilities. 
 
 This helps the organizations ensure that they can provide a safe working environment for employees to return to the workplace using the Return to the Workplace solution.
 
@@ -29,26 +29,25 @@ The Facility Safety Management app has the following components:
 
 **Facility Management**
 
--  **Facilities**- List of the facilities (for example, buildings, plants, etc.) that require monitoring to reopen.
+-  **Facilities**- List of the facilities (for example, buildings and plants) that require monitoring to reopen.
 
--  **Facility Groups** - Provides a flexible way to group facilities. For example, by campus, or geographical region.
+-  **Facility Groups** - Provides a flexible way to group facilities. For example, by campus or geographical region.
 
--  **Areas** - Areas are subcomponents of a facility used to distinguish
-    the capacity of these subcomponents over the various phases.
+-  **Areas** - Areas are subcomponents of a facility used to distinguish the capacity of these subcomponents over the various phases.
 
 **Reopen Readiness**
 
 -  **Phase Transitions** - A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase.
 
--  **Readiness Factors** -  Readiness Factors are yes or no type questions regarding reopening a building. They are linked per Reopening Phase to a checklist on a facility.
+-  **Readiness Factors** -  Readiness factors are yes-or-no questions about reopening a building. They are linked to the reopening phase by a checklist on a facility.
 
-- **Measurements** -  The actual values for a metric that allows us to track parameters over time. For a single metric, measurements can be entered per facility.
+- **Measurements** -  The actual values for a metric to help track parameters over time. For a single metric, measurements can be entered for each facility.
 
 **Employee**
 
-- **Employee Sentiment** -  Keeps track of general employee wellbeing. This is self-reported information, but it is a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees using the employee app.
+- **Employee Sentiment** -  Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees using the employee app.
 
-- **Employee Attestation** - Keeps track of employee health assessments or attestations based upon a series of questions answered by the employee. This data is typically entered by employees using the employee app.
+- **Employee Attestation** - Keeps track of employee health assessments or attestations based on a series of questions answered by the employee. This data is typically entered by employees using the employee app.
 
 ## Manage and monitor facilities 
 
@@ -56,9 +55,11 @@ This section covers how to manage and monitor facilities.
 
 ### Create a facility 
 
-By default, two facilities are provided as an example. To  create a new facility:
+By default, two facilities are provided as an example.
 
-1. Select **Facilities** in the left pane and select **New**.
+**To create a new facility**
+
+1. Select **Facilities** in the left pane, and then select **New**.
 
    > [!div class="mx-imgBorder"]
    > ![New facility ](media/facility-manager-facility-new.png "New facility")
@@ -74,9 +75,9 @@ By default, two facilities are provided as an example. To  create a new facility
    | Name                   | Enter a  name for the new facility.                    |
    | Description            | Enter the description for the new facility.              |
    | Facility Type          | Select the appropriate facility type.   |
-   | Facility Group         | Select appropriate facility group. |
-   | Reopen Phase           | Select appropriate reopen phase.  |
-   | Address Street 1       | Enter the address street 1 information.            |
+   | Facility Group         | Select an appropriate group for the facility. |
+   | Reopen Phase           | Select an appropriate reopen phase.  |
+   | Address Street 1       | Enter the first line of the street address.            |
    | Address Street 2       | Enter the address street 2 information.             |
    | Address Postal Code    | Enter postal code.         |
    | Address City           | Enter the city.               |
@@ -103,7 +104,7 @@ required, and select **Save & Close**.
 ### Monitor facility
 
 The facility manager can monitor and assesses the current status of their facilities
-by reviewing the facility’s associated dashboard, details, checklist, and
+by reviewing the facility's associated dashboard, details, checklist, and
 transitions. To monitor a facility.
 
 1. Select **Facility** from  the left pane to see the list of facilities. The default view, My Facilities, shows only your facilities. When switching view, you can see either all active or inactive facilities. 
@@ -245,7 +246,7 @@ A reviewer must **Accept** or **Reject** transitions. To review, and approve or 
 
 ## Monitor employee attestations
 
-Facility managers can monitor whether or not their organization’s employees are
+Facility managers can monitor whether or not their organization's employees are
 feeling healthy enough to be eligible to return to their facility. They can track employee self-attestations of their health based upon a series of
 questions answered by the employees. This data is typically entered by the employee using the employee app. Facility managers can view the summary of the responses in **Employee Attestations** subarea in the facility manager app.
 

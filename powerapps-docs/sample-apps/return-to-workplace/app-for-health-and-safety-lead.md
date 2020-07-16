@@ -68,7 +68,7 @@ Employee Cases - Lists of all cases that have been created.
 
 - Workload
 
-## Getting started with the Workplace care management app
+## Getting started with the Workplace Care Management app
 
 Employee Safety is the main goal for the Health & Safety Lead. Therefore the
 employee cases allows the Health & Safety Lead to revoke the employee's ability
