@@ -12,14 +12,14 @@
       href: ../web-api-functions-actions-sample.md
 - name: (C#) samples
   items:
-    - name: About the samples
+    - name: CDSWebApiService class
       href: cdswebapiservice.md
     - name: Basic Operations
       href: cdswebapiservice-basic-operations.md
     - name: Query Data
-      href: 
+      href: cdswebapiservice-query-data.md
     - name: Conditional Operations
-      href: 
+      href: cdswebapiservice-conditional-operations.md
     - name: Functions and Actions
       href: functions-actions-csharp.md
     - name: Parallel Operations

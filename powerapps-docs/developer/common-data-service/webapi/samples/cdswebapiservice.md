@@ -328,8 +328,8 @@ This class simply extends <xref:System.Exception> and provides additional proper
 
 ## Samples using this class
 
-The following samples use this class:
+The following C# samples use this class:
 
-- [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)
-- [Web API CDSWebApiService Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)
-- [Web API CDSWebApiService Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)
+- [Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)
+- [Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)
+- [Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)
