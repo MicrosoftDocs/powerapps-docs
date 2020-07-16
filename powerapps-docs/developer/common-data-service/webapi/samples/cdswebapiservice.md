@@ -18,7 +18,7 @@ search.app:
 # Web API CDSWebApiService class Sample (C#)
 
 
-This is a .NET Framework Class library project that creates an assembly to define a service when using the CDS Web API.
+This is a .NET Framework Class library project that creates an assembly to define a service when using the Common Data Service Web API.
 
 This assembly demonstrates how to:
 

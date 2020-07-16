@@ -448,6 +448,6 @@ namespace PowerApps.Samples
 [Use Web API actions](../use-web-api-actions.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md)
-[Web API Basic Operations Sample (C#)](basic-operations-csharp.md)<br />
-[Web API Query Data Sample (C#)](query-data-csharp.md)<br />
-[Web API Conditional Operations Sample (C#)](conditional-operations-csharp.md)
+[Web API Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />
+[Web API Query Data Sample (C#)](cdswebapiservice-query-data.md)<br />
+[Web API Conditional Operations Sample (C#)](cdswebapiservice-conditional-operations.md)
