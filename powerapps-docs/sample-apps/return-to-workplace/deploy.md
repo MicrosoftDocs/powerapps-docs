@@ -348,25 +348,25 @@ Follow the steps below for each .pbit file.
 
 5. After signing in, select **Connect** to connect to your data in Common Data Service.
 
-6. After connecting to your Common Data Service environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings need to be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.<!--note from editor: This information must also be in body text or alt text, it can't only be conveyed by screenshots. This is an accessibility requirement.-->
+6. After connecting to your Common Data Service environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings need to be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
      
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-access-web-content-level.png)
+    > ![Access Web Content level](media/deploy-access-web-content-level.png "Grant anonymous access to the Web Content level")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-level-connect.png)
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-level-connect.png "Grant anonymous access to the Web Content")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-level.png)
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-level.png "Grant anonymous access to the Web Content")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels.png)
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels.png "Grant anonymous access to the Web Content")
 
     > [!div class="mx-imgBorder"] 
     > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-select-anonymous.png)
     
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels-blob-storage-public.png)
+    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels-blob-storage-public.png "Grant anonymous access to the Web Content")
 
     After you've configured the access and privacy levels for COVID-19 public data, you must set the privacy level for Common Data Service data to **Organizational**. 
 
@@ -400,7 +400,7 @@ Follow the steps below for each .pbit file.
 
 Next, you must configure the data refresh settings for the dataset. More information: [Step 4: Schedule report refresh](#step-4-schedule-report-refresh)
 
-### Service URLs for US Government customers (optional - for government agencies only)
+### Service URLs for US Government customers
 
 There is a different set of URLs to access Power Apps US Government environments and Power BI US Government tenants. The commercial version of the service URLs is used throughout the article. If you have a US Government organization, use the respective US Government URL for your deployment:
 
