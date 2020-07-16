@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/17/2020
+ms.date: 07/16/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -194,11 +194,11 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
-**A:** You need an [Office 365 plan that includes Power Apps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
+**A:** Guest users can **use** custom forms. To **create** custom forms, you need an [Office 365 plan that includes Power Apps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
 
 **Q:** What happens when guest users access a list that has a custom form?
 
-**A:** Guest users get an error message if they try to access a list form that's been customized using Power Apps.
+**A:** As long as the guest users have permission to access the list, they’ll be able to access the custom form.
 
 **Q:** As an administrator, how do I get a list of all customized forms in my organization?
 
