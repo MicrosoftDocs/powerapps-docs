@@ -293,12 +293,16 @@ Now, we will configure the data refresh settings for the dataset, [Step 4: Sched
 
 4. In the **Settings** page, expand **Scheduled refresh** and specify the required details for refreshing data based on a schedule. Select **Apply**.
 
+    > [!NOTE]
+    > All datasets are refreshed when configuring the refresh schedule.  
+    > We recommend setting the data to refresh every 30 mins.
+
       > [!div class="mx-imgBorder"] 
       > ![Schedule refresh data](media/deploy-schedule-refresh.png "Schedule refresh data")
 
       > [!NOTE]
       > - There are limits to how many times data can refresh. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Premium capacity, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
-      >- We recommend setting the data to refresh every 30 mins.
+     
 
 5. Next, go back to your workspace, select **Reports** tab, and then select the report to open it in browser.
 
