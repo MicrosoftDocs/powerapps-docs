@@ -1,7 +1,7 @@
 ---
 title: Use the Location Readiness dashboard
 description: Provides an overview of insights through dashboards.
-author: wbakker
+author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
