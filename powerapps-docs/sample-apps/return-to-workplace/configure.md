@@ -1,7 +1,7 @@
 ---
 title: Configuration guide for the Return to the Workplace solution administrator
 description: Provides an overview of Return to the Workplace Solution.
-author: wbakker
+author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
