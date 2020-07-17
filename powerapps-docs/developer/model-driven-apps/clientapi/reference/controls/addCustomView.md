@@ -32,7 +32,7 @@ Lookup
 
 - **viewId**: String. The string representation of a GUID for a view.
     > [!NOTE]
-    > This value is never saved and only needs to be unique among the other available views for the lookup. A string for a non-valid GUID will work, for example “00000000-0000-0000-0000-000000000001”. It’s recommended that you use a tool like **guidgen.exe** to generate a valid GUID.  
+    > This value is never saved and only needs to be unique among the other available views for the lookup on the current form. A string for a non-valid GUID will not work, for example “00000000-0000-0000-0000-000000000001” will not work. It’s recommended that you use a tool like **guidgen.exe** to generate a valid GUID.  
 
 - **entityName**: String. The name of the entity.
 - **viewDisplayName**: String. The name of the view.
