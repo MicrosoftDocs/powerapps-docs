@@ -1,7 +1,7 @@
 ---
 title: User the Workplace Care Management app
 description: Provides an overview of how to use the Workplace Care Management app.
-author: wbakker
+author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
