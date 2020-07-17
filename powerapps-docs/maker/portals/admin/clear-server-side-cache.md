@@ -1,11 +1,11 @@
 ---
-title: "Clear the server-side cache for a portal | MicrosoftDocs"
+title: "Clear the server-side cache for a portal"
 description: "Instructions to force the portal to refresh its cache immediately."
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/23/2020
+ms.date: 07/16/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -15,7 +15,8 @@ ms.reviewer: tapanm
 As a portal administrator, you can clear the server-side cache for the entire portal so that updated data from Common Data Service is immediately reflected on the portal. Updates from Common Data Service  are communicated to the portal in asynchronous mode, so there might be a lag between the time data is updated in Common Data Service and the time that updated data appears on the portal. To eliminate this delay&mdash;for example, when it interferes with portal configuration&mdash;you can force the portal to refresh its cache immediately.
 
 > [!NOTE]
-> The SLA for cache refresh (data transfer between Common Data Service and portal) is 15 minutes.
+> - The SLA for cache refresh (data transfer between Common Data Service and portal) is 15 minutes.
+> - Power Apps portals with version 9.2.6.x or later have improved caching. For more information, go to [Caching changes for portals with version 9.2.6.x or later](#caching-changes-for-portals-with-version-926x-or-later).
 
 ## Steps to clear portal server-side cache
 
@@ -66,3 +67,30 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 | adx_publishingstate                       | adx_webnotificationentity | adx_webtemplate                      |
 | adx_publishingstatetransitionrule         | adx_webnotificationurl    | adx_urlhistory                       |
 | adx_publishingstatetransitionrule_webrole | adx_webpage               | adx_entitypermission                 |
+
+## Caching changes for portals with version 9.2.6.x or later
+
+Power Apps portals with version 9.2.6.x or later benefit from improved caching functionality to increase consistency and reliability as follows.
+
+- [Capacity-based portals and add-on portals](../faq.md#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals) will use the same caching functionality.
+- Capacity-based portals don't have to manually [clear the configuration entity cache](#configuration-entity-caching-portals-with-capacity-based-licenses).
+- Add-on portals with high load will have improved performance and a reliable data cache refresh.
+
+> [!IMPORTANT]
+> - No change to SLA for cache refresh (data transfer between Common Data Service and portal) mentioned earlier in this article.
+> - Data changes from portals will reflect immediately in Common Data Service and portals.
+> - No change to [clear server-side cache functionality](#steps-to-clear-portal-server-side-cache). You can continue to use this functionality to clear server cache immediately.
+ 
+### FAQs
+ 
+**Can I change the cache refresh duration from 15 minutes to real-time refresh?** <br>
+No. SLA for cache refresh will remain to 15 minutes. Though not guaranteed, it's possible that you may see some data changes from Common Data Service to portals immediately.
+
+**I'm using plugins or workflows to update data in other entities and need these data changes to reflect immediately on my portal.** <br>
+This design approach isn't recommended. Apart from the primary record where the create or update action is triggered, data reflection from Common data Service to portals is never guaranteed to be immediate.
+
+**Is there any difference in caching between capacity-based portals and add-on portals?** <br>
+No.
+
+**How long does it take for changes to reflect from portals to Common Data Service?** <br>
+Immediately.
