@@ -1,7 +1,7 @@
 ---
 title: Overview of the Return to the Workplace solution for Microsoft Power Platform | Microsoft Docs
 description: Provides an overview of the Return to the Workplace solution.
-author: wbakker
+author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
