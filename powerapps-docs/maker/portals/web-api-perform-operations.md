@@ -17,7 +17,7 @@ ms.reviewer: tapanm
 You can perform the [available Web API operations](web-api-overview.md#web-api-operations) in portals. Web API operations consist of HTTP requests and responses. This article shows sample operations, methods, URI, and the sample JSON you can use in the HTTP request.
 
 > [!IMPORTANT]
-> - **Your portal version must be 9.2.6.41 or higher for this feature to work.**
+> - **Your portal version must be 9.2.6.41 or later for this feature to work.**
 > - This feature is in preview. For more information, see [experimental and preview features](../canvas-apps/working-with-experimental-preview.md).
 
 ## Create an entity record

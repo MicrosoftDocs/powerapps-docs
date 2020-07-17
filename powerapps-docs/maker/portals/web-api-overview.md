@@ -21,7 +21,7 @@ Portals Web API enables building a richer user experience inside Power Apps port
 For example, you can create a new account, update a contact, or change the [entity permissions](configure/assign-entity-permissions.md) for a product using portals Web API instead of using Portal Management app.
 
 > [!IMPORTANT]
-> - **Your portal version must be 9.2.6.41 or higher for this feature to work**.
+> - **Your portal version must be 9.2.6.41 or later for this feature to work**.
 > - This feature is in preview. For more information, see [experimental and preview features](../canvas-apps/working-with-experimental-preview.md).
 > - Portals Web APIs are build for creating rich user experience inside portal pages. And not optimized for 3rd party services or application integration.
 > - Portals Web API operations are limited to entities related to data. For example, entities such as Accounts, Contacts or your custom entity. Configuration of entity metadata, or portal configuration entity data isn't supported when using the portals Web API. For example, configuring portals entities such as adx_contentsnippet, adx_entityform or adx_entitylist isn't supported using portals Web API. For a complete list, go to [configuration entities](#configuration-entities).
