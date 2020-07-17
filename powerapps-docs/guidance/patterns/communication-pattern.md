@@ -1,6 +1,6 @@
 ---
-title: "Power Apps Pattern: Communication | Microsoft Docs"
-description: Learn how Communication apps help you quickly share news, event announcements, and the latest up-to-date info with your employees no matter where they are.
+title: "Power Apps pattern: Communication | Microsoft Docs"
+description: Learn how communication apps help you quickly share news, event announcements, and the latest up-to-date info with your employees no matter where they are.
 author: kathyos
 ms.service: powerapps
 ms.topic: conceptual
@@ -19,13 +19,13 @@ ms.reviewer: kathyos
 Want to quickly share news, event announcements, and the latest up-to-date information<!--Editors recently decided that articles on docs aren't quite informal enough to use "info."-->
 with your employees no matter where they are? A common use of Microsoft Power Platform is
 to provide highly tailored and visually compelling communications via an app.
-<!--It seems odd to bring up Telstra so early in the article. Recommend deleting: For example, Telstra sends all communications to its field engineers directly
+<!--It seems odd to bring up Telstra so early in the article, especially when it's not even the first example you discuss in detail. Recommend deleting: For example, Telstra sends all communications to its field engineers directly
 within the Field Technician app.--> This article provides several examples of
 real-world use cases that showcase organizations using Microsoft Power Platform to
 communicate information to employees.
 
 ## How to recognize the communication/announcement pattern
-<!--Note that this illustration includes the word "PLACEHOLDER".-->
+<!--Note that this illustration says "PLACEHOLDER".-->
 ![Illustration of the communication pattern with compose, publish, and consume steps](media/communication-illustration.png "Illustration of the communication pattern with compose, publish, and consume steps")
 
 In a typical communication scenario:
@@ -88,9 +88,9 @@ The employee app, which can be embedded in Teams, enables users to consume news
 and information, and reach out for assistance.
 
 ![A screenshot of the Crisis Communication employee app](media/crisis-communication-employee-app.jpg "A screenshot of the Crisis Communication employee app")
-
-[Watch a video demo of the Crisis Communication
-solution](https://youtu.be/23SypLXiOTw) and [Set up and learn about the Crisis
+<!--Suggest formatting these links in the "More information" pattern. -->
+More information:<br>[Video demo of the Crisis Communication
+solution](https://youtu.be/23SypLXiOTw)<br>[Set up and learn about the Crisis
 Communication sample
 template](https://docs.microsoft.com/powerapps/maker/canvas-apps/sample-crisis-communication-app)
 
@@ -98,7 +98,7 @@ template](https://docs.microsoft.com/powerapps/maker/canvas-apps/sample-crisis-c
 
 ### Schlumberger Coronavirus Stay SAFE app
 
-[Read the whole story](https://powerapps.microsoft.com/blog/schlumberger/)
+[Read the whole story.](https://powerapps.microsoft.com/blog/schlumberger/)
 
 For Schlumberger, the health and safety of their employees and contractors is
 its first priority. Schlumberger's Health, Safety and Environment (HSE) function
@@ -118,7 +118,7 @@ minimize exposure.
 
 ### Telstra Technician Plus app
 
-[Read the whole story](https://customers.microsoft.com/story/765534-telstra-telecommunications-teams)
+[Read the whole story.](https://customers.microsoft.com/story/765534-telstra-telecommunications-teams)
 
 Telstra, a leading Australian telecommunications company, was using a number of
 resources over the years&mdash;such as online spreadsheets, paper documents, emails,
@@ -135,15 +135,14 @@ The solution is used by leaders to efficiently send communications out to the
 field.
 
 See the solution in this video:
-<!--TO EDITOR: The author would like the thumbnail to be a hyperlink to the video but we don't know how to achieve that. -->
-<!-- 
+<!--TO EDITOR: The author would like the thumbnail to be a hyperlink to the video but we don't know how to achieve that.
 ![A thumbnail of the Telstra video](media/telstra-video-thumbnail.png)(https://mymbas.microsoft.com/sessions/a00b1455-2989-4eb6-b17d-e182a27183a1?source=sessions)-->
-<!--note from editor to self: Will this work?-->
-<a href="https://mymbas.microsoft.com/sessions/a00b1455-2989-4eb6-b17d-e182a27183a1?source=sessions"><img src="media/telstra-video-thumbnail.png" alt="Telstra solution"></a>
+<!--note from editor: Easy peasy! Here you go:-->
+<a href="https://mymbas.microsoft.com/sessions/a00b1455-2989-4eb6-b17d-e182a27183a1?source=sessions"><img src="media/telstra-video-thumbnail.png" alt="Telstra solution video" title="Telstra solution video"></a>
 
 ### Hexion app to manage company-wide communications
 
-[Read the whole story](https://customers.microsoft.com/story/810656-hexion-manufacturing-power-platform)
+[Read the whole story.](https://customers.microsoft.com/story/810656-hexion-manufacturing-power-platform)
 
 At global chemical company Hexion, managers and the communications department
 were sending email widely throughout the company. They needed to target
