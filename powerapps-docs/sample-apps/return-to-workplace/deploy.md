@@ -1,7 +1,7 @@
 ---
 title: Deploy the Return to Workplace solution
 description: Provides an overview of how to deploy the Return to the Workplace Solution.
-author: wbakker
+author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
