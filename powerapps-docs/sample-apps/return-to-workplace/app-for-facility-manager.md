@@ -1,7 +1,7 @@
 ---
 title: Use the Facility Safety Management app
 description: Provides an overview of the Facility Safety Management app.
-author: wbakker
+author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
@@ -32,8 +32,6 @@ The Facility Safety Management app has the following components:
 -  **Facilities**- List of the facilities (for example, buildings and plants) that require monitoring to reopen.
 
 -  **Facility Groups** - Provides a flexible way to group facilities. For example, by campus or geographical region.
-
--  **Areas** - Areas are subcomponents of a facility used to distinguish the capacity of these subcomponents over the various phases.
 
 **Reopen Readiness**
 
