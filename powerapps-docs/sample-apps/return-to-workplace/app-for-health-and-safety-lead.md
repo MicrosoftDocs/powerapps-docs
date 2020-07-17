@@ -62,12 +62,6 @@ Lists all the cases that have been created.
 > [!div class="mx-imgBorder"]
 > ![Master data](media/health-safety-master-data.png "Master data")
 
-### Employee cases dashboard
-
-- **Cases**
-
-- **Workload**
-
 ## Getting started with the Workplace Care Management app
 
 Employee safety is the main goal for Health and Safety Leads. You use this app to decide whether to revoke an employee's ability
