@@ -48,9 +48,12 @@ Some of these operators are dependent on the language of the author.  See [Globa
 |                                **@**                                |                       &nbsp;                        |                                                                              **[@MyVariable]**                                                                               |                                                                                                                      Global disambiguation                                                                                                                       |
 | **,**<br>[[language dependent](../global-apps.md)]  |                   List separator                    | **If( X < 10, "Low", "Good" )**<br>**{ X: 12, Y: 32 }**<br>**[ 1, 2, 3 ]** | Separates: <ul><li>arguments in function calls</li><li>fields in a [record](../working-with-tables.md#elements-of-a-table)</li><li>records in a [table](../working-with-tables.md#inline-value-tables)</li></ul> This character depends on the language. |
 | **;**<br>[[language dependent](../global-apps.md)] |                  Formula chaining                   |                                     **Collect(T, A); Navigate(S1, &quot;&quot;)**                                     |                                                                          Separate invocations of functions in behavior properties. The chaining operator depends on the language.                                                                          |
+|                             **As**                              |         [As operator](#as-operator)         |                                                                               **AllCustomers As Customer**                                                                                |                                                                                                           Overrides **ThisItem** and **ThisRecord** in galleries and record scope functions.  **As** is useful for providing a better, specific name and is especially important in nested  scenarios.                                                                                                             |
 |                             **Self**                              |         [Self operator](#self-and-parent-operators)         |                                                                               **Self.Fill**                                                                                |                                                                                                           Access to properties of the current control                                                                                                             |
 |                             **Parent**                              |         [Parent operator](#self-and-parent-operators)         |                                                                               **Parent.Fill**                                                                                |                                                                                                           Access to properties of a control container                                                                                                            |
 |                            **ThisItem**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisItem.FirstName**                                                                            |                                                                                                          Access to fields of a Gallery or form control                                                                                                           |
+|                            **ThisRecord**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisRecord.FirstName**                                                                            |                                                                                                          Access to the complete record and individual fields of the record within **ForAll**, **Sum**, **With**, and other record scope functions.  Can be overridden with the **As** operator.                                                                                                           |
+
 
 ## in and exactin operators
 You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
@@ -65,12 +68,124 @@ You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](
 
     The gallery shows only Europa because only its name contains the letter that you specified in the case that you specified.
 
-## ThisItem operator
-You can show data in **[Gallery](../controls/control-gallery.md)**, **[Edit form](../controls/control-form-detail.md)**, or **[Display form](../controls/control-form-detail.md)** controls by binding it to a table or a collection.  These controls are a container for other cards and controls.  Each card or control within the container can access the bound data through the **[ThisItem](operators.md#thisitem-operator)** operator.   
+## ThisItem, ThisRecord, and As operators
+Some controls and functions apply formulas to individual records of a table.  To refer to the individual record in a formula, use one of the following:
 
-Use the **[ThisItem](operators.md#thisitem-operator)** operator to specify the [column](../working-with-tables.md#columns) of data to be displayed in each card or control within the outer control. For example, that operator in the product gallery for [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) specified that the image control showed the product design, the upper label showed the product name, and the lower label showed the number of units in stock.
+| Operator | Applies to | Description |
+|----------|------------|-------------|
+| **ThisItem** | **[Gallery](../controls/control-gallery.md)**&nbsp;control<br>**[Edit&nbsp;form](../controls/control-form-detail.md)**&nbsp;control<br>**[Display&nbsp;form](../controls/control-form-detail.md)**&nbsp;control | The default name for the current record in a **Gallery** or form control. |
+| **ThisRecord** | **[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other record scope functions |  The default name for the current record in **ForAll** and other record scope functions. |
+| **As** *name* | **[Gallery](../controls/control-gallery.md)**&nbsp;control<br>**[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other record scope functions | Defines a *name* for the current record, replacing default **ThisItem** or **ThisRecord**.  Use **As** to make formulas easier to understand and resolve ambiguity when nesting. |
 
-For nested galleries, **[ThisItem](operators.md#thisitem-operator)** refers to the innermost gallery's items. Assuming the row fields in the inner and outer galleries don't conflict, you can also use the unqualified field (column) names directly. This approach enables rules in an inner gallery to refer to an outer gallery's items.
+### ThisItem
+
+For example, in the following **Gallery** control, the **Items** property is set to an **Employees** data source (such as the one entity included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
+
+```powerapps-dot
+Employees
+``` 
+
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-items.png)
+
+The first item in the gallery is a template that is replicated for each employee.  In the template, the formula for the picture uses **ThisItem** to refer to the current item:
+
+```powerapps-dot
+ThisItem.Picture
+``` 
+
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-picture.png)
+
+Likewise the formula for name also uses **ThisItem**:
+
+```powerapps-dot
+ThisItem.'First Name' & " " & ThisItem.'Last Name'
+``` 
+
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-picture.png)
+
+### ThisRecord
+
+Likewise, when using a function that has a [record scope](../working-with-tables.md#record-scope), **ThisRecord** is used.  For example, we can use the **Filter** function with our gallery's **Items** property:
+
+```powerapps-dot
+Filter( Employees, StartsWith( ThisRecord.Employee.'First Name', "M" ) )
+``` 
+
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-filter-thisrecord.png)
+
+**ThisRecord** is optional and implied by using the field directly, for example in this case we could have written:
+
+```powerapps-dot
+Filter( Employees, StartsWith( 'First Name', "M" ) )
+```  
+
+Although optional, using **ThisRecord** can make formulas easier to understand and may be required in ambiguous situations where it a field name may also be a relationship name.  Note that **ThisRecord** is optional while **ThisItem** is required.
+
+Use **ThisRecord** to reference the whole record with the **Patch** function.  For example the following formula sets the status for all inactive employees to active:
+
+```powerapps-dot
+With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inactive ) },
+      ForAll( InactiveEmployees, 
+              Patch( Employees, ThisRecord, { Status: 'Status (Employees)'.Active } ) ) )
+```
+
+### As
+
+Use the **As** operator to name a record in a gallery or record scope function, resulting in easier to understand formulas.  **As** is required in nested galleries and functions to access records in parent record scopes.
+
+For example, we can modify the **Items** property of our gallery to use **As** to clealry identify that we are working with an Employee:
+
+```powerapps-dot
+Employees As Employee
+```   
+
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-filter-as-employee.png)
+
+The formulas for the picture and name will also need to be adjusted:
+
+```powerapps-dot
+Employee.Picture
+```
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-as-picture.png)
+
+
+```powerapps-dot
+Employee.'First Name' & " " & Employee.'Last Name'
+```
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-as-name.png)
+
+**As** can also be used in our record scope functions, here replacing **ThisRecord** with **Employee** for clarity:
+
+```powerapps-dot
+With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inactive ) },
+      ForAll( InactiveEmployees As Employee, 
+              Patch( Employees, Employee, { Status: 'Status (Employees)'.Active } ) ) )
+```
+
+When nesting galleries and record scope functions, **ThisItem** and **ThisRecord** always refers to to the inner most record scope and the outer most record scopes will be unavailable.  Use **As** to make all record scopes available by giving each a unique name.  For example, this formula produces a checkerboard pattern as a text string by nesting two **ForAll** functions:
+
+```powerapps-dot
+Concat( 
+    ForAll( Sequence(8) As Rank,
+        Concat( 
+            ForAll( Sequence(8) As File, 
+                    If( Mod(Rank.Value + File.Value, 2) = 1, " X ", " . " ) 
+            ),
+            Value 
+        ) & Char(10) 
+    ), 
+    Value 
+)
+```
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-checkerboard.png)
 
 ## Self and Parent operators
 
