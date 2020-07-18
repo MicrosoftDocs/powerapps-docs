@@ -74,7 +74,7 @@ A few controls and functions apply formulas to individual records of a table.  T
 | Operator | Applies to | Description |
 |----------|------------|-------------|
 | **ThisItem** | **[Gallery](../controls/control-gallery.md)**&nbsp;control<br>**[Edit&nbsp;form](../controls/control-form-detail.md)**&nbsp;control<br>**[Display&nbsp;form](../controls/control-form-detail.md)**&nbsp;control | The default name for the current record in a **Gallery** or form control. |
-| **ThisRecord** | **[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other [record scope](../working-with-tables#record-scope) functions |  The default name for the current record in **ForAll** and other record scope functions. |
+| **ThisRecord** | **[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other [record scope](../working-with-tables.md#record-scope) functions |  The default name for the current record in **ForAll** and other record scope functions. |
 | **As** *name* | **[Gallery](../controls/control-gallery.md)**&nbsp;control<br>**[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other record scope functions | Defines a *name* for the current record, replacing default **ThisItem** or **ThisRecord**.  Use **As** to make formulas easier to understand and resolve ambiguity when nesting. |
 
 ### ThisItem operator
