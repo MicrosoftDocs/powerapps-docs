@@ -20,7 +20,7 @@ Formulas combine many elements.  Listed below are:
 * **Functions** take parameters, perform an operation, and return a value. For example, **Sqrt(25)** returns **5**. Functions are modeled after Microsoft Excel functions.  Some functions have side effects, such as **SubmitForm**, which are appropriate only in a [behavior formula](working-with-formulas-in-depth.md) such as **Button.OnSelect**.
 * **Signals** return information about the environment. For example, **[Location](functions/signals.md)** returns the device's current GPS coordinates. Signals don't take parameters or have side effects.
 * **Enumerations** return a pre-defined constant value. For example, **[Color](functions/function-colors.md)** is an enumeration that has pre-defined values for **Color.Red**, **Color.Blue**, and so forth.  Common enumerations are included here; function-specific enumerations are described with the function.
-* **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-operator)** and **[Self](functions/operators.md#self-and-parent-operators)**, provide access to information from within a container.
+* **Named operators**, such as **[ThisItem](functions/operators.md#thisitem-thisrecord-and-as-operators)** and **[Self](functions/operators.md#self-and-parent-operators)**, provide access to information from within a container.
 
 Other elements include:
 
@@ -305,7 +305,7 @@ Other elements include:
 
 **[Self](functions/operators.md#self-and-parent-operators)** – Provides access to the properties of the current control.
 
-**[Sequence](functions/sequence.md)** – Generate a table of sequential numbers, useful when iterating with **ForAll**.
+**[Sequence](functions/function-sequence.md)** – Generate a table of sequential numbers, useful when iterating with **ForAll**.
 
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 

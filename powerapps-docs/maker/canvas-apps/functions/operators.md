@@ -77,7 +77,7 @@ A few controls and functions apply formulas to individual records of a table.  T
 | **ThisRecord** | **[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other [record scope](../working-with-tables#record-scope) functions |  The default name for the current record in **ForAll** and other record scope functions. |
 | **As** *name* | **[Gallery](../controls/control-gallery.md)**&nbsp;control<br>**[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other record scope functions | Defines a *name* for the current record, replacing default **ThisItem** or **ThisRecord**.  Use **As** to make formulas easier to understand and resolve ambiguity when nesting. |
 
-### ThisItem
+### ThisItem operator
 
 For example, in the following **Gallery** control, the **Items** property is set to the **Employees** data source (such as the **Employees** entity included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
 
@@ -106,7 +106,7 @@ ThisItem.'First Name' & " " & ThisItem.'Last Name'
 > [!div class="mx-imgBorder"]  
 > ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-picture.png)
 
-### ThisRecord
+### ThisRecord operator
 
 **ThisRecord** is used when using a function that has a [record scope](../working-with-tables.md#record-scope).  For example, we can use the **Filter** function with our gallery's **Items** property:
 
@@ -133,7 +133,7 @@ With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inac
               Patch( Employees, ThisRecord, { Status: 'Status (Employees)'.Active } ) ) )
 ```
 
-### As
+### As operator
 
 Use the **As** operator to name a record in a gallery or record scope function, overriding the default **ThisItem** and **ThisRecord**.  Naming the record can make your formulas easier to understand and may be required in nested situations to access records in other scopes.
 
