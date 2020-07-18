@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/01/2019
+ms.date: 07/17/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -40,40 +40,48 @@ The **Char** function translates a number into a string with the corresponding A
 
 1. On an empty screen in a tablet app, add a [**Gallery**](../controls/control-gallery.md) control with a **Blank Horizontal** layout, and then set these properties:
 
-    - **Items**: `Sequence( 8, 0 )`
-    - **Width**: 800
-    - **Height**: 500
-    - **TemplateSize**: 100
+    - **Items**: `Sequence( 8, 0, 16 ) As HighNibble`
+    - **Width**: `Parent.Width`
+    - **Height**: `Parent.Height`
+    - **TemplateSize**: `Parent.Width / 8`
     - **TemplatePadding**: 0
+    - **X**: 0
+    - **Y**: 0
 
 1. Inside that gallery, add a **Gallery** control with a **Blank Vertical** layout, and then set these properties:
 
-    - **Items**: `ForAll( Sequence( 16, 0 ), Value + ThisItem.Value * 16 )`
-    - **Width**: 100
-    - **Height**: 500
-    - **TemplateSize**: 30
+    - **Items**: `Sequence( 16, HighNibble.Value ) As CharacterCode`
+    - **Width**: `Parent.Width / 8`
+    - **Height**: `Parent.Height`
+    - **TemplateSize**: `Parent.Height / 16`
     - **TemplatePadding**: 0
-
-    The value of the **Items** property multiplies 16 by the column number provided by the Value column of the **Items** property from the first gallery (0-7 in `ThisItem.Value`). The formula then adds the result to one of the row numbers from the second gallery (0-15 in the record scope that the [**ForAll**](function-forall.md) function provides).
+    - **X**: 0
+    - **Y**: 0
 
 1. Inside the second (vertical) gallery, add a **Label** control, and set these properties:
 
-    - **Text**: `ThisItem.Value`
-    - **Width**: 50
+    - **Text**: `CharacterCode.Value`
+    - **Width**: `Parent.Width / 2`
+    - **X**: 0
+    - **Y**: 0
+    - **Align**: `Center`
+    - **FontWeight**: `Bold`
 
 1. Inside the second (vertical) gallery, add another **Label** control, and set these properties:
 
-    - **Text**: `Char( ThisItem.Value )`
-    - **Width**: 50
-    - **X**: 50
+    - **Text**: `Char( CharacterCode.Value )`
+    - **Width**: `Parent.Width / 2`
+    - **X**: `Parent.Width / 2`
+    - **Y**: 0
+    - **FontWeight**: `Bold`
 
 You've created a chart of the first 128 ASCII characters. Characters that appear as a small square can't be printed.
 
 ![First 128 ASCII characters](media/function-char/chart-lower.png)
 
-To show the extended ASCII characters, set the **Items** property of the second gallery to this formula, which adds 128 to each character value:
+To show the extended ASCII characters, set the **Items** property of the second gallery to this formula which starts with character 128:
 
-`ForAll( Sequence( 16, 0 ), Value + ThisItem.Value * 16 + 128)`
+`Sequence( 8, 128, 16 ) As HighNibble`
 
 ![Extended ASCII characters](media/function-char/chart-higher.png)
 

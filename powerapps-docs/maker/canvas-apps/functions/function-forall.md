@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/15/2019
+ms.date: 07/17/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -18,7 +18,9 @@ search.app:
 Calculates values and performs actions for all [records](../working-with-tables.md#records) of a [table](../working-with-tables.md).
 
 ## Description
-The **ForAll** function evaluates a formula for all records of a table.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection.  Use the [**With** function](function-with.md) to evaluate a formula for a single record.
+The **ForAll** function evaluates a formula for all records of a table.  The formula can calculate a value and/or perform actions, such as modifying data or working with a connection.  Use the [**With** function](function-with.md) to evaluate a formula for a single record.  
+
+Use the [**Sequence** function](function-sequence.md) with the **ForAll** function to iterate based on a count.
 
 [!INCLUDE [record-scope](../../../includes/record-scope.md)]
 

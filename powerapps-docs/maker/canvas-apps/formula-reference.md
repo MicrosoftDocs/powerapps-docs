@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/20/2020
+ms.date: 07/17/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -46,6 +46,8 @@ Other elements include:
 **[Asin](functions/function-trig.md)** – Returns the arcsine of a number, in radians.
 
 **[Assert](functions/function-assert.md)** – Evaluates to true or false in a test.
+
+**[As](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Names the current record in gallery, form, and record scope functions such as **ForAll**, **With**, and **Sum**.
 
 **[AsType](functions/function-astype-istype.md)** – Treats a record reference as a specific entity type.
 
@@ -303,6 +305,8 @@ Other elements include:
 
 **[Self](functions/operators.md#self-and-parent-operators)** – Provides access to the properties of the current control.
 
+**[Sequence](functions/sequence.md)** – Generate a table of sequential numbers, useful when iterating with **ForAll**.
+
 **[Set](functions/function-set.md)** – Sets the value of a global variable.
 
 **[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
@@ -342,7 +346,9 @@ Other elements include:
 
 **[Text](functions/function-text.md)** – Converts any value and formats a number or date/time value to a string of text.
 
-**[ThisItem](functions/operators.md#thisitem-operator)** – When in a gallery or form, returns the data for the current item from the container.
+**[ThisItem](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Returns the record for the current item in a gallery or form control.
+
+**[ThisRecord](functions/operators.md#thisitem-thisrecord-and-as-operators)** – Returns the record for the current item in a record scope function, such as **ForAll**, **With**, and **Sum**.
 
 **[Time](functions/function-date-time.md)** – Returns a date/time value, based on **Hour**, **Minute**, and **Second** values.  
 

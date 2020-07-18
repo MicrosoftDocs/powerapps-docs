@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/20/2020
+ms.date: 07/17/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -69,17 +69,17 @@ You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](
     The gallery shows only Europa because only its name contains the letter that you specified in the case that you specified.
 
 ## ThisItem, ThisRecord, and As operators
-Some controls and functions apply formulas to individual records of a table.  To refer to the individual record in a formula, use one of the following:
+A few controls and functions apply formulas to individual records of a table.  To refer to the individual record in a formula, use one of the following:
 
 | Operator | Applies to | Description |
 |----------|------------|-------------|
 | **ThisItem** | **[Gallery](../controls/control-gallery.md)**&nbsp;control<br>**[Edit&nbsp;form](../controls/control-form-detail.md)**&nbsp;control<br>**[Display&nbsp;form](../controls/control-form-detail.md)**&nbsp;control | The default name for the current record in a **Gallery** or form control. |
-| **ThisRecord** | **[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other record scope functions |  The default name for the current record in **ForAll** and other record scope functions. |
+| **ThisRecord** | **[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other [record scope](../working-with-tables#record-scope) functions |  The default name for the current record in **ForAll** and other record scope functions. |
 | **As** *name* | **[Gallery](../controls/control-gallery.md)**&nbsp;control<br>**[ForAll](function-forall.md)**, **[Filter](function-filter-lookup.md)**, **[With](function-with.md)**, **[Sum](function-aggregates.md)** and other record scope functions | Defines a *name* for the current record, replacing default **ThisItem** or **ThisRecord**.  Use **As** to make formulas easier to understand and resolve ambiguity when nesting. |
 
 ### ThisItem
 
-For example, in the following **Gallery** control, the **Items** property is set to an **Employees** data source (such as the one entity included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
+For example, in the following **Gallery** control, the **Items** property is set to the **Employees** data source (such as the **Employees** entity included with the [Northwind Traders sample](../northwind-orders-canvas-overview.md)):
 
 ```powerapps-dot
 Employees
@@ -108,7 +108,7 @@ ThisItem.'First Name' & " " & ThisItem.'Last Name'
 
 ### ThisRecord
 
-Likewise, when using a function that has a [record scope](../working-with-tables.md#record-scope), **ThisRecord** is used.  For example, we can use the **Filter** function with our gallery's **Items** property:
+**ThisRecord** is used when using a function that has a [record scope](../working-with-tables.md#record-scope).  For example, we can use the **Filter** function with our gallery's **Items** property:
 
 ```powerapps-dot
 Filter( Employees, StartsWith( ThisRecord.Employee.'First Name', "M" ) )
@@ -123,7 +123,7 @@ Filter( Employees, StartsWith( ThisRecord.Employee.'First Name', "M" ) )
 Filter( Employees, StartsWith( 'First Name', "M" ) )
 ```  
 
-Although optional, using **ThisRecord** can make formulas easier to understand and may be required in ambiguous situations where it a field name may also be a relationship name.  Note that **ThisRecord** is optional while **ThisItem** is required.
+Although optional, using **ThisRecord** can make formulas easier to understand and may be required in ambiguous situations where a field name may also be a relationship name.  Note that **ThisRecord** is optional while **ThisItem** is always required.
 
 Use **ThisRecord** to reference the whole record with the **Patch** function.  For example the following formula sets the status for all inactive employees to active:
 
@@ -135,7 +135,7 @@ With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inac
 
 ### As
 
-Use the **As** operator to name a record in a gallery or record scope function, resulting in easier to understand formulas.  **As** is required in nested galleries and functions to access records in parent record scopes.
+Use the **As** operator to name a record in a gallery or record scope function, overriding the default **ThisItem** and **ThisRecord**.  Naming the record can make your formulas easier to understand and may be required in nested situations to access records in other scopes.
 
 For example, we can modify the **Items** property of our gallery to use **As** to clealry identify that we are working with an Employee:
 
@@ -146,14 +146,13 @@ Employees As Employee
 > [!div class="mx-imgBorder"]  
 > ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-filter-as-employee.png)
 
-The formulas for the picture and name will also need to be adjusted:
+The formulas for the picture and name are adjusted to use this name:
 
 ```powerapps-dot
 Employee.Picture
 ```
 > [!div class="mx-imgBorder"]  
 > ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-as-picture.png)
-
 
 ```powerapps-dot
 Employee.'First Name' & " " & Employee.'Last Name'
