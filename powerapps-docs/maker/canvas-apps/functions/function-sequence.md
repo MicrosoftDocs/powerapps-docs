@@ -54,7 +54,7 @@ See the [**Char**](function-char.md#display-a-character-map) function reference 
 
 ### Checkerboard
 
-See the [**As**](operators.md#as) operator reference for two **Sequence** functions working together to create a checkerboard in a text string.
+See the [**As**](operators.md#as-operator) operator reference for two **Sequence** functions working together to create a checkerboard in a text string.
 
 
 
