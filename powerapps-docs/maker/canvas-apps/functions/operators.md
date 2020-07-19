@@ -125,7 +125,7 @@ Filter( Employees, StartsWith( 'First Name', "M" ) )
 
 Although optional, using **ThisRecord** can make formulas easier to understand and may be required in ambiguous situations where a field name may also be a relationship name.  Note that **ThisRecord** is optional while **ThisItem** is always required.
 
-Use **ThisRecord** to reference the whole record with the **Patch** function.  For example the following formula sets the status for all inactive employees to active:
+Use **ThisRecord** to reference the whole record with the **Patch**, **Collect**, and other record scope functions.  For example the following formula sets the status for all inactive employees to active:
 
 ```powerapps-dot
 With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inactive ) },
@@ -160,7 +160,7 @@ Employee.'First Name' & " " & Employee.'Last Name'
 > [!div class="mx-imgBorder"]  
 > ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-as-name.png)
 
-**As** can also be used in our record scope functions, here replacing **ThisRecord** with **Employee** for clarity:
+**As** can also be used with record scope functions to replace the default name **ThisRecord**.  We can apply this to our previous example to clarify the record we are working with:
 
 ```powerapps-dot
 With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inactive ) },
@@ -170,7 +170,7 @@ With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inac
 
 When nesting galleries and record scope functions, **ThisItem** and **ThisRecord** always refers to to the inner most record scope and the outer most record scopes will be unavailable.  Use **As** to make all record scopes available by giving each a unique name.  
 
-For example, this formula produces a checkerboard pattern as a text string by nesting two **ForAll** functions:
+For example, this formula produces a chessboard pattern as a text string by nesting two **ForAll** functions:
 
 ```powerapps-dot
 Concat( 
@@ -197,14 +197,32 @@ Let's unpack what is happening here:
 - If **Rank.Value + File.Value** is an odd number, the square gets an **X**, otherwise a dot.  This part of the formula is referencing both **ForAll** loops, made possible by using the **As** operator.
 - Concat is used twice, first to assemble the columns and then the rows, with a Char(10) thrown in to create a newline.
 
-A similar example is possible with nested **Gallery** controls instead of **ForAll** functions.  **Gallery1** is a vertical gallery, which contains the horizontal gallery **Gallery2**, which contains the label control **Label1**.  The logic is similar, but broken across three important properties of these controls:
+A similar example is possible with nested **Gallery** controls instead of **ForAll** functions. Let's start with the a vertical gallery for the **Rank**.  This gallery control will have an **Items** formula of:  
 
-**Gallery1.Items**: `Sequence(8) As Rank`
-**Gallery2.Items**: `Sequence(8) As File`
-**Label1.Fill**: `If( Mod( Rank.Value + File.Value, 2 ) = 1, Red, Black )`
+```powerapps-dot
+Sequence(8) as Rank
+```
 
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-nesting.png)
+> ![Illustration of the outer gallery that provides the Rank iteration](media/operators/as-chessboard-rank.png)
+
+Within this gallery, we'll place a horizontal gallery for the **File**, that will be replicated for each **Rank**, with an **Items** property of:
+
+```powerapps-dot
+Sequence(8) as File
+```
+
+> [!div class="mx-imgBorder"]  
+> ![Illustration of the inner gallery that provides the File iteration](media/operators/as-chessboard-file.png)
+
+And finally within this gallery, we'll add a **Label** control that will be replicated for each **File** and each **Rank**.   We'll size it to fill the entire space and use the **Fill** property to provide the color with this formula:
+
+```powerapps-dot
+If( Mod( Rank.Value + File.Value, 2 ) = 1, Green, Beige )
+```
+
+> [!div class="mx-imgBorder"]  
+> ![Label control within the two galleries that provides the alternating colors for the chessboard](media/operators/as-chessboard-fill.png)
 
 ## Self and Parent operators
 
