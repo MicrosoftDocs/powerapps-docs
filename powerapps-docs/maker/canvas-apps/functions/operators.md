@@ -168,7 +168,9 @@ With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inac
               Patch( Employees, Employee, { Status: 'Status (Employees)'.Active } ) ) )
 ```
 
-When nesting galleries and record scope functions, **ThisItem** and **ThisRecord** always refers to to the inner most record scope and the outer most record scopes will be unavailable.  Use **As** to make all record scopes available by giving each a unique name.  For example, this formula produces a checkerboard pattern as a text string by nesting two **ForAll** functions:
+When nesting galleries and record scope functions, **ThisItem** and **ThisRecord** always refers to to the inner most record scope and the outer most record scopes will be unavailable.  Use **As** to make all record scopes available by giving each a unique name.  
+
+For example, this formula produces a checkerboard pattern as a text string by nesting two **ForAll** functions:
 
 ```powerapps-dot
 Concat( 
@@ -183,8 +185,26 @@ Concat(
     Value 
 )
 ```
+
+Setting a **Label** control's **Text** property to this formula displays:
+
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-checkerboard.png)
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-forall-nesting.png)
+
+Let's unpack what is happening here:
+- We start by iterating an unnamed table of 8 numbered records from the new Sequence(8) function (more about this function below).  This loop is for each row of the board, which are referred to as **Rank** and so we give it this name.
+- For each row, we iterate another unnamed table of 8 columns, and we give this the standard name **File**.
+- If **Rank.Value + File.Value** is an odd number, the square gets an **X**, otherwise a dot.  This part of the formula is referencing both **ForAll** loops, made possible by using the **As** operator.
+- Concat is used twice, first to assemble the columns and then the rows, with a Char(10) thrown in to create a newline.
+
+A similar example is possible with nested **Gallery** controls instead of **ForAll** functions.  **Gallery1** is a vertical gallery, which contains the horizontal gallery **Gallery2**, which contains the label control **Label1**.  The logic is similar, but broken across three important properties of these controls:
+
+**Gallery1.Items**: `Sequence(8) As Rank`
+**Gallery2.Items**: `Sequence(8) As File`
+**Label1.Fill**: `If( Mod( Rank.Value + File.Value, 2 ) = 1, Red, Black )`
+
+> [!div class="mx-imgBorder"]  
+> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-nesting.png)
 
 ## Self and Parent operators
 
