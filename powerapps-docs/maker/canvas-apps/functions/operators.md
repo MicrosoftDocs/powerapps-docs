@@ -86,7 +86,7 @@ Employees
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-items.png)
+> ![Employees shown in a gallery](media/operators/as-gallery-items.png)
 
 The first item in the gallery is a template that is replicated for each employee.  In the template, the formula for the picture uses **ThisItem** to refer to the current item:
 
@@ -95,7 +95,7 @@ ThisItem.Picture
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-picture.png)
+> ![Formula for the picture of an employee](media/operators/as-gallery-picture.png)
 
 Likewise the formula for name also uses **ThisItem**:
 
@@ -104,7 +104,7 @@ ThisItem.'First Name' & " " & ThisItem.'Last Name'
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-picture.png)
+> ![Formula for the first and last name of an employee](media/operators/as-gallery-name.png)
 
 ### ThisRecord operator
 
@@ -115,7 +115,7 @@ Filter( Employees, StartsWith( ThisRecord.Employee.'First Name', "M" ) )
 ``` 
 
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-filter-thisrecord.png)
+> ![Filtering the employees based on name, using ThisRecord](media/operators/as-gallery-filter-thisrecord.png)
 
 **ThisRecord** is optional and implied by using the field directly, for example in this case we could have written:
 
@@ -144,7 +144,7 @@ Employees As Employee
 ```   
 
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-filter-as-employee.png)
+> ![Gallery of employees, using the As operator](media/operators/as-gallery-filter-as-employee.png)
 
 The formulas for the picture and name are adjusted to use this name:
 
@@ -152,13 +152,13 @@ The formulas for the picture and name are adjusted to use this name:
 Employee.Picture
 ```
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-as-picture.png)
+> ![Picture of an employee using the Employee name set with the As operator](media/operators/as-gallery-as-picture.png)
 
 ```powerapps-dot
 Employee.'First Name' & " " & Employee.'Last Name'
 ```
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-gallery-as-name.png)
+> ![First and last name of an employee using the Employee name set with the As operator](media/operators/as-gallery-as-name.png)
 
 **As** can also be used with record scope functions to replace the default name **ThisRecord**.  We can apply this to our previous example to clarify the record we are working with:
 
@@ -189,7 +189,7 @@ Concat(
 Setting a **Label** control's **Text** property to this formula displays:
 
 > [!div class="mx-imgBorder"]  
-> ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/as-forall-nesting.png)
+> ![Chessboard text shown in a label control](media/operators/as-forall-nesting.png)
 
 Let's unpack what is happening here:
 - We start by iterating an unnamed table of 8 numbered records from the new Sequence(8) function (more about this function below).  This loop is for each row of the board, which are referred to as **Rank** and so we give it this name.
