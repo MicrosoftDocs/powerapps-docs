@@ -54,9 +54,8 @@ Some of these operators are dependent on the language of the author.  See [Globa
 |                            **ThisItem**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisItem.FirstName**                                                                            |                                                                                                          Access to fields of a Gallery or form control                                                                                                           |
 |                            **ThisRecord**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisRecord.FirstName**                                                                            |                                                                                                          Access to the complete record and individual fields of the record within **ForAll**, **Sum**, **With**, and other record scope functions.  Can be overridden with the **As** operator.                                                                                                           |
 
-
 ## in and exactin operators
-You can use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
+Use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
 
 1. Create or import a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
 2. Set the **[Items](../controls/properties-core.md)** property of the gallery to this formula:
@@ -108,7 +107,7 @@ ThisItem.'First Name' & " " & ThisItem.'Last Name'
 
 ### ThisRecord operator
 
-**ThisRecord** is used when using a function that has a [record scope](../working-with-tables.md#record-scope).  For example, we can use the **Filter** function with our gallery's **Items** property:
+**ThisRecord** is used in functions that have a [record scope](../working-with-tables.md#record-scope).  For example, we can use the **Filter** function with our gallery's **Items** property to only show first names that being with *M*:
 
 ```powerapps-dot
 Filter( Employees, StartsWith( ThisRecord.Employee.'First Name', "M" ) )
@@ -117,15 +116,15 @@ Filter( Employees, StartsWith( ThisRecord.Employee.'First Name', "M" ) )
 > [!div class="mx-imgBorder"]  
 > ![Filtering the employees based on name, using ThisRecord](media/operators/as-gallery-filter-thisrecord.png)
 
-**ThisRecord** is optional and implied by using the field directly, for example in this case we could have written:
+**ThisRecord** is optional and implied by using the fields directly, for example in this case we could have written:
 
 ```powerapps-dot
 Filter( Employees, StartsWith( 'First Name', "M" ) )
 ```  
 
-Although optional, using **ThisRecord** can make formulas easier to understand and may be required in ambiguous situations where a field name may also be a relationship name.  Note that **ThisRecord** is optional while **ThisItem** is always required.
+Although optional, using **ThisRecord** can make formulas easier to understand and may be required in ambiguous situations where a field name may also be a relationship name.  **ThisRecord** is optional while **ThisItem** is always required.
 
-Use **ThisRecord** to reference the whole record with the **Patch**, **Collect**, and other record scope functions.  For example the following formula sets the status for all inactive employees to active:
+Use **ThisRecord** to reference the whole record with **Patch**, **Collect**, and other record scope functions.  For example the following formula sets the status for all inactive employees to active:
 
 ```powerapps-dot
 With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inactive ) },
@@ -135,7 +134,7 @@ With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inac
 
 ### As operator
 
-Use the **As** operator to name a record in a gallery or record scope function, overriding the default **ThisItem** and **ThisRecord**.  Naming the record can make your formulas easier to understand and may be required in nested situations to access records in other scopes.
+Use the **As** operator to name a record in a gallery or record scope function, overriding the default **ThisItem** or **ThisRecord**.  Naming the record can make your formulas easier to understand and may be required in nested situations to access records in other scopes.
 
 For example, we can modify the **Items** property of our gallery to use **As** to clealry identify that we are working with an Employee:
 
@@ -146,7 +145,7 @@ Employees As Employee
 > [!div class="mx-imgBorder"]  
 > ![Gallery of employees, using the As operator](media/operators/as-gallery-filter-as-employee.png)
 
-The formulas for the picture and name are adjusted to use this name:
+The formulas for the picture and name are adjusted to use this name for the current record:
 
 ```powerapps-dot
 Employee.Picture
@@ -168,7 +167,7 @@ With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inac
               Patch( Employees, Employee, { Status: 'Status (Employees)'.Active } ) ) )
 ```
 
-When nesting galleries and record scope functions, **ThisItem** and **ThisRecord** always refers to to the inner most record scope and the outer most record scopes will be unavailable.  Use **As** to make all record scopes available by giving each a unique name.  
+When nesting galleries and record scope functions, **ThisItem** and **ThisRecord** always refers to to the inner most scope, leaving records in outer scopes unavailable.  Use **As** to make all record scopes available by giving each a unique name.  
 
 For example, this formula produces a chessboard pattern as a text string by nesting two **ForAll** functions:
 
@@ -192,10 +191,10 @@ Setting a **Label** control's **Text** property to this formula displays:
 > ![Chessboard text shown in a label control](media/operators/as-forall-nesting.png)
 
 Let's unpack what is happening here:
-- We start by iterating an unnamed table of 8 numbered records from the new Sequence(8) function (more about this function below).  This loop is for each row of the board, which are referred to as **Rank** and so we give it this name.
-- For each row, we iterate another unnamed table of 8 columns, and we give this the standard name **File**.
+- We start by iterating an unnamed table of 8 numbered records from the [**Sequence**](function-sequence.md) function.  This loop is for each row of the board, which are commonly referred to as **Rank** and so we give it this name.
+- For each row, we iterate another unnamed table of 8 columns, and we give this the common name **File**.
 - If **Rank.Value + File.Value** is an odd number, the square gets an **X**, otherwise a dot.  This part of the formula is referencing both **ForAll** loops, made possible by using the **As** operator.
-- Concat is used twice, first to assemble the columns and then the rows, with a Char(10) thrown in to create a newline.
+- [**Concat**](function-concatenate.md) is used twice, first to assemble the columns and then the rows, with a [**Char(10)**](function-char.md) thrown in to create a newline.
 
 A similar example is possible with nested **Gallery** controls instead of **ForAll** functions. Let's start with the a vertical gallery for the **Rank**.  This gallery control will have an **Items** formula of:  
 

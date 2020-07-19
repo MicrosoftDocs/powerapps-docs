@@ -139,11 +139,13 @@ Other elements include:
 
 **[Enable](functions/function-enable-disable.md)** – Enables a signal, such as **[Location](functions/signals.md)** for reading the GPS.
 
+**[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
+
 **[EndsWith](functions/function-startswith.md)** – Checks whether a text string ends with another text string.
 
 **[Errors](functions/function-errors.md)** – Provides error information for previous changes to a data source.
 
-**[EncodeUrl](functions/function-encode-decode.md)** – Encodes special characters using URL encoding.
+**[exactin](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case dependent.  Also used to check if a record is in a table.  
 
 **[Exit](functions/function-exit.md)** – Exits the currently running app and optionally signs out the current user.
 
@@ -174,6 +176,8 @@ Other elements include:
 **[If](functions/function-if.md)** – Returns one value if a condition is true and another value if not. 
 
 **[IfError](functions/function-iferror.md)** - Detects errors and provides an alternative value or takes action. 
+
+**[in](functions/operators.md#in-and-exactin-operators)** – Checks if a text string is contained within another text string or table, case independent.  Also used to check if a record is in a table.
 
 **[IsBlank](functions/function-isblank-isempty.md)** – Checks for a [blank](functions/function-isblank-isempty.md) value.
 
