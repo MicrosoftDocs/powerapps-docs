@@ -16,22 +16,22 @@ ms.reviewer: kathyos
 
 ![Collage of communication app screenshots](media/communication-collage.png "Collage of communication app screenshots")
 
-Want to quickly share news, event announcements, and the latest up-to-date information<!--Editors recently decided that articles on docs aren't quite informal enough to use "info."-->
+Want to quickly share news, event announcements, and the latest up-to-date information
 with your employees no matter where they are? A common use of Microsoft Power Platform is
-to provide highly tailored and visually compelling communications via an app.
-<!--It seems odd to bring up Telstra so early in the article, especially when it's not even the first example you discuss in detail. Recommend deleting: For example, Telstra sends all communications to its field engineers directly
-within the Field Technician app.--> This article provides several examples of
+to provide highly tailored and visually compelling communications via an app. 
+
+This article provides several examples of
 real-world use cases that showcase organizations using Microsoft Power Platform to
 communicate information to employees.
 
 ## How to recognize the communication/announcement pattern
-<!--Note that this illustration says "PLACEHOLDER".-->
+
 ![Illustration of the communication pattern with compose, publish, and consume steps](media/communication-illustration.png "Illustration of the communication pattern with compose, publish, and consume steps")
 
 In a typical communication scenario:
 
 1. A communication team creates information to be published to the
-    organization. For example:<!--Sorry to make this so leaden, but we're supposed to have parallel structure for list items. I realize this section is using bullets mostly cosmetically though.-->
+    organization. For example:
 
     - An HR department might share news across the organization.
 
@@ -80,7 +80,7 @@ Key features include:
     reputable sources such as the WHO, CDC, or a local authority.
 
 The Crisis Communication Admin app enables the admin to compose news and
-information, in addition to<!--WSG--> configuring the features of the employee app.
+information, in addition to configuring the features of the employee app.
 
 ![A screenshot of the Crisis Communication admin app](media/crisis-communication-admin-app.png "A screenshot of the Crisis Communication admin app")
 
@@ -88,11 +88,8 @@ The employee app, which can be embedded in Teams, enables users to consume news
 and information, and reach out for assistance.
 
 ![A screenshot of the Crisis Communication employee app](media/crisis-communication-employee-app.jpg "A screenshot of the Crisis Communication employee app")
-<!--Suggest formatting these links in the "More information" pattern. -->
-More information:<br>[Video demo of the Crisis Communication
-solution](https://youtu.be/23SypLXiOTw)<br>[Set up and learn about the Crisis
-Communication sample
-template](https://docs.microsoft.com/powerapps/maker/canvas-apps/sample-crisis-communication-app)
+
+More information:<br>[Video demo of the Crisis Communication solution](https://youtu.be/23SypLXiOTw)<br>[Set up and learn about the Crisis Communication sample template](https://docs.microsoft.com/powerapps/maker/canvas-apps/sample-crisis-communication-app)
 
 ## How customers are using the communication pattern
 
@@ -113,7 +110,7 @@ The app is a single source of truth and a reference for preventive measures to
 minimize exposure.
 
 ![Some screenshots of the Schlumberger Stay SAFE app](media/schlumberger-stay-safe-app-1.png "Some screenshots of the Schlumberger Stay SAFE app")
-<!--The following alt text is suggested, just so it's not the same for two images.-->
+
 ![Examples of preventative measures in the Schlumberger Stay SAFE app](media/schlumberger-stay-safe-app-2.png "Examples of preventative measures in the Schlumberger Stay SAFE app")
 
 ### Telstra Technician Plus app
@@ -135,9 +132,6 @@ The solution is used by leaders to efficiently send communications out to the
 field.
 
 See the solution in this video:
-<!--TO EDITOR: The author would like the thumbnail to be a hyperlink to the video but we don't know how to achieve that.
-![A thumbnail of the Telstra video](media/telstra-video-thumbnail.png)(https://mymbas.microsoft.com/sessions/a00b1455-2989-4eb6-b17d-e182a27183a1?source=sessions)-->
-<!--note from editor: Easy peasy! Here you go:-->
 <a href="https://mymbas.microsoft.com/sessions/a00b1455-2989-4eb6-b17d-e182a27183a1?source=sessions"><img src="media/telstra-video-thumbnail.png" alt="Telstra solution video" title="Telstra solution video"></a>
 
 ### Hexion app to manage company-wide communications
@@ -158,7 +152,7 @@ app's key capabilities and benefits include:
 
 - Authoring of emails with dynamic previews of the formatted versions.
 
-- Letting authors focus on<!--Suggested, to be parallel.--> content while the tool manages branding and layout.
+- Letting authors focus on content while the tool manages branding and layout.
 
 - Ability to send a test email before sending the final communication.
 
