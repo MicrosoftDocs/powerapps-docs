@@ -35,7 +35,7 @@ The server-side cache is deleted, and data is reloaded from Common Data Service.
 
 ![Clear the portal cache](media/clear-server-side-cache/clear-portal-cache.png)
 
-## Configuration entity caching in portals with capacity-based licenses
+## Configuration entity caching in portals with capacity-based licenses <a name = "Configuration entity caching portals with capacity-based licenses"></a>
 
 [Capacity based](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) portals have more options on `<portal_path>/_services/about`:
 
