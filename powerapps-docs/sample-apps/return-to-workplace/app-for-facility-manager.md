@@ -159,7 +159,7 @@ The **Checklist** tab contains an editable grid displaying the checklist for the
 ## Moving facility to a new phase
 
 When a facility manager asserts that a facility should be moved to a new phase, the manager can apply for a transition. Only the facility manager can create
-a new transition record that indicates the new phase. A reviewer must **Accept** or **Reject** the transition. Either way, the transition record is closed and stored as a historical record. When the transition is accepted, the proposed phase is applied to the facility.
+a new transition record that indicates the new phase. After the transition is saved, a reviewer can be assigned. A reviewer must **Accept** or **Reject** the transition. Either way, the transition record is closed and stored as a historical record. When the transition is accepted, the proposed phase is applied to the facility.
 
 The new phase comes with its own checklist and set of metrics and goals. These will be made available on the facility by a background process. So there will be
 a small delay between accepting a transition and the actual changes on the facility record.
