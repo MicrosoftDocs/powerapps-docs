@@ -35,11 +35,11 @@ Common Data Service also supports polymorphic lookup fields, which can refer to 
 
 <!--note from editor: Change "Knowledge Articles" to "Knowledge Base articles" if that is what is being referenced.   -->
 
-In canvas-app formulas, you can use record references to work with polymorphic lookups. Because a record reference can refer to different entities, you don't know which fields will be available when you write a formula. The *.Field* notation isn't available. Those formulas must adapt to the records that the app encounters when it runs.
+In canvas-app formulas, use record references to work with polymorphic lookups. Because a record reference can refer to different entities, you don't know which fields will be available when you write a formula. The *Record.Field* notation isn't available. Those formulas must adapt to the records that the app encounters when it runs.
 
 The **IsType** function tests whether a record reference refers to a specific entity type. The function returns a Boolean TRUE or FALSE.
 
-The **AsType** function treats a record reference as a specific entity type, sometimes referred to as *casting*. You can use the result as if it were a record of the entity and, again, use the *.Field* notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
+The **AsType** function treats a record reference as a specific entity type, sometimes referred to as *casting*. You can use the result as if it were a record of the entity and again use the *Record.Field* notation to access all of the fields of that record. An error occurs if the reference isn't of the specific type.
 
 Use these functions together to first test the entity type of a record and then treat it as a record of that type so that the fields are available:
 
