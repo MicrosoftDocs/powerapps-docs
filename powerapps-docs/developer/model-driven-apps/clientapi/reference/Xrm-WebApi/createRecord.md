@@ -110,7 +110,7 @@ Xrm.WebApi.createRecord("account", data).then(
  You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account record along with the primary contact record and an associated opportunity record.
 
 > [!NOTE]
-> Creating related entity records in a single Create operation is not supported for offline mode.
+> Creating related entity records in a single create operation is not supported for offline mode.
 
 ```JavaScript
 // define data to create primary and related entity records
