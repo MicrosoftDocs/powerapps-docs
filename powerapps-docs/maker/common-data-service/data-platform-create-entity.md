@@ -5,7 +5,7 @@ author: Mattp123
 ms.service: powerapps
 ms.component: cds
 ms.topic: quickstart
-ms.date: 06/05/2020
+ms.date: 07/20/2020
 ms.author: matp
 search.audienceType: 
   - maker
@@ -38,11 +38,12 @@ Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com
     |---------|---------|---------|
     |Required fields   | **Display name &#42;**      | This is the singular name for the entity that will be shown in the app. This can be changed later.     |
     |Required fields      |  **Plural display name &#42;**        | This is the plural name for the entity that will be shown in the app. This can be changed later.      |
-    |Required fields      | **Name &#42;**    |  This field is pre-populated based on the **Display** name you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the entity is saved. <br /> <br /> In order for the entity name to work with [Dynamics 365 for Customer Service embedded knowledge search](/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), the maximum entity name length including the publisher prefix can’t exceed 24 characters.         |
     |Required fields     |  **Display Name &#42;** (Primary field)     | By default, every entity contains a Primary Field, which is used by lookup fields when establishing relationships with other entities. Typically the primary field stores the name or primary description of the data stored in the entity. You may update the name and display name of the primary field before saving the entity for the first time. Also, observe that the primary field also has its own **Name** box, which functions similarly to the entity name described above. The primary field name is autopopulated when a display name is entered, uses the same prefix as the entity, and cannot be changed after the entity is created.      |
+    |Required fields      | **Name &#42;**    |  This field is pre-populated based on the **Primary Field Display name** you enter. It includes the customization prefix for the Common Data Service solution publisher. You cannot change this after the entity is saved. <br /> <br /> In order for the entity name to work with [Dynamics 365 for Customer Service embedded knowledge search](/dynamics365/customer-engagement/customer-service/set-up-knowledge-management-embedded-knowledge-search), the maximum entity name length including the publisher prefix can’t exceed 24 characters.         |
+    | Required fields  | **Enable attachments**  | Adds the attachments control to the entity. The control is used to add or remove files and notes to records. Enabling this option lets users add files, such as document files from their computer or existing photos from a mobile device. Attached files can be up to 10 MB in size. Once this option is set, it can’t be changed after the entity is created.   |
     |**Description**     | **Description**      | Expand **More settings** > **Description**.  You can enter a description for your entity if you wish. Descriptions are helpful if other people will use this entity.     |
     |**Entity type and ownership**   |  **Choose entity type**    | Switch the entity type to **Activity Entity** to create entities that can manage tasks.      |
-    |**Entity type and ownership**   |  **Ownership**     | The type of ownership defines who can perform operations on a record. **User or team** ownership allows the entity records to contain data that relates to customers, such as accounts or contacts. Security can be defined according to the business unit for the user or team.  **Organization** owership entity records contain data involving something that belongs to or that can be viewed by the whole organization. *Organization-owned entity records can't be assigned or shared.*      |
+    |**Entity type and ownership**   |  **Ownership**     | The type of ownership defines who can perform operations on a record. **User or team** ownership allows the entity records to contain data that relates to customers, such as accounts or contacts. Security can be defined according to the business unit for the user or team.  **Organization** ownership entity records contain data involving something that belongs to or that can be viewed by the whole organization. *Organization-owned entity records can't be assigned or shared.*      |
     |**Collaboration**     |  **Allow feedback**     |  Let customers write feedback for any entity record, or rate entity records within a defined rating range. Once enabled this setting can't be disabled. More information: [Configure an entity for feedback/ratings](configure-entity-feedback.md)    |
     |**Collaboration**     | **Enable for activities**    | Associate activities to records for this entity.  Once enabled this setting can't be disabled.      |
     |**Collaboration**     | **Enable connections**    | Use the connections feature to show how records for this entity have connections to records of other entities that also have connections enabled. Once enabled this setting can't be disabled.    |
@@ -61,7 +62,7 @@ Sign in to Power Apps at [https://make.powerapps.com](https://make.powerapps.com
 On the entity details page, observe that the entity is now being provisioned in the background. Once provisioning is completed, your entity will be saved and available for use in apps. Fields, relationships, and keys can be added to your entity at any time (even while provisioning is still in progress), but views, forms, charts, dashboards, and business rules can only be added to the entity after provisioning is completed.
 
 ## Next steps
-In this topic, you learned how to create a custom entity. Next, learn how to define relationships between entities.
+In this article, you learned how to create a custom entity. Next, learn how to define relationships between entities.
 
 > [!div class="nextstepaction"]
 > [Create a relationship](data-platform-entity-lookup.md)
