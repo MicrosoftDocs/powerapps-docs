@@ -47,7 +47,7 @@ Portal metadata is stored in entities called *configuration entities*. If you ch
 
 > [!IMPORTANT]
 > - Metadata changes should be performed during non-peak hours.
-> - Frequent metadata changes may adversely affect portal performance.
+> - Frequent or too many metadata changes may adversely affect portal performance.
 
 ### List of configuration entities refreshed when you clear config
 
