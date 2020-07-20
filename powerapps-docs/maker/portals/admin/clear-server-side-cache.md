@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/16/2020
+ms.date: 07/20/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -45,6 +45,10 @@ To learn more about the differences between Power Apps portals and portal add-on
 
 Portal metadata is stored in entities called *configuration entities*. If you change configuration entities using the *Unified Interface application*, you **must** select **Clear config** to clear the configuration cache for changes to reflect in your Portal.  
 
+> [!IMPORTANT]
+> - Metadata changes should be performed during non-peak hours.
+> - Frequent metadata changes may adversely affect portal performance.
+
 ### List of configuration entities refreshed when you clear config
 
 Clearing the server-side configuration cache for a portal includes refreshing the data from the following *configuration entities*:
@@ -78,19 +82,19 @@ Power Apps portals with version 9.2.6.x or later benefit from improved caching f
 
 > [!IMPORTANT]
 > - No change to SLA for cache refresh (data transfer between Common Data Service and portal) mentioned earlier in this article.
-> - Data changes from portals will reflect immediately in Common Data Service and portals.
+> - Data changes done using portals will reflect immediately in Common Data Service and portals.
 > - No change to [clear server-side cache functionality](#steps-to-clear-portal-server-side-cache). You can continue to use this functionality to clear server cache immediately.
  
 ### FAQs
  
-**Can I change the cache refresh duration from 15 minutes to real-time refresh?** <br>
-No. SLA for cache refresh will remain to 15 minutes. Though not guaranteed, it's possible that you may see some data changes from Common Data Service to portals immediately.
+**1. Can I change the cache refresh duration from 15 minutes to a lesser duration?** <br>
+No. SLA for cache refresh remains 15 minutes. Any changes from Common Data Service will reflect on portals within 15 minutes.
 
-**I'm using plugins or workflows to update data in other entities and need these data changes to reflect immediately on my portal.** <br>
-This design approach isn't recommended. Apart from the primary record where the create or update action is triggered, data reflection from Common data Service to portals is never guaranteed to be immediate.
+**2. I'm using plugins or workflows to update data in other entities and need these data changes to reflect immediately on my portal.** <br>
+This design approach isn't recommended. Except the primary record where the create or update action is triggered, data reflection from Common data Service to portals is never guaranteed to be immediate.
 
-**Is there any difference in caching between capacity-based portals and add-on portals?** <br>
+**3. Is there any difference in caching between capacity-based portals and add-on portals?** <br>
 No.
 
-**How long does it take for changes to reflect from portals to Common Data Service?** <br>
-Immediately.
+**4. How long does it take for changes to reflect from portals to Common Data Service?** <br>
+Immediately, as long as the update changes a primary record and isn't based indirect changes to data using plugins or workflows.
