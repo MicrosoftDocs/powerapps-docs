@@ -28,7 +28,7 @@ Microsoft Power Platform to create timely, efficient, and actionable inspections
 aircraft maintenance to elementary school.
 
 ## How to recognize the inspection pattern
-<!--PLACEHOLDER as I'm sure you know. -->
+
 ![Illustration of the inspection pattern with record, aggregate, and decide/act/report steps](media/inspection-illustration.png "Illustration of the inspection pattern with record, aggregate, and decide/act/report steps")
 
 In a typical inspection scenario:
@@ -51,7 +51,7 @@ In a typical inspection scenario:
 1. Often, an inspection results in needing to take action.
 
     - For example, you might see that a vehicle has failed its inspection and
-        decide to<!--Suggested.--> take it out of service. Or the centralized report might show that daily
+        decide to take it out of service. Or the centralized report might show that daily
         maintenance standards need to be improved in a particular location.
 
 ## How customers are using the inspection pattern
@@ -71,7 +71,7 @@ Aircraft engineers use a canvas app on their corporate iPads to perform ad-hoc
 and scheduled inspections. They can view which inspections are scheduled and what
 the inspection questions are. After an inspection is completed, expected answers are
 highlighted in green to provide a visual aid. Unexpected answers are highlighted
-in red and followed up with a prompt, after which the engineer can<!--Suggested, to avoid "allows."--> record a finding
+in red and followed up with a prompt, after which the engineer can record a finding
 and assign a follow-up task to a manager.
 
 ![Screenshots of the Virgin Atlantic safety and compliance audit app](media/virgin-atlantic-aircraft-inspection.png "Screenshots of the Virgin Atlantic safety and compliance audit app")
@@ -86,7 +86,7 @@ if an inspector or executive requires further information.
 ![Engineering compliance manager view - Power Apps running embedded in SharePoint](media/virgin-atlantic-audit-summary.jpg "Engineering compliance manager view - Power Apps running embedded in SharePoint")
 
 ### Virgin Atlantic Clubhouse Spa check-in app
-<!--Edit okay? -->
+
 How is a health spa similar to aircraft maintenance? Both use the inspection
 pattern.
 
@@ -98,7 +98,7 @@ Clubhouse Spas in Heathrow, Gatwick, and JFK use an app that connects directly t
 customer data in Dynamics 365 to allow therapists and hosts to search for
 customers and check whether they've recently completed the mandatory health
 questionnaire. If they haven't, the app allows the therapist to complete the
-questionnaire&mdash;a key component of the inspection pattern&mdash;<!--Em dashes suggested if you're saying that this aspect of the app (giving freedom to the therapist to do what the customer is supposed to have done) is part of the general inspection pattern for good Power Apps.-->at check-in with the
+questionnaire at check-in with the
 customer. This replaces a tedious paper process.
 
 ![Screenshots of the Virgin Atlantic Clubhouse Spa check-in app](media/virgin-atlantic-spa-app.png "Screenshots of the Virgin Atlantic Clubhouse Spa check-in app")
@@ -129,14 +129,14 @@ collected data. For this app, the data is stored in SharePoint Online lists,
 which is their central data repository to enable business intelligence to aid in
 future improvements. Power BI dashboards and reports are used to visualize the
 aggregate data.
-<!--Used the name of the app from the heading for the alt text below. Apologies if I changed the wrong one.-->
+
 ![Screenshots of the Standard Bank ATM inspection app](media/standard-bank-atm-audit.jpg "Screenshots of the Standard Bank ATM inspection app")
 
 ### Tacoma Public schools reading assessment
 
 [Read the whole story.](https://powerapps.microsoft.com/blog/assistant-principal-builds-power-platform-solution-to-improve-reading-assessments/)
 
-Schools in Tacoma, Washington,<!--Suggested.--> use the (Developmental Reading Assessment, 2nd
+Schools in Tacoma, Washington, use the (Developmental Reading Assessment, 2nd
 Edition (DRA2), in which teachers read with students to assess their reading level and
 abilities. Teachers systematically observe, record, and evaluate how a student's
 reading performance changes over time, and use this data to set reading goals
@@ -145,7 +145,7 @@ for the student.
 Rather than fill out paper forms as before, teachers now access this app from
 their mobile device or Surface tablets provided by the school. Teachers use the
 app to enter detailed information from each student's reading assessment, such
-as oral reading goals and comprehension goals.<!--Don't need "etc" if you use "such as." -->
+as oral reading goals and comprehension goals.
 
 ![Screenshots of the Tacoma Public Schools DRA2 app](media/tacoma-schools-dra-app.png "Screenshots of the Tacoma Public Schools DRA2 app")
 
@@ -153,7 +153,7 @@ as oral reading goals and comprehension goals.<!--Don't need "etc" if you use "s
 
 The Hospital Emergency Response sample solution provides a set of capabilities
 for healthcare organizations to collect data for situational awareness of
-available beds and supplies, COVID-19 <!--Not sure why "related" is here, not sure what it means. If you want it there, should be "COVID-19&ndash;related".-->patients, staffing, and pending
+available beds and supplies, COVID-19&ndash;related patients, staffing, and pending
 discharges. This solution implements the inspection pattern by collecting an
 inventory of available hospital beds and supplies. It also uses dashboards to
 summarize key data and insights for users to make informed decisions, resulting
@@ -171,7 +171,7 @@ The main components of the Hospital Emergency Response solution are:
     manage system data required for the solution to work.
 
 - **Dashboards for healthcare decision makers**: Decision makers can use dashboards to quickly
-    view important data and metrics to help make decisions efficiently.<!--Suggested.-->
+    view important data and metrics to help make decisions efficiently.
 
 [Watch the video.](https://youtu.be/Dg-i3F9G01I)
 
