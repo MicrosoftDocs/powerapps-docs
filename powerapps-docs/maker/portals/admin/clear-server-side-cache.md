@@ -35,7 +35,7 @@ The server-side cache is deleted, and data is reloaded from Common Data Service.
 
 ![Clear the portal cache](media/clear-server-side-cache/clear-portal-cache.png)
 
-## Configuration entity caching in portals with capacity-based licenses <a name = "bkmk_1"></a>
+## Configuration entity caching in portals with capacity-based licenses<a name = "configuration-entity-caching-portals-with-capacity-based-licenses"></a>
 
 [Capacity based](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) portals have more options on `<portal_path>/_services/about`:
 
@@ -77,7 +77,7 @@ Clearing the server-side configuration cache for a portal includes refreshing th
 Power Apps portals with version 9.2.6.x or later benefit from improved caching functionality to increase consistency and reliability as follows.
 
 - [Capacity-based portals and add-on portals](../faq.md#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals) will use the same caching functionality.
-- Capacity-based portals don't have to manually [clear the configuration entity cache](#bkmk_1).
+- Capacity-based portals don't have to manually [clear the configuration entity cache](#configuration-entity-caching-portals-with-capacity-based-licenses).
 - Add-on portals with high load will have improved performance and a reliable data cache refresh.
 
 > [!IMPORTANT]
