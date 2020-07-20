@@ -18,29 +18,28 @@ search.app:
 
 # Override the default open behavior of data rows in an entity-bound grid
 
-By default,<!--Suggested, since you want to emphasize default behavior here.--> performing any of the following actions in a data row in an entity-bound grid opens the entity record:
+By default, performing any of the following actions in a data row in an entity-bound grid opens the entity record:
 
 - Double-clicking the data row, or selecting the primary attribute link in the row.
-- Selecting a data row, and then pressing the Enter key.<!--Suggested. This isn't actually what the Style Guide would want, but "selecting **Enter**" isn't going to work as well.-->
+- Selecting a data row, and then pressing the Enter key.
 - On a touch-enabled device, selecting a data row.
 
-There might be situations where you don't want the entity record to open (which is the default behavior), but want a custom action to be performed such as opening a URL or executing<!--Suggested.--> JavaScript functions. You can override the default behavior and define your own custom behavior by creating a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the ID attribute `CommandDefinition`, and defining a custom action on the **Actions** tab. The application looks for the `Mscrm.OpenRecordItem` command ID for an entity when you try to open a record from the entity-bound grid and&mdash;if one is present&mdash;will execute the custom action instead of performing the default behavior of opening the entity record.<!--Suggested.-->
+There might be situations where you don't want the entity record to open (which is the default behavior), but want a custom action to be performed such as opening a URL using JavaScript functions. You can override the default behavior and define your own custom behavior by creating a command definition for an entity with `Mscrm.OpenRecordItem` as the value of the ID attribute `CommandDefinition`, and defining a custom action on the **Actions** tab. The application looks for the `Mscrm.OpenRecordItem` command ID for an entity when you try to open a record from the entity-bound grid and&mdash;if one is present&mdash;will execute the custom action instead of performing the default behavior of opening the entity record.
 
 > [!NOTE] 
 > - This feature is supported only for Unified Interface.
 > - You can also use Ribbon Workbench, a community tool, to visually edit ribbons by using the UI. Note that tools created by the community aren't supported by Microsoft. If you have questions or issues with community tools, contact the publisher of the tool.
 
-<!--It might be nice to have a short summary of the steps here, just to put the H2s in context. Something like:
-
 To specify a custom action when an entity record is selected, you'll do the following:
 1. Create a web resource to perform the action.
 2. Create a custom button on the entity form by editing the customization.xml file
-3. Import the customization.xml file    -->
+3. Import the customization.xml file
+
 ## Step 1: Create a web resource
 
 Create a web resource to change the default behavior. In the following example<!--Edit okay?-->, if you want to open a URL instead of displaying the record, you create a JavaScript web resource to perform that action.
 
-1. Sign in to [Power Apps](https://make.powerapps.com)<!--Edit okay? This URL goes to the same place as the more elaborate one.--> and select **Solutions** from the left pane<!--Via Writing Style Guide.-->. 
+1. Sign in to [Power Apps](https://make.powerapps.com) and select **Solutions** from the left pane. 
   
 2. Select **New solution**, and then complete the required fields for the solution.
   
@@ -60,7 +59,7 @@ Create a web resource to change the default behavior. In the following example<!
 
 5. Enter the name of the web resource,  and select the **Type** as **Script(JScript)**.
 
-6. Select **Text Editor**, copy the code shown below, paste it into the text editor,<!--Edit okay? "Copy-paste" just ends up where you started!--> and enter the value of the URL you want to open<!--Edit okay? I wanted to tie this back to the example you describe at the beginning of this section.-->:
+6. Select **Text Editor**, copy the code shown below, paste it into the text editor, and enter the value of the URL you want to open:
 
    ```JavaScript
    function ChangeBehavior(){
@@ -117,9 +116,9 @@ Create a custom button on the entity form where you want to change the default b
     The customizations.xml file is the file that you'll edit.
 
     > [!NOTE]
-    > You can enable or disable the button; doing either will still override the open default behavior.<!--So if you disable the button, what decides what the default behavior will become?-->
+    > You can enable or disable the button; doing either will still override the open default behavior.
 
-13. Open the customization.xml file, copy the code below, and then paste it into the file:<!--Edit okay? "Copy-paste" doesn't make sense to me.-->
+13. Open the customization.xml file, copy the code below, and then paste it into the file:
 
      ```XML
     <RibbonDiffXml>
@@ -160,7 +159,7 @@ Create a custom button on the entity form where you want to change the default b
     > [!div class="mx-imgBorder"]  
     > ![Import solution](media/import-solution-from-command-bar.png "Import solution") 
   
-5. On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab<!--You said the file would have a .zip extension. Should you cover the possibility of its being a .cab file in the note above? -->) file that contains the solution you want to import. 
+5. On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import. 
   
 6. Select **Next**.  
   
