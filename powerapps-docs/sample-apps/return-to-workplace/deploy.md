@@ -178,7 +178,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
 
-4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**. From the list of entities, select **Facility** > **select components**, under the **Forms** tab, select **Information Form**.
+4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**. From the list of entities, select **Facility** > **select components**, under the **Forms** tab, select **Main - Information Form**.
 
    > [!div class="mx-imgBorder"]
    > ![Facility form](media/deploy-new-facility-form.png "Facility form")

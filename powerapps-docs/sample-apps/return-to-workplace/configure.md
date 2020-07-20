@@ -28,7 +28,7 @@ This article provides step-by-step instructions to IT administrators for configu
 
 Reopening workplaces safely requires planning in phases to ensure the safety of the employees. Within these phases, you need to define goals, metrics, and readiness factors.
 
-In the model-driven app, you select the **Setup** module, which allows you to configure the plan.
+In the model-driven app, you select the **Solution Setup** module, which allows you to configure the plan.
 
 > [!div class="mx-imgBorder"]
 > ![Phase planning](media/solution-admin-new-setting-phase-planning.png "Phase planning")
