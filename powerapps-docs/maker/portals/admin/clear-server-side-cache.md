@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/20/2020
+ms.date: 07/21/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -14,14 +14,14 @@ ms.reviewer: tapanm
 
 As a portal administrator, you can clear the server-side cache for the entire portal so that updated data from Common Data Service is immediately reflected on the portal. Updates from Common Data Service  are communicated to the portal in asynchronous mode, so there might be a lag between the time data is updated in Common Data Service and the time that updated data appears on the portal. To eliminate this delay&mdash;for example, when it interferes with portal configuration&mdash;you can force the portal to refresh its cache immediately.
 
-> [!NOTE]
+> [!IMPORTANT]
+> - Clearing the [portal server-side cache](#steps-to-clear-portal-server-side-cache) or the [configuration entities cache](#configuration-entity-caching-in-portals-with-capacity-based-licensesa-name--configuration-entity-caching-portals-with-capacity-based-licensesa) causes temporary performance degradation of the portal while data gets reloaded from Common Data Service.
+> - Changes to the [configuration entities](#list-of-configuration-entities-refreshed-when-you-clear-config) should be performed during non-peak hours.
+> - Frequent or too many configuration entity changes may adversely affect portal performance.
 > - The SLA for cache refresh (data transfer between Common Data Service and portal) is 15 minutes.
 > - Power Apps portals with version 9.2.6.x or later have improved caching. For more information, go to [Caching changes for portals with version 9.2.6.x or later](#caching-changes-for-portals-with-version-926x-or-later).
 
 ## Steps to clear portal server-side cache
-
-> [!IMPORTANT]
-> Clearing the portal server-side cache causes temporary performance degradation of the portal while data gets reloaded from Common Data Service.
 
 To clear the server-side cache:
 
@@ -44,10 +44,6 @@ The server-side cache is deleted, and data is reloaded from Common Data Service.
 To learn more about the differences between Power Apps portals and portal add-ons, read [Power Apps portal FAQ](../faq.md#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals).
 
 Portal metadata is stored in entities called *configuration entities*. If you change configuration entities using the *Unified Interface application*, you **must** select **Clear config** to clear the configuration cache for changes to reflect in your Portal.  
-
-> [!IMPORTANT]
-> - Changes to the [configuration entities](#list-of-configuration-entities-refreshed-when-you-clear-config) should be performed during non-peak hours.
-> - Frequent or too many configuration entity changes may adversely affect portal performance.
 
 ### List of configuration entities refreshed when you clear config
 
