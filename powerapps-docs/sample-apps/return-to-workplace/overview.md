@@ -12,6 +12,7 @@ ms.reviewer: kvivek
 # Return to the Workplace solution
 
 Reopen responsibly, monitor intelligently, and protect continuously with solutions for a safer work environment. Equip facility managers and task force leaders to make informed decisions to safely reopen locations. Empower employees to return confidently with self-service tools for working safely and productively. Help health and safety leaders ensure the care and well-being of your workforce.
+<br/>
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4B4tH]
 
