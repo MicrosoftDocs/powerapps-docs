@@ -96,3 +96,6 @@ You can say how you're feeling about returning to the workplace. On the home pag
 > [!div class="mx-imgBorder"]
 > ![Share sentiment](media/employee-share-sentiment2-2.png "Share sentiment")
 
+## Feedback about the solution
+
+To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.

@@ -237,4 +237,6 @@ consistently over time and with bigger groups. This data is typically entered by
 > [!div class="mx-imgBorder"]
 ![Employee sentiment](media/facility-manager-employee-sentiment.png "Employee sentiment")
 
+## Feedback about the solution
 
+To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.

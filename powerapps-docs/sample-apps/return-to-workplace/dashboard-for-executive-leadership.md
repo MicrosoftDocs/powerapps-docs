@@ -142,3 +142,6 @@ WHO supports open access to the published output of its activities as a fundamen
 
     This dataset is from EpiForecasts and the CMMID COVID-10 working group at <https://epiforecasts.io/covid/posts/global> and is licensed under Creative Commons Attribution CC BY 4.0.
 
+## Feedback about the solution
+
+To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.

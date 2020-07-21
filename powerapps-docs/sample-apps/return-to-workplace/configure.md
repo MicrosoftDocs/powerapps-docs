@@ -332,3 +332,6 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 
 7.	Submit the bulk record-delete job.
 
+## Feedback about the solution
+
+To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
