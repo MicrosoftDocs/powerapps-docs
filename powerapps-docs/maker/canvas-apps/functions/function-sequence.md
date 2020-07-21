@@ -20,7 +20,17 @@ Generate a table of sequential numbers.
 ## Description
 The **Sequence** function generates a single column table of sequential numbers, such as 1, 2, 3.  The name of the column is **Value**.  `Sequence( 4 )` is equivalent to `[1,2,3,4]`.
 
-Use **Sequence** with the **ForAll** function to iterate based on a count.
+Use **Sequence** with the **ForAll** function to iterate a specific number of times.  For example, the following formula adds 10 random numbers to the collection **MyRandomNumbers**:
+
+```powerapps-dot
+ForAll( Sequence( 10 ), Collect( MyRandomNumbers, Rand() ) )
+```
+
+**ForAll** can also be used to transform the value into other data types and return a new table.  For example, the following formula returns a table of the next 10 days: 
+
+```powerapps-dot
+ForAll( Sequence( 10 ), DateAdd( Today(), Value, Days ) )
+``` 
 
 The number of records to generate is rounded down to the nearest whole number and must be in the range 0 to 50,000.  Generating a table with 0 records results in an *empty* table.
 
