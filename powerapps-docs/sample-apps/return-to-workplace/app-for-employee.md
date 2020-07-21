@@ -5,7 +5,7 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/20/2020
+ms.date: 07/21/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
