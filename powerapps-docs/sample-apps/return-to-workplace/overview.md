@@ -5,13 +5,15 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/20/2020
+ms.date: 07/21/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
 # Return to the Workplace solution
 
 Reopen responsibly, monitor intelligently, and protect continuously with solutions for a safer work environment. Equip facility managers and task force leaders to make informed decisions to safely reopen locations. Empower employees to return confidently with self-service tools for working safely and productively. Help health and safety leaders ensure the care and well-being of your workforce.
+
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4B4tH]
 
 The main modules of the Return to the Workplace solution include:
 
@@ -21,9 +23,9 @@ The main modules of the Return to the Workplace solution include:
 
 - **Workplace Care Management** gives health and safety leaders the tools they need to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. The Location Readiness dashboard enables monitoring of all the data from the Workplace Care Management app.
 
-- **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace to check in to work remotely and self-screen before entering a building.<br/><br/>
+- **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace to check in to work remotely and self-screen before entering a building.
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4B4tH]
+
 
 ## Licensing requirements
 
