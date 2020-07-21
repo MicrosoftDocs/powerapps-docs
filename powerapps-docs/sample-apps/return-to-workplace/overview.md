@@ -53,6 +53,9 @@ See also:
 |Use the employee app|Used by employees who are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to having no symptoms before returning to a reopened workplace.|Employees|[Employee Return to the Workplace app](app-for-employee.md)
 |Use the care management app|Used to manage employee cases.|Case managers|[Workplace Care Management app](app-for-health-and-safety-lead.md)
 
+## Feedback about the solution
+
+To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
 
 ### Disclaimer
 
