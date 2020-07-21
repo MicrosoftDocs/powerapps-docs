@@ -325,3 +325,4 @@ For more information, see [OAuth2 site settings](configure-oauth2-settings.md#cr
 - [Set authentication identity for a portal](set-authentication-identity.md)
 - [Configure Azure AD B2C provider settings](azure-ad-b2c.md)
 - [Configure OAuth2 provider settings](configure-oauth2-settings.md)
+- [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)

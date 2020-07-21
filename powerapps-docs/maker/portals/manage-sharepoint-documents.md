@@ -226,3 +226,6 @@ The below example demonstrates configuration using the Case entity which needs t
       > [!div class=mx-imgBorder]
       > ![Case document](media/case-document.png "Case document")
 
+### See also
+
+[Microsoft Learn: Document management with SharePoint](https://docs.microsoft.com/learn/modules/portals-integration/2-sharepoint)
