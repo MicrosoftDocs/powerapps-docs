@@ -329,7 +329,7 @@ This section provides information about how GCC customers can use the **Return t
 Install Power BI Desktop from Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
 
 > [!NOTE]
-> If you installed Power BI Desktop by downloading it directly from the Download Center page in the past, remove it and then download it from Microsoft Store. The Microsoft Store version will be updated automatically as new releases become available. If you can't install from Microsoft Store, install the latest non&ndash;Microsoft Store version from the Download Center page.
+> If you installed Power BI Desktop by downloading it directly from the Download Center page in the past, remove it and then download it from Microsoft Store. The Microsoft Store version will be updated automatically as new releases become available. If you can't install from Microsoft Store, install the latest non&ndash;Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
 
 #### The process
 Follow the steps below for each .pbit file.
