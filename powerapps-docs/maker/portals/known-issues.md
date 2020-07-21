@@ -98,3 +98,6 @@ ms.reviewer: tapanm
     - The selection of component isn't correct and hovering on a component provides incorrect target indication.
     - Two or three column sections don't render properly in Power Apps portals Studio but works fine on the website.
 
+### See also
+
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
