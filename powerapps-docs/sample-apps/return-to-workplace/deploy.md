@@ -24,11 +24,6 @@ Estimated time to complete these steps: 60&ndash;90 minutes
 
 - Sign in to Power BI and create a workspace to publish the report. More information: [Create the new workspaces in Power BI](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces) and [Share the workspace with others](https://docs.microsoft.com/power-bi/collaborate-share/service-create-the-new-workspaces#give-access-to-your-workspace)
 
-- Install Power BI Desktop from Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
-
-  > [!NOTE]
-  > If you installed Power BI Desktop by downloading it directly from the Download Center page in the past, remove it and then download it from Microsoft Store. The Microsoft Store version will be updated automatically as new releases become available. If you can't install from Microsoft Store, install the latest non&ndash;Microsoft Store version from the Download Center page.
-
 ## Step 1: Sign up for Power Apps and create an environment
 
 Sign up for [Power Apps](https://docs.microsoft.com/power-platform/admin/signup-for-powerapps-admin) if you don't have it already, and purchase an appropriate license. More information: [Power Apps pricing](https://powerapps.microsoft.com/pricing/)
@@ -329,7 +324,14 @@ After extracting the .zip file, you'll see the following in the extracted folder
 
 This section provides information about how GCC customers can use the **Return to the Workplace - Location Readiness** and **Return to the Workplace - Facility Manager** dashboard .pbit files available in the deployment package to publish the dashboards.
 
+#### Prerequisites
 
+Install Power BI Desktop from Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
+
+> [!NOTE]
+> If you installed Power BI Desktop by downloading it directly from the Download Center page in the past, remove it and then download it from Microsoft Store. The Microsoft Store version will be updated automatically as new releases become available. If you can't install from Microsoft Store, install the latest non&ndash;Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
+
+#### The process
 Follow the steps below for each .pbit file.
 
 1. Run Power BI Desktop, and sign in using your account.
