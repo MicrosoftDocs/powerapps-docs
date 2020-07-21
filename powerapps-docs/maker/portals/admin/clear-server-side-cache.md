@@ -46,8 +46,8 @@ To learn more about the differences between Power Apps portals and portal add-on
 Portal metadata is stored in entities called *configuration entities*. If you change configuration entities using the *Unified Interface application*, you **must** select **Clear config** to clear the configuration cache for changes to reflect in your Portal.  
 
 > [!IMPORTANT]
-> - Metadata changes should be performed during non-peak hours.
-> - Frequent or too many metadata changes may adversely affect portal performance.
+> - Changes to the configuration entities should be performed during non-peak hours.
+> - Frequent or too many configuration entity changes may adversely affect portal performance.
 
 ### List of configuration entities refreshed when you clear config
 
