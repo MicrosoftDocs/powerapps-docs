@@ -32,7 +32,7 @@ ForAll( Sequence( 10 ), Collect( MyRandomNumbers, Rand() ) )
 ForAll( Sequence( 10 ), DateAdd( Today(), Value, Days ) )
 ``` 
 
-The number of records to generate is rounded down to the nearest whole number and must be in the range 0 to 50,000.  Generating a table with 0 records results in an *empty* table.
+The number of records to generate is rounded down to the nearest whole number and must be in the range 0 to 50,000.  Generating a table with zero records results in an *empty* table.
 
 > [!NOTE]
 > **Sequence** is limited to 50,000 records.
@@ -60,11 +60,8 @@ The number of records to generate is rounded down to the nearest whole number an
 
 ### Character map
 
-See the [**Char**](function-char.md#display-a-character-map) function reference for two **Sequence** functions working together to display a character map in a two dimensional layout.
+See the [**Char**](function-char.md#display-a-character-map) function reference for two **Sequence** functions working together to display a character map in a two-dimensional layout.
 
 ### Chessboard
 
 See the [**As**](operators.md#as-operator) operator reference for two **Sequence** functions working together to create a chessboard in a text string and in two nested galleries.
-
-
-
