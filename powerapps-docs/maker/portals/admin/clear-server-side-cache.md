@@ -92,4 +92,4 @@ This design approach isn't recommended. Except the primary record where the crea
 No.
 
 **4. How long does it take for changes to reflect from portals to Common Data Service?** <br>
-Immediately, as long as the update changes a primary record and isn't based indirect changes to data using plugins or workflows.
+Immediately, as long as the update changes a primary record and isn't based on indirect changes to data using plugins or workflows.
