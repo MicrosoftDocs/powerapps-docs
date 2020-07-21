@@ -36,4 +36,6 @@ With open registration enabled, users are not required to provide an invitation 
 
 ### See also
 
-[Set authentication identity for a portal](set-authentication-identity.md)  
+- [Set authentication identity for a portal](set-authentication-identity.md)
+- [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)
+- [Microsoft Learn: User registration in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/3-user-registration)

@@ -213,9 +213,10 @@ To disable request validation, follow these steps:
 
 ### See also
 
-[Configure a portal](configure-portal.md)  
-[Web Form properties for portals](web-form-properties.md)  
-[Web Form steps for portals](web-form-steps.md)  
-[Web Forms metadata for portals](configure-web-form-metadata.md)  
-[Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-[Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
+- [Configure a portal](configure-portal.md)  
+- [Web Form properties for portals](web-form-properties.md)  
+- [Web Form steps for portals](web-form-steps.md)  
+- [Web Forms metadata for portals](configure-web-form-metadata.md)  
+- [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
+- [Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
+- [Microsoft Learn: Interact with Common Data Service data using entity forms](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/3-entity-forms)
