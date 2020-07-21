@@ -172,9 +172,9 @@ The main components of the Hospital Emergency Response solution are:
 - **Dashboards for healthcare decision makers**: Decision makers can use dashboards to quickly
     view important data and metrics to help make decisions efficiently.
 
-[Watch the video.](https://youtu.be/Dg-i3F9G01I)
 
-Learn more about the solution: [documentation](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/overview) | [blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
+
+Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [documentation](https://docs.microsoft.com/powerapps/sample-apps/emergency-response/overview) | [blog post](https://powerapps.microsoft.com/blog/emergency-response-solution-a-microsoft-power-platform-solution-for-healthcare-emergency-response/)
 
 ### Additional stories
 
