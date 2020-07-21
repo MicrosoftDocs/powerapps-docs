@@ -77,7 +77,7 @@ We'll continue to add patterns over time.
    :::column-end:::
    :::column span="":::
       Example use cases
-      - Announcement<!--Suggested.--> viewer
+      - Announcement viewer
       - Company-wide communications
       - Corporate news management
       - Learning catalog
