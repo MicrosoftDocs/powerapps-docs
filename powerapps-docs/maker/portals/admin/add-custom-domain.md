@@ -53,4 +53,6 @@ A custom domain can help your customers find your support resources more easily 
     > [!NOTE]
     > If you want to change your existing custom domain name, you must upload a new SSL certificate and follow the steps as mentioned in this section.
     
+### See also
 
+[Microsoft Learn: Configure SSL certificates and custom domain names](https://docs.microsoft.com/learn/modules/portals-administration/2-custom-domain)

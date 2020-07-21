@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/11/2020
+ms.date: 07/20/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -328,14 +328,13 @@ By default, the menu on the website is created automatically based on the hierar
 
 After you create the web link set:
 
-1.    [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
+1. [Edit the portal](manage-existing-portals.md#edit) to open it in Power Apps portals Studio.
 
-2.    Select the header component. 
+1. Select the header component. 
 
-3.    In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
+1. In the properties on the right side of the screen, select the web link set name from the **Navigation Menu** list.
 
-    > [!div class=mx-imgBorder]
-    > ![Navigation menu](media/navigation-menu.png "Navigation menu")
+    ![Navigation menu](media/navigation-menu.png "Navigation menu")
 
 ## Use code editor
 
@@ -467,3 +466,7 @@ Embedding multiple Power BI workspaces may need additional considerations. Refer
 ## Next steps
 
 [Work with templates](work-with-templates.md)
+
+### See also
+
+[Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)

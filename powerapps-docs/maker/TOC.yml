@@ -945,8 +945,6 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Let customers test drive your apps
-      href: ./canvas-apps/dev-appsource-test-drive.md
     - name: Create a component
       items:
         - name: Components overview
@@ -1449,6 +1447,14 @@
           href: ./portals/oauth-implicit-grant-flow.md
         - name: Manage webpages
           href: ./portals/configure/web-page.md
+        - name: Portals Web API
+          items:
+          - name: Overview
+            href: ./portals/web-api-overview.md
+          - name: Perform operations
+            href: ./portals/web-api-perform-operations.md
+          - name: Compose HTTP requests and handle errors
+            href: ./portals/web-api-http-requests-handle-errors.md
     - name: User management and security in portal
       items:
         - name: Configure contacts

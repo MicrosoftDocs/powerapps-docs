@@ -168,3 +168,8 @@ When the portal creation is disabled in a tenant, non-administrators will see an
 
 > [!div class=mx-imgBorder]
 > ![Portal creation blocked error](media/portal-create-blocked-error.png "Portal creation blocked error")
+
+### See also
+
+- [Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)
+- [Microsoft Learn: Access Common Data Service in Power Apps portals](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/)

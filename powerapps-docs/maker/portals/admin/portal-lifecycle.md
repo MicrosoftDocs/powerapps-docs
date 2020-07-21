@@ -101,4 +101,5 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 
 ### See also
 
-[Power Apps portals FAQ](../faq.md)
+- [Microsoft Learn: Portal application lifecycle management](https://docs.microsoft.com/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
+- [Power Apps portals FAQ](../faq.md)
