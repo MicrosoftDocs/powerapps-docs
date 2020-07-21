@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 07/20/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -15,7 +15,8 @@ ms.reviewer: tapanm
 A webpage is a document that is identified by a unique URL in a website. It is one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
 
 > [!NOTE]
-> If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
+> - If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
+> - Changes to the **Default** navigation menu is not supported. To customize your portal's navigation menu, create a new web link set or customize a different web link set. For more information, go to [Manage web links](configure/manage-web-links.md#default-web-link-set-and-navigation-menu-in-studio).
 
 ## Create webpage
 
@@ -91,8 +92,4 @@ If you are working with a portal created in an environment containing model-driv
 
         > [!div class=mx-imgBorder]
         > ![webpage manage options](media/webpage-manage-options.png "Webpage manage options")  
-
-
-
-
 
