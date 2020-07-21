@@ -14,7 +14,7 @@ ms.reviewer: kathyos
 # Power Apps patterns
 
 With Microsoft Power Platform, you can easily create apps that are tailored to your
-organization's specific needs. Although<!--Via WSG--> your needs might be unique, we see some
+organization's specific needs. Although your needs might be unique, we see some
 common *patterns* among apps most often created by organizations to meet their
 most-pressing needs.
 
@@ -125,7 +125,7 @@ We'll continue to add patterns over time.
     :::column-end:::
     :::column:::
         Example use cases: 
-      - Automated granting of permissions<!--Suggested.-->
+      - Automated granting of permissions
       - Employee travel request
       - Overtime request
       - Timesheet submission
