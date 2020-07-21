@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/21/2020
+ms.date: 07/20/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -147,6 +147,26 @@ Internal users of an organization that use portals for accessing authenticated p
 
 > [!div class=mx-imgBorder]
 > ![Portal login error](media/portal-login-error.png "Portal login error")
+
+### I'm getting "Page Not Found" error and the page content is different from the default Page Not Found site marker or web page.
+
+You may see a *Page Not Found* error message that may appear different from the default error page content available by default on the **Page Not Found** site marker and web page.
+
+![Page Not Found](media/page-not-found.png "Page Not Found")
+
+This *Page Not Found* page is a system page and appears if: 
+
+- The default **Page Not Found** site marker is configured incorrectly.
+- The default **Page Not Found** site marker is deleted.
+- The default **Page Not Found** web page is deleted.
+
+To resolve this error, ensure that you have the default site marker named **Page Not Found** present and configured correctly. If the site marker is present and correctly configured, check if the **Page Not Found** web page is selected for the site marker or whether the **Page Not Found** web page is present or not.
+
+To create a site marker for **Page Not Found**, go to [An active Page Not Found site marker isn't available for this portal](an-active-page-not-found-site-marker-isnt-available-for-this-portal).
+
+To check site marker configuration and ensure it points to the correct web page, go to [The Page Not Found site marker isn't pointing to any webpage](#the-page-not-found-site-marker-isnt-pointing-to-any-webpage).
+
+To change the site marker to point to the correct **Page Not Found** web page, go to [The Page Not Found site marker is pointing to a deactivated web page](the-page-not-found-site-marker-is-pointing-to-a-deactivated-web-page).
 
 ## Licensing and provisioning
 
