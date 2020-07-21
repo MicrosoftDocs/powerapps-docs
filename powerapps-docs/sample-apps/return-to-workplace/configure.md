@@ -328,14 +328,7 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 6.	Add a name and a schedule for the bulk record-delete job to run.
 
    > [!div class="mx-imgBorder"]
-   > ![Brd](media/solution-admin-brd.png "Brd")
+   > ![Bulk record delete job](media/solution-admin-brd.png "Bulk record delete job")
 
 7.	Submit the bulk record-delete job.
 
-<!--
-## Issues and feedback
-
-- To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
-
-- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
--->

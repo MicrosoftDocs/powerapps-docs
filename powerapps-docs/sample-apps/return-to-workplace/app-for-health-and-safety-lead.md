@@ -210,10 +210,4 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 | Risk Assessment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
 | Comment | Enter additional information, when applicable. |
 
-<!--
-## Issues and feedback
 
-- To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
-
-- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
--->

@@ -120,7 +120,7 @@ When you hover over the transition part of the ribbon chart, tooltips give you q
 
 The dashboard consists of data from the model-driven app and the canvas app, but also consists of external data. The following data sources are used:
 
-1. WHO (cases/deaths): https://covid19.who.int/  
+1. WHO (cases/deaths): <https://covid19.who.int/>  
 © World Health Organization 2020, All rights reserved.  
 WHO supports open access to the published output of its activities as a fundamental part of its mission and a public benefit to be encouraged wherever possible. Permission from WHO isn't required for the use of the WHO Coronavirus disease (COVID-19) dashboard material or data available for download. It's important to note that:
 
@@ -130,22 +130,15 @@ WHO supports open access to the published output of its activities as a fundamen
 
    For further information, visit [WHO Copyright, Licensing, and Permissions](https://www.who.int/about/who-we-are/publishing-policies/copyright).
 
-2. USAFACTS (cases/deaths US only): https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/  
+2. USAFACTS (cases/deaths US only): <https://usafacts.org/visualizations/coronavirus-covid-19-spread-map/>  
 
-   © 2020 USAFacts. All rights reserved.  USAFacts data is available under a Creative Commons license. Learn more at https://usafacts.org/faq/ 
+   © 2020 USAFacts. All rights reserved.  USAFacts data is available under a Creative Commons license. Learn more at <https://usafacts.org/faq/> 
 
-3. Bing COVID Tracker (cases/deaths for China (mainland), Taiwan, Hong Kong SAR, and Macao SAR: https://github.com/microsoft/Bing-COVID-19-Data
+3. Bing COVID Tracker (cases/deaths for China (mainland), Taiwan, Hong Kong SAR, and Macao SAR: <https://github.com/microsoft/Bing-COVID-19-Data>
 
-    Bing COVID-19 Data.  This data is available strictly for educational and academic purposes, such as medical research, government agencies, and academic institutions, under terms and conditions available at https://github.com/microsoft/Bing-COVID-19-Data/blob/master/LICENSE.txt. Data used or cited in publications should include an attribution to 'Bing COVID-19 Tracker' with a link to www.bing.com/covid.
+    Bing COVID-19 Data.  This data is available strictly for educational and academic purposes, such as medical research, government agencies, and academic institutions, under terms and conditions available at <https://github.com/microsoft/Bing-COVID-19-Data/blob/master/LICENSE.txt>. Data used or cited in publications should include an attribution to 'Bing COVID-19 Tracker' with a link to www.bing.com/covid.
 
-4. Reproductive factor estimates: https://epiforecasts.io/covid/posts/global/ 
+4. Reproductive factor estimates: <https://epiforecasts.io/covid/posts/global/> 
 
-    This dataset is from EpiForecasts and the CMMID COVID-10 working group at https://epiforecasts.io/covid/posts/global/ and is licensed under Creative Commons Attribution CC BY 4.0.
+    This dataset is from EpiForecasts and the CMMID COVID-10 working group at <https://epiforecasts.io/covid/posts/global> and is licensed under Creative Commons Attribution CC BY 4.0.
 
-<!--
-## Issues and feedback
-
-- To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
-
-- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
--->

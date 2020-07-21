@@ -416,14 +416,6 @@ For detailed information about the US Government plans for Power Apps and Power 
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
 
 
-<!--
-## Issues and feedback
-
-- To report an issue with the Return to the Workplace solution, visit <https://aka.ms/rtw-issues>.
-
-- For feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-feedback>.
--->
-
 ## Next step
 
 [Configure the Return to the Workplace solution](configure.md)
