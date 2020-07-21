@@ -33,8 +33,6 @@ You use this app to:
 
 - [Manage employee cases](#manage-employee-cases).
 
-<!-- Removing this, as we don't have any reference for this section[Monitor the employee cases dashboard](#monitor-the-employee-cases-dashboard).-->
-
 ## App at a glance
 
 The left pane lists all the components available in the **Employee Cases** area.
@@ -210,4 +208,6 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 | Risk Assessment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
 | Comment | Enter additional information, when applicable. |
 
+## Feedback about the solution
 
+To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.

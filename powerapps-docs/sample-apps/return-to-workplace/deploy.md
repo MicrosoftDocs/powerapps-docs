@@ -417,6 +417,9 @@ For detailed information about the US Government plans for Power Apps and Power 
 - [Power Apps for US Government](https://docs.microsoft.com/power-platform/admin/powerapps-us-government)
 - [Power BI for US Government](https://docs.microsoft.com/power-bi/service-govus-overview)
 
+## Feedback about the solution
+
+To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
 
 ## Next step
 
