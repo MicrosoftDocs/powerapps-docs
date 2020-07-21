@@ -469,4 +469,5 @@ Embedding multiple Power BI workspaces may need additional considerations. Refer
 
 ### See also
 
-[Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)
+- [Create and manage web pages](create-manage-webpages.md)
+- [Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)

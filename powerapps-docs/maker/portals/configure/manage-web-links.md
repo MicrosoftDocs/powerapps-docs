@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 07/20/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -20,27 +20,48 @@ Once the portal customizations have been imported into the Common Data Service e
 
 1. Open the [Portal Management app](configure-portal.md).
 
-2. Go to **Portals** > **Web Link Sets**.
+1. Go to **Portals** > **Web Link Sets**.
 
-3. To create a new web link set, select **New**.
+    ![Web Link Sets](media/manage-web-links/web-link-set.png "Web Link Sets")
 
-4. To edit an existing web link set, select the web link set name.
+    More information: [Web link set attributes and relationships](#web-link-set-attributes-and-relationships)
 
-5. Enter appropriate values in the fields.
+1. To create a new web link set, select **New**. To edit an existing web link set instead, select the web link set name.
 
-6. If you create a new web link set, select **Save** to save the record so you can add web links.
+1. Enter appropriate values in the fields.
 
-7. Go to the **Links** tab.
+1. If you create a new web link set, select **Save** to save the record so you can add web links.
 
-8. To create a new web link, select **New Web Link**.
+1. Go to the **Links** tab.
 
-    ![Add web link](../media/add-web-link.png "add web link")
+1. To create a new web link, select **New Web Link**. To edit an existing web link instead, select the web link name.
 
-9. To edit an existing web link, select the web link name.
+    ![Add web link](media/manage-web-links/add-web-link.png "add web link")
 
-9. Enter appropriate values in the fields.
+    More information: [Web link attributes and relationships](#web-link-attributes-and-relationships)
 
-6. Save the changes.
+1. Enter appropriate values in the fields.
+
+1. Save the changes.
+
+## Default web link set and navigation menu in Studio
+
+Each portal has a **Default Web Link Set** available by default. This default web link set shows inside the Studio as the **Default Navigation Menu**.
+
+![Default Navigation Menu](media/manage-web-links/navigation-menu.png "Default Navigation Menu")
+
+You can change the default navigation menu for your portal using the Studio. When you [edit your portal](../manage-existing-portals.md#edit) in Power Apps portals Studio, the **Navigation Menu** selected for your portal from the available web link sets is loaded *asynchronously*. However, the navigation menu and the display order don't change immediately to allow you to continue with customizations. 
+
+After you're done with your changes to the current page, you can do one of the following actions to reflect the loaded navigation menu and the display order inside Studio:
+
+- Select another page to edit.
+- Select **Sync Configuration** from the top-right menu.
+- Reload the Studio session by refreshing the browser.
+
+> [!IMPORTANT]
+> Changes to the **Default** web link set is not supported. To customize your portal's navigation menu, create a new web link set or customize a different web link set.
+
+More information: [Add a custom navigation menu](../compose-page.md#add-a-custom-menu). For more information about creating and managing web pages, go to [Create and manage web pages](../create-manage-webpages.md).
 
 ## Web link set attributes and relationships
 
@@ -80,10 +101,12 @@ The table below explains many of the standard Web Link properties used by portal
 |    Display Image Only    |                                                   Indicates that the template should render only an image link for this web link, rather than both the image and link name together.                                                    |
 |                          |                                                                                                                                                                                                                                         |
 
-> [!Note]
+> [!NOTE]
 > - When a web link is to a webpage, the security and publishing state of the webpage will apply to the web link as well. This validation can be disabled with the Disable Page Validation option. 
 >   - Users with content management permissions may be granted the ability to use Preview Mode, which allows these users to see (preview) unpublished content.
 
 ### See also
 
-[Customize content by using content snippets](customize-content-snippets.md)
+- [Manage a web page and navigation menu](../create-manage-webpages.md#manage-webpage)
+- [Add a custom menu to a page](../compose-page.md#add-a-custom-menu)
+- [Customize content by using content snippets](customize-content-snippets.md)
