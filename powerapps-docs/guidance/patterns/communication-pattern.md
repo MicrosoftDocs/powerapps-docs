@@ -1,7 +1,7 @@
 ---
 title: "Power Apps pattern: Communication | Microsoft Docs"
 description: Learn how communication apps help you quickly share news, event announcements, and the latest up-to-date info with your employees no matter where they are.
-author: kathyos
+author: Vasavib
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
@@ -145,7 +145,7 @@ distributing them. In this case, Microsoft Power Platform is used to compose and
 communications that are consumed in email and Teams.
 
 The IT team in Hexion used Power Apps to build a new Broadcaster app that had richer
-capabilities than its previous legacy tool and a lower support cost. The app is
+capabilities than its previous system and a lower support cost. The app is
 now used by the communications lead to broadcast company-wide messages in email
 and Teams, and they plan to roll it out to all major project team leaders. The
 app's key capabilities and benefits include:

@@ -68,10 +68,9 @@ inspections.
 #### Performing the inspection
 
 Aircraft engineers use a canvas app on their corporate iPads to perform ad-hoc
-and scheduled inspections. They can view which inspections are scheduled and what
-the inspection questions are. After an inspection is completed, expected answers are
+and scheduled inspections. They can view what audits are scheduled for them and review audit questions. After an inspection is completed, expected answers are
 highlighted in green to provide a visual aid. Unexpected answers are highlighted
-in red and followed up with a prompt, after which the engineer can record a finding
+in red and followed up with a prompt, which the engineer can use to record a finding
 and assign a follow-up task to a manager.
 
 ![Screenshots of the Virgin Atlantic safety and compliance audit app](media/virgin-atlantic-aircraft-inspection.png "Screenshots of the Virgin Atlantic safety and compliance audit app")

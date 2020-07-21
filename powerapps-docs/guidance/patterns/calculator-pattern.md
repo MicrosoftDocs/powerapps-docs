@@ -1,7 +1,7 @@
 ---
 title: "Power Apps pattern: Calculation | Microsoft Docs"
 description: Learn how calculation apps make work easier and more accurate. For example, help someone select the right part, adjust equipment, or provide a price estimate.
-author: kathyos
+author: topness-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
