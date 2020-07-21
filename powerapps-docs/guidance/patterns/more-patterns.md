@@ -46,7 +46,7 @@ See also: [Pattern: Calculation](calculator-pattern.md) | [Pattern: Communicatio
 
 [Environment Canterbury speeds up outcome tracking with Microsoft Power Platform](https://powerapps.microsoft.com/blog/environment-canterbury-speeds-up-outcome-tracking-with-the-power-platform/)
 
-[Teaming up to house America: Fannie Mae empowers a workplace culture to deliver more with Microsoft 365](https://customers.microsoft.com/story/809849-fannie-mae-case-study-banking-microsoft-365) (request processing<!--Edit okay?--> app)
+[Teaming up to house America: Fannie Mae empowers a workplace culture to deliver more with Microsoft 365](https://customers.microsoft.com/story/809849-fannie-mae-case-study-banking-microsoft-365) (request processing app)
 
 [Capitol Records signs on with Microsoft, migrating marketing platform, transforming business processes](https://customers.microsoft.com/story/768079-capitol-records-media-entertainment-power-platform)
 
