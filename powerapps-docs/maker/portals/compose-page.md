@@ -466,3 +466,7 @@ Embedding multiple Power BI workspaces may need additional considerations. Refer
 ## Next steps
 
 [Work with templates](work-with-templates.md)
+
+### See also
+
+[Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)
