@@ -162,11 +162,11 @@ This *Page Not Found* page is a system page and appears if:
 
 To resolve this error, ensure that you have the default site marker named **Page Not Found** present and configured correctly. If the site marker is present and correctly configured, check if the **Page Not Found** web page is selected for the site marker or whether the **Page Not Found** web page is present or not.
 
-To create a site marker for **Page Not Found**, go to [An active Page Not Found site marker isn't available for this portal](an-active-page-not-found-site-marker-isnt-available-for-this-portal).
+To create a site marker for **Page Not Found**, go to [An active Page Not Found site marker isn't available for this portal](#an-active-page-not-found-site-marker-isnt-available-for-this-portal).
 
 To check site marker configuration and ensure it points to the correct web page, go to [The Page Not Found site marker isn't pointing to any webpage](#the-page-not-found-site-marker-isnt-pointing-to-any-webpage).
 
-To change the site marker to point to the correct **Page Not Found** web page, go to [The Page Not Found site marker is pointing to a deactivated web page](the-page-not-found-site-marker-is-pointing-to-a-deactivated-web-page).
+To change the site marker to point to the correct **Page Not Found** web page, go to [The Page Not Found site marker is pointing to a deactivated web page](#the-page-not-found-site-marker-is-pointing-to-a-deactivated-web-page).
 
 ## Licensing and provisioning
 
