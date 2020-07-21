@@ -76,7 +76,7 @@ In the **General** tab, some of the options are required before you can save the
 |**Display Name**|This is the singular name for the entity that will be shown in the app.<br />This can be changed later.|
 |**Plural Name**|This is the plural name for the entity that will be shown in the app.<br />This can be changed later.|
 |**Name**|This field is pre-populated based on the display name you enter. It includes the solution publisher customization prefix.|
-|**Ownership**|You can choose either user or team-owned or organization owned. More information: [Entity ownership](types-of-entities.md#entity-ownership)|
+|**Ownership**|You can choose either user or team-owned or organization owned. More information: [Standard entity ownership](types-of-entities.md#standard-entity-with-ownership-defined)|
 
 ## Edit an entity
 
