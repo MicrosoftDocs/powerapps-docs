@@ -21,19 +21,9 @@ The main modules of the Return to the Workplace solution include:
 
 - **Workplace Care Management** gives health and safety leaders the tools they need to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. The Location Readiness dashboard enables monitoring of all the data from the Workplace Care Management app.
 
-- **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace to check in to work remotely and self-screen before entering a building.
+- **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace to check in to work remotely and self-screen before entering a building.<br/><br/>
 
-
-<!--
-## Demo: Quick overview
-
-Watch a quick overview of the solution.
-
-<br/>
-
-> add video embed link
-
--->
+> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4B4tH]
 
 ## Licensing requirements
 
