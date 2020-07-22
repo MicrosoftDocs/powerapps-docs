@@ -2,14 +2,6 @@
 title: Return to the Workplace Data Dictionary
 ---
 
-## Version History
-
-| Version | Release Date | Comments                 |
-|---------|--------------|--------------------------|
-| 0.1     | 26-06-2020   | Initial Draft for Review |
-| 0.2     | 10-7-2020    | Updated content          |
-| 0.3     | 13-7-2020    | Updated content          |
-
 # Overview
 
 This article provides a detailed description of the data model used by the
@@ -28,7 +20,7 @@ The diagram displayed below illustrates the entities and their relationships.
 System generated entities and relationships (such as those used for **Created
 By** and **Modified By** attributes) are not depicted in the diagram.
 
-![](media/fea98b0a47d377ec6582513cca7171f9.emf)
+![Entity Relationship Diagram](media/data-dictionary-ERD.png)
 
 # Data Tables
 
