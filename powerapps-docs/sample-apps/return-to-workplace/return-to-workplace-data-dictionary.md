@@ -1,5 +1,13 @@
 ---
 title: Return to the Workplace Data Dictionary
+description: Provides an overview of the Return to the Workplace data dictionary.
+author: v-jogha
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 07/21/2020
+ms.author: garybird
+ms.reviewer: kvivek
 ---
 
 # Overview
@@ -14,7 +22,7 @@ and attributes contained in the Return to the Workplace solution. These
 definitions may be fully or partially adopted depending on your business
 requirements.
 
-# Entity Relationship Diagram
+## Entity Relationship Diagram
 
 The diagram displayed below illustrates the entities and their relationships.
 System generated entities and relationships (such as those used for **Created
@@ -22,7 +30,7 @@ By** and **Modified By** attributes) are not depicted in the diagram.
 
 ![Entity Relationship Diagram](media/data-dictionary-ERD.png)
 
-# Data Tables
+## Data Tables
 
 | **Table Name**           | **Information in the Table**                                                                                  |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
@@ -49,13 +57,13 @@ By** and **Modified By** attributes) are not depicted in the diagram.
 | Solution Setting         | Contains metadata used to drive platform behavior for specific facility groups.                               |
 | State                    | Contains standard state names.                                                                                |
 
-# Data Definitions
+## Data Definitions
 
 This section of the document provides a list of entities, their data attributes,
 and the areas of the solution where they are used. System generated attributes
 (such as **Created On**, **Modified On**, etc.) are not displayed.
 
-## Case Contact
+### Case Contact
 
 | Display Name                        | Data Type     | Description                                                    | Platform Use     |
 |-------------------------------------|---------------|----------------------------------------------------------------|------------------|
@@ -64,7 +72,7 @@ and the areas of the solution where they are used. System generated attributes
 | Employee                            | Lookup        | Used to capture the employee.                                  | Canvas app       |
 | Sentiment Date                      | Date and Time | Used to capture the point in time the sentiment was collected. | Canvas app       |
 
-## Case Facility
+### Case Facility
 
 | Display Name  | Data Type | Description                                                 | Platform Use     |
 |---------------|-----------|-------------------------------------------------------------|------------------|
@@ -72,21 +80,21 @@ and the areas of the solution where they are used. System generated attributes
 | Employee Case | Lookup    | Used to associate the employee case with the case facility. | Model-driven app |
 | Facility      | Lookup    | Used to associate the facility with the case facility.      | Model-driven app |
 
-## Country
+### Country
 
 | Display Name   | Data Type | Description                        | Platform Use     |
 |----------------|-----------|------------------------------------|------------------|
 | Name           | Text      | User-friendly name of the country. | Model-driven app |
 | ISO Short Code | Text      | ISO identifier of the country.     | Model-driven app |
 
-## Employee (Contact)
+### Employee (Contact)
 
 | Display Name     | Data Type | Description                                                                        | Platform Use                 |
 |------------------|-----------|------------------------------------------------------------------------------------|------------------------------|
 | Default Facility | Lookup    | Used to associate a facility to the employee.                                      | Model-driven app; Canvas app |
 | User ID          | Text      | Used to provide a unique identifier specific to the organization for the employee. | Model-driven app             |
 
-## Employee Attestation
+### Employee Attestation
 
 | Display Name     | Data Type     | Description                                                         | Platform Use                 |
 |------------------|---------------|---------------------------------------------------------------------|------------------------------|
@@ -96,7 +104,7 @@ and the areas of the solution where they are used. System generated attributes
 | Facility         | Lookup        | Used to associate the facility for which the employee is attesting. | Model-driven app; Canvas app |
 | Name             | Text          | Used to create a name for the employee attestation record.          | Model-driven app             |
 
-## Employee Case
+### Employee Case
 
 | Display Name                    | Data Type     | Description                                                                                      | Platform Use                 |
 |---------------------------------|---------------|--------------------------------------------------------------------------------------------------|------------------------------|
@@ -110,14 +118,14 @@ and the areas of the solution where they are used. System generated attributes
 | Risk Assessment                 | Option Set    | Used to denote the current risk of the employee case.                                            | Model-driven app             |
 | Screened                        | Option Set    | Used to denote whether the screening process has occurred.                                       | Model-driven app             |
 
-## Employee Facility Search
+### Employee Facility Search
 
 | Display Name | Data Type | Description                                         | Platform Use                 |
 |--------------|-----------|-----------------------------------------------------|------------------------------|
 | Employee     | Lookup    | Used to capture the employee conducting the search. | Canvas app; Model-driven app |
 | Facility     | Lookup    | Used to capture the facility searched.              | Canvas app; Model-driven app |
 
-## Employee Sentiment
+### Employee Sentiment
 
 | Display Name                       | Data Type     | Description                                                      | Platform Use                 |
 |------------------------------------|---------------|------------------------------------------------------------------|------------------------------|
@@ -126,7 +134,7 @@ and the areas of the solution where they are used. System generated attributes
 | Do you feel safe returning to work | Option Set    | Used to capture a response to the question: Sad, Neutral, Happy. | Model-driven app; Canvas app |
 | Sentiment Date                     | Date and Time | Used to capture the date and time the sentiment was recorded.    | Model-driven app             |
 
-## Facility 
+### Facility 
 
 | Display Name           | Data Type | Description                                                 | Platform Use     |
 |------------------------|-----------|-------------------------------------------------------------|------------------|
@@ -145,7 +153,7 @@ and the areas of the solution where they are used. System generated attributes
 | Name                   | Text      | Used to provide a recognizable name for the facility.       | Model-driven app |
 | Reopen Phase           | Lookup    | Used to associate the current reopen phase.                 | Model-driven app |
 
-## Facility Group
+### Facility Group
 
 | Display Name          | Data Type | Description                                                  | Platform Use     |
 |-----------------------|-----------|--------------------------------------------------------------|------------------|
@@ -153,14 +161,14 @@ and the areas of the solution where they are used. System generated attributes
 | Name                  | Text      | Used to provide a name for the facility group.               | Model-driven app |
 | Parent Facility Group | Lookup    | Used to group facilities in a hierarchical manner.           | Model-driven app |
 
-## Facility Type
+### Facility Type
 
 | Display Name | Data Type | Description                                                 | Platform Use     |
 |--------------|-----------|-------------------------------------------------------------|------------------|
 | Description  | Text      | Used to provide additional details about the facility type. | Model-driven app |
 | Type         | Text      | Used to provide a name for the facility type.               | Model-driven app |
 
-## Goal
+### Goal
 
 | Display Name | Data Type  | Description                                                                                              | Platform Use     |
 |--------------|------------|----------------------------------------------------------------------------------------------------------|------------------|
@@ -170,13 +178,13 @@ and the areas of the solution where they are used. System generated attributes
 | Target Type  | Option Set | Used to designate if the target value should be higher or lower than the value provided by target value. | Model-driven app |
 | Target Value | Decimal    | The value used to evaluate success.                                                                      | Model-driven app |
 
-## Key Metric
+### Key Metric
 
 | Display Name | Data Type | Description                                | Platform Use     |
 |--------------|-----------|--------------------------------------------|------------------|
 | Name         | Text      | Used to provide a name for the key metric. | Model-driven app |
 
-## Measurement
+### Measurement
 
 | Display Name     | Data Type     | Description                                                                       | Platform Use     |
 |------------------|---------------|-----------------------------------------------------------------------------------|------------------|
@@ -187,13 +195,13 @@ and the areas of the solution where they are used. System generated attributes
 | Name             | Text          | Used to provide a name for the measurement.                                       | Model-driven app |
 | Value            | Decimal       | Used to capture the value of the measurement.                                     | Model-driven app |
 
-## Readiness Category
+### Readiness Category
 
 | Display Name | Data Type | Description                                     | Platform Use     |
 |--------------|-----------|-------------------------------------------------|------------------|
 | Category     | Text      | Used to provide a name for the category record. | Model-driven app |
 
-## Readiness Check
+### Readiness Check
 
 | Display Name        | Data Type   | Description                                                                  | Platform Use                 |
 |---------------------|-------------|------------------------------------------------------------------------------|------------------------------|
@@ -203,7 +211,7 @@ and the areas of the solution where they are used. System generated attributes
 | Name                | Text        | Denotes the readiness check name.                                            | Model-driven app; Canvas app |
 | Readiness Checklist | Lookup      | Used to associate the readiness check to the applicable readiness checklist. | Model-driven app; Canvas app |
 
-## Readiness Checklist
+### Readiness Checklist
 
 | Display Name | Data Type | Description                                                       | Platform Use     |
 |--------------|-----------|-------------------------------------------------------------------|------------------|
@@ -212,7 +220,7 @@ and the areas of the solution where they are used. System generated attributes
 | Name         | Text      | Denotes the readiness checklist name.                             | Model-driven app |
 | Reopen Phase | Lookup    | Used to designate the applicable reopen phase for this checklist. | Model-driven app |
 
-## Readiness Factor
+### Readiness Factor
 
 | Display Name | Data Type | Description                                                   | Platform Use     |
 |--------------|-----------|---------------------------------------------------------------|------------------|
@@ -220,7 +228,7 @@ and the areas of the solution where they are used. System generated attributes
 | Description  | Text      | Used to provide additional detail about the readiness factor. | Model-driven app |
 | Factor       | Text      | The primary name of the readiness factor.                     | Model-driven app |
 
-## Reopening Phase
+### Reopening Phase
 
 | Display Name | Data Type    | Description                                          | Platform Use                 |
 |--------------|--------------|------------------------------------------------------|------------------------------|
@@ -228,7 +236,7 @@ and the areas of the solution where they are used. System generated attributes
 | Name         | Text         | The name of the reopen phase.                        | Model-driven app             |
 | Index        | Whole Number | Used to provide a logical sequence to reopen phases. | Model-driven app             |
 
-## Reopen Phase Transition
+### Reopen Phase Transition
 
 | Display Name          | Data Type  | Description                                                                   | Platform Use     |
 |-----------------------|------------|-------------------------------------------------------------------------------|------------------|
@@ -241,7 +249,7 @@ and the areas of the solution where they are used. System generated attributes
 | Review Status         | Option Set | Used to denote the current status of the reopen phase transition.             | Model-driven app |
 | Summary               | Text       | Used to provide additional context of the transition.                         | Model-driven app |
 
-## Solution Setting
+### Solution Setting
 
 | Display Name         | Data Type  | Description                                                              | Platform Use                 |
 |----------------------|------------|--------------------------------------------------------------------------|------------------------------|
@@ -254,7 +262,7 @@ and the areas of the solution where they are used. System generated attributes
 | Target Temperature   | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
 | Temperature Scale    | Option Set | Used to display the value of the temperature question in the canvas app. | Canvas app                   |
 
-## State
+### State
 
 | Display Name | Data Type | Description                        | Platform Use     |
 |--------------|-----------|------------------------------------|------------------|
@@ -262,7 +270,7 @@ and the areas of the solution where they are used. System generated attributes
 | State Code   | Text      | ISO identifier of the state.       | Model-driven app |
 | Country      | Lookup    | Association to the parent company. | Model-driven app |
 
-# Data Model Integration & Extension
+## Data Model Integration & Extension
 
 The Return to the Workplace solution is built on Microsoft Power Platform.
 Additional information on working with model-driven apps and Common Data Service
@@ -292,10 +300,3 @@ management guidance to maintain solution integrity.
 
 -   [Application lifecycle management (ALM) with Microsoft Power
     Platform](https://docs.microsoft.com/en-us/power-platform/alm/)
-
-# Disclaimer
-
-*Customer bears the sole risk and responsibility for any use of this app.*
-
-*Sample data included in this app are for illustration only and are fictitious.
-No real association is intended or inferred.*
