@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/20/2020
+ms.date: 07/22/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -16,7 +16,7 @@ A webpage is a document that is identified by a unique URL in a website. It is o
 
 > [!NOTE]
 > - If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
-> - Changes to the **Default** navigation menu is not supported. To customize your portal's navigation menu, create a new web link set or customize a different web link set. For more information, go to [Manage web links](configure/manage-web-links.md#default-web-link-set-and-navigation-menu-in-studio).
+> - When **Default** navigation menu is selected, the new pages are added to the **Default** web link set. However, direct changes to the **Default** navigation menu using [Manage web links](configure/manage-web-links.md#default-web-link-set-and-navigation-menu-in-studio) is not supported.
 
 ## Create webpage
 

@@ -59,7 +59,7 @@ After you're done with your changes to the current page, you can do one of the f
 - Reload the Studio session by refreshing the browser.
 
 > [!IMPORTANT]
-> Changes to the **Default** web link set is not supported. To customize your portal's navigation menu, create a new web link set or customize a different web link set.
+> Direct changes to the **Default** web link set using the Portal Management app is not supported. To customize your portal's navigation menu using the Portal Management app, create a new web link set or customize a different web link set. You can add new web pages using the portals Studio with **Default** navigation menu selected that creates new pages inside the **Default** web link set instead.
 
 More information: [Add a custom navigation menu](../compose-page.md#add-a-custom-menu). For more information about creating and managing web pages, go to [Create and manage web pages](../create-manage-webpages.md).
 
