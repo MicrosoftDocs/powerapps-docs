@@ -27,6 +27,8 @@
       href: use-fetchxml-left-outer-join-query-records-not-in.md
     - name: Page large result sets with FetchXML
       href: org-service/page-large-result-sets-with-fetchxml.md
+    - name: Paging behaviors and ordering
+      href: org-service/paging-behaviors-and-ordering.md
     - name: Use column comparison in queries
       href: column-comparison.md
   - name: "Use SQL to query data (Preview)"
