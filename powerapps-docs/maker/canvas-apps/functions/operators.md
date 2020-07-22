@@ -21,9 +21,9 @@ Some of these operators are dependent on the language of the author.  See [Globa
 
 |                               Symbol                                |                        Type                         |                                                                                    Syntax                                                                                    |                                                                                                                           Description                                                                                                                            |
 |---------------------------------------------------------------------|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|                                **.**                                |                  Property Selector                  |                                                               **Slider1.Value<br>Color.Red<br>Acceleration.X**                                                               |                                               Extracts a property from a [table](../working-with-tables.md), control, [signal](signals.md), or enumeration.  For backwards compatibility, **!** may also be used.                                                |
+|                                **.**                                |                  Property Selector                  |                                                               **Slider1.Value<br>Color.Red<br>Acceleration.X**                                                               |                                               Extracts a property from a [table](../working-with-tables.md), control, [signal](signals.md), or enumeration.  For backward compatibility, **!** may also be used.                                                |
 | **.**<br>[[language dependent](../global-apps.md)]  |                  Decimal separator                  |                                                             **1.23**                                                           |                                                                              Separator between whole and fractional parts of a number. The character depends on the language.                                                                              |
-|                               **( )**                               |                     Parentheses                     |                                                               **Filter(T, A &lt; 10)**<br><br>**(1 + 2) \* 3**                                                               |                                                                                           Enforces precedence order, and groups sub-expressions in a larger expression                                                                                           |
+|                               **( )**                               |                     Parentheses                     |                                                               **Filter(T, A &lt; 10)**<br><br>**(1 + 2) \* 3**                                                               |                                                                                           Enforces precedence order, and groups subexpressions in a larger expression                                                                                           |
 |                                **+**                                |                Arithmetic operators                 |                                                                                  **1 + 2**                                                                                   |                                                                                                                             Addition                                                                                                                             |
 |                                **-**                                |                       &nbsp;                        |                                                                                  **2 - 1**                                                                                   |                                                                                                                       Subtraction and sign                                                                                                                       |
 |                              *                               |                       &nbsp;                        |                                                                                  **2 \* 3**                                                                                  |                                                                                                                          Multiplication                                                                                                                          |
@@ -55,6 +55,7 @@ Some of these operators are dependent on the language of the author.  See [Globa
 |                            **ThisRecord**                             |       [ThisItem operator](#thisitem-operator)       |                                                                            **ThisRecord.FirstName**                                                                            |                                                                                                          Access to the complete record and individual fields of the record within **ForAll**, **Sum**, **With**, and other record scope functions.  Can be overridden with the **As** operator.                                                                                                           |
 
 ## in and exactin operators
+
 Use the **[in](operators.md#in-and-exactin-operators)** and **[exactin](operators.md#in-and-exactin-operators)** operators to find a string in a [data source](../working-with-data-sources.md), such as a collection or an imported table. The **[in](operators.md#in-and-exactin-operators)** operator identifies matches regardless of case, and the **[exactin](operators.md#in-and-exactin-operators)** operator identifies matches only if they're capitalized the same way. Here's an example:
 
 1. Create or import a collection named **Inventory**, and show it in a gallery, as the first procedure in [Show images and text in a gallery](../show-images-text-gallery-sort-filter.md) describes.
@@ -96,7 +97,7 @@ ThisItem.Picture
 > [!div class="mx-imgBorder"]  
 > ![Formula for the picture of an employee](media/operators/as-gallery-picture.png)
 
-Likewise the formula for name also uses **ThisItem**:
+Likewise, the formula for the name also uses **ThisItem**:
 
 ```powerapps-dot
 ThisItem.'First Name' & " " & ThisItem.'Last Name'
@@ -116,7 +117,7 @@ Filter( Employees, StartsWith( ThisRecord.Employee.'First Name', "M" ) )
 > [!div class="mx-imgBorder"]  
 > ![Filtering the employees based on name, using ThisRecord](media/operators/as-gallery-filter-thisrecord.png)
 
-**ThisRecord** is optional and implied by using the fields directly, for example in this case we could have written:
+**ThisRecord** is optional and implied by using the fields directly, for example, in this case, we could have written:
 
 ```powerapps-dot
 Filter( Employees, StartsWith( 'First Name', "M" ) )
@@ -124,7 +125,7 @@ Filter( Employees, StartsWith( 'First Name', "M" ) )
 
 Although optional, using **ThisRecord** can make formulas easier to understand and may be required in ambiguous situations where a field name may also be a relationship name.  **ThisRecord** is optional while **ThisItem** is always required.
 
-Use **ThisRecord** to reference the whole record with **Patch**, **Collect**, and other record scope functions.  For example the following formula sets the status for all inactive employees to active:
+Use **ThisRecord** to reference the whole record with **Patch**, **Collect**, and other record scope functions.  For example, the following formula sets the status for all inactive employees to active:
 
 ```powerapps-dot
 With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inactive ) },
@@ -136,7 +137,7 @@ With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inac
 
 Use the **As** operator to name a record in a gallery or record scope function, overriding the default **ThisItem** or **ThisRecord**.  Naming the record can make your formulas easier to understand and may be required in nested situations to access records in other scopes.
 
-For example, we can modify the **Items** property of our gallery to use **As** to clealry identify that we are working with an Employee:
+For example, you can modify the **Items** property of our gallery to use **As** to identify that we are working with an Employee:
 
 ```powerapps-dot
 Employees As Employee
@@ -167,7 +168,7 @@ With( { InactiveEmployees: Filter( Employees, Status = 'Status (Employees)'.Inac
               Patch( Employees, Employee, { Status: 'Status (Employees)'.Active } ) ) )
 ```
 
-When nesting galleries and record scope functions, **ThisItem** and **ThisRecord** always refers to to the inner most scope, leaving records in outer scopes unavailable.  Use **As** to make all record scopes available by giving each a unique name.  
+When nesting galleries and record scope functions, **ThisItem** and **ThisRecord** always refers to the inner most scope, leaving records in outer scopes unavailable.  Use **As** to make all record scopes available by giving each a unique name.  
 
 For example, this formula produces a chessboard pattern as a text string by nesting two **ForAll** functions:
 
@@ -191,12 +192,12 @@ Setting a **Label** control's **Text** property to this formula displays:
 > ![Chessboard text shown in a label control](media/operators/as-forall-nesting.png)
 
 Let's unpack what is happening here:
-- We start by iterating an unnamed table of 8 numbered records from the [**Sequence**](function-sequence.md) function.  This loop is for each row of the board, which are commonly referred to as **Rank** and so we give it this name.
-- For each row, we iterate another unnamed table of 8 columns, and we give this the common name **File**.
-- If **Rank.Value + File.Value** is an odd number, the square gets an **X**, otherwise a dot.  This part of the formula is referencing both **ForAll** loops, made possible by using the **As** operator.
-- [**Concat**](function-concatenate.md) is used twice, first to assemble the columns and then the rows, with a [**Char(10)**](function-char.md) thrown in to create a newline.
+- We start by iterating an unnamed table of 8 numbered records from the [**Sequence**](function-sequence.md) function.  This loop is for each row of the board, which is commonly referred to as **Rank** and so we give it this name.
+- For each row, we iterate another unnamed table of 8 columns, and we give the common name **File**.
+- If **Rank.Value + File.Value** is an odd number, the square gets an **X**, otherwise a dot.  This part of the formula is referencing both **ForAll** loops, made possible by using the **As** operator.
+- [**Concat**](function-concatenate.md) is used twice, first to assemble the columns and then the rows, with a [**Char(10)**](function-char.md) thrown in to create a new line.
 
-A similar example is possible with nested **Gallery** controls instead of **ForAll** functions. Let's start with the a vertical gallery for the **Rank**.  This gallery control will have an **Items** formula of:  
+A similar example is possible with nested **Gallery** controls instead of **ForAll** functions. Let's start with the vertical gallery for the **Rank**.  This gallery control will have an **Items** formula of:  
 
 ```powerapps-dot
 Sequence(8) as Rank
@@ -214,7 +215,7 @@ Sequence(8) as File
 > [!div class="mx-imgBorder"]  
 > ![Illustration of the inner gallery that provides the File iteration](media/operators/as-chessboard-file.png)
 
-And finally within this gallery, we'll add a **Label** control that will be replicated for each **File** and each **Rank**.   We'll size it to fill the entire space and use the **Fill** property to provide the color with this formula:
+And finally, within this gallery, we'll add a **Label** control that will be replicated for each **File** and each **Rank**.   We'll size it to fill the entire space and use the **Fill** property to provide the color with this formula:
 
 ```powerapps-dot
 If( Mod( Rank.Value + File.Value, 2 ) = 1, Green, Beige )
@@ -239,7 +240,8 @@ There are three ways to refer to a control and its properties within a formula:
 
 The names of variables, data sources, columns, and other objects can contain any [Unicode](https://en.wikipedia.org/wiki/Unicode).
 
-Use single quotes around a name that contains a space or other special character.  Use two single quotes together to represent one single quote in the name.  Names that do not contain special characters do not require single quotes.
+Use single quotes around a name that contains a space or other special character.  
+Use two single quotes together to represent one single quote in the name.  Names that do not contain special characters do not require single quotes.
 
 Here are some example column names you might encounter in a table, and how they are represented in a formula:
 
@@ -257,13 +259,13 @@ Double quotes are used to [designate text strings](data-types.md#embedded-text).
 ## Display names and logical names
 Some data sources such as SharePoint and Common Data Service have two different names to refer to the same table or column of data:
 
-* **Logical name** - A name that is guaranteed to be unique, does not change after being created, usually does not allow spaces or other special characters, and is not localized into different languages.  As a result the name can be somewhat cryptic.  These names are used by professional developers.  For example **cra3a_customfield**.  This name may also be referred to as **schema name** or just **name**.
+* **Logical name** - A name that is guaranteed to be unique, does not change after being created, usually does not allow spaces or other special characters, and is not localized into different languages.  As a result, the name can be cryptic.  These names are used by professional developers.  For example, **cra3a_customfield**.  This name may also be referred to as **schema name** or just **name**.
 
-* **Display name** - A name that is user friendly and intended to be seen by end users.  This name may not be unique, may change over time, may contain spaces and any Unicode character, and may be localized into different languages.  Corresponding to the example above, the display name may be **Custom Field** with a space inbetween the words.
+* **Display name** - A name that is user-friendly and intended to be seen by end users.  This name may not be unique, may change over time, may contain spaces and any Unicode character, and may be localized into different languages.  Corresponding to the example above, the display name may be **Custom Field** with space in between the words.
  
-Since display names are easier to understand, Canvas apps will suggest them as choices and not suggest logical names.  Although logical names are not suggested, they can still be used if typed in directly.
+Since display names are easier to understand, Canvas apps will suggest them as choices and not suggest logical names.  Although logical names are not suggested, they can still be used if typed indirectly.
 
-For example, imagine you have added a **Custom Field** to an entity in Common Data Service.  A logical name will be assigned for you by the system which you can modify only when creating the field.  The result would look similar to:
+For example, imagine you have added a **Custom Field** to an entity in Common Data Service.  A logical name will be assigned for you by the system, which you can modify only when creating the field.  The result would look similar to:
 
 > [!div class="mx-imgBorder"]  
 > ![Accounts entity with Custom Field added, showing a display name of "Custom Field" and a logical name of "cr5e3_customfield"](media/operators/customfield_portal.png)
@@ -283,10 +285,10 @@ Although it is not suggested, we could also use the logical name for this field.
 > [!div class="mx-imgBorder"]  
 > ![Studio formula bar showing the use of the logical name cr5e3_customfield for the field](media/operators/customfield_logical.png)
 
-Behind the scenes, a mapping is maintained between the display names seen in formulas and the underlying logical names.  Since logical names must be used to interact with the data source, this mapping is used to convert from the current display name to the logical name automatically and that is what is seen in the network traffic.  This mapping is also used to convert back to logical names in order to switch into new display names, for example if a display name changes or a maker in a different language edits the app.
+Behind the scenes, a mapping is maintained between the display names seen in formulas and the underlying logical names.  Since logical names must be used to interact with the data source, this mapping is used to convert from the current display name to the logical name automatically and that is what is seen in the network traffic.  This mapping is also used to convert back to logical names to switch into new display names, for example, if a display name changes or a maker in a different language edits the app.
 
 > [!NOTE] 
-> Logical names are not translated when moving an app between environments.  For Common Data Service system entity and field names this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
+> Logical names are not translated when moving an app between environments.  For Common Data Service system entity and field names, this should not be a problem as logical names are consistent across environments.  But any custom fields, such as **cra3a_customfield** in this example above, may have a different environment prefix (**cra3a** in this case).  Display names are preferred as they can be matched against display names in the new environment. 
 
 ## Name disambiguation
 Since display names are not unique, the same display name may appear more than once in the same entity.  When this happens, the logical name will be added to the end of the display name in parenthesis for one of more of the conflicting names.  Building on the example above, if there was a second field with the same display name of **Custom Field** with a logical name of **cra3a_customfieldalt** then the suggestions would show:
@@ -297,6 +299,7 @@ Since display names are not unique, the same display name may appear more than o
 Name disambiguation strings are added in other situations where name conflicts occur, such as the names of entities, option sets, and other Common Data Service items. 
 
 ## Disambiguation operator
+
 Some functions create [record scopes](../working-with-tables.md#record-scope) for accessing the fields of table while processing each record, such as **Filter**, **AddColumns**, and **Sum**.  Field names added with the record scope override the same names from elsewhere in the app.  When this happens, you can still access values from outside the record scope with the **@** disambiguation operator:
 
 * To access values from nested record scopes, use the **@** operator with the name of the table being operated upon using this pattern:<br>_Table_**[@**_FieldName_**]**
