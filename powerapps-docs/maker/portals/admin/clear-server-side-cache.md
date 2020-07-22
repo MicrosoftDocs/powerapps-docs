@@ -16,7 +16,7 @@ As a portal administrator, you can clear the server-side cache for the entire po
 
 > [!IMPORTANT]
 > - Clearing the [portal server-side cache](#steps-to-clear-portal-server-side-cache) or the [configuration entities cache](#configuration-entity-caching-portals-with-capacity-based-licenses) causes temporary performance degradation of the portal while data gets reloaded from Common Data Service.
-> - Changes to the [configuration entities](#list-of-configuration-entities-refreshed-when-you-clear-config), or [business data entities (standard or custom)](../../common-data-service/entity-overview.md) such as when [publishing changes](../../common-data-service/create-solution.md#publish-changes) should be performed during non-peak hours. Frequent or too many entity changes may adversely affect portal performance.
+> - Changes to the [configuration entities](#list-of-configuration-entities-refreshed-when-you-clear-config), or [publish changes](../../common-data-service/create-solution.md#publish-changes) actions should be performed during non-peak hours. Frequent or too many entity changes may adversely affect portal performance.
 > - The SLA for cache refresh (data transfer between Common Data Service and portal) is 15 minutes.
 > - Power Apps portals with version 9.2.6.x or later have improved caching. For more information, go to [Caching changes for portals with version 9.2.6.x or later](#caching-changes-for-portals-with-version-926x-or-later).
 
