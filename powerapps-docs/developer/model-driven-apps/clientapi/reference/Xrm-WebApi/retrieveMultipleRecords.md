@@ -253,55 +253,41 @@ The above piece of code returns a result with a schema like:
 ```
 
 #### For mobile offline scenario
-When doing an **$expand** operation while working offline, the structure of the result object is different from the online scenario and a different approach is needed to get to the linked data in this case. The following example demonstrates this:
-
-```JavaScript
-Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)", 3).then(
-    function success(result) {
-        for (var i = 0; i < result.entities.length; i++) {
-            console.log(result.entities[i]);
-        }        
-        // perform additional operations on retrieved records
-    },
-    function (error) {
-        console.log(error.message);
-        // handle error conditions
-    }
-);
-```
-
-The above piece of code returns a result with a schema like:
-```JSON
-{
-	"entities": [
-		{
-			"accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
-			"name": "Test Account",
-			"primarycontactid@odata.nextLink": {
-				"API": "{Xrm.Mobile.offline}.{retrieveRecord}",
-				"id": "119edfac-19c6-ea11-a81a-000d3af5e732",
-				"entityType": "account",
-				"options": "?$select=accountid&$expand=primarycontactid($select=contactid,fullname)&$getOnlyRelatedEntity=true"
-			},
-			"primarycontactid": {}
-		}
-	]
-}
-```
-
-Notice the empty `primarycontactid` property but an additional `primarycontactid@odata.nextLink` annotation that lets us know how to get to the linked data that we need. Use the `id`, `entityType`, and `options` parameter of that property to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
+**$expand** for the mobile offline scenario is different from the online scenario and is a multi-part process. An offline **\$expand** operation returns a `@odata.nextLink` annotation containing information on how to get to the related record's information. We use the `id`, `entityType`, and `options` parameter of that annotation to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
 
 ```JavaScript
 Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)").then(function(resultSet) {
+    /**
+     *  resultSet has a structure like:
+     *  {
+     *      "entities": [
+     *          {
+     *              "accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
+     *              "name": "Test Account",
+     *              "primarycontactid@odata.nextLink": {
+     *                  "API": "{Xrm.Mobile.offline}.{retrieveRecord}",
+     *                  "id": "119edfac-19c6-ea11-a81a-000d3af5e732",
+     *                  "entityType": "account",
+     *                  "options": "?$select=accountid&$expand=primarycontactid($select=contactid,fullname)&$getOnlyRelatedEntity=true"
+     *              },
+     *              "primarycontactid": {}
+     *          }
+     *      ]
+     *  }
+     *
+     *  Notice the empty `primarycontactid` property but an additional `primarycontactid@odata.nextLink` 
+     *  annotation that lets us know how to get to the linked data that we need.
+     **/
+
     var promises = resultSet.entities.map(function(outerItem) {
         // We do a retrieveRecord() for every item in the result set of retrieveMultipleRecords() and then
-        // combine its results into the retrieveMultipleRecords() result set itself.
+        // combine the results into the retrieveMultipleRecords() result set itself.
        return Xrm.WebApi.offline.retrieveRecord(
            outerItem["primarycontactid@odata.nextLink"].entityType, 
            outerItem["primarycontactid@odata.nextLink"].id,
            outerItem["primarycontactid@odata.nextLink"].options
         ).then(function(innerResult) {            
-            if(innerResult.value.length === 0) {
+            if (innerResult.value.length === 0) {
                 return outerItem;
             }
             outerItem.primarycontactid = innerResult.value[0];
