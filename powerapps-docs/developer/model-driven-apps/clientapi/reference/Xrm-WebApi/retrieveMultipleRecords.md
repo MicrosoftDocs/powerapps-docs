@@ -218,6 +218,7 @@ Next page link: [Organization URI]/api/data/v9.0/accounts?$select=name&$skiptoke
 >  The value of the `nextLink` property is URI encoded. If you URI encode the value before you send it, the XML cookie information in the URL will cause an error.
 
 ### Retrieve related entities by expanding navigation properties
+#### For online scenario (connected to server)
 
 Use the **$expand** system query option in the navigation properties to control the data that is returned from related entities. The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the `contactid` and `fullname`:
 
