@@ -81,7 +81,7 @@ You've created a chart of the first 128 ASCII characters. Characters that appear
 
 ![First 128 ASCII characters](media/function-char/chart-lower.png)
 
-What is going on here?  Let's see how **FullCode.Value** gets its values.  Let's begin with the outer horizontal gallery.  Its **Items** property uses the **Sequence** function to create 8 columns, starting with 0 with increments of 16:
+If you want to see how **FullCode.Value** gets its values.  Let's begin with the outer horizontal gallery.  Its **Items** property uses the **Sequence** function to create 8 columns, starting with 0 with increments of 16:
 
 ![Outer gallery illustrated](media/function-char/chart-lower-outer.png)
 
