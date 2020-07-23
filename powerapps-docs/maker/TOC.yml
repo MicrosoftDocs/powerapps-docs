@@ -1157,7 +1157,6 @@
         href: ./common-data-service/configure-actions.md    
       - name: Invoke custom actions from a workflow
         href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
-      href: ./model-driven-apps/
     - name: Apply data visualizations in an app
       items:
       - name: Create a system chart
