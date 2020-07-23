@@ -1,0 +1,123 @@
+### YamlMime:Hub
+
+title: Microsoft Power Apps documentation # < 60 chars
+summary: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.
+# brand: aspnet | azure | dotnet | dynamics | m365 | office | sql | windows | visual-studio | xamarin
+brand: dynamics
+
+metadata:
+  title: Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: hub-page # Required
+  author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kvivek #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/02/2020 #Required; mm/dd/yyyy format.
+  hide_bc: false
+
+
+highlightedContent:
+
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample tutorial | video | whats-new
+
+  items:
+    # Card
+    - title: What is Power Apps?
+      itemType: get-started
+      url: powerapps-overview.md
+
+    # Card
+    - title: What's new in Power Apps?
+      itemType: whats-new
+      url: whats-new.md
+
+    # Card
+    - title: "Power Apps videos"
+      itemType: video
+      url: https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg
+
+    # Card
+    - title: Power Apps training on Microsoft Learn
+      itemType: learn
+      url: https://docs.microsoft.com/en-us/learn/browse/?products=powerapps
+
+# conceptualContent section
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+conceptualContent:  
+  items:
+    - title: Get started with Power Apps
+      links:
+        - text: Sign up for free
+          url: https://docs.microsoft.com/powerapps/maker/signup-for-powerapps
+          itemType: get-started        
+        - text: Sign in for the first time
+          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/intro-maker-portal
+          itemType: get-started
+        - text: Get started with app creation
+          url: https://docs.microsoft.com/powerapps/maker/
+          itemType: overview
+        - text: Learning catalog
+          url: https://docs.microsoft.com/powerapps/learning-catalog/get-started
+          itemType: get-started      
+    - title: Canvas app (app maker)
+      links:
+        - text: What are canvas apps?
+          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started
+          itemType: overview
+        - text: Create your first canvas app
+          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive
+          itemType: how-to-guide
+        - text: Create a canvas app in a solution
+          url: https://docs.microsoft.com/learn/paths/create-app-models-business-processes/index
+          itemType: how-to-guide
+        - text: Connect to data
+          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/connections-list
+          itemType: overview
+        - text: Save and publish an app
+          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/save-publish-app
+          itemType: how-to-guide 
+        - text: Share an app
+          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app
+          itemType: how-to-guide      
+    - title: Model-driven apps (app maker)
+      links:
+        - text: What are model-driven apps?
+          url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview
+          itemType: overview
+        - text: Create your first model-driven app
+          url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app
+          itemType: how-to-guide
+        - text: Validate and publish an app
+          url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/validate-app
+          itemType: how-to-guide
+        - text: Share an app
+          url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app
+          itemType: tutorial
+      footerLink:
+        url: https://powerusers.microsoft.com/t5/News-Announcements/Power-Platform-Training-Materials/ba-p/342088
+        text: See more
+    - title: Portals (app maker)
+      links:
+        - text: What is Power Apps portal?
+          url: https://docs.microsoft.com/en-us/powerapps/maker/portals/overview
+          itemType: overview        
+    - title: I am a report designer
+      links:
+        - text: Lorem Ipsum
+          url: https://powerusers.microsoft.com/
+          itemType: reference
+    - title: I am an app maker
+      links:
+        - text: Lorem Ipsum
+          url: https://powerusers.microsoft.com/
+          itemType: reference
+    - title: I am a developer
+      links:
+        - text: Lorem Ipsum
+          url: https://powerusers.microsoft.com/
+          itemType: reference
+    - title: I am a solution architect
+      links:
+        - text: Lorem Ipsum
+          url: https://powerusers.microsoft.com/
+          itemType: reference  

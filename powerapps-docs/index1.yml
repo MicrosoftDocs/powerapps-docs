@@ -1,0 +1,281 @@
+### YamlMime:Hub
+
+title: Microsoft Power Apps documentation # < 60 chars
+summary: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.
+# brand: aspnet | azure | dotnet | dynamics | m365 | office | sql | windows | visual-studio | xamarin
+brand: dynamics
+
+metadata:
+  title: Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: hub-page # Required
+  author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kvivek #Required; microsoft alias of author; optional team alias.
+  ms.date: 04/02/2020 #Required; mm/dd/yyyy format.
+  hide_bc: false
+
+
+highlightedContent:
+
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample tutorial | video | whats-new
+
+  items:
+    # Card
+    - title: What is Power Apps?
+      itemType: get-started
+      url: powerapps-overview.md
+
+    # Card
+    - title: What's new in Power Apps?
+      itemType: whats-new
+      url: whats-new.md
+
+    # Card
+    - title: "Power Apps videos"
+      itemType: video
+      url: https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg
+
+    # Card
+    - title: Power Apps training on Microsoft Learn
+      itemType: learn
+      url: https://docs.microsoft.com/en-us/learn/browse/?products=powerapps
+
+
+additionalContent:
+  # Supports up to 3 sections
+  sections:   
+  - title: I am an app maker
+    items:
+        - title: Get Started
+          links:
+            - text: Sign up for a free trial
+              url: /powerapps/maker/signup-for-powerapps
+            - text: Sign in for the first time
+              url: /powerapps/maker/canvas-apps/intro-maker-portal
+            - text: Get started with creating apps
+              url: /powerapps/maker/
+            
+        - title: Canvas apps
+          links:
+            - text: What are canvas apps?
+              url: /powerapps/maker/canvas-apps/getting-started
+            - text: Create a sample app
+              url: /powerapps/maker/canvas-apps/open-and-run-a-sample-app
+            - text: Build an app from scratch
+              url: /powerapps/maker/canvas-apps/data-platform-create-app-scratch
+            - text: Connect to data
+              url: /powerapps/maker/canvas-apps/connections-list                   
+            - text: See more >
+              url: /powerapps/maker/canvas-apps/getting-started               
+        - title: Model-driven apps
+          links:
+            - text: What are model-driven apps
+              url: /powerapps/maker/model-driven-apps/model-driven-app-overview
+            - text: Create an app
+              url: /powerapps/maker/model-driven-apps/build-first-model-driven-app
+            - text: Understand app components
+              url: /powerapps/maker/model-driven-apps/model-driven-app-components
+            - text: Create and design app forms
+              url: /powerapps/maker/model-driven-apps/create-design-forms
+            - text: See more >
+              url: /powerapps/maker/canvas-apps/getting-started
+        - title: Portals
+          links:
+            - text: What is Power Apps portals
+              url: /powerapps/maker/portals/overview
+            - text: Create a portal
+              url: /powerapps/maker/portals/create-portal
+            - text: Manage existing portals
+              url: /powerapps/maker/portals/manage-existing-portals
+            - text: Portal administration
+              url: /powerapps/maker/portals/admin/admin-overview            
+        - title: Common Data Service
+          links:
+            - text: What is Common Data Service?
+              url: /powerapps/maker/common-data-service/data-platform-intro
+            - text: Entities
+              url: /powerapps/maker/common-data-service/entity-overview
+            - text: Entity relationship
+              url: /powerapps/maker/common-data-service/relationships-overview
+            - text: Fields
+              url: /powerapps/maker/common-data-service/fields-overview
+            - text: See more >
+              url: /powerapps/maker/canvas-apps/getting-started
+        - title: Sample apps and solutions
+          links:
+            - text: Crisis communication
+              url: /powerapps/maker/canvas-apps/sample-crisis-communication-app
+            - text: Hospital Emergency Response
+              url: /powerapps/sample-apps/emergency-response/overview
+            - text: Regional Government Emergency Response
+              url: /powerapps/sample-apps/regional-emergency-response/overview            
+  - title: I am an admin
+    items:
+        - title: Pricing and licensing
+          links:
+            - text: Sign up for a free trial
+              url: ~/xamarin-forms/app-fundamentals/index.yml
+            - text: "Create app: get started"
+              url: ~/xamarin-forms/user-interface/index.yml
+            - text: Sign in for the first time
+              url: ~/xamarin-forms/xaml/index.yml            
+        - title: Power Platform Admin center
+          links:
+            - text: Administer Power Platform
+              url: /power-platform/admin/admin-documentation
+            - text: Get help + Support
+              url: /power-platform/admin/get-help-support
+            - text: Opt in to early access updates
+              url: power-platform/admin/opt-in-early-access-updates
+            - text: Security concepts
+              url: /power-platform/admin/wp-security        
+        - title: Data integration and DSR
+          links:
+            - text: Integrate data into Common Data Service
+              url: /power-platform/admin/data-integrator
+            - text: Respond to Data Subject Rights (DSR) requests
+              url: /power-platform/admin/powerapps-gdpr-dsr-guide         
+        - title: Licensing and purchase
+          links:
+            - text: Licensing overview
+              url: /power-platform/admin/pricing-billing-skus
+            - text: License requirements for entities
+              url: /powerapps/maker/common-data-service/data-platform-entity-licenses
+            - text: Power Apps US Government
+              url: /power-platform/admin/powerapps-us-government
+        - title: Environment and security
+          links:
+            - text: Environments overview
+              url: /power-platform/admin/environments-overview
+            - text: Trial environments
+              url: /power-platform/admin/trial-environments
+            - text: Environments security
+              url: /power-platform/admin/database-security
+        - title: Resources
+          links:
+            - text: Whitepaper Administering Power Apps sand Power Automate Enterprise Deployments
+              url: https://aka.ms/powerappsadminwhitepaper
+            - text: Power Apps Center of Excellence (CoE) Starter Kit
+              url: https://powerapps.microsoft.com/blog/introducing-the-powerapps-center-of-excellence-starter-kit
+  - title: I am a developer
+    items:
+        - title: Get Started
+          links:
+            - text: Common Data Service Developer overview
+              url: /powerapps/developer/common-data-service/overview
+            - text: Model-driven apps Developer overview
+              url: /powerapps/developer/model-driven-apps/overview
+            - text: Canvas apps Developer Overview
+              url: /powerapps/maker/canvas-apps/dev-enterprise-intro
+            - text: Common Data Model
+              url: /powerapps/common-data-model/overview          
+        - title: Extend canvas apps
+          links:
+            - text: Custom connectors
+              url: powerapps/maker/canvas-apps/register-custom-api
+            - text: Integrate into websites and other services
+              url: /powerapps/maker/canvas-apps/embed-apps-dev
+            - text: Develop offline-capable apps
+              url: /powerapps/maker/canvas-apps/offline-apps
+            - text: Test your app on AppSource
+              url: /powerapps/maker/canvas-apps/dev-appsource-test-drive
+        - title: Extend model-driven apps
+          links:
+            - text: Customize entity forms
+              url: /powerapps/developer/model-driven-apps/customize-entity-forms
+            - text: Customize entity views
+              url: /powerapps/developer/model-driven-apps/customize-entity-views
+            - text: Customize visualizations and dashboards
+              url: /powerapps/developer/model-driven-apps/customize-visualizations-dashboards
+            - text: Apply business logic using client scripting
+              url: /powerapps/developer/model-driven-apps/client-scripting
+            - text: See more >
+              url: /powerapps/maker/canvas-apps/getting-started
+        - title: Work with Common Data Service data
+          links:
+            - text: Use Web API
+              url: /powerapps/developer/common-data-service/webapi/overview
+            - text: Use Organization service
+              url: /powerapps/developer/common-data-service/org-service/overview
+            - text: Query data using FetchXML
+              url: /powerapps/developer/common-data-service/use-fetchxml-construct-query
+            - text: Detect duplicate data
+              url: /powerapps/developer/common-data-service/detect-duplicate-data-with-code
+            - text: See more >
+              url: /powerapps/maker/canvas-apps/getting-started
+        - title: Work with Common Data Service metadata
+          links:
+            - text: Get started with metadata
+              url: /powerapps/developer/common-data-service/metadata-services
+            - text: Browse your environment metadata
+              url: /powerapps/developer/common-data-service/browse-your-metadata
+            - text: Entity metadata
+              url: /powerapps/developer/common-data-service/entity-metadata
+            - text: Attribute metadata
+              url: /powerapps/developer/common-data-service/entity-attribute-metadata
+            - text: See more >
+              url: /powerapps/maker/canvas-apps/getting-started 
+        - title: Apply business logic
+          links:
+            - text: Plug-ins (Common Data Service)
+              url: /powerapps/developer/common-data-service/plug-ins
+            - text: Workflow extensions (Common Data Service)
+              url: /powerapps/developer/common-data-service/workflow/workflow-extensions 
+            - text: Client scripting (Model-driven apps)
+              url: /powerapps/developer/model-driven-apps/client-scripting
+            - text: Best practices Plug-ins and workflow extensions
+              url: /powerapps/developer/common-data-service/best-practices/business-logic
+            - text: Best practices Client scripting
+              url: /powerapps/developer/model-driven-apps/best-practices/business-logic   
+        - title: Integrate data with Common Data Service
+          links:
+            - text: Virtual entities
+              url: /powerapps/developer/common-data-service/virtual-entities/get-started-ve
+            - text: Azure integration
+              url: /powerapps/developer/common-data-service/azure-integration
+            - text: Webhooks
+              url: /powerapps/developer/common-data-service/use-webhooks
+            - text: Import data
+              url: /powerapps/developer/common-data-service/import-data
+            - text: Data export service
+              url: /powerapps/developer/common-data-service/data-export-service
+            - text: Data synchronization
+              url: /powerapps/developer/common-data-service/data-synchronization        
+        - title: Create client applications for Common Data Service
+          links:
+            - text: Authentication
+              url: /powerapps/developer/common-data-service/authentication
+            - text: Discover user organizations
+              url: /powerapps/developer/common-data-service/discovery-service
+            - text: Build Windows client applications using XRM tooling
+              url: /powerapps/developer/common-data-service/xrm-tooling/build-windows-client-applications-xrm-tools
+        - title: Best practices
+          links:
+            - text: Common Data Service
+              url: /powerapps/developer/common-data-service/best-practices
+            - text: Model-driven apps
+              url: /powerapps/developer/model-driven-apps/best-practices
+            - text: Canvas apps
+              url: /powerapps/maker/canvas-apps/performance-tips
+        - title: Reference
+          links:
+            - text: Entity Reference
+              url: /powerapps/developer/common-data-service/reference/about-entity-reference
+            - text: Web APi Reference
+              url: https://docs.microsoft.com/dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
+            - text: Organization service Reference
+              url: https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk?view=dynamics-general-ce-9
+            - text: Client API Reference
+              url: /powerapps/developer/model-driven-apps/clientapi/reference
+        - title: Samples
+          links:
+            - text: Quickstart Web API sample
+              url: /powerapps/developer/common-data-service/webapi/quick-start-console-app-csharp
+            - text: Quickstart Organization service sample
+              url: /powerapps/developer/common-data-service/org-service/quick-start-org-service-console-app
+            - text: Quickstart Client API sample
+              url: /powerapps/developer/model-driven-apps/clientapi/walkthrough-write-your-first-client-script
+            - text: Web API samples
+              url: /powerapps/developer/common-data-service/webapi/web-api-samples-csharp
+            
