@@ -94,18 +94,17 @@ conceptualContent:
         - text: Power Apps guidance
           url: https://docs.microsoft.com/en-us/powerapps/guidance/
           itemType: reference
-    - title: I am an app maker
+    - title: Learning catalog
       links:
-        - text: Lorem Ipsum
-          url: https://powerusers.microsoft.com/
-          itemType: reference
-    - title: I am a developer
-      links:
-        - text: Lorem Ipsum
-          url: https://powerusers.microsoft.com/
-          itemType: reference
-    - title: I am a solution architect
-      links:
-        - text: Lorem Ipsum
-          url: https://powerusers.microsoft.com/
-          itemType: reference  
+        - text: Business decision maker
+          url: /powerapps/learning-catalog/bdm
+          itemType: learn
+        - text: App maker
+          url: /powerapps/learning-catalog/app-maker
+          itemType: learn
+        - text: Developer
+          url: /powerapps/learning-catalog/developer
+          itemType: learn     
+      footerLink:
+        url: /powerapps/learning-catalog/get-started
+        text: See more
