@@ -1,7 +1,7 @@
 ---
 title: "Create and edit fields for Common Data Service using Power Apps solution explorer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 05/18/2018
+ms.date: 07/23/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -258,23 +258,14 @@ If you delete a lookup field, the 1:N entity relationship for it will automatica
 
 ## IME Mode
 
-> [!WARNING]
-> IME mode is obsolete. Power Apps is based on web technologies and this feature has been [removed from industry standards](https://drafts.csswg.org/css-ui-3/#input-method-editor). Unified Interface apps do not support IME mode.
->
-> IME mode does not make sense with modern IMEs, which include touchscreen keyboards. Browsers that still support this may end support at any time. Hence, this feature may stop working even for legacy Web Client apps.
->
-> Consider using features provided by your operating system for convenient text entry. For example, in Windows 10 and Mac OS X, users with a physical keyboard can automatically switch between Japanese kana and Roman characters. Set input method to romaji. Press Shift+_letter_ key to immediately enter a Roman character. Focusing on another text field will automatically switch back to kana input.
-
-IME (input method editor) mode specifies how a physical keyboard can be used to enter characters for text fields. IMEs are tools provided by the operating system for composing text. They are commonly used to enter Chinese, Japanese, and Korean words.
-
-When IME mode is auto, Power Apps will not interfere with the IME. This is the recommended setting.
-
-Disable IME mode to bypass the IME. This can be useful for entering alphanumeric characters.
-
+IME (input method editor) mode specifies how a physical keyboard can be used to enter characters for text fields. IMEs are tools provided by the operating system for composing text. They are commonly used to enter Chinese, Japanese, and Korean words. 
 IME mode does not restrict the characters that users can enter. For example, when IME mode is disabled, users can still enter Japanese characters by pasting in a text input.
-
-IME mode is supported only in Internet Explorer and partially supported in Firefox.
-
+> [!IMPORTANT]
+> IME Mode is used for backward compatibility with the legacy web client and the IME Mode settings described here don’t apply to Unified Interface apps. Additionally, IME mode is supported only in Internet Explorer and partially supported in Firefox.
+-	**Active**: This value will activate the IME initially. You can deactivate it later if desired. This is the default IME setting. 
+-	**Auto**: When IME mode is auto, Power Apps will not interfere with the IME. 
+-	**Disabled**: Disable IME mode to bypass the IME. This can be useful for entering alphanumeric characters in certain languages. 
+-	**Inactive**: Power Apps will deactivate the IME initially. You can activate it later if desired.
 
 ### See also  
 [Create and edit fields for Common Data Service](create-edit-fields.md)<br />
