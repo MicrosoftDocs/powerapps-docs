@@ -1,7 +1,7 @@
 ---
 title: "Create and edit fields for Common Data Service using Power Apps solution explorer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 05/18/2018
+ms.date: 07/22/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -82,9 +82,11 @@ You can set additional options depending on your choice of **Data type**. More i
 There are three field requirement options:
 - **Optional**: The record can be saved even if there is no data in this field.
 - **Business Recommended**: The record can be saved even if there is no data in this field. However, a blue symbol appears next to the field to indicate it is important.
-- **Business Required**: The record can’t be saved if there is no data in this field.
+- **Business Required**: The record can’t be saved if there is no data in this field. 
+
 > [!NOTE]
-> Be careful when you make fields business required. People will resist using the application if they can’t save records because they lack the correct information to enter into a required field. People may enter incorrect data simply to save the record and get on with their work. You can use business rules or form scripts to change the requirement level as the data in the record changes as people work on it. More information  [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
+> - When a record is saved programmatically using web services, only the SystemRequired fields are enforced. Failure to set a value for SystemRequired fields will return an error.  You can’t set the SystemRequired level of requirement. <br />Setting a field to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the field has no value. The app user is shown an error and prompted to add data to the required field before they can save the record. There are options within the app to override this behavior and allow operation to proceed if needed.
+> - Be careful when you make fields business required. People will resist using the application if they can’t save records because they lack the correct information to enter into a required field. People may enter incorrect data simply to save the record and get on with their work. You can use business rules or form scripts to change the requirement level as the data in the record changes as people work on it. More information  [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
 ## Field Data types
 
