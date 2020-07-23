@@ -28,6 +28,7 @@ Ribbon actions are defined in the `<Actions>` element of a `<CommandDefinition>`
 -   Use a `<JavaScriptFunction>` element together with a `<CrmParameter>` element.  
   
 ## Use the PassParams attribute to set dynamic values  
+
  Passing parameters to the target URL by using the **PassParams** attribute provides information to the target application about the context of the record or the user. All the parameters are passed if the ribbon control is configured by using the **PassParams** attribute. The following table lists the parameters that are passed.  
   
 |Parameter|Name|Description|  

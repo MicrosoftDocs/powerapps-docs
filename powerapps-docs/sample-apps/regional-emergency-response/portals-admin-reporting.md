@@ -1,16 +1,14 @@
 ---
 title: Administer the Regional Government Emergency Response and Monitoring portal | Microsoft Docs
 description: Learn how to configure the Regional Hospital Emergency Response portal.
-author: tapanm-msft
+author: pankajarora-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/05/2020
-ms.author: tapanm
+ms.author: pankar
 ms.reviewer: tapanm
-searchScope:
-  - PowerApps
 ---
 # Administer the Regional Government Emergency Response and Monitoring portal
 

@@ -1,14 +1,13 @@
 ---
 title: "Use simplified authentication and identity provider configuration (Preview) | MicrosoftDocs"
 description: "Learn how to use quick, easy, and simplified portal configuration for authentication."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/05/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Simplified authentication and identity provider configuration (Preview)
@@ -326,3 +325,4 @@ For more information, see [OAuth2 site settings](configure-oauth2-settings.md#cr
 - [Set authentication identity for a portal](set-authentication-identity.md)
 - [Configure Azure AD B2C provider settings](azure-ad-b2c.md)
 - [Configure OAuth2 provider settings](configure-oauth2-settings.md)
+- [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)

@@ -54,7 +54,7 @@ Initially, just three field properties are available:
  |**Display Name**|The text to be displayed for the field in the user interface.|
  |**Name**|The unique name across your environment. A name will be generated for you based on the display name that you've entered, but you can edit it before saving. Once a field is created the name cannot be changed as it may be referenced in your applications or code. The name will have the customization prefix for your **Common Data Service Default Publisher** prepended to it.|
  |**Data type**|Controls how values are stored as well as how they are formatted in some applications. Once a field is saved, you cannot change the data type with the exception of converting text fields to autonumber fields.|
- |**Required**| A record can't be saved without data in this field. |
+ |**Required**| A record can't be saved without data in this field. More information: [Saving records programmatically for required fields](#saving-records-programmatically-for-required-fields) |
  |**Searchable**| This field appears in Advanced Find and is available when customizing views. |
  |**Calculated or Rollup**| Use to automate manual calculations. Use values, dates, or text.|
  |**Advanced Options**| Add a description, and specify a maximum length and IME mode for the field.
@@ -148,17 +148,21 @@ Every field has the following properties you can change:
 
 |Property|Description|
 |--|--|
-|**Required**|When this is selected a record can't be saved without data in this field.|
+|**Required**|When this is selected a record can't be saved without data in this field. More information: [Saving records programmatically for required fields](#saving-records-programmatically-for-required-fields) |
 |**Searchable**|De-select this for fields for the entity that you don’t use.  When a field is searchable it appears in **Advanced Find** and is available when customizing views. De-selecting this will reduce the number of options shown to people using advanced find.|
 |**Description**|Found within **Advanced Options**. Enter instructions to the user about what the field is for. These descriptions appear as tooltips for the user in model-driven apps when they hover their mouse over the label of the field.|
 
 > [!NOTE]
-> **Making fields required**: Be careful when you make fields required. People will resist using the application if they can’t save records because they lack the correct information to enter into a required field. People may enter incorrect data simply to save the record and get on with their work.
+>**Making fields required**: Be careful when you make fields required. People will resist using the application if they can’t save records because they lack the correct information to enter into a required field. People may enter incorrect data simply to save the record and get on with their work.
 >
 >**Set requirement dynamically**: In model-driven apps you can use business rules or form scripts to change the requirement level as the data in the record changes as people work on it. More information: [Create business rules and recommendations to apply logic in a form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 >
 >**Advanced Find availability**: Advanced Find is currently only available for model-driven apps using the Web Client. Advanced find is not currently available in Unified Interface clients.
 
+### Saving records programmatically for required fields 
+When a record is saved programmatically using web services, only the SystemRequired fields are enforced. Failure to set a value for SystemRequired fields will return an error.  You can’t set the SystemRequired level of requirement. 
+
+Setting a field to Business Required means that the default behavior of a model-driven or canvas app will enforce this requirement in the app. The request will not be sent to the service if the field has no value. The app user is shown an error and prompted to add data to the required field before they can save the record. There are options within the app to override this behavior and allow operation to proceed if needed.
 ## Calculated or Rollup
 
 You can set a custom field to be a **Calculated** or a **Rollup** field. Fields that are not calculated or rollup fields are sometimes referred to as *simple* fields.

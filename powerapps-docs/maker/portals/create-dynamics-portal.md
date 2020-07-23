@@ -1,14 +1,13 @@
 ---
 title: Create a portal in an environment containing model-driven apps in Dynamics 365 | Microsoft Docs
 description: Instructions to create a a portal in an environment containing model-driven apps in Dynamics 365.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Create a portal in an environment containing model-driven apps in Dynamics 365
@@ -34,3 +33,6 @@ If you select an environment that contains model-driven apps in Dynamics 365 (su
 > - To disable portal creation in a tenant, see [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant).
 > - When you create a portal, a few solutions are installed and sample data is imported.
 
+### See also
+
+[Microsoft Learn: Administer Power Apps portals](https://docs.microsoft.com/learn/paths/administer-portals/)

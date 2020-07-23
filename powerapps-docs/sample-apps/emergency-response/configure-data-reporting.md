@@ -9,8 +9,6 @@ ms.custom:
 ms.date: 06/10/2020
 ms.author: pankar
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
 # Configure data and view dashboards
 

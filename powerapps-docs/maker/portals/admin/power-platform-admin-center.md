@@ -1,12 +1,11 @@
 ---
 title: "Power Apps portals settings on the Power Platform admin center | MicrosoftDocs"
 description: "Information about Power Apps portals settings on Power Platform admin center."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/29/2020
+ms.date: 06/12/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -92,6 +91,9 @@ A portal can have the following status: *Configured*, *Suspended*, or *Not-confi
 ## Update the Power Apps portal solution
 
 You can use the Power Platform admin center to update your Power Apps portal solution.
+
+> [!IMPORTANT]
+> When changing Dynamics 365 Instance for your portal, ensure the new instance is from the same [region](https://docs.microsoft.com/power-platform/admin/regions-overview) as the current instance. Changing the Dynamics 365 Instance for Power Apps portals across regions isn't supported.
 
 1. Select **Manage** to manage your portal by using one of the methods explained earlier in this article.
 

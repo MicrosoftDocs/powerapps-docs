@@ -9,8 +9,6 @@ ms.custom:
 ms.date: 04/23/2020
 ms.author: pankar
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
 # Hospital Emergency Response - Power Platform sample solution
 
