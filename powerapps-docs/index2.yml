@@ -50,61 +50,49 @@ conceptualContent:
         - text: Sign up for free
           url: https://docs.microsoft.com/powerapps/maker/signup-for-powerapps
           itemType: get-started        
-        - text: Sign in for the first time
-          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/intro-maker-portal
-          itemType: get-started
         - text: Get started with app creation
           url: https://docs.microsoft.com/powerapps/maker/
           itemType: overview
-        - text: Learning catalog
-          url: https://docs.microsoft.com/powerapps/learning-catalog/get-started
-          itemType: get-started      
-    - title: Canvas app (app maker)
+        - text: Plan a Power Apps project
+          url: https://docs.microsoft.com/powerapps/guidance/planning/introduction
+          itemType: overview      
+    - title: Create apps
       links:
-        - text: What are canvas apps?
+        - text: Create canvas apps
           url: https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started
           itemType: overview
-        - text: Create your first canvas app
-          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive
-          itemType: how-to-guide
-        - text: Create a canvas app in a solution
-          url: https://docs.microsoft.com/learn/paths/create-app-models-business-processes/index
-          itemType: how-to-guide
-        - text: Connect to data
-          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/connections-list
-          itemType: overview
-        - text: Save and publish an app
-          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/save-publish-app
-          itemType: how-to-guide 
-        - text: Share an app
-          url: https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app
-          itemType: how-to-guide      
-    - title: Model-driven apps (app maker)
-      links:
-        - text: What are model-driven apps?
+        - text: Create model-driven apps
           url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview
           itemType: overview
-        - text: Create your first model-driven app
-          url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app
-          itemType: how-to-guide
-        - text: Validate and publish an app
-          url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/validate-app
-          itemType: how-to-guide
-        - text: Share an app
-          url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/share-model-driven-app
-          itemType: tutorial
-      footerLink:
-        url: https://powerusers.microsoft.com/t5/News-Announcements/Power-Platform-Training-Materials/ba-p/342088
-        text: See more
-    - title: Portals (app maker)
-      links:
-        - text: What is Power Apps portal?
+        - text: Create portals
           url: https://docs.microsoft.com/en-us/powerapps/maker/portals/overview
-          itemType: overview        
-    - title: I am a report designer
+          itemType: overview
+        - text: Work with data in Common Data Service
+          url: https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro
+          itemType: overview           
+    - title: Administer Power Apps
       links:
-        - text: Lorem Ipsum
-          url: https://powerusers.microsoft.com/
+        - text: Use Power Platform admin center
+          url: https://docs.microsoft.com/en-us/power-platform/admin/admin-documentation
+          itemType: overview
+        - text: Power Apps licensing
+          url: https://docs.microsoft.com/en-us/power-platform/admin/pricing-billing-skus
+          itemType: how-to-guide
+        - text: Power Platform Center of Excellence (CoE) Starter Kit
+          url: https://docs.microsoft.com/en-us/power-platform/guidance/coe/starter-kit
+          itemType: how-to-guide        
+      footerLink:
+        url: https://www.microsoft.com
+        text: See more
+    - title: Power Apps for developers
+      links:
+        - text: "Developers: Common Data Service"
+          url: https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/overview
+          itemType: overview        
+    - title: Best practices guidance
+      links:
+        - text: Power Apps guidance
+          url: https://docs.microsoft.com/en-us/powerapps/guidance/
           itemType: reference
     - title: I am an app maker
       links:
