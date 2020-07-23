@@ -1142,21 +1142,21 @@
     - name: Common Data Service workflows
       items:    
       - name: Configure workflow stages and steps
-        href: ./maker/common-data-service/configure-workflow-steps.md
+        href: ./common-data-service/configure-workflow-steps.md
       - name: Monitor and manage workflow processes
-        href: ./maker/common-data-service/monitor-manage-processes.md
+        href: ./common-data-service/monitor-manage-processes.md
       - name: Best practices for workflow processes
-        href: ./maker/common-data-service/best-practices-workflow-processes.md
+        href: ./common-data-service/best-practices-workflow-processes.md
     - name: Common Data Service actions
       items:
       - name: Use actions
-        href: actions.md
+        href: ./common-data-service/actions.md
       - name: Create a custom action
-        href: ./maker/common-data-service/create-actions.md
+        href: ./common-data-service/create-actions.md
       - name: Configure custom actions from a workflow
-        href: ./maker/common-data-service/configure-actions.md    
+        href: ./common-data-service/configure-actions.md    
       - name: Invoke custom actions from a workflow
-        href: ./maker/common-data-service/invoke-custom-actions-workflow-dialog.md
+        href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
       href: ./model-driven-apps/
     - name: Apply data visualizations in an app
       items:
