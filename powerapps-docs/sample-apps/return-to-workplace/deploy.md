@@ -105,7 +105,7 @@ The Return to the Workplace solution has two Power BI dashboards, one for execut
 
 4. Determine where the displayed URL is pointing to in the Common Data Service environment:
 
-    - If it's pointing to Common Data Service, set the **Authentication method** to **Microsoft account** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
+    - If it's pointing to Common Data Service, set the **Authentication method** to **OAuth** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
     - If it's not pointing to Common Data Service, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png "Privacy")
