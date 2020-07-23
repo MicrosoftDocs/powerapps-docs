@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app quick view forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a quick view form"
 ms.custom: ""
-ms.date: 03/13/2020
+ms.date: 07/23/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -86,7 +86,7 @@ A quick view form can be added to another form as a quick view control. It provi
 7.  To save the form select **Save**.  
 
     > [!IMPORTANT]
-    > If you have a parential relationship with the same entity, for example if Account has a relationship to Account and you create a lookup that is used by a Quick Create form and is used to create a parent record, the first record will not be saved with the lookup having the parent record value due to the circular reference.  If you experience this issue you can mitigate it by removing the parent record id in the quick create form, which should be optional, and save the record.
+    > Be aware of the behavior that occurs when you create a parent relationship with the same entity. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent record, the first record will not be saved with the lookup that has the parent record value. This is because of the circular reference introduced by using the same entity. If you experience this issue you can resolve it by removing the parent record id on the quick create form before saving the record.
 
 ## Next steps   
  [Create and design forms](create-design-forms.md)   
