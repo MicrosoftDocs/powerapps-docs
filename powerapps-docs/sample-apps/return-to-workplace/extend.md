@@ -1,5 +1,5 @@
 ---
-title: Return to the Workplace Data Dictionary
+title: Extend the Solution
 description: Provides an overview of the Return to the Workplace data dictionary.
 author: v-jogha
 ms.service: powerapps
@@ -22,6 +22,41 @@ and attributes contained in the Return to the Workplace solution. These
 definitions may be fully or partially adopted depending on your business
 requirements.
 
+## Data Model Integration & Extension
+
+The Return to the Workplace solution is built on Microsoft Power Platform.
+Additional information on working with model-driven apps and Common Data Service
+can be found at the following links:
+
+-   [Model-driven apps
+    guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
+
+-   [Common Data Service Developer
+    Guide](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/overview)
+
+-   [Common Data Service
+    entities](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/entities)
+
+-   [Work with data using code in Common Data
+    Service](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/work-with-data-cds)
+
+-   [Best practices and guidance for the Common Data
+    Service](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/best-practices/)
+
+Future releases of the Return to the Workplace solution are planned to create
+additional capabilities. Follow Microsoft solution and application lifecycle
+management guidance to maintain solution integrity.
+
+-   [Introduction to
+    Solutions](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/introduction-solutions)
+
+-   [Application lifecycle management (ALM) with Microsoft Power
+    Platform](https://docs.microsoft.com/en-us/power-platform/alm/)
+
+Additional information regarding supported extension methods can be found here:
+
+-   [Get started with Model-driven apps customization using code](https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/supported-customizations#unsupported-customizations)
+
 ## Entity Relationship Diagram
 
 The diagram displayed below illustrates the entities and their relationships.
@@ -32,19 +67,48 @@ By** and **Modified By** attributes) are not depicted in the diagram.
 
 ## Data Tables
 
+The data tables listed below are grouped by the using application in the Return to the Workplace solution.
+
+## Core Tables
+
+These tables are used across multiple applications and are considered core to the platform.
+
+| **Table Name**           | **Information in the Table**                                                                                  |
+|--------------------------|---------------------------------------------------------------------------------------------------------------|
+| Country                  | Contains standard country names.                                                                              |
+| Employee                 | Contains people and basic contact information.                                                                |
+| Facility                 | Contains basic demographic information on a physical place and re-open phase planning progress.               |
+| Facility Group           | Contains logic grouping metadata used to create a hierarchical relationship of facilities.                    |
+| Facility Type            | Contains metadata used to segment facilities.                                                                 |
+| Solution Setting         | Contains metadata used to drive platform behavior for specific facility groups.                               |
+| State                    | Contains standard state names.                                                                                |
+
+## Employee Return to the Workplace
+
+These tables are primarily used by the Employee Return to the Workplace canvas application.
+
+| **Table Name**           | **Information in the Table**                                                                                  |
+|--------------------------|---------------------------------------------------------------------------------------------------------------|
+| Employee Attestation     | Contains associations of people to their attestations.                                                        |
+| Employee Facility Search | Contains a list of most recently used employee app facility results associated with system users.             |
+| Employee Sentiment       | Contains associations of people and information relevant to their recorded sentiment.                         |
+
+## Workplace Care Management
+
+These tables are primarily used by the Workplace Care Management model-driven application.
+
 | **Table Name**           | **Information in the Table**                                                                                  |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
 | Case Contact             | Contains individuals associated with an employee case.                                                        |
 | Case Facility            | Contains facilities associated with employee cases.                                                           |
-| Country                  | Contains standard country names.                                                                              |
-| Employee                 | Contains people and basic contact information.                                                                |
-| Employee Attestation     | Contains associations of people to their attestations.                                                        |
 | Employee Case            | Contains associations of people and information relevant to their case.                                       |
-| Employee Facility Search | Contains a list of most recently used employee app facility results associated with system users.             |
-| Employee Sentiment       | Contains associations of people and information relevant to their recorded sentiment.                         |
-| Facility                 | Contains basic demographic information on a physical place and re-open phase planning progress.               |
-| Facility Group           | Contains logic grouping metadata used to create a hierarchical relationship of facilities.                    |
-| Facility Type            | Contains metadata used to segment facilities.                                                                 |
+
+## Facility Safety Management
+
+These tables are primarily used by the Facility Safety Management model-driven application.
+
+| **Table Name**           | **Information in the Table**                                                                                  |
+|--------------------------|---------------------------------------------------------------------------------------------------------------|
 | Goal                     | Contains associations of reopen phases and key metrics with target values.                                    |
 | Key Metric               | Contains a list of measurable indications to evaluate progress.                                               |
 | Measurement              | Contains a list of key metric values measured at a point in time with relation to a facility.                 |
@@ -54,8 +118,7 @@ By** and **Modified By** attributes) are not depicted in the diagram.
 | Readiness Factor         | Contains a list of items that are evaluated through the reopening process.                                    |
 | Reopen Phase             | Contains a list of associated readiness factors and metrics to be tracked and evaluated at the current stage. |
 | Reopen Phase Transition  | Contains a list of requests to move from one phase to another with relevant process information.              |
-| Solution Setting         | Contains metadata used to drive platform behavior for specific facility groups.                               |
-| State                    | Contains standard state names.                                                                                |
+
 
 ## Data Definitions
 
@@ -141,11 +204,11 @@ and the areas of the solution where they are used. System generated attributes
 | Address Street 1       | Text      | Used to provide address information for the facility.       | Model-driven app |
 | Address Street 2       | Text      | Used to provide address information for the facility.       | Model-driven app |
 | Address City           | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Address Country        | Text      | Used to provide address information for the facility.       | Model-driven app |
+| Address Country        | Lookup    | Used to associate the standardized state to the facility.   | Model-driven app |
 | Address Latitude       | Text      | Used to provide address information for the facility.       | Model-driven app |
 | Address Longitude      | Text      | Used to provide address information for the facility.       | Model-driven app |
 | Address Postal Code    | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Address State/Province | Text      | Used to provide address information for the facility.       | Model-driven app |
+| Address State/Province | Lookup    | Used to associate the standardized state to the facility.   | Model-driven app |
 | Description            | Text      | Used to provide address information for the facility.       | Model-driven app |
 | Group                  | Lookup    | Used to associate the group this facility belongs.          | Model-driven app |
 | Number                 | Text      | Used to provide a recognizable identifier for the facility. | Model-driven app |
@@ -269,34 +332,3 @@ and the areas of the solution where they are used. System generated attributes
 | Name         | Text      | User-friendly name of the state.   | Model-driven app |
 | State Code   | Text      | ISO identifier of the state.       | Model-driven app |
 | Country      | Lookup    | Association to the parent company. | Model-driven app |
-
-## Data Model Integration & Extension
-
-The Return to the Workplace solution is built on Microsoft Power Platform.
-Additional information on working with model-driven apps and Common Data Service
-can be found at the following links:
-
--   [Model-driven apps
-    guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
-
--   [Common Data Service Developer
-    Guide](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/overview)
-
--   [Common Data Service
-    entities](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/entities)
-
--   [Work with data using code in Common Data
-    Service](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/work-with-data-cds)
-
--   [Best practices and guidance for the Common Data
-    Service](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/best-practices/)
-
-Future releases of the Return to the Workplace solution are planned to create
-additional capabilities. Follow Microsoft solution and application lifecycle
-management guidance to maintain solution integrity.
-
--   [Introduction to
-    Solutions](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/introduction-solutions)
-
--   [Application lifecycle management (ALM) with Microsoft Power
-    Platform](https://docs.microsoft.com/en-us/power-platform/alm/)
