@@ -93,7 +93,7 @@ For example, the following table explains which additional portal template and l
 | Portal from blank in English | Community portal in English | Dynamics 365 | &check; |
 | Portal from blank in English | Portal from blank in French | Dynamics 365 | &check; |
 
-When an environment already has a portal of the available type created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
+When an environment already has a portal of the available template type created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
 
 ![Error when creating additional portal](media/create-additional-portal-error.png "Error when creating additional portal")
 
