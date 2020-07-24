@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/07/2020
+ms.date: 23/07/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -29,7 +29,8 @@ If you choose to create your portal in an existing environment without portal pr
 Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
 
 > [!NOTE]
-> When you create a portal, a few solutions are installed and sample data is imported.
+> - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](#create-additional-portals-in-an-environment).
+> - When you create a portal, a few solutions are installed and sample data is imported.
 
 More information on working with environments: [Working with environments and Microsoft Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
 
@@ -71,13 +72,20 @@ After the portal is provisioned successfully, the status is updated and the port
 To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
-> - There can be only one portal of each type and for a language created in an environment.
 > - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have the System Administrator role in Common Data Service to create a portal. You must also have the **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** in the user record.
 > - If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page. More information: [Provision a portal using the older portal add-on](provision-portal-add-on.md)
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).
 > - Provisioning portals from [make.powerapps.com](https://make.powerapps.com) does not consume the older portal add-ons. Also, these portals are not listed under the **Applications** tab on the **Dynamics 365 Administration Center** page.
 > - A Common Data Service starter portal cannot be created from the **Dynamics 365 Administration Center** page.
 > - Power Apps portals is not available in the France region.
+
+### Create additional portals in an environment
+
+An environment can have one portal of each type and for each language. When an environment already has a portal of the available type created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
+
+![Error when creating additional portal](media/create-additional-portal-error.png "Error when creating additional portal")
+
+For more information about enabling languages in an environment, go to [Enable language for an environment](https://docs.microsoft.com/power-platform/admin/enable-languages#enable-the-language).
 
 ## Create new environment
 
