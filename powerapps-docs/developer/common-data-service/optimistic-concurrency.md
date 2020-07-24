@@ -31,7 +31,7 @@ On a multi-threaded and multi-user system like Power Apps, operations and data c
   
 ## Apply optimistic concurrency using Web API
 
-For information about using Web API to apply optimistic concurrency, see [Apply optimistic concurrency](webapi/perform-conditional-operations-using-web-api.md##apply-optimistic-concurrency)
+For information about using Web API to apply optimistic concurrency, see [Apply optimistic concurrency](webapi/perform-conditional-operations-using-web-api.md#apply-optimistic-concurrency)
 
 
 ## Apply optimistic concurrency using Organization service
