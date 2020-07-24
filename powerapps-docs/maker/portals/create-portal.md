@@ -87,11 +87,11 @@ For example, the following table explains which additional portal template and l
 
 | Existing portal template and language | Additional portal template and language | Environment type | Allowed |
 | - | - | - | - |
-| Starter portal in English | Starter portal in English | Common Data Service | &cross; |
-| Starter portal in English | Starter portal in French | Common Data Service | &check; |
-| Portal from blank in English | Portal from blank in English | Dynamics 365 | &cross; |
-| Portal from blank in English | Community portal in English | Dynamics 365 | &check; |
-| Portal from blank in English | Portal from blank in French | Dynamics 365 | &check; |
+| *Starter portal* in English | *Starter portal* in English | Common Data Service | &cross; |
+| *Starter portal* in English | *Starter portal* in French | Common Data Service | &check; |
+| *Portal from blank* in English | *Portal from blank* in English | Dynamics 365 | &cross; |
+| *Portal from blank* in English | *Community portal* in English | Dynamics 365 | &check; |
+| *Portal from blank* in English | *Portal from blank* in French | Dynamics 365 | &check; |
 
 When an environment already has a portal of the available template type created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
 
