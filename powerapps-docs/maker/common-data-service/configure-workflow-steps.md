@@ -44,7 +44,7 @@ When you design workflows you have the option to contain the logic you want to p
 |**Send Email**|Sends an email. You can choose to create a new email message or use an email template configured for the entity of the record that the workflow is running on or any entities that have an N:1 relationship with the entity, or the entity for any records created by earlier steps.|  
 |**Start Child Workflow**|Starts a workflow process that has been configured as a child workflow.|  
 |**Change Status**|Changes the status of the record that the process is running on, any of the records linked to that record with an N:1 relationship, or any records created by earlier steps.|  
-|**Stop Workflow**|Stops the current workflow. You can set a status of either **Succeeded** or **Cancelled** and specify a status message.<br /><br /> When real-time workflows are configured for an event, stopping a workflow with a status of cancelled will prevent the event action from completing. See [Using real-time workflows](configure-workflow-steps.md#BKMK_SynchronousWorkflows) for more information.|  
+|**Stop Workflow**|Stops the current workflow. You can set a status of either **Succeeded** or **Canceled** and specify a status message.<br /><br /> When real-time workflows are configured for an event, stopping a workflow with a status of canceled will prevent the event action from completing. See [Using real-time workflows](configure-workflow-steps.md#BKMK_SynchronousWorkflows) for more information.|  
 |**Custom Step**|Developers can create custom workflow steps that define actions. There are no custom steps available by default.|  
   
 ### Setting record values  
@@ -107,7 +107,7 @@ When you design workflows you have the option to contain the logic you want to p
  When you apply a **Stop Workflow** action in a workflow you have the option to specify a status condition that can be either **Succeeded** or **Canceled**. When you set the status to canceled, you prevent the operation. An error message containing the text from the stop action status message will be displayed to the user with the heading **Business Process Error**.  
   
 ## Next steps  
- [Create custom business logic with processes](guide-staff-through-common-tasks-processes.md)   
- [Workflow processes overview](workflow-processes.md)   
+ <!-- [Create custom business logic with processes](./guide-staff-through-common-tasks-processes.md)   
+ [Workflow processes overview](workflow-processes.md)    -->
  [Monitor and manage workflow processes](monitor-manage-processes.md)   
  [Best practices for workflow processes](best-practices-workflow-processes.md)

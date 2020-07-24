@@ -64,7 +64,7 @@ Running more than one workflow that updates the same entity can cause resource l
  When you edit workflows you should use the Notes tab and type what you did and why you did it. This allows someone else to understand the changes you made.  
   
 ## Next steps  
- [Workflow processes overview](workflow-processes.md)   
+ <!-- [Workflow processes overview](workflow-processes.md)    -->
  [Configure workflow processes](configure-workflow-steps.md)   
  [Monitor and manage workflow processes](monitor-manage-processes.md)
    
