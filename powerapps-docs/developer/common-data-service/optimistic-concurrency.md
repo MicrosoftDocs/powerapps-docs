@@ -36,7 +36,7 @@ For information about using Web API to apply optimistic concurrency, see [Apply 
 
 ## Apply optimistic concurrency using Organization service
 
-For information about using Organization service to apply optimistic concurrency, see [Optimistic concurrency behavior](org-service/entity-operations-update-delete.md##optimistic-concurrency-behavior)
+For information about using Organization service to apply optimistic concurrency, see [Optimistic concurrency behavior](org-service/entity-operations-update-delete.md#optimistic-concurrency-behavior)
   
 <a name="bkmk_handle"></a>   
 ## Handle exceptions  
