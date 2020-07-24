@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/25/2020
+ms.date: 06/26/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -13,6 +13,20 @@ ms.reviewer: tapanm
 # Known issues
 
 ## General issues
+
+- You receive the following error message when configuring or using entity fields:
+
+    ***Field Name**: You have exceeded the maximum number of 100000 characters in this field.*
+
+    This can happen if the referenced field for the entity exceeds 100000 characters limit. To increase this limit, go to your Dynamics 365 instance > **Settings** > **Customization** > **Customize this system** > **Components** > **Entities**. Select applicable entity and then select the field. Increase the **Maximum Length** field value for the field to a higher value. Allowed values: 1 through 1,048,576.
+
+    Fields where limit may need to be increased:
+
+    | Entity | Field Display Name |
+    | - | - |
+    | Entity Form | Settings (adx_settings) |
+    | Enity List | View (adx_views) |
+    | Enity Form Metadata | Subgrid Setting (adx_subgrid_settings) |
 
 - Rich-text for notes in timeline isn't fully supported by Power Apps portals because there's no rich-text editor equivalent control available in portals. For more information, go to [notes created with rich-text editor](configure-notes.md?#notes-created-with-rich-text-editor). If you want, you can [disable the rich-text editor for notes in timeline](https://docs.microsoft.com/powerapps/maker/model-driven-apps/set-up-timeline-control#enable-or-disable-rich-text-editor-for-notes-in-timeline) for the Common Data Service model-driven app.
 
@@ -84,3 +98,6 @@ ms.reviewer: tapanm
     - The selection of component isn't correct and hovering on a component provides incorrect target indication.
     - Two or three column sections don't render properly in Power Apps portals Studio but works fine on the website.
 
+### See also
+
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
