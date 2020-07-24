@@ -81,11 +81,11 @@ To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-exis
 
 ### Create additional portals in an environment
 
-An environment can have one portal of each type and for each language. Environments with Common Data Service have [starter portal template](portal-templates.md#environment-with-common-data-service) available. If you already have a starter portal for such an environment, you can't create another starter portal for the same language. Similarly, environments with Dynamics 365 have several [portal templates](portal-templates.md#environment-with-model-driven-apps-in-dynamics-365) available. If you have a portal from one of the templates already created in a language, you can't create a new portal with the same template type and language. New portal must have either a different portal type, or a different language. 
+An environment can have one portal of each type and for each language. Environments with Common Data Service have [starter portal template](portal-templates.md#environment-with-common-data-service) available. If you already have a starter portal for such an environment, you can't create another starter portal for the same language. Similarly, environments with Dynamics 365 have several [portal templates](portal-templates.md#environment-with-model-driven-apps-in-dynamics-365) available. If you have a portal from one of the templates already created in a language, you can't create a new portal with the same template type and language. New portal must have either a different portal type, or a different language.
 
-For example, the following table explains which new portal template and language combination is allowed when creating additional portals:
+For example, the following table explains which additional portal template and language combination is allowed when creating additional portals:
 
-| Existing portal template and language | New portal template and language | Environment type | Allowed |
+| Existing portal template and language | Additional portal template and language | Environment type | Allowed |
 | - | - | - | - |
 | Starter portal in English | Starter portal in English | Common Data Service | &cross; |
 | Starter portal in English | Starter portal in French | Common Data Service | &check; |
