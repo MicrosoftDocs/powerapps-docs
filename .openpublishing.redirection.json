@@ -69,12 +69,12 @@
       "source_path": "powerapps-docs/maker/canvas-apps/dev-appsource-test-drive.md",
       "redirect_url": "dev-enterprise-intro",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/compress-extract-solution-file-solutionpackager.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-packager-tool",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/use-source-control-solution-files.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/use-source-control-solution-files",
@@ -84,37 +84,37 @@
       "source_path": "powerapps-docs/developer/common-data-service/checker/webapi/overview.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/checker-api/overview",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/checker/webapi/analyze.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/checker-api/analyze",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/checker/webapi/check-status.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/checker-api/check-status",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/checker/webapi/retrieve-rules.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/checker-api/retrieve-rules",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/checker/webapi/retrieve-rulesets.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/checker-api/retrieve-rulesets",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/checker/webapi/upload-file.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/checker-api/upload-file",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/package-deployer/create-packages-package-deployer.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/package-deployer-tool",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/common-data-service/create-edit-entities.md",
       "redirect_url": "data-platform-create-entity",
@@ -124,122 +124,122 @@
       "source_path": "powerapps-docs/maker/common-data-service/solution-patches.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/update-solutions-alm#create-solution-patches",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/common-data-service/set-managed-properties-metadata.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/managed-properties-alm",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/common-data-service/use-solution-explorer.md",
       "redirect_url": "solutions-overview",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/common-data-service/use-segmented-solutions-patches-simplify-updates.md",
       "redirect_url": "create-solution#create-a-segmented-solution",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/common-data-service/solution-best-practices.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/solution-concepts-alm",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/build-tools-tutorial-faq.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/devops-build-tools#frequently-asked-question-faq",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/build-tools-tasks.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/devops-build-tools#build-tool-tasks",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/build-tools-overview.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/devops-build-tools",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/model-driven-apps/customize-power-bi-content-packs.md",
       "redirect_url": "../common-data-service/use-powerbi-with-cds",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/common-data-service/how-managed-solutions-merged.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/how-managed-solutions-merged",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/maker/common-data-service/use-solutions-for-your-customizations.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/use-solutions-for-your-customizations",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/user/run-app-client.md",
       "redirect_url": "run-canvas-and-model-apps-on-mobile",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/user/run-app-client-model-driven.md",
       "redirect_url": "https://docs.microsoft.com/dynamics365/mobile-app/dynamics-365-phones-tablets-users-guide",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/administrator/app-analytics.md",
       "redirect_url": "/power-platform/admin/analytics-common-data-service",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/administrator/export-import-packages.md",
       "redirect_url": "/power-platform/admin/powerapps-gdpr-export-dsr",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/administrator/index.md",
       "redirect_url": "/powerapps/administrator/admin-guide",
       "redirect_document_id": "false"
-    },   
+    },
     {
       "source_path": "powerapps-docs/maker/model-driven-apps/create-and-edit-views.md",
       "redirect_url": "create-edit-views-app-designer",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/add-images-to-excel.md",
       "redirect_url": "add-images-pictures-audio-video",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/tutorial-working-with-images-in-excel.md",
       "redirect_url": "add-images-pictures-audio-video",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/developer/common-data-service/fill-app-submission-form-appsource.md",
       "redirect_url": "register-microsoft-partner-network",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/maker/portals/configure/view-email-in-timeline.md",
       "redirect_url": "view-all-activities-in-portal-timeline",
       "redirect_document_id": "false"
-    }, 
+    },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-environments.md",
       "redirect_url": "/power-platform/admin/working-with-environments",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/developer/component-framework/updating-tooling.md",
       "redirect_url": "get-powerapps-cli#update-microsoft-powerapps-cli-to-the-latest-version",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/scan-barcode.md",
       "redirect_url": "controls/control-new-barcode-scanner",
       "redirect_document_id": "false"
-    },    
+    },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/connect-to-sharepoint.md",
       "redirect_url": "connections/connection-sharepoint-online",
@@ -424,7 +424,7 @@
       "source_path": "powerapps-docs/developer/common-data-service/webapi/web-api-helper-code-authentication-class.md",
       "redirect_url": "enhanced-quick-start",
       "redirect_document_id": false
-    },    
+    },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/create-app-browser.md",
       "redirect_url": "getting-started",
@@ -439,7 +439,6 @@
       "source_path": "powerapps/developer/common-data-service/export-solution-specific-version.md",
       "redirect_url": "https://docs.microsoft.com/dynamics365/customer-engagement/developer/create-export-import-unmanaged-solution",
       "redirect_document_id": false
-
     },
     {
       "source_path": "powerapps-docs/common-data-model/overview.md",
@@ -459,32 +458,32 @@
     {
       "source_path": "powerapps-docs/guided-learning/create-app-sharepoint.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/manage-apps.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/get-started.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/index.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/manage-data.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/create-app-cds.md",
       "redirect_url": "https://docs.microsoft.com/learn/browse/?products=powerapps&resource_type=learning%20path",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/postman-collection.md",
@@ -1809,7 +1808,7 @@
     {
       "source_path": "powerapps-docs/maker/common-data-service/publish-changes-for-use-customer-service-hub.md",
       "redirect_url": "create-solution#publish-changes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/embed-powerapps-powerbi.md",
@@ -1830,6 +1829,76 @@
       "source_path": "powerapps-docs/maker/maker/canvas-apps/webinars-listing.md",
       "redirect_url": "https://powerusers.microsoft.com/t5/Samples-Learning-and-Videos/ct-p/PA_Comm_Galleries",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/org-service/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/org-service/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/synchronize-cds-data-with-external-systems.md",
+      "redirect_url": "data-synchronization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/virtual-entities/index.md",
+      "redirect_url": "get-started-ve",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/webapi/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/webapi/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/workflow/index.md",
+      "redirect_url": "workflow-extensions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/xrm-tooling/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/xrm-tooling/build-windows-client-applications-xrm-tools.md",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/component-framework/index.md",
+      "redirect_url": "/powerapps/developer/control-framework/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/index.md",
+      "redirect_url": "/powerapps/developer/common-data-service/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/model-driven-apps/index.md",
+      "redirect_url": "/powerapps/developer/model-driven-apps/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/working-with-experimental.md",
+      "redirect_url": "working-with-experimental-preview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/entity-relationship-behavior.md",
+      "redirect_url": "create-edit-entity-relationships#entity-relationship-behavior",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/common-data-service/index.md",
+      "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/model-driven-apps/index.md",
+      "redirect_url": "/powerapps/maker/model-driven-apps/model-driven-app-overview",
+      "redirect_document_id": false
     }
   ]
 }
