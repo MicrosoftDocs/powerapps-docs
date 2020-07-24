@@ -99,7 +99,7 @@ The Return to the Workplace solution has two Power BI dashboards, one for execut
     > [!div class="mx-imgBorder"]
     > ![Connect](media/deploy-connect-data-source.png "Connect")
 
-3. Enter the URL of the Common Data Service environment (for example, https://[myenv].crm.dynamics.com), and then select **Next**.
+3. Enter the URL of the Common Data Service environment (for example, https://[myenv].[region].dynamics.com), and then select **Next**.
     > [!div class="mx-imgBorder"]
     > ![Common Data Service environment name](media/deploy-connect-CDS.png "Common Data Service environment name")
 
