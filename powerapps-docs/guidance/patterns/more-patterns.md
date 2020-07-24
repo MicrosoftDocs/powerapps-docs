@@ -11,19 +11,19 @@ ms.reviewer: kathyos
 
 ---
 
-# Real-world stories
+# Power Apps patterns: Real-world stories
 
 These real-world stories show how enterprise customers are using Microsoft Power Platform and the patterns that successful makers have used to bring these solutions to life.
 
-See also: [Pattern: Calculation](calculator-pattern.md) | [Pattern: Communication](communication-pattern.md) | [Pattern: Inspection, audit, questionnaire](inspection-pattern.md)
+See also: [Pattern: Calculation](calculator-pattern.md) | [Pattern: Communication](communication-pattern.md) | [Pattern: Inspection](inspection-pattern.md)
 
 ## Approvals
+
+- [T-Mobile manages company wide initiatives and more with Microsoft Power Platform](https://powerapps.microsoft.com/blog/tmobile/) (managing company-wide initiatives)
 
 - [Hexion: Global chemical manufacturer streamlines sales processes with Microsoft Power Platform and AI Builder](https://customers.microsoft.com/story/810656-hexion-manufacturing-power-platform) (automating IT requests)
 
 - [Virgin Atlantic drives agile wins for its mobile workforce with Microsoft Power Platform](https://powerapps.microsoft.com/blog/virgin-atlantic-drives-agile-wins-for-mobile-workforce-with-the-power-platform/) (credit card application)
-
-- [T-Mobile manages company wide initiatives and more with Microsoft Power Platform](https://powerapps.microsoft.com/blog/tmobile/) (managing company-wide initiatives)
 
 ## Asset management
 
@@ -52,6 +52,8 @@ See also: [Pattern: Calculation](calculator-pattern.md) | [Pattern: Communicatio
 - [Capitol Records signs on with Microsoft, migrating marketing platform, transforming business processes](https://customers.microsoft.com/story/768079-capitol-records-media-entertainment-power-platform) (release scheduling and management)
 
 - [Partners In Health manages gift review process with Power Apps](https://customers.microsoft.com/story/775258-partners-in-health-nonprofit-power-apps) (donation portfolio management)
+
+- [Microsoft transforms sales planning process using the Power Platform](https://aka.ms/MicrosoftAccountPlanning) (sales planning)
 
 ## Scheduling
 

@@ -19,8 +19,7 @@ common *patterns* among apps most often created by organizations to meet their
 most-pressing needs.
 
 Different scenarios, across different industries, often use the basic same
-patterns. For example, an app for doing aircraft inspections, a health
-pre-registration questionnaire, and an app for tracking kids' reading levels all
+patterns. For example, an app for doing aircraft inspections, a situational awareness app for hospitals, and an app for tracking kids' reading levels all
 have a similar structure, even though they have very different purposes and
 audiences.
 
@@ -86,14 +85,14 @@ We'll continue to add patterns over time.
 :::row-end:::
 :::row:::
    :::column span="":::
-      **Inspection/audit/questionnaire**
+      **Inspection/audit**
 
       [Read more about the inspection pattern, including real-world use cases](inspection-pattern.md)
    :::column-end:::
    :::column span="":::
       In a typical inspection scenario:
 
-      1.  Someone (for example, an employee or a customer) fills out a standardized checklist or questionnaire, and submits it. 
+      1.  Someone (for example, an employee or a customer) fills out a standardized checklist or form and submits it. 
 
       1.  Then, typically in a centralized function, all the answers are aggregated for review or reporting.
     
@@ -103,9 +102,6 @@ We'll continue to add patterns over time.
       Example use cases
       - Collection of customer data
       - Daily job-site inspection
-      - Employee sentiment survey
-      - Health appointment check-in questionnaire
-      - Idea collection
       - Incident reporting
       - IoT-based monitoring
       - Quality control checklist

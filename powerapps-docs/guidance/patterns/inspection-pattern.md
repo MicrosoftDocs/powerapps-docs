@@ -11,7 +11,7 @@ ms.reviewer: kathyos
 
 ---
 
-# Pattern: Inspection, audit, questionnaire
+# Pattern: Inspection
 
 ![Collage of inspection app screenshots](media/inspection-collage.png "Collage of inspection app screenshots")
 
@@ -20,8 +20,7 @@ and Microsoft Power Platform provides a no-code or low-code solution for enablin
 inspection, analysis, and action. In this pattern, an app user fills out a
 structured assessment, which is then uploaded to a centralized location for
 analysis, reporting, and potential action. You might call this an audit, an
-inspection, quality control, taking inventory, a checkup, a checklist, a
-questionnaire, and so forth.
+inspection, quality control, taking inventory, a checkup, a checklist, and so forth.
 
 This article provides several real-world examples of how customers have used
 Microsoft Power Platform to create timely, efficient, and actionable inspections, from
@@ -34,13 +33,13 @@ aircraft maintenance to elementary school.
 In a typical inspection scenario:
 
 1. Someone (for example, an employee or a customer) fills out a standardized
-    checklist or questionnaire, and submits it.
+    checklist or form, and submits it.
 
     - This might happen on a recurring basis, such as a daily quality check, a
         monthly inventory, or a scheduled checkup.
 
     - Data can be collected from the public, such as crowd-sourced vandalism
-        reporting or filling in a personal health questionnaire.
+        reporting.
 
 1. Then, typically in a centralized function, all the answers are aggregated
     for review or reporting.
@@ -65,8 +64,6 @@ inspections.
 
 [Read the whole story.](https://powerapps.microsoft.com/blog/virgin-atlantic-drives-agile-wins-for-mobile-workforce-with-the-power-platform/)
 
-#### Performing the inspection
-
 Aircraft engineers use a canvas app on their corporate iPads to perform ad-hoc
 and scheduled inspections. They can view what audits are scheduled for them and review audit questions. After an inspection is completed, expected answers are
 highlighted in green to provide a visual aid. Unexpected answers are highlighted
@@ -75,32 +72,12 @@ and assign a follow-up task to a manager.
 
 ![Screenshots of the Virgin Atlantic safety and compliance audit app](media/virgin-atlantic-aircraft-inspection.png "Screenshots of the Virgin Atlantic safety and compliance audit app")
 
-#### Reviewing and taking action
-
 Engineering compliance managers use a Power Apps canvas app integrated within a
 SharePoint list to review completed inspections and view all inspection
 findings. They can also generate HTML and PDF inspection summaries from the app
 if an inspector or executive requires further information.
 
 ![Engineering compliance manager view - Power Apps running embedded in SharePoint](media/virgin-atlantic-audit-summary.jpg "Engineering compliance manager view - Power Apps running embedded in SharePoint")
-
-### Virgin Atlantic Clubhouse Spa check-in app
-
-How is a health spa similar to aircraft maintenance? Both use the inspection
-pattern.
-
-[Read the whole story.](https://powerapps.microsoft.com/blog/virgin-atlantic-drives-agile-wins-for-mobile-workforce-with-the-power-platform/)
-
-#### Filling out the questionnaire
-
-Clubhouse Spas in Heathrow, Gatwick, and JFK use an app that connects directly to
-customer data in Dynamics 365 to allow therapists and hosts to search for
-customers and check whether they've recently completed the mandatory health
-questionnaire. If they haven't, the app allows the therapist to complete the
-questionnaire at check-in with the
-customer. This replaces a tedious paper process.
-
-![Screenshots of the Virgin Atlantic Clubhouse Spa check-in app](media/virgin-atlantic-spa-app.png "Screenshots of the Virgin Atlantic Clubhouse Spa check-in app")
 
 ### Standard Bank ATM inspection app
 
@@ -111,17 +88,15 @@ and the team was buried in reams of paperwork.
 
 [Read the whole story.](https://powerapps.microsoft.com/blog/standard-bank-south-africa-creates-a-center-of-excellence-for-the-power-platform/)
 
-#### Performing the inspection
-
 With Microsoft Power Platform, Standard Bank was able to build a mobile app for inspecting
 ATMs. Over 300 inspectors use the Power Apps canvas app to generate over 5,000
 inspection reports each month. The app uses the device GPS capabilities to find
 nearby ATMs and the device camera to take pictures when issues need to be
 reported.
 
-[Watch a demo of the ATM inspection.](https://youtu.be/-JRUIA8ItWE?t=1469)
+![Standard Bank ATM inspection app](media/standard-bank-atm-app-blurred.png "Standard Bank ATM inspection app")
 
-#### Reviewing and taking action
+[Watch a demo of the ATM inspection.](https://youtu.be/-JRUIA8ItWE?t=1469)
 
 An important part of the inspection pattern is the ability to review the
 collected data. For this app, the data is stored in SharePoint Online lists,
@@ -134,6 +109,8 @@ aggregate data.
 ### Tacoma Public schools reading assessment
 
 [Read the whole story.](https://powerapps.microsoft.com/blog/assistant-principal-builds-power-platform-solution-to-improve-reading-assessments/)
+
+[Watch a video.](https://www.youtube.com/watch?v=v5xWpOT1V78)
 
 Schools in Tacoma, Washington, use the (Developmental Reading Assessment, 2nd
 Edition (DRA2), in which teachers read with students to assess their reading level and
@@ -180,8 +157,8 @@ Learn more about the solution: [video](https://youtu.be/Dg-i3F9G01I) | [document
 
 - [Pinnacle Group – Helpdesk employee leads transition from paper to digital](https://powerapps.microsoft.com/blog/pinnacle-group/)
 
-- [Hexion – Global chemical manufacturer streamlines sales processes with Microsoft Power Platform and AI Builder (Automating customer surveys)](https://customers.microsoft.com/story/810656-hexion-manufacturing-power-platform)
-
 - [Kelly Roofing uses Power Apps to capture photos at work sites](https://powerapps.microsoft.com/blog/kellyroofing/)
 
-- [Community video: Paul Culmsee - Inside the Universal Audit App: See what Power Apps and Flow are capable of](https://www.youtube.com/watch?v=6Wn47bDOMEE)
+### Microsoft Power Apps Community
+
+- [App sample gallery: Audit](https://powerusers.microsoft.com/t5/forums/searchpage/tab/message?advanced=false&allow_punctuation=false&filter=location&location=forum-board:AppFeedbackGallery&q=audit)

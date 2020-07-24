@@ -18,7 +18,7 @@ ms.reviewer: kathyos
 
 Want to quickly share news, event announcements, and the latest up-to-date information
 with your employees no matter where they are? A common use of Microsoft Power Platform is
-to provide highly tailored and visually compelling communications via an app. 
+to provide highly tailored and visually compelling communications via an app.
 
 This article provides several examples of
 real-world use cases that showcase organizations using Microsoft Power Platform to
@@ -131,7 +131,7 @@ upselling opportunities in the field, and instructional video and podcast hubs.
 The solution is used by leaders to efficiently send communications out to the
 field.
 
-See the solution in this video:
+See the solution in this video:<br>
 <a href="https://mymbas.microsoft.com/sessions/a00b1455-2989-4eb6-b17d-e182a27183a1?source=sessions"><img src="media/telstra-video-thumbnail.png" alt="Telstra solution video" title="Telstra solution video"></a>
 
 ### Hexion app to manage company-wide communications

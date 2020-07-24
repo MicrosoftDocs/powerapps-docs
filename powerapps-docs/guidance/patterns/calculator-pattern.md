@@ -64,19 +64,23 @@ the calculation in the inspection report.
 
 Reliable Electric creates complex bids for integrated electrical projects in
 high-end homes. These bids were created by using a legacy system that was limited
-to one user at a time and used a a manual process based on Excel. The company has replaced
+to one user at a time and used a manual process based on Excel.  Gone are the days of copying and pasting outputs into spreadsheets. The company has replaced
 this process with a single app built in Power Apps that manages the entire
-estimation process. This app has been tailored for Reliable Electric's business
-process by defining groups of materials and labor that can be used to more
-quickly calculate estimates. By moving to this app, they've reduced their time
-for data entry by half and can create bids more easily now that the data is
-instantly available.
+estimation process, a change that also reduces estimating-related manual workloads by half and dramatically lowers the potential for errors.
 
-![Screenshot of the Reliable Electric project estimation app](media/reliable-electric-takeoffs.png "Screenshot of the Reliable Electric project estimation app")
+This app has been tailored for Reliable Electric's business
+process by defining groups of materials and labor that can be used to calculate estimates more
+quickly. By moving to this app, they've reduced their time
+for data entry by half and can create bids more easily now that the data is
+instantly available. With its related improvements to labor, accuracy, and purchasing incorporated,  the app built in Power Apps has saved Reliable Electric between CAD80,000 and CAD100,000 annually, compared to the top purpose-built electrical estimating solutions on the market.
+
+![Screenshot of the Reliable Electric project estimation app](media/reliable-electric-takeoffs.jpg "Screenshot of the Reliable Electric project estimation app")
 
 ### SNCF Manufacturing Configuration
 
 [Read the whole story.](https://powerapps.microsoft.com/blog/sncf-power-platform-customer-success-story/)
+
+[Watch a video.](https://youtu.be/WHtb7D1cVAI)
 
 Workers on the factory floor use an app to evaluate the parts for repairing a
 train. The app identifies the most suitable parts and configures the
@@ -104,6 +108,8 @@ In this case, the calculation is a transformation of one language into another.
 
 [Read the whole story.](https://customers.microsoft.com/story/multi-national-energy-company-uses-powerapps-to-create-a-decision-validation-tool)
 
+[Watch a video.](https://youtu.be/e_dCMN3NDsg?t=2439)
+
 TransAlta is a multinational power generation and energy trading company.
 Using Power Apps, TransAlta built a decision-making tool called Economic
 Callouts to calculate the economic viability of sending an immediate response to
@@ -128,6 +134,8 @@ market forecasts.
 ### Elementary school classroom lessons
 
 [Read the whole story.](https://customers.microsoft.com/story/8bit-classrom-primary-secondary-education-powerapps)
+
+[Watch a video.](https://www.youtube.com/watch?v=Y3YiR3ZOTDc)
 
 Teacher Brian Dang of 8-bit Classroom created an app called Bits for students
 to practice spelling. The app evaluates the students' input in real time and
