@@ -1,7 +1,7 @@
 ---
 title: "Create and edit fields for Common Data Service using Power Apps solution explorer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 07/22/2020
+ms.date: 07/23/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -260,8 +260,14 @@ If you delete a lookup field, the 1:N entity relationship for it will automatica
 
 ## IME Mode
 
-Any of the fields that provide direct text input have an IME Mode. The Input Method Editor (IME) is used for east asian languages like Japanese. IMEs allow the user to enter the thousands of different characters used in east asian written languages using a standard 101-key keyboard.
-
+IME (input method editor) mode specifies how a physical keyboard can be used to enter characters for text fields. IMEs are tools provided by the operating system for composing text. They are commonly used to enter Chinese, Japanese, and Korean words. 
+IME mode does not restrict the characters that users can enter. For example, when IME mode is disabled, users can still enter Japanese characters by pasting in a text input.
+> [!IMPORTANT]
+> IME Mode is used for backward compatibility with the legacy web client and the IME Mode settings described here don’t apply to Unified Interface apps. Additionally, IME mode is supported only in Internet Explorer and partially supported in Firefox.
+-	**Active**: This value will activate the IME initially. You can deactivate it later if desired. This is the default IME setting. 
+-	**Auto**: When IME mode is auto, Power Apps will not interfere with the IME. 
+-	**Disabled**: Disable IME mode to bypass the IME. This can be useful for entering alphanumeric characters in certain languages. 
+-	**Inactive**: Power Apps will deactivate the IME initially. You can activate it later if desired.
 
 ### See also  
 [Create and edit fields for Common Data Service](create-edit-fields.md)<br />
