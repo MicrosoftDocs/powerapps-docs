@@ -13,12 +13,27 @@ metadata:
   ms.collection: collection
   author: KumarVivek
   ms.author: kvivek
-  ms.date: 06/16/2020 
+  ms.date: 07/26/2020 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
+  
+  # Card
+  - title: Power Apps patterns
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Overview
+            url: patterns/overview.md
+          - text: "Pattern: Calculation"
+            url: patterns/calculator-pattern
+          - text: "Pattern: Communication"
+            url: patterns/communication-pattern
+          - text: "Pattern: Inspection"
+            url: patterns/inspection-pattern
+  
   # Card 
   - title: Planning a Power Apps project
     linkLists:
@@ -41,30 +56,16 @@ landingContent:
   - title: Related content
     linkLists:
        - linkListType: overview
-         links:
-          - text: Create apps in Power Apps
-            url: /powerapps/maker
-          - text: What are canvas apps?
+         links:          
+          - text: Create canvas apps?
             url: /powerapps/maker/canvas-apps/getting-started
-          - text: What are model-driven apps?
+          - text: Create model-driven apps?
             url: /powerapps/maker/model-driven-apps/model-driven-app-overview
           - text: Power Platform Center of Excellence (CoE) kit
             url: /power-platform/guidance/coe/starter-kit
           - text: Power Platform ALM guide
             url: /power-platform/alm/          
 
-
-  # Card
-  - title: Other resources
-    linkLists:
-       - linkListType: concept
-         links:
-          - text: Power Apps licensing
-            url: /power-platform/admin/powerapps-flow-licensing-faq
-          - text: Power Apps US Government plans
-            url: /power-platform/admin/powerapps-us-government
-          - text: Power Apps Support
-            url: https://powerapps.microsoft.com/support/
         
           
 
