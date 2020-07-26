@@ -328,7 +328,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Admins can use the Power Platform Admin center to secure data, manage environments, and monitor usage.</p>
+                           <p>Admins can use the Power Platform admin center to secure data, manage environments, and monitor usage.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -343,7 +343,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Power Platform Admin center</h3>
+                                    <h3 style="font-size: 1.15rem">Power Platform admin center</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-documentation">Administer Power Platform</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/get-help-support">Get Help + Support</a></p>
