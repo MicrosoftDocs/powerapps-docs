@@ -28,11 +28,11 @@ landingContent:
           - text: Overview
             url: patterns/overview.md
           - text: "Pattern: Calculation"
-            url: patterns/calculator-pattern
+            url: patterns/calculator-pattern.md
           - text: "Pattern: Communication"
-            url: patterns/communication-pattern
+            url: patterns/communication-pattern.md
           - text: "Pattern: Inspection"
-            url: patterns/inspection-pattern
+            url: patterns/inspection-pattern.md
   
   # Card 
   - title: Planning a Power Apps project

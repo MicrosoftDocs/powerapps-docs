@@ -5,7 +5,7 @@
   - name: Power Apps patterns
     items:
     - name: Patterns overview
-      href: patterns/patterns-overview.md
+      href: patterns/overview.md
     - name: Calculation or Transformation pattern
       href: patterns/calculator-pattern.md
     - name: Communication or Announcement pattern
