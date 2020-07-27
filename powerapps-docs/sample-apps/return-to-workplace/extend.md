@@ -32,30 +32,30 @@ can be found at the following links:
     guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
 
 -   [Common Data Service Developer
-    Guide](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/overview)
+    Guide](https://docs.microsoft.com/powerapps/developer/common-data-service/overview)
 
 -   [Common Data Service
-    entities](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/entities)
+    entities](https://docs.microsoft.com/powerapps/developer/common-data-service/entities)
 
 -   [Work with data using code in Common Data
-    Service](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/work-with-data-cds)
+    Service](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds)
 
 -   [Best practices and guidance for the Common Data
-    Service](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/best-practices/)
+    Service](https://docs.microsoft.com/powerapps/developer/common-data-service/best-practices/)
 
 Future releases of the Return to the Workplace solution are planned to create
 additional capabilities. Follow Microsoft solution and application lifecycle
 management guidance to maintain solution integrity.
 
 -   [Introduction to
-    Solutions](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/introduction-solutions)
+    Solutions](https://docs.microsoft.com/powerapps/developer/common-data-service/introduction-solutions)
 
 -   [Application lifecycle management (ALM) with Microsoft Power
-    Platform](https://docs.microsoft.com/en-us/power-platform/alm/)
+    Platform](https://docs.microsoft.com/power-platform/alm/)
 
 Additional information regarding supported extension methods can be found here:
 
--   [Get started with Model-driven apps customization using code](https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/supported-customizations#unsupported-customizations)
+-   [Get started with Model-driven apps customization using code](https://docs.microsoft.com/powerapps/developer/model-driven-apps/supported-customizations#unsupported-customizations)
 
 ## Entity Relationship Diagram
 
