@@ -161,8 +161,7 @@ The **Checklist** tab contains an editable grid displaying the checklist for the
 When a facility manager asserts that a facility should be moved to a new phase, the manager can apply for a transition. Only the facility manager can create
 a new transition record that indicates the new phase. After the transition is saved, a reviewer can be assigned. A reviewer must **Accept** or **Reject** the transition. Either way, the transition record is closed and stored as a historical record. When the transition is accepted, the proposed phase is applied to the facility.
 
-The new phase comes with its own checklist and set of metrics and goals. These will be made available on the facility by a background process. So there will be
-a small delay between accepting a transition and the actual changes on the facility record.
+The new phase comes with its own checklist and set of metrics and goals. These will be made available on the facility by a background process. So there will be a small delay between accepting a transition and the actual changes on the facility record.
 
 A reviewer&mdash;for instance, a facility manager supervising many facility managers in a facility group&mdash;can find the backlog in **Phase transitions**. For example, the list can be filtered by the facility group or by the reviewer to find the phase transitions that require attention.
 
@@ -218,6 +217,17 @@ To edit the record, select it, update the values, and then select **Save & Close
 
 The review status for the transition is updated, and appropriate back-end processes are triggered to move the facility to the targeted reopen phase.
 
+### Create transition records via the Business Process Flow
+
+For ease of use we can also use the business process flow to create new transition records. There are two cases:
+
+1. Moving forward
+
+Given that the facility is not in the final phase, the user can click on the circle of the current stage and select **Next Stage**. The business process flow wont move instantly, but in the background a new transition record is created. The record is pre populated with the next phase and is ready for approval.
+
+2. Moving backward
+
+Given that the facility is not in the first phase, the user can click on the cirle of current stage and select **<** to move back. Or the user can select the circle of any previous stage and click **Set Active**. The business process flow will change imediatly. In the background a phase transition record is created and approved automatically. This in turn will trigger the background process that will update the facility with the checklist, metrics and goals corresponding to the selected phase. Please allow for some time for this to happen. The user can continue to perform other tasks.
 
 ## Monitor employee attestations
 
