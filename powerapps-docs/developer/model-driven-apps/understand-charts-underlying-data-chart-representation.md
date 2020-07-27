@@ -94,10 +94,10 @@ For more sample data description XML strings, see [Sample Charts](sample-charts.
 
 The presentation description XML string contains information about the appearance of the chart such as chart title, chart color, and chart type (bar, column, line, and so on). There is no schema definition for this XML string. However, the XML is a serialization of the [Chart](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx) class in Microsoft Chart Controls. More information: [Chart Controls](https://go.microsoft.com/fwlink/p/?LinkId=128301)  
 
-> [!IMPORTANT]
-> In Unified Interface, only a subset of properties are supported. More information: [Supported methods and properties in Unified Interface](methods-and-properties-supported-in-unified-interface)
+You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.
 
-You can specify the presentation description XML string while you are creating a chart using the `SavedQueryVisualization.PresentationDescription` or `UserQueryVisualization.PresentationDescription` attribute for the organization-owned or user-owned chart, respectively.  
+> [!IMPORTANT]
+> In Unified Interface, only a subset of properties are supported. More information: [Supported methods and properties in Unified Interface](#methods-and-properties-supported-in-unified-interface)
 
 ### Example for web client
 
@@ -151,8 +151,8 @@ Gets or sets the X-axis type of the series.
 |IsReversed|Gets or sets a flag which indicates whether the axis is reversed.<br/> If set to true, it has two effects for x-axis:<br/> - x-axis labels are flipped in the reversed order (from right-to-left)<br/>- It also bring the y-axis to the opposite side, to accommodate above right-to-left x-axis label.|
 |MajorGrid Enabled|Gets or sets a flag that determines whether major or minor grid lines are enabled.|
 |MajorGrid LineColor|Gets or sets the line color of a grid.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
-|MajorTickMark Enabled|Need description|
-|MajorTickMark LineColor|Need description|
+|MajorTickMark Enabled|Gets or sets a flag that determines whether major grid lines are enabled.|
+|MajorTickMark LineColor|Gets or sets the line color of a grid.|
 |Title|Gets or sets the title of the axis.|
 |TitleForeColor|Gets or sets the text color of an axis title.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 
@@ -181,10 +181,10 @@ Gets or sets the Y-axis type of the series.
 |LabelStyle ForeColor|Gets or sets the color of the label.|
 |LabelStyle Format|Gets or sets the formatting string for the label text. More information: [Supported numeric format for charts](#supported-numeric-format-for-charts-in-unified-interface)|
 |LineColor|Gets or sets the line color of an axis.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
-|MajorGrid Enabled|Gets or sets a flag that determines whether major or minor grid lines are enabled.|
+|MajorGrid Enabled|Gets or sets a flag that determines whether major grid lines are enabled.|
 |MajorGrid LineColor|Gets or sets the line color of a grid.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
-|MajorTickMark Enabled|Need description|
-|MajorTickMark LineColor|Need description|
+|MajorTickMark Enabled|Gets or sets a flag that determines whether major grid lines are enabled.|
+|MajorTickMark LineColor|Gets or sets the line color of a grid.|
 |Maximum|Gets or sets the maximum value of an axis.|
 |Minimum|Gets or sets the minimum value of an axis.|
 |Title|Gets or sets the title of the axis.|
