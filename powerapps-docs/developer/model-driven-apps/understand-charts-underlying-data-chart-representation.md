@@ -43,7 +43,7 @@ Charts display data visually by mapping textual values on two axes: horizontal (
 
  The data description XML string defines the data that is displayed on the chart. The contents of the XML string are validated against the visualization data description schema. For more information about the schema, see [Visualization Data Description Schema](visualization-data-description-schema.md).  
   
- You can specify the data description XML string while you are creating a chart using the `SavedQueryVisualization.DataDescription` or the `UserQueryVisualization.DataDescription` attribute for the organization-owned or user-owned chart respectively.  
+ You can specify the data description XML string while you are creating a chart using the `SavedQueryVisualization.DataDescription` or `UserQueryVisualization.DataDescription` attribute for the organization-owned or user-owned chart respectively.  
   
  The data description XML string contains the following two elements: `<FetchCollection>` and `<CategoryCollection>`.  
   
@@ -147,14 +147,14 @@ Gets or sets the X-axis type of the series.
 |LabelStyle Enabled|Gets or sets a flag that indicates whether the label is enabled.|
 |LabelStyle ForeColor|Gets or sets the color of the label.|
 |LabelStyle Format|Gets or sets the formatting string for the label text. More information: [Supported numeric format for charts](#supported-numeric-format-for-charts-in-unified-interface)|
-|LineColor|Gets or sets the line color of an axis.|
-|IsReversed|Gets or sets a flag which indicates whether the axis is reversed.|
+|LineColor|Gets or sets the line color of an axis.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
+|IsReversed|Gets or sets a flag which indicates whether the axis is reversed.<br/> If set to true, it has two effects for x-axis:<br/> - x-axis labels are flipped in the reversed order (from right-to-left)<br/>- It also bring the y-axis to the opposite side, to accommodate above right-to-left x-axis label.|
 |MajorGrid Enabled|Gets or sets a flag that determines whether major or minor grid lines are enabled.|
-|MajorGrid LineColor|Gets or sets the line color of a grid.|
+|MajorGrid LineColor|Gets or sets the line color of a grid.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |MajorTickMark Enabled|Need description|
 |MajorTickMark LineColor|Need description|
 |Title|Gets or sets the title of the axis.|
-|TitleForeColor|Gets or sets the text color of an axis title.|
+|TitleForeColor|Gets or sets the text color of an axis title.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 
 **Example**
 
@@ -174,21 +174,21 @@ Gets or sets the Y-axis type of the series.
 
 |Property Name| Description|
 |-------------|------------|
-|AxisY2|Gets or sets an Axis object that represents the secondary Y-axis.|
+|AxisY2|Gets or sets an Axis object that represents the secondary Y-axis.<br/> - Second Yaxis only applies to multiple series chart. <br/> - If you create multiple series chart with the chart editor, by default, the `YAxisType=Secondary` property will be added to the 2nd series of your chart, and a `AxisY2` node is added to the XML.<br/> - If you want another series to be measured by second Y axis, you can move the `YAxisType=Secondary` to that series node. <br/> - If you don't want a second Y axis, you can delete the `YAxisType=Secondary`.<br/> - If a Y Axis (either primary or secondary) measures more than 1 series, title will not be added to that Y Axis, because Y Axis title doesn't know which series to display.|
 |Enabled|Gets or sets a value that indicates whether an axis is enabled.|
 |Interval|Gets or sets the interval of an axis.|
 |LabelStyle Enabled|Gets or sets a flag that indicates whether the label is enabled.|
 |LabelStyle ForeColor|Gets or sets the color of the label.|
 |LabelStyle Format|Gets or sets the formatting string for the label text. More information: [Supported numeric format for charts](#supported-numeric-format-for-charts-in-unified-interface)|
-|LineColor|Gets or sets the line color of an axis.|
+|LineColor|Gets or sets the line color of an axis.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |MajorGrid Enabled|Gets or sets a flag that determines whether major or minor grid lines are enabled.|
-|MajorGrid LineColor|Gets or sets the line color of a grid.|
+|MajorGrid LineColor|Gets or sets the line color of a grid.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |MajorTickMark Enabled|Need description|
 |MajorTickMark LineColor|Need description|
 |Maximum|Gets or sets the maximum value of an axis.|
 |Minimum|Gets or sets the minimum value of an axis.|
 |Title|Gets or sets the title of the axis.|
-|TitleForeColor|Gets or sets the text color of an axis title.|
+|TitleForeColor|Gets or sets the text color of an axis title.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 
 **Example**
 
@@ -213,7 +213,7 @@ The root class for the charts.
 
 |Property Name|Description|
 |-------------|------------|
-|PaletteCustomColor|Gets or sets an array of custom palette colors.  It follows the priority as shown below: <br/> - Renders the color defined in the `Series` node. <br/> - If the color pallet is specified, chart picks the color from the color pallet. <br/> - If none is specified, it picks up the default color pallet.|
+|PaletteCustomColor|Gets or sets an array of custom palette colors.  It follows the priority as shown below: <br/> - Renders the color defined in the `Series` node. <br/> - If the color pallet is specified, chart picks the color from the color pallet. <br/> - If none is specified, it picks up the default color pallet.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 
 **Example**
 
@@ -230,15 +230,15 @@ Represents a chart area on the chart image.
 |Property Name| Description|
 |-------------|------------|
 |Area3DStyle Enable3D|Gets or sets a value that indicates whether the flag toggles the 3D on and off for a chart area.|
-|BackColor|Allow users to set the plot background to either a solid or a gradient color.|
-|BackSecondaryColor|Allow users to set the plot background to either a solid or a gradient color.|
+|BackColor|Allow users to set the plot background to either a solid or a gradient color.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
+|BackSecondaryColor|Allow users to set the plot background to either a solid or a gradient color.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |BackGradientStyle|Allow users to set the plot background to either a solid or a gradient color.|
 
 **Example**
 
 ```xml
 <ChartArea BackColor="orange" BackSecondaryColor="purple" BackGradientStyle="LeftRight" >
-	<Area3DStyle Enable3D="true" />
+  <Area3DStyle Enable3D="true" />
 </ChartArea>
 ```
 
@@ -256,7 +256,7 @@ Represents the legend for the chart image.
 
 ```xml
 <Legends>
-	<Legend Enabled="True"/>
+  <Legend Enabled="True"/>
 </Legends>
 ```
 
@@ -268,26 +268,26 @@ Stores data points and series attributes.
 
 |Property Name| Description|
 |-------------|------------|
-|BorderColor|Gets or sets the border color of the data point.|
+|BorderColor|Gets or sets the border color of the data point.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |BorderWidth|Gets or sets the border width of the data point.|
-|ChartType| An enumeration value that indicates the chart type that is used to represent the series. The default value is Column. It supports the following chart types: <br/> - Column <br/> - StackedColumn <br/> - StackedColumn100 <br/> - Bar <br/> - StackedBar <br/> - StackedBar100 <br/> - Area <br/> - StackedArea <br/> - StackedArea100 <br/> -  Line <br/> - Pie <br/> - Funnel <br/> - Tag <br/> - Doughnut <br/> - Point|
-|Color|Gets or sets the color of the data point. For funnel and pie charts, the color property defined in the series node is ignored, but picks the chart color from color palette.|
+|ChartType| An enumeration value that indicates the chart type that is used to represent the series. The default value is Column. It supports the following chart types: <br/> - Column <br/> - StackedColumn <br/> - StackedColumn100 <br/> - Bar <br/> - StackedBar <br/> - StackedBar100 <br/> - Area <br/> - StackedArea <br/> - StackedArea100 <br/> -  Line <br/> - Pie <br/> - Funnel <br/> - Tag <br/> - Doughnut <br/> - Point|
+|Color|Gets or sets the color of the data point. For funnel and pie charts, the color property defined in the series node is ignored, but picks the chart color from color palette.  More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |IsValueShownAsLabel|Gets or sets a flag that indicates whether to show the value of the data point on the label.|
 |CustomProperties|Allows users to set `FunnelNeckHeight` and `FunnelNeckWidth` to customize funnel chart's shape. FunnelNeckHeight & FunnelNeckWidth represents the percentage. This parameter is only supported for funnel chart types.|
 |IsVisibleInLegend|Gets or sets a flag that indicates whether the item is shown in the legend.|
-|LabelForeColor|Gets or sets the text color of the label.|
+|LabelForeColor|Gets or sets the text color of the label. More information: [Supported color format](#supported-color-format-in-unified-interface)|
 |LabelFormat|Gets or sets the format of the data point label. More information: [Supported numeric format for charts](#supported-numeric-format-for-charts-in-unified-interface)|
-|LegendText|Gets or sets the text of the item in the legend. For funnel and pie charts, the legend displays each individual data point's value in a series. Instead of displaying the series name as a whole.|
-|YAxisType|Gets or sets the Y-axis type of a series. Only second Y-axis is supported, not second X-axis.|
+|LegendText|Gets or sets the text of the item in the legend. For funnel and pie charts, the legend displays each data point's value in a series. Instead of displaying the series name as a whole.|
+|YAxisType|Gets or sets the Y-axis type of a series. Only the second Y-axis is supported, not second X-axis.|
 
 **Example**
 
 ```xml
 <Series>
-	<Series ChartType="Column" Color="91, 151, 213" LegendText="Est Revenue" IsVisibleInLegend="True" BorderColor="red" BorderWidth="1" IsValueShownAsLabel="True" LabelFormat="$#,0,.##K" LabelForeColor="59, 59, 59">
-	</Series>
-	<Series ChartType="Column" Color="237, 125, 49" LegendText="Actual Revenue" IsVisibleInLegend="True" BorderColor="red" BorderWidth="1" IsValueShownAsLabel="True" LabelFormat="$#,0,.##K" LabelForeColor="59, 59, 59" YAxisType="Secondary">
-	</Series>
+  <Series ChartType="Column" Color="91, 151, 213" LegendText="Est Revenue" IsVisibleInLegend="True" BorderColor="red" BorderWidth="1" IsValueShownAsLabel="True" LabelFormat="$#,0,.##K" LabelForeColor="59, 59, 59">
+  </Series>
+  <Series ChartType="Column" Color="237, 125, 49" LegendText="Actual Revenue" IsVisibleInLegend="True" BorderColor="red" BorderWidth="1" IsValueShownAsLabel="True" LabelFormat="$#,0,.##K" LabelForeColor="59, 59, 59" YAxisType="Secondary">
+  </Series>
 </Series>
 ```
 
@@ -304,7 +304,7 @@ Unified Interface supports the following color formats in chart presentation xml
 
 |Formatting values|Description|
 |------------|----------------|
-|`#,0` | No scaling, No decimals, leading zero|
+|`#,0` | No scaling, No decimals, leading zero|
 |`#,0,.##K`|Thousands, up to 2 decimals, leading zero|
 |`#,0,,.##M`|Millions, up to 2 decimals, leading zero|
 |`#,0,,,.##B` |Billions, up to 2 decimals, leading zero|
@@ -312,19 +312,20 @@ Unified Interface supports the following color formats in chart presentation xml
 |`C0`| Currency with no decimals|
 |`C2`|Currency with 2 decimals|
 |`F0`|Fixed point|
-|`#,0;(#,0);' '`| No scaling, no decimals, leading zero, negative value shown in braces, suppress zeros|
-|#,0,.##K;(#,0,.##K);' ' | Thousands, up to 2 decimals, leading zero negative value shown in braces, suppress zeros|
-|#,0,,.##M;(#,0,,.##M);' ' | Millions,  up to 2 decimals, leading zero negative value shown in braces, suppress zeros|
-|#,0,,,.##B;(#,0,,,.##B);' ' | Billions, up to 2 decimals, leading zero negative value shown in braces, suppress zeros|
-|%|Percent sign (%) in a format string causes a number to be multiplied by 100 before it is formatted|
+|`#,0;(#,0);' '`| No scaling, no decimals, leading zero, negative value shown in braces, suppress zeros|
+|`#,0,.##K;(#,0,.##K);' '` | Thousands, up to 2 decimals, leading zero negative value shown in braces, suppress zeros|
+|`#,0,,.##M;(#,0,,.##M);' '`| Millions,  up to 2 decimals, leading zero negative value shown in braces, suppress zeros|
+|`#,0,,,.##B;(#,0,,,.##B);' '` | Billions, up to 2 decimals, leading zero negative value shown in braces, suppress zeros|
+|`%`|Percent sign (%) in a format string causes a number to be multiplied by 100 before it is formatted|
 |||
 
 ### See also  
- [Visualizations (Charts)](view-data-with-visualizations-charts.md)   
- [Actions on Visualizations (Charts)](actions-visualizations-charts.md)   
- [Create a Chart](create-visualization-chart.md)   
- [Use FetchXML to construct a query](../common-data-service/use-fetchxml-construct-query.md)   
- [FetchXML schema](../common-data-service/fetchxml-schema.md)
- [Visualization Data Description Schema](visualization-data-description-schema.md)   
- [Sample Charts](sample-charts.md)   
- [Chart Class (Microsoft Chart Controls)](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx)
+
+[Visualizations (Charts)](view-data-with-visualizations-charts.md)   
+[Actions on Visualizations (Charts)](actions-visualizations-charts.md)   
+[Create a Chart](create-visualization-chart.md)   
+[Use FetchXML to construct a query](../common-data-service/use-fetchxml-construct-query.md)   
+[FetchXML schema](../common-data-service/fetchxml-schema.md)
+[Visualization Data Description Schema](visualization-data-description-schema.md)   
+[Sample Charts](sample-charts.md)   
+[Chart Class (Microsoft Chart Controls)](https://msdn.microsoft.com/library/system.web.ui.datavisualization.charting.chart.aspx)
