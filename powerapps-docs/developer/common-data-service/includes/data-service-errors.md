@@ -1199,7 +1199,7 @@
 |0x80048483<br />-2147187581|Name: **ErrorInUnzip**<br />Message: An error occurred while extracting the uploaded compressed (.zip) or .cab file. Make sure that the file isn't password protected, and try uploading the file again. If this problem persists, contact your system administrator.|
 |0x80048503<br />-2147187453|Name: **ErrorInUnzipAlternate**<br />Message: An error occurred while the uploaded compressed (.zip) file was being extracted. Try to upload the file again. If the problem persists, contact your system administrator.|
 |0x80040358<br />-2147220648|Name: **ErrorInUpdate**<br />Message: The Microsoft Dynamics 365 record could not be updated|
-|0x8004F214<br />-2147159532|Name: **ErrorInvalidFileNameChars**<br />Message: The Microsoft Excel file name cannot contain the following characters: *  \ : > < | ? " /. Rename the file using valid characters, and try again.|
+|0x8004F214<br />-2147159532|Name: **ErrorInvalidFileNameChars**<br />Message: The Microsoft Excel file name cannot contain the following characters: *  \ : > < \| ? " /. Rename the file using valid characters, and try again.|
 |0x8004F211<br />-2147159535|Name: **ErrorInvalidUIScriptImportFile**<br />Message: File type is not supported. Select an xml file for import.|
 |0x8005F034<br />-2147094476|Name: **ErrorMigrationProcessExcessOnServer**<br />Message: The server is busy handling other migration processes. Please try after some time.|
 |0x8004F215<br />-2147159531|Name: **ErrorMimeTypeNullOrEmpty**<br />Message: The MimeType property value of the UploadFromBase64DataUIScriptRequest method is null or empty. Specify a valid property value, and try again.|
