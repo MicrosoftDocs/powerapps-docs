@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/24/2020
+ms.date: 07/27/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -83,15 +83,22 @@ To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-exis
 
 An environment can have one portal of each type and for each language. Environments with Common Data Service have [starter portal template](portal-templates.md#environment-with-common-data-service) available. If you already have a starter portal for such an environment, you can't create another starter portal for the same language. Similarly, environments with Dynamics 365 have several [portal templates](portal-templates.md#environment-with-model-driven-apps-in-dynamics-365) available. If you have a portal from one of the templates already created in a language, you can't create a new portal with the same template type and language. New portal must have either a different portal type, or a different language.
 
-For example, the following table explains which additional portal template and language combination is allowed when creating additional portals:
+For example, consider a scenario where you have a Common Data Service environment without the Dynamics 365 Apps. In this environment, you have a portal with *English* language created with the template type of *Starter portal*. You want to create a new portal in this environment.
 
-| Existing portal template and language | Additional portal template and language | Environment type | Allowed |
-| - | - | - | - |
-| *Starter portal* in English | *Starter portal* in English | Common Data Service | &cross; |
-| *Starter portal* in English | *Starter portal* in French | Common Data Service | &check; |
-| *Portal from blank* in English | *Portal from blank* in English | Dynamics 365 | &cross; |
-| *Portal from blank* in English | *Community portal* in English | Dynamics 365 | &check; |
-| *Portal from blank* in English | *Portal from blank* in French | Dynamics 365 | &check; |
+In this scenario, the following table explains which additional portal template and language combination is allowed when creating additional portals:
+
+| Template type and language of existing portal  | Template type and language of the new portal that you want to create | Allowed |
+| - | - | - |
+| *Starter portal* in English | *Starter portal* in English | &cross; |
+| *Starter portal* in English | *Starter portal* in French | &check; |
+
+Similarly, the following table explains the allowed template type and language combination for a portal that can be created if you have a Common Data Service environment with Dynamics 365 Apps. In this example, you have a portal with the template *Portal from blank* created in *English* language. You want to create a new portal in this environment.
+
+| Template type and language of existing portal | Template type and language of the new portal that you want to create | Allowed |
+| - | - | - |
+| *Portal from blank* in English | *Portal from blank* in English | &cross; |
+| *Portal from blank* in English | *Community portal* in English | &check; |
+| *Portal from blank* in English | *Portal from blank* in French | &check; |
 
 When an environment already has a portal of the available template type created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
 
