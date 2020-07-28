@@ -82,7 +82,41 @@ condition3.Operator = ConditionOperator.Equal;
 condition3.Values.Add(AccountState.Active);  
   
 ```  
-  
+
+## Column comparison using the SDK API
+
+The following example shows how to compare columns using SDK API and the Organization service:
+
+```csharp
+public ConditionExpression
+(
+  string attributeName,
+  ConditionOperator conditionOperator,
+  bool compareColumns,
+  object value
+)
+
+public ConditionExpression
+(
+  string attributeName,
+  ConditionOperator conditionOperator,
+  bool compareColumns,
+  object[] values
+)
+```
+
+In the SDK, two APIs are introduced to support column comparison. The
+first identifies the original attribute, the second allows
+for the inclusion of the attribute you want to compare it against.
+
+If `compareColumns` is passed in as `true`, it will compare the two attributes
+and return all records that match.
+
+If a `false` value is passed, it will return all records for one attribute and
+return values that match the provided value.
+
+More information: [Use column comparison in queries](../column-comparison.md)
+
 ### See also  
  [Building Queries](build-queries-with-queryexpression.md)   
  [Build Queries with QueryExpression](build-queries-with-queryexpression.md)   

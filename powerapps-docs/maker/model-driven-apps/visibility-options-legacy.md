@@ -2,7 +2,7 @@
 title: "Show or hide model-driven app form elements with Power Apps | MicrosoftDocs"
 description: "Learn how to display or hide from elements, such as tabs, sections, or fields"
 ms.custom: ""
-ms.date: 06/11/2018
+ms.date: 07/23/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -27,8 +27,9 @@ search.app:
 
  Several types of form elements have the option to be shown or hidden by default. Tabs, sections, fields, iFrames, and web resources all provide this option. Using form scripts or business rules the visibility of these elements can be controlled to create a dynamic form to provide a user interface that adapts to conditions in the form.  
   
-> [!NOTE]
+> [!IMPORTANT]
 >  Hiding form elements is not a recommended way to enforce security. There are several ways people can view all the elements and data in the form when elements are hidden. 
+> Disabling, hiding, or locking a field, control, or form component using the form designer, manually in the form XML, or using a Client API only works to control data access in a Unified Interface or legacy web client app. It doesn’t strictly enforce data access by itself in the apps. Moreover, it doesn’t control data access using other ways to connect to Common Data Service such as using the Web service or a canvas app. To control access, [Set security roles for a form](control-access-forms.md#set-security-roles-for-a-form) or use [Field-level security](/power-platform/admin/field-level-security). 
   
  Rather than designing forms that depend on scripts to control visibility of options, consider whether a business process flow, a dialog, or switching to a different form may be better suited to meet your requirements. If you do use scripts, make sure that any element that might be hidden is hidden by default. Only show it with scripts when your logic calls for it. This way it will not be displayed in presentations that do not support scripts.
  

@@ -57,7 +57,7 @@ Power Apps stores some data locally in your browser, including user identity and
 
 - **Option 1: Enable local data for all sites**
 
-    1. Close all Internet Explorer and Edge windows.
+    1. Close all Internet Explorer and Microsoft Edge windows.
     2. Select **OK** to close the **Internet Options** dialog box.
     3. Select **OK**.
     4. Remove any entries for **powerapps.com**.
@@ -80,15 +80,15 @@ Power Apps stores some data locally in your browser, including user identity and
     6. Add an entry to “Allow” **powerapps.com**.
     7. Select **OK**.
     8. Select **OK** to close the Internet Options dialog box.
-    9. Close all Internet Explorer and Edge windows.
+    9. Close all Internet Explorer and Microsoft Edge windows.
 
-### Instructions for Edge
-1. Open Edge.
-2. On the Edge toolbar, select **More** > **Settings**.
+### Instructions for Microsoft Edge
+1. Open Microsoft Edge.
+2. On the Microsoft Edge toolbar, select **More** > **Settings**.
 3. Near the bottom of the panel, select **View advanced settings**.
 4. Near the bottom of the panel, find the **Cookies** drop-down options list.
 5. Select **Don’t block cookies**.
-6. Close all Internet Explorer and Edge windows.
+6. Close all Internet Explorer and Microsoft Edge windows.
 
 ### Instructions for Chrome
     
@@ -112,9 +112,9 @@ Power Apps stores some data locally in your browser, including user identity and
     6. Select **Done**.
 
 
-## Resolution 2: Configure Trust Zones for Internet Explorer and Edge
+## Resolution 2: Configure Trust Zones for Internet Explorer and Microsoft Edge
 
-Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on which Power Apps relies are in different Trust Zones in your browser settings. While these settings apply to both Internet Explorer and Edge, the easiest way to access them is from Internet Explorer. (You might need assistance from your IT administrator to change some of these settings.)
+Internet Explorer and Microsoft Edge use *Trust Zones*. Problems can occur if services on which Power Apps relies are in different Trust Zones in your browser settings. While these settings apply to both Internet Explorer and Microsoft Edge, the easiest way to access them is from Internet Explorer. (You might need assistance from your IT administrator to change some of these settings.)
 
 - **Option 1: Add the required Power Apps domains to the Trusted Sites zone**
     1. On the browser toolbar, select the gear icon.
@@ -131,7 +131,7 @@ Internet Explorer and Edge use *Trust Zones*. Problems can occur if services on 
         - **https://*.powerapps.com** (the asterisk is part of the address, don't replace it)
     7. Select **Close**.
     8. Select **OK**.
-    9. Close all Internet Explorer and Edge windows.
+    9. Close all Internet Explorer and Microsoft Edge windows.
  
 
 - **Option 2: Remove all the Power Apps domains from the Trusted Sites zone**

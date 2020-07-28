@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 09/14/2019
+ms.date: 07/17/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -74,17 +74,15 @@ You need a formula that can adapt to this variance. You also need to add the dat
 With these data sources in place, use this formula to display the name of either a user or a team:
 
 ```powerapps-dot
-If( IsType( ThisItem.Owner, [@Teams] ),
-    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
+If( IsType( ThisItem.Owner, Teams ),
+    "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
+    "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
 ```
 
 > [!div class="mx-imgBorder"]
 > ![Accounts shown in a Gallery control with Owner field displayed](media/working-with-references/accounts-displayowner.png)
 
 In this formula, the **IsType** function tests the **Owner** field against the **Teams** entity. If it's of that entity type, the **AsType** function casts it to a **Team** record. At this point, you can access all the fields of the **Teams** entity, including **Team Name**, by using the *.Field* notation. If **IsType** determines that the **Owner** isn't a record in the **Teams** entity, that field must be a record in the **Users** entity because the **Owner** field is required (can't be *blank*).
-
-You're using the [global disambiguation operator](functions/operators.md#disambiguation-operator) for **[@Teams]** and **[@Users]** to ensure that you're using the global entity type. You don't need it in this case, but it's a good habit to form. One-to-many relationships often conflict in the gallery's record scope, and this practice avoids that confusion.
 
 To use any fields of a record reference, you must first use the **AsType** function to cast it to a specific entity type. You can't access fields directly from the **Owner** field because the system doesn't know what entity type you want to use.
 
@@ -97,8 +95,8 @@ Then replace the previous formula with this one:
 
 ```powerapps-dot
 IfError(
-    "Team: " & AsType( ThisItem.Owner, [@Teams] ).'Team Name',
-    "User: " & AsType( ThisItem.Owner, [@Users] ).'Full Name' )
+    "Team: " & AsType( ThisItem.Owner, Teams ).'Team Name',
+    "User: " & AsType( ThisItem.Owner, Users ).'Full Name' )
 ```
 
 ## Filter based on an owner
@@ -244,8 +242,8 @@ To add this capability to the app:
     ```powerapps-dot
     Patch( Accounts, Gallery1.Selected,
         { Owner: If( Radio1_1.Selected.Value = "Users",
-                ComboBox1_2.Selected,
-                ComboBox1_3.Selected ) } )
+                     ComboBox1_2.Selected,
+                     ComboBox1_3.Selected ) } )
     ```
 
     > [!div class="mx-imgBorder"]
@@ -357,9 +355,9 @@ Both of these changes are in the same formula, which appears in the custom card 
 
 ```powerapps-dot
 If( IsBlank( ThisItem.'Company Name' ), "",
-    IsType( ThisItem.'Company Name', [@Accounts] ),
-        "Account: " & AsType( ThisItem.'Company Name', [@Accounts] ).'Account Name',
-    "Contact: " & AsType( ThisItem.'Company Name', [@Contacts] ).'Full Name'
+    IsType( ThisItem.'Company Name', Accounts ),
+        "Account: " & AsType( ThisItem.'Company Name', Accounts ).'Account Name',
+    "Contact: " & AsType( ThisItem.'Company Name', Contacts ).'Full Name'
 )
 ```
 
@@ -393,10 +391,10 @@ An important difference for **Regarding** is that it isn't limited to **Accounts
 
 ```powerapps-dot
 If( IsBlank( ThisItem.Regarding ), "",
-    IsType( ThisItem.Regarding, [@Accounts] ),
-        "Account: " & AsType( ThisItem.Regarding, [@Accounts] ).'Account Name',
-    IsType( ThisItem.Regarding, [@Contacts] ),
-        "Contacts: " & AsType( ThisItem.Regarding, [@Contacts] ).'Full Name',
+    IsType( ThisItem.Regarding, Accounts ),
+        "Account: " & AsType( ThisItem.Regarding, Accounts ).'Account Name',
+    IsType( ThisItem.Regarding, Contacts ),
+        "Contacts: " & AsType( ThisItem.Regarding, Contacts ).'Full Name',
     ""
 )
 ```
@@ -498,10 +496,10 @@ Records are coming from the **Activity** entity, but you can nevertheless use th
 By using this formula, you can show the record type in a label control within the gallery:
 
 ```powerapps-dot
-If( IsType( ThisItem, [@Faxes] ), "Fax",
-    IsType( ThisItem, [@'Phone Calls'] ), "Phone Call",
-    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
-    IsType( ThisItem, [@Chats] ), "Chat",
+If( IsType( ThisItem, Faxes] ), "Fax",
+    IsType( ThisItem, 'Phone Calls' ), "Phone Call",
+    IsType( ThisItem, 'Email Messages' ), "Email Message",
+    IsType( ThisItem, Chats ), "Chat",
     "Unknown"
 )
 ```
@@ -512,13 +510,13 @@ If( IsType( ThisItem, [@Faxes] ), "Fax",
 You can also use **AsType** to access the fields of the specific type. For example, this formula determines the type of each activity and, for phone calls, shows the phone number and call direction from the **Phone Numbers** entity:
 
 ```powerapps-dot
-If( IsType( ThisItem, [@Faxes] ), "Fax",
-    IsType( ThisItem, [@'Phone Calls'] ),
+If( IsType( ThisItem, Faxes ), "Fax",
+    IsType( ThisItem, 'Phone Calls' ),
        "Phone Call: " &
-       AsType( ThisItem, [@'Phone Calls'] ).'Phone Number' &
-       " (" & AsType( ThisItem, [@'Phone Calls'] ).Direction & ")",
-    IsType( ThisItem, [@'Email Messages'] ), "Email Message",
-    IsType( ThisItem, [@Chats] ), "Chat",
+       AsType( ThisItem, 'Phone Calls' ).'Phone Number' &
+       " (" & AsType( ThisItem, 'Phone Calls' ).Direction & ")",
+    IsType( ThisItem, 'Email Messages' ), "Email Message",
+    IsType( ThisItem, Chats ), "Chat",
     "Unknown"
 )
 ```

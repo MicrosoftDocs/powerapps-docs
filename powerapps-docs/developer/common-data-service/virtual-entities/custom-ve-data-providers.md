@@ -1,15 +1,15 @@
 ---
 title: "Custom virtual entity data providers (Common Data Service) | Microsoft Docs"
 description: "Using the Common Data Service Data SDK, .NET Developers have the option of creating custom virtual entity data providers to help integrate external data source types that are not supported by an existing data provider."
-ms.date: 09/05/2019
+ms.date: 06/24/2020
 ms.service: powerapps
 ms.topic: "article"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d22
-author: "mayadumesh" # GitHub ID
-ms.author: "jdaly"
-manager: "annbe"
+author: "Sunil-Garg" # GitHub ID
+ms.author: "pehecke"
+manager: "ryjones"
 search.audienceType: 
   - developer
 search.app: 

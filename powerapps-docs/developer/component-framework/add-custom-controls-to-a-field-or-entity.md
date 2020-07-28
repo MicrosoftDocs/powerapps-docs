@@ -63,7 +63,7 @@ Following the steps below will change the default label and text box field of th
   
    - **Step**. This represents the unit to increment or decrement when adding to or subtracting from  the current value. For example, for budget amount you can select 100 dollar increments\decrements.  
   
-   - **Hide Default Control**. Hides the component so neither the component or the data is displayed in any of the clients that don't support the code component.   
+   - **Hide Default Control**. Hides the component so neither the component nor the data is displayed in any of the clients that don't support the code component.   
   
 8. Select **OK**, to close the Field Properties page.  
   

@@ -30,9 +30,6 @@ Components are groups of controls that can answer the need for a specific scenar
 You can read more about components and how to build your own in [Power Apps component framework docs](/powerapps/developer/component-framework/custom-controls-overview).
 
 
-> [!NOTE]
-> Mixed reality components are currently an experimental preview feature that is only available in [https://preview.create.powerapps.com](https://preview.create.powerapps.com) on a [Power Apps Preview Program environment](/power-platform/admin/preview-environments).
-
 The following prebuilt components can be used for mixed reality scenarios:
 
 

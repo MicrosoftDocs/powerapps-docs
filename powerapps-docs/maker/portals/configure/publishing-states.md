@@ -1,14 +1,13 @@
 ---
 title: "Create and manage publishing states in Power Apps portals | MicrosoftDocs"
 description: "Learn how to create and manage publishing states in a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/22/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Create and manage publishing states
