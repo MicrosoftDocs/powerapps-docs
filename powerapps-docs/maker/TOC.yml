@@ -1078,6 +1078,8 @@
             href: ./model-driven-apps/optimize-form-performance.md
           - name: How to work with sections in a form
             href: ./model-driven-apps/section-properties-legacy.md
+          - name: How to add a chart to a form
+            href: ./model-driven-apps/add-chart-to-form.md
           - name: How to configure Bing maps in a form
             href: ./model-driven-apps/configure-bing-maps-legacy.md
           - name: How to assign form order
