@@ -109,10 +109,9 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 3. Add the connections to your data sources to the Common Data Service using the new data source selection experience. 
 
     > [!NOTE] 
-    > If you have connections to other environments (other than current), select the *Entity* category and then the *More* (...) option to change the environment. You can then select an entity from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
-
-    > [!NOTE] 
-    > If you do not see the environment you were using for your D365 connector then you may have a permissions issue.  To see an environment you need to have at least one these roles: System Administrator, System Customizer, or Environment Maker. Alternatively you may have permissions if someone shared a Power Apps application with maker permissions for that environment.  Otherwise you won’t see the environment when trying to use CDS. Contact an administrator for the environment to get permissions.
+    > - If you have connections to other environments (other than current), select the *Entity* category and then the *More* (...) option to change the environment. You can then select an entity from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
+    > - If you don't see the environment you want to use, ensure your account has the required permissions defined to see an environment. For example, your account may need to be a member of the roles such as Environment Admin, Environment Maker or System Administrator. For more information about environment permissions, go to [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
+    > - If you do not see the environment you were using for your D365 connector then you may have a permissions issue.  To see an environment you need to have at least one these roles: System Administrator, System Customizer, or Environment Maker. Alternatively you may have permissions if someone shared a Power Apps application with maker permissions for that environment.  Otherwise you won’t see the environment when trying to use CDS. Contact an administrator for the environment to get permissions.
 
 
 4.	Save your application.
