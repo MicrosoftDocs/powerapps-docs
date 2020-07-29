@@ -167,7 +167,7 @@ Or, you can use an input text control to type in a Twitter handle, just as we ha
 2. Add a button, and then set its **[OnSelect](../controls/properties-core.md)** property to the following formula:  
     `Twitter.Tweet("",{tweetText: MyTweet.Text})`
     <br> Example: `Twitter.Tweet("",{tweetText:"Sample tweet!"})`
-3. Press F5, or select the Preview button (![](./media/connection-twitter/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
+3. Press F5, or select the Preview button (![Preview button](./media/connection-twitter/preview.png)). Type some text into **MyTweet**, and then select the button to tweet the text that you entered.
 4. Press Esc to return to the default workspace.
 
 ## View the available functions
