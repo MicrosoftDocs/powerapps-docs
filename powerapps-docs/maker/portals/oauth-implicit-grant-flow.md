@@ -20,7 +20,6 @@ OAuth 2.0 implicit grant flow supports endpoints that a client can call to get a
 > Power Apps portals supports following OpenIdConnect flows and response types:
 >
 > - **Implicit Flow** with response types *id_token* or *id_token token*.
-> - **Hybrid Flow** with response type *code id_token*.
 >
 > **Authorization Code Flow** with response type *code* is **not supported**. For more information, read [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html#Authentication) documentation for authentication.
 
@@ -41,7 +40,7 @@ The URL for authorize endpoint is: `<portal_url>/_services/auth/authorize`. The 
 
 The authorize endpoint returns the following values in the response URL as a fragment:
 
-- **token**: Token is returned as a JSON Web Token (JWT) digitally signed by the portal’s private key.
+- **token**: Access token is returned as a JSON Web Token (JWT) digitally signed by the portal’s private key.
 - **state**: If a state parameter is included in the request, the same value should appear in the response. The app should verify that the state values in the request and response are identical.
 - **expires_in**: The length of time that the access token is valid (in seconds).
 
