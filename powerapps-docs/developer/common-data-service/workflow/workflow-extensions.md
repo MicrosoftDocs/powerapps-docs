@@ -49,14 +49,14 @@ By default, these processes include a common set of activities you can perform a
 
 You can use the **Perform Action** activity to execute any custom actions or the following system messages called **Command Actions**:
 
-||||
+|Actions|Actions (cont'd)|Actions (cont'd)|
 |--|--|--|
 |AddToQueue|AddUserToRecordTeam|RemoveUserFromRecordTeam|
 |SetProcess|SetWordTemplate||
 
 If you have Dynamics 365 Sales or Service solutions, you can find other command actions depending on the solution:
 
-||||
+|Actions|Actions (cont'd)|Actions (cont'd)|
 |--|--|--|
 |ApplyRoutingRule|CalculateActualValue|CloseOpportunity|
 |GetQuoteProductsFromOpportunity|GetSalesOrderProductsFromOpportunity|LockInvoicePricing|
@@ -132,7 +132,7 @@ When your custom workflow activity uses input or output parameters you must add 
 
 You can use the following types of properties as input or output parameters:
 
-||||
+|Properties|Properties (cont'd)|Properties (cont'd)|
 |--|--|--|
 |[bool](/dotnet/api/system.boolean)|[DateTime](/dotnet/api/system.datetime)|[Decimal](/dotnet/api/system.decimal)|
 |[Double](/dotnet/api/system.double)|<xref:Microsoft.Xrm.Sdk.EntityReference>|[int](/dotnet/api/system.int32)|
