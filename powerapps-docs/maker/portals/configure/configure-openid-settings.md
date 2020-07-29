@@ -24,6 +24,14 @@ Each OpenID Connect provider also involves registering an application (similar t
 > [!Note]
 > The Google OpenID Connect endpoint is currently not supported because the underlying libraries are still in the early stages of release with compatibility issues to address. The [OAuth2 provider settings for portals](configure-oauth2-settings.md) endpoint can be used instead.
 
+> [!NOTE]
+> Power Apps portals supports following OpenIdConnect flows and response types by adding site setting (Authentication/OpenIdConnect/\[provider\]/ResponseType):
+>
+> - **Implicit Flow** with response types *id_token* or *id_token token*.
+> - **Hybrid Flow** with response type *code id_token*.
+>
+> **Authorization Code Flow** with response type *code* is **not supported**. For more information, read [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html#Authentication) documentation for authentication.
+
 ## OpenID settings for [!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]
 
 To get started, sign into the [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] Management Portal](https://msdn.microsoft.com/library/azure/hh967611.aspx#bkmk_azureportal) and create or select an existing directory. When a directory is available follow the instructions to [add an application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) to the directory.  
