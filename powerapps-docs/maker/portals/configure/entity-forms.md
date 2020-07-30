@@ -1,14 +1,13 @@
 ---
 title: "Define entity forms | MicrosoftDocs"
 description: "Instructions to create entity forms in a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/07/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # About entity forms
@@ -214,9 +213,10 @@ To disable request validation, follow these steps:
 
 ### See also
 
-[Configure a portal](configure-portal.md)  
-[Web Form properties for portals](web-form-properties.md)  
-[Web Form steps for portals](web-form-steps.md)  
-[Web Forms metadata for portals](configure-web-form-metadata.md)  
-[Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-[Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
+- [Configure a portal](configure-portal.md)  
+- [Web Form properties for portals](web-form-properties.md)  
+- [Web Form steps for portals](web-form-steps.md)  
+- [Web Forms metadata for portals](configure-web-form-metadata.md)  
+- [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
+- [Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
+- [Microsoft Learn: Interact with Common Data Service data using entity forms](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/3-entity-forms)

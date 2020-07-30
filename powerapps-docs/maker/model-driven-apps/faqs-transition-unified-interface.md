@@ -2,7 +2,7 @@
 title: "FAQs: Transition to Unified Interface | MicrosoftDocs"
 description: "FAQs related to the transition process for moving users from the legacy web client to Unified Interface."
 ms.custom: ""
-ms.date: 03/04/2020
+ms.date: 07/07/2020
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -22,13 +22,18 @@ This topic provides answers to the most common questions about Unified Interface
 
 ## FAQs: Unified Interface and legacy web client
 
+### What is Unified Interface?
+
+Unified Interface for model-driven apps provides a consistent and accessible user experience across devices. It is the latest look and feel of all model-driven apps and Dynamics 365 apps such as Dynamics 365 Sales and Dynamics 365 Customer Service. More information: [Enhanced user experience with the Unified Interface for model-driven apps](/powerapps/user/unified-interface).
+
+
 ### Why should I move to Unified Interface?
 
 Microsoft's vision of a productive workplace requires a modern interface that includes the features and improvements contained in Unified Interface, which provides a more consistent user experience, improved performance and increased user efficiency. For more information, see [Unified Interface playbook.](https://docs.microsoft.com/powerapps/maker/model-driven-apps/unified-interface-playbook)
 
 ### Are my ISVs compatible?
 
-ISVs have been notified to take action on the transition to Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
+ISVs (Independent Software Vendors) such as third-parties listed on [Microsoft AppSource](https://appsource.microsoft.com/en-us/?product=dynamics-365-business-central%3Bdynamics-365-customer-insights%3Bdynamics-365-for-customer-services%3Bdynamics-365-for-field-services%3Bdynamics-365-for-finance-and-operations%3Bdynamics-365-for-project-service-automation%3Bdynamics-365-for-sales) have been notified to take action on the transition to Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
 
 ### What is the retraining effort?
 
@@ -55,7 +60,7 @@ It is highly recommended to plan your move to Unified Interface at the same time
 
 ### When will ISVs be notified of the need to move to Unified Interface?
 
-ISVs have been notified to take action on the transition to Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
+ISVs (Independent Software Vendors) such as third-parties listed on [Microsoft AppSource](https://appsource.microsoft.com/en-us/?product=dynamics-365-business-central%3Bdynamics-365-customer-insights%3Bdynamics-365-for-customer-services%3Bdynamics-365-for-field-services%3Bdynamics-365-for-finance-and-operations%3Bdynamics-365-for-project-service-automation%3Bdynamics-365-for-sales) have been notified to take action on the transition to Unified Interface. Contact your ISV directly regarding their timeline for Unified Interface compatibility.
 
 ### How are language translations handled?
 
@@ -76,6 +81,12 @@ You can move right away; we already have many customers transitioned in producti
 ### What are the risks associated with moving to Unified Interface?
 
 We see a risk in staying on legacy web client because our investment and strategic direction is on Unified Interface. If you are now planning to start the transition, review our [community site](https://community.dynamics.com/365/unified-interface/) and [quick start guides](https://docs.microsoft.com/powerapps/maker/model-driven-apps/transition-web-app-existing). This will help you identify gaps (if any) and have a plan to fix those before you do a full deployment.
+
+### What happens to my environment after the December 1, 2020 deadline passes?
+
+If you are still using the legacy web client on December 1, 2020, we will automatically transition your environment/organization to Unified Interface. This process will be applied by geographic location in alignment with a typical update cycle timeframe. Customers will receive communication on their tenant transition date.
+
+We don't expect any downtime with the transition process, but you must ensure that your environment is compatible. For more information, see [Checklist: Unified Interface transition](/powerapps/maker/model-driven-apps/checklist-transition-unified-interface).
 
 ### I have a new feature idea for Unified Interface; where do I log it?
 

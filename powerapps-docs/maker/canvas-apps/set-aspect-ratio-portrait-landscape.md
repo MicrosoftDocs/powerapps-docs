@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/30/2020
+ms.date: 07/28/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -69,6 +69,11 @@ Customize a canvas app by changing its screen size and orientation.
     You can also modify the app's orientation by enabling **Optimize embedding appearance** in **Advanced settings** under **Experimental features**. This feature top-left aligns the app when it's embedded and changes the background color of the hosting canvas to white.
 
     ![Embedding experience](./media/set-aspect-ratio-portrait-landscape/embedding-experience.png "Embedding experience")
+
+1. Select **Apply** to save the changes.
+
+    > [!IMPORTANT]
+    > Ensure you select **Apply** to reflect the screen size and orientation changes to your app.
 
 1. [Save and publish](save-publish-app.md) your app.
 

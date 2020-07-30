@@ -1,13 +1,12 @@
 ---
 title: "Azure AD B2C provider settings for portals | MicrosoftDocs"
 description: "Instructions to enable Azure AD B2C provider settings for portals."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/03/2020
-ms.author: tapanm
+ms.date: 07/21/2020
+ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
@@ -108,7 +107,7 @@ You can create or configure the following site settings in portals to support [!
 | Authentication/Registration/ExternalLoginEnabled                     | Enables or disables external authentication.       |
 | Authentication/Registration/AzureADLoginEnabled                      | Enables or disables [!include[Azure](../../../includes/pn-azure-shortest.md)] AD as an external identity provider. By default, it is set to true.                                                                                                                                                                      |
 | Authentication/OpenIdConnect/[Federation-Name]/ExternalLogoutEnabled | Enables or disables federated sign-out. When set to true, users are redirected to the federated sign-out user experience when they sign out from the portal. When set to false, users are signed out from the portal only. By default, it is set to false.               |
-| Authentication/LoginTrackingEnabled                                  | Enables or disables tracking the user's last sign-in. When set to true, the date and time are displayed in the **Last Successful Sign-in** field on the contact record. By default, this is set to false.                                                            |
+| Authentication/LoginTrackingEnabled (Deprecated)                                  | Enables or disables tracking the user's last sign-in. When set to true, the date and time are displayed in the **Last Successful Sign-in** field on the contact record. By default, this is set to false. Login tracking is deprecated. For more information, go to [Login tracking FAQ](../faq.md#login-tracking-enabled).                                                           |
 | Authentication/OpenIdConnect/[Federation-Name]/RegistrationEnabled   | Enables or disables the registration requirement for the existing identity provider. When set to true, registration is enabled for the existing provider only if the site setting Authentication/Registration/Enabled is also set to true. By default, it is set to true. |
 |Authentication/OpenIdConnect/[Federation-Name]/PostLogoutRedirectUri |Specifies the URL within the portal to redirect to after a user signs out. |
 | | |

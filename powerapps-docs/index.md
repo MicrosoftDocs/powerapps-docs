@@ -210,7 +210,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. You can create three types of apps in Power Apps: <strong>Canvas app</strong>, <strong>Model-driven app</strong>, and <strong>Portal</strong>. <strong>Common Data Service</strong> is the data platform that lets you securely store and manage data used by business apps. More information: <a href="/powerapps/maker">Create apps</a>.</p>
+                           <p>App makers can manage their organization's mission-critical data by quickly creating custom business apps without writing code. You can create three types of apps in Power Apps: <strong>Canvas app</strong>, <strong>Model-driven app</strong>, and <strong>Portal</strong>. <strong>Common Data Service</strong> is the data platform that lets you securely store and manage data used by business apps. More information: <a href="/powerapps/guidance/planning/introduction">Planning a Power Apps project</a> and <a href="/powerapps/maker">Create apps</a>.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -263,8 +263,7 @@ ms.custom:
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-edit-views">Create and manage app views</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-edit-system-chart">Use charts</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-edit-dashboards">Use dashboards</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/use-custom-controls-data-visualizations">Use custom controls</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/create-themes-organization-branding">Use themes for branding</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/use-custom-controls-data-visualizations">Use custom controls</a></p>                                    
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/share-model-driven-app">Share an app</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/model-driven-apps/distribute-model-driven-app">Distribute an app</a></p>
                                  </div>
@@ -307,13 +306,14 @@ ms.custom:
                                     <h3 style="font-size: 1.15rem">Common Data Service</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-intro">What is Common Data Service?</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/why-cds-overview">Why choose Common Data Service?</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/entity-overview">Entities</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/relationships-overview">Entity relationships</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/fields-overview">Fields</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/cds-processes">Apply business logic</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/solutions-overview">Solutions</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/wp-security">Security in Common Data Service</a></p>
-                                    <p><a class="barLink" style="font-size: 0.95rem" href="https://www.microsoft.com/download/details.aspx?id=57777">Whitepaper: ALM using solutions</a></p>
+                                    <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/alm/">Power Platform ALM guide</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/powerapps/maker/common-data-service/data-platform-powerbi-connector">Build Power BI reports from Common Data Service data</a></p>
                                  </div>
                               </div>
@@ -328,7 +328,7 @@ ms.custom:
                      class="cardsF">
                      <li>
                         <div class="container">
-                           <p>Admins can use the Power Platform Admin center to secure data, manage environments, and monitor usage.</p>
+                           <p>Admins can use the Power Platform admin center to secure data, manage environments, and monitor usage.</p>
                            <hr/>
                            <br/>
                         </div>
@@ -343,7 +343,7 @@ ms.custom:
                                     </div>
                                  </div>
                                  <div class="cardText">
-                                    <h3 style="font-size: 1.15rem">Power Platform Admin center</h3>
+                                    <h3 style="font-size: 1.15rem">Power Platform admin center</h3>
                                     <hr/>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/admin-documentation">Administer Power Platform</a></p>
                                     <p><a class="barLink" style="font-size: 0.95rem" href="/power-platform/admin/get-help-support">Get Help + Support</a></p>

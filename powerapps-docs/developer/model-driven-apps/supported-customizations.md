@@ -36,9 +36,9 @@ The following customization methods can be used to produce fully supported custo
 
 - Customization in the Power Apps portal or solution explorer. For more information, see [Overview of building model-driven apps](../../maker/model-driven-apps/model-driven-app-overview.md)
 
-- Settings in the web application. For more information, see [Administer model-driven apps](/dynamics365/customer-engagement/admin/admin-guide).
+- Settings in the web application. For more information, see [Administer model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
 
-- Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](/dynamics365/customer-engagement/analytics/reporting-analytics-with-dynamics-365).
+- Reporting Services. For more information, see [Reporting and Analytics guide for model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-reporting-to-app).
 
 > [!NOTE]
 > The behavior of model-driven apps depend on customizations applied to the associated Common Data Service. More information: [Supported Customizations for Common Data Service](../common-data-service/supported-customizations.md)
@@ -77,7 +77,7 @@ The following is a list of unsupported action types that are frequently asked ab
 - Editing a solutions file to edit any solution components other than ribbons, forms, SiteMap, or saved queries is not supported. For more information, see [When to edit the customizations file](when-edit-customization-file.md).
     - Defining new solution components by editing the solutions file is not supported.
     - Editing web resource files exported with a solution is not supported.
-    - Except for the steps documented in [Maintain managed solutions](../common-data-service/maintain-managed-solutions.md), editing the contents of a managed solution is not supported.
+    - Except for the steps documented in [Maintain managed solutions](/power-platform/alm/maintain-managed-solutions), editing the contents of a managed solution is not supported.
 
 - Displaying an entity form within an IFrame embedded in another entity form is not supported.
 
