@@ -39,7 +39,7 @@ highlightedContent:
     # Card
     - title: Power Apps training on Microsoft Learn
       itemType: learn
-      url: https://docs.microsoft.com/en-us/learn/browse/?products=powerapps
+      url: https://docs.microsoft.com/en-us/learn/browse/?products=power-apps
 
 # conceptualContent section
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
