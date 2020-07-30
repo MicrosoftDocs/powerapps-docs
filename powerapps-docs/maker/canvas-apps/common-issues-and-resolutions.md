@@ -19,7 +19,7 @@ search.app:
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
 1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
-   When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access to their Power Apps. As a workaround, please use your browser.
+   When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, please use your browser.
 
 1. **Connection.Connected returns the wrong value during OnStart in Power Apps for Windows** (July 21, 2020)
    While offline, **Connection.Connected** may wrongly return **true** immediately after starting an app in the Windows app. As a workaround, delay when the logic depending on it is executed by using a **Timer** control. 
