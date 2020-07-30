@@ -50,7 +50,7 @@ The following sample code shows how you can hide or display the **Create** butto
 ```JavaScript
 function sampleFunction(executionContext) {
     var formContext = executionContext.getFormContext();
-    formContext.data.process.getActiveStage.getNavigationBehavior().allowCreateNew = function () {
+    formContext.data.process.getActiveStage().getNavigationBehavior().allowCreateNew = function () {
         if (formContext.data.process.getName() === 'Test Process') {
             return false; // Create button is not available
         }

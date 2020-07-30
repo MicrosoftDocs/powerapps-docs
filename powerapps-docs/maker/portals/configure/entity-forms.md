@@ -1,14 +1,13 @@
 ---
 title: "Define entity forms | MicrosoftDocs"
 description: "Instructions to create entity forms in a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 03/11/2020
-ms.author: tapanm
-ms.reviewer:
+ms.date: 05/07/2020
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # About entity forms
@@ -25,10 +24,11 @@ To view existing entity forms or to create new entity forms, open the [Portal Ma
 
 When creating a new entity form, the first step is to decide the **Entity** and **Form Name** that you will be rendering, in addition to the **mode: Insert, Edit, or Read Only**. The mode selected will determine if you are creating a new record from the portal, editing an existing record, or just displaying information about a record on the portal.
 
-> [!Note]
+> [!NOTE]
 > - An **Entity Form** must be associated with a webpage for a given website for the form to be viewable within the site.
-> - The Connection entity subgrids are not supported in entity forms. If you add a Connection entity subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection entity.
-> - Duplicate fields, multi-select option set, custom controls, and business rules are not supported in entity forms.
+> - The Connection entity subgrids aren't supported in entity forms. If you add a Connection entity subgrid to the form using Form designer, error messages are displayed when you render the form on the portal and use the Connection entity.
+> - Duplicate fields, multi-select option set, custom controls, Party List fields and business rules aren't supported in entity forms.
+> - [Image attributes](https://docs.microsoft.com/powerapps/developer/common-data-service/image-attributes), [file attributes](https://docs.microsoft.com/powerapps/developer/common-data-service/file-attributes) and [entity images](https://docs.microsoft.com/dynamics365/customerengagement/on-premises/developer/sample-set-retrieve-entity-images) aren't supported in [entity forms](entity-forms.md), [web forms](web-form-properties.md) or when using liquid template tags, such as [fetchxl](../liquid/template-tags.md).
 > - Business rules and client API can enable locked fields on a read-only form.
 > - If you create an entity form in the Insert mode, you can't change a button's alignment or place an action button above the entity form.
 > - If you render a lookup control as a dropdown list on the form, the related records filter does not work.
@@ -213,9 +213,10 @@ To disable request validation, follow these steps:
 
 ### See also
 
-[Configure a portal](configure-portal.md)  
-[Web Form properties for portals](web-form-properties.md)  
-[Web Form steps for portals](web-form-steps.md)  
-[Web Forms metadata for portals](configure-web-form-metadata.md)  
-[Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
-[Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
+- [Configure a portal](configure-portal.md)  
+- [Web Form properties for portals](web-form-properties.md)  
+- [Web Form steps for portals](web-form-steps.md)  
+- [Web Forms metadata for portals](configure-web-form-metadata.md)  
+- [Web Form subgrid configuration for portals](configure-web-form-subgrid.md)  
+- [Notes configuration for Entity Forms and Web Forms for portals](../configure-notes.md)
+- [Microsoft Learn: Interact with Common Data Service data using entity forms](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/3-entity-forms)

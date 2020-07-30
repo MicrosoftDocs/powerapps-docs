@@ -27,7 +27,7 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
   
 <a name="BKMK_limitations"></a>   
 ## Limitations of script web resources  
- Like all web resources, JavaScript web resources use the Model-driven apps security context. Only licensed users who have the necessary privileges can access them.  
+ Like all web resources, JavaScript web resources use the model-driven apps security context. Only licensed users who have the necessary privileges can access them.  
   
 > [!NOTE]
 >  References included in code between web resources aren’t tracked as solution dependencies.  
@@ -48,10 +48,10 @@ Use Script(JScript) web resources to create a library of JavaScript functions th
   
 ### See also  
  [Client scripting using JavaScript](client-scripting.md)   
- [Web Resources](web-resources.md)   
- [Using Web Page (HTML) Web Resources](webpage-html-web-resources.md)   
- [Using Style Sheet (CSS) Web Resources](css-web-resources.md)   
- [Using Data (XML) Web Resources](data-xml-web-resources.md)   
- [Using Image (JPG, PNG, GIF) Web Resources](image-web-resources.md)   
- [Using Stylesheet (XSL) Web Resources](stylesheet-xsl-web-resources.md)   
+ [Web resources](web-resources.md)   
+ [Using Web Page (HTML) web resources](webpage-html-web-resources.md)   
+ [Using Style Sheet (CSS) web resources](css-web-resources.md)   
+ [Using Data (XML) web resources](data-xml-web-resources.md)   
+ [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
+ [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md)   
  [Streamline web resource development using Fiddler AutoResponder](streamline-javascript-development-fiddler-autoresponder.md)    

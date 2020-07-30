@@ -1,5 +1,5 @@
 ---
-title: Share a model-driven app with Power Apps | Microsoft Docs
+title: Share a model-driven app using Power Apps | Microsoft Docs
 description: Learn how to share a model-driven app
 documentationcenter: ''
 author: Mattp123
@@ -19,7 +19,7 @@ search.app:
   - D365CE
 ---
 
-# Share a model-driven app with Power Apps
+# Share a model-driven app using Power Apps
 
 [!INCLUDE [powerapps](../../includes/powerapps.md)] apps use role-based security for sharing. The fundamental concept in role-based security is that a security role contains privileges that define a set of actions that can be performed within the app. All app users must be assigned to one or more predefined or custom roles. Or, roles can also be assigned to teams. When a user or team is assigned to one of these roles, the person or team members are granted the set of privileges associated with that role. 
 
@@ -147,7 +147,7 @@ These predefined roles are available with a [!INCLUDE [powerapps](../../includes
 *Privilege is global scope unless specified otherwise.
 
 ## Use Azure Active Directory groups to manage access
-Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Common Data Service users. Both types of Azure AD groups—Office and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams.md#about-group-teams) 
+Administrators can use their organization’s Azure Active Directory (Azure AD) groups to manage access rights for licensed Common Data Service users. Both types of Azure AD groups—Office and Security—can be used to secure user-access rights to an app. More information: [About group teams](/power-platform/admin/manage-teams#about-group-teams) 
 
 
 ### See also

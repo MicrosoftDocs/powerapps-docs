@@ -1,7 +1,7 @@
 ---
 title: "EnvironmentVariableDefinition Entity Reference (Common Data Service)| MicrosoftDocs"
-description: "Includes schema information and supported messages for the EnvironmentVariableDefinition entity in Common Data Service."
-ms.date: 11/07/2019
+description: "Includes schema information and supported messages for the EnvironmentVariableDefinition entity."
+ms.date: 04/12/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -12,10 +12,11 @@ search.audienceType:
   - developer
 search.app: 
   - PowerApps
+  - D365CE
 ---
 # EnvironmentVariableDefinition Entity Reference
 
-
+Contains information about the settable variable: its type, default value, and etc.
 
 **Added by**: Environment Variables Solution
 
@@ -37,6 +38,7 @@ search.app:
 |RevokeAccess|<xref href="Microsoft.Dynamics.CRM.RevokeAccess?text=RevokeAccess Action" />|<xref:Microsoft.Crm.Sdk.Messages.RevokeAccessRequest>|
 |SetState|PATCH [*org URI*]/api/data/v9.0/environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />[Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update) `statecode` and `statuscode` properties.|<xref:Microsoft.Crm.Sdk.Messages.SetStateRequest>|
 |Update|PATCH [*org URI*]/api/data/v9.0/environmentvariabledefinitions(*environmentvariabledefinitionid*)<br />See [Update](/powerapps/developer/common-data-service/webapi/update-delete-entities-using-web-api#basic-update)|<xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> or <br /><xref:Microsoft.Xrm.Sdk.IOrganizationService.Update*>|
+
 
 ## Entity Properties
 
@@ -85,7 +87,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Default variable value to be used if no associated EnvironmentVariableValue entities exist.|
 |DisplayName|Default Value|
 |Format|Text|
 |IsLocalizable|False|
@@ -101,7 +103,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Description of the variable definition.|
 |DisplayName|Description|
 |Format|Text|
 |IsLocalizable|True|
@@ -117,7 +119,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Display Name of the variable definition.|
 |DisplayName|Display Name|
 |FormatName|Text|
 |IsLocalizable|True|
@@ -147,7 +149,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|For internal use only.|
 |DisplayName|Hint|
 |Format|Text|
 |IsLocalizable|True|
@@ -160,6 +162,8 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 
 ### <a name="BKMK_ImportSequenceNumber"></a> ImportSequenceNumber
+
+**Added by**: Basic Solution Solution
 
 |Property|Value|
 |--------|-----|
@@ -210,7 +214,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|For internal use only.|
 |DisplayName|Is Required|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -280,7 +284,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Unique entity name.|
 |DisplayName|Schema Name|
 |FormatName|Text|
 |IsLocalizable|False|
@@ -355,7 +359,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|Environment variable value type.|
 |DisplayName|Type|
 |IsValidForForm|True|
 |IsValidForRead|True|
@@ -395,7 +399,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 
 |Property|Value|
 |--------|-----|
-|Description||
+|Description|For internal use only.|
 |DisplayName|Value Schema|
 |Format|Text|
 |IsLocalizable|False|

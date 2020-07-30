@@ -24,6 +24,7 @@ search.app:
 You can perform actions such as create, retrieve, update, or delete, on organization-owned and user-owned dashboards.  
   
 ## Actions on an Organization-Owned Dashboard  
+
  To perform the following actions on an organization-owned dashboard (`SystemForm`), you must have the System Administrator or the System Customizer role assigned to your account in Common Data Service:  
   
 - Create, retrieve, update, and delete. You can create or update an organization-owned dashboard by using the Common Data Service web services or by customizing the entity form. For detailed information about creating a dashboard, see [Create a Dashboard](create-dashboard.md).  
@@ -33,11 +34,12 @@ You can perform actions such as create, retrieve, update, or delete, on organiza
   > [!IMPORTANT]
   >  Using the methods available in the Common Data Service Web Services, it is possible to set two dashboards as the default. Make sure that no other dashboard is the default dashboard for the organization before updating this setting programmatically.  
   
-  After you update an organization-owned dashboard, you must publish the metadata changes to make it visible across the organization. You can use the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message or <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> message to publish the changes made for an organization-owned dashboard. For a sample code that demonstrates this, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard)<!-- TODO Need to update the powerapps repo's topic link. As of now not found-->.  
+  After you update an organization-owned dashboard, you must publish the metadata changes to make it visible across the organization. You can use the <xref:Microsoft.Crm.Sdk.Messages.PublishAllXmlRequest> message or <xref:Microsoft.Crm.Sdk.Messages.PublishXmlRequest> message to publish the changes made for an organization-owned dashboard. For a sample code that demonstrates this, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard).  
   
   For a list of supported messages on the organization-owned dashboard entity, see [SystemForm Entity](../common-data-service/reference/entities/systemform.md).  
   
 ## Actions on a User-Owned Dashboard  
+
  You can perform the following actions on a user-owned dashboard (`UserForm`):  
   
 - Create, retrieve, update, and delete. For detailed information about creating a user-owned dashboard, see [Create a Dashboard](create-dashboard.md).  
@@ -51,10 +53,10 @@ You can perform actions such as create, retrieve, update, or delete, on organiza
   For a list of supported messages on the user-owned dashboard entity, see [UserForm Entity](../common-data-service/reference/entities/userform.md).  
   
 ### See also  
+
  [Dashboards for Microsoft Dynamics 365](analyze-data-with-dashboards.md)   
  [Using FormXML for Dashboards](understand-dashboards-dashboard-components-formxml.md)   
  [Create a Dashboard](create-dashboard.md)   
- [Sample Dashboards](sample-dashboards.md)   
- [Dashboard Entities](/dynamics365/customer-engagement/developer/customize-dev/dashboard-entities) <!-- TODO Need to update the powerapps repo's topic link. As of now not found-->  
- [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard) <!-- TODO Need to update the powerapps repo's topic link. As of now not found-->   
- [Sample: Assign a User-Owned Dashboard to Another User](/dynamics365/customer-engagement/developer/customize-dev/sample-assign-user-owned-dashboard-another-user) <!-- TODO Need to update the powerapps repo's topic link. As of now not found-->
+ [Sample Dashboards](sample-dashboards.md)     
+ [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard)  
+ [Sample: Assign a User-Owned Dashboard to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother)

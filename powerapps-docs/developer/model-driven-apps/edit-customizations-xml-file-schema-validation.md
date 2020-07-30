@@ -49,11 +49,13 @@ The customizations.xml file is included within the compressed .zip file exported
 - VisualizationDataDescription.xsd  
   
   
-<a name="BKMK_UseSchemaValidation"></a>   
+<a name="BKMK_UseSchemaValidation"></a>
+
 ## Using schema validation  
- Because the exported XML is a text file, you can edit it using a text editor such as [!INCLUDE[pn_Notepad](../../includes/pn-notepad.md)]. However, we strongly recommend that you use an application that supports XSD schema validation such as [!INCLUDE[pn_Visual_Studio](../../includes/pn-visual-studio.md)]. XSD validation in [!INCLUDE[pn_Visual_Studio](../../includes/pn-visual-studio.md)] <!-- TODO - need to fix this link. The page is not available (or [Visual Studio Express 2012 for Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web))--> provides [!INCLUDE[pn_IntelliSense](../../includes/pn-intellisense.md)] information and schema validation to help prevent errors.  
+
+Because the exported XML is a text file, you can edit it using a text editor such as [!INCLUDE[pn_Notepad](../../includes/pn-notepad.md)]. However, we strongly recommend that you use an application that supports XSD schema validation such as [!INCLUDE[pn_Visual_Studio](../../includes/pn-visual-studio.md)]. XSD validation in [!INCLUDE[pn_Visual_Studio](../../includes/pn-visual-studio.md)] <!-- TODO - need to fix this link. The page is not available (or [Visual Studio Express 2012 for Web](https://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web))--> provides [!INCLUDE[pn_IntelliSense](../../includes/pn-intellisense.md)] information and schema validation to help prevent errors.  
   
- The XSD schema files that are used to validate the customization.xml file in a solution are available here. [!INCLUDE[schema_download](../../includes/schema-download.md)]. Make sure to copy all the files from that folder into the same directory. You will need to associate the customizations.xml file to the CustomizationsSolution.xsd file. That file has links to all the other XSD files in the folder.  
+The XSD schema files that are used to validate the customization.xml file in a solution are available here. [!INCLUDE[schema_download](../../includes/schema-download.md)]. Make sure to copy all the files from that folder into the same directory. You will need to associate the customizations.xml file to the CustomizationsSolution.xsd file. That file has links to all the other XSD files in the folder.  
   
 1. Download the XSD schema files and copy all of them to your computer. Save them in the location that [!INCLUDE[pn_Visual_Studio](../../includes/pn-visual-studio.md)] uses for XSD validation files. This location is probably `[install drive]\Program Files (x86)\Microsoft Visual Studio X.0\Xml\Schemas` where `X` represents the version of [!INCLUDE[pn_Visual_Studio_short](../../includes/pn-visual-studio-short.md)].  
   
@@ -74,11 +76,10 @@ The customizations.xml file is included within the compressed .zip file exported
   
 ### See also
 
-[When to Edit the Customizations File for Common Data Service](when-edit-customization-file.md)<br/> 
+[When to edit the customizations file for Common Data Service](when-edit-customization-file.md)<br/> 
 [Ribbon core schema](ribbon-core-schema.md)<br/>
 [Ribbon types schema](ribbon-types-schema.md)<br/>
 [Ribbon WSS schema](ribbon-wss-schema.md)<br/>
-[SiteMap schema](/dynamics365/customer-engagement/developer/customize-dev/sitemap-schema)<br/>   <!-- TODO need to fix link relevant to the topic in powerapps repo-->
 [Form XML schema](form-xml-schema.md)     
-[ISV Configuration File Schema](/dynamics365/customer-engagement/developer/customize-dev/isv-configuration-file-schema)<br/>   <!-- TODO need to fix link relevant to the topic in powerapps repo-->
-[Build Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml) <!-- TODO need to fix link relevant to the topic in powerapps repo-->
+[ISV configuration file schema](/dynamics365/customer-engagement/developer/customize-dev/isv-configuration-file-schema)<br/>   <!-- TODO need to fix link relevant to the topic in powerapps repo-->
+

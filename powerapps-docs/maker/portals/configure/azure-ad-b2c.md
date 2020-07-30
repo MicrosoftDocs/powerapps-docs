@@ -1,13 +1,12 @@
 ---
 title: "Azure AD B2C provider settings for portals | MicrosoftDocs"
 description: "Instructions to enable Azure AD B2C provider settings for portals."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/03/2020
-ms.author: tapanm
+ms.date: 07/21/2020
+ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
@@ -23,29 +22,31 @@ In the process of configuring [!include[Azure](../../../includes/pn-azure-shorte
 |-------------------|-------|-----------------------------------------------------------------------|
 | Application-Name  |       | Name of the application that represents the portal as a relying party |
 | Application-ID    |       | The Application ID associated with the application created in Azure Active Directory B2C.  |
-| Policy-Signin-URL |       | The Issuer (iss) URL defined in the metadata endpoint.                |
+| Issuer-URL |       | The Issuer (iss) URL defined in the metadata endpoint.                |
 | Federation-Name   |       | A unique name to identify the type of federation provider such as 'B2C'. This will be used in Site Setting names to group configuration settings for this specific provider.                                                                      |
 | | | |
 
 ### Use Azure AD B2C as an identity provider for your portal
 
 1. Sign in to your [Azure portal](https://portal.azure.com/).
-2. [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-get-started).
-3. Select **[!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C** on the leftmost navigation bar.
-4. [Create Azure application](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-app-registration#register-a-web-application).
+1. [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-get-started).
+1. Select **[!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C** on the leftmost navigation bar.
+1. [Create Azure application](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-app-registration#register-a-web-application).
 
    > [!Note]
    > You must choose **Yes** for the **Allow implicit flow** field and specify your portal URL in the **Reply URL** field. The value in the **Reply URL** field should be in the format [portal domain]/signin-[Federation-Name]. For example, `https://contosocommunity.microsoftcrmportals.com/signin-B2C`.
 
-5. Copy the application name, and enter it as the value of Application-Name in the preceding table.
-6. Copy the application ID, and enter it as the value of Application-ID in the preceding table.
-7. [Create a sign-up or sign-in policy](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies#create-a-sign-up-or-sign-in-policy).
-8. Select the policy, and then select **Edit**.
-9. Select **Token, session & SSO config**.
-10. From the **Issuer (iss) claim** list, select the URL that has **/tfp** in its path.
-11. Save the policy.
-12. Select the URL in the **Metadata endpoint for this policy** field.
-13. Copy the value of the issuer field and enter it as the value of Policy-Signin-URL in the preceding table. 
+1. Copy the application name, and enter it as the value of Application-Name in the preceding table.
+1. Copy the application (client) ID, and enter it as the value of Application-ID in the preceding table.
+1. [Create a sign-up or sign-in policy](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies#create-a-sign-up-or-sign-in-policy).
+1. Navigate to **Azure AD B2C** resource.
+1. Select **User flows** under Policies.
+1. Choose the newly created Sign up and sign in policy.
+1. From **Settings** list, select **Properties**
+1. Under **Token compatability settings**, from the **Issuer (iss) claim** list, select the URL that has **/tfp** in its path.
+1. Save the policy.
+1. Select the URL in the **Metadata endpoint for this policy** field.
+1. Copy the value of the issuer field and enter it as the value of Issuer-URL in the preceding table. 
 
 ## Portal configuration
 
@@ -59,7 +60,7 @@ After creating and configuring the B2C tenant in [!include[Azure](../../../inclu
 5. Create the following site settings:
    -   **Name**: Authentication/OpenIdConnect/[Federation-Name]/Authority
 
-       **Value**: [Policy-Signin-URL]
+       **Value**: [Issuer-URL]
    -   **Name**: Authentication/OpenIdConnect/[Federation-Name]/ClientId
 
        **Value**: [Application-ID]
@@ -75,7 +76,7 @@ After creating and configuring the B2C tenant in [!include[Azure](../../../inclu
 7. To hardcode your portal to a single identity provider, create the following site setting:
    - **Name**: Authentication/Registration/LoginButtonAuthenticationType
 
-     **Value**: [Policy-Signin-URL]
+     **Value**: [Issuer-URL]
 
 8. To support password reset, create the required site settings described [here](#password-reset).
 9. To support claims mapping, create the required site settings described [here](#claims-mapping).
@@ -89,7 +90,7 @@ The following site settings are required if you want to support password reset w
 | Site Setting                                                        | Description                                                                                                          |
 |---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | Authentication/OpenIdConnect/[Federation-Name/PasswordResetPolicyId | ID of the password reset policy.                                                                                     |
-| Authentication/OpenIdConnect/[Federation-Name]/ValidIssuers         | A comma-delimited list of issuers that includes the [Policy-Signin-URL] and the issuer of the password reset policy. |
+| Authentication/OpenIdConnect/[Federation-Name]/ValidIssuers         | A comma-delimited list of issuers that includes the [Issuer-URL] and the issuer of the password reset policy. |
 |Authentication/OpenIdConnect/[Federation-Name]/DefaultPolicyId | ID of the sign-in or sign-up policy.|
 |||
 
@@ -106,7 +107,7 @@ You can create or configure the following site settings in portals to support [!
 | Authentication/Registration/ExternalLoginEnabled                     | Enables or disables external authentication.       |
 | Authentication/Registration/AzureADLoginEnabled                      | Enables or disables [!include[Azure](../../../includes/pn-azure-shortest.md)] AD as an external identity provider. By default, it is set to true.                                                                                                                                                                      |
 | Authentication/OpenIdConnect/[Federation-Name]/ExternalLogoutEnabled | Enables or disables federated sign-out. When set to true, users are redirected to the federated sign-out user experience when they sign out from the portal. When set to false, users are signed out from the portal only. By default, it is set to false.               |
-| Authentication/LoginTrackingEnabled                                  | Enables or disables tracking the user's last sign-in. When set to true, the date and time are displayed in the **Last Successful Sign-in** field on the contact record. By default, this is set to false.                                                            |
+| Authentication/LoginTrackingEnabled (Deprecated)                                  | Enables or disables tracking the user's last sign-in. When set to true, the date and time are displayed in the **Last Successful Sign-in** field on the contact record. By default, this is set to false. Login tracking is deprecated. For more information, go to [Login tracking FAQ](../faq.md#login-tracking-enabled).                                                           |
 | Authentication/OpenIdConnect/[Federation-Name]/RegistrationEnabled   | Enables or disables the registration requirement for the existing identity provider. When set to true, registration is enabled for the existing provider only if the site setting Authentication/Registration/Enabled is also set to true. By default, it is set to true. |
 |Authentication/OpenIdConnect/[Federation-Name]/PostLogoutRedirectUri |Specifies the URL within the portal to redirect to after a user signs out. |
 | | |

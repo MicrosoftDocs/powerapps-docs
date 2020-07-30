@@ -1,12 +1,12 @@
 ---
-title: 'Web barcode-scanner control: reference | Microsoft Docs'
-description: Information, including properties and examples, about the barcode-scanner control
+title: 'Web barcode scanner control: reference | Microsoft Docs'
+description: Information, including properties and examples, about the web barcode scanner control
 author: chmoncay
 manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/25/2016
+ms.date: 06/12/2020
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType:
@@ -14,17 +14,20 @@ search.audienceType:
 search.app:
   - PowerApps
 ---
-# Web barcode-scanner control (experimental) in Power Apps
+# Web barcode scanner control (experimental) in Power Apps
 
-The legacy barcode-scanning control, which is obsolete but might be useful for scanning codes in a web browser.
+The legacy barcode scanning control, which is obsolete but might be useful for scanning codes in a web browser.
 
 ## Description
 
-The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete due to poor performance, and the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control replaces this control.
+The control shows the camera feed in the app so that users can scan barcodes on all devices. The control is obsolete because of poor performance, and the mobile **[Barcode scanner](control-new-barcode-scanner.md)** control replaces this control.
+
+> [!NOTE]
+> The web barcode scanner control is only supported on Microsoft Edge, Chrome, Firefox, and Opera browsers. All other browsers will show a warning that some features of the app won't work.
 
 ## Key properties
 
-**barcode scanner** – On a device that has more than one barcode scanner, the numeric ID of the barcode scanner that the app uses.
+**Camera** – On a device that has more than one camera, the numeric ID of the camera that the app uses for scanning barcodes.
 
 ## Additional properties
 
@@ -54,9 +57,9 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
 **[Width](properties-size-location.md)** – The distance between a control's left and right edges.
 
-**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen if no parent container).
+**[X](properties-size-location.md)** – The distance between the left edge of a control and the left edge of its parent container (screen, if no parent container).
 
-**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen if no parent container).
+**[Y](properties-size-location.md)** – The distance between the top edge of a control and the top edge of the parent container (screen, if no parent container).
 
 ## Related functions
 
@@ -80,7 +83,7 @@ The control shows the camera feed in the app so that users can scan barcodes on 
 
 ### Video alternatives
 
-* Consider adding a **[Label](control-text-box.md)** with its **[Text](properties-core.md)** set to the barcode scanner's **Text**. Since the barcode scanner does not display the identified barcode value, doing the above makes the scanner accessible to everyone, not just those with visual disabilities.
+* Consider adding a **[Label](control-text-box.md)** with its **[Text](properties-core.md)** set to the barcode scanner's **Text**. Since the barcode scanner doesn't display the identified barcode value, doing the above makes the scanner accessible to everyone, not just those with visual disabilities.
 
 ### Screen reader support
 

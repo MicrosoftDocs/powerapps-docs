@@ -39,7 +39,9 @@
       - name: Actions on dashboards
         href: actions-dashboards.md
       - name: Create a dashboard
-        href: create-dashboard.md
+        href: create-dashboard.md    
+      - name: Sample dashboards
+        href: sample-dashboards.md
     - name: View data with visualizations (charts)
       href: view-data-with-visualizations-charts.md
       items:
@@ -48,7 +50,9 @@
       - name: Actions on visualizations (charts)
         href: actions-visualizations-charts.md
       - name: Create a visualization (chart)
-        href: create-visualization-chart.md      
+        href: create-visualization-chart.md 
+      - name: Sample charts
+        href: sample-charts.md     
 - name: Apply business logic using client scripting
   href: client-scripting.md
   items:
@@ -491,8 +495,12 @@
         href: clientapi/reference/formcontext-ui-formselector/getId.md
       - name: getLabel
         href: clientapi/reference/formcontext-ui-formselector/getLabel.md
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-formselector/getVisible.md
       - name: navigate
         href: clientapi/reference/formcontext-ui-formselector/navigate.md
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-formselector/setVisible.md
     - name: formContext.ui.navigation
       href: clientapi/reference/formcontext-ui-navigation.md
       items:
@@ -818,6 +826,8 @@
     href: define-ribbon-display-rules.md
   - name: Define ribbon actions
     href: define-ribbon-actions.md
+  - name: Override the default behavior to open records in grids
+    href: override-default-open-behavior-grids.md
   - name: Pass data from a page as a parameter to Ribbon Actions
     href: pass-data-page-parameter-ribbon-actions.md
   - name: Define custom actions to modify the ribbon
@@ -873,11 +883,7 @@
   - name: Pass multiple values to a  web resource through the data parameter
     href: sample-pass-multiple-values-web-resource-through-data-parameter.md
   - name: Import files as web resources
-    href: sample-import-files-web-resources.md
-  - name: Sample charts
-    href: sample-charts.md
-  - name: Sample dashboards
-    href: sample-dashboards.md
+    href: sample-import-files-web-resources.md  
 - name: Resources
   items:
   - name: Developer Tools

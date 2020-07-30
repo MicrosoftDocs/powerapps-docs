@@ -14,7 +14,7 @@ ms.topic: "article"
 
 # Add code components to a field or entity in model-driven apps
 
-Code components let you transform fields that traditionally contain text into visualizations. Similarly, you can use code components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. code components can appear as visualizations on forms, dashboards, views, and homepage grids. 
+Code components let you transform fields that traditionally contain text into visualizations. Similarly, you can use code components to transform datasets, such as a view, to display in a more visual rendering rather than a list of records. Code components can appear as visualizations on forms, dashboards, views, and homepage grids. 
 
 
    > [!div class="mx-imgBorder"] 
@@ -63,7 +63,7 @@ Following the steps below will change the default label and text box field of th
   
    - **Step**. This represents the unit to increment or decrement when adding to or subtracting from  the current value. For example, for budget amount you can select 100 dollar increments\decrements.  
   
-   - **Hide Default Control**. Hides the component so neither the component or the data is displayed in any of the clients that don't support the code component.   
+   - **Hide Default Control**. Hides the component so neither the component nor the data is displayed in any of the clients that don't support the code component.   
   
 8. Select **OK**, to close the Field Properties page.  
   

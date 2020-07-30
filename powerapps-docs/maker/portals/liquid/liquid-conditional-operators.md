@@ -1,14 +1,13 @@
 ---
 title: "Use Liquid conditional operators for a portal | MicrosoftDocs"
 description: "Learn about the available liquid conditional operators in a portal."
-author: tapanm-msft
-manager: kvivek
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: gisingh
+ms.reviewer: tapanm
 ---
 
 # Available Liquid conditional operators
@@ -18,7 +17,7 @@ When used in conditional statements (**if**,**unless**), some Liquid values will
 In Liquid, null and the Boolean value false are treated as false;everything else is treated as true. Empty strings, empty arrays, etc. are treated as true. For examples,
 
 ```
-{% assign empty_string =  %}
+{% assign empty_string = "" %}
 {% if empty_string %}
 <p>This will render.</p>
 {% endif %}

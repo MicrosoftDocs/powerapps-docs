@@ -1,41 +1,50 @@
 ---
 title: Change screen size and orientation of a canvas app | Microsoft Docs
 description: Step-by-step instructions for changing settings such as the screen size and the orientation of a canvas app in Power Apps
-author: evchaki
+author: emcoope-MSFT
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/07/2018
-ms.author: evchaki
+ms.date: 07/28/2020
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
 # Change screen size and orientation of a canvas app in Power Apps
+
 Customize a canvas app by changing its screen size and orientation.
 
-## Prerequisites
-
-Create an app or open one for editing, and then select **App settings** on the **File** menu.
-
 ## Change screen size and orientation
-1. Under **App settings**, select **Screen size + orientation**.
 
-    ![Option to change the screen size and orientation of an app](./media/set-aspect-ratio-portrait-landscape/size-orientation.png)
+1. Sign in to [Power Apps](https://make.powerapps.com).
+1. Open the app to [edit](edit-app.md).
+1. Select **File** menu.
+1. Select **Settings**.
+1. Select **Screen size + orientation**.
 
-1. In the **Orientation** list, select **Portrait** or **Landscape**.
+    ![Option to change the screen size and orientation of an app](./media/set-aspect-ratio-portrait-landscape/size-orientation.png "Screen size + orientation option")
+
+1. In the **Orientation** list, select **Portrait** or **Landscape**. <br> 
+
+    ![Orientation for phone layout](./media/set-aspect-ratio-portrait-landscape/phone-layout-orientation.png "Orientation for phone layout")
 
 1. (Tablet apps only) Under **Aspect ratio**, perform either of these steps:
 
     - Select the ratio that matches the target device for this app.
     - Select **Custom** to set your own size, and then specify a width between 50 - 3840 and a height between 50 - 2160.
 
-    ![Change the aspect ratio of a tablet app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png)
+    ![Change the aspect ratio of a tablet app](./media/set-aspect-ratio-portrait-landscape/aspect-tablet.png "Aspect ratio for a tablet")
     
+    > [!NOTE]
+    > **Size** is only available for apps with **Tablet** layout.
+
 1. Under **Scale to fit**, specify either **On** or **Off**.
+
+    ![Scale to fit](./media/set-aspect-ratio-portrait-landscape/scale-to-fit.png "Scale to fit")
 
     This setting is on by default so that app screens resize to fit the available space on the device. When this setting is on, the app's **Width** property matches its **DesignWidth**, and the app's **Height** matches its **DesignHeight**.
 
@@ -45,17 +54,29 @@ Create an app or open one for editing, and then select **App settings** on the *
 
 1. Under **Lock aspect ratio**, specify either **On** or **Off**.
 
+    ![Lock aspect ratio](./media/set-aspect-ratio-portrait-landscape/lock-aspect-ratio.png "Lock aspect ratio")
+
     If this setting is on, the app retains the screen orientation and aspect ratio that you specified in steps 2 and 3, no matter the device. For example, a phone app that's running in a web browser retains the ratio for a phone, showing a dark bar on each side instead of filling the window.
 
     If this setting is off, the app adjusts to the aspect ratio of the device on which it's running (and distorting the UI if necessary).
 
 1. Under **Lock orientation**, specify either **On** or **Off**.
 
+    ![Lock orientation](./media/set-aspect-ratio-portrait-landscape/lock-orientation.png "Lock orientation")
+
     If you lock the app's orientation, the app retains the orientation that you specify. If the app is running on a device for which the screen is in a different orientation, the app displays incorrectly and may show unwanted results. If you unlock the app's orientation, it adjusts to the screen orientation of the device on which it's running.
 
-    You can also modify the app's orientation by enabling **Enable app embedding user experience** in **Advanced settings**. This feature top-left aligns the app when it's embedded and changes the background color of the hosting canvas to white.
+    You can also modify the app's orientation by enabling **Optimize embedding appearance** in **Advanced settings** under **Experimental features**. This feature top-left aligns the app when it's embedded and changes the background color of the hosting canvas to white.
 
-1. Select **Apply** to save your changes.
+    ![Embedding experience](./media/set-aspect-ratio-portrait-landscape/embedding-experience.png "Embedding experience")
+
+1. Select **Apply** to save the changes.
+
+    > [!IMPORTANT]
+    > Ensure you select **Apply** to reflect the screen size and orientation changes to your app.
+
+1. [Save and publish](save-publish-app.md) your app.
 
 ## Next step
-On the **File** menu, select **Save** to republish your app with the new settings.
+
+[Create responsive layouts in canvas apps](create-responsive-layout.md)

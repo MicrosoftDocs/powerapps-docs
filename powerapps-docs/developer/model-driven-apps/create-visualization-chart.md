@@ -40,7 +40,7 @@ To create a visualization programmatically, you must create a record for the [Sa
 
  Charts require you to specify the underlying data for the charts and how the charts will look in the form of *data description* and *presentation description* XML strings. More information: [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md) and [Sample Charts](sample-charts.md).  
   
- For a complete sample on how to create an organization-owned chart, see [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-chart).  <!-- TODO need to replace the link with powerapps -->
+ For a complete sample on how to create an organization-owned chart, see [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart). 
   
 ### Create a multi-series chart  
 
@@ -59,15 +59,14 @@ SavedQueryVisualization newWebResourceVisualization = new SavedQueryVisualizatio
 {  
    Name = "Sample Dashboard Visualization",  
    Description = "Sample organization-owned visualization",  
-                           PrimaryEntityTypeCode = Account.EntityLogicalName,  
+  PrimaryEntityTypeCode = Account.EntityLogicalName,  
    WebResourceId = new EntityReference(WebResource.EntityLogicalName, _webResourceId))  
   
 };  
-_orgOwnedVisualizationId = _serviceProxy.Create(newWebResourceVisualization);  
-  
+_orgOwnedVisualizationId = service.Create(newWebResourceVisualization);  
 ```  
   
- If you want to create a web resource visualization by using the Dynamics 365 Common Data Service web application, you must create an XML file in the following format, and then use **Import Chart** in the ribbon to import the visualization.  
+If you want to create a web resource visualization by using the Common Data Service, you must create an XML file in the following format, and then use **Import Chart** in the ribbon to import the visualization.  
   
 ```xml  
 <visualization>  
@@ -79,7 +78,7 @@ _orgOwnedVisualizationId = _serviceProxy.Create(newWebResourceVisualization);
 </visualization>  
 ```  
   
- For example, to create a *Sample Visualization* that displays an existing Web resource called *new_TestWebResource*, and the visualization should be attached to the *account* entity, the XML should look like.  
+For example, to create a *Sample Visualization* that displays an existing Web resource called *new_TestWebResource*, and the visualization should be attached to the *account* entity, the XML should look like.  
   
 ```xml  
 <visualization>  
@@ -91,10 +90,11 @@ _orgOwnedVisualizationId = _serviceProxy.Create(newWebResourceVisualization);
 </visualization>  
 ```  
   
-### See also  
+### See also
+ 
  [Charts](view-data-with-visualizations-charts.md)   
  [Specifying Chart Data](understand-charts-underlying-data-chart-representation.md)   
  [Actions on Chart](actions-visualizations-charts.md)   
  [Sample Charts](sample-charts.md)   
  [Data Visualization and Analytics](customize-visualizations-dashboards.md)   
- [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-chart)  <!-- TODO need to replace the link with powerapps -->
+ [Sample: Create, Retrieve, Update, and Delete (CRUD) a Chart](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsChart)  

@@ -2,7 +2,7 @@
 title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: " A list of common issues and resolutions within solution checker"
 keywords: ""
-ms.date: 02/11/2019
+ms.date: 04/07/2020
 ms.service: powerapps
 ms.custom:
   - ""
@@ -40,6 +40,12 @@ Failures that occur during background processing of the analysis will fail with 
 Selecting the portal notification will link to this page of common issues for further troubleshooting. If one of the provided common issues does not resolve the problem, a reference number is also returned. Provide this reference number to Microsoft Support for further investigation.
 
 ![Failure notification](media/solution-checker-failure-notification.png)
+
+
+## Solution Checker fails to check Default solution
+
+Solution checker exports the solution from the Common Data Service environment for analysis. Exporting the Default Solution is not supported and the check may not complete successfully. More information: [Solution Checker fails to export large solutions](#solution-checker-fails-to-export-large-solutions).
+
 
 ## Solution checker fails due to unsupported version of Power Apps Checker
 
@@ -218,7 +224,7 @@ Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
-To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](solution-patches.md#clone-a-solution).
+To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](/power-platform/alm/update-solutions-alm#clone-a-solution).
 
 ## Solution checker will not analyze empty solutions
 
@@ -242,9 +248,13 @@ The workaround is to create smaller solutions with fewer components to be analyz
 
 When HTML web resources are processed within solution checker, the HTML web resource is processed separately than the JavaScript within the HTML web resource. Due to this, the line number of the violation found within `<script>` of the HTML web resource will not be correct.
 
+## Web-avoid-eval error for Power Apps component framework code components
+
+If a web-avoid-eval error is reported for a Power Apps component framework code component created using CLI tooling, package your control with `msbuild /p:configuration=Release` or `npm run build -- --buildMode production` to produce a release build that does not include 'eval' usage.
+
 ## Web-unsupported-syntax issue for web resources
 
-ECMAScript 6 (2015) or later versions are not currently supported for solution checker. When solution checker analyzes JavaScript using ECMAScript 6 or later, a web-supported-syntax issue for the web resource is reported.  
+Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When solution checker analyzes JavaScript using global variables later than ES6, or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.  
 
 ## Multiple violations reported for plug-ins and workflow activities based on call scope
 
