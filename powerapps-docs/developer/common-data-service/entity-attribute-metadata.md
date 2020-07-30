@@ -124,11 +124,11 @@ This property can have the following values set:
 |Name|Value|UI Label|Description|
 |--|--|--|--|
 |`None`|0|**Optional**|No requirements are specified.|
-|`SystemRequired`|1|**System Required**|The attribute is required to have a value.|
-|`ApplicationRequired`|2|**Business Required**|The attribute is required by the business to have a value.|
+|`SystemRequired`|1|**System Required**|The data service requires the attribute to have a value.|
+|`ApplicationRequired`|2|**Business Required**|The application requires the attribute to have a value.|
 |`Recommended`|3|**Business Recommended**|It is recommended that the attribute has a value.|
 
-Common Data Service only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. 
+Common Data Service only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. The data service does not return an error when an attribute with `ApplicationRequired` applied does not have a value.
 
 Model-driven apps will enforce the `ApplicationRequired` option and use a different presentation for the `Recommended` option. Creators of custom clients may use this information to require similar validation or presentation options.
 

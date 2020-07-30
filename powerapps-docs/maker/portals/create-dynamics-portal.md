@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 07/24/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -13,6 +13,9 @@ ms.reviewer: tapanm
 # Create a portal in an environment containing model-driven apps in Dynamics 365
 
 If you select an environment that contains model-driven apps in Dynamics 365 (such as Dynamics 365 Sales and Dynamics 365 Customer Service), you can create the portals mentioned in [Portal templates](portal-templates.md).
+
+> [!NOTE]
+> - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](create-portal.md#create-additional-portals-in-an-environment).
 
 1.	Sign in to [Power Apps](https://make.powerapps.com).
 
