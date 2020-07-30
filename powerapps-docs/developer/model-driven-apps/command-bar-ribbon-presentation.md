@@ -23,7 +23,7 @@ search.app:
 
 Data defining commands in Common Data Service can be presented in several different ways depending on the client and differences in how some entities are treated. You need to take these factors into consideration as you change ribbon commands or define new ones.
   
-<a name="BKMK_DifferentPresentations"></a>   
+<a name="BKMK_DifferentPresentations"></a>
 
 ## Different presentations of commands 
 
@@ -105,6 +105,6 @@ There are three different ways that command data can be displayed.
 ### See also  
 
  [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Ribbons available](/dynamics365/customer-engagement/developer/customize-dev/ribbons-available-microsoft-dynamics-365)   
+ [Ribbons available](https://docs.microsoft.com/powerapps/developer/model-driven-apps/ribbons-available)   
  [Export Ribbon definitions](export-ribbon-definitions.md)   
  [Troubleshoot ribbon issues](https://support.microsoft.com/help/4552163)

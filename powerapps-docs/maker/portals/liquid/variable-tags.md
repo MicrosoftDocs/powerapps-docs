@@ -1,14 +1,13 @@
 ---
 title: "Use variable tags for a portal | MicrosoftDocs"
 description: "Learn about variable tags available in portal"
-author: tapanm-msft
-manager: kvivek
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: gisingh
+ms.reviewer: tapanm
 ---
 
 # Variable tags

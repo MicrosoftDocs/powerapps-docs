@@ -22,10 +22,11 @@ Model-driven apps and canvas apps (public preview)
 
 ## Example
 
-```javascript
-MyControl.prototype.destroy = function () {
- this.button.removeEventListener("click", this.onButtonClick);
-};
+```TypeScript
+public destroy(): void
+{
+    this.button.removeEventListener("click", this.onButtonClick);
+}
 ```
 
 ### Related topics

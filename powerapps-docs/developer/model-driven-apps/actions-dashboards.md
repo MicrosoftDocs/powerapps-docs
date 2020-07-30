@@ -57,7 +57,6 @@ You can perform actions such as create, retrieve, update, or delete, on organiza
  [Dashboards for Microsoft Dynamics 365](analyze-data-with-dashboards.md)   
  [Using FormXML for Dashboards](understand-dashboards-dashboard-components-formxml.md)   
  [Create a Dashboard](create-dashboard.md)   
- [Sample Dashboards](sample-dashboards.md)   
- [Dashboard Entities](/dynamics365/customer-engagement/developer/customize-dev/dashboard-entities) <!-- TODO Need to update the powerapps repo's topic link. As of now not found-->  
- [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard)
+ [Sample Dashboards](sample-dashboards.md)     
+ [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard)  
  [Sample: Assign a User-Owned Dashboard to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother)

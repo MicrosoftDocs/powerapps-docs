@@ -1,14 +1,13 @@
 ---
 title: "Add a custom domain name | MicrosoftDocs"
 description: "Instructions to add a custom domain name."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/04/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Add a custom domain name
@@ -54,4 +53,6 @@ A custom domain can help your customers find your support resources more easily 
     > [!NOTE]
     > If you want to change your existing custom domain name, you must upload a new SSL certificate and follow the steps as mentioned in this section.
     
+### See also
 
+[Microsoft Learn: Configure SSL certificates and custom domain names](https://docs.microsoft.com/learn/modules/portals-administration/2-custom-domain)

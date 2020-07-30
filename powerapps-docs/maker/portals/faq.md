@@ -1,14 +1,13 @@
 ---
 title: Frequently asked questions | Microsoft Docs
 description: Frequently asked questions in Power Apps portals.
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 05/21/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Power Apps portals FAQ
@@ -634,3 +633,7 @@ To fix this issue, add the CSS file with entire content in the notes section of 
 ### MIME type of file isn't text/css
 
 To fix this issue, ensure that there are no plugins or flows that override the MIME type of the CSS file(s).
+
+### See also
+
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
