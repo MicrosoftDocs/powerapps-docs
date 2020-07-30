@@ -1139,24 +1139,6 @@
       items:
       - name: Create a business rule for a form
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
-      - name: Common Data Service workflows
-        items:    
-        - name: Configure workflow stages and steps
-          href: ./common-data-service/configure-workflow-steps.md
-        - name: Monitor and manage workflow processes
-          href: ./common-data-service/monitor-manage-processes.md
-        - name: Best practices for workflow processes
-          href: ./common-data-service/best-practices-workflow-processes.md
-      - name: Common Data Service actions
-        items:
-        - name: Use actions
-          href: ./common-data-service/actions.md
-        - name: Create a custom action
-          href: ./common-data-service/create-actions.md
-        - name: Configure custom actions from a workflow
-          href: ./common-data-service/configure-actions.md    
-        - name: Invoke custom actions from a workflow
-          href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
     - name: Apply data visualizations in an app
       items:
       - name: Create a system chart
@@ -1662,6 +1644,24 @@
     items:
       - name: Create a business rule for an entity
         href: ./common-data-service/data-platform-create-business-rule.md
+      - name: Common Data Service workflows
+        items:    
+        - name: Configure workflow stages and steps
+          href: ./common-data-service/configure-workflow-steps.md
+        - name: Monitor and manage workflow processes
+          href: ./common-data-service/monitor-manage-processes.md
+        - name: Best practices for workflow processes
+          href: ./common-data-service/best-practices-workflow-processes.md
+      - name: Common Data Service actions
+        items:
+        - name: Use actions
+          href: ./common-data-service/actions.md
+        - name: Create a custom action
+          href: ./common-data-service/create-actions.md
+        - name: Configure custom actions from a workflow
+          href: ./common-data-service/configure-actions.md    
+        - name: Invoke custom actions from a workflow
+          href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
   - name: Work with solutions
     items:
       - name: Solutions overview
