@@ -8,7 +8,7 @@ brand: dynamics
 metadata:
   title: Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: powerapps #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
