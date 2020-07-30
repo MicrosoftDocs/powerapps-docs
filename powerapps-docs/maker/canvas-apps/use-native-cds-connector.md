@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/09/2020
+ms.date: 07/29/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -109,7 +109,11 @@ To convert your app that uses the Dynamics 365 connector, you'll need to remove 
 3. Add the connections to your data sources to the Common Data Service using the new data source selection experience. 
 
     > [!NOTE] 
-    > If you have connections to other environments (other than current), select the *Entity* category and then the *More* (...) option to change the environment. You can then select an entity from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
+    > - If you have connections to other environments (other than current), select the *Entity* category and then the *More* (...) option to change the environment. You can then select an entity from a different environment to add to your application. Cross-tenant connections don't work with the improved native connector. You'll need to use data integration to access data cross-tenant.
+    > - You need to meet one of the following requirements to be able to see an environment that you want to add the connection to:
+    >   - You're the **Owner** of the app, or the app is [shared](share-app.md) with you as a **Co-owner**.
+    >   - You're a member of at least one of these security roles: **Environment Admin**, **Environment Maker**, or **System Administrator**. For more information about the security roles in an environment, go to [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
+
 4.	Save your application.
 
 *Possible errors and suggestions*:
