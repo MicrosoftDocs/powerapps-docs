@@ -7,12 +7,12 @@ brand: dynamics
 
 metadata:
   title: Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.. # Required; article description that is displayed in search results. < 160 chars.
+  description: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: power-platform #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/02/2020 #Required; mm/dd/yyyy format.
+  ms.date: 07/30/2020 #Required; mm/dd/yyyy format.
   hide_bc: false
 
 
@@ -56,6 +56,7 @@ conceptualContent:
         - text: Plan a Power Apps project
           url: https://docs.microsoft.com/powerapps/guidance/planning/introduction
           itemType: overview      
+    
     - title: Create apps and portals
       links:
         - text: Create canvas apps
@@ -80,6 +81,18 @@ conceptualContent:
           url: /powerapps/maker/common-data-service/entity-overview
           itemType: concept
     
+    - title: Use solutions for ALM
+      links:
+        - text: What are solutions?
+          url: /powerapps/maker/common-data-service/solutions-overview
+          itemType: overview
+        - text: Implement ALM using solutions
+          url: /power-platform/alm/overview-alm
+          itemType: overview
+        - text: Use Power Platform Build Tools
+          url: /power-platform/alm/devops-build-tools
+          itemType: how-to-guide     
+
     - title: Administer Power Apps
       links:
         - text: Use Power Platform admin center
@@ -87,28 +100,34 @@ conceptualContent:
           itemType: overview
         - text: Power Apps licensing
           url: https://docs.microsoft.com/en-us/power-platform/admin/pricing-billing-skus
-          itemType: how-to-guide
+          itemType: overview
         - text: Power Platform Center of Excellence (CoE) Starter Kit
           url: https://docs.microsoft.com/en-us/power-platform/guidance/coe/starter-kit
-          itemType: how-to-guide        
-      footerLink:
-        url: https://www.microsoft.com
-        text: See more
+          itemType: how-to-guide     
+    
     - title: Power Apps for developers
       links:
-        - text: "Developers: Common Data Service"
-          url: https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/overview
-          itemType: overview        
+        - text: Common Data Service developer guide
+          url: /powerapps/developer/common-data-service/overview
+          itemType: overview
+        - text: Model-driven apps developer guide
+          url: /powerapps/developer/model-driven-apps/overview
+          itemType: overview
+        - text: Canvas apps developer guide
+          url: /powerapps/maker/canvas-apps/dev-enterprise-intro
+          itemType: overview    
+    
     - title: Best practices guidance
       links:
-        - text: Power Apps guidance
-          url: https://docs.microsoft.com/en-us/powerapps/guidance/
+        - text: Power Apps patterns
+          url: /powerapps/guidance/patterns/overview
           itemType: reference
+        - text: Planning a Power Apps project
+          url: /powerapps/guidance/planning/introduction
+          itemType: reference
+    
     - title: Learning catalog
       links:
-        - text: Business decision maker
-          url: /powerapps/learning-catalog/bdm
-          itemType: learn
         - text: App maker
           url: /powerapps/learning-catalog/app-maker
           itemType: learn
