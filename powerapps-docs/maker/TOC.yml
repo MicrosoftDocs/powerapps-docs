@@ -1711,6 +1711,11 @@
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: Export to data lake
     href: ./common-data-service/export-to-data-lake.md
+    items: 
+    - name: Ingest exported data lake data with Azure Data Factory
+      href: ./common-data-service/export-to-data-lake-adf.md
+    - name: Analyze exported data lake data with Power BI
+      href: ./common-data-service/export-to-data-lake-powerbi.md    
   - name: Security in Common Data Service
     href: /power-platform/admin/wp-security
   - name: API limits overview
