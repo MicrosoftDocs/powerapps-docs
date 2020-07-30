@@ -137,3 +137,22 @@ conceptualContent:
       footerLink:
         url: /powerapps/learning-catalog/get-started
         text: See more
+
+# additionalContent section (optional)
+# Card with summary style
+additionalContent:
+  # Supports up to 3 sections
+  sections:
+    - title: Other Power Platform products # < 60 chars (optional)
+    - items:
+        # Card
+        - title: Power Automate
+          summary: Create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
+          url: https://docs.microsoft.com/power-automate
+        # Card
+        - title: Power BI
+          summary: Turn your unrelated sources of data into coherent, visually immersive, and interactive insights.
+          url: https://docs.microsoft.com/power-bi
+        - title: Power Virtual Agents
+          summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
+          url: https://docs.microsoft.com/power-virtual-agents
