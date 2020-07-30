@@ -56,7 +56,7 @@ conceptualContent:
         - text: Plan a Power Apps project
           url: https://docs.microsoft.com/powerapps/guidance/planning/introduction
           itemType: overview      
-    - title: Create apps
+    - title: Create apps and portals
       links:
         - text: Create canvas apps
           url: https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started
@@ -66,10 +66,20 @@ conceptualContent:
           itemType: overview
         - text: Create portals
           url: https://docs.microsoft.com/en-us/powerapps/maker/portals/overview
-          itemType: overview
-        - text: Work with data in Common Data Service
+          itemType: overview             
+    
+    - title: Work with data platform
+      links:
+        - text: What is Common Data Service?
           url: https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro
-          itemType: overview           
+          itemType: overview
+        - text: Why choose Common Data Service?
+          url: /powerapps/maker/common-data-service/why-cds-overview
+          itemType: concept
+        - text: Use entities in Common Data Service
+          url: /powerapps/maker/common-data-service/entity-overview
+          itemType: concept
+    
     - title: Administer Power Apps
       links:
         - text: Use Power Platform admin center
