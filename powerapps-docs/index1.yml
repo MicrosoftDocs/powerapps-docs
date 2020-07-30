@@ -173,7 +173,7 @@ additionalContent:
       # Card
       - title: Dynamics 365
         summary: "The next generation of CRM and ERP applications"
-        url: /dynamics365/index
+        url: https://docs.microsoft.com/dynamics365/
       # Card
       - title: Microsoft Azure
         summary: "Ever-expanding set of cloud computing services to help your organization meet it's business challenges"
