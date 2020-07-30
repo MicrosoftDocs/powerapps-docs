@@ -36,7 +36,7 @@ You can manually export solutions using the steps in this article. We recommend 
 2.  In the list of solutions, select the unmanaged solution you want to export, and then select **Export**. Notice that you can't export managed solutions. 
 
 3. The **Before you export** right pane appears. Choose from the following options, and then select **Next**:  
-    - **Publish all changes**. Notice that, when you export a managed or unmanaged solution, only published components are exported. We recommend that you select **Publish all changes** to make sure all components are included in the exported solution. 
+    - **Publish all changes**. Notice that, when you export an unmanaged solution, only published components are exported. We recommend that you select **Publish all changes** to make sure all components are included in the exported solution. 
     - **Check for issues**. Run the solution checker against the solution to detect performance and stability issues.
 
 4.  The **Export this solution** right pane appears. Enter or select from the following options, and then select **Export**:  
