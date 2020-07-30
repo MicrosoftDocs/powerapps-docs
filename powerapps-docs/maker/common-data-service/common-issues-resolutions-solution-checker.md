@@ -2,7 +2,7 @@
 title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: " A list of common issues and resolutions within solution checker"
 keywords: ""
-ms.date: 04/07/2020
+ms.date: 07/30/2020
 ms.service: powerapps
 ms.custom:
   - ""
@@ -76,25 +76,27 @@ To install Power Apps Checker back into your Common Data Service environment:
 2. Select **Solutions**.
 3. On the solution toolbar select **Solution checker**, and then select **Install**.
 
-## Solution Checker can't access organizations in Administration Mode
+## Solution Checker can't access environments in Administration Mode
 
-Organizations that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
+Environments that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
 
-In order to use solution checker in this organization, Adminstration Mode must be disabled.
+In order to use solution checker in this organization, Administration Mode must be disabled.
 
 ### How to disable administration mode
 
 To disable administration mode for an organization instance:
 
-1. Open the Dynamics 365 instance picker: https://port.crm.dynamics.com/G/Instances/InstancePicker.aspx.
-2. Select the organization instance that has issues running solution checker.
-3. Select **ADMIN**.
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments/).
+2. Select the environment that has issues running solution checker, and then select **Convert to sandbox** on the command bar. 
 
-![Instance Admin](media/solution-checker-instance-admin.png)
+    > [!NOTE]
+    > The conversion to sandbox may take several minutes to complete. 
 
-4. Clear **Enable administration mode**, and then select **Save**.
+3. Open the environment, and then select **Edit**. 
 
-![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
+4. Set **Administration mode** to disabled, and then select **Save**.
+
+    ![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
 
 5. Run solution checker again.
 
@@ -167,9 +169,9 @@ Typical Common Data Service operations requested by solution checker:
 - Create, update, and retrieve analysis job, analysis component, and analysis result entity data
 - Export solutions
 
-### Plugin step registered to execute in context of a unlicensed user
+### Plugin step registered to execute in context of an unlicensed user
 
-When solution checker fails due to an "unlicensed user" exception, it is often caused by a triggered plugin step configured to execute in the context of a specific systemuser that is currently unlicensed. Ensure that any plugin steps that could be triggered by solution checker execute in context of a licensed user.
+When solution checker fails due to an "unlicensed user" exception, it is often caused by a triggered plugin step configured to execute in the context of a specific system user that is currently unlicensed. Ensure that any plugin steps that could be triggered by solution checker execute in context of a licensed user.
 
 >[!IMPORTANT]
 >It is highly recommended that plugin steps be configured to execute in context of the calling user rather than specific users which are subject to assigned license being revoked.
@@ -182,7 +184,7 @@ When solution checker fails due to Common Data Service denying access based on a
 
 When solution checker fails due to the error "ISV aborted code", a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
 
-## Solution checker fails due to disabled first-party application in AAD
+## Solution checker fails due to disabled first-party application in Azue Active Directory
 
 The first-party enterprise application identity used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the identity cannot authenticate when requesting bearer tokens for Common Data Service and other required resource providers on-behalf of the requesting user.
 
@@ -200,7 +202,7 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 
 4. Select **'PowerApps-Advisor'** to view the app details.
 5. Select **Properties**.
-6. Check the state of **Enabled for users to sign-in**. If **'No'**, then the application has been disabled.
+6. Check the state of **Enabled for users to sign in**. If **'No'**, then the application has been disabled.
 
 ![Disabled enterprise app](media/solution-checker-disabled-app.png)
 
@@ -224,17 +226,17 @@ Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
-To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly-created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](/power-platform/alm/update-solutions-alm#clone-a-solution).
+To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](/power-platform/alm/update-solutions-alm#clone-a-solution).
 
 ## Solution checker will not analyze empty solutions
 
-If Solution Ccecker exports a solution that contains no components to analyze, it will terminate further processing and consider the run a failure. Ensure that the selected solution submitted for a Solution Checker analysis contains at least one component.
+If Solution Checker exports a solution that contains no components to analyze, it will terminate further processing and consider the run a failure. Ensure that the selected solution submitted for a Solution Checker analysis contains at least one component.
 
 ## Solution Checker fails to export large solutions
 
 The primary scenario for failure to export a large solution from the Common Data Service environment involves a timeout exception on the export request. This will occur if the request exceeds 20 minutes. Large solutions, such as the Default Solution, may fail to get exported within this time frame, and the check will not complete successfully. If solution checker encounters a timeout during export, it will retry three times before it fails to process the job, so it may take over an hour before you receive a failure notification.
 
-The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, please see guidance to [Optimize custom assembly development](../../developer/common-data-service/best-practices/business-logic/optimize-assembly-development.md).
+The workaround is to create smaller solutions with fewer components to be analyzed. If the large file size of the solution is due to many plug-in assembly components, see guidance to [Optimize custom assembly development](../../developer/common-data-service/best-practices/business-logic/optimize-assembly-development.md).
 
 > [!IMPORTANT]
 > To minimize false positives, ensure you add dependent customizations. When you create a solution and add these components, include the following:
