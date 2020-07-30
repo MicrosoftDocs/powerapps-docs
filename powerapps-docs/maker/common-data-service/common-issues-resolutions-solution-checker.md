@@ -254,7 +254,7 @@ If a web-avoid-eval error is reported for a Power Apps component framework code 
 
 ## Web-unsupported-syntax issue for web resources
 
-ECMAScript 6 (2015) or later versions are not currently supported for solution checker. When solution checker analyzes JavaScript using ECMAScript 6 or later, a web-supported-syntax issue for the web resource is reported.  
+Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When solution checker analyzes JavaScript using global variables later than ES6, or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.  
 
 ## Multiple violations reported for plug-ins and workflow activities based on call scope
 

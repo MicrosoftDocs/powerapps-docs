@@ -34,7 +34,7 @@ The available operands are as follows:
 | &             | And                    |
 | \|             | Or                     |
 | !             | Not                    |
-| =\*, ==\*, -= | Like                   |
+| =\*, ==\*, ~= | Like                   |
 | !=\*          | Not Like               |
 
 ## Format

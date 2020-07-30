@@ -52,10 +52,9 @@ When you develop a large number of files to use as Web resources you can save yo
   
   **FilesToImport/ShowData.htm**  
   This HTML Web resource requires each of the other files to display the following table.  
-  
-|||  
-|-|-|  
-|**First Name**|**Last Name**|  
+
+|First Name|Last Name|
+|-|-|
 |Apurva|Dalia|  
 |Ofer|Daliot|  
 |Jim|Daly|  
