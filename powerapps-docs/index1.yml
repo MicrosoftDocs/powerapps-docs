@@ -86,7 +86,7 @@ conceptualContent:
         - text: What are solutions?
           url: /powerapps/maker/common-data-service/solutions-overview
           itemType: overview
-        - text: Implement ALM using solutions
+        - text: Implement healthy ALM using solutions
           url: /power-platform/alm/overview-alm
           itemType: overview
         - text: Use Power Platform Build Tools
