@@ -117,6 +117,18 @@ conceptualContent:
           url: /powerapps/maker/canvas-apps/dev-enterprise-intro
           itemType: overview    
     
+    - title: Sample apps and solutions
+      links:
+        - text: Hospital Emergency Response
+          url: /powerapps/sample-apps/emergency-response/overview
+          itemType: overview
+        - text: Regional Government Emergency Response and Monitoring
+          url: /powerapps/sample-apps/regional-emergency-response/overview
+          itemType: overview
+        - text: Return to the Workplace
+          url: /powerapps/sample-apps/return-to-workplace/overview
+          itemType: overview
+    
     - title: Best practices guidance
       links:
         - text: Power Apps patterns
