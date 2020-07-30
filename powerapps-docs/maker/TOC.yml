@@ -1710,8 +1710,9 @@
   - name: Import translated entity and field text
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: Export to data lake
-    href: ./common-data-service/export-to-data-lake.md
     items: 
+    - name: Export to Azure Data Lake Storage Gen2
+      href: ./common-data-service/export-to-data-lake.md
     - name: Ingest exported data lake data with Azure Data Factory
       href: ./common-data-service/export-to-data-lake-data-adf.md
     - name: Analyze exported data lake data with Power BI
