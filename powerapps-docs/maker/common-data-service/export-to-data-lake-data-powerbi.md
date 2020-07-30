@@ -3,7 +3,7 @@ title: "Analyze Common Data Service exported to Azure Data Lake Storage Gen2 dat
 ms.custom: ""
 ms.date: 07/29/2020
 ms.reviewer: "matp"
-author: Mattp123
+author: sabinn-msft
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
