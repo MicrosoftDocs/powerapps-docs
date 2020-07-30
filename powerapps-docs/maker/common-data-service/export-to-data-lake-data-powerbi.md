@@ -22,8 +22,6 @@ search.app:
 
 # Analyze Common Data Service data in Azure Data Lake Storage Gen2 with Power BI
 
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
-
 After exporting data from Common Data Service to Azure Data Lake Storage Gen2
 with the export to data lake service, you can use Power BI to create business
 reports and analytics. This can be useful for sales managers and sales associates to refine and build additional reports and dashboards in Power BI. 
