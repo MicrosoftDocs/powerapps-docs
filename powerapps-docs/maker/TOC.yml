@@ -1644,23 +1644,23 @@
     items:
       - name: Create a business rule for an entity
         href: ./common-data-service/data-platform-create-business-rule.md
-      - name: Common Data Service workflows
+      - name: Work with workflows
         items:    
-        - name: Configure workflow stages and steps
+        - name: Configure realtime workflow stages and steps
           href: ./common-data-service/configure-workflow-steps.md
-        - name: Monitor and manage workflow processes
+        - name: Monitor and manage realtime workflow processes
           href: ./common-data-service/monitor-manage-processes.md
-        - name: Best practices for workflow processes
+        - name: Best practices for realtime workflow processes
           href: ./common-data-service/best-practices-workflow-processes.md
-      - name: Common Data Service actions
+      - name: Work with actions
         items:
         - name: Use actions
           href: ./common-data-service/actions.md
         - name: Create a custom action
           href: ./common-data-service/create-actions.md
-        - name: Configure custom actions from a workflow
+        - name: Configure custom actions from a realtime workflow
           href: ./common-data-service/configure-actions.md    
-        - name: Invoke custom actions from a workflow
+        - name: Invoke custom actions from a realtime workflow
           href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
   - name: Work with solutions
     items:
