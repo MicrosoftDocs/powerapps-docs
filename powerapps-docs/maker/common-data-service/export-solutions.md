@@ -128,3 +128,4 @@ More information:   [Service Calendar Appearance Configuration](https://docs.mic
 ### See also
 [Import solutions](import-update-export-solutions.md) <br />
 [Update solutions](update-solutions.md)
+[For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)

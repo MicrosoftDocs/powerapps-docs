@@ -198,4 +198,4 @@ Start by opening an unmanaged solution you created. Choose the **Entity** compon
 
 ### See also
  [Use solutions](use-solution-explorer.md) 
-[For Developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
+[For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)

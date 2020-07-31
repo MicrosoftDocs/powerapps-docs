@@ -62,4 +62,4 @@ To import a solution:
 [Update solutions](update-solutions.md) <br />
 [Export solutions](export-solutions.md) <br />
 [Publish changes](create-solution.md#publish-changes)
-
+[For developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)

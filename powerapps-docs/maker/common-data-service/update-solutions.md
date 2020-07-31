@@ -88,3 +88,4 @@ A solution’s version has the following format: major.minor.build.revision. An 
 [Export solutions](export-solutions.md) <br />
 [Import solutions](import-update-export-solutions.md) <br />
 [Create solution patches](/powerapps/maker/common-data-service/solution-patches)
+[For developers: Cloning, patching, and upgrading](/power-platform/alm/solution-api#cloning-patching-and-upgrading)
