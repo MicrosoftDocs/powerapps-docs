@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/canvas-apps/entity-form-control.md",
+      "redirect_url": "controls/control-form-detail",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/maintain-managed-solutions.md",
       "redirect_url": "https://docs.microsoft.com/power-platform/alm/maintain-managed-solutions",
       "redirect_document_id": "false"
