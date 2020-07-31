@@ -197,4 +197,5 @@ Start by opening an unmanaged solution you created. Choose the **Entity** compon
  > ![Solution with entities.](media/solution-segmentation-solution-entities-admin.png "Solution with entities.")
 
 ### See also
- [Use solutions](use-solution-explorer.md)
+ [Use solutions](use-solution-explorer.md) 
+[For Developers: Create, export, or import an unmanaged solution](/power-platform/alm/solution-api#create-export-or-import-an-unmanaged-solution)
