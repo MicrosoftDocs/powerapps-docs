@@ -97,6 +97,9 @@ To create an unlicensed "application user" in your environment, follow these ste
 
 7. Before exiting the user form, choose **MANAGE ROLES** and assign a security role to this application user so that the application user can access the desired organization data.
 
+> [!NOTE]
+> - You can only create 1 application user for each Azure AD Application per environment.
+
 > [!IMPORTANT]
 > When developing a real-world application using S2S, you should use a custom security role which can be stored in a solution and distributed along with your application.
 
