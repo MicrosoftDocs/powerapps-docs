@@ -25,16 +25,16 @@ search.audienceType:
 # Configure custom actions from a workflow
 
 
-You can enable a custom action from a realtime workflow without writing code. More information: [Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md).  
+You can enable a custom action from a real-time workflow without writing code. More information: [Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md).  
   
- You may also create an action so that a developer can use it in code or you may need to edit an action that was previously defined. Like realtime workflow processes, consider the following:  
+ You may also create an action so that a developer can use it in code or you may need to edit an action that was previously defined. Like real-time workflow processes, consider the following:  
   
 -   What should the action do?  
   
 -   Under what conditions should the action be performed?  
   
  
-Unlike realtime workflow processes, you don’t need to set the following options:  
+Unlike real-time workflow processes, you don’t need to set the following options:  
   
 - **Start When**: Actions start when code calls the message generated for them.  
   
@@ -42,7 +42,7 @@ Unlike realtime workflow processes, you don’t need to set the following option
   
 - **Run in the background**: Actions are always real-time workflows.  
   
-Actions also have something that realtime workflow processes don’t – input and output arguments. More information: [Define process arguments](configure-actions.md#BKMK_DefineProcessArgs)  
+Actions also have something that real-time workflow processes don’t – input and output arguments. More information: [Define process arguments](configure-actions.md#BKMK_DefineProcessArgs)  
   
 <a name="create"></a>   
 ## Create an action  
@@ -50,7 +50,7 @@ Actions also have something that realtime workflow processes don’t – input a
 > [!IMPORTANT]
 >  If you’re creating an action to include as part of a solution that will be distributed, create it in the context of the solution. Go to **[Settings](/powerapps/maker/model-driven-apps/advanced-navigation#settings)** > **Solutions** and locate the unmanaged solution that this action will be part of. Then, in the menu bar, select **New** > **Process**. This ensures that the customization prefix associated with the name of the action will be consistent with other components in the solution. After you create the action, you can’t change the prefix.  
   
- Like realtime workflow processes, actions have the following properties in the **Create Process** dialog box.  
+ Like real-time workflow processes, actions have the following properties in the **Create Process** dialog box.  
   
  **Process name**  
  After you enter a name for the process, a unique name will be created for it by removing any spaces or special characters from the process name.  
@@ -59,7 +59,7 @@ Actions also have something that realtime workflow processes don’t – input a
  This property establishes that this is an action process. You can’t change this after you save the process.  
   
  **Entity**  
- With actions processes, you can select an entity to provide context for the realtime workflow just like other types of processes, but you also have the option to choose **None (global)**. Use this if your action doesn’t require the context of a specific entity. You can’t change this after you save the process.  
+ With actions processes, you can select an entity to provide context for the real-time workflow just like other types of processes, but you also have the option to choose **None (global)**. Use this if your action doesn’t require the context of a specific entity. You can’t change this after you save the process.  
   
  **Type**  
  Use this property to choose whether to build a new action from scratch or to start from an existing template.  
@@ -84,7 +84,7 @@ Actions also have something that realtime workflow processes don’t – input a
 >  After the action is activated and code is written to use a unique name, the unique name must not be changed without also changing the code that references it.  
   
  **Enable rollback**  
- Generally, processes that support transactions will “undo” (or roll back) the entire operation if any part of them fails. There are some exceptions to this. Some actions developers might do in code initiated by the action might not support transactions. For example, if the code perform actions in other systems that are beyond the scope of the transaction. Those can’t be rolled back by the action running in an app. Some messages in the platform don’t support transactions. But everything you can do just with the user interface of the action will support transactions. All the actions that are part of a realtime workflow are considered in transaction, but with actions you have the option to opt out of this.  
+ Generally, processes that support transactions will “undo” (or roll back) the entire operation if any part of them fails. There are some exceptions to this. Some actions developers might do in code initiated by the action might not support transactions. For example, if the code perform actions in other systems that are beyond the scope of the transaction. Those can’t be rolled back by the action running in an app. Some messages in the platform don’t support transactions. But everything you can do just with the user interface of the action will support transactions. All the actions that are part of a real-time workflow are considered in transaction, but with actions you have the option to opt out of this.  
   
  You should consult with the developer who will use this message to determine whether it must be in transaction or not. Generally, an action should be in transaction if the actions performed by the business process don’t make sense unless all of them are completed successfully. The classic example is transferring funds between two bank accounts. If you withdraw funds from one account you must deposit them in the other. If either fails, both must fail.  
   
