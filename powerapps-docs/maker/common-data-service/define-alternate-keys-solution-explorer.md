@@ -2,7 +2,7 @@
 title: "Define alternate keys using solution explorer | MicrosoftDocs"
 description: "Learn how to define alternate keys that can be used to reference records in Common Data Service using solution explorer"
 ms.custom: ""
-ms.date: 06/01/2020
+ms.date: 08/01/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -54,12 +54,13 @@ Part of the name of any alternate key you create is the customization prefix. Th
 1. Select **OK** to close the form.
 
 ### (Optional) View the system job tracking creation of indexes
+
 1. While [viewing alternate keys](#view-alternate-keys) after you have created a new alternate key you will see a row for the key you created.
 2. In the **System Job** column you will find a link to the system job that monitors the creation of the indexes to support the alternate key. 
     
     This system job will have a name that follows this pattern: `Create index for {0} for entity {1}` where `0` is the **Display Name** of the alternate key and `1` is the name of the entity.
 
-    The link to the system job will not be displayed after the system job completes successfully. More information: [Monitor and manage system jobs](/dynamics365/customer-engagement/admin/monitor-manage-system-jobs)
+    The link to the system job will not be displayed after the system job completes successfully. More information: [Monitor and manage system jobs](/power-platform/admin/monitor-manage-system-jobs)
 
 
 ## Delete an alternate key
