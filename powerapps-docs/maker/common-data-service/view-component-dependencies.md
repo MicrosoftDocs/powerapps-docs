@@ -26,3 +26,6 @@ Solution components often depend on other solution components. You can’t delet
 
    > [!div class="mx-imgBorder"] 
    > ![Component dependency for the account entity](media/component-dependencies-account.png)
+
+### See also
+[For developers: Detect solution dependencies](/power-platform/alm/solution-api#detect-solution-dependencies)
