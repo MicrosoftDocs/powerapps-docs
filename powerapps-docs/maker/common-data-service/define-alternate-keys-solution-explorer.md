@@ -2,7 +2,7 @@
 title: "Define alternate keys using solution explorer | MicrosoftDocs"
 description: "Learn how to define alternate keys that can be used to reference records in Common Data Service using solution explorer"
 ms.custom: ""
-ms.date: 05/31/2018
+ms.date: 06/01/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -28,6 +28,9 @@ Solution explorer provides one way to view and create alternate keys for Common 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
 - [Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
 - [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)
+
+> [!IMPORTANT]
+> If the data within a field that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?` then `GET` or `PATCH` actions will not work. If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with those characters.
 
 ## Open solution explorer
 
