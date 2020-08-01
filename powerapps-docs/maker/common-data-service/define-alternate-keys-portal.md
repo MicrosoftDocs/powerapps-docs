@@ -2,7 +2,7 @@
 title: "Define alternate keys using Power Apps portal | MicrosoftDocs"
 description: "Learn how to define alternate keys using Power Apps portal"
 ms.custom: ""
-ms.date: 06/11/2020
+ms.date: 08/01/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -28,7 +28,7 @@ search.app:
 Power Apps enables configuring the most common options, but certain options can only be set using solution explorer. More information: [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)
 
 > [!IMPORTANT]
-> If the data within a field that is used in an alternate key will contain one of the following characters /,<,>,*,%,&,:,\ then get or patch actions will not work. If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with those characters.
+> If the data within a field that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?` then get or patch actions will not work. If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with those characters.
 
 ## View alternate keys
 
