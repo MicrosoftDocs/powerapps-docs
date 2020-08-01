@@ -70,4 +70,4 @@ While [viewing alternate keys](#view-alternate-keys), select ![Delete](media/del
 
 [Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
 [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
-[Developer Documentation: Define alternate keys for an entity](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)
+[Developer Documentation: Work with alternate keys](../../developer/common-data-service/define-alternate-keys-entity.md)
