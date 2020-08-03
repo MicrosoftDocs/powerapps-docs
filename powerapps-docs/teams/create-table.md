@@ -23,7 +23,7 @@ There are four different types of table ownership. When you create a table, the 
 
 The articles in this section cover information about tables in Dataflex, how to create and manage them, define what data columns are in your table, and more.
 
-1. Sign-in to Teams, and then select the link for **Power Apps**.
+1. Sign into Teams, and then select the link for **Power Apps**.
    ![Sign into Power Apps](media/create-table1.png)
 
 2. Select the **Build** tab, and then select **See all**.
@@ -44,4 +44,4 @@ The articles in this section cover information about tables in Dataflex, how to 
 5. Select **Done**.
 
 ### See also
-
+[Edit or delete a table](edit-delete-table.md)
