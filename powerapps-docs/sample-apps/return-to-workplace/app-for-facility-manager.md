@@ -223,7 +223,7 @@ For ease of use we can also use the business process flow to create new transiti
 
 1. Moving forward
 
-Given that the facility is not in the final phase, the user can click on the circle of the current stage and select **Next Stage**. The business process flow wont move instantly, but in the background a new transition record is created. The record is pre populated with the next phase and is ready for approval.
+Given that the facility is not in the final phase, the user can click on the circle of the current stage and select **Next Stage**. The business process flow wont move instantly, but in the background a new transition record is created and the user will be navigated to that record. The record is pre populated with the next phase and is ready for approval.
 
 2. Moving backward
 
