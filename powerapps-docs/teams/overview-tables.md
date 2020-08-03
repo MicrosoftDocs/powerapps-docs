@@ -20,6 +20,5 @@ A solution will often have multiple tables that are used together in an applicat
 > [!NOTE]
 > All the capabilities found in tables are powered by ***REMOVED***. While this will satisfy many situations, there are situations where an organization may want to have additional capacity, capabilities, or control over their solution. In these scenarios, ***REMOVED*** environments can be upgraded to ***REMOVED*** Pro (formerly Common Data Service). The upgrade process, referred to as *promotion*, has several considerations discussed later. 
 
-
 ### See also
-[***REMOVED*** vs ***REMOVED*** Pro](data-platform-compare.md)
+[How are ***REMOVED*** and ***REMOVED*** Pro different?](data-platform-compare.md)

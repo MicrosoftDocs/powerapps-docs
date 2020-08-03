@@ -12,7 +12,7 @@ ms.reviewer: matp
 
 # How are ***REMOVED*** and ***REMOVED*** Pro different?
 
-Applications within a Team have access to a Microsoft ***REMOVED*** environment.  ***REMOVED*** is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. ***REMOVED*** delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. For scenarios where an organization may require additional capabilities, more granular control for security and governance, or capacity beyond the approximately one million rows a ***REMOVED*** environment can contain, ***REMOVED*** can be upgraded to ***REMOVED*** Pro. 
+Applications within a Team have access to a Microsoft ***REMOVED*** environment.  ***REMOVED*** is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. ***REMOVED*** delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. For scenarios where an organization may require additional capabilities, more granular control for security and governance, or capacity beyond the approximately 1 million rows a ***REMOVED*** environment can contain, ***REMOVED*** can be upgraded to ***REMOVED*** Pro. 
 
 The table below outlines the differences between ***REMOVED*** tables and ***REMOVED*** Pro entities: 
 
