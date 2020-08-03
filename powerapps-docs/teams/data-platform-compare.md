@@ -46,3 +46,4 @@ This article uses the terms *field* and *column* interchangeably. We will contin
 Most of the processes for creating and managing tables in Dataflex are the same as creating and managing entities in Dataflex Pro. Where applicable, these articles about Dataflex link you to the Dataflex Pro documentation that provides more detail.  
 
 ### See also
+[Create a table](create-table.md)
