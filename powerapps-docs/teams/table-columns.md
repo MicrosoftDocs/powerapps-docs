@@ -23,7 +23,7 @@ For more information about the columns available, see these ***REMOVED*** Pro ar
 - [Set managed properties for fields](../maker/common-data-service/set-managed-properties-for-field.md)
 - [Behavior and format of the Date and Time field](../maker/common-data-service/behavior-format-date-time-field.md)
 
-# Create a column
+## Create a column
 1. On the **Build** tab, and then select **Tables**. 
 2. Open the table you want to add a column to, and then select **Add column**.
     ![Create a table column](media/create-table-column.png)
@@ -32,7 +32,7 @@ The rest of the process to add and manage columns is the same as in ***REMOVED**
 - [Create and edit fields for Common Data Service using Power Apps portal](../maker/common-data-service/create-edit-field-portal.md)
 - [Manage custom fields in an entity](../maker/common-data-service/data-platform-manage-fields.md)
 
-## Choice column
+## Choice columns
 In ***REMOVED***, choices can only be created as a column within a table. Creation of choices is otherwise the same as creating an option set in ***REMOVED*** Pro. More information: [Create an Option set](../maker/common-data-service/custom-picklists.md)
 
 ## Calculated and Rollup Columns
