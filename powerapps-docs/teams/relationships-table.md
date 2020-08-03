@@ -39,6 +39,7 @@ Editing relationships in ***REMOVED*** works the same as ***REMOVED*** Pro excep
 While viewing table relationships, select the table relationship you want to delete and then do one of the following:
 
 Select **Delete** relationship on the command bar.
+
 <img src="media/delete-table-relationship1.png" alt="Delete table relationship from command bar" height="300" width="350">
 
 Or, select **…** next to the relationship, and then select **Delete relationship**.
