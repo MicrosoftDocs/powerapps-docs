@@ -10,9 +10,9 @@ ms.author: nhelgren
 ms.reviewer: matp
 ---
 
-# Work with columns
+# Work with table columns
 
-With the exception Customer field, all field types in Microsoft Dataflex Pro are available in Microsoft Dataflex as *columns*. This article covers the content you will need for working with table columns in Dataflex.
+With the exception of the Customer field, all field types in Microsoft Dataflex Pro are available in Microsoft Dataflex as *columns*. This article covers the content you will need for working with table columns in Dataflex.
 
 Notice that, the currency feature will always use the default currency for the country that was selected during Dataflex environment creation. This can’t be changed, and additional transaction currencies or exchange rates can’t be added. However, users can upgrade from Dataflex to Dataflex Pro. After upgrading, the full currency functionality will be available. 
 
