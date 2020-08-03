@@ -1,6 +1,6 @@
 ---
-title: Dataflex vs Dataflex Pro | Microsoft Docs
-description: Explains the differences between Dataflex and Dataflex Pro.
+title: Create tables in Teams | Microsoft Docs
+description: Explains how to create a Dataflex table.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
