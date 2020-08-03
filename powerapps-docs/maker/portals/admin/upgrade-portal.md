@@ -1,14 +1,13 @@
 ---
 title: "Upgrade a portal | MicrosoftDocs"
 description: "Learn how to upgrade a portal."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/18/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
  
 # Upgrade a portal
@@ -59,4 +58,6 @@ To enable a portal for early upgrade:
 
 If you encounter any issue during the early upgrade phase, you can report it through Microsoft support.
 
+### See also
 
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)

@@ -23,7 +23,7 @@ This topic contains sample dashboards along with the respective FormXML strings.
   
 <a name="Sample1"></a>   
 ## Dashboard with charts and grids  
- The following is a sample dashboard that has four components: three charts and a grid. This is one of the default organization-owned dashboards,  available in Model-driven apps.  
+ The following is a sample dashboard that has four components: three charts and a grid. This is one of the default organization-owned dashboards,  available in model-driven apps.  
   
  ![Sample dashboard](media/dashboard-sample.png "Sample dashboard: Microsoft Dynamics 365 Overview")  
   
@@ -207,5 +207,5 @@ This topic contains sample dashboards along with the respective FormXML strings.
   
 ### See also  
  [Dashboards](analyze-data-with-dashboards.md)   
- [Dashboard Entities](/dynamics365/customer-engagement/developer/customize-dev/dashboard-entities)
+ 
 

@@ -3,14 +3,10 @@ title: Build your first model-driven app from scratch with Power Apps | Microsof
 description: Learn how to build a simple model-driven app
 documentationcenter: ''
 author: Mattp123
-manager: kvivek
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 02/05/2019
+ms.date: 07/01/2020
 ms.author: matp
 search.audienceType: 
   - maker
@@ -23,7 +19,8 @@ search.app:
 Model-driven app design is a component-focused approach to app development. In this topic, you simplify how to create a model-driven app by using one of the standard entities that's available in your Power Apps environment.
 
 > [!TIP]
-> To learn all about building model-driven apps, start here: [Understand model-driven app components](model-driven-app-components.md). 
+> Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction).<br/> 
+> For detailed information about model-driven apps and how to build it, start here: [Understand model-driven app components](model-driven-app-components.md). 
 
 ## Sign in to Power Apps
 Sign in to [Power Apps](https://make.powerapps.com/). If you don't already have a [!INCLUDE [powerapps](../../includes/powerapps.md)] account, select the **Get started free** link. 

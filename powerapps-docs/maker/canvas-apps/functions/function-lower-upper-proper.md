@@ -56,7 +56,7 @@ Each formula returns a single-column table that contains the converted strings.
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Converts any letter that's lowercase to uppercase. |<style> img { max-width:none; } </style> ![](media/function-lower-upper-proper/people-table-lower.png) |
+| **Lower( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Converts any letter that's lowercase to uppercase. | ![](media/function-lower-upper-proper/people-table-lower.png) |
 | **Upper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Converts any letter that's lowercase to uppercase. |![](media/function-lower-upper-proper/people-table-upper.png) |
 | **Proper( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |Converts any first letter of a word that's lowercase to uppercase, and converts any other letter that's uppercase to lowercase. |![](media/function-lower-upper-proper/people-table-proper.png) |
 

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 1/29/2020
+ms.date: 07/07/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -27,7 +27,7 @@ The Unified Interface for model-driven apps provides a consistent and accessible
 For an overview of Unified Interface in model-driven apps, watch this video: [Introduction to Unified Interface](https://www.youtube.com/watch?v=_VPOi_Iq6ko)
 
 > [!NOTE]
-> The legacy web client will be deprecated and customers must transition to Unified Interface before October 1, 2020. For more information, see [Blog: Announcing the timeline to move to Unified Interface](https://cloudblogs.microsoft.com/dynamics365/it/2019/09/10/announcing-the-timeline-to-move-to-unified-interface/). To learn more on how to transition, see [Quick start for transitioning](https://docs.microsoft.com/powerapps/maker/model-driven-apps/transition-web-app).
+> The legacy web client will be deprecated and customers must transition to Unified Interface before December 1, 2020. To learn more on how to transition, see [Quick start for transitioning](/powerapps/maker/model-driven-apps/transition-web-app) and [FAQs: Transition to Unified Interface](/powerapps/maker/model-driven-apps/faqs-transition-unified-interface).
 
 ## Navigation
 
