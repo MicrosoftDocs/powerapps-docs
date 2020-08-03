@@ -20,7 +20,6 @@ A solution will often have multiple tables that are used together in an applicat
 > [!NOTE]
 > All the capabilities found in tables are powered by Dataflex. While this will satisfy many situations, there are situations where an organization may want to have additional capacity, capabilities, or control over their solution. In these scenarios, Dataflex environments can be upgraded to Dataflex Pro (formerly Common Data Service). The upgrade process, referred to as *promotion*, has several considerations discussed later. 
 
-The next several topics cover information about tables in Dataflex, how to create and manage them, define what data columns are in your table, and more. 
 
 ### See also
 [Dataflex vs Dataflex Pro](data-platform-compare.md)
