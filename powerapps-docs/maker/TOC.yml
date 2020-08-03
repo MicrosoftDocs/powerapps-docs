@@ -1729,6 +1729,8 @@
         href: ../teams/overview-tables.md
       - name: ***REMOVED*** vs ***REMOVED*** Pro
         href: data-platform-compare.md
+      - name: Create a table
+        href: create-table.md
 - name: Chatbots
   href: ../chatbots.md
 

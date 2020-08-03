@@ -46,3 +46,4 @@ This article uses the terms *field* and *column* interchangeably. We will contin
 Most of the processes for creating and managing tables in ***REMOVED*** are the same as creating and managing entities in ***REMOVED*** Pro. Where applicable, these articles about ***REMOVED*** link you to the ***REMOVED*** Pro documentation that provides more detail.  
 
 ### See also
+[Create a table](create-table.md)
