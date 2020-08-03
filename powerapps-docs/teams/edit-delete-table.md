@@ -12,17 +12,17 @@ ms.reviewer: matp
 
 # Edit or delete a table
 With Microsoft Dataflex, you can perform the following types of operations on a table:
-- Edit the table columns
-- Edit the table relationships
-- Edit the table views
-- Delete the table
+- Edit the table columns.
+- Edit the table relationships.
+- Edit the table views.
+- Delete the table.
 
 ## Edit a table
 
 Within Teams, there are four table properties you can edit:
 
 - **Display name**: The name you would like the table to use in all displays.
-- **Plural display name**: The plural of the table name (when needed for display).
+- **Plural display name**: The plural of the table name when needed for display.
 - **Description**: A brief description of the purpose of the table.
 - **Quick create settings**: This enables quick creation of records for clients that support this feature.
 
@@ -44,3 +44,4 @@ In the **Tables** list select **…** next to the table you want to delete, and 
 
 
 ### See also
+[Work with table relationships](relationships-table.md)
