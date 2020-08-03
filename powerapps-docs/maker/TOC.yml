@@ -1733,6 +1733,8 @@
         href: ../teams/create-table.md
       - name: Edit or delete a table
         href: ../teams/edit-delete-table.md
+      - name: Work with table relationships
+        href: ../teams/relationships-table.md
 - name: Chatbots
   href: ../chatbots.md
 
