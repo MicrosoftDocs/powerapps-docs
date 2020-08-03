@@ -1723,7 +1723,11 @@
   items:
   - name: Overview
     href: ../teams/overview.md
-
+  - name: Work with Dataflex tables
+    href: ../teams/overview-tables.md
+    items: 
+      - name: Dataflex vs Dataflex Pro
+        href: data-platform-compare.md
 - name: Chatbots
   href: ../chatbots.md
 
