@@ -1728,9 +1728,9 @@
       - name: Overview
         href: ../teams/overview-tables.md
       - name: Dataflex vs Dataflex Pro
-        href: data-platform-compare.md
+        href: ../teams/data-platform-compare.md
       - name: Create a table
-        href: create-table.md
+        href: ../teams/create-table.md
 - name: Chatbots
   href: ../chatbots.md
 

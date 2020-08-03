@@ -19,7 +19,7 @@ While Microsoft Dataflex Pro has two types of entities that can be created (stan
 
 You define the type of table under the **More settings** option when you create a table.
 
-There are four different types of table ownership. When you create a table, the only options are *user* or *team owned* or *organization-owned*, but you should be aware that other tables have different ownership types. More information: [Types of entities](../maker/common-data-service/types-of-entities.md#entity-ownership)
+There are four different types of table ownership. When you create a table, the only options are *user* or *team owned* or *organization-owned*, but you should be aware that other tables have different ownership types. More information: [Types of entities](../maker/common-data-service/types-of-entities.md)
 
 The articles in this section cover information about tables in Dataflex, how to create and manage them, define what data columns are in your table, and more.
 
@@ -41,7 +41,7 @@ The articles in this section cover information about tables in Dataflex, how to 
     - **More settings**: This area provides additional settings that are available. More information: [Create a custom entity](../maker/common-data-service/data-platform-create-entity.md).
     ![Column details](media/create-table4.png)
 
-5. Select **Done**. 
+5. Select **Done**.
 
 ### See also
 
