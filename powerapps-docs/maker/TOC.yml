@@ -1731,6 +1731,8 @@
         href: ../teams/data-platform-compare.md
       - name: Create a table
         href: ../teams/create-table.md
+      - name: Edit or delete a table
+        href: ../teams/edit-delete-table.md
 - name: Chatbots
   href: ../chatbots.md
 
