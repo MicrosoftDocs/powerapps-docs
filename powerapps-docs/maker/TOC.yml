@@ -1724,8 +1724,9 @@
   - name: Overview
     href: ../teams/overview.md
   - name: Work with ***REMOVED*** tables
-    href: ../teams/overview-tables.md
-    items: 
+    items:
+      - name: Overview
+        href: ../teams/overview-tables.md
       - name: ***REMOVED*** vs ***REMOVED*** Pro
         href: data-platform-compare.md
 - name: Chatbots
