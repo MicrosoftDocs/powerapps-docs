@@ -12,7 +12,7 @@ ms.reviewer: matp
 
 # How are Dataflex and Dataflex Pro different?
 
-Applications within a Team have access to a Microsoft Dataflex environment.  Dataflex is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataflex delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. For scenarios where an organization may require additional capabilities, more granular control for security and governance, or capacity beyond the approximately one million rows a Dataflex environment can contain, Dataflex can be upgraded to Dataflex Pro. 
+Applications within a Team have access to a Microsoft Dataflex environment.  Dataflex is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataflex delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. For scenarios where an organization may require additional capabilities, more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataflex environment can contain, Dataflex can be upgraded to Dataflex Pro. 
 
 The table below outlines the differences between Dataflex tables and Dataflex Pro entities: 
 
