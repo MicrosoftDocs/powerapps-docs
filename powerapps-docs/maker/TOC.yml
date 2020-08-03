@@ -1735,6 +1735,8 @@
         href: ../teams/edit-delete-table.md
       - name: Work with table relationships
         href: ../teams/relationships-table.md
+      - name: Work with table columns
+        href: ../teams/table-columns.md
 - name: Chatbots
   href: ../chatbots.md
 

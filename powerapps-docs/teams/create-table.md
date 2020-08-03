@@ -1,6 +1,6 @@
 ---
-title: ***REMOVED*** vs ***REMOVED*** Pro | Microsoft Docs
-description: Explains the differences between ***REMOVED*** and ***REMOVED*** Pro.
+title: Create tables in Teams | Microsoft Docs
+description: Explains how to create a ***REMOVED*** table.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
