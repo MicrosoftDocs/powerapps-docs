@@ -43,6 +43,5 @@ The articles in this section cover information about tables in ***REMOVED***, ho
 
 5. Select **Done**. 
 
-
-
 ### See also
+
