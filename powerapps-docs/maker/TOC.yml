@@ -1723,7 +1723,18 @@
   items:
   - name: Overview
     href: ../teams/overview.md
-
+  - name: Work with Dataflex tables
+    items:
+      - name: Overview
+        href: ../teams/overview-tables.md
+      - name: Dataflex vs Dataflex Pro
+        href: ../teams/data-platform-compare.md
+      - name: Create a table
+        href: ../teams/create-table.md
+      - name: Edit or delete a table
+        href: ../teams/edit-delete-table.md
+      - name: Work with table relationships
+        href: ../teams/relationships-table.md
 - name: Chatbots
   href: ../chatbots.md
 
