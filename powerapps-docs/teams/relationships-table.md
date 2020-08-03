@@ -37,8 +37,9 @@ Editing relationships in Dataflex works the same as Dataflex Pro except you canâ
 
 ## Delete a table Relationship
 While viewing table relationships, select the table relationship you want to delete and then do one of the following:
+
 Select **Delete** relationship on the command bar.
-![Delete table relationship from command bar](media/delete-table-relationship1.png)
+<img src="media/delete-table-relationship1.png" alt="Delete table relationship from command bar" height="300" width="350">
 
 Or, select **â€¦** next to the relationship, and then select **Delete relationship**.
 ![Delete table relationship in context](media/delete-table-relationship2.png)
