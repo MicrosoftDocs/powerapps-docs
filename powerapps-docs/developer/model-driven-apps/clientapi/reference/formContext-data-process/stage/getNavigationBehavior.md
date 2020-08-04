@@ -16,8 +16,6 @@ search.app:
 ---
 # getNavigationBehavior (Client API reference)
 
-
-
 [!INCLUDE[./includes/getNavigationBehavior-description.md](./includes/getNavigationBehavior-description.md)]
 
 > [!NOTE]
