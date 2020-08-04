@@ -1729,6 +1729,8 @@
         href: ../teams/understand-power-apps-studio.md
       - name: Use the Fluent UI controls
         href: ../teams/use-the-fluent-ui-controls.md
+  - name: Create additional apps
+    href: ../teams/create-additional-apps.md
   - name: Work with ***REMOVED*** tables
     items:
       - name: Overview
