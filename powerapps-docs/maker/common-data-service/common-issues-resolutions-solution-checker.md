@@ -2,7 +2,7 @@
 title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: " A list of common issues and resolutions within solution checker"
 keywords: ""
-ms.date: 07/30/2020
+ms.date: 08/04/2020
 ms.service: powerapps
 ms.custom:
   - ""
@@ -87,18 +87,13 @@ In order to use solution checker in this organization, Administration Mode must 
 To disable administration mode for an organization instance:
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments/).
-2. Select the environment that has issues running solution checker, and then select **Convert to sandbox** on the command bar. 
+2. Open the environment that has issues running solution checker, and then select **Edit**. 
 
-    > [!NOTE]
-    > The conversion to sandbox may take several minutes to complete. 
-
-3. Open the environment, and then select **Edit**. 
-
-4. Set **Administration mode** to disabled, and then select **Save**.
+3. Set **Administration mode** to disabled, and then select **Save**.
 
     ![Disable Admin mode](media/solution-checker-instance-disable-admin-mode.png)
 
-5. Run solution checker again.
+4. Run solution checker again.
 
 ## Solution checker fails due to missing security roles
 
