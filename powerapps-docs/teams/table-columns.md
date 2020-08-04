@@ -14,9 +14,9 @@ ms.reviewer: matp
 
 With the exception of the Customer field, all field types in Microsoft Dataflex Pro are available in Microsoft Dataflex as *columns*. This article covers the content you will need for working with table columns in Dataflex.
 
-Notice that, the currency feature will always use the default currency for the country that was selected during Dataflex environment creation. This can’t be changed, and additional transaction currencies or exchange rates can’t be added. However, users can upgrade from Dataflex to Dataflex Pro. After upgrading, the full currency functionality will be available. 
+Notice that, the currency feature will always use the default currency for the country that was selected during Dataflex environment creation. This can’t be changed, and additional transaction currencies or exchange rates can’t be added. However, you can upgrade from Dataflex to Dataflex Pro for full currency functionality.
 
-For more information about the columns available, see these Dataflex Pro articles: 
+For more information about the columns available, see these Dataflex Pro articles:
 - [Fields overview](../maker/common-data-service/fields-overview.md)
 - [Create and edit global option sets overview](../maker/common-data-service/create-edit-global-option-sets.md)
 - [Autonumber fields](../maker/common-data-service/autonumber-fields.md)
