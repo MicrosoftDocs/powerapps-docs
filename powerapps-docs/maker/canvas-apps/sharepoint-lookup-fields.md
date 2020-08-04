@@ -63,17 +63,17 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 
 1. On your SharePoint site, create a new **RepairShop** list.
 
-    ![](./media/sharepoint-lookup-fields/new-list.png)
+    ![New list](./media/sharepoint-lookup-fields/new-list.png)
 
 2. Add a *ContactEmail* field of type **Single line of text**.
 
-    ![](./media/sharepoint-lookup-fields/add-email-field.png)
+    ![Add email field](./media/sharepoint-lookup-fields/add-email-field.png)
 
 3. Add any other fields you need.
 
 4. Click or tap **+ New** to enter sample data into the list, at least 3 rows with different *ContactEmail* values. When an asset needs to be repaired, you choose one of these.
 
-    ![](./media/sharepoint-lookup-fields/add-repair-shops.png)
+    ![Add repair shops](./media/sharepoint-lookup-fields/add-repair-shops.png)
 
 ### Define the Assets list
 
@@ -81,17 +81,17 @@ You do this first, so that when you add data to the **Assets** list, **RepairSho
 
 2. Click or tap the plus sign and choose **More**.
 
-    ![](./media/sharepoint-lookup-fields/choose-more-type.png)
+    ![Choose more type](./media/sharepoint-lookup-fields/choose-more-type.png)
 
 3. Add an *AssetType* field of type **Choice**, and in the **Type each choice on a separate line** text box, fill in the values you want to appear in the choice menu. Then click or tap **OK**.
 
-    ![](./media/sharepoint-lookup-fields/define-choice-column.png)
+    ![Define choice column](./media/sharepoint-lookup-fields/define-choice-column.png)
 
 4. Start to add another field, just like in step 2: click or tap the plus sign and choose **More**.
 
 5. Add a *RepairShop* field of type **Lookup**, choose **RepairShop** from the **Get information from** text box, and choose *ContactEmail* from the **In this column** text box. Then click or tap **OK**.
 
-    ![](./media/sharepoint-lookup-fields/setup-lookup-column.png)
+    ![Setup lookup column](./media/sharepoint-lookup-fields/setup-lookup-column.png)
 
 6. Add any additional fields you want.
 
@@ -103,15 +103,15 @@ You use this app to add data to the **Assets** list.
 
 2. In the **File** menu (along the left edge), click or tap **New**, and then click or tap **SharePoint**.
 
-    ![](./media/sharepoint-lookup-fields/create-app.png)
+    ![Create app](./media/sharepoint-lookup-fields/create-app.png)
 
 1. Choose your SharePoint site from the **Recent sites** list or enter your site's url directly into the text box. Click or tap **GO**.
 
-    ![](./media/sharepoint-lookup-fields/choose-sharepoint-site.png)
+    ![Choose SharePoint site](./media/sharepoint-lookup-fields/choose-sharepoint-site.png)
 
 1. Choose the main list from your SharePoint site, in this example, **Assets**. Click or tap the **Connect** button in the lower-right corner.
 
-    ![](./media/sharepoint-lookup-fields/choose-main-list.png)
+    ![Choose main list](./media/sharepoint-lookup-fields/choose-main-list.png)
 
 
 ## Add data to the Assets list
@@ -126,11 +126,11 @@ Now you can run the app and see how the view details screen looks for the lookup
 
 4. Click or tap the **AssetType** dropdown arrow. The values displayed are those you entered when you created this field. Choose one of the entries.
 
-    ![](./media/sharepoint-lookup-fields/fill-asset-type-3.png)
+    ![Fill asset type](./media/sharepoint-lookup-fields/fill-asset-type-3.png)
 
 5. Click or tap the **RepairShop** dropdown arrow. Choose one of the entries.
 
-    ![](./media/sharepoint-lookup-fields/fill-repair-shop-3.png)
+    ![Fill repair shop](./media/sharepoint-lookup-fields/fill-repair-shop-3.png)
 
 6. In the upper-right corner, click or tap the check mark to save the new entry.
 
