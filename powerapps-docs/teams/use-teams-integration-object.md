@@ -20,7 +20,7 @@ There are two features available with the integration of Power Apps with Teams. 
 
 ## Get the Teams theme
 
-Teams uses three themes: *Default*, *Dark* and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark* and *Contrast* inside the Power Apps formula bar. For more information about colors in Teams, go to [UI component colors in Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/design/components/color).
+Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* inside the Power Apps formula bar. For more information about colors in Teams, go to [UI component colors in Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/design/components/color).
 
 To retrieve a theme name, use the following formula.
 
@@ -36,12 +36,14 @@ Switch(
     )
 ```
 
-In the above formula, the expression *Teams.Theme.Name* is used to evaluate theme names of *Default*, *Dark* or *Contrast* and the color of the selected
-canvas app object is changed depending on the color entered in the formula. The [Switch() function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-if) evaluates a formula and determines whether the result matches any value in a sequence that you specify.
+In the above formula, the expression *Teams.Theme.Name* is used to evaluate theme names of *Default*, *Dark*, or *Contrast* and the color of the selected
+canvas app object is changed depending on the color entered in the formula.
+
+The [Switch() function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-if) evaluates a formula and determines whether the result matches any value in a sequence that you specify.
 
 ![Function Switch()](media/teams-function-switch.png)
 
-This results in changing the background of canvas app depending on the change in the theme selection inside Teams.
+This function results in changing the background of canvas app depending on the change in the theme selection inside Teams.
 
 ![Teams themes](media/teams-themes.png)
 
