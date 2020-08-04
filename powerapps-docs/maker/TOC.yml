@@ -1749,6 +1749,16 @@
         href: ../teams/relationships-table.md
       - name: Work with table columns
         href: ../teams/table-columns.md
+  - name: Manage your apps
+    href: ../teams/manage-your-apps.md
+  - name: Publish and share your apps
+    href: ../teams/publish-and-share-apps.md
+  - name: Remove your apps
+    href: ../teams/remove-your-apps.md
+  - name: Uninstall Power Apps personal app
+    href: ../teams/uninstall-personal-apps.md
+  - name: Use sample apps from Teams store
+    href: ../teams/use-sample-apps-from-teams-store.md
 - name: Chatbots
   href: ../chatbots.md
 

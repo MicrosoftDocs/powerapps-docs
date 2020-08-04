@@ -27,7 +27,7 @@ This group of  samples demonstrate how to query data using the Common Data Servi
 
 - [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)
 
-- [Query Data Sample (C#)](samples/query-data-csharp.md)
+- [Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)
 
 This topic describes a common set of operations implemented by each sample in this group. This topic describes the HTTP requests and responses and text output that each sample in this group will perform without the language specific details. See the language specific descriptions and the individual samples for details about how this operations are performed.
 
@@ -2236,5 +2236,5 @@ Saved User Query:
 [Use the Common Data Service Web API](overview.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br />
-[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
+[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)
