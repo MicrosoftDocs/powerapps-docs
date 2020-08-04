@@ -14,9 +14,9 @@ ms.reviewer: matp
 
 With the exception of the Customer field, all field types in Microsoft ***REMOVED*** Pro are available in Microsoft ***REMOVED*** as *columns*. This article covers the content you will need for working with table columns in ***REMOVED***.
 
-Notice that, the currency feature will always use the default currency for the country that was selected during ***REMOVED*** environment creation. This can’t be changed, and additional transaction currencies or exchange rates can’t be added. However, users can upgrade from ***REMOVED*** to ***REMOVED*** Pro. After upgrading, the full currency functionality will be available. 
+Notice that, the currency feature will always use the default currency for the country that was selected during ***REMOVED*** environment creation. This can’t be changed, and additional transaction currencies or exchange rates can’t be added. However, you can upgrade from ***REMOVED*** to ***REMOVED*** Pro for full currency functionality.
 
-For more information about the columns available, see these ***REMOVED*** Pro articles: 
+For more information about the columns available, see these ***REMOVED*** Pro articles:
 - [Fields overview](../maker/common-data-service/fields-overview.md)
 - [Create and edit global option sets overview](../maker/common-data-service/create-edit-global-option-sets.md)
 - [Autonumber fields](../maker/common-data-service/autonumber-fields.md)

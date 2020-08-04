@@ -46,3 +46,4 @@ Or, select **…** next to the relationship, and then select **Delete relationsh
 ![Delete table relationship in context](media/delete-table-relationship2.png)
 
 ### See also
+[Work with table columns](table-columns.md)
