@@ -35,7 +35,7 @@ The Facility Safety Management app has the following components:
 
 **Reopen Readiness**
 
--  **Phase Transitions** - A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase.
+-  **Phase Transitions** - A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase and its associated checklist based upon the phase's configured readiness factors.
 
 -  **Readiness Factors** -  Readiness factors are yes-or-no questions about reopening a building. They are linked to the reopening phase by a checklist on a facility.
 
@@ -122,6 +122,8 @@ transitions.
 
      > [!div class="mx-imgBorder"]
      > ![Checklist items](media/facility-manager-checklist-2-1.png "Checklist items") 
+     >[!NOTE]
+     >Checklist items are configured as part of the global process for managing Reopen Phases and their associated Readiness Factors.  The +New Readiness Check button does permit users to create new checks here.    
 
    - Select the **Transitions** tab to see any related transition requests and their status.
 
