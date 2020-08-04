@@ -123,7 +123,7 @@ transitions.
      > [!div class="mx-imgBorder"]
      > ![Checklist items](media/facility-manager-checklist-2-1.png "Checklist items") 
      >[!NOTE]
-     >Checklist items are configured as part of the global process for managing Reopen Phases and their associated Readiness Factors.  The +New Readiness Check button does permit users to create new checks here.    
+     >Checklist items are configured as part of the global process for managing Reopen Phases and their associated Readiness Factors.  Therefore, new Checks are added as Readiness Factors on a Reopen Phase and not on the Facility.    
 
    - Select the **Transitions** tab to see any related transition requests and their status.
 
@@ -160,10 +160,10 @@ The **Checklist** tab contains an editable grid displaying the checklist for the
 
 ## Moving facility to a new phase
 
-When a facility manager asserts that a facility should be moved to a new phase, the manager can apply for a transition. Only the facility manager can create
-a new transition record that indicates the new phase. After the transition is saved, a reviewer can be assigned. A reviewer must **Accept** or **Reject** the transition. Either way, the transition record is closed and stored as a historical record. When the transition is accepted, the proposed phase is applied to the facility.
+When a facility manager asserts that a facility should be moved to a new phase, the manager can apply for a transition. Only the facility manager can create a new transition record that indicates readiness to move to a new phase. After a new transition is created and saved it will appear in the sub-grid with on the Transitions tab of the Facility record with a status of Submitted.  A reviewer is now able to be assigned to Reopen Phase transition. The reviewer once assigned can then take action on that Reopen Phase Transition request by Accepting or Rejecting it.  Upon approval or rejection of the transition record it is processed and when complete the request is considered closed and stored as a historical record. When complete a transition will appear in the sub-grid as with either Accepted (approved request) or Rejected (rejected request). When a transition is accepted, the transition record proposed phase is applied to the facility record’s Reopen Phase field.  This update will trigger the background process that will update the business process flow stage, aligning the Reopen Phase and current BPF stage.
 
-The new phase comes with its own checklist and set of metrics and goals. These will be made available on the facility by a background process. So there will be a small delay between accepting a transition and the actual changes on the facility record.
+Additionally the background process will create a new checklist for the Facility along with a new set of metrics and goals. The new checklist that is created is based upon the Readiness Factors that were previously setup and configured by the Facility Manager for the selected Reopen Phase.  The new checklist can then be accessed from the Facility record’s Checklist Tab.  (note:  during the execution of the background processes there may be a delay before these updates are completed and viewable in the Facility’s manager’s view of the screen.  You may need to select the refresh button to see the updates on the screen).
+
 
 A reviewer&mdash;for instance, a facility manager supervising many facility managers in a facility group&mdash;can find the backlog in **Phase transitions**. For example, the list can be filtered by the facility group or by the reviewer to find the phase transitions that require attention.
 
