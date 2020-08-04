@@ -47,6 +47,11 @@ function getAttributeValue(executionContext) {
             // Access the value of the attribute bound to the constituent control
             var myValue = quickViewControl.getControl(0).getAttribute().getValue();
             console.log(myValue);
+            
+            // Search by a specific attribute present in the control       
+            var myValue2 =  quickViewControl.getControl().find(control => control.getName() == "<AttributeSchemaName>").getAttribute().getValue();
+            console.log(myValue2);
+            
             return;
         }
         else {
