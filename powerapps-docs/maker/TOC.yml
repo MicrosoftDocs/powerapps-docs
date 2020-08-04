@@ -1725,6 +1725,8 @@
     href: ../teams/overview.md
   - name: Understand the Power Apps interface
     items:
+      - name: Overview of the Power Apps app
+        href: ../teams/overview-of-the-power-apps-app.md
       - name: Understand Power Apps Studio
         href: ../teams/understand-power-apps-studio.md
       - name: Use the Fluent UI controls
