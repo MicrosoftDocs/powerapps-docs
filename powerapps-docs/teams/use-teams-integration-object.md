@@ -79,4 +79,4 @@ Considering the Teams channel name as *General*, you can use the following formu
 
 ![Filtered items](media/teams-filtered-items.png)
 
-For more information about the Teams clients SDK, go to [Context interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest). For more information about using context from Teams, go to [use context from teams](maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
+For more information about the Teams clients SDK, go to [Context interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest). For more information about using context from Teams, go to [use context from teams](../maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
