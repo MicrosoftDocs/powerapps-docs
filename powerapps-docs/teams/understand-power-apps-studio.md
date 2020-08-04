@@ -13,7 +13,7 @@ ms.reviewer:
 # Understand Power Apps Studio
 
 When you create a canvas app using any method, you’re taken to the canvas app
-builder called Microsoft Power Apps Studio. You can use Power Apps Studio to design, build and manage your canvas app.
+builder called Microsoft Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app.
 
 ## Overview of Power Apps Studio
 
@@ -24,7 +24,7 @@ builder called Microsoft Power Apps Studio. You can use Power Apps Studio to des
 1. [Power Apps Studio options](#2--power-apps-studio-options) – options relevant to the settings within app
 Studio session.
 
-1. [App actions](#3--app-actions) - options rename, save, preview or publish the app.
+1. [App actions](#3--app-actions) - options rename, save, preview, or publish the app.
 
 1. [Properties list](#4--properties-list) - list of properties for the selected object.
 
@@ -60,7 +60,7 @@ interface.
 ## 2 – Power Apps Studio options
 
 Power Apps Studio options available are available on top-left menu. The
-options are relevant to the current session and app related settings.
+options are relevant to the current session and app-related settings.
 
 ![Studio options](media/studio-options.png)
 
@@ -96,7 +96,7 @@ Select a new screen to add to the app based on layout of the screen.
 ![Scenarios](media/studio-scenarios.png)
 
 Select a screen type based on the available scenarios, such as *Scrollable,
-List, Form, Success, Tutorial, Email, People, Meeting or Calendar.*
+List, Form, Success, Tutorial, Email, People, Meeting, or Calendar.*
 
 ### App checker
 
@@ -111,8 +111,7 @@ Allows you to configure app’s genera settings and turn features on or off.
 
 #### General settings
 
-Launches app’s general settings and options such as the app name, icon, data row
-limit and app icon fill colors.
+Launches app’s general settings and options such as the app name, icon, data row limit and app icon fill colors.
 
 ![General settings](media/studio-general-settings.png)
 
@@ -123,12 +122,12 @@ or *Off*.
 
 ![Features](media/studio-features.png)
 
-For more information, go to [preview, experimental or deprecated
+For more information, go to [preview, experimental, or deprecated
 features](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
 
 ### Power Automate
 
-Les you create a new flow using Power Automate or select any already available
+Lets you create a new flow using Power Automate or select any already available
 flow.
 
 ![Power Automate](media/studio-power-automate.png)
@@ -146,7 +145,7 @@ List current [variables](https://docs.microsoft.com/powerapps/maker/canvas-apps/
 ### Account details
 
 Shows account details including session details, current Power Apps app build
-version and other session details. You can also turn the **Auto save** option **On** or **Off**.
+version, and other session details. You can also turn the **Auto save** option **On** or **Off**.
 
 ![Account details](media/studio-account-details.png)
 
@@ -156,7 +155,7 @@ save the changes to your app before closing the Studio.
 
 ## 3 – App actions
 
-The options on top-right corner of Power Apps Studio allows you to work with app-specific actions.
+The options on top-right corner of Power Apps Studio allow you to work with app-specific actions.
 
 ![App actions](media/studio-app-actions.png)
 
@@ -186,8 +185,7 @@ about sharing an app, go to Share an app.
 
 ### Version history
 
-Shows all the versions of the app. You can view app versions, version comments
-and the currently published version. From the version history page, you can also restore an app to a particular version. For more information about version history, go to Restore an app.
+Shows all the versions of the app. You can view app versions, version comments, and the currently published version. From the version history page, you can also restore an app to a particular version. For more information about version history, go to Restore an app.
 
 ## 4 – Properties list
 
@@ -198,7 +196,7 @@ The properties list changes based on your selection. For a complete list of all 
 
 ## 5 – Formula bar
 
-Use the formula bar to add, edit or remove functions relevant to the selected
+Use the formula bar to add, edit, or remove functions relevant to the selected
 object and the property selected from the properties list. For example, select
 the screen to update the background using the [RGBA function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-colors).
 
@@ -245,7 +243,7 @@ more detail in *Understanding the Power Apps interface*.
 
 ## 7 – App authoring menu
 
-The left pane on Power Apps Studio allows you to switch between options such as **Insert**, **Data Sources**, **Media** and **Advanced tools**.
+The left pane on Power Apps Studio allows you to switch between options such as **Insert**, **Data Sources**, **Media, and **Advanced tools**.
 
 ![App authoring menu](media/studio-app-authoring-menu.png)
 
@@ -277,8 +275,8 @@ libraries](https://docs.microsoft.com/powerapps/maker/canvas-apps/component-libr
 
 ### Insert
 
-By default, **Insert** shows all the popular objects or controls that you can
-add on the selected screen in your canvas app. However, you can expand other
+**Insert** shows all the popular objects or controls that you can
+add on the selected screen in your canvas app. You can also expand other
 choices or use the components option to insert controls from a component
 library.
 
@@ -306,9 +304,9 @@ properties.
 
 *Rectangle* – A rectangular shape to configure canvas appearance.
 
-*Date Picker* - A control that the user can click or tap to specify a date.
+*Date Picker* - A control that the user can select to specify a date.
 
-*Button* - A control that the user can click or tap to interact with the app.
+*Button* - A control that the user can select to interact with the app.
 
 For more information about the controls that you can insert, their properties
 and definitions, go to [controls and properties in Power
@@ -316,7 +314,7 @@ Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-propertie
 
 ### Data
 
-Data allows you to add, refresh or remove data sources from your canvas app. You
+Data allows you to add, refresh, or remove data sources from your canvas app. You
 can add one or more
 [connections](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections-list)
 using data sources.
@@ -341,7 +339,7 @@ Connectors](https://docs.microsoft.com/connectors/connector-reference/connector-
 
 ### Table designer
 
-When you select **Create new table** and enter a name for the new table, you can see the **Table designer**. Use the Table designer to design the table, add columns of different data types, enter data in rows and save the changes.
+When you select **Create new table** and enter a name for the new table, you can see the **Table designer**. Use the Table designer to design the table, add columns of different data types, enter data in rows, and save the changes.
 
 ![Table designer](media/studio-table-designer.png)
 
@@ -385,7 +383,7 @@ Table* using the build hub instead of the Table designer.
 
 ###### Advanced options
 
-The advanced options of columns change depending on the type of the column. For example, a **Text** column type has advanced option of **Max length.** Whereas an **Auto number** column type has more options such as the type of auto numbering, prefixes and maximum number of digits. For more information about the data types of columns in a ***REMOVED*** table, go to [types of
+The advanced options of columns change depending on the type of the column. For example, a **Text** column type has advanced option of **Max length.** **Auto number** column type instead has more options such as the type of auto numbering, prefixes, and maximum number of digits. For more information about the data types of columns in a ***REMOVED*** table, go to [types of
 columns](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-fields).
 
 ##### Show/hide columns
@@ -414,7 +412,7 @@ available data sources inside the **Data** option in the Studio.
 
 ##### Table designer view
 
-Select from the options of **Compact, Default** or **Comfortable** layouts to
+Select from the options of **Compact, Default, or **Comfortable** layouts to
 switch the view with columns and rows spacing to change the Table designer
 layout.
 
@@ -424,8 +422,7 @@ Shows the row counts inside the table.
 
 ##### Column options
 
-Select the drop-down option at the top of the column name to view column related
-options.
+Select the drop-down option at the top of the column name to view column-related options.
 
 ![Column options](media/studio-column-options.png)
 
@@ -447,7 +444,7 @@ options.
 
 Once you add rows, columns and add data, you can close the table and use it as
 the data source inside your app. To edit content inside the table, you can use
-the app controls. You can also go back to the Table designer to edit the table.
+the app controls, or go back to the Table designer to edit the table.
 
 To edit the table, select the table data source and then select **Edit data** to
 open the table inside Table designer.
@@ -460,7 +457,7 @@ to manually refresh the Studio to reflect the data inside the controls added on 
 
 ### Media
 
-Use the **Media** option to add images, video or audio files to your app. Adding media directly to your app uploads the files to the app and uses the app storage. Each file uploaded to the app as media can’t exceed 64 MB and the size of all media files uploaded to an app can’t exceed 200 MB.
+Use the **Media** option to add images, video, or audio files to your app. Adding media directly to your app uploads the files to the app and uses the app storage. Each file uploaded to the app as media can’t exceed 64 MB and the size of all media files uploaded to an app can’t exceed 200 MB.
 
 ![Media](media/studio-media.png)
 
@@ -476,7 +473,7 @@ Studio**. Canvas app **Monitor** is useful when debugging a canvas app, or when
 diagnosing a problem with the app – such as to investigate performance
 degradation or time delay when using the app. **Test Studio** allows you to
 develop and reuse tests specific to individual apps based on scenarios. These
-tests can be extremely useful when automating canvas app testing during
+tests can be useful when automating canvas app testing during
 application lifecycle management (ALM) scenarios, such as when releasing a new
 version of the app.
 
@@ -491,17 +488,14 @@ The canvas shows the currently selected screen from the left pane.
 ## 10 – Properties pane
 
 The properties pane shows properties and options available for the currently
-selected object on the canvas. **Properties** tab shows generic options, such as the name, color, size or position. **Advanced** tab shows additional options for advanced customization. The advanced properties may sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-cards#unlock-a-card) in such situations while working with advanced customization.
+selected object on the canvas. **Properties** tab shows generic options, such as the name, color, size, or position. **Advanced** tab shows additional options for advanced customization. The advanced properties may sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-cards#unlock-a-card) in such situations while working with advanced customization.
 
 ![Properties pane](media/studio-properties-pane.png)
 
 ## 11 – Screen selector
 
-If your canvas app has multiple screens, use the screen selector to switch
-between screens. You can also select a screen from the left pane using the
-**Tree view**. If the current selection is inside a container, or an individual
-cell inside a gallery, the selector shows the breadcrumbs for the parent
-elements at each level.
+Use the screen selector to switch between screens when your canvas app has multiple screens. You can also select a screen from the left pane using the
+**Tree view**. If the current selection is inside a container, or an individual cell inside a gallery, the selector shows the breadcrumbs for the parent elements at each level.
 
 ## 12 – Change canvas screen size
 
