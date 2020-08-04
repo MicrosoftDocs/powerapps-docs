@@ -1,0 +1,80 @@
+---
+title: Use Teams integration object | Microsoft Docs
+description: Learn how to use the Teams integration object when creating apps using Power Apps inside Teams.
+author: tapanm-msft
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 08/17/2020
+ms.author: tapanm
+ms.reviewer: 
+---
+
+# Teams integration object
+
+You can use Teams integration object to easily find and access the Teams integration features and use the improved usability of expressions while integrating your canvas app with Teams. You can validate the canvas app having Teams integration object present with the visibility of **Teams** control from the tree view.
+
+![Teams Integration Object](media/teams-integration-object.png)
+
+There are two features available with the integration of Power Apps with Teams. You can get a Teams theme inside a canvas app, and you can filter data depending on the team or channel context.
+
+## Get the Teams theme
+
+Teams uses three themes: *Default*, *Dark* and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark* and *Contrast* inside the Power Apps formula bar. For more information about colors in Teams, go to [UI component colors in Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/design/components/color).
+
+To retrieve a theme name, use the following formula.
+
+```powerapps-dot
+Switch(
+    Teams.Theme.Name,
+    TeamsTheme.Default,
+    Color.DimGrey,
+    TeamsTheme.Dark,
+    Color.White,
+    TeamsTheme.Contrast,
+    Color.Black
+    )
+```
+
+In the above formula, the expression *Teams.Theme.Name* is used to evaluate theme names of *Default*, *Dark* or *Contrast* and the color of the selected
+canvas app object is changed depending on the color entered in the formula. The [Switch() function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-if) evaluates a formula and determines whether the result matches any value in a sequence that you specify.
+
+![Function Switch()](media/teams-function-switch.png)
+
+This results in changing the background of canvas app depending on the change in the theme selection inside Teams.
+
+![Teams themes](media/teams-themes.png)
+
+| **Teams theme**                               | **App background**                       |
+|-----------------------------------------------|------------------------------------------|
+| *Default (App background color: DimGrey)*     | ![Default theme](media/teams-default-theme.png) |
+| *Dark (App background color: White)*          | ![Dark theme](media/teams-dark-theme.png) |
+| *High contrast (App background color: Black)* | ![High contrast theme](media/teams-high-contrast-theme.png) |
+
+## Get the Teams channel name to filter app data
+
+You can get the Teams channel name in canvas app functions, such as [function Filter()](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-filter-lookup). To get a Teams channel name, use the following syntax:
+
+```powerapps-dot
+Teams.ThisChannel.DisplayName
+```
+
+For example, you can add a label and set the *Text* property to display the name of the Teams channel.
+
+![Show Teams channel name](media/teams-show-teams-channel.png)
+
+For example, [connecting to a list hosted on a SharePoint site](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-sharepoint-online), you can list the items in a default gallery.
+
+![Show SharePoint list items](media/teams-show-sharepoint-list-items.png)
+
+The list shows all items and a column representing the Teams channel name.
+
+![All items](media/teams-all-sharepoint-items.png)
+
+Considering the Teams channel name as *General*, you can use the following formula to filter the gallery content depending on the name of the channel.
+
+*Filter('Colors', Channel = Teams.ThisChannel.DisplayName)*
+
+![Filtered items](media/teams-filtered-items.png)
+
+For more information about the Teams clients SDK, go to [Context interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest). For more information about using context from Teams, go to [use context from teams](maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
