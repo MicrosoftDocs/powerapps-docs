@@ -1727,6 +1727,8 @@
     items:
       - name: Understand Power Apps Studio
         href: ../teams/understand-power-apps-studio.md
+      - name: Use the Fluent UI controls
+        href: ../teams/use-the-fluent-ui-controls.md
   - name: Work with ***REMOVED*** tables
     items:
       - name: Overview
