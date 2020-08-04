@@ -21,8 +21,7 @@ builder called Microsoft Power Apps Studio. You can use Power Apps Studio to des
 
 1. [Build hub](#1---build-hub) – select different tabs inside the Power Apps app.
 
-1. [Power Apps Studio options](#2--power-apps-studio-options) – options relevant to the settings within app
-Studio session.
+1. [Power Apps Studio options](#2--power-apps-studio-options) – options relevant to the settings within Power Apps Studio session.
 
 1. [App actions](#3--app-actions) - options rename, save, preview, or publish the app.
 
@@ -46,15 +45,14 @@ menu item for authoring the app.
 1. [Screen selector](#11--screen-selector) - switch between different screens within an app.
 
 1. [Change canvas screen size](#12--change-canvas-screen-size) - change the size of the canvas during
-authoring experience inside Studio.
+authoring experience inside Power Apps Studio.
 
 Let’s understand each option inside Power Apps Studio in detail.
 
 ## 1 - Build hub
 
-When you launch Power Apps Studio, the Studio opens inside Teams interface
-inheriting the Teams interface and options. The **Home**, **Build** and
-**About** tabs are explained earlier in the section Understanding the Power Apps
+Launching Power Apps Studio from the build hub opens the app authoring experience inside Teams interface
+that inherits the Teams interface and options. The **Home**, **Build** and **About** tabs are explained earlier in the section Understanding the Power Apps
 interface.
 
 ## 2 – Power Apps Studio options
@@ -111,7 +109,7 @@ Allows you to configure app’s genera settings and turn features on or off.
 
 #### General settings
 
-Launches app’s general settings and options such as the app name, icon, data row limit and app icon fill colors.
+Launches app’s general settings and options such as the app name, icon, data row limit, and app icon fill colors.
 
 ![General settings](media/studio-general-settings.png)
 
@@ -151,7 +149,7 @@ version, and other session details. You can also turn the **Auto save** option *
 
 > [!NOTE]
 > We recommend that you keep **Auto save** setting turned **On** and
-save the changes to your app before closing the Studio.
+save the changes to your app before closing Power Apps Studio.
 
 ## 3 – App actions
 
@@ -350,6 +348,8 @@ the table name.
 
 #### Understanding Table designer
 
+**Table designer** inside the Power Apps Studio allows you to quickly create a table while authoring an app. You can create tables quickly using the Table designer from Power Apps Studio. However, you can also use the [Build hub](edit-delete-table.md) to edit or delete the tables you create using Power Apps Studio. Go to [Create a Table](create-table.md) for more information about creating table using the build hub.
+
 ![Authoring table in table designer](media/studio-table-designer-authoring.png)
 
 ##### Table name
@@ -378,8 +378,7 @@ Power Apps Studio:
 ![Column types](media/studio-column-types.png)
 
 > [!IMPORTANT]
-> To add columns not supported by the Table designer, *Create a
-Table* using the build hub instead of the Table designer.
+> To add columns not supported by the Table designer, [Create a Table](create-table.md) using the build hub instead of the Table designer.
 
 ###### Advanced options
 
@@ -406,14 +405,13 @@ To ensure the changes to the table are saved, you can select the next row inside
 ![Saving changes](media/studio-saving-changes.png)
 
 After you close a saved table, you’ll see the table added to the list of
-available data sources inside the **Data** option in the Studio.
+available data sources inside the **Data** option in Power Apps Studio.
 
 ![Data source added](media/studio-data-source-added.png)
 
 ##### Table designer view
 
-Select from the options of **Compact, Default, or **Comfortable** layouts to
-switch the view with columns and rows spacing to change the Table designer
+Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change the Table designer
 layout.
 
 ##### Row count
@@ -452,8 +450,8 @@ open the table inside Table designer.
 ![Edit table data](media/studio-edit-table-data.png)
 
 After you close the Table designer, the data source is automatically refreshed
-to reflect the updated data inside the Studio. You can also select **Refresh**
-to manually refresh the Studio to reflect the data inside the controls added on the canvas.
+to reflect the updated data inside Power Apps Studio. You can also select **Refresh**
+to manually refresh Power Apps Studio to reflect the data inside the controls added on the canvas.
 
 ### Media
 
@@ -468,14 +466,9 @@ For more details about **Media**, go to [add multimedia files to Power Apps](htt
 
 ### Advanced tools
 
-Go to **Advanced tools** to work with the canvas app **Monitor** and the **Test
-Studio**. Canvas app **Monitor** is useful when debugging a canvas app, or when
-diagnosing a problem with the app – such as to investigate performance
-degradation or time delay when using the app. **Test Studio** allows you to
-develop and reuse tests specific to individual apps based on scenarios. These
-tests can be useful when automating canvas app testing during
-application lifecycle management (ALM) scenarios, such as when releasing a new
-version of the app.
+Go to **Advanced tools** to work with the canvas app **Monitor** and the **Test Studio**. Canvas app **Monitor** is useful when debugging a canvas app, or when
+diagnosing a problem with the app – such as to investigate performance degradation or time delay when using the app. **Test Studio** allows you to
+develop and reuse tests specific to individual apps based on scenarios. These tests can be useful when automating canvas app testing during application lifecycle management (ALM) scenarios, such as when releasing a new version of the app.
 
 ![Advanced tools](media/studio-advanced-tools.png)
 
