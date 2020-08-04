@@ -19,33 +19,33 @@ builder called Microsoft Power Apps Studio. You can use Power Apps Studio to des
 
 ![Power Apps Studio](media/studio-power-apps-studio.png)
 
-1. Build hub – select different tabs inside the Power Apps app.
+1. [Build hub](#1---build-hub) – select different tabs inside the Power Apps app.
 
-1. Power Apps Studio options – options relevant to the settings within app
+1. [Power Apps Studio options](#2--power-apps-studio-options) – options relevant to the settings within app
 Studio session.
 
-1. App actions - options rename, save, preview or publish the app.
+1. [App actions](#3--app-actions) - options rename, save, preview or publish the app.
 
-1. Properties list - list of properties for the selected object.
+1. [Properties list](#4--properties-list) - list of properties for the selected object.
 
-1. Formula bar - compose or edit formula for the selected property with one
+1. [Formula bar](#5--formula-bar) - compose or edit formula for the selected property with one
 or more functions.
 
-1. Power Apps app – Power Apps app in Teams.
+1. [Power Apps app](#6--power-apps-app) – Power Apps app in Teams.
 
-1. App authoring menu - selection pane to switch between data sources and
+1. [App authoring menu](#7--app-authoring-menu) - selection pane to switch between data sources and
 insert options.
 
-1. App authoring options - details pane with options relevant to the selected
+1. [App authoring options](#8--app-authoring-options) - details pane with options relevant to the selected
 menu item for authoring the app.
 
-1. Canvas/screen - primary canvas for composing the app structure.
+1. [Canvas/screen](#9--canvasscreen) - primary canvas for composing the app structure.
 
-1. Properties pane - properties list for the selected object in UI format.
+1. [Properties pane](#10--properties-pane) - properties list for the selected object in UI format.
 
-1. Screen selector - switch between different screens within an app.
+1. [Screen selector](#11--screen-selector) - switch between different screens within an app.
 
-1. Change canvas screen size - change the size of the canvas during
+1. [Change canvas screen size](#12--change-canvas-screen-size) - change the size of the canvas during
 authoring experience inside Studio.
 
 Let’s understand each option inside Power Apps Studio in detail.
@@ -196,7 +196,7 @@ The properties list changes based on your selection. For a complete list of all 
 
 ![Properties list](media/studio-properties-list.png)
 
-### 5 – Formula bar
+## 5 – Formula bar
 
 Use the formula bar to add, edit or remove functions relevant to the selected
 object and the property selected from the properties list. For example, select
