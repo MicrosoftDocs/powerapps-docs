@@ -118,7 +118,7 @@ You use this app to add data to the **Assets** list.
 
 Now you can run the app and see how the view details screen looks for the lookup fields.
 
-1. Press F5 or select Preview ( ![](./media/sharepoint-lookup-fields/preview.png) ).
+1. Press F5 or select Preview ( ![Preview](./media/sharepoint-lookup-fields/preview.png) ).
 
 2. Click or tap the **+** symbol in the upper right corner to add an entry.
 
