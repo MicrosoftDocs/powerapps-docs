@@ -1,6 +1,21 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/common-data-service/webapi/samples/basic-operations-csharp.md",
+      "redirect_url": "cdswebapiservice-basic-operations",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/webapi/samples/conditional-operations-csharp.md",
+      "redirect_url": "cdswebapiservice-conditional-operations",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "powerapps-docs/developer/common-data-service/webapi/samples/query-data-csharp.md",
+      "redirect_url": "cdswebapiservice-query-data",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/canvas-apps/entity-form-control.md",
       "redirect_url": "controls/control-form-detail",
       "redirect_document_id": "false"
