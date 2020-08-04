@@ -8,7 +8,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/09/2020
+ms.date: 08/04/2020
 ms.author: brdang
 search.audienceType: 
   - maker
@@ -56,7 +56,7 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 - If customizations were made to the sample app, there may be [dependencies](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
 ### Steps
-1. Login to the [Power Apps admin portal](https://admin.powerapps.com).
+1. Sign into the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
 2. Select an environment.
 
