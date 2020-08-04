@@ -1723,6 +1723,10 @@
   items:
   - name: Overview
     href: ../teams/overview.md
+  - name: Understand the Power Apps interface
+    items:
+      - name: Understand Power Apps Studio
+        href: ../teams/understand-power-apps-studio.md
   - name: Work with ***REMOVED*** tables
     items:
       - name: Overview
