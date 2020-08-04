@@ -1718,8 +1718,38 @@
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
+
+- name: Teams integration
+  items:
+  - name: Overview
+    href: ../teams/overview.md
+  - name: Understand the Power Apps interface
+    items:
+      - name: Understand Power Apps Studio
+        href: ../teams/understand-power-apps-studio.md
+      - name: Use the Fluent UI controls
+        href: ../teams/use-the-fluent-ui-controls.md
+  - name: Create additional apps
+    href: ../teams/create-additional-apps.md
+  - name: Use Teams integration object
+    href: ../teams/use-teams-integration-object.md
+  - name: Work with ***REMOVED*** tables
+    items:
+      - name: Overview
+        href: ../teams/overview-tables.md
+      - name: ***REMOVED*** vs ***REMOVED*** Pro
+        href: ../teams/data-platform-compare.md
+      - name: Create a table
+        href: ../teams/create-table.md
+      - name: Edit or delete a table
+        href: ../teams/edit-delete-table.md
+      - name: Work with table relationships
+        href: ../teams/relationships-table.md
+      - name: Work with table columns
+        href: ../teams/table-columns.md
 - name: Chatbots
   href: ../chatbots.md
+
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
