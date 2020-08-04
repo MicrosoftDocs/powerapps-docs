@@ -52,8 +52,7 @@ Let’s understand each option inside Power Apps Studio in detail.
 ## 1 - Build hub
 
 Launching Power Apps Studio from the build hub opens the app authoring experience inside Teams interface
-that inherits the Teams interface and options. The **Home**, **Build** and **About** tabs are explained earlier in the section Understanding the Power Apps
-interface.
+that inherits the Teams interface and options. The **Home**, **Build** and **About** tabs are explained earlier in the section <!--- Link to the "Understand the Power Apps interface section once added --> Understanding the Power Apps interface.
 
 ## 2 – Power Apps Studio options
 
@@ -237,7 +236,7 @@ reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-refere
 ## 6 – Power Apps app
 
 The **Power Apps** app inside Teams. The app and app interface is explained in
-more detail in *Understanding the Power Apps interface*.
+more detail in <!--- Link to the "Understand the Power Apps interface section once added --> *Understanding the Power Apps interface*.
 
 ## 7 – App authoring menu
 
@@ -346,9 +345,10 @@ the table name.
 
 ![Create table](media/studio-create-table.png)
 
-#### Understanding Table designer
+> [!NOTE]
+> **Table designer** inside Power Apps Studio allows you to quickly create a table while authoring an app. You can create tables quickly using the Table designer from Power Apps Studio. However, you can also use the [Build hub](edit-delete-table.md) to edit or delete the tables you create using Power Apps Studio. Go to [Create a Table](create-table.md) for more information about creating table using the build hub.
 
-**Table designer** inside the Power Apps Studio allows you to quickly create a table while authoring an app. You can create tables quickly using the Table designer from Power Apps Studio. However, you can also use the [Build hub](edit-delete-table.md) to edit or delete the tables you create using Power Apps Studio. Go to [Create a Table](create-table.md) for more information about creating table using the build hub.
+#### Understand Table designer
 
 ![Authoring table in table designer](media/studio-table-designer-authoring.png)
 
