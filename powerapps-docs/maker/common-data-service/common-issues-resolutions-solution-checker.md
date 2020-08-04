@@ -76,7 +76,7 @@ To install Power Apps Checker back into your Common Data Service environment:
 2. Select **Solutions**.
 3. On the solution toolbar select **Solution checker**, and then select **Install**.
 
-## Solution Checker can't access environments in Administration Mode
+## Solution checker can't access environments in Administration Mode
 
 Environments that have been placed into [Administration Mode](https://docs.microsoft.com/dynamics365/customer-engagement/admin/manage-sandbox-instances#administration-mode) purposely restrict access to only users with System Administrator and System Customizer roles. Because the Power Apps Checker application identity has neither of these roles assigned by default, it can't access organizations operating in this mode.
 
@@ -115,7 +115,7 @@ To assign missing security roles to the Power Apps Checker user:
 
 5. Run solution checker again.
 
-## Solution Checker fails due to restricted access mode
+## Solution checker fails due to restricted access mode
 
 The application user for solution checker requires an access mode of **'Non-Interactive'** or **'Read-Write'** in order to communicate with the Common Data Service organization. If the access mode has been changed to another value such as **'Administrative'**, then attempts to run analysis, download results, and run cancelation will fail.
 
@@ -179,7 +179,7 @@ When solution checker fails due to Common Data Service denying access based on a
 
 When solution checker fails due to the error "ISV aborted code", a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
 
-## Solution checker fails due to disabled first-party application in Azue Active Directory
+## Solution checker fails due to disabled first-party application in Azure Active Directory
 
 The first-party enterprise application identity used by solution checker (PowerApps-Advisor) should not be disabled in Azure Active Directory (AAD). If disabled, the identity cannot authenticate when requesting bearer tokens for Common Data Service and other required resource providers on-behalf of the requesting user.
 
@@ -217,7 +217,7 @@ If a solution contains a business process flow component in draft state that has
 
 Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-entity-missing) for details about the issue and steps to resolve.
 
-## Solution Checker fails to export patched solutions
+## Solution checker fails to export patched solutions
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
