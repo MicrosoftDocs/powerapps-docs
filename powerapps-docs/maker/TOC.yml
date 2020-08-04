@@ -1731,6 +1731,8 @@
         href: ../teams/use-the-fluent-ui-controls.md
   - name: Create additional apps
     href: ../teams/create-additional-apps.md
+  - name: Use Teams integration object
+    href: ../teams/use-teams-integration-object.md
   - name: Work with ***REMOVED*** tables
     items:
       - name: Overview
