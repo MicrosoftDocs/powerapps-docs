@@ -1724,9 +1724,7 @@
   - name: Overview
     href: ../teams/overview.md
   - name: Get started
-    items:
-      - name: Get started with Teams integration
-        href: ../teams/get-started.md
+    items:      
       - name: Install the Power Apps personal app
         href: ../teams/install-personal-app.md
       - name: Create your first app
