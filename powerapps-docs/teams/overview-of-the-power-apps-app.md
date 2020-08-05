@@ -91,7 +91,7 @@ about Power Automate flows, go to [Get started with Power Automate](/power-autom
 
 In Power Apps, a table defines information that you want to track in the form of records, which typically include properties such as company name, location,
 products, email, and phone. You can then surface that data by creating an app that refers to the entity. For more information about tables, go to [Tables
-overview](../maker/common-data-service/entity-overview).
+overview](../maker/common-data-service/entity-overview.md).
 
 ![Solution explorer - Tables](media/power-apps-overview-12.png "Solution explorer - Tables")
 
@@ -104,7 +104,7 @@ Lists connections available to the environment. Data is stored in a data source,
 ### Other - Environment variables
 
 Lists the environment variables for your selected team’s environment. Apps and flows often require different configuration settings across environments.
-Environment variables as configurable input parameters allow management of data separately compared to hard-coding values within your customization or using additional tools. For more information about environment variables, go to [Environment variables overview](../maker/common-data-service/environmentvariables).
+Environment variables as configurable input parameters allow management of data separately compared to hard-coding values within your customization or using additional tools. For more information about environment variables, go to [Environment variables overview](../maker/common-data-service/environmentvariables.md).
 
 ![Solution explorer - Environment Variables](media/power-apps-overview-14.png "Solution explorer - Environment Variables")
 
