@@ -16,7 +16,7 @@ You can create, edit and delete [canvas apps](/powerapps/maker/canvas-apps/getti
 
 If you’re creating an app using Power Apps in a Teams team for the *first time*, a new Microsoft ***REMOVED*** environment (also called Teams environment) will be created for you. More information: [About the Teams environment](/power-platform/admin/about-teams-environment) 
 
-## Get started building your first app
+## Get started with creating your first app
 
 After installing the **Power Apps** app from the Teams store:
 
@@ -268,4 +268,5 @@ detail.
 
 [Overview of the Power Apps app](overview-of-the-power-apps-app.md)<br/>
 [Understand Power Apps Studio](understand-power-apps-studio.md)<br/>
-[Use the Fluent UI controls](use-the-fluent-ui-controls.md)
+[Use the Fluent UI controls](use-the-fluent-ui-controls.md)<br/>
+[Create additional apps](create-additional-apps.md)
