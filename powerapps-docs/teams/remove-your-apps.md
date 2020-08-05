@@ -33,3 +33,8 @@ To remove an app from your team:
 The app is now removed from your Teams channel.
 
 ![Remove-app-deleted-from-list](media/remove-app-deleted-from-list.png "Remove-app-deleted-from-list")
+
+### See also
+
+- [Uninstall Power Apps personal app from Teams](uninstall-personal-apps.md)
+- [Add published app to Teams channel from teams](publish-and-share-apps.md#add-published-app-to-teams-channel-from-teams)

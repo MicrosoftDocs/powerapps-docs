@@ -16,6 +16,8 @@ After you build a canvas app that addresses a business need, specify which users
 
 When creating an app inside Teams, you need to share the app with the Microsoft 365 Group associated for the selected team.
 
+## Share an app
+
 To share an app, select ![select three dots icon](media/publish-app-select-three-dots.png "Select three dots icon") button from the top-right side of the Power Apps Studio. And then, select **Share**.
 
 ![Share an app](media/publish-app-share-app.png "Share an app")
@@ -42,7 +44,7 @@ app](https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app).
 
 Whenever you save changes to a canvas app, you automatically publish them only for yourself and anyone else who has permissions to edit the app. When you finish making changes, you must explicitly publish them to make them available to everyone with whom the app is shared.
 
-## Publish and add app to Teams channel from Power Apps Studio
+### Publish and add app to Teams channel from Power Apps Studio
 
 To publish an app, select the **Publish to Teams** button from the top-right side of the Power Apps Studio.
 
@@ -62,7 +64,7 @@ Select **+** to add the app as a tab and **Save.**
 
 For more information about publishing an app and versions, go to [publish an app](https://docs.microsoft.com/powerapps/maker/canvas-apps/save-publish-app#publish-an-app).
 
-## Add published app to Teams channel from Teams
+### Add published app to Teams channel from Teams
 
 You can add apps to your team’s channel directly using **Add a** tab option if the app is published and shared with the team.
 
@@ -111,3 +113,8 @@ To add a published app to your team:
    ![Select save](media/publish-app-select-save.png "Select save")
 
 You can now run the app inside the Teams channel and switch across posts, files, Wiki and other options.
+
+### See also
+
+- [Use sample apps from Teams store](use-sample-apps-from-teams-store.md)
+- [Manage your apps](manage-your-apps.md)
