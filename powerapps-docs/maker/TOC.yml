@@ -1723,6 +1723,12 @@
   items:
   - name: Overview
     href: ../teams/overview.md
+  - name: Get started
+    items:      
+      - name: Install the Power Apps personal app
+        href: ../teams/install-personal-app.md
+      - name: Create your first app
+        href: ../teams/create-first-app.md    
   - name: Understand the Power Apps interface
     items:
       - name: Overview of the Power Apps app
