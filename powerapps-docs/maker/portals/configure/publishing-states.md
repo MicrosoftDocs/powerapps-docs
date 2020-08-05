@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom:
-ms.date: 11/22/2019
+ms.date: 08/05/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -42,7 +42,7 @@ Publishing states can be created, edited, and deleted within portals.
 8. Select **Save & Close**.
 
 > [!NOTE]
-> The Web Page records may have missing Publishing State associations, such as after data import when no Publishing State is selected as default for your Website record. If this happens, you’ll see a warning with missing Publishing State associations for the page(s) while editing your portal in Studio. The page(s) with no associated Publishing State may cause issues with the navigation menu and affect page visibility. To fix this warning, select a Publishing State for each [Web Page record](web-page.md) using the Portal Management app.
+> Web pages with no associated Publishing State may cause issues with the navigation menu and affect the page visibility. You may see a warning about such missing Publishing State associations for the pages when editing your portal. To fix this warning, select a Publishing State for each [Web Page record](web-page.md) using the Portal Management app.
 
 ### Publishing state attributes
 
