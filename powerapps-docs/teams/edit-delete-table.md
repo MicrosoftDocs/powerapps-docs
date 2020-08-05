@@ -31,7 +31,8 @@ Within Teams, there are four table properties you can edit:
 1. On the left navigation pane, select **Tables**.
 2. Open the table you want to edit. 
 3. Select **Settings** on the command bar to display the **Edit** table dialog box.  
-    ![Edit table](media/edit-table1.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Edit table](media/edit-table1.png)
     For more information about these settings, see [Create an entity](../maker/common-data-service/data-platform-create-entity.md#create-an-entity).
 4. Make the changes you want, and then select **Done**.
  
@@ -39,7 +40,8 @@ Within Teams, there are four table properties you can edit:
 Anyone who is a member of the team can delete tables that aren’t part of a managed solution.
 
 In the **Tables** list select **…** next to the table you want to delete, and then select **Delete table**. Alternatively, while viewing a table, select **Delete table** on the command bar.
-![Delete table](media/delete-table.png)
+> [!div class="mx-imgBorder"] 
+> ![Delete table](media/delete-table.png)
 
 
 ### See also
