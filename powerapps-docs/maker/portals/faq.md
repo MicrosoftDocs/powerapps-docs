@@ -16,9 +16,6 @@ We've compiled a list of frequently asked questions and provided brief answers t
 
 ## General
 
-### I see a warning with missing Publishing State association for the page(s) while editing my portal in [Studio](portal-designer-anatomy.md).
-
-The Web Page records may have missing [Publishing State](configure/publishing-states.md) associations, such as after data import when no Publishing State is selected as default for your Website record. When this happens, you’ll see a warning with missing Publishing State associations for the page(s) while editing your portal in Studio. The page(s) with no associated Publishing State may cause issues with the navigation menu and affect page visibility. To fix this warning, select a Publishing State for each [Web Page record](configure/web-page.md) using the Portal Management app.
 ### Rendering Power BI report on my portal page fails with the following error:
 
 *A configuration error occurred while rendering your report.*
