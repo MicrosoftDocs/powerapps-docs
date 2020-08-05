@@ -14,7 +14,7 @@ ms.reviewer:
 
 To manage an app, select **Apps** from the solution explorer. And then, select the app that you want to manage, or select the *Commands* (**…**) option for the app, and then select the options from the drop-down menu.
 
-![Select apps](media/manage-apps-select-apps.png)
+![Select apps](media/manage-apps-1.png "Select apps")
 
 ## Edit an app
 
@@ -35,7 +35,7 @@ The **Details** option shows you the app details such as the owner of the app, w
 
 Select **Delete** to delete an app. When prompted, select **Delete from cloud** to delete the app.
 
-![Delete app](media/manage-app-delete-app.png)
+![Delete app](media/manage-app-2.png "Delete app")
 
 For more information about deleting an app, go to [Delete an app](../maker/canvas-apps/delete-app.md).
 
@@ -49,31 +49,31 @@ To restore an app to a specific version:
 
 1. **Version history** from the top-right on the screen.
 
-    ![Select version history](media/manage-apps-select-version-history.png)
+    ![Select version history](media/manage-apps-3.png "Select version history")
 
 1. Select **Details**. You can also select *Commands (…)* and then select **Delete** from the drop-down menu instead.
 
-    ![Select details](media/manage-apps-select-details.png)
+    ![Select details](media/manage-apps-4.png "Select details")
 
 1. Select **Versions.**
 
-    ![Select versions](media/manage-apps-select-versions.png)
+    ![Select versions](media/manage-apps-5.png "Select versions")
 
 1. Select the app version that you want to restore. The currently published version available to users is marked as **Live**.
 
-    ![Select app version](media/manage-app-select-app-version.png)
+    ![Select app version](media/manage-app-6.png "Select app version")
 
 1. Select **Restore**. You can also select *Commands (…)* and then select **Restore** from the drop-down menu.
 
-    ![Select restore from menu](media/manage-app-select-restore-from-menu.png)
+    ![Select restore from menu](media/manage-app-7.png "Select restore from menu")
 
 1. Select **Restore** to confirm.
 
-    ![Select restore](media/manage-app-select-restore.png)
+    ![Select restore](media/manage-app-8.png "Select restore")
 
 The app version is now restored.
 
-![Restored version](media/manage-app-restored-version.png)
+![Restored version](media/manage-app-9.png "Restored version")
 
 For more details about restoring an app, go to [Restore an app](../maker/canvas-apps/restore-an-app.md).
 
