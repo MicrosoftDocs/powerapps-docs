@@ -214,14 +214,14 @@ select X at the top-right corner of the table designer.
 
     ![Edit fields](media/edit-fields-1.png "Edit fields")
 
-11.  To add new fields, select **Add fields**, select the fields you want to add,
+11. To add new fields, select **Add fields**, select the fields you want to add,
     and then select **Add**.
 
     ![Add fields](media/add-fields-1.png "Add fields")
 
-12.  You can drag and drop the fields on the form to rearrange them.
+12. You can drag and drop the fields on the form to rearrange them.
 
-13.  Now that you’ve created the form with all required fields, you’ll need to
+13. Now that you’ve created the form with all required fields, you’ll need to
     bind your form to your gallery. To do this, go to the formula bar while the
     form is selected and set the **Item** property to Gallery1.Selected.
 
@@ -230,21 +230,18 @@ select X at the top-right corner of the table designer.
     first gallery added to the app. You may need to change it as per the gallery
     name in your app. For example, if your gallery name is different, such as
     gallery2, use *Gallery2.Selected* instead.
+    >
+    > ![Bind controls to table](media/bind-controls.png "Bind controls to table")
 
-    ![](media/4c23ed8af899ba2c66e0489ae0af739b.png)
+14. Select the **Preview** button in the top right to test your app.
 
-14.  Select the **Preview** button in the top right to test your app.
+15. Select **Save** to save the app.
 
-15.  Select **Save** to save the app.
+    ![Save the app](media/save-the-app.png "Save the app")
 
-    ![](media/68962ffc9ec1982e9ecf63d3dd9b318e.png)
+16. Select **Publish to Teams** to publish your app to Teams.
 
-16.  Select **Publish to Teams** to publish your app to Teams.
-
-### Add your app to Teams channel as a tab
-
-**NOTE:** During the Private Preview period, you’ll have to add the published
-app to the Teams manually.
+## Add your app to Teams channel as a tab
 
 To use the app as a tab in your Teams channel, you’ll need to save the app,
 publish it and then add it to your team’s channel.
