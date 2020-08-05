@@ -16,7 +16,7 @@ Uninstalling Power Apps app removes the app as a personal app available to your 
 
 To uninstall Power Apps personal app:
 
-1. Select ![Uninstall-three-dots-icon](media/uninstall-three-dots-icon.png "Uninstall-three-dots-icon")
+1. Select ![Uninstall-three-dots-icon](media/uninstall-three-dots-icon.png)
 from the left pane inside Teams.
 
     ![Uninstall-find-apps](media/uninstall-find-apps.png  "Uninstall-find-apps")
@@ -25,17 +25,17 @@ from the left pane inside Teams.
 
 3. Right-click on **Power Apps** app.
 
-    ![Uninstall-right-click-on-app](media/uninstall-right-click-on-app.png "Uninstall-right-click-on-app")
+    ![Uninstall-right-click-on-app](media/uninstall-right-click-on-app.png)
 
 4. Select **Uninstall**.
 
 5. Confirm **Uninstall**.
 
-    ![Uninstall-confirm](media/uninstall-confirm.png "Uninstall-confirm")
+    ![Uninstall-confirm](media/uninstall-confirm.png)
 
 Power Apps app is now uninstalled from your Teams.
 
-![uninstall-removed-from-list](media/uninstall-removed-from-list.png "uninstall-removed-from-list")
+![uninstall-removed-from-list](media/uninstall-removed-from-list.png)
 
 ### See also
 
