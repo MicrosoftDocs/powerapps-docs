@@ -24,6 +24,14 @@ A personal app is a Teams application with a personal scope. Power Apps is by de
 
    ![Add Power Apps](media/add-power-apps.png)
 
-Power Apps is now added to your Teams. uou can access the app within Teams by using the left pane.
+Power Apps is now added to your Teams. You can access the app within Teams by using the left pane.
 
-![](media/power-apps-home-tab.png "Power Apps app)
+![](media/power-apps-home-tab.png)
+
+> [!TIP]
+> As an alternate to using the flyout, you can also select **Apps** from the bottom-left corner in Microsoft Teams, and then search for Power Apps to install the app. For more information, go to apps in Teams.
+
+### Next steps
+
+[Create your first app in Teams](create-first-app.md)<br/>
+[Overview of the Power Apps app](overview-of-the-power-apps-app.md)
