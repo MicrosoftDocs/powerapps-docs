@@ -49,7 +49,7 @@ When you select **Create** to create an app in the selected team, Power Apps aut
 To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
 *False* to *True* using PowerShell. For detailed steps, see [Share an
 app with Microsoft 365
-Groups](../maker/canvas-apps/share-app#share-an-app-with-office-365-groups.md).
+Groups](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups).
 
 For more information about how Microsoft 365 Groups work with Microsoft Teams,
 see [Microsoft 365 Groups and Microsoft
