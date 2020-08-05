@@ -1237,6 +1237,8 @@
     href: ./model-driven-apps/app-for-outlook-customize.md
   - name: For developers
     href: ../developer/model-driven-apps/overview.md
+  - name: Performance tracking
+    href: ../developer/model-driven-apps/performance-tracking.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 
 - name: Portals
