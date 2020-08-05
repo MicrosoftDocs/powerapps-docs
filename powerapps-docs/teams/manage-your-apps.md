@@ -12,23 +12,22 @@ ms.reviewer:
 
 # Managing an app
 
-To manage an app, select **Apps** from the solution explorer. And then, select the app that you want to manage, or select the *Commands* (…) option for the app, and then select the options from the drop-down menu.
+To manage an app, select **Apps** from the solution explorer. And then, select the app that you want to manage, or select the *Commands* (**…**) option for the app, and then select the options from the drop-down menu.
 
 ![Select apps](media/manage-apps-select-apps.png "Select apps")
 
 ## Edit an app
 
-Select **Edit** an app to edit the app in Power Apps Studio. For more information about editing an app, go to [edit a canvas app in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app). For more information about Power Apps Studio, go to *Understanding Power Apps Studio*.
+Select **Edit** an app to edit the app in Power Apps Studio. For more information about editing an app, go to [edit a canvas app in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/edit-app). For more information about Power Apps Studio, go to [Understanding Power Apps Studio](understand-power-apps-studio.md).
 
 ## Play an app
 
-Select **Play** to run an app’s latest [published](https://docs.microsoft.com/powerapps/maker/canvas-apps/save-publish-app) version. For more details about publishing an app, go to Publish an app.
+Select **Play** to run an app’s latest [published](https://docs.microsoft.com/powerapps/maker/canvas-apps/save-publish-app) version. For more details about publishing an app, go to [Publish an app](publish-and-share-apps.md).
 
 ## App details
 
-The **Details** option shows you the app details such as the owner of the app, when the app was created and last modified, app ID, app licensing information
-and the app’s *web link*.
- 
+The **Details** option shows you the app details such as the owner of the app, when the app was created and last modified, app ID, app licensing information and the app’s *web link*.
+
 > [!TIP]
 > *Web link* of an app can be very useful when you want to run an app in the browser for testing or to launch an app from a browser or through another app (such as when using the [Launch() function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-param)).
 
@@ -76,4 +75,8 @@ The app version is now restored.
 
 ![Restored version](media/manage-app-restored-version.png "Restored version")
 
-For more details about restoring an app, go to [Restore an app](https://docs.microsoft.com/powerapps/maker/canvas-apps/restore-an-app).
+For more details about restoring an app, go to [Restore an app](../maker/canvas-apps/restore-an-app.md).
+
+### See also
+
+[Publish and share your apps](publish-and-share-apps.md)
