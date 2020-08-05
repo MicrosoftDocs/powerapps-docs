@@ -39,7 +39,7 @@ Switch(
 In the above formula, the expression *Teams.Theme.Name* is used to evaluate theme names of *Default*, *Dark*, or *Contrast* and the color of the selected
 canvas app object is changed depending on the color entered in the formula.
 
-The [Switch() function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-if) evaluates a formula and determines whether the result matches any value in a sequence that you specify.
+The [Switch() function](../maker/canvas-apps/functions/function-if.md) evaluates a formula and determines whether the result matches any value in a sequence that you specify.
 
 ![Function Switch()](media/teams-function-switch.png)
 
@@ -55,7 +55,7 @@ This function results in changing the background of canvas app depending on the 
 
 ## Get the Teams channel name to filter app data
 
-You can get the Teams channel name in canvas app functions, such as [function Filter()](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-filter-lookup). To get a Teams channel name, use the following syntax:
+You can get the Teams channel name in canvas app functions, such as [function Filter()](../maker/canvas-apps/functions/function-filter-lookup.md). To get a Teams channel name, use the following syntax:
 
 ```powerapps-dot
 Teams.ThisChannel.DisplayName
@@ -65,7 +65,7 @@ For example, you can add a label and set the *Text* property to display the name
 
 ![Show Teams channel name](media/teams-show-teams-channel.png)
 
-For example, [connecting to a list hosted on a SharePoint site](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections/connection-sharepoint-online), you can list the items in a default gallery.
+For example, [connecting to a list hosted on a SharePoint site](../maker/canvas-apps/connections/connection-sharepoint-online.md), you can list the items in a default gallery.
 
 ![Show SharePoint list items](media/teams-show-sharepoint-list-items.png)
 
@@ -80,3 +80,8 @@ Considering the Teams channel name as *General*, you can use the following formu
 ![Filtered items](media/teams-filtered-items.png)
 
 For more information about the Teams clients SDK, go to [Context interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest). For more information about using context from Teams, go to [use context from teams](../maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
+
+### See also
+
+- [Manage your apps](manage-your-apps.md)
+- [Understand Power Apps Studio](understand-power-apps-studio.md)

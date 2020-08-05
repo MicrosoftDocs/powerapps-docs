@@ -18,21 +18,21 @@ To remove an app from your team:
 
 1. Go to the team that you have the app added to.
 
-    ![Remove-app-go-to-teams](media/remove-apps-go-to-teams.png "Remove-app-go-to-teams")
+    ![Remove-app-go-to-teams](media/remove-apps-go-to-teams.png)
 
 2. Select the drop-down for the tab.
 
-    ![Remove-app-select-from-drop-down](media/remove-app-select-from-drop-down.png "Remove-app-select-from-drop-down")
+    ![Remove-app-select-from-drop-down](media/remove-app-select-from-drop-down.png)
 
 3. Select **Remove**.
 
 4. Confirm **Remove**.
 
-    ![Remove-app-confirm](media/remove-app-confirm.png "Remove-app-confirm")
+    ![Remove-app-confirm](media/remove-app-confirm.png)
 
 The app is now removed from your Teams channel.
 
-![Remove-app-deleted-from-list](media/remove-app-deleted-from-list.png "Remove-app-deleted-from-list")
+![Remove-app-deleted-from-list](media/remove-app-deleted-from-list.png)
 
 ### See also
 

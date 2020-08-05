@@ -14,8 +14,7 @@ ms.reviewer:
 
 Creating apps that look great in Teams will be easier with our new components. Built on [Fluent UI framework](https://www.microsoft.com/design/fluent/#/), the new components will look great with Teams styles and will automatically adjust to the current Teams theme. The new controls are: Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
 
-Let’s take a look at each Fluent UI control and the most useful properties. For a complete list of controls and properties in Power Apps, go to [Controls and
-properties in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties).
+Let’s take a look at each Fluent UI control and the most useful properties. For a complete list of controls and properties in Power Apps, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
 
 ## Button
 
@@ -99,13 +98,13 @@ represented in local time.
 *Format* – The text format in which the control shows the date and the user
 specifies the date. You can set this property to ShortDate (default) or LongDate to format dates based on the Language property of this control. You can also set this property to an expression, such as yyyy/mm/dd if you want the same format independent of the language. For example:
 
--   The control shows "12/31/2017" if the user selects the last day of
+-   The control shows 12/31/2017 if the user selects the last day of
     2017, the Format property is set to ShortDate, and the Language property is
-    set to "en-us".
+    set to en-us.
 
--   The control shows "dimanche 31 December 2017" if the user selects the
+-   The control shows dimanche 31 December 2017 if the user selects the
     last day of 2017, the Format property is set to LongDate, and the Language
-    property is set to "fr-fr".
+    property is set to fr-fr.
 
 ## Label
 
