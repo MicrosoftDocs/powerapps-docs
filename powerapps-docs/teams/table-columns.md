@@ -26,7 +26,8 @@ For more information about the columns available, see these Dataflex Pro article
 ## Create a column
 1. On the **Build** tab, and then select **Tables**. 
 2. Open the table you want to add a column to, and then select **Add column**.
-    ![Create a table column](media/create-table-column.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Create a table column](media/create-table-column.png)
 
 The rest of the process to add and manage columns is the same as in Dataflex Pro, which is documented in these articles.
 - [Create and edit fields for Common Data Service using Power Apps portal](../maker/common-data-service/create-edit-field-portal.md)
