@@ -120,7 +120,7 @@ data.
 
 > [!TIP]
 > To learn about Dataflex tables in detail, see [Dataflex
-tables](overview-tables).
+tables](overview-tables.md).
 
 To get started creating your first table: 
 
@@ -244,30 +244,28 @@ select X at the top-right corner of the table designer.
 ## Add your app to Teams channel as a tab
 
 To use the app as a tab in your Teams channel, you’ll need to save the app,
-publish it and then add it to your team’s channel.
+publish it, and then add it to your team’s channel.
 
 1.  Go to your team in Microsoft Teams.
 
-2.  Select the channel that you want to pin the app to.
+2.  Select the channel that you want to pin the app to, and then select +.
 
-3.  Select
-
-    ![](media/25a4abcd21efd306a5d75c62ad59be76.png)
-
-    .
-
-    ![](media/ced095ee9817bdd6883e9eebca1a8d33.png)
+    ![Pin your app](media/pin-app.png "Pin your app")
 
 4.  Select **Power Apps** app.
 
-    ![](media/b8195b9bac571ca7029fd26423737bb4.png)
+    ![Power Apps app in Teams](media/power-apps-app.png "Power Apps app in Teams")
 
-5.  Select **Add.**
+5.  Select **Add**
 
-6.  Select your app from the list, such as the **Recipes** app in this example.
-
-7.  Select **Save** to add the app as a tab.
+6.  Select your app from the list, such as the **Recipes** app in this example, and select **Save** to add the app as a tab.
 
 Now that you’ve created your first app from a blank table, let’s go through the
 Power Apps interface, Studio, controls and how to create additional apps in
 detail.
+
+## Next steps
+
+[Overview of the Power Apps app](overview-of-the-power-apps-app.md)<br/>
+[Understand Power Apps Studio](understand-power-apps-studio.md)<br/>
+[Use the Fluent UI controls](use-the-fluent-ui-controls.md)
