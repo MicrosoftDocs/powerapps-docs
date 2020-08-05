@@ -1,6 +1,6 @@
 ---
-title: Overview of the Power Apps app | Microsoft Docs
-description: Learn about the Power Apps app in Teams.
+title: Create your first app in Teams | Microsoft Docs
+description: Learn how to create your first app in Teams. 
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -49,7 +49,7 @@ When you select **Create** to create an app in the selected team, Power Apps aut
 To fix this issue, manually update the Microsoft 365 Group setting *SecurityEnabled* from
 *False* to *True* using PowerShell. For detailed steps, see [Share an
 app with Microsoft 365
-Groups](https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app#share-an-app-with-office-365-groups).
+Groups](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups).
 
 For more information about how Microsoft 365 Groups work with Microsoft Teams,
 see [Microsoft 365 Groups and Microsoft
@@ -77,7 +77,7 @@ To find the **GroupId** (ObjectID in Azure AD) of a team:
 
 4.  Copy the *GroupID* from the link.
 
-    ![](media/group-id.png)
+    ![Group ID](media/group-id.png "Group ID")
 
     You can also copy the channel link by selecting **Copy**, and then paste it to a text editor
 to get the *GroupID* value instead.
@@ -132,10 +132,10 @@ To get started creating your first table:
 new table that describes this dataset, and select
 **Create**.
 
-1.  After the table is created, you can add columns of different types, add rows, and
+1. After the table is created, you can add columns of different types, add rows, and
 work with data inside the table designer.
 
-    ![Table designer](media/table-designer-first-table.png "Table designer")
+   ![Table designer](media/table-designer-1.png "Table designer")
 
 
 ### Add columns in the table
@@ -148,7 +148,8 @@ To add a new column to track new data:
 
 3.  Select the type for your column.
 
-    **TIP:** For more information about column types supported by the table
+    > [!TIP]
+    > For more information about column types supported by the table
     designer, see [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns not supported by
     the table designer, create a table using the **Build** tab. More information: [Create tables](create-table.md)
 

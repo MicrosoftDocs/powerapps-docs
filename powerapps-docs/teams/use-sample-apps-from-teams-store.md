@@ -16,7 +16,7 @@ Sample apps created using Power Apps are available in the Teams store. You can s
 
 The sample app you'll learn in this article consists of several tables and two apps, **Inspection App** and **Manage Asset Classes**. After you install the sample app, you can go to the team that you added the app to and use the tabs for the apps just like other features such as **Post**, **Files**, or **Wiki**.
 
-![Sample app](media/sample-app.png)
+![Sample app](media/sample-app.png "Sample app")
 
 > [!IMPORTANT]
 > Installing the sample app automatically enables the selected team’s Microsoft 365 Group for security. For more information about Microsoft 365 Group and security, go to [enable security for the selected team’s Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups).
@@ -33,19 +33,19 @@ To get started with installing the sample Power Apps app in Teams:
 
 4. Select **Add to a team**.
 
-    ![Select Add to team](media/sample-app-select-add-to-team.png)
+    ![Select Add to team](media/sample-app-1.png "Select Add to team")
 
 5. Search for the Teams channel that you want to add the apps to.
 
-    ![Search teams channel](media/sample-app-search-teams-channel.png)
+    ![Search teams channel](media/sample-app-2.png "Search teams channel")
 
 6. Select **Set up a tab**.
 
-   ![Select set up tab](media/sample-app-select-setup-tab.png)
+   ![Select set up tab](media/sample-app-3.png "Select set up tab")
 
 7. Select **Save** to confirm and start the installation.
 
-    ![Select save](media/sample-app-select-save.png)
+    ![Select save](media/sample-app-4.png "Select save")
 
     > [!NOTE]
     > You can keep **Post to the channel about this tab** selected to
@@ -55,14 +55,14 @@ To get started with installing the sample Power Apps app in Teams:
 8. Installation of the app begins. Installation may take a while and you can continue
     with other activities.
 
-    ![App installation](media/sample-app-installation.png)
+    ![App installation](media/sample-app-5.png "App installation")
 
     > [!NOTE]
-    > If the selected Teams team doesn’t already have an environment created, a new environment is created at this stage. For more information about environment lifecycle, go to [Environment lifecycle](https://docs.microsoft.com/power-platform/admin/about-teams-environment).
+    > If the selected Teams team doesn’t already have an environment created, a new environment is created at this stage. For more information about environment lifecycle, go to [Environment lifecycle](/power-platform/admin/about-teams-environment.md).
 
 9. After the app installs, you’ll see two tabs added, **Inspection App** and **Manage Asset Classes.** Upon completion of installation, you can remove the **Installing App** tab.
 
-    ![Remove installation tab](media/sample-app-remove-installation-tab.png)
+    ![Remove installation tab](media/sample-app-6.png "Remove installation tab")
 
 ## Run the sample app
 
@@ -71,11 +71,11 @@ To run the installed app, select app from the available tabs inside the Teams ch
 For example, to run the **Inspection App**, select the app from the available
 tabs on your Teams channel.
 
-![select app from available list](media/sample-app-select-from-available-list.png)
+![Select app from available list](media/sample-app-7.png "Select app from available list")
 
 Likewise, select **Manage Asset Classes** to run the asset class management app.
 
-![Asset class management app](media/sample-app-asset-management-app.png)
+![Asset class management app](media/sample-app-8.png "Asset class management app")
 
 ### Add Asset Types
 
@@ -137,6 +137,6 @@ If you get any errors during the installation process, you can help us troublesh
 
 ### See also
 
-- Install Power Apps personal app <!--- hyperlink to article/section -->
-- Create your first app <!--- hyperlink to article/section -->
+- [Install Power Apps personal app](install-personal-app.md)
+- [Create your first app](create-first-app.md)
 - [Create additional apps](create-additional-apps.md)
