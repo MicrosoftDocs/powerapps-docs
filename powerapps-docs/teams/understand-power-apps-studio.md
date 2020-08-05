@@ -195,7 +195,7 @@ The properties list changes based on your selection. For a complete list of all 
 
 Use the formula bar to add, edit, or remove functions relevant to the selected
 object and the property selected from the properties list. For example, select
-the screen to update the background using the [RGBA function](../maker/canvas-apps/functions/function-colors).
+the screen to update the background using the [RGBA function](../maker/canvas-apps/functions/function-colors.md).
 
 ![Formula bar](media/studio-formula-bar.png)
 
