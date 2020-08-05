@@ -56,3 +56,8 @@ information, go to Canvas apps terminology reference and definitions.
 
 > [!TIP]
 > Creating a canvas app using different methods doesn’t affect the available app features. If you want to change the app orientation and size after you selected a layout, go to [change the screen size and orientation of a canvas app](../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md).
+
+### See also
+
+- [Use Teams integration object](use-teams-integration-object.md)
+- [Use the Fluent UI controls](use-the-fluent-ui-controls.md)
