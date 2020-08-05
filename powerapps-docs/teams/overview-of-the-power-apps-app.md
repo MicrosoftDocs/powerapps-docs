@@ -83,7 +83,7 @@ Shows the apps created using Power Apps. For more information about managing an 
 
 Shows all the Power Automate flows in the selected team’s environment. Power Automate is a service that helps you create automated workflows between your
 favorite apps and services to synchronize files, get notifications, collect data and more. There are different types of flows available. For more information
-about Power Automate flows, go to [Get started with Power Automate](../../../power-automate/teams/overview.md).
+about Power Automate flows, go to [Get started with Power Automate](/power-automate/teams/overview.md).
 
 ![Solution explorer - Flows](media/power-apps-overview-solution-explorer-flows.png)
 
