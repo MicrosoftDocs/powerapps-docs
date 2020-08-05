@@ -30,9 +30,9 @@ There are two ways to use the apps created using Power Apps in Teams.
  
 - You can install the apps created using Power Apps directly from the Microsoft Teams catalog that are published using Microsoft AppSource or the organization’s app catalog. For more information about the distribution of Microsoft Teams app, see [Distribute your Microsoft Teams app](https://docs.microsoft.com/microsoftteams/platform/concepts/deploy-and-publish/overview).
 
-When you create an app in Teams using Power Apps for the first time or install a Power Apps app from the app catalog for the first time, a new Dataflex environment is created for the selected team. The Dataflex environment is used to store, manage, and share team-specific data, apps, and flows. Each team can have one environment and all data, apps and flows created using Power Apps inside a team are available from that team's Power Apps Dataflex environment. More information: [About the Teams environment](/power-platform/admin/about-teams-environment).
+When you create an app in Teams using Power Apps for the first time or install a Power Apps app from the app catalog for the first time, a new Dataflex environment is created for the selected team. The Dataflex environment is used to store, manage, and share team-specific data, apps, and flows. Each team can have one environment and all data, apps, and flows created using Power Apps inside a team are available from that team's Power Apps Dataflex environment. More information: [About the Teams environment](/power-platform/admin/about-teams-environment).
 
 ### Next steps
 
 [Install the Power Apps personal app](install-personal-app.md)<br/>
-[Create your first app in Teams](create-first-app.md) 
+[Create your first app in Teams](create-first-app.md)
