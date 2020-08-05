@@ -167,6 +167,9 @@ Additionally the background process will create a new checklist for the Facility
 
 A reviewer&mdash;for instance, a facility manager supervising many facility managers in a facility group&mdash;can find the backlog in **Phase transitions**. For example, the list can be filtered by the facility group or by the reviewer to find the phase transitions that require attention.
 
+[!NOTE]
+> Transitions from one phase to another cannot be completed without an approved transition and therefore it is highly recommended that organizations ensure someone has been given the responsibillity to monitor transitions and ensure they have the appropriate assigned Reviewer.
+
 > [!div class="mx-imgBorder"]
 > ![Open phase transitions](media/facility-manager-open-phase-transitions.png "Open phase transitions")
 
