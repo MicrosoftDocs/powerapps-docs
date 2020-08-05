@@ -18,20 +18,20 @@ When creating an app inside Teams, you need to share the app with the Microsoft 
 
 ## Share an app
 
-To share an app, select ![select three dots icon](media/publish-app-select-three-dots.png) button from the top-right side of the Power Apps Studio. And then, select **Share**.
+To share an app, select ![Select three dots icon](media/publish-app-1.png "Select three dots icon") button from the top-right side of the Power Apps Studio. And then, select **Share**.
 
-![Share an app](media/publish-app-share-app.png)
+![Share an app](media/publish-app-2.png "Share an app")
 
 If you haven’t saved latest changes to the app, you’re asked to save first. In the share app screen, enter the name of the Teams team’s Microsoft 365 Group name.
 
-![Group name](media/publish-app-group-name.png)
+![Group name](media/publish-app-3.png "Group name")
 
 > [!TIP]
 > If the Microsoft 365 Group you want to share the app with isn’t available in the list, check if the group is enabled for security. For more details, go to [share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups).
 
 Select **Share** to share the app. When sharing the app with other users, you can also select **Co-owner** make them co-owners of the app.
 
-![select owner](media/publish-app-select-co-owner.png)
+![Select Co-Owner](media/publish-app-4.png "Select Co-Owner")
 
 > [!IMPORTANT]
 > When you share an app, some connections used by the app are **implicitly shared**. For example, SQL Server connection saved with SQL or Windows authentication. Connections to Microsoft 365 applications, such as to OneDrive or a SharePoint site, are prompted for permissions at runtime to
@@ -47,19 +47,19 @@ Whenever you save changes to a canvas app, you automatically publish them only f
 
 To publish an app, select the **Publish to Teams** button from the top-right side of the Power Apps Studio.
 
-![Publish to teams](media/publish-app-publish-to-teams.png)
+![Publish to teams](media/publish-app-5.png "Publish to teams")
 
 Select **Next.** Publishing an app creates a new version of the app and makes the published version of the app available to everyone else the app is shared with.
 
-![Select next](media/publish-app-select-next.png)
+![Select next](media/publish-app-6.png "Select next")
 
 A list of all channels is displayed. You can add the app to one or more channels as a tab inside the team.
 
-![List of channels](media/publish-app-list-of-channels.png)
+![List of channels](media/publish-app-7.png "List of channels")
 
 Select **+** to add the app as a tab and **Save.**
 
-![Select and save](media/publish-app-select-plus-save.png)
+![Select and save](media/publish-app-8.png "Select and save")
 
 For more information about publishing an app and versions, go to [publish an app](../maker/canvas-apps/save-publish-app.md#publish-an-app).
 
@@ -71,22 +71,22 @@ To add a published app to your team:
 
 1. Select the channel that you want to add the app to.
 
-1. Select ![Select plus icon](media/publish-app-select-plus-icon.png)
+1. Select ![Select plus icon](media/publish-app-9.png "Select plus icon")
    
-    ![Select plus in teams channel](media/publish-app-select-plus-teams-channel.png)
+    ![Select plus in teams channel](media/publish-app-10.png "Select plus in teams channel")
 
 1. Select **Power Apps.**
 
-   ![Select Power Apps](media/publish-app-select-power-apps.png)
+   ![Select Power Apps](media/publish-app-11.png "Select Power Apps")
 
 1. You can select the app that you want to add to the channel tab. The available apps by default show apps you’ve created, with the selected view as **My apps**.
 
-   ![My Apps view](media/publish-app-myapps-view.png)
+   ![My Apps view](media/publish-app-12.png "My Apps view")
 
    If the app you’re looking for isn’t available in **My apps** view, select a
   different view.
 
-   ![Select different view](media/publish-app-select-different-view.png)
+   ![Select different view](media/publish-app-13.png "Select different view")
 
     -  **My apps** – published apps that you’ve created.
 
@@ -98,15 +98,15 @@ To add a published app to your team:
 
    You can also search for an app by the name.
 
-   ![Search for an app](media/publish-app-search-for-an-app.png)
+   ![Search for an app](media/publish-app-14.png "Search for an app")
 
    When you select an app that you're an owner of, you’re prompted to ensure the app is shared with the team before you add it to the channel’s tab.
 
-   ![App owner](media/publish-app-select-owner.png)
+   ![App owner](media/publish-app-15.png "App owner")
 
 1. Select **Save** and the app is added to your selected channel as a tab.
 
-   ![Select save](media/publish-app-select-save.png)
+   ![Select save](media/publish-app-16.png "Select save")
 
 You can now run the app inside the Teams channel and switch across posts, files, Wiki, and other options.
 

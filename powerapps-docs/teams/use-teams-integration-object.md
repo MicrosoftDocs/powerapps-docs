@@ -14,13 +14,13 @@ ms.reviewer:
 
 You can use Teams integration object to easily find and access the Teams integration features and use the improved usability of expressions while integrating your canvas app with Teams. You can validate the canvas app having Teams integration object present with the visibility of **Teams** control from the tree view.
 
-![Teams Integration Object](media/teams-integration-object.png)
+![Teams Integration Object](media/teams-1.png "Teams Integration Object")
 
 There are two features available with the integration of Power Apps with Teams. You can get a Teams theme inside a canvas app, and you can filter data depending on the team or channel context.
 
 ## Get the Teams theme
 
-Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* inside the Power Apps formula bar. For more information about colors in Teams, go to [UI component colors in Teams](https://docs.microsoft.com/microsoftteams/platform/concepts/design/components/color).
+Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* inside the Power Apps formula bar. For more information about colors in Teams, go to [UI component colors in Teams](/microsoftteams/platform/concepts/design/components/color).
 
 To retrieve a theme name, use the following formula.
 
@@ -41,17 +41,17 @@ canvas app object is changed depending on the color entered in the formula.
 
 The [Switch() function](../maker/canvas-apps/functions/function-if.md) evaluates a formula and determines whether the result matches any value in a sequence that you specify.
 
-![Function Switch()](media/teams-function-switch.png)
+![Function Switch()](media/teams-2.png "Function Switch()")
 
 This function results in changing the background of canvas app depending on the change in the theme selection inside Teams.
 
-![Teams themes](media/teams-themes.png)
+![Teams themes](media/teams-themes.png "Teams themes")
 
 | **Teams theme**                               | **App background**                       |
 |-----------------------------------------------|------------------------------------------|
-| *Default (App background color: DimGrey)*     | ![Default theme](media/teams-default-theme.png) |
-| *Dark (App background color: White)*          | ![Dark theme](media/teams-dark-theme.png) |
-| *High contrast (App background color: Black)* | ![High contrast theme](media/teams-high-contrast-theme.png) |
+| *Default (App background color: DimGrey)*     | ![Default theme](media/teams-default-theme.png "Default theme") |
+| *Dark (App background color: White)*          | ![Dark theme](media/teams-dark-theme.png "Dark theme") |
+| *High contrast (App background color: Black)* | ![High contrast theme](media/teams-high-contrast.png "High contrast theme") |
 
 ## Get the Teams channel name to filter app data
 
@@ -63,23 +63,23 @@ Teams.ThisChannel.DisplayName
 
 For example, you can add a label and set the *Text* property to display the name of the Teams channel.
 
-![Show Teams channel name](media/teams-show-teams-channel.png)
+![Show Teams channel name](media/teams-3.png "Show Teams channel name")
 
 For example, [connecting to a list hosted on a SharePoint site](../maker/canvas-apps/connections/connection-sharepoint-online.md), you can list the items in a default gallery.
 
-![Show SharePoint list items](media/teams-show-sharepoint-list-items.png)
+![Show SharePoint list items](media/teams-4.png "Show SharePoint list items")
 
 The list shows all items and a column representing the Teams channel name.
 
-![All items](media/teams-all-sharepoint-items.png)
+![All items](media/teams-5.png "All items")
 
 Considering the Teams channel name as *General*, you can use the following formula to filter the gallery content depending on the name of the channel.
 
 *Filter('Colors', Channel = Teams.ThisChannel.DisplayName)*
 
-![Filtered items](media/teams-filtered-items.png)
+![Filtered items](media/teams-filtered-items.png "Filtered items")
 
-For more information about the Teams clients SDK, go to [Context interface](https://docs.microsoft.com/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest). For more information about using context from Teams, go to [use context from teams](../maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
+For more information about the Teams clients SDK, go to [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest). For more information about using context from Teams, go to [use context from teams](../maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
 
 ### See also
 
