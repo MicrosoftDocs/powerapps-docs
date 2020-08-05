@@ -18,6 +18,10 @@ This helps the organizations ensure that they can provide a safe working environ
 
 ## App at a glance
 
+The Return to Workplace solution supports organization’s goal to Reopen its facilities to its employees as safely and as quickly as possible in an effort to return to normal.  The Safety Management app as part of the overall solution provides Facility Managers with a tool that provides them with the capabilities to manage and support the organization’s journey through their specific reopening plan for their facilities  and its associated phases and goals.  
+
+It is the Facility Manager the facilitates the execution of the organizations reopening plan and their reopening phases that have been configured (see Configure the solution for steps on configuration).   Facility Managers in supporting the goal to reopening their facilities safely and quickly will lead the required assessments of Facility Readiness and review its status.  The assessments take the form of executing  Checks on a Facility’s Readiness Checklist.   When assumed to be ready based on the results of these checks, the Facility Manager will then assert readiness to move to their next Reopen Phase by initiating a phase transition request.   This request then is processed by the organization’s assigned reviewer where it can then be approved.  This will implement a four-eyes principle, while the checklist allows for a consistent discussion on readiness throughout the company.  Once the reviewer approves the transition the facility is moved to the next phase where a new checklist applicable to the new phase is created and managed.  
+
 The left pane lists all the components available in the **Facility Management** area.
 
 > [!div class="mx-imgBorder"]
@@ -167,7 +171,7 @@ Additionally the background process will create a new checklist for the Facility
 
 A reviewer&mdash;for instance, a facility manager supervising many facility managers in a facility group&mdash;can find the backlog in **Phase transitions**. For example, the list can be filtered by the facility group or by the reviewer to find the phase transitions that require attention.
 
-[!NOTE]
+>[!NOTE]
 > Transitions from one phase to another cannot be completed without an approved transition and therefore it is highly recommended that organizations ensure someone has been given the responsibillity to monitor transitions and ensure they have the appropriate assigned Reviewer.
 
 > [!div class="mx-imgBorder"]
