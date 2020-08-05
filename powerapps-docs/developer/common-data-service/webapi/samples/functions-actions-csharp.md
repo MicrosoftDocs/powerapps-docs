@@ -25,7 +25,7 @@ search.app:
 This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service Web API.  
   
 > [!NOTE]
-> This sample implements the operations detailed in the [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md) and uses the common client-side C# constructs described in [Web API Samples (C#)](../web-api-samples-csharp.md).  
+> This sample implements the operations detailed in the [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md). This sample currently does not use the [CDSWebApiService](cdswebapiservice.md) class methods. However, an update to the sample is planned.
  
 <a name="bkmk_prerequisites"></a>
 
@@ -448,6 +448,6 @@ namespace PowerApps.Samples
 [Use Web API actions](../use-web-api-actions.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Functions and Actions Sample](../web-api-functions-actions-sample.md)
-[Web API Basic Operations Sample (C#)](basic-operations-csharp.md)<br />
-[Web API Query Data Sample (C#)](query-data-csharp.md)<br />
-[Web API Conditional Operations Sample (C#)](conditional-operations-csharp.md)
+[Web API Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)<br />
+[Web API Query Data Sample (C#)](cdswebapiservice-query-data.md)<br />
+[Web API Conditional Operations Sample (C#)](cdswebapiservice-conditional-operations.md)

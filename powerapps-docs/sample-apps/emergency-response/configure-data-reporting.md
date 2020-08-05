@@ -1,20 +1,22 @@
 ---
-title: Configure master data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
+title: Configure data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
 description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2020
+ms.date: 06/10/2020
 ms.author: pankar
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
-# Configure master data and view dashboards
+# Configure data and view dashboards
 
-This article provides information on how you can use the admin app (model-driven app) to add and manage master data for your solution and use the Power BI dashboard to view key insights and metrics.
+This article provides information on how you can use:
+- **Admin** app to add and manage master data for your solution and configure the Power BI report URL 
+- **Power BI dashboard** to view key insights and metrics
+- **Canvas App Label Management** app to extend mobile app labels
+- **Download Data for CDC** app to download the CDC data
 
 These tasks are typically performed by business admins in your organization.
 
@@ -117,19 +119,33 @@ To create a record:
     > [!div class="mx-imgBorder"] 
     > ![enter-details-new-facility](media/enter-details-new-facility.png)
 
-    | **Field**            | **Description**                                                                                 |
-    |----------------------|-------------------------------------------------------------------------------------------------|
-    | Region               | Select a region this facility is associated with. This list is populated based on the **Regions** data you have created earlier. |
-    | Facility Name        | Type the facility name. For example, Bellevue.                                                  |
-    | Total Vents          | Type the total number of ventilators available in the facility.                                  |
-    | Description          | Type an optional description.                                                                   |
-    | Effective Start Data | Type start date and time for this facility.                                                     |
-    | Effective End Date   | Type end date and time for this facility.                                                       |
-    |Total Beds      | Automatically calculated.|
-    |Total Occupied      | Automatically calculated.|
-    |Facility Address      | Type the Street, City, County, State, Zip code, Latitude, and Longitude for the facility.|
+    | **Field**                    | **Description**            |
+    |------------------------------|---------------------------------------------------|
+    | Region    | Select a region this facility is associated with. This list is populated based on the **Regions** data you have created earlier.          |
+    | Facility Name | Type the facility name.                 |
+    | Description    | Type an optional description.              |
+    | Effective Start Data         | Type start date and time for this facility.|    
+    | DOH Number    | Type Department of Health (DOH) number for this facility.     |
+    | Follows Droplet Protocol     | Indicates whether the facility follows Droplet Precautions for patients known or suspected to be infected with pathogens transmitted by respiratory droplets, such as in COVID-19 cases. Select **Yes** or **No**. |
+    | Effective End Date           | Type end date and time for this facility.       |
+    | Does have an Emergency            | Select **Yes**/**No** to confirm if the facility has emergency department.   |
+    | Ventilators Total Capacity    | Type the total number of ventilators in the facility.    |
+    | Excluded Supplies    | List of supplies not available at this facility.    |    
+    | Total Inpatient Bed Capacity in other areas    | Type the total inpatient bed capacity in other areas.    |
+    | Acute Care Beds (AIIR Room) Total Capacity     | Type the total number of Acute care beds in AIIR (Airborne Infection Isolation Room).     |
+    | ICU Beds (AIIR Room) Total Capacity    | Type the total number of ICU beds in AIIR.    |
+    | Total Pediatric Acute Care Beds (AIIR) Capacity    | Type the total pediatric acute care beds in AIIR.    |
+    | Total Pediatric ICU Beds (AIIR) Capacity    | Type the total pediatric ICU beds in AIIR.    |
+    | Total Outpatient Bed Capacity    | Type the total number of outpatient bed capacity in the facility.    |
+    | Total Overflow/Surge/Expansion Bed Capacity           | Type the total number of overflow/surge/expansion beds the facility can have. These beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted.                                              |
+    | Acute Care Beds (non-AIIR Room) Capacity | Type the total number of Acute care beds in non- AIIR.|
+    | ICU Beds (non-AIIR Room) Total Capacity        | Type the total number of ICU beds in non-AIIR.      |   
+    | Total Pediatric Acute Care Beds (Non-AIIR) Capacity    | Type the total pediatric acute care beds in non-AIIR.    |
+    | Total Pediatric ICU Beds (Non-AIIR Room) Capacity    | Type the total pediatric ICU beds in non-AIIR.    |
+    | Total Mortuary Capacity    | Type the total mortuary capacity.|    
+    | Facility Address    | Type the Street, City, County, State, Zip code, Latitude, and Longitude for the facility.   |
 
-    If required, enter facility address.
+    
 
 1. Select **Save & Close**. The newly created record will be available in the **Facilities** list.
 
@@ -609,6 +625,25 @@ You can restore canvas apps to previous version that didn't use Canvas App Strin
 - Some TextIDs (labels) can be found in the **OnVisible** property of a screen as a part of a collection.
 - HomeScreen, SplashScreen, FeedbackScreen, MeScreen, Buttons and the timestamp for last submitted data share the same TextIDs across apps. Other screens use separate values for TextIDs, even if the Default Text is same across apps; for example *Location*.
 - Canvas App Strings solution supports the following languages: German, Spanish, French, Italian, Japanese,  Korean, Polish, Portuguese (Portugal), Portuguese (Brazil), and Turkish.
+
+## Download CDC data
+
+Centers for Disease Control and Prevention (CDC) expects each hospital to report data in a certain format. The **Download Data for CDC** app lets you download the data for your facilities in the CDC format. 
+
+This data is collated from various areas of the hospital solution such as information specified for each facility in the admin app, data reported by healthcare workers [using the mobile app](use.md).
+
+1. Sign in to [Power Apps](https://make.powerapps.com).
+
+1. From the left navigation pane, select **Apps** and then select **Download Data for CDC**.
+
+1. In the app, select one of the facilities to view the CDC data.
+ 
+1. The following CDC data is available for each facility: **Patient Impact And Hospital Capacity**, **Healthcare Supplies**, and **Healthcare Worker Staffings**. Select a row, and then select **Download CSV** to download the data.
+
+    > [!div class="mx-imgBorder"]
+    > ![Download CDC data](media/download-cdc-data.png)
+
+After downloading the data as CSV files from the **Download Data for CDC** app, you can review and upload them to the CDC web site.
 
 ## Issues and feedback
 

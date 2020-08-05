@@ -60,9 +60,7 @@ While developing and debugging JavaScript web resources, you can use AutoRespond
    The bottom row is left blank. Type the path to your local file on your disk on this bottom row and <strong>Save</strong>.<br />
    ![Add path to your local file in Rule editor](media/fiddler-save-rule.png "Add path to your local file in Rule editor")<br />
 
- 
 
- 
 By following the above steps, Fiddler is configured to listen to the requests and responds with the local file instead of passing the request over the network.
 
 ## Update and test your code

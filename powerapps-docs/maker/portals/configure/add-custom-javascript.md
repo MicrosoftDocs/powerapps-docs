@@ -1,14 +1,13 @@
 ---
 title: "Use custom JavaScript for a portal | MicrosoftDocs"
 description: "Instructions to add custom JavaScript to a form in a portal"
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Add custom JavaScript
@@ -92,9 +91,11 @@ if (window.jQuery) {
 ```
 ### See also
 
-[Configure a portal](configure-portal.md)  
-[Define entity forms](entity-forms.md)  
-[Web Form steps for portals](web-form-steps.md)  
-[Load Form/Load Tab step type](load-form-step.md)  
-[Redirect step type](add-redirect-step.md)  
-[Conditional step type](add-conditional-step.md)
+- [Configure a portal](configure-portal.md)  
+- [Define entity forms](entity-forms.md)  
+- [Web Form steps for portals](web-form-steps.md)  
+- [Load Form/Load Tab step type](load-form-step.md)  
+- [Redirect step type](add-redirect-step.md)  
+- [Conditional step type](add-conditional-step.md)
+- [Micosoft Learn: Extend Power Apps portals with scripts](https://docs.microsoft.com/learn/modules/extend-power-app-portals/3-portal-javascript)
+- [Microsoft Learn: Advanced client-side development](https://docs.microsoft.com/learn/modules/extend-power-app-portals/5-advanced-portal-development)

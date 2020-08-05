@@ -1,14 +1,13 @@
 ---
 title: "Use Liquid types for a portal | MicrosoftDocs"
 description: "Learn about the available liquid types in a portal."
-author: tapanm-msft
-manager: kvivek
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: gisingh
+ms.reviewer: tapanm
 ---
 
 # Available Liquid types
@@ -20,7 +19,7 @@ Liquid objects can return one of seven basic types: **String**, **Number**, **Bo
 A String is declared by wrapping text in single or double quotes.
 
 ```
-{% assign string_a = Hello World! %}
+{% assign string_a = "Hello World!" %}
 
 {% assign string_b = 'Single quotes work too.' %}
 ```

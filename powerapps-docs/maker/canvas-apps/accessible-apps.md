@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/03/2018
+ms.date: 07/01/2020
 ms.author: fikaradz
 search.audienceType: 
   - maker
@@ -20,7 +20,7 @@ An accessible canvas app will allow users with vision, hearing and other impairm
 Use the **[Accessibility Checker](accessibility-checker.md)** to help review potential accessibility issues in your app. 
 
 ## Layout and color
-Common sense and uncomplicated design helps apps be more accessible to all users.  When doing heavy customization of apps take note of the below suggestions.  Power Apps themes are by default accessible.
+Common sense and uncomplicated design helps apps be more accessible to all users.  When doing heavy customization of apps take note of the below suggestions. Power Apps themes are designed to meet accessibility standards.
 - Ensure all elements are clearly visible and text is of sufficient size.  All content must be easily read and understood by the naked eye.
 - Avoid using the visibility property of items to bring an element into view.  If you need to show something conditionally, create the content in a new screen and navigate to it and back.
 - Ensure input elements are labeled on the screen. **[AccessibilityLabel](controls/properties-accessibility.md)** property defines what the screen reader will announce.
