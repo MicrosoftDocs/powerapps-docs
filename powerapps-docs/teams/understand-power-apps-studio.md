@@ -120,7 +120,7 @@ or *Off*.
 ![Features](media/studio-features.png)
 
 For more information, go to [preview, experimental, or deprecated
-features](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
+features](../maker/canvas-apps/working-with-experimental-preview.md).
 
 ### Power Automate
 
@@ -133,11 +133,11 @@ For more information about Power Automate, go to Working with flows.
 
 ### Collections
 
-List current [collections](https://docs.microsoft.com/powerapps/maker/canvas-apps/create-update-collection) used by the app.
+List current [collections](../maker/canvas-apps/create-update-collection.md) used by the app.
 
 ### Variables
 
-List current [variables](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-variables) used by the app.
+List current [variables](../maker/canvas-apps/working-with-variables.md) used by the app.
 
 ### Account details
 
@@ -187,7 +187,7 @@ Shows all the versions of the app. You can view app versions, version comments, 
 ## 4 – Properties list
 
 Shows the list of available properties for the selected object on the canvas.
-The properties list changes based on your selection. For a complete list of all properties, go to [properties reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties#all-properties).
+The properties list changes based on your selection. For a complete list of all properties, go to [properties reference](../maker/canvas-apps/reference-properties.md#all-properties).
 
 ![Properties list](media/studio-properties-list.png)
 
@@ -195,11 +195,11 @@ The properties list changes based on your selection. For a complete list of all 
 
 Use the formula bar to add, edit, or remove functions relevant to the selected
 object and the property selected from the properties list. For example, select
-the screen to update the background using the [RGBA function](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-colors).
+the screen to update the background using the [RGBA function](../maker/canvas-apps/functions/function-colors.md).
 
 ![Formula bar](media/studio-formula-bar.png)
 
-The formula bar is IntelliSense enabled. IntelliSense provides tips as you enter text inside the formula bar to help you with the function syntax. When a formula returns an error, the IntelliSense also shows tips relevant to the syntax error and mitigation steps. When you start entering text that matches to one or more functions, the formula bar shows in-line function help and highlights help text relevant to the cursor position.
+The formula bar is IntelliSense enabled. IntelliSense provides tips as you enter text inside the formula bar to help you with the function syntax. If a formula returns an error, the IntelliSense also shows tips relevant to the syntax error and mitigation steps. When you start entering text that matches to one or more functions, the formula bar shows in-line function help and highlights help text relevant to the cursor position.
 
 ![Function inside formula bar](media/studio-function-inside-formula-bar.png)
 
@@ -231,7 +231,7 @@ You can read the description of the selected **Action** function and selecting
 the function name twice adds the function into the formula bar.
 
 For a complete list of all canvas app functions, go to [Formula
-reference](https://docs.microsoft.com/powerapps/maker/canvas-apps/formula-reference).
+reference](../maker/canvas-apps/formula-reference.md).
 
 ## 6 – Power Apps app
 
@@ -266,7 +266,7 @@ change app behavior, such as adding a formula on *OnStart* event of the app.
 Switch to the components to work with component library features. You can add
 new components or reuse the already published components from published
 component libraries. For more information, go to [working with component
-libraries](https://docs.microsoft.com/powerapps/maker/canvas-apps/component-library).
+libraries](../maker/canvas-apps/component-library.md).
 
 ![Tree view - components](media/studio-tree-view-components.png)
 
@@ -307,13 +307,13 @@ properties.
 
 For more information about the controls that you can insert, their properties
 and definitions, go to [controls and properties in Power
-Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/reference-properties).
+Apps](../maker/canvas-apps/reference-properties.md).
 
 ### Data
 
 Data allows you to add, refresh, or remove data sources from your canvas app. You
 can add one or more
-[connections](https://docs.microsoft.com/powerapps/maker/canvas-apps/connections-list)
+[connections](../maker/canvas-apps/connections-list.md)
 using data sources.
 
 ![Data](media/studio-data.png)
@@ -383,7 +383,7 @@ Power Apps Studio:
 ###### Advanced options
 
 The advanced options of columns change depending on the type of the column. For example, a **Text** column type has advanced option of **Max length.** **Auto number** column type instead has more options such as the type of auto numbering, prefixes, and maximum number of digits. For more information about the data types of columns in a Dataflex table, go to [types of
-columns](https://docs.microsoft.com/powerapps/maker/common-data-service/types-of-fields).
+columns](../maker/common-data-service/types-of-fields.md).
 
 ##### Show/hide columns
 
@@ -459,10 +459,10 @@ Use the **Media** option to add images, video, or audio files to your app. Addin
 
 ![Media](media/studio-media.png)
 
-If you want to reference additional media, consider using [audio and video controls with URLs](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-images-pictures-audio-video#add-images-audio-or-video-using-the-controls),
-using media from the [Azure Media Services](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-images-pictures-audio-video#add-media-from-azure-media-services),
-or from [Microsoft Stream](https://docs.microsoft.com/powerapps/maker/canvas-apps/controls/control-stream-video#example).
-For more details about **Media**, go to [add multimedia files to Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-images-pictures-audio-video).
+If you want to reference additional media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
+using media from the [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),
+or from [Microsoft Stream](../maker/canvas-apps/controls/control-stream-video.md#example).
+For more details about **Media**, go to [add multimedia files to Power Apps](../maker/canvas-apps/add-images-pictures-audio-video.md).
 
 ### Advanced tools
 
@@ -472,7 +472,7 @@ develop and reuse tests specific to individual apps based on scenarios. These te
 
 ![Advanced tools](media/studio-advanced-tools.png)
 
-For more information about Monitor and Test Studio, go to [debugging an app with canvas app Monitor](https://docs.microsoft.com/powerapps/maker/canvas-apps/monitor) and [Canvas app Test Studio](https://docs.microsoft.com/powerapps/maker/canvas-apps/test-studio).
+For more information about Monitor and Test Studio, go to [debugging an app with canvas app Monitor](../maker/canvas-apps/monitor.md) and [Canvas app Test Studio](../maker/canvas-apps/test-studio.md).
 
 ## 9 – Canvas/screen
 
@@ -481,7 +481,7 @@ The canvas shows the currently selected screen from the left pane.
 ## 10 – Properties pane
 
 The properties pane shows properties and options available for the currently
-selected object on the canvas. **Properties** tab shows generic options, such as the name, color, size, or position. **Advanced** tab shows additional options for advanced customization. The advanced properties may sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-cards#unlock-a-card) in such situations while working with advanced customization.
+selected object on the canvas. **Properties** tab shows generic options, such as the name, color, size, or position. **Advanced** tab shows additional options for advanced customization. The advanced properties may sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](../maker/canvas-apps/working-with-cards.md#unlock-a-card) in such situations while working with advanced customization.
 
 ![Properties pane](media/studio-properties-pane.png)
 
@@ -496,3 +496,8 @@ You can zoom in or zoom out while authoring the canvas app. Use **Ctrl+0**
 keyboard combination or select the **Fit to window** to fit the screen size
 based on current authoring window size. Note the zoom or screen size while
 authoring a canvas app has no impact on the aspect ratio configured for the app when you preview your app or play a published app.
+
+### See also
+
+- [Use the Fluent UI controls](use-the-fluent-ui-controls.md)
+- [Overview of the Power Apps app](overview-of-the-power-apps-app.md)
