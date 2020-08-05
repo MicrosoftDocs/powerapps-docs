@@ -36,3 +36,7 @@ from the left pane inside Teams.
 Power Apps app is now uninstalled from your Teams.
 
 ![uninstall-removed-from-list](media/uninstall-removed-from-list.png "uninstall-removed-from-list")
+
+### See also
+
+Install Power Apps personal app <!--- Add link to install app article/section -->

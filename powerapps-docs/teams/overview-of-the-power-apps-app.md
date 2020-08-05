@@ -149,3 +149,8 @@ While creating canvas aps using Power Apps from the Teams interface, it becomes 
 | [Publish an app](https://docs.microsoft.com/powerapps/maker/canvas-apps/save-publish-app#publish-an-app)       | Making an app available to the app store for general consumption.                                                                                                                                            |
 | [Versions](https://docs.microsoft.com/powerapps/maker/canvas-apps/save-publish-app#identify-the-live-version)  | Each time an app is saved, a new version is created that you can [restore](https://docs.microsoft.com/powerapps/maker/canvas-apps/restore-an-app) with functionality available at the time of saving an app. |
 | [Share an app](https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app)                               | Allowing users or groups to use the app, as consumers or co-owners.                                                                                                                                          |
+
+### See also
+
+- [Understand Power Apps Studio](understand-power-apps-studio.md)
+- Create your first app <!--- Add link to article/section -->
