@@ -219,3 +219,8 @@ A Toggle is designed for modern user interface but behaves the same way as a che
 *OffText* – The text of the off state.
 
 *OnText* – The text of the on state.
+
+### See also
+
+- [Create additional apps](create-additional-apps.md)
+- [Understand Power Apps Studio](understand-power-apps-studio.md)

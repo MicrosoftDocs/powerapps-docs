@@ -10,19 +10,18 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Installing sample Power Apps app in Teams
+# Install sample Power Apps app in Teams
 
-A sample Power Apps app is available with the release of this Private Preview. The sample app can be installed to Teams using the **Apps** option.
+Sample apps created using Power Apps are available in the Teams store. You can select the sample app that best fits your business requirement and quickly install to get started. In this article, you'll learn about one such sample application that helps inspect vehicles. Sample apps created using Power Apps and published to the Teams store may consist of multiple components such as apps, flows, and tables.
 
-> [!NOTE]
-> You must use <https://aka.ms/teams-fullscreen-test> to install the sample Power Apps app in Teams during the private preview period.
-
-The sample app available consists of several tables and two apps, **Inspection App** and **Manage Asset Classes**. After you install the sample app, you can go to the team that you added the app to and use the tabs for the apps just like other features such as **Post**, **Files** or **Wiki**.
+The sample app you'll learn in this article consists of several tables and two apps, **Inspection App** and **Manage Asset Classes**. After you install the sample app, you can go to the team that you added the app to and use the tabs for the apps just like other features such as **Post**, **Files**, or **Wiki**.
 
 ![Sample app](media/sample-app.png "Sample app")
 
 > [!IMPORTANT]
 > Installing the sample app automatically enables the selected team’s Microsoft 365 Group for security. For more information about Microsoft 365 Group and security, go to [enable security for the selected team’s Microsoft 365 Group](https://docs.microsoft.com/powerapps/maker/canvas-apps/share-app#share-an-app-with-office-365-groups).
+
+## Install sample app
 
 To get started with installing the sample Power Apps app in Teams:
 
@@ -53,18 +52,19 @@ To get started with installing the sample Power Apps app in Teams:
     communicate the addition of the app. Unchecking will not announce the
     addition of the app on the selected channel as a post.
 
-8. Installation of the app begins. This may take a while and you can continue
+8. Installation of the app begins. Installation may take a while and you can continue
     with other activities.
 
     ![App installation](media/sample-app-installation.png "App installation")
 
-    **NOTE:** If the selected Teams team doesn’t already have an environment created, a new environment is created at this stage. For more information about environment lifecycle, go to Environment lifecycle.
+    > [!NOTE]
+    > If the selected Teams team doesn’t already have an environment created, a new environment is created at this stage. For more information about environment lifecycle, go to [Environment lifecycle](https://docs.microsoft.com/power-platform/admin/about-teams-environment).
 
 9. After the app installs, you’ll see two tabs added, **Inspection App** and **Manage Asset Classes.** Upon completion of installation, you can remove the **Installing App** tab.
 
     ![Remove installation tab](media/sample-app-remove-installation-tab.png "Remove installation tab")
 
-## Running the sample app
+## Run the sample app
 
 To run the installed app, select app from the available tabs inside the Teams channel that you added the app to.
 
@@ -77,7 +77,7 @@ Likewise, select **Manage Asset Classes** to run the asset class management app.
 
 ![Asset class management app](media/sample-app-asset-management-app.png "Asset class management app")
 
-### Adding Asset Types
+### Add Asset Types
 
 To start with the **Inspection App**, you’ll need to add **Asset Types**. The
 Asset Types define the classes of different assets that can be added to the app
@@ -89,9 +89,9 @@ To add asset types:
 
 2. Select **Assets** tab inside the app.
 
-3. Add asset types, such as Bike, Car or a Truck.
+3. Add asset types, such as Bike, Car, or a Truck.
 
-### Adding Assets
+### Add Assets
 
 Assets are the individual items or vehicles that you want to inspect.
 
@@ -101,9 +101,9 @@ To add assets:
 
 2. Select **Assets** tab inside the app.
 
-3. In the form that opens, fill in the asset details such as the asset name, unique ID and asset class.
+3. In the form that opens, fill in the asset details such as the asset name, unique ID, and asset class.
 
-### Adding Inspection Forms
+### Add Inspection Forms
 
 Inspections forms are tied to asset types. You can define more than one inspection form for each asset type. For example, you can define a “Daily Car Inspection” and a “Daily Car Inspection” form for the asset type “Car”.
 
@@ -127,10 +127,16 @@ To associate forms to the asset types:
 
 3. Associate the inspection form to the asset type.
 
-## Editing the sample app
+## Edit the sample app
 
-You can further customize and edit the components of an installed Power Apps app in Teams. To edit and manage the installed Power Apps Teams app in Teams, go to Managing an app.
+You can further customize and edit the components of an installed Power Apps app in Teams. To edit and manage the installed Power Apps Teams app in Teams, go to [Manage your apps](manage-your-apps.md).
 
-### Reporting installation errors
+### Report installation errors
 
-If you encounter any errors during the installation process, you can help us troubleshoot the problem much more effectively with the session details using CTRL+ALT+A on the keyboard. To learn more about the session details, go to About tab.
+If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively with the session details using CTRL+ALT+A on the keyboard. To learn more about the session details, go to [About tab](overview-of-the-power-apps-app.md#about-tab).
+
+### See also
+
+- Install Power Apps personal app <!--- hyperlink to article/section>
+- Create your first app <!--- hyperlink to article/section>
+- [Create additional apps](create-additional-apps.md)
