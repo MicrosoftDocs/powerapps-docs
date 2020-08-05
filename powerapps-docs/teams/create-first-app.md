@@ -135,7 +135,7 @@ new table that describes this dataset, and select
 1. After the table is created, you can add columns of different types, add rows, and
 work with data inside the table designer.
 
-   ![Table designer](media/table-designer-first-table.png "Table designer")
+   ![Table designer](media/table-designer-1.png "Table designer")
 
 
 ### Add columns in the table
