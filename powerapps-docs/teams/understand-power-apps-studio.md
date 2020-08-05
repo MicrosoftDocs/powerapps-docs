@@ -52,7 +52,7 @@ Let’s understand each option inside Power Apps Studio in detail.
 ## 1 - Build hub
 
 Launching Power Apps Studio from the build hub opens the app authoring experience inside Teams interface
-that inherits the Teams interface and options. The **Home**, **Build** and **About** tabs are explained earlier in the section <!--- Link to the "Understand the Power Apps interface section once added --> Understanding the Power Apps interface.
+that inherits the Teams interface and options. The **Home**, **Build** and **About** tabs are explained earlier in the section [Overview of the Power Apps app](overview-of-the-power-apps-app.md).
 
 ## 2 – Power Apps Studio options
 
@@ -236,7 +236,7 @@ reference](../maker/canvas-apps/formula-reference.md).
 ## 6 – Power Apps app
 
 The **Power Apps** app inside Teams. The app and app interface is explained in
-more detail in <!--- Link to the "Understand the Power Apps interface section once added --> *Understanding the Power Apps interface*.
+more detail in [Overview of the Power Apps app](overview-of-the-power-apps-app.md).
 
 ## 7 – App authoring menu
 

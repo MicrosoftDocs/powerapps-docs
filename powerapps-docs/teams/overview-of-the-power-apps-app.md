@@ -15,7 +15,7 @@ ms.reviewer:
 You can use the Power Apps app to create and manage apps across the available environments for the applicable teams. Select the Power Apps app from the left pane in Teams to open the Power Apps interface.
 
 > [!NOTE]
-> If the **Power Apps** app doesn't appear on the left pane, you can <!--- Install Power Apps app topic link --> install it. After you install the app, you need to <!--- Create first app topic link --> create your first app to create an environment. For more details about a Power Apps environment, go to [About Teams environment](https://docs.microsoft.com/power-platform/admin/about-teams-environment).
+> If the **Power Apps** app doesn't appear on the left pane, you can [install](install-personal-app.md) it. After you install the app, you need to [create your first app](create-first-app.md) to create an environment. For more details about a Power Apps environment, go to [About Teams environment](https://docs.microsoft.com/power-platform/admin/about-teams-environment).
 
 ![Power Apps app](media/power-apps-overview-app.png)
 
@@ -27,7 +27,7 @@ Let’s understand each tab in detail.
 
 ## Home tab
 
-The **Home** tab allows you to get started creating new apps using Power Apps. As you’ve learned from the earlier section about <!--- Create first app topic link --> creating your first app in Teams, a new environment is created for your team when you create a first app. Creating additional apps inside same team uses the environment already created for the selected team. You can use the Home tab as a one stop to view all the available apps that you can install, or play the video to get started.
+The **Home** tab allows you to get started creating new apps using Power Apps. As you’ve learned from the earlier section about [creating your first app in Teams](create-first-app.md), a new environment is created for your team when you create a first app. Creating additional apps inside same team uses the environment already created for the selected team. You can use the Home tab as a one stop to view all the available apps that you can install, or play the video to get started.
 
 ## Build tab
 
@@ -83,7 +83,7 @@ Shows the apps created using Power Apps. For more information about managing an 
 
 Shows all the Power Automate flows in the selected team’s environment. Power Automate is a service that helps you create automated workflows between your
 favorite apps and services to synchronize files, get notifications, collect data and more. There are different types of flows available. For more information
-about Power Automate flows, go to [Get started with Power Automate](https://docs.microsoft.com/power-automate/getting-started).
+about Power Automate flows, go to [Get started with Power Automate](../../../power-automate/teams/overview.md).
 
 ![Solution explorer - Flows](media/power-apps-overview-solution-explorer-flows.png)
 
@@ -153,4 +153,4 @@ While creating canvas aps using Power Apps from the Teams interface, it becomes 
 ### See also
 
 - [Understand Power Apps Studio](understand-power-apps-studio.md)
-- Create your first app <!--- Add link to article/section -->
+- [Create your first app](create-first-app.md)

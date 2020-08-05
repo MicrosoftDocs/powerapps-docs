@@ -39,4 +39,4 @@ Power Apps app is now uninstalled from your Teams.
 
 ### See also
 
-Install Power Apps personal app <!--- Add link to install app article/section -->
+[Install Power Apps personal app](install-personal-app.md)
