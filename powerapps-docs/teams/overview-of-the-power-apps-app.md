@@ -12,7 +12,7 @@ ms.reviewer:
 
 # Overview of the Power Apps app
 
-You can use the **Power Apps** app to create and manage apps across the available environments for the applicable teams. Select the **Power Apps** app from the left pane in Teams to open the Power Apps interface.
+You can use the Power Apps app to create and manage apps across the available environments for the applicable teams. Select the Power Apps app from the left pane in Teams to open the Power Apps interface.
 
 > [!NOTE]
 > If the **Power Apps** app doesn't appear on the left pane, you can <!--- Install Power Apps app topic link --> install it. After you install the app, you need to <!--- Create first app topic link --> create your first app to create an environment. For more details about a Power Apps environment, go to [About Teams environment](https://docs.microsoft.com/power-platform/admin/about-teams-environment).
