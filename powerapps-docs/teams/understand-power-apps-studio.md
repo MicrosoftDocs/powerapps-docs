@@ -17,7 +17,7 @@ builder called Microsoft Power Apps Studio. You can use Power Apps Studio to des
 
 ## Overview of Power Apps Studio
 
-![Power Apps Studio](media/studio-power-apps-studio.png)
+![Power Apps Studio](media/studio-power-apps.png "Power Apps Studio")
 
 1. [Build hub](#1---build-hub) – select different tabs inside the Power Apps app.
 
@@ -59,18 +59,18 @@ that inherits the Teams interface and options. The **Home**, **Build** and **Abo
 Power Apps Studio options available are available on top-left menu. The
 options are relevant to the current session and app-related settings.
 
-![Studio options](media/studio-options.png)
+![Studio options](media/studio-options.png "Studio options")
 
 ### Undo and redo
 
-![Undo Redo](media/studio-undo-redo.png)
+![Undo Redo](media/studio-undo-redo.png "Undo Redo")
 
 - Undo – undo the last action.
 - Redo – repeat the last action.
 
 ### Add data
 
-![Add data](media/studio-add-data.png)
+![Add data](media/studio-add-data.png "Add data")
 
 Allows you to:
 
@@ -84,13 +84,13 @@ Allows you to add screens based on layouts or scenarios.
 
 #### Layouts
 
-![Layouts](media/studio-layouts.png)
+![Layouts](media/studio-layouts.png "Layouts")
 
 Select a new screen to add to the app based on layout of the screen.
 
 #### Scenarios
 
-![Scenarios](media/studio-scenarios.png)
+![Scenarios](media/studio-scenarios.png "Layouts")
 
 Select a screen type based on the available scenarios, such as *Scrollable,
 List, Form, Success, Tutorial, Email, People, Meeting, or Calendar.*
@@ -100,7 +100,7 @@ List, Form, Success, Tutorial, Email, People, Meeting, or Calendar.*
 Runs the [App
 checker](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app-checker-results-for-canvas-apps-in-solutions/) with available rules and shows the results.
 
-![App-checker](media/studio-app-checker.png)
+![App-checker](media/studio-app-checker.png "App-checker")
 
 ### Settings
 
@@ -110,14 +110,14 @@ Allows you to configure app’s genera settings and turn features on or off.
 
 Launches app’s general settings and options such as the app name, icon, data row limit, and app icon fill colors.
 
-![General settings](media/studio-general-settings.png)
+![General settings](media/studio-general-settings.png "General settings")
 
 #### Features
 
 **Features** option allows you to turn *Preview* or *Experimental* features *On*
 or *Off*.
 
-![Features](media/studio-features.png)
+![Features](media/studio-features.png "Features")
 
 For more information, go to [preview, experimental, or deprecated
 features](../maker/canvas-apps/working-with-experimental-preview.md).
@@ -127,7 +127,7 @@ features](../maker/canvas-apps/working-with-experimental-preview.md).
 Lets you create a new flow using Power Automate or select any already available
 flow.
 
-![Power Automate](media/studio-power-automate.png)
+![Power Automate](media/studio-power-automate.png "Power Automate")
 
 For more information about Power Automate, go to Working with flows.
 
@@ -144,7 +144,7 @@ List current [variables](../maker/canvas-apps/working-with-variables.md) used by
 Shows account details including session details, current Power Apps app build
 version, and other session details. You can also turn the **Auto save** option **On** or **Off**.
 
-![Account details](media/studio-account-details.png)
+![Account details](media/studio-account-details.png "Account details")
 
 > [!NOTE]
 > We recommend that you keep **Auto save** setting turned **On** and
@@ -154,13 +154,13 @@ save the changes to your app before closing Power Apps Studio.
 
 The options on top-right corner of Power Apps Studio allow you to work with app-specific actions.
 
-![App actions](media/studio-app-actions.png)
+![App actions](media/studio-app-actions.png "App actions")
 
 ### App name editor
 
 Select the name of the app to edit it.
 
-![App name editor](media/studio-app-name-editor.png)
+![App name editor](media/studio-app-name-editor.png "App name editor")
 
 ### Save
 
@@ -189,7 +189,7 @@ Shows all the versions of the app. You can view app versions, version comments, 
 Shows the list of available properties for the selected object on the canvas.
 The properties list changes based on your selection. For a complete list of all properties, go to [properties reference](../maker/canvas-apps/reference-properties.md#all-properties).
 
-![Properties list](media/studio-properties-list.png)
+![Properties list](media/studio-properties-list.png "Properties list")
 
 ## 5 – Formula bar
 
@@ -197,11 +197,11 @@ Use the formula bar to add, edit, or remove functions relevant to the selected
 object and the property selected from the properties list. For example, select
 the screen to update the background using the [RGBA function](../maker/canvas-apps/functions/function-colors.md).
 
-![Formula bar](media/studio-formula-bar.png)
+![Formula bar](media/studio-formula-bar.png "Formula bar")
 
 The formula bar is IntelliSense enabled. IntelliSense provides tips as you enter text inside the formula bar to help you with the function syntax. If a formula returns an error, the IntelliSense also shows tips relevant to the syntax error and mitigation steps. When you start entering text that matches to one or more functions, the formula bar shows in-line function help and highlights help text relevant to the cursor position.
 
-![Function inside formula bar](media/studio-function-inside-formula-bar.png)
+![Function inside formula bar](media/studio-function-1.png "Function inside formula bar")
 
 Similarly, use the IntelliSense when working with complex functions, nested
 functions, or when correcting a formula syntax.
@@ -209,23 +209,23 @@ functions, or when correcting a formula syntax.
 For a quick and easy function reference, you can also select the formula
 drop-down.
 
-![Function drop-down](media/studio-function-drop-down.png)
+![Function drop-down](media/studio-function-2.png "Function drop-down")
 
 Select an event type from the drop-down at the top of the dialog, such as
 **Action,** instead of **Text**.
 
-![Function drop-down event selection](media/studio-function-drop-down-event-selection.png)
+![Function drop-down event selection](media/studio-function-3.png "Function drop-down event selection")
 
 Select an action that you want to add a function for.
 
-![Change in function drop-down event selection](media/studio-function-drop-down-event-selection-change.png)
+![Change in function drop-down event selection](media/studio-function-4.png "Change in function drop-down event selection")
 
 The available functions for the selected event type are dynamically updated
 depending on the object you select. For example, if you selected a button on the
 canvas, the available **Action** functions also include function
 *ClearCollect()*.
 
-![Function ClearCollect() selected](media/studio-function-clear-collect-selected.png)
+![Function ClearCollect() selected](media/studio-function-5.png "Function ClearCollect() selected")
 
 You can read the description of the selected **Action** function and selecting
 the function name twice adds the function into the formula bar.
@@ -240,9 +240,9 @@ more detail in [Overview of the Power Apps app](overview-of-the-power-apps-app.m
 
 ## 7 – App authoring menu
 
-The left pane on Power Apps Studio allows you to switch between options such as **Insert**, **Data Sources**, **Media, and **Advanced tools**.
+The left pane on Power Apps Studio allows you to switch between options such as **Insert**, **Data Sources**, **Media**, and **Advanced tools**.
 
-![App authoring menu](media/studio-app-authoring-menu.png)
+![App authoring menu](media/studio-app-1.png "App authoring menu")
 
 You can also select the expand button to expand the list to include names,
 instead of only icons.
@@ -251,13 +251,13 @@ instead of only icons.
 
 The options for working with canvas app change depending on the selection in the left pane, such as the **Tree view**, **Insert**, **Data sources**, **Media**, or **Advanced tools**.
 
-![App authoring options](media/studio-app-authoring-options.png)
+![App authoring options](media/studio-app-2.png "App authoring options")
 
 ### Tree view
 
 Select the tree view to show the screens available in the app,
 
-![Tree view](media/studio-tree-view.png)
+![Tree view](media/studio-tree-view.png "Tree view")
 
 > [!TIP]
 > Select **App** in tree view to work with app-specific controls, or to
@@ -268,7 +268,7 @@ new components or reuse the already published components from published
 component libraries. For more information, go to [working with component
 libraries](../maker/canvas-apps/component-library.md).
 
-![Tree view - components](media/studio-tree-view-components.png)
+![Tree view - components](media/studio-tree-view-1.png "Tree view - components")
 
 ### Insert
 
@@ -277,7 +277,7 @@ add on the selected screen in your canvas app. You can also expand other
 choices or use the components option to insert controls from a component
 library.
 
-![Insert](media/studio-insert.png)
+![Insert](media/studio-insert.png "Insert")
 
 To insert controls on the canvas, you can drag and drop the control on canvas,
 select the control, or use the ellipsis (…) option and then choose *Add to
@@ -316,12 +316,12 @@ can add one or more
 [connections](../maker/canvas-apps/connections-list.md)
 using data sources.
 
-![Data](media/studio-data.png)
+![Data](media/studio-data.png "Data")
 
 You can also use the tables created using the **Tables** option inside the
 environment by expanding the **Tables** option.
 
-![Add data](media/studio-add-data-select-data-source.png)
+![Add data](media/studio-add-1.png "Add data")
 
 Select **Create new table** to create a new table inside the Dataflex
 environment.
@@ -329,40 +329,40 @@ environment.
 To choose other connectors such as SharePoint, OneDrive or SQL Server, you can
 enter the text in data source search box or select from the list of connectors.
 
-![Select data source](media/studio-select-search-data-source.png)
+![Select data source](media/studio-select-1.png "Select data source")
 
 For more details about Power Apps Connectors, go to [list of all Power Apps
-Connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors).
+Connectors](/connectors/connector-reference/connector-reference-powerapps-connectors.md).
 
 ### Table designer
 
 When you select **Create new table** and enter a name for the new table, you can see the **Table designer**. Use the Table designer to design the table, add columns of different data types, enter data in rows, and save the changes.
 
-![Table designer](media/studio-table-designer.png)
+![Table designer](media/studio-table-designer.png "Table designer")
 
 To get started with the Table designer, select **Create new table** and enter
 the table name.
 
-![Create table](media/studio-create-table.png)
+![Create table](media/studio-create-table.png "Create table")
 
 > [!NOTE]
 > **Table designer** inside Power Apps Studio allows you to quickly create a table while authoring an app. You can create tables quickly using the Table designer from Power Apps Studio. However, you can also use the [Build hub](edit-delete-table.md) to edit or delete the tables you create using Power Apps Studio. Go to [Create a Table](create-table.md) for more information about creating table using the build hub.
 
 #### Understand Table designer
 
-![Authoring table in table designer](media/studio-table-designer-authoring.png)
+![Authoring table in table designer](media/studio-table-1.png "Authoring table in table designer")
 
 ##### Table name
 
-Select the ![Edit icon](media/studio-edit-icon.png) icon to edit the name of the table.
+Select the ![Edit icon](media/studio-edit-icon.png "Edit icon") icon to edit the name of the table.
 
-![Edit table name](media/studio-edit-table-name.png)
+![Edit table name](media/studio-edit-1.png "Edit table name")
 
 ##### Add row
 
 Select **Add row** to add a new row inside the table.
 
-![Add row](media/studio-add-row.png)
+![Add row](media/studio-add-row.png "Add row")
 
 ##### Add columns
 
@@ -375,7 +375,7 @@ Table designer supports specific data types as columns. The following options
 are available when creating a new column using the Table designer inside the
 Power Apps Studio:
 
-![Column types](media/studio-column-types.png)
+![Column types](media/studio-column-types.png "Column types")
 
 > [!IMPORTANT]
 > To add columns not supported by the Table designer, [Create a Table](create-table.md) using the build hub instead of the Table designer.
@@ -398,16 +398,16 @@ Refreshes the current table with data.
 
 To save the changes to table, select the **Save.** When you change table and try to close the table without saving changes, you’re prompted to discard changes.
 
-![Save changes](media/studio-save-table-changes.png)
+![Save changes](media/studio-save-table-changes.png "Save changes")
 
 To ensure the changes to the table are saved, you can select the next row inside the table, or select any other cell after editing a cell to trigger the auto save functionality.
 
-![Saving changes](media/studio-saving-changes.png)
+![Saving changes](media/studio-saving-changes.png "Saving changes")
 
 After you close a saved table, you’ll see the table added to the list of
 available data sources inside the **Data** option in Power Apps Studio.
 
-![Data source added](media/studio-data-source-added.png)
+![Data source added](media/studio-data-1.png "Data source added")
 
 ##### Table designer view
 
@@ -422,7 +422,7 @@ Shows the row counts inside the table.
 
 Select the drop-down option at the top of the column name to view column-related options.
 
-![Column options](media/studio-column-options.png)
+![Column options](media/studio-column-options.png "Column options")
 
 | **Option**      | **Description**                                                                                      |
 |-----------------|------------------------------------------------------------------------------------------------------|
@@ -447,7 +447,7 @@ the app controls, or go back to the Table designer to edit the table.
 To edit the table, select the table data source and then select **Edit data** to
 open the table inside Table designer.
 
-![Edit table data](media/studio-edit-table-data.png)
+![Edit table data](media/studio-edit-2.png "Edit table data")
 
 After you close the Table designer, the data source is automatically refreshed
 to reflect the updated data inside Power Apps Studio. You can also select **Refresh**
@@ -457,7 +457,7 @@ to manually refresh Power Apps Studio to reflect the data inside the controls ad
 
 Use the **Media** option to add images, video, or audio files to your app. Adding media directly to your app uploads the files to the app and uses the app storage. Each file uploaded to the app as media can’t exceed 64 MB and the size of all media files uploaded to an app can’t exceed 200 MB.
 
-![Media](media/studio-media.png)
+![Media](media/studio-media.png "Media")
 
 If you want to reference additional media, consider using [audio and video controls with URLs](../maker/canvas-apps/add-images-pictures-audio-video.md#add-images-audio-or-video-using-the-controls),
 using media from the [Azure Media Services](../maker/canvas-apps/add-images-pictures-audio-video.md#add-media-from-azure-media-services),
@@ -470,7 +470,7 @@ Go to **Advanced tools** to work with the canvas app **Monitor** and the **Test 
 diagnosing a problem with the app – such as to investigate performance degradation or time delay when using the app. **Test Studio** allows you to
 develop and reuse tests specific to individual apps based on scenarios. These tests can be useful when automating canvas app testing during application lifecycle management (ALM) scenarios, such as when releasing a new version of the app.
 
-![Advanced tools](media/studio-advanced-tools.png)
+![Advanced tools](media/studio-advanced-tools.png "Advanced tools")
 
 For more information about Monitor and Test Studio, go to [debugging an app with canvas app Monitor](../maker/canvas-apps/monitor.md) and [Canvas app Test Studio](../maker/canvas-apps/test-studio.md).
 
@@ -483,7 +483,7 @@ The canvas shows the currently selected screen from the left pane.
 The properties pane shows properties and options available for the currently
 selected object on the canvas. **Properties** tab shows generic options, such as the name, color, size, or position. **Advanced** tab shows additional options for advanced customization. The advanced properties may sometimes be locked for editing, such as when working with data cards. You can select [Unlock to change properties](../maker/canvas-apps/working-with-cards.md#unlock-a-card) in such situations while working with advanced customization.
 
-![Properties pane](media/studio-properties-pane.png)
+![Properties pane](media/studio-properties-pane.png "Properties pane")
 
 ## 11 – Screen selector
 
