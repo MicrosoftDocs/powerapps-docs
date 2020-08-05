@@ -137,6 +137,6 @@ If you get any errors during the installation process, you can help us troublesh
 
 ### See also
 
-- Install Power Apps personal app <!--- hyperlink to article/section -->
-- Create your first app <!--- hyperlink to article/section -->
+- [Install Power Apps personal app](install-personal-app.md)
+- [Create your first app](create-first-app.md)
 - [Create additional apps](create-additional-apps.md)
