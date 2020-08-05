@@ -23,13 +23,16 @@ There are four different types of table ownership. When you create a table, the 
 
 ## Create a table
 1. Sign into Teams, and then select the link for **Power Apps**.
-   ![Sign into Power Apps](media/create-table1.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Sign into Power Apps](media/create-table1.png)
 
 2. Select the **Build** tab, and then select **See all**.
-   ![The Build tab](media/create-table2.png)
+   > [!div class="mx-imgBorder"] 
+   > ![The Build tab](media/create-table2.png)
 
 3. Select **Tables** from the left pane, and then select **New table** on the command bar.
-    ![New table menu option](media/create-table3.png)
+    > [!div class="mx-imgBorder"] 
+    > ![New table menu option](media/create-table3.png)
 
 4. In the **New table** pane, enter the following information. Required columns are designated with an asterisk (*) next to the column label.
     - **Display name**: The name of the table to be displayed. For example, *Product*.
@@ -38,7 +41,8 @@ There are four different types of table ownership. When you create a table, the 
        > [!NOTE]
        > Each Dataflex environment is assigned a prefix upon creation, such as *cr628*. Every table and column name created will be prefixed with this value. This value can’t be changed.
     - **More settings**: This area provides additional settings that are available. More information: [Create a custom entity](../maker/common-data-service/data-platform-create-entity.md).
-    ![Column details](media/create-table4.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Column details](media/create-table4.png)
 
 5. Select **Done**.
 

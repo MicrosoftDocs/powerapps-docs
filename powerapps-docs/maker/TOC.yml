@@ -1741,7 +1741,7 @@
     href: ../teams/create-additional-apps.md
   - name: Use Teams integration object
     href: ../teams/use-teams-integration-object.md
-  - name: Work with Dataflex tables
+  - name: Work with Dataflex
     items:
       - name: Overview
         href: ../teams/overview-tables.md
