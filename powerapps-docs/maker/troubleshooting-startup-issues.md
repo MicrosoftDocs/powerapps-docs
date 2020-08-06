@@ -198,5 +198,5 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
 
 ### See also
 
+- [Common issues and resolutions](canvas-apps/common-issues-and-resolutions.md)
 - [Power Apps Support](https://powerapps.microsoft.com/support/)
-- [New support request](https://admin.powerplatform.microsoft.com/support)
