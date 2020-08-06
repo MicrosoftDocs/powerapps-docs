@@ -282,7 +282,7 @@ Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function () {
                 "structuralProperty": 5
             }
         },
-        operationType: 1, // This is an action. Use '1' for functions and '2' for CRUD
+        operationType: 1, // This is a function. Use '0' for actions and '2' for CRUD
         operationName: "RetrieveDuplicates",
     };
 };
