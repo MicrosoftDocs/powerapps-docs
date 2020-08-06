@@ -120,6 +120,8 @@ namespace PowerApps.Samples
                         throw new Exception(string.Format("Failed to retrieve current user", response.Content));
                     }
                     JObject whoAmIresp = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+                    response.Dispose();
+
                     //First obtain the user's ID.
                     myUserId = (Guid)whoAmIresp["UserId"];
                     //Then retrieve the full name for that unique ID.
@@ -137,6 +139,8 @@ namespace PowerApps.Samples
                         Console.WriteLine("Error calling WhoAmI!");
                         throw new Exception(string.Format("Failed to retrieve the fullname for that unique ID", response.Content));
                     }
+                    response.Dispose();
+
                     Console.WriteLine("\tCurrent user has system name '{0}'.", currentUser);
                     #endregion Call an unbound function with no parameters.
 
@@ -170,6 +174,8 @@ namespace PowerApps.Samples
                         throw new Exception(string.Format("Faile calling GetTimeZoneCodeByLocalizedName!", response.Content));
 
                     }
+                    response.Dispose();
+
                     timeZoneCode = LocalizedNameResponse["TimeZoneCode"].ToString();
                     Console.WriteLine("\tThe time zone '{0}' has the code '{1}'.", timeZoneName, timeZoneCode);
                     #endregion Call an unbound function that requires parameters.
@@ -194,6 +200,8 @@ namespace PowerApps.Samples
                         Console.WriteLine("Error calling CalculateTotalTimeIncident!");
                         throw new Exception(string.Format("Failed calling CalculateTotalTimeIncident!", response.Content));
                     }
+                    response.Dispose();
+
                     Console.WriteLine("\tThe total duration of tasks associated with the incident " +
                         "is {0} minutes.", totalTime);
                     #endregion Call a bound function.  
@@ -224,6 +232,7 @@ namespace PowerApps.Samples
                         throw new Exception(string.Format("Failed to close an opportunity as won", response.Content));
                     }
                     response.Dispose();
+
                     Console.WriteLine("\tOpportunity won.");
                     #endregion Call an unbound action that requires parameters.
 
@@ -269,6 +278,7 @@ namespace PowerApps.Samples
                         Console.WriteLine("Error retrieving tracking letter activity ID!");
                         throw new Exception(string.Format("Failed to retrieve trscking letter activity ID", response.Content));
                     }
+                    response.Dispose();
 
                     //Retrieve URL to current user's queue.
                     string myQueueUri;
@@ -304,6 +314,7 @@ namespace PowerApps.Samples
                         throw new Exception(string.Format("Failed to Add letter activity to current user's queue", response.Content));
                     }
                     response.Dispose();
+
                     Console.WriteLine("\tQueueItemId returned from AddToQueue action: {0}", queueItemId);
                     #endregion Call a bound action that requires parameters.
 
@@ -353,8 +364,9 @@ namespace PowerApps.Samples
                         Console.WriteLine("Error calling custom action sample_CreateCustomer!");
                         throw new Exception(string.Format("Failed calling custom action sample_CreateCustomer", response.Content));
                     }
-                    Console.WriteLine("\tThe account '" + customerName1 + "' was created.");
                     response.Dispose();
+
+                    Console.WriteLine("\tThe account '" + customerName1 + "' was created.");
 
                     //Try to call the same custom action with invalid parameters, here the same name is
                     //not valid for a contact. (ContactFirstname and ContactLastName parameters are  
