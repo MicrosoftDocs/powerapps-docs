@@ -721,6 +721,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Revert
             href: ./canvas-apps/functions/function-revert.md
+          - name: RequestHide
+            href: ./canvas-apps/functions/function-requesthide.md
           - name: RGBA
             href: ./canvas-apps/functions/function-colors.md
           - name: Right
@@ -1710,7 +1712,13 @@
   - name: Import translated entity and field text
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: Export to data lake
-    href: ./common-data-service/export-to-data-lake.md
+    items: 
+    - name: Export to Azure Data Lake Storage Gen2
+      href: ./common-data-service/export-to-data-lake.md
+    - name: Ingest exported data with Azure Data Factory
+      href: ./common-data-service/export-to-data-lake-data-adf.md
+    - name: Analyze exported data with Power BI
+      href: ./common-data-service/export-to-data-lake-data-powerbi.md    
   - name: Security in Common Data Service
     href: /power-platform/admin/wp-security
   - name: API limits overview
