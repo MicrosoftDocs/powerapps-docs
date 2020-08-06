@@ -36,13 +36,13 @@ This article shows you how to perform the following tasks:
 
 ## Prerequisites
 
-This section describes the prerequisites necessary to ingest exported Common Data Service data<!--To echo the article title.--> with Data Factory.
+This section describes the prerequisites necessary to ingest exported Common Data Service data with Data Factory.
  
 ### Azure roles
 
 The user account that's used to sign in to Azure must be a member of the
 *contributor* or *owner* role, or an *administrator* of the Azure subscription.
-To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one<!--Suggested.-->. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
+To view the permissions that you have in the subscription, go to the [Azure portal](https://portal.azure.com/), select your username in the upper-right corner, select **...**, and then select **My permissions**. If you have access to multiple subscriptions, select the appropriate one. To create and manage child resources for Data Factory in the Azure portal&mdash;including datasets, linked services, pipelines, triggers, and integration runtimes&mdash;you must belong to the *Data Factory Contributor* role at the resource group level or above.
 
 ### Export to data lake
 
@@ -52,7 +52,7 @@ In this example, account entity data is exported to the data lake.
 
 ## Generate the manifest.json from the model.json
 
-1.  Go to<!--Via Writing Style Guide.--> [this GitHub repository](https://github.com/t-sazaki/ConvertModelJsonToManifestOriginal) and download it<!--Suggested.--> to your computer.
+1.  Go to [this GitHub repository](https://github.com/t-sazaki/ConvertModelJsonToManifestOriginal) and download it to your computer.
 
 2.  Go to ConvertModelJsonToManifest-master/ConvertModelJsonToManifest-master/ConvertModelJsonToManifest.sln.
 
@@ -71,41 +71,41 @@ In this example, account entity data is exported to the data lake.
 
     -   NLog
 
-5. If you're missing the Common Data Model packages or they're unavailable, you can add them by following these steps:<!--note from editor: To get proper step formatting (hanging indents) for substeps, you need to number them with numbers rather than letters.-->
+5. If you're missing the Common Data Model packages or they're unavailable, you can add them by following these steps:
 
     1. Select the gear icon to access package settings.
        ![Package settings gear icon](media/package-settings-gear.png "Package settings gear icon")
 
-    1. Select **+** in the pop-up window to add a new package source. 
+    2. Select **+** in the pop-up window to add a new package source. 
        ![Add a new package](media/add-new-package.png "Add a new package")
 
-6.  Configure the new package source, and then select **OK**:<!--Are the following edits okay? I wasn't sure what was user input and what was UI, since both are meant to be bold.-->
+6.  Configure the new package source, and then select **OK**:
 
     1.  For **Name**, enter **CDM**.
 
-    2.  For **Source**, enter **https[]()://commondatamodel.pkgs.visualstudio.com/_packaging/CDM/nuget/v3/index.json**<!--Suggested as a way to keep the URL from being rendered as a link.-->
+    2.  For **Source**, enter **https[]()://commondatamodel.pkgs.visualstudio.com/_packaging/CDM/nuget/v3/index.json**.
 
 7.  Make sure that the package source is set to **All**.
 
 8.  In Program.cs, fill in the storage container information on line 26, as indicated here:
 
-    1. Replace <span><b>your-storage-account.dfs.core.windows.net</b></span><!--Suggested, to keep this address from being linked.--> by substituting the name of your storage account.
+    1. Replace <span><b>your-storage-account.dfs.core.windows.net</b></span> by substituting the name of your storage account.
        ![Your storage account substitution](media/your-storage-account.png "Your storage account substitution")
 
-    1. Replace **your-folder-name**<!--Edit okay? I assume this is a literal string in Program.cs, just as your-storage-account.dfs.core.windows.net is?--> with the folder containing the model.json file. Go to your storage account **Overview** > **Storage Explorer** > **Containers**, and then select the correct folder name. 
+    1. Replace **your-folder-name** with the folder containing the model.json file. Go to your storage account **Overview** > **Storage Explorer** > **Containers**, and then select the correct folder name. 
       ![Replace your folder name](media/replace-your-folder-name.png "Replace your folder name")
 
     1.  Replace the access key with the access key for this storage account. Go to your storage account, and on the left panel under **Settings**, select **Access Keys**. Select **Copy** to copy the access key and replace it in the code.
 
 9.  Optionally, you can change the name of the manifest file as indicated in the code comments.
 
-10.  Run the code,<!--Need the comma because these are two complete sentences.--> and refresh your storage container to find the new manifest, entity, resolved entity, and config files.
+10.  Run the code, and refresh your storage container to find the new manifest, entity, resolved entity, and config files.
 
 ## Set the Data Lake Storage Gen2 storage account as a source
 
-1.  Open [Azure Data Factory](https://ms-adf.azure.com/home?factory=%2Fsubscriptions%2Fd410b7d3-02af-45c8-895e-dc27c5b35342%2FresourceGroups%2Fsama%2Fproviders%2FMicrosoft.DataFactory%2Ffactories%2Fadfathena), and then select **Create data flow**.<!--Can you ask someone to close this phrase up?--> 
+1.  Open [Azure Data Factory](https://ms-adf.azure.com/home?factory=%2Fsubscriptions%2Fd410b7d3-02af-45c8-895e-dc27c5b35342%2FresourceGroups%2Fsama%2Fproviders%2FMicrosoft.DataFactory%2Ffactories%2Fadfathena), and then select **Create data flow**. 
 
-2.  Turn on **Data flow debug** mode. This might take up to 10<!--note from editor: Because is 10 or more, just as we'd say "10 books."--> minutes, but you
+2.  Turn on **Data flow debug** mode. This might take up to 10 minutes, but you
     can proceed with the following steps.
 
     ![Dataflow debug mode](media/data-flow-debug.png "Dataflow debug mode")
@@ -118,29 +118,29 @@ In this example, account entity data is exported to the data lake.
 
     - **Output stream name**: Enter the name you want. 
     - **Source type**: Select **Common Data Model**.
-    - **Linked Service**<!--For sure this matches the UI, or should it be "Linked service"?-->: Select the storage account from the drop-down menu, and then link a new service by providing your subscription details and leaving all default configurations.
+    - **Linked Service**: Select the storage account from the drop-down menu, and then link a new service by providing your subscription details and leaving all default configurations.
     - **Sampling**: If you want to use all your data, select **Disable**.
 
 5.  Under **Source options**, do the following:
 
     - **Metadata format**: Select **Manifest**. 
-    - **Root location**: In the first box (**Container**<!--This edit assumes that this is the default text that appears in the box, to match what I think you've done in the next line. Edit also presumes the text will be capped just as "Entity path" is?-->), enter the container name. In the second box (**Folder path**<!--Edit okay?-->), enter **/**. 
-    - **Manifest file**: Leave the first box (**Entity path**) blank, and in the second box (**Manifest name (default)**<!--Edit assumes this is the default text in the second box.-->), enter the first part of the manifest file name, such as *test.manifest.cdm.json* **/** *test*).
+    - **Root location**: In the first box (**Container**), enter the container name. In the second box (**Folder path**), enter **/**. 
+    - **Manifest file**: Leave the first box (**Entity path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json* **/** *test*).
 
        ![Source options, part one](media/source-options.png "Source options, part one")
 
     - **Schema linked service**: Select the same storage container as the source settings.
     - **Container**: Enter the container name.
     - **Corpus folder**: Leave blank.
-    - **Entity**: Enter text in the format **/*entity*Res.cdm.json/*entity***, replacing<!--Suggested, since they shouldn't have to enter it and then change it.--> *entity* with the entity name you want, such as account.
+    - **Entity**: Enter text in the format **/*entity*Res.cdm.json/*entity***, replacing *entity* with the entity name you want, such as account.
 
        ![Source options, part two](media/source-options-two.png "Source options, part two")
 
 ## Set the Data Lake Storage Gen2 storage account 
 
-After setting the exported Common Data Service data in the Data Lake Storage Gen2 storage account as a source in the Data Factory dataflow, there are many possibilities for transforming<!--Suggested.--> your data. More information: [Azure Data Factory](/azure/data-factory/introduction)
+After setting the exported Common Data Service data in the Data Lake Storage Gen2 storage account as a source in the Data Factory dataflow, there are many possibilities for transforming your data. More information: [Azure Data Factory](/azure/data-factory/introduction)
 
-Ultimately, you must set a sink for your dataflow. Follow these instructions to set the Data Lake Storage Gen2 storage account with the data exported by the Export to Data Lake service<!--Or can this be "exported Common Data Service data," to match the title?--> as your sink.
+Ultimately, you must set a sink for your dataflow. Follow these instructions to set the Data Lake Storage Gen2 storage account with the data exported by the Export to Data Lake service as your sink.
 
 1.  Select **+** in the lower-right corner, and then search for and select **Sink**.
 
@@ -149,7 +149,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
     - **Output stream name**: Enter the name you want, such as *Sink1*.
     - **Incoming stream**: Select the source name you want. 
     - **Sink type**: Select **Common Data Model**. 
-    - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Export to Data Lake service<!--Or can this be "exported Common Data Service data," to match the title?-->.
+    - **Linked service**: Select your Data Lake Storage Gen2 storage container that has the data you exported by using the Export to Data Lake service.
 
       ![Configure the Sink tab](media/configure-sink.png "Configure the Sink tab")
 
@@ -162,8 +162,8 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 
       ![Configure the sink Settings tab, part one](media/configure-settings.png "Configure the sink Settings tab, part one")
 
-    - **Root Location**: In the first box (**Container**<!--Edit okay? I followed the same pattern here as in lines 127 and 128.-->), enter the container name. In the second box (**Folder path**), enter **/**<!--To match previous format.-->. 
-    - **Manifest file**: Leave the first box (**Entity path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json / test*.<!--Should this have the same format as line 128?-->
+    - **Root Location**: In the first box (**Container**), enter the container name. In the second box (**Folder path**), enter **/**. 
+    - **Manifest file**: Leave the first box (**Entity path**) blank, and in the second box (**Manifest name (default)**), enter the first part of the manifest file name, such as *test.manifest.cdm.json / test*.
     - **Format type**: Select your file format preference.
 
       ![Configure the sink Settings tab, part two](media/configure-settings-two.png "Configure the sink Settings tab, part two")
@@ -177,7 +177,7 @@ Ultimately, you must set a sink for your dataflow. Follow these instructions to 
 2.  Under **Activities**, select **Move & Transform**, and then drag **Data flow** to the workspace.
 
 3.  Select **Use existing data flow**, and then select the dataflow that you
-    created in the previous steps.<!--The reader will know what you mean here?-->
+    created in the previous steps.
 
 4.  Select **Debug** from the command bar.
 
