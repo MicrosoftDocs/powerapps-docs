@@ -63,13 +63,23 @@ To resolve the issues listed above, read [Resolutions for common errors](#resolu
 
 ## Resolutions for common errors
 
-| Error identifier                                                              | Microsoft Internet Explorer 11          | Microsoft Edge                          | Google Chrome                        |
+| Error identifier                                                              | Microsoft Internet Explorer 11          | Microsoft Edge (Legacy)                         | Google Chrome                        |
 |-------------------------------------------------------------------------------|-------------------------------|-------------------------------|-------------------------------|
 | Sign in required | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) |
 | UserInterventionNeeded_CookiesBlocked <br> UserInterventionNeeded_StorageBlocked   | [Enable storage of local data](#resolution-1-enable-storage-of-local-data-in-your-browser)  | [Enable storage of local data](#resolution-1-enable-storage-of-local-data-in-your-browser)  | [Enable storage of local data](#resolution-1-enable-storage-of-local-data-in-your-browser)  |
 | UserInterventionNeeded_NavigateToAadTimeout                                   | Possible network problem      | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy)         | Possible network problem      |
 | UserInterventionNeeded_NavigateToAadDenied <br> UserInterventionNeeded_StorageLost | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy)         | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy)         | Not applicable                |
 | AadError                                                                      | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) |
+
+### new table
+
+| Error | Microsoft Edge | Microsoft Edge Legacy | Microsoft Internet Explorer 11 | Google Chrome |
+| - | - | - | - | - |
+| Sign in required | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) |
+| UserInterventionNeeded_CookiesBlocked <br> UserInterventionNeeded_StorageBlocked | [Enable storage for local data](#instructions-for-microsoft-edge) | [Enable storage for local data](#instructions-for-microsoft-edge-legacy) | [Enable storage for local data](#instructions-for-internet-explorer-11) | [Enable storage for local data](#instructions-for-google-chrome) |
+| UserInterventionNeeded_NavigateToAadTimeout | Possible network problem | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy)  | Possible network problem | Possible network problem |
+| UserInterventionNeeded_NavigateToAadDenied <br> UserInterventionNeeded_StorageLost | Not applicable | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy) | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy) | Not applicable |
+| AadError | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) |
 
 ## Resolution 1: Enable storage of local data in your browser
 Power Apps stores some data locally in your browser, including user identity and preferences. Power Apps can’t function if the browser is configured to disallow storage of local data.
@@ -119,7 +129,7 @@ Power Apps stores some data locally in your browser, including user identity and
 5. Select **Don’t block cookies**.
 6. Close all Internet Explorer and Microsoft Edge windows.
 
-### Instructions for Chrome
+### Instructions for Google Chrome
     
 - **Option 1: Enable local data for all sites**
     1. On your browser toolbar, select **More**.
