@@ -42,7 +42,7 @@ Publishing states can be created, edited, and deleted within portals.
 8. Select **Save & Close**.
 
 > [!NOTE]
-> Web pages with no associated Publishing State may cause issues with the navigation menu and affect the page visibility. You may see a warning about such missing Publishing State associations for the pages when editing your portal. To fix this warning, select a Publishing State for each [Web Page record](web-page.md) using the Portal Management app.
+> Web pages with no associated Publishing State may cause issues with the navigation menu and affect the page visibility. You may see a warning about such missing Publishing State associations for the pages when editing your portal. To fix this warning, select a Publishing State for each [Web Page record](web-page.md) using the [Portal Management app](configure-portal.md).
 
 ### Publishing state attributes
 
