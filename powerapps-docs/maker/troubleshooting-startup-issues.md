@@ -16,7 +16,9 @@ search.app:
 ---
 # Troubleshooting startup issues for Power Apps
 
-This troubleshooting article helps fix common configuration problems that prevent Power Apps from starting:
+This troubleshooting article helps fix common configuration problems that prevent Power Apps from starting.
+
+## Common errors
 
 - When you sign in to Power Apps - especially using the *InPrivate* or *incognito* experience, you receive the following error:
 
@@ -38,7 +40,7 @@ This troubleshooting article helps fix common configuration problems that preven
 
     ![Hmmm … We couldn’t sign you in. The information below may be helpful](./media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
 
-    **Resolution**: Check [Common data matrix](#common-error-matrix) for different error variations and resolutions.
+    **Resolution**: Check [Resolutions for common errors](#resolutions-for-common-errors) for different error variations and resolutions.
     
 - When you try to create an app from a SharePoint list, you receive the following "abnormal termination" error message
     ```
@@ -57,16 +59,16 @@ This troubleshooting article helps fix common configuration problems that preven
     errorMessage: Script error
     ```
 
-To resolve the issues listed above, read [common errors matrix](#common-error-matrix), and try one of the listed resolutions.
+To resolve the issues listed above, read [Resolutions for common errors](#resolutions-for-common-errors), and try one of the listed resolutions.
 
-## Common error matrix
+## Resolutions for common errors
 
 | Error identifier                                                              | Microsoft Internet Explorer 11          | Microsoft Edge                          | Google Chrome                        |
 |-------------------------------------------------------------------------------|-------------------------------|-------------------------------|-------------------------------|
 | Sign in required | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) | [Allow third-party cookies](#resolution-4-allow-third-party-cookies) |
-| UserInterventionNeeded_CookiesBlocked UserInterventionNeeded_StorageBlocked   | [Enable storage of local data](#resolution-1-enable-storage-of-local-data-in-your-browser)  | [Enable storage of local data](#resolution-1-enable-storage-of-local-data-in-your-browser)  | [Enable storage of local data](#resolution-1-enable-storage-of-local-data-in-your-browser)  |
+| UserInterventionNeeded_CookiesBlocked <br> UserInterventionNeeded_StorageBlocked   | [Enable storage of local data](#resolution-1-enable-storage-of-local-data-in-your-browser)  | [Enable storage of local data](#resolution-1-enable-storage-of-local-data-in-your-browser)  | [Enable storage of local data](#resolution-1-enable-storage-of-local-data-in-your-browser)  |
 | UserInterventionNeeded_NavigateToAadTimeout                                   | Possible network problem      | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy)         | Possible network problem      |
-| UserInterventionNeeded_NavigateToAadDenied UserInterventionNeeded_StorageLost | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy)         | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy)         | Not applicable                |
+| UserInterventionNeeded_NavigateToAadDenied <br> UserInterventionNeeded_StorageLost | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy)         | [Configure Trust Zones](#resolution-2-configure-trust-zones-for-internet-explorer-and-microsoft-edge-legacy)         | Not applicable                |
 | AadError                                                                      | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) | [Azure Active Directory Errors](#resolution-3-azure-active-directory-errors) |
 
 ## Resolution 1: Enable storage of local data in your browser
