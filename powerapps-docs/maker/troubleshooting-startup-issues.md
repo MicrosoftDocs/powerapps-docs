@@ -196,7 +196,7 @@ To disable the **Block third-party cookies** setting in your browser:
 | - | - |
 | Microsoft Edge | **Settings and more**  > **Settings**  > **Site permissions**  > **Cookies and site data** > Turn off **Block third-party cookies**. |
 | Microsoft Edge Legacy | **More** > **Settings** > **View advanced settings** > **Cookies** > Turn off **Block third-party cookies**. |
-| Google Chrome | **More** > scroll down to **Privacy and security** > **Cookies and other site data** > Select an option to allow third-party cookies. For example,  **Allow all cookies** for always, or **Block third-party cookies in incognito** for only blocking in *incognito*. <br> **Note**: You can also start *incognito* session and turn off **Block third-party cookies** in the browser window before you enter URL in the address bar.
+| Google Chrome | **More** > scroll down to **Privacy and security** > **Cookies and other site data** > Select an option to allow third-party cookies. For example,  **Allow all cookies** for always, or **Block third-party cookies in incognito** for only blocking in *incognito*. <br> **Note**: You can also start *incognito* session and turn off **Block third-party cookies** in the browser window before you enter a URL in the address bar.
 | Internet Explorer 11 | **Tools** > **Internet Options** > **Advanced** > Select **Allow** under **Third-party Cookies**.
 
 Most browsers allow settings to reflect the changes immediately. You may also close all the browser windows and reopen instead.
