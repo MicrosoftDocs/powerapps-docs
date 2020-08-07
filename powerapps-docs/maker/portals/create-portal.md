@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/27/2020
+ms.date: 08/06/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -186,8 +186,8 @@ Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $tr
 Administrator are the users having one of the following Azure roles:
 
 - Global Administrator
-- Dynamics 365 Service Administrator
-- Power Platform Service Administrator
+- Dynamics 365 admin
+- Power Platform admin
 
 Users not having the any of the above mentioned Azure roles are considered as non-administrators.
 
