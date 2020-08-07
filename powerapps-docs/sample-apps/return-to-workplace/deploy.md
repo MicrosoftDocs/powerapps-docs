@@ -173,41 +173,41 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
 
-4. Open https://make.powerapps.com/ and select solutions in the left panel.  
-In the toolbar click **New Solution**. Once the new solution is created, open it. Then click **Add Existing** and select the option **Entity**. Now select **Facility (msft_facility)** and click **next**. 
+4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
 
-5. Click the **"Select Components"** link below the Facility title. On the Forms tab select the form ‘Information’ of type ‘Main’ and click on the **Add** button to finish the process. 
+5. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-report1.png "Step1")
 
-6. Within the newly created solution, click on **Export** in the Tool Bar. On the right side of your browser window a pane will open, select the option **"Publish"** and then click on **next**. New options will display, where you will select the **"Unmanaged"** option.  
+6. Within the newly created solution, select **Export** . On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
 
-7. Click on **Export** and a **Zip File** will download from your browser. Now open the downloaded Zip File and be sure to unpack it. Locate and open Customizations.XML in notepad. 
+7. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
 
-8. In the XML File you just opened, look for a section similar to the xml code in this example:  https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
+8. Open the customization.xml file,, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
 
-    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID** and **TileURL** according to your PowerBI Workspace and Report. You can find this information by opening the Facility Manager report in PowerBI and examine the URL: 
- https://...powerbi.com/groups/<PowerBIGroupID>/reports/<PowerBIReportID>/ReportSection/ 
+    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID** and **TileURL** according to your PowerBI workspace and report. You can find this information by opening the Facility Manager report in PowerBI and examine the URL: https://...powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
 
-    The TileURL can be found within the PowerBI Report. You can find it at the following destination: Tool Bar> "..." (ellipsis)>Embed > Website or portal. 
+    The `TileURL` can be found within the PowerBI report. You can find it at the following destination **... (ellipsis)** > **Embed** > **Website or portal**. 
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-report2.png "Step1")
 
-   From the displayed “Secure embed code” window, capture the content of the link in the first field up to the end of the <PowerBIReportID> (as shown in the example code) 
+   From the displayed `Secure embed code` window, capture the content of the link in the first field up to the end of the `PowerBIReportID` (as shown in the example code). 
 
-    Take a look at the next link https://docs.microsoft.com/en-us/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if those changes you just did to the XML file apply as in the example. 
+    Take a look at the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
 
 9. **Save** the xml file with the modifications you made and zip the files in the folder again. Now you have a zip file with the 3 files in it, including the updated the customizations.xml file.  
 
-10. Go back to Solutions in https://make.powerapps.com/ and click on **import** in the Tool Bar. Choose the modified Zip File and select **next**. Now select the **Import** button to complete the process of embedding the report.  
+10. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
+On the command bar, select **Import**.  On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import.
 
-Open a Facility in the Facility Safety Management App and you’ll see the embedded report on the General Tab. 
+11. Select **Next**. On the page that displays information about the solution, select **Import**.
+
+You might need to wait a few moments while the import is completed. View the results, and then select **Close**.
+
+Open a facility record in the Facility Safety Management app and you’ll see the embedded report on the **General** tab.
  
-
-
-
 ## Step 6: Publish a theme
 
 You can change the look and feel of the app by applying themes to match your company branding.
