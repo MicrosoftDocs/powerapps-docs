@@ -99,13 +99,13 @@ The Return to the Workplace solution has two Power BI dashboards, one for execut
     > [!div class="mx-imgBorder"]
     > ![Connect](media/deploy-connect-data-source.png "Connect")
 
-3. Enter the URL of the Common Data Service environment (for example, https://[myenv].[region].dynamics.com), and then select **Next**.
+3. Enter the URL of the Common Data Service environment (for example, https://[myenv].crm.dynamics.com), and then select **Next**.
     > [!div class="mx-imgBorder"]
     > ![Common Data Service environment name](media/deploy-connect-CDS.png "Common Data Service environment name")
 
 4. Determine where the displayed URL is pointing to in the Common Data Service environment:
 
-    - If it's pointing to Common Data Service, set the **Authentication method** to **OAuth2** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
+    - If it's pointing to Common Data Service, set the **Authentication method** to **Microsoft Account** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
     - If it's not pointing to Common Data Service, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png "Privacy")
