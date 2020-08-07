@@ -1,28 +1,36 @@
-- name: (C#)  Data operations Samples
+- name: (HTTP) samples
   items:
-    - name: Get started with C# samples
-      href: ../web-api-samples-csharp.md
+    - name: About the samples
+      href: ../web-api-samples.md
     - name: Basic Operations
-      href: basic-operations-csharp.md
+      href: ../web-api-basic-operations-sample.md
     - name: Query Data
-      href: query-data-csharp.md
+      href: ../web-api-query-data-sample.md
     - name: Conditional Operations
-      href: conditional-operations-csharp.md
+      href: ../web-api-conditional-operations-sample.md
     - name: Functions and Actions
-      href: functions-actions-csharp.md
-- name: (C#)  CDSWebApiService Samples
+      href: ../web-api-functions-actions-sample.md
+- name: (C#) samples
   items:
     - name: CDSWebApiService class
       href: cdswebapiservice.md
-    - name: CDSWebApiService Basic Operations
+    - name: Basic Operations
       href: cdswebapiservice-basic-operations.md
-    - name: CDSWebApiService Parallel Operations
+    - name: Query Data
+      href: cdswebapiservice-query-data.md
+    - name: Conditional Operations
+      href: cdswebapiservice-conditional-operations.md
+    - name: Functions and Actions
+      href: functions-actions-csharp.md
+    - name: Parallel Operations
       href: cdswebapiservice-parallel-operations.md
-    - name: CDSWebApiService Async Parallel Operations
+    - name: Async Parallel Operations
       href: cdswebapiservice-async-parallel-operations.md
-- name: Client-side JavaScript  Data operations Samples
+    - name: Global Discovery Service
+      href: global-discovery-service-csharp.md
+- name: (JavaScript) samples
   items:
-  - name: Get started with Client-side JavaScript samples
+  - name: About the client-side samples
     href: ../web-api-samples-client-side-javascript.md
   - name: Basic Operations
     href: basic-operations-client-side-javascript.md
@@ -32,5 +40,3 @@
     href: conditional-operations-client-side-javascript.md
   - name: Functions and Actions
     href: functions-actions-client-side-javascript.md
-- name: Global Discovery Service Sample (C#)
-  href: global-discovery-service-csharp.md

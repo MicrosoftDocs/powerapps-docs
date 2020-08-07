@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/12/2017
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -163,3 +163,6 @@ That brings us to the conclusion of our end-to-end walkthrough and this series o
 
 Let us know in the comments if you have any feedback on this series, suggestions for additions, or ideas for additional content that will help you work with the technologies that we covered.
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
