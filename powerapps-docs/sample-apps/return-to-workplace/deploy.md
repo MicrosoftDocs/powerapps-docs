@@ -195,9 +195,9 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 
    From the displayed `Secure embed code` window, capture the content of the link in the first field up to the end of the `PowerBIReportID` (as shown in the example code). 
 
-    Take a look at the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
+    See the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
 
-9. **Save** the xml file with the modifications you made and zip the files in the folder again. Now you have a zip file with the 3 files in it, including the updated the customizations.xml file.  
+9. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with 3 files in it, including the updated customizations.xml file.  
 
 10. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
 On the command bar, select **Import**.  On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import.
