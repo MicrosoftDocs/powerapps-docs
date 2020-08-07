@@ -24,7 +24,7 @@ The Portal Management app is opened in the Unified Interface. You can configure 
 > [!div class=mx-imgBorder]
 > ![Portal Management app in the Unified Interface](../media/portal-mgmt-unified-interface.png "Portal Management app in the Unified Interface")
 
-### Script Error when working with the Portal Management app
+### Browser considerations
 
 If your web browser has any extensions such as ad-blockers, you may see a script error when using the Portal Management app: `One of the scripts for this record has caused an error. For more details, download the log file.` In addition, the downloaded log file may reference this error: `ReferenceError: Web resource method does not exist.` 
 
