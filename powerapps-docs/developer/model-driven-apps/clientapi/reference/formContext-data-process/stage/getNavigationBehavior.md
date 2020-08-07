@@ -39,7 +39,7 @@ stageObj.getNavigationBehavior().allowCreateNew = function () {
 
 For example, here is the **Create** button in the **Develop** stage of the **AccountToContactProcess** sample business process flow that lets you create a Contact record from the Account form.
 
-![](../../../../media/clientapi_getNavigationBehavior.png)
+![Create button in the Develop stage](../../../../media/clientapi_getNavigationBehavior.png)
 
 The `allowCreateNew` property will return **undefined** for business process flow records that do not implement cross-entity navigation.
 
@@ -50,7 +50,7 @@ The following sample code shows how you can hide or display the **Create** butto
 ```JavaScript
 function sampleFunction(executionContext) {
     var formContext = executionContext.getFormContext();
-    formContext.data.process.getActiveStage.getNavigationBehavior().allowCreateNew = function () {
+    formContext.data.process.getActiveStage().getNavigationBehavior().allowCreateNew = function () {
         if (formContext.data.process.getName() === 'Test Process') {
             return false; // Create button is not available
         }

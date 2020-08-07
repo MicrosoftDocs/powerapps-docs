@@ -1,14 +1,14 @@
 ---
 title: Customize a SharePoint list form | Microsoft Docs
 description: Use Power Apps to customize the form with which users create and update entries in a SharePoint list.
-author: tapanm-msft
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 10/24/2019
-ms.author: tapanm
+ms.reviewer: tapanm
+ms.date: 07/16/2020
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
@@ -24,6 +24,7 @@ To follow the steps in this topic, you'll create a simple list so that you can s
 > - If the **Customize forms** option isn't available or doesn't work correctly for your list, it might contain data types that [Power Apps doesn't support](connections/connection-sharepoint-online.md#known-issues). Also, you can't move your form to a different list or [environment](working-with-environments.md). 
 > - Custom forms for lists are only supported in generic lists and generic document libraries. Custom list and library templates are currently not supported; including but not limited to lists such as Announcements, Contacts and Tasks.
 > - Custom forms for document libraries only supports editing custom metadata. Editing or managing file(s) is not supported.
+> - Additional actions are needed when changing the address of a SharePoint site that uses custom forms. More information: [Effects of changing a SharePoint site address on Power Apps](https://docs.microsoft.com/sharepoint/change-site-address#effects-of-changing-a-site-address).
 
 ## Create a list
 
@@ -193,17 +194,17 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
-**A:** You need an [Office 365 plan that includes Power Apps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
+**A:** Guest users can **use** custom forms. To **create** custom forms, you need an [Office 365 plan that includes Power Apps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
 
 **Q:** What happens when guest users access a list that has a custom form?
 
-**A:** Guest users get an error message if they try to access a list form that's been customized using Power Apps.
+**A:** As long as the guest users have permission to access the list, they’ll be able to access the custom form.
 
 **Q:** As an administrator, how do I get a list of all customized forms in my organization?
 
 **A:** If you're a tenant administrator for Power Apps or you have environment-administrator permissions on the default Power Apps environment of your organization, do the following:
 
-1. In the [Power Apps admin center](https://admin.powerapps.com), select the default environment for your organization from the list of environments.
+1. In the [Power Apps admin center](https://admin.powerplatform.microsoft.com), select the default environment for your organization from the list of environments.
 
 1. At the top of the default environment page, select **Resources**.
 

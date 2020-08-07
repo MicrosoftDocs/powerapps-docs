@@ -2,7 +2,7 @@
 title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service | Microsoft Docs"
 description: ""
 keywords: ""
-ms.date: 05/25/2020
+ms.date: 07/08/2020
 ms.service: powerapps
 ms.topic: article
 author: JimDaly # GitHub ID
@@ -499,6 +499,7 @@ In Visual Studio, press F5 to launch the app with the code changes.
 
 ### See also
 
+[Quickstart: Blazor Server Web API sample (C#)](./webapi/quick-start-blazor-server-app.md)  
 [Secure an ASP.NET Core Blazor WebAssembly standalone app with Azure Active Directory](/aspnet/core/security/blazor/webassembly/standalone-with-azure-active-directory)<br />
 [Walkthrough: Register an app with Azure Active Directory](walkthrough-register-app-azure-active-directory.md)<br />
 [Use OAuth with Common Data Service](authenticate-oauth.md)<br />

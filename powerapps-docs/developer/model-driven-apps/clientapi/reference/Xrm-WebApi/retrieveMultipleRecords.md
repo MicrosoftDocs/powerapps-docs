@@ -63,7 +63,7 @@ search.app:
 <td>successCallback</td>
 <td>Function</td>
 <td>No</td>
-<td><p>A function to call when entity records are retrived. An object with the following attributes is passed to the function:</p>
+<td><p>A function to call when entity records are retrieved. An object with the following attributes is passed to the function:</p>
 <ul>
 <li><b>entities</b>: An array of JSON objects, where each object represents the retrieved entity record containing attributes and their values as <code>key: value</code> pairs. The Id of the entity record is retrieved by default.</li>
 <li><b>nextLink</b>: String. If the number of records being retrieved is more than the value specified in the <code>maxPageSize</code> parameter in the request, this attribute returns the URL to return next set of records.</li>
@@ -131,7 +131,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name,_primarycontactid_v
 );
 ```
 
-#### For mobile offine scenario
+#### For mobile offline scenario
 
 This example queries the accounts entity set and uses the `$select` and `$filter` system query options to return the name and primarycontactid property for accounts that have a particular primary contact when working in the offline mode:
 
@@ -169,7 +169,7 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name", 3).then(
 );
 ```
 
-This example will display 3 records and a link to the next page. Here is an example outout from the **Console** in the browser developer tools:
+This example will display 3 records and a link to the next page. Here is an example output from the **Console** in the browser developer tools:
 
 ```
 {@odata.etag: "W/"1035541"", name: "A. Datum", accountid: "475b158c-541c-e511-80d3-3863bb347ba8"}
@@ -218,6 +218,7 @@ Next page link: [Organization URI]/api/data/v9.0/accounts?$select=name&$skiptoke
 >  The value of the `nextLink` property is URI encoded. If you URI encode the value before you send it, the XML cookie information in the URL will cause an error.
 
 ### Retrieve related entities by expanding navigation properties
+#### For online scenario (connected to server)
 
 Use the **$expand** system query option in the navigation properties to control the data that is returned from related entities. The following example demonstrates how to retrieve the contact for all the account records. For the related contact records, we are only retrieving the `contactid` and `fullname`:
 
@@ -235,7 +236,77 @@ Xrm.WebApi.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=prim
     }
 );
 ```
+The above piece of code returns a result with a schema like:
+```JSON
+{
+	"entities": [
+		{
+			"@odata.etag": "W/\"1459919\"",
+			"name": "Test Account",
+			"accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
+			"primarycontactid": {
+				"contactid": "6c63a1b7-19c6-ea11-a81a-000d3af5e732",
+				"fullname": "Test Contact"
+			}
+		}
+	]
+}
+```
 
+#### For mobile offline scenario
+**$expand** for the mobile offline scenario is different from the online scenario and is a multi-part process. An offline **\$expand** operation returns a `@odata.nextLink` annotation containing information on how to get to the related record's information. We use the `id`, `entityType`, and `options` parameter of that annotation to construct one or more additional `Xrm.WebApi.offline.retrieveRecord` request(s). The following piece of code provides a complete example of how to do this:
+
+```JavaScript
+Xrm.WebApi.offline.retrieveMultipleRecords("account", "?$select=name&$top=3&$expand=primarycontactid($select=contactid,fullname)").then(function(resultSet) {
+    /**
+     *  resultSet has a structure like:
+     *  {
+     *      "entities": [
+     *          {
+     *              "accountid": "119edfac-19c6-ea11-a81a-000d3af5e732",
+     *              "name": "Test Account",
+     *              "primarycontactid@odata.nextLink": {
+     *                  "API": "{Xrm.Mobile.offline}.{retrieveRecord}",
+     *                  "id": "119edfac-19c6-ea11-a81a-000d3af5e732",
+     *                  "entityType": "account",
+     *                  "options": "?$select=accountid&$expand=primarycontactid($select=contactid,fullname)&$getOnlyRelatedEntity=true"
+     *              },
+     *              "primarycontactid": {}
+     *          }
+     *      ]
+     *  }
+     *
+     *  Notice the empty `primarycontactid` property but an additional `primarycontactid@odata.nextLink` 
+     *  annotation that lets us know how to get to the linked data that we need.
+     **/
+
+    var promises = resultSet.entities.map(function(outerItem) {
+        // We do a retrieveRecord() for every item in the result set of retrieveMultipleRecords() and then
+        // combine the results into the retrieveMultipleRecords() result set itself.
+       return Xrm.WebApi.offline.retrieveRecord(
+           outerItem["primarycontactid@odata.nextLink"].entityType, 
+           outerItem["primarycontactid@odata.nextLink"].id,
+           outerItem["primarycontactid@odata.nextLink"].options
+        ).then(function(innerResult) {            
+            if (innerResult.value.length === 0) {
+                return outerItem;
+            }
+            outerItem.primarycontactid = innerResult.value[0];
+            return outerItem;
+        });
+    });
+
+    return Promise.all(promises);
+}).then(function(allResults) {
+    for (var i = 0; i < allResults.length; i++) {
+        console.log(allResults[i]);
+    }
+    // perform additional operations on retrieved records
+}, function(error) {
+    console.error(error);
+    // handle error conditions
+});
+```
 
 For more examples of retrieving multiple records using Web API, see [Query Data using the Web API](../../../../common-data-service/webapi/query-data-web-api.md).
 

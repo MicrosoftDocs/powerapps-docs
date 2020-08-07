@@ -74,11 +74,9 @@ Publishing customizations makes the Web application aware of changes to the data
   
 ### See also  
 
- [Customize model-driven apps](/dynamics365/customer-engagement/developer/customize-dev/customize-applications)<br/>
- [Extend the Metadata Model](/dynamics365/customer-engagement/developer/org-service/use-organization-service-metadata)<br/>
+ [Extend the Metadata Model](https://docs.microsoft.com/powerapps/developer/common-data-service/metadata-services)<br/>
  [Publish request schema](publish-request-schema.md)<br/>
  [Customize entity forms](customize-entity-forms.md)<br/>
  [Customize entity views](customize-entity-views.md)<br/>
- [Customize global option sets](/dynamics365/customer-engagement/developer/org-service/customize-global-option-sets)<br/>
- [Change application navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)
+ [Change application navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)
 

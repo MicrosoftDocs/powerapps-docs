@@ -1,14 +1,13 @@
 ---
 title: "Manage SharePoint documents on a portal | MicrosoftDocs"
 description: "Instructions to manage SharePoint document on a portal."
-author: tapanm-msft
-manager: kvivek
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: gisingh
+ms.reviewer: tapanm
 ---
 
 # Manage SharePoint documents
@@ -227,3 +226,6 @@ The below example demonstrates configuration using the Case entity which needs t
       > [!div class=mx-imgBorder]
       > ![Case document](media/case-document.png "Case document")
 
+### See also
+
+[Microsoft Learn: Document management with SharePoint](https://docs.microsoft.com/learn/modules/portals-integration/2-sharepoint)

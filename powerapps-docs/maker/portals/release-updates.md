@@ -1,14 +1,13 @@
 ---
 title: "Release updates in Power Apps portals | MicrosoftDocs"
 description: "Learn about release updates of Power Apps portals."
-author: tapanm-msft
-manager: kvivek
+author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/22/2019
-ms.author: tapanm
-ms.reviewer:
+ms.date: 08/06/2020
+ms.author: dileeps
+ms.reviewer: tapanm
 ---
 
 # Release updates
@@ -119,7 +118,7 @@ Dynamics 365 Portals version 8.3 for the model-driven apps in Dynamics 365 has m
 - **Support time zone&ndash;independent date formats in portals forms**: This feature adds support for **Date Only** and **Timezone Independent** behaviors for date/time fields. More information: [Behavior and format of the date and time field](configure/behavior-format-date-time-field.md)
 
 - **Allowing non-global administrators to provision a portal**: You can now provision a portal if you are assigned to the System Administrator role of the CRM organization selected for the portal. You can now also manage an existing portal, if you have any of the following roles:
-  - Dynamics 365 Service Administrator
+  - Dynamics 365 admin
   - System Administrator of the CRM organization selected for the portal
 
 - **Store the custom domain name for a portal**: This feature stores the primary domain name of a portal on the website record. If the domain name is changed in the future, the latest primary domain name will be stored.

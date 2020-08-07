@@ -1,16 +1,14 @@
 ---
 title: Use the Regional Government Emergency Response and Monitoring portal | Microsoft Docs
 description: Learn how to use the Regional Government Emergency Response and Monitoring portal as a healthcare worker.
-author: tapanm-msft
+author: pankajarora-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 06/09/2020
-ms.author: tapanm
+ms.author: pankar
 ms.reviewer: tapanm
-searchScope:
-  - PowerApps
 ---
 # Use the Regional Government Emergency Response and Monitoring portal
 

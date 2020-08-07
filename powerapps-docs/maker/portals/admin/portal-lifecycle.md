@@ -1,13 +1,12 @@
 ---
 title: "About the Power Apps portals lifecycle | MicrosoftDocs"
 description: "Information about the Power Apps portals lifecycle and converting it from trial to production."
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/29/2020
-ms.author: tapanm
+ms.date: 08/05/2020
+ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
@@ -20,6 +19,8 @@ As an administrator, you can convert a trial or suspended portal to a production
 The first portal is free to be created in an environment in a tenant. If you need to create more than one portal, you must have 1 GB of unused storage space in the tenant.
 
 ## Stages in the portal lifecycle
+
+![Portal lifecycle stages](./media/portal-lifecycle/portal-lifecycle.png "Portal lifecycle stages")
 
 ### Trial portal
 
@@ -67,12 +68,9 @@ To convert your portal from trial to production:
 
 ## Convert an existing portal to a capacity-based model
 
-> [!IMPORTANT]
-> This feature is being deployed. During the deployment period, this feature may not be available.
-
 You can convert your existing portal license to [capacity-based licensing model](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). To change your portal license to capacity-based model:
 
-1. Go to [Portal Details](portal-details.md).
+1. Go to [Portal details](portal-details.md).
 1. Select **Change License**.
 
     ![Convert an existing portal to a capacity-based model](media/portal-lifecycle/convert-to-capacity-based-licensing.gif "Convert an existing portal to a capacity-based model")
@@ -105,4 +103,5 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 
 ### See also
 
-[Power Apps portals FAQ](../faq.md)
+- [Microsoft Learn: Portal application lifecycle management](https://docs.microsoft.com/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
+- [Power Apps portals FAQ](../faq.md)
