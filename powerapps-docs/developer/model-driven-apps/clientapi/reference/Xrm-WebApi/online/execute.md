@@ -206,10 +206,12 @@ Sdk.CalculateRollupFieldRequest = function (target, fieldName) {
     this.FieldName = fieldName;
 };
 	 
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+//       function object itself.
 Sdk.CalculateRollupFieldRequest.prototype.getMetadata = function () {
-    return {
-                    boundParameter: null,
-                    parameterTypes: {
+	return {
+		boundParameter: null,
+            parameterTypes: {
                         "Target": {
                             "typeName": "mscrm.crmbaseentity",
                             "structuralProperty": 5
@@ -219,38 +221,37 @@ Sdk.CalculateRollupFieldRequest.prototype.getMetadata = function () {
                             "structuralProperty": 1
                         }
                     },
-                    operationType: 1,
+                    operationType: 1, // This is a function. Use '0' for actions and '2' for CRUD
                     operationName: "CalculateRollupField"
                 };
 };
- 
-function myTestFunction() {
-	 
-    //create variables to point to a quote record and to a specific field
-    var quoteId = {
-        "@odata.type": "Microsoft.Dynamics.CRM.quote",
-        "quoteid": "7bb01e55-2394-ea11-a811-000d3ad97943"
-    };
-    var fieldName = "new_test_rollup";
-	   
-    //create variable calculateRollupFieldRequest and pass those variables created above
-    var calculateRollupFieldRequest = new Sdk.CalculateRollupFieldRequest(quoteId, fieldName);
-	   
-    // Use the request object to execute the function
-    Xrm.WebApi.online.execute(calculateRollupFieldRequest).then(
-        function (result) {
-        if (result.ok) {
-            result.json().then(
-                function (response) {
-                console.log("The response is: %s", response);
-            });
-        }
-    },
-        function (error) {
-        console.log(error.message);
-        // handle error conditions
-    });
-}
+
+// Create variables to point to a quote record and to a specific field
+var quoteId = {
+	"@odata.type": "Microsoft.Dynamics.CRM.quote",
+	"quoteid": "7bb01e55-2394-ea11-a811-000d3ad97943"
+};
+
+// The roll-up field for which we want to force a re-calculation
+var fieldName = "new_test_rollup";
+
+// Create variable calculateRollupFieldRequest and pass those variables created above
+var calculateRollupFieldRequest = new Sdk.CalculateRollupFieldRequest(quoteId, fieldName);
+
+// Use the request object to execute the function
+Xrm.WebApi.online.execute(calculateRollupFieldRequest).then(
+	function (result) {
+		if (result.ok) { // If the result was retrieved
+			result.json().then( // Convert the result to Json
+				function (response) { //Do something with the response
+					console.log("The response is: %s", response); 
+		});
+	}
+},
+	function (error) {
+		console.log(error.message);
+		// handle error conditions
+});
 ```
 
 The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicatesRequest> function:
@@ -267,7 +268,7 @@ Sdk.RetrieveDuplicatesRequest = function (businessEntity, matchingEntityName, pa
  
 Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function () {
     return {
-        boundParameter: null,
+		boundParameter: null,
         parameterTypes: {
             "BusinessEntity": {
                 "typeName": "mscrm.crmbaseentity",
@@ -278,7 +279,7 @@ Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function () {
                 "structuralProperty": 1 // Primitive Type
             },
             "PagingInfo": {
-                "typeName:": "mscrm.PagingInfo",
+                "typeName:": "mscrm.PagingInfo", // Complex Type
                 "structuralProperty": 5
             }
         },
@@ -287,38 +288,36 @@ Sdk.RetrieveDuplicatesRequest.prototype.getMetadata = function () {
     };
 };
  
-function myTestFunction() {
+// Create a variable to point to a contact record and with specific data in the needed fields
+var contactRecord = {
+	"@odata.type": "Microsoft.Dynamics.CRM.contact",
+	"firstname": "Test",
+	"lastname": "Account"
+};
+
+// Create a paging object to keep track of the current page and how many records we get per page
+var pagingInfo = {
+	"PageNumber": 1,
+	"Count": 10
+};
+
+// Create the variable retrieveDuplicatesRequest to build the request
+var retrieveDuplicatesRequest = new Sdk.RetrieveDuplicatesRequest(contactRecord, "contact", pagingInfo);
  
-    var contactRecord = {
-        "@odata.type": "Microsoft.Dynamics.CRM.contact",
-        "firstname": "Test",
-        "lastname": "Acc"
-    };
- 
-    var pagingInfo = {
-        "PageNumber": 1,
-        "Count": 10
-    };
- 
-    // Construct a request object from the metadata
-    var retrieveDuplicatesRequest = new Sdk.RetrieveDuplicatesRequest(contactRecord, "contact", pagingInfo);
- 
-    // Use the request object to execute the function
-    Xrm.WebApi.online.execute(retrieveDuplicatesRequest).then(
-        function (result) {
-        if (result.ok) {
-            result.json().then(
-                function (response) {
-                console.log("The response is: %s", response);
-            });
-        }
-    },
-        function (error) {
-        console.log(error.message);
-        // handle error conditions
-    });
- 
-}
+// Use the request object to execute the function
+Xrm.WebApi.online.execute(retrieveDuplicatesRequest).then(
+	function (result) {
+	if (result.ok) {
+		result.json().then(
+			function (response) {
+			console.log("The response is: %s", response);
+		});
+	}
+},
+	function (error) {
+	console.log(error.message);
+	// handle error conditions
+});
 
 ```
 
