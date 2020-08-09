@@ -152,7 +152,7 @@ Details about errors are included as JSON in the response. Errors will be in thi
 ```
 
 > [!IMPORTANT]
-> The structure of the error messages is changing. This change is expected to be deployed to different regions over a period starting in late April through May 2020.
+> The structure of the error messages is changing. This change is expected to be deployed to different regions over a period starting in August through October 2020.
 > 
 > Before this change, the errors returned were in this format:
 > 
@@ -180,7 +180,7 @@ Details about errors are included as JSON in the response. Errors will be in thi
 
 Some errors can include additional details using *annotations*. When a request includes the `Prefer: odata.include-annotations="*"` header, the response will include all the annotations which will include additional details about errors and a URL that can be used to be directed to any specific guidance for the error.
 
-Some of these details can be set by developers writing plug-ins. For example, Let’s say you have a plug-in that throws an error using the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor. This allows you to pass an OperationStatus value, a custom integer error code, and an error message.
+Some of these details can be set by developers writing plug-ins. For example, let’s say you have a plug-in that throws an error using the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor. This allows you to pass an OperationStatus value, a custom integer error code, and an error message.
 
 A simple plug-in might look like this:
 
