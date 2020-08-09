@@ -2,7 +2,7 @@
 title: "Compose HTTP requests and handle errors (Common Data Service)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 04/03/2020
+ms.date: 08/09/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -175,6 +175,14 @@ Details about errors are included as JSON in the response. Errors will be in thi
 > The OData [Error Response guidance](https://docs.oasis-open.org/odata/odata-json-format/v4.0/os/odata-json-format-v4.0-os.html#_Toc372793091) states "*The innererror name/value pair SHOULD only be used in development environments in order to guard against potential security concerns around information disclosure.*". To align with this guidance we are removing this property.
 > 
 > If you find that an application you use has a dependency on this property after this change is deployed, you can contact support and request that the change be temporarily removed for your environment. This will provide time for the application developer to make appropriate changes to remove this dependency.
+
+### Include additional details with errors
+
+Some errors can include additional details using *annotations*. When a request includes the `Prefer: odata.include-annotations="*"` header, the response will include all the annotations which will include additional details about errors and a URL that can be used to be directed to any specific guidance for the error.
+
+Some of these details can be set by developers writing plug-ins. For example, Let’s say you have a plug-in that throws an error using the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.#ctor(Microsoft.Xrm.Sdk.OperationStatus,System.Int32,System.String)> constructor. This allows you to pass an OperationStatus, a custom integer error code, and an error message.
+
+
 
   
 ### See also  
