@@ -213,7 +213,7 @@ namespace MyNamespace
 }
 ```
 
-When this plug-in is registered on the create of an account entity, and the request to create an account includes the `odata.include-annotations="*"` preference, the Request and response will look like the following:
+When this plug-in is registered on the create of an account entity, and the request to create an account includes the `odata.include-annotations="*"` preference, the request and response will look like the following:
 
 **Request**
 
@@ -247,13 +247,13 @@ Content-Type: application/json; odata.metadata=minimal
 This response includes the following annotations:
 
 
-|Annotation  |Value  |Description  |
-|---------|---------|---------|
-|`@Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`|`1`|The value of the <xref:Microsoft.Xrm.Sdk.OperationStatus> set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|
-|`@Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`|`12345`|The value of the `SubErrorCode` set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|
-|`@Microsoft.PowerApps.CDS.HelpLink`|`http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform`|A URL that contains information about the error which *may* re-direct you to guidance about how to address the error.|
-|`@Microsoft.PowerApps.CDS.TraceText`|`[MyNamespace: MyNamespace.MyClass ]`<br/>`[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass :Create of account]`<br/><br/>`Entering MyClass plug-in.`<br/>`StackTrace:`<br/>`  at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)`|         |
-|`@Microsoft.PowerApps.CDS.InnerError.Message`|`Example Error Message.`|Content written to the Plug-in trace log using the [ITracingService.Trace(String, Object[]) Method](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace). This includes the stacktrace for the plugin because the plug-in author logged it.|
+|Annotation and Description  |Value  |
+|---------|---------|
+|`@Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br/>The value of the <xref:Microsoft.Xrm.Sdk.OperationStatus> set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|`1`|
+|`@Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br/>The value of the `SubErrorCode` set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|`12345`|
+|`@Microsoft.PowerApps.CDS.HelpLink`<br/>A URL that contains information about the error which *may* re-direct you to guidance about how to address the error.|`http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform`|
+|`@Microsoft.PowerApps.CDS.TraceText`<br/>Content written to the Plug-in trace log using the [ITracingService.Trace(String, Object[]) Method](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace). This includes the stacktrace for the plugin because the plug-in author logged it.|`[MyNamespace: MyNamespace.MyClass ]`<br/>`[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass :Create of account]`<br/><br/>`Entering MyClass plug-in.`<br/>`StackTrace:`<br/>`  at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)`|
+|`@Microsoft.PowerApps.CDS.InnerError.Message`<br/>The error message found in the InnerError for the exception. This should be the same as the error exception except in certain special cases.|`Example Error Message.`|
 
 
 
