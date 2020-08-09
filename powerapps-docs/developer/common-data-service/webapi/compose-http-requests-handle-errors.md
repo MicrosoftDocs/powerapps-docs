@@ -258,6 +258,9 @@ This response includes the following annotations:
 > [!NOTE]
 > The `@Microsoft.PowerApps.CDS.HelpLink` is not guaranteed to provide guidance for every error. Guidance *may* be provided proactively but most commonly it will be provided reactively based on how frequently the link is used. Please use the link. If it doesn't provide guidance, your use of the link helps us track that people need more guidance about the error. We can then prioritize including guidance to the errors that people need most. The resources that the link may direct you to may be documentation, links to community resources, or external sites.
 
+If you do not want to receive all annotations in the response, you can specify which specific annotations you want to have returned. Rather than using `Prefer: odata.include-annotations="*"`, you can use the following to receive only formatted values for operations that retrieve data and the helplink if an error occurs:
+`Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.HelpLink"`.
+
 ### See also  
 
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
