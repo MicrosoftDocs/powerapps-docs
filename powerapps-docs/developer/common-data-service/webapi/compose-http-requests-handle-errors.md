@@ -244,8 +244,8 @@ Content-Type: application/json; odata.metadata=minimal
     }
 }
 ```
-This response includes the following annotations:
 
+This response includes the following annotations:
 
 |Annotation and Description  |Value  |
 |---------|---------|
@@ -253,12 +253,11 @@ This response includes the following annotations:
 |`@Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br/>The value of the `SubErrorCode` set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|`12345`|
 |`@Microsoft.PowerApps.CDS.HelpLink`<br/>A URL that contains information about the error which *may* re-direct you to guidance about how to address the error.|`http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform`|
 |`@Microsoft.PowerApps.CDS.TraceText`<br/>Content written to the Plug-in trace log using the [ITracingService.Trace(String, Object[]) Method](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace). This includes the stacktrace for the plugin because the plug-in author logged it.|`[MyNamespace: MyNamespace.MyClass ]`<br/>`[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass :Create of account]`<br/><br/>`Entering MyClass plug-in.`<br/>`StackTrace:`<br/>`  at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)`|
-|`@Microsoft.PowerApps.CDS.InnerError.Message`<br/>The error message found in the InnerError for the exception. This should be the same as the error exception except in certain special cases.|`Example Error Message.`|
+|`@Microsoft.PowerApps.CDS.InnerError.Message`<br/>The error message found in the InnerError for the exception. This should be the same as the error message except in certain special cases that are for internal use only.|`Example Error Message.`|
 
+> [!NOTE]
+> The `@Microsoft.PowerApps.CDS.HelpLink` is not guaranteed to provide guidance for every error. Guidance *may* be provided proactively but most commonly it will be provided reactively based on how frequently the link is used. Please use the link. If it doesn't provide guidance, your use of the link helps us track that people need more guidance about the error. We can then prioritize including guidance to the errors that people need most. The resources that the link may direct you to may be documentation, links to community resources, or external sites.
 
-
-
-  
 ### See also  
 
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
