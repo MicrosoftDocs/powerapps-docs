@@ -180,7 +180,81 @@ Details about errors are included as JSON in the response. Errors will be in thi
 
 Some errors can include additional details using *annotations*. When a request includes the `Prefer: odata.include-annotations="*"` header, the response will include all the annotations which will include additional details about errors and a URL that can be used to be directed to any specific guidance for the error.
 
-Some of these details can be set by developers writing plug-ins. For example, Let’s say you have a plug-in that throws an error using the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException.#ctor(Microsoft.Xrm.Sdk.OperationStatus,System.Int32,System.String)> constructor. This allows you to pass an OperationStatus, a custom integer error code, and an error message.
+Some of these details can be set by developers writing plug-ins. For example, Let’s say you have a plug-in that throws an error using the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor. This allows you to pass an OperationStatus value, a custom integer error code, and an error message.
+
+A simple plug-in might look like this:
+
+```csharp
+namespace MyNamespace
+{
+    public class MyClass : IPlugin
+    {
+        public void Execute(IServiceProvider serviceProvider)
+        {
+
+            // Obtain the tracing service
+            ITracingService tracingService =
+            (ITracingService)serviceProvider.GetService(typeof(ITracingService));
+
+            tracingService.Trace("Entering MyClass plug-in.");
+
+             try
+            {
+                throw new InvalidPluginExecutionException(OperationStatus.Canceled, 12345, "Example Error Message.");
+            }
+            catch (InvalidPluginExecutionException ex)
+            {
+                tracingService.Trace("StackTrace:");
+                tracingService.Trace(ex.StackTrace);
+                throw ex;
+            }
+        }
+    }
+}
+```
+
+When this plug-in is registered on the create of an account entity, and the request to create an account includes the `odata.include-annotations="*"` preference, the Request and response will look like the following:
+
+**Request**
+
+```http
+POST https://yourorg.api.crm.dynamics.com/api/data/v9.1/accounts HTTP/1.1
+Content-Type: application/json;
+Prefer: odata.include-annotations="*"
+{
+    "name":"Example Account"
+}
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Type: application/json; odata.metadata=minimal
+{
+    "error": {
+        "code": "0x80040265",
+        "message": "Example Error Message.",
+        "@Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus": "1",
+        "@Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode": "12345",
+        "@Microsoft.PowerApps.CDS.HelpLink": "http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform",
+        "@Microsoft.PowerApps.CDS.TraceText": "\r\n[MyNamespace: MyNamespace.MyClass ]\r\n[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass : Create of account] \r\n\r\n Entering MyClass plug-in.\r\nStackTrace:\r\n   at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)\r\n\r\n"
+        "@Microsoft.PowerApps.CDS.InnerError.Message": "Example Error Message."
+    }
+}
+```
+This response includes the following annotations:
+
+
+|Annotation  |Value  |Description  |
+|---------|---------|---------|
+|`@Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`|`1`|The value of the <xref:Microsoft.Xrm.Sdk.OperationStatus> set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|
+|`@Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`|`12345`|The value of the `SubErrorCode` set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|
+|`@Microsoft.PowerApps.CDS.HelpLink`|`http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform`|A URL that contains information about the error which *may* re-direct you to guidance about how to address the error.|
+|`@Microsoft.PowerApps.CDS.TraceText`|`[MyNamespace: MyNamespace.MyClass ]`<br/>`[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass :Create of account]`<br/><br/>`Entering MyClass plug-in.`<br/>`StackTrace:`<br/>`  at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)`|         |
+|`@Microsoft.PowerApps.CDS.InnerError.Message`|`Example Error Message.`|Content written to the Plug-in trace log using the [ITracingService.Trace(String, Object[]) Method](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace). This includes the stacktrace for the plugin because the plug-in author logged it.|
+
 
 
 
