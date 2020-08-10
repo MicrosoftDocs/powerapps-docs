@@ -88,7 +88,7 @@ changes, retrieve operations, export operations, or during authentication. For i
 
 Common Data Service supports analytics by providing the capability to choose entities for machine learning models to run. It has a prebuilt AI capability through AI Builder.
 
-### Search
+## Search
 
 Common Data Service provides three ways to query records:
 
@@ -103,7 +103,7 @@ Common Data Service provides three ways to query records:
 
 For more information, see [Compare searches](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization#compare-model-driven-apps-in-dynamics-365-searches).
 
-#### Relevance search
+### Relevance search
 
 Relevance search delivers fast and comprehensive results across multiple entities in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by Azure) to boost search performance.
 
@@ -121,7 +121,7 @@ Relevance search brings the following enhancements and benefits:
 
 For more information about relevance search, see [Using relevance search to search for records](/powerapps/user/relevance-search).
 
-#### Quick find
+### Quick find
 
 Common Data Service includes the ability to find records quickly and has approaches that will search just one type of entity, such as customer, or be used to search across multiple types of entities at the same time, such as contacts, users, customers, and so on.
 
@@ -132,7 +132,7 @@ Common Data Service includes the ability to find records quickly and has approac
 *Multiple-entity quick find (categorized search)* is also used to find
 records, but will find them across different types of entities, such as accounts or contacts.
 
-### Data Lake
+## Data Lake
 
 Common Data Service supports continuous replication of entity data to Azure Data Lake Storage, which can then be used to run analytics such as Power BI reporting, machine learning, data warehousing, and other downstream integration processes.
 
