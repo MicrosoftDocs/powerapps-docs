@@ -23,7 +23,7 @@ highlightedContent:
   items:
     # Card
     - title: What is Power Apps?
-      itemType: get-started
+      itemType: overview
       url: powerapps-overview.md
 
     # Card
@@ -89,7 +89,7 @@ conceptualContent:
         - text: Implement healthy ALM using solutions
           url: /power-platform/alm/overview-alm
           itemType: overview
-        - text: Use Power Platform Build Tools
+        - text: Use Microsoft Power Platform Build Tools
           url: /power-platform/alm/devops-build-tools
           itemType: how-to-guide     
 
@@ -148,7 +148,7 @@ conceptualContent:
           itemType: learn     
       footerLink:
         url: /powerapps/learning-catalog/get-started
-        text: See more
+        text: More
 
 # additionalContent section (optional)
 # Card with summary style
