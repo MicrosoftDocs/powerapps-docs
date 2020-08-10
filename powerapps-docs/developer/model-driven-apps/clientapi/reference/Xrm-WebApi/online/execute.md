@@ -38,7 +38,7 @@ search.app:
 <td>request</td>
 <td>Object</td>
 <td>Yes</td>
-<td><p>Object that will be passed to the Web API endpoint to execute an action, function, or CRUD request. The object exposes a <b>getMetadata</b> method that lets you define the metadata for the action, function or CRUD request you want to execute. The <b>getMetadata</b> method has the following parameters:</p>
+<td><p>Object that will be passed to the Web API endpoint to execute an action, function, or CRUD request. The object exposes a <b>getMetadata</b> method <u>via its prototype</u> that lets you define the metadata for the action, function or CRUD request you want to execute. The <b>getMetadata</b> method has the following parameters:</p>
 <ul>
 <li><b>boundParameter</b>: (Optional) String. The name of the bound parameter for the action or function to execute.
 <ul><li>Specify <code>undefined</code> if you are executing a CRUD request.</li>
@@ -112,6 +112,9 @@ Sdk.WinOpportunityRequest = function (opportunityClose, status) {
     this.OpportunityClose = opportunityClose;
     this.Status = status;
 };
+
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+//       function object itself.
 Sdk.WinOpportunityRequest.prototype.getMetadata = function () {
     return {
         boundParameter: null,
@@ -165,6 +168,9 @@ var Sdk = window.Sdk || {};
  * Request to execute WhoAmI function
  */
 Sdk.WhoAmIRequest = function () { };
+
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+//       function object itself.
 Sdk.WhoAmIRequest.prototype.getMetadata = function () {
     return {
         boundParameter: null,
@@ -212,6 +218,9 @@ Sdk.CreateRequest = function (entityName, payload) {
     this.etn = entityName;
     this.payload = payload;
 };
+
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+//       function object itself.
 Sdk.CreateRequest.prototype.getMetadata = function () {
     return {
         boundParameter: null,
@@ -255,6 +264,9 @@ Sdk.RetrieveRequest = function (entityReference, columns) {
     this.entityReference = entityReference;
     this.columns = columns;
 };
+
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+//       function object itself.
 Sdk.RetrieveRequest.prototype.getMetadata = function () {
     return {
         boundParameter: null,
@@ -307,6 +319,9 @@ Sdk.UpdateRequest = function (entityName, entityId, payload) {
     this.id = entityId;
     this.payload = payload;
 };
+
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+//       function object itself.
 Sdk.UpdateRequest.prototype.getMetadata = function () {
     return {
         boundParameter: null,
@@ -350,6 +365,9 @@ var Sdk = window.Sdk || {};
 Sdk.DeleteRequest = function (entityReference) {
     this.entityReference = entityReference;
 };
+
+// NOTE: The getMetadata property should be attached to the function prototype instead of the
+//       function object itself.
 Sdk.DeleteRequest.prototype.getMetadata = function () {
         return {
             boundParameter: null,
