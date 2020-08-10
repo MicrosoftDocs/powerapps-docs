@@ -25,10 +25,10 @@ Another scenario is one where each customer has their own environment and data. 
 ## Resources included in the package
 
 > [!IMPORTANT]
-> - Export and import functionality of a canvas app package is not meant for the application lifecycle management (ALM). For ALM capabilities in Microsoft Power Platform environments, use Common Data Service and solutions. More information: [ALM overview](https://docs.microsoft.com/power-platform/alm/overview-alm).
-> - [Common Data Service solution packages](../common-data-service/solutions-overview.md) are different from the canvas app export and import packages and these packages are not compatible with each other.
+> - For application lifecycle management (ALM) capabilities in Microsoft Power Platform environments, use Common Data Service and solutions instead of the canvas app package export and import. More information: [ALM overview](https://docs.microsoft.com/power-platform/alm/overview-alm).
+> - Canvas app packages can't be used with [Common Data Service solution packages](../common-data-service/solutions-overview.md) as both packages are incompatible with each other.
 
-An app can consume different resources. For example, most apps use connections. Other apps may use Power Automate, have custom connectors or connect using gateways to on-premises resources. Some apps may also use Common Data Service customizations.
+An app can consume different resources. For example, most apps use connections. Other apps may use Power Automate, have custom connectors, or connect using gateways to on-premises resources. Some apps may also use Common Data Service customizations.
 
 The following table explains different resource types, supportability, and import options.
 
@@ -44,9 +44,6 @@ The following table explains different resource types, supportability, and impor
 ## Permissions required to export a canvas app package
 
 Only **Owner** or **Co-owner** of an app can export a canvas app package. To import an app, **Environment Maker** permission is required on the destination environment.
-
-> [!NOTE]
-> While packaging is in preview, any user with a valid Power Apps license will be able to try out packaging for their apps and environments.
 
 ## Exporting a canvas app package
 
