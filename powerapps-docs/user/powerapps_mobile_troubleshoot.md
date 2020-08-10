@@ -1,5 +1,5 @@
 ---
-title: "Your device configuration is preventing sign-in to Power Apps mobile| MicrosoftDocs"
+title: "Your device configuration is preventing sign-in to Power Apps mobile app| MicrosoftDocs"
 ms.custom: ""
 author: mduelae
 manager: kvivek
@@ -17,7 +17,7 @@ search.app:
   - PowerApps
 ---
 
-# Your device configuration is preventing sign-in to Power Apps mobile 
+# Your device configuration is preventing sign-in to Power Apps mobile app
 
 If you receive this message it means that your IT administrator is using Microsoft Intune and requires you to sign-in securely using an authenticator app, but your device configuration is blocking the Power Apps mobile app from launching the authenticator app installed on your device. Microsoft authenticator apps are Authenticator and Company Portal. Your company may also use a third-party authenticator app. If you are unsure, ask your IT administrator which authenticator app you should be using and then follow the instructions below.
 
@@ -48,8 +48,8 @@ If the above does not resolve the issue, try this:
 1. Back up your Microsoft Authenticator accounts. For more info, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/en-us/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall the Power Apps mobile app.
-4. Install Microsoft Authenticator again, add your back up accounts again.
+4. Install Microsoft Authenticator again and add your back up accounts again.
 5. Install the Power Apps mobile app.
-6, Try to sign in to Power Apps again.
+6. Open the Power Apps mobile app and sign-in.
 
-If you still have sign in issue please email us at pamobsup@microsoft.com and include your device make and model, session ID and quote the error message above.
+If you still have sign-in issue please email us at pamobsup@microsoft.com and include your device make and model, session ID and quote the error message above.
