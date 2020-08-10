@@ -52,4 +52,4 @@ If the above does not resolve the issue, try this:
 5. Install the Power Apps mobile app.
 6, Try to sign in to Power Apps again.
 
-If you still have sign in issue please email us at amobsup@microsoft.com and include your device make and model, session ID and quote the error message above.
+If you still have sign in issue please email us at pamobsup@microsoft.com and include your device make and model, session ID and quote the error message above.
