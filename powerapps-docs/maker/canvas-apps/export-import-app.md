@@ -1,12 +1,12 @@
 ---
-title: Export and import canvas app (preview) | Microsoft Docs
-description: Learn how to export and import canvas app (preview)
-author: jimholtz
+title: Export and import canvas app | Microsoft Docs
+description: Learn how to export and import canvas app
+author: caburk
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
-ms.date: 06/16/2020
-ms.author: jimholtz
+ms.date: 08/10/2020
+ms.author: caburk
 ms.reviewer: tapanm
 search.audienceType: 
   - maker
@@ -14,20 +14,19 @@ search.app:
   - PowerApps
 ---
 
-# Export and import canvas app package (preview)
+# Export and import canvas app package
 
-[This article is pre-release documentation and is subject to change.]
-
-In this article, you'll learn how to export and import canvas apps. You can export and import apps within same environment, across environments within same tenants or across tenants.
-
-> [!IMPORTANT]
-> This feature is in preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
+In this article, you'll learn how to export and import canvas apps.
 
 One common scenario where you may want to migrate resources is where you have Test or Dev environments and a production environment. Developers and testers have wide access to the apps in their environments. But when it comes time to migrate a new app to production, that environment has rigorous control over permissions to update and change it.
 
 Another scenario is one where each customer has their own environment and data. When a new customer is added, a new environment is created for them, and you would migrate apps into their environment.
 
 ## Resources included in the package
+
+> [!IMPORTANT]
+> - Export and import functionality of a canvas app package is not meant for the application lifecycle management (ALM). For ALM capabilities in Microsoft Power Platform environments, use Common Data Service and solutions. More information: [ALM overview](../../../../power-platform/alm/overview-alm.md).
+> - [Common Data Service solution packages](../common-data-service/solutions-overview.md) are different from the canvas app export and import packages and these packages are not compatible with each other.
 
 An app can consume different resources. For example, most apps use connections. Other apps may use Power Automate, have custom connectors or connect using gateways to on-premises resources. Some apps may also use Common Data Service customizations.
 
@@ -121,7 +120,7 @@ If you're updating existing app or resource, be sure to [publish](save-publish-a
 
     ![Select import action](media/export-import-app/update-import-action-when-importing.png)
 
-    1. If you select **Create as new**, you have the option to change the resource name.
+    1. If you select **Create as new**, you can change the resource name.
 
         ![Select import action - resource name](media/export-import-app/create-as-new-resource-name.png)
 
@@ -131,7 +130,7 @@ If you're updating existing app or resource, be sure to [publish](save-publish-a
 
 1. Repeat the previous step for each additional resource in the app package.
 
-1. (Optional) If the app package contains references to [connection(s)](connections-list.md), you'll have the option to choose the connection from available connections list.
+1. (Optional) If the app package contains references to [connection(s)](connections-list.md), you'll be able to choose the connection from available connections list.
 
     ![Select connection during import](media/export-import-app/select-connection-during-import.png)
 
