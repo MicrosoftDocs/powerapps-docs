@@ -2,7 +2,7 @@
 title: "FAQs: Transition to Unified Interface | MicrosoftDocs"
 description: "FAQs related to the transition process for moving users from the legacy web client to Unified Interface."
 ms.custom: ""
-ms.date: 07/07/2020
+ms.date: 08/07/2020
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -132,7 +132,7 @@ Do the following:
 
 ### I see my environment has a date suggested for transition. Can I change this date?
 
-Yes, this is possible if you have the **global admin**, **Dynamics 365 service administrator**, or **Power Platform administrator** role for the tenant. 
+Yes, this is possible if you have the **global admin**, **Dynamics 365 admin**, or **Power Platform admin** role for the tenant. 
 
 The dates associated to your environment is a suggestion that requires approval to go ahead. Approve if the date works for your organization.  
 
@@ -163,7 +163,7 @@ The ability to change the transition date for an environment is available only u
 
 ### I have environments without a scheduled date. Can I update these to include a date?
 
-Yes, if you have a **global admin**, **Dynamics 365 service administrator**, or **Power Platform administrator** role for the tenant, select the environment, and select a date by clicking on the reschedule transition date button.
+Yes, if you have a **global admin**, **Dynamics 365 admin**, or **Power Platform admin** role for the tenant, select the environment, and select a date by clicking on the reschedule transition date button.
 
 We will update the portal with the date to confirm. Notification e-mails will also be sent to the global tenant admins as you get close to the transition date. This will follow the standard reminder procedure detailed within this document.
 

@@ -52,9 +52,9 @@ The following table lists the samples implemented in C#.  Each sample is describ
   
 |Sample|Sample Group|Description|  
 |------------|------------------|-----------------|  
-|[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate Common Data Service entity records.|  
-|[Web API Query Data Sample (C#)](samples/query-data-csharp.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Common Data Service query functions. Includes examples of working with pre-defined queries and using FetchXML to perform queries.|  
-|[Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|Demonstrates how to perform conditional operations you specify with ETag criteria.|  
+|[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|Demonstrates how to create, retrieve, update, delete, associate and disassociate Common Data Service entity records.|  
+|[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)|[Web API Query Data Sample](web-api-query-data-sample.md)|Demonstrates how to use OData v4 query syntax and functions as well as Common Data Service query functions. Includes examples of working with pre-defined queries and using FetchXML to perform queries.|  
+|[Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|Demonstrates how to perform conditional operations you specify with ETag criteria.|  
 |[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)|[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|Demonstrates how to use bound and unbound functions and actions, including custom actions.|  
   
 <a name="bkmk_howDownloadRun"></a>
@@ -175,7 +175,7 @@ Most of the samples have the same general architectural pattern, with the follow
 [Use the Common Data Service Web API](overview.md)<br />
 [Web API Samples](web-api-samples.md)<br />
 [Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)<br />
-[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)<br />
-[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
-[Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)<br />
+[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
+[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
+[Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)

@@ -8,7 +8,6 @@ ms.custom:
 ms.date: 06/26/2020
 ms.author: iawilt
 ms.reviewer: mvakoc
-ms.custom: pva, power-apps
 ---
 # Create chatbots from Power Apps
 
