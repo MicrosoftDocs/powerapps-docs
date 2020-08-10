@@ -1,14 +1,14 @@
 ---
 title: Customize a SharePoint list form | Microsoft Docs
 description: Use Power Apps to customize the form with which users create and update entries in a SharePoint list.
-author: tapanm-msft
+author: emcoope-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 06/17/2020
-ms.author: tapanm
+ms.reviewer: tapanm
+ms.date: 07/16/2020
+ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
@@ -194,17 +194,17 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **Q:** Do I need a Power Apps license to create or use custom list forms?
 
-**A:** You need an [Office 365 plan that includes Power Apps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
+**A:** Guest users can **use** custom forms. To **create** custom forms, you need an [Office 365 plan that includes Power Apps](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus#licenses).
 
 **Q:** What happens when guest users access a list that has a custom form?
 
-**A:** Guest users get an error message if they try to access a list form that's been customized using Power Apps.
+**A:** As long as the guest users have permission to access the list, they’ll be able to access the custom form.
 
 **Q:** As an administrator, how do I get a list of all customized forms in my organization?
 
 **A:** If you're a tenant administrator for Power Apps or you have environment-administrator permissions on the default Power Apps environment of your organization, do the following:
 
-1. In the [Power Apps admin center](https://admin.powerapps.com), select the default environment for your organization from the list of environments.
+1. In the [Power Apps admin center](https://admin.powerplatform.microsoft.com), select the default environment for your organization from the list of environments.
 
 1. At the top of the default environment page, select **Resources**.
 

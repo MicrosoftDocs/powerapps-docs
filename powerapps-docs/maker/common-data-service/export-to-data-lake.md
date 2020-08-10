@@ -2,7 +2,7 @@
 title: "Export to data lake | MicrosoftDocs"
 description: "Learn how to export entity data to an Azure data lake in Power Apps"
 ms.custom: ""
-ms.date: 04/27/2020
+ms.date: 07/23/2020
 ms.reviewer: "Mattp123"
 ms.service: powerapps
 ms.suite: ""
@@ -85,7 +85,9 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 Your Common Data Service environment is linked to the Azure Data Lake Storage Gen2 account. The file system in the Azure storage account is created with a folder for each entity selected to be replicated to the data lake. 
 
 > [!NOTE]
-> The data exported by Export to data lake service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest)
+> The data exported by Export to data lake service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest) <br />
+> Currently, you can't provide public IPs for Export to data lake service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range. 
+More information: [Configure Azure Storage firewalls and virtual networks]( /azure/storage/common/storage-network-security)
 
 ## Manage entity data to the data lake
 

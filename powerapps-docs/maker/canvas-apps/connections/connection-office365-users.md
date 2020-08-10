@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/07/2016
+ms.date: 08/07/2020
 ms.author: lanced
 search.audienceType: 
   - maker
@@ -15,17 +15,19 @@ search.app:
   - PowerApps
 ---
 # Connect to Office 365 Users connection from Power Apps
+
 ![Office 365 Users](./media/connection-office365-users/office365icon.png)
 
 Office 365 Users lets you access user profiles in your organization using your Office 365 account. You can perform various actions such as get your profile, a user's profile, a user's manager or direct reports.
 
 You can display this information in a label on your app. You can display one function, multiple functions, or even combine different functions. For example, you can create an expression that combines the User Name and Phone Number, and then display this information in your app.
 
-This topic shows you how to add Office 365 Users as a connection, add Office 365 Users as a data source to your app, and use table data in a gallery control.
+This article shows you how to add Office 365 Users as a connection, add Office 365 Users as a data source to your app, and use table data in a gallery control.
 
 [!INCLUDE [connection-requirements](../../../includes/connection-requirements.md)]
 
 ## Add a connection
+
 1. [Add a data connection](../add-data-connection.md) and select **Office 365 Users**:  
 
     ![Connect to Office 365](./media/connection-office365-users/add-office.png)
@@ -311,7 +313,6 @@ Search for users: Retrieves search results of user profiles.
 | AccountEnabled |boolean |Account enabled flag. |
 | BusinessPhones | string |Phone numbers of user's company.|
 
-## Helpful links
+### See also
 * See all the [available connections](../connections-list.md).
 * Learn how to [add connections](../add-manage-connections.md) to your apps.
-

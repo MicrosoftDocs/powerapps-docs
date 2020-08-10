@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 11/11/2017
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -68,7 +68,7 @@ These defaults ensure that the form works when running within SharePoint - they 
 ## Understand the SharePointIntegration control
 The **SharePointIntegration** control communicates user actions between SharePoint and Power Apps.
 
-![](./media/sharepoint-form-integration/sharepointintegration-object.png)
+![SharePoint integration object](./media/sharepoint-form-integration/sharepointintegration-object.png)
 
 >[!NOTE]
 >You can access the properties for the **SharePointIntegration** control only when the form is running in SharePoint, not when you're customizing the form in Power Apps Studio. These properties may not be available in **OnStart** or **OnVisible**. 
@@ -106,3 +106,9 @@ Now that you have a better understanding of the default generated form and the *
 * You can't control the hiding of a form when a user clicks or taps **Cancel** in SharePoint, so make sure you reset your forms in the **OnCancel** formula of the **SharePointIntegration** control.
 
 * The properties for the **SharePointIntegration** control may not be available in **OnStart** or **OnVisible**, and those events execute only once while the list is loaded. You can use **OnNew**, **OnView**, or **OnEdit** formulas to run logic before the form is shown to the user every time. 
+
+### See also
+
+- EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions - [form functions in Power Apps](functions/function-form.md)
+- [RequestHide function](functions/function-requesthide.md)
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)

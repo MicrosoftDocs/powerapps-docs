@@ -62,7 +62,7 @@ Requests from Power Apps use IP addresses that depend on the region of the [envi
 
 Calls made from an API connected through an app (for example, the SQL API or the SharePoint API) come from the IP address specified later in this topic.
 
-You should use these addresses if, for example, you must whitelist IP addresses for an Azure SQL database.
+You should use these addresses if, for example, you must allow IP addresses for an Azure SQL database.
 
 > [!IMPORTANT]
 >   If you have existing configurations, please update them as soon as possible before September 30, 2018 so they include and match the IP addresses in this list for the regions where your Power Apps apps exist.
@@ -93,7 +93,7 @@ This list identifies all services to which Power Apps Studio talks and their usa
 | graph.microsoft.com<br>graph.windows.net |https |Azure Graph - For getting user info (e.g., profile photo) |
 | gallery.azure.com |https |Sample and Template apps |
 | \*.azure-apim.net |https |Api Hubs - Different sub-domains for each locale |
-| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
+| \*.powerapps.com |https | create.powerapps.com, make.powerapps.com, content.powerapps.com,apps.powerapps.com, and make.powerapps.com |
 | \*.azureedge.net |https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
 | \*.blob.core.windows.net |https | Blob storage |
 | \*.flow.microsoft.com | https | create.powerapps.com, make.powerapps.com, content.powerapps.com, and make.powerapps.com |
