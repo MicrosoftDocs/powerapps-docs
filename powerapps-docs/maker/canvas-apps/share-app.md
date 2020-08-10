@@ -231,11 +231,11 @@ Canvas apps enable building an app, tailored to digitizing business processes, w
 
 The following table outlines a few core capability differences between Power Apps portals and canvas apps.  
 
-| | Interface | Authentication | Accessible data sources |
+| Portals or canvas apps| Interface | Authentication | Accessible data sources |
 |------|--------|----------|-------------------|
 | Power Apps portals | Browser only experience | Allows anonymous and authenticated access | Common Data Service |
 | Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any ~150 out-of-box connectors and any custom connector  |
-||
+|
 
 #### Can guests access customized forms in SharePoint?
 
@@ -263,7 +263,7 @@ As with non-guests, the underlying data source(s) accessed by the app must also 
 
 The same license that’s required for non-guests to run an app. For instance, if the app uses premium connecters then a Power Apps Per App Plan or a Power Apps Per User Plan must be assigned to the guest.  
 
-|                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
+|    Plan                             | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
 | SharePoint user (no PA license) | x                          |                                                    |                                                |                  |
 | Power Apps Included w/ Office    | x                          | x                                                  |                                                |                  |

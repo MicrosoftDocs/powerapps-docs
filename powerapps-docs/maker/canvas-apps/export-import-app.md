@@ -25,7 +25,7 @@ Another scenario is one where each customer has their own environment and data. 
 ## Resources included in the package
 
 > [!IMPORTANT]
-> - Export and import functionality of a canvas app package is not meant for the application lifecycle management (ALM). For ALM capabilities in Microsoft Power Platform environments, use Common Data Service and solutions. More information: [ALM overview](../../../../power-platform/alm/overview-alm.md).
+> - Export and import functionality of a canvas app package is not meant for the application lifecycle management (ALM). For ALM capabilities in Microsoft Power Platform environments, use Common Data Service and solutions. More information: [ALM overview](https://docs.microsoft.com/power-platform/alm/overview-alm).
 > - [Common Data Service solution packages](../common-data-service/solutions-overview.md) are different from the canvas app export and import packages and these packages are not compatible with each other.
 
 An app can consume different resources. For example, most apps use connections. Other apps may use Power Automate, have custom connectors or connect using gateways to on-premises resources. Some apps may also use Common Data Service customizations.
