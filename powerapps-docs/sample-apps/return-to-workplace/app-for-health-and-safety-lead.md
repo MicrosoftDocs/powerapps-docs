@@ -51,6 +51,17 @@ Lists all the cases that have been created.
 > [!div class="mx-imgBorder"]
 > ![Employee cases](media/health-safety-employee-cases.png "Employee cases")
 
+In the Employee Cases component we have 3 views with different filters:
+
+   1. My Employee Cases - Filtered by owner and only shows active cases. This is the default view.
+
+   2. Active Employee Cases - Shows all active employee cases.
+
+   3. Closed Employee Cases - Shows all closed employee cases.
+
+> [!div class="mx-imgBorder"]
+> ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
+
 **Master data**
 
 - **Employee** - List of all employees. Employees are contacts.
