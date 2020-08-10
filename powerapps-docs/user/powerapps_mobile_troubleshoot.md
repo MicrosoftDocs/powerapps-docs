@@ -43,4 +43,14 @@ For **Vivo** device, do the following:
 1. Go to **Settings** > **More Settings** > **Applications** > **Autostart**.
 2. Set the toggle switch to **ON** for the authenticator app.
 
-For other device manufacturers, please email Power Apps Mobile Support TBD@microsoft.com and include your device make and model, session ID and quote the error message above.
+If the above does not resolve the issue, try this:
+
+1. Back up your Microsoft Authenticator accounts. For more info, see [Back up and recover account credentials using the Microsoft Authenticator app(https://docs.microsoft.com/en-us/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
+
+2. Uninstall the Microsoft Authenticator app.
+3. Uninstall the Power Apps mobile app.
+4. Install Microsoft Authenticator again, add your back up accounts again.
+5. Install the Power Apps mobile app.
+6, Try to sign in to Power Apps again.
+
+If you still have sign in issue please email us at amobsup@microsoft.com and include your device make and model, session ID and quote the error message above.
