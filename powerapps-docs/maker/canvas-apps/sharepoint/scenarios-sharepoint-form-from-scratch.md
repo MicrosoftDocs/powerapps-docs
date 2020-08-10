@@ -326,5 +326,5 @@ Once the app is ready to use, [share the app](../share-app.md) with others.
 - [Add and configure controls](../add-configure-controls.md)
 - [Add and configure screen](../add-screen-context-variables.md)
 - [Understand forms, layouts, and cards](../working-with-forms.md)
-- [Formula reference](../formula-reference.md) for Power Apps
-- [Control reference](../reference-properties.md) for Power Apps
+- [Formula reference](../formula-reference.md)
+- [Control reference](../reference-properties.md)
