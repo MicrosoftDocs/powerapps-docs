@@ -1804,6 +1804,8 @@
     href: ./canvas-apps/get-sessionid.md
   - name: Troubleshoot startup issues for Power Apps
     href: troubleshooting-startup-issues.md
+  - name: Your device configuration is preventing sign-in to Power Apps mobile
+    href: powerapps_mobile_troubleshoot.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support
