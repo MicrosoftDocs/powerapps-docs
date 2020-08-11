@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/16/2020
+ms.date: 07/28/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -203,21 +203,6 @@ For example, the following request body posted to the Account entity set will cr
     <td>Remove a reference to an entity</td>
     <td>DELETE</td>
     <td><i>[Portal URI]/_api/accounts(00000000-0000-0000-0000-000000000002)/opportunity_customer_accounts/$ref?$id=[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)</i></td>
-  </tr>
-</table>
-
-### Change the reference in a single-valued navigation property
-
-<table style="text-align:left">
-  <tr>
-    <th>Operation</th>
-    <th>Method</th>
-    <th>URI</th>
-  </tr>
-  <tr>
-    <td>Change the reference in a single-valued navigation property</td>
-    <td>PUT</td>
-    <td><i>[Portal URI]/_api/opportunities(00000000-0000-0000-0000-000000000001)/customerid_account/$ref </i></td>
   </tr>
 </table>
 

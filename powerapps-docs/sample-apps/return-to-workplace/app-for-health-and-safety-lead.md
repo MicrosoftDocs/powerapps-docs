@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 08/10/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -50,6 +50,17 @@ Lists all the cases that have been created.
 
 > [!div class="mx-imgBorder"]
 > ![Employee cases](media/health-safety-employee-cases.png "Employee cases")
+
+In the Employee Cases component, we have 3 views with different filters:
+
+- **My Employee Cases**: Filtered by owner and only shows active cases. This is the default view.
+
+- **Active Employee Cases**: Shows all active employee cases.
+
+- **Closed Employee Cases**: Shows all closed employee cases.
+
+> [!div class="mx-imgBorder"]
+> ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
 
 **Master data**
 

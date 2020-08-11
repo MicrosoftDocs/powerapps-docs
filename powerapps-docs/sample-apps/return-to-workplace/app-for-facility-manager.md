@@ -18,6 +18,10 @@ This helps the organizations ensure that they can provide a safe working environ
 
 ## App at a glance
 
+The Return to Workplace solution supports organization’s goal to Reopen its facilities to its employees as safely and as quickly as possible in an effort to return to normal.  The Safety Management app as part of the overall solution provides Facility Managers with a tool that provides them with the capabilities to manage and support the organization’s journey through their specific reopening plan for their facilities  and its associated phases and goals.  
+
+It is the Facility Manager the facilitates the execution of the organizations reopening plan and their reopening phases that have been configured (see [Configure the solution](configure.md) for steps on configuration).   Facility Managers in supporting the goal to reopening their facilities safely and quickly will lead the required assessments of Facility Readiness and review its status.  The assessments take the form of executing  Checks on a Facility’s Readiness Checklist.   When assumed to be ready based on the results of these checks, the Facility Manager will then assert readiness to move to their next Reopen Phase by initiating a phase transition request.   This request then is processed by the organization’s assigned reviewer where it can then be approved.  This will implement a four-eyes principle, while the checklist allows for a consistent discussion on readiness throughout the company.  Once the reviewer approves the transition the facility is moved to the next phase where a new checklist applicable to the new phase is created and managed.  
+
 The left pane lists all the components available in the **Facility Management** area.
 
 > [!div class="mx-imgBorder"]
@@ -35,7 +39,7 @@ The Facility Safety Management app has the following components:
 
 **Reopen Readiness**
 
--  **Phase Transitions** - A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase.
+-  **Phase Transitions** - A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase and its associated checklist based upon the phase's configured readiness factors.
 
 -  **Readiness Factors** -  Readiness factors are yes-or-no questions about reopening a building. They are linked to the reopening phase by a checklist on a facility.
 
@@ -122,6 +126,8 @@ transitions.
 
      > [!div class="mx-imgBorder"]
      > ![Checklist items](media/facility-manager-checklist-2-1.png "Checklist items") 
+     >[!NOTE]
+     >Checklist items are configured as part of the global process for managing Reopen Phases and their associated Readiness Factors.  Therefore, new Checks are added as Readiness Factors on a Reopen Phase and not on the Facility.    
 
    - Select the **Transitions** tab to see any related transition requests and their status.
 
@@ -158,13 +164,15 @@ The **Checklist** tab contains an editable grid displaying the checklist for the
 
 ## Moving facility to a new phase
 
-When a facility manager asserts that a facility should be moved to a new phase, the manager can apply for a transition. Only the facility manager can create
-a new transition record that indicates the new phase. After the transition is saved, a reviewer can be assigned. A reviewer must **Accept** or **Reject** the transition. Either way, the transition record is closed and stored as a historical record. When the transition is accepted, the proposed phase is applied to the facility.
+When a facility manager asserts that a facility should be moved to a new phase, the manager can apply for a transition. Only the facility manager can create a new transition record that indicates readiness to move to a new phase. After a new transition is created and saved it will appear in the sub-grid with on the Transitions tab of the Facility record with a status of Submitted.  A reviewer is now able to be assigned to Reopen Phase transition. The reviewer once assigned can then take action on that Reopen Phase Transition request by Accepting or Rejecting it.  Upon approval or rejection of the transition record it is processed and when complete the request is considered closed and stored as a historical record. When complete a transition will appear in the sub-grid as with either Accepted (approved request) or Rejected (rejected request). When a transition is accepted, the transition record proposed phase is applied to the facility record’s Reopen Phase field.  This update will trigger the background process that will update the business process flow stage, aligning the Reopen Phase and current BPF stage.
 
-The new phase comes with its own checklist and set of metrics and goals. These will be made available on the facility by a background process. So there will be
-a small delay between accepting a transition and the actual changes on the facility record.
+Additionally the background process will create a new checklist for the Facility along with a new set of metrics and goals. The new checklist that is created is based upon the Readiness Factors that were previously setup and configured by the Facility Manager for the selected Reopen Phase.  The new checklist can then be accessed from the Facility record’s Checklist Tab.  (note:  during the execution of the background processes there may be a delay before these updates are completed and viewable in the Facility’s manager’s view of the screen.  You may need to select the refresh button to see the updates on the screen).
+
 
 A reviewer&mdash;for instance, a facility manager supervising many facility managers in a facility group&mdash;can find the backlog in **Phase transitions**. For example, the list can be filtered by the facility group or by the reviewer to find the phase transitions that require attention.
+
+>[!NOTE]
+> Transitions from one phase to another cannot be completed without an approved transition and therefore it is highly recommended that organizations ensure someone has been given the responsibillity to monitor transitions and ensure they have the appropriate assigned Reviewer.
 
 > [!div class="mx-imgBorder"]
 > ![Open phase transitions](media/facility-manager-open-phase-transitions.png "Open phase transitions")
@@ -218,6 +226,17 @@ To edit the record, select it, update the values, and then select **Save & Close
 
 The review status for the transition is updated, and appropriate back-end processes are triggered to move the facility to the targeted reopen phase.
 
+### Create transition records via the Business Process Flow
+
+For ease of use we can also use the business process flow to create new transition records. There are two cases:
+
+1. Moving forward
+
+Given that the facility is not in the final phase, the user can click on the circle of the current stage and select **Next Stage**. The business process flow wont move instantly, but in the background a new transition record is created and the user will be navigated to that record. The record is pre populated with the next phase and is ready for approval.
+
+2. Moving backward
+
+Given that the facility is not in the first phase, the user can click on the cirle of current stage and select **<** to move back. Or the user can select the circle of any previous stage and click **Set Active**. The business process flow will change imediatly. In the background a phase transition record is created and approved automatically. This in turn will trigger the background process that will update the facility with the checklist, metrics and goals corresponding to the selected phase. Please allow for some time for this to happen. The user can continue to perform other tasks.
 
 ## Monitor employee attestations
 

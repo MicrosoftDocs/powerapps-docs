@@ -105,10 +105,10 @@
       "Publish",
       "PDF"
     ],
-   "alm-guide": [
+    "alm-guide": [
       "Publish",
       "PDF"
-    ] 
+    ]
   },
   "need_generate_pdf_url_template": true,
   "Targets": {
@@ -116,5 +116,8 @@
       "template_folder": "_themes.pdf"
     }
   },
-  "need_generate_intellisense": false
+  "need_generate_intellisense": false,
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
