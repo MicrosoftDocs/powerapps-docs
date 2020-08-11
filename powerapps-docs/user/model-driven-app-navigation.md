@@ -21,10 +21,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../includes/cc-beta-prerelease-disclaimer.md)]
 
-With the early access release of the enhanced email experience in the Dynamics 365 for phones and tablets app, you can compose an email within the app with the following capabilities:
+With the early access release we have improved teh navigation for model-drvien apps. 
 
-
-This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
+This article explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
 ## Navigating among apps, areas, and entities
 
