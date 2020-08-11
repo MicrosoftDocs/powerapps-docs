@@ -485,6 +485,8 @@
             href: ./canvas-apps/functions/function-logicals.md
           - name: App
             href: ./canvas-apps/functions/object-app.md
+          - name: As
+            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators            
           - name: Asin
             href: ./canvas-apps/functions/function-trig.md
           - name: Assert
@@ -577,12 +579,14 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Enable
             href: ./canvas-apps/functions/function-enable-disable.md
+          - name: EncodeUrl
+            href: ./canvas-apps/functions/function-encode-decode.md            
           - name: EndsWith
             href: ./canvas-apps/functions/function-startswith.md
           - name: Errors
             href: ./canvas-apps/functions/function-errors.md
-          - name: EncodeUrl
-            href: ./canvas-apps/functions/function-encode-decode.md
+          - name: exactin
+            href: ./canvas-apps/functions/operators.md#in-and-exactin-operators            
           - name: Exit
             href: ./canvas-apps/functions/function-exit.md
           - name: Exp
@@ -611,6 +615,8 @@
             href: ./canvas-apps/functions/function-if.md
           - name: IfError
             href: ./canvas-apps/functions/function-iferror.md
+          - name: in
+            href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
           - name: IsBlank
             href: ./canvas-apps/functions/function-isblank-isempty.md
           - name: IsEmpty
@@ -681,6 +687,8 @@
             href: ./canvas-apps/functions/function-logicals.md
           - name: Param
             href: ./canvas-apps/functions/function-param.md
+          - name: Parent
+            href: ./canvas-apps/functions/operators.md#self-and-parent-operators              
           - name: Patch
             href: ./canvas-apps/functions/function-patch.md
           - name: Pi
@@ -713,6 +721,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Revert
             href: ./canvas-apps/functions/function-revert.md
+          - name: RequestHide
+            href: ./canvas-apps/functions/function-requesthide.md
           - name: RGBA
             href: ./canvas-apps/functions/function-colors.md
           - name: Right
@@ -731,12 +741,16 @@
             href: ./canvas-apps/functions/function-datetime-parts.md
           - name: Select
             href: ./canvas-apps/functions/function-select.md
+          - name: Self
+            href: ./canvas-apps/functions/operators.md#self-and-parent-operators         
           - name: Set
             href: ./canvas-apps/functions/function-set.md
           - name: SetFocus
             href: ./canvas-apps/functions/function-setfocus.md
           - name: SetProperty
             href: ./canvas-apps/functions/function-setproperty.md
+          - name: Sequence
+            href: ./canvas-apps/functions/function-sequence.md            
           - name: ShowColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: Shuffle
@@ -769,6 +783,10 @@
             href: ./canvas-apps/functions/function-trig.md
           - name: Text
             href: ./canvas-apps/functions/function-text.md
+          - name: ThisItem
+            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators
+          - name: ThisRecord
+            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators         
           - name: Time
             href: ./canvas-apps/functions/function-date-time.md
           - name: TimeValue
@@ -945,8 +963,6 @@
       href: ./canvas-apps/embed-apps-dev.md
     - name: Develop offline-capable apps
       href: ./canvas-apps/offline-apps.md
-    - name: Let customers test drive your apps
-      href: ./canvas-apps/dev-appsource-test-drive.md
     - name: Create a component
       items:
         - name: Components overview
@@ -1064,6 +1080,8 @@
             href: ./model-driven-apps/optimize-form-performance.md
           - name: How to work with sections in a form
             href: ./model-driven-apps/section-properties-legacy.md
+          - name: How to add a chart to a form
+            href: ./model-driven-apps/add-chart-to-form.md
           - name: How to configure Bing maps in a form
             href: ./model-driven-apps/configure-bing-maps-legacy.md
           - name: How to assign form order
@@ -1151,6 +1169,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
         - name: Add the calendar control to entities
           href: ./model-driven-apps/add-calendar-control.md
+        - name: Add the news control to an entity
+          href: ./model-driven-apps/stay-current-with-news-control.md          
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
@@ -1447,6 +1467,14 @@
           href: ./portals/oauth-implicit-grant-flow.md
         - name: Manage webpages
           href: ./portals/configure/web-page.md
+        - name: Portals Web API
+          items:
+          - name: Overview
+            href: ./portals/web-api-overview.md
+          - name: Perform operations
+            href: ./portals/web-api-perform-operations.md
+          - name: Compose HTTP requests and handle errors
+            href: ./portals/web-api-http-requests-handle-errors.md
     - name: User management and security in portal
       items:
         - name: Configure contacts
@@ -1684,7 +1712,13 @@
   - name: Import translated entity and field text
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: Export to data lake
-    href: ./common-data-service/export-to-data-lake.md
+    items: 
+    - name: Export to Azure Data Lake Storage Gen2
+      href: ./common-data-service/export-to-data-lake.md
+    - name: Ingest exported data with Azure Data Factory
+      href: ./common-data-service/export-to-data-lake-data-adf.md
+    - name: Analyze exported data with Power BI
+      href: ./common-data-service/export-to-data-lake-data-powerbi.md    
   - name: Security in Common Data Service
     href: /power-platform/admin/wp-security
   - name: API limits overview
@@ -1738,6 +1772,22 @@
       href: ../sample-apps/crisis-financial-impact-tracker/use-mobile-app.md
     - name: Use dashboards
       href: ../sample-apps/crisis-financial-impact-tracker/configure-dashboards.md
+  - name: Return to the Workplace
+    items:
+    - name: Overview
+      href: ../sample-apps/return-to-workplace/overview.md
+    - name: Deploy the solution
+      href: ../sample-apps/return-to-workplace/deploy.md   
+    - name: Configure the solution
+      href: ../sample-apps/return-to-workplace/configure.md
+    - name: Location Readiness dashboard
+      href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
+    - name: Facility Safety Management app
+      href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
+    - name: Workplace Care Management app
+      href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
+    - name: Employee Return to the Workplace app
+      href: ../sample-apps/return-to-workplace/app-for-employee.md
 - name: Learn from others
   items:
   - name: Blog

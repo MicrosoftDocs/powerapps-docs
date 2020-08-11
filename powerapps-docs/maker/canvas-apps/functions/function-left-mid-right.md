@@ -59,7 +59,7 @@ Each example in this section extracts strings from the **Address** [column](../w
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** |Extracts the first eight characters of each string. |<style> img { max-width: none } </style> ![](media/function-left-mid-right/people-table-left.png) |
+| **Left( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 8 )** |Extracts the first eight characters of each string. | ![](media/function-left-mid-right/people-table-left.png) |
 | **Mid( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 5, 7 )** |Extracts the middle seven characters of each string, starting with the fifth character. |![](media/function-left-mid-right/people-table-mid.png) |
 | **Right( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;), 7 )** |Extracts the last seven characters of each string. |![](media/function-left-mid-right/people-table-right.png) |
 
