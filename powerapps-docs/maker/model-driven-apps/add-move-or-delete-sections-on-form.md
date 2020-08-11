@@ -72,6 +72,9 @@ These are the properties available to configure a section when you create or edi
 |**Display options** | **Hide on phone** |  The section can be hidden to render a condensed version of this form on phone screens. |
 |**Formatting** |  **Columns** |  Specify up to four columns for the section. |
 
+  > [!NOTE]
+  >   Section labels with long titles will truncate, the text will not wrap.
+
 ## Move sections on a form
 You can move sections using drag and drop or cut and paste actions. 
 
