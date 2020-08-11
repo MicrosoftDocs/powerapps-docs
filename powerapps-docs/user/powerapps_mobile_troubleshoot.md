@@ -21,7 +21,7 @@ search.app:
 
 This troubleshooting article helps fix common sign-in issues when you sign in to the Power Apps mobile app.
 
-## Common errors
+**Common errors**
 
 - **Your device configuration is preventing sign-in**
 - **There was a problem signing you in**
