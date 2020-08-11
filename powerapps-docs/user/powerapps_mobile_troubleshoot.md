@@ -57,4 +57,4 @@ If the above does not resolve the issue, try this:
 5. Install the Power Apps mobile app.
 6. Open the Power Apps mobile app and sign-in.
 
-If you still can't sign-in please email us at [pamobsup@microsoft.com](pamobsup@microsoft.com) and include your device make and model, session ID and quote the error message that's on your screen.
+If you still can't sign-in please email us at [pamobsup@microsoft.com](pamobsup@microsoft.com) and include your device make and model, session ID and quote the error message that you get on your screen.
