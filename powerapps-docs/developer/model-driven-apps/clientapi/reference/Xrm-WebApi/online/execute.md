@@ -196,7 +196,7 @@ Xrm.WebApi.online.execute(whoAmIRequest).then(
 );
 ```
 
-The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.CalculateRollupFieldRequest> function:
+The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.CalculateRollupField> function:
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -254,7 +254,7 @@ Xrm.WebApi.online.execute(calculateRollupFieldRequest).then(
 });
 ```
 
-The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicatesRequest> function:
+The following example demonstrates how to execute the <xref:Microsoft.Dynamics.CRM.RetrieveDuplicates> function:
 
 ```JavaScript
 var Sdk = window.Sdk || {};
