@@ -18,7 +18,7 @@ search.app:
 
 # Troubleshoot sign-in issues for Power Apps mobile
 
-This troubleshooting article helps fix common sign-in issues when you sign in to the Power Apps mobile app.
+This troubleshooting article helps fix common sign-in issues when you sign in to Power Apps mobile.
 
 **Common errors**
 
