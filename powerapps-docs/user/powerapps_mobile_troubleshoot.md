@@ -19,9 +19,9 @@ search.app:
 
 # Troubleshoot sign-in issues for Power Apps mobile
 
-Error: **Your device configuration is preventing sign-in**
+Error: **Your device configuration is preventing sign-in** or **There was a problem signing you in**
 
-If you receive this message it means that your IT administrator is using Microsoft Intune and requires you to sign-in securely using an authenticator app, but your device configuration is blocking the Power Apps mobile app from launching the authenticator app installed on your device. Microsoft authenticator apps are Authenticator and Company Portal. Your company may also use a third-party authenticator app. If you are unsure, ask your IT administrator which authenticator app you should be using and then follow the instructions below.
+If you receive one of these messages it means that your IT administrator is using Microsoft Intune and requires you to sign-in securely using an authenticator app, but your device configuration is blocking the Power Apps mobile app from launching the authenticator app installed on your device. Microsoft authenticator apps are Authenticator and Company Portal. Your company may also use a third-party authenticator app. If you are unsure, ask your IT administrator which authenticator app you should be using and then follow the instructions below.
 
  > [!NOTE]
  > Power Apps requires a valid license to sign-in. For more information, see [Licensing overview](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
