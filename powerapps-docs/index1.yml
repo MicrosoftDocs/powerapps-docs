@@ -96,13 +96,13 @@ conceptualContent:
     - title: Administer Power Apps
       links:
         - text: Use Power Platform admin center
-          url: https://docs.microsoft.com/en-us/power-platform/admin/admin-documentation
+          url: https://docs.microsoft.com/power-platform/admin/admin-documentation
           itemType: overview
         - text: Power Apps licensing
-          url: https://docs.microsoft.com/en-us/power-platform/admin/pricing-billing-skus
+          url: https://docs.microsoft.com/power-platform/admin/pricing-billing-skus
           itemType: overview
         - text: Power Platform Center of Excellence (CoE) Starter Kit
-          url: https://docs.microsoft.com/en-us/power-platform/guidance/coe/starter-kit
+          url: https://docs.microsoft.com/power-platform/guidance/coe/starter-kit
           itemType: how-to-guide     
     
     - title: Power Apps for developers
