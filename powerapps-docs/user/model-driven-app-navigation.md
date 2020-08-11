@@ -25,6 +25,9 @@ With the early access release we have improved teh navigation for model-drvien a
 
 This article explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
+## How to enable this feature?
+Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: Opt in to early access updates
+
 ## Navigating among apps, areas, and entities
 
 A model-driven app is built out of applications (apps), areas, and entities.
@@ -35,8 +38,7 @@ A model-driven app is built out of applications (apps), areas, and entities.
 
 - *Entities* represent a specific type of data, such as a contacts and accounts. Entities use a structured data format, which defines the collection of fields available to the entity. Each entity consists of a collection of individual records. For example, for the Contact entity, each record describes a single person, and each record includes a collection of fields such as first name, last name, and email address. Entities normally present two views: a list view, which is typically a table listing available records; and a form view, which shows all available data and settings for a single record. Use the side navigator to move between entities in your current work area.
 
-## How to enable this feature?
-Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: Opt in to early access updates
+
 
 ### Move between apps
 
