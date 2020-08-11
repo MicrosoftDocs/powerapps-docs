@@ -1,6 +1,5 @@
 ---
 title: "Troubleshoot sign-in issues for Power Apps mobile | MicrosoftDocs"
-ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -57,11 +56,11 @@ For **Vivo** device, do the following:
 
 If the above does not resolve the issue, try this:
 
-1. Back up your Microsoft Authenticator accounts. For more info, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/en-us/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
+1. Back up your Microsoft Authenticator accounts. For more info, see [Back up and recover account credentials using the Microsoft Authenticator app](https://docs.microsoft.com/azure/active-directory/user-help/user-help-auth-app-backup-recovery)
 2. Uninstall the Microsoft Authenticator app.
 3. Uninstall the Power Apps mobile app.
 4. Install Microsoft Authenticator again and add your back up accounts again.
 5. Install the Power Apps mobile app.
 6. Open the Power Apps mobile app and sign-in.
 
-If you still can't sign-in please email us at [pamobsup@microsoft.com](pamobsup@microsoft.com) and include your device make and model, session ID and quote the error message that you got on your screen.
+If you still can't sign-in please email us at pamobsup@microsoft.com and include your device make and model, session ID and quote the error message that you got on your screen.
