@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/27/2020
+ms.date: 08/11/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -17,8 +17,6 @@ In Power Apps portals, the **Enable basic theme** feature is set to **Off**. Whe
 In this article, you'll walk through the basic themes feature. For advanced theme customization, see [Edit CSS](edit-css.md).
 
 ## Enable basic themes for existing portals
-
-[This topic is pre-release documentation and is subject to change.]
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
