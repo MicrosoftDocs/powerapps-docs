@@ -43,7 +43,7 @@ can be found at the following links:
 -   [Best practices and guidance for the Common Data
     Service](https://docs.microsoft.com/powerapps/developer/common-data-service/best-practices/)
 
--   [Business Process Flows](https://docs.microsoft.com/en-us/power-automate/business-process-flows-overview)
+-   [Business Process Flows](https://docs.microsoft.com/power-automate/business-process-flows-overview)
 
 Future releases of the Return to the Workplace solution are planned to create
 additional capabilities. Follow Microsoft solution and application lifecycle
