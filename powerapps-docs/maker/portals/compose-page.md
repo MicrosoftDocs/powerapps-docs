@@ -405,14 +405,14 @@ To add a Power BI component to a web page:
 
         ![Apply roles](media/apply-roles-powerbi.png "Apply roles")
     
-        - You can enter multiple roles separated by a comma (for example, ```role_1,role_2```). For more information on defining roles in Power BI, go to [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls). <br>
+        - You can enter multiple roles separated by a comma (for example, `role_1,role_2`). For more information on defining roles in Power BI, go to [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls). <br>
         - Only available for access type **Embed for your customer**.
 
     1. **Apply filter**: Allows user to load the report with pre-filtered values. User can provide filter condition in the field. 
         
         ![Apply filter](media/apply-filter-powerbi.png "Apply filter")
 
-        - Filter parameter must be without ```?filter=``` prefix. For example, ```Table/Field eq 'value'```.
+        - Filter parameter must be without `?filter=''` prefix. For example, `Table/Field eq 'value'`.
         <br> For more information, go to [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
         - Only available for **Reports** with access types **Embed for your customer** and **Embed for your organization**.
 
