@@ -89,9 +89,13 @@ These tables are primarily used by the Employee Return to the Workplace canvas a
 
 | **Table Name**           | **Information in the Table**                                                                                  |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
+| Area                     | Contains a list of physically or logically segmented spaces.                         |
 | Employee Attestation     | Contains associations of people to their attestations.                                                        |
+| Employee Booking       | Contains associations of people and specific areas, floors, and facilities for a given time period.                         |
 | Employee Facility Search | Contains a list of most recently used employee app facility results associated with system users.             |
 | Employee Sentiment       | Contains associations of people and information relevant to their recorded sentiment.                         |
+| Employee Visit       | Contains associations of people and facilities for a given time period representing a physical entry and exit.                        |
+| Floor       | Contains a list of physically segmented spaces associated to a single facility and multiple areas.                        |
 
 ## Workplace Care Management
 
@@ -125,6 +129,16 @@ These tables are primarily used by the Facility Safety Management model-driven a
 This section of the document provides a list of entities, their data attributes,
 and the areas of the solution where they are used. System generated attributes
 (such as **Created On**, **Modified On**, etc.) are not displayed.
+
+### Area
+
+| Display Name                        | Data Type     | Description                                                    | Platform Use     |
+|-------------------------------------|---------------|----------------------------------------------------------------|------------------|
+| Area                                | Text          | Primary identifier of the record.                              | Model-driven app; Canvas app |
+| Capcity | Whole Number    | Used to capture total allowable occupancy for the area.                     | Model-driven app; Canvas app       |
+| Description                            | Text        | Used to capture additional details to describe the area.                                  | Model-driven app; Canvas app       |
+| Facility                      | Lookup | Used to associate the parent facility. |Model-driven app; Canvas app     |
+| Floor                      | Lookup | Used to associate the parent floor. | Model-driven app; Canvas app       |
 
 ### Case Contact
 
@@ -167,6 +181,16 @@ and the areas of the solution where they are used. System generated attributes
 | Facility         | Lookup        | Used to associate the facility for which the employee is attesting. | Model-driven app; Canvas app |
 | Name             | Text          | Used to create a name for the employee attestation record.          | Model-driven app             |
 
+### Employee Booking
+
+| Display Name     | Data Type     | Description                                                         | Platform Use                 |
+|------------------|---------------|---------------------------------------------------------------------|------------------------------|
+| Area | Lookup | Used to associate the location booked.     | Model-driven app; Canvas app             |
+| End Arrival Time         | Date and Time    | Used to capture the ending point in time for the booking.                  | Model-driven app; Canvas app |
+| Start Arrival Time         | Date and Time        | Used to capture the beginning point in time for the booking.             | Model-driven app; Canvas app             |
+| Employee         | Lookup        | Used to associate the employee creating the booking. | Model-driven app; Canvas app |
+| Name             | Text          | Primary identifier of the record.         | Model-driven app             |
+
 ### Employee Case
 
 | Display Name                    | Data Type     | Description                                                                                      | Platform Use                 |
@@ -196,6 +220,18 @@ and the areas of the solution where they are used. System generated attributes
 | Name                               | Text          | Used to provide a name for the employee sentiment record.        | Model-driven app             |
 | Do you feel safe returning to work | Option Set    | Used to capture a response to the question: Sad, Neutral, Happy. | Model-driven app; Canvas app |
 | Sentiment Date                     | Date and Time | Used to capture the date and time the sentiment was recorded.    | Model-driven app             |
+
+### Employee Visit
+
+| Display Name     | Data Type     | Description                                                         | Platform Use                 |
+|------------------|---------------|---------------------------------------------------------------------|------------------------------|
+| Emplpoyee Attestation | Lookup | Used to associate an attestation.     | Model-driven app             |
+| Emplpoyee Booking     | Lookup | Used to associate a booking.     | Model-driven app             |
+| Employee              | Lookup        | Used to associate the employee creating the visit. | Model-driven app |
+| End Time              | Date and Time | Used to denote the end of the visit.     | Model-driven app             |
+| Facility              | Lookup          | Used to denote the facility visited.         | Model-driven app             |
+| Name                  | Text | Primary identifier of the record.     | Model-driven app             |
+| Start Time            | Date and Time | Used to denote the beginning of the visit.     | Model-driven app             |
 
 ### Facility 
 
@@ -230,6 +266,16 @@ and the areas of the solution where they are used. System generated attributes
 |--------------|-----------|-------------------------------------------------------------|------------------|
 | Description  | Text      | Used to provide additional details about the facility type. | Model-driven app |
 | Type         | Text      | Used to provide a name for the facility type.               | Model-driven app |
+
+### Floor
+
+| Display Name                        | Data Type     | Description                                                    | Platform Use     |
+|-------------------------------------|---------------|----------------------------------------------------------------|------------------|
+| Description | Text    | Used to capture additional details to describe the floor.                     | Model-driven app; Canvas app       |
+| Facility                      | Lookup | Used to associate the parent facility. |Model-driven app; Canvas app     |
+| Floor                                | Text          | Primary identifier of the record.                              | Model-driven app; Canvas app |
+| Floor Index                    | Whole Number  | Used to create a structured order of floors within a facility. | Model-driven app; Canvas app       |
+
 
 ### Goal
 
