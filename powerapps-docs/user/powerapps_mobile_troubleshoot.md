@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/10/2020
+ms.date: 08/11/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -21,7 +21,7 @@ search.app:
 
 If you receive this message it means that your IT administrator is using Microsoft Intune and requires you to sign-in securely using an authenticator app, but your device configuration is blocking the Power Apps mobile app from launching the authenticator app installed on your device. Microsoft authenticator apps are Authenticator and Company Portal. Your company may also use a third-party authenticator app. If you are unsure, ask your IT administrator which authenticator app you should be using and then follow the instructions below.
 
-Sometimes, manually opening your authenticator app on your device before retrying to sign-in from the Power Apps mobile app is enough to fix the issue.
+Sometimes, updating and manually opening your authenticator app on your device before retrying to sign-in from the Power Apps mobile app is enough to fix the issue.
  
 If the suggestion above did not work, the steps to resolve the issue are device manufacturer-specific and depend which authenticator app you have installed.
 
