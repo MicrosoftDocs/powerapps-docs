@@ -20,6 +20,12 @@ search.app:
 
 This introduction explains how to find and open an app, and how to work with its common user interface elements including lists, forms, and business processes.
 
+If you have enabled early acccess then you will have a different navigation experience. This topic calls out both experiences.
+
+## How to enable this feature?
+Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
+ 
+
 ## Navigating among apps, areas, and entities
 
 A model-driven app is built out of applications (apps), areas, and entities.
