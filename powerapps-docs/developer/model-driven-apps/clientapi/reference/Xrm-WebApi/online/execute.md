@@ -1,6 +1,6 @@
 ---
 title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps| MicrosoftDocs"
-ms.date: 10/28/2019
+ms.date: 08/11/2020
 ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
