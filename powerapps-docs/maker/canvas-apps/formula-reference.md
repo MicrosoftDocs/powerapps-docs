@@ -28,7 +28,7 @@ Other elements include:
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 
-## List of formulas<br>A
+## List of formulas <br>A
 **[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
 **[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
