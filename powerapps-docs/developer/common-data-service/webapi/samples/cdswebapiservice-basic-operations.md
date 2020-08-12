@@ -422,6 +422,6 @@ namespace PowerApps.Samples
 [Update and delete entities using the Web API](../update-delete-entities-using-web-api.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)
-[Web API Query Data Sample (C#)](query-data-csharp.md)<br />
-[Web API Conditional Operations Sample (C#)](conditional-operations-csharp.md)<br />
+[Web API Query Data Sample (C#)](cdswebapiservice-query-data.md)<br />
+[Web API Conditional Operations Sample (C#)](cdswebapiservice-conditional-operations.md)<br />
 [Web API Functions and Actions Sample (C#)](functions-actions-csharp.md)

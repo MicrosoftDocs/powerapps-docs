@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/30/2020
+ms.date: 08/02/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 ---
@@ -41,10 +41,6 @@ You can run apps that you created, or that someone else created and shared with 
 ## Power Apps for admins
 
 Power Apps admins can use **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to create and manage environments, get real-time, self-help recommendations and support for Power Apps and Power Automate, and view Common Data Service analytics. More information: [Administer Power Platform](/power-platform/admin/admin-guide)
-
-> [!NOTE] 
-> Admins can also use **Power Apps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies.
-
 
 ## Power Apps for developers
 
