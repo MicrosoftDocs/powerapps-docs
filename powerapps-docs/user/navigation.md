@@ -44,7 +44,7 @@ Use the app-selector menu to switch between apps.
 
 |Current  |Early access  |
 |---------|---------|
-|![The app-selector menu](media/app-selector.png "The app-selector menu")     |      ![The app-selector menu](media/app-selector.png "The app-selector menu")   |
+|![The app-selector menu](media/app-selector1.png "The app-selector menu")     |      ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
 
 
 The apps you see listed in your app-selector menu will depend on which apps you have access to. 
