@@ -54,7 +54,7 @@ The apps you see listed in your app-selector menu will depend on which apps you 
 It's easy to get around and get back to your favorite or most-used records. The following illustration shows the primary navigation elements.
 
 
-|Column1  |Column2  |
+|Current  |Early acces  |
 |---------|---------|
 |![Navigation controls, expanded view](media/nav-expanded.png "Navigation controls, expanded view") <div style="page-break-after: always"></div>   <ol><li>**App selector**: Open this menu to move between apps</li> <li> </li> <li> </li><li> </li><li> </li><li> </li> |     ![Navigation controls, expanded view](media/nav-expanded.png "Navigation controls, expanded view")  <div style="page-break-after: always"></div>   <ol><li>**App selector**: Open this menu to move between apps</li> <li> </li> <li> </li><li> </li><li> </li><li> </li>    |
 
