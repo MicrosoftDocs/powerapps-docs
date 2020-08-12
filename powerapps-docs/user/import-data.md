@@ -72,7 +72,7 @@ To find an app, search your phone’s online store.
 
 ## Step 2: Import the file 
   
-1. On the command bar, select **Import from Excel**,  **Import from CSV**, or **[Import from XML](#import-from-xml-file)**.
+1. On the command bar, select **Import from Excel**,  **Import from CSV**, or **[Import from XML](#import-from-xml-or-csv-file)**.
 
    > [!div class="mx-imgBorder"]
    > ![Main menu in Power Apps](media/import.png "Main menu in Power Apps")
@@ -84,7 +84,10 @@ To find an app, search your phone’s online store.
    
 3. Review the file name and verify that the field and data delimiters are correct using the **Review Mapping** option. If everything looks good, select **Finish Import**.  
 
-### Import from XML file
+### Import from XML or CSV file
+
+>[!NOTE]
+>In the below process, we are importing an XML file. Similarly, you can follow the below process to import CSV file.
 
 1. On the **Import from XML** pane, select **Choose file** and browse to the folder where you saved the file that contains the export of your contacts. Select the file and then select **Open**.
 
@@ -96,9 +99,12 @@ To find an app, search your phone’s online store.
     >[!NOTE]
     >The application might take few seconds to display data on the **Import from XML** pane and wait until the **Review Mapping** option appears.    
 
-3. If you have an alternate key defined, select it from the **Alternate Key** drop-down list.
+3. (Optional) If you have to update the existing records in Dynamics 365 through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the entity.
 
-    The alternate key is used to uniquely identify and update records during import instead of using the primary key. Some external data systems do not store primary keys. In such cases, an alternate key can be used to uniquely identify records. More information: [How alternate key and duplicate detection work during import](https://docs.microsoft.com/dynamics365/marketing/import-data#how-alternate-key-and-duplicate-detection-work-during-import)
+    The alternate key is used to uniquely identify and update records during import. More information: [Define alternate keys to reference Dynamics 365 records](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn949335(v=crm.8)?redirectedfrom=MSDN).
+
+   > [!div class="mx-imgBorder"]
+   > ![Select the alternate key](media/import-xml-alternate-key.png "Select the alternate key")
 
 4. Select **Review Mapping** option and then on the **Review Mapping** page, review how your column headings are mapped to the fields in Dynamics 365. 
 
@@ -159,6 +165,9 @@ After the wizard finishes, check your data (for example, list of contacts) to ma
 1. From the main menu, go to **Contacts**.
   
 2. Scroll through the contact list. Check that each person is listed and verify the contents of the fields for accuracy.
+
+>[!NOTE]
+>Verify the import logs to view the status of the imported records. To view the import logs, go to **Settings** > **System** > **Data management** > **Imports**.
 
 ## Import double-byte characters 
 
