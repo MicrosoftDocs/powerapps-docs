@@ -28,7 +28,7 @@ Other elements include:
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 
-## <a id="adiff"></a> A
+## <a id="-a"></a> A
 **[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
 **[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
