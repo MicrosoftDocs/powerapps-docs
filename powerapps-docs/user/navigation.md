@@ -57,9 +57,7 @@ It's easy to get around and get back to your favorite or most-used records. The 
 |Column1  |Column2  |
 |---------|---------|
 |![Navigation controls, expanded view](media/nav-expanded.png "Navigation controls, expanded view")     |     ![Navigation controls, expanded view](media/nav-expanded.png "Navigation controls, expanded view")    |
-|Legend:
-
-1. **App selector**: Open this menu to move between apps.
+|Legend: 1. **App selector**: Open this menu to move between apps.
 2. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again.
 3. **Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).
 4. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
