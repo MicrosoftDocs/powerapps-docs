@@ -72,7 +72,7 @@ To find an app, search your phone’s online store.
 
 ## Step 2: Import the file 
   
-1. On the command bar, select **Import from Excel**,  **Import from CSV**, or **[Import from XML](#import-from-xml-or-csv-file)**.
+1. On the command bar, select **Import from Excel**,  **[Import from CSV](#import-from-xml-or-csv-file)**, or **[Import from XML](#import-from-xml-or-csv-file)**.
 
    > [!div class="mx-imgBorder"]
    > ![Main menu in Power Apps](media/import.png "Main menu in Power Apps")
@@ -87,7 +87,7 @@ To find an app, search your phone’s online store.
 ### Import from XML or CSV file
 
 >[!NOTE]
->In the below process, we are importing an XML file. Similarly, you can follow the below process to import CSV file.
+>In the below process, we are importing an XML file. Similarly, you can the follow process to import CSV file.
 
 1. On the **Import from XML** pane, select **Choose file** and browse to the folder where you saved the file that contains the export of your contacts. Select the file and then select **Open**.
 
