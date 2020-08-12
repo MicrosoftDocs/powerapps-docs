@@ -164,27 +164,18 @@ Next, we'll configure the data refresh settings for the dataset.
 
 The facility manager Power BI dashboard is used in the model-driven app. Because these reports are published in a different location, you need to change the location.
 
-1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+1. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
 
-2. Select the correct environment, and then select **Settings**.
-
-3. Select **Product** > **Feature**, turn on the **Power BI visualization embedding** toggle, and then select **Save**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
-
-4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
-
-5. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
+2. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-report1.png "Step1")
 
-6. Within the newly created solution, select **Export** . On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
+3. Within the newly created solution, select **Export** . On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
 
-7. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
+4. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
 
-8. Open the customization.xml file,, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
+5. Open the customization.xml file,, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
 
     In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID** and **TileURL** according to your PowerBI workspace and report. You can find this information by opening the Facility Manager report in PowerBI and examine the URL: https://...powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
 
@@ -197,12 +188,12 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 
     See the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
 
-9. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with 3 files in it, including the updated customizations.xml file.  
+6. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with 3 files in it, including the updated customizations.xml file.  
 
-10. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
+7. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
 On the command bar, select **Import**.  On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import.
 
-11. Select **Next**. On the page that displays information about the solution, select **Import**.
+8. Select **Next**. On the page that displays information about the solution, select **Import**.
 
 You might need to wait a few moments while the import is completed. View the results, and then select **Close**.
 
