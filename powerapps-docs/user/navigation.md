@@ -22,7 +22,7 @@ This introduction explains how to find and open an app, and how to work with its
 
 ## Early access feature
 
-If you have enabled early acccess then you will have a different navigation experience. This topic calls out both experiences.
+If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
 
 Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
  
@@ -41,7 +41,11 @@ A model-driven app is built out of applications (apps), areas, and entities.
 
 Use the app-selector menu to switch between apps.
 
-![The app-selector menu](media/app-selector.png "The app-selector menu")
+
+|Current  |Early access  |
+|---------|---------|
+|![The app-selector menu](media/app-selector.png "The app-selector menu")     |      ![The app-selector menu](media/app-selector.png "The app-selector menu")   |
+
 
 The apps you see listed in your app-selector menu will depend on which apps you have access to. 
 
