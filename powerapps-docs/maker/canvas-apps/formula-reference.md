@@ -28,7 +28,7 @@ Other elements include:
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 
-## List of formulas <br>A
+## Later test <br>A
 **[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
 **[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
@@ -62,7 +62,7 @@ Other elements include:
 
 **[Blank](functions/function-isblank-isempty.md)** – Returns a *blank* value that can be used to insert a NULL value in a data source.
 
-##  A
+## <a id="adiff"></a> A
 **[Calendar](functions/function-clock-calendar.md)** – Retrieves information about the calendar for the current locale.
 
 **[Char](functions/function-char.md)** – Translates a character code into a string.
