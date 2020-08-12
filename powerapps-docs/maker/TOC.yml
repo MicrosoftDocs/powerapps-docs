@@ -1472,10 +1472,13 @@
         - name: Portals Web API
           items:
           - name: Overview
+            displayName: Portals Web API overview
             href: ./portals/web-api-overview.md
           - name: Perform operations
+            displayName: Portals Web API perform operations
             href: ./portals/web-api-perform-operations.md
           - name: Compose HTTP requests and handle errors
+            displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
     - name: User management and security in portal
       items:
