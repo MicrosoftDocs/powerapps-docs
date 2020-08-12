@@ -25,7 +25,7 @@ It is the Facility Manager the facilitates the execution of the organizations re
 The left pane lists all the components available in the **Facility Management** area.
 
 > [!div class="mx-imgBorder"]
-> ![Facility management](media/facility-manager-facility-active-facilities.png "Facility management")
+> ![Facility management](media/facility-manager-facility-active-facilities2.png "Facility management")
 
 ## App components
 
@@ -37,19 +37,21 @@ The Facility Safety Management app has the following components:
 
 -  **Facility Groups** - Provides a flexible way to group facilities. For example, by campus or geographical region.
 
+-  **Facility Types** - Type of facility. For example, building, datacenter, parking space.
+
 **Reopen Readiness**
 
 -  **Phase Transitions** - A phase transition is used to create a request to transition to a new phase. When the transition is approved, the facility will be updated with the proposed phase and its associated checklist based upon the phase's configured readiness factors.
-
--  **Readiness Factors** -  Readiness factors are yes-or-no questions about reopening a building. They are linked to the reopening phase by a checklist on a facility.
-
-- **Measurements** -  The actual values for a metric to help track parameters over time. For a single metric, measurements can be entered for each facility.
 
 **Employee**
 
 - **Employee Sentiment** -  Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees using the employee app.
 
 - **Employee Attestation** - Keeps track of employee health assessments or attestations based on a series of questions answered by the employee. This data is typically entered by employees using the employee app.
+
+- **Employee Bookings** - Keeps track of the employee booking having the employee, area, start and end arrival time. This is linked to the employees attestation and recors if there is a visit for that booking.
+
+- **Employee Visits** - Keeps track of the visits. This is linked to an employee and a booking. 
 
 ## Manage and monitor facilities 
 
@@ -76,6 +78,7 @@ By default, two facilities are provided as an example.
    | Facility Number        | Enter a number for the new facility.                  |
    | Name                   | Enter a  name for the new facility.                    |
    | Description            | Enter the description for the new facility.              |
+   | Entry Window Interval  | Select the window interval for entry between 30 mins, 1 hour and none.          |
    | Facility Type          | Select the appropriate facility type.   |
    | Facility Group         | Select an appropriate group for the facility. |
    | Reopen Phase           | Select an appropriate reopen phase.  |
@@ -118,9 +121,12 @@ transitions.
    > [!div class="mx-imgBorder"]
    > ![Facility at a glance](media/facility-manager-facility-at-glance1.png "Facility at a glance")
 
-3. Select the **Details** tab for the facility.
-   > [!div class="mx-imgBorder"]
-   > ![Select details ](media/facility-manager-facility-form-populated.png "Select details")
+3. Exploring the Facility
+
+   - Select the **Details** tab for the facility.
+     > [!div class="mx-imgBorder"]
+     > ![Select details ](media/facility-manager-facility-form-populated.png "Select details")
+
 
    - Select the **Checklist** tab to see checklist items and their completion status.
 
@@ -133,6 +139,18 @@ transitions.
 
      > [!div class="mx-imgBorder"]
      > ![Facility transition](media/facility-manager-facility-transitions.png "Facility transition")
+
+   
+   - Select the **Ocupancy** tab to see and add floors and areas to the facility.
+
+     > [!div class="mx-imgBorder"]
+     > ![Facility transition](media/facility-manager-facility-ocupancy.png "Facility Ocupancy")
+
+   - Select the **Related** tab to see any related acctions.
+
+     > [!div class="mx-imgBorder"]
+     > ![Facility transition](media/facility-manager-facility-related.png "Facility Related")
+
 
 ### Updating the checklist
 

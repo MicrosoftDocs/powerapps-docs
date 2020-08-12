@@ -98,11 +98,19 @@ You can create a new employee contact if the contact doesn't exist.
 
    | **Field**   | **Description**  |
    |---------------|------------------|
+   | User ID| Enter the employees Used ID |
    | First Name | Enter the first name of the employee. |
+   | Middle Name | Enter the middle name of the employee. |
    | Last Name | Enter the last name of the employee.  |
+   | Default Facility | Select the employees default facility |
+   | Default Area | Select a default area |
+   | Assigned Area | Select an assigned area for the employee |
    | Email | Enter an employee email address. |
    | Business Phone| Enter the employee mobile or phone number. |
    | Preferred Method of Contact | Select the method of contact the employee prefers from the drop-list. |
+
+   > [!div class="mx-imgBorder"]
+   > ![Create a contact](media/health-safety-employee-new2.png "Create a contact")
 
 3. Select **Save & Close**. The newly created record is available in the
     **Active Contacts** view.

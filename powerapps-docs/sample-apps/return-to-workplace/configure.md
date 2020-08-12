@@ -129,6 +129,7 @@ In the reopening plan, you define phases that guide a facility to safely reopen 
    | Index | Enter a unique index number to place the phase in the order you want.|
    | Name | Enter a name for the reopen phase.|
    | Description   | Enter the description for the phase. |
+   | Capacity Limit Percentage   | Enter the percentage for this pahse. |
    | Process Stage | Select the appropriate process stage to assign the new reopen phase to. This identifies which stage in the business process flow should be activated. |
 
    > [!div class="mx-imgBorder"]
