@@ -87,9 +87,9 @@ To find an app, search your phone’s online store.
 ### Import from XML or CSV file
 
 >[!NOTE]
->In the below process, we are importing an XML file. Similarly, you can the follow process to import CSV file.
+>In the below process, we are importing an XML file. Similarly, you can follow the process to import CSV file.
 
-1. On the **Import from XML** pane, select **Choose file** and browse to the folder where you saved the file that contains the export of your contacts. Select the file and then select **Open**.
+1. On the **Import from XML** pane, select **Choose file** and browse to the folder where you saved the file that contains the export of your data. Select the file and then select **Open**.
 
    > [!div class="mx-imgBorder"]
    > ![Import selected XML file](media/import-xml.png "Import selected XML file")
