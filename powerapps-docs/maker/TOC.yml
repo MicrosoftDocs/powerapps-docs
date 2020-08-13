@@ -891,6 +891,8 @@
           href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
         - name: Create responsive layout
           href: ./canvas-apps/create-responsive-layout.md
+        - name: Build responsive apps
+          href: ./build-responsive-apps.md
   - name: Test an app with Test Studio
     items:
     - name: Test Studio Overview
