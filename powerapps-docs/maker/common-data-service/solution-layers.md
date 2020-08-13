@@ -2,7 +2,7 @@
 title: "Solution layers  | MicrosoftDocs"
 description: "Learn how you can use solution layers"
 keywords: 
-ms.date: 03/13/2020
+ms.date: 08/05/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
@@ -36,14 +36,14 @@ When you prepare your managed solution for distribution, remember that an enviro
 The processes that Common Data Service uses to merge customizations emphasize maintaining the functionality of the solution. While every effort is made to preserve the presentation, some incompatibilities between customizations may require that the computed resolution will change some presentation details in favor of maintaining the customization functionality. More information: [Understand how managed solutions are merged](../../developer/common-data-service/understand-managed-solutions-merged.md)
 
 ## View the solution layers for a component
-The solution layers feature allows you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill down to view specific changed and unchanged property details for a component. You can access solution layers from the **Components** list or from the **Dependency Details** dialog box in solution explorer. 
+The see solution layers feature allows you to view all component changes that occur due to solution changes over time. Within a solution layer, you can drill down to view specific changed and unchanged property details for a component. You can access solution layers from the **Solutions** area in Power Apps. 
 
-The solution layers feature: 
+The see solution layers feature: 
 -	Lets you see the order in which a solution changed a component. 
 -	Lets you view all properties of a component within a specific solution, including the changes to the component. 
 -	Can be used to troubleshoot dependency or solution-layering issues by displaying change details for a component that was introduced by a solution change.
 
-1. To view solution layers from the **Components** list, open [solution explorer](../model-driven-apps/advanced-navigation.md#solution-explorer). In the **Components** list, select a component, such as **Account**, and then select **Solution Layers** on the toolbar. 
+1. Sign in to Power Apps, select **Solutions**, open the solution you want, select **...** next to a component, such as **Account**, and then select **See solution layers**.
 
    > [!div class="mx-imgBorder"] 
    > ![Solution layers button](media/solution-layers-toolbar.png "Solution layers button")
@@ -67,6 +67,23 @@ The solution layers feature:
    > ![Solution layer localized labels](media/localized-labels.png "Solution layer localized labels")
 
     Select a label to see its full layering.
+
+There are additional tabs available for specific component solution layers. 
+
+|Tab name  |Description  |Possible value  |
+|---------|---------|---------|
+|RolePrivileges     | Displays the privileges for a security role.   | Added, Updated, Removed, Unchanged   |
+|AttributePicklistValues (optionset)  | When selected for a global optionset, displays the possible values for an optionset.   | Added, Updated, Removed, Unchanged        |
+|AttributePicklistValues (optionset attribute)   |  When selected for an optionset attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
+
+## Remove an unmanaged layer
+
+Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the the unmanaged layer for a component, follow these steps: 
+
+1. Open the solution you want, select **...** next to a component, such as **Account**, and then select **See solution layers**.
+2. If an unmanaged layer is detected, a message appears indicating the layer. On the left **Properties** pane, select **Remove unmanaged layer**. 
+    > [!div class="mx-imgBorder"] 
+    > ![Remove unmanaged layer](media/remove-unmanaged-layer.png)
 
 ### See also
 [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md) <br />
