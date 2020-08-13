@@ -1,5 +1,5 @@
 ---
-title: Create responsive layouts in canvas apps | Microsoft Docs
+title: Build responsive apps in canvas apps | Microsoft Docs
 description: Reference information about building responsive apps in canvas apps
 author: emcoope-msft
 manager: kvivek
@@ -15,7 +15,7 @@ search.app:
   - PowerApps
 ---
 
-# Building Responsive Apps  
+# Building responsive apps  
 
 [This article is pre-release documentation and is subject to change.]
 
@@ -31,7 +31,7 @@ Responsiveness allows different parts of the app to specify how they:
 > - This feature is in public preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
 > - Preview features aren’t meant for production use and may have restricted functionality. These features are available before an official release so that customers can get early access and provide feedback.
 
-## Why build responsive apps?
+## Why should you build responsive apps
 
 End users can access your app from different devices such as phones, tablets, laptops, and desktops with large monitors, they will be viewing the app in different screen sizes and with different number of pixels. 
 
@@ -66,24 +66,19 @@ Before you start using the responsive layouts, you need to do the following:
 
 The following responsive layouts can be created by adding a new screen and selecting the appropriate option from the **Layout** tab: 
 
-
-### Split Screen 
+### Split Screen
 
 This layout has two sections, each taking 50% of the width of the screen on desktops.  On mobile devices, the sections are placed one below the other, each taking up the entire width. 
 
-### Sidebar 
+### Sidebar
 
 This layout has a fixed-width sidebar on the left.  The main-body consists of a fixed-height header and the main section, which take up the rest of the width.  By default, the template has the same behavior on mobile, however some customizations are recommended based on the UI pattern desired for the mobile experience. 
 
-### Considerations for mobile 
+### Considerations for mobile
 
 This template can be modified to implement a popular design pattern for mobile apps - having a hamburger menu that appears and allows the user to navigate to a screen (or record) and then disappears. 
 
 By adding formulas to conditionally show the sidebar or the main components, this pattern can be implemented with Auto-layout containers. 
-
-Instructions needed… 
-
- 
 
 ### Header, Main Section, Footer 
 
@@ -95,25 +90,25 @@ Containers are building blocks of all responsive design.  A container can be an 
 
 Below are some tips for building your app’s UI with containers: 
 
-Always create UI elements that form a UI entity inside a container 
+- Always create UI elements that form a UI entity inside a container 
 
-Allows that container to have its own responsive properties and settings to specify how it is positioned or resized on different screen sizes. 
+- Allows the container to have its own responsive properties and settings to specify how it is positioned or resized on different screen sizes.
 
-Allows you to change how its children are laid out with respect to responsiveness. 
+- Allows you to change how its child components are laid out with respect to responsiveness. 
 
 Choose one of two layout modes for a container: Manual layout or Auto layout (horizontal or vertical) 
 
- ### Auto-layout containers 
+### Auto-layout containers 
 
 Two new controls, `Vertical Container` and `Horizontal Container`, can be used to automatically lay out child components. 
 
 These containers determine the position of its child components, so you never have to set X, Y on a component inside this container. Also, it can distribute the available space to its child components based on their settings, as well as determine both vertical and horizontal alignment of the child components.  
 
-You can use auto-layout containers in the following use-cases:
+You can use auto-layout containers in the following use cases:
 
 - UI needs to be responsive to screen size or form factor changes.
 
-- There is more than one child component that needs to resize or move around based on the screen size or form factor changes. 
+- There is more than one child component that needs to resize or move around based on the screen size or form factor changes.
 
 - When you need to stack items vertically or horizontally (regardless of their size).
 
@@ -139,9 +134,9 @@ In what direction does the container layout its children
 
 The following properties can be set on any child for an auto-layout container (vertical or horizontal): 
 
-|Property|Description|Parameters|
+|Property|Description|Parameters/Value|
 |--------|-----------|----------|
-|AlignInContainer|How this individual component is aligned in the parent. The default value, SetByContainer, inherits the value from the parent’s LayoutAlignItems property, while other properties can be used to customize the alignment for this individual child component. | SetByContainer, Start, End, Center, Stretch | 
-|GrowthPortions|Determines how this individual component grows when there is more screen real-estate assigned to its parent.  The number represents the portion of the extra space given to this component out of all the available extra space claimed by children of its parent.  If child A has GrowthPortions set to 1 and child B has GrowthPortions set to 2, child A will get 1/3 of the extra space available while child B will get 2/3 of the extra available space.| int |
-|MinWidth, MinHeight|When GrowthPortions are used, represent the minimum size of the component in the direction of the GrowthPortions (that is, the parent’s LayoutDirection) | number |
+|AlignInContainer|Defines how the individual component is aligned to the parent. The default value, `SetByContainer`, inherits the value from the parent’s `LayoutAlignItems` property, while other properties can be used to customize the alignment for the individual child component. | SetByContainer, Start, End, Center, Stretch | 
+|GrowthPortions|Determines how the individual component grows when there is more screen real-estate assigned to its parent.  The number represents the portion of the extra space given to the component out of all the available extra space claimed by children of its parent.  For example, if child A has `GrowthPortions` set to 1 and child B has `GrowthPortions` set to 2, child A gets 1/3 of the extra space available while child B gets 2/3 of the extra available space.| int |
+|MinWidth, MinHeight|When GrowthPortions is used, represent the minimum size of the component in the direction of the GrowthPortions (that is, the parent’s LayoutDirection) | Number |
 |||
