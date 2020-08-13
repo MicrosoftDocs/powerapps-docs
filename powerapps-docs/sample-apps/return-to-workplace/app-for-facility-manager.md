@@ -89,11 +89,16 @@ By default, two facilities are provided as an example.
    | Address State/Province | Enter the state or province.      |
    | Address Country        | Enter a country.        |
 
-3. After filling in **details**, click on **save**. Go under the **Occypancy** tabb and fill in the required information to create **floors** and **areas** linked to the new facility. 
+3. Select **Save & Close**. The newly created record is available in the
+    **Active Facility Types** view.
 
-**New Floor**
+### Create a Floor and Area 
 
-Click on **+New Floor** and fill in the form.
+When creating a facility, you can link a floor and area to this.
+
+1. Open the new Facility and go under the **Occupancy** tabb. 
+
+2. Click on **+New Floor** and fill in the form.
 
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-floor.png "New facility form")
@@ -107,9 +112,9 @@ Click on **+New Floor** and fill in the form.
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-floor2.png "New facility form")
 
-**New Area**
+3. Select **save** and now the **area** option enables.
 
-After filling in a floor and clicking **save**, a floor is created and the **area** option enables. Create an area, linked to the new floor, by clicking on **+New Area** and filling the form.
+4. Create an area, linked to the new floor, by clicking on **+New Area** and filling the form.
 
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-area.png "New facility form")
@@ -124,8 +129,7 @@ After filling in a floor and clicking **save**, a floor is created and the **are
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-area2.png "New facility form")
 
-4. Select **Save & Close**. The newly created record is available in the
-    **Active Facility Types** view.
+4. Select **Save & Close**. 
 
 To edit the record, select it, update the values, and then select **Save & Close**.
 
