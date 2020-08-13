@@ -1777,7 +1777,9 @@
     - name: Overview
       href: ../sample-apps/return-to-workplace/overview.md
     - name: Deploy the solution
-      href: ../sample-apps/return-to-workplace/deploy.md   
+      href: ../sample-apps/return-to-workplace/deploy.md
+    - name: Upgrade Solution
+      href: ../sample-apps/return-to-workplace/upgrade.md      
     - name: Configure the solution
       href: ../sample-apps/return-to-workplace/configure.md
     - name: Location Readiness dashboard
@@ -1790,8 +1792,6 @@
       href: ../sample-apps/return-to-workplace/app-for-employee.md
     - name: Extend the solutions
       href: ../sample-apps/return-to-workplace/extend.md
-    - name: Upgrade Solution
-      href: ../sample-apps/return-to-workplace/upgrade.md   
 - name: Learn from others
   items:
   - name: Blog
