@@ -1790,6 +1790,8 @@
       href: ../sample-apps/return-to-workplace/app-for-employee.md
     - name: Extend the solutions
       href: ../sample-apps/return-to-workplace/extend.md
+    - name: Upgrade Solution
+      href: ../sample-apps/return-to-workplace/upgrade.md   
 - name: Learn from others
   items:
   - name: Blog

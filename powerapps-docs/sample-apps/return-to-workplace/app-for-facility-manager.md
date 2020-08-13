@@ -89,7 +89,28 @@ By default, two facilities are provided as an example.
    | Address State/Province | Enter the state or province.      |
    | Address Country        | Enter a country.        |
 
-3. Select **Save & Close**. The newly created record is available in the
+3. After filling in **details**, click on **save**. Go under the **Occypancy** tabb and fill in the required information to create **floors** and **areas** linked to the new facility. 
+
+**New Floor**
+Click on **+New Floor** and fill in the form.
+
+| **Field**       | **Description**                                |
+   |--------------|------------------------------------------------|
+   | Floor        | Name for the floor.                 |
+   | Floor Index  | Number stablished for the floor.                    |
+   | Facility     | Must be the newly facility name.             |
+
+**New Area**
+After filling in a floor and clicking **save**, a floor is created and the **area** option enables. Create an area, linked to the new floor, by clicking on **+New Area** and filling the form.
+
+| **Field**       | **Description**                                |
+   |--------------|------------------------------------------------|
+   | Area        | Name for the area.                 |
+   | Facility  | By default, the newly created facility.                   |
+   | Floor     | By default, the newly floor created.           |
+   | Capacity    | People capacity for the area.             |
+
+4. Select **Save & Close**. The newly created record is available in the
     **Active Facility Types** view.
 
 To edit the record, select it, update the values, and then select **Save & Close**.
@@ -141,7 +162,7 @@ transitions.
      > ![Facility transition](media/facility-manager-facility-transitions.png "Facility transition")
 
    
-   - Select the **Ocupancy** tab to see and add floors and areas to the facility.
+   - Select the **Occupancy** tab to see and add floors and areas to the facility.
 
      > [!div class="mx-imgBorder"]
      > ![Facility transition](media/facility-manager-facility-ocupancy.png "Facility Ocupancy")
