@@ -67,7 +67,7 @@ It's easy to get around and get back to your favorite or most-used records. The 
 
 Usually, when you first open an entity, you'll see the list view, which shows a list of records belonging to that entity, formatted as a table. For example, if you open the **Accounts** entity, you'll see a list of accounts.
 
-![A typical list view](media/list-view.png "A typical list view")
+![A typical list view](media/list-view1.png "A typical list view")
 
 Legend:
 
