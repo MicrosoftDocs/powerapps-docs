@@ -92,7 +92,7 @@ By default, two facilities are provided as an example.
 3. Select **Save & Close**. The newly created record is available in the
     **Active Facility Types** view.
 
-### Create a Floor and Area 
+### Create a Floor 
 
 When creating a facility, you can link a floor and area to this.
 
@@ -103,21 +103,28 @@ When creating a facility, you can link a floor and area to this.
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-floor.png "New facility form")
 
+   > [!div class="mx-imgBorder"]
+   > ![New facility form](media/facility-manager-floor2.png "New facility form")
+
 | **Field**       | **Description**                                |
    |--------------|------------------------------------------------|
    | Floor        | Name for the floor.                 |
    | Floor Index  | Number stablished for the floor.                    |
    | Facility     | Must be the newly facility name.             |
 
-   > [!div class="mx-imgBorder"]
-   > ![New facility form](media/facility-manager-floor2.png "New facility form")
+3. Select **save**.
 
-3. Select **save** and now the **area** option enables.
+### Create am Area
 
-4. Create an area, linked to the new floor, by clicking on **+New Area** and filling the form.
+Once a floor is created, the **area** option enables to be linked to it.
+
+1. Click on **+New Area** and filling the form.
 
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-area.png "New facility form")
+
+   > [!div class="mx-imgBorder"]
+   > ![New facility form](media/facility-manager-area2.png "New facility form")
 
 | **Field**       | **Description**                                |
    |--------------|------------------------------------------------|
@@ -125,9 +132,6 @@ When creating a facility, you can link a floor and area to this.
    | Facility  | By default, the newly created facility.                   |
    | Floor     | By default, the newly floor created.           |
    | Capacity    | People capacity for the area.             |
-
-   > [!div class="mx-imgBorder"]
-   > ![New facility form](media/facility-manager-area2.png "New facility form")
 
 4. Select **Save & Close**. 
 
