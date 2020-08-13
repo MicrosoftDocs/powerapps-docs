@@ -99,14 +99,20 @@ When you choose an entity name from the **Related** drop-down list, a new tab na
 
 Navigate through multiple records by using preset views and queries. The record-focused navigation improves productivity by allowing users to jump from record to record in the list and easily navigate back without losing their working list.
 
-> [!div class="mx-imgBorder"]
-> ![Record set navigation](media/recordset1.png "Record set navigation")
+
+
+|Current  |Early access  |
+|---------|---------|
+|!![Record set navigation](media/recordset1.png "Record set navigation")    |      ![Record set navigation](media/recordsetnav.gif "This show how to use the record set navigation feature")   |
+
+
+
 
 ## Reference panel
 
 The reference panel is a great way to get work done without moving away from the screen you're on. You can look up other related items&mdash;such as cases or opportunities for an account&mdash;within the context of the record you're viewing, without having to navigate to other screens.
 
-> [!div class="mx-imgBorder"]
+
 > ![Reference panel](media/reference-panel1.png "Reference panel")
 
  Watch this video to learn more about the reference panel:
