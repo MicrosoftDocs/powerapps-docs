@@ -100,7 +100,7 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
   
  Assuming you will be adding custom icons for an option-set type of attribute, which has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid localization issues. 
 
- **Note**: If it is necessary to retrieve data to determine the icon, Unified Interface supports returning a Promise which resolves to a boolean (similar to ribbon rules).  Do not use synchronous XHR's in your custom function. 
+ **Note**: If it is necessary to retrieve data to determine the icon, Unified Interface supports returning a JavaScript Promise object which resolves to a boolean (similar to ribbon rules).  Do not use a synchronous XMLHttpRequest (XHR) in your custom function.
   
  The following sample code displays icons and tooltips based on one of three values (1: Hot, 2: Warm, 3: Cold) in the opportunityratingcode (Rating) attribute. The sample code also shows how to display localized tooltip text. For this sample to work, you must create three image web resources with 16x16 images with the following names: new_Hot, new_Warm, and new_Cold.  
 
