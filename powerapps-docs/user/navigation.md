@@ -103,7 +103,7 @@ Navigate through multiple records by using preset views and queries. The record-
 
 |Current  |Early access  |
 |---------|---------|
-|!![Record set navigation](media/recordset1.png "Record set navigation")    |      ![Record set navigation](media/recordsetnav.gif "This show how to use the record set navigation feature")   |
+|![Record set navigation](media/recordsetnav.gif "This show how to use the record set navigation feature")     |      ![Record set navigation](media/recordsetnav.gif "This show how to use the record set navigation feature")   |
 
 
 
