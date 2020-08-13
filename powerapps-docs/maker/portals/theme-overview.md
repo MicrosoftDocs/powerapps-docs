@@ -54,6 +54,9 @@ The selected theme is applied to your portal.
 
 ![Applied theme](./media/theme-overview/theme-applied.png "Applied theme")
 
+> [!NOTE]
+> After changing theme or theme properties such as colors inside the Studio, select **Browse website** to view the changes in a separate browser tab. If you make multiple changes using this method and switch to different pages inside the browser, the stale browser cache may cause your browser to show theme changes that aren't latest. If this happens, use **Ctrl+F5** to reload the page.
+
 ## Create a new theme
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
