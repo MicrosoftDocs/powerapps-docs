@@ -947,6 +947,8 @@
           href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
         - name: How to work with permissions in a lookup list from SharePoint site?
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
+        - name: How to create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items?
+          href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
@@ -1470,10 +1472,13 @@
         - name: Portals Web API
           items:
           - name: Overview
+            displayName: Portals Web API overview
             href: ./portals/web-api-overview.md
           - name: Perform operations
+            displayName: Portals Web API perform operations
             href: ./portals/web-api-perform-operations.md
           - name: Compose HTTP requests and handle errors
+            displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
     - name: User management and security in portal
       items:
