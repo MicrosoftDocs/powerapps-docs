@@ -92,7 +92,11 @@ By default, two facilities are provided as an example.
 3. After filling in **details**, click on **save**. Go under the **Occypancy** tabb and fill in the required information to create **floors** and **areas** linked to the new facility. 
 
 **New Floor**
+
 Click on **+New Floor** and fill in the form.
+
+   > [!div class="mx-imgBorder"]
+   > ![New facility form](media/facility-manager-floor.png "New facility form")
 
 | **Field**       | **Description**                                |
    |--------------|------------------------------------------------|
@@ -100,8 +104,15 @@ Click on **+New Floor** and fill in the form.
    | Floor Index  | Number stablished for the floor.                    |
    | Facility     | Must be the newly facility name.             |
 
+   > [!div class="mx-imgBorder"]
+   > ![New facility form](media/facility-manager-floor2.png "New facility form")
+
 **New Area**
+
 After filling in a floor and clicking **save**, a floor is created and the **area** option enables. Create an area, linked to the new floor, by clicking on **+New Area** and filling the form.
+
+   > [!div class="mx-imgBorder"]
+   > ![New facility form](media/facility-manager-area.png "New facility form")
 
 | **Field**       | **Description**                                |
    |--------------|------------------------------------------------|
@@ -109,6 +120,9 @@ After filling in a floor and clicking **save**, a floor is created and the **are
    | Facility  | By default, the newly created facility.                   |
    | Floor     | By default, the newly floor created.           |
    | Capacity    | People capacity for the area.             |
+
+   > [!div class="mx-imgBorder"]
+   > ![New facility form](media/facility-manager-area2.png "New facility form")
 
 4. Select **Save & Close**. The newly created record is available in the
     **Active Facility Types** view.
