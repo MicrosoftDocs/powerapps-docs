@@ -161,6 +161,11 @@ From the Power Apps maker portal in the environment where you imported the Expor
 > [!div class="mx-imgBorder"] 
 > ![Imported Export to Data Lake entities](media/imported-export-entities.png "Imported Export to Data Lake entities") 
 
+### What's next?
+After successfully using the Export to Data Lake service, discover how you can analyze and consume your data with **Discover Hub**. To access **Discover Hub**, navigate to **Power Apps** > **Export to data lake**. Select your linked service and then select the **Discover Hub** tab. Here you can access links to different docuemntation describing the tools and how they can help analyze your exported common data service data.
+
 ### See also
 
 [Blog: Exporting CDS data to Azure Data Lake](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/)
+[Analyze exported data with Power BI](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/export-to-data-lake-data-powerbi)
+[Ingest exported data with Azure Data Factory](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/export-to-data-lake-data-adf)
