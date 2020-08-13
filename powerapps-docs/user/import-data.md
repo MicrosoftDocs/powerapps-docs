@@ -96,9 +96,6 @@ To find an app, search your phone’s online store.
 
 2. Select **Next**.
 
-    >[!NOTE]
-    >The application might take few seconds to display data on the **Import from XML** pane and wait until the **Review Mapping** option appears.    
-
 3. (Optional) If you have to update the existing records in Dynamics 365 through import XML file, use the alternate key. Select it from the **Alternate Key** drop-down list. This option is available only when an alternate key is defined for the entity.
 
     The alternate key is used to uniquely identify and update records during import. More information: [Define alternate keys to reference Dynamics 365 records](https://docs.microsoft.com/previous-versions/dynamicscrm-2016/administering-dynamics-365/dn949335(v=crm.8)?redirectedfrom=MSDN).
@@ -167,7 +164,7 @@ After the wizard finishes, check your data (for example, list of contacts) to ma
 2. Scroll through the contact list. Check that each person is listed and verify the contents of the fields for accuracy.
 
 >[!NOTE]
->Verify the import logs to view the status of the imported records. To view the import logs, go to **Settings** > **System** > **Data management** > **Imports**.
+>To verify the status of the imported records, view import logs. To view the import logs, go to **Settings** > **System** > **Data management** > **Imports**.
 
 ## Import double-byte characters 
 
