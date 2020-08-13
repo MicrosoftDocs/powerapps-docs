@@ -40,9 +40,9 @@ Captured media is referenced by a text string URI. For more information, read th
 > [!NOTE]
 > The microphone control is supported only on Microsoft Edge based on Chromium, Chrome, and Firefox browsers; and Android and iOS devices. All other browsers and platforms will show a warning that some features of the app won't work.
 
-## Considerations for Teams
+## Considerations for Teams Mobile
 
-You can use the Microphone control in apps created inside Microsoft Teams similarly to how you use it in canvas apps. However, there are three key differences:
+The following conditions apply when using the Microphone control in apps created using Power Apps on Teams Mobile:
 
 1. The audio format for microphone recordings in Teams will always be *AAC* with a file extension of .MP4.
 1. Teams has its own recording experience. Hence, the microphone control inside apps created using Power Apps will be disabled during the recording period.
