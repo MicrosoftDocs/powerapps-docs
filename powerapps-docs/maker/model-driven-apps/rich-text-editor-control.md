@@ -152,7 +152,7 @@ The following sample sets the several options in the rich text editor such as th
 
 ## Known issue
 
-HTML markup is displayed in the field is displayed in a field configured to use the rich text editor when the field is part of a subgrid.
+HTML markup is displayed in the field configured to use the rich text editor when the field is part of a subgrid.
 ![HTML markup displayed in a field on a subgrid.](media/html-markup-issue.png)
 
 ### See also
