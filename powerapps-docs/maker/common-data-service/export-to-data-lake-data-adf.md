@@ -79,17 +79,17 @@ In this example, account entity data is exported to the data lake.
     2. Select **+** in the pop-up window to add a new package source. 
        ![Add a new package](media/add-new-package.png "Add a new package")
 
-6.  Configure the new package source, and then select **OK**:
+    3.  Configure the new package source, and then select **OK**:
 
-    1.  For **Name**, enter **CDM**.
+        1.  For **Name**, enter **CDM**.
 
-    2.  For **Source**, enter **https[]()://commondatamodel.pkgs.visualstudio.com/_packaging/CDM/nuget/v3/index.json**.
+        2.  For **Source**, enter **https[]()://commondatamodel.pkgs.visualstudio.com/_packaging/CDM/nuget/v3/index.json**.
 
-7.  Make sure that the package source is set to **All**.
+    4.  Make sure that the package source is set to **All**.
 
 8.  In Program.cs, fill in the storage container information on line 26, as indicated here:
 
-    1. Replace <span><b>your-storage-account.dfs.core.windows.net</b></span> by substituting the name of your storage account.
+    1. Replace **your-storage-account** by substituting the name of your storage account.
        ![Your storage account substitution](media/your-storage-account.png "Your storage account substitution")
 
     1. Replace **your-folder-name** with the folder containing the model.json file. Go to your storage account **Overview** > **Storage Explorer** > **Containers**, and then select the correct folder name. 
@@ -100,6 +100,9 @@ In this example, account entity data is exported to the data lake.
 9.  Optionally, you can change the name of the manifest file as indicated in the code comments.
 
 10.  Run the code, and refresh your storage container to find the new manifest, entity, resolved entity, and config files.
+
+> [!NOTE]
+> If there are changes made to the metadata of the entity, you must delete the generated files from the Data Lake and re-generate an updated manifest file by running the code again. It is recommended that you maintain the same name of the manaifest file, so there is no need to update any Azure Data Factory data flows or pipelines.
 
 ## Set the Data Lake Storage Gen2 storage account as a source
 
