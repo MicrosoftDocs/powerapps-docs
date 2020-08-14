@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 649fe7b0-016d-409f-ba3c-b14e0f1953e0
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +15,6 @@ search.app:
   - D365CE
 ---
 # getNavigationBehavior (Client API reference)
-
-
 
 [!INCLUDE[./includes/getNavigationBehavior-description.md](./includes/getNavigationBehavior-description.md)]
 
