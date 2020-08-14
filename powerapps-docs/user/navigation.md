@@ -99,13 +99,13 @@ When you choose an entity name from the **Related** drop-down list, a new tab na
 
 Navigate through multiple records by using preset views and queries. The record-focused navigation improves productivity by allowing users to jump from record to record in the list and easily navigate back without losing their working list.
 
-### Current
+**Current**
 
 This is how record set navigation currently works.
 
 ![Record set navigation](media/recordsetnav.gif "This show how to use the record set navigation feature")     
 
-### Early Access
+**Early Access**
 
 This is how record set navigation works in early access. 
 
