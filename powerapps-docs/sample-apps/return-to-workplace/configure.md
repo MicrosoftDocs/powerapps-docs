@@ -315,7 +315,7 @@ This flow runs twice a day and will randomly move cases one step forward through
 
 - Sample Data - Visits
 
-This flow runs sometime after the 'Sample Data - Generate Employee Records' flow. It will create a visit record for the current time for each employee to their default facility. The prerequisites are more stringent then need be, to ensure all created visits can be matched to a booking created by the 'Sample Data - Generate Employee Records' flow. Prerequisites: Employees are active, have a default facility assigned and an assigned area that is part of that default facility.
+This flow runs twice a day and will create a visit record for each employee for their default facility. When an employee is active, has a default facility assigned and an assigned area that is part of that default facility, then the visit will also be linked to a booking or attestation.
 
 ## Bulk record deletion
 
