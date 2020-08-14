@@ -1,6 +1,6 @@
 ---
-title: Dataflex vs Dataflex Pro | Microsoft Docs
-description: Explains the differences between Dataflex and Dataflex Pro.
+title: Project Oakdale vs Common Data Service | Microsoft Docs
+description: Explains the differences between Project Oakdale and Common Data Service.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,13 +10,13 @@ ms.author: nhelgren
 ms.reviewer: matp
 ---
 
-# How are Dataflex and Dataflex Pro different?
+# How are Project Oakdale and Common Data Service different?
 
-Applications within a Team have access to a Microsoft Dataflex environment.  Dataflex is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Dataflex delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Dataflex environment can contain, Dataflex can be upgraded to Dataflex Pro.
+Applications within a Team have access to a Project Oakdale environment.  Project Oakdale is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Project Oakdale delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Project Oakdale environment can contain, Project Oakdale can be upgraded to Common Data Service.
 
-The table below outlines the differences between Dataflex table and Dataflex Pro entity features:
+The table below outlines the differences between Project Oakdale table and Common Data Service entity features:
 
-|Feature  |Dataflex  |Dataflex Pro  |
+|Feature  |Project Oakdale  |Common Data Service  |
 |---------|---------|---------|
 |Basic data types     |  Yes       |  Yes       |
 |Advanced data types​ (customer, multiple transaction currencies)      |  No       |  Yes       |
@@ -29,19 +29,19 @@ The table below outlines the differences between Dataflex table and Dataflex Pro
 |Advanced and relevance search​      |   No      | Yes        |
 |Mobile offline     |  No       |  Yes       |
 
-Also note that most of the standard tables that are provided with a Dataflex Pro environment will not be present as part of Dataflex.
+Also note that most of the standard tables that are provided with a Common Data Service environment will not be present as part of Project Oakdale.
 
 ## Key terminology changes
 
-Some terminology has changed between Dataflex Pro and Dataflex to make it easier for a broader audience. The table below provides a mapping between Dataflex Pro and Dataflex:
+Some terminology has changed between Common Data Service and Project Oakdale to make it easier for a broader audience. The table below provides a mapping between Common Data Service and Project Oakdale:
 
 
-|Dataflex  |Dataflex Pro  |
+|Project Oakdale  |Common Data Service  |
 |---------|---------|
 |Table, Tables     | Entity, entities        |
 |Column, columns     |  Field, fields <br /> attribute, attributes       |
 
-Most of the processes for creating and managing tables in Dataflex are the same as creating and managing entities in Dataflex Pro. Where applicable, these articles about Dataflex link you to the Dataflex Pro documentation that provide more detail.  
+Most of the processes for creating and managing tables in Project Oakdale are the same as creating and managing entities in Common Data Service. Where applicable, these articles about Project Oakdale link you to the Common Data Service documentation that provide more detail.  
 
 ### See also
 [Create a table](create-table.md)

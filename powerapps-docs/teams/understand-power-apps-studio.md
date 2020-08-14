@@ -323,7 +323,7 @@ environment by expanding the **Tables** option.
 
 ![Add data](media/studio-add-1.png "Add data")
 
-Select **Create new table** to create a new table inside the Dataflex
+Select **Create new table** to create a new table inside the Project Oakdale
 environment.
 
 To choose other connectors such as SharePoint, OneDrive or SQL Server, you can
@@ -382,7 +382,7 @@ Power Apps Studio:
 
 ###### Advanced options
 
-The advanced options of columns change depending on the type of the column. For example, a **Text** column type has advanced option of **Max length.** **Auto number** column type instead has more options such as the type of auto numbering, prefixes, and maximum number of digits. For more information about the data types of columns in a Dataflex table, go to [types of
+The advanced options of columns change depending on the type of the column. For example, a **Text** column type has advanced option of **Max length.** **Auto number** column type instead has more options such as the type of auto numbering, prefixes, and maximum number of digits. For more information about the data types of columns in a Project Oakdale table, go to [types of
 columns](../maker/common-data-service/types-of-fields.md).
 
 ##### Show/hide columns

@@ -11,7 +11,7 @@ ms.reviewer: matp
 ---
 
 # Work with table relationships
-Table relationships define the ways that table records can be associated with records from other tables or the same table. There are three types of table relationships. Microsoft Dataflex allows for the creation of the same relationship types as Microsoft Dataflex Pro:
+Table relationships define the ways that table records can be associated with records from other tables or the same table. There are three types of table relationships. Project Oakdale allows for the creation of the same relationship types as Common Data Service:
 - One-to-many relationships. In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class of students have a single classroom.
 - Many-to-one relationships. In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, one single teacher teaches many classes.
 - Many-to-many relationships. In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
@@ -33,10 +33,10 @@ To add a lookup relation to a table, create a relation under the **Relationships
    > [!div class="mx-imgBorder"] 
    > ![Add relationship](media/create-relate-table3.png)
 
-The rest of the process is nearly identical to Dataflex Pro with the exception that none of the collaboration features are available as in Dataflex Pro, such as allow feedback or enable SharePoint document management. More information: [Create a relationship between entities](../maker/common-data-service/data-platform-entity-lookup.md) 
+The rest of the process is nearly identical to Common Data Service with the exception that none of the collaboration features are available as in Common Data Service, such as allow feedback or enable SharePoint document management. More information: [Create a relationship between entities](../maker/common-data-service/data-platform-entity-lookup.md) 
 
 ## Edit a table Relationship
-Editing relationships in Dataflex works the same as Dataflex Pro except you can’t manage the collaboration functions, such as allow feedback or enable SharePoint document management. More information: [Relationship actions](/maker/common-data-service/create-edit-entity-relationships#actions)
+Editing relationships in Project Oakdale works the same as Common Data Service except you can’t manage the collaboration functions, such as allow feedback or enable SharePoint document management. More information: [Relationship actions](/maker/common-data-service/create-edit-entity-relationships#actions)
 
 ## Delete a table Relationship
 While viewing table relationships, select the table relationship you want to delete and then do one of the following:
