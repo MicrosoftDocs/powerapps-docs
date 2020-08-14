@@ -13,7 +13,7 @@ ms.reviewer:
 
 With the significant number of enterprise employees working remotely and millions of them meeting and collaborating through Microsoft Teams, there’s been significant interest in building low code and no code applications that could make remote work easier and more productive.
 
-Introducing Project Oakdale, a built-in, low-code data platform for Microsoft Teams that empowers users to build custom apps and workflows in Teams using Power Apps and Power Automate. Project Oakdale&mdash;built on Common Data Service (formerly Common Data Service)&mdash;provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment to Teams app store.  
+Introducing Project Oakdale, a built-in, low-code data platform for Microsoft Teams that empowers users to build custom apps and workflows in Teams using Power Apps and Power Automate. Project Oakdale&mdash;built on Common Data Service&mdash;provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment to Teams app store.  
 
 The new capability provides an integrated experience for app makers to create and edit apps and workflows, and them quickly publish them for anyone on the team to use without having to switch between multiple apps and services. With the Power Apps Studio embedded in Teams and the new built-in data platform providing an easy-to-use editable data table, users can quickly build apps based on custom data tables that are Teams and scenario specific.
 
