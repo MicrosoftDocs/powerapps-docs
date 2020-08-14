@@ -141,7 +141,7 @@ To find an app, search your phone’s online store.
 
 7. If some data in your source file references other existing records in Dynamics 365 Sales, you must map the column in the source file to a lookup field of Dynamics 365 Sales.
 
-    For example, you might want to import a file named Leads.csv, which contains customer records. The **Customer** column in Leads.csv contains the associated account or contact data. To map this, select the The **Lookup Reference** button button next to the lookup field. The **Lookup Reference** section opens and lists the entities related to the current entity.
+    For example, you might want to import a file named Leads.csv, which contains customer records. The **Customer** column in Leads.csv contains the associated account or contact data. To map this, select the **Lookup Reference** button next to the lookup field. The **Lookup Reference** section opens and lists the entities related to the current entity.
 
     > [!div class="mx-imgBorder"]
     > ![The Lookup Reference section](media/import-lookup-reference-section.png "The Lookup Reference section")
