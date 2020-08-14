@@ -170,5 +170,7 @@ After successfully using the Export to Data Lake service, discover how you can a
 ### See also
 
 [Blog: Exporting CDS data to Azure Data Lake](https://powerapps.microsoft.com/blog/exporting-cds-data-to-azure-data-lake-preview/)
+
 [Analyze exported data with Power BI](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/export-to-data-lake-data-powerbi)
+
 [Ingest exported data with Azure Data Factory](https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/export-to-data-lake-data-adf)
