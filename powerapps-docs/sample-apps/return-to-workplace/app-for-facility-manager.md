@@ -260,7 +260,7 @@ A reviewer&mdash;for instance, a facility manager supervising many facility mana
    |-----------------------|---------------|
    | Proposed Reopen Phase | Select the next reopen phase you want to transition to.|
    | Summary | Enter the summary information about moving to the next or targeted reopen phase. |
-   | Reviewer | Select appropriate resources to review and approve the new transition. |
+   | Reviewer | Select appropriate resources to review and approve the new transition. By default this only shows facility managers, by changing the view you can select other users. |
 
 5. Select **Save & Close**. The newly created record is available in the **Transitions** tab subgrid for the facility.
 
