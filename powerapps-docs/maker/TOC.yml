@@ -1741,11 +1741,11 @@
     href: ../teams/create-additional-apps.md
   - name: Use Teams integration object
     href: ../teams/use-teams-integration-object.md
-  - name: Work with ***REMOVED***
+  - name: Work with Project Oakdale
     items:
       - name: Overview
         href: ../teams/overview-tables.md
-      - name: ***REMOVED*** vs ***REMOVED*** Pro
+      - name: Project Oakdale vs Commonn Data Service
         href: ../teams/data-platform-compare.md
       - name: Create a table
         href: ../teams/create-table.md

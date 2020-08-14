@@ -1,6 +1,6 @@
 ---
 title: Create a table in Teams | Microsoft Docs
-description: Explains how to create a ***REMOVED*** table.
+description: Explains how to create a Project Oakdale table.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
@@ -12,10 +12,10 @@ ms.reviewer: matp
 
 # Create tables in Teams 
 
-In Teams, data is defined by *tables*, which are the same as *entities* in Microsoft ***REMOVED*** Pro. To create a table, you must be a member of a team. 
+In Teams, data is defined by *tables*, which are the same as *entities* in Common Data Service. To create a table, you must be a member of a team. 
 
 ## Types of tables
-While Microsoft ***REMOVED*** Pro has two types of entities that can be created (standard entity with ownership defined and activity entity), you can only create standard tables in ***REMOVED***.
+While Common Data Service has two types of entities that can be created (standard entity with ownership defined and activity entity), you can only create standard tables in Project Oakdale.
 
 You define the type of table under the **More settings** option when you create a table.
 
@@ -39,7 +39,7 @@ There are four different types of table ownership. When you create a table, the 
     - **Plural display name**: The name used to reflect multiple of what the table contains. For example, *Products*.
     - **Name**: A unique internal name for the table. Unlike the display name, once saved this value can't be changed.
        > [!NOTE]
-       > Each ***REMOVED*** environment is assigned a prefix upon creation, such as *cr628*. Every table and column name created will be prefixed with this value. This value can’t be changed.
+       > Each Project Oakdale environment is assigned a prefix upon creation, such as *cr628*. Every table and column name created will be prefixed with this value. This value can’t be changed.
     - **More settings**: This area provides additional settings that are available. More information: [Create a custom entity](../maker/common-data-service/data-platform-create-entity.md).
     > [!div class="mx-imgBorder"] 
     > ![Column details](media/create-table4.png)

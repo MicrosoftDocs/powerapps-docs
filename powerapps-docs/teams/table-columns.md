@@ -1,6 +1,6 @@
 ---
-title: Work with ***REMOVED*** table columns | Microsoft Docs
-description: Explains how to create and use ***REMOVED*** table columns.
+title: Work with Project Oakdale table columns | Microsoft Docs
+description: Explains how to create and use Project Oakdale table columns.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
@@ -12,11 +12,11 @@ ms.reviewer: matp
 
 # Work with table columns
 
-With the exception of the Customer field, all field types in Microsoft ***REMOVED*** Pro are available in Microsoft ***REMOVED*** as *columns*. This article covers the content you will need for working with table columns in ***REMOVED***.
+With the exception of the Customer field, all field types in Common Data Service are available in Project Oakdale as *columns*. This article covers the content you will need for working with table columns in Project Oakdale.
 
-Notice that, the currency feature will always use the default currency for the country that was selected during ***REMOVED*** environment creation. This can’t be changed, and additional transaction currencies or exchange rates can’t be added. However, you can upgrade from ***REMOVED*** to ***REMOVED*** Pro for full currency functionality.
+Notice that, the currency feature will always use the default currency for the country that was selected during Project Oakdale environment creation. This can’t be changed, and additional transaction currencies or exchange rates can’t be added. However, you can upgrade from Project Oakdale to Common Data Service for full currency functionality.
 
-For more information about the columns available, see these ***REMOVED*** Pro articles:
+For more information about the columns available, see these Common Data Service articles:
 - [Fields overview](../maker/common-data-service/fields-overview.md)
 - [Create and edit global option sets overview](../maker/common-data-service/create-edit-global-option-sets.md)
 - [Autonumber fields](../maker/common-data-service/autonumber-fields.md)
@@ -29,15 +29,15 @@ For more information about the columns available, see these ***REMOVED*** Pro ar
     > [!div class="mx-imgBorder"] 
     > ![Create a table column](media/create-table-column.png)
 
-The rest of the process to add and manage columns is the same as in ***REMOVED*** Pro, which is documented in these articles.
+The rest of the process to add and manage columns is the same as in Common Data Service, which is documented in these articles.
 - [Create and edit fields for Common Data Service using Power Apps portal](../maker/common-data-service/create-edit-field-portal.md)
 - [Manage custom fields in an entity](../maker/common-data-service/data-platform-manage-fields.md)
 
 ## Choice columns
-In ***REMOVED***, choices can only be created as a column within a table. Creation of choices is otherwise the same as creating an option set in ***REMOVED*** Pro. More information: [Create an Option set](../maker/common-data-service/custom-picklists.md)
+In Project Oakdale, choices can only be created as a column within a table. Creation of choices is otherwise the same as creating an option set in Common Data Service. More information: [Create an Option set](../maker/common-data-service/custom-picklists.md)
 
 ## Calculated and Rollup Columns
-Calculated columns and rollup columns available in ***REMOVED*** are equivalent to what is available in ***REMOVED*** Pro. More information: [Define calculated fields to automate manual calculations](../maker/common-data-service/define-calculated-fields.md) and [Define rollup fields that aggregate values](../maker/common-data-service/define-rollup-fields.md).
+Calculated columns and rollup columns available in Project Oakdale are equivalent to what is available in Common Data Service. More information: [Define calculated fields to automate manual calculations](../maker/common-data-service/define-calculated-fields.md) and [Define rollup fields that aggregate values](../maker/common-data-service/define-rollup-fields.md).
 
 
 ### See also

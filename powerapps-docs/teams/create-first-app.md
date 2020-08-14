@@ -14,7 +14,7 @@ ms.reviewer:
 
 You can create, edit and delete [canvas apps](/powerapps/maker/canvas-apps/getting-started) within Teams. 
 
-If you’re creating an app using Power Apps in a Teams team for the *first time*, a new Microsoft ***REMOVED*** environment (also called Teams environment) will be created for you. More information: [About the Teams environment](/power-platform/admin/about-teams-environment) 
+If you’re creating an app using Power Apps in a Teams team for the *first time*, a new Project Oakdale environment (also called Teams environment) will be created for you. More information: [About the Teams environment](/power-platform/admin/about-teams-environment) 
 
 ## Get started with creating your first app
 
@@ -30,13 +30,13 @@ After installing the **Power Apps** app from the Teams store:
 
     ![Select a team to create the app](media/create-app-2.png "Select a team to create the app")
 
-    If this is the first app being created in the selected team, a new ***REMOVED***
-environment will be created for the selected team and you'll see a message about this on selecting the team. For more information about the ***REMOVED*** environment, see [About the Teams environment](/power-platform/admin/about-teams-environment).
+    If this is the first app being created in the selected team, a new Project Oakdale
+environment will be created for the selected team and you'll see a message about this on selecting the team. For more information about the Project Oakdale environment, see [About the Teams environment](/power-platform/admin/about-teams-environment).
 
     ![First app in a team](media/create-app-3.png "First app in a team")
 
 1. Select **Create**. You’ll see a confirmation about
-the ***REMOVED*** environment being created, which might take time and you’ll be notified when the environment is available for you to create your first app.
+the Project Oakdale environment being created, which might take time and you’ll be notified when the environment is available for you to create your first app.
 
     ![First app in a team](media/create-app-4.png "First app in a team")
 
@@ -93,7 +93,7 @@ to enable security for the team’s Microsoft 365 Group.
 
 ## Continue creating your first app
 
-After your ***REMOVED*** environment has been created:
+After your Project Oakdale environment has been created:
 
 1. Select the **Build** tab to
 view the environment created for your team.
@@ -113,13 +113,13 @@ Apps Studio](understand-power-apps-studio.md).
 
 ### Create your first table
 
-Data for apps built in Teams lives inside ***REMOVED*** environments as tables. Like
+Data for apps built in Teams lives inside Project Oakdale environments as tables. Like
 other data experiences, you can add additional columns to track different
 attributes of each record before filling up the table with multiple rows of
 data. 
 
 > [!TIP]
-> To learn about ***REMOVED*** tables in detail, see [***REMOVED***
+> To learn about Project Oakdale tables in detail, see [Project Oakdale
 tables](overview-tables.md).
 
 To get started creating your first table: 

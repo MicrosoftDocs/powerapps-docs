@@ -11,7 +11,7 @@ ms.reviewer: matp
 ---
 
 # Edit or delete a table
-With Microsoft ***REMOVED***, you can perform the following types of operations on a table:
+With Project Oakdale, you can perform the following types of operations on a table:
 - Create table columns.
 - Delete a table.
 - Create, edit, and delete table relationships. More information: [Work with table relationships](relationships-table.md)
@@ -26,7 +26,7 @@ Within Teams, there are four table properties you can edit:
 - **Quick create settings**: This enables quick creation of records for clients that support this feature.
 
 > [!NOTE]
-> Each ***REMOVED*** environment is assigned a prefix upon creation, such as *cr1a3*. Every table and column name created will be prefixed with this value. This value can’t be changed.
+> Each Project Oakdale environment is assigned a prefix upon creation, such as *cr1a3*. Every table and column name created will be prefixed with this value. This value can’t be changed.
 
 1. On the left navigation pane, select **Tables**.
 2. Open the table you want to edit. 
