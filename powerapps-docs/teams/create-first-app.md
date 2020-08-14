@@ -31,7 +31,7 @@ After installing the **Power Apps** app from the Teams store:
     ![Select a team to create the app](media/create-app-2.png "Select a team to create the app")
 
     If this is the first app being created in the selected team, a new Project Oakdale
-environment will be created for the selected team and you'll see a message about this on selecting the team. For more information about the Project Oakdale environment, see [About the Teams environment](/power-platform/admin/about-teams-environment).
+environment will be created for the selected team and you'll see a message about this on selecting the team. For more information about the Project Oakdale environment, see [About the Project Oakdale environment](/power-platform/admin/about-teams-environment).
 
     ![First app in a team](media/create-app-3.png "First app in a team")
 
