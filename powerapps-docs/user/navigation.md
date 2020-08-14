@@ -121,7 +121,7 @@ The reference panel is a great way to get work done without moving away from the
 
 ## App message bar 
 
-There are three types of notifications that are shown on a form: informational, warning, and error. Notifications are always available at the top of the form, just above the header.
+The app message bar shows three types of notifications: informational, warning, and error. 
 
 When you select the error notification, it will take you to the field on the form where the error occurred.
 
