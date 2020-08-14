@@ -47,7 +47,7 @@ Use the app-selector menu to switch between apps.
 |![The app-selector menu](media/app-selector1.png "The app-selector menu")     |      ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
 
 
-The apps you see listed in your app-selector menu will depend on which apps you have access to. 
+The apps you see listed depends on which apps you have access to. 
 
 ### Move between entities, records, and work areas
 
@@ -65,7 +65,7 @@ It's easy to get around and get back to your favorite or most-used records. The 
 
 ## Working with list views
 
-Usually, when you first open an entity, you'll see the list view, which shows a list of records belonging to that entity, formatted as a table. For example, if you open the **Accounts** entity, you'll see a list of accounts.
+Usually, when you first open an entity, you'll see the list view, which shows a list of records belonging to that entity, formatted as a table. For example, if you open the **Products** entity, you'll see a list of accounts.
 
 ![A typical list view](media/list-view1.png "A typical list view")
 
@@ -110,7 +110,7 @@ Navigate through multiple records by using preset views and queries. The record-
 
 ## Reference panel
 
-The reference panel is a great way to get work done without moving away from the screen you're on. You can look up other related items&mdash;such as cases or opportunities for an account&mdash;within the context of the record you're viewing, without having to navigate to other screens.
+The reference panel is a great way to get work done without moving away from the screen you're on. You can look up other related items&mdash;such as reviews or reservations for a product&mdash;within the context of the record you're viewing, without having to navigate to other screens.
 
 
 > ![Reference panel](media/reference-panel1.png "Reference panel")
@@ -119,7 +119,7 @@ The reference panel is a great way to get work done without moving away from the
 
 <div class="embeddedvideo"><iframe src="https://www.youtube.com/embed/ruAPEKY5vNc" frameborder="0" allowfullscreen=""></iframe></div>
 
-## Notifications 
+## App message bar 
 
 There are three types of notifications that are shown on a form: informational, warning, and error. Notifications are always available at the top of the form, just above the header.
 
