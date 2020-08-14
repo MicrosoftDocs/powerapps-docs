@@ -96,7 +96,7 @@ By default, two facilities are provided as an example.
 
 When creating a facility, you can link a floor and area to this.
 
-1. Open the new Facility and go under the **Occupancy** tab. Click on **+ New Floor**.
+1. Open the new facility and go under the **Occupancy** tab. Click on **+ New Floor**.
 
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-floor.png "New facility form")
@@ -118,7 +118,7 @@ When creating a facility, you can link a floor and area to this.
 
 Once a floor is created, the **area** option enables to be linked to it.
 
-1. Click on **+ New Area** and filling the form.
+1. Open the new facility and go under the **Occupancy** tab. Click on **+ New Area**.
 
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-area.png "New facility form")
@@ -133,7 +133,7 @@ Once a floor is created, the **area** option enables to be linked to it.
    | Area        | Name for the area.                 |
    | Facility  | By default, the newly created facility.                   |
    | Floor     | By default, the newly floor created.           |
-   | Capacity    | People capacity for the area.             |
+   | Capacity    | Number of people allowed in an area.             |
 
 3. Select **Save & Close**. 
 
