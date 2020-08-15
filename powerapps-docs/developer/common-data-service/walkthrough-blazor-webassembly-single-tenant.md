@@ -2,7 +2,7 @@
 title: "Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service | Microsoft Docs"
 description: ""
 keywords: ""
-ms.date: 07/08/2020
+ms.date: 08/14/2020
 ms.service: powerapps
 ms.topic: article
 author: JimDaly # GitHub ID
@@ -37,7 +37,6 @@ To complete this tutorial, you must have:
 
 - Access to a [Common Data Service environment with a database](https://docs.microsoft.com/power-platform/admin/create-environment#create-an-environment-with-a-database)
 - A Common Data Service user with a security role that provides read access to the Account and Contact entities
-- Application Administrator, Application Developer, Cloud Application Administrator, or Hybrid Identity Administrator role access to the Azure AD tenant that the Common Data Service environment uses.
 - Understanding of the C# programming language
 - Understanding of ASP.NET Core Blazor is helpful but not required
 - The latest version of Visual Studio 2019 with the **ASP.NET and web development** workload installed.
