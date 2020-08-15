@@ -1,14 +1,13 @@
 ---
 title: System requirements, limits, and configuration values for canvas apps | Microsoft Docs
 description: System requirements, limits, and configuration values for canvas apps built in Power Apps
-author: gregli-msft
-manager: kvivek
+author: lancedMicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 03/19/2020
-ms.author: gregli
+ms.author: lanced
 search.audienceType: 
   - maker
 search.app: 
