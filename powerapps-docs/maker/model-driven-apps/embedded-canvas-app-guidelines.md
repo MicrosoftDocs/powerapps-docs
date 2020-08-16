@@ -23,9 +23,9 @@ search.app:
 This topic provides guidelines on working with embedded canvas apps as well as helpful tips to troubleshoot any issues you might encounter.
 
 -	Embedded canvas apps are only supported with Unified Interface model-driven apps.
--	You can only enable one embedded canvas app per form. 
-     - You can have multiple embedded canvas apps added to the form but can only enable one at a time.
-     - If you try to enable more than one embedded canvas app on a model-driven form you will get a message that reads “Only one canvas app can be enabled on a form.”
+-	You can only enable three embedded canvas app per form with Web form factor and one for Tablet and Phone form factors. 
+     - You can have multiple embedded canvas apps added to the form but can only enable three at a time for Web and one at a time for Tablet and Phone form factors.
+     - If you try to enable more than three embedded canvas app with Web form factor on a model-driven form you will get a message that reads “You have more than three canvas apps with Web form factor, the maximum is three for this form factor. The number of canvas apps are limited to three for Web and one for Tablet and Phone form factors”
      - To enable or disable an embedded canvas app see [Enable an embedded canvas app](#enable-an-embedded-canvas-app) and [Disable an embedded canvas app](#disable-an-embedded-canvas-app).
 -	When adding an embedded canvas app to a model-driven form always use a required field that is guaranteed to have a value. If your field does not have a value your embedded canvas app will not refresh in response to any change in data on the host model-driven form.
 -	Publishing a model-driven form does not also publish the embedded canvas app.
