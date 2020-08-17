@@ -111,15 +111,11 @@ By setting this property, you can avoid using the default entity for images so t
 
 ### disableImages
 
-Set this property to false will enable images. This property will have highest priority. This means that when this property is set to true, irrespective of the *imageEntity* property value, images will be disabled. By default, images are disabled.
+Set this property to true will disable images. This property will have highest priority. This means that when this property is set to true, irrespective of the imageEntity property value, images will be disabled. By default, images are enabled.
 
 ### disableDefaultImageProcessing
 
 By default, images will be uploaded using the client API. As soon as an image gets added to the editor, it will be uploaded to the platform. To process images, set this property to true.
-
-### Storing images
-
-The rich text editor control default behavior stores images as Base64. Base64 images require large amount of space and most existing fields might not have sufficient space. When the limit is exceeded, the message "You have exceeded the maximum number of 2000 characters in this field" is displayed in the app. To avoid this problem, as soon as an image gets added to the editor, it will be uploaded to the blob store using the pre-configured API and Base64 content will be replaced with platform URL.
 
 ## Sample rich text editor configuration file
 
