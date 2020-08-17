@@ -21,7 +21,7 @@ If this is the first time you deploy the solution, look into Deploy Solution.
 
 - Ensure all users are disconnected from your environmnet before you upgrade. You might have to plan the upgrade process at a time when there is minimal obstruction for your users. 
 
-# Step 1: Update the Package
+## Step 1: Update the Package
 
 When you have installed the package via AppSource, updates will appears in the Power Platform admin center.
 
@@ -36,22 +36,22 @@ When you have installed the package via AppSource, updates will appears in the P
 
 After you've created your environment, you can access it by using the following URL: `https://[myenv].crm.dynamics.com`, where [myenv] is the name of your environment. Make a note of this environment URL.
 
-# Step 2: Update the Power BI dashboards
+## Step 2: Update the Power BI dashboards
 
 ...
 
-# Step 3: Update the Facilities
+## Step 3: Update the Facilities
 
 With the new version we are introducing the notitions of areas and floors for a certain facility. A floor indicates how many levels are there within a building. An area allows you to define a space within a floors which has a certain capacity. Through bookings in the employee app, you can book the area and a floor. View the facility manager safety app section to see how you add floors and areas.
 
-# Step 4: Define capacity for your reopen phases
+## Step 4: Define capacity for your reopen phases
 
 Even though the capacity is defined on an area, it is bound by the phase your facility is in. Every reopen phase defines a percentage of the capacity, view the configure the solution section to see how you can assign this to a reopen phase. 
 
-# Step 5: Employee Cases
+## Step 5: Employee Cases
 
 
-# Appendix: Update the app and publish Power BI dashboard (US Government customers only)
+## Appendix: Update the app and publish Power BI dashboard (US Government customers only)
 
 Get the larest deployment package (.zip) from ______________. Notice its the same deployment package as the one you download during the fresh deployment step.
 
