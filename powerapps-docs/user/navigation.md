@@ -107,9 +107,9 @@ This is how record set navigation currently works.
 
 **Early Access**
 
-This is how record set navigation works in early access. 
+This is how record set navigation works in early access.
 
-![Record set navigation](media/recordsetnav_new.gif "This show how to use the record set navigation feature")   
+![Record set navigation](media/recordsetnav_new.gif "This shows how to use the record set navigation feature")   
 
 
 ## Reference panel
