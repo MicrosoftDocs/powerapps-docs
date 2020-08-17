@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 04/30/2020
+ms.date: 06/18/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -509,3 +509,6 @@ When you put the functions together in the formula, here's what happens:
 ## Next steps
 The next step in this tutorial series is to [create a Power BI report to analyze projects](sharepoint-scenario-build-report.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)

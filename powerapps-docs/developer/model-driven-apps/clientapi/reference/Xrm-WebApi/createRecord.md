@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 848c277b-bd44-4388-852a-0f59a3a15538
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -108,6 +108,9 @@ Xrm.WebApi.createRecord("account", data).then(
 ### Create related entity records along with the primary record
 
  You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*. In this example, we will create a sample account record along with the primary contact record and an associated opportunity record.
+
+> [!NOTE]
+> Creating related entity records in a single create operation is not supported for offline mode.
 
 ```JavaScript
 // define data to create primary and related entity records

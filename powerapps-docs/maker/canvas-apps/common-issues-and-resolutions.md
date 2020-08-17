@@ -18,6 +18,12 @@ search.app:
 
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
+1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
+   When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, please use your browser.
+
+1. **Connection.Connected returns the wrong value during OnStart in Power Apps for Windows** (July 21, 2020)
+   While offline, **Connection.Connected** may wrongly return **true** immediately after starting an app in the Windows app. As a workaround, delay when the logic depending on it is executed by using a **Timer** control. 
+   
 1. **Black box covering part of embedded canvas app** (June 11, 2020)
    When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users many see a black box when scrolling covering part of the app. This issue happens with chromium based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium with version 85.**
    
