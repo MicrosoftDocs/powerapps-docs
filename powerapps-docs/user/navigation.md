@@ -44,10 +44,10 @@ Use the app-selector menu to switch between apps.
 
 |Current  |Early access  |
 |---------|---------|
-| <ul><li> Select the drop-down menu and then choose an app. </li> <div></div> <div></div> ![The app-selector menu](media/app-selector1.png "The app-selector menu")     |   <ol><li> Select the current app name.</li> <li> On the **Apps** page select an app. You will only see apps for your organization. </li> <div></div> <div></div>  ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
+| <ul><li> Select the drop-down menu and then choose an app. The apps you see listed depends on which apps you have access to.  </li> <div></div> <div></div> ![The app-selector menu](media/app-selector1.png "The app-selector menu")     |   <ol><li> Select the current app name.</li> <li> On the **Apps** page select an app. You will only see apps for your organization. </li> <div></div> <div></div>  ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
 
 
-The apps you see listed depends on which apps you have access to. 
+
 
 ### Move between entities, records, and work areas
 
