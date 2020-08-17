@@ -111,7 +111,7 @@ By setting this property, you can avoid using the default entity for images so t
 
 ### disableImages
 
-Set this property to true will disable images. This property will have highest priority. This means that when this property is set to true, irrespective of the imageEntity property value, images will be disabled. By default, images are enabled.
+Set this property to true will disable images. This property will have highest priority. This means that when this property is set to true, irrespective of the [imageEntity](#imageentity) property value, images will be disabled. By default, images are enabled.
 
 ### disableDefaultImageProcessing
 
