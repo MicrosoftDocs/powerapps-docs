@@ -47,8 +47,6 @@ Use the app-selector menu to switch between apps.
 | <ul><li> Select the drop-down menu and then choose an app. The apps you see listed depends on which apps you have access to.  </li> <div></div> <div></div> ![The app-selector menu](media/app-selector1.png "The app-selector menu")     |   <ol><li> Select the current app name.</li> <li> On the **Apps** page select an app. You will only see apps for your organization. </li> <div></div> <div></div>  ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
 
 
-
-
 ### Move between entities, records, and work areas
 
 It's easy to get around and get back to your favorite or most-used records. The following illustration shows the primary navigation elements.
@@ -58,6 +56,11 @@ It's easy to get around and get back to your favorite or most-used records. The 
 |---------|---------|
 |![Navigation controls, expanded view](media/nav-expanded1.png "Navigation controls, expanded view") <div></div>  <div></div>  <ol><li>**App selector**: Open this menu to move between apps</li> <li>**Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. </li>  <li>**Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).</li> <li> **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.</li> <li> **Page navigation**: This area lists each entity and dashboard page available for the current work area.</li>  |     ![Navigation controls, expanded view](media/nav-expanded2.png "Navigation controls, expanded view")  <div></div> <div></div>  <ol><li>**Click to change app**: Select the current app name to change a differ app. </li> <li>**Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. </li>  <li>**Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).</li> <li> **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.</li> <li> **Page navigation**: This area lists each entity and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that entity.</li>    |
 
+### Area switcher 
+
+In the navigation the area switcher appears at the bottom left only when a single model-driven app has more than one area in the sitemap definition. 
+
+![Area switcher](media/work_area.png "Area switcher")
 
 
 ## Go back (for early access)
