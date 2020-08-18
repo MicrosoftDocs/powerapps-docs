@@ -54,7 +54,7 @@ There are many situations that you may encounter where access to the information
 
 ## Use Monitor to understand form behavior
 
-For each record, you can open and view detailed information about the form event. For example, imagine you have a question about the options in the related menu tab of a form. You go to that form in the app and select the appropriate form component. In this example, the **RelatedMenu** record in the **Operation** column is selected. Next, the **Details** tab, and then **…** are selected ti display additional information. 
+For each record, you can open and view detailed information about the form event. For example, imagine you have a question about the options in the related menu tab of a form. You go to that form in the app and select the appropriate form component. In this example, the **RelatedMenu** record in the **Operation** column is selected. Next, the **Details** tab, and then **…** are selected to display additional information.
 
 > [!div class="mx-imgBorder"] 
 > ![Monitoring related menu ](media/monitor-formchecker-related-menu.png)
