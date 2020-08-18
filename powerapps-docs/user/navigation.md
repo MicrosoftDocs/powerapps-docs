@@ -58,7 +58,9 @@ It's easy to get around and get back to your favorite or most-used records. The 
 
 ### Area switcher 
 
-In the navigation the area switcher appears at the bottom left only when a single model-driven app has more than one area in the sitemap definition. 
+In the left hand navigation pain, the area switcher appears at the bottom left only when a single model-driven app has more than one area in the sitemap definition. 
+
+Open this menu to move to another work area. The current work area is named here.
 
 ![Area switcher](media/work_area.png "Area switcher")
 
