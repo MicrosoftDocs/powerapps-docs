@@ -47,7 +47,7 @@ Use the app-selector menu to switch between apps.
 | <ul><li> Select the drop-down menu and then choose an app. The apps you see listed depends on which apps you have access to.  </li> <div></div> <div></div> ![The app-selector menu](media/app-selector1.png "The app-selector menu")     |   <ol><li> Select the current app name.</li> <li> On the **Apps** page select an app. You will only see apps for your organization. </li> <div></div> <div></div>  ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
 
 
-### Move between entities, records, and work areas
+### Move between entities and records
 
 It's easy to get around and get back to your favorite or most-used records. The following illustration shows the primary navigation elements.
 
