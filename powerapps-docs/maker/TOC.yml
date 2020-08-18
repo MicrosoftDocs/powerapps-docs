@@ -195,7 +195,7 @@
         href: ./canvas-apps/get-started-create-from-data.md
       - name: From Azure SQL Database
         href: ./canvas-apps/app-from-azure-sql-database.md
-    - name: 2 - Make basic customizations
+    - name: 3 - Make basic customizations
       items:
       - name: 1 - Galleries
         href: ./canvas-apps/customize-layout-sharepoint.md
@@ -1173,6 +1173,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
         - name: Add the calendar control to entities
           href: ./model-driven-apps/add-calendar-control.md
+        - name: Add the rich text editor control
+          href: ./model-driven-apps/rich-text-editor-control.md
         - name: Add the news control to an entity
           href: ./model-driven-apps/stay-current-with-news-control.md          
       - name: Use custom controls for data visualizations
