@@ -22,12 +22,29 @@ search.app:
 The Unified Interface for model-driven apps provides a consistent and accessible user experience across devices—whether on a desktop, laptop, tablet, or phone. The apps scale by reflowing the components on the screen. The responsive design adapts to your environment based on screen size, so the more available space that you have, the more information can be displayed.
 
 > [!div class="mx-imgBorder"]
-> ![Unified Interface adapts to screen](media/Reflow.png "Unified Interface adapts to screen")
+> ![Unified Interface adapts to screen](media/Reflow_1.png "Unified Interface adapts to screen")
 
 For an overview of Unified Interface in model-driven apps, watch this video: [Introduction to Unified Interface](https://www.youtube.com/watch?v=_VPOi_Iq6ko)
 
 > [!NOTE]
 > The legacy web client will be deprecated and customers must transition to Unified Interface before December 1, 2020. To learn more on how to transition, see [Quick start for transitioning](/powerapps/maker/model-driven-apps/transition-web-app) and [FAQs: Transition to Unified Interface](/powerapps/maker/model-driven-apps/faqs-transition-unified-interface).
+
+
+## Early access feature
+
+If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
+
+Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
+
+
+> [!div class="mx-imgBorder"]
+> ![Unified Interface adapts to screen](media/Reflow_2.png "Unified Interface adapts to screen")
+
+
+
+
+
+ 
 
 ## Navigation
 
