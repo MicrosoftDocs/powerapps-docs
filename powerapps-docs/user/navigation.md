@@ -47,7 +47,7 @@ Use the app-selector menu to switch between apps.
 | <ul><li> Select the drop-down menu and then choose an app. The apps you see listed depends on which apps you have access to.  </li> <div></div> <div></div> ![The app-selector menu](media/app-selector1.png "The app-selector menu")     |   <ol><li> Select the current app name.</li> <li> On the **Apps** page select an app. You will only see apps for your organization. </li> <div></div> <div></div>  ![The app-selector menu](media/app-selector2.png "The app-selector menu")   |
 
 
-### Move between entities and records
+### Move between pages and records
 
 It's easy to get around and get back to your favorite or most-used records. The following illustration shows the primary navigation elements.
 
@@ -111,13 +111,16 @@ Navigate through multiple records by using preset views and queries. The record-
 
 **Current**
 
-This is how record set navigation currently works.
+1. To use record set navigation in the current release, open a page with a list of records.
+2. Open a record and then select **Open Record Set** ![Record set navigation](media/openrecordset_1 "Record set button") and then select a record from the list.  
 
-![Record set navigation](media/recordsetnav.gif "This show how to use the record set navigation feature")     
+ ![Record set navigation](media/recordsetnav.gif "This show how to use the record set navigation feature")     
 
 **Early Access**
 
-This is how record set navigation works in early access.
+1. To use record set navigation in the early access release, open a page with a list of records.
+2. Open a record and then select **Open Record Set** ![Record set navigation](media/openrecordset_2 "Record set button") and then select a record from the list. 
+
 
 ![Record set navigation](media/recordsetnav_new.gif "This shows how to use the record set navigation feature")   
 
