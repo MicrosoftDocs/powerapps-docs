@@ -40,10 +40,6 @@ Your administrator has to opt in to early access updates for your environment an
 > [!div class="mx-imgBorder"]
 > ![Unified Interface adapts to screen](media/Reflow_2.png "Unified Interface adapts to screen")
 
-
-
-
-
  
 
 ## Navigation
