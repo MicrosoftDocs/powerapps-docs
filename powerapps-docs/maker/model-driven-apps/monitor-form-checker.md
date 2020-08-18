@@ -74,7 +74,7 @@ Supported areas for form monitoring include:
 |Tab / section / control state change   | Details on who (via callstack) has caused a form component such as a tab, section, or control, to change the component’s visibility and enabled state.        |
 |Navigation     | Details about who’s causing navigation or unexpected dialogs by tracing the callstack of these Xrm.Navigation client API methods: openAlertDialog(), openConfirmDialog(), openDialog(), openErrorDialog(), navigateTo(), openForm(), openTaskFlow(), openUrl(), openWebResource()         |
 |Unsupported customizations    |  Details about unsupported client API access before the form is ready. Examples: <br /> Accessing parent.Xrm.Page in iFrame before form is fully loaded. <br /> Accessing Xrm.Page in form web resource outside of form handler contexts using window.setTimeout() to periodically call Form client API. <br /> Accessing Xrm.Page in updateView() method of PCF control code.  |
-
+gi
 Examples of the supported form-related events in Monitor:
 - FormEvents.onsave
 - XrmNavigation
