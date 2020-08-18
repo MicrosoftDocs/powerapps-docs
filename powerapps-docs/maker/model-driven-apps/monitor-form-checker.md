@@ -71,9 +71,9 @@ Supported areas for form monitoring include:
 |---------|---------|
 |Control state   | Details about the state of the visible, enabled, and label source of a control when the form is loaded.     |
 |Related menu   | Details about the state of related menu items. Examples:  <br /> Why is a menu item not displaying? <br /> Where does the menu item come from?     |
-|Tab / section / control state change   | Details on who (via callstack) has caused a form component such as a tab, section, or control, to change the component’s visibility and enabled state.        |
-|Navigation     | Details about who’s causing navigation or unexpected dialogs by tracing the callstack of these Xrm.Navigation client API methods: openAlertDialog(), openConfirmDialog(), openDialog(), openErrorDialog(), navigateTo(), openForm(), openTaskFlow(), openUrl(), openWebResource()         |
-|Unsupported customizations    |  Details about unsupported client API access before the form is ready. Examples: <br /> Accessing parent.Xrm.Page in iFrame before form is fully loaded. <br /> Accessing Xrm.Page in form web resource outside of form handler contexts using window.setTimeout() to periodically call Form client API. <br /> Accessing Xrm.Page in updateView() method of PCF control code.  |
+|Tab / section / control state change   | Details on who (via the callstack) has caused a form component such as a tab, section, or control, to change the component’s visibility and enabled state.        |
+|Navigation     | Details about what’s causing navigation or unexpected dialogs by tracing the callstack of these Xrm.Navigation client API methods: openAlertDialog(), openConfirmDialog(), openDialog(), openErrorDialog(), navigateTo(), openForm(), openTaskFlow(), openUrl(), openWebResource()         |
+|Unsupported customizations    |  Details about unsupported client API access before the form is ready. Examples: <br /> Accessing parent.Xrm.Page in iFrame before the form is fully loaded. <br /> Accessing Xrm.Page in form web resource outside of form handler contexts using window.setTimeout() to periodically call the form client API. <br /> Accessing Xrm.Page in updateView() method of the Power Apps control framework control code.  |
 
 Examples of the supported form-related events in Monitor:
 - FormEvents.onsave
