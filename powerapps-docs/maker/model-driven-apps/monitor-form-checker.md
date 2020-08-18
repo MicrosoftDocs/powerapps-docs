@@ -48,9 +48,9 @@ There are many situations that you may encounter where access to the information
    <img src="media/monitor-formchecker-filter.png" alt="Enter formchecker filter" height="255" width="405"> 
 
 4. Click or tap anywhere outside the filter dialog to close the dialog and refresh the list in Monitor. You can expand the **Category** column to see the full name of the events that are tracked by selecting and holding the right-side of the column and dragging to the right. As you use the app and open and use a form, Monitor updates the list of events.
-
+<!--Replace with updated screenshot that displays FormChecker not uci_formchecker"
    > [!div class="mx-imgBorder"] 
-   >![Monitored form events displayed](media/monitor-formchecker-events.png)
+   >![Monitored form events displayed](media/monitor-formchecker-events.png)  -->
 
 ## Use Monitor to understand form behavior
 
