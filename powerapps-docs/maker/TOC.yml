@@ -1094,6 +1094,10 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+        - name: Troubleshoot forms
+          items: 
+          - name: Use Monitor to troubleshoot forms
+            href: ./model-driven-apps/monitor-form-checker.md            
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
