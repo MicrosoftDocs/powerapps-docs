@@ -112,14 +112,14 @@ Navigate through multiple records by using preset views and queries. The record-
 **Current**
 
 1. To use record set navigation in the current release, open a page with a list of records.
-2. Open a record and then select **Open Record Set** ![Record set navigation](media/openrecordset_1 "Record set button") and then select a record from the list.  
+2. Open a record and then select **Open Record Set** ![Record set navigation](media/openrecordset_1.png "Record set button") and then select a record from the list.  
 
  ![Record set navigation](media/recordsetnav.gif "This show how to use the record set navigation feature")     
 
 **Early Access**
 
 1. To use record set navigation in the early access release, open a page with a list of records.
-2. Open a record and then select **Open Record Set** ![Record set navigation](media/openrecordset_2 "Record set button") and then select a record from the list. 
+2. Open a record and then select **Open Record Set** ![Record set navigation](media/openrecordset_2.png "Record set button") and then select a record from the list. 
 
 
 ![Record set navigation](media/recordsetnav_new.gif "This shows how to use the record set navigation feature")   
