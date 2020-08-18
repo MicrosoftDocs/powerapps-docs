@@ -60,8 +60,13 @@ It's easy to get around and get back to your favorite or most-used records. The 
 
 
 
+## Go back (for early access)
 
+Until now, you could only go back to the previous screen using the back button on your web browser or device. With the early access release there is now a back button in Power Apps. 
 
+To go back to the previous page, select the **Go back** button.
+
+![Go back to the previous page](media/go_back_button.png "Go back to the previous page") 
 
 ## Working with list views
 
@@ -71,7 +76,7 @@ Usually, when you first open an entity, you'll see the list view, which shows a 
 
 Legend:
 
-1. **Go back** (only in Early Access): Select to go back to the previous page.
+1. **Go back** (For early access): Select to go back to the previous page.
 2. **Select records**: Select one or more records by placing a check mark in this column. Depending on where you're working, you might be able to apply a single operation to all the selected records at once by using buttons in the command bar.
 3. **Open a record**: Select any record in the list to open its record view, which shows all the details about the record. Usually you select from the **Name** column to open a record from the current entity. Some entities provide links to records from related entities in other columns (such as a related contact).
 4. **Sort or filter the list**: Select to sort the list by values in that column or filter the list by values in that column. An arrow in the column heading indicates which column is being sorted and in which direction. 
