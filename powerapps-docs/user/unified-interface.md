@@ -46,16 +46,9 @@ Your administrator has to opt in to early access updates for your environment an
 
 The menu options let you swiftly navigate the different apps in the system. They provide quick access to recently viewed records and pinned favorites.
 
-![Navigation controls, expanded view](media/nav-expanded.png "Navigation controls, expanded view")
-
-Legend:
-
-1. **App selector**: Open this menu to move between apps.
-1. **Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again.
-1. **Recent records**: Expand this entry to view a list of records you were recently using. Select an record here to open it. Select the push-pin icon next to a record listed here to added to your favorites (pinned records).
-1. **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.
-1. **Entity navigator**: This area lists each entity and dashboard available for the current work area. Select any entry here to open the named dashboard or list-view for that entity.
-1. **Work-area selector**: Open this menu to move to another work area. The current work area is named here.
+|Current  |Early access  |
+|---------|---------|
+|![Navigation controls, expanded view](media/nav-expanded1.png "Navigation controls, expanded view") <div></div>  <div></div>  <ol><li>**App selector**: Open this menu to move between apps</li> <li>**Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. </li>  <li>**Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).</li> <li> **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.</li> <li> **Page navigation**: This area lists each entity and dashboard page available for the current work area.</li>  |     ![Navigation controls, expanded view](media/nav-expanded2.png "Navigation controls, expanded view")  <div></div> <div></div>  <ol><li>**Click to change app**: Select the current app name to change a differ app. </li> <li>**Collapse/expand button**: Select this to collapse the navigator to allow more room for the main part of the page. If the navigator is already collapsed, select this button to expand it again. </li>  <li>**Recent records**: Expand this entry to view a list of records you were recently using. Select a record here to open it. Select the push-pin icon next to a record listed here to add it to your favorites (pinned records).</li> <li> **Favorite records**: Expand this entry to view and open your favorite (pinned) records. Use the **Recent records** list to add records here. Select the remove-pin icon next to a record listed here to remove it from this list.</li> <li> **Page navigation**: This area lists each entity and dashboard page available for the current work area. Select any entry here to open the named dashboard or list view for that entity.</li>    |
 
 For more information, see [Basic navigation in a model-driven app](navigation.md).
 
