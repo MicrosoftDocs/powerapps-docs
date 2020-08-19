@@ -10,113 +10,84 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Use the Location Readiness dashboard
+# Use the Case Management Dashboard
 
-This article is for executive leaders who use the Power BI dashboard to analyze data to help get their employees back to their office locations using the Return to the Workplace solution. 
+In this article:
+1.	How to view the Case Management Dashboard
 
-## How to view the Location Readiness dashboard
+2.	Overview
+
+3.	Investigating
+
+4.	Monitoring
+
+This article is for Health and Safety Leads who use the Power BI dashboard to have an awareness of employee well-being and effectively manage and track employee cases across their network of facilities and locations using the Return to the Workplace solution.
+
+
+## 1. How to view the Case Management Dashboard
 
 1. Open Power BI Desktop.
 
-2. In the search bar, search for **Return to the Workplace – Leadership**.
+2. 2.	In the search bar, search for Return to the Workplace – **Case management.**
 
     > [!div class="mx-imgBorder"]
-    > ![Search for dashboard](media/pbi-dash-command-bar.png "Search for dashboard")
+    > ![Search for dashboard](media/pbi-dash-command-bar2.png "Search for dashboard")
 
-## System at a glance
 
-The **System at a Glance** tab provides key metrics for returning to work, including current value, goal values, and whether locations have met the goals. These key metrics are the number of COVID-19 new cases per day, fatality cases per day, new cases per day per million population, fatality cases per day per million population, reproductive number, and facilities' Readiness Checklist completion percentage.
+## 2. Overview Page
 
-A map highlights locations of facilities, along with the number of facilities that are in a certain phase. Hovering over a facility gives you insights into the virus spread at that location.
+The **Overview Page** is the default or the top-level page that provides an overall view. It provides visibility into key metrics and trends related to employee cases. The key metrics include: 
 
-Some important statistics are provided at the top, including the number of facilities, new cases, new fatal cases, and the reproductive number.
+1. Total Active Cases 
 
-> [!div class="mx-imgBorder"]
-> ![System at a Glance](media/pbi-dash-system-at-a-glance2.png "System at a Glance")
+2. Cases per Case Manager: Average number of active cases (in open, investigating and monitoring phase) per case manager
 
-### Key metrics
+3. Days without new Cases: Number of days for which a new case has not been opened at a facility 
 
-#### Phases
-Review the phases that facilities are in, the number of facilities, new cases, new fatal cases, and the reproductive number.
+4. Average Risk: Average case risk associated with a facility or group of facilities
 
-> [!div class="mx-imgBorder"]
-> ![System at Glance phases](media/pbi-dash-system-at-a-glance-phases.png "System at a Glance phases")
+5. Average Resolution time – days needed to 
 
-#### New COVID cases per day
-Information is shown about new confirmed cases and average cases, in addition to states with the most active spread.
 
 > [!div class="mx-imgBorder"]
-> ![System at a Glance cases](media/pbi-dash-report-covidcases.png "System at a Glance cases")
+> ![System at a Glance](media/pbi-dash-system-at-a-glance3.png "System at a Glance")
 
-#### Fatal COVID cases per day
-The data on confirmed deaths is shown in these visualizations, giving you easy access to information about the most active spread by states, new fatal cases, and total fatal cases.
 
-> [!div class="mx-imgBorder"]
-> ![System at a Glance fatal COVID cases](media/pbi-dash-report-fatalcovidcases.png "System at a Glance fatal COVID cases")
+## 3. Investigating Page
 
-#### Effective Reproductive Number
-
-This is a key measure of how fast the virus is growing or decreasing, showing the average number of people who are infected.
+The page provides information on Active Cases in Investigation stage such as the number of cases being investigating, time it takes to start investigation and reach a contact, trends behind them, breaking them down by the Case Manager.
 
 > [!div class="mx-imgBorder"]
-> ![System at a Glance reproductive number](media/pbi-dash-report-reproductivenumber.png "System at a Glance reproductive number")
+> ![System at a Glance cases](media/pbi-dash-report-covidcases2.png "System at a Glance cases")
 
-### Filter on a region
 
-When you want to drill down on certain facility locations, you can filter on them based on country/region.
+## 4. Monitoring Page 
 
-> [!div class="mx-imgBorder"]
-> ![System at a Glance filter by region](media/pbi-dash-report-filter-region.png "System at a Glance filter by region")
+This page focuses on active Cases in Monitoring Stage. It shows:
 
-## Facility at a Glance
+1. Cases being Monitored.
 
-Different from the overall view of **System at a Glance**, the **Facility at a Glance** tab lets you drill down to each facility and track details about facility open readiness, employee sentiment, and employee attestation. It helps executive leaders to monitor all kinds of key metrics and determine the facility's opening phase.
+2. Average resolution time: average time taken for a case from being opened to resolved.
 
-> [!div class="mx-imgBorder"]
-> ![Facility view](media/pbi-dash-selected-facility-details2.png "Facility view")
+3. Cases per case manager: average number of cases in Monitoring phase per Case manager.
 
-### Key metrics
+4. Resolved Cases: Total number of cases already resolved.
 
-#### Phases/Readiness
-
-In this area, you can find employees average sentiment, reproductive numbers, facilities, and current phases.
 
 > [!div class="mx-imgBorder"]
-> ![Phase readiness](media/pbi-dash-report-facility-at-a-glance-PhaseReadiness.png "Phase readiness")
+> ![System at a Glance fatal COVID cases](media/pbi-dash-report-fatalcovidcases2.png "System at a Glance fatal COVID cases")
 
-#### Readiness Checklist
 
-The checklist shows the steps needed to move facilities through phases.
+## 5. Slicers
 
-> [!div class="mx-imgBorder"]
-> ![Readiness Checklist](media/pbi-dash-report-facility-at-a-glance-checklist.png "Readiness Checklist")
-
-## Employee Activity 
-
-The **Employee Activity** tab provides an overall time-series daily view for employee sentiment and attestation. You can check every day to see where numbers increased or were lower compared to previous days.
+Users can filter al three pages by the case creation date and their Groups of Facilities and Locations, going down to the level of a single Facility.
 
 > [!div class="mx-imgBorder"]
-> ![Employee Activity](media/pbi-dash-employee-activity2.png "Employee Activity")
+> ![System at a Glance reproductive number](media/pbi-dash-report-reproductivenumber2.png "System at a Glance reproductive number")
 
-## Tools
 
-Throughout the report you can use numerous tools like sliders, date filters, and bookmarks. The visualizations include bar and column charts, cards, gauge charts, maps, and more.
 
-### Slicer
-
-Slicer helps you quickly "slice and dice" the data, focusing only on data points you're interested in. You can use the country or state slicer to select the country and state you're interested in. This slicer supports functions like multiple selections, hierarchy category selections, search, and clean selections.
-
-> [!div class="mx-imgBorder"]
-> ![Slicer](media/pbi-dash-report-filter-region2.png "Slicer")
-
-### Tooltip
-
-When you hover over the transition part of the ribbon chart, tooltips give you quick insights into the numbers.
-
-> [!div class="mx-imgBorder"]
-> ![Tooltip](media/pbi-dash-transition-hover-metrics3.png "Tooltip")
-
-## Data sources
+### Data sources
 
 The dashboard consists of data from the model-driven app and the canvas app, but also consists of external data. The following data sources are used:
 
