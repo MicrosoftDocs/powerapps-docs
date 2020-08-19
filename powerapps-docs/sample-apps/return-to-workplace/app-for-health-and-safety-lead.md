@@ -55,9 +55,9 @@ In the Employee Cases component, we have 3 views with different filters:
 
 - **My Employee Cases**: Filtered by owner and only shows active cases. This is the default view.
 
-- **Active Employee Cases**: Shows all active employee cases.
+- **Active Employee Cases**: Shows all active employee cases. An employee case is consider active when it has the status active.
 
-- **Closed Employee Cases**: Shows all closed employee cases.
+- **Closed Employee Cases**: Shows all closed employee cases. An employee case is consider closed when it is made inactive either by the case manager or through the process.
 
 > [!div class="mx-imgBorder"]
 > ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
@@ -197,7 +197,7 @@ In this process stage, the case manager monitors and manages the cases, ensuring
 #### Resolve
 
 In this process stage, the case manager completes the process by resolving the
-case, and selects **Finish**. The key pieces of data to be captured and recorded are:
+case, and selects **Finish**. After the process is finished, the employee case is made inactive. The inactive employee is then consider completed. The key pieces of data to be captured and recorded are:
 
 - Employee Instructions Provided (Yes/No)
 
