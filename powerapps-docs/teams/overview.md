@@ -28,7 +28,7 @@ Access and authorization align with the Microsoft Teams model and include securi
 There are two ways to use the apps created using Power Apps in Teams. 
 - You can use the Power Apps app from the default Teams catalog as a personal app and create apps to share with teams in Microsoft Teams. More information: [Install the Power Apps personal app](install-personal-app.md) 
  
-- You can install the apps created using Power Apps directly from the Microsoft Teams catalog that are published using Microsoft AppSource or the organization’s app catalog.
+- You can install the apps created using Power Apps directly from the Microsoft Teams catalog that are published using Microsoft AppSource or the organization’s app catalog. More information: [Embed an app in Teams](../maker/canvas-apps/embed-teams-app.md).
 
 When you create an app in Teams using Power Apps for the first time or install a Power Apps app from the app catalog for the first time, a new Project Oakdale environment is created for the selected team. The Project Oakdale environment is used to store, manage, and share team-specific data, apps, and flows. Each team can have one environment and all data, apps, and flows created using Power Apps inside a team are available from that team's Power Apps Project Oakdale environment. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment).
 
