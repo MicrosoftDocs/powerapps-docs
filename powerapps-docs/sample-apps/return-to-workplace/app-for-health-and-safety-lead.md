@@ -227,6 +227,13 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 | Risk Assessment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
 | Comment | Enter additional information, when applicable. |
 
+### Complete Employee Case
+
+After you completed the process and press **Finish** in the BPF, you will make the employee case inactive. You can also choice to make that for a certain reason the employee cas is now longer being worked on. In that case you can deactive the employee case in the command bar. 
+
+  > [!div class="mx-imgBorder"]
+  > ![resolve](media/health-safety-deactivate.png "Deactive Employee Case")
+
 ## Feedback about the solution
 
 To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
