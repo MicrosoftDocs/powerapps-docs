@@ -206,6 +206,8 @@ and the areas of the solution where they are used. System generated attributes
 | Public Health Official Notified | Option Set    | Used to denote whether the appropriate public health officials have been notified if applicable. | Model-driven app             |
 | Risk Assessment                 | Option Set    | Used to denote the current risk of the employee case.                                            | Model-driven app             |
 | Screened                        | Option Set    | Used to denote whether the screening process has occurred.                                       | Model-driven app             |
+| First Time Employee Contacted   | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
+| First Time to Investigation     | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
 
 ### Employee Facility Search
 

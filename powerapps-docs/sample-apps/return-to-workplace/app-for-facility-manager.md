@@ -92,16 +92,16 @@ By default, two facilities are provided as an example.
 3. Select **Save & Close**. The newly created record is available in the
     **Active Facility Types** view.
 
-### Create a Floor 
+### To create a floor for a facility 
 
 When creating a facility, you can link a floor and area to this.
 
-1. Open the new Facility and go under the **Occupancy** tabb. 
-
-2. Click on **+New Floor** and fill in the form.
+1. Open the new facility and go under the **Occupancy** tab. Click on **+ New Floor**.
 
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-floor.png "New facility form")
+
+2. Enter appropriate values in the fields:
 
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-floor2.png "New facility form")
@@ -112,16 +112,18 @@ When creating a facility, you can link a floor and area to this.
    | Floor Index  | Number stablished for the floor.                    |
    | Facility     | Must be the newly facility name.             |
 
-3. Select **save**.
+3. Select **Save**.
 
-### Create am Area
+### To create an area for a facility
 
 Once a floor is created, the **area** option enables to be linked to it.
 
-1. Click on **+New Area** and filling the form.
+1. Open the new facility and go under the **Occupancy** tab. Click on **+ New Area**.
 
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-area.png "New facility form")
+
+2. Enter appropriate values in the fields:
 
    > [!div class="mx-imgBorder"]
    > ![New facility form](media/facility-manager-area2.png "New facility form")
@@ -131,9 +133,9 @@ Once a floor is created, the **area** option enables to be linked to it.
    | Area        | Name for the area.                 |
    | Facility  | By default, the newly created facility.                   |
    | Floor     | By default, the newly floor created.           |
-   | Capacity    | People capacity for the area.             |
+   | Capacity    | Number of people allowed in an area.             |
 
-4. Select **Save & Close**. 
+3. Select **Save & Close**. 
 
 To edit the record, select it, update the values, and then select **Save & Close**.
 
@@ -258,7 +260,7 @@ A reviewer&mdash;for instance, a facility manager supervising many facility mana
    |-----------------------|---------------|
    | Proposed Reopen Phase | Select the next reopen phase you want to transition to.|
    | Summary | Enter the summary information about moving to the next or targeted reopen phase. |
-   | Reviewer | Select appropriate resources to review and approve the new transition. |
+   | Reviewer | Select appropriate resources to review and approve the new transition. By default this only shows facility managers, by changing the view you can select other users. |
 
 5. Select **Save & Close**. The newly created record is available in the **Transitions** tab subgrid for the facility.
 
