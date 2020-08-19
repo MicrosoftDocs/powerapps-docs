@@ -63,7 +63,7 @@ The improved accessibility experience lets you use screen readers to translate o
 ## Create a Unified Interface app
 If you have requirements to create your own experience on Unified Interface, you can create a model-driven app using the app designer. See [Overview of building model-driven apps](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview).
 
-![Create new Unified Interface app](media/uci-model-driven-app.png "Create new Unified Interface app")
+![Create new Unified Interface app](media/uci-model-driven-app_1.png "Create new Unified Interface app")
 
 ## Unified Interface Community
 
