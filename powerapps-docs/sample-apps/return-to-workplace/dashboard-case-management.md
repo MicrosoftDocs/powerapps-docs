@@ -12,48 +12,39 @@ ms.reviewer: kvivek
 
 # Use the Case Management Dashboard
 
-In this article:
-1.	How to view the Case Management Dashboard
-
-2.	Overview
-
-3.	Investigating
-
-4.	Monitoring
-
 This article is for Health and Safety Leads who use the Power BI dashboard to have an awareness of employee well-being and effectively manage and track employee cases across their network of facilities and locations using the Return to the Workplace solution.
 
 
-## 1. How to view the Case Management Dashboard
+##  How to view the Case Management Dashboard
 
 1. Open Power BI Desktop.
 
-2. 2.	In the search bar, search for Return to the Workplace – **Case management.**
+2. In the search bar, search for Return to the Workplace – **Case management.**
 
     > [!div class="mx-imgBorder"]
     > ![Search for dashboard](media/pbi-dash-command-bar2.png "Search for dashboard")
 
 
-## 2. Overview Page
+## Overview Page
 
 The **Overview Page** is the default or the top-level page that provides an overall view. It provides visibility into key metrics and trends related to employee cases. The key metrics include: 
 
-1. Total Active Cases 
+- Total Active Cases 
 
-2. Cases per Case Manager: Average number of active cases (in open, investigating and monitoring phase) per case manager
+- Cases per Case Manager: Average number of active cases (in open, investigating and monitoring phase) per case manager
 
-3. Days without new Cases: Number of days for which a new case has not been opened at a facility 
+- Days without new Cases: Number of days for which a new case has not been opened at a facility 
 
-4. Average Risk: Average case risk associated with a facility or group of facilities
+- Average Risk: Average case risk associated with a facility or group of facilities
 
-5. Average Resolution time – days needed to 
+- Average Resolution time – days needed to 
 
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance](media/pbi-dash-system-at-a-glance3.png "System at a Glance")
 
 
-## 3. Investigating Page
+## Investigating Page
 
 The page provides information on Active Cases in Investigation stage such as the number of cases being investigating, time it takes to start investigation and reach a contact, trends behind them, breaking them down by the Case Manager.
 
@@ -61,24 +52,24 @@ The page provides information on Active Cases in Investigation stage such as the
 > ![System at a Glance cases](media/pbi-dash-report-covidcases2.png "System at a Glance cases")
 
 
-## 4. Monitoring Page 
+## Monitoring Page 
 
 This page focuses on active Cases in Monitoring Stage. It shows:
 
-1. Cases being Monitored.
+- Cases being Monitored.
 
-2. Average resolution time: average time taken for a case from being opened to resolved.
+- Average resolution time: average time taken for a case from being opened to resolved.
 
-3. Cases per case manager: average number of cases in Monitoring phase per Case manager.
+- Cases per case manager: average number of cases in Monitoring phase per Case manager.
 
-4. Resolved Cases: Total number of cases already resolved.
+- Resolved Cases: Total number of cases already resolved.
 
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance fatal COVID cases](media/pbi-dash-report-fatalcovidcases2.png "System at a Glance fatal COVID cases")
 
 
-## 5. Slicers
+## Slicers
 
 Users can filter al three pages by the case creation date and their Groups of Facilities and Locations, going down to the level of a single Facility.
 

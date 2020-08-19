@@ -37,10 +37,10 @@ When you successfully sign in and open the **Return to the Workplace** app, you 
 
 You can find all available facilities and see the reopen status for them. Select **Look Up Status** to look for facilities and view details such as whether the facility is open and what phase of reopening it's in.
 
-When you select a facility from the facility list, the current status of the facility and associated details are displayed. Select **<** to return to the previous screen.
-
 > [!div class="mx-imgBorder"]
 > ![List of facilities](media/employee-facility-list2.png "List of facilities")
+
+When you select a facility from the facility list, the current status of the facility and associated details are displayed. Select **<** to return to the previous screen.
 
 > [!div class="mx-imgBorder"]
 > ![Facility details](media/employee-facility-details2.png "Facility details")
@@ -62,7 +62,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
    > [!div class="mx-imgBorder"]
    > ![Select Facility](media/employee-select-facility.png "Select facility")
 
-4. Select an available area within that facility. Select **Next** to continue with the check-in process.
+4. Select an available area within that facility. Click on the **See all available** button to only show the available areas. Select **Next** to continue with the check-in process. Check in the box **Save as default for future check ins** to save the area to reuse on future check ins.
 
    > [!div class="mx-imgBorder"]
    > ![Select Area](media/employee-select-area.png "Select area")
