@@ -161,10 +161,48 @@ transitions.
 
 1. Select **Facility** from the left pane. The default view, My Facilities, shows only your facilities. When switching views, you can see either all active or inactive facilities. 
 
-2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard. The dashboard shows the COVID-19 data based on the address details of the facility, checklist completion for the current phase, employee attestation, and employee sentiment. More information: [Power BI dashboard](dashboard-for-executive-leadership.md).
+2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information to intelligently monitor facility usage, guide a re-opening, and analyze occupancy at a facility.   The report has three main sections: Facilities, Virus Spread, and Employee Activity.
+
+   **Facility Manager Dashboard** - *Facilities* tab
+
+   The Readiness section shows the status of the readiness checks needed for a facility’s safe reopening.  Checks are separated into categories (e.g. Employee Experience, Communications, etc.) which can be expanded to show the progress of individual actions.  Reproductive number is the average number of people to whom COVID-19 may be transmitted by an infected individual.
+
+   The Occupancy section provides metrics regarding facility capacity and usage, such as:
+      - The Facility’s Total Capacity, and Current Capacity based on re-opening phase
+      - Number of bookings and visits for the most recent day and daily average for the last 7 days
+      - Two charts, that can be filtered by date range, and to a floor or an area:
+          - Number of bookings and the current capacity
+          - Average daily occupancy, shown as a black bar.  Capacity is represented by the green zone.  Floors and areas with black bars in the red zone are over-capacity. Occupancy can be viewed at the floor or area level.  Hovering over the information symbol (🛈) next to the chart shows detailed instructions.
+
+   The Daily Arrivals section shows booking information to assist in controlling facility traffic, such as:
+      - Capacity and visit metrics, busiest weekday and arrival time window for the last 7 days.
+      - Two charts, which can be filtered by date range, display number of bookings by arrival window, and by weekday.
 
    > [!div class="mx-imgBorder"]
-   > ![Facility at a glance](media/facility-manager-facility-at-glance1.png "Facility at a glance")
+   > ![Facility Manager Readiness](media/pbi-dash-facility-manager-readiness.png "Facility Manager - Readiness")
+
+   **Facility Manager Dashboard** - *Virus Spread* tab
+
+   The Virus Spread section shows data from public health sources by country (state level for US).  There are three sections: New COVID-19 Cases, Fatal COVID-19 Cases, and Reproductive Number.
+
+   The New COVID Cases section shows the number of cases for the last reporting day, 14-day average, daily trend, and total number of cases.
+   The Fatal COVID Cases section shows information for COVID-19 cases with fatalities.
+   Reproductive Number is the average number of people to whom COVID-19 may be transmitted by an infected individual.  Data for US is at state level.
+
+   > [!div class="mx-imgBorder"]
+   > ![Facility Manager Virus Spread](media/pbi-dash-facility-manager-virus-spread.png "Facility Manager - Virus Spread")
+
+   **Facility Manager Dashboard** - *Employee Activity* tab
+
+   The Employee Activity tab summarizes employee engagement and employee app usage over a time period.  The following metrics are shown:
+      - Employee App Usage, which shows the number of times the Return to Workplace app has been used to obtain a pass
+      - Average employee sentiment
+      - Number of passes generated
+
+      There are two charts.  One displays sentiment by date, and the other displays passes generated vs. number of visits by date, along with the trend over time.
+
+   > [!div class="mx-imgBorder"]
+   > ![Facility Manager Employee Activity](media/pbi-dash-facility-manager-employee-activity.png "Facility Manager - Employee Activity")
 
 3. Exploring the Facility
 
