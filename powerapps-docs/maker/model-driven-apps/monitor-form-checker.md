@@ -47,14 +47,14 @@ There are many situations that you may encounter where access to the information
 
    <img src="media/monitor-formchecker-filter.png" alt="Enter formchecker filter" height="255" width="405"> 
 
-4. Click or tap anywhere outside the filter dialog to close the dialog and refresh the list in Monitor. You can expand the **Category** column to see the full name of the events that are tracked by selecting and holding the right-side of the column and dragging to the right. As you use the app and open and use a form, Monitor updates the list of events.
-<!--Replace with updated screenshot that displays FormChecker not uci_formchecker"
+4. Click or tap anywhere outside the filter dialog to close the dialog and refresh the list in Monitor. You can expand the **Operation** column to see the full name of the events that are tracked by selecting and holding the right-side of the column and dragging to the right. As you use the app and open and use a form, Monitor updates the list of events.
+
    > [!div class="mx-imgBorder"] 
-   >![Monitored form events displayed](media/monitor-formchecker-events.png)  -->
+   >![Monitored form events displayed](media/monitor-formchecker-events.png)
 
 ## Use Monitor to understand form behavior
 
-For each record, you can open and view detailed information about the form event. For example, imagine you have a question about the options in the related menu tab of a form. You go to that form in the app and select the appropriate form component. In this example, the **RelatedMenu** record in the **Operation** column is selected. Next, the **Details** tab, and then **…** are selected ti display additional information. 
+For each record, you can open and view detailed information about the form event. For example, imagine you have a question about the options in the related menu tab of a form. You go to that form in the app and select the appropriate form component. In this example, the **RelatedMenu** record in the **Operation** column is selected. Next, the **Details** tab, and then **…** are selected to display additional information.
 
 > [!div class="mx-imgBorder"] 
 > ![Monitoring related menu ](media/monitor-formchecker-related-menu.png)
@@ -71,9 +71,9 @@ Supported areas for form monitoring include:
 |---------|---------|
 |Control state   | Details about the state of the visible, enabled, and label source of a control when the form is loaded.     |
 |Related menu   | Details about the state of related menu items. Examples:  <br /> Why is a menu item not displaying? <br /> Where does the menu item come from?     |
-|Tab / section / control state change   | Details on who (via callstack) has caused a form component such as a tab, section, or control, to change the component’s visibility and enabled state.        |
-|Navigation     | Details about who’s causing navigation or unexpected dialogs by tracing the callstack of these Xrm.Navigation client API methods: openAlertDialog(), openConfirmDialog(), openDialog(), openErrorDialog(), navigateTo(), openForm(), openTaskFlow(), openUrl(), openWebResource()         |
-|Unsupported customizations    |  Details about unsupported client API access before the form is ready. Examples: <br /> Accessing parent.Xrm.Page in iFrame before form is fully loaded. <br /> Accessing Xrm.Page in form web resource outside of form handler contexts using window.setTimeout() to periodically call Form client API. <br /> Accessing Xrm.Page in updateView() method of PCF control code.  |
+|Tab / section / control state change   | Details on who (via the callstack) has caused a form component such as a tab, section, or control, to change the component’s visibility and enabled state.        |
+|Navigation     | Details about what’s causing navigation or unexpected dialogs by tracing the callstack of these Xrm.Navigation client API methods: openAlertDialog(), openConfirmDialog(), openDialog(), openErrorDialog(), navigateTo(), openForm(), openTaskFlow(), openUrl(), openWebResource()         |
+|Unsupported customizations    |  Details about unsupported client API access before the form is ready. Examples: <br /> Accessing parent.Xrm.Page in iFrame before the form is fully loaded. <br /> Accessing Xrm.Page in form web resource outside of form handler contexts using window.setTimeout() to periodically call the form client API. <br /> Accessing Xrm.Page in updateView() method of the Power Apps control framework control code.  |
 
 Examples of the supported form-related events in Monitor:
 - FormEvents.onsave
