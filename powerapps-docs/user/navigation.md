@@ -42,7 +42,7 @@ A model-driven app is built out of applications (apps), areas, and entities.
 
 Select the user menu to view your account information or sign out. 
 
-In early access, you can go to your account page by select the **View acccount** hyperlink.
+In early access, you can go to your account page by selecting the **View acccount** hyperlink.
 
 |Current  |Early access  |
 |---------|---------|
