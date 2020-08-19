@@ -37,6 +37,17 @@ A model-driven app is built out of applications (apps), areas, and entities.
 
 - *Entities* represent a specific type of data, such as a contacts and accounts. Entities use a structured data format, which defines the collection of fields available to the entity. Each entity consists of a collection of individual records. For example, for the Contact entity, each record describes a single person, and each record includes a collection of fields such as first name, last name, and email address. Entities normally present two views: a list view, which is typically a table listing available records; and a form view, which shows all available data and settings for a single record. Use the side navigator to move between entities in your current work area.
 
+
+### User info and sign out
+
+Select the user menu to view your account information, sign out. 
+
+|Current  |Early access  |
+|---------|---------|
+| ![User menu](media/usermenu_1.png "User menu")     |     ![User menu](media/usermenu_2.png "User menu")   |
+
+
+
 ### Move between apps
 
 Use the app-selector menu to switch between apps.
@@ -135,6 +146,7 @@ The reference panel is a great way to get work done without moving away from the
  Watch this video to learn more about the reference panel:
 
 <div class="embeddedvideo"><iframe src="https://www.youtube.com/embed/ruAPEKY5vNc" frameborder="0" allowfullscreen=""></iframe></div>
+
 
 ## App message bar 
 
