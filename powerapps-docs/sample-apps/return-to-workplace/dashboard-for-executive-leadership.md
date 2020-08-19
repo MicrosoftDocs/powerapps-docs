@@ -16,12 +16,12 @@ This article is for executive leaders who use the Power BI dashboard to analyze 
 
 ## How to view the Location Readiness dashboard
 
-1. Open Power BI Desktop.
+1. Open Power BI in the Service.
 
 2. In the search bar, search for **Return to the Workplace – Leadership**.
 
     > [!div class="mx-imgBorder"]
-    > ![Search for dashboard](media/pbi-dash-command-bar.png "Search for dashboard")
+    > ![Search for dashboard](media/pbi-dash-command-barr.png "Search for dashboard")
 
 ## System at a glance
 
