@@ -64,7 +64,7 @@ You can also use **DataSourceInfo** to obtain information about a data source as
 ## Examples
 The examples in this section use this data source, named **IceCream**:
 
-![](media/function-datasourceinfo/icecream.png)
+![Icecream](media/function-datasourceinfo/icecream.png "Icecream")
 
 The data source has also provided this information:
 
