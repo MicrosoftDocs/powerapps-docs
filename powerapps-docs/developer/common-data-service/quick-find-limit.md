@@ -19,10 +19,10 @@ search.app:
 # Work with Quick Find’s search item limit
 
 Quick Find provides an easy way to configure the default search experience
-across Common Data Service entities and is optimized for searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a
+across Dynamics 365 Customer Engagement or Common Data Service entities and is optimized for searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a
 query indicating:
 
-&nbsp;&nbsp;*The number of records for this search exceeds the Quick Search
+*The number of records for this search exceeds the Quick Search
 record limit. Please refine your query and try again.*
 
 This is because the query received too many results and has been stopped to prevent the data
