@@ -3,9 +3,9 @@ title: "Xrm.App (Client API reference) in model-driven apps| MicrosoftDocs"
 ms.date: 03/04/2020
 ms.service: powerapps
 ms.topic: "reference"
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
