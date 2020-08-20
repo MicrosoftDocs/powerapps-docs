@@ -203,7 +203,7 @@ Open a facility record in the Facility Safety Management app and you’ll see th
 
 You can change the look and feel of the app by applying themes to match your company branding.
 
-1. Open the **Facility Safety** app or the **Workplace Care Management** app and in the right top, select **Advanced Settings** after selecting the gear.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear and after that **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
    > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
@@ -260,7 +260,7 @@ In the Return to the Workplace solution, the following security roles are define
 
 **To assign security roles**
 
-1. Open the **Facility Safety** app or the **Workplace Care Management** app and in the right top, select **Advanced Settings** after selecting the gear.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear and after that **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
    > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
