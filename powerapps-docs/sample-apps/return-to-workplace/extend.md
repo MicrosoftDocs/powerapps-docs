@@ -12,17 +12,16 @@ ms.reviewer: kvivek
 
 # Overview
 
-This article provides a detailed description of the data model used by the
-Return to the Workplace solution. The model extends Common Data Model and
-utilizes several components of Common Data Model. Administrators, implementers,
-and end users should be mindful of the data model and possible implications of
+This article provides a detailed description of the data model, workflows and flows used by the
+Return to the Workplace solution. The solutions extends the Common Data Model and
+utilizes several components of the Common Data Model. Administrators, implementers,
+and end users should be mindful of the solution and possible implications of
 other solutions that co-exist in the same environment. The definitions provided
-in this document indicate the intended purpose of the entities, relationships,
-and attributes contained in the Return to the Workplace solution. These
-definitions may be fully or partially adopted depending on your business
+in this document indicate the intended purpose of the entities, relationships, attributes, flows and workflows
+contained in the Return to the Workplace solution. These definitions may be fully or partially adopted depending on your business
 requirements.
 
-## Data Model Integration & Extension
+## Integration & Extension
 
 The Return to the Workplace solution is built on Microsoft Power Platform.
 Additional information on working with model-driven apps and Common Data Service
@@ -67,15 +66,15 @@ By** and **Modified By** attributes) are not depicted in the diagram.
 
 ![Entity Relationship Diagram](media/data-dictionary-ERD.png)
 
-## Data Tables
+## Entities
 
-The data tables listed below are grouped by the using application in the Return to the Workplace solution.
+The entities listed below are grouped by the using application in the Return to the Workplace solution.
 
-## Core Tables
+## Core Entities
 
-These tables are used across multiple applications and are considered core to the platform.
+These entities are used across multiple applications and are considered core to the platform.
 
-| **Table Name**           | **Information in the Table**                                                                                  |
+| **Entity Name**          | **Information in the Table**                                                                                  |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
 | Country                  | Contains standard country names.                                                                              |
 | Employee                 | Contains people and basic contact information.                                                                |
@@ -87,23 +86,23 @@ These tables are used across multiple applications and are considered core to th
 
 ## Employee Return to the Workplace
 
-These tables are primarily used by the Employee Return to the Workplace canvas application.
+These entities are primarily used by the Employee Return to the Workplace canvas application.
 
-| **Table Name**           | **Information in the Table**                                                                                  |
+| **Entity Name**          | **Information in the Table**                                                                                  |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
-| Area                     | Contains a list of physically or logically segmented spaces.                         |
+| Area                     | Contains a list of physically or logically segmented spaces.                                                  |
 | Employee Attestation     | Contains associations of people to their attestations.                                                        |
-| Employee Booking       | Contains associations of people and specific areas, floors, and facilities for a given time period.                         |
+| Employee Booking         | Contains associations of people and specific areas, floors, and facilities for a given time period.           |
 | Employee Facility Search | Contains a list of most recently used employee app facility results associated with system users.             |
 | Employee Sentiment       | Contains associations of people and information relevant to their recorded sentiment.                         |
-| Employee Visit       | Contains associations of people and facilities for a given time period representing a physical entry and exit.                        |
-| Floor       | Contains a list of physically segmented spaces associated to a single facility and multiple areas.                        |
+| Employee Visit           | Contains associations of people and facilities for a given time period representing a physical entry and exit.|
+| Floor                    | Contains a list of physically segmented spaces associated to a single facility and multiple areas.            |
 
 ## Workplace Care Management
 
-These tables are primarily used by the Workplace Care Management model-driven application.
+These entities are primarily used by the Workplace Care Management model-driven application.
 
-| **Table Name**           | **Information in the Table**                                                                                  |
+| **Entity Name**          | **Information in the Table**                                                                                  |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
 | Case Contact             | Contains individuals associated with an employee case.                                                        |
 | Case Facility            | Contains facilities associated with employee cases.                                                           |
@@ -111,9 +110,9 @@ These tables are primarily used by the Workplace Care Management model-driven ap
 
 ## Facility Safety Management
 
-These tables are primarily used by the Facility Safety Management model-driven application.
+These entities are primarily used by the Facility Safety Management model-driven application.
 
-| **Table Name**           | **Information in the Table**                                                                                  |
+| **Entity Name**          | **Information in the Table**                                                                                  |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
 | Goal                     | Contains associations of reopen phases and key metrics with target values.                                    |
 | Key Metric               | Contains a list of measurable indications to evaluate progress.                                               |
@@ -382,3 +381,35 @@ and the areas of the solution where they are used. System generated attributes
 | Name         | Text      | User-friendly name of the state.   | Model-driven app |
 | State Code   | Text      | ISO identifier of the state.       | Model-driven app |
 | Country      | Lookup    | Association to the parent company. | Model-driven app |
+
+## Power Automate Flows
+
+This section of the solution describes the different flows within the solution and explains their different purposes.
+These flows can be extended, used or turned off depending on the business requirements.
+
+| Flow | Entity | Description                        |
+|--------------|-----------|------------------------------------|------------------|
+| Area - Update Capacity for future Occupancies         | Area      | Updates the daily occupancy when then capacity changes on an area |
+| Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes |
+| Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase |
+| Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist |
+| Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when a employee booking is created |
+| Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Readucate occupancy in daily occupancy when employee bookings are disabled |
+| Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations |
+| Facility - Apply and Update Phase      | Lookup    | Applies a new phase to a facility which creates a checklist, changes the business process flow and updates the capacities |
+| Reopen Phase - Update Capacity      | Lookup    | Update capacity when the capacity limits changes for a reopen phase |
+| Reopen Phase Transition - Update facility reopen phase      | Lookup    | Updates and changes the reopen phase for a facility |
+
+For the solution we generate sample data which makes records every 12 hour to simulate real life.
+As mentioned in **Configure the Solution**, dependant on the purpose of your environment you can disable these flows.
+
+| Flow  | Description                        |
+|--------------|-----------|------------------------------------|------------------|
+| Sample Data - Create and Update Employee Cases          | Create employee cases and move them through the different stages |
+| Sample Data - Generate Employee Records      | Create employee bookings and employee attestations |
+| Sample Data - Generate Facility Transitions   | Create reopen phase transitions and move facilities to other phases  |
+| Sample Data - Visits          | Create employee visits |
+
+
+
+
