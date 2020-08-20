@@ -189,6 +189,7 @@ and the areas of the solution where they are used. System generated attributes
 | Area | Lookup | Used to associate the location booked.     | Model-driven app; Canvas app             |
 | End Arrival Time         | Date and Time    | Used to capture the ending point in time for the booking.                  | Model-driven app; Canvas app |
 | Start Arrival Time         | Date and Time        | Used to capture the beginning point in time for the booking.             | Model-driven app; Canvas app             |
+| Booking Date     | Date          | Used to determine the date of the booking                              | Model-driven app; Canvas app |
 | Employee         | Lookup        | Used to associate the employee creating the booking. | Model-driven app; Canvas app |
 | Name             | Text          | Primary identifier of the record.         | Model-driven app             |
 
