@@ -37,7 +37,10 @@ The **Overview Page** is the default or the top-level page that provides an over
 
 - Average Risk: Average case risk associated with a facility or group of facilities
 
-- Average Resolution time – days needed to 
+- Average Resolution time: Days needed to 
+
+A map displays active cases by stage by location; Size of the bubble represents number of cases. A table breaks down key metrics by the Case Manager: number of cases, average risk and average resolution time per case.
+Table breaks down key metrics by the case manager.
 
 
 > [!div class="mx-imgBorder"]
@@ -46,7 +49,21 @@ The **Overview Page** is the default or the top-level page that provides an over
 
 ## Investigating Page
 
-The page provides information on Active Cases in Investigation stage such as the number of cases being investigating, time it takes to start investigation and reach a contact, trends behind them, breaking them down by the Case Manager.
+This page provides a detailed view on Active Cases being Investigated with a set of key metrics important for that stage. Key metrics provide information on
+
+- Cases being investigated.
+
+- Contacts reached: Number of employees that have been reached out to of total cases under investigation.
+
+- Time to start investigating: Average time taken from opening a case to starting an investigation.
+
+- Time to reach a contact: Average time taken from opening a case to contacting an employee.
+
+-  Cases per case manager: Average number of cases under investigation per Case manager.
+
+Map displays location of Cases in Investigating stage and can be drilled into by Country, Province and Facility. Size of the bubble represents number of cases. 
+
+Table breaks down key metrics by case Manager.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance cases](media/pbi-dash-report-covidcases2.png "System at a Glance cases")
@@ -56,14 +73,15 @@ The page provides information on Active Cases in Investigation stage such as the
 
 This page focuses on active Cases in Monitoring Stage. It shows:
 
-- Cases being Monitored.
+- Cases being monitored.
 
-- Average resolution time: average time taken for a case from being opened to resolved.
+- Average resolution time: Average time taken for a case from being opened to resolved.
 
-- Cases per case manager: average number of cases in Monitoring phase per Case manager.
+- Cases per case manager: Average number of cases in Monitoring phase per Case manager.
 
-- Resolved Cases: Total number of cases already resolved.
+- Resolved sases: Total number of cases already resolved.
 
+Map displays location of Cases in Monitoring phase and can be drilled into by Country, Province and Facility. Size of the bubble represents number of cases. Table represents workin load of each case manager.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance fatal COVID cases](media/pbi-dash-report-fatalcovidcases2.png "System at a Glance fatal COVID cases")
