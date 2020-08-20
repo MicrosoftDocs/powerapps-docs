@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/03/2019
+ms.date: 08/20/2020
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -80,7 +80,7 @@ Open this menu to move to another work area. The current work area is named here
 
 ## Go back (for early access)
 
-Until now, you could only go back to the previous screen using the back button on your web browser or device. With the early access release there is now a back button in Power Apps. 
+With the early access release there is now a back button for form, view, and dashboard pages on the command bar.
 
 To go back to the previous page, select the **Go back** button.
 
@@ -98,9 +98,10 @@ Legend:
 2. **Select records**: Select one or more records by placing a check mark in this column. Depending on where you're working, you might be able to apply a single operation to all the selected records at once by using buttons in the command bar.
 3. **Open a record**: Select any record in the list to open its record view, which shows all the details about the record. Usually you select from the **Name** column to open a record from the current entity. Some entities provide links to records from related entities in other columns (such as a related contact).
 4. **Sort or filter the list**: Select to sort the list by values in that column or filter the list by values in that column. An arrow in the column heading indicates which column is being sorted and in which direction. 
-5. **Command bar**: Use the commands in the command bar to operate on records in the list and perform related actions. Some commands (such as **Delete**) require that you first select one or more target records by placing a check mark in the leftmost column, while others operate on the entire list. You can export the list to an Excel workbook (possibly based on a template), open charts and dashboards, and more, depending on the type of records you're working with.
-6. **Search the view**: Enter text in the search field above the list to show only those records in the current view that contain your text.
-7. **Filtering and paging**: Select a letter to show only those records whose names start with that letter. If the list contains more records than can be shown on one page, use the paging arrows at the bottom of the list to move forward and backward through the pages.
+5. **Open advanced filtering panel**: See which filters are applied to the current view and add or modify view filters.
+6. **Command bar**: Use the commands in the command bar to operate on records in the list and perform related actions. Some commands (such as **Delete**) require that you first select one or more target records by placing a check mark in the leftmost column, while others operate on the entire list. You can export the list to an Excel workbook (possibly based on a template), open charts and dashboards, and more, depending on the type of records you're working with.
+7. **Search the view**: Enter text in the search field above the list to show only those records in the current view that contain your text.
+8. **Jump bar and paging**: Select a letter to show only those records whose names start with that letter. If the list contains more records than can be shown on one page, use the paging arrows at the bottom of the list to move forward and backward through the pages.
 
 ## Working with record views
 
