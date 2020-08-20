@@ -390,7 +390,7 @@ This section of the solution describes the different flows within the solution a
 These flows can be extended, used or turned off depending on the business requirements.
 
 | Flow | Entity | Description                        |
-|--------------|-----------|------------------------------------|------------------|
+|--------------|-----------|-------------------------------------------------|
 | Area - Update Capacity for future Occupancies         | Area      | Updates the daily occupancy when then capacity changes on an area |
 | Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes |
 | Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase |
@@ -406,7 +406,7 @@ For the solution we generate sample data which makes records every 12 hour to si
 As mentioned in [Configure the Solution](configure.md), dependant on the purpose of your environment you can disable these flows.
 
 | Flow  | Description                        |
-|--------------|-----------|------------------------------------|------------------|
+|--------------|------------------------------------|------------------|
 | Sample Data - Create and Update Employee Cases          | Create employee cases and move them through the different stages |
 | Sample Data - Generate Employee Records      | Create employee bookings and employee attestations |
 | Sample Data - Generate Facility Transitions   | Create reopen phase transitions and move facilities to other phases  |
