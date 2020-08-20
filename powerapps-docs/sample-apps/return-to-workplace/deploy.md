@@ -206,7 +206,7 @@ You can change the look and feel of the app by applying themes to match your com
 1. Open the **Facility Safety** app or the **Workplace Care Management** app and in the right top, select **Advanced Settings** after selecting the gear.
 
    > [!div class="mx-imgBorder"]
-   > ![Customizations](media/advanced-settings.png "Advanced Settings")
+   > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
 
 2. Go to **Settings** > **Customizations**.
 
@@ -263,7 +263,7 @@ In the Return to the Workplace solution, the following security roles are define
 1. Open the **Facility Safety** app or the **Workplace Care Management** app and in the right top, select **Advanced Settings** after selecting the gear.
 
    > [!div class="mx-imgBorder"]
-   > ![Customizations](media/advanced-settings.png "Advanced Settings")
+   > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
 
 2. Go to **Settings** > **Security**.
 
