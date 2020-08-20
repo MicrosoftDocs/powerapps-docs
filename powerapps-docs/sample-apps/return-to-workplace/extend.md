@@ -403,7 +403,7 @@ These flows can be extended, used or turned off depending on the business requir
 | Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility |
 
 For the solution we generate sample data which makes records every 12 hour to simulate real life.
-As mentioned in **Configure the Solution**, dependant on the purpose of your environment you can disable these flows.
+As mentioned in [Configure the Solution](configure.md), dependant on the purpose of your environment you can disable these flows.
 
 | Flow  | Description                        |
 |--------------|-----------|------------------------------------|------------------|
