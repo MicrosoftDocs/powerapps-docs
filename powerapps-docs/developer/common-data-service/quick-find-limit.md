@@ -19,15 +19,12 @@ search.app:
 # Work with Quick Find’s search item limit
 
 Quick Find provides an easy way to configure the default search experience
-across Dynamics 365 Customer Engagement or Common Data Service entities and is optimized for searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a
+across Dynamics 365 Customer Engagement or Common Data Service entities. Quick Find provides optimized searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a
 query indicating:
 
-*The number of records for this search exceeds the Quick Search
-record limit. Please refine your query and try again.*
+*The number of records for this search exceeds the Quick Search record limit.*
 
-This is because the query received too many results and has been stopped to prevent the data
-service's resource consumption from causing potential outages. This article will explain how the
-10,000 search item limit is calculated and includes best practices to avoid hitting this limit.
+This error occurs because the query received too many results and has been stopped to prevent the data service's resource consumption from causing potential outages. This article will explain how the 10,000 search item limit is calculated and includes best practices to avoid hitting this limit.
 
 > [!NOTE]
 > A Quick Find is a FetchXML query that contains one of these filter attributes: `isquickfindquery`, `isquickfindfields`.
@@ -67,8 +64,8 @@ in the first stage and not progress to stage two.
 ## When the search limit does not apply to Quick Find queries
 
 The query engine treats Quick Find queries with 1 or zero search columns as a
-standard query and not a Quick Find. These are not subject to the 10,000 record
-limit. This is because Quick Find queries with 1 or less conditions perform
+standard query and not a Quick Find. Such queries are not subject to the 10,000 record
+limit. The reason being Quick Find queries with 1 or less conditions perform
 better as a standard query than a Quick Find.
 
 ## Avoiding the search limit exception
@@ -85,11 +82,11 @@ The following best practices should be observed when querying data.
 
 ### Specific exception querying
 
-If you have a specific need to have a query exceed this limit on a temporary basis, edit the FetchXML query to include setting the `overridequickfindrecordlimitenabled` attribute equal to 0 within the filter XML element. This will disable the 10k limit for the specific Quick Find query.
+If you have a specific need to have a query exceed this limit on a temporary basis, edit the FetchXML query to include setting the `overridequickfindrecordlimitenabled` attribute equal to 0 within the filter XML element. Use of this attribute will disable the 10k limit for the specific Quick Find query.
 
 ### Organizational override
 
-In extreme cases where a business organization query regularly returns more than 10k search items, an administrator can request that the 10k item limit be disabled. This is not recommended as disabling this can cause over consumption of resources and environment wide outages if misused.
+In extreme cases where a business organization query regularly returns more than 10k search items, an administrator can request the 10k item limit be disabled. Disabling the limit is not recommended and can result in over consumption of resources and environment wide outages if misused.
 
 ### See Also
 
