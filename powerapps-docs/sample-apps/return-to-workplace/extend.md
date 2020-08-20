@@ -406,7 +406,7 @@ For the solution we generate sample data which makes records every 12 hour to si
 As mentioned in [Configure the Solution](configure.md), dependant on the purpose of your environment you can disable these flows.
 
 | Flow  | Description                        |
-|--------------|------------------------------------|------------------|
+|--------------|--------------------------------------------------|
 | Sample Data - Create and Update Employee Cases          | Create employee cases and move them through the different stages |
 | Sample Data - Generate Employee Records      | Create employee bookings and employee attestations |
 | Sample Data - Generate Facility Transitions   | Create reopen phase transitions and move facilities to other phases  |
