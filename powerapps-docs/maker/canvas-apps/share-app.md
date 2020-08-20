@@ -49,7 +49,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
     - To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
 
-        ![Everyone](./media/share-app/everyone.png)
+        ![Search Everyone](./media/share-app/everyone.png)
 
     - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Meghan Holmes &lt;meghan.holmes@contoso.com>**) if the items are separated by semi-colons. If more than one person has the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved.
 
@@ -60,7 +60,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. If you want to allow the users to edit and share the app, select the **Co-owner** check box.
 
-    ![Co-owner](./media/share-app/co-owner.png)
+    ![Select a co-owner](./media/share-app/co-owner.png)
 
     You can't grant **Co-owner** permission to a security group if you [created the app from within a solution](add-app-solution.md).
 
