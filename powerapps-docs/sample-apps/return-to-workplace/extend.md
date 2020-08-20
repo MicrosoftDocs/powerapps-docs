@@ -396,9 +396,9 @@ These flows can be extended, used or turned off depending on the business requir
 | Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when a employee booking is created |
 | Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Readucate occupancy in daily occupancy when employee bookings are disabled |
 | Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations |
-| Facility - Apply and Update Phase      | Lookup    | Applies a new phase to a facility which creates a checklist, changes the business process flow and updates the capacities |
-| Reopen Phase - Update Capacity      | Lookup    | Update capacity when the capacity limits changes for a reopen phase |
-| Reopen Phase Transition - Update facility reopen phase      | Lookup    | Updates and changes the reopen phase for a facility |
+| Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility which creates a checklist, changes the business process flow and updates the capacities |
+| Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits changes for a reopen phase |
+| Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility |
 
 For the solution we generate sample data which makes records every 12 hour to simulate real life.
 As mentioned in **Configure the Solution**, dependant on the purpose of your environment you can disable these flows.
