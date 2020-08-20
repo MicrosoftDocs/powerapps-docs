@@ -170,9 +170,6 @@ If you're updating an existing app or resource, be sure to [publish](save-publis
     > [!IMPORTANT]
     > If you select to **Update** an existing app, the new changes will be saved as a draft of the app. You'll need to [publish](save-publish-app.md#publish-an-app) the app so users can see the changes.
 
-    > [!TIP]
-    > You can quickly confirm selections before importing an app package by viewing the icon changes for each resource type.
-
 ### See also
 
 - [Save and publish an app](save-publish-app.md)
