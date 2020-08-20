@@ -136,7 +136,8 @@ and the areas of the solution where they are used. System generated attributes
 | Display Name                        | Data Type     | Description                                                    | Platform Use     |
 |-------------------------------------|---------------|----------------------------------------------------------------|------------------|
 | Area                                | Text          | Primary identifier of the record.                              | Model-driven app; Canvas app |
-| Capcity | Whole Number    | Used to capture total allowable occupancy for the area.                     | Model-driven app; Canvas app       |
+| Capacity | Whole Number    | Used to capture total allowable occupancy for the area.                     | Model-driven app; Canvas app       |
+| Capacity of Current Phase | Whole Number    | Used to capture allowable occupancy for the area in the current phase.                     | Model-driven app; Canvas app       |
 | Description                            | Text        | Used to capture additional details to describe the area.                                  | Model-driven app; Canvas app       |
 | Facility                      | Lookup | Used to associate the parent facility. |Model-driven app; Canvas app     |
 | Floor                      | Lookup | Used to associate the parent floor. | Model-driven app; Canvas app       |
