@@ -91,12 +91,13 @@ These entities are primarily used by the Employee Return to the Workplace canvas
 | **Entity Name**          | **Information in the Table**                                                                                  |
 |--------------------------|---------------------------------------------------------------------------------------------------------------|
 | Area                     | Contains a list of physically or logically segmented spaces.                                                  |
+| Floor                    | Contains a list of physically segmented spaces associated to a single facility and multiple areas.            |
+| Daily Occupancy          | Daily occupancy indicates the capacity and occupancy for an area on a certain day.                            |
 | Employee Attestation     | Contains associations of people to their attestations.                                                        |
 | Employee Booking         | Contains associations of people and specific areas, floors, and facilities for a given time period.           |
 | Employee Facility Search | Contains a list of most recently used employee app facility results associated with system users.             |
 | Employee Sentiment       | Contains associations of people and information relevant to their recorded sentiment.                         |
 | Employee Visit           | Contains associations of people and facilities for a given time period representing a physical entry and exit.|
-| Floor                    | Contains a list of physically segmented spaces associated to a single facility and multiple areas.            |
 
 ## Workplace Care Management
 
@@ -165,6 +166,16 @@ and the areas of the solution where they are used. System generated attributes
 |----------------|-----------|------------------------------------|------------------|
 | Name           | Text      | User-friendly name of the country. | Model-driven app |
 | ISO Short Code | Text      | ISO identifier of the country.     | Model-driven app |
+
+### Daily Occupancy
+
+| Display Name     | Data Type    | Description                                                                        | Platform Use                 |
+|------------------|--------------|------------------------------------------------------------------------------------|------------------------------|
+| Area ID          | Lookup       | Used to associate a area to the daily occupancy.                                   | Model-driven app; Canvas app |
+| Facility ID      | Lookup       | Used to associate a facility to the daily occupancy.                               | Model-driven app; Canvas app |
+| Capacity         | Whole Number | Total capacity for that area.                                                      | Model-driven app; Canvas app |
+| Occupancy        | Whole Number | Occupied spaces for an area.                                                       | Model-driven app; Canvas app |
+| Date             | Date         | The date for which the occupancy and capacity are tracked.                         | Model-driven app; Canvas app |
 
 ### Employee (Contact)
 
