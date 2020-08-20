@@ -39,7 +39,7 @@ After you've purchased Power Apps, create an environment with a Common Data Serv
 
 3. Create appropriate users, and assign security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
-After you've created your environment, you can access it by using the following URL: `https://[myenv].crm.dynamics.com`, where [myenv] is the name of your environment. Make a note of this environment URL.
+After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region like crm for US. Make a note of this environment URL.
 
 ## Step 2: Install the package
 
@@ -203,22 +203,27 @@ Open a facility record in the Facility Safety Management app and you’ll see th
 
 You can change the look and feel of the app by applying themes to match your company branding.
 
-1. Go to **Settings** > **Customizations**.
+1. Open the **Facility Safety** app or the **Workplace Care Management** app and in the right top, select **Advanced Settings** after selecting the gear.
+
+   > [!div class="mx-imgBorder"]
+   > ![Customizations](media/advanced-settings.png "Advanced Settings")
+
+2. Go to **Settings** > **Customizations**.
 
    > [!div class="mx-imgBorder"]
    > ![Customizations](media/deploy-settings-customizations.png "Customizations")
 
-2. Select **Themes**.
+3. Select **Themes**.
 
    > [!div class="mx-imgBorder"]
    > ![Select themes](media/deploy-settings-solutions.png "Select themes")
 
-3. Select **New**. Enter the **Name** and determine which colors you want to use. You can also specify the logo, which is used in the site map.
+4. Select **New**. Enter the **Name** and determine which colors you want to use. You can also specify the logo, which is used in the site map.
 
    > [!div class="mx-imgBorder"]
    > ![Deploy themes](media/deploy-themes.png "Deploy themes")
 
-4. Select **Save**, and then **Publish**. 
+5. Select **Save**, and then **Publish**. 
 
    > [!div class="mx-imgBorder"]
    > ![Sample theme](media/deploy-theme-colors.png "Sample theme")
@@ -255,17 +260,22 @@ In the Return to the Workplace solution, the following security roles are define
 
 **To assign security roles**
 
-1. Go to **Settings** > **Security**.
+1. Open the **Facility Safety** app or the **Workplace Care Management** app and in the right top, select **Advanced Settings** after selecting the gear.
+
+   > [!div class="mx-imgBorder"]
+   > ![Customizations](media/advanced-settings.png "Advanced Settings")
+
+2. Go to **Settings** > **Security**.
 
    > [!div class="mx-imgBorder"]
    > ![Security](media/deploy-settings-security.png "Security")
 
-2. Select **Users**, and then select the user to whom you want to give permissions.
+3. Select **Users**, and then select the user to whom you want to give permissions.
 
    > [!div class="mx-imgBorder"]
    > ![Select user](media/deploy-settings-security-users.png "Select user")
 
-3. Select the user, and then select **Manage Roles**. After assigning the roles, select **OK**.
+4. Select the user, and then select **Manage Roles**. After assigning the roles, select **OK**.
 
    > [!div class="mx-imgBorder"]
    > ![Select roles](media/deploy-settings-security-enabled-users.png "Select roles")
