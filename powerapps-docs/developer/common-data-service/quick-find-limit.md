@@ -86,7 +86,7 @@ If you have a specific need to have a query exceed this limit on a temporary bas
 
 ### Organizational override
 
-In extreme cases where a business organization query regularly returns more than 10k search items, an administrator can request the 10k item limit be disabled. Disabling the limit is not recommended and can result in over consumption of resources and environment wide outages if misused.
+In extreme cases where a business organization query regularly returns more than 10k search items, an administrator can contact Microsoft Support to request the 10k item limit be disabled. Disabling the limit is not recommended and can result in over consumption of resources and environment wide outages if misused.
 
 ### See Also
 
