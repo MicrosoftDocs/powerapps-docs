@@ -29,6 +29,9 @@ This is because the query received too many results and has been stopped to prev
 service's resource consumption from causing potential outages. This article will explain how the
 10,000 search item limit is calculated and includes best practices to avoid hitting this limit.
 
+> [!NOTE]
+> A Quick Find is a FetchXML query that contains one of these filter attributes: `isquickfindquery`, `isquickfindfields`.
+
 ## How the search item limit is calculated
 
 Quick Find queries use a two-stage execution. The first stage uses the Quick
