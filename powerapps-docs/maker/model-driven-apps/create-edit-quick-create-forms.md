@@ -159,6 +159,9 @@ The social pane is a special case because it doesn't use the **Enable quick crea
 When you import a solution from version 8.2 regardless of the value of the **Enable quick create forms** property in the solution, the following entities will be reset to the default form display value and the main form will display: task, phone call, email, and appointment. In this situation, you'll need to reset the **Enable quick create forms** option back to *enabled* for those activity entities after the import.
  
 If there is a customization made in a version 9.0 solution to entities where **Enable quick create forms** is enabled, the value will not change after import.  However, if you have set the **Enable quick create forms** option to *disabled* for the task, phone call, email, and appointment entities, the value will be overwritten to enabled. In this situation, you'll need to reset the **Enable quick create forms** option back to disabled for those activity entities after the import. 
+
+[!IMPORTANT]
+>In some sceanrios if a quick create form exists but is not included in the app the Unified Interface runtime will open the Quick Create form if it is enabled on an entity.  This will occur for lookup controls and subgrids.  If you do not want a quick create to show in your app you will need to disable it on the entity.
   
 ### See also  
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
