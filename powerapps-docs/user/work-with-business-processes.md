@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 01/29/2020
+ms.date: 08/21/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -32,8 +32,10 @@ As you work on a new customer record, the business process flow helps you see ea
 
 The process bar can also be docked to the right side of the screen for easy reference as you work with a customer record. 
 
-> [!div class="mx-imgBorder"]
-> ![Business process bar](media/bpdock.gif "Business process bar")
+- On the prcess bar select a stage, and then select **Pin the stage flyout** ![Pin business stage flyout"](media/bp_stage_flyout.png "Pin business process stage flyout"). 
+
+  > [!div class="mx-imgBorder"]
+  > ![Business process bar](media/bpdock.gif "Business process bar")
  
   
  
