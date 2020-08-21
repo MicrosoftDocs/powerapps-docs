@@ -54,7 +54,7 @@ You can also open a record and then add an activity to the record.
 
 ### Add a phone call  
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Phone Call**. 
 
@@ -74,7 +74,7 @@ You can also open a record and then add an activity to the record.
   
 ### Add a task  
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Task**.
   
@@ -86,7 +86,7 @@ You can also open a record and then add an activity to the record.
 
 To add an email activity to a record, you must first save the record you are adding the activity to.  
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Email**. 
 
@@ -122,7 +122,7 @@ To add an appointment activity to a record, you must first save the record you a
 > [!NOTE]
 > Recurring appointments are not supported on the Dynamics 365 App for Outlook, Dynamics 365 for phones app, and when you run the model-driven apps web client on your mobile phone web browser.
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2.  In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Appointment**.  
   
@@ -134,7 +134,7 @@ To add an appointment activity to a record, you must first save the record you a
 
 You can also easily add notes in the activities area.
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2. In the **Timeline** section, select the **Enter a note** area.
 
@@ -159,7 +159,7 @@ You can also easily add notes in the activities area.
 
 ### Add a post 
 
-1. Open the record that you want to add a post to. For example, open a contact record.
+1. Open the record that you want to add a post to. 
 
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Post**. 
 
