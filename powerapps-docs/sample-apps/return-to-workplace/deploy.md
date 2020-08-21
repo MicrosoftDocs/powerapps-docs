@@ -105,7 +105,7 @@ The Return to the Workplace solution has two Power BI dashboards, one for execut
 
 4. Determine where the displayed URL is pointing to in the Common Data Service environment:
 
-    - If it's pointing to Common Data Service, set the **Authentication method** to **Microsoft account** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
+    - If it's pointing to Common Data Service, set the **Authentication method** to **Microsoft Account** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
     - If it's not pointing to Common Data Service, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png "Privacy")
@@ -156,7 +156,7 @@ Next, we'll configure the data refresh settings for the dataset.
 
       > [!NOTE]
       > - There are limits to how many times data can be refreshed. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Power BI Premium capacity node, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
-      >- We recommend scheduling data to be refreshed every 30 minutes.
+      > - We recommend scheduling data to be refreshed every 30 minutes.
 
 5. Go back to your workspace, select the **Reports** tab, and then select the report to open it in a browser.
 
@@ -173,15 +173,41 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
 
-4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**. From the list of entities, select **Facility** > **select components**, under the **Forms** tab, select **Main - Information Form**.
+4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
+
+5. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
    > [!div class="mx-imgBorder"]
-   > ![Facility form](media/deploy-new-facility-form.png "Facility form")
+   > ![Enable Power BI](media/deploy-settings-report1.png "Step1")
 
-5. Export the solution, unpack the solution, and then apply the changes in the form XML listed in this article: [Embed a Power BI report in a model-driven system form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form). Pack the solution, reimport the solution, and then select **Publish all customizations**.
+6. Within the newly created solution, select **Export** . On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
 
-For ease of implementation, you can also use the [Power BI Embedder](https://www.xrmtoolbox.com/plugins/Fic.XTB.PowerBiEmbedder/) in XRMToolBox.
+7. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
 
+8. Open the customization.xml file,, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
+
+    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID** and **TileURL** according to your PowerBI workspace and report. You can find this information by opening the Facility Manager report in PowerBI and examine the URL: https://...powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
+
+    The `TileURL` can be found within the PowerBI report. You can find it at the following destination **... (ellipsis)** > **Embed** > **Website or portal**. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Enable Power BI](media/deploy-settings-report2.png "Step1")
+
+   From the displayed `Secure embed code` window, capture the content of the link in the first field up to the end of the `PowerBIReportID` (as shown in the example code). 
+
+    See the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
+
+9. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with 3 files in it, including the updated customizations.xml file.  
+
+10. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
+On the command bar, select **Import**.  On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import.
+
+11. Select **Next**. On the page that displays information about the solution, select **Import**.
+
+You might need to wait a few moments while the import is completed. View the results, and then select **Close**.
+
+Open a facility record in the Facility Safety Management app and you’ll see the embedded report on the **General** tab.
+ 
 ## Step 6: Publish a theme
 
 You can change the look and feel of the app by applying themes to match your company branding.

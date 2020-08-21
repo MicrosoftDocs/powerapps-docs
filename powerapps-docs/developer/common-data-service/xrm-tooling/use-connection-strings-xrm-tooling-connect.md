@@ -145,7 +145,7 @@ Create a new connection to Common Data Service using a Application or Client Id 
   AuthType=Certificate;
   url=https://contosotest.crm.dynamics.com;
   thumbprint={CertThumbPrintId};
-  ClientId={AppId};
+  ClientId={AppId};"
   />
 ```
 
@@ -158,7 +158,7 @@ Create a new connection to Common Data Service using a Application or Client Id 
   AuthType=ClientSecret;
   url=https://contosotest.crm.dynamics.com;
   ClientId={AppId};
-  ClientSecret={ClientSecret}
+  ClientSecret={ClientSecret}"
   />
 ```
 

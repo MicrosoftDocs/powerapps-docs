@@ -31,6 +31,8 @@
       href: org-service/paging-behaviors-and-ordering.md
     - name: Use column comparison in queries
       href: column-comparison.md
+    - name: FetchXML search item limit
+      href: quick-find-limit.md
   - name: "Use SQL to query data (Preview)"
     href: cds-sql-query.md
   - name: Saved Queries
