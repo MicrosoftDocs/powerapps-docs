@@ -24,7 +24,7 @@ Your user profile displays useful information about you to your entire organizat
   
 1. In the upper-right corner of the screen, select **Settings** ![user-profile-settings-button](media/user-profile-settings-button.png) > **Personalization Settings**.  
  
-2. Scroll down to the very bottom of the **Set Personal Options** dialog box, and then choose **View your user information**.  
+2. Scroll down to the very bottom of the **Set Personal Options** dialog box, and then choose **user information**.  
   
-3. Select the different areas such as **Summary**, **Details**, or **Administration** to see details about your profile. 
+3. On the user informatoin page select different tabs such as **Summary**, **Details**, or **Administration** to see details about your profile. 
   
