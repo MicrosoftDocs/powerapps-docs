@@ -157,7 +157,13 @@ The app message bar shows three types of notifications: informational, warning, 
 
 When you select the error notification, it will take you to the field on the form where the error occurred.
 
-![Example of notifications](media/notifications.png "Examples of notifications")
+
+
+|Current  |Early access  |
+|---------|---------|
+| ![Example of notifications](media/notifications.png "Examples of notifications")     |     ![Example of notifications](media/notifications_1.png "Examples of notifications")   |
+
+
 
 Legend:
 
