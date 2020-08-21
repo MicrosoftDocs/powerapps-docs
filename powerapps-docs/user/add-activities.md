@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 05/11/2020
+ms.date: 08/21/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -42,19 +42,7 @@ Legend:
   6. Activity status
   7. Activity icons
   8. Date and time
- 
-## Add an activity from the nav bar
- 
-The fastest way to add an activity is to use the shortcut on the nav bar and then link it to a record. For example, you can create a phone call activity and then link it to a contact in the system using the **Regarding** field.
 
-1. On the top nav bar, select **New** ![Create record button](media/create-record-button.png "Create record button") > **Activities** > choose the type of activity you want to add.
-
-   > [!div class="mx-imgBorder"]
-   > ![Shortcut to add an activity in Power Apps](media/add_new_activity_from_nav.gif "Shortcut to add an activity in Power Apps")  
- 
-3. Fill in the required information. Use the **Regarding** field to associate the activity with a record.
-
-4. When you're done, select **Save and Close** or **Save & Create New**. 
 
 ## Add an activity from within a record
 
