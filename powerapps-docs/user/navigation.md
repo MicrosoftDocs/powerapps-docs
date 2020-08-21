@@ -173,7 +173,7 @@ Legend:
 
 ### Multiple notification
 
-If there is only one notification, you'll see a single line. If there are multiple notifications. Select the chevron to view each message.
+If there is only one notification, you'll see a single line. If there are multiple notifications, you'll see chevron button.
 
 **Current**
 
