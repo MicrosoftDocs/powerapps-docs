@@ -166,9 +166,9 @@ When you select the error notification, it will take you to the field on the for
 
 Legend:
 
-1. **Info**: The notification is informational.
-2. **Warn**: The notification is a warning. 
-3. **Error**: The notification is an error. 
+1. **Information notifications**: The notification is informational.
+2. **Warning notifications**: The notification is a warning. 
+3. **Error notifications**: The notification is an error. 
 
 
 ### Multiple notification
