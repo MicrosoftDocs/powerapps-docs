@@ -25,8 +25,8 @@ Business processes help everyone follow best practices, even for situations that
 As you work on a new customer record, the business process flow helps you see each step that you need to take to create the new record and fill out the required information according to your organizations business process. 
 
 
-> [!div class="mx-imgBorder"]
-> ![Business process bar](media/business-process.png "Business process bar")
+  > [!div class="mx-imgBorder"]
+  > ![Business process bar](media/business-process.png "Business process bar")
 
 
 
