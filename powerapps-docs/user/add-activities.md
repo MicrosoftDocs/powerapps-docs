@@ -48,6 +48,7 @@ Legend:
 
 1. Open the record that you want to add an activity to.
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button").
+3. Select the type of activity that you want to add.
 
    > [!div class="mx-imgBorder"]
    > ![Shortcut to add an activity in Power Apps](media/add_new_activity_from_record.gif "Shortcut to add an activity in Power Apps") 
