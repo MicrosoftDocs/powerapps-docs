@@ -27,9 +27,11 @@ This article explains how to setup and use a system dashboard that references a 
 To learn more about Power BI reports and dashboards, see <a href="https://docs.microsoft.com/power-bi/create-reports/">Create Power BI Reports</a>. 
 
 > [!IMPORTANT]
-> - This is a private preview feature and requires an maker & environment feature flags to be enabled to author and view a Power BI embedded page in a model-driven app.
+> - This is a private preview feature and requires a maker feature flag to add a Power BI embedded as a system dashboard.  Trains earlier than 8.2 need an environment flag enabled to view a Power BI embedded page in a model-driven app.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
+> [!NOTE]
+> Power BI embedded in a system dashboard or form ignores the Power Platform Admin Center Power BI visualization embedding flag.  That admin flag controls if end users can add Power BI embedded pages. 
 
 ## Create a system dashboard with Power BI embedded
 
