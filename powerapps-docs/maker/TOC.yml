@@ -877,6 +877,8 @@
     items:
     - name: Edit an app
       href: ./canvas-apps/edit-app.md
+    - name: Export and import an app
+      href: ./canvas-apps/export-import-app.md
     - name: Delete an app
       href: ./canvas-apps/delete-app.md
     - name: License designation for an app
