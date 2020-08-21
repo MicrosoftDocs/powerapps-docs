@@ -181,8 +181,8 @@ In the current release, you'll see the number of notifications. Select the chevr
 
 ![Example of multiple notifications](media/multiple_notification.png "Example of multiple notifications")
 
-**Early access**
+**Early Access**
 
-Select the chevron to view each message.
+In the early access release, select the chevron to view each message.
 
 ![Example of multiple notifications](media/multiple_notification_1.png "Example of multiple notifications")
