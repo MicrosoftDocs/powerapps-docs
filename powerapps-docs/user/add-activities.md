@@ -46,7 +46,8 @@ Legend:
 
 ## Add an activity from within a record
 
-You can also open a record and then add an activity to the record. 
+1. Open the record that you want to add an activity to.
+2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button").
 
    > [!div class="mx-imgBorder"]
    > ![Shortcut to add an activity in Power Apps](media/add_new_activity_from_record.gif "Shortcut to add an activity in Power Apps") 
