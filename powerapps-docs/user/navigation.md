@@ -164,7 +164,6 @@ When you select the error notification, it will take you to the field on the for
 | ![Example of notifications](media/notifications.png "Examples of notifications")     |     ![Example of notifications](media/notifications_1.png "Examples of notifications")   |
 
 
-
 Legend:
 
 1. **Info**: The notification is informational.
@@ -172,15 +171,18 @@ Legend:
 3. **Error**: The notification is an error. 
 
 
+### Multiple notification
 
-### Single notification
+If there is only one notification, you'll see a single line. If there are multiple notifications. Select the chevron to view each message.
 
-If there is only one notification, you'll see a single line.
+**Current**
 
-![Example of single notifications](media/single_notification.png "Example of a single notification")
-
-### Multiple notifications
-
-If there are multiple notifications, you'll see the number of notifications. Select the chevron to view each message.
+In the current release, you'll see the number of notifications. Select the chevron to view each message.
 
 ![Example of multiple notifications](media/multiple_notification.png "Example of multiple notifications")
+
+**Early access**
+
+Select the chevron to view each message.
+
+![Example of multiple notifications](media/multiple_notification_1.png "Example of multiple notifications")
