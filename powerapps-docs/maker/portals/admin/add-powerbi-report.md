@@ -5,15 +5,14 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2019
+ms.date: 08/21/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-
 # Add a Power BI report or dashboard to a web page in portal
 
-You can add a Power BI report or dashboard to a web page in portal by using the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag. You can add the tag in the **Copy** field on a web page or in the **Source** field on a web template. If you adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as **powerbiembedded** in the *powerbi* Liquid tag.
+You can add a Power BI report or dashboard to a web page in portal by using the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag. You can add the tag in the **Copy** field on a web page or in the **Source** field on a web template. If you're adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as **powerbiembedded** in the *powerbi* Liquid tag.
 
 > [!TIP]
 > This article explains how to add a Power BI report or dashboard using *powerbi* liquid tag. To add **Power BI component** on a webpage in your portal using the portals Studio, go to [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi).
@@ -54,6 +53,23 @@ For example:
     > [!div class=mx-imgBorder]
     > ![Power BI dashboard tile ID](../media/powerbi-dashboard-tile-id.png "Power BI dashboard tile ID")
 
+## Hide the Filters pane in portals web page
+
+Power BI allows you to [hide the Filters pane](https://docs.microsoft.com/power-bi/create-reports/power-bi-report-filter#hide-the-filters-pane-while-editing) allowing extra space on screen when Filters pane isn't needed. Similarly, you can hide the Filters pane for a dashboard or a report embedded on a web page in your portal.
+
+To hide Filters pane in portals web page, use the following sample code in your web page's [copy (HTML)](../configure/web-page.md#web-page-attributes) attribute.
+
+```html
+<div id="hide-powerbi-filters">
+{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000000/" %}
+</div>
+<script>
+  $(function() {
+//Set the "powerbi-settings-filter-pane-enabled" setting to "false" to hide the Power BI Filters panel 
+    $('#hide-powerbi-filters.powerbi').attr("powerbi-settings-filter-pane-enabled", "false");
+  })
+</script>
+```
 
 ### See also
 
