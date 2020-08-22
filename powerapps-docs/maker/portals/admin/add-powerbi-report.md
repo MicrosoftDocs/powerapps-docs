@@ -55,7 +55,7 @@ For example:
 
 ## Hide the Filters pane in portals web page
 
-Power BI allows you to [hide the Filters pane](https://docs.microsoft.com/power-bi/create-reports/power-bi-report-filter#hide-the-filters-pane-while-editing) allowing extra space on screen when Filters pane isn't needed. Similarly, you can hide the Filters pane for a dashboard or a report embedded on a web page in your portal. To hide, you can use the [Power BI JavaScript embed configuration](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details) attribute called `powerbi-settings-filter-pane-enabled` and set it's value to `false`.
+Power BI allows you to [hide the Filters pane](https://docs.microsoft.com/power-bi/create-reports/power-bi-report-filter#hide-the-filters-pane-while-editing) allowing extra space on screen when Filters pane isn't needed. Similarly, you can hide the Filters pane for a dashboard or a report embedded on a web page in your portal. To hide, you can use the [Power BI JavaScript embed configuration](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details) attribute called `powerbi-settings-filter-pane-enabled` and set its value to `false`.
 
 For example, use the following sample code in your web page's [copy (HTML)](../configure/web-page.md#web-page-attributes) attribute to hide Power BI Filters pane in portals.
 
