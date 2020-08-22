@@ -1,6 +1,6 @@
 ---
 title: "Create a record quickly| MicrosoftDocs"
-ms.custom: ""
+description: How to create a record
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -26,10 +26,10 @@ The **Create a new record** command or **Quick create** makes it fast and easy t
 > [!NOTE]
 > The **Quick create** option is only available for records that are enabled by your admin.
     
-1. On the navigation bar, select the **plus sign** ![Create record button](media/create-record-button.png "Create record button"), and then select the item you want.  
+1. On the navigation bar, select the **plus sign** ![Create a record button](media/create-record-button.png "Create a record button"), and then select the item you want.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Create record button](media/newrecord1.png "Create record button")
+    > ![Create a record](media/newrecord1.png "Create a record")
   
 2.  Fill in the fields, and then select **Save and Close**. Or, to save and create another record, select the down arrow and then select  **Save & Create New**.
 
