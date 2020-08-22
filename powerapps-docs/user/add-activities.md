@@ -202,9 +202,9 @@ Quickly filter activities, notes or posts in the timeline wall by record type or
 Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated record or editing notes and posts.
 
   ![Timeline command bar options](media/timeline-options1.png "Timeline command bar options")
-  ![Timeline command bar options](media/timeline-options2.png "Timeline command bar options")
-  ![Timeline command bar options](media/timeline-options3.png "Timeline command bar options")
-  ![Timeline command bar options](media/timeline-options4.png "Timeline command bar options")
+  ![Timeline command bar options](media/timeline-options2.png "Timeline command options")
+  ![Timeline command bar options](media/timeline-options3.png "Timeline options")
+  ![Timeline command bar options](media/timeline-options4.png "More timeline options")
 
 ## See activities in List or Calendar view
 
