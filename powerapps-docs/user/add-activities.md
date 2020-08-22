@@ -1,6 +1,6 @@
 ---
 title: "Add an appointment, email, phone call, notes or task activity to the Timeline in a Model-driven app| MicrosoftDocs"
-Description: How to add an activity to the timeline
+description: How to add an activity to the timeline
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -195,16 +195,16 @@ Quickly filter activities, notes or posts in the timeline wall by record type or
  > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md#why-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
 
   > [!div class="mx-imgBorder"]
-  > ![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "The filter pane in the timeline")
+  > ![Filter pane in the timeline ](media/timeline-filter2.png "Filter pane in the timeline") ![Filter pane on the timeline ](media/timeline-filter5.png "The filter pane on the timeline")
 
 
 ## Manage Activities
 Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated record or editing notes and posts.
 
   ![Timeline command bar options](media/timeline-options1.png "Timeline command bar options")
-  ![Timeline command bar options](media/timeline-options2.png "Timeline command options")
-  ![Timeline command bar options](media/timeline-options3.png "Timeline options")
-  ![Timeline command bar options](media/timeline-options4.png "More timeline options")
+  ![Timeline command bar option](media/timeline-options2.png "Timeline command bar option")
+  ![Timeline options](media/timeline-options3.png "Timeline options")
+  ![More timeline options](media/timeline-options4.png "More timeline options")
 
 ## See activities in List or Calendar view
 
@@ -233,4 +233,3 @@ You can see the activities in the following views:
 
 [FAQs about Activities and the Timeline Wall](faq-for-timeline-and-activity.md)
 
-[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
