@@ -1,6 +1,6 @@
 ---
 title: "Add an appointment, email, phone call, notes or task activity to the Timeline in a Model-driven app| MicrosoftDocs"
-ms.custom: ""
+Description: How to add an activity to the timeline
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -195,7 +195,7 @@ Quickly filter activities, notes or posts in the timeline wall by record type or
  > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md#why-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
 
   > [!div class="mx-imgBorder"]
-  > ![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")
+  > ![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "The filter pane in the timeline")
 
 
 ## Manage Activities
