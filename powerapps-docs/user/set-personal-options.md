@@ -1,6 +1,6 @@
 ---
 title: "Set personal options| MicrosoftDocs"
-ms.custom: ""
+description: How to set personal options in Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
