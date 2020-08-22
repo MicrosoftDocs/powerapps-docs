@@ -22,7 +22,7 @@ This introduction explains how to find and open an app, and how to work with its
 
 ## Early access feature
 
-If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
+If you have enabled early access, then you will have a different navigation experience. This topic calls out both experiences.
 
 Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
  
@@ -42,7 +42,7 @@ A model-driven app is built out of applications (apps), areas, and entities.
 
 Select the user menu to view your account information or sign out. 
 
-In early access, you can go to your account page by selecting the **View acccount** hyperlink.
+In early access, you can go to your account page by selecting the **View account** hyperlink.
 
 |Current  |Early access  |
 |---------|---------|
@@ -71,7 +71,7 @@ It's easy to get around and get back to your favorite or most-used records. The 
 
 ### Area switcher 
 
-In the left hand navigation pane, the area switcher appears at the bottom left only when a single model-driven app has more than one area in the sitemap definition. 
+In the left-hand navigation pane, the area switcher appears at the bottom left only when a single model-driven app has more than one area in the sitemap definition. 
 
 Open this menu to move to another work area. The current work area is named here.
 
@@ -116,7 +116,7 @@ Legend:
 2. **Related**: Nearly all types of records show a **Related** tab after you've saved them at least once. This tab is actually a drop-down list that you can use to find other types of records that use or reference the displayed record. 
 When you choose an entity name from the **Related** drop-down list, a new tab named for that entity opens, showing a list of all related records of that type. The **Related** tab remains available, and you can still use it to find other types of records that reference the current one.
 3. **Command bar**: Use the commands in the command bar to operate on the current record or perform a task related to the record. The available commands vary based on the record type, but you can typically use the command bar to save your changes, delete the record, refresh the page, email a link to the record, reassign the record owner, or export the record by using a Word template.
-4. **Heading bar**: Some record views display a few especially important fields in the heading bar, opposite the record name. These are typically fields that are fundamental to working with records of the current type (such as a the record name or record owner).
+4. **Heading bar**: Some record views display a few especially important fields in the heading bar, opposite the record name. These are typically fields that are fundamental to working with records of the current type (such as a record name or record owner).
 5. **View and edit all field values**: In the main body of the record view, you'll find all of the fields related to the current tab, form view, and record type. Fields marked with a red asterisk are required, and you can't save the record without their having valid values. Fields marked with a blue plus sign are especially important or recommended, but aren't strictly required. Fields showing a lock icon are read-only and can't be edited.
 
 ## Record set navigation 
