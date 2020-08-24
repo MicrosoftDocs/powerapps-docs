@@ -33,6 +33,7 @@ Power BI is a comprehensive collection of services and  tools that you use to vi
    - [Sales analytics](/dynamics365/sales-enterprise/introduction-sales-template-apps)
    - [Service analytics](/dynamics365/customer-service/configure-customer-service-analytics-dashboard)  
 - **Embed Power BI reports on a form**: You can use Power BI reports in Power Apps model-driven apps to bring rich reporting and analytics to your system forms and empower your users to accomplish more. More information: [Embed a Power BI report in a model-driven system form](../model-driven-apps/embed-powerbi-report-in-system-form.md)
+- **Embed Power BI reports on a system dashboard**: Use can add Power BI reports to the dashboards and include in the solution with Environment Variables for ALM.  More information: [Create or edit model-driven app Power BI embedded page](create-edit-powerbi-embedded-page.md)
 - **Tabular Data Stream (TDS) endpoint**: Use the TDS endpoint for Common Data Service to view entity data in Power BI Desktop. More information: [View entity data in Power BI Desktop (Preview)](view-entity-data-power-bi.md) 
 
 

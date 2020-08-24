@@ -127,3 +127,9 @@ When a solution with a Power BI embedded component will be moved to other enviro
 * [View entity data in Power BI Desktop](../common-data-service/view-entity-data-power-bi.md)
 
 * [Environment variables overview](../common-data-service/environmentvariables.md)
+
+* [Use Power BI](use-power-bi.md)
+
+* [Use Power BI with CDS](../common-data-service/use-powerbi-with-cds.md)
+
+* [Create a Power BI report using the Common Data Service connector](../common-data-service/data-platform-powerbi-connector.md)

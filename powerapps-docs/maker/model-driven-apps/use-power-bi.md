@@ -19,6 +19,7 @@ search.app:
 # Use Power BI
 
 The Power BI cloud service works with Common Data Service apps to provide a self-service analytics solution. Power BI automatically refreshes the app's data displayed. With Power BI Desktop or Microsoft Excel, Power Query for authoring reports and Power BI for sharing dashboards and refreshing data from model-driven apps, your users have a powerful way to work with your app's data. For more information, see these articles: 
+- [Create or edit model-driven app Power BI embedded page](create-edit-powerbi-embedded-page.md)
 - [Embed a Power BI report in a model-driven system form](embed-powerbi-report-in-system-form.md) 
 - [How app users can add or edit Power BI visualizations on their dashboards](../../user/add-powerbi-dashboards.md) 
  
