@@ -39,7 +39,7 @@ After you've purchased Power Apps, create an environment with a Common Data Serv
 
 3. Create appropriate users, and assign security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
-After you've created your environment, you can access it by using the following URL: `https://[myenv].crm.dynamics.com`, where [myenv] is the name of your environment. Make a note of this environment URL.
+After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region like crm for US. Make a note of this environment URL.
 
 ## Step 2: Install the package
 
@@ -164,27 +164,18 @@ Next, we'll configure the data refresh settings for the dataset.
 
 The facility manager Power BI dashboard is used in the model-driven app. Because these reports are published in a different location, you need to change the location.
 
-1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+1. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
 
-2. Select the correct environment, and then select **Settings**.
-
-3. Select **Product** > **Feature**, turn on the **Power BI visualization embedding** toggle, and then select **Save**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
-
-4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
-
-5. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
+2. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-report1.png "Step1")
 
-6. Within the newly created solution, select **Export** . On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
+3. Within the newly created solution, select **Export** . On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
 
-7. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
+4. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
 
-8. Open the customization.xml file,, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
+5. Open the customization.xml file,, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
 
     In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID** and **TileURL** according to your PowerBI workspace and report. You can find this information by opening the Facility Manager report in PowerBI and examine the URL: https://...powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
 
@@ -197,12 +188,12 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 
     See the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
 
-9. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with 3 files in it, including the updated customizations.xml file.  
+6. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with 3 files in it, including the updated customizations.xml file.  
 
-10. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
+7. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
 On the command bar, select **Import**.  On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import.
 
-11. Select **Next**. On the page that displays information about the solution, select **Import**.
+8. Select **Next**. On the page that displays information about the solution, select **Import**.
 
 You might need to wait a few moments while the import is completed. View the results, and then select **Close**.
 
@@ -212,22 +203,27 @@ Open a facility record in the Facility Safety Management app and you’ll see th
 
 You can change the look and feel of the app by applying themes to match your company branding.
 
-1. Go to **Settings** > **Customizations**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear and after that **Advanced Settings**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
+
+2. Go to **Settings** > **Customizations**.
 
    > [!div class="mx-imgBorder"]
    > ![Customizations](media/deploy-settings-customizations.png "Customizations")
 
-2. Select **Themes**.
+3. Select **Themes**.
 
    > [!div class="mx-imgBorder"]
    > ![Select themes](media/deploy-settings-solutions.png "Select themes")
 
-3. Select **New**. Enter the **Name** and determine which colors you want to use. You can also specify the logo, which is used in the site map.
+4. Select **New**. Enter the **Name** and determine which colors you want to use. You can also specify the logo, which is used in the site map.
 
    > [!div class="mx-imgBorder"]
    > ![Deploy themes](media/deploy-themes.png "Deploy themes")
 
-4. Select **Save**, and then **Publish**. 
+5. Select **Save**, and then **Publish**. 
 
    > [!div class="mx-imgBorder"]
    > ![Sample theme](media/deploy-theme-colors.png "Sample theme")
@@ -264,17 +260,22 @@ In the Return to the Workplace solution, the following security roles are define
 
 **To assign security roles**
 
-1. Go to **Settings** > **Security**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear and after that **Advanced Settings**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
+
+2. Go to **Settings** > **Security**.
 
    > [!div class="mx-imgBorder"]
    > ![Security](media/deploy-settings-security.png "Security")
 
-2. Select **Users**, and then select the user to whom you want to give permissions.
+3. Select **Users**, and then select the user to whom you want to give permissions.
 
    > [!div class="mx-imgBorder"]
    > ![Select user](media/deploy-settings-security-users.png "Select user")
 
-3. Select the user, and then select **Manage Roles**. After assigning the roles, select **OK**.
+4. Select the user, and then select **Manage Roles**. After assigning the roles, select **OK**.
 
    > [!div class="mx-imgBorder"]
    > ![Select roles](media/deploy-settings-security-enabled-users.png "Select roles")

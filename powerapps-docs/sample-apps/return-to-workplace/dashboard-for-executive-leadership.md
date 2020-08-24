@@ -16,12 +16,12 @@ This article is for executive leaders who use the Power BI dashboard to analyze 
 
 ## How to view the Location Readiness dashboard
 
-1. Open Power BI Desktop.
+1. Open Power BI in the Service.
 
 2. In the search bar, search for **Return to the Workplace – Leadership**.
 
     > [!div class="mx-imgBorder"]
-    > ![Search for dashboard](media/pbi-dash-command-bar.png "Search for dashboard")
+    > ![Search for dashboard](media/pbi-dash-command-barr.png "Search for dashboard")
 
 ## System at a glance
 
@@ -73,7 +73,7 @@ When you want to drill down on certain facility locations, you can filter on the
 Different from the overall view of **System at a Glance**, the **Facility at a Glance** tab lets you drill down to each facility and track details about facility open readiness, employee sentiment, and employee attestation. It helps executive leaders to monitor all kinds of key metrics and determine the facility's opening phase.
 
 > [!div class="mx-imgBorder"]
-> ![Facility view](media/pbi-dash-selected-facility-details2.png "Facility view")
+> ![Facility view](media/pbi-dash-report-facility-at-a-glance-overview.png "Facility view")
 
 ### Key metrics
 
@@ -82,21 +82,34 @@ Different from the overall view of **System at a Glance**, the **Facility at a G
 In this area, you can find employees average sentiment, reproductive numbers, facilities, and current phases.
 
 > [!div class="mx-imgBorder"]
-> ![Phase readiness](media/pbi-dash-report-facility-at-a-glance-PhaseReadiness.png "Phase readiness")
+> ![Phase readiness](media/pbi-dash-report-facility-at-a-glance-phases-readiness.png "Phase readiness")
 
 #### Readiness Checklist
 
 The checklist shows the steps needed to move facilities through phases.
 
 > [!div class="mx-imgBorder"]
-> ![Readiness Checklist](media/pbi-dash-report-facility-at-a-glance-checklist.png "Readiness Checklist")
+> ![Readiness Checklist](media/pbi-dash-report-facility-at-a-glance-readiness-checklist.png "Readiness Checklist")
+
+#### Occupancy
+
+   The Occupancy section provides metrics regarding facility capacity and usage, such as:
+
+- The Facility’s Total Capacity, and Current Capacity based on re-opening phase
+- Number of bookings and visits for the most recent day and daily average for the last 7 days
+- Two charts, that can be filtered by date range:
+   - Number of bookings and the current capacity
+   - Average daily occupancy, shown as a black bar.  Capacity is represented by the green zone.  Facilities with black bars in the red zone are over-capacity.
+
+> [!div class="mx-imgBorder"]
+> ![Readiness Checklist](media/pbi-dash-report-facility-at-a-glance-occupancy.png "Readiness Checklist")
 
 ## Employee Activity 
 
 The **Employee Activity** tab provides an overall time-series daily view for employee sentiment and attestation. You can check every day to see where numbers increased or were lower compared to previous days.
 
 > [!div class="mx-imgBorder"]
-> ![Employee Activity](media/pbi-dash-employee-activity2.png "Employee Activity")
+> ![Employee Activity](media/pbi-dash-report-leadership-employee-activity.png "Employee Activity")
 
 ## Tools
 

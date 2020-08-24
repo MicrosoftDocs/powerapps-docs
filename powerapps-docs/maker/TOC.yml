@@ -1777,11 +1777,15 @@
     - name: Overview
       href: ../sample-apps/return-to-workplace/overview.md
     - name: Deploy the solution
-      href: ../sample-apps/return-to-workplace/deploy.md   
+      href: ../sample-apps/return-to-workplace/deploy.md
+    - name: Upgrade the solution
+      href: ../sample-apps/return-to-workplace/upgrade.md      
     - name: Configure the solution
       href: ../sample-apps/return-to-workplace/configure.md
     - name: Location Readiness dashboard
       href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
+    - name: Workplace Care Management dashboard
+      href: ../sample-apps/return-to-workplace/dashboard-case-management.md
     - name: Facility Safety Management app
       href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
     - name: Workplace Care Management app
