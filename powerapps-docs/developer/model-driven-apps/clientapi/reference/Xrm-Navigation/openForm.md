@@ -120,8 +120,7 @@ This function is passed an object as a parameter. The object has a <b>savedEntit
 <td>Function</td>
 <td>No</td>
 <td>A function to execute when the operation fails.<br>
-
-<b>NOTE</b>: On [Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface), the <b>errorCallback</b> function will be executed only if you are opening a quick create form.</td>
+</td>
 </tr>
 </table>
 
