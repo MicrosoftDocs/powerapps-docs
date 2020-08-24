@@ -39,7 +39,7 @@ After you've purchased Power Apps, create an environment with a Common Data Serv
 
 3. Create appropriate users, and assign security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
-After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region like crm for US. Make a note of this environment URL.
+After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region for example, crm for US. Make a note of this environment URL.
 
 ## Step 2: Install the package
 
@@ -203,7 +203,7 @@ Open a facility record in the Facility Safety Management app and you’ll see th
 
 You can change the look and feel of the app by applying themes to match your company branding.
 
-1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear and after that **Advanced Settings**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear icon and select **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
    > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
@@ -260,7 +260,7 @@ In the Return to the Workplace solution, the following security roles are define
 
 **To assign security roles**
 
-1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear and after that **Advanced Settings**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear icon and then select **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
    > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
@@ -282,7 +282,7 @@ In the Return to the Workplace solution, the following security roles are define
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 
-This section provides information for US Government customers about how to install the app and publish the Power BI dashboard using the deploymemt package.
+This section provides information for US Government customers about how to install the app and publish the Power BI dashboard using the deployment package.
 
 > - [Step 1: Download the latest deployment package](#step-1-download-the-latest-deployment-package)
 > - [Step 2: Install the app by using the deployment package](#step-2-install-the-app-by-using-the-deployment-package)
@@ -359,6 +359,7 @@ Install Power BI Desktop from Microsoft Store: [Power BI Desktop](https://aka.ms
 > If you installed Power BI Desktop by downloading it directly from the Download Center page in the past, remove it and then download it from Microsoft Store. The Microsoft Store version will be updated automatically as new releases become available. If you can't install from Microsoft Store, install the latest non&ndash;Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
 
 #### The process
+
 Follow the steps below for each .pbit file.
 
 1. Run Power BI Desktop, and sign in using your account.

@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -37,18 +37,21 @@ Some important statistics are provided at the top, including the number of facil
 ### Key metrics
 
 #### Phases
+
 Review the phases that facilities are in, the number of facilities, new cases, new fatal cases, and the reproductive number.
 
 > [!div class="mx-imgBorder"]
 > ![System at Glance phases](media/pbi-dash-system-at-a-glance-phases.png "System at a Glance phases")
 
-#### New COVID cases per day
+#### New cases per day
+
 Information is shown about new confirmed cases and average cases, in addition to states with the most active spread.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance cases](media/pbi-dash-report-covidcases.png "System at a Glance cases")
 
-#### Fatal COVID cases per day
+#### Fatal cases per day
+
 The data on confirmed deaths is shown in these visualizations, giving you easy access to information about the most active spread by states, new fatal cases, and total fatal cases.
 
 > [!div class="mx-imgBorder"]
@@ -93,13 +96,13 @@ The checklist shows the steps needed to move facilities through phases.
 
 #### Occupancy
 
-   The Occupancy section provides metrics regarding facility capacity and usage, such as:
+The Occupancy section provides metrics regarding facility capacity and usage, such as:
 
-- The Facility’s Total Capacity, and Current Capacity based on re-opening phase
-- Number of bookings and visits for the most recent day and daily average for the last 7 days
+- Facility’s total capacity, and current capacity based on re-opening phase.
+- Number of bookings and visits for the most recent day and daily average for the last 7 days.
 - Two charts, that can be filtered by date range:
-   - Number of bookings and the current capacity
-   - Average daily occupancy, shown as a black bar.  Capacity is represented by the green zone.  Facilities with black bars in the red zone are over-capacity.
+   - Number of bookings and the current capacity.
+   - Average daily occupancy, shown as a black bar. Capacity is represented by the green zone.  Facilities with black bars in the red zone are over-capacity.
 
 > [!div class="mx-imgBorder"]
 > ![Readiness Checklist](media/pbi-dash-report-facility-at-a-glance-occupancy.png "Readiness Checklist")

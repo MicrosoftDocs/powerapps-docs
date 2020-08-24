@@ -5,7 +5,7 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -16,7 +16,7 @@ This article provides step-by-step instructions about how to use the Employee Re
 
 ## Prerequisites
 
-- Open PowerApps in a [web browser](https://make.powerapps.com) or Download [Power Apps Mobile](https://powerapps.microsoft.com/downloads):
+- Open [Power Apps](https://make.powerapps.com) in a web browser or download [Power Apps Mobile](https://powerapps.microsoft.com/downloads):
 
   - For Apple devices with iOS, such as iPhone and iPad, use the [App Store](https://aka.ms/powerappsios).
 
@@ -26,7 +26,7 @@ This article provides step-by-step instructions about how to use the Employee Re
 
 ## Getting started with the app
 
-Open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization after you sign in. More information: [Power Apps mobile device sign in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in), [Powerapps web browser sign in](https://docs.microsoft.com/en-us/powerapps/user/run-app-browser)
+Open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization after you sign in. More information: [Power Apps mobile device sign in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in), [Power Apps web browser sign in](https://docs.microsoft.com/powerapps/user/run-app-browser)
 
 When you successfully sign in and open the **Return to the Workplace** app, you can get a day pass, look up facility status, or answer the employee sentiment question.
 
@@ -57,12 +57,12 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
 2. Select an available facility from the facility list or use the saved facility and area shortcut if applicable.
 
-3. Select **Book a Space** to continue with the check-in process.
+3. Select **BOOK A SPACE** to continue with the check-in process.
 
    > [!div class="mx-imgBorder"]
    > ![Select Facility](media/employee-select-facility.png "Select facility")
 
-4. Select an available area within that facility. Click on the **See all available** button to only show the available areas. Select **Next** to continue with the check-in process. Check in the box **Save as default for future check ins** to save the area to reuse on future check ins.
+4. Select an available area within that facility. Select **See All Available** option to show the available areas. Select **Save as default for future check ins** to save the area to reuse on future check ins. Select **NEXT** to continue with the check-in process.
 
    > [!div class="mx-imgBorder"]
    > ![Select Area](media/employee-select-area.png "Select area")
@@ -77,7 +77,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
     > [!div class="mx-imgBorder"]
     > ![Terms and agreements](media/employee-termandagreement.png "Terms and agreements")
 
-7. Review the **Symptom Check** statements. Select **I Agree**  if you agree with the statements, and **I Disagree** if you don't.
+7. Review the list of symptom check statements. Select **I AGREE**  if you agree with the statements, and **CANCEL** if you don't.
 
    > [!div class="mx-imgBorder"]
    > ![Symptom check](media/employee-agreement.png "Symptom check")
@@ -89,12 +89,12 @@ If your responses to the symptom check statements show that you're healthy, you'
 > [!div class="mx-imgBorder"]
 > ![Employee pass](media/employee-pass.png "Employee pass")
 
-To cancel your pass, select the **Cancel** button. Select **Yes, Cancel** to proceed with cancelling the pass or **No** to keep the pass.
+To cancel your pass, select the **CANCEL PASS** button. Select **YES, CANCEL** to proceed with canceling the pass or **NO** to keep the pass.
 
 > [!div class="mx-imgBorder"]
 > ![Employee cancel pass](media/employee-cancel-pass.png "Employee cancel pass")
 
-If your responses show you aren't healthy, you won't receive a pass and you'll be given contact information for the company health and safety department to use if you need.
+If your responses show you aren't healthy, you'll not receive a pass and provided with contact information for the company health and safety department if you need.
 
 > [!div class="mx-imgBorder"]
 > ![Not feeling well](media/employee-pass-negative.png "Not feeling well")
