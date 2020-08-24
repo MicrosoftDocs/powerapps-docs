@@ -1,6 +1,6 @@
 ---
 title: Monitor and troubleshoot model-driven app form behavior in Power Apps | MicrosoftDocs
-description: "Monitor can help you debug and diagnose problems, which helps you build faster, more reliable apps."<!--Suggested-->
+description: "Monitor can help you debug and diagnose problems, which helps you build faster, more reliable apps."
 ms.custom: ""
 ms.date: 08/11/2020
 ms.reviewer: "matp"
