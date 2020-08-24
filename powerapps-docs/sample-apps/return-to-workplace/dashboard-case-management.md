@@ -1,6 +1,6 @@
 ---
 title: Use the Case Management dashboard
-description: Provides an overview of insights through dashboards.
+description: Provides an overview of case management dashboards.
 author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual

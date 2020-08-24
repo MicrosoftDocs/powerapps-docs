@@ -49,7 +49,7 @@ The Workplace Care Management app has the following components:
 Lists all the cases that have been created.
 
 > [!div class="mx-imgBorder"]
-> ![Employee cases](media/health-safety-employee-cases.png "Employee cases")
+> ![List of Employee cases](media/health-safety-employee-cases.png "List of Employee cases")
 
 In the Employee Cases component, we have three views with different filters:
 
@@ -108,7 +108,7 @@ You can create a new employee contact if the contact doesn't exist.
    | Preferred Method of Contact | Select the method of contact the employee prefers from the drop-down list. |
 
    > [!div class="mx-imgBorder"]
-   > ![Create a contact](media/health-safety-employee-new2.png "Create a contact")
+   > ![Create a contact details](media/health-safety-employee-new2.png "Create a contact details")
 
 3. Select **Save & Close**. The newly created record is available in the
     **Active Contacts** view.

@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 08/21/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -169,7 +169,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 2. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
    > [!div class="mx-imgBorder"]
-   > ![Enable Power BI](media/deploy-settings-report1.png "Step1")
+   > ![Enable Power BI](media/deploy-settings-report1.png "Enable Power BI")
 
 3. Within the newly created solution, select **Export** . On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
 
@@ -177,12 +177,12 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 
 5. Open the customization.xml file,, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
 
-    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID** and **TileURL** according to your PowerBI workspace and report. You can find this information by opening the Facility Manager report in PowerBI and examine the URL: https://...powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
+    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID** and **TileURL** according to your PowerBI workspace and report. You can find this information by opening the Facility Manager report in PowerBI and examine the URL: https://powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
 
     The `TileURL` can be found within the PowerBI report. You can find it at the following destination **... (ellipsis)** > **Embed** > **Website or portal**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Enable Power BI](media/deploy-settings-report2.png "Step1")
+   > ![Power BI TileURL](media/deploy-settings-report2.png "Power BI TileURL")
 
    From the displayed `Secure embed code` window, capture the content of the link in the first field up to the end of the `PowerBIReportID` (as shown in the example code). 
 
@@ -206,7 +206,7 @@ You can change the look and feel of the app by applying themes to match your com
 1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear icon and select **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
-   > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
+   > ![Advanced Settings](media/deploy-advanced-settings.png "Advanced Settings")
 
 2. Go to **Settings** > **Customizations**.
 
@@ -263,7 +263,7 @@ In the Return to the Workplace solution, the following security roles are define
 1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear icon and then select **Advanced Settings**.
 
    > [!div class="mx-imgBorder"]
-   > ![Customizations](media/deploy-advanced-settings.png "Advanced Settings")
+   > ![Customizations Advance Settings](media/deploy-advanced-settings.png " Customizations Advanced Settings")
 
 2. Go to **Settings** > **Security**.
 
@@ -351,18 +351,18 @@ After extracting the .zip file, you'll see the following in the extracted folder
 
 This section provides information about how GCC customers can use the **Return to the Workplace - Location Readiness** and **Return to the Workplace - Facility Manager** dashboard .pbit files available in the deployment package to publish the dashboards.
 
-#### Prerequisites
+#### Prerequisites for installing Power BI
 
 Install Power BI Desktop from Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
 
 > [!NOTE]
 > If you installed Power BI Desktop by downloading it directly from the Download Center page in the past, remove it and then download it from Microsoft Store. The Microsoft Store version will be updated automatically as new releases become available. If you can't install from Microsoft Store, install the latest non&ndash;Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
 
-#### The process
+**Process**
 
 Follow the steps below for each .pbit file.
 
-1. Run Power BI Desktop, and sign in using your account.
+1. Open Power BI Desktop, and sign in using your account.
 
 2. Go to the location where you extracted the deployment package (.zip file). In the **Power BI Template** folder, you'll find the appropriate .pbit file.
 
@@ -381,27 +381,27 @@ Follow the steps below for each .pbit file.
 6. After connecting to your Common Data Service environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings need to be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
      
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-access-web-content-level.png "Grant anonymous access to the Web Content level")
+    > ![Access Web Content level](media/deploy-access-web-content-level.png "Access Web Content level")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-level-connect.png "Grant anonymous access to the Web Content")
+    > ![Grant anonymous access to the Web Content](media/deploy-gcc-web-acesss-level-connect.png "Grant anonymous access to the Web Content")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-level.png "Grant anonymous access to the Web Content")
+    > ![Anonymous access to the Web Content](media/deploy-gcc-web-acesss-level.png "Anonymous access to the Web Content")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels.png "Grant anonymous access to the Web Content")
+    > ![Privacy level](media/deploy-gcc-web-acesss-privacy-levels.png "Privacy level")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-select-anonymous.png)
+    > ![Anonymous privacy select](media/deploy-gcc-web-acesss-privacy-select-anonymous.png "Anonymous privacy select")
     
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels-blob-storage-public.png "Grant anonymous access to the Web Content")
+    > ![Privacy level blob storage](media/deploy-gcc-web-acesss-privacy-levels-blob-storage-public.png "Privacy level blob storage")
 
     After you've configured the access and privacy levels for COVID-19 public data, you must set the privacy level for Common Data Service data to **Organizational**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels-CDS.png)
+    > ![Access Web Content level CDS](media/deploy-gcc-web-acesss-privacy-levels-CDS.png "Access Web Content level CDS")
 
 7. After a connection is successfully made, the Power BI report will be displayed. You'll be prompted to apply pending changes to your query. Select **Apply changes**.
 

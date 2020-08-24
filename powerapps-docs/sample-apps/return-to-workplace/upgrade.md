@@ -1,25 +1,23 @@
 ---
 title: Upgrade the Return to the Workplace solution for Microsoft Power Platform | Microsoft Docs
-description: Provides an overview of the Return to the Workplace solution.
+description: Provides an overview of how to upgrade the Return to the Workplace solution.
 author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/21/2020
+ms.date: 08/25/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
 # Upgrade the Return to Work solution.
 
-Follow the steps in this article to upgrade your existing installation of Return to Work solution to the latest version. 
+This article provide step-by-step instructions on how to upgrade the existing Return to Work solution to the latest version. If you're deploying the solution for the first time, see [deploy solution](deploy.md) article.
 
-If this is the first time you deploy the solution, look into Deploy Solution.
-
-## Prerequisites 
+## Prerequisites
 
 - Ensure you have the Global Admin credentials and environment details where the Return to Work solution is deployed currently. 
 
-- Ensure all users are disconnected from your environment before you upgrade. You might have to plan the upgrade process at a time when there is minimal obstruction for your users. 
+- Ensure all the users are disconnected from your environment before you upgrade. You might have to plan the upgrade process at a time when there is minimal obstruction for your users. 
 
 ## Step 1: Update the Package
 

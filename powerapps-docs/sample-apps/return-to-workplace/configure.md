@@ -174,7 +174,7 @@ To edit the record, select it, update the values, and then select **Save & Close
 1. Select the **Readiness Factors** tab.
 
    > [!div class="mx-imgBorder"]
-   > ![Readiness factors](media/solution-admin-reopen-phase-view-readiness-factors.png "Readiness factors")
+   > ![Readiness factors for a phase](media/solution-admin-reopen-phase-view-readiness-factors.png "Readiness factors for a phase")
 
 2. Select **Add Existing Readiness Factor**.
 

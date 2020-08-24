@@ -26,8 +26,6 @@ The main modules of the Return to the Workplace solution include:
 
 - **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace to check in to work remotely and self-screen before entering a building.
 
-
-
 ## Licensing requirements
 
 - Power Apps license

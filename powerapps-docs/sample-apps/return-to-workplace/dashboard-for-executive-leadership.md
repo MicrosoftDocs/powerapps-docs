@@ -105,7 +105,7 @@ The Occupancy section provides metrics regarding facility capacity and usage, su
    - Average daily occupancy, shown as a black bar. Capacity is represented by the green zone.  Facilities with black bars in the red zone are over-capacity.
 
 > [!div class="mx-imgBorder"]
-> ![Readiness Checklist](media/pbi-dash-report-facility-at-a-glance-occupancy.png "Readiness Checklist")
+> ![Readiness Checklist Occupancy](media/pbi-dash-report-facility-at-a-glance-occupancy.png "Readiness Checklist occupancy")
 
 ## Employee Activity 
 
