@@ -67,7 +67,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
    > [!div class="mx-imgBorder"]
    > ![Select Area](media/employee-select-area.png "Select area")
 
-5. Select time window for arrival at the facility. Select **Next** to continue with the check-in process.
+5. Select time window for arrival at the facility. Select **NEXT** to continue with the check-in process.
 
    > [!div class="mx-imgBorder"]
    > ![Select Time](media/employee-select-time.png "Select time")
@@ -109,7 +109,7 @@ You can say how you're feeling about returning to the workplace. On the home pag
  This option will reset itself after you reopen the app.
 
 > [!div class="mx-imgBorder"]
-> ![Share sentiment](media/employee-share-sentiment2-2.png "Share sentiment")
+> ![Share sentiment reset](media/employee-share-sentiment2-2.png "Share sentiment reset")
 
 ## Feedback about the solution
 
