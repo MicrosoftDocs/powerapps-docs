@@ -89,7 +89,7 @@ For more details on the update process, view [update a template app](https://doc
 
 ## Step 3: Install the Workplace Care Management Dashboard
 
-Included in the next version is a new dashboard for the **Health and Safety Leads**, this dashboard gives you a single overview where you can track employee cases. You can view more details in [use the case management dashboard](dashboard-case-management.md), to install it follow the instructions as provided in the [deploy the solution](deploy.md#step-3-configure-and-publish-power-bi-dashboards).
+Included in the next version is a new dashboard for the **Health and Safety Leads**, this dashboard gives you a single overview where you can track employee cases. You can view more details in [use the case management dashboard](dashboard-case-management.md), to install the dashboard follow the instructions as provided in the [deploy the solution](deploy.md#step-3-configure-and-publish-power-bi-dashboards).
 
 ## Step 4: Update the Facilities
 
