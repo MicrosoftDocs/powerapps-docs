@@ -34,7 +34,7 @@ For similar instructions that show you how to create a new sandbox environment t
 >  For environments with Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps, see [Dynamics 365 apps](transition-web-app.md#dynamics-365-apps).
 
 ## Prerequisites 
-- An existing Dynamics 365 Sales or Service legacy web client application. 
+- An existing Dynamics 365 Sales or Dynamics 365 Customer Service legacy web client application. 
 - Although not required, we recommend using a non-production environment to test your application. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances) 
 
 ## Overview 
@@ -161,7 +161,7 @@ Transitioning to the Unified Interface is a great opportunity for you to make a 
 More information: [Design model-driven apps by using the app designer](design-custom-business-apps-using-app-designer.md) 
 
 ### See also
-<!-- Unified Interface transition community (link tbd) <br />  -->
+
 [Unified Interface Playbook](unified-interface-playbook.md) <br />
 [Approaching a user experience and Unified Interface transition](approaching-unified-interface.md) <br />
 [About Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface) <br />
