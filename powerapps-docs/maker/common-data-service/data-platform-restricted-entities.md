@@ -15,7 +15,7 @@ search.app:
 
 # Restricted entities requiring Dynamics 365 licenses
 
-App makers, who are building custom apps, can use all of the Common Data Service entities available within [Common Data Model](https://docs.microsoft.com/en-us/common-data-model/) to create apps and flows for users who have any version of Power Apps license.  
+App makers, who are building custom apps, can use all of the Common Data Service entities available within [Common Data Model](https://docs.microsoft.com/common-data-model/) to create apps and flows for users who have any version of Power Apps license.  
 
 However, a smaller set of entities tied to Dynamics 365 products require canvas and model-driven app users to have a license for the corresponding Dynamics 365 product if they need to create, update, or delete records within the entities. These are referred to as restricted entities.
 
