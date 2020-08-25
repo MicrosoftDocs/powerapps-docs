@@ -28,15 +28,29 @@ For an overview of Unified Interface in model-driven apps, watch this video: [In
 > [!NOTE]
 > The legacy web client will be deprecated and customers must transition to Unified Interface before December 1, 2020. To learn more on how to transition, see [Quick start for transitioning](/powerapps/maker/model-driven-apps/transition-web-app) and [FAQs: Transition to Unified Interface](/powerapps/maker/model-driven-apps/faqs-transition-unified-interface).
 
-
 ## Early access feature
 
 If you have enabled early access then you will have a different navigation experience. This topic calls out both experiences.
 
 Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
 
-
 > ![Unified Interface adapts to the screen](media/Reflow_2.png "Unified Interface adapts to the screen")
+
+
+## Reflow 
+
+The Unified Interface is designed for a modern reflow experience. When you're on a form there are pixel breakpoints where it will move information on the screen based on your screen size. Section will move below if you have a single section 
+
+When a form reflows from multiple columns to one column, it reflows from left to right. Reflows works differently when a control in the column spans at least two columns in a section, then it reflow from top to bottom. 
+
+In example below, each number corresponds to a control.
+
+|Reflow experience from multiple columns to one column   |Reflow experience when control spans at least two columns in a section   |
+|---------|---------|
+| ![Reflow experience from multiple columns to one column](media/reflow_example1.png "Reflow experience from multiple columns to one column")     |     ![Reflow experience when control spans at least two columns in a section](media/reflow_example2.png "Reflow experience when control spans at least two columns in a section")   |
+
+
+
 
 ## Navigation
 
