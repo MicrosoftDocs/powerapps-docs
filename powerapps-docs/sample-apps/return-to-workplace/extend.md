@@ -425,7 +425,7 @@ This section of the solution describes the different flows within the solution a
 | Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility. |
 ||||
 
-For the solution, we generate sample data, which makes records every 12 hours to simulate real life. As mentioned in [configure the solution](configure.md) article, dependent on the purpose of your environment you can disable these flows.
+For the solution, we generate sample data, which will be refreshed for 12 hours. You can turn off these flows if you don't need sample data in your environments.
 
 | Flow  | Description |
 |--------------|----------|
