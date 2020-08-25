@@ -34,7 +34,7 @@ For similar instructions that show you how to create a new sandbox environment t
 >  For environments with Dynamics 365 Field Service or Dynamics 365 Project Service Automation apps, see [Dynamics 365 apps](transition-web-app.md#dynamics-365-apps).
 
 ## Prerequisites 
-- An existing Dynamics 365 Sales or Service legacy web client application. 
+- An existing Dynamics 365 Sales or Dynamics 365 Customer Service legacy web client application. 
 - Although not required, we recommend using a non-production environment to test your application. More information: [Manage sandbox instances](/dynamics365/customer-engagement/admin/manage-sandbox-instances) 
 
 ## Overview 
@@ -149,7 +149,7 @@ Now you are ready to launch the app. You can compare the new Unified Interface a
 With your application showcasing the Unified Interface, you can start validating your app, processes, and customizations to identify how the transition will look. We recommend that you test all use cases, but you can start with the most critical ones or group into logical patterns of design. Since the Unified Interface is based on responsive design, we recommend that you always perform tests with different devices that have different screen resolutions. As you test the application you will be able to verify that your customizations are compatible with the Unified Interface and whether there are any features that require a redesign or have missing functionality.  
 
 > [!IMPORTANT]
-> The current version of Common Data Service and model-driven apps in Dynamics 365 still include several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
+> The current version of Common Data Service and customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, and Dynamics 365 Project Service Automation) still include several deprecated features. You should review your application for any deprecated features and replace as necessary with new capabilities. More information: [Important changes (deprecations) coming](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming)
 
 > [!TIP]
 > The Power Apps Checker tool assists in quality checking of your solution's components.  More information: [Use solution checker to validate your model-driven apps in Power Apps](../common-data-service/use-powerapps-checker.md)
@@ -161,7 +161,7 @@ Transitioning to the Unified Interface is a great opportunity for you to make a 
 More information: [Design model-driven apps by using the app designer](design-custom-business-apps-using-app-designer.md) 
 
 ### See also
-<!-- Unified Interface transition community (link tbd) <br />  -->
+
 [Unified Interface Playbook](unified-interface-playbook.md) <br />
 [Approaching a user experience and Unified Interface transition](approaching-unified-interface.md) <br />
 [About Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface) <br />
