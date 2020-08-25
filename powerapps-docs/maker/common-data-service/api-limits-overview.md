@@ -17,7 +17,7 @@ search.app:
 ---
 # Common Data Service API limits overview
 
-Common Data Service API limits help ensure service levels, availability and quality. Common Data Service API limits are part of the Power Platform Request limits and allocations. This topic will introduce limits specifically for Common Data Service applicable for model-driven apps in Dynamics 365 (such as Dynamics 365 Sales and Dynamics 365 Customer Service), Power Apps, and Power Automate connecting to Common Data Service/model-driven apps in Dynamics 365. 
+Common Data Service API limits help ensure service levels, availability and quality. Common Data Service API limits are part of the Power Platform Request limits and allocations. This topic will introduce limits specifically for Common Data Service applicable for customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), Power Apps, and Power Automate connecting to Common Data Service. 
 
 For information about limits for all areas within Power Platform, see [Power Platform Request limits and allocations](/power-platform/admin/api-request-limits-allocations).
 

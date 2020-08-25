@@ -16,7 +16,7 @@ With the capability to build a portal in Power Apps, you can create a website fo
 
 These are some benefits of creating a portal:
 
-- Because the data is stored in Common Data Service, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, model-driven apps in Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
+- Because the data is stored in Common Data Service, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
 - You can design the portal through the WYSIWYG Power Apps portals Studio by adding and configuring components on the webpages.
 
@@ -26,7 +26,7 @@ If you choose to create your portal in a new environment using the **Create new 
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
-Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
+Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service).
 
 > [!NOTE]
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](#create-additional-portals-in-an-environment).
