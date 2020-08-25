@@ -4,7 +4,7 @@ description: A list of restricted entities in Common Data Service that require D
 author: KumarVivek
 ms.service: powerapps
 ms.topic: reference
-ms.date: 04/15/2020
+ms.date: 08/25/2020
 ms.author: kvivek
 search.audienceType: 
   - maker
