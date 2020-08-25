@@ -22,6 +22,7 @@ However, a smaller set of entities tied to Dynamics 365 products require canvas 
 Entities may be restricted to a Dynamics 365 license for the following reasons:
 * The entity is used to store and maintain product-specific configuration data that should typically be not used outside of the application.
 * The entity is accompanied by advanced logic that creates and maintains data in a specific way when used within a Dynamics 365 product.
+
 If an app or flow only reads information from an entity, a Dynamics 365 license is not required and an appropriate Power Apps or Power Automate license is all that's needed.
 
 ## Restricted entities for create, update, and delete operations
@@ -72,7 +73,7 @@ Work Order Business Process |msdyn_bpf_d3d97bac8c294105840e99e37a9d1c39 |Dynamic
 Work Order Details Generation Queue (Deprecated)|msdyn_workorderdetailsgenerationqueue |Dynamics 365 for Field Service<br>**or** Dynamics 365 Customer Engagement plan <br> **or** Dynamics 365 plan
 
 [1] *Case Entity actions permitted with only Power Apps license:*  
-     PowerApps licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on        behalf of customers. PowerApps licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’,     ‘close’,‘delete’,‘assign’,‘duplicate’ , ‘merge’ , ‘create child cases’ or perform any other custom operation on cases created by others- Users cannot act as a customer service agent, cannotmanage cases.
+     PowerApps licensed users can ‘create’ cases; can ‘read’, ‘update’ and ‘delete’ self-created cases to enable scenarios including employee self-service and case creation on        behalf of customers. PowerApps licensed users can only perform ‘read’ operation on cases created by other users. They cannot ‘update’, ‘resolve’, ‘route’,     ‘close’,‘delete’,‘assign’,‘duplicate’ , ‘merge’ , ‘create child cases’ or perform any other custom operation on cases created by others- Users cannot act as a customer service agent, cannot manage cases.
 
 > [!Note]
 > Dynamics 365 Customer Engagement Plan and Dynamics 365 Plan licenses are no longer available for purchase and is referenced here only for the benefit of existing customers who had bought this license in the past.
