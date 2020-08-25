@@ -45,12 +45,9 @@ When a form reflows from multiple columns to one column, it reflows from left to
 
 In example below, each number corresponds to a control.
 
-|Reflow experience from left to right: When multiple columns to one column   |Reflow experience from top to bottom: When control spans at least two columns in a section (notice column #5 spans across) |
+|Reflow experience from left to right: When multiple columns reflow to one column   |Reflow experience from top to bottom: When a control spans at least two columns in a section (notice column #5 spans across) |
 |---------|---------|
 | ![Reflow experience from multiple columns to one column](media/reflow_example1.png "Reflow experience from multiple columns to one column")     |     ![Reflow experience when control spans at least two columns in a section](media/reflow_example2.png "Reflow experience when control spans at least two columns in a section")   |
-
-
-
 
 ## Navigation
 
