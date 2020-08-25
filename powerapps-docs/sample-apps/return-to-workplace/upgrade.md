@@ -91,7 +91,7 @@ To learn more about the update process, see: [Update a template app](https://doc
 
 ## Step 3: Install the Workplace Care Management dashboard
 
-The Workplace Care Management dashboard gives you an overall overview where you can track the employee cases. More information: [Use the case management dashboard](dashboard-case-management.md).
+The Workplace Care Management dashboard gives you an overall overview where you can track the employee cases. More information: [Use the Workplace Care Management dashboard](dashboard-case-management.md).
 
 To install the Workplace Care Management dashboard, follow the instructions as provided in the [deploy the solution](deploy.md#step-3-configure-and-publish-power-bi-dashboards) article.
 

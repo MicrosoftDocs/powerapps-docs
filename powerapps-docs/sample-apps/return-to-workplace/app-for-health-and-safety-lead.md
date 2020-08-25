@@ -73,7 +73,7 @@ In the Employee Cases component, we have three views with different filters:
 
 ## Getting started with the Workplace Care Management app
 
-Employee safety is the main goal for Health and Safety Leads. You use this app to decide whether to revoke an employee's ability to check in to the workplace. The goal of the case management is to provide a clear insight into the work backlog and to make sure that the same process is used to manage all cases.
+Employee safety is the main goal for Health and Safety Leads. You use this app to decide whether to revoke an employee's ability to check in to the workplace. The goal of the care management is to provide a clear insight into the work backlog and to make sure that the same process is used to manage all cases.
 
 At the case level, no additional personal or privacy-related information is
 stored or gathered. The case must be regarded as a checklist that proper

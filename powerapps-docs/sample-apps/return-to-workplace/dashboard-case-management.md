@@ -1,6 +1,6 @@
 ---
-title: Use the Case Management dashboard
-description: Provides an overview of case management dashboards.
+title: Use the Workplace Care Management dashboard
+description: Provides an overview of the Workplace Care Management dashboards.
 author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,15 +10,15 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 
-# Use the Case Management dashboard
+# Use the Workplace Care Management dashboard
 
 This article is for Health and Safety Leads who use the Power BI dashboard to have an awareness of employee well-being and effectively manage and track employee cases across their network of facilities and locations using the Return to the Workplace solution.
 
-## How to view the Case Management dashboard
+## How to view the Workplace Care Management dashboard
 
 1. Open Power BI Desktop.
 
-2. In the search bar, search for Return to the Workplace – **Case management**.
+2. In the search bar, search for Return to the Workplace – **Care management**.
 
     > [!div class="mx-imgBorder"]
     > ![Search for dashboard](media/pbi-dash-command-bar2.png "Search for dashboard")
@@ -86,7 +86,6 @@ Users can filter all the three pages by the case creation date and their groups 
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance reproductive number](media/pbi-dash-report-reproductivenumber2.png "System at a Glance reproductive number")
-
 
 ## Feedback about the solution
 

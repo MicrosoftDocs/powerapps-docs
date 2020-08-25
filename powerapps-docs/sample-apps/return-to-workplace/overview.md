@@ -24,7 +24,7 @@ The main modules of the Return to the Workplace solution include:
 
 - **Workplace Care Management** gives health and safety leaders the tools they need to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. The **Workplace Care Management dashboard** enables monitoring of all the data from the Workplace Care Management app.
 
-- **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace to check in to work remotely and self-screen before entering a building.
+- **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace app to check in remotely and self-screen before entering a building.
 
 ## Licensing requirements
 
@@ -47,8 +47,8 @@ See also:
 |Download and deploy the solution| Used by IT administrators to deploy the Return to the Workplace solution and set up users and security.|IT administrators|[Deploy the solution](deploy.md)|
 |Upgrade the solution| Used by IT administrators to upgrade to the latest version of the Return to the Workplace solution|IT administrators|[Upgrade the solution](upgrade.md)|
 |Configure the Return to the Workplace solution| Used by IT administrators to set up and configure data related to workplaces and users who will use this solution.|IT administrators|[Configure the solution](configure.md)|
-|Use dashboards for insights and decision making|Used by executive leaders to review current data about all their workplaces as it relates to COVID-19 conditions and facility readiness. These dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations, and respective phase rules or guidelines set for them by government agencies.|Executive leadership|[Location Readiness dashboard](dashboard-for-executive-leadership.md)|
-|Use the care management dashboard|Used by executive leaders to review employee cases.|Executive leadership|[Workplace Care Management dashboard](dashboard-case-management.md)|
+|Use dashboards for insights and decision making|Used by executive leadership to review the current data about their workplaces as it relates to COVID-19 conditions and facility readiness. These dashboards provide a comparison of selected measures and metrics associated with established goals or targets for the facilities in their locations, and respective phase rules or guidelines set for them by the government agencies.|Executive leadership|[Location Readiness dashboard](dashboard-for-executive-leadership.md)|
+|Use the care management dashboard|Used by Health and Safety leads to review employee cases.|Health and Safety leads|[Workplace Care Management dashboard](dashboard-case-management.md)|
 |Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Facility Safety Management app](app-for-facility-manager.md)
 |Use the employee app|Used by employees who are seeking to return to the workplace. Employees can use this app to identify open buildings and self-attest to having no symptoms before returning to a reopened workplace.|Employees|[Employee Return to the Workplace app](app-for-employee.md)
 |Use the care management app|Used to manage employee cases.|Case managers|[Workplace Care Management app](app-for-health-and-safety-lead.md)
