@@ -23,9 +23,6 @@ This article provide step-by-step instructions on how to upgrade the existing Re
 
 Update the **Return to the Workplace** solution via the Power Platform admin center. 
 
-> [!div class="mx-imgBorder"]
-> ![Welcome screen](media/app-management-environment-view-sm.png "Admin Center")
-
   1. Sign in to the Power Platform admin center.
 
   2. Select **Environments** and then select an environment.
@@ -43,15 +40,15 @@ Yet to be documented based on experience.
 
 ## Step 3: Update the Facilities
 
-With the new version, we are introducing the notations of areas and floors for a certain facility. A floor indicates how many levels are there within a building. An area allows you to define a space within a floor that has a certain capacity. Through bookings in the employee app, you can book the area and a floor. View the facility manager safety app section to see how you add floors and areas.
+With the new version, we are introducing the notations of areas and floors for a certain facility. A floor indicates how many levels are there within a building. An area allows you to define a space within a floor that has a certain capacity. Through bookings in the employee app, you can book the area and a floor. View the [use the facility management app](app-for-facility-managers.md#manage-and-monitor-facilities) to see how you add floors and areas.
 
 ## Step 4: Define capacity for your reopen phases
 
-Even though the capacity is defined on an area, it is bound by the phase your facility is in. Every reopen phase defines a percentage of the capacity, view the [configure the solution](configure.md) section to see how you can assign this to a reopen phase. 
+Even though the capacity is defined on an area, it is bound by the phase your facility is in. Every reopen phase defines a percentage of the capacity, view the [configure the solution](configure.md) section to see how you can assign this to a reopen phase.
 
 ## Step 5: Employee Cases
 
-Employee cases are made inactive when they are finished now. For any employee cases you are finished, move them to inactive state.
+Employee cases are made inactive when they are finished starting from this release. For any employee cases which is finished, move them to inactive state by completing them. View the [use the workplace care management app](app-for-health-and-safety-lead.md#manage-employee-cases) for more details on how to complete an employee case.
 
 ## Appendix: Update the app and publish Power BI dashboard (US Government customers only)
 
