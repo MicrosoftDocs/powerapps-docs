@@ -4,9 +4,9 @@ ms.date: 10/02/2019
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 8615a284-41b4-479c-81bd-577b3b7c79ad
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
