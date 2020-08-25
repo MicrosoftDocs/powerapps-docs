@@ -21,7 +21,21 @@ This article provide step-by-step instructions on how to upgrade the existing Re
 
 ## Step 1: Update the Package
 
-Yet to be documented based on experience.
+Update the **Return to the Workplace** solution via the Power Platform admin center. 
+
+> [!div class="mx-imgBorder"]
+> ![Welcome screen](media/app-management-environment-view-sm.png "Admin Center")
+
+  1. Sign in to the Power Platform admin center.
+
+  2. Select **Environments** and then select an environment.
+
+  3. Under **Resources**, select **Dynamics 365 apps**. In the list you will find **Power Platform Return to the Workplace - Apps** which will be the **Return to the Workplace** solution.
+
+> [!div class="mx-imgBorder"]
+> ![Welcome screen](media/app-management-environment-view.png "Applications within the Admin Center")
+
+  4. Select **Power Platform Return to the Workplace - Apps**. From the top menu bar, depending on the status of the app, you can select **Update** to start the update process. From the top menu bar you can also select **Details** to see the process of the installation.
 
 ## Step 2: Update the Power BI dashboards
 
