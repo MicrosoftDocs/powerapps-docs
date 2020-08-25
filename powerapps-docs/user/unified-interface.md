@@ -39,7 +39,7 @@ Your administrator has to opt in to early access updates for your environment an
 
 ## Reflow 
 
-The Unified Interface is designed for a modern reflow experience. When you're on a form there are pixel breakpoints where it will move information on the screen based on your screen size. Section will move below if you have a single section 
+The Unified Interface is designed for a modern reflow experience. When you're on a form there are pixel breakpoints where it will move information on the screen based on your screen size. When you resize your screen, if you have a single section they will move below.
 
 When a form reflows from multiple columns to one column, it reflows from left to right. When a control in the column spans at least two columns in a section, then it reflow from top to bottom. 
 
