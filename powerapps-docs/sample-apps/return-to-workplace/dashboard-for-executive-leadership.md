@@ -25,11 +25,13 @@ This article is for executive leaders who use the Power BI dashboard to analyze 
 
 ## System at a glance
 
-The **System at a Glance** tab provides key metrics for returning to work, including current value, goal values, and whether locations have met the goals. These key metrics are the number of COVID-19 new cases per day, fatality cases per day, new cases per day per million population, fatality cases per day per million population, reproductive number, and facilities' Readiness Checklist completion percentage.
+The **System at a Glance** tab provides key metrics for returning to work, including current value, goal values, and whether locations have met the goals. 
+
+The key metrics are the number of COVID-19 new cases per day, fatality cases per day, new cases per day per million population, fatality cases per day per million population, reproductive number, and facilities' Readiness Checklist completion percentage.
 
 A map highlights locations of facilities, along with the number of facilities that are in a certain phase. Hovering over a facility gives you insights into the virus spread at that location.
 
-Some important statistics are provided at the top, including the number of facilities, new cases, new fatal cases, and the reproductive number.
+Important statistics are provided at the top, including the number of facilities, new cases, new fatal cases, and the reproductive number.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance](media/pbi-dash-system-at-a-glance2.png "System at a Glance")
@@ -59,7 +61,7 @@ The data on confirmed deaths is shown in these visualizations, giving you easy a
 
 #### Effective Reproductive Number
 
-This is a key measure of how fast the virus is growing or decreasing, showing the average number of people who are infected.
+Effective Reproductive Number is a key measure of how fast the virus is growing or decreasing, showing the average number of people who are infected.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance reproductive number](media/pbi-dash-report-reproductivenumber.png "System at a Glance reproductive number")
@@ -98,8 +100,8 @@ The checklist shows the steps needed to move facilities through phases.
 
 The Occupancy section provides metrics regarding facility capacity and usage, such as:
 
-- Facility’s total capacity, and current capacity based on re-opening phase.
-- Number of bookings and visits for the most recent day and daily average for the last 7 days.
+- Facility’s total capacity, and current capacity based on reopening phase.
+- Number of bookings and visits for the most recent day and daily average for the last seven days.
 - Two charts, that can be filtered by date range:
    - Number of bookings and the current capacity.
    - Average daily occupancy, shown as a black bar. Capacity is represented by the green zone.  Facilities with black bars in the red zone are over-capacity.

@@ -12,19 +12,18 @@ ms.reviewer: kvivek
 
 # Overview
 
-This article provides a detailed description of the data model, workflows, and flows used by the Return to the Workplace solution. The solution extends the Common Data Model and
-utilizes several components of the Common Data Model. Administrators, developers, and end users should be mindful of the solution and possible implications of
+This article provides a detailed description of the data model, workflows, and Power Automate flows used by the Return to the Workplace solution. The solution extends the Common Data Model and utilizes several components of the Common Data Model. Administrators, developers, and end users should be mindful of the solution and possible implications of
 other solutions that coexist in the same environment. 
 
-The definitions provided in this article indicates the intended purpose of the entities, relationships, attributes, flows, and workflows contained in the Return to the Workplace solution. These definitions can be fully or partially adopted depending on your business requirements.
+The definitions provided in this article indicate the intended purpose of the entities, relationships, attributes, flows, and workflows contained in the Return to the Workplace solution. These definitions can be fully or partially adopted depending on your business requirements.
 
 ## Integration and extension
 
 Return to the Workplace solution is built on Microsoft Power Platform. To learn more about working with model-driven apps and Common Data Service, see:
 
-- [Model-driven apps guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
+- [Model-driven apps admin guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
 
-- [Common Data Service developer Guide](https://docs.microsoft.com/powerapps/developer/common-data-service/overview)
+- [Common Data Service developer guide](https://docs.microsoft.com/powerapps/developer/common-data-service/overview)
 
 - [Common Data Service entities](https://docs.microsoft.com/powerapps/developer/common-data-service/entities)
 
@@ -46,7 +45,7 @@ To learn more about supported extension methods, see:
 
 ## Entity relationship diagram
 
-The entity relationship diagram illustrates the entities and their relationships that are present in teh Common Data Service environment. System-generated entities and relationships such as **Created By** and **Modified By** attributes are not depicted in the diagram.
+The entity relationship diagram illustrates the entities and their relationships that are present in the Common Data Service environment. System-generated entities and relationships such as **Created By** and **Modified By** attributes are not displayed in the diagram.
 
 > [!div class="mx-imgBorder"]
 > ![Entity Relationship Diagram](media/data-dictionary-ERD.png "Entity relationship Diagram")
@@ -116,7 +115,7 @@ These entities are primarily used by the Facility Safety Management model-driven
 
 ## Data definitions
 
-The data definitions section provides information on list of entities, their data attributes, and the areas of the solution where they are used. System-generated attributes
+The data definitions section provides information on list of entities, data attributes, and the areas of the solution where they are used. System-generated attributes
 such as **Created On**, **Modified On** are not displayed.
 
 ### Area
@@ -414,25 +413,25 @@ This section of the solution describes the different flows within the solution a
 
 | Flow | Entity | Description                        |
 |--------------|-----------|-------------------------------------------------|
-| Area - Update Capacity for future Occupancies         | Area      | Updates the daily occupancy when then capacity changes on an area |
-| Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes |
-| Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase |
-| Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist |
-| Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created |
-| Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Re-educate occupancy in daily occupancy when employee bookings are disabled |
-| Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations |
-| Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities |
-| Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase |
-| Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility |
+| Area - Update Capacity for future Occupancies         | Area      | Updates the daily occupancy when then capacity changes on an area.|
+| Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes. |
+| Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase. |
+| Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist. |
+| Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. |
+| Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Re-educate occupancy in daily occupancy when employee bookings are disabled. |
+| Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations. |
+| Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. |
+| Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. |
+| Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility. |
 ||||
 
-For the solution, you generate sample data, which makes records every 12 hours to simulate real life. As mentioned in [configure the solution](configure.md) article, dependent on the purpose of your environment you can disable these flows.
+For the solution, we generate sample data, which makes records every 12 hours to simulate real life. As mentioned in [configure the solution](configure.md) article, dependent on the purpose of your environment you can disable these flows.
 
-| Flow  | Description                        |
-|--------------|--------------------------------------------------|
-| Sample Data - Create and Update Employee Cases          | Create employee cases and move them through the different stages |
-| Sample Data - Generate Employee Records      | Create employee bookings and employee attestations |
-| Sample Data - Generate Facility Transitions   | Create reopen phase transitions and move facilities to other phases  |
+| Flow  | Description |
+|--------------|----------|
+| Sample Data - Create and Update Employee Cases          | Create employee cases and move them through different stages.|
+| Sample Data - Generate Employee Records      | Create employee bookings and employee attestations. |
+| Sample Data - Generate Facility Transitions   | Create reopen phase transitions and move facilities to other phases.  |
 | Sample Data - Visits  | Create employee visits |
 |||
 

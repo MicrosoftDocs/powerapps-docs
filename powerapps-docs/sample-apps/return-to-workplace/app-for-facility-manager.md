@@ -51,9 +51,9 @@ The Facility Safety Management app has the following components:
 
 - **Employee Attestation** - Keeps track of employee health assessments or attestations based on a series of questions answered by the employee. Employee attestation data is typically entered by employees using the employee app.
 
-- **Employee Bookings** - Keeps track of the employee booking having the employee, area, start, and end arrival time. Employee bookings is linked to the employees' attestation record and updates if there is a visit to that booking.
+- **Employee Bookings** - Keeps track of the employee booking having the employee, area, start, and end arrival time. Employee bookings are linked to the employees' attestation record and updates if there is a visit to that booking.
 
-- **Employee Visits** - Keeps track of the visits. Employee visits is linked to an employee and a booking record. 
+- **Employee Visits** - Keeps track of the visits. Employee visits are linked to an employee and a booking record. 
 
 ## Manage and monitor facilities 
 
@@ -118,7 +118,7 @@ When creating a facility, you can link a floor and area to this facility. To cre
 
 ### Create an area for a facility
 
-Once a floor is created, the **area** option enables to be linked to it.
+Once a floor is created, the **area** option is available to be linked to it.
 
 1. Select a facility where you want to add an area from the **Facilities** list. Select **Occupancy** tab and select **+ New Area**.
 

@@ -39,11 +39,11 @@ After you've purchased Power Apps, create an environment with a Common Data Serv
 
 3. Create appropriate users, and assign security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
-After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region for example, crm for US. Make a note of this environment URL.
+After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region, for example, crm for US. Make a note of this environment URL.
 
 ## Step 2: Install the package
 
-You can install the Return to the Workplace solution by from Microsoft AppSource. 
+You can install the Return to the Workplace solution by from the AppSource. 
 
 > [!NOTE]
 > If you are a US Government customer, you'll have to install using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
@@ -65,12 +65,12 @@ You can install the Return to the Workplace solution by from Microsoft AppSource
 
 ## Step 3: Configure and publish Power BI dashboards
 
-The Return to the Workplace solution has three Power BI dashboards, one for executive leadership, one for facility managers and one for health and safety leaders. You can publish the Power BI dashboards by using the template app from AppSource.
+The Return to the Workplace solution has three Power BI dashboards, one for executive leadership, one for facility managers, and one for Health and Safety leaders. You can publish the Power BI dashboards by using the template app from AppSource.
 
 > [!NOTE]
 > If you are a US Government customer, you'll have to publish Power BI dashboards using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
-### Install the template app for dashboards
+### Install template app for dashboards
 
 1. Go to AppSource to install [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi), [Return to the Workplace - Location Management](https://aka.ms/rtw-facilitypbi) and [Return to the Workplace - Workplace Care Management](https://aka.ms/rtw-workplacepbi) dashboards. 
 
@@ -171,15 +171,15 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
    > [!div class="mx-imgBorder"]
    > ![Enable Power BI](media/deploy-settings-report1.png "Enable Power BI")
 
-3. Within the newly created solution, select **Export** . On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
+3. Within the newly created solution, select **Export**. On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
 
 4. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
 
-5. Open the customization.xml file,, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
+5. Open the customization.xml file, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
 
-    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID** and **TileURL** according to your PowerBI workspace and report. You can find this information by opening the Facility Manager report in PowerBI and examine the URL: https://powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
+    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID**, and **TileURL** according to your Power BI workspace and report. You can find this information by opening the Facility Manager report in Power BI and examine the URL: https://powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
 
-    The `TileURL` can be found within the PowerBI report. You can find it at the following destination **... (ellipsis)** > **Embed** > **Website or portal**. 
+    The `TileURL` can be found within the Power BI report. You can find it at the following destination **... (ellipsis)** > **Embed** > **Website or portal**. 
 
    > [!div class="mx-imgBorder"]
    > ![Power BI TileURL](media/deploy-settings-report2.png "Power BI TileURL")
@@ -188,7 +188,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 
     See the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
 
-6. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with 3 files in it, including the updated customizations.xml file.  
+6. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with three files in it, including the updated customizations.xml file.  
 
 7. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
 On the command bar, select **Import**.  On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import.
@@ -333,7 +333,7 @@ After extracting the .zip file, you'll see the following in the extracted folder
 
 8. The next screen validates whether all dependencies are available in your environment. Select **Next**.
 
-9. The next screen displays the installation status of the package. Note that it might take a while for the package installation to be completed.
+9. The next screen displays the installation status of the package. It might take a while for the package installation to be completed.
 
 10. After the installation is complete, select **Next**.
 
@@ -378,7 +378,7 @@ Follow the steps below for each .pbit file.
 
 5. After signing in, select **Connect** to connect to your data in Common Data Service.
 
-6. After connecting to your Common Data Service environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings need to be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
+6. After connecting to your Common Data Service environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings should be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
      
     > [!div class="mx-imgBorder"] 
     > ![Access Web Content level](media/deploy-access-web-content-level.png "Access Web Content level")
