@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -30,7 +30,7 @@ The main modules of the Return to the Workplace solution include:
 
 - Power Apps license
 
-- Power BI Premium or Power BI Pro license, if you'll be using the Power BI dashboard that's available as part of this solution 
+- Power BI Premium or Power BI Pro license, if you'll be using the Power BI dashboard that's available as part of the solution 
 
 Contact your local Microsoft account representative for questions related to licensing as per your requirements.
 
@@ -46,7 +46,7 @@ See also:
 |--|--|-----|--|
 |Download and deploy the solution| Used by IT administrators to deploy the Return to the Workplace solution and set up users and security.|IT administrators|[Deploy the solution](deploy.md)|
 |Upgrade the solution| Used by IT administrators to upgrade to the latest version of the Return to the Workplace solution|IT administrators|[Upgrade the solution](upgrade.md)|
-|Configure the Return to the Workplace solution| Used by IT administrators to set up and configure master data related to workplaces and users who will use this solution.|IT administrators|[Configure the solution](configure.md)|
+|Configure the Return to the Workplace solution| Used by IT administrators to set up and configure data related to workplaces and users who will use this solution.|IT administrators|[Configure the solution](configure.md)|
 |Use dashboards for insights and decision making|Used by executive leaders to review current data about all their workplaces as it relates to COVID-19 conditions and facility readiness. These dashboards provide a comparison of selected measures and metrics associated with established goals or targets for facilities in their locations, and respective phase rules or guidelines set for them by government agencies.|Executive leadership|[Location Readiness dashboard](dashboard-for-executive-leadership.md)|
 |Use the care management dashboard|Used by executive leaders to review employee cases.|Executive leadership|[Workplace Care Management dashboard](dashboard-case-management.md)|
 |Use the facility manager app| Used by facility managers to develop and execute on reopening plans.|Facility managers|[Facility Safety Management app](app-for-facility-manager.md)
