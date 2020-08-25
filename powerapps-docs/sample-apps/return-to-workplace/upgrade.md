@@ -68,7 +68,7 @@ You will be asked whether you wish to overwrite the current version, or to insta
 
   - **Install to a new workspace:** Installs a fresh version of the workspace and app that you need to reconfigure (that is, connect to data, define navigation and permissions).
 
-###Overwrite behavior
+### Overwrite behavior
   - Overwriting updates the reports, dashboards, and dataset inside the workspace, not the app. Overwriting doesn't change app navigation, setup, and permissions.
 
   - After you update the workspace, you need to update the app to apply changes from the workspace to the app.
