@@ -65,14 +65,14 @@ You can install the Return to the Workplace solution by from Microsoft AppSource
 
 ## Step 3: Configure and publish Power BI dashboards
 
-The Return to the Workplace solution has two Power BI dashboards, one for executive leadership and one for facility managers. You can publish the Power BI dashboards by using the template app from AppSource.
+The Return to the Workplace solution has three Power BI dashboards, one for executive leadership, one for facility managers and one for health and safety leaders. You can publish the Power BI dashboards by using the template app from AppSource.
 
 > [!NOTE]
 > If you are a US Government customer, you'll have to publish Power BI dashboards using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
 ### Install the template app for dashboards
 
-1. Go to AppSource to install [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi) and [Return to the Workplace - Location Management](https://aka.ms/rtw-facilitypbi) dashboards. 
+1. Go to AppSource to install [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi), [Return to the Workplace - Location Management](https://aka.ms/rtw-facilitypbi) and [Return to the Workplace - Workplace Care Management](https://aka.ms/rtw-workplacepbi) dashboards. 
 
 2. Select **GET IT NOW** to install the solution in your environment.
     > [!div class="mx-imgBorder"]
