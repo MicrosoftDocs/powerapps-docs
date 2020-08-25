@@ -1,5 +1,6 @@
 ---
 title: "Add, configure, move, or delete sections on a form using the form designer | MicrosoftDocs"
+description: "Work with sections on a model-driven app form in Power Apps"
 ms.custom: ""
 ms.date: 08/25/2020
 ms.reviewer: "matp"
@@ -24,7 +25,7 @@ Add, configure, move, or delete sections on a form using the form designer.
 To add sections to a form, use the **Components** pane. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/FormDesignerComponentsLayout.png "Layout components")
+> ![Layout components](media/FormDesignerComponentsLayout.png "Layout components")
 
   > [!NOTE]
   >   Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md).
