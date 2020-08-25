@@ -35,7 +35,7 @@ Update the **Return to the Workplace** solution via Power Platform admin center:
   3. On the command bar select **Resources**,  and then select **Dynamics 365 apps**. From the list of apps, you'll find **Power Platform Return to the Workplace - Apps**, which will be the **Return to the Workplace** solution.
 
      > [!div class="mx-imgBorder"]
-     > ![Welcome screen](media/app-management-environment-view.png "Applications within the Admin Center")
+     > ![Applications within the Admin Center](media/app-management-environment-view.png "Applications within the Admin Center")
 
   4. The status field indicates that there is an **Update Available** for **Power Platform Return to the Workplace - Apps**. From the command bar, select **Update** or select the **Update Available** status to start the update process. From the command bar, you can also select **Details** to see the process of the installation.
   
@@ -45,15 +45,15 @@ To learn more about the update process, see: [Manage Dynamics 365 apps](https://
 
 When a new version of the  **Return to the Workplace** solution is available, you can get notified in two ways:
 
-- An update banner appears in the Power BI Service informing you that a new app version is available. Template app update notification
+- An update banner appears in the Power BI Service informing you that a new app version is available.
 
     > [!div class="mx-imgBorder"]
-    > ![Welcome screen](media/power-bi-new-app-version-notification-banner.png "Power BI Banner")
+    > ![Power BI Banner](media/power-bi-new-app-version-notification-banner.png "Power BI Banner")
 
 - You'll receive a notification on Power BI's notification pane.
 
     > [!div class="mx-imgBorder"]
-    > ![Welcome screen](media/power-bi-new-app-version-notification-pane.png "Power BI Notification Pane")
+    > ![Power BI Notification Pane](media/power-bi-new-app-version-notification-pane.png "Power BI Notification Pane")
 
 > [!NOTE]
 > If you had originally downloaded the app through a direct link rather than from AppSource, the use of the links in the [deploy the solution](deploy.md).
@@ -63,7 +63,7 @@ To install the update, either select **Get it** on the notification banner or in
 You'll be asked whether you wish to overwrite the current version or to install the new version in a new workspace. By default, overwrite is selected.
 
 > [!div class="mx-imgBorder"]
-> ![Welcome screen](media/power-bi-update-app-overwrite.png "Update App overwrite")
+> ![Update App overwrite](media/power-bi-update-app-overwrite.png "Update App overwrite")
 
   - **Overwrite an existing version:** Overwrites the existing workspace with the updated version of the template app. More information: [overwrite behavior](#overwrite-behavior).
 
@@ -78,7 +78,7 @@ After you update the workspace, you need to update the app to apply changes from
 Overwriting the existing version keeps the configured parameters and authentication. After the update, an automatic dataset refresh starts. During the refresh, the sample data is still present in the app, reports, and dashboards.
 
 > [!div class="mx-imgBorder"]
-> ![Welcome screen](media/power-bi-sample-data.png "Sample Data")
+> ![Refresh Sample Data](media/power-bi-sample-data.png "Refresh Sample Data")
 
 Overwriting always presents sample data until the refresh is complete. If the template app author made changes to the dataset or parameters, users of the workspace and app will not see the new data until the refresh is complete. Rather, they will continue to see sample data during this time.
 
@@ -99,7 +99,7 @@ To install the Workplace Care Management dashboard, follow the instructions as p
 
 With the new version, we are introducing the notations of areas and floors for a certain facility. A floor indicates how many levels are present within a building. 
 
-An area allows you to define a space within a floor that has a certain capacity. Through bookings in the Employee app, you can book the area and a floor. More information: [Use the Facility Safety Management app](app-for-facility-managers.md#manage-and-monitor-facilities).
+An area allows you to define a space within a floor that has a certain capacity. Through bookings in the Employee app, you can book an area. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-and-monitor-facilities).
 
 ## Step 5: Define capacity for your reopen phases
 
