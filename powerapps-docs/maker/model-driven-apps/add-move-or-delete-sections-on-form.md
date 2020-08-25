@@ -1,16 +1,10 @@
 ---
 title: "Add, configure, move, or delete sections on a form using the form designer | MicrosoftDocs"
 ms.custom: ""
-ms.date: 08/26/2019
+ms.date: 08/25/2020
 ms.reviewer: ""
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "PowerApps"
 author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
@@ -72,6 +66,9 @@ These are the properties available to configure a section when you create or edi
 |**Display options** | **Hide on phone** |  The section can be hidden to render a condensed version of this form on phone screens. |
 |**Formatting** |  **Columns** |  Specify up to four columns for the section. |
 
+> [!Important]
+> Sections that don't have any fields or controls will be hidden at runtime in Unified Interface.
+    
 ## Move sections on a form
 You can move sections using drag and drop or cut and paste actions. 
 
