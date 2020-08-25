@@ -73,7 +73,7 @@ These are the properties available to configure a section when you create or edi
 |**Formatting** |  **Columns** |  Specify up to four columns for the section. |
 
   > [!NOTE]
-  >   Section labels with long titles will truncate, the text will not wrap.
+  >   We recommend limiting the length of section label text to about 50 characters. Section label text doesn't wrap and can truncate on devices with small screens.
 
 ## Move sections on a form
 You can move sections using drag and drop or cut and paste actions. 
