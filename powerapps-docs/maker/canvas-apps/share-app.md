@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/01/2020
+ms.date: 06/16/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -49,7 +49,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
     - To allow your entire organization to run the app (but not modify or share it), type **Everyone** in the sharing panel.
 
-        ![Everyone](./media/share-app/everyone.png)
+        ![Search Everyone](./media/share-app/everyone.png)
 
     - You can share an app with a list of aliases, friendly names, or a combination of those (for example, **Meghan Holmes &lt;meghan.holmes@contoso.com>**) if the items are separated by semi-colons. If more than one person has the same name but different aliases, the first person found will be added to the list. A tooltip appears if a name or alias already has permission or can't be resolved.
 
@@ -60,7 +60,7 @@ Before you share an app, you must [save it to the cloud](save-publish-app.md#sav
 
 1. If you want to allow the users to edit and share the app, select the **Co-owner** check box.
 
-    ![Co-owner](./media/share-app/co-owner.png)
+    ![Select a co-owner](./media/share-app/co-owner.png)
 
     You can't grant **Co-owner** permission to a security group if you [created the app from within a solution](add-app-solution.md).
 
@@ -231,11 +231,11 @@ Canvas apps enable building an app, tailored to digitizing business processes, w
 
 The following table outlines a few core capability differences between Power Apps portals and canvas apps.  
 
-| | Interface | Authentication | Accessible data sources |
+| Portals or canvas apps| Interface | Authentication | Accessible data sources |
 |------|--------|----------|-------------------|
 | Power Apps portals | Browser only experience | Allows anonymous and authenticated access | Common Data Service |
 | Canvas apps | Browser and mobile apps | Requires authentication via Azure AD | Any ~150 out-of-box connectors and any custom connector  |
-||
+|
 
 #### Can guests access customized forms in SharePoint?
 
@@ -263,7 +263,7 @@ As with non-guests, the underlying data source(s) accessed by the app must also 
 
 The same license that’s required for non-guests to run an app. For instance, if the app uses premium connecters then a Power Apps Per App Plan or a Power Apps Per User Plan must be assigned to the guest.  
 
-|                                 | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
+|    Plan                             | SharePoint customized form | Standalone canvas app using non-premium connectors | Standalone canvas app using premium connectors | Model driven app |
 |---------------------------------|----------------------------|----------------------------------------------------|------------------------------------------------|------------------|
 | SharePoint user (no PA license) | x                          |                                                    |                                                |                  |
 | Power Apps Included w/ Office    | x                          | x                                                  |                                                |                  |
@@ -401,3 +401,10 @@ All connectors that don't use Azure AD authentication of any type supports guest
 | Word Online (Business)                            | No                                                                     |
 
 \* When using the Common Data Service connector, ensure the guest user is licensed from the same tenant where you have Common Data Service located.
+
+### See also
+
+- [Edit an app](edit-app.md)
+- [Restore an app to a previous version](restore-an-app.md)
+- [Export and import an app](export-import-app.md)
+- [Delete an app](delete-app.md)

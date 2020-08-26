@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 08/21/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -32,22 +32,22 @@ To secure these features, entity permissions allow for granular rights to be gra
 
     ![Add entity permissions to a web role](../media/add-entity-permission-web-role.png "Add entity permissions to a web role")  
 
-When creating a new Entity Permission record, the first step is to determine the entity that will be secured. The next step is to define scope, as discussed below, and&mdash;for any scope other than Global&mdash;the relationships that define that scope. Finally, determine the rights that are being granted to the role via this permission. Note that rights are cumulative, so if a user is in a role that grants Read, and another that grants Read and Update, the user will have Read and Update rights for any records that overlap between the two roles.
+When creating a new Entity Permission record, the first step is to determine the entity that will be secured. The next step is to define scope, as discussed below, and&mdash;for any scope other than Global&mdash;the relationships that define that scope. Finally, determine the rights that are being granted to the role via this permission. Rights are cumulative, so if a user is in a role that grants Read, and another that grants Read and Update, the user will have Read and Update rights for any records that overlap between the two roles.
 
 > [!Note]
-> Selecting CMS entities like webpage and web files is invalid and might have other unintended consequences. The portal will assert the security of CMS entities based on content access controls, not entity permissions.
+> Selecting entities like webpage, web files and other configuration entities is invalid and might have other unintended consequences. The portal will assert the security of configuration entities based on content access controls, not entity permissions.
 
 ### Global scope
 
-If an Entity Permission record with Read permission is granted to a role that has global scope, any contact in that role will have access to all records of the defined entity. For example, they will be able to see all leads, all accounts, and so on. This permission will be automatically respected by any entity lists, essentially showing all records according to the model-driven app views that have been defined for that list. Further, if a user attempts to access a record via an entity form that they do not have access to, they will receive a permission error.
+If an Entity Permission record with Read permission is granted to a role that has global scope, any contact in that role will have access to all records of the defined entity. For example, they can see all leads, all accounts, and so on. This permission will be automatically respected by any entity lists, essentially showing all records according to the model-driven app views that have been defined for that list. Further, if a user attempts to access a record via an entity form that they don't have access to, they'll receive a permission error.
 
 ### Contact scope
 
 With Contact scope, a signed-in user in the role for which the permission record is defined will have the rights granted by that permission only for records that are related to that user's contact record via a defined relationship.
 
-On an entity list, this means that a filter will be added to whatever model-driven app views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.)
+On an entity list, this scope means that a filter will be added to whatever model-driven app views are surfaced by that list, which only retrieves records directly linked to the current user. (Depending on the scenario, this relationship can be thought of as ownership or management rights.)
 
-Entity forms will only allow the appropriate permission for Read, Create, Write, and so on if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define entity forms](entity-forms.md).  
+Entity forms will only allow the appropriate permission for Read, Create, Write, and so on, if this relationship exists when the record is loaded. [!INCLUDE[proc-more-information](../../../includes/proc-more-information.md)] [Define entity forms](entity-forms.md).  
 
 ### Account scope
 
@@ -55,15 +55,15 @@ With Account Scope, a signed-in user in the role for which the permission record
 
 ### Self scope
 
-Self Scope allows you to define the rights a user has to their own Contact (Identity) record. This allows users to use entity forms or web forms to make changes to their own Contact record linked with their profile. Note that the default Profile Page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users will not require this permission to use it. However, they will require this permission to use any custom entity forms or web forms that target their User Contact record.
+Self Scope allows you to define the rights a user has to their own Contact (Identity) record. Users can use entity forms or web forms to make changes to their own Contact record linked with their profile. The default Profile Page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom entity forms or web forms that target their User Contact record.
 
 ### Parental scope
 
 In this most complex case, permissions are granted for an entity that is a relationship away from an entity for which an Entity Permission record has already been defined. This permission is actually a child record of the parent entity permission.
 
-The Parent Permission record defines a permission and scope for an entity (probably Global or Contact scope, although Parent is also possible). That entity might be related to a Contact (in the case of Contact scope) or globally defined. With that permission in place, a child permission is created that defines a relationship from another entity to the entity defined in the parent relationship.
+The Parent Permission record defines a permission and scope for an entity (probably Global or Contact scope, although Parent is also possible). That entity might be related to a Contact (if there's Contact scope) or globally defined. With that permission in place, a child permission is created that defines a relationship from another entity to the entity defined in the parent relationship.
 
-Thus, users in a web role who have access to records defined by parent entity permissions will also have rights as defined by the child permission record to records related to the parent record.
+Users in a web role who have access to records defined by parent entity permissions will also have rights as defined by the child permission record to records related to the parent record.
 
 ### Attributes and relationships
 
@@ -79,10 +79,10 @@ The table below explains the entity permission attributes.
 | Parent Entity Permission | Required only if Scope = Parent.                                                                                                                                                                                                                                                            |
 | Read                     | Privilege that controls whether the user can read a record.                                                                                                                                                                                                                                                               |
 | Write                    | Privilege that controls whether the user can update a record.                                                                                                                                                                                                                                                             |
-| Create                   | Privilege that controls whether the user can create a new record. The right to create a record for an entity type does not apply to an individual record, but instead to a class of entities.                                                                                                                             |
+| Create                   | Privilege that controls whether the user can create a new record. The right to create a record for an entity type doesn't apply to an individual record, but instead to a class of entities.                                                                                                                             |
 | Delete                   | Privilege that controls whether the user can delete a record.                                                                                                                                                                                                                                                             |
-| Append                   | Privilege that controls whether the user can attach another record to the specified record.The Append and Append To access rights work in combination. Every time that a user attaches one record to another, the user must have both rights. For example, when you attach a note to a case, you must have the Append access right on the note and the Append To access right on the case for the operation to work.  |
-| Append To                | Privilege that controls whether the user can append the record in question to another record.The Append and Append To access rights work in combination. For more information, see the description for Append.|
+| Append                   | Privilege that controls whether the user can attach another record to the specified record. The Append and Append To access rights work in combination. Every time that a user attaches one record to another, the user must have both rights. For example, when you attach a note to a case, you must have the Append access right on the note and the Append To access right on the case for the operation to work.  |
+| Append To                | Privilege that controls whether the user can append the record in question to another record. The Append and Append To access rights work in combination. For more information, see the description for Append.|
 | | |
 
 ## Global permissions for tasks related to leads
@@ -95,17 +95,17 @@ Users in this role can access all leads via entity lists or forms on the portal.
 
 ![Grant global permissions to a lead](../media/grant-global-permission-leads.png "Grant global permissions to a lead")  
 
-We will now add a Child permission to the Global Lead permission. With the Parent Permission record open, go to the **Child Entity Permissions** subgrid, select **New** to open a lookup for entity permissions, select the magnifying glass, and then select **New** to add a new record.
+We'll now add a Child permission to the Global Lead permission. With the Parent Permission record open, go to the **Child Entity Permissions** subgrid, select **New** to open a lookup for entity permissions, select the magnifying glass, and then select **New** to add a new record.
 
 ![Add entity permissions to a web role](../media/add-entity-permission-web-role.png "Add entity permissions to a web role")  
 
-Select the entity as Tasks and the scope as Parental. Note that you can then select the parent relationship (**Lead\_Tasks**). This permission implies that a contact that is in a web role with the parent permission will then have global permission to all tasks that are related to leads.
+Select the entity as Tasks and the scope as Parental. You can then select the parent relationship (**Lead\_Tasks**). This permission implies that a contact that is in a web role with the parent permission will then have global permission to all tasks that are related to leads.
 
-Remember that in order for your list to respect these permissions, you must have enabled Entity Permissions on the list AND there must be actions that will actually allow users to perform the actions for which their permissions have been granted. Furthermore, permissions must also be enabled on the [entity form](entity-forms.md) record, and that form must be surfacing a page that has a subgrid on it for the entity that you want to enable with child permissions, in this case Tasks. Furthermore, to enable Read or Create permissions for tasks, you will need to configure those entity forms too, and edit the forms to remove the Regarding lookup field.  
+Remember that in order for your list to respect these permissions, you must have enabled Entity Permissions on the list AND there must be actions that will actually allow users to do the actions for which their permissions have been granted. Furthermore, permissions must also be enabled on the [entity form](entity-forms.md) record, and that form must be surfacing a page that has a subgrid on it for the entity that you want to enable with child permissions, in this case Tasks. Furthermore, to enable Read or Create permissions for tasks, you'll need to configure those entity forms too, and edit the forms to remove the Regarding lookup field.  
 
 ![Edit a web page form](../media/edit-webpage-form.png "Edit a web page form")  
 
-This then grants permissions for all tasks that are related to leads. If tasks are being surfaced on an entity list, a filter is essentially added to the list so that only tasks that are related to a lead will show up in the list. In our example, they are being surfaced with a subgrid on an entity form.
+This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on an entity list, a filter is added to the list so that only tasks that are related to a lead will show up in the list. In our example, they're being surfaced with a subgrid on an entity form.
 
 ![Task example](../media/tasks-example.png "Task example")  
 
