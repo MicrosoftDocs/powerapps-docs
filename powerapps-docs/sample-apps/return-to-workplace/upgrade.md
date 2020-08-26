@@ -24,9 +24,12 @@ This article provides step-by-step instructions on how to upgrade the existing R
 > [!TIP]
 > Upgrading the solution impacts the user experience, so it is recommended to upgrade the solution outside of the normal business hours and test the changes on a development or test environment before moving it to production environment. 
 
-## Step 1: Updating the solution
+## Step 1: Update the solution
 
-Update the **Return to the Workplace** solution via Power Platform admin center:
+You can update the **Return to the Workplace** solution using the Power Platform admin center.
+
+> [!NOTE]
+> If you are a US Government customer, you'll have to update the solution using the latest version of the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](deploy.md#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
   1. Sign in to [Power Platform admin center](https://admin.powerapps.com).
 
@@ -56,7 +59,7 @@ When a new version of the  **Return to the Workplace** solution is available, yo
     > ![Power BI Notification Pane](media/power-bi-new-app-version-notification-pane.png "Power BI Notification Pane")
 
 > [!NOTE]
-> If you had originally downloaded the app through a direct link rather than from AppSource, the use of the links in the [deploy the solution](deploy.md).
+> If you are a US Government customer, you'll have to update the Power BI dashboard using the latest version of the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](deploy.md#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
 To install the update, either select **Get it** on the notification banner or in the notification center, or find the app in the AppSource and select **Get it now**. If you have a direct link for the update, select the link.
 
@@ -109,10 +112,6 @@ To learn more about how you can indicate capacity limit per reopen phase, see [c
 ## Step 6: Employee cases
 
 Employee cases are made inactive when they are finished with the new version of the solution. For any employee cases that is finished, move them to the inactive state by completing them. More information: [Use the Workplace Care Management app](app-for-health-and-safety-lead.md#manage-employee-cases).
-
-## Appendix: Update the app and publish Power BI dashboard (US Government customers only)
-
-For GCC customers, we still support the process outside of AppSource, before executing the steps above you need to follow **Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)** in the [deploy the solution](deploy.md) page.
 
 ## Feedback about the solution
 
