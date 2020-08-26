@@ -30,9 +30,7 @@ App registration can also be done by an application developer or individual user
 
 ## Prerequisites  
 
--   The user who is registering the application must have a user account with System Administrator security role and the global administrator role for the Office 365 subscription.  
-  
--   An Azure subscription for application registration. A trial account will also work.  
+- An Azure subscription for application registration. A trial account will also work.  
   
 ## Create an application registration 
   
