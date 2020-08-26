@@ -41,10 +41,9 @@ Your administrator has to opt in to early access updates for your environment an
 
 The Unified Interface is designed for a modern reflow experience. 
 
-For forms, there are pixel breakpoints that cause information on the form to move on the screen based on the space available to the form to display in. This can happen if the space available to the form to display in decreases, for example if you resize the window the app is in and decrease the width of the window. When the width decreases past certain breakpoints, information that would be hidden will move below where it used to be so that it is either visible or can be vertically scrolled to.
+For forms, there are pixel breakpoints that cause information on a form to move on the screen based on the space available to the form to display in. This happens when the display space available to the form decreases. For example if you resize the window that your app is in and decrease the width of the window it will decrease the space available for the form to display in. When the width decreases past certain breakpoints, information that would be hidden will move below where it used to be so that it is either visible or you can vertically scroll down to see it.
 
 When columns in a form section reflows from multiple columns to one column, it reflows from left to right (in left-to-right languages). When a control spans at least two columns in a section, then it reflows from top to bottom. The difference in behavior is so that tab navigation order is kept after reflow.
-
 
 In example below, each number corresponds to a control.
 
