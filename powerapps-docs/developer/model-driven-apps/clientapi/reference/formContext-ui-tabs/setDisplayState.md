@@ -16,7 +16,8 @@ search.app:
 ---
 # setDisplayState (Client API reference)
 
-
+[IMPORTANT]
+>The setDisplayState API will be deprecated with Release Wave One 2021 (April 2021)  Please use setFocus in the Unified Interface to ensure the correct tab is opened on a form.
 
 [!INCLUDE[./includes/setDisplayState-description.md](./includes/setDisplayState-description.md)]
 
