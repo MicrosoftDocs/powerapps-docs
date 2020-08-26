@@ -21,27 +21,21 @@ The definitions provided in this article indicate the intended purpose of the en
 
 Return to the Workplace solution is built on Microsoft Power Platform. To learn more about working with model-driven apps and Common Data Service, see:
 
-- [Model-driven apps admin guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
-
+- [Model-driven apps guide](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)
 - [Common Data Service developer guide](https://docs.microsoft.com/powerapps/developer/common-data-service/overview)
-
 - [Common Data Service entities](https://docs.microsoft.com/powerapps/developer/common-data-service/entities)
-
 - [Work with data using code in Common Data Service](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds)
-
 - [Best practices and guidance for Common Data Service](https://docs.microsoft.com/powerapps/developer/common-data-service/best-practices/)
-
-- [Business Process Flows](https://docs.microsoft.com/power-automate/business-process-flows-overview)
+- [Business process flows](https://docs.microsoft.com/power-automate/business-process-flows-overview)
 
 To learn more about solutions and application lifecycle management guidance to maintain the solution integrity, see:
 
 - [Introduction to solutions](https://docs.microsoft.com/powerapps/developer/common-data-service/introduction-solutions)
-
 - [Application lifecycle management (ALM) with Microsoft Power Platform](https://docs.microsoft.com/power-platform/alm/)
 
 To learn more about supported extension methods, see:
 
-- [Get started with model-driven apps customizations using code](https://docs.microsoft.com/powerapps/developer/model-driven-apps/supported-customizations#unsupported-customizations)
+- [Get started with model-driven apps customizations using code](https://docs.microsoft.com/powerapps/developer/model-driven-apps/supported-customizations)
 
 ## Entity relationship diagram
 
