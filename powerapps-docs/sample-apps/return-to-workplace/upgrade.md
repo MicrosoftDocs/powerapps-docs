@@ -9,9 +9,9 @@ ms.date: 08/25/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
-# Upgrade the Return to Work solution.
+# Upgrade the Return to Work solution
 
-This article provides step-by-step instructions on how to upgrade the existing Return to Work solution to the latest version. If you're deploying the solution for the first time, see [deploy the solution](deploy.md) article.
+This article provides step-by-step instructions on how to upgrade the existing Return to the Workplace solution to the latest version. If you're deploying the solution for the first time, see [deploy the solution](deploy.md).
 
 ## Prerequisites
 
