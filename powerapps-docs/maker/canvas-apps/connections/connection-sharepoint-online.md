@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/03/2019
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType:
   - maker
@@ -210,3 +210,7 @@ Not all types of columns are supported, and not all types of columns support all
 - Learn how to [show data from a data source](../add-gallery.md).
 - Learn how to [view details and create or update records](../add-form.md).
 - See other types of [data sources](../connections-list.md) to which you can connect.
+
+### See also
+
+- [SharePoint integration scenarios](../sharepoint/scenarios-intro.md)
