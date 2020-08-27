@@ -19,6 +19,10 @@ In this scenario article, you'll learn how to filter a search list in a canvas a
 
 ## Prerequisites
 
+
+<!-- Editor note: Seems like it should be "a" SharePoint connector in the line below. And in the second line, maybe it should be "the" canvas app. What do you think? --> 
+
+
 - You must have created an app using SharePoint connector that connects to a SharePoint list.
 - The SharePoint list should consist of several list items to filter data inside canvas app.
 
@@ -39,7 +43,7 @@ To search using text input and to filter the records, you have to use the functi
 
 1. Select **+** (Insert) from the left pane.
 
-1. Select **Text Input**.
+1. Select **Text input**.
 
     ![Insert text input](./media/scenarios-filter-search-list/insert-text-input.png "Insert text input")
 
