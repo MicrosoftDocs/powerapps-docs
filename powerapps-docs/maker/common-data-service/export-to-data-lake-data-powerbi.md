@@ -47,29 +47,29 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
 3. On the **Get Data** page, select **Azure** > **Azure Data Lake Storage Gen2** > **Connect.**
 
-4.  Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/*
+4.  Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/* and replace **accountname** and **containername** with your storage account's information.
 
 5. Find the storage account name by going to **Azure** > **Storage accounts**, and then select the Data Lake Storage Gen2 account that's populated with the exported Common Data Services data.
 
-6. Find the container name by going to **Storage Explorer (preview)** > **Containers**.
+6. Find the container name by going to **Storage Explorer (preview)** > **Containers** and select the name of the container with the exported Common Data Service data.
 
     ![Find the storage container name](media/find-container-name.png "Find the storage container name")
 
 7. Select **CDM Folder View (Beta)**, and then select **OK**.
 
-8. If prompted to sign in, do so, and then select **Access key** from the left side bar.
+8. If prompted to sign in, you can sign in with your Azure Active Directory account or with the **Account key**. To sign in with an **Account key**, select the option from the left side bar.
 
-9. Find the access key by going back to the storage account setting and selecting **Access keys** from the left pane. Copy the first key.
+9. Find the account key by going back to the storage account settings and selecting **Access keys** from the left pane. Copy the first key and paste it in Power BI. Select **OK**.
 
     ![Copy the access key](media/copy-access-key.png "Copy the access key")
 
-10. Expand **cdm**, select the **account** data, and then select **Load**.
+10. After successfully connecting to your storage account, expand the **cdm** directory and select the entities that you want to analyze. Then, select **Load**.
 
     ![Load account data](media/load-account-data.png "Load account data")
 
 ## Create a Power BI report with account revenue by account owner
 
-1. On the **Visualizations** menu, select **Pie Chart**.
+1. Under the **Visualizations** menu, select **Pie Chart**.
 
     ![Pie chart](media/pie-chart.png "Pie chart")
 
