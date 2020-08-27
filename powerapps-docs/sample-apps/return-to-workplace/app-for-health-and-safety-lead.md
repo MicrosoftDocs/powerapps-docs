@@ -55,7 +55,7 @@ In the Employee Cases component, we have three views with different filters:
 
 - **My Employee Cases**: Filtered by owner and only shows active cases. This is the default view.
 
-- **Active Employee Cases**: Shows all the active employee cases. An employee case is considered active when the status field value is set to active.
+- **Active Employee Cases**: Shows all the active employee cases. An employee case is considered active when the status field value is set to active. Active Employee Cases are limited to one per employee.
 
 - **Closed Employee Cases**: Shows all the closed employee cases. An employee case is considered closed when it is made inactive either by the case manager or through the process.
 
