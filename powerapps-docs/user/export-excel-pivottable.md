@@ -1,6 +1,6 @@
 ---
-title: "Export to an Excel PivotTable in model-driven PowerApp| MicrosoftDocs"
-ms.custom: ""
+title: "Export to an Excel PivotTable in model-driven Power Apps| MicrosoftDocs"
+description: How to export to an Excel PivotTable in Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
