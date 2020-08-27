@@ -45,8 +45,10 @@ To import a solution:
   
 4. Select **Next**.  
   
-5. Information about the solution is displayed. By default, in the **Advanced settings** section, if SDK messages and flows exist in the solution, they will be imported. Clear the option if you don’t want to import them, and then select **Import**.
-  
+5. Information about the solution is displayed. By default, in the **Advanced settings** section, if SDK messages and flows exist in the solution, they will be imported. Clear the **Enable SDK messages and flows included in the solution** option if you don’t want to import them, and then select **Import**.
+
+   :::image type="content" source="media/import-solution-pane.png" alt-text="Import solution information and options":::
+
 6. You may need to wait a few moments while the import completes. View the results and then select **Close**.  
   
  If you have imported any changes that require publishing, you must publish customizations before they are available.
