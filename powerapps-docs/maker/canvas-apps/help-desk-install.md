@@ -30,7 +30,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 ![Opening screen of the Help Desk Tickets app](./media/help-desk-install/login-screen.png)
 
 > [!TIP]
-> Watch end-to-end demonstration of how to use the Help Desk sample app, watch this [video](https://youtu.be/sl5fXwwnvzI).
+> For an end-to-end demonstration of how to use the Help Desk sample app, watch this [video](https://youtu.be/sl5fXwwnvzI).
 
 ## Prerequisites
 
