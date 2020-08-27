@@ -21,7 +21,7 @@ Step-by-step instructions for, in Power Apps, installing and configuring the Hel
 Estimated time to complete these steps: **10-15 minutes**
 
 > [!TIP]
-> For a demonstration of this process, please watch this [video](https://youtu.be/z4cdtD6hB_4).
+> For a demonstration of installation and setup process, watch this [video](https://youtu.be/z4cdtD6hB_4).
 
 ## Overview of the sample
 
@@ -30,7 +30,7 @@ Help Desk provides a user-friendly experience to connect end users with support 
 ![Opening screen of the Help Desk Tickets app](./media/help-desk-install/login-screen.png)
 
 > [!TIP]
-> Watch this [video](https://youtu.be/sl5fXwwnvzI) to see how to use the Help Desk Tickets sample app.
+> Watch end-to-end demonstration of how to use the Help Desk sample app, watch this [video](https://youtu.be/sl5fXwwnvzI).
 
 ## Prerequisites
 
