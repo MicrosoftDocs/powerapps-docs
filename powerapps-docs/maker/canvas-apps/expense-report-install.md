@@ -50,13 +50,13 @@ This list stores the expense reports.
 
 1. Select **Create**.
 
-### Create Cost center column
+### Create Cost Center column
 
 1. Select the **Expenses** list.
 1. Select the **gear icon** in the top-right portion of the web page.
 1. Select **List settings**.
 1. Select **Create column**.
-1. In the Column name textbox, enter **Cost center**.
+1. In the Column name textbox, enter **Cost Center**.
 1. In the **type of information in this column is** radio button list, select **Choice**.
 1. In the **Type each choice on a separate line** textbox, enter the following values, each on a separate line: 
 	- Microsoft
@@ -320,6 +320,10 @@ This list stores the line items that are associated with each expense report.
 
     ![Edit Flow screen](./media/expense-report-install/edit-flow-getitems.png)
 
+    > [!TIP]
+    > - You don’t need to type it manually; you can select it in the drop-down lists.
+    > - If you select an incorrect list, you can discard the changes to the flow and restart flow modifications as a quick fix.
+
 1. Select **Apply to each**.
 1. Expand the **Condition**.
 1. Expand the **If yes** section.
@@ -334,9 +338,6 @@ This list stores the line items that are associated with each expense report.
 
     ![Change item status to Open](./media/expense-report-install/edit-flow-condition-ifno.png)
 
-    > [!TIP]
-    > You don’t need to type it manually; you can select it in the drop-down lists.
-
 14. Select **Save**.
 
 ## Update app functions
@@ -345,9 +346,9 @@ This list stores the line items that are associated with each expense report.
 1. Select ![Ellipsis for apps during functions update](./media/expense-report-install/ellipsis.png) next to the Expense Report app.
 1. Select **Edit**.
 1. Select **NewExpense** screen from the tree view.
-1. Select text input next to **COST CENTER** label.
+1. Select text input next to **Cost Center** label.
 1. Select **Items** property.
-1. Update the formula from `Choices(Expenses.Costcenter)` to `Choices(Expenses.Cost_x0020_center)`.
+1. Update the formula from `Choices(Expenses.Costcenter)` to `Choices(Expenses.Cost_x0020_Center)`.
 1. Select **DeleteExpenseConfirm** screen from the tree view.
 1. Select the expense ID label.
 1. Select the **Text** property.
