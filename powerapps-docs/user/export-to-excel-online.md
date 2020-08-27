@@ -1,6 +1,6 @@
 ---
-title: "Export your data to Excel Online in a model-driven app| MicrosoftDocs"
-ms.custom: ""
+title: "Export your data to Excel Online in model-driven Power Apps| MicrosoftDocs"
+description: How to export your data to Excel Online in model-driven Power App
 author: mduelae
 manager: kvivek
 ms.service: powerapps
