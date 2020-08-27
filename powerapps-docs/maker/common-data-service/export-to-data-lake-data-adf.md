@@ -102,7 +102,7 @@ In this example, account entity data is exported to the data lake.
 10.  Run the code, and refresh your storage container to find the new manifest, entity, resolved entity, and config files.
 
 > [!NOTE]
-> If there are changes made to the metadata of the entity, you must delete the generated files from the Data Lake and re-generate an updated manifest file by running the code again. It is recommended that you maintain the same name of the manaifest file, so there is no need to update any Azure Data Factory data flows or pipelines.
+> If there are changes made to the metadata of the entity, you must delete the generated files from the Data Lake and regenerate an updated manifest file by running the code again. It is recommended that you maintain the same name of the manifest file, so there is no need to update any Azure Data Factory dataflows or pipelines.
 
 ## Set the Data Lake Storage Gen2 storage account as a source
 
