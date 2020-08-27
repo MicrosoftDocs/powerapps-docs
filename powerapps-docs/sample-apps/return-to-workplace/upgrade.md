@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 08/27/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -61,36 +61,22 @@ When a new version of the  **Return to the Workplace** solution is available, yo
 > [!NOTE]
 > If you are a US Government customer, you'll have to update the Power BI dashboard using the latest version of the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](deploy.md#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
-To install the update, either select **Get it** on the notification banner or in the notification center, or find the app in the AppSource and select **Get it now**. If you have a direct link for the update, select the link.
+1. To install the update, either select **Get it** on the notification banner or in the notification center, or find the app in the AppSource and select **Get it now**. If you have a direct link for the update, select the link.
 
-You'll be asked whether you wish to overwrite the current version or to install the new version in a new workspace. By default, overwrite is selected.
+2. You'll be asked whether you want to overwrite the current version or to install the new version in a new workspace. By default, **Overwrite an existing version** is selected.
 
-> [!div class="mx-imgBorder"]
-> ![Update App overwrite](media/power-bi-update-app-overwrite.png "Update App overwrite")
+    > [!div class="mx-imgBorder"]
+    > ![Update App overwrite](media/power-bi-update-app-overwrite.png "Update App overwrite")
 
-  - **Overwrite an existing version:** Overwrites the existing workspace with the updated version of the template app. More information: [overwrite behavior](#overwrite-behavior).
-
-  - **Install to a new workspace:** Installs a fresh version of the workspace and app that you need to reconfigure (connect to data, define navigation and permissions).
-
-### Overwrite behavior
-
-Overwriting the solution updates the reports, dashboards, and dataset inside the workspace, not the app. Overwriting doesn't change app navigation, setup, and permissions.
-
-After you update the workspace, you need to update the app to apply changes from the workspace to the app.
-
-Overwriting the existing version keeps the configured parameters and authentication. After the update, an automatic dataset refresh starts. During the refresh, the sample data is still present in the app, reports, and dashboards.
-
-> [!div class="mx-imgBorder"]
-> ![Refresh Sample Data](media/power-bi-sample-data.png "Refresh Sample Data")
-
-Overwriting always presents sample data until the refresh is complete. If the template app author made changes to the dataset or parameters, users of the workspace and app will not see the new data until the refresh is complete. Rather, they will continue to see sample data during this time.
-
-Overwriting never deletes new reports or dashboards you've added to the workspace. It only overwrites the original reports and dashboards with changes from the original author.
-
-> [!NOTE]
-> Remember to update the app after overwriting to apply changes to the reports and dashboard for your organizational app users.
-
-To learn more about the update process, see: [Update a template app](https://docs.microsoft.com/power-bi/connect-data/service-template-apps-install-distribute#update-a-template-app)
+    Select **Install to a new workspace** to install a fresh version of the workspace and app that you need to reconfigure (connect to data, define navigation and permissions).
+  
+    > [!IMPORTANT]
+    > Overwriting the existing version is currently not supported.
+  
+3. Install the app in a new workplace by following these steps in the deploy topic:
+    - [Step 3: Configure and publish Power BI dashboards](/powerapps/sample-apps/return-to-workplace/deploy#step-3-configure-and-publish-power-bi-dashboards)
+    - [Step 4: Schedule report refresh](/powerapps/sample-apps/return-to-workplace/deploy#step-4-schedule-report-refresh)
+    - [Step 5: Embed the Power BI report in the model-driven app](/powerapps/sample-apps/return-to-workplace/deploy#step-5-embed-the-power-bi-report-in-the-model-driven-app)
 
 ## Step 3: Install the Workplace Care Management dashboard
 
