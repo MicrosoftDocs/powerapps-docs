@@ -195,7 +195,7 @@
         href: ./canvas-apps/get-started-create-from-data.md
       - name: From Azure SQL Database
         href: ./canvas-apps/app-from-azure-sql-database.md
-    - name: 2 - Make basic customizations
+    - name: 3 - Make basic customizations
       items:
       - name: 1 - Galleries
         href: ./canvas-apps/customize-layout-sharepoint.md
@@ -877,6 +877,8 @@
     items:
     - name: Edit an app
       href: ./canvas-apps/edit-app.md
+    - name: Export and import an app
+      href: ./canvas-apps/export-import-app.md
     - name: Delete an app
       href: ./canvas-apps/delete-app.md
     - name: License designation for an app
@@ -1094,6 +1096,10 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+        - name: Troubleshoot forms
+          items: 
+          - name: Use Monitor to troubleshoot forms
+            href: ./model-driven-apps/monitor-form-checker.md            
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
@@ -1255,12 +1261,14 @@
       items:
         - name: Portal templates
           href: ./portals/portal-templates.md
-        - name: Create a starter portal
-          href: ./portals/create-portal.md
-        - name: Create a portal with Dynamics 365 environment
-          href: ./portals/create-dynamics-portal.md
-        - name: Provision a portal using the older portal add-on
-          href: ./portals/provision-portal-add-on.md
+        - name: Create a portal
+          items:
+           - name: Create a starter portal
+             href: ./portals/create-portal.md
+           - name: Create a portal with Dynamics 365 environment
+             href: ./portals/create-dynamics-portal.md
+           - name: Create a portal using the older portal add-on
+             href: ./portals/provision-portal-add-on.md
         - name: Power Apps portals Studio anatomy
           href: ./portals/portal-designer-anatomy.md
         - name: Supported web browsers for portal designer
@@ -1784,17 +1792,23 @@
     - name: Overview
       href: ../sample-apps/return-to-workplace/overview.md
     - name: Deploy the solution
-      href: ../sample-apps/return-to-workplace/deploy.md   
+      href: ../sample-apps/return-to-workplace/deploy.md
+    - name: Upgrade the solution
+      href: ../sample-apps/return-to-workplace/upgrade.md      
     - name: Configure the solution
       href: ../sample-apps/return-to-workplace/configure.md
     - name: Location Readiness dashboard
       href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
+    - name: Workplace Care Management dashboard
+      href: ../sample-apps/return-to-workplace/dashboard-case-management.md
     - name: Facility Safety Management app
       href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
     - name: Workplace Care Management app
       href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
     - name: Employee Return to the Workplace app
       href: ../sample-apps/return-to-workplace/app-for-employee.md
+    - name: Extend the solutions
+      href: ../sample-apps/return-to-workplace/extend.md
 - name: Learn from others
   items:
   - name: Blog

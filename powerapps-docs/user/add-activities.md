@@ -1,12 +1,12 @@
 ---
 title: "Add an appointment, email, phone call, notes or task activity to the Timeline in a Model-driven app| MicrosoftDocs"
-ms.custom: ""
+description: How to add an activity to the timeline
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 05/11/2020
+ms.date: 08/21/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -42,23 +42,13 @@ Legend:
   6. Activity status
   7. Activity icons
   8. Date and time
- 
-## Add an activity from the nav bar
- 
-The fastest way to add an activity is to use the shortcut on the nav bar and then link it to a record. For example, you can create a phone call activity and then link it to a contact in the system using the **Regarding** field.
 
-1. On the top nav bar, select **New** ![Create record button](media/create-record-button.png "Create record button") > **Activities** > choose the type of activity you want to add.
-
-   > [!div class="mx-imgBorder"]
-   > ![Shortcut to add an activity in Power Apps](media/add_new_activity_from_nav.gif "Shortcut to add an activity in Power Apps")  
- 
-3. Fill in the required information. Use the **Regarding** field to associate the activity with a record.
-
-4. When you're done, select **Save and Close** or **Save & Create New**. 
 
 ## Add an activity from within a record
 
-You can also open a record and then add an activity to the record. 
+1. Open the record that you want to add an activity to.
+2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button").
+3. Select the type of activity that you want to add.
 
    > [!div class="mx-imgBorder"]
    > ![Shortcut to add an activity in Power Apps](media/add_new_activity_from_record.gif "Shortcut to add an activity in Power Apps") 
@@ -66,7 +56,7 @@ You can also open a record and then add an activity to the record.
 
 ### Add a phone call  
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Phone Call**. 
 
@@ -86,7 +76,7 @@ You can also open a record and then add an activity to the record.
   
 ### Add a task  
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Task**.
   
@@ -98,7 +88,7 @@ You can also open a record and then add an activity to the record.
 
 To add an email activity to a record, you must first save the record you are adding the activity to.  
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Email**. 
 
@@ -134,7 +124,7 @@ To add an appointment activity to a record, you must first save the record you a
 > [!NOTE]
 > Recurring appointments are not supported on the Dynamics 365 App for Outlook, Dynamics 365 for phones app, and when you run the model-driven apps web client on your mobile phone web browser.
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2.  In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Appointment**.  
   
@@ -146,7 +136,7 @@ To add an appointment activity to a record, you must first save the record you a
 
 You can also easily add notes in the activities area.
   
-1. Open the record that you want to add the activity to. For example, open a contact record.
+1. Open the record that you want to add the activity to. 
   
 2. In the **Timeline** section, select the **Enter a note** area.
 
@@ -171,7 +161,7 @@ You can also easily add notes in the activities area.
 
 ### Add a post 
 
-1. Open the record that you want to add a post to. For example, open a contact record.
+1. Open the record that you want to add a post to. 
 
 2. In the **Timeline** section, select **Add info and activities** ![Add activities](media/add-activity-button.png "Add activities button") > **Post**. 
 
@@ -205,16 +195,16 @@ Quickly filter activities, notes or posts in the timeline wall by record type or
  > When the timeline is displayed on more than one column, the filter pane is displayed as a column alongside the timeline records. To learn more, see [Filter pane appears in two column mode](../maker/model-driven-apps/faqs-timeline-control.md#why-my-agents-see-the-filter-pane-even-when-the-expand-filter-pane-by-default-check-box-is-cleared). 
 
   > [!div class="mx-imgBorder"]
-  > ![Filter pane in the Timeline ](media/timeline-filter2.png "Filter pane in the Timeline") ![Filter pane in the Timeline ](media/timeline-filter5.png "Filter pane in the Timeline")
+  > ![Filter pane in the timeline ](media/timeline-filter2.png "Filter pane in the timeline") ![Filter pane on the timeline ](media/timeline-filter5.png "The filter pane on the timeline")
 
 
 ## Manage Activities
 Manage activities directly from the timeline wall including assigning an activity to another person, deleting or closing an activity, add an activity to a queue, opening an associated record or editing notes and posts.
 
   ![Timeline command bar options](media/timeline-options1.png "Timeline command bar options")
-  ![Timeline command bar options](media/timeline-options2.png "Timeline command bar options")
-  ![Timeline command bar options](media/timeline-options3.png "Timeline command bar options")
-  ![Timeline command bar options](media/timeline-options4.png "Timeline command bar options")
+  ![Timeline command bar option](media/timeline-options2.png "Timeline command bar option")
+  ![Timeline options](media/timeline-options3.png "Timeline options")
+  ![More timeline options](media/timeline-options4.png "More timeline options")
 
 ## See activities in List or Calendar view
 
@@ -243,4 +233,3 @@ You can see the activities in the following views:
 
 [FAQs about Activities and the Timeline Wall](faq-for-timeline-and-activity.md)
 
-[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)

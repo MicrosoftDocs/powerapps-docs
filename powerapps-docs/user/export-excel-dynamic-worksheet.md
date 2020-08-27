@@ -48,12 +48,12 @@ You can’t export data to a dynamic worksheet in Excel for all record types. If
   
 6. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
   
-7. To refresh data in the file, on the **Data** tab, select **Refresh from Power Apps**.  
+7. To refresh data in the file, on the **Data** tab, select **Refresh All**.  
   
    > [!NOTE]
-   > If you have a phone number that starts with **+** or **–** (for example +1-123-456-7890), when you refresh the dynamic worksheet, the phone number field will not display the number correctly.   
-   >
+   > - If you have a phone number that starts with **+** or **–** (for example +1-123-456-7890), when you refresh the dynamic worksheet, the phone number field will not display the number correctly.   
    > To avoid the issue, use a space or parentheses **()**, like this: +1 123-456-7890 or +1 (123)-456-7890.  
+   >- If you have any issues with dynamic worksheet, see [Troubleshoot export to Excel](ts-export-to-excel.md).  
   
 ## Tips  
   
