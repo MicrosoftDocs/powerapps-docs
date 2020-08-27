@@ -68,10 +68,10 @@ When a new version of the  **Return to the Workplace** solution is available, yo
     > [!div class="mx-imgBorder"]
     > ![Update App overwrite](media/power-bi-update-app-overwrite.png "Update App overwrite")
 
-    Select **Install to a new workspace** to install a fresh version of the workspace and app that you need to reconfigure (connect to data, define navigation and permissions).
+  Select **Install to a new workspace** to install a fresh version of the workspace and app that you need to reconfigure (connect to data, define navigation and permissions).
   
-    > [!IMPORTANT]
-    > Overwriting the existing version is currently not supported.
+  > [!IMPORTANT]
+  > Overwriting the existing version is currently not supported.
   
 3. Install the app in a new workplace by following these steps in the deploy topic:
     - [Step 3: Configure and publish Power BI dashboards](/powerapps/sample-apps/return-to-workplace/deploy#step-3-configure-and-publish-power-bi-dashboards)
