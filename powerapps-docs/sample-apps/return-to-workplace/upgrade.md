@@ -68,29 +68,12 @@ You'll be asked whether you wish to overwrite the current version or to install 
 > [!div class="mx-imgBorder"]
 > ![Update App overwrite](media/power-bi-update-app-overwrite.png "Update App overwrite")
 
-  - **Overwrite an existing version:** Overwrites the existing workspace with the updated version of the template app. More information: [overwrite behavior](#overwrite-behavior).
+  - **Overwrite an existing version: (Not Supported)** Overwrites the existing workspace with the updated version of the template app.  More information: [overwrite behavior](#overwrite-behavior).
 
   - **Install to a new workspace:** Installs a fresh version of the workspace and app that you need to reconfigure (connect to data, define navigation and permissions).
 
-### Overwrite behavior
-
-Overwriting the solution updates the reports, dashboards, and dataset inside the workspace, not the app. Overwriting doesn't change app navigation, setup, and permissions.
-
-After you update the workspace, you need to update the app to apply changes from the workspace to the app.
-
-Overwriting the existing version keeps the configured parameters and authentication. After the update, an automatic dataset refresh starts. During the refresh, the sample data is still present in the app, reports, and dashboards.
-
-> [!div class="mx-imgBorder"]
-> ![Refresh Sample Data](media/power-bi-sample-data.png "Refresh Sample Data")
-
-Overwriting always presents sample data until the refresh is complete. If the template app author made changes to the dataset or parameters, users of the workspace and app will not see the new data until the refresh is complete. Rather, they will continue to see sample data during this time.
-
-Overwriting never deletes new reports or dashboards you've added to the workspace. It only overwrites the original reports and dashboards with changes from the original author.
-
-> [!NOTE]
-> Remember to update the app after overwriting to apply changes to the reports and dashboard for your organizational app users.
-
-To learn more about the update process, see: [Update a template app](https://docs.microsoft.com/power-bi/connect-data/service-template-apps-install-distribute#update-a-template-app)
+> [!IMPORTANT]
+> Overwriting the existing version is current not supported. Please install the Apps in a new workplace and follow [deploy the solution](deploy.md) steps 3 till 5.
 
 ## Step 3: Install the Workplace Care Management dashboard
 
