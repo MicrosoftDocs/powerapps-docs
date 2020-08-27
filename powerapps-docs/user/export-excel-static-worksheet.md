@@ -1,6 +1,6 @@
 ---
-title: "Export to an Excel static worksheet in a model-driven app | MicrosoftDocs"
-ms.custom: ""
+title: "Export to an Excel static worksheet in model-driven Power Apps | MicrosoftDocs"
+description: How to export to an Excel static worksheet in a model-driven Power apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
