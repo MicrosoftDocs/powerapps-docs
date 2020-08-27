@@ -1,5 +1,5 @@
 ---
-title: How to filter a search list in an app. | Microsoft Docs
+title: How to filter a search list in an app | Microsoft Docs
 description: This article explains how to search for items and filter the list in your app when sourcing data from a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# How to filter a search list in an app?
+# How to filter a search list in an app
 
 In this scenario article, you'll learn how to filter a search list in a canvas app.
 
@@ -26,7 +26,7 @@ In this scenario article, you'll learn how to filter a search list in a canvas a
 
 You can use text input control in a canvas app to input text and filter the list such as a data table to filter list items from the connected SharePoint list.
 
-To use the ability to search using a text input and filter the records, you have to use the function [filter](../functions/function-filter-lookup.md). For example, `Filter([@Colors], StartsWith(Title, TextInput1.Text))` uses the SharePoint list connection **Colors** and the column **Title** to filter the records.
+To search using text input and to filter the records, you have to use the function [filter](../functions/function-filter-lookup.md). For example, `Filter([@Colors], StartsWith(Title, TextInput1.Text))` uses the SharePoint list connection **Colors** and the column **Title** to filter the records.
 
 ## Example
 
@@ -51,13 +51,13 @@ To use the ability to search using a text input and filter the records, you have
 
     `Filter([@Colors], StartsWith(Title, TextInput1.Text))`
 
-    Replace **Colors** with the name of your SharePoint list, **Title** with the name of column in the list, and **TextInput1** with your text input control name.
+    Replace **Colors** with the name of your SharePoint list, **Title** with the name of the column in the list, and **TextInput1** with your text input control name.
 
     ![Filter formula](./media/scenarios-filter-search-list/filter-formula.png "Filter formula")
 
 1. Play the app.
 
-1. Enter text, such as 'B' to filter items starting with 'B'.
+1. Enter text, such as 'B,' to filter items starting with 'B'.
 
     ![Colors](./media/scenarios-filter-search-list/colors.png "Colors")
 
