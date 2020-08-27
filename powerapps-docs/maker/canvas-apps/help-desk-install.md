@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/20/2020
+ms.date: 08/26/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -41,20 +41,20 @@ Help Desk provides a user-friendly experience to connect end users with support 
 
 This list stores the Help Desk tickets.
 
-1. Open a web browser and go to https://admin.microsoft.com.
-2. Sign in with an account that has permission to create SharePoint lists.
-3. Go to the site collection where you want to create the HelpDesk list.
-4. Select the **gear icon** in the top-right portion of the web page.
-5. Select **Add an app**.
-6. In the **Find an app** textbox, enter **Custom**.
-7. Select the **search icon**.
-8. Select the **Custom List** app.
-9. In the **Name** textbox, enter **HelpDesk**.
+1. Open a web browser.
+1. Go to the SharePoint site where you want to create the HelpDesk list.
+1. Sign in with an account that has permission to create lists.
+1. Select the **gear icon** in the top-right portion of the web page.
+1. Select **Add an app**.
+1. In the **Find an app** textbox, enter **Custom**.
+1. Select the **search icon**.
+1. Select the **Custom List** app.
+1. In the **Name** textbox, enter **HelpDesk**.
 
 	> [!IMPORTANT]
 	> If you choose a different name for the list make sure you write it down because you will need to substitute it for HelpDesk everywhere you see it during the installation and configuration process.
 
-10. Select **Create**.
+1. Select **Create**.
 
 ### Create Description column
 
@@ -314,6 +314,7 @@ This list stores the Help Desk tickets.
 
 ### See also
 
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
 - [Customize a SharePoint list form](customize-list-form.md)
 - [Add and configure a control](add-configure-controls.md)
 - [Edit and manage permissions for a SharePoint list or library](https://support.office.com/article/edit-and-manage-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782)
