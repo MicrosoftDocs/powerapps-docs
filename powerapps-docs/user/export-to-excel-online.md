@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 8/27/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -38,8 +38,8 @@ The option to open data in Excel Online isn’t available in all record types. I
   
 To open a list of records in an app, on the command bar select the **Export to Excel** menu and then select **Open in Excel Online**. 
 
-> [!div class="mx-imgBorder"] 
-> ![Export to Excel Online](media/exportexcelonline.png "Export to Excel Online")  
+   > [!div class="mx-imgBorder"] 
+   > ![Export to excel](media/export_to_excel.png "Select export to Excel")
 
   
 ## Save your data and import it back to the app  
