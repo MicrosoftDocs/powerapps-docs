@@ -47,7 +47,7 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
 3. On the **Get Data** page, select **Azure** > **Azure Data Lake Storage Gen2** > **Connect.**
 
-4.  Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/* and replace **accountname** and **containername** with your storage account's infromation.
+4.  Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/* and replace **accountname** and **containername** with your storage account's information.
 
 5. Find the storage account name by going to **Azure** > **Storage accounts**, and then select the Data Lake Storage Gen2 account that's populated with the exported Common Data Services data.
 
