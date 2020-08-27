@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: sample
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/26/2020
+ms.date: 08/27/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -238,40 +238,40 @@ This list stores the line items that are associated with each expense report.
 1. Select **Upload**, and then select the package that you downloaded earlier.
 1. For the **App** and **Flow** resource types, set **IMPORT SETUP** to **Create as new**.
 
-    ![Import settings screen](./media/expense-report-install/import-settings.png)
+    ![Review package content](./media/expense-report-install/import-settings.png)
 
 1. Select ![Gear icon](./media/expense-report-install/gear-icon.png) for the **SharePoint Connection**.
 1. In the connections list, select the item with your username.
 
-    ![Import settings screen](./media/expense-report-install/import-settings-sharepoint.png)
+    ![Choose SharePoint connection](./media/expense-report-install/import-settings-sharepoint.png)
 
 1. Select **Save**.
 1. Select ![Gear icon](./media/expense-report-install/gear-icon.png) for the **Approval Connection**.
 1. In the connections list, select **Approvals**.
 
-    ![Import settings screen](./media/expense-report-install/import-settings-approvals.png)
+    ![Choose Approvals](./media/expense-report-install/import-settings-approvals.png)
 
 1. Select **Save**.
 1. Select ![Gear icon](./media/expense-report-install/gear-icon.png) for the **Office 365 Outlook Connection**.
 1. In the connections list, select the item with your username.
 
-    ![Import settings screen](./media/expense-report-install/import-settings-office365outlook.png)
+    ![Choose Outlook connection](./media/expense-report-install/import-settings-office365outlook.png)
 
 1. Select **Save**.
 
     > [!TIP]
     > When you're done, it will look like this:
 
-    ![Import settings screen](./media/expense-report-install/import-settings-done.png)
+    ![Import settings review](./media/expense-report-install/import-settings-done.png)
 
 1. Select **Import**, and then wait until the process is complete.
 
-    ![Import settings screen](./media/expense-report-install/import-done.png)
+    ![Import success](./media/expense-report-install/import-done.png)
 
 ## Configure the app to use the SharePoint lists
 
 1. In the web browser, select **Apps**.
-1. Select ![Ellipsis](./media/expense-report-install/ellipsis.png) next to the Expense Report app.
+1. Select ![Ellipsis for apps](./media/expense-report-install/ellipsis.png) next to the Expense Report app.
 1. Select **Edit**.
 1. Select **Allow** to let the app use connections.
 
@@ -326,13 +326,13 @@ This list stores the line items that are associated with each expense report.
 1. Expand the **Change item status to Approved** action.
 1. Change the **Site Address** and **List Name** to match the Expenses list that you created in SharePoint.
 
-    ![Edit Flow screen](./media/expense-report-install/edit-flow-condition-ifyes.png) 
+    ![Change item status to Approved](./media/expense-report-install/edit-flow-condition-ifyes.png) 
 
 1. Expand the **If no** section.
 1. Expand the **Change item status to Open** action.
 1. Change the **Site Address** and **List Name** to match the Expenses list that you created in SharePoint. 
 
-    ![Edit Flow screen](./media/expense-report-install/edit-flow-condition-ifno.png)
+    ![Change item status to Open](./media/expense-report-install/edit-flow-condition-ifno.png)
 
     > [!TIP]
     > You don’t need to type it manually; you can select it in the drop-down lists.
@@ -342,7 +342,7 @@ This list stores the line items that are associated with each expense report.
 ## Update app functions
 
 1. Select **Apps**.
-1. Select ![Ellipsis](./media/expense-report-install/ellipsis.png) next to the Expense Report app.
+1. Select ![Ellipsis for apps during functions update](./media/expense-report-install/ellipsis.png) next to the Expense Report app.
 1. Select **Edit**.
 1. Select **NewExpense** screen from the tree view.
 1. Select text input next to **COST CENTER** label.
