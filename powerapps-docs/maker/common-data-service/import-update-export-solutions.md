@@ -17,7 +17,9 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Import solutions 
+# Import solutions
+
+[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can manually import solutions using the steps in this article. You must import only those solutions that you've obtained from a trusted source. Customizations might include code that can send data to external sources.   
  
@@ -31,8 +33,6 @@ When you import an **unmanaged** solution:
 - That contains components you have already customized, your customizations will be overwritten by the customizations in the imported unmanaged solution. You can’t undo this.
 
 To import a solution:
-
-[!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) and select **Solutions** from the left navigation.  
   
