@@ -63,7 +63,7 @@ When a new version of the  **Return to the Workplace** solution is available, yo
 
 To install the update, either select **Get it** on the notification banner or in the notification center, or find the app in the AppSource and select **Get it now**. If you have a direct link for the update, select the link.
 
-You'll be asked whether you wish to overwrite the current version or to install the new version in a new workspace. By default, overwrite is selected.
+You'll be asked whether you wish to overwrite the current version or to install the new version in a new workspace. By default, overwrite is selected. This needs to be changed to **Install to a new workspace**.
 
 > [!div class="mx-imgBorder"]
 > ![Update App overwrite](media/power-bi-update-app-overwrite.png "Update App overwrite")
