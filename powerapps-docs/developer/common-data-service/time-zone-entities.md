@@ -2,7 +2,7 @@
 title: "Time zone entities (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The time zone entities contain time zone information, such as supported time zone, time zone code, localized time zone, storing information on how times are calculated." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 08/27/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -24,9 +24,10 @@ The *time zone* entities can be used when you write code that works in multiple 
 - The *time zone localized name* entity stores the localized time zone names.  
   
 
-Note, *time zone rule* has been deprecated. We delegate the time conversion calculation to Windows. Refer to this article to know more - [Microsoft policy in response to daylight saving time and time zone changes](https://support.microsoft.com/en-us/help/22803/daylight-saving-time)
+> [!NOTE]
+> The *time zone rule* entity is deprecated. The time conversion calculation is now provided by Microsoft Windows. Refer to this article for more information: [Microsoft policy in response to daylight saving time and time zone changes](https://support.microsoft.com/help/22803/daylight-saving-time).
   
-  The following table lists the messages that are related to time zones, but don’t refer to a specific entity.  
+The following table lists the messages that are related to time zones, but don’t refer to a specific entity.  
   
 |Message|Description|  
 |-------------|-----------------|  
