@@ -265,6 +265,45 @@ With solution settings, you define the terms of agreement that are applicable to
    > [!div class="mx-imgBorder"]
    > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
 
+## Employee Cases 
+
+On the **Active Employee Cases**, items must be limited to one per employee. For this, a **Duplicate rule** must be created. 
+
+1. Go into the **Power Platform Admin Center** or click this link: https://admin.powerplatform.microsoft.com/
+
+2. Select the environment in which the app is located.
+
+3. On the tool box, select **Settings**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Solution settings form](media/solution-environmnet-setting.png "Environment Settings")
+
+4. Select **Data Management** and from the list select **Duplicate detection rules**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Solution settings form](media/solution-data-management.png "Data Management")
+
+5. Select **New** in the tool box and a pop up window will appear. 
+    
+    Fill in the fields: 
+
+   | **Field**   | **Description**                     |
+   |-------------|-------------------------------------|
+   | Name        | Enter a name for the rule.     |
+   | Base Record Type | Select Employee Cases |
+   | Matching Record Type | Select Employee Cases |
+   | Field | Select Employee |
+   | Criteria | Select Exact Match |
+
+Mark the **Exclude inactive matching records** check box.
+
+   > [!div class="mx-imgBorder"]
+   > ![Solution settings form](media/solution-pop-up-rule.png "pop up")
+
+6. Click **Save and Close**.
+
+7. Select the newly created rule and click on **Publish**.
+
 ## Define a theme
 
 You can use a theme to enhance the user experience.
