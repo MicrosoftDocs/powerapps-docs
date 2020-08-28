@@ -20,7 +20,7 @@ Common Data Service supports integration with [!INCLUDE[pn-microsoft-sharepoint-
 
 To work with the document management capabilities of [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] from within Common Data Service, you must:
 
-1.	[Enable document management functionality in model-driven apps in Dynamics 365](#step-1-enable-document-management-functionality-in-model-driven-apps-in-dynamics-365)
+1.	[Enable document management functionality for your environment](#step-1-enable-document-management-functionality-in-model-driven-apps)
 
 2.	[Set up SharePoint integration from Power Apps Portals admin center](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center)
 
@@ -30,9 +30,9 @@ To work with the document management capabilities of [!INCLUDE[pn-sharepoint-sho
 
 5.	[Create appropriate entity permission and assign it to the appropriate web role](#step-5-create-appropriate-entity-permission-and-assign-it-to-the-appropriate-web-role)
 
-## Step 1: Enable document management functionality in model-driven apps in Dynamics 365
+## Step 1: Enable document management functionality in model-driven apps
 
-You must enable the document management functionality in model-driven apps in Dynamics 365 by using server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration. Server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration allows model-driven apps in Dynamics 365 and [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] to perform a server-to-server connection. The default [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] site record is used by the portal. For information on how to enable document management functionality in model-driven apps in Dynamics 365, see [Set up model-driven apps in Dynamics 365 to use SharePoint Online](https://docs.microsoft.com/power-platform/admin/set-up-dynamics-365-online-to-use-sharepoint-online).
+You must enable the document management functionality in model-driven apps by using server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration. Server-based [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration allows model-driven apps and [!INCLUDE[pn-microsoft-sharepoint-online](../../includes/pn-microsoft-sharepoint-online.md)] to perform a server-to-server connection. The default [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] site record is used by the portal. For information on how to enable document management functionality in model-driven apps, see [Set up model-driven apps to use SharePoint Online](https://docs.microsoft.com/power-platform/admin/set-up-dynamics-365-online-to-use-sharepoint-online).
 
 ## Step 2: Set up SharePoint integration from Power Apps Portals admin center
 
@@ -127,7 +127,7 @@ By default, the file size is set to 10 MB. However, you can configure the file s
 
 The below example demonstrates configuration using the Case entity which needs the Dynamics 365 Customer Service application as a pre-requisite. Although this sample uses the Case entity, it is just an illustration of the steps mentioned above and can be followed with any other custom entity or any Common Data Service entity that supports managing documents in SharePoint. 
 
-1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-model-driven-apps-in-dynamics-365) to ensure that server-based configuration is complete for model-driven apps in Dynamics 365 and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
+1.	Follow the instructions in [Step 1](#step-1-enable-document-management-functionality-in-model-driven-apps) to ensure that server-based configuration is complete for your envoronment and [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)] integration.
 
 2.	Follow the instructions in [Step 2](#step-2-set-up-sharepoint-integration-from-power-apps-portals-admin-center) to ensure that the portal has permissions to integrate with [!INCLUDE[pn-sharepoint-short](../../includes/pn-sharepoint-short.md)]. 
 
@@ -135,7 +135,7 @@ The below example demonstrates configuration using the Case entity which needs t
 
 4.	Follow the instructions in [Step 4](#step-4-configure-the-appropriate-form-to-display-documents) with the following configurations:
 
-    - Model-driven apps in Dynamics 365 customization
+    - Model-driven apps customization
 
         a. Go to **Settings** > **Customization** > **Customize the System**. 
 
