@@ -200,6 +200,7 @@ such as **Created On**, **Modified On** are not displayed.
 | Case Number                     | Text          | Unique identifier for the employee case.                                                         | Model-driven app             |
 | Check In Available              | Option Set    | Used to denote whether the employee can get a pass for a facility.                               | Model-driven app and canvas app |
 | Check In Available Date         | Date and Time | Used to specify when the employee will be able to get a pass for a facility.                     | Model-driven app             |
+| Check In Blocked Note           | Text          | Used to give the employee a note on why they are blocked from booking a pass.                    | Model-driven app             |
 | Employee                        | Lookup        | Used to associate the employee to the employee case.                                             | Model-driven app             |
 | Employee Contacted              | Option Set    | Used to denote whether the employee was contacted.                                               | Model-driven app             |
 | Employee Instructions Provided  | Option Set    | Used to denote whether the employee was provided instructions.                                   | Model-driven app             |
@@ -380,16 +381,17 @@ such as **Created On**, **Modified On** are not displayed.
 
 ### Solution Setting
 
-| Display name         | Data type  | Description                                                              | Platform use               |
-|----------------------|------------|--------------------------------------------------------------------------|------------------------------|
-| Health Contact Email | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
-| Health Contact Name  | Text       | Used to capture the name of the primary health contact.                  | Model-driven app and canvas app |
-| Health Contact Phone | Text       | Used to capture the phone number of the primary health contact.          | Model-driven app and canvas app |
-| Maximum Temperature  | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
-| Minimal Temperature  | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
-| Name                 | Text       | The primary name of the setting record.                                  | Model-driven app             |
-| Target Temperature   | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
-| Temperature Scale    | Option Set | Used to display the value of the temperature question in the canvas app. | Canvas app                   |
+| Display name                | Data type  | Description                                                              | Platform use                    |
+|-----------------------------|------------|--------------------------------------------------------------------------|---------------------------------|
+| Health Contact Email        | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
+| Health Contact Name         | Text       | Used to capture the name of the primary health contact.                  | Model-driven app and canvas app |
+| Health Contact Phone        | Text       | Used to capture the phone number of the primary health contact.          | Model-driven app and canvas app |
+| Health Contact Instructions | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app |
+| Maximum Temperature         | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
+| Minimal Temperature         | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
+| Name                        | Text       | The primary name of the setting record.                                  | Model-driven app                |
+| Target Temperature          | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
+| Temperature Scale           | Option Set | Used to display the value of the temperature question in the canvas app. | Canvas app                      |
 |||||
 
 ### State
