@@ -107,7 +107,7 @@ If you add a composite field to a quick create form, it will be displayed as sep
 The **Enable quick create forms** property can be enabled or disabled for all standard activities except recurring appointments. This property lets you change the form that is displayed by default for most activities. By default, the **Enable quick create forms** property is enabled and the quick create form is the form displayed in the app areas and activity entities that support it. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/allow-quick-create.png "Allow Quick Create property on appointment entity")
+> ![Allow Quick Create property on appointment entity](media/allow-quick-create.png "Allow Quick Create property on appointment entity")
 
 
 ### Unified interface client form display behavior
