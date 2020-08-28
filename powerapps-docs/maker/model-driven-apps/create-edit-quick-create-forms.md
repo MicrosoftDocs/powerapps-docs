@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app quick create forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
-ms.date: 03/23/2020
+ms.date: 08/28/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -161,7 +161,7 @@ When you import a solution from version 8.2 regardless of the value of the **Ena
 If there is a customization made in a version 9.0 solution to entities where **Enable quick create forms** is enabled, the value will not change after import.  However, if you have set the **Enable quick create forms** option to *disabled* for the task, phone call, email, and appointment entities, the value will be overwritten to enabled. In this situation, you'll need to reset the **Enable quick create forms** option back to disabled for those activity entities after the import. 
 
 [!IMPORTANT]
->In some sceanrios if a quick create form exists but is not included in the app the Unified Interface runtime will open the Quick Create form if it is enabled on an entity.  This will occur for lookup controls and subgrids.  If you do not want a quick create to show in your app you will need to disable it on the entity.
+>If a quick create form exists for an entity but is not included in the app, the Unified Interface runtime will still open the quick create form.  This behavior occurs with lookup controls and subgrids. If you don’t want a quick create form to appear in your app you must delete it.
   
 ### See also  
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
