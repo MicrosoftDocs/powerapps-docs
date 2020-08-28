@@ -201,6 +201,10 @@ case, and selects **Finish**. After the process is finished, the employee case b
 
   > [!div class="mx-imgBorder"]
   > ![resolve](media/health-safety-bpf-resolve.png "Resolve")
+  
+### Employee Check-in Available
+
+As part of the investigation, a case manager can indicate that the employee is no longer allowed to book a pass. By default **Check-in Available** is **Yes**, by turning this to **No** you can indicate this. The **Check-in Available Date** indicates will when this employee is no longer allowed to book a pass. Every hour, the employees for which this date is passed then the **Check-in Available** is turned to **Yes**. A **Check-in Blocked Note** can be provided to employees so employees know why they are no longer allowed to book a pass.
 
 ### Case facilities
 
