@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Translate entity label text
+# Translate label text
 
 The standard entities include default text for labels that are available in many different languages. However, when you customize a form, such as adding or changing fields, or create custom entities, you may need the labels for those components to appear in different languages. You can import translated label text for customized entities for your apps so that the label text displays in languages other than the base language.
 
@@ -35,17 +35,17 @@ When you translate label text for a form, you are modifying the base language of
 2. Import the translations. More information: [Import translated entity and field text back into an app](import-translated-entity-field-text.md)
 
 
-## Common issues with translating entity component text
+## Common issues with translating form label text
 
 <!-- THIS SHOULD GO IN ANOTHER TOPIC ### Active customizations prevent customizations from appearing
 
 Active customizations can prevent customizations from appearing at runtime. For example, managed solution changes don't appear at runtime or some components are missing. This behavior can occur if there is an active unmanaged layer for the component. You can resolve this by removing the component's unmanaged layer. More information: [Remove the unmanaged layer](solution-layers.md#remove-the-unmanaged-layer)  -->
 
-### Translations don't appear in the layers
+### Form label translations don't appear in the layers
 
 Imported translations may not appear when you view the solution layers for a component. Make sure the translations are on the &lt;Label&gt; level when you view the solution layer. Note that “displayname” tags are at the attribute level, so they will not translate labels. The “DisplayName” tags are actually for form labels and will translate form’s labels. For more information about viewing solution layers, see [Solution layers](solution-layers.md).
 
-### Translations don't appear specifically for the base language
+### Form label translations don't appear specifically for the base language
 
 The translation export and import feature is a tool for used so your apps can display translated label text for customized components. It isn't designed to be used in managing all labels including the base language. 
 
@@ -59,7 +59,7 @@ If the issue is base language specific, do the following:
 3. Export the active unmanaged solution as managed.
 4. Import this solution into the target environment.
 
-### Translation descriptions appear when exporting as unmanaged, but are "" when exporting as managed
+### Form Label translation descriptions appear when exporting as unmanaged, but are "" when exporting as managed
 This can happen because the label has no translations. The following behavior occurs:
 - The unmanaged solution is filled with the display name: &lt;label description="example" languagecode="1033"&gt;
 - The managed solution is empty, which is seen as non-existent and falls back to the display name: &lt;label description="" languagecode="1033"&gt;
