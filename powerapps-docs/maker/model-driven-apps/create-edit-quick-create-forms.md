@@ -2,7 +2,7 @@
 title: "Create or edit model-driven app quick create forms in Power Apps | MicrosoftDocs"
 description: "Learn how to create or edit a quick create form"
 ms.custom: ""
-ms.date: 03/23/2020
+ms.date: 08/28/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -160,8 +160,11 @@ When you import a solution from version 8.2 regardless of the value of the **Ena
  
 If there is a customization made in a version 9.0 solution to entities where **Enable quick create forms** is enabled, the value will not change after import.  However, if you have set the **Enable quick create forms** option to *disabled* for the task, phone call, email, and appointment entities, the value will be overwritten to enabled. In this situation, you'll need to reset the **Enable quick create forms** option back to disabled for those activity entities after the import. 
 
-> [!IMPORTANT]
-> Be aware of the behavior that occurs when you create a parent relationship with the same entity. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent record, the first record will not be saved with the lookup that has the parent record value. This is because of the circular reference introduced by using the same entity. If you experience this issue you can resolve it by removing the parent record id on the quick create form before saving the record.
+[!IMPORTANT]
+>
+> - If a quick create form exists for an entity but is not included in the app, the Unified Interface runtime will still open the quick create form.  This behavior occurs with lookup controls and subgrids. If you don’t want a quick create form to appear in your app you must delete it.
+> - Be aware of the behavior that occurs when you create a parent relationship with the same entity. For example, if Account has a relationship to Account and you create a lookup that is used by a quick create form that creates a parent record, the first record will not be saved with the lookup that has the parent record value. This is because of the circular reference introduced by using the same entity. If you experience this issue you can resolve it by removing the parent record id on the quick create form before saving the record.
+
   
 ### See also  
 [Overview of the form editor user interface](form-editor-user-interface-legacy.md)
