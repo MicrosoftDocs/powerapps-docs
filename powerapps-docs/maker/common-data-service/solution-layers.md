@@ -76,14 +76,18 @@ There are additional tabs available for specific component solution layers.
 |AttributePicklistValues (optionset)  | When selected for a global optionset, displays the possible values for an optionset.   | Added, Updated, Removed, Unchanged        |
 |AttributePicklistValues (optionset attribute)   |  When selected for an optionset attribute, displays the values for the attribute.        | Added, Updated, Removed, Unchanged        |
 
-## Remove an unmanaged layer
-
+<!--## Remove an unmanaged layer
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the the unmanaged layer for a component, follow these steps: 
 
 1. Open the solution you want, select **...** next to a component, such as **Account**, and then select **See solution layers**.
 2. If an unmanaged layer is detected, a message appears indicating the layer. On the left **Properties** pane, select **Remove unmanaged layer**. 
     > [!div class="mx-imgBorder"] 
     > ![Remove unmanaged layer](media/remove-unmanaged-layer.png)
+3. Save and publish to fully remove the unmanaged layer.
+
+[!IMPORTANT]
+>Please be sure you want to make this change as this will impact your active unmanaged customizations and can not be reversed or undone.  This may impact data and entities when the solution is removed.
+-->
 
 ### See also
 [Translate localizable text for model-driven apps](../model-driven-apps/translate-localizable-text.md) <br />
