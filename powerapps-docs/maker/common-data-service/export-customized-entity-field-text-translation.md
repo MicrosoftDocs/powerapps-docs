@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Translate customized entity and field text into other languages
+# Translate customized entity, form, and field text into other languages
 After you create customized entity and field text in your unmanaged solution, you may want to translate it into other languages.  
 
 > [!IMPORTANT]
