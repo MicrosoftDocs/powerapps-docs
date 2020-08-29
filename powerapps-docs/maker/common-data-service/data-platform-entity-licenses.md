@@ -18,7 +18,7 @@ search.app:
 
 App makers can use most of the entities available within Common Data Service (including custom entities and entities that are part of the Common Data Model) to create apps and flows for users who have a Power Apps or Power Automate license. 
 
-In some cases, entities contain complex business logic or are tied to some Dynamics 365 apps that require app users to have a specific license. This topic provides licensing information for entities with complex business logic and entities that are tied to Dynamics 365 apps (termed as restricted entities).
+In some cases, entities contain complex business logic or are tied to customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Customer Service, Field Service, Marketing, or Project Service Automation) that require app users to have a specific license. This topic provides licensing information for entities with complex business logic and entities that are tied to Dynamics 365 apps (termed as restricted entities).
 
 ## Entities with complex business logic
 Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a [Power Apps](https://powerapps.microsoft.com/pricing/) or [Power Automate](https://flow.microsoft.com/pricing/) license:
