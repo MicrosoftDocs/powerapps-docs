@@ -4,9 +4,9 @@ ms.date: 03/10/2019
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 0206c43b-b1fc-490d-a867-1d75331885a8
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -120,8 +120,7 @@ This function is passed an object as a parameter. The object has a <b>savedEntit
 <td>Function</td>
 <td>No</td>
 <td>A function to execute when the operation fails.<br>
-
-<b>NOTE</b>: On [Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface), the <b>errorCallback</b> function will be executed only if you are opening a quick create form.</td>
+</td>
 </tr>
 </table>
 
