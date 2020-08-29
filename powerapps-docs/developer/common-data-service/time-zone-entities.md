@@ -17,15 +17,14 @@ search.app:
 ---
 # Time zone entities
 
+> [!NOTE]
+> The *time zone rule* entity is deprecated. The time conversion calculation is now provided by Microsoft Windows. Refer to this article for more information: [Microsoft policy in response to daylight saving time and time zone changes](https://support.microsoft.com/help/22803/daylight-saving-time).
+
 The *time zone* entities can be used when you write code that works in multiple time zones. The following two read-only entities in Common Data Service contain time zone information:  
   
 - The *time zone definition entity* stores basic information about each supported time zone, including the time zone code and the standard time zone name.
   
 - The *time zone localized name* entity stores the localized time zone names.  
-  
-
-> [!NOTE]
-> The *time zone rule* entity is deprecated. The time conversion calculation is now provided by Microsoft Windows. Refer to this article for more information: [Microsoft policy in response to daylight saving time and time zone changes](https://support.microsoft.com/help/22803/daylight-saving-time).
   
 The following table lists the messages that are related to time zones, but don’t refer to a specific entity.  
   
