@@ -21,7 +21,7 @@ App makers can use most of the entities available within Common Data Service (in
 In some cases, entities contain complex business logic or are tied to some Dynamics 365 apps that require app users to have a specific license. This topic provides licensing information for entities with complex business logic and entities that are tied to Dynamics 365 apps (termed as restricted entities).
 
 ## Entities with complex business logic
-Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a Power Apps Plan 2 or Power Automate Plan 2 license:
+Entities that include the following complex server-side logic require users of an app or flow that uses these entities to have a [Power Apps](https://powerapps.microsoft.com/pricing/) or [Power Automate](https://flow.microsoft.com/pricing/) license:
 
 - Code plug-ins (for more information, see [Plug-in development](/powerapps/developer/common-data-service/plug-ins))
 - Real-time workflows (for more information, see [Workflow processes](/flow/workflow-processes))
