@@ -336,7 +336,7 @@ Webhooks are relatively simple. The service will send the request and evaluate t
 
 The timeout is 60 seconds. Generally, if no response is returned before the timeout period or if the response `StatusCode` value is not within the `2xx` range to indicate success it will fail. The exception is when the error returned is in the following table:
 
-|`StatusCode`|Description|
+|StatusCode|Description|
 |-|-|
 |`502`|Bad Gateway|
 |`503`|Service Unavailable|

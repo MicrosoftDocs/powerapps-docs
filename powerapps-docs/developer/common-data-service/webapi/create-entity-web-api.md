@@ -294,7 +294,7 @@ OData-Version: 4.0
 
 ### See also
 
-[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)<br />
+[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)<br />
 [Web API Basic Operations Sample (Client-side JavaScript)](samples/basic-operations-client-side-javascript.md)<br />
 <xref href="Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function" />  
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
