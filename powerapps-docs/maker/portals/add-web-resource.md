@@ -12,6 +12,8 @@ ms.reviewer: tapanm
 
 # Add the Azure Storage web resource to a form
 
+## Overview
+
 Attachments uploaded to Azure Storage instead of directly to Common Data Service can be managed by using notes in Common Data Service.
 
 To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form and you must [configure Azure Storage for your organization](enable-azure-storage.md).
@@ -32,6 +34,8 @@ The attachment file is now named attachment.zip.txt. By default, Common Data Ser
  "Url": "https://accountname.blob.core.windows.net/storage/81a9a9491c36e51182760026833bcf82/attachment.zip"
 }
 ```
+
+## Add the Azure Blob Storage web resource to a form
 
 To see and interact with the file stored in Azure, you must add the web resource adx.annotations.html to the form. As a pre-requisite, ensure that your users have read access to adx_setting. Otherwise, the web resource won't render properly.
 
