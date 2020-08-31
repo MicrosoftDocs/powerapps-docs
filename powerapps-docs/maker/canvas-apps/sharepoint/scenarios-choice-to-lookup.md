@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# How to use drop-down list with choices from lookup column in a SharePoint list
+# How to use drop-down lists with choices from lookup columns in a SharePoint list
 
 In this scenario article, you'll learn how to use a drop-down list with choices from a lookup column in a SharePoint list.
 
@@ -36,26 +36,31 @@ To use the choices in a drop-down list, you have to use the function [choices](.
 
 1. [Create](../app-from-sharepoint.md) a new app, or [edit](../edit-app.md) an existing app.
 
-    > [!NOTE]
-    > Ensure the app uses SharePoint connection and connects to a SharePoint list as described in the prerequisites.
+   > [!NOTE]
+   > Ensure the app uses a SharePoint connection and connects to a SharePoint list as described in the prerequisites.
+
+
+
+<!-- editor question: Do the + and Insert buttons do the same thing? Or should the user select + and then select Insert? It's hard to tell from this step and from the image that follows. -->
+
 
 1. Select **+** (Insert) from the left pane.
 
 1. Select **Drop down**.
 
-    ![Insert drop-down](./media/scenarios-choice-to-lookup/insert-drop-down.png "Insert drop down")
+   ![Select Drop down](./media/scenarios-choice-to-lookup/insert-drop-down.png "Select Drop down")
 
 1. Update the **Items** property with the following formula:
 
     `Choices([@'Vehicle registration'].Vehicle_x0020_type)`
 
-    Replace **Vehicle registration** with the name of your SharePoint list and **Vehicle type** with the name of lookup column in the list.
+    Replace **Vehicle registration** with the name of your SharePoint list and **Vehicle type** with the name of the lookup column in the list.
 
     ![Choices formula](./media/scenarios-choice-to-lookup/choices-formula.png "Choices formula")
 
-1. Play the app, or press the **Alt** key on the keyboard and select the drop-down.
+1. Play the app, or press **Alt** on the keyboard and select the drop-down list.
 
-    ![Drop down choices](./media/scenarios-choice-to-lookup/drop-down-choices.png "Drop down choices")
+   ![Drop-down choices](./media/scenarios-choice-to-lookup/drop-down-choices.png "Drop-down choices")
 
 ### See also
 
