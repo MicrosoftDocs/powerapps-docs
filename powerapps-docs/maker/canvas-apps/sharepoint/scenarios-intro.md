@@ -29,7 +29,7 @@ Articles in this section explain individual and short scenarios when working wit
 
 
 - [How to filter a search list in an app](scenarios-filter-search-list.md)
-- [How to use drop-down list with choices from lookup column in a SharePoint list](scenarios-choice-to-lookup.md)
+- [How to use drop-down lists with choices from lookup columns in a SharePoint list](scenarios-choice-to-lookup.md)
 - [How to customize an app screen based on column status inside SharePoint list](scenarios-customize-view-based-on-column-status.md)
 - [How to work with permissions in a lookup list from SharePoint site](scenarios-lookup-list-permissions.md)
 - [How to create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items](scenarios-sharepoint-form-from-scratch.md)
