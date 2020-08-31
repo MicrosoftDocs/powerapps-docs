@@ -229,6 +229,33 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 | Risk Assessment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
 | Comment | Enter additional information, when applicable. |
 
+**Case Contacts** may be added to an **Employee Case** using import functionality by a user with appropriate security privileges. The steps below describe the process for importing Case Contacts. 
+
+Prerequisites: 
+1. [Download a template to use for data import](https://docs.microsoft.com/power-platform/admin/download-template-data-import). 
+2. When prompted to select the record type that you want to download the template for, select **Case Contacts**.
+3. Add **Case Contact** data to the data file just downloaded.
+4. Save this file with a meaningful name and in a location that you will reference in the next section.
+
+Steps to import **Case Contact** data:
+
+1. Navigate to the **Workplace Care Management app**.
+2. Select **Settings** --> **Advanced Settings**. Based on your browser settings, a new tab or window will be presented. 
+![Advanced Settings](media/advancedsettings.png "Advanced Settings")
+3. In the new tab or window, Select **Settings** --> **Data Management**. 
+![Data Management](media/datamangement.png "Data Management")
+4. Select **Imports**.
+5. Select the **Import Data** menu item, then select the **Import Data** from the dropdown.
+6. The **Upload Data File** dialog box will appear. Click the **Choose File** button or drag your file into the space labeled **Drag your file here**. 
+![Upload Data File](media/uploaddatafile.png "Upload Data File")
+7. If you clicked the **Choose File** button, use the File Explorer dialog box to select the file you created in prerequisites step #4. Proceed to step #8. If you dragged the file into the space labeled **Drag your file here**, continue to step #8.
+8. Click the **Next Button**.
+9. Select the appropriate **Allow Duplicates** option based on your business requirements. 
+10. Select the appropriate **Owner** for the **Case Contact** records that will be created.
+Select the **Submit Button**. 
+11. The **Data Submitted for Import** dialog box will be displayed. 
+12. Your **Case Contacts** will be processed for import and you may return to the **Workplace Care Management app**.
+
 ### Complete Employee Case
 
 After you completed the process and selects **Finish** in the business process flow, the employee case will be moved to inactive state. You can also make employee cases inactive for certain reasons if the employee case is now longer being worked on. In that case you can deactivate the employee case from the command bar. 
