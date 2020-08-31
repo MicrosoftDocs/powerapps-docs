@@ -12,11 +12,11 @@ ms.reviewer: tapanm
 
 # Add the Azure Storage web resource to a form
 
+Attachments uploaded to Azure Storage (instead of directly to Common Data Service) can be managed by using notes in Common Data Service.
+
 ## Overview
 
-Attachments uploaded to Azure Storage instead of directly to Common Data Service can be managed by using notes in Common Data Service.
-
-To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form and you must [configure Azure Storage for your organization](enable-azure-storage.md).
+To enable attachments from a particular form to be uploaded into Azure Storage, you must add a web resource to that form, and [configure Azure Storage for your organization](enable-azure-storage.md).
 
 > [!NOTE]
 > In this example, the form is added to the Lead form for the Lead entity. We recommend using caution when editing existing forms.
@@ -35,7 +35,7 @@ The attachment file is now named attachment.zip.txt. By default, Common Data Ser
 }
 ```
 
-## Add the Azure Blob Storage web resource to a form
+## Add the Azure Storage web resource to a form
 
 To see and interact with the file stored in Azure, you must add the web resource adx.annotations.html to the form. As a pre-requisite, ensure that your users have read access to adx_setting. Otherwise, the web resource won't render properly.
 
@@ -86,7 +86,7 @@ Several processes are required to upload attachments to Azure Storage that must 
 
 ![Blob storage processes](media/blob-storage-processes.png "Blob storage processes")
 
-During migration, the processes may get deactivated. This may cause attachments to upload to Common Data Service instead of Azure Storage after you follow steps to add web resource. Ensure these processes are activated to upload attachments to Azure Storage.
+During migration, the processes may get deactivated. Migration may cause attachments to upload to Common Data Service instead of Azure Storage after you follow steps to add web resource. Ensure these processes are activated to upload attachments to Azure Storage.
 
 ## CORS protocol support
 
