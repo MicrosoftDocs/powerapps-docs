@@ -71,12 +71,18 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 > if they want to continue using it.
 
 
-> [!NOTE]
-> When performing a merge between two custom entities, DateTime values will not merge. The DateTime of the target record will remain unchanged.
 
 <a name="BKMK_ReparentAction"></a>   
 ### About the reparent action  
  The reparent action is very similar to the share action except that it deals with the inherited read access rights instead of explicit read access rights. The reparent action is when you change the value of the referencing attribute in a parental relationship. When a reparent action occurs, the desired scope of the inherited read access rights for related entities might change. The cascade actions related to the reparent action refer to changes to read access rights for the entity record and any entity records related to it.  
+
+<a name="BKMK_MergeAction"></a>  
+### About the merge action  
+ The merge action can sometimes have problems completing if a record that is part of the operation set is deleted while the job is running. Often this will result in an error indicating that the record will be "differently parented" or the child record "might lose its parenting". If this occurs and you would prefer the merge continue forward even if the record is missing, you can choose to disable the parent check when you select the columns to merge.
+
+
+> [!NOTE]
+> When performing a merge between two custom entities, DateTime values will not merge. The DateTime of the target record will remain unchanged.
 
 ### See also
 
