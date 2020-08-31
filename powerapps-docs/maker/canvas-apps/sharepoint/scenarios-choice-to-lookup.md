@@ -1,5 +1,5 @@
 ---
-title: How to use drop down list with choices from lookup column in a SharePoint list | Microsoft Docs
+title: How to use drop-down list with choices from lookup column in a SharePoint list | Microsoft Docs
 description: This article explains how to use the drop-down list in your app to show choices from a lookup column in a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# How to use drop down list with choices from lookup column in a SharePoint list?
+# How to use drop-down list with choices from lookup column in a SharePoint list
 
 In this scenario article, you'll learn how to use a drop-down list with choices from a lookup column in a SharePoint list.
 
@@ -26,7 +26,7 @@ In this scenario article, you'll learn how to use a drop-down list with choices 
 
 You can use lookup columns in SharePoint that consume values from other lists or libraries.
 
-When using such column as a field in a canvas app, you can use drop down list with choices.
+When using such columns as a field in a canvas app, you can use a drop-down list with choices.
 
 To use the choices in a drop-down list, you have to use the function [choices](../functions/function-choices.md). For example, `Choices([@'Vehicle registration'].Vehicle_x0020_type)` uses the SharePoint list **Vehicle Registration** and the column **Vehicle type** for the lookup of the type of the vehicle.
 
