@@ -78,7 +78,7 @@ If the attached file is an image, the control will display the image as a thumbn
 
 ### Processes for Azure Blob Storage
 
-Several processes are required to upload attachments to Azure Storage that must be activated: **Azure Blob Storage Url**, **AzureBlobStorageEnabled** and **Generate Shared Access Signature**.
+Several processes are required to upload attachments to Azure Storage that must be activated: **AzureBlobStorageEnabled**, **Azure Blob Storage Url** and **Generate Shared Access Signature**.
 
 ![Blob storage processes](media/blob-storage-processes.png "Blob storage processes")
 
