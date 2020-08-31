@@ -246,7 +246,7 @@ Steps to import **Case Contact** data:
 ![Data Management](media/datamangement.png "Data Management")
 4. Select **Imports**.
 5. Select the **Import Data** menu item, then select the **Import Data** from the dropdown.
-6. The **Upload Data File** dialog box will appear. Click the **Choose File** button or drag your file into the space labeled **Drag your file here**. 
+6. The **Upload Data File** dialog box will appear. Click the **Choose File** button or drag your file into the space labeled **Drag your file here**.
 ![Upload Data File](media/uploaddatafile.png "Upload Data File")
 7. If you clicked the **Choose File** button, use the File Explorer dialog box to select the file you created in prerequisites step #4. Proceed to step #8. If you dragged the file into the space labeled **Drag your file here**, continue to step #8.
 8. Click the **Next Button**.
