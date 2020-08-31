@@ -55,35 +55,59 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 1. Open the **Insert** tab.
 2. Expand **Media**.
 3. Select the component **View in 3D** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.  
-    A default shape is included in the component. You can change this shape to another by altering the **Source** property.
+    A default shape is included in the component. You can change this shape to another by altering the **Source** property. See [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic for more information. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
-3. Select the component **View in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
+3. Select the component **View in MR** to place it in the app screen, or drag and drop it to position it anywhere on the screen.
 
    ![Insert the View in MR component into the app](./media/augmented-view-mr/augmented-view-mr.png "Insert the View in MR component into the app")
 
-1. In the **Properties** panel for the **View in MR** component, select the **Source** field.
-8. In the expression editor at the top of the window, type `ViewIn3D1.Src` to set the source object as the 3D object you inserted with the **View in 3D** component.
+1. In the **Properties** panel for the **View in MR** component, select the **Source** field and enter `ViewIn3D1.Src` to set the source object as the 3D object you inserted with the **View in 3D** component.  
+    You can also use the expression editor at the top of the window: type `ViewIn3D1.Src`.
 
    ![Screenshot showing the Source property with ViewIn3D1.Src in the expression editor](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Src in the expression editor")
 
-9. [Save the app](save-publish-app.md) and [load it on your mobile device](../../user/run-canvas-and-model-apps-on-mobile.md) to test that you can view the 3D object in MR by selecting the **View in MR** button.
+   <!-- doesn't work -->
+
+9. [Save (and, if necessary, publish) the app](save-publish-app.md) and [load it on your mobile device](../../user/run-canvas-and-model-apps-on-mobile.md) to test that you can view the 3D object in MR by selecting the **View in MR** button.
 
 
 ## Insert a gallery to view photos taken in the app
 
+You can now insert a gallery control into your app. This lets users of the app take and view photos from within the app.
+
+Photos you take by selecting the camera icon in the MR view on the app will be loaded into the gallery component on the app. You need to exit the MR view to see the gallery, and re-entering the MR view and taking more photos will overwrite the photos.
 
 1. Open the **Insert** tab.
 2. Select the **Vertical gallery** control to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
-3. In the **Properties** panel for the gallery control, set the **Items** property to equal `ViewInMR1.photos`.
+3. In the **Properties** panel for the gallery control, on the **Advanced** tab, set the **Items** property to equal `ViewInMR1.photos`.  
+    You can also use the expression editor at the top of the window.
+            ![Screenshot showing the Items property with ViewInMR1.photos](./media/augmented-upload-photo/add-gallery-source.png "Screenshot showing the Items property with ViewInMR1.photos")
 
-    ![Screenshot showing the Items property with ViewInMR1.photos](./media/augmented-upload-photo/add-gallery-source.png "Screenshot showing the Items property with ViewInMR1.photos")
 
-    Photos you take by selecting the camera icon in the MR view on the app will be loaded into the gallery component on the app. You need to exit the MR view to see the gallery, and re-entering the MR view and taking more photos will overwrite the photos.
+    >[!TIP]
+    >You can load all photos taken across multiple MR components by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR component.
 
->[!TIP]
->You can load all photos taken across multiple MR components by adding `Collect(AllPhotos,ViewInMR1.Photos)` to the **OnChange** property of each MR component.
+You can insert a "pop-up" overlay of the selected image so users of the app can see the photo full size.
 
+1. Open the **Insert** tab.
+2. Expand **Media** and select the **Image** control to place it in the app screen. Drag and position it so it covers the entire screen (or however much of the screen you want the image to cover when selected from the gallery).
+
+    ![](./media/augmented-upload-photo/insert-pop-up.png)
+
+3. Go to the **Advanced** tab of the **Properties** pane:  
+    1. Change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:false})`.
+    2. Change the **Image** property to `Gallery1.Selected.Image2` (or whatever the first image in the gallery control is labelled).
+    3. Change the **Visible** property to `vVisibleImageZoom`.
+4. Select the first image in the gallery control.
+5. Go to the **Advanced** tab of the **Properties** pane and change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:true})`.
+
+    ![](./media/augmented-upload-photo/set-gallery-onselect.png)
+
+6. [Save and publish the app](save-publish-app.md) and [load it on your mobile device](../../user/run-canvas-and-model-apps-on-mobile.md).
+7. Tap the **View in MR** button to open MR view. 
+8. Tap the screenshot icon at the bottom of the screen, then tap the back arrow at the top of the screen.
+9. You should see the screenshot now showing underneath the **View in MR** button. Tap on the screenshot's thumbnail, and a large version of the screenshot will appear. Tap anywhere on the image to hide it.
 
 ## Upload photos to OneDrive with a Power Automate flow
 
