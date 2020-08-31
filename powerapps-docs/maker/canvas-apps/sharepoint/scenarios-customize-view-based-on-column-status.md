@@ -55,13 +55,13 @@ For example, you created a list named Issue Tracking, based on the out-of-the-bo
 
     ![List of issues](./media/scenarios-customize-view-based-on-column-status/app-list-of-issues.png "List of issues")
 
-    The sample list only has two items. However, when the number of issues increases, it becomes overwhelming to scan through issues or search them, especially when the objective is only to show active issues.
+    The sample list only has two items. However, when the number of issues increases, it becomes overwhelming to scan through issues or search them, especially when the objective is to show only active issues.
 
 1. Select the items gallery, by default named BrowseGallery1.
 
     ![Items gallery](./media/scenarios-customize-view-based-on-column-status/select-browse-gallery.png "Items gallery")
 
-1. Update the formula for **Items** property the default to include filter criteria for issues status.
+1. Update the formula for the default **Items** property to include filter criteria for issues status.
 
     Default:
 
