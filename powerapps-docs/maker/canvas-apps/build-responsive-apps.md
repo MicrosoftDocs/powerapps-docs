@@ -27,16 +27,16 @@ Responsiveness refers to the ability of an app to automatically adapt to differe
 
 Responsiveness allows different elements of the app to specify how they: 
 
-- Stretch or resize with screen size changes.
+- Stretch or resize with the screen size changes.
 
-- Maintain or change position with screen size changes. 
+- Maintain or change position with the screen size changes. 
 
 > [!NOTE]
 > The new responsive layouts are applicable to the apps that are built for **Tablet** format.
 
 ## Why should you build responsive apps
 
-End users can access your app from different devices such as phones, tablets, laptops, and desktops with large monitors, with different screen sizes and with various number of pixels.
+End users can access your app from different devices such as phones, tablets, laptops, and desktops with large monitors, different screen sizes, and with various numbers of pixels.
 
 To ensure great user experience and usability of the app on each form factor and device, you need to design the app with responsive design principles. Even if your app is intended to be used only on the web browser or only on mobile phones, user device screen sizes can be different, so designing the app with responsive principles is a good idea.
 
@@ -54,7 +54,7 @@ Before you start designing the UI for your app, you need to consider the followi
 
 - Does the app behave different in some form factors?
 
-Once all these requirements are gathered, you should start thinking about how these different UI layouts can be created in a single application with the responsive tools available in Power Apps.  To start off, it’s best to consider some common design patterns.
+Once all these requirements are gathered, you should start thinking about how these different UI layouts can be created in a single application with the responsive tools available in Power Apps. 
 
 Before you start using the responsive layouts, you need to do the following:
 
@@ -80,15 +80,15 @@ The Split-screen layout has two sections, each occupying 50% width of the screen
 
 ### Sidebar
 
-The sidebar layout has a fixed width sidebar on the left. The main body consists of a fixed height header, and the main section takes up the rest of the screen width.  By default, the template has the same behavior on mobile, however some customizations are recommended based on the UI pattern desired for the mobile experience. 
+The Sidebar layout has a fixed width sidebar on the left. The main body consists of a fixed height header, and the main section takes up the rest of the screen width.  By default, the template has the same behavior on mobile, however some customizations are recommended based on the UI pattern desired for the mobile experience. 
 
-#### Sidebar layout considerations for mobile devices
+<!-- #### Sidebar layout considerations for mobile devices
 
-The Sidebar layout can be modified to implement a popular design pattern for mobile apps like having a hamburger menu that appears and allows the user to navigate to a screen or record and then disappears. By adding formulas to conditionally show the sidebar or the main components, this pattern can be implemented with auto-layout containers.
+The Sidebar layout can be modified to implement a popular design pattern for mobile apps such as a hamburger menu that appears and allows the user to navigate to a screen or a record and then disappears from the UI. By adding formulas to conditionally show the sidebar or the main components, this pattern can be implemented with auto-layout containers.
 
-### Header, main section, footer 
+### Header, main section, footer
 
-The Header, main section, footer layout is a popular design for webpages and apps that consists of a fixed height for header and footer, and the main section takes up the rest of the screen height. The same layout is displayed both on large screens as well as mobile devices. 
+The Header, main section, footer layout is a popular design for webpages and apps that consists of a fixed height for header and footer, and the main section takes up the rest of the screen height. The same layout is displayed both on large screens as well as mobile devices. -->
 
 ### Working with containers 
 
@@ -106,7 +106,7 @@ Choose one of two layout modes for a container: Manual layout or Auto layout (ho
 
 ### Auto-layout containers 
 
-Two new controls, `Vertical Container` and `Horizontal Container`, can be used to automatically lay out child components. 
+Two new controls, `Vertical layout container` and `Horizontal layout container`, can be used to automatically lay out child components. 
 
 These containers determine the position of the child components, so you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components.  
 
@@ -150,3 +150,7 @@ The following properties can be set on any child for an auto-layout container (v
 |GrowthPortions|Defines how the individual component grows when there is more screen real-estate assigned to its parent.  The number represents the portion of the extra space given to the component out of all the available extra space claimed by children of its parent.  For example, if child A has `GrowthPortions` set to 1 and child B has `GrowthPortions` set to 2, child A gets 1/3 of the extra space available while child B gets 2/3 of the extra available space.| Integer |
 |MinWidth, MinHeight|When GrowthPortions is used, represent the minimum size of the component in the direction of the GrowthPortions (that is, the parent’s LayoutDirection) | Number |
 |||
+
+## See also
+
+[Create responsive layouts](create-responsive-layout.md)
