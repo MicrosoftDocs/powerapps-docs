@@ -1,5 +1,5 @@
 ---
-title: How to create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items. | Microsoft Docs
+title: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items | Microsoft Docs
 description: This article explains how to create an app with SharePoint form functionality from scratch.
 author: emcoope-msft
 ms.service: powerapps
@@ -13,9 +13,9 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# How to create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items?
+# Create SharePoint integrated canvas apps from scratch to view, edit, add, and delete SharePoint list items
 
-In this scenario article, you'll learn how to create an app with SharePoint form functionality from scratch. The app will demonstrate to you how to view, edit, add, and delete SharePoint list items using canvas app without visiting SharePoint site. 
+In this scenario article, you'll learn how to create an app with SharePoint form functionality from scratch. The app will demonstrate how to view, edit, add, and delete SharePoint list items using a canvas app without visiting a SharePoint site. 
 
 > [!NOTE]
 > For more details about different scenarios working with SharePoint forms and additional examples, go to [SharePoint scenarios overview](scenarios-intro.md).
@@ -36,20 +36,20 @@ The purpose of this scenario is to demonstrate how to create a canvas app from s
 - Create a new SharePoint list item.
 - Delete a SharePoint list item.
 
-The scenario is a basic illustration of the canvas app capabilities when integrated with SharePoint. To enhance the layout with improved design or additional screens, go to the following relevant articles:
+The scenario is a basic illustration of the canvas app capabilities when integrated with SharePoint. To enhance the layout with improved design or additional screens, go to the following articles:
 
 - [Add and configure controls](../add-configure-controls.md)
 - [Add and configure screen](../add-screen-context-variables.md)
 - [Understand forms, layouts, and cards](../working-with-forms.md)
 
 > [!IMPORTANT]
-> The example in this scenario creates a sample app to view, edit, add and delete SharePoint list items. You can change the approach to customize the app differently based on your choices or business objective. When you customize your app with custom names for controls, ensure to use the correct control names in formula when following steps in this example.
+> The example in this scenario creates a sample app to view, edit, add, and delete SharePoint list items. You can change the approach to customize the app differently based on your choices or business objective. When you customize your app with custom names for controls, be sure to use the correct control names in the formula when following the steps in this example.
 
 ## Example
 
 This scenario example walks you through the steps to create an app and connect it to a SharePoint list to view, edit, add, and delete SharePoint list items.
 
-## Step 1 - Create a SharePoint list
+## Step 1 – Create a SharePoint list
 
 Create a SharePoint list with columns and list items. In this scenario, we've used a list with the following columns and list items:
 
@@ -58,7 +58,7 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 > [!NOTE]
 > Both columns are *Single line of text*.
 
-## Step 2 - Create a blank canvas app
+## Step 2 – Create a blank canvas app
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -66,9 +66,9 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     ![Canvas app from blank](./media/scenarios-sharepoint-form-from-scratch/create-from-blank.png "Canvas app from blank")
 
-1. Enter app name of your choice. For example, *SharePoint list from scratch*.
+1. Enter the app name of your choice. For example, *SharePoint list from scratch*.
 
-1. Select layout of your choice. This scenario uses *Tablet* layout.
+1. Select the layout of your choice. This scenario uses *Tablet* layout.
 
     ![App name and layout](./media/scenarios-sharepoint-form-from-scratch/create-app-name.png "App name and layout")
 
@@ -76,17 +76,17 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     ![Blank app](./media/scenarios-sharepoint-form-from-scratch/blank-app.png "Blank app")
 
-## Step 3 - Connect app to SharePoint
+## Step 3 – Connect app to SharePoint
 
 1. Select **Data sources** from the left pane.
 
     ![Select data sources](./media/scenarios-sharepoint-form-from-scratch/select-data-sources.png "Select data sources")
 
-1. Select **SharePoint** data source. You can also search for the name in search box.
+1. Select **SharePoint** data source. You can also search for the name in the search box.
 
     ![Select SharePoint data source](./media/scenarios-sharepoint-form-from-scratch/select-sharepoint-data-source.png "Select SharePoint data source")
 
-1. Select **Add a connection** to add a new connection.
+1. Select **Add a connection**.
 
     ![Add SharePoint connection](./media/scenarios-sharepoint-form-from-scratch/add-connection-sharepoint.png "Add SharePoint connection")
 
@@ -98,17 +98,17 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     ![Select SharePoint site](./media/scenarios-sharepoint-form-from-scratch/select-sharepoint-site.png "Select SharePoint site")
 
-1. Select SharePoint list that you created. This scenario uses a list named *Shapes*.
+1. Select the SharePoint list that you created. This scenario uses a list named *Shapes*.
 
     ![Select SharePoint list](./media/scenarios-sharepoint-form-from-scratch/select-sharepoint-list.png "Select SharePoint list")
 
-1. Select **Connect**. Data source is added to the app.
+1. Select **Connect**. The data source is added to the app.
 
     ![Data source added](./media/scenarios-sharepoint-form-from-scratch/data-source-added.png "Data source added")
 
-## Step 4 - Add data table to view SharePoint list items
+## Step 4 – Add data table to view SharePoint list items
 
-1. Select "**+**" (Insert) from the left pane.
+1. Select **+** (insert) from the left pane.
 
     ![Select insert](./media/scenarios-sharepoint-form-from-scratch/step-1-1.png "Select insert")
 
@@ -122,13 +122,17 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     ![Select data table source](./media/scenarios-sharepoint-form-from-scratch/select-data-table-source.png "Select data table source")
 
-1. Move data table to the bottom-left inside the screen to make space for additional components.
+
+<!-- question from editor: In the image below, it looks like the data table is moved to the lower right, if I'm looking at the correct thing. -->
+
+
+1. Move the data table to the lower-left inside the screen to make space for additional components.
 
     ![Move data table](./media/scenarios-sharepoint-form-from-scratch/data-table-finish.png "Move data table")
 
-## Step 5 - Add the capability to search and select item
+## Step 5 – Add the capability to search and select item
 
-1. Insert a **Text input** control to the canvas, and move it below the drop-down.
+1. Insert a **Text input** control to the canvas, and move it below the drop-down list.
 
     ![Insert text input control](./media/scenarios-sharepoint-form-from-scratch/insert-text-input.png "Insert text input control")
 
@@ -140,7 +144,7 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     ![Insert list box control](./media/scenarios-sharepoint-form-from-scratch/insert-list-box.png "Insert list box control")
 
-1. From the right-side of the Studio screen, set the **Items** property of the list box control to the **Shapes** SharePoint list for this example.
+1. From the right side of the Studio screen, set the **Items** property of the list box control to the **Shapes** SharePoint list for this example.
 
     ![List box items](./media/scenarios-sharepoint-form-from-scratch/items-listbox.png "List box items")
 
@@ -158,16 +162,16 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     The formula contains following functions:
 
-    - [Filter()](../functions/function-filter-lookup.md) - Used in this formula to filter items in the list box based on the defined parameters. `[@Shapes]` in this function defines which data source to filter.
-    - [StartsWith()](../functions/function-startswith.md) - Used in this formula to filter the SharePoint list items based on **Shape** column that start with the characters entered in the *TextInput1* control added earlier.
+    - [Filter()](../functions/function-filter-lookup.md) – Used in this formula to filter items in the list box based on the defined parameters. `[@Shapes]` in this function defines which data source to filter.
+    - [StartsWith()](../functions/function-startswith.md) – Used in this formula to filter the SharePoint list items based on the **Shape** column that start with the characters entered in the *TextInput1* control added earlier.
 
-## Step 6 - Add the capability to edit item
+## Step 6 – Add the capability to edit item
 
 1. Insert the **Edit form** control.
 
-    ![Add edit-form](./media/scenarios-sharepoint-form-from-scratch/add-edit-form.png "Add edit-form")
+    ![Add edit form](./media/scenarios-sharepoint-form-from-scratch/add-edit-form.png "Add edit form")
 
-1. From the right-side of the Studio screen, set the **Data source** property for the edit form control to **Shapes**.
+1. From the right side of the Studio screen, set the **Data source** property for the edit form control to **Shapes**.
 
     ![Edit-form data source](./media/scenarios-sharepoint-form-from-scratch/edit-form-data-source.png "Edit-form data source")
 
@@ -181,7 +185,7 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
 1. Rearrange the screen layout to ensure the **Edit form** control is visible and doesn't overlay with other controls.
 
-    ![Re-arranged screen](./media/scenarios-sharepoint-form-from-scratch/edit-form-arranged.png "Re-arranged screen")
+    ![Rearranged screen](./media/scenarios-sharepoint-form-from-scratch/edit-form-arranged.png "Rearranged screen")
 
 1. Set the **OnSelect** property of the list box control to the following function:
 
@@ -205,9 +209,9 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
 1. Insert a button.
 
-    ![Insert save button](./media/scenarios-sharepoint-form-from-scratch/submit-button.png "Insert save button")
+    ![Insert button](./media/scenarios-sharepoint-form-from-scratch/submit-button.png "Insert button")
 
-1. From the right-side of the Studio screen, set the **Text** property of the button added in the previous step to **Save**.
+1. From the right side of the Studio screen, set the **Text** property of the button added in the previous step to **Save**.
 
     ![Save button](./media/scenarios-sharepoint-form-from-scratch/save-button.png "Save button")
 
@@ -222,28 +226,28 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     The formula contains following functions:
 
-    - [SubmitForm()](../functions/function-form.md) - Used in this formula to submit the edit form and save the values to SharePoint list.
-    - [Set()](../functions/function-set.md) function resets the *TextSelected* variable back to *o* so that a new item can be selected from the list box.
+    - [SubmitForm()](../functions/function-form.md) – Used in this formula to submit the edit form and save the values to SharePoint list.
+    - [Set()](../functions/function-set.md) – Resets the *TextSelected* variable back to *o* so that a new item can be selected from the list box.
 
 1. Insert **Text label** control.
 
     ![Text label](./media/scenarios-sharepoint-form-from-scratch/add-text-label.png "Text label")
 
-1. Update **Text** property for the **Text label** control added in the previous step to *To edit value(s) for an item, select from the table, or search.*.
+1. Update the **Text** property for the **Text label** control added in the previous step to *To edit value(s) for an item, select from the table, or search.*
 
     ![Label text updated](./media/scenarios-sharepoint-form-from-scratch/label-text.png "Label text updated")
 
 1. Rearrange the controls on the screen to order the edit controls.
 
-    ![Re-arrange edit controls](./media/scenarios-sharepoint-form-from-scratch/rearrange-controls-edit.png "Re-arrange edit controls")
+    ![Rearrange edit controls](./media/scenarios-sharepoint-form-from-scratch/rearrange-controls-edit.png "Rearrange edit controls")
 
-## Step 7 - Add the capability to add item
+## Step 7 – Add the capability to add item
 
 1. Insert a button.
 
 1. Rearrange the controls on the screen to ensure the button is visible.
 
-1. Update **Text** property of the button added in the previous step to **Add**.
+1. Update the **Text** property of the button added in the previous step to **Add**.
 
 1. Set the **OnSelect** property of the **Add** button to the following function:
 
@@ -253,15 +257,15 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     ![OnSelect property for Add button](./media/scenarios-sharepoint-form-from-scratch/add-button-onselect.png "OnSelect property for Add button")
 
-    The [NewForm()](../functions/function-form.md) function clears the edit form control added on form named *Form1* so that you can add a new SharePoint list item.
+    The [NewForm()](../functions/function-form.md) function clears the edit form control added on the form named *Form1* so that you can add a new SharePoint list item.
 
-## Step 8 - Add the capability to delete item
+## Step 8 – Add the capability to delete item
 
 1. Insert a button.
 
 1. Move the button added in the previous step below the **Save** button.
 
-1. Update **Text** property of the button added in the previous step to **Delete**.
+1. Update the **Text** property of the button added in the previous step to **Delete**.
 
 1. Set the **OnSelect** property of the **Delete** button to the following formula:
 
@@ -274,29 +278,29 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     The formula contains following functions:
 
-    - [Remove()](../functions/function-remove-removeif.md) - Used in this formula to delete the selected SharePoint list item.
-    - [If()](../functions/function-if.md) function checks first if the value of the variable *TextSelected* is *1* or not. If it is, the **Delete** button deletes the item selected from the list box. If not, the **Delete** button deletes the item selected from the data table control.
-    - The [Set()](../functions/function-set.md) function resets the *TextSelected* variable back to *o* so that a new item can be selected from the list box.
+    - [Remove()](../functions/function-remove-removeif.md) – Used in this formula to delete the selected SharePoint list item.
+    - [If()](../functions/function-if.md) – Checks first if the value of the variable *TextSelected* is *1* or not. If it is, the **Delete** button deletes the item selected from the list box. If not, the **Delete** button deletes the item selected from the data table control.
+    - [Set()](../functions/function-set.md) – Resets the *TextSelected* variable back to *o* so that a new item can be selected from the list box.
 
 Now that you have all the app components configured, ensure the screen looks like the following example:
 
 ![App after all components added](./media/scenarios-sharepoint-form-from-scratch/app-completion-screen.png "App after all components added")
 
-## Step 9 - Save the app
+## Step 9 – Save the app
 
 Now that the app has view, edit, add, and delete capability added, [save the app](../save-publish-app.md#save-changes-to-an-app).
 
-1. Select **File** menu.
+1. Select the **File** menu.
 
 1. Select **Save**.
 
-1. When saving for the first time, the **Save** option takes you to **Save as**. Select **Save** to save the app to cloud.
+1. When saving for the first time, the **Save** option takes you to **Save as**. Select **Save** to save the app to the cloud.
 
     ![Save the app](./media/scenarios-sharepoint-form-from-scratch/save-app.png "Save the app")
 
-1. Close the Power Apps Studio.
+1. Close Power Apps Studio.
 
-## Step 10 - Test the app
+## Step 10 – Test the app
 
 1. Go to [Power Apps](https://make.powerapps.com).
 
@@ -311,15 +315,19 @@ Now that the app has view, edit, add, and delete capability added, [save the app
     ![Play the app animation](./media/scenarios-sharepoint-form-from-scratch/play-the-app.gif "Play the app animation")
 
     > [!TIP]
-    > You can quickly preview the behavior of a component using the keyboard key **Alt** and a mouse **Left-click** when editing the app inside the Power Apps Studio. <br> For example, instead of selecting the **Preview the app** button from top-right, or **F5** from the keyboard that runs the app in preview, keep the **Alt** key on the keyboard pressed, and then select a row from the data table to change the edit form control to the selected row as if the app is running in preview.
-    > ![Alt + Left-click on drop-down to preview](./media/scenarios-sharepoint-form-from-scratch/alt-click-preview.png "Alt + Left-click on drop-down to preview")
-    > <br> In addition, keep the **Alt** key pressed on the keyboard and you can continue to run the preview inside the Power Apps Studio. For example, selecting multiple components for different actions or checks.
+    > You can quickly preview the behavior of a component using the keyboard key **Alt** and a mouse **left-click** when editing the app inside Power Apps Studio. 
+    >
+    > For example, instead of selecting **Preview the app** from the upper right, or **F5** from the keyboard that runs the app in preview, keep the **Alt** key on the keyboard pressed, and then select a row from the data table to change the edit form control to the selected row as if the app is running in preview.
+    >
+    > ![Alt + left-click on drop-down menu to preview](./media/scenarios-sharepoint-form-from-scratch/alt-click-preview.png "Alt + left-click on drop-down menu to preview")
+    > 
+    > In addition, keep the **Alt** key pressed on the keyboard and you can continue to run the preview inside Power Apps Studio. For example, selecting multiple components for different actions or checks.
 
 ## Next steps
 
-If you edit the app with any changes, you must [publish](../save-publish-app.md#publish-an-app) the changes for others to see the changes.
+If you edit the app, you must [publish](../save-publish-app.md#publish-an-app) the changes for others to see.
 
-Once the app is ready to use, [share the app](../share-app.md) with others.
+Once the app is ready to use, [share the app](../share-app.md).
 
 ### See also
 
