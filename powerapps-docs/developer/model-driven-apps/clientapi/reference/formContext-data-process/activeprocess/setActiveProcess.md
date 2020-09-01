@@ -30,7 +30,7 @@ If there is an active instance of the process, the entity record is loaded with 
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|processInstanceId|String|Yes|The Id of the process to set as the active process.|
+|processId|String|Yes|The Id of the process to set as the active process.|
 |callbackFunction|Function|No|A function to call when the operation is complete. This callback function is passed one of the following string values to indicate whether the operation succeeded:<br/>- **success**: The operation succeeded.<br/>- **invalid**: The processId isn’t valid or the process isn’t enabled.|
 
 ### Related topics

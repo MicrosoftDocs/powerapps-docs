@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -39,11 +39,11 @@ After you've purchased Power Apps, create an environment with a Common Data Serv
 
 3. Create appropriate users, and assign security roles. More information: [Create users and assign security roles](https://docs.microsoft.com/power-platform/admin/create-users-assign-online-security-roles)
 
-After you've created your environment, you can access it by using the following URL: `https://[myenv].crm.dynamics.com`, where [myenv] is the name of your environment. Make a note of this environment URL.
+After you've created your environment and it is ready, you can access it by using the following URL: `https://[myenv].[region].dynamics.com`, where [myenv] is the name of your environment and [region] is the deployment region, for example, crm for US. Make a note of this environment URL.
 
 ## Step 2: Install the package
 
-You can install the Return to the Workplace solution by from Microsoft AppSource. 
+You can install the Return to the Workplace solution by from the AppSource. 
 
 > [!NOTE]
 > If you are a US Government customer, you'll have to install using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
@@ -65,14 +65,14 @@ You can install the Return to the Workplace solution by from Microsoft AppSource
 
 ## Step 3: Configure and publish Power BI dashboards
 
-The Return to the Workplace solution has two Power BI dashboards, one for executive leadership and one for facility managers. You can publish the Power BI dashboards by using the template app from AppSource.
+The Return to the Workplace solution has three Power BI dashboards, one for executive leadership, one for facility managers, and one for Health and Safety leaders. You can publish the Power BI dashboards by using the template app from AppSource.
 
 > [!NOTE]
 > If you are a US Government customer, you'll have to publish Power BI dashboards using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
-### Install the template app for dashboards
+### Install template app for dashboards
 
-1. Go to AppSource to install [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi) and [Return to the Workplace - Location Management](https://aka.ms/rtw-facilitypbi) dashboards. 
+1. Go to AppSource to install [Return to the Workplace – Location Readiness](https://aka.ms/rtw-leadershippbi), [Return to the Workplace - Location Management](https://aka.ms/rtw-facilitypbi) and [Return to the Workplace - Workplace Care Management](https://aka.ms/rtw-workplacepbi) dashboards. 
 
 2. Select **GET IT NOW** to install the solution in your environment.
     > [!div class="mx-imgBorder"]
@@ -99,13 +99,13 @@ The Return to the Workplace solution has two Power BI dashboards, one for execut
     > [!div class="mx-imgBorder"]
     > ![Connect](media/deploy-connect-data-source.png "Connect")
 
-3. Enter the URL of the Common Data Service environment (for example, https://[myenv].crm.dynamics.com), and then select **Next**.
+3. Enter the URL of the Common Data Service environment (for example, https://[myenv].[region].dynamics.com), and then select **Next**.
     > [!div class="mx-imgBorder"]
     > ![Common Data Service environment name](media/deploy-connect-CDS.png "Common Data Service environment name")
 
 4. Determine where the displayed URL is pointing to in the Common Data Service environment:
 
-    - If it's pointing to Common Data Service, set the **Authentication method** to **Microsoft Account** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
+    - If it's pointing to Common Data Service, set the **Authentication method** to **OAuth2** and set **Privacy level setting for this data source** to **Organizational**. Select **Sign in**.
     - If it's not pointing to Common Data Service, set the **Authentication method** to **Anonymous** and set **Privacy level setting for this data source** to **Public**. Select **Sign in**
     > [!div class="mx-imgBorder"]
     > ![Privacy](media/deploy-privacy-level.png "Privacy")
@@ -164,45 +164,36 @@ Next, we'll configure the data refresh settings for the dataset.
 
 The facility manager Power BI dashboard is used in the model-driven app. Because these reports are published in a different location, you need to change the location.
 
-1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/).
+1. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
 
-2. Select the correct environment, and then select **Settings**.
-
-3. Select **Product** > **Feature**, turn on the **Power BI visualization embedding** toggle, and then select **Save**.
+2. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
 
    > [!div class="mx-imgBorder"]
-   > ![Enable Power BI](media/deploy-settings-admin1.png "Enable Power BI")
+   > ![Enable Power BI](media/deploy-settings-report1.png "Enable Power BI")
 
-4. Go to [Power Apps](https://make.powerapps.com), select **Solutions** in the left pane, and create a new solution. After opening the solution, select **Add existing**, and then select **Entity**.
+3. Within the newly created solution, select **Export**. On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
 
-5. From the list of entities, select **Facility (msft_facility)** > **select components**, under the **Forms** tab, select **Main - Information Form**, and then select **Add** to finish the process. 
+4. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
 
-   > [!div class="mx-imgBorder"]
-   > ![Enable Power BI](media/deploy-settings-report1.png "Step1")
+5. Open the customization.xml file, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
 
-6. Within the newly created solution, select **Export** . On the right side of your browser a window pops up, select **Publish**, select **Run** to check whether the solution has any issues or dependencies, and then select **Next**.  With the **Version number** and **Unmanaged** option selected, select **Export**.
+    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID**, and **TileURL** according to your Power BI workspace and report. You can find this information by opening the Facility Manager report in Power BI and examine the URL: https://powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
 
-7. In the **Download** dialog box, select **Save**, and in the **Download complete** dialog box, select **Open Folder**. Right-click to select the compressed .zip file that you downloaded, and then select **Extract All**. Select a location to extract the files to, and then select **Extract**. The customizations.xml file is the file that you'll edit.
-
-8. Open the customization.xml file,, look for the section similar to the XML code specified in this example: https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#embed-without-contextual-filtering  
-
-    In this XML file you need to update the **PowerBIGroupID**, **PowerBIReportID** and **TileURL** according to your PowerBI workspace and report. You can find this information by opening the Facility Manager report in PowerBI and examine the URL: https://...powerbi.com/groups/PowerBIGroupID/reports/PowerBIReportID/ReportSection 
-
-    The `TileURL` can be found within the PowerBI report. You can find it at the following destination **... (ellipsis)** > **Embed** > **Website or portal**. 
+    The `TileURL` can be found within the Power BI report. You can find it at the following destination **... (ellipsis)** > **Embed** > **Website or portal**. 
 
    > [!div class="mx-imgBorder"]
-   > ![Enable Power BI](media/deploy-settings-report2.png "Step1")
+   > ![Power BI TileURL](media/deploy-settings-report2.png "Power BI TileURL")
 
    From the displayed `Secure embed code` window, capture the content of the link in the first field up to the end of the `PowerBIReportID` (as shown in the example code). 
 
     See the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
 
-9. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with 3 files in it, including the updated customizations.xml file.  
+6. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with three files in it, including the updated customizations.xml file.  
 
-10. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
+7. Sign in to [Power Apps](https://make.powerapps.com), and select **Solutions** from the left pane.
 On the command bar, select **Import**.  On the **Select Solution Package** page, select **Browse** to locate the compressed (.zip or .cab) file that contains the solution you want to import.
 
-11. Select **Next**. On the page that displays information about the solution, select **Import**.
+8. Select **Next**. On the page that displays information about the solution, select **Import**.
 
 You might need to wait a few moments while the import is completed. View the results, and then select **Close**.
 
@@ -212,22 +203,27 @@ Open a facility record in the Facility Safety Management app and you’ll see th
 
 You can change the look and feel of the app by applying themes to match your company branding.
 
-1. Go to **Settings** > **Customizations**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear icon and select **Advanced Settings**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Advanced Settings](media/deploy-advanced-settings.png "Advanced Settings")
+
+2. Go to **Settings** > **Customizations**.
 
    > [!div class="mx-imgBorder"]
    > ![Customizations](media/deploy-settings-customizations.png "Customizations")
 
-2. Select **Themes**.
+3. Select **Themes**.
 
    > [!div class="mx-imgBorder"]
    > ![Select themes](media/deploy-settings-solutions.png "Select themes")
 
-3. Select **New**. Enter the **Name** and determine which colors you want to use. You can also specify the logo, which is used in the site map.
+4. Select **New**. Enter the **Name** and determine which colors you want to use. You can also specify the logo, which is used in the site map.
 
    > [!div class="mx-imgBorder"]
    > ![Deploy themes](media/deploy-themes.png "Deploy themes")
 
-4. Select **Save**, and then **Publish**. 
+5. Select **Save**, and then **Publish**. 
 
    > [!div class="mx-imgBorder"]
    > ![Sample theme](media/deploy-theme-colors.png "Sample theme")
@@ -264,24 +260,29 @@ In the Return to the Workplace solution, the following security roles are define
 
 **To assign security roles**
 
-1. Go to **Settings** > **Security**.
+1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear icon and then select **Advanced Settings**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Customizations Advance Settings](media/deploy-advanced-settings.png " Customizations Advanced Settings")
+
+2. Go to **Settings** > **Security**.
 
    > [!div class="mx-imgBorder"]
    > ![Security](media/deploy-settings-security.png "Security")
 
-2. Select **Users**, and then select the user to whom you want to give permissions.
+3. Select **Users**, and then select the user to whom you want to give permissions.
 
    > [!div class="mx-imgBorder"]
    > ![Select user](media/deploy-settings-security-users.png "Select user")
 
-3. Select the user, and then select **Manage Roles**. After assigning the roles, select **OK**.
+4. Select the user, and then select **Manage Roles**. After assigning the roles, select **OK**.
 
    > [!div class="mx-imgBorder"]
    > ![Select roles](media/deploy-settings-security-enabled-users.png "Select roles")
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 
-This section provides information for US Government customers about how to install the app and publish the Power BI dashboard using the deploymemt package.
+This section provides information for US Government customers about how to install the app and publish the Power BI dashboard using the deployment package.
 
 > - [Step 1: Download the latest deployment package](#step-1-download-the-latest-deployment-package)
 > - [Step 2: Install the app by using the deployment package](#step-2-install-the-app-by-using-the-deployment-package)
@@ -332,7 +333,7 @@ After extracting the .zip file, you'll see the following in the extracted folder
 
 8. The next screen validates whether all dependencies are available in your environment. Select **Next**.
 
-9. The next screen displays the installation status of the package. Note that it might take a while for the package installation to be completed.
+9. The next screen displays the installation status of the package. It might take a while for the package installation to be completed.
 
 10. After the installation is complete, select **Next**.
 
@@ -350,17 +351,18 @@ After extracting the .zip file, you'll see the following in the extracted folder
 
 This section provides information about how GCC customers can use the **Return to the Workplace - Location Readiness** and **Return to the Workplace - Facility Manager** dashboard .pbit files available in the deployment package to publish the dashboards.
 
-#### Prerequisites
+#### Prerequisites for installing Power BI
 
 Install Power BI Desktop from Microsoft Store: [Power BI Desktop](https://aka.ms/pbidesktop)
 
 > [!NOTE]
 > If you installed Power BI Desktop by downloading it directly from the Download Center page in the past, remove it and then download it from Microsoft Store. The Microsoft Store version will be updated automatically as new releases become available. If you can't install from Microsoft Store, install the latest non&ndash;Microsoft Store version from the [Download Center page](https://www.microsoft.com/download/details.aspx?id=58494).
 
-#### The process
+**Process**
+
 Follow the steps below for each .pbit file.
 
-1. Run Power BI Desktop, and sign in using your account.
+1. Open Power BI Desktop, and sign in using your account.
 
 2. Go to the location where you extracted the deployment package (.zip file). In the **Power BI Template** folder, you'll find the appropriate .pbit file.
 
@@ -376,30 +378,30 @@ Follow the steps below for each .pbit file.
 
 5. After signing in, select **Connect** to connect to your data in Common Data Service.
 
-6. After connecting to your Common Data Service environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings need to be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
+6. After connecting to your Common Data Service environment, you'll see a series of pop-up windows to configure access to data sources. These access-level and privacy-level settings should be configured to connect to the public data sources for the COVID-19 report data. Complete access level and privacy selections as shown in the following screenshots.
      
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-access-web-content-level.png "Grant anonymous access to the Web Content level")
+    > ![Access Web Content level](media/deploy-access-web-content-level.png "Access Web Content level")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-level-connect.png "Grant anonymous access to the Web Content")
+    > ![Grant anonymous access to the Web Content](media/deploy-gcc-web-acesss-level-connect.png "Grant anonymous access to the Web Content")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-level.png "Grant anonymous access to the Web Content")
+    > ![Anonymous access to the Web Content](media/deploy-gcc-web-acesss-level.png "Anonymous access to the Web Content")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels.png "Grant anonymous access to the Web Content")
+    > ![Privacy level](media/deploy-gcc-web-acesss-privacy-levels.png "Privacy level")
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-select-anonymous.png)
+    > ![Anonymous privacy select](media/deploy-gcc-web-acesss-privacy-select-anonymous.png "Anonymous privacy select")
     
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels-blob-storage-public.png "Grant anonymous access to the Web Content")
+    > ![Privacy level blob storage](media/deploy-gcc-web-acesss-privacy-levels-blob-storage-public.png "Privacy level blob storage")
 
     After you've configured the access and privacy levels for COVID-19 public data, you must set the privacy level for Common Data Service data to **Organizational**. 
 
     > [!div class="mx-imgBorder"] 
-    > ![Access Web Content level](media/deploy-gcc-web-acesss-privacy-levels-CDS.png)
+    > ![Access Web Content level CDS](media/deploy-gcc-web-acesss-privacy-levels-CDS.png "Access Web Content level CDS")
 
 7. After a connection is successfully made, the Power BI report will be displayed. You'll be prompted to apply pending changes to your query. Select **Apply changes**.
 
