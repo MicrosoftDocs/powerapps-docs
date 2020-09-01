@@ -1,5 +1,5 @@
 ---
-title: Publish and share your apps | Microsoft Docs
+title: Share and publish your app | Microsoft Docs
 description: Learn how to share and publish your apps using Power Apps app from Teams.
 author: tapanm-msft
 ms.service: powerapps
