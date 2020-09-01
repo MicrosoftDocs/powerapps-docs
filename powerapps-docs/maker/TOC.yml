@@ -133,7 +133,7 @@
         href: ../user/export-excel-pivottable.md
       - name: Merge duplicate records
         href: ../user/merge-duplicate-records.md
-      - name: Troubleshoot export to Excel  
+      - name: Troubleshoot export to Excel
         href: ../user/ts-export-to-excel.md
     - name: Reports
       items:
@@ -331,6 +331,8 @@
               href: ./canvas-apps/mixed-reality-component-view-mr.md
             - name: Measure in mixed reality
               href: ./canvas-apps/mixed-reality-component-measure-distance.md
+            - name: Upload photos from mixed reality
+              href: ./canvas-apps/mixed-reality-take-upload-photos.md
           - name: "Add geospatial components (Preview)"
             items:
             - name: Geospatial components
@@ -486,7 +488,7 @@
           - name: App
             href: ./canvas-apps/functions/object-app.md
           - name: As
-            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators            
+            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators
           - name: Asin
             href: ./canvas-apps/functions/function-trig.md
           - name: Assert
@@ -580,13 +582,13 @@
           - name: Enable
             href: ./canvas-apps/functions/function-enable-disable.md
           - name: EncodeUrl
-            href: ./canvas-apps/functions/function-encode-decode.md            
+            href: ./canvas-apps/functions/function-encode-decode.md
           - name: EndsWith
             href: ./canvas-apps/functions/function-startswith.md
           - name: Errors
             href: ./canvas-apps/functions/function-errors.md
           - name: exactin
-            href: ./canvas-apps/functions/operators.md#in-and-exactin-operators            
+            href: ./canvas-apps/functions/operators.md#in-and-exactin-operators
           - name: Exit
             href: ./canvas-apps/functions/function-exit.md
           - name: Exp
@@ -688,7 +690,7 @@
           - name: Param
             href: ./canvas-apps/functions/function-param.md
           - name: Parent
-            href: ./canvas-apps/functions/operators.md#self-and-parent-operators              
+            href: ./canvas-apps/functions/operators.md#self-and-parent-operators
           - name: Patch
             href: ./canvas-apps/functions/function-patch.md
           - name: Pi
@@ -742,7 +744,7 @@
           - name: Select
             href: ./canvas-apps/functions/function-select.md
           - name: Self
-            href: ./canvas-apps/functions/operators.md#self-and-parent-operators         
+            href: ./canvas-apps/functions/operators.md#self-and-parent-operators
           - name: Set
             href: ./canvas-apps/functions/function-set.md
           - name: SetFocus
@@ -750,7 +752,7 @@
           - name: SetProperty
             href: ./canvas-apps/functions/function-setproperty.md
           - name: Sequence
-            href: ./canvas-apps/functions/function-sequence.md            
+            href: ./canvas-apps/functions/function-sequence.md
           - name: ShowColumns
             href: ./canvas-apps/functions/function-table-shaping.md
           - name: Shuffle
@@ -786,7 +788,7 @@
           - name: ThisItem
             href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators
           - name: ThisRecord
-            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators         
+            href: ./canvas-apps/functions/operators.md#thisitem-thisrecord-and-as-operators
           - name: Time
             href: ./canvas-apps/functions/function-date-time.md
           - name: TimeValue
@@ -1170,7 +1172,7 @@
         - name: Add the calendar control to entities
           href: ./model-driven-apps/add-calendar-control.md
         - name: Add the news control to an entity
-          href: ./model-driven-apps/stay-current-with-news-control.md          
+          href: ./model-driven-apps/stay-current-with-news-control.md
       - name: Use custom controls for data visualizations
         href: ./model-driven-apps/use-custom-controls-data-visualizations.md
     - name: Use Excel and Word templates
@@ -1511,7 +1513,7 @@
   items:
   - name: What is Common Data Service?
     href: ./common-data-service/data-platform-intro.md
-  - name: Why choose Common Data Service? 
+  - name: Why choose Common Data Service?
     items:
     - name: Overview
       href: ./common-data-service/why-cds-overview.md
@@ -1651,13 +1653,13 @@
   - name: Work with solutions
     items:
       - name: Solutions overview
-        href: ./common-data-service/solutions-overview.md           
+        href: ./common-data-service/solutions-overview.md
       - name: Create a solution
         href: ./common-data-service/create-solution.md
       - name: Export solutions
         href: ./common-data-service/export-solutions.md
       - name: Import solutions
-        href: ./common-data-service/import-update-export-solutions.md           
+        href: ./common-data-service/import-update-export-solutions.md
       - name: Update or upgrade solutions
         href: ./common-data-service/update-solutions.md
       - name: Other solution tasks
@@ -1667,18 +1669,18 @@
         - name: View solution history
           href: ./common-data-service/solution-history.md
         - name: View component dependencies
-          href: ./common-data-service/view-component-dependencies.md   
+          href: ./common-data-service/view-component-dependencies.md
         - name: Use environment variables
           href: ./common-data-service/EnvironmentVariables.md
         - name: Translate customized entity and field text
           href: ./common-data-service/export-customized-entity-field-text-translation.md
         - name: Import translated entity and field text
-          href: ./common-data-service/import-translated-entity-field-text.md               
+          href: ./common-data-service/import-translated-entity-field-text.md
       - name: Use solution checker
         href: ./common-data-service/use-powerapps-checker.md
         items:
         - name: "Common issues and resolutions: solution checker"
-          href: ./common-data-service/common-issues-resolutions-solution-checker.md   
+          href: ./common-data-service/common-issues-resolutions-solution-checker.md
   - name: Work with dataflows
     href: ./common-data-service/self-service-data-prep-with-dataflows.md
     items:
@@ -1712,13 +1714,13 @@
   - name: Import translated entity and field text
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: Export to data lake
-    items: 
+    items:
     - name: Export to Azure Data Lake Storage Gen2
       href: ./common-data-service/export-to-data-lake.md
     - name: Ingest exported data with Azure Data Factory
       href: ./common-data-service/export-to-data-lake-data-adf.md
     - name: Analyze exported data with Power BI
-      href: ./common-data-service/export-to-data-lake-data-powerbi.md    
+      href: ./common-data-service/export-to-data-lake-data-powerbi.md
   - name: Security in Common Data Service
     href: /power-platform/admin/wp-security
   - name: API limits overview
@@ -1777,7 +1779,7 @@
     - name: Overview
       href: ../sample-apps/return-to-workplace/overview.md
     - name: Deploy the solution
-      href: ../sample-apps/return-to-workplace/deploy.md   
+      href: ../sample-apps/return-to-workplace/deploy.md
     - name: Configure the solution
       href: ../sample-apps/return-to-workplace/configure.md
     - name: Location Readiness dashboard

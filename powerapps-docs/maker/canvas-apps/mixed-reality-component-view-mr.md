@@ -25,7 +25,7 @@ The component creates a button in your app. When app users click the button, it 
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vvwR]
 
-
+You can also take photos and [upload them to OneDrive](mixed-reality-take-upload-photos.md).
 
 > [!IMPORTANT]
 > Your 3D content must be in the .glb file format.  

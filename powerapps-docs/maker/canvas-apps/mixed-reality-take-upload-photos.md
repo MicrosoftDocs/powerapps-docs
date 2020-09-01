@@ -1,13 +1,13 @@
 ---
-title: Use the View in MR component in Power Apps (Preview)
-description: View 3D models and 2D images in the real world with augmented reality features in Power Apps.
+title: Take real-world screenshots of objects in mixed reality
+description: Use your app to take photos of 3D objects that are overlaid in the real world.
 author: iaanw
 manager: shellyha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 5/4/2020
+ms.date: 9/1/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -40,7 +40,7 @@ For this guide, you will first need to do the following:
        
        ![Create a blank phone layout app](./media/augmented-upload-photo/create-blank-phone-app.png "Select phone layout as your blank app type, highlighted in red")
 - [Enable the MR features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
-- Have a OneDrive folder that you can store your photos in when testing the upload feature.
+- Have a OneDrive folder called **MRPhotos** that you can store your photos in when testing the upload feature.
 - Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
 
@@ -67,7 +67,6 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
    ![Screenshot showing the Source property with ViewIn3D1.Src in the expression editor](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Src in the expression editor")
 
-   <!-- doesn't work -->
 
 9. [Save (and, if necessary, publish) the app](save-publish-app.md) and [load it on your mobile device](../../user/run-canvas-and-model-apps-on-mobile.md) to test that you can view the 3D object in MR by selecting the **View in MR** button.
 
@@ -112,15 +111,77 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 ## Upload photos to OneDrive with a Power Automate flow
 
 
-1. Go to the **Action** tab and select **Power Automate**, followed by **Create a new flow**.
+1. Go to the **Action** tab and select **Power Automate**, followed by **Create a new flow**. This opens Power Automate in a new browser tab. You may need to sign in at the top.
+
     ![](./media/augmented-upload-photo/open-automate.png "")
 2. Choose the template for a **Power Apps button**.
+
     ![](./media/augmented-upload-photo/create-power-apps-button.png "")
-3. Rename the flow to make it easier to find later.
-4. In the flow, select the + icon to add a new step. Search for "OneDrive create file" and select the **Create file** action that appears in the results.
+3. To make it easier to find later, rename the flow by selecting **Power Apps button** at the top and entering a new name.
+
+    ![](./media/augmented-upload-photo/rename-flow.png "")
+
+4. Select **+ New step**. Search for **OneDrive create file** and select the **Create file** action that appears in the results.
+
+    ![](./media/augmented-upload-photo/create-onedrive.png "")
+
+    Make sure you are signed in to the correct OneDrive account where you want to upload your photos.
+
 5. Fill in the following information:
-   6. For the **Folder Path**, enter **MRPhotos**.
-   6. For the **File Name**, select the 
+    1. For the **Folder Path**, enter **MRPhotos**.
+    2. For the **File Name**, select the text box and then choose the option for **Ask in PowerApps**.
+    
+        ![](./media/augmented-upload-photo/file-name-ask.png "")
+
+    3. For **File Content**:
+       1. Select the text box and then choose **Expression**. Enter `decodeDataUri(replace(triggerBody()?['Createfile_FileContent'], '"', ''))` then select the **OK** button. 
+
+           ![](./media/augmented-upload-photo/file-content-code.png "")
+
+       2. Under the **Dynamic content** section, select the **More** button and choose **Ask in PowerApps**.  
+
+           
+           ![](./media/augmented-upload-photo/see-more.png "")
+
+          This adds a second purple box named **Createfile_FileContent** into the **Create file** task.  
+          Select the **X** remove button  to remove it. 
+
+          ![](./media/augmented-upload-photo/flow-remove-ask-code.png "")
+
+
+
+6. Your Flow should now look like this:
+    
+    ![](./media/augmented-upload-photo/flow-complete.png "")
+
+7. Save the flow and return to the browser tab that has your canvas app open. You'll see your flow now shows up in the **Data** pane.
+
+    ![](./media/augmented-upload-photo/flow-data-pane.png "")
+
+
+8. Open the **Insert** tab and select **Button**.
+9. Change the **Test** property of the button to `Upload photos`, and set the font size to 16. Move the button to a free area on the app screen and change its size so the button label fits inside it properly.
+10. In the expression editor at the top of the Power Apps window, select the **OnSelect** property, then select the **Action** tab. Select **Power Automate**, and then the flow you created.
+
+    ![](./media/augmented-upload-photo/add-flow-to-button.png "")
+
+
+11. This will populate the **OnSelect** method with `YourFlowName.Run(`. Insert the following code to upload the last photo taken to the **MRPhotos** folder on OneDrive: 
+
+    
+    `UploadMRPhoto.Run(Last(ViewInMR1.Photos).ImageURI, JSON(Last(ViewInMR1.Photos).ImageURI, JSONFormat.IncludeBinaryData));`
+    
+
+    ![](./media/augmented-upload-photo/button-upload-code.png "")
+
+    If you were inside a gallery of the MR photos you could instead use the following formula:
+    
+    `UploadMRPhoto.Run(ThisItem.ImageURI, JSON(ThisItem.ImageURI, JSONFormat.IncludeBinaryData));`
+
+    If you wanted to create a button that would upload all of the photos taken in the MR session you could use this formula: 
+
+    `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run(ImageURI, JSON(ImageURI, JSONFormat.IncludeBinaryData)));`
+
 
 
 
