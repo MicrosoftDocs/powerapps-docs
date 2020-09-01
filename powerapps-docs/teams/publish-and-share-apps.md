@@ -1,6 +1,6 @@
 ---
 title: Publish and share your apps | Microsoft Docs
-description: Learn how to publish and share your apps using Power Apps app from Teams.
+description: Learn how to share and publish your apps using Power Apps app from Teams.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Share an app
+# Share and publish your app
 
 After you build a canvas app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
 
