@@ -1,5 +1,5 @@
 ---
-title: How to customize an app screen based on column status inside a SharePoint list | Microsoft Docs
+title: Customize an app screen based on column status inside a SharePoint list | Microsoft Docs
 description: This article explains how to customize an app screen based on column status inside a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# How to customize an app screen based on column status inside a SharePoint list
+# Customize an app screen based on column status inside a SharePoint list
 
 In this scenario article, you'll learn how to customize an app screen based on column status inside a SharePoint list. You can customize forms for supported lists or libraries, and you can also create apps for lists or libraries.
 
