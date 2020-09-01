@@ -134,14 +134,14 @@ You can show the label associated with the currently selected pin by inserting a
 3. Select the **Data table** control and place it on the app screen.
 4. Choose to show only the selected pin, or all pins:
 
-   1. Selected pin only: On the **Properties** pane, set the **Data source** property to the Excel table you added.
+   1. Show all pins: On the **Properties** pane, set the **Data source** property to the Excel table you added.
 
-   ![](./media/augmented/pins-label-table.png "")
+        ![](./media/augmented/pins-label-table.png "")
 
-   1. Show all pins: In the expression editor at the top, set the **Items** property to `ViewIn3D1.SelectedItems`.
+   1. Selected pin only: In the expression editor at the top, set the **Items** property to `ViewIn3D1.SelectedItems`.
 
 
-   ![](./media/augmented/pins-label-selected.png "")
+        ![](./media/augmented/pins-label-selected.png "")
 
 5. On the **Properties** pane, select **Edit fields** and then **Add field**. Select each of the fields and then **Add**.
 
@@ -152,8 +152,16 @@ You can show the label associated with the currently selected pin by inserting a
 You can [create a collection](create-update-collection) within the app so users can create their own pins that will show on the 3D model:
 
 1. Open the **Insert** tab.
-2. Select the **Text input** control and place it on the app screen. Copy and paste it twice so you have three text input controls.
-3. Change the **Default** property for each control to `XCoordinate`, `YCoordinate`, and `ZCoordinate`.
+2. Select the **Text input** control and place it on the app screen. Copy and paste it so you have four text input controls.
+3. Change the **Default** property for each control to `X`, `Y`, `Z`, and `Label`. 
+4. On the **Tree view**, rename each control to:
+   1. **XCoordinate**
+   2. **YCoordinate**
+   3. **ZCoordinate**
+   4. **LabelInput**
+
+    ![](./media/augmented/pins-coords.png "")
+
 4. Open the **Insert** tab and select the **Button** control. Place it in a free area on your app screen. Set the **Text** property to `Add pin`. 
 5. Set the **OnSelect** property to the following:
 
@@ -163,7 +171,8 @@ You can [create a collection](create-update-collection) within the app so users 
       {
         X: XCoordinate.Text,
         Y: YCoordinate.Text,
-        Z: ZCoordinate.Text
+        Z: ZCoordinate.Text,
+        Label: LabelInput.Text
       }
     )
     ```
@@ -179,7 +188,19 @@ You can [create a collection](create-update-collection) within the app so users 
     - **PinsY** as `PinsCollection.Y`
     - **PinsZ** as `PinsCollection.Z`
 
-Now when a user enters coordinates into each of the fields and selects the **Add pin** button, the coordinates will be converted into a pin and placed on the model.
+Now when a user enters coordinates into each of the fields and a label, and selects the **Add pin** button, the coordinates will be converted into a pin and placed on the model.
+
+You can display each of the pins as they are added:
+
+1. Open the **Insert** tab.
+2. Expand **Layout**.
+3. Select the **Data table** control and place it on the app screen.
+4. On the **Properties** pane, set the **Data source** property to the collection you created, **PinsCollection**.
+5. On the **Properties** pane, select **Edit fields** and then **Add field**. Select each of the fields and then **Add**.
+
+    ![](./media/augmented/pins-add-fields.png "")
+
+As users add pins with the **Add pin** button, they will display in table below the button.
 
 ## Other mixed reality controls
 
