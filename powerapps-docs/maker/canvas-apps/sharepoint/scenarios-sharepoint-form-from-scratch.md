@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -122,11 +122,7 @@ Create a SharePoint list with columns and list items. In this scenario, we've us
 
     ![Select data table source](./media/scenarios-sharepoint-form-from-scratch/select-data-table-source.png "Select data table source")
 
-
-<!-- question from editor: In the image below, it looks like the data table is moved to the lower right, if I'm looking at the correct thing. -->
-
-
-1. Move the data table to the lower-left inside the screen to make space for additional components.
+1. Move the data table to the lower-right inside the screen to make space for additional components.
 
     ![Move data table](./media/scenarios-sharepoint-form-from-scratch/data-table-finish.png "Move data table")
 

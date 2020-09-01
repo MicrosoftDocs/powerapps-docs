@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/01/2020
+ms.date: 09/01/2020
 ms.author: emcoope
 search.audienceType: 
   - maker

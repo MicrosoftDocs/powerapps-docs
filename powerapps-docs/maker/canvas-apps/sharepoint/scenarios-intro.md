@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -23,10 +23,6 @@ In this section, you'll learn about common scenarios when working with an app th
 ## Getting started with scenarios
 
 Articles in this section explain individual and short scenarios when working with SharePoint integration with canvas app.
-
-
-<!-- editor's note: You don't need question marks with these titles, because they're not questions, they're statements. In fact, you also don't need the "How to" - the title can just start with the action word. I'll update these H1s in the individual topics, but they should also be updated in the TOC. -->
-
 
 - [Filter a search list in an app](scenarios-filter-search-list.md)
 - [Use drop-down lists with choices from lookup columns in a SharePoint list](scenarios-choice-to-lookup.md)
