@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 08/06/2020
+ms.date: 08/31/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -125,24 +125,29 @@ Power Apps stores some data locally in your browser, including user identity and
 ### Instructions for Google Chrome
     
 - **Option 1: Enable local data for all sites**
-    1. On your browser toolbar, select **More**.
-    2. Select **Settings**.
-    3. Near the bottom of the page, select **Show advanced settings**.
-    4. In the "Privacy" section, select **Content settings**.
-    5. Select **Allow local data to be set (recommended)**.
-    6. Make sure that **Block third-party cookies and site data** isn't selected.
-    7. Select Manage exceptions and make sure that there are no exceptions for **https://create.powerapps.com**, **https://\*.create.powerapps.com**, **https://make.\*.powerapps.com**, **https://make.powerapps.com**, and **https://login.microsoftonline.com**. If there are such exceptions, remove them by clicking on the x sign for the corresponding rows.
-    8. Select **Done**.
+    
+    1. Select **Settings**.
+    1. Select **Privacy and security**.
+    1. Expand **Cookies and other site data**.
+    1. Make sure that **Block third-party cookies** isn't selected.
+    1. Ensure these sites aren't added in site-specific cookie configuration that doesn't allow cookies, or deletes cookies when windows are closed:
+        - `https://create.powerapps.com`
+        - `https://*.create.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://make.powerapps.com`
+        - `https://login.microsoftonline.com`
     
 - **Option 2: Create exceptions to allow local data for Power Apps and associated services**
       
-    1. On the browser toolbar, select **More**.
-    2. Select **Settings**.
-    3. Near the bottom of the page, select **Show advanced settings**.
-    4. In the Privacy section, select **Content settings**.
-    5. Select **Manage exceptions** and create exceptions to “Allow” data storage for **https://create.powerapps.com**, **https://\*.create.powerapps.com**, **https://make.\*.powerapps.com**, **https://make.powerapps.com**, and **https://login.microsoftonline.com**.
-    6. Select **Done**.
-
+    1. Select **Settings**.
+    1. Select **Privacy and security**.
+    1. Expand **Cookies and other site data**.
+    1. Use **Add** for **Sites that can always use cookies** and add:
+        - `https://create.powerapps.com`
+        - `https://*.create.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
+        - `https://make.powerapps.com`
+        - `https://login.microsoftonline.com`
 
 ## Resolution 2: Configure Trust Zones for Internet Explorer and Microsoft Edge Legacy
 
@@ -155,12 +160,12 @@ Internet Explorer and Microsoft Edge Legacy use *Trust Zones*. Problems can occu
     4. Select **Trusted sites**.
     5. Select **Sites**.
     6. Add the following sites by typing the address and selecting **Add** for each:
-        - **https://login.microsoftonline.com**
-        - **https://create.powerapps.com**
-        - **https://*.create.powerapps.com** (the asterisk is part of the address, don't replace it)
-        - **https://make.powerapps.com**
-        - **https://make.*.powerapps.com** (the asterisk is part of the address, don't replace it)
-        - **https://*.powerapps.com** (the asterisk is part of the address, don't replace it)
+        - `https://login.microsoftonline.com`
+        - `https://create.powerapps.com`
+        - `https://*.create.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://make.powerapps.com`
+        - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://*.powerapps.com` (the asterisk is part of the address, don't replace it)
     7. Select **Close**.
     8. Select **OK**.
     9. Close all Internet Explorer and Microsoft Edge Legacy windows.
@@ -172,11 +177,12 @@ Internet Explorer and Microsoft Edge Legacy use *Trust Zones*. Problems can occu
     4. Select **Trusted sites**.
     5. Select **Sites**.
     6. Remove all existing entries for the following sites:
-        - **https://login.microsoftonline.com**
-        - **https://create.powerapps.com**
-        - **https://*.create.powerapps.com**
-        - **https://make.powerapps.com**
-        - **https://make.*.powerapps.com** 
+        - `https://login.microsoftonline.com`
+        - `https://create.powerapps.com`
+        - `https://*.create.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://make.powerapps.com`
+        - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://*.powerapps.com` (the asterisk is part of the address, don't replace it)
         - Any other address that ends in **powerapps.com** or **create.powerapps.com**.
   7. Select **Close**.
 
@@ -196,7 +202,7 @@ To disable the **Block third-party cookies** setting in your browser:
 | - | - |
 | Microsoft Edge | **Settings and more**  > **Settings**  > **Site permissions**  > **Cookies and site data** > Turn off **Block third-party cookies**. |
 | Microsoft Edge Legacy | **More** > **Settings** > **View advanced settings** > **Cookies** > Turn off **Block third-party cookies**. |
-| Google Chrome | **More** > scroll down to **Privacy and security** > **Cookies and other site data** > Select an option to allow third-party cookies. For example,  **Allow all cookies** for always, or **Block third-party cookies in incognito** for only blocking in *incognito*. <br> **Note**: You can also start *incognito* session and turn off **Block third-party cookies** in the browser window before you enter a URL in the address bar.
+| Google Chrome | **Settings** > **Privacy and security** > **Cookies and other site data** > Select an option to allow third-party cookies. For example,  **Allow all cookies** for always, or **Block third-party cookies in incognito** for only blocking in *incognito*. <br> **Note**: You can also start *incognito* session and turn off **Block third-party cookies** in the browser window before you enter a URL in the address bar.
 | Internet Explorer 11 | **Tools** > **Internet Options** > **Advanced** > Select **Allow** under **Third-party Cookies**.
 
 Most browsers allow settings to reflect the changes immediately. You may also close all the browser windows and reopen instead.
