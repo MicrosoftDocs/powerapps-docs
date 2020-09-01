@@ -1,5 +1,5 @@
 ---
-title: Manage your apps | Microsoft Docs
+title: Manage your app | Microsoft Docs
 description: Learn how to manage your apps using Power Apps app from Teams.
 author: tapanm-msft
 ms.service: powerapps
@@ -10,7 +10,7 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Managing an app
+# Manage your app
 
 To manage an app, select **Apps** from the solution explorer. And then, select the app that you want to manage, or select the *Commands* (**…**) option for the app, and then select the options from the drop-down menu.
 
