@@ -1,5 +1,5 @@
 ---
-title: How to work with permissions in a lookup list from a SharePoint site | Microsoft Docs
+title: Work with permissions in a lookup list from a SharePoint site | Microsoft Docs
 description: This article explains how to configure lookup list permissions in SharePoint when using a canvas app.
 author: emcoope-msft
 ms.service: powerapps
@@ -13,7 +13,7 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# How to work with permissions in a lookup list from a SharePoint site
+# Work with permissions in a lookup list from a SharePoint site
 
 In this scenario article, you'll learn how to configure permissions for fields that use lookup columns from SharePoint lists. When you create a canvas app that connects to SharePoint, the app follows permissions configured inside SharePoint. Unique permissions at different levels inside SharePoint can become confusing when surfacing lists, libraries, or items on a canvas app screen.
 
