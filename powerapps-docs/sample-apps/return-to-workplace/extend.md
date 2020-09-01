@@ -198,9 +198,9 @@ such as **Created On**, **Modified On** are not displayed.
 | Display name                    | Data type     | Description                                                                                      | Platform use                |
 |---------------------------------|---------------|--------------------------------------------------------------------------------------------------|------------------------------|
 | Case Number                     | Text          | Unique identifier for the employee case.                                                         | Model-driven app             |
-| Check In Available              | Option Set    | Used to denote whether the employee can get a pass for a facility.                               | Model-driven app and canvas app |
-| Check In Available Date         | Date and Time | Used to specify when the employee will be able to get a pass for a facility.                     | Model-driven app             |
-| Check In Blocked Note           | Text          | Used to give the employee a note on why they are blocked from booking a pass.                    | Model-driven app             |
+| Facility Access Available       | Option Set    | Used to denote whether the employee can get a pass for a facility.                               | Model-driven app and canvas app |
+| Facility Access Available Date  | Date and Time | Used to specify when the employee will be able to get a pass for a facility.                     | Model-driven app             |
+| Facility Access Unavailable Note| Text          | Used to give the employee a note on why they are blocked from booking a pass.                    | Model-driven app             |
 | Employee                        | Lookup        | Used to associate the employee to the employee case.                                             | Model-driven app             |
 | Employee Contacted              | Option Set    | Used to denote whether the employee was contacted.                                               | Model-driven app             |
 | Employee Instructions Provided  | Option Set    | Used to denote whether the employee was provided instructions.                                   | Model-driven app             |
@@ -415,6 +415,7 @@ This section of the solution describes the different flows within the solution a
 | Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist. |
 | Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. |
 | Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Re-educate occupancy in daily occupancy when employee bookings are disabled. |
+| Employee Case - Reset Facility Access Available      | Employee Case    | Reset the employee case facility access available when the time is reached. |
 | Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations. |
 | Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. |
 | Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. |
