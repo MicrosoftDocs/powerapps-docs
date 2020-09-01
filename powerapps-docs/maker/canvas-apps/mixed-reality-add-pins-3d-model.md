@@ -125,19 +125,27 @@ X Point | 0.00 | 0.72 | -0.20
 
 ## Display the label and other information about each pin
 
-You can show the label associated with the currently selected pin by inserting a data table control and setting it to the selected pin.
+You can show the label associated with the currently selected pin by inserting a data table control and setting it to display all the pins, or the currently selected pin.
 
 ![](./media/augmented/pins-selected.png "")
 
 1. Open the **Insert** tab.
 2. Expand **Layout**.
 3. Select the **Data table** control and place it on the app screen.
-4. In the expression editor at the top, set the **Items** property to `ViewIn3D1.SelectedItems`.
+4. Choose to show only the selected pin, or all pins:
+
+   1. Selected pin only: On the **Properties** pane, set the **Data source** property to the Excel table you added.
+
+   ![](./media/augmented/pins-label-table.png "")
+
+   1. Show all pins: In the expression editor at the top, set the **Items** property to `ViewIn3D1.SelectedItems`.
+
+
+   ![](./media/augmented/pins-label-selected.png "")
+
 5. On the **Properties** pane, select **Edit fields** and then **Add field**. Select each of the fields and then **Add**.
 
-
     ![](./media/augmented/pins-add-fields.png "")
-
 
 ## Create a collection to let users define their own pins in the app
 
