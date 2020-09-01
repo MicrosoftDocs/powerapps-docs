@@ -35,7 +35,7 @@ For this guide, you will first need to do the following:
 - Create a blank canvas app ready for editing
   - Go to the [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
        
-       ![Create a blank phone layout app](./media/augmented-upload-photo/create-blank-phone-app.png "Select phone layout as your blank app type, highlighted in red")
+       ![Create a blank phone layout app](./media/augmented/create-blank-phone-app.png "Select phone layout as your blank app type, highlighted in red")
 - [Enable the MR features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
 - Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
