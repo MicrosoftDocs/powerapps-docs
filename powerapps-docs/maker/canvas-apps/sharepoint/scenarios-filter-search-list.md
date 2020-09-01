@@ -1,5 +1,5 @@
 ---
-title: How to filter a search list in an app | Microsoft Docs
+title: Filter a search list in an app | Microsoft Docs
 description: This article explains how to search for items and filter the list in your app when sourcing data from a SharePoint list.
 author: emcoope-msft
 ms.service: powerapps
@@ -13,18 +13,14 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
-# How to filter a search list in an app
+# Filter a search list in an app
 
 In this scenario article, you'll learn how to filter a search list in a canvas app.
 
 ## Prerequisites
 
-
-<!-- Editor note: Seems like it should be "a" SharePoint connector in the line below. And in the second line, maybe it should be "the" canvas app. What do you think? --> 
-
-
-- You must have created an app using SharePoint connector that connects to a SharePoint list.
-- The SharePoint list should consist of several list items to filter data inside canvas app.
+- You must have created an app using a SharePoint connector that connects to a SharePoint list.
+- The SharePoint list should consist of several list items to filter data inside the canvas app.
 
 ## Scenario details
 
@@ -41,7 +37,7 @@ To search using text input and to filter the records, you have to use the functi
     > [!NOTE]
     > Ensure the app uses SharePoint connection and connects to a SharePoint list as described in the prerequisites.
 
-1. Select **+** (Insert) from the left pane.
+1. Select **+** (insert) from the left pane.
 
 1. Select **Text input**.
 
