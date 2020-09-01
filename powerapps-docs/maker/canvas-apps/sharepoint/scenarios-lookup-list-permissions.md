@@ -23,7 +23,7 @@ The example in this tutorial explains how you can work with a canvas app that co
 
 - You must have created an app using a SharePoint connector that connects to a SharePoint list.
 - The SharePoint list should consist of a lookup column with values from another column.
-- You need two user accounts with access to the app and SharePoint site hosting the lists.
+- You need two user accounts with access to the app and the SharePoint site hosting the lists.
 - You need to be knowledgeable about how to configure SharePoint lists and list/item permissions.
 
 ## Scenario details
@@ -39,17 +39,17 @@ You can customize permissions for a SharePoint list or list item when you [stop 
     | Shapes | - Title <br> - Color (lookup column)
     | Colors | - Title (for color of the shape)
 
-     Shapes list has a Color lookup column. This lookup column is connected to the Color column from the Colors list for values. You can also use your own lists instead.
+     The Shapes list has a Color lookup column. This lookup column is connected to the Color column from the Colors list for values. You can also use your own lists instead.
 
 1. If necessary, create sample items:
 
-    | Shapes | Color |
+    | Shapes | Color 
     | - | - |
     | Circle | Red
     | Rectangle | Blue
     | Triangle | Green
 
-    The shape colors are through lookup column from the Colors list.
+    The shape colors are through the lookup column from the Colors list.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -80,7 +80,7 @@ You can customize permissions for a SharePoint list or list item when you [stop 
     > [!NOTE]
     > If the user can see the lookup column, check the permissions for the lookup column list. If the lookup column list has unique permissions and the user is added, you can skip the next step.
 
-1. Go to Colors list permissions and add the other user, Kenny Smith in this example, explicitly.
+1. Go to Colors list permissions and add the other user (Kenny Smith in this example) explicitly.
 
     ![Colors list permissions](./media/scenarios-lookup-list-permissions/colors-list-permissions.png "Colors list permissions")
 
