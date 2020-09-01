@@ -39,12 +39,7 @@ To use the choices in a drop-down list, you have to use the function [choices](.
     > [!NOTE]
     > Ensure the app uses a SharePoint connection and connects to a SharePoint list as described in the prerequisites.
 
-
-
-<!-- editor question: Do the + and Insert buttons do the same thing? Or should the user select + and then select Insert? It's hard to tell from this step and from the image that follows. -->
-
-
-1. Select **+** (Insert) from the left pane.
+1. Select **+** (insert) from the left pane.
 
 1. Select **Drop down**.
 
