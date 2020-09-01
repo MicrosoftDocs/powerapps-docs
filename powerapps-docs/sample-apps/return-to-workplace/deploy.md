@@ -246,7 +246,7 @@ You can change the look and feel of the app by applying themes to match your com
 5. Select users from the list of available users with whom you want to share the app.
 
 > [!IMPORTANT]
-> - Even though the employee may have access to the canvas app, you should still assign people security roles to people. 
+> - Even though the user may have access to the canvas app, you should still assign users the **Return to the Workplace - Employee** security role. 
 
 ## Step 8: Set the security roles
 
@@ -284,7 +284,7 @@ In the Return to the Workplace solution, the following security roles are define
    
 
    > [!NOTE]
-   > To make the process of adding users more efficient, you can make use of teams. Teams which are based on Azure AD security group or Office365 group can make assignment faster. (https://docs.microsoft.com/en-us/power-platform/admin/manage-teams) When applying teams based on Azure AD security groups or Office365 groups, you need change the user and team privileges in the security roles. (https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
+   > When you want to assign security roles in bulk, you can use Teams. Teams which are based on Azure AD security groups or Office365 groups can assign security roles based on the organization. (https://docs.microsoft.com/en-us/power-platform/admin/manage-teams) When applying teams based on Azure AD security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. (https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 
