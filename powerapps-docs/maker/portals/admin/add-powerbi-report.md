@@ -53,11 +53,104 @@ For example:
     > [!div class=mx-imgBorder]
     > ![Power BI dashboard tile ID](../media/powerbi-dashboard-tile-id.png "Power BI dashboard tile ID")
 
-## Hide the Filters pane in portals web page
+## How to use powerbi-client JavaScript library in portals
 
-Power BI allows you to [hide the Filters pane](https://docs.microsoft.com/power-bi/create-reports/power-bi-report-filter#hide-the-filters-pane-while-editing) allowing extra space on screen when Filters pane isn't needed. Similarly, you can hide the Filters pane for a dashboard or a report embedded on a web page in your portal. To hide, you can use the [Power BI JavaScript embed configuration](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details) attribute called `powerbi-settings-filter-pane-enabled` and set its value to `false`.
+You can use [powerbi-client JavaScript library](https://github.com/microsoft/PowerBI-JavaScript#powerbi-client) while embedding Power BI reports or dashboards in portals. See [Power BI JavaScript wiki](https://github.com/Microsoft/PowerBI-JavaScript/wiki) for more details.
 
-For example, use the following sample code in your web page's [copy (HTML)](../configure/web-page.md#web-page-attributes) attribute to hide Power BI Filters pane in portals.
+For example, here's a sample JavaScript that can be used to update the report settings, or to handle events. This sample disables filters pane, disables page navigation and enables *dateSelected* event.
+
+```javascript
+$(function(){
+    var embedContainer = $(".powerbi")[0];
+    var report = powerbi.get(embedContainer);
+    report.on("loaded", function(){
+        report.updateSettings({
+            panes: {
+                filters :{
+                    visible: false
+                },
+                pageNavigation:{
+                    visible: false
+                }
+            }
+        }).catch(function (errors) {
+            console.log(errors);
+        });
+    })
+    report.on('dataSelected', function(event){
+        console.log('Event - dataSelected:');
+        console.log(event.detail);
+    })
+})
+```
+
+To add custom JavaScript to a web page:
+
+1. Open the [Portal Management](../configure/configure-portal.md) app.
+1. Select **Web Pages** from the left-pane.
+1. Select the web page that contains the Power BI report or dashboard.
+1. Select **Advanced** tab.
+1. Copy and paste the JavaScript inside the **Custom JavaScript** section.
+1. Select **Save & Close**.
+
+Let's understand the sample JavaScript operations, and different options.
+
+### Get a reference to the embedded report HTML
+
+Get a reference to the embedded report HTML.
+
+```javascript
+var embedContainer = $(".powerbi")[0];
+```
+
+More information: [Get a reference to an existing Power BI component given the containing element](https://github.com/microsoft/PowerBI-JavaScript/wiki/Service-Details#get-a-reference-to-an-existing-power-bi-component-given-the-containing-element)
+
+### Get a reference to the embedded report
+
+```javascript
+var report = powerbi.get(embedContainer);
+```
+
+### Work with Power BI panes
+
+You can use the *Panes* related settings to work with Power BI panes on a portals web page. For example, you can use the filters setting to hide or show the pane. Or, use the paging with page navigation setting.
+
+Panes can be updated using JavaScript directly as shared in the [previous example](#how-to-use-powerbi-client-javascript-library-in-portals), or you can use HTML with the `<div>` tags.
+
+The following samples show how to use both methods, using JavaScript directly, or through HTML.
+
+#### Change panes using JavaScript
+
+To hide the Filters pane using above JavaScript sample, use the following format.
+
+```javascript
+report.updateSettings({
+            panes: {
+                filters :{
+                    visible: false
+                },
+            }
+```
+
+Similarly, if you want to work with page navigation in addition to filters:
+
+```javascript
+report.updateSettings({
+            panes: {
+                filters :{
+                    visible: false
+                },
+                pageNavigation:{
+                    visible: false
+                }
+            }
+```
+
+More information: [Update settings](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Update-Settings) and [Embed configuration - Settings](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details#settings)
+
+#### Change panes using HTML
+
+You can also use the attribute called `powerbi-settings-filter-pane-enabled` and set its value to `false` to hide the Filters pane. You can add this sample code in a web page's [copy (HTML)](../configure/web-page.md#web-page-attributes) attribute.
 
 ```html
 <div id="hide-powerbi-filters">
@@ -65,11 +158,45 @@ For example, use the following sample code in your web page's [copy (HTML)](../c
 </div>
 <script>
   $(function() {
-    //Set the "powerbi-settings-filter-pane-enabled" setting to "false" to hide the Power BI Filters pane.
     $('#hide-powerbi-filters.powerbi').attr("powerbi-settings-filter-pane-enabled", "false");
   })
 </script>
 ```
+
+Similarly, to work with page navigation, change the `powerbi-settings-nav-content-pane-enabled` setting:
+
+```html
+<div id="hide-powerbi-pagenav">
+{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000000/" %}
+</div>
+<script>
+  $(function() {
+    $('#hide-powerbi-pagenav.powerbi').attr("powerbi-settings-nav-content-pane-enabled", "false");
+  })
+</script>
+```
+
+More information: [Embed configuration - Settings](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details#settings)
+
+### Handle events
+
+The embedded component can emit events upon invoking a completion of an executed command. For example, `dataSelected`.
+
+To turn an existing event listener off:
+
+```javascript
+    report.on('dataSelected', function(event){
+        console.log('Event - dataSelected:');
+        console.log(event.detail);
+```
+
+To turn an event listener on:
+
+```javascript
+    report.off("dataSelected");
+```
+
+More information: [Handling events](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Handling-Events)
 
 ### See also
 
