@@ -59,7 +59,7 @@ To search using text input and to filter the records, you have to use the functi
 
 1. Enter text, such as 'B,' to filter items starting with 'B'.
 
-    ![Colors](./media/scenarios-filter-search-list/colors.png "Colors")
+    ![Colors with filtered for 'B'](./media/scenarios-filter-search-list/colors.png "Colors with filtered for 'B'")
 
 ### See also
 
