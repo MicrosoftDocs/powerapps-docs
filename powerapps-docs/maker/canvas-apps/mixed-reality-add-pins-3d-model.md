@@ -121,7 +121,6 @@ X Point | 0.00 | 0.72 | -0.20
 
 1. The 3D component will now show each row in the table as a pin.
 
-    ![](./media/geospatial/map-expanded.png)
 
 
 ## Display the label and other information about each pin
