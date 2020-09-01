@@ -209,6 +209,7 @@ such as **Created On**, **Modified On** are not displayed.
 | Screened                        | Option Set    | Used to denote whether the screening process has occurred.                                       | Model-driven app             |
 | First Time Employee Contacted   | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
 | First Time to Investigation     | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
+| Process Stage                   | Text          | Indicated the actual process stage the BPF is in.                                                | Model-driven app             |
 |||||
 
 ### Employee Facility Search
