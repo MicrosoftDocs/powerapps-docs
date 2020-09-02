@@ -30,7 +30,7 @@ Dashboards are available for all record types. Charts are available on the Dashb
 ## Expand, refresh, and view records
 
 
-![Expand chart view](media/chart_more_buttons.png "Expand chart view")
+![Expand chart view](media/chart_more_button.png "Expand chart view")
 
 
 Legend:
