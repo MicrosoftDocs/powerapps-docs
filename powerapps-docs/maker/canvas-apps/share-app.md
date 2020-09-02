@@ -170,7 +170,7 @@ Power Apps canvas apps can be shared with guest users of an Azure Active Directo
 
 > [!NOTE]
 > - Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
-> - Power Apps canvas app guest access leverages Azure B2B. Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties). Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation).
+> - Power Apps canvas app guest access leverages Azure B2B. Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties). Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [One-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode)
 
 ### Prerequisites
 
