@@ -172,7 +172,7 @@ For more information on supported tracing options see [Configure tracing for XRM
 [Late-bound and Early-bound programming using the Organization service](early-bound-programming.md)  
 [Sample: Early-bound entity operations](samples/early-bound-entity-operations.md)
 
-[Create an Extensions for the Code Generation Tool](extend-code-generation-tool.md)  
+[Create extensions for the Code Generation Tool](extend-code-generation-tool.md)  
 [Developer tools and resources](../developer-tools.md)  
 [Download tools from NuGet](../download-tools-NuGet.md)
 
