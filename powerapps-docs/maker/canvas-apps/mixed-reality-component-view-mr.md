@@ -58,13 +58,13 @@ The following properties are on the component's **View in MR** pane on the **Pro
 
 ![Properties on the View in MR pane](./media/augmented-view-mr/augmented-view-mr-properties.png "Properties on the View in MR pane")
 
-Note that some properties are only available under **More options** in the **Advanced** tab on the **View in MR** pane.
+Some properties are only available under **More options** in the **Advanced** tab on the **View in MR** pane.
 
 Property | Description | Type | Location
 - | - | - | -
 Text | Label for the button | String | Properties (also in **Advanced**)
 Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
-Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>See [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic for more information. | Not applicable | **Properties** (also in **Advanced**)
+Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>For more information, see [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. | Not applicable | **Properties** (also in **Advanced**)
 Object width | Width of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
 Object height | Height of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
 Object depth | The three-dimensional depth of the 3D content. | Integer | **Properties** (also in **Advanced**)

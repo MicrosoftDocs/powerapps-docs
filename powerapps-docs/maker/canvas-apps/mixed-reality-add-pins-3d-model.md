@@ -30,7 +30,7 @@ This topic will guide you through creating a test app with a 3D model that you c
 - Create a collection to allow users of the app to create their own pins
 
 
-For this guide, you will first need to do the following:
+## Prerequisites
 
 - Create a blank canvas app ready for editing
   - Go to the [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
@@ -49,7 +49,7 @@ First, insert a 3D model:
 1. Open the **Insert** tab.
 2. Expand **Media**.
 3. Select the component **View in 3D** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.  
-    A default shape is included in the component. You can change this shape to another by altering the **Source** property. See [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic for more information. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
+    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
 
 >[!NOTE]
 >This component will be named `ViewIn3D1` by default, and is how it will be referenced throughout this guide. If you add multiple versions of this component, you'll need to adjust your references.  
@@ -58,7 +58,7 @@ First, insert a 3D model:
 
 Now you'll need to connect a set of predefined pins to your model.
 
-You can do this in a few ways, but the easiest is to use a table in an Excel workbook.
+You can connect predefined pins in a few ways, but the easiest is to use a table in an Excel workbook.
 
 
 Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
@@ -107,7 +107,7 @@ X Point | 0.00 | 0.72 | -0.20
 
 
 
-1. In your open app, go to the **Properties** pane, select the **Pins(Items)** field and then search for *excel* and select **Import from Excel**.
+1. In your open app, go to the **Properties** pane, select the **Pins(Items)** field, and then search for *excel* and select **Import from Excel**.
 
     ![](./media/augmented/pins-excel-source.png)
 
@@ -174,7 +174,7 @@ You can [create a collection](create-update-collection) within the app so users 
     ![](./media/augmented/pins-coords.png "")
 
 4. Open the **Insert** tab and select the **Button** control. Place it in a free area on your app screen. Set the **Text** property to `Add pin`. 
-5. Set the **OnSelect** property to the following:
+5. Set the **OnSelect** property to:
 
     ```json
     Collect( 
@@ -211,7 +211,7 @@ You can display each of the pins as they are added:
 
     ![](./media/augmented/pins-add-fields.png "")
 
-As users add pins with the **Add pin** button, they will display in table below the button.
+As users add pins with the **Add pin** button, they will display in the table below the button.
 
 ## Other mixed reality controls
 
