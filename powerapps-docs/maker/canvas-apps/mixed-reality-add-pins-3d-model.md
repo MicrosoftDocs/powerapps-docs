@@ -51,6 +51,10 @@ First, insert a 3D model:
 3. Select the component **View in 3D** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.  
     A default shape is included in the component. You can change this shape to another by altering the **Source** property. See [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic for more information. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
 
+>[!NOTE]
+>This component will be named `ViewIn3D1` by default, and is how it will be referenced throughout this guide. If you add multiple versions of this component, you'll need to adjust your references.  
+>For example, if you insert a second copy of the component, by default it will be called `ViewIn3D1_1` and any code references will need to be changed to refer to it.
+
 
 Now you'll need to connect a set of predefined pins to your model.
 
@@ -146,6 +150,13 @@ You can show the label associated with the currently selected pin by inserting a
 5. On the **Properties** pane, select **Edit fields** and then **Add field**. Select each of the fields and then **Add**.
 
     ![](./media/augmented/pins-add-fields.png "")
+
+
+You can also add a single text box label to show the selected pin:
+
+1. Open the **Insert** tab.
+2. Select the **Text label** control and place it on the app screen.
+3. Change the **Text** property to `ViewIn3D1.Selected.Label`.
 
 ## Create a collection to let users define their own pins in the app
 
