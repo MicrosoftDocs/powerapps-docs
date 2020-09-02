@@ -6,7 +6,6 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/02/2020
-ms.reviewer:
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -53,14 +52,14 @@ This section provides information about troubleshooting issues while resetting a
 If a portal reset request could not be submitted, an error is displayed as shown in the following image. In this case, you must close and reopen the Power Apps Portals admin center, and try to reset the portal again. If the issue persists, contact Microsoft support.
 
 > [!div class=mx-imgBorder]
-> ![Error while resetting a portal](../media/reset-portal-request-error.png "Error while resetting a portal")
+> ![Couldn't submit error while resetting a portal](../media/reset-portal-request-error.png "Couldn't submit error while resetting a portal")
 
 ### Reset portal job fails
 
 If a reset portal job fails, an error message is displayed along with the **Reset Portal** action.
 
 > [!div class=mx-imgBorder]
-> ![Error while resetting a portal](../media/reset-portal-error.png "Error while resetting a portal")
+> ![Failure error while resetting a portal](../media/reset-portal-error.png "Failure error while resetting a portal")
 
 Typically, these are transient errors and you must select **Reset Portal** to restart the job. If the issue persists, contact Microsoft support.
 
