@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/21/2020
+ms.date: 09/02/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -31,9 +31,10 @@ Opens the [Power Apps portals Studio](portal-designer-anatomy.md) to edit the co
 
 Portals Studio requires a contact record with the email address portaluser@powerappsportals.com for some of its functionality to work. This contact record is automatically created when you edit the portal for the first time.
 
-If you've one or more fields for the Contact entity set as **Required**, or any business logic such as synchronous plug-ins or workflows to restrict contact creation, this contact record creation may fail with the following error message:
+If you've one or more fields for the Contact entity set as required, or any business logic such as synchronous plug-ins or workflows to restrict contact creation, this contact record creation may fail with the following error message:
 
-`Something went wrong. Contact with email address portaluser@powerappsportals.com couldn’t be created. To edit the portal, create a contact with email address portaluser@powerappsportals.com.`
+`Contact creation failed` <br>
+`A contact with an email address portaluser@powerappsportals.com must be created before you can edit your portal. Please create this contact manually.`
 
 When you see this error message, create a contact record manually with the email address portaluser@powerappsportals.com.
 
@@ -93,7 +94,7 @@ Your portal should work anonymously and should be accessible by the external use
 
 ## Settings
 
-Displays the portal settings and allows you to change the name of the portal. You can also do advanced actions such as administering the portal though the Power Apps Portals admin center and working with site settings. Settings provides links to the Power Apps Portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
+Displays the portal settings and allows you to change the name of the portal. You can also do advanced actions such as administering the portal though the Power Apps Portals admin center and working with site settings. Settings provide links to the Power Apps Portals admin center and Site settings. More information: [Advanced portal administration](admin/admin-overview.md) and [Configure site settings](configure/configure-site-settings.md).  
 
 > [!div class=mx-imgBorder]
 > ![portal settings](media/portal-settings.png "Portal settings")  
@@ -101,7 +102,7 @@ Displays the portal settings and allows you to change the name of the portal. Yo
 ## Delete
 
 Deletes the portal and hosted resources. When you delete a portal, its URL becomes inaccessible. Deleting a portal doesn't affect any portal configurations or solutions present in your environment, and they'll remain as-is.
-You must delete the portal configurations manually to completely remove portal configurations from your environment. To do this, use the Portal Management app, and delete the corresponding website record for the portal.
+If you want to remove the portal configurations from your environment completely, delete the portal configurations manually. To delete, use the Portal Management app, and delete the corresponding website record for the portal.
 
 > [!NOTE]
 > If you don't have sufficient privileges to delete a portal, an error is displayed. You must have the System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Azure AD application](admin/admin-overview.md#add-yourself-as-an-owner-of-the-azure-ad-application).
