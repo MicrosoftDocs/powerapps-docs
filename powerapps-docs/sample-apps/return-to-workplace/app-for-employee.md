@@ -90,7 +90,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
 ### Employee pass
 
-If your responses to the symptom check statements show that you're healthy, you'll receive a pass to enter the selected facility. The pass is valid until the end of the day. 
+If your responses to the symptom check statements show that you're healthy, you'll receive a pass to enter the selected facility. The pass is valid until the end of the day. When you create a pass for a facility were you already created a pass for earlier that day, the pass earlier that day will be cancelled automatically. 
 
 > [!div class="mx-imgBorder"]
 > ![Employee pass](media/employee-pass.png "Employee pass")
