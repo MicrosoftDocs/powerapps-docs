@@ -105,6 +105,9 @@ If your responses show you aren't healthy, you'll not receive a pass and provide
 > [!div class="mx-imgBorder"]
 > ![Not feeling well](media/employee-pass-negative.png "Not feeling well")
 
+> [!NOTE]
+> Current negative attestations are also stored, in the solution settings you can turn this feature off if you are not allowed to store them.
+
 ## Share sentiment
 
 You can say how you're feeling about returning to the workplace. On the home page, select one of the options to answer the question **Do you feel safe returning to work?**
@@ -116,6 +119,9 @@ You can say how you're feeling about returning to the workplace. On the home pag
 
 > [!div class="mx-imgBorder"]
 > ![Share sentiment reset](media/employee-share-sentiment2-2.png "Share sentiment reset")
+
+> [!NOTE]
+> In the solution settings you can turn this feature off if you don't want to use this.
 
 ## Feedback about the solution
 
