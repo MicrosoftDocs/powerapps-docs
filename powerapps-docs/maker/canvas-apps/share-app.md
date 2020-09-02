@@ -1,14 +1,13 @@
 ---
 title: Share a canvas app | Microsoft Docs
 description: Share your canvas app by giving other users permission to run or modify it
-author: tapanm-msft
-manager: kvivek
+author: alaug
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 06/16/2020
-ms.author: tapanm
+ms.reviewer: tapanm
+ms.date: 09/02/2020
+ms.author: alaug
 search.audienceType: 
   - maker
 search.app: 
@@ -170,7 +169,7 @@ Power Apps canvas apps can be shared with guest users of an Azure Active Directo
 
 > [!NOTE]
 > - Guests may only be assigned the **User** role, and not the **Co-owner** role, for apps shared with them.
-> - Power Apps canvas app guest access leverages Azure B2B. Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties). Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [One-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode)
+> - Power Apps canvas app guest access leverages Azure B2B. Power Apps recognizes guests outlined by states 1 – 4 in the [Azure B2B documentation](https://docs.microsoft.com/azure/active-directory/b2b/user-properties). Power Apps can't recognize guests that authenticate using [Azure AD direct federation](https://docs.microsoft.com/azure/active-directory/b2b/direct-federation) or [Email one-time passcode authentication](https://docs.microsoft.com/azure/active-directory/external-identities/one-time-passcode).
 
 ### Prerequisites
 
