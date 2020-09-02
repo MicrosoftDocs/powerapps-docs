@@ -25,7 +25,7 @@ You can add a control to take photos of the mixed reality (MR) experience in you
 - [Measure in MR](mixed-reality-component-measure-distance.md)
 
 
-This topic will guide you through creating a test app that you can use to take and upload photos from within an MR session. This includes:
+This topic will guide you through creating a test app that you can use to take and upload photos from within an MR session, including:
 
 - Inserting a **View in 3D** component with the default sample 3D object included so you can see and manipulate a 3D object
 - Connecting the **View in 3D** component to a **View in MR** component button so you can view the 3D object in MR
@@ -33,7 +33,7 @@ This topic will guide you through creating a test app that you can use to take a
 - Inserting a gallery to view recorded photos taken from the **View in MR** component on the MR-capable device
 - Uploading photos to OneDrive with a Power Automate flow
 
-For this guide, you will first need to do the following:
+## Prerequisites
 
 - Create a blank canvas app ready for editing
   - Go to the [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
@@ -50,7 +50,7 @@ For this guide, you will first need to do the following:
 
 ## Insert and connect a 3D object to the View in MR component and test your app
 
-With an app open for editing in [Power Apps Studio](https://create.powerapps.com), you can insert and connect the **View in 3D** and **View in MR** components. This will let you overlay a sample 3D object (which looks like a box's frame) into the real world using your device's camera.
+With an app open for editing in [Power Apps Studio](https://create.powerapps.com), you can insert and connect the **View in 3D** and **View in MR** components. Using these components lets you overlay a sample 3D object (which looks like a box's frame) into the real world using your device's camera.
 
 1. Open the **Insert** tab.
 2. Expand **Media**.
@@ -73,9 +73,9 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 ## Insert a gallery to view photos taken in the app
 
-You can now insert a gallery control into your app. This lets users of the app take and view photos from within the app.
+You can now insert a gallery control into your app. The gallery control lets users of the app take and view photos from within the app.
 
-Photos you take by selecting the camera icon in the MR view on the app will be loaded into the gallery component on the app. You need to exit the MR view to see the gallery, and re-entering the MR view and taking more photos will overwrite the photos.
+Photos you take by selecting the camera icon in the MR view on the app will be loaded into the gallery component on the app. Exit the MR view to see the gallery, and re-entering the MR view and taking more photos will overwrite the photos.
 
 1. Open the **Insert** tab.
 2. Select the **Vertical gallery** control to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
@@ -96,7 +96,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 3. Go to the **Advanced** tab of the **Properties** pane:  
     1. Change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:false})`.
-    2. Change the **Image** property to `Gallery1.Selected.Image2` (or whatever the first image in the gallery control is labelled).
+    2. Change the **Image** property to `Gallery1.Selected.Image2` (or whatever the first image in the gallery control is labeled).
     3. Change the **Visible** property to `vVisibleImageZoom`.
 4. Select the first image in the gallery control.
 5. Go to the **Advanced** tab of the **Properties** pane and change the **OnSelect** property to `UpdateContext({vVisibleImageZoom:true})`.
@@ -150,7 +150,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
 
 
-6. Your Flow should now look like this:
+6. Your Flow should now have the **Folder Path**, **File Name**, and **File Content** fields filled in:
     
     ![](./media/augmented-upload-photo/flow-complete.png "")
 
@@ -166,7 +166,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
     ![](./media/augmented-upload-photo/add-flow-to-button.png "")
 
 
-11. This will populate the **OnSelect** method with `YourFlowName.Run(`. Insert the following code to upload the last photo taken to the **MRPhotos** folder on OneDrive: 
+11. The **OnSelect** method will be populated with `YourFlowName.Run(`. Insert the following code to upload the last photo taken to the **MRPhotos** folder on OneDrive: 
 
     
     `UploadMRPhoto.Run(Last(ViewInMR1.Photos).ImageURI, JSON(Last(ViewInMR1.Photos).ImageURI, JSONFormat.IncludeBinaryData));`
@@ -174,11 +174,11 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
     ![](./media/augmented-upload-photo/button-upload-code.png "")
 
-    If you were inside a gallery of the MR photos you could instead use the following formula:
+    If you were inside a gallery of the MR photos, you could instead use the following formula:
     
     `UploadMRPhoto.Run(ThisItem.ImageURI, JSON(ThisItem.ImageURI, JSONFormat.IncludeBinaryData));`
 
-    If you wanted to create a button that would upload all of the photos taken in the MR session you could use this formula: 
+    If you wanted to create a button that would upload all of the photos taken in the MR session, you could use this formula: 
 
     `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run(ImageURI, JSON(ImageURI, JSONFormat.IncludeBinaryData)));`
 
