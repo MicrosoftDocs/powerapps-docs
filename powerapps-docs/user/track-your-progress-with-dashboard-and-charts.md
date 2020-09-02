@@ -43,7 +43,7 @@ Legend:
 
 ## Create a dashboard with charts
 
-1. On the left nav under **My Work** select **Dashboards** and then on the command bar select **New** > **Dynamics 365 Dashboard**. 
+1. Go to **Dashboards** and then on the command bar select **New** > **Dynamics 365 Dashboard**. 
 
    > [!div class="mx-imgBorder"]
    > ![Add a new dashboard](media/add_new_dashboard.png "Add a new dashboard")
