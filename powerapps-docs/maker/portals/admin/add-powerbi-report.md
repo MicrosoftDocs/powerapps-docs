@@ -115,7 +115,7 @@ var report = powerbi.get(embedContainer);
 
 ### Work with Power BI panes
 
-You can use the settings for **Panes** to work with Power BI panes on a portals web page. For example, you can use the filters setting to hide or show the pane. Or, use the paging with page navigation setting.
+You can use the settings for panes to work with Power BI panes on a portals web page. For example, you can use the filters setting to hide or show the pane. Or, use the paging with page navigation setting.
 
 Below is the sample to remove filters pane:
 
@@ -152,7 +152,7 @@ More information: [Update settings](https://github.com/Microsoft/PowerBI-JavaScr
 
 ### Handle events
 
-The embedded component can emit events upon invoking a completion of an executed command. For example, `dataSelected`.
+The embedded component can emit events upon invoking a completion of an executed command. For example, below is a sample for `dataSelected` event.
 
 ```javascript
 //Report.off removes a given event listener if it exists
