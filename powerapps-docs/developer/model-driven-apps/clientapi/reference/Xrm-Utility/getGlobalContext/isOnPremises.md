@@ -14,7 +14,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# isOnPremise (Client API reference)
+# isOnPremises (Client API reference)
 
 
 
