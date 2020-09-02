@@ -106,7 +106,7 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
    
     The **Data table** control is now attached to the **Sales order** data source. Several initial fields appear in the **Data table** control, because we're using a connector that supports that capability.
    
-    ![Data table](./media/control-data-table/pre-order-data-table.png)
+    ![Data table order](./media/control-data-table/pre-order-data-table.png)
 7. In the right pane, select one or more check boxes to show or hide individual fields.
    
     For example, select the check box next to **CustomerPurchaseOrderReference** to hide this field.
