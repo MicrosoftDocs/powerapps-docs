@@ -70,6 +70,10 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 > deactivated when the reassignment occurs. The new owner of the record will need to reactivate the workflow or business rule 
 > if they want to continue using it.
 
+
+> [!NOTE]
+> When performing a merge between two custom entities, DateTime values will not merge. The DateTime of the target record will remain unchanged.
+
 <a name="BKMK_ReparentAction"></a>   
 ### About the reparent action  
  The reparent action is very similar to the share action except that it deals with the inherited read access rights instead of explicit read access rights. The reparent action is when you change the value of the referencing attribute in a parental relationship. When a reparent action occurs, the desired scope of the inherited read access rights for related entities might change. The cascade actions related to the reparent action refer to changes to read access rights for the entity record and any entity records related to it.  

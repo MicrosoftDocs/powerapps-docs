@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 12/05/2019
+ms.date: 06/12/2020
 ms.author: mkaur
 manager: "kvivek"
 ms.custom: ""
@@ -31,7 +31,7 @@ To follow this quickstart, you need:
 - Access to an app that you built or that someone else built and shared with you.
 - Access to a supported web browser and operating system.
    - For canvas apps, see: [System requirements, limits, and configuration values](../maker/canvas-apps/limits-and-config.md)
-   - For model-driven apps, see: [Supported web browsers and mobile devices](https://docs.microsoft.com/dynamics365/customer-engagement/admin/supported-web-browsers-and-mobile-devices)
+   - For model-driven apps, see: [Requirements/supported configurations](https://docs.microsoft.com/power-platform/admin/online-requirements)
 
 
 ## Sign in to Dynamics 365

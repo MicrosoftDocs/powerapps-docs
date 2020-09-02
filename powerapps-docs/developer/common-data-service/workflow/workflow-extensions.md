@@ -8,7 +8,6 @@ ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
 ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -19,7 +18,7 @@ search.app:
 
 You can extend the options available within the designer for workflows used in Common Data Service. These extensions are added by adding an assembly that contains a class the extends the [CodeActivity](/dotnet/api/system.activities.codeactivity) class. These extensions are commonly called *workflow assemblies* or *workflow activities*.
 
-You can use these custom extensions within the designer used for workflows, custom actions, and dialogs.
+You can use these custom extensions within the designer used for workflows, custom actions, and dialogs (deprecated).
 
 > [!IMPORTANT]
 > Whenever possible, you should first consider applying one of the several declarative options to define business logic. More information: [Apply business logic in Common Data Service](../../../maker/common-data-service/cds-processes.md)
@@ -50,14 +49,14 @@ By default, these processes include a common set of activities you can perform a
 
 You can use the **Perform Action** activity to execute any custom actions or the following system messages called **Command Actions**:
 
-||||
+|Actions|Actions (cont'd)|Actions (cont'd)|
 |--|--|--|
 |AddToQueue|AddUserToRecordTeam|RemoveUserFromRecordTeam|
 |SetProcess|SetWordTemplate||
 
 If you have Dynamics 365 Sales or Service solutions, you can find other command actions depending on the solution:
 
-||||
+|Actions|Actions (cont'd)|Actions (cont'd)|
 |--|--|--|
 |ApplyRoutingRule|CalculateActualValue|CloseOpportunity|
 |GetQuoteProductsFromOpportunity|GetSalesOrderProductsFromOpportunity|LockInvoicePricing|
@@ -133,7 +132,7 @@ When your custom workflow activity uses input or output parameters you must add 
 
 You can use the following types of properties as input or output parameters:
 
-||||
+|Properties|Properties (cont'd)|Properties (cont'd)|
 |--|--|--|
 |[bool](/dotnet/api/system.boolean)|[DateTime](/dotnet/api/system.datetime)|[Decimal](/dotnet/api/system.decimal)|
 |[Double](/dotnet/api/system.double)|<xref:Microsoft.Xrm.Sdk.EntityReference>|[int](/dotnet/api/system.int32)|

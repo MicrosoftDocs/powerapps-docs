@@ -1,14 +1,13 @@
 ---
 title: Create and manage webpages | Microsoft Docs
 description: Instructions to create and manage webpages in portal.
-author: tapanm-msft
-manager: kvivek
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/07/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: nenandw
+ms.reviewer: tapanm
 ---
 
 # Create and manage webpages
@@ -54,7 +53,7 @@ The primary menu on the website is created automatically based on the hierarchy 
 > [!div class=mx-imgBorder]
 > ![website navigation](media/website-navigation.png "Website navigation")
 
-If you are working with a portal created in an environment containing model-driven apps in Dynamics 365, and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+If you are working with a portal created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
 
 > [!div class=mx-imgBorder]
 > ![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")

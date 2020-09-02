@@ -1,14 +1,13 @@
 ---
 title: "Add a webpage to render a list of records on a portal | MicrosoftDocs"
 description: "Instructions to add and configure entity lists to render a list of records on a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 02/05/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # About entity lists
@@ -516,5 +515,6 @@ The following image shows an arbitrary contact assigned to a filter condition, t
 
 ### See also
 
-[Configure a portal](configure-portal.md)  
-[Redirect to a new URL on a portal](add-redirect-url.md)  
+- [Microsoft Learn: Display multiple Common Data Service records using entity lists](https://docs.microsoft.com/learn/modules/portals-access-common-data-service/2-entity-lists)
+- [Configure a portal](configure-portal.md)  
+- [Redirect to a new URL on a portal](add-redirect-url.md)

@@ -31,12 +31,12 @@ On a multi-threaded and multi-user system like Power Apps, operations and data c
   
 ## Apply optimistic concurrency using Web API
 
-For information about using Web API to apply optimistic concurrency, see [Apply optimistic concurrency](webapi/perform-conditional-operations-using-web-api.md##apply-optimistic-concurrency)
+For information about using Web API to apply optimistic concurrency, see [Apply optimistic concurrency](webapi/perform-conditional-operations-using-web-api.md#apply-optimistic-concurrency)
 
 
 ## Apply optimistic concurrency using Organization service
 
-For information about using Organization service to apply optimistic concurrency, see [Optimistic concurrency behavior](org-service/entity-operations-update-delete.md##optimistic-concurrency-behavior)
+For information about using Organization service to apply optimistic concurrency, see [Optimistic concurrency behavior](org-service/entity-operations-update-delete.md#optimistic-concurrency-behavior)
   
 <a name="bkmk_handle"></a>   
 ## Handle exceptions  

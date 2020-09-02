@@ -1,17 +1,13 @@
 ---
 title: Explore Power Apps for free for 30 days | Microsoft Docs
 description: Sign up for a free license that includes all Power Apps capabilities and expires after 30 days.
-author: KumarVivek
-manager: kvivek
+author: alaug
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.date: 02/28/2020
-ms.author: kvivek
+ms.date: 07/20/2020
+ms.author: alaug
 ms.reviewer: kvivek
-searchScope:
-  - GetStarted
-  - PowerApps
 ---
 # Explore Power Apps for free for 30 days
 
@@ -44,11 +40,11 @@ To find out which license or licenses you already have, try to [sign in to Power
 
 ## Upgrade an existing license
 
-To start a free, 30-day trial of Power Apps Plan 2 from an existing license, [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then try any feature that requires Plan 2. (For example, select the gear icon near the upper-right corner, select **Admin center**, and then select **New environment** near the upper-right corner.) Then follow the prompts to complete the sign-up process.
+To start a free, 30-day trial of Power Apps per user plan from an existing license, [sign in to Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then try any feature that requires a premium Power Apps license. (For example, select the gear icon near the upper-right corner, select **Admin center**, and then select **New environment** near the upper-right corner.) Then follow the prompts to complete the sign-up process.
 
 ## Get a license from scratch
 
-Regardless of whether you have a license for Power Apps, you can start a free, 30-day trial of Power Apps Plan 2 by following these steps:
+Regardless of whether you have a license for Power Apps, you can start a free, 30-day trial of Power Apps per user plan by following these steps:
 
 1. Open the [Power Apps site](https://powerapps.microsoft.com), and then select **Sign up free**.
 
@@ -86,11 +82,14 @@ You can use a work or school address to sign up for a trial license. If you use 
 To determine when your trial license will expire, select the gear icon near the upper-right corner of the [Power Apps site](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then select **Plan(s)**.
 -->
 
+### Does the cloud environment I use Power Apps in allow the use of trial licenses? 
+Power Apps trial licenses are only available in the Azure commercial cloud. Power Apps trial licenses are not available in Azure Government and Microsoft Azure in China clouds.
+
 ### What happens when my trial expires?
 
 You'll be prompted to request an extension of the trial or purchase a plan 30 days after the trial starts. You can find details about all plans on the [pricing page](https://powerapps.microsoft.com/pricing/).
 
-If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of Power Apps that your other license provides. Any data in Common Data Service will remain as it is, and any app or flow that uses Common Data Service will continue to run as it did if your license supports them. If you try to use features that Plan 2 supports but your existing license doesn't (for example, modify a schema or entities in Common Data Service), you'll be prompted to purchase a plan.
+If you don't extend the trial or purchase a plan but you still have another kind of license, you can still use all the features of Power Apps that your other license provides. Any data in Common Data Service will remain as it is, and any app or flow that uses Common Data Service will continue to run as it did if your license supports them. If you try to use premium Power Apps features but your existing license doesn't (for example, modify a schema or entities in Common Data Service), you'll be prompted to purchase a plan.
 
 ### More questions?
 
