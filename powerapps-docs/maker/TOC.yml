@@ -941,15 +941,15 @@
         items:
         - name: SharePoint scenarios overview
           href: ./canvas-apps/sharepoint/scenarios-intro.md
-        - name: How to filter a search list in an app?
+        - name: Filter a search list in an app
           href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
-        - name: How to use drop down list with choices from lookup column in a SharePoint list?
+        - name: Use drop down list with choices from lookup column in a SharePoint list
           href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: How to customize an app screen based on column status inside SharePoint list?
+        - name: Customize an app screen based on column status inside SharePoint list
           href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
-        - name: How to work with permissions in a lookup list from SharePoint site?
+        - name: Work with permissions in a lookup list from SharePoint site
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
-        - name: How to create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items?
+        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items
           href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
@@ -1685,10 +1685,14 @@
           href: ./common-data-service/view-component-dependencies.md   
         - name: Use environment variables
           href: ./common-data-service/EnvironmentVariables.md
-        - name: Translate customized entity and field text
-          href: ./common-data-service/export-customized-entity-field-text-translation.md
-        - name: Import translated entity and field text
-          href: ./common-data-service/import-translated-entity-field-text.md               
+        - name: Translate customized component text
+          items: 
+          - name: Overview
+            href: ./common-data-service/translate-entity-label-text.md
+          - name: Export customized component text for translation
+            href: ./common-data-service/export-customized-entity-field-text-translation.md
+          - name: Import translated component text
+            href: ./common-data-service/import-translated-entity-field-text.md               
       - name: Use solution checker
         href: ./common-data-service/use-powerapps-checker.md
         items:
@@ -1747,7 +1751,7 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
-  - name: Crisis communication
+  - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
   - name: Hospital Emergency Response
     items:
@@ -1792,17 +1796,23 @@
     - name: Overview
       href: ../sample-apps/return-to-workplace/overview.md
     - name: Deploy the solution
-      href: ../sample-apps/return-to-workplace/deploy.md   
+      href: ../sample-apps/return-to-workplace/deploy.md
+    - name: Upgrade the solution
+      href: ../sample-apps/return-to-workplace/upgrade.md      
     - name: Configure the solution
       href: ../sample-apps/return-to-workplace/configure.md
     - name: Location Readiness dashboard
       href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
+    - name: Workplace Care Management dashboard
+      href: ../sample-apps/return-to-workplace/dashboard-case-management.md
     - name: Facility Safety Management app
       href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
     - name: Workplace Care Management app
       href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
     - name: Employee Return to the Workplace app
       href: ../sample-apps/return-to-workplace/app-for-employee.md
+    - name: Extend the solutions
+      href: ../sample-apps/return-to-workplace/extend.md
 - name: Learn from others
   items:
   - name: Blog
