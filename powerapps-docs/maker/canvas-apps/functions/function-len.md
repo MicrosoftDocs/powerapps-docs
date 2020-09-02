@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 11/07/2015
 ms.author: gregli
 search.audienceType: 
@@ -47,6 +47,6 @@ For the first example in this section, the data source is named **People** and c
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |In the **Address** [column](../working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> |<style> img { max-width: none } </style> ![](media/function-len/people-table-len.png) |
+| **Len( ShowColumns(&nbsp;People,&nbsp;"Address"&nbsp;) )** |In the **Address** [column](../working-with-tables.md#columns) of the **People** table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> | ![](media/function-len/people-table-len.png) |
 | **Len( [ "Hello", "to the", "World", "" ] )** |In the **[Value](function-value.md)** column of the inline table:<br><ul><li>Measures the length of each string.</li><li>Returns a single-column table that contains the length of each string.</li> |![](media/function-len/people-table-len-inline.png) |
 

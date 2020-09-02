@@ -1,6 +1,6 @@
 ---
-title: Crisis communication app - sample template | Microsoft Docs
-description: Learn about the Crisis communication sample template in Power Apps.
+title: Crisis communication sample app | Microsoft Docs
+description: Learn about the Crisis communication sample app in Power Apps.
 author: matthewbolanos
 manager: kvivek
 ms.service: powerapps
@@ -15,9 +15,9 @@ search.app:
   - PowerApps
 ---
 
-# Set up and learn about the Crisis Communication sample template in Power Apps
+# Set up and learn about the Crisis Communication sample app in Power Apps
 
-The Crisis Communication app provides a user-friendly experience to connect
+The Crisis Communication sample app provides a user-friendly experience to connect
 users with information about a crisis. Quickly get updates on
 internal company news, get answers to frequently asked questions, and get access
 to important information like links and emergency contacts. This app requires a
@@ -34,11 +34,11 @@ In this walkthrough, you'll learn how to:
 Estimated time to complete these steps: **20&ndash;25 minutes**.
 
 > [!NOTE]
-> The Crisis Communication sample template is also available for the Power Apps US Government and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government versions are different from the commercial versions. More information: [Power Apps US Government service URLs](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](https://docs.microsoft.com/power-automate/us-govt#power-automate-us-government-service-urls)
+> The Crisis Communication sample app is also available for the Power Apps US Government and Power Automate US Government plans. The service URLs for Power Apps and Power Automate US Government versions are different from the commercial versions. More information: [Power Apps US Government service URLs](https://docs.microsoft.com/power-platform/admin/powerapps-us-government#power-apps-us-government-service-urls) and [Power Automate US Government service URLs](https://docs.microsoft.com/power-automate/us-govt#power-automate-us-government-service-urls)
 
 ## Demo: Crisis Communication app
 
-Watch how to use the Crisis Communication solution.
+Watch how to use the Crisis Communication app.
 
 > [!VIDEO https://www.youtube.com/embed/23SypLXiOTw]
 

@@ -266,8 +266,9 @@ Settings for modifying the default authentication cookie behavior. Defined by th
 
 ### See also
 
-[Configure portal authentication](configure-portal-authentication.md)  
-[OAuth2 provider settings for portals](configure-oauth2-settings.md)  
-[Open ID Connect provider settings for portals](configure-openid-settings.md)  
-[WS-Federation provider settings for portals](configure-ws-federation-settings.md)  
-[SAML 2.0 provider settings for portals](configure-saml2-settings.md)  
+- [Configure portal authentication](configure-portal-authentication.md)  
+- [OAuth2 provider settings for portals](configure-oauth2-settings.md)  
+- [Open ID Connect provider settings for portals](configure-openid-settings.md)  
+- [WS-Federation provider settings for portals](configure-ws-federation-settings.md)  
+- [SAML 2.0 provider settings for portals](configure-saml2-settings.md)
+- [Microsoft Learn: Power Apps portals authentication settings](https://docs.microsoft.com/learn/modules/authentication-user-management/2-authentication-settings)
