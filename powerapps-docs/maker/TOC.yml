@@ -1163,8 +1163,6 @@
         href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
       - name: Use system controls for data visualizations
         items:
-        - name: Set up the Notes control
-          href: ./model-driven-apps/notes-control-legacy.md
         - name: Set up timeline control
           href: ./model-driven-apps/set-up-timeline-control.md
         - name: FAQs for timeline control
