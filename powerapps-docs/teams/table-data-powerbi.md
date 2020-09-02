@@ -26,7 +26,7 @@ You can use Power BI Desktop to view tables in Project Oakdale. The table data t
    > [!div class="mx-imgBorder"] 
    > ![The Build tab](media/create-table2.png)
 
-1. Select **Tables** from the left pane, select the table your want, and then on the command bar select **Analyze in Power BI**.
+1. Select **Tables** from the left pane, and then on the command bar select **Analyze in Power BI**.
 
    The pbids file for your environment is downloaded to your browser’s default download folder.
 
