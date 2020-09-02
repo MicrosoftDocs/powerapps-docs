@@ -111,7 +111,7 @@ Expand the **Advanced** section in the **Timeline** **Properties** for settings 
 - **Expand all records by default**: When this check box is selected, all records in the timeline are shown in an expanded view. This option is disabled by default.
 
   > [!NOTE]
-  > The records in a timeline might contain images, but they won't display when the record is collapsed. Records with images must be expanded to be viewed. Use the caret icons (˅ or ^) to expand or collapse a record. Records with images will often display the message "The email has been blocked due to potentially harmful content. View full Email content." When you select this message, the warning goes away. If you don't see a message and still don't see the image displaying, refer to [Timeline FAQ](#timeline-faq).
+  > The records in a timeline might contain images, but they won't display when the record is collapsed. Records with images must be expanded to be viewed. Use the caret icons (˅ or ^) to expand or collapse a record. Records with images will often display the message "The email has been blocked due to potentially harmful content. View full Email content." When you select this message, the warning goes away. If you don't see a message and still don't see the image displaying, see [FAQs for timeline control](faqs-timeline-control.md).
 
 - **Enable "What you've missed" summary**: This setting lets users know there are new records they haven't seen. The setting is disabled by default. To enable, select the check box. When enabled, a notification is displayed.
 
@@ -195,7 +195,7 @@ All card forms are broken out into the following four sections:
 | d | **Footer** | This section is not displayed on the timeline record. | 
 | e | **Entity Fields** | You can select which fields you want to add to your card form from the field options listed on the right.  You can customize your card form by dragging and dropping the fields you want to use into the sections you want that field to appear in on the timeline record. |
 
-![Advanced display options how to customize a card form in timeline](media/timeline-card-form-advanced-1.png "Advanced display options how to customize a card form in timeline")
+![Advanced display options about how to customize a card form in the timeline](media/timeline-card-form-advanced-1.png "Advanced display options about how to customize a card form in the timeline")
 
 Each individual card form has to be customized for each activity record such as email, tasks, posts, and so on.
 
