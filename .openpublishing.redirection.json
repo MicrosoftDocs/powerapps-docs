@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/model-driven-apps/notes-control-legacy.md",
+      "redirect_url": "set-up-timeline-control",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/webapi/samples/basic-operations-csharp.md",
       "redirect_url": "cdswebapiservice-basic-operations",
       "redirect_document_id": "false"
