@@ -234,12 +234,12 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 Prerequisites: 
 1. [Download a template to use for data import](https://docs.microsoft.com/power-platform/admin/download-template-data-import). 
 2. Select **Case Contact** when prompted to select the record type for which template is needed.
-3. Add **Case Contact** data to the data file just downloaded. The **Case Contact** entity contains the following fields that should be updated in the data file:
-**Comment** - Any additional information as required.
-**Employee** - This is the name of the employee to be added as a case contact.
-**Employee Case** - This is the case number of the case to associate the new case contacts.
-**Risk Assessment** - Use the provided picklist to specify as required.
-Please note, your organization may have extended the entity to include additional attributes. Consultant your system administrator to ensure all required data is entered appropriately. 
+3. Add **Case Contact** data to the data file just downloaded. The **Case Contact** entity contains the following attributes that should be updated in the data file:<br>
+**Comment** - Any additional information as required.<br>
+**Employee** - This is the name of the employee to be added as a case contact and must match the Full Name attribute on their corresponding **Employee** record.<br>
+**Employee Case** - This is the case number of the case to associate the new case contacts and must match the Case Number attribute.<br>
+**Risk Assessment** - Use the provided picklist to specify as required.<br>
+Please note, your organization may have extended or modified the **Case Contact** entity. Consultant your system administrator to ensure all required data is entered appropriately. <br>
 4. Save this file with a meaningful name and in a location that you will reference in the next section.
 
 Steps to import **Case Contact** data:
@@ -257,9 +257,10 @@ Steps to import **Case Contact** data:
 8. Click the **Next Button**.
 9. Select the appropriate **Allow Duplicates** option based on your business requirements. 
 10. Select the appropriate **Owner** for the **Case Contact** records that will be created.
-Select the **Submit Button**. Select the **Finish** button.
-11. The **Data Submitted for Import** dialog box will be displayed. 
-12. Your **Case Contacts** will be processed for import and you may return to the **Workplace Care Management app**.
+11. Select the **Submit Button**. 
+12. Select the **Finish** button.
+13. The **Data Submitted for Import** dialog box will be displayed. 
+14. Your **Case Contacts** will be processed for import and you may return to the **Workplace Care Management app**.
 
 ### Complete Employee Case
 
