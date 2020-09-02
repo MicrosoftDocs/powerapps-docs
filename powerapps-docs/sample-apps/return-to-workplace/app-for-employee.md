@@ -66,11 +66,17 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
    > [!div class="mx-imgBorder"]
    > ![Select Area](media/employee-select-area.png "Select area")
+   
+> [!NOTE]
+> When a facility doesn't have any areas, this screen will be skipped for an user. The pass will then only be for that facility.
 
 5. Select time window for arrival at the facility. Select **NEXT** to continue with the check-in process.
 
    > [!div class="mx-imgBorder"]
    > ![Select Time](media/employee-select-time.png "Select time")
+
+> [!NOTE]
+> On a facility you can indicate a time window in which people can check in, it is possible to select 30 minutes, 1 hour or none. When the time window is not filled or none, this screen will be skipped.
 
 6. Accept the terms and agreements.
 
