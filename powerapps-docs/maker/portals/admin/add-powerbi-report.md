@@ -5,14 +5,16 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/21/2020
+ms.date: 09/01/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
 # Add a Power BI report or dashboard to a web page in portal
 
-You can add a Power BI report or dashboard to a web page in portal by using the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag. You can add the tag in the **Copy** field on a web page or in the **Source** field on a web template. If you're adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as **powerbiembedded** in the *powerbi* Liquid tag.
+You can add a Power BI report or dashboard to a web page in portal by using the [powerbi](../liquid/portals-entity-tags.md#powerbi) Liquid tag. Use the `powerbi` tag in the **Copy** field on a web page or in the **Source** field on a web template.
+
+If adding a Power BI report or dashboard created in the new workspace in Power BI, you must specify the authentication type as **powerbiembedded** in the *powerbi* Liquid tag.
 
 > [!TIP]
 > This article explains how to add a Power BI report or dashboard using *powerbi* liquid tag. To add **Power BI component** on a webpage in your portal using the portals Studio, go to [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi).
@@ -55,9 +57,9 @@ For example:
 
 ## How to use powerbi-client JavaScript library in portals
 
-You can use [powerbi-client JavaScript library](https://github.com/microsoft/PowerBI-JavaScript#powerbi-client) while embedding Power BI reports or dashboards in portals. See [Power BI JavaScript wiki](https://github.com/Microsoft/PowerBI-JavaScript/wiki) for more details.
+You can use [powerbi-client JavaScript library](https://github.com/microsoft/PowerBI-JavaScript#powerbi-client) while embedding Power BI reports or dashboards in portals. For more information about powerbi-client JavaScript library, see [Power BI JavaScript wiki](https://github.com/Microsoft/PowerBI-JavaScript/wiki).
 
-For example, here's a sample JavaScript that can be used to update the report settings, or to handle events. This sample disables filters pane, disables page navigation and enables *dateSelected* event.
+Below is a sample JavaScript to update the report settings, or to handle events. This sample disables filters pane, disables page navigation, and enables *dataSelected* event.
 
 ```javascript
 $(function(){
@@ -113,26 +115,23 @@ var report = powerbi.get(embedContainer);
 
 ### Work with Power BI panes
 
-You can use the *Panes* related settings to work with Power BI panes on a portals web page. For example, you can use the filters setting to hide or show the pane. Or, use the paging with page navigation setting.
+You can use the settings for **Panes** to work with Power BI panes on a portals web page. For example, you can use the filters setting to hide or show the pane. Or, use the paging with page navigation setting.
 
-Panes can be updated using JavaScript directly as shared in the [previous example](#how-to-use-powerbi-client-javascript-library-in-portals), or you can use HTML with the `<div>` tags.
-
-The following samples show how to use both methods, using JavaScript directly, or through HTML.
-
-#### Change panes using JavaScript
-
-To hide the Filters pane using above JavaScript sample, use the following format.
+Below is the sample to remove filters pane:
 
 ```javascript
 report.updateSettings({
             panes: {
                 filters :{
                     visible: false
-                },
+                }
             }
+        }).catch(function (errors) {
+            console.log(errors);
+        });
 ```
 
-Similarly, if you want to work with page navigation in addition to filters:
+Sample to work with both page navigation, and filters:
 
 ```javascript
 report.updateSettings({
@@ -144,56 +143,25 @@ report.updateSettings({
                     visible: false
                 }
             }
+        }).catch(function (errors) {
+            console.log(errors);
+        });
 ```
 
 More information: [Update settings](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Update-Settings) and [Embed configuration - Settings](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details#settings)
-
-#### Change panes using HTML
-
-You can also use the attribute called `powerbi-settings-filter-pane-enabled` and set its value to `false` to hide the Filters pane. You can add this sample code in a web page's [copy (HTML)](../configure/web-page.md#web-page-attributes) attribute.
-
-```html
-<div id="hide-powerbi-filters">
-{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000000/" %}
-</div>
-<script>
-  $(function() {
-    $('#hide-powerbi-filters.powerbi').attr("powerbi-settings-filter-pane-enabled", "false");
-  })
-</script>
-```
-
-Similarly, to work with page navigation, change the `powerbi-settings-nav-content-pane-enabled` setting:
-
-```html
-<div id="hide-powerbi-pagenav">
-{% powerbi authentication_type:"powerbiembedded" path:"https://app.powerbi.com/groups/00000000-0000-0000-0000-000000000000/reports/00000000-0000-0000-0000-000000000000/" %}
-</div>
-<script>
-  $(function() {
-    $('#hide-powerbi-pagenav.powerbi').attr("powerbi-settings-nav-content-pane-enabled", "false");
-  })
-</script>
-```
-
-More information: [Embed configuration - Settings](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details#settings)
 
 ### Handle events
 
 The embedded component can emit events upon invoking a completion of an executed command. For example, `dataSelected`.
 
-To turn an existing event listener off:
-
 ```javascript
+//Report.off removes a given event listener if it exists
+    report.off("dataSelected");
+//Report.on will add an event list
     report.on('dataSelected', function(event){
         console.log('Event - dataSelected:');
         console.log(event.detail);
-```
-
-To turn an event listener on:
-
-```javascript
-    report.off("dataSelected");
+    })
 ```
 
 More information: [Handling events](https://github.com/Microsoft/PowerBI-JavaScript/wiki/Handling-Events)
