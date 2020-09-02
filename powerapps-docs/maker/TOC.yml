@@ -941,15 +941,15 @@
         items:
         - name: SharePoint scenarios overview
           href: ./canvas-apps/sharepoint/scenarios-intro.md
-        - name: How to filter a search list in an app?
+        - name: Filter a search list in an app
           href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
-        - name: How to use drop down list with choices from lookup column in a SharePoint list?
+        - name: Use drop down list with choices from lookup column in a SharePoint list
           href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: How to customize an app screen based on column status inside SharePoint list?
+        - name: Customize an app screen based on column status inside SharePoint list
           href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
-        - name: How to work with permissions in a lookup list from SharePoint site?
+        - name: Work with permissions in a lookup list from SharePoint site
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
-        - name: How to create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items?
+        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items
           href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
@@ -1163,11 +1163,9 @@
         href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
       - name: Use system controls for data visualizations
         items:
-        - name: Set up the Notes control
-          href: ./model-driven-apps/notes-control-legacy.md
-        - name: Set up timeline control
+        - name: Set up the timeline control
           href: ./model-driven-apps/set-up-timeline-control.md
-        - name: FAQs for timeline control
+        - name: FAQs for the timeline control
           href: ./model-driven-apps/faqs-timeline-control.md
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
