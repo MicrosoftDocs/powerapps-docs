@@ -414,6 +414,7 @@ This section of the solution describes the different flows within the solution a
 | Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes. |
 | Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase. |
 | Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist. |
+| Employee Attestation - Disable Earlier Pass      | Employee Attestation    | When an employee creates multiple passes on a single day, earlier passes will be disabled. |
 | Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. |
 | Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Re-educate occupancy in daily occupancy when employee bookings are disabled. |
 | Employee Case - Reset Facility Access Available      | Employee Case    | Reset the employee case facility access available when the time is reached. |
