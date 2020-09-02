@@ -27,8 +27,7 @@ This article explains how to setup and use a system dashboard that references a 
 To learn more about Power BI reports and dashboards, see <a href="https://docs.microsoft.com/power-bi/create-reports/">Create Power BI Reports</a>. 
 
 > [!IMPORTANT]
-> - This is a private preview feature and requires a maker feature flag to add a Power BI embedded as a system dashboard.  Trains earlier than 8.2 need an environment flag enabled to view a Power BI embedded page in a model-driven app.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
+> [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 
 > [!NOTE]
 > Power BI embedded in a system dashboard or form ignores the Power Platform Admin Center Power BI visualization embedding flag.  That admin flag controls if end users can add Power BI embedded pages. 
@@ -38,9 +37,6 @@ To learn more about Power BI reports and dashboards, see <a href="https://docs.m
 This procedure shows you how to setup a Power BI embedded page for a single environment connected to a Power BI workspace. 
 
 1. Go to the **Solutions** area in <a href="https://make.powerapps.com">make.powerapps.com</a>, then create or edit a solution. 
-
-    > [!NOTE]
-    > Append "?powerappsPortal.powerbiAllowAsSystemDashboard=true" to the URL to enable the private preview
 
 2. Select **New** > **Dashboards** > **Power BI embedded**.
 
@@ -82,9 +78,6 @@ This procedure shows you how to setup a Power BI embedded page for a single envi
 6. To save your changes and make them available to users, save and publish the model-driven app.
 
 ## Select the Power BI embedded page in the model-driven app 
-
-  > [!Note]
-  > During the private preview phase, a server feature flag needs to be enabled per environment to allow viewing the Power BI embedded page in a model-driven app 
 
 1. Play the model-driven app, and then select a dashboard from the left navigation pane. 
 
