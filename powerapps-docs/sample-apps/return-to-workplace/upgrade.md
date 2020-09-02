@@ -83,9 +83,9 @@ To install the Workplace Care Management dashboard, follow the instructions as p
 
 ## Step 4: Update facilities
 
-With the new version, we are introducing the notations of areas and floors for a certain facility. A floor indicates how many levels are present within a building. 
+With the new version, we are introducing the notations of areas and floors for a certain facility. A floor indicates how many levels are present within a building. An area allows you to define a space within a floor that has a certain capacity. Through bookings in the Employee app, you can book an area. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-and-monitor-facilities).
 
-An area allows you to define a space within a floor that has a certain capacity. Through bookings in the Employee app, you can book an area. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-and-monitor-facilities).
+Facilities now also have time windows defined which allow you to indicate in which time window people can enter the building. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-and-monitor-facilities).
 
 ## Step 5: Define capacity for your reopen phases
 
