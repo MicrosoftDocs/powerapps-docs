@@ -44,8 +44,6 @@ landingContent:
             url: create-portal.md
           - text: Create and manage webpages
             url: create-manage-webpages.md  
-          - text: Work with sample data
-            url: build-model.md#deploy-sample-apps-and-data
           
   # Card
   - title: Advanced portal management
@@ -60,7 +58,7 @@ landingContent:
             url: liquid/liquid-overview.md
 
   # Card
-  - title: User management
+  - title: User management and security
     linkLists:
       - linkListType: how-to-guide
         links:
