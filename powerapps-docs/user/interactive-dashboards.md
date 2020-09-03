@@ -41,12 +41,18 @@ To learn more on how to create and configure interactive dashboards, see [Create
   > [!div class="mx-imgBorder"]
   > ![Show visual filter](media/show_visual_filter.png "Show visual filter")
   
-3. Select an area one of the chart or graphs to apply a filter. 
+3. Select a dril-down option.
+
+
+  > [!div class="mx-imgBorder"]
+  > ![Select drill down option](media/drill_down.png "Select drill down option")
+  
+4. Select an area one of the chart or graphs to apply a filter. 
 
   > [!div class="mx-imgBorder"]
   > ![Select an area on a chart](media/select_chart_area.png "Select an area on a chart")
   
-4. To clear filter, select the **X** next to the filter or to clear all filters, select **Clear All**.
+5. To clear filter, select the **X** next to the filter or to clear all filters, select **Clear All**.
 
   > [!div class="mx-imgBorder"]
   > ![Clear filters](media/clear_filter.png "Clear filters")
