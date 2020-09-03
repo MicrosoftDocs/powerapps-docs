@@ -10,7 +10,7 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Install sample Power Apps app in Teams
+# Use sample apps from Teams store
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
