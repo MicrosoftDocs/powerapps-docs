@@ -12,6 +12,8 @@ ms.reviewer: matp
 
 # Work with table columns
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 With the exception of the Customer field, all field types in Common Data Service are available in Project Oakdale as *columns*. This article covers the content you will need for working with table columns in Project Oakdale.
 
 Notice that, the currency feature will always use the default currency for the country that was selected during Project Oakdale environment creation. This can’t be changed, and additional transaction currencies or exchange rates can’t be added. However, you can upgrade from Project Oakdale to Common Data Service for full currency functionality.

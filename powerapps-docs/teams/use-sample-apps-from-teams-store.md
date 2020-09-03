@@ -12,6 +12,8 @@ ms.reviewer:
 
 # Install sample Power Apps app in Teams
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 Sample apps created using Power Apps are available in the Teams store. You can select the sample app that best fits your business requirement and quickly install to get started. In this article, you'll learn about one such sample application that helps inspect vehicles. Sample apps created using Power Apps and published to the Teams store may consist of multiple components such as apps, flows, and tables.
 
 The sample app you'll learn in this article consists of several tables and two apps, **Inspection App** and **Manage Asset Classes**. After you install the sample app, you can go to the team that you added the app to and use the tabs for the apps just like other features such as **Post**, **Files**, or **Wiki**.

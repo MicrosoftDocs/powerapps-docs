@@ -5,12 +5,15 @@ author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2020
+ms.date: 09/03/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---
 
 # Edit or delete a table
+
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 With Project Oakdale, you can perform the following types of operations on a table:
 - Create table columns.
 - Delete a table.

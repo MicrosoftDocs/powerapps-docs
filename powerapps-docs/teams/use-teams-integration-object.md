@@ -12,6 +12,8 @@ ms.reviewer:
 
 # Teams integration object
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 You can use Teams integration object to easily find and access the Teams integration features and use the improved usability of expressions while integrating your canvas app with Teams. You can validate the canvas app having Teams integration object present with the visibility of **Teams** control from the tree view.
 
 ![Teams Integration Object](media/teams-1.png "Teams Integration Object")

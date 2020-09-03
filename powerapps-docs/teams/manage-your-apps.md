@@ -5,12 +5,14 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2020
+ms.date: 09/03/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
 
 # Manage your app
+
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 To manage an app, select **Apps** from the solution explorer. And then, select the app that you want to manage, or select the *Commands* (**…**) option for the app, and then select the options from the drop-down menu.
 
