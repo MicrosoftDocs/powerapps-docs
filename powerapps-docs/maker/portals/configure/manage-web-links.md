@@ -52,7 +52,7 @@ The primary menu on the website is created automatically based on the hierarchy 
 
 If you change the web link set using the [Portal Management app](configure-portal.md), and then try to edit the portal using the [portals Studio](../portal-designer-anatomy.md), you may see the following message:
 
-`"Default navigation menu and page display order has been updated. To see the changes, select Sync Configuration."`
+`Default navigation menu and page display order has been updated. To see the changes, select Sync Configuration.`
 
 When this happens, you can select **Sync Configuration** to see the changes to the navigation menu.
 
