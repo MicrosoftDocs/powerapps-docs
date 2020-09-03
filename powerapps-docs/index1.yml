@@ -66,7 +66,7 @@ conceptualContent:
           url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview
           itemType: overview
         - text: Portals
-          url: https://docs.microsoft.com/en-us/powerapps/maker/portals/overview
+          url: /powerapps/maker/portals
           itemType: overview             
     
     - title: Work with data platform
