@@ -75,7 +75,7 @@ Once you add sections to your page, you can add portal components inside the sec
        - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100 px. You can also enter the height in points (pt) and percentage (%).
 
         > [!div class=mx-imgBorder]
-        > ![Alignment in the section](media/section-props-height.png "Alignment in the section")  
+        > ![Min Height](media/section-props-height.png "Min Height")  
 
         - **Alignment**: Select whether the component in the section must be left, center, or right aligned.
 
