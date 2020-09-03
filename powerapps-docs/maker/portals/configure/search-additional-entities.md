@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/20/2020
+ms.date: 09/02/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -106,7 +106,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
 1. Select the **Order Product** entity, and then select **Views**.
 
-    ![Views](media/search-additional-entities/views.png "Views")
+    ![Order Product - Views](media/search-additional-entities/views.png "Order Product - Views")
 
 1. Ensure that you see **Portal Search** in the views list.
 
