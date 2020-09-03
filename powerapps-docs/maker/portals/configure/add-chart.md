@@ -12,17 +12,21 @@ ms.reviewer: tapanm
 
 # Add a chart created in a model-driven app to a webpage in portal
 
-You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/portals-entity-tags.md#chart). You can add the chart Liquid tag in the **Copy** field on a webpage or in the **Source** field on a [Web template](../liquid/store-content-web-templates.md).
+You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/portals-entity-tags.md#chart). You can add the chart Liquid tag in:
+
+- The **Copy** field on a webpage.
+- In the **Source** field on a [Web template](../liquid/store-content-web-templates.md).
  
-For example, {% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}
+For example, `{% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}`
 
 ![Chart example](../media/dynamics365-chart-example.png "Chart example")
 
 You can also specify the ID of a view (saved query) to filter the query. For example:
 
+```
 <!—Leads by Source – Open Leads -->
-
 {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
+```
 
 ## Get the ID of a chart
 
@@ -34,13 +38,13 @@ You can also specify the ID of a view (saved query) to filter the query. For exa
     ![Export a chart](../media/export-dynamics365-chart.png "Export a chart")
 
 5. Open the XML file of the exported chart in a text editor.
-6. Copy the value of the \<visualizationid\> tag.
+6. Copy the value of the `<visualizationid>` tag.
 
     ![Get chartid for a chart](../media/dynamics365-chart-chartid.png "Get the chart ID for a chart")
 
-7. Paste the *visualizationid* value into your Liquid chart tag declaration for the chart ID parameter, for example:
+7. Paste the `visualizationid` value into your Liquid chart tag declaration for the chart ID parameter, for example:
 
-    {% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}.
+    `{% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}`
 
 ## Get the ID of a view
 
@@ -67,11 +71,7 @@ Read privilege is asserted for the target entity being queried in the chart. For
  
 If permission isn't granted, the user will see an access denied message.
 
-## Support for charts and chart types
-
-This section lists the supported and unsupported charts, chart types, and other charts related configuration.
-
-### Supported charts and chart types
+## Supported charts and chart types
 
 The following chart types are supported in portals:
 
@@ -98,7 +98,7 @@ Supported configuration for Horizontal (Category) Axis Labels:
     - Date Grouping by Week, Fiscal Year, Fiscal Period, and Quarter are **not supported**.
     - Date Grouping on Linked Entity attributes is supported only until the first level of Link.
 
-### Unsupported charts and chart types
+## Unsupported charts and chart types
 
 The following chart types are currently not supported in portals:
 
