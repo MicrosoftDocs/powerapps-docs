@@ -27,28 +27,28 @@ The component creates a button in your app. When app users click the button, it 
 
 
 
->[!IMPORTANT]
->Your 3D content must be in the .glb file format.  
->You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
+> [!IMPORTANT]
+> Your 3D content must be in the .glb file format.  
+> You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
 
 To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
->[!TIP]
+> [!TIP]
 > The MR components work best in well-lit environments with flat-textured surfaces. When establishing tracking, point the device at the surface you would like to track and slowly pan the device from right to left in broad arm motions. If tracking fails, exit and enter the MR view to reset the tracking and try again.
 
 ## Use the component
 
 Insert the component into your app as you normally would for any other button control or component.
 
-With an app open for editing in the [Power Apps Studio](https://create.powerapps.com):
+With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
 3. Select the component **View in MR** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.
 
-  ![](./media/augmented-view-mr/augmented-view-mr.png)
+   ![Insert the View in MR component into the app](./media/augmented-view-mr/augmented-view-mr.png "Insert the View in MR component into the app")
 
 You can modify the component with a number of properties.
 
@@ -56,17 +56,17 @@ You can modify the component with a number of properties.
 
 The following properties are on the component's **View in MR** pane on the **Properties** and **Advanced** tabs.
 
-![](./media/augmented-view-mr/augmented-view-mr-properties.png)
+![Properties on the View in MR pane](./media/augmented-view-mr/augmented-view-mr-properties.png "Properties on the View in MR pane")
 
 Note that some properties are only available under **More options** in the **Advanced** tab on the **View in MR** pane.
 
 Property | Description | Type | Location
 - | - | - | -
 Text | Label for the button | String | Properties (also in **Advanced**)
-Display type | Whether the button shows just an icon, text, or both | Drop-down selection | Properties (also in **Advanced**)
-Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li></ul><br/>See [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic for more information. | Not applicable | **Properties** (also in **Advanced**)
-Object width | Width of the displayed image or 3D content | Integer | **Properties** (also in **Advanced**)
-Object height | Height of the displayed image or 3D content | Integer | **Properties** (also in **Advanced**)
+Display type | Whether the button shows just an icon, text, or both. | Drop-down selection | Properties (also in **Advanced**)
+Source | Data source that identifies the .glb file to display. The **View in MR** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs.</li><li>Base64-encoded URIs.</li><li>Attachments or media content accessed through data connectors.</li></ul><br/>See [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic for more information. | Not applicable | **Properties** (also in **Advanced**)
+Object width | Width of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
+Object height | Height of the displayed image or 3D content. | Integer | **Properties** (also in **Advanced**)
 Object depth | The three-dimensional depth of the 3D content. | Integer | **Properties** (also in **Advanced**)
 Units | The unit used for the object width, height, and depth fields. | Drop-down selection | **Properties** (also in **Advanced**)
 Photos | The photos captured during the mixed reality session. | | Not applicable (output property only)
@@ -93,7 +93,7 @@ Photos | The photos captured during the mixed reality session. | | Not applicabl
 
 **[Font](./controls/properties-text.md)** – The name of the family of fonts in which text appears.
 
-**[FontStyle](./controls/properties-text.md)** - The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**
+**[FontStyle](./controls/properties-text.md)** – The style of the text in the component: **None**, **Strikethrough**, **Underline**, or **Italic**.
 
 **[FontSize](./controls/properties-text.md)** – The font size of the text that appears on a control.
 
@@ -123,11 +123,11 @@ Photos | The photos captured during the mixed reality session. | | Not applicabl
 
 **[TabIndex](./controls/properties-accessibility.md)** – Keyboard navigation order.
 
-**[TextAlignment](./controls/properties-text.md)** - The alignment of the text: **Center**, **Left**, **Right**, or Justify
+**[TextAlignment](./controls/properties-text.md)** – The alignment of the text: **Center**, **Left**, **Right**, or Justify.
 
 **[Tooltip](./controls/properties-core.md)** – Explanatory text that appears when the user hovers over a control.
 
-**[VerticalAlign](./controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**
+**[VerticalAlign](./controls/properties-text.md)** – The location of text on a control in relation to the vertical center of that control: **Middle**, **Top**, or **Bottom**.
 
 **[Visible](./controls/properties-core.md)** – Whether a control appears or is hidden.
 

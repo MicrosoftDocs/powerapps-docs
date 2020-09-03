@@ -72,6 +72,9 @@ In addition to image attributes, custom entities support zero or more file attri
 ### MaxSizeInKB attribute
 
  This value represents the maximum size (in kilobytes) of the image data that the attribute can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
+ 
+ > [!NOTE]
+ > MaxSizeInKB is set when the Image attribute is added to an entity. This cannot be changed after it is set.
 
 ### CanStoreFullImage attribute
 

@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: c1fa5f12-f66a-40bc-98e4-434b907d6485
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 

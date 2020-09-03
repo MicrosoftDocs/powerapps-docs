@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 34715e1f-35c0-4b7f-971e-e0a6518f0722
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -15,8 +15,6 @@ search.app:
   - D365CE
 ---
 # getControl (Client API reference)
-
-
 
 Gets a control on the form. 
 
@@ -30,7 +28,7 @@ The **formContext.getControl(arg)** method is a shortcut method to access **form
 
 **arg**: Optional. You can access a control on a form by passing an argument as either the **name** or the **index value** of the control on a form. For example: `formContext.getControl("firstname")` or `formContext.getControl(0)`.
 
-When the `arg` value is not provided, it returns an array of all the controls on the form.
+When the `arg` value is not provided, it returns an array of all the controls on the form. If the `arg` name is spelled wrong and is not on the form, it simply returns null value.
 
 
 ## Return Value

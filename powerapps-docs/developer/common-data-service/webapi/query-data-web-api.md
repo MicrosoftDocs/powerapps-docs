@@ -861,9 +861,20 @@ The change tracking feature allows you to keep the data synchronized in an effic
 
 More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md).
 
+## Column comparison using the Web API
+
+The following example shows how to compare columns using the Web API:
+
+```http
+https://<environment-root>/contacts?$select=firstname&$filter=firstname eq lastname
+```
+
+More information: [Use column comparison in queries](../column-comparison.md)
+
 ### See also
 
-[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
+[Work with Quick Find’s search item limit](../quick-find-limit.md)  
+[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

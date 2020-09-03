@@ -7,8 +7,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 11/14/2018
+ms.reviewer: nabuthuk
+ms.date: 07/17/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -56,19 +56,27 @@ When used in a [behavior formula](../working-with-formulas-in-depth.md), **GUID*
 
 To return a GUID value based on the hexadecimal string representation:
 
-* **GUID( "0f8fad5b-d9cb-469f-a165-70867728950e" )**
+```powerapps-dot
+GUID( "0f8fad5b-d9cb-469f-a165-70867728950e" )
+```
 
 You can also provide the GUID string without hyphens. This formula returns the same GUID value:
 
-* **GUID( "0f8fad5bd9cb469fa16570867728950e" )**
+```powerapps-dot
+GUID( "0f8fad5bd9cb469fa16570867728950e" )
+```
 
 Used in context, to set the **Status** field of a new database record to a well-established value:
 
-* **Patch( Products, Default( Products ), { Status: GUID( "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4" ) } )**
+```powerapps-dot
+Patch( Products, Default( Products ), { Status: GUID( "F9168C5E-CEB2-4faa-B6BF-329BF39FA1E4" ) } )
+```
 
 You probably don't want to show GUIDs to your users, but GUIDs can help you debug your app. To show the value of the **Status** field in the record that you created in the previous example, set the **Text** property of a **Label** control to this formula:
 
-* **First( Products ).Status**
+```powerapps-dot
+First( Products ).Status
+```
 
 The **Label** control will show **f9168c5e-ceb2-4faa-b6bf-329bf39fa1e4**.
 
@@ -76,7 +84,9 @@ The **Label** control will show **f9168c5e-ceb2-4faa-b6bf-329bf39fa1e4**.
 
 1. Set the **[OnSelect](../controls/properties-core.md)** property of a **[Button](../controls/control-button.md)** control to this formula:
 
-    **ClearCollect( NewGUIDs, ForAll( [ 1, 2, 3, 4, 5 ], GUID() ) )**
+    ```powerapps-dot
+    ClearCollect( NewGUIDs, ForAll( Sequence(5), GUID() ) )
+    ```
 
     This formula creates a single-column table that's used to iterate five times, resulting in five GUIDs.
 
@@ -94,4 +104,6 @@ The **Label** control will show **f9168c5e-ceb2-4faa-b6bf-329bf39fa1e4**.
 
 To generate a single GUID instead of a table, use this formula:
 
-**Set( NewGUID, GUID() )**
+```powerapps-dot
+Set( NewGUID, GUID() )
+```

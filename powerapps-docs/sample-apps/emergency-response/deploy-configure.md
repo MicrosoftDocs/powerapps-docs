@@ -6,11 +6,9 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/13/2020
+ms.date: 06/10/2020
 ms.author: pankar
 ms.reviewer: kvivek
-searchScope:
-  - PowerApps
 ---
 # Deploy the Hospital Emergency Response app
 
@@ -81,7 +79,10 @@ After you have purchased Power Apps, create an environment with a Common Data Se
 Follow the steps below to install Hospital Emergency Response app along with the configuration and sample data.
 
 > [!NOTE]
-> The configuration and sample data is installed only for new installation. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure that your existing data isn't overwritten.
+> 
+> - The configuration and sample data is installed only for new installation. If you have a prior installation of this app in your environment, the configuration and sample data won't be installed during the installation to ensure that your existing data isn't overwritten.
+>
+> - If you intend to transfer data from the hospital to [regional](/powerapps/sample-apps/regional-emergency-response/overview) solution, make sure you create the connections in your environment as described in [Create connections](/powerapps/sample-apps/emergency-response-data-transfer#step-1-create-connections) before installing the solution. The out-of-box solution to [transfer data from hospital to regional](../emergency-response-data-transfer.md) solution uses the Secure File Transfer Protocol (SFTP) as the data transmission mechanism. 
 
 You can install the app by using one of the following 3 options:
 
@@ -99,7 +100,7 @@ You can install the app by using one of the following 3 options:
 
 2.  In the left pane, select **Environments**, and then select the name of the environment you created in the previous step.
 
-3. In the environment details page, select **Manage Dynamics 365 apps**.
+3. In the environment details page, select **Dynamics 365 apps** under **Resources**.
 
     > [!div class="mx-imgBorder"] 
     > ![Environment settings](media/ppac-env-setting.png "Environment settings")
@@ -286,9 +287,9 @@ Next do the following:
 
 2.  Replace the `APPGUIDHERE` value with the actual app ID of a canvas app.
 
-3.  Save the file as .ps file.
+3.  Save the file as .ps1 file.
 
-4.  Run PowerShell as an administrator and execute the .ps file you just created.
+4.  Run PowerShell as an administrator and execute the .ps1 file you just created.
 
 5.  Repeat steps 2 - 4 for each canvas app.
 
@@ -496,6 +497,34 @@ This section provides information on how you can use the **Emergency Response Ap
 
 To view the published Power BI dashboard, see [View Power BI dashboard](configure-data-reporting.md#view-power-bi-dashboard)
 
+## Step 11: Enable flows for populating CDC data
+
+You must enable the following flows that help in collating the data from various sources in the solution in the format that Centers for Disease Control and Prevention (CDC) expects each hospital to report:
+
+- Populate CDC Data - Healthcare Staff
+- Populate CDC Data - Healthcare Supply
+- Populate CDC Data - Patients and Hospitals Capacities
+
+1.  Sign into [Power Automate](https://flow.microsoft.com/).
+
+2.  In the left pane, select **Solutions.** From the solution list, select **Hospital Emergency Response Solution** to open the solution.
+
+3.  In the solution, filter on **Flow** to find all the flows.
+
+    > [!div class="mx-imgBorder"]
+    > ![all-flows](media/all-flows.png)
+
+4.  Select the flow name to open the flow definition. For example, **Populate CDC Data - Healthcare Staff**.
+
+5.  Select **Edit** on the toolbar, and verify the connection information.  
+
+6. Select **Save** to save the changes, and then select **Turn On**.
+
+7. Perform steps 4-6 with each of the following flows to verify the connection, and then enable the flow:
+
+    - Populate CDC Data - Healthcare Supply
+    - Populate CDC Data - Patients and Hospitals Capacities
+
 ## Issues and feedback
 
 - To report an issue with the Hospital Emergency Response sample app, visit <https://aka.ms/emergency-response-issues>.
@@ -504,4 +533,4 @@ To view the published Power BI dashboard, see [View Power BI dashboard](configur
 
 ## Next step
 
-[Use the Hospital Emergency Response app](use.md)
+[Configure the data and view reporting](configure-data-reporting.md)
