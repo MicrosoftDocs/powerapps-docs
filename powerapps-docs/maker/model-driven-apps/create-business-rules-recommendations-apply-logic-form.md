@@ -151,6 +151,7 @@ A business rule may not execute because the field referenced in the business rul
         > [!div class="mx-imgBorder"] 
         > ![](media/account-name-on-form.png "Account name field on form")
 
+A business rule may also not execute because a field referenced in the business rule is a composite field. You can use the constituent fields of the composite field instead.
 ## Frequently asked questions (FAQ)
 *Can business rules unlock fields on a read-only form?*
 - Yes, a business rule can unlock fields and edit actions on a read-only form.
