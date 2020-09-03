@@ -31,6 +31,8 @@ search.app:
  You can't assign security roles to quick create, quick view, or card forms, so the only form that will be used by everyone is the one at the top of the form order.  
   
 ## To assign a form order  
+> [!NOTE]
+> To set form order using the new experience, see [Set the form order](control-access-forms.md#set-the-form-order).
   
 1.  Open the [solutions explorer](advanced-navigation.md#solution-explorer), expand the entity that you want, and then select **Forms**.  
   

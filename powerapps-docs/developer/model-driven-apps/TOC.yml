@@ -826,6 +826,8 @@
     href: define-ribbon-display-rules.md
   - name: Define ribbon actions
     href: define-ribbon-actions.md
+  - name: Override the default behavior to open records in grids
+    href: override-default-open-behavior-grids.md
   - name: Pass data from a page as a parameter to Ribbon Actions
     href: pass-data-page-parameter-ribbon-actions.md
   - name: Define custom actions to modify the ribbon

@@ -1,7 +1,7 @@
 ---
 title: Edit CSS in a portal | Microsoft Docs
 description: Instructions on editing CSS in a portal.
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
@@ -41,4 +41,7 @@ To upload a new CSS file:
 
 4. Browse and select the CSS file to upload.
 
+### See also
 
+- [Microsoft Learn: Advanced CSS in Power Apps portals](https://docs.microsoft.com/learn/modules/extend-power-app-portals/4-portal-css)
+- [Microsoft Learn: Advanced client-side development](https://docs.microsoft.com/learn/modules/extend-power-app-portals/5-advanced-portal-development)

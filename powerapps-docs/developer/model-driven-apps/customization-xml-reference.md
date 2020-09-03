@@ -27,7 +27,7 @@ The customizations.xml file is one of the files included in an exported unmanage
 
 > [!NOTE]
 > - Editing a managed solution file is not supported.  
-> - Not all elements of the customizations.xml file can be edited. More information: [Support for Editing the Customization File](../common-data-service/when-edit-customization-file.md)
+> - Not all elements of the customizations.xml file can be edited. More information: [Support for Editing the Customization File](/power-platform/alm/when-edit-customization-file)
 
 ## In This Section
 
@@ -39,7 +39,7 @@ The customizations.xml file is one of the files included in an exported unmanage
 
 ## Related Sections
 
-[When to edit the customizations file](../common-data-service/when-edit-customization-file.md)  
+[When to edit the customizations file](/power-platform/alm/when-edit-customization-file)  
 [Edit the Customizations file with schema validation](edit-customizations-xml-file-schema-validation.md)  
 [Customize the Ribbon for Dynamics 365](customize-commands-ribbon.md)  
 [Change application navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app) 

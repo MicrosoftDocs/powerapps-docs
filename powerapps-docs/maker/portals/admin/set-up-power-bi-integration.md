@@ -1,7 +1,7 @@
 ---
 title: "Set up Power BI integration with your portal | MicrosoftDocs"
 description: "Learn how to set up Power BI integration with your portal."
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
@@ -195,3 +195,4 @@ Customizers can now use the [powerbi](../liquid/portals-entity-tags.md#powerbi) 
 - [Add a Power BI component to a webpage using the portals Studio](../compose-page.md#add-power-bi)
 - [Add a Power BI report or dashboard to a webpage using liquid tag in portal](add-powerbi-report.md)
 - [powerbi Liquid tag](../liquid/portals-entity-tags.md#powerbi)
+- [Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)

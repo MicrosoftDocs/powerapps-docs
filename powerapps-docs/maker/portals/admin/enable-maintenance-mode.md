@@ -1,7 +1,7 @@
 ---
 title: "Enable maintenance mode for a portal | MicrosoftDocs"
 description: "Learn how to enable maintenance mode with your portal."
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
@@ -67,3 +67,6 @@ You can also choose to disable maintenance mode on your portal when the schedule
     > [!div class=mx-imgBorder]
     > ![Update maintenance mode settings](../media/configure-maint-mode.png "Update maintenance mode settings")
 
+### See also
+
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)

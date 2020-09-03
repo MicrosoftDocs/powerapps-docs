@@ -1,11 +1,11 @@
 ---
 title: Overview of themes in Power Apps portals | Microsoft Docs
 description: Introduction to themes in Power Apps portals.
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/28/2020
+ms.date: 08/11/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -16,12 +16,7 @@ In Power Apps portals, the **Enable basic theme** feature is set to **Off**. Whe
 
 In this article, you'll walk through the basic themes feature. For advanced theme customization, see [Edit CSS](edit-css.md).
 
-> [!IMPORTANT]
-> The basic theme feature is in preview. For more information about preview features, see [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview).
-
-## Enable basic themes for existing portals (Preview)
-
-[This topic is pre-release documentation and is subject to change.]
+## Enable basic themes for existing portals
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -58,6 +53,9 @@ You can set any existing theme in your portal to a default theme.
 The selected theme is applied to your portal.
 
 ![Applied theme](./media/theme-overview/theme-applied.png "Applied theme")
+
+> [!NOTE]
+> After changing theme or theme properties such as colors inside the Studio, select **Browse website** to view the changes in a separate browser tab. If you make multiple changes using this method and switch to different pages inside the browser, the stale browser cache may cause your browser to show theme changes that aren't latest. If this happens, use **Ctrl+F5** to reload the page.
 
 ## Create a new theme
 

@@ -92,20 +92,7 @@ You can change the enterprise gateway used for a given dataflow and change the g
 ## View and manage gateway permissions
 1.  In the left navigation pane of [powerapps.com](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Gateways** and then select the gateway you want.
 
-2.  To add a user to a gateway, select **Users**, specify a user or group, and then specify a permission level:
-
-    -   **Can use.** Users with this permission can create connections on the gateway to use for
-        apps and flows, but can't share the gateway. Use this permission for
-        users who will run apps but not share them.
-
-    -   **Can use + share.** Users with this permission can create a connection on the gateway to
-        use for apps and flows, and automatically share the gateway when sharing
-        an app. Use this permission for users who need to share apps with other
-        users or with the organization.
-
-    -   **Admin.** Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
-
-      For **Can use** and **Can use + share** permission levels, select the data sources that the user can connect to over the gateway.
+2.  To add a user to a gateway, select **Users**, specify a user or group, and then specify a permission level. Using gateways in dataflows requires Admin permission on the gateway. Admins have full control of the gateway, including adding users, setting permissions, creating connections to all available data sources, and deleting the gateway.
 
 ## View and manage gateway connections
 1.  In the left navigation bar of *powerapps.com*, select **Gateways**, and then choose the gateway you want.
@@ -135,6 +122,8 @@ There are a few known limitations when using enterprise gateways and dataflows.
 -   Dataflows are only supported using enterprise gateways. Personal gateways
     will not be available for selection in the drop-down lists and settings
     screens.
+    
+-   Using gateways in dataflows is only supported for people with *Admins* permissions. *Can use* and *Can use + share* permissions levels are not currently supported.
 
 For information about troubleshooting issues with gateways, or configuring the
 gateway service for your network, see [Understand on-premises data gateways](../canvas-apps/gateway-reference.md).

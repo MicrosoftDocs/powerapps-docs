@@ -1,11 +1,11 @@
 ---
 title: "About the Power Apps portals lifecycle | MicrosoftDocs"
 description: "Information about the Power Apps portals lifecycle and converting it from trial to production."
-author: neerajnandwana-ms
+author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/22/2020
+ms.date: 08/05/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -19,6 +19,8 @@ As an administrator, you can convert a trial or suspended portal to a production
 The first portal is free to be created in an environment in a tenant. If you need to create more than one portal, you must have 1 GB of unused storage space in the tenant.
 
 ## Stages in the portal lifecycle
+
+![Portal lifecycle stages](./media/portal-lifecycle/portal-lifecycle.png "Portal lifecycle stages")
 
 ### Trial portal
 
@@ -101,4 +103,5 @@ Follow the steps in [Reset a portal](reset-portal.md) to reset a portal that was
 
 ### See also
 
-[Power Apps portals FAQ](../faq.md)
+- [Microsoft Learn: Portal application lifecycle management](https://docs.microsoft.com/learn/modules/extend-power-app-portals/2-portal-application-lifecycle)
+- [Power Apps portals FAQ](../faq.md)
