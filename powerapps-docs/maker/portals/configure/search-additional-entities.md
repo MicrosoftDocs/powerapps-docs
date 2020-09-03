@@ -57,14 +57,9 @@ For example, if your entity logical name is *nwind_products*, the site marker wi
 
 The following walkthrough explains each step in detail with a sample database and solution to configure search for additional entities.
 
-## Walkthrough - configure search for additional entities with sample database
-
-The following walkthrough explains how to enable search for the **Order Products** entity in the sample database **Northwind**, available with Common Data Service.
-
-For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
-
-> [!TIP]
-> You can follow the walkthrough with an entity of your choice by replacing the *nwind_products* entity name with your entity's logical name.
+> [!NOTE]
+> - This walkthrough explains how to enable search for the **Order Products** entity in the sample database **Northwind**, available with Common Data Service. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
+> - You can follow the walkthrough with an entity of your choice by replacing the *nwind_products* entity name with your entity's logical name.
 
 ## Step 1: Add or update search site settings
 
