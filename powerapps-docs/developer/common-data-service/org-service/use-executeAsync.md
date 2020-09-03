@@ -26,7 +26,7 @@ Importing a solution asynchronously improves system performance by postponing me
 Merging records with a large number of related activities or other entity types can also take a long time to update all the related records, so executing these in the background can improve the user experience.
   
 > [!NOTE]
->  <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest>, <xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest> and <xref:Microsoft.Crm.Sdk.Messages.MergeRequest> are the only request classes that can be used with the `ExecuteAsync` message.
+>  <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest>, <xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest>, and <xref:Microsoft.Crm.Sdk.Messages.MergeRequest> are the only request classes that can be used with <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest>.
   
 Use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> request class to execute a message asynchronously. You configure the request and pass the request instance as an argument to <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>. <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncResponse> returns with the ID of the asynchronous job. You can (optionally) query the job using the ID to find out its current state.  
   
