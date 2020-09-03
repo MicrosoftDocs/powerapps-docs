@@ -1239,6 +1239,8 @@
 
 - name: Portals
   items:
+    - name: Power Apps portals
+      href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
     - name: Release updates
