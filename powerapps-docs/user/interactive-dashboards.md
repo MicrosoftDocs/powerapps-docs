@@ -45,3 +45,8 @@ To learn more on how to create and configure interactive dashboards, see [Create
 
   > [!div class="mx-imgBorder"]
   > ![Select an area on a chart](media/select_chart_area.png "Select an area on a chart")
+  
+4. To clear filter, select the **X** next to the filter or to clear all filters, select **Clear All**.
+
+  > [!div class="mx-imgBorder"]
+  > ![Clear filters](media/clear_filter.png "Clear filters")
