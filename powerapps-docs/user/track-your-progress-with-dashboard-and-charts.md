@@ -31,8 +31,8 @@ Dashboards are available for all record types. Charts are available on the Dashb
 
 Thre are two types of dashboards, **System Dashboards** and **My Dashboards**.
 
-> [!div class="mx-imgBorder"]
-> ![Choose between personal or system dashboard](media/select_dashboard.png "Choose between personal or system dashboard") 
+  > [!div class="mx-imgBorder"]
+  > ![Choose between personal or system dashboard](media/select_dashboard.png "Choose between personal or system dashboard") 
 
 
 1. **My Dashboards**: My dashboards are personal dashboards can only be see by the user that created the dashbaord. The user can also share their personal dashboard with other users if the user has sharing privileges for their security role.
