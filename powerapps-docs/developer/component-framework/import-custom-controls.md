@@ -91,7 +91,7 @@ The `push` capability speeds up the inner-developer cycle development because it
 To use the `push` capability, do the following:
 
 1. Ensure that you have a valid authentication profile created.
-2. Go in to the folder where you have created the code component project.
+2. Navigate to the directory where the `.pcfproj` file is located.
 3. Run the command.
 
    ```CLI
