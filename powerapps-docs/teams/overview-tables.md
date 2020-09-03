@@ -1,6 +1,6 @@
 ---
-title: Project Oakdale tables - Overview | Microsoft Docs
-description: Provides an overview of tables in Microsoft Teams.
+title: Overview of Project Oakdale | Microsoft Docs
+description: Provides an overview of Project Oakdale.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
@@ -9,7 +9,7 @@ ms.date: 08/17/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---
-# Project Oakdale tables: Overview
+# Overview of Project Oakdale
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
