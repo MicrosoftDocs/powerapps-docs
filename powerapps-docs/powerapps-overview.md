@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/30/2020
+ms.date: 08/02/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 ---
@@ -42,17 +42,13 @@ You can run apps that you created, or that someone else created and shared with 
 
 Power Apps admins can use **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to create and manage environments, get real-time, self-help recommendations and support for Power Apps and Power Automate, and view Common Data Service analytics. More information: [Administer Power Platform](/power-platform/admin/admin-guide)
 
-> [!NOTE] 
-> Admins can also use **Power Apps admin center** ([admin.powerapps.com](https://admin.powerapps.com)) to create and manage environments, users, roles, and data-loss prevention policies.
-
-
 ## Power Apps for developers
 
 Developers are app makers who can write code to extend business app creation and customization. Developers can use code to create data and metadata, apply server-side logic using Azure functions, plug-ins, and workflow extensions, apply client-side logic using JavaScript, integrate with external data using virtual entities and webhooks, build custom connectors, and embed apps into your website experiences to create integrated solutions. More information: [Power Apps for developers](/powerapps/#pivot=home&panel=developer)
 
 ## Power Apps and Dynamics 365
 
-Dynamics 365 applications, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing also use the underlying data platform (Common Data Service) used by Power Apps to store and secure data. This enables you to build apps using Power Apps and Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and Common Data Service](maker/common-data-service/data-platform-intro.md#dynamics-365-and-common-data-service)
+Dynamics 365 apps, such as Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Marketing also use the underlying data platform (Common Data Service) used by Power Apps to store and secure data. This enables you to build apps using Power Apps and Common Data Service directly against your core business data already used within Dynamics 365 without the need for integration. More information: [Dynamics 365 and Common Data Service](maker/common-data-service/data-platform-intro.md#dynamics-365-and-common-data-service)
 
 ## Try Power Apps for free
 

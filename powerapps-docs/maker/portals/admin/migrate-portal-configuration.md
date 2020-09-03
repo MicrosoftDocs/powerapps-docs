@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/08/2020
+ms.date: 08/10/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -21,13 +21,14 @@ To export configuration data, you would need to use the Configuration Migration 
 > [!NOTE]
 > - We recommend you to use the latest version of the Configuration Migration tool. The Configuration Migration tool can be downloaded from NuGet. More information for downloading the tool: [Download tools from NuGet](https://docs.microsoft.com/dynamics365/customer-engagement/developer/download-tools-nuget).
 > - The minimum solution version of portals supported by schema files for configuration migration is 8.4.0.275. However, we recommend that you use the latest solution version.
+> - Source and destination organizations must have same default language for the migration to work successfully.
 
 Schema files are available for the following portal types:
 
 - **Portals created in an environment with Common Data Service**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2110477)
 
-- **Portals created in an environment containing model-driven apps in Dynamics 365**
+- **Portals created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service)**
     - [Custom portal (Blank portal)](https://go.microsoft.com/fwlink/p/?linkid=2019804)
     - [Community portal](https://go.microsoft.com/fwlink/p/?linkid=2019704)
     - [Customer Self-Service portal](https://go.microsoft.com/fwlink/p/?linkid=2019705)
@@ -114,7 +115,7 @@ Power Apps portals doesn't support tenant to tenant migration. To migrate a port
 
 1. [Reset](reset-portal.md) your portal in the source tenant.
 
-1. Provision a new portal in an environment [with Common Data Service](../create-portal.md) or [containing model-driven apps in Dynamics 365](../create-dynamics-portal.md).
+1. Provision a new portal in an environment [with Common Data Service](../create-portal.md) or [containing customer engagement apps](../create-dynamics-portal.md).
 
 1. Migrate portal configurations and customizations using the [export](#export-portal-configuration-data) and [import](#import-portal-configuration-data) steps explained in this article earlier.
 

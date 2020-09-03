@@ -873,7 +873,8 @@ More information: [Use column comparison in queries](../column-comparison.md)
 
 ### See also
 
-[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
+[Work with Quick Find’s search item limit](../quick-find-limit.md)  
+[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />

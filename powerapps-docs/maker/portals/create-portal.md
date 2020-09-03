@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 02/07/2020
+ms.date: 08/06/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -16,7 +16,7 @@ With the capability to build a portal in Power Apps, you can create a website fo
 
 These are some benefits of creating a portal:
 
-- Because the data is stored in Common Data Service, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, model-driven apps in Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
+- Because the data is stored in Common Data Service, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
 - You can design the portal through the WYSIWYG Power Apps portals Studio by adding and configuring components on the webpages.
 
@@ -26,10 +26,11 @@ If you choose to create your portal in a new environment using the **Create new 
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
-Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
+Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service).
 
 > [!NOTE]
-> When you create a portal, a few solutions are installed and sample data is imported.
+> - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](#create-additional-portals-in-an-environment).
+> - When you create a portal, a few solutions are installed and sample data is imported.
 
 More information on working with environments: [Working with environments and Microsoft Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-environments)
 
@@ -71,13 +72,39 @@ After the portal is provisioned successfully, the status is updated and the port
 To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-existing-portals.md#edit).
 
 > [!NOTE]
-> - There can be only one portal of each type and for a language created in an environment.
 > - If you don't have sufficient privileges to provision a portal, an error is displayed. You must have the System Administrator role in Common Data Service to create a portal. You must also have the **Access Mode** set to **Read-Write** under **Client Access License (CAL) Information** in the user record.
 > - If you have purchased an older portal add-on, and want to provision a portal using the add-on, you must go to the **Dynamics 365 Administration Center** page. More information: [Provision a portal using the older portal add-on](provision-portal-add-on.md)
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).
 > - Provisioning portals from [make.powerapps.com](https://make.powerapps.com) does not consume the older portal add-ons. Also, these portals are not listed under the **Applications** tab on the **Dynamics 365 Administration Center** page.
 > - A Common Data Service starter portal cannot be created from the **Dynamics 365 Administration Center** page.
 > - Power Apps portals is not available in the France region.
+
+### Create additional portals in an environment
+
+An environment can have one portal of each type and for each language. Environments with Common Data Service have [starter portal template](portal-templates.md#environment-with-common-data-service) available. If you already have a starter portal for such an environment, you can't create another starter portal for the same language. Similarly, environments with customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, or Dynamics 365 Project Service Automation) have several [portal templates](portal-templates.md#environment-with-customer-engagement-apps) available. If you have a portal from one of the templates already created in a language, you can't create a new portal with the same template type and language. New portal must have either a different portal type, or a different language.
+
+For example, consider a scenario where you have a Common Data Service environment without the Dynamics 365 Apps. In this environment, you have a portal with *English* language created with the template type of *Starter portal*. You want to create a new portal in this environment.
+
+In this scenario, the following table explains which additional portal template and language combination is allowed when creating additional portals:
+
+| Template type and language of existing portal  | Template type and language of the new portal that you want to create | Allowed |
+| - | - | - |
+| *Starter portal* in English | *Starter portal* in English | &cross; |
+| *Starter portal* in English | *Starter portal* in French | &check; |
+
+Similarly, the following table explains the allowed template type and language combination for a portal that can be created if you have a Common Data Service environment with Dynamics 365 Apps. In this example, you have a portal with the template *Portal from blank* created in *English* language. You want to create a new portal in this environment.
+
+| Template type and language of existing portal | Template type and language of the new portal that you want to create | Allowed |
+| - | - | - |
+| *Portal from blank* in English | *Portal from blank* in English | &cross; |
+| *Portal from blank* in English | *Community portal* in English | &check; |
+| *Portal from blank* in English | *Portal from blank* in French | &check; |
+
+When an environment already has a portal of the available template type created, and if the environment doesn't have any additional languages enabled, you'll see this error message: *You have reached the maximum limit of 1 portal(s) on this environment. Please choose another environment or create new environment.*
+
+![Error when creating additional portal](media/create-additional-portal-error.png "Error when creating additional portal")
+
+For more information about enabling languages in an environment, go to [Enable language for an environment](https://docs.microsoft.com/power-platform/admin/enable-languages#enable-the-language).
 
 ## Create new environment
 
@@ -159,8 +186,8 @@ Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $tr
 Administrator are the users having one of the following Azure roles:
 
 - Global Administrator
-- Dynamics 365 Service Administrator
-- Power Platform Service Administrator
+- Dynamics 365 admin
+- Power Platform admin
 
 Users not having the any of the above mentioned Azure roles are considered as non-administrators.
 
