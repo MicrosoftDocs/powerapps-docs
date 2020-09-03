@@ -177,7 +177,7 @@ Some entities will have different sets of options.
 **Example**: `PhoneCall` entity `StateCode` and `StatusCode` options
 
 
-|`StateCode`|`StatusCode`|
+|StateCode|StatusCode|
 |---------|---------|
 |0 : Open|1: Open|
 |1 : Completed|2: Made <br />4: Received|

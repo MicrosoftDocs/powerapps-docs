@@ -44,7 +44,7 @@ A package lets you bundle and deploy multiple files related to your app at once.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
-    <Types xmlns="https://schemas.openxmlformats.org/package/2006/content-types">
+    <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
       <Default Extension="xml" ContentType="application/octet-stream" />
       <Default Extension="xaml" ContentType="application/octet-stream" />
       <Default Extension="dll" ContentType="application/octet-stream" />

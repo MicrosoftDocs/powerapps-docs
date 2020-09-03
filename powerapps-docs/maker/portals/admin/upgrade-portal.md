@@ -58,4 +58,6 @@ To enable a portal for early upgrade:
 
 If you encounter any issue during the early upgrade phase, you can report it through Microsoft support.
 
+### See also
 
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)

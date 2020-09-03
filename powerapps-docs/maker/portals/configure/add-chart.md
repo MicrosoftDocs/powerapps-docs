@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/14/2020
+ms.date: 09/02/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -133,3 +133,7 @@ The following table lists the charts that are currently not supported in portals
 - Hovering over currency data types formatting shows values with spaces instead of separators.
 - Numeric fields are currently shown in decimal format.
 - Horizontal Axis values can show only up-to 15 Labels.
+
+### See also
+
+[Microsoft Learn: Model-driven charts in portals](https://docs.microsoft.com/learn/modules/portals-integration/4-model-driven-charts)
