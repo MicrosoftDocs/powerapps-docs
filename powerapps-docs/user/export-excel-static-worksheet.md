@@ -57,7 +57,7 @@ You may have the option to export data to an Excel static worksheet in all recor
   
 - You can’t change the columns for a system view, such as **All Active Accounts**. You must either customize the view, which requires the System Administrator or System Customizer security role, or use Advanced Find to create your own view based on the current view.  
     
-- In model-driven apps, currency values are exported to Excel as numbers. After you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a40 format the data as currency).
+- In model-driven apps, currency values are exported to Excel as numbers. After you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4?ui=en-US&rs=en-US&ad=US).
   
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   
