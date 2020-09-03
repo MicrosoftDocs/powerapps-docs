@@ -2,7 +2,7 @@
 title: "Use webhooks to create external handlers for server events (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "You can send data about events that occur on the server to a web application using webhooks. Webhooks is a lightweight HTTP pattern for connecting Web APIs and services with a publish/subscribe model. webhook senders notify receivers about events by making requests to receiver endpoints with some information about the events." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/04/2019
+ms.date: 08/29/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -74,8 +74,7 @@ Other data you can expect to find passed to your service is in the table below:
 
 |Key|Value Description|
 |---------|---------|
-|`x-request-id`|A unique identifier for the request|
-|`x-ms-dynamics-organization`|The name of the tenant sending the request|
+|`x-ms-dynamics-organization`|The domain name of the environment sending the request|
 |`x-ms-dynamics-entity-name`|The logical name of the entity passed in the execution context data.|
 |`x-ms-dynamics-request-name`|The name of the Event that the webhook step was registered for.|
 |`x-ms-correlation-request-id`|Unique identifier for tracking any type of extension. This property is used by the platform for infinite loop prevention. In most cases, this property can be ignored. This value may be used when working with technical support because it can be used to query telemetry to understand what occurred during the entire operation.
@@ -87,9 +86,6 @@ Other data you can expect to find passed to your service is in the table below:
 The body will contain string that represents the JSON value of an instance of the <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> class. This is the same data that is passed to Azure service bus integrations. 
 
 The service you create must parse this data to extract the relevant items of information for your service to provide its function. How you choose to parse this data depends on the technology you are using and your preferences.
-
-> [!IMPORTANT]
-> Due to certain Service Bus optimizations, it is not recommended that .NET developers deserialize the JSON formatted message request body to a <xref:Microsoft.Xrm.Sdk.RemoteExecutionContext> object. Rather, use [JObject](https://www.newtonsoft.com/json/help/html/T_Newtonsoft_Json_Linq_JObject.htm) to parse the message body.
 
 The following is an example of the serialized JSON data passed for a step registered with the following properties:
 
