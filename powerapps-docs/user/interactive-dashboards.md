@@ -28,3 +28,7 @@ To learn more on how to create and configure interactive dashboards, see [Create
  ## View a interactive dashboard
  
 To view an interactive dashbaord, in the list of dashbards find the one that has the interactive icon ![Interactive dashboard icon](media/interactive_dashboard_icon.png "Interactive dashboard icon") next the dashboard name.
+
+
+> [!div class="mx-imgBorder"]
+> ![View a interactive dashboard](media/view_interactive_dashboard.png "view a interactive dashboard") 
