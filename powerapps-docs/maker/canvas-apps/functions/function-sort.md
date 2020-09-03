@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 04/26/2016
 ms.author: gregli
 search.audienceType: 
@@ -70,7 +70,7 @@ For the following examples, we'll use the **IceCream** [data source](../working-
 
 | Formula | Description | Result |
 | --- | --- | --- |
-| **Sort( IceCream, Flavor )**<br><br>**SortByColumns( IceCream, "Flavor" )** |Sorts **IceCream** by its **Flavor** column. The **Flavor** column contains strings, so the table is sorted alphabetically. By default, the sort order is ascending. |<style> img { max-width: none; } </style> ![](media/function-sort/icecream-flavor.png) |
+| **Sort( IceCream, Flavor )**<br><br>**SortByColumns( IceCream, "Flavor" )** |Sorts **IceCream** by its **Flavor** column. The **Flavor** column contains strings, so the table is sorted alphabetically. By default, the sort order is ascending. | ![](media/function-sort/icecream-flavor.png) |
 | **Sort( IceCream, Quantity )**<br><br>**SortByColumns( IceCream, "Quantity" )** |Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the table is sorted numerically.  By default, the sort order is ascending. |![](media/function-sort/icecream-quantity-asc.png) |
 | **Sort( IceCream, Quantity, SortOrder.Descending )**<br><br>**SortByColumns( IceCream, "Quantity", SortOrder.Descending )** |Sorts **IceCream** by its **Quantity** column.  The **Quantity** column contains numbers, so the sort is done numerically.  The sort order has been specified as descending. |![](media/function-sort/icecream-quantity-desc.png) |
 | **Sort( IceCream, Quantity + OnOrder )** |Sorts **IceCream** by the sum of its **Quantity** and **OnOrder** columns for each record individually. The sum is a number, so the table is sorted numerically.  By default, the sort order is ascending.  Since we are sorting by a formula and not by raw column values, there is no equivalent using **SortByColumns**. |![](media/function-sort/icecream-total.png) |

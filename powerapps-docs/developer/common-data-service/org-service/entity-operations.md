@@ -81,7 +81,7 @@ Attribute types can be any of the following:
 |Type|Description|
 |--|--|
 |<xref:Microsoft.Xrm.Sdk.EntityReference>|A **Lookup** attribute. A link to another record.|
-|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty>|Used only for entities that can be solution components, such as the [WebResource Entity](../reference/entities/webresource.md). More information: [Use managed properties](../use-managed-properties.md)|
+|<xref:Microsoft.Xrm.Sdk.BooleanManagedProperty>|Used only for entities that can be solution components, such as the [WebResource Entity](../reference/entities/webresource.md). More information: [Use managed properties](/power-platform/alm/use-managed-properties)|
 |<xref:Microsoft.Xrm.Sdk.Money>|A **Currency** attribute.|
 |<xref:Microsoft.Xrm.Sdk.OptionSetValue>|An **Option Set** attribute. **State** and **Status** attributes also use this type. |
 |<xref:System.Boolean>|A **Two Option** attribute.|

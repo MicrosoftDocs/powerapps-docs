@@ -27,7 +27,7 @@ This group of  samples demonstrate how to query data using the Common Data Servi
 
 - [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)
 
-- [Query Data Sample (C#)](samples/query-data-csharp.md)
+- [Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)
 
 This topic describes a common set of operations implemented by each sample in this group. This topic describes the HTTP requests and responses and text output that each sample in this group will perform without the language specific details. See the language specific descriptions and the individual samples for details about how this operations are performed.
 
@@ -45,9 +45,9 @@ This sample is divided into the following principal sections, containing Web API
 |[Parameter alias](#bkmk_parameteralias)|[Use parameter aliases with system query options](query-data-web-api.md#bkmk_useParameterAliases)|
 |[Limit results](#bkmk_limitresults)|[Limit results](query-data-web-api.md#bkmk_limitResults)<br /><br /> [Limits on number of entities returned](query-data-web-api.md#bkmk_limits)|
 |[Expanding results](#bkmk_expandresults)|[Retrieve related entities by expanding navigation properties](query-data-web-api.md#bkmk_expandRelated)|
+|[Predefined queries](#bkmk_predefinedqueries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /><br /> <xref:Microsoft.Dynamics.CRM.userquery?text=userquery EntityType/><br /><br /> <xref:Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType/>|
 <!-- TODO:
 |[FetchXML queries](#bkmk_fetchxml)|[FetchXML schema](../org-service/fetchxml-schema.md)<br /><br /> [Page large result sets with FetchXML](../org-service/page-large-result-sets-with-fetchxml.md)<br /><br /> [Use custom FetchXML](retrieve-and-execute-predefined-queries.md#bkmk_useFetchXML)| -->
-|[Predefined queries](#bkmk_predefinedqueries)|[Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br /><br /> <xref href="Microsoft.Dynamics.CRM.userquery?text=userquery EntityType" /><br /><br /> <xref href="Microsoft.Dynamics.CRM.savedquery?text=savedquery EntityType" />|
 
 The following sections contain a brief discussion of the Common Data Service Web API operations performed, along with the corresponding HTTP messages and associated console output.
 
@@ -2236,5 +2236,5 @@ Saved User Query:
 [Use the Common Data Service Web API](overview.md)<br />
 [Query Data using the Web API](query-data-web-api.md)<br />
 [Retrieve and execute predefined queries](retrieve-and-execute-predefined-queries.md)<br />
-[Web API Query Data Sample (C#)](samples/query-data-csharp.md)<br />
+[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)<br />
 [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)
