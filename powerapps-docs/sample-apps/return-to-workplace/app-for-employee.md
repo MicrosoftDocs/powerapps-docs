@@ -55,7 +55,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
 1. Select **GET DAY PASS**.
 
-2. Select an available facility from the facility list or use the saved facility and area shortcut if applicable.
+2. Select an available facility from the facility list or use the saved facility and area shortcut if applicable. In **Recent** you will find the facilities you most recently used. For saved facilities and recent facilities, it indicates if the facility is available based on their phase and the earlier bookings. When a facility is unavailable, it will be greyed out and unavailable for booking.
 
 3. Select **BOOK A SPACE** to continue with the check-in process.
 
