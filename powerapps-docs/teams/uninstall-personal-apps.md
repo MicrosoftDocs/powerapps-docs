@@ -12,6 +12,8 @@ ms.reviewer:
 
 # Uninstall Power Apps personal app
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 Uninstalling Power Apps app removes the app as a personal app available to your account. Uninstalling Power Apps app doesn’t uninstall or remove the apps created using Power Apps from the respective Teams channels.
 
 To uninstall Power Apps personal app:

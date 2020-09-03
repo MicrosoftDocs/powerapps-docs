@@ -5,12 +5,14 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2020
+ms.date: 09/03/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
 
 # Remove an app from your team
+
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Removing an app added as a tab from a Teams channel makes it inaccessible from the Teams tab for all members of the Teams channel.
 
