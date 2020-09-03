@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Use interactive dashboards and charts
+# Use interactive dashboards and charts to filter data
 
 Use interactive dashboards to see workload information and take action. The charts on a interactive dashboard serves as a simple filtering source. You can select different data points on a chart to filter data based on the filter criteria. 
 
@@ -35,9 +35,8 @@ The single-stream dashboards display real-time data over one stream based on an 
 > [!div class="mx-imgBorder"]
 > ![Single stream interactive dashboard](media/single_stream.png "Single stream interactive dashboard") 
 
-
  
- ## Work with interactive dashboard
+ ## Use visual filters
  
  Use the visual filter option to drill down in to the data on the charts.
  
