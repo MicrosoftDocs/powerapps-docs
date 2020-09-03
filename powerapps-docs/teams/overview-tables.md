@@ -10,6 +10,10 @@ ms.author: nhelgren
 ms.reviewer: matp
 ---
 # Project Oakdale tables: Overview
+
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
+
 Project Oakdale delivers a built-in, low-code data platform for Teams. It provides relational data storage, rich data types, enterprise grade governance, and one-click solution deployment. Project Oakdale enables everyone to easily build and deploy apps. 
 
 Project Oakdale tables provide the ability to create, populate, and query data within Project Oakdale. Tables represent different types of entities important to an organization, such as a table to store products or another to store orders.  

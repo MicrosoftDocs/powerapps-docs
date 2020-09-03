@@ -5,12 +5,14 @@ author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2020
+ms.date: 09/03/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---
 
 # How are Project Oakdale and Common Data Service different?
+
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 Applications within a Team have access to a Project Oakdale environment.  Project Oakdale is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Project Oakdale delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Project Oakdale environment can contain, Project Oakdale can be upgraded to Common Data Service.
 

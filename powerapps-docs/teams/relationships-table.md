@@ -1,6 +1,6 @@
 ---
-title: Table relationships | Microsoft Docs
-description: Explains how to create and use table relationships.
+title: Table relationships in Project Oakdale | Microsoft Docs
+description: Explains how to create and use table relationships in in Project Oakdale.
 author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
@@ -11,12 +11,18 @@ ms.reviewer: matp
 ---
 
 # Work with table relationships
-Table relationships define the ways that table records can be associated with records from other tables or the same table. There are three types of table relationships. Project Oakdale allows for the creation of the same relationship types as Common Data Service:
-- One-to-many relationships. In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class of students have a single classroom.
-- Many-to-one relationships. In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, one single teacher teaches many classes.
-- Many-to-many relationships. In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
-For more information about relationships, see [Entity relationships overview](../maker/common-data-service/create-edit-entity-relationships.md). 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
+
+Table relationships define the ways that table records can be associated with records from other tables or the same table. There are three types of table relationships. Project Oakdale allows for the creation of the same relationship types as Common Data Service:
+- **One-to-many relationships**. In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class of students have a single classroom.
+
+- **Many-to-one relationships**. In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, one single teacher teaches many classes.
+
+- **Many-to-many relationships**. In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
+
+For more information about relationships, see [Entity relationships overview](../maker/common-data-service/create-edit-entity-relationships.md) in Common Data Service docs. 
 
 ## Create a table relationship
 To add a lookup relation to a table, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.

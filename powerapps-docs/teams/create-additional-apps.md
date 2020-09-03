@@ -12,6 +12,8 @@ ms.reviewer:
 
 # Create additional apps from Teams
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 Creating the [first app](create-first-app.md) inside a team using Power Apps app creates an environment. After an environment is available, you can create additional apps inside a team using several methods. Let’s take a look at several methods you can use to create an app.
 
 ## Create an app from Power Apps Home

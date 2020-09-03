@@ -12,6 +12,8 @@ ms.reviewer:
 
 # Understand Power Apps Studio
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 When you create a canvas app using any method, you’re taken to the canvas app
 builder called Microsoft Power Apps Studio. You can use Power Apps Studio to design, build, and manage your canvas app.
 

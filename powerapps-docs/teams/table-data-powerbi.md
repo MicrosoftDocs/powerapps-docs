@@ -12,6 +12,8 @@ ms.reviewer: matp
 
 # Analyze table data with Power BI Desktop
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 You can use Power BI Desktop to view tables in Project Oakdale. The table data that you can access from your environment is read-only.
 
 ## View table data

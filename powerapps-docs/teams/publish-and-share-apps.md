@@ -12,6 +12,8 @@ ms.reviewer:
 
 # Share and publish your app
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 After you build a canvas app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
 
 When creating an app inside Teams, you need to share the app with the Microsoft 365 Group associated for the selected team.

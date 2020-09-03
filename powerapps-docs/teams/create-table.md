@@ -10,7 +10,9 @@ ms.author: nhelgren
 ms.reviewer: matp
 ---
 
-# Create tables in Teams 
+# Create tables in Teams
+
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 In Teams, data is defined by *tables*, which are the same as *entities* in Common Data Service. To create a table, you must be a member of a team. 
 
