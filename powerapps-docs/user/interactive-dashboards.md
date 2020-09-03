@@ -48,7 +48,7 @@ To learn more on how to create and configure interactive dashboards, see [Create
   > [!div class="mx-imgBorder"]
   > ![Select drill down option](media/drill_down.png "Select drill down option")
   
-4. Select an area one of the chart or graphs to apply a filter. 
+4. Select an area one of the chart or graph to apply a filter. 
 
   > [!div class="mx-imgBorder"]
   > ![Select an area on a chart](media/select_chart_area.png "Select an area on a chart")
