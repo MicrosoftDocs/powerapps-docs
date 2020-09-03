@@ -177,7 +177,9 @@ When solution checker fails due to Common Data Service denying access based on a
 
 ### Plugin step unexpectedly interrupts execution by throwing InvalidPluginExecutionException
 
-When solution checker fails due to the error "ISV aborted code", a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
+Solution checker may fail due to the errors "ISV code aborted the operation" or "An unexpected error occurred from ISV code". When this occurs, it indicates a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException or that an error was not caught properly in plugin code. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
+
+Common operations invoked by solution checker include Create and Update. These operations can occur on the following entities: Analysis Job, Analysis Component, or Analysis Result.
 
 ## Solution checker fails due to disabled first-party application in Azure Active Directory
 

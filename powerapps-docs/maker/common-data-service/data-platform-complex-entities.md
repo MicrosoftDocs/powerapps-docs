@@ -1,13 +1,12 @@
 ---
-title: Complex entities requiring Power Apps Plan 2 licenses | Microsoft Docs
+title: Complex entities requiring Power Apps licenses | Microsoft Docs
 description: A list of complex entities in Common Data Service that require a Power Apps Plan 2 license.
-author: lancedMicrosoft
-manager: kvivek
+author: KumarVivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: reference
-ms.date: 04/15/2020
-ms.author: lanced
+ms.date: 08/28/2020
+ms.author: kvivek
 search.audienceType: 
   - maker
 search.app: 
@@ -18,7 +17,7 @@ search.app:
 # Complex entities and licensing
 
 > [!IMPORTANT]
-> *This topic is applicable only for older Power Apps Plan 1 and Plan 2 licenses.* 
+> *This topic is applicable only for older Power Apps Plan 1 and Plan 2 licenses.*
 >
 > Complex entities are applicable *only* for the older Power Apps Plan 1 and Plan 2 licenses, and not for the latest Power Apps per app and Power Apps per user plans.
 > 
@@ -35,10 +34,10 @@ Entities that include the following complex server-side logic require users of a
 To know whether or not you've added complex business logic to your entities, review the list of plug-in assemblies and workflows configured in your environment.
 
 ## Complex entities installed with Dynamics 365 apps
-The following table lists entities that contain complex server-side logic out-of-the-box as part of the installation of model-driven applications in Dynamics 365, such as Dynamics 365 Sales and Dynamics 365 Customer Service. This list is intended as a guide. Depending on which Dynamics 365 apps and versions are installed in your environment, the list of complex entities may vary.
+The following table lists entities that contain complex server-side logic out-of-the-box as part of the installation of customer engagement apps in Dynamics 365 (Dynamics 365 Sales, Customer Service, Field Service, Marketing, and Project Service Automation). This list is intended as a guide. Depending on the Dynamics 365 apps and versions installed in your environment, the list of complex entities may vary.
 
 > [!NOTE]
->  If you are using the Common Data Service and have not installed a Dynamics 365 application or third-party solution, your environment will not have entities containing complex server side logic.
+>  If you are using the Common Data Service and have not installed a Dynamics 365 app or third-party solution, your environment won't have entities containing complex server-side logic.
 
 * Account
 * Agreement
