@@ -1,12 +1,12 @@
 ---
-title: "Export to an Excel dynamic worksheet in model-driven Powerapps| MicrosoftDocs"
-ms.custom: ""
+title: "Export to an Excel dynamic worksheet in model-driven Power Apps| MicrosoftDocs"
+description: How to export to an Excel dynamic worksheet in model-driven Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 8/27/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -26,6 +26,9 @@ Export your app data to an Office Excel worksheet so users can have the latest i
 You can’t export data to a dynamic worksheet in Excel for all record types. If you don’t see the option, it’s not available for that record.  
   
 1. Open a list of records in the app and select the arrow to the right of **Export to Excel**. 
+
+   > [!div class="mx-imgBorder"] 
+   > ![Export to excel](media/export_to_excel.png "Select export to Excel")
   
 2. Select **Dynamic Worksheet**.  
   
@@ -48,12 +51,15 @@ You can’t export data to a dynamic worksheet in Excel for all record types. If
   
 6. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
   
-7. To refresh data in the file, on the **Data** tab, select **Refresh from Power Apps**.  
+7. To refresh data in the file, on the **Data** tab, select **Refresh All**.  
+
+   > [!div class="mx-imgBorder"] 
+   > ![Refresh all data](media/refresh_data.png "Refresh all data")
   
    > [!NOTE]
-   > If you have a phone number that starts with **+** or **–** (for example +1-123-456-7890), when you refresh the dynamic worksheet, the phone number field will not display the number correctly.   
-   >
+   > - If you have a phone number that starts with **+** or **–** (for example +1-123-456-7890), when you refresh the dynamic worksheet, the phone number field will not display the number correctly.   
    > To avoid the issue, use a space or parentheses **()**, like this: +1 123-456-7890 or +1 (123)-456-7890.  
+   >- If you have any issues with dynamic worksheet, see [Troubleshoot export to Excel](ts-export-to-excel.md).  
   
 ## Tips  
   

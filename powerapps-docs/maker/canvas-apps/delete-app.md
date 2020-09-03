@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/08/2020
+ms.date: 08/06/2020
 ms.author: alaug
 search.audienceType: 
   - maker
@@ -50,7 +50,7 @@ This article shows you how to delete a canvas app.
 
 ## Delete an app as the administrator
 
-If owner of an app is unavailable, an administrator such as Global admin, Azure Active Directory Global admin, or Dynamics 365 Service administrator can set the owner of an app. And then, the [new owner can delete the app](#delete-an-app-as-the-owner).
+If owner of an app is unavailable, an administrator such as Global admin, Azure Active Directory Global admin, or Dynamics 365 admin can set the owner of an app. And then, the [new owner can delete the app](#delete-an-app-as-the-owner).
 
 To set a user as the owner of an app, use the [Power Apps cmdlets for administrators](https://docs.microsoft.com/power-platform/admin/powerapps-powershell).
 
@@ -59,6 +59,7 @@ To set a user as the owner of an app, use the [Power Apps cmdlets for administra
 
 ### See also
 
-[Share an app](share-app.md)  
-[Change app name and tile](set-name-tile.md)  
-[Restore an app to a previous version](restore-an-app.md)
+- [Share an app](share-app.md)  
+- [Change app name and tile](set-name-tile.md)  
+- [Restore an app to a previous version](restore-an-app.md)
+- [Export and import an app](export-import-app.md)

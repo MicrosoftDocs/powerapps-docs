@@ -62,7 +62,7 @@ These are the localizable values that are used to refer to the attributes in an 
 The `AttributeTypeName` property describes the type of an attribute. This property contains a value of type `AttributeTypeDisplayName` which provides a label for each the different types of attributes that exist. 
 
 > [!NOTE]
-> Don't be confused by the `AttributeType` property. The values in this older property are mostly aligned with `AttributeTypeName` except that it shows `ImageType` attributes as `Virtual`. You should refer to the `AttributeTypeName` property rather than the `AttributeType` property.
+> Don't be confused by the [AttributeType](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.attributetype#Microsoft_Xrm_Sdk_Metadata_AttributeMetadata_AttributeType) property. The values in this older property are mostly aligned with [AttributeTypeName](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.attributetypename#Microsoft_Xrm_Sdk_Metadata_AttributeMetadata_AttributeTypeName) except that it shows `ImageAttributeMetadata` and `MultiSelectPicklistAttributeMetadata` as `Virtual`. Refer to the `AttributeTypeName` property rather than the `AttributeType` property.
 
 In the following table:
 
@@ -124,11 +124,11 @@ This property can have the following values set:
 |Name|Value|UI Label|Description|
 |--|--|--|--|
 |`None`|0|**Optional**|No requirements are specified.|
-|`SystemRequired`|1|**System Required**|The attribute is required to have a value.|
-|`ApplicationRequired`|2|**Business Required**|The attribute is required by the business to have a value.|
+|`SystemRequired`|1|**System Required**|The data service requires the attribute to have a value.|
+|`ApplicationRequired`|2|**Business Required**|The application requires the attribute to have a value.|
 |`Recommended`|3|**Business Recommended**|It is recommended that the attribute has a value.|
 
-Common Data Service only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. 
+Common Data Service only enforces the `SystemRequired` option for attributes created by the system. Custom attributes cannot be set to use the `SystemRequired` option. The data service does not return an error when an attribute with `ApplicationRequired` applied does not have a value.
 
 Model-driven apps will enforce the `ApplicationRequired` option and use a different presentation for the `Recommended` option. Creators of custom clients may use this information to require similar validation or presentation options.
 

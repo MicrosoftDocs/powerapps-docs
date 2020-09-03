@@ -24,24 +24,24 @@ search.app:
 ---
 # Types of entities
 
-Before creating or editing entities in Common Data Service, you should understand that there are different types of entities. Once a custom entity is created, these types cannot be changed. The two major divisions are based on entity ownership and whether the entities are activity entities.  
+Before creating or editing entities in Common Data Service, you should understand that there are different types of entities. Once a custom entity is created, these types can't be changed. The two main entity types are standard entities and activity entities.  
   
 <a name="BKMK_EntityOwnership"></a>
 
-## Entity ownership  
+## Standard entities 
 
-There are four different types of entity ownership. When you create a custom entity the only options are **user or team owned** or **organization-owned**, but you should be aware that other entities have different ownership types.  
+There are four different types of standard entity ownership. When you create a custom standard entity the only options are **User or team** owned or **Organization** owned, but you should be aware that other entities have different ownership types.  
   
 |Ownership|Description|  
 |---------------|-----------------|  
 |**Business-owned**|Data in these entities belongs to the Business unit. Access to the data can be controlled at the business unit level.|  
 |**None**|Data not owned by another entity.|  
-|**Organization-owned**|Data belongs to the organization. Access to the data is controlled at the organization level.|  
-|**User or Team Owned**|Data belongs to a user or a team. Actions that can be performed on these records can be controlled on a user level.|  
+|**Organization**|Data belongs to the organization. Access to the data is controlled at the organization level.|  
+|**User or team**|Data belongs to a user or a team. Actions that can be performed on these records can be controlled on a user level.|  
   
   
 > [!IMPORTANT]
->  After an entity is created, you can’t change the ownership. Before you create an entity, make sure that you choose the correct type of ownership. If you later determine that your custom entity must be of a different type, you have to delete it and create a new one.
+>  After a standard entity is created, you can’t change the ownership. Before you create an entity, make sure that you choose the correct type of ownership. If you later determine that your custom entity must be of a different type, you have to delete it and create a new one.
   
 <a name="BKMK_ActivityEntities"></a>
 

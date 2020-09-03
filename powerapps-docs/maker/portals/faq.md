@@ -642,3 +642,7 @@ To fix this issue, add the CSS file with entire content in the notes section of 
 ### MIME type of file isn't text/css
 
 To fix this issue, ensure that there are no plugins or flows that override the MIME type of the CSS file(s).
+
+### See also
+
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)
