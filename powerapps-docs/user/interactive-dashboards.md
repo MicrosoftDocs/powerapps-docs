@@ -23,5 +23,5 @@ Use interactive dashboards to see workload information and take action. The char
 To learn more on how to create and configure interactive dashboards, see [Create and configure model-driven app interactive experience dashboards](https://docs.microsoft.com/powerapps/maker/model-driven-apps/configure-interactive-experience-dashboards).
 
 > [!div class="mx-imgBorder"]
-> ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
+> ![Interactive dashboard](media/interactive_dashboard.png "Interactive dashboard") 
  can be a
