@@ -3,9 +3,9 @@ title: "Xrm.Utility (Client API reference)| MicrosoftDocs"
 ms.date: 02/25/2020
 ms.service: powerapps
 ms.topic: "reference"
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
