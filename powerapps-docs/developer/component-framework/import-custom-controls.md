@@ -47,7 +47,7 @@ To create and import a solution file:
     > - If you encounter an error that says *Ambiguous project name* when running the `msbuild` command on your solution, ensure that your solution name and project name are not the same.
 
 4. The generated solution files are located inside the `\bin\debug\` folder after the build is successful.
-5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerApps-BuildTools).
+5. Manually [import the solution into Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/import-update-export-solutions) using the web portal or automatically using the [Microsoft Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools).
 
 ## Connecting to your environment
 
@@ -91,7 +91,7 @@ The `push` capability speeds up the inner-developer cycle development because it
 To use the `push` capability, do the following:
 
 1. Ensure that you have a valid authentication profile created.
-2. Navigate to the root directory where the code component project is created.
+2. Go in to the folder where you have created the code component project.
 3. Run the command.
 
    ```CLI
