@@ -27,6 +27,15 @@ Dashboards are available for all record types. Charts are available on the Dashb
 > ![Dashboard](media/dashboard_sample.png "Sample Dashboard") 
 
 
+## View dashboards
+
+Thre are two types of dashboards, **System Dashboards** and **My Dashboards**.
+
+**System Dashboards**: System dashboards are craete by your dministrator. By default, these dashboards are visible to all users. 
+
+**My Dashboards**: My dashboards are personal dashboards can only be see by the user that created the dashbaord. The user can also share their personal dashboard with other users if the user has sharing privileges for their security role.
+
+
 ## Expand, refresh, and view records
 
 
