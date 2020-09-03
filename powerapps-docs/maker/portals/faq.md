@@ -266,7 +266,7 @@ When you enable diagnostic logging, you can search for particular errors that us
 
 Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
 
-    https://content.powerapps.com/resource/powerappsportal
+https://content.powerapps.com/resource/powerappsportal
 
 > [!NOTE]
 > Power Apps portals hosted in Microsoft Government Cloud don't use CDN.
