@@ -40,7 +40,7 @@ You can find all available facilities and see the reopen status for them. Select
 > [!div class="mx-imgBorder"]
 > ![List of facilities](media/employee-facility-list2.png "List of facilities")
 
-When you select a facility from the facility list, the current status of the facility and associated details are displayed. Select **<** to return to the previous screen.
+When you select a facility from the facility list, the current status of the facility and associated details are displayed. Select **<** to return to the previous screen. Now you can also book a space directly from the look up screen. When a facility isn't available, then the **BOOK A SPACE** button is disabled.
 
 > [!div class="mx-imgBorder"]
 > ![Facility details](media/employee-facility-details2.png "Facility details")
