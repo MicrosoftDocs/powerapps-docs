@@ -59,13 +59,13 @@ conceptualContent:
     
     - title: Create apps and portals
       links:
-        - text: Create canvas apps
+        - text: Canvas apps
           url: https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started
           itemType: overview
-        - text: Create model-driven apps
+        - text: Model-driven apps
           url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview
           itemType: overview
-        - text: Create portals
+        - text: Portals
           url: https://docs.microsoft.com/en-us/powerapps/maker/portals/overview
           itemType: overview             
     
