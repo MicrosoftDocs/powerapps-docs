@@ -41,7 +41,7 @@ When you create an app in Teams using Power Apps app for the first time or insta
 ## Get started with creating flows and chatbots in Teams
 
 You can create:
-- Power Automate flows using the Power Apps app in Teams. For more information, see [Create flows from with the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app) in Power Automate docs. 
+- Power Automate flows using the Power Apps app in Teams. For more information, see [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app) in Power Automate docs. 
 
 - Chatbots using the Power Virtual Agents app in Teams. For more information, see [TODO: Add link] in Power Virtual Agents docs.
 
