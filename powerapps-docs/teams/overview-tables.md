@@ -23,7 +23,7 @@ Each of these tables contains columns that contain data about the subject of the
 A solution will often have multiple tables that are used together in an application. For example, an Order table may reference multiple other tables (Customer, Product, Country, etc.)  These tables are “related” to one another and tables provide the way to create those relationships.
 
 > [!NOTE]
-> All the capabilities found in tables are powered by Project Oakdale. While this will satisfy many situations, there are situations where an organization may want to have additional capacity, capabilities, or control over their solution. In these scenarios, Project Oakdale environments can be upgraded to Common Data Service. The upgrade process, referred to as *promotion*, has several considerations discussed in [Promotion process](/power-platform/admin/about-teams-environment?branch=teams-preview#promotion-process). 
+> All the capabilities found in tables are powered by Project Oakdale. While this will satisfy many situations, there are situations where an organization may want to have additional capacity, capabilities, or control over their solution. In these scenarios, Project Oakdale environments can be upgraded to Common Data Service. The upgrade process, referred to as *promotion*, has several considerations discussed in [Promotion process](/power-platform/admin/about-teams-environment?branch=teams-preview#promotion-process) in the Power Platform admin guide. 
 
 ### See also
 [How are Project Oakdale and Common Data Service different?](data-platform-compare.md) <br />
