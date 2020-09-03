@@ -27,7 +27,8 @@ To learn more on how to create and configure interactive dashboards, see [Create
 > ![Interactive dashboard](media/interactive_dashboard.png "Interactive dashboard") 
  
  ## Work with interactive dashboard
- Use the visual filter option to see visual filters for work streasm below. 
+ 
+ Use the visual filter option to drill-down in to the data on the charts.
  
 1. To view an interactive dashbaord, in the list of dashbards find the one that has the interactive icon ![Interactive dashboard icon](media/interactive_dashboard_icon.png "Interactive dashboard icon") next the dashboard name.
 
