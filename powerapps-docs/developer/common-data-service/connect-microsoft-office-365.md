@@ -1,6 +1,6 @@
 ---
 title: "Connect with Microsoft Office 365 and Common Data Service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "The Microsoft Office 365 portal provides a single sign-on experience for Office 365 customers where they can sign in once and access any Office 365 application, including Dynamics 365 (online)" # 115-145 characters including spaces. This abstract displays in the search result.
+description: "The Microsoft Office 365 portal provides a single sign-on experience for Office 365 customers where they can sign in once and access any Office 365 application" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
 ms.date: 10/31/2018
 ms.reviewer: "pehecke"
@@ -22,14 +22,14 @@ Common Data Service is part of the Office 365 collaboration and productivity too
  Using federation, applications can connect to Common Data Service using the same system user identities and credentials available in an Azure Active Directory based network. More information: [Single sign-on roadmap](https://technet.microsoft.com/library/hh967643.aspx).  
   
 ## In This Section  
- [Dynamics 365 (online) Integration with Office 365](online-integration-office-365.md)  
+ [Common Data Service Integration with Office 365](online-integration-office-365.md)  
   
- [Authenticate Office 365 Users with Dynamics 365 (online) Web Services](/dynamics365/customer-engagement/developer/authenticate-office-365-users-customer-engagement-web-services)  
+ [Authenticate Office 365 Users with Common Data Service Web Services](/dynamics365/customer-engagement/developer/authenticate-office-365-users-customer-engagement-web-services)  
   
- [Sample: Authenticate Users with Dynamics 365 Web Services](/dynamics365/customer-engagement/developer/sample-authenticate-users-web-services)  
+ [Sample: Authenticate Users with Common Data Service Web Services](/dynamics365/customer-engagement/developer/sample-authenticate-users-web-services)  
   
 ## Related Sections  
- [Authenticate Users with Dynamics 365 Web Services](/dynamics365/customer-engagement/developer/authenticate-users)  
+ [Authenticate Users with Common Data Service Web Services](/dynamics365/customer-engagement/developer/authenticate-users)  
   
- [Connect to the Dynamics 365 Web Services](/dynamics365/customer-engagement/developer/authenticate-office-365-users-customer-engagement-web-services)  
+ [Connect to the Common Data Service Web Services](/dynamics365/customer-engagement/developer/authenticate-office-365-users-customer-engagement-web-services)  
  
