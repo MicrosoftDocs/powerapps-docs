@@ -19,7 +19,7 @@ Model-driven app design is a component-focused approach to app development. Mode
 
 :::row:::
    :::column span="":::
-      <img src="../media/index/i_get-started.svg" alt="Overview icon" width="80"/><br><br>**Get started** <br /> Get started with model-driven apps<Br><ul><li>[Overview](overview.md)</li><li>[Motivation](motivation.md)</li><li>[Download](<https://aka.ms/coestarterkitdownload>)</li></ul>
+      <img src="../../media/index/i_get-started.svg" alt="Overview icon" width="80"/><br><br>**Get started** <br /> Get started with model-driven apps<Br><ul><li>[Overview](overview.md)</li><li>[Motivation](motivation.md)</li><li>[Download](<https://aka.ms/coestarterkitdownload>)</li></ul>
    :::column-end:::
    :::column span="":::
       <img src="../media/index/i_model-driven-apps.svg" alt="Overview icon" width="80"/><br><br>**Design and build**  <br /> Build a model-driven app<br><ul><li>[Understand model-driven app components](model-driven-app-components.md)</li><li>[Define data](define-data-model-driven-app.md)</li><li>[Deep dive](power-bi.md)</li></ul>
