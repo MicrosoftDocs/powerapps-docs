@@ -46,7 +46,7 @@ Only an administrator can add charts to a record, for information see, [Add a ch
 
 ## Commands on a chart view
 
-Use the **More Commands** icon ![More commands button](media/commandbar_more_icon.png "More commands button")   to access commands such as, create a new chart, import, export, and more. The chart commands options are different for system charts and personal charts.
+Use the **More Commands** button ![More commands button](media/commandbar_more_icon.png "More commands button")   to access commands such as, create a new chart, import, export, and more. The chart commands options are different for system charts and personal charts.
 
 
 | Commands on my (personal) charts  | Command on syetem charts |
