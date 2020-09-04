@@ -54,7 +54,7 @@ landingContent:
          links:
           - text: Add and configure controls
             url: add-configure-controls.md
-          - text: Change screen size and orientation
+          - text: Screens and layouts
             url: set-aspect-ratio-portrait-landscape.md
        - linkListType: learn
          links:
@@ -62,7 +62,7 @@ landingContent:
             url: https://docs.microsoft.com/learn/paths/ui-controls-canvas-app-powerapps/
 
   # Card
-  - title: Customize canvas apps
+  - title: Customize
     linkLists:
       - linkListType: tutorial
         links:
@@ -90,7 +90,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Save and publish an app
+          - text: Save and publish
             url: save-publish-app.md
           - text: Share an app
             url: share-app.md
@@ -102,13 +102,13 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Test an app with Test Studio
+          - text: Test using Test Studio
             url: test-studio.md
-          - text: Debug an app with Monitor
+          - text: Debug using Monitor
             url: monitor.md
           - text: Analyze app telemetry using Application Insights
             url: application-insights.md
-          - text: Performance tips for canvas apps
+          - text: Performance tips
             url: performance-tips.md
 
   # Card
@@ -130,9 +130,9 @@ landingContent:
     linkLists:
        - linkListType: learn
          links:
-          - text: Use advanced data options and connectors in canvas apps
+          - text: Use advanced data options and connectors
             url: https://docs.microsoft.com/learn/paths/advanced-data-options-and-connectors/
-          - text: Master advanced techniques for canvas apps
+          - text: Master advanced techniques
             url: https://docs.microsoft.com/learn/paths/understand-advanced-topics/
        - linkListType: reference
          links:
