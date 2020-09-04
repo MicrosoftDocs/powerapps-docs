@@ -28,11 +28,8 @@ There are two types of charts, **System Charts** and **My Charts**.
 ![Choose between personal or system dashboard](media/select_dashboard.png "Choose between personal or system dashboard") 
 
 Legend: 
-1. **My Dashboards**: My dashboards are personal dashboards can only be see by the user that created the dashbaord. The user can also share their personal dashboard with other users if the user has sharing privileges for their security role.
+1. **My Charts**: My charts are personal charts which can only be seen by the user that created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
 
-2. **System Dashboards**: System dashboards are craete by your dministrator. By default, these dashboards are visible to all users. 
+2. **System Charts**: System charts are craete by your dministrator. By default, these charts are visible to all users. 
 
 
-
-> [!div class="mx-imgBorder"]
-> ![Multi-stream interactive dashboard](media/interactive_dashboard.png "Multi-stream interactive dashboard") 
