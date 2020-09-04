@@ -1,0 +1,130 @@
+### YamlMime:Landing
+
+title: Canvas apps in Power Apps documentation
+summary: Design, build and share a business app from a canvas in Microsoft Power Apps with data from a variety of sources without writing code. 
+
+metadata:
+  title: Canvas apps in Power Apps documentation
+  description: Provides access to highlighted areas within the canvas apps in Power Apps documentation
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: tapanm-msft
+  ms.author: tapanm
+  ms.date: 09/04/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: What are canvas apps in Power Apps?
+            url: getting-started
+          - text: System and configuration requirements
+            url: limits-and-config.md
+       - linkListType: learn
+         links:
+          - text: Get started with canvas apps in Power Apps
+            url: https://docs.microsoft.com/learn/modules/get-started-with-powerapps/
+
+  # Card
+  - title: Explore and create canvas apps
+    linkLists:
+       - linkListType: quickstart
+         links:
+          - text: Create a sample Help Desk app
+            url: help-desk-install.md  
+          - text: Create a canvas app from Common Data Service
+            url: data-platform-create-app.md
+          - text: Create an app from scratch
+            url: data-platform-create-app-scratch.md
+
+  # Card
+  - title: Understand building blocks
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Connectors
+            url: connections-list.md
+          - text: Data sources
+            url: working-with-data-sources.md
+          - text: Delegation
+            url: delegation-overview.md  
+
+  # Card
+  - title: Design the interface
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Add and configure controls
+            url: add-configure-controls.md
+          - text: Change screen size and orientation
+            url: set-aspect-ratio-portrait-landscape.md
+          - text: Accessibility
+            url: accessible-apps.md  
+
+  # Card
+  - title: Customize canvas apps
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Galleries
+            url: customize-layout-sharepoint.md
+          - text: Forms
+            url: customize-forms-sharepoint.md
+          - text: Cards
+            url: customize-card.md
+  
+  # Card
+  - title: Manage canvas apps
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Save and publish an app
+            url: save-publish-app.md
+          - text: Share an app
+            url: share-app.md
+          - text: Edit an app
+            url: edit-app.md
+
+    # Card
+  - title: Learn canvas apps
+    linkLists:
+      - linkListType: learn
+        links:
+          - text: Create canvas apps in Power Apps
+            url: https://docs.microsoft.com/learn/paths/create-powerapps/
+          - text: Use the UI and controls in canvas apps
+            url: https://docs.microsoft.com/learn/paths/ui-controls-canvas-app-powerapps/
+          - text: See all canvas apps learning paths and modules
+            url: https://docs.microsoft.com/learn/browse/?terms=canvas
+
+    # Card
+  - title: Test, monitor, and optimize canvas apps
+    linkLists:
+      - linkListType: learn
+        links:
+          - text: Test an app with Test Studio
+            url: test-studio.md
+          - text: Debug an app with Monitor
+            url: monitor.md
+          - text: Performance tips for canvas apps
+            url: performance-tips.md
+
+  # Card
+  - title: Advanced concepts and reference
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Reuse canvas app components
+            url: create-component.md
+          - text: Controls and properties reference
+            url: reference-properties.md
+          - text: Formula reference
+            url: formula-reference.md

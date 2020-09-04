@@ -165,6 +165,8 @@
     href: ./canvas-apps/intro-maker-portal.md
 - name: Canvas apps
   items:
+  - name: Canvas apps in Power Apps
+    href: ./canvas-apps/index.yml
   - name: What are canvas apps?
     href: ./canvas-apps/getting-started.md
   - name: System requirements, limits, and configuration
