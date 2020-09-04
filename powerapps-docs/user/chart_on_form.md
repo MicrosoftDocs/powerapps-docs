@@ -51,7 +51,7 @@ Use the **More Commands** icon to access commands such as, create a new chart, i
 
 | Commands on my (personal) charts  | Command on syetem charts |
 |---------|---------|
-| ![Commands for a personal chart](media/my_chart_commands.png "Commands for a personal chart")     |     ![Commands for a system chart(media/system_chart_commands.png "Commands for a syetem chart")   |
+| ![Commands for a personal chart](media/my_chart_commands.png "Commands for a personal chart")     |     ![Commands for a system chart](media/system_chart_commands.png "Commands for a syetem chart")   |
 
 
 
