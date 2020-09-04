@@ -94,7 +94,7 @@
       - name: Use interactive dashboards to filter data
         href: ../user/interactive-dashboards.md
       - name: Add Power BI dashboards
-        href: ../user/add-powerbi-dashboards.mdd       
+        href: ../user/add-powerbi-dashboards.md      
     - name: Work with email
       items:
       - name: View and create email through the activities grid
