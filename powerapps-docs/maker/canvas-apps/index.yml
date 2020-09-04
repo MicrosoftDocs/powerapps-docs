@@ -42,8 +42,8 @@ landingContent:
             url: get-started-test-drive.md 
           - text: Create a canvas app from Common Data Service
             url: data-platform-create-app.md
-      - linkListType: learn
-        links:
+       - linkListType: learn
+         links:
           - text: Create canvas apps in Power Apps
             url: https://docs.microsoft.com/learn/paths/create-powerapps/
 
@@ -56,8 +56,8 @@ landingContent:
             url: add-configure-controls.md
           - text: Change screen size and orientation
             url: set-aspect-ratio-portrait-landscape.md
-      - linkListType: learn
-        links:
+       - linkListType: learn
+         links:
           - text: Use the UI and controls in canvas apps
             url: https://docs.microsoft.com/learn/paths/ui-controls-canvas-app-powerapps/
 
