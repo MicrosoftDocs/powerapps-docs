@@ -4,8 +4,8 @@ title: Model-driven apps developer documentation
 summary: Model-driven apps are primarily a no-code or low-code component focused approach to app development. Extend model-driven apps by applying business logic using client scripting, web resources. Customize entity forms, views, dashboards, chart, commands and ribbons. 
 
 metadata:
-  title: Power Apps portals documentation
-  description: Provides access to highlighted areas within the Power Apps portals documentation
+  title: Model-driven apps developer documentation
+  description: Provides access to highlighted areas within the model-driven apps documentation
   services: service
   ms.service: powerapps 
   ms.subservice: subservice

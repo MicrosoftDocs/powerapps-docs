@@ -1,7 +1,7 @@
 - name: Model-driven apps
   href: ../../maker/model-driven-apps/model-driven-app-overview.md
 - name: Developer overview
-  href: overview.md
+  href: index.yml
 - name: Get started
   href: supported-customizations.md
 - name: Design app interface using code
