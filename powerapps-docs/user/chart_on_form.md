@@ -25,21 +25,25 @@ You can view charts on a page with a list of records. You can also open a record
 
 1. On the left navigation, select a page.
 2. On the commbar bar, select **Show Chart**.
-  > [!div class="mx-imgBorder"]
-  > ![Charts on a page](media/show_chart.png "Show charts on a page") 
+
+   > [!div class="mx-imgBorder"]
+   > ![Charts on a page](media/show_chart.png "Show charts on a page") 
 
 3. Select the drop-down menu to choose a view. 
 
+   > [!div class="mx-imgBorder"]
+   > ![Choose a view](media/choose_view.png "Choose a view") 
 
-  > [!div class="mx-imgBorder"]
-  > ![Choose a view](media/choose_view.png "Choose a view") 
+
+system_and_my_charts.png
+
+
+
+
 
 
 
 There are two types of charts, **System Charts** and **My Charts**.
-
-
-
 
 Legend: 
 1. **My Charts**: My charts are personal charts which can only be seen by the user that created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
