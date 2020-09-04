@@ -62,18 +62,6 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/explore-portals-studio/
 
   # Card
-  - title: Integrate portals with Common Data Service
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Entity forms
-            url: configure/entity-forms.md
-          - text: Entity lists
-            url: configure/entity-lists.md
-          - text: Web forms
-            url: configure/web-form-properties.md
-
-  # Card
   - title: Administer and manage portals
     linkLists:
       - linkListType: concept
@@ -86,6 +74,18 @@ landingContent:
         links:
           - text: Power Apps portals administration
             url: https://docs.microsoft.com/learn/modules/portals-administration/
+
+  # Card
+  - title: Integrate portals with Common Data Service
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Entity forms
+            url: configure/entity-forms.md
+          - text: Entity lists
+            url: configure/entity-lists.md
+          - text: Web forms
+            url: configure/web-form-properties.md
 
   # Card
   - title: User management and security

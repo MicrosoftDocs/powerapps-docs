@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: Canvas apps in Power Apps documentation
+title: Power Apps canvas apps documentation
 summary: Design, build and share a business app from a canvas in Microsoft Power Apps with data from a variety of sources without writing code. 
 
 metadata:
-  title: Canvas apps in Power Apps documentation
-  description: Provides access to highlighted areas within the canvas apps in Power Apps documentation
+  title: Power Apps canvas apps documentation
+  description: Provides access to highlighted areas within the Power Apps canvas apps documentation
   services: service
   ms.service: powerapps 
   ms.subservice: subservice
@@ -38,24 +38,14 @@ landingContent:
     linkLists:
        - linkListType: quickstart
          links:
-          - text: Create a sample Help Desk app
-            url: help-desk-install.md  
+          - text: Create your first app
+            url: get-started-test-drive.md 
           - text: Create a canvas app from Common Data Service
             url: data-platform-create-app.md
-          - text: Create an app from scratch
-            url: data-platform-create-app-scratch.md
-
-  # Card
-  - title: Understand building blocks
-    linkLists:
-       - linkListType: concept
-         links:
-          - text: Connectors
-            url: connections-list.md
-          - text: Data sources
-            url: working-with-data-sources.md
-          - text: Delegation
-            url: delegation-overview.md  
+      - linkListType: learn
+        links:
+          - text: Create canvas apps in Power Apps
+            url: https://docs.microsoft.com/learn/paths/create-powerapps/
 
   # Card
   - title: Design the interface
@@ -66,8 +56,22 @@ landingContent:
             url: add-configure-controls.md
           - text: Change screen size and orientation
             url: set-aspect-ratio-portrait-landscape.md
-          - text: Accessibility
-            url: accessible-apps.md  
+      - linkListType: learn
+        links:
+          - text: Use the UI and controls in canvas apps
+            url: https://docs.microsoft.com/learn/paths/ui-controls-canvas-app-powerapps/
+
+  # Card
+  - title: Understand building blocks of canvas apps
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Connectors
+            url: connections-list.md
+          - text: Data sources
+            url: working-with-data-sources.md
+          - text: Delegation
+            url: delegation-overview.md  
 
   # Card
   - title: Customize canvas apps
@@ -94,36 +98,44 @@ landingContent:
             url: edit-app.md
 
     # Card
-  - title: Learn canvas apps
-    linkLists:
-      - linkListType: learn
-        links:
-          - text: Create canvas apps in Power Apps
-            url: https://docs.microsoft.com/learn/paths/create-powerapps/
-          - text: Use the UI and controls in canvas apps
-            url: https://docs.microsoft.com/learn/paths/ui-controls-canvas-app-powerapps/
-          - text: See all canvas apps learning paths and modules
-            url: https://docs.microsoft.com/learn/browse/?terms=canvas
-
-    # Card
   - title: Test, monitor, and optimize canvas apps
     linkLists:
-      - linkListType: learn
+      - linkListType: how-to-guide
         links:
           - text: Test an app with Test Studio
             url: test-studio.md
           - text: Debug an app with Monitor
             url: monitor.md
+          - text: Analyze app telemetry using Application Insights
+            url: application-insights.md
           - text: Performance tips for canvas apps
             url: performance-tips.md
 
   # Card
-  - title: Advanced concepts and reference
+  - title: Canvas apps for developers
     linkLists:
        - linkListType: concept
          links:
+          - text: Create a canvas app within a Common Data Service solution
+            url: add-app-solution.md
           - text: Reuse canvas app components
             url: create-component.md
+          - text: Apps for enterprise developers, partners and ISVs
+            url: create-component.md
+          - text: Integrate with other websites
+            url: embed-apps-dev.md
+
+  # Card
+  - title: Advanced learning and reference
+    linkLists:
+       - linkListType: learn
+         links:
+          - text: Use advanced data options and connectors in canvas apps
+            url: https://docs.microsoft.com/learn/paths/advanced-data-options-and-connectors/
+          - text: Master advanced techniques for canvas apps
+            url: https://docs.microsoft.com/learn/paths/understand-advanced-topics/
+       - linkListType: reference
+         links:
           - text: Controls and properties reference
             url: reference-properties.md
           - text: Formula reference
