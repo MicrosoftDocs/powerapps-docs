@@ -1,0 +1,69 @@
+### YamlMime:Landing
+
+title: Power Apps portals documentation
+summary: Use Power Apps portals to create external-facing websites that allow users outside their organizations to sign in with a wide variety of identities, create and view data in Common Data Service, or even browse content anonymously. 
+
+metadata:
+  title: Power Apps portals documentation
+  description: Provides access to highlighted areas within the Power Apps portals documentation
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: kumarvivek
+  ms.author: kvivek
+  ms.date: 09/03/2019 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: What is Power Apps portals?
+            url: overview.md
+          - text: Release updates
+            url: release-updates.md
+       - linkListType: learn
+         links:
+          - text: Learn Power Apps portals
+            url: https://docs.microsoft.com/learn/modules/intro-portals/
+
+  # Card
+  - title: Design and build portals
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Portal templates
+            url: portal-templates.md
+          - text: Create a starter portal
+            url: create-portal.md
+          - text: Create and manage webpages
+            url: create-manage-webpages.md  
+          
+  # Card
+  - title: Advanced portal management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Portal administration
+            url: admin/admin-overview.md
+          - text: Portal configuration
+            url: configure/configure-portal.md
+          - text: Portal customization
+            url: liquid/liquid-overview.md
+
+  # Card
+  - title: User management and security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure contacts
+            url: configure/configure-contacts
+          - text: Create web roles
+            url: configure/create-web-roles.md      
+  
