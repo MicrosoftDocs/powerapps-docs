@@ -17,20 +17,7 @@ search.app:
 
 Model-driven app design is a component-focused approach to app development. Model-driven app design doesn’t require code and the apps you make can be simple or very complex.  Unlike canvas app development where the designer has complete control over app layout, with model-driven apps much of the layout is determined for you and largely designated by the components you add to the app.
 
-:::row:::
-   :::column span="":::
-      <img src="../../media/index/i_get-started.svg" alt="Overview icon" width="80"/><br><br>**Get started** <br /> Get started with model-driven apps<Br><ul><li>[Overview](overview.md)</li><li>[Motivation](motivation.md)</li><li>[Download](<https://aka.ms/coestarterkitdownload>)</li></ul>
-   :::column-end:::
-   :::column span="":::
-      <img src="../media/index/i_model-driven-apps.svg" alt="Overview icon" width="80"/><br><br>**Design and build**  <br /> Build a model-driven app<br><ul><li>[Understand model-driven app components](model-driven-app-components.md)</li><li>[Define data](define-data-model-driven-app.md)</li><li>[Deep dive](power-bi.md)</li></ul>
-   :::column-end:::
-   :::column span="":::
-      <img src="media/i_setup.svg" alt="Overview icon" width="80"/><br><br>**Govern** <br />   Establish audit and compliance processes <br><ul><li>[Set up](setup-governance-components.md)</li><li>[Use](governance-components.md)</li><li>[Deep dive](example-processes.md)</li></ul>
-   :::column-end:::
-   :::column span="":::
-      <img src="media/i_get-started.svg" alt="Overview icon" width="80"/><br><br>**Nurture** <Br>Accelerate your adoption by thriving with a community of makers <br><ul><li>[Set up](setup-nurture-components.md)</li><li>[Use](nurture-components.md)</li></ul>
-   :::column-end:::
-:::row-end:::
+![Sample model-driven app](media/model-driven-app-overview/model-app-sample.png)
 
 Model-driven app design provides the following benefits:
 - Rich component-focused no-code design environments 
@@ -38,7 +25,7 @@ Model-driven app design provides the following benefits:
 - Rich design capability 
 - Your app can be distributed as a solution
 
-![Sample model-driven app](media/model-driven-app-overview/model-app-sample.png)
+
  
 ## The approach to model-driven app making
 At a fundamental level, model-driven app making consists of three key focus areas.
