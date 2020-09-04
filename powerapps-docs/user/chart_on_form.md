@@ -54,3 +54,21 @@ Use the **More Commands** button ![More commands button](media/more_command_butt
 | ![Commands for a personal chart](media/my_chart_commands.png "Commands for a personal chart")     |     ![Commands for a system chart](media/system_chart_commands.png "Commands for a syetem chart")   |
 
 
+## Grid filter on charts
+
+Grid home page provides multiple filter options for a user to filter the grid data such as, quick find, advanced find, grid columm filter, and jump bar.
+For more information, see [How to use grid filters](https://docs.microsoft.com/powerapps/user/grid-filters).
+
+When a chart is shown together with grid, the grid filter option that you select will filter both chart and grid.
+
+![Grid filter for charts](media/chart_grid_filters.png "Grid filters for charts")
+
+Legend:
+
+1. **Short**: Short records.
+2. **Open advanced filtering panel**: See which filters were applied to the current view. For more information, see [See the current view definition](https://docs.microsoft.com/powerapps/user/grid-filters-advanced#see-the-current-view-definition).
+3. **Search this view**: Search for data in the view you're in.
+4. **Jump bar**: The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.
+
+
+
