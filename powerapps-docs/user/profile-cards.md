@@ -19,10 +19,13 @@ search.app:
 
 # View the profile card for a contact or user
 
-Use the profile card to get quick information about a contact or user. When you select a contact or user field in Dynamics 365 apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), you can find information related to them on their profile card. For more information about profile cards, see [Profile cards in Office 365](https://support.office.com/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501).
+When you select someone's name or picture in Outlook or other Office apps, you can find information related to them on their profile card. The profile card is also sometimes referred to as contact card or people card. Profile cards can be seen on contact and user records. You can only view them when they are in a lookup.
+
+
+For more information about profile cards, see [Profile cards in Office 365](https://support.office.com/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501).
 
 > [!NOTE]
->  - Profile card is available for the  **Contact** and **User** entity. For information, see [Enable the profile card (for admins)](https://docs.microsoft.com/dynamics365/customer-engagement/admin/enable-profile-card).
+>  - Profile cards are available on contacts and users in any Unified Interface app. For information, see [Enable viewing profile cards (for admins)](https://docs.microsoft.com/en-us/power-platform/admin/enable-profile-card).
 >  - The profile card in Common Data Service is not displayed if multi-factor authentication is turned on for Office Delve service in Azure Active Directory.
 
 ## View a contact's profile
