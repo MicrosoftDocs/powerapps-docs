@@ -25,9 +25,15 @@ You can view charts on a page with a list of records. You can also open a record
 
 1. On the left navigation, select a page.
 2. On the commbar bar, select **Show Chart**.
+  > [!div class="mx-imgBorder"]
+  > ![Charts on a page](media/show_chart.png "Show charts on a page") 
 
-   > [!div class="mx-imgBorder"]
-   > ![Charts on a page](media/show_chart.png "Show charts on a page") 
+3. Select the drop-down menu to choose a view. 
+
+
+  > [!div class="mx-imgBorder"]
+  > ![Choose a view](media/choose_view.png "Choose a view") 
+
 
 
 There are two types of charts, **System Charts** and **My Charts**.
