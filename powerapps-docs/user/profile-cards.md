@@ -30,8 +30,8 @@ For more information about profile cards, see [Profile cards in Office 365](http
 
 ## View a contact's profile
 
-1.	Open a record and go a look up field for a contact or owner.
-2.	Hover over the user name to view the prfile card.
+1.	Open a record and go a look up field that has  a contact or owner name.
+2.	Hover over the name to view the prfile card.
 
 
     > [!div class="mx-imgBorder"] 
