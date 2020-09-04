@@ -25,7 +25,7 @@ landingContent:
        - linkListType: overview
          links:
           - text: What are canvas apps in Power Apps?
-            url: getting-started
+            url: getting-started.md
           - text: System and configuration requirements
             url: limits-and-config.md
        - linkListType: learn

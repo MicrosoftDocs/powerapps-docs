@@ -62,6 +62,18 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/explore-portals-studio/
 
   # Card
+  - title: Integrate portals with Common Data Service
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Entity forms
+            url: configure/entity-forms.md
+          - text: Entity lists
+            url: configure/entity-lists.md
+          - text: Web forms
+            url: configure/web-form-properties.md
+
+  # Card
   - title: Administer and manage portals
     linkLists:
       - linkListType: concept
@@ -76,16 +88,16 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/portals-administration/
 
   # Card
-  - title: Integrate portals with Common Data Service
+  - title: User management and security
     linkLists:
-      - linkListType: concept
+      - linkListType: how-to-guide
         links:
-          - text: Entity forms
-            url: entity-forms.md
-          - text: Entity lists
-            url: entity-lists.md
-          - text: Web forms
-            url: web-form-properties.md
+          - text: Create web roles
+            url: configure/create-web-roles.md
+          - text: Assign entity permissions
+            url: configure/assign-entity-permissions.md
+          - text: Control web page access
+            url: configure/webpage-access-control.md
 
   # Card
   - title: Configure portals
@@ -93,7 +105,7 @@ landingContent:
       - linkListType: tutorial
         links:
           - text: Configure portal authentication
-            url: use-simplified-authentication-configuration.md
+            url: configure/use-simplified-authentication-configuration.md
           - text: Configure portal search
             url: configure/search.md
           - text: Configure document storage in portals
@@ -110,18 +122,6 @@ landingContent:
             url: web-api-overview.md
           - text: Use OAuth 2.0 implicit grant flow
             url: oauth-implicit-grant-flow.md
-
-  # Card
-  - title: User management and security
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Create web roles
-            url: configure/create-web-roles.md
-          - text: Assign entity permissions
-            url: configure/assign-entity-permissions
-          - text: Control web page access
-            url: configure/webpage-access-control.md
 
   # Card
   - title: Troubleshoot and optimize portals
