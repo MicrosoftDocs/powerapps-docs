@@ -97,20 +97,6 @@ landingContent:
           - text: Edit an app
             url: edit-app.md
 
-    # Card
-  - title: Test, monitor, and optimize
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Test using Test Studio
-            url: test-studio.md
-          - text: Debug using Monitor
-            url: monitor.md
-          - text: Analyze app telemetry using Application Insights
-            url: application-insights.md
-          - text: Performance tips
-            url: performance-tips.md
-
   # Card
   - title: For developers
     linkLists:
@@ -124,6 +110,20 @@ landingContent:
             url: create-component.md
           - text: Integrate with other websites
             url: embed-apps-dev.md
+
+    # Card
+  - title: Test, monitor, and optimize
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Test using Test Studio
+            url: test-studio.md
+          - text: Debug using Monitor
+            url: monitor.md
+          - text: Analyze app telemetry using Application Insights
+            url: application-insights.md
+          - text: Performance tips
+            url: performance-tips.md
 
   # Card
   - title: Advanced learning and reference
