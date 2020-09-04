@@ -17,15 +17,23 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# View charts on a form page
+# View charts for a page or record 
 
-You can view charts on a entity page or a record page. 
+You can view charts on a page with a list of records. You can also open a record and see chart added in the record. Only an administrator can add charts to a record, for information see, [Add a chart to a form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-chart-to-form).
+
+## View charts on a page
+
+1. On the left navigation, select a page.
+2. On the commbar bar, select **Show Chart**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Charts on a page](media/show_chart.png "Show charts on a page") 
 
 
 There are two types of charts, **System Charts** and **My Charts**.
 
 
-![Choose between personal or system dashboard](media/select_dashboard.png "Choose between personal or system dashboard") 
+
 
 Legend: 
 1. **My Charts**: My charts are personal charts which can only be seen by the user that created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
