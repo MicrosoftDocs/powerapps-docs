@@ -76,7 +76,7 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/portals-administration/
 
   # Card
-  - title: Integrate portals with Common Data Service
+  - title: Integrate with Common Data Service
     linkLists:
       - linkListType: concept
         links:
