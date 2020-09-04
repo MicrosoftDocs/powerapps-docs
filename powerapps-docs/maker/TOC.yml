@@ -1658,8 +1658,6 @@
         items:
         - name: Use actions
           href: ./common-data-service/actions.md
-        - name: Create a custom action
-          href: ./common-data-service/create-actions.md
         - name: Configure custom actions from a real-time workflow
           href: ./common-data-service/configure-actions.md    
         - name: Invoke custom actions from a real-time workflow
