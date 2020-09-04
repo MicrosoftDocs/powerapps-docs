@@ -17,9 +17,11 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# View charts for a page or record 
+# View charts for a page or in a record 
 
-You can view charts on a page with a list of records. You can also open a record and see chart added in the record. Only an administrator can add charts to a record, for information see, [Add a chart to a form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-chart-to-form).
+You can view charts on a page that has a list of records. You can also open a record and view a charts in the record. 
+
+Only an administrator can add charts to a record, for information see, [Add a chart to a form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-chart-to-form).
 
 ## View charts on a page
 
