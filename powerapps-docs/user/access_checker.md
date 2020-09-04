@@ -25,6 +25,6 @@ Use the access checker to see what you security role is and what permissions you
 2. From the list of commands, select **Check access**.
 
     > [!div class="mx-imgBorder"]
-    > ![Select to check your access](media/check_accessd.png "Select check acess to check your access")
+    > ![Select to check your access](media/check_access.png "Select check acess to check your access")
   
   
