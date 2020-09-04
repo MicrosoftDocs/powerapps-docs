@@ -19,7 +19,7 @@ search.app:
 
 # View the profile card for a contact or user
 
-When you select someone's name or picture in Outlook or other Office apps, you can find information related to them on their profile card. The profile card is also sometimes referred to as contact card or people card. Profile cards can be seen on contact and user records. You can only view them when they are in a lookup.
+When you select someone's name or picture in Outlook or other Office apps, you can find information related to them on their profile card. The profile card is also sometimes referred to as contact card or people card. In model-driven Power Apps, profile cards can be seen on contact and user records. You can only view them when they are in a lookup.
 
 
 For more information about profile cards, see [Profile cards in Office 365](https://support.office.com/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501).
@@ -30,26 +30,13 @@ For more information about profile cards, see [Profile cards in Office 365](http
 
 ## View a contact's profile
 
-1.	Go to **Activities**.
-2.	Select an existing activity or create a new one.
-3.	Hover over the **Call To** field when it has a contact record. 
+1.	Open a record and go a look up field for a contact or owner.
+2.	Hover over the user name to view the prfile card.
 
-You can view details of the contact inline which includes the contact picture, name, title and account.
 
-4. To view more details, select **Show more** to expand the contact's profile.
- 
     > [!div class="mx-imgBorder"] 
-    > ![Expand contact profile card detail](media/profile1.png "Expand contact profile card details")
-   
- ## View a user's profile
- 
-1.	Go to **Accounts**.
-2.	Select an account record.
-3.	Hover over the owner field when it has a user record. You can view the details of the user inline.
-4.  To view more details like emails and shared files with the user, select **Show more** to expand the contact's profile.
- 
-    > [!div class="mx-imgBorder"] 
-    > ![Expand User profile card detail](media/profile2.png "Expand User profile card details")
+    > ![Expand contact profile card detail](media/profilecard.gif "This image shows how to expand a contacts profile card and view details")
+
 
 
  ## FAQs
