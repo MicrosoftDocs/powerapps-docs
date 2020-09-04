@@ -1,5 +1,6 @@
 ---
 title: "Classic Common Data Service real-time workflows | MicrosoftDocs"
+description: "Classic Common Data Service real-time workflows"
 ms.custom: ""
 ms.date: 07/27/2020
 ms.reviewer: "matp"

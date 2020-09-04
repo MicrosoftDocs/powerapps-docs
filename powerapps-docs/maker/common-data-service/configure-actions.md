@@ -1,5 +1,6 @@
 ---
 title: "Configure actions for workflows in Power Apps | MicrosoftDocs"
+description: "Learn how to configure actions for workflows in Power Apps."
 ms.custom: ""
 ms.date: 07/30/2020
 ms.reviewer: ""
