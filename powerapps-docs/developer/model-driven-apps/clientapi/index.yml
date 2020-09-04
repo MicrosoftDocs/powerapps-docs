@@ -51,7 +51,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Client scripting
-            url: client-scripting.md
+            url: ../client-scripting.md
           - text: Write your first client script
             url: walkthrough-write-your-first-client-script.md
           - text: Debug your JavaScript code
@@ -63,11 +63,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Web resources overview
-            url: web-resources.md
+            url: ../web-resources.md
           - text: How to use web resources
-            url: use-web-resources.md      
+            url: ../use-web-resources.md      
           - text: Web resource dependencies
-            url: web-resource-dependencies.md
+            url: ../web-resource-dependencies.md
 
 # Card
   - title: Power Apps component framework
@@ -77,7 +77,7 @@ landingContent:
           - text: Framework overview
             url: ../../component-framework/overview.md
           - text: Create code components
-            url: ../../code-components/implementing-controls-using-typescript.md      
+            url: ../../component-framework/implementing-controls-using-typescript.md      
           - text: Get Power Apps CLI
             url: ../../component-framework/get-powerapps-cli.md
 
@@ -91,5 +91,5 @@ landingContent:
           - text: Customization XML reference
             url: ../customization-xml-reference.md      
           - text: Power Apps component framework
-            url: ../../component-framework/get-powerapps-cli.md
+            url: ../../component-framework/reference.md
   
