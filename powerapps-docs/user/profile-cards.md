@@ -45,7 +45,7 @@ For more information about profile cards, see [Profile cards in Office 365](http
 Profile cards can be seen on contact and user records. You can only view them when they are in a lookup.
 
 ### Where is information shown in the profile card coming from?
-The information shown on the contact profile card is fetched from Common Data Service (and not Microsoft Exchange). This means the contact details are coming from Dynamics 365.
+The information shown on the contact profile card is fetched from Common Data Service (and not Microsoft Exchange). 
 
 The information shown on the user profile card is fetched from Office 365 (Azure Active Directory). For more information, see [Profile cards in Office 365 (admin section)](https://support.office.com/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501).
 
