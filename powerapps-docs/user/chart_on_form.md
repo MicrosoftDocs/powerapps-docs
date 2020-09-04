@@ -34,10 +34,14 @@ You can view charts on a page with a list of records. You can also open a record
    > [!div class="mx-imgBorder"]
    > ![Choose a view](media/choose_view.png "Choose a view") 
 
+4. Select the chart view drop-down menu to choose between a system or personal view. 
 
-system_and_my_charts.png
+- **My Charts**: My charts are personal charts which can only be seen by the user that created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
+- **System Charts**: System charts are craete by your dministrator. By default, these charts are visible to all users. 
 
 
+   > [!div class="mx-imgBorder"]
+   > ![Choose between a system or personal chart view](media/system_and_my_charts.png.png "Choose between a system or personal chart view") 
 
 
 
