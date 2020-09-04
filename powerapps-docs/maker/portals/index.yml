@@ -26,44 +26,111 @@ landingContent:
          links:
           - text: What is Power Apps portals?
             url: overview.md
-          - text: Release updates
-            url: release-updates.md
+          - text: Portals lifecycle
+            url: admin/portal-lifecycle.md
        - linkListType: learn
          links:
-          - text: Learn Power Apps portals
-            url: https://docs.microsoft.com/learn/modules/intro-portals/
+          - text: Get started with Power Apps portals
+            url: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/
 
   # Card
-  - title: Design and build portals
+  - title: Create a portal
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Understand available templates for portals
+            url: portal-templates.md
+       - linkListType: quickstart
+         links:  
+          - text: Create a starter portal
+            url: create-portal.md
+          - text: Create a portal in an environment with customer engagement apps
+            url: create-dynamics-portal.md
+          
+  # Card
+  - title: Customize a portal
     linkLists:
        - linkListType: how-to-guide
          links:
-          - text: Portal templates
-            url: portal-templates.md
-          - text: Create a starter portal
-            url: create-portal.md
-          - text: Create and manage webpages
-            url: create-manage-webpages.md  
-          
+          - text: Portals Studio overview
+            url: portal-designer-anatomy.md
+          - text: Add components on a web page
+            url: compose-page.md
+       - linkListType: learn
+         links:
+          - text: Customize web pages using Studio
+            url: https://docs.microsoft.com/learn/modules/explore-portals-studio/
+
   # Card
-  - title: Advanced portal management
+  - title: Administer and manage portals
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: concept
         links:
-          - text: Portal administration
+          - text: Overview of portals admin center
             url: admin/admin-overview.md
-          - text: Portal configuration
+          - text: Overview of Portal Management app
             url: configure/configure-portal.md
-          - text: Portal customization
+      - linkListType: learn
+        links:
+          - text: Power Apps portals administration
+            url: https://docs.microsoft.com/learn/modules/portals-administration/
+
+  # Card
+  - title: Integrate portals with Common Data Service
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Entity forms
+            url: entity-forms.md
+          - text: Entity lists
+            url: entity-lists.md
+          - text: Web forms
+            url: web-form-properties.md
+
+  # Card
+  - title: Configure portals
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Configure portal authentication
+            url: use-simplified-authentication-configuration.md
+          - text: Configure portal search
+            url: configure/search.md
+          - text: Configure document storage in portals
+            url: configure-notes.md
+
+  # Card
+  - title: Advanced portal customization
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Work with Liquid templates
             url: liquid/liquid-overview.md
+          - text: Portals Web API
+            url: web-api-overview.md
+          - text: Use OAuth 2.0 implicit grant flow
+            url: oauth-implicit-grant-flow.md
 
   # Card
   - title: User management and security
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Configure contacts
-            url: configure/configure-contacts
           - text: Create web roles
-            url: configure/create-web-roles.md      
-  
+            url: configure/create-web-roles.md
+          - text: Assign entity permissions
+            url: configure/assign-entity-permissions
+          - text: Control web page access
+            url: configure/webpage-access-control.md
+
+  # Card
+  - title: Troubleshoot and optimize portals
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Run portal checker
+            url: admin/portal-checker.md
+          - text: Clear the server-side cache
+            url: admin/clear-server-side-cache.md      
+          - text: Error logging and diagnostics
+            url: admin/view-portal-error-log.md
