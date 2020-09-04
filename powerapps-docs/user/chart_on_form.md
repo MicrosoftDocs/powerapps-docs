@@ -70,5 +70,5 @@ Legend:
 3. **Search this view**: Search for data in the view you're in.
 4. **Jump bar**: The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.
 
-
+## View charts in a record
 
