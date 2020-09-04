@@ -1,11 +1,12 @@
-title: "Check your user access and permissions | MicrosoftDocs"
-ms.custom: ""
+---
+title: "Check your user access and permissions| MicrosoftDocs"
+description: How to check user accesss and security role
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/25/2019
+ms.date: 08/21/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
