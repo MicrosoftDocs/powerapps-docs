@@ -47,11 +47,5 @@ You can view charts on a page with a list of records. You can also open a record
 
 
 
-There are two types of charts, **System Charts** and **My Charts**.
-
-Legend: 
-1. **My Charts**: My charts are personal charts which can only be seen by the user that created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
-
-2. **System Charts**: System charts are craete by your dministrator. By default, these charts are visible to all users. 
 
 
