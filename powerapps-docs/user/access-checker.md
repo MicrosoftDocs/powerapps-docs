@@ -23,7 +23,7 @@ search.app:
 Use the access checker to see what you security role is and what permissions your user account has. 
 
 1. Open a record and on the command bar select the More button ![More commands button](media/MoreButton.png "More commands button").
-2. From the list of commands, select **Check access**.
+2. From the list of commands, choose **Check access**.
 
     > [!div class="mx-imgBorder"]
     > ![Select to check your access](media/check_access.png "Select check acess to check your access")
