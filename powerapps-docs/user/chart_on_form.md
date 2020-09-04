@@ -17,7 +17,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# View charts for a page or in a record 
+# View charts on a page or in a record 
 
 You can view charts on a page that has a list of records. You can also open a record and view a charts in the record. 
 
