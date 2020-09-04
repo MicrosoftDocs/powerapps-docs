@@ -34,7 +34,7 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/get-started-with-powerapps/
 
   # Card
-  - title: Explore and create canvas apps
+  - title: Explore and create
     linkLists:
        - linkListType: quickstart
          links:
@@ -62,7 +62,19 @@ landingContent:
             url: https://docs.microsoft.com/learn/paths/ui-controls-canvas-app-powerapps/
 
   # Card
-  - title: Understand building blocks of canvas apps
+  - title: Customize canvas apps
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Galleries
+            url: customize-layout-sharepoint.md
+          - text: Forms
+            url: customize-forms-sharepoint.md
+          - text: Cards
+            url: customize-card.md
+
+  # Card
+  - title: Understand building blocks
     linkLists:
        - linkListType: concept
          links:
@@ -74,19 +86,7 @@ landingContent:
             url: delegation-overview.md  
 
   # Card
-  - title: Customize canvas apps
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: Galleries
-            url: customize-layout-sharepoint.md
-          - text: Forms
-            url: customize-forms-sharepoint.md
-          - text: Cards
-            url: customize-card.md
-  
-  # Card
-  - title: Manage canvas apps
+  - title: Manage
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -98,7 +98,7 @@ landingContent:
             url: edit-app.md
 
     # Card
-  - title: Test, monitor, and optimize canvas apps
+  - title: Test, monitor, and optimize
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -112,7 +112,7 @@ landingContent:
             url: performance-tips.md
 
   # Card
-  - title: Canvas apps for developers
+  - title: For developers
     linkLists:
        - linkListType: concept
          links:

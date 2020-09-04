@@ -34,7 +34,7 @@ landingContent:
             url: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/
 
   # Card
-  - title: Create a portal
+  - title: Create
     linkLists:
        - linkListType: concept
          links:
@@ -48,11 +48,11 @@ landingContent:
             url: create-dynamics-portal.md
           
   # Card
-  - title: Customize a portal
+  - title: Customize
     linkLists:
        - linkListType: how-to-guide
          links:
-          - text: Portals Studio overview
+          - text: Portals Studio
             url: portal-designer-anatomy.md
           - text: Add components on a web page
             url: compose-page.md
@@ -62,13 +62,13 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/explore-portals-studio/
 
   # Card
-  - title: Administer and manage portals
+  - title: Administer and manage
     linkLists:
       - linkListType: concept
         links:
-          - text: Overview of portals admin center
+          - text: Portals admin center
             url: admin/admin-overview.md
-          - text: Overview of Portal Management app
+          - text: Portal Management app
             url: configure/configure-portal.md
       - linkListType: learn
         links:
@@ -100,37 +100,37 @@ landingContent:
             url: configure/webpage-access-control.md
 
   # Card
-  - title: Configure portals
+  - title: Configure
     linkLists:
       - linkListType: tutorial
         links:
-          - text: Configure portal authentication
+          - text: Authentication
             url: configure/use-simplified-authentication-configuration.md
-          - text: Configure portal search
+          - text: Search
             url: configure/search.md
-          - text: Configure document storage in portals
+          - text: Document storage
             url: configure-notes.md
 
   # Card
-  - title: Advanced portal customization
+  - title: Advanced customization
     linkLists:
       - linkListType: concept
         links:
-          - text: Work with Liquid templates
+          - text: Liquid templates
             url: liquid/liquid-overview.md
           - text: Portals Web API
             url: web-api-overview.md
-          - text: Use OAuth 2.0 implicit grant flow
+          - text: OAuth 2.0 implicit grant flow
             url: oauth-implicit-grant-flow.md
 
   # Card
-  - title: Troubleshoot and optimize portals
+  - title: Troubleshoot and optimize
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Run portal checker
             url: admin/portal-checker.md
-          - text: Clear the server-side cache
+          - text: Clear server-side cache
             url: admin/clear-server-side-cache.md      
           - text: Error logging and diagnostics
             url: admin/view-portal-error-log.md
