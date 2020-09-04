@@ -19,10 +19,19 @@ search.app:
 ---
 # View charts on a form page
 
-Use interactive dashboards to see workload information and take action. The charts on a interactive dashboard serves as a simple filtering source. You can select different data points on a chart to filter data based on the filter criteria. 
-Interactive dashboards are system dashboards that only an admin can create. To learn more on how to create and configure interactive dashboards, see [Create and configure model-driven app interactive experience dashboards](https://docs.microsoft.com/powerapps/maker/model-driven-apps/configure-interactive-experience-dashboards).
+You can view charts on a entity page or a record page. 
 
-Interactive dashboards come in two forms: multi-stream and single-stream. In addition, multi-stream dashboards can be home page or entity-specific dashboards. The multi-stream dashboards display data in real time over multiple data streams. 
+
+There are two types of charts, **System Charts** and **My Charts**.
+
+
+![Choose between personal or system dashboard](media/select_dashboard.png "Choose between personal or system dashboard") 
+
+Legend: 
+1. **My Dashboards**: My dashboards are personal dashboards can only be see by the user that created the dashbaord. The user can also share their personal dashboard with other users if the user has sharing privileges for their security role.
+
+2. **System Dashboards**: System dashboards are craete by your dministrator. By default, these dashboards are visible to all users. 
+
 
 
 > [!div class="mx-imgBorder"]
