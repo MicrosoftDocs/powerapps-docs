@@ -112,7 +112,7 @@ landingContent:
             url: embed-apps-dev.md
 
     # Card
-  - title: Test, monitor and optimize
+  - title: Test, debug and optimize
     linkLists:
       - linkListType: how-to-guide
         links:
