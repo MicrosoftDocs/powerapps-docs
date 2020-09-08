@@ -29,7 +29,7 @@ landingContent:
           - text: System and configuration requirements
             url: limits-and-config.md
           - text: Planning a Power Apps project
-            url: /powerapps/guidance/planning/introduction.md
+            url: /powerapps/guidance/planning/introduction
        - linkListType: learn
          links:
           - text: Get started with canvas apps in Power Apps
@@ -119,7 +119,7 @@ landingContent:
           - text: Reuse canvas app components
             url: create-component.md
           - text: ALM with Microsoft Power Platform
-            url: ../../../power-platform/alm/overview-alm.md
+            url: ../../../power-platform/alm/overview-alm
           - text: Integrate with other websites
             url: embed-apps-dev.md
 

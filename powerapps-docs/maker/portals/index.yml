@@ -38,7 +38,7 @@ landingContent:
     linkLists:
        - linkListType: concept
          links:
-          - text: Understand available templates for portals
+          - text: Understand available templates
             url: portal-templates.md
        - linkListType: quickstart
          links:  
