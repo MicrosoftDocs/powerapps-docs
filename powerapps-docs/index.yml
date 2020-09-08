@@ -108,7 +108,7 @@ conceptualContent:
     - title: Power Apps for developers
       links:
         - text: Common Data Service developer guide
-          url: /powerapps/developer/common-data-service/overview
+          url: /powerapps/developer/common-data-service/
           itemType: overview
         - text: Model-driven apps developer guide
           url: /powerapps/developer/model-driven-apps/overview
