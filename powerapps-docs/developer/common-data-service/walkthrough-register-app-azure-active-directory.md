@@ -63,7 +63,7 @@ App registration can also be done by an application developer or individual user
 
     ![Add app permission](media/azure-api-permissions-page.png "Add app permission")
 
-7. Select **Dynamics CRM** under the **Microsoft APIs** tab.
+7. Search for and choose **Common Data Service** under the **APIs my organization uses** tab.
     
     ![Select API](media/app-registration-select-api-page.png "Select API")    
 
