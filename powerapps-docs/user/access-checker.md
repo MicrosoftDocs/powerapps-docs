@@ -31,7 +31,7 @@ Common Data Service uses a role-based security model to help secure access to th
 2. On the open record, select **Check Access** on the command bar.
     
 ### Record-level privileges  
-Power Apps use eight different record-level privileges that determine the level of access a user has to a specific record or record type.  
+Power Apps use eight different record-level privileges that determine the level of access a user has to a specific record or record type. Only your administrator can edit you security role and privileges. To find your administrator, see [Find your administrator or support person](https://docs.microsoft.com/powerapps/user/find-admin).
   
 |Privilege|Description|  
 |---------------|-----------------|  
@@ -44,8 +44,9 @@ Power Apps use eight different record-level privileges that determine the level 
 |**Assign**|Required to give ownership of a record to another user. Which records can be assigned depends on the access level of the permission defined in your security role.|  
 |**Share**|Required to give access to a record to another user while keeping your own access. Which records can be shared depends on the access level of the permission defined in your security role.| 
     
-    
-For information on security roles, see [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).   
+ 
+For information on security roles, see [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges). 
+
 For information on how to configure security roles, see [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
 
 
