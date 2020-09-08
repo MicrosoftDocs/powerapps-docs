@@ -60,3 +60,41 @@ landingContent:
          links:
           - text: Create and manage app views
             url: create-edit-views.md
+
+# Card
+  - title: Distribute and share
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Share an app
+            url: share-model-driven-app.md
+          - text: Distribute an app
+            url: distribute-model-driven-app.md
+      - linkListType: learn
+        links:
+          - text: Solutions overview
+            url: ../common-data-service/solutions-overview.md
+
+  # Card
+  - title: Work with controls
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Custom controls overview
+            url: use-custom-controls-data-visualizations.md
+          - text: Set up the timeline control
+            url: set-up-timeline-control.md
+          - text: Add the rich text editor control
+            url: rich-text-editor-control.md
+
+  # Card
+  - title: Apply data visualizations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create a system chart
+            url: create-edit-system-chart.md
+          - text: Create or edit dashboards
+            url: create-edit-dashboards.md
+          - text: Set chart or list properties
+            url: set-properties-chart-list-included-dashboard.md
