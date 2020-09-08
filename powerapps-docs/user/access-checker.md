@@ -45,7 +45,8 @@ Power Apps use eight different record-level privileges that determine the level 
 |**Share**|Required to give access to a record to another user while keeping your own access. Which records can be shared depends on the access level of the permission defined in your security role.| 
     
     
-    
+For information on security roles, see [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges).   
+For information on how to configure security roles, see [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
 
 
 
