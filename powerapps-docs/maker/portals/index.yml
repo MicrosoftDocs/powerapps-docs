@@ -134,5 +134,8 @@ landingContent:
             url: admin/portal-checker.md
           - text: Clear server-side cache
             url: admin/clear-server-side-cache.md      
+          - text: Enable header and footer output caching
+            url: configure/enable-header-footer-output-caching.md      
           - text: Error logging and diagnostics
             url: admin/view-portal-error-log.md
+
