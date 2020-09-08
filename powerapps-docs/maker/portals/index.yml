@@ -92,6 +92,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Invite contacts
+            url: configure/invite-contacts.md
           - text: Create web roles
             url: configure/create-web-roles.md
           - text: Assign entity permissions
