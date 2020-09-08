@@ -433,7 +433,7 @@
     {
       "source_path": "powerapps-docs/developer/common-data-service/xrm-tooling/use-xrm-tooling-classes-generated-code-generation-tool.md",
       "redirect_url": "https://docs.microsoft.com/dynamics365/customer-engagement/developer/build-windows-client-applications-xrm-tools",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps/developer/common-data-service/export-solution-specific-version.md",
@@ -443,17 +443,17 @@
     {
       "source_path": "powerapps-docs/common-data-model/overview.md",
       "redirect_url": "https://docs.microsoft.com/common-data-model/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/common-data-model/use-common-data-model.md",
       "redirect_url": "https://docs.microsoft.com/common-data-model/use",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/common-data-model/industry-accelerators.md",
       "redirect_url": "https://docs.microsoft.com/common-data-model/industry-accelerators",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/guided-learning/create-app-sharepoint.md",
@@ -488,37 +488,37 @@
     {
       "source_path": "powerapps-docs/postman-collection.md",
       "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/define-postman-collection",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/customapi-azure-resource-manager-tutorial.md",
       "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/azure-active-directory-authentication",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/customapi-web-api-tutorial.md",
       "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/create-web-api-connector",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/api-connector-overview.md",
       "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/submit-certification",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/api-connector-dev.md",
       "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/submit-certification",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/api-connector-submission.md",
       "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/submit-certification",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/api-connector-faq.md",
       "redirect_url": "https://docs.microsoft.com/connectors/custom-connectors/faq",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/admin-view-user-licenses.md",
@@ -1633,7 +1633,7 @@
     {
       "source_path": "powerapps-docs/webinars-listing.md",
       "redirect_url": "https://powerusers.microsoft.com/t5/Samples-Learning-and-Videos/ct-p/PA_Comm_Galleries",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/working-with-cards.md",
@@ -1753,7 +1753,7 @@
     {
       "source_path": "powerapps-docs/samples-resources.md",
       "redirect_url": "/powerapps/maker/common-data-service/samples-resources",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/app-source.md",
@@ -1783,12 +1783,12 @@
     {
       "source_path": "powerapps-docs/maker/model-driven-apps/run-app-client-model-driven.md",
       "redirect_url": "/powerapps-docs/user/run-app-client-model-driven",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/maker/canvas-apps/generate-app-from-sharepoint-list-interface.md",
       "redirect_url": "/powerapps-docs/maker/canvas-apps/app-from-sharepoint",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps/maker/canvas-apps/release-notes.md",
@@ -1813,7 +1813,7 @@
     {
       "source_path": "powerapps-docs/maker/canvas-apps/embed-powerapps-powerbi.md",
       "redirect_url": "https://docs.microsoft.com/power-bi/visuals/power-bi-visualization-powerapp",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/maker/common-data-service/view-download-developer-resources.md",
@@ -1828,7 +1828,7 @@
     {
       "source_path": "powerapps-docs/maker/maker/canvas-apps/webinars-listing.md",
       "redirect_url": "https://powerusers.microsoft.com/t5/Samples-Learning-and-Videos/ct-p/PA_Comm_Galleries",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/index.md",
