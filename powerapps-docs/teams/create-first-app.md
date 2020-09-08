@@ -121,8 +121,7 @@ attributes of each record before filling up the table with multiple rows of
 data. 
 
 > [!TIP]
-> To learn about Project Oakdale tables in detail, see [Project Oakdale
-tables](overview-tables.md).
+> To learn about Project Oakdale tables in detail, see [Overview of Project Oakdale](overview-data-platform.md).
 
 To get started creating your first table: 
 
