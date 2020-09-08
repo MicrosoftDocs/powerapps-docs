@@ -119,7 +119,7 @@ landingContent:
           - text: Reuse canvas app components
             url: create-component.md
           - text: ALM with Microsoft Power Platform
-            url: ../../../power-platform/alm/overview-alm
+            url: https://docs.microsoft.com/power-platform/alm/overview-alm
           - text: Integrate with other websites
             url: embed-apps-dev.md
 
