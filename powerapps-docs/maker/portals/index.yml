@@ -88,7 +88,7 @@ landingContent:
             url: configure/web-form-properties.md
 
   # Card
-  - title: User management and security
+  - title: Manage users and security
     linkLists:
       - linkListType: how-to-guide
         links:

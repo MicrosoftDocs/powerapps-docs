@@ -29,7 +29,7 @@ landingContent:
           - text: System and configuration requirements
             url: limits-and-config.md
           - text: Planning a Power Apps project
-            url: /powerapps/guidance/planning/introduction
+            url: /powerapps/guidance/planning/introduction.md
        - linkListType: learn
          links:
           - text: Get started with canvas apps in Power Apps
@@ -40,8 +40,10 @@ landingContent:
     linkLists:
        - linkListType: quickstart
          links:
+          - text: Explore sample apps
+            url: open-and-run-a-sample-app.md 
           - text: Create your first app
-            url: get-started-test-drive.md 
+            url: get-started-test-drive.md  
           - text: Create a canvas app from Common Data Service
             url: data-platform-create-app.md
        - linkListType: learn
@@ -58,6 +60,8 @@ landingContent:
             url: add-configure-controls.md
           - text: Screens and layouts
             url: set-aspect-ratio-portrait-landscape.md
+          - text: Add forms
+            url: add-form.md
        - linkListType: learn
          links:
           - text: Use the UI and controls in canvas apps
@@ -74,6 +78,8 @@ landingContent:
             url: customize-forms-sharepoint.md
           - text: Cards
             url: customize-card.md
+          - text: Accessibility
+            url: accessible-apps.md
 
   # Card
   - title: Understand building blocks
@@ -82,10 +88,12 @@ landingContent:
          links:
           - text: Connectors
             url: connections-list.md
+          - text: Delegation
+            url: delegation-overview.md
           - text: Data sources
             url: working-with-data-sources.md
-          - text: Delegation
-            url: delegation-overview.md  
+          - text: Tables and records
+            url: working-with-tables.md  
 
   # Card
   - title: Manage
@@ -98,9 +106,11 @@ landingContent:
             url: share-app.md
           - text: Edit an app
             url: edit-app.md
+          - text: Licensing
+            url: license-designation.md
 
   # Card
-  - title: For developers
+  - title: Application Lifecycle Management (ALM)
     linkLists:
        - linkListType: concept
          links:
@@ -108,8 +118,8 @@ landingContent:
             url: add-app-solution.md
           - text: Reuse canvas app components
             url: create-component.md
-          - text: Apps for enterprise developers, partners and ISVs
-            url: create-component.md
+          - text: ALM with Microsoft Power Platform
+            url: ../../../power-platform/alm/overview-alm.md
           - text: Integrate with other websites
             url: embed-apps-dev.md
 
@@ -128,17 +138,18 @@ landingContent:
             url: performance-tips.md
 
   # Card
-  - title: Advanced learning and reference
+  - title: References and advanced learning
     linkLists:
-       - linkListType: learn
-         links:
-          - text: Use advanced data options and connectors
-            url: https://docs.microsoft.com/learn/paths/advanced-data-options-and-connectors/
-          - text: Master advanced techniques
-            url: https://docs.microsoft.com/learn/paths/understand-advanced-topics/
        - linkListType: reference
          links:
           - text: Controls and properties reference
             url: reference-properties.md
           - text: Formula reference
             url: formula-reference.md
+       - linkListType: learn
+         links:
+          - text: Use advanced data options and connectors
+            url: https://docs.microsoft.com/learn/paths/advanced-data-options-and-connectors/
+          - text: Master advanced techniques
+            url: https://docs.microsoft.com/learn/paths/understand-advanced-topics/
+
