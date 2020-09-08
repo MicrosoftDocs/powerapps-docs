@@ -46,18 +46,18 @@ The Workplace Care Management app has the following components:
 
 **Employee cases** 
 
-Lists all the cases that have been created.
-
 > [!div class="mx-imgBorder"]
 > ![List of Employee cases](media/health-safety-employee-cases.png "List of Employee cases")
 
-In the Employee Cases component, we have three views with different filters:
+- **Dashboard** - Provide a clean and simple dashboard which gives you a way to manage your workload.
 
-- **My Employee Cases**: Filtered by owner and only shows active cases. This is the default view.
+- **Employee Cases** - List of all the employee cases current open. The employee cases have three views with different filters:
 
-- **Active Employee Cases**: Shows all the active employee cases. An employee case is considered active when the status field value is set to active. Active Employee Cases are limited to one per employee.
+   - My Employee Cases: Filtered by owner and only shows active cases. This is the default view.
 
-- **Closed Employee Cases**: Shows all the closed employee cases. An employee case is considered closed when it is made inactive either by the case manager or through the process.
+   - Active Employee Cases: Shows all the active employee cases. An employee case is considered active when the status field value is set to active. Active Employee Cases are limited to one per employee.
+
+   - Closed Employee Cases: Shows all the closed employee cases. An employee case is considered closed when it is made inactive either by the case manager or through the process.
 
 > [!div class="mx-imgBorder"]
 > ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
@@ -232,7 +232,7 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 **Case Contacts** may be added to an **Employee Case** using import functionality by a user with appropriate security privileges. The steps below describe the process for importing Case Contacts. 
 
 Prerequisites: 
-1. [Download a template to use for data import](https://docs.microsoft.com/power-platform/admin/download-template-data-import). 
+1. Download a template to use for data import ([link](https://docs.microsoft.com/power-platform/admin/download-template-data-import)). 
 2. Select **Case Contact** when prompted to select the record type for which template is needed.
 3. Add **Case Contact** data to the data file just downloaded. The **Case Contact** entity contains the following attributes that should be updated in the data file:<br>
 **Comment** - Any additional information as required.<br>
@@ -268,6 +268,29 @@ After you completed the process and selects **Finish** in the business process f
 
   > [!div class="mx-imgBorder"]
   > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
+  
+## Overview of Employee Cases
+
+For managing the whole process from beginning to end, you can use the **Workplace Care Management** dashboard. You will find the dashboard under **Dashboards**. The dashboard is separated with two different sections, on the top you will see the list of 4 different views which show different focusses on the employee cases and on the bottom it will show charts to get a quick overview.
+
+**Views**
+
+- My High Risk Employee Cases; shows the employee cases which are on high risk.
+
+- My Employee Cases due for Contact; shows the employee cases which aren't contacted yet for over a day.
+
+- My Employee Cases due for Investigation; shows the employee cases which aren't investigated yet for over a day.
+
+- My Outstanding Employee Cases; shows the employee cases outstanding for more then 2 weeks.
+
+**Charts**
+
+- Employee Cases by Risk Level; which shows employee cases by risk level.
+
+- Employee Cases by Duration; which shows employee cases by duration over days.
+
+  > [!div class="mx-imgBorder"]
+  > ![Workplace Care Management Dashboard](media/health-safety-dashboard.png "Workplace Care Management Dashboard")
 
 ## Feedback about the solution
 
