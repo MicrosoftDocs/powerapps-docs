@@ -73,9 +73,11 @@ Legend:
 
 ### Drill down in the chart data
 
-You can drill down into a segment on a chart and filter the data for that segment. When a chart is shown together with grid, the drill down option that you select will filter both chart and grid as show in the illustration below. For more information on how to use the drill down option, see [Drill down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
+You can drill down into a segment on a chart and filter the data for that segment. When a chart is shown together with grid, the drill down option that you select will filter both chart and grid as show this illustration. 
 
-![Drill down in to a chart](media/drill-down.gif "This shows how the chart drill down feature works")
+![Drill down in to a chart](media/drill-down.gif "This illustration shows how the chart drill down feature works")
+
+For more information on how to use the drill down option, see [Drill down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
 
 ## View charts in a record
 
