@@ -28,6 +28,8 @@ landingContent:
             url: getting-started.md
           - text: System and configuration requirements
             url: limits-and-config.md
+          - text: Planning a Power Apps project
+            url: /powerapps/guidance/planning/introduction
        - linkListType: learn
          links:
           - text: Get started with canvas apps in Power Apps
