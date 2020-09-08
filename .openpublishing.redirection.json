@@ -1889,16 +1889,6 @@
       "source_path": "powerapps-docs/maker/common-data-service/entity-relationship-behavior.md",
       "redirect_url": "create-edit-entity-relationships#entity-relationship-behavior",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/maker/common-data-service/index.md",
-      "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "powerapps-docs/maker/model-driven-apps/index.md",
-      "redirect_url": "/powerapps/maker/model-driven-apps/model-driven-app-overview",
-      "redirect_document_id": false
     }
   ]
 }
