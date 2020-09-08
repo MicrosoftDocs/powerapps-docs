@@ -887,14 +887,6 @@
       href: ./canvas-apps/restore-an-app.md
     - name: Change app name and tile
       href: ./canvas-apps/set-name-tile.md
-    - name: Manage screens
-      items:
-        - name: Change screen size and orientation
-          href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
-        - name: Create responsive layout
-          href: ./canvas-apps/create-responsive-layout.md
-        - name: Build responsive apps
-          href: ./build-responsive-apps.md
   - name: Test an app with Test Studio
     items:
     - name: Test Studio Overview
@@ -991,6 +983,14 @@
     items:
     - name: Understand model-driven app components
       href: ./model-driven-apps/model-driven-app-components.md
+    - name: Manage screens
+      items:
+        - name: Change screen size and orientation
+          href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+        - name: Create responsive layout
+          href: ./canvas-apps/create-responsive-layout.md
+        - name: Build responsive apps
+          href: ./build-responsive-apps.md
     - name: Define data for an app
       href: ./model-driven-apps/define-data-model-driven-app.md
       items:

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 08/24/2020
+ms.date: 09/15/2020
 ms.author: emcoope
 search.audienceType:
   - maker
@@ -19,7 +19,7 @@ search.app:
 
 [This article is pre-release documentation and is subject to change.]
 
-Responsiveness refers to the ability of an app to automatically adapt to different screen sizes and form factors to use the available screen space sensibly, providing great UI and UX in every device, form factor, and screen size. 
+Responsiveness refers to the ability of an app to automatically align to different screen sizes and form factors to use the available screen space sensibly, providing great UI and UX in every device, form factor, and screen size. 
 
 > [!IMPORTANT]
 > - This feature is in public preview. For more information, see [Experimental and preview features](working-with-experimental-preview.md).
@@ -36,9 +36,9 @@ Responsiveness allows different elements of the app to specify how they:
 
 ## Why should you build responsive apps
 
-End users can access your app from different devices such as phones, tablets, laptops, and desktops with large monitors, different screen sizes, and with various numbers of pixels.
+End users can access your app from different devices such as phones, tablets, laptops, and desktops with large monitors, different screen sizes, and with varied number of pixels.
 
-To ensure great user experience and usability of the app on each form factor and device, you need to design the app with responsive design principles. Even if your app is intended to be used only on the web browser or only on mobile phones, user device screen sizes can be different, so designing the app with responsive principles is a good idea.
+To ensure great user experience and usability of the app on each form factor and device, designing the app with responsive design principles is necessary. Even if the app is intended to be used only on the web browser or on mobile phones, user device screen sizes can be different, so designing the app with responsive principles is a good idea.
 
 ## Designing the app with responsiveness principles
 
@@ -106,9 +106,7 @@ Choose one of two layout modes for a container: Manual layout or Auto layout (ho
 
 ### Auto-layout containers 
 
-Two new controls, `Vertical layout container` and `Horizontal layout container`, can be used to automatically lay out child components. 
-
-These containers determine the position of the child components, so you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components.  
+Two controls, `Vertical layout container` and `Horizontal layout container` can be used to automatically lay out child components. These containers determine the position of the child components so that you never have to set X, Y for a component inside the container. Also, it can distribute the available space to its child components based on the settings, as well as determines both the vertical and horizontal alignment of the child components.  
 
 #### When to use auto-layout containers
 
