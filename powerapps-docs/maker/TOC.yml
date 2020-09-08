@@ -1744,7 +1744,7 @@
   - name: Work with Project Oakdale
     items:
       - name: Overview
-        href: ../teams/overview-tables.md
+        href: ../teams/overview-data-platform.md
       - name: Project Oakdale vs Common Data Service
         href: ../teams/data-platform-compare.md
       - name: Create a table

@@ -1,5 +1,5 @@
 ---
-title: Overview of Project Oakdale | Microsoft Docs
+title: Project Oakdale overview | Microsoft Docs
 description: Provides an overview of Project Oakdale.
 author: NHelgren
 ms.service: powerapps
@@ -13,8 +13,19 @@ ms.reviewer: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
+Project Oakdale delivers a built-in, low-code data platform for Teams. It provides relational data storage, rich data types, enterprise grade governance, and one-click solution deployment. Project Oakdale enables everyone to easily build and deploy apps.
 
-Project Oakdale delivers a built-in, low-code data platform for Teams. It provides relational data storage, rich data types, enterprise grade governance, and one-click solution deployment. Project Oakdale enables everyone to easily build and deploy apps. 
+:::image type="content" source="media/tables-in-teams.png" alt-text="Teams integration app example":::
+
+Some of the benefits of Project Oakdale include:
+- Contains a subset of the capabilities available in the data platform behind Dynamics 365 and Power Platform.​
+- Provides storage, rich data types with enterprise capabilities, and one-click solution deployment. ​
+- Is included for every Teams customer, which can be governed by your organization.​
+- With 2 GB storage per team, can support up to 1 million rows​.
+- Data can be shared across multiple apps, flows, and chatbots​.
+- Can be promoted to full Common Data Service.​
+
+## Tables in Project Oakdale
 
 Project Oakdale tables provide the ability to create, populate, and query data within Project Oakdale. Tables represent different types of entities important to an organization, such as a table to store products or another to store orders.  
 
