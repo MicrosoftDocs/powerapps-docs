@@ -34,7 +34,7 @@ Common Data Service uses a role-based security model to help secure access to th
     > ![Select to check your access](media/check_access.png "Select check acess to check your access")
     
 ### Record-level privileges  
- [!INCLUDE [pn-powerapps](../includes/pn-powerapps.md)] and model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, use eight different record-level privileges that determine the level of access a user has to a specific record or record type.  
+Power Apps use eight different record-level privileges that determine the level of access a user has to a specific record or record type.  
   
 |Privilege|Description|  
 |---------------|-----------------|  
