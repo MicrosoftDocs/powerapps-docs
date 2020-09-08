@@ -65,7 +65,7 @@ When a chart is shown together with grid, the grid filter option that you select
 
 Legend:
 
-1. **Short**: Short records.
+1. **Sort**: Sorts records. Use **Filter by** to filter both grid and chart data based on the filter criteria.
 2. **Open advanced filtering panel**: See which filters were applied to the current view. For more information, see [See the current view definition](https://docs.microsoft.com/powerapps/user/grid-filters-advanced#see-the-current-view-definition).
 3. **Search this view**: Search for data in the view you're in.
 4. **Jump bar**: The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.
