@@ -98,3 +98,39 @@ landingContent:
             url: create-edit-dashboards.md
           - text: Set chart or list properties
             url: set-properties-chart-list-included-dashboard.md
+
+  # Card
+  - title: Transition to unified interface
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Transition quick start
+            url: transition-web-app.md
+          - text: Approaching a Unified Interface transition
+            url: approaching-unified-interface.md
+          - text: Transition FAQ
+            url: faqs-transition-unified-interface.md
+
+  # Card
+  - title: Advanced app making and customization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create web resources
+            url: create-edit-web-resources.md
+          - text: Change custom entity icons
+            url: change-custom-entity-icons.md
+          - text: Create customizable help
+            url: use-customizable-help.md
+
+  # Card
+  - title: For developers
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Customize entity forms
+            url: ../../developer/model-driven-apps/customize-entity-forms.md
+          - text: Apply data visualizations using code
+            url: ../../developer/model-driven-apps/customize-visualizations-dashboards.md      
+          - text: Use web resources
+            url: ../../developer/model-driven-apps/use-web-resources.md
