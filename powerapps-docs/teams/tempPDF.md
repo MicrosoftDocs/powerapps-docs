@@ -6,7 +6,7 @@
 [!include[](use-the-fluent-ui-controls.md)]
 [!include[](create-additional-apps.md)]
 [!include[](use-teams-integration-object.md)]
-[!include[](overview-tables.md)]
+[!include[](overview-data-platform.md)]
 [!include[](data-platform-compare.md)]
 [!include[](create-table.md)]
 [!include[](edit-delete-table.md)]
