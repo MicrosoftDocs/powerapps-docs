@@ -2,7 +2,7 @@
 title: "Define alternate keys using solution explorer | MicrosoftDocs"
 description: "Learn how to define alternate keys that can be used to reference records in Common Data Service using solution explorer"
 ms.custom: ""
-ms.date: 05/31/2018
+ms.date: 08/01/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -29,6 +29,9 @@ The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium
 - [Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
 - [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)
 
+> [!IMPORTANT]
+> If the data within a field that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?` then `GET` or `PATCH` actions will not work. If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with those characters.
+
 ## Open solution explorer
 
 Part of the name of any alternate key you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this entity. More information: [Change the solution publisher prefix](change-solution-publisher-prefix.md) 
@@ -51,12 +54,13 @@ Part of the name of any alternate key you create is the customization prefix. Th
 1. Select **OK** to close the form.
 
 ### (Optional) View the system job tracking creation of indexes
+
 1. While [viewing alternate keys](#view-alternate-keys) after you have created a new alternate key you will see a row for the key you created.
 2. In the **System Job** column you will find a link to the system job that monitors the creation of the indexes to support the alternate key. 
     
     This system job will have a name that follows this pattern: `Create index for {0} for entity {1}` where `0` is the **Display Name** of the alternate key and `1` is the name of the entity.
 
-    The link to the system job will not be displayed after the system job completes successfully. More information: [Monitor and manage system jobs](/dynamics365/customer-engagement/admin/monitor-manage-system-jobs)
+    The link to the system job will not be displayed after the system job completes successfully. More information: [Monitor and manage system jobs](/power-platform/admin/monitor-manage-system-jobs)
 
 
 ## Delete an alternate key
@@ -67,4 +71,4 @@ While [viewing alternate keys](#view-alternate-keys), select ![Delete](media/del
 
 [Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
 [Define alternate keys using Power Apps portal](define-alternate-keys-portal.md)<br />
-[Developer Documentation: Define alternate keys for an entity](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)
+[Developer Documentation: Work with alternate keys](../../developer/common-data-service/define-alternate-keys-entity.md)

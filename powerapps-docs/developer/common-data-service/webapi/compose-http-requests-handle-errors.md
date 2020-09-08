@@ -2,7 +2,7 @@
 title: "Compose HTTP requests and handle errors (Common Data Service)| Microsoft Docs"
 description: "Read about the HTTP methods and headers that form a part of HTTP requests that interact with the Web API and how to identify and handle errors returned in the response"
 ms.custom: ""
-ms.date: 04/03/2020
+ms.date: 08/09/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -152,7 +152,7 @@ Details about errors are included as JSON in the response. Errors will be in thi
 ```
 
 > [!IMPORTANT]
-> The structure of the error messages is changing. This change is expected to be deployed to different regions over a period starting in late April through May 2020.
+> The structure of the error messages is changing. This change is expected to be deployed to different regions over a period starting in August through October 2020.
 > 
 > Before this change, the errors returned were in this format:
 > 
@@ -176,7 +176,91 @@ Details about errors are included as JSON in the response. Errors will be in thi
 > 
 > If you find that an application you use has a dependency on this property after this change is deployed, you can contact support and request that the change be temporarily removed for your environment. This will provide time for the application developer to make appropriate changes to remove this dependency.
 
-  
+### Include additional details with errors
+
+Some errors can include additional details using *annotations*. When a request includes the `Prefer: odata.include-annotations="*"` header, the response will include all the annotations which will include additional details about errors and a URL that can be used to be directed to any specific guidance for the error.
+
+Some of these details can be set by developers writing plug-ins. For example, let’s say you have a plug-in that throws an error using the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor. This allows you to pass an OperationStatus value, a custom integer error code, and an error message.
+
+A simple plug-in might look like this:
+
+```csharp
+namespace MyNamespace
+{
+    public class MyClass : IPlugin
+    {
+        public void Execute(IServiceProvider serviceProvider)
+        {
+
+            // Obtain the tracing service
+            ITracingService tracingService =
+            (ITracingService)serviceProvider.GetService(typeof(ITracingService));
+
+            tracingService.Trace("Entering MyClass plug-in.");
+
+             try
+            {
+                throw new InvalidPluginExecutionException(OperationStatus.Canceled, 12345, "Example Error Message.");
+            }
+            catch (InvalidPluginExecutionException ex)
+            {
+                tracingService.Trace("StackTrace:");
+                tracingService.Trace(ex.StackTrace);
+                throw ex;
+            }
+        }
+    }
+}
+```
+
+When this plug-in is registered on the create of an account entity, and the request to create an account includes the `odata.include-annotations="*"` preference, the request and response will look like the following:
+
+**Request**
+
+```http
+POST https://yourorg.api.crm.dynamics.com/api/data/v9.1/accounts HTTP/1.1
+Content-Type: application/json;
+Prefer: odata.include-annotations="*"
+{
+    "name":"Example Account"
+}
+
+```
+
+**Response**
+
+```http
+HTTP/1.1 400 Bad Request
+Content-Type: application/json; odata.metadata=minimal
+{
+    "error": {
+        "code": "0x80040265",
+        "message": "Example Error Message.",
+        "@Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus": "1",
+        "@Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode": "12345",
+        "@Microsoft.PowerApps.CDS.HelpLink": "http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform",
+        "@Microsoft.PowerApps.CDS.TraceText": "\r\n[MyNamespace: MyNamespace.MyClass ]\r\n[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass : Create of account] \r\n\r\n Entering MyClass plug-in.\r\nStackTrace:\r\n   at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)\r\n\r\n"
+        "@Microsoft.PowerApps.CDS.InnerError.Message": "Example Error Message."
+    }
+}
+```
+
+This response includes the following annotations:
+
+|Annotation and Description  |Value  |
+|---------|---------|
+|`@Microsoft.PowerApps.CDS.ErrorDetails.OperationStatus`<br/>The value of the <xref:Microsoft.Xrm.Sdk.OperationStatus> set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|`1`|
+|`@Microsoft.PowerApps.CDS.ErrorDetails.SubErrorCode`<br/>The value of the `SubErrorCode` set by the [InvalidPluginExecutionException(OperationStatus, Int32, String)](/dotnet/api/microsoft.xrm.sdk.invalidpluginexecutionexception.-ctor#Microsoft_Xrm_Sdk_InvalidPluginExecutionException__ctor_Microsoft_Xrm_Sdk_OperationStatus_System_Int32_System_String_) constructor.|`12345`|
+|`@Microsoft.PowerApps.CDS.HelpLink`<br/>A URL that contains information about the error which *may* re-direct you to guidance about how to address the error.|`http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040265&client=platform`|
+|`@Microsoft.PowerApps.CDS.TraceText`<br/>Content written to the Plug-in trace log using the [ITracingService.Trace(String, Object[]) Method](/dotnet/api/microsoft.xrm.sdk.itracingservice.trace). This includes the stacktrace for the plugin because the plug-in author logged it.|`[MyNamespace: MyNamespace.MyClass ]`<br/>`[52e2dbb9-85d3-ea11-a812-000d3a122b89: MyNamespace.MyClass :Create of account]`<br/><br/>`Entering MyClass plug-in.`<br/>`StackTrace:`<br/>`  at MyNamespace.MyClass.Execute(IServiceProvider serviceProvider)`|
+|`@Microsoft.PowerApps.CDS.InnerError.Message`<br/>The error message found in the InnerError for the exception. This should be the same as the error message except in certain special cases that are for internal use only.|`Example Error Message.`|
+
+> [!NOTE]
+> The `@Microsoft.PowerApps.CDS.HelpLink` is not guaranteed to provide guidance for every error. Guidance *may* be provided proactively but most commonly it will be provided reactively based on how frequently the link is used. Please use the link. If it doesn't provide guidance, your use of the link helps us track that people need more guidance about the error. We can then prioritize including guidance to the errors that people need most. The resources that the link may direct you to may be documentation, links to community resources, or external sites.
+
+If you do not want to receive all annotations in the response, you can specify which specific annotations you want to have returned. Rather than using `Prefer: odata.include-annotations="*"`, you can use the following to receive only formatted values for operations that retrieve data and the helplink if an error occurs:
+`Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Microsoft.PowerApps.CDS.HelpLink"`.
+
 ### See also  
 
 [Perform operations using the Web API](perform-operations-web-api.md)<br />

@@ -30,9 +30,7 @@ App registration can also be done by an application developer or individual user
 
 ## Prerequisites  
 
--   The user who is registering the application must have a user account with System Administrator security role and the global administrator role for the Office 365 subscription.  
-  
--   An Azure subscription for application registration. A trial account will also work.  
+- An Azure subscription for application registration. A trial account will also work.  
   
 ## Create an application registration 
   
@@ -65,7 +63,7 @@ App registration can also be done by an application developer or individual user
 
     ![Add app permission](media/azure-api-permissions-page.png "Add app permission")
 
-7. Select **Dynamics CRM** under the **Microsoft APIs** tab.
+7. Search for and choose **Common Data Service** under the **APIs my organization uses** tab.
     
     ![Select API](media/app-registration-select-api-page.png "Select API")    
 

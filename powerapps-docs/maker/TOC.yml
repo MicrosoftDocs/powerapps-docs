@@ -197,7 +197,7 @@
         href: ./canvas-apps/get-started-create-from-data.md
       - name: From Azure SQL Database
         href: ./canvas-apps/app-from-azure-sql-database.md
-    - name: 2 - Make basic customizations
+    - name: 3 - Make basic customizations
       items:
       - name: 1 - Galleries
         href: ./canvas-apps/customize-layout-sharepoint.md
@@ -723,6 +723,8 @@
             href: ./canvas-apps/functions/function-form.md
           - name: Revert
             href: ./canvas-apps/functions/function-revert.md
+          - name: RequestHide
+            href: ./canvas-apps/functions/function-requesthide.md
           - name: RGBA
             href: ./canvas-apps/functions/function-colors.md
           - name: Right
@@ -877,6 +879,8 @@
     items:
     - name: Edit an app
       href: ./canvas-apps/edit-app.md
+    - name: Export and import an app
+      href: ./canvas-apps/export-import-app.md
     - name: Delete an app
       href: ./canvas-apps/delete-app.md
     - name: License designation for an app
@@ -939,14 +943,16 @@
         items:
         - name: SharePoint scenarios overview
           href: ./canvas-apps/sharepoint/scenarios-intro.md
-        - name: How to filter a search list in an app?
+        - name: Filter a search list in an app
           href: ./canvas-apps/sharepoint/scenarios-filter-search-list.md
-        - name: How to use drop down list with choices from lookup column in a SharePoint list?
+        - name: Use drop down list with choices from lookup column in a SharePoint list
           href: ./canvas-apps/sharepoint/scenarios-choice-to-lookup.md
-        - name: How to customize an app screen based on column status inside SharePoint list?
+        - name: Customize an app screen based on column status inside SharePoint list
           href: ./canvas-apps/sharepoint/scenarios-customize-view-based-on-column-status.md
-        - name: How to work with permissions in a lookup list from SharePoint site?
+        - name: Work with permissions in a lookup list from SharePoint site
           href: ./canvas-apps/sharepoint/scenarios-lookup-list-permissions.md
+        - name: Create SharePoint integrated canvas app from scratch to view, edit, add, and delete SharePoint list items
+          href: ./canvas-apps/sharepoint/scenarios-sharepoint-form-from-scratch.md
     - name: Cognitive Services
       href: ./canvas-apps/cognitive-services-api.md
     - name: Transform your InfoPath forms to Power Apps
@@ -1092,6 +1098,10 @@
             href: ./model-driven-apps/manage-auto-save.md
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
+        - name: Troubleshoot forms
+          items: 
+          - name: Use Monitor to troubleshoot forms
+            href: ./model-driven-apps/monitor-form-checker.md            
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
@@ -1155,11 +1165,9 @@
         href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
       - name: Use system controls for data visualizations
         items:
-        - name: Set up the Notes control
-          href: ./model-driven-apps/notes-control-legacy.md
-        - name: Set up timeline control
+        - name: Set up the timeline control
           href: ./model-driven-apps/set-up-timeline-control.md
-        - name: FAQs for timeline control
+        - name: FAQs for the timeline control
           href: ./model-driven-apps/faqs-timeline-control.md
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
@@ -1169,6 +1177,8 @@
           href: ./model-driven-apps/timer-control-legacy.md
         - name: Add the calendar control to entities
           href: ./model-driven-apps/add-calendar-control.md
+        - name: Add the rich text editor control
+          href: ./model-driven-apps/rich-text-editor-control.md
         - name: Add the news control to an entity
           href: ./model-driven-apps/stay-current-with-news-control.md          
       - name: Use custom controls for data visualizations
@@ -1253,12 +1263,14 @@
       items:
         - name: Portal templates
           href: ./portals/portal-templates.md
-        - name: Create a starter portal
-          href: ./portals/create-portal.md
-        - name: Create a portal with Dynamics 365 environment
-          href: ./portals/create-dynamics-portal.md
-        - name: Provision a portal using the older portal add-on
-          href: ./portals/provision-portal-add-on.md
+        - name: Create a portal
+          items:
+           - name: Create a starter portal
+             href: ./portals/create-portal.md
+           - name: Create a portal with Dynamics 365 environment
+             href: ./portals/create-dynamics-portal.md
+           - name: Create a portal using the older portal add-on
+             href: ./portals/provision-portal-add-on.md
         - name: Power Apps portals Studio anatomy
           href: ./portals/portal-designer-anatomy.md
         - name: Supported web browsers for portal designer
@@ -1472,10 +1484,13 @@
         - name: Portals Web API
           items:
           - name: Overview
+            displayName: Portals Web API overview
             href: ./portals/web-api-overview.md
           - name: Perform operations
+            displayName: Portals Web API perform operations
             href: ./portals/web-api-perform-operations.md
           - name: Compose HTTP requests and handle errors
+            displayName: Portals Web API handle HTTP requests and errors
             href: ./portals/web-api-http-requests-handle-errors.md
     - name: User management and security in portal
       items:
@@ -1672,10 +1687,14 @@
           href: ./common-data-service/view-component-dependencies.md   
         - name: Use environment variables
           href: ./common-data-service/EnvironmentVariables.md
-        - name: Translate customized entity and field text
-          href: ./common-data-service/export-customized-entity-field-text-translation.md
-        - name: Import translated entity and field text
-          href: ./common-data-service/import-translated-entity-field-text.md               
+        - name: Translate customized component text
+          items: 
+          - name: Overview
+            href: ./common-data-service/translate-entity-label-text.md
+          - name: Export customized component text for translation
+            href: ./common-data-service/export-customized-entity-field-text-translation.md
+          - name: Import translated component text
+            href: ./common-data-service/import-translated-entity-field-text.md               
       - name: Use solution checker
         href: ./common-data-service/use-powerapps-checker.md
         items:
@@ -1714,7 +1733,13 @@
   - name: Import translated entity and field text
     href: ./common-data-service/import-translated-entity-field-text.md
   - name: Export to data lake
-    href: ./common-data-service/export-to-data-lake.md
+    items: 
+    - name: Export to Azure Data Lake Storage Gen2
+      href: ./common-data-service/export-to-data-lake.md
+    - name: Ingest exported data with Azure Data Factory
+      href: ./common-data-service/export-to-data-lake-data-adf.md
+    - name: Analyze exported data with Power BI
+      href: ./common-data-service/export-to-data-lake-data-powerbi.md    
   - name: Security in Common Data Service
     href: /power-platform/admin/wp-security
   - name: API limits overview
@@ -1728,7 +1753,7 @@
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
   items:
-  - name: Crisis communication
+  - name: Crisis Communication
     href: ./canvas-apps/sample-crisis-communication-app.md
   - name: Hospital Emergency Response
     items:
@@ -1773,17 +1798,23 @@
     - name: Overview
       href: ../sample-apps/return-to-workplace/overview.md
     - name: Deploy the solution
-      href: ../sample-apps/return-to-workplace/deploy.md   
+      href: ../sample-apps/return-to-workplace/deploy.md
+    - name: Upgrade the solution
+      href: ../sample-apps/return-to-workplace/upgrade.md      
     - name: Configure the solution
       href: ../sample-apps/return-to-workplace/configure.md
     - name: Location Readiness dashboard
       href: ../sample-apps/return-to-workplace/dashboard-for-executive-leadership.md
+    - name: Workplace Care Management dashboard
+      href: ../sample-apps/return-to-workplace/dashboard-case-management.md
     - name: Facility Safety Management app
       href: ../sample-apps/return-to-workplace/app-for-facility-manager.md
     - name: Workplace Care Management app
       href: ../sample-apps/return-to-workplace/app-for-health-and-safety-lead.md
     - name: Employee Return to the Workplace app
       href: ../sample-apps/return-to-workplace/app-for-employee.md
+    - name: Extend the solutions
+      href: ../sample-apps/return-to-workplace/extend.md
 - name: Learn from others
   items:
   - name: Blog
@@ -1800,6 +1831,8 @@
     href: ./canvas-apps/get-sessionid.md
   - name: Troubleshoot startup issues for Power Apps
     href: troubleshooting-startup-issues.md
+  - name: Troubleshoot sign-in issues for Power Apps mobile
+    href: ../user/powerapps_mobile_troubleshoot.md
   - name: Troubleshoot Power Query
     href: ./common-data-service/data-platform-cds-newentity-troubleshooting-mashup.md
   - name: Support
