@@ -38,7 +38,7 @@ You use this app to:
 The left pane lists all the components available in the **Employee Cases** area.
 
 > [!div class="mx-imgBorder"]
-> ![Employee case view](media/health-safety-employee-case-view.png "Employee case view")
+> ![Workplace Care Management App](media/health-safety-dashboard.png "Workplace Care Management App")
 
 ## App components
 
