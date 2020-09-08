@@ -91,7 +91,7 @@ landingContent:
           - text: Customization XML reference
             url: customization-xml-reference.md      
           - text: Power Apps component framework
-            url: ../component-framework/reference.md
+            url: ../component-framework/reference/index.md
 
 # Card
   - title: Related resources
