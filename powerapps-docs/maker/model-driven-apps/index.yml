@@ -61,6 +61,18 @@ landingContent:
           - text: Create and manage app views
             url: create-edit-views.md
 
+  # Card
+  - title: Work with controls
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Custom controls overview
+            url: use-custom-controls-data-visualizations.md
+          - text: Set up the timeline control
+            url: set-up-timeline-control.md
+          - text: Add the rich text editor control
+            url: rich-text-editor-control.md
+
 # Card
   - title: Distribute and share
     linkLists:
@@ -74,18 +86,6 @@ landingContent:
         links:
           - text: Solutions overview
             url: ../common-data-service/solutions-overview.md
-
-  # Card
-  - title: Work with controls
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Custom controls overview
-            url: use-custom-controls-data-visualizations.md
-          - text: Set up the timeline control
-            url: set-up-timeline-control.md
-          - text: Add the rich text editor control
-            url: rich-text-editor-control.md
 
   # Card
   - title: Apply data visualizations
