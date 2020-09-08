@@ -1901,11 +1901,6 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/developer/model-driven-apps/index.md",
-      "redirect_url": "/powerapps/developer/model-driven-apps/overview",
-      "redirect_document_id": "false"
-    },
-    {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-experimental.md",
       "redirect_url": "working-with-experimental-preview",
       "redirect_document_id": "false"
