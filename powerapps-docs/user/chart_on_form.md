@@ -77,7 +77,7 @@ You can drill down into a segment on a chart and filter the data for that segmen
 
 ![Drill down in to a chart](media/drill-down.gif "This illustration shows how the chart drill down feature works")
 
-For more information on how to use the drill down option, see [Drill down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
+For more information on how to use the drill down featuref, see [Drill down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
 
 ## View charts in a record
 
