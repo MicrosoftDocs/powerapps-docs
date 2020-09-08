@@ -39,31 +39,29 @@ The single-stream dashboards display real-time data over one stream based on an 
  
  Use the visual filter option to drill down in to the data on the charts. This displays information that interests you most.
 
- 
-1. To view an interactive dashbaord, in the list of dashbards find the one that has the interactive icon ![Interactive dashboard icon](media/interactive_dashboard_icon.png "Interactive dashboard icon") next the dashboard name.
+ 1. To view an interactive dashbaord, in the list of dashbards find the one that has the interactive icon ![Interactive dashboard icon](media/interactive_dashboard_icon.png "Interactive dashboard icon") next the dashboard name.
 
-
-  > [!div class="mx-imgBorder"]
-  > ![View a interactive dashboard](media/view_interactive_dashboard.png "view a interactive dashboard")
+    > [!div class="mx-imgBorder"]
+    > ![View a interactive dashboard](media/view_interactive_dashboard.png "view a interactive dashboard")
   
 2. On the command bar, select **Show visual Filter**. 
 
 
-  > [!div class="mx-imgBorder"]
-  > ![Show visual filter](media/show_visual_filter.png "Show visual filter")
+   > [!div class="mx-imgBorder"]
+   > ![Show visual filter](media/show_visual_filter.png "Show visual filter")
   
 3. Select a drill down option.
 
 
-  > [!div class="mx-imgBorder"]
-  > ![Select drill down option](media/drill_down.png "Select drill down option")
+   > [!div class="mx-imgBorder"]
+   > ![Select drill down option](media/drill_down.png "Select drill down option")
   
 4. Select an area one of the chart or graph to apply a filter. 
 
-  > [!div class="mx-imgBorder"]
-  > ![Select an area on a chart](media/select_chart_area.png "Select an area on a chart")
+   > [!div class="mx-imgBorder"]
+   > ![Select an area on a chart](media/select_chart_area.png "Select an area on a chart")
   
 5. To clear filter, select the **X** next to the filter or to clear all filters, select **Clear All**.
 
-  > [!div class="mx-imgBorder"]
-  > ![Clear filters](media/clear_filter.png "Clear filters")
+   > [!div class="mx-imgBorder"]
+   > ![Clear filters](media/clear_filter.png "Clear filters")
