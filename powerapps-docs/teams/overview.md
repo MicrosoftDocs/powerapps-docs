@@ -9,7 +9,7 @@ ms.date: 09/03/2020
 ms.author: kvivek
 ms.reviewer: 
 ---
-# Power Apps and Teams integration: Overview
+# Create apps in Teams using Power Apps
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
