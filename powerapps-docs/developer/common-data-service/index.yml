@@ -13,7 +13,7 @@ metadata:
   ms.collection: collection
   author: phecke
   ms.author: pehecke
-  ms.date: 09/04/2020 
+  ms.date: 09/08/2020 
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -22,21 +22,23 @@ landingContent:
   # Card 
   - title: Get started
     linkLists:
-       - linkListType: overview
+       - linkListType: get-started
          links:
-          - text: What is Power Apps portals?
+          - text: Developer Guide overview
             url: overview.md
-          - text: Portals lifecycle
-            url: admin/portal-lifecycle.md
+          - text: Get started with Common Data Service
+            url: get-started-CDS-developers.md
+          - text: Supported customizations
+            url: supported-customizations.md
        - linkListType: learn
          links:
-          - text: Get started with Power Apps portals
-            url: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/
+          - text: Introduction to Common Data Service
+            url: https://docs.microsoft.com/learn/modules/intro-cds-developers-power-platform/
 
   # Card
-  - title: Create applications
+  - title: Connect to the web services
     linkLists:
-       - linkListType: concept
+       - linkListType: how-to-guide
          links:
           - text: Understand available templates for portals
             url: portal-templates.md
@@ -50,7 +52,7 @@ landingContent:
   # Card
   - title: Learn the entity data model
     linkLists:
-       - linkListType: how-to-guide
+       - linkListType: concept
          links:
           - text: Portals Studio
             url: portal-designer-anatomy.md
@@ -62,9 +64,9 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/explore-portals-studio/
 
   # Card
-  - title: Package and deploy solutions
+  - title: Use the web services
     linkLists:
-      - linkListType: concept
+      - linkListType: how-to-guide
         links:
           - text: Portals admin center
             url: admin/admin-overview.md
@@ -88,7 +90,7 @@ landingContent:
             url: configure/web-form-properties.md
 
   # Card
-  - title: Learn about security
+  - title: Customize entity forms, views, and more
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -100,9 +102,9 @@ landingContent:
             url: configure/webpage-access-control.md
 
   # Card
-  - title: Interface to external systems
+  - title: Package and distribute custom extensions
     linkLists:
-      - linkListType: tutorial
+      - linkListType: deploy
         links:
           - text: Authentication
             url: configure/use-simplified-authentication-configuration.md
@@ -112,25 +114,25 @@ landingContent:
             url: configure-notes.md
 
   # Card
-  - title: Learn advanced concepts 
+  - title: Programming reference 
     linkLists:
-      - linkListType: concept
+      - linkListType: reference
         links:
-          - text: Liquid templates
-            url: liquid/liquid-overview.md
-          - text: Portals Web API
-            url: web-api-overview.md
-          - text: OAuth 2.0 implicit grant flow
-            url: oauth-implicit-grant-flow.md
+          - text: Entity model reference
+            url: reference/about-entity-reference.md
+          - text: Web APi reference
+            url: /dynamics365/customer-engagement/web-api/about
+          - text: Organization Service SDK reference
+            url: https://docs.microsoft.com/dotnet/api
 
   # Card
-  - title: Follow best practices
+  - title: Additional resources
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: overview
         links:
-          - text: Run portal checker
-            url: admin/portal-checker.md
-          - text: Clear server-side cache
-            url: admin/clear-server-side-cache.md      
-          - text: Error logging and diagnostics
-            url: admin/view-portal-error-log.md
+          - text: Model-driven apps Developer Guide
+            url: ../model-driven-apps/overview.md
+          - text: Canvas apps Developer Guide
+            url: ../../maker/canvas-apps/dev-enterprise-intro.md
+          - text: Power Apps component framework
+            url: ../component-framework/overview.md.md    
