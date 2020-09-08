@@ -1,0 +1,136 @@
+### YamlMime:Landing
+
+title: Common Data Service developer documentation
+summary: Learn how to write applications and web pages that can access Common Data Service business data, extend the functionality of the platform through plug-ins and workflow, or interface your business data to external systems.
+
+metadata:
+  title: Common Data Service developer documentation
+  description: Provides access to highlighted areas within the Common Data Service developer documentation
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: phecke
+  ms.author: pehecke
+  ms.date: 09/04/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: What is Power Apps portals?
+            url: overview.md
+          - text: Portals lifecycle
+            url: admin/portal-lifecycle.md
+       - linkListType: learn
+         links:
+          - text: Get started with Power Apps portals
+            url: https://docs.microsoft.com/learn/paths/get-started-power-apps-portals/
+
+  # Card
+  - title: Create applications
+    linkLists:
+       - linkListType: concept
+         links:
+          - text: Understand available templates for portals
+            url: portal-templates.md
+       - linkListType: quickstart
+         links:  
+          - text: Create a starter portal
+            url: create-portal.md
+          - text: Create a portal in an environment with customer engagement apps
+            url: create-dynamics-portal.md
+          
+  # Card
+  - title: Learn the entity data model
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Portals Studio
+            url: portal-designer-anatomy.md
+          - text: Add components on a web page
+            url: compose-page.md
+       - linkListType: learn
+         links:
+          - text: Customize web pages using Studio
+            url: https://docs.microsoft.com/learn/modules/explore-portals-studio/
+
+  # Card
+  - title: Package and deploy solutions
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Portals admin center
+            url: admin/admin-overview.md
+          - text: Portal Management app
+            url: configure/configure-portal.md
+      - linkListType: learn
+        links:
+          - text: Power Apps portals administration
+            url: https://docs.microsoft.com/learn/modules/portals-administration/
+
+  # Card
+  - title: Extend the platform
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Entity forms
+            url: configure/entity-forms.md
+          - text: Entity lists
+            url: configure/entity-lists.md
+          - text: Web forms
+            url: configure/web-form-properties.md
+
+  # Card
+  - title: Learn about security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create web roles
+            url: configure/create-web-roles.md
+          - text: Assign entity permissions
+            url: configure/assign-entity-permissions.md
+          - text: Control web page access
+            url: configure/webpage-access-control.md
+
+  # Card
+  - title: Interface to external systems
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Authentication
+            url: configure/use-simplified-authentication-configuration.md
+          - text: Search
+            url: configure/search.md
+          - text: Document storage
+            url: configure-notes.md
+
+  # Card
+  - title: Learn advanced concepts 
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Liquid templates
+            url: liquid/liquid-overview.md
+          - text: Portals Web API
+            url: web-api-overview.md
+          - text: OAuth 2.0 implicit grant flow
+            url: oauth-implicit-grant-flow.md
+
+  # Card
+  - title: Follow best practices
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Run portal checker
+            url: admin/portal-checker.md
+          - text: Clear server-side cache
+            url: admin/clear-server-side-cache.md      
+          - text: Error logging and diagnostics
+            url: admin/view-portal-error-log.md
