@@ -20,16 +20,38 @@ search.app:
 
 # Check your user access and permissions
 
-Use the access checker to check your security role and permissions.
+Common Data Service uses a role-based security model to help secure access to the database. When you're on a record select **Check Access** to check your security role and privileges.
 
-1. Go to a record and select it and then select **Edit** on the command bar.
+
+1. To check your access, select a record and then select **Edit** on the command bar.
 
     > [!div class="mx-imgBorder"]
     > ![Select a record to edit it](media/edit_record.png "Select a record to edit it")
   
-2. From the list of commands, choose **Check access**.
+2. On the open record, select **Check Access** on the command bar.
 
     > [!div class="mx-imgBorder"]
     > ![Select to check your access](media/check_access.png "Select check acess to check your access")
+    
+### Record-level privileges  
+ [!INCLUDE [pn-powerapps](../includes/pn-powerapps.md)] and model-driven apps in Dynamics 365, such as Dynamics 365 Sales and Customer Service, use eight different record-level privileges that determine the level of access a user has to a specific record or record type.  
+  
+|Privilege|Description|  
+|---------------|-----------------|  
+|**Create**|Required to make a new record. Which records can be created depends on the access level of the permission defined in your security role.|  
+|**Read**|Required to open a record to view the contents. Which records can be read depends on the access level of the permission defined in your security role.|  
+|**Write**|Required to make changes to a record. Which records can be changed depends on the access level of the permission defined in your security role.|  
+|**Delete**|Required to permanently remove a record. Which records can be deleted depends on the access level of the permission defined in your security role.|  
+|**Append**|Required to associate the current record with another record. For example, a note can be attached to an opportunity if the user has Append rights on the note. The records that can be appended depend on the access level of the permission defined in your security role.<br /> In case of many-to-many relationships, you must have Append privilege for both entities being associated or disassociated.|  
+|**Append To**|Required to associate a record with the current record. For example, if a user has Append To rights on an opportunity, the user can add a note to the opportunity. The records that can be appended to depend on the access level of the permission defined in your security role.|  
+|**Assign**|Required to give ownership of a record to another user. Which records can be assigned depends on the access level of the permission defined in your security role.|  
+|**Share**|Required to give access to a record to another user while keeping your own access. Which records can be shared depends on the access level of the permission defined in your security role.| 
+    
+    
+    
+
+
+
+    
   
   
