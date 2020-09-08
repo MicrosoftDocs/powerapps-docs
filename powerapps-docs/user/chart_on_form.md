@@ -60,7 +60,7 @@ Grid home page provides multiple filter options for a user to filter the grid da
 For more information, see [How to use grid filters](https://docs.microsoft.com/powerapps/user/grid-filters).
 
 
-When a chart is shown together with grid, the grid filter option that you select will filter both chart and grid. You can also drill into the chart data, for more information, see [Drill down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
+When a chart is shown together with grid, the grid filter option that you select will filter both chart and grid. 
 
 ![Grid filter for charts](media/chart_grid_filters.png "Grid filters for charts")
 
@@ -70,6 +70,12 @@ Legend:
 2. **Open advanced filtering panel**: See which filters were applied to the current view. For more information, see [See the current view definition](https://docs.microsoft.com/powerapps/user/grid-filters-advanced#see-the-current-view-definition).
 3. **Search this view**: Search for data in the view you're in.
 4. **Jump bar**: The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.
+
+### Drill down in the chart data
+
+You can drill down into a segment on a chart and filter the data for that segment. When a chart is shown together with grid, the drill down option that you select will filter both chart and grid. For more information on how to use the drill down option, see [Drill down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
+
+![Drill down in to a chart](media/drill-down.gif "This shows how the chart drill down feature works")
 
 ## View charts in a record
 
