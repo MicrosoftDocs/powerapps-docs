@@ -26,6 +26,8 @@ Some of the benefits of Project Oakdale include:
 - Data can be shared across multiple apps, flows, and chatbots​.
 - Can be promoted to full Common Data Service.​
 
+## Tables in Project Oakdale
+
 Project Oakdale tables provide the ability to create, populate, and query data within Project Oakdale. Tables represent different types of entities important to an organization, such as a table to store products or another to store orders.  
 
 Each of these tables contains columns that contain data about the subject of the table. For example, a table named *Product* could have columns that contain a product name, product identifier, manufacturer identifier, and price. Each of these columns may contain different types of data. For example, identifiers could be numbers, a price represents a cost in a specific currency, and so on.
