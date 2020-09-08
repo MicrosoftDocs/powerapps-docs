@@ -1,5 +1,5 @@
 ---
-title: Overview of Project Oakdale | Microsoft Docs
+title: Project Oakdale overview | Microsoft Docs
 description: Provides an overview of Project Oakdale.
 author: NHelgren
 ms.service: powerapps
@@ -12,7 +12,6 @@ ms.reviewer: matp
 # Overview of Project Oakdale
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
-
 
 Project Oakdale delivers a built-in, low-code data platform for Teams. It provides relational data storage, rich data types, enterprise grade governance, and one-click solution deployment. Project Oakdale enables everyone to easily build and deploy apps.
 
