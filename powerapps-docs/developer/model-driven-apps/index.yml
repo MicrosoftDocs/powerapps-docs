@@ -25,13 +25,13 @@ landingContent:
        - linkListType: overview
          links:
           - text: Model-driven apps developer overview
-            url: ../overview.md
+            url: overview.md
           - text: Create, manage, and publish model-driven apps
-            url: ../create-manage-model-driven-apps-using-code.md
+            url: create-manage-model-driven-apps-using-code.md
        - linkListType: learn
          links:
           - text: Extend model-driven apps using code
-            url: https://docs.microsoft.com/en-us/learn/paths/extend-power-platform-model-driven-app
+            url: https://docs.microsoft.com/learn/paths/extend-power-platform-model-driven-app
 
   # Card
   - title: Extend model-driven apps
@@ -39,11 +39,11 @@ landingContent:
        - linkListType: how-to-guide
          links:
           - text: Customize entity forms
-            url: ../customize-entity-forms.md
+            url: customize-entity-forms.md
           - text: Customize visualizations and dashboards
-            url: ../customize-visualizations-dashboards.md
+            url: customize-visualizations-dashboards.md
           - text: Customize commands and ribbons
-            url: ../customize-commands-ribbon.md  
+            url: customize-commands-ribbon.md  
           
   # Card
   - title: Apply business logic
@@ -51,11 +51,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Client scripting
-            url: ../client-scripting.md
+            url: client-scripting.md
           - text: Write your first client script
-            url: walkthrough-write-your-first-client-script.md
+            url: clientapi/walkthrough-write-your-first-client-script.md
           - text: Debug your JavaScript code
-            url: debug-javascript-code.md
+            url: clientapi/debug-javascript-code.md
 
   # Card
   - title: Web resources in model-driven apps
@@ -63,11 +63,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Web resources overview
-            url: ../web-resources.md
+            url: web-resources.md
           - text: How to use web resources
-            url: ../use-web-resources.md      
+            url: use-web-resources.md      
           - text: Web resource dependencies
-            url: ../web-resource-dependencies.md
+            url: web-resource-dependencies.md
 
 # Card
   - title: Power Apps component framework
@@ -75,11 +75,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Framework overview
-            url: ../../component-framework/overview.md
+            url: ../component-framework/overview.md
           - text: Create code components
-            url: ../../component-framework/implementing-controls-using-typescript.md      
+            url: ../component-framework/implementing-controls-using-typescript.md      
           - text: Get Power Apps CLI
-            url: ../../component-framework/get-powerapps-cli.md
+            url: ../component-framework/get-powerapps-cli.md
 
 # Card
   - title: Reference
@@ -87,9 +87,21 @@ landingContent:
       - linkListType: reference
         links:
           - text: Client API reference
-            url: reference.md
+            url: clientapi/reference.md
           - text: Customization XML reference
-            url: ../customization-xml-reference.md      
+            url: customization-xml-reference.md      
           - text: Power Apps component framework
-            url: ../../component-framework/reference.md
+            url: ../component-framework/reference.md
+
+# Card
+  - title: Related resources
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Model-driven apps admin guide
+            url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview
+          - text: Common Data Service developer guide
+            url: https://docs.microsoft.com/powerapps/developer/common-data-service/overview      
+          - text: Canvas apps developer guide
+            url: https://docs.microsoft.com/powerapps/maker/canvas-apps/dev-enterprise-intro
   
