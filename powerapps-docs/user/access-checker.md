@@ -22,7 +22,11 @@ search.app:
 
 Use the access checker to check your security role and permissions.
 
-1. Open a record and on the command bar select the More button ![More commands button](media/MoreButton.png "More commands button").
+1. Go to a record and select it and then select **Edit** on the command bar.
+
+    > [!div class="mx-imgBorder"]
+    > ![Select a record to edit it](media/edit_record.png "Select a record to edit it")
+  
 2. From the list of commands, choose **Check access**.
 
     > [!div class="mx-imgBorder"]
