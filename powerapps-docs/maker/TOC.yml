@@ -447,6 +447,14 @@
               href: ./canvas-apps/controls/properties-size-location.md
             - name: Text
               href: ./canvas-apps/controls/properties-text.md
+      - name: Manage screens
+        items:
+        - name: Change screen size and orientation
+          href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
+        - name: Create responsive layout
+          href: ./canvas-apps/create-responsive-layout.md
+        - name: Build responsive apps
+          href: canvas-apps/build-responsive-apps.md
       - name: Configure app functionality
         items:
         - name: Get started with formulas
@@ -983,14 +991,6 @@
     items:
     - name: Understand model-driven app components
       href: ./model-driven-apps/model-driven-app-components.md
-    - name: Manage screens
-      items:
-        - name: Change screen size and orientation
-          href: ./canvas-apps/set-aspect-ratio-portrait-landscape.md
-        - name: Create responsive layout
-          href: ./canvas-apps/create-responsive-layout.md
-        - name: Build responsive apps
-          href: ./build-responsive-apps.md
     - name: Define data for an app
       href: ./model-driven-apps/define-data-model-driven-app.md
       items:
