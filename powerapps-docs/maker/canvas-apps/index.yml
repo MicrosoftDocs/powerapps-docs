@@ -138,7 +138,7 @@ landingContent:
             url: performance-tips.md
 
   # Card
-  - title: References and advanced learning
+  - title: Reference and advanced learning
     linkLists:
        - linkListType: reference
          links:
