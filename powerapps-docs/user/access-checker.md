@@ -29,9 +29,6 @@ Common Data Service uses a role-based security model to help secure access to th
     > ![Select a record to edit it](media/edit_record.png "Select a record to edit it")
   
 2. On the open record, select **Check Access** on the command bar.
-
-    > [!div class="mx-imgBorder"]
-    > ![Select to check your access](media/check_access.png "Select check acess to check your access")
     
 ### Record-level privileges  
 Power Apps use eight different record-level privileges that determine the level of access a user has to a specific record or record type.  
