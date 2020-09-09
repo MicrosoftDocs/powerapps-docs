@@ -39,10 +39,10 @@ To learn more about supported extension methods, go to:
 ## Entity relationship diagram
 
 The entity relationship diagram illustrates the entities and their relationships that are present in the Common Data Service environment. System-generated entities and relationships, such as **Created By** and **Modified By**, aren't displayed in the diagram.
-<!--Would it be possible to give better alt text so people with low vision can get an idea of what the diagram shows?-->
+
 > [!div class="mx-imgBorder"]
 > ![Entity relationship diagram](media/data-dictionary-ERD.png "Entity relationship diagram")
-<!--Suggest removing the "Entities" H2 and slightly renaming the following four H2s. Another option would be to demote those four sections to H3s, but I think this is a better solution.-->
+
 The lists of entities in the following sections are grouped by the app in the Return to the Workplace solution.
 
 ## Core entities
@@ -53,7 +53,7 @@ These entities are used across multiple applications and are considered core to 
 |-----------------|------------------------------|
 | Country   | Contains standard country names.  |
 | Employee   | Contains contact information.  |
-| Facility  | Contains demographic<!--Should this be "geographic"?--> information about a physical place and reopen phase planning progress.  |
+| Facility  | Contains geographic information about a physical place and reopen phase planning progress.  |
 | Facility Group | Contains logic grouping metadata used to create a hierarchical relationship of facilities.  |
 | Facility Type   | Contains metadata used to segment facilities.  |
 | Solution Setting | Contains metadata used to drive platform behavior for specific facility groups. |
@@ -97,7 +97,7 @@ These entities are used primarily by the Facility Safety Management model-driven
 | Measurement              | Contains a list of key metric values measured at a point in time with relation to a facility.                 |
 | Readiness Category       | Contains metadata used to group readiness factors.                                                            |
 | Readiness Check          | Contains a list of activities and their status associated with a checklist for a given facility.               |
-| Readiness Checklist      | Contains a group of activities associated with a facility and a reopen phase.<!--We seem to almost always call this a "reopen" phase in the docset.-->                              |
+| Readiness Checklist      | Contains a group of activities associated with a facility and a reopen phase.                       |
 | Readiness Factor         | Contains a list of items that are evaluated through the reopening process.                                    |
 | Reopen Phase             | Contains a list of associated readiness factors and metrics to be tracked and evaluated at the current stage. |
 | Reopen Phase Transition  | Contains a list of requests to move from one phase to another with relevant process information.              |
@@ -126,7 +126,7 @@ The data definitions section provides information about a list of entities, data
 | Name | Text  | Primary identifier of the record. | Model-driven app |
 | Do you feel safe returning to work? | Option Set | Used to capture the employee's feeling about returning to work. | Canvas app   |
 | Employee | Lookup  | Used to capture the employee record.  | Canvas app       |
-| Sentiment date | Date and Time<!--Shouldn't this be "DateTime," here and throughout the article? Otherwise we're implying that a single entity can have two data types.-->| Used to capture the time when the sentiment is collected. | Canvas app   |
+| Sentiment date | DateTime| Used to capture the time when the sentiment is collected. | Canvas app   |
 |||||
 
 ### Case Facility
@@ -169,7 +169,7 @@ The data definitions section provides information about a list of entities, data
 
 | Display name     | Data type     | Description  | Platform use |
 |------------------|---------------|-------------------------------------------|------------------------------|
-| Attestation Date | Date and Time | Used to capture the date and time the attestation was recorded.     | Model-driven app             |
+| Attestation Date | DateTime | Used to capture the date and time the attestation was recorded.     | Model-driven app             |
 | Attested         | Option Set    | Used to capture whether the employee has attested.                 | Model-driven app and canvas app |
 | Employee         | Lookup        | Used to denote the employee completing the attestation.             | Model-driven app             |
 | Facility         | Lookup        | Used to associate the facility for which the employee is attesting. | Model-driven app and canvas app |
@@ -181,8 +181,8 @@ The data definitions section provides information about a list of entities, data
 | Display name     | Data type     | Description   | Platform use|
 |------------------|---------------|---------------|------------------|
 | Area | Lookup | Used to associate the location booked. | Model-driven app and canvas app|
-| End Arrival Time | Date and Time    | Used to capture the ending point in time for the booking. | Model-driven app; Canvas app |
-| Start Arrival Time  | Date and Time | Used to capture the beginning point in time for the booking. | Model-driven app and canvas app|
+| End Arrival Time | DateTime    | Used to capture the ending point in time for the booking. | Model-driven app; Canvas app |
+| Start Arrival Time  | DateTime | Used to capture the beginning point in time for the booking. | Model-driven app and canvas app|
 | Booking Date     | Date          | Used to determine the date of the booking.| Model-driven app and canvas app |
 | Employee         | Lookup        | Used to associate the employee creating the booking. | Model-driven app and canvas app|
 | Name             | Text          | Primary identifier of the record. | Model-driven app |
@@ -194,15 +194,15 @@ The data definitions section provides information about a list of entities, data
 |---------------------------------|---------------|--------------------------------------------------------------------------------------------------|------------------------------|
 | Case Number                     | Text          | Unique identifier for the employee case.                                                         | Model-driven app             |
 | Check In Available              | Option Set    | Used to denote whether the employee can get a pass for a facility.                               | Model-driven app and canvas app |
-| Check In Available Date         | Date and Time | Used to specify when the employee will be able to get a pass for a facility.                     | Model-driven app             |
+| Check In Available Date         | DateTime | Used to specify when the employee will be able to get a pass for a facility.                     | Model-driven app             |
 | Employee                        | Lookup        | Used to associate the employee to the employee case.                                             | Model-driven app             |
 | Employee Contacted              | Option Set    | Used to denote whether the employee was contacted.                                               | Model-driven app             |
 | Employee Instructions Provided  | Option Set    | Used to denote whether the employee was provided instructions.                                   | Model-driven app             |
 | Public Health Official Notified | Option Set    | Used to denote whether the appropriate public health officials have been notified, if applicable. | Model-driven app             |
 | Risk Assessment                 | Option Set    | Used to denote the current risk of the employee case.                                            | Model-driven app             |
 | Screened                        | Option Set    | Used to denote whether the screening process has occurred.                                       | Model-driven app             |
-| First Time Employee Contacted   | Date and Time | Marked by a workflow and used in the Power BI dashboards to track performance.                | Model-driven app             |
-| First Time to Investigation     | Date and Time | Marked by a workflow and used in the Power BI dashboards to track performance.                | Model-driven app             |
+| First Time Employee Contacted   | DateTime | Marked by a workflow and used in the Power BI dashboards to track performance.                | Model-driven app             |
+| First Time to Investigation     | DateTime | Marked by a workflow and used in the Power BI dashboards to track performance.                | Model-driven app             |
 |||||
 
 ### Employee Facility Search
@@ -220,7 +220,7 @@ The data definitions section provides information about a list of entities, data
 | Employee                           | Lookup        | Used to capture the employee completing the sentiment.           | Model-driven app and canvas app |
 | Name                               | Text          | Used to provide a name for the employee sentiment record.        | Model-driven app             |
 | Do you feel safe returning to work | Option Set    | Used to capture a response to the question: Sad, Neutral, Happy. | Model-driven app and canvas app |
-| Sentiment Date                     | Date and Time | Used to capture the date and time the sentiment was recorded.    | Model-driven app             |
+| Sentiment Date                     | DateTime | Used to capture the date and time the sentiment was recorded.    | Model-driven app             |
 |||||
 
 ### Employee Visit
@@ -230,10 +230,10 @@ The data definitions section provides information about a list of entities, data
 | Employee Attestation | Lookup | Used to associate an attestation.     | Model-driven app             |
 | Employee Booking     | Lookup | Used to associate a booking.     | Model-driven app             |
 | Employee              | Lookup        | Used to associate the employee creating the visit. | Model-driven app |
-| End Time              | Date and Time | Used to denote the end of the visit.     | Model-driven app             |
+| End Time              | DateTime | Used to denote the end of the visit.     | Model-driven app             |
 | Facility              | Lookup          | Used to denote the facility visited.         | Model-driven app             |
 | Name                  | Text | Primary identifier of the record.     | Model-driven app             |
-| Start Time            | Date and Time | Used to denote the beginning of the visit.     | Model-driven app             |
+| Start Time            | DateTime | Used to denote the beginning of the visit.     | Model-driven app             |
 |||||
 
 ### Facility 
@@ -290,7 +290,7 @@ The data definitions section provides information about a list of entities, data
 | Key Metric   | Lookup     | Used to associate the appropriate key metric.                                                            | Model-driven app |
 | Name         | Text       | Used to provide a name for the goal.                                                                     | Model-driven app |
 | Reopen Phase | Lookup     | Used to associate the appropriate reopen phase.                                                          | Model-driven app |
-| Target Type  | Option Set | Used to designate whether the target value should be higher or lower than the value provided by the target value.<!--Don't know what this means.--> | Model-driven app |
+| Target Type  | Option Set | The option set values for the target type. | Model-driven app |
 | Target Value | Decimal    | The value used to evaluate success.                                                                      | Model-driven app |
 |||||
 
@@ -308,7 +308,7 @@ The data definitions section provides information about a list of entities, data
 | Facility Group   | Lookup        | Used to associate the appropriate facility group.                                 | Model-driven app |
 | Facility         | Lookup        | Used to associate the appropriate facility.                                       | Model-driven app |
 | Key Metric       | Lookup        | Used to associate the appropriate key metric.                                     | Model-driven app |
-| Measurement Date | Date and Time | Denotes the date and time a measurement was taken, displayed in user local format. | Model-driven app |
+| Measurement Date | DateTime | Denotes the date and time a measurement was taken, displayed in user local format. | Model-driven app |
 | Name             | Text          | Used to provide a name for the measurement.                                       | Model-driven app |
 | Value            | Decimal       | Used to capture the value of the measurement.                                     | Model-driven app |
 |||||
@@ -382,7 +382,7 @@ The data definitions section provides information about a list of entities, data
 | Health Contact Phone | Text       | Used to capture the phone number of the primary health contact.          | Model-driven app and canvas app |
 | Maximum Temperature  | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
 | Minimal Temperature  | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
-| Name                 | Text       | The primary name of the setting record.<!--What is a "setting record" here?-->                                  | Model-driven app             |
+| Name                 | Text       | The primary name of the solution setting record.                                  | Model-driven app             |
 | Target Temperature   | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
 | Temperature Scale    | Option Set | Used to display the value of the temperature question in the canvas app. | Canvas app                   |
 |||||
@@ -407,7 +407,7 @@ This section describes the different flows in the solution and explains their pu
 | Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase. |
 | Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist. |
 | Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. |
-| Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Re-educate occupancy in daily occupancy when employee bookings are disabled.<!--Don't know what this means. Who is being re-educated?--> |
+| Employee Booking - Update Daily Occupancy on Status      | Employee Booking    |  Updates occupancy in daily occupancy when employee bookings are disabled. |
 | Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit, and matches a visit to bookings and attestations. |
 | Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow, and updates the capacity. |
 | Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. |

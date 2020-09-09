@@ -12,15 +12,15 @@ ms.reviewer: kvivek
 
 # Use the Facility Safety Management app
 
-The Facility Safety Management app provides step-by-step instructions to facility managers in the organization to manage the reopening and readiness of their<!--Suggested.--> facilities. 
+The Facility Safety Management app provides step-by-step instructions to facility managers in the organization to manage the reopening and readiness of their facilities. 
 
-This helps the organizations ensure that they can provide a safe working environment for employees by using the Return to the Workplace solution.<!--Suggested.-->
+This helps the organizations ensure that they can provide a safe working environment for employees by using the Return to the Workplace solution.
 
 ## App at a glance
-<!--Edits in this section are suggested, to make it clear we're talking to the facility manager and also to cut down on redundancy.-->
-The Return to the Workplace solution supports an organization's goal to return to normal and reopen its facilities to its employees as safely and quickly as possible. As a facility manager, you can use the Facility Safety Management app to manage and support your organization's journey through its specific reopening plan for your facility and its associated phases and goals.<!--Suggested. Remember, we need to "focus on what's important from the customer's point of view," not on what our software provides or allows or enables. -->
 
-To facilitate the execution of your organization's reopening plan and the reopen phases<!--To match the usual usage.--> that have been configured, you lead the required assessments of facility readiness and review its status. More information about reopen phases: [Configure the solution](configure.md)<!--The "More information" syntax requires that it occur at the end of a paragraph.-->
+The Return to the Workplace solution supports an organization's goal to return to normal and reopen its facilities to its employees as safely and quickly as possible. As a facility manager, you can use the Facility Safety Management app to manage and support your organization's journey through its specific reopening plan for your facility and its associated phases and goals.
+
+To facilitate the execution of your organization's reopening plan and the reopen phases that have been configured, you lead the required assessments of facility readiness and review its status. More information about reopen phases: [Configure the solution](configure.md)
 
 The assessments are done by performing checks from the facility's readiness checklist. When the facility is considered to be ready based on the results of these checks, you move the facility to the next reopen phase by initiating a phase transition request. The phase transition request is then processed by the organization's assigned reviewer for approval. This implements a "four-eyes" principle, while the checklist allows for a consistent discussion about readiness throughout the company. After the reviewer approves the phase transition request, the facility is moved to the next phase, where a new checklist is created and managed.  
 
@@ -56,8 +56,8 @@ The Facility Safety Management app has the following components:
 - **Employee Visits** - Keeps track of visits to the facility. Employee visits are linked to an employee and a booking record. 
 
 ## Manage facilities 
-<!--I got a bit lost in here between what was a description of the UI and what was a procedure (especially in the description about using reports to monitor facilities), so I suggest splitting this section into two.-->
-This section covers how to manage facilities. In addition to creating a facility, you can create floors for that facility that you can associate with areas, to define maximum capacity at a more granular level. You can also assign a facility to a user.<!--This new introduction is suggested, but it definitely could be better. This is probably the first place the reader will see reference to floors and areas, so it would be good to explain what they're for. It also would be a good place to explain what it means to assign a facility to a user, and why you'd want to do it. (I'm a bit confused by the term "user"; does this mean you assign a facility to another manager?)--> 
+
+This section covers how to manage facilities. In addition to creating a facility, you can create floors for that facility that you can associate with areas, to define maximum capacity at a more granular level. You can also assign a facility to a user.
 
 **To create a new facility**
 
@@ -76,7 +76,7 @@ This section covers how to manage facilities. In addition to creating a facility
    | Facility Number        | Enter a number for the new facility.                  |
    | Name                   | Enter a name for the new facility.                    |
    | Description            | Enter a description for the new facility.              |
-   | Entry Window Interval  | Select the window interval for entry:<!--If you can actually fine-tune this number between 30 and 60 minutes, then this should be "Select the window interval for entry from 30 through 60 minutes, or none." --> 30 mins, 1 hour, or none. |
+   | Entry Window Interval  | Select the window interval for entry from 30 through 60 minutes, or none.|
    | Facility Type          | Select the facility type.   |
    | Facility Group         | Select a group for the facility. |
    | Reopen Phase           | Select the reopen phase.  |
@@ -93,7 +93,7 @@ The newly created record is available in the **Active Facility Types** view.
 
 **To create a floor for a facility**
 
-1. On the left pane, select **Facilities**<!--Edit okay?-->, and then select the facility where you want to add a floor.
+1. On the left pane, select **Facilities**, and then select the facility where you want to add a floor.
 
 2. On the **Occupancy** tab, select **New Floor**.
 
@@ -132,8 +132,8 @@ Once a floor is created, the **area** option is available to be linked to it.
    | **Field**       | **Description**  |
    |--------------|--------------------|
    | Area        | Name for the area. |
-   | Facility  | By default, the newly created facility.<!--Should this be "...or you can enter a different facility name."? What's the significance of saying what the default value is here?-->  |
-   | Floor     | By default, the newly created floor.<!--Same question as above.--> |
+   | Facility  | By default the newly created facility  is assigned or you can enter a different facility name. |
+   | Floor     | By default, the newly created floor is assigned or you can enter a different floor name. |
    | Capacity    | Number of people allowed in an area.  |
 
 4. Select **Save & Close**. 
@@ -142,7 +142,7 @@ To edit the record, select it, update the values, and then select **Save & Close
 
 **To assign a facility to a user**
 
-1. Switch to the **Active Facilities** view.<!--Will the reader know how to do this, or can you give the steps?-->
+1. Switch to the **Active Facilities** view.
 
    > [!div class="mx-imgBorder"]
    > ![Active Facilities](media/facility-manager-active-facilities.png "Active Facilities")
@@ -154,17 +154,17 @@ To edit the record, select it, update the values, and then select **Save & Close
 
 ## Monitor a facility
 
-You can monitor and assess the current status of a facility by reviewing its associated dashboard, details, checklist, and transitions.<!--The structure of this section is more complicated than "## Manage a facility"; the procedures aren't so clear-cut compared to the UI descriptions. For that reason, I suggest making these a series of H3s (each with the -ing verb form) rather than procedure headings, so we can have a bit more freedom in how each H3 is organized.-->
+You can monitor and assess the current status of a facility by reviewing its associated dashboard, details, checklist, and transitions.
 
 ### Accessing the facility manager dashboard for your facility
 
 1. On the left pane, select **Facility**. The default view, **My Facilities**, shows only your facilities. When switching the views, you can see all the active or inactive facilities. 
 
-2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information about facility usage, guides the reopening process, and analyzes occupancy at a facility. The report has three main tabs:<!--"Tabs" is the right name for these areas of the UI. I'm not exactly sure what to call the views? commands? on the left pane, so I suggest just talking about what happens when you select them.--> **Facilities**<!--It's simply **Facility** in the screenshots, is that okay?-->, **Virus Spread**, and **Employee Activity**.
+2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information about facility usage, guides the reopening process, and analyzes occupancy at a facility. The report has three main tabs: **Facility**, **Virus Spread**, and **Employee Activity**.
 
-   - **Facilities** tab
+   - **Facility** tab
 
-     **Readiness** shows the status of the readiness checks needed for a facility's safe reopening. Checks are separated into categories (for example, **Employee Experience** and **Communications**), which can be expanded to show the progress of individual actions. The reproductive number is the average number of people to whom COVID-19 might be transmitted by an infected individual.<!--Why is this explanation here? It doesn't look like this metric is included on this page.-->
+     **Readiness** shows the status of the readiness checks needed for a facility's safe reopening. Checks are separated into categories (for example, **Employee Experience** and **Communications**), which can be expanded to show the progress of individual actions. The reproductive number is the average number of people to whom COVID-19 might be transmitted by an infected individual.
 
      **Occupancy** provides metrics regarding the facility capacity and usage, such as:
       - The facility's total capacity, and its current capacity based on the reopen phase.
@@ -209,7 +209,9 @@ You can monitor and assess the current status of a facility by reviewing its ass
       > ![Facility manager dashboard - Employee activity](media/pbi-dash-facility-manager-employee-activity.png "Facility manager dashboard - Employee activity")
 
 ### Exploring the facility
-<!--There should be an introduction here, but I can't think of any way to make ths anything but a series of "look at our UI" screenshots.-->
+
+You can see all the details of a facility by opening the facility record. To explore details of the facility:
+
 - Select the **Details** tab for the facility.
    > [!div class="mx-imgBorder"]
    > ![Select details ](media/facility-manager-facility-form-populated.png "Select details")
@@ -255,7 +257,7 @@ The **Checklist** tab contains an editable grid displaying the checklist for the
    > [!div class="mx-imgBorder"]
    > ![Category drop-down list](media/facility-manager-categories-droplist1.png "Category drop-down list")
 
-5. Select the down arrow,<!--Edit okay? Writing Style Guide wants us to use "drop-down" only as an adjective, but I'm not sure what it should modify here. Maybe it should be "Select the drop-down list"?--> and then select **Yes** to confirm that the check has been completed. 
+5. Select the drop-down, and then select **Yes** to confirm that the check has been completed. 
 
 6. Add the date in the **Completion date** column, and then select **Save** to update the checklist.
 
@@ -263,8 +265,8 @@ The **Checklist** tab contains an editable grid displaying the checklist for the
     > ![Update the completion date for a checklist item](media/facility-manager-facility-completed-check1.png "Update the completion date for a checklist item")
 
 ## Move a facility to a new phase
-<!--The following paragraphs are fairly long and unstructured. Maybe eventually you could create a nice diagram of the approval flow (with detailed alt text, of course.-->
-When you believe a facility should be moved to a new phase, you can apply for a transition. Only a facility manager can create this new transition record, which indicates the facility is ready to move to a new phase. After a new transition is created and saved, it appears in the subgrid on<!--Edit okay?--> the **Transitions** tab of the facility record with a status of **Submitted**. A reviewer is assigned to the request. As soon as the reviewer is assigned, they can start acting on the reopen phase transition request by accepting or rejecting it. On approval or rejection of the transition record, it's processed, and when it's complete, the request is considered to be closed and is stored as a historical record.
+
+When you believe a facility should be moved to a new phase, you can apply for a transition. Only a facility manager can create this new transition record, which indicates the facility is ready to move to a new phase. After a new transition is created and saved, it appears in the subgrid on the **Transitions** tab of the facility record with a status of **Submitted**. A reviewer is assigned to the request. As soon as the reviewer is assigned, they can start acting on the reopen phase transition request by accepting or rejecting it. On approval or rejection of the transition record, it's processed, and when it's complete, the request is considered to be closed and is stored as a historical record.
 
 When the process is complete, the transition record appears in the subgrid as either **Accepted** (approved request) or **Rejected** (rejected request). If the transition request is accepted, the phase that was proposed in the transition record is applied to the facility record's reopen phase field. This update triggers the background process that updates the business process flow stage, aligning the reopen phase and the current business process flow stage.
 
@@ -282,7 +284,7 @@ A reviewer&mdash;for instance, a facility manager supervising many facility mana
 > ![Open phase transitions](media/facility-manager-open-phase-transitions.png "Open phase transitions")
 
 ### Creating a transition request
-<!--As in the previous section, the subheadings aren't straightforward procedures (because of that last H3 about using the business process flow to create a transition), so I suggest using H3s and -ing verb forms here.-->
+
 1. On the left pane, select **Facilities**, and then select a facility record from the **Active facilities** list.
 
 2. Select the **Transitions** tab. If any existing or previous transition requests were established, they'll appear in the subgrid.
@@ -359,4 +361,3 @@ This area of the Facility Safety Management app keeps track of general employee 
 ## Give feedback about the solution
 
 To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
-<!--markdownlint-enable MD036-->

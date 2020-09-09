@@ -83,7 +83,6 @@ The interactive map displays the location of cases in the monitoring phase. You 
 ## Slicers
 
 Slicers help you quickly "slice and dice" the data, focusing only on data points you're interested in. You can filter all three pages by the case creation date and their groups of facilities and locations, down to the level of a single facility. 
-<!--note from Renee: I revised this to be closer to the same section on the Location Readiness dashboard page.-->
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance reproductive number](media/pbi-dash-report-reproductivenumber2.png "System at a Glance reproductive number")
