@@ -23,7 +23,6 @@ search.app:
 To perform an action on a record, a user needs to have the required privilege assigned through a security role or the user is a member of a team that has a security role with assigned privileges.
 
 To perform actions on a record the systerm checks your privileges and if the privilege check passes then the system preforms an access check. The access check verifies that you have the required rights to perform actions on a record such as, read, write, create, delete, append, append to, share, and assign.
- 
 
 You can have access rights to a perform an action on a record through ownership, role access, shared access, or hierarchy access.
 
