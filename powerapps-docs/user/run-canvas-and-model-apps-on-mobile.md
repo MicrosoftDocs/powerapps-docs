@@ -129,7 +129,7 @@ Your administrator has to opt in to early access updates for your environment an
    >![Select Add](media/add-shortcut-3.png "Select add button")
    
 
-The app will be pinned to your home screen.   
+7. The app is be pinned to your home screen.   
   
 
    > [!div class="mx-imgBorder"]
