@@ -86,15 +86,28 @@ If you filtered your apps, the filtered list will be searched.
 
 Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
 
-## Pin an app to the home screen
+## Pin an app to the home screen 
 
 You can pin both canvas apps and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
 
 ![Pin an app](media/pin_to_home.png "Pin an app")
 
-
 > [!NOTE]
 > For iOS devices that have multiple browsers installed use Safari when pinning an app to Home. 
+
+
+## Pin to home screen (early access feature)
+
+If you have enabled early access, then you will have a different pin to home screen experience for iOS 13 or later. This works for both model-driven and canvas apps.
+
+Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
+
+1. To pin a app to the home screen, select the ellipsis (...) on the app tile.
+2. Select **Add shortcut to Sri**.
+
+   > [!div class="mx-imgBorder"]
+   >![Add shortcut to Sri](media/add-shortcut.png "Add shortcut to Sri")
+
 
 ## See non-production apps
 
