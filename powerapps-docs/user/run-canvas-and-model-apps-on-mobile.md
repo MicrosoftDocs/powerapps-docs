@@ -113,7 +113,7 @@ Your administrator has to opt in to early access updates for your environment an
    > [!div class="mx-imgBorder"]
    >![Add a phrase to open and run the app](media/add-shortcut-1.png "Add a phrase to open and run the app")
    
-4. The app is added to the **Shortcuts** app on your mobile device. Open the **Shortcuts** app and select the ellipsis (...).
+4. The app is added to the **Shortcuts** app on your mobile device. Open the **Shortcuts** app and select the ellipsis (...) above the app name.
 
    > [!div class="mx-imgBorder"]
    >![Select the ellipsis](media/add-short-2.png "Select the ellipsis")
