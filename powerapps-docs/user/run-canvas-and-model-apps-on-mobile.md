@@ -102,13 +102,13 @@ If you have enabled early access, then you will have a different pin to home scr
 
 Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
 
-1. To pin a app to the home screen, select the ellipsis (...) on the app tile.
+1. To pin an app to the home screen, select the ellipsis (...) on the app tile.
 2. Select **Add shortcut to Sri**.
 
    > [!div class="mx-imgBorder"]
    >![Add shortcut to Sri](media/add-shortcut.png "Add shortcut to Sri")
    
-3. Add custom phrase to open the app using voice commands and select **Add to Siri**.
+3. Add a custom phrase to open the app using voice commands and select **Add to Siri**.
 
    > [!div class="mx-imgBorder"]
    >![Add a phrase to open and run the app](media/add-shortcut-1.png "Add a phrase to open and run the app")
@@ -123,7 +123,7 @@ Your administrator has to opt in to early access updates for your environment an
    > [!div class="mx-imgBorder"]
    >![Select add to home screeen button](media/add-to-homescreen.png "Select add to home screen button")
    
-6. On the upper right corner, select **Add** and then **Done**.
+6. On the upper right corner, select **Add** and then **Done**. The app will be pinned to your home screen.
 
    > [!div class="mx-imgBorder"]
    >![Select Add](media/add-shortcut-3.png "Select add button")
