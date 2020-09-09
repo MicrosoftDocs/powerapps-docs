@@ -2,7 +2,7 @@
 title: "Use change tracking to synchronize data with external systems (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The change tracking feature provides a way to keep the data synchronized in an efficient manner by detecting what data has changed since the data was initially extracted or last synchronized" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 09/01/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -128,7 +128,7 @@ System query options `$filter`, `$orderby` and `$top` are not supported when usi
   
 <a name="BKMK_SampleCode"></a>   
 ## Sample code  
- The following code snippet shows how the `RetrieveEntityChangesRequest` message is used to retrieve the changes for an entity. For the complete sample, see [Synchronize data with external systems using change tracking](https://go.microsoft.com/fwlink/p/?LinkId=533957).  
+ The following code snippet shows how the `RetrieveEntityChangesRequest` message is used to retrieve the changes for an entity. For the complete sample, see [Synchronize data with external systems using change tracking](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Changetracking).  
   
 ```csharp
 string token;

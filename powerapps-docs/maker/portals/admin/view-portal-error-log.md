@@ -121,7 +121,7 @@ After developing and publishing the portal, you still need to be able to access 
 
 4. Click **Configure**.
 
-Once diagnostic logging is configured, a new **telemetry-logs** blob container is created in your Azure storage account and the logs are written into the blob files stored in the container. The following screenshot shows the **telemetry-logs** blob container in Azure storage explorer:
+Once diagnostic logging is configured, a new **telemetry-logs** blob container is created in your Azure storage account and the logs are written into the blob files stored in the container. The following screenshot shows the **telemetry-logs** blob container in Azure Storage Explorer:
 
 > [!div class=mx-imgBorder]
 > ![Azure blog storage account](../media/azure-blob-storage.png "Azure blog storage account")
