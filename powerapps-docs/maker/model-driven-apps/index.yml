@@ -30,13 +30,13 @@ landingContent:
             url: overview-model-driven-samples.md
        - linkListType: learn
          links:
-          - text: Understand model-driven app components
-            url: model-driven-app-components.md
+          - text: Get started with model-driven apps
+            url: https://docs.microsoft.com/learn/modules/get-started-with-model-driven-apps-in-powerapps/
 
   # Card
   - title: Create
     linkLists:
-       - linkListType: learn
+       - linkListType: quickstart
          links:
           - text: Create your first app
             url: build-first-model-driven-app.md
@@ -56,8 +56,6 @@ landingContent:
             url: create-design-forms.md
           - text: Apply business logic
             url: guide-staff-through-common-tasks-processes.md
-       - linkListType: learn
-         links:
           - text: Create and manage app views
             url: create-edit-views.md
 
@@ -73,20 +71,6 @@ landingContent:
           - text: Add the rich text editor control
             url: rich-text-editor-control.md
 
-# Card
-  - title: Distribute and share
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Share an app
-            url: share-model-driven-app.md
-          - text: Distribute an app
-            url: distribute-model-driven-app.md
-      - linkListType: learn
-        links:
-          - text: Solutions overview
-            url: ../common-data-service/solutions-overview.md
-
   # Card
   - title: Apply data visualizations
     linkLists:
@@ -98,6 +82,18 @@ landingContent:
             url: create-edit-dashboards.md
           - text: Set chart or list properties
             url: set-properties-chart-list-included-dashboard.md
+
+  # Card
+  - title: Distribute and share
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Share an app
+            url: share-model-driven-app.md
+          - text: Distribute an app
+            url: distribute-model-driven-app.md
+          - text: Use solutions for ALM
+            url: ../common-data-service/solutions-overview.md
 
   # Card
   - title: Transition to unified interface
