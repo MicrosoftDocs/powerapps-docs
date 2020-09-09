@@ -115,7 +115,7 @@ landingContent:
       - linkListType: sample
         links:
           - text: Work with solutions using the SDK APIs
-            url: /power-platform/alm/solution-api.md
+            url: /power-platform/alm/solution-api
       - linkListType: learn
         links:
           - text: Use developer tools to extend the Power Platform
