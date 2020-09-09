@@ -1192,6 +1192,8 @@
     - name: Add reporting to your app
       href: ./model-driven-apps/add-reporting-to-app.md
       items:
+      - name: Create a Power BI embedded dashboard
+        href: ./model-driven-apps/create-edit-powerbi-embedded-page.md
       - name: Report considerations
         href: ./model-driven-apps/reporting-considerations.md
       - name: RDL sandboxing
