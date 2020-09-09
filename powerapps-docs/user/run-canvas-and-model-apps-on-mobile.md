@@ -123,10 +123,17 @@ Your administrator has to opt in to early access updates for your environment an
    > [!div class="mx-imgBorder"]
    >![Select add to home screeen button](media/add-to-homescreen.png "Select add to home screen button")
    
-6. On the upper right corner, select **Add** and then **Done**. The app will be pinned to your home screen.
+6. On the upper right corner, select **Add** and then **Done**. 
 
    > [!div class="mx-imgBorder"]
    >![Select Add](media/add-shortcut-3.png "Select add button")
+   
+
+The app will be pinned to your home screen.   
+  
+
+   > [!div class="mx-imgBorder"]
+   >![App shortcut on home screen](media/add-shortcut-4.png "App shortcut on home screen")
 
 
 ## See non-production apps
