@@ -44,10 +44,10 @@ You can have access rights to a perform an action on a record through ownership,
 |**Shared access**| The record is shared with a user, team, or organization by a user that has appropriate share rights.|  
 |**Hierarchy access**|Hierarchy access only takes place if hierarchy security management is turned on for the organization and the entity. The user also needs to be a manager.
 
-## Check your access
+## Check your access for a record
 
 
-1. To check your access, select a record and then select **Edit** on the command bar.
+1. Select a record and then select **Edit** on the command bar.
 
     > [!div class="mx-imgBorder"]
     > ![Select a record to edit it](media/edit_record.png "Select a record to edit it")
