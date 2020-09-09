@@ -46,7 +46,7 @@ The Workplace Care Management app has the following components:
 
 **Employee cases** 
 
-Lists all the cases that have been created.
+Lists all the cases that have been created and a dashboard.
 
 > [!div class="mx-imgBorder"]
 > ![List of Employee cases](media/health-safety-employee-cases.png "List of Employee cases")
