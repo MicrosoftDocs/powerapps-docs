@@ -80,7 +80,6 @@ This procedure shows you how to set up a Power BI embedded page for a single env
 
 2. Open the dashboard selector and select the Power BI embedded page.
 
-<!-- Reference this section for "Use environment variable" Learn more link -->
 ## Create Power BI embedded page with an environment variable
 
 When a solution with a Power BI embedded component will be moved to other environments, you can turn on **Use environment variable** to configure the dashboard. For each environment, you specify the workspace and either a dashboard or report to reference. Environment variables allow configuration without unmanaged customizations.
