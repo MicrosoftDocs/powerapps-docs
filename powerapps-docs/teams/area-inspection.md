@@ -50,14 +50,14 @@ To configure the app:
 
 1. Select **Continue** if you selected a *Tasks* (Planner) instance in the previous step, otherwise select **Skip**.
 
-    ![Integrate with channel and planner](area-inspection/channel-planner-integrate.png "Integrate with channel and planner")
+    ![Integrate with channel and planner](media/area-inspection/channel-planner-integrate.png "Integrate with channel and planner")
 
 1. If you selected **Continue** in the previous step, follow the steps provided on the page (Steps 1 and 2) to get the SharePoint site URL. And then, paste the URl in *Step 3* input box.
 
 1. Select **Let's go** if you entered a SharePoint site URL in the previous step, otherwise select **Skip** to use the app without SharePoint integration.
 Select **Back** if you want to go back to the previous screen.
 
-    ![Configure image storage](area-inspection/configure-storage.png "Configure image storage")
+    ![Configure image storage](media/area-inspection/configure-storage.png "Configure image storage")
 
 ### Edit the app configuration
 
@@ -65,7 +65,7 @@ To edit the app configuration:
 
 1. Go to the **Area Walk (Manager)** tab in Teams.
 
-1. Select ![Teams settings](area-inspection/teams-settings.png "Teams settings") on the top-right corner.
+1. Select ![Teams settings](media/area-inspection/teams-settings.png "Teams settings") on the top-right corner.
 
 1. Select **General** from the settings menu.
 
@@ -73,7 +73,7 @@ To edit the app configuration:
 
 1. Select **Save**.
 
-    ![Edit app configuration](area-inspection/edit-app-configuration.png "Edit app configuration")
+    ![Edit app configuration](media/area-inspection/edit-app-configuration.png "Edit app configuration")
 
 ### Add area types
 
@@ -85,7 +85,7 @@ To add the area types:
 
 1. Select **Areas** tab inside the app.
 
-1. Select ![Teams settings for areas](area-inspection/teams-settings.png "Teams settings for areas") on the top-right corner.
+1. Select ![Teams settings for areas](media/area-inspection/teams-settings.png "Teams settings for areas") on the top-right corner.
 
 1. Select **Area type** from the left-pane inside the app.
 
@@ -94,7 +94,7 @@ To add the area types:
 
 1. Select **Save**.
 
-    ![Add area type](area-inspection/add-area-type.png "Add area type")
+    ![Add area type](media/area-inspection/add-area-type.png "Add area type")
 
 ### Add areas
 
@@ -112,7 +112,7 @@ To add areas:
 
 1. Select **Save**.
 
-    ![Add area](area-inspection/add-area.png "Add area")
+    ![Add area](media/area-inspection/add-area.png "Add area")
 
 ### Add inspection forms
 
@@ -136,7 +136,7 @@ To add inspection forms:
 
 1. Select **Save**.
 
-    ![Add inspection form](area-inspection/add-form.png "Add inspection form")
+    ![Add inspection form](media/area-inspection/add-form.png "Add inspection form")
 
 ## Area Walk User app
 
@@ -161,18 +161,18 @@ The user app for inspection provides the following capabilities:
 
 App greats you based on your time of the day. If Planner is integrated from the manager app, statistics of the Planner tasks, and all inspections for last 7 days are displayed.
 
-![Home screen with Planner](area-inspection/home-screen-with-planner.png "Home screen with Planner")
+![Home screen with Planner](media/area-inspection/home-screen-with-planner.png "Home screen with Planner")
 
 If Planner is not integrated from the manager app, below screen is displayed when selecting **Open Tasks**. Selecting **Close** takes you back to the previous screen.
 
-![Home screen without Planner](area-inspection/home-screen-without-planner.png "Home screen without Planner")
+![Home screen without Planner](media/area-inspection/home-screen-without-planner.png "Home screen without Planner")
 
 ### Choose an area to inspect
 
 Selecting **Inspect an area** takes you to the next screen that allows
 you to select the area that needs to be inspected.
 
-![Inspect an area](area-inspection/inspect-area.png "Inspect an area")
+![Inspect an area](media/area-inspection/inspect-area.png "Inspect an area")
 
 1. Search box: Searches for areas based on the area type selected.
 
@@ -184,20 +184,20 @@ you to select the area that needs to be inspected.
 
 If there are more than one inspection forms associated to the area type, the app allows you to choose one of the inspection forms. Otherwise, the app takes you to *Inspection overview* screen.
 
-![Select an inspection form](area-inspection/select-inspection-form.png "Select an inspection form")
+![Select an inspection form](media/area-inspection/select-inspection-form.png "Select an inspection form")
 
 ### Inspection overview
 
 This screen shows the image of the area with the checklist, and checklist steps configured in the manager app.
 To start an inspection, select **Begin inspection**, or any of the checklist item.
 
-![Inspection overview](area-inspection/inspection-overview.png "Inspection overview")
+![Inspection overview](media/area-inspection/inspection-overview.png "Inspection overview")
 
 ### Inspection form
 
 Inspect the area and fill in the details on the inspection form. The checklist instructions configured in the manager app is displayed.
 
-![Inspection form](area-inspection/inspection-form.png "Inspection form")
+![Inspection form](media/area-inspection/inspection-form.png "Inspection form")
 
 Select **Ok**, **Issue**, or **N/A** against each checklist. Select **Photo** to add an image, **Note** to add a note, and **Task** to add a Planner task.
 
@@ -217,11 +217,11 @@ You can add task that automatically creates a Planner task inside the team to co
 
 1. Select **Add Task**.
 
-![Add a Planner task to an inspection step](area-inspection/add-task-to-inspection.png "Add a Planner task to an inspection step")
+![Add a Planner task to an inspection step](media/area-inspection/add-task-to-inspection.png "Add a Planner task to an inspection step")
 
 You can't create tasks and the following screen is displayed if the Planner is not integrated from the manager app.
 
-![Planner not integrated](area-inspection/planner-not-integrated.png "Planner not integrated")
+![Planner not integrated](media/area-inspection/planner-not-integrated.png "Planner not integrated")
 
 Selecting **Close** takes you to the previous screen.
 
@@ -230,6 +230,6 @@ Selecting **Close** takes you to the previous screen.
 Select the checklist step to go back to the previous screen, and
 modify the outcome. Or, select **Submit inspection** to submit the inspection form.
 
-![Review inspection](area-inspection/review-inspection.png "Review inspection")
+![Review inspection](media/area-inspection/review-inspection.png "Review inspection")
 
 Once inspection is submitted, the app takes you to the next screen that shows the status of the submission, and the list of all the areas of the current area type.
