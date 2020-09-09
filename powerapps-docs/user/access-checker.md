@@ -23,17 +23,7 @@ search.app:
 To perform an action on a record, a user needs to have the required privilege assigned through a security role or the user is a member of a team that has a security role with assigned privileges.
 
 To perform actions on a record the systerm checks your privileges and if the privilege check passes then the system preforms an access check. The access check verifies that you have the required rights to perform actions on a record such as, read, write, create, delete, append, append to, share, and assign.
-
-|Privilege|Description|  
-|---------------|-----------------|  
-|**Create**|Required to make a new record. Which records can be created depends on the access level of the permission defined in your security role.|  
-|**Read**|Required to open a record to view the contents. Which records can be read depends on the access level of the permission defined in your security role.|  
-|**Write**|Required to make changes to a record. Which records can be changed depends on the access level of the permission defined in your security role.|  
-|**Delete**|Required to permanently remove a record. Which records can be deleted depends on the access level of the permission defined in your security role.|  
-|**Append**|Required to associate the current record with another record. For example, a note can be attached to an opportunity if the user has Append rights on the note. The records that can be appended depend on the access level of the permission defined in your security role.<br /> In case of many-to-many relationships, you must have Append privilege for both entities being associated or disassociated.|  
-|**Append To**|Required to associate a record with the current record. For example, if a user has Append To rights on an opportunity, the user can add a note to the opportunity. The records that can be appended to depend on the access level of the permission defined in your security role.|  
-|**Assign**|Required to give ownership of a record to another user. Which records can be assigned depends on the access level of the permission defined in your security role.|  
-|**Share**|Required to give access to a record to another user while keeping your own access. Which records can be shared depends on the access level of the permission defined in your security role.| 
+ 
 
 You can have access rights to a perform an action on a record through ownership, role access, shared access, or hierarchy access.
 
