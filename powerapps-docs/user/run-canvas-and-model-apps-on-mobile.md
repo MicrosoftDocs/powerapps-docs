@@ -108,10 +108,12 @@ Your administrator has to opt in to early access updates for your environment an
    > [!div class="mx-imgBorder"]
    >![Add shortcut to Sri](media/add-shortcut.png "Add shortcut to Sri")
    
-3. Add custom phrase to open the app using voice command.
+3. Add custom phrase to open the app using voice commands and select **Add to Sri**.
 
    > [!div class="mx-imgBorder"]
    >![Add a phrase to open and run the app](media/add-shortcut-1.png "Add a phrase to open and run the app")
+   
+4.    
 
 ## See non-production apps
 
