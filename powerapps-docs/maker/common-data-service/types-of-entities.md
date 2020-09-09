@@ -1,5 +1,6 @@
 ---
 title: "Types of entities | MicrosoftDocs"
+description: "Learn about the different types of Common Data Service entities."
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
