@@ -42,7 +42,7 @@ You can have access rights to a perform an action on a record through ownership,
 |**Ownership**| User owns the record or belongs to a team that owns the record.|  
 |**Role access**|User has access to perform an action on a record because of their security role.|  
 |**Shared access**| The record is shared with a user, team, or organization by a user that has appropriate share rights.|  
-|**Hierarchy access**|Hierarchy access only takes place if hierarchy security management is turned on in your organization and the entity. The user also needs to be a manager.
+|**Hierarchy access**|Hierarchy access only takes place if hierarchy security management is turned on for the organization and the entity. The user also needs to be a manager.
 
 ## Check your access
 
