@@ -43,7 +43,7 @@ After you've created your environment and it is ready, you can access it by usin
 
 ## Step 2: Install the package
 
-You can install the Return to the Workplace solution by from the AppSource. 
+You can install the Return to the Workplace solution from AppSource. 
 
 > [!NOTE]
 > If you are a US Government customer, you'll have to install using the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
