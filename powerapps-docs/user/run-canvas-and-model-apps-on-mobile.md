@@ -96,9 +96,9 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 > For iOS devices that have multiple browsers installed use Safari when pinning an app to Home. 
 
 
-## Pin to home screen (early access feature)
+## Pin to home screen for iOS 13 or later (early access feature)
 
-If you have enabled early access, then you will have a different pin to home screen experience for iOS 13 or later. This works for both model-driven and canvas apps.
+If you have enabled early access, then you will have a different pin to home screen experience for iOS 13 or later. This works for both model-driven and canvas apps. When you add a shortcut to the home screen, the app is first added to the **Shortcuts** app and then from the **Shortcuts** app you can add to to the home screen. 
 
 Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
 
@@ -108,7 +108,7 @@ Your administrator has to opt in to early access updates for your environment an
    > [!div class="mx-imgBorder"]
    >![Add shortcut to Sri](media/add-shortcut.png "Add shortcut to Sri")
    
-3. Add a custom phrase to open the app using voice commands and select **Add to Siri**.
+3. Add a custom phrase to open the app using voice commands and then select **Add to Siri**.
 
    > [!div class="mx-imgBorder"]
    >![Add a phrase to open and run the app](media/add-shortcut-1.png "Add a phrase to open and run the app")
