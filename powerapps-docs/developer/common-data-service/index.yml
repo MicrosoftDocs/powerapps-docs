@@ -64,7 +64,7 @@ landingContent:
         links:
           - text: Use the Web API
             url: webapi/overview.md
-          - text: Use the web services SDK
+          - text: Use the web services .NET class library
             url: org-service/overview.md
           - text: Build Windows client applications using the XRM tools
             url: xrm-tooling/build-windows-client-applications-xrm-tools.md
@@ -74,16 +74,16 @@ landingContent:
     linkLists:
        - linkListType: concept
          links:
-          - text: Use FetchXML to construct a query
-            url: use-fetchxml-construct-query.md
           - text: Use SQL to query data
             url: cds-sql-query.md
+          - text: Use FetchXML to construct a query
+            url: use-fetchxml-construct-query.md
        - linkListType: quickstart
          links:
-          - text: Web API Data operations Samples (C#)
-            url: webapi/web-api-samples-csharp.md
           - text: Organization service sample (C#)
             url: org-service/quick-start-org-service-console-app.md
+          - text: Web API Data operations Samples (C#)
+            url: webapi/web-api-samples-csharp.md
 
   # Card
   - title: Extend
@@ -112,6 +112,10 @@ landingContent:
             url: https://docs.microsoft.com/power-platform/alm/solution-concepts-alm
           - text: ALM for developers
             url: https://docs.microsoft.com/power-platform/alm/alm-for-developers
+      - linkListType: sample
+        links:
+          - text: Work with solutions using the SDK APIs
+            url: /power-platform/alm/solution-api.md
       - linkListType: learn
         links:
           - text: Use developer tools to extend the Power Platform
@@ -124,7 +128,7 @@ landingContent:
         links:
           - text: Entity data model
             url: reference/about-entity-reference.md
-          - text: Organization Service
+          - text: SDK class libraries
             url: https://docs.microsoft.com/dotnet/api/?view=dynamics-general-ce-9
           - text: Web API
             url: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
@@ -134,9 +138,9 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Model-driven apps Developer Guide
-            url: ../model-driven-apps/overview.md
           - text: Canvas apps Developer Guide
             url: ../../maker/canvas-apps/dev-enterprise-intro.md
+          - text: Model-driven apps Developer Guide
+            url: ../model-driven-apps/overview.md
           - text: Power Apps component framework
             url: ../component-framework/overview.md    
