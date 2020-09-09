@@ -2,13 +2,13 @@
 title: "Use messages with the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 09/08/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: "pehecke" # MSFT alias of Microsoft employees only
+manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -99,6 +99,32 @@ req.Target = account;
 req["SuppressDuplicateDetection"] = true;  
 CreateResponse response = (CreateResponse)svc.Execute(req);  
 ```  
+
+### Add a Shared Variable from the Organization Service
+
+You can set a string value that will be available to plug-ins within the ExecutionContext in the `SharedVariables` collection. More information: [Shared variables](../understand-the-data-context.md#shared-variables)
+
+```csharp
+var account = new Entity("account");
+account["name"] = "Contoso";
+
+var request = new CreateRequest() { Target = account };
+request["tag"] = "This is a value passed.";
+
+var response = (CreateResponse)svc.Execute(request);
+```
+
+
+Will result in the following value within the `SharedVariables` collection when sent using a webhook.
+
+```json
+{
+"key": "tag",
+"value": "This is a value passed."
+}
+```
+
+This can also be done using the Web API: [Add a Shared Variable from the Web API](../webapi/compose-http-requests-handle-errors.md#add-a-shared-variable-from-the-web-api)
 
 ### See also
 
