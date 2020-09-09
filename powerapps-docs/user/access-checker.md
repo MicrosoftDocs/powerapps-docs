@@ -57,7 +57,7 @@ You can have access rights to a perform an action on a record through ownership,
 
 
     > [!div class="mx-imgBorder"]
-    > ![Acess checker showing your accesss leve](media/edit_record_page.png "Acess checker showing your accesss level")
+    > ![Acess checker showing your accesss leve](media/access_check_page.png "Acess checker showing your accesss level")
     
   
 
