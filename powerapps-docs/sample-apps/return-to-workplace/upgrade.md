@@ -95,7 +95,7 @@ To install the Workplace Care Management dashboard, follow the instructions in [
 With the new version, we're introducing the notion of areas and floors that you can define for a particular facility.
 
 - A *floor* indicates how many levels are present in the building.
-- An *area* defines a space within a floor that has a certain capacity. Through bookings in the Employee Return to the Workplace app, you can book an area. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-and-monitor-facilities)
+- An *area* defines a space within a floor that has a certain capacity. Through bookings in the Employee Return to the Workplace app, you can book an area. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-facilities)
 
 ## Step 5: Define capacity for your reopen phases
 
