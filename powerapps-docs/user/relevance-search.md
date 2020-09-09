@@ -1,6 +1,6 @@
 ---
 title: "Relevance Search| MicrosoftDocs"
-ms.custom: ""
+description: How to use relevance search
 author: mduelae
 manager: kvivek
 ms.service: powerapps
