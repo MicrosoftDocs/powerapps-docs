@@ -219,6 +219,12 @@ If a solution contains a business process flow component in draft state that has
 
 Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-entity-missing) for details about the issue and steps to resolve.
 
+## Solution checker fails to export solutions with Model-driven app components
+
+If a solution contains a Model-driven app, Solution Checker may fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to Model-driven apps, any solutions containing them will fail to export with solution checker.
+
+To resolve this issue, grant the Power Apps Checker Application user the Environment Maker security role.
+
 ## Solution checker fails to export patched solutions
 
 If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
