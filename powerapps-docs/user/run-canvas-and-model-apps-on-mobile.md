@@ -118,10 +118,16 @@ Your administrator has to opt in to early access updates for your environment an
    > [!div class="mx-imgBorder"]
    >![Select the ellipsis](media/add-short-2.png "Select the ellipsis")
 
-5. Select **Add to Home Screen** and then select **Done**.
+5. Select **Add to Home Screen**.
 
    > [!div class="mx-imgBorder"]
-   >![Select add to home screeen button](media/add-to-homescreen.png "Selectadd to home screen button")
+   >![Select add to home screeen button](media/add-to-homescreen.png "Select add to home screen button")
+   
+6. On the upper right corner, select **Add** and then **Done**.
+
+   > [!div class="mx-imgBorder"]
+   >![Select Add](media/add-shortcut-3.png "Select add button")
+
 
 ## See non-production apps
 
