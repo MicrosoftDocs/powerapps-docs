@@ -1,4 +1,4 @@
-# Document Objective
+# Area Inspection
 
 In this tutorial, learn about the **Area Walk** (User) and **Area Walk** (Manager) apps, and how to use them effectively.
 
@@ -6,16 +6,7 @@ In this tutorial, learn about the **Area Walk** (User) and **Area Walk** (Manage
 
 **Area Inspection** consists of two different apps, one app for the users, and another app for the manager.
 
-1. Area Walk (User) app
-
-    This app is used by employees to perform the following actions:
-
-    - Inspect an area within a building or other location in the course of
-    completing their job. The app provides inspection checklists so that
-    multiple areas can be inspected. For example, a store employee can use this app to inspect a section of a retail store to verify that the store is ready to open for the day.
-    - When an issue is found during the inspection, the employee can log the issue and assign it to the right person so that it can be resolved quickly.
-
-1. Area Walk (Manager) app
+1. [Area Walk (Manager) app](#area-walk-manager-app)
 
     This app is used by a manager to perform the following actions:
 
@@ -24,15 +15,24 @@ In this tutorial, learn about the **Area Walk** (User) and **Area Walk** (Manage
     - Ensure that all identified issues have been addressed by the staff.
     - Identify repeat issues from prior area walks and analyze root cause and prevent them from happening in future.
 
+1. [Area Walk (User) app](#area-walk-user-app)
+
+    This app is used by employees to perform the following actions:
+
+    - Inspect an area within a building or other location in the course of
+    completing their job. The app provides inspection checklists so that
+    multiple areas can be inspected. For example, a store employee can use this app to inspect a section of a retail store to verify that the store is ready to open for the day.
+    - When an issue is found during the inspection, the employee can log the issue and assign it to the right person so that it can be resolved quickly.
+
 ## Area Walk Manager app
 
 Manager app gives the manager the following capabilities.
 
-- Configure the app
-- Edit the app configuration
-- Add area types
-- Add areas
-- Add inspection forms
+- [Configure the app](#app-configuration)
+- [Edit the app configuration](#edit-the-app-configuration)
+- [Add area types](#add-area-types)
+- [Add areas](#add-areas)
+- [Add inspection forms](#add-inspection-forms)
 
 ### App configuration
 
@@ -59,7 +59,7 @@ Select **Back** if you want to go back to the previous screen.
 
     ![Configure image storage](area-inspection/configure-storage.png "Configure image storage")
 
-### Edit app configuration
+### Edit the app configuration
 
 To edit the app configuration:
 
@@ -77,7 +77,7 @@ To edit the app configuration:
 
 ### Add area types
 
-To start with the Area Walk App, you'll need to add area types first. The area types define the classes of different areas that can be added to the app for inspection.
+To start with the Area Walk app, you'll need to add area types first. The area types define the classes of different areas that can be added to the app for inspection.
 
 To add the area types:
 
@@ -114,170 +114,122 @@ To add areas:
 
     ![Add area](area-inspection/add-area.png "Add area")
 
-Adding Inspection Forms
------------------------
+### Add inspection forms
 
 Inspections forms are tied to area types. You can define more than one
-inspection form for each area type. Also each inspection form can be tied to
+inspection form for each area type. Each inspection form can be tied to
 more than one area types.
 
->   Steps to add Inspection Forms:
+To add inspection forms:
 
-1.  Go to **Area Walk (Manager)** tab in Teams.
+1. Go to **Area Walk (Manager)** tab in Teams.
 
-2.  Select **Inspection Forms** tab.
+1. Select **Inspection Forms** tab inside the app.
 
-3.  Click on **+ Add a form** to create a new Inspection form.
+1. Select **Add a form** to create a new inspection form.
 
-    1.  Add Title
+    1. Enter *Title*.
+    1. Select *Area type*.
+    1. Add *Checklist step* using **Add step**.
 
-    2.  Add Associated Area Types
+    Copy, delete or move checklist steps up and down as required. You can enter one or more checklist steps for the inspection form. Each checklist step can have a *Title*, *Detailed Instructions*, and an image. Each checklist item can also have up to three action buttons associated, reflecting "Ok", "Issue" and "Not Applicable" outcomes. The labels of the buttons can be customized.
 
-    3.  Add Checklist steps using **+Add step**
+1. Select **Save**.
 
-4.  Use **copy** icon to copy a step
+    ![Add inspection form](area-inspection/add-form.png "Add inspection form")
 
-5.  Use **delete** icon to delete a step
+## Area Walk User app
 
-6.  Use **up and down arrows** to change the sequence of the steps
-
->   You can enter one or more checklist steps for the inspection form. Each
->   checklist step can have a Title, Detailed Instructions, and an Image. Each
->   checklist item can also have up to three action buttons associated,
->   reflecting "Ok", "Issue" and "Not Applicable" outcomes. The labels of the
->   buttons can be customized.
-
-![](area-inspection/55b5c55e08e3afaf6db58a5e72f7a776.png)
-
-Area Walk User App
-==================
-
-User App – Enables users to Complete a full inspection of the areas as and when
+User app enables users to complete a full inspection of the areas as and when
 required in their job.
 
->   (note: To run the installed app, select 'Area Walk' app from the available
->   tabs inside the Teams channel.)
+> [!NOTE]
+> To run the installed app, select **Area Walk** app from the available
+tabs inside the Teams channel.
 
->   The detailed steps on how to create an inspection is given below:
+The user app for inspection provides the following capabilities:
 
-User lands to Home screen on opening the app
---------------------------------------------
+- [Home screen](#home-screen)
+- [Choose an area to inspect](#choose-an-area-to-inspect)
+- [Select an inspection form](#select-an-inspection-form)
+- [Inspection overview](#inspection-overview)
+- [Fill the inspection form](#inspection-form)
+- [Add a Planner task to an inspection step](#add-a-planner-task-to-an-inspection-step)
+- [Review inspection](#review-inspection)
 
-![](area-inspection/561c5ccfe8cdf392523ceabe4273f398.png)
+### Home screen
 
-1.  App will Great you based on your Time "Good \<Morning/Afternoon/Evening\>,
-    \<Your Name\>.
+App greats you based on your time of the day. If Planner is integrated from the manager app, statistics of the Planner tasks, and all inspections for last 7 days are displayed.
 
-2.  The statistics of the planner tasks.
+![Home screen with Planner](area-inspection/home-screen-with-planner.png "Home screen with Planner")
 
-3.  The statistics of all inspections for last 7 days
+If Planner is not integrated from the manager app, below screen is displayed when selecting **Open Tasks**. Selecting **Close** takes you back to the previous screen.
 
->   **Note:** If the Planner is not selected from the manager App, users will be
->   not be able to view Planner task Statistics and will see below screen when
->   clicked on **Open Tasks**. On Seleting **Close**, the user will navigate to
->   previous Screen
+![Home screen without Planner](area-inspection/home-screen-without-planner.png "Home screen without Planner")
 
-![](area-inspection/d89bce19d65d7f6b4cfa5a6e11a2b773.png)
+### Choose an area to inspect
 
-Choose the Area that needs to be inspected
-------------------------------------------
+Selecting **Inspect an area** takes you to the next screen that allows
+you to select the area that needs to be inspected.
 
->   On click of Inspect an Area, it navigates to the next screen which allows
->   user to select the area that needs to be inspected.
+![Inspect an area](area-inspection/inspect-area.png "Inspect an area")
 
-![](area-inspection/491ff593d268bcadb845eeb008f5dcc3.png)
+1. Search box: Searches for areas based on the area type selected.
 
-1.  Search box: Searches for Areas based on the area type selected.
+1. Area types: Lists all the area types with and additional option *All* selected by default.
 
-2.  Area types: Lists all the area types with and additional option "All"
-    selected by default
+1. Areas: Lists all the areas based on selected area. If *All* is selected, all the areas are listed by default.
 
-3.  Areas: Lists all the areas based on selected area, if "All" is selected, all
-    the areas are listed by default.
+### Select an inspection form
 
-User chooses the inspection form
---------------------------------
+If there are more than one inspection forms associated to the area type, the app allows you to choose one of the inspection forms. Otherwise, the app takes you to *Inspection overview* screen.
 
-If there are more than one inspection form associated to the area type, the app
-allows user to choose one of the inspection forms, else the app directly
-navigates to Inspection overview page
+![Select an inspection form](area-inspection/select-inspection-form.png "Select an inspection form")
 
-![](area-inspection/eb7330b9cb7ca293dd05ef5e2d373eed.png)
+### Inspection overview
 
-Inspection overview page 
--------------------------
+This screen shows the image of the area with the checklist, and checklist steps configured in the manager app.
+To start an inspection, select **Begin inspection**, or any of the checklist item.
 
-This page shows the image of the area with number or checklist completed vs
-total number of checklist steps in the form.
+![Inspection overview](area-inspection/inspection-overview.png "Inspection overview")
 
-![](area-inspection/8ec813744858eb27b222ffd9699036a4.png)
+### Inspection form
 
-1.  List of checklist steps for the form selected as per configuration in the
-    manager app.
+Inspect the area and fill in the details on the inspection form. The checklist instructions configured in the manager app is displayed.
 
->   User must click on 'Begin Inspection' button or any of the checklist item to
->   start the inspection.
+![Inspection form](area-inspection/inspection-form.png "Inspection form")
 
-Inspection Form Page
---------------------
+Select **Ok**, **Issue**, or **N/A** against each checklist. Select **Photo** to add an image, **Note** to add a note, and **Task** to add a Planner task.
 
-The user must fill in details and click on Review inspection
+### Add a Planner task to an inspection step
 
-![](area-inspection/cda6a1a1c6fc6bb1d944e6110b579af3.png)
+You can add task that automatically creates a Planner task inside the team to complete.
 
-![](area-inspection/8a6d212dcb9095751058fb4e2e5cdf84.png)
+1. Select **Task** from the inspection step. This action updates the *Images* and *Notes*.
 
-1.  Checklist instruction: The instructions configured in the manager app is
-    displayed here
+1. Add more images using **Add Photos**, or delete the unwanted images by selecting the images.
 
-2.  Checklist outcome: User must select either OK(gets highlighted in Green),
-    Issue(gets highlighted in Red) or N/A(gets highlighted in Grey) from the
-    inspection list against each checklist.
+1. Select **Assign** to search for the user(s) that you wanted to assign the task to.
 
-3.  Add details: User can add/capturing pictures by using **Photo** option ,
-    Also add note by using **Note option** or add Planner Tasks by using
-    **Task** option.
+1. Select a due date.
 
-Adding a Planner Task to an Inspection step.
---------------------------------------------
+1. If required, update the description.
 
-User can add task which will automatically create a planner task in the teams
-which is viewed by Store staff and the store staff is responsible for completing
-this task.
+1. Select **Add Task**.
 
-1.  Click on the **Task** at Checklist step
+![Add a Planner task to an inspection step](area-inspection/add-task-to-inspection.png "Add a Planner task to an inspection step")
 
-2.  The Images and Notes will get populated on the task.
+You can't create tasks and the following screen is displayed if the Planner is not integrated from the manager app.
 
-3.  Add addional images using **Add Photos** or delete the unwanted images by
-    clicking on any image
+![Planner not integrated](area-inspection/planner-not-integrated.png "Planner not integrated")
 
-4.  Click on **Assign** to search for the User(s) for whom you wanted to assign
-    the task.
+Selecting **Close** takes you to the previous screen.
 
-5.  Select a due date
+### Review inspection
 
-6.  Update the description if required
+Select the checklist step to go back to the previous screen, and
+modify the outcome. Or, select **Submit inspection** to submit the inspection form.
 
-7.  Click on **Add Task**
+![Review inspection](area-inspection/review-inspection.png "Review inspection")
 
-![](area-inspection/8a317fd05fc564ea68cd39172fd51563.png)
-
-**Note:** If the Planner is not selected from the manager App, users will be not
-b able to create tasks and will see belo screen when clicked on **Task** from
-Checklist Step. On Seleting **Close**, the user will navigate to previous Screen
-
-![](area-inspection/d89bce19d65d7f6b4cfa5a6e11a2b773.png)
-
-Review inspection 
-------------------
-
-User can click on the checklist step to go back to the previous screen and
-modify the outcome or click on "Submit Inspection" to submit inspection.
-
-![](area-inspection/416657344886c4a357f1ef696c46a05a.png)
-
-![](area-inspection/2f23e89e8c4b75c41d499c3cae689d8f.png)
-
-Once inspection is submitted, the app navigates to next screen which shows the
-status of the submission and list of all the areas of the current area type.
+Once inspection is submitted, the app takes you to the next screen that shows the status of the submission, and the list of all the areas of the current area type.
