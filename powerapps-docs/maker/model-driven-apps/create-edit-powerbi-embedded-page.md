@@ -41,7 +41,7 @@ This procedure shows you how to set up a Power BI embedded page for a single env
 2. Select **New** > **Dashboards** > **Power BI embedded**.
 
 3. Enter the following information in the **New Power BI embedded** dialog that appears:
-   -  Enter a name for the dashboard, which will be shown to the user in the selector on the **Dashboards** page.
+   - Enter a **Display name** for the dashboard, which will be shown to the user in the selector on the **Dashboards** page.
    - Select the type, either **Power BI report** or **Power BI dashboard**.
    - Select a **Power BI workspace**.
    - Select a Power BI report or dashboard.
@@ -57,20 +57,17 @@ This procedure shows you how to set up a Power BI embedded page for a single env
 
 2. Select the **Dashboards** subarea on the app designer canvas. 
 
-    > [!div class="mx-imgBorder"] 
-    > ![App designer select dashboards element](media/create-edit-powerbi-embedded-page/app-designer-select-dashboards-element.png "App designer select dashboards element")
-
-3. On the dashboards property pane, there is a **Power BI embedded page** category. Clear **All** to select specific dashboards. Optionally, the Power BI embedded page can be set as the default dashboard in the sitemap.
+3. On the dashboards property pane, there is a **Power BI embedded page** category. Clear **All** to select specific dashboards. Optionally, the Power BI embedded page can be set as the default dashboard in the site map.
 
     > [!div class="mx-imgBorder"] 
     > ![App designer dashboards Power BI embedded category](media/create-edit-powerbi-embedded-page/app-designer-dashboards-powerbi-embedded-category.png "App designer dashboards Power BI embedded category")
 
-4. Open **Sitemap** from the app designer, then select the existing **Dashboards** subarea or insert one.
+4. Open **Site map** from the app designer, then select the existing **Dashboards** subarea or insert one.
 
 5. Open the **Default Dashboard** property and then select the Power BI embedded dashboard name.
 
     > [!div class="mx-imgBorder"] 
-    > ![Sitemap designer subarea property default dashboard](media/create-edit-powerbi-embedded-page/sitemap-designer-subarea-property-default-dashboard.png "Sitemap designer subarea property default dashboard")
+    > ![Site map designer subarea property default dashboard](media/create-edit-powerbi-embedded-page/sitemap-designer-subarea-property-default-dashboard.png "Sitemap designer subarea property default dashboard")
 
 6. Select **Save**. To make your changes available to users, select **Publish**.
 
@@ -98,7 +95,7 @@ When a solution with a Power BI embedded component will be moved to other enviro
 
     A nested panel opens where you create the environment variable. The environment variable properties are automatically filled using the dashboard **Display Name** and **Name**.
 
-    You can configure the workspace and report or dashboard. The values are stored as JSON.
+    You can configure the workspace and report or dashboard. The values are stored as JSON. More information: [Environment variables overview](../common-data-service/environmentvariables.md)
 
     > [!div class="mx-imgBorder"] 
     > ![Power BI embedded Environment Variable panel](media/create-edit-powerbi-embedded-page/powerbi-embedded-env-var-panel.png  "Power BI embedded Environment Variable panel")
@@ -108,11 +105,10 @@ When a solution with a Power BI embedded component will be moved to other enviro
     > [!div class="mx-imgBorder"] 
     > ![Power BI embedded environment variable value preview](media/create-edit-powerbi-embedded-page/power-bi-embedded-environment-variable-value-preview.png  "Power BI embedded environment variable value preview")
 
-## See also
+### See also
 
 [Create or edit model-driven app dashboards](create-edit-dashboards.md) <br />
 [View entity data in Power BI Desktop](../common-data-service/view-entity-data-power-bi.md) <br />
-[Environment variables overview](../common-data-service/environmentvariables.md) <br />
 [Use Power BI](use-power-bi.md) <br />
 [Use Power BI with CDS](../common-data-service/use-powerbi-with-cds.md) <br />
 [Create a Power BI report using the Common Data Service connector](../common-data-service/data-platform-powerbi-connector.md)
