@@ -20,7 +20,20 @@ search.app:
 
 # Check your user access and permissions
 
-Common Data Service uses a role-based security model to help secure access to the database. When you're on a record select **Check Access** to check your security role and privileges.
+There are different ways to get access to a record in Common Data Service. To perform an action on a record, you need to have either the required privilege assigned through a security role or the you need to be a member of a team that has a security role with the privilege assigned.
+
+
+To perform actions on a record the systerm checks your privileges and if that passes it preforms an access check. The access check verifies that you have the required rights to perform actions on a record such as, read, write, create, delete, append, append to, share, and assign. You can have access rights to a perform an action on a record the following permissions:
+
+
+
+
+
+
+
+
+If this is not the case, then the user will get an access denied error claiming that they do not hold the necessary privilege to perform the action.
+
 
 
 1. To check your access, select a record and then select **Edit** on the command bar.
