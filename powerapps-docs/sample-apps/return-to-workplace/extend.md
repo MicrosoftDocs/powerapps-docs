@@ -198,8 +198,9 @@ such as **Created On**, **Modified On** are not displayed.
 | Display name                    | Data type     | Description                                                                                      | Platform use                |
 |---------------------------------|---------------|--------------------------------------------------------------------------------------------------|------------------------------|
 | Case Number                     | Text          | Unique identifier for the employee case.                                                         | Model-driven app             |
-| Check In Available              | Option Set    | Used to denote whether the employee can get a pass for a facility.                               | Model-driven app and canvas app |
-| Check In Available Date         | Date and Time | Used to specify when the employee will be able to get a pass for a facility.                     | Model-driven app             |
+| Facility Access Available       | Option Set    | Used to denote whether the employee can get a pass for a facility.                               | Model-driven app and canvas app |
+| Facility Access Available Date  | Date and Time | Used to specify when the employee will be able to get a pass for a facility.                     | Model-driven app             |
+| Facility Access Unavailable Note| Text          | Used to give the employee a note on why they are blocked from booking a pass.                    | Model-driven app             |
 | Employee                        | Lookup        | Used to associate the employee to the employee case.                                             | Model-driven app             |
 | Employee Contacted              | Option Set    | Used to denote whether the employee was contacted.                                               | Model-driven app             |
 | Employee Instructions Provided  | Option Set    | Used to denote whether the employee was provided instructions.                                   | Model-driven app             |
@@ -208,6 +209,7 @@ such as **Created On**, **Modified On** are not displayed.
 | Screened                        | Option Set    | Used to denote whether the screening process has occurred.                                       | Model-driven app             |
 | First Time Employee Contacted   | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
 | First Time to Investigation     | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
+| Process Stage                   | Text          | Indicated the actual process stage the BPF is in.                                                | Model-driven app             |
 |||||
 
 ### Employee Facility Search
@@ -380,16 +382,19 @@ such as **Created On**, **Modified On** are not displayed.
 
 ### Solution Setting
 
-| Display name         | Data type  | Description                                                              | Platform use               |
-|----------------------|------------|--------------------------------------------------------------------------|------------------------------|
-| Health Contact Email | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
-| Health Contact Name  | Text       | Used to capture the name of the primary health contact.                  | Model-driven app and canvas app |
-| Health Contact Phone | Text       | Used to capture the phone number of the primary health contact.          | Model-driven app and canvas app |
-| Maximum Temperature  | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
-| Minimal Temperature  | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
-| Name                 | Text       | The primary name of the setting record.                                  | Model-driven app             |
-| Target Temperature   | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                   |
-| Temperature Scale    | Option Set | Used to display the value of the temperature question in the canvas app. | Canvas app                   |
+| Display name                            | Data type  | Description                                                              | Platform use                    |
+|-----------------------------------------|------------|--------------------------------------------------------------------------|---------------------------------|
+| Allow Employee Sentiment                | Option Set | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app |
+| Allow Storing of Negetive Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app |
+| Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
+| Health Contact Name                     | Text       | Used to capture the name of the primary health contact.                  | Model-driven app and canvas app |
+| Health Contact Phone                    | Text       | Used to capture the phone number of the primary health contact.          | Model-driven app and canvas app |
+| Health Contact Instructions             | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app |
+| Maximum Temperature                     | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
+| Minimal Temperature                     | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
+| Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                |
+| Target Temperature                      | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
+| Temperature Scale                       | Option Set | Used to display the value of the temperature question in the canvas app. | Canvas app                      |
 |||||
 
 ### State
@@ -411,8 +416,10 @@ This section of the solution describes the different flows within the solution a
 | Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes. |
 | Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase. |
 | Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist. |
+| Employee Attestation - Disable Earlier Pass      | Employee Attestation    | When an employee creates multiple passes on a single day, earlier passes will be disabled. |
 | Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. |
 | Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Re-educate occupancy in daily occupancy when employee bookings are disabled. |
+| Employee Case - Reset Facility Access Available      | Employee Case    | Reset the employee case facility access available when the time is reached. |
 | Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations. |
 | Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. |
 | Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. |

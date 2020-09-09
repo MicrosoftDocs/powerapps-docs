@@ -40,7 +40,7 @@ You can find all available facilities and see the reopen status for them. Select
 > [!div class="mx-imgBorder"]
 > ![List of facilities](media/employee-facility-list2.png "List of facilities")
 
-When you select a facility from the facility list, the current status of the facility and associated details are displayed. Select **<** to return to the previous screen.
+When you select a facility from the facility list, the current status of the facility and associated details are displayed. You can also book a space directly from the look up screen. When a facility isn't available, then the **BOOK A SPACE** button is disabled. Select **<** to return to the previous screen.
 
 > [!div class="mx-imgBorder"]
 > ![Facility details](media/employee-facility-details2.png "Facility details")
@@ -55,7 +55,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
 1. Select **GET DAY PASS**.
 
-2. Select an available facility from the facility list or use the saved facility and area shortcut if applicable.
+2. Select an available facility from the facility list or use the saved facility and area shortcut if applicable. In **Recent** you will find the facilities you most recently used. For saved facilities and recent facilities, it indicates if the facility is available based on their phase and the earlier bookings. When a facility is unavailable, it will be greyed out and unavailable for booking.
 
 3. Select **BOOK A SPACE** to continue with the check-in process.
 
@@ -66,11 +66,17 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
    > [!div class="mx-imgBorder"]
    > ![Select Area](media/employee-select-area.png "Select area")
+   
+> [!NOTE]
+> When a facility doesn't have any areas, this screen will be skipped for an user. The pass will then only be for that facility.
 
 5. Select time window for arrival at the facility. Select **NEXT** to continue with the check-in process.
 
    > [!div class="mx-imgBorder"]
    > ![Select Time](media/employee-select-time.png "Select time")
+
+> [!NOTE]
+> On a facility you can indicate a time window in which people can check in, it is possible to select 30 minutes, 1 hour or none. When the time window is not filled or none, this screen will be skipped.
 
 6. Accept the terms and agreements.
 
@@ -84,7 +90,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
 ### Employee pass
 
-If your responses to the symptom check statements show that you're healthy, you'll receive a pass to enter the selected facility. The pass is valid until the end of the day. 
+If your responses to the symptom check statements show that you're healthy, you'll receive a pass to enter the selected facility. The pass is valid until the end of the day. When you create a pass for a facility were you already created a pass for earlier that day, the pass earlier that day will be cancelled automatically. 
 
 > [!div class="mx-imgBorder"]
 > ![Employee pass](media/employee-pass.png "Employee pass")
@@ -99,6 +105,9 @@ If your responses show you aren't healthy, you'll not receive a pass and provide
 > [!div class="mx-imgBorder"]
 > ![Not feeling well](media/employee-pass-negative.png "Not feeling well")
 
+> [!NOTE]
+> Current negative attestations are also stored, in the solution settings you can turn this feature off if you are not allowed to store them.
+
 ## Share sentiment
 
 You can say how you're feeling about returning to the workplace. On the home page, select one of the options to answer the question **Do you feel safe returning to work?**
@@ -110,6 +119,9 @@ You can say how you're feeling about returning to the workplace. On the home pag
 
 > [!div class="mx-imgBorder"]
 > ![Share sentiment reset](media/employee-share-sentiment2-2.png "Share sentiment reset")
+
+> [!NOTE]
+> In the solution settings you can turn this feature off if you don't want to use this.
 
 ## Feedback about the solution
 

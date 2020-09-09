@@ -154,8 +154,7 @@ Next, we'll configure the data refresh settings for the dataset.
       > [!div class="mx-imgBorder"] 
       > ![Schedule refresh data](media/deploy-schedule-refresh.png "Schedule refresh data")
 
-      > [!NOTE]
-      > - There are limits to how many times data can be refreshed. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Power BI Premium capacity node, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
+      C- There are limits to how many times data can be refreshed. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Power BI Premium capacity node, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
       > - We recommend scheduling data to be refreshed every 30 minutes.
 
 5. Go back to your workspace, select the **Reports** tab, and then select the report to open it in a browser.
@@ -244,7 +243,10 @@ You can change the look and feel of the app by applying themes to match your com
    > [!div class="mx-imgBorder"]
    > ![Share app](media/deploy-share-app.png "Share app")
 
-5. Select users from the list of available users with whom you want to share the app.
+5. Select users from the list of available users or groups with whom you want to share the app.
+
+> [!IMPORTANT]
+> - Even though the user may have access to the canvas app, you should still assign users the **Return to the Workplace - Employee** security role. 
 
 ## Step 8: Set the security roles
 
@@ -279,6 +281,10 @@ In the Return to the Workplace solution, the following security roles are define
 
    > [!div class="mx-imgBorder"]
    > ![Select roles](media/deploy-settings-security-enabled-users.png "Select roles")
+   
+
+   > [!NOTE]
+   > When you want to assign security roles in bulk, you can use Teams. Teams, which are based on Azure AD security groups or Office365 groups, can assign security roles based on the organization. (https://docs.microsoft.com/en-us/power-platform/admin/manage-teams) When applying teams based on Azure AD security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. (https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 

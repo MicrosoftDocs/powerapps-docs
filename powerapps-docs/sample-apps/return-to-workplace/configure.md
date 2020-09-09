@@ -265,9 +265,9 @@ With solution settings, you define the terms of agreement that are applicable to
    > [!div class="mx-imgBorder"]
    > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
 
-## Employee Cases 
+## Set duplicate detection rules for employee cases 
 
-On the **Active Employee Cases**, items must be limited to one per employee. For this, a **Duplicate rule** must be created. 
+For active employee cases, the number of cases can be limited to one active employee case per employee. When you want to enable this, you need to create a **Duplicate rule**. 
 
 1. Go into the **Power Platform Admin Center** or click this link: https://admin.powerplatform.microsoft.com/
 
