@@ -1,0 +1,142 @@
+### YamlMime:Landing
+
+title: Common Data Service documentation
+summary: Create powerful apps with easy to use tools that run across the spectrum of devices. 
+
+metadata:
+  title: Common Data Service documentation
+  description: Provides access to highlighted areas within the Common Data Service documentation
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: Mattp123
+  ms.author: matp
+  ms.date: 09/08/2020 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: What is Common Data Service?
+            url: data-platform-intro.md
+          - text: Why choose Common Data Service
+            url: why-cds-overview.md
+       - linkListType: learn
+         links:
+          - text: Introduction to Common Data Service
+            url: https://docs.microsoft.com/learn/modules/introduction-common-data-service/
+
+  # Card
+  - title: Create
+    linkLists:
+       - linkListType: quickstart
+         links:
+          - text: Create an entity
+            url: data-platform-create-entity.md
+       - linkListType: concept
+         links:  
+          - text: Entities and metadata
+            url: create-edit-metadata.md
+          - text: Types of entities
+            url: types-of-entities.md
+          
+  # Card
+  - title: Customize
+    linkLists:
+       - linkListType: how-to-guide
+         links:
+          - text: Import or export data
+            url: data-platform-import-export.md
+          - text: Create a relationship between entities
+            url: data-platform-entity-lookup.md
+          - text: Create and edit fields
+            url: create-edit-fields.md
+          - text: Create an option set
+            url: custom-picklists.md
+
+  # Card
+  - title: Work with dataflows
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Self-service data prep
+            url: self-service-data-prep-with-dataflows.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create and use dataflows
+            url: create-and-use-dataflows.md
+          - text: Connect Azure Data Lake Storage Gen2
+            url: connect-azure-data-lake-storage-for-dataflow.md
+
+  # Card
+  - title: Work with solutions
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Solutions overview
+            url: solutions-overview.md
+      - linkListType: how-to-guide
+        links:
+         - text: Create a solution
+           url: create-solution.md
+         - text: Export solutions
+           url: export-solutions.md
+
+  # Card
+  - title: Integrate
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Use Power BI with Common Data Service 
+            url: use-powerbi-with-cds.md
+          - text: SharePoint, OneNote, and OneDrive
+            url: sharepoint-onedrive-onenote-intro.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create a Power BI report
+            url: data-platform-powerbi-connector.md
+
+  # Card
+  - title: Apply business logic
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Overview
+            url: cds-processes.md
+      - linkListType: how-to-guide
+        links:
+          - text: Create a business rule
+            url: data-platform-create-business-rule.md
+          - text: Create a business process flow
+            url: https://docs.microsoft.com/power-automate/create-business-process-flow
+
+  # Card
+  - title: Troubleshoot
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: View solution layers
+            url: solution-layers.md
+          - text: View solution history
+            url: solution-history.md
+          - text: Use solution checker
+            url: use-powerapps-checker.md
+
+  # Card
+  - title: For developers
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Work with data using code
+            url: ../../developer/common-data-service/work-with-data-cds.md
+          - text: Apply business logic using code
+            url: ../../developer/common-data-service/apply-business-logic-with-code.md      
+          - text: Work with entities
+            url: ../../developer/common-data-service/entities.md
