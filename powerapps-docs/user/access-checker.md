@@ -53,6 +53,11 @@ You can have access rights to a perform an action on a record through ownership,
     > ![Select a record to edit it](media/edit_record.png "Select a record to edit it")
   
 2. On the open record, select **Check Access** on the command bar.
+3. The **Check Access** dialog box will appear and display details of your access to the record.
+
+
+    > [!div class="mx-imgBorder"]
+    > ![Acess checker showing your accesss leve](media/edit_record_page.png "Acess checker showing your accesss level")
     
   
 
