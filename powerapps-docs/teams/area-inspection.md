@@ -50,14 +50,14 @@ To configure the app:
 
 1. Select **Continue** if you selected a *Tasks* (Planner) instance in the previous step, otherwise select **Skip**.
 
-    ![Integrate with channel and planner](media/channel-planner-integrate.png "Integrate with channel and planner")
+    ![Integrate with channel and planner](area-inspection/channel-planner-integrate.png "Integrate with channel and planner")
 
 1. If you selected **Continue** in the previous step, follow the steps provided on the page (Steps 1 and 2) to get the SharePoint site URL. And then, paste the URl in *Step 3* input box.
 
 1. Select **Let's go** if you entered a SharePoint site URL in the previous step, otherwise select **Skip** to use the app without SharePoint integration.
 Select **Back** if you want to go back to the previous screen.
 
-    ![Configure image storage](media/configure-storage.png "Configure image storage")
+    ![Configure image storage](area-inspection/configure-storage.png "Configure image storage")
 
 ### Edit app configuration
 
@@ -65,7 +65,7 @@ To edit the app configuration:
 
 1. Go to the **Area Walk (Manager)** tab in Teams.
 
-1. Select ![Teams settings](media/teams-settings.png "Teams settings") on the top-right corner.
+1. Select ![Teams settings](area-inspection/teams-settings.png "Teams settings") on the top-right corner.
 
 1. Select **General** from the settings menu.
 
@@ -73,7 +73,7 @@ To edit the app configuration:
 
 1. Select **Save**.
 
-    ![Edit app configuration](media/edit-app-configuration.png "Edit app configuration")
+    ![Edit app configuration](area-inspection/edit-app-configuration.png "Edit app configuration")
 
 ### Add area types
 
@@ -85,7 +85,7 @@ To add the area types:
 
 1. Select **Areas** tab inside the app.
 
-1. Select ![Teams settings for areas](media/teams-settings.png "Teams settings for areas") on the top-right corner.
+1. Select ![Teams settings for areas](area-inspection/teams-settings.png "Teams settings for areas") on the top-right corner.
 
 1. Select **Area type** from the left-pane inside the app.
 
@@ -94,24 +94,25 @@ To add the area types:
 
 1. Select **Save**.
 
-    ![Add area type](media/add-area-type.png "Add area type")
+    ![Add area type](area-inspection/add-area-type.png "Add area type")
 
 ### Add areas
 
 Areas are the portions that needs to be inspected.
 
-To add reas:
+To add areas:
 
 1. Go to the **Area Walk (Manager)** tab in Teams.
 
 1. Select **Add area** from the left-pane inside the app.
 
->   3. In the form that opens, fill in the area details such as the **Title**
->   and select **Area Type** from the dropdown.
+1. Enter the area details, such as *Title*.
 
->   4. Click on **Save.**
+1. Select the **Area type** from the dropdown.
 
-![](media/1f023be9ded28396fe55bff661370b89.png)
+1. Select **Save**.
+
+    ![Add area](area-inspection/add-area.png "Add area")
 
 Adding Inspection Forms
 -----------------------
@@ -146,7 +147,7 @@ more than one area types.
 >   reflecting "Ok", "Issue" and "Not Applicable" outcomes. The labels of the
 >   buttons can be customized.
 
-![](media/55b5c55e08e3afaf6db58a5e72f7a776.png)
+![](area-inspection/55b5c55e08e3afaf6db58a5e72f7a776.png)
 
 Area Walk User App
 ==================
@@ -162,7 +163,7 @@ required in their job.
 User lands to Home screen on opening the app
 --------------------------------------------
 
-![](media/561c5ccfe8cdf392523ceabe4273f398.png)
+![](area-inspection/561c5ccfe8cdf392523ceabe4273f398.png)
 
 1.  App will Great you based on your Time "Good \<Morning/Afternoon/Evening\>,
     \<Your Name\>.
@@ -176,7 +177,7 @@ User lands to Home screen on opening the app
 >   clicked on **Open Tasks**. On Seleting **Close**, the user will navigate to
 >   previous Screen
 
-![](media/d89bce19d65d7f6b4cfa5a6e11a2b773.png)
+![](area-inspection/d89bce19d65d7f6b4cfa5a6e11a2b773.png)
 
 Choose the Area that needs to be inspected
 ------------------------------------------
@@ -184,7 +185,7 @@ Choose the Area that needs to be inspected
 >   On click of Inspect an Area, it navigates to the next screen which allows
 >   user to select the area that needs to be inspected.
 
-![](media/491ff593d268bcadb845eeb008f5dcc3.png)
+![](area-inspection/491ff593d268bcadb845eeb008f5dcc3.png)
 
 1.  Search box: Searches for Areas based on the area type selected.
 
@@ -201,7 +202,7 @@ If there are more than one inspection form associated to the area type, the app
 allows user to choose one of the inspection forms, else the app directly
 navigates to Inspection overview page
 
-![](media/eb7330b9cb7ca293dd05ef5e2d373eed.png)
+![](area-inspection/eb7330b9cb7ca293dd05ef5e2d373eed.png)
 
 Inspection overview page 
 -------------------------
@@ -209,7 +210,7 @@ Inspection overview page
 This page shows the image of the area with number or checklist completed vs
 total number of checklist steps in the form.
 
-![](media/8ec813744858eb27b222ffd9699036a4.png)
+![](area-inspection/8ec813744858eb27b222ffd9699036a4.png)
 
 1.  List of checklist steps for the form selected as per configuration in the
     manager app.
@@ -222,9 +223,9 @@ Inspection Form Page
 
 The user must fill in details and click on Review inspection
 
-![](media/cda6a1a1c6fc6bb1d944e6110b579af3.png)
+![](area-inspection/cda6a1a1c6fc6bb1d944e6110b579af3.png)
 
-![](media/8a6d212dcb9095751058fb4e2e5cdf84.png)
+![](area-inspection/8a6d212dcb9095751058fb4e2e5cdf84.png)
 
 1.  Checklist instruction: The instructions configured in the manager app is
     displayed here
@@ -260,13 +261,13 @@ this task.
 
 7.  Click on **Add Task**
 
-![](media/8a317fd05fc564ea68cd39172fd51563.png)
+![](area-inspection/8a317fd05fc564ea68cd39172fd51563.png)
 
 **Note:** If the Planner is not selected from the manager App, users will be not
 b able to create tasks and will see belo screen when clicked on **Task** from
 Checklist Step. On Seleting **Close**, the user will navigate to previous Screen
 
-![](media/d89bce19d65d7f6b4cfa5a6e11a2b773.png)
+![](area-inspection/d89bce19d65d7f6b4cfa5a6e11a2b773.png)
 
 Review inspection 
 ------------------
@@ -274,9 +275,9 @@ Review inspection
 User can click on the checklist step to go back to the previous screen and
 modify the outcome or click on "Submit Inspection" to submit inspection.
 
-![](media/416657344886c4a357f1ef696c46a05a.png)
+![](area-inspection/416657344886c4a357f1ef696c46a05a.png)
 
-![](media/2f23e89e8c4b75c41d499c3cae689d8f.png)
+![](area-inspection/2f23e89e8c4b75c41d499c3cae689d8f.png)
 
 Once inspection is submitted, the app navigates to next screen which shows the
 status of the submission and list of all the areas of the current area type.
