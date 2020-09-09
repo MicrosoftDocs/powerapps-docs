@@ -128,7 +128,9 @@ landingContent:
         links:
           - text: Entity data model
             url: reference/about-entity-reference.md
-          - text: SDK class libraries
+          - text: XRM Tooling API Reference
+            url: https://docs.microsoft.com/dotnet/api/?view=dynamics-xrmtooling-ce-9  
+          - text: SDK API class libraries
             url: https://docs.microsoft.com/dotnet/api/?view=dynamics-general-ce-9
           - text: Web API
             url: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
