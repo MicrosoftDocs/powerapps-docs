@@ -981,6 +981,8 @@
       href: ./canvas-apps/embedding-sdk.md
 - name: Model-driven apps
   items:
+  - name: Model-driven apps
+    href: ./model-driven-apps/index.yml
   - name: What are model-driven apps?
     href: ./model-driven-apps/model-driven-app-overview.md
   - name: Explore sample apps
