@@ -38,7 +38,7 @@ landingContent:
     linkLists:
        - linkListType: concept
          links:
-          - text: Understand available templates for portals
+          - text: Understand available templates
             url: portal-templates.md
        - linkListType: quickstart
          links:  
@@ -88,10 +88,12 @@ landingContent:
             url: configure/web-form-properties.md
 
   # Card
-  - title: User management and security
+  - title: Manage users and security
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Invite contacts
+            url: configure/invite-contacts.md
           - text: Create web roles
             url: configure/create-web-roles.md
           - text: Assign entity permissions
@@ -132,5 +134,8 @@ landingContent:
             url: admin/portal-checker.md
           - text: Clear server-side cache
             url: admin/clear-server-side-cache.md      
+          - text: Enable header and footer output caching
+            url: configure/enable-header-footer-output-caching.md      
           - text: Error logging and diagnostics
             url: admin/view-portal-error-log.md
+

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 12/19/2017
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -183,3 +183,6 @@ As noted in the introduction to this tutorial series, we included two sample app
 ## Next steps
 The next step in this tutorial series is to [generate an app to handle project requests](sharepoint-scenario-generate-app.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
