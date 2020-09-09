@@ -58,6 +58,8 @@ landingContent:
             url: guide-staff-through-common-tasks-processes.md
           - text: Create and manage app views
             url: create-edit-views.md
+          - text: Embed a canvas app on a model-driven form
+            url: embed-canvas-app-in-form.md
 
   # Card
   - title: Work with controls
