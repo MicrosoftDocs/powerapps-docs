@@ -57,17 +57,10 @@ You can have access rights to a perform an action on a record through ownership,
 
 
     > [!div class="mx-imgBorder"]
-    > ![Acess checker showing your accesss leve](media/access_check_page.png "Acess checker showing your accesss level")
+    > ![Acess checker showing your accesss leve](media/check_access_page.png "Acess checker showing your accesss level")
     
-  
+Contact your administrator if you don't have the reqired access. Only an administrator can edit your security role and privileges. To find your administrator, see [Find your administrator or support person](https://docs.microsoft.com/powerapps/user/find-admin).
 
-## Tips
-
-- Only your administrator can edit your security role and privileges. To find your administrator, see [Find your administrator or support person](https://docs.microsoft.com/powerapps/user/find-admin).
-   
-- For information on security roles, see [Security roles and privileges](https://docs.microsoft.com/power-platform/admin/security-roles-privileges). 
-
-- For information on how to configure security roles, see [Configure user security to resources in an environment](https://docs.microsoft.com/power-platform/admin/database-security).
 
 
 
