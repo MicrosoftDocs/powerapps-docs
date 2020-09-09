@@ -64,7 +64,7 @@ landingContent:
         links:
           - text: Use the Web API
             url: webapi/overview.md
-          - text: Use the Organization Service SDK
+          - text: Use the web services SDK
             url: org-service/overview.md
           - text: Build Windows client applications using the XRM tools
             url: xrm-tooling/build-windows-client-applications-xrm-tools.md
@@ -100,7 +100,7 @@ landingContent:
             url: azure-integration.md
       - linkListType: learn
         links:
-          - text: Introduction to extending the Microsoft Power Platform
+          - text: Extending the Microsoft Power Platform
             url: https://docs.microsoft.com/learn/modules/introduction-power-platform-extensibility-model/
 
   # Card
@@ -124,10 +124,10 @@ landingContent:
         links:
           - text: Entity data model
             url: reference/about-entity-reference.md
-          - text: Web API
-            url: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
           - text: Organization Service
             url: https://docs.microsoft.com/dotnet/api/?view=dynamics-general-ce-9
+          - text: Web API
+            url: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
 
   # Card
   - title: More
