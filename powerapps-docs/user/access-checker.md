@@ -22,7 +22,7 @@ search.app:
 
 To perform an action on a record, a user needs to have the required privilege assigned through a security role or the user is a member of a team that has a security role with assigned privileges.
 
-To perform actions on a record the systerm checks your privileges and if the privilege check passes then the system preforms an access check. The access check verifies that you have the required rights to perform actions on a record such as, read, write, create, delete, append, append to, share, and assign.
+To perform actions on a record the system checks your privileges and if the privilege check passes then the system preforms an access check. The access check verifies that you have the required rights to perform actions on a record such as, read, write, create, delete, append, append to, share, and assign.
 
 You can have access rights to a perform an action on a record through ownership, role access, shared access, or hierarchy access.
 
@@ -44,7 +44,7 @@ For more information on how privilege and access work, see [TBD]().
     > ![Select a record to edit it](media/edit_record.png "Select a record to edit it")
   
 2. On the open record, select **Check Access** on the command bar.
-3. The **Check Access** dialog box will appear and display your acccess information.
+3. The **Check Access** dialog box will appear and display your access information.
 
 
     > [!div class="mx-imgBorder"]
