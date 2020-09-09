@@ -108,12 +108,20 @@ Your administrator has to opt in to early access updates for your environment an
    > [!div class="mx-imgBorder"]
    >![Add shortcut to Sri](media/add-shortcut.png "Add shortcut to Sri")
    
-3. Add custom phrase to open the app using voice commands and select **Add to Sri**.
+3. Add custom phrase to open the app using voice commands and select **Add to Siri**.
 
    > [!div class="mx-imgBorder"]
    >![Add a phrase to open and run the app](media/add-shortcut-1.png "Add a phrase to open and run the app")
    
-4.    
+4. The app is added to the **Shortcuts** app on your mobile device. Open the **Shortcuts** app and select the ellipsis (...).
+
+   > [!div class="mx-imgBorder"]
+   >![Select the ellipsis](media/add-short-2.png "Select the ellipsis")
+
+5. Select **Add to Home Screen** and then select **Done**.
+
+   > [!div class="mx-imgBorder"]
+   >![Select add to home screeen button](media/add-to-homescreen.png "Selectadd to home screen button")
 
 ## See non-production apps
 
