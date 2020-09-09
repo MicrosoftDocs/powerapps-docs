@@ -20,7 +20,7 @@ metadata:
 landingContent:
 
   # Card 
-  - title: Get started
+  - title: Start
     linkLists:
        - linkListType: get-started
          links:
@@ -28,105 +28,119 @@ landingContent:
             url: overview.md
           - text: Get started with Common Data Service
             url: get-started-CDS-developers.md
-          - text: Supported customizations
-            url: supported-customizations.md
+       - linkListType: quickstart
+         links:
+          - text: Web API sample (C#)
+            url: webapi/quick-start-console-app-csharp.md
        - linkListType: learn
          links:
           - text: Introduction to Common Data Service
             url: https://docs.microsoft.com/learn/modules/intro-cds-developers-power-platform/
 
   # Card
-  - title: Connect to the web services
-    linkLists:
-       - linkListType: how-to-guide
+  - title: Connect
+    linkLists: 
+       - linkListType: overview
          links:
-          - text: Understand available templates for portals
-            url: portal-templates.md
-       - linkListType: quickstart
+          - text: Authentication and the web services
+            url: authentication.md
+          - text: Build web applications using Server-to-Server (S2S) authentication
+            url: build-web-applications-server-server-s2s-authentication.md
+          - text: Work with data using code
+            url: work-with-data-cds.md
+       - linkListType: tutorial
          links:  
-          - text: Create a starter portal
-            url: create-portal.md
-          - text: Create a portal in an environment with customer engagement apps
-            url: create-dynamics-portal.md
+          - text: Register an app with Azure Active Directory
+            url: walkthrough-register-app-azure-active-directory.md
           
   # Card
-  - title: Learn the entity data model
+  - title: Data
     linkLists:
        - linkListType: concept
          links:
-          - text: Portals Studio
-            url: portal-designer-anatomy.md
-          - text: Add components on a web page
-            url: compose-page.md
-       - linkListType: learn
+          - text: Use FetchXML to construct a query
+            url: use-fetchxml-construct-query.md
+          - text: Use SQL to query data
+            url: cds-sql-query.md
+       - linkListType: quickstart
          links:
-          - text: Customize web pages using Studio
-            url: https://docs.microsoft.com/learn/modules/explore-portals-studio/
+          - text: Web API Data operations Samples (C#)
+            url: webapi/web-api-samples-csharp.md
+          - text: Organization service sample (C#)
+            url: org-service/quick-start-org-service-console-app
 
   # Card
-  - title: Use the web services
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Portals admin center
-            url: admin/admin-overview.md
-          - text: Portal Management app
-            url: configure/configure-portal.md
-      - linkListType: learn
-        links:
-          - text: Power Apps portals administration
-            url: https://docs.microsoft.com/learn/modules/portals-administration/
-
-  # Card
-  - title: Extend the platform
+  - title: Access
     linkLists:
       - linkListType: concept
         links:
-          - text: Entity forms
-            url: configure/entity-forms.md
-          - text: Entity lists
-            url: configure/entity-lists.md
-          - text: Web forms
-            url: configure/web-form-properties.md
-
-  # Card
-  - title: Customize entity forms, views, and more
-    linkLists:
+          - text: Security concepts in Common Data Service
+            url: https://docs.microsoft.com/power-platform/admin/wp-security-cds
+      - linkListType: overview
+        links:
+          - text: Build Windows client applications using the XRM tools
+            url: xrm-tooling/build-windows-client-applications-xrm-tools.md
       - linkListType: how-to-guide
         links:
-          - text: Create web roles
-            url: configure/create-web-roles.md
-          - text: Assign entity permissions
-            url: configure/assign-entity-permissions.md
-          - text: Control web page access
-            url: configure/webpage-access-control.md
+          - text: Use the Web API
+            url: webapi/overview.md
+          - text: Use the Organization Service SDK
+            url: org-service/overview.md
 
   # Card
-  - title: Package and distribute custom extensions
+  - title: Extend
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Event Framework
+            url: event-framework.md
+      - linkListType: overview
+        links:
+          - text: Apply business logic using code
+            url: apply-business-logic-with-code.md
+          - text: Azure Integration
+            url: azure-integration.md
+      - linkListType: learn
+        links:
+          - text: Introduction to extending the Microsoft Power Platform
+            url: https://docs.microsoft.com/learn/modules/introduction-power-platform-extensibility-model/
+
+  # Card
+  - title: Customize
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Supported customizations
+            url: supported-customizations.md
+
+  # Card
+  - title: Deploy
     linkLists:
       - linkListType: deploy
         links:
-          - text: Authentication
-            url: configure/use-simplified-authentication-configuration.md
-          - text: Search
-            url: configure/search.md
-          - text: Document storage
-            url: configure-notes.md
+          - text: Solution concepts
+            url: https://docs.microsoft.com/power-platform/alm/solution-concepts-alm
+          - text: ALM for developers
+            url: https://docs.microsoft.com/power-platform/alm/alm-for-developers
+      - linkListType: learn
+        links:
+          - text: Use developer tools to extend the Power Platform
+            url: https://docs.microsoft.com/learn/modules/use-developer-tools-extend/
 
   # Card
-  - title: Programming reference 
+  - title: Browse
     linkLists:
       - linkListType: reference
         links:
-          - text: Entity model reference
+          - text: Entity data model
             url: reference/about-entity-reference.md
-          - text: Web APi reference
+          - text: Web API
             url: /dynamics365/customer-engagement/web-api/about
-          - text: Organization Service SDK reference
+          - text: Organization Service
             url: https://docs.microsoft.com/dotnet/api
 
   # Card
-  - title: Additional resources
+  - title: More
     linkLists:
       - linkListType: overview
         links:
@@ -135,4 +149,4 @@ landingContent:
           - text: Canvas apps Developer Guide
             url: ../../maker/canvas-apps/dev-enterprise-intro.md
           - text: Power Apps component framework
-            url: ../component-framework/overview.md.md    
+            url: ../component-framework/overview.md    
