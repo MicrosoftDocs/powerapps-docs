@@ -1,3 +1,15 @@
+---
+title: Use Area Inspection apps from teams store | Microsoft Docs
+description: Learn how to use the Area Inspection apps from Teams store.
+author: tapanm-msft
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 08/17/2020
+ms.author: tapanm
+ms.reviewer: 
+---
+
 # Area Inspection
 
 In this tutorial, learn about the **Area Walk** (User) and **Area Walk** (Manager) apps, and how to use them effectively.
@@ -6,7 +18,7 @@ In this tutorial, learn about the **Area Walk** (User) and **Area Walk** (Manage
 
 **Area Inspection** consists of two different apps, one app for the users, and another app for the manager.
 
-1. [Area Walk (Manager) app](#area-walk-manager-app)
+- [Area Walk (Manager) app](#area-walk-manager-app)
 
     This app is used by a manager to perform the following actions:
 
@@ -15,7 +27,7 @@ In this tutorial, learn about the **Area Walk** (User) and **Area Walk** (Manage
     - Ensure that all identified issues have been addressed by the staff.
     - Identify repeat issues from prior area walks and analyze root cause and prevent them from happening in future.
 
-1. [Area Walk (User) app](#area-walk-user-app)
+- [Area Walk (User) app](#area-walk-user-app)
 
     This app is used by employees to perform the following actions:
 
@@ -23,6 +35,16 @@ In this tutorial, learn about the **Area Walk** (User) and **Area Walk** (Manage
     completing their job. The app provides inspection checklists so that
     multiple areas can be inspected. For example, a store employee can use this app to inspect a section of a retail store to verify that the store is ready to open for the day.
     - When an issue is found during the inspection, the employee can log the issue and assign it to the right person so that it can be resolved quickly.
+
+## Prerequisites
+
+Before using this app:
+
+- Find the app in Teams store.
+- Install the app.
+- Set up the app for the first use.
+
+For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
 ## Area Walk Manager app
 
@@ -42,7 +64,7 @@ To configure the app:
 
 1. Select the team.
 
-1. Go to the **Area Walks (Manager)** tab.
+1. Select the **Area Walks (Manager)** tab.
 
 1. Select the *Channel* where the messages will be posted.
 
@@ -65,7 +87,7 @@ To edit the app configuration:
 
 1. Go to the **Area Walk (Manager)** tab in Teams.
 
-1. Select ![Teams settings](media/area-inspection/teams-settings.png "Teams settings") on the top-right corner.
+1. Select ![Teams settings](media/area-inspection/teams-settings.png "Teams settings") from the top-right corner.
 
 1. Select **General** from the settings menu.
 
@@ -81,11 +103,11 @@ To start with the Area Walk app, you'll need to add area types first. The area t
 
 To add the area types:
 
-1. Go to the **Area Walk (Manager)** tab in Teams.
+1. Select the **Area Walk (Manager)** tab in Teams.
 
 1. Select **Areas** tab inside the app.
 
-1. Select ![Teams settings for areas](media/area-inspection/teams-settings.png "Teams settings for areas") on the top-right corner.
+1. Select ![Teams settings for areas](media/area-inspection/teams-settings.png "Teams settings for areas") from the top-right corner.
 
 1. Select **Area type** from the left-pane inside the app.
 
