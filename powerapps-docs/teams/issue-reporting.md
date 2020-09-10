@@ -18,7 +18,7 @@ In this tutorial, learn about the **Manage Issues** and **Issue Reporting** apps
 
 **Issue Reporting** consists of two different apps, one app for reporting the issues, and another app for managing issues.
 
-- Manage Issues
+- [Manage Issues](#manage-issues-app)
 
     Manage Issues app is used by team managers to:
 
@@ -26,7 +26,7 @@ In this tutorial, learn about the **Manage Issues** and **Issue Reporting** apps
     - Create, review, edit, or delete issue template forms to collect information when a user reports an issue.
     - Review team issues, report on issue history, and efficiently manage issue resolution.
 
-- Issue Reporting
+- [Issue Reporting](#issue-reporting-app)
 
     Issue Reporting app is used by employees to:
 
@@ -48,17 +48,17 @@ For details about the above steps, go to [Use sample apps from the Teams store](
 
 This app provides the following capabilities:
 
-- Configure the app
-- Edit the app configuration
-- Add a new issue category
-- Update a category icon
-- Update a category title
-- Delete a category
-- Add a new issue template
-- Edit an issue template
-- Delete an issue template
-- Review an issue report
-- View issue tasks in Planner
+- [Configure the app](#configure-the-app)
+- [Edit the app configuration](#edit-the-app-configuration)
+- [Add a new issue category](#add-a-new-issue-category)
+- [Update a category icon](#update-a-category-icon)
+- [Update a category title](#update-a-category-title)
+- [Delete a category](#delete-a-category)
+- [Add a new issue template](#add-a-new-issue-template)
+- [Edit a issue template](#edit-a-issue-template)
+- [Delete a issue template](#delete-a-issue-template)
+- [Review a issue report](#review-a-issue-report)
+- [View issue tasks in Planner](#view-issue-tasks-in-planner)
 
 ### Configure the app
 
@@ -211,9 +211,9 @@ To add a new issue template:
 
 1. Select **Save**.
 
-### Edit an issue template
+### Edit a issue template
 
-To edit an issue template:
+To edit a issue template:
 
 1. Select **Manage Issues** tab in Teams.
 
@@ -231,114 +231,101 @@ To edit an issue template:
 
     ![Save issue template changes](media/issue-reporting/save-issue-template-changes.png "Save issue template changes")
 
-### Delete an issue template
+### Delete a issue template
 
-Steps to delete issue template
+To delete a issue template:
 
->   1. Go to **Manage Issues** tab in Teams 
+1. Select **Manage Issues** tab in Teams.
 
->   2. Click on “Issue templates” tab in the manage issues screen
+1. Select **Issue templates** tab in the *Manage Issues* screen.
 
->   3. Select required category
+1. Select the required category.
 
->   4. Go to the Issue templates section
+1. Select **Edit** for the required issue template.
 
->   5. Click on "Edit" button present on the right side
+1. Select **Delete**.
 
->   7. Click on "Delete" button
+1. Select the checkbox next to **I understand**.
 
->   8. Select checkbox “I understand” to re-confirm
+1. Select **Delete**.
 
->   9. Click on “Delete” button
+    ![Delete a issue template](media/issue-reporting/delete-issue-template.png "Delete a issue template")
 
-![](media/issue-reporting/457cea9499570080e6c080b8b31247d7.png)
+### Review a issue report
 
-![](media/issue-reporting/4a160435184df3832e818ae9bf2da1ff.png)
+To review a issue report:
 
-### Review an issue report
+1. Select **Manage Issues** tab in Teams.
 
-Steps to review issue report :
+1. Select **Insights** tab.
 
->   1. Go to **Manage Issues** tab in Teams
-
->   2. Click on “Insights” tab
-
-![](media/issue-reporting/8829720837f147c47f1ec8512973b57c.png)
+    ![Review a issue report](media/issue-reporting/review-issue-report.png "Review a issue report")
 
 ### View issue tasks in Planner
 
-Steps to see issue tasks in planner :
+To view issue tasks in Planner
 
->   1. Go to **Manage Issues** tab in Teams
+1. Select **Manage Issues** tab in Teams.
 
->   2. Click on “Insights” tab
+1. Select **Insights** tab.
 
->   3. Click on “View Issues” button
+1. Select **View Issues**.
 
->   4. User gets navigated to the planner app to see the tasks list
-
-![](media/issue-reporting/5c2bb3f29f37ea7e9341757d44eb8255.png)
-
-![](media/issue-reporting/27685f315801f09b8712b3abdc58127e.png)
-
-Likewise, you can select an issue category to see the related tasks list in Planner:
-
-![](media/issue-reporting/1d0b6596e84c59f36405457046244659.png)
+    ![View issues](media/issue-reporting/view-issues.png "View issues")
 
 ## Issue Reporting app
 
 Issue reporting app provides the following capabilities:
 
-- Create a new issue
-- View an issue task in Planner
-- Review and edit existing issues in Planner
+- [Submit a new issue](#submit-a-new-issue)
+- [View a issue task in Planner](#view-a-issue-task-in-planner)
+- [Review and edit existing issues in Planner](#review-and-edit-existing-issues-in-planner)
 
-### Create a new issue
+### Submit a new issue
 
->   Steps to report an issue :
+To Submit a new issue:
 
->   1. Go to **Issue Reporting** tab in Teams
+1. Select **Issue Reporting** tab in Teams.
 
->   2. Click on “Report an issue" button
+1. Select **Report an issue**.
 
->   3. Select relevant issue type
+1. Select issue type.
 
->   4. Issue details auto-fills based on the selected issue type
+1. Enter issue details.
 
->   5. Fill out the other details
+    > [!NOTE]
+    > Some of the issue details are automatically filled.
 
->   6. Click on "Submit issue" button
+1. Select **Submit issue**.
 
-![](media/issue-reporting/8c91801023f8eded440516dcdfde5de6.png)
+    ![Submit a new issue](media/issue-reporting/submit-new-issue.png "Submit a new issue")
 
-![](media/issue-reporting/834229cb7be8897a9518399b8195729e.png)
+### View a issue task in Planner
 
-### View an issue task in Planner
+To view a issue task in Planner:
 
->   Steps to view task in planner :
+1. Select **Issue Reporting** tab in Teams.
 
->   1. Go to **Issue Reporting** tab in Teams
+1. Select **View issues**.
 
->   2. Click on “View issues"
+    ![View issues](media/issue-reporting/view-issue.png "View issues")
 
->   3. Click on “View in Tasks”
+1. Select **View in Tasks**.
 
-![](media/issue-reporting/b2c09e344a0779aad27c484616420780.png)
+    ![View issue in Tasks](media/issue-reporting/view-issue-tasks.png "View issue in Tasks")
 
-![](media/issue-reporting/e82a1a7480bd00995d05df30051d7a9c.png)
+This action opens Planner with the selected issue task.
 
-![](media/issue-reporting/f4fd841629bfee2b8c75e4361a780acb.png)
+![Planner with issue task](media/issue-reporting/planner-issue-task-open.png "Planner with issue task")
 
 ### Review and edit existing issues in Planner
 
->   Steps to modify issues in planner:
+To review and edit existing issues in Planner:
 
->   1. Go to the Tasks (Planner)
+1. Go to Tasks (Planner).
 
->   2. Select the desired issue tasks
+1. Select the issue task.
 
->   3. Make the desired changes in the issue tasks
+1. Edit the task.
 
-![](media/issue-reporting/4c1c00bf429ff1f0cc994790af64ed49.png)
-
-![](media/issue-reporting/1d693f30b4ce3028f27a549edb90e191.png)
+    ![Review and edit task in planner](media/issue-reporting/4c1c00bf429ff1f0cc994790af64ed49.png "Review and edit task in planner")
