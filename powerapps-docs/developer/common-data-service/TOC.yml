@@ -1,6 +1,6 @@
-- name: Common Data Service
-  href: ../../maker/common-data-service/data-platform-intro.md
-- name: Developer overview
+- name: Common Data Service developer guide
+  href: index.yml
+- name: Overview
   href: overview.md
 - name: Get started
   href: get-started-cds-developers.md

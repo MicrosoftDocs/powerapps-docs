@@ -98,7 +98,7 @@ landingContent:
             url: ../common-data-service/solutions-overview.md
 
   # Card
-  - title: Transition to unified interface
+  - title: Transition to Unified Interface
     linkLists:
       - linkListType: concept
         links:
@@ -106,7 +106,7 @@ landingContent:
             url: transition-web-app.md
           - text: Approaching a Unified Interface transition
             url: approaching-unified-interface.md
-          - text: Transition FAQ
+          - text: Transition FAQs
             url: faqs-transition-unified-interface.md
 
   # Card
