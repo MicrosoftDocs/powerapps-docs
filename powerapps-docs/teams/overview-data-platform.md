@@ -18,12 +18,12 @@ Project Oakdale delivers a built-in, low-code data platform for Teams. It provid
 :::image type="content" source="media/tables-in-teams.png" alt-text="Teams integration app example":::
 
 Some of the benefits of Project Oakdale include:
-- Contains a subset of the capabilities available in the data platform behind Dynamics 365 and Power Platform.​
-- Provides storage, rich data types with enterprise capabilities, and one-click solution deployment. ​
-- Is included for every Teams customer, which can be governed by your organization.​
-- With 2 GB storage per team, can support up to 1 million rows​.
-- Data can be shared across multiple apps, flows, and chatbots​.
-- Can be promoted to full Common Data Service.​
+- Contains a subset of the capabilities available in Comon Data Service
+- Provides storage, rich data types with enterprise capabilities, and one-click solution deployment.
+- Is included for every Teams customer, which can be governed by your organization.
+- With 2 GB storage per team, can support up to 1 million rows.
+- Data can be shared across multiple apps, flows, and chatbots.
+- Can be promoted to full Common Data Service if required.
 
 ## Tables in Project Oakdale
 
