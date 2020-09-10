@@ -34,10 +34,12 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/introduction-common-data-service/
 
   # Card
-  - title: Work with data
+  - title: Define data
     linkLists:
        - linkListType: concept
          links:
+          - text: Entities and metadata
+            url: create-edit-metadata.md
           - text: Types of entities
             url: types-of-entities.md
           - text: Entity relationships
