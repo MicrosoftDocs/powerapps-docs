@@ -132,7 +132,7 @@ Users on iOS 13 or later can use Siri Shortcuts to pin an app to the home screen
    >![Select Add](media/add-shortcut-3.png "Select add button")
    
 
-7. The app is be pinned to your home screen.   
+7. Go to your home sceen to find the pinned app.   
   
 
    > [!div class="mx-imgBorder"]
