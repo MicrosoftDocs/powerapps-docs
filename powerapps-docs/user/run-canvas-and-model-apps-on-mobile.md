@@ -102,7 +102,7 @@ The Power Apps mobile app is now integrated with Siri shortcuts, which gives you
 
 ### Pin to home screen (iOS 13 or later) 
 
-Users on iOS 13 or later can use Siri Shortcuts to pin an app to home screen. The new experience works for both model-driven and canvas apps. When you add a shortcut to the home screen, the app is added to the **Shortcuts** app and then from the **Shortcuts** app you can then add the app to the home screen.
+Users on iOS 13 or later can use Siri Shortcuts to pin an app to the home screen. The new experience works for both model-driven and canvas apps. When you add a shortcut to the home screen, the app is added to the iOS **Shortcuts** app and from there you can add the app to your home screen.
 
 
 1. To pin an app to the home screen, select the ellipsis (...) on the app tile.
