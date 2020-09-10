@@ -50,13 +50,13 @@ For details about the above steps, go to [Use sample apps from the Teams store](
 
 Manager app gives the manager the following capabilities.
 
-- [Configure the app](#app-configuration)
+- [Configure the app](#configure-the-app)
 - [Edit the app configuration](#edit-the-app-configuration)
 - [Add area types](#add-area-types)
 - [Add areas](#add-areas)
 - [Add inspection forms](#add-inspection-forms)
 
-### App configuration
+### Configure the app
 
 To configure the app:
 
