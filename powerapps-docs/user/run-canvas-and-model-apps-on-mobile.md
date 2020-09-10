@@ -98,9 +98,8 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 
 ## Pin to home screen for iOS 13 or later (early access feature)
 
-If you have enabled early access, then you will have a different pin to home screen experience for iOS 13 or later. This works for both model-driven and canvas apps. When you add a shortcut to the home screen, the app is first added to the **Shortcuts** app and then from the **Shortcuts** app you can add to to the home screen. 
+If you have enabled early access, then you will have a different pin to home screen experience for iOS 13 or later. This works for both model-driven and canvas apps. When you add a shortcut to the home screen, the app is first added to the **Shortcuts** app and then from the **Shortcuts** app you can add to to the home screen. For more information on how shortscuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios).
 
-Your administrator has to opt in to early access updates for your environment and then install the updates to get this feature. More information: [Opt in to early access updates](https://docs.microsoft.com/power-platform/admin/opt-in-early-access-updates)
 
 1. To pin an app to the home screen, select the ellipsis (...) on the app tile.
 2. Select **Add shortcut to Sri**.
