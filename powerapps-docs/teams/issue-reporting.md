@@ -278,7 +278,7 @@ To view issue tasks in Planner
 Issue reporting app provides the following capabilities:
 
 - [Submit a new issue](#submit-a-new-issue)
-- [View a issue task in Planner](#view-a-issue-task-in-planner)
+- [View an issue task in Planner](#view-an-issue-task-in-planner)
 - [Review and edit existing issues in Planner](#review-and-edit-existing-issues-in-planner)
 
 ### Submit a new issue
