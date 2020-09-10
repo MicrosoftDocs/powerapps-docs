@@ -60,7 +60,7 @@ To get started with installing the sample Power Apps app in Teams:
 
 1. Select **Save** to confirm and start the installation.
 
-    ![Select save](media/sample-app-4.png "Select save")
+    ![Save changes](media/sample-app-4.png "Save changes")
 
     > [!NOTE]
     > You can keep **Post to the channel about this tab** selected to
