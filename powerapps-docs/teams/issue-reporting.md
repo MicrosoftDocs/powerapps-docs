@@ -20,7 +20,7 @@ In this tutorial, learn about the **Manage Issues** and **Issue Reporting** apps
 
 **Issue Reporting** consists of two different apps, one app for reporting the issues, and another app for managing issues.
 
-- [Manage Issues](#manage-issues-app)
+- [Manage Issues app](#manage-issues-app)
 
     Manage Issues app is used by team managers to:
 
@@ -28,7 +28,7 @@ In this tutorial, learn about the **Manage Issues** and **Issue Reporting** apps
     - Create, review, edit, or delete issue template forms to collect information when a user reports an issue.
     - Review team issues, report on issue history, and efficiently manage issue resolution.
 
-- [Issue Reporting](#issue-reporting-app)
+- [Issue Reporting app](#issue-reporting-app)
 
     Issue Reporting app is used by employees to:
 
