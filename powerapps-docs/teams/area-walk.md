@@ -12,6 +12,8 @@ ms.reviewer: tapanm
 
 # Area Walk
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 In this tutorial, learn about the **Area Walk** (User) and **Area Walk** (Manager) apps, and how to use them effectively.
 
 ## Overview
