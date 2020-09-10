@@ -51,8 +51,8 @@ This app provides the following capabilities:
 - Configure the app
 - Edit the app configuration
 - Add a new issue category
-- Update category icon
-- Update category title
+- Update a category icon
+- Update a category title
 - Delete a category
 - Add a new issue template
 - Edit an issue template
@@ -70,157 +70,166 @@ Steps for App configuration:
 
 1. Select the **Manage Issues** tab in Teams.
 
-3.  User will be prompted to choose Channel and Tasks (Planner)
+1. Select the *Channel* where the messages will be posted.
 
-4.  Click on the "Continue" button
+1. Select the *Tasks* (Planner) instance to integrate the app with Planner.
 
-5.  Follow the steps provided on the page to get the SharePoint URL
+1. Select **Continue**.
 
-6.  Click on "Let's go" button
+    ![Select Channel and Tasks](media/issue-reporting/select-channel-tasks.png "Select Channel and Tasks")
 
-    ![](media/issue-reporting/6a6c079abd78568d4b16020386e41942.png)
+1. Follow the steps provided on the page (Steps 1 and 2) to get the SharePoint site URL. And then, paste the URL in *Step 3* input box.
 
-![](media/issue-reporting/83ef5a697e0190e053cb7fb1490790d2.png)
+1. Select **Let's go**.
 
- ### Edit the app configuration
+    ![Configure the app](media/issue-reporting/configure-app.png "Configure the app")
 
->   Steps to update app configuration:
+### Edit the app configuration
 
-1.  Go to **Manage Issues** tab in Teams
+To edit the app configuration:
 
-2.  Click on “Insights” tab in the manage issues page
+1. Select **Manage Issues** tab in Teams.
 
-3.  Click on the setting icon
+1. Select **Insights** tab on the *Manage Issues* screen.
 
-4.  Make the required changes
+1. Select **Settings**.
 
-5.  Click on "Save" button
+    ![Insights settings](media/issue-reporting/insights-settings.png "Insights settings")
 
-![](media/issue-reporting/6b12b457885f06a408c54a3bba088813.png)
+1. Make the required changes.
 
-![](media/issue-reporting/fd4e9baeb4426accdcae3c3a222683ef.png)
+1. Select **Save**.
+
+    ![Save changes](media/issue-reporting/save-changes.png "Save changes")
 
 ### Add a new issue category
 
->   Steps to add Issue category:
+To add a new issue category:
 
-1.  Go to **Manage Issues** tab in Teams
+1. Select **Manage Issues** tab in Teams.
 
-2.  Click on “Issue templates” tab in manage issues screen
+1. Select **Issue templates** tab in *Manage Issues* screen.
 
-3.  Click on the “Add category” button
+1. Select **Add category** from the left-pane inside the app.
 
-4.  Fill in the category title and click on “Update icon” to select the desired
-    category icon
+1. Enter *Title*.
 
-5.  Click on “Save” button
+1. Select **Update icon** and update the icon.
 
-![](media/issue-reporting/638982afb733325b8203d365e84bcff7.png)
+1. Select **Save**.
 
-![](media/issue-reporting/f0c00e34be35b42ffc45c3c050e0d6e9.png)
+    ![New issue category](media/issue-reporting/new-issue-category.png "New issue category")
 
-### Update category icon
+### Update a category icon
 
-Steps to update category icon:
+To update a category icon:
 
-1.  Go to **Manage Issues** tab in Teams
+1. Select **Manage Issues** tab in Teams.
 
-2.  Click on “Issue templates” tab in manage issues screen
+1. Select **Issue templates** tab in *Manage Issues* screen.
 
-3.  Click on “Edit” button
+1. Select **Edit**.
 
-4.  Click on “Update icon” and select the requird icon
+1. Select **Update icon** and update the icon as required.
 
-5.  Click on “Save” button
+1. Select **Save**.
 
-![](media/issue-reporting/ff6fdf4f03d358f59b213a2714af19c1.png)
+    ![Update category icon](media/issue-reporting/update-category-icon.png "Update category icon")
 
-### Update category title
+### Update a category title
 
->   Steps to update category title :  
->     
->   1. Go to the Tasks (Planner) tab in teams  
->   2. Go the required category  
->   3. Rename category  
->   4. Login into the team with a valid-user  
->   5. Go to the **Manage Issues** tab  
->   6. Go to the “Issue templates” tab  
->   7. Open the category which got updated in planner tasks  
->   8. Observe the info in the notification bar and click on “Update title” to
->   reflect the category updated title in the app
+To update a category title:
 
-![](media/issue-reporting/ae9c03678e901e6501482cc4083b1c8c.png)
+1. Select **Tasks** (Planner).
 
-![](media/issue-reporting/26511e39981799f2fc4a366376dcf30e.png)
+1. Select the required category.
+
+1. Rename the category.
+
+    ![Rename the category in Tasks](media/issue-reporting/rename-category-tasks.png "Rename the category in Tasks")
+
+1. Sign in to Teams.
+
+1. Select **Manage Issues** tab in teams.
+
+1. Select **Issue templates** tab.
+
+1. Open the category that you updated in Tasks (Planner) earlier.
+
+1. Select **Update title** to reflect the updated category title in the app.
+
+    ![Update title inside app](media/issue-reporting/update-title-app.png "Update title inside app")
+
+    > [!NOTE]
+    > The notification bar shows a notification about the title update in Tasks.
 
 ### Delete a category
 
->   Steps to delete category
+To delete a category:
 
-1.  Go to **Manage Issues** tab in Teams
+1. Select **Manage Issues** tab in Teams.
 
-2.  Click on “Issue templates” tab in the manage issues screen
+1. Select **Issue templates** tab in the *Manage Issues* screen.
 
-3.  Select the required category
+1. Select the required category.
 
-4.  Click on “Edit” button
+1. Select **Edit**.
 
-5.  Click on “Delete” button
+1. Select **Delete**.
 
-6.  Click on “I understand” checkbox in the confirmation popup
+1. Select the checkbox next to **I understand**.
 
-7.  Click on “Delete”
+1. Select **Delete**.
 
-![](media/issue-reporting/0f81347b2c302ab69c0d07108f74a5d5.png)
-
-![](media/issue-reporting/0af0998b26c9ee2bb24e75d0df43a34f.png)
-
-![](media/issue-reporting/5f572951ac1050eb7787be167fb55bae.png)
+    ![Delete a category](media/issue-reporting/delete-category.png "Delete a category")
 
 ### Add a new issue template
 
->   Steps to add new issue template
+To add a new issue template:
 
->   1. Go to **Manage Issues** tab in Teams
+1. Select **Manage Issues** tab in Teams.
 
->   2. Click on “Issue templates” tab in the manage issues screen
+1. Select **Issue templates** tab in the *Manage Issues* screen.
 
->   3. Select category to add new issue template
+1. Select a category to add the new issue template.
 
->   4. Click on "Add issue template"
+1. Select **Add issue template**.
 
->   5. Fill the required details such as Title, Due within, Auto assign issues
->   to, Additional help, Supporting information
+    ![Add issue template](media/issue-reporting/add-issue-template.png "Add issue template")
 
->   6. Add Issue questions (Click on "Add question" to add)
+1. Enter the following:
 
->   7. Click on "Save" button
+    - *Title*
+    - *Due within*
+    - *Auto assign issue to*
+    - *Issue questions*
+    - *Additional help*
+    - *Primary contact*
+    - *Supporting information*
 
-![](media/issue-reporting/004c4fca2340d18ec81ff17ad4336ceb.png)
+    ![Enter issue template details](media/issue-reporting/issue-template-details.png "Enter issue template details")
 
-![](media/issue-reporting/22399fa9feda665b5b0420f8617c0c9b.png)
+1. Select **Save**.
 
 ### Edit an issue template
 
-Steps to edit issue template
+To edit an issue template:
 
->   1. Go to **Manage Issues** tab in Teams 
+1. Select **Manage Issues** tab in Teams.
 
->   2. Click on “Issue templates” tab in the manage issues screen
+1. Select **Issue templates** tab in the *Manage Issues* screen.
 
->   3. Select required category
+1. Select the required category.
 
->   4. Go to the Issue templates section
+1. Select **Edit** for the required issue template.
 
->   5. Click on "Edit" button present on the right side
+    ![Edit issue template](media/issue-reporting/edit-issue-template.png "Edit issue template")
 
->   6. Make the required changes
+1. Edit the issue template as required.
 
->   7. Click on "Save" button
+1. Select **Save**.
 
-![](media/issue-reporting/923b563a8c42c369b2c29f461d83efbf.png)
-
-![](media/issue-reporting/024029c7d316bccdafcbcca8a59d93c3.png)
+    ![Save issue template changes](media/issue-reporting/save-issue-template-changes.png "Save issue template changes")
 
 ### Delete an issue template
 
