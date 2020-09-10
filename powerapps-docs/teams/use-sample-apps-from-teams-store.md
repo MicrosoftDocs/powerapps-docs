@@ -23,29 +23,42 @@ In this tutorial, you'll learn how to search for sample apps in Teams store, and
 > [!IMPORTANT]
 > Installing the sample app automatically enables the selected team’s Microsoft 365 Group for security. For more information about Microsoft 365 Group and security, go to [enable security for the selected team’s Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups).
 
+## Available sample apps
+
+Several sample apps are available from the Teams store that you can add to your Teams channels and use for different purposes.
+
+| Name | Description |
+| - | - |
+| [Asset Inspection](asset-inspection.md) | Manager and user apps for asset inspections. |
+| [Area Walk](area-walk.md) | Manager and user apps for area walks. |
+| [Employee Ideas](employee-ideas.md) | Manager and employee apps for campaigns and ideas. |
+| [Issue Reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
+
+The following tutorial shows how to install one of the available sample apps.
+
 ## Install the sample app
 
 To get started with installing the sample Power Apps app in Teams:
 
 1. Select **Apps** at the bottom of left pane inside Teams.
 
-2. Search for the app name, for example **Asset Inspection**.
+1. Search for the app name, for example **Asset Inspection**.
 
-3. Select the app.
+1. Select the app.
 
-4. Select **Add to a team**.
+1. Select **Add to a team**.
 
     ![Select Add to team](media/sample-app-1.png "Select Add to team")
 
-5. Search for the Teams channel that you want to add the apps to.
+1. Search for the Teams channel that you want to add the apps to.
 
     ![Search teams channel](media/sample-app-2.png "Search teams channel")
 
-6. Select **Set up a tab**.
+1. Select **Set up a tab**.
 
    ![Select set up tab](media/sample-app-3.png "Select set up tab")
 
-7. Select **Save** to confirm and start the installation.
+1. Select **Save** to confirm and start the installation.
 
     ![Select save](media/sample-app-4.png "Select save")
 
@@ -54,7 +67,7 @@ To get started with installing the sample Power Apps app in Teams:
     communicate the addition of the app. Unchecking will not announce the
     addition of the app on the selected channel as a post.
 
-8. Installation of the app begins. Installation may take a while and you can continue
+1. Installation of the app begins. Installation may take a while and you can continue
     with other activities.
 
     ![App installation](media/sample-app-5.png "App installation")
@@ -62,7 +75,7 @@ To get started with installing the sample Power Apps app in Teams:
     > [!NOTE]
     > If the selected Teams team doesn’t already have an environment created, a new environment is created at this stage. For more information about environment lifecycle, go to [Environment lifecycle](/power-platform/admin/about-teams-environment.md).
 
-9. After the app installs, you’ll see tab(s) added to the Teams channel you selected earlier. In this example, the tabs are **Inspection App** and **Manage Asset Classes.** Upon completion of installation, you can remove the **Installing App** tab.
+1. After the app installs, you’ll see tab(s) added to the Teams channel you selected earlier. In this example, the tabs are **Inspection App** and **Manage Asset Classes.** Upon completion of installation, you can remove the **Installing App** tab.
 
     ![Remove installation tab](media/sample-app-6.png "Remove installation tab")
 
@@ -77,7 +90,7 @@ tabs on your Teams channel.
 
 ![Select app from available list](media/sample-app-7.png "Select app from available list")
 
-For more details about using the **Asset Inspection** app, go to Asset Inspection. <!-- Add link to Asset Inspection page -->
+For more details about using the **Asset Inspection** app, go to [Asset Inspection](asset-inspection.md).
 
 ## Edit the sample app
 
@@ -89,6 +102,7 @@ If you get any errors during the installation process, you can help us troublesh
 
 ### See also
 
-- [Install Power Apps personal app](install-personal-app.md)
-- [Create your first app](create-first-app.md)
-- [Create additional apps](create-additional-apps.md)
+- [Asset Inspection](asset-inspection.md)
+- [Area Walk](area-walk.md)
+- [Employee Ideas](employee-ideas.md)
+- [Issue Reporting](issue-reporting.md)
