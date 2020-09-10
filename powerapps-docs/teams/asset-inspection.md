@@ -88,7 +88,7 @@ To add assets:
 
 1. Select **Add assets**.
 
-1. Fill in the asset details such as the asset name, asset number and asset type.
+1. Enter the asset details such as the asset name, asset number and asset type.
 
     ![Add assets](media/asset-inspection/add-assets.png "Add assets")
 

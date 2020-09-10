@@ -105,7 +105,7 @@ To add campaigns:
 
 1. Select **Create Campaign**.
 
-1. Fill in the campaign details such as campaign name, description, campaign
+1. Enter the campaign details such as campaign name, description, campaign
     start and end date, and a cover image.
 
 1. Add edea questions.
@@ -160,9 +160,9 @@ To submit a new idea:
 
     ![Submit an idea](media/employee-ideas/submit-an-idea.png "Submit an idea")
 
-1. Fill in the idea campaign details such as *Title* and *Description*.
+1. Enter the idea campaign details such as *Title* and *Description*.
 
-1. Fill in the answers to the remaining questions on the form.
+1. Enter the answers to the remaining questions on the form.
 
 1. (Optional) Upload supporting files.
 
@@ -229,9 +229,9 @@ To submit a new idea:
 
     ![Submit an idea - employee](media/employee-ideas/submit-an-idea-employee.png "Submit an idea - employee")
 
-1. Fill in the idea campaign details such as *Title* and *Description*.
+1. Enter the idea campaign details such as *Title* and *Description*.
 
-1. Fill in the answers to the remaining questions on the form.
+1. Enter the answers to the remaining questions on the form.
 
 1. (Optional) Upload supporting files.
 
@@ -249,11 +249,11 @@ To submit a new idea and post it in a channel:
 
 1. Select **Submit an idea**.
 
-1. Fill in the idea campaign details such as *Title* and *Description*.
+1. Enter the idea campaign details such as *Title* and *Description*.
 
 1. Set **Share in channel** to *On*.
 
-1. Fill in the answers to the remaining questions on the form.
+1. Enter the answers to the remaining questions on the form.
 
 1. (Optional) Upload supporting files.
 
