@@ -52,7 +52,7 @@ For details about the above steps, go to [Use sample apps from the Teams store](
 
 Manage Campaign app gives the manager following capabilities.
 
-- [Configure the app](#app-configuration)
+- [Configure the app](#configure-the-app)
 - [Edit the app configuration](#edit-the-app-configuration)
 - [Add an idea campaign](#add-an-idea-campaign)
 - [Edit an idea campaign](#edit-an-idea-campaign)
@@ -61,7 +61,7 @@ Manage Campaign app gives the manager following capabilities.
 - [Review and vote for an idea](#review-and-vote-for-an-idea)
 - [Share an idea](#share-an-idea)
 
-### App configuration
+### Configure the app
 
 Manage Campaign app needs to be configured only for the first time.
 
