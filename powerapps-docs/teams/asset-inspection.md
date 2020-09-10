@@ -1,6 +1,6 @@
 ---
-title: Use sample apps from teams store | Microsoft Docs
-description: Learn how to use sample apps from Teams store.
+title: Use Asset Inspection apps from teams store | Microsoft Docs
+description: Learn how to use the Asset Inspection apps from Teams store.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -179,7 +179,7 @@ Select **Ok**, **Issue**, or **N/A** against each checklist. Select **Photo** to
 Select the checklist step to go back to the previous screen, and
 modify the outcome. Or, select **Submit inspection** to submit the inspection form.
 
-![Review inspection](media/asset-inspection/e74478e5f1e996da5466f1e7e291c870.png "Review inspection")
+![Review inspection](media/asset-inspection/review-inspection.png "Review inspection")
 
 Once inspection is submitted, the app takes you to the next screen that shows the updated statistics with the current submission.
 
