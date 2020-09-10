@@ -202,6 +202,26 @@ case, and selects **Finish**. After the process is finished, the employee case b
   > [!div class="mx-imgBorder"]
   > ![resolve](media/health-safety-bpf-resolve.png "Resolve")
 
+## Contact tracing
+
+To facilitate contact tracing and tracking possible exposures, three elements have been added:
+
+1. Exposures (Days to investigate)
+2. Case Facilities
+3. Case Contacts
+
+### Exposures (Days to investigate)
+
+When accounting for the whereabouts of an employee, the system stores valuable information in the form of bookings and attestations. That is why those records can be linked to a case. When doing so, a background process is triggered. This process does two things:
+
+1. Create a Case facility record for that day.
+2. Create Case Contacts for all the other employees that were:
+  a. In the same Area as that person (10 points)
+  b. In the same entry window for that facility (if applicable) (5 points)
+  c. On the same Floor as that person (3 points)
+
+These Case Contacts must be regarded as suggestions and can then be cleared by the case manager.
+
 ### Case facilities
 
 As part of the investigation, a case manager might need to register which facilities are involved in this case. When you open an employee case, this can be done on the **Case Facilities** tab.
@@ -214,6 +234,8 @@ On the **Case Facilities** tab, select **New Case Facility** to relate a facilit
 | Date To | Enter the end date of the employee visiting that facility.  |
 | Comment | Enter additional information, when applicable. |
 
+When a Case Facility is added as part of the suggestion process, both the Date From and Date To fields will be set to the day of the attestation.
+
 ### Case contacts
 
 An employee under investigation might have had contact with one or more colleagues. This type of information can be logged on the **Case Contacts** tab.
@@ -222,8 +244,51 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 
 | **Field**   | **Description**  |
 |---------------|------------------|
+| Exposure score | whole number used to sort the suggestions based on estimated exposure |
 | Risk Assessment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
+| Open Case | This can refer to an open case for this employee. By default the lookup will filter on active cases for this employee. If the record was added as a system suggestion, this field will be filled only if only one active case exists. |
 | Comment | Enter additional information, when applicable. |
+
+#### Exposure Score
+
+Exposure score is calculated when the system generates Case Contacts as suggestions when a Case manager links an attestation. The system will only create one record per person. If a person then shared area/entry window/floor via multiple attestations, the exposure score on the existing record is increased. For each day, a Case Contacts gets points only for the highest category applicable. For example; if a case contact suggestion shared Area on one day (10 points) and shared entry window on another day (5 points), the total exposure score for that Case Contact would be 15.
+
+This functionality is purely as a means to sort the suggestions based on 'proximity' to the employee under investigation.
+
+### Case Contact importing
+
+**Case Contacts** may be added to an **Employee Case** using import functionality by a user with appropriate security privileges. The steps below describe the process for importing Case Contacts. 
+
+Prerequisites: 
+1. Download a template to use for data import ([link](https://docs.microsoft.com/power-platform/admin/download-template-data-import)). 
+2. Select **Case Contact** when prompted to select the record type for which template is needed.
+3. Add **Case Contact** data to the data file just downloaded. The **Case Contact** entity contains the following attributes that should be updated in the data file:<br>
+**Comment** - Any additional information as required.<br>
+**Employee** - This is the name of the employee to be added as a case contact and must match the Full Name attribute on their corresponding **Employee** record.<br>
+**Employee Case** - This is the case number of the case to associate the new case contacts and must match the Case Number attribute.<br>
+**Risk Assessment** - Use the provided picklist to specify as required.<br>
+Please note, your organization may have extended or modified the **Case Contact** entity. Consultant your system administrator to ensure all required data is entered appropriately. <br>
+4. Save this file with a meaningful name and in a location that you will reference in the next section.
+
+Steps to import **Case Contact** data:
+
+1. Navigate to the **Workplace Care Management app**.
+2. Select **Settings** --> **Advanced Settings**. Based on your browser settings, a new tab or window will be presented. 
+![Advanced Settings](media/advancedsettings.png "Advanced Settings")
+3. In the new tab or window, Select **Settings** --> **Data Management**. 
+![Data Management](media/datamangement.png "Data Management")
+4. Select **Imports**.
+5. Select the **Import Data** menu item, then select the **Import Data** from the dropdown.
+6. The **Upload Data File** dialog box will appear. Click the **Choose File** button or drag your file into the space labeled **Drag your file here**.
+![Upload Data File](media/uploaddatafile.png "Upload Data File")
+7. If you clicked the **Choose File** button, use the File Explorer dialog box to select the file you created in prerequisites step #4. Proceed to step #8. If you dragged the file into the space labeled **Drag your file here**, continue to step #8.
+8. Click the **Next Button**.
+9. Select the appropriate **Allow Duplicates** option based on your business requirements. 
+10. Select the appropriate **Owner** for the **Case Contact** records that will be created.
+11. Select the **Submit Button**. 
+12. Select the **Finish** button.
+13. The **Data Submitted for Import** dialog box will be displayed. 
+14. Your **Case Contacts** will be processed for import and you may return to the **Workplace Care Management app**.
 
 ### Complete Employee Case
 
