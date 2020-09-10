@@ -1,209 +1,184 @@
-Document Objective
-==================
+---
+title: Use sample apps from teams store | Microsoft Docs
+description: Learn how to use sample apps from Teams store.
+author: tapanm-msft
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 08/17/2020
+ms.author: namarwah
+ms.reviewer: tapanm
+---
 
->   This user guide is meant to serve as the user reference for using Asset
->   Inspection User and Asset Inspection Manager App. This document details the
->   guidance for users to use the app.
+# Asset Inspection
 
-Overview
-========
+In this tutorial, learn about using the Asset Inspection (User), and Asset Inspection (Manager) apps.
 
-There are two Apps each intended for different kind of users. To use these apps,
-users must find the app on the app store, install it for the team and set it up
-for first use (add list of vehicles, customize inspection forms, set up contact
-list etc.)
+## Overview
 
-1.  Asset Inspection (User) App
+**Asset Inspection** consists of two different apps, one app for the users, and another app for the manager.
 
-    This app is used by an employee for the following:
-
--   To complete inspections effectively and efficiently so that the user can
-    focus on their job and ensure that the asset or equipment is compliant with
-    company standards.. For example, a delivery driver can deliver packages with
-    confidence that the vehicle will not have any issues during their shift.
-
--   To document and notify managers about issues discovered during the
-    inspection so that problems can be addressed in a timely manner.
-
-1.  Asset Inspection (Manager) App
+- [Asset Inspection (Manager) app](#asset-inspection-manager-app)
 
     This app is used by the manager for the following:
 
--   To ensure that assets and equipment are healthy and downtime won’t impact
-    employee productivity.
+    - To ensure that assets and equipment are healthy and downtime won’t impact employee productivity.
+    - Receive notification when an inspection is complete, along with any issues identified so that the manager can quickly resolve the issue.
+    - Validate that assets and equipment meets safety standards.
+    - Configure the app user experience, including adding, updating, or removing assets, creating and modifying inspection forms, and configuring inspection response outcome options.
+    - View insights and metrics about completed inspection history. For example, a manager managing a fleet of vehicles may want to see recurring issues so to address the root cause, and improve the efficiency of the organization.
 
--   Receive notification when an inspection is complete, along with any issues
-    identified so that the manager can quickly resolve the issue.
+- [Asset Inspection (User) app](#asset-inspection-user-app)
 
--   Validate that assets and equipment meets safety standards.
+    This app is used by an employee for the following:
 
--   Configure the app user experience, including adding, updating, or removing
-    assets, creating and modifying inspection forms, and configuring inspection
-    response outcome options.
+    - To complete inspections effectively and efficiently so that the user can focus on their job and ensure that the asset or equipment is compliant with company standards. For example, a delivery driver can deliver packages with confidence that the vehicle will not have any issues during their shift.
+    - To document and notify managers about issues discovered during the inspection so that problems can be addressed in a timely manner.
 
--   View insights and metrics about completed inspection history.
+## Prerequisites
 
->   For example, when manager is managing a fleet of vehicles, he wants to be
->   able to see recurring issues so we can address the root cause and improve
->   the efficiency of the organization.
+Before using this app:
 
-Asset Inspection Manager App 
-=============================
+- Find the app in Teams store.
+- Install the app.
+- Set up the app for the first use.
 
->   Manager app gives the manager following capabilities
+For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
-Adding Asset Types 
--------------------
+## Asset Inspection (Manager) app
 
->   To start with the Inspection App, you’ll need to add Asset Types. The Asset
->   Types define the classes of different assets that can be added to the app
->   for inspection.
+Manager app gives the manager following capabilities.
 
->   Steps to add asset types:
+- [Add asset types](#add-asset-types)
+- [Add assets](#add-assets)
+- [Add inspection forms](#add-inspection-forms)
+- [Associate forms to asset types](#associate-forms-to-asset-types)
 
-1.  Go to Asset Manager tab in Teams.
+### Add asset types
 
-2.  Select Assets tab inside the app.
+To start with the manager app, you’ll need to add asset types. The asset types define the classes of different assets that can be added to the app for inspection.
 
-3.  Click on the Gear icon on the right top corner of the page
+To add asset types:
 
-4.  Add asset types, such as Bike, Car or a Truck.
+1. Sign in to Teams.
 
-![](media/f65be6ce582215c334018e8d716d6cb3.png)
+1. Select the team.
 
-Adding Assets
--------------
+1. Select the **Asset Manager** tab.
 
->   Assets are the individual items or vehicles that you want to inspect.
+1. Select **Assets** tab inside the app.
 
->   Steps to add assets:
+1. Select ![Teams settings](media/asset-inspection/teams-settings.png "Teams settings") from the top-right corner.
 
->   1. Go to Manage Asset Classes tab in Teams.
+1. Add the required asset types. For example, Bike, Car or Truck.
 
->   2. Select Assets tab inside the app and click on Add Asseets
+    ![Add asset types](media/asset-inspection/add-asset-types.png "Add asset types")
 
->   3. In the form that opens, fill in the asset details such as the asset name,
->   asset number and Asset Type.
+1. Select **Save**.
 
-![](media/6cbdada5ada1c64c4029cd6187f9209b.png)
+### Add assets
 
-Adding Inspection Forms: 
--------------------------
+Assets are the individual items or vehicles that you want to inspect.
+
+To add assets:
+
+1. Select **Manage Asset Classes** tab in Teams.
+
+1. Select **Assets** tab inside the app.
+
+1. Select **Add assets**.
+
+1. Fill in the asset details such as the asset name, asset number and asset type.
+
+    ![Add assets](media/asset-inspection/add-assets.png "Add assets")
+
+### Add inspection forms
 
 Inspections forms are tied to asset types. You can define more than one
 inspection form for each asset type. For example, you can define a “Daily Car
-Inspection” and a “Daily Car Inspection” form for the asset type “Car”.
+Inspection” and a “Weekly Car Inspection” form for the asset type “Car”.
 
->   Steps to add Inspection Forms:
+To add inspection forms:
 
->   1. Go to Manage Asset Classes tab in Teams.
+1. Select **Manage Asset Classes** tab in Teams.
 
->   2. Select Inspection Forms tab inside the app.
+1. Select **Inspection forms** tab inside the app.
 
->   3. Select Add a form on left-side of the screen.
+1. Select **Add a form** from the left-pane inside the app.
 
->   You can enter one or more checks for this inspection form. Each check can
->   have a Title, Detailed Instructions, and an Image. Each checklist item can
->   also have up to three action buttons associated, reflecting “Ok”, “Issue”
->   and “Not Applicable” outcomes. The labels of the buttons can be customized.
+    You can enter one or more checklists for this inspection form. Each checklist step can have a *Title*, *Detailed Instructions*, and an *Image*. Each checklist item can also have up to three action buttons associated, reflecting "Ok", "Issue" and "Not Applicable" outcomes. The labels of the buttons can be customized.The labels of the buttons can be customized.
 
-![](media/191a5b78fcaf345e40953db505a61afe.png)
+    ![Add inspection foms](media/asset-inspection/add-inspection-forms.png "Add inspection foms")
 
-###  Associate forms to asset types: 
+### Associate forms to asset types
 
->   Steps to associate forms to the asset types:
+To associate forms to the asset types:
 
->   1. Go to Asset Manager tab in Teams.
+1. Select **Manage Asset Classes** tab in Teams.
 
->   2. Select Assets tab inside the app.
+1. Select **Assets** tab inside the app.
 
->   3. Associate the inspection form to the asset type.
+1. Associate the inspection form to the asset type.
 
-Asset Inspection User App
-=========================
+## Asset Inspection (User) app
 
-User App – Enables users to Complete a full inspection of the vehicle as and
-when required in their job.
+User app enables employees to complete a full inspection of the vehicle.
 
->   (note: To run the installed app, select ‘Area Inspection’ app from the
->   available tabs inside the Teams channel.)
+> [!NOTE]
+> To run the installed app, select **Asset inspection** app from the available
+tabs inside the Teams channel.
 
->   The detailed steps on how to create an inspection is given below:
+The user app for inspection provides the following capabilities.
 
-User lands to Home screen on opening the app
---------------------------------------------
+- [Home screen](#home-screen)
+- [Choose an asset to inspect](#choose-an-asset-to-inspect)
+- [Inspection overview](#inspection-overview)
+- [Inspection form](#inspection-form)
+- [Review inspection](#review-inspection)
 
-![](media/f39dbf4054bd5cd024da0067b6fc85d1.png)
+### Home screen
 
-1.  App will Great you based on your Time "Good \<Morning/Afternoon/Evening\>,
-    \<Your Name\>.
+The app greats you based on your time of the day and lists the statistics of all inspections for the last 7 days.
 
-2.  The statistics of all inspections for last 7 days
+![Home screen](media/asset-inspection/home-screen.png "Home screen")
 
-Choose the Asset that needs to be inspected
--------------------------------------------
+### Choose an asset to inspect
 
->   On click of Inspect an Area, it navigates to the next screen which allows
->   user to select the asset that needs to be inspected.
+Selecting to inspect takes you to select the asset that needs to be inspected.
 
-![](media/990a608aab4f6b8500122fc4a329eb39.png)
+![Inspect asset](media/asset-inspection/inspect-asset.png "Inspect asset")
 
-1.  Search box:
+1. **Search box** - searches for assets based on the asset type selected.
 
-2.  Asset types: Lists all the asset types with and additional option “All”
-    selected by default
+1. **Asset types** - lists all the asset types with and additional option. Default: *All*.
 
-3.  Assets: Lists all the assets based on selected Asset, if “All” is selected,
-    all the assets are listed by default.
+1. **Assets**- lists all the assets based on selected asset. If *All* selected, all the assets are listed by default.
 
-User chooses the inspection form
---------------------------------
+### Select an inspection form
 
-If there are more than one inspection form associated to the asset type, the app
-allows user to choose one of the inspection form, else the app directly
-navigates to Inspection overview page
+If there are more than one inspection forms associated to the area type, the app allows you to choose one of the inspection forms. Otherwise, the app takes you to *Inspection overview* screen.
 
-![](media/d98bec10ef8c97fe9e567e1ec949cbc7.png)
+![Select an inspection form](media/asset-inspection/select-inspection-form.png)
 
-Inspection over view page 
---------------------------
+### Inspection overview
 
-This page shows the image of the asset with corresponding asset number
+This screen shows the image of the asset with the checklist, and checklist steps configured in the manager app. To start an inspection, select **Begin inspection**, or any of the checklist item.
 
-![](media/e5b1dc5e70012f89dbde2ff4903747af.png)
+![Inspection overview](media/asset-inspection/inspection-overview.png "Inspection overview")
 
-1.  List of checklist steps for the form selected as per configuration in the
-    manager app.
+### Inspection form
 
->   User must click on ‘Begin Inspection’ button or any of the checklist item to
->   start the inspection.
+Inspect the asset and fill in the details on the inspection form. The checklist instructions configured in the manager app are displayed.
 
-Inspection Form Page
---------------------
+![Inspection form](media/asset-inspection/inspection-form.png "Inspection form")
 
-The user must fill in details and click on Review inspection
+Select **Ok**, **Issue**, or **N/A** against each checklist. Select **Photo** to add an image, and **Note** to add a note.
 
-![](media/3d3685677015a7722c5cf6523b6fcadc.png)
+### Review inspection
 
-![](media/139cd3d02876feec95d3b1b69615210f.png)
+Select the checklist step to go back to the previous screen, and
+modify the outcome. Or, select **Submit inspection** to submit the inspection form.
 
-1.  Checklist instruction: The instructions as configured in the manager app is
-    displayed here
+![Review inspection](media/asset-inspection/e74478e5f1e996da5466f1e7e291c870.png "Review inspection")
 
-2.  Checklist outcome: User must select either OK(gets highlighted in Green),
-    Issue(gets highlighted in Red) or N/A(gets highlighted in Grey) from the
-    inspection list against each checklist.
-
-3.  Add details: User can add details by either capturing picture or adding
-    Notes.
-
-Review inspection 
-------------------
-
-User can click on the checklist step to go back to the previous screen and
-modify the outcome or click on “Submit Inspection” to submit inspection.
-
-![](media/e74478e5f1e996da5466f1e7e291c870.png)
-
-Once inspection is submitted, it navigates to home screen where statistics
-section is updated with currently submitted inspection
+Once inspection is submitted, the app takes you to the next screen that shows the updated statistics with the current submission.
