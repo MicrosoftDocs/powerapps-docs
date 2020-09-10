@@ -308,7 +308,7 @@ To view an issue task in Planner:
 
 1. Select **View issues**.
 
-    ![View issues](media/issue-reporting/view-issue.png "View issues")
+    ![View issues for Planner](media/issue-reporting/view-issue.png "View issues for Planner")
 
 1. Select **View in Tasks**.
 
@@ -328,7 +328,7 @@ To review and edit existing issues in Planner:
 
 1. Edit the task.
 
-    ![Review and edit task in planner](media/issue-reporting/4c1c00bf429ff1f0cc994790af64ed49.png "Review and edit task in planner")
+    ![Review and edit task in planner](media/issue-reporting/review-edit-task-planner.png "Review and edit task in planner")
 
 ### See also
 
