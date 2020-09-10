@@ -6,8 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 08/17/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: namarwah
+ms.reviewer: tapanm
 ---
 
 # Area Inspection
@@ -111,8 +111,7 @@ To add the area types:
 
 1. Select **Area type** from the left-pane inside the app.
 
-1. Add, update, or delete area types as required. Examples: Interior, Food, Shopping.
-   <br> For each area, you can enter *Title*, *Menu label*, and update icon.
+1. Add, update, or delete area types as required. Examples: Interior, Food, Shopping. <br> For each area, you can enter *Title*, *Menu label*, and update icon.
 
 1. Select **Save**.
 
@@ -154,7 +153,7 @@ To add inspection forms:
     1. Select *Area type*.
     1. Add *Checklist step* using **Add step**.
 
-    Copy, delete or move checklist steps up and down as required. You can enter one or more checklist steps for the inspection form. Each checklist step can have a *Title*, *Detailed Instructions*, and an image. Each checklist item can also have up to three action buttons associated, reflecting "Ok", "Issue" and "Not Applicable" outcomes. The labels of the buttons can be customized.
+    Copy, delete or move checklist steps up and down as required. You can enter one or more checklist steps for the inspection form. Each checklist step can have a *Title*, *Detailed Instructions*, and an *Image*. Each checklist item can also have up to three action buttons associated, reflecting "Ok", "Issue" and "Not Applicable" outcomes. The labels of the buttons can be customized.
 
 1. Select **Save**.
 
@@ -169,7 +168,7 @@ required in their job.
 > To run the installed app, select **Area Walk** app from the available
 tabs inside the Teams channel.
 
-The user app for inspection provides the following capabilities:
+The user app for inspection provides the following capabilities.
 
 - [Home screen](#home-screen)
 - [Choose an area to inspect](#choose-an-area-to-inspect)
@@ -181,7 +180,7 @@ The user app for inspection provides the following capabilities:
 
 ### Home screen
 
-App greats you based on your time of the day. If Planner is integrated from the manager app, statistics of the Planner tasks, and all inspections for last 7 days are displayed.
+The app greats you based on your time of the day. If Planner is integrated from the manager app, statistics of the Planner tasks, and all inspections for last 7 days are displayed.
 
 ![Home screen with Planner](media/area-inspection/home-screen-with-planner.png "Home screen with Planner")
 
@@ -196,11 +195,11 @@ you to select the area that needs to be inspected.
 
 ![Inspect an area](media/area-inspection/inspect-area.png "Inspect an area")
 
-1. Search box: Searches for areas based on the area type selected.
+1. **Search box** - searches for areas based on the area type selected.
 
-1. Area types: Lists all the area types with and additional option *All* selected by default.
+1. **Area types** - lists all the area types with and additional option. Default: *All*.
 
-1. Areas: Lists all the areas based on selected area. If *All* is selected, all the areas are listed by default.
+1. **Areas** - lists all the areas based on selected area. If *All* is selected, all the areas are listed by default.
 
 ### Select an inspection form
 
@@ -210,14 +209,13 @@ If there are more than one inspection forms associated to the area type, the app
 
 ### Inspection overview
 
-This screen shows the image of the area with the checklist, and checklist steps configured in the manager app.
-To start an inspection, select **Begin inspection**, or any of the checklist item.
+This screen shows the image of the area with the checklist, and checklist steps configured in the manager app. To start an inspection, select **Begin inspection**, or any of the checklist item.
 
 ![Inspection overview](media/area-inspection/inspection-overview.png "Inspection overview")
 
 ### Inspection form
 
-Inspect the area and fill in the details on the inspection form. The checklist instructions configured in the manager app is displayed.
+Inspect the area and fill in the details on the inspection form. The checklist instructions configured in the manager app are displayed.
 
 ![Inspection form](media/area-inspection/inspection-form.png "Inspection form")
 
