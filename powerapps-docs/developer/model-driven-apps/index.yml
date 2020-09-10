@@ -34,7 +34,7 @@ landingContent:
             url: https://docs.microsoft.com/learn/paths/extend-power-platform-model-driven-app
 
   # Card
-  - title: Extend model-driven apps
+  - title: Customize
     linkLists:
        - linkListType: how-to-guide
          links:
@@ -48,34 +48,40 @@ landingContent:
   # Card
   - title: Apply business logic
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: overview
         links:
           - text: Client scripting
             url: client-scripting.md
+      - linkListType: tutorial
+        links:
           - text: Write your first client script
             url: clientapi/walkthrough-write-your-first-client-script.md
           - text: Debug your JavaScript code
             url: clientapi/debug-javascript-code.md
 
   # Card
-  - title: Web resources in model-driven apps
+  - title: Work with Web resources
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: overview
         links:
           - text: Web resources overview
             url: web-resources.md
-          - text: How to use web resources
+      - linkListType: concept
+        links:
+          - text: Use web resources
             url: use-web-resources.md      
           - text: Web resource dependencies
             url: web-resource-dependencies.md
 
 # Card
-  - title: Power Apps component framework
+  - title: Build custom code components
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: overview
         links:
-          - text: Framework overview
+          - text: Power Apps component framework overview
             url: ../component-framework/overview.md
+      - linkListType: tutorial
+        links:
           - text: Create code components
             url: ../component-framework/implementing-controls-using-typescript.md      
           - text: Get Power Apps CLI
@@ -90,13 +96,13 @@ landingContent:
             url: clientapi/reference.md
           - text: Customization XML reference
             url: customization-xml-reference.md      
-          - text: Power Apps component framework
+          - text: Power Apps component framework reference
             url: ../component-framework/reference/index.md
 
 # Card
   - title: Related resources
     linkLists:
-      - linkListType: overview
+      - linkListType: how-to-guide
         links:
           - text: Model-driven apps admin guide
             url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview
