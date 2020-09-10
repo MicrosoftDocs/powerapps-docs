@@ -12,6 +12,8 @@ ms.reviewer: tapanm
 
 # Employee Ideas and Manage Campaigns
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 In this tutorial, learn about the **Employee Ideas** and **Manage Campaigns** apps, and how to use them effectively.
 
 ## Overview

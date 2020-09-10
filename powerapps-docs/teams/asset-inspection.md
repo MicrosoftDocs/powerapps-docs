@@ -12,6 +12,8 @@ ms.reviewer: tapanm
 
 # Asset Inspection
 
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
+
 In this tutorial, learn about using the Asset Inspection (User), and Asset Inspection (Manager) apps.
 
 ## Overview
