@@ -32,7 +32,7 @@ In this tutorial, learn about the **Manage Issues** and **Issue Reporting** apps
 
     - Log issues with the information required to resolve the issue.
     - Modify existing issues and assist with resolution
-    - To get a high-level view of his/her issues and team issues.
+    - To get a high-level view of the issues and team issues.
 
 ## Prerequisites
 
@@ -55,9 +55,9 @@ This app provides the following capabilities:
 - [Update a category title](#update-a-category-title)
 - [Delete a category](#delete-a-category)
 - [Add a new issue template](#add-a-new-issue-template)
-- [Edit a issue template](#edit-a-issue-template)
-- [Delete a issue template](#delete-a-issue-template)
-- [Review a issue report](#review-a-issue-report)
+- [Edit an issue template](#edit-an-issue-template)
+- [Delete an issue template](#delete-an-issue-template)
+- [Review an issue report](#review-an-issue-report)
 - [View issue tasks in Planner](#view-issue-tasks-in-planner)
 
 ### Configure the app
@@ -197,7 +197,7 @@ To add a new issue template:
 
     ![Add issue template](media/issue-reporting/add-issue-template.png "Add issue template")
 
-1. Enter the following:
+1. Enter the details:
 
     - *Title*
     - *Due within*
@@ -211,9 +211,9 @@ To add a new issue template:
 
 1. Select **Save**.
 
-### Edit a issue template
+### Edit an issue template
 
-To edit a issue template:
+To edit an issue template:
 
 1. Select **Manage Issues** tab in Teams.
 
@@ -231,9 +231,9 @@ To edit a issue template:
 
     ![Save issue template changes](media/issue-reporting/save-issue-template-changes.png "Save issue template changes")
 
-### Delete a issue template
+### Delete an issue template
 
-To delete a issue template:
+To delete an issue template:
 
 1. Select **Manage Issues** tab in Teams.
 
@@ -251,9 +251,9 @@ To delete a issue template:
 
     ![Delete a issue template](media/issue-reporting/delete-issue-template.png "Delete a issue template")
 
-### Review a issue report
+### Review an issue report
 
-To review a issue report:
+To review an issue report:
 
 1. Select **Manage Issues** tab in Teams.
 
@@ -300,9 +300,9 @@ To Submit a new issue:
 
     ![Submit a new issue](media/issue-reporting/submit-new-issue.png "Submit a new issue")
 
-### View a issue task in Planner
+### View an issue task in Planner
 
-To view a issue task in Planner:
+To view an issue task in Planner:
 
 1. Select **Issue Reporting** tab in Teams.
 
@@ -329,3 +329,9 @@ To review and edit existing issues in Planner:
 1. Edit the task.
 
     ![Review and edit task in planner](media/issue-reporting/4c1c00bf429ff1f0cc994790af64ed49.png "Review and edit task in planner")
+
+### See also
+
+- [Asset Inspection](asset-inspection.md)
+- [Area Walk](area-walk.md)
+- [Employee Ideas](employee-ideas.md)

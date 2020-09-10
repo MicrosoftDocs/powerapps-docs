@@ -27,16 +27,16 @@ Employee Ideas and Manage Campaigns consists of two different apps, one app for 
     - Review idea campaigns and manage list of campaigns and ideas.
     - Edit and delete campaigns.
     - Review leaderboards of ideas.
-    - Vote for ideas and share those that are being prioritized.
+    - Vote for and share prioritized ideas.
 
 - [Employee Ideas app](#employee-idea-app)
 
     This app is used by the employees for the following activities:
 
     - Submit Ideas for a campaign.
-    - View other team members ideas .
-    - Vote on ideas that he/she liked the most.
-    - Review how his/her own idea is performing in relation to others within a campaign.
+    - View other team members ideas.
+    - Vote on the most liked ideas.
+    - Review how your own idea is performing compared to others within a campaign.
 
 ## Prerequisites
 
@@ -63,7 +63,7 @@ Manage Campaign app gives the manager following capabilities.
 
 ### Configure the app
 
-Manage Campaign app needs to be configured only for the first time.
+Manage Campaign app configuration is only required for the first time.
 
 To configure the app:
 
@@ -108,7 +108,7 @@ To add campaigns:
 1. Enter the campaign details such as campaign name, description, campaign
     start and end date, and a cover image.
 
-1. Add edea questions.
+1. Add idea questions.
 
 1. Select **Save**.
 
@@ -261,7 +261,7 @@ To submit a new idea and post it in a channel:
 
     ![Share an idea in a channel](media/employee-ideas/share-idea-in-channel.png "Share an idea in a channel")
 
-Below is a sample message that gets posted in channel on a successfully submission of an idea.
+Below is a sample message that gets posted in channel on a submission of an idea.
 
 ![Message posted in channel](media/employee-ideas/message-posted-channel.png "Message posted in channel")
 
@@ -292,3 +292,9 @@ To share an idea:
 1. Select **Share** to share the idea.
 
     ![Share the idea - employee](media/employee-ideas/share-idea-employee.png "Share the idea - employee")
+
+### See also
+
+- [Asset Inspection](asset-inspection.md)
+- [Area Walk](area-walk.md)
+- [Issue Reporting](issue-reporting.md)

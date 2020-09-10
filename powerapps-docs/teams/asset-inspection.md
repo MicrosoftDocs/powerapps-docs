@@ -20,20 +20,20 @@ In this tutorial, learn about using the Asset Inspection (User), and Asset Inspe
 
 - [Asset Inspection (Manager) app](#asset-inspection-manager-app)
 
-    This app is used by the manager for the following:
+    This app is used by the manager for the following activities:
 
     - To ensure that assets and equipment are healthy and downtime won’t impact employee productivity.
     - Receive notification when an inspection is complete, along with any issues identified so that the manager can quickly resolve the issue.
-    - Validate that assets and equipment meets safety standards.
+    - Validate that assets and equipment meet the required safety standards.
     - Configure the app user experience, including adding, updating, or removing assets, creating and modifying inspection forms, and configuring inspection response outcome options.
     - View insights and metrics about completed inspection history. For example, a manager managing a fleet of vehicles may want to see recurring issues so to address the root cause, and improve the efficiency of the organization.
 
 - [Asset Inspection (User) app](#asset-inspection-user-app)
 
-    This app is used by an employee for the following:
+    This app is used by an employee for the following activities:
 
-    - To complete inspections effectively and efficiently so that the user can focus on their job and ensure that the asset or equipment is compliant with company standards. For example, a delivery driver can deliver packages with confidence that the vehicle will not have any issues during their shift.
-    - To document and notify managers about issues discovered during the inspection so that problems can be addressed in a timely manner.
+    - To complete inspections effectively and efficiently so that the user can focus on their job and ensure that the asset or equipment is compliant with company standards. For example, a delivery driver can deliver packages with confidence that the vehicle won't have any issues during their shift.
+    - To document and notify managers about issues discovered during the inspection so that problems can be addressed quickly.
 
 ## Prerequisites
 
@@ -88,7 +88,7 @@ To add assets:
 
 1. Select **Add assets**.
 
-1. Enter the asset details such as the asset name, asset number and asset type.
+1. Enter the asset details such as the asset name, asset number, and asset type.
 
     ![Add assets](media/asset-inspection/add-assets.png "Add assets")
 
@@ -106,7 +106,7 @@ To add inspection forms:
 
 1. Select **Add a form** from the left-pane inside the app.
 
-    You can enter one or more checklists for this inspection form. Each checklist step can have a *Title*, *Detailed Instructions*, and an *Image*. Each checklist item can also have up to three action buttons associated, reflecting "Ok", "Issue" and "Not Applicable" outcomes. The labels of the buttons can be customized.The labels of the buttons can be customized.
+    You can enter one or more checklists for this inspection form. Each checklist step can have a *Title*, *Detailed Instructions*, and an *Image*. Each checklist item can also have up to three action buttons associated, reflecting "Ok", "Issue" and "Not Applicable" outcomes. The labels of the buttons can be customized. The labels of the buttons can be customized.
 
     ![Add inspection foms](media/asset-inspection/add-inspection-forms.png "Add inspection foms")
 
@@ -138,7 +138,7 @@ The user app for inspection provides the following capabilities.
 
 ### Home screen
 
-The app greats you based on your time of the day and lists the statistics of all inspections for the last 7 days.
+The app greats you based on your time of the day and lists the statistics of all inspections for the last seven days.
 
 ![Home screen](media/asset-inspection/home-screen.png "Home screen")
 
@@ -162,7 +162,7 @@ If there are more than one inspection forms associated to the area type, the app
 
 ### Inspection overview
 
-This screen shows the image of the asset with the checklist, and checklist steps configured in the manager app. To start an inspection, select **Begin inspection**, or any of the checklist item.
+This screen shows the image of the asset with the checklist, and checklist steps configured in the manager app. To start an inspection, select **Begin inspection**, or any of the checklist items.
 
 ![Inspection overview](media/asset-inspection/inspection-overview.png "Inspection overview")
 
@@ -182,3 +182,9 @@ modify the outcome. Or, select **Submit inspection** to submit the inspection fo
 ![Review inspection](media/asset-inspection/e74478e5f1e996da5466f1e7e291c870.png "Review inspection")
 
 Once inspection is submitted, the app takes you to the next screen that shows the updated statistics with the current submission.
+
+### See also
+
+- [Area Walk](area-walk.md)
+- [Employee Ideas](employee-ideas.md)
+- [Issue Reporting](issue-reporting.md)

@@ -1765,8 +1765,18 @@
     href: ../teams/remove-your-apps.md
   - name: Uninstall Power Apps personal app
     href: ../teams/uninstall-personal-apps.md
+  - name: Sample apps
+    items:
   - name: Use sample apps from Teams store
     href: ../teams/use-sample-apps-from-teams-store.md
+  - name: Asset Inspection
+    href: ../teams/asset-inspection.md
+  - name: Area Walk
+    href: ../teams/area-walk.md
+  - name: Employee Ideas
+    href: ../teams/employee-ideas.md
+  - name: Issue Reporting
+    href: ../teams/issue-reporting.md
 - name: Chatbots
   href: ../chatbots.md
 
