@@ -46,7 +46,7 @@ Before using this app:
 
 For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
-## Area Walk Manager app
+## Area Walk (Manager) app
 
 Manager app gives the manager the following capabilities.
 
@@ -190,7 +190,7 @@ To add inspection forms:
 
     ![Add inspection form](media/area-walk/add-form.png "Add inspection form")
 
-## Area Walk User app
+## Area Walk (User) app
 
 User app enables users to complete a full inspection of the areas as and when
 required in their job.
