@@ -2,7 +2,7 @@
 title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: " A list of common issues and resolutions within solution checker"
 keywords: ""
-ms.date: 08/04/2020
+ms.date: 09/09/2020
 ms.service: powerapps
 ms.custom:
   - ""
@@ -219,11 +219,11 @@ If a solution contains a business process flow component in draft state that has
 
 Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-entity-missing) for details about the issue and steps to resolve.
 
-## Solution checker fails to export solutions with Model-driven app components
+## Solution checker fails to export solutions with model-driven app components
 
-If a solution contains a Model-driven app, Solution Checker may fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to Model-driven apps, any solutions containing them will fail to export with solution checker.
+If a solution contains a model-driven app, Solution Checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to model-friven apps, any solutions containing them will fail to export with solution checker.
 
-To resolve this issue, grant the Environment Maker security role to the Power Apps Checker Application user.
+To resolve this issue, grant the **Environment Maker** security role to the Power Apps Checker application user.
 
 ## Solution checker fails to export patched solutions
 
