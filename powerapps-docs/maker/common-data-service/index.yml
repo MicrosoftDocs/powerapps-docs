@@ -34,18 +34,18 @@ landingContent:
             url: https://docs.microsoft.com/learn/modules/introduction-common-data-service/
 
   # Card
-  - title: Create
+  - title: Work with data
     linkLists:
-       - linkListType: quickstart
-         links:
-          - text: Create an entity
-            url: data-platform-create-entity.md
        - linkListType: concept
-         links:  
-          - text: Entities and metadata
-            url: create-edit-metadata.md
+         links:
           - text: Types of entities
             url: types-of-entities.md
+          - text: Entity relationships
+            url: relationships-overview.md
+          - text: Fields
+            url: fields-overview.md
+          - text: Option sets
+            url: create-edit-global-option-sets.md
           
   # Card
   - title: Customize
@@ -108,7 +108,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Overview
+          - text: Business logic introduction
             url: cds-processes.md
       - linkListType: how-to-guide
         links:
