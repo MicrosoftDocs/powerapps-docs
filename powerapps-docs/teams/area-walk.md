@@ -210,6 +210,7 @@ The user app for inspection provides the following capabilities.
 - [Fill the inspection form](#inspection-form)
 - [Add a Planner task to an inspection step](#add-a-planner-task-to-an-inspection-step)
 - [Review inspection](#review-inspection)
+- [Submit inspection of grouped areas](#submit-inspection-of-grouped-areas)
 
 ### Home screen
 
