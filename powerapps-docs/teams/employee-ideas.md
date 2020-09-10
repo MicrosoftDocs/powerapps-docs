@@ -1,288 +1,294 @@
-Document Objective
-==================
+---
+title: Use Employee Ideas and Manage Campaigns apps from teams store | Microsoft Docs
+description: Learn how to use the Employee Ideas and Manage Campaigns apps from Teams store.
+author: tapanm-msft
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 08/17/2020
+ms.author: namarwah
+ms.reviewer: tapanm
+---
 
->   This user guide is meant to serve as the user reference for using Employee
->   Idea and Manage Campaigns App. This document details the guidance for users
->   to use the apps.
+# Employee Ideas and Manage Campaigns
 
-Overview
-========
+In this tutorial, learn about the **Employee Ideas** and **Manage Campaigns** apps, and how to use them effectively.
 
-There are two Apps each intended for different kind of users. To use these apps,
-users must find the app on the app store, install it for the team.
+## Overview
 
->   Employee Ideas
+Employee Ideas and Manage Campaigns consists of two different apps, one app for the employees to submit ideas, and another app for the managing the campaigns.
 
-This app is used by Team Managers to perform the following activities:
+- [Manage Campaigns app](#manage-campaigns-app)
 
--   Set-up and configure an Idea campaign (a category for grouping ideas around
-    common themes).
+    This app is used by Team Managers to perform the following activities:
 
--   Configure a standard submission form that employees need to submit for each
-    idea.
+    - Setup and configure an idea campaign (a category for grouping ideas around common themes).
+    - Configure a standard submission form that employees need to submit for each idea.
+    - Review idea campaigns and manage list of campaigns and ideas.
+    - Edit and delete campaigns.
+    - Review leaderboards of ideas.
+    - Vote for ideas and share those that are being prioritized.
 
--   Review idea campaigns and manage list of campaigns and ideas.
+- [Employee Ideas app](#employee-idea-app)
 
--   Edit and delete campaigns.
+    This app is used by the employees for the following activities:
 
--   Review leaderboards of Ideas.
+    - Submit Ideas for a campaign.
+    - View other team members ideas .
+    - Vote on ideas that he/she liked the most.
+    - Review how his/her own idea is performing in relation to others within a campaign.
 
--   Vote for ideas and share those that are being prioritized.
+## Prerequisites
 
-    Team members can also use the app for the following activities:
+Before using this app:
 
--   Submit Ideas for a campaign.
+- Find the app in Teams store.
+- Install the app.
+- Set up the app for the first use.
 
--   View other team members ideas .
+For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
--   Vote on ideas that he/she liked the most.
+## Manage Campaigns app
 
--   Review how his/her own idea is performing in relation to others within a
-    campaign.
+Manage Campaign app gives the manager following capabilities.
 
-Manager Experience 
-===================
+- [Configure the app](#app-configuration)
+- [Edit the app configuration](#edit-the-app-configuration)
+- [Add an idea campaign](#add-an-idea-campaign)
+- [Edit an idea campaign](#edit-an-idea-campaign)
+- [Delete an idea campaign](#delete-an-idea-campaign)
+- [Submit a new idea](#submit-a-new-idea)
+- [Review and vote for an idea](#review-and-vote-for-an-idea)
+- [Share an idea](#share-an-idea)
 
->   Manage Campaign app gives the manager following capabilities
+### App configuration
 
-App configuration
------------------
+Manage Campaign app needs to be configured only for the first time.
 
-Steps for App configuration: (This is one time activity)
+To configure the app:
 
-1.  Login into the team with a valid user
+1. Sign in to Teams.
 
-2.  Go to the **Employee Ideas** tab in Teams
+1. Select the team.
 
-3.  User will be prompted to choose Channel
+1. Select the **Manage Campaigns** tab in Teams.
 
-4.  Choose required channel
+1. Select the channel.
 
-5.  Click on "Let's go" button
+1. Select "Let's go".
 
-![](media/7e38cf07013441c47d8141a162f09066.png)
+    ![App configuration](media/employee-ideas/app-configuration.png "App configuration")
 
-Edit App Configuration
-----------------------
+### Edit the app configuration
 
-Steps to update app configuration:
+To edit the app configuration:
 
-1.  Go to Employee Ideas tab in Teams
+1. Select **Manage Campaigns** tab in Teams.
 
-2.  Click on the setting icon
+1. Select app settings.
 
-3.  Change channel
+    ![App settings](media/employee-ideas/app-settings.png "App settings")
 
-4.  Click on "Save" button
+1. Change the channel.
 
-![](media/f39e61855ca01a9c5a0b16475e50d752.png)
+    ![Change channel](media/employee-ideas/change-channel.png "Change channel")
 
-![](media/eef16e6f76118639b7fd6b987928c9c1.png)
+1. Select **Save**.
 
-Adding Idea Campaign
---------------------
+### Add an idea campaign
 
->   To start with the Employee Ideas app, you’ll need to add Campaigns.
+To start with the Employee Ideas app, you’ll need to add campaigns.
 
->   Steps to add Idea Campaigns:
+To add campaigns:
 
-1.  Go to **Employee Ideas** tab in Teams.
+1. Select **Manage Campaigns** tab in Teams.
 
-2.  Click on the “Create Campaign” button.
+1. Select **Create Campaign**.
 
-3.  Fill in the campaign details such as Campaign name, Description, Campaign
-    Start and End date, Cover image.
+1. Fill in the campaign details such as campaign name, description, campaign
+    start and end date, and a cover image.
 
-4.  Add Idea questions.
+1. Add edea questions.
 
-5.  Click on save.
+1. Select **Save**.
 
-![](media/8a0f7c146e035d3334ffa23ae78488cb.png)
+    ![Add idea campaign](media/employee-ideas/add-campaign.png "Add idea campaign")
 
-Editing Idea Campaign
----------------------
+### Edit an idea campaign
 
-Steps to edit existing idea campaign:
+To edit existing idea campaign:
 
-1.  Go to **Employee Ideas** tab in Teams.
+1. Select **Manage Campaigns** tab in Teams.
 
-2.  Select idea campaign you want to edit.
+1. Select the idea campaign you want to edit.
 
-3.  Click on “Edit” button.
+1. Select **Edit**.
 
-4.  Make the required updates.
+1. Change the campaign as required.
 
-5.  Click on save.
+1. Select **Save**.
 
-![](media/6dd618b2868e0d3fc844436b5e27c230.png)
+    ![Edit an idea campaign](media/employee-ideas/edit-idea-campaign.png "Edit an idea campaign")
 
-Delete Idea Campaign
---------------------
+### Delete an idea campaign
 
->   Steps to delete idea campaign
+To delete an idea campaign:
 
-1.  Go to **Employee Ideas** tab in Teams.
+1. Select **Manage Campaigns** tab in Teams.
 
-2.  Select idea campaign you want delete.
+1. Select the idea campaign you want to edit.
 
-3.  Click on “Edit” button.
+1. Select **Edit**.
 
-4.  Click on “Delete” button
+1. Select **Delete**.
 
-5.  Click to select “I understand” checkbox in confirmation popup.
+1. Confirm by selecting the *I understand* confirmation checkbox.
 
-6.  Click “Delete” to delete record permanently.
+1. Select **Delete** to delete the record permanently.
 
-![](media/228e8f4428d3e1d35cb3b51b74fb11d0.png)
+    ![Delete an idea campaign](media/employee-ideas/delete-idea-campaign.png "Delete an idea campaign")
 
-Submitting new Idea
--------------------
+### Submit a new idea
 
->   Steps to submit new idea
+To submit a new idea:
 
-1.  Go to **Employee Ideas** tab in Teams.
+1. Select **Manage Campaigns** tab in Teams.
 
-2.  Select active idea campaign you want to submit idea for.
+1. Select active idea campaign you want to submit idea for.
 
-3.  Click on “Submit an Idea” button.
+1. Select **Submit an idea**.
 
-4.  Fill in the details such as Title, Description.
+    ![Submit an idea](media/employee-ideas/submit-an-idea.png "Submit an idea")
 
-5.  Answer to the idea questions.
+1. Fill in the idea campaign details such as *Title* and *Description*.
 
-6.  Upload supporting files if any.
+1. Fill in the answers to the remaining questions on the form.
 
-7.  Click on “Submit Idea” to submit new idea.
+1. (Optional) Upload supporting files.
 
-![](media/1a123bfa0c03924f04c619f5b8603098.png)
+1. Select **Submit idea**.
 
-![](media/2890ef942da09b44fed3184f75a63c45.png)
+    ![Submit idea](media/employee-ideas/submit-idea.png "Submit idea")
 
-Review and vote for an Idea
----------------------------
+### Review and vote for an idea
 
->   Steps to review and vote for an idea :
+To review and vote for an idea:
 
-1.  Go to **Employee Ideas** tab in Teams.
+1. Select **Manage Campaigns** tab in Teams.
 
-2.  Select any active campaign.
+1. Select an active campaign.
 
-3.  Click on any associated ideas to see the details.
+1. Select an associated idea to see the details.
 
-4.  Click on “**Like**” icon to vote for the Idea.
+1. Select **Like** to vote for the idea.
 
-![](media/c6f35d9c418594ddf89b3f9101c7b3b0.png)
+    ![Review and vote for an idea](media/employee-ideas/review-vote-idea.png "Review and vote for an idea")
 
-Sharing an Idea
----------------
+### Share an idea
 
->   Steps to share an idea :
+To share an idea:
 
-1.  Go to **Employee Ideas** tab in Teams.
+1. Select **Manage Campaigns** tab in Teams.
 
-2.  Select any active campaign.
+1. Select an active campaign.
 
-3.  Click on any associated ideas to see the details.
+1. Select an associated idea to see the details.
 
-4.  Click on the “**Share**” button to share the Idea.
+1. Select **Share** to share the idea.
 
-![](media/5e79c81c83828a5ff8d136b9d9ad37ac.png)
+    ![Share an idea](media/employee-ideas/share-idea.png "Share an idea")
 
 ### Review existing idea campaigns
 
->   Steps to review existing campaigns :
+To review existing idea campaigns:
 
-1.  Go to **Employee Ideas** tab in Teams.
+1. Select **Manage Campaigns** tab in Teams.
 
-![](media/04fbb7d4bb43e11b0ed5776165aadfab.png)
+1. Review the idea campaign.
 
-Employee Experience
-===================
+    ![Review idea campaign](media/employee-ideas/review-idea-campaign.png "Review idea campaign")
 
-Employee Idea App gives employees the following capabilities
+## Employee Idea app
 
-Submit new Idea
----------------
+Employee Idea app gives employees the following capabilities.
 
->   Steps to submit an Idea :
+- [Submit a new idea](#submit-a-new-idea-1)
+- [Submit a new idea and post it in a channel](#submit-a-new-idea-and-post-it-in-a-channel)
+- [Review and upvote an idea](#review-and-upvote-an-idea)
+- [Share an idea](#share-an-idea-1)
 
-1.  Go to **Employee Ideas** tab in Teams.
+### Submit a new idea
 
-2.  Select any idea campaign you want to submit idea for.
+To submit a new idea:
 
-3.  Click on “Submit an Idea” button.
+1. Select **Employee Ideas** tab in Teams.
 
-4.  Fill in the details such as Title, Description.
+1. Select any idea campaign you want to submit idea for.
 
-5.  Answer to the idea questions.
+1. Select **Submit an idea**.
 
-6.  Upload supporting files if any.
+    ![Submit an idea - employee](media/employee-ideas/submit-an-idea-employee.png "Submit an idea - employee")
 
-7.  Click on “Submit Idea” to submit new idea.
+1. Fill in the idea campaign details such as *Title* and *Description*.
 
-![](media/128ff41be69a2d882ffefee8980c75c4.png)
+1. Fill in the answers to the remaining questions on the form.
 
-![](media/07e699b9a6c326b888398a6d5b0176ae.png)
+1. (Optional) Upload supporting files.
 
-Submit new Idea and Post it in channel
---------------------------------------
+1. Select **Submit idea**.
 
->   Steps to submit an Idea :
+    ![Submit idea - employee](media/employee-ideas/submit-idea-employee.png "Submit idea - employee")
 
-1.  Go to **Employee Ideas** tab in Teams.
+### Submit a new idea and post it in a channel
 
-2.  Select any idea campaign you want to submit idea for.
+To submit a new idea and post it in a channel:
 
-3.  Click on “Submit an Idea” button.
+1. Select **Employee Ideas** tab in Teams.
 
-4.  Fill in the details such as Title, Description.
+1. Select any idea campaign you want to submit idea for.
 
-5.  Set “Share in channel” **On**
+1. Select **Submit an idea**.
 
-6.  Answer to the idea questions.
+1. Fill in the idea campaign details such as *Title* and *Description*.
 
-7.  Upload supporting files if any.
+1. Set **Share in channel** to *On*.
 
-8.  Click on “Submit Idea” to submit new idea.
+1. Fill in the answers to the remaining questions on the form.
 
-![](media/128ff41be69a2d882ffefee8980c75c4.png)
+1. (Optional) Upload supporting files.
 
-![](media/54940ce5aa6570b4a1d406bd51140335.png)
+1. Select **Submit idea**.
 
-![](media/5f590be23a8bfd493fcc42538431b252.png)
+    ![Share an idea in a channel](media/employee-ideas/share-idea-in-channel.png "Share an idea in a channel")
 
-Below message gets posted in channel on successfully submission of idea.
+Below is a sample message that gets posted in channel on a successfully submission of an idea.
 
-![](media/1279eb0381219a33872233634856540b.png)
+![Message posted in channel](media/employee-ideas/message-posted-channel.png "Message posted in channel")
 
-Review and upvote for an Idea
------------------------------
+### Review and upvote an idea
 
->   Steps to review and vote for an idea :
+To review and upvote an idea:
 
-1.  Go to **Employee Ideas** tab in Teams.
+1. Select **Employee Ideas** tab in Teams.
 
-2.  Select any campaign.
+1. Select a campaign.
 
-3.  Click on any associated idea to see details.
+1. Select an associated idea to see details.
 
-4.  Click on the “**Like**” icon to vote for the Idea.
+1. Select **Like** to vote for the idea.
 
-![](media/27f7f9d116684097d4432c124cd8db70.png)
+    ![Review and vote for an idea - employee](media/employee-ideas/review-vote-idea-employee.png "Review and vote for an idea - employee")
 
-Share an Idea
--------------
+### Share an idea
 
->   Steps to share an idea :
+To share an idea:
 
-1.  Go to **Employee Ideas** tab in Teams.
+1. Select **Employee Ideas** tab in Teams.
 
-2.  Select any campaign.
+1. Select a campaign.
 
-3.  Click on any associated idea to see details.
+1. Select an associated idea to see details.
 
-4.  Click on the “**Share**” button to share the Idea.
+1. Select **Share** to share the idea.
 
-![](media/aa62414ce348779f0746e323f5276df6.png)
-
-![](media/cd32ff1d22d78c50113c783617da6995.png)
+    ![Share the idea - employee](media/employee-ideas/share-idea-employee.png "Share the idea - employee")
