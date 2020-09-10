@@ -287,6 +287,40 @@ modify the outcome. Or, select **Submit inspection** to submit the inspection fo
 
 Once inspection is submitted, the app takes you to the next screen that shows the status of the submission, and the list of all the areas of the current area type.
 
+### Submit inspection of grouped areas
+
+To submit inspection of grouped areas:
+
+1. Open **Area Walk** tab in Teams.
+
+1. Select **Inspect an area**.
+
+1. Select the group from **Grouped areas** section.
+
+    ![Grouped areas](media/area-walk/grouped-areas.png "Grouped areas")
+
+1. Select **Begin inspection**.
+
+    ![Begin inspection](media/area-walk/begin-inspection.png "Begin inspection")
+
+1. Respond to the inspection steps on screen.
+
+1. Select **Review inspection**.
+
+    ![Review grouped inspection](media/area-walk/review-inspection-grouped.png "Review grouped inspection")
+
+1. Select the next area in the tab.
+
+1. Select **Continue inspection**.
+
+    ![Continue inspection](media/area-walk/continue-inspection.png "Continue inspection")
+
+1. Respond to the inspection steps on screen.
+
+1. Select **Submit inspection**.
+
+    ![Submit inspection](media/area-walk/submit-inspection.png "Submit inspection")
+
 ### See also
 
 - [Asset Inspection](asset-inspection.md)
