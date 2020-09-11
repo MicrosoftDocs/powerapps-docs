@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Manage portals from the Power Platform admin center
 
-You can now manage portals in the Power Platform admin center. The Power Platform admin center helps you manage both capacity-based and add-on portals. You can also see information such as how many days are left before a trial portal expires. For more information about portal licensing, see the [licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#portals) and [portal differences](../faq#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals). For more information about Power Platform admin center, go to [Administer Power Platform](/power-platform/admin/admin-documentation).
+You can now manage portals in the Power Platform admin center. The Power Platform admin center helps you manage both capacity-based and add-on portals. You can also see information such as how many days are left before a trial portal expires. For more information about portal licensing, see the [licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#portals) and [portal differences](../faq.md#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals). For more information about Power Platform admin center, go to [Administer Power Platform](/power-platform/admin/admin-documentation).
 
 You can manage portals in the Power Platform admin center in two ways: You can manage all portals for the current tenant from **Resources** > **Portals**, and you can manage portals for a specific environment from **Environments**.
 
@@ -88,7 +88,7 @@ A portal can have the following status: *Configured*, *Suspended*, or *Not-confi
 | Not-configured | This portal is ready to be configured to an environment.   |
 
 > [!NOTE]
-> You can [create a new portal](../provision-portal-add-on) if the portal add-on status is *Not-configured*. The status will change to *Configured* after the portal is provisioned.
+> You can [create a new portal](../provision-portal-add-on.md) if the portal add-on status is *Not-configured*. The status will change to *Configured* after the portal is provisioned.
 
 ## Update the Power Apps portal solution
 
