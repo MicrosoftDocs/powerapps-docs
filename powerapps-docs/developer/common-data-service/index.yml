@@ -121,12 +121,13 @@ landingContent:
           - text: Register an app with Azure Active Directory
             url: walkthrough-register-app-azure-active-directory.md
 
-
   # Card
-  - title: Tools
+  - title: Tools and resources
     linkLists:
       - linkListType: overview
         links:
+          - text: View the developer resources page
+            url: /powerapps/developer/common-data-service/view-download-developer-resources
           - text: Developer tools
             url: /powerapps/developer/common-data-service/developer-tools
           - text: Microsoft Power Apps CLI
