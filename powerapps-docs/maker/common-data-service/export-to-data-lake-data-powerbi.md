@@ -1,5 +1,6 @@
 ---
 title: "Analyze Common Data Service exported to Azure Data Lake Storage Gen2 data with Power BI | MicrosoftDocs"
+description: "Use Azure Data Lake Storage Gen2 to analyze exported Common Data Service data"
 ms.custom: ""
 ms.date: 07/29/2020
 ms.reviewer: "matp"
