@@ -59,3 +59,22 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 [Add an appointment, email, phone call, note, or task activity to the timeline](add-activities.md)
 
 [Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
+
+## Known issues
+
+### Email content is lost after entering text in the description field on a email form 
+
+**Issue**: While composing an email and filling the description field if **Save** or **Save and Close** or **Send** is selected immediately after entering text in the description field, the most recent content added to the email from may get lost. 
+
+**Resolution**: As a general guideline please wait a few seconds before you select **Save** or **Save and Close** or **Send** after text is entered in the description field. 
+
+### The From field is read only or look for records search isn't working
+
+**Issue**: The **From** field in an email form is read-only or you can't look up records and filter results by **User** or **Queue**.
+
+**Resolution**: This happens when your system administrator has customizated parts of the form. To fix the issue, open a browser window and run the following two commands replacing **envioment URL** with the URL of your environment.
+
+For more information on how to find the enviroment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
+    
+ - (your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD))
+ - (your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD))
