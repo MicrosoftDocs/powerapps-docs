@@ -296,6 +296,28 @@ After you completed the process and selects **Finish** in the business process f
 
   > [!div class="mx-imgBorder"]
   > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
+  
+## Overview of Employee Cases
+For managing the whole process from beginning to end, you can use the **Workplace Care Management** dashboard. You will find the dashboard under **Dashboards**. The dashboard is separated with two different sections, on the top you will see the list of 4 different views which show different focusses on the employee cases and on the bottom it will show charts to get a quick overview.
+
+  > [!div class="mx-imgBorder"]
+  > ![Workplace Care Management Dashboard](media/health-safety-dashboard.png "Workplace Care Management Dashboard")
+
+**Views**
+
+- My High Risk Employee Cases; shows the employee cases which are on high risk.
+
+- My Employee Cases due for Contact; shows the employee cases which aren't contacted yet for over a day.
+
+- My Employee Cases due for Investigation; shows the employee cases which aren't investigated yet for over a day.
+
+- My Outstanding Employee Cases; shows the employee cases outstanding for more then 2 weeks.
+
+**Charts**
+
+- Employee Cases by Risk Level; which shows employee cases by risk level.
+
+- Employee Cases by Duration; which shows employee cases by duration over days.
 
 ## Feedback about the solution
 
