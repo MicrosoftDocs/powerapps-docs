@@ -268,6 +268,15 @@ Exposure score is calculated when the system generates Case Contacts as suggesti
 
 This functionality is purely as a means to sort the suggestions based on 'proximity' to the employee under investigation.
 
+#### Case Contact status
+
+A Case Contact has three statusses:
+- To be evaluated (Active)
+- Case Created (Inactive)
+- Evaluated (Inactive)
+
+With these three statusses, a case manager has the ability to clearly indicated which Case Contacts have been traced and how they have been dealt with.
+
 ### Case Contact importing
 
 **Case Contacts** may be added to an **Employee Case** using import functionality by a user with appropriate security privileges. The steps below describe the process for importing Case Contacts. 
