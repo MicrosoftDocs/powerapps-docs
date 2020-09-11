@@ -127,5 +127,7 @@ The update might take a while after you select **Submit**. More information: [Up
 
 ### See also
 
-[Manage Dynamics 365 apps](https://docs.microsoft.com/power-platform/admin/manage-apps)  
-[Upgrade a portal](upgrade-portal.md)
+- [Manage Dynamics 365 apps](https://docs.microsoft.com/power-platform/admin/manage-apps)  
+- [Upgrade a portal](upgrade-portal.md)
+- [Administer Power Platform](/power-platform/admin/admin-documentation)
+
