@@ -80,15 +80,15 @@ landingContent:
             url: /powerapps/developer/common-data-service/plug-ins
           - text: Workflow extensions
             url: /powerapps/developer/common-data-service/workflow/workflow-extensions
-      - linkListType: overview
+      - linkListType: tutorial
         links:
-          - text: Publish your app on AppSource
-            url: /powerapps/developer/common-data-service/publish-app-appsource
+          - text: Write and register a plug-in
+            url: /powerapps/developer/common-data-service/tutorial-write-plug-in
   
   # Card
   - title: Deploy and publish
     linkLists:
-      - linkListType: deploy
+      - linkListType: overview
         links:
           - text: Solution concepts
             url: /powerapps/developer/common-data-service/introduction-solutions
@@ -98,10 +98,10 @@ landingContent:
         links:
           - text: Work with solutions using the SDK APIs
             url: /power-platform/alm/solution-api
-      - linkListType: overview
+      - linkListType: how-to-guide
         links:
           - text: Publish your app on AppSource
-            url: /powerapps/developer/common-data-service/publish-app-appsource
+            url: /powerapps/developer/common-data-service/publish-app-appsource          
 
     # Card
   - title: Create custom client applications
