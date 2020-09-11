@@ -41,9 +41,9 @@ landingContent:
          links:
           - text: Work with data using code
             url: work-with-data-cds.md
-          - text: Web API types and operations
+          - text: Types and operations (Web API)
             url: /powerapps/developer/common-data-service/webapi/web-api-types-operations
-          - text: Entity Operations using the Organization service
+          - text: Entity operations (Organization service)
             url: /powerapps/developer/common-data-service/org-service/entity-operations
           - text: Use FetchXML to query data
             url: /powerapps/developer/common-data-service/use-fetchxml-construct-query
