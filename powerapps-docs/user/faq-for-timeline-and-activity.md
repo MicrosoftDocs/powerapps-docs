@@ -72,9 +72,11 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 
 **Issue**: The **From** field in an email form is read-only or you can't look up records and filter results by **User** or **Queue**.
 
-**Resolution**: This happens when your system administrator has customizated parts of the form. To fix the issue, open a browser window and run the following two commands replacing **envioment URL** with the URL of your environment.
+**Resolution**: This happens when your system administrator has customizated parts of the form. To fix the issue, open a browser window and run the following two commands replacing the **envioment URL** with the URL of your environment.
+
+To find the URL, look at the the address bar the first part of the URL that starts with **https://** and ends with **.com** is your envioment URL.
 
 For more information on how to find the enviroment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
     
- - (your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD))
- - (your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD))
+ - (replace with your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD))
+ - (replace with your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD))
