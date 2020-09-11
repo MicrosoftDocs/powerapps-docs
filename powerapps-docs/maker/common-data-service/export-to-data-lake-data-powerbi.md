@@ -59,9 +59,7 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
 8. If prompted to sign in, you can sign in with your Azure Active Directory account or with the **Account key**. To sign in with an **Account key**, select the option from the left side bar.
 
-9. Find the access key by going back to the storage account setting and selecting **Access keys** from the left pane. Copy the first key.
-
-10. Find the account key by going back to the storage account settings and selecting **Access keys** from the left pane. Copy the first key and paste it in Power BI. Select **OK**.
+9. Find the account key by going back to the storage account settings and selecting **Access keys** from the left pane. Copy the first key and paste it in Power BI. Select **OK**.
 
     ![Copy the access key](media/copy-access-key.png "Copy the access key")
 
