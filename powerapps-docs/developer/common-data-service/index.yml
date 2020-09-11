@@ -28,10 +28,6 @@ landingContent:
             url: overview.md
           - text: "Developers: Get started"
             url: get-started-CDS-developers.md
-       - linkListType: quickstart
-         links:
-          - text: Web API sample (C#)
-            url: webapi/quick-start-console-app-csharp.md
        - linkListType: learn
          links:
           - text: Introduction to Common Data Service for developers
@@ -67,6 +63,8 @@ landingContent:
             url: /powerapps/developer/common-data-service/data-synchronization
           - text: Import data
             url: /powerapps/developer/common-data-service/import-data
+          - text: Data Export Service
+            url: /powerapps/developer/common-data-service/data-export-service
       
 
   # Card
