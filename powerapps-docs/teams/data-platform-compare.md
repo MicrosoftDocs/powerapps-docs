@@ -14,7 +14,7 @@ ms.reviewer: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-Applications within a Team have access to a Project Oakdale environment.  Project Oakdale is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Project Oakdale delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Project Oakdale environment can contain, Project Oakdale can be upgraded to Common Data Service.
+Applications within a team in Microsoft Teams have access to a Project Oakdale environment. Project Oakdale is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Project Oakdale delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Project Oakdale environment can contain, Project Oakdale can be upgraded to Common Data Service.
 
 ## Entity features
 This table describes the differences between Project Oakdale table and Common Data Service entity features:
@@ -48,9 +48,9 @@ This table describes the differences between Project Oakdale and Common Data Ser
 
 ## Environments
 
-In Project Oakdale and Common Data Service, data is stored within an environment. Project Oakdale creates a single environment for each Microsoft Team where you create data, apps, chatbots, and workflows. Environments support backups, point-in-time restore, and disaster recovery.  With Project Oakdale, capacity is measured with relational, image, and file data. The 2 GB capacity provided to a team can typically store up to 1 million rows of data.
+In Project Oakdale and Common Data Service, data is stored within an environment. Project Oakdale creates a single environment for each team in Teams where you create data, apps, chatbots, and workflows. Environments support backups, point-in-time restore, and disaster recovery.  With Project Oakdale, capacity is measured with relational, image, and file data. The 2-GB capacity provided to a team can typically store up to 1 million rows of data.
 
-To make management easier, the lifecycle of the Project Oakdale environment is connected to that of the associated Microsoft Team. For example, when a team is deleted, the associated environment is also deleted.
+To make management easier, the lifecycle of the Project Oakdale environment is connected to that of the associated team. For example, when a team is deleted, the associated environment is also deleted.
 
 While Project Oakdale focuses on one environment per team, the Common Data Service supports both unlimited environments as well as additional capabilities relevant when there are multiple environments, such as copy and reset.
 
@@ -58,7 +58,7 @@ While Project Oakdale focuses on one environment per team, the Common Data Servi
 |Environment lifecycle  |Project Oakdale  |Common Data Service  |
 |---------|---------|---------|
 |Environments   | 1 per Team     | Unlimited        |
-|Maximum size     |   1M Rows / 2GB      |  4TB or more     |
+|Maximum size     |   1M Rows / 2 GB      |  4 TB or more     |
 |Promote to Common Data Service / Microsoft Dynamics 365   |  Yes    |  Yes    |
 
 ## Security
@@ -76,7 +76,7 @@ As Common Data Service is not specific to the Teams environment, it delivers mor
 |Security feature  |Project Oakdale  |Common Data Service  |
 |---------|---------|---------|
 |Admin roles     |  System Administrator and System Customizer       |  System Administrator and System Customizer as well as additional service admin roles. More information: [Use service admin roles to manage your tenant](/power-platform/admin/use-service-admin-role-manage-tenant)      |
-|User roles    | Teams owners, members and Guests        |  Several standard security roles and custom roles can be created. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)       |
+|User roles    | Teams owners, members, and Guests        |  Several standard security roles and custom roles can be created. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)       |
 |Activity Logging     |  Yes       |  Yes       |
 |Business Units     |   One      |  No limit       |
 |Auditing     |  No       |  Yes       |
