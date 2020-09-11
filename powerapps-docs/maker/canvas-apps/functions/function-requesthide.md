@@ -28,10 +28,7 @@ Use the **RequestHide** function to hide the SharePoint form. By default, Reques
 
 ![RequestHide example](media/function-requesthide/requesthide-fuction.png)
 
-### Considerations
-
-- Not required when using **SharePointIntegration** control actions of **OnCancel** as SharePoint by default hides the form when a user selects **Cancel**, and the function only reacts to a SharePoint form.
-- Though available, when using **RequestHide()** outside the context of a **SharePointIntegration** control, such as **OnSelect** for a button, won't return a formula error and the button **OnSelect** won't have any effect.
+> [!NOTE] Not required for **SharePointIntegration** control event **OnCancel** as SharePoint by default hides the form when a user selects **Cancel**, and the function only reacts to a SharePoint form.
 
 ## Syntax
 
