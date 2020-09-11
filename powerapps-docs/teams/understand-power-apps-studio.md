@@ -316,7 +316,7 @@ using data sources.
 You can also use the tables created using the **Tables** option inside the
 environment by expanding the **Tables** option.
 
-![Add data](media/studio-add-1.png "Add data")
+![Add data - select data source](media/studio-add-1.png "Add data - select data source")
 
 Select **Create new table** to create a new table inside the Project Oakdale
 environment.
