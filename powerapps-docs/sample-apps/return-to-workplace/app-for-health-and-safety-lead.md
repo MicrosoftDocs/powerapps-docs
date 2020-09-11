@@ -191,6 +191,8 @@ In this process stage, the case manager monitors and manages the cases, ensuring
 
   > [!div class="mx-imgBorder"]
   > ![Monitoring](media/health-safety-bpf-monitoring.png "Monitoring")
+  
+When you provided instructions you could for the time being indicate the employee is not able to enter a facility. When settings **Facility Access Available** to no, the employee won't be able to get a day pass. When you indicate that the facility access is not available on a employee case, you will be able to give **Employee Instructions** which are visible in the app. With the **Facility Access Available Date** you can indicate when the employee will be able to get a day pass again, a flow will automatically reset **Facility Access Available** when this date is reached.
 
 #### Resolve
 
