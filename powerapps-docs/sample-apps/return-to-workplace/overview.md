@@ -22,7 +22,7 @@ The main modules of the Return to the Workplace solution include:
 
 - **Facility Safety Management** gives facility managers the tools they need to manage the reopening and readiness of the facilities. This helps organizations ensure that they can provide a safe working environment for employees to return to the workplace.
 
-- **Workplace Care Management** gives health and safety leaders the tools they need to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from contact tracing systems to determine exposure. The **Workplace Care Management dashboard** enables monitoring of all the data from the Workplace Care Management app.
+- **Workplace Care Management** gives health and safety leaders the tools they need to actively manage COVID-19 cases, identify hot spots for safety improvement, and import data from external systems to support case management and manual contact tracing. The **Workplace Care Management dashboard** enables monitoring of all the data from the Workplace Care Management app.
 
 - **Employee Return to the Workplace** offers your workforce the self-service tool that they need to feel confident about returning and remain productive while onsite. They can use Employee Return to the Workplace app to check in remotely and self-screen before entering a building.
 
