@@ -249,6 +249,19 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 | Open Case | This can refer to an open case for this employee. By default the lookup will filter on active cases for this employee. If the record was added as a system suggestion, this field will be filled only if only one active case exists. |
 | Comment | Enter additional information, when applicable. |
 
+A case can be directly created from a Case Contact record. To do so, select the row in the subgrid and click on the 'Create Case' button that appears. This button is only visible when one record is selected. The following actions are performed:
+A new Employee Case gets created
+- The new Employee Case is linked to the Case Contact record
+- The new Employee Case has the Employee of the Case Contact record entered
+- The new Employee Case has the original Employee Case entered as originating case.
+- The new Employee Case is assigned to the current user
+- The user is navigated to the newly created record
+- The new Employee Case number is entered in the Open Case field on the Contact record
+- The Case Contact record is deactivated with status 'Case Created'
+
+A case manager can enter additional information. Click 'Save & Close' to return to the original Employee Case record.
+
+
 #### Exposure Score
 
 Exposure score is calculated when the system generates Case Contacts as suggestions when a Case manager links an attestation. The system will only create one record per person. If a person then shared area/entry window/floor via multiple attestations, the exposure score on the existing record is increased. For each day, a Case Contacts gets points only for the highest category applicable. For example; if a case contact suggestion shared Area on one day (10 points) and shared entry window on another day (5 points), the total exposure score for that Case Contact would be 15.
