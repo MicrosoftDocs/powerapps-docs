@@ -33,7 +33,7 @@ search.app:
 
 **Resolution**: This happens when your system admin has customizated parts of the form. To fix the issue, open a browser window and run the following two commands replacing <**orgurl**> with your environment URL.
     
-  - <orglur>/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD) 
-  - <orglur>/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD) 
+ - <orglur>/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD) 
+ - <orglur>/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD) 
 
 
