@@ -106,7 +106,7 @@ Users on iOS 13 or later can use Siri Shortcuts to pin an app to the home screen
 
 
 1. To pin an app to the home screen, select the ellipsis (...) on the app tile.
-2. Select **Add shortcut to Sri**.
+2. Select **Add shortcut to Siri**.
 
    > [!div class="mx-imgBorder"]
    >![Add shortcut to Sri](media/add-shortcut.png "Add shortcut to Sri")
