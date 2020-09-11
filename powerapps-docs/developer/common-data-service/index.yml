@@ -112,6 +112,8 @@ landingContent:
             url: authentication.md
           - text: Build web applications using Server-to-Server (S2S) authentication
             url: build-web-applications-server-server-s2s-authentication.md
+          - text: Use OAuth with CORS to connect an SPA
+            url: /powerapps/developer/common-data-service/oauth-cross-origin-resource-sharing-connect-single-page-application
           - text: Build Windows client applications using the XRM tools
             url: xrm-tooling/build-windows-client-applications-xrm-tools.md
        - linkListType: tutorial
