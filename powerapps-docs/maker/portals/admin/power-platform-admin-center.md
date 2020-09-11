@@ -62,6 +62,10 @@ To configure portal details, see [Portal details](portal-details.md).
 
 Using the Power Platform admin center to manage portals as described in this article replaces earlier functionality, which is illustrated in the following image.
 
+| Old method to manage portal add-on | New method to manage portal add-on for a tenant | New method to manage portal add-on for an environment |
+| - | - | - |
+| ![Old method to manage portal add-on](media/power-platform-admin-center/old.png "Old method to manage portal add-on") | ![New method to manage portal add-on for a tenant](media/power-platform-admin-center/tenant.png "New method to manage portal add-on for a tenant") | ![New method to manage portal add-on for a tenant](media/power-platform-admin-center/environment.png "New method to manage portal add-on for a tenant") |
+
 ![Older functionality for managing a portal add-on](media/power-platform-admin-center/old-admin-center.png "Older functionality for managing a portal add-on")
 
 ### Portal types
