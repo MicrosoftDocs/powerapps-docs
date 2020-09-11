@@ -157,6 +157,6 @@ landingContent:
           - text: Canvas apps Developer Guide
             url: ../../maker/canvas-apps/dev-enterprise-intro.md
           - text: Model-driven apps Developer Guide
-            url: ../model-driven-apps/
+            url: ../model-driven-apps/index.yml
           - text: Power Apps component framework
             url: ../component-framework/overview.md    
