@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/12/2020
+ms.date: 09/11/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -62,9 +62,9 @@ To configure portal details, see [Portal details](portal-details.md).
 
 Using the Power Platform admin center to manage portals as described in this article replaces earlier functionality, which is illustrated in the following image.
 
-| Old method to manage portal add-on | New method to manage portal add-on for a tenant | New method to manage portal add-on for an environment |
+| Old method to manage an add-on portal | New method to manage an add-on portal for a tenant | New method to manage an add-on portal for an environment |
 | - | - | - |
-| ![Old method to manage portal add-on](media/power-platform-admin-center/old.png "Old method to manage portal add-on") | ![New method to manage portal add-on for a tenant](media/power-platform-admin-center/tenant.png "New method to manage portal add-on for a tenant") | ![New method to manage portal add-on for a tenant](media/power-platform-admin-center/environment.png "New method to manage portal add-on for a tenant") |
+| ![Old method to manage an add-on portal](media/power-platform-admin-center/old.png "Old method to manage an add-on portal") | ![New method to manage an add-on portal for a tenant](media/power-platform-admin-center/tenant.png "New method to manage an add-on portal for a tenant") | ![New method to manage an add-on portal for an environment](media/power-platform-admin-center/environment.png "New method to manage an add-on portal for an environment") |
 
 ![Older functionality for managing a portal add-on](media/power-platform-admin-center/old-admin-center.png "Older functionality for managing a portal add-on")
 
