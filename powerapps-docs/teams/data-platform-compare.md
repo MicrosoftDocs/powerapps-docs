@@ -76,9 +76,9 @@ As Common Data Service is not specific to the Teams environment, it delivers mor
 |Security feature  |Project Oakdale  |Common Data Service  |
 |---------|---------|---------|
 |Admin roles     |  System Administrator and System Customizer       |  System Administrator and System Customizer as well as additional service admin roles. More information: [Use service admin roles to manage your tenant](/power-platform/admin/use-service-admin-role-manage-tenant)      |
-|User roles    | Teams owners, members, and Guests        |  Several standard security roles and custom roles can be created. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)       |
+|User roles    | Teams owners, members, and Guests        |  Several standard security roles and custom roles can also be created. More information: [Security roles and privileges](/power-platform/admin/security-roles-privileges)       |
 |Activity Logging     |  Yes       |  Yes       |
-|Business Units     |   One      |  No limit       |
+|Business Units     |   One      |  Unlimited      |
 |Auditing     |  No       |  Yes       |
 |Customer managed environment encryption key     |   No      |  Yes       |
 |Field level security     |   No      |  Yes       |
