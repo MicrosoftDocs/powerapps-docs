@@ -106,23 +106,16 @@ checker](https://powerapps.microsoft.com/blog/powerapps-checker-now-includes-app
 
 ### Settings
 
-Allows you to configure app’s genera settings and turn features on or off.
+Allows you to configure app’s genera settings.
 
-#### General settings
+![App settings](media/studio-general-settings.png "App settings")
 
-Launches app’s general settings and options such as the app name, icon, data row limit, and app icon fill colors.
-
-![General settings](media/studio-general-settings.png "General settings")
-
-#### Features
-
-**Features** option allows you to turn *Preview* or *Experimental* features *On*
-or *Off*.
-
-![Features](media/studio-features.png "Features")
-
-For more information, go to [preview, experimental, or deprecated
-features](../maker/canvas-apps/working-with-experimental-preview.md).
+| Setting name | Description |
+| - | - |
+| App name  | Shows the app name, and allows renaming the app. To rename the app, select ![Edit app name](media/edit-app-name.png "Edit app name").  |
+| License designation  | License designation of the app. More information: [How to check license designation for an app](../maker/canvas-apps/license-designation.md)  |
+| Pass assignment  | Toggle for pass assignment of the app. More information: [About Power Apps per app plans](/power-platform/admin/about-powerapps-perapp.md)  |
+| Preload app for enhanced performance  | Allows users to download the app (preload) while authentication is in progress, enhancing the app load performance. More information: [Improve the performance of your app](../maker/canvas-apps/embed-teams-app.md#improve-the-performance-of-your-app)  |
 
 ### Power Automate
 
