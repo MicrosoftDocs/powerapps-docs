@@ -123,6 +123,13 @@ You can say how you're feeling about returning to the workplace. On the home pag
 > [!NOTE]
 > In the solution settings you can turn this feature off if you don't want to use this.
 
+## Facility access not available
+
+It can happen that a case manager indicates that facility access is no longer available for you. You will see a banner appearing, which indicates the **Facility access is not available**. When clicking the banner, a message is shown with further instructions. 
+
+> [!div class="mx-imgBorder"]
+> ![Facility access is not available](media/facility-access-not-available.png "Facility access is not available")
+
 ## Feedback about the solution
 
 To provide feedback about the Return to the Workplace solution, visit <https://aka.ms/rtw-community>.
