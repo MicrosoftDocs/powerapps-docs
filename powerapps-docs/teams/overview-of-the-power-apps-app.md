@@ -92,7 +92,7 @@ about Power Automate flows, go to [Get started with Power Automate](/power-autom
 ### Tables
 
 In Power Apps, a table defines information that you want to track in the form of records, which typically include properties such as company name, location,
-products, email, and phone. You can then surface that data by creating an app that refers to the entity. For more information about tables, go to [Tables
+products, email, and phone. You can then surface that data by creating an app that refers to the table. For more information about tables, go to [Tables
 overview](../maker/common-data-service/entity-overview.md).
 
 ![Solution explorer - Tables](media/power-apps-overview-12.png "Solution explorer - Tables")
