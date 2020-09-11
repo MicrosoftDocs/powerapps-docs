@@ -46,18 +46,18 @@ The Workplace Care Management app has the following components:
 
 **Employee cases** 
 
-Lists all the cases that have been created and a dashboard.
-
 > [!div class="mx-imgBorder"]
 > ![List of Employee cases](media/health-safety-employee-cases.png "List of Employee cases")
 
-In the Employee Cases component, we have three views with different filters:
+- **Dashboard** - Gives you a dashboard were you can track the status of employee cases.
 
-- **My Employee Cases**: Filtered by owner and only shows active cases. This is the default view.
+- **Employee Case** - List of all the employees. Employees are contacts. In the Employee Cases component, we have three views with different filters:
 
-- **Active Employee Cases**: Shows all the active employee cases. An employee case is considered active when the status field value is set to active. Active Employee Cases are limited to one per employee.
+   - My Employee Cases: Filtered by owner and only shows active cases. This is the default view.
 
-- **Closed Employee Cases**: Shows all the closed employee cases. An employee case is considered closed when it is made inactive either by the case manager or through the process.
+   - Active Employee Cases: Shows all the active employee cases. An employee case is considered active when the status field value is set to active. Active Employee Cases are limited to one per employee.
+
+   - Closed Employee Cases: Shows all the closed employee cases. An employee case is considered closed when it is made inactive either by the case manager or through the process.
 
 > [!div class="mx-imgBorder"]
 > ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
