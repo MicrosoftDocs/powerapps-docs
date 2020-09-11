@@ -66,8 +66,6 @@ Using the Power Platform admin center to manage portals as described in this art
 | - | - | - |
 | ![Old method to manage an add-on portal](media/power-platform-admin-center/old.png "Old method to manage an add-on portal") | ![New method to manage an add-on portal for a tenant](media/power-platform-admin-center/tenant.png "New method to manage an add-on portal for a tenant") | ![New method to manage an add-on portal for an environment](media/power-platform-admin-center/environment.png "New method to manage an add-on portal for an environment") |
 
-![Older functionality for managing a portal add-on](media/power-platform-admin-center/old-admin-center.png "Older functionality for managing a portal add-on")
-
 ### Portal types
 
 The following table describes the different types of portals that are listed in the Power Platform admin center.
