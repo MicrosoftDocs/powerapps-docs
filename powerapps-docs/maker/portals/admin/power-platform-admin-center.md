@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Manage portals from the Power Platform admin center
 
-You can now manage portals in the Power Platform admin center. The Power Platform admin center helps you manage both capacity-based and add-on portals. You can also see information such as how many days are left before a trial portal expires. For more information about portal licensing, see the [licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#portals) and [portal differences](https://docs.microsoft.com/powerapps/maker/portals/faq#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals). For more information about Power Platform admin center, go to [Administer Power Platform](/power-platform/admin/admin-documentation).
+You can now manage portals in the Power Platform admin center. The Power Platform admin center helps you manage both capacity-based and add-on portals. You can also see information such as how many days are left before a trial portal expires. For more information about portal licensing, see the [licensing FAQ](/power-platform/admin/powerapps-flow-licensing-faq#portals) and [portal differences](../faq#what-is-the-difference-between-power-apps-portals-dynamics-365-portals-and-add-on-portals). For more information about Power Platform admin center, go to [Administer Power Platform](/power-platform/admin/admin-documentation).
 
 You can manage portals in the Power Platform admin center in two ways: You can manage all portals for the current tenant from **Resources** > **Portals**, and you can manage portals for a specific environment from **Environments**.
 
@@ -30,7 +30,7 @@ You can manage portals in the Power Platform admin center in two ways: You can m
 
     ![Manage a portal from the Power Platform admin center](media/power-platform-admin-center/portals-manage-ppac.png "Manage a portal from the Power Platform admin center")
 
-To configure portal details, see [Portal details](https://docs.microsoft.com/powerapps/maker/portals/admin/portal-details).
+To configure portal details, see [Portal details](portal-details.md).
 
 ## Manage all portals for an environment
 
@@ -88,14 +88,14 @@ A portal can have the following status: *Configured*, *Suspended*, or *Not-confi
 | Not-configured | This portal is ready to be configured to an environment.   |
 
 > [!NOTE]
-> You can [create a new portal](https://docs.microsoft.com/powerapps/maker/portals/provision-portal-add-on) if the portal add-on status is *Not-configured*. The status will change to *Configured* after the portal is provisioned.
+> You can [create a new portal](../provision-portal-add-on) if the portal add-on status is *Not-configured*. The status will change to *Configured* after the portal is provisioned.
 
 ## Update the Power Apps portal solution
 
 You can use the Power Platform admin center to update your Power Apps portal solution.
 
 > [!IMPORTANT]
-> When changing Dynamics 365 Instance for your portal, ensure the new instance is from the same [region](https://docs.microsoft.com/power-platform/admin/regions-overview) as the current instance. Changing the Dynamics 365 Instance for Power Apps portals across regions isn't supported.
+> When changing Dynamics 365 Instance for your portal, ensure the new instance is from the same [region](/power-platform/admin/regions-overview) as the current instance. Changing the Dynamics 365 Instance for Power Apps portals across regions isn't supported.
 
 1. Select **Manage** to manage your portal by using one of the methods explained earlier in this article.
 
@@ -127,7 +127,6 @@ The update might take a while after you select **Submit**. More information: [Up
 
 ### See also
 
-- [Manage Dynamics 365 apps](https://docs.microsoft.com/power-platform/admin/manage-apps)  
-- [Upgrade a portal](upgrade-portal.md)
 - [Administer Power Platform](/power-platform/admin/admin-documentation)
-
+- [Manage Dynamics 365 apps](/power-platform/admin/manage-apps)  
+- [Upgrade a portal](upgrade-portal.md)
