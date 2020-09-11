@@ -121,7 +121,23 @@ landingContent:
 
 
   # Card
-  - title: Browse
+  - title: Tools and resources
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Developer tools
+            url: /powerapps/developer/common-data-service/developer-tools
+          - text: Microsoft Power Apps CLI
+            url: /powerapps/developer/common-data-service/powerapps-cli
+          - text: Community tools
+            url: /powerapps/developer/common-data-service/community-tools
+      - linkListType: how-to-guide
+        links:  
+          - text: Download tools from NuGet
+            url: /powerapps/developer/common-data-service/download-tools-nuget
+  
+  # Card
+  - title: Entity and API reference
     linkLists:
       - linkListType: reference
         links:
