@@ -104,7 +104,7 @@ landingContent:
             url: /powerapps/developer/common-data-service/publish-app-appsource          
 
     # Card
-  - title: Create custom client applications
+  - title: Create client applications
     linkLists: 
        - linkListType: overview
          links:
