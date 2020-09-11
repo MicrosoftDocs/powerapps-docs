@@ -20,13 +20,13 @@ metadata:
 landingContent:
 
   # Card 
-  - title: Start
+  - title: Get started
     linkLists:
-       - linkListType: get-started
+       - linkListType: overview
          links:
-          - text: Developer Guide overview
+          - text: Developer overview
             url: overview.md
-          - text: Get started with Common Data Service
+          - text: "Developers: Get started"
             url: get-started-CDS-developers.md
        - linkListType: quickstart
          links:
@@ -34,24 +34,8 @@ landingContent:
             url: webapi/quick-start-console-app-csharp.md
        - linkListType: learn
          links:
-          - text: Introduction to Common Data Service
+          - text: Introduction to Common Data Service for developers
             url: https://docs.microsoft.com/learn/modules/intro-cds-developers-power-platform/
-
-  # Card
-  - title: Connect
-    linkLists: 
-       - linkListType: overview
-         links:
-          - text: Authentication and the web services
-            url: authentication.md
-          - text: Build web applications using Server-to-Server (S2S) authentication
-            url: build-web-applications-server-server-s2s-authentication.md
-          - text: Work with data using code
-            url: work-with-data-cds.md
-       - linkListType: tutorial
-         links:  
-          - text: Register an app with Azure Active Directory
-            url: walkthrough-register-app-azure-active-directory.md
 
   # Card
   - title: Access
@@ -66,24 +50,23 @@ landingContent:
             url: webapi/overview.md
           - text: Use the web services .NET class library
             url: org-service/overview.md
-          - text: Build Windows client applications using the XRM tools
-            url: xrm-tooling/build-windows-client-applications-xrm-tools.md
+          
           
   # Card
-  - title: Data
+  - title: Work with data
     linkLists:
-       - linkListType: concept
+       - linkListType: overview
          links:
+          - text: Work with data using code
+            url: work-with-data-cds.md
+          - text: Web API types and operations
+            url: /powerapps/developer/common-data-service/webapi/web-api-types-operations
+          - text: Entity Operations using the Organization service
+            url: /powerapps/developer/common-data-service/org-service/entity-operations
+          - text: Use FetchXML to query data
+            url: /powerapps/developer/common-data-service/use-fetchxml-construct-query
           - text: Use SQL to query data
-            url: cds-sql-query.md
-          - text: Use FetchXML to construct a query
-            url: use-fetchxml-construct-query.md
-       - linkListType: quickstart
-         links:
-          - text: Organization service sample (C#)
-            url: org-service/quick-start-org-service-console-app.md
-          - text: Web API Data operations Samples (C#)
-            url: webapi/web-api-samples-csharp.md
+            url: /powerapps/developer/common-data-service/cds-sql-query
 
   # Card
   - title: Extend
@@ -120,6 +103,23 @@ landingContent:
         links:
           - text: Use developer tools to extend the Power Platform
             url: https://docs.microsoft.com/learn/modules/use-developer-tools-extend/
+
+    # Card
+  - title: Create custom client applications
+    linkLists: 
+       - linkListType: overview
+         links:
+          - text: Authentication and the web services
+            url: authentication.md
+          - text: Build web applications using Server-to-Server (S2S) authentication
+            url: build-web-applications-server-server-s2s-authentication.md
+          - text: Build Windows client applications using the XRM tools
+            url: xrm-tooling/build-windows-client-applications-xrm-tools.md
+       - linkListType: tutorial
+         links:  
+          - text: Register an app with Azure Active Directory
+            url: walkthrough-register-app-azure-active-directory.md
+
 
   # Card
   - title: Browse
