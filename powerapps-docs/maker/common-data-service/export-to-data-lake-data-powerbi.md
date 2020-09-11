@@ -59,37 +59,9 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
 8. If prompted to sign in, you can sign in with your Azure Active Directory account or with the **Account key**. To sign in with an **Account key**, select the option from the left side bar.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-9. Find the access key by going back to the storage account setting and selecting **Access keys** from the left navigation pane. Copy the first key.
-
-    ![Copy access key](media/copy-access-key.png)
-
-10. Expand **cdm**, select the **account** data, and then select **Load**.
-
-    ![Load account data](media/load-account-data.png)
-
-## Create a Power BI report with account revenue by account owner
-
-1. Select the **Pie Chart** from the **Visualizations** menu.
-
-    ![Pie chart](media/pie-chart.png)
-
-2. Under the **Fields** menu search for the fields *ownerid* and *revenue* and select the fields. The **ownerid** field should appear under **Legend** and **revenue** should appear under **Values** in the **Visualizations** menu.
-
-    ![Search for and select revenue field](media/select-fields.png)
-
-3. A pie chart that separates each account owner by color and displays the total revenue of accounts appears. 
-
-    ![A picture containing screenshot Description automatically generated](media/account-data-pie-chart.png)
-
-### See also
-[Export entity data to Azure Data Lake Storage Gen2](export-to-data-lake.md)
-=======
 9. Find the access key by going back to the storage account setting and selecting **Access keys** from the left pane. Copy the first key.
-=======
-9. Find the account key by going back to the storage account settings and selecting **Access keys** from the left pane. Copy the first key and paste it in Power BI. Select **OK**.
->>>>>>> origin/master
+
+10. Find the account key by going back to the storage account settings and selecting **Access keys** from the left pane. Copy the first key and paste it in Power BI. Select **OK**.
 
     ![Copy the access key](media/copy-access-key.png "Copy the access key")
 
@@ -114,4 +86,4 @@ This section describes the prerequisites necessary to consume Common Data Servic
 ### See also
 
 [Export entity data to Azure Data Lake Storage Gen2](export-to-data-lake.md)
->>>>>>> origin/master
+
