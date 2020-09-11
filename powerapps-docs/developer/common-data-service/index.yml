@@ -36,21 +36,7 @@ landingContent:
          links:
           - text: Introduction to Common Data Service for developers
             url: https://docs.microsoft.com/learn/modules/intro-cds-developers-power-platform/
-
-  # Card
-  - title: Access
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Security concepts in Common Data Service
-            url: https://docs.microsoft.com/power-platform/admin/wp-security-cds
-      - linkListType: how-to-guide
-        links:
-          - text: Use the Web API
-            url: webapi/overview.md
-          - text: Use the web services .NET class library
-            url: org-service/overview.md
-          
+         
           
   # Card
   - title: Work with data
@@ -69,40 +55,55 @@ landingContent:
             url: /powerapps/developer/common-data-service/cds-sql-query
 
   # Card
-  - title: Extend
+  - title: Integrate external data
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Azure integration
+            url: /powerapps/developer/common-data-service/azure-integration
+          - text: Webhooks
+            url: /powerapps/developer/common-data-service/use-webhooks
+          - text: Synchronize data with external system
+            url: /powerapps/developer/common-data-service/data-synchronization
+          - text: Import data
+            url: /powerapps/developer/common-data-service/import-data
+      
+
+  # Card
+  - title: Apply business logic
     linkLists:
       - linkListType: concept
         links:
-          - text: Event Framework
-            url: event-framework.md
+          - text: Event framework
+            url: /powerapps/developer/common-data-service/event-framework
       - linkListType: overview
         links:
-          - text: Apply business logic using code
-            url: apply-business-logic-with-code.md
-          - text: Azure Integration
-            url: azure-integration.md
-      - linkListType: learn
+          - text: Plug-ins
+            url: /powerapps/developer/common-data-service/plug-ins
+          - text: Workflow extensions
+            url: /powerapps/developer/common-data-service/workflow/workflow-extensions
+      - linkListType: overview
         links:
-          - text: Extending the Microsoft Power Platform
-            url: https://docs.microsoft.com/learn/modules/introduction-power-platform-extensibility-model/
-
+          - text: Publish your app on AppSource
+            url: /powerapps/developer/common-data-service/publish-app-appsource
+  
   # Card
-  - title: Deploy
+  - title: Deploy and publish
     linkLists:
       - linkListType: deploy
         links:
           - text: Solution concepts
-            url: https://docs.microsoft.com/power-platform/alm/solution-concepts-alm
+            url: /powerapps/developer/common-data-service/introduction-solutions
           - text: ALM for developers
             url: https://docs.microsoft.com/power-platform/alm/alm-for-developers
       - linkListType: sample
         links:
           - text: Work with solutions using the SDK APIs
             url: /power-platform/alm/solution-api
-      - linkListType: learn
+      - linkListType: overview
         links:
-          - text: Use developer tools to extend the Power Platform
-            url: https://docs.microsoft.com/learn/modules/use-developer-tools-extend/
+          - text: Publish your app on AppSource
+            url: /powerapps/developer/common-data-service/publish-app-appsource
 
     # Card
   - title: Create custom client applications
@@ -126,23 +127,24 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Entity data model
+          - text: Entity reference
             url: reference/about-entity-reference.md
-          - text: XRM Tooling API Reference
-            url: https://docs.microsoft.com/dotnet/api/?view=dynamics-xrmtooling-ce-9  
           - text: SDK API class libraries
             url: https://docs.microsoft.com/dotnet/api/?view=dynamics-general-ce-9
           - text: Web API
             url: /dynamics365/customer-engagement/web-api/about?view=dynamics-ce-odata-9
+          - text: XRM Tooling API Reference
+            url: https://docs.microsoft.com/dotnet/api/?view=dynamics-xrmtooling-ce-9 
+
 
   # Card
-  - title: More
+  - title: Related resources
     linkLists:
       - linkListType: overview
         links:
           - text: Canvas apps Developer Guide
             url: ../../maker/canvas-apps/dev-enterprise-intro.md
           - text: Model-driven apps Developer Guide
-            url: ../model-driven-apps/overview.md
+            url: ../model-driven-apps/
           - text: Power Apps component framework
             url: ../component-framework/overview.md    
