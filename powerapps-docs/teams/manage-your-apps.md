@@ -1,5 +1,5 @@
 ---
-title: Manage your app | Microsoft Docs
+title: Manage your apps | Microsoft Docs
 description: Learn how to manage your apps using Power Apps app from Teams.
 author: tapanm-msft
 ms.service: powerapps
@@ -10,7 +10,7 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Manage your app
+# Manage your apps
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
