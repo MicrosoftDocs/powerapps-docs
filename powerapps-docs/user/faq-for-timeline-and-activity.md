@@ -50,15 +50,6 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 
 **My activities** stream in the dashboard shows the records and activities that are owned by you (user). For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
 
-## See also
-
-[Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
-
-[FAQs for timeline control](../maker/model-driven-apps/faqs-timeline-control.md)
-
-[Add an appointment, email, phone call, note, or task activity to the timeline](add-activities.md)
-
-[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
 
 ## Known issues
 
@@ -79,4 +70,15 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
  - (replace with your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD))
  
 To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the enviroment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
+
+## See also
+
+[Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
+
+[FAQs for timeline control](../maker/model-driven-apps/faqs-timeline-control.md)
+
+[Add an appointment, email, phone call, note, or task activity to the timeline](add-activities.md)
+
+[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
+
     
