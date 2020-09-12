@@ -32,7 +32,7 @@ You can update the Return to the Workplace solution by using the Power Platform 
 > [!NOTE]
 > If you're a US Government customer, you'll have to update the solution by using the latest version of the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](deploy.md#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only)
 
-  1. Sign in to the [Power Platform admin center](https://admin.powerapps.com).
+  1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com).
 
   2. On the left pane, select **Environments**, and then select the environment where you want to update the solution.
 
