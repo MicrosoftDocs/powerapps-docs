@@ -18,7 +18,7 @@ search.app:
   - D365CE
 ---
 
-# Check your user access and permissions
+# Check your user access to a record
 
 To perform an action on a record, a user needs to have the required privilege assigned through a security role or the user is a member of a team that has a security role with assigned privileges.
 
@@ -33,9 +33,9 @@ You can have access rights to a perform an action on a record through ownership,
 |**Shared access**| The record is shared with a user, team, or organization by a user that has appropriate share rights.|  
 |**Hierarchy access**|Hierarchy access only takes place if hierarchy security management is turned on for the organization and the entity. The user also needs to be a manager.
 
-For more information on how privilegse and access check works, see [How access to a record is determined](https://review.docs.microsoft.com/en-us/power-platform/admin/how-record-access-determined?branch=JimHoltzWorkBranch2).
+For more information on how privilegse and access check works, see [How access to a record is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
 
-## Check your access for a record
+## Check your access to a record
 
 
 1. Select a record and then select **Edit** on the command bar.
