@@ -1157,7 +1157,7 @@
     - name: Apply business logic in an app
       href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
       items:
-      - name: Create a business rule  for a form
+      - name: Create a business rule for a form
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
     - name: Apply data visualizations in an app
       items:
@@ -1669,6 +1669,24 @@
     items:
       - name: Create a business rule for an entity
         href: ./common-data-service/data-platform-create-business-rule.md
+      - name: Work with workflows
+        items:
+        - name: Overview
+          href: ./common-data-service/overview-realtime-workflows.md    
+        - name: Configure real-time workflow stages and steps
+          href: ./common-data-service/configure-workflow-steps.md
+        - name: Monitor and manage real-time workflow processes
+          href: ./common-data-service/monitor-manage-processes.md
+        - name: Best practices for real-time workflow processes
+          href: ./common-data-service/best-practices-workflow-processes.md
+      - name: Work with actions
+        items:
+        - name: Use actions
+          href: ./common-data-service/actions.md
+        - name: Configure custom actions from a real-time workflow
+          href: ./common-data-service/configure-actions.md    
+        - name: Invoke custom actions from a real-time workflow
+          href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
   - name: Work with solutions
     items:
       - name: Solutions overview
