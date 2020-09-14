@@ -102,8 +102,10 @@ landingContent:
             url: clientapi/reference.md
           - text: Customization XML reference
             url: customization-xml-reference.md      
-          - text: Power Apps component framework reference
+          - text: Power Apps component framework API reference
             url: ../component-framework/reference/index.md
+          - text: Power Apps component framework Manifest schema reference
+            url: /powerapps/developer/component-framework/manifest-schema-reference
 
 # Card
   - title: Related resources
