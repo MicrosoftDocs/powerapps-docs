@@ -497,7 +497,7 @@ Now that you have enabled Web API and configured user permissions, create a Web 
 
 1. Enter Partial URL as *webapi*.
 
-1. Select Page Template as *Hope*.
+1. Select Page Template as *Home*.
 
 1. Select Publishing State as *Published*.
 
