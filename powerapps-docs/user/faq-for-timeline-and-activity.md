@@ -63,7 +63,7 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 
 **Issue**: The **From** field in an email form is read-only or you can't look up records and filter results by **User** or **Queue**.
 
-**Resolution**: This happens when your system administrator has customized parts of the form. To fix the issue, open a browser window and run the following two commands replacing the **environment URL** with the URL of your environment.
+**Resolution**: This happens when customization specifically have been applied on this field by your system administrator. To fix the issue, open a browser window and run the following two commands replacing the **environment URL** with the URL of your environment.
 
 
  - (replace with your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD))
