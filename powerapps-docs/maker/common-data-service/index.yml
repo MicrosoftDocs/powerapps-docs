@@ -65,6 +65,20 @@ landingContent:
           - text: Create an option set
             url: custom-picklists.md
 
+    # Card
+  - title: Apply business logic
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Business rules 
+            url: data-platform-create-business-rule.md
+          - text: Real-time workflows
+            url: overview-realtime-workflows.md
+          - text: Actions
+            url: actions.md
+          - text: More >
+            url: cds-processes.md
+
   # Card
   - title: Work with dataflows
     linkLists:
@@ -80,20 +94,6 @@ landingContent:
             url: connect-azure-data-lake-storage-for-dataflow.md
 
   # Card
-  - title: Use solutions for ALM
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Solutions overview
-            url: solutions-overview.md
-      - linkListType: how-to-guide
-        links:
-         - text: Create a solution
-           url: create-solution.md
-         - text: Export solutions
-           url: export-solutions.md
-
-  # Card
   - title: Integrate with external data
     linkLists:
       - linkListType: concept
@@ -107,31 +107,22 @@ landingContent:
           - text: Create a Power BI report
             url: data-platform-powerbi-connector.md
 
+
   # Card
-  - title: Apply business logic
+  - title: Use solutions for ALM
     linkLists:
       - linkListType: overview
         links:
-          - text: Business rules 
-            url: data-platform-create-business-rule.md
-          - text: Real-time workflows
-            url: overview-realtime-workflows.md
-          - text: Actions
-            url: actions.md
-          - text: More >
-            url: cds-processes.md 
-
-  # Card
-  - title: Troubleshoot
-    linkLists:
+          - text: What are solutions?
+            url: solutions-overview.md
       - linkListType: how-to-guide
         links:
-          - text: View solution layers
-            url: solution-layers.md
-          - text: View solution history
-            url: solution-history.md
-          - text: Use solution checker
-            url: use-powerapps-checker.md
+         - text: Create a solution
+           url: create-solution.md
+         - text: Export solutions
+           url: export-solutions.md
+         - text: More > 
+           url: solution-layers.md
 
   # Card
   - title: For developers
