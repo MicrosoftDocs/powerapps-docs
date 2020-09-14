@@ -47,7 +47,7 @@ To import a solution:
   
 1. Information about the solution is displayed. By default, in the **Advanced settings** section, if SDK messages and flows exist in the solution, they will be imported. Clear the **Enable SDK messages and flows included in the solution** option if you want them to import in an inactive state. 
 
-1. If your solution contains connection references, you’ll be prompted to select the connections you want. If a connection does not already exist, create a new one. Click **Next**.
+1. If your solution contains [connection references](create-connection-reference.md), you’ll be prompted to select the connections you want. If a connection does not already exist, create a new one. Click **Next**.
 
 1. If your solution contains [environment variables](EnvironmentVariables.md), you will be prompted to enter values. You will not see this screen if value(s) are already present in your solution or the target environment. 
 
