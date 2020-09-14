@@ -1,0 +1,180 @@
+### YamlMime:Hub
+
+title: Microsoft Power Apps documentation # < 60 chars
+summary: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps.
+# brand: aspnet | azure | dotnet | dynamics | m365 | office | sql | windows | visual-studio | xamarin
+brand: dynamics
+
+metadata:
+  title: Microsoft Power Apps documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Learn how to quickly build low-code apps that modernize processes and solve tough business challenges in your organization using Power Apps. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: powerapps #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: hub-page # Required
+  author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kvivek #Required; microsoft alias of author; optional team alias.
+  ms.date: 09/13/2020 #Required; mm/dd/yyyy format.
+  hide_bc: false
+
+
+highlightedContent:
+
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample tutorial | video | whats-new
+
+  items:
+    # Card
+    - title: What is Power Apps?
+      itemType: overview
+      url: powerapps-overview.md
+
+    # Card
+    - title: What's new in Power Apps?
+      itemType: whats-new
+      url: whats-new.md
+
+    # Card
+    - title: "Power Apps videos"
+      itemType: video
+      url: https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg
+
+    # Card
+    - title: Power Apps training on Microsoft Learn
+      itemType: learn
+      url: https://docs.microsoft.com/en-us/learn/browse/?products=power-apps
+
+# conceptualContent section
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+conceptualContent:  
+  items:
+    - title: Get started with Power Apps
+      links:
+        - text: Sign up for free
+          url: /powerapps/maker/signup-for-powerapps
+          itemType: get-started        
+        - text: Get started with app creation
+          url: /powerapps/maker/
+          itemType: overview
+        - text: Plan a Power Apps project
+          url: /powerapps/guidance/planning/introduction
+          itemType: overview      
+    
+    - title: Create apps and portals
+      links:
+        - text: Canvas apps
+          url: /powerapps/maker/canvas-apps
+          itemType: overview
+        - text: Model-driven apps
+          url: /powerapps/maker/model-driven-apps
+          itemType: overview
+        - text: Portals
+          url: /powerapps/maker/portals
+          itemType: overview             
+    
+    - title: Work with data platform
+      links:
+        - text: What is Common Data Service?
+          url: /powerapps/maker/common-data-service/data-platform-intro
+          itemType: overview
+        - text: Entities and metadata
+          url: /powerapps/maker/common-data-service/create-edit-metadata
+          itemType: concept
+      footerLink:
+        url: /powerapps/maker/common-data-service
+        text: More
+
+    - title: Use solutions for ALM
+      links:
+        - text: What are solutions?
+          url: /powerapps/maker/common-data-service/solutions-overview
+          itemType: overview
+        - text: Implement healthy ALM using solutions
+          url: /power-platform/alm/overview-alm
+          itemType: overview
+        - text: Use Microsoft Power Platform Build Tools
+          url: /power-platform/alm/devops-build-tools
+          itemType: how-to-guide     
+
+    - title: Administer Power Apps
+      links:
+        - text: Use Power Platform admin center
+          url: https://docs.microsoft.com/power-platform/admin/admin-documentation
+          itemType: overview
+        - text: Power Apps licensing
+          url: https://docs.microsoft.com/power-platform/admin/pricing-billing-skus
+          itemType: overview
+        - text: Microsoft Power Platform guidance documentation
+          url: /power-platform/guidance
+          itemType: how-to-guide     
+    
+    - title: Power Apps for developers
+      links:
+        - text: Common Data Service developer
+          url: /powerapps/developer/common-data-service/
+          itemType: reference
+        - text: Model-driven apps developer
+          url: /powerapps/developer/model-driven-apps
+          itemType: reference
+        - text: Canvas apps developer
+          url: /powerapps/maker/canvas-apps/dev-enterprise-intro
+          itemType: reference    
+    
+    - title: Sample apps and solutions
+      links:
+        - text: Hospital Emergency Response
+          url: /powerapps/sample-apps/emergency-response/overview
+          itemType: overview
+        - text: Regional Government Emergency Response and Monitoring
+          url: /powerapps/sample-apps/regional-emergency-response/overview
+          itemType: overview
+        - text: Return to the Workplace
+          url: /powerapps/sample-apps/return-to-workplace/overview
+          itemType: overview
+    
+    - title: Best practices guidance
+      links:
+        - text: Power Apps patterns
+          url: /powerapps/guidance/patterns/overview
+          itemType: reference
+        - text: Planning a Power Apps project
+          url: /powerapps/guidance/planning/introduction
+          itemType: reference
+    
+    - title: Learning catalog
+      links:
+        - text: App maker
+          url: /powerapps/learning-catalog/app-maker
+          itemType: learn
+        - text: Developer
+          url: /powerapps/learning-catalog/developer
+          itemType: learn     
+      footerLink:
+        url: /powerapps/learning-catalog/get-started
+        text: More
+
+# additionalContent section (optional)
+# Card with summary style
+additionalContent:
+  # Supports up to 3 sections
+  sections:
+    - title: Other Microsoft Power Platform products # < 60 chars (optional)
+    - items:
+        # Card
+        - title: Power Automate
+          summary: Create automated workflows between your favorite apps and services to synchronize files, get notifications, collect data, and more.
+          url: https://docs.microsoft.com/power-automate
+        # Card
+        - title: Power BI
+          summary: Turn your unrelated sources of data into coherent, visually immersive, and interactive insights.
+          url: https://docs.microsoft.com/power-bi
+        - title: Power Virtual Agents
+          summary: Create powerful bots using a guided, no-code graphical interface without the need for data scientists or developers.
+          url: https://docs.microsoft.com/power-virtual-agents
+    - title: See also
+      items:
+      # Card
+      - title: Dynamics 365
+        summary: "The next generation of CRM and ERP applications"
+        url: https://docs.microsoft.com/dynamics365/
+      # Card
+      - title: Microsoft Azure
+        summary: "Ever-expanding set of cloud computing services to help your organization meet it's business challenges"
+        url: https://docs.microsoft.com/azure

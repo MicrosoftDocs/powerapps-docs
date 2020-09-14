@@ -1,6 +1,6 @@
 ---
-title: "Classic Common Data Service real-time workflows | MicrosoftDocs"
-description: "Classic Common Data Service real-time workflows"
+title: "Common Data Service real-time workflows | MicrosoftDocs"
+description: "Common Data Service real-time workflows"
 ms.custom: ""
 ms.date: 07/27/2020
 ms.reviewer: "matp"
@@ -16,17 +16,17 @@ search.audienceType:
   - flowmaker
   - enduser
 ---
-# Classic Common Data Service real-time workflows 
+# Common Data Service real-time workflows 
 
 Workflows automate business processes without a user interface. People usually use workflow processes to initiate automation that doesn’t require any user interaction.
 
 There are two types of workflows:
-1. Background workflows. See the [Power Automate](https://docs.microsoft.com/power-automate/workflow-processes) documentation for more details about real-time workflows.
-1. Real-time workflows. 
+- Background workflows. See the [Power Automate](https://docs.microsoft.com/power-automate/workflow-processes) documentation for more details about background workflows.
+- Real-time workflows. 
 
 ## Real-time workflows
 
-To create real-time workflows, you must *uncheck* the **Run this workflow in the background (recommended)** checkbox, as displayed in the following image.
+To create real-time workflows, you must *uncheck* the **Run this workflow in the background (recommended)** checkbox, while defining the workflow.
 
 ![Workflow process with Under&#47;Not Under operators](media/wfp-under-not-under.PNG "Workflow process with Under/Not Under operators")
 
