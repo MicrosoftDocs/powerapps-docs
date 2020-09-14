@@ -53,8 +53,6 @@ To import a solution:
 
 1. Select **Import**.
 
-   :::image type="content" source="media/import-solution-pane.png" alt-text="Import solution information and options":::
-
 Your solution imports in the background and may take a few moments.  
   
  If you have imported any changes that require publishing, you must publish customizations before they are available.

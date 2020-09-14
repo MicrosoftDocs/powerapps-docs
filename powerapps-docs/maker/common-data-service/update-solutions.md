@@ -60,6 +60,8 @@ The procedure to import the updated solution is similar to installing a new mana
         
 9. Select **Import**.  
 
+   :::image type="content" source="media/import-solution-pane.png" alt-text="Import solution information and options":::
+
 10. You may need to wait a few moments while the solution import completes. If it's successful, you can view the results and select **Close**.  
 
    Managed customizations are always imported in a published state, so there is no need to publish customizations after import in this scenario.
