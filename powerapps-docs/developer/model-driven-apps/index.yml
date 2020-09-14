@@ -68,6 +68,8 @@ landingContent:
         links:
           - text: Web resources
             url: web-resources.md 
+          - text: Script web resource development using Fiddler AutoResponder
+            url: /powerapps/developer/model-driven-apps/streamline-javascript-development-fiddler-autoresponder
           - text: Web resource dependencies
             url: web-resource-dependencies.md
       - linkListType: sample
@@ -102,6 +104,8 @@ landingContent:
             url: clientapi/reference.md
           - text: Customization XML reference
             url: customization-xml-reference.md      
+          - text: Form XML schema
+            url: /powerapps/developer/model-driven-apps/form-xml-schema
           - text: Power Apps component framework API reference
             url: ../component-framework/reference/index.md
           - text: Power Apps component framework Manifest schema reference
