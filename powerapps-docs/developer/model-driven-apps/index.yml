@@ -66,14 +66,16 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Web resources overview
-            url: web-resources.md
-      - linkListType: concept
-        links:
-          - text: Use web resources
-            url: use-web-resources.md      
+          - text: Web resources
+            url: web-resources.md 
           - text: Web resource dependencies
             url: web-resource-dependencies.md
+      - linkListType: sample
+        links:
+          - text: Pass multiple values to a web resource
+            url: sample-pass-multiple-values-web-resource-through-data-parameter.md
+          - text: Import files as web resources
+            url: sample-import-files-web-resources.md
 
 # Card
   - title: Build custom code components
