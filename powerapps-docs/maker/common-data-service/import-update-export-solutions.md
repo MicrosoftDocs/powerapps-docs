@@ -24,7 +24,7 @@ search.app:
 You can manually import solutions using the steps in this article. You must import only those solutions that you've obtained from a trusted source.
  
 > [!NOTE]
-> - To import a solution that includes a plug-in assembly, the **Create** privilege on the **Plug-In Assembly** entity is required. Although, the System Customer security role has create privilege on most components that are commonly imported, by default it doesn't have create privilege on the plug-in assembly entity. The System Administrator security role has this privilege.
+> - The create priviledge is required to import a component. Although, the System Customer security role has create privilege on most components that are commonly imported, by default it doesn't have create privilege on the **Plug-In Assembly** entity. The System Administrator security role has this privilege.
 > - When you import a managed solution, all component changes will be brought into the environment in a published state. However, when you import an unmanaged solution, the changes are imported in a draft state so you must publish them to make them active. 
 > - To implement healthy application lifecycle management (ALM) in your organization, consider using a source control system to store and collaborate on your solutions, and automate the solution import process. More information: [ALM basics](/power-platform/alm/basics-alm) in the Power Platform ALM guide.
 
