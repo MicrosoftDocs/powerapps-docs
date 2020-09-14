@@ -112,14 +112,14 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Use 
-            url: cds-processes.md
-      - linkListType: how-to-guide
-        links:
-          - text: Create a business rule
+          - text: Business rules 
             url: data-platform-create-business-rule.md
-          - text: Create a business process flow
-            url: https://docs.microsoft.com/power-automate/create-business-process-flow
+          - text: Real-time workflows
+            url: overview-realtime-workflows.md
+          - text: Actions
+            url: actions.md
+          - text: More >
+            url: cds-processes.md 
 
   # Card
   - title: Troubleshoot
