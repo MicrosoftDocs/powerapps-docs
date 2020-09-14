@@ -165,6 +165,8 @@
     href: ./canvas-apps/intro-maker-portal.md
 - name: Canvas apps
   items:
+  - name: Canvas apps
+    href: ./canvas-apps/index.yml
   - name: What are canvas apps?
     href: ./canvas-apps/getting-started.md
   - name: System requirements, limits, and configuration
@@ -979,6 +981,8 @@
       href: ./canvas-apps/embedding-sdk.md
 - name: Model-driven apps
   items:
+  - name: Model-driven apps
+    href: ./model-driven-apps/index.yml
   - name: What are model-driven apps?
     href: ./model-driven-apps/model-driven-app-overview.md
   - name: Explore sample apps
@@ -1149,7 +1153,7 @@
     - name: Apply business logic in an app
       href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
       items:
-      - name: Create a business rule  for a form
+      - name: Create a business rule for a form
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
     - name: Apply data visualizations in an app
       items:
@@ -1249,12 +1253,12 @@
 
 - name: Portals
   items:
+    - name: Portals
+      href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
     - name: Release updates
       href: ./portals/release-updates.md
-    - name: "Microsoft Learn: Get started with Power Apps portals"
-      href: https://docs.microsoft.com/learn/modules/intro-portals/
     - name: Design and build a portal
       items:
         - name: Portal templates
@@ -1522,6 +1526,8 @@
       href: ./portals/legacy-portal-faq.md
 - name: Common Data Service
   items:
+  - name: Common Data Service
+    href: ./common-data-service/index.yml
   - name: What is Common Data Service?
     href: ./common-data-service/data-platform-intro.md
   - name: Why choose Common Data Service? 
@@ -1538,14 +1544,14 @@
     items:
     - name: Entity overview
       href: ./common-data-service/entity-overview.md
+    - name: Entities and metadata
+      href: ./common-data-service/create-edit-metadata.md
+    - name: Types of entities
+      href: ./common-data-service/types-of-entities.md    
     - name: "Create an entity"
       href: ./common-data-service/data-platform-create-entity.md
     - name: "Create a custom entity that has components"
       href: ./common-data-service/create-custom-entity.md
-    - name: Entities and metadata
-      href: ./common-data-service/create-edit-metadata.md
-    - name: Types of entities
-      href: ./common-data-service/types-of-entities.md
     - name: Edit an entity
       href: ./common-data-service/edit-entities.md
     - name: Create and edit virtual entities
@@ -1661,6 +1667,24 @@
     items:
       - name: Create a business rule for an entity
         href: ./common-data-service/data-platform-create-business-rule.md
+      - name: Work with workflows
+        items:
+        - name: Overview
+          href: ./common-data-service/overview-realtime-workflows.md    
+        - name: Configure real-time workflow stages and steps
+          href: ./common-data-service/configure-workflow-steps.md
+        - name: Monitor and manage real-time workflow processes
+          href: ./common-data-service/monitor-manage-processes.md
+        - name: Best practices for real-time workflow processes
+          href: ./common-data-service/best-practices-workflow-processes.md
+      - name: Work with actions
+        items:
+        - name: Use actions
+          href: ./common-data-service/actions.md
+        - name: Configure custom actions from a real-time workflow
+          href: ./common-data-service/configure-actions.md    
+        - name: Invoke custom actions from a real-time workflow
+          href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
   - name: Work with solutions
     items:
       - name: Solutions overview
