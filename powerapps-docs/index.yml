@@ -107,13 +107,13 @@ conceptualContent:
     
     - title: Power Apps for developers
       links:
-        - text: Common Data Service developer documentation
+        - text: Common Data Service developer
           url: /powerapps/developer/common-data-service/
           itemType: reference
-        - text: Model-driven apps developer documentation
+        - text: Model-driven apps developer
           url: /powerapps/developer/model-driven-apps
           itemType: reference
-        - text: Canvas apps developer documentation
+        - text: Canvas apps developer
           url: /powerapps/maker/canvas-apps/dev-enterprise-intro
           itemType: reference    
     
