@@ -1,0 +1,125 @@
+### YamlMime:Landing
+
+title: Model-driven apps developer documentation
+summary: Model-driven apps are primarily a no-code or low-code component focused approach to app development. Extend model-driven apps by applying business logic using client scripting, web resources. Customize entity forms, views, dashboards, chart, commands and ribbons. 
+
+metadata:
+  title: Model-driven apps developer documentation
+  description: Provides access to highlighted areas within the model-driven apps documentation
+  services: service
+  ms.service: powerapps 
+  ms.subservice: subservice
+  ms.topic: landing-page 
+  ms.collection: collection
+  author: kumarvivek
+  ms.author: kvivek
+  ms.date: 09/03/2019 
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card 
+  - title: Get started
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: Developer overview
+            url: overview.md
+          - text: "Developers: Get started"
+            url: supported-customizations.md
+       - linkListType: learn
+         links:
+          - text: Extend model-driven apps using code
+            url: https://docs.microsoft.com/learn/paths/extend-power-platform-model-driven-app
+
+  # Card
+  - title: Customize
+    linkLists:
+       - linkListType: overview
+         links:
+          - text: Customize entity forms
+            url: customize-entity-forms.md
+          - text: Customize entity views
+            url: customize-entity-views.md
+          - text: Customize visualizations and dashboards
+            url: customize-visualizations-dashboards.md
+          - text: Customize commands and ribbons
+            url: customize-commands-ribbon.md  
+          
+  # Card
+  - title: Apply business logic
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Client scripting
+            url: client-scripting.md
+          - text: Understand the Client API object model
+            url: clientapi/understand-clientapi-object-model.md
+      - linkListType: tutorial
+        links:
+          - text: Write your first client script
+            url: clientapi/walkthrough-write-your-first-client-script.md
+
+  # Card
+  - title: Work with Web resources
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Web resources
+            url: web-resources.md 
+          - text: Script web resource development using Fiddler AutoResponder
+            url: /powerapps/developer/model-driven-apps/streamline-javascript-development-fiddler-autoresponder
+          - text: Web resource dependencies
+            url: web-resource-dependencies.md
+      - linkListType: sample
+        links:
+          - text: Pass multiple values to a web resource
+            url: sample-pass-multiple-values-web-resource-through-data-parameter.md
+          - text: Import files as web resources
+            url: sample-import-files-web-resources.md
+
+# Card
+  - title: Build custom code components
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Power Apps component framework
+            url: ../component-framework/overview.md
+      - linkListType: tutorial
+        links:
+          - text: Create your first code component
+            url: ../component-framework/implementing-controls-using-typescript.md      
+      - linkListType: learn
+        links:
+          - text: Create components with Power Apps Component Framework
+            url: https://docs.microsoft.com/learn/paths/use-power-apps-component-framework/
+
+# Card
+  - title: Reference
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Client API reference
+            url: clientapi/reference.md
+          - text: Customization XML reference
+            url: customization-xml-reference.md      
+          - text: Form XML schema
+            url: /powerapps/developer/model-driven-apps/form-xml-schema
+          - text: Power Apps component framework API reference
+            url: ../component-framework/reference/index.md
+          - text: Power Apps component framework Manifest schema reference
+            url: /powerapps/developer/component-framework/manifest-schema-reference
+
+# Card
+  - title: Related resources
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Model-driven apps documentation
+            url: /powerapps/maker/model-driven-apps
+          - text: Common Data Service developer documentation
+            url: /powerapps/developer/common-data-service      
+          - text: Canvas apps developer documentation
+            url: /powerapps/maker/canvas-apps/dev-enterprise-intro
+  
