@@ -72,7 +72,7 @@ conceptualContent:
     - title: Work with data platform
       links:
         - text: What is Common Data Service?
-          url: powerapps/maker/common-data-service/data-platform-intro
+          url: /powerapps/maker/common-data-service/data-platform-intro
           itemType: overview
         - text: Entities and metadata
           url: /powerapps/maker/common-data-service/create-edit-metadata
