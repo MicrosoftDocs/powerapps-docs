@@ -1,11 +1,11 @@
 ---
-title: User the Workplace Care Management app
+title: Use the Workplace Care Management app
 description: Provides an overview of how to use the Workplace Care Management app.
 author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 08/25/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -29,7 +29,7 @@ healthy enough to be eligible to return to the workplace.
 
 You use this app to:
 
-- [Manage employee and case managers master data](#manage-employee-and-case-managers-master-data).
+- [Manage employee and case managers data](#manage-employee-and-case-managers-master-data).
 
 - [Manage employee cases](#manage-employee-cases).
 
@@ -49,11 +49,22 @@ The Workplace Care Management app has the following components:
 Lists all the cases that have been created.
 
 > [!div class="mx-imgBorder"]
-> ![Employee cases](media/health-safety-employee-cases.png "Employee cases")
+> ![List of Employee cases](media/health-safety-employee-cases.png "List of Employee cases")
+
+In the Employee Cases component, we have three views with different filters:
+
+- **My Employee Cases**: Filtered by owner and only shows active cases. This is the default view.
+
+- **Active Employee Cases**: Shows all the active employee cases. An employee case is considered active when the status field value is set to active.
+
+- **Closed Employee Cases**: Shows all the closed employee cases. An employee case is considered closed when it is made inactive either by the case manager or through the process.
+
+> [!div class="mx-imgBorder"]
+> ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
 
 **Master data**
 
-- **Employee** - List of all employees. Employees are contacts.
+- **Employee** - List of all the employees. Employees are contacts.
 
 - **Case managers** - List of all the users who have access to the **Employee Cases** area.
 
@@ -62,9 +73,7 @@ Lists all the cases that have been created.
 
 ## Getting started with the Workplace Care Management app
 
-Employee safety is the main goal for Health and Safety Leads. You use this app to decide whether to revoke an employee's ability
-to check in to the workplace. The goal of the case management is to provide a
-clear insight into the work backlog and to make sure that the same process is used to manage all cases.
+Employee safety is the main goal for Health and Safety Leads. You use this app to decide whether to revoke an employee's ability to check in to the workplace. The goal of the care management is to provide a clear insight into the work backlog and to make sure that the same process is used to manage all cases.
 
 At the case level, no additional personal or privacy-related information is
 stored or gathered. The case must be regarded as a checklist that proper
@@ -87,11 +96,19 @@ You can create a new employee contact if the contact doesn't exist.
 
    | **Field**   | **Description**  |
    |---------------|------------------|
+   | User ID| Enter the employee user ID. |
    | First Name | Enter the first name of the employee. |
+   | Middle Name | Enter the middle name of the employee. |
    | Last Name | Enter the last name of the employee.  |
+   | Default Facility | Select the employees default facility. |
+   | Default Area | Select default area. |
+   | Assigned Area | Select an assigned area for the employee. |
    | Email | Enter an employee email address. |
    | Business Phone| Enter the employee mobile or phone number. |
-   | Preferred Method of Contact | Select the method of contact the employee prefers from the drop-list. |
+   | Preferred Method of Contact | Select the method of contact the employee prefers from the drop-down list. |
+
+   > [!div class="mx-imgBorder"]
+   > ![Create a contact details](media/health-safety-employee-new2.png "Create a contact details")
 
 3. Select **Save & Close**. The newly created record is available in the
     **Active Contacts** view.
@@ -178,7 +195,7 @@ In this process stage, the case manager monitors and manages the cases, ensuring
 #### Resolve
 
 In this process stage, the case manager completes the process by resolving the
-case, and selects **Finish**. The key pieces of data to be captured and recorded are:
+case, and selects **Finish**. After the process is finished, the employee case becomes inactive. The inactive employee case is then considered completed. The key pieces of data to be captured and recorded are:
 
 - Employee Instructions Provided (Yes/No)
 
@@ -207,6 +224,13 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 |---------------|------------------|
 | Risk Assessment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
 | Comment | Enter additional information, when applicable. |
+
+### Complete Employee Case
+
+After you complete the process and select **Finish** in the business process flow, the employee case will become inactive. You can also make employee cases inactive for certain reasons if the employee case is no longer being worked on. In that case, you can deactivate the employee case from the command bar. 
+
+  > [!div class="mx-imgBorder"]
+  > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
 
 ## Feedback about the solution
 
