@@ -101,7 +101,7 @@ conceptualContent:
         - text: Power Apps licensing
           url: https://docs.microsoft.com/power-platform/admin/pricing-billing-skus
           itemType: overview
-        - text: Power Platform guidance documentation
+        - text: Microsoft Power Platform guidance documentation
           url: /power-platform/guidance
           itemType: how-to-guide     
     
@@ -111,7 +111,7 @@ conceptualContent:
           url: /powerapps/developer/common-data-service/
           itemType: reference
         - text: Model-driven apps developer documentation
-          url: /powerapps/developer/model-driven-apps/overview
+          url: /powerapps/developer/model-driven-apps
           itemType: reference
         - text: Canvas apps developer documentation
           url: /powerapps/maker/canvas-apps/dev-enterprise-intro
@@ -155,7 +155,7 @@ conceptualContent:
 additionalContent:
   # Supports up to 3 sections
   sections:
-    - title: Other Power Platform products # < 60 chars (optional)
+    - title: Other Microsoft Power Platform products # < 60 chars (optional)
     - items:
         # Card
         - title: Power Automate

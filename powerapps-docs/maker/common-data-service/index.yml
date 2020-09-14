@@ -54,6 +54,8 @@ landingContent:
     linkLists:
        - linkListType: how-to-guide
          links:
+          - text: Create a custom entity
+            url: data-platform-create-entity.md
           - text: Import or export data
             url: data-platform-import-export.md
           - text: Create a relationship between entities
@@ -78,7 +80,7 @@ landingContent:
             url: connect-azure-data-lake-storage-for-dataflow.md
 
   # Card
-  - title: Work with solutions
+  - title: Use solutions for ALM
     linkLists:
       - linkListType: overview
         links:
@@ -92,13 +94,13 @@ landingContent:
            url: export-solutions.md
 
   # Card
-  - title: Integrate
+  - title: Integrate with external data
     linkLists:
       - linkListType: concept
         links:
-          - text: Use Power BI with Common Data Service 
+          - text: Use Power BI 
             url: use-powerbi-with-cds.md
-          - text: SharePoint, OneNote, and OneDrive
+          - text: Use SharePoint, OneNote, and OneDrive
             url: sharepoint-onedrive-onenote-intro.md
       - linkListType: how-to-guide
         links:
@@ -110,7 +112,7 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Business logic introduction
+          - text: Use 
             url: cds-processes.md
       - linkListType: how-to-guide
         links:
@@ -140,5 +142,7 @@ landingContent:
             url: ../../developer/common-data-service/work-with-data-cds.md
           - text: Apply business logic using code
             url: ../../developer/common-data-service/apply-business-logic-with-code.md      
-          - text: Work with entities
-            url: ../../developer/common-data-service/entities.md
+          - text: Work with metadata using code
+            url: ../../developer/common-data-service/metadata-services.md
+          - text: More >
+            url: /powerapps/developer/common-data-service        
