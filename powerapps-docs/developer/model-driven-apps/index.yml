@@ -24,10 +24,10 @@ landingContent:
     linkLists:
        - linkListType: overview
          links:
-          - text: Model-driven apps developer overview
+          - text: Developer overview
             url: overview.md
-          - text: Create, manage, and publish model-driven apps
-            url: create-manage-model-driven-apps-using-code.md
+          - text: "Developers: Get started"
+            url: supported-customizations.md
        - linkListType: learn
          links:
           - text: Extend model-driven apps using code
@@ -36,10 +36,12 @@ landingContent:
   # Card
   - title: Customize
     linkLists:
-       - linkListType: how-to-guide
+       - linkListType: overview
          links:
           - text: Customize entity forms
             url: customize-entity-forms.md
+          - text: Customize entity views
+            url: customize-entity-views.md
           - text: Customize visualizations and dashboards
             url: customize-visualizations-dashboards.md
           - text: Customize commands and ribbons
@@ -52,12 +54,12 @@ landingContent:
         links:
           - text: Client scripting
             url: client-scripting.md
+          - text: Understand the Client API object model
+            url: clientapi/understand-clientapi-object-model.md
       - linkListType: tutorial
         links:
           - text: Write your first client script
             url: clientapi/walkthrough-write-your-first-client-script.md
-          - text: Debug your JavaScript code
-            url: clientapi/debug-javascript-code.md
 
   # Card
   - title: Work with Web resources
@@ -78,14 +80,16 @@ landingContent:
     linkLists:
       - linkListType: overview
         links:
-          - text: Power Apps component framework overview
+          - text: Power Apps component framework
             url: ../component-framework/overview.md
       - linkListType: tutorial
         links:
-          - text: Create code components
+          - text: Create your first code component
             url: ../component-framework/implementing-controls-using-typescript.md      
-          - text: Get Power Apps CLI
-            url: ../component-framework/get-powerapps-cli.md
+      - linkListType: learn
+        links:
+          - text: Create components with Power Apps Component Framework
+            url: https://docs.microsoft.com/learn/paths/use-power-apps-component-framework/
 
 # Card
   - title: Reference
@@ -104,10 +108,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Model-driven apps admin guide
-            url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview
-          - text: Common Data Service developer guide
-            url: https://docs.microsoft.com/powerapps/developer/common-data-service/overview      
-          - text: Canvas apps developer guide
-            url: https://docs.microsoft.com/powerapps/maker/canvas-apps/dev-enterprise-intro
+          - text: Model-driven apps documentation
+            url: /powerapps/maker/model-driven-apps
+          - text: Common Data Service developer documentation
+            url: /powerapps/developer/common-data-service      
+          - text: Canvas apps developer documentation
+            url: /powerapps/maker/canvas-apps/dev-enterprise-intro
   
