@@ -29,9 +29,8 @@ Several sample apps are available from the Teams store that you can add to your 
 
 | Name | Description |
 | - | - |
-| [Asset Inspection](asset-inspection.md) | Manager and user apps for asset inspections. |
-| [Area Walk](area-walk.md) | Manager and user apps for area walks. |
 | [Employee Ideas](employee-ideas.md) | Manager and employee apps for campaigns and ideas. |
+| [Area Walk](area-walk.md) | Manager and user apps for area walks. |
 | [Issue Reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
 
 The following tutorial shows how to install one of the available sample apps.
@@ -102,7 +101,6 @@ If you get any errors during the installation process, you can help us troublesh
 
 ### See also
 
-- [Asset Inspection](asset-inspection.md)
 - [Area Walk](area-walk.md)
 - [Employee Ideas](employee-ideas.md)
 - [Issue Reporting](issue-reporting.md)

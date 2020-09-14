@@ -324,6 +324,5 @@ To submit inspection of grouped areas:
 
 ### See also
 
-- [Asset Inspection](asset-inspection.md)
 - [Employee Ideas](employee-ideas.md)
 - [Issue Reporting](issue-reporting.md)
