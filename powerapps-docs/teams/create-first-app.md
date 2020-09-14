@@ -35,7 +35,7 @@ After installing the **Power Apps** app from the Teams store:
     If this is the first app being created in the selected team, a new Project Oakdale
 environment will be created for the selected team and you'll see a message about this on selecting the team. For more information about the Project Oakdale environment, see [About the Project Oakdale environment](/power-platform/admin/about-teams-environment).
 
-    ![First app in a team](media/create-app-3.png "First app in a team")
+    ![Creating first app in a team](media/create-app-3.png "Creating first app in a team")
 
 1. Select **Create**. You’ll see a confirmation about
 the Project Oakdale environment being created, which might take time and you’ll be notified when the environment is available for you to create your first app.
@@ -167,7 +167,7 @@ select the **Add row** button instead.
 
 After you close the table, the app template added to the app screen by default automatically refreshes to use the new table.
 
-![Updated gallery](media/updated-gallery.png "Updated gallery")
+![Updated app template](media/updated-gallery.png "Updated app template")
 
 Depending on the number of fields you added to your table, the app template may need updates to the form and the gallery.
 
