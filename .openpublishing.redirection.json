@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/model-driven-apps/notes-control-legacy.md",
+      "redirect_url": "set-up-timeline-control",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/developer/common-data-service/webapi/samples/basic-operations-csharp.md",
       "redirect_url": "cdswebapiservice-basic-operations",
       "redirect_document_id": "false"
@@ -1849,12 +1854,7 @@
       "source_path": "powerapps-docs/maker/maker/canvas-apps/webinars-listing.md",
       "redirect_url": "https://powerusers.microsoft.com/t5/Samples-Learning-and-Videos/ct-p/PA_Comm_Galleries",
       "redirect_document_id": "false"
-    },
-    {
-      "source_path": "powerapps-docs/developer/common-data-service/index.md",
-      "redirect_url": "/powerapps/developer/common-data-service/overview",
-      "redirect_document_id": "false"
-    },
+    },    
     {
       "source_path": "powerapps-docs/developer/common-data-service/org-service/index.md",
       "redirect_url": "/powerapps/developer/common-data-service/org-service/overview",
@@ -1896,11 +1896,6 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "powerapps-docs/developer/model-driven-apps/index.md",
-      "redirect_url": "/powerapps/developer/model-driven-apps/overview",
-      "redirect_document_id": "false"
-    },
-    {
       "source_path": "powerapps-docs/maker/canvas-apps/working-with-experimental.md",
       "redirect_url": "working-with-experimental-preview",
       "redirect_document_id": "false"
@@ -1908,17 +1903,7 @@
     {
       "source_path": "powerapps-docs/maker/common-data-service/entity-relationship-behavior.md",
       "redirect_url": "create-edit-entity-relationships#entity-relationship-behavior",
-      "redirect_document_id": "false"
-    },
-    {
-      "source_path": "powerapps-docs/maker/common-data-service/index.md",
-      "redirect_url": "/powerapps/maker/common-data-service/data-platform-intro",
-      "redirect_document_id": "false"
-    },
-    {
-      "source_path": "powerapps-docs/maker/model-driven-apps/index.md",
-      "redirect_url": "/powerapps/maker/model-driven-apps/model-driven-app-overview",
-      "redirect_document_id": "false"
+      "redirect_document_id": false
     }
   ]
 }

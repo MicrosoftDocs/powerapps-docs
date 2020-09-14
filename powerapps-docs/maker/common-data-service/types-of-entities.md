@@ -1,5 +1,6 @@
 ---
 title: "Types of entities | MicrosoftDocs"
+description: "Learn about the different types of Common Data Service entities."
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
@@ -66,6 +67,10 @@ The following table lists activity entities that are available in a default Comm
 You can create new custom activity entities. For example you might create a custom activity entity to record instant message communications. Creating an activity entity is different from creating a non-activity entity because you don’t specify a primary field. All activity entities have a **Primary Field** set to **Subject** and other common fields that are defined by the Activity entity. This allows all types of activities to be shown in a view where just the common fields are displayed.  
 
 To create a custom activity entity, open the **More settings** section in the **New entity** panel, select **Activity entity** option from the **Choose entity type** drop-down list. After you select this, you’ll see that **Display in Activity Menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn’t selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the entity, you can’t change these settings.  
+
+## Virtual entities
+
+A virtual entity is a custom entity in Common Data Service that has fields containing data from an external data source. Virtual entities appear in your app to users as regular entity records, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Records based on virtual entities are available in all clients including custom clients developed using the Common Data Service web services.  More information: [Create and edit virtual entities that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
 [Create or edit entities](create-edit-entities.md)
