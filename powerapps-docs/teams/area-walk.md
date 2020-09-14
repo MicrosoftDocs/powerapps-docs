@@ -152,7 +152,7 @@ To group areas:
 
     ![Settings inside areas](media/area-walk/area-settings.png "Settings inside areas")
 
-1. Select **Grouped areas**.
+1. Select **Grouped locations**.
 
 1. Select **Add group**.
 
