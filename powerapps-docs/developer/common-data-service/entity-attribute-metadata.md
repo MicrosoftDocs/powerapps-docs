@@ -62,7 +62,7 @@ These are the localizable values that are used to refer to the attributes in an 
 The `AttributeTypeName` property describes the type of an attribute. This property contains a value of type `AttributeTypeDisplayName` which provides a label for each the different types of attributes that exist. 
 
 > [!NOTE]
-> Don't be confused by the `AttributeType` property. The values in this older property are mostly aligned with `AttributeTypeName` except that it shows `ImageType` attributes as `Virtual`. You should refer to the `AttributeTypeName` property rather than the `AttributeType` property.
+> Don't be confused by the [AttributeType](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.attributetype#Microsoft_Xrm_Sdk_Metadata_AttributeMetadata_AttributeType) property. The values in this older property are mostly aligned with [AttributeTypeName](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.attributetypename#Microsoft_Xrm_Sdk_Metadata_AttributeMetadata_AttributeTypeName) except that it shows `ImageAttributeMetadata` and `MultiSelectPicklistAttributeMetadata` as `Virtual`. Refer to the `AttributeTypeName` property rather than the `AttributeType` property.
 
 In the following table:
 

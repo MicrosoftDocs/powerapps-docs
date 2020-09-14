@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/30/2020
+ms.date: 06/16/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -63,3 +63,8 @@ You can override the previous session, but you might lose any changes that you h
 ## Next Steps
 
 Learn more about how to add a [screen](add-screen-context-variables.md), a [control](add-configure-controls.md), or a [data connection](add-data-connection.md).
+
+### See also
+
+- [Restore an app to a previous version](restore-an-app.md)
+- [Export and import an app](export-import-app.md)

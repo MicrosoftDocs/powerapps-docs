@@ -28,7 +28,7 @@ Other elements include:
 * [Controls and their properties](reference-properties.md)
 * [Data types](functions/data-types.md)
 
-## A
+## <a id="-a"></a> A
 **[Abs](functions/function-numericals.md)** – Absolute value of a number.  
 
 **[Acceleration](functions/signals.md)** – Reads the acceleration sensor in your device.
@@ -281,6 +281,8 @@ Other elements include:
 **[RenameColumns](functions/function-table-shaping.md)** – Renames columns of a table.
 
 **[Replace](functions/function-replace-substitute.md)** – Replaces part of a string with another string, by starting position of the string.
+
+**[RequestHide](functions/function-requesthide.md)** – Hides a SharePoint form.
 
 **[Reset](functions/function-reset.md)** – Resets an input control to its default value, discarding any user changes.
 

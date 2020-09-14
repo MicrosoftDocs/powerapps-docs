@@ -4,9 +4,9 @@ ms.date: 03/10/2019
 ms.service: powerapps
 ms.topic: "reference"
 ms.assetid: 0206c43b-b1fc-490d-a867-1d75331885a8
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -47,8 +47,6 @@ search.app:
 <li><b>openInNewWindow</b>: (Optional) Boolean. Indicates whether to display form in a new window.</li>
 <li><b>windowPosition</b>: (Optional) Number. Specify one of the following values for the position of the form on the screen:<ul><li><code>1:center</code></li><li><code>2:side</code></li></ul>
 This does not apply to opening a new browser window.  
-<li><b>processId</b>: (Optional) String. ID of the business process to be displayed on the form.</li>
-<li><b>processInstanceId</b>: (Optional) String. ID of the business process instance to be displayed on the form.</li>
 <li><b>relationship</b>: (Optional) Object. Define a relationship object to display the related records on the form. The object has the following attributes.
 <table style="width:100%">
   <tr>
@@ -120,14 +118,14 @@ This function is passed an object as a parameter. The object has a <b>savedEntit
 <td>Function</td>
 <td>No</td>
 <td>A function to execute when the operation fails.<br>
-
-<b>NOTE</b>: On [Unified Interface](/dynamics365/customer-engagement/admin/about-unified-interface), the <b>errorCallback</b> function will be executed only if you are opening a quick create form.</td>
+</td>
 </tr>
 </table>
 
 ## Remarks
 
-You must use this method to open entity or quick create forms instead of the deprecated  [Xrm.Utility.openEntityForm](https://msdn.microsoft.com/library/jj602956.aspx#openEntityForm) and  [Xrm.Utility.openQuickCreate](https://msdn.microsoft.com/library/jj602956.aspx#openQuickCreate) methods.
+You must use this method to open entity or quick create forms instead of the deprecated  [Xrm.Utility.openEntityForm](https://msdn.microsoft.com/library/jj602956.aspx#openEntityForm) and  [Xrm.Utility.openQuickCreate](https://msdn.microsoft.com/library/jj602956.aspx#openQuickCreate) methods. 
+Use [setActiveProcess](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-data-process/activeprocess/setactiveprocess) to display a particular business process and [setActiveProcessInstance](https://docs.microsoft.com/powerapps/developer/model-driven-apps/clientapi/reference/formcontext-data-process/setactiveprocessinstance) to display a particular business process instance on the form.
  
 
 ## Examples

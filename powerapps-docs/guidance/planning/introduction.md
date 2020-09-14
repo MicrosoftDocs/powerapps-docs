@@ -5,7 +5,7 @@ author: TGrounds
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: guidance
-ms.date: 06/16/2020
+ms.date: 08/10/2020
 ms.author: thground
 ms.reviewer: kathyos
 
@@ -68,6 +68,3 @@ If you're a **"full stack" developer**:
 
 - Then, if you're already familiar with app project planning, you may want to jump right to the [Designing phase \> Architectural design](where-is-data.md) section, which is where the material specific to Power Platform starts.
 
-> [!NOTE]
-> If your intention is to create a very large and complex solution, we recommend that you use the
-[Sure Step](https://mbs.microsoft.com/customersource/Global/SureStep) guide.
