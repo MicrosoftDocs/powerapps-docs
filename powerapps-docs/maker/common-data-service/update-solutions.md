@@ -44,9 +44,7 @@ The procedure to import the updated solution is similar to installing a new mana
 
 4. Select **Next**.  
 
-5. You can view information about the solution before you choose **Next**. This page will display a yellow bar displaying **This solution package contains an update for a solution that is already installed**.  
-
-6. Expand **Advanced settings**, and then select from the following solution action options:  
+5. This page displays a yellow bar indicating **This solution package contains an update for a solution that is already installed**. To upgrade the solution, select **Next**. To view additional options, expand **Advanced settings**, and then select from the following solution action options:  
    - **Upgrade (recommended)**
         This is the default option and upgrades your solution to the latest version and rolls up all previous patches in one step.  Any components associated to the previous solution version that are not in the newer solution version will be deleted. This is the recommended option as it will ensure that your resulting configuration state is consistent with the importing solution including removal of components that are no longer part of the solution.
         
@@ -70,6 +68,7 @@ The procedure to import the updated solution is similar to installing a new mana
 If you chose to stage for upgrade, or if the system had an issue completing an upgrade, you will see that you have the original solution still installed in your system as well as a new solution that has the same solution name as the base solution suffixed with \_Upgrade.  To complete the upgrade, select the base solution in the solution list and select **Apply Solution Upgrade**.  This will uninstall all previous patches and the base solution then rename the \_Upgrade solution to be the same name as the previous base solution.  Any components that were in the original solution and patches that are not present in the \_Upgrade solution will be deleted as part of this process.
 
 ## Understanding version numbers for updates
+
 A solution’s version has the following format: major.minor.build.revision. An update must have a higher major, minor, build or revision number than the parent solution. For example, for a base solution version 3.1.5.7, a small update could be a version 3.1.5.8 or a slightly more signficant update could have version 3.1.7.0. A substantially more significant update could be version 3.2.0.0.
 
 ## Overwrite customizations option
