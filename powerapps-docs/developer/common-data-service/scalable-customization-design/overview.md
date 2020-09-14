@@ -2,7 +2,7 @@
 title: "Scalable Customization Design: Overview (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "The first in a series of topics. This topic introduces symptoms that can appear when code customizations are not optimized and the constraints that code customizations must operate within to avoid them. " # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 1/15/2019
+ms.date: 9/13/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -85,7 +85,8 @@ It is worth being aware of and understanding the platform constraints that do ex
 |**SQL timeouts**|&bull; Requests to SQL Server time out at 30 seconds<br />&bull; Protects against long running requests<br />&bull; Provides protection within a particular organization and its private database<br />&bull; Also provides protection at a database server level against excessive use of shared resources such as processors/memory|
 |**Workflow limits**|&bull; Operates under a Fair Usage policy<br />&bull; No specific hard limits, but balance resource across organizations<br />&bull; Where demand is low an organization can take full advantage of available capacity. Where demand is high, resources and throughput are shared.|
 |**Maximum concurrent connections**|&bull; There is a platform default setting of  a maximum connection pool limit of 100 connections from the  Web Server connection pool in IIS to the database. Common Data Service does not change this value<br />&bull; If you hit this, it is an indication of an error in the system; look at why so many connections are blocking<br />&bull; With multiple web servers, each with 100 concurrent connections to the database of typical &lt; 10ms, this suggests a throughput of &gt; 10k database requests for each web server. This should not be required and would hit other challenges well before that|
-|**ExecuteMultiple**|&bull; The `ExecuteMultiple` message is designed to assist with collections of operations being sent to Common Data Service from an external source<br />&bull; The processing of large groups of these requests can tie up vital resources in Common Data Service at the expense of more response critical requests by users, therefore this is limited to 2 concurrent `ExecuteMultiple` requests per organization|
+|**ExecuteMultiple**|&bull; The `ExecuteMultiple` message is designed to assist with collections of operations being sent to Common Data Service from an external source<br />&bull; The processing of large groups of these requests can tie up vital resources in Common Data Service at the expense of more response critical requests by users.|
+|**Service Protection Limits**|&bull; To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources.<br />&bull; More information: [Service Protection API Limits](/powerapps/developer/common-data-service/api-limits)|
 
 ## Next steps
 
