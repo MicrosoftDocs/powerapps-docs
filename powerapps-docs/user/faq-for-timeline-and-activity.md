@@ -71,6 +71,22 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
  
 To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the enviroment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
 
+### Appointments are auto saved even if system administrator has added a custom script to stop auto save
+
+**Issue** If your system administrator has added a custom script to prevent the default save option for appointments the system will still override the custom script and auto save appointments.
+
+**Resolution**: There is no work around for this.
+
+### Open Record Set button disappears when an appointment is saved
+
+**Issue** When you select the **Save** button to save a appointment [The  Open Record Set](https://docs.microsoft.com/powerapps/user/navigation#record-set-navigation) button that lets you jump from record to record in the same list disappears. 
+
+**Resolution**: You can refresh the page and the **Open Record Set** button will appear again. 
+
+
+### Synced appointments show unsaved changes without making any changes. 
+
+
 ## See also
 
 [Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
