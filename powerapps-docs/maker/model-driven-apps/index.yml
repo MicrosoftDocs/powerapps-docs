@@ -26,8 +26,8 @@ landingContent:
          links:
           - text: What are model-driven apps?
             url: model-driven-app-overview.md
-          - text: Explore model-driven sample apps
-            url: overview-model-driven-samples.md
+          - text: Planning a Power Apps project
+            url: /powerapps/guidance/planning/introduction
        - linkListType: learn
          links:
           - text: Get started with model-driven apps
@@ -38,6 +38,8 @@ landingContent:
     linkLists:
        - linkListType: quickstart
          links:
+          - text: Explore sample apps
+            url: overview-model-driven-samples.md
           - text: Create your first app
             url: build-first-model-driven-app.md
        - linkListType: concept
@@ -126,9 +128,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Customize entity forms
+          - text: Customize entity forms using code
             url: ../../developer/model-driven-apps/customize-entity-forms.md
           - text: Apply data visualizations using code
             url: ../../developer/model-driven-apps/customize-visualizations-dashboards.md      
-          - text: Use web resources
-            url: ../../developer/model-driven-apps/use-web-resources.md
+          - text: More >
+            url: ../../developer/model-driven-apps/index.yml
