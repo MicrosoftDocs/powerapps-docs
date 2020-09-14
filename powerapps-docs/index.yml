@@ -12,7 +12,7 @@ metadata:
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/30/2020 #Required; mm/dd/yyyy format.
+  ms.date: 09/13/2020 #Required; mm/dd/yyyy format.
   hide_bc: false
 
 
@@ -48,13 +48,13 @@ conceptualContent:
     - title: Get started with Power Apps
       links:
         - text: Sign up for free
-          url: https://docs.microsoft.com/powerapps/maker/signup-for-powerapps
+          url: /powerapps/maker/signup-for-powerapps
           itemType: get-started        
         - text: Get started with app creation
-          url: https://docs.microsoft.com/powerapps/maker/
+          url: /powerapps/maker/
           itemType: overview
         - text: Plan a Power Apps project
-          url: https://docs.microsoft.com/powerapps/guidance/planning/introduction
+          url: /powerapps/guidance/planning/introduction
           itemType: overview      
     
     - title: Create apps and portals
@@ -63,7 +63,7 @@ conceptualContent:
           url: /powerapps/maker/canvas-apps
           itemType: overview
         - text: Model-driven apps
-          url: https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview
+          url: /powerapps/maker/model-driven-apps
           itemType: overview
         - text: Portals
           url: /powerapps/maker/portals
@@ -72,15 +72,15 @@ conceptualContent:
     - title: Work with data platform
       links:
         - text: What is Common Data Service?
-          url: https://docs.microsoft.com/en-us/powerapps/maker/common-data-service/data-platform-intro
+          url: powerapps/maker/common-data-service/data-platform-intro
           itemType: overview
-        - text: Why choose Common Data Service?
-          url: /powerapps/maker/common-data-service/why-cds-overview
+        - text: Entities and metadata
+          url: /powerapps/maker/common-data-service/create-edit-metadata
           itemType: concept
-        - text: Use entities in Common Data Service
-          url: /powerapps/maker/common-data-service/entity-overview
-          itemType: concept
-    
+      footerLink:
+        url: /powerapps/maker/common-data-service
+        text: More
+
     - title: Use solutions for ALM
       links:
         - text: What are solutions?
@@ -101,21 +101,21 @@ conceptualContent:
         - text: Power Apps licensing
           url: https://docs.microsoft.com/power-platform/admin/pricing-billing-skus
           itemType: overview
-        - text: Power Platform Center of Excellence (CoE) Starter Kit
-          url: https://docs.microsoft.com/power-platform/guidance/coe/starter-kit
+        - text: Power Platform guidance documentation
+          url: /power-platform/guidance
           itemType: how-to-guide     
     
     - title: Power Apps for developers
       links:
-        - text: Common Data Service developer guide
+        - text: Common Data Service developer documentation
           url: /powerapps/developer/common-data-service/
-          itemType: overview
-        - text: Model-driven apps developer guide
+          itemType: reference
+        - text: Model-driven apps developer documentation
           url: /powerapps/developer/model-driven-apps/overview
-          itemType: overview
-        - text: Canvas apps developer guide
+          itemType: reference
+        - text: Canvas apps developer documentation
           url: /powerapps/maker/canvas-apps/dev-enterprise-intro
-          itemType: overview    
+          itemType: reference    
     
     - title: Sample apps and solutions
       links:
