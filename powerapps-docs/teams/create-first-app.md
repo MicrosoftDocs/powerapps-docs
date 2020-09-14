@@ -35,7 +35,7 @@ After installing the **Power Apps** app from the Teams store:
     If this is the first app being created in the selected team, a new Project Oakdale
 environment will be created for the selected team and you'll see a message about this on selecting the team. For more information about the Project Oakdale environment, see [About the Project Oakdale environment](/power-platform/admin/about-teams-environment).
 
-    ![First app in a team](media/create-app-3.png "First app in a team")
+    ![Creating first app in a team](media/create-app-3.png "Creating first app in a team")
 
 1. Select **Create**. You’ll see a confirmation about
 the Project Oakdale environment being created, which might take time and you’ll be notified when the environment is available for you to create your first app.
@@ -110,20 +110,17 @@ Power Apps Studio and you’re prompted to name your app.
     ![Name your app](media/name-your-app.png "Name your app")
 
     > [!TIP]
-    > To learn more about the Power Apps Studio, see [Understanding Power
-Apps Studio](understand-power-apps-studio.md).
+    > An app template is included with your the app by default so that you can get started with creating your table and using the app. To learn more about editing the app inside the Power Apps Studio, see [Understanding Power Apps Studio](understand-power-apps-studio.md).
 
 ### Create your first table
 
-Data for apps built in Teams lives inside Project Oakdale environments as tables. Like
-other data experiences, you can add additional columns to track different
-attributes of each record before filling up the table with multiple rows of
-data. 
+Data for apps built in Teams lives inside Project Oakdale environments as tables. Like other data experiences, you can add additional columns to track different attributes of each record before filling up the table with multiple rows of
+data.
 
 > [!TIP]
 > To learn about Project Oakdale tables in detail, see [Overview of Project Oakdale](overview-data-platform.md).
 
-To get started creating your first table: 
+To get started creating your first table:
 
 1. Select **Create new table**.
 
@@ -138,27 +135,26 @@ work with data inside the table designer.
 
    ![Table designer](media/table-designer-1.png "Table designer")
 
-
 ### Add columns in the table
 
 To add a new column to track new data:
 
 1.  Select **Add column.**  
 
-2.  Enter a name that best describes your new column.
+1.  Enter a name that best describes your new column.
 
-3.  Select the type for your column.
+1.  Select the type for your column.
 
     > [!TIP]
     > For more information about column types supported by the table
     designer, see [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns not supported by
     the table designer, create a table using the **Build** tab. More information: [Create tables](create-table.md)
 
-4.  If required, change **Advanced options** for the selected column type.
+1.  If required, change **Advanced options** for the selected column type.
 
-5.  Select **Create**.
+1.  Select **Create**.
 
-6.  Repeat previous steps to add the rest of the data columns.
+1.  Repeat previous steps to add the rest of the data columns.
 
 ### Add rows in the table
 
@@ -167,81 +163,97 @@ select the **Add row** button instead.
 
 ![Add rows](media/add-rows.png "Add rows")
 
-### Add app controls to work with your table
+### Update app template
 
-After you’ve finished creating the table and adding data, you can start using
-the table in your app using different controls. To get back to the Studio,
-select X at the top-right corner of the table designer.
+After you close the table, the app template added to the app screen by default automatically refreshes to use the new table.
 
-1.  Select **Insert** (+) in the left pane to add a control.
+![Updated app template](media/updated-gallery.png "Updated app template")
 
-    ![Insert control](media/insert-control.png "Insert control")
+Depending on the number of fields you added to your table, the app template may need updates to the form and the gallery.
 
-2.  Select the **Vertical gallery** control to add to the canvas.
+#### Update fields on the form
 
-    ![Vertical Gallery control](media/vertical-gallery.png "Vertical Gallery control")
+The template shows two fields inside the form by default. To add more fields to the form:
 
-3.  In the flyout, select the table you created earlier.  
-    
+1. Select the form.
 
-    ![Select your table](media/select-the-table.png "Select your table")
+    ![Select form](media/app-form.png "Select form")
 
-4.  To change the layout of your gallery, select **Layout** from the property
-    pane on the right, and then select the layout of your choice.
+1. Select **Edit fields** from the property pane on the right.
 
-    ![Select layout](media/select-layout.png "Select layout")
+    ![Edit fields](media/edit-form-fields.png "Edit fields")
 
-5.  To change the fields in your gallery, select **Fields** from the property
-    pane on the right to open the data pane.
+1. Select **Add fields**.
 
-    ![Select fields](media/select-fields.png "Select fields")
+    ![Add fields](media/add-fields.png "Add fields")
 
-6.  Select the fields from the drop-down list of fields to display on the
-    control.
+1. Select the fields that you want to add on the form.
 
-    ![Select fields](media/select-fields-1.png "Select fields")
+    ![Select fields to add](media/add-fields-list.png "Select fields to add")
 
-7.  Select **Insert** from the left pane.
+1. Select **Add**.
 
-8.  Select **Edit form**. Edit form control allows you to display the selected record and edit its values.
+1. (Optional) Select fields to move up or down, or remove unwanted fields using remove.
 
-    ![Edit form control](media/edit-form-control.png "Edit form control")
+    ![Move or remove fields](media/move-remove-field.png "Move or remove fields")
 
-9.  To bind the **Edit form** to your table, select the form, and then select
-    the table you created earlier.
+1. Close the fields pane.
 
-    ![Select your table](media/select-table-1.png "Select your table")
+Adding, removing and reordering fields automatically updates the form:
 
-10. Select **Edit fields** to change the fields displayed by the form.
+![Updated form](media/form-updated.png "Updated form")
 
-    ![Edit fields](media/edit-fields-1.png "Edit fields")
+#### Update fields in the gallery
 
-11. To add new fields, select **Add fields**, select the fields you want to add,
-    and then select **Add**.
+The gallery on the default app template may need updates to reflect the fields from the table you created.
 
-    ![Add fields](media/add-fields-1.png "Add fields")
+![Default gallery](media/gallery-fields.png "Default gallery")
 
-12. You can drag and drop the fields on the form to rearrange them.
+To update the fields in the gallery:
 
-13. Now that you’ve created the form with all required fields, you’ll need to
-    bind your form to your gallery. To do this, go to the formula bar while the
-    form is selected and set the **Item** property to Gallery1.Selected.
+1. Select **Edit fields** from the property pane on the right.
 
-    > [!NOTE]
-    > *Gallery1.Selected* uses the gallery name as *Gallery1* for the
-    first gallery added to the app. You may need to change it as per the gallery
-    name in your app. For example, if your gallery name is different, such as
-    gallery2, use *Gallery2.Selected* instead.
-    >
-    > ![Bind controls to table](media/bind-controls.png "Bind controls to table")
+    ![Edit fields for gallery](media/edit-gallery-fields.png "Edit fields for gallery")
 
-14. Select the **Preview** button in the top right to test your app.
+1. Select the drop-down for a gallery component (such as image, title or subtitle) and change the selection to the required field.
 
-15. Select **Save** to save the app.
+    ![Edit selected field](media/gallery-fields-change.png "Edit selected field")
 
-    ![Save the app](media/save-the-app.png "Save the app")
+1. Close the data pane.
 
-16. Select **Publish to Teams** to publish your app to Teams.
+The gallery is updated with selected changes:
+
+![Updated gallery](media/gallery-fields-updated.png "Updated gallery")
+
+#### Update app title
+
+To update the app title:
+
+1. Select the label from the top-left corner of the screen.
+
+    ![Updated title](media/app-title.png "Updated title")
+
+1. Change the *Text* property value from the properties pane on the right.
+
+    ![Update title property](media/update-title.png "Update title property")
+
+Verify all the changes to the app.
+
+![Verify all changes](media/app-changes.png "Verify all changes")
+
+### Save and preview the app
+
+Now that you've created your first app with data, you can save your changes, and preview the app.
+
+![Save and preview](media/save-preview.png "Save and preview")
+
+1. Select **Save** to save the app.
+
+1. Select **Preview** to preview the app.
+
+    1. To add a new record, select **New record** and fill in the form.
+    1. To edit a record, select the record from the left pane, and edit the values.
+    1. To close the preview, select the close button, or press the **Esc** key on the keyboard.
 
 ## Add your app to Teams channel as a tab
 
@@ -250,17 +262,17 @@ publish it, and then add it to your team’s channel.
 
 1.  Go to your team in Microsoft Teams.
 
-2.  Select the channel that you want to pin the app to, and then select +.
+1.  Select the channel that you want to pin the app to, and then select +.
 
     ![Pin your app](media/pin-app.png "Pin your app")
 
-4.  Select **Power Apps** app.
+1.  Select **Power Apps** app.
 
     ![Power Apps app in Teams](media/power-apps-app.png "Power Apps app in Teams")
 
-5.  Select **Add**
+1.  Select **Add**
 
-6.  Select your app from the list, such as the **Recipes** app in this example, and select **Save** to add the app as a tab.
+1.  Select your app from the list, such as the **Sample app** app in this example, and select **Save** to add the app as a tab.
 
 Now that you’ve created your first app from a blank table, let’s go through the
 Power Apps interface, Studio, controls and how to create additional apps in
