@@ -297,6 +297,5 @@ To share an idea:
 
 ### See also
 
-- [Asset Inspection](asset-inspection.md)
 - [Area Walk](area-walk.md)
 - [Issue Reporting](issue-reporting.md)

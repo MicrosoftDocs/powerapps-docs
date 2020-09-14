@@ -334,6 +334,5 @@ To review and edit existing issues in Planner:
 
 ### See also
 
-- [Asset Inspection](asset-inspection.md)
 - [Area Walk](area-walk.md)
 - [Employee Ideas](employee-ideas.md)
