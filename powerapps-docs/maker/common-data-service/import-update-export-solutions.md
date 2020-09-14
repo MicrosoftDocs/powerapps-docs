@@ -61,10 +61,10 @@ Your solution imports in the background and may take a few moments.
   
  If the import isn’t successful, you will see a notification on the solutions page showing any errors or warnings that were captured. Select **Download Log File** to capture details about what caused the import to fail. The most common cause for an import to fail is that the solution did not contain some required components.  
 
+When you download the log file, you will find an XML file that you can open using Office Excel to view the contents.
+
 > [!NOTE]
-> You can view the details of all solution operations with [solution history](solution-history.md), which can be accessed by selecting **See history** on the solutions page.
- 
- When you download the log file, you will find an XML file that you can open using Office Excel to view the contents.  
+> You can view the details of all solution operations including solution import with the [solution history](solution-history.md) feature. To view these operations, select **See history** on the solutions page.
   
 <!-- 
 > You can’t edit an active routing rule set. Therefore, if you’re importing a solution that includes an active routing rule set into an environment where the rule already exists with the same ID, the import will fail. More information: [Create rules to automatically route cases](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  -->
