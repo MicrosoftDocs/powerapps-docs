@@ -19,11 +19,11 @@ search.app:
 ---
 # Known issues for activities
 
-## Email content is lost after entering text in the description field on a email form 
+## Email content is lost after entering text in the body of the message
 
-**Issue**: When composing an email and filling the description field if **Save**, **Save and Close**, or **Send** is selected immediately after entering text in the description field, the most recent content added to the email may get lost. 
+**Issue**: Recent content added to the email may get lost if you enter text in the body of an email and immediately select **Save**, **Save and Close**, or **Send**. 
 
-**Resolution**: To avoid this issue, wait a few seconds before you select **Save**, **Save and Close**, or **Send** after text is entered in the description field. 
+**Resolution**: To avoid this issue, wait a few seconds before you select **Save**, **Save and Close**, or **Send** after your enter text in the body of the email.
 
 ## The From field is read only or lookup isn't working
 
@@ -45,7 +45,7 @@ To find the URL, in the address bar the first part of the URL that starts with *
 
 ### Open Record Set button disappears when an appointment is saved
 
-**Issue** When you select the **Save** button to save a appointment [The  Open Record Set](https://docs.microsoft.com/powerapps/user/navigation#record-set-navigation) button disappears. 
+**Issue** When you select the **Save** button to save a appointment the [Open Record Set](https://docs.microsoft.com/powerapps/user/navigation#record-set-navigation) button disappears. 
 
 **Resolution**: Refresh the page and the **Open Record Set** button will appear again. 
 
