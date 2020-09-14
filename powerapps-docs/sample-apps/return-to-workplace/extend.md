@@ -386,7 +386,7 @@ such as **Created On**, **Modified On** are not displayed.
 |-----------------------------------------|------------|--------------------------------------------------------------------------|---------------------------------|
 | Allow Employee Sentiment                | Option Set | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app |
 | Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app |
-| Allow Guest Attestations                | Option Set | Indicates if guests are able to get a pass.                              | Model-driven app and canvas app |
+| Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app |
 | Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
 | Health Contact Name                     | Text       | Used to capture the name of the primary health contact.                  | Model-driven app and canvas app |
 | Health Contact Phone                    | Text       | Used to capture the phone number of the primary health contact.          | Model-driven app and canvas app |
