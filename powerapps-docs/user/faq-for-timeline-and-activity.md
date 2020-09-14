@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/11/2020
+ms.date: 09/14/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -79,9 +79,9 @@ To find the URL, in the address bar the first part of the URL that starts with *
 
 ### Open Record Set button disappears when an appointment is saved
 
-**Issue** When you select the **Save** button to save a appointment [The  Open Record Set](https://docs.microsoft.com/powerapps/user/navigation#record-set-navigation) button that lets you jump from record to record in the same list disappears. 
+**Issue** When you select the **Save** button to save a appointment [The  Open Record Set](https://docs.microsoft.com/powerapps/user/navigation#record-set-navigation) button disappears. 
 
-**Resolution**: You can refresh the page and the **Open Record Set** button will appear again. 
+**Resolution**: Refresh the page and the **Open Record Set** button will appear again. 
 
 
 
