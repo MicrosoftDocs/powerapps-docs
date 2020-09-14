@@ -32,10 +32,10 @@ search.app:
 **Resolution**: This happens when customization specifically have been applied on this field by your system administrator. To fix the issue, open a browser window and run the following two commands replacing the **environment URL** with the URL of your environment.
 
 
- - (replace with your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD))
- - (replace with your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD))
+ - (replace with your environment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD))
+ - (replace with your environment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD))
  
-To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the enviroment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
+To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the environment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
 
 ## Appointments are auto saved even if system administrator has added a custom script to stop auto save
 
@@ -45,7 +45,7 @@ To find the URL, in the address bar the first part of the URL that starts with *
 
 ### Open Record Set button disappears when an appointment is saved
 
-**Issue** When you select the **Save** button to save a appointment the [Open Record Set](https://docs.microsoft.com/powerapps/user/navigation#record-set-navigation) button disappears. 
+**Issue** When you select the **Save** button to save an appointment the [Open Record Set](https://docs.microsoft.com/powerapps/user/navigation#record-set-navigation) button disappears. 
 
 **Resolution**: Refresh the page and the **Open Record Set** button will appear again. 
 
