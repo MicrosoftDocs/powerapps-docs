@@ -84,8 +84,6 @@ To find the URL, in the address bar the first part of the URL that starts with *
 **Resolution**: You can refresh the page and the **Open Record Set** button will appear again. 
 
 
-### Synced appointments show unsaved changes without making any changes. 
-
 
 ## See also
 
