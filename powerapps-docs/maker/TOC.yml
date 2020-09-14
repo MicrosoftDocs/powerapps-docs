@@ -1544,14 +1544,14 @@
     items:
     - name: Entity overview
       href: ./common-data-service/entity-overview.md
+    - name: Entities and metadata
+      href: ./common-data-service/create-edit-metadata.md
+    - name: Types of entities
+      href: ./common-data-service/types-of-entities.md    
     - name: "Create an entity"
       href: ./common-data-service/data-platform-create-entity.md
     - name: "Create a custom entity that has components"
       href: ./common-data-service/create-custom-entity.md
-    - name: Entities and metadata
-      href: ./common-data-service/create-edit-metadata.md
-    - name: Types of entities
-      href: ./common-data-service/types-of-entities.md
     - name: Edit an entity
       href: ./common-data-service/edit-entities.md
     - name: Create and edit virtual entities
