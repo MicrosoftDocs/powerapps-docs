@@ -2,7 +2,7 @@
 title: "Use messages with the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 09/08/2020
+ms.date: 09/11/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -87,7 +87,8 @@ You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.O
 |Parameter|Description|Messages|  
 |-----------------|-----------------|--------------|  
 |`SolutionUniqueName`|A `String` that specifies the unique name of the solution to which the operation applies. More information: [Dependency tracking for solution components](../dependency-tracking-solution-components.md).|<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> <br /> <xref:Microsoft.Crm.Sdk.Messages.MakeAvailableToOrganizationTemplateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|  
-|`SuppressDuplicateDetection`|A `Boolean` used to disable duplicate detection on a create or update operation. More information: [Use SuppressDuplicateDetection parameter to throw errors when you create or update record](detect-duplicate-data.md#use-suppressduplicatedetection-parameter-to-throw-errors-when-you-create-or-update-record) .|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|  
+|`SuppressDuplicateDetection`|A `Boolean` used to disable duplicate detection on a create or update operation. More information: [Use SuppressDuplicateDetection parameter to throw errors when you create or update record](detect-duplicate-data.md#use-suppressduplicatedetection-parameter-to-throw-errors-when-you-create-or-update-record) .|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|
+|`tag`|A value to include within the `ExecutionContext` `SharedVariables` collection. |Any message that can have a plug-in step registered. More information: [Add a Shared Variable from the Organization Service](#add-a-shared-variable-from-the-organization-service)|
   
  The following sample shows how to pass an optional parameter:  
   
