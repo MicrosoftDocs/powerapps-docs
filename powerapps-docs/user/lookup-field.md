@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/06/2019
+ms.date: 09/14/2020
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -70,6 +70,10 @@ The most recently used list of records shows an image to help distinguish betwee
   
 ## Record type selection list  
 When results span multiple record types, you can see how many types of records there are and select them from the list.
+
+- To search, enter text in the serach box. 
+- To search by entity type select **types of records**. 
+- Select **Change View** to select a view.
 
   > [!div class="mx-imgBorder"]
   > ![See how many records](media/Lookup_04-MultipleEntityTypes[1].gif "See how many records")  
