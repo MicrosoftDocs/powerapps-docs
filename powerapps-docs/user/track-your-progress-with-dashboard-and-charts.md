@@ -19,7 +19,7 @@ search.app:
 ---
 # Track your progress with dashboards and charts
 
-A dashboard is made up of a collection of easy-to-read charts and graphs that provide visual representation of filtered app data. The interactive charts and graphs on a dashboard display important data that gives you a 360 degree view of your business and helps you to understand key performance indicators (KPI).
+A dashboard is made up of a collection of easy-to-read charts and graphs that provide visual representation of filtered app data. The interactive charts and graphs on a dashboard display important data that gives you a 360-degree view of your business and helps you to understand key performance indicators (KPI).
 
 Dashboards are available for all record types. Charts are available on the Dashboard page, Grid page, Associated Home page, and on Edit Form page. 
 
@@ -29,15 +29,15 @@ Dashboards are available for all record types. Charts are available on the Dashb
 
 ## View dashboards
 
-Thre are two types of dashboards, **System Dashboards** and **My Dashboards**.
+There is two types of dashboards, **System Dashboards** and **My Dashboards**.
 
 
 ![Choose between personal or system dashboard](media/select_dashboard.png "Choose between personal or system dashboard") 
 
 Legend: 
-1. **My Dashboards**: My dashboards are personal dashboards can only be see by the user that created the dashbaord. The user can also share their personal dashboard with other users if the user has sharing privileges for their security role.
+1. **My Dashboards**: My dashboards are personal dashboards that can only be seen by the user who creates them. The user can also share their personal dashboard with other users if the user has sharing privileges for their security role.
 
-2. **System Dashboards**: System dashboards are craete by your dministrator. By default, these dashboards are visible to all users. 
+2. **System Dashboards**: System dashboards are create by your administrator. By default, these dashboards are visible to all users. 
 
 
 
@@ -51,7 +51,7 @@ Legend:
 
 1. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
 2. **Refresh**: Refreshes the records in the chart.
-3. **View Records**: See the chart and the underlying records together. This opens the chart and the corresponding records.
+3. **View Records**: See the chart and the underlying records together. This opens the chart for the corresponding records.
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
@@ -109,14 +109,14 @@ Legend:
 
 ## Edit the properties of a chart
 
-When you add a chart on a dashboard you can edit the chart properties and modify the chart view and dispaly options. The screenshot below shows how a chart will display based on the chart properties that you selected.
+When you add a chart on a dashboard you can edit the chart properties and modify the chart view and display options. The screenshot below shows how a chart will display based on the chart properties that you selected.
 
    > [!div class="mx-imgBorder"]
    > ![Select a view](media/all_chart_views.png "Select a view on a chart")
 
 Legend:
 
- 1. View title with **View Selector** turned off. You connot toggle between different views. You only see the title.
+ 1. View title with **View Selector** turned off. You cannot toggle between different views. You only see the title.
  2. Chart title with **Display Chart Selection** turned off. You cannot toggle between different charts for the entity. You only see the title.
  3. Only **View Selector** is turned. You can toggle to a different view and the chart will render based on the underline data for the selected view.
  4. Both **View Selector** and **Display Chart Selection** is turned. You can toggle a different views and chart for the entity
@@ -159,13 +159,13 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 6. When you're done, select **OK**.
 
 
-## Drill down in a chart
+## Drill-down in a chart
 
-You can drill down into a segment on a chart and filter the data for that segment. For example, you can drill down on one segment of a chart and change the chart type as you drill down.
+You can drill-down into a segment on a chart and filter the data for that segment. For example, you can drill-down on one segment of a chart and change the chart type as you drill-down.
 
 The chart drilldown feature is only available on the browser. It is not available on the mobile app for phones or tablets.
 
-In the example below, let's further drill down into the chart.
+In the example below, let's further drill-down into the chart.
 
 1. Select a data point on the chart to bring the **Drill down by** dialog box.
 
@@ -175,9 +175,9 @@ In the example below, let's further drill down into the chart.
 2. Select the drop-down menu and choose how to want to group the data.
 
    > [!div class="mx-imgBorder"]
-   > ![Select how to drill down into the chart](media/chart_drilldown_1.png "Select how to drill down into the chart")
+   > ![Select how to drill down into the chart](media/chart_drilldown_1.png "Select how to drill-down into the chart")
    
-3. Select the type of chart that you want to see the drill down data.
+3. Select the type of chart that you want to see the drill-down data.
 
    > [!div class="mx-imgBorder"]
    > ![Select the type of chart](media/chart_drilldown_2.png "Select the type of chart")
@@ -188,9 +188,9 @@ In the example below, let's further drill down into the chart.
    > ![Drill down showing breadcrumbs](media/chart_drilldown_3.png "Drill down showing breadcrumbs")
 
 
-You can continue drilling further into the chart data. As you drill down deeper, the breadcrumb will expand and you can go back to the previous screen or select the Home button to go back to the Home screen.
+You can continue drilling further into the chart data. As you drill-down deeper, the breadcrumb will expand and you can go back to the previous screen or select the Home button to go back to the Home screen.
 
-   ![Drill down further](media/chart_drilldown_4.png "Drill down further")
+   ![Drill down further](media/chart_drilldown_4.png "Drill-down further")
 
 ## Known issues  
 In the chart designer, adding an order by on certain calculated fields is not supported and will cause an error. The calculated fields causing this are using another calculated fields, a related entity field, or a local field on the entity.
