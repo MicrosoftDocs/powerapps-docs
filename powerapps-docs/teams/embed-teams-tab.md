@@ -85,9 +85,4 @@ In the desktop app for Microsoft Teams:
 
 To remove the app from the channel, choose the **Product Showcase** tab > **Remove**.
 
-## Next steps
 
-In this topic, you added the Product Showcase sample app to a Teams channel, and then opened the app from that channel. To learn more about Power Apps, continue to the Power Apps tutorials.
-
-> [!div class="nextstepaction"]
-> [Power Apps Tutorials](../maker/canvas-apps/get-started-create-from-blank.md)
