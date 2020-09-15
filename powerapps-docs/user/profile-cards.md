@@ -31,7 +31,7 @@ For more information about profile cards, see [Profile cards in Office 365](http
 
 ## View a contact's profile
 
-1.	Open a record and go a look up field that has  a contact or owner name.
+1.	Open a record and go a lookup field that has  a contact or owner name.
 2.	Hover over the name to view the profile card.
 
 
@@ -51,7 +51,7 @@ The information shown on the contact profile card is fetched from Common Data Se
 The information shown on the user profile card is fetched from Office 365 (Azure Active Directory). For more information, see [Profile cards in Office 365 (admin section)](https://support.office.com/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501).
 
 ### How can I customize the fields shown on the profile card?
-Currently, the list of fields displayed on the profile card are not open for customization.
+Currently, the list of fields displayed on the profile card is not open for customization.
 
 ### Why is the **Start chat** option on the profile card disabled (greyed out)?
 The **Start chat** and the **Send Email** options on the profile card will open your default instant message and email apps. The **Start chat** option is enabled if the person you are trying to contact in the same Azure Active Directory environment as you or is a federated contact.
