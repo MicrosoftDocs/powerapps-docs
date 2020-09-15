@@ -23,7 +23,7 @@ Scenario|Description
 
 ### Related topics
 
-[What is Project Oakdale?](install-personal-app.md)<br/>
+[What is Project Oakdale?](overview-data-platform.md)<br/>
 [Create your first app in Teams](create-first-app.md)<br/>
 [Power Automate and Teams](/power-automate/teams/overview)<br/>
 [Power Virtual Agents and Teams](https://aka.ms/pva-teams-docs)
