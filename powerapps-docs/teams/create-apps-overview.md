@@ -15,7 +15,7 @@ ms.reviewer:
 
 With the significant number of enterprise employees working remotely and millions of them meeting and collaborating through Microsoft Teams, there’s been significant interest in building low code and no code applications that could make remote work easier and more productive.
 
-Introducing *Project Oakdale*, a built-in, low-code data platform for Microsoft Teams that empowers users to build custom apps and workflows in Teams using Power Apps and Power Automate. Project Oakdale&mdash;built on Common Data Service&mdash;provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment to Teams app store.  
+Introducing *[Project Oakdale](overview-data-platform.md)*, a built-in, low-code data platform for Microsoft Teams that empowers users to build custom apps and workflows in Teams using Power Apps and Power Automate. Project Oakdale&mdash;built on [Common Data Service](/powerapps/maker/common-data-service/data-platform-intro)&mdash;provides relational data storage, rich data types, enterprise-grade governance, and one-click solution deployment to Teams app store.  
 
 The new *Power Apps app* in Teams provides an integrated experience for app makers to create and edit apps and workflows within Teams and quickly publish and share them for anyone on the team to use without having to switch between multiple apps and services. With the Power Apps Studio embedded in the Power Apps app in Teams and the new built-in data platform providing an easy-to-use editable data table, users can quickly build apps based on custom data tables that are Teams and scenario specific.
 
@@ -41,9 +41,9 @@ When you create an app in Teams using Power Apps app for the first time or insta
 ## Get started with creating flows and chatbots in Teams
 
 You can create:
-- Power Automate flows using the Power Apps app in Teams. For more information, see [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app) in Power Automate docs. 
+- Power Automate flows using the new *Power Apps* app in Teams. For more information, see [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app) in Power Automate docs. 
 
-- Chatbots using the Power Virtual Agents app in Teams. For more information, see [TODO: Add link] in Power Virtual Agents docs.
+- Chatbots using the new *Power Virtual Agents* app in Teams. For more information, see [Power Virtual Agents in Teams](https://aka.ms/pva-teams-docs) in Power Virtual Agents docs.
 
 ### Next steps
 
