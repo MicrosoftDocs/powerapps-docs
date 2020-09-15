@@ -54,6 +54,7 @@ Dashboards are one of the different types of forms in model-driven apps. You can
 
 <a name="SupportedFormXMLElements"></a>   
 ## FormXML elements supported for dashboards  
+
  Although dashboards are a type of forms, not all FormXML elements and attributes are supported by dashboards. The following table provides information about the FormXML elements, child elements, and attributes supported by dashboards.
 
  For sample FormXML for different types of dashboards, see [Sample Dashboards](sample-dashboards.md).  
