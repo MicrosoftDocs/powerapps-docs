@@ -297,5 +297,5 @@ To share an idea:
 
 ### See also
 
-- [Area Walk](area-walk.md)
+- [Inspection](inspection.md)
 - [Issue Reporting](issue-reporting.md)
