@@ -19,7 +19,7 @@ search.app:
 ---
 # View charts on a page or in a record 
 
-You can view charts on a page that has a list of records. You can also open a record and view a charts in the record. 
+You can view charts on a page that has a list of records. You can also open a record and view a chart in the record. 
 
 Only an administrator can add charts to a record, for information see, [Add a chart to a form](https://docs.microsoft.com/powerapps/maker/model-driven-apps/add-chart-to-form).
 
@@ -38,8 +38,8 @@ Only an administrator can add charts to a record, for information see, [Add a ch
 
 4. Select the chart view drop-down menu to choose between a system or personal view. 
 
-  - **My Charts**: My charts are personal charts which can only be seen by the user that created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
-  - **System Charts**: System charts are craete by your dministrator. By default, these charts are visible to all users. 
+  - **My Charts**: My charts are personal charts that can only be seen by the user that created the chart. The user can also share their personal chart with other users if the user has sharing privileges for their security role.
+  - **System Charts**: System charts are create by your administrator. By default, these charts are visible to all users. 
 
     > [!div class="mx-imgBorder"]
     > ![Choose between a system or personal chart view](media/system_and_my_charts.png "Choose between a system or personal chart view") 
@@ -49,14 +49,14 @@ Only an administrator can add charts to a record, for information see, [Add a ch
 Use the **More Commands** button ![More commands button](media/more_command_button_charts.png "More commands button")   to access commands such as, create a new chart, import, export, and more. The chart commands options are different for system charts and personal charts.
 
 
-| Commands on my (personal) charts  | Command on syetem charts |
+| Commands on my (personal) charts  | Command on system charts |
 |---------|---------|
-| ![Commands for a personal chart](media/my_chart_commands.png "Commands for a personal chart")     |     ![Commands for a system chart](media/system_chart_commands.png "Commands for a syetem chart")   |
+| ![Commands for a personal chart](media/my_chart_commands.png "Commands for a personal chart")     |     ![Commands for a system chart](media/system_chart_commands.png "Commands for a system chart")   |
 
 
 ## Grid filter on charts
 
-Grid home page provides multiple filter options for a user to filter the grid data such as, quick find, advanced find, grid columm filter, and jump bar.
+Grid home page provides multiple filter options for a user to filter the grid data such as, quick find, advanced find, grid column filter, and jump bar.
 For more information, see [How to use grid filters](https://docs.microsoft.com/powerapps/user/grid-filters).
 
 
@@ -71,12 +71,12 @@ Legend:
 3. **Search this view**: Search for data in the view you're in.
 4. **Jump bar**: The page jump bar uses the first sorted field. If no change has been made to the sort order, the jump bar uses the primary field.
 
-### Drill down in the chart data
+### Drill-down in the chart data
 
-You can drill down into a segment on a chart and filter the data for that segment. When a chart is shown together with grid, the drill down option that you select will filter both chart and grid as show in this illustration. 
+You can drill-down into a segment on a chart and filter the data for that segment. When a chart is shown together with grid, the drill-down option that you select will filter both chart and grid as show in this illustration. 
 
-![Drill down in to a chart](media/drill-down.gif "This illustration shows how the chart drill down feature works")
+![Drill-down in to a chart](media/drill-down.gif "This illustration shows how the chart drill-down feature works")
 
-For more information on how to use the drill down featuref, see [Drill down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
+For more information on how to use the drill-down feature, see [Drill-down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
 
 
