@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 9/2/2020
-ms.author: mduelae
+ms.date: 9/14/2020
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -112,7 +112,7 @@ Legend:
 When you add a chart on a dashboard you can edit the chart properties and modify the chart view and dispaly options. The screenshot below shows how a chart will display based on the chart properties that you selected.
 
    > [!div class="mx-imgBorder"]
-   > ![Select views](media/all_chart_views.png "Select views")
+   > ![Select a view](media/all_chart_views.png "Select a view on a chart")
 
 Legend:
 
@@ -148,7 +148,7 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 4. Once **View Selector** is turned on, you can select different views, to see how the chart renders with different data associated with the view.
 
    > [!div class="mx-imgBorder"]
-   > ![Select views](media/charts_select_views.png "Select views")
+   > ![Select view selector](media/charts_select_views.png "Select view selector")
 
 
 5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the entity and see  different visualizations of the data. If the box is unchecked, then you only see the chart title.
@@ -170,22 +170,22 @@ In the example below, let's further drill down into the chart.
 1. Select a data point on the chart to bring the **Drill down by** dialog box.
 
    > [!div class="mx-imgBorder"]
-   > ![Drill down box](media/chart_drilldown.png "Drill down on a chart box")
+   > ![Drill down by](media/chart_drilldown.png "Select data point on Drill down by dialog box")
 
 2. Select the drop-down menu and choose how to want to group the data.
 
    > [!div class="mx-imgBorder"]
-   > ![Drill down box](media/chart_drilldown_1.png "Drill down on a chart box")
+   > ![Select how to drill down into the chart](media/chart_drilldown_1.png "Select how to drill down into the chart")
    
 3. Select the type of chart that you want to see the drill down data.
 
    > [!div class="mx-imgBorder"]
-   > ![Drill down box](media/chart_drilldown_2.png "Drill down on a chart box")
+   > ![Select the type of chart](media/chart_drilldown_2.png "Select the type of chart")
 
 4. The chart with the drilled down data will show. The breadcrumb at the top shows the filter criteria of the drilldown. You can select the breadcrumb to go back Home or to the previous screen.
 
    > [!div class="mx-imgBorder"]
-   > ![Drill down box](media/chart_drilldown_3.png "Drill down on a chart box")
+   > ![Drill down showing breadcrumbs](media/chart_drilldown_3.png "Drill down showing breadcrumbs")
 
 
 You can continue drilling further into the chart data. As you drill down deeper, the breadcrumb will expand and you can go back to the previous screen or select the Home button to go back to the Home screen.
