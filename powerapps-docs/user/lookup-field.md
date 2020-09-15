@@ -71,7 +71,7 @@ The most recently used list of records shows an image to help distinguish betwee
 ## Record type selection list  
 When results span multiple record types, you can see how many types of records there are and select them from the list.
 
-- To search, enter text in the serach box. 
+- To look for records, enter text in the serach box. 
 - To search by entity type select **types of records**. 
 - Select **Change View** to select a view.
 
