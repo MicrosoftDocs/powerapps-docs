@@ -342,7 +342,7 @@ To submit inspection of grouped locations:
 
 1. Select **Review inspection**.
 
-    ![Review grouped inspection](media/inspection/inspection/review-inspection-grouped.png "Review grouped inspection")
+    ![Review grouped inspection](media/inspection/review-inspection-grouped.png "Review grouped inspection")
 
 1. Select the next location in the tab.
 
