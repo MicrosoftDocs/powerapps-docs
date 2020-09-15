@@ -54,8 +54,8 @@ Environment variables can be created and managed through the modern solution int
       > A value can't exist without a definition. The interface only allows creation of one value per definition. 
 
 ## Enter new values while importing solutions
-The modern solution import interface includes the ability to enter values for environment variables. This sets the ‘value’ property on the environmentvariablevalue entity.
-You will not be prompted if the environment variables already have either a default value or value present – whether values are part of your solution or are already present in CDS. 
+The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the environmentvariablevalue entity.
+You will not be prompted if the environment variables already have either a default value or value present – whether values are part of your solution or are already present in Common Data Service. 
    >[!NOTE]
       > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but not get exported in the solution. This approach allows a new value to be set while importing the solution into other environments.  
 
