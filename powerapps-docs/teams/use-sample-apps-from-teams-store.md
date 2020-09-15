@@ -14,7 +14,7 @@ ms.reviewer:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-Sample apps created using Power Apps are available in the Teams store. You can select the sample app that best fits your business requirement and quickly install to get started. In this article, you'll learn about one such sample application that helps inspect vehicles. Sample apps created using Power Apps and published to the Teams store may consist of multiple components such as apps, flows, and tables.
+Sample apps created using Power Apps are available in the Teams store. You can select the sample app that best fits your business requirement and quickly install to get started. In this article, you'll learn about one such sample application that helps manage campaigns and ideas. Sample apps created using Power Apps and published to the Teams store may consist of multiple components such as apps, flows, and tables.
 
 In this tutorial, you'll learn how to search for sample apps in Teams store, and add them to your team channel. After you install the sample app, you can go to the team that you added the app to and use the tabs for the apps just like other features such as **Post**, **Files**, or **Wiki**.
 
@@ -29,9 +29,8 @@ Several sample apps are available from the Teams store that you can add to your 
 
 | Name | Description |
 | - | - |
-| [Asset Inspection](asset-inspection.md) | Manager and user apps for asset inspections. |
-| [Area Walk](area-walk.md) | Manager and user apps for area walks. |
 | [Employee Ideas](employee-ideas.md) | Manager and employee apps for campaigns and ideas. |
+| [Inspection](inspection.md) | Manager and user apps for area inspections. |
 | [Issue Reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
 
 The following tutorial shows how to install one of the available sample apps.
@@ -42,7 +41,9 @@ To get started with installing the sample Power Apps app in Teams:
 
 1. Select **Apps** at the bottom of left pane inside Teams.
 
-1. Search for the app name, for example **Asset Inspection**.
+1. Search for the app name, for example **Employee Ideas**.
+
+    ![Employee Ideas app search](media/sample-app-9.png "Employee Ideas app search")
 
 1. Select the app.
 
@@ -75,7 +76,7 @@ To get started with installing the sample Power Apps app in Teams:
     > [!NOTE]
     > If the selected Teams team doesn’t already have an environment created, a new environment is created at this stage. For more information about environment lifecycle, go to [Environment lifecycle](/power-platform/admin/about-teams-environment.md).
 
-1. After the app installs, you’ll see tab(s) added to the Teams channel you selected earlier. In this example, the tabs are **Inspection App** and **Manage Asset Classes.** Upon completion of installation, you can remove the **Installing App** tab.
+1. After the app installs, you’ll see tab(s) added to the Teams channel you selected earlier. In this example, the tab called **Employee Ideas**.
 
     ![Remove installation tab](media/sample-app-6.png "Remove installation tab")
 
@@ -83,14 +84,30 @@ Similarly, you can find other apps in the Teams store, and add them to your Team
 
 ## Run the sample app
 
-To run the installed app, select app from the available tabs inside the Teams channel that you added the app to.
-
-For example, to run the **Inspection App**, select the app from the available
+To run the installed app, select app from the available tabs inside the Teams channel that you added the app to. For example, to run the **Employee Ideas**, select the app from the available
 tabs on your Teams channel.
 
-![Select app from available list](media/sample-app-7.png "Select app from available list")
+### Step 1 - Allow connections
 
-For more details about using the **Asset Inspection** app, go to [Asset Inspection](asset-inspection.md).
+Before you can use the app, an app configured to use connection(s) may ask your permissions:
+
+![Select Allow to let the app use connections](media/sample-app-10.png "Select Allow to let the app use connections")
+
+Select **Allow** so the app can use connections.
+
+### Step 2 - Select channel
+
+Select the channel, in this case populated automatically - and then, select **Let's go**:
+
+![Select Let's go](media/sample-app-11.png "Select Let's go")
+
+### Step 3 - Use the app
+
+The app **Employee Ideas** is now open and ready for your use.
+
+![Select app from available list](media/sample-app-12.png "Select app from available list")
+
+For more details about using the **Employee Ideas** app, go to [Employee Ideas](employee-ideas.md).
 
 ## Edit the sample app
 
@@ -102,7 +119,6 @@ If you get any errors during the installation process, you can help us troublesh
 
 ### See also
 
-- [Asset Inspection](asset-inspection.md)
-- [Area Walk](area-walk.md)
 - [Employee Ideas](employee-ideas.md)
+- [Inspection](inspection.md)
 - [Issue Reporting](issue-reporting.md)

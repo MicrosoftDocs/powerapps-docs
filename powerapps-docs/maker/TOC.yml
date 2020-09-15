@@ -1824,12 +1824,10 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Asset Inspection
-          href: ../teams/asset-inspection.md
-        - name: Area Walk
-          href: ../teams/area-walk.md
         - name: Employee Ideas
           href: ../teams/employee-ideas.md
+        - name: Inspection
+          href: ../teams/inspection.md
         - name: Issue Reporting
           href: ../teams/issue-reporting.md
 - name: Chatbots
