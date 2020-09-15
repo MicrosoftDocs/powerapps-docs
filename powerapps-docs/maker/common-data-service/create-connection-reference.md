@@ -26,7 +26,7 @@ A connection reference is a solution component that contains information about a
 
 > [!NOTE]
 >
-> - Canvas apps and flows handle connections differently. Flows use connection references for all connectors, whereas canvas apps only use them for implicitly shared connections, such as SQL Server. More information: [Security and types of authentication](../canvas-apps/connections-list#security-and-types-of-authentication)
+> - Canvas apps and flows handle connections differently. Flows use connection references for all connectors, whereas canvas apps only use them for implicitly shared connections, such as SQL Server. More information: [Security and types of authentication](../canvas-apps/connections-list.md#security-and-types-of-authentication)
 > - A connection reference is automatically created when you create new connections from the flow and canvas app designers.
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and on the left pane select **Solutions**. 
