@@ -22,6 +22,7 @@ Apps and flows often require different configuration settings across environment
 Benefits of using environment variables:
 - No need to manually edit configurable values in a production environment.
 - Configure one or more variables in one place and reference like a parameter across multiple solution components.
+- Enter different values while importing solutions to other environments. 
 - Update values without a code change.
 - Granular level security managed by [Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro).
 - Unlimited number of variables (max solution size is 29 MB).
