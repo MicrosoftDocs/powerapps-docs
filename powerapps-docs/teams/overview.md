@@ -26,4 +26,4 @@ Scenario|Description
 [What is Project Oakdale?](install-personal-app.md)<br/>
 [Create your first app in Teams](create-first-app.md)<br/>
 [Power Automate and Teams](/power-automate/teams/overview)<br/>
-[Power Virtual Agents and Teams]( https://aka.ms/pva-teams-docs)
+[Power Virtual Agents and Teams](https://aka.ms/pva-teams-docs)
