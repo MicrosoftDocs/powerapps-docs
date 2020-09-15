@@ -463,14 +463,14 @@ The page provides details about the equipment by location, the total number of v
 The page provides details about the long-term patients, discharge barriers over a period, and variance in terms of actual and anticipated discharges.
 
 > [!div class="mx-imgBorder"]
-> ![Equipment Details](media/report-discharge-details.png)
+> ![Discharges](media/report-discharge-details.png)
 
 #### Supplies page 
 
 The page provides details about the supplies by location. It also provides a chart about days on hand by supply and facility, and the supply available on hand over a period of time.
 
 > [!div class="mx-imgBorder"]
-> ![Equipment Details](media/report-supplies.png)
+> ![Supplies](media/report-supplies.png)
 
 ## View and manage app feedback
 
@@ -485,7 +485,7 @@ To view and manage app feedback:
 3. Select **App Feedback** to view a list of app feedback submitted by users. You can click a record to view details and mark them as reviewed or not.  
 
     > [!div class="mx-imgBorder"]
-    > ![select-app-feedback](media/select-app-feedback.png)
+    > ![App feedback](media/select-app-feedback.png)
 
 ## View the admin app in your language
 
