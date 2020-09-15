@@ -30,7 +30,7 @@ Several sample apps are available from the Teams store that you can add to your 
 | Name | Description |
 | - | - |
 | [Employee Ideas](employee-ideas.md) | Manager and employee apps for campaigns and ideas. |
-| [Area Walk](area-walk.md) | Manager and user apps for area walks. |
+| [Inspection](inspection.md) | Manager and user apps for area inspections. |
 | [Issue Reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
 
 The following tutorial shows how to install one of the available sample apps.
@@ -119,6 +119,6 @@ If you get any errors during the installation process, you can help us troublesh
 
 ### See also
 
-- [Area Walk](area-walk.md)
 - [Employee Ideas](employee-ideas.md)
+- [Inspection](inspection.md)
 - [Issue Reporting](issue-reporting.md)
