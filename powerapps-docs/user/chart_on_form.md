@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 9/2/2020
+ms.date: 9/14/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -79,5 +79,4 @@ You can drill down into a segment on a chart and filter the data for that segmen
 
 For more information on how to use the drill down featuref, see [Drill down in a chart](https://docs.microsoft.com/powerapps/user/track-your-progress-with-dashboard-and-charts#drill-down-in-a-chart).
 
-## View charts in a record
 
