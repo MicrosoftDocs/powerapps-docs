@@ -47,10 +47,6 @@
       items:
       - name: Basic navigation
         href: ../user/navigation.md
-      - name: Use grid filters
-        href: ../user/grid-filters.md
-      - name: Create personal views with advanced grid filters
-        href: ../user/grid-filters-advanced.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
@@ -82,11 +78,23 @@
       - name: Add a connection role
         href: ../user/add-connection-role.md
       - name: Deactivate accounts or contacts
-        href: ../user/deactivate-activate-account-contact.md
+        href: ../user/deactivate-activate-account-contact.md   
+    - name: Work with grid filters
+      items:
+      - name: Use grid filters
+        href: ../user/grid-filters.md
+      - name: Create personal views with advanced grid filters
+        href: ../user/grid-filters-advanced.md      
+    - name: Charts and dashboards
+      items:
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
+      - name: View charts on a page or in a record
+        href: ../user/chart_on_form.md
+      - name: Use interactive dashboards to filter data
+        href: ../user/interactive-dashboards.md
       - name: Add Power BI dashboards
-        href: ../user/add-powerbi-dashboards.md
+        href: ../user/add-powerbi-dashboards.md      
     - name: Work with email
       items:
       - name: View and create email through the activities grid
@@ -1707,6 +1715,8 @@
           href: ./common-data-service/view-component-dependencies.md   
         - name: Use environment variables
           href: ./common-data-service/EnvironmentVariables.md
+        - name: Create a connection reference
+          href: ./common-data-service/create-connection-reference.md  
         - name: Translate customized component text
           items: 
           - name: Overview
