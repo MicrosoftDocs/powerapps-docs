@@ -26,7 +26,7 @@ You can share an app you've created by embedding it directly into Microsoft Team
 ## Prerequisites
 
 - You need a valid [Power Apps license](https://docs.microsoft.com/power-platform/admin/pricing-billing-skus).
-- To embed an app into Teams, you need an existing app [created using Power Apps](data-platform-create-app.md).
+- To embed an app into Teams, you need an existing app [created using Power Apps](/powerapps/maker/canvas-apps/data-platform-create-app).
 
 ## Download the app
 
@@ -36,11 +36,11 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 2. Select **More actions** (...) for the app you want to share in Teams, and then select **Add to Teams**.
 
-    ![App details](../maker/canvas-apps/media/embed-teams-app/add-to-teams.png "Add to Teams")
+    ![Add to Teams](../maker/canvas-apps/media/embed-teams-app/add-to-teams.png "Add to Teams")
 
 3. In the Add to Teams panel, select **Download**. Power Apps will then generate your Teams manifest file using the app description and logo you've already set in your app.
 
-    ![App details](../maker/canvas-apps/media/embed-teams-app/download-app.png "Download app")
+    ![Download app](../maker/canvas-apps/media/embed-teams-app/download-app.png "Download app")
 
 ## Add the app as a personal app
 
@@ -116,7 +116,7 @@ You can optionally preload your app within Teams to increase performance.
 
 3. In the Settings panel, toggle **Preload app for enhanced performance** to **Yes**. App will then pre-load whenever embedded in Teams.
 
-    ![App details](../maker/canvas-apps/media/embed-teams-app/preload-app.png "Preload app for enhanced performance")
+    ![Preload app for enhanced performance](../maker/canvas-apps/media/embed-teams-app/preload-app.png "Preload app for enhanced performance")
 
 4. For the changes to take effect, remove and add your app into Teams again.
 
