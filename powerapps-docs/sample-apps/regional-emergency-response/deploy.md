@@ -45,7 +45,7 @@ For detailed information about the US Government plans for Power Apps and Power 
 ## Step 1: Download the deployment package
 
 > [!IMPORTANT]
-> If you are a commercial version user, you can use the AppSource option instead of using the deployment package to install the app and Power BI dashboard. You still need to download the deployment package to use the [sample data](configure.md##add-and-manage-master-data).
+> If you are a commercial version user, you can use the AppSource option instead of using the deployment package to install the app and Power BI dashboard. You still need to download the deployment package to use the [sample data](configure.md#add-and-manage-master-data).
 
 Download the latest deployment package (.zip) from <https://aka.ms/rer-solution>.
 
