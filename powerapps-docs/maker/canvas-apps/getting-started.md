@@ -51,7 +51,7 @@ Run your own apps - and any apps shared with you - on Windows, in a [web browser
 ## Share your experience
 * Read and post in the [Power Apps Community](https://aka.ms/powerapps-community), where anyone who uses Power Apps can post a question and others can answer. Before you post a question, search the community to see whether your question has already been answered.
 * Submit an idea for how we can improve Power Apps in [Power Apps Ideas](https://powerusers.microsoft.com/t5/PowerApps-Ideas/idb-p/PowerAppsIdeas).
-* Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a Power Apps administrator for your organization, you can also open a support ticket in the [Power Apps admin center](https://admin.microsoft.com/Support/Support.aspx).
+* Create a [support ticket](https://powerapps.microsoft.com/support/pro/) to get technical assistance. If you're a Power Platform administrator for your organization, you can also open a support ticket in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/support).
 
 ## Next steps
 - [Planning a Power Apps project](/powerapps/guidance/planning/introduction)

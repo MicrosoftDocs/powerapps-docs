@@ -143,7 +143,7 @@ You can install the app by using one of the following 3 options:
     > [!div class="mx-imgBorder"] 
     > ![Select an environment](media/appsource-02.png "Select an environment")
 
-5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+5.  You'll be taken to Power Platform admin center where you can monitor the progress of your app installation.
 
     > [!div class="mx-imgBorder"] 
     > ![AppSource](media/appsource-03.png "Monitor app installation progress")

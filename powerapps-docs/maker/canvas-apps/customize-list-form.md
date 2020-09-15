@@ -204,7 +204,7 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 **A:** If you're a tenant administrator for Power Apps or you have environment-administrator permissions on the default Power Apps environment of your organization, do the following:
 
-1. In the [Power Apps admin center](https://admin.powerplatform.microsoft.com), select the default environment for your organization from the list of environments.
+1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com), select the default environment for your organization from the list of environments.
 
 1. At the top of the default environment page, select **Resources**.
 

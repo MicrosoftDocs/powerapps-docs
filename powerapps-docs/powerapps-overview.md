@@ -40,7 +40,7 @@ You can run apps that you created, or that someone else created and shared with 
 
 ## Power Apps for admins
 
-Power Apps admins can use **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to create and manage environments, get real-time, self-help recommendations and support for Power Apps and Power Automate, and view Common Data Service analytics. More information: [Administer Power Platform](/power-platform/admin/admin-guide)
+Power Platform admins can use **Power Platform admin center** ([admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)) to create and manage environments, get real-time, self-help recommendations and support for Power Apps and Power Automate, and view Common Data Service analytics. More information: [Administer Power Platform](/power-platform/admin/admin-guide)
 
 ## Power Apps for developers
 
