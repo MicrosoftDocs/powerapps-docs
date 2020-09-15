@@ -872,9 +872,7 @@
     - name: Share app resources
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
-      href: ./canvas-apps/embed-powerapps-powerbi.md
-    - name: Embed an app in Teams
-      href: ./canvas-apps/embed-teams-app.md
+      href: ./canvas-apps/embed-powerapps-powerbi.md    
   - name: Manage an app
     items:
     - name: Edit an app
@@ -1770,62 +1768,70 @@
 
 - name: Teams integration
   items:
-  - name: Overview
+  - name: Power Apps and Teams integration
     href: ../teams/overview.md
-  - name: Get started
-    items:      
-      - name: Install the Power Apps personal app
-        href: ../teams/install-personal-app.md
-      - name: Create your first app
-        href: ../teams/create-first-app.md    
-  - name: Understand the Power Apps interface
+  - name: Embed a canvas app as tab app
+    href: ../teams/embed-teams-tab.md
+  - name: Embed a canvas app as personal app
+    href: ../teams/embed-teams-app.md
+  - name: Create an app in Teams
     items:
-      - name: Overview of the Power Apps app
-        href: ../teams/overview-of-the-power-apps-app.md
-      - name: Understand Power Apps Studio
-        href: ../teams/understand-power-apps-studio.md
-      - name: Use the Fluent UI controls
-        href: ../teams/use-the-fluent-ui-controls.md
-  - name: Create additional apps
-    href: ../teams/create-additional-apps.md
-  - name: Use Teams integration object
-    href: ../teams/use-teams-integration-object.md
-  - name: Work with Project Oakdale
-    items:
-      - name: Overview
-        href: ../teams/overview-data-platform.md
-      - name: Project Oakdale vs Common Data Service
-        href: ../teams/data-platform-compare.md
-      - name: Create a table
-        href: ../teams/create-table.md
-      - name: Edit or delete a table
-        href: ../teams/edit-delete-table.md
-      - name: Work with table relationships
-        href: ../teams/relationships-table.md
-      - name: Work with table columns
-        href: ../teams/table-columns.md
-      - name: Analyze tables in Power BI
-        href: ../teams/table-data-powerbi.md
-  - name: Manage your apps
-    href: ../teams/manage-your-apps.md
-  - name: Share and publish your app
-    href: ../teams/publish-and-share-apps.md
-  - name: Remove your apps
-    href: ../teams/remove-your-apps.md
-  - name: Uninstall Power Apps personal app
-    href: ../teams/uninstall-personal-apps.md
-  - name: Sample apps
-    items:
-      - name: Use sample apps from Teams store
-        href: ../teams/use-sample-apps-from-teams-store.md
-      - name: Asset Inspection
-        href: ../teams/asset-inspection.md
-      - name: Area Walk
-        href: ../teams/area-walk.md
-      - name: Employee Ideas
-        href: ../teams/employee-ideas.md
-      - name: Issue Reporting
-        href: ../teams/issue-reporting.md
+    - name: "Overview: create an app in Teams"
+      href: ../teams/create-apps-overview.md
+    - name: Get started
+      items:      
+        - name: Install the Power Apps personal app
+          href: ../teams/install-personal-app.md
+        - name: Create your first app
+          href: ../teams/create-first-app.md    
+    - name: Understand the Power Apps interface
+      items:
+        - name: Overview of the Power Apps app
+          href: ../teams/overview-of-the-power-apps-app.md
+        - name: Understand Power Apps Studio
+          href: ../teams/understand-power-apps-studio.md
+        - name: Use the Fluent UI controls
+          href: ../teams/use-the-fluent-ui-controls.md
+    - name: Create additional apps
+      href: ../teams/create-additional-apps.md
+    - name: Use Teams integration object
+      href: ../teams/use-teams-integration-object.md
+    - name: Work with Project Oakdale
+      items:
+        - name: Overview
+          href: ../teams/overview-data-platform.md
+        - name: Project Oakdale vs Common Data Service
+          href: ../teams/data-platform-compare.md
+        - name: Create a table
+          href: ../teams/create-table.md
+        - name: Edit or delete a table
+          href: ../teams/edit-delete-table.md
+        - name: Work with table relationships
+          href: ../teams/relationships-table.md
+        - name: Work with table columns
+          href: ../teams/table-columns.md
+        - name: Analyze tables in Power BI
+          href: ../teams/table-data-powerbi.md
+    - name: Manage your apps
+      href: ../teams/manage-your-apps.md
+    - name: Share and publish your app
+      href: ../teams/publish-and-share-apps.md
+    - name: Remove your apps
+      href: ../teams/remove-your-apps.md
+    - name: Uninstall Power Apps personal app
+      href: ../teams/uninstall-personal-apps.md
+    - name: Sample apps
+      items:
+        - name: Use sample apps from Teams store
+          href: ../teams/use-sample-apps-from-teams-store.md
+        - name: Asset Inspection
+          href: ../teams/asset-inspection.md
+        - name: Area Walk
+          href: ../teams/area-walk.md
+        - name: Employee Ideas
+          href: ../teams/employee-ideas.md
+        - name: Issue Reporting
+          href: ../teams/issue-reporting.md
 - name: Chatbots
   href: ../chatbots.md
 
