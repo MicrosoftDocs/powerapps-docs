@@ -2,7 +2,7 @@
 title: "Solutions in Power Apps | MicrosoftDocs"
 description: "Provides an overview of solutions in Power Apps"
 ms.custom: ""
-ms.date: 05/19/2020
+ms.date: 09/15/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.topic: "article"
@@ -131,7 +131,7 @@ With solutions that are unmanaged or the default one, you can use the **New** or
 The following limitations apply to the use of canvas apps, flows, and custom connectors in solutions. 
 
 - Canvas app button triggered flows must be created from an app already in a solution. Adding this type of flow from outside solutions is blocked.
-  - The app and flow will not currently be connected in the target environment post deployment. First associate valid connections with the flow and activate the flow. Then edit the app and re-associate the flow to the button.
+  - The app and flow will not currently be connected in the target environment after deployment. First associate valid connections with the flow and activate the flow. Then edit the app and re-associate the flow to the button.
 -	Canvas apps won't display in the classic solution explorer. Use the modern experience. There are no plans for them to be added to classic solution explorer. 
 - Flows created from solutions will not be displayed in the "Team Flows" list. They must be accessed through a solution. 
 - Button triggered flows are not available in solutions.
