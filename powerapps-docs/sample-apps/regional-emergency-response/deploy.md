@@ -152,7 +152,7 @@ You can install the app by using one of the following 3 options:
 5.  The installation will start, and you can monitor the progress of your app installation on the Dynamics 365 apps page.
 
     > [!div class="mx-imgBorder"] 
-    > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
+    > ![Monitor the app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
 
     > [!IMPORTANT]
     > It might take a while for the app to install.
