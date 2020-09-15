@@ -1,5 +1,6 @@
 ---
 title: "Use the lookup field on a record | MicrosoftDocs"
+description: How to use the lookup field in Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
