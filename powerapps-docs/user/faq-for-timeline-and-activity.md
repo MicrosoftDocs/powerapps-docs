@@ -51,39 +51,6 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 **My activities** stream in the dashboard shows the records and activities that are owned by you (user). For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
 
 
-## Known issues
-
-### Email content is lost after entering text in the description field on a email form 
-
-**Issue**: When composing an email and filling the description field if **Save**, **Save and Close**, or **Send** is selected immediately after entering text in the description field, the most recent content added to the email may get lost. 
-
-**Resolution**: To avoid this issue, wait a few seconds before you select **Save**, **Save and Close**, or **Send** after text is entered in the description field. 
-
-### The From field is read only or lookup isn't working
-
-**Issue**: The **From** field in an email form is read-only or you can't look up records and filter results by **User** or **Queue**.
-
-**Resolution**: This happens when customization specifically have been applied on this field by your system administrator. To fix the issue, open a browser window and run the following two commands replacing the **environment URL** with the URL of your environment.
-
-
- - (replace with your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(25E9AF0C-2341-DB11-898A-0007E9E17EBD))
- - (replace with your envioment URL)/api/data/v9.1/RemoveActiveCustomizations(SolutionComponentName='AttributeLookupValue',ComponentId=(26E9AF0C-2341-DB11-898A-0007E9E17EBD))
- 
-To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the enviroment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
-
-### Appointments are auto saved even if system administrator has added a custom script to stop auto save
-
-**Issue** If your system administrator has added a custom script to prevent the default save option for appointments the system will still override the custom script and auto save appointments.
-
-**Resolution**: There is no work around for this.
-
-### Open Record Set button disappears when an appointment is saved
-
-**Issue** When you select the **Save** button to save a appointment [The  Open Record Set](https://docs.microsoft.com/powerapps/user/navigation#record-set-navigation) button disappears. 
-
-**Resolution**: Refresh the page and the **Open Record Set** button will appear again. 
-
-
 
 ## See also
 
