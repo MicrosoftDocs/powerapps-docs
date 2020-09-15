@@ -1774,9 +1774,9 @@
     href: ../teams/embed-teams-tab.md
   - name: Embed a canvas app as personal app
     href: ../teams/embed-teams-app.md
-  - name: Create an app in Teams
+  - name: Create apps in Teams using Power Apps
     items:
-    - name: "Overview: create an app in Teams"
+    - name: Create apps in Teams
       href: ../teams/create-apps-overview.md
     - name: Get started
       items:      
