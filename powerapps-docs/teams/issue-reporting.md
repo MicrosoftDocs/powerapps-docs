@@ -334,5 +334,5 @@ To review and edit existing issues in Planner:
 
 ### See also
 
-- [Area Walk](area-walk.md)
+- [Inspection](inspection.md)
 - [Employee Ideas](employee-ideas.md)
