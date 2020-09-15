@@ -1768,7 +1768,7 @@
 
 - name: Teams integration
   items:
-  - name: Power Apps and Teams integration
+  - name: Overview
     href: ../teams/overview.md
   - name: Embed a canvas app as tab app
     href: ../teams/embed-teams-tab.md
