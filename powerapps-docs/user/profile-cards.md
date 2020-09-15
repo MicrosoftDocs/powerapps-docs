@@ -1,13 +1,14 @@
 ---
 title: "View the profile card for a contact or user | MicrosoftDocs"
+description: View a contact's or user profile card
 ms.custom: ""
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 10/04/2020
-ms.author: mduelae
+ms.date: 09/14/2020
+ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
 search.audienceType: 
@@ -25,7 +26,7 @@ When you select someone's name or picture in Outlook or other Office apps, you c
 For more information about profile cards, see [Profile cards in Office 365](https://support.office.com/article/Profile-cards-in-Office-365-e80f931f-5fc4-4a59-ba6e-c1e35a85b501).
 
 > [!NOTE]
->  - Profile cards are available on contacts and users in any Unified Interface app. For information, see [Enable viewing profile cards (for admins)](https://docs.microsoft.com/en-us/power-platform/admin/enable-profile-card).
+>  - Profile cards are available on contacts and users in any Unified Interface app. For information, see [Enable viewing profile cards (for admins)](https://docs.microsoft.com/power-platform/admin/enable-profile-card).
 >  - The profile card in Common Data Service is not displayed if multi-factor authentication is turned on for Office Delve service in Azure Active Directory.
 
 ## View a contact's profile
