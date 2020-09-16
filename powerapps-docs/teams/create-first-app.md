@@ -112,6 +112,8 @@ Power Apps Studio and you’re prompted to name your app.
     > [!TIP]
     > An app template is included with your the app by default so that you can get started with creating your table and using the app. To learn more about editing the app inside the Power Apps Studio, see [Understanding Power Apps Studio](understand-power-apps-studio.md).
 
+### Update 
+
 ### Create your first table
 
 Data for apps built in Teams lives inside Project Oakdale environments as tables. Like other data experiences, you can add additional columns to track different attributes of each record before filling up the table with multiple rows of
@@ -170,6 +172,26 @@ After you close the table, the app template added to the app screen by default a
 ![Updated app template](media/updated-gallery.png "Updated app template")
 
 Depending on the number of fields you added to your table, the app template may need updates to the form and the gallery.
+
+#### Update selected item background color
+
+The gallery shows records created earlier. However, the background color needs to change for a record when selected from the gallery to show the selection.
+
+To update the selected item background color:
+
+1. Select the gallery.
+
+    ![Select the gallery for background fill](media/select-gallery.png "Select the gallery for background fill")
+
+2. Select *TemplateFill* property from the property drop-down on the top-left.
+
+    ![Select TemplateFill prpoerty](media/select-templatefill.png "Select TemplateFill property")
+
+3. Update the *TemplateFill* property value in the formula bar to the following formula:
+
+    `If(ThisItem.IsSelected, RGBA(0,0,0,.05), RGBA(0,0,0,0))`
+
+    ![Update TemplateFill prpoerty](media/templatefill-property.png "Update TemplateFill property")
 
 #### Update fields on the form
 
