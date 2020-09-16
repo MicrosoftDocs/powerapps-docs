@@ -15,7 +15,7 @@ This article provides details about the known issues and limitations of the Powe
 
 ## Component library
 
-[Component library](../maker/canvas-apps/component-library.md) isn't supported currently. This support is coming soon.
+[Component library](../maker/canvas-apps/component-library.md) isn't currently supported. This support is coming soon.
 
 ## Government Community Cloud (GCC)
 
