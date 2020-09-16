@@ -66,3 +66,15 @@ If the above does not resolve the issue, try this:
 6. Open the Power Apps mobile app and sign-in.
 
 If you still can't sign-in please email us at pamobsup@microsoft.com and include your device make and model, session ID and quote the error message that you got on your screen.
+
+## Pin to Home functionality is not supported using Safari for iOS 14
+
+Safari for iOS 14 no longer supports the Power Apps mobile app **Pin to Home** functionality. This still works on on iOS 13 or ealier. 
+
+
+
+
+## App icons are blank on iOS 14 or later
+
+If your using an older version of Power Apps mobile on iOS 14 then app list icons are blank. To fix the issue, update your Power Apps mobile app to the latest version.
+
