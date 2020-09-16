@@ -106,6 +106,7 @@ You can create a new employee contact if the contact doesn't exist.
    | Email | Enter an employee email address. |
    | Business Phone| Enter the employee mobile or phone number. |
    | Preferred Method of Contact | Select the method of contact the employee prefers from the drop-down list. |
+   | Conact Type | Select 'Employee'. |
 
    > [!div class="mx-imgBorder"]
    > ![Create a contact details](media/health-safety-employee-new2.png "Create a contact details")
@@ -223,6 +224,9 @@ When accounting for the whereabouts of an employee, the system stores valuable i
   c. On the same Floor as that person (3 points)
 
 These Case Contacts must be regarded as suggestions and can then be cleared by the case manager.
+
+> [!NOTE]
+> Case Contact record that are created as suggestions do not include guests that were registered.
 
 ### Case facilities
 
