@@ -6,12 +6,12 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/14/2020
-ms.author: mabolanos
+ms.author: mabolan
 ms.reviewer: tapanm
 ---
 # Known issues and limitations
 
-This article provides details about the known issues and limitations of the Power Apps and Teams integration capabilities when using [**Project Oakdale environments**](power-platform/admin/about-teams-environment).
+This article provides details about the known issues and limitations of the Power Apps and Teams integration capabilities when using [**Project Oakdale environments**](/power-platform/admin/about-teams-environment).
 
 ## Component library
 
@@ -19,7 +19,7 @@ This article provides details about the known issues and limitations of the Powe
 
 ## Government Community Cloud (GCC)
 
-Project Oakdale currently isn't available in [Power Apps Government Community Cloud (GCC)](power-platform/admin/powerapps-us-government).
+Project Oakdale currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
 
 ## Localization
 
@@ -50,7 +50,7 @@ To see the new changes, refresh Power Apps Studio.
 
 The following controls aren't supported:
 
-- [Forms Pro survey (preview)](forms-pro/embed-survey-powerapps)
+- [Forms Pro survey (preview)](/forms-pro/embed-survey-powerapps)
 - AR controls
 - [Video control](../maker/canvas-apps/controls/control-audio-video.md)
 
