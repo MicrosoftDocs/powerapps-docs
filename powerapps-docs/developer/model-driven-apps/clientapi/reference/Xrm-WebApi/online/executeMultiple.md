@@ -24,7 +24,7 @@ If you want to execute multiple requests in a transaction, you must pass in a ch
 
 > [!NOTE]
 > - You cannot include read operations (retrieve, retrieve multiple, and Web API functions) as part of a change set; this is as per the OData v4 specifications.
-> - Requests can contain up to 1000 individual requests and cannot contain other requests.
+> - Requests can contain up to 1000 individual requests and cannot contain other requests.This is because of the limitation on the underlying Common Data Service implementation and not on the API itself. More information: [Execute batch operations](https://docs.microsoft.com/powerapps/developer/common-data-service/webapi/execute-batch-operations-using-web-api).
 
 ## Syntax
 
