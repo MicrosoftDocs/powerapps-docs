@@ -56,4 +56,5 @@ These tables and the applications that use them are secured with enterprise-grad
 
 ### See also
 [How are Project Oakdale and Common Data Service different?](data-platform-compare.md) <br />
+[Create tables](create-table.md)<br/>
 [Work with table relationships](relationships-table.md)
