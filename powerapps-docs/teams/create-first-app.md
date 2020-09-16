@@ -14,7 +14,7 @@ ms.reviewer:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-You can create, edit and delete [canvas apps](/powerapps/maker/canvas-apps/getting-started) within Teams. 
+You can create, edit, and delete [canvas apps](/powerapps/maker/canvas-apps/getting-started) within Teams. 
 
 If you’re creating an app using Power Apps in a Teams team for the *first time*, a new Project Oakdale environment will be created for you. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment) 
 
@@ -173,7 +173,7 @@ After you close the table, the app template added to the app screen by default a
 
 Depending on the number of fields you added to your table, the app template may need updates to the form and the gallery.
 
-#### Update selected item background color
+#### Update background color for the selected gallery record
 
 The gallery shows records created earlier. However, the background color needs to change for a record when selected from the gallery to show the selection.
 
@@ -185,7 +185,7 @@ To update the selected item background color:
 
 2. Select *TemplateFill* property from the property drop-down on the top-left.
 
-    ![Select TemplateFill prpoerty](media/select-templatefill.png "Select TemplateFill property")
+    ![Select TemplateFill property](media/select-templatefill.png "Select TemplateFill property")
 
 3. Update the *TemplateFill* property value in the formula bar to the following formula:
 
@@ -193,7 +193,7 @@ To update the selected item background color:
     If(ThisItem.IsSelected, RGBA(0,0,0,.05), RGBA(0,0,0,0))
     ```
 
-    ![Update TemplateFill prpoerty](media/templatefill-property.png "Update TemplateFill property")
+    ![Update TemplateFill property](media/templatefill-property.png "Update TemplateFill property")
 
 #### Update fields on the form
 
@@ -239,7 +239,7 @@ To update the fields in the gallery:
 
     ![Edit fields for gallery](media/edit-gallery-fields.png "Edit fields for gallery")
 
-1. Select the drop-down for a gallery component (such as image, title or subtitle) and change the selection to the required field.
+1. Select the drop-down for a gallery component (such as image, title, or subtitle) and change the selection to the required field.
 
     ![Edit selected field](media/gallery-fields-change.png "Edit selected field")
 
