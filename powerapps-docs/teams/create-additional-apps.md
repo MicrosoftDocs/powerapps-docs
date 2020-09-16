@@ -51,7 +51,7 @@ in Power Apps**.
 
 You can also select **New \> Canvas app** and then select an app layout to
 create an app. Canvas app is a Power Apps app that you can create from scratch
-or using any available template through the Power Apps Studio. For more
+or using any available template through Power Apps Studio. For more
 information, go to Canvas apps terminology reference and definitions.
 
 ![Create an app from the solution explorer](media/additional-apps-8.png "Create an app from the solution explorer")

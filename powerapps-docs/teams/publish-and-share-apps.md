@@ -20,7 +20,7 @@ When creating an app inside Teams, you need to share the app with the Microsoft 
 
 ## Share an app
 
-To share an app, select ![Select three dots icon](media/publish-app-1.png "Select three dots icon") button from the top-right side of the Power Apps Studio. And then, select **Share**.
+To share an app, select ![Select three dots icon](media/publish-app-1.png "Select three dots icon") button from the top-right side of Power Apps Studio. And then, select **Share**.
 
 ![Share an app](media/publish-app-2.png "Share an app")
 
@@ -47,7 +47,7 @@ Whenever you save changes to a canvas app, you automatically publish them only f
 
 ### Publish and add app to Teams channel from Power Apps Studio
 
-To publish an app, select the **Publish to Teams** button from the top-right side of the Power Apps Studio.
+To publish an app, select the **Publish to Teams** button from the top-right side of Power Apps Studio.
 
 ![Publish to teams](media/publish-app-5.png "Publish to teams")
 
