@@ -5,7 +5,7 @@ author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---
@@ -14,14 +14,14 @@ ms.reviewer: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-In Teams, data is defined by *tables*, which are the same as *entities* in Common Data Service. To create a table, you must be a member of a team. 
+In Teams, data is defined by *tables*, which are the same as *[entities](/powerapps/maker/common-data-service/entity-overview)* in Common Data Service. To create a table, you must be a member of a team. 
 
 ## Types of tables
 While Common Data Service has two types of entities that can be created (standard entity with ownership defined and activity entity), you can only create standard tables in Project Oakdale.
 
 You define the type of table under the **More settings** option when you create a table.
 
-There are four different types of table ownership. When you create a table, the only options are *user* or *team owned* or *organization-owned*, but you should be aware that other tables have different ownership types. More information: [Types of entities](../maker/common-data-service/types-of-entities.md)
+There are four different types of table ownership. When you create a table, the only options are *user* or *team owned* or *organization-owned*, but you should be aware that other tables have different ownership types. More information: [Types of entities in Common Data Service](../maker/common-data-service/types-of-entities.md)
 
 ## Create a table
 1. Sign into Teams, and then select the link for **Power Apps**.
