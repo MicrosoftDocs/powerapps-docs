@@ -51,7 +51,7 @@ To see the new changes, refresh Power Apps Studio.
 The following controls aren't supported:
 
 - [Forms Pro survey (preview)](/forms-pro/embed-survey-powerapps)
-- AR controls
+- [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md)
 - [Video control](../maker/canvas-apps/controls/control-audio-video.md)
 
 ### Studio version
