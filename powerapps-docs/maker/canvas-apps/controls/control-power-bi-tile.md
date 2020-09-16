@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 07/07/2016
+ms.date: 09/11/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -92,7 +92,7 @@ You can use computed fields in the Power BI report to convert other value types 
 
 ## Example
 
-1. On the **Insert** tab, open the **Controls** menu, and then add a **Power BI tile** control.
+1. On the **Insert** tab, open the **Charts** menu, and then add a **Power BI tile** control.
 
     Don't know how to [add and configure a control](../add-configure-controls.md)?
 

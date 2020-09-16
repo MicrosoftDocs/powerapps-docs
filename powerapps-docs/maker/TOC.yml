@@ -47,10 +47,6 @@
       items:
       - name: Basic navigation
         href: ../user/navigation.md
-      - name: Use grid filters
-        href: ../user/grid-filters.md
-      - name: Create personal views with advanced grid filters
-        href: ../user/grid-filters-advanced.md
       - name: View your profile
         href: ../user/view-your-user-profile.md
       - name: Find your admin or support person
@@ -82,11 +78,23 @@
       - name: Add a connection role
         href: ../user/add-connection-role.md
       - name: Deactivate accounts or contacts
-        href: ../user/deactivate-activate-account-contact.md
+        href: ../user/deactivate-activate-account-contact.md   
+    - name: Work with grid filters
+      items:
+      - name: Use grid filters
+        href: ../user/grid-filters.md
+      - name: Create personal views with advanced grid filters
+        href: ../user/grid-filters-advanced.md      
+    - name: Charts and dashboards
+      items:
       - name: Track your progress with dashboards and charts
         href: ../user/track-your-progress-with-dashboard-and-charts.md
+      - name: View charts on a page or in a record
+        href: ../user/chart_on_form.md
+      - name: Use interactive dashboards to filter data
+        href: ../user/interactive-dashboards.md
       - name: Add Power BI dashboards
-        href: ../user/add-powerbi-dashboards.md
+        href: ../user/add-powerbi-dashboards.md      
     - name: Work with email
       items:
       - name: View and create email through the activities grid
@@ -165,6 +173,8 @@
     href: ./canvas-apps/intro-maker-portal.md
 - name: Canvas apps
   items:
+  - name: Canvas apps
+    href: ./canvas-apps/index.yml
   - name: What are canvas apps?
     href: ./canvas-apps/getting-started.md
   - name: System requirements, limits, and configuration
@@ -979,6 +989,8 @@
       href: ./canvas-apps/embedding-sdk.md
 - name: Model-driven apps
   items:
+  - name: Model-driven apps
+    href: ./model-driven-apps/index.yml
   - name: What are model-driven apps?
     href: ./model-driven-apps/model-driven-app-overview.md
   - name: Explore sample apps
@@ -1149,7 +1161,7 @@
     - name: Apply business logic in an app
       href: ./model-driven-apps/guide-staff-through-common-tasks-processes.md
       items:
-      - name: Create a business rule  for a form
+      - name: Create a business rule for a form
         href: ./model-driven-apps/create-business-rules-recommendations-apply-logic-form.md
     - name: Apply data visualizations in an app
       items:
@@ -1163,11 +1175,9 @@
         href: ./model-driven-apps/set-properties-chart-list-included-dashboard.md
       - name: Use system controls for data visualizations
         items:
-        - name: Set up the Notes control
-          href: ./model-driven-apps/notes-control-legacy.md
-        - name: Set up timeline control
+        - name: Set up the timeline control
           href: ./model-driven-apps/set-up-timeline-control.md
-        - name: FAQs for timeline control
+        - name: FAQs for the timeline control
           href: ./model-driven-apps/faqs-timeline-control.md
         - name: Quick view control properties
           href: ./model-driven-apps/quick-view-control-properties-legacy.md
@@ -1251,12 +1261,12 @@
 
 - name: Portals
   items:
+    - name: Portals
+      href: ./portals/index.yml
     - name: What is Power Apps portals?
       href: ./portals/overview.md
     - name: Release updates
       href: ./portals/release-updates.md
-    - name: "Microsoft Learn: Get started with Power Apps portals"
-      href: https://docs.microsoft.com/learn/modules/intro-portals/
     - name: Design and build a portal
       items:
         - name: Portal templates
@@ -1524,6 +1534,8 @@
       href: ./portals/legacy-portal-faq.md
 - name: Common Data Service
   items:
+  - name: Common Data Service
+    href: ./common-data-service/index.yml
   - name: What is Common Data Service?
     href: ./common-data-service/data-platform-intro.md
   - name: Why choose Common Data Service? 
@@ -1540,14 +1552,14 @@
     items:
     - name: Entity overview
       href: ./common-data-service/entity-overview.md
+    - name: Entities and metadata
+      href: ./common-data-service/create-edit-metadata.md
+    - name: Types of entities
+      href: ./common-data-service/types-of-entities.md    
     - name: "Create an entity"
       href: ./common-data-service/data-platform-create-entity.md
     - name: "Create a custom entity that has components"
       href: ./common-data-service/create-custom-entity.md
-    - name: Entities and metadata
-      href: ./common-data-service/create-edit-metadata.md
-    - name: Types of entities
-      href: ./common-data-service/types-of-entities.md
     - name: Edit an entity
       href: ./common-data-service/edit-entities.md
     - name: Create and edit virtual entities
@@ -1663,6 +1675,24 @@
     items:
       - name: Create a business rule for an entity
         href: ./common-data-service/data-platform-create-business-rule.md
+      - name: Work with workflows
+        items:
+        - name: Overview
+          href: ./common-data-service/overview-realtime-workflows.md    
+        - name: Configure real-time workflow stages and steps
+          href: ./common-data-service/configure-workflow-steps.md
+        - name: Monitor and manage real-time workflow processes
+          href: ./common-data-service/monitor-manage-processes.md
+        - name: Best practices for real-time workflow processes
+          href: ./common-data-service/best-practices-workflow-processes.md
+      - name: Work with actions
+        items:
+        - name: Use actions
+          href: ./common-data-service/actions.md
+        - name: Configure custom actions from a real-time workflow
+          href: ./common-data-service/configure-actions.md    
+        - name: Invoke custom actions from a real-time workflow
+          href: ./common-data-service/invoke-custom-actions-workflow-dialog.md
   - name: Work with solutions
     items:
       - name: Solutions overview
@@ -1685,6 +1715,8 @@
           href: ./common-data-service/view-component-dependencies.md   
         - name: Use environment variables
           href: ./common-data-service/EnvironmentVariables.md
+        - name: Create a connection reference
+          href: ./common-data-service/create-connection-reference.md  
         - name: Translate customized component text
           items: 
           - name: Overview
