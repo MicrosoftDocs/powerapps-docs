@@ -1,11 +1,11 @@
 ---
-title: "Troubleshoot sign-in issues for Power Apps mobile | MicrosoftDocs"
+title: "Troubleshoot issues for the Power Apps mobile app | MicrosoftDocs"
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/11/2020
+ms.date: 09/16/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -16,9 +16,11 @@ search.app:
   - PowerApps
 ---
 
-# Troubleshoot sign-in issues for Power Apps mobile
+# Troubleshoot issues for the Power Apps mobile app
 
-This troubleshooting article helps fix common sign-in issues when you sign in to Power Apps mobile.
+This troubleshooting article helps fix common issues for the [Power Apps mobile app](run-canvas-and-model-apps-on-mobile.md).
+
+## Sign in issues
 
 **Common errors**
 
