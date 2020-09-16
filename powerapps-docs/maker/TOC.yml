@@ -1830,6 +1830,8 @@
           href: ../teams/inspection.md
         - name: Issue Reporting
           href: ../teams/issue-reporting.md
+    - name: Known issues and limitations
+      href: ../teams/known-issues-limitations.md
 - name: Chatbots
   href: ../chatbots.md
 

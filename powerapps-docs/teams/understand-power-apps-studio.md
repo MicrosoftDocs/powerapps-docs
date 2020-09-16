@@ -367,8 +367,7 @@ supported by the Table designer.
 ###### Supported column types
 
 Table designer supports specific data types as columns. The following options
-are available when creating a new column using the Table designer inside the
-Power Apps Studio:
+are available when creating a new column using the Table designer inside Power Apps Studio:
 
 ![Column types](media/studio-column-types.png "Column types")
 
