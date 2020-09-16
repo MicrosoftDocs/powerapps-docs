@@ -189,7 +189,9 @@ To update the selected item background color:
 
 3. Update the *TemplateFill* property value in the formula bar to the following formula:
 
-    `If(ThisItem.IsSelected, RGBA(0,0,0,.05), RGBA(0,0,0,0))`
+    ```powerapps-dot
+    If(ThisItem.IsSelected, RGBA(0,0,0,.05), RGBA(0,0,0,0))
+    ```
 
     ![Update TemplateFill prpoerty](media/templatefill-property.png "Update TemplateFill property")
 
