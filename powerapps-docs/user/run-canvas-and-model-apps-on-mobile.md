@@ -90,6 +90,7 @@ Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the l
 
 You can pin both canvas apps and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
 
+
 ![Pin an app](media/pin_to_home.png "Pin an app")
 
 > [!NOTE]
@@ -134,9 +135,10 @@ Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen
 
 7. Go to your home sceen to find the pinned app.   
   
-
    > [!div class="mx-imgBorder"]
    >![App shortcut on home screen](media/add-shortcut-4.png "App shortcut on home screen")
+   
+You can customize the shortcut icon but it is limited to the customization options in iOS. For more information, go to [Use the Shortcuts app on your iPhone or iPad](https://support.apple.com/HT208309) and scroll down to, **Edit or customize a shortcut**.
 
 
 ## See non-production apps
