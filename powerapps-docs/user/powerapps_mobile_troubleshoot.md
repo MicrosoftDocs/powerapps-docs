@@ -1,12 +1,13 @@
 ---
-title: "Troubleshoot sign-in issues for Power Apps mobile | MicrosoftDocs"
+title: "Troubleshoot issues for the Power Apps mobile app | MicrosoftDocs"
+description: Troubleshooting and known issues for the Power Apps mobile app 
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/11/2020
-ms.author: mduelae
+ms.date: 09/16/2020
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -16,9 +17,11 @@ search.app:
   - PowerApps
 ---
 
-# Troubleshoot sign-in issues for Power Apps mobile
+# Troubleshoot issues for the Power Apps mobile app
 
-This troubleshooting article helps fix common sign-in issues when you sign in to Power Apps mobile.
+This troubleshooting article helps fix common issues for the [Power Apps mobile app](run-canvas-and-model-apps-on-mobile.md).
+
+## Sign in issues
 
 **Common errors**
 
@@ -64,3 +67,12 @@ If the above does not resolve the issue, try this:
 6. Open the Power Apps mobile app and sign-in.
 
 If you still can't sign-in please email us at pamobsup@microsoft.com and include your device make and model, session ID and quote the error message that you got on your screen.
+
+## Pin to Home does not work on iOS 14
+
+If you're on an iOS device running iOS 14, the Safari browser no longer supports the **Pin to Home** functionality from Power Apps mobile. You will need to use the Siri Shortcuts app to pin an app to the home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-siri-shortcuts-to-pin-home-ios-14-or-later).
+
+If you're still on iOS 13 you can continue to use the Safari browser to pin an app to the home screen. For more information, see [Pin an app to the home screen](https://docs.microsoft.com/powerapps/user/run-canvas-and-model-apps-on-mobile#use-safari-to-pin-to-home-ios-13-or-earlier)
+
+
+
