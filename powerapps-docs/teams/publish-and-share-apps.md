@@ -1,6 +1,6 @@
 ---
-title: Share and publish your app | Microsoft Docs
-description: Learn how to share and publish your apps using Power Apps app from Teams.
+title: Publish and share your app | Microsoft Docs
+description: Learn how to publish and share your apps using Power Apps app from Teams.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,36 +10,11 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Share and publish your app
+# Publish and share your app
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-After you build a canvas app that addresses a business need, specify which users in your organization can run the app and which can modify and even reshare it. Specify each user by name or specify a security group in Azure Active Directory. If everyone would benefit from your app, specify that your entire organization can run it.
-
-When creating an app inside Teams, you need to share the app with the Microsoft 365 Group associated for the selected team.
-
-## Share an app
-
-To share an app, select ![Select three dots icon](media/publish-app-1.png "Select three dots icon") button from the top-right side of Power Apps Studio. And then, select **Share**.
-
-![Share an app](media/publish-app-2.png "Share an app")
-
-If you haven’t saved latest changes to the app, you’re asked to save first. In the share app screen, enter the name of the Teams team’s Microsoft 365 Group name.
-
-![Group name](media/publish-app-3.png "Group name")
-
-> [!TIP]
-> If the Microsoft 365 Group you want to share the app with isn’t available in the list, check if the group is enabled for security. For more details, go to [share an app with Microsoft 365 Groups](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups).
-
-Select **Share** to share the app. When sharing the app with other users, you can also select **Co-owner** make them co-owners of the app.
-
-![Select Co-Owner](media/publish-app-4.png "Select Co-Owner")
-
-> [!IMPORTANT]
-> When you share an app, some connections used by the app are **implicitly shared**. For example, SQL Server connection saved with SQL or Windows authentication. Connections to Microsoft 365 applications, such as to OneDrive or a SharePoint site, are prompted for permissions at runtime to
-connect within the context of user that runs the app. For more information about sharing app resources, go to [share app resources](../maker/canvas-apps/share-app-resources.md#connections).
-
-For more information about sharing an app, go to [share an app](../maker/canvas-apps/share-app.md).
+In this article, learn about how you can publish and add apps to Microsoft Teams team.
 
 ## Publish and add an app to Teams
 
@@ -111,6 +86,12 @@ To add a published app to your team:
    ![Select save](media/publish-app-16.png "Select save")
 
 You can now run the app inside the Teams channel and switch across posts, files, Wiki, and other options.
+
+## Share an app
+
+You can't share apps or data outside of a team currently. This capability is coming soon as a new **Share with your colleagues** experience.
+
+![Share with your colleagus](media/share-with-colleagues.png "Share with your colleagues")
 
 ### See also
 
