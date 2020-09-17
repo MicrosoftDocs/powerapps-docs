@@ -28,10 +28,46 @@ Select **Play** to run an app’s latest [published](../maker/canvas-apps/save-p
 
 ## App details
 
-The **Details** option shows you the app details such as the owner of the app, when the app was created and last modified, app ID, app licensing information, and the app’s *web link*.
+The **Details** option shows the owner of the app, when the app was created and last modified, app ID and license designation.
 
-> [!TIP]
-> *Web link* of an app can be very useful when you want to run an app in the browser for testing or to launch an app from a browser or through another app (such as when using the [Launch() function](../maker/canvas-apps/functions/function-param.md)).
+![App details](media/app-details.png "App details")
+
+## Restore an app
+
+A canvas app can have multiple versions. You can restore an app to an available published version.
+
+To restore an app to a specific version:
+
+1. Select **Versions** from the [app details](#app-details) screen.
+
+    ![App versions](media/app-versions.png "App versions")
+
+1. Select a version other than *Live* that you want to restore.
+
+1. Select ![Ellipsis](media/ellipsis.png "Ellipsis").
+
+1. Select **Restore**.
+
+    ![Restore a version](media/restore-version.png "Restore a version")
+
+    > [!NOTE]
+    > The restored app becomes the latest version of the app. However, the latest version is not yet live. You must publish the restored version to make the restored version available to all users.
+
+1. Select ![Ellipsis to publish restored version](media/ellipsis.png "Ellipsis to publish restored version") for the restored version.
+
+1. Select **Publish this version**.
+
+    ![Publish restored version](media/publish-restored-version.png "Publish restored version")
+
+1. Review the app preview and select **Publish this version** to confirm.
+
+    ![Confirm publish restored version](media/confirm-publish-restored-version.png "Confirm publish restored version")
+
+The **Versions** tab now shows the restored version as *Live*:
+
+![Confirm restored app](media/confirm-restored-app.png "Confirm restored app")
+
+For more details about restoring an app, go to [Restore an app](../maker/canvas-apps/restore-an-app.md).
 
 ## Delete an app
 
@@ -40,44 +76,6 @@ Select **Delete** to delete an app. When prompted, select **Delete from cloud** 
 ![Delete app](media/manage-app-2.png "Delete app")
 
 For more information about deleting an app, go to [Delete an app](../maker/canvas-apps/delete-app.md).
-
-## Restore an app
-
-A canvas app can have multiple versions. You can restore an app to an available published version.
-
-To restore an app to a specific version:
-
-1. Edit an app in Studio.
-
-1. **Version history** from the top-right on the screen.
-
-    ![Select version history](media/manage-apps-3.png "Select version history")
-
-1. Select **Details**. You can also select *Commands (…)* and then select **Delete** from the drop-down menu instead.
-
-    ![Select details](media/manage-apps-4.png "Select details")
-
-1. Select **Versions.**
-
-    ![Select versions](media/manage-apps-5.png "Select versions")
-
-1. Select the app version that you want to restore. The currently published version available to users is marked as **Live**.
-
-    ![Select app version](media/manage-app-6.png "Select app version")
-
-1. Select **Restore**. You can also select *Commands (…)* and then select **Restore** from the drop-down menu.
-
-    ![Select restore from menu](media/manage-app-7.png "Select restore from menu")
-
-1. Select **Restore** to confirm.
-
-    ![Select restore](media/manage-app-8.png "Select restore")
-
-The app version is now restored.
-
-![Restored version](media/manage-app-9.png "Restored version")
-
-For more details about restoring an app, go to [Restore an app](../maker/canvas-apps/restore-an-app.md).
 
 ### See also
 

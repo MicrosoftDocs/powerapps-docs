@@ -168,16 +168,7 @@ Preview the app inside Teams. Use preview option to run the app, similar to play
 ### Publish to Teams
 
 Publishes the app’s current version to Teams for everyone to use. For more
-information about publishing an app, go to Publish an app.
-
-### Share
-
-Allows you to share the app with other users or groups. For more information
-about sharing an app, go to Share an app.
-
-### Version history
-
-Shows all the versions of the app. You can view app versions, version comments, and the currently published version. From the version history page, you can also restore an app to a particular version. For more information about version history, go to Restore an app.
+information about publishing an app, go to [Publish an app](publish-and-share-apps.md#publish-and-add-an-app-to-teams).
 
 ## 4 – Properties list
 
