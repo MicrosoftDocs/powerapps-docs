@@ -1,1 +1,1 @@
-Dynamics 365 admin center
+Power Platform admin center

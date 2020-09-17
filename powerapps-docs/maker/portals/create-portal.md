@@ -126,7 +126,7 @@ Follow these steps when you create an environment using the option provided in t
 3.  Select the currency and language for the data stored in the database. You cannot change the currency or language once the database is created. When you're done, select **Create my database**. The database is created with the starter portal that enables you to quickly get started with sample content once the portal is provisioned.
 
     > [!NOTE]
-    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from Power Apps admin center.
+    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from Power Platform admin center.
 
     > [!div class=mx-imgBorder]
     > ![create new database](media/create-new-database.png "Create new database") 
