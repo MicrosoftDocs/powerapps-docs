@@ -170,7 +170,7 @@ Use your finger to swipe from the left edge of the app to the right to close an 
 
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time you run the app.
 
-![Give consent](media/give_consent_canvas.jpg "Give consent")
+![Give consent to a canvas app](media/give_consent_canvas.jpg "Give consent to canvas app")
 
 ### Run a model-driven app 
 
