@@ -161,17 +161,8 @@ Preview the app in Teams. Use **Preview** to run the app, similar to play<!--not
 
 ### Publish to Teams
 
-Publishes the current version of the app to Teams for everyone to use. More
-information: [Share and publish your app](publish-and-share-apps.md)<!--note from editor: Edit okay?-->
-
-### Share
-
-Shares the app with other users or groups.  More
-information: [Share and publish your app](publish-and-share-apps.md)<!--note from editor: Edit okay?-->
-
-### Version history
-
-Shows all versions of the app. You can view app versions, version comments, and the currently published version. From the version history page, you can also restore an app to a particular version. More information: [Restore an app](manage-your-apps.md#restore-an-app)<!--note from editor: Edit okay?-->
+Publishes the app’s current version to Teams for everyone to use. For more
+information about publishing an app, go to [Publish an app](publish-and-share-apps.md#publish-and-add-an-app-to-teams).
 
 ## 4 – Properties list
 
@@ -352,8 +343,9 @@ supported by the table designer.
 
 ###### Supported column types
 
-The table designer supports specific data types as columns, as shown in the following image.
-<!--note from editor: Please add all these types to alt text; information shouldn't only be captured in an image, needs to be in text too.-->
+Table designer supports specific data types as columns. The following options
+are available when creating a new column using the Table designer inside Power Apps Studio:
+
 ![Column types](media/studio-column-types.png "Column types")
 
 > [!IMPORTANT]
