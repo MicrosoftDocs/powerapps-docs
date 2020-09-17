@@ -10,13 +10,13 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Use the Fluent UI controls
+# Use Fluent UI controls
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-Creating apps that look great in Teams will be easier with our new components. Built on [Fluent UI framework](https://www.microsoft.com/design/fluent/#/), the new components will look great with Teams styles and will automatically adjust to the current Teams theme. The new controls are: Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
+Creating apps that look great in Microsoft Teams will be easier with our new components. Built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/), the new components will look great with Teams styles and will automatically adjust to the current Teams theme. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
 
-Let’s take a look at each Fluent UI control and the most useful properties. For a complete list of controls and properties in Power Apps, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
+Let's take a look at each Fluent UI control and its most useful properties. For a complete list of controls and properties in Power Apps, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
 
 ## Button
 
@@ -26,15 +26,15 @@ A control that the user can select to interact with the app.
 
 ### Description
 
-Configure the OnSelect property of a Button control to run one or more formulas when the user selects the control.
+Configure the OnSelect property of a **Button** control to run one or more formulas when the user selects the control.
 
 ### Key properties
 
-*ButtonType* – The style of button to show, Default, or Primary. Default value: **Standard**.
+*ButtonType* – The style of button to show, Default, or Primary. Default value: **Standard**.<!--note from editor: I don't understand this.-->
 
 *OnSelect* – How the app responds when the user selects a control.
 
-*Text* – Text that appears on a control or that the user types into a control.
+*Text* – Text that appears on a control or that the user enters into a control.
 
 ## Check box
 
@@ -50,7 +50,7 @@ been widely used in the user interface.
 
 ### Key properties
 
-*Box side* – The side of the control that the check box is displayed.
+*Box side* – The side of the control on which the check box is displayed.
 
 *Label* – Text that appears on a control.
 
@@ -65,17 +65,17 @@ search and multiple selections.
 
 ### Description
 
-A Combo box control allows you to search for items you'll select. The search
-is done server-side on the *SearchField* property so performance is not
+A **Combo box** control allows a user to search for items to select. The search
+is done server-side on the *SearchField* property, so performance isn't
 affected by large data sources.
 
-Single or multi-select mode is configured via the *SelectMultiple* property.
+Single-select or multiple-select mode is configured via the *SelectMultiple* property.
 
 ### Key properties
 
 *Items* – The source of data from which selections can be made.
 
-*DefaultSelectedItems* – The initial selected item(s) before the user interacts with the control.
+*DefaultSelectedItems* – The items that are initially selected before the user interacts with the control.
 
 *SelectMultiple* – Whether the user can select a single item or multiple items.
 
@@ -89,7 +89,7 @@ A control that the user can select to specify a date.
 
 ### Description
 
-If you add a **Date Picker** control instead of a **Text input** control, you
+If you add a **Date picker** control instead of a text input control, you
 help ensure that the user specifies a date in the correct format.
 
 ### Key properties
@@ -98,7 +98,7 @@ help ensure that the user specifies a date in the correct format.
 represented in local time.
 
 *Format* – The text format in which the control shows the date and the user
-specifies the date. You can set this property to ShortDate (default) or LongDate to format dates based on the Language property of this control. You can also set this property to an expression, such as yyyy/mm/dd if you want the same format independent of the language. For example:
+specifies the date. You can set this property to ShortDate (default) or LongDate to format dates based on the Language property of this control. You can also set this property to an expression, such as yyyy/mm/dd, if you want the same format independent of the language. For example:
 
 -   The control shows 12/31/2017 if the user selects the last day of
     2017, the Format property is set to ShortDate, and the Language property is
@@ -128,13 +128,13 @@ A label shows data that you specify as a literal string of text or as a formula 
 
 ## Radio group
 
-An input control that shows multiple options, of which users can select only one at a time.
+An input control that shows multiple options, only one of which users can select at a time.
 
 ![Radio group control](media/fluent-radio-group.png "Radio group control")
 
 ### Description
 
-A Radio group control, a standard HTML input control, is best used with only a
+A **Radio group** control, a standard HTML input control, is best used with only a
 few, mutually exclusive options.
 
 ### Key properties
@@ -146,7 +146,7 @@ list, or a chart.
 
 ## Rating
 
-A control with which users can indicate a value between 0 and a maximum number
+A control with which users can indicate a value from 0 through a maximum number
 that you specify.
 
 ![Rating control](media/fluent-rating.png "Rating control")
@@ -171,7 +171,7 @@ A control with which the user can specify a value by dragging a handle.
 ### Description
 
 The user can indicate a value, between a minimum and a maximum value that you
-specify, by dragging the handle of a slider left-right or up-down, depending on the direction that you choose.
+specify, by dragging the handle of a slider left to right or up and down, depending on the direction that you choose.
 
 ### Key properties
 
@@ -187,13 +187,13 @@ specify, by dragging the handle of a slider left-right or up-down, depending on 
 
 ## Text box
 
-A box in which the user can type text, numbers, and other data.
+A box in which the user can enter text, numbers, and other data.
 
 ![Text box control](media/fluent-text-box.png "Text box control")
 
 ### Description
 
-The user can specify data by typing into a text box control. Depending on how
+The user can specify data by typing into a **Text box** control. Depending on how
 you configure the app, that data might be added to a data source, used to
 calculate a temporary value, or incorporated in some other way.
 
@@ -201,7 +201,7 @@ calculate a temporary value, or incorporated in some other way.
 
 *Font* – The name of the family of fonts in which text appears.
 
-*Text* – Text that appears on a control or that the user types into a control.
+*Text* – Text that appears on a control or that the user enters into a control.
 
 ## Toggle
 
@@ -211,7 +211,7 @@ A control that the user can turn on or off by moving its handle.
 
 ### Description
 
-A Toggle is designed for modern user interface but behaves the same way as a check box.
+A **Toggle** control is designed for the modern user interface, but behaves the same way as a check box.
 
 ### Key properties
 
@@ -223,5 +223,5 @@ A Toggle is designed for modern user interface but behaves the same way as a che
 
 ### See also
 
-- [Create additional apps](create-additional-apps.md)
-- [Understand Power Apps Studio](understand-power-apps-studio.md)
+[Create additional apps](create-additional-apps.md)  
+[Understand Power Apps Studio](understand-power-apps-studio.md)
