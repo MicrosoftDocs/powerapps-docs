@@ -100,9 +100,9 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 
 ### Use Siri shortcuts to pin home (iOS 14 or later) 
 
-The Power Apps mobile app is now integrated with Siri shortcuts, which gives you with the ability to pin to home, launch apps with Siri, and create new workflows. For more information on how shortscuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios).
+The Power Apps mobile app is now integrated with Siri shortcuts, which gives you with the ability to pin to home, launch apps with Siri, and create new workflows. For more information on how shortcuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios).
 
-Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen. The new experience works for both model-driven and canvas apps. When you add a shortcut to the home screen, the app is added to the iOS **Shortcuts** app and from there you can add the app to your home screen.
+Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen. The new experience works for both model-driven and canvas apps. When you add a Siri shortcut, the app is added to the iOS **Shortcuts** app and from there you can add the app to your home screen.
 
 
 1. To pin an app to the home screen, select the ellipsis (...) on the app tile.
