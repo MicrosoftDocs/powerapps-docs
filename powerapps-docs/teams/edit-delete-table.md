@@ -15,37 +15,39 @@ ms.reviewer: matp
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 With Project Oakdale, you can perform the following types of operations on a table:
+
 - Create table columns.
 - Delete a table.
 - Create, edit, and delete table relationships. More information: [Work with table relationships](relationships-table.md)
 
 ## Edit a table
 
-Within Teams, there are four table properties you can edit:
+In Microsoft Teams, you can edit four table properties:
 
-- **Display name**: The name you would like the table to use in all displays.
-- **Plural display name**: The plural of the table name when needed for display.
+- **Display name**: The name you want to display for the table.
+- **Plural display name**: The plural of the table name, when needed for display.
 - **Description**: A brief description of the purpose of the table.
-- **Quick create settings**: This enables quick creation of records for clients that support this feature.
+- **Quick create settings**: This enables quick creation of records for client apps that support this feature.
 
 > [!NOTE]
-> Each Project Oakdale environment is assigned a prefix upon creation, such as *cr1a3*. Every table and column name created will be prefixed with this value. This value can’t be changed.
+> Each Project Oakdale environment is assigned a prefix when it's created creation, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
 
-1. On the left navigation pane, select **Tables**.
+1. On the left pane, select **Tables**.
 2. Open the table you want to edit. 
 3. Select **Settings** on the command bar to display the **Edit** table dialog box.  
     > [!div class="mx-imgBorder"] 
-    > ![Edit table](media/edit-table1.png)
+    > ![Edit table](media/edit-table1.png "Edit table")
     For more information about these settings, see [Create an entity](../maker/common-data-service/data-platform-create-entity.md#create-an-entity).
 4. Make the changes you want, and then select **Done**.
- 
+
 ## Delete a table
-Anyone who is a member of the team can delete tables that aren’t part of a managed solution.
 
-In the **Tables** list select **…** next to the table you want to delete, and then select **Delete table**. Alternatively, while viewing a table, select **Delete table** on the command bar.
+Anyone who's a member of the team can delete tables that aren't part of a managed solution.
+
+In the **Tables** list, select **…** next to the table you want to delete, and then select **Delete table**. Alternatively, while viewing a table, select **Delete table** on the command bar.
 > [!div class="mx-imgBorder"] 
-> ![Delete table](media/delete-table.png)
-
+> ![Delete table](media/delete-table.png "Delete table")
 
 ### See also
+
 [Work with table relationships](relationships-table.md)

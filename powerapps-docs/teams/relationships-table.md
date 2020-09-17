@@ -14,46 +14,53 @@ ms.reviewer: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
+Table relationships define the ways that table records can be associated with records from other tables or the same table. There are three types of table relationships. Project Oakdale allows for the creation of the same relationship types as Common Data Service does:
 
-Table relationships define the ways that table records can be associated with records from other tables or the same table. There are three types of table relationships. Project Oakdale allows for the creation of the same relationship types as Common Data Service:
 - **One-to-many relationships**. In this type of relationship, each row in table A can match more than one row in table B, but each row in table B can match only one row in table A. For example, a class of students have a single classroom.
 
 - **Many-to-one relationships**. In this type of relationship, each row in table B can match more than one row in table A, but each row in table A can match only one row in table B. For example, one single teacher teaches many classes.
 
 - **Many-to-many relationships**. In this type of relationship, each row in table A can match more than one row in table B, and vice versa. For example, students attend many classes, and each class can have multiple students.
 
-For more information about relationships, see [Entity relationships overview](../maker/common-data-service/create-edit-entity-relationships.md) in Common Data Service docs. 
+More information: [Entity relationships](../maker/common-data-service/create-edit-entity-relationships.md)
 
 ## Create a table relationship
-To add a lookup relation to a table, create a relation under the **Relationships** tab and specify the table with which you want to create a relationship.
-1. In the **Power Apps** section of Teams, select the table to create a relationship. This can be done by opening the table and selecting the **Relationships** tab.
+
+To add a lookup relation to a table, create a relation on the **Relationships** tab and specify the table with which you want to create a relationship.
+
+1. In the **Power Apps** section of Microsoft Teams, select the table to create a relationship. This can be done by opening the table and selecting the **Relationships** tab.
 
    > [!div class="mx-imgBorder"] 
-   > ![Relationship tab](media/create-relate-table.png) 
-   
-   Or, in the left-hand pane, select the **Tables** dropdown, select the down arrow on your desired table, and then select **Relationships**. <br />
-   
+   > ![Relationships tab](media/create-relate-table.png "Relationships tab") 
+
+   Or, on the left pane, select the **Tables** drop-down menu, select the down arrow on the table you wante, and then select **Relationships**. <br />
+
     > [!div class="mx-imgBorder"] 
-    > ![Relationship create from navigation pane](media/create-relate-table2.png)
-2. Once the relationships page is open select Add relationship, and then select the type of relationship you would like to create, such as **Many-to-one**.
+    > ![Create a relationship from the left pane](media/create-relate-table2.png "Create a relationship from the left pane")
+
+2. When the relationships page is open, select **Add relationship**, and then select the type of relationship you want to create (for example, **Many-to-one**).
+
    > [!div class="mx-imgBorder"] 
-   > ![Add relationship](media/create-relate-table3.png)
+   > ![Add a relationship](media/create-relate-table3.png "Add a relationship")
 
-The rest of the process is nearly identical to Common Data Service with the exception that none of the collaboration features are available as in Common Data Service, such as allow feedback or enable SharePoint document management. More information: [Create a relationship between entities](../maker/common-data-service/data-platform-entity-lookup.md) 
+<!--note from editor: The following text is redundant: The rest of the process is nearly identical to Common Data Service except that that none of the collaboration features are available as in Common Data Service, such as allow feedback or enable SharePoint document management.-->More information: [Create a relationship between entities](../maker/common-data-service/data-platform-entity-lookup.md) 
 
-## Edit a table Relationship
-Editing relationships in Project Oakdale works the same as Common Data Service except you can’t manage the collaboration functions, such as allow feedback or enable SharePoint document management. More information: [Relationship actions](/maker/common-data-service/create-edit-entity-relationships#actions)
+## Edit a table relationship
 
-## Delete a table Relationship
-While viewing table relationships, select the table relationship you want to delete and then do one of the following:
+Editing relationships in Project Oakdale works the same as Common Data Service except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/maker/common-data-service/create-edit-entity-relationships.md#actions)<!--note from editor: I can't verify this link.-->
 
-Select **Delete** relationship on the command bar.
+## Delete a table relationship
 
-<img src="media/delete-table-relationship1.png" alt="Delete table relationship from command bar" height="300" width="350">
+While viewing table relationships, select the table relationship you want to delete, and then do one of the following:
 
-Or, select **…** next to the relationship, and then select **Delete relationship**.
-> [!div class="mx-imgBorder"] 
-> ![Delete table relationship in context](media/delete-table-relationship2.png)
+- Select **Delete relationship** on the command bar.
+
+   <img src="media/delete-table-relationship1.png" alt="Delete table relationship from command bar" height="300" width="350">
+
+- Select **…** next to the relationship, and then select **Delete relationship**.
+   > [!div class="mx-imgBorder"] 
+   > ![Delete table relationship in context](media/delete-table-relationship2.png "Delete table relationship in context")
 
 ### See also
+
 [Work with table columns](table-columns.md)
