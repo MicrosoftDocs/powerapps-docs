@@ -10,18 +10,18 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Use sample apps from Teams store
+# Use sample apps from the Microsoft Teams store
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-Sample apps created using Power Apps are available in the Teams store. You can select the sample app that best fits your business requirement and quickly install to get started. In this article, you'll learn about one such sample application that helps manage campaigns and ideas. Sample apps created using Power Apps and published to the Teams store may consist of multiple components such as apps, flows, and tables.
+Sample apps that were created by using Power Apps are available in the Teams store. You can select the sample app that best fits your business requirement and quickly install it to get started. In this article, you'll learn about one such sample app that helps manage campaigns and ideas. Sample apps created with Power Apps and published to the Teams store can consist of multiple components such as apps, flows, and tables.
 
-In this tutorial, you'll learn how to search for sample apps in Teams store, and add them to your team channel. After you install the sample app, you can go to the team that you added the app to and use the tabs for the apps just like other features such as **Post**, **Files**, or **Wiki**.
+In this tutorial, you'll learn how to search for a sample app in the Teams store and add it to your team channel. After you install the sample app, you can go to the team that you added the app to and use the tabs for the app just as you use other features such as **Post**, **Files**, or **Wiki**.
 
-![Sample app](media/sample-app.png "Sample app")
+![Employee Ideas sample app](media/sample-app.png "Employee Ideas sample app")
 
 > [!IMPORTANT]
-> Installing the sample app automatically enables the selected team’s Microsoft 365 Group for security. For more information about Microsoft 365 Group and security, go to [enable security for the selected team’s Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups).
+> Installing the sample app automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups)
 
 ## Available sample apps
 
@@ -33,15 +33,13 @@ Several sample apps are available from the Teams store that you can add to your 
 | [Inspection](inspection.md) | Manager and user apps for area inspections. |
 | [Issue Reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
 
-The following tutorial shows how to install one of the available sample apps.
+The following tutorial shows how to install the Employee Ideas app.
 
 ## Install the sample app
 
-To get started with installing the sample Power Apps app in Teams:
+1. Select **Apps** at the bottom of the left pane in Teams.
 
-1. Select **Apps** at the bottom of left pane inside Teams.
-
-1. Search for the app name, for example **Employee Ideas**.
+1. Search for **Employee Ideas**.
 
     ![Employee Ideas app search](media/sample-app-9.png "Employee Ideas app search")
 
@@ -49,61 +47,59 @@ To get started with installing the sample Power Apps app in Teams:
 
 1. Select **Add to a team**.
 
-    ![Select Add to team](media/sample-app-1.png "Select Add to team")
+    ![Select Add to a team](media/sample-app-1.png "Select Add to a team")
 
-1. Search for the Teams channel that you want to add the apps to.
+1. Search for the team channel that you want to add the app to.
 
-    ![Search teams channel](media/sample-app-2.png "Search teams channel")
+    ![Search for a team channel](media/sample-app-2.png "Search for a team channel")
 
 1. Select **Set up a tab**.
 
-   ![Select set up tab](media/sample-app-3.png "Select set up tab")
+   ![Select set up a tab](media/sample-app-3.png "Select set up a tab")
 
 1. Select **Save** to confirm and start the installation.
 
     ![Save changes](media/sample-app-4.png "Save changes")
 
     > [!NOTE]
-    > You can keep **Post to the channel about this tab** selected to
-    communicate the addition of the app. Unchecking will not announce the
-    addition of the app on the selected channel as a post.
+    > You can keep **Post to the channel about this tab** selected to post an announcement
+    to the channel that the app has been added. If you clear this check box, the addition of the app won't be announced.
 
-1. Installation of the app begins. Installation may take a while and you can continue
+1. Installation of the app begins. Installation might take a while; you can continue
     with other activities.
 
     ![App installation](media/sample-app-5.png "App installation")
 
     > [!NOTE]
-    > If the selected Teams team doesn’t already have an environment created, a new environment is created at this stage. For more information about environment lifecycle, go to [Environment lifecycle](/power-platform/admin/about-teams-environment.md).
+    > If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](/power-platform/admin/about-teams-environment.md)
 
-1. After the app installs, you’ll see tab(s) added to the Teams channel you selected earlier. In this example, the tab called **Employee Ideas**.
+1. After the app is installed, you'll see a tab named **Employee Ideas** added to the team channel that you selected earlier.
 
-    ![Remove installation tab](media/sample-app-6.png "Remove installation tab")
+    ![New Employee Ideas tab](media/sample-app-6.png "New Employee Ideas tab")
 
-Similarly, you can find other apps in the Teams store, and add them to your Teams channel.
+Similarly, you can find other apps in the Teams store and add them to your team channel.
 
 ## Run the sample app
 
-To run the installed app, select app from the available tabs inside the Teams channel that you added the app to. For example, to run the **Employee Ideas**, select the app from the available
-tabs on your Teams channel.
+To run the installed app, select the **Employee Ideas** tab from the team channel.
 
 ### Step 1 - Allow connections
 
-Before you can use the app, an app configured to use connection(s) may ask your permissions:
+Before you can use the app, it might ask your permission to use connections.<!--note from editor: Can you say with assurance that this will happen, or is "might" accurate here?-->
 
 ![Select Allow to let the app use connections](media/sample-app-10.png "Select Allow to let the app use connections")
 
-Select **Allow** so the app can use connections.
+Select **Allow**, so the app can use connections.
 
-### Step 2 - Select channel
+### Step 2 - Select the channel
 
-Select the channel, in this case populated automatically - and then, select **Let's go**:
+Select the channel (in this example, the channel is populated automatically), and then select **Let's go**.
 
 ![Select Let's go](media/sample-app-11.png "Select Let's go")
 
 ### Step 3 - Use the app
 
-The app **Employee Ideas** is now open and ready for your use.
+The **Employee Ideas** app is now open and ready for your use.
 
 ![Select app from available list](media/sample-app-12.png "Select app from available list")
 
@@ -111,14 +107,14 @@ For more details about using the **Employee Ideas** app, go to [Employee Ideas](
 
 ## Edit the sample app
 
-You can further customize and edit the components of an installed Power Apps app in Teams. To edit and manage the installed Power Apps Teams app in Teams, go to [Manage your apps](manage-your-apps.md).
+You can further customize and edit the components of an installed Power Apps app in Teams. More information: [Manage your apps](manage-your-apps.md)
 
 ## Report installation errors
 
-If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively with the session details using CTRL+ALT+A on the keyboard. To learn more about the session details, go to [About tab](overview-of-the-power-apps-app.md#about-tab).
+If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively by selecting **Ctrl**+**Alt**+**A** on the keyboard to get the session details. For more information about session details, go to [About tab](overview-of-the-power-apps-app.md#about-tab).
 
 ### See also
 
-- [Employee Ideas](employee-ideas.md)
-- [Inspection](inspection.md)
-- [Issue Reporting](issue-reporting.md)
+[Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
+[Inspection sample apps](inspection.md)  
+[Issue Reporting sample apps](issue-reporting.md)
