@@ -77,6 +77,7 @@ These entities are primarily used by the Employee Return to the Workplace canvas
 | Employee Facility Search | Contains a list of most recently used employee app facility results associated with system users.             |
 | Employee Sentiment       | Contains associations of employee and information relevant to their recorded sentiment.                         |
 | Employee Visit           | Contains associations of employee and facilities for a given time representing a physical entry and exit.|
+| Guest Registration           | Contains associations of employees (hosts) and guests which are associated with an Employee Booking.|
 |||
 
 ## Workplace Care Management
@@ -300,6 +301,16 @@ such as **Created On**, **Modified On** are not displayed.
 | Target Type  | Option Set | Used to designate if the target value should be higher or lower than the value provided by target value. | Model-driven app |
 | Target Value | Decimal    | The value used to evaluate success.                                                                      | Model-driven app |
 |||||
+
+### Guest Registration
+
+| Display name | Data type  | Description                                                                                              | Platform use    |
+|--------------|------------|----------------------------------------------------------------------------------------------------------|------------------|
+| Employee Booking   | Lookup     | Used to associate the appropriate employee booking tied to the guest registration.  | Model-driven app |
+| Guest   | Lookup     | Used to associate the non-employee to the registration.                   | Model-driven app |
+| Host   | Lookup     | Used to associate the employee making the registration.                   | Model-driven app |
+| Name   | Text     | Used to provide a name for the guest registration record.                   | Model-driven app |
+| Registration Date   | Date     | Used to denote the date of registration.                   | Model-driven app |
 
 ### Key Metric
 
