@@ -51,7 +51,7 @@ In the dialog box, select **Power Apps**, and then select **Create an app in Pow
 You can also select **New** \> **Canvas app**, and then select an app layout to
 create an app. A canvas app is an app that you can create from scratch
 or using any available template through Power Apps Studio. More
-information: [Canvas apps terminology reference and definitions](overview-of-the-power-apps-app.md#canvas-apps-terminology-reference-and-definitions)<!--note from editor: Edit okay?-->
+information: [Canvas apps terminology reference and definitions](overview-of-the-power-apps-app.md#canvas-apps-terminology-reference-and-definitions)
 
 ![Create an app from the solution explorer](media/additional-apps-8.png "Create an app from the solution explorer")
 
