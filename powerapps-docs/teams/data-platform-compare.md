@@ -43,7 +43,7 @@ This table describes the differences between Project Oakdale and Common Data Ser
 |Area  |Feature  |Project Oakdale  |Common Data Service  |
 |---------|---------|---------|---------|
 |Business intelligence     |  Data visualization   |  Yes    |  Yes   |
-|      |   Paginated reports (SQL Server Reporting Services)<!--note from editor: Edit okay?-->    |  No    |  Yes     |
+|      |   Paginated reports (SQL Server Reporting Services)   |  No    |  Yes     |
 |Professional developer     | API access       |  No     |  Yes     |
 |      |  Plugins       |   No      |  Yes       |
 
@@ -92,14 +92,14 @@ Integration with Project Oakdale is delivered primarily through connectors. Supp
 
 Common Data Service can also use connectors. Additionally, Common Data Service includes other built-in integration capabilities that can export data to a data lake or publish events to an event hub, service bus, or by using webhooks. Common Data Service also supports the TDS protocol, which provides integration with SQL Server.<!--note from editor: Edit okay?-->
 
-Common Data Service can also be used with server-side sync to synchronize with Exchange or POP3, and with Data Export Service<!--note from editor: I don't find this anywhere.-->, which synchronizes data to Azure SQL Database.
+Common Data Service can also be used with server-side sync to synchronize with Exchange or POP3, and with Data Export Service, which synchronizes data to Azure SQL Database.
 
 
 |Integration feature  |Project Oakdale  |Common Data Service  |
 |---------|---------|---------|
 |Power Automate     |   Yes      |  Yes       |
-|Export to Azure data lake <!--note from editor: Shouldn't this be "Azure Data Lake Storage"? I don't think it's kosher to use a generic term here.-->    |   No      |  Yes       |
-|Data Export Service  <!--as above, don't know what this is. -->   |   No      |  Yes       |
+|Export to Azure data lake    |   No      |  Yes       |
+|Data Export Service     |   No      |  Yes       |
 |Events to Azure Event Hubs     |   No      |  Yes       |
 |Events to Azure Service Bus     |   No      |  Yes       |
 |Webhooks     |   No      |  Yes       |
