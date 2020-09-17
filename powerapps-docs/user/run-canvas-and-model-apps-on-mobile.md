@@ -56,7 +56,7 @@ When you sign in to the app, the **My apps** filter is set by default. If you do
 
 The following filters are available:
 
-* **All apps** : Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
+* **All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
 
 * **My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. 
 
@@ -132,7 +132,7 @@ Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen
    >![Select Add](media/add-shortcut-3.png "Select add button")
    
 
-7. Go to your home sceen to find the pinned app.   
+7. Go to your home screen to find the pinned app.   
   
    > [!div class="mx-imgBorder"]
    >![App shortcut on home screen](media/add-shortcut-4.png "App shortcut on home screen")
