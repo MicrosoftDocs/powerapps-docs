@@ -191,4 +191,7 @@ Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map 
 ![Close a model-driven app](media/pa_mobile_close_app.png "Close a model-driven app")
 
 
+## See also
+
+[Troubleshoot issues for the Power Apps mobile app](powerapps_mobile_troubleshoot.md)
 
