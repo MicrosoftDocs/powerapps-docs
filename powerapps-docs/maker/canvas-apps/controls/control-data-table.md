@@ -1,14 +1,13 @@
 ---
 title: 'Data table control: reference | Microsoft Docs'
 description: Information, including properties and examples, about the Data table control
-author: jasongre
-manager: kvivek
+author: chmoncay
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/05/2017
-ms.author: jasongre
+ms.date: 09/16/2020
+ms.author: chmoncay
 search.audienceType: 
   - maker
 search.app: 
@@ -52,10 +51,13 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
 * **Selected** – The selected row in the **Data table** control.
 
 ## Other properties
+
+* **AutoWidth** - The property of a column inside a data table to define if the column width should be automatic, or manual.
 * [**BorderColor**](properties-color-border.md) – The color of the **Data table** control's border.
 * [**BorderStyle**](properties-color-border.md) – The style of the **Data table** control's border. The options are **Solid**, **Dashed**, **Dotted**, and **None**.
 * [**BorderThickness**](properties-color-border.md) – The thickness of the **Data table** control's border.
 * [**Color**](properties-color-border.md) – The default text color for all data rows.
+* **FieldDisplayName** - The property of a column inside a data table that defines display name for the selected column.
 * [**Fill**](properties-color-border.md) – The default background color for all data rows.
 * [**Font**](properties-text.md) - The default font for all data rows.
 * [**FontWeight**](properties-text.md) – The default font weight for all data rows.
@@ -67,10 +69,13 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
 * [**Height**](properties-size-location.md) – The distance between the **Data table** control's top and bottom edges.
 * [**HoverColor**](properties-color-border.md) – The text color for the row that the mouse pointer is pointing at.
 * [**HoverFill**](properties-color-border.md) – The background color of the row that the mouse pointer is pointing at.
+* **IsHyperlink** - The property of a column inside a data table that defines whether the selected column should be in hyperlink format or not.
 * **NoDataText** – The message that the user receives when there are no records to show in the **Data table** control.
+* **Order** - The property of a column inside a data table that determines order of the column respective to other columns. The order starts from left to right with first column order value of 1.
 * **SelectedColor** – The color of the text in the selected row.
 * **SelectedFill** – The background color of the selected row.
 * [**Size**](properties-text.md) – The default font size for all data rows.
+* **Text** - The property of a column inside a data table that defines text value of the data to be displayed inside the selected column.
 * [**Visible**](properties-core.md) – A value that determines whether the **Data table** control appears or is hidden.
 * [**Width**](properties-size-location.md) – The distance between the **Data table** control's left and right edges.
 * [**X**](properties-size-location.md) – The distance between the left edge of the **Data table** control and the left edge of its parent container (or the left edge of the screen if there is no parent container).
@@ -101,7 +106,7 @@ Power Apps introduced the **Data table** control on May 5, 2017. This section pr
    
     The **Data table** control is now attached to the **Sales order** data source. Several initial fields appear in the **Data table** control, because we're using a connector that supports that capability.
    
-    ![Data table](./media/control-data-table/pre-order-data-table.png)
+    ![Data table order](./media/control-data-table/pre-order-data-table.png)
 7. In the right pane, select one or more check boxes to show or hide individual fields.
    
     For example, select the check box next to **CustomerPurchaseOrderReference** to hide this field.
