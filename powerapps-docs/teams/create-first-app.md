@@ -14,6 +14,7 @@ ms.reviewer:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
+
 You can create, edit, and delete [canvas apps](/powerapps/maker/canvas-apps/getting-started) in Teams. 
 
 If you're creating an app by using Power Apps in a Teams team for the first time, a new Project Oakdale environment will be created for you. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment)
@@ -102,6 +103,8 @@ Power Apps Studio, where you're prompted to name your app.
     > [!TIP]
     > An app template is included with the app by default, so that you can get started with creating your table and using the app. More information: [Understand Power Apps Studio](understand-power-apps-studio.md)
 
+### Update 
+
 ### Create your first table
 
 Data for apps built in Teams lives in Project Oakdale environments as tables. Like other data experiences, you can add additional columns to track different attributes of each record before filling up the table with multiple rows of data. 
@@ -160,6 +163,28 @@ After you close the table, the app template that was added to the app screen by 
 
 Depending on the number of fields you added to your table, the app template might need updates to the form and the gallery.
 
+#### Update background color for the selected gallery record
+
+The gallery shows records created earlier. However, the background color needs to change for a record when selected from the gallery to show the selection.
+
+To update the selected item background color:
+
+1. Select the gallery.
+
+    ![Select the gallery for background fill](media/select-gallery.png "Select the gallery for background fill")
+
+2. Select *TemplateFill* property from the property drop-down on the top-left.
+
+    ![Select TemplateFill property](media/select-templatefill.png "Select TemplateFill property")
+
+3. Update the *TemplateFill* property value in the formula bar to the following formula:
+
+    ```powerapps-dot
+    If(ThisItem.IsSelected, RGBA(0,0,0,.05), RGBA(0,0,0,0))
+    ```
+
+    ![Update TemplateFill property](media/templatefill-property.png "Update TemplateFill property")
+
 #### Update fields on the form
 
 The template shows two fields inside the form by default. To add more fields to the form:
@@ -203,6 +228,7 @@ To update the fields in the gallery:
 1. Select **Edit fields** from the property pane on the right.
 
     ![Edit fields for the gallery](media/edit-gallery-fields.png "Edit fields for the gallery")
+
 
 1. Select the drop-down menu for a gallery component (such as image, title, or subtitle) and change the selection to the field you want.
 

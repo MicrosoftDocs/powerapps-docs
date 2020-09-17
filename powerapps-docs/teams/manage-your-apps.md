@@ -28,56 +28,54 @@ Select **Play** to run the latest [published version](../maker/canvas-apps/save-
 
 ## App details
 
-**Details** shows you the information such as the owner of the app, when the app was created and last modified, app ID, app licensing information, and the app's web link.
+The **Details** option shows the owner of the app, when the app was created and last modified, app ID and license designation.
 
-> [!TIP]
-> The web link for an app can be very useful when you want to run an app in the browser for testing, or open an app from a browser or through another app (such as when using the [Launch() function](../maker/canvas-apps/functions/function-param.md)).
+![App details](media/app-details.png "App details")
 
-## Delete an app
-
-Select **Delete** to delete an app. When prompted, select **Delete from cloud**.
-
-![Delete an app](media/manage-app-2.png "Delete an app")
-
-More information: [Delete an app](../maker/canvas-apps/delete-app.md)
-<a name="restore-an-app"></a>
 ## Restore an app
 
 A canvas app can have multiple versions. You can restore an app to an available published version.
 
 To restore an app to a specific version:
 
-1. Edit the app in Power Apps Studio.
+1. Select **Versions** from the [app details](#app-details) screen.
 
-1. Select **Version history** from the upper-right corner of the screen.
+    ![App versions](media/app-versions.png "App versions")
 
-    ![Select version history](media/manage-apps-3.png "Select version history")
+1. Select a version other than *Live* that you want to restore.
 
-1. Select **Details**.<!--You can also select *Commands (…)* and then select **Delete** from the drop-down menu instead. note from editor: No need to document every method, just tell the reader what to do.-->
+1. Select ![Ellipsis](media/ellipsis.png "Ellipsis").
 
-    ![Select details](media/manage-apps-4.png "Select details")
+1. Select **Restore**.
 
-1. Select **Versions**.
+    ![Restore a version](media/restore-version.png "Restore a version")
 
-    ![Select versions](media/manage-apps-5.png "Select versions")
+    > [!NOTE]
+    > The restored app becomes the latest version of the app. However, the latest version is not yet live. You must publish the restored version to make the restored version available to all users.
 
-1. Select the app version that you want to restore. The currently published version that's available to users is marked as **Live**.
+1. Select ![Ellipsis to publish restored version](media/ellipsis.png "Ellipsis to publish restored version") for the restored version.
 
-    ![Select an app version](media/manage-app-6.png "Select an app version")
+1. Select **Publish this version**.
 
-1. Select **Restore**.<!--You can also select *Commands (…)* and then select **Restore** from the drop-down menu.-->
+    ![Publish restored version](media/publish-restored-version.png "Publish restored version")
 
-    ![Select restore from menu](media/manage-app-7.png "Select restore from menu")
+1. Review the app preview and select **Publish this version** to confirm.
 
-1. Select **Restore** to confirm.
+    ![Confirm publish restored version](media/confirm-publish-restored-version.png "Confirm publish restored version")
 
-    ![Select restore](media/manage-app-8.png "Select restore")
+The **Versions** tab now shows the restored version as *Live*:
 
-The app version is now restored.
-
-![Restored version](media/manage-app-9.png "Restored version")
+![Confirm restored app](media/confirm-restored-app.png "Confirm restored app")
 
 More information: [Restore an app](../maker/canvas-apps/restore-an-app.md)
+
+## Delete an app
+
+Select **Delete** to delete an app. When prompted, select **Delete from cloud** to delete the app.
+
+![Delete app](media/manage-app-2.png "Delete app")
+
+For more information about deleting an app, go to [Delete an app](../maker/canvas-apps/delete-app.md).
 
 ### See also
 
