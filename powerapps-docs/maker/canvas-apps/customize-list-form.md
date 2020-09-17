@@ -217,6 +217,6 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
     ![List of customized forms](./media/customize-list-form/app-details.png)
 
     > [!NOTE]
-    > [SharePoint Center of Excellence](https://docs.microsoft.com/en-us/power-platform/guidance/coe/core-components) (CoE) Kit also has a **Power Apps Overview** dashboard that show the different type of apps.<br/>
+    > [SharePoint Center of Excellence](https://docs.microsoft.com/en-us/power-platform/guidance/coe/core-components) (CoE) Kit also has a **Power Apps Overview** dashboard that shows different type of apps available.<br/>
     ![List of customized forms](./media/customize-list-form/coe-appdetails.png)
 
