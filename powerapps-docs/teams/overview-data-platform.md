@@ -43,7 +43,7 @@ Project Oakdale tables provide the ability to create, populate, and query data w
 
 Each of these tables includes columns that contain data about the subject of the table. For example, a table named *Product* might have columns that contain a product name, product identifier, manufacturer identifier, and price. Each of these columns can contain different types of data. For example, identifiers could be numbers, a price represents a cost in a specific currency, and so on.
 
-A solution often has multiple tables that are used together in an application. For example, an Order table might reference multiple other tables (Customer, Product, and Country). These tables are "related" to one another, and tables provide the way to create those relationships.
+A solution often has multiple tables that are used together in an application. For example, an Order table might reference multiple other tables, such as Customer, Product, and Country. These tables are "related" to one another, and tables provide the way to create those relationships.
 
 You can create and populate these tables with a new table designer that makes it even easier to work with these tables.
 
