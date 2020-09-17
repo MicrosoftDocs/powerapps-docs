@@ -206,8 +206,17 @@ You can configure the **Price**, **Availability**, and **Colors** fields to appe
 
 1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com), select the default environment for your organization from the list of environments.
 
-1. At the top of the default environment page, select **Resources**.
+1. At the top of the default environment page, select **Resources** and then select **Power Apps**.
 
-1. From the list of apps, look for apps with a **SharePoint Form** app type—these are the customized forms.
+1. From the list of apps, look for the app names with the pattern: *[ListName] on [SiteName] forms*
+     
+     **Example**: MyList1 on MyTeam1 forms
 
-    ![List of customized forms](./media/customize-list-form/all-customized-forms.png)
+1. These apps show up as Canvas apps. Select **Details** of an app to see the App Type: **SharePoint Form**.
+
+    ![List of customized forms](./media/customize-list-form/app-details.png)
+
+
+**Note:** [SharePoint Center of Excellence](https://docs.microsoft.com/en-us/power-platform/guidance/coe/core-components) (CoE) Kit also has a **Power Apps Overview** dashboard that show the different type of apps.<br/>
+    ![List of customized forms](./media/customize-list-form/coe-appdetails.png)
+
