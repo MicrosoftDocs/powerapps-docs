@@ -44,7 +44,7 @@ Open Power Apps on your mobile device, and sign in by using your Azure Active Di
 
 ![Sign in to Power Apps](media/powerapps_mobile_app_signin_screen.png "Sign in to Power Apps")
 
-If you have the Microsoft Authenticator app installed on your mobile device, simply enter your username when prompted, and then approve the notification sent to your device.
+If you have the Microsoft Authenticator app installed on your mobile device, enter your username when prompted, and then approve the notification sent to your device.
 
 
 ## Find the app
