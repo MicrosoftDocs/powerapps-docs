@@ -393,17 +393,16 @@ such as **Created On**, **Modified On** are not displayed.
 
 ### Solution Setting
 
-| Display name                | Data type  | Description                                                              | Platform use                    |
-|-----------------------------|------------|--------------------------------------------------------------------------|---------------------------------|
-| Health Contact Email        | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
-| Health Contact Name         | Text       | Used to capture the name of the primary health contact.                  | Model-driven app and canvas app |
-| Health Contact Phone        | Text       | Used to capture the phone number of the primary health contact.          | Model-driven app and canvas app |
-| Health Contact Instructions | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app |
-| Maximum Temperature         | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
-| Minimal Temperature         | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
-| Name                        | Text       | The primary name of the setting record.                                  | Model-driven app                |
-| Target Temperature          | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
-| Temperature Scale           | Option Set | Used to display the value of the temperature question in the canvas app. | Canvas app                      |
+| Display name                            | Data type  | Description                                                              | Platform use                    |
+|-----------------------------------------|------------|--------------------------------------------------------------------------|---------------------------------|
+| Allow Employee Sentiment                | Option Set | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app |
+| Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app |
+| Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app |
+| Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
+| Health Contact Name                     | Text       | Used to capture the name of the primary health contact.                  | Model-driven app and canvas app |
+| Health Contact Phone                    | Text       | Used to capture the phone number of the primary health contact.          | Model-driven app and canvas app |
+| Health Contact Instructions             | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app |
+| Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                |
 |||||
 
 ### State
@@ -425,6 +424,7 @@ This section of the solution describes the different flows within the solution a
 | Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes. |
 | Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase. |
 | Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist. |
+| Employee Attestation - Disable Earlier Pass      | Employee Attestation    | When an employee creates multiple passes on a single day, earlier passes will be disabled. |
 | Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. |
 | Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Re-educate occupancy in daily occupancy when employee bookings are disabled. |
 | Employee Case - Reset Facility Access Available      | Employee Case    | Reset the employee case facility access available when the time is reached. |
