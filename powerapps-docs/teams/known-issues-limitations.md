@@ -60,7 +60,7 @@ It's currently not possible to change your Studio version.
 
 ### Image, File, and DateTime in Table designer
 
-You can't create an image, file, and datetime data in [Table designer](understand-power-apps-studio.md#table-designer). To create an image, file, and datetime in Table designer, use the experience with [build hub](create-table.md) to work with tables.
+You can't create an image, file, and datetime data in [Table designer](understand-power-apps-studio.md#table-designer). To create an image, file, and datetime data in Table designer, use the experience with [build hub](create-table.md) to work with tables.
 
 ## Theme
 
