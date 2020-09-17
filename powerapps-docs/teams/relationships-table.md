@@ -33,7 +33,7 @@ To add a lookup relation to a table, create a relation on the **Relationships** 
    > [!div class="mx-imgBorder"] 
    > ![Relationships tab](media/create-relate-table.png "Relationships tab") 
 
-   Or, on the left pane, select the **Tables** drop-down menu, select the down arrow on the table you wante, and then select **Relationships**. <br />
+   Or, on the left pane, select the **Tables** drop-down menu, select the down arrow on the table you want, and then select **Relationships**. <br />
 
     > [!div class="mx-imgBorder"] 
     > ![Create a relationship from the left pane](media/create-relate-table2.png "Create a relationship from the left pane")
@@ -43,11 +43,11 @@ To add a lookup relation to a table, create a relation on the **Relationships** 
    > [!div class="mx-imgBorder"] 
    > ![Add a relationship](media/create-relate-table3.png "Add a relationship")
 
-<!--note from editor: The following text is redundant: The rest of the process is nearly identical to Common Data Service except that that none of the collaboration features are available as in Common Data Service, such as allow feedback or enable SharePoint document management.-->More information: [Create a relationship between entities](../maker/common-data-service/data-platform-entity-lookup.md) 
+More information: [Create a relationship between entities](../maker/common-data-service/data-platform-entity-lookup.md) 
 
 ## Edit a table relationship
 
-Editing relationships in Project Oakdale works the same as Common Data Service except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/maker/common-data-service/create-edit-entity-relationships.md#actions)<!--note from editor: I can't verify this link.-->
+Editing relationships in Project Oakdale works the same as Common Data Service except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/maker/common-data-service/create-edit-entity-relationships.md#actions)
 
 ## Delete a table relationship
 
