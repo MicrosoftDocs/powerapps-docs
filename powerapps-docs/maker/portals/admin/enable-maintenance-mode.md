@@ -5,23 +5,23 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/11/2019
+ms.date: 09/17/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
 # Maintenance mode for a portal
 
-There might be times when your website is under scheduled maintenance or is down due to temporary outage. When a customer accesses the website during maintenance, unpredictable behavior and intermittent unavailability might be experienced. 
+There might be times when your website is under scheduled maintenance or is down because of temporary outage. When a customer accesses the website during maintenance, unpredictable behavior and intermittent unavailability might be experienced. 
 
-As a portal administrator, you can configure your portal to display a proper message to customers whenever a maintenance activity is going on (for example, "Solution packages are being upgraded.") You can leverage this capability by enabling the maintenance mode on your portal. When the maintenance mode is enabled, a message is displayed, and the customers are restricted from browsing any webpages except the `<portal URL>/_services/about` page.
+As a portal administrator, you can configure your portal to display a proper message to customers whenever a maintenance activity is going on (for example, "Solution packages are being upgraded.") You can benefit from this capability by enabling the maintenance mode on your portal. When the maintenance mode is enabled, a message is displayed, and the customers are restricted from browsing any webpages except the `<portal URL>/_services/about` page.
 
 > [!div class=mx-imgBorder]
 > ![Default maintenance mode page](../media/default-maint-page.png "Default maintenance mode page")
 
 ## Enable maintenance mode
 
-You can enable maintenance mode on your portal to provide a consistent message, instead of dealing with unpredictable behavior when your website is under scheduled maintenance. This will provide a better experience for your portal users.
+You can enable maintenance mode on your portal to provide a consistent message, instead of dealing with unpredictable behavior when your website is under scheduled maintenance. This capability will provide a better experience for your portal users.
 
 1. Open [Power Apps Portals admin center](admin-overview.md).
 
@@ -37,15 +37,24 @@ You can enable maintenance mode on your portal to provide a consistent message, 
 
         - **Custom page**: Select this value if you want a custom HTML page to be displayed when maintenance mode is enabled.
 
-    - **Custom page URL**: This field is enabled only when you select the option to display a custom HTML page. You must ensure that the page URL you provide is publicly accessible. If the specified HTML page can't be reached, the default page is displayed with a note to the administrators.
+    - **Custom page URL**: This field is enabled only when you select the option to display a custom HTML page.
 
-        > [!NOTE]
-        > The custom maintenance page uses IFrame to display the page. Hence, the page should not contain the `x-frame-options:SAMEORIGIN` response header, else the page will not load.
-
+        > [!IMPORTANT]
+        > Read the [custom maintenance page considerations](#considerations-for-custom-maintenance-page) before using custom maintenance page.
+ 
 5. Select **Enable**. While maintenance mode is being enabled, the portal restarts and is unavailable for a few minutes. 
 
     > [!div class=mx-imgBorder]
     > ![Enable maintenance mode settings](../media/enable-maint-mode.png "Enable maintenance mode settings")
+
+### Considerations for custom maintenance page
+
+- Ensure the page URL you provide is publicly accessible.
+- The custom maintenance page uses IFrame to display the page. So, the page shouldn't contain the `x-frame-options:SAMEORIGIN` response header, else the page won't load.
+- Don't host custom maintenance page on Power Apps portal. If a portal is unavailable (because of data migration, solution upgrade, outage, or any other maintenance activity), the custom maintenance page hosted on the same portal won't be accessible.
+- If the custom maintenance page is inaccessible publicly, or if you host the page on the portal that is inaccessible, the default maintenance page is used. The page also shows the following note for the administrators:
+
+    `Note for administrators: The custom page for maintenance mode could not be displayed due to configuration errors.`
 
 ## Configure or disable maintenance mode
 
