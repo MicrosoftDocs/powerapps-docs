@@ -69,9 +69,9 @@ If you still can't sign-in please email us at pamobsup@microsoft.com and include
 
 ## Pin to Home functionality is not supported using Safari for iOS 14
 
-Safari for iOS 14 does not support **Pin to Home** functionality for Power Apps mobile. You will need to use the Siri Shortcuts app to pin an app to the home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](https://docs.microsoft.com/en-us/powerapps/user/run-canvas-and-model-apps-on-mobile#use-siri-shortcuts-ios-14-or-later).
+Safari for iOS 14 does not support **Pin to Home** functionality for Power Apps mobile. You will need to use the Siri Shortcuts app to pin an app to the home screen. For more information, see [Use Siri Shortcuts (iOS 14 or later)](https://docs.microsoft.com/en-us/powerapps/user/run-canvas-and-model-apps-on-mobile#use-siri-shortcuts-to-pin-home-ios-14-or-later).
 
-If you're still on iOS 13 you can continue using Safari to pin an app to the home screen. For more information, see [Pin an app to the home screen](https://docs.microsoft.com/en-us/powerapps/user/run-canvas-and-model-apps-on-mobile#pin-an-app-to-the-home-screen)
+If you're still on iOS 13 you can continue using Safari to pin an app to the home screen. For more information, see [Pin an app to the home screen](https://docs.microsoft.com/en-us/powerapps/user/run-canvas-and-model-apps-on-mobile#use-safari-to-pin-to-home-ios-13-or-earlier)
 
 
 ## App icons are blank on iOS 14 or later
