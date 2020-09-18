@@ -14,17 +14,17 @@ ms.reviewer:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-To manage an app, select **Apps** from the solution explorer. And then, select the app that you want to manage, or select the *Commands* (**…**) option for the app, and then select the options from the drop-down menu.
+To manage an app, select **Apps** from the solution explorer. Then select the app that you want to manage, or select **Commands** (**…**) next to the app name, and then select commands from the drop-down menu.
 
 ![Select apps](media/manage-apps-1.png "Select apps")
 
 ## Edit an app
 
-Select **Edit** an app to edit the app in Power Apps Studio. For more information about editing an app, go to [edit a canvas app in Power Apps](../maker/canvas-apps/edit-app.md). For more information about Power Apps Studio, go to [Understanding Power Apps Studio](understand-power-apps-studio.md).
+Select **Edit** to edit the app in Power Apps Studio. More information: [Edit a canvas app in Power Apps](../maker/canvas-apps/edit-app.md) and [Understanding Power Apps Studio](understand-power-apps-studio.md)
 
 ## Play an app
 
-Select **Play** to run an app’s latest [published](../maker/canvas-apps/save-publish-app.md) version. For more details about publishing an app, go to [Publish an app](publish-and-share-apps.md).
+Select **Play** to run the latest [published version](../maker/canvas-apps/save-publish-app.md) of the app. More information: [Publish an app](publish-and-share-apps.md)
 
 ## App details
 
@@ -44,7 +44,7 @@ To restore an app to a specific version:
 
 1. Select a version other than *Live* that you want to restore.
 
-1. Select ![Ellipsis](media/ellipsis.png "Ellipsis").
+1. Select ![Ellipsis for versions](media/ellipsis.png "Ellipsis for versions").
 
 1. Select **Restore**.
 
@@ -67,7 +67,7 @@ The **Versions** tab now shows the restored version as *Live*:
 
 ![Confirm restored app](media/confirm-restored-app.png "Confirm restored app")
 
-For more details about restoring an app, go to [Restore an app](../maker/canvas-apps/restore-an-app.md).
+More information: [Restore an app](../maker/canvas-apps/restore-an-app.md)
 
 ## Delete an app
 

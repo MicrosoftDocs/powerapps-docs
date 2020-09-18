@@ -10,39 +10,39 @@ ms.author: namarwah
 ms.reviewer: tapanm
 ---
 
-# Issue Reporting
+# Issue Reporting sample apps
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-In this tutorial, learn about the **Manage Issues** and **Issue Reporting** apps, and how to use them effectively.
+In this tutorial, learn about the Manage Issues and Issue Reporting apps, and how to use them effectively.
 
 ## Overview
 
-**Issue Reporting** consists of two different apps, one app for reporting the issues, and another app for managing issues.
+Issue Reporting consists of two different apps, one for reporting issues and another for managing them:
 
 - [Manage Issues app](#manage-issues-app)
 
-    Manage Issues app is used by team managers to:
+    The Manage Issues app is used by team managers to:
 
-    - Configure the app experience, including the channel in which Teams messages and Planner tasks are created by the app.
+    - Configure the app experience, including the channel in which Microsoft Teams messages and Planner tasks are created by the app.
     - Create, review, edit, or delete issue template forms to collect information when a user reports an issue.
     - Review team issues, report on issue history, and efficiently manage issue resolution.
 
 - [Issue Reporting app](#issue-reporting-app)
 
-    Issue Reporting app is used by employees to:
+    The Issue Reporting app is used by employees to:
 
     - Log issues with the information required to resolve the issue.
     - Modify existing issues and assist with resolution
-    - To get a high-level view of the issues and team issues.
+    - Get a high-level view of the issues and team issues.
 
 ## Prerequisites
 
 Before using this app:
 
-- Find the app in Teams store.
-- Install the app.
-- Set up the app for the first use.
+1. Find the app in Teams store.
+2. Install the app.
+3. Set up the app for the first use.
 
 For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
@@ -64,23 +64,21 @@ This app provides the following capabilities:
 
 ### Configure the app
 
-Steps for App configuration:
-
 1. Sign in to Teams.
 
 1. Select the team.
 
 1. Select the **Manage Issues** tab in Teams.
 
-1. Select the *Channel* where the messages will be posted.
+1. Select the channel where the messages will be posted.
 
-1. Select the *Tasks* (Planner) instance to integrate the app with Planner.
+1. Select the **Tasks (Planner)** instance to integrate the app with Planner.
 
 1. Select **Continue**.
 
-    ![Select Channel and Tasks](media/issue-reporting/select-channel-tasks.png "Select Channel and Tasks")
+    ![Select channel and tasks](media/issue-reporting/select-channel-tasks.png "Select channel and tasks")
 
-1. Follow the steps provided on the page (Steps 1 and 2) to get the SharePoint site URL. And then, paste the URL in *Step 3* input box.
+1. Follow the steps provided on the page (Steps 1 and 2) to get the SharePoint site URL. Then paste the URL in the **Step 3** box.
 
 1. Select **Let's go**.
 
@@ -90,9 +88,9 @@ Steps for App configuration:
 
 To edit the app configuration:
 
-1. Select **Manage Issues** tab in Teams.
+1. Select the **Manage Issues** tab in Teams.
 
-1. Select **Insights** tab on the *Manage Issues* screen.
+1. Select the **Insights** tab on the **Manage Issues** screen.
 
 1. Select **Settings**.
 
@@ -108,11 +106,11 @@ To edit the app configuration:
 
 To add a new issue category:
 
-1. Select **Manage Issues** tab in Teams.
+1. Select the **Manage Issues** tab in Teams.
 
-1. Select **Issue templates** tab in *Manage Issues* screen.
+1. Select the **Issue templates** tab on the **Manage Issues** screen.
 
-1. Select **Add category** from the left-pane inside the app.
+1. Select **Add category** on the left pane in the app.
 
 1. Enter *Title*.
 
@@ -126,9 +124,9 @@ To add a new issue category:
 
 To update a category icon:
 
-1. Select **Manage Issues** tab in Teams.
+1. Select the **Manage Issues** tab in Teams.
 
-1. Select **Issue templates** tab in *Manage Issues* screen.
+1. Select the **Issue templates** tab on the **Manage Issues** screen.
 
 1. Select **Edit**.
 
@@ -152,9 +150,9 @@ To update a category title:
 
 1. Sign in to Teams.
 
-1. Select **Manage Issues** tab in teams.
+1. Select the **Manage Issues** tab in teams.
 
-1. Select **Issue templates** tab.
+1. Select the **Issue templates** tab.
 
 1. Open the category that you updated in Tasks (Planner) earlier.
 
@@ -169,9 +167,9 @@ To update a category title:
 
 To delete a category:
 
-1. Select **Manage Issues** tab in Teams.
+1. Select the **Manage Issues** tab in Teams.
 
-1. Select **Issue templates** tab in the *Manage Issues* screen.
+1. Select the **Issue templates** tab on the **Manage Issues** screen.
 
 1. Select the required category.
 
@@ -179,7 +177,7 @@ To delete a category:
 
 1. Select **Delete**.
 
-1. Select the checkbox next to **I understand**.
+1. Select the **I understand** check box.
 
 1. Select **Delete**.
 
@@ -189,9 +187,9 @@ To delete a category:
 
 To add a new issue template:
 
-1. Select **Manage Issues** tab in Teams.
+1. Select the **Manage Issues** tab in Teams.
 
-1. Select **Issue templates** tab in the *Manage Issues* screen.
+1. Select the **Issue templates** tab on the **Manage Issues** screen.
 
 1. Select a category to add the new issue template.
 
@@ -217,9 +215,9 @@ To add a new issue template:
 
 To edit an issue template:
 
-1. Select **Manage Issues** tab in Teams.
+1. Select the **Manage Issues** tab in Teams.
 
-1. Select **Issue templates** tab in the *Manage Issues* screen.
+1. Select the **Issue templates** tab on the **Manage Issues** screen.
 
 1. Select the required category.
 
@@ -237,9 +235,9 @@ To edit an issue template:
 
 To delete an issue template:
 
-1. Select **Manage Issues** tab in Teams.
+1. Select the **Manage Issues** tab in Teams.
 
-1. Select **Issue templates** tab in the *Manage Issues* screen.
+1. Select the **Issue templates** tab on the **Manage Issues** screen.
 
 1. Select the required category.
 
@@ -247,19 +245,19 @@ To delete an issue template:
 
 1. Select **Delete**.
 
-1. Select the checkbox next to **I understand**.
+1. Select the **I understand** check box.
 
 1. Select **Delete**.
 
-    ![Delete a issue template](media/issue-reporting/delete-issue-template.png "Delete a issue template")
+    ![Delete an issue template](media/issue-reporting/delete-issue-template.png "Delete an issue template")
 
 ### Review an issue report
 
 To review an issue report:
 
-1. Select **Manage Issues** tab in Teams.
+1. Select the **Manage Issues** tab in Teams.
 
-1. Select **Insights** tab.
+1. Select the **Insights** tab.
 
     ![Review a issue report](media/issue-reporting/review-issue-report.png "Review a issue report")
 
@@ -267,9 +265,9 @@ To review an issue report:
 
 To view issue tasks in Planner
 
-1. Select **Manage Issues** tab in Teams.
+1. Select the **Manage Issues** tab in Teams.
 
-1. Select **Insights** tab.
+1. Select the **Insights** tab.
 
 1. Select **View Issues**.
 
@@ -277,7 +275,7 @@ To view issue tasks in Planner
 
 ## Issue Reporting app
 
-Issue reporting app provides the following capabilities:
+The Issue reporting app provides the following capabilities:
 
 - [Submit a new issue](#submit-a-new-issue)
 - [View an issue task in Planner](#view-an-issue-task-in-planner)
@@ -285,18 +283,18 @@ Issue reporting app provides the following capabilities:
 
 ### Submit a new issue
 
-To Submit a new issue:
+To submit a new issue:
 
-1. Select **Issue Reporting** tab in Teams.
+1. Select the **Issue Reporting** tab in Teams.
 
 1. Select **Report an issue**.
 
-1. Select issue type.
+1. Select the issue type.
 
 1. Enter issue details.
 
     > [!NOTE]
-    > Some of the issue details are automatically filled.
+    > Some of the issue details are automatically entered.
 
 1. Select **Submit issue**.
 
@@ -306,7 +304,7 @@ To Submit a new issue:
 
 To view an issue task in Planner:
 
-1. Select **Issue Reporting** tab in Teams.
+1. Select the **Issue Reporting** tab in Teams.
 
 1. Select **View issues**.
 
@@ -330,9 +328,9 @@ To review and edit existing issues in Planner:
 
 1. Edit the task.
 
-    ![Review and edit task in planner](media/issue-reporting/review-edit-task-planner.png "Review and edit task in planner")
+    ![Review and edit a task in Planner](media/issue-reporting/review-edit-task-planner.png "Review and edit a task in Planner")
 
 ### See also
 
-- [Inspection](inspection.md)
-- [Employee Ideas](employee-ideas.md)
+[Inspection sample apps](inspection.md)  
+[Employee Ideas sample app](employee-ideas.md)

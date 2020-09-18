@@ -10,28 +10,28 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Install the Power Apps personal app in Teams
+# Install the Power Apps personal app in Microsoft Teams
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-A personal app is a Teams application with a personal scope. Power Apps is by default available for you to select and add to a tab inside the Teams channel of your choice. For more information about a personal app in Teams, see [personal apps](https://docs.microsoft.com/microsoftteams/platform/concepts/design/personal-apps).
+A *personal app* is a Teams application that has a personal scope. Power Apps is by default available for you to select and add to a tab in the Teams channel of your choice. More information: [Personal apps](https://docs.microsoft.com/microsoftteams/platform/concepts/design/personal-apps)
 
-1. Open Microsoft Teams and select **More added apps** (...).
+1. Open Microsoft Teams, and then select **More added apps** (...).
 
 1. Search for **Power Apps**.
 
-   ![Search Power Apps](media/search-power-apps.png "Search Power Apps")
+   ![Search for Power Apps](media/search-power-apps.png "Search for Power Apps")
 
 1. Select **Add**.
 
    ![Add Power Apps](media/add-power-apps.png "Add Power Apps")
 
-Power Apps is now added to your Teams. You can access the app within Teams by using the left pane.
+Power Apps is now added to Teams. You can access the app in Teams from the left pane.
 
 ![Power Apps app](media/power-apps-home-tab.png "Power Apps app")
 
 > [!TIP]
-> As an alternate to using the flyout, you can also select **Apps** from the bottom-left corner in Microsoft Teams, and then search for Power Apps to install the app. For more information, go to apps in Teams.
+> As an alternative to using the flyout menu, you can select **Apps** from the lower-left corner in Teams, and then search for **Power Apps** to install the app.
 
 ### Next steps
 
