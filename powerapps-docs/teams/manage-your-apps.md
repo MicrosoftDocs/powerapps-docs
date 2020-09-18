@@ -44,7 +44,7 @@ To restore an app to a specific version:
 
 1. Select a version other than *Live* that you want to restore.
 
-1. Select ![Ellipsis](media/ellipsis.png "Ellipsis").
+1. Select ![Ellipsis for versions](media/ellipsis.png "Ellipsis for versions").
 
 1. Select **Restore**.
 

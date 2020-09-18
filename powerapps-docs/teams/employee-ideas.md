@@ -31,7 +31,7 @@ Employee Ideas and Manage Campaigns consists of two different apps:
     - Review leaderboards of ideas.
     - Vote for and share prioritized ideas.
 
-- [Employee Ideas app](#employee-idea-app)
+- [Employee Ideas app](#employee-ideas-app)
 
     This app is used by employees for the following activities:
 
@@ -59,9 +59,9 @@ The Manage Campaign app gives the manager the following capabilities.
 - [Add an idea campaign](#add-an-idea-campaign)
 - [Edit an idea campaign](#edit-an-idea-campaign)
 - [Delete an idea campaign](#delete-an-idea-campaign)
-- [Submit a new idea](#submit-a-new-idea)
+- [Submit a new idea](#submit-a-new-idea-manage-campaigns-app)
 - [Review and vote for an idea](#review-and-vote-for-an-idea)
-- [Share an idea](#share-an-idea)
+- [Share an idea](#share-an-idea-manage-campaigns-app)
 
 ### Configure the app
 
@@ -150,7 +150,7 @@ To delete an idea campaign:
 
     ![Delete an idea campaign](media/employee-ideas/delete-idea-campaign.png "Delete an idea campaign")
 
-### Submit a new idea
+### Submit a new idea (Manage Campaigns app)
 
 To submit a new idea:
 
@@ -186,7 +186,7 @@ To review and vote for an idea:
 
     ![Review and vote for an idea](media/employee-ideas/review-vote-idea.png "Review and vote for an idea")
 
-### Share an idea
+### Share an idea (Manage Campaigns app)
 
 To share an idea:
 
@@ -214,12 +214,12 @@ To review existing idea campaigns:
 
 The Employee Ideas app gives employees the following capabilities.
 
-- [Submit a new idea](#submit-a-new-idea-1)
+- [Submit a new idea](#submit-a-new-idea-employee-ideas-app)
 - [Submit a new idea and post it in a channel](#submit-a-new-idea-and-post-it-in-a-channel)
 - [Review and upvote an idea](#review-and-upvote-an-idea)
-- [Share an idea](#share-an-idea-1)
+- [Share an idea](#share-an-idea-employee-ideas-app)
 
-### Submit a new idea
+### Submit a new idea (Employee Ideas app)
 
 To submit a new idea:
 
@@ -281,7 +281,7 @@ To review and upvote an idea:
 
     ![Review and vote for an idea - employee](media/employee-ideas/review-vote-idea-employee.png "Review and vote for an idea - employee")
 
-### Share an idea
+### Share an idea (Employee Ideas app)
 
 To share an idea:
 

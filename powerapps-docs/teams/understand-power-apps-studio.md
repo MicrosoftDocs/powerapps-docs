@@ -118,7 +118,7 @@ Create a new flow with Power Automate, or select any available flow.
 
 ![Power Automate](media/studio-power-automate.png "Power Automate")
 
-More information: [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app)<!--note from editor: Edit okay?-->
+More information: [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app)
 
 ### Collections
 
@@ -157,7 +157,7 @@ Saves recent and unsaved changes you made to the app in Power Apps Studio. Each 
 
 ### Preview
 
-Preview the app in Teams. Use **Preview** to run the app, similar to play<!--note from editor: What does this mean?--> but within the authoring session.
+Preview the app in Teams.
 
 ### Publish to Teams
 
@@ -184,11 +184,11 @@ The formula bar is IntelliSense-enabled, and provides tips as you enter text to 
 ![Function in the formula bar](media/studio-function-1.png "Function in the formula bar")
 
 Similarly, you'll find help when working with complex functions, nested
-functions, or when correcting a formula syntax.<!--note from editor: You don't want to anthropomorphize "IntelliSense".-->
+functions, or when correcting a formula syntax.
 
-For a quick and easy function reference, you can also select the formula drop-down menu.<!--note from editor: Should this match the alt text, or vice versa?-->
+For a quick and easy function reference, you can also select the formula drop-down menu.
 
-![Function drop-down menu](media/studio-function-2.png "Function drop-down menu")
+![Formula drop-down menu](media/studio-function-2.png "Formula drop-down menu")
 
 Select an event type from the drop-down menu at the top of the dialog box, such as
 **Action** instead of **Text**.
@@ -206,8 +206,7 @@ canvas, the available **Action** functions also include the function
 
 ![Function ClearCollect() selected](media/studio-function-5.png "Function ClearCollect() selected")
 
-You can read the description of the selected **Action** function. Selecting
-the function name twice<!--note from editor: Does this mean double-clicking?  --> adds the function into the formula bar.
+You can read the description of the selected **Action** function. Double-clicking a function name adds it into the formula bar.
 
 For a complete list of all canvas app functions, go to [Formula reference](../maker/canvas-apps/formula-reference.md).
 
@@ -291,8 +290,7 @@ by using data sources.
 
 ![Data](media/studio-data.png "Data")
 
-You can also use the tables created using the **Tables** option inside the
-environment by expanding the **Tables** option.<!--note from editor: I don't know what this means.-->
+You can also use the tables created using the [build hub](create-table.md) by expanding the **Tables** option.
 
 ![Add data - select data source](media/studio-add-1.png "Add data - select data source")
 
@@ -304,7 +302,7 @@ enter text in the data source search box or select from the list of connectors.
 
 ![Select data source](media/studio-select-1.png "Select data source")
 
-More information: [List of all Power Apps connectors](https://docs.microsoft.com/connectors/connector-reference/connector-reference-powerapps-connectors)<!--note from editor: Edit okay?-->
+More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
 ### Table designer
 
