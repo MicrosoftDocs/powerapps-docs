@@ -51,7 +51,7 @@ You can enable maintenance mode on your portal to provide a consistent message, 
 
 - Ensure the page URL you provide is publicly accessible.
 - The custom maintenance page uses IFrame to display the page. So, the page shouldn't contain the `x-frame-options:SAMEORIGIN` response header, else the page won't load.
-- Don't host custom maintenance page on Power Apps portal. If a portal is unavailable (because of data migration, solution upgrade, outage, or any other maintenance activity), the custom maintenance page hosted on the same portal won't be accessible.
+- Don't host custom maintenance page on a Power Apps portal. If a portal is unavailable (for reasons such as data migration, solution upgrade, an outage, or any other maintenance activity), the custom maintenance page hosted on the same portal won't be accessible.
 - If the custom maintenance page is inaccessible publicly, or if you host the page on the portal that is inaccessible, the default maintenance page is used. The page also shows the following note for the administrators:
 
     `Note for administrators: The custom page for maintenance mode could not be displayed due to configuration errors.`
