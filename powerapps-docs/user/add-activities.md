@@ -73,6 +73,10 @@ Legend:
 4. By default, the direction is set to **Outgoing**. You can change it to **Incoming** by selecting **Outgoing**.
   
 5. When you're done filling in the form, select **Save and Close** to save the phone call activity.  
+
+
+> [!NOTE]
+> - After a phone call activity is created and you select the phone icon, you will get an error, **Unable to find many-to-one relationship,entity: phonecall referenced Entity: undefined, field: regardingobjectid**. This happens because Common Data Service doesn't support creating a  phone call activity from within another phone call activity.
   
 ### Add a task  
   
