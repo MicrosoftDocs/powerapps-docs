@@ -1,11 +1,12 @@
 ---
 title: "Use the lookup field on a record | MicrosoftDocs"
+description: How to use the lookup field in Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/06/2019
+ms.date: 09/14/2020
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -69,10 +70,15 @@ The most recently used list of records shows an image to help distinguish betwee
   > ![Lookup fields shows image](media/Lookup_03-MRU_Entity_Images_56[1].png "Lookup fields shows image")  
   
 ## Record type selection list  
-When results span multiple record types, you can see how many types of records there are and select them from the list.
+When results span multiple record types, you can see how many types of records there are and select them from the list. The **Lookup Record** option is not available in the Unified Interface. Instead use the following to search:
+
+- To look for records, enter text in the search box. 
+- To search by entity type select **types of records**. 
+- Select **Change View** to select a view.
 
   > [!div class="mx-imgBorder"]
   > ![See how many records](media/Lookup_04-MultipleEntityTypes[1].gif "See how many records")  
+  
   
 ## Create a new record if you don’t find an existing record
 

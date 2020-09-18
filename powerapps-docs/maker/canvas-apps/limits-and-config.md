@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/31/2020
+ms.date: 09/14/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -25,7 +25,8 @@ This topic contains device platform and web browser requirements, as well as lim
 | Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
 
 > [!NOTE]
-> We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Common Data Service option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
+> - On October 16, 2020 we will no longer support iOS 12. After October 16, 2020 iOS 13 or later will be supported. 
+> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Common Data Service option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
 
 ## Supported browsers for running canvas apps
 
@@ -72,7 +73,7 @@ You should use these addresses if, for example, you must allow IP addresses for 
 | Australia  | 13.70.72.192 - 13.70.72.207, 13.72.243.10, 13.77.50.240 - 13.77.50.255, 13.70.136.174, 13.70.78.224 - 13.70.78.255, 13.77.55.160 - 13.77.55.191, 127.0.0.1 |
 | Brazil | 191.233.203.192 - 191.233.203.207, 104.214.19.48 - 104.214.19.63, 13.65.86.57, 104.41.59.51, 191.233.207.160 - 191.233.207.191, 127.0.0.1 |
 | Canada | 13.71.170.208 - 13.71.170.223, 13.71.170.224 - 13.71.170.239, 52.237.24.126, 40.69.106.240 - 40.69.106.255, 52.242.35.152, 13.71.175.160 - 13.71.175.191, 13.71.170.224 - 13.71.170.239, 40.69.111.0 - 40.69.111.31, 127.0.0.1|
-| Europe | 13.69.227.208 - 13.69.227.223, 52.178.150.68, 13.69.64.208 - 13.69.64.223, 52.174.88.118, 137.117.161.181, 13.69.231.192 - 13.69.231.223, 13.69.71.192 - 13.69.71.223, 40.79.148.96 - 40.79.148.127, 40.79.180.224 - 40.79.180.255, 127.0.0.1|
+| Europe | 13.69.227.208 - 13.69.227.223, 52.178.150.68, 13.69.64.208 - 13.69.64.223, 52.174.88.118, 137.117.161.181, 13.69.231.192 - 13.69.231.223, 13.69.71.192 - 13.69.71.223, 40.79.148.96 - 40.79.148.127, 40.79.180.224 - 40.79.180.255, 51.107.59.16 - 51.107.59.31, 51.107.60.224 - 51.107.60.255, 51.107.86.217, 127.0.0.1|
 | India  | 104.211.81.192 - 104.211.81.207, 52.172.211.12, 40.78.194.240 - 40.78.194.255, 13.71.125.22, 104.211.146.224 - 104.211.146.239, 104.211.189.218, 20.38.128.224 - 20.38.128.255, 20.43.123.0 - 20.43.123.31, 127.0.0.1 |
 | Japan | 13.78.108.0 - 13.78.108.15, 13.71.153.19, 40.74.100.224 - 40.74.100.239, 104.215.61.248, 127.0.0.1 |
 | South America | 191.233.203.192 - 191.233.203.207, 104.214.19.48 - 104.214.19.63, 13.65.86.57, 104.41.59.51, 127.0.0.1 |
