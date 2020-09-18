@@ -1,7 +1,7 @@
 ---
 title: "Team Entity Reference (Common Data Service)| MicrosoftDocs"
 description: "Includes schema information and supported messages for the Team entity."
-ms.date: 04/12/2020
+ms.date: 09/16/2020
 ms.service: "powerapps"
 ms.topic: "reference"
 ms.assetid: 3948cc48-07c8-7f60-0608-71c37158ad7c
@@ -63,6 +63,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 - [Description](#BKMK_Description)
 - [EMailAddress](#BKMK_EMailAddress)
 - [ImportSequenceNumber](#BKMK_ImportSequenceNumber)
+- [MembershipType](#BKMK_MembershipType)
 - [Name](#BKMK_Name)
 - [OverriddenCreatedOn](#BKMK_OverriddenCreatedOn)
 - [ProcessId](#BKMK_ProcessId)
@@ -128,7 +129,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |DisplayName|Description|
 |Format|TextArea|
 |IsLocalizable|False|
-|IsValidForForm|False|
+|IsValidForForm|True|
 |IsValidForRead|True|
 |LogicalName|description|
 |MaxLength|2000|
@@ -167,6 +168,30 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |MinValue|-2147483648|
 |RequiredLevel|None|
 |Type|Integer|
+
+
+### <a name="BKMK_MembershipType"></a> MembershipType
+
+|Property|Value|
+|--------|-----|
+|Description|Information about team membership type.|
+|DisplayName|Team Membership Type|
+|IsValidForForm|True|
+|IsValidForRead|True|
+|IsValidForUpdate|False|
+|LogicalName|membershiptype|
+|RequiredLevel|SystemRequired|
+|Type|Picklist|
+
+#### MembershipType Options
+
+|Value|Label|
+|-----|-----|
+|0|Members and guests|
+|1|Members|
+|2|Owners|
+|3|Guests|
+
 
 
 ### <a name="BKMK_Name"></a> Name
@@ -239,7 +264,7 @@ These attributes return true for either **IsValidForCreate** or **IsValidForUpda
 |IsValidForUpdate|False|
 |LogicalName|regardingobjectid|
 |RequiredLevel|None|
-|Targets|knowledgearticle|
+|Targets|knowledgearticle,opportunity|
 |Type|Lookup|
 
 

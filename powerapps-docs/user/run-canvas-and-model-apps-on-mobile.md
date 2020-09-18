@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 04/30/2020
+ms.date: 09/16/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -44,7 +44,7 @@ Open Power Apps on your mobile device, and sign in by using your Azure Active Di
 
 ![Sign in to Power Apps](media/powerapps_mobile_app_signin_screen.png "Sign in to Power Apps")
 
-If you have the Microsoft Authenticator app installed on your mobile device, simply enter your username when prompted, and then approve the notification sent to your device.
+If you have the Microsoft Authenticator app installed on your mobile device, enter your username when prompted, and then approve the notification sent to your device.
 
 
 ## Find the app
@@ -56,7 +56,7 @@ When you sign in to the app, the **My apps** filter is set by default. If you do
 
 The following filters are available:
 
-* **All apps** : Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
+* **All apps**: Displays all canvas apps and model-driven apps to which you have access, including apps you created and apps that others shared with you.
 
 * **My apps**: For canvas apps, this displays canvas apps that you've opened, apps that you're the owner of, and apps that you can edit. For model-driven apps, this displays all model-driven apps that you have access to. 
 
@@ -86,15 +86,59 @@ If you filtered your apps, the filtered list will be searched.
 
 Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
 
-## Pin an app to the home screen
+## Pin an app to the home screen 
+
+### Use Safari to pin to home (iOS 13 or earlier)
 
 You can pin both canvas apps and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
 
-![Pin an app](media/pin_to_home.png "Pin an app")
 
+![Pin an app](media/pin_to_home.png "Pin an app")
 
 > [!NOTE]
 > For iOS devices that have multiple browsers installed use Safari when pinning an app to Home. 
+
+### Use Siri shortcuts to pin to home (iOS 14 or later) 
+
+The Power Apps mobile app is now integrated with Siri shortcuts, which gives you with the ability to pin to home, launch apps with Siri, and create new workflows. For more information on how shortcuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios). This feature requires Power Apps mobile version 3.20092.x or later.
+
+Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen. The new experience works for both model-driven and canvas apps. When you add a Siri shortcut, the app is added to the iOS **Shortcuts** app and from there you can add the app to your home screen.
+
+
+1. To pin an app to the home screen, select the ellipsis (...) on the app tile.
+2. Select **Add shortcut to Siri**.
+
+   > [!div class="mx-imgBorder"]
+   >![Add shortcut to Sri](media/add-shortcut.png "Add shortcut to Sri")
+   
+3. Add a custom phrase to open the app using voice commands and then select **Add to Siri**.
+
+   > [!div class="mx-imgBorder"]
+   >![Add a phrase to open and run the app](media/add-shortcut-1.png "Add a phrase to open and run the app")
+   
+4. The app is added to the **Shortcuts** app on your mobile device. Open the **Shortcuts** app and select the ellipsis (...) above the app name.
+
+   > [!div class="mx-imgBorder"]
+   >![Select the ellipsis](media/add-short-2.png "Select the ellipsis")
+
+5. Select **Add to Home Screen**.
+
+   > [!div class="mx-imgBorder"]
+   >![Select add to home screeen button](media/add-to-homescreen.png "Select add to home screen button")
+   
+6. On the upper right corner, select **Add** and then **Done**. 
+
+   > [!div class="mx-imgBorder"]
+   >![Select Add](media/add-shortcut-3.png "Select add button")
+   
+
+7. Go to your home screen to find the pinned app.   
+  
+   > [!div class="mx-imgBorder"]
+   >![App shortcut on home screen](media/add-shortcut-4.png "App shortcut on home screen")
+   
+You can customize the shortcut icon but it is limited to the customization options in iOS. For more information, go to [Use the Shortcuts app on your iPhone or iPad](https://support.apple.com/HT208309) and scroll down to, **Edit or customize a shortcut**.
+
 
 ## See non-production apps
 
@@ -126,7 +170,7 @@ Use your finger to swipe from the left edge of the app to the right to close an 
 
 If an app requires a connection to a data source or permission to use the device's capabilities (such as the camera or location services), you must give consent before you can use the app. Typically, you're prompted only the first time you run the app.
 
-![Give consent](media/give_consent_canvas.jpg "Give consent")
+![Give consent to a canvas app](media/give_consent_canvas.jpg "Give consent to canvas app")
 
 ### Run a model-driven app 
 
@@ -147,4 +191,7 @@ Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map 
 ![Close a model-driven app](media/pa_mobile_close_app.png "Close a model-driven app")
 
 
+## See also
+
+[Troubleshoot issues for the Power Apps mobile app](powerapps_mobile_troubleshoot.md)
 
