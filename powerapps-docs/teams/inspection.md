@@ -24,11 +24,11 @@ plant&mdash;to assets and equipment, such as vehicles and machines. There are tw
 
 - [Manage Inspections app](#manage-inspections-app) is used by a manager to perform the following actions:
 
-    - App configuration.
-    - Configure inspection forms and define outcome.
-    - Gain visibility to inspection results and issue status.
-    - Ensure that all identified issues have been addressed by the staff.
-    - Identify repeat issues from prior inspections, analyze root cause, and prevent future occurrence.
+    - View and close inspections.
+    - Create and edit inspection forms.
+    - View insights about inspection history.
+    - Manage settings for Inspection app, such as Planner and Teams channel for messages.
+
 
 - [Inspection app](#inspection-app) is used by employees to perform the following actions:
 
@@ -80,6 +80,7 @@ The Manage Inspections app gives a manager the following capabilities:
 - [Add locations](#add-locations)
 - [Group locations](#group-locations)
 - [Review submitted inspections](#review-submitted-inspections)
+- [Review inspection insights](#review-inspection-insights)
 
 > [!NOTE]
 > For the example in this tutorial, the items being inspected are referred to as **Location** and **Location types**. This is based around a retail scenario where retail employees inspect sections of a store before opening or closing for the day. These views can differ based on how you've configured your application. For example, when inspecting a fleet of vehicles, the labels might be **Vehicle** and **Vehicle Category**.
@@ -94,11 +95,33 @@ To configure the app:
 
 1. Select the **Manage Inspections** tab in Teams.
 
-1. Select the channel where the messages will be posted.
+1. Configure or skip Planner integration:
 
-1. (Optional) Select the *Tasks* (Planner) instance to integrate the app with Planner.
+    - If your Teams channel has a Planner tab, select **I've a planner tab**.
+    - To continue app configuration without Planner integration, select **I'll set up later**.
 
-1. Select **Let's go** if you selected a *Tasks* (Planner) instance in the previous step, otherwise select **Skip**.
+        > [!IMPORTANT]
+        > Without Planer integration, the app will still work, but the tasks will not be created during the inspections.    
+ 
+    - To set up the Planner tab first, go back to the Teams channel, set up the Planner tab, and reopen the **Manage Inspections** tab.
+
+        > [!TIP]
+        > Give your Planner a distinct name, such as “Inspection tasks”. When you select the Planner instance later to configure the **Manage Inspections** app, you'll be able to identify the right Planner based on this name. The list of Planner instances inside the app as options shows Planner names, and not the name on the Teams tab for the Planner.
+
+    ![Planner integration](media/inspection/planner-tab.png "Planner integration")
+
+1. If you want, change the channel where the messages will be posted.
+
+1. If available, select the *Tasks* (Planner) instance to integrate the app with Planner.
+
+    > [!NOTE]
+    > - If you selected **I'll set up later** for Planner integration, you won't be able to select the *Tasks* (Planner) instance.
+
+    ![Select channel and Planner](media/inspection/select-planner-channel.png "Select channel and Planner")
+
+1. Select **Continue**.
+
+1. Select **Let's go**.
 
     ![Integrate with channel and planner](media/inspection/channel-planner-integrate.png "Integrate with channel and planner")
 
@@ -223,6 +246,27 @@ To review submitted inspection:
 1. Review the submitted inspection details as required.
 
     ![Review submitted inspection](media/inspection/review-submitted-inspection.png "Review submitted inspection")
+
+### Review inspection insights
+
+Inspection insights provide managers with a dashboard of insights about inspection history.
+
+To view the inspection insights:
+
+1. Select the **Manage Inspections** tab in Teams.
+
+1. Select **Inspection insights** tab inside the app.
+
+    ![Inspection insights](media/inspection/inspection-insights.png "Inspection insights")
+
+The following table explains dashboard areas in detail.
+
+| Dashboard area | Details |
+| - | - |
+| **Inspections** | Shows inspection KPIs for pending, closed inspections, and average inspection time. <br> **Note**: If you don’t see any results in the *Closed* KPI, you may have completed inspections that haven't been closed. Go back to the **Locations** tab and close inspections. |
+| **Open inspections** | A pie chart that shows inspections that have not been closed, grouped by category. Date range filters: 7/30/60 days. <br> **Note**: If you don't see the pie chart, all of the inspection records have been changed to closed status. |
+| **Average inspection time by form** | A bar chart that shows the average time to complete inspections per form. This average includes both open and closed inspections. Date range filters: 7/30/60 days. |
+| **Top inspection report contributors** | Shows the number of inspection forms completed by employees. Date range filters: 7/30/60 days. |
 
 ## Inspection app
 
