@@ -10,19 +10,19 @@ ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Teams integration object
+# Microsoft Teams integration object
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-You can use Teams integration object to easily find and access the Teams integration features and use the improved usability of expressions while integrating your canvas app with Teams. You can validate the canvas app having Teams integration object present with the visibility of **Teams** control from the tree view.
+You can use the Teams integration object to easily find and access the Teams integration features and use the improved usability of expressions while integrating your canvas app with Teams. The availability of a *Teams integration object* can be validated by checking the presence of **Teams** control from the tree view.
 
-![Teams Integration Object](media/teams-1.png "Teams Integration Object")
+![Teams integration object](media/teams-1.png "Teams integration object")
 
 There are two features available with the integration of Power Apps with Teams. You can get a Teams theme inside a canvas app, and you can filter data depending on the team or channel context.
 
 ## Get the Teams theme
 
-Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* inside the Power Apps formula bar. For more information about colors in Teams, go to [UI component colors in Teams](/microsoftteams/platform/concepts/design/components/color).
+Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* in the Power Apps formula bar. More information: [UI components: Colors](/microsoftteams/platform/concepts/design/components/color)
 
 To retrieve a theme name, use the following formula.
 
@@ -45,7 +45,7 @@ The [Switch() function](../maker/canvas-apps/functions/function-if.md) evaluates
 
 ![Function Switch()](media/teams-2.png "Function Switch()")
 
-This function results in changing the background of canvas app depending on the change in the theme selection inside Teams.
+This function results in changing the background of canvas app, depending on the change in the theme selection in Teams.
 
 ![Teams themes](media/teams-themes.png "Teams themes")
 
@@ -65,7 +65,7 @@ Teams.ThisChannel.DisplayName
 
 For example, you can add a label and set the *Text* property to display the name of the Teams channel.
 
-![Show Teams channel name](media/teams-3.png "Show Teams channel name")
+![Show the Teams channel name](media/teams-3.png "Show the Teams channel name")
 
 For example, [connecting to a list hosted on a SharePoint site](../maker/canvas-apps/connections/connection-sharepoint-online.md), you can list the items in a default gallery.
 
@@ -81,9 +81,9 @@ Considering the Teams channel name as *General*, you can use the following formu
 
 ![Filtered items](media/teams-filtered-items.png "Filtered items")
 
-For more information about the Teams clients SDK, go to [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest). For more information about using context from Teams, go to [use context from teams](../maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
+For more information about the Teams client SDK, go to [Context interface](/javascript/api/@microsoft/teams-js/microsoftteams.context?view=msteams-client-js-latest&preserve-view=true). For more information about using context from Teams, go to [Use context from teams](../maker/canvas-apps/embed-teams-app.md#use-context-from-teams).
 
 ### See also
 
-- [Manage your apps](manage-your-apps.md)
-- [Understand Power Apps Studio](understand-power-apps-studio.md)
+[Manage your apps](manage-your-apps.md)  
+[Understand Power Apps Studio](understand-power-apps-studio.md)
