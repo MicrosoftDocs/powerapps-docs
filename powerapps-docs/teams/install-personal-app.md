@@ -31,7 +31,7 @@ Power Apps is now added to Teams. You can access the app in Teams from the left 
 ![Power Apps app](media/power-apps-home-tab.png "Power Apps app")
 
 > [!TIP]
-> As an alternative to using the flyout menu, you can select **Apps** from the lower-left corner in Teams, and then search for **Power Apps** to install the app.<!--For more information, go to apps in Teams.-->
+> As an alternative to using the flyout menu, you can select **Apps** from the lower-left corner in Teams, and then search for **Power Apps** to install the app.
 
 ### Next steps
 

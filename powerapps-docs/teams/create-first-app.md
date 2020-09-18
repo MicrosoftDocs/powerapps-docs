@@ -14,8 +14,7 @@ ms.reviewer:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-
-You can create, edit, and delete [canvas apps](/powerapps/maker/canvas-apps/getting-started) in Teams. 
+You can create, edit, and delete [canvas apps](/powerapps/maker/canvas-apps/getting-started) in Teams.
 
 If you're creating an app by using Power Apps in a Teams team for the first time, a new Project Oakdale environment will be created for you. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment)
 
@@ -62,26 +61,24 @@ Teams for the associated team.
 
 To find the **GroupId** (ObjectID in Azure AD) of a team:
 
-1.  Go to the team in Teams.
+1. Go to the team in Teams.
 
-2.  Select any channel in the team.
+1. Select any channel in the team.
 
-3.  Select **More options** (...) from the upper-right corner, and then select **Get link to channel**.
+1. Select **More options** (...) from the upper-right corner, and then select **Get link to channel**.
 
     ![Get link to the channel](media/get-channel-link.png "Get link to the channel")
 
-4.  Copy the *GroupID* from the link.
+1. Copy the *GroupID* from the link.
 
     ![Group ID](media/group-id.png "Group ID")
 
     You can also copy the channel link by selecting **Copy**, and then pasting it into a text editor
 to get the *GroupID* value.
 
-    ```
-    https://teams.microsoft.com/l/channel/19%3a06f038959c9f4387a35f5d776484cff2%40thread.tacv2/General?groupId=40b7e373-a788-4e29-a590-5a86db7550e3&tenantId=00000000-0000-0000-0000-0000000000000000
-    ```
+    `https://teams.microsoft.com/l/channel/19%3a06f038959c9f4387a35f5d776484cff2%40thread.tacv2/General?groupId=40b7e373-a788-4e29-a590-5a86db7550e3&tenantId=00000000-0000-0000-0000-0000000000000000`
 
-5. Now that you have the correct team's **GroupID** (ObjectID in Azure AD), use the instructions in
+1. Now that you have the correct team's **GroupID** (ObjectID in Azure AD), use the instructions in
 [Share an app with Microsoft 365 Groups](/powerapps/maker/canvas-apps/share-app#share-an-app-with-office-365-groups)
 to enable security for the team's Microsoft 365 Group.
 
@@ -103,11 +100,11 @@ Power Apps Studio, where you're prompted to name your app.
     > [!TIP]
     > An app template is included with the app by default, so that you can get started with creating your table and using the app. More information: [Understand Power Apps Studio](understand-power-apps-studio.md)
 
-### Update 
+### Update
 
 ### Create your first table
 
-Data for apps built in Teams lives in Project Oakdale environments as tables. Like other data experiences, you can add additional columns to track different attributes of each record before filling up the table with multiple rows of data. 
+Data for apps built in Teams lives in Project Oakdale environments as tables. Like other data experiences, you can add additional columns to track different attributes of each record before filling up the table with multiple rows of data.
 
 > [!TIP]
 > To learn about Project Oakdale tables in detail, go to [Overview of Project Oakdale](overview-data-platform.md).
@@ -131,22 +128,22 @@ work with data in the table designer.
 
 To add a new column to track new data:
 
-1.  Select **Add column.**  
+1. Select **Add column.**  
 
-1.  Enter a name that best describes your new column.
+1. Enter a name that best describes your new column.
 
-1.  Select the type for your column.
+1. Select the type for your column.
 
     > [!TIP]
     > For more information about column types supported by the table
     designer, go to [Supported column types](understand-power-apps-studio.md#supported-column-types). To add columns that aren't supported by
     the table designer, create a table by using the **Build** tab. More information: [Create tables](create-table.md)
 
-1.  If required, change **Advanced options** for the selected column type.
+1. If required, change **Advanced options** for the selected column type.
 
-1.  Select **Create**.
+1. Select **Create**.
 
-1.  Repeat the previous steps to add the rest of the data columns.
+1. Repeat the previous steps to add the rest of the data columns.
 
 ### Add rows to the table
 
@@ -229,7 +226,6 @@ To update the fields in the gallery:
 
     ![Edit fields for the gallery](media/edit-gallery-fields.png "Edit fields for the gallery")
 
-
 1. Select the drop-down menu for a gallery component (such as image, title, or subtitle) and change the selection to the field you want.
 
     ![Edit selected field](media/gallery-fields-change.png "Edit selected field")
@@ -275,19 +271,19 @@ Now that you've created your first app with data, you can save your changes and 
 To use the app as a tab in your Teams channel, you'll need to save the app,
 publish it, and then add it to your team's channel.
 
-1.  Go to your team in Teams.
+1. Go to your team in Teams.
 
-1.  Select the channel that you want to pin the app to, and then select +.
+1. Select the channel that you want to pin the app to, and then select +.
 
     ![Pin your app](media/pin-app.png "Pin your app")
 
-1.  Select **Power Apps**.
+1. Select **Power Apps**.
 
     ![Power Apps app in Teams](media/power-apps-app.png "Power Apps app in Teams")
 
-1.  Select **Add**.
+1. Select **Add**.
 
-1.  Select your app from the list (in this example, **Sample app**), and then select **Save** to add the app as a tab.
+1. Select your app from the list (in this example, **Sample app**), and then select **Save** to add the app as a tab.
 
 Now that you've created your first app from a blank table, let's go through the
 Power Apps interface, Studio, controls and how to create additional apps in

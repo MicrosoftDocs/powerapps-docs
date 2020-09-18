@@ -27,7 +27,7 @@ To publish an app, select the **Publish to Teams** button from the top-right sid
 ![Publish to Teams](media/publish-app-5.png "Publish to Teams")
 
 Select **Next.** Publishing an app creates a new version of the app and makes the published version of the app available to everyone else the app is shared with.
-<!--note from editor: Please fix the typo in this image ("Itenarary") -->
+
 ![Select Next](media/publish-app-6.png "Select Next")
 
 A list of all channels is displayed. You can add the app to one or more channels as a tab in the team.
