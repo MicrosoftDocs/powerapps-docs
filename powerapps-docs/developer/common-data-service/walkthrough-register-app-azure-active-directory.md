@@ -66,8 +66,10 @@ App registration can also be done by an application developer or individual user
 7. Search for and choose **Common Data Service** under the **APIs my organization uses** tab.
     
     ![Select API](media/app-registration-select-api-page.png "Select API")    
-
-8. Click on **Delegated permissions** and check the options and click on **Add permissions**. 
+    > [!NOTE]
+    > It might be that you have several **Common Data Services** in the List. Choose the one that isn't the "PowerApps Runtime Service". In step #8 the service name will be shown.
+    
+8.  Click on **Delegated permissions** and check the options and click on **Add permissions**. 
     
     ![Delegate Permissions](media/app-registration-delegate-permissions-page.png "Delegate Permission")
     > [!NOTE]
