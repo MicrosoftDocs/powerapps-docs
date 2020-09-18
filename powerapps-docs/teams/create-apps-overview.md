@@ -34,16 +34,16 @@ Access and authorization align with the Teams security model and include securit
 There are two ways to use the apps created by using Power Apps in Teams:
 
 - You can use the Power Apps app from the default Teams catalog as a personal app and create apps to share with teams in Teams. More information: [Install the Power Apps personal app](install-personal-app.md)
- 
-- You can install the apps created using Power Apps directly from the Microsoft Teams catalog that are published using Microsoft AppSource or the organization’s app catalog.<!--note from editor: I don't know what this means.--> More information: [Use sample apps from Teams store](use-sample-apps-from-teams-store.md).
 
-When you create an app in Teams with the Power Apps app for the first time, or install an app created with Power Apps<!--note from editor: Is this what "Power Apps app" meant here?--> from the app catalog for the first time, a new Project Oakdale environment is created for the selected team. The Project Oakdale environment is used to store, manage, and share team-specific data, apps, flows, and chatbots. Each team can have one Project Oakdale environment, and all data, apps, and flows created with the Power Apps app inside a team are available from that environment. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment)<!--Edit okay? -->
+- You can install the apps created using Power Apps directly from the Microsoft Teams store. More information: [Use sample apps from Teams store](use-sample-apps-from-teams-store.md).
+
+When you create an app in Teams with the Power Apps app for the first time, or install an app created with Power Apps from the app catalog for the first time, a new Project Oakdale environment is created for the selected team. The Project Oakdale environment is used to store, manage, and share team-specific data, apps, flows, and chatbots. Each team can have one Project Oakdale environment, and all data, apps, and flows created with the Power Apps app inside a team are available from that environment. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment)
 
 ## Get started with creating flows and chatbots in Teams
 
 You can create:
 
-- Power Automate flows by using the new Power Apps app in Teams. More information: [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app) 
+- Power Automate flows by using the new Power Apps app in Teams. More information: [Create flows using the Power Apps app in Teams](/power-automate/teams/create-flows-power-apps-app)
 
 - Chatbots by using the new Power Virtual Agents app in Teams. More information: [Power Virtual Agents in Teams](https://aka.ms/pva-teams-docs)
 

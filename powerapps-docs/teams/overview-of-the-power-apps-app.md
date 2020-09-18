@@ -17,7 +17,7 @@ ms.reviewer:
 You can use the Power Apps app to create and manage apps across the available environments for the applicable teams. Select the Power Apps app from the left pane in Microsoft Teams to open the Power Apps interface.
 
 > [!NOTE]
-> If **Power Apps** doesn't appear on the left pane, you can [install](install-personal-app.md) it. After you install the app, you need to [create your first app](create-first-app.md) to create an environment. More information: [About Teams environments](https://docs.microsoft.com/power-platform/admin/about-teams-environment)<!--note from editor: Link doesn't work yet.-->
+> If **Power Apps** doesn't appear on the left pane, you can [install](install-personal-app.md) it. After you install the app, you need to [create your first app](create-first-app.md) to create an environment. More information: [About Teams environments](/power-platform/admin/about-teams-environment)
 
 ![Power Apps app](media/power-apps-overview-app.png "Power Apps app")
 
@@ -29,7 +29,7 @@ Let's understand each tab in detail.
 
 ## Home tab
 
-Use the **Home** tab to get started creating new apps with Power Apps. As you've learned from [Create your first app in Teams](create-first-app.md), a new environment is created for your team when you first create an app. Creating additional apps in the same team uses the environment that was already created for the team. You can use the **Home** tab to get an overall view of every app that's available for you to install, or play the video to get started.<!--note from editor: What does this mean?-->
+Use the **Home** tab to get started creating new apps with Power Apps. As you've learned from [Create your first app in Teams](create-first-app.md), a new environment is created for your team when you first create an app. Creating additional apps in the same team uses the environment that was already created for the team. The **Home** tab also shows available sample apps from the Microsoft Teams store.
 
 ## Build tab
 
@@ -66,18 +66,18 @@ When you select **See all** from the environment list on the **Build** tab, you'
 Shows all available Power Apps objects such as apps, flows, and chatbots in the selected environment.
 
 ![Solution explorer - All](media/power-apps-overview-16.png "Solution explorer - All")
-<!--I assume this image is going to be updated with numbers? If not, this should be a bulleted list.-->
-1. **Back** takes you back to the **Build** tab, with its list of environments.
 
-1. **New** is what you select to create new apps, flows, or tables.
+- **Back** takes you back to the **Build** tab, with its list of environments.
+
+- **New** is what you select to create new apps, flows, or tables.
 
     ![Solution explorer - All - New option](media/power-apps-overview-15.png "Solution explorer - All - New option")
 
-1. **Publish all customizations** publishes customization changes.
+- **Publish all customizations** publishes customization changes.
 
 ### Apps
 
-Shows the apps created with Power Apps. More information: [Manage your apps](manage-your-addps.md)
+Shows the apps created with Power Apps. More information: [Manage your apps](manage-your-apps.md)
 
 ![Solution explorer - Apps](media/power-apps-overview-10.png "Solution explorer - Apps")
 
@@ -91,7 +91,7 @@ favorite apps and services to synchronize files, get notifications, collect data
 ### Tables
 
 In Power Apps, a *table* defines information that you want to track in the form of records, which typically include properties such as company name, location,
-products, email, and phone. You can then surface that data by creating an app that refers to the table. For more information about tables, go to [Tables overview](../maker/common-data-service/entity-overview.md).<!--note from editor: Can you get the reader closer to a discussion of tables?-->
+products, email, and phone. You can then surface that data by creating an app that refers to the table. For more information about tables, go to [Tables overview](../maker/common-data-service/entity-overview.md).
 
 ![Solution explorer - Tables](media/power-apps-overview-12.png "Solution explorer - Tables")
 
@@ -135,7 +135,7 @@ While creating canvas aps using Power Apps from the Teams interface, you need to
 
 | **Component or action**                                                                                        | **Description**                                                                                                                                                                                              |
 |----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Power Apps Studio](https://docs.microsoft.com/powerapps/powerapps-overview#power-apps-for-app-makerscreators) | An application used to make or author a canvas app.<!--Also referred to as canvas studio.-->                                                                                                               |
+| [Power Apps Studio](https://docs.microsoft.com/powerapps/powerapps-overview#power-apps-for-app-makerscreators) | An application used to make or author a canvas app.                                                                                                             |
 | [Canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/getting-started)                           | An app that you can create from scratch or by using any available template through Power Apps Studio.                                                                                             |
 | [Model-driven app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/model-driven-app-overview)     | An application based on Common Data Service forms, views, tables, columns, and other components.                                                                                                                     |
 | [Connector](https://docs.microsoft.com/connectors/connectors)                                                  | A connection object that connects an app with a data source. For example, a connector for SharePoint or a connector for OneDrive.                                                                                |
