@@ -1,5 +1,5 @@
 ---
-title: Teams integration - Overview | Microsoft Docs
+title: Create apps in Microsoft Teams by using Power Apps (Preview) | Microsoft Docs
 description: Provides an overview of creating apps in Microsoft Teams.
 author: KumarVivek
 ms.service: powerapps
@@ -9,7 +9,7 @@ ms.date: 09/03/2020
 ms.author: kvivek
 ms.reviewer: 
 ---
-# Create apps in Microsoft Teams by using Power Apps
+# Create apps in Microsoft Teams by using Power Apps (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
