@@ -81,6 +81,18 @@ conceptualContent:
         url: /powerapps/maker/common-data-service
         text: More
 
+    - title: Integrate with Microsoft Teams
+      links:
+        - text: Embed a canvas app in Teams
+          url: /powerapps/teams/embed-teams-app
+          itemType: overview
+        - text: Create apps in Teams
+          url: /powerapps/teams/create-apps-overview
+          itemType: overview
+        - text: What is Project Oakdale?
+          url: /powerapps/teams/overview-data-platform
+          itemType: overview
+
     - title: Use solutions for ALM
       links:
         - text: What are solutions?
