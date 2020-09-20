@@ -6,7 +6,7 @@ manager: annbe
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/02/2020
+ms.date: 09/20/2020
 ms.author: kvivek
 ms.reviewer: kvivek
 ---
@@ -44,7 +44,10 @@ Power Apps admins can use **Power Platform admin center** ([admin.powerplatform.
 
 ## Power Apps for developers
 
-Developers are app makers who can write code to extend business app creation and customization. Developers can use code to create data and metadata, apply server-side logic using Azure functions, plug-ins, and workflow extensions, apply client-side logic using JavaScript, integrate with external data using virtual entities and webhooks, build custom connectors, and embed apps into your website experiences to create integrated solutions. More information: [Power Apps for developers](/powerapps/#pivot=home&panel=developer)
+Developers are app makers who can write code to extend business app creation and customization. Developers can use code to create data and metadata, apply server-side logic using Azure functions, plug-ins, and workflow extensions, apply client-side logic using JavaScript, integrate with external data using virtual entities and webhooks, build custom connectors, and embed apps into your website experiences to create integrated solutions. More information: 
+- [Common Data Service developer](/powerapps/developer/common-data-service/)
+- [Model-driven apps developer](/powerapps/developer/model-driven-apps/)
+- [Canvas apps developer](/powerapps/maker/canvas-apps/dev-enterprise-intro)
 
 ## Power Apps and Dynamics 365
 
