@@ -20,7 +20,7 @@ Apps built using Power Apps provide rich business logic and workflow capabilitie
 
 Power Apps also provides an extensible platform that lets pro developers programmatically interact with data and metadata, apply business logic, create custom connectors, and integrate with external data.
 
-For more information, see the [Power Apps channel](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) on YouTube.
+Watch videos on the [Power Apps channel](https://www.youtube.com/channel/UCGfWR2ekfRFckLjev6eQYLg) on YouTube for more information.
 
 ## Power Apps for app makers/creators
 
