@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/16/2020
+ms.date: 09/22/2020
 ms.author: tapanm
 ms.reviewer:
 ---
@@ -21,6 +21,9 @@ Power Apps is a high-productivity development platform for business apps, and ha
 - Common Data Service
 
 Let's learn more about each of these.
+
+> [!NOTE]
+> In addition to creating apps in Power Apps, you can now create apps directly within Microsoft Teams using Power Apps. More information: [Create apps in Microsoft Teams by using Power Apps](/powerapps/teams/create-apps-overview).
 
 ## Canvas apps
 
