@@ -14,7 +14,7 @@ ms.reviewer: matp
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-Applications within a team in Microsoft Teams have access to a Project Oakdale environment. Project Oakdale is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Project Oakdale delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Project Oakdale environment can contain, Project Oakdale can be upgraded to Common Data Service.
+Applications within a team in Microsoft Teams have access to a Project Oakdale environment. Project Oakdale is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Project Oakdale delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Project Oakdale environment can contain, Project Oakdale can be promoted to Common Data Service.
 
 ## Entity features
 
@@ -24,7 +24,7 @@ This table describes the differences between a Project Oakdale table and Common 
 |---------|---------|---------|
 |Basic data types     |  Yes       |  Yes       |
 |Advanced data types​ (customer, multiple transaction currencies)      |  No       |  Yes       |
-|Common Data Model    |  No       |  Yes       |
+|Common Data Model    |  Coming Soon       |  Yes       |
 |Relational storage      | Yes       |  Yes       |
 |Non-relational​ storage (logs)   |  No       |  Yes       |
 |Managed data lake​      |  No       | Yes        |
@@ -53,7 +53,7 @@ In Project Oakdale and Common Data Service, data is stored within an environment
 
 To make management easier, the lifecycle of the Project Oakdale environment is connected to that of the associated team. For example, when a team is deleted, the associated environment is also deleted.
 
-Whereas Project Oakdale focuses on one environment per team, the Common Data Service supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
+Whereas Project Oakdale focuses on one environment per team for up to 500 teams, the Common Data Service supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
 
 
 |Environment lifecycle  |Project Oakdale  |Common Data Service  |
