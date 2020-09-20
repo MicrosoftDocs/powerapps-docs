@@ -32,6 +32,8 @@ To create an app, you start with [make.powerapps.com](https://make.powerapps.com
 
 - **App designer** for model-driven apps lets you define the sitemap and add components to build a model-driven app. More information: [Design model-driven apps using app designer](maker/model-driven-apps/design-custom-business-apps-using-app-designer.md)
 
+- **Power Apps portals Studio** is a WYSIWYG design tool to add and configure webpages, components, forms, and lists. More information: [Power Apps portals Studio anatomy](/powerapps/maker/portals/portal-designer-anatomy)
+
 Ready to convert your ideas into an app? Start here: [Planning a Power Apps project](/powerapps/guidance/planning/introduction)
 
 ## Power Apps for app users
