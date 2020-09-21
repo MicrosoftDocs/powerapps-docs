@@ -119,15 +119,17 @@ useful information that you can then share with others when investigating an iss
 
 ![About tab - Session details](media/power-apps-overview-1.png "About tab - Session details")
 
-**Timestamp**: Date and time in Coordinated Universal Time (UTC).
+- **Timestamp**: Date and time in Coordinated Universal Time (UTC).
+- **Session ID**: Unique GUID representing the current Power Apps session.
+- **Tenant ID**: Tenant ID of Teams and Power Apps.
+- **Object ID**: Object ID of the user account in Azure Active Directory.
+- **Build name**: Build and version details of the Power Apps app.
+- **Resource ID**: ID of the resource.
+- **Unique name**: Unique name of the Common Data Service organization.
+- **Instance url**: URL of the Common Data Service instance.
 
-**Session ID**: Unique GUID representing the current Power Apps session.
-
-**Tenant ID**: Tenant ID of Teams and Power Apps.
-
-**Object ID**: Object ID of the user account in Azure Active Directory.
-
-**Build name**: Build and version details of the Power Apps app.
+> [!NOTE]
+> Session details are only used when you reach out to Microsoft Support to investigate an issue.
 
 ## Canvas apps terminology reference and definitions
 
