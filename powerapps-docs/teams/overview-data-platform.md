@@ -25,7 +25,7 @@ Some of the benefits of Project Oakdale include:
 
 - Storage, rich data types with enterprise capabilities, and one-click solution deployment.
 
-- A new table designer that makes it even easier to define and populate data.
+- A new visual editor that makes it even easier to define and populate table data.
 
 - Enterprise security that's easy to use and aligned with the approach used in Teams.
 
@@ -45,7 +45,7 @@ Each of these tables includes columns that contain data about the subject of the
 
 A solution often has multiple tables that are used together in an application. For example, an Order table might reference multiple other tables, such as Customer, Product, and Country. These tables are "related" to one another, and tables provide the way to create those relationships.
 
-You can create and populate these tables with a new table designer that makes it even easier to work with these tables.
+You can create and populate these tables with a new visual editor that makes it even easier to work with these tables.
 
 > [!NOTE]
 > All the capabilities found in tables are powered by Project Oakdale. Although this will satisfy many situations, in some situations an organization might want to have additional capacity, capabilities, or control over their solution. In these scenarios, Project Oakdale environments can be upgraded to Common Data Service. The upgrade process, referred to as *promotion*, has several considerations discussed in [Promotion process](/power-platform/admin/about-teams-environment?branch=teams-preview#promotion-process) in the Microsoft Power Platform admin guide.
