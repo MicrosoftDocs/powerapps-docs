@@ -36,6 +36,7 @@ In Microsoft Teams, you can edit four table properties:
 1. On the left pane, expand **Tables**.
 2. Open the table you want to edit, and then select **Settings** on the command bar to display the **Edit** table dialog box.  
    <img src = "media/edit-table1.png" alt = "Edit table" width = "350" height = "557">
+    
     For more information about these settings, see [Create an entity](../maker/common-data-service/data-platform-create-entity.md#create-an-entity).
 4. Make the changes you want, and then select **Done**.
 
