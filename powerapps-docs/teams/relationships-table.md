@@ -5,7 +5,7 @@ author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2020
+ms.date: 09/22/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---
@@ -45,7 +45,8 @@ To add a lookup relation to a table, create a relation on the **Relationships** 
 
 More information: [Create a relationship between entities](../maker/common-data-service/data-platform-entity-lookup.md) 
 
-Note: When defining columns of type lookup within a table, a many to one relationship is created automatically.
+> [!NOTE]
+> When defining columns of type lookup within a table, a many-to-one relationship is created automatically.
 
 ## Edit a table relationship
 
