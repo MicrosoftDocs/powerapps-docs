@@ -45,6 +45,8 @@ To add a lookup relation to a table, create a relation on the **Relationships** 
 
 More information: [Create a relationship between entities](../maker/common-data-service/data-platform-entity-lookup.md) 
 
+Note: When defining columns of type lookup within a table, a many to one relationship is created automatically.
+
 ## Edit a table relationship
 
 Editing relationships in Project Oakdale works the same as Common Data Service except that you can't manage collaboration functions, such as allowing feedback or enabling SharePoint document management. More information: [Relationship actions](/maker/common-data-service/create-edit-entity-relationships.md#actions)
