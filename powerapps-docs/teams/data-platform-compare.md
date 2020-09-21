@@ -64,7 +64,7 @@ In Project Oakdale and Common Data Service, data is stored within an environment
 
 To make management easier, the lifecycle of the Project Oakdale environment is connected to that of the associated team. For example, when a team is deleted, the associated environment is also deleted.
 
-Whereas Project Oakdale focuses on one environment per team for up to 500 teams, the Common Data Service supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
+Whereas Project Oakdale focuses on one environment per team for up to 500 teams, Common Data Service supports unlimited environments in addition to capabilities that are relevant for multiple environments, such as copy and reset.
 
 
 |Environment lifecycle  |Project Oakdale  |Common Data Service  |
