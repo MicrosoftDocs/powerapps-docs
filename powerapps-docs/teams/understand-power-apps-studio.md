@@ -299,7 +299,7 @@ More information: [List of all Power Apps connectors](/connectors/connector-refe
 
 When you select **Create new table** and enter a name for the new table, you open the visual editor where you can design the table, add columns of different data types, enter data in rows, and save the changes.
 
-![Table designer](media/studio-table-designer.png "Table designer")
+![Visual Editor](media/studio-table-designer.png "Visual Editor")
 
 To get started with the visual editor, select **Create new table** and enter
 the table name.
