@@ -34,7 +34,7 @@ There are four different types of table ownership. When you create a table, the 
    > [!div class="mx-imgBorder"] 
    > ![The Build tab](media/create-table2.png "The Build tab")
 
-3. Expand **Tables** on the left pane, select **New**, and then select **Table** on the command bar.
+3. Expand **Tables** on the left pane, select **New**, and then select **Table** .
     > [!div class="mx-imgBorder"] 
     > ![New table menu option](media/create-table3.png "New table menu option")
 
