@@ -56,7 +56,7 @@ This table describes the differences between Project Oakdale and Common Data Ser
 |Business intelligence     |  Data visualization   |  Yes    |  Yes   |
 |      |   Paginated reports (SQL Server Reporting Services)   |  No    |  Yes     |
 |Professional developer     | API access       |  No     |  Yes     |
-|      |  Plugins       |   No      |  Yes       |
+|      |  Plug-ins       |   No      |  Yes       |
 
 ## Environments
 
