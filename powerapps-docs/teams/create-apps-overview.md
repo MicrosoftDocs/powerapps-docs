@@ -27,7 +27,11 @@ The new Power Apps app in Teams provides an integrated experience for app makers
 
 To help organizations realize value faster, you can use *templates*, which are purpose-built apps for common application patterns that can be easily discovered and installed by members of the team. Although these templates can work without modification, members of the team can customize and extend them to meet the specific needs of their business.
 
-Access and authorization align with the Teams security model and include security groups that enable access for owners, members, and guests of the team that your app is associated with.  
+Access and authorization align with the Microsoft Teams security model and include security groups that enable access for owners, members, and guests of the team that your app is associated with.
+
+## Licensing requirements
+
+The ability to create apps within Microsoft Teams will be available as part of select Microsoft 365 subscriptions. For detailed information, see [Licensing and restrictions](/power-platform/admin/about-teams-environment#licensing-and-restrictions) in the Power Platform admin guide
 
 ## Get started with creating apps in Teams
 
@@ -51,3 +55,6 @@ You can create:
 
 [Install the Power Apps personal app](install-personal-app.md)<br/>
 [Create your first app in Teams](create-first-app.md)
+
+### Related topics
+[Administer Project Oakdale environment](/power-platform/admin/about-teams-environment)
