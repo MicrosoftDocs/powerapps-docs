@@ -74,25 +74,27 @@ The following sections describe how to configure display options, advanced setti
 
    ![Records shown on page](media/timeline-records-shown-on-page-runtime.png "Records shown on page")
 
-- **Record types shown**: Select which record types you want to show in the timeline. Users will also be able to create new records of the record types you select here. You can select from: Activities, Notes, and Posts. All these are selected by default.
+- **Record types shown**: Select which record types you want to show in the timeline. Users will also be able to create new records of the record types you select here. You can select from: Activities and Notes. Both are selected by default.
 
     - **Activities**. There are multiple customizable activity types to support business needs. You can create, add, and display a number of different activity types under the **Activities** section of timeline properties.
       > [!IMPORTANT]
       > You only want to enable activities that you need on this form. When working with 10 or more **Activity types**, you will receive a warning that the number of activity types you have selected impacts the performance speed on the timeline. To improve timeline performance speed, consider limiting activity types to 10 or less. 
     - **Notes**. This allows users to capture notes related to the entity record. Notes are typically used to grab thoughts, summary information, and provide feedback on a record—for example, a contact.
-    - **Posts.**  There are two types of posts, Auto and User. 
-        - **Auto Posts**. These are system-generated and notify you of account activity that has occurred. 
-        - **User Posts**. These are used to communicate with other users in your organization.
+
+    > [!NOTE]
+    > If you have a Dynamics 365 customer engagement app, such as Dynamics 365 Field Service installed, **Posts** will be another record type available. There are two types of posts, Auto and User.
+    > - **Auto Posts**. These are system-generated and notify you of account activity that has occurred.
+    > - **User Posts**. These are used to communicate with other users in your organization.
 
     The following image shows that because you selected **Activities**, **Notes**, and **Posts** in the **Record types to show** section of timeline properties, users will see an option to create these record types at runtime. The records of these record types will also be shown in the timeline section at runtime.  
 
     ![Option to create the record types that are selected in timeline properties](media/timeline-record-type-to-show-runtime.png "Record types shown based on the record types selected in timeline properties")  
        
-    The timeline shows an icon before the activity, post, note, and custom entity making it easy for you to identify the record type. Dates and timestamps are shown for each activity, note, or post in the timeline. 
+    The timeline shows an icon before the activity, note, post, and custom entity making it easy for you to identify the record type. Dates and timestamps are shown for each activity, note, or post in the timeline. 
 
 ### Advanced section
 
-Expand the **Advanced** section in the **Timeline** **Properties** for settings that span an activity, note, or post, which are the three primary record types that appear in the timeline section. This section is collapsed by default. When you enable or disable settings in the advanced section, you won't be able to see the changes at runtime until you save and publish your changes and refresh the form's web browser page in the app.
+Expand the **Advanced** section in the **Timeline** **Properties** for settings that span an activity or note, which are the primary record types that appear in the timeline section. This section is collapsed by default. When you enable or disable settings in the advanced section, you won't be able to see the changes at runtime until you save and publish your changes and refresh the form's web browser page in the app.
 
 ![Advanced settings in Timeline properties](media/timeline-properties-advanced-section.png "Advanced settings in Timeline properties")
 
@@ -117,7 +119,7 @@ Expand the **Advanced** section in the **Timeline** **Properties** for settings 
 
 ### Record settings section
 
-The **Record settings** section allows you to define detailed settings for the record types that you selected in the **Record types to show** setting. For example, if you selected check boxes for **Activities**, **Notes**, and **Posts** in the **Record types to show** section, the **Record settings** section will provide you with more settings related to these record types.
+The **Record settings** section allows you to define detailed settings for the record types that you selected in the **Record types to show** setting. For example, if you selected check boxes for **Activities** and **Notes** in the **Record types to show** section, the **Record settings** section will provide you with more settings related to those record types.
 
 #### Configure activity record types
 
@@ -154,7 +156,7 @@ After you select **Activities** in the **Records types to show** section, you ca
 
 ### Set date in the sort activities by feature in the timeline
 
-How you view data is important and setting a default display view of your data varies based on the needs of your business. Makers can choose how data is sorted and create a default sort setting for **Activity types** in **Record settings**. **Last Updated** is on all activities, which is why it is set as the default in ascending order.    
+How you view data is important and setting a default display view of your data varies based on the needs of your business. Makers can choose how data is sorted and create a default sort setting for **Activity types** in **Record settings**. **Last Updated** is on all activities, which is why it is set as the default in ascending order.
 
 1. The **Sort activities by** feature in the **Activities record settings** allows you to control how data is sorted in the timeline.  
 2. When you select the **Sort activities by** field, a list appears. You can select from this list how you want your data to be sorted and displayed on the timeline in the form.
@@ -197,7 +199,7 @@ All card forms are broken out into the following four sections:
 
 ![Advanced display options about how to customize a card form in the timeline](media/timeline-card-form-advanced-1.png "Advanced display options about how to customize a card form in the timeline")
 
-Each individual card form has to be customized for each activity record such as email, tasks, posts, and so on.
+Each individual card form has to be customized for each activity record such as email, tasks, and so on.
 
 **Header Section**<br>
 This displays the title/subject in your timeline email form. You can have up to six fields in the **Header** section. Only the first two fields will be seen on the timeline record. Also, empty fields will be ignored by the form in all sections.<br>
