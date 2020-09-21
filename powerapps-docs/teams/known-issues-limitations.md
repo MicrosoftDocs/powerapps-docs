@@ -23,7 +23,7 @@ Project Oakdale currently isn't available in [Power Apps Government Community Cl
 
 ## Hidden membership groups
 
-Project Oakdale doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0#group-visibility-options).
+Project Oakdale doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0 &preserve-view=true#group-visibility-options).
 
 ## Localization
 
