@@ -157,11 +157,11 @@ Saves recent and unsaved changes you made to the app in Power Apps Studio. Each 
 
 ### Preview
 
-This will show a Preview version of the app in Teams that you can interact with.
+This will show a preview version of the app in Microsoft Teams that you can interact with.
 
 ### Publish to Teams
 
-Publishes the app’s current version to a channel within Teams. For more
+Publishes the app’s current version to a channel within Microsoft Teams. For more
 information about publishing an app, go to [Publish an app](publish-and-share-apps.md#publish-and-add-an-app-to-teams).
 
 ## 4 – Properties list
@@ -279,7 +279,7 @@ can add one or more
 [connections](../maker/canvas-apps/connections-list.md)
 by using data sources.  
 
-In addition to data stored within Tables, there are a number of connectors available to interact with data in popular SaaS, services, and systems.
+In addition to data stored within tables, there are a number of connectors available to interact with data in popular SaaS, services, and systems.
 
 ![Data](media/studio-data.png "Data")
 
