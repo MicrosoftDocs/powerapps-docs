@@ -28,8 +28,8 @@ For more information about the columns available, see these Common Data Service 
 
 ## Create a column
 
-1. On the **Build** tab, select **Tables**. 
-2. Open the table you want to add a column to, and then select **Add column**.
+1. On the **Build** tab, select **See all**, and then expand **Tables**. 
+2. Select the table you want to add a column to, and then select **Add column** on the command bar.
     > [!div class="mx-imgBorder"] 
     > ![Create a table column](media/create-table-column.png "Create a table column")
 
