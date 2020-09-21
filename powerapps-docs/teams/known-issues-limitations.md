@@ -15,7 +15,7 @@ This article provides details about the known issues and limitations of the Powe
 
 ## Component library
 
-[Component library](../maker/canvas-apps/component-library.md) isn't currently supported. This support is coming soon.
+[Component library](../maker/canvas-apps/component-library.md) isn't currently supported.
 
 ## Government Community Cloud (GCC)
 
@@ -27,15 +27,11 @@ Project Oakdale doesn't support [hidden membership groups](https://docs.microsof
 
 ## Localization
 
-Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't supported. Support for additional languages is coming soon.
-
-## Responsive containers
-
-The new responsive containers that make it easier to create responsive canvas apps for teams is coming soon.
+Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't supported.
 
 ## Sharing
 
-You can't share apps or data outside of a team currently. This capability is coming soon as a new **Share with your colleagues** experience.
+You can't share apps or data outside of a team currently.
 
 ![Share with your colleagus](media/share-with-colleagues.png "Share with your colleagues")
 
