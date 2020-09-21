@@ -1810,8 +1810,6 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md
-        - name: Analyze tables in Power BI
-          href: ../teams/table-data-powerbi.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Share and publish your app
