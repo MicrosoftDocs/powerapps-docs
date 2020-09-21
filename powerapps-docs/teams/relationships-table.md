@@ -33,10 +33,10 @@ To add a lookup relation to a table, create a relation on the **Relationships** 
    > [!div class="mx-imgBorder"] 
    > ![Relationships tab](media/create-relate-table.png "Relationships tab") 
 
-   Or, on the left pane, select the **Tables** drop-down menu, select the down arrow on the table you want, and then select **Relationships**. <br />
+   Or, on the left pane, expand **Tables**, expand the table you want, and then select **Relationships**. <br />
 
-    > [!div class="mx-imgBorder"] 
-    > ![Create a relationship from the left pane](media/create-relate-table2.png "Create a relationship from the left pane")
+ <!--   > [!div class="mx-imgBorder"] 
+    > ![Create a relationship from the left pane](media/create-relate-table2.png "Create a relationship from the left pane") -->
 
 2. When the relationships page is open, select **Add relationship**, and then select the type of relationship you want to create (for example, **Many-to-one**).
 
@@ -62,7 +62,7 @@ While viewing table relationships, select the table relationship you want to del
 
 - Select **…** next to the relationship, and then select **Delete relationship**.
    > [!div class="mx-imgBorder"] 
-   > ![Delete table relationship in context](media/delete-table-relationship2.png "Delete table relationship in context")
+   > ![Delete table relationship in context](media/delete-table-relationship2.png "Delete table relationship in context") 
 
 ### See also
 
