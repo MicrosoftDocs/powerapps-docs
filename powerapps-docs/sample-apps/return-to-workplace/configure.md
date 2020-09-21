@@ -348,6 +348,10 @@ This flow will loop over all the facilities and randomly move a facility one pha
 
 This flow mimics employees using the app. It will create a booking, attestation, and sentiment record for the current day for each active employee. Prerequisites: Employees record should be active, have a default facility assigned and an assigned area that is part of that default facility.
 
+- Sample Data - Guest Registrations
+
+This flow will add 5 guests to bookings created by the 'Sample Data - Generate Employee Records' flow. Each booking will receive one guest. This flow will create a new Contact record for each guest every time it runs.
+
 - Sample Data - Create and update employee cases
 
 This flow runs twice a day and randomly moves cases one step forward through the process. For each employee, a case is created if none exists. If a case exists, it is moved forward one step in the process. If the case reaches the **Resolved** stage, it will be closed. When moving from opening to investigation, it creates a linked case facility record based on the employees' default facility. Prerequisites: Employees records should be in active state and have a default facility selected.
