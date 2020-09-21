@@ -34,7 +34,7 @@ In Microsoft Teams, you can edit four table properties:
 > - Each Project Oakdale environment is assigned a prefix when it's created creation, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
 
 1. On the left pane, expand **Tables**.
-2. Open the table you want to edit, and then select **Settings** on the command bar to display the **Edit** table dialog box.  
+2. Open the table you want to edit, and then select **Settings** on the command bar to display the **Edit table** dialog box.  
    <img src = "media/edit-table1.png" alt = "Edit table" width = "350" height = "557">
     
     For more information about these settings, see [Create an entity](../maker/common-data-service/data-platform-create-entity.md#create-an-entity).
