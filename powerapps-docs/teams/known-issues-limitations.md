@@ -21,10 +21,13 @@ This article provides details about the known issues and limitations of the Powe
 
 Project Oakdale currently isn't available in [Power Apps Government Community Cloud (GCC)](/power-platform/admin/powerapps-us-government).
 
+## Hidden membership groups
+
+Project Oakdale doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options).
+
 ## Localization
 
 Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't supported. Support for additional languages is coming soon.
-
 
 ## Responsive containers
 
@@ -58,15 +61,15 @@ The following controls aren't supported:
 - [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md)
 - [Video control](../maker/canvas-apps/controls/control-audio-video.md)
 
-### Image, File, and DateTime in Table designer
+### Image, File, and DateTime in Visual Editor
 
-You can't create an image, file, and datetime data in [Visual editor](understand-power-apps-studio.md#visual-editor). To create an image, file, and datetime data in Table designer, use the experience with [build hub](create-table.md) to work with tables.
+You can't create an image, file, and datetime data in [Visual editor](understand-power-apps-studio.md#visual-editor). To create an image, file, and datetime data in Visual Editor, use the experience with [build hub](create-table.md) to work with tables.
 
 ### New connections
 
 Connections in the Power Apps Studio that require an authentication dialog fails in the [Teams desktop client](https://docs.microsoft.com/microsoftteams/get-clients#desktop-client). Open the Studio in the [Teams web client](https://docs.microsoft.com/microsoftteams/get-clients#web-client) to add these connectors.
 
-### Studio and Table designer synchronization
+### Studio and Visual Editor synchronization
 
 Power Apps Studio doesn't reflect the changes to tables after:
 
