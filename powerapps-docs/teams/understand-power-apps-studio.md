@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2020
+ms.date: 09/22/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -101,7 +101,7 @@ Runs the [App checker](https://powerapps.microsoft.com/blog/powerapps-checker-no
 
 ### Settings
 
-Configure the app's genera settings.
+Configure the app's general settings.
 
 ![App settings](media/studio-general-settings.png "App settings")
 
@@ -157,11 +157,11 @@ Saves recent and unsaved changes you made to the app in Power Apps Studio. Each 
 
 ### Preview
 
-Preview the app in Teams.
+This will show a preview version of the app in Microsoft Teams that you can interact with.
 
 ### Publish to Teams
 
-Publishes the app’s current version to Teams for everyone to use. For more
+Publishes the app’s current version to a channel within Microsoft Teams. For more
 information about publishing an app, go to [Publish an app](publish-and-share-apps.md#publish-and-add-an-app-to-teams).
 
 ## 4 – Properties list
@@ -257,26 +257,17 @@ To insert controls on the canvas, you can drag the control to the canvas,
 select the control, or select **(...)** and then select **Add to canvas**.
 
 #### Popular controls
-
-*Label* - A box that shows data such as text, numbers, dates, or currency.
-
-*Edit form* - Display, edit, or create a record in a data source.
-
-*Text* – A box that shows text.
-
-*Text box* - A box in which the user can enter text, numbers, and other data.
-
-*Vertical gallery* - A control that contains other controls and shows a set of
-data.
-
-*Add icon* - Graphics for which you can configure appearance and behavior
-properties.
-
-*Rectangle* – A rectangular shape to configure the canvas appearance.
-
-*Date Picker* - A control that the user can select to specify a date.
-
-*Button* - A control that the user can select to interact with the app.
+| **Name**      | **Description**                                                                                      |
+|-----------------|------------------------------------------------------------------------------------------------------|
+|*Label* | A box that shows data such as text, numbers, dates, or currency. |
+|*Edit form*|Display, edit, or create a record in a data source.|
+|*Text*|A box that shows text.|
+|*Text box*|A box in which the user can enter text, numbers, and other data.|
+|*Vertical gallery*|A control that contains other controls and shows a set of data.|
+|*Add icon*|Graphics for which you can configure appearance and behavior properties.|
+|*Rectangle*|A rectangular shape to configure the canvas appearance.|
+|*Date Picker*|A control that the user can select to specify a date.|
+|*Button*|A control that the user can select to interact with the app.|
 
 For more information about the controls that you can insert, and their properties
 and definitions, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
@@ -286,11 +277,11 @@ and definitions, go to [Controls and properties in Power Apps](../maker/canvas-a
 Add, refresh, or remove data sources from your canvas app. You
 can add one or more
 [connections](../maker/canvas-apps/connections-list.md)
-by using data sources.
+by using data sources.  
+
+In addition to data stored within tables, there are a number of connectors available to interact with data in popular SaaS, services, and systems.
 
 ![Data](media/studio-data.png "Data")
-
-You can also use the tables created using the [build hub](create-table.md) by expanding the **Tables** option.
 
 ![Add data - select data source](media/studio-add-1.png "Add data - select data source")
 
@@ -304,23 +295,23 @@ enter text in the data source search box or select from the list of connectors.
 
 More information: [List of all Power Apps connectors](/connectors/connector-reference/connector-reference-powerapps-connectors)
 
-### Table designer
+### Visual editor
 
-When you select **Create new table** and enter a name for the new table, you open the table designer where you can design the table, add columns of different data types, enter data in rows, and save the changes.
+When you select **Create new table** and enter a name for the new table, you open the visual editor where you can design the table, add columns of different data types, enter data in rows, and save the changes.
 
 ![Table designer](media/studio-table-designer.png "Table designer")
 
-To get started with the table designer, select **Create new table** and enter
+To get started with the visual editor, select **Create new table** and enter
 the table name.
 
 ![Create table](media/studio-create-table.png "Create table")
 
 > [!NOTE]
-> You can use the table designer in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
+> You can use the visual editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
 
-#### Understand the table designer
+#### Understand the visual editor
 
-![Authoring a table in the table designer](media/studio-table-1.png "Authoring a table in the table designer")
+![Authoring a table in the visual editor](media/studio-table-1.png "Authoring a table in the visual editor")
 
 ##### Table name
 
@@ -337,17 +328,18 @@ Select **Add row** to add a new row to the table.
 ##### Add columns
 
 Select **Add columns** to add new columns of the available column types
-supported by the table designer.
+supported by the visual editor.
 
 ###### Supported column types
 
-Table designer supports specific data types as columns. The following options
-are available when creating a new column using the Table designer inside Power Apps Studio:
+Visual editor supports specific data types as columns. The following options
+are available when creating a new column using the visual editor inside Power Apps Studio:
 
 ![Column types](media/studio-column-types.png "Column types")
 
 > [!IMPORTANT]
-> To add columns of types that aren't supported by the table designer, [create a table](create-table.md) by using the build hub instead.
+> To add columns of types that aren't supported by the visual editor, such as file or image, [create a table](create-table.md) by using the build hub instead.
+
 
 ###### Advanced options
 
@@ -376,9 +368,9 @@ available data sources in **Data** on the left pane.
 
 ![Data source added](media/studio-data-1.png "Data source added")
 
-##### Table designer view
+##### Visual editor view
 
-Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change the tTable designer layout.
+Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change the visual editor layout.
 
 ##### Row count
 
@@ -408,14 +400,14 @@ Select the drop-down menu next to the column heading to view column-related opti
 
 After you add rows and columns, and add data, you can close the table and use it as
 the data source in your app. To edit content in the table, you can use
-the app controls or go back to the table designer.
+the app controls or go back to the visual editor.
 
 To edit the table, select the table data source, and then select **Edit data** to
-open the table in the table designer.
+open the table in the visual editor.
 
 ![Edit table data](media/studio-edit-2.png "Edit table data")
 
-After you close the table designer, the data source is automatically refreshed
+After you close the visual editor, the data source is automatically refreshed
 to reflect the updated data in Power Apps Studio. You can also select **Refresh**
 to manually refresh Power Apps Studio to reflect the data in the controls you added on the canvas.
 
