@@ -16,6 +16,17 @@ ms.reviewer: matp
 
 Applications within a team in Microsoft Teams have access to a Project Oakdale environment. Project Oakdale is a common platform that allows all these interfaces to have a unified understanding of how the data is modeled and consumed. Project Oakdale delivers a targeted set of the features commonly needed for creating apps, flows, and more within Teams. If your organization requires additional capabilities, such as more granular control for security and governance, or capacity beyond the approximately 1 million rows a Project Oakdale environment can contain, Project Oakdale can be promoted to Common Data Service.
 
+## Key terminology changes
+
+Some terminology has changed between Common Data Service and Project Oakdale to make it easier for a broader audience. The table below provides a mapping between Common Data Service and Project Oakdale terms.
+
+|Project Oakdale  |Common Data Service  |
+|---------|---------|
+|Table, tables     | Entity, entities        |
+|Column, columns     |  Field, fields <br /> attribute, attributes       |
+
+Most of the processes for creating and managing tables in Project Oakdale are the same as creating and managing entities in Common Data Service. Where applicable, these articles about Project Oakdale link you to Common Data Service articles that provide more detail.
+
 ## Entity features
 
 This table describes the differences between a Project Oakdale table and Common Data Service entity features.
@@ -106,16 +117,7 @@ Common Data Service can also be used with server-side sync to synchronize with E
 |Server-side sync     |   No      |  Yes       |
 |SQL Server Management Studio     |   No      |   Yes      |
 
-## Key terminology changes
-
-Some terminology has changed between Common Data Service and Project Oakdale to make it easier for a broader audience. The table below provides a mapping between Common Data Service and Project Oakdale terms.
-
-|Project Oakdale  |Common Data Service  |
-|---------|---------|
-|Table, tables     | Entity, entities        |
-|Column, columns     |  Field, fields <br /> attribute, attributes       |
-
-Most of the processes for creating and managing tables in Project Oakdale are the same as creating and managing entities in Common Data Service. Where applicable, these articles about Project Oakdale link you to Common Data Service articles that provide more detail.  
+  
 
 ### See also
 
