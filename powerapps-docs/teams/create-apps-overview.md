@@ -5,7 +5,7 @@ author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/03/2020
+ms.date: 09/22/2020
 ms.author: kvivek
 ms.reviewer: 
 ---
@@ -31,7 +31,7 @@ Access and authorization align with the Microsoft Teams security model and inclu
 
 ## Licensing requirements
 
-The ability to create apps within Microsoft Teams will be available as part of select Microsoft 365 subscriptions. For detailed information, see [Licensing and restrictions](/power-platform/admin/about-teams-environment#licensing-and-restrictions) in the Power Platform admin guide
+The ability to create apps within Microsoft Teams will be available as part of select Microsoft 365 subscriptions. For detailed information, see [Licensing and restrictions](/power-platform/admin/about-teams-environment#licensing-and-restrictions) in the Power Platform admin guide.
 
 ## Get started with creating apps in Teams
 
