@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/14/2020
+ms.date: 09/22/2020
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
@@ -60,7 +60,7 @@ The following controls aren't supported:
 
 ### Image, File, and DateTime in Table designer
 
-You can't create an image, file, and datetime data in [Table designer](understand-power-apps-studio.md#table-designer). To create an image, file, and datetime data in Table designer, use the experience with [build hub](create-table.md) to work with tables.
+You can't create an image, file, and datetime data in [Visual editor](understand-power-apps-studio.md#visual-editor). To create an image, file, and datetime data in Table designer, use the experience with [build hub](create-table.md) to work with tables.
 
 ### New connections
 
@@ -71,7 +71,7 @@ Connections in the Power Apps Studio that require an authentication dialog fails
 Power Apps Studio doesn't reflect the changes to tables after:
 
 1. Renaming tables.
-1. Adding relationships within the inline [Table designer](understand-power-apps-studio.md#table-designer).
+1. Adding relationships within the inline [Visual editor](understand-power-apps-studio.md#visual-editor).
 
 To see the new changes, refresh Power Apps Studio.
 
