@@ -31,7 +31,7 @@ In Microsoft Teams, you can edit four table properties:
 
 > [!NOTE]
 > - You can also edit a table using the visual editor. More information: [Create your first table](create-first-app.md#create-your-first-table)
-> - Each Project Oakdale environment is assigned a prefix when it's created creation, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
+> - Each Project Oakdale environment is assigned a prefix when it's created, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
 
 1. On the left pane, expand **Tables**.
 2. Open the table you want to edit, and then select **Settings** on the command bar to display the **Edit table** dialog box.  
