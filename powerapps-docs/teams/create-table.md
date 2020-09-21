@@ -34,7 +34,7 @@ There are four different types of table ownership. When you create a table, the 
    > [!div class="mx-imgBorder"] 
    > ![The Build tab](media/create-table2.png "The Build tab")
 
-3. Select **Tables** on the left pane, and then select **New table** on the command bar.
+3. Expand **Tables** on the left pane, select **New**, and then select **Table** .
     > [!div class="mx-imgBorder"] 
     > ![New table menu option](media/create-table3.png "New table menu option")
 
@@ -44,9 +44,10 @@ There are four different types of table ownership. When you create a table, the 
     - **Name**: A unique internal name for the table. Unlike the display name, after it's saved this value can't be changed.
        > [!NOTE]
        > Each Project Oakdale environment is assigned a prefix when it's created, such as **cr628**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
-    - **More settings**: This area provides additional settings that are available. More information: [Create a custom entity](../maker/common-data-service/data-platform-create-entity.md).
-    > [!div class="mx-imgBorder"] 
-    > ![Column details](media/create-table4.png "Column details")
+    - **Display name** (Primary name column): Every table contains a primary name column, which is used by lookup fields when establishing relationships with other tables. Typically the primary name column stores the name or primary description of the data stored in the entity.
+    - **Name** (Primary name column): This column is pre-populated based on the primary name column name you enter. It includes the prefix. You cannot change this after the table is saved.
+     - **More settings**: This area provides additional settings that are available. More information: [Create a custom entity](../maker/common-data-service/data-platform-create-entity.md).
+     <img src = "media/create-table4.png" alt = "Column details" width = "350" height = "586">
 
 5. Select **Done**.
 

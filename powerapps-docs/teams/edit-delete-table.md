@@ -30,13 +30,13 @@ In Microsoft Teams, you can edit four table properties:
 - **Quick create settings**: This enables quick creation of records for client apps that support this feature.
 
 > [!NOTE]
-> Each Project Oakdale environment is assigned a prefix when it's created creation, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
+> - You can also edit a table using the visual editor. More information: [Create your first table](create-first-app.md#create-your-first-table)
+> - Each Project Oakdale environment is assigned a prefix when it's created, such as **cr1a3**. The name for every table and column you create will be prefixed with this value. This value can't be changed.
 
-1. On the left pane, select **Tables**.
-2. Open the table you want to edit. 
-3. Select **Settings** on the command bar to display the **Edit** table dialog box.  
-    > [!div class="mx-imgBorder"] 
-    > ![Edit table](media/edit-table1.png "Edit table")
+1. On the left pane, expand **Tables**.
+2. Open the table you want to edit, and then select **Settings** on the command bar to display the **Edit table** dialog box.  
+   <img src = "media/edit-table1.png" alt = "Edit table" width = "350" height = "557">
+    
     For more information about these settings, see [Create an entity](../maker/common-data-service/data-platform-create-entity.md#create-an-entity).
 4. Make the changes you want, and then select **Done**.
 
@@ -45,8 +45,8 @@ In Microsoft Teams, you can edit four table properties:
 Anyone who's a member of the team can delete tables that aren't part of a managed solution.
 
 In the **Tables** list, select **…** next to the table you want to delete, and then select **Delete table**. Alternatively, while viewing a table, select **Delete table** on the command bar.
-> [!div class="mx-imgBorder"] 
-> ![Delete table](media/delete-table.png "Delete table")
+<!-- >> [!div class="mx-imgBorder"] 
+> ![Delete table](media/delete-table.png "Delete table")  -->
 
 ### See also
 
