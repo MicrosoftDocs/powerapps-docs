@@ -87,7 +87,11 @@ A new type of section called **Reference panel** can also be added. A Reference 
 When you insert a reference panel, by default it's added as a last section in the tab. You can add only one reference panel per form.  
   
 > [!IMPORTANT]
->  By default, the reference panel section is locked in these standard forms: Cases, Accounts, and Contacts. To remove it or change it, you must unlock it. 
+>  By default, the reference panel section is locked in these standard forms: Cases, Accounts, and Contacts. To remove it or change it, you must unlock it.
+
+>[NOTE]
+> Quick view forms are based on an organization and not at an app level setting so any quick view form that is available that may or may not be included in an app module will be used to render related information in a reference panel.
+
 
 ## Next steps
 
