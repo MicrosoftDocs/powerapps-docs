@@ -47,8 +47,7 @@ There are four different types of table ownership. When you create a table, the 
     - **Display name** (Primary name column): Every table contains a primary name column, which is used by lookup fields when establishing relationships with other tables. Typically the primary name column stores the name or primary description of the data stored in the entity.
     - **Name** (Primary name column): This column is pre-populated based on the primary name column name you enter. It includes the prefix. You cannot change this after the table is saved.
      - **More settings**: This area provides additional settings that are available. More information: [Create a custom entity](../maker/common-data-service/data-platform-create-entity.md).
-    > [!div class="mx-imgBorder"] 
-    > ![Column details](media/create-table4.png "Column details")
+     <img src = "media/create-table4.png" alt = "Column details" width = "350" height = "586">
 
 5. Select **Done**.
 
