@@ -2,7 +2,7 @@
 title: "Create and update option sets using the Web API (Common Data Service) | Microsoft Docs"
 description: "Learn about creating and updating entity Common Data Service uses a metadata driven architecture to provide the flexibility to create custom entities and additional system entity attributes."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 09/17/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -52,7 +52,7 @@ The following table lists the messages you can use with local and global option 
 |InsertOptionValue</br>Inserts a new option into a global option set.|<xref href="Microsoft.Dynamics.CRM.InsertOptionValue?text=InsertOptionValue Action" />| 
 |InsertStatusValue</br>Inserts a new option into the global option set used in the `Status` attribute.|<xref href="Microsoft.Dynamics.CRM.InsertStatusValue?text=InsertStatusValue Action" />|
 |OrderOption</br>Changes the relative order of the options in an option set.|<xref href="Microsoft.Dynamics.CRM.OrderOption?text=OrderOption Action" />|
-|UpdateOptionSet|Use `PUT` request with a <xref href="Microsoft.Dynamics.CRM.OptionSetMetadata?text=OptionSetMetadata EntityType" /> to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions(`*metadataid*`)/Microsoft.Dynamics.CRM.OptionSetMetadata`<br />For a local option set use *[Organization URI]*`/api/data/v9.0/EntityDefinitions(`*metadataid*`)/Attributes(`*metadataid*`)/Microsoft.Dynamics.CRM.PicklistAttributeMetadata/OptionSet`.|
+|UpdateOptionSet|Use `PUT` request with a <xref href="Microsoft.Dynamics.CRM.OptionSetMetadataBase?text=OptionSetMetadataBase EntityType" /> to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions(`*metadataid*`)`<br />Only those properties defined by the `OptionSetMetadataBase` can be updated. This does not include the options. Use other actions to make changes to options.|
 |UpdateOptionValue</br>Updates an option in a global option set.|<xref href="Microsoft.Dynamics.CRM.UpdateOptionValue?text=UpdateOptionValue Action" />|
 |UpdateStateValue</br>Inserts a new option into the option set used in the `Status` attribute.|<xref href="Microsoft.Dynamics.CRM.UpdateStateValue?text=UpdateStateValue Action" />|
 
