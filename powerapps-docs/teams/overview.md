@@ -1,17 +1,17 @@
 ---
-title: Power Apps and Teams integration - Overview | Microsoft Docs
+title: Power Apps and Microsoft Teams integration - Overview | Microsoft Docs
 description: Provides an overview of using Power Apps with Microsoft Teams.
 author: KumarVivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/14/2020
+ms.date: 09/22/2020
 ms.author: kvivek
 ms.reviewer: 
 ---
 # Power Apps and Microsoft Teams integration
 
-Teams enables people around the world to create, collaborate, and communicate. With more than 75 million daily active users, Teams is how people are getting work done.
+Microsoft Teams enables people around the world to create, collaborate, and communicate. With more than 75 million daily active users, Teams is how people are getting work done.
 
 Power Apps can be used in three scenarios with Teams.
 
