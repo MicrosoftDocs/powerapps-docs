@@ -28,7 +28,7 @@ To configure search for additional entities:
 
 1. [Create a record details page](#step-4-add-record-details-webpage) for each entity to show the [details of the selected record](#site-marker-for-record-details-page) from the search results page. Skip this step if you already have created separate results record details page for each entity.
 
-1. [Create a site marker](#step-5-add-a-site-marker-for-record-details-webpage) named ```<entitylogicalname>_SearchResultPage``` for each entity with the associated [record details page](#site-marker-for-record-details-page).
+1. [Create a site marker](#step-5-add-a-site-marker-for-record-details-webpage) named `<entitylogicalname>_SearchResultPage` for each entity with the associated [record details page](#site-marker-for-record-details-page).
 
 1. [Rebuild the search index](#step-6-rebuild-the-search-index).
 
@@ -48,9 +48,9 @@ You can also configure other related site settings similar to the search configu
 
 ### Site marker for record details page
 
-The record details page is configured using a **Site Marker** named ```<entitylogicalname>_SearchResultPage```.
+The record details page is configured using a **Site Marker** named `<entitylogicalname>_SearchResultPage`.
 
-For example, if your entity logical name is *nwind_products*, the site marker will be ```nwind_products_SearchResultPage```. The value of the site marker is the record details page that you want to open when that search result is selected. By default, a record ID is passed in the *id* querystring parameter to the record details page. For more information about adding forms on a page, go to [Compose a page](../compose-page.md#add-form).
+For example, if your entity logical name is *nwind_products*, the site marker will be `nwind_products_SearchResultPage`. The value of the site marker is the record details page that you want to open when that search result is selected. By default, a record ID is passed in the *id* querystring parameter to the record details page. For more information about adding forms on a page, go to [Compose a page](../compose-page.md#add-form).
 
 > [!IMPORTANT]
 > Ensure that your record details page has an entity form, or has logic written to show the search result details. For example, [Step 4 - Add record details page](#step-4-add-record-details-webpage) in the following walkthrough.
