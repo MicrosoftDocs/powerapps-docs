@@ -30,7 +30,7 @@ Configure the OnSelect property of a **Button** control to run one or more formu
 
 ### Key properties
 
-*ButtonType* – The style of button to show, Default, or Primary. Default value: **Standard**.<!--note from editor: I don't understand this.-->
+*ButtonType* – The style of button to show, Standard, or Primary. Default value: **Standard**.
 
 *OnSelect* – How the app responds when the user selects a control.
 
@@ -54,7 +54,7 @@ been widely used in the user interface.
 
 *Label* – Text that appears on a control.
 
-*Value* – The value of an input control.
+*Checked* – Whether the control is checked or not.
 
 ## Combo box
 
@@ -215,7 +215,7 @@ A **Toggle** control is designed for the modern user interface, but behaves the 
 
 ### Key properties
 
-*Value* – The value of an input control.
+*Checked* – Whether the control is checked or not.
 
 *OffText* – The text of the off state.
 
