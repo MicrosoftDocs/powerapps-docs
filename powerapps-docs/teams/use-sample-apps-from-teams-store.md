@@ -87,6 +87,9 @@ To run the installed app, select the **Employee Ideas** tab from the team channe
 
 Before you can use the app, it might ask your permission to use connections.
 
+> [!NOTE]
+> The list of connections you see below is an example. The number and types of connections asking for your permissions may vary depending on the app you install.
+
 ![Select Allow to let the app use connections](media/sample-app-10.png "Select Allow to let the app use connections")
 
 Select **Allow**, so the app can use connections.
