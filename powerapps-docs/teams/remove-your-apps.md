@@ -39,4 +39,4 @@ The app is now removed from your Teams channel.
 ### See also
 
 [Uninstall the Power Apps personal app](uninstall-personal-apps.md)  
-[Add a published app to a team's channel from Teams](publish-and-share-apps.md#add-published-app-to-teams-channel-from-teams)
+
