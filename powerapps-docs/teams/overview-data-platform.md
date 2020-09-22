@@ -58,7 +58,7 @@ These tables and the applications that use them are secured with enterprise-grad
 
 You can administer and manage Project Oakdale environment using the Power Platform admin center. More information: [About the Project Oakdale environment](/power-platform/admin/about-teams-environment) in the Power Platform admin guide.
 
-## Frequent asked questions (FAQs)
+## Frequently asked questions (FAQs)
 
 Here is a list of FAQs for Project Oakdale; also see [Project Oakdale licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#project-oakdale) in the Power Platform admin guide.
 
