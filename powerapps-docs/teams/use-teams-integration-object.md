@@ -20,6 +20,9 @@ You can use the Teams integration object to easily find and access the Teams int
 
 There are two features available with the integration of Power Apps with Teams. You can get a Teams theme inside a canvas app, and you can filter data depending on the team or channel context.
 
+> [!NOTE]
+> To further integrate with Teams, you can use the [Microsoft Teams connector](https://docs.microsoft.com/connectors/teams/) with actions sch as post a message, create a Teams meeting, list channels, and more.
+
 ## Get the Teams theme
 
 Teams uses three themes: *Default*, *Dark*, and *High contrast.* When using the expressions to retrieve theme names, you can use the names as *Default*, *Dark*, and *Contrast* in the Power Apps formula bar. More information: [UI components: Colors](/microsoftteams/platform/concepts/design/components/color)
