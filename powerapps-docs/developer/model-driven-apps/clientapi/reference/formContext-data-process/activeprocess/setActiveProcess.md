@@ -22,6 +22,9 @@ search.app:
 
 If there is an active instance of the process, the entity record is loaded with the process instance ID. If there is no active instance of the process, a new process instance is created and the entity record is loaded with the process instance ID. If there are multiple instances of the current process, the record is loaded with the first instance of the active process as per the defaulting logic, that is the most recently used process instance per user.
 
+> [!NOTE]
+> The `setActiveProcess` method should be used while creating or editing a record. Use the `setActiveProcess` method to set the active process for a business process flow instead of `processId` and `porocessInstanceId` with `Xrm.Navigation.openForm` method . 
+
 ## Syntax
 
 `formContext.data.process.setActiveProcess(processId, callbackFunction);`
