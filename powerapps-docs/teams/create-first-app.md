@@ -40,6 +40,16 @@ After installing the Power Apps app from the Teams store:
 
     ![First app in a team](media/create-app-4.png "First app in a team")
 
+### Notification
+
+Once the environment gets created, you'll see a notification on the bottom-right side of Teams.
+
+![Bottom notification](media/notification-bottom.png "Bottom notification")
+
+The notification also appears in Teams Activity.
+
+![Activity notification](media/notification-activity.png "Activity notification")
+
 ## Creating an app in a team with a Microsoft 365 Group
 
 When you select **Create** to create an app in the selected team, Power Apps automatically enables the selected team's Microsoft 365 Group for security. However, if the group can't be enabled for security, you'll see the following error: 
@@ -84,7 +94,10 @@ to enable security for the team's Microsoft 365 Group.
 
 ## Continue creating your first app
 
-After your Project Oakdale environment has been created:
+After your Project Oakdale environment has been created, you can go to the build hub and continue creating your first app.
+
+> [!NOTE]
+> If you wait in Teams for the environment to be created, you're automatically taken to the Power Apps Studio and a new app. In this situation, skip this step and go to [create your first table](#create-your-first-table).
 
 1. Select the **Build** tab to view the environment created for your team.
 
@@ -99,8 +112,6 @@ Power Apps Studio, where you're prompted to name your app.
 
     > [!TIP]
     > An app template is included with the app by default, so that you can get started with creating your table and using the app. More information: [Understand Power Apps Studio](understand-power-apps-studio.md)
-
-### Update
 
 ### Create your first table
 

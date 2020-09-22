@@ -14,7 +14,7 @@ ms.reviewer:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-To manage an app, select **Apps** from the solution explorer. Then select the app that you want to manage, or select **Commands** (**…**) next to the app name, and then select commands from the drop-down menu.
+To manage an app, select **Apps** from the build hub. Then select the app that you want to manage, or select **Commands** (**…**) next to the app name, and then select commands from the drop-down menu.
 
 ![Select apps](media/manage-apps-1.png "Select apps")
 
@@ -22,9 +22,21 @@ To manage an app, select **Apps** from the solution explorer. Then select the ap
 
 Select **Edit** to edit the app in Power Apps Studio. More information: [Edit a canvas app in Power Apps](../maker/canvas-apps/edit-app.md) and [Understanding Power Apps Studio](understand-power-apps-studio.md)
 
+> [!TIP]
+> Use this option if you want to rename an app, or change app icon and description. For detailed steps, go to [rename an app](#rename-an-app) or [change app icon and description](#change-app-icon-and-description).
+
 ## Play an app
 
 Select **Play** to run the latest [published version](../maker/canvas-apps/save-publish-app.md) of the app. More information: [Publish an app](publish-and-share-apps.md)
+
+> [!NOTE]
+> Selecting **Play** opens the app outside of Teams.
+
+## Add to Teams
+
+Allows you to download the app, and then upload to Teams. To learn how to add an app to Teams, go to [Embed a canvas app in Teams](embed-teams-app.md).
+
+![Add to Teams](media/embed-app-teams.png "Add to Teams")
 
 ## App details
 
@@ -76,6 +88,34 @@ Select **Delete** to delete an app. When prompted, select **Delete from cloud** 
 ![Delete app](media/manage-app-2.png "Delete app")
 
 For more information about deleting an app, go to [Delete an app](../maker/canvas-apps/delete-app.md).
+
+## Rename an app
+
+To rename an app:
+
+1. [Edit the app](manage-your-apps.md#edit-an-app) in Power Apps Studio.
+1. Select the app name from the top-right.
+1. Update the name.
+
+    ![Rename an app](media/studio-app-name-editor.png "Rename an app")
+
+1. Select **Save**.
+
+More information: [Edit app editor](understand-power-apps-studio.md?branch=teams-preview#app-name-editor)
+
+## Change app icon and description
+
+To change the app icon and description:
+
+1. [Edit the app](manage-your-apps.md#edit-an-app) in Power Apps Studio.
+1. Select **Settings**.
+1. Update the icon and description.
+
+    ![Change app icon and description](media/studio-general-settings.png "Change app icon and description")
+
+1. Select **Save**.
+
+More information: [Change app settings](understand-power-apps-studio.md?branch=teams-preview#settings)
 
 ### See also
 

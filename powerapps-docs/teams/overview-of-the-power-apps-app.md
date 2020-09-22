@@ -29,7 +29,19 @@ Let's understand each tab in detail.
 
 ## Home tab
 
-Use the **Home** tab to get started creating new apps with Power Apps. As you've learned from [Create your first app in Teams](create-first-app.md), a new environment is created for your team when you first create an app. Creating additional apps in the same team uses the environment that was already created for the team. The **Home** tab also shows available sample apps from the Microsoft Teams store.
+Your **Power Apps** experience in Teams starts with the **Home** tab. Use the **Home** tab to get started creating new apps with Power Apps. 
+
+![Home tab](media/home-tab.png "Home tab")
+
+1. **Introduction Video**: Watch a one-minute video to find out what Power Apps in Teams is all about.
+
+1. **Create an app**: Select **Create an app** to enter the Power Apps Studio integrated inside Teams and start building a Power Apps app. As you've learned from [Create your first app in Teams](create-first-app.md), a new environment is created for your team when you first create an app. Creating additional apps in the same team uses the environment that was already created for the team.
+
+1. **Recent apps**: You'll find the apps that you have recently edited in this section. Select an app from this section to directly open the app inside the Studio. This section may be empty if you haven't edited any app yet.
+
+1. **Sample apps**: This section shows available sample apps from the Teams store. You can try out these apps by selecting on these tiles and installing them for your team. More information: [Use sample apps](use-sample-apps-from-teams-store.md)
+
+1. **Learn**: You'll find helpful articles in this section to get you started with Power Apps in Teams.
 
 ## Build tab
 
@@ -47,7 +59,7 @@ Select the **Build** tab to see the list of environments for each team that you'
 
     ![Expand and collapse the list](media/power-apps-overview-8.png "Expand and collapse the list")
 
-1. **Built by this team**: This list shows all Power Apps objects such as apps, flows, and tables created in the selected environment (the Teams team). Select **New app** to create a new app. Select **See all** to open the solution explorer for the environment. For more information, go to the following section about the solution explorer.
+1. **Built by this team**: This list shows all Power Apps objects such as apps, flows, and tables created in the selected environment (the Teams team). Select **New app** to create a new app. Select **See all** to open the build hub for the environment. More information: [Build hub](#    build-hub)
 
     Select **See all** to view the all the components in the selected environment, and to create new apps or components.
 
@@ -57,43 +69,43 @@ Select the **Build** tab to see the list of environments for each team that you'
 
     ![Installed apps](media/power-apps-overview-9.png "Installed apps")
 
-## Power Apps solution explorer
+## Build hub
 
-When you select **See all** from the environment list on the **Build** tab, you'll see the Power Apps solution explorer with the available components for the selected environment. To get started, select a component group from the left pane.
+When you select **See all** from the environment list on the **Build** tab, you'll see the Power Apps build hub with the available components for the selected environment. To get started, select a component group from the left pane.
 
 ### All
 
 Shows all available Power Apps objects such as apps, flows, and chatbots in the selected environment.
 
-![Solution explorer - All](media/power-apps-overview-16.png "Solution explorer - All")
+![Build hub - All](media/power-apps-overview-16.png "Build hub - All")
 
 - **Back** takes you back to the **Build** tab, with its list of environments.
 
 - **New** is what you select to create new apps, flows, or tables.
 
-    ![Solution explorer - All - New option](media/power-apps-overview-15.png "Solution explorer - All - New option")
+    ![Build hub - All - New option](media/power-apps-overview-15.png "Build hub - All - New option")
 
-- **Publish all customizations** publishes customization changes.
+- **Publish all customizations** publishes customization changes. More information: [Work with solutions in Power Apps](../maker/common-data-service/solutions-overview.md#work-with-solutions-in-power-apps)
 
 ### Apps
 
 Shows the apps created with Power Apps. More information: [Manage your apps](manage-your-apps.md)
 
-![Solution explorer - Apps](media/power-apps-overview-10.png "Solution explorer - Apps")
+![Build hub - Apps](media/power-apps-overview-10.png "Build hub - Apps")
 
 ### Flows
 
 Shows all the Power Automate flows in the selected team's environment. Power Automate is a service that helps you create automated workflows between your
 favorite apps and services to synchronize files, get notifications, collect data, and more. Different types of flows are available. More information: [Get started with Power Automate](/power-automate/teams/overview.md)
 
-![Solution explorer - Flows](media/power-apps-overview-11.png "Solution explorer - Flows")
+![Build hub - Flows](media/power-apps-overview-11.png "Build hub - Flows")
 
 ### Tables
 
 In Power Apps, a *table* defines information that you want to track in the form of records, which typically include properties such as company name, location,
 products, email, and phone. You can then surface that data by creating an app that refers to the table. For more information about tables, go to [Tables overview](../maker/common-data-service/entity-overview.md).
 
-![Solution explorer - Tables](media/power-apps-overview-12.png "Solution explorer - Tables")
+![Build hub - Tables](media/power-apps-overview-12.png "Build hub - Tables")
 
 ### Other - Connection references
 
@@ -106,7 +118,7 @@ Lists connections available to the environment. Data is stored in a data source,
 Lists the environment variables for your selected team's environment. Apps and flows often require different configuration settings across environments.
 You can use environment variables as configurable input parameters separately to manage data, rather than hard-coding values in your customization or using additional tools. More information: [Environment variables overview](../maker/common-data-service/environmentvariables.md).
 
-![Solution explorer - Environment variables](media/power-apps-overview-14.png "Solution explorer - Environment variables")
+![Build hub - Environment variables](media/power-apps-overview-14.png "Build hub - Environment variables")
 
 ## About tab
 
