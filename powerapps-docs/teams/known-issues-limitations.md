@@ -11,11 +11,28 @@ ms.reviewer: tapanm
 ---
 # Known issues and limitations
 
-This article provides details about the known issues and limitations of the Power Apps and Teams integration capabilities when using [**Project Oakdale environments**](/power-platform/admin/about-teams-environment).
+This article provides details about the known issues and limitations of the Power Apps and Teams integration capabilities when using [**Project Oakdale environments**](/power-platform/admin/about-teams-environment) during the initial **Public Preview** period.
+
+## Additional components
+
+The following components aren't supported:
+
+- Model-driven apps
+- AI Builder
+- Custom connectors
+
+## Build hub
+
+Selecting **Play** for apps in build hub launches the application in an external browser window, and may not work.
+
+Use one of the following options to play an app:
+
+- Edit the app and play using the Studio.
+- Publish the app in Teams and play from the pinned tab.
 
 ## Component library
 
-[Component library](../maker/canvas-apps/component-library.md) isn't currently supported.
+[Component library](../maker/canvas-apps/component-library.md) isn't supported.
 
 ## Government Community Cloud (GCC)
 
@@ -29,6 +46,10 @@ Project Oakdale doesn't support [hidden membership groups](https://docs.microsof
 
 Localization of [Power Apps Studio](understand-power-apps-studio.md) isn't supported.
 
+## Required fields
+
+There is no enforcement of user-created required table fields. Rows that have empty values in those fields can be saved successfully. System required fields are enforced and cannot be saved without a value.
+
 ## Sharing
 
 You can't share apps or data outside of a team currently.
@@ -36,6 +57,10 @@ You can't share apps or data outside of a team currently.
 ![Share with your colleagus](media/share-with-colleagues.png "Share with your colleagues")
 
 ## Studio
+
+### Classic controls
+
+Enabling classic controls requires a refresh of Power Apps Studio.  
 
 ### Combo box
 
@@ -57,10 +82,6 @@ The following controls aren't supported:
 - [Mixed reality](../maker/canvas-apps/mixed-reality-overview.md)
 - [Video control](../maker/canvas-apps/controls/control-audio-video.md)
 
-### Image, File, and DateTime in Visual Editor
-
-You can't create an image, file, and datetime data in [Visual editor](understand-power-apps-studio.md#visual-editor). To create an image, file, and datetime data in Visual Editor, use the experience with [build hub](create-table.md) to work with tables.
-
 ### New connections
 
 Connections in the Power Apps Studio that require an authentication dialog fails in the [Teams desktop client](https://docs.microsoft.com/microsoftteams/get-clients#desktop-client). Open the Studio in the [Teams web client](https://docs.microsoft.com/microsoftteams/get-clients#web-client) to add these connectors.
@@ -77,6 +98,10 @@ To see the new changes, refresh Power Apps Studio.
 ### Studio version
 
 It's currently not possible to change your Studio version.
+
+### Visual Editor
+
+Currency, Duration, Language, Ticker, and Timezone fields can't be added using Visual Editor. To create these fields, use the experience to work with tables as available using [build hub](create-table.md).
 
 ## Theme
 
