@@ -57,7 +57,7 @@ The Facility Safety Management app has the following components:
 
 **Guests**
 
-- **Guest Registrations** - Keep track of registered guests. Guest registrations are always linked to a booking and an Employee serves as a host. Guests are stored as a Contact record of type 'Guest'.
+- **Guest Registrations** - Keep track of registered guests. Guest registrations are always linked to a booking for an Employee. The Employee serves as a host. Guests are stored as a Contact record of type 'Guest'. Guests can be added via the Employee App.
 
 ## Manage and monitor facilities 
 
