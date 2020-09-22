@@ -109,12 +109,18 @@ Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen
 2. Select **Add shortcut to Siri**.
 
    > [!div class="mx-imgBorder"]
-   >![Add shortcut to Sri](media/add-shortcut.png "Add shortcut to Sri")
+   >![Add shortcut to Siri](media/add-shortcut.png "Add shortcut to Siri")
    
 3. Add a custom phrase to open the app using voice commands and then select **Add to Siri**.
 
+   > [!div class="mx-imgBorder"]
+   >![Select add to Siri](media/add-shortcut-1.png "Select add to Siri")
+
    
 4. The app is added to the **Shortcuts** app on your mobile device. Open the **Shortcuts** app and select the ellipsis (...) above the app name.
+
+   > [!div class="mx-imgBorder"]
+   >![Select the ellipsis to add shortcut](media/add-short-2.png "Select the ellipsis] to add shortcut")
 
 
 5. Select **Add to Home Screen**.
