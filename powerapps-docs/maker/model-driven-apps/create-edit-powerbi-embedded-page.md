@@ -24,7 +24,7 @@ search.app:
 
 This article explains how to set up and use a system dashboard that references a Power BI report or dashboard in a model-driven app. System administrators and system customizers can create system reports and dashboards, which can be made available to model-driven app users.  Users need to have the relevant Power BI license and authorization to consume content.  Read more about relevant Power BI licenses at [Power BI pricing](https://powerbi.microsoft.com/en-us/pricing/).
 
-To learn more about Power BI reports and dashboards, see [Create Power BI reports](../../power-bi/create-reports/).
+To learn more about Power BI reports and dashboards, see [Create Power BI reports](../../../power-bi/create-reports/).
 
 > [!IMPORTANT]
 > [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
