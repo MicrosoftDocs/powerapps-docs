@@ -5,7 +5,7 @@ author: NHelgren
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/17/2020
+ms.date: 09/22/2020
 ms.author: nhelgren
 ms.reviewer: matp
 ---

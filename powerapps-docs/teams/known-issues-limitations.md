@@ -1,5 +1,5 @@
 ---
-title: Power Apps and Teams integration - Known issues and limitations | Microsoft Docs
+title: Known issues and limitations for Project Oakdale | Microsoft Docs
 description: Provides an overview of known issues and limitations when using Power Apps with Microsoft Teams.
 author: tapanm-msft
 ms.service: powerapps
@@ -10,6 +10,8 @@ ms.author: mabolan
 ms.reviewer: tapanm
 ---
 # Known issues and limitations
+
+[!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
 This article provides details about the known issues and limitations when using [**Project Oakdale environments**](/power-platform/admin/about-teams-environment) during the preview release.
 
