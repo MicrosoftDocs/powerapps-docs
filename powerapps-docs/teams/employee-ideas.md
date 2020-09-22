@@ -40,6 +40,9 @@ Employee Ideas and Manage Campaigns consists of two different apps:
     - Vote on the most-liked ideas.
     - Review how their own idea is performing compared to others within a campaign.
 
+> [!NOTE]
+> Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+
 ## Prerequisites
 
 Before using this app:
