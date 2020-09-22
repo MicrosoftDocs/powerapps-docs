@@ -114,7 +114,7 @@ Applications can include data from environments that the maker has access to wit
 
 ### Where can I use the new visual editor?
 
-In addition to the table designer experience previously found in Common Data Service, Project Oakdale includes a new, easy-to-use editable grid that helps user be even more productive. You can also use tables from other environments subject to the normal permission model. The new visual editor is currently only available in Oakdale.
+In addition to the table designer experience previously found in Common Data Service, Project Oakdale includes a new, easy-to-use editable grid that helps user be even more productive. You can also use tables from other environments subject to the normal permission model. The new visual editor is currently available only in Project Oakdale.
 
 ### Can I use applications built using Project Oakdale Preview later in the generally available (GA) version of Project Oakdale?
 
