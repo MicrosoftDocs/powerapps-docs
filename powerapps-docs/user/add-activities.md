@@ -76,7 +76,7 @@ Legend:
 
 
 > [!NOTE]
-> After a phone call activity is created and you select the phone icon, you will get an error, **Unable to find many-to-one relationship,entity: phonecall referenced Entity: undefined, field: regardingobjectid**. This happens because Common Data Service doesn't support creating a  phone call activity from within another phone call activity.
+> When you open an existing phone call activity, and on the **Phone Number** field select the phone icon, the system will open a new **Quick Create: Phone Call** activity. If you attempt to save the new phone call activity record, you will get this error, **Unable to find many-to-one relationship,entity: phonecall referenced Entity: undefined, field. regardingobjectid**. This happens because Common Data Service does not support the option to create a phone call activity from within another phone call activity record. For more information, see [Known issues for activities](activities-known-issues.md).
   
 ### Add a task  
   
