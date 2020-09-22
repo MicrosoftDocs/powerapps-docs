@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 11/04/2019
+ms.date: 09/22/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -20,31 +20,50 @@ Once the portal customizations have been imported into the Common Data Service e
 
 1. Open the [Portal Management app](configure-portal.md).
 
-2. Go to **Portals** > **Web Link Sets**.
+1. Go to **Portals** > **Web Link Sets**.
 
-3. To create a new web link set, select **New**.
+    ![Web Link Sets](media/manage-web-links/web-link-set.png "Web Link Sets")
 
-4. To edit an existing web link set, select the web link set name.
+    More information: [Web link set attributes and relationships](#web-link-set-attributes-and-relationships)
 
-5. Enter appropriate values in the fields.
+1. To create a new web link set, select **New**. To edit an existing web link set instead, select the web link set name.
 
-6. If you create a new web link set, select **Save** to save the record so you can add web links.
+1. Enter appropriate values in the fields.
 
-7. Go to the **Links** tab.
+1. If you create a new web link set, select **Save** to save the record so you can add web links.
 
-8. To create a new web link, select **New Web Link**.
+1. Go to the **Links** tab.
 
-    ![Add web link](../media/add-web-link.png "add web link")
+1. To create a new web link, select **New Web Link**. To edit an existing web link instead, select the web link name.
 
-9. To edit an existing web link, select the web link name.
+    ![Add web link](media/manage-web-links/add-web-link.png "add web link")
 
-9. Enter appropriate values in the fields.
+    More information: [Web link attributes and relationships](#web-link-attributes-and-relationships)
 
-6. Save the changes.
+1. Enter appropriate values in the fields.
+
+1. Save the changes.
+
+## Default web link set and navigation menu in Studio
+
+The primary menu on the website is created automatically based on the hierarchy of the webpages. It's called the **Default** menu. You can also create a custom menu to display on the website.
+
+![Default Navigation Menu](media/manage-web-links/navigation-menu.png "Default Navigation Menu")
+
+If you change the web link set using the [Portal Management app](configure-portal.md), and then try to edit the portal using the [portals Studio](../portal-designer-anatomy.md), you may see the following message:
+
+`Default navigation menu and page display order has been updated. To see the changes, select Sync Configuration.`
+
+When this happens, you can select **Sync Configuration** to see the changes to the navigation menu.
+
+> [!IMPORTANT]
+> Direct changes to the **Default** web link set using the Portal Management app is not supported. To customize your portal's navigation menu using the Portal Management app, create a new web link set or customize a different web link set. You can add new web pages using the portals Studio with **Default** navigation menu selected that creates new pages inside the **Default** web link set instead.
+
+More information: [Add a custom navigation menu](../compose-page.md#add-a-custom-menu). For more information about creating and managing web pages, go to [Create and manage web pages](../create-manage-webpages.md).
 
 ## Web link set attributes and relationships
 
-The table below explains many of the standard Web Link Set properties used by portals. It is important to note that the way in which many of the content/display-oriented properties are rendered is controlled by the page template used.
+The table below explains many of the standard Web Link Set properties used by portals. It's important to note that the way in which many of the content/display-oriented properties are rendered is controlled by the page template used.
 
 | Name    | Description                                                                                                                                                                                  |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -56,7 +75,7 @@ The table below explains many of the standard Web Link Set properties used by po
 
 ## Web link attributes and relationships
 
-The table below explains many of the standard Web Link properties used by portals. It is important to note that the way in which many of the content/display-oriented properties are rendered is controlled by the page template used.
+The table below explains many of the standard Web Link properties used by portals. It's important to note that the way in which many of the content/display-oriented properties are rendered is controlled by the page template used.
 
 
 |           Name           |                                                                                                               Description                                                                                                               |
@@ -68,9 +87,9 @@ The table below explains many of the standard Web Link properties used by portal
 |        External URL      |                                                                                An optional URL to link to. This value can be any properly formatted URL.                                                                                |
 |       Description        |                                                              An optional summary for the web link. This value can be used on the portal if it's part of the page template.                                                              |
 |     Publishing State     | The current publishing workflow state of the web link, which may dictate whether the web link is visible on the site. The most common use of this feature is to provide published/draft control over content. This field is required. |
-|    Robots Follow Link    |                                                           Indicates whether or not search indexers should follow and index the contents of the link. This field is required.                                                            |
+|    Robots Follow Link    |                                                           Indicates whether search indexers should follow and index the contents of the link or not. This field is required.                                                            |
 |      Display Order       |                                                  An integer value indicating the order in which the web link will be placed, relative to other web links within the same web link set.                                                  |
-| Display Page Child Links |  In a template that supports multilevel web link sets, generate child links for this entity using the portal site map provider. Note that this option is only valid for web links that refer to internal pages, and not external URLs.  |
+| Display Page Child Links |  In a template that supports multilevel web link sets, generate child links for this entity using the portal site map provider. This option is only valid for web links that refer to internal pages, and not external URLs.  |
 |    Open in New Window    |                                                                            Indicates whether selecting the link will load the link in a new browser window.                                                                             |
 | Disable Page Validation  |                                                                       Indicates whether the security of a linked webpage will be applied to the web link as well.                                                                       |
 |        Image URL         |                                                   An optional URL to an image. The linked image can be used on the portal if it's part of the page template; for example, as an icon.                                                   |
@@ -80,10 +99,12 @@ The table below explains many of the standard Web Link properties used by portal
 |    Display Image Only    |                                                   Indicates that the template should render only an image link for this web link, rather than both the image and link name together.                                                    |
 |                          |                                                                                                                                                                                                                                         |
 
-> [!Note]
+> [!NOTE]
 > - When a web link is to a webpage, the security and publishing state of the webpage will apply to the web link as well. This validation can be disabled with the Disable Page Validation option. 
 >   - Users with content management permissions may be granted the ability to use Preview Mode, which allows these users to see (preview) unpublished content.
 
 ### See also
 
-[Customize content by using content snippets](customize-content-snippets.md)
+- [Manage a web page and navigation menu](../create-manage-webpages.md#manage-webpage)
+- [Add a custom menu to a page](../compose-page.md#add-a-custom-menu)
+- [Customize content by using content snippets](customize-content-snippets.md)
