@@ -29,7 +29,19 @@ Let's understand each tab in detail.
 
 ## Home tab
 
-Use the **Home** tab to get started creating new apps with Power Apps. As you've learned from [Create your first app in Teams](create-first-app.md), a new environment is created for your team when you first create an app. Creating additional apps in the same team uses the environment that was already created for the team. The **Home** tab also shows available sample apps from the Microsoft Teams store.
+Your **Power Apps** experience in Teams starts with the **Home** tab. Use the **Home** tab to get started creating new apps with Power Apps. 
+
+![Home tab](media/home-tab.png "Home tab")
+
+1. **Introduction Video**: Watch a one-minute video to find out what Power Apps in Teams is all about.
+
+1. **Create an app**: Select **Create an app** to enter the Power Apps Studio integrated inside Teams and start building a Power Apps app. As you've learned from [Create your first app in Teams](create-first-app.md), a new environment is created for your team when you first create an app. Creating additional apps in the same team uses the environment that was already created for the team.
+
+1. **Recent apps**: You'll find the apps that you have recently edited in this section. Select an app from this section to directly open the app inside the Studio. This section may be empty if you haven't edited any app yet.
+
+1. **Sample apps**: This section shows available sample apps from the Teams store. You can try out these apps by selecting on these tiles and installing them for your team. More information: [Use sample apps](use-sample-apps-from-teams-store.md)
+
+1. **Learn**: You'll find helpful articles in this section to get you started with Power Apps in Teams.
 
 ## Build tab
 
@@ -47,7 +59,7 @@ Select the **Build** tab to see the list of environments for each team that you'
 
     ![Expand and collapse the list](media/power-apps-overview-8.png "Expand and collapse the list")
 
-1. **Built by this team**: This list shows all Power Apps objects such as apps, flows, and tables created in the selected environment (the Teams team). Select **New app** to create a new app. Select **See all** to open the build hub for the environment. For more information, go to the following section about the build hub.
+1. **Built by this team**: This list shows all Power Apps objects such as apps, flows, and tables created in the selected environment (the Teams team). Select **New app** to create a new app. Select **See all** to open the build hub for the environment. More information: [Build hub](#    build-hub)
 
     Select **See all** to view the all the components in the selected environment, and to create new apps or components.
 
@@ -57,7 +69,7 @@ Select the **Build** tab to see the list of environments for each team that you'
 
     ![Installed apps](media/power-apps-overview-9.png "Installed apps")
 
-## Power Apps build hub
+## Build hub
 
 When you select **See all** from the environment list on the **Build** tab, you'll see the Power Apps build hub with the available components for the selected environment. To get started, select a component group from the left pane.
 
