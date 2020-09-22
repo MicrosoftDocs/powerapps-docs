@@ -210,4 +210,4 @@ This article lists some common issues that you might encounter while using Power
      
  1.   **Power Apps per app plans does not support Power Apps for Windows app**
  
-        Power Apps for Windows app is not support if you're on the [Power Apps per app plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp). 
+        Power Apps for Windows app is not supported if you're on the [Power Apps per app plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp). 
