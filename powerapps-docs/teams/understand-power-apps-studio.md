@@ -111,11 +111,21 @@ Configure the app's general settings.
 
 #### Name + icon
 
-Shows app name, and allows changing the app icon. You can also upload a custom icon for the app using the **Browse** option.
+Shows app name, and allows changing the app icon. To update the icon, select a new icon or background color. To add or update description, enter text in the text box. You can also upload a custom icon for the app using the **Browse** option.
 
 ### Screen size + orientation
 
-Change the screen size, and orientation for your app. More information: [Change screen size and orientation](../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md)
+Shows the screen size and orientation. To change, select the radio buttons for **Orientation** and **Size**.
+
+Advanced settings allow you to further customize the app screen configuration.
+
+- **Scale to it**: Scales the app to fit available space.
+- **Lock aspect ratio**: Locks the height and width ratio.
+- **Lock orientation**: Maintains app orientation when device rotates.
+
+To change the setting, toggle the switch.
+
+More information: [Change screen size and orientation](../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md)
 
 #### Advanced settings
 
