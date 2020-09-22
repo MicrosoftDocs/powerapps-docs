@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/11/2020
+ms.date: 09/22/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -15,8 +15,7 @@ ms.reviewer: tapanm
 A webpage is a document that is identified by a unique URL in a website. It is one of the core objects of the website and builds a hierarchy of the website through parent and child relationships to other webpages.
 
 > [!NOTE]
-> - If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
-> - When **Default** navigation menu is selected, the new pages are added to the **Default** web link set. However, direct changes to the **Default** navigation menu using [Manage web links](configure/manage-web-links.md#default-web-link-set-and-navigation-menu-in-studio) is not supported.
+> If you customize your portal using Power Apps portals Studio, the website users would notice a performance impact. We recommended you to do the changes during non-peak hours on a live portal.
 
 ## Create webpage
 
@@ -55,6 +54,9 @@ The primary menu on the website is created automatically based on the hierarchy 
 > ![website navigation](media/website-navigation.png "Website navigation")
 
 If you are working with a portal created in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), and you want the menu to be the same as page hierarchy, you must select **Default** from the **Navigation Menu** list.
+
+> [!IMPORTANT]
+> When **Default** navigation menu is selected, the new pages are added to the **Default** web link set. However, direct changes to the **Default** navigation menu using [Manage web links](configure/manage-web-links.md#default-web-link-set-and-navigation-menu-in-studio) is not supported.
 
 > [!div class=mx-imgBorder]
 > ![Default navigation menu](media/navigation-menu-default.png "Default navigation menu")
