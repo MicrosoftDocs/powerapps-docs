@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/21/2020
+ms.date: 09/02/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -133,16 +133,16 @@ Create a web template by using the following values:
 
 ```html
 <!DOCTYPE html>
-<html lang=en-US>
+<html lang="en-US">
   <head>
-    <meta charset=utf-8>
-    <meta name=viewport content=width=device-width, initial-scale=1.0>
-    <meta http-equiv=X-UA-Compatible content=IE=edge>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
       {{ page.title | h }}
     </title>
-                        <link href={{ request.url | base }}/bootstrap.min.css rel=stylesheet>
-                        <link href={{ request.url | base }}/theme.css rel=stylesheet>
+                        <link href={{ request.url | base }}/bootstrap.min.css rel="stylesheet">
+                        <link href={{ request.url | base }}/theme.css rel="stylesheet">
                         <style>
                           .page-heading {
             padding-top: 20px;
@@ -373,59 +373,59 @@ Create a web template by using the following values:
                         </style>
   </head>
   <body>
-    <div class=navbar navbar-inverse navbar-static-top role=navigation>
-      <div class=container>
-        <div class=navbar-header>
-          <div class=visible-xs-block>
+    <div class="navbar" navbar-inverse navbar-static-top role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="visible-xs-block">
             {{ snippets[Mobile Header] }}
           </div>
-          <div class=visible-sm-block visible-md-block visible-lg-block navbar-brand>
+          <div class="visible-sm-block" visible-md-block visible-lg-block navbar-brand>
             {{ snippets[Navbar Left] }}
           </div>
         </div>
       </div>
     </div>
-    <div class=container>
-      <div class=page-heading>
-        <ul class=breadcrumb>
+    <div class="container">
+      <div class="page-heading">
+        <ul class="breadcrumb">
           <li>
-            <a href={{ request.url | base }} title=Home>Home</a>
+            <a href={{ request.url | base }} title="Home">Home</a>
           </li>
           <li class=active>{{ page.title | h}}</li>
         </ul>
         {% include 'Page Header' %}
      </div>
-     <div class=row>
-      <div class=col-md-12>
+     <div class="row">
+      <div class="col-md-12">
         {% include 'Page Copy' %}
-        <div id=api></div>
+        <div id="api"></div>
       </div>
      </div>
     </div>
-    <footer role=contentinfo>
-      <div class=footer-top hidden-print>
-        <div class=container>
-          <div class=row>
-            <div class=col-md-6 col-sm-12 col-xs-12 text-left>
+    <footer role="contentinfo">
+      <div class="footer-top hidden-print">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 text-left">
                {{ snippets[About Footer] }}
             </div>
-            <div class=col-md-6 col-sm-12 col-xs-12 text-right>
-              <ul class=list-social-links>
-                <li><a href=#><span class=sprite sprite-facebook_icon></span></a></li>
-                <li><a href=#><span class=sprite sprite-twitter_icon></span></a></li>
-                <li><a href=#><span class=sprite sprite-email_icon></span></a></li>
+            <div class="col-md-6 col-sm-12 col-xs-12 text-right">
+              <ul class="list-social-links">
+                <li><a href=#><span class="sprite sprite-facebook_icon"></span></a></li>
+                <li><a href=#><span class="sprite sprite-twitter_icon"></span></a></li>
+                <li><a href=#><span class="sprite sprite-email_icon"></span></a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class=footer-bottom hidden-print>
-        <div class=container>
-          <div class=row>
-            <div class=col-md-4 col-sm-12 col-xs-12 text-left>
+      <div class="footer-bottom" hidden-print>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-12 col-xs-12 text-left">
                {{ snippets[Footer] | liquid }}
             </div>
-            <div class=col-md-8 col-sm-12 col-xs-12 text-left >
+            <div class="col-md-8 col-sm-12 col-xs-12 text-left">
             </div>   
           </div>
         </div>

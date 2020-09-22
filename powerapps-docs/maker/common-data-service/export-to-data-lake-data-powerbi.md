@@ -1,5 +1,6 @@
 ---
 title: "Analyze Common Data Service exported to Azure Data Lake Storage Gen2 data with Power BI | MicrosoftDocs"
+description: "Use Azure Data Lake Storage Gen2 to analyze exported Common Data Service data"
 ms.custom: ""
 ms.date: 07/29/2020
 ms.reviewer: "matp"
@@ -49,7 +50,7 @@ This section describes the prerequisites necessary to consume Common Data Servic
 
 4.  Enter the storage container name in the format<br>*https://accountname.dfs.core.windows.net/containername/* and replace **accountname** and **containername** with your storage account's information.
 
-5. Find the storage account name by going to **Azure** > **Storage accounts**, and then select the Data Lake Storage Gen2 account that's populated with the exported Common Data Services data.
+5. Find the storage account name by going to **Azure** > **Storage accounts**, and then select the Data Lake Storage Gen2 account that's populated with the exported Common Data Service data.
 
 6. Find the container name by going to **Storage Explorer (preview)** > **Containers** and select the name of the container with the exported Common Data Service data.
 
@@ -84,3 +85,4 @@ This section describes the prerequisites necessary to consume Common Data Servic
 ### See also
 
 [Export entity data to Azure Data Lake Storage Gen2](export-to-data-lake.md)
+
