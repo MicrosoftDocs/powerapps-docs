@@ -11,7 +11,7 @@ ms.reviewer: tapanm
 ---
 # Known issues and limitations
 
-This article provides details about the known issues and limitations of the Power Apps and Teams integration capabilities when using [**Project Oakdale environments**](/power-platform/admin/about-teams-environment) during the initial **Public Preview** period.
+This article provides details about the known issues and limitations when using [**Project Oakdale environments**](/power-platform/admin/about-teams-environment) during the preview release.
 
 ## Additional components
 
