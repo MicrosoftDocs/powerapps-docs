@@ -101,6 +101,7 @@ To add an email activity to a record, you must first save the record you are add
 4. To add an attachment to the email, save the email. Then, on the command bar select **Attach File** > **Choose File** and then select the file that you want to attach to the email.
 
    > [!NOTE]
+   > To use the spell checker, on your keyboard press Control + right click. 
    > An email with an attached image will be shown inline with the body of the email.
   
 5. To use a template for the email body, on the command bar, select **Insert Template**, and then select the template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md). 
