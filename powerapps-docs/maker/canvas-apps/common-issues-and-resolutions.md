@@ -207,3 +207,6 @@ This article lists some common issues that you might encounter while using Power
 1. **Card gallery is deprecated**.
 
      Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Please replace card galleries with the new **[Edit form](controls/control-form-detail.md)** and **[Display form](controls/control-form-detail.md)** controls.
+     
+ 1.   **Power Apps per app plans does not support Power Apps for Windows**
+        The Power Apps for Windows app is not support if you're on the [Power Apps per app plans](https://docs.microsoft.com/power-platform/admin/about-powerapps-perapp). 
