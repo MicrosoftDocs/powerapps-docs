@@ -2,13 +2,13 @@
 title: "Use messages with the Organization service (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Understand how messages are used to invoke operations using the organization service." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 09/11/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
 author: "JimDaly" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+ms.author: "pehecke" # MSFT alias of Microsoft employees only
+manager: "sunilg" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -87,7 +87,8 @@ You can pass optional parameters in messages using the <xref:Microsoft.Xrm.Sdk.O
 |Parameter|Description|Messages|  
 |-----------------|-----------------|--------------|  
 |`SolutionUniqueName`|A `String` that specifies the unique name of the solution to which the operation applies. More information: [Dependency tracking for solution components](../dependency-tracking-solution-components.md).|<xref:Microsoft.Crm.Sdk.Messages.AddPrivilegesRoleRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.DeleteRequest> <br /> <xref:Microsoft.Crm.Sdk.Messages.MakeAvailableToOrganizationTemplateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|  
-|`SuppressDuplicateDetection`|A `Boolean` used to disable duplicate detection on a create or update operation. More information: [Use SuppressDuplicateDetection parameter to throw errors when you create or update record](detect-duplicate-data.md#use-suppressduplicatedetection-parameter-to-throw-errors-when-you-create-or-update-record) .|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|  
+|`SuppressDuplicateDetection`|A `Boolean` used to disable duplicate detection on a create or update operation. More information: [Use SuppressDuplicateDetection parameter to throw errors when you create or update record](detect-duplicate-data.md#use-suppressduplicatedetection-parameter-to-throw-errors-when-you-create-or-update-record) .|<xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> <br /> <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest>|
+|`tag`|A value to include within the `ExecutionContext` `SharedVariables` collection. |Any message that can have a plug-in step registered. More information: [Add a Shared Variable from the Organization Service](#add-a-shared-variable-from-the-organization-service)|
   
  The following sample shows how to pass an optional parameter:  
   
@@ -99,6 +100,32 @@ req.Target = account;
 req["SuppressDuplicateDetection"] = true;  
 CreateResponse response = (CreateResponse)svc.Execute(req);  
 ```  
+
+### Add a Shared Variable from the Organization Service
+
+You can set a string value that will be available to plug-ins within the ExecutionContext in the `SharedVariables` collection. More information: [Shared variables](../understand-the-data-context.md#shared-variables)
+
+```csharp
+var account = new Entity("account");
+account["name"] = "Contoso";
+
+var request = new CreateRequest() { Target = account };
+request["tag"] = "This is a value passed.";
+
+var response = (CreateResponse)svc.Execute(request);
+```
+
+
+Will result in the following value within the `SharedVariables` collection when sent using a webhook.
+
+```json
+{
+"key": "tag",
+"value": "This is a value passed."
+}
+```
+
+This can also be done using the Web API: [Add a Shared Variable from the Web API](../webapi/compose-http-requests-handle-errors.md#add-a-shared-variable-from-the-web-api)
 
 ### See also
 

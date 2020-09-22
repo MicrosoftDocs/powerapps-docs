@@ -1,6 +1,6 @@
 ---
 title: Configure data and view dashboards in the Hospital Emergency Response app | Microsoft Docs
-description: Provides provides detailed instructions for hospital IT admins to deploy and configure the sample app for their organization.
+description: Provides instructions for hospital IT admins to configure data and view dashboards for their organization.
 author: pankajarora-msft
 manager: annbe
 ms.service: powerapps
@@ -42,7 +42,7 @@ You must add master data in these entities in the following sequence:
 The master data is managed from the **Locations** area in the left navigation in the admin app:
 
 > [!div class="mx-imgBorder"]
-> ![locations-area](media/locations-area.png)
+> ![Locations area](media/locations-area.png)
 
 The entities under the **Hierarchy** area are listed in the order you should populate data.
 
@@ -59,11 +59,11 @@ To create a record:
 
 1. Select **Systems** in the left pane, and select **New**:  
     > [!div class="mx-imgBorder"]
-    > ![select-systems-new](media/select-systems-new.png)
+    > ![Select new systems](media/select-systems-new.png)
 
 1. In the **New System** page, specify appropriate values:  
    > [!div class="mx-imgBorder"]
-   > ![enter-details-new-system](media/enter-details-new-system.png)
+   > ![New System](media/enter-details-new-system.png)
 
    | **Field**            | **Description**                                    |
    |----------------------|----------------------------------------------------|
@@ -89,7 +89,7 @@ To create a record:
 1. In the **New Region** page, specify appropriate values:  
 
     > [!div class="mx-imgBorder"]
-    > ![enter-details-new-region](media/enter-details-new-region.png)
+    > ![Select New Region](media/enter-details-new-region.png)
 
     | **Field**            | **Description**                                                                                          |
     |----------------------|----------------------------------------------------------------------------------------------------------|
@@ -117,7 +117,7 @@ To create a record:
 1. In the **New Facility** page, specify appropriate values: 
 
     > [!div class="mx-imgBorder"] 
-    > ![enter-details-new-facility](media/enter-details-new-facility.png)
+    > ![Select New Facility](media/enter-details-new-facility.png)
 
     | **Field**                    | **Description**            |
     |------------------------------|---------------------------------------------------|
@@ -167,7 +167,7 @@ To create a record:
 1. In the **New Location** page, specify appropriate values:  
  
     > [!div class="mx-imgBorder"]
-    > ![enter-details-new-location](media/enter-details-new-location.png)
+    > ![Select New Location](media/enter-details-new-location.png)
 
     | **Field**            | **Description**                                                                                      |
     |----------------------|------------------------------------------------------------------------------------------------------|
@@ -194,7 +194,7 @@ To edit the record, select the record, update the values as required, and select
 You can view the associated data for a location, such as **Census**, **COVID Tracking**, **Equipment Needs**, by opening an existing location record and selecting the respective tabs. The associated data is entered by frontline staff using the [mobile apps](use.md).
 
 > [!div class="mx-imgBorder"]
-> ![location-related-records](media/location-related-records.png)
+> ![Select location related records](media/location-related-records.png)
 
 
 ### Departments data
@@ -210,7 +210,7 @@ To create a record:
 1. In the **New Department** page, specify appropriate values:
 
     > [!div class="mx-imgBorder"]
-    > ![enter-details-new-department](media/enter-details-new-department.png)
+    > ![New Department - enter details](media/enter-details-new-department.png)
 
     | **Field**            | **Description**                                    |
     |----------------------|----------------------------------------------------|
@@ -251,7 +251,7 @@ As an admin, you can change the default tracking level of mobile apps.
 1. In the app record, select an appropriate value in the **Tracking Level** field.
 
     > [!div class="mx-imgBorder"]
-    > ![app-tracking-level](media/app-tracking-level.png)
+    > ![Tracking Level](media/app-tracking-level.png)
 
     - If **Location** is selected for an app, records created using the mobile app will contain location and facility information along with other data. Additionally, a **Location** drop-down will be available in the mobile app for users to select a location to track the data.
 
@@ -278,7 +278,7 @@ You can set the Power BI report URL for the **Dashboard** mobile app so that fro
 1.  In the app record, specify the report URL in the **Launch URL** field.
 
     > [!div class="mx-imgBorder"]
-    > ![dashboard-launch-url](media/dashboard-launch-url.png)
+    > ![Launch URL](media/dashboard-launch-url.png)
 
 1.  Save the record.
 
@@ -317,12 +317,12 @@ To manage dashboards:
 2. In the left navigation pane, select **Dashboards** from the area picker:
 
     > [!div class="mx-imgBorder"]
-    > ![select-dashboards](media/select-dashboards.png)
+    > ![Dashboards](media/select-dashboards.png)
 
 3. Select a dashboard name in the left navigation to view the charts:
 
     > [!div class="mx-imgBorder"]
-    > ![view-charts](media/view-charts.png)
+    > ![View charts](media/view-charts.png)
 
     > [!NOTE]
     > You can filter data at the bottom of the screen and the charts on top are automatically updated with filtered values.
@@ -330,24 +330,24 @@ To manage dashboards:
 4. Select the **Expand** option to view a chart in full-screen mode:
 
     > [!div class="mx-imgBorder"]
-    > ![select-expand](media/select-expand.png)
+    > ![Select expand](media/select-expand.png)
 
 ### Additional analysis
 
 - **Drill down**: You can select chart area to drill down further with additional attributes (fields) for an entity:
 
     > [!div class="mx-imgBorder"]
-    > ![select-chart-area-drill-down](media/select-chart-area-drill-down.png)
+    > ![Additional analysis - drill-down](media/select-chart-area-drill-down.png)
 
 - **Refresh**: You can refresh the dashboards to reflect updated data. You can either refresh all charts on a specific dashboard with **Refresh All**, or a selected chart with **Refresh**:
 
     > [!div class="mx-imgBorder"]
-    > ![refresh-dashboards](media/refresh-dashboards.png)
+    > ![Additional analysis - Refresh](media/refresh-dashboards.png)
 
 - **View records**: Select **More Commands** (**…**) and then **View Records** to view all records associated to a given chart:
 
     > [!div class="mx-imgBorder"]
-    > ![select-more-commands](media/select-more-commands.png)
+    > ![Additional analsis - View records](media/select-more-commands.png)
 
     > [!NOTE] 
     > When you select **View records**, you'll see the view of the entity split between chart and the records. Any change to filters for records on the right-side reflects with automatic updates to the chart on left-side of the screen.
@@ -360,7 +360,7 @@ of charts, read [edit an existing dashboard](https://docs.microsoft.com/powerapp
 You can also create your own dashboards and customize to suite your needs. To create a new dashboard, select **New** and then select **Dynamics 365 Dashboard**:
 
 > [!div class="mx-imgBorder"]
-> ![select-new-dynamics-dashboard](media/select-new-dynamics-dashboard.png)
+> ![Create new dashboards](media/select-new-dynamics-dashboard.png)
 
 For more information about creating a new dashboard, read [create new dashboard](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-edit-dashboards#create-a-new-dashboard).
 
@@ -463,14 +463,14 @@ The page provides details about the equipment by location, the total number of v
 The page provides details about the long-term patients, discharge barriers over a period, and variance in terms of actual and anticipated discharges.
 
 > [!div class="mx-imgBorder"]
-> ![Equipment Details](media/report-discharge-details.png)
+> ![Discharges](media/report-discharge-details.png)
 
 #### Supplies page 
 
 The page provides details about the supplies by location. It also provides a chart about days on hand by supply and facility, and the supply available on hand over a period of time.
 
 > [!div class="mx-imgBorder"]
-> ![Equipment Details](media/report-supplies.png)
+> ![Supplies](media/report-supplies.png)
 
 ## View and manage app feedback
 
@@ -485,7 +485,7 @@ To view and manage app feedback:
 3. Select **App Feedback** to view a list of app feedback submitted by users. You can click a record to view details and mark them as reviewed or not.  
 
     > [!div class="mx-imgBorder"]
-    > ![select-app-feedback](media/select-app-feedback.png)
+    > ![App feedback](media/select-app-feedback.png)
 
 ## View the admin app in your language
 
@@ -500,12 +500,12 @@ Before you can view the admin app in one of the supported languages, the languag
 2. In the left pane, select **Environments**, and then select [Your Environment] > **Settings** > **Product** > **Languages**.
 
     > [!div class="mx-imgBorder"]
-    > ![ppac-settings](media/ppac-settings.png)
+    > ![PPAC settings](media/ppac-settings.png)
 
 3. On the **Language Settings** page, select the languages you want to enable from one of the supported languages mentioned earlier, and select **Apply** in the lower-right corner. For example, we are enabling the **French** and **German** languages.
 
     > [!div class="mx-imgBorder"]
-    > ![ppac-lang-settings](media/ppac-lang-settings.png)
+    > ![PPAC language settings](media/ppac-lang-settings.png)
 
 4. On the **Confirm Language Change** dialog box, select **OK**.
 
@@ -521,12 +521,12 @@ After the required languages are enabled by your system administrator, each admi
 2. Select the **Settings** button in the upper-right corner of the screen, and then select **Personalization Settings**.
 
     > [!div class="mx-imgBorder"]
-    > ![personal-settings](media/personal-settings.png)
+    > ![Settings for personalization](media/personal-settings.png)
 
 3. On the **Set Personal Options** page, select the **Languages** tab, and then select a language of choice from the **User Interface Language** list. The list shows all the languages enabled by your system administrator for your environment.
 
     > [!div class="mx-imgBorder"]
-    > ![select-lang](media/select-lang.png)
+    > ![Personal language setting](media/select-lang.png)
 
 4. Select **OK** in the lower-right corner.
 
@@ -537,7 +537,7 @@ The admin app UI will switch to display in the language you selected.
 You can extend Hospital Emergency Response mobile app labels with custom text. To do this, you model-driven app named **Canvas App Label Management** to customize the mobile app labels. Add new languages supported by the solution and text for corresponding mobile app labels using the model-driven app. You can create and edit strings across different languages for use in the mobile app.
 
 > [!div class="mx-imgBorder"]
-> ![canvas-app-label-app](media/canvas-app-label-app.png)
+> ![Extend mobile app labels](media/canvas-app-label-app.png)
 
 ### Add new language record
 

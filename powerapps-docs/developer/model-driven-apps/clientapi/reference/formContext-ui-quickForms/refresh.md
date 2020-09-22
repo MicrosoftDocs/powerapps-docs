@@ -22,7 +22,7 @@ search.app:
 
 ## Syntax
 
-`quickViewControl.refresh;`
+`quickViewControl.refresh();`
 
 ### Related topics
 
