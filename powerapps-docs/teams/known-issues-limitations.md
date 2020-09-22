@@ -113,6 +113,6 @@ Power Apps Studio and apps currently don't support **Dark theme**.
 
 -	If a user is an owner of the Azure Active Directory (Azure AD) group associated with a team but is not also a member of that group, they may not be able to see that team in the Power Apps and Power Virtual Agents apps.
 
--	It may take up to 2 hours for deleting, renaming, or restoring a team to reflect correctly within the Power Apps and Power Virtual Agent apps.
+-	It may take up to 2 hours for deleting, renaming, or restoring a team to reflect correctly within the Power Apps and Power Virtual Agents apps.
 
--	It may take up to 15 minutes for new team users to be able to see the team within the Power Apps and Power Virtual Agent apps.
+-	It may take up to 15 minutes for new team users to be able to see the team within the Power Apps and Power Virtual Agents apps.
