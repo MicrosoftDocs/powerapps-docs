@@ -39,7 +39,7 @@ To find the URL, in the address bar the first part of the URL that starts with *
 
 ## Error message: Unable to find many-to-one relationship,entity: phonecall, referenced Entity: undefined, field: regardingobjectid.
 
-**Issue**: When you open an existing phone call activity record, and on the **Phone Number** field select the phone icon. The system opens a new **Quick Create: Phone Call** activity. 
+**Issue**: When you open an existing phone call activity record, and on the **Phone Number** field select the phone icon, the system opens a new **Quick Create: Phone Call** activity. 
 
 > ![Create a phone call record](media/error_phonecallactivity.png "Create a phone call record")
 
