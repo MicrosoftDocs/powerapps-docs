@@ -1904,6 +1904,11 @@
       "source_path": "powerapps-docs/maker/common-data-service/entity-relationship-behavior.md",
       "redirect_url": "create-edit-entity-relationships#entity-relationship-behavior",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/embed-teams-app.md",
+      "redirect_url": "/powerapps/teams/embed-teams-app",
+      "redirect_document_id": false
     }
   ]
 }

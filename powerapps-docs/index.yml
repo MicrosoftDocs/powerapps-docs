@@ -12,7 +12,7 @@ metadata:
   ms.topic: hub-page # Required
   author: KumarVivek #Required; your GitHub user alias, with correct capitalization.
   ms.author: kvivek #Required; microsoft alias of author; optional team alias.
-  ms.date: 09/13/2020 #Required; mm/dd/yyyy format.
+  ms.date: 09/22/2020 #Required; mm/dd/yyyy format.
   hide_bc: false
 
 
@@ -80,6 +80,18 @@ conceptualContent:
       footerLink:
         url: /powerapps/maker/common-data-service
         text: More
+
+    - title: Integrate with Microsoft Teams
+      links:
+        - text: Embed a canvas app in Teams
+          url: /powerapps/teams/embed-teams-app
+          itemType: overview
+        - text: Create apps in Teams
+          url: /powerapps/teams/create-apps-overview
+          itemType: overview
+        - text: What is Project Oakdale?
+          url: /powerapps/teams/overview-data-platform
+          itemType: overview
 
     - title: Use solutions for ALM
       links:
