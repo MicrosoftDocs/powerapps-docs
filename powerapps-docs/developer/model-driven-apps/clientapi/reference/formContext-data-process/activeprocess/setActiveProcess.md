@@ -22,6 +22,8 @@ search.app:
 
 If there is an active instance of the process, the entity record is loaded with the process instance ID. If there is no active instance of the process, a new process instance is created and the entity record is loaded with the process instance ID. If there are multiple instances of the current process, the record is loaded with the first instance of the active process as per the defaulting logic, that is the most recently used process instance per user.
 
+[!NOTE]> setActiveProcess works when creating or editing a record.  The call has been removed from the openForm processId and processInstanceId and can directly be set using the  setActiveProcess API. 
+
 ## Syntax
 
 `formContext.data.process.setActiveProcess(processId, callbackFunction);`
