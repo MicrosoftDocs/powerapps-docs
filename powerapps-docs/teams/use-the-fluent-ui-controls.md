@@ -54,7 +54,7 @@ been widely used in the user interface.
 
 *Label* – Text that appears on a control.
 
-*Value* – The value of an input control.
+*Checked* – Whether the control is checked.
 
 ## Combo box
 
@@ -215,7 +215,7 @@ A **Toggle** control is designed for the modern user interface, but behaves the 
 
 ### Key properties
 
-*Value* – The value of an input control.
+*Checked* – Whether the control is checked.
 
 *OffText* – The text of the off state.
 
