@@ -35,7 +35,7 @@ Some of the benefits of Project Oakdale include:
 
 - Support for up to 500 teams.
 
-- The capability to be promoted to full Common Data Service.
+- The capability to be promoted to Common Data Service.
 
 ## Tables in Project Oakdale
 
