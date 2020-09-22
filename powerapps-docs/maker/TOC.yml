@@ -869,7 +869,7 @@
             href: ./canvas-apps/accessible-apps-live-regions.md
       - name: Experimental and preview features
         href: ./canvas-apps/working-with-experimental-preview.md
-  - name: Publish and share an app
+  - name: Save and publish an app
     href: ./canvas-apps/save-publish-app.md
   - name: Share an app and its dependencies
     items:
@@ -1822,7 +1822,7 @@
           href: ../teams/table-columns.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
-    - name: Share and publish your app
+    - name: Publish and share your app
       href: ../teams/publish-and-share-apps.md
     - name: Remove your apps
       href: ../teams/remove-your-apps.md
