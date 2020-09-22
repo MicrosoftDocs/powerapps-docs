@@ -83,6 +83,15 @@ To add code components to a canvas app:
 
 To delete a code component from a canvas app, select the code component that you want to delete and then select the **Delete** button on the menu. When the code component is deleted from the app, all the code component elements get deleted from the app and the app package.
 
+1. Open the app where you have added the code component. 
+1. Select the **Tree view** icon from the left pane and select the screen where you have added the code component. 
+1. Select **ellipse (...)** next to the code component and select **Delete**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Delete code component](media/delete-code-component.png "Delete code component")
+
+1. Save the app to see the changes. 
+
 ## Update existing code components
 
 Whenever you update the code components and want to see the changes in runtime, you need to bump the `version` attribute in the manifest file. It is recommended to always bump  the version of the component whenever you make changes.
