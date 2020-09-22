@@ -69,6 +69,14 @@ options are relevant to the current session and app-related settings.
 - **Undo** – undo the last action.
 - **Redo** – repeat the last action.
 
+### Cut, copy and paste
+
+![Cut, copy and paste](media/studio-cut-copy-paste.png "Cut, copy and paste")
+
+- **Cut** – Cut the selection, and store it in the clipboard.
+- **Copy** – Copy the selection, and store it in the clipboard.
+- **Paste** - Paste the last cut, or copied selection from the clipboard.
+
 ### Add data
 
 ![Add data](media/studio-add-data.png "Add data")
@@ -79,19 +87,15 @@ options are relevant to the current session and app-related settings.
 
 ### New screen
 
-Add screens based on layouts or scenarios.
+Add screens based on the available layouts.
 
 #### Layouts
 
-![Layouts](media/studio-layouts.png "Layouts")
-
 Select a new screen to add to the app based on the layout of the screen.
 
-#### Scenarios
+![Layout scenarios](media/studio-scenarios.png "Layout scenarios")
 
-![Scenarios](media/studio-scenarios.png "Scenarios")
-
-Select a screen type based on the available scenarios, such as **Scrollable**, **List**, **Form**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, or **Calendar**.
+Select a screen type based on the available scenarios, such as **Blank**, **Scrollable**, **List**, **Success**, **Tutorial**, **Email**, **People**, **Meeting**, or **Calendar**.
 
 ### App checker
 
@@ -105,12 +109,21 @@ Configure the app's general settings.
 
 ![App settings](media/studio-general-settings.png "App settings")
 
-| Setting name | Description |
-| - | - |
-| App name  | Shows the app name. To rename the app, select ![Edit app name](media/edit-app-name.png "Edit app name").  |
-| License designation  | License designation of the app. More information: [How to check license designation for an app](../maker/canvas-apps/license-designation.md)  |
-| Pass assignment  | Toggle switch for assigning passes for the app. More information: [About Power Apps per app plans](/power-platform/admin/about-powerapps-perapp.md)  |
-| Preload app for enhanced performance  | Setting to let users download (preload) the app while authentication is in progress, enhancing the app load performance. More information: [Improve the performance of your app](../maker/canvas-apps/embed-teams-app.md#improve-the-performance-of-your-app)  |
+#### Name + icon
+
+Shows app name, and allows changing the app icon. You can also upload a custom icon for the app using the **Browse** option.
+
+### Screen size + orientation
+
+Change the screen size, and orientation for your app. More information: [Change screen size and orientation](../maker/canvas-apps/set-aspect-ratio-portrait-landscape.md)
+
+#### Advanced settings
+
+Allows you to configure advanced settings for the app.
+
+- **Data row limit for non-delegable views** - Set the delegable data row limit. More information: [Understand delegation in canvas apps](../maker/canvas-apps/delegation-overview.md)
+- **Improve data source experience and Common Data Service views** - Use the improved data source experience when working with Common Data Service. More information: [Common Data Service and the improved data source experience](../maker/canvas-apps/use-native-cds-connector.md)
+- **Preview, experimental and deprecated features** - Features that are in preview or experimental phases, or deprecated. More information: [Understand experimental, preview, and deprecated features in Power Apps](../maker/canvas-apps/working-with-experimental-preview.md)
 
 ### Power Automate
 
@@ -122,11 +135,15 @@ More information: [Create flows using the Power Apps app in Teams](/power-automa
 
 ### Collections
 
-List current [collections](../maker/canvas-apps/create-update-collection.md) used by the app.
+A collection is a group of items that are similar, such as products in a product list. This section lists the collections used by the current app. More information: [Collections in canvas apps](../maker/canvas-apps/create-update-collection.md) used by the app.
+
+![Collections](media/settings-collections.png "Collections")
 
 ### Variables
 
-List current [variables](../maker/canvas-apps/working-with-variables.md) used by the app.
+You can save data such as the result values from a data set into temporary storage by using variables. This section lists variables used by the current app. More information: [Variables in canvas apps](../maker/canvas-apps/working-with-variables.md) used by the app.
+
+![Variables](media/studio-variables.png "Variables")
 
 ### Account details
 
@@ -134,6 +151,15 @@ Shows account details including session details, current Power Apps app build
 version, and other session details. You can also turn the **Auto save** option **On** or **Off**.
 
 ![Account details](media/studio-account-details.png "Account details")
+
+| Name | Description |
+| - | - |
+| Account | Allows to sign-out from the current session. |
+| Environment | Shows the current environment name. |
+| Auto save | Set **Auto save** *On* or *Off*. When *On*, saves your changes at the interval of 2 minutes. |
+| Power Apps version | Shows the version of Power Apps. |
+| About Power Apps | Additional information and help. |
+| Session details | Details about the current session. More information: [Session details](overview-of-the-power-apps-app.md?branch=teams-preview#about-tab)
 
 > [!NOTE]
 > We recommend that you keep the **Auto save** setting turned **On** and
@@ -256,6 +282,9 @@ library.
 To insert controls on the canvas, you can drag the control to the canvas,
 select the control, or select **(...)** and then select **Add to canvas**.
 
+> [!TIP]
+> Project Oakdale provides new components built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/). More information: [Fluent UI controls](use-the-fluent-ui-controls.md).
+
 #### Popular controls
 | **Name**      | **Description**                                                                                      |
 |-----------------|------------------------------------------------------------------------------------------------------|
@@ -297,21 +326,23 @@ More information: [List of all Power Apps connectors](/connectors/connector-refe
 
 ### Visual editor
 
-When you select **Create new table** and enter a name for the new table, you open the visual editor where you can design the table, add columns of different data types, enter data in rows, and save the changes.
+When you select **Create new table** and enter a name for the new table, you open Visual Editor where you can design the table, add columns of different data types, enter data in rows, and save the changes.
 
 ![Visual Editor](media/studio-table-designer.png "Visual Editor")
 
-To get started with the visual editor, select **Create new table** and enter
-the table name.
+To get started with Visual Editor, select **Create a table** and enter
+the table name. You can also expand the *Advanced settings* to update the table's plural name. For example, a table name can be *Shape*, and the plural table name can be *Shapes*.
 
 ![Create table](media/studio-create-table.png "Create table")
 
 > [!NOTE]
-> You can use the visual editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
+> You can use Visual Editor in Power Apps Studio to quickly create a table while authoring an app. However, you can also use the [Build tab](edit-delete-table.md) to edit or delete the tables you create by using Power Apps Studio. Go to [Create tables in Microsoft Teams](create-table.md) for more information about creating tables by using the **Build** tab.
 
-#### Understand the visual editor
+#### Understand Visual Editor
 
-![Authoring a table in the visual editor](media/studio-table-1.png "Authoring a table in the visual editor")
+Visual Editor allows you to work with table rows, columns and data.
+
+![Authoring a table in Visual Editor](media/studio-table-1.png "Authoring a table in Visual Editor")
 
 ##### Table name
 
@@ -328,18 +359,27 @@ Select **Add row** to add a new row to the table.
 ##### Add columns
 
 Select **Add columns** to add new columns of the available column types
-supported by the visual editor.
+supported by Visual Editor.
 
 ###### Supported column types
 
 Visual editor supports specific data types as columns. The following options
-are available when creating a new column using the visual editor inside Power Apps Studio:
+are available when creating a new column using Visual Editor inside Power Apps Studio:
 
-![Column types](media/studio-column-types.png "Column types")
+- Text
+- Email
+- URL
+- Phone
+- Auto number
+- Number
+- Date
+- Decimal
+- Lookup
+- Choice
+- Yes/No
 
 > [!IMPORTANT]
-> To add columns of types that aren't supported by the visual editor, such as file or image, [create a table](create-table.md) by using the build hub instead.
-
+> To add columns of types that aren't supported by Visual Editor, such as file or image, [create a table](create-table.md) by using the build hub instead.
 
 ###### Advanced options
 
@@ -348,6 +388,10 @@ The advanced options for columns change depending on the type of column. For exa
 ##### Show/hide columns
 
 Use the **Show/hide columns** option to show or hide available columns, including columns automatically created as part of the table metadata.
+
+For example, you can add an *Owner* column created by default to the existing table.
+
+![Show/hide columns](media/show-hide-columns.png "Show/hide columns")
 
 ##### Refresh
 
@@ -370,7 +414,7 @@ available data sources in **Data** on the left pane.
 
 ##### Visual editor view
 
-Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change the visual editor layout.
+Select from the options of **Compact**, **Default**, or **Comfortable** layouts to switch the view with columns and rows spacing to change Visual Editor layout.
 
 ##### Row count
 
@@ -400,14 +444,14 @@ Select the drop-down menu next to the column heading to view column-related opti
 
 After you add rows and columns, and add data, you can close the table and use it as
 the data source in your app. To edit content in the table, you can use
-the app controls or go back to the visual editor.
+the app controls or go back to Visual Editor.
 
 To edit the table, select the table data source, and then select **Edit data** to
-open the table in the visual editor.
+open the table in Visual Editor.
 
 ![Edit table data](media/studio-edit-2.png "Edit table data")
 
-After you close the visual editor, the data source is automatically refreshed
+After you close Visual Editor, the data source is automatically refreshed
 to reflect the updated data in Power Apps Studio. You can also select **Refresh**
 to manually refresh Power Apps Studio to reflect the data in the controls you added on the canvas.
 
