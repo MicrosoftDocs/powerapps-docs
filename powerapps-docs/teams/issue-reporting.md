@@ -36,6 +36,9 @@ Issue Reporting consists of two different apps, one for reporting issues and ano
     - Modify existing issues and assist with resolution
     - Get a high-level view of the issues and team issues.
 
+> [!NOTE]
+> Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+
 ## Prerequisites
 
 Before using this app:
@@ -43,6 +46,8 @@ Before using this app:
 1. Find the app in Teams store.
 2. Install the app.
 3. Set up the app for the first use.
+
+You also need to [configure](https://support.microsoft.com/office/use-planner-in-microsoft-teams-62798a9f-e8f7-4722-a700-27dd28a06ee0) Planner in Teams.
 
 For details about the above steps, go to [Use sample apps from the Teams store](use-sample-apps-from-teams-store.md).
 
@@ -68,11 +73,21 @@ This app provides the following capabilities:
 
 1. Select the team.
 
+1. Select the channel where you installed the **Issue Reporting** app.
+
+1. Add **Tasks (Planner)** tab.
+
+    > [!TIP]
+    > Give your Planner a distinct name, such as “Issue tasks”. This way, you'll be able to identify the right Planner based on this name. The list of Planner instances inside the app as options shows Planner names, and not the name on the Teams tab for the Planner.
+
 1. Select the **Manage Issues** tab in Teams.
 
 1. Select the channel where the messages will be posted.
 
 1. Select the **Tasks (Planner)** instance to integrate the app with Planner.
+
+    > [!NOTE]
+    > Issue Reporting requires a Planner tab to be installed before the app can be used. If you didn't add Planner tab, add the tab first and then, reopen the **Manage Issues** app.
 
 1. Select **Continue**.
 

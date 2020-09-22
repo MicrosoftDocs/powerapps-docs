@@ -29,11 +29,13 @@ plant&mdash;to assets and equipment, such as vehicles and machines. There are tw
     - View insights about inspection history.
     - Manage settings for Inspection app, such as Planner and Teams channel for messages.
 
-
 - [Inspection app](#inspection-app) is used by employees to perform the following actions:
 
     - Inspect something, such as an asset or an area within a building or other location, in the course of completing their job. The app provides inspection checklists so that multiple locations can be inspected. For example, a store employee can use this app to inspect a section of a retail store to verify that the store is ready to open for the day.
     - Log an issue when an issue is found during the inspection and assign it to the right person so that it can be resolved quickly.
+
+> [!NOTE]
+> Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
 
 ## Prerequisites
 
@@ -334,8 +336,6 @@ Select **Ok**, **Issue**, or **N/A** against each checklist. Select **Photo** to
 You can add a task that automatically creates a Planner task in the team to complete.
 
 1. Select **Task** from the inspection step. This action updates the *Images* and *Notes*.
-
-1. Add more images using **Add Photos**, or delete the unwanted images by selecting the images.
 
 1. Select **Assign** to search for the users who you want to assign the task to.
 
