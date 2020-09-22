@@ -62,10 +62,6 @@ You can administer and manage Project Oakdale environment using the Power Platfo
 
 Here is a list of FAQs for Project Oakdale; also see [Project Oakdale licensing FAQs](/power-platform/admin/powerapps-flow-licensing-faq#project-oakdale) in the Power Platform admin guide.
 
-### Why are we launching Project Oakdale?
-
-Teams usage has grown rapidly with 75 Million daily active users. So, there a unique platform opportunity in focusing on Teams and Microsoft Power Platform.
-
 ### What does Project Oakdale enable and how does this impact Microsoft Power Platform and Teams users? 
 
 Power Apps developers and Power Virtual Agents chatbot creators will now be able to make and manage their apps and bots directly in Teams with embedded Power Apps and Power Virtual Agents apps. This enables a streamlined end-to-end user experience and allows makers to deploy to Teams with one click through the Teams app store. These new features are powered by Power Platform enhancement in Teams that provide enterprise datastores with rich data types to Microsoft 365 users and is now included in Microsoft 365 and Office 365 licenses.
@@ -80,13 +76,17 @@ Project Oakdale is initially focused on the low-code and no-code developer and d
 
 ### When should customers use Lists versus Project Oakdale?
 
-Lists is great for quickly tracking data in Teams. All your lists are instantly usable inside of Teams. Additionally, you can build canvas apps and flows on top of your Lists just like you can today in SharePoint. Project Oakdale is great for building Microsoft Power Platform solutions in Teams. The key differences are in type of storage, for example, relational table storage and support for file and image data with find, filter, and sort, and the ability to easily work with multiple tables.
+Lists is great for quickly tracking data in Teams. All your lists are instantly usable inside of Teams. Additionally, you can build canvas apps and flows on top of your Lists just like you can today in SharePoint. 
+
+Project Oakdale is great for building Microsoft Power Platform solutions in Teams. With support for files, images, and multiple related tables, Oakdale can meet your needs today and be promoted to the full Common Data Service if you need additional capacity or capabilities in the future.
 
 ### How does security and governance differ between Common Data Service and Microsoft Project Oakdale?
 
 Project Oakdale is enterprise grade and designed to work within Teams. Focused on Teams, it aligns with the core roles identified in the environment: Owners, Members, and Guests. 
 
-For Project Oakdale, access to the environment is restricted just to the Teams owners, members, and guests. Granting access to environment is managed by Teams Owner by adding or removing the Teams members. 
+For Project Oakdale, access to the environment is restricted just to the Teams owners, members, and guests. 
+Granting access to the environment is managed by Teams Owner by adding or removing the Teams members.
+Key benefits include -
 - Supports Teams Azure AD security group with runtime (JIT) user access and privilege checks.  
 - Auto assignment of System Administrator security role to Teams Owners. 
 - Ability to assign different security roles to Teams Owners and Members.  
@@ -95,7 +95,7 @@ For Project Oakdale, access to the environment is restricted just to the Teams o
 Common Data Service is designed to be used in any application (not just Teams) and includes additional security features such as auditing, sharing, field level and hierarchical security.  
 
 ### How do users import data into tables in Project Oakdale?
-In addition to Office data sources like SharePoint and Excel and files in CSV format, users will have the opportunity to bring in data through connectors.
+Makers have the opportunity to bring in data through both the apps they develop as well as via connectors in Power Apps and Power Automate.
 
 ### Which tables are available to developers in Project Oakdale?  
  
@@ -114,14 +114,12 @@ Applications can include data from environments that the maker has access to wit
 
 ### Where can I use the new visual editor?
 
-In addition to the table designer experience previously found in Common Data Service, Project Oakdale includes a new, easy-to-use editable grid that helps user be even more productive. You can also use tables from other environments subject to the normal permission model. The new table designer is currently only available in Oakdale.
+In addition to the table designer experience previously found in Common Data Service, Project Oakdale includes a new, easy-to-use editable grid that helps user be even more productive. You can also use tables from other environments subject to the normal permission model. The new visual editor is currently only available in Oakdale.
 
 ### Can I use applications built using Project Oakdale Preview later in the generally available (GA) version of Project Oakdale?
 
-Yes, Project Oakdale applications built using the preview version can be used later in the generally available version of Project Oakdale. 
+Products in preview can and do change, but the current plan is that Project Oakdale applications built using the preview version can be used later in the generally available version of Project Oakdale. 
 
-### As an ISV, can I publish my solution to the Teams store?
-We anticipate a rich ecosystem of solutions for Project Oakdale in the Teams store.  ISV’s are encouraged to build and publish solutions for Project Oakdale.
 
 ### See also
 
