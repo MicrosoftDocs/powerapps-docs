@@ -43,7 +43,7 @@ To find the URL, in the address bar the first part of the URL that starts with *
 
 > ![Create a phone call record](media/error_phonecallactivity.png "Create a phone call record")
 
-If you attempt to save the new phone call activity record, you will get this error, **Unable to find many-to-one relationship,entity: phonecall referenced Entity: undefined, field. regardingobjectid**. 
+If you attempt to save the new phone call activity record, you will get this error, **Unable to find many-to-one relationship,entity: phonecall, referenced Entity: undefined, field: regardingobjectid**. 
 
 
 > ![Create a phone call record](media/error_phonecallactivity_1.png "Create a phone call record")
