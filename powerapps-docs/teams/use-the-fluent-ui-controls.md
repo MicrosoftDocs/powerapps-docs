@@ -221,6 +221,23 @@ A **Toggle** control is designed for the modern user interface, but behaves the 
 
 *OnText* – The text of the on state.
 
+## Difference between Fluent UI and classic controls
+
+Properties of controls have been simplified for the ease of use. The following table lists differences between Fluent UI controls and classic control property names.
+
+| Control type | Classic | Fluent UI |
+|---------|:-------:|:------:|
+|Button|Fill<br />Background<br />TabIndex|ColorFill<br />ColorBackground<br />AcceptsFocus|
+|Check box|Default<br />TabIndex|Checked<br />AcceptsFocus|
+|Combo box|InputTextPlaceholder<br />TabIndex|Text<br />AcceptsFocus|
+|Date picker|SelectedDate<br />TabIndex|Value<br />AcceptsFocus|
+|Label|Size|FontSize|
+|Radio group|TabIndex|AcceptsFocus|
+|Rating|Default<br />TabIndex|Value<br />AcceptsFocus|
+|Slider|Default<br />TabIndex|Value<br />AcceptsFocus|
+|Text box|Color<br />Default<br />Fill<br />SpellCheck<br />TabIndex|ColorText<br />Value<br />ColorBackground<br />EnableSpellCheck<br />AcceptsFocus|
+|Toggle|Size<br />Default<br />TabIndex|FontSize<br />Checked<br />AcceptsFocus|
+
 ### See also
 
 [Create additional apps](create-additional-apps.md)  
