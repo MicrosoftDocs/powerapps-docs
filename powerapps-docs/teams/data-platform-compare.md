@@ -1,12 +1,12 @@
 ---
 title: Project Oakdale vs. Common Data Service | Microsoft Docs
 description: Explains the differences between Project Oakdale and Common Data Service.
-author: NHelgren
+author: mmercuri
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/11/2020
-ms.author: nhelgren
+ms.date: 09/22/2020
+ms.author: mmercuri
 ms.reviewer: matp
 ---
 
