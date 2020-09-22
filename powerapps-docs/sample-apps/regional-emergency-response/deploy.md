@@ -45,7 +45,7 @@ For detailed information about the US Government plans for Power Apps and Power 
 ## Step 1: Download the deployment package
 
 > [!IMPORTANT]
-> If you are a commercial version user, you can use the AppSource option instead of using the deployment package to install the app and Power BI dashboard. You still need to download the deployment package to use the [sample data](configure.md##add-and-manage-master-data).
+> If you are a commercial version user, you can use the AppSource option instead of using the deployment package to install the app and Power BI dashboard. You still need to download the deployment package to use the [sample data](configure.md#add-and-manage-master-data).
 
 Download the latest deployment package (.zip) from <https://aka.ms/rer-solution>.
 
@@ -145,14 +145,14 @@ You can install the app by using one of the following 3 options:
 3.  On the Dynamics 365 apps page, select **Install app**. Next select **Regional Govt Emergency Response and Monitoring** in the right pane, and select **Next**.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/ppac-install-app.png "Install app")
+    > ![Install app](media/ppac-install-app.png "Install app")
 
 4.  On the next page, agree to the terms, and select **Install**.
 
 5.  The installation will start, and you can monitor the progress of your app installation on the Dynamics 365 apps page.
 
     > [!div class="mx-imgBorder"] 
-    > ![Monitor app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
+    > ![Monitor the app installation progress](media/ppac-app-install-progress.png "Monitor app installation progress")
 
     > [!IMPORTANT]
     > It might take a while for the app to install.
@@ -169,19 +169,19 @@ You can install the app by using one of the following 3 options:
 2.  On the Regional Govt Emergency Response and Monitoring page, select **Get It Now**.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/deploy-appsource-01.png "App on AppSource")
+    > ![App on AppSource](media/deploy-appsource-01.png "App on AppSource")
 
 3.  You are prompted to review the AppSource agreement terms. The dialog also shows the account that is being used to sign in. Select **Continue**. You might be prompted to verify your credentials.
 
 4.  On the next page, select your environment where you want to install the app. Select the legal terms and privacy statements check boxes, and select **Agree**.
 
     > [!div class="mx-imgBorder"] 
-    > ![Select an environment](media/deploy-appsource-02.png "Select an environment")
+    > ![Select an environment and privacy/legal](media/deploy-appsource-02.png "Select an environment")
 
-5.  You'll be taken to Dynamics 365 Admin Center where you can monitor the progress of your app installation.
+5.  You'll be taken to Power Platform admin center where you can monitor the progress of your app installation.
 
     > [!div class="mx-imgBorder"] 
-    > ![AppSource](media/deploy-appsource-03.png "Monitor app installation progress")
+    > ![Monitor app installation progress](media/deploy-appsource-03.png "Monitor app installation progress")
 
     > [!IMPORTANT]
     > It might take a while for the app to install.
@@ -341,7 +341,7 @@ This section provides information on how you can use the **Regional Emergency Re
     3. On the **Permissions** tab, specify users or group who will be able to view this app. Make sure you select the **Install this app automatically** check box to install this app automatically for end users. More information: [Automatically install apps for end users](https://docs.microsoft.com/power-bi/service-create-distribute-apps#automatically-install-apps-for-end-users)  
 
         > [!div class="mx-imgBorder"]
-        > ![select-install-apps-automatically](media/select-install-apps-automatically.png)
+        > ![Install this app automatically](media/select-install-apps-automatically.png)
 
 18. Select **Publish app.** For detailed information on publishing apps in Power BI, see [Publish your app](https://docs.microsoft.com/power-bi/service-create-distribute-apps#publish-your-app).
 
@@ -742,7 +742,7 @@ In this step, we are going to do the following:
 6.  After fixing the connection to connect to Common Data Service, select **IfRequestState ==**, and specify the user account that has a mailbox enabled account to send emails.
 
     > [!div class="mx-imgBorder"] 
-    > ![Specify outlook credentials](media/deploy-fix-cred2.png "Specify outlook credentials")
+    > ![Specify Outlook credentials](media/deploy-fix-cred2.png "Specify outlook credentials")
 
 7. Select **Save** to save the changes, and then select **Turn On**.
 
@@ -756,7 +756,7 @@ In this step, we are going to do the following:
      3. Select **Connections** to specify the user account credentials that has a mailbox enabled account to send emails
 
     > [!div class="mx-imgBorder"] 
-    > ![Specify outlook credentials](media/deploy-fix-cred3.png "Specify outlook credentials")
+    > ![Specify outlook credentials for connection](media/deploy-fix-cred3.png "Specify outlook credentials")
 
 11. In **Send an email**, ensure that you fix the URL as per your portal URL. For example, in this case, change rer6 to your URL value.
 
@@ -780,7 +780,7 @@ In this step, we will authorize the connection information for the flows that he
 5.  Specify the connection to connect to Common Data Service by selecting **Connections** and then either using the existing connection or using a new credential by selecting **Add new connection**.  
 
     > [!div class="mx-imgBorder"] 
-    > ![Fix credential](media/authorize-cred.png "Fix credentials")
+    > ![Fix credential for connection](media/authorize-cred.png "Fix credentials")
 
 6. Select **Save** to save the changes, and then select **Turn On**.
 

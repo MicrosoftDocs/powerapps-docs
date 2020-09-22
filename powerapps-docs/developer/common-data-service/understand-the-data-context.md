@@ -2,13 +2,13 @@
 title: "Understand the execution context (Common Data Service) | Microsoft Docs" 
 description: "Learn about the data that is passed to your plug-ins when it is executed." 
 ms.custom: ""
-ms.date: 06/20/2019
+ms.date: 09/08/2020
 ms.reviewer: pehecke
 ms.service: powerapps
 ms.topic: "article"
 author: JimDaly
-ms.author: jdaly
-manager: ryjones
+ms.author: pehecke
+manager: sunilg
 search.audienceType: 
   - developer
 search.app: 
@@ -127,7 +127,7 @@ The `OutputParameters` are not populated until after the database transaction, s
 
 ## Shared variables
 
-The <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property allows for including data that can be passed from a plug-in to a step that occurs later in the execution pipeline. Because this is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> value, plug-ins can add, read, or modify properties to share data with subsequent steps.
+The <xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables> property allows for including data that can be passed from the API or a plug-in to a step that occurs later in the execution pipeline. Because this is a <xref:Microsoft.Xrm.Sdk.ParameterCollection> value, plug-ins can add, read, or modify properties to share data with subsequent steps.
 
 The following example shows how a `PrimaryContact` value can be passed from a plug-in registered for a **PreOperation** step to a **PostOperation** step.
 
@@ -177,6 +177,19 @@ public class PostOperation : IPlugin
 
 > [!NOTE]
 > For a plug-in registered for the **PreOperation** or **PostOperation** stages to access the shared variables from a plug-in registered for the  **PreValidation** stage that executes on **Create**, **Update**, **Delete**, or by a <xref:Microsoft.Crm.Sdk.Messages.RetrieveExchangeRateRequest>, you must access the <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext.ParentContext>.**SharedVariables** collection. For all other cases, <xref:Microsoft.Xrm.Sdk.IPluginExecutionContext>.**SharedVariables** contains the collection.
+
+### Passing a Shared Variable from the API
+
+If you need to introduce a shared variable when you call an API, use the keyword `tag` from either the Web API or the Organization service to pass a string value.
+
+This value will be accessible in the Shared Variable collection using the `tag` key. Once set, this value cannot be changed, it is immutable.
+
+For information about how to set this see the following topics:
+
+- [Add a Shared Variable from the Web API](webapi/compose-http-requests-handle-errors.md#add-a-shared-variable-from-the-web-api)
+- [Add a Shared Variable from the Organization Service](org-service/use-messages.md#add-a-shared-variable-from-the-organization-service)
+
+
 
 ## Entity Images
 
