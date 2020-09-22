@@ -37,3 +37,17 @@ search.app:
  
 To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the environment URL, see [Get the environment UR](https://docs.microsoft.com/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
 
+## Error message: Unable to find many-to-one relationship,entity: phonecall referenced Entity: undefined, field. regardingobjectid
+
+**Issue**: When you open an existing phone call activity, and on the **Phone Number** field select the phone icon the system, it open a new **Quick Create: Phone Call** activity. 
+
+> ![Create a phone call record](media/error_phonecallactivity.png "Create a phone call record")
+
+If you  attempt to save the new phone call activity record, you will get this error, **Unable to find many-to-one relationship,entity: phonecall referenced Entity: undefined, field. regardingobjectid**. 
+
+
+> ![Create a phone call record](media/error_phonecallactivity_1.png "Create a phone call record")
+
+
+**Resolution**: Common Data Service does not support the option to create a phone call activity from within another phone call activity record.
+
