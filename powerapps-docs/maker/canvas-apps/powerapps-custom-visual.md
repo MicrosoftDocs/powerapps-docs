@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 05/29/2020
+ms.date: 09/22/2020
 ms.author: ropur
 search.audienceType: 
   - maker
@@ -69,7 +69,7 @@ Let's look at the steps required to use the Power Apps visual in your Power BI r
 The following limitations apply to the Power Apps visual:
 
 - Power Apps visual isn't supported for [guest users](share-app.md#share-with-guests).
-- Power Apps visual isn't supported in sovereign clouds.
+- Power Apps visual doesn't support multi-level embedding of Power Apps in Sovereign clouds. For example, embedding a Power BI report with Power Apps visual to a SharePoint page, or further embedding that SharePoint page to a Teams channel isn't supported on sovereign clouds.
 - If you change the data fields associated with the visual, you must edit the app from within the Power BI service by selecting the ellipsis (...) and then selecting **Edit**. Otherwise, the changes won't be propagated to Power Apps, and the app will behave in unexpected ways.
 - The Power Apps visual can't trigger a refresh of Power BI reports and Power BI data sources from within Power BI Desktop. If you write back data from the app to the same data source as the report, your changes won't be reflected immediately in Power BI Desktop. Changes are reflected on the next scheduled refresh.
 - The Power Apps visual can't filter the data or send any data back to the report.
