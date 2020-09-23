@@ -247,9 +247,9 @@ When you enable diagnostic logging, you can search for particular errors that us
 
 ## Portal administration and management
 
-### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
+### Do portals use any static content from CDNs (Content Delivery Network) that I need to allow-list?
 
-Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must allow-list the following CDN URL to render portals successfully:
 
     https://content.powerapps.com/resource/powerappsportal
 
@@ -331,7 +331,7 @@ There are situations in which portal won't be able to recreate website binding r
 
       - **Name**: Can be any string
       - **Website**: Select the website record that you want to be rendered on portal
-      - **Sitename**: Type in the hostname of your portal i.e Portal URL without ```https://``` in the beginning. If your Portal is using custom domain name, then use custom domain name here.
+      - **Sitename**: Type in the hostname of your portal i.e Portal URL without `https://` in the beginning. If your Portal is using custom domain name, then use custom domain name here.
       - Leave all other fields blank.
 
 3. Once website binding record is recreated, restart your portal from Power Apps Portals admin center.
