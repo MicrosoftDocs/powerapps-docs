@@ -28,6 +28,11 @@ After installing the Power Apps app from the Teams store:
 
     ![Start creating an app](media/create-app-1.png "Start creating an app")
 
+    > [!TIP]
+    > If you don't see the **Power Apps** app in the left pane, select ![More added apps - ellipsis](media/more-added-apps-ellipsis.png "More added apps - ellipsis") (*More added apps*), and then select **Power Apps**.
+    
+    ![Power Apps](media/power-apps.png "Power Apps")
+
 1. You'll be prompted to select a team where you want to create the app. Select a team to create the app.
 
     ![Select a team to create the app](media/create-app-2.png "Select a team to create the app")
