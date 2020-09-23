@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/14/2020
-ms.author: mduelae
+ms.date: 09/23/2020
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -41,7 +41,7 @@ To find the URL, in the address bar the first part of the URL that starts with *
 
 **Issue**: When you open an existing phone call activity record, and on the **Phone Number** field select the phone icon, the system opens a new **Quick Create: Phone Call** activity. 
 
-> ![Create a phone call record](media/error_phonecallactivity.png "Create a phone call record")
+> ![Create a phone call activity record](media/error_phonecallactivity.png "Create a phone call activity record")
 
 If you attempt to save the new phone call activity record, you will get this error, **Unable to find many-to-one relationship,entity: phonecall, referenced Entity: undefined, field: regardingobjectid**. 
 
