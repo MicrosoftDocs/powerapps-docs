@@ -1,13 +1,13 @@
 ---
 title: "Frequently Asked Questions about activities and the timeline wall| MicrosoftDocs"
-ms.custom: ""
+description: Frequently Asked Questions about Activities and the Timeline Wall  
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/14/2020
-ms.author: mduelae
+ms.date: 09/23/2020
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
