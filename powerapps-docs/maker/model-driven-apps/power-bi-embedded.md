@@ -1,5 +1,6 @@
 ---
 title: "Power BI embedded best practices | MicrosoftDocs"
+description: Power BI embedded best practices
 ms.custom: ""
 ms.date: 06/27/2018
 ms.reviewer: "matp"
