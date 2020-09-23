@@ -1,5 +1,6 @@
 ---
-title: "Create or edit model-driven app Power BI embedded page | MicrosoftDocs"
+title: "Create or edit a Power BI embedded system dashboard | MicrosoftDocs"
+description: Set up and use a system dashboard that references a Power BI report or dashboard in a model-driven app.
 ms.custom: ""
 ms.date: 09/09/2020
 ms.reviewer: "matp"
@@ -18,7 +19,7 @@ search.app:
   - "PowerApps"
   - D365CE
 ---
-# Create or edit a Power BI embedded system dashboard (preview)
+# Create or edit a Power BI embedded system dashboard (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
