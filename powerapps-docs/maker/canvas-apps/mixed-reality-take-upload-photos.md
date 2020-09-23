@@ -15,11 +15,15 @@ search.app:
   - PowerApps
 ---
 
-# Take and upload mixed reality photos in Power Apps (Preview)
+# Take and upload mixed-reality photos in Power Apps (Preview)
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-You can add a control to take photos of the mixed reality (MR) experience in your apps that use the following components:
+
+<!-- editor query: Wondering about the first sentence. Is it the control or the apps that "use the following components"? If it's the apps, then the sentence is OK. If it's the control, it should be "uses." -->
+
+
+You can add a control to take photos of the mixed-reality (MR) experience in your apps that use the following components:
 - [View in MR](mixed-reality-component-view-mr.md)
 - [View shape in MR](mixed-reality-component-view-shape.md)
 - [Measure in MR](mixed-reality-component-measure-distance.md)
@@ -27,15 +31,15 @@ You can add a control to take photos of the mixed reality (MR) experience in you
 
 This topic will guide you through creating a test app that you can use to take and upload photos from within an MR session, including:
 
-- Inserting a **View in 3D** component with the default sample 3D object included so you can see and manipulate a 3D object
-- Connecting the **View in 3D** component to a **View in MR** component button so you can view the 3D object in MR
-- Testing the components using a MR-capable device
-- Inserting a gallery to view recorded photos taken from the **View in MR** component on the MR-capable device
-- Uploading photos to OneDrive with a Power Automate flow
+- Inserting a **View in 3D** component with the default sample 3D object included so you can see and manipulate a 3D object.
+- Connecting the **View in 3D** component to a **View in MR** component button so you can view the 3D object in MR.
+- Testing the components using an MR-capable device.
+- Inserting a gallery to view recorded photos taken from the **View in MR** component on the MR-capable device.
+- Uploading photos to OneDrive with a Power Automate flow.
 
 ## Prerequisites
 
-- Create a blank canvas app ready for editing
+- Create a blank canvas app ready for editing.
   - Go to the [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
        
        ![Create a blank phone layout app](./media/augmented-upload-photo/create-blank-phone-app.png "Select phone layout as your blank app type, highlighted in red")
@@ -54,15 +58,17 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 
 1. Open the **Insert** tab.
 2. Expand **Media**.
-3. Select the component **View in 3D** to place it in the center of the app screen, or drag and drop it to position it anywhere on the screen.  
+3. Select the component **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
+
     A default shape is included in the component. You can change this shape to another by altering the **Source** property. See [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic for more information. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
-3. Select the component **View in MR** to place it in the app screen, or drag and drop it to position it anywhere on the screen.
+3. Select the component **View in MR** to place it in the app screen, or drag it to position it anywhere on the screen.
 
    ![Insert the View in MR component into the app](./media/augmented-view-mr/augmented-view-mr.png "Insert the View in MR component into the app")
 
 1. In the **Properties** panel for the **View in MR** component, select the **Source** field and enter `ViewIn3D1.Src` to set the source object as the 3D object you inserted with the **View in 3D** component.  
+
     You can also use the expression editor at the top of the window: type `ViewIn3D1.Src`.
 
    ![Screenshot showing the Source property with ViewIn3D1.Src in the expression editor](./media/augmented-upload-photo/add-3d-model-source.png "Screenshot showing the Source property with ViewIn3D1.Src in the expression editor")
