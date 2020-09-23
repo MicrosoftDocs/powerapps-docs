@@ -260,6 +260,9 @@ In the Return to the Workplace solution, the following security roles are define
 
 - Return to the Workplace - Health & Safety Leader, which is used to manage employee cases.
 
+> [!IMPORTANT]
+> - These security roles are indicative. They provide broad access for test and demonstration purpose. Please review these roles carefully before when moving to a production environment or when loading sensitive data.
+
 **To assign security roles**
 
 1. Open the **Facility Safety Management** app or the **Workplace Care Management** app, in the top right select the gear icon and then select **Advanced Settings**.

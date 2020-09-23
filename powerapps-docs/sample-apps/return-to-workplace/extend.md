@@ -37,6 +37,27 @@ To learn more about supported extension methods, see:
 
 - [Get started with model-driven apps customizations using code](https://docs.microsoft.com/powerapps/developer/model-driven-apps/supported-customizations)
 
+## Security
+
+The security roles included in this solution are setup for test and demo purposes. They must be reviewed and understood thouroughly before moving to a production environment or when loading sensitive data.
+
+To learn more about the Power Platform and Common Data Service Security, see:
+
+- [Security in Common Data Service](https://docs.microsoft.com/en-us/power-platform/admin/wp-security)
+- [Security Roles](https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges)
+
+### Changing Security Roles guidance ###
+
+New security roles can be created and tailerod to your needs. The supplied security roles can serve as template here that can be copied. If the new roles need to be moved to different environments, they need to be added to a new solution.
+
+In order to copy the security role:
+
+1. Open the Settings
+2. Select Settings and then Security
+3. Select Security Roles
+4. Select the role you want to copy
+5. Click 'More actions' and select 'Copy Role...'
+
 ## Entity relationship diagram
 
 The entity relationship diagram illustrates the entities and their relationships that are present in the Common Data Service environment. System-generated entities and relationships such as **Created By** and **Modified By** attributes are not displayed in the diagram.
