@@ -195,10 +195,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
     `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run(ImageURI, JSON(ImageURI, JSONFormat.IncludeBinaryData)));`
 
 
-
-
-
-## Other mixed reality controls
+## Other mixed-reality controls
 
 - View 3D content with the **[View in 3D](mixed-reality-component-view-3d.md)** component.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
