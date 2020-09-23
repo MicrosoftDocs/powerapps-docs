@@ -116,7 +116,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
     ![Select action, then Power Automate](./media/augmented-upload-photo/open-automate.png "Select action, then Power Automate")
 2. Choose the template for a **PowerApps button**.
 
-    ![Select the PowerApps button template](./media/augmented-upload-photo/create-power-apps-button.png "Select the PowerApps buton template")
+    ![Select the PowerApps button template](./media/augmented-upload-photo/create-power-apps-button.png "Select the PowerApps button template")
 3. To make it easier to find later, rename the flow by selecting **PowerApps button** at the top and entering a new name.
 
     ![Change the name on the top of the screen](./media/augmented-upload-photo/rename-flow.png "Change the name on the top of the screen")
