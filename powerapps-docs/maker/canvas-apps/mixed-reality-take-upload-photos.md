@@ -20,9 +20,6 @@ search.app:
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 
-<!-- editor query: Wondering about the first sentence. Is it the control or the apps that "use the following components"? If it's the apps, then the sentence is OK. If it's the control, it should be "uses." -->
-
-
 You can add a control to take photos of the mixed-reality (MR) experience in your apps that use the following components:
 - [View in MR](mixed-reality-component-view-mr.md)
 - [View shape in MR](mixed-reality-component-view-shape.md)
@@ -80,9 +77,6 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 ## Insert a gallery to view photos taken in the app
 
 You can now insert a gallery control into your app. The gallery control lets users of the app take and view photos from within the app.
-
-
-<!-- editor note: The second sentence below was confusing. Please check the rewording for accuracy. -->
 
 Photos you take by selecting the camera icon in the MR view on the app will be loaded into the gallery component on the app. If you exit the MR view to see the gallery, re-entering the MR view and taking more photos will overwrite the photos.
 
