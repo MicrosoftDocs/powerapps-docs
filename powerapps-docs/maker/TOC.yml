@@ -57,16 +57,12 @@
         href: ../user/screen-reader.md
       - name: Keyboard shortcuts
         href: ../user/keyboard-shortcuts.md
-    - name: Work with records and activities
+    - name: Work with records 
       items:
       - name: Create a record
         href: ../user/create-a-record.md
-      - name: Add activities to the timeline
-        href: ../user/add-activities.md
       - name: Work with records in the new calendar view
         href: ../user/calendar-view.md
-      - name: FAQ about activities
-        href: ../user/faq-for-timeline-and-activity.md
       - name: Use the lookup field on a record
         href: ../user/lookup-field.md
       - name: View a profile card
@@ -78,7 +74,27 @@
       - name: Add a connection role
         href: ../user/add-connection-role.md
       - name: Deactivate accounts or contacts
-        href: ../user/deactivate-activate-account-contact.md   
+        href: ../user/deactivate-activate-account-contact.md 
+    - name: Work with activities
+      items:
+      - name: Add activities to the timeline
+        href: ../user/add-activities.md
+      - name: FAQ about activities
+        href: ../user/faq-for-timeline-and-activity.md
+      - name: Known issues for activities
+        href: ../user/activities-known-issues.md     
+    - name: Work with email
+      items:
+      - name: View and create email through the activities grid
+        href: ../user/view-create-email.md
+      - name: Send email using the enhanced email experience
+        href: ../user/enhanced-email.md
+      - name: Insert an email template
+        href: ../user/insert-email-template.md
+      - name: Send email to multiple recipients
+        href: ../user/direct-email.md
+      - name: Resolve an unresolved email recipient
+        href: ../user/unresolved-email-recipient.md
     - name: Work with grid filters
       items:
       - name: Use grid filters
@@ -95,18 +111,6 @@
         href: ../user/interactive-dashboards.md
       - name: Add Power BI dashboards
         href: ../user/add-powerbi-dashboards.md      
-    - name: Work with email
-      items:
-      - name: View and create email through the activities grid
-        href: ../user/view-create-email.md
-      - name: Send email using the enhanced email experience
-        href: ../user/enhanced-email.md
-      - name: Insert an email template
-        href: ../user/insert-email-template.md
-      - name: Send email to multiple recipients
-        href: ../user/direct-email.md
-      - name: Resolve an unresolved email recipient
-        href: ../user/unresolved-email-recipient.md
     - name: Collaboration
       items:
       - name: Use OneDrive for Business
@@ -880,9 +884,7 @@
     - name: Share app resources
       href: ./canvas-apps/share-app-resources.md
     - name: Embed an app in Power BI
-      href: ./canvas-apps/embed-powerapps-powerbi.md
-    - name: Embed an app in Teams
-      href: ./canvas-apps/embed-teams-app.md
+      href: ./canvas-apps/embed-powerapps-powerbi.md    
   - name: Manage an app
     items:
     - name: Edit an app
@@ -1777,8 +1779,74 @@
   - name: For developers
     href: ../developer/common-data-service/overview.md
     # href: ../developer/common-data-service/TOC.yml  changing this to have developer TOC rather than buried in maker toc
+
+- name: Teams integration
+  items:
+  - name: Overview
+    href: ../teams/overview.md
+  - name: Embed a canvas app as tab app
+    href: ../teams/embed-teams-tab.md
+  - name: Embed a canvas app as personal app
+    href: ../teams/embed-teams-app.md
+  - name: Create apps in Teams (Preview)
+    items:
+    - name: Create apps in Teams
+      href: ../teams/create-apps-overview.md
+    - name: Get started
+      items:      
+        - name: Install the Power Apps personal app
+          href: ../teams/install-personal-app.md
+        - name: Create your first app
+          href: ../teams/create-first-app.md    
+    - name: Understand the Power Apps interface
+      items:
+        - name: Overview of the Power Apps app
+          href: ../teams/overview-of-the-power-apps-app.md
+        - name: Understand Power Apps Studio
+          href: ../teams/understand-power-apps-studio.md
+        - name: Use the Fluent UI controls
+          href: ../teams/use-the-fluent-ui-controls.md
+    - name: Create additional apps
+      href: ../teams/create-additional-apps.md
+    - name: Use Teams integration object
+      href: ../teams/use-teams-integration-object.md
+    - name: Work with Project Oakdale
+      items:
+        - name: Overview
+          href: ../teams/overview-data-platform.md
+        - name: Project Oakdale vs Common Data Service
+          href: ../teams/data-platform-compare.md
+        - name: Create a table
+          href: ../teams/create-table.md
+        - name: Edit or delete a table
+          href: ../teams/edit-delete-table.md
+        - name: Work with table relationships
+          href: ../teams/relationships-table.md
+        - name: Work with table columns
+          href: ../teams/table-columns.md
+    - name: Manage your apps
+      href: ../teams/manage-your-apps.md
+    - name: Publish and share your app
+      href: ../teams/publish-and-share-apps.md
+    - name: Remove your apps
+      href: ../teams/remove-your-apps.md
+    - name: Uninstall Power Apps personal app
+      href: ../teams/uninstall-personal-apps.md
+    - name: Sample apps
+      items:
+        - name: Use sample apps from Teams store
+          href: ../teams/use-sample-apps-from-teams-store.md
+        - name: Employee Ideas
+          href: ../teams/employee-ideas.md
+        - name: Inspection
+          href: ../teams/inspection.md
+        - name: Issue Reporting
+          href: ../teams/issue-reporting.md
+    - name: Known issues and limitations
+      href: ../teams/known-issues-limitations.md
 - name: Chatbots
   href: ../chatbots.md
+
 - name: AI Builder
   href: ../use-ai-builder.md
 - name: Sample apps and solutions
