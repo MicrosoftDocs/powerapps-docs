@@ -57,7 +57,7 @@ With an app open for editing in [Power Apps Studio](https://create.powerapps.com
 2. Expand **Media**.
 3. Select the component **View in 3D** to place it in the center of the app screen, or drag it to position it anywhere on the screen.  
 
-    A default shape is included in the component. You can change this shape to another by altering the **Source** property. See [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic for more information. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
+    A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, see [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
 1. Open the **Insert** tab.
 2. Expand **Mixed reality**.
 3. Select the component **View in MR** to place it in the app screen, or drag it to position it anywhere on the screen.
@@ -116,7 +116,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 ## Upload photos to OneDrive with a Power Automate flow
 
 
-1. Go to the **Action** tab and select **Power Automate**, followed by **Create a new flow**. This opens Power Automate in a new browser tab. You might need to sign in at the top.
+1. Go to the **Action** tab and select **Power Automate**, followed by **Create a new flow**. This option opens Power Automate in a new browser tab. You might need to sign in at the top.
 
     ![Select Action, then select Power Automate](./media/augmented-upload-photo/open-automate.png "Select Action, then select Power Automate")
 2. Choose the template for a **PowerApps button**.
@@ -148,7 +148,7 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
            
            ![Screenshot highlighting the See more button](./media/augmented-upload-photo/see-more.png "Screenshot highlighting the See more button")
 
-          This adds a second purple box named **Createfile_FileContent** into the **Create file** task.  
+          Adding this content adds a second purple box named **Createfile_FileContent** into the **Create file** task.  
           
           Select **X** to remove it. 
 
@@ -180,11 +180,11 @@ You can insert a "pop-up" overlay of the selected image so users of the app can 
 
     ![Screenshot showing the code in the expression editor](./media/augmented-upload-photo/button-upload-code.png "Screenshot showing the code in the expression editor")
 
-    If you were inside a gallery of the MR photos, you could instead use the following formula:
+    If you're inside a gallery of the MR photos, instead use the following formula:
     
     `UploadMRPhoto.Run(ThisItem.ImageURI, JSON(ThisItem.ImageURI, JSONFormat.IncludeBinaryData));`
 
-    If you wanted to create a button that would upload all of the photos taken in the MR session, you could use this formula: 
+    If you want to create a button that uploads all of the photos taken in the MR session, use this formula: 
 
     `ForAll(ViewInMR1.Photos, UploadMRPhoto.Run(ImageURI, JSON(ImageURI, JSONFormat.IncludeBinaryData)));`
 
