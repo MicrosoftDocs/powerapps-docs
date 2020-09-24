@@ -1,13 +1,13 @@
 ---
-title: Take real-world screenshots of objects in mixed reality
-description: Use your app to take photos of 3D objects that are overlaid in the real world.
+title: Add pins to your 3D objects
+description: Use your app to add pins to 3D objects.
 author: iaanw
 manager: shellyha
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 9/1/2020
+ms.date: 9/24/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
