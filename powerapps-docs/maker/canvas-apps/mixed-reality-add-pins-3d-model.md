@@ -33,12 +33,12 @@ This topic will guide you through creating a test app with a 3D model that you c
 ## Prerequisites
 
 - Create a blank canvas app ready for editing.
-  - Go to the [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
+  - Go to [Power Apps Studio](https://create.powerapps.com) and, under the **Start with a blank canvas or a template** section, select **Phone layout** on the **Blank app** tile.  
        
        ![Create a blank phone layout app](./media/augmented/create-blank-phone-app.png "Select phone layout as your blank app type, highlighted in red")
        
-- [Enable the MR features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
-- Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
+- [Enable the mixed-reality features](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app).
+- Make sure to also [review the prerequisites for using mixed-reality components](mixed-reality-overview.md#prerequisites).
 
 
 ## Insert and connect pins to a 3D model
@@ -53,9 +53,10 @@ First, insert a 3D model:
 
     A default shape is included in the component. You can change this shape to another by altering the **Source** property. For more information, go to [Define where the 3D content is stored](mixed-reality-component-view-3d.md#define-where-the-3d-content-is-stored) in the **View in 3D** component's topic. In this example, we'll use the URL *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/chair.glb*.
 
->[!NOTE]
->This component will be named `ViewIn3D1` by default, and is how it will be referenced throughout this guide. If you add multiple versions of this component, you'll need to adjust your references.  
->For example, if you insert a second copy of the component, by default it will be called `ViewIn3D1_1` and any code references will need to be changed to refer to it.
+> [!NOTE]
+> This component will be named `ViewIn3D1` by default, and is how it will be referenced throughout this guide. If you add multiple versions of this component, you'll need to adjust your references.  
+>
+> For example, if you insert a second copy of the component, by default it will be called `ViewIn3D1_1` and any code references will need to be changed to refer to it.
 
 
 Now you'll need to connect a set of predefined pins to your model.
@@ -70,14 +71,16 @@ Column description | Maps to property
 Label for the pin | ItemsLabels
 X dimension of the pin | PinsX
 Y dimension of the pin | PinsY
-Z dimension (depth) of the pint | PinsZ
+Z dimension (depth) of the pin | PinsZ
 
+
+<!-- editor note: the following question was here prior to this edit. -->
 <!-- is there a label field? -->
 
 
 The following is an example of an Excel table with the required columns:
 
-![Sample excel file with a table named Table1 and containing Label, X Pins, Y Pins, and Z Pins columns](./media/augmented/pins-table-sample.png "Sample excel file with a table named Table1 and containing Label, X Pins, Y Pins, and Z Pins columns")
+![Sample Excel file with a table named Table1 and containing Label, X Pins, Y Pins, and Z Pins columns](./media/augmented/pins-table-sample.png "Sample Excel file with a table named Table1 and containing Label, X Pins, Y Pins, and Z Pins columns")
 
 You can copy the following sample data to test this functionality:
 
@@ -98,7 +101,7 @@ X Point | 0.00 | 0.72 | -0.20
 
     ![Screenshot highlighting the Format as Table option in Excel](./media/geospatial/convert-table.png "Screenshot highlighting the Format as Table option in Excel")
 
-1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**, for example *TestData*.
+1. Select the table, and then go to the **Table Design** tab on the ribbon. Enter a name for the table under **Table Name:**—for example, *TestData*.
 
     ![Screenshot highlighting the Table Name field in Excel](./media/geospatial/table-name.png "Screenshot highlighting the Table Name field in Excel")
 
@@ -138,11 +141,11 @@ You can show the label associated with the currently selected pin by inserting a
 1. Open the **Insert** tab.
 2. Expand **Layout**.
 3. Select the **Data table** control and place it on the app screen.
-4. Choose to show only the selected pin, or all pins:
+4. Choose to show all pins, or only the selected pin:
 
    1. Show all pins: On the **Properties** pane, set the **Data source** property to the Excel table you added.
 
-        ![Under Data Source, select the Excel table option](./media/augmented/pins-label-table.png "Under Data Source, select the Excel table option")
+        ![Under Data source, select the Excel table option](./media/augmented/pins-label-table.png "Under Data source, select the Excel table option")
 
    1. Selected pin only: In the expression editor at the top, set the **Items** property to `ViewIn3D1.SelectedItems`.
 
@@ -193,7 +196,7 @@ You can [create a collection](create-update-collection.md) within the app so use
 
     ![In the Pins(Items) field, select the PinsCollection option](./media/augmented/pins-collect-connect.png "In the Pins(Items) field, select the PinsCollection option")
 
-1. On the **Properties** pane, go to the **Advanced** tab, and select **More options**.
+1. On the **Properties** pane, go to the **Advanced** tab and select **More options**.
 
 1. Set the following properties:
 
@@ -215,8 +218,8 @@ You can display each of the pins as they are added:
 
 As users add pins with the **Add pin** button, they will display in the table below the button.
 
-## Other mixed reality controls
+## Other mixed-reality controls
 
-- View 3D content in MR with the **[View in MR](mixed-reality-component-view-mr.md)** component.
+- View 3D content in mixed reality with the **[View in MR](mixed-reality-component-view-mr.md)** component.
 - Measure distance, area, and volume with the **[Measure in mixed reality](mixed-reality-component-measure-distance.md)** component.
 - Create and view predefined 3D shapes with the **[View shape in mixed reality](mixed-reality-component-view-shape.md)** component
