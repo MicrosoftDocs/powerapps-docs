@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 09/24/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -267,6 +267,11 @@ To update the app title:
 Verify all the changes you made to the app.
 
 ![Verify all changes](media/app-changes.png "Verify all changes")
+
+> [!TIP]
+> For better responsiveness, the [data cards](../maker/canvas-apps/working-with-cards.md) by default have [**Width fit**](../maker/canvas-apps/controls/properties-size-location.md#size) property set to *On*. If you want to resize the data cards manually, select the data cards and then set the **Width fit** property to *Off* first.
+
+![Data card - width fit property](media/data-card-width-fit.png "Data card - width fit property")
 
 ### Save and preview the app
 
