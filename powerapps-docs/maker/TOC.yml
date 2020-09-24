@@ -345,6 +345,8 @@
               href: ./canvas-apps/mixed-reality-component-view-mr.md
             - name: Measure in mixed reality
               href: ./canvas-apps/mixed-reality-component-measure-distance.md
+            - name: Add pins to 3D models
+              href: ./canvas-apps/mixed-reality-add-pins-3d-model.md
             - name: Upload photos from mixed reality
               href: ./canvas-apps/mixed-reality-take-upload-photos.md
           - name: "Add geospatial components (Preview)"
@@ -1113,9 +1115,9 @@
           - name: How to add a tab for SharePoint documents
             href: ./model-driven-apps/add-documents-tab-entity-main-form.md
         - name: Troubleshoot forms
-          items: 
+          items:
           - name: Use Monitor to troubleshoot forms
-            href: ./model-driven-apps/monitor-form-checker.md            
+            href: ./model-driven-apps/monitor-form-checker.md
       - name: Embed a canvas app on a model-driven form
         href: ./model-driven-apps/embed-canvas-app-in-form.md
         items:
@@ -1724,13 +1726,13 @@
         - name: Create a connection reference
           href: ./common-data-service/create-connection-reference.md  
         - name: Translate customized component text
-          items: 
+          items:
           - name: Overview
             href: ./common-data-service/translate-entity-label-text.md
           - name: Export customized component text for translation
             href: ./common-data-service/export-customized-entity-field-text-translation.md
           - name: Import translated component text
-            href: ./common-data-service/import-translated-entity-field-text.md               
+            href: ./common-data-service/import-translated-entity-field-text.md
       - name: Use solution checker
         href: ./common-data-service/use-powerapps-checker.md
         items:
@@ -1902,7 +1904,7 @@
     - name: Deploy the solution
       href: ../sample-apps/return-to-workplace/deploy.md
     - name: Upgrade the solution
-      href: ../sample-apps/return-to-workplace/upgrade.md      
+      href: ../sample-apps/return-to-workplace/upgrade.md
     - name: Configure the solution
       href: ../sample-apps/return-to-workplace/configure.md
     - name: Location Readiness dashboard
