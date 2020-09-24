@@ -37,7 +37,19 @@ To learn more about supported extension methods, see:
 
 - [Get started with model-driven apps customizations using code](https://docs.microsoft.com/powerapps/developer/model-driven-apps/supported-customizations)
 
-## Security
+## Guidance
+
+With the solution there are numerous parts which can be extended. Below are a couple of components where we give some additional guidance to customize or tailor them.
+
+### Canvas App
+
+The canvas app within the solution can be tailored to your own needs. Advised when doing so, is to copy the canvas app. This way your changes aren't impacted by new changes. In order to copy the canvas app:
+
+1. Go to the Maker Portal (https://make.powerapps.com)
+2. Select App and **Edit** the **Employee Return to the Workplace** app.
+3. Select **File** and the press **Save As**. Select a new location and name and then press **Save**.
+
+### Security Roles
 
 The security roles included in this solution are setup for test and demo purposes. They must be reviewed and understood thouroughly before moving to a production environment or when loading sensitive data.
 
@@ -46,17 +58,15 @@ To learn more about the Power Platform and Common Data Service Security, see:
 - [Security in Common Data Service](https://docs.microsoft.com/en-us/power-platform/admin/wp-security)
 - [Security Roles](https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges)
 
-### Changing Security Roles guidance ###
-
 New security roles can be created and tailerod to your needs. The supplied security roles can serve as template here that can be copied. If the new roles need to be moved to different environments, they need to be added to a new solution.
 
 In order to copy the security role:
 
-1. Open the Settings
-2. Select Settings and then Security
-3. Select Security Roles
-4. Select the role you want to copy
-5. Click 'More actions' and select 'Copy Role...'
+1. Open the **Settings**.
+2. Select **Settings** and then **Security**.
+3. Select **Security Roles**.
+4. Select the role you want to copy.
+5. Click **More actions** and select **Copy Role...**.
 
 ## Entity relationship diagram
 
