@@ -2,14 +2,10 @@
 title: "Create or edit a Power BI embedded system dashboard | MicrosoftDocs"
 description: Set up and use a system dashboard that references a Power BI report or dashboard in a model-driven app.
 ms.custom: ""
-ms.date: 09/09/2020
+ms.date: 09/24/2020
 ms.reviewer: "matp"
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "article"
-applies_to: 
-  - "PowerApps"
 ms.author: "aorth"
 manager: "kvivek"
 author: "adrianorth"
@@ -111,5 +107,5 @@ When a solution with a Power BI embedded component will be moved to other enviro
 [Create or edit model-driven app dashboards](create-edit-dashboards.md) <br />
 [View entity data in Power BI Desktop](../common-data-service/view-entity-data-power-bi.md) <br />
 [Use Power BI](use-power-bi.md) <br />
-[Use Power BI with CDS](../common-data-service/use-powerbi-with-cds.md) <br />
+[Use Power BI with Common Data Service](../common-data-service/use-powerbi-with-cds.md) <br />
 [Create a Power BI report using the Common Data Service connector](../common-data-service/data-platform-powerbi-connector.md)
