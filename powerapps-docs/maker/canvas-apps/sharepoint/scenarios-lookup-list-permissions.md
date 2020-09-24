@@ -1,19 +1,19 @@
 ---
-title: How to work with permissions in a lookup list from SharePoint site. | Microsoft Docs
+title: Work with permissions in a lookup list from a SharePoint site | Microsoft Docs
 description: This article explains how to configure lookup list permissions in SharePoint when using a canvas app.
 author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 06/01/2020
+ms.date: 09/01/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-# How to work with permissions in a lookup list from SharePoint site?
+# Work with permissions in a lookup list from a SharePoint site
 
 In this scenario article, you'll learn how to configure permissions for fields that use lookup columns from SharePoint lists. When you create a canvas app that connects to SharePoint, the app follows permissions configured inside SharePoint. Unique permissions at different levels inside SharePoint can become confusing when surfacing lists, libraries, or items on a canvas app screen.
 
@@ -21,14 +21,14 @@ The example in this tutorial explains how you can work with a canvas app that co
 
 ## Prerequisites
 
-- You must have created an app using SharePoint connector that connects to a SharePoint list.
+- You must have created an app using a SharePoint connector that connects to a SharePoint list.
 - The SharePoint list should consist of a lookup column with values from another column.
-- You need two user accounts with access to the app and SharePoint site hosting the lists.
+- You need two user accounts with access to the app and the SharePoint site hosting the lists.
 - You need to be knowledgeable about how to configure SharePoint lists and list/item permissions.
 
 ## Scenario details
 
-You can customize permissions for a SharePoint list or list item when you [stop inheriting permissions](https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c). Consider you connect your app with a SharePoint site that has broken inheritance at different levels. The app behavior may appear confusing if the user doesn't have access to the correct SharePoint objects as intended. Ensure the user can browse to the list and work with the objects with same permissions that you expect canvas app to surface.
+You can customize permissions for a SharePoint list or list item when you [stop inheriting permissions](https://support.office.com/en-us/article/share-sharepoint-files-or-folders-1fe37332-0f9a-4719-970e-d2578da4941c). Consider, for example, that you connect your app with a SharePoint site that has a broken inheritance at different levels. The app behavior might appear confusing if the user doesn't have access to the correct SharePoint objects as intended. Ensure the user can browse to the list and work with the objects with the same permissions that you expect the canvas app to surface.
 
 ## Example
 
@@ -39,17 +39,17 @@ You can customize permissions for a SharePoint list or list item when you [stop 
     | Shapes | - Title <br> - Color (lookup column)
     | Colors | - Title (for color of the shape)
 
-     Shapes list has a Color lookup column. This lookup column is connected to the Color column from the Colors list for values. You can also use your own lists instead.
+     The Shapes list has a Color lookup column. This lookup column is connected to the Color column from the Colors list for values. You can also use your own lists instead.
 
 1. If necessary, create sample items:
 
-    | Shapes | Color |
+    | Shapes | Color 
     | - | - |
     | Circle | Red
     | Rectangle | Blue
     | Triangle | Green
 
-    The shape colors are through lookup column from the Colors list.
+    The shape colors are through the lookup column from the Colors list.
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -80,7 +80,7 @@ You can customize permissions for a SharePoint list or list item when you [stop 
     > [!NOTE]
     > If the user can see the lookup column, check the permissions for the lookup column list. If the lookup column list has unique permissions and the user is added, you can skip the next step.
 
-1. Go to Colors list permissions and add the other user, Kenny Smith in this example, explicitly.
+1. Go to Colors list permissions and add the other user (Kenny Smith in this example) explicitly.
 
     ![Colors list permissions](./media/scenarios-lookup-list-permissions/colors-list-permissions.png "Colors list permissions")
 
