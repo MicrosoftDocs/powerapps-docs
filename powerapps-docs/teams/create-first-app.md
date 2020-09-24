@@ -269,9 +269,9 @@ Verify all the changes you made to the app.
 ![Verify all changes](media/app-changes.png "Verify all changes")
 
 > [!TIP]
-> For better responsiveness, the [data cards](../maker/canvas-apps/working-with-cards.md) inside the app by default have [**Width fit**](../maker/canvas-apps/controls/properties-size-location.md#size) property turned *On*. If you want to resize the data cards, select the data cards and then set the **Width fit** setting to *Off* first.
+> For better responsiveness, the [data cards](../maker/canvas-apps/working-with-cards.md) inside the app by default have [**Width fit**](../maker/canvas-apps/controls/properties-size-location.md#size) property turned *On*. If you want to resize the data cards, select the data cards and then set the **Width fit** property to *Off* first.
 
-![Data card - width fit setting](media/data-card-width-fit.png "Data card - width fit setting")
+![Data card - width fit property](media/data-card-width-fit.png "Data card - width fit property")
 
 ### Save and preview the app
 
