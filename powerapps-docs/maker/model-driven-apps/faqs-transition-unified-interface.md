@@ -2,7 +2,7 @@
 title: "FAQs: Transition to Unified Interface | MicrosoftDocs"
 description: "FAQs related to the transition process for moving users from the legacy web client to Unified Interface."
 ms.custom: ""
-ms.date: 08/07/2020
+ms.date: 09/02/2020
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -222,5 +222,11 @@ We don't anticipate any downtime when making this transition. However, we will o
 ### Are environments from all data centers included within this transition service?
 
 At present, environments from specific data centers, such as Government Community Cloud (GCC), have not been included within the portal. We'll provide suggested transition dates for these environments by June 2020. Customers who want to make the move to Unified Interface can always [switch manually](/power-platform/admin/enable-unified-interface-only#how-to-enable-unified-interface-only-mode) at any time before December 1, 2020.
+
+### Within the transition portal, I can see a final transition date which is after December 1, 2020. What does this mean?
+
+If you are still using the legacy web client after December 1, 2020, we will automatically transition your environment to Unified Interface. This process will be applied by geographic location. The **Final Transition Date** column indicates when we expect this to happen. All the dates are shown in the MM/DD/YYYY format. Consider this the last date when the legacy web client will be available for your environment. We strongly discourage any customers delaying the transition until the last minute. The legacy web client will no longer be available to users after the final transition date. So, there won't be any opportunity to switch back and continue testing should you run into any issues after this date.
+
+
 
 
