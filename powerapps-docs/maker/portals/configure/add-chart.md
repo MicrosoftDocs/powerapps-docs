@@ -27,7 +27,7 @@ For example, to show leads by source and filtered for only open leads view:
 ```
 
 > [!IMPORTANT]
-> You must specify the values for both the `chart id` and the `viewid` parameters to render a chart on a portals webpage.
+> You must specify the values for both the [`chart id`](#get-the-id-of-a-chart) and the [`viewid`](#get-the-id-of-a-view) parameters to render a chart on a portals webpage.
 
 ## Get the ID of a chart
 
