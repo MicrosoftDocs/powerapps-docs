@@ -1359,24 +1359,34 @@
           href: ./portals/configure/configure-site-settings.md
         - name: Portal authentication
           items:
-            - name: Configure portal authentication
+            - name: Overview
               href: ./portals/configure/configure-portal-authentication.md
-            - name: Use simplified authentication configuration (Preview)
-              href: ./portals/configure/use-simplified-authentication-configuration.md
             - name: Set authentication identity
               href: ./portals/configure/set-authentication-identity.md
-            - name: Azure AD B2C provider settings for portals
-              href: ./portals/configure/azure-ad-b2c.md
-            - name: Configure OAuth2 provider settings
-              href: ./portals/configure/configure-oauth2-settings.md
-            - name: Configure OpenID provider settings
-              href: ./portals/configure/configure-openid-settings.md
-            - name: Configure WS-Federation provider settings
-              href: ./portals/configure/configure-ws-federation-settings.md
-            - name: Configure SAML 2.0 provider settings
-              href: ./portals/configure/configure-saml2-settings.md
-            - name: Migrate identity providers to Azure AD B2C
-              href: ./portals/configure/migrate-identity-providers.md
+            - name: Azure AD B2C
+              items:
+                   - name: Configure Azure AD B2C provider
+                     href: ./portals/configure/use-simplified-authentication-configuration.md
+                   - name: Migrate identity providers to Azure AD B2C
+                     href: ./portals/configure/migrate-identity-providers.md
+                   - name: Azure AD B2C provider settings for portals
+                     href: ./portals/configure/azure-ad-b2c.md
+            - name: OAuth 2.0
+              items:
+                   - name: Configure OAuth2 provider settings
+                     href: ./portals/configure/configure-oauth2-settings.md
+            - name: OpenID Connect
+              items:
+                   - name: Configure OpenID provider settings
+                     href: ./portals/configure/configure-openid-settings.md
+            - name: SAML 2.0
+              items:
+                    - name: Configure SAML 2.0 provider settings
+                      href: ./portals/configure/configure-saml2-settings.md
+            - name: WS-FED
+              items:
+                    - name: Configure WS-Federation provider settings
+                      href: ./portals/configure/configure-ws-federation-settings.md
         - name: Search
           items:
             - name: About search
