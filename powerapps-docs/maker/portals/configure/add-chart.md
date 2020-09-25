@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -27,6 +27,9 @@ You can also specify the ID of a view (saved query) to filter the query. For exa
 <!—Leads by Source – Open Leads -->
 {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
 ```
+
+> [!IMPORTANT]
+> Both the `chart id` and the `viewid` are required for a chart to render on a portals webpage.
 
 ## Get the ID of a chart
 
