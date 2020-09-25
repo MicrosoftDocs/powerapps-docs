@@ -2,7 +2,7 @@
 title: "View entity data in Power BI Desktop (Preview) | MicrosoftDocs"
 description: "Learn how access and view entity data in Power BI Desktop"
 ms.custom: ""
-ms.date: 05/26/2020
+ms.date: 09/25/2020
 ms.reviewer: "matp"
 ms.service: powerapps
 author: "Mattp123"
@@ -19,14 +19,14 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
+> [!IMPORTANT]
+> A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is globally disabled, and we are working urgently to address the issue. This topic will be updated when the issue is resolved or when we have more information to share.
+> While this feature is disabled, the existing Commmon Data Service connector still works using the import connection mode.
+
 You can use Power BI Desktop to view entities in Common Data Service. The entity
 record data that you can access from your environment is read-only. Data access
 uses the Common Data Service security model that is the same used to access
 entity record data using a Power Apps app.
-
-> [!IMPORTANT]
-> A problem has been identified with the Tabluar Data Stream (TDS) endpoint. This feature has been globally disabled. We are working urgently address the issue. This topic will be updates when we have more information.
-> While this is disabled the existing Commmon Data Service connector still works using the import connection mode.
 
 > [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
