@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/02/2020
+ms.date: 09/25/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -36,12 +36,16 @@ To reset a configured portal:
 > - If you have provisioned a portal using the older portal add-on and the portal is reset successfully, the portal name and its status on the **Applications** tab on the **Dynamics 365 Administration Center** page does not change. For example, if your portal name and status were Portal 1 and Configured respectively, then after resetting the portal, these values do not change. If you want to change the portal name, you can change it on the **Portal Details** tab in the Power Apps Portals admin center. However, the status value cannot be reverted to Not Configured.
 > - It is important to note that the portal's status on the **Applications** tab does not represent its provisioning status and does not affect the functioning of your portal. It just shows whether you have ever accessed the Power Apps Portals admin center for that corresponding portal or not.
 > - If you have provisioned a portal using the older portal add-on, you can reset the portal to **not configured** state and [create a new portal](../provision-portal-add-on.md).
-> - If you reset a portal and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, read [Set up Power BI integration](https://docs.microsoft.com/powerapps/maker/portals/admin/set-up-power-bi-integration#create-security-group-and-add-to-power-bi-account).
+> - If you reset a portal and provision a new portal, you must add portal application ID of the new portal to the **Portal Power BI Embedded service** Azure AD security group. For more information, read [Set up Power BI integration](set-up-power-bi-integration.md#create-security-group-and-add-to-power-bi-account).
  
 If your portal is not provisioned correctly, it goes into an error state and the following screen is displayed. In this case, you can also reset the portal by selecting **Reset Portal** on the error screen.
 
 > [!div class=mx-imgBorder]
 > ![Error while provisioning a portal](../media/provision-portal-error.png "Error while provisioning a portal")
+
+### Completely delete a portal
+
+To learn about how to delete a portal completely, go to [How do I delete a portal completely after it's provisioned?](../faq.md?#how-do-i-delete-a-portal-completely-after-its-provisioned).
 
 ## Troubleshooting
 
@@ -62,4 +66,3 @@ If a reset portal job fails, an error message is displayed along with the **Rese
 > ![Failure error while resetting a portal](../media/reset-portal-error.png "Failure error while resetting a portal")
 
 Typically, these are transient errors and you must select **Reset Portal** to restart the job. If the issue persists, contact Microsoft support.
-
