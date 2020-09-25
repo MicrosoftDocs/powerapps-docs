@@ -44,10 +44,10 @@ Project Oakdale currently isn't available in [Power Apps Government Community Cl
 
 Project Oakdale doesn't support [hidden membership groups](https://docs.microsoft.com/graph/api/resources/group?view=graph-rest-1.0&preserve-view=true#group-visibility-options). You'll receive one of the following errors when you try to create an app in a team that has the group visibility set to *Hiddenmembership*.
 
-- `Something went wrong` <br>
-    `The request failed with error: '{"errorCode":"BadRequest"}'. The tracking Id is 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'`
-- `Something went wrong. Please try again later.` <br>
-    `We couldn't save your tab settings. Please try again.`
+| Action | Error |
+| - | - |
+| [Create your first app](create-first-app.md#get-started-with-creating-your-first-app) | `Something went wrong` <br> `The request failed with error: '{"errorCode":"BadRequest"}'. The tracking Id is 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'` |
+| [Install a sample app](use-sample-apps-from-teams-store.md#install-the-sample-app) | `Something went wrong. Please try again later.` <br> `We couldn't save your tab settings. Please try again.` |
 
 The group may have hidden membership enabled by your administrator. Try using a different Teams team that has hidden membership not enabled, or contact your administrator.
 
