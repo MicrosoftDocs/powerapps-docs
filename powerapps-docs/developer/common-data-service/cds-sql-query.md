@@ -2,7 +2,7 @@
 title: "Use SQL to query data (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn how to query Common Data Service entity data using SQL." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/26/2020
+ms.date: 09/25/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-> [!IMPORTANT]
+> [!WARNING]
 > A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is globally disabled, and we are working urgently to address the issue. This topic will be updated when the issue is resolved or when we have more information to share.
 
 A SQL data connection is available on the Common Data Service endpoint. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
