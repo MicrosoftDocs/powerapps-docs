@@ -45,7 +45,12 @@ For example, to show leads by source and filtered for only open leads view:
 
 7. Paste the `visualizationid` value into your Liquid chart tag declaration for the chart ID parameter, for example:
 
-    `{% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}`
+    ```
+    <!—Leads by Source – Open Leads -->
+    {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" %}
+    ```
+
+Now that the Liquid chart tag declaration has the chart ID, follow the next steps to get the view ID.
 
 ## Get the ID of a view
 
