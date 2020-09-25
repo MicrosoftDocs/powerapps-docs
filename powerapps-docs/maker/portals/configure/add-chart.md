@@ -16,20 +16,18 @@ You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/porta
 
 - The **Copy** field on a webpage.
 - In the **Source** field on a [Web template](../liquid/store-content-web-templates.md).
- 
-For example, `{% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}`
 
-![Chart example](../media/dynamics365-chart-example.png "Chart example")
-
-You can also specify the ID of a view (saved query) to filter the query. For example:
+For example:
 
 ```
 <!—Leads by Source – Open Leads -->
 {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
 ```
+ 
+![Chart example](../media/dynamics365-chart-example.png "Chart example")
 
 > [!IMPORTANT]
-> Both the `chart id` and the `viewid` are required for a chart to render on a portals webpage.
+> You must specify the values for both the `chart id` and the `viewid` parameters to render a chart on a portals webpage.
 
 ## Get the ID of a chart
 
