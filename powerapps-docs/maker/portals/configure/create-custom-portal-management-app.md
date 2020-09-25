@@ -6,16 +6,21 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/02/2020
+ms.date: 09/25/2020
 ms.author: tapanm
 ms.reviewer: sandhan
 ---
 
 # Create custom Portal Management app
 
-The [overview](configure-portal.md) introduces **Portal Management** app to help you get started with the advanced portal configuration. In this walk-through, you'll learn how to create a custom **Portal Management** app for additional customization, or if you accidentally deleted it.
+The [overview](configure-portal.md) introduces **Portal Management** app to help you get started with the advanced portal configuration. In this walk-through, you'll learn how to create a custom **Portal Management** app.
 
 ## How to create a custom Portal Management app
+
+> [!IMPORTANT]
+> - A custom app created using this article can't be used as a replacement app for the default and supported **Portal Management** app. Use the method described in this article only if you accidentally deleted the default **Portal Management** app.
+> - Any updates to the default **Portal Management** app won't be available to this custom app. Manage this custom app as any other custom model-driven app.
+> - Updates to the environment or portal solutions may recreate the default **Portal Management** app. If that happens, start using the default app instead of the manually created custom app.
 
 To create a custom **Portal Management** app:
 

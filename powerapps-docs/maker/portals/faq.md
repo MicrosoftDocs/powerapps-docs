@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/23/2020
+ms.date: 09/25/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -173,14 +173,16 @@ A Power Apps portal consists of the following components:
 
 **To delete a portal**, you must delete the **portal website host** and the  **portal configuration**.
 
-- To delete **portal web site host**, read [Reset a portal](admin/reset-portal.md).
+- To delete **portal web site host**, do one of the following:
+    1. Go to [Power Apps](https://make.powerapps.com), and [delete](manage-existing-portals.md#delete) the portal.
+    1. Go to [Power Apps portals admin center](admin/admin-overview.md), and [Reset the portal](admin/reset-portal.md).
 
-- To delete **portal configuration**, delete the *Websites* record for the portal you want to delete using the **Portal Management** app.
+- To delete **portal configuration**, delete the corresponding website record for the portal you want to delete using the **Portal Management** app.
 
 > [!NOTE]
-> *Resetting a portal* is different from *deleting a portal*. If you reset the portal but do not delete the *Websites* record associated with the portal using the [Portal Management](configure/configure-portal.md) app, new portal that you create will re-use the existing **portal configuration**.
+> If you [delete](manage-existing-portals.md#delete), or [reset](admin/reset-portal.md) the portal but do not delete the corresponding website record associated with the portal using the [Portal Management](configure/configure-portal.md) app, new portal that you create will re-use the existing **portal configuration**.
 
-If you want, you can also delete **portal solutions**. Deleting **portal solutions** is not required to create a new portal with clean configuration. However, you may need to delete the **portal solutions** for other reasons such as a business requirement to not have any more portals in a specific environment. If you have such requirement, you can delete **portal solutions** by following the steps outlined at [steps to uninstall portal solutions](https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/02/27/portal-troubleshooting-part-three-uninstalling-portal-solutions).
+If you want, you can also delete **portal solutions**. Deleting **portal solutions** is not required to create a new portal with clean configuration. However, you may need to delete the **portal solutions** for other reasons such as a business requirement to not have any more portals in a specific environment.
 
 If you deleted **Portal Management** app by mistake while trying to delete a portal, refer [how to create custom Portal Management app](configure/create-custom-portal-management-app.md).
 
