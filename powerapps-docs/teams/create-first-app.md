@@ -45,6 +45,9 @@ After installing the Power Apps app from the Teams store:
 
     ![First app in a team](media/create-app-4.png "First app in a team")
 
+> [!NOTE]
+> Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
+
 ### Notification
 
 Once the environment gets created, you'll see a notification on the bottom-right side of Teams.
