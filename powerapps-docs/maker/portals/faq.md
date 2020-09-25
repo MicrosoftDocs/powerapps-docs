@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/02/2020
+ms.date: 09/23/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -141,13 +141,6 @@ Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $fa
 
 More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)
 
-### I'm getting an error that I don't have appropriate license to access this website.
-
-Internal users of an organization that use portals for accessing authenticated pages require that licenses be assigned to the environment that a portal is connected to. You  can read more about the user rights for portals for internal users [here](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users). When an environment doesn't have licenses assigned, internal users will get an error such as follows:
-
-> [!div class=mx-imgBorder]
-> ![Portal login error](media/portal-login-error.png "Portal login error")
-
 ## Licensing and provisioning
 
 ### How do I get a portal subscription?
@@ -190,6 +183,18 @@ A Power Apps portal consists of the following components:
 If you want, you can also delete **portal solutions**. Deleting **portal solutions** is not required to create a new portal with clean configuration. However, you may need to delete the **portal solutions** for other reasons such as a business requirement to not have any more portals in a specific environment. If you have such requirement, you can delete **portal solutions** by following the steps outlined at [steps to uninstall portal solutions](https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/02/27/portal-troubleshooting-part-three-uninstalling-portal-solutions).
 
 If you deleted **Portal Management** app by mistake while trying to delete a portal, refer [how to create custom Portal Management app](configure/create-custom-portal-management-app.md).
+
+### I'm getting an error that I don't have appropriate license to access this website.
+
+Internal users with Azure Active Directory credentials trying to sign-in without a valid license assigned will see this message on the sign-in page: *You don't have a valid license to access this website. Please contact your system administrator*.
+
+![Portal login error](media/portal-login-error.png "Portal login error")
+
+Depending on the purchased SKU type - such as different *Dynamics 365 SKUs*, *Power Apps per app plan* or *Power Apps per user plan*, an administrator will need to either provide an appropriate license to the users, or have appropriate number of app passes available to the environment. For more information about app passes, go to [Allocate or change capacity in an environment](https://docs.microsoft.com/power-platform/admin/capacity-add-on#allocate-or-change-capacity-in-an-environment). Once app passes are allocated to the environment, the portal will have to be restarted for changes to take effect.
+
+For details about licensing of internal users, go to [Portal Licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). 
+
+For details about use rights to portals for internal users, go to FAQ [use rights to portals for internal users](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users) and [Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) section **Power Apps Portals – Use rights for Internal users**.
 
 ## Common Data Service environment lifecycle
 
@@ -251,9 +256,9 @@ When you enable diagnostic logging, you can search for particular errors that us
 
 ## Portal administration and management
 
-### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
+### Do portals use any static content from CDNs (Content Delivery Network) that I need to allow-list?
 
-Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must allow-list the following CDN URL to render portals successfully:
 
 `https://content.powerapps.com/resource/powerappsportal`
 
@@ -335,7 +340,7 @@ There are situations in which portal won't be able to recreate website binding r
 
       - **Name**: Can be any string
       - **Website**: Select the website record that you want to be rendered on portal
-      - **Sitename**: Type in the hostname of your portal i.e Portal URL without ```https://``` in the beginning. If your Portal is using custom domain name, then use custom domain name here.
+      - **Sitename**: Type in the hostname of your portal i.e Portal URL without `https://` in the beginning. If your Portal is using custom domain name, then use custom domain name here.
       - Leave all other fields blank.
 
 3. Once website binding record is recreated, restart your portal from Power Apps Portals admin center.

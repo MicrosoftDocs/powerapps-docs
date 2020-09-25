@@ -34,8 +34,15 @@ Define *business rules* for an entity that apply to all the entity forms and at 
 > [!NOTE]
 > To define a business rule that applies to a form in a model-driven app, see [Create business rules for a model-driven app form](../model-driven-apps/create-business-rules-recommendations-apply-logic-form.md)
 
+## Common Data Service processes
+You can also use the following Common Data Service processes:
+
+- [Real-time workflows](overview-realtime-workflows.md)
+
+- [Actions](actions.md).
+
 ## Power Automate
-Power Automate has several different flows you can use to create automated workflows within Common Data Service or between Common Data Service and another app or service than can be used to synchronize files, get notifications, collect data, and more. 
+Power Automate has several different flows you can use to create automated workflows within Common Data Service or between Common Data Service and another app or service that can be used to synchronize files, get notifications, collect data, and more. 
 
 
 |Flow type  |Description  |More information  |
@@ -46,9 +53,6 @@ Power Automate has several different flows you can use to create automated workf
 |Scheduled flows   | Create a flow that performs one or more tasks on a schedule.    | [Learn more](/power-automate/run-scheduled-tasks)        |
 |UI flows   | Record and automate the playback of manual steps on legacy software.    | [Learn more](/power-automate/ui-flows/overview)     |
 
-
-## Classic Common Data Service processes
-You can also use the classic Common Data Service processes, which are workflows and actions. More information: [Power Automate: Use Workflow processes](/flow/workflow-processes) and [Power Automate: Actions overview](/flow/actions).
 
 ### See also
 
