@@ -23,6 +23,9 @@ search.app:
 A SQL data connection is available on the Common Data Service endpoint. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
 > [!IMPORTANT]
+> A problem has been identified with the Tabluar Data Stream (TDS) endpoint. This feature has been globally disabled. We are working urgently address the issue. This topic will be updates when we have more information.
+
+> [!IMPORTANT]
 > - This is a preview feature, and isn't available in all regions.
 > - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)]
 > - Instructions to enable the feature can be found here: [View entity data in Power BI Desktop](/powerapps/maker/common-data-service/view-entity-data-power-bi), and [Manage feature settings](/power-platform/admin/settings-features) (see TDS endpoint setting).
