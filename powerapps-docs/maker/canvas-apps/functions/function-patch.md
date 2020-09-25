@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: nabuthuk
-ms.date: 03/16/2020
+ms.date: 09/25/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -15,6 +15,7 @@ search.app:
   - PowerApps
 ---
 # Patch function in Power Apps
+
 Modifies or creates one or more [records](../working-with-tables.md#records) in a [data source](../working-with-data-sources.md), or merges records outside of a data source.
 
 Use the **Patch** function to modify records in complex situations. Such as, when you do updates that require no user interaction or use forms that span multiple screens.
@@ -95,7 +96,7 @@ Specify two or more records that you want to merge. Records are processed in the
 #### Modify or create a record (in a data source)
 In these examples, you'll modify or create a record in a data source, named **IceCream**, that contains the data in this [table](../working-with-tables.md) and automatically generates the values in the **ID** [column](../working-with-tables.md#columns):
 
-![](media/function-patch/icecream.png)
+![Example icecream](media/function-patch/icecream.png "Example icecream")
 
 | Formula | Description | Result |
 | --- | --- | --- |
@@ -104,7 +105,7 @@ In these examples, you'll modify or create a record in a data source, named **Ic
 
 After the previous formulas have been evaluated, the data source ends with these values:
 
-![](media/function-patch/icecream-after.png)
+![Example icecream after](media/function-patch/icecream-after.png "Example icecream after")
 
 #### Merge records (outside of a data source)
 
@@ -113,11 +114,12 @@ After the previous formulas have been evaluated, the data source ends with these
 | **Patch(&nbsp;{&nbsp;Name:&nbsp;"James",&nbsp;Score:&nbsp;90&nbsp;}, {&nbsp;Name:&nbsp;"Jim",&nbsp;Passed:&nbsp;true&nbsp;} )** |Merges two records outside of a data source:<br><ul><li>The values in the **Name** column of each record don't match. The result contains the value (**Jim**) in the record that's closer to the end of the argument list instead of the value (**James**) in the record that's closer to the start.</li><li>The first record contains a column (**Score**) that doesn't exist in the second record. The result contains that column with its value (**90**).</li><li>The second record contains a column (**Passed**) that doesn't exist in the first record. The result contains that column with its value (**true**). |{&nbsp;Name:&nbsp;"Jim", Score:&nbsp;90, Passed:&nbsp;true&nbsp;} |
 
 ### Use of **As** or **ThisRecord**
-Avoid an ambiguous evaluation context by using the **As** or **ThisRecord** keyword. 
 
-In the example below, consider the first Lookup in the If statement. (OrderID = A[@OrderID]) is expected to compare the OrderId in the Lookup scope with the OrderId of collection A in the ForAll scope. In this case, you likely want A[@OrderId] to be resolved as a local parameter. But it is ambiguous.
+Using the **As** or **ThisRecord** keyword in the formula avoids ambiguous evaluation context. 
 
-Power Apps currently interprets both the LHS side OrderId and RHS side A[@OrderId] as a field in the Lookup scope. Therefore, Lookup will always find the first row in [dbo].[Orders1] because the condition is always true (i.e., any row's OrderId is equal to itself.)
+In the example below, consider the first lookup in the `If` statement. `(OrderID = A[@OrderID])` is expected to compare the `OrderId` in the lookup scope with the `OrderId` of collection `A` in the `ForAll` scope. In this case, you likely want `A[@OrderId]` to be resolved as a local parameter. But it is ambiguous.
+
+Power Apps currently interprets both the left-hand side `OrderId` and right-hand side `A[@OrderId]` as a field in the lookup scope. Therefore, lookup will always find the first row in `[dbo].[Orders1]` because the condition is always true (that is, any row's `OrderId` is equal to itself.)
 
 ```powerapps-dot
 ClearCollect(
@@ -158,11 +160,11 @@ ForAll(
 
 #### Using **As** or **ThisRecord**
 
-Whenever possible use the **As** operator or the **ThisRecord** to disambiguate the LHS. **As** is recommended for the above scenario.
+Whenever possible use the **As** operator or the **ThisRecord** to disambiguate the left-hand side. **As** is recommended for the above scenario.
 
-When your formula uses multiple scopes with ForAll, Filter, Lookup on the same data source or table, it is possible that the scope parameters may collide with a same named field elsewhere.  Therefore, it is also recommended to use the **As** operator or **ThisRecord** to resolve the field name and avoid ambiguity.
+When your formula uses multiple scopes with `ForAll`, `Filter`, and `Lookup` on the same data source or table, it is possible that the scope parameters may collide with a same field elsewhere.  Therefore, it is recommended to use the **As** operator or **ThisRecord** to resolve the field name and avoid ambiguity.
 
-For example, we can use the **As** operator to disambiguate in the example below. 
+For example, you can use the **As** operator to disambiguate in the example below. 
 
 ```powerapps-dot
 ClearCollect(
@@ -201,7 +203,7 @@ ForAll(
 )
 ```
 
-Alternatively, we can use **ThisRecord** for the same purpose.
+Alternatively, you can use **ThisRecord** for the same purpose.
 
 ```powerapps-dot
 ClearCollect(
@@ -239,7 +241,8 @@ ForAll(
     )
 )
 ```
-For detailed usage of the **As** operator and **ThisRecord**. For details, please see the **[Operators](operators.md)** article.
+
+To learn more about the usage of **As** operator and **ThisRecord** see **[Operators](operators.md)** article.
 
 
 
