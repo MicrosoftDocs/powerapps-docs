@@ -25,7 +25,7 @@ uses the Common Data Service security model that is the same used to access
 entity record data using a Power Apps app.
 
 > [!IMPORTANT]
-> A problem has been identified with the Tabluar Data Stream (TDS) endpoint. This feature and it has been globally disabled. We are working urgently address the issue. This topic will be updates when we have more information.
+> A problem has been identified with the Tabluar Data Stream (TDS) endpoint. This feature has been globally disabled. We are working urgently address the issue. This topic will be updates when we have more information.
 > While this is disabled the existing Commmon Data Service connector still works using the import connection mode.
 
 > [!IMPORTANT]
