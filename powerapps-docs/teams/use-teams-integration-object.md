@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -51,6 +51,8 @@ The [Switch() function](../maker/canvas-apps/functions/function-if.md) evaluates
 This function results in changing the background of canvas app, depending on the change in the theme selection in Teams.
 
 ![Teams themes](media/teams-themes.png "Teams themes")
+
+For example, use this formula in the [*Fill* property](../maker/canvas-apps/controls/properties-color-border.md#normal) of a control (such as, a rectangle) to change the fill color based on the selected Teams theme.
 
 | **Teams theme**                               | **App background**                       |
 |-----------------------------------------------|------------------------------------------|
