@@ -10,11 +10,7 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure WS-Federation provider settings for portals
-
-A single [!INCLUDE[pn-active-directory](../../../includes/pn-active-directory.md)] Federation Services server can be added (or another [WS-Federation](https://msdn.microsoft.com/library/bb498017.aspx)–compliant security token service) as an identity provider. In addition, a single [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] ACS](https://azure.microsoft.com/documentation/articles/active-directory-dotnet-how-to-use-access-control/) namespace can be configured as a set of individual identity providers. The settings for both AD FS and ACS are based on the properties of the [WsFederationAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.aspx) class.
-
-## Create an AD FS relying party trust
+# Create an AD FS relying party trust
 
 Using the AD FS Management tool, go to **Trust Relationships** &gt; **Relying Party Trusts**.
 
@@ -101,38 +97,3 @@ Get-ADFSEndpoint -AddressPath /FederationMetadata/2007-06/FederationMetadata.xml
 |      Authentication/WsFederation/ADFS/ValidateLifetime      |                                                                                                                                                                                                               A Boolean to control if the lifetime will be validated during token validation.                                                                                                                                                                                                               |
 |  Authentication/WsFederation/ADFS/ValidateIssuerSigningKey  |                                                                                                                                                         A Boolean that controls if validation of the System.IdentityModel.Tokens.SecurityKey that signed the securityToken xmlns=<https://ddue.schemas.microsoft.com/authoring/2003/5> is called.                                                                                                                                                          |
 |            Authentication/WsFederation/ADFS/Whr             |                                                                                                                                       Specifies a "whr" parameter in the identity provider redirect URL. For more information: [wsFederation](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation).                                                                                                                                       |
-
-## WS-Federation settings for [!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]
-
-The previous section describing AD FS can also be applied to [!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)] ([[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD](https://msdn.microsoft.com/library/azure/mt168838.aspx)), because [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD behaves like a standard [WS-Federation](https://docs.microsoft.com/azure/active-directory/develop/active-directory-developers-guide) compliant security token service. To get started sign into the [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] Management Portal](https://msdn.microsoft.com/library/azure/hh967611.aspx#bkmk_azureportal) and create or select an existing directory. When a directory is available follow the instructions to [add an application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) to the directory.
-
-1.  Under the **Applications** menu of the directory, select **Add**.
-2.  Choose **Add an application my organization is developing**.
-3.  Specify a custom **name** for the application, and then choose the type **web application and/or web API**.
-4.  For the **Sign-On URL** and the **App ID URI**, specify the URL of the portal for both fields https://portal.contoso.com/.
-    - This corresponds to the **Wtrealm** site setting value.
-5.  At this point, a new application is created. Go to the **Configure** section in the menu.
-6.  In the **single sign-on** section, update the first **Reply URL** entry to include a path in the URL https://portal.contoso.com/signin-azure-ad.
-    - This corresponds to the **Wreply** site setting value.
-7.  Select **Save** in the footer.
-8.  In the footer menu, select **View Endpoints** and note the **Federation Metadata Document** field.
-
-    - This corresponds to the **MetadataAddress** site setting value.
-    - Paste this URL in a browser window to view the federation metadata XML, and note the **entityID** attribute of the root element.
-    - This corresponds to the **AuthenticationType** site setting value.
-
-> [!Note]
-> A standard [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD configuration only uses the following settings (with example values):
-> - Authentication/WsFederation/ADFS/MetadataAddress - https://login.microsoftonline.com/01234567-89ab-cdef-0123-456789abcdef/federationmetadata/2007-06/federationmetadata.xml
-> - Authentication/WsFederation/ADFS/AuthenticationType - https://sts.windows.net/01234567-89ab-cdef-0123-456789abcdef/
->   - Use the value of the **entityID** attribute in the root element of the Federation Metadata (open the **MetadataAddress URL** in a browser that is the value of the above site setting)
-> - Authentication/WsFederation/ADFS/Wtrealm - https://portal.contoso.com/
-> - Authentication/WsFederation/ADFS/Wreply - https://portal.contoso.com/signin-azure-ad
-
-### See also
-
-[Configure portal authentication](configure-portal-authentication.md)  
-[Set authentication identity for a portal](set-authentication-identity.md)  
-[OAuth2 provider settings for portals](configure-oauth2-settings.md)  
-[Open ID Connect provider settings for portals](configure-openid-settings.md)  
-[SAML 2.0 provider settings for portals](configure-saml2-settings.md)  
