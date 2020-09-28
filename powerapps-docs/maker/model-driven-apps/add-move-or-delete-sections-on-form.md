@@ -1,16 +1,11 @@
 ---
 title: "Add, configure, move, or delete sections on a form using the form designer | MicrosoftDocs"
+description: "Work with sections on a model-driven app form in Power Apps"
 ms.custom: ""
-ms.date: 08/26/2019
-ms.reviewer: ""
+ms.date: 08/25/2020
+ms.reviewer: "matp"
 ms.service: powerapps
-ms.suite: ""
-ms.tgt_pltfrm: ""
 ms.topic: "get-started-article"
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "PowerApps"
 author: "Aneesmsft"
 ms.author: "matp"
 manager: "kvivek"
@@ -30,7 +25,7 @@ Add, configure, move, or delete sections on a form using the form designer.
 To add sections to a form, use the **Components** pane. 
 
 > [!div class="mx-imgBorder"] 
-> ![](media/FormDesignerComponentsLayout.png "Layout components")
+> ![Layout components](media/FormDesignerComponentsLayout.png "Layout components")
 
   > [!NOTE]
   >   Sections can only be added on main forms and quick view forms. More information: [Form types](types-forms.md).
@@ -72,6 +67,11 @@ These are the properties available to configure a section when you create or edi
 |**Display options** | **Hide on phone** |  The section can be hidden to render a condensed version of this form on phone screens. |
 |**Formatting** |  **Columns** |  Specify up to four columns for the section. |
 
+> [!NOTE]
+> We recommend limiting the length of section label text to about 50 characters. Section label text doesn't wrap and can truncate on devices with small screens.
+>
+> Sections that don't have any fields or controls will be hidden at runtime in Unified Interface.
+    
 ## Move sections on a form
 You can move sections using drag and drop or cut and paste actions. 
 

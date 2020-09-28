@@ -2,7 +2,7 @@
 title: "Common issues and resolutions for solution checker | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces"
 description: " A list of common issues and resolutions within solution checker"
 keywords: ""
-ms.date: 08/04/2020
+ms.date: 09/09/2020
 ms.service: powerapps
 ms.custom:
   - ""
@@ -177,7 +177,9 @@ When solution checker fails due to Common Data Service denying access based on a
 
 ### Plugin step unexpectedly interrupts execution by throwing InvalidPluginExecutionException
 
-When solution checker fails due to the error "ISV aborted code", a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
+Solution checker may fail due to the errors "ISV code aborted the operation" or "An unexpected error occurred from ISV code". When this occurs, it indicates a plugin step was triggered that explicitly interrupted execution by throwing an InvalidPluginExcecutionException or that an error was not caught properly in plugin code. Either reconfigure the plugin step to not execute on the operation invoked by solution checker or adjust the plugin implementation not to interrupt execution based on the conditions presented by solution checker.
+
+Common operations invoked by solution checker include Create and Update. These operations can occur on the following entities: Analysis Job, Analysis Component, or Analysis Result.
 
 ## Solution checker fails due to disabled first-party application in Azure Active Directory
 
@@ -216,6 +218,12 @@ To verify and/or modify the enabled status of the PowerApps-Advisor enterprise a
 If a solution contains a business process flow component in draft state that has never been previously activated, then Solution Checker will fail to export the solution for analysis. This error is not unique to Solution Checker and is caused by the business process flow having a dependency on a backing (custom) entity component that doesn't get created until the business process flow is activated for the first time. This issue can also occur if a business process flow is activated from within Solution Explorer.
 
 Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing](https://support.microsoft.com/en-hk/help/4337537/invalid-export-business-process-entity-missing) for details about the issue and steps to resolve.
+
+## Solution checker fails to export solutions with model-driven app components
+
+If a solution contains a model-driven app, Solution Checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to model-friven apps, any solutions containing them will fail to export with solution checker.
+
+To resolve this issue, grant the **Environment Maker** security role to the Power Apps Checker application user.
 
 ## Solution checker fails to export patched solutions
 

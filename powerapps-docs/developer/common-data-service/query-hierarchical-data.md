@@ -59,6 +59,8 @@ You can take advantage of new query condition operators to query entities with e
 ```  
   
 > [!NOTE]
->  The aggregate value returned represents all the child records, including any that the user may not have access to read.  
+> The aggregate value returned represents all the child records, including any that the user may not have access to read.  
   
- 
+### See Also
+
+[Work with Quick Find’s search item limit](quick-find-limit.md)

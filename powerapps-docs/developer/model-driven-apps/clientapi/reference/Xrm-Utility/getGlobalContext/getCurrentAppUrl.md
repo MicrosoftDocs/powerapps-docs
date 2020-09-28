@@ -20,6 +20,9 @@ search.app:
 
 Returns the URL of the current business app in model-driven apps.
 
+> [!NOTE]
+> In mobile client, this method returns null value.
+ 
 ## Syntax
 
 ```JavaScript
