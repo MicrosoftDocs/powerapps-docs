@@ -261,7 +261,7 @@ In the Return to the Workplace solution, the following security roles are define
 - Return to the Workplace - Health & Safety Leader, which is used to manage employee cases.
 
 > [!IMPORTANT]
-> - These security roles are indicative. They provide broad access for test and demonstration purpose. Please review these roles carefully before when moving to a production environment or when loading sensitive data.
+> - These security roles are indicative. They provide broad access for test and demonstration purpose. Please review these roles carefully before moving to a production environment or when loading sensitive data.
 
 **To assign security roles**
 
@@ -290,6 +290,9 @@ In the Return to the Workplace solution, the following security roles are define
    > When you want to assign security roles in bulk, you can use Teams. Teams, which are based on Azure AD security groups or Office365 groups, can assign security roles based on the organization. (https://docs.microsoft.com/en-us/power-platform/admin/manage-teams) When applying teams based on Azure AD security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. (https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
+
+> [!NOTE]
+> There are notable differences between the commercially available service and the service for Dynamics 365 U.S. Government. Please review these differences thouroughly before deciding in which environment to implement. More details: [Dynamics 365 US Government - Feature availability](https://docs.microsoft.com/en-us/power-platform/admin/government-feature-availability)
 
 This section provides information for US Government customers about how to install the app and publish the Power BI dashboard using the deployment package.
 
