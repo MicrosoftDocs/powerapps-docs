@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/06/2020
+ms.date: 09/22/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -14,9 +14,9 @@ ms.reviewer: tapanm
 
 With the capability to build a portal in Power Apps, you can create a website for external and internal users enabling them to interact with data stored in Common Data Service.
 
-These are some benefits of creating a portal:
+Some of the benefits of creating a Power Apps portal:
 
-- Because the data is stored in Common Data Service, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, model-driven apps in Dynamics 365, or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
+- Because the data is stored in Common Data Service, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
 - You can design the portal through the WYSIWYG Power Apps portals Studio by adding and configuring components on the webpages.
 
@@ -26,7 +26,7 @@ If you choose to create your portal in a new environment using the **Create new 
 
 If you choose to create your portal in an existing environment without portal pre-requisites, the pre-requisites are installed first and then the portal is created. In this method, the portal provisioning can take some time and you’ll be notified when the portal is provisioned.
 
-Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing model-driven apps in Dynamics 365.
+Based on the selected environment in Power Apps, you can create a Common Data Service starter portal or a portal in an environment containing customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service).
 
 > [!NOTE]
 > - There can be only one portal of each type and for a language created in an environment. For more information, go to [creating additional portals](#create-additional-portals-in-an-environment).
@@ -42,12 +42,11 @@ To create a portal:
 
 2.  Under **Make your own app**, select **Portal from blank**.
 
-3.	If the selected environment does not contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
+3.	If the selected environment doesn't contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
 
-    > [!div class=mx-imgBorder]
-    > ![create new environment message](media/create-portal-message.png "Create new environment message")
+    ![create new environment message](media/create-portal-message.png "Create new environment message")
 
-4.	If you choose to proceed with the current environment, enter the required information in the window as mentioned in the following steps. If you choose to create a new environment, see [Create new environment](#create-new-environment).
+4.	If you choose to continue with the current environment, enter the required information in the window as mentioned in the following steps. If you choose to create a new environment, see [Create new environment](#create-new-environment).
 
 5.  In the **Portal from blank** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
 
@@ -59,7 +58,7 @@ To create a portal:
 
 After you select **Create**, the portal will begin provisioning and the provisioning status is displayed through [notifications](#portal-provisioning-notifications).
 
-If you have created your portal in the environment that doesn't have portal pre-requisites installed, the provisioning status is also displayed in the grid:
+If you've created your portal in the environment that doesn't have portal pre-requisites installed, the provisioning status is also displayed in the grid:
 
 > [!div class=mx-imgBorder]
 > ![Grid notification](media/provision-progress-notif.png "Grid notification")
@@ -81,7 +80,7 @@ To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-exis
 
 ### Create additional portals in an environment
 
-An environment can have one portal of each type and for each language. Environments with Common Data Service have [starter portal template](portal-templates.md#environment-with-common-data-service) available. If you already have a starter portal for such an environment, you can't create another starter portal for the same language. Similarly, environments with Dynamics 365 have several [portal templates](portal-templates.md#environment-with-model-driven-apps-in-dynamics-365) available. If you have a portal from one of the templates already created in a language, you can't create a new portal with the same template type and language. New portal must have either a different portal type, or a different language.
+An environment can have one portal of each type and for each language. Environments with Common Data Service have [starter portal template](portal-templates.md#environment-with-common-data-service) available. If you already have a starter portal for such an environment, you can't create another starter portal for the same language. Similarly, environments with customer engagement apps (Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, Dynamics 365 Marketing, or Dynamics 365 Project Service Automation) have several [portal templates](portal-templates.md#environment-with-customer-engagement-apps) available. If you have a portal from one of the templates already created in a language, you can't create a new portal with the same template type and language. New portal must have either a different portal type, or a different language.
 
 For example, consider a scenario where you have a Common Data Service environment without the Dynamics 365 Apps. In this environment, you have a portal with *English* language created with the template type of *Starter portal*. You want to create a new portal in this environment.
 
@@ -110,7 +109,7 @@ For more information about enabling languages in an environment, go to [Enable l
 
 Follow these steps when you create an environment using the option provided in the **Portal from blank** window.
 
-1.  In the **New environment** pane, enter a name for the environment, and then select a region and environment type from the drop-down lists. You cannot change the region once the environment is created. When you're done, select **Create environment**.
+1.  In the **New environment** pane, enter a name for the environment, and then select a region and environment type from the drop-down lists. You can't change the region once the environment is created. When you're done, select **Create environment**.
 
     > [!div class=mx-imgBorder]
     > ![create new environment](media/create-new-environment.png "Create new environment")  
@@ -123,15 +122,15 @@ Follow these steps when you create an environment using the option provided in t
     > [!div class=mx-imgBorder]
     > ![new environment created](media/new-environment-created.png "New environment created")  
 
-3.  Select the currency and language for the data stored in the database. You cannot change the currency or language once the database is created. When you're done, select **Create my database**. The database is created with the starter portal that enables you to quickly get started with sample content once the portal is provisioned.
+3.  Select the currency and language for the data stored in the database. You can't change the currency or language once the database is created. When you're done, select **Create my database**. The database is created with the starter portal that enables you to quickly get started with sample content once the portal is provisioned.
 
     > [!NOTE]
-    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from Power Apps admin center.
+    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from Power Platform admin center.
 
     > [!div class=mx-imgBorder]
     > ![create new database](media/create-new-database.png "Create new database") 
 
-    It might take several minutes to create the database on Common Data Service. Once the database is created, the new environment is selected in the list of environments on the Power Apps home page and the Portal Management app is created. This app is not the actual portal but a model-driven companion app that allows you to perform advance configuration activities. You can now proceed with creating the portal for designing the external-facing website.
+    It might take several minutes to create the database on Common Data Service. Once the database is created, the new environment is selected in the list of environments on the Power Apps home page and the Portal Management app is created. This app isn't the actual portal but a model-driven companion app that allows you to perform advance configuration activities. You can now continue with creating the portal for designing the external-facing website.
 
     > [!div class=mx-imgBorder]
     > ![portal management app](media/portal-mgmt-app.png "Portal management app")
@@ -157,12 +156,12 @@ The following notification is displayed when you select **Create** to provision 
 
 Once the provisioning request is successfully placed, the following notifications are displayed in the **Notification** pane.
 
-Notification shown for provisioning in progress
+Notification shown for provisioning in progress.
 
 > [!div class=mx-imgBorder]
-> ![Pane notification](media/pane-notif.png "Pane notification") 
+> ![Pane notification](media/pane-notif.png "Pane notification")
 
-Notification shown for provisioning successfully completed
+Notification shown for provisioning successfully completed.
 
 > [!div class=mx-imgBorder]
 > ![Provisioning success notification](media/provision-complete-notif.png "Provisioning success notification") 
@@ -183,13 +182,13 @@ After installing the modules, run the following command in a PowerShell window (
 Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $true }
 ```
 
-Administrator are the users having one of the following Azure roles:
+Administrators are the users having one of the following Azure roles:
 
 - Global Administrator
 - Dynamics 365 admin
 - Power Platform admin
 
-Users not having the any of the above mentioned Azure roles are considered as non-administrators.
+Users not having any of the above mentioned Azure roles are considered as non-administrators.
 
 When the portal creation is disabled in a tenant, non-administrators will see an error as follows:
 
