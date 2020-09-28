@@ -130,8 +130,8 @@ This topic shows you how to create business rules and recommendations to apply f
 ## Common issues
 This section describes common issues that may occur when you use business rules. 
 
-### Full Name field not supported with unified interface apps
-Actions or conditions that use a **Full Name** (fullname) field aren't supported in apps based on the unified interface.  Alternatively, you can use actions or conditions with **First Name** (firstname) and **Last Name** (lastname) fields. 
+### Full Name field and Address field not supported with Unified Interface apps
+Actions or conditions that use a composite field like the **Full Name** (fullname) field or an **Address** field aren't supported in apps based on the Unified Interface.  Alternatively, you can use actions or conditions with the constituent fields. For example, for the **Full Name** field, you can use actions or conditions on the  **First Name** (firstname) and **Last Name** (lastname) fields. 
 
 ### Business rules don't fire on editable grid on a dashboard
 Entity scoped business rules will not fire on an editable grid when the editable grid is configured on a dashboard page.
@@ -151,6 +151,7 @@ A business rule may not execute because the field referenced in the business rul
         > [!div class="mx-imgBorder"] 
         > ![](media/account-name-on-form.png "Account name field on form")
 
+A business rule may also not execute because a field referenced in the business rule is a composite field. You can use the constituent fields of the composite field instead.
 ## Frequently asked questions (FAQ)
 *Can business rules unlock fields on a read-only form?*
 - Yes, a business rule can unlock fields and edit actions on a read-only form.

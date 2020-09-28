@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: cds
 ms.topic: article
-ms.date: 07/09/2019
+ms.date: 08/12/2020
 ms.author: matp
 search.audienceType: 
   - maker
@@ -30,7 +30,7 @@ Solution checker works with unmanaged solutions that can be exported from an env
 > [!NOTE]
 > - This topic explains how to run solution checker from the Power Apps maker portal. A PowerShell module is also available that you can use to interact directly with the service. The Microsoft.PowerApps.Checker.PowerShell module can be used for analysis of managed and unmanaged solutions for supported versions of on-premises and online environments, or to automate and integrate the service into your build and release pipelines. More information: [Microsoft.PowerApps.Checker.PowerShell Overview]( /powershell/powerapps/overview?view=pa-ps-latest#get-started-using-the-microsoftpowerappscheckerpowershell-module) 
 > - Solution checker supports global variables for ECMAScript 2015 (ES6) and up to ECMAScript 2018 (ES9) syntax. When JavaScript is detected using global variables later than ES6 or syntax later than ES9, a web-unsupported-syntax issue for the web resource is reported.
-
+<!-- 
 ## Enable the solution checker
 The Solution checker is enabled by default in every Common Data Service environment. A **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. If the **Run** option is not available in the **Solution checker** menu,  you can enable it by installing the Power Apps checker solution. To install it, follow these steps:   
 
@@ -45,21 +45,9 @@ The Solution checker is enabled by default in every Common Data Service environm
 
 5. If you agree, accept the terms and conditions and select the environment to install the Power Apps checker solution. 
 6. When the installation is complete, refresh the **Solution** list on the Power Apps site to verify that the solution checker is available.  
-7. To check a solution, [Run the solution checker](#run-the-solution-checker).
-
-
-<!-- ### Components created with the Power Apps checker
-When you install the Power Apps checker these solution specific components are created. 
-- Entities: The entities that are created are required to store the results of solution analysis and the status of analysis jobs in your environment.
-   - Analysis Component
-   - Analysis Job
-   - Analysis Result
-- System job: A system job is created so admins can remove solution analysis data from the environment. The job contains a configuration value, currently set to remove the solution analysis data after 60 days, which an administrator can override. 
-- Security Roles: Two security roles, **Export Customizations**, and **Solution Checker** are created. These roles are required to export the solution for analysis, and storing the analysis results to the entities in your environment.
-- User principle: The **Power Apps Advisor** user is created that allows the checker to authenticate with your Common Data Service environment and assign the two security roles, Export Customizations and Solution Checker. The Power Apps Advisor is an application user and does not consume a license.  -->
+7. To check a solution, [Run the solution checker](#run-the-solution-checker). -->
 
 ## Run the solution checker
-After you install the Power Apps checker in your environment, a **Solution checker** menu item is available when you select an unmanaged solution in the **Solutions** area of Power Apps. 
 
 1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
 2. In the left pane, select **Solutions**. 
@@ -110,7 +98,7 @@ When a solution check is completed, you can view the analysis report in the port
 3. Select an Issue to view the details and guidance on how to resolve.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/solution-checker-viewresults.png "Solution checker view results")
+    > ![Solution checker view results](media/solution-checker-viewresults.png "Solution checker view results")
 
 The solution check results are also available for download. The solution checker zip file is downloaded to the folder specified by your web browser.The download report is in [!INCLUDE [pn-excel-short](../../includes/pn-excel-short.md)] format and contains several visualizations and columns that assist you in identifying the impact, type, and location of each issue detected in your solution. A link to detailed guidance about how to resolve the issue is also provided. 
 

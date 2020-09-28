@@ -12,7 +12,7 @@ manager: shujoshi
 
 # Troubleshoot export to Excel
 
-## Data disappears after I refresh the imported Excel file
+## Data disappears after I refresh the exported dynamic Excel file
 
 **Problem**
 

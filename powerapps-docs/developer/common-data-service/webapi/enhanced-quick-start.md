@@ -68,7 +68,7 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
   <connectionStrings>
     <!--Online using Office 365-->
     <add name="Connect"
-         connectionString="Url=https://yourorg.api.crm.dynamics.com;Username=yourname@yourorg.onmicrosoft.com;Password=y0urp455w0rd; />
+         connectionString="Url=https://yourorg.api.crm.dynamics.com;Username=yourname@yourorg.onmicrosoft.com;Password=mypassword;" />
   </connectionStrings>
 </configuration>
 ```

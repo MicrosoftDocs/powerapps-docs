@@ -245,7 +245,7 @@
 |0x8004B58C<br />-2147175028|Name: **BDK_E_ZIP_CITY_MISSING**<br />Message: {0}  |
 |0x8004B58D<br />-2147175027|Name: **BDK_E_ZIP_INVALID**<br />Message: {0}  Billing zip code error.|
 |0x8004B58E<br />-2147175026|Name: **BDK_E_ZIP_INVALID_FOR_ENTERED_STATE**<br />Message: {0}  Billing zip code error.|
-|0x8005E003<br />-2147098621|Name: **BidsAuthenticationError**<br />Message: An error occured while authenticating with server {0}.|
+|0x8005E003<br />-2147098621|Name: **BidsAuthenticationError**<br />Message: An error occurred while authenticating with server {0}.|
 |0x8005E006<br />-2147098618|Name: **BidsAuthenticationFailed**<br />Message: Authentication failed when trying to connect to server {0}. The username or password is incorrect.|
 |0x8005E000<br />-2147098624|Name: **BidsInvalidConnectionString**<br />Message: Input connection string is invalid. Usage: ServerUrl[;OrganizationName][;HomeRealmUrl]|
 |0x8005E001<br />-2147098623|Name: **BidsInvalidUrl**<br />Message: Input url {0} is invalid.|
@@ -387,13 +387,13 @@
 |0x80045035<br />-2147200971|Name: **CannotChangeAccessModeForInternetMarketingUser**<br />Message: Internet Marketing User is a system user. You cannot change its access mode.|
 |0x8004D293<br />-2147167597|Name: **CannotChangeAttributeRequiredLevel**<br />Message: An attribute's required level cannot be changed from SystemRequired|
 |0x80072607<br />-2147015161|Name: **CannotChangeConnectorDisplayName**<br />Message: The connector display name attribute cannot be changed.|
-|0x800608F4<br />-2147088140|Name: **CannotChangeConvertRuleState**<br />Message: Error occured during activating Convert Rule.Please check your privileges on Workflow and kindly try again or Contact your system administrator.|
+|0x800608F4<br />-2147088140|Name: **CannotChangeConvertRuleState**<br />Message: Error occurred during activating Convert Rule.Please check your privileges on Workflow and kindly try again or Contact your system administrator.|
 |0x800609A4<br />-2147087964|Name: **CannotChangeDaysSinceRecordLastModified**<br />Message: You need to enable this entity for mobile offline before you can set or change the number of days since the record was last modified.|
 |0x80045036<br />-2147200970|Name: **CannotChangeInvitationStatusForInternetMarketingUser**<br />Message: Internet Marketing User is a system user. You cannot change its invitation status.|
 |0x80061013<br />-2147086317|Name: **CannotChangeProductRelationship**<br />Message: You can't add or modify the product relationship of a retired product.|
 |0x8004F986<br />-2147157626|Name: **CannotChangeSelectedBundleToAnotherValue**<br />Message: If a bundle is selected as an existing product, you can't change it to another value.|
 |0x8004F987<br />-2147157625|Name: **CannotChangeSelectedProductWithBundle**<br />Message: If a product is selected as an existing product, you can't change it to a bundle.|
-|0x8004F863<br />-2147157917|Name: **CannotChangeState**<br />Message: Error occured during activating SLA.Please check your privileges on Workflow and kindly try again or Contact your system administrator.|
+|0x8004F863<br />-2147157917|Name: **CannotChangeState**<br />Message: Error occurred during activating SLA.Please check your privileges on Workflow and kindly try again or Contact your system administrator.|
 |0x80040279<br />-2147220871|Name: **CannotChangeStateOfNonpublicView**<br />Message: Only public views can be deactivated and activated.|
 |0x80048337<br />-2147187913|Name: **CannotChangeTeamTypeDueToOwnership**<br />Message: You cannot modify the type of the team because there are records owned by the team.|
 |0x80048336<br />-2147187914|Name: **CannotChangeTeamTypeDueToRoleOrProfile**<br />Message: You cannot modify the type of the team because there are security roles or field security profiles assigned to the team.|
@@ -738,7 +738,7 @@
 |0x80090101<br />-2146893567|Name: **ColumnNameNotFound**<br />Message: The column with name '{0}' cannot be found on the table with name '{1}'.|
 |0x8004F027<br />-2147160025|Name: **CombinedManagedPropertyFailure**<br />Message: The evaluation of the current component(name={0}, id={1}) in the current operation ({2}) failed during at least one managed property evaluations: {3}|
 |0x80154B52<br />-2146088110|Name: **CommandNotSupported**<br />Message: Command is not supported in offline mode.|
-|0x80072556<br />-2147015338|Name: **CommitFileFailure**<br />Message: Error occured when commiting file. (chunkList size: {0}, uploadToken: {1}, fileName:{2}, mimeType:{3})|
+|0x80072556<br />-2147015338|Name: **CommitFileFailure**<br />Message: Error occurred when commiting file. (chunkList size: {0}, uploadToken: {1}, fileName:{2}, mimeType:{3})|
 |0x80044506<br />-2147203834|Name: **CommunicationBlocked**<br />Message: Communication is blocked due to a socket exception.|
 |0x8004F019<br />-2147160039|Name: **ComponentDefinitionDoesNotExists**<br />Message: No component definition exists for the component type {0}.|
 |0x80072014<br />-2147016684|Name: **ComponentDisabledForMigration**<br />Message: Component with name {0} is not enabled for import on this organization.|
@@ -1537,7 +1537,7 @@
 |0x8005E008<br />-2147098616|Name: **IndexOutOfRange**<br />Message: The index {0} is out of range for {1}. Number of elements present are {2}.|
 |0x80060895<br />-2147088235|Name: **IndexSizeConstraintViolated**<br />Message: Index size exceeded the size limit of {0} bytes. The key is too large. Try removing some columns or making the strings in string columns shorter.|
 |0x8004F800<br />-2147158016|Name: **InitializeErrorNoReadOnSource**<br />Message: The operation could not be completed because you donot have read access on some of the fields in {0} record.|
-|0x80072555<br />-2147015339|Name: **InitializeFileRequestFailure**<br />Message: Error occured during initialize file request. (RecordId: {0}, EntityName: {1}) Details:{2}|
+|0x80072555<br />-2147015339|Name: **InitializeFileRequestFailure**<br />Message: Error occurred during initialize file request. (RecordId: {0}, EntityName: {1}) Details:{2}|
 |0x80060378<br />-2147089544|Name: **InputParameterFieldIncorrect**<br />Message: Input parameter “{0}” does not match the input parameter field configured. Contact your system administrator to check the configuration metadata if the error persists.|
 |0x80044320<br />-2147204320|Name: **InsertOptionValueInvalidType**<br />Message: You can add option values only to picklist and status attributes.|
 |0x8004E115<br />-2147163883|Name: **InstanceOutsideEffectiveRange**<br />Message: Cannot perform the operation. An instance is outside of series effective expansion range.|
@@ -2338,7 +2338,7 @@
 |0x8004B00D<br />-2147176435|Name: **OfferingIdNotSupported**<br />Message: This version does not support search for offering id.|
 |0x80044239<br />-2147204551|Name: **OfficeGraphDisabledError**<br />Message: Document Recommendations has been disabled for this organization.|
 |0x80044257<br />-2147204521|Name: **OfficeGraphSiteNotConfigured**<br />Message: No default SharePoint site has been configured.|
-|0x800610EB<br />-2147086101|Name: **OfficeGroupsExceptionRetrieveSetting**<br />Message: Office Groups Exception occured in RetrieveOfficeGroupsSetting: {0}.|
+|0x800610EB<br />-2147086101|Name: **OfficeGroupsExceptionRetrieveSetting**<br />Message: Office Groups Exception occurred in RetrieveOfficeGroupsSetting: {0}.|
 |0x800610EA<br />-2147086102|Name: **OfficeGroupsFeatureNotEnabled**<br />Message: Office Groups feature is not enabled.|
 |0x800610EC<br />-2147086100|Name: **OfficeGroupsInvalidSettingType**<br />Message: Invalid setting type for Office Groups feature: {0}.|
 |0x800610EE<br />-2147086098|Name: **OfficeGroupsNoAuthServersFound**<br />Message: Office Groups feature could not find any authorization servers.|
@@ -2480,10 +2480,10 @@
 |0x80060380<br />-2147089536|Name: **ProcessActionWorkflowNotEnabledForOnDemand**<br />Message: Process Action or Workflow must be enabled for on-demand execution to be available for action steps.|
 |0x80060372<br />-2147089550|Name: **ProcessControlDoesNotExistOnForm**<br />Message: Process Control does not exist on form|
 |0x80060399<br />-2147089511|Name: **ProcessEmptyBranches**<br />Message: This process contains empty branches. Define or delete these branches and try again.|
-|0x80072554<br />-2147015340|Name: **ProcessFileFailure**<br />Message: Error occured when processing file. Reason: {0}|
+|0x80072554<br />-2147015340|Name: **ProcessFileFailure**<br />Message: Error occurred when processing file. Reason: {0}|
 |0x80060460<br />-2147089312|Name: **ProcessIdDoesNotMatchBusinessProcessDefinition**<br />Message: Validation error: Process ID does not match Business Process definition.|
 |0x80060459<br />-2147089319|Name: **ProcessIdIsEmpty**<br />Message: Validation error: Process ID cannot be empty.|
-|0x80072553<br />-2147015341|Name: **ProcessImageFailure**<br />Message: Error occured when processing image. Reason: {0}|
+|0x80072553<br />-2147015341|Name: **ProcessImageFailure**<br />Message: Error occurred when processing image. Reason: {0}|
 |0x80060370<br />-2147089552|Name: **ProcessInstanceNotFound**<br />Message: Supplied process instance {0} does not match any existing instance on this entity {1}|
 |0x80060398<br />-2147089512|Name: **ProcessNameContainsInvalidCharacters**<br />Message: The business process name contains invalid characters.|
 |0x80060418<br />-2147089384|Name: **ProcessNameIsNullOrEmpty**<br />Message: The business process flow name is NULL or empty. |
@@ -2961,7 +2961,7 @@
 |0x8004853C<br />-2147187396|Name: **SolutionUpgradeWrongSolutionSelected**<br />Message: "To use this action, you must first select the old solution and then try again."|
 |0x80044340<br />-2147204288|Name: **SourceAttributeHeaderTooBig**<br />Message: Column headers must be 160 or fewer characters. Fix the column headers, and then run Data Migration Manager again.|
 |0x8004033d<br />-2147220675|Name: **SourceEntityMappedToMultipleTargets**<br />Message: This source entity is mapped to more than one Microsoft Dynamics 365 entity. Remove any duplicate mappings, and then import this data map again.|
-|0x8006072A<br />-2147088598|Name: **SPAccountNameFetchFailure**<br />Message: Exception occured while fetching account name from Sharepoint.|
+|0x8006072A<br />-2147088598|Name: **SPAccountNameFetchFailure**<br />Message: Exception occurred while fetching account name from Sharepoint.|
 |0x80060760<br />-2147088544|Name: **SPAllFilesErrorScenario**<br />Message: One or more sites in all files view of SharePointDocument failed.|
 |0x8006070A<br />-2147088630|Name: **SPBadLockInFileCollectionErrorCode**<br />Message: The file in the collection has bad lock |
 |0x80060767<br />-2147088537|Name: **SPCertificationError**<br />Message: S2STokenIssuer certificate not found.|
@@ -3003,7 +3003,7 @@
 |0x8006071F<br />-2147088609|Name: **SPIllegalCharactersInFileNameErrorCode**<br />Message: Illegal characters in filename|
 |0x8006071D<br />-2147088611|Name: **SPIllegalFileTypeErrorCode**<br />Message: Illegal file type|
 |0x80060716<br />-2147088618|Name: **SPInstanceOfRecurringEventErrorCode**<br />Message: List item is an instance of a recurring event which is not a recurrence exception, the list item is a workflow task whose parent workflow is in the recycle bin, or the parent list is a document library|
-|0x80060764<br />-2147088540|Name: **SPIntermittentError**<br />Message: Intermittent error occured. Please refresh the grid and try again|
+|0x80060764<br />-2147088540|Name: **SPIntermittentError**<br />Message: Intermittent error occurred. Please refresh the grid and try again|
 |0x80060762<br />-2147088542|Name: **SPInvalidDocumentLocation**<br />Message: Invalid Sharepoint Document Location type|
 |0x8006071E<br />-2147088610|Name: **SPInvalidFieldValueErrorCode**<br />Message: Invalid Field Value|
 |0x8006070B<br />-2147088629|Name: **SPInvalidLookupValuesErrorCode**<br />Message: List item could not be updated because invalid lookup values were found for one or more field(s) in the list|
