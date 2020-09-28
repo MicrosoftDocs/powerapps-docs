@@ -26,7 +26,7 @@ requests into smaller more usable segments which can improve the performance of 
 > provide a performance benefit. It is best used if you are experiencing
 > performance issues with your existing fetch request.
 
-Executing a traditional fetch of the top “\#\#” records of an entity will pull all
+Executing a traditional fetch for a given number of the top records of an entity will pull all
 the columns in the select list that meet the filter criteria. Let’s say you are
 pulling the top 500 records on an entity that has 100 columns and 100K rows
 that meet the filter criteria, this request can cause issues in two ways:
