@@ -273,7 +273,7 @@ For more information about configuring OAuth 2 providers, see [OAuth 2 provider 
 
 ![Configure the Google app](media/use-simplified-authentication-configuration/configure-google.png "Configure the Google app")
 
-To use **Google** as an identity provider, you need to [create an app in Google](https://console.developers.google.com/) with a redirect URL.
+To use **Google** as an identity provider, you need to [create an app in Google](configure-oauth2-settings.md#google-people-api-settings) with a redirect URL.
 
 The redirect URL is used by the Google app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.​
 
