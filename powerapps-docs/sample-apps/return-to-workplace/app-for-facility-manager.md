@@ -192,7 +192,9 @@ transitions.
    The Virus Spread section shows the data from public health sources by country (state level for US). There are three tabs: New COVID-19 Cases, Fatal COVID-19 Cases, and Reproductive Number.
 
    The **New COVID-19 Cases** tab shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
+   
    The **Fatal COVID Cases** tab shows information for COVID-19 cases with fatalities.
+   
    The **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the US is at the state level.
 
    > [!div class="mx-imgBorder"]
