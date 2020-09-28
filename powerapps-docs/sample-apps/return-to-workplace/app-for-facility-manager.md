@@ -167,20 +167,20 @@ transitions.
 
 1. Select **Facility** from the left pane. The default view, **My Facilities**, shows only your facilities. When switching the views, you can see either all the active or inactive facilities. 
 
-2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information on facility usage, guide reopening, and analyze the occupancy at a facility.  The report has three main tabs: Facilities, Virus Spread, and Employee Activity.
+2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information on facility usage, guide reopening, and analyze the occupancy at a facility.  The report has three main tabs: Facility, Virus Spread, and Employee Activity.
 
-   **Facilities**:
+   **Facility**:
 
-   The *Readiness* tab shows the status of the readiness checks needed for a facility’s safe reopening. Checks are separated into categories (for example, Employee Experience, Communications, etc.) which can be expanded to show the progress of individual actions. The reproductive number is the average number of people to whom COVID-19 may be transmitted by an infected individual.
+   The **Readiness** tab shows the status of the readiness checks needed for a facility’s safe reopening. At the top, the phase is shown together with the reproductive number ,which is the average number of people to whom COVID-19 may be transmitted by an infected individual, and the average sentiment. In the middle you find the checks separated into categories (for example, Employee Experience, Communications, etc.) which can be expanded to show the progress of individual actions. 
 
-   The *Occupancy* tab provides metrics regarding the facility capacity and usage, such as:
+   The **Occupancy** tab provides metrics regarding the facility capacity and usage, such as:
       - Facility’s total capacity, and current capacity based on reopening phase.
-      - Number of bookings and visits for the most recent day and daily average for the last seven days.
+      - Number of bookings, guest registrations and visits for the most recent day and daily average for the last seven days.
       - Two charts, that can be filtered by date range, and to a floor or an area:
-          - Number of bookings and the current capacity.
-          - Average daily occupancy, shown as a black bar.  Capacity is represented by the green zone.  Floors and areas with black bars in the red zone are over-capacity. Occupancy can be viewed at the floor or area level.  Hovering over the information symbol (🛈) next to the chart shows detailed instructions.
+          - Employee bookings (or Employee bookings + guest registrations) vs capacity by date. Shows the employee bookings (+ guest registrations) on a certain date on the total capacity on that date.
+          - Average daily occupancy by Floor (or Floor and Area). The dot represents the capacity and the contents show the average employee bookings and average guest registrations. 
 
-   The *Daily Arrivals* tab shows booking information to assist in controlling the facility traffic, such as:
+   The **Daily Arrivals** tab shows booking information to assist in controlling the facility traffic, such as:
       - Capacity and visit metrics, busiest weekday, and arrival time window for the last seven days.
       - Two charts, which can be filtered by date range, display number of bookings by arrival window, and by weekday.
 
@@ -191,9 +191,9 @@ transitions.
 
    The Virus Spread section shows the data from public health sources by country (state level for US). There are three tabs: New COVID-19 Cases, Fatal COVID-19 Cases, and Reproductive Number.
 
-   The *New COVID-19 Cases* tab shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
-   The *Fatal COVID Cases* tab shows information for COVID-19 cases with fatalities.
-   The *Reproductive Number* is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the US is at the state level.
+   The **New COVID-19 Cases** tab shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
+   The **Fatal COVID Cases** tab shows information for COVID-19 cases with fatalities.
+   The **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the US is at the state level.
 
    > [!div class="mx-imgBorder"]
    > ![Facility Manager Virus Spread](media/pbi-dash-facility-manager-virus-spread.png "Facility Manager - Virus Spread")
@@ -205,7 +205,7 @@ transitions.
       - Average employee sentiment
       - Number of passes generated
 
-      There are two charts. One displays the sentiment by date and the other displays the pass generated vs. the number of visits by date, along with the trend over time.
+      There are two charts. One displays the sentiment by date and the other displays the pass + guest registrations generated vs. the number of visits by date, along with the trend over time.
 
    > [!div class="mx-imgBorder"]
    > ![Facility Manager Employee Activity](media/pbi-dash-facility-manager-employee-activity.png "Facility Manager - Employee Activity")
