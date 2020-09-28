@@ -108,6 +108,13 @@ If your responses show you aren't healthy, you'll not receive a pass and provide
 > [!NOTE]
 > Current negative attestations are also stored, in the solution settings you can turn this feature off if you are not allowed to store them.
 
+## Email Guest Pass
+
+When a guest pass is created, you can share this with the guest by mail by clicking on **Share Pass**. This will send the guest an email with the host name, the facility, date and hour of the reservation and QR code. 
+
+> [!div class="mx-imgBorder"]
+> ![Share sentiment](media/employee-share-pass-email.png "Share pass guest")
+
 ## Share sentiment
 
 You can say how you're feeling about returning to the workplace. On the home page, select one of the options to answer the question **Do you feel safe returning to work?**
