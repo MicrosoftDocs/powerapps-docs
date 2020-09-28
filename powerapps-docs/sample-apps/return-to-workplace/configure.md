@@ -243,7 +243,7 @@ The facility sample data file is available in the package. When you want to impo
 
 ## Specify solution settings
 
-The overall solution requires certain configurations to be made to make sure that the user has the correct information. You can use solution settings to configure your own terms of agreement, health terms of agreement, and contact email. You can also use themes to tailor the experience to your company branding.
+The overall solution requires certain configurations to ensure that the user has the correct information. You can use solution settings to configure your own terms of agreement, health terms of agreement, and contact email, etc. You can also use themes to tailor the experience to your company branding.
 
 When setting up the solution, do the following:
 
@@ -253,7 +253,10 @@ When setting up the solution, do the following:
 
 ## Set solution settings
 
-With solution settings, you define the terms of agreement that are applicable to your company. Solution settings are linked to groups or to the entire organization, which makes it possible to differentiate them for individual facilities. One solution setting will act as the default and will be applicable for every facility, which will be the solution setting that has an empty group. To set solution settings:
+With solution settings, you define system settings unique to your company. Solution settings are linked to a facility group or to the entire organization, which makes it possible to differentiate them for facilities in that group. One solution setting will act as the default and will be applicable for every facility, which will be the solution setting record that has an empty facility group.
+
+Some of these settings impact the Employee App. The solution setting record that applies, is found by matchting the facility group of the default facility of that user to the settings. If none is found or the user has no default facility set, the default solution settings record is used.
+To set solution settings:
 
 1. Select **Solution Settings** in the left pane, and then select **New**.
 
@@ -264,6 +267,11 @@ With solution settings, you define the terms of agreement that are applicable to
 
    > [!div class="mx-imgBorder"]
    > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
+
+3. On the second tab, add values for the Guest related settings.
+
+   > [!div class="mx-imgBorder"]
+   > ![Solution settings guest tab](media/solution-admin-guest-setting.png "Solution settings guest tab")
 
 ## Set duplicate detection rules for employee cases 
 
@@ -347,6 +355,10 @@ This flow will loop over all the facilities and randomly move a facility one pha
 - Sample Data - Generate Employee Records
 
 This flow mimics employees using the app. It will create a booking, attestation, and sentiment record for the current day for each active employee. Prerequisites: Employees record should be active, have a default facility assigned and an assigned area that is part of that default facility.
+
+- Sample Data - Guest Registrations
+
+This flow will add 5 guests to bookings created by the 'Sample Data - Generate Employee Records' flow. Each booking will receive one guest. This flow will create a new Contact record for each guest every time it runs.
 
 - Sample Data - Create and update employee cases
 

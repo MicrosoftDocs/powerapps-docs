@@ -37,6 +37,37 @@ To learn more about supported extension methods, see:
 
 - [Get started with model-driven apps customizations using code](https://docs.microsoft.com/powerapps/developer/model-driven-apps/supported-customizations)
 
+## Guidance
+
+With the solution there are numerous parts which can be extended. Below are a couple of components where we give some additional guidance to customize or tailor them.
+
+### Canvas App
+
+The canvas app within the solution can be tailored to your own needs. Advised when doing so, is to copy the canvas app. This way your changes aren't impacted by new changes. In order to copy the canvas app:
+
+1. Go to the Maker Portal (https://make.powerapps.com)
+2. Select App and **Edit** the **Employee Return to the Workplace** app.
+3. Select **File** and the press **Save As**. Select a new location and name and then press **Save**.
+
+### Security Roles
+
+The security roles included in this solution are setup for test and demo purposes. They must be reviewed and understood thouroughly before moving to a production environment or when loading sensitive data.
+
+To learn more about the Power Platform and Common Data Service Security, see:
+
+- [Security in Common Data Service](https://docs.microsoft.com/en-us/power-platform/admin/wp-security)
+- [Security Roles](https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges)
+
+New security roles can be created and tailerod to your needs. The supplied security roles can serve as template here that can be copied. If the new roles need to be moved to different environments, they need to be added to a new solution.
+
+In order to copy the security role:
+
+1. Open the **Settings**.
+2. Select **Settings** and then **Security**.
+3. Select **Security Roles**.
+4. Select the role you want to copy.
+5. Click **More actions** and select **Copy Role...**.
+
 ## Entity relationship diagram
 
 The entity relationship diagram illustrates the entities and their relationships that are present in the Common Data Service environment. System-generated entities and relationships such as **Created By** and **Modified By** attributes are not displayed in the diagram.
@@ -77,6 +108,7 @@ These entities are primarily used by the Employee Return to the Workplace canvas
 | Employee Facility Search | Contains a list of most recently used employee app facility results associated with system users.             |
 | Employee Sentiment       | Contains associations of employee and information relevant to their recorded sentiment.                         |
 | Employee Visit           | Contains associations of employee and facilities for a given time representing a physical entry and exit.|
+| Guest Registration           | Contains associations of employees (hosts) and guests which are associated with an Employee Booking.|
 |||
 
 ## Workplace Care Management
@@ -301,6 +333,16 @@ such as **Created On**, **Modified On** are not displayed.
 | Target Value | Decimal    | The value used to evaluate success.                                                                      | Model-driven app |
 |||||
 
+### Guest Registration
+
+| Display name | Data type  | Description                                                                                              | Platform use    |
+|--------------|------------|----------------------------------------------------------------------------------------------------------|------------------|
+| Employee Booking   | Lookup     | Used to associate the appropriate employee booking tied to the guest registration.  | Model-driven app |
+| Guest   | Lookup     | Used to associate the non-employee to the registration.                   | Model-driven app |
+| Host   | Lookup     | Used to associate the employee making the registration.                   | Model-driven app |
+| Name   | Text     | Used to provide a name for the guest registration record.                   | Model-driven app |
+| Registration Date   | Date     | Used to denote the date of registration.                   | Model-driven app |
+
 ### Key Metric
 
 | Display name | Data type | Description                                | Platform use    |
@@ -385,16 +427,13 @@ such as **Created On**, **Modified On** are not displayed.
 | Display name                            | Data type  | Description                                                              | Platform use                    |
 |-----------------------------------------|------------|--------------------------------------------------------------------------|---------------------------------|
 | Allow Employee Sentiment                | Option Set | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app |
-| Allow Storing of Negetive Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app |
+| Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app |
+| Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app |
 | Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
 | Health Contact Name                     | Text       | Used to capture the name of the primary health contact.                  | Model-driven app and canvas app |
 | Health Contact Phone                    | Text       | Used to capture the phone number of the primary health contact.          | Model-driven app and canvas app |
 | Health Contact Instructions             | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app |
-| Maximum Temperature                     | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
-| Minimal Temperature                     | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
 | Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                |
-| Target Temperature                      | Decimal    | Used to set the value of the temperature question in the canvas app.     | Canvas app                      |
-| Temperature Scale                       | Option Set | Used to display the value of the temperature question in the canvas app. | Canvas app                      |
 |||||
 
 ### State

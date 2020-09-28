@@ -61,19 +61,19 @@ When a new version of the  **Return to the Workplace** solution is available, yo
 > [!NOTE]
 > If you are a US Government customer, you'll have to update the Power BI dashboard using the latest version of the deployment package available on GitHub. More information: [Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)](deploy.md#appendix-deploy-the-app-and-publish-power-bi-dashboard-us-government-customers-only).
 
-To install the update, either select **Get it** on the notification banner or in the notification center, or find the app in the AppSource and select **Get it now**. If you have a direct link for the update, select the link.
+1. To install the update, either select **Get it** on the notification banner or in the notification center, or find the app in the AppSource and select **Get it now**. If you have a direct link for the update, select the link.
 
-You'll be asked whether you wish to overwrite the current version or to install the new version in a new workspace. By default, overwrite is selected. This needs to be changed to **Install to a new workspace**.
+2. You'll be asked whether you want to overwrite the current version or to install the new version in a new workspace. By default, **Overwrite an existing version** is selected.
 
 > [!div class="mx-imgBorder"]
 > ![Update App overwrite](media/power-bi-update-app-overwrite.png "Update App overwrite")
 
-  - **Overwrite an existing version: (Not Supported)** Overwrites the existing workspace with the updated version of the template app.  More information: [overwrite behavior](#overwrite-behavior).
-
-  - **Install to a new workspace:** Installs a fresh version of the workspace and app that you need to reconfigure (connect to data, define navigation and permissions).
-
-> [!IMPORTANT]
-> Overwriting the existing version is current not supported. Please install the Apps in a new workplace and follow [deploy the solution](deploy.md) steps 3 till 5.
+If you already installed the existing version, leave it on **Overwrite an existing version**. Select **Install to a new workspace** to install a fresh version of the workspace and app that you need to reconfigure (connect to data, define navigation and permissions).
+  
+3. Install the app in a new workplace by following these steps in the deploy topic:
+    - [Step 3: Configure and publish Power BI dashboards](/powerapps/sample-apps/return-to-workplace/deploy#step-3-configure-and-publish-power-bi-dashboards)
+    - [Step 4: Schedule report refresh](/powerapps/sample-apps/return-to-workplace/deploy#step-4-schedule-report-refresh)
+    - [Step 5: Embed the Power BI report in the model-driven app](/powerapps/sample-apps/return-to-workplace/deploy#step-5-embed-the-power-bi-report-in-the-model-driven-app)
 
 ## Step 3: Install the Workplace Care Management dashboard
 

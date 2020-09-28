@@ -46,18 +46,18 @@ The Workplace Care Management app has the following components:
 
 **Employee cases** 
 
-Lists all the cases that have been created and a dashboard.
-
 > [!div class="mx-imgBorder"]
 > ![List of Employee cases](media/health-safety-employee-cases.png "List of Employee cases")
 
-In the Employee Cases component, we have three views with different filters:
+- **Dashboard** - Gives you a dashboard were you can track the status of employee cases.
 
-- **My Employee Cases**: Filtered by owner and only shows active cases. This is the default view.
+- **Employee Case** - List of all the employees. Employees are contacts. In the Employee Cases component, we have three views with different filters:
 
-- **Active Employee Cases**: Shows all the active employee cases. An employee case is considered active when the status field value is set to active. Active Employee Cases are limited to one per employee.
+   - My Employee Cases: Filtered by owner and only shows active cases. This is the default view.
 
-- **Closed Employee Cases**: Shows all the closed employee cases. An employee case is considered closed when it is made inactive either by the case manager or through the process.
+   - Active Employee Cases: Shows all the active employee cases. An employee case is considered active when the status field value is set to active. Active Employee Cases are limited to one per employee.
+
+   - Closed Employee Cases: Shows all the closed employee cases. An employee case is considered closed when it is made inactive either by the case manager or through the process.
 
 > [!div class="mx-imgBorder"]
 > ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
@@ -106,6 +106,7 @@ You can create a new employee contact if the contact doesn't exist.
    | Email | Enter an employee email address. |
    | Business Phone| Enter the employee mobile or phone number. |
    | Preferred Method of Contact | Select the method of contact the employee prefers from the drop-down list. |
+   | Conact Type | Select 'Employee'. |
 
    > [!div class="mx-imgBorder"]
    > ![Create a contact details](media/health-safety-employee-new2.png "Create a contact details")
@@ -191,6 +192,8 @@ In this process stage, the case manager monitors and manages the cases, ensuring
 
   > [!div class="mx-imgBorder"]
   > ![Monitoring](media/health-safety-bpf-monitoring.png "Monitoring")
+  
+When you provided instructions you could for the time being indicate the employee is not able to enter a facility. When settings **Facility Access Available** to no, the employee won't be able to get a day pass. When you indicate that the facility access is not available on a employee case, you will be able to give **Employee Instructions** which are visible in the app. With the **Facility Access Available Date** you can indicate when the employee will be able to get a day pass again, a flow will automatically reset **Facility Access Available** when this date is reached.
 
 #### Resolve
 
@@ -201,6 +204,29 @@ case, and selects **Finish**. After the process is finished, the employee case b
 
   > [!div class="mx-imgBorder"]
   > ![resolve](media/health-safety-bpf-resolve.png "Resolve")
+
+## Contact tracing
+
+To facilitate contact tracing and tracking possible exposures, three elements have been added:
+
+1. Exposures (Days to investigate)
+2. Case Facilities
+3. Case Contacts
+
+### Exposures (Days to investigate)
+
+When accounting for the whereabouts of an employee, the system stores valuable information in the form of bookings and attestations. That is why those records can be linked to a case. When doing so, a background process is triggered. This process does two things:
+
+1. Create a Case facility record for that day.
+2. Create Case Contacts for all the other employees that were:
+  a. In the same Area as that person (10 points)
+  b. In the same entry window for that facility (if applicable) (5 points)
+  c. On the same Floor as that person (3 points)
+
+These Case Contacts must be regarded as suggestions and can then be cleared by the case manager.
+
+> [!NOTE]
+> Case Contact record that are created as suggestions do not include guests that were registered.
 
 ### Case facilities
 
@@ -214,6 +240,8 @@ On the **Case Facilities** tab, select **New Case Facility** to relate a facilit
 | Date To | Enter the end date of the employee visiting that facility.  |
 | Comment | Enter additional information, when applicable. |
 
+When a Case Facility is added as part of the suggestion process, both the Date From and Date To fields will be set to the day of the attestation.
+
 ### Case contacts
 
 An employee under investigation might have had contact with one or more colleagues. This type of information can be logged on the **Case Contacts** tab.
@@ -222,8 +250,39 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 
 | **Field**   | **Description**  |
 |---------------|------------------|
+| Exposure score | whole number used to sort the suggestions based on estimated exposure |
 | Risk Assessment | This field provides an easy way to prioritize other employees based on their interactions with the employee under investigation. |
+| Open Case | This can refer to an open case for this employee. By default the lookup will filter on active cases for this employee. If the record was added as a system suggestion, this field will be filled only if only one active case exists. |
 | Comment | Enter additional information, when applicable. |
+
+A case can be directly created from a Case Contact record. To do so, select the row in the subgrid and click on the 'Create Case' button that appears. This button is only visible when one record is selected. The following actions are performed:
+A new Employee Case gets created
+- The new Employee Case is linked to the Case Contact record
+- The new Employee Case has the Employee of the Case Contact record entered
+- The new Employee Case has the original Employee Case entered as originating case.
+- The new Employee Case is assigned to the current user
+- The user is navigated to the newly created record
+- The new Employee Case number is entered in the Open Case field on the Contact record
+- The Case Contact record is deactivated with status 'Case Created'
+
+A case manager can enter additional information. Click 'Save & Close' to return to the original Employee Case record.
+
+
+#### Exposure Score
+
+Exposure score is calculated when the system generates Case Contacts as suggestions when a Case manager links an attestation. The system will only create one record per person. If a person then shared area/entry window/floor via multiple attestations, the exposure score on the existing record is increased. For each day, a Case Contacts gets points only for the highest category applicable. For example; if a case contact suggestion shared Area on one day (10 points) and shared entry window on another day (5 points), the total exposure score for that Case Contact would be 15.
+
+This functionality is purely as a means to sort the suggestions based on 'proximity' to the employee under investigation.
+
+#### Case Contact status
+
+A Case Contact has three statusses:
+- To be evaluated (Active)
+- Case Created (Inactive)
+- Evaluated (Inactive)
+
+With these three statusses, a case manager has the ability to clearly indicated which Case Contacts have been traced and how they have been dealt with.
+
 
 ### Complete Employee Case
 
@@ -231,6 +290,28 @@ After you completed the process and selects **Finish** in the business process f
 
   > [!div class="mx-imgBorder"]
   > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
+  
+## Overview of Employee Cases
+For managing the whole process from beginning to end, you can use the **Workplace Care Management** dashboard. You will find the dashboard under **Dashboards**. The dashboard is separated with two different sections, on the top you will see the list of 4 different views which show different focusses on the employee cases and on the bottom it will show charts to get a quick overview.
+
+  > [!div class="mx-imgBorder"]
+  > ![Workplace Care Management Dashboard](media/health-safety-dashboard.png "Workplace Care Management Dashboard")
+
+**Views**
+
+- My High Risk Employee Cases; shows the employee cases which are on high risk.
+
+- My Employee Cases due for Contact; shows the employee cases which aren't contacted yet for over a day.
+
+- My Employee Cases due for Investigation; shows the employee cases which aren't investigated yet for over a day.
+
+- My Outstanding Employee Cases; shows the employee cases outstanding for more then 2 weeks.
+
+**Charts**
+
+- Employee Cases by Risk Level; which shows employee cases by risk level.
+
+- Employee Cases by Duration; which shows employee cases by duration over days.
 
 ## Feedback about the solution
 
