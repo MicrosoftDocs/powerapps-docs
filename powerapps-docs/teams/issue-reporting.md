@@ -349,3 +349,4 @@ To review and edit existing issues in Planner:
 
 [Inspection sample apps](inspection.md)  
 [Employee Ideas sample app](employee-ideas.md)
+[Customize sample apps](customize-sample-apps.md)
