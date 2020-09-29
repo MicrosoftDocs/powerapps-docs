@@ -1485,6 +1485,8 @@
           href: ./portals/configure/gather-feedback-poll.md
         - name: Create and manage publishing states
           href: ./portals/configure/publishing-states.md
+        - name: Create custom Portal Management app
+          href: ./portals/configure/create-custom-portal-management-app.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates
@@ -1866,6 +1868,8 @@
           href: ../teams/relationships-table.md
         - name: Work with table columns
           href: ../teams/table-columns.md
+        - name: Project Oakdale FAQs
+          href: ../teams/data-platform-faqs.md
     - name: Manage your apps
       href: ../teams/manage-your-apps.md
     - name: Publish and share your app
