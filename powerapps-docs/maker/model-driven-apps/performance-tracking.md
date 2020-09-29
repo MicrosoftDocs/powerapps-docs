@@ -1,13 +1,10 @@
 ---
 title: Performance tracking in model-driven apps | Microsoft Docs
-description: Learn how tperformance is tracked in model-driven apps
+description: Learn how terformance is tracked in model-driven apps
 documentationcenter: ''
 author: JesseParsons
-manager: kvivek
-editor: ''
-tags: ''
+ms.reviewer: matp
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: model
 ms.date: 03/04/2020
