@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/07/2020
+ms.date: 09/25/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -100,7 +100,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 ## Add a record quickly
 
-1. From the Home screen, select **New** ![Create record button](media/create-record-button.png "Create record button").
+1. From the Home screen, select **New** ![Create record button](media/pa1_create-record-button.png "Create record button").
 2. Fill in the fields, and then select **Save**.
 3. After the record is created, you can view the new record. 
 

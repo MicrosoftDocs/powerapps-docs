@@ -1,12 +1,12 @@
 ---
-title: "Export to an Excel PivotTable in model-driven PowerApp| MicrosoftDocs"
-ms.custom: ""
+title: "Export to an Excel PivotTable in model-driven Power Apps| MicrosoftDocs"
+description: How to export to an Excel PivotTable in model-driven Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 8/27/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -27,6 +27,9 @@ You can export app data to an Office Excel PivotTable to see patterns and trends
 The option to export data to an Excel PivotTable isn’t available in all record types. If you don’t see the option, it’s not available for that record.  
   
 1. Open a list of records in your app, select the arrow to the right of **Export to Excel**, and then select **Dynamic PivotTable**.  
+
+   > [!div class="mx-imgBorder"] 
+   > ![Export to excel](media/export_to_excel.png "Select export to Excel")
   
 2. In the **Select Columns for Pivot Excel** dialog box, select the column settings and then select **Export**.  
   
@@ -50,9 +53,12 @@ The option to export data to an Excel PivotTable isn’t available in all record
   
 5. If you see the security warning **External Data Connections have been disabled**, select **Enable Content**.  
   
-6. To refresh data in the file, on the **Data** tab, select **Refresh from Power Apps**.  
+6. To refresh data in the file, on the **Data** tab, select **Refresh All**.  
+
+   > [!div class="mx-imgBorder"] 
+   > ![Refresh all data](media/refresh_data.png "Refresh all data")
   
-7. Drag the fields from the PivotTable Field List to the PivotTable. For more information, see Excel Help.  
+7. Drag the fields from the PivotTable Field List to the PivotTable. For more information, see [Excel Help](https://support.microsoft.com/excel).  
   
 ## Tips  
   

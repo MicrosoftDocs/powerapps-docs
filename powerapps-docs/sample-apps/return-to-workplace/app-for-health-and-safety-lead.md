@@ -198,7 +198,7 @@ When you provided instructions you could for the time being indicate the employe
 #### Resolve
 
 In this process stage, the case manager completes the process by resolving the
-case, and selects **Finish**. After the process is finished, the employee case becomes inactive. Inactive employee is then considered completed. The key pieces of data to be captured and recorded are:
+case, and selects **Finish**. After the process is finished, the employee case becomes inactive. The inactive employee case is then considered completed. The key pieces of data to be captured and recorded are:
 
 - Employee Instructions Provided (Yes/No)
 
@@ -286,7 +286,7 @@ With these three statusses, a case manager has the ability to clearly indicated 
 
 ### Complete Employee Case
 
-After you completed the process and selects **Finish** in the business process flow, the employee case will be moved to inactive state. You can also make employee cases inactive for certain reasons if the employee case is now longer being worked on. In that case you can deactivate the employee case from the command bar. 
+After you complete the process and select **Finish** in the business process flow, the employee case will become inactive. You can also make employee cases inactive for certain reasons if the employee case is no longer being worked on. In that case, you can deactivate the employee case from the command bar. 
 
   > [!div class="mx-imgBorder"]
   > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
