@@ -148,7 +148,7 @@ Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen
 <!-- Is the link below correct? It opens a page titled "Run shortcuts with Siri, the Shortcuts app, or Siri Suggestions," and I don't find a section labeled "Edit or customize a shortcut." -->
 
 
-You can customize the shortcut icon but it is limited to the customization options in iOS. For more information, go to [Use the Shortcuts app on your iPhone or iPad](https://support.apple.com/HT208309) and scroll down to **Edit or customize a shortcut**.
+You can customize the shortcut icon but it is limited to the customization options in iOS. For more information, go to [Modify shortcut icons](https://support.apple.com/guide/shortcuts/modify-shortcut-icons-apd5ad5a2128/ios).
 
 
 ## See non-production apps
