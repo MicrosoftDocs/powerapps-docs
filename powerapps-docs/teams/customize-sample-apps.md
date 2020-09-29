@@ -264,8 +264,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 1. At the end of the 17th line, add a comma and this formula:
 
     ```powerapps-dot
-    'Store
-    Name':Microsoft_CoreControls_TextBox1.Value
+    'Store Name':Microsoft_CoreControls_TextBox1.Value
     ```
 
     This section of the formula should now look like the following:
