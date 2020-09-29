@@ -58,7 +58,7 @@ To configure OpenID Connect provider:
     | Post logout redirection URL |  |
     | RP initiated logout | |
 
-1. Configure additional settings.
+1. (Optional) Configure additional settings.
 
     ![Additional settings](media/authentication/openid-additional-settings.png "Additional settings")
 
