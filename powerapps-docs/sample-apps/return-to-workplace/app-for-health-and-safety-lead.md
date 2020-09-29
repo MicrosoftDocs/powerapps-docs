@@ -193,7 +193,7 @@ In this process stage, the case manager monitors and manages the cases, ensuring
   > [!div class="mx-imgBorder"]
   > ![Monitoring](media/health-safety-bpf-monitoring.png "Monitoring")
   
-When you provided instructions you could for the time being indicate the employee is not able to enter a facility. When settings **Facility Access Available** to no, the employee won't be able to get a day pass. When you indicate that the facility access is not available on a employee case, you will be able to give **Employee Instructions** which are visible in the app. With the **Facility Access Available Date** you can indicate when the employee will be able to get a day pass again, a flow will automatically reset **Facility Access Available** when this date is reached.
+When you provided instructions you could for the time being indicate the employee is not able to enter a facility. When setting **Facility Access Available** to no, the employee won't be able to get a day pass. When you indicate that the facility access is not available on an employee case, you will be able to give **Employee Instructions** which are visible in the app. With the **Facility Access Available Date** you can indicate when the employee will be able to get a day pass again, a flow will automatically reset **Facility Access Available** when this date is reached.
 
 #### Resolve
 
@@ -205,9 +205,9 @@ case, and selects **Finish**. After the process is finished, the employee case b
   > [!div class="mx-imgBorder"]
   > ![resolve](media/health-safety-bpf-resolve.png "Resolve")
 
-## Contact tracing
+## Manual Contact tracing
 
-To facilitate contact tracing and tracking possible exposures, three elements have been added:
+To facilitate manual contact tracing and tracking possible exposures, three elements have been added:
 
 1. Exposures (Days to investigate)
 2. Case Facilities
@@ -227,6 +227,21 @@ These Case Contacts must be regarded as suggestions and can then be cleared by t
 
 > [!NOTE]
 > Case Contact record that are created as suggestions do not include guests that were registered.
+
+> [!NOTE]
+> These Case Contact suggestions only work for facilities where capacity management has been enabled. See the facility manager app chapter for guidance on how to setup floors and areas.
+
+#### Link an Employee Attestation
+
+To link an Attestation to a Case, follow these steps:
+
+1. Open a Case and open the Exposures tab
+2. In the **Days to investigate** grid, click **Add Existing Employee Attestation**
+3. Use the lookup to search for Employee Attestations for the Employee under investigation
+4. Select the applicable Employee Attestations and click **Add**
+
+The Employee Attestation record is now linked to the case. This will trigger the background suggestion process that will create Case Contact suggestions that can assist in the contact tracing procedure.
+Each Employee Attestation can only be linked to one case. If the duplicate detection rules have been setup, there can also be only one active case per employee. This prevents double work.
 
 ### Case facilities
 
@@ -255,7 +270,7 @@ On the **Case Contacts** tab, select **New Case Contact** to relate an employee 
 | Open Case | This can refer to an open case for this employee. By default the lookup will filter on active cases for this employee. If the record was added as a system suggestion, this field will be filled only if only one active case exists. |
 | Comment | Enter additional information, when applicable. |
 
-A case can be directly created from a Case Contact record. To do so, select the row in the subgrid and click on the 'Create Case' button that appears. This button is only visible when one record is selected. The following actions are performed:
+A case can be directly created from a Case Contact record. To do so, select the row in the subgrid and click on the **Create Case** button that appears. This button is only visible when one record is selected. The following actions are performed:
 A new Employee Case gets created
 - The new Employee Case is linked to the Case Contact record
 - The new Employee Case has the Employee of the Case Contact record entered

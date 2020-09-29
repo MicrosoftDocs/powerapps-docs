@@ -273,6 +273,26 @@ To set solution settings:
    > [!div class="mx-imgBorder"]
    > ![Solution settings guest tab](media/solution-admin-guest-setting.png "Solution settings guest tab")
 
+
+### Field details
+
+| **Field**              | **Description**                                |
+|------------------------|------------------------------------------------|
+| Name | Name of the solution settings record |
+| Facility Group | Applicable facililty group, leave empty for default |
+| Company Name | Additional description for solution settings |
+| Allow Employee Sentiment | Enables capture of employee sentiment in the Employee App |
+| Allow storing of Negative Attestations | When disabled, negative attestations registered in the Employee App are not stored |
+| Allow QR codes | Enables QR code on the pass in the Employee App  |
+| Allow Guest Registrations | Enables employees to register guest on their bookings in the Employee App  |
+| Health & Safety email | E-mail address shown when the Employee does not attest to Health & Safety Instructions in the Employee App   |
+| Health & Safety Instructions | General instruction provided to Employee in the Employee App when access is blocked by a Case Manager |
+| General Terms & Agreement | Showed in the Employee App during booking process |
+| Health Terms & Agreement | Showed in the Employee App during booking process |
+| Guest Health Terms & Agreement | Showed in the Employee App during guest registration process|
+| Guest Privacy Terms & Agreement | Showed in the Employee App during guest registration process |
+
+
 ## Set duplicate detection rules for employee cases 
 
 For active employee cases, the number of cases can be limited to one active employee case per employee. When you want to enable this, you need to create a **Duplicate rule**. 

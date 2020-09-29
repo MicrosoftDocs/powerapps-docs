@@ -287,7 +287,7 @@ In the Return to the Workplace solution, the following security roles are define
    
 
    > [!NOTE]
-   > When you want to assign security roles in bulk, you can use Teams. Teams, which are based on Azure AD security groups or Office365 groups, can assign security roles based on the organization. (https://docs.microsoft.com/en-us/power-platform/admin/manage-teams) When applying teams based on Azure AD security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. (https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
+   > When you want to assign security roles in bulk, you can use Teams. Teams, which are based on Azure AD security groups or Office365 groups, can assign security roles based on the organization. (https://docs.microsoft.com/power-platform/admin/manage-teams) When applying teams based on Azure AD security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. (https://docs.microsoft.com/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 
