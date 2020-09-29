@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/07/2019
+ms.date: 09/25/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -97,6 +97,10 @@ You must delete the portal configurations manually to completely remove portal c
 
 > [!NOTE]
 > If you don't have sufficient privileges to delete a portal, an error is displayed. You must have the System Administrator role to delete a portal. Also, you must be the owner of the portal application in Azure Active Directory. The user who creates the portal is by default the owner and can delete a portal. For information on adding yourself as an owner, see [Add yourself as an owner of the Azure AD application](admin/admin-overview.md#add-yourself-as-an-owner-of-the-azure-ad-application).
+
+### Completely delete a portal
+
+To learn about how to delete a portal completely, go to [How do I delete a portal completely after it's provisioned?](faq.md?#how-do-i-delete-a-portal-completely-after-its-provisioned).
 
 ## Details
 
