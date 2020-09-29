@@ -86,13 +86,8 @@ If you filtered your apps, the filtered list will be searched.
 
 Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
 
-## Pin an app to the home screen 
 
-
-<!-- there should be some text here before the next heading. Just a quick intro to this subsection, perhaps. -->
-
-
-### Use Safari to pin to home (iOS 13 or earlier)
+## Use Safari to pin to home (iOS 13 or earlier)
 
 You can pin both canvas apps and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
 
@@ -102,7 +97,7 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 > [!NOTE]
 > For iOS devices that have multiple browsers installed, use Safari when pinning an app to home. 
 
-### Use Siri shortcuts to pin to home (iOS 14 or later) 
+## Use Siri shortcuts to pin to home (iOS 14 or later) 
 
 The Power Apps mobile app is now integrated with Siri shortcuts, which gives you the ability to pin to home, launch apps with Siri, and create new workflows. For more information on how shortcuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios). This feature requires Power Apps mobile version 3.20092.x or later.
 
@@ -142,10 +137,6 @@ Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen
   
    > [!div class="mx-imgBorder"]
    > ![App shortcut on home screen.](media/add-shortcut-4.png "App shortcut on home screen")
-
-
-
-<!-- Is the link below correct? It opens a page titled "Run shortcuts with Siri, the Shortcuts app, or Siri Suggestions," and I don't find a section labeled "Edit or customize a shortcut." -->
 
 
 You can customize the shortcut icon but it is limited to the customization options in iOS. For more information, go to [Modify shortcut icons](https://support.apple.com/guide/shortcuts/modify-shortcut-icons-apd5ad5a2128/ios).
