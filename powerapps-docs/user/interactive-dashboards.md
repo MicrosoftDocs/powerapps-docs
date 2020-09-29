@@ -61,7 +61,7 @@ The single-stream dashboards display real-time data over one stream based on an 
 
 <!-- Below, should it be "Select an area on a chart or graph ..."? -->
 
-4. Select an area one of the chart or graph to apply a filter. 
+4. Select an area on one of the charts or graphs to apply a filter. 
 
    > [!div class="mx-imgBorder"]
    > ![Select an area on a chart.](media/select_chart_area.png "Select an area on a chart")
