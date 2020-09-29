@@ -302,3 +302,4 @@ To share an idea:
 
 [Inspection sample app](inspection.md)  
 [Issue Reporting sample app](issue-reporting.md)
+[Customize sample apps](customize-sample-apps.md)

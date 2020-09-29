@@ -400,3 +400,4 @@ To submit inspection of grouped locations:
 
 [Employee Ideas sample apps](employee-ideas.md)  
 [Issue Reporting sample apps](issue-reporting.md)
+[Customize sample apps](customize-sample-apps.md)
