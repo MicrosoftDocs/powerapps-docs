@@ -199,10 +199,9 @@ You can continue drilling further into the chart data. As you drill down deeper,
 
 ## Known issues  
 
-<!-- Below, where it says "adding an order by on certain calculated fields ...", I'm wondering if "by" should be deleted or if it's part of a term, "Order by". --> 
 
 
-In the chart designer, adding an order by on certain calculated fields is not supported and will cause an error. The calculated fields causing this are using other calculated fields, a related entity field, or a local field on the entity.
+In the chart designer, adding an order on certain calculated fields is not supported and will cause an error. The calculated fields causing this are using other calculated fields, a related entity field, or a local field on the entity.
 
 
 
