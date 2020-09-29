@@ -1,6 +1,6 @@
 ---
-title: "View charts on a form page in model-driven apps| MicrosoftDocs"
-description: View charts on form pages.
+title: "View charts on a form page or in a record in model-driven apps| MicrosoftDocs"
+description: View charts on form page or in a record
 author: mduelae
 manager: kvivek
 ms.service: powerapps
