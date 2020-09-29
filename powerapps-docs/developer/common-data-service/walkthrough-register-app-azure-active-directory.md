@@ -63,13 +63,15 @@ App registration can also be done by an application developer or individual user
 
     ![Add app permission](media/azure-api-permissions-page.png "Add app permission")
 
-7. Select **Dynamics CRM** under the **Microsoft APIs** tab.
+7. Search for and choose **Common Data Service** under the **APIs my organization uses** tab.
     
     ![Select API](media/app-registration-select-api-page.png "Select API")    
 
 8. Click on **Delegated permissions** and check the options and click on **Add permissions**. 
     
     ![Delegate Permissions](media/app-registration-delegate-permissions-page.png "Delegate Permission")
+    > [!NOTE]
+    > A future revision of the form in step #8 will replace the Dynamics CRM logo and icon with Common Data Service.
 
 This completes the registration of your application in Azure Active Directory.
 

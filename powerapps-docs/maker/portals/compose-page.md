@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/20/2020
+ms.date: 09/22/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -72,17 +72,17 @@ Once you add sections to your page, you can add portal components inside the sec
 
 6.    In the properties pane on the right side of the screen, enter or select the following information:
 
-    - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100 px. You can also enter the height in points (pt) and percentage (%).
+       - **Min Height**: Enter the minimum height of the section. If you add a component that occupies more space than the specified height, the section expands to accommodate the component. By default, the minimum height is 100 px. You can also enter the height in points (pt) and percentage (%).
 
         > [!div class=mx-imgBorder]
-        > ![Alignment in the section](media/section-props-height.png "Alignment in the section")  
+        > ![Min Height](media/section-props-height.png "Min Height")  
 
-    - **Alignment**: Select whether the component in the section must be left, center, or right aligned.
+        - **Alignment**: Select whether the component in the section must be left, center, or right aligned.
 
         > [!div class=mx-imgBorder]
         > ![Alignment in the section](media/section-props-align.png "Alignment in the section")  
 
-    - **Background**: Select if you'd like to have color or an image as the section background.
+        - **Background**: Select if you'd like to have color or an image as the section background.
 
         - **Fill**: Select a color for the background.
 
@@ -405,14 +405,14 @@ To add a Power BI component to a web page:
 
         ![Apply roles](media/apply-roles-powerbi.png "Apply roles")
     
-        - You can enter multiple roles separated by a comma (for example, ```role_1,role_2```). For more information on defining roles in Power BI, go to [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls). <br>
+        - You can enter multiple roles separated by a comma (for example, `role_1,role_2`). For more information on defining roles in Power BI, go to [Row-level security (RLS) with Power BI](https://docs.microsoft.com/power-bi/service-admin-rls). <br>
         - Only available for access type **Embed for your customer**.
 
     1. **Apply filter**: Allows user to load the report with pre-filtered values. User can provide filter condition in the field. 
         
         ![Apply filter](media/apply-filter-powerbi.png "Apply filter")
 
-        - Filter parameter must be without ```?filter=``` prefix. For example, ```Table/Field eq 'value'```.
+        - Filter parameter must be without `?filter=''` prefix. For example, `Table/Field eq 'value'`.
         <br> For more information, go to [filter parameter details](https://docs.microsoft.com/power-bi/service-url-filters).
         - Only available for **Reports** with access types **Embed for your customer** and **Embed for your organization**.
 
@@ -469,4 +469,5 @@ Embedding multiple Power BI workspaces may need additional considerations. Refer
 
 ### See also
 
-[Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)
+- [Create and manage web pages](create-manage-webpages.md)
+- [Microsoft Learn: Integration with Power BI](https://docs.microsoft.com/learn/modules/portals-integration/3-power-bi)

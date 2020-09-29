@@ -1,12 +1,12 @@
 ---
-title: "Export to an Excel static worksheet in a model-driven app | MicrosoftDocs"
-ms.custom: ""
+title: "Export to an Excel static worksheet in model-driven Power Apps | MicrosoftDocs"
+description: How to export to an Excel static worksheet in a model-driven Power Apps
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 11/16/2018
+ms.date: 8/27/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -27,6 +27,9 @@ You can export up to 100,000 records at a time. By default, a model-driven app l
 You may have the option to export data to an Excel static worksheet in all record types. However, in some cases the format might be legacy, or the data might not be filtered by what you see in the app.  
   
 1. Open a list of records in the app, select the arrow to the right of **Export to Excel**, and then choose **Static worksheet (Page only)**.  
+
+   > [!div class="mx-imgBorder"] 
+   > ![Export to excel](media/export_to_excel.png "Select export to Excel")
   
 2. By default, an exported worksheet includes the fields that are displayed in the list, using the same field order, sorting, and field widths. To make changes to the columns in an Advanced Find View, choose **Edit Columns**. 
   
@@ -54,7 +57,7 @@ You may have the option to export data to an Excel static worksheet in all recor
   
 - You can’t change the columns for a system view, such as **All Active Accounts**. You must either customize the view, which requires the System Administrator or System Customizer security role, or use Advanced Find to create your own view based on the current view.  
     
-- In model-driven apps, currency values are exported to Excel as numbers. Ater you have completed the export, see the Excel Help topic “Display numbers as currency" to format the data as currency.
+- In model-driven apps, currency values are exported to Excel as numbers. After you have completed the export, see [Format numbers as currency](https://support.microsoft.com/office/format-numbers-as-currency-0a03bb38-1a07-458d-9e30-2b54366bc7a4?ui=en-US&rs=en-US&ad=US).
   
 - The date and time values that you see in the app show up only as Date when you export the file to Excel, but the cell actually shows both the date and time.  
   

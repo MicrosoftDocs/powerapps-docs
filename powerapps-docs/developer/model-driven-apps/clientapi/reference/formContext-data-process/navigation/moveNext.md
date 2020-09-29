@@ -65,6 +65,10 @@ You can also move to a next stage in a different entity.
 <td>dirtyForm</td>
 <td>This value will be returned if the data in the page is not saved.</td>
 </tr>
+<tr>
+<td>stageGate</td>
+<td>One or more required field on the current stage is empty.</td>
+</tr>
 </table>
 </td>
 </tr>
