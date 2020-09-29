@@ -40,7 +40,7 @@ You can find all available facilities and see the reopen status for them. Select
 > [!div class="mx-imgBorder"]
 > ![List of facilities](media/employee-facility-list2.png "List of facilities")
 
-When you select a facility from the facility list, the current status of the facility and associated details are displayed. You can also book a space directly from the look up screen. When a facility isn't available, then the **BOOK A SPACE** button is disabled. Select **<** to return to the previous screen.
+When you select a facility from the facility list, the current status of the facility and associated details are displayed. You can also book a space directly from the look up screen. When a facility isn't available, then the **BOOK A SPACE** button is disabled. Select **< Back** to return to the previous screen.
 
 > [!div class="mx-imgBorder"]
 > ![Facility details](media/employee-facility-details2.png "Facility details")
@@ -92,6 +92,11 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
 If your responses to the symptom check statements show that you're healthy, you'll receive a pass to enter the selected facility. The pass is valid until the end of the day. When you create a pass for a facility were you already created a pass for earlier that day, the pass earlier that day will be cancelled automatically. 
 
+> [!NOTE]
+> In the solution settings an administrator can disable the use of QR codes. This applies to both Employee and Guest passes.
+
+If the administrator enabled QR codes in the solution settings, a QR code will be displayed on the pass (default). If you click the QR code, it will expand for easy scanning.
+
 > [!div class="mx-imgBorder"]
 > ![Employee pass](media/employee-pass.png "Employee pass")
 
@@ -108,7 +113,24 @@ If your responses show you aren't healthy, you'll not receive a pass and provide
 > [!NOTE]
 > Current negative attestations are also stored, in the solution settings you can turn this feature off if you are not allowed to store them.
 
-## Email Guest Pass
+## Create Guest Pass
+
+After an employee created a pass, guest registration becomes available. If the employee does not have a pass, then the option is greyed out. An employee can create multiple guest passes.
+
+> [!NOTE]
+> In the solution settings an administrator can disable the use of guest registrations. This will remove the option from the screen.
+
+To create a guest pass, follow these steps:
+
+1. Create a pass for yourself as described above
+2. Select **Register a guest**
+3. If a user entered a guest before, it will show up to three recent names. Select one of the recent guests or enter new guest details. First name, last name and email address are required fields. Click **Next**
+4. This screen shows configured information and privacy discloses and the health requirements and instructions for guests. Both fields can be expanded with the **+**-sign. Click **Next** to continue.
+5. This screen shows the guest pass.
+
+Guest passes are available from the home screen under the **Pass** button on top of the screen. They are showed next to the employee pass. This screen can also be used to share guest passes.
+
+### Email Guest Pass
 
 When a guest pass is created, you can share this with the guest by mail by clicking on **Share Pass**. This will send the guest an email with the host name, the facility, date and hour of the reservation and QR code. 
 
