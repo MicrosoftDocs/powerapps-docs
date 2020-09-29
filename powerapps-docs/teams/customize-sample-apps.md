@@ -12,7 +12,7 @@ ms.reviewer:
 
 # Customize sample apps installed from Teams store
 
-In this article, you'll learn about customizing sample apps installed from the Teams store.
+In this article, you'll learn about customizing sample apps installed from the Teams store. For example, you may need to change the company logo, update the data inside the sample apps to fit your business requirement, add or remove controls on the screens to extend the app.
 
 ## Prerequisites
 
