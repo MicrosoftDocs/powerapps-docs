@@ -1,6 +1,6 @@
 ---
 title: "Check your user access and permissions| MicrosoftDocs"
-description: How to check user accesss and security role
+description: How to check user accesss and security role.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
@@ -33,7 +33,7 @@ You can have access rights to a perform an action on a record through ownership,
 |**Shared access**| The record is shared with a user, team, or organization by a user that has appropriate share rights.|  
 |**Hierarchy access**|Hierarchy access only takes place if hierarchy security management is turned on for the organization and the entity. The user also needs to be a manager.
 
-For more information on how privilegse and access check works, see [How access to a record is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
+For more information on how privileges and access check works, see [How access to a record is determined](https://docs.microsoft.com/power-platform/admin/how-record-access-determined).
 
 ## Check your access to a record
 
@@ -48,7 +48,7 @@ For more information on how privilegse and access check works, see [How access t
 
 
     > [!div class="mx-imgBorder"]
-    > ![Acess checker showing your accesss leve](media/check_access_page.png "Acess checker showing your accesss level")
+    > ![Access checker showing your access level](media/check_access_page.png "Access checker showing your access level")
     
 Contact your administrator if you don't have the required access. Only an administrator can edit your security role and privileges. To find your administrator, see [Find your administrator or support person](https://docs.microsoft.com/powerapps/user/find-admin).
 
