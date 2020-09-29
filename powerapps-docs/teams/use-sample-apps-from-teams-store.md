@@ -122,3 +122,4 @@ If you get any errors during the installation process, you can help us troublesh
 [Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
 [Inspection sample apps](inspection.md)  
 [Issue Reporting sample apps](issue-reporting.md)
+[Customize sample apps](customize-sample-apps.md)
