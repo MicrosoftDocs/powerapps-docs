@@ -1,6 +1,6 @@
 ---
 title: "View charts on a form page in model-driven apps| MicrosoftDocs"
-description: View charts on form pages in Power Apps.
+description: View charts on form pages.
 author: mduelae
 manager: kvivek
 ms.service: powerapps
