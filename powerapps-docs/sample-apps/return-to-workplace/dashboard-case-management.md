@@ -80,6 +80,51 @@ The interactive map displays the location of cases in the monitoring phase. You 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance fatal COVID cases](media/pbi-dash-report-fatalcovidcases2.png "System at a Glance fatal COVID cases")
 
+## Clusters 
+
+Clusters page helps health and safety leaders view cases as clusters and assess whether there is an outbreak in a facility. The tab focuses on a case contacts and links between active cases, identifying root cause of the outbreak. It also provides a set of metrics and trends related to case contacts. These metrics include:
+
+1. Average linked cases per case - the number of case contacts with an active case of their own per active case. 
+
+2. Case contacts per case - Average number of case contacts per active case.
+
+3. % Contacts evaluated - Percentage of case contacts whose evaluation is complete.
+
+4. Average evaluation time - For evaluated case contacts, time taken to evaluate/process a case contact in days.
+
+5. % evaluated within 24 hr - Percentage of case contacts that were evaluated/processed within 24 hours of identification.
+
+> [!div class="mx-imgBorder"]
+> ![System at a Glance fatal COVID cases](media/pbi-dash-report-clusternavmap.png "Cluster Nav Map")
+
+Users can switch from a map to the table visual, where key metrics are displayed by facility. 
+
+> [!div class="mx-imgBorder"]
+> ![System at a Glance fatal COVID cases](media/pbi-dash-report-clusternavtable.png "Cluster Nav Table")
+
+Map displays active cases by facility. To view a cluster, select a facility on the map. 
+
+> [!div class="mx-imgBorder"]
+> ![System at a Glance fatal COVID cases](media/pbi-dash-report-clusternavmap-facility.png "Cluster Nav Map Facility Selected")
+
+The clusters view provides information about case contacts and linked cases, and relationships between active cases for the selected facility and date range. Relationships are visualized in a form of a network, where cases are represented as a circles, colored based on their stage. The thickness of the line displays the exposure score, that measures how close and frequent exposure has been between two cases.
+
+> [!div class="mx-imgBorder"]
+> ![System at a Glance fatal COVID cases](media/pbi-dash-report-clusternetwork.png "Cluster Network")
+
+You can also switch from a map view to the table view to view key metrics broken down by a case. 
+
+> [!div class="mx-imgBorder"]
+> ![System at a Glance fatal COVID cases](media/pbi-dash-report-clustertable.png "Cluster Table")
+
+Following set of metrics related to the selected facility are also displayed:
+
+a) Total number of cases linked to a facility.
+b) Total number of case contacts.
+c) Number of Standalone cases: cases that are not linked to other cases in a facility.
+d) Number of cases that are part of a cluster.
+
+
 ## Slicers
 
 Slicers help you quickly "slice and dice" the data, focusing only on data points you're interested in. You can filter all three pages by the case creation date and their groups of facilities and locations, down to the level of a single facility. 
