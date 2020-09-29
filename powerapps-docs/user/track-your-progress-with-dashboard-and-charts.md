@@ -120,11 +120,9 @@ Legend:
  2. Chart title with **Display Chart Selection** turned off. You cannot toggle between different charts for the entity. You only see the title.
  
  
- <!-- from editor: In the two lines below, should it be "turned on" or "turned off" instead of just "turned?" Also, is "underline data" correct or should it be "underlying data"? -->
  
- 
- 3. Only **View Selector** is turned. You can toggle to a different view and the chart will render based on the underline data for the selected view.
- 4. Both **View Selector** and **Display Chart Selection** is turned. You can toggle to a different view and chart for the entity.
+ 3. Only **View Selector** is turned on. You can toggle to a different view and the chart will render based on the underlying data for the selected view.
+ 4. Both **View Selector** and **Display Chart Selection** is turned on. You can toggle to a different view and chart for the entity.
 
 
 To edit the chart properties, you need to edit the dashboard that the chart is in. If you're in the process of adding a new chart on a dashboard, then you're already in edit mode and can skip to step 2.
