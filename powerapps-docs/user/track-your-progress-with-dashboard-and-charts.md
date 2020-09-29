@@ -37,7 +37,7 @@ There is two types of dashboards, **System Dashboards** and **My Dashboards**.
 Legend: 
 1. **My Dashboards**: My dashboards are personal dashboards that can only be seen by the user who creates them. The user can also share their personal dashboard with other users if the user has sharing privileges for their security role.
 
-2. **System Dashboards**: System dashboards are create by your administrator. By default, these dashboards are visible to all users. 
+2. **System Dashboards**: System dashboards are created by your administrator. By default, these dashboards are visible to all users. 
 
 
 
@@ -88,7 +88,7 @@ Legend:
 
 
       > [!div class="mx-imgBorder"]
-      > ![Add componets](media/add_componet_to_dashboard.png "Add componets")
+      > ![Add components](media/add_componet_to_dashboard.png "Add components")
 
  
 6. When you're done adding each component, select **Add**.
