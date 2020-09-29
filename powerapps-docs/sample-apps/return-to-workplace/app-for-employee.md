@@ -113,7 +113,7 @@ If your responses show you aren't healthy, you'll not receive a pass and provide
 > [!NOTE]
 > Current negative attestations are also stored, in the solution settings you can turn this feature off if you are not allowed to store them.
 
-## Create Guest Pass
+## Create guest pass
 
 After an employee created a pass, guest registration becomes available. If the employee does not have a pass, then the option is greyed out. An employee can create multiple guest passes.
 
