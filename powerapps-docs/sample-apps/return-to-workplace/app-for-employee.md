@@ -124,7 +124,7 @@ To create a guest pass, follow these steps:
 
 1. Create a pass for yourself as described above
 2. Select **Register a guest**
-3. If a user entered a guest before, it will show up to three recent names. Select one of the recent guests or enter new guest details. First name, last name and email address are required fields. Click **Next**
+3. If a user entered a guest before, it will show up to five recent names. Select one of the recent guests or enter new guest details. First name, last name and email address are required fields. Click **Next**
 4. This screen shows configured information and privacy discloses and the health requirements and instructions for guests. Both fields can be expanded with the **+**-sign. Click **Next** to continue.
 5. This screen shows the guest pass.
 
