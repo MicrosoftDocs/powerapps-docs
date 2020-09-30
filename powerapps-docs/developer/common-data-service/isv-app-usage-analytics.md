@@ -1,5 +1,5 @@
 ---
-title: Introduction to the Power Platform ISV Studio app analytics| Microsoft Docs
+title: Introduction to the Power Platform ISV Studio app usage analytics| Microsoft Docs
 description: Measure app's performance and get insights.
 services: ''
 suite: powerapps
@@ -14,7 +14,7 @@ ms.topic: article
 ms.reviewer: nabuthuk
 ms.workload: na
 ms.date: 10/02/2020
-ms.author: prkoduku
+ms.author: nabuthuk
 search.audienceType: 
   - developer
 search.app: 
@@ -26,9 +26,9 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-ISVs need data to measure the success or gain insights of their application. App usage analytics feature allows ISVs to monitor the usage of their apps by giving them visibility into the monthly, daily, and weekly usage data of their apps.
+ISVs need data to measure the success of their application. App usage analytics feature allows ISVs to monitor the usage of their apps by giving them the visibility into monthly, daily, and weekly usage data of their apps. For ISVs to get the usage data, tenants or customers need to update their apps.
 
-App usage feature allows ISVs to filter the usage data by component type, date, package name, solution name, and package version. An app can have multiple packages and an individual package can have multiple solutions. Each solution has multiple components.
+App usage feature allows ISVs to filter the usage data by **Component Type**, **Data Date**, **Package Name**, **Solution Name**, and **Package Version**. An app can have multiple packages and an individual package can have multiple solutions. Each solution can have multiple components. App usage is measured based on how many times the components of the application are used in a month, week, or day. 
 
 > [!NOTE]
 > For any app that is not deployed via [AppSource](https://appsource.microsoft.com), it needs to be tracked at the solution level.   
@@ -36,12 +36,33 @@ App usage feature allows ISVs to filter the usage data by component type, date, 
 > [!div class="mx-imgBorder"]
 > ![Usage report](media/isv-app-usage-analytics-report.png "Usage report")
 
+The following list shows some of the components that can be part of a solution:
+ 
+- Workflows
+- Web resources
+- Plug-ins
+- Reports
+- Charts and dashboards
+- Entities, forms, and views
+- Entity fields and relationships
+- Connectors
+- Environment variables
+- Site map
+
+Some of the components of a solution can have shared ownership by multiple ISVs. For shared components, only the publisher who created the component gets the usage credit. For example, ISV1 created a form and ISV2 extends the form by adding a widget to it. Every time the form is used, ISV1 gets the usage credit and ISV2 gets the usage credit whenever the widget is used. If a user visited the form only to access the widget, ISV1 also gets the usage credit.
+
+For components that are not shared, only the publisher who created gets the usage credit. 
+
 ## View the app usage report
 
 To view the app usage data:
 
 1. Sign in to [ISV studio](https://aka.ms/ISVStudio/).
 1. On the **Home** page, you can see a list of published app packages. Select the desired package for which you want to see the usage details. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Home page](media/isv-home-page-list-apps.png "Home page")
+   
 1. Scroll-down to the page to view all the apps. Select the app and select the **Usage** tab.
 1. You can also see the app usage details by directly selecting the app usage icon from the list of apps as shown  screenshot:
 
@@ -55,20 +76,20 @@ The usage report shows the following metrics:
 - **Monthly active users**: Tracks the information about the number of unique users who used the app within the last month.
 - **Daily active users**: Tracks the information about the number of daily unique users who used the app within the last 24 hours.
 - **Weekly active users**: Tracks the information about the number of daily unique users who used the app within the last 7 hours.
-- **Usage by tenant**: Tracks the information about the number of installs in a tenant.
-- **Usage by solution**: Tracks the information about the number of times the solution is installed.
-- **Entity usage**:
+- **Usage over time**: Tracks the information about the average number of monthly, weekly, and daily active users.
+- **Monthly active users by component type**: Tracks the information about the number of monthly active users filtered by component type.
+- **Monthly active users by component name**: Tracks the information about the number of monthly active users filtered by component name.
 
-If the ISV is looking at the metrics at a solution level, all the components are rolled up to the solution level. Similarly, all the solution metrics are rolled up to package and all package metrics are rolled up to an app. 
+If ISV is looking at the metrics at a solution level, all the components are rolled up to the solution level. Similarly, all the solution metrics are rolled up to package and all package metrics are rolled up to an app. 
 
 ### Filtering the usage report
 
-ISVs can filter the usage report using the filtering option available. For example, an ISV can filter to see the metrics at app, package, solution, and component level. If ISVs want to see the metrics at solution level, ISVs can select all the components of the solution in the filter.  
+ISVs can filter the usage report using the filters available. For example, an ISV can filter to see the metrics at app, package, solution, and component level. If ISVs want to see the metrics at solution level, ISVs can select all the components of the solution in the filter.  
 
-ISV can filter the usage report by the following: 
+### See also
 
-- Tenant 
-- Geo location 
-- Package version 
-- Time range – up to 90 days 
-- App contents - It is the composition of the app in a hierarchy view so it is easy to understand all the packages, solutions, and components that are part of the app. That way the ISV can select one or more packages or versions and slice and dice the information. 
+[Home page](isv-app-management-homepage.md)  
+[App page](isv-app-management-apppage.md)<br/> 
+[Tenant page](isv-app-management-tenantpage.md)<br/>
+[AppSource checker](isv-app-management-appsource-checker.md)<br/>
+[Connector Certification](isv-app-management-certification.md)
