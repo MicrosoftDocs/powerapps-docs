@@ -209,11 +209,11 @@ case, and selects **Finish**. After the process is finished, the employee case b
 
 To facilitate manual contact tracing and tracking possible exposures, three elements have been added:
 
-1. Exposures (Days to investigate)
+1. Exposures
 2. Case Facilities
 3. Case Contacts
 
-### Exposures (Days to investigate)
+### Exposures
 
 When accounting for the whereabouts of an employee, the system stores valuable information in the form of bookings and attestations. That is why those records can be linked to a case. When doing so, a background process is triggered. This process does two things:
 
@@ -236,7 +236,7 @@ These Case Contacts must be regarded as suggestions and can then be cleared by t
 To link an Attestation to a Case, follow these steps:
 
 1. Open a Case and open the Exposures tab
-2. In the **Days to investigate** grid, click **Add Existing Employee Attestation**
+2. In the grid, click **Add Existing Employee Attestation**
 3. Use the lookup to search for Employee Attestations for the Employee under investigation
 4. Select the applicable Employee Attestations and click **Add**
 
