@@ -289,6 +289,17 @@ In the Return to the Workplace solution, the following security roles are define
    > [!NOTE]
    > When you want to assign security roles in bulk, you can use Teams. Teams, which are based on Azure AD security groups or Office365 groups, can assign security roles based on the organization. (https://docs.microsoft.com/power-platform/admin/manage-teams) When applying teams based on Azure AD security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. (https://docs.microsoft.com/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
    
+## Step 9: Enable Flows
+
+1. Sign in to [Power Apps](https://make.powerapps.com). Select the **Environment** from the upper-right corner.
+
+2. On the left pane, select **Solutions**.
+
+3. Select the **Default Solution**.
+
+4. Open the **Employee App Email Flow** and press **Edit**. Connect the flow with **Common Data Service (current environment)** and **Office 365 Outlook** connector. After that press **Save**, go back and press **Turn On**. Please validate that the flow is then turned on, so it can be used. 
+   
+   
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 
 > [!NOTE]
