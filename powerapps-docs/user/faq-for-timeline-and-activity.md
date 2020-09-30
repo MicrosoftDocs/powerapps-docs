@@ -60,6 +60,6 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 
 [Add an appointment, email, phone call, note, or task activity to the timeline](add-activities.md)
 
-[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
+[Dynamics 365 Sales: Frequently asked questions ](https://docs.microsoft.com/dynamics365/sales-enterprise/faqs-sales#entity-activity
 
     
