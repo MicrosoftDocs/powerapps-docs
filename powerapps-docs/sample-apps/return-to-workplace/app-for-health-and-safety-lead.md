@@ -248,7 +248,7 @@ To link an Attestation to a Case, follow these steps:
 3. Use the lookup to search for Employee Attestations for the Employee under investigation
 4. Select the applicable Employee Attestations and click **Add**
 
-The Employee Attestation record is now linked to the case. This will trigger the background suggestion process that will create Case Contact suggestions that can assist in the contact tracing procedure.
+The Employee Attestation record is now linked to the case. This will trigger the background suggestion process that will create Case Contact suggestions that can assist in the manual contact tracing procedure.
 Each Employee Attestation can only be linked to one case. If the duplicate detection rules have been setup, there can also be only one active case per employee. This prevents double work.
 
 ### Case facilities
