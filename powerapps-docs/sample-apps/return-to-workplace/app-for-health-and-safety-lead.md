@@ -205,6 +205,14 @@ case, and selects **Finish**. After the process is finished, the employee case b
   > [!div class="mx-imgBorder"]
   > ![resolve](media/health-safety-bpf-resolve.png "Resolve")
 
+### Complete Employee Case
+
+After you complete the process and select **Finish** in the business process flow, the employee case will become inactive. You can also make employee cases inactive for certain reasons if the employee case is no longer being worked on. In that case, you can deactivate the employee case from the command bar. 
+
+  > [!div class="mx-imgBorder"]
+  > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
+
+
 ## Manual Contact tracing
 
 To facilitate manual contact tracing and tracking possible exposures, three elements have been added:
@@ -297,13 +305,6 @@ A Case Contact has three statusses:
 
 With these three statusses, a case manager has the ability to clearly indicated which Case Contacts have been traced and how they have been dealt with.
 
-
-### Complete Employee Case
-
-After you complete the process and select **Finish** in the business process flow, the employee case will become inactive. You can also make employee cases inactive for certain reasons if the employee case is no longer being worked on. In that case, you can deactivate the employee case from the command bar. 
-
-  > [!div class="mx-imgBorder"]
-  > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
   
 ## Overview of Employee Cases
 For managing the whole process from beginning to end, you can use the **Workplace Care Management** dashboard. You will find the dashboard under **Dashboards**. The dashboard is separated with two different sections, on the top you will see the list of 4 different views which show different focusses on the employee cases and on the bottom it will show charts to get a quick overview.
