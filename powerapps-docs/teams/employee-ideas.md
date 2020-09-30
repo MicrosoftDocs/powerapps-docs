@@ -260,5 +260,5 @@ To delete an idea:
 
 ### See also
 
-[Inspection sample app](inspection.md)  
-[Issue Reporting sample app](issue-reporting.md)
+[Inspection sample apps](inspection.md)  
+[Issue reporting sample apps](issue-reporting.md)

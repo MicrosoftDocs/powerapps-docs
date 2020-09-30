@@ -398,5 +398,5 @@ To submit inspection of grouped locations:
 
 ### See also
 
-[Employee Ideas sample apps](employee-ideas.md)  
-[Issue Reporting sample apps](issue-reporting.md)
+[Employee ideasapp](employee-ideas.md)  
+[Issue reporting sample apps](issue-reporting.md)
