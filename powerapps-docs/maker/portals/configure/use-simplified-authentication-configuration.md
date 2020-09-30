@@ -219,7 +219,7 @@ For more information about site settings, see [related site settings](azure-ad-b
 
 You have the option of configuring additional setting for the Azure AD B2C identity provider.
 
-![Configure additional settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings")
+![Configure additional settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings - Azure AD B2C")
 
 - **Registration claims mapping​** - List of logical name/claim pairs to be used to map claim values returned from Azure AD B2C created during sign up to attributes in the contact record. <br> 
 For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
@@ -273,7 +273,7 @@ For more information about configuring OAuth 2 providers, see [OAuth 2 provider 
 
 ![Configure the Google app](media/use-simplified-authentication-configuration/configure-google.png "Configure the Google app")
 
-To use **Google** as an identity provider, you need to [create an app in Google](https://console.developers.google.com/) with a redirect URL.
+To use **Google** as an identity provider, you need to [create an app in Google](configure-oauth2-settings.md#google-people-api-settings) with a redirect URL.
 
 The redirect URL is used by the Google app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.​
 
