@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 09/30/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -16,17 +16,18 @@ You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/porta
 
 - The **Copy** field on a webpage.
 - In the **Source** field on a [Web template](../liquid/store-content-web-templates.md).
- 
-For example, `{% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}`
 
 ![Chart example](../media/dynamics365-chart-example.png "Chart example")
 
-You can also specify the ID of a view (saved query) to filter the query. For example:
+For example, to show leads by source and filtered for only open leads view:
 
 ```
 <!—Leads by Source – Open Leads -->
 {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
 ```
+
+> [!IMPORTANT]
+> You must specify the values for both the [`chart id`](#get-the-id-of-a-chart) and the [`viewid`](#get-the-id-of-a-view) parameters to render a chart on a portals webpage.
 
 ## Get the ID of a chart
 
@@ -44,7 +45,12 @@ You can also specify the ID of a view (saved query) to filter the query. For exa
 
 7. Paste the `visualizationid` value into your Liquid chart tag declaration for the chart ID parameter, for example:
 
-    `{% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}`
+    ```
+    <!—Leads by Source – Open Leads -->
+    {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" %}
+    ```
+
+Now that the Liquid chart tag declaration has the chart ID, follow the next steps to get the view ID.
 
 ## Get the ID of a view
 
