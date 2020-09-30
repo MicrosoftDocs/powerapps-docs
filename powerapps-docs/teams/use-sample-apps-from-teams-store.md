@@ -18,7 +18,7 @@ Sample apps that were created by using Power Apps are available in the Teams sto
 
 In this tutorial, you'll learn how to search for a sample app in the Teams store and add it to your team channel. After you install the sample app, you can go to the team that you added the app to and use the tabs for the app just as you use other features such as **Post**, **Files**, or **Wiki**.
 
-![Employee Ideas sample app](media/sample-app.png "Employee Ideas sample app")
+![Employee ideas sample app](media/sample-app.png "Employee ideas sample app")
 
 > [!IMPORTANT]
 > Installing the sample app automatically enables the selected team's Microsoft 365 Group for security. More information: [Enable security for the selected team's Microsoft 365 Group](../maker/canvas-apps/share-app.md#share-an-app-with-office-365-groups)
@@ -29,19 +29,19 @@ Several sample apps are available from the Teams store that you can add to your 
 
 | Name | Description |
 | - | - |
-| [Employee Ideas](employee-ideas.md) | Manager and employee apps for campaigns and ideas. |
+| [Employee ideas](employee-ideas.md) | Manager and employee apps for campaigns and ideas. |
 | [Inspection](inspection.md) | Manager and user apps for area inspections. |
-| [Issue Reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
+| [Issue reporting](issue-reporting.md) | Manager and user apps for issue reporting. |
 
-The following tutorial shows how to install the Employee Ideas app.
+The following tutorial shows how to install the Employee ideas app.
 
 ## Install the sample app
 
 1. Select **Apps** at the bottom of the left pane in Teams.
 
-1. Search for **Employee Ideas**.
+1. Search for **Employee ideas**.
 
-    ![Employee Ideas app search](media/sample-app-9.png "Employee Ideas app search")
+    ![Employee ideas app search](media/sample-app-9.png "Employee ideas app search")
 
 1. Select the app.
 
@@ -74,15 +74,15 @@ The following tutorial shows how to install the Employee Ideas app.
     > - If the selected Teams team doesn't already have an environment created, a new environment is created at this stage. More information: [Environment lifecycle](/power-platform/admin/about-teams-environment.md)
     > - Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
 
-1. After the app is installed, you'll see a tab named **Employee Ideas** added to the team channel that you selected earlier.
+1. After the app is installed, you'll see a tab named **Employee ideas** added to the team channel that you selected earlier.
 
-    ![New Employee Ideas tab](media/sample-app-6.png "New Employee Ideas tab")
+    ![New Employee ideas tab](media/sample-app-6.png "New Employee ideas tab")
 
 Similarly, you can find other apps in the Teams store and add them to your team channel.
 
 ## Run the sample app
 
-To run the installed app, select the **Employee Ideas** tab from the team channel.
+To run the installed app, select the **Employee ideas** tab from the team channel.
 
 ### Step 1 - Allow connections
 
@@ -103,11 +103,11 @@ Select the channel (in this example, the channel is populated automatically), an
 
 ### Step 3 - Use the app
 
-The **Employee Ideas** app is now open and ready for your use.
+The **Employee ideas** app is now open and ready for your use.
 
 ![Select app from available list](media/sample-app-12.png "Select app from available list")
 
-For more details about using the **Employee Ideas** app, go to [Employee Ideas](employee-ideas.md).
+For more details about using the **Employee ideas** app, go to [Employee ideas](employee-ideas.md).
 
 ## Edit the sample app
 
@@ -119,6 +119,6 @@ If you get any errors during the installation process, you can help us troublesh
 
 ### See also
 
-[Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
+[Employee ideas app](employee-ideas.md)  
 [Inspection sample apps](inspection.md)  
-[Issue Reporting sample apps](issue-reporting.md)
+[Issue reporting sample apps](issue-reporting.md)
