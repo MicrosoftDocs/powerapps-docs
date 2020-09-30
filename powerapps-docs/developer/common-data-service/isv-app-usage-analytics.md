@@ -26,7 +26,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-ISVs need data to measure the success of their application. App usage analytics feature allows ISVs to monitor the usage of their apps by giving them the visibility into monthly, daily, and weekly usage data of their apps. For ISVs to get the usage data, tenants or customers need to update their apps.
+ISVs need data like active users, number of times the solution installed or other means of data to measure the success of their application. App usage analytics feature allows ISVs to monitor the usage of their apps by giving them the visibility into monthly, daily, and weekly usage data of their apps. For ISVs to get the usage data, tenants or customers need to update their apps.
 
 App usage feature allows ISVs to filter the usage data by **Component Type**, **Data Date**, **Package Name**, **Solution Name**, and **Package Version**. An app can have multiple packages and an individual package can have multiple solutions. Each solution can have multiple components. App usage is measured based on how many times the components of the application are used in a month, week, or day. 
 
@@ -34,7 +34,7 @@ App usage feature allows ISVs to filter the usage data by **Component Type**, **
 > For any app that is not deployed via [AppSource](https://appsource.microsoft.com), it needs to be tracked at the solution level.   
 
 > [!div class="mx-imgBorder"]
-> ![Usage report](media/isv-app-usage-analytics-report.png "Usage report")
+> ![Usage dashboard](media/isv-app-usage-analytics-report.png "Usage dashboard")
 
 The following list shows some of the components that can be part of a solution:
  
@@ -53,25 +53,29 @@ Some of the components of a solution can have shared ownership by multiple ISVs.
 
 For components that are not shared, only the publisher who created gets the usage credit. 
 
-## View the app usage report
+## View the app usage dashboard
 
 To view the app usage data:
 
 1. Sign in to [ISV studio](https://aka.ms/ISVStudio/).
-1. On the **Home** page, you can see a list of published app packages. Select the desired package for which you want to see the usage details. 
+1. On the **Home** page, you can see a list of published applications. Select the desired application for which you want to see the usage details. 
 
    > [!div class="mx-imgBorder"]
    > ![Home page](media/isv-home-page-list-apps.png "Home page")
    
 1. Scroll-down to the page to view all the apps. Select the app and select the **Usage** tab.
+
+   > [!div class="mx-imgBorder"]
+   > ![List of top apps](media/isv-top-apps.png "List of top apps")
+
 1. You can also see the app usage details by directly selecting the app usage icon from the list of apps as shown  screenshot:
 
    > [!div class="mx-imgBorder"]
    > ![Usage icon](media/isv-select-app-to-see-details.png "Usage icon")
 
-## Overview of the usage report
+## Overview of the usage dashboard
 
-The usage report shows the following metrics:
+The usage dashboard shows the following metrics:
 
 - **Monthly active users**: Tracks the information about the number of unique users who used the app within the last month.
 - **Daily active users**: Tracks the information about the number of daily unique users who used the app within the last 24 hours.
@@ -82,9 +86,9 @@ The usage report shows the following metrics:
 
 If ISV is looking at the metrics at a solution level, all the components are rolled up to the solution level. Similarly, all the solution metrics are rolled up to package and all package metrics are rolled up to an app. 
 
-### Filtering the usage report
+### Filtering the usage dashboard
 
-ISVs can filter the usage report using the filters available. For example, an ISV can filter to see the metrics at app, package, solution, and component level. If ISVs want to see the metrics at solution level, ISVs can select all the components of the solution in the filter.  
+ISVs can filter the usage dashboard using the filters available. For example, an ISV can filter to see the metrics at app, package, solution, and component level. If ISVs want to see the metrics at solution level, ISVs can select all the components of the solution in the filter.  
 
 ### See also
 
