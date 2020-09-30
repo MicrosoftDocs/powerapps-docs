@@ -32,8 +32,8 @@ The portals Web API offers a subset of capabilities for Common Data Service oper
 ### Web API operations available in portals
 
 - [Create an entity](web-api-perform-operations.md#create-an-entity-record)
-- [Update and delete entities](web-api-perform-operations.md#update-and-delete-entities-using-the-web-api) 
-- [Associate and disassociate entities](web-api-perform-operations.md#associate-and-disassociate-entities-using-web-api)
+- [Update and delete entities](web-api-perform-operations.md#update-and-delete-entities-by-using-the-web-api) 
+- [Associate and disassociate entities](web-api-perform-operations.md#associate-and-disassociate-entities-by-using-the-web-api)
 
 ## Site settings for the Web API
 
