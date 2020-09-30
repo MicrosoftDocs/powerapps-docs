@@ -298,7 +298,7 @@ A Case Contact has three statusses:
 With these three statusses, a case manager has the ability to clearly indicated which Case Contacts have been traced and how they have been dealt with.
 
 
-## Complete Employee Case
+### Complete Employee Case
 
 After you complete the process and select **Finish** in the business process flow, the employee case will become inactive. You can also make employee cases inactive for certain reasons if the employee case is no longer being worked on. In that case, you can deactivate the employee case from the command bar. 
 
