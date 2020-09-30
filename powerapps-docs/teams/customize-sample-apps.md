@@ -63,11 +63,11 @@ When you install sample apps, the tables are pre-populated with sample data. The
 
 To remove data from the sample apps:
 
-1. Open the sample app (for example, **Manage Inspection**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the sample app (for example, **Manage inspections**) in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 
-1. Select ![Data - ellipsis](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Task* for **Manage Inspection** app).
+1. Select ![Data - ellipsis](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Task* for **Manage inspections** app).
 
 1. Select **Edit data**.
 
@@ -116,8 +116,23 @@ variables to correctly display the desired terminology for inspections and items
     The formula for the greeting text is in this format:
 
     ```powerapps-dot
-    "Glad to have you here, we are ready for you to " & Lower(gblWorkType) &
-    /\*inspect\*/ " an " & Lower(areaLabel) //"area"
+    "Glad to have you here, we are ready for you to " & If(Lower(gblWorkType)="inspection", "inspect", Lower(gblWorkType)) & Switch(
+    Left(
+        Lower(areaLabel),
+        1
+    ),
+    "a",
+    " an ",
+    "e",
+    " an ",
+    "i",
+    " an ",
+    "o",
+    " an ",
+    "u",
+    " an ",
+    " a "
+    ) & Lower(areaLabel)
     ```
 
 1. Select the formula bar.
@@ -127,8 +142,23 @@ variables to correctly display the desired terminology for inspections and items
 1. Update the greeting text, such as **We are happy that you are here**.
 
     ```powerapps-dot
-    "We are happy that you are here, we are ready for you to " &
-    Lower(gblWorkType) & /\*inspect\*/ " an " & Lower(areaLabel)
+    "We are happy that you are here, we are ready for you to " & If(Lower(gblWorkType)="inspection", "inspect", Lower(gblWorkType)) & Switch(
+    Left(
+        Lower(areaLabel),
+        1
+    ),
+    "a",
+    " an ",
+    "e",
+    " an ",
+    "i",
+    " an ",
+    "o",
+    " an ",
+    "u",
+    " an ",
+    " a "
+    ) & Lower(areaLabel)
     ```
 
     ![Update greeting text in formula](media/customize-sample-apps/update-greeting-text.png "Update greeting text in formula")
@@ -185,11 +215,11 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 ### Add Store Name text column to the Location table
 
-1. Open the **Inspection Manager** app in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
+1. Open the **Manage inspections** app in [Power Apps Studio](#open-the-sample-app-in-power-apps-studio).
 
 1. Select **Data** from the left pane.
 
-1. Select ![Data - ellipsis](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Location* for Inspection app).
+1. Select ![Data - ellipsis](media/customize-sample-apps/data-ellipsis.png "Data - ellipsis") next to the table name (for example, *Area Inspection Locations* for **Manage inspections** app).
 
 1. Select **Add column**.
 
@@ -203,14 +233,14 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 ### Add Store Name column to the location form
 
-1. Select the **Location Screen**.
+1. Select the **Locations Screen**.
 
     > [!TIP]
     > You can ignore the error about the use of the preview connectors in this app.
 
 1. In [Tree view](understand-power-apps-studio.md#tree-view), search for `btnArea_GroupedAreas`.
 
-1. In the **Grouped Areas** on the form, drag the right edge to be parallel with the edge of the **Title** field.
+1. In the **Grouped Areas** on the form, drag the left edge to be parallel with the edge of the **Title** field.
 
     > [!NOTE]
     > The Grouped Areas field control is in a container. Hence, the
@@ -249,7 +279,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
 1. Select **Display mode** from the property list on the top-left.
 
-1. In the formula bar, enter "Edit".
+1. In the formula bar, enter "Edit" if not already present.
 
 1. Hold the **ALT key** on your keyboard, and select the **Edit**.
 
@@ -277,6 +307,9 @@ Consider a scenario where you have multiple stores, and you want to associate lo
     }
     ```
 
+    > [!NOTE]
+    > If the updated formula shows error, verify the text box name for the store name. For example, it may be `Microsoft_CoreControls_TextBox2` instead of `Microsoft_CoreControls_TextBox1`, depending on your changes.
+
 1. Select the label control added in step 5.
 
 1. Select the **Y** property from the property list on the top-left.
@@ -301,7 +334,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
     If(gblEditLocation,282,232)
     ```    
 
-1. Hold the **ALT key** on your keyboard, and select both the store name label and the text box.
+1. Hold the **CTRL key** on your keyboard, and select both the store name label and the text box.
 
 1. Select Visible property from the property list on the top-left.
 
@@ -311,7 +344,7 @@ Consider a scenario where you have multiple stores, and you want to associate lo
 
     ```powerapps-dot
     If(gblViewInspection, false, true)
-    ```   
+    ```
 
     ![Position changes with property Y](media/customize-sample-apps/position-changes.png "Position changes with property Y")
 
