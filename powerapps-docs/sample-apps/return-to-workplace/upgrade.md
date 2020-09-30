@@ -121,7 +121,7 @@ In previous versions there was a possibility to indicate on an employee case if 
 
 ### Step 4: Send guest pass.
 
-1. Go into the "Return to Work Solution" solution.
+1. Go into the "Return to Work" solution.
 
 2. Look for the "Employee App Email Flow" flow and open it. It should take to you Power Automate site.
 
