@@ -121,15 +121,8 @@ In previous versions there was a possibility to indicate on an employee case if 
 
 ### Step 4: Send guest pass.
 
-1. Go into the "Return to Work" solution.
+With the introduction of guest passes, we also allow you to share passes with guests. From within the employee app, these **Share** buttons send out an email via Outlook to the guest who is invited. To setup this up look at: [Deploy the solution - Turn on Flows](deploy.md)
 
-2. Look for the "Employee App Email Flow" flow and open it. It should take to you Power Automate site.
-
-3. Create connection between your Outlook and the Common Data Service environment by clicking on the **+**. 
-
-4. Click on **Save** and close it.
-
-4. Make sure the flow is turned **On**.
 
 ## Give feedback about the solution
 
