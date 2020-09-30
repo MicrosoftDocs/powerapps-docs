@@ -98,5 +98,5 @@ The following Common Data Service datatypes are not supported with the SQL conne
 
 ### See also
 
-[Use FetchXML to construct a query](use-fetchxml-construct-query.md)  
-[How Common Data Service SQL differs from Transact-SQL](how-cds-sql-differs-from-transact-sql.md)
+[How Common Data Service SQL differs from Transact-SQL](how-cds-sql-differs-from-transact-sql.md)  
+[Use FetchXML to construct a query](cds-sql-query.md)

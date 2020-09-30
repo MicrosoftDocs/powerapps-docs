@@ -236,5 +236,4 @@ SELECT value c FROM Categories AS c;
   
 ## See also
 
-- [Common Data Service SQL Overview](entity-sql-overview.md)
-- [Unsupported Expressions](unsupported-expressions-entity-sql.md)
+- [Use SQL to query data](cds-sql-query.md)
