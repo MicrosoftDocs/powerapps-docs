@@ -205,15 +205,23 @@ case, and selects **Finish**. After the process is finished, the employee case b
   > [!div class="mx-imgBorder"]
   > ![resolve](media/health-safety-bpf-resolve.png "Resolve")
 
+### Complete Employee Case
+
+After you complete the process and select **Finish** in the business process flow, the employee case will become inactive. You can also make employee cases inactive for certain reasons if the employee case is no longer being worked on. In that case, you can deactivate the employee case from the command bar. 
+
+  > [!div class="mx-imgBorder"]
+  > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
+
+
 ## Manual Contact tracing
 
 To facilitate manual contact tracing and tracking possible exposures, three elements have been added:
 
-1. Exposures (Days to investigate)
+1. Exposures
 2. Case Facilities
 3. Case Contacts
 
-### Exposures (Days to investigate)
+### Exposures
 
 When accounting for the whereabouts of an employee, the system stores valuable information in the form of bookings and attestations. That is why those records can be linked to a case. When doing so, a background process is triggered. This process does two things:
 
@@ -236,11 +244,11 @@ These Case Contacts must be regarded as suggestions and can then be cleared by t
 To link an Attestation to a Case, follow these steps:
 
 1. Open a Case and open the Exposures tab
-2. In the **Days to investigate** grid, click **Add Existing Employee Attestation**
+2. In the grid, click **Add Existing Employee Attestation**
 3. Use the lookup to search for Employee Attestations for the Employee under investigation
 4. Select the applicable Employee Attestations and click **Add**
 
-The Employee Attestation record is now linked to the case. This will trigger the background suggestion process that will create Case Contact suggestions that can assist in the contact tracing procedure.
+The Employee Attestation record is now linked to the case. This will trigger the background suggestion process that will create Case Contact suggestions that can assist in the manual contact tracing procedure.
 Each Employee Attestation can only be linked to one case. If the duplicate detection rules have been setup, there can also be only one active case per employee. This prevents double work.
 
 ### Case facilities
@@ -297,13 +305,6 @@ A Case Contact has three statusses:
 
 With these three statusses, a case manager has the ability to clearly indicated which Case Contacts have been traced and how they have been dealt with.
 
-
-### Complete Employee Case
-
-After you complete the process and select **Finish** in the business process flow, the employee case will become inactive. You can also make employee cases inactive for certain reasons if the employee case is no longer being worked on. In that case, you can deactivate the employee case from the command bar. 
-
-  > [!div class="mx-imgBorder"]
-  > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
   
 ## Overview of Employee Cases
 For managing the whole process from beginning to end, you can use the **Workplace Care Management** dashboard. You will find the dashboard under **Dashboards**. The dashboard is separated with two different sections, on the top you will see the list of 4 different views which show different focusses on the employee cases and on the bottom it will show charts to get a quick overview.

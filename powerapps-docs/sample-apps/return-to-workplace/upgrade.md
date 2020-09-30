@@ -88,14 +88,14 @@ To install the Workplace Care Management dashboard, follow the instructions in [
 
 ### Step 2: Update facilities
 
-With the new version, we are introducing the notations of areas and floors for a certain facility. A floor indicates how many levels are present within a building. An area allows you to define a space within a floor that has a certain capacity. Through bookings in the Employee app, you can book an area. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-and-monitor-facilities).
+With the new version, we are introducing the notion of areas and floors for a facility. A floor indicates how many levels are present within a facility. An area allows you to define a space within a floor that has a certain capacity. Through bookings in the Employee app, you can book an area. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-and-monitor-facilities).
 
-Facilities now also have time windows defined which allow you to indicate in which time window people can enter the building. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-and-monitor-facilities).
+Facilities now also have entry windows defined, which allow you to indicate in which time window people can enter the building. More information: [Use the Facility Safety Management app](app-for-facility-manager.md#manage-and-monitor-facilities).
 
 
 ### Step 3: Define capacity for your reopen phases
 
-Capacity is defined in an area, but it's also bound by the phase your facility is in. Every reopen phase defines the percentage by which capacity will be limited. More information: [Configure the solution](configure.md)
+Capacity is defined for an area, but it's also bound by the phase your facility is in. Every reopen phase defines the percentage by which capacity will be limited. More information: [Configure the solution](configure.md)
 
 
 ### Step 4: Make employee cases inactive
@@ -117,7 +117,7 @@ To limit the number of employee cases on an employee, there is a possibility to 
 
 ### Step 3: Facility access available
 
-Starting from the beginning there is a possibility to indicate on an employee case if people are allowed to enter a facility. In this release, we changed this process so it blocks people from entering a facility. More information: [Manage employee cases - Monitoring](app-for-health-and-safety-lead.md#manage-employee-cases)
+In previous versions there was a possibility to indicate on an employee case if the employee is allowed to enter a facility. In this release, we changed this process so it blocks the employee from entering a facility. More information: [Manage employee cases - Monitoring](app-for-health-and-safety-lead.md#manage-employee-cases)
 
 ### Step 4: Send guest pass.
 
