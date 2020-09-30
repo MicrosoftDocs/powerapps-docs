@@ -16,7 +16,9 @@ search.app:
   - D365CE
 ---
 
-# How Common Data Service SQL differs from Transact-SQL
+# How Common Data Service SQL differs from Transact-SQL (Preview)
+
+[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 This article describes the differences between Common Data Service SQL and Transact-SQL.  
   
