@@ -119,6 +119,17 @@ To limit the number of employee cases on an employee, there is a possibility to 
 
 Starting from the beginning there is a possibility to indicate on an employee case if people are allowed to enter a facility. In this release, we changed this process so it blocks people from entering a facility. More information: [Manage employee cases - Monitoring](app-for-health-and-safety-lead.md#manage-employee-cases)
 
+### Step 4: Send guest pass.
+
+1. Go into the "Return to Work Solution" solution.
+
+2. Look for the "Employee App Email Flow" flow and open it. It should take to you Power Automate site.
+
+3. Create connection between your Outlook and the Common Data Service environment by clicking on the **+**. 
+
+4. Click on **Save** and close it.
+
+4. Make sure the flow is turned **On**.
 
 ## Give feedback about the solution
 
