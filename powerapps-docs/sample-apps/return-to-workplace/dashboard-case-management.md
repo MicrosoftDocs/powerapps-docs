@@ -29,13 +29,13 @@ The overview page is the default page of the dashboard that provides overall vis
 
 - Total active cases: Number of active cases.
 
-- Cases per case manager: Average number of active cases (in open, investigating, and monitoring phases) per case manager.
-
 - Days without new cases: Number of days since a new case hasn't been opened at a facility.
 
 - Average risk: Average case risk associated with a facility or group of facilities.
 
 - Average resolution time: Days needed to resolve cases.
+
+- Cases per case manager: Average number of active cases (in open, investigating, and monitoring phases) per case manager.
 
 The interactive map displays the active cases by stage and location. The size of the bubble represents the number of cases. The case manager overview table contains information about the number of cases, average risk, and average resolution time in days.
 
@@ -69,11 +69,11 @@ The Monitoring page focuses on active cases that are in the monitoring stage. Ke
 
 - Cases being monitored: Number of cases being monitored.
 
-- Avg resolution time (days): Average time taken for a case from being opened to resolved.
-
 - Cases per case manager: Average number of cases in the monitoring phase per case manager.
 
 - Resolved cases: Total number of cases already resolved.
+
+- Avg resolution time (days): Average time taken for a case from being opened to resolved.
 
 The interactive map displays the location of cases in the monitoring phase. You can drill into the data by country, province, and facility. The size of the bubble represents the number of cases. The case manager overview table contains information about the number of cases, case manager, average resolution time, and variance from average.
 
@@ -84,15 +84,15 @@ The interactive map displays the location of cases in the monitoring phase. You 
 
 Clusters page helps health and safety leaders view cases as clusters and assess whether there is an outbreak in a facility. The tab focuses on a case contacts and links between active cases, identifying root cause of the outbreak. It also provides a set of metrics and trends related to case contacts. These metrics include:
 
-1. Average linked cases per case - the number of case contacts with an active case of their own per active case. 
+- Case contacts per case - Average number of case contacts per active case.
 
-2. Case contacts per case - Average number of case contacts per active case.
+- % Contacts evaluated - Percentage of case contacts whose evaluation is complete.
 
-3. % Contacts evaluated - Percentage of case contacts whose evaluation is complete.
+- Average evaluation time - For evaluated case contacts, time taken to evaluate/process a case contact in days.
 
-4. Average evaluation time - For evaluated case contacts, time taken to evaluate/process a case contact in days.
+- Average linked cases per case - the number of case contacts with an active case of their own per active case. 
 
-5. % evaluated within 24 hr - Percentage of case contacts that were evaluated/processed within 24 hours of identification.
+- % evaluated within 24 hr - Percentage of case contacts that were evaluated/processed within 24 hours of identification.
 
 > [!div class="mx-imgBorder"]
 > ![System at a Glance fatal COVID cases](media/pbi-dash-report-clusternavmap.png "Cluster Nav Map")
@@ -117,11 +117,14 @@ You can also switch from a map view to the table view to view key metrics broken
 > [!div class="mx-imgBorder"]
 > ![System at a Glance fatal COVID cases](media/pbi-dash-report-clustertable.png "Cluster Table")
 
-Following set of metrics related to the selected facility are also displayed:
+The following set of metrics related to the selected facility are also displayed:
 
 a) Total number of cases linked to a facility.
+
 b) Total number of case contacts.
+
 c) Number of Standalone cases: cases that are not linked to other cases in a facility.
+
 d) Number of cases that are part of a cluster.
 
 
