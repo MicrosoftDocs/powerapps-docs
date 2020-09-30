@@ -274,7 +274,6 @@ A case can be directly created from a Case Contact record. To do so, select the 
 A new Employee Case gets created
 - The new Employee Case is linked to the Case Contact record
 - The new Employee Case has the Employee of the Case Contact record entered
-- The new Employee Case has the original Employee Case entered as originating case.
 - The new Employee Case is assigned to the current user
 - The user is navigated to the newly created record
 - The new Employee Case number is entered in the Open Case field on the Contact record
