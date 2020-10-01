@@ -22,6 +22,11 @@ For the steps to move an app, go to [Move an app to another Teams channel in the
 
 For the steps to delete sample data from the sample apps, go to [Remove sample data](customize-sample-apps.md#remove-sample-data).
 
+## Planner tasks are created with “Former Member” instead of the name of the assigned user
+
+When you assign a task in the Issue reporting, or Inspection apps who isn't a member of the Teams team, the user's name on the task will show as "Former member".
+To correctly display the user's name, add the user to the Team where the app is installed.
+
 ## Why can't I create tasks in Inspection app?
 
 If a user isn't allowed to create tasks using a mobile device in the Inspection app:
