@@ -84,7 +84,7 @@ These are the broad steps to authenticate to the Online Management API service.
     }
     ```
 
-You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all Common Data Service environments in your Office 365 tenant, see [Quick Start Sample: Retrieve environments in your tenant](sample-quick-start.md)
+You are all set to execute messages against the Online Management API. For a sample code that demonstrates how to retrieve all Common Data Service environments in your Microsoft 365 tenant, see [Quick Start Sample: Retrieve environments in your tenant](sample-quick-start.md)
 
 
 ### Related Topics  

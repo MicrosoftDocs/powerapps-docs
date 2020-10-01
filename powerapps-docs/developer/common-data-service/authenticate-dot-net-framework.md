@@ -29,7 +29,7 @@ With the `Xrm.Tooling` classes, use the <xref:Microsoft.Xrm.Tooling.Connector>.<
 
 The `Xrm.Tooling` classes provide many benefits including:
 - You can define connection information using a connection string.
-- Supports both OAuth and Office 365 claims-based authentication.
+- Supports both OAuth and Microsoft 365 claims-based authentication.
 - Thread safety for actions performed in a multithreaded environment. 
 - A common Windows Presentation Foundation (WPF) login control for a consistent sign-in experience from your Windows client applications.
 - Supports for secure storage of the sign-in credentials and reuse of the stored credentials to automatically sign in after initial sign in.

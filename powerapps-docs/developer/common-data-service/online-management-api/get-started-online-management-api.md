@@ -17,14 +17,14 @@ search.app:
 
 This topic provides basic information to help you get started with the Online Admin API for Common Data Service.
 
-## Office 365 Admin roles
+## Microsoft 365 Admin roles
 
-To use the Online Management API, you must have one of the following admin roles assigned to you in your Office 365 tenant:
+To use the Online Management API, you must have one of the following admin roles assigned to you in your Microsoft 365 tenant:
 
 - Global administrator
 - Service administrator
 
-For information about these roles, see [About Office 365 admin roles](https://support.office.com/article/About-Office-365-admin-roles-da585eea-f576-4f55-a1e0-87090b6aaa9d)
+For information about these roles, see [About Microsoft 365 admin roles](https://support.office.com/article/About-Office-365-admin-roles-da585eea-f576-4f55-a1e0-87090b6aaa9d)
 
 ## Service URL
 
@@ -32,12 +32,12 @@ The service URL defines the endpoint address for accessing REST API. To perform 
 
 `{ServiceUrl}/api/v1.2/{resource}`
 
-For example, you can pass in the following URL with a **GET** request to retrieve the instances in your Office 365 tenant in North America:
+For example, you can pass in the following URL with a **GET** request to retrieve the instances in your Microsoft 365 tenant in North America:
 
 `https://admin.services.crm.dynamics.com/api/v1.2/instances`
 
 
-The following table lists the service URLs of Online Management API for worldwide Office 365 data centers.
+The following table lists the service URLs of Online Management API for worldwide Microsoft 365 data centers.
 
 |Location | Service URL |
 |---------|-------------|
