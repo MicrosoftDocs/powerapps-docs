@@ -106,6 +106,14 @@ The email sent by this workflow must be customized by using the URL to the redee
 
     ![Sign up with an invitation code](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
 
+### Disabled registration
+
+If registration is disabled for a user after the user has redeemed an invitation, display a message by using the following content snippet:
+
+**Name**: Account/Register/RegistrationDisabledMessage
+
+**Value**: Registration has been disabled.
+
 ## Manage user accounts through profile pages
 
 Authenticated users manage their user accounts through the **Security** navigation bar of the profile page. Users aren't limited to the single local account or single external account they chose at user registration time. Users who have an external account can choose to create a local account by applying a username and password. Users who started with a local account can choose to associate multiple external identities to their account. The profile page is also where the user is reminded to confirm their email address by requesting a confirmation email to be sent to their email account.
