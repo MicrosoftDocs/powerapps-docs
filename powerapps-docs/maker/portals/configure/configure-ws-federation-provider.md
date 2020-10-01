@@ -49,7 +49,7 @@ To configure SAML 2.0 provider:
 
     | Name | Description
     | - | - |
-    | Sign-out reply | The URL to return to (sign-out wreply) once the sign-out is complete. <br> Example: https://portal.contoso.com/signin-federation <br> More information: [WsFederationAuthenticationOptions.Wreply](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wreply.aspx) |
+    | Sign-out reply | The URL to return to (sign-out wreply) once the sign-out is complete. <br> Example: `https://portal.contoso.com/signin-federation` <br> More information: [WsFederationAuthenticationOptions.Wreply](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wreply.aspx) |
     | Valid audiences | Comma-separated list of audience URLs. <br> More information: [TokenValidationParameters.AllowedAudiences](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.allowedaudiences.aspx) |
     | Validate audiences | If enabled, the audience will be validated during the token validation. |
     | WHR | The home realm of the identity provider (IdP) to use for authentication. Sets the WS-Federation sign-in request **whr** parameter. If empty, the **whr** parameter is not included in the request. <br> More information: [wsFederation](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation) |

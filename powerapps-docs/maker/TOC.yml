@@ -1373,10 +1373,20 @@
                      href: ./portals/configure/azure-ad-b2c-claims-mapping.md
             - name: OAuth 2.0
               items:
-                   - name: Configure
+                   - name: Overview
                      href: ./portals/configure/configure-oauth2-provider.md
-                   - name: Configure manually
-                     href: ./portals/configure/configure-oauth2-settings.md
+                   - name: Microsoft
+                     href: ./portals/configure/configure-oauth2-microsoft.md
+                   - name: LinkedIn
+                     href: ./portals/configure/configure-oauth2-linkedin.md
+                   - name: Facebook
+                     href: ./portals/configure/configure-oauth2-facebook.md
+                   - name: Google
+                     href: ./portals/configure/configure-oauth2-google.md
+                   - name: Twitter
+                     href: ./portals/configure/configure-oauth2-twitter.md
+                   - name: Additional settings
+                     href: ./portals/configure/configure-oauth2-additional-settings.md
             - name: OpenID Connect
               items:
                    - name: Configure
