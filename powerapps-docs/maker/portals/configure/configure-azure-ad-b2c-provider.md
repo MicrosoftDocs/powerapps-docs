@@ -22,7 +22,7 @@ A portal owner can configure the portal to accept [!include[Azure](../../../incl
 
 To use Azure AD B2C as an identity provider:
 
-1. [Create and configure an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant).
+1. [Create and configure an Azure AD B2C tenant]().
 
 1. [Register an application](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant. Use the **Reply URL** provided in the wizard while configuring the application.
 
@@ -96,6 +96,47 @@ Select **Confirm** to view a summary of your configuration and complete the iden
 For more information about claims mapping, see [Azure AD B2C claims mapping scenarios](azure-ad-b2c.md#claims-mapping).
 
 For more information about configuring Azure AD B2C identity provider, see [Azure AD B2C provider settings for portals](azure-ad-b2c.md#customize-the--ad-b2c-user-interface).
+
+### Create and configure an Azure AD B2C tenant
+
+> [!NOTE]
+> For more details about creating and configuring Azure AD B2C tenant on Azure portal, go to [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant).
+
+To create Azure AD B2C tenant:
+
+1. Sign in to your [Azure portal](https://portal.azure.com/).
+1. [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-get-started).
+1. Select **[!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C** on the leftmost navigation bar.
+1. [Create Azure application](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-app-registration#register-a-web-application).
+
+   > [!Note]
+   > You must choose **Yes** for the **Allow implicit flow** field and specify your portal URL in the **Reply URL** field. The value in the **Reply URL** field should be in the format [portal domain]/signin-[Federation-Name]. For example, `https://contosocommunity.microsoftcrmportals.com/signin-B2C`.
+
+1. Copy the application name, and enter it as the value of Application-Name in the preceding table.
+1. Copy the application (client) ID, and enter it as the value of Application-ID in the preceding table.
+1. [Create a sign-up or sign-in policy](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies#create-a-sign-up-or-sign-in-policy).
+1. Navigate to **Azure AD B2C** resource.
+1. Select **User flows** under Policies.
+1. Choose the newly created Sign up and sign in policy.
+1. From **Settings** list, select **Properties**
+1. Under **Token compatability settings**, from the **Issuer (iss) claim** list, select the URL that has **/tfp** in its path.
+1. Save the policy.
+1. Select the URL in the **Metadata endpoint for this policy** field.
+1. Copy the value of the issuer field and enter it as the value of Issuer-URL in the preceding table. 
+
+## Claims to support sign-in scenarios
+
+The data in Common Data Service and in the identity provider are not directly linked, so the data might get out of sync. The portal should have a list of claims that you want to accept from any sign-in event to update in Common Data Service. These claims can be a subset of, or equal to, the claims coming in from a sign-in scenario. This must be configured separately from sign-in claims mapping, because you might not want to overwrite some key portal attributes. The following site setting is required:
+
+**Name**: Authentication/OpenIdConnect/[Federation-Name]/LoginClaimsMapping
+
+**Description**: List of logical name/claim pairs to be used to map claim values to attributes in the contact record created after sign-in.
+
+**Format**: attribute1=claim1, attribute2=claim2, attribute3=claim3
+
+For example: firstname=<https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle> 
+
+The claim name is the CLAIM TYPE field listed next to the attribute in the sign-in policies Application claims.
 
 ### See also
 
