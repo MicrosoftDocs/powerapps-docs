@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 10/05/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -154,7 +154,8 @@ Next, we'll configure the data refresh settings for the dataset.
       > [!div class="mx-imgBorder"] 
       > ![Schedule refresh data](media/deploy-schedule-refresh.png "Schedule refresh data")
 
-      C- There are limits to how many times data can be refreshed. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Power BI Premium capacity node, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
+      > [!NOTE]
+      > - There are limits to how many times data can be refreshed. Power BI limits datasets on shared capacity to eight daily refreshes. If the dataset resides on a Power BI Premium capacity node, you can schedule up to 48 refreshes per day in the dataset settings. More information: [Refresh data](https://docs.microsoft.com/power-bi/refresh-data#data-refresh)
       > - We recommend scheduling data to be refreshed every 30 minutes.
 
 5. Go back to your workspace, select the **Reports** tab, and then select the report to open it in a browser.
@@ -185,7 +186,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 
    From the displayed `Secure embed code` window, capture the content of the link in the first field up to the end of the `PowerBIReportID` (as shown in the example code). 
 
-    See the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
+    See the article [Embed Power BI report](https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import) and verify if the changes that you made to the XML file apply as in the example. 
 
 6. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with three files in it, including the updated customizations.xml file.  
 
@@ -246,7 +247,7 @@ You can change the look and feel of the app by applying themes to match your com
 5. Select users from the list of available users or groups with whom you want to share the app.
 
 > [!IMPORTANT]
-> - Even though the user may have access to the canvas app, you should still assign users the **Return to the Workplace - Employee** security role. 
+> Even if the user has access to the canvas app, you should still need to assign users with the **Return to the Workplace - Employee** security role. 
 
 ## Step 8: Set the security roles
 
@@ -261,7 +262,7 @@ In the Return to the Workplace solution, the following security roles are define
 - Return to the Workplace - Health & Safety Leader, which is used to manage employee cases.
 
 > [!IMPORTANT]
-> - These security roles are indicative. They provide broad access for test and demonstration purpose. Please review these roles carefully before moving to a production environment or when loading sensitive data.
+> These security roles are indicative. They provide broad access for test and demonstration purpose. Review these roles carefully before moving to a production environment or when importing sensitive data.
 
 **To assign security roles**
 
@@ -287,23 +288,23 @@ In the Return to the Workplace solution, the following security roles are define
    
 
    > [!NOTE]
-   > When you want to assign security roles in bulk, you can use Teams. Teams, which are based on Azure AD security groups or Office365 groups, can assign security roles based on the organization. (https://docs.microsoft.com/power-platform/admin/manage-teams) When applying teams based on Azure AD security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. (https://docs.microsoft.com/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
+   > When you want to assign security roles in bulk, you can use teams privileges. Teams privileges which are based on Azure Active Directory security groups or Office365 groups, can assign security roles based on the organization. More information: [Manage teams](https://docs.microsoft.com/power-platform/admin/manage-teams). When applying teams privileges based on Azure Active Directory security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. More information: [Security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
    
-## Step 9: Enable Flows
+## Step 9: Enable flows
 
 1. Sign in to [Power Apps](https://make.powerapps.com). Select the **Environment** from the upper-right corner.
 
 2. On the left pane, select **Solutions**.
 
-3. Select the **Default Solution**.
+3. Select the **Default Solution** from the list of solutions.
 
-4. Open the **Employee App Email Flow** and press **Edit**. Connect the flow with **Common Data Service (current environment)** and **Office 365 Outlook** connector. After that press **Save**, go back and press **Turn On**. Please validate that the flow is then turned on, so it can be used. 
+4. Select the **Employee App Email Flow** solution and then select **Edit**. Connect the flow with **Common Data Service (current environment)** and **Office 365 Outlook** connector. After that select **Save**, go back and then select **Turn On**. Validate whether the flow is turned on, so it can be used.
    
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 
 > [!NOTE]
-> There are notable differences between the commercially available service and the service for Dynamics 365 U.S. Government. Please review these differences thouroughly before deciding in which environment to implement. More details: [Dynamics 365 US Government - Feature availability](https://docs.microsoft.com/en-us/power-platform/admin/government-feature-availability)
+> There are notable differences between the commercially available service and the service for Dynamics 365 U.S. Government. Review these differences thoroughly before deciding in which environment to implement. More details: [Dynamics 365 US Government - Feature availability](https://docs.microsoft.com/power-platform/admin/government-feature-availability)
 
 This section provides information for US Government customers about how to install the app and publish the Power BI dashboard using the deployment package.
 
