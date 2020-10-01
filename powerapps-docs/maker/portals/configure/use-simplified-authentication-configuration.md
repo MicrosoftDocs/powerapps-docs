@@ -152,6 +152,14 @@ Deleting a provider deletes your provider configuration for the selected provide
 > [!NOTE]
 > When you delete a provider, only the portal configuration for the provider is deleted. For example, if you delete the LinkedIn provider, your LinkedIn app and app configuration remain intact. Similarly, if you delete an Azure Active Directory B2C provider, only the portal configuration is deleted; the Azure tenant configuration for this provider won't change.
 
+### Effects of the deleted and recreated portal
+
+If you delete and recreate your portal, the users may receive the following error when signing in. When this happens, update the portal's identity provider configuration correctly.
+
+`Sorry, but we're having trouble signing you in.`
+
+`AADSTS700016: Application with identifier 'https://contoso.powerappsportals.com/' was not found in the directory 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.`
+
 ### See also
 
 - [Set authentication identity for a portal](set-authentication-identity.md)
