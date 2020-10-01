@@ -66,8 +66,10 @@ App registration can also be done by an application developer or individual user
 7. Search for and choose **Common Data Service** under the **APIs my organization uses** tab.
     
     ![Select API](media/app-registration-select-api-page.png "Select API")    
-
-8. Click on **Delegated permissions** and check the options and click on **Add permissions**. 
+    > [!TIP]
+    > If you are presented with more than one **Common Data Service** item in the search list, choose any one of them. In the next step the service name and URL will be shown. At that point you can go back to the API search and choose a different Common Data Service list item if needed.
+    
+8.  Click on **Delegated permissions** and check the options and click on **Add permissions**. 
     
     ![Delegate Permissions](media/app-registration-delegate-permissions-page.png "Delegate Permission")
     > [!NOTE]
