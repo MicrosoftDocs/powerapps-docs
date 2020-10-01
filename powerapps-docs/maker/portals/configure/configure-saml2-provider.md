@@ -36,10 +36,10 @@ To configure SAML 2.0 provider:
 
     | Name | Description |
     | - | - |
-    | Metadata address | The [WS-Federation](https://msdn.microsoft.com/library/bb498017.aspx) metadata URL of the ADFS (STS) server. It commonly ends with the path:/FederationMetadata/2007-06/FederationMetadata.xml. <br> Example: `https://adfs.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml` <br> More information: [WsFederationAuthenticationOptions.MetadataAddress](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.metadataaddress.aspx) |
-    | Authentication type | The OWIN authentication middleware type. Enter the value of the [entityID](https://docs.microsoft.com/azure/active-directory/develop/active-directory-federation-metadata) attribute at the root of the federation metadata XML. <br> Example: `https://adfs.contoso.com/adfs/services/trust` <br> More information: [AuthenticationOptions.AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx) |
-    | Service provider realm | The ADFS relying party identifier. <br> Example: `https://portal.contoso.com/` <br> More information: [WsFederationAuthenticationOptions.Wtrealm](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wtrealm.aspx) |
-    | Assertion consumer service URL | The ADFS SAML Consumer Assertion endpoint. <br> Example: `https://portal.contoso.com/signin-saml2` <br> More information: [WsFederationAuthenticationOptions.Wreply](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wreply.aspx) |
+    | Metadata address | The SAML 2.0 identity provider metadata file location. <br> Example: `https://adfs.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml` <br> More information: [WsFederationAuthenticationOptions.MetadataAddress](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.metadataaddress.aspx) |
+    | Authentication type | The Entity Id value that specifies a globally unique name for the SAML 2.0 identity provider. <br> Example: `https://adfs.contoso.com/adfs/services/trust` <br> More information: [AuthenticationOptions.AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx) |
+    | Service provider realm | The portal URL that specifies the service provider realm for the SAML 2.0 identity provider. <br> Example: `https://portal.contoso.com/` <br> More information: [WsFederationAuthenticationOptions.Wtrealm](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wtrealm.aspx) |
+    | Assertion consumer service URL | The portal URL that corresponds to the service provider's endpoint (URL). This URL is responsible for receiving and parsing a SAML assertion. <br> Example: `https://portal.contoso.com/signin-saml2` <br> More information: [WsFederationAuthenticationOptions.Wreply](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wreply.aspx) |
 
 1. Select **Next**.
 
@@ -49,7 +49,7 @@ To configure SAML 2.0 provider:
 
     | Name | Description
     | - | - |
-    | Validate audience | A Boolean to control whether the audience will be validated during token validation. |
+    | Validate audience | If enabled, the audience will be validated during the token validation. |
     | Valid audiences | Comma-separated list of audience URLs. <br> More information: [TokenValidationParameters.AllowedAudiences](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.allowedaudiences.aspx) |
 
 1. Select **Confirm**.

@@ -1,6 +1,6 @@
 ---
-title: "Set authentication identity for a portal  | MicrosoftDocs"
-description: "Instructions to set authentication identity for a portal."
+title: "Set local authentication identity for a portal  | MicrosoftDocs"
+description: "Instructions to set local authentication identity for a portal."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,10 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Set authentication identity for a portal
+# Set local authentication for a portal
+
+> [!IMPORTANT]
+> Use the recommended [Azure AD B2C](configure-azure-ad-b2c-provider.md) identity provider instead of the local authentication. To learn about migrating to Azure AD B2C identity provider, go to [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md).
 
 Portals provides authentication functionality built on the [ASP.NET Identity](https://www.asp.net/identity) API. ASP.NET Identity is in turn built on the [OWIN](https://www.asp.net/aspnet/overview/owin-and-katana) framework, which is also an important component of the authentication system. The services provided include:
 

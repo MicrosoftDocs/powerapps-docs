@@ -1367,8 +1367,6 @@
               items:
                    - name: Configure
                      href: ./portals/configure/configure-azure-ad-b2c-provider.md
-                   - name: Migrate to Azure AD B2C
-                     href: ./portals/configure/migrate-identity-providers.md
                    - name: Configure manually
                      href: ./portals/configure/azure-ad-b2c-configure-manually.md
                    - name: Customize the Azure AD B2C user interface
@@ -1381,18 +1379,12 @@
                      href: ./portals/configure/configure-oauth2-provider.md
                    - name: Configure manually
                      href: ./portals/configure/configure-oauth2-settings.md
-                   - name: Settings reference
-                     href: ./portals/configure/configure-oauth2-settings-reference.md
             - name: OpenID Connect
               items:
-                   - name: Overview
-                     href: ./portals/configure/configure-openid-overview.md
                    - name: Configure
                      href: ./portals/configure/configure-openid-provider.md
                    - name: Configure OpenID for Azure AD manually
                      href: ./portals/configure/configure-openid-settings.md                   
-                   - name: Configure authentication using multi-tenant Azure AD
-                     href: ./portals/configure/configure-openid-multi-tenant-ad.md
             - name: SAML 2.0
               items:
                     - name: Configure
@@ -1411,8 +1403,10 @@
                       href: ./portals/configure/configure-ws-federation-settings.md
                     - name: Configure WS-Federation with Azure AD
                       href: ./portals/configure/configure-ws-federation-settings-azure-ad.md
-            - name: General authentication settings
+            - name: Local authentication
               href: ./portals/configure/set-authentication-identity.md
+            - name: Migrate to Azure AD B2C
+              href: ./portals/configure/migrate-identity-providers.md
         - name: Search
           items:
             - name: About search

@@ -10,7 +10,21 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure OpenID Connect provider
+# Configure Open ID Connect provider settings for portals
+
+[OpenID Connect](https://openid.net/connect/) external identity providers are services that conform to the Open ID Connect [specifications](https://openid.net/developers/specs/). Integrating a provider involves locating the authority (or issuer) URL associated with the provider. A configuration URL can be determined from the authority which supplies metadata required during the authentication workflow. The provider settings are based on the properties of the [OpenIdConnectAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.aspx) class.
+
+Examples of authority URLs are:
+
+- [Google](https://developers.google.com/identity/protocols/OpenIDConnect): <https://accounts.google.com/.well-known/openid-configuration>
+- [[!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]](https://msdn.microsoft.com/library/azure/mt168838.aspx): [https://login.microsoftonline.com/&lt;[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD Application&gt;/](https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration)
+
+Each OpenID Connect provider also involves registering an application (similar to that of an OAuth 2.0 provider) and obtaining a Client Id. The authority URL and the generated application Client Id are the settings required to enable external authentication between the portal and the identity provider.
+
+> [!Note]
+> The Google OpenID Connect endpoint is currently not supported because the underlying libraries are still in the early stages of release with compatibility issues to address. The [OAuth2 provider settings for portals](configure-oauth2-settings.md) endpoint can be used instead.
+
+## Configure OpenID Connect provider
 
 Similar to all other providers, you have to sign in to [Power Apps](https://make.powerapps.com) to configure the OpenID Connect provider.
 
@@ -36,27 +50,26 @@ To configure OpenID Connect provider:
 
     | Name | Description |
     | - | - |
-    | Authority | The Authority to use when making OpenIdConnect calls. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/` <br> More information:[OpenIdConnectAuthenticationOptions.Authority](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.authority.aspx) |
-    | Client ID | The client ID value from the provider application. It may also be referred to as an "App ID" or "Consumer Key". <br> More information: [OpenIdConnectAuthenticationOptions.ClientId](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.clientid.aspx) |
-    | Redirect URL | The AD FS WS-Federation passive endpoint. <br> Example: `https://portal.contoso.com/signin-saml2` <br> More information: [OpenIdConnectAuthenticationOptions.RedirectUri](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.redirecturi.aspx) |
-    | Metadata address | The discovery endpoint for obtaining metadata. Commonly ending with the path:/.well-known/openid-configuration. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` <br> More information:[OpenIdConnectAuthenticationOptions.MetadataAddress](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.metadataaddress.aspx) |
-    | Scope | A space separated list of permissions to request. <br> Example: `openid` <br> More information: [OpenIdConnectAuthenticationOptions.Scope](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.scope.aspx) |
-    | Response type | The 'response\_type'. <br> More information: [OpenIdConnectAuthenticationOptions.ResponseType](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.responsetype.aspx) |
-    | Client secret | The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". <br> More information: [OpenIdConnectAuthenticationOptions.ClientSecret](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.clientsecret.aspx) |
-    | Response mode | |
-    | Issue filter | A wildcard-based filter that matches on all issuers across all tenants. <br> Example: `https://sts.windows.net/*/` |
+    | Authority | The authority (or issuer) URL associated with the identity provider. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/` <br> More information:[OpenIdConnectAuthenticationOptions.Authority](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.authority.aspx) |
+    | Client ID | The ID of the application created with the identity provider and to be used with the portal. <br> More information: [OpenIdConnectAuthenticationOptions.ClientId](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.clientid.aspx) |
+    | Redirect URL | The location where the identity provider will send the authentication response. <br> Example: `https://portal.contoso.com/signin-saml2` <br> More information: [OpenIdConnectAuthenticationOptions.RedirectUri](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.redirecturi.aspx) |
+    | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. Example: https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` <br> More information:[OpenIdConnectAuthenticationOptions.MetadataAddress](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.metadataaddress.aspx) |
+    | Scope | A space-separated list of permissions to request. Default value: ‘openid’.  <br> Example: `openid` <br> More information: [OpenIdConnectAuthenticationOptions.Scope](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.scope.aspx) |
+    | Response type | The value for the OpenID Connect 'response_type' parameter. <br> More information: [OpenIdConnectAuthenticationOptions.ResponseType](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.responsetype.aspx) |
+    | Client secret | The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". This is required if the selected response type is “code”. <br> More information: [OpenIdConnectAuthenticationOptions.ClientSecret](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.clientsecret.aspx) |
+    | Response mode | The value for the OpenID Connect “response_mode” parameter. The vaiue should be  “query”  if the selected response type is “code”. Default value: ‘form_post’. |
 
 1. Select **Next**.
 
 1. Configure logout settings.
 
-    ![Logout settings](media/authentication/openid-logoug-settings.png "Logout settings")
+    ![Logout settings](media/authentication/openid-logout-settings.png "Logout settings")
 
     | Name | Description |
     | - | - |
-    | External logout | Enables or disables external account sign-out and registration. |
-    | Post logout redirection URL |  |
-    | RP initiated logout | |
+    | External logout | Enables or disables external account sign-out. When enabled, users are redirected to the external sign-out user experience when they sign out from the portal. When disabled, users are only signed out from the portal. |
+    | Post logout redirection URL | The location where the identity provider will redirect post logout.This location should also be set appropriately in the identity provider configuration. |
+    | RP initiated logout | Enables / disables a relying party initiated logout.  To use this the external logout  should be enabled first. |
 
 1. (Optional) Configure additional settings.
 
@@ -64,12 +77,12 @@ To configure OpenID Connect provider:
 
     | Name | Description
     | - | - |
-    | Validate audience | A Boolean to control if the audience will be validated during token validation.  |
+    | Validate audience | If enabled, the audience will be validated during the token validation.  |
     | Valid audiences | Comma-separated list of audience URLs. <br> More information: [TokenValidationParameters.AllowedAudiences](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.allowedaudiences.aspx)  |
-    | Validate issuers | A Boolean to control if the issuer will be validated during token validation. |
-    | Valid issuers | Comma-separated list of issuer URLs. <br> More information: [TokenValidationParameters.ValidIssuers](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.validissuers.aspx) |
-    | Nonce lifetime | |
-    | Use token lifetime | Indicates that the authentication session lifetime (for example, cookies) should match that of the authentication token. <br> More information: [OpenIdConnectAuthenticationOptions.UseTokenLifetime](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.usetokenlifetime.aspx) |
+    | Validate issuers | If enabled, the issuer will be validated during token validation. |
+    | Valid issuers | Comma-separated list of Issuer URLs. <br> More information: [TokenValidationParameters.ValidIssuers](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.validissuers.aspx) |
+    | Nonce lifetime | Lifetime of nonce, in minutes. Default: 10 minutes. |
+    | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this will override the Application Cookie Ecpire Timespan value. <br> More information: [OpenIdConnectAuthenticationOptions.UseTokenLifetime](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.usetokenlifetime.aspx) |
 
 1. Select **Confirm**.
 
