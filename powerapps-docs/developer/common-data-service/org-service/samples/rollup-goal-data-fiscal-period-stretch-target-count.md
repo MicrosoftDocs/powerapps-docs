@@ -21,7 +21,7 @@ search.app:
 
 This sample shows how to roll up goal data for a fiscal period against stretch target count, representing a number of completed phone calls. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/GoalDataForFiscalYear).
 
-This sample requires additional users that are not in your system. Create the three required users **as is** shown below manually in **Office 365**. Replace `yourorg` with the organization name.
+This sample requires additional users that are not in your system. Create the three required users **as is** shown below manually in **Microsoft 365**. Replace `yourorg` with the organization name.
 
 **First Name**: Nancy<br/>
 **Last Name**: Anderson<br/>
@@ -53,7 +53,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the version of the org.
-2. Retrieves the sales manager and 2 sales representatives, created manually in **Office 365**.
+2. Retrieves the sales manager and 2 sales representatives, created manually in **Microsoft 365**.
 3. Creates a `PhoneCall` record and supporting account record for the sample.
 4. Creates ActivityPartys for the phone calls **From** field.
 5. Creates an open phone call.
