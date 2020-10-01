@@ -38,34 +38,33 @@ To learn more about supported extension methods, go to:
 
 ## Guidance
 
-With the solution there are numerous parts which can be extended. Below are a couple of components where we give some additional guidance to customize or tailor them.
+With the solution, there are numerous parts that can be extended. Below are a couple of components where we give some additional guidance to customize or tailor them.
 
-### Canvas App
+### Copying a canvas app
 
-The canvas app within the solution can be tailored to your own needs. Advised when doing so, is to copy the canvas app. This way your changes aren't impacted by new changes. In order to copy the canvas app:
+The canvas app within the solution can be tailored to your own needs. It is recommended to copy the canvas app before you make any changes. This way your changes aren't impacted by new changes. To copy a canvas app:
 
-1. Go to the Maker Portal (https://make.powerapps.com)
-2. Select App and **Edit** the **Employee Return to the Workplace** app.
-3. Select **File** and the press **Save As**. Select a new location and name and then press **Save**.
+1. Go to the [Power Apps](https://make.powerapps.com).
+2. Select the **Employee Return to the Workplace** app and then select **Edit**.
+3. Select **File** and the select **Save As**. Select a new location and name and then select **Save**.
 
-### Security Roles
+### Security roles
 
-The security roles included in this solution are setup for test and demo purposes. They must be reviewed and understood thouroughly before moving to a production environment or when loading sensitive data.
+The security roles included in the solution are set up for test and demo purposes. They must be reviewed and understood thoroughly before moving to a production environment or when importing sensitive data.
 
 To learn more about the Power Platform and Common Data Service Security, see:
 
-- [Security in Common Data Service](https://docs.microsoft.com/en-us/power-platform/admin/wp-security)
-- [Security Roles](https://docs.microsoft.com/en-us/power-platform/admin/security-roles-privileges)
+- [Security in Common Data Service](https://docs.microsoft.com/power-platform/admin/wp-security)
+- [Security Roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges)
 
-New security roles can be created and tailerod to your needs. The supplied security roles can serve as template here that can be copied. If the new roles need to be moved to different environments, they need to be added to a new solution.
+New security roles can be created and tailored to your needs. The supplied security roles can serve as template here that can be copied. If the new roles need to be moved to different environments, they need to be added to a new solution.
 
 In order to copy the security role:
 
-1. Open the **Settings**.
-2. Select **Settings** and then **Security**.
-3. Select **Security Roles**.
-4. Select the role you want to copy.
-5. Click **More actions** and select **Copy Role...**.
+1. Select **Settings** and then select **Security**.
+2. Select **Security Roles**.
+3. Select the role you want to copy.
+4. Select **More actions** and then select **Copy Role**.
 
 ## Entity relationship diagram
 
@@ -105,7 +104,7 @@ These entities are used primarily by the Employee Return to the Workplace canvas
 | Employee Facility Search | Contains a list of most recently used employee app facility results associated with system users.             |
 | Employee Sentiment       | Contains associations of employee and information relevant to their recorded sentiment.                         |
 | Employee Visit           | Contains associations of employee and facilities for a given time representing a physical entry and exit.|
-| Guest Registration           | Contains associations of employees (hosts) and guests which are associated with an Employee Booking.|
+| Guest Registration       | Contains associations of employees (hosts) and guests that are associated with an Employee Booking.|
 |||
 
 ## Workplace Care Management entities
@@ -156,11 +155,11 @@ The data definitions section provides information about a list of entities, data
 | Display name | Data type | Description   | Platform use|
 |-----------|---------------|----------------|------------------|
 | Name | Text  | Primary identifier of the record. | Model-driven app |
-| Employee | Lookup | Contact associated with the record | Model-driven app |
-| Comment | Text | Used to capture details of this possible contact | Model-driven app |
-| Risk Assesment | Option set | Used to denote the current risk of the Case Contact | Model-driven app |
-| Exposure Score | Whole number | Score calculated by Case Contact suggestion flow | Model-driven app |
-| Open Case | Lookup | Used associate an open case for this Case Contact | Model-driven app|
+| Employee | Lookup | Contact associated with the record. | Model-driven app |
+| Comment | Text | Used to capture details of th possible contact. | Model-driven app |
+| Risk Assessment | Option set | Used to denote the current risk of the case contact. | Model-driven app |
+| Exposure Score | Whole number | Score calculated by case contact suggestion flow. | Model-driven app |
+| Open Case | Lookup | Used associate an open case for the case contact. | Model-driven app|
 |||||
 
 ### Case Facility
@@ -170,9 +169,9 @@ The data definitions section provides information about a list of entities, data
 | Name          | Text      | Primary identifier of the record. | Model-driven app |
 | Employee Case | Lookup    | Used to associate the employee case with the case facility. | Model-driven app |
 | Facility      | Lookup    | Used to associate the facility with the case facility.      | Model-driven app |
-| Comment       | Text      | Used to caputre details on the visits of this facility | Model-driven app |
-| Date From     | Date and time | Used to indicate the period the employee was in the building | Model-driven app |
-| Date To       | Date and time | Used to indicate the period the employee was in the building | Model-driven app |
+| Comment       | Text      | Used to capture details on the visits of this facility. | Model-driven app |
+| Date From     | Date and time | Used to indicate the period the employee was in the building. | Model-driven app |
+| Date To       | Date and time | Used to indicate the period the employee was in the building. | Model-driven app |
 |||||
 
 ### Country
@@ -200,11 +199,11 @@ The data definitions section provides information about a list of entities, data
 |------------------|-----------|------------|----------------|
 | Default Facility | Lookup    | Used to associate a facility to the employee. | Model-driven app and canvas app |
 | User ID          | Text      | Used to provide a unique identifier specific to the organization for the employee. | Model-driven app |
-| Default Area     | Lookup    | Used to store the default Area for an Employee | Model-driven app and canvas app |
-| Assigned Area    | Lookup    | Could be used to configure a specific Area for an Employee | Model-driven app |
-| Contact Type     | Option set | Used to set type of contact (employee, guest) | Model-driven app and canvas app |
-| Host             | Lookup     | Used to associate an Employee to a guest | Model-driven app and canvas app |
-| Company          | Text       | Used to store the company name of a guest | Model-driven app and canvas app |
+| Default Area     | Lookup    | Used to store the default area for an employee. | Model-driven app and canvas app |
+| Assigned Area    | Lookup    | Could be used to configure a specific area for an employee. | Model-driven app |
+| Contact Type     | Option set | Used to set type of contact (employee, guest). | Model-driven app and canvas app |
+| Host             | Lookup     | Used to associate an employee to a guest. | Model-driven app and canvas app |
+| Company          | Text       | Used to store the company name of a guest. | Model-driven app and canvas app |
 |||||
 
 ### Employee Attestation
@@ -216,8 +215,8 @@ The data definitions section provides information about a list of entities, data
 | Employee         | Lookup        | Used to denote the employee completing the attestation.             | Model-driven app             |
 | Facility         | Lookup        | Used to associate the facility for which the employee is attesting. | Model-driven app and canvas app |
 | Name             | Text          | Used to create a name for the employee attestation record.  | Model-driven app             |
-| Employee Booking | Lookup        | Used to associate the Attestation to an Employee Booking | Model-driven app and canvas app |
-| Employee Case    | Lookup        | Used to associate the Attestation to an Employee Case | Model-driven app |
+| Employee Booking | Lookup        | Used to associate the attestation to an employee booking. | Model-driven app and canvas app |
+| Employee Case    | Lookup        | Used to associate the attestation to an employee case. | Model-driven app |
 |||||
 
 ### Employee Booking
@@ -250,8 +249,8 @@ The data definitions section provides information about a list of entities, data
 | Screened                        | Option Set    | Used to denote whether the screening process has occurred.                                       | Model-driven app             |
 | First Time Employee Contacted   | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
 | First Time to Investigation     | Date and Time | Marked by a workflow and used to in the Power BI dashboards to track performance.                | Model-driven app             |
-| Originating Case                | Lookup        | Used to associate a case to the case where it was created from (via Case Contacts)               | Model-driven app  |
-| Process Stage                   | Text          | Indicated the actual process stage the BPF is in.                                                | Model-driven app             |
+| Originating Case                | Lookup        | Used to associate a case to the case where it was created from (via case contacts).               | Model-driven app  |
+| Process Stage                   | Text          | Indicates the actual process stage of the business process flow.                                                | Model-driven app             |
 |||||
 
 ### Employee Facility Search
@@ -298,7 +297,7 @@ The data definitions section provides information about a list of entities, data
 | Address Postal Code    | Text      | Used to provide address information for the facility.       | Model-driven app |
 | Address State/Province | Lookup    | Used to associate the standardized state to the facility.   | Model-driven app |
 | Description            | Text      | Used to provide address information for the facility.       | Model-driven app |
-| Entry Window Interval  | Option set | Used to set entry window size for employees                | Model-driven app and canvas app |
+| Entry Window Interval  | Option set | Used to set entry window size for employees.                | Model-driven app and canvas app |
 | Group                  | Lookup    | Used to associate the group this facility belongs to.       | Model-driven app and canvas app |
 | Number                 | Text      | Used to provide a recognizable identifier for the facility. | Model-driven app |
 | Type                   | Lookup    | Denotes the facility type.                                  | Model-driven app |
@@ -442,15 +441,15 @@ The data definitions section provides information about a list of entities, data
 | Allow Employee Sentiment                | Option Set | Disables the employee sentiment in the canvas app.                       | Model-driven app and canvas app |
 | Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app |
 | Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app |
-| Allow QR codes                          | Option Set | Indicates if QR codes are displayed on the pass                          | Model-driven app and canvas app |
-| Company Name                            | Text       | Used to describe the solution settings record                            | Model-driven app |
-| Facility Group                          | Lookup     | Links solution settings record to specific Facility Group                | Model-driven app and canvas app |
+| Allow QR codes                          | Option Set | Indicates if QR codes are displayed on the pass.                         | Model-driven app and canvas app |
+| Company Name                            | Text       | Used to describe the solution settings record.                            | Model-driven app |
+| Facility Group                          | Lookup     | Links solution settings record to specific facility group.               | Model-driven app and canvas app |
 | Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
 | Health Contact Instructions             | Text       | Instructions provided to an employee when they are blocked from booking. | Model-driven app and canvas app |
-| Health & Safety Instructions            | Text       | Instructions provided to an employee when making a booking           | Model-driven app and canvas app |
-| General Terms & Agreement               | Text       | Instructions provided to an employee when making a booking           | Model-driven app and canvas app |
-| Guest Health Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest           | Model-driven app and canvas app |
-| Guest Privacy Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest           | Model-driven app and canvas app |
+| Health & Safety Instructions            | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app |
+| General Terms & Agreement               | Text       | Instructions provided to an employee when making a booking.           | Model-driven app and canvas app |
+| Guest Health Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest.          | Model-driven app and canvas app |
+| Guest Privacy Terms & Agreement          | Text       | Instructions provided to an employee when registration a guest.           | Model-driven app and canvas app |
 | Name                                    | Text       | The primary name of the setting record.                                  | Model-driven app                |
 |||||
 
@@ -473,14 +472,15 @@ This section describes the different flows in the solution and explains their pu
 | Area - Update Capacity of Current Phase   | Area      | Updates the capacity of a current phase when a capacity changes. |
 | Checklist - Generate Checks      | Checklist    | Generate checks based on readiness factors linked to the reopen phase. |
 | Checklist - Update Checks      | Checklist    | Makes readiness checks inactive or active based on status changes of the checklist. |
-| Employee App Email Flow | Guest Registration | Sends an email to the gest sharing their QR code, host name, facility and date and hour registration.|
+| Employee App Email Flow | Guest Registration | Sends an email to the guest sharing their QR code, host name, facility, and date and hour registration.|
 | Employee Attestation - Disable Earlier Pass      | Employee Attestation    | When an employee creates multiple passes on a single day, earlier passes will be disabled. |
 | Employee Booking - Update Daily Occupancy      | Employee Booking    | Create or update daily occupancy when an employee booking is created. |
-| Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Re-educate occupancy in daily occupancy when employee bookings are disabled. |
-| Employee Case - Create suggestions | Employee Attestation | Creates Case Contacts when attestation is linked to the case. |
+| Employee Booking - Update Daily Occupancy on Status      | Employee Booking    | Reactivate occupancy in daily occupancy when employee bookings are disabled. |
+| Employee Case - Create suggestions | Employee Attestation | Creates case contacts when attestation is linked to the case. |
+|Employee Case – Disable Earlier Passes  | Employee Case | Disable passes that are active when an employee no longer has access to a facility.|
 | Employee Case - Reset Facility Access Available      | Employee Case    | Reset the employee case facility access available when the time is reached. |
-| Employee Case - Share with Employee | Employee Case | Shares the Employee Case record with an Employee when facility access is disabled. |
-| Employee Case - Update Case Contacts | Case Contact | Deactives Case Contact records for an Employee if an Employee Case is created for the Employee |
+| Employee Case - Share with Employee | Employee Case | Shares the employee case record with an employee when facility access is disabled. |
+| Employee Case - Update Case Contacts | Case Contact | Deactivates case contact records for an employee if an employee case is created for the employee |
 | Employee Visit - Name and match to booking or attestation      | Employee Visit    | Sets the name of the employee visit and matches a visit to bookings and attestations. |
 | Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. |
 | Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. |
@@ -494,8 +494,8 @@ For the solution, we generate sample data, which will be refreshed for 12 hours.
 | Sample Data - Create and Update Employee Cases          | Create employee cases, and move them through different stages.|
 | Sample Data - Generate Employee Records      | Create employee bookings and employee attestations. |
 | Sample Data - Generate Facility Transitions   | Create reopen phase transitions, and move facilities to other phases.  |
-| Sample Data - Guest Registrations | Adds 5 guest registrations on bookings created the same day |
-| Sample Data - Visits  | Create employee visits |
+| Sample Data - Guest Registrations | Adds five guest registrations on bookings created the same day. |
+| Sample Data - Visits  | Create employee visits. |
 |||
 
 ### Give feedback about the solution
