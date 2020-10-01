@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 10/05/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -255,7 +255,8 @@ When setting up the solution, do the following:
 
 With solution settings, you define system settings unique to your company. Solution settings are linked to a facility group or to the entire organization, which makes it possible to differentiate them for facilities in that group. One solution setting will act as the default and will be applicable for every facility, which will be the solution setting record that has an empty facility group.
 
-Some of these settings impact the Employee App. The solution setting record that applies, is found by matchting the facility group of the default facility of that user to the settings. If none is found or the user has no default facility set, the default solution settings record is used.
+Some of these settings have impact on the Employee app. The solution setting record that applies, is found by matching the facility group of the default facility of that user to settings. If no record is found or the user has no default facility set, the default solution settings record is used.
+
 To set solution settings:
 
 1. Select **Solution Settings** in the left pane, and then select **New**.
@@ -268,69 +269,70 @@ To set solution settings:
    > [!div class="mx-imgBorder"]
    > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
 
-3. On the second tab, add values for the Guest related settings.
+   
+   | **Field**              | **Description**                                |
+   |------------------------|------------------------------------------------|
+   | Name | Name of the solution settings record. |
+   | Facility Group | Applicable facility group, leave empty for default. |
+   | Company Name |Name of the company for solution settings. |
+   | Allow Employee Sentiment | Enables to capture employee sentiment information in the Employee app. |
+   | Allow storing of Negative Attestations | When disabled, negative attestations registered in the Employee app are not stored. |
+   | Allow QR codes | Enables QR code on the pass in the Employee app.  |
+   | Allow Guest Registrations | Enables employees to register guest on their bookings in the Employee app.  |
+   | Health & Safety email | E-mail address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
+   | Health & Safety Instructions | General instruction provided to employee in the Employee app when access is blocked by the case manager. |
+   | General Terms & Agreement | Showed in the Employee app during the booking process. |
+   | Health Terms & Agreement | Showed in the Employee app during the booking process. |
+  
+   |||
+
+3. On the **Guest** tab, add values for the guest-related settings.
 
    > [!div class="mx-imgBorder"]
    > ![Solution settings guest tab](media/solution-admin-guest-setting.png "Solution settings guest tab")
 
-
-### Field details
-
-| **Field**              | **Description**                                |
-|------------------------|------------------------------------------------|
-| Name | Name of the solution settings record |
-| Facility Group | Applicable facililty group, leave empty for default |
-| Company Name | Additional description for solution settings |
-| Allow Employee Sentiment | Enables capture of employee sentiment in the Employee App |
-| Allow storing of Negative Attestations | When disabled, negative attestations registered in the Employee App are not stored |
-| Allow QR codes | Enables QR code on the pass in the Employee App  |
-| Allow Guest Registrations | Enables employees to register guest on their bookings in the Employee App  |
-| Health & Safety email | E-mail address shown when the Employee does not attest to Health & Safety Instructions in the Employee App   |
-| Health & Safety Instructions | General instruction provided to Employee in the Employee App when access is blocked by a Case Manager |
-| General Terms & Agreement | Showed in the Employee App during booking process |
-| Health Terms & Agreement | Showed in the Employee App during booking process |
-| Guest Health Terms & Agreement | Showed in the Employee App during guest registration process|
-| Guest Privacy Terms & Agreement | Showed in the Employee App during guest registration process |
-
+   | **Field**              | **Description**                                |
+   |------------------------|------------------------------------------------|
+   | Guest Health Terms & Agreement | Showed in the Employee app during the guest registration process.|
+   | Guest Privacy Terms & Agreement | Showed in the Employee app during the guest registration process. |
+   |||
 
 ## Set duplicate detection rules for employee cases 
 
-For active employee cases, the number of cases can be limited to one active employee case per employee. When you want to enable this, you need to create a **Duplicate rule**. 
+For active employee cases, the number of cases can be limited to one active case per employee. When you want to enable this, you need to create a **Duplicate rule**. 
 
-1. Go into the **Power Platform Admin Center** or click this link: https://admin.powerplatform.microsoft.com/
+1. Go to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
 
 2. Select the environment in which the app is located.
 
-3. On the tool box, select **Settings**.
+3. On the command box, select **Settings**.
 
    > [!div class="mx-imgBorder"]
-   > ![Solution settings form](media/solution-environmnet-setting.png "Environment Settings")
+   > ![Environment Settings](media/solution-environmnet-setting.png "Environment Settings")
 
-4. Select **Data Management** and from the list select **Duplicate detection rules**.
+4. Expand **Data Management** and then select **Duplicate detection rules**.
 
    > [!div class="mx-imgBorder"]
-   > ![Solution settings form](media/solution-data-management.png "Data Management")
+   > ![Data Management](media/solution-data-management.png "Data Management")
 
-5. Select **New** in the tool box and a pop up window will appear. 
-    
-    Fill in the fields: 
+5. Select **New** and enter appropriate values in the fields: 
 
    | **Field**   | **Description**                     |
    |-------------|-------------------------------------|
    | Name        | Enter a name for the rule.     |
-   | Base Record Type | Select Employee Cases |
-   | Matching Record Type | Select Employee Cases |
-   | Field | Select Employee |
-   | Criteria | Select Exact Match |
+   | Base Record Type | Select employee cases. |
+   | Matching Record Type | Select employee cases. |
+   | Field | Select employee. |
+   | Criteria | Select exact match. |
 
-Mark the **Exclude inactive matching records** check box.
+   Select the **Exclude inactive matching records** check box.
 
    > [!div class="mx-imgBorder"]
-   > ![Solution settings form](media/solution-pop-up-rule.png "pop up")
+   > ![Pop up](media/solution-pop-up-rule.png "Pop up")
 
-6. Click **Save and Close**.
+6. Select **Save and Close**.
 
-7. Select the newly created rule and click on **Publish**.
+7. Select the newly created rule from the list of rules and then select **Publish**.
 
 ## Define a theme
 
@@ -356,7 +358,7 @@ You can use a theme to enhance the user experience.
    > [!div class="mx-imgBorder"]
    > ![Theme color](media/deploy-theme-colors.png "Theme color")
    
-## Contoso Sample Data
+## Contoso sample data
 
 To try out the solution, when installing the Return to the Workplace solution, Contoso sample data is installed with it. This sample data includes data around the entities listed below. Advised is to import or create your own data for these entities.
 
@@ -378,7 +380,7 @@ This flow mimics employees using the app. It will create a booking, attestation,
 
 - Sample Data - Guest Registrations
 
-This flow will add 5 guests to bookings created by the 'Sample Data - Generate Employee Records' flow. Each booking will receive one guest. This flow will create a new Contact record for each guest every time it runs.
+This flow adds five guests to bookings created by the flow. Each booking receives one guest. This flow creates a new contact record for each guest every time it triggers.
 
 - Sample Data - Create and update employee cases
 

@@ -5,7 +5,7 @@ author: wbakker
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 10/05/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -28,7 +28,7 @@ This article provides step-by-step instructions about how to use the Employee Re
 
 Open the app from your device and sign in with your company's Azure Active Directory account. You can view all apps shared with you by your organization after you sign in. More information: [Power Apps mobile device sign in](https://docs.microsoft.com/powerapps/user/run-app-client#open-power-apps-and-sign-in), [Power Apps web browser sign in](https://docs.microsoft.com/powerapps/user/run-app-browser)
 
-When you successfully sign in and open the **Return to the Workplace** app, you can get a day pass, look up facility status, or answer the employee sentiment question.
+When you successfully sign in and open the **Return to the Workplace** app, you can get a day pass, lookup facility status, or answer the employee sentiment question.
 
 > [!div class="mx-imgBorder"]
 > ![Welcome screen](media/employee-welcome2.png "Welcome screen")
@@ -40,7 +40,7 @@ You can find all available facilities and see the reopen status for them. Select
 > [!div class="mx-imgBorder"]
 > ![List of facilities](media/employee-facility-list2.png "List of facilities")
 
-When you select a facility from the facility list, the current status of the facility and associated details are displayed. You can also book a space directly from the look up screen. When a facility isn't available, then the **BOOK A SPACE** button is disabled. Select **< Back** to return to the previous screen.
+When you select a facility from the facility list, the current status of the facility and associated details are displayed. You can also book a space directly from the **LOOK UP STATUS** screen. When a facility isn't available, the **BOOK A SPACE** button is disabled. Select **<** to return back to the previous screen.
 
 > [!div class="mx-imgBorder"]
 > ![Facility details](media/employee-facility-details2.png "Facility details")
@@ -55,7 +55,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
 1. Select **GET DAY PASS**.
 
-2. Select an available facility from the facility list or use the saved facility and area shortcut if applicable. In **Recent** you will find the facilities you most recently used. For saved facilities and recent facilities, it indicates if the facility is available based on their phase and the earlier bookings. When a facility is unavailable, it will be greyed out and unavailable for booking.
+2. Select an available facility from the facility list or select from the **Saved** facility shortcut if applicable. In the Recent  section, you'll find the facilities you most recently used. The **Saved facilities** and the **Recent facilities** section show the available facilities based on their phase and the earlier bookings. When a facility isn't available, the two sections get disable when a booking isn't available.
 
 3. Select **BOOK A SPACE** to continue with the check-in process.
 
@@ -67,8 +67,8 @@ If you're eligible, you'll be given a pass to your selected building for that da
    > [!div class="mx-imgBorder"]
    > ![Select Area](media/employee-select-area.png "Select area")
    
-> [!NOTE]
-> When a facility doesn't have any areas, this screen will be skipped for an user. The pass will then only be for that facility.
+    > [!NOTE]
+    > When a facility doesn't have any available areas to reserve, the area booking screen is skipped for the user. The pass is generated only for that facility and not the area.
 
 5. Select time window for arrival at the facility. Select **NEXT** to continue with the check-in process.
 
@@ -90,12 +90,12 @@ If you're eligible, you'll be given a pass to your selected building for that da
 
 ### Employee pass
 
-If your responses to the symptom check statements show that you're healthy, you'll receive a pass to enter the selected facility. The pass is valid until the end of the day. When you create a pass for a facility were you already created a pass for earlier that day, the pass earlier that day will be cancelled automatically. 
+If your responses to the symptom check statements show that you're healthy, you'll receive a pass to enter the selected facility. The pass is valid until the end of the day. When you create a pass for a facility where you already created a pass for earlier that day, the pass earlier that day will be canceled automatically. 
 
 > [!NOTE]
-> In the solution settings an administrator can disable the use of QR codes. This applies to both Employee and Guest passes.
+> An administrator can disable the use of QR codes in the solution settings. This applies to both employee and guest passes.
 
-If the administrator enabled QR codes in the solution settings, a QR code will be displayed on the pass (default). If you click the QR code, it will expand for easy scanning.
+If the administrator enabled QR codes in the solution settings, a QR code will be displayed on the pass (default). You can select the QR code to expand for easy scanning.
 
 > [!div class="mx-imgBorder"]
 > ![Employee pass](media/employee-pass.png "Employee pass")
@@ -111,28 +111,38 @@ If your responses show you aren't healthy, you'll not receive a pass and provide
 > ![Not feeling well](media/employee-pass-negative.png "Not feeling well")
 
 > [!NOTE]
-> Current negative attestations are also stored, in the solution settings you can turn this feature off if you are not allowed to store them.
+> Currently negative attestations are also stored in the solution settings. You can turn off this option if you don't want to store them.
 
 ## Create guest pass
 
-After an employee created a pass, guest registration becomes available. If the employee does not have a pass, then the option is greyed out. An employee can create multiple guest passes.
+After an employee creates a pass, **REGISTER A GUEST** option becomes available. If the employee does not have a valid pass, the **REGISTER A  GUEST** option is disabled. An employee can create multiple guest passes.
 
 > [!NOTE]
-> In the solution settings an administrator can disable the use of guest registrations. This will remove the option from the screen.
+> In the solution settings an administrator can disable the **REQUEST A GUEST** option. This removes the option from the screen as well.
 
-To create a guest pass, follow these steps:
+To create a guest pass:
 
-1. Create a pass for yourself as described above
-2. Select **Register a guest**
-3. If a user entered a guest before, it will show up to five recent names. Select one of the recent guests or enter new guest details. First name, last name and email address are required fields. Click **Next**
-4. This screen shows configured information and privacy discloses and the health requirements and instructions for guests. Both fields can be expanded with the **+**-sign. Click **Next** to continue.
-5. This screen shows the guest pass.
+1. Create a pass for yourself as described in the above section.
+1. Select **REGISTER A GUEST**
+1. If a user has registered a guest before, recent five guest names are displayed. Select one of the recent guests or enter new guest details. To register a new guest, enter the details in the fields:
 
-Guest passes are available from the home screen under the **Pass** button on top of the screen. They are showed next to the employee pass. This screen can also be used to share guest passes.
+   |Field|Description|
+   |------|----------|
+   |Guest First Name| Enter the first name of the guest.|
+   |Guest Last Name| Enter the last name of the guest.|
+   |Company| Enter the company name of the guest.|
+   |Email Address|Enter the email address of the guest.|
+   |Phone Number|Enter the phone number of the guest.|
 
-### Email Guest Pass
+1. Select **NEXT** after you entered all the details in the required fields.
+1. The **Review Disclosure and Instructions** screen show information about privacy discloses, health requirements, and instructions for the guests. Both fields can be expanded with the **+** icon. Select **NEXT** to continue, to see the generated guest pass with details.
+1. Select **X** icon to return back to the home page.
 
-When a guest pass is created, you can share this with the guest by mail by clicking on **Share Pass**. This will send the guest an email with the host name, the facility, date and hour of the reservation and QR code. 
+You can also access guest passes from the home screen by selecting the **PASS** icon on top of the screen. Both the employee and guest passes can be seen on the screen. You can also share  the guest passes by selecting the **SHARE PASS** button available on the guest pass.
+
+### Email guest pass
+
+When a guest pass is created, you can share the pass with the guest through email by selecting the **SHARE PASS** button available on the guest pass. This sends the guest an email with the host name, facility, date, and hour of the reservation with QR code. 
 
 > [!div class="mx-imgBorder"]
 > ![Share sentiment](media/employee-share-pass-email.png "Share pass guest")
@@ -154,7 +164,7 @@ You can say how you're feeling about returning to the workplace. On the home pag
 
 ## Facility access not available
 
-It can happen that a case manager indicates that facility access is no longer available for you. You will see a banner appearing, which indicates the **Facility access is not available**. When clicking the banner, a message is shown with further instructions. 
+Sometimes the case manager can inform you about the facility that the access is no longer available for you. You'll see a banner appearing on the home screen, which indicates the **Facility access is not available**. A message is shown with further instructions when you select the banner. 
 
 > [!div class="mx-imgBorder"]
 > ![Facility access is not available](media/facility-access-not-available.png "Facility access is not available")

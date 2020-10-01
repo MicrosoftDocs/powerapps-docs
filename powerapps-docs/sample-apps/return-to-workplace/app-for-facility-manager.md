@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 10/05/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -32,7 +32,7 @@ The left pane lists all the components available in the **Facility Management** 
 ## App components
 
 The Facility Safety Management app has the following components:
-<!--markdownlint-disable MD036-->
+
 **Facility Management**
 
 - **Facilities**: List of the facilities (for example, buildings and plants) that require monitoring to reopen.
@@ -55,7 +55,7 @@ The Facility Safety Management app has the following components:
 
 **Guests**
 
-- **Guest Registrations** - Keep track of registered guests. Guest registrations are always linked to a booking for an Employee. The Employee serves as a host. Guests are stored as a Contact record of type 'Guest'. Guests can be added via the Employee App.
+- **Guest Registrations** - Keep track of registered guests. Guest registrations are always linked to a booking for an employee. The employee serves as a host. Guests are stored as a contact record of type `Guest`. Guests can be added via the Employee app.
 
 - **Employee Visits** - Keeps track of visits to the facility. Employee visits are linked to an employee and a booking record. 
 
@@ -168,11 +168,11 @@ You can monitor and assess the current status of a facility by reviewing its ass
 
    **Facility**:
 
-   The **Readiness** tab shows the status of the readiness checks needed for a facility’s safe reopening. At the top, the phase is shown together with the reproductive number ,which is the average number of people to whom COVID-19 may be transmitted by an infected individual, and the average sentiment. In the middle you find the checks separated into categories (for example, Employee Experience, Communications, etc.) which can be expanded to show the progress of individual actions. 
+   The **Readiness** tab shows the status of the readiness checks needed for a facility’s safe reopening. At the top, the phase is shown together with the reproductive number, which is the average number of people to whom COVID-19 may be transmitted by an infected individual, and the average sentiment. In the middle, you find the checks separated into categories (for example, Employee Experience, Communications, etc.) which can be expanded to show the progress of individual actions. 
 
    The **Occupancy** tab provides metrics regarding the facility capacity and usage, such as:
       - Facility’s total capacity, and current capacity based on reopening phase.
-      - Number of bookings, guest registrations and visits for the most recent day and daily average for the last seven days.
+      - Number of bookings, guest registrations, and visits for the most recent day and daily average for the last seven days.
       - Two charts, that can be filtered by date range, and to a floor or an area:
           - Employee bookings (or Employee bookings + guest registrations) vs capacity by date. Shows the employee bookings (+ guest registrations) on a certain date on the total capacity on that date.
           - Average daily occupancy by Floor (or Floor and Area). The dot represents the capacity and the contents show the average employee bookings and average guest registrations. 
@@ -194,7 +194,7 @@ You can monitor and assess the current status of a facility by reviewing its ass
    
    The **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the US is at the state level.
 
-      - **Fatal COVID Cases** shows information for COVID-19 cases with fatalities.
+      - **Fatal COVID Cases show information for COVID-19 cases with fatalities.
 
       - **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the United States is at the state level.
 
