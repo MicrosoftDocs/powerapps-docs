@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 08/31/2020
+ms.date: 10/01/2020
 ms.author: mabolan
 search.audienceType: 
   - maker
@@ -136,6 +136,8 @@ Power Apps stores some data locally in your browser, including user identity and
         - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
         - `https://make.powerapps.com`
         - `https://login.microsoftonline.com`
+        - `https://apps.*.powerapps.com`
+        - `https://apps.powerapps.com`
     
 - **Option 2: Create exceptions to allow local data for Power Apps and associated services**
       
@@ -148,6 +150,8 @@ Power Apps stores some data locally in your browser, including user identity and
         - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
         - `https://make.powerapps.com`
         - `https://login.microsoftonline.com`
+        - `https://apps.*.powerapps.com`
+        - `https://apps.powerapps.com`
 
 ## Resolution 2: Configure Trust Zones for Internet Explorer and Microsoft Edge Legacy
 
@@ -166,6 +170,8 @@ Internet Explorer and Microsoft Edge Legacy use *Trust Zones*. Problems can occu
         - `https://make.powerapps.com`
         - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
         - `https://*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://apps.*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://apps.powerapps.com`
     7. Select **Close**.
     8. Select **OK**.
     9. Close all Internet Explorer and Microsoft Edge Legacy windows.
@@ -183,6 +189,8 @@ Internet Explorer and Microsoft Edge Legacy use *Trust Zones*. Problems can occu
         - `https://make.powerapps.com`
         - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
         - `https://*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://apps.*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://apps.powerapps.com`
         - Any other address that ends in **powerapps.com** or **create.powerapps.com**.
   7. Select **Close**.
 
