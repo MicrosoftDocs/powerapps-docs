@@ -123,7 +123,7 @@ For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sampl
 
 ### See also
 
-[Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
-[Inspection sample apps](inspection.md)  
-[Issue Reporting sample apps](issue-reporting.md)
-[Customize sample apps](customize-sample-apps.md)
+- [Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue Reporting sample apps](issue-reporting.md)
+- [Customize sample apps](customize-sample-apps.md)

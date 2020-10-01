@@ -347,7 +347,7 @@ To review and edit existing issues in Planner:
 
 ### See also
 
-[Sample apps FAQs](sample-apps-faqs.md)
-[Inspection sample apps](inspection.md)  
-[Employee Ideas sample app](employee-ideas.md)
-[Customize sample apps](customize-sample-apps.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Inspection sample apps](inspection.md)  
+- [Employee Ideas sample app](employee-ideas.md)
+- [Customize sample apps](customize-sample-apps.md)
