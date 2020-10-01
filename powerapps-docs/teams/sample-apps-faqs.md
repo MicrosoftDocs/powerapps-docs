@@ -22,7 +22,7 @@ For the steps to move an app, go to [Move an app to another Teams channel in the
 
 For the steps to delete sample data from the sample apps, go to [Remove sample data](customize-sample-apps.md#remove-sample-data).
 
-## Why can't I create tasks in Inspection app>
+## Why can't I create tasks in Inspection app?
 
 If a user isn't allowed to create tasks using a mobile device in the Inspection app:
 
