@@ -40,7 +40,7 @@ If your inspection forms are loading slowly, reduce the size of images used in t
 
 ### See also
 
-[Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
-[Inspection sample apps](inspection.md)  
-[Issue Reporting sample apps](issue-reporting.md)
-[Customize sample apps](customize-sample-apps.md)
+- [Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue Reporting sample apps](issue-reporting.md)
+- [Customize sample apps](customize-sample-apps.md)
