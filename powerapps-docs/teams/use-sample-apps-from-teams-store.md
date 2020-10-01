@@ -5,7 +5,7 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/24/2020
+ms.date: 10/01/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
@@ -116,6 +116,10 @@ You can further customize and edit the components of an installed Power Apps app
 ## Report installation errors
 
 If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively by selecting **Ctrl**+**Alt**+**A** on the keyboard to get the session details. For more information about session details, go to [About tab](overview-of-the-power-apps-app.md#about-tab).
+
+## Sample apps FAQs
+
+For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sample-apps-faqs.md).
 
 ### See also
 
