@@ -1384,7 +1384,7 @@
                    - name: Twitter
                      href: ./portals/configure/configure-oauth2-twitter.md
                    - name: Additional settings
-                     href: ./portals/configure/configure-oauth2-additional-settings.md
+                     href: ./portals/configure/configure-oauth2-settings.md
             - name: OpenID Connect
               items:
                    - name: Configure
