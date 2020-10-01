@@ -72,7 +72,7 @@ Every context variable is scoped to a screen. If you want to define a context va
 | **UpdateContext( {&nbsp;Person:&nbsp;{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;} )** |Creates or modifies the context variable **Person**, setting its value to a record. The record contains two columns, named **Name** and **Address**. The value of the **Name** column is **Milton**, and the value of the **Address** column is **1 Main St**. |**Person** has the value of record **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"1&nbsp;Main&nbsp;St"&nbsp;}&nbsp;}**.<br><br>Reference this record as a whole with the name **Person**, or reference an individual column of this record with **Person.Name** or **Person.Address**. |
 | **UpdateContext( {&nbsp;Person: Patch(&nbsp;Person,&nbsp;{Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;) }&nbsp;)** |Works with the **[Patch](function-patch.md)** function to update the **Person** context variable by setting the value of the **Address** column to **2 Main St**. |**Person** now has the value of record **{&nbsp;Name:&nbsp;"Milton", Address:&nbsp;"2&nbsp;Main&nbsp;St"&nbsp;}&nbsp;}**. |
 
-### Step-by-step example
+### Step-by-step example 1
 1. Name the default screen **Source**, add another screen, and name it **Target**.
 2. On the **Source** screen, add two buttons, and set their **[Text](../controls/properties-core.md)** properties so that one says **English** and the other says **Spanish**.
 3. Set the **[OnSelect](../controls/properties-core.md)** property of the **English** button to this expression:<br>**Navigate(Target, ScreenTransition.Fade, {Language:"English"})**
@@ -88,5 +88,11 @@ Every context variable is scoped to a screen. If you want to define a context va
     On the **Target** screen, the label appears in the language that corresponds to the button that you selected.
 10. Press Esc to return to the default workspace.
 
+### Step-by-step example 2
+
+1. Open the canvas app where you want to use this formula. 
+1. Add a new blank screen by selecting **New screen** from the command bar.
+1. Add a button, and set its **[OnSelect](../controls/properties-core.md)** property to this formula: <br> **UpdateContext( { Name: "Lily", Score: 10 } )**
+   
 [Another example](../add-screen-context-variables.md)
 

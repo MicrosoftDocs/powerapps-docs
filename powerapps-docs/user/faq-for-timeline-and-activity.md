@@ -1,13 +1,13 @@
 ---
 title: "Frequently Asked Questions about activities and the timeline wall| MicrosoftDocs"
-ms.custom: ""
+description: Frequently Asked Questions about Activities and the Timeline Wall  
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 02/03/2020
-ms.author: mduelae
+ms.date: 09/23/2020
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -50,6 +50,8 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 
 **My activities** stream in the dashboard shows the records and activities that are owned by you (user). For example, user **A** see records and activities that are owned by **A**, and user **B** see records and activities that are owned by **B**.
 
+
+
 ## See also
 
 [Set up timeline control](../maker/model-driven-apps/set-up-timeline-control.md)
@@ -58,4 +60,6 @@ When you select the **Print Preview** option in Dynamics 365 the **Timeline Wall
 
 [Add an appointment, email, phone call, note, or task activity to the timeline](add-activities.md)
 
-[Timeline section in the Customer Service Hub app](https://docs.microsoft.com/dynamics365/customer-service/customer-service-hub-user-guide-basics#timeline)
+[Dynamics 365 Sales: Frequently asked questions](https://docs.microsoft.com/dynamics365/sales-enterprise/faqs-sales#entity-activity)
+
+    
