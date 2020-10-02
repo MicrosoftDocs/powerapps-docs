@@ -24,8 +24,6 @@ To use the Online Management API, you must have one of the following admin roles
 - Global administrator
 - Service administrator
 
-For information about these roles, see [About Microsoft 365 admin roles](https://support.office.com/article/About-Office-365-admin-roles-da585eea-f576-4f55-a1e0-87090b6aaa9d)
-
 ## Service URL
 
 The service URL defines the endpoint address for accessing REST API. To perform any operation using the Online Management API, you need to specify the request URL in the following format:
