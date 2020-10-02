@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/troubleshooting-startup-issues.md",
+      "redirect_url": "../troubleshooting-startup-issues",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/notes-control-legacy.md",
       "redirect_url": "set-up-timeline-control",
       "redirect_document_id": "false"
