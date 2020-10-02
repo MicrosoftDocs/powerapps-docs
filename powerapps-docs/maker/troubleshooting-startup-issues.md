@@ -1,19 +1,19 @@
 ---
 title: Troubleshooting startup issues for Power Apps | Microsoft Docs
 description: This troubleshooting guide helps fix common configuration problems that prevent Power Apps from starting.
-author: matthewbolanos
-manager: kvivek
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
-ms.reviewer: 
-ms.date: 08/31/2020
-ms.author: mabolan
+ms.reviewer: tapanm
+ms.date: 10/01/2020
+ms.author: namarwah
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
+
 # Troubleshooting startup issues for Power Apps
 
 This troubleshooting article helps fix common configuration problems that prevent Power Apps from starting.
@@ -38,7 +38,7 @@ This troubleshooting article helps fix common configuration problems that preven
 
 - When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
 
-    ![Hmmm … We couldn’t sign you in. The information below may be helpful](./media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
+    ![Hmmm … We couldn’t sign you in. The information below may be helpful](media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
 
     **Resolution**: Check [Resolutions for common errors](#resolutions-for-common-errors) for different error variations and resolutions.
     
@@ -136,6 +136,8 @@ Power Apps stores some data locally in your browser, including user identity and
         - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
         - `https://make.powerapps.com`
         - `https://login.microsoftonline.com`
+        - `https://apps.*.powerapps.com`
+        - `https://apps.powerapps.com`
     
 - **Option 2: Create exceptions to allow local data for Power Apps and associated services**
       
@@ -148,6 +150,8 @@ Power Apps stores some data locally in your browser, including user identity and
         - `https://make.*.powerapps.com`  (the asterisk is part of the address, don't replace it)
         - `https://make.powerapps.com`
         - `https://login.microsoftonline.com`
+        - `https://apps.*.powerapps.com`
+        - `https://apps.powerapps.com`
 
 ## Resolution 2: Configure Trust Zones for Internet Explorer and Microsoft Edge Legacy
 
@@ -166,6 +170,8 @@ Internet Explorer and Microsoft Edge Legacy use *Trust Zones*. Problems can occu
         - `https://make.powerapps.com`
         - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
         - `https://*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://apps.*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://apps.powerapps.com`
     7. Select **Close**.
     8. Select **OK**.
     9. Close all Internet Explorer and Microsoft Edge Legacy windows.
@@ -183,6 +189,8 @@ Internet Explorer and Microsoft Edge Legacy use *Trust Zones*. Problems can occu
         - `https://make.powerapps.com`
         - `https://make.*.powerapps.com` (the asterisk is part of the address, don't replace it)
         - `https://*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://apps.*.powerapps.com` (the asterisk is part of the address, don't replace it)
+        - `https://apps.powerapps.com`
         - Any other address that ends in **powerapps.com** or **create.powerapps.com**.
   7. Select **Close**.
 

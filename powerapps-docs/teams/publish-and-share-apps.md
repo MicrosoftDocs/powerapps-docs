@@ -1,16 +1,16 @@
 ---
-title: Publish and share your app | Microsoft Docs
-description: Learn how to publish and share your apps using Power Apps app from Teams.
+title: Publish and share your app using Power Apps app in Teams | Microsoft Docs
+description: Learn how to publish and share your apps using Power Apps app in Teams.
 author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 09/25/2020
 ms.author: tapanm
 ms.reviewer: 
 ---
 
-# Publish and share your app
+# Publish and share your app in Teams
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -32,7 +32,10 @@ A list of all channels is displayed. You can add the app to one or more channels
 
 ![List of channels](media/publish-app-7.png "List of channels")
 
-Select **Add a tab** ![Add a tab](media/publish-app-9.png "Add a tab"), and then select **Save.**
+Select **Add a tab** ![Add a tab](media/publish-app-9.png "Add a tab"), and then select **Save + close**.
+
+> [!TIP]
+> If the app is already published to a Teams channel as a tab, you'll have the option to **Show tabs**. <br> To publish updated version of an app to an existing active tab, select **Save + close** without adding a new tab. <br> To add published version of an app to a new tab in a different channel, Select **Add a tab** ![Add a tab](media/publish-app-9.png "Add a tab") for the channel you want, and then select **Save + close**.
 
 ![Select and save](media/publish-app-8.png "Select and save")
 
