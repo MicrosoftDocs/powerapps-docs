@@ -32,7 +32,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: `string`
+Type: Number
 
 ### Related topics
 
