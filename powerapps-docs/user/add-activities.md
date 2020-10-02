@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/21/2020
-ms.author: mduelae
+ms.date: 09/23/2020
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -73,6 +73,10 @@ Legend:
 4. By default, the direction is set to **Outgoing**. You can change it to **Incoming** by selecting **Outgoing**.
   
 5. When you're done filling in the form, select **Save and Close** to save the phone call activity.  
+
+
+> [!NOTE]
+> When you open an existing phone call activity, and on the **Phone Number** field select the phone icon, the system will open a new **Quick Create: Phone Call** activity. If you attempt to save the new phone call activity record, you will get this error, **Unable to find many-to-one relationship,entity: phonecall, referenced Entity: undefined, field: regardingobjectid**. This happens because Common Data Service does not support the option to create a phone call activity from within another phone call activity record. For more information, see [Known issues for activities](activities-known-issues.md).
   
 ### Add a task  
   
@@ -97,7 +101,8 @@ To add an email activity to a record, you must first save the record you are add
 4. To add an attachment to the email, save the email. Then, on the command bar select **Attach File** > **Choose File** and then select the file that you want to attach to the email.
 
    > [!NOTE]
-   > An email with an attached image will be shown inline with the body of the email.
+   > - To use the spell checker, on your keyboard press Control + right click. 
+   > - An email with an attached image will be shown inline with the body of the email.
   
 5. To use a template for the email body, on the command bar, select **Insert Template**, and then select the template. For more information on inserting an email template, see [Insert an email template](insert-email-template.md). 
   

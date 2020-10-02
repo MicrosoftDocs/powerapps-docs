@@ -21,7 +21,7 @@ search.app:
 
 This sample shows how to allow access to a record using an access team. All the members of the team will receive the same access to the record that is granted to the team. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ShareRecordUsingAccessTeam).
 
-This sample requires additional users that are not in your system. Create the required users manually in **Office 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. Replace `yourorg` with the organization name.
+This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. Replace `yourorg` with the organization name.
 
 **First Name**: Nancy<br/>
 **Last Name**: Anderson<br/>
@@ -52,7 +52,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 ### Demonstrate
 
-1. Retrieves the sales persons that are created manually in **Office 365** that will be added to the team.
+1. Retrieves the sales persons that are created manually in **Microsoft 365** that will be added to the team.
 1. The `WhoAMIRequest` gets the ID's of the current user and business unit.
 1. Creates a sample access team. The `AddMembersTeamRequest`adds two sales persons to the access team.
 1. The `GrantAccessRequest` grants the team read/write access to the account created in the Setup(#setup).

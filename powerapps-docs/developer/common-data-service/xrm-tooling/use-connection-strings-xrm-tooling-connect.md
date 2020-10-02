@@ -70,6 +70,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
 |`StoreName` or `CertificateStoreName`|Specifies the store name where the certificate identified by thumbprint can be found. When set, Thumbprint is required.|
 |`Thumbprint` or `CertThumbprint`| Specifies the thumbprint of the certificate to be utilized during an S2S connection. When set, AppID is required and UserID and Password values are ignored.|
 |`SkipDiscovery`|Specifies whether to call instance discovery to determine the connection uri for a given instance. As of NuGet release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.0.2.7, default = true. Older versions default to false. <br/> Note: If set to true, it is important that the user provide the correct and accurate URI for the target instance.|
+|`Integrated Security`|Specifies to use current windows credentials to attempt to create a token for the instances. As of NuGet release Microsoft.CrmSdk.XrmTooling.CoreAssembly Version 9.1.0.21|
 
 > [!NOTE]
 > <b>When using the `OAuth` AuthType\AuthenticationType</b><br/>
@@ -84,7 +85,7 @@ CrmServiceClient svc = new CrmServiceClient(ConnectionString);
  
 The following examples show how you can use connection strings for connecting to online deployments and authentication scenarios. The connection string examples for on-premises and IFD deployment instances is now available in the Dynamics 365 Customer Engagement (on-premises) documentation at: [Use connection strings in XRM tooling to connect](/dynamics365/customerengagement/on-premises/developer/xrm-tooling/use-connection-strings-xrm-tooling-connect) 
 
-### Named account using Office 365  
+### Named account using Microsoft 365  
   
 ```xml
 <add name="MyCDSServer" 
@@ -95,7 +96,7 @@ The following examples show how you can use connection strings for connecting to
   Url=https://contoso.crm.dynamics.com"/>  
 ```  
   
-### OAuth using named account in Office 365 with UX to prompt for authentication  
+### OAuth using named account in Microsoft 365 with UX to prompt for authentication  
 
 Create a new connection to Common Data Service using a UserID or Password via OAuth.
 

@@ -1,5 +1,5 @@
 ---
-title: "Preview: Use environment variables in solutions | MicrosoftDocs"
+title: "Use environment variables in solutions | MicrosoftDocs"
 description: "Use environment variables to migrate application configuration data in solutions."
 Keywords: environment variables, variables, model-driven app, configuration data
 author: caburk
@@ -15,15 +15,14 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Preview: Environment variables overview 
-
-[!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
+# Environment variables overview 
 
 Apps and flows often require different configuration settings across environments. Environment variables as configurable input parameters allow management of data separately compared to hard-coding values within your customization or using additional tools. Because they're solution components, performance is much better than importing configuration data as record data.
 
 Benefits of using environment variables:
 - No need to manually edit configurable values in a production environment.
 - Configure one or more variables in one place and reference like a parameter across multiple solution components.
+- Enter different values while importing solutions to other environments. 
 - Update values without a code change.
 - Granular level security managed by [Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-intro).
 - Unlimited number of variables (max solution size is 29 MB).
@@ -32,9 +31,6 @@ Benefits of using environment variables:
 - Support for localization.
 - Can be used to control feature flags and other application settings.
 
-> [!IMPORTANT]
-> - This is a preview feature.
-> - [!INCLUDE[cc_preview_features_definition](../../includes/cc-preview-features-definition.md)] 
 
 ## How do they work?
 Environment variables can be created and managed through the modern solution interface or by [using code](https://docs.microsoft.com/powerapps/developer/common-data-service/work-with-data-cds). A separate JSON file is created within your solution package for the values, which can also be managed in source control and modified in a build pipeline. Export to and import from Excel is supported. After creating environment variables, you can use them as inputs within plug-ins, flows, and other components. 
@@ -55,7 +51,15 @@ Environment variables can be created and managed through the modern solution int
       > ![New environment variable](media/new-environment-variable.png)
 
       >[!NOTE]
-      > A value can't exist without a definition. The interface only allows creation of one value per definition. 
+      > A value can't exist without a definition. The interface only allows creation of one value per definition.
+
+## Enter new values while importing solutions
+
+The modern solution import interface includes the ability to enter values for environment variables. This sets the value property on the `environmentvariablevalue` entity.
+
+You will not be prompted if the environment variables already have either a default value or value present; whether values are part of your solution or are already present in Common Data Service.
+   >[!NOTE]
+   > You may remove the value from your solution before exporting the solution. This ensures the existing value will remain in your development environment, but not get exported in the solution. This approach allows a new value to be set while importing the solution into other environments.  
 
 ## Notifications
 A notification is displayed when the environment variables do not have any values. This is a reminder to set the values so that components dependent on variables do not fail. It also allows partners to ship variables without values and the customer is prompted to input the values.

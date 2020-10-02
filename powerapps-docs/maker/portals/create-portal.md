@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/06/2020
+ms.date: 10/01/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -14,7 +14,7 @@ ms.reviewer: tapanm
 
 With the capability to build a portal in Power Apps, you can create a website for external and internal users enabling them to interact with data stored in Common Data Service.
 
-These are some benefits of creating a portal:
+Some of the benefits of creating a Power Apps portal:
 
 - Because the data is stored in Common Data Service, you don't need to create a connection from Power Apps as you do with data sources such as SharePoint, customer engagement apps (such as Dynamics 365 Sales and Dynamics 365 Customer Service), or Salesforce. You need only to specify the entities that you want to show or manage in the portal.
 
@@ -42,12 +42,11 @@ To create a portal:
 
 2.  Under **Make your own app**, select **Portal from blank**.
 
-3.	If the selected environment does not contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
+3.	If the selected environment doesn't contain portal pre-requisites, a message is displayed in the **Portal from blank** window suggesting you select another environment or create a new one.
 
-    > [!div class=mx-imgBorder]
-    > ![create new environment message](media/create-portal-message.png "Create new environment message")
+    ![create new environment message](media/create-portal-message.png "Create new environment message")
 
-4.	If you choose to proceed with the current environment, enter the required information in the window as mentioned in the following steps. If you choose to create a new environment, see [Create new environment](#create-new-environment).
+4.	If you choose to continue with the current environment, enter the required information in the window as mentioned in the following steps. If you choose to create a new environment, see [Create new environment](#create-new-environment).
 
 5.  In the **Portal from blank** window, enter a name for the portal and address for the website, and select a language from the drop-down list. When you're done, select **Create**.
 
@@ -59,7 +58,7 @@ To create a portal:
 
 After you select **Create**, the portal will begin provisioning and the provisioning status is displayed through [notifications](#portal-provisioning-notifications).
 
-If you have created your portal in the environment that doesn't have portal pre-requisites installed, the provisioning status is also displayed in the grid:
+If you've created your portal in the environment that doesn't have portal pre-requisites installed, the provisioning status is also displayed in the grid:
 
 > [!div class=mx-imgBorder]
 > ![Grid notification](media/provision-progress-notif.png "Grid notification")
@@ -77,7 +76,6 @@ To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-exis
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).
 > - Provisioning portals from [make.powerapps.com](https://make.powerapps.com) does not consume the older portal add-ons. Also, these portals are not listed under the **Applications** tab on the **Dynamics 365 Administration Center** page.
 > - A Common Data Service starter portal cannot be created from the **Dynamics 365 Administration Center** page.
-> - Power Apps portals is not available in the France region.
 
 ### Create additional portals in an environment
 
@@ -110,7 +108,7 @@ For more information about enabling languages in an environment, go to [Enable l
 
 Follow these steps when you create an environment using the option provided in the **Portal from blank** window.
 
-1.  In the **New environment** pane, enter a name for the environment, and then select a region and environment type from the drop-down lists. You cannot change the region once the environment is created. When you're done, select **Create environment**.
+1.  In the **New environment** pane, enter a name for the environment, and then select a region and environment type from the drop-down lists. You can't change the region once the environment is created. When you're done, select **Create environment**.
 
     > [!div class=mx-imgBorder]
     > ![create new environment](media/create-new-environment.png "Create new environment")  
@@ -123,15 +121,15 @@ Follow these steps when you create an environment using the option provided in t
     > [!div class=mx-imgBorder]
     > ![new environment created](media/new-environment-created.png "New environment created")  
 
-3.  Select the currency and language for the data stored in the database. You cannot change the currency or language once the database is created. When you're done, select **Create my database**. The database is created with the starter portal that enables you to quickly get started with sample content once the portal is provisioned.
+3.  Select the currency and language for the data stored in the database. You can't change the currency or language once the database is created. When you're done, select **Create my database**. The database is created with the starter portal that enables you to quickly get started with sample content once the portal is provisioned.
 
     > [!NOTE]
-    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from Power Apps admin center.
+    > The **Include starter portal** option is available only when you create an environment using the option provided in the **Portal from blank** window. This option is not available when you create an environment from Power Platform admin center.
 
     > [!div class=mx-imgBorder]
     > ![create new database](media/create-new-database.png "Create new database") 
 
-    It might take several minutes to create the database on Common Data Service. Once the database is created, the new environment is selected in the list of environments on the Power Apps home page and the Portal Management app is created. This app is not the actual portal but a model-driven companion app that allows you to perform advance configuration activities. You can now proceed with creating the portal for designing the external-facing website.
+    It might take several minutes to create the database on Common Data Service. Once the database is created, the new environment is selected in the list of environments on the Power Apps home page and the Portal Management app is created. This app isn't the actual portal but a model-driven companion app that allows you to perform advance configuration activities. You can now continue with creating the portal for designing the external-facing website.
 
     > [!div class=mx-imgBorder]
     > ![portal management app](media/portal-mgmt-app.png "Portal management app")
@@ -157,12 +155,12 @@ The following notification is displayed when you select **Create** to provision 
 
 Once the provisioning request is successfully placed, the following notifications are displayed in the **Notification** pane.
 
-Notification shown for provisioning in progress
+Notification shown for provisioning in progress.
 
 > [!div class=mx-imgBorder]
-> ![Pane notification](media/pane-notif.png "Pane notification") 
+> ![Pane notification](media/pane-notif.png "Pane notification")
 
-Notification shown for provisioning successfully completed
+Notification shown for provisioning successfully completed.
 
 > [!div class=mx-imgBorder]
 > ![Provisioning success notification](media/provision-complete-notif.png "Provisioning success notification") 
@@ -183,13 +181,13 @@ After installing the modules, run the following command in a PowerShell window (
 Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $true }
 ```
 
-Administrator are the users having one of the following Azure roles:
+Administrators are the users having one of the following Azure roles:
 
 - Global Administrator
 - Dynamics 365 admin
 - Power Platform admin
 
-Users not having the any of the above mentioned Azure roles are considered as non-administrators.
+Users not having any of the above mentioned Azure roles are considered as non-administrators.
 
 When the portal creation is disabled in a tenant, non-administrators will see an error as follows:
 
