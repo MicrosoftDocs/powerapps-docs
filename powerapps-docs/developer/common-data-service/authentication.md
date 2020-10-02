@@ -25,7 +25,7 @@ How you authenticate depends on the software framework you use and which web ser
 If your client application uses the .NET Framework, you have two options:
 
 - OAuth
-- Office 365
+- Microsoft 365
 
 ### OAuth
 
@@ -39,13 +39,13 @@ OAuth is also required to support:
 
 More information: [Use OAuth with Common Data Service](authenticate-oauth.md)
 
-### Office 365
+### Microsoft 365
 
-Office 365 authentication requires using the .NET Framework SDK assemblies with the SOAP web services only.
+Microsoft 365 authentication requires using the .NET Framework SDK assemblies with the SOAP web services only.
 
-Using Office 365 authentication does not require that your register your applications as OAuth does. You must simply provide a User Principal Name (UPN) and password for a valid user.
+Using Microsoft 365 authentication does not require that your register your applications as OAuth does. You must simply provide a User Principal Name (UPN) and password for a valid user.
 
-More information: [Authentication with .NET Framework applications](authenticate-dot-net-framework.md), [Use of Office365 authentication with the WS-Trust security protocol](authenticate-office365-deprecation.md)
+More information: [Authentication with .NET Framework applications](authenticate-dot-net-framework.md), [Use of Microsoft 365 authentication with the WS-Trust security protocol](authenticate-office365-deprecation.md)
 
 ## All other software frameworks
 
