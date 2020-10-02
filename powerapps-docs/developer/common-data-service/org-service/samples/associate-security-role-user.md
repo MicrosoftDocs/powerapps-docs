@@ -20,7 +20,7 @@ search.app:
 
 This sample shows how to assign a security role to a user by using the [IOrganizationService.Associate](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice?view=dynamics-general-ce-9) message. 
 
-This sample requires an additional user that isn't available in your system. Create the required user manually in **Office 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. 
+This sample requires an additional user that isn't available in your system. Create the required user manually in **Microsoft 365** in order to run the sample without any errors. For this sample create a user profile **as is** shown below. 
 
 **First Name**: Dan<br/>
 **Last Name**: Park<br/>
