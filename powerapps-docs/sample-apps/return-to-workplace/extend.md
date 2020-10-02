@@ -42,7 +42,7 @@ With the solution, there are numerous parts that can be extended. Below are a co
 
 ### Copying a canvas app
 
-The canvas app within the solution can be tailored to your own needs. It is recommended to copy the canvas app before you make any changes. This way your changes aren't impacted by new changes. To copy a canvas app:
+The canvas app within the solution can be tailored to your own needs. It is recommended to copy the canvas app before you make any changes. This way your changes aren't impacted by new versions. To copy a canvas app:
 
 1. Go to the [Power Apps](https://make.powerapps.com).
 2. Select the **Employee Return to the Workplace** app and then select **Edit**.
@@ -438,10 +438,10 @@ The data definitions section provides information about a list of entities, data
 
 | Display name          | Data type  | Description                                                                   | Platform use    |
 |-----------------------|------------|-------------------------------------------------------------------------------|------------------|
-| Name                  | Text       | The primary identifier of the record.                                         | Model-driven app |
-| Facility              | Lookup     | Used to associate the applicable facility.                                    | Model-driven app |
-| Language              | Text       | Used to capture the language used in the e-mail.                              | Model-driven app |
-| Guest Registration    | Lookup     | Used to associate the guest registration to share.                            | Model-driven app |
+| Name                  | Text       | The primary identifier of the record.                                         | Canvas app |
+| Facility              | Lookup     | Used to associate the applicable facility.                                    | Canvas app |
+| Language              | Text       | Used to capture the language used in the e-mail.                              | Canvas app |
+| Guest Registration    | Lookup     | Used to associate the guest registration to share.                            | Canvas app |
 |||||
 
 ### Solution Setting
@@ -452,6 +452,7 @@ The data definitions section provides information about a list of entities, data
 | Allow Guest Registrations               | Option Set | Indicates if guests are able to register a guest.                        | Model-driven app and canvas app |
 | Allow Storing of Negative Attestations  | Option Set | Indicates if you want to store negative attestations.                    | Model-driven app and canvas app |
 | Allow QR codes                          | Option Set | Indicates if QR codes are displayed on the pass.                         | Model-driven app and canvas app |
+| Allow Share Guest Registrations         | Option Set | Indicates if sharing of a guest registrations is available               | Model-driven app and canvas app |
 | Company Name                            | Text       | Used to describe the solution settings record.                            | Model-driven app |
 | Facility Group                          | Lookup     | Links solution settings record to specific facility group.               | Model-driven app and canvas app |
 | Health Contact Email                    | Text       | Used to capture the email address of the primary health contact.         | Model-driven app and canvas app |
