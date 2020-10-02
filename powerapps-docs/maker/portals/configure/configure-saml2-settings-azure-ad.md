@@ -12,7 +12,10 @@ ms.reviewer: tapanm
 
 # SAML 2.0 settings for [!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]
 
-The previous section describing [!include[](../../../includes/pn-adfs-short.md)] can also be applied to [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD](https://msdn.microsoft.com/library/azure/mt168838.aspx), because [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD behaves like a standard [SAML 2.0](https://msdn.microsoft.com/library/azure/dn195591.aspx)&ndash;compliant IdP. To get started, sign in to the [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] Management Portal](https://msdn.microsoft.com/library/azure/hh967611.aspx#bkmk_azureportal) and create or select an existing directory. When a directory is available, follow the instructions to [add an application](https://msdn.microsoft.com/library/azure/dn132599.aspx) to the directory.  
+The previous section describing [!include[](../../../includes/pn-adfs-short.md)] can also be applied to [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD](https://docs.microsoft.com/azure/active-directory/), because [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD behaves like a standard [SAML 2.0](https://docs.microsoft.com/azure/active-directory/develop/single-sign-on-saml-protocol)&ndash;compliant IdP. To get started, sign in to the [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] Management Portal](https://msdn.microsoft.com/library/azure/hh967611.aspx#bkmk_azureportal) and create or select an existing directory. When a directory is available, follow the instructions to [add an application](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) to the directory.  
+
+> [!NOTE]
+> Portals can be configured with identity providers that conform to the SAML 2.0 standards. In this article, you'll learn about using Azure Active Directory as an example of identity providers using SAML 2.0.
 
 1.  Under the**Applications** menu of the directory, select **Add**.
 2.  Choose **Add an application my organization is developing**.

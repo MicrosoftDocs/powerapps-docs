@@ -1395,12 +1395,10 @@
               items:
                     - name: Configure
                       href: ./portals/configure/configure-saml2-provider.md
-                    - name: Configure ADFS with SAML 2.0
-                      href: ./portals/configure/configure-saml2-settings.md
                     - name: Configure Azure AD with SAML 2.0
                       href: ./portals/configure/configure-saml2-settings-azure-ad.md
-                    - name: Configure Shibboleth Identity Provider 3 with SAML 2.0
-                      href: ./portals/configure/configure-saml2-settings-shibboleth.md
+                    - name: Configure ADFS with SAML 2.0
+                      href: ./portals/configure/configure-saml2-settings.md
             - name: WS-Federation
               items:
                     - name: Configure

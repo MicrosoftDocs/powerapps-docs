@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Configure WS-Federation provider settings for portals
 
-A single [!INCLUDE[pn-active-directory](../../../includes/pn-active-directory.md)] Federation Services server can be added (or another [WS-Federation](https://msdn.microsoft.com/library/bb498017.aspx)–compliant security token service) as an identity provider. In addition, a single [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] ACS](https://azure.microsoft.com/documentation/articles/active-directory-dotnet-how-to-use-access-control/) namespace can be configured as a set of individual identity providers. The settings for both AD FS and ACS are based on the properties of the [WsFederationAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.aspx) class.
+A single [!INCLUDE[pn-active-directory](../../../includes/pn-active-directory.md)] Federation Services server can be added (or another WS-Federation–compliant security token service) as an identity provider. In addition, a single [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] ACS](https://azure.microsoft.com/documentation/articles/active-directory-dotnet-how-to-use-access-control/) namespace can be configured as a set of individual identity providers. The settings for both AD FS and ACS are based on the properties of the WsFederationAuthenticationOptions class.
 
 To configure SAML 2.0 provider:
 
@@ -36,10 +36,10 @@ To configure SAML 2.0 provider:
 
     | Name | Description |
     | - | - |
-    | Metadata address | The WS-Federation identity provider metadata file location. <br> Example: `https://adfs.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml` <br> More information: [WsFederationAuthenticationOptions.MetadataAddress](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.metadataaddress.aspx) |
-    | Authentication type | The Entity Id value that specifies a globally unique name for the WS-Federation identity provider. <br> Example: `https://adfs.contoso.com/adfs/services/trust` <br> More information: [AuthenticationOptions.AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx) |
-    | Service provider realm | The portal URL that specifies the service provider realm for the WS-Federation identity provider. <br> Example: `https://portal.contoso.com/` <br> More information: [WsFederationAuthenticationOptions.Wtrealm](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wtrealm.aspx) |
-    | Assertion consumer service URL | The portal URL that corresponds to the service provider's endpoint (URL).   <br> Example: `https://portal.contoso.com/signin-saml2` <br> More information: [WsFederationAuthenticationOptions.Wreply](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wreply.aspx) |
+    | Metadata address | The WS-Federation identity provider metadata file location. <br> Example: `https://adfs.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml` |
+    | Authentication type | The Entity Id value that specifies a globally unique name for the WS-Federation identity provider. <br> Example: `https://adfs.contoso.com/adfs/services/trust` |
+    | Service provider realm | The portal URL that specifies the service provider realm for the WS-Federation identity provider. <br> Example: `https://portal.contoso.com/` |
+    | Assertion consumer service URL | The portal URL that corresponds to the service provider's endpoint (URL). |
 
 1. Select **Next**.
 
@@ -49,8 +49,8 @@ To configure SAML 2.0 provider:
 
     | Name | Description
     | - | - |
-    | Sign-out reply | The URL to return to (sign-out wreply) once the sign-out is complete. <br> Example: `https://portal.contoso.com/signin-federation` <br> More information: [WsFederationAuthenticationOptions.Wreply](https://msdn.microsoft.com/library/microsoft.owin.security.wsfederation.wsfederationauthenticationoptions.wreply.aspx) |
-    | Valid audiences | Comma-separated list of audience URLs. <br> More information: [TokenValidationParameters.AllowedAudiences](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.allowedaudiences.aspx) |
+    | Sign-out reply | The URL to return to (sign-out wreply) once the sign-out is complete. <br> Example: `https://portal.contoso.com/signin-federation` |
+    | Valid audiences | Comma-separated list of audience URLs. |
     | Validate audiences | If enabled, the audience will be validated during the token validation. |
     | WHR | The home realm of the identity provider (IdP) to use for authentication. Sets the WS-Federation sign-in request **whr** parameter. If empty, the **whr** parameter is not included in the request. <br> More information: [wsFederation](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation) |
 

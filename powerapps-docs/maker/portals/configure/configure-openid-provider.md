@@ -16,10 +16,16 @@ ms.reviewer: tapanm
 
 Examples of authority URLs are:
 
-- [Google](https://developers.google.com/identity/protocols/OpenIDConnect): <https://accounts.google.com/.well-known/openid-configuration>
 - [[!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]](https://msdn.microsoft.com/library/azure/mt168838.aspx): [https://login.microsoftonline.com/&lt;[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD Application&gt;/](https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration)
+- [Google](https://developers.google.com/identity/protocols/OpenIDConnect): <https://accounts.google.com/.well-known/openid-configuration>
 
 Each OpenID Connect provider also involves registering an application (similar to that of an OAuth 2.0 provider) and obtaining a Client Id. The authority URL and the generated application Client Id are the settings required to enable external authentication between the portal and the identity provider.
+
+> [!NOTE]
+> Examples of the OpenID Connect providers for portals:
+> - [Azure AD B2C](configure-azure-ad-b2c-provider.md)
+> - [Azure AD](configure-openid-settings.md)
+> - [Azure AD with multi-tenancy](configure-openid-settings.md#enable-authentication-using-a-multi-tenant-azure-active-directory-application)
 
 ## Configure OpenID Connect provider
 
@@ -47,13 +53,13 @@ To configure OpenID Connect provider:
 
     | Name | Description |
     | - | - |
-    | Authority | The authority (or issuer) URL associated with the identity provider. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/` <br> More information:[OpenIdConnectAuthenticationOptions.Authority](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.authority.aspx) |
-    | Client ID | The ID of the application created with the identity provider and to be used with the portal. <br> More information: [OpenIdConnectAuthenticationOptions.ClientId](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.clientid.aspx) |
-    | Redirect URL | The location where the identity provider will send the authentication response. <br> Example: `https://portal.contoso.com/signin-saml2` <br> More information: [OpenIdConnectAuthenticationOptions.RedirectUri](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.redirecturi.aspx) |
-    | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. Example: https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` <br> More information:[OpenIdConnectAuthenticationOptions.MetadataAddress](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.metadataaddress.aspx) |
-    | Scope | A space-separated list of permissions to request. Default value: ‘openid’.  <br> Example: `openid` <br> More information: [OpenIdConnectAuthenticationOptions.Scope](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.scope.aspx) |
-    | Response type | The value for the OpenID Connect 'response_type' parameter. <br> More information: [OpenIdConnectAuthenticationOptions.ResponseType](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.responsetype.aspx) |
-    | Client secret | The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". This is required if the selected response type is “code”. <br> More information: [OpenIdConnectAuthenticationOptions.ClientSecret](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.clientsecret.aspx) |
+    | Authority | The authority (or issuer) URL associated with the identity provider. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/` |
+    | Client ID | The ID of the application created with the identity provider and to be used with the portal. |
+    | Redirect URL | The location where the identity provider will send the authentication response. <br> Example: `https://portal.contoso.com/signin-saml2` |
+    | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. Example: https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` |
+    | Scope | A space-separated list of permissions to request. Default value: ‘openid’.  <br> Example: `openid` |
+    | Response type | The value for the OpenID Connect 'response_type' parameter. |
+    | Client secret | The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". This is required if the selected response type is “code”. |
     | Response mode | The value for the OpenID Connect “response_mode” parameter. The vaiue should be  “query”  if the selected response type is “code”. Default value: ‘form_post’. |
 
 1. Select **Next**.
@@ -75,11 +81,11 @@ To configure OpenID Connect provider:
     | Name | Description
     | - | - |
     | Validate audience | If enabled, the audience will be validated during the token validation.  |
-    | Valid audiences | Comma-separated list of audience URLs. <br> More information: [TokenValidationParameters.AllowedAudiences](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.allowedaudiences.aspx)  |
+    | Valid audiences | Comma-separated list of audience URLs.  |
     | Validate issuers | If enabled, the issuer will be validated during token validation. |
-    | Valid issuers | Comma-separated list of Issuer URLs. <br> More information: [TokenValidationParameters.ValidIssuers](https://msdn.microsoft.com/library/system.identitymodel.tokens.tokenvalidationparameters.validissuers.aspx) |
+    | Valid issuers | Comma-separated list of Issuer URLs. |
     | Nonce lifetime | Lifetime of nonce, in minutes. Default: 10 minutes. |
-    | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this will override the Application Cookie Ecpire Timespan value. <br> More information: [OpenIdConnectAuthenticationOptions.UseTokenLifetime](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.usetokenlifetime.aspx) |
+    | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this will override the Application Cookie Ecpire Timespan value. |
 
 1. Select **Confirm**.
 

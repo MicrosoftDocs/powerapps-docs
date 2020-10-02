@@ -12,7 +12,10 @@ ms.reviewer: tapanm
 
 # Migrate identity providers to Azure AD B2C
 
-The portal supports a configurable security system that lets our customers support multiple authentication systems. The portal includes its own local credentials in addition to federating with external identity providers using standard protocols such as OIDC, SAML, and WS-Federation. Going forward, we recommended that you use only Azure AD B2C identity provider for authentication and that you deprecate other identity providers. 
+The portal supports a configurable security system that lets our customers support multiple authentication systems. The portal includes its own local credentials in addition to federating with external identity providers using standard protocols such as OIDC, SAML, and WS-Federation. Going forward, we recommended that you use only Azure AD B2C identity provider for authentication and that you deprecate other identity providers.
+
+> [!IMPORTANT]
+> We recommend to use this path to migrate from [Local authentication](set-authentication-identity.md), and deprecate the local authentication for your portal.
 
 ## Marking an identity provider as deprecate
 
