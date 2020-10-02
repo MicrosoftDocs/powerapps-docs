@@ -1938,7 +1938,7 @@
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
   - name: Troubleshoot startup issues for Power Apps
-    href: troubleshooting-startup-issues.md
+    href: ../troubleshooting-startup-issues.md
   - name: Troubleshoot issues for the Power Apps mobile app
     href: ../user/powerapps_mobile_troubleshoot.md
   - name: Troubleshoot Power Query
