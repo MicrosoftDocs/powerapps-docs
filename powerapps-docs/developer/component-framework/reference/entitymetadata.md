@@ -1,6 +1,6 @@
 ---
 title: EntityMetadata | Microsoft Docs
-description: 
+description: Information about methods and properties for entity metadata.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -34,7 +34,7 @@ Model-driven apps
 |primaryImageAttribute|string|Entity's primary image attribute name.|
 |primaryIdAttribute|string|Entity's primary id attribute name.|
 |primaryNameAttribute|string|Entity's primary field name.|
-|privilegesByType|Dictionary<[securityPrivilegeMetadata](secuirtyprivilegesmetadata.md)>|The privileges for the entity indexed by type.|
+|privilegesByType|Dictionary<[securityPrivilegeMetadata](securityprivilegesmetadata.md)>|The privileges for the entity indexed by type.|
 ||||
 
 ### Related topics

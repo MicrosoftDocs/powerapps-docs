@@ -1,6 +1,6 @@
 ---
 title: SecurityPrivilegesMetadata | Microsoft Docs
-description: 
+description: Information about entity metadata security privileges.
 keywords:
 ms.author: nabuthuk
 author: Nkrb
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ---
 
-## SecurityPrivilegesMetadata
+# SecurityPrivilegesMetadata
 
 Provides all the information about the entity metadata security privileges.
 

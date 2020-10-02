@@ -1,6 +1,6 @@
 ---
 title: GetWeekOfYear | Microsoft Docs
-description: 
+description: Gets the ISO week number of the year for a given date. Range is from 1-53.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
@@ -11,4 +11,4 @@ ms.tgt_pltfrm: ""
 ms.topic: "article"
 ms.assetid: 7710cfbf-12fc-488f-9d16-3670792748ac
 ---
-Gets the ISO week number of the year for a given date. Range is from 0-53.
+Gets the ISO week number of the year for a given date. Range is from 1-53.
