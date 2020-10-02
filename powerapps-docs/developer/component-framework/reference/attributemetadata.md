@@ -1,6 +1,6 @@
 ---
 title: AttributeMetadata | Microsoft Docs
-description: 
+description: Provides all the information about attributes metadata.
 keywords:
 ms.author: nabuthuk
 manager: kvivek
