@@ -26,7 +26,10 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-ISVs need data like active users, number of times the solution installed or other means of data to measure the success of their application. App usage analytics feature allows ISVs to monitor the usage of their apps by giving them the visibility into monthly, daily, and weekly usage data of their apps. For ISVs to get the usage data, tenants or customers need to update their apps.
+ISVs need data like active users, number of times the solution installed or other means of data to measure the success of their application. App usage analytics feature allows ISVs to monitor the usage of their apps by giving them the visibility into monthly, daily, and weekly usage data of their apps. 
+
+[!NOTE]
+A tenant or customer needs to update their apps in order for an ISV to start seeing this data.
 
 App usage feature allows ISVs to filter the usage data by **Component Type**, **Data Date**, **Package Name**, **Solution Name**, and **Package Version**. An app can have multiple packages and an individual package can have multiple solutions. Each solution can have multiple components. App usage is measured based on how many times the components of the application are used in a month, week, or day. 
 
