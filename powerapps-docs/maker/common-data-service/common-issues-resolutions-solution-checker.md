@@ -267,7 +267,7 @@ For plug-in and workflow activity rules where the issue is only relevant in the 
 
 ## app-formula-issues-high and app-formula-issues-high may show different number of errors than those shown in design mode
 
-The solution checker will list the number of the errors of the app, *including those from tests*. In the app checker on design mode, it only shows errors from screen controls and components. If the value shown in the app checker on design mode is smaller, open the [Test Studio](../canvas-apps/test-studio) and search for the errors in the expressions used in tests.
+The solution checker will list the number of the errors found in the app, *including those from tests*. The app checker in design mode only shows errors from screen controls and components. If the error count shown in the app checker in design mode is smaller, open the [Test Studio](../canvas-apps/test-studio) and search for the errors in the expressions used in tests.
 
 ## See also
 
