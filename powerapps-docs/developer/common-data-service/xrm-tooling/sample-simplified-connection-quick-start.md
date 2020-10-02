@@ -110,7 +110,7 @@ The following shows a sample `app.config file`. To use this, remove the comment 
 </configuration>  
 ```
 
-## Example
+## Another Example
 
 ```csharp
 using Microsoft.Crm.Sdk.Messages;
