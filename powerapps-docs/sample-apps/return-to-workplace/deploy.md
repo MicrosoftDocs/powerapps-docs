@@ -298,7 +298,9 @@ In the Return to the Workplace solution, the following security roles are define
 
 3. Select the **Return to the Workplace** from the list of solutions.
 
-4. Select the **Share Guest Registration - Email** solution and then select **Save as**. Connect the flow with **Common Data Service (current environment)** and **Office 365 Outlook** connector and then select **continue**. After that select the name for the flow and press **save**. Select **My Flows** on the left, then select **Turn on**. Validate whether the flow is turned on, so it can be used.
+4. Select the **Share Guest Registration - Email** solution and then select **Save as**.  Connect the flow with **Common Data Service (current environment)** and **Office 365 Outlook** connector and then select **continue**. After that select the name for the flow and press **save**.
+
+5. Select **My Flows** on the left, after selecting **Share Guest Registration - Email** select **Turn on**. Validate whether the flow is turned on, so it can be used. Additionally, the flow should be shared with others to prevent issues with people who aren't allowed to enter it.
 
    > [!NOTE]
    > The connection used for **Office 365 Outlook** is the email address used to send emails out to guests. Use a service account for sending out generic emails or use a shared mailbox. 
