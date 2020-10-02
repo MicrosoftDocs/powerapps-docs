@@ -141,13 +141,6 @@ Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $fa
 
 More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)
 
-### I'm getting an error that I don't have appropriate license to access this website.
-
-Internal users of an organization that use portals for accessing authenticated pages require that licenses be assigned to the environment that a portal is connected to. You  can read more about the user rights for portals for internal users [here](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users). When an environment doesn't have licenses assigned, internal users will get an error such as follows:
-
-> [!div class=mx-imgBorder]
-> ![Portal login error](media/portal-login-error.png "Portal login error")
-
 ### I'm getting "Page Not Found" error and the page content is different from the default Page Not Found site marker or web page.
 
 You may see a *Page Not Found* error message that may appear different from the default error page content available by default on the **Page Not Found** site marker and web page.
