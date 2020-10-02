@@ -279,11 +279,11 @@ To set solution settings:
    | Allow storing of Negative Attestations | When disabled, negative attestations registered in the Employee app are not stored. |
    | Allow QR codes | Enables QR code on the pass in the Employee app.  |
    | Allow Guest Registrations | Enables employees to register guest on their bookings in the Employee app.  |
+   | Allow Share Guest Registrations | Enables employees to share passes with guests. |
    | Health & Safety email | E-mail address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
    | Health & Safety Instructions | General instruction provided to employee in the Employee app when access is blocked by the case manager. |
    | General Terms & Agreement | Showed in the Employee app during the booking process. |
    | Health Terms & Agreement | Showed in the Employee app during the booking process. |
-  
    |||
 
 3. On the **Guest** tab, add values for the guest-related settings.
@@ -392,7 +392,7 @@ This flow runs twice a day and creates a visit record for each employee for thei
 
 ## Bulk record deletion
 
-Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period.
+Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period. Also to reduce storage, you can delete deactived share guest registrations or employee attestations after a certain period of time.
 
 **To create bulk record-delete jobs**
 
