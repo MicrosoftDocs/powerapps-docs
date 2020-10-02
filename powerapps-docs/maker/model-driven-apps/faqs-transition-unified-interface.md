@@ -2,7 +2,7 @@
 title: "FAQs: Transition to Unified Interface | MicrosoftDocs"
 description: "FAQs related to the transition process for moving users from the legacy web client to Unified Interface."
 ms.custom: ""
-ms.date: 09/02/2020
+ms.date: 10/02/2020
 ms.reviewer: "kvivek"
 ms.service: powerapps
 ms.topic: "article"
@@ -216,8 +216,7 @@ If you find this has been disabled and have a requirement to switch  back, raise
 
 ### Is there a specific day and time when approved transitions will take place?
 
-We don't anticipate any downtime when making this transition. However, we will only make a transition on a Friday, following the same maintenance timelines outlined within our standard policies and communications. More information: [Maintenance timeline
-](https://docs.microsoft.com/power-platform/admin/policies-communications#maintenance-timeline)
+We don't anticipate any downtime when making this transition. However, we will only make a transition on a Friday, 8:00 PM to 10.00 PM Pacific Time. If the transition fails, we will retry within this window. You should expect to see the changes after 10 PM Pacific Time. We will send a communication about the transition (success or failure) the following Monday starting at 9:00 AM Pacific Time.
 
 ### Are environments from all data centers included within this transition service?
 
