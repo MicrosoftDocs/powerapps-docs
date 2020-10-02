@@ -216,7 +216,7 @@ If you find this has been disabled and have a requirement to switch  back, raise
 
 ### Is there a specific day and time when approved transitions will take place?
 
-We don't anticipate any downtime when making this transition. However, we will only make a transition on a Friday, 8:00 PM to 10.00 PM Pacific Time. If the transition fails, we will retry within this window. You should expect to see the changes after 10 PM Pacific Time. We will send a communication about the transition (success or failure) the following Monday starting at 9:00 AM Pacific Time.
+We don't anticipate any downtime when making this transition. However, we will only make a transition on a Friday, 8:00 PM to 10.00 PM Pacific Time. If the transition fails, we will retry within this window. You should expect to see the changes after 10:00 PM Pacific Time. We will send a communication about the transition (success or failure) the following Monday starting at 9:00 AM Pacific Time.
 
 ### Are environments from all data centers included within this transition service?
 
