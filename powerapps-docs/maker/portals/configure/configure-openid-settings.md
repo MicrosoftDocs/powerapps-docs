@@ -12,6 +12,11 @@ ms.reviewer: tapanm
 
 # OpenID settings for [!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]
 
+In this article, you'll learn about configuring OpenID Connect provider for portals with Azure Active Directory, and multi-tenant Azure AD. 
+
+> [!NOTE]
+> You can use different identity providers conforming to the standards of OpenID Connect specifications. For example, you can use Azure AD B2C, Azure AD, or multi-tenancy in Azure AD as the OpenID Connect identity providers for portals.
+
 To get started, sign into the [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] Management Portal](https://msdn.microsoft.com/library/azure/hh967611.aspx#bkmk_azureportal) and create or select an existing directory. When a directory is available follow the instructions to [add an application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) to the directory.  
 
 1. Under the **Applications** menu of the directory, select **Add**.
@@ -86,9 +91,7 @@ Multiple identity providers can be configured by substituting a label for the \[
 
 ## Enable authentication using a multi-tenant Azure Active Directory application
 
-You can configure your portal to accept [!include[](../../../includes/pn-azure-active-directory.md)] users from any tenant in [!include[](../../../includes/pn-azure-shortest.md)] and not just a specific tenant by using the multi-tenant application registered in [!include[](../../../includes/pn-azure-active-directory.md)]. To enable multi-tenancy, set the **Multi-tenanted** switch to **Yes** in the [!include[](../../../includes/pn-azure-active-directory.md)] application.
-
-![Enable multi tenancy in Azure Active Directory application](../media/enable-multi-tenancy.png "Enable multi tenancy in Azure Active Directory application")
+You can configure your portal to accept [!include[](../../../includes/pn-azure-active-directory.md)] users from any tenant in [!include[](../../../includes/pn-azure-shortest.md)] and not just a specific tenant by using the multi-tenant application registered in [!include[](../../../includes/pn-azure-active-directory.md)]. To enable multi-tenancy, [update the application registration](https://docs.microsoft.com/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multi-tenant) in the [!include[](../../../includes/pn-azure-active-directory.md)] application.
 
 ### Related site settings
 

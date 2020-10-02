@@ -124,20 +124,6 @@ To create Azure AD B2C tenant:
 1. Select the URL in the **Metadata endpoint for this policy** field.
 1. Copy the value of the issuer field and enter it as the value of Issuer-URL in the preceding table. 
 
-## Claims to support sign-in scenarios
-
-The data in Common Data Service and in the identity provider are not directly linked, so the data might get out of sync. The portal should have a list of claims that you want to accept from any sign-in event to update in Common Data Service. These claims can be a subset of, or equal to, the claims coming in from a sign-in scenario. This must be configured separately from sign-in claims mapping, because you might not want to overwrite some key portal attributes. The following site setting is required:
-
-**Name**: Authentication/OpenIdConnect/[Federation-Name]/LoginClaimsMapping
-
-**Description**: List of logical name/claim pairs to be used to map claim values to attributes in the contact record created after sign-in.
-
-**Format**: attribute1=claim1, attribute2=claim2, attribute3=claim3
-
-For example: firstname=<https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle> 
-
-The claim name is the CLAIM TYPE field listed next to the attribute in the sign-in policies Application claims.
-
 ### See also
 
 - [Set authentication identity for a portal](set-authentication-identity.md)
