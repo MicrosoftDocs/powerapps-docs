@@ -34,7 +34,7 @@ The sample performs the following tasks:
 
 ## Run this sample
 Before you can run this sample, make sure that you have:
-- One of the admin roles in your Microsoft 365 tenant. See [Microsoft 365 Admin roles](get-started-online-management-api.md#office-365-admin-roles)
+- One of the admin roles in your Microsoft 365 tenant. See [Microsoft 365 Admin roles](get-started-online-management-api.md#microsoft-365-admin-roles)
 - Visual Studio 2015 or later; Internet connectivity is required to download/restore assemblies in the NuGet package.
 - .NET Framework 4.6.2
 
