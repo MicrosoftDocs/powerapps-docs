@@ -38,7 +38,7 @@ This troubleshooting article helps fix common configuration problems that preven
 
 - When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
 
-    ![Hmmm … We couldn’t sign you in. The information below may be helpful](media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
+    ![Hmmm … We couldn’t sign you in. The information below may be helpful](maker/media/troubleshooting-startup-issues/error.png "Hmmm … We couldn’t sign you in. The information below may be helpful")
 
     **Resolution**: Check [Resolutions for common errors](#resolutions-for-common-errors) for different error variations and resolutions.
     
@@ -217,5 +217,5 @@ Most browsers allow settings to reflect the changes immediately. You may also cl
 
 ### See also
 
-- [Common issues and resolutions](canvas-apps/common-issues-and-resolutions.md)
+- [Common issues and resolutions](maker/canvas-apps/common-issues-and-resolutions.md)
 - [Power Apps Support](https://powerapps.microsoft.com/support/)
