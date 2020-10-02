@@ -147,6 +147,9 @@ When a guest pass is created, you can share the pass with the guest through emai
 > [!div class="mx-imgBorder"]
 > ![Share sentiment](media/employee-share-pass-email.png "Share pass guest")
 
+> [!NOTE]
+> In the solution settings you can turn this feature off if you don't want to use this.
+
 ## Share sentiment
 
 You can say how you're feeling about returning to the workplace. On the home page, select one of the options to answer the question **Do you feel safe returning to work?**
