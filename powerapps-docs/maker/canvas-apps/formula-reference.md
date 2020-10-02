@@ -317,7 +317,7 @@ Other elements include:
 
 **[SetFocus](functions/function-setfocus.md)** – Moves input focus to a specific control.
 
-**[SetPropertry](functions/function-setproperty.md)** – Simulates interactions with input controls.
+**[SetProperty](functions/function-setproperty.md)** – Simulates interactions with input controls.
 
 **[ShowColumns](functions/function-table-shaping.md)** – Returns a table with only selected columns.
 
