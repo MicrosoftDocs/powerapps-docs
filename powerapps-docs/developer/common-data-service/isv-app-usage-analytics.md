@@ -26,28 +26,16 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-ISVs need data like active users, number of times the solution installed or other means of data to measure the success of their application. App usage analytics feature allows ISVs to monitor the usage of their apps by giving them the visibility into monthly, daily, and weekly usage data of their apps. For ISVs to get the usage data, tenants or customers need to update their apps.
+ISVs need data like active users, number of times the solution installed or other means of data to measure the success of their application. App usage analytics feature allows ISVs to monitor the usage of their apps by giving them the visibility into **monthly, daily, and weekly usage data** of their apps. 
 
-App usage feature allows ISVs to filter the usage data by **Component Type**, **Data Date**, **Package Name**, **Solution Name**, and **Package Version**. An app can have multiple packages and an individual package can have multiple solutions. Each solution can have multiple components. App usage is measured based on how many times the components of the application are used in a month, week, or day. 
+App usage feature allows ISVs to filter the usage data by **Component Type**, **Data Date**, **Package Name**, and **Solution Name**. An app can have multiple packages and an individual package can have multiple solutions. Each solution can have multiple components. App usage is measured based on how many times the components of the application are used in a month, week, or day. 
 
 > [!NOTE]
-> For any app that is not deployed via [AppSource](https://appsource.microsoft.com), it needs to be tracked at the solution level.   
+> Ann app must be deployed via [AppSource](https://appsource.microsoft.com) in order to see this data.   
 
 > [!div class="mx-imgBorder"]
 > ![Usage dashboard](media/isv-app-usage-analytics-report.png "Usage dashboard")
 
-The following list shows some of the components that can be part of a solution:
- 
-- Workflows
-- Web resources
-- Plug-ins
-- Reports
-- Charts and dashboards
-- Entities, forms, and views
-- Entity fields and relationships
-- Connectors
-- Environment variables
-- Site map
 
 Some of the components of a solution can have shared ownership by multiple ISVs. For shared components, only the publisher who created the component gets the usage credit. For example, ISV1 created a form and ISV2 extends the form by adding a widget to it. Every time the form is used, ISV1 gets the usage credit and ISV2 gets the usage credit whenever the widget is used. If a user visited the form only to access the widget, ISV1 also gets the usage credit.
 
