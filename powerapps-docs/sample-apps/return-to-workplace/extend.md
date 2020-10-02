@@ -434,6 +434,16 @@ The data definitions section provides information about a list of entities, data
 | Summary               | Text       | Used to provide an additional context for the transition.                      | Model-driven app |
 |||||
 
+### Share Guest Registration
+
+| Display name          | Data type  | Description                                                                   | Platform use    |
+|-----------------------|------------|-------------------------------------------------------------------------------|------------------|
+| Name                  | Text       | The primary identifier of the record.                                         | Model-driven app |
+| Facility              | Lookup     | Used to associate the applicable facility.                                    | Model-driven app |
+| Language              | Text       | Used to capture the language used in the e-mail.                              | Model-driven app |
+| Guest Registration    | Lookup     | Used to associate the guest registration to share.                            | Model-driven app |
+|||||
+
 ### Solution Setting
 
 | Display name                            | Data type  | Description                                                              | Platform use                    |
