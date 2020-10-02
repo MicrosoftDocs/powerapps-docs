@@ -227,7 +227,7 @@ To resolve this issue, grant the **Environment Maker** security role to the Powe
 
 ## Solution checker fails to export patched solutions
 
-If a solution has had a [patch](../../developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
+If a solution has had a [patch](/power-platform/alm/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
 To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](/power-platform/alm/update-solutions-alm#clone-a-solution).
 
@@ -267,7 +267,7 @@ For plug-in and workflow activity rules where the issue is only relevant in the 
 
 ## app-formula-issues-high and app-formula-issues-high may show different number of errors than those shown in design mode
 
-The solution checker will list the number of the errors found in the app, *including those from tests*. The app checker in design mode only shows errors from screen controls and components. If the error count shown in the app checker in design mode is smaller, open the [Test Studio](../canvas-apps/test-studio) and search for the errors in the expressions used in tests.
+The solution checker will list the number of the errors found in the app, *including those from tests*. The app checker in design mode only shows errors from screen controls and components. If the error count shown in the app checker in design mode is smaller, open the [Test Studio](../canvas-apps/test-studio.md) and search for the errors in the expressions used in tests.
 
 ## See also
 
