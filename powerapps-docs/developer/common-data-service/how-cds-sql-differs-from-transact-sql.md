@@ -26,7 +26,7 @@ This article describes the differences between Common Data Service SQL and Trans
 
  Common Data Service SQL works directly with conceptual entity schemas and supports conceptual model features such as inheritance and relationships.  
   
- When working with inheritance, it is often useful to select instances of a subtype from a collection of supertype instances. The [oftype](oftype-entity-sql.md) operator in Common Data Service SQL (similar to `oftype` in C# Sequences) provides this capability.  
+ When working with inheritance, it is often useful to select instances of a subtype from a collection of supertype instances. The [oftype](dotnet/framework/data/adonet/ef/language-reference/oftype-entity-sql) operator in Common Data Service SQL (similar to `oftype` in C# Sequences) provides this capability.  
   
 ## Support for Collections  
 
@@ -46,7 +46,7 @@ This article describes the differences between Common Data Service SQL and Trans
 
  Transact-SQL has subqueries (tables) and expressions (rows and columns).  
   
- To support collections and nested collections, Common Data Service SQL makes everything an expression. Common Data Service SQL is more composable than Transact-SQL—every expression can be used anywhere. Query expressions always result in collections of the projected types and can be used anywhere a collection expression is allowed. For information about Transact-SQL expressions that are not supported in Common Data Service SQL, see [Unsupported Expressions](unsupported-expressions-entity-sql.md).  
+ To support collections and nested collections, Common Data Service SQL makes everything an expression. Common Data Service SQL is more composable than Transact-SQL—every expression can be used anywhere. Query expressions always result in collections of the projected types and can be used anywhere a collection expression is allowed. For information about Transact-SQL expressions that are not supported in Common Data Service SQL, see [Unsupported Expressions](dotnet/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql).  
   
  The following are all valid Common Data Service SQL queries:  
   
@@ -192,7 +192,7 @@ SELECT C2.FirstName, C2.LastName
   
 ## Identifiers  
 
- In Transact-SQL, identifier comparison is based on the collation of the current database. In Common Data Service SQL, identifiers are always case insensitive and accent sensitive (that is, Common Data Service SQL distinguishes between accented and unaccented characters; for example, 'a' is not equal to 'ấ'). Common Data Service SQL treats versions of letters that appear the same but are from different code pages as different characters. For more information, see [Input Character Set](input-character-set-entity-sql.md).  
+ In Transact-SQL, identifier comparison is based on the collation of the current database. In Common Data Service SQL, identifiers are always case insensitive and accent sensitive (that is, Common Data Service SQL distinguishes between accented and unaccented characters; for example, 'a' is not equal to 'ấ'). Common Data Service SQL treats versions of letters that appear the same but are from different code pages as different characters. For more information, see [Input Character Set](dotnet/framework/data/adonet/ef/language-reference/input-character-set-entity-sql).  
   
 ## Transact-SQL Functionality Not Available in Common Data Service SQL  
 
