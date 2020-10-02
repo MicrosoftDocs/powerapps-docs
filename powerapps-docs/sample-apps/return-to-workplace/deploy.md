@@ -296,10 +296,13 @@ In the Return to the Workplace solution, the following security roles are define
 
 2. On the left pane, select **Solutions**.
 
-3. Select the **Default Solution** from the list of solutions.
+3. Select the **Return to the Workplace** from the list of solutions.
 
-4. Select the **Employee App Email Flow** solution and then select **Edit**. Connect the flow with **Common Data Service (current environment)** and **Office 365 Outlook** connector. After that select **Save**, go back and then select **Turn On**. Validate whether the flow is turned on, so it can be used.
-   
+4. Select the **Share Guest Registration - Email** solution and then select **Save as**. Connect the flow with **Common Data Service (current environment)** and **Office 365 Outlook** connector and then select **continue**. After that select the name for the flow and press **save**. Select **My Flows** on the left, then select **Turn on**. Validate whether the flow is turned on, so it can be used.
+
+   > [!NOTE]
+   > The connection used for **Office 365 Outlook** is the email address used to send emails out to guests. Use a service account for sending out generic emails or use a shared mailbox. 
+
    
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
 
