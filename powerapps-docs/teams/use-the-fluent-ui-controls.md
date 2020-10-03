@@ -1,13 +1,13 @@
 ---
 title: Use the Fluent UI controls in Power Apps app in Microsoft Teams | Microsoft Docs
 description: Learn about the new Fluent UI Framework controls in Power Apps.
-author: tapanm-msft
+author: chmoncay
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: chmoncay
+ms.reviewer: tapanm
 ---
 
 # Use Fluent UI controls
