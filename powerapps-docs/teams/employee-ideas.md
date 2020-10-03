@@ -1,7 +1,7 @@
 ---
 title: Use Employee Ideas and Manage Campaigns apps from teams store | Microsoft Docs
 description: Learn how to use the Employee Ideas and Manage Campaigns apps from Teams store.
-author: tapanm-msft
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 

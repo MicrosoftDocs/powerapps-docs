@@ -1,13 +1,13 @@
 ---
 title: Overview of the Power Apps app in Microsoft Teams | Microsoft Docs
 description: Learn about the Power Apps app in Microsoft Teams.
-author: tapanm-msft
+author: chmoncay
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: chmoncay
+ms.reviewer: tapanm
 ---
 
 # Overview of the Power Apps app
