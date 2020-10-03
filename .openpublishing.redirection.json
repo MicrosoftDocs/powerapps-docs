@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/maker/troubleshooting-startup-issues.md",
+      "redirect_url": "../troubleshooting-startup-issues",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "powerapps-docs/maker/model-driven-apps/notes-control-legacy.md",
       "redirect_url": "set-up-timeline-control",
       "redirect_document_id": "false"
@@ -1903,6 +1908,11 @@
     {
       "source_path": "powerapps-docs/maker/common-data-service/entity-relationship-behavior.md",
       "redirect_url": "create-edit-entity-relationships#entity-relationship-behavior",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/maker/canvas-apps/embed-teams-app.md",
+      "redirect_url": "/powerapps/teams/embed-teams-app",
       "redirect_document_id": false
     }
   ]

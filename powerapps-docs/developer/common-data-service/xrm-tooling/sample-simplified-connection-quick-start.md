@@ -44,7 +44,7 @@ The following shows a sample `app.config file`. To use this, remove the comment 
 <?xml version="1.0" encoding="utf-8"?>  
 <configuration>  
   <connectionStrings>  
-    <!-- Online using Office 365 -->  
+    <!-- Online using Microsoft 365 -->  
     <!-- <add name="Server=CRM Online, organization=contoso, user=someone"  
          connectionString="Url=https://contoso.crm.dynamics.com; Username=someone@contoso.onmicrosoft.com; Password=password; authtype=Office365"/> -->  
   </connectionStrings>  
@@ -110,7 +110,7 @@ The following shows a sample `app.config file`. To use this, remove the comment 
 </configuration>  
 ```
 
-## Example
+## Another Example
 
 ```csharp
 using Microsoft.Crm.Sdk.Messages;
