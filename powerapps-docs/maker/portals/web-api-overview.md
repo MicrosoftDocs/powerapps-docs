@@ -64,7 +64,7 @@ You can configure record-based security to individual records in portals by usin
 
 ## Authenticating portals Web API requests
 
-You don't need to include authentication code, because authentication and authorization are managed by the application session. All Web API calls must include a cross-site request forgery (CSRF) token.
+You don't need to include authentication code, because authentication and authorization are managed by the application session. All Web API calls must include a Cross-Site Request Forgery (CSRF) token.
 
 ## General Data Protection Regulation (GDPR)
 
