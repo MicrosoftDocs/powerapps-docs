@@ -1,7 +1,7 @@
 ---
 title: Use Issue Reporting app from teams store | Microsoft Docs
 description: Learn how to use the Issue Reporting app from Teams store.
-author: tapanm-msft
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
