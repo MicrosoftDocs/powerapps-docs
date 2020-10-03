@@ -31,11 +31,11 @@ Construct the Web API URL by using the format in the following table.
 | Web API Path | \_api                                    |
 | Resource     | Name of the entity you want to use |
 
-For example, use this format when referring a case:<!--Should this be "referring to a case"? And sho0uld the following line end with `case` rather than `entity`? -->
+For example, use this format when referring a case:
 
-`https://contoso.powerappsportals.com/_api/entity`
+`https://contoso.powerappsportals.com/_api/case`
 
-All Web API resources will follow the respective [portal entity permissions](https://docs.microsoft.com/dynamics365/portals/assign-entity-permissions) in context with Web Roles. 
+All Web API resources will follow the respective [portal entity permissions](https://docs.microsoft.com/dynamics365/portals/assign-entity-permissions) in context with Web Roles.
 
 ## HTTP methods
 
@@ -56,7 +56,7 @@ The Web API only supports JSON. Each HTTP header must include:
 - If the request includes JSON data in the request body, you must include a
 *Content-Type* header with a value of `application/json`.
 
-The current OData version is 4.0, but future versions might allow for new capabilities. Use the following syntax to ensure that there's no ambiguity about the OData version that will be applied to your code in the future.<!--Edit okay? This sentence was incomplete.-->
+The current OData version is 4.0, but future versions might allow for new capabilities. Use the following syntax to ensure that there's no ambiguity about the OData version that will be applied to your code in the future.
 
 ### Syntax
 
@@ -160,19 +160,19 @@ Each HTTP request response includes a status code. Status codes returned by the 
 | 501 Not Implemented | Expect this response when some requested operation isn't implemented. | Server error |
 | 503 Service Unavailable | Expect this response when the Web API service isn't available. | Server error |
 
-## Parse errors from the response 
+## Parse errors from the response
 
-Consider the following example response that still includes the inner error.<!--Can you use "HTTP", spell out "CDS", and add make two sentences out of "A message describing the error. This is frequently the same as the outer message."?-->
+Consider the following example HTTP response that still includes the inner error.
 
 ```json
 {
   "error":{
     "code": "This code is not related to the http status code and is frequently empty",
     "message": "A message describing the error",
-    "cdscode": "CDS error code",
+    "cdscode": "Common Data Service error code",
     "innererror": {
         "code": "800xxxx",
-        "message": "A message describing the error, this is frequently the same as the outer message."
+        "message": "A message describing the error. This is frequently the same as the outer message.."
       }
     }
   }

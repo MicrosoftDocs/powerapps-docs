@@ -21,8 +21,8 @@ The portals Web API enables building a richer user experience inside Power Apps 
 > [!IMPORTANT]
 > - **Your portal version must be 9.2.6.41 or later for this feature to work**.
 > - This feature is in preview. More information: [Understand experimental, preview, and deprecated features in Power Apps](../canvas-apps/working-with-experimental-preview.md)
-> - The portals Web API<!--Not sure why this plural suddenly appeared?--> is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration.
-> - Portals Web API operations are limited to entities related to data&mdash;for example, accounts, contacts, or your custom entities. Configuring entity metadata or portal configuration entity data&mdash;for example, configuring portals entities such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [Unsupported configuration entities](#unsupported-configuration-entities), later in this topic.<!--Edit okay? I think this heading should be a bit more descriptive.-->
+> - The portals Web API is built for creating a rich user experience inside portal pages. It isn't optimized for third-party services or application integration.
+> - Portals Web API operations are limited to entities related to data&mdash;for example, accounts, contacts, or your custom entities. Configuring entity metadata or portal configuration entity data&mdash;for example, configuring portals entities such as adx_contentsnippet, adx_entityform, or adx_entitylist&mdash;isn't supported with the portals Web API. For a complete list, go to [configuration entities](#unsupported-configuration-entities), later in this topic.
 > - The portals Web API benefits from [server-side caching](admin/clear-server-side-cache.md) and, hence, subsequent calls to the Web API are faster than the initial calls. Note that clearing the portal server-side cache causes temporary performance degradation.
 
 ## Web API operations
@@ -41,14 +41,14 @@ You must enable the site setting to enable the portals Web API for your portal. 
 
 | Site setting name | Description|
 | - |- |
-| *Webapi/\<entity name\>/enabled* | Enables or disables the OData<!--Why is "OData" suddenly used in this section? Should it be "the OData Web API", or simply "Web API" as it is elsewhere?--> API for \<entity name\>. <br> **Default:** `False` <br> **Valid values:** `True`, `False` |
+| *Webapi/\<entity name\>/enabled* | Enables or disables the Web API for \<entity name\>. <br> **Default:** `False` <br> **Valid values:** `True`, `False` |
 | *Webapi/\<entity name\>/fields*  | Defines the comma-separated list of attributes that can be modified with the Web API. <br>  **Possible values:**  <br> - *All attributes:* `*` <br> - *Specific attributes:* `attr1,attr2,attr3` <br> **Note**:  The value must be either an asterisk (**\***) or a comma-separated list of field names. <br> **Important**: This is a mandatory site setting. When this setting is missing, you'll see the error "No fields defined for this entity." |
-| *Webapi/error/innererror* | Enables or disables InnerError.<!--note from editor: Not sure whether this is relevant, but please see line 173 of \powerapps-docs-pr\powerapps-docs\developer\common-data-service\webapi\compose-http-requests-handle-errors.md, "We are removing the `innererror` property of the error message. You should remove any code that expects to parse this property."--> <br> **Default:** `False` <br> **Valid values:** `True`, `False`
+| *Webapi/error/innererror* | Enables or disables InnerError. <br> **Default:** `False` <br> **Valid values:** `True`, `False`
 
 > [!NOTE]
 > Site settings must be set to **Active** for changes to take effect.
 
-For example, to expose the OData<!--Or "Web"?--> API for the Case entity where authenticated
+For example, to expose the Web API for the Case entity where authenticated
 users are allowed to perform create, update, and delete operations on this entity, the site settings are shown in the following table.
 
 | Site setting name | Site setting value|
@@ -58,9 +58,9 @@ users are allowed to perform create, update, and delete operations on this entit
 
 ## Security with the portals Web API
 
-You can configure record-based security to individual records in portals by using [entity permissions](configure/assign-entity-permissions.md). The portals Web API accesses entity records and follows the entity permissions given to users through the associated [web role](configure/create-web-roles.md).<!--note from editor: This diagram needs better alt text. Please describe the boxes and the relationship among them.-->
+You can configure record-based security to individual records in portals by using [entity permissions](configure/assign-entity-permissions.md). The portals Web API accesses entity records and follows the entity permissions given to users through the associated [web role](configure/create-web-roles.md).
 
-![Portals Web API security](media/web-api/portals-Webapi-security.png)
+![Portals Web API security](media/web-api/portals-Webapi-security.png "Portals Web API security architecture")
 
 ## Authenticating portals Web API requests
 
@@ -68,7 +68,7 @@ You don't need to include authentication code, because authentication and author
 
 ## General Data Protection Regulation (GDPR)
 
-All request headers will<!--Edit okay? Please see the style guide entry for "should" at https://styleguides.azurewebsites.net/StyleGuide/Read?id=2700&topicid=35667 --> have a contact ID passed for auditing purpose. For an anonymous user, this will be passed as `null`.
+All request headers will have a contact ID passed for auditing purpose. For an anonymous user, this will be passed as `null`.
 
 If audit logging is enabled, a user can see all the audit events in the [Office 365 audit log](https://protection.office.com/unifiedauditlog).
 

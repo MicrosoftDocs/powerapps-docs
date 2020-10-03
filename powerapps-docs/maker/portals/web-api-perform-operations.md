@@ -41,7 +41,7 @@ You can perform [available Web API operations](web-api-overview.md#web-api-opera
 
 #### Sample JSON for creating related entity records in one operation
 
-For example, the following request body posted to the Account entity set will create a total of four new entities&mdash;including the account&mdash;in the context of creating the account.<!--note from editor: Edit okay? Only three entities are listed below.-->
+For example, the following request body posted to the Account entity set will create a total of four new entities&mdash;including the account&mdash;in the context of creating the account.
 
 - A contact is created because it's defined as an object property of the single-valued navigation property primarycontactid.
 - An opportunity is created because it's defined as an object within an array that's set to the value of a collection-valued navigation property opportunity_customer_accounts.
@@ -106,7 +106,7 @@ For example, the following request body posted to the Account entity set will cr
     }
 ```
 
-`documentbody` will contain the attachment<!--note from editor: Not sure why you discuss the attachment here while this section is about creating an annotation.--> as a base64 string.
+`documentbody` will contain the attachment as a base64 string.
 
 ## Update and delete entities by using the Web API
 
@@ -854,7 +854,7 @@ To test the Web API functionality:
 
 1. Select **Add Sample Record** to add the sample record from the script.
 
-1. Select a field. In this example, we've selected **Email** to change the email address of a contact.<!--note from editor: Edit okay? I assume changing the email address isn't actually the point of this procedure.-->
+1. Select a field. In this example, we've selected **Email** to change the email address of a contact.
 
     ![Edit email](media/web-api/edit-record.png "Edit email")
 
