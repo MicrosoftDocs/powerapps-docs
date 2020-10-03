@@ -858,7 +858,7 @@ To test the Web API functionality:
 
     ![Edit email](media/web-api/edit-record.png "Edit email")
 
-1. Select ![Delete](media/web-api/delete.png "Delete") to delete a record.
+1. Select ![Delete record](media/web-api/delete.png "Delete record") to delete a record.
 
 Now that you've created a webpage with a sample in this example to view, edit, create and delete records, you can customize the forms and layout.
 
