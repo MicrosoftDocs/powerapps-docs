@@ -24,7 +24,7 @@ search.app:
 
 # Create an entity record using the Web API
 
-Use a POST request to send data to create an entity. You can create multiple related entity records in a single operation using ‘deep insert’. You also need to know how to set values to associate a new entity record to existing entities using the @odata.bind annotation.  
+Use a POST request to send data to create an entity. You can create multiple related entity records in a single operation using *deep insert*. You also need to know how to set values to associate a new entity record to existing entities using the `@odata.bind` annotation.  
 
 > [!NOTE]
 > For information about how to create and update the entity metadata using the Web API, see [Create and update entity definitions using the Web API](create-update-entity-definitions-using-web-api.md).
@@ -65,7 +65,66 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(7eb682f1-ca75-e511-80d
 
 ```
 
-To create a new entity record you must identify the valid property names and types. For all system entities and attributes, you can find this information in the topic for that entity in the [About the Entity Reference](../reference/about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL $metadata document](web-api-types-operations.md#csdl-metadata-document) . More information:[Entity types](web-api-types-operations.md#entity-types)
+To create a new entity record you must identify the valid property names and types. For all system entities and attributes, you can find this information in the topic for that entity in the [About the Entity Reference](../reference/about-entity-reference.md). For custom entities or attributes, refer to the definition of that entity in the [CSDL $metadata document](web-api-types-operations.md#csdl-metadata-document) . More information: [Entity types](web-api-types-operations.md#entity-types)
+
+<a name="bkmk_createWithDataReturned"></a>
+
+## Create with data returned
+
+You can compose your `POST` request so that data from the created record will be returned with a status of `201 (Created)`.  To get his result, you must use the `return=representation` preference in the request headers.
+
+To control which properties are returned, append the `$select` query option to the URL to the entity set. You may also use `$expand` to return related entities.
+
+When an entity is created in this way the `OData-EntityId` header containing the URI to the created record is not returned.
+
+This example creates a new account entity and returns the requested data in the response.
+
+**Request**
+
+ ```http
+
+POST [Organization URI]/api/data/v9.0/accounts?$select=name,creditonhold,address1_latitude,description,revenue,accountcategorycode,createdon HTTP/1.1
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+Prefer: return=representation
+
+{
+    "name": "Sample Account",
+    "creditonhold": false,
+    "address1_latitude": 47.639583,
+    "description": "This is the description of the sample account",
+    "revenue": 5000000,
+    "accountcategorycode": 1
+}
+
+```
+
+**Response**
+
+```http
+
+HTTP/1.1 201 Created
+Content-Type: application/json; odata.metadata=minimal
+Preference-Applied: return=representation
+OData-Version: 4.0
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
+    "@odata.etag": "W/\"536530\"",
+    "accountid": "d6f193fc-ce85-e611-80d8-00155d2a68de",
+    "accountcategorycode": 1,
+    "description": "This is the description of the sample account",
+    "address1_latitude": 47.63958,
+    "creditonhold": false,
+    "name": "Sample Account",
+    "createdon": "2016-09-28T22:57:53Z",
+    "revenue": 5000000.0000,
+    "_transactioncurrencyid_value": "048dddaa-6f7f-e611-80d3-00155db5e0b6"
+}
+
+```
 
 <a name="bkmk_CreateRelated"></a>
 
@@ -73,9 +132,9 @@ To create a new entity record you must identify the valid property names and typ
 
  You can create entities related to each other by defining them as navigation properties values. This is known as *deep insert*.
 
- As with a basic create, the response `OData-EntityId` header contains the Uri of the created entity. The URIs for the related entities created aren’t returned.
+ As with a basic create, the response `OData-EntityId` header contains the Uri of the created entity. The URIs for the related entities created aren’t returned. You can get the primary key values of the records if you use the `Prefer: return=representation` header so it returns the values of the created record. More information: [Create with data returned](#create-with-data-returned)
 
- For example, the following request body posted to the `Account` entity set will create a total of four new entities in the context of creating an account.
+ For example, the following request body posted to the `accounts` entity set will create a total of four new entities in the context of creating an account.
 
 - A contact is created because it is defined as an object property of the single-valued navigation property `primarycontactid`.
 
@@ -264,64 +323,7 @@ Accept: application/json
 }
 ```
 
-<a name="bkmk_createWithDataReturned"></a>
 
-## Create with data returned
-
-You can compose your `POST` request so that data from the created record will be returned with a status of `201 (Created)`.  To get his result, you must use the `return=representation` preference in the request headers.
-
-To control which properties are returned, append the `$select` query option to the URL to the entity set.
-
-When an entity is created in this way the `OData-EntityId` header containing the URI to the created record is not returned.
-
-This example creates a new account entity and returns the requested data in the response.
-
-**Request**
-
- ```http
-
-POST [Organization URI]/api/data/v9.0/accounts?$select=name,creditonhold,address1_latitude,description,revenue,accountcategorycode,createdon HTTP/1.1
-OData-MaxVersion: 4.0
-OData-Version: 4.0
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Prefer: return=representation
-
-{
-    "name": "Sample Account",
-    "creditonhold": false,
-    "address1_latitude": 47.639583,
-    "description": "This is the description of the sample account",
-    "revenue": 5000000,
-    "accountcategorycode": 1
-}
-
-```
-
-**Response**
-
-```http
-
-HTTP/1.1 201 Created
-Content-Type: application/json; odata.metadata=minimal
-Preference-Applied: return=representation
-OData-Version: 4.0
-
-{
-    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
-    "@odata.etag": "W/\"536530\"",
-    "accountid": "d6f193fc-ce85-e611-80d8-00155d2a68de",
-    "accountcategorycode": 1,
-    "description": "This is the description of the sample account",
-    "address1_latitude": 47.63958,
-    "creditonhold": false,
-    "name": "Sample Account",
-    "createdon": "2016-09-28T22:57:53Z",
-    "revenue": 5000000.0000,
-    "_transactioncurrencyid_value": "048dddaa-6f7f-e611-80d3-00155db5e0b6"
-}
-
-```
 
 ### See also
 
