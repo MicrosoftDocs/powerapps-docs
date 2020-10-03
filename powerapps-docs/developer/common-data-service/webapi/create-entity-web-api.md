@@ -2,7 +2,7 @@
 title: "Create an entity record using the Web API (Common Data Service) | Microsoft Docs"
 description: "Read how to create a POST request to send data to create an entity record on Common Data Service using the Web API"
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 10/3/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -127,23 +127,31 @@ OData-EntityId: [Organization URI]/api/data/v9.0/accounts(3c6e4b5f-86f6-e411-80d
 
 ## Associate entity records on create
 
- To associate new entities to existing entities when they are created you must set the value of single-valued navigation properties using the `@odata.bind` annotation.
+ To associate new entities to existing entities when they are created you must set the value of navigation properties using the `@odata.bind` annotation.
 
- The following request body posted to the accounts entity set will create a new account associated with an existing contact with the `contactid` value of 00000000-0000-0000-0000-000000000001.
+ The following request body posted to the `accounts` entity set will create a new account associated with an existing contact with the `contactid` value of `00000000-0000-0000-0000-000000000001` and two existing tasks with `activityid` values of `00000000-0000-0000-0000-000000000002` and `00000000-0000-0000-0000-000000000003`.
+
+> [!NOTE]
+> This request is using the `Prefer: return=representation` header so it returns the values of the created record. More information: [Create with data returned](#create-with-data-returned)
 
 **Request**
 
 ```http
 
-POST [Organization URI]/api/data/v9.0/accounts HTTP/1.1
+POST [Organization URI]/api/data/v9.0/accounts?$select=name&$expand=primarycontactid($select=fullname),Account_Tasks($select=subject) HTTP/1.1
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
 OData-Version: 4.0
 Accept: application/json
+Prefer: return=representation
 
 {
-"name":"Sample Account",
-"primarycontactid@odata.bind":"/contacts(00000000-0000-0000-0000-000000000001)"
+    "name": "Sample Account",
+    "primarycontactid@odata.bind": "/contacts(00000000-0000-0000-0000-000000000001)",
+    "Account_Tasks@odata.bind": [
+        "/tasks(00000000-0000-0000-0000-000000000002)",
+        "/tasks(00000000-0000-0000-0000-000000000003)"
+    ]
 }
 
 ```
@@ -152,14 +160,37 @@ Accept: application/json
 
 ```http
 
-HTTP/1.1 204 No Content
+HTTP/1.1 201 Created
 OData-Version: 4.0
-OData-EntityId: [Organization URI]/api/data/v9.0/accounts(00000000-0000-0000-0000-000000000002)
+Preference-Applied: return=representation
+
+{
+    "@odata.context": "[Organization URI]/api/data/v9.1/$metadata#accounts(name,primarycontactid(fullname),Account_Tasks(subject))/$entity",
+    "@odata.etag": "W/\"36236432\"",
+    "name": "Sample Account",
+    "accountid": "00000000-0000-0000-0000-000000000004",
+    "primarycontactid": {
+        "@odata.etag": "W/\"28877094\"",
+        "fullname": "Yvonne McKay (sample)",
+        "contactid": "00000000-0000-0000-0000-000000000001"
+    },
+    "Account_Tasks": [
+        {
+            "@odata.etag": "W/\"36236437\"",
+            "subject": "Task 1",
+            "activityid": "00000000-0000-0000-0000-000000000002"
+        },
+        {
+            "@odata.etag": "W/\"36236440\"",
+            "subject": "Task 2",
+            "activityid": "00000000-0000-0000-0000-000000000003"
+        }
+    ]
+}
 
 ```
 
-> [!NOTE]
-> Associating entities this way using a collection-valued navigation property is not supported by the Web API.
+
 
 <a name="bkmk_SuppressDuplicateDetection"></a>
 
@@ -174,9 +205,9 @@ See [Detect duplicate data using Web API](manage-duplicate-detection-create-upda
 
 ## Create a new entity record from another entity
 
-Use `InitializeFrom function` to create a new record in the context of an existing record where a mapping exists between the entities to which the records belong. 
+Use `InitializeFrom` function to create a new record in the context of an existing record where a mapping exists between the entities to which the records belong. 
 
-The following example shows how to create an account record using the attribute values of an existing record of account entity with `accountid` value equal to c65127ed-2097-e711-80eb-00155db75426.
+The following example shows how to create an account record using the attribute values of an existing record of account entity with `accountid` value equal to `c65127ed-2097-e711-80eb-00155db75426`.
 
 **Request**
 
@@ -193,21 +224,21 @@ Accept: application/json
 
 ```json
 {
-        "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
-        "@odata.type": "#Microsoft.Dynamics.CRM.account",
-        "parentaccountid@odata.bind": "accounts(c65127ed-2097-e711-80eb-00155db75426)",
-        "transactioncurrencyid@odata.bind": "transactioncurrencies(732e87e1-1d96-e711-80e4-00155db75426)",
-        "address1_line1":"123 Maple St.",
-        "address1_city":"Seattle",
-        "address1_country":"United States of America"
+    "@odata.context": "[Organization URI]/api/data/v9.0/$metadata#accounts/$entity",
+    "@odata.type": "#Microsoft.Dynamics.CRM.account",
+    "parentaccountid@odata.bind": "accounts(c65127ed-2097-e711-80eb-00155db75426)",
+    "transactioncurrencyid@odata.bind": "transactioncurrencies(732e87e1-1d96-e711-80e4-00155db75426)",
+    "address1_line1": "123 Maple St.",
+    "address1_city": "Seattle",
+    "address1_country": "United States of America"
 }
 ```
 
-The response received from InitializeFrom request consists of values of mapped attributes between the source entity and target entity and the GUID of parent record. The attribute mapping between entities that have an entity relationship is different for different entity sets and is customizable, so the response from InitializeFrom function request may vary for different entities and organizations. When this response is passed in the body of create request of the new record, these attribute values are replicated in the new record. The values of custom mapped attributes also get set in the new record during the process.
+The response received from `InitializeFrom` request consists of values of mapped attributes between the source entity and target entity and the GUID of parent record. The attribute mapping between entities that have an entity relationship is different for different entity sets and is customizable, so the response from `InitializeFrom` function request may vary for different entities and organizations. When this response is passed in the body of create request of the new record, these attribute values are replicated in the new record. The values of custom mapped attributes also get set in the new record during the process.
 
 > [!NOTE]
-> To determine whether two entities can be mapped, use this query:  
-GET [Organization URI]/api/data/v9.0/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname
+> To determine whether two entities can be mapped, use this query:<br />
+`GET [Organization URI]/api/data/v9.1/entitymaps?$select=sourceentityname,targetentityname&$orderby=sourceentityname`
 
 Other attribute values can also be set and/or modified for the new record by adding them in the JSON request body, as shown in the example below.
 
@@ -237,9 +268,9 @@ Accept: application/json
 
 ## Create with data returned
 
-You can compose your POST request so that data from the created record will be returned with a status of 201 (Created).  To get his result, you must use the `return=representation` preference in the request headers.
+You can compose your `POST` request so that data from the created record will be returned with a status of `201 (Created)`.  To get his result, you must use the `return=representation` preference in the request headers.
 
-To control which properties are returned, append the `$select` query option to the URL to the entity set.  The `$expand` query option will be ignored if used.
+To control which properties are returned, append the `$select` query option to the URL to the entity set.
 
 When an entity is created in this way the `OData-EntityId` header containing the URI to the created record is not returned.
 
