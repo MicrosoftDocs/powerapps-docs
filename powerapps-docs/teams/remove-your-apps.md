@@ -6,8 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: simatthe
+ms.reviewer: tapanm
 ---
 
 # Remove an app from your team
