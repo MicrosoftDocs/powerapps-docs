@@ -64,9 +64,6 @@ When you download the log file, you will find an XML file that you can open usin
 > [!NOTE]
 > You can view the details of all solution operations including solution import with the [solution history](solution-history.md) feature. To view these operations, select **See history** on the solutions page.
   
-<!-- 
-> You can’t edit an active routing rule set. Therefore, if you’re importing a solution that includes an active routing rule set into an environment where the rule already exists with the same ID, the import will fail. More information: [Create rules to automatically route cases](https://docs.microsoft.com/dynamics365/customer-engagement/customer-service/create-rules-automatically-route-cases)  -->
-  
 ## Troubleshooting solution import
 
 ### There's an active unmanaged layer created after importing a managed solution

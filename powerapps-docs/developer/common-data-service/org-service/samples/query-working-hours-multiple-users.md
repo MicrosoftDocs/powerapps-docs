@@ -21,7 +21,7 @@ search.app:
 
 This sample shows how to retrieve the working hours of multiple users by using the [QueryMultipleSchedulesRequest](https://docs.microsoft.com/dotnet/api/microsoft.crm.sdk.messages.querymultipleschedulesrequest?view=dynamics-general-ce-9) message. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23).
 
-This sample requires additional users that are not present in your system. Create the required user manually **as is** shown below in **Office 365** before you run the sample. Replace `yourorg` with the `OrgName` of your organization.
+This sample requires additional users that are not present in your system. Create the required user manually **as is** shown below in **Microsoft 365** before you run the sample. Replace `yourorg` with the `OrgName` of your organization.
 
 **First Name**: Kevin<br/>
 **Last Name**: Cook<br/>
@@ -43,7 +43,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the current version of the org.
-2. Retrieves the current user's information and also the user, that you have created manually in **Office 365**.
+2. Retrieves the current user's information and also the user, that you have created manually in **Microsoft 365**.
 
 ### Demonstrate
 
