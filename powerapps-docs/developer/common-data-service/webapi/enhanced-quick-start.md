@@ -66,7 +66,7 @@ Edit the `<configuration>` element to add a the `connectionStrings` node as show
         <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.2" />
     </startup>
   <connectionStrings>
-    <!--Online using Office 365-->
+    <!--Online using Microsoft 365-->
     <add name="Connect"
          connectionString="Url=https://yourorg.api.crm.dynamics.com;Username=yourname@yourorg.onmicrosoft.com;Password=mypassword;" />
   </connectionStrings>

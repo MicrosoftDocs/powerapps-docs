@@ -6,7 +6,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/24/2020
-ms.author: tapanm
+ms.author: jshum
 ms.reviewer: 
 ---
 
