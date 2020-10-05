@@ -1,6 +1,6 @@
 ---
-title: "Use simplified authentication and identity provider configuration (Preview) | MicrosoftDocs"
-description: "Learn how to use quick, easy, and simplified portal configuration for authentication."
+title: "Configure additional site settings for OAuth 2.0 providers in Power Apps portals.  | MicrosoftDocs"
+description: "Learn how to configure additional site settings for OAuth 2.0 providers in Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure additional settings for OAuth 2 providers
+# Configure additional settings for OAuth 2.0 providers
 
 As explained in the [OAuth 2.0 providers in portals](configure-oauth2-provider.md) article, you can configure several identity providers using the OAuth 2.0 protocol. The additional authentication settings in this section apply to the [Microsoft](configure-oauth2-microsoft.md), [LinkedIn](configure-oauth2-linkedin.md), [Facebook](configure-oauth2-facebook.md), [Google](configure-oauth2-google.md), and [Twitter](configure-oauth2-twitter.md) providers.
 
