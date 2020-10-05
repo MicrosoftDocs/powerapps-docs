@@ -275,7 +275,7 @@ To set solution settings:
    | Name | Name of the solution settings record. |
    | Facility Group | Applicable facility group, leave empty for default. |
    | Company Name |Name of the company for solution settings. |
-   | Allow Employee Sentiment | Enables to capture employee sentiment information in the Employee app. |
+   | Allow Employee Sentiment | Capture employee sentiment information in the Employee app. |
    | Allow storing of Negative Attestations | When disabled, negative attestations registered in the Employee app are not stored. |
    | Allow QR codes | Enables QR code on the pass in the Employee app.  |
    | Allow Guest Registrations | Enables employees to register guest on their bookings in the Employee app.  |
@@ -392,7 +392,7 @@ This flow runs twice a day and creates a visit record for each employee for thei
 
 ## Bulk record deletion
 
-Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period. Also to reduce storage, you can delete deactived share guest registrations or employee attestations after a certain period of time.
+Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period. Also to reduce storage, you can delete deactivated share guest registrations or employee attestations after a certain period of time.
 
 **To create bulk record-delete jobs**
 
@@ -401,7 +401,7 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 2.	Under **Data Management**, select **Bulk record deletion**.
 
    > [!div class="mx-imgBorder"]
-   > ![Data Management](media/solution-admin-dm.png "Data Management")
+   > ![Data Management admin](media/solution-admin-dm.png "Data Management admin")
 
 3.	Select **New**.
 

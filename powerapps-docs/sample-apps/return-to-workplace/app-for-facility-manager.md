@@ -49,7 +49,7 @@ The Facility Safety Management app has the following components:
 
 - **Employee Sentiment** -  Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees with the Employee Return to the Workplace app.
 
-- **Employee Attestation** - Keeps track of employee health assessments or attestations based on a series of questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
+- **Employee Attestation** - Keeps track of employee health assessments or attestations based on the questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
 
 - **Employee Visits** - Keeps track of the visits. Employee visits are linked to an employee and a booking record.
 
@@ -346,7 +346,7 @@ For ease of use, you can also use the business process flow to create new transi
 
 - Moving forward
 
-   Given that the facility isn't in the final phase, you can select the circle of the current stage and then select **Next Stage**. The business process flow won't move instantly, but in the background, a new transition record is created and you'll go to that record. The record is prepopulated with the next phase and is ready for approval.
+   Given that the facility isn't in the final phase, you can select the circle of the current stage and then select **Next Stage**. The business process flow won't move instantly, but in the background, a new transition record is created and you'll go to that record. The record is auto populated with the next phase and is ready for approval.
 
 - Moving backward
 
@@ -354,7 +354,7 @@ For ease of use, you can also use the business process flow to create new transi
 
 ## Monitor employee attestations
 
-You can monitor whether your organization's employees are feeling healthy enough to be eligible to return to your facility. You can track employee self-attestations of their health based on a series of questions that the employees answer. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Attestations** area of the Facility Safety Management app.
+You can monitor whether your organization's employees are feeling healthy enough to be eligible to return to your facility. You can track employee self-attestations of their health based on the questions employees answer. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Attestations** area of the Facility Safety Management app.
 
 > [!div class="mx-imgBorder"]
 > ![Employee attestations](media/facility-manager-employee-attestations.png "Employee attestations")

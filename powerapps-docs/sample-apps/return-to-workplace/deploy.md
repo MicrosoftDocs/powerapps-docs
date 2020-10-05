@@ -246,8 +246,8 @@ You can change the look and feel of the app by applying themes to match your com
 
 5. Select users from the list of available users or groups with whom you want to share the app.
 
-> [!IMPORTANT]
-> Even if the user has access to the canvas app, you should still need to assign users with the **Return to the Workplace - Employee** security role. 
+   > [!IMPORTANT]
+   > Even if the user has access to the canvas app, you should still need to assign users with the **Return to the Workplace - Employee** security role. 
 
 ## Step 8: Set the security roles
 
