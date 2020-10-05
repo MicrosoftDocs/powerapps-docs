@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/05/2020
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -300,5 +300,7 @@ To share an idea:
 
 ### See also
 
-[Inspection sample app](inspection.md)  
-[Issue Reporting sample app](issue-reporting.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Inspection sample app](inspection.md)  
+- [Issue Reporting sample app](issue-reporting.md)
+- [Customize sample apps](customize-sample-apps.md)
