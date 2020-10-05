@@ -1,5 +1,6 @@
 ---
-title: "Change the color scheme or add a logo to match your organization’s brand  | MicrosoftDocs"
+title: "Change the color scheme or add a logo to match your brand  | MicrosoftDocs"
+description: Learn how to create a theme
 ms.custom: ""
 ms.date: 04/30/2020
 ms.reviewer: ""
@@ -18,7 +19,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create a theme
+# Use a theme to create a custom look for your app
 
 You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing entity-specific coloring. A theme is created by using the customization tools in the user interface, without requiring a developer to write code. You can create, change or delete themes that are used in your organization. The theme customization is supported in the Web forms in Dynamics 365 for Outlook. You can define multiple themes, but only one can be set and published as the default theme.  
   
@@ -39,8 +40,6 @@ You can create a custom look and feel (a theme), for your app by making changes 
 -   Navigation bar color  
   
 -   Navigation bar shelf color
-
--   Main command bar color on the Unified Interface
   
 -   Header color  
   

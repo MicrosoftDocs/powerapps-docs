@@ -1,7 +1,7 @@
 ---
 title: Known issues and limitations for Project Oakdale | Microsoft Docs
 description: Provides an overview of known issues and limitations when using Power Apps with Microsoft Teams.
-author: tapanm-msft
+author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
