@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/01/2020
+ms.date: 10/05/2020
 ms.reviewer: 
 ms.author: mabolan
 ms.reviewer: tapanm
