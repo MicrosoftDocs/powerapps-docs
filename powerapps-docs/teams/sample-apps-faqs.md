@@ -1,13 +1,13 @@
 ---
 title: Frequently Asked Questions (FAQs) and answers when using sample apps from Teams store | Microsoft Docs
 description: Learn about the Frequently Asked Questions (FAQs) and answers when using sample apps from Teams store
-author: tapanm-msft
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/05/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: namarwah
+ms.reviewer: tapanm
 ---
 
 # Frequently Asked Questions (FAQs) for sample apps
