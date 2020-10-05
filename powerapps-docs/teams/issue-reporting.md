@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/05/2020
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
@@ -347,5 +347,7 @@ To review and edit existing issues in Planner:
 
 ### See also
 
-[Inspection sample apps](inspection.md)  
-[Employee Ideas sample app](employee-ideas.md)
+- [Sample apps FAQs](sample-apps-faqs.md)
+- [Inspection sample apps](inspection.md)  
+- [Employee Ideas sample app](employee-ideas.md)
+- [Customize sample apps](customize-sample-apps.md)
