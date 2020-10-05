@@ -87,29 +87,21 @@ If you filtered your apps, the filtered list will be searched.
 Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
 
 
-## Use Safari to pin to home (iOS 13 or earlier)
+## Pin to home
 
-You can pin both canvas apps and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
+You can pin both canvas apps and model-driven apps to the home screen of your device for quick access.
 
+### Use Safari to pin to home (iOS 13 or earlier)
+
+Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
 
 ![Pin an app on iPhone.](media/pa_mobile_pin_to_home_iphone.png "Pin an app on iPhone") 
-
-[!NOTE]
-> For iOS devices that have multiple browsers installed, use Safari when pinning an app to home.   |    
-
-
-
-
-
-![Pin an app.](media/pin_to_home.png "Pin an app")  |
-
-
-
 
 > [!NOTE]
 > For iOS devices that have multiple browsers installed, use Safari when pinning an app to home. 
 
-## Use Siri shortcuts to pin to home (iOS 14 or later) 
+
+### Use Siri shortcuts to pin to home (iOS 14 or later) 
 
 The Power Apps mobile app is now integrated with Siri shortcuts, which gives you the ability to pin to home, launch apps with Siri, and create new workflows. For more information on how shortcuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios). This feature requires Power Apps mobile version 3.20092.x or later.
 
@@ -153,6 +145,11 @@ Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen
 
 You can customize the shortcut icon but it is limited to the customization options in iOS. For more information, go to [Modify shortcut icons](https://support.apple.com/guide/shortcuts/modify-shortcut-icons-apd5ad5a2128/ios).
 
+### Pin to home on Android 
+
+Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
+
+![Pin an app.](media/pin_to_home.png "Pin an app")  
 
 ## See non-production apps
 
