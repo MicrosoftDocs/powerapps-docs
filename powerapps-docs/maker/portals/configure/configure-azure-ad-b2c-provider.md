@@ -16,13 +16,22 @@ ms.reviewer: tapanm
 
 A portal owner can configure the portal to accept [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports Open ID Connect for federation.
 
-### Step 1 - Configure the Azure Active Directory B2C application
+Configuring Azure Active Directory B2C provider for a portal consists of the following stages:
+
+1. [Add Azure AD B2C provider](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider)
+1. [Configure Azure AD B2C application](#configure-the-azure-active-directory-b2c-application)
+1. [Configure site settings](#configure-site-settings)
+1. [Configure additional settings](#configure-additional-settings)
+
+The next sections explain each stage in detail.
+
+## Configure the Azure Active Directory B2C application
 
 ![Configure the Azure AD B2C app](media/use-simplified-authentication-configuration/configure-ad-b2c-step1.png "Configure the Azure AD B2C app")
 
 To use Azure AD B2C as an identity provider:
 
-1. [Create and configure an Azure AD B2C tenant]().
+1. [Create and configure an Azure AD B2C tenant](#create-and-configure-an-azure-ad-b2c-tenant).
 
 1. [Register an application](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant. Use the **Reply URL** provided in the wizard while configuring the application.
 
@@ -33,7 +42,7 @@ To use Azure AD B2C as an identity provider:
 
 1. [Configure token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/configure-tokens#configure-token-compatibility) with an **Issuer (iss) claim** URL that includes **tfp**. More information: [Token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/tokens-overview#compatibility)
 
-### Step 2 - Configure site settings
+## Configure site settings
 
 Configure the following site settings and password reset policy for your Azure AD B2C provider.
 
@@ -66,7 +75,7 @@ Configure the following site settings and password reset policy for your Azure A
 
 - **Redirect URI** - Enter the portal URL. <br> You only need to change the redirect URI if you use a custom domain name.
 
-#### Password reset settings
+## Password reset settings
 
 - **Default policy ID** - Enter the name of the sign-up and sign-in user flow you created in [step 1](#step-1---configure-the-azure-active-directory-b2c-application). The name is prefixed with *B2C_1*.
 
@@ -77,7 +86,7 @@ Configure the following site settings and password reset policy for your Azure A
 
 For more information about site settings, see [related site settings](azure-ad-b2c.md#related-site-settings).
 
-### Step 3 - Configure additional settings
+## Configure additional settings
 
 You have the option of configuring additional setting for the Azure AD B2C identity provider.
 
@@ -97,7 +106,7 @@ For more information about claims mapping, see [Azure AD B2C claims mapping scen
 
 For more information about configuring Azure AD B2C identity provider, see [Azure AD B2C provider settings for portals](azure-ad-b2c.md#customize-the--ad-b2c-user-interface).
 
-### Create and configure an Azure AD B2C tenant
+## Create and configure an Azure AD B2C tenant
 
 > [!NOTE]
 > For more details about creating and configuring Azure AD B2C tenant on Azure portal, go to [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant).
@@ -122,11 +131,9 @@ To create Azure AD B2C tenant:
 1. Under **Token compatability settings**, from the **Issuer (iss) claim** list, select the URL that has **/tfp** in its path.
 1. Save the policy.
 1. Select the URL in the **Metadata endpoint for this policy** field.
-1. Copy the value of the issuer field and enter it as the value of Issuer-URL in the preceding table. 
+1. Copy the value of the issuer field and enter it as the value of Issuer-URL in the preceding table.
 
 ### See also
 
-- [Set authentication identity for a portal](set-authentication-identity.md)
-- [Configure Azure AD B2C provider settings](azure-ad-b2c.md)
-- [Configure OAuth2 provider settings](configure-oauth2-settings.md)
-- [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)
+[Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+
