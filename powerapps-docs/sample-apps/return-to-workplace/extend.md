@@ -495,7 +495,7 @@ This section describes the different flows in the solution and explains their pu
 | Facility - Apply and Update Phase      | Facility    | Applies a new phase to a facility, which creates a checklist, changes the business process flow and updates the capacities. |
 | Reopen Phase - Update Capacity      | Reopen phase    | Update capacity when the capacity limits change for a reopen phase. |
 | Reopen Phase Transition - Update facility reopen phase      | Reopen phase transition    | Updates and changes the reopen phase for a facility. |
-| Share Guest Registration - Email | Share Guest Registration | Shares the Guest Registration with the host and the guest. |
+| Share Guest Registration - Email | Share Guest Registration | Shares the guest registration details with the host and the guest. |
 ||||
 
 For the solution, we generate sample data, which will be refreshed for 12 hours. You can turn off these flows if you don't need sample data in your environments.
