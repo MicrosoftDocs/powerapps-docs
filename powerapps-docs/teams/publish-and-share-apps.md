@@ -5,7 +5,7 @@ author: matthewbolanos
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/25/2020
+ms.date: 10/05/2020
 ms.author: mabolan
 ms.reviewer: tapanm
 ---
@@ -40,6 +40,13 @@ Select **Add a tab** ![Add a tab](media/publish-app-9.png "Add a tab"), and then
 ![Select and save](media/publish-app-8.png "Select and save")
 
 More information: [Publish an app](../maker/canvas-apps/save-publish-app.md#publish-an-app)
+
+## Move an app to another Teams channel in the same team
+
+Moving an app to another Teams channel in the same team requires publishing the app to the new channel, and then, removing the app from the old channel.
+
+- To publish an app to the new channel: Follow the steps to [publish and add an app to Teams](#publish-and-add-an-app-to-teams). But before you select **Save + close**, select **Add a tab** ![Add a tab](media/publish-app-9.png "Add a tab") for the new channel you want. And then, select **Save + close** to publish the app to the new channel.
+- To remove the app from a channel: Follow the steps to [remove an app](remove-your-apps.md).
 
 ## Share an app
 
