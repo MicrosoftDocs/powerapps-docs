@@ -14,9 +14,12 @@ ms.reviewer: tapanm
 
 The OAuth 2.0 based external identity providers involve registering an "application" with a third-party service to obtain a "client ID" and "client secret" pair. Often this application requires specifying a redirect URL that allows the identity provider to send users back to the portal (relying party). The client ID and client secret are configured as portal site settings in order to establish a secure connection from relying party to identity provider. The settings are based on the properties of the [[!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)]AccountAuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.microsoftaccount.microsoftaccountauthenticationoptions.aspx), [TwitterAuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.twitter.twitterauthenticationoptions.aspx), [FacebookAuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.facebook.facebookauthenticationoptions.aspx), and [GoogleOAuth2AuthenticationOptions](https://msdn.microsoft.com//library/microsoft.owin.security.google.googleoauth2authenticationoptions.aspx) classes.  
 
-### See also
+To learn about individual OAuth 2.0 providers, select the name of the provider that you want to configure.
 
-- [Set authentication identity for a portal](set-authentication-identity.md)
-- [Configure Azure AD B2C provider settings](azure-ad-b2c.md)
-- [Configure OAuth2 provider settings](configure-oauth2-settings.md)
-- [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)
+- [Microsoft](configure-oauth2-microsoft.md)
+- [LinkedIn](configure-oauth2-linkedin.md)
+- [Facebook](configure-oauth2-facebook.md)
+- [Google](configure-oauth2-google.md)
+- [Twitter](configure-oauth2-twitter.md)
+
+For general settings applicable to all OAuth 2.0 providers, go to [Additional OAuth 2.0 provider settings](configure-oauth2-settings.md).

@@ -1,5 +1,5 @@
 ---
-title: "Use simplified authentication and identity provider configuration (Preview) | MicrosoftDocs"
+title: "Use simplified authentication and identity provider configuration | MicrosoftDocs"
 description: "Learn how to use quick, easy, and simplified portal configuration for authentication."
 author: sandhangitmsft
 ms.service: powerapps
@@ -10,24 +10,19 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Simplified authentication and identity provider configuration (Preview)
-
-[This topic is pre-release documentation and is subject to change.]
+# Simplified authentication and identity provider configuration
 
 Setting up authentication is a core customization in any portal. Simplified identity provider configuration in Power Apps portals provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal for supported identity providers.
 
-> [!NOTE]
-> The simplified authentication and identity provider configuration feature is in preview. To access this preview feature, you must use [Power Apps preview](https://make.preview.powerapps.com). After this preview feature is generally available, you'll be able to access it from [Power Apps](https://make.powerapps.com). You can't turn this preview feature on or off for your portal. For more information about preview features, see [Understand experimental and preview features in Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-experimental-preview). 
-
 ## Overview
 
-You can enable, disable, and configure portal identity providers from [Power Apps preview](https://make.preview.powerapps.com) by using simplified portal authentication configuration. After you select an identity provider, you can then follow prompts to easily enter the provider settings, instead of [setting up authentication manually](set-authentication-identity.md).
+You can enable, disable, and configure portal identity providers from [Power Apps](https://make.powerapps.com) by using simplified portal authentication configuration. After you select an identity provider, you can then follow prompts to easily enter the provider settings, instead of [setting up authentication manually](set-authentication-identity.md).
 
 ### Authentication Settings
 
 To begin configuring an identity provider for your portal:
 
-1. Go to [Power Apps preview](https://make.preview.powerapps.com).
+1. Go to [Power Apps](https://make.powerapps.com).
 
 1. Select **Apps** from the left navigation pane.
 
@@ -46,9 +41,6 @@ To begin configuring an identity provider for your portal:
 You'll see a list of identity providers that you can configure.
 
 ![Identity providers](media/use-simplified-authentication-configuration/portal-authentication-settings.png "Identity providers")
-
-> [!NOTE]
-> Power Apps portals supports several identity providers. However, the simplified authentication and identity provider configuration feature currently only supports the identity providers listed above.
 
 #### Authentication settings from the portal details page
 
@@ -111,18 +103,17 @@ To add an identity provider, select **Add provider** from **Authentication Setti
 
 ![Add a provider from settings](media/use-simplified-authentication-configuration/add-provider-from-settings.png "Add a provider from settings")
 
-You can also select **Add provider** from the portal details page.
+> [!TIP]
+> You can also select **Add provider** from the [portal details](#authentication-settings-from-the-portal-details-page).
 
-![Add a provider from the details page](media/use-simplified-authentication-configuration/add-provider-from-details.png "Add a provider from the details page")
-
-You can select from the available list of providers, enter a name, and then select **Next** to configure the provider settings.
+Select from the available list of providers, enter a name, and then select **Next** to configure the provider settings.
 
 ![Add a new provider](media/use-simplified-authentication-configuration/add-provider.png "Add a new provider")
 
 > [!NOTE]
 > The **Provider name** you enter here is displayed on the sign-in page for users as the text on the button they use when selecting this provider.
 
-To configure a provider, select **Click to Configure** (or select **More Commands** (**...**), and then select **Configure**).
+To configure a provider, select **Configure** (or select **More Commands** (**...**), and then select **Configure**).
 
 ![Configure a provider](media/use-simplified-authentication-configuration/configure-provider.png "Configure a provider")
 

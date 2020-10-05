@@ -12,7 +12,9 @@ ms.reviewer: tapanm
 
 # Configure additional settings for OAuth 2 providers
 
-The additional authentication settings in this section apply to the **Facebook**, **Twitter**, **Microsoft**, **LinkedIn**, and **Google** providers.
+As explained in the [OAuth 2.0 providers in portals](configure-oauth2-provider.md) article, you can configure several identity providers using the OAuth 2.0 protocol. The additional authentication settings in this section apply to the [Microsoft](configure-oauth2-microsoft.md), [LinkedIn](configure-oauth2-linkedin.md), [Facebook](configure-oauth2-facebook.md), [Google](configure-oauth2-google.md), and [Twitter](configure-oauth2-twitter.md) providers.
+
+To configure the additional settings for any OAuth 2.0 identity provider, select **Configure** from [provider settings](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) page, and expand **Additional settings**.
 
 ![Configure additional settings](media/use-simplified-authentication-configuration/additional-oauth-settings.png "Configure additional settings")
 
@@ -24,11 +26,6 @@ The additional authentication settings in this section apply to the **Facebook**
 - **Scope** - A comma-separated list of permissions to request: MicrosoftAccountAuthenticationOptions.Scope.​
 - ​**Registration Enabled**​ - Enables or disables the registration requirement for the existing identity provider. When disabled, the user is denied registration with an error if no contact record exists for the user. When enabled, user registration is allowed for a new user only if the site setting **Authentication/Registration/Enabled** is set to true.​
 
-For more information, see [OAuth2 site settings](configure-oauth2-settings.md#create-site-settings-by-using-oauth2).
-
 ### See also
 
-- [Set authentication identity for a portal](set-authentication-identity.md)
-- [Configure Azure AD B2C provider settings](azure-ad-b2c.md)
-- [Configure OAuth2 provider settings](configure-oauth2-settings.md)
-- [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)
+[Overview of OAuth 2.0 providers in portals](configure-oauth2-provider.md)
