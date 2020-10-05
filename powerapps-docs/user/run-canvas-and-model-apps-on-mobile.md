@@ -96,7 +96,7 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 1. Select the ellipsis (...) on the app tile, select **Pin to Home**;
 
    > [!div class="mx-imgBorder"]
-   > ![Pin an app on iPhone.](media/pa_mobile_pin_to_home_iphone.png "Pin an app on iPhone") 
+   > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
 
 2. Select ![Pin an app on iPhone button.](media/add-to-home-button.png "Pin an app on iPhone button").
  
