@@ -112,7 +112,7 @@ The clusters view provides information about case contacts and linked cases, and
 > [!div class="mx-imgBorder"]
 > ![Cluster Network](media/pbi-dash-report-clusternetwork.png "Cluster Network")
 
-You can also switch from a map view to the table view to view key metrics broken down by a case. 
+You can also switch from a map view to the table view to view key metrics by a case. 
 
 > [!div class="mx-imgBorder"]
 > ![Cluster Table](media/pbi-dash-report-clustertable.png "Cluster Table")

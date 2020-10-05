@@ -83,7 +83,7 @@ If you're eligible, you'll be given a pass to your selected building for that da
     > [!div class="mx-imgBorder"]
     > ![Terms and agreements](media/employee-termandagreement.png "Terms and agreements")
 
-7. Review the list of symptom check statements. Select **I AGREE**  if you agree with the statements, and **CANCEL** if you don't.
+7. Review the list of symptom check statements. Select **I AGREE**  if you agree with the statements, and **I DISAGREE** if you don't.
 
    > [!div class="mx-imgBorder"]
    > ![Symptom check](media/employee-agreement.png "Symptom check")
@@ -145,10 +145,10 @@ You can also access guest passes from the home screen by selecting the **PASS** 
 When a guest pass is created, you can share the pass with the guest through email by selecting the **SHARE PASS** button available on the guest pass. This sends the guest an email with the host name, facility, date, and hour of the reservation with QR code. 
 
 > [!div class="mx-imgBorder"]
-> ![Share sentiment](media/employee-share-pass-email.png "Share pass guest")
+> ![Share guest pass](media/employee-share-pass-email.png "Share guest pass")
 
 > [!NOTE]
-> In the solution settings you can turn off sending email option if you don't want to email guest passes.
+> In the solution settings, you can turn off sending email option if you don't want to email guest passes.
 
 ## Share sentiment
 
@@ -163,7 +163,7 @@ You can say how you're feeling about returning to the workplace. On the home pag
 > ![Share sentiment reset](media/employee-share-sentiment2-2.png "Share sentiment reset")
 
 > [!NOTE]
-> In the solution settings you can turn this feature off if you don't want to use this.
+> In the solution settings, you can turn this feature off if you don't want to use this.
 
 ## Facility access not available
 
