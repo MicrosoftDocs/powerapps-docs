@@ -52,4 +52,4 @@ To view the summary of the specified system user in Customer Engagement, navigat
 
 Displays an option to enable the user account that was disabled in the `Main()` method.
 
-Answering "yes" is optional in case you want to examine the disabled user account in Customer Engagement. You can manually enable the user account in Active Directory or Office 365 to achieve the same result.
+Answering "yes" is optional in case you want to examine the disabled user account in Customer Engagement. You can manually enable the user account in Active Directory or Microsoft 365 to achieve the same result.

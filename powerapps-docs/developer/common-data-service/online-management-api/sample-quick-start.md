@@ -1,6 +1,6 @@
 ---
 title: "Quick Start Sample: Retrieve Common Data Service environements using Online Management API| MicrosoftDocs"
-description: "The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environements from your Office 365 tenant."
+description: "The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environments from your Microsoft 365 tenant."
 ms.date: 10/01/2019
 ms.service: powerapps
 ms.topic: conceptual
@@ -15,7 +15,7 @@ search.app:
 ---
 # Quick Start Sample: Retrieve Common Data Service environments using Online Management API 
 
-The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environments from your Office 365 tenant.
+The C# sample demonstrates how to authenticate to the Online Management API and then retrieve all Common Data Service environments from your Microsoft 365 tenant.
 
 The sample uses the authentication [helper code](sample-authentication-helper.md) to easily authenticate to Online Management API using the OAuth 2.0 protocol and pass in the access token in header of your request.
 
@@ -30,11 +30,11 @@ The sample performs the following tasks:
     b. Uses an HttpClient instance to connect to Online Management API service.
 
     c. Specifies the API service base address and the max period of execution time.
-1. Uses the **RetrieveInstancesAsync** method to execute a http request to retrieve all Customer Engagement instances in your Office 365 tenant, and then displays the response.
+1. Uses the **RetrieveInstancesAsync** method to execute a http request to retrieve all Customer Engagement instances in your Microsoft 365 tenant, and then displays the response.
 
 ## Run this sample
 Before you can run this sample, make sure that you have:
-- One of the admin roles in your Office 365 tenant. See [Office 365 Admin roles](get-started-online-management-api.md#office-365-admin-roles)
+- One of the admin roles in your Microsoft 365 tenant. See [Microsoft 365 Admin roles](get-started-online-management-api.md#microsoft-365-admin-roles)
 - Visual Studio 2015 or later; Internet connectivity is required to download/restore assemblies in the NuGet package.
 - .NET Framework 4.6.2
 
@@ -43,7 +43,7 @@ To run the sample:
 2. Double-click the Visual Studio solution file (.sln) under the C# folder at the extracted location to open the solution in Visual Studio.
 3. In the **Programs.cs** file, specify a different service URL if the region is not North America. For a list of service URL values for worldwide regions, see [Service URL](get-started-online-management-api.md#service-url).
     ```csharp
-    //TODO: Change this value if your Office 365 tenant is in a different region than North America
+    //TODO: Change this value if your Microsoft 365 tenant is in a different region than North America
 
     private static string _serviceUrl = "https://admin.services.crm.dynamics.com";
     ```
@@ -73,14 +73,14 @@ namespace Microsoft.Crm.Sdk.Samples
 {
     /// <summary>
     /// This sample retrieves Customer Engagement instances
-    /// in your Office 365 tenant.
+    /// in your Microsoft 365 tenant.
     /// </summary>    
 
     class RetrieveInstances
     {
         private HttpClient httpClient;
 
-        //TODO: Change this value if your Office 365 tenant is in a different region than North America
+        //TODO: Change this value if your Microsoft 365 tenant is in a different region than North America
         private static string _serviceUrl = "https://admin.services.crm.dynamics.com";
 
         private void ConnectToAPI()
@@ -110,7 +110,7 @@ namespace Microsoft.Crm.Sdk.Samples
             if (myResponse.IsSuccessStatusCode)
             {
                 var result = myResponse.Content.ReadAsStringAsync().Result;
-                Console.WriteLine("Your instances retrieved from Office 365 tenant: \n{0}", result);
+                Console.WriteLine("Your instances retrieved from Microsoft 365 tenant: \n{0}", result);
             }
             else
             {

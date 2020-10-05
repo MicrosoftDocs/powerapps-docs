@@ -1,13 +1,13 @@
 ---
 title: Use sample apps from teams store | Microsoft Docs
 description: Learn how to use sample apps from Teams store.
-author: tapanm-msft
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/24/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.date: 10/05/2020
+ms.author: namarwah
+ms.reviewer: tapanm
 ---
 
 # Use sample apps from the Microsoft Teams store
@@ -117,8 +117,13 @@ You can further customize and edit the components of an installed Power Apps app
 
 If you get any errors during the installation process, you can help us troubleshoot the problem much more effectively by selecting **Ctrl**+**Alt**+**A** on the keyboard to get the session details. For more information about session details, go to [About tab](overview-of-the-power-apps-app.md#about-tab).
 
+## Sample apps FAQs
+
+For Frequently Asked Questions about sample apps, go to [Sample apps FAQs](sample-apps-faqs.md).
+
 ### See also
 
-[Employee ideas app](employee-ideas.md)  
-[Inspection sample apps](inspection.md)  
-[Issue reporting sample apps](issue-reporting.md)
+- [Employee Ideas and Manage Campaigns sample apps](employee-ideas.md)  
+- [Inspection sample apps](inspection.md)  
+- [Issue Reporting sample apps](issue-reporting.md)
+- [Customize sample apps](customize-sample-apps.md)
