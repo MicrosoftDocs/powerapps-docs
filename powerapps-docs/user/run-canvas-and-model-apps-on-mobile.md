@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 09/16/2020
+ms.date: 10/15/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -111,7 +111,7 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 4. Select **Add**.   
 
    > [!div class="mx-imgBorder"]
-   > ![Select Add.](media/pin_to_home_3.png "Select Add") 
+   > ![Select Add to add to Home screen.](media/pin_to_home_3.png "Select Add to add to Home screen") 
    
 > [!NOTE]
 > For iOS devices that have multiple browsers installed, use Safari when pinning an app to home. 
