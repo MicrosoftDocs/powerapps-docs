@@ -91,8 +91,12 @@ Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the l
 
 You can pin both canvas apps and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
 
+|iOS  |Android |
+|---------|---------|
+| ![Pin an app on iPhone.](media/pa_mobile_pin_to_home_iphone.png "Pin an app on iPhone")   |     ![Pin an app.](media/pin_to_home.png "Pin an app")  |
 
-![Pin an app.](media/pin_to_home.png "Pin an app")
+
+
 
 > [!NOTE]
 > For iOS devices that have multiple browsers installed, use Safari when pinning an app to home. 
