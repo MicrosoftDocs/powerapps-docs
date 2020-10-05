@@ -51,7 +51,7 @@ Configure the following site settings and password reset policy for your Azure A
 - **Authority** - The issuer URL defined in the metadata of the sign-up and sign-in policy user flow.​
 <br> To get the issuer URL:
 
-   1. Open the sign-up and sign-in user flow you created in [step 1](#step-1---configure-the-azure-active-directory-b2c-application). For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
+   1. Open the sign-up and sign-in user flow you created [earlier](#configure-the-azure-active-directory-b2c-application). For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
 
         ![Select the user flow](media/use-simplified-authentication-configuration/user-flow.png "Select the user flow")
 
@@ -71,20 +71,18 @@ Configure the following site settings and password reset policy for your Azure A
 
         Ensure you copy only the URL, without the double quotation marks (*""*). <br> For example, `https://tailspintoysorg.b2clogin.com/acf18993-4325-4d94-b519-96824b0d06db/v2.0/`
 
-- **Client ID​** - Enter the **Application ID** of the Azure AD B2C application created in [step 1](#step-1---configure-the-azure-active-directory-b2c-application).
+- **Client ID​** - Enter the **Application ID** of the Azure AD B2C application created [earlier](#configure-the-azure-active-directory-b2c-application).
 
 - **Redirect URI** - Enter the portal URL. <br> You only need to change the redirect URI if you use a custom domain name.
 
 ## Password reset settings
 
-- **Default policy ID** - Enter the name of the sign-up and sign-in user flow you created in [step 1](#step-1---configure-the-azure-active-directory-b2c-application). The name is prefixed with *B2C_1*.
+- **Default policy ID** - Enter the name of the sign-up and sign-in user flow you created in [earlier](#configure-the-azure-active-directory-b2c-application). The name is prefixed with *B2C_1*.
 
-- **Password reset policy ID** - Enter the name of the password reset user flow you created in [step 1](#step-1---configure-the-azure-active-directory-b2c-application). The name is prefixed with *B2C_1*.
+- **Password reset policy ID** - Enter the name of the password reset user flow you created [earlier](#configure-the-azure-active-directory-b2c-application). The name is prefixed with *B2C_1*.
 
-- **Valid issuers** - A comma-delimited list of issuer URLs for the sign-up and sign-in user flow and password reset user flow you created in [step 1](#step-1---configure-the-azure-active-directory-b2c-application). 
+- **Valid issuers** - A comma-delimited list of issuer URLs for the sign-up and sign-in user flow and password reset user flow you created [earlier](#configure-the-azure-active-directory-b2c-application). 
 <br> To get the issuer URLs for the sign-up and sign-in user flow, and password reset user flow, open each flow and then follow the steps under **Authority**, earlier in this section.
-
-For more information about site settings, see [related site settings](azure-ad-b2c.md#related-site-settings).
 
 ## Configure additional settings
 
@@ -101,10 +99,6 @@ For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (posta
 - **Registration Enabled**​ - Turn [open registration](configure-portal-authentication.md#open-registration) for your portal on or off. Setting this toggle to **Off** disables and hides external account registration.
 
 Select **Confirm** to view a summary of your configuration and complete the identity configuration.
-
-For more information about claims mapping, see [Azure AD B2C claims mapping scenarios](azure-ad-b2c.md#claims-mapping).
-
-For more information about configuring Azure AD B2C identity provider, see [Azure AD B2C provider settings for portals](azure-ad-b2c.md#customize-the--ad-b2c-user-interface).
 
 ## Create and configure an Azure AD B2C tenant
 

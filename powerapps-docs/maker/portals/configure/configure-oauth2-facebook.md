@@ -1,6 +1,6 @@
 ---
-title: "Use simplified authentication and identity provider configuration (Preview) | MicrosoftDocs"
-description: "Learn how to use quick, easy, and simplified portal configuration for authentication."
+title: "Configure Facebook as the identity provider for Power Apps portals. | MicrosoftDocs"
+description: "Learn how to configure Facebook as the identity provider for Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
