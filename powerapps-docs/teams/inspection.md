@@ -5,7 +5,7 @@ author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/05/2020
 ms.author: namarwah
 ms.reviewer: tapanm
 ---
