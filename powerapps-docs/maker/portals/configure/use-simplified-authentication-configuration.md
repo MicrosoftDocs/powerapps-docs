@@ -1,6 +1,6 @@
 ---
-title: "Use simplified authentication and identity provider configuration | MicrosoftDocs"
-description: "Learn how to use quick, easy, and simplified portal configuration for authentication."
+title: "Configure authentication and different identity providers in Power Apps portals. | MicrosoftDocs"
+description: "Learn how to configure authentication and different identity providers in Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Simplified authentication and identity provider configuration
+# Configure authentication and identity providers in portals
 
 Setting up authentication is a core customization in any portal. Simplified identity provider configuration in Power Apps portals provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal for supported identity providers.
 
