@@ -112,6 +112,11 @@ When editing an action, you have the following options:
   
 - **Add Stages, Conditions and Actions**  
 
+
+
+<!-- from editor: The following link opens a section titled "Add stages and steps". Do you want to change this to match? -->
+
+
   Like other processes, you specify what actions to perform and when to perform them. More information: [Add stages, conditions and actions](configure-actions.md#BKMK_AddStagesConditionsAndActions)
 
 <a name="BKMK_DefineProcessArgs"></a>   
@@ -153,7 +158,7 @@ Actions are a type of process very similar to real-time workflows. All the steps
 In addition to the steps that can be used for real-time workflows, actions also have the **Assign Value** step.  In actions, these can be used only to set output arguments. You can use the form assistant to set output arguments to specific values or, more likely, to values from the record that the action is running against, records related to that record with a many-to-one relationship, records created in an earlier step, or values that are part of the process itself.  
   
 ## Next steps  
-[Actions](actions.md)  
+[Use actions](actions.md)  
 [Invoke custom actions from a workflow](invoke-custom-actions-workflow-dialog.md)   
 [Monitoring real-time workflows and actions](monitor-manage-processes.md#BKMK_MonitorSyncWorkflows)
  
