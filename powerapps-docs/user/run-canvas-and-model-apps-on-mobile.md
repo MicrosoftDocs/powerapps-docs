@@ -106,12 +106,12 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 3. Scroll down and select **Add to Home Screen**   
 
    > [!div class="mx-imgBorder"]
-   > ![Add to Home Screen.](media/pin_to_home_2.png "Add to Home Screen) 
+   > ![Add to Home Screen.](media/pin_to_home_2.png "Add to Home Screen") 
    
 4. Select **Add**.   
 
    > [!div class="mx-imgBorder"]
-   > ![Select Add.](media/pin_to_home_4.png "Select Add) 
+   > ![Select Add.](media/pin_to_home_3.png "Select Add") 
    
 > [!NOTE]
 > For iOS devices that have multiple browsers installed, use Safari when pinning an app to home. 
