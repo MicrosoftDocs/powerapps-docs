@@ -93,7 +93,8 @@ You can pin both canvas apps and model-driven apps to the home screen of your de
 
 |iOS  |Android |
 |---------|---------|
-| ![Pin an app on iPhone.](media/pa_mobile_pin_to_home_iphone.png "Pin an app on iPhone")   |     ![Pin an app.](media/pin_to_home.png "Pin an app")  |
+| ![Pin an app on iPhone.](media/pa_mobile_pin_to_home_iphone.png "Pin an app on iPhone") >  <div></div> <div></div>[!NOTE]
+> For iOS devices that have multiple browsers installed, use Safari when pinning an app to home.   |     ![Pin an app.](media/pin_to_home.png "Pin an app")  |
 
 
 
