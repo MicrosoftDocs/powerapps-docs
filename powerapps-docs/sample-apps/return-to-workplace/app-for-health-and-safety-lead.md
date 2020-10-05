@@ -59,8 +59,8 @@ The Workplace Care Management app has the following components:
 
    - Closed Employee Cases: Shows all the closed employee cases. An employee case is considered closed when it is made inactive either by the case manager or through the process.
 
-> [!div class="mx-imgBorder"]
-> ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
+      > [!div class="mx-imgBorder"]
+      > ![Employee cases](media/health-safety-employee-case-view-myemployeecases.png "Employee cases")
 
 **Master data**
 
@@ -211,7 +211,7 @@ After you complete the process and select **Finish** in the business process flo
   > ![Deactivate Employee Case](media/health-safety-deactivate.png "Deactivate Employee Case")
 
 
-## Manual Contact tracing
+## Manual contact tracing
 
 To facilitate manual contact tracing and tracking possible exposures, three elements have been added to the employee case form:
 

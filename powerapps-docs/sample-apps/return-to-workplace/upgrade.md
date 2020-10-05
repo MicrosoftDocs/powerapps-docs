@@ -66,8 +66,8 @@ When a new version of the  **Return to the Workplace** solution is available, yo
 
 2. You'll be asked whether you want to overwrite the current version or to install the new version in a new workspace. By default, **Overwrite an existing version** is selected.
 
-> [!div class="mx-imgBorder"]
-> ![Update App overwrite](media/power-bi-update-app-overwrite.png "Update App overwrite")
+   > [!div class="mx-imgBorder"]
+   > ![Update App overwrite](media/power-bi-update-app-overwrite.png "Update App overwrite")
 
 If you already installed the existing version, leave it on **Overwrite an existing version**. Select **Install to a new workspace** to install a fresh version of the workspace and app that you need to reconfigure (connect to data, define navigation and permissions).
   
