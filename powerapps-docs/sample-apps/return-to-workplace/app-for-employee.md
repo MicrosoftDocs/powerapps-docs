@@ -75,8 +75,8 @@ If you're eligible, you'll be given a pass to your selected building for that da
    > [!div class="mx-imgBorder"]
    > ![Select Time](media/employee-select-time.png "Select time")
 
-> [!NOTE]
-> On a facility you can indicate a time window in which people can check in, it is possible to select 30 minutes, 1 hour or none. When the time window is not filled or none, this screen will be skipped.
+   > [!NOTE]
+   > On a facility you can indicate a time window in which people can check in, it is possible to select 30 minutes, 1 hour or none. When the time window is not filled or none, this screen will be skipped.
 
 6. Accept the terms and agreements.
 
@@ -113,12 +113,12 @@ If your responses show you aren't healthy, you'll not receive a pass and provide
 > [!NOTE]
 > Currently negative attestations are also stored in the solution settings. You can turn off this option if you don't want to store them.
 
-## Create guest pass
+## Create a guest pass
 
 After an employee creates a pass, **REGISTER A GUEST** option becomes available. If the employee does not have a valid pass, the **REGISTER A  GUEST** option is disabled. An employee can create multiple guest passes.
 
 > [!NOTE]
-> In the solution settings an administrator can disable the **REQUEST A GUEST** option. This removes the option from the screen as well.
+> In the solution settings an administrator can disable the **REGISTER A GUEST** option. This removes the option from the screen as well.
 
 To create a guest pass:
 
@@ -148,7 +148,7 @@ When a guest pass is created, you can share the pass with the guest through emai
 > ![Share sentiment](media/employee-share-pass-email.png "Share pass guest")
 
 > [!NOTE]
-> In the solution settings you can turn this feature off if you don't want to use this.
+> In the solution settings you can turn off sending email option if you don't want to email guest passes.
 
 ## Share sentiment
 
