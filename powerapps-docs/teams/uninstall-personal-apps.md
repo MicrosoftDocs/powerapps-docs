@@ -6,8 +6,8 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: jshum
+ms.reviewer: tapanm
 ---
 
 # Uninstall the Power Apps personal app
