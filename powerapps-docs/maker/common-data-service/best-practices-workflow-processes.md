@@ -50,7 +50,7 @@ In the **Create Process** dialog, choose **New process from an existing template
 If you apply the same logic in different workflows or in conditional branches, define that logic as a child real-time workflow so you don’t have to replicate that logic manually in each real-time workflow or conditional branch. This helps make your workflows easier to maintain. Instead of examining many workflows that might apply the same logic, you can just update one workflow.  
   
 ## Automatically delete completed real-time workflow jobs
-For background (asynchronous) workflows, we recommend selecting the **Automatically delete completed workflow jobs (to save disk space)** option in the real-time workflow definition. Selecting this box allows the system to delete real-time workflow logs for successful executions to save space. Note that logs from failed real-time workflow executions will always be saved for troubleshooting.  
+For background (asynchronous) workflows, we recommend selecting the **Automatically delete completed workflow jobs (to save disk space)** option in the real-time workflow definition. Selecting this option allows the system to delete real-time workflow logs for successful executions to save space. Note that logs from failed real-time workflow executions will always be saved for troubleshooting.  
 
 ![Workflow job retention](media/workflow-job-retention.png)
 
