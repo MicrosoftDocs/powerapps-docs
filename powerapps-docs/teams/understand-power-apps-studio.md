@@ -1,13 +1,13 @@
 ---
 title: Understand Power Apps Studio | Microsoft Docs
 description: Learn the components inside Power Apps Studio.
-author: tapanm-msft
+author: emcoope-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: emcoope
+ms.reviewer: tapanm
 ---
 
 # Understand Power Apps Studio
