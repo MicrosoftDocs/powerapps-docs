@@ -74,11 +74,11 @@ If your organization uses background workflows or business process flows that ru
    
 6. Select **Next**.
 
-7. Set the frequency that your bulk delete job will run. You can schedule your job to run at set intervals or create a one-time bulk deletion job [using the immediately option](#using-the-immediately-option). In this example, a recurring job is set to run on May 21, 2018, and every 30 days thereafter. 
+7. Set the frequency that your bulk delete job will run. You can schedule your job to run at set intervals or create a one-time bulk deletion job [using the Immediately option](#using-the-immediately-option). In this example, a recurring job is set to run on May 21, 2018, and every 30 days thereafter. 
 
    ![Bulk record deletion options](media/custom-bulk-record-delete-options.png)
 
-### Using the immediately option
+### Using the Immediately option
 
 Notice that you have the option of performing an immediate synchronous bulk delete of the records by selecting the **Immediately** option. This delete is performed with direct SQL Server execution rather than passing each record through the delete event pipeline, which can reduce the impact to system performance. This is a good option if you want to quickly clean up the extra real-time workflow records instead of the bulk delete job waiting in the asynchronous queue for processing. 
 
@@ -87,7 +87,7 @@ The **Immediately** option is enabled when the following conditions are true:
 - The search criteria has the condition system job type equals workflow. 
 - The user creating the bulk delete job has global depth for the delete privilege on the AsyncOperation entity. The system administrator security role has this privilege.  
 
-The synchronous bulk delete will only delete AsyncOperation records in the completed state. A maximum of one million records are processed for each invocation. You will need to execute the job multiple times if your environment has more than one million records to remove.  
+The synchronous bulk delete will only delete AsyncOperation records in the completed state. A maximum of 1 million records are processed for each invocation. You will need to execute the job multiple times if your environment has more than 1 million records to remove.  
   
 ## Next steps   
 [Best practices for real-time workflow processes](best-practices-workflow-processes.md) <br />
