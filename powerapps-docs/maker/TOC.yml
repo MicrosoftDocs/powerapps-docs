@@ -1401,6 +1401,8 @@
                       href: ./portals/configure/configure-saml2-settings-azure-ad.md
                     - name: Configure ADFS with SAML 2.0
                       href: ./portals/configure/configure-saml2-settings.md
+                   - name: FAQs when using SAML 2.0
+                     href: ./portals/configure/configure-saml2-faqs.md
             - name: WS-Federation
               items:
                     - name: Configure
