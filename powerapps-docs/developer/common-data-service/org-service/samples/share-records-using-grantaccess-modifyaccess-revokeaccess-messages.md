@@ -32,7 +32,7 @@ This sample shows how to share a record using the following messages:
 
 You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/GrantModifyRevokeAccess).
 
-This sample requires additional users that are not in your system. Create the required users manually in **Office 365** in order to run the sample without any errors. For this sample create 2 user profiles **as is** shown below. Replace `yourorg` with the organization name.
+This sample requires additional users that are not in your system. Create the required users manually in **Microsoft 365** in order to run the sample without any errors. For this sample create 2 user profiles **as is** shown below. Replace `yourorg` with the organization name.
 
 **First Name**: Dan<br/>
 **Last Name**: Wilson<br/>
@@ -60,7 +60,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 
 1. Checks for the current version of the org.
 2. Creates a unique identifier for preventing name conflicts.
-3. Retrieves the user created manually in **Office 365** for this sample.
+3. Retrieves the user created manually in **Microsoft 365** for this sample.
 4. Retrieves the root business unit for creating the team for the sample.
 5. The `WhoAMIRequest` gets the current user information.
 6. Creates the team and adds the users to the team. 
