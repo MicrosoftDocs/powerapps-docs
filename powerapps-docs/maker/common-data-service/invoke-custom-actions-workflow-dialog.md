@@ -33,12 +33,12 @@ search.audienceType:
 
 Workflows have numerous capabilities supporting business scenarios. Calling basic data operation actions for a record, such as create, update, and delete, from within a workflow solves quite a few business scenarios. However, if you couple the capabilities of the workflows with the power of the custom actions invoked directly from within a workflow, you add a whole new range of business scenarios to your application without needing to write code.  
   
-Let’s look at the scenario in which a custom action is invoked from a workflow. We’ll invoke a custom action to request the manager’s approval when a discount for a particular opportunity exceeds 20%.  
+Let’s look at the scenario in which a custom action is invoked from a workflow. We’ll invoke a custom action to request the manager’s approval when a discount for a particular opportunity exceeds 20 percent.  
   
 <a name="action"></a>   
 ## Example: Create a custom action using the opportunity entity
   
-1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer) select **Processes**.  
+1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer), select **Processes**.  
   
 2.  On the Nav bar, choose **New**. Give the process a name and choose the **Action** category.  
   
@@ -46,7 +46,7 @@ To request an approval for the discount, we’re using a custom action called **
   
 ![Add a step &#45; send email](media/enable-custom-action-approval-proces-sadd-email.png "Add a step - send email")  
   
-To configure the email message, choose **Set Properties**. When the form opens, use the **Form Assistant** to add special notes and other information to the email, as highlighted on the screenshot. To add the special notes, place the cursor where you want them to appear in the message, and then, in the **Form Assistant**, under **Look for**, choose **Arguments** in the first drop-down list and choose **SpecialNotes** in the second drop-down list, and then choose **OK**.  
+To configure the email message, choose **Set Properties**. When the form opens, use the **Form Assistant** to add special notes and other information to the email, as highlighted on the screenshot. To add the special notes, place the cursor where you want the notes to appear in the message, and then, in the **Form Assistant**, under **Look for**, choose **Arguments** in the first drop-down list and choose **SpecialNotes** in the second drop-down list, and then choose **OK**.  
   
 ![Set up email](media/enable-custom-action-approval-process-setup-email.png "Set up email")  
   
@@ -57,11 +57,11 @@ Before you can invoke the action from a workflow, you have to activate it. After
 <a name="workflow"></a>   
 ## Invoke a custom action from a workflow  
   
-1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer) select **Processes**.   
+1. In [solution explorer](/powerapps/maker/model-driven-apps/advanced-navigation#solution-explorer), select **Processes**.   
   
 2.  On the Nav bar, choose **New**. Give the process a name and choose the **Workflow** category.  
   
-We created a workflow that invokes the **Approval Process** custom action whenever the manager’s approval for a discount over 20% for an opportunity is required.  
+We created a workflow that invokes the **Approval Process** custom action whenever the manager’s approval for a discount of more than 20 percent for an opportunity is required.  
   
 ![Set action properties from workflow](media/enable-custom-action-from-workflow.png "Set action properties from workflow")  
   
