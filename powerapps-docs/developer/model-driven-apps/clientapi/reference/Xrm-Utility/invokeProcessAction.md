@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[./includes/invokeProcessAction-description.md](./includes/invokeProcessAction-description.md)] 
 
-For more information about actions, see [Use actions](/flow/actions)
+For more information about actions, see [Use actions](https://docs.microsoft.com/powerapps/maker/common-data-service/actions)
 
 ## Syntax
 
@@ -41,7 +41,7 @@ On success, returns Web API result along with any action output.
 
 ### Related topics
 
-[Use actions](/flow/actions)
+[Use actions](https://docs.microsoft.com/powerapps/maker/common-data-service/actions)
 
 [Xrm.Utility](../xrm-utility.md)
 

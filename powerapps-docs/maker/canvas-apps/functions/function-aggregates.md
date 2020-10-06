@@ -58,8 +58,13 @@ Let's say that you had a [data source](../working-with-data-sources.md) named **
 
 The label would show total sales by multiplying the values in those columns for each record and then adding the results from all records together:<br>![Calculate total sales from units sold and cost per unit](./media/function-aggregates/total-sales.png)
 
-As a different example, let's say that you had sliders that were named **Slider1**, **Slider2**, and **Slider3** and a label with its **[Text](../controls/properties-core.md)** property set to this formula:<br>
-**Sum(Slider1.Value, Slider2.Value, Slider3.Value)**
+As a different example, let's say that you had sliders that were named **Slider1**, **Slider2**, and **Slider3** and a label with its **[Text](../controls/properties-core.md)** property set to this formulas:<br>
+**Sum(Slider1.Value, Slider2.Value, Slider3.Value)**: The label would show the sum of all values to which the sliders were set.<br>
+**Average(Slider1.Value, Slider2.Value, Slider3.Value)**: The label would show the average of all values to which the sliders were set.<br>
+**Max(Slider1.Value, Slider2.Value, Slider3.Value)**: The label would show the maximum of all values to which the sliders were set.<br>
+**Min(Slider1.Value, Slider2.Value, Slider3.Value)**: The label would show the minimum of all values to which the sliders were set.<br>
+**StdevP(Slider1.Value, Slider2.Value, Slider3.Value)**: The label would show the standard deviation of all values to which the sliders were set.<br>
+**VarP(Slider1.Value, Slider2.Value, Slider3.Value)**: The label would show the variance of all values to which the sliders were set.
 
-The label would show the sum of all values to which the sliders were set.
+
 
