@@ -1390,7 +1390,9 @@
                    - name: Configure
                      href: ./portals/configure/configure-openid-provider.md
                    - name: Configure OpenID for Azure AD manually
-                     href: ./portals/configure/configure-openid-settings.md                   
+                     href: ./portals/configure/configure-openid-settings.md
+                   - name: FAQs when using OpenID Connect
+                     href: ./portals/configure/configure-openid-faqs.md                                        
             - name: SAML 2.0
               items:
                     - name: Configure
