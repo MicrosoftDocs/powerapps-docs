@@ -14,9 +14,9 @@ ms.reviewer: tapanm
 
 In this article, learn about the common scenarios, or the FAQs when using an authentication provider with Power Apps portals that uses OpenID Connect specifications.
 
-## Do I require OpenId Connect Auto-Discovery Document&mdash;commonly known as `/.well-known/openid-configuration`&mdash;to integrate with portals?
+## Do I require OpenId Connect Auto-Discovery Document to integrate with portals?
 
-Yes. Auto-Discovery Document is required in order to integrate with portals. Information present in this document is used by portals to create authorization requests, and validate the authentication tokens.
+Yes. Auto-Discovery Document (commonly known as `/.well-known/openid-configuration`) is required in order to integrate with portals. Information present in this document is used by portals to create authorization requests, and validate the authentication tokens.
 
 If your identity provider (IDP) doesn’t provide this document, you can create it manually, and host it at any public location (including your portal).
 
