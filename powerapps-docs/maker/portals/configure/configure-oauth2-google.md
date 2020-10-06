@@ -65,4 +65,4 @@ After you've created the app in Google, configure the site settings for the prov
 
 ## (Optional) Step 3 - Additional settings
 
-To configure **Additional settings** for Microsoft provider, see [configure additional settings for OAuth 2 providers](configure-oauth2-settings.md).
+To configure **Additional settings** for Google provider, see [configure additional settings for OAuth 2 providers](configure-oauth2-settings.md).
