@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/20/2020
+ms.date: 10/2/2020
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -122,6 +122,8 @@ When you choose an entity name from the **Related** drop-down list, a new tab na
 ## Record set navigation 
 
 Navigate through multiple records by using preset views and queries. The record-focused navigation improves productivity by allowing users to jump from record to record in the list and easily navigate back without losing their working list.
+
+The number of records that you see in the record set navigation pane is based on the number of rows that your system administrator has defined for the subgrid.
 
 **Current**
 

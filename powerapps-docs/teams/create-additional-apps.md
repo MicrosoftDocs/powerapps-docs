@@ -1,13 +1,13 @@
 ---
 title: Create additional apps using Power Apps app from Teams | Microsoft Docs
 description: Learn about the available different methods to create additional apps using Power Apps app from Teams.
-author: tapanm-msft
+author: chmoncay
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: chmoncay
+ms.reviewer: tapanm
 ---
 
 # Create additional apps from Microsoft Teams
