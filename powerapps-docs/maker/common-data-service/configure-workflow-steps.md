@@ -83,6 +83,23 @@ The following screenshot contains an example of the workflow process definition 
   
 <a name="BKMK_SynchronousWorkflows"></a>   
 
+### Initiating real-time workflows before or after status changes  
+
+ When you configure **Options for Automatic Processes** for real-time workflows, the **Start When** options for the status changes event let you select **After** or **Before** for when status changes. The default option is **After**.  
+  
+ When you select **Before** you are saying that you want the logic in the real-time workflow to be applied before data changing the status is saved. This provides you with the ability to check the values before other logic has been applied after the operation and prevent further logic from being performed. For example, you may have additional logic in a plug-in or custom real-time workflow action which could initiate actions on another system. By stopping further processing you can avoid cases where external systems are affected. Applying real-time workflows before this event also means that other real-time workflow or plug-in actions that may have saved data don’t need to be “rolled back” when the operation is canceled.  
+
+
+|Action  |Start when  |Explanation  |
+|---------|---------|---------|
+|Record is created   | After    | Only **After** is available. The record won't have a unique identifier until after the internal MainOperation stage so can’t occur before the record is created.      |
+|Record status changes   |  Before <br />  After     |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.       |
+|Record is assigned   |  Before <br />  After     |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.       |
+|Record fields change     |  Before <br />  After   |  Corresponds to an update operation that provides the ability to apply real-time workflow logic either after or before the status changes. **Before** corresponds to the preoperation stage. **After** corresponds to the postoperation stage.        |
+|Record is deleted     |  Before       |  Only **Before** is available. Record deletion corresponds to the PreOperation stage. After the MainOperation occurs, the record is deleted and there is no further status change that can occur.       |
+
+For more information about preoperation, mainoperation, and postoperation stages, see [Event execution pipeline](/powerapps/developer/common-data-service/event-framework#event-execution-pipeline).
+
 ## Using real-time workflows  
 
 You can configure real-time workflows but you should use them with care. Background workflows are generally recommended because they allow the system to apply them when resources on the server are available. This helps smooth out the work the server has to do and helps maintain the best performance for everyone using the system. The drawback is that actions defined by background workflows are not immediate. You can’t predict when they will be applied, but generally it will take a few minutes. For most automation of business processes, this is fine because people using the system don’t need to be consciously aware that the process is running.  
@@ -95,12 +112,14 @@ You can change a real-time workflow into a background workflow by choosing **Con
   
 You can change a background workflow into a real-time workflow by choosing **Convert to a real-time workflow** on the toolbar. If the background workflow uses a wait condition, it will become invalid and you won’t be able to activate it until you remove the wait condition.  
   
+
 ### Initiating real-time workflows before or after status changes  
 
 When you configure **Options for Automatic Processes** for real-time workflows, the **Start When** options for the status changes event let you select **After** or **Before** for when status changes. The default option is **After**.  
   
 When you select **Before**, you are saying that you want the logic in the real-time workflow to be applied before data changing the status is saved. This provides you with the ability to check the values before other logic has been applied after the operation and prevents further logic from being performed. For example, you might have additional logic in a plug-in or custom real-time workflow action that could initiate actions on another system. By stopping further processing you can avoid cases where external systems are affected. Applying real-time workflows before this event also means that other real-time workflow or plug-in actions that might have saved data don’t need to be “rolled back” when the operation is canceled.  
   
+
 ### Using the Stop Workflow action with real-time workflows  
 
 When you apply a **Stop Workflow** action in a real-time workflow, you have the option to specify a status condition that can be either **Succeeded** or **Canceled**. When you set the status to canceled, you prevent the operation. An error message containing the text from the stop action status message will be displayed to the user with the heading **Business Process Error**.  
