@@ -12,7 +12,25 @@ ms.reviewer: tapanm
 
 # Configure Open ID Connect provider settings for portals
 
-[OpenID Connect](https://openid.net/connect/) external identity providers are services that conform to the OpenID Connect [specifications](https://openid.net/developers/specs/). Integrating a provider involves locating the authority (or issuer) URL associated with the provider. A configuration URL can be determined from the authority which supplies metadata required during the authentication workflow. The provider settings are based on the properties of the [OpenIdConnectAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.aspx) class.
+[OpenID Connect](https://openid.net/connect/) external identity providers are services that conform to the [Open ID Connect specifications](https://openid.net/specs/openid-connect-core-1_0.html). OpenID Connect introduces the concept of an "ID token", which is a security token that allows the client to verify the identity of the user. The ID token also gets basic profile information about the user; commonly known as "claims".
+
+This article explains how an identity provider&mdash;that supports OpenId Connect&mdash;can be integrated with Power Apps portals.
+
+## Supported and unsupported authentication flows in portals
+
+- Implicit Grant Flow
+    - This is the default authentication method used by portals.
+- Authorization Code Flow
+    - Portals uses *client_secret_post* method to communicate with token endpoint of identity server.
+    - *private_key_jwt* method to authenticate with token endpoint is not supported.
+- Hybrid Flow (restricted support)
+    - Portals requires *id_token* to be present in the response. Hence, *response_type* value as *code token* is not supported.
+    - Hybrid Flow in portals follows the same flow as Implicit Grant Flow, and uses *id_token* to directly sign in the users.
+- Portals doesn’t support PKCE-based techniques (Proof Key for Code Exchange) to authenticate users.
+
+## Examples
+
+Integrating a provider involves locating the authority (or issuer) URL associated with the provider. A configuration URL can be determined from the authority which supplies metadata required during the authentication workflow. The provider settings are based on the properties of the [OpenIdConnectAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.aspx) class.
 
 Examples of authority URLs are:
 
@@ -21,11 +39,11 @@ Examples of authority URLs are:
 
 Each OpenID Connect provider also involves registering an application (similar to that of an OAuth 2.0 provider) and obtaining a Client Id. The authority URL and the generated application Client Id are the settings required to enable external authentication between the portal and the identity provider.
 
-> [!NOTE]
-> Examples of the OpenID Connect providers for portals:
-> - [Azure AD B2C](configure-azure-ad-b2c-provider.md)
-> - [Azure AD](configure-openid-settings.md)
-> - [Azure AD with multi-tenancy](configure-openid-settings.md#enable-authentication-using-a-multi-tenant-azure-active-directory-application)
+Examples of the OpenID Connect providers for portals are:
+
+- [Azure AD B2C](configure-azure-ad-b2c-provider.md)
+- [Azure AD](configure-openid-settings.md)
+- [Azure AD with multi-tenancy](configure-openid-settings.md#enable-authentication-using-a-multi-tenant-azure-active-directory-application)
 
 ## Configure OpenID Connect provider
 
@@ -56,11 +74,11 @@ To configure OpenID Connect provider:
     | Authority | The authority (or issuer) URL associated with the identity provider. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/` |
     | Client ID | The ID of the application created with the identity provider and to be used with the portal. |
     | Redirect URL | The location where the identity provider will send the authentication response. <br> Example: `https://portal.contoso.com/signin-saml2` |
-    | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. Example: https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` |
+    | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` |
     | Scope | A space-separated list of permissions to request. Default value: ‘openid’.  <br> Example: `openid` |
     | Response type | The value for the OpenID Connect 'response_type' parameter. |
     | Client secret | The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". This is required if the selected response type is “code”. |
-    | Response mode | The value for the OpenID Connect “response_mode” parameter. The vaiue should be  “query”  if the selected response type is “code”. Default value: ‘form_post’. |
+    | Response mode | The value for the OpenID Connect “response_mode” parameter. The value should be  “query”  if the selected response type is “code”. Default value: ‘form_post’. |
 
 1. Select **Next**.
 

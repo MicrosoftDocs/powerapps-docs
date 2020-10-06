@@ -22,4 +22,7 @@ To learn about individual OAuth 2.0 providers, select the name of the provider t
 - [Google](configure-oauth2-google.md)
 - [Twitter](configure-oauth2-twitter.md)
 
+> [!NOTE]
+> Custom OAuth providers aren't supported. For custom OAuth providers, use [OpenID Connect](configure-openid-provider.md) instead.
+
 For general settings applicable to all OAuth 2.0 providers, go to [Additional OAuth 2.0 provider settings](configure-oauth2-settings.md).
