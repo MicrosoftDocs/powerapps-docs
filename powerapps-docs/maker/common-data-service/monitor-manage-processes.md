@@ -45,7 +45,7 @@ When you view a list of real-time workflow processes, any individual process can
 |-----------|-------------------|  
 |Ready|Waiting for Resources|  
 |Suspended|Waiting|  
-|Locked|In Progress<br /><br /> Pausing<br /><br /> Canceling|  
+|Locked|In Progress<br /> Pausing<br /> Canceling|  
 |Completed|Succeeded<br /><br /> Failed<br /><br /> Canceled|  
 
 ## Deleting process log records
