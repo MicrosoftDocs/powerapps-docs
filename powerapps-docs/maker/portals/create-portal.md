@@ -5,7 +5,7 @@ author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/01/2020
 ms.author: nenandw
 ms.reviewer: tapanm
 ---
@@ -76,7 +76,6 @@ To edit the portal in Power Apps portals Studio, see [Edit a portal](manage-exis
 > - If you have provisioned a portal using the older portal add-on, you can still customize and manage it from [make.powerapps.com](https://make.powerapps.com).
 > - Provisioning portals from [make.powerapps.com](https://make.powerapps.com) does not consume the older portal add-ons. Also, these portals are not listed under the **Applications** tab on the **Dynamics 365 Administration Center** page.
 > - A Common Data Service starter portal cannot be created from the **Dynamics 365 Administration Center** page.
-> - Power Apps portals is not available in the France region.
 
 ### Create additional portals in an environment
 
