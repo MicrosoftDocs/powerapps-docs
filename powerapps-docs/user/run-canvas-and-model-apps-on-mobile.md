@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 09/16/2020
+ms.date: 10/15/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -87,17 +87,37 @@ If you filtered your apps, the filtered list will be searched.
 Select the refresh icon ![Refresh icon](media/refresh_icon.png) to refresh the list of apps. This will refresh the lists of both the canvas apps and model-driven apps. 
 
 
-## Use Safari to pin to home (iOS 13 or earlier)
+## Pin to home
 
-You can pin both canvas apps and model-driven apps to the home screen of your device for quick access. Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
+You can pin both canvas apps and model-driven apps to the home screen of your device for quick access.
 
+### Use Safari to pin to home (iOS 13 or earlier)
 
-![Pin an app.](media/pin_to_home.png "Pin an app")
+1. Select the ellipsis (...) on the app tile, select **Pin to Home**;
 
+   > [!div class="mx-imgBorder"]
+   > ![Select Pin to Home.](media/pa_mobile_pin_to_home_iphone.png "Select Pin to Home") 
+
+2. Select ![Pin an app on iPhone button.](media/add-to-home-button.png "Pin an app on iPhone button").
+ 
+   > [!div class="mx-imgBorder"]
+   > ![Pin an app on iPhone.](media/pin_to_home_1.png "Pin an app on iPhone") 
+   
+3. Scroll down and select **Add to Home Screen**   
+
+   > [!div class="mx-imgBorder"]
+   > ![Add to Home Screen.](media/pin_to_home_2.png "Add to Home Screen") 
+   
+4. Select **Add**.   
+
+   > [!div class="mx-imgBorder"]
+   > ![Select Add to add to Home screen.](media/pin_to_home_3.png "Select Add to add to Home screen") 
+   
 > [!NOTE]
 > For iOS devices that have multiple browsers installed, use Safari when pinning an app to home. 
 
-## Use Siri shortcuts to pin to home (iOS 14 or later) 
+
+### Use Siri shortcuts to pin to home (iOS 14 or later) 
 
 The Power Apps mobile app is now integrated with Siri shortcuts, which gives you the ability to pin to home, launch apps with Siri, and create new workflows. For more information on how shortcuts work on iOS, see [Shortcuts User Guide](https://support.apple.com/guide/shortcuts/welcome/ios). This feature requires Power Apps mobile version 3.20092.x or later.
 
@@ -141,6 +161,11 @@ Users on iOS 14 or later can use Siri Shortcuts to pin an app to the home screen
 
 You can customize the shortcut icon but it is limited to the customization options in iOS. For more information, go to [Modify shortcut icons](https://support.apple.com/guide/shortcuts/modify-shortcut-icons-apd5ad5a2128/ios).
 
+### Pin to home on Android 
+
+Select the ellipsis (...) on the app tile, select **Pin to Home**, and then follow the instructions that appear.
+
+![Pin an app.](media/pin_to_home.png "Pin an app")  
 
 ## See non-production apps
 
