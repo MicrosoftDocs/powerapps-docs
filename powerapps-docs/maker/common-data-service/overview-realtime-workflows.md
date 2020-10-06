@@ -34,9 +34,9 @@ See other topics here in the Power Apps documentation to learn more about real-t
 
 ## Learn more
 
-- [Configure real-time workflow stages and steps](configure-workflow-steps.md).
+- [Configure real-time workflow stages and steps](configure-workflow-steps.md)
 - [Monitor and manage real-time workflow processes](monitor-manage-processes.md)
-- [Best practices for real-time workflow processes](best-practices-workflow-processes.md).
+- [Best practices for real-time workflow processes](best-practices-workflow-processes.md)
 - [Use actions](actions.md)
 
 
