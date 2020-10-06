@@ -45,12 +45,12 @@ When you view a list of real-time workflow processes, any individual process can
 |-----------|-------------------|  
 |Ready|Waiting for Resources|  
 |Suspended|Waiting|  
-|Locked|In Progress<br /> Pausing<br /> Canceling|  
+|Locked|In Progress<br /><br /> Pausing<br /><br /> Canceling|  
 |Completed|Succeeded<br /><br /> Failed<br /><br /> Canceled|  
 
 ## Deleting process log records
 
-If your organization uses background workflows or business process flows that run frequently, the amount of process log records can become large enough to cause performance issues as well as consume significant amounts of storage. To delete process log records not removed sufficiently by one of the standard bulk record deletion jobs you can use the bulk delete system jobs feature to create a custom bulk record deletion job.
+If your organization uses background workflows or business process flows that run frequently, the amount of process log records can become large enough to cause performance issues as well as consume significant amounts of storage. To delete process log records not removed sufficiently by one of the standard bulk record deletion jobs, you can use the bulk delete system jobs feature to create a custom bulk record deletion job.
 
 1. Go to **Settings** > **Data Management** > **Bulk Record Deletion**.
 
@@ -60,22 +60,23 @@ If your organization uses background workflows or business process flows that ru
 
 4. In the **Look for** list, select **System Jobs**.
 
-5. The following conditions are used to create a bulk record deletion job to delete process log records. 
+5. The following conditions are used to create a bulk record deletion job to delete process log records: 
 
-   - **System Job Type Equals Workflow**. This targets real-time workflow records. 
+   - **System Job Type Equals Workflow**: This targets real-time workflow records. 
    
-   - **Status Equals Completed**. Only completed workflows are valid to run the job against.
+   - **Status Equals Completed**: Only completed workflows are valid to run the job against.
    
-   - **Status Reason Equals Succeeded**. Delete successful, canceled, and failed jobs.
+   - **Status Reason Equals Succeeded**: Delete successful, canceled, and failed jobs.
    
-   - **Completed On Older than X Days 30**. Use the Completed On field to only delete real-time workflow process log records that are older than 30 days.
+   - **Completed On Older than X Days 30**: Use the Completed On field to only delete real-time workflow process log records that are older than 30 days.
    
    ![View of a page for custom bulk record deletions](media/custom-bulk-record-deletion.png)
    
-6. Click **Next**.
+6. Select **Next**.
 
-7. Set the frequency that your bulk delete job will run. You can schedule your job to run at set intervals or create a one-time bulk deletion job [Using the immediately option](#using-the-immediately-option). In this example, a recurring job is set to run on May 21, 2018 and every 30 days thereafter. 
-![Bulk record deletion options](media/custom-bulk-record-delete-options.png)
+7. Set the frequency that your bulk delete job will run. You can schedule your job to run at set intervals or create a one-time bulk deletion job [using the immediately option](#using-the-immediately-option). In this example, a recurring job is set to run on May 21, 2018, and every 30 days thereafter. 
+
+   ![Bulk record deletion options](media/custom-bulk-record-delete-options.png)
 
 ### Using the immediately option
 
