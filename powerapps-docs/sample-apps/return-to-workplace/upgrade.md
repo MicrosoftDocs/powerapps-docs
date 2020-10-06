@@ -10,7 +10,6 @@ ms.author: garybird
 ms.reviewer: kvivek
 ---
 # Upgrade the Return to the Workplace solution
-<!--I'm not sure what the reasoning is for using "upgrade" versus "update" in this article. It does seem that "upgrade" is correct when there's a new version of software, though the UI says "update."-->
 
 This article provides step-by-step instructions for how to upgrade the existing Return to the Workplace solution to the latest version. If you're deploying the solution for the first time, see [Deploy the Return to the Workplace solution](deploy.md). Follow upgrade the solution steps and after that follow the upgrade path which is applicable for you.
 
@@ -77,7 +76,7 @@ If you already installed the existing version, leave it on **Overwrite an existi
     - [Step 5: Embed the Power BI report in the model-driven app](/powerapps/sample-apps/return-to-workplace/deploy#step-5-embed-the-power-bi-report-in-the-model-driven-app)
 
 
-## Upgrade from V1.0 to V1.1
+## Upgrade from version 1.0 to 1.1
 
 ### Step 1: Install the Workplace Care Management dashboard
 
@@ -103,7 +102,7 @@ Capacity is defined for an area, but it's also bound by the phase your facility 
 In the new version of the solution, employee cases become inactive when they're completed. For any employee cases that are completed, you can move them to the inactive state by completing them. More information: [Use the Workplace Care Management app](app-for-health-and-safety-lead.md#manage-employee-cases)
 
 
-## Upgrade from V1.1 tot V1.2
+## Upgrade from version 1.1 to 1.2
 
 ### Step 1: Configure the solution settings
 
