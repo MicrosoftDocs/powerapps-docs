@@ -103,28 +103,38 @@ To configure OpenID Connect provider:
 
     | Name | Description
     | - | - |
+    | Issuer filter | A wildcard-based filter that matches on all issuers across all tenants. <br> Example: `https://sts.windows.net/*/` |
     | Validate audience | If enabled, the audience will be validated during the token validation.  |
     | Valid audiences | Comma-separated list of audience URLs.  |
     | Validate issuers | If enabled, the issuer will be validated during token validation. |
     | Valid issuers | Comma-separated list of Issuer URLs. |
+    | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` |
+    | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` |
     | Nonce lifetime | Lifetime of nonce, in minutes. Default: 10 minutes. |
     | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this will override the Application Cookie Ecpire Timespan value. |
+    | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to *On*, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 
 1. Select **Confirm**.
 
-## Claims to support sign-in scenarios
+## Configure additional claims
 
-The data in Common Data Service and in the identity provider are not directly linked, so the data might get out of sync. The portal should have a list of claims that you want to accept from any sign-in event to update in Common Data Service. These claims can be a subset of, or equal to, the claims coming in from a sign-in scenario. This must be configured separately from sign-in claims mapping, because you might not want to overwrite some key portal attributes. The following site setting is required:
+Additional claims&mdash;such as "first name" and "last name"&mdash;can be filled in by adding the value profile to the scope.
 
-**Name**: Authentication/OpenIdConnect/[Federation-Name]/LoginClaimsMapping
+To use additional claims:
 
-**Description**: List of logical name/claim pairs to be used to map claim values to attributes in the contact record created after sign-in.
+1. Enable [optional claims in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
 
-**Format**: attribute1=claim1, attribute2=claim2, attribute3=claim3
+1. Set the **Scope** additional site setting to include the additional claims.
 
-Example: <br> `firstname=<https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle>` 
+    Example: `openid email firstname lastname`
 
-The claim name is the CLAIM TYPE field listed next to the attribute in the sign-in policies Application claims.
+1. Set the **Registration claims mapping** additional site setting.
+
+    Example: `firstname=given_name,lastname=family_name`
+
+1. Set the **Login claims mapping** additional site setting.
+
+    Example: `firstname=given_name,lastname=family_name`
 
 ### See also
 [Configure portal authentication](configure-portal-authentication.md)  
