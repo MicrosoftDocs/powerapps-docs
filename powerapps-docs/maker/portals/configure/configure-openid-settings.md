@@ -20,7 +20,7 @@ In this article, you'll learn about configuring OpenID Connect provider for port
 Configuration of Azure AD as the OpenID Connect provider involves the following stages:
 
 1. [Add OpenID Connect provider](#add-openid-connect-provider-for-azure-ad)
-1. [Configure app registrations on Azure portal](#configure-app-registration-on-azure-portal)
+1. [Configure app registration on Azure portal](#configure-app-registration-on-azure-portal)
 1. [Configure site settings](#configure-site-settings)
 
 The next sections explain each stage in detail.
@@ -37,24 +37,50 @@ The next sections explain each stage in detail.
 
     ![Provider name](media/authentication/select-other-openid.png "Provider name")
 
-1. Select **Next**.
+1. Select **Next** to [configure app registration on Azure portal](#configure-app-registration-on-azure-portal).
 
 ## Configure app registration on Azure portal
 
-Create the application and configure the settings with your identity provider.
+In this step, create the application and configure the settings with your identity provider.
 
 ![Create application](media/authentication/step-1-openid.png "Create application")
 
 > [!NOTE]
 > The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
 
+1. [Register an application](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app#register-an-application).
+
+1. [Add portal URL as the **Redirect URI**](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app#add-a-redirect-uri). <br> Example: `https://contoso-portal.powerappsportals.com/signin-openid_1`
+
+    > [!NOTE]
+    > If you're using the default portal URL, copy and paste the **Reply URL** from the step 1 as shown in **Create and configure OpenID Connect provider settings**. However, ensure that the value entered here for your application is exactly the same as the value available for the **Redirect URL** in your portal settings while configuring OpenID Connect provider. <br> For example, if the **Reply URL** is `https://contoso-portal.powerappsportals.com/signin-openid_1`, use it as is. Using `https://contoso-portal.powerappsportals.com/signin-openid` in this case is incorrect.
+
+After your application is registered in the Azure portal with the correct **Redirect URL**, continue to [configure the site settings](#configure-site-settings). Don't close the Azure portal since the registered app details are required to fill in the site settings.
+
 ## Configure site settings
 
-Enter the following site settings for portal configuration.
+In this step, enter the site settings for the portal configuration.
 
 ![Configure OpenID site settings](media/authentication/openid-site-settings-1.png "ConfigureOpenID site settings")
 
+> [!TIP]
+> If you closed the browser window after configuring the app registration in the earlier step, sign in to the Azure portal again and go to the app that you registered for the following steps.
 
+1. **Authority** - To configure the authority URL, use the following format:
+
+    `https://login.microsoftonline.com/<Directory (tenant) ID>/`
+
+    For example, if the *Directory (tenant) ID* in the Azure portal is `22a47203-270e-4476-a9fd-189d82e4b467`, the authority URL is `https://login.microsoftonline.com/22a47203-270e-4476-a9fd-189d82e4b467/`
+
+1. **Client ID** - Copy the **Application (client) ID** from the Azure portal as the client ID.
+
+    ![Authority and Client ID](media/authentication/authority-client-id.png "Authority and Client ID")
+
+1. **Metadata address** - To configure the metadata address:
+
+    1. Select **Overview** in the Azure portal.
+    1. Select **Endpoints**.
+        ![Endpoints](media/authentication/endpoints.png "Endpoints")
 
 1. Under the **Applications** menu of the directory, select **Add**.
 2. Choose **Add an application my organization is developing**.
