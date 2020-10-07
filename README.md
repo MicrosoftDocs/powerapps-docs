@@ -1,6 +1,6 @@
-# Microsoft PowerApps Documentation
+# Microsoft Power Apps Documentation
 
-This is the GitHub repository for the technical product documentation for **PowerApps**. This documentation is published to  [https://docs.microsoft.com/powerapps](https://docs.microsoft.com/powerapps).
+This is the GitHub repository for the technical product documentation for **Power Apps**. This documentation is published to  [https://docs.microsoft.com/powerapps](https://docs.microsoft.com/powerapps).
 
 ## How to contribute
 
