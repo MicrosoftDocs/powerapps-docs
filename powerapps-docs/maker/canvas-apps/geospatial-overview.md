@@ -62,7 +62,11 @@ The geospatial features require additional terms of use that must be reviewed an
     ![Screenshot of the terms of service](./media/geospatial/ppac-tos.png "Screenshot of the terms of service")
 
     >[!IMPORTANT]
-    >You must read and agree to the terms of service before you can use geospatial features. The following are the terms of service:  
+    >You must read and agree to the terms of service before you can use geospatial features. 
+    >
+    >Requests sent between TomTom(tm) and the Azure Maps service are not exposed over the public Internet.
+    >
+    >The following are the terms of service:  
     >  
     >These features use mapping capabilities that are powered by a third party, TomTom(tm), and operate outside your tenant's geographic region, compliance boundary, or national cloud instance.  
     >
