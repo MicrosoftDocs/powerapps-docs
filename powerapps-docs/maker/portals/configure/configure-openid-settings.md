@@ -12,12 +12,48 @@ ms.reviewer: tapanm
 
 # OpenID settings for [!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]
 
-In this article, you'll learn about configuring OpenID Connect provider for portals with Azure Active Directory, and multi-tenant Azure AD. 
+In this article, you'll learn about configuring OpenID Connect provider for portals with Azure Active Directory, and multi-tenant Azure AD.
 
 > [!NOTE]
-> You can use different identity providers conforming to the standards of OpenID Connect specifications. For example, you can use Azure AD B2C, Azure AD, or multi-tenancy in Azure AD as the OpenID Connect identity providers for portals.
+> Portals isn't limited to only Azure AD, multi-tenant Azure AD, or Azure AD B2C as the OpenID Connect providers. You can use any other provider that confirms to the OpenID Connect specifications with portals.
 
-To get started, sign into the Azure portal and create or select an existing directory. When a directory is available follow the instructions to [add an application](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) to the directory.  
+To configure Azure AD as the OpenID Connect provider:
+
+1. Select [Add provider](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) for your portal.
+
+1. Select **Login provider** as **Other**.
+
+1. Select **Protocol** as **OpenID Connect**.
+
+1. Enter a provider name.
+
+    ![Provider name](media/authentication/select-other-openid.png "Provider name")
+
+1. Select **Next**.
+
+1. Create the application and configure the settings with your identity provider.
+
+    ![Create application](media/authentication/step-1-openid.png "Create application")
+
+    > [!NOTE]
+    > The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
+
+1. Enter the following site settings for portal configuration.
+
+    ![Configure OpenID site settings](media/authentication/openid-site-settings-1.png "ConfigureOpenID site settings")
+
+1. Select **Next**.
+
+1. Configure logout settings.
+
+    ![Logout settings](media/authentication/openid-logout-settings.png "Logout settings")
+
+1. (Optional) Configure additional settings.
+
+    ![Additional settings](media/authentication/openid-additional-settings.png "Additional settings")
+
+1. Select **Confirm**.
+
 
 1. Under the **Applications** menu of the directory, select **Add**.
 2. Choose **Add an application my organization is developing**.

@@ -65,6 +65,11 @@ To configure OpenID Connect provider:
 
 1. Create the application and configure the settings with your identity provider.
 
+    ![Create application](media/authentication/step-1-openid.png "Create application")
+
+    > [!NOTE]
+    > The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
+
 1. Enter the following site settings for portal configuration.
 
     ![Configure OpenID site settings](media/authentication/openid-site-settings-1.png "ConfigureOpenID site settings")
@@ -117,7 +122,7 @@ The data in Common Data Service and in the identity provider are not directly li
 
 **Format**: attribute1=claim1, attribute2=claim2, attribute3=claim3
 
-For example: firstname=<https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle> 
+Example: <br> `firstname=<https://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname,lastname=https://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname,jobtitle=jobTitle>` 
 
 The claim name is the CLAIM TYPE field listed next to the attribute in the sign-in policies Application claims.
 
