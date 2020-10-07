@@ -739,6 +739,8 @@
         href: clientapi/reference/xrm-utility/getAllowedStatusTransitions.md
       - name: getEntityMetadata
         href: clientapi/reference/xrm-utility/getEntityMetadata.md
+      - name: getEntityMainFormDescriptor
+        href: clientapi/reference/xrm-utility/getEntityMainFormDescriptor.md
       - name: getGlobalContext
         href: clientapi/reference/xrm-utility/getGlobalContext.md
         items:
