@@ -10,7 +10,7 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# OpenID settings for Azure AD
+# Configure OpenID Connect for portals with Azure Active Directory
 
 In this article, you'll learn about configuring OpenID Connect provider for portals with Azure Active Directory, and multi-tenant Azure AD.
 
@@ -68,10 +68,10 @@ To configure OpenID Connect provider with Azure AD:
 
 1. In this step, enter the site settings for the portal configuration.
 
-    ![Configure OpenID site settings](media/authentication/openid-site-settings-1.png "ConfigureOpenID site settings")
+    ![Configure OpenID Connect site settings](media/authentication/openid-site-settings-1.png "Configure OpenID Connect site settings")
 
     > [!TIP]
-    > If you closed the browser window after configuring the app registration in the earlier step, sign in to the Azure portal again and go to the app that you registered for the following steps.
+    > If you closed the browser window after configuring the app registration in the earlier step, sign in to the Azure portal again and go to the app that you registered for the next steps.
 
     1. **Authority** - To configure the authority URL, use the following format:
 
