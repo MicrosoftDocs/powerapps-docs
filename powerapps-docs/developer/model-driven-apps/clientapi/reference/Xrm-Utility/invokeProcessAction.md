@@ -40,7 +40,6 @@ For more information about actions, see [Use actions](/powerapps/maker/common-da
 On success, returns Web API result along with any action output.
 
 ### Related topics
-
 [Use actions](/powerapps/maker/common-data-service/actions)
 
 [Xrm.Utility](../xrm-utility.md)
