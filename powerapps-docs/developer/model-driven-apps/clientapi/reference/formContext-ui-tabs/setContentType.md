@@ -31,4 +31,4 @@ search.app:
 
 ### Related topics
 
-[formContext-ui-tabs](../formContext-ui-tabs.md)
+[formContext.ui.tabs](../formContext-ui-tabs.md)
