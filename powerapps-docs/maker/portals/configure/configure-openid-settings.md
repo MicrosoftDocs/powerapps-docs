@@ -129,9 +129,9 @@ To configure OpenID Connect provider with Azure AD:
 To configure additional claims, such as using first name, or last name:
 
 1. Enable [optional claims in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
-1. Set **Scope** to include the additional claims. Example: `openid email profile`
-1. Set the **Registration claims mapping** additional site setting. Example: `firstname=given_name,lastname=family_name`
-1. Set the **Login claims mapping** additional site setting.    Example: `firstname=given_name,lastname=family_name`
+1. Set **Scope** to include the additional claims. <br> Example: `openid email profile`
+1. Set the **Registration claims mapping** additional site setting. <b> Example: `firstname=given_name,lastname=family_name`
+1. Set the **Login claims mapping** additional site setting. <br> Example: `firstname=given_name,lastname=family_name`
 
 ## Enable authentication using a multi-tenant Azure Active Directory application
 
