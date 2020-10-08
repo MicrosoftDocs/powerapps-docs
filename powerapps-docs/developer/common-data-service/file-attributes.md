@@ -136,7 +136,40 @@ none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>,<br
 PATCH /api/data/v9.1/\<entity-type(id)\>/\<file-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>
 none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest>
 
-As was previously mentioned under [Retrieve file data](#retrieve-file-data), uploading a data file of 16 MB or less can be accomplished in a single API call while uploading more than 16 MB of data requires the file data to be divided into blocks of 4 MB or less data. After the complete set of data blocks has been uploaded and a commit request has been sent, the web service will automatically combine the blocks, in the same sequence as the data blocks were uploaded, into a single data file in Azure Blob Storage.
+Files can be uploaded either in full or in chunks. As of October 2020, the restriction of using chunked upload for files greater than 16 MB has been removed. Files can be uploaded in full up to the maximum size configured. The previous chunking APIs will be still be available to maintain backwards compatibility with existing solutions.
+
+### Example: .NET C# code for full file upload
+
+```csharp
+static async Task FullFileUploadAsync(
+            Uri urlPrefix,
+            string customEntitySetName,
+            string entityId,
+            string entityFileOrAttributeAttributeLogicalName,
+            string fileRootPath,
+            string uploadFileName,
+            string accessToken)
+        {
+            var filePath = Path.Combine(fileRootPath, uploadFileName);
+            var fileStream = File.OpenRead(filePath);
+            var url = new Uri(urlPrefix, $"{customEntitySetName}({entityId})/{entityFileOrAttributeAttributeLogicalName}");
+
+            using (var request = new HttpRequestMessage(new HttpMethod("PATCH"), url))
+            {
+                request.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+                                request.Content = new StreamContent(fileStream);
+                request.Content.Headers.Add("Content-Type", "application/octet-stream");
+                request.Content.Headers.Add("x-ms-file-name", uploadFileName);
+                                
+                using (var response = await Client.SendAsync(request))
+                {
+                    response.EnsureSuccessStatusCode();
+                }
+            }
+        }
+```
+
+The following is the legacy method of uploading a data file of 16 MB or more by dividing file data blocks of 4 MB or less. After the complete set of data blocks has been uploaded and a commit request has been sent, the web service will automatically combine the blocks, in the same sequence as the data blocks were uploaded, into a single data file in Azure Blob Storage.
 
 Messages such as <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> and <xref:Microsoft.Xrm.Sdk.Messages.UpdateRequest> cannot be used to upload file attribute data.
 
