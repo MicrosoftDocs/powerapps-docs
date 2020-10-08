@@ -1,16 +1,16 @@
 ---
-title: Manage your apps | Microsoft Docs
-description: Learn how to manage your apps using Power Apps app from Teams.
-author: tapanm-msft
+title: Manage your apps using Power Apps app in Teams | Microsoft Docs
+description: Learn how to manage your apps using Power Apps app in Teams.
+author: chmoncay
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: chmoncay
+ms.reviewer: tapanm
 ---
 
-# Manage your apps
+# Manage your apps in Teams
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -27,7 +27,7 @@ Select **Edit** to edit the app in Power Apps Studio. More information: [Edit a 
 
 ## Play an app
 
-Select **Play** to run the latest [published version](../maker/canvas-apps/save-publish-app.md) of the app. More information: [Publish an app](publish-and-share-apps.md)
+Select **Play** to run the latest published version of the app. More information: [Publish an app](publish-and-share-apps.md)
 
 > [!NOTE]
 > Selecting **Play** opens the app outside of Teams.

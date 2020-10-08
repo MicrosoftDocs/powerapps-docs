@@ -1,20 +1,20 @@
 ---
 title: Use the Fluent UI controls in Power Apps app in Microsoft Teams | Microsoft Docs
 description: Learn about the new Fluent UI Framework controls in Power Apps.
-author: tapanm-msft
+author: chmoncay
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: chmoncay
+ms.reviewer: tapanm
 ---
 
 # Use Fluent UI controls
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../includes/cc-beta-prerelease-disclaimer.md)]
 
-Creating apps that look great in Microsoft Teams will be easier with our new components. Built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/), the new components will look great with Teams styles and will automatically adjust to the current Teams theme. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
+Creating apps that look great in Microsoft Teams will be easier with our new components. Built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/), the new components will look great with Teams styles and will automatically adjust to the Teams default theme. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
 
 Let's take a look at each Fluent UI control and its most useful properties. For a complete list of controls and properties in Power Apps, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
 
@@ -30,7 +30,7 @@ Configure the OnSelect property of a **Button** control to run one or more formu
 
 ### Key properties
 
-*ButtonType* – The style of button to show, Default, or Primary. Default value: **Standard**.<!--note from editor: I don't understand this.-->
+*ButtonType* – The style of button to show, Standard, or Primary. Default value: **Standard**.
 
 *OnSelect* – How the app responds when the user selects a control.
 
@@ -54,7 +54,7 @@ been widely used in the user interface.
 
 *Label* – Text that appears on a control.
 
-*Value* – The value of an input control.
+*Checked* – Whether the control is checked or not.
 
 ## Combo box
 
@@ -215,7 +215,7 @@ A **Toggle** control is designed for the modern user interface, but behaves the 
 
 ### Key properties
 
-*Value* – The value of an input control.
+*Checked* – Whether the control is checked or not.
 
 *OffText* – The text of the off state.
 
