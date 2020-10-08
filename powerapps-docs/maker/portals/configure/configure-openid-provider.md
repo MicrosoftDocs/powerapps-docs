@@ -101,8 +101,8 @@ To configure OpenID Connect provider:
     | Valid audiences | Comma-separated list of audience URLs.  |
     | Validate issuers | If enabled, the issuer will be validated during token validation. |
     | Valid issuers | Comma-separated list of Issuer URLs. |
-    | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` |
-    | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` |
+    | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD |
+    | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD  |
     | Nonce lifetime | Lifetime of nonce, in minutes. Default: 10 minutes. |
     | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this will override the Application Cookie Expire Timespan value. |
     | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to *On*, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
