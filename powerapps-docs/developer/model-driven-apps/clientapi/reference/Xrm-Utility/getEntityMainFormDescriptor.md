@@ -44,7 +44,7 @@ search.app:
 |Id| string| The form ID of the specified entity.|
 |Label| String| The label of the specified entity.|
 |Name| String| The display name of the specified entity.|
-|Sections| String| The section names on the specified entity.|
+|Sections| String| The sections name of the specified entity.|
 |ShowLabel| Boolean| Defines whether to show the label of the specified entity or not.|
 |Visible| Boolean| Defines if the form is visible or not.|
 ||||
@@ -54,13 +54,11 @@ search.app:
 The following sample code shows how to get the main form descriptor for a specified entity. 
 
 ```javascript
-function getFormDescriptor(){
 
-var entityName = "account";
-var formId = "28c36741-0070-435c-a42f-49f4dda2ef7f";
-Xrm.Utility.getEntityMainFormDescriptor(entityName. formId);
+  var entityName = "account";
+  var formId = "8448b78f-8f42-454e-8e2a-f8196b0419af";
+  Xrm.Utility.getEntityMainFormDescriptor(entityName, formId);
 
-}
 ```
 
 ## Related topics
