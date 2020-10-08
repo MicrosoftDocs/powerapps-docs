@@ -488,6 +488,11 @@
         href: clientapi/reference/formcontext-ui/setFormEntityName.md
       - name: setFormNotification
         href: clientapi/reference/formcontext-ui/setFormNotification.md
+    - name: formContext-ui-footerSection
+      href: clientapi/reference/formcontext-ui-footerSection.md
+      items: 
+      - name: setVisible
+        href: clientapi/reference/formcontext-ui-footerSection/setVisible.md
     - name: formContext.ui.formSelector
       href: clientapi/reference/formcontext-ui-formselector.md
       items:
@@ -501,6 +506,15 @@
         href: clientapi/reference/formcontext-ui-formselector/navigate.md
       - name: setVisible
         href: clientapi/reference/formcontext-ui-formselector/setVisible.md
+    - name: formContext-ui-headerSection
+      href: clientapi/reference/formContext-ui-headerSection.md
+      items:
+      - name: setBodyVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setBodyVisible.md
+      - name: setCommandBarVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setCommandBarVisible.md
+      - name: setTabNavigatorVisible
+        href: clientapi/reference/formcontext-ui-headerSection/setTabNavigatorVisible.md
     - name: formContext.ui.navigation
       href: clientapi/reference/formcontext-ui-navigation.md
       items:
@@ -575,6 +589,8 @@
         href: clientapi/reference/formcontext-ui-tabs/getVisible.md
       - name: removeTabStateChange
         href: clientapi/reference/formcontext-ui-tabs/removeTabStateChange.md
+      - name: setContentType
+        href: clientapi/reference/formContext-ui-tabs/setContentType.md
       - name: setDisplayState
         href: clientapi/reference/formcontext-ui-tabs/setDisplayState.md
       - name: setFocus
