@@ -58,7 +58,7 @@ To configure SAML 2.0 provider with Azure AD:
     1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-saml_1`
 
         > [!NOTE]
-        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Create and configure SAML 2.0 provider settings**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Assertion consumer service URL** in your portal settings while configuring SAML 2.0 provider. <br> For example, if you enter the **Redirect URI** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-saml_1`, use it as is for the SAML 2.0 configuration in portals. In this example, using `https://contoso-portal.powerappsportals.com/signin-saml` or `https://portal.contoso.com/signin-saml_1` in portals site settings for will be incorrect.
+        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Create and configure SAML 2.0 provider settings**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Assertion consumer service URL** in your portal settings while configuring SAML 2.0 provider. <br> For example, if you enter the **Redirect URI** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-saml_1`, use it as is for the SAML 2.0 configuration in portals. In this example, using `https://contoso-portal.powerappsportals.com/signin-saml` or `https://portal.contoso.com/signin-saml_1` in portals site settings will be incorrect.
 
         ![Register application](media/authentication/register-application-saml2.png "Register application")
 
@@ -124,7 +124,7 @@ To configure SAML 2.0 provider with Azure AD:
         ![Assertion consumer service URL](media/authentication/redirect-uri-azure-power-apps-saml.png "Assertion consumer service URL")
 
         > [!NOTE]
-        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Create and configure SAML 2.0 provider settings**. If you're using a custom domain name, enter the URL manually. However, ensure that the value entered here is exactly the same as the value you entered as the **Redirect URI** in the Azure portal earlier.
+        > If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in **Create and configure SAML 2.0 provider settings**. If you're using a custom domain name, enter the URL manually. However, ensure that the value entered here is exactly the same as the value you entered as the **Redirect URI** in the Azure portal earlier.
 
 1. Select **Confirm**.
 
