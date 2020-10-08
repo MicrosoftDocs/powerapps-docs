@@ -1,13 +1,13 @@
 ---
 title: Use Teams integration object | Microsoft Docs
 description: Learn how to use the Teams integration object when creating apps using Power Apps inside Teams.
-author: tapanm-msft
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.date: 09/25/2020
+ms.author: namarwah
+ms.reviewer: tapanm
 ---
 
 # Microsoft Teams integration object
@@ -21,7 +21,7 @@ You can use the Teams integration object to easily find and access the Teams int
 There are two features available with the integration of Power Apps with Teams. You can get a Teams theme inside a canvas app, and you can filter data depending on the team or channel context.
 
 > [!NOTE]
-> To further integrate with Teams, you can use the [Microsoft Teams connector](https://docs.microsoft.com/connectors/teams/) with actions sch as post a message, create a Teams meeting, list channels, and more.
+> To further integrate with Teams, you can use the [Microsoft Teams connector](https://docs.microsoft.com/connectors/teams/) with actions such as post a message, create a Teams meeting, list channels, and more.
 
 ## Get the Teams theme
 
@@ -51,6 +51,8 @@ The [Switch() function](../maker/canvas-apps/functions/function-if.md) evaluates
 This function results in changing the background of canvas app, depending on the change in the theme selection in Teams.
 
 ![Teams themes](media/teams-themes.png "Teams themes")
+
+For example, use this formula in the [*Fill* property](../maker/canvas-apps/controls/properties-color-border.md#normal) of a control (such as, a rectangle) to change the fill color based on the selected Teams theme.
 
 | **Teams theme**                               | **App background**                       |
 |-----------------------------------------------|------------------------------------------|

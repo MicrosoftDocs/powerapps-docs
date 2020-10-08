@@ -149,6 +149,8 @@
           href: reference/entityrecord/getrecordid.md
         - name: getValue
           href: reference/entityrecord/getvalue.md
+      - name: EntityMetadata
+        href: reference/entitymetadata.md
       - name: EntityReference
         href: reference/entityreference.md
       - name: Factory
