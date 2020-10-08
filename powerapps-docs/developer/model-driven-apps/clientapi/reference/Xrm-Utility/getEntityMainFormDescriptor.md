@@ -35,7 +35,7 @@ search.app:
 
 **Type**: Promise
 
-**Description**: Returns a promise containing the default main form descriptor for the specified entity.
+**Description**: Returns a promise containing the default main form descriptor with the following attributes.
 
 |Attribute Name| Type| Description|
 |-------------|-------|-----------|
@@ -45,8 +45,8 @@ search.app:
 |Label| String| The label of the specified entity.|
 |Name| String| The display name of the specified entity.|
 |Sections| String| The sections name of the specified entity.|
-|ShowLabel| Boolean| Defines whether to show the label of the specified entity or not.|
-|Visible| Boolean| Defines if the form is visible or not.|
+|ShowLabel| Boolean| Indicates whether to show the label of the specified entity or not.|
+|Visible| Boolean| Indicates whether the form is visible or not.|
 ||||
 
 ## Example
@@ -54,11 +54,12 @@ search.app:
 The following sample code shows how to get the main form descriptor for a specified entity. 
 
 ```javascript
-
+  // Define the entity and form ID
   var entityName = "account";
   var formId = "8448b78f-8f42-454e-8e2a-f8196b0419af";
-  Xrm.Utility.getEntityMainFormDescriptor(entityName, formId);
 
+  // Get the entity main form descriptor 
+  Xrm.Utility.getEntityMainFormDescriptor(entityName, formId);
 ```
 
 ## Related topics
