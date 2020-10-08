@@ -58,7 +58,7 @@ To configure OpenID Connect provider with Azure AD:
     1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-openid_1`
 
         > [!NOTE]
-        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Create and configure OpenID Connect provider settings**. However, ensure that the value entered here for your application is exactly the same as the value available for the **Redirect URL** in your portal settings while configuring OpenID Connect provider. <br> For example, if the **Reply URL** in portals is `https://contoso-portal.powerappsportals.com/signin-openid_1`, use it as is for the Azure portal. Using `https://contoso-portal.powerappsportals.com/signin-openid` in this case is incorrect.
+        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Create and configure OpenID Connect provider settings**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Redirect URL** in your portal settings while configuring OpenID Connect provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-openid_1`, use it as is for the OpenID Connect configuration in portals. In this example, using `https://contoso-portal.powerappsportals.com/signin-openid` or `https://portal.contoso.com/signin-openid_1` in portals site settings for will be incorrect.
 
         ![Register application](media/authentication/register-application.png "Register application")
 
@@ -86,6 +86,9 @@ To configure OpenID Connect provider with Azure AD:
     1. **Redirect URL** - Confirm that the **Redirect URL** site setting value is the same as the **Redirect URI** that you set in the Azure portal earlier.
 
         ![Confirm Redirect URL](media/authentication/redirect-uri-azure-power-apps.png "Confirm Redirect URL")
+
+        > [!NOTE]
+        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Create and configure OpenID Connect provider settings**. If you're using a custom domain name, enter the URL manually. However, ensure that the value entered here is exactly the same as the value you entered as the **Redirect URI** in the Azure portal earlier.
 
     1. **Metadata address** - To configure the metadata address:
 
