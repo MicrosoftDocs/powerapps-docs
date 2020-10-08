@@ -42,6 +42,7 @@ var tabObj = formContext.ui.tabs.get(arg);
 |[getParent](formcontext-ui-tabs/getParent.md)|[!INCLUDE[formcontext-ui-tabs/includes/getParent-description.md](formcontext-ui-tabs/includes/getParent-description.md)]|
 |[getVisible](formcontext-ui-tabs/getVisible.md)|[!INCLUDE[formcontext-ui-tabs/includes/getVisible-description.md](formcontext-ui-tabs/includes/getVisible-description.md)]|
 |[removeTabStateChange](formcontext-ui-tabs/removeTabStateChange.md)|[!INCLUDE[formcontext-ui-tabs/includes/removeTabStateChange-description.md](formcontext-ui-tabs/includes/removeTabStateChange-description.md)]|
+|[setContentType](formContext-ui-tabs/setContentType.md)|[!INCLUDE[formContext-ui-tabs/includes/setContentType-description.md](formContext-ui-tabs/includes/setContentType-description.md)]|
 |[setDisplayState](formcontext-ui-tabs/setDisplayState.md)|[!INCLUDE[formcontext-ui-tabs/includes/setDisplayState-description.md](formcontext-ui-tabs/includes/setDisplayState-description.md)]|
 |[setFocus](formcontext-ui-tabs/setFocus.md)|[!INCLUDE[formcontext-ui-tabs/includes/setFocus-description.md](formcontext-ui-tabs/includes/setFocus-description.md)]|
 |[setLabel](formcontext-ui-tabs/setLabel.md)|[!INCLUDE[formcontext-ui-tabs/includes/setLabel-description.md](formcontext-ui-tabs/includes/setLabel-description.md)]|
