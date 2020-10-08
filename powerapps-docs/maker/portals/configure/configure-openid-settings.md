@@ -112,11 +112,7 @@ To configure OpenID Connect provider with Azure AD:
         > `openid` value in **Scope** is mandatory. `email` value is optional, and specifying it in the scope ensures that the email address of the portal user (contact record) is pre-filled, and shown on the *Profile* page after the user logs in.
 
         > [!TIP]
-        > To configure additional claims: 
-        > 1. Enable [optional claims in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
-        > 1. Set **Scope** to include the additional claims. Example: `openid email profile`
-        > 1. Set the **Registration claims mapping** additional site setting. Example: `firstname=given_name,lastname=family_name`
-        > 1. Set the **Login claims mapping** additional site setting.    Example: `firstname=given_name,lastname=family_name`
+        > For additional claims, see [Configure additional claims](#configure-additional-claims).
 
     1. **Response type** - Select **code id_token**.
 
@@ -127,6 +123,15 @@ To configure OpenID Connect provider with Azure AD:
     ![Confirm the configuration](media/authentication/confirm-config.png "Confirm the configuration")
 
 1. Select **Close**.
+
+### Configure additional claims
+
+To configure additional claims, such as using first name, or last name:
+
+1. Enable [optional claims in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
+1. Set **Scope** to include the additional claims. Example: `openid email profile`
+1. Set the **Registration claims mapping** additional site setting. Example: `firstname=given_name,lastname=family_name`
+1. Set the **Login claims mapping** additional site setting.    Example: `firstname=given_name,lastname=family_name`
 
 ## Enable authentication using a multi-tenant Azure Active Directory application
 
