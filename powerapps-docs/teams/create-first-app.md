@@ -5,8 +5,8 @@ author: tapanm-msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
-ms.author: tapanm
+ms.date: 09/24/2020
+ms.author: jshum
 ms.reviewer: 
 ---
 
@@ -28,6 +28,11 @@ After installing the Power Apps app from the Teams store:
 
     ![Start creating an app](media/create-app-1.png "Start creating an app")
 
+    > [!TIP]
+    > If you don't see the **Power Apps** app in the left pane, select ![More added apps - ellipsis](media/more-added-apps-ellipsis.png "More added apps - ellipsis") (*More added apps*), and then select **Power Apps**.
+    
+    ![Power Apps](media/power-apps.png "Power Apps")
+
 1. You'll be prompted to select a team where you want to create the app. Select a team to create the app.
 
     ![Select a team to create the app](media/create-app-2.png "Select a team to create the app")
@@ -39,6 +44,9 @@ After installing the Power Apps app from the Teams store:
 1. Select **Create**. You'll see a confirmation about the Project Oakdale environment being created, which might take some time. You'll be notified when the environment is available for you to create your first app.
 
     ![First app in a team](media/create-app-4.png "First app in a team")
+
+> [!NOTE]
+> Environment creation will fail if the Teams team that you selected has *Hiddenmembership* enabled. If this happens, try creating the app in a different team. More information: [Hidden membership groups](known-issues-limitations.md#hidden-membership-groups)
 
 ### Notification
 
@@ -262,6 +270,11 @@ To update the app title:
 Verify all the changes you made to the app.
 
 ![Verify all changes](media/app-changes.png "Verify all changes")
+
+> [!TIP]
+> For better responsiveness, the [data cards](../maker/canvas-apps/working-with-cards.md) by default have [**Width fit**](../maker/canvas-apps/controls/properties-size-location.md#size) property set to *On*. If you want to resize the data cards manually, select the data cards and then set the **Width fit** property to *Off* first.
+
+![Data card - width fit property](media/data-card-width-fit.png "Data card - width fit property")
 
 ### Save and preview the app
 
