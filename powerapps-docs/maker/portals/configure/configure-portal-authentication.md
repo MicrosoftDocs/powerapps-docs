@@ -12,9 +12,7 @@ ms.reviewer: tapanm
 
 # Overview of authentication in Power Apps portals
 
-In Power Apps portals, each authenticated portal user is associated with a [contact record in Common Data Service](../../../developer/common-data-service/customer-entities-account-contact.md#contact-entity). Portal users must be assigned to [web roles](create-web-roles.md) to gain permissions beyond unauthenticated users. To configure permissions for a web role, configure its [webpage access and website access control rules](webpage-access-control.md).
-
-Power Apps portals allows portal users to sign-in with their choice of an external account based on [ASP.NET Identity](https://www.asp.net/identity). Though not recommended, portals also allows a local contact membership provider-based account for users to sign-in.
+In Power Apps portals, each authenticated portal user is associated with a [contact record in Common Data Service](../../../developer/common-data-service/customer-entities-account-contact.md#contact-entity). Portal users must be assigned to [web roles](create-web-roles.md) to gain permissions beyond unauthenticated users. To configure permissions for a web role, configure its [webpage access and website access control rules](webpage-access-control.md). Portals allows portal users to sign-in with their choice of an external account based on [ASP.NET Identity](https://www.asp.net/identity). Though not recommended, portals also allows a local contact membership provider-based account for users to sign-in.
 
 > [!NOTE]
 > Portal users must have an unique email address. If two or more contact records (including deactivated contact records) have the same email address, the contacts will not be able to authenticate on the portal.
