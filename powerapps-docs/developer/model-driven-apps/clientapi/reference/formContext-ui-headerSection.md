@@ -27,3 +27,7 @@ Provides information on how to set the visibility of header section.
 |[setCommandBarVisible](formContext-ui-headerSection/setCommandBarVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/setCommandBarVisible-description.md](formContext-ui-headerSection/includes/setCommandBarVisible-description.md)]|
 |[setTabNavigatorVisible](formContext-ui-headerSection/setTabNavigatorVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/setTabNavigatorVisible-description.md](formContext-ui-headerSection/includes/setTabNavigatorVisible-description.md)]|
 |||
+
+### Related topics
+
+[Client API Xrm object](../clientapi-xrm.md)

@@ -17,7 +17,7 @@ search.app:
 
 # setBodyVisible (Client API reference)
 
-[!INCLUDES[./includes/setBodyVisible-description.md](./includes/setBodyVisible-description.md)]
+[!INCLUDE[./includes/setBodyVisible-description.md](./includes/setBodyVisible-description.md)]
 
 ## Syntax
 
@@ -26,7 +26,9 @@ search.app:
 ## Parameter
 
 |Name|Type|Required|Description|
+|----|------|-------|----------|
 |bool|Boolean|Yes|Specify **true** to show the body; **false** to hide the body.|
+|||||
 
 ## Related topics
 

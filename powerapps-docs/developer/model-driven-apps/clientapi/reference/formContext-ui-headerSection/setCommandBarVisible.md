@@ -17,7 +17,7 @@ search.app:
 
 # setCommandBarVisible (Client API reference)
 
-[!INCLUDES[./includes/setCommandBarVisible-description.md](./includes/setCommandBarVisible-description.md)]
+[!INCLUDE[./includes/setCommandBarVisible-description.md](./includes/setCommandBarVisible-description.md)]
 
 ## Syntax
 
@@ -26,7 +26,9 @@ search.app:
 ## Parameter
 
 |Name|Type|Required|Description|
+|----|------|-------|----------|
 |bool|Boolean|Yes|Specify **true** to show the command bar; **false** to hide the command bar.|
+|||||
 
 ## Related topics
 

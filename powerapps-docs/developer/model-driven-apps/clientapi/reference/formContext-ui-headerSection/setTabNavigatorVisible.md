@@ -17,7 +17,7 @@ search.app:
 
 # setTabNavigatorVisible (Client API reference)
 
-[!INCLUDES[./includes/setTabNavigatorVisible-description.md](./includes/setTabNavigatorVisible-description.md)]
+[!INCLUDE[./includes/setTabNavigatorVisible-description.md](./includes/setTabNavigatorVisible-description.md)]
 
 ## Syntax
 
@@ -26,7 +26,9 @@ search.app:
 ## Parameter
 
 |Name|Type|Required|Description|
+|----|------|-------|----------|
 |bool|Boolean|Yes|Specify **true** to show the tab navigator; **false** to hide the tab navigator.|
+|||||
 
 ## Related topics
 

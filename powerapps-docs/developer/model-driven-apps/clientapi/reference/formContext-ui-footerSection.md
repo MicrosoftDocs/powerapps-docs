@@ -25,3 +25,7 @@ Provides information on how to set the visibility of footer section.
 |--|--|
 |[setVisible](formContext-ui-footerSection/setVisible.md)|[!INCLUDE[formContext-ui-footerSection/includes/setVisible-description.md](formContext-ui-footerSection/includes/setVisible-description.md)]|
 |||
+
+### Related topics
+
+[Client API Xrm object](../clientapi-xrm.md)
