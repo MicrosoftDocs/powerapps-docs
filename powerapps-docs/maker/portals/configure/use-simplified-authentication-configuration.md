@@ -1,16 +1,16 @@
 ---
-title: "Configure authentication and different identity providers in Power Apps portals. | MicrosoftDocs"
-description: "Learn how to configure authentication and different identity providers in Power Apps portals."
+title: ""Get started with configuring the authentication your portal authentication with different identity providers. | MicrosoftDocs"
+description: "Learn how to configure the authentication your portal authentication with different identity providers."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/29/2020
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure authentication and identity providers in portals
+# "Get started with configuring the authentication your portal
 
 Setting up authentication is a core customization in any portal. Simplified identity provider configuration in Power Apps portals provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal for supported identity providers.
 
@@ -63,12 +63,13 @@ The details page displays the **Identity providers** section.
 
 You can configure the following general authentication settings by selecting **Authentication Settings** on the **Identity providers** page.
 
-![General authentication settings](media/use-simplified-authentication-configuration/general-authentication-settings.png "General authentication settings")
+![General authentication settings](media/authentication/general-authentication-settings.png "General authentication settings")
 
-- **External login** - When set to **Off**, disables and hides external account registration and sign in.
-<br>External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity providers such as Facebook, LinkedIn, Google, Twitter, and Microsoft. Users sign up for access to the portal by selecting an external identity to register with the portal. After it's registered, an external identity has access to the same features as a local account. See [Manage external accounts](set-authentication-identity.md#manage-external-accounts) for related site settings.
+- **External login** - External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity providers such as Facebook, LinkedIn, Google, Twitter, and Microsoft. Users sign up for access to the portal by selecting an external identity to register with the portal. After it's registered, an external identity has access to the same features as a local account. See [Manage external accounts](set-authentication-identity.md#manage-external-accounts) for related site settings. <br> When set to **Off**, disables and hides external account registration and sign in.
 
-- **[Open registration](configure-portal-authentication.md#open-registration)** - When set to **Off**, disables and hides external account registration.
+- **[Open registration](configure-portal-authentication.md#open-registration)** - Enables or disables the sign-up registration form for creating new local users. The sign-up form allows any anonymous visitor to the portal and create a new user account. <br> When set to **Off**, disables and hides external account registration.
+
+- **Require unique email** - Specifies whether a unique email address is needed for validating a new user. If set to **On**, may cause sign-in attempts to fail for contact records with an email address already present. <br> When set to **Off**, an existing contact email address is used to sign-in.
 
 You can also go to general authentication settings from the portal details page by selecting **Settings** in the upper-right corner of the **Identity providers** section.
 
