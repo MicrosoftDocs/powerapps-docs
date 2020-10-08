@@ -67,9 +67,9 @@ You can configure the following general authentication settings by selecting **A
 
 - **External login** - External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity providers such as Facebook, LinkedIn, Google, Twitter, and Microsoft. Users sign up for access to the portal by selecting an external identity to register with the portal. After it's registered, an external identity has access to the same features as a local account. See [Manage external accounts](set-authentication-identity.md#manage-external-accounts) for related site settings. <br> When set to **Off**, disables and hides external account registration and sign in.
 
-- **[Open registration](configure-portal-authentication.md#open-registration)** - Enables or disables the sign-up registration form for creating new local users. The sign-up form allows any anonymous visitor to the portal and create a new user account. <br> When set to **Off**, disables and hides external account registration.
+- **[Open registration](configure-portal-authentication.md#open-registration)** - Enables or disables the sign-up registration form for creating new local users. The sign-up form allows any anonymous user to visit the portal and create a new user account. <br> When set to **Off**, disables and hides new user account registration.
 
-- **Require unique email** - Specifies whether a unique email address is needed for validating a new user. If set to **On**, may cause sign-in attempts to fail for contact records with an email address already present. <br> When set to **Off**, an existing contact email address is used to sign-in.
+- **Require unique email** - Specifies whether a unique email address is needed for validating a new user during sign up. When set to **On**, may cause sign up attempts to fail if a user provides an email address already present in a contact record. <br> When set to **Off**, an existing contact email address is used to sign up if it matches with the user provided email address.
 
 You can also go to general authentication settings from the portal details page by selecting **Settings** in the upper-right corner of the **Identity providers** section.
 
@@ -121,7 +121,19 @@ To configure a provider, select **Configure** (or select **More Commands** (**..
 > [!NOTE]
 > You can use **Add provider** or **Configure** to add or configure a provider for the first time. After you configure a provider, you can edit it. You can also select the provider name hyperlink to open the configuration options quickly.
 
-The configuration steps after you select **Next** depend on the type of identity provider you select. For example, the Azure Active Directory B2C configuration is different from how you set up LinkedIn. See the provider-specific sections later in this article to configure the provider of your choice.
+The configuration steps after you select **Next** depend on the type of identity provider you select. For example, the Azure Active Directory B2C configuration is different from how you set up LinkedIn. Here's a list of providers and protocols that you can select from.
+
+| Available provider | Available protocol | Description |
+| - | - | - |
+| Azure Active Directory B2C | OpenID Connect | Allows configuration of Azure AD B2C for authentication in portals using OpenID Connect protocol. <br> More information: [Configure the Azure AD B2C provider](configure-azure-ad-b2c-provider.md) |
+| Facebook | OAuth 2.0 | Allows configuration of Facebook as the authentication provider in portals using OAuth 2.0 protocol. <br> More information: [Configure Facebook provider](configure-oauth2-facebook.md) |
+| LinkedIn | OAuth 2.0 | Allows configuration of LinkedIn as the authentication provider in portals using OAuth 2.0 protocol. <br> More information: [Configure LinkedIn provider](configure-oauth2-linkedin.md) |
+| Google | OAuth 2.0 | Allows configuration of Google as the authentication provider in portals using OAuth 2.0 protocol. <br> More information: [Configure Google provider](configure-oauth2-google.md) |
+| Twitter | OAuth 2.0 | Allows configuration of Twitter as the authentication provider in portals using OAuth 2.0 protocol. <br> More information: [Configure Twitter provider](configure-oauth2-twitter.md) |
+| Microsoft | OAuth 2.0 | Allows configuration of Microsoft as the authentication provider in portals using OAuth 2.0 protocol. <br> More information: [Configure Microsoft provider](configure-oauth2-microsoft.md) |
+| Other | OpenID Connect | Allows configuration of any provider that conforms to the [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html) protocol specifications. <br> Examples: [Configure Azure AD provider with OpenID Connect](configure-openid-settings.md), [Configure Azure AD B2C provider with OpenID Connect](configure-azure-ad-b2c-provider.md) |
+| Other | SAML 2.0 | Allows configuration of any provider that conforms to the SAML 2.0 protocol specifications. <br> Examples: [Configure Azure AD provider with SAML 2.0](configure-saml2-settings-azure-ad.md), [Configure AD FS with SAML 2.0](configure-saml2-settings.md) |
+| Other | WS-Federation | Allows configuration of any provider that conforms to the WS-Federation protocol specifications. <br> Examples: [Configure Azure AD with WS-Federation](configure-ws-federation-settings-azure-ad.md), [Configure Azure AD FS with WS-Federation](configure-ws-federation-settings.md) |
 
 ### Edit a provider
 

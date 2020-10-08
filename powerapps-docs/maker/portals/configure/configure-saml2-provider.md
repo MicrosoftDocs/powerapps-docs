@@ -34,6 +34,9 @@ To configure SAML 2.0 provider:
 
     ![Configure SAML 2.0 site settings](media/authentication/saml2-site-settings.png "Configure SAML 2.0 site settings")
 
+    > [!NOTE]
+    > Ensure that you review&mdash;and if required, change&mdash;the default values.
+
     | Name | Description |
     | - | - |
     | Metadata address | The SAML 2.0 identity provider metadata file location. <br> Example: `https://adfs.contoso.com/FederationMetadata/2007-06/FederationMetadata.xml` |
@@ -51,6 +54,7 @@ To configure SAML 2.0 provider:
     | - | - |
     | Validate audience | If enabled, the audience will be validated during the token validation. |
     | Valid audiences | Comma-separated list of audience URLs. |
+    | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. When set to On, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 
 1. Select **Confirm**.
 

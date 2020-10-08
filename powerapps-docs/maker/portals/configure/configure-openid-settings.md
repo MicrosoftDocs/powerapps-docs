@@ -112,7 +112,11 @@ To configure OpenID Connect provider with Azure AD:
         > `openid` value in **Scope** is mandatory. `email` value is optional, and specifying it in the scope ensures that the email address of the portal user (contact record) is pre-filled, and shown on the *Profile* page after the user logs in.
 
         > [!TIP]
-        > To configure additional claims, refer to [Configure additional claims](configure-openid-provider.md#configure-additional-claims).
+        > To configure additional claims: 
+        > 1. Enable [optional claims in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
+        > 1. Set **Scope** to include the additional claims. Example: `openid email profile`
+        > 1. Set the **Registration claims mapping** additional site setting. Example: `firstname=given_name,lastname=family_name`
+        > 1. Set the **Login claims mapping** additional site setting.    Example: `firstname=given_name,lastname=family_name`
 
     1. **Response type** - Select **code id_token**.
 
