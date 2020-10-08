@@ -17,7 +17,7 @@ search.app:
 
 # setVisible (Client API reference)
 
-[!INCLUDES[./includes/setVisible-description.md](./includes/setVisible-description.md)]
+[!INCLUDE[./includes/setVisible-description.md](./includes/setVisible-description.md)]
 
 ## Syntax
 
@@ -26,7 +26,9 @@ search.app:
 ## Parameter
 
 |Name|Type|Required|Description|
+|----|------|-------|----------|
 |bool|Boolean|Yes|Specify **true** to show the footer section; **false** to hide the footer section.|
+|||||
 
 ## Related topics
 
