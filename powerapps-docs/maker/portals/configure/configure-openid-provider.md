@@ -28,23 +28,6 @@ This article explains how an identity provider&mdash;that supports OpenId Connec
     - Hybrid Flow in portals follows the same flow as Implicit Grant Flow, and uses *id_token* to directly sign in the users.
 - Portals doesn’t support PKCE-based techniques (Proof Key for Code Exchange) to authenticate users.
 
-## Examples
-
-Integrating a provider involves locating the authority (or issuer) URL associated with the provider. A configuration URL can be determined from the authority which supplies metadata required during the authentication workflow. The provider settings are based on the properties of the [OpenIdConnectAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.openidconnect.openidconnectauthenticationoptions.aspx) class.
-
-Examples of authority URLs are:
-
-- [[!INCLUDE[pn-azure-active-directory](../../../includes/pn-azure-active-directory.md)]](https://msdn.microsoft.com/library/azure/mt168838.aspx): [https://login.microsoftonline.com/&lt;[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] AD Application&gt;/](https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration)
-- [Google](https://developers.google.com/identity/protocols/OpenIDConnect): <https://accounts.google.com/.well-known/openid-configuration>
-
-Each OpenID Connect provider also involves registering an application (similar to that of an OAuth 2.0 provider) and obtaining a Client Id. The authority URL and the generated application Client Id are the settings required to enable external authentication between the portal and the identity provider.
-
-Examples of the OpenID Connect providers for portals are:
-
-- [Azure AD B2C](configure-azure-ad-b2c-provider.md)
-- [Azure AD](configure-openid-settings.md)
-- [Azure AD with multi-tenancy](configure-openid-settings.md#enable-authentication-using-a-multi-tenant-azure-active-directory-application)
-
 ## Configure OpenID Connect provider
 
 Similar to all other providers, you have to sign in to [Power Apps](https://make.powerapps.com) to configure the OpenID Connect provider.
@@ -70,13 +53,23 @@ To configure OpenID Connect provider:
     > [!NOTE]
     > The Reply URL is used by the app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.
 
+    > [!TIP]
+    > Examples of the OpenID Connect providers for portals:
+    > 
+    > - [Azure AD B2C](configure-azure-ad-b2c-provider.md)
+    > - [Azure AD](configure-openid-settings.md)
+    > - [Azure AD with multi-tenancy](configure-openid-settings.md#enable-authentication-using-a-multi-tenant-azure-active-directory-application)
+
 1. Enter the following site settings for portal configuration.
 
     ![Configure OpenID site settings](media/authentication/openid-site-settings-1.png "ConfigureOpenID site settings")
 
+    > [!NOTE]
+    > Ensure that you review&mdash;and if required, change&mdash;the default values.
+
     | Name | Description |
     | - | - |
-    | Authority | The authority (or issuer) URL associated with the identity provider. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/` |
+    | Authority | The authority (or issuer) URL associated with the identity provider. <br> Examples: `https://login.microsoftonline.com/contoso.onmicrosoft.com/` <br> `https://accounts.google.com/.well-known/openid-configuration/` |
     | Client ID | The ID of the application created with the identity provider and to be used with the portal. |
     | Redirect URL | The location where the identity provider will send the authentication response. <br> Example: `https://portal.contoso.com/signin-saml2` |
     | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` |
@@ -111,30 +104,10 @@ To configure OpenID Connect provider:
     | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` |
     | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` |
     | Nonce lifetime | Lifetime of nonce, in minutes. Default: 10 minutes. |
-    | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this will override the Application Cookie Ecpire Timespan value. |
+    | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this will override the Application Cookie Expire Timespan value. |
     | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to *On*, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 
 1. Select **Confirm**.
-
-## Configure additional claims
-
-Additional claims&mdash;such as "first name" and "last name"&mdash;can be filled in by adding the value profile to the scope.
-
-To use additional claims:
-
-1. Enable [optional claims in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
-
-1. Set the **Scope** additional site setting to include the additional claims.
-
-    Example: `openid email firstname lastname`
-
-1. Set the **Registration claims mapping** additional site setting.
-
-    Example: `firstname=given_name,lastname=family_name`
-
-1. Set the **Login claims mapping** additional site setting.
-
-    Example: `firstname=given_name,lastname=family_name`
 
 ### See also
 [Configure portal authentication](configure-portal-authentication.md)  

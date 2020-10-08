@@ -30,9 +30,14 @@ To configure SAML 2.0 provider:
 
 1. Create the application and configure the settings with your identity provider.
 
+    ![Create WS-Federation application](media/authentication/step-1-wsfed.png "Create WS-Federation application")
+
 1. Enter the following site settings for portal configuration.
 
-    ![Configure WS-FED site settings](media/authentication/wsfed-site-settings.png "Configure WS-FED site settings")
+    ![Configure WS-FED site settings](media/authentication/configure-wsfed-site-settings.png "Configure WS-FED site settings")
+
+    > [!NOTE]
+    > Ensure that you review&mdash;and if required, change&mdash;the default values.
 
     | Name | Description |
     | - | - |
@@ -53,6 +58,7 @@ To configure SAML 2.0 provider:
     | Valid audiences | Comma-separated list of audience URLs. |
     | Validate audiences | If enabled, the audience will be validated during the token validation. |
     | WHR | The home realm of the identity provider (IdP) to use for authentication. Sets the WS-Federation sign-in request **whr** parameter. If empty, the **whr** parameter is not included in the request. <br> More information: [wsFederation](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation) |
+    | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. When set to On, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 
 1. Select **Confirm**.
 
