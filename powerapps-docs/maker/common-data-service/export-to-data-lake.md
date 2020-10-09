@@ -84,6 +84,8 @@ Follow the steps in the [Create an Azure Storage account](/azure/storage/blobs
 
 Your Common Data Service environment is linked to the Azure Data Lake Storage Gen2 account. The file system in the Azure storage account is created with a folder for each entity selected to be replicated to the data lake. 
 
+You can follow the steps above to create a link from one Common Data Service environment to multiple Azure data lakes in your Azure subscription. Similarly, you could create a link from multiple Common Data Service envrionments to the same Azure Data Lake, all within the same tenant.
+
 > [!NOTE]
 > The data exported by Export to data lake service is encrypted at rest in Azure Data Lake Storage Gen2. Additionally, transient data in the blob storage is also encrypted at rest. Encryption in Azure Data Lake Storage Gen2 helps you protect your data, implement enterprise security policies, and meet regulatory compliance requirements. More information: [Azure Data Encryption-at-Rest]( /azure/security/fundamentals/encryption-atrest) <br />
 > Currently, you can't provide public IPs for Export to data lake service that can be used in **Azure Data Lake firewall settings**. Public IP network rules have no effect on requests originating from the same Azure region as the storage account. Services deployed in the same region as the storage account use private Azure IP addresses for communication. Thus, you can't restrict access to specific Azure services based on their public outbound IP address range. 
@@ -137,6 +139,7 @@ In Power Apps, solutions are used to transport apps and components from one envi
 
 1.	From the Power Apps maker portal, select the environment where you want to distribute the Export to Data Lake configuration.
 2.	On the leftmost navigation pane, select **Solutions**, select **Open AppSource**, search for the solution named **Export to Data Lake Core**, and then import the solution.
+3.  Repeat above steps in the destination environment. You need the **Export to Data Lake Core** solution in both, the source and destination environments.
 
 ### Add an Export to Data Lake configuration to a solution
 
