@@ -20,7 +20,7 @@ Settings for an identity provider such as [!include[](../../../includes/pn-activ
 ### Create an AD FS relying party trust
 
 > [!Note]
-> See [Configure AD FS by using PowerShell](#configure-ad-fs-by-using-powershell), below, for information about how to perform these steps in a [!INCLUDE[pn-powershell-short](../../../includes/pn-powershell-short.md)] script.
+> See [Configure AD FS by using PowerShell](#configure-ad-fs-by-using-powershell), for information about how to perform these steps in a [!INCLUDE[pn-powershell-short](../../../includes/pn-powershell-short.md)] script.
 
 Using the [!include[](../../../includes/pn-adfs-short.md)] Management tool, go to **Service** > **Claim Descriptions**.
 
@@ -58,7 +58,7 @@ Using the [!include[](../../../includes/pn-adfs-short.md)] Management tool, sele
    > - URL: **https://portal.contoso.com/signin-saml2**
 
 8. Configure Identities: Specify https://portal.contoso.com/, select **Add**, and then select **Next**.
-   If applicable, you can add more identities for each additional relying party portal. Users will be able to authenticate across any or all of the available identities.
+   If applicable, you can add more identities for each additional relying party portal. Users can authenticate across any or all of the available identities.
 9. Choose Issuance Authorization Rules: Select **Permit all users to access this relying party**, and then select **Next**.
 10. Ready to Add Trust: Select **Next**.
 11. Select **Close**.
@@ -77,7 +77,7 @@ Add the **Name ID** claim to the relying party trust:
 
 ### Create site settings
 
-Apply portal site settings referencing the above [!include[](../../../includes/pn-adfs-short.md)] relying party trust.
+Apply portal site settings referencing the earlier [!include[](../../../includes/pn-adfs-short.md)] relying party trust.
 
 > [!Note]
 > A standard [!include[](../../../includes/pn-adfs-short.md)] (IdP) configuration only uses the following settings (with example values):
@@ -90,7 +90,7 @@ Apply portal site settings referencing the above [!include[](../../../includes/p
 >   `Import-Module adfs`
 >   `Get-ADFSEndpoint -AddressPath /FederationMetadata/2007-06/FederationMetadata.xml`
 
-Multiple IdP services can be configured by substituting a label for the [provider] tag. Each unique label forms a group of settings related to an IdP. Examples: ADFS, [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]AD, MyIdP
+Multiple IdP services can be configured by replacing a label for the [provider] tag. Each unique label forms a group of settings related to an IdP. Examples: ADFS, [!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]AD, MyIdP
 
 
 | Site Setting Name                                             | Description                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -102,7 +102,7 @@ Multiple IdP services can be configured by substituting a label for the [provide
 | Authentication/SAML2/[provider]/AssertionConsumerServiceUrl<br>or<br>Authentication/SAML2/[provider]/Wreply                       | Required. The [!include[](../../../includes/pn-adfs-short.md)] SAML Consumer Assertion endpoint. <br> Example: https://portal.contoso.com/signin-saml2.                                                                                                                                                                                                 |  
 | Authentication/SAML2/[provider]/Caption                     | Recommended. The text that the user can display on a sign-in user interface. Default: [provider].                |  
 | Authentication/SAML2/[provider]/CallbackPath                | An optional constrained path on which to process the authentication callback.  |  
-| Authentication/SAML2/[provider]/BackchannelTimeout          | Timeout value for back-channel communications. <br> Example: `00:05:00` (5 mins).  |  
+| Authentication/SAML2/[provider]/BackchannelTimeout          | Time out value for back-channel communications. <br> Example: `00:05:00` (5 mins).  |  
 | Authentication/SAML2/[provider]/UseTokenLifetime            | Indicates that the authentication session lifetime (for example, cookies) should match that of the authentication token.  |  
 | Authentication/SAML2/[provider]/AuthenticationMode          | The OWIN authentication middleware mode.  |  
 | Authentication/SAML2/[provider]/SignInAsAuthenticationType  | The AuthenticationType used when creating the System.Security.Claims.ClaimsIdentity.  |  
@@ -113,7 +113,7 @@ Multiple IdP services can be configured by substituting a label for the [provide
 
 ### IdP-initiated sign-in
 
-[!include[](../../../includes/pn-adfs-short.md)] supports the [IdP-initiated single sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/manage-apps/configure-saml-single-sign-on) profile of the SAML 2.0 [specification](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). In order for the portal (service provider) to respond properly to the SAML request initiated by the IdP, the [RelayState](https://blogs.technet.com/b/askds/archive/2012/09/27/ad-fs-2-0-relaystate.aspx) parameter must be encoded properly.  
+[!include[](../../../includes/pn-adfs-short.md)] supports the [IdP-initiated single sign-on (SSO)](https://docs.microsoft.com/azure/active-directory/manage-apps/configure-saml-single-sign-on) profile of the SAML 2.0 [specification](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html#5.1.4.IdP-Initiated%20SSO:%20POST%20Binding|outline). In order for the portal (service provider) to respond properly to the SAML request started by the IdP, the [RelayState](https://blogs.technet.com/b/askds/archive/2012/09/27/ad-fs-2-0-relaystate.aspx) parameter must be encoded properly.  
 
 The basic string value to be encoded into the SAML RelayState parameter must be in the format **ReturnUrl=/content/sub-content/**, where **/content/sub-content/** is the path to the webpage you want to go to on the portal (service provider). The path can be replaced by any valid webpage on the portal. The string value is encoded and placed into a container string of the format **RPID=&lt;URL encoded RPID&gt;&RelayState=&lt;URL encoded RelayState&gt;**. This entire string is once again encoded and added to another container of the format **<https://adfs.contoso.com/adfs/ls/idpinitiatedsignon.aspx?RelayState=&lt;URL> encoded RPID/RelayState&gt;**.
 

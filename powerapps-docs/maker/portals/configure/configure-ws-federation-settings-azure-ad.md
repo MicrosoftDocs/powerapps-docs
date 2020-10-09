@@ -51,7 +51,7 @@ To configure WS-Federation provider with Azure AD:
 
     1. Enter a name.
 
-    1. If required, select a different **Supported account type**. More information: [Supported account types](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
+    1. If necessary, select a different **Supported account type**. More information: [Supported account types](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
 
     1. If not already, select **Web** for **Redirect URI**.
 
@@ -104,7 +104,7 @@ To configure WS-Federation provider with Azure AD:
 
         1. Paste the copied document URL as the **Metadata address** for portals.
 
-    1. **Autentication type** - To configure the authentication type:
+    1. **Authentication type** - To configure the authentication type:
 
         1. Copy and paste the **Metadata address** configured earlier in a new browser window.
 

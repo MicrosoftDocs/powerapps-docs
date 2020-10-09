@@ -66,11 +66,11 @@ You can configure the following general authentication settings by selecting **A
 
 ![General authentication settings](media/authentication/general-authentication-settings.png "General authentication settings")
 
-- **External login** - External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by a third-party identity providers such as Facebook, LinkedIn, Google, Twitter, and Microsoft. Users sign up for access to the portal by selecting an external identity to register with the portal. After it's registered, an external identity has access to the same features as a local account. See [Manage external accounts](set-authentication-identity.md#manage-external-accounts) for related site settings. <br> When set to **Off**, disables and hides external account registration and sign in.
+- **External login** - External authentication is provided by the ASP.NET Identity API. In this case, account credentials and password management are handled by third-party identity providers. For example, Facebook, LinkedIn, Google, Twitter, and Microsoft. Users sign up for access to the portal by selecting an external identity to register with the portal. After it's registered, an external identity has access to the same features as a local account. See [Manage external accounts](set-authentication-identity.md#manage-external-accounts) for related site settings. <br> When set to **Off**, disables and hides external account registration and sign-in.
 
 - **[Open registration](configure-portal-authentication.md#open-registration)** - Enables or disables the sign-up registration form for creating new local users. The sign-up form allows any anonymous user to visit the portal and create a new user account. <br> When set to **Off**, disables and hides new user account registration.
 
-- **Require unique email** - Specifies whether a unique email address is needed for validating a new user during sign up. When set to **On**, may cause sign up attempts to fail if a user provides an email address already present in a contact record. <br> When set to **Off**, an existing contact email address is used to sign up if it matches with the user provided email address.
+- **Require unique email** - Specifies whether a unique email address is needed for validating a new user during sign-up. When set to **On**, may cause sign up attempts to fail if a user provides an email address already present in a contact record. <br> When set to **Off**, an existing contact email address is used to sign up if it matches with the user provided email address.
 
 You can also go to general authentication settings from the portal details page by selecting **Settings** in the upper-right corner of the **Identity providers** section.
 
@@ -78,7 +78,7 @@ You can also go to general authentication settings from the portal details page 
 
 ### Default identity provider
 
-You can set any identity provider as the default. When an identity provider is set as the default, users signing in to the portal aren't redirected to the portal sign-in page; instead, the sign-in experience always defaults to signing in by using the selected provider.
+You can set any identity provider as the default. When an identity provider is set as the default, users signing in to the portal aren't redirected to the portal sign-in page. Instead, the sign-in experience always defaults to signing in by using the selected provider.
 
 ![Default identity provider](media/use-simplified-authentication-configuration/set-default.png "Default identity provider")
 
@@ -159,7 +159,7 @@ Deleting a provider deletes your provider configuration for the selected provide
 
 ### Effects of the deleted and recreated portal
 
-If you delete and recreate your portal, the users may receive the following error when signing in. When this happens, update the portal's identity provider configuration correctly.
+If you delete and recreate your portal, the users may receive the following error when signing in. When this issue happens, update the portal's identity provider configuration correctly.
 
 `Sorry, but we're having trouble signing you in.`
 

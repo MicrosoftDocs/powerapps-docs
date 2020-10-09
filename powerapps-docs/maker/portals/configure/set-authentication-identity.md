@@ -148,14 +148,14 @@ Changing an email address (or setting it for the first time) puts it into an unc
 3. The user checks email for confirmation.
 4. Process: Send email confirmation to contact
 5. Customize the confirmation email.
-6. The user clicks the confirmation link to complete the confirmation process.
+6. The user selects the confirmation link to complete the confirmation process.
 
 > [!NOTE]
 > Ensure that the primary email is specified for the contact because the confirmation email is sent only to the primary email (emailaddress1) of the contact. The confirmation email is not sent to the secondary email (emailaddress2) or alternate email (emailaddress3) of the contact record.
 
 ## Enable two-factor authentication
 
-The two-factor authentication feature increases user account security by requiring proof of ownership of a confirmed email in addition to the standard local or external account sign-in. A user trying to sign in to an account that has two-factor authentication enabled is sent a security code to the confirmed email associated with their account. The security code must be submitted to complete the sign-in process. A user can choose to remember the browser that successfully passed the verification, so that the security code won't be required for next sign ins from the same browser. Each user account enables this feature individually and requires a confirmed email.
+The two-factor authentication feature increases user account security by requiring proof of ownership of a confirmed email in addition to the standard local or external account sign-in. A user trying to sign in to an account that has two-factor authentication enabled is sent a security code to the confirmed email associated with their account. The security code must be submitted to complete the sign-in process. A user can choose to remember the browser that successfully passed the verification, so that the security code won't be required for next sign-ins from the same browser. Each user account enables this feature individually and requires a confirmed email.
 
 > [!WARNING]
 > If you create and enable the **Authentication/Registration/MobilePhoneEnabled** site setting to enable the legacy functionality, an error will occur. This site setting is not provided out of the box and not supported by portals.
@@ -175,7 +175,7 @@ The two-factor authentication feature increases user account security by requiri
 
 ## Manage external accounts
 
-An authenticated user may connect (register) multiple external identities to their user account, one from each configured identity provider. After the identities are connected, the user may choose to sign in by using any of the connected identities. Existing identities can also be disconnected, as long as a single external or local identity remains.
+An authenticated user may connect (register) multiple external identities to their user account, one from each configured identity provider. After the identities are connected, the user may choose to sign in by using any of the connected identities. Existing identities can also be disconnected, as long as a single external, or local identity remains.
 
 **Related Site Settings:**
 
@@ -193,7 +193,7 @@ The provider is now connected. The provider can also be disconnected.
 
 ## Enable ASP.NET identity authentication
 
-The following describes the settings for enabling and disabling various authentication features and behaviors:
+The following table describes the settings for enabling and disabling various authentication features and behaviors:
 
 
 |                        Site Setting Name                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
