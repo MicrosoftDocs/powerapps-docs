@@ -1725,7 +1725,7 @@
           href: ./common-data-service/view-component-dependencies.md
         - name: Use environment variables
           href: ./common-data-service/EnvironmentVariables.md
-        - name: Create a connection reference
+        - name: Use a connection reference
           href: ./common-data-service/create-connection-reference.md  
         - name: Translate customized component text
           items:
@@ -1846,12 +1846,16 @@
       items:
         - name: Use sample apps from Teams store
           href: ../teams/use-sample-apps-from-teams-store.md
-        - name: Employee Ideas
+        - name: Employee ideas
           href: ../teams/employee-ideas.md
         - name: Inspection
           href: ../teams/inspection.md
-        - name: Issue Reporting
+        - name: Issue reporting
           href: ../teams/issue-reporting.md
+        - name: Customize sample apps
+          href: ../teams/customize-sample-apps.md
+        - name: FAQs for sample apps
+          href: ../teams/sample-apps-faqs.md
     - name: Known issues and limitations
       href: ../teams/known-issues-limitations.md
 - name: Chatbots
@@ -1938,7 +1942,7 @@
   - name: Get a session or app ID
     href: ./canvas-apps/get-sessionid.md
   - name: Troubleshoot startup issues for Power Apps
-    href: troubleshooting-startup-issues.md
+    href: ../troubleshooting-startup-issues.md
   - name: Troubleshoot issues for the Power Apps mobile app
     href: ../user/powerapps_mobile_troubleshoot.md
   - name: Troubleshoot Power Query

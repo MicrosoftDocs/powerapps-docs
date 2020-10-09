@@ -221,13 +221,13 @@ Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing
 
 ## Solution checker fails to export solutions with model-driven app components
 
-If a solution contains a model-driven app, Solution Checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to model-friven apps, any solutions containing them will fail to export with solution checker.
+If a solution contains a model-driven app, Solution Checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to model-driven apps, any solutions containing them will fail to export with solution checker.
 
 To resolve this issue, grant the **Environment Maker** security role to the Power Apps Checker application user.
 
 ## Solution checker fails to export patched solutions
 
-If a solution has had a [patch](https://docs.microsoft.com/powerapps/developer/common-data-service/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
+If a solution has had a [patch](/power-platform/alm/create-patches-simplify-solution-updates) applied, Solution Checker will fail to export the solution for analysis. When a solution has had a patch applied, the original solution becomes locked and it can't be changed or exported as long as there are dependent patches that exist in the organization that identify the solution as the parent solution.
 
 To resolve this issue, clone the solution so that all patches related to the solution are rolled into the newly created solution. This unlocks the solution and allows the solution to be exported from the system.  For more information, see  [Clone a Solution](/power-platform/alm/update-solutions-alm#clone-a-solution).
 
@@ -264,6 +264,10 @@ Solution checker supports global variables for ECMAScript 2015 (ES6) and up to E
 ## Multiple violations reported for plug-ins and workflow activities based on call scope
 
 For plug-in and workflow activity rules where the issue is only relevant in the calling context, the solution checker tool starts its analysis at the IPlugin interface implementation and traverses a call graph to detect issues within the scope of that implementation.  In some cases, many call paths may arrive at the same location where the issue is detected.  Since the issue is relevant to the call scope, the tool may report based on that scope to provide a better picture of impact rather than on distinct locations. As a result, multiple issues may reference a single location that should be fixed.
+
+## app-formula-issues-high and app-formula-issues-high may show different number of errors than those shown in design mode
+
+The solution checker will list the number of the errors found in the app, *including those from tests*. The app checker in design mode only shows errors from screen controls and components. If the error count shown in the app checker in design mode is smaller, open the [Test Studio](../canvas-apps/test-studio.md) and search for the errors in the expressions used in tests.
 
 ## See also
 
