@@ -156,7 +156,7 @@ The user can specify data by typing into a text-input control. Depending on how 
 
     Want more information about the **[If](../functions/function-if.md)** function or [other functions](../formula-reference.md)?
 
-1. Press F5, and then type **P@ssw0rd** in **inputPassword**.
+1. Press F5, and then type **P\@ssw0rd** in **inputPassword**.
 
     When you finish typing the password, the label stops showing **Access denied** and starts to show **Access granted**.
 
