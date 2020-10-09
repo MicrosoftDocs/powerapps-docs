@@ -129,21 +129,25 @@ To configure OpenID Connect provider with Azure AD:
 To configure additional claims, such as using first name, or last name:
 
 1. Enable [optional claims in Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-optional-claims#configuring-directory-extension-optional-claims).
-1. Set **Scope** to include the additional claims. <br> Example: `openid email profile`
-1. Set the **Registration claims mapping** additional site setting. <b> Example: `firstname=given_name,lastname=family_name`
-1. Set the **Login claims mapping** additional site setting. <br> Example: `firstname=given_name,lastname=family_name`
+
+1. Set **Scope** to include the additional claims.
+    <br> Example: `openid email profile`
+
+1. Set the **Registration claims mapping** additional site setting.
+    <br> Example: `firstname=given_name,lastname=family_name`
+
+1. Set the **Login claims mapping** additional site setting.
+    <br> Example: `firstname=given_name,lastname=family_name`
 
 ## Enable authentication using a multi-tenant Azure Active Directory application
 
 You can configure your portal to accept [!include[](../../../includes/pn-azure-active-directory.md)] users from any tenant in [!include[](../../../includes/pn-azure-shortest.md)] and not just a specific tenant by using the multi-tenant application registered in [!include[](../../../includes/pn-azure-active-directory.md)]. To enable multi-tenancy, [update the application registration](https://docs.microsoft.com/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multi-tenant) in the [!include[](../../../includes/pn-azure-active-directory.md)] application.
 
-### Related site settings
+To support authentication against [!include[](../../../includes/pn-azure-active-directory.md)] using a multi-tenanted application, you have to create or configure the additional **Issue Filter** site setting in portals.
 
-You can create or configure the additional **Issue Filter** site setting in portals to support authentication against [!include[](../../../includes/pn-azure-active-directory.md)] using a multi-tenanted application:
+`Authentication/OpenIdConnect/[provider]/IssuerFilter`
 
-|Site Setting Name    |Description   |
-|---|---|
-|Authentication/OpenIdConnect/[provider]/IssuerFilter   | A wildcard-based filter that matches on all issuers across all tenants. <br> Example: `https://sts.windows.net/*/`   |
+This site setting is a wildcard-based filter that matches on all issuers across all tenants. Example: `https://sts.windows.net/*/`
 
 ### See also
 
