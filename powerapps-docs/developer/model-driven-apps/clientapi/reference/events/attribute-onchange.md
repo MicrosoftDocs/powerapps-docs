@@ -30,6 +30,9 @@ The `OnChange` event does not occur if the field is changed programmatically usi
 > [!NOTE]
 > Although the **Status** field supports the`OnChange` event, the field is read-only on the form so the event cannot occur through user interaction. Another script could cause this event to occur by using the [fireOnchange](../attributes/fireOnChange.md) method on the field.
 
+> [!NOTE]
+> OnChange events are synchronous. You should **not** use asynchronous code in an OnChange event handler that needs an action to be taken or handled on the resolution of the async code. This causes issues if the resolution handler expects the app context to remain the same as it was when the asynchronous code was started. You should also **not** make synchronous network requests in an OnChange event handler. This can cause an unresponsive app.
+
 ## Methods supported for this event
 There are three methods you can use to work with the `OnChange` event for an attribute:
 - [addOnChange](../attributes/addOnChange.md)
