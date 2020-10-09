@@ -20,7 +20,9 @@ search.app:
 
 The form `OnLoad` event occurs after the form has loaded. It cannot prevent the window from loading. Use the `OnLoad` event to apply logic about how the form should be displayed, to set properties on fields, and interact with other page elements.
 
-OnLoad events are synchronous. However, you should **not** make synchronous network requests in an OnLoad event handler. This can cause a slow save experience and an unresponsive app. Instead, you can make asynchronous network requests. You should be careful when using asynchronous code in an OnLoad event handler that needs an action to be taken or handled on the resolution of the async code. Asynchronous code can cause issues if the resolution handler expects the app context to remain the same as it was when the asynchronous code was started. For example, there may be code in an OnLoad event handler to make a network request and change a control to be disabled based on the response data. Before the response from the request is receieved, the user may have interacted with the control or navigated to a different page, so there may be undesired behavior. 
+The form `OnLoad` events are synchronous. However, you should **not** make synchronous network requests in an `OnLoad` event handler. This can cause a slow save experience and an unresponsive app. Instead, you can make asynchronous network requests. 
+
+You should be careful when using asynchronous code in an OnLoad event handler that needs an action to be taken or handled on the resolution of the async code. Asynchronous code can cause issues if the resolution handler expects the app context to remain the same as it was when the asynchronous code has started. For example, there may be code in an `OnLoad` event handler to make a network request and change a control to be disabled based on the response data. Before the response from the request is receieved, the user may have interacted with the control or navigated to a different page, so there may be undesired behavior. 
 
 
 
