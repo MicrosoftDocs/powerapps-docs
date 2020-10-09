@@ -30,7 +30,7 @@ Ratings are custom activities, and can be used in the same way as any other acti
 
 ## Use ratings
 
-For webpages that have page ratings enabled and the developer has applied the control to the template, users can rate the page either by using the rating scale or voting, depending on the type chosen when the control was added to the page template.
+For webpages that have page ratings enabled, users can rate the page by using the rating scale.
 
 ![Rating type](../media/rating-type.png "Rating type")  
 
