@@ -491,6 +491,8 @@
     - name: formContext.ui.footerSection
       href: clientapi/reference/formcontext-ui-footerSection.md
       items: 
+      - name: getVisible
+        href: clientapi/reference/formcontext-ui-footerSection/getVisible.md
       - name: setVisible
         href: clientapi/reference/formcontext-ui-footerSection/setVisible.md
     - name: formContext.ui.formSelector
@@ -509,6 +511,12 @@
     - name: formContext.ui.headerSection
       href: clientapi/reference/formContext-ui-headerSection.md
       items:
+      - name: getBodyVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getBodyVisible.md
+      - name: getCommandBarVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getCommandBarVisible.md
+      - name: getTabNavigatorVisible
+        href: clientapi/reference/formcontext-ui-headerSection/getTabNavigatorVisible.md
       - name: setBodyVisible
         href: clientapi/reference/formcontext-ui-headerSection/setBodyVisible.md
       - name: setCommandBarVisible
@@ -577,6 +585,8 @@
       items:
       - name: addtabStateChange
         href: clientapi/reference/formcontext-ui-tabs/addtabStateChange.md
+      - name: getContentType
+        href: clientapi/reference/formContext-ui-tabs/getContentType.md
       - name: getDisplayState
         href: clientapi/reference/formcontext-ui-tabs/getDisplayState.md
       - name: getLabel

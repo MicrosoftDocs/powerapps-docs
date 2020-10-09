@@ -23,6 +23,9 @@ Provides information on how to set the visibility of header section.
 
 |Name|Description|
 |--|--|
+|[getBodyVisible](formContext-ui-headerSection/getBodyVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/getBodyVisible-description.md](formContext-ui-headerSection/includes/getBodyVisible-description.md)]|
+|[getCommandBarVisible](formContext-ui-headerSection/getCommandBarVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/getCommandBarVisible-description.md](formContext-ui-headerSection/includes/getCommandBarVisible-description.md)]|
+|[getTabNavigatorVisible](formContext-ui-headerSection/getTabNavigatorVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/getTabNavigatorVisible-description.md](formContext-ui-headerSection/includes/getTabNavigatorVisible-description.md)]|
 |[setBodyVisible](formContext-ui-headerSection/setBodyVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/setBodyVisible-description.md](formContext-ui-headerSection/includes/setBodyVisible-description.md)]|
 |[setCommandBarVisible](formContext-ui-headerSection/setCommandBarVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/setCommandBarVisible-description.md](formContext-ui-headerSection/includes/setCommandBarVisible-description.md)]|
 |[setTabNavigatorVisible](formContext-ui-headerSection/setTabNavigatorVisible.md)|[!INCLUDE[formContext-ui-headerSection/includes/setTabNavigatorVisible-description.md](formContext-ui-headerSection/includes/setTabNavigatorVisible-description.md)]|
