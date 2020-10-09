@@ -67,7 +67,7 @@ The usage dashboard shows the following metrics:
 - **Monthly active users**: Tracks the information about the number of unique users who used the app within the last month.
 - **Daily active users**: Tracks the information about the number of daily unique users who used the app within the last 24 hours.
 - **Weekly active users**: Tracks the information about the number of daily unique users who used the app within the last 7 hours.
-- **Usage over time**: Tracks the information about the average number of monthly, weekly, and daily active users.
+- **Usage over time**: Tracks the information about the number of monthly, weekly, and daily active users over time.
 - **Monthly active users by component type**: Tracks the information about the number of monthly active users filtered by component type.
 - **Monthly active users by component name**: Tracks the information about the number of monthly active users filtered by component name.
 
