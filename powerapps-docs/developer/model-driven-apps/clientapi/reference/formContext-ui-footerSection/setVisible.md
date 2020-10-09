@@ -20,7 +20,7 @@ search.app:
 [!INCLUDE[./includes/setVisible-description.md](./includes/setVisible-description.md)]
 
 > [!NOTE]
-> This method is supported only on the Unified Interface.
+> This method is supported only on Unified Interface.
 
 ## Syntax
 
