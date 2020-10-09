@@ -131,3 +131,9 @@ To configure SAML 2.0 provider with Azure AD:
     ![Confirm configuration](media/authentication/confirm-saml-config.png "Confirm configuration")
 
 1. Select **Close**.
+
+### See also
+
+- [Example: Configure SAML 2.0 provider for portals with AD FS](configure-saml2-settings.md)
+- [Frequently Asked Questions (FAQs) when using SAML 2.0 in portals](configure-saml2-faqs.md)
+- [Configure SAML 2.0 provider for portals](configure-saml2-provider.md)

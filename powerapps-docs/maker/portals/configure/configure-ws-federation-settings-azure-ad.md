@@ -131,3 +131,8 @@ To configure WS-Federation provider with Azure AD:
     ![Confirm configuration](media/authentication/confirm-wsfed-config.png "Confirm configuration")
 
 1. Select **Close**.
+
+### See also
+
+- [Configure WS-Federation provider for portals](configure-ws-federation-provider.md)
+- [Example: Configure WS-Federation provider for a portal with AD FS](configure-ws-federation-settings.md)
