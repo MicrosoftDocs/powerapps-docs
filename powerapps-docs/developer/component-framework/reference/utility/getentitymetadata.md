@@ -34,7 +34,7 @@ Model-driven apps
 
 ## Return Value
 
-Type: `Promise<EntityMetadata>`
+Type: Promise<[EntityMetadata](../entitymetadata.md)>
 
 
 ### Related topics
