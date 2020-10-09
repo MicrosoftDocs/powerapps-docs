@@ -29,7 +29,7 @@ search.app:
 
 **Type**: Content type.
 
-**Description**: Returns the content type, cardSections or singleComponent.
+**Description**: Returns "cardSections" or "singleComponent".
 
 ### Related topics
 

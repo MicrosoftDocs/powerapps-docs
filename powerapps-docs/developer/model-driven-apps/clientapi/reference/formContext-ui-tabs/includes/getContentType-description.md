@@ -1,1 +1,1 @@
-Gets the content type.
+Returns the content type.
