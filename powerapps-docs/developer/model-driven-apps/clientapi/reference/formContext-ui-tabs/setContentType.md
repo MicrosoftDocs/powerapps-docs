@@ -29,7 +29,7 @@ search.app:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|contentType|String|Yes| Defines the content type. It has the following parameters: <br/> - **cardSections**: The default tab behavior. <br/> - **singleComponent**: Maximizes the content of the first custom component. |
+|contentType|String|Yes| Defines the content type. It has the following parameters: <br/> - **cardSections**: The default tab behavior. <br/> - **singleComponent**: Maximizes the content of the first component in the tab. |
 ||||
 
 ### Related topics
