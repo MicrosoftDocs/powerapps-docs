@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/21/2020
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -32,7 +32,7 @@ To secure these features, entity permissions allow for granular rights to be gra
 
     ![Add entity permissions to a web role](../media/add-entity-permission-web-role.png "Add entity permissions to a web role")  
 
-When creating a new Entity Permission record, the first step is to determine the entity that will be secured. The next step is to define scope, as discussed below, and&mdash;for any scope other than Global&mdash;the relationships that define that scope. Finally, determine the rights that are being granted to the role via this permission. Rights are cumulative, so if a user is in a role that grants Read, and another that grants Read and Update, the user will have Read and Update rights for any records that overlap between the two roles.
+When creating a new Entity Permission record, the first step is to determine the entity that will be secured. The next step is to define scope, as discussed in the following section, and&mdash;for any scope other than Global&mdash;the relationships that define that scope. Finally, determine the rights that are being granted to the role via this permission. Rights are cumulative, so if a user is in a role that grants Read, and another that grants Read and Update, the user will have Read and Update rights for any records that overlap between the two roles.
 
 > [!Note]
 > Selecting entities like webpage, web files and other configuration entities is invalid and might have other unintended consequences. The portal will assert the security of configuration entities based on content access controls, not entity permissions.
@@ -53,6 +53,8 @@ Entity forms will only allow the appropriate permission for Read, Create, Write,
 
 With Account Scope, a signed-in user in the role for which the permission record is defined will have the rights granted by that permission only for records that are related to that user's parent account record via a defined relationship.
 
+This scope means that the entity list will only show the records of the selected entity that are associated to the user's parent account. For example, if an entity permission allows Read access to Lead entity with the Account scope, the user having this permission can view all the leads of only the parent account of the user.
+
 ### Self scope
 
 Self Scope allows you to define the rights a user has to their own Contact (Identity) record. Users can use entity forms or web forms to make changes to their own Contact record linked with their profile. The default Profile Page has a special built-in form that allows any user to change their basic contact info, and opt in or out of marketing lists. If this form is included in your portal (which it is by default), users won't require this permission to use it. However, they'll require this permission to use any custom entity forms or web forms that target their User Contact record.
@@ -67,16 +69,16 @@ Users in a web role who have access to records defined by parent entity permissi
 
 ### Attributes and relationships
 
-The table below explains the entity permission attributes.
+The following table explains the entity permission attributes.
+
+
 
 | Name                     | Description                                                                                                                                                                                                                                                                                                               |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Name                     | The descriptive name of the record. This field is required.                                                                                                                                                                                                                                                               |
 | Entity Name              | The logical name of the entity that is to be secured or that will define the contact relationship or parent relationship to secure a related entity on a child permission. This field is required.                                                                                                                        |
 | Scope (mandatory)                   | <ul><li>**Global**: Grant privileges to the entity record without any requirement for an owner (contact).</li><li>**Contact**: Grant privileges to the entity record that has a direct relationship to an owner (contact).</li><li>**Account**: Grant privileges to the entity record that has a relationship to an account, which serves as the owner assuming the account is the parent customer of the contact.</li><li>**Parent**: Grant privileges to the entity record through the chain of its parent permissions' relationships.</li></ul>|
-| Contact Relationship     | Required only if Scope = Contact. The schema name of the relationship between the contact and the entity specified by the Entity Name field.|
-| Parent Relationship      | Required only if a parent entity permission is assigned. The schema name of the relationship between the entity specified by the Entity Name field and the entity specified by the Entity Name field on its Parent Entity Permission record.                                                                                     |
-| Parent Entity Permission | Required only if Scope = Parent.                                                                                                                                                                                                                                                            |
+| Relationship for Scope | Depends on the selected Scope. <ul> <li> **Contact Relationship**: Required only if Scope = Contact. <br> The schema name of the relationship between the contact and the entity specified by the Entity Name field. </li> <li> **Account Relationship**: Required only if Scope = Account. <br> The schema name of the relationship between the Account and the entity specified by the Entity Name field. </li> <li> **Parent Relationship**: Required only if a parent entity permission is assigned. <br> The schema name of the relationship between the entity specified by the Entity Name field and the entity specified by the Entity Name field on its Parent Entity Permission record. <ul> <li> **Parent Entity Permission**:  Required only if Scope = Parent. </li> </li> </ul>  </ul> <br> **Note**: Available relationships will be empty if the Contact, or the Account has no existing relationships with the selected entity. To create relationships, see [Entity relationships overview](../../common-data-service/create-edit-entity-relationships.md).
 | Read                     | Privilege that controls whether the user can read a record.                                                                                                                                                                                                                                                               |
 | Write                    | Privilege that controls whether the user can update a record.                                                                                                                                                                                                                                                             |
 | Create                   | Privilege that controls whether the user can create a new record. The right to create a record for an entity type doesn't apply to an individual record, but instead to a class of entities.                                                                                                                             |
@@ -105,7 +107,7 @@ Remember that in order for your list to respect these permissions, you must have
 
 ![Edit a web page form](../media/edit-webpage-form.png "Edit a web page form")  
 
-This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on an entity list, a filter is added to the list so that only tasks that are related to a lead will show up in the list. In our example, they're being surfaced with a subgrid on an entity form.
+This action then grants permissions for all tasks that are related to leads. If tasks are being surfaced on an entity list, a filter is added to the list so that only tasks that are related to a lead will appear in the list. In our example, they're being surfaced with a subgrid on an entity form.
 
 ![Task example](../media/tasks-example.png "Task example")  
 
