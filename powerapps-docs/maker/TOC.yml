@@ -1348,7 +1348,7 @@
         - name: About portal lifecycle
           href: ./portals/admin/portal-lifecycle.md
         - name: Update portal solution
-          href: ./portals/admin/power-platform-admin-center#update-the-power-apps-portal-solution
+          href: ./portals/admin/power-platform-admin-center.md#update-the-power-apps-portal-solution
         - name: Upgrade a portal
           href: ./portals/admin/upgrade-portal.md
         - name: Cookies used by portal
