@@ -1463,7 +1463,7 @@
             items:
                  - name: Configure
                    href: ./portals/configure/configure-openid-provider.md
-                 - name: Configure OpenID for Azure AD
+                 - name: Configure OpenID Connect for Azure AD
                    href: ./portals/configure/configure-openid-settings.md
                  - name: FAQs when using OpenID Connect
                    href: ./portals/configure/configure-openid-faqs.md                                        

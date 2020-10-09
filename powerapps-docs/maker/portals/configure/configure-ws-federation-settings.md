@@ -1,16 +1,19 @@
 ---
-title: "Configure WS-Federation provider settings for a portal  | MicrosoftDocs"
-description: "Instructions to add and configure WS-Federation provider settings for a portal."
+title: "Configure WS-Federation provider for a portal with AD FS.  | MicrosoftDocs"
+description: "Instructions to configure WS-Federation provider for a portal with AD FS."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/18/2019
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Create an AD FS relying party trust
+# Configure WS-Federation provider for a portal with AD FS
+
+> [!IMPORTANT]
+> The steps for the configuration of AD FS may vary depending on the version of your AD FS server.
 
 Using the AD FS Management tool, go to **Trust Relationships** &gt; **Relying Party Trusts**.
 

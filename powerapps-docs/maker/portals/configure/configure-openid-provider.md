@@ -1,16 +1,16 @@
 ---
-title: "Configure OpenID Connect provider settings for a portal  | MicrosoftDocs"
-description: "Instructions to add and configure OpenID Connect provider settings for a portal."
+title: "Configure the OpenID Connect provider for Power Apps portals.  | MicrosoftDocs"
+description: "Learn how to configure the OpenID Connect provider for Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/18/2019
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure Open ID Connect provider settings for portals
+# Configure the Open ID Connect provider for portals
 
 [OpenID Connect](https://openid.net/connect/) external identity providers are services that conform to the [Open ID Connect specifications](https://openid.net/specs/openid-connect-core-1_0.html). OpenID Connect introduces the concept of an "ID token", which is a security token that allows the client to verify the identity of the user. The ID token also gets basic profile information about the user; commonly known as "claims".
 

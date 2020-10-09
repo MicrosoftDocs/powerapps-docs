@@ -1,6 +1,6 @@
 ---
-title: ""Get started with configuring the authentication your portal authentication with different identity providers. | MicrosoftDocs"
-description: "Learn how to configure the authentication your portal authentication with different identity providers."
+title: "Get started with configuring the authentication your portal authentication using different identity providers. | MicrosoftDocs"
+description: "Learn how to configure the authentication your portal authentication using different identity providers."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,13 +10,14 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# "Get started with configuring the authentication your portal
+
+# Get started with configuring the authentication your portal
 
 Setting up authentication is a core customization in any portal. Simplified identity provider configuration in Power Apps portals provides in-app guidance for identity provider setup and abstracts setup complexities. Makers and administrators can easily configure the portal for supported identity providers.
 
 ## Overview
 
-You can enable, disable, and configure portal identity providers from [Power Apps](https://make.powerapps.com) by using simplified portal authentication configuration. After you select an identity provider, you can then follow prompts to easily enter the provider settings, instead of [setting up authentication manually](set-authentication-identity.md).
+You can enable, disable, and configure portal identity providers from [Power Apps](https://make.powerapps.com) by using simplified portal authentication configuration. After you select an identity provider, you can then follow prompts to easily enter the provider settings.
 
 ### Authentication Settings
 
@@ -94,7 +95,7 @@ After you set an identity provider as the default, you can select **Remove as de
 Several identity providers are added by default that you can configure. You can add additional Azure Active Directory (Azure AD) B2C providers, or configure the available OAuth 2.0 providers such as LinkedIn and Microsoft.
 
 > [!NOTE]
-> - You can't change the configuration of the [Local sign in](configure-portal-authentication.md) and Azure Active Directory providers when using this interface.
+> - You can't change the configuration of the **Local sign in** and **Azure Active Directory** providers when using this interface.
 > - You can have only one instance of each identity provider type for OAuth 2.0, such as **Facebook**, **LinkedIn**, **Google**, **Twitter**, and **Microsoft**.
 > - Updates to identity provider configuration might take a few minutes to be reflected on the portal. To apply your changes immediately, you can [restart the portal](../admin/admin-overview.md#open-power-apps-portals-admin-center).
 
@@ -123,7 +124,7 @@ To configure a provider, select **Configure** (or select **More Commands** (**..
 
 The configuration steps after you select **Next** depend on the type of identity provider you select. For example, the Azure Active Directory B2C configuration is different from how you set up LinkedIn. Here's a list of providers and protocols that you can select from.
 
-| Available provider | Available protocol | Description |
+| Available providers | Available protocols | Description |
 | - | - | - |
 | Azure Active Directory B2C | OpenID Connect | Allows configuration of Azure AD B2C for authentication in portals using OpenID Connect protocol. <br> More information: [Configure the Azure AD B2C provider](configure-azure-ad-b2c-provider.md) |
 | Facebook | OAuth 2.0 | Allows configuration of Facebook as the authentication provider in portals using OAuth 2.0 protocol. <br> More information: [Configure Facebook provider](configure-oauth2-facebook.md) |
@@ -169,4 +170,3 @@ If you delete and recreate your portal, the users may receive the following erro
 - [Set authentication identity for a portal](set-authentication-identity.md)
 - [Configure Azure AD B2C provider settings](azure-ad-b2c.md)
 - [Configure OAuth2 provider settings](configure-oauth2-settings.md)
-- [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)

@@ -5,7 +5,7 @@ author: dileepsinghmicrosoft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/18/2019
+ms.date: 10/12/2020
 ms.author: dileeps
 ms.reviewer: tapanm
 ---
