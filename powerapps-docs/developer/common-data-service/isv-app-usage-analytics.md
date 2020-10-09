@@ -50,10 +50,6 @@ To view the app usage data:
 
 1. Sign in to [ISV studio](https://aka.ms/ISVStudio/).
 1. On the **Home** page, you can see a list of published applications. Select the desired application for which you want to see the usage details. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Home page](media/isv-home-page-list-apps.png "Home page")
-   
 1. Scroll-down to the page to view all the apps. Select the app and select the **Usage** tab.
 
    > [!div class="mx-imgBorder"]
