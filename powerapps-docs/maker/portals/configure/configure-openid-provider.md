@@ -19,12 +19,12 @@ This article explains how an identity provider&mdash;that supports OpenId Connec
 ## Supported and unsupported authentication flows in portals
 
 - Implicit Grant Flow
-    - This is the default authentication method used by portals.
+    - This flow is the default authentication method used by portals.
 - Authorization Code Flow
     - Portals uses *client_secret_post* method to communicate with token endpoint of identity server.
-    - *private_key_jwt* method to authenticate with token endpoint is not supported.
+    - *private_key_jwt* method to authenticate with token endpoint isn't supported.
 - Hybrid Flow (restricted support)
-    - Portals requires *id_token* to be present in the response. Hence, *response_type* value as *code token* is not supported.
+    - Portals requires *id_token* to be present in the response. So, *response_type* value as *code token* isn't supported.
     - Hybrid Flow in portals follows the same flow as Implicit Grant Flow, and uses *id_token* to directly sign in the users.
 - Portals doesn’t support PKCE-based techniques (Proof Key for Code Exchange) to authenticate users.
 
@@ -75,7 +75,7 @@ To configure OpenID Connect provider:
     | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` |
     | Scope | A space-separated list of permissions to request. Default value: ‘openid’.  <br> Example: `openid` |
     | Response type | The value for the OpenID Connect 'response_type' parameter. |
-    | Client secret | The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". This is required if the selected response type is “code”. |
+    | Client secret | The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". This setting is required if the selected response type is “code”. |
     | Response mode | The value for the OpenID Connect “response_mode” parameter. The value should be  “query”  if the selected response type is “code”. Default value: ‘form_post’. |
 
 1. Select **Next**.
@@ -87,8 +87,8 @@ To configure OpenID Connect provider:
     | Name | Description |
     | - | - |
     | External logout | Enables or disables external account sign-out. When enabled, users are redirected to the external sign-out user experience when they sign out from the portal. When disabled, users are only signed out from the portal. |
-    | Post logout redirection URL | The location where the identity provider will redirect post logout.This location should also be set appropriately in the identity provider configuration. |
-    | RP initiated logout | Enables / disables a relying party initiated logout.  To use this the external logout  should be enabled first. |
+    | Post logout redirection URL | The location where the identity provider will redirect post logout. This location should be set appropriately in the identity provider configuration. |
+    | RP initiated logout | Enables / disables a relying party initiated logout. To use this setting, the external logout should be enabled first. |
 
 1. (Optional) Configure additional settings.
 
@@ -104,7 +104,7 @@ To configure OpenID Connect provider:
     | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD |
     | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD  |
     | Nonce lifetime | Lifetime of nonce, in minutes. Default: 10 minutes. |
-    | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this will override the Application Cookie Expire Timespan value. |
+    | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this value will override the Application Cookie Expire Timespan value. |
     | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to *On*, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 
 1. Select **Confirm**.

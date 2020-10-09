@@ -20,7 +20,7 @@ No. Portals only support SAML 2.0 based providers.
 
 ## Does portals support Signed Assertion?
 
-No. Portals doesn't support signed assertion request. If you're using signed assertion, we suggest that you use OpenID Connect. If your identity provider (IDP) doesn’t support OpenID Connect, use an intermediatory identity provider (Azure AD B2C preferred) that supports federation with SAML, and that can federate with portals using OpenID Connect.
+No. Portals doesn't support signed assertion request. If you're using signed assertion, we suggest that you use OpenID Connect. If your identity provider (IDP) doesn’t support OpenID Connect, use an intermediary identity provider (Azure AD B2C preferred) that supports federation with SAML, and that can federate with portals using OpenID Connect.
 
 ## Does portals support signed SAML responses?
 
@@ -32,9 +32,9 @@ No. Portals doesn’t support encrypted SAML assertion or response.
 
 ## What type of Name Identifiers are supported?
 
-Portals requires "Persistent" Identifiers which ensures that the user can always be uniquely identified across sessions. Portals doesn't support “Transient” Identifiers.
+Portals requires "Persistent" Identifiers that ensure that the user can always be uniquely identified across sessions. Portals doesn't support “Transient” Identifiers.
 
-## Does portals requires any specific AuthNContextClass in SAML assertion request?
+## Does portals require any specific AuthNContextClass in SAML assertion request?
 
 Yes. Portals will specify *PasswordProtectedTransport* in authentication requests, and requires IDP to support it.
 

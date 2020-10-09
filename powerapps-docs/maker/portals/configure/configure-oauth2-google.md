@@ -40,15 +40,15 @@ To create an app in Google:
 1. Select **Configure consent screen**.
 1. Select **External** user type.
 1. Select **Create**.
-1. Enter **Application name** and upload an image for logo if required.
+1. Enter **Application name** and upload an image for logo if necessary.
 1. Select appropriate **Support email**.
-1. Enter `powerappsportals.com` as the top level domain in **Authorized domains**. 
+1. Enter `powerappsportals.com` as the top-level domain in **Authorized domains**. 
     > [!TIP]
     > Use `microsoftcrmportals.com` if you have not [updated your Power Apps portal domain name](../admin/update-portal-domain.md). You can also enter a [custom domain name](../admin/add-custom-domain.md) if you have configured.
-1. Provide links for home page, privacy policy and terms of service as required. 
+1. Provide links for home page, privacy policy, and terms of service as required. 
 1. Select **Save**.
 1. Select **Credentials** from left navigation menu.
-1. Select **OAuth client ID** from the **Create credentials** drop down menu.
+1. Select **OAuth client ID** from the **Create credentials** drop-down menu.
 1. Select application type as **Web application**.
 1. Enter **Name** for the OAuth Client ID.
 1. Enter your Power Apps portal URL in **Authorized JavaScript Origins** list.

@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Configure the Azure Active Directory B2C provider
 
-[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Office 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C is an extension to that authentication model that enables external customer sign-ins through local credentials and federation with various common social identity providers.
+[!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory (Azure AD) powers Office 365 and Dynamics 365 services for employee or internal authentication. [!include[Azure](../../../includes/pn-azure-shortest.md)] Active Directory B2C is an extension to that authentication model that enables external customer signs in through local credentials and federation with various common social identity providers.
 
 A portal owner can configure the portal to accept [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C as an identity provider. [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports Open ID Connect for federation.
 
@@ -22,7 +22,7 @@ To configure OpenID Connect provider with Azure AD B2C:
 
     ![Azure AD B2C provider name](media/authentication/azure-ad-b2c-name.png "Azure AD B2C provider name")
 
-1. If required, update the name.
+1. If necessary, update the name.
 
 1. Select **Next**.
 
@@ -91,7 +91,7 @@ To configure OpenID Connect provider with Azure AD B2C:
 
      - **Registration claims mapping​** - List of logical name/claim pairs to be used to map claim values returned from Azure AD B2C created during sign up to attributes in the contact record. <br> 
      For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
-     - **Login claims mapping** - List of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign in to the attributes in the contact record. <br> 
+     - **Login claims mapping** - List of logical name/claim pairs to be used to map claim values returned from Azure AD B2C after sign-in to the attributes in the contact record. <br> 
      For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **Application Claims** in your user flow and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
      - **External logout** - Enables or disables federated sign-out. When set to **On**, users are redirected to the federated sign-out user experience when they sign out from the portal. When set to **Off**, users are only signed out from the portal.
      - **Contact mapping with email** - Specifies whether contacts are mapped to a corresponding email. When set to **On**, this setting associates a unique contact record with a matching email address, and then automatically assigns the external identity provider to the contact after the user successfully signs in.
@@ -121,7 +121,7 @@ To create Azure AD B2C tenant:
 1. Select **User flows** under Policies.
 1. Choose the newly created Sign up and sign in policy.
 1. From **Settings** list, select **Properties**
-1. Under **Token compatability settings**, from the **Issuer (iss) claim** list, select the URL that has **/tfp** in its path.
+1. Under **Token compatibility settings**, from the **Issuer (iss) claim** list, select the URL that has **/tfp** in its path.
 1. Save the policy.
 1. Select the URL in the **Metadata endpoint for this policy** field.
 1. Copy the value of the issuer field and enter it as the value of Issuer-URL in the preceding table.

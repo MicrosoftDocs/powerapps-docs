@@ -16,7 +16,7 @@ In this article, learn about the common scenarios, or the FAQs when using an aut
 
 ## Do I require OpenId Connect Auto-Discovery Document to integrate with portals?
 
-Yes. Auto-Discovery Document (commonly known as `/.well-known/openid-configuration`) is required in order to integrate with portals. Information present in this document is used by portals to create authorization requests, and validate the authentication tokens.
+Yes. Auto-Discovery Document (commonly known as `/.well-known/openid-configuration`) is required to integrate with portals. Information present in this document is used by portals to create authorization requests, and validate the authentication tokens.
 
 If your identity provider (IDP) doesn’t provide this document, you can create it manually, and host it at any public location (including your portal).
 
@@ -34,7 +34,7 @@ The following optional parameters are supported:
 
 ## Does portals support custom scope parameter(s) in authentication requests?
 
-Yes. These parameter(s) can be specified using scope option in configuration.
+Yes. Custom scope parameter(s) can be specified using scope option in configuration.
 
 ## Why does the username value in contact, or external identity record in Common Data Service, show a different value compared to what the user entered on the sign-in page?
 
@@ -42,7 +42,7 @@ Username field on contact record, and externally identity record, will show the 
 
 ## Does portals support logout from OpenId Connect-based provider?
 
-Yes. Portal supports front channel logout technique to logout from both the application, and the OpenId Connect-based providers.
+Yes. Portal supports front channel logout technique to log out from both the application, and the OpenId Connect-based providers.
 
 ## Does portals support Single Logout (SLO)?
 
@@ -50,7 +50,7 @@ No. Portals doesn't support single logout technique for OpenID Connect-based pro
 
 ## Does portals require any specific claim in *id_token*?
 
-In addition to all the required claims, portals requires a claim representing email address of the users in the *id_token*. This claim must be named as either “email”, “emails” or “upn”.
+Apart from all the required claims, portals requires a claim representing email address of the users in the *id_token*. This claim must be named as either “email”, “emails” or “upn”.
 
 These claims are processed at in the following order of priority to set as the *Primary Email Address* of the contact record in Common Data Service:
 
@@ -71,3 +71,7 @@ For example, Azure AD provides [MSAL library](https://docs.microsoft.com/azure/a
 ## Can I use a custom OpenId Connect provider, instead of Azure AD?
 
 Yes. Portals supports any OpenID Connect provider that supports the standard OpenID Connect protocol.
+
+### See also
+
+[Configure the Open ID Connect provider for portals](configure-openid-provider.md)

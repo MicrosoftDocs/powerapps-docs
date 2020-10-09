@@ -20,7 +20,7 @@ To configure the additional settings for any OAuth 2.0 identity provider, select
 
 - **Authentication type** - The OWIN authentication middleware type. <br> Example: `https://sts.windows.net/contoso.onmicrosoft.com/`
 - **Authentication mode** - The OWIN authentication middleware mode.
-- **Backchannel timeout** - Timeout value in milliseconds for back-channel communications: MicrosoftAccountAuthenticationOptions.BackchannelTimeout.
+- **Backchannel timeout** - Time out value in milliseconds for back-channel communications: MicrosoftAccountAuthenticationOptions.BackchannelTimeout.
 - **Callback path** - The request path within the application's base path where the user-agent will be returned: MicrosoftAccountAuthenticationOptions.CallbackPath.​
 - **Sign in As authentication type** - The name of another authentication middleware that will be responsible for actually issuing a user Claims Identity: MicrosoftAccountAuthenticationOptions.SignInAsAuthenticationType.​
 - **Scope** - A comma-separated list of permissions to request: MicrosoftAccountAuthenticationOptions.Scope.​

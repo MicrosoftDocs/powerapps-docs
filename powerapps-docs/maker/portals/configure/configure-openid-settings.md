@@ -51,7 +51,7 @@ To configure OpenID Connect provider with Azure AD:
 
     1. Enter a name.
 
-    1. If required, select a different **Supported account type**. More information: [Supported account types](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
+    1. If necessary, select a different **Supported account type**. More information: [Supported account types](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
 
     1. If not already, select **Web** for **Redirect URI**.
 
