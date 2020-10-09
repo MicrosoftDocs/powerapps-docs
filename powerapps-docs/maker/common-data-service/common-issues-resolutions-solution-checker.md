@@ -221,7 +221,7 @@ Reference [KB Article #4337537: Invalid Export - Business Process Entity Missing
 
 ## Solution checker fails to export solutions with model-driven app components
 
-If a solution contains a model-driven app, Solution Checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to model-friven apps, any solutions containing them will fail to export with solution checker.
+If a solution contains a model-driven app, Solution Checker might fail to export the solution for analysis. This error is caused by role-based security for sharing of apps. If the Power Apps Checker application user does not have appropriate access to model-driven apps, any solutions containing them will fail to export with solution checker.
 
 To resolve this issue, grant the **Environment Maker** security role to the Power Apps Checker application user.
 
