@@ -96,7 +96,7 @@ To configure OpenID Connect provider with Azure AD:
         
         1. Select **Endpoints**.
         
-            ![Endpoints](media/authentication/endpoints.png "Endpoints")
+            ![Endpoints in Azure portal](media/authentication/endpoints.png "Endpoints in Azure portal")
 
         1. Copy the **OpenID Connect metadata document**.
 
@@ -144,3 +144,7 @@ You can create or configure the additional **Issue Filter** site setting in port
 |Site Setting Name    |Description   |
 |---|---|
 |Authentication/OpenIdConnect/[provider]/IssuerFilter   | A wildcard-based filter that matches on all issuers across all tenants. <br> Example: `https://sts.windows.net/*/`   |
+
+### See also
+
+- [Frequently Asked Questions (FAQs) when using OpenID Connect in portals](configure-openid-faqs.md)

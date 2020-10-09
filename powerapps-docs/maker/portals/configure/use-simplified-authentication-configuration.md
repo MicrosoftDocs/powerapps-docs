@@ -167,6 +167,9 @@ If you delete and recreate your portal, the users may receive the following erro
 
 ### See also
 
-- [Set authentication identity for a portal](set-authentication-identity.md)
-- [Configure Azure AD B2C provider settings](azure-ad-b2c.md)
-- [Configure OAuth2 provider settings](configure-oauth2-settings.md)
+- [Configure Azure AD B2C](configure-azure-ad-b2c-provider.md)
+- [Configure different OAuth 2.0 providers](configure-oauth2-provider.md)
+- [Configure OpenID Connect provider](configure-openid-provider.md)
+- [Configure SAML 2.0 provider](configure-saml2-provider.md)
+- [Configure WS-FED provider](configure-ws-federation-provider.md)
+- [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)

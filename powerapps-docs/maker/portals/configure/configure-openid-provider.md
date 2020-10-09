@@ -110,9 +110,6 @@ To configure OpenID Connect provider:
 1. Select **Confirm**.
 
 ### See also
-[Configure portal authentication](configure-portal-authentication.md)  
-[Set authentication identity for a portal](set-authentication-identity.md)  
-[OAuth2 provider settings for portals](configure-oauth2-settings.md)  
-[WS-Federation provider settings for portals](configure-ws-federation-settings.md)  
-[SAML 2.0 provider settings for portals](configure-saml2-settings.md)  
 
+- [Example: Configure OpenID Connect for portals with Azure Active Directory](configure-openid-settings.md)
+- [Frequently Asked Questions (FAQs) when using OpenID Connect in portals](configure-openid-faqs.md)

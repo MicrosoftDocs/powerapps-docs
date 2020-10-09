@@ -37,3 +37,9 @@ Portals requires "Persistent" Identifiers which ensures that the user can always
 ## Does portals requires any specific AuthNContextClass in SAML assertion request?
 
 Yes. Portals will specify *PasswordProtectedTransport* in authentication requests, and requires IDP to support it.
+
+### See also
+
+- [Example: Configure SAML 2.0 for portals with Azure Active Directory](configure-saml2-settings-azure-ad.md)
+- [Example: Configure SAML 2.0 provider for portals with AD FS](configure-saml2-settings.md)
+- [Configure SAML 2.0 provider for portals](configure-saml2-provider.md)

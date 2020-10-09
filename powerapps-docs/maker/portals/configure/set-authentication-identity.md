@@ -275,11 +275,15 @@ Settings for modifying the default authentication cookie behavior. Defined by th
 | Authentication/TwoFactorCookie/ExpireTimeSpan                            | Controls how much time the two-factor cookie will remain valid from the point it's created. <br> Default: `5` minutes |
 |||
 
+## Next steps
+
+[Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
+
 ### See also
 
-- [Configure portal authentication](configure-portal-authentication.md)  
-- [OAuth2 provider settings for portals](configure-oauth2-settings.md)  
-- [Open ID Connect provider settings for portals](configure-openid-settings.md)  
-- [WS-Federation provider settings for portals](configure-ws-federation-settings.md)  
-- [SAML 2.0 provider settings for portals](configure-saml2-settings.md)
+- [Overview of authentication in Power Apps portals](configure-portal-authentication.md)  
+- [Configure OAuth 2.0 providers for portals](configure-oauth2-provider.md)  
+- [Configure the Open ID Connect provider for portals](configure-openid-provider.md)  
+- [Configure SAML 2.0 provider for portals](configure-saml2-provider.md)
+- [Configure WS-Federation provider for portals](configure-ws-federation-provider.md)  
 - [Microsoft Learn: Power Apps portals authentication settings](https://docs.microsoft.com/learn/modules/authentication-user-management/2-authentication-settings)

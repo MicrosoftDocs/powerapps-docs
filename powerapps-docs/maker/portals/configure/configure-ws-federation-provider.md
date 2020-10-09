@@ -64,8 +64,5 @@ To configure SAML 2.0 provider:
 
 ### See also
 
-[Configure portal authentication](configure-portal-authentication.md)  
-[Set authentication identity for a portal](set-authentication-identity.md)  
-[OAuth2 provider settings for portals](configure-oauth2-settings.md)  
-[Open ID Connect provider settings for portals](configure-openid-settings.md)  
-[SAML 2.0 provider settings for portals](configure-saml2-settings.md)  
+- [Example: Configure WS-Federation for portals with Azure Active Directory](configure-ws-federation-settings-azure-ad.md)
+- [Example: Configure WS-Federation provider for a portal with AD FS](configure-ws-federation-settings.md)

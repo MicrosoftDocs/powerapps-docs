@@ -311,8 +311,6 @@ Add-CrmRelyingPartyTrust $domain
 
 ### See also
 
-[Configure portal authentication](configure-portal-authentication.md)  
-[Set authentication identity for a portal](set-authentication-identity.md)  
-[OAuth2 provider settings for portals](configure-oauth2-settings.md)  
-[Open ID Connect provider settings for portals](configure-openid-settings.md)  
-[WS-Federation provider settings for portals](configure-ws-federation-settings.md)  
+- [Example: Configure SAML 2.0 for portals with Azure Active Directory](configure-saml2-settings-azure-ad.md)
+- [Frequently Asked Questions (FAQs) when using SAML 2.0 in portals](configure-saml2-faqs.md)
+- [Configure SAML 2.0 provider for portals](configure-saml2-provider.md)
