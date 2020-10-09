@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 10/05/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -243,7 +243,7 @@ The facility sample data file is available in the package. When you want to impo
 
 ## Specify solution settings
 
-The overall solution requires certain configurations to be made to make sure that the user has the correct information. You can use solution settings to configure your own terms of agreement, health terms of agreement, and contact email. You can also use themes to tailor the experience to your company branding.
+The overall solution requires certain configurations to ensure that the user has the correct information. You can use solution settings to configure your own terms of agreement, health terms of agreement, and contact email, etc. You can also use themes to tailor the experience to your company branding.
 
 When setting up the solution, do the following:
 
@@ -253,7 +253,11 @@ When setting up the solution, do the following:
 
 ## Set solution settings
 
-With solution settings, you define the terms of agreement that are applicable to your company. Solution settings are linked to groups or to the entire organization, which makes it possible to differentiate them for individual facilities. One solution setting will act as the default and will be applicable for every facility, which will be the solution setting that has an empty group. To set solution settings:
+With solution settings, you define system settings unique to your company. Solution settings are linked to a facility group or to the entire organization, which makes it possible to differentiate them for facilities in that group. One solution setting will act as the default and will be applicable for every facility, which will be the solution setting record that has an empty facility group.
+
+Some of these settings have impact on the Employee app. The solution setting record that applies, is found by matching the facility group of the default facility of that user to settings. If no record is found or the user has no default facility set, the default solution settings record is used.
+
+To set solution settings:
 
 1. Select **Solution Settings** in the left pane, and then select **New**.
 
@@ -264,6 +268,71 @@ With solution settings, you define the terms of agreement that are applicable to
 
    > [!div class="mx-imgBorder"]
    > ![Solution settings form](media/solution-admin-new-setting.png "Solution settings form")
+
+   
+   | **Field**              | **Description**                                |
+   |------------------------|------------------------------------------------|
+   | Name | Name of the solution settings record. |
+   | Facility Group | Applicable facility group, leave empty for default. |
+   | Company Name |Name of the company for solution settings. |
+   | Allow Employee Sentiment | Capture employee sentiment information in the Employee app. |
+   | Allow storing of Negative Attestations | When disabled, negative attestations registered in the Employee app are not stored. |
+   | Allow QR codes | Enables QR code on the pass in the Employee app.  |
+   | Allow Guest Registrations | Enables employees to register guest on their bookings in the Employee app.  |
+   | Allow Share Guest Registrations | Enables employees to share passes with guests. |
+   | Health & Safety email | E-mail address shown when the employee doesn't attest to Health & Safety Instructions in the Employee app.   |
+   | Health & Safety Instructions | General instruction provided to employee in the Employee app when access is blocked by the case manager. |
+   | General Terms & Agreement | Showed in the Employee app during the booking process. |
+   | Health Terms & Agreement | Showed in the Employee app during the booking process. |
+   |||
+
+3. On the **Guest** tab, add values for the guest-related settings.
+
+   > [!div class="mx-imgBorder"]
+   > ![Solution settings guest tab](media/solution-admin-guest-setting.png "Solution settings guest tab")
+
+   | **Field**              | **Description**                                |
+   |------------------------|------------------------------------------------|
+   | Guest Health Terms & Agreement | Showed in the Employee app during the guest registration process.|
+   | Guest Privacy Terms & Agreement | Showed in the Employee app during the guest registration process. |
+   |||
+
+## Set duplicate detection rules for employee cases 
+
+For active employee cases, the number of cases can be limited to one active case per employee. When you want to enable this, you need to create a **Duplicate rule**. 
+
+1. Go to [Power Platform Admin Center](https://admin.powerplatform.microsoft.com).
+
+2. Select the environment in which the app is located.
+
+3. On the command box, select **Settings**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Environment Settings](media/solution-environmnet-setting.png "Environment Settings")
+
+4. Expand **Data Management** and then select **Duplicate detection rules**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Data Management](media/solution-data-management.png "Data Management")
+
+5. Select **New** and enter appropriate values in the fields: 
+
+   | **Field**   | **Description**                     |
+   |-------------|-------------------------------------|
+   | Name        | Enter a name for the rule.     |
+   | Base Record Type | Select employee cases. |
+   | Matching Record Type | Select employee cases. |
+   | Field | Select employee. |
+   | Criteria | Select exact match. |
+
+   Select the **Exclude inactive matching records** check box.
+
+   > [!div class="mx-imgBorder"]
+   > ![Pop up](media/solution-pop-up-rule.png "Pop up")
+
+6. Select **Save and Close**.
+
+7. Select the newly created rule from the list of rules and then select **Publish**.
 
 ## Define a theme
 
@@ -289,7 +358,7 @@ You can use a theme to enhance the user experience.
    > [!div class="mx-imgBorder"]
    > ![Theme color](media/deploy-theme-colors.png "Theme color")
    
-## Contoso Sample Data
+## Contoso sample data
 
 To try out the solution, when installing the Return to the Workplace solution, Contoso sample data is installed with it. This sample data includes data around the entities listed below. Advised is to import or create your own data for these entities.
 
@@ -309,6 +378,10 @@ This flow will loop over all the facilities and randomly move a facility one pha
 
 This flow mimics employees using the app. It will create a booking, attestation, and sentiment record for the current day for each active employee. Prerequisites: Employees record should be active, have a default facility assigned and an assigned area that is part of that default facility.
 
+- Sample Data - Guest Registrations
+
+This flow adds five guests to bookings created by the flow. Each booking receives one guest. This flow creates a new contact record for each guest every time it triggers.
+
 - Sample Data - Create and update employee cases
 
 This flow runs twice a day and randomly moves cases one step forward through the process. For each employee, a case is created if none exists. If a case exists, it is moved forward one step in the process. If the case reaches the **Resolved** stage, it will be closed. When moving from opening to investigation, it creates a linked case facility record based on the employees' default facility. Prerequisites: Employees records should be in active state and have a default facility selected.
@@ -319,7 +392,7 @@ This flow runs twice a day and creates a visit record for each employee for thei
 
 ## Bulk record deletion
 
-Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period.
+Due to privacy regulations, we strongly recommend that you create bulk record-delete jobs to delete personal data after a certain period. Also to reduce storage, you can delete deactivated share guest registrations or employee attestations after a certain period of time.
 
 **To create bulk record-delete jobs**
 
@@ -328,7 +401,7 @@ Due to privacy regulations, we strongly recommend that you create bulk record-de
 2.	Under **Data Management**, select **Bulk record deletion**.
 
    > [!div class="mx-imgBorder"]
-   > ![Data Management](media/solution-admin-dm.png "Data Management")
+   > ![Data Management admin](media/solution-admin-dm.png "Data Management admin")
 
 3.	Select **New**.
 
