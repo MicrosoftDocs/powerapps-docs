@@ -19,6 +19,9 @@ search.app:
 
 [!INCLUDE[./includes/setBodyVisible-description.md](./includes/setBodyVisible-description.md)]
 
+> [!NOTE]
+> This method is supported only on Unified Interface.
+
 ## Syntax
 
 `formContext.ui.headerSection.setBodyVisible(bool);`

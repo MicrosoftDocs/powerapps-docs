@@ -19,6 +19,9 @@ search.app:
 
 [!INCLUDE[./includes/setTabNavigatorVisible-description.md](./includes/setTabNavigatorVisible-description.md)]
 
+> [!NOTE]
+> This method is supported only on Unified Interface.
+
 ## Syntax
 
 `formContext.ui.headerSection.setTabNavigatorVisible(bool);`

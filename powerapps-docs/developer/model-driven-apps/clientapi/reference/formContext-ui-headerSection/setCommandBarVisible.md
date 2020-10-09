@@ -19,6 +19,9 @@ search.app:
 
 [!INCLUDE[./includes/setCommandBarVisible-description.md](./includes/setCommandBarVisible-description.md)]
 
+> [!NOTE]
+> This method is supported only on Unified Interface.
+
 ## Syntax
 
 `formContext.ui.headerSection.setCommandBarVisible(bool);`

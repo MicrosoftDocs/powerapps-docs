@@ -19,7 +19,7 @@ search.app:
 [!INCLUDE[./includes/getContentType-description.md](./includes/getContentType-description.md)] 
 
 > [!NOTE]
-> This method is supported only on the Unified Interface.
+> This method is supported only on Unified Interface.
 
 ## Syntax
 
