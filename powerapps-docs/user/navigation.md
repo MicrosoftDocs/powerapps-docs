@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 08/20/2020
+ms.date: 10/2/2020
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -95,7 +95,7 @@ Usually, when you first open an entity, you'll see the list view, which shows a 
 Legend:
 
 1. **Go back** (For early access): Select to go back to the previous page.
-2. **Select records**: Select one or more records by placing a check mark in this column. Depending on where you're working, you might be able to apply a single operation to all the selected records at once by using buttons in the command bar.
+2. **Select records**: Select one or more records by placing a check mark in this column. Depending on where you're working, you might be able to apply a single operation to all the selected records at once by using buttons in the command bar. Note, when you use the **Email a link** command on the command bar you can only select up to ten records to send via email. 
 3. **Open a record**: Select any record in the list to open its record view, which shows all the details about the record. Usually you select from the **Name** column to open a record from the current entity. Some entities provide links to records from related entities in other columns (such as a related contact).
 4. **Sort or filter the list**: Select to sort the list by values in that column or filter the list by values in that column. An arrow in the column heading indicates which column is being sorted and in which direction. 
 5. **Open advanced filtering panel**: See which filters are applied to the current view and add or modify view filters.
@@ -122,6 +122,8 @@ When you choose an entity name from the **Related** drop-down list, a new tab na
 ## Record set navigation 
 
 Navigate through multiple records by using preset views and queries. The record-focused navigation improves productivity by allowing users to jump from record to record in the list and easily navigate back without losing their working list.
+
+The number of records that you see in the record set navigation pane is based on the number of rows that your system administrator has defined for the subgrid.
 
 **Current**
 

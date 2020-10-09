@@ -1,13 +1,13 @@
 ---
 title: Use Teams integration object | Microsoft Docs
 description: Learn how to use the Teams integration object when creating apps using Power Apps inside Teams.
-author: tapanm-msft
+author: navjotm
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 09/25/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.author: namarwah
+ms.reviewer: tapanm
 ---
 
 # Microsoft Teams integration object

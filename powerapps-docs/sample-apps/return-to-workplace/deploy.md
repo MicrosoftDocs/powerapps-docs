@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 10/05/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -186,7 +186,7 @@ The facility manager Power BI dashboard is used in the model-driven app. Because
 
    From the displayed `Secure embed code` window, capture the content of the link in the first field up to the end of the `PowerBIReportID` (as shown in the example code). 
 
-    See the article https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import and verify if the changes that you made to the XML file apply as in the example. 
+    See the article [Embed Power BI report](https://docs.microsoft.com/powerapps/maker/model-driven-apps/embed-powerbi-report-in-system-form#remove-unmodified-attribute-before-import) and verify if the changes that you made to the XML file apply as in the example. 
 
 6. **Save** the XML file with the modifications you made and zip the files in the folder again. Now you have a .zip file with three files in it, including the updated customizations.xml file.  
 
@@ -244,7 +244,10 @@ You can change the look and feel of the app by applying themes to match your com
    > [!div class="mx-imgBorder"]
    > ![Share app](media/deploy-share-app.png "Share app")
 
-5. Select users from the list of available users with whom you want to share the app.
+5. Select users from the list of available users or groups with whom you want to share the app.
+
+   > [!IMPORTANT]
+   > Even if the user has access to the canvas app, you should still need to assign users with the **Return to the Workplace - Employee** security role. 
 
 ## Step 8: Set the security roles
 
@@ -257,6 +260,9 @@ In the Return to the Workplace solution, the following security roles are define
 - Return to the Workplace - Leadership, which is used to view details over the entire system.
 
 - Return to the Workplace - Health & Safety Leader, which is used to manage employee cases.
+
+> [!IMPORTANT]
+> These security roles are indicative. They provide broad access for test and demonstration purpose. Review these roles carefully before moving to a production environment or when importing sensitive data.
 
 **To assign security roles**
 
@@ -280,7 +286,30 @@ In the Return to the Workplace solution, the following security roles are define
    > [!div class="mx-imgBorder"]
    > ![Select roles](media/deploy-settings-security-enabled-users.png "Select roles")
    
+
+   > [!NOTE]
+   > When you want to assign security roles in bulk, you can use teams privileges. Teams privileges which are based on Azure Active Directory security groups or Office365 groups, can assign security roles based on the organization. More information: [Manage teams](https://docs.microsoft.com/power-platform/admin/manage-teams). When applying teams privileges based on Azure Active Directory security groups or Office365 groups, you need change the user and team privileges in the security roles to **Direct User/Basic access level and Team privileges**. More information: [Security roles](https://docs.microsoft.com/power-platform/admin/security-roles-privileges#team-members-privilege-inheritance)
+   
+## Step 9: Enable flows
+
+1. Sign in to [Power Apps](https://make.powerapps.com). Select the **Environment** from the upper-right corner.
+
+2. On the left pane, select **Solutions**.
+
+3. Select the **Return to the Workplace** from the list of solutions.
+
+4. Select the **Share Guest Registration - Email** solution and then select **Save as**.  Connect the flow with **Common Data Service (current environment)** and **Office 365 Outlook** connector and then select **continue**. After that enter name for the flow and select **save**.
+
+5. Select **My Flows** on the left, after selecting **Share Guest Registration - Email**, select **Turn on**. Validate whether the flow is turned on, to ensure that it can be used. Additionally, flow should be shared with others to prevent issues with people who aren't allowed to enter it.
+
+   > [!NOTE]
+   > The connection used for **Office 365 Outlook** is the email address used to send emails to guests. Use a service account for sending generic emails or use a shared mailbox. 
+
+   
 ## Appendix: Deploy the app and publish Power BI dashboard (US Government customers only)
+
+> [!NOTE]
+> There are notable differences between the commercially available service and the service for Dynamics 365 U.S. Government. Review these differences thoroughly before deciding in which environment to implement. More details: [Dynamics 365 US Government - Feature availability](https://docs.microsoft.com/power-platform/admin/government-feature-availability)
 
 This section provides information for US Government customers about how to install the app and publish the Power BI dashboard using the deployment package.
 
