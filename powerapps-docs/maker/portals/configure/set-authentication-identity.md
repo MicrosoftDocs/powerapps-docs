@@ -1,6 +1,6 @@
 ---
-title: "Set local authentication identity for a portal  | MicrosoftDocs"
-description: "Instructions to set local authentication identity for a portal."
+title: "Use local authentication in Power Apps portals.  | MicrosoftDocs"
+description: "Instructions to use local authentication in Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,7 +10,7 @@ ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Set local authentication for a portal
+# Use local authentication for a portal
 
 > [!IMPORTANT]
 > - We recommended that you use [Azure AD B2C](configure-azure-ad-b2c-provider.md) identity provider for authentication, and deprecate local identity provider for your portal. To learn about migrating to Azure AD B2C identity provider, go to [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md).

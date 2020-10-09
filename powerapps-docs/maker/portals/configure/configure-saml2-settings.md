@@ -1,16 +1,16 @@
 ---
-title: "Configure SAML 2.0 provider settings for a portal | MicrosoftDocs"
-description: "Instructions to add and configure SAML 2.0 provider settings for a portal."
+title: "Configure SAML 2.0 provider for portals with AD FS. | MicrosoftDocs"
+description: "Instructions to configure SAML 2.0 provider for portals with AD FS."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/18/2019
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# AD FS (IdP)
+# Configure SAML 2.0 provider for portals with AD FS
 
 Settings for an identity provider such as [!include[](../../../includes/pn-active-dir-fed-svcs-ad-fs.md)].
 

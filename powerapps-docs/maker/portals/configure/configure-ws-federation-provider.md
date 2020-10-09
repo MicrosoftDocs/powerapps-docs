@@ -1,16 +1,16 @@
 ---
-title: "Configure WS-Federation provider settings for a portal  | MicrosoftDocs"
-description: "Instructions to add and configure WS-Federation provider settings for a portal."
+title: "Configure WS-Federation provider for Power Apps portals.  | MicrosoftDocs"
+description: "Instructions to configure WS-Federation provider for Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/18/2019
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure WS-Federation provider settings for portals
+# Configure WS-Federation provider for portals
 
 A single [!INCLUDE[pn-active-directory](../../../includes/pn-active-directory.md)] Federation Services server can be added (or another WS-Federation–compliant security token service) as an identity provider. In addition, a single [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] ACS](https://azure.microsoft.com/documentation/articles/active-directory-dotnet-how-to-use-access-control/) namespace can be configured as a set of individual identity providers. The settings for both AD FS and ACS are based on the properties of the WsFederationAuthenticationOptions class.
 

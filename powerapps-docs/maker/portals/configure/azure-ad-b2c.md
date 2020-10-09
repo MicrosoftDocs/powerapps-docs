@@ -1,16 +1,16 @@
 ---
-title: "Azure AD B2C provider settings for portals | MicrosoftDocs"
-description: "Instructions to enable Azure AD B2C provider settings for portals."
+title: "Customize the Azure AD B2C user interface for portals. | MicrosoftDocs"
+description: "Instructions to customize the Azure AD B2C user interface for portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/02/2020
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Customize the [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C user interface
+# Customize the Azure AD B2C user interface for portals
 
 [!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C supports user interface customization. You can customize the user experience for sign-up and sign-in scenarios.
 

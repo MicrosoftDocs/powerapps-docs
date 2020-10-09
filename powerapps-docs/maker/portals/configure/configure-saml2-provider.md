@@ -1,16 +1,16 @@
 ---
-title: "Configure SAML 2.0 provider settings for a portal | MicrosoftDocs"
-description: "Instructions to add and configure SAML 2.0 provider settings for a portal."
+title: "Configure SAML 2.0 provider for Power Apps portals. | MicrosoftDocs"
+description: "Instructions to configure SAML 2.0 provider for Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/18/2019
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure SAML 2.0 provider settings for portals
+# Configure SAML 2.0 provider for portals
 
 To provide external authentication, you can add one or more [SAML 2.0](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html)–compliant identity providers (IdP). This document describes how to set up various identity providers to integrate with a portal that acts as a service provider.  
 

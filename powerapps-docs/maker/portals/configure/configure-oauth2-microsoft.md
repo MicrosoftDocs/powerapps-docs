@@ -5,12 +5,12 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 07/29/2020
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Configure the Microsoft provider
+# Configure the Microsoft provider for portals
 
 As explained in the [OAuth 2.0 providers in portals](configure-oauth2-provider.md) article, Microsoft is one of the several identity providers using the OAuth 2.0 protocol. To get started with configuring Microsoft as the identity provider, select **Configure** from [provider settings](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) page.
 
