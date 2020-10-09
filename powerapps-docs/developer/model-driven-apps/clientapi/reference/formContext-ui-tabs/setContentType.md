@@ -18,17 +18,20 @@ search.app:
 
 [!INCLUDE[./includes/setContentType-description.md](./includes/setContentType-description.md)] 
 
+> [!NOTE]
+> This method is supported only on the Unified Interface.
+
 ## Syntax
 
-`formContext.ui.tabs.get(tab-name).setContentType(expandAvailableSpace);`
+`tabObj.setContentType(contentType);`
 
 ## Parameter
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|expandAvailableSpace|String|Yes| The first visible component of the form is maximized to fill the whole space allocated to the form.|
+|contentType|String|Yes| Defines the content type. It has the following parameters: <br/> - **cardSection**: The default tab behavior. <br/> - **singleComponent**: Maximizes the content of the first custom component. |
 ||||
 
 ### Related topics
 
-[formContext.ui.tabs](../formContext-ui-tabs.md)
+[getContentType](getContentType.md)

@@ -23,6 +23,7 @@ Provides information on how to set the visibility of footer section.
 
 |Name|Description|
 |--|--|
+|[getVisible](formContext-ui-footerSection/getVisible.md)|[!INCLUDE[formContext-ui-footerSection/includes/getVisible-description.md](formContext-ui-footerSection/includes/getVisible-description.md)]|
 |[setVisible](formContext-ui-footerSection/setVisible.md)|[!INCLUDE[formContext-ui-footerSection/includes/setVisible-description.md](formContext-ui-footerSection/includes/setVisible-description.md)]|
 |||
 

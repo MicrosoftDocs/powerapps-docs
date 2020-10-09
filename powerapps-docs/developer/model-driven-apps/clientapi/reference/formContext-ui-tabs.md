@@ -36,6 +36,7 @@ var tabObj = formContext.ui.tabs.get(arg);
 |Name | Description |
 |--|--|
 |[addTabStateChange](formcontext-ui-tabs/addTabStateChange.md)|[!INCLUDE[formcontext-ui-tabs/includes/addTabStateChange-description.md](formcontext-ui-tabs/includes/addTabStateChange-description.md)]|
+|[getContentType](formcontext-ui-tabs/getContentType.md)|[!INCLUDE[formcontext-ui-tabs/includes/getContentType-description.md](formcontext-ui-tabs/includes/getContentType-description.md)]|
 |[getDisplayState](formcontext-ui-tabs/getDisplayState.md)|[!INCLUDE[formcontext-ui-tabs/includes/getDisplayState-description.md](formcontext-ui-tabs/includes/getDisplayState-description.md)]|
 |[getLabel](formcontext-ui-tabs/getLabel.md)|[!INCLUDE[formcontext-ui-tabs/includes/getLabel-description.md](formcontext-ui-tabs/includes/getLabel-description.md)]|
 |[getName](formcontext-ui-tabs/getName.md)|[!INCLUDE[formcontext-ui-tabs/includes/getName-description.md](formcontext-ui-tabs/includes/getName-description.md)]|
