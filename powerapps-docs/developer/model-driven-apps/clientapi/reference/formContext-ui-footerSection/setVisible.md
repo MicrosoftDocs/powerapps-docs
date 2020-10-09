@@ -19,6 +19,9 @@ search.app:
 
 [!INCLUDE[./includes/setVisible-description.md](./includes/setVisible-description.md)]
 
+> [!NOTE]
+> This method is supported only on the Unified Interface.
+
 ## Syntax
 
 `formContext.ui.footerSection.setVisible(bool);`

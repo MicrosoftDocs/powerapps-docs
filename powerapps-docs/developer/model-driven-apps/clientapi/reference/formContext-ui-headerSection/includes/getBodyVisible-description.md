@@ -1,0 +1,1 @@
+Gets the header's body visibility.

@@ -1,0 +1,1 @@
+Gets the tab navigator visibility.
