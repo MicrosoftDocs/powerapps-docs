@@ -1347,6 +1347,8 @@
           href: ./portals/admin/migrate-portal-configuration.md
         - name: About portal lifecycle
           href: ./portals/admin/portal-lifecycle.md
+        - name: Update portal solution
+          href: ./portals/admin/power-platform-admin-center.md#update-the-power-apps-portal-solution
         - name: Upgrade a portal
           href: ./portals/admin/upgrade-portal.md
         - name: Cookies used by portal
@@ -1725,7 +1727,7 @@
           href: ./common-data-service/view-component-dependencies.md
         - name: Use environment variables
           href: ./common-data-service/EnvironmentVariables.md
-        - name: Create a connection reference
+        - name: Use a connection reference
           href: ./common-data-service/create-connection-reference.md  
         - name: Translate customized component text
           items:
