@@ -1,6 +1,6 @@
 ---
 title: "Details about different security roles required to administer Power Apps portals with specific actions. | MicrosoftDocs"
-description: "Learn about the available security roles, admin roles and other permissions that are required to administer Power Apps portals."
+description: "Learn about the available security roles, admin roles, and other permissions that are required to administer Power Apps portals."
 author: neerajnandwana-msft
 ms.service: powerapps
 ms.topic: conceptual
@@ -10,11 +10,11 @@ ms.author: nenandw
 ms.reviewer: tapanm
 ---
 
-# Admin roles for portal administrative tasks
+# Admin roles required for portal administrative tasks
 
 Power Apps portals has a variety of administrative tasks that can be performed by the members of different roles. The admin and security roles required to perform these tasks vary depending on the impact area. 
 
-For example, some tasks may require the user to be a member of admin roles in [Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide), and others may need membership to security roles in [Power Platform environment](https://docs.microsoft.com/power-platform/admin/database-security). 
+For example, some tasks may require the user to be a member of admin roles in [Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true), and others may need membership to security roles in [Power Platform environment](https://docs.microsoft.com/power-platform/admin/database-security). 
 
 In this article, you'll learn about the role memberships required for a user to have the ability to perform specific administrative tasks for portals.
 
@@ -42,9 +42,9 @@ For example, to be able to download the public key of a portal, a user needs to 
 
 Global admin is a Microsoft 365 admin role. A person who purchases the Microsoft business subscription is a global admin. A global admin has unlimited control over products in the subscription and access to most data. 
 
-To assign a user the global admin role, read [Assign admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide). 
+To assign a user the global admin role, read [Assign admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/assign-admin-roles?view=o365-worldwide&preserve-view=true). 
 
-More information: [About admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide)
+More information: [About admin roles in Microsoft 365](https://docs.microsoft.com/microsoft-365/admin/add-users/about-admin-roles?view=o365-worldwide&preserve-view=true)
 
 ### Dynamics 365 administrator
 
