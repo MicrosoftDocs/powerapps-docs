@@ -12,7 +12,7 @@ applies_to:
 ms.assetid: fc3ade34-9c4e-4c33-88a4-aa3842c5eee1
 caps.latest.revision: 78
 author: "MitiJ"
-ms.author: "Miti.Joshi"
+ms.author: "mijosh"
 ms.reviewer: "pehecke"
 manager: "mayadumesh"
 search.audienceType: 
@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# Search for entity data using relevance search
+# Search entity data using relevance search
 
 Relevance search delivers fast and comprehensive search results across multiple
 entities, in a single list, sorted by relevance. Relevance search must be
@@ -57,18 +57,18 @@ The minimum syntax of a relevance search HTTP request is as shown below.
 ```http
 POST [Organization URI]/api/search/v1.0/query
 {  
-“search”: “\<search term\>”
+  “search”: “<search term>”
 }
 ```
 
-The search parameter value contains the terms to be searched and has a
+The search parameter value contains the term to be searched for and has a
 100-character limit.
 
 A successful search response returns an HTTP status of 200 and consists of:
 
 - Value: a list of entities. By default, 50 results are returned. This also
     includes search highlights, which indicate matches to the search parameter
-    value contained within the crmhit tag.
+    value contained within the `crmhit` tag.
 
 - Totalrecordcount: The total count of results (of type long). A value of -1
     is returned if returntotalrecordcount set to false (default).
@@ -102,8 +102,8 @@ POST [Organization URI]/api/search/v1.0/query
 “facets”: ["\@search.entityname,count:100",  
   "account.primarycontactid,count:100",  
   "ownerid,count:100",  
-  "modifiedon,values:2019-04-27T00:00:00\|2020-03-27T00:00:00\|2020-04-20T00:00:00\|2020-04-27T00:00:00",
-  "createdon,values:2019-04-27T00:00:00\|2020-03-27T00:00:00\|2020-04-20T00:00:00\|2020-04-27T00:00:00"]
+  "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00\|2020-04-20T00:00:00|2020-04-27T00:00:00",
+  "createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00\|2020-04-20T00:00:00|2020-04-27T00:00:00"]
 }
 ```
 
@@ -119,16 +119,16 @@ POST [Organization URI]/api/search/v1.0/query
 
 “filter”: "account:modifiedon ge 2020-04-27T00:00:00,
 
-activities: regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account',
+  activities: regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account',
 
-incident: (prioritycode eq 1 or prioritycode eq 2)"
+  incident: (prioritycode eq 1 or prioritycode eq 2)"
 }
 ```
 
 **returntotalrecordcount = true \| false (optional)**
 
-Specify **true** to return the total record count; otherwise false. The default
-is false.
+Specify **true** to return the total record count; otherwise **false**. The default
+is **false**.
 
 **skip=[int] (optional)**
 
@@ -150,6 +150,9 @@ precedence.
 Specifies whether any or all the search terms must be matched to count the
 document as a match. The default is 'any'.
 
+> [!NOTE]
+> The `searchMode` parameter on a query request controls whether a term with the NOT operator is AND'ed or OR'ed with other terms in the query (assuming there is no + or | operator on the other terms).<p/> Using `searchMode=any` increases the recall of queries by including more results, and by default, will be interpreted as "OR NOT". For example, "wifi -luxury" will match documents that either contain the term "wifi" or those that do not contain the term "luxury".<p/>Using `searchMode=all` increases the precision of queries by including fewer results, and by default, will be interpreted as "AND NOT". For example, "wifi -luxury" will match documents that contain the term "wifi" and do not contain the term "luxury".
+
 **searchtype= simple \| full (optional)**
 
 The search type specifies the syntax of a search query. Using 'simple' selects
@@ -158,49 +161,24 @@ simple query syntax and 'full' selects Lucene query syntax. The default is
 
 The simple query syntax supports the following functionality:
 
-| **Functionality**    | **Description**                                                                                                       |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------|
-| Boolean operators    | AND operator; denoted by +                                                                                            |
-| Precedence operators | A hotel+(wifi \| luxury) will search for results containing the term “hotel” and either “wifi” or “luxury” (or both). |
-| Wildcards            | Trailing wildcard are supported. Example: Alp\* searches for alpine                                                   |
-| Exact matches        | A query enclosed in quotation marks “ “.                                                                              |
-
-- OR operator; denoted by \|
-
-- NOT operator; denoted by -
+| **Functionality** | **Description** |
+|---|---|
+| Boolean operators | AND operator; denoted by +<br/>OR operator; denoted by \|<br/>NOT operator; denoted by \- |
+| Precedence operators | A search term "hotel+(wifi \| luxury)" will search for results containing the term “hotel” and either “wifi” or “luxury” (or both). |
+| Wildcards            | Trailing wildcard are supported. For example, "Alp\*" searches for "alpine". |
+| Exact matches        | A query enclosed in quotation marks “ “.|
 
 The Lucene query syntax supports the following functionality:
 
-| **Functionality**                 | **Description**                                                                             |
-|-----------------------------------|---------------------------------------------------------------------------------------------|
-| Boolean operators                 | Provides an expanded set compared to simple query syntax.                                   |
-| Precedence operators              | The same functionality as simple query syntax.                                              |
-| Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.                       |
-| Fuzzy search                      | Supports queries misspelled by up to 2 characters.                                          |
-| Term boosting                     | Weighs specific terms in a query differently.                                               |
-| Proximity search                  | Returns results where terms are within X words of each other - for more contextual results. |
-| Regular expression (regex) search | For example: /[mh]otel/ matches “motel” or “hotel”.                                         |
-
-- AND operator; denoted by AND, &&, +
-
-- OR operator; denoted by OR, \|\|
-
-- NOT operator; denoted by NOT, !, –
-
-- Trailing wildcard – alp\*
-
-- Leading wildcard - \*ine
-
-- “Uniersty\~” will return “University”
-
-- “Blue\~1” will return “glue”, “blues”
-
-- “Rock\^2 electronic” will return results where the matches of “rock” are
-    more important than matches to “electronic”.
-
-- For example: “airport hotel”\~5 returns results where “airport” and “hotel”
-    are within 5 words of each other, thus boosting the chances of finding a
-    hotel located close to an airport.
+| **Functionality** | **Description** |
+|---|---|
+| Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, &&, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
+| Precedence operators              | The same functionality as simple query syntax. |
+| Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – alp\*<br/>Leading wildcard - \*ine |
+| Fuzzy search                      | Supports queries misspelled by up to 2 characters.<br/>“Uniersty\~” will return “University”<br/>“Blue\~1” will return “glue”, “blues” |
+| Term boosting                     | Weighs specific terms in a query differently.<br/>“Rock\^2 electronic” will return results where the matches of “rock” are more important than matches to “electronic”. |
+| Proximity search                  | Returns results where terms are within X words of each other - for more contextual results.<br/>For example, “airport hotel”\~5 returns results where “airport” and “hotel” are within 5 words of each other, thus boosting the chances of finding a hotel located close to an airport. |
+| Regular expression (regex) search | For example, /\[mh\]otel/ matches “motel” or “hotel”. |
 
 ### Example 1
 
