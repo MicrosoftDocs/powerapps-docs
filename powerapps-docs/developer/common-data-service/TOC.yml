@@ -18,9 +18,9 @@
     href: custom-actions.md
     items:
     - name: Use Workflow Custom Actions with code
-    - href: workflow-custom-actions.md
+      href: workflow-custom-actions.md
     - name: Create and use Custom APIs (Preview)
-    - href: custom-api.md      
+      href: custom-api.md      
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
