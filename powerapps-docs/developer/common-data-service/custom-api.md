@@ -30,7 +30,7 @@ Because a Custom API requires a plug-in to implement any logic to be defined by 
 
 - Developing the plug-in first, and then define the Custom API for it.
 - Define the Custom API first, then write the plug-in to implement it.
-- 
+
 Your Custom API will be completed when the data defining the Custom API is saved and linked to the Plug-in type to define the main operation. In either case, you should understand the data that drives the Custom API.
 
 There are several different ways to create a custom API:
@@ -85,6 +85,7 @@ A parameter is related to a single Custom API. You cannot define multiple Custom
 If you define a bound entity or entity collection for your Custom API, the parameter will be generated for you. You don’t need to create a parameter for bound entities.
 
 This table includes attributes of the Custom API Request Parameter entity that you can set.
+
 |Display Name<br />Schema Name  |Type  |Description |
 |---------|---------|---------|
 |**Custom API Request Parameter**<br />`CustomAPIRequestParameterId`|Uniqueidentifier|Unique identifier for custom API request parameter instances.<br/>**Cannot be changed after it is saved.**|
@@ -108,6 +109,7 @@ This table includes attributes of the Custom API Request Parameter entity that y
 The object returned for your Custom API message will include any response properties you define. It is not required for a Custom API to return any value, but if the custom API is defined as a function it is expected.
 
 This table includes attributes of the Custom API Response Property entity that you can set.
+
 |Display Name<br />Schema Name  |Type  |Description |
 |---------|---------|---------|
 |**Custom API Response Property**<br />`CustomAPIResponsePropertyId`|Uniqueidentifier|Unique identifier for custom API response property instances.<br/>**Cannot be changed after it is saved.**|
