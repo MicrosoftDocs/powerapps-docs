@@ -30,7 +30,7 @@ enabled in your target environment by an administrator prior to using the
 feature.
 
 For more information about relevance search including instructions to enable the
-feature, see [Using relevance search to search for records](https://docs.microsoft.com/en-us/powerapps/user/relevance-search).
+feature, see [Using relevance search to search for records](https://docs.microsoft.com/powerapps/user/relevance-search).
 
 To begin using relevance search, your application simply issues an HTTP POST
 request (presently Web API only) to start a relevance search. When searching
@@ -180,7 +180,7 @@ The Lucene query syntax supports the following functionality:
 | Proximity search                  | Returns results where terms are within X words of each other - for more contextual results.<br/>For example, “airport hotel”\~5 returns results where “airport” and “hotel” are within 5 words of each other, thus boosting the chances of finding a hotel located close to an airport. |
 | Regular expression (regex) search | For example, /\[mh\]otel/ matches “motel” or “hotel”. |
 
-### Example 1
+### Example: basic search
 
 Below is an example of a basic search request and response.
 
@@ -205,261 +205,133 @@ POST [Organization URI]/api/search/v1.0/query
 ```json
 {
     "value": [
-
         {
-
             "\@search.score": 0.4547767,
-
             "\@search.highlights": {
-
                 "emailaddress1": [
-
                     "{crmhit}maria{/crmhit}\@contoso.com"
-
                 ],
-
                 "firstname": [
-
                     "{crmhit}Maria{/crmhit}"
-
                 ],
-
                 "fullname": [
-
                     "{crmhit}Maria{/crmhit} Sullivan"
-
                 ]
-
             },
-
             "\@search.entityname": "contact",
-
             "\@search.objectid": "16ffc791-d06d-4d8c-84ad-89a8978e14f3",
-
             "key": "5d3d6f6b-a721-4108-ad95-fe25eebbc277contact2",
-
             "ownerid": "bb2500d1-5e6d-4953-8389-bfedf57e3857",
-
             "owneridname": "Corey Gray",
-
             "\@search.ownerid.logicalname": "systemuser",
-
             "owningbusinessunit": "e854b0d3-3441-418d-854f-b7d11bb17f1b",
-
             "owningbusinessunitname": "",
-
             "\@search.owningbusinessunit.logicalname": "businessunit",
-
             "sharedtoprincipalid": [],
-
             "\@search.objecttypecode": 2,
-
             "fullname": "Maria Sullivan",
-
             "versionnumber": 1622564,
-
             "statecode\@stringcollection": [
-
                 "Active"
-
             ],
-
             "statecode": 0,
-
             "statuscode\@stringcollection": [
-
                 "Active"
-
             ],
-
             "statuscode": 1,
-
             "entityimage_url": **null**,
-
             "lastsyncdate": "/Date(1602289865930)/",
-
             "createdon": "10/9/2020 5:27 PM",
-
             "modifiedon": "10/9/2020 5:27 PM",
-
             "documentbody": **null**,
-
             "body": **null**,
-
             "filebody": **null**,
-
             "emailaddress1": "maria\@contoso.com",
-
             "address1_city": **“Seattle”**,
-
             "address1_telephone1": **“206-400-0200”**,
-
             "parentcustomerid": **null**,
-
             "parentcustomeridname": **null**,
-
             "telephone1": **“206-400-0300”**
-
         }
-
     ],
-
     "facets": {
-
         "account.primarycontactid": [],
-
         "ownerid": [
-
             {
-
                 "Type": "Value",
-
                 "Value": "31ca7d4b-701c-4ea9-8714-a89a5172106e",
-
                 "OptionalValue": "Corey Gray",
-
                 "Count": 1
-
             }
-
         ],
-
         "\@search.entityname": [
-
             {
-
                 "Type": "Value",
-
                 "Value": "contact",
-
                 "Count": 1
-
             }
-
         ],
-
         "modifiedon": [
-
             {
-
                 "Type": "Range",
-
                 "To": "4/27/2019 12:00 AM",
-
                 "Count": 0
-
             },
-
             {
-
                 "Type": "Range",
-
                 "From": "4/27/2019 12:00 AM",
-
                 "To": "3/27/2020 12:00 AM",
-
                 "Count": 0
-
             },
-
             {
-
                 "Type": "Range",
-
                 "From": "3/27/2020 12:00 AM",
-
                 "To": "4/20/2020 12:00 AM",
-
                 "Count": 0
-
             },
-
             {
-
                 "Type": "Range",
-
                 "From": "4/20/2020 12:00 AM",
-
                 "To": "4/27/2020 12:00 AM",
-
                 "Count": 0
-
             },
-
             {
-
                 "Type": "Range",
-
                 "From": "4/27/2020 12:00 AM",
-
                 "Count": 1
-
             }
-
         ],
-
         "createdon": [
-
             {
-
                 "Type": "Range",
-
                 "To": "4/27/2019 12:00 AM",
-
                 "Count": 0
-
             },
-
             {
-
                 "Type": "Range",
-
                 "From": "4/27/2019 12:00 AM",
-
                 "To": "3/27/2020 12:00 AM",
-
                 "Count": 0
-
             },
-
             {
-
                 "Type": "Range",
-
                 "From": "3/27/2020 12:00 AM",
-
                 "To": "4/20/2020 12:00 AM",
-
                 "Count": 0
-
             },
-
             {
-
                 "Type": "Range",
-
                 "From": "4/20/2020 12:00 AM",
-
                 "To": "4/27/2020 12:00 AM",
-
                 "Count": 0
-
             },
-
             {
-
                 "Type": "Range",
-
                 "From": "4/27/2020 12:00 AM",
-
                 "Count": 1
-
             }
-
         ]
-
     },
-
     "totalrecordcount": -1
 }
 ```
@@ -467,16 +339,16 @@ POST [Organization URI]/api/search/v1.0/query
 ## Suggestions
 
 Suggestions provide a list of matches to the specified search parameter value,
-based on an entity record’s primary field. This is different from a Search
-request because this only searches through an entity record’s primary field,
-while Search requests search through all relevance search-enabled entity fields.
+based on an entity record’s primary field. This is different from a regular search
+request because a suggestion search only searches through an entity record’s primary field,
+while search requests search through all relevance search-enabled entity fields.
 
 The minimum syntax of a suggestion search HTTP request is as shown below.
 
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
 {
-“search”: “\<text-fragment\>”
+  “search”: “<text-fragment>”
 }
 ```
 
@@ -496,7 +368,7 @@ query parameters are indicated in the next section.
 
 **usefuzzy=true \| false (optional)**
 
-Use fuzzy search to aid with misspellings. The default is false.
+Use fuzzy search to aid with misspellings. The default is **false**.
 
 **top=[int] (optional)**
 
@@ -525,11 +397,11 @@ POST [Organization URI]/api/search/v1.0/suggest
 “search”: ”mar”,
 
 “filter”: "account:modifiedon ge 2020-04-27T00:00:00,
-activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
+  activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
 }
 ```
 
-### Example 2
+### Example: suggestion search
 
 Below is an example of a basic suggestion search request.
 
@@ -538,7 +410,7 @@ Below is an example of a basic suggestion search request.
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
 {  
-“search”: ”mar”
+  “search”: ”mar”
 }
 ```
 
@@ -547,35 +419,20 @@ POST [Organization URI]/api/search/v1.0/suggest
 ```json
 {
     "value": [
-
         {
-
             "text": "{crmhit}Mar{/crmhit}ia Sullivan",
-
             "document": {
-
                 "\@search.objectid": "52a33850-8f0a-eb11-a813-000d3a8ab142",
-
                 "\@search.entityname": "contact",
-
                 "\@search.objecttypecode": 2,
-
                 "fullname": "Maria Sullivan",
-
                 "entityimage_url": **null**,
-
                 "emailaddress1": "maria\@contoso.com",
-
                 "address1_city": **null**,
-
                 "address1_telephone1": **null**,
-
                 "parentcustomerid": **null**,
-
                 "parentcustomeridname": **null**,
-
                 "telephone1": **null**
-
             }
         }
     ]
@@ -592,7 +449,7 @@ The minimum syntax of a relevance search HTTP request is as shown below.
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
 {  
-“search”: ”\<text-fragment\>”
+  “search”: ”\<text-fragment\>”
 }
 ```
 
@@ -627,11 +484,11 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 “search”: ”mar”,
 
 “filter”: "account:modifiedon ge 2020-04-27T00:00:00,
-activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
+  activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
 }
 ```
 
-### Example 3
+### Example: autocomplete search
 
 Below is an example of a basic autocomplete request.
 
@@ -640,7 +497,7 @@ Below is an example of a basic autocomplete request.
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
 {  
-“search”: ”mar”
+  “search”: ”mar”
 }
 ```
 
@@ -654,4 +511,4 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See Also
 
-[Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/en-us/power-platform/admin/configure-relevance-search-organization)
+[Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)
