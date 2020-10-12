@@ -66,14 +66,14 @@ The search parameter value contains the term to be searched for and has a
 
 A successful search response returns an HTTP status of 200 and consists of:
 
-- Value: a list of entities. By default, 50 results are returned. This also
+- value: a list of entities. By default, 50 results are returned. This also
     includes search highlights, which indicate matches to the search parameter
-    value contained within the `crmhit` tag.
+    value contained within the `crmhit` tag of the response.
 
-- Totalrecordcount: The total count of results (of type long). A value of -1
+- totalrecordcount: The total count of results (of type long). A value of -1
     is returned if returntotalrecordcount set to false (default).
 
-- Facets: The facet results.
+- facets: The facet results.
 
 In addition, you can add one or more query parameters to customize how the
 search is to be done and what results are returned. The supported query
@@ -140,10 +140,13 @@ Specifies the number of search results to retrieve. The default is 50.
 
 **orderby=[list\<string\>] (optional)**
 
-A list of comma-separated clauses where each clause consists of an attribute
-name followed by ‘asc’ (shorthand for ascending) or ‘desc’ (shorthand for
-descending). This list specifies how to order the results in order of
-precedence.
+A list of comma-separated clauses where each clause consists of an attribute name followed by ‘asc’ (shorthand for ascending) or ‘desc’ (shorthand for descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+
+For a set of results that contains multiple entity types, the list of clauses for `orderby` must be globally applicable (for example: modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+
+`“orderby”: “@search.score desc, modifiedon desc”`
+
+If the query request includes a filter for a specific entity type, `orderby` can optionally specify entity-specific attributes.
 
 **searchmode= any \| all (optional)**
 
@@ -358,7 +361,7 @@ has a 3-character minimum length.
 A successful search response returns an HTTP status of 200 and contains “value”,
 which is a list consisting of text or a document where the text is the
 suggestion with highlights, and the document is a dictionary \<string,object\>
-of the suggestion result. By default, five results are returned.
+of the suggestion result. By default, five results are returned. Suggestion highlights indicate matches to the search parameter value and are contained within the `crmhit` tag in the response.
 
 In addition, you can add one or more query parameters to customize how the
 suggestion search is to be done and what results are returned. The supported
@@ -376,9 +379,13 @@ Number of suggestions to retrieve. The default is 5.
 
 **orderby=[List\<string\>] (optional)**
 
-List of comma-separated clauses where each clause consists of an attribute name
-followed by ‘asc’ (ascending) or ‘desc’ (descending). This list specifies how to
-order the results, in order of precedence.
+A list of comma-separated clauses where each clause consists of an attribute name followed by ‘asc’ (shorthand for ascending) or ‘desc’ (shorthand for descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+
+For a set of results that contains multiple entity types, the list of clauses for `orderby` must be globally applicable (for example: modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
+
+`“orderby”: “@search.score desc, modifiedon desc”`
+
+If the query request includes a filter for a specific entity type, `orderby` can optionally specify entity-specific attributes.
 
 **entities=[list\<string\>] (optional)**
 
@@ -449,7 +456,7 @@ The minimum syntax of a relevance search HTTP request is as shown below.
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
 {  
-  “search”: ”\<text-fragment\>”
+  “search”: ”<text-fragment>”
 }
 ```
 
@@ -464,7 +471,7 @@ parameters are indicated in the next section.
 
 **usefuzzy=true \| false (optional)**
 
-Fuzzy search to aid with misspellings. The default is false.
+Fuzzy search to aid with misspellings. The default is **false**.
 
 **entities=[list\<string\>] (optional)**
 
@@ -511,4 +518,7 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ### See Also
 
-[Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)
+[Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)  
+[Compare search options in Common Data Service](/user/search)  
+[Retrieve related entity records with a query](retrieve-related-entities-query.md)  
+[Query Data using the Web API](query-data-web-api.md)
