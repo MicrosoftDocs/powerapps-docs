@@ -133,15 +133,6 @@ When you enable the header and footer caching, and want to avoid caching of cert
 > [!TIP]
 > The URL used in [request.url](liquid-objects.md#request) can be any requested value, and gets [cached](../configure/enable-header-footer-output-caching.md) for subsequent requests. To ensure correct value in request.url, consider using substitution tag, partial URL such as ~\{WebFile path} or storing the portal URL in [Site Settings](../configure/configure-site-settings.md).
 
-### Attributes
-
-The following table lists the attributes for this tag that can be used replacing the defaults to avoid caching.
-
-| Default | Substitute (avoids caching) | Example |
-| - | - | - |
-| sign_in_url  | sign_in_url_substitution | **Default**: *website.sign_in_url*: `/en-US/SignIn?returnUrl=%2Fen-US%2F` <br>  **Substitution (avoids caching)**: *website.sign_in_url_substitution*: `/en-US/SignIn?returnUrl=%2Fen-US%2Fsubstitute-page%2F` <br> ("substitute-page" in this example replaces default cached URL.)
-| sign_out_url | sign_out_url_substitution | **Default**: *website.sign_out_url*: `/en-US/Account/Login/LogOff?returnUrl=%2Fen-US%2F` <br>  **Substitution (avoids caching)**: *website.sign_out_url_substitution*: `/en-US/Account/Login/LogOff?returnUrl=%2Fen-US%2Fsubstitute-page%2F` <br> ("substitute-page" in this example replaces default cached URL.)
-
 ### See also
 
 [Control flow tags](control-flow-tags.md)<br>

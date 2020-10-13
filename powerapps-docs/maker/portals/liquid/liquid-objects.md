@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 06/05/2020
+ms.date: 10/13/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -1364,6 +1364,14 @@ Refers to the portal website, allowing access to all attributes of the Power App
 Community Portal (936DA01F-9ABD-4d9d-80C7-02AF85C822A8)
 ```
 
+### Attributes
+
+The following table lists the attributes for this tag that can be used replacing the defaults to avoid caching.
+
+| Default | Substitute (avoids caching) | Example |
+| - | - | - |
+| sign_in_url  | sign_in_url_substitution | **Default**: *website.sign_in_url*: `/en-US/SignIn?returnUrl=%2Fen-US%2F` <br>  **Substitution (avoids caching)**: *website.sign_in_url_substitution*: `/en-US/SignIn?returnUrl=%2Fen-US%2Fsubstitute-page%2F` <br> ("substitute-page" in this example replaces default cached URL.)
+| sign_out_url | sign_out_url_substitution | **Default**: *website.sign_out_url*: `/en-US/Account/Login/LogOff?returnUrl=%2Fen-US%2F` <br>  **Substitution (avoids caching)**: *website.sign_out_url_substitution*: `/en-US/Account/Login/LogOff?returnUrl=%2Fen-US%2Fsubstitute-page%2F` <br> ("substitute-page" in this example replaces default cached URL.)
 
 ### See also
 
