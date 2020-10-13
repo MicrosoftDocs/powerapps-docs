@@ -55,7 +55,7 @@ To view the app usage data:
    > [!div class="mx-imgBorder"]
    > ![List of top apps](media/isv-top-apps.png "List of top apps")
 
-1. You can also see the app usage details by directly selecting the app usage icon from the list of apps as shown  screenshot:
+1. You can also see the app usage details by directly selecting the app usage icon from the list of apps as shown in the screenshot:
 
    > [!div class="mx-imgBorder"]
    > ![Usage icon](media/isv-select-app-to-see-details.png "Usage icon")
