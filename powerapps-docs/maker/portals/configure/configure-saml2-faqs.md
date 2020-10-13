@@ -24,7 +24,7 @@ No. Portals doesn't support signed assertion request. If you're using signed ass
 
 ## Does portals support signed SAML responses?
 
-Yes. Portals requires all SAML responses to be signed by the IDP.
+Yes. Portals requires all SAML responses to be signed by the identity provider (IDP).
 
 ## Does portals support encrypted assertion and response?
 
@@ -36,7 +36,7 @@ Portals requires "Persistent" Identifiers that ensure that the user can always b
 
 ## Does portals require any specific AuthNContextClass in SAML assertion request?
 
-Yes. Portals will specify *PasswordProtectedTransport* in authentication requests, and requires IDP to support it.
+Yes. Portals will specify *PasswordProtectedTransport* in authentication requests, and requires identity provider (IDP) to support it.
 
 ### See also
 
