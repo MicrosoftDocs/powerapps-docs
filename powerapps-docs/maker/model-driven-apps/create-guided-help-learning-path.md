@@ -1,6 +1,6 @@
 ---
 title: "Create your own guided help (Learning Path) (Model-driven apps) | MicrosoftDocs"
-description: ""
+description: Learn how to create guided help for your model-driven app.
 keywords: 
 ms.date: 10/22/2019
 ms.service: powerapps
