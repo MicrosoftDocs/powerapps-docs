@@ -39,5 +39,4 @@ Use Data (XML) Web resources to save and access data.
  [Using Style Sheet (CSS) web resources](css-web-resources.md)   
  [Using Script (JScript) web resources](script-jscript-web-resources.md)   
  [Using Image (JPG, PNG, GIF) web resources](image-web-resources.md)   
- [Using Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)<br/>   <!-- TODO need to update the relevant link from the powerapps repo-->
- [Using Stylesheet (XSL) web resources](/dynamics365/customer-engagement/developer/stylesheet-xsl-web-resources) <!-- TODO need to update the relevant link from the powerapps repo-->
+ [Using Stylesheet (XSL) web resources](stylesheet-xsl-web-resources.md) 

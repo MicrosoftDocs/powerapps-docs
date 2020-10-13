@@ -2,7 +2,7 @@
 title: "Change model-driven app custom entity icons in Power Apps | MicrosoftDocs"
 definition: "Learn how to change the icon for a custom entity"
 ms.custom: ""
-ms.date: 05/17/2018
+ms.date: 05/04/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -48,7 +48,11 @@ Each type of icon is stored as a Web Resource. You can create the web resources 
 
 You must use solution explorer to set entity icons.
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+1. From the Power Apps portal select **Solutions**, and then on the toolbar, select **Switch to classic**.
+
+2. In the **All Solutions** list select the unmanaged solution you want.
+
+3. Open the custom entity where you want to update the icon.
 
 ### Set entity icons
 

@@ -98,7 +98,9 @@ Custom icons in list views can display in Unified Interface, legacy web client, 
  The JavaScript function for displaying custom icons and tooltips expects the following two arguments: the entire row object specified in layoutxml and the calling user’s Locale ID (LCID). The LCID parameter enables you to specify tooltip text in multiple languages. For more information about the languages supported by the environment, see [Enable languages](/dynamics365/customer-engagement/admin/enable-languages) and [Install or upgrade language packs](/dynamics365/customer-engagement/on-premises/install-or-upgrade-language-packs). For a list of locale ID (LCID) values that you can use in your code, see [Locale IDs assigned by Microsoft](https://go.microsoft.com/fwlink/?linkid=829588).
 
   
- Assuming you will be adding custom icons for an option-set type of attribute, which has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid localization issues.  
+ Assuming you will be adding custom icons for an option-set type of attribute, which has a limited set of predefined options, make sure you use the integer value of the options instead of label to avoid localization issues. 
+
+ **Note**: If it is necessary to retrieve data to determine the icon, Unified Interface supports returning a JavaScript Promise object which resolves to a boolean (similar to ribbon rules).  Do not use a synchronous XMLHttpRequest (XHR) in your custom function.
   
  The following sample code displays icons and tooltips based on one of three values (1: Hot, 2: Warm, 3: Cold) in the opportunityratingcode (Rating) attribute. The sample code also shows how to display localized tooltip text. For this sample to work, you must create three image web resources with 16x16 images with the following names: new_Hot, new_Warm, and new_Cold.  
 

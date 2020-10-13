@@ -2,7 +2,7 @@
 title: "Use custom controls for model-driven app data visualizations in Power Apps | MicrosoftDocs"
 description: "Learn how to use custom controls for fields"
 ms.custom: ""
-ms.date: 06/07/2018
+ms.date: 04/29/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -25,7 +25,11 @@ search.app:
 ---
 # Use custom controls for model-driven app data visualizations
 
-In this topic you learn how to configure a custom control for a field. 
+In this topic you learn how to configure a custom control for a field.
+
+To add a control using the Power Apps form designer, see [Add components to a form](add-move-configure-or-delete-components-on-form.md#add-components-to-a-form).
+
+## Use a custom control using the classic form designer
 
 Custom controls let you transform app user interface components, such as a field or view that traditionally contain text, into visualizations. Custom controls can be configured on fields, forms, dashboards, views, and grids. 
 For example, a slider control can be configured on a number field.
@@ -40,12 +44,10 @@ Or the editable grid control can be configured on a view.
 
 You can set one type of custom control to appear in the web browser client while having a different custom control appear in your Dynamics 365 phone or  tablet mobile apps. For example, you could use a number input custom control for a field in web browser clients and a slider custom control for the phone app. After the customization is published, users can fully interact with the control to change the value, such as by sliding the control when using the linear slider custom control. Changes are automatically saved when the form is closed just as they are when the user changes a traditional  field on a form.  
   
-## Use a custom control to add visualizations to a field  
+### Use a custom control to add visualizations to a field  
  Following the steps in this procedure will change the default label and text box field  of the **Budget Amount** field to the slider custom control on the Opportunity entity. You can use similar steps to replace an existing field with a custom control or configure a custom control for a custom field.  
   
 1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).  
-
-     
 
 2.  Expand **Data**, select **Entities**, select the entity that you want, and then select the **Forms** tab.  
   
@@ -57,8 +59,8 @@ You can set one type of custom control to appear in the web browser client while
   
 5.  On the Add Control page, select the control that you want, such as the **Linear Slider** control shown here, and then select **Add**.  
 
-   > [!div class="mx-imgBorder"] 
-   > ![Add linear slider control](media/add-slider.PNG "Add linear slider control")  
+    > [!div class="mx-imgBorder"] 
+    > ![Add linear slider control](media/add-slider.PNG "Add linear slider control")  
   
 6.  Choose the client where you want the control to appear.  
   
@@ -68,13 +70,13 @@ You can set one type of custom control to appear in the web browser client while
   
     - **Tablet**. To make the custom control available on tablet devices running Dynamics 365 for tablets, select the **Tablet** option next to the control.  
   
-   > [!div class="mx-imgBorder"] 
-   > ![Choose the client apps to view the custom control](media/choose-client.png "Choose the client apps to view the custom control")  
+    > [!div class="mx-imgBorder"] 
+    > ![Choose the client apps to view the custom control](media/choose-client.png "Choose the client apps to view the custom control")  
   
 7.  Select the ![Edit custom control property icon](media/ccf-pencil-icon.png "Edit custom control property icon") pencil icon next to **Min**, **Max**, and **Step**, set the property option described below, and then select **OK**.  
   
-   > [!div class="mx-imgBorder"] 
-   > ![Add custom control properties](media/ccf-add-properties.png "Add custom control properties")
+    > [!div class="mx-imgBorder"] 
+    > ![Add custom control properties](media/ccf-add-properties.png "Add custom control properties")
   
    - **Min**. Set the minimum accepted value. You can bind a static value that you enter or bind the value to an existing field. In this example **Bind to static value** is **Currency** and the minimum value that can be entered is *zero*.  
   

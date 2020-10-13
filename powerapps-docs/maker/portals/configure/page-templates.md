@@ -1,14 +1,13 @@
 ---
 title: "Create and manage page templates in Power Apps portals | MicrosoftDocs"
 description: "Learn how to create and manage page templates in Power Apps portals."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Create and manage page templates
@@ -25,7 +24,7 @@ When you create a new webpage, you must choose a page template from a list of ex
 
 Creating a new Page Template is only necessary when creating a brand new .aspx page to display content on your website, a portal developer’s task. In fact, for the purposing of simply customizing the layout of your site, a portal developer can largely just modify existing .aspx pages.
 
-1. pen the [Portal Management app](configure-portal.md).
+1. Open the [Portal Management app](configure-portal.md).
 
 2. Go to **Portals** > **Page Templates**.
 

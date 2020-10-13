@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: tutorial
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 05/06/2018
+ms.date: 06/18/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -144,3 +144,7 @@ In this tutorial, you've customized the gallery and made other changes to the de
 
 > [!div class="nextstepaction"]
 > [Customize forms](customize-forms-sharepoint.md)
+
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)

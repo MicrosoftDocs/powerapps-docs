@@ -2,12 +2,11 @@
 title: Send a push notification | Microsoft Docs
 description: Learn how to send native push notifications to an app in Power Apps.
 author: kavishi
-manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/08/2017
+ms.date: 08/20/2020
 ms.author: kaagar
 search.audienceType: 
   - maker
@@ -134,7 +133,6 @@ PowerAppsNotification.SendPushNotification(
 * Currently, notifications aren't displayed on Power Apps Mobile for Windows Phone.
 * Currently, we don't provide push notifications for users who run apps only in a web browser.
 * Notifications show the generic Power Apps icon instead of a specific app icon.
-* When you use Power Automate, you can send a push notification to only one recipient at a time.
+* Push notifications aren't currently supported for Model Driven apps. 
 
 For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
-

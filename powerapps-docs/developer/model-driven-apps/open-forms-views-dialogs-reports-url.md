@@ -223,6 +223,5 @@ function getReportURL(action,fileName,id) {
  [Customize the Ribbon](customize-commands-ribbon.md)<br/>
  [Client scripting using JavaScript](client-scripting.md)<br/>
  [Web Resources](web-resources.md)<br/> 
- [Extend the client](/dynamics365/customer-engagement/developer/extend-client)<br/> 
- [Change Application Navigation using the SiteMap](/dynamics365/customer-engagement/developer/customize-dev/change-application-navigation-using-sitemap)<br/> 
- [Start Dialog by using a URL](/dynamics365/customer-engagement/developer/actions-dialogs#StartDialog)
+ [Change Application Navigation using the SiteMap](https://docs.microsoft.com/powerapps/maker/model-driven-apps/create-site-map-app)
+ 
