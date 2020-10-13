@@ -24,7 +24,7 @@ search.app:
 
 ## Syntax
 
-`formContext.ui.headerSection.getVisible();`
+`formContext.ui.footerSection.getVisible();`
 
 ## Return Value
 
