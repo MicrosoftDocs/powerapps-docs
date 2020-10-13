@@ -19,4 +19,4 @@ search.app:
 
 # Run canvas apps and model-driven apps on a mobile device
 
-Use the Power Apps mobile to run both canvas app and model-driven apps on your mobile device. With Power Apps mobile get your work done from anywhere and on any device. For more information, see [Run model-driven apps and canvas apps on Power Apps mobile](/mobile/run-powerapps-on-mobile.md).
+Use the Power Apps mobile to run both canvas app and model-driven apps on your mobile device. With Power Apps mobile get your work done from anywhere and on any device. For more information, see [Run model-driven apps and canvas apps on Power Apps mobile](../mobile/run-powerapps-on-mobile.md).
