@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: e71012ba-249d-4ae7-8891-f7d3ae16a20a
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -20,7 +20,7 @@ search.app:
 
 [!INCLUDE[./includes/invokeProcessAction-description.md](./includes/invokeProcessAction-description.md)] 
 
-For more information about actions, see [Use actions](/flow/actions)
+For more information about actions, see [Use actions](/powerapps/maker/common-data-service/actions)
 
 ## Syntax
 
@@ -40,8 +40,7 @@ For more information about actions, see [Use actions](/flow/actions)
 On success, returns Web API result along with any action output.
 
 ### Related topics
-
-[Use actions](/flow/actions)
+[Use actions](/powerapps/maker/common-data-service/actions)
 
 [Xrm.Utility](../xrm-utility.md)
 

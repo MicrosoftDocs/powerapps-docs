@@ -46,7 +46,7 @@ For v9.*x* instances, nothing gets appended to the attribute name.
 
 The following operations have been added to the Web API for the v9.x release.  
   
-||||  
+|Operations|Operations (cont'd)|Operations (cont'd)|  
 |-|-|-|  
 |<xref:Microsoft.Crm.Sdk.Messages.GrantAccessRequest>|<xref:Microsoft.Crm.Sdk.Messages.ModifyAccessRequest>|<xref:Microsoft.Crm.Sdk.Messages.RetrieveSharedPrincipalsAndAccessRequest>|  
 

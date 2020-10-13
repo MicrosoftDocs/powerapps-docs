@@ -1,16 +1,11 @@
 ---
 title: Overview of building a model-driven app with Power Apps | Microsoft Docs
-description: Step-by-step instructions for creating and configuring an entity to use with a Power Apps app.
-documentationcenter: na
+description: Step-by-step instructions for creating and configuring an entity to use with a Power Apps model-driven app.
 author: Mattp123
-manager: kvivek
-editor: ''
-tags: ''
 ms.service: powerapps
-ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 02/12/2020
+ms.date: 06/16/2020
 ms.author: matp
 search.audienceType: 
   - maker
@@ -29,6 +24,8 @@ Model-driven app design provides the following benefits:
 - Create complex responsive apps with a similar UI across a variety of devices from desktop to mobile
 - Rich design capability 
 - Your app can be distributed as a solution
+
+
  
 ## The approach to model-driven app making
 At a fundamental level, model-driven app making consists of three key focus areas.
@@ -47,6 +44,8 @@ Defining and enforcing consistent business processes is a key aspect of model-dr
 After modeling data and defining processes, you build your app by selecting and configuring the components you need using the app designer.
 
 ![App designer](media/model-driven-app-overview/app-designer.png)
+
+If you are new to Power Apps, and want to learn about how to convert your ideas into a fully working solution using Power Apps, start with [Planning a Power Apps project](/powerapps/guidance/planning/introduction).
 
 ## Next steps
 

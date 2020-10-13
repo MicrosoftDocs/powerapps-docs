@@ -8,7 +8,7 @@ ms.service: powerapps
 ms.devlang: na
 ms.topic: conceptual
 ms.component: model
-ms.date: 03/09/2020
+ms.date: 08/04/2020
 ms.author: brdang
 search.audienceType: 
   - maker
@@ -29,7 +29,7 @@ Be sure to check out documentation specific to each sample app for more details.
 
 ## Get sample apps
 
-In order to play or edit model-driven sample apps, the apps must first be provisioned in a Common Data Service database. First create a trial environment and database and be sure to select **Depoly sample apps and data**.
+In order to play or edit model-driven sample apps, the apps must first be provisioned in a Common Data Service database. First create a trial environment and database and be sure to select **Deploy sample apps and data**.
 
 > [!div class="mx-imgBorder"] 
 > ![Create database](media/overview-model-driven-samples/create-database1.png "Create a database")
@@ -55,40 +55,12 @@ In order to play or edit model-driven sample apps, the apps must first be provis
 - Deleting the solution also deletes any sample data specific to the custom entities for the app.
 - If customizations were made to the sample app, there may be [dependencies](https://docs.microsoft.com/dynamics365/customer-engagement/developer/dependency-tracking-solution-components), which must be removed before deleting the solution.
 
-### Steps
-1. Login to the [Power Apps admin portal](https://admin.powerapps.com).
+### Delete a solution
+To delete a solution, follow the steps in this topic: [Delete a model-driven app](delete-model-driven-app.md#delete-a-model-driven-app-that-was-installed-as-part-of-a-managed-solution)
 
-2. Select an environment.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Dynamics 365 Administration Center](media/overview-model-driven-samples/admin-center.png "Select an environment")
-
-3. Click **Dynamics 365 Administration Center**.
-
-4. Select your Database from the list and click **OPEN**.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Select database](media/overview-model-driven-samples/select-database.png "Select a database")
-
-5. Navigate to **Settings/Solutions**.
-
-6. Select the solution for the app that is to be deleted and click **delete**.
-
-    > [!div class="mx-imgBorder"] 
-    > ![Delete solution](media/overview-model-driven-samples/delete-solution.png "Delete the solution")
-
-*Alternatively navigate to the list of solutions by clicking **Advanced** in the maker portal and delete everything in the URL after .dynamics.com/*
-
-> [!IMPORTANT]
-> Do not delete other system solutions unless you're aware of the impact.
 
 ## Install or uninstall Sample Data
-1. Follow steps 1-4 above.
-2. Navigate to **Settings/Data Management/Sample Data**.
-3. If sample data is installed, the option to remove is available. Otherwise the option to install is available. 
-
-    > [!div class="mx-imgBorder"] 
-    > ![remove sample data](media/overview-model-driven-samples/remove-sample-data.png "Remove sample data")
+To remove sample data, follow the steps in this topic: [Add or remove sample data](/power-platform/admin/add-remove-sample-data)
 
 
 

@@ -2,7 +2,7 @@
 title: "File attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about File attributes that store file data within the application, supporting attributes, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/08/2020
+ms.date: 07/09/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -39,6 +39,9 @@ When a file attribute is added to an entity some additional attributes are creat
 ### MaxSizeInKB attribute
 
  This value represents the maximum size (in kilobytes) of the file data that the attribute can contain. Set this value to the smallest useable data size appropriate for your particular application. See the <xref:Microsoft.Xrm.Sdk.Metadata.FileAttributeMetadata.MaxSizeInKB> property for the allowable size limit and the default value.
+ 
+ > [!NOTE]
+ > MaxSizeInKB is set when the File attribute is added to an entity. This cannot be changed after it is set.
   
 <a name="BKMK_RetrievingFiles"></a>
 
@@ -60,7 +63,7 @@ Messages such as <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> and <xref:Mic
 ```http
 GET [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute/$value
 Headers:
-Range: 0-1023/8192
+Range: bytes=0-1023/8192
 ```
 
 **Response**
@@ -147,6 +150,18 @@ Headers:
 x-ms-transfer-mode: chunked 
 x-ms-file-name: sample.png
 ```
+
+**Request** (alternate form)
+
+This form of the request uses a query string parameter and supports non-ASCII language file names. If the file name is specified in both the header and as a query string parameter, the header value has precedence.
+
+```http
+PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute?x-ms-file-name=测试.txt
+
+Headers: 
+x-ms-transfer-mode: chunked
+```
+
 **Response**
 ```http
 200 OK 
@@ -163,7 +178,7 @@ Location: api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken
 PATCH [Organization URI]/api/data/v9.1/accounts(id)/myfileattribute?FileContinuationToken 
 
 Headers: 
-Content-Range: 0-4095/8192 
+Content-Range: bytes 0-4095/8192 
 Content-Type: application/octet-stream
 x-ms-file-name: sample.png
 

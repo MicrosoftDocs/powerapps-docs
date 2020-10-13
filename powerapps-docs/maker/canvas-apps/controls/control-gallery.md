@@ -77,8 +77,6 @@ If a user scrolls the **Flexible height** gallery control before all items are l
 
 **ShowScrollbar** – Whether a scrollbar appears when the user hovers over a gallery.
 
-**Snap** – Whether, when a user scrolls through a gallery, it automatically snaps so that the next item appears in full.
-
 **TemplateFill** – The background color of a gallery.
 
 **TemplatePadding** – The distance between items in a gallery.

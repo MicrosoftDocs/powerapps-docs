@@ -1,8 +1,8 @@
 ---
-title: "<Topic Title> (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
-description: "<Description>" # 115-145 characters including spaces. This abstract displays in the search result.
+title: "Upload and manage document templates (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
+description: "In Common Data Service, the *template* entities help you create consistent layout and content in email messages, articles, mail merge documents, and Microsoft Office documents (Excel and Word)."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/19/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"

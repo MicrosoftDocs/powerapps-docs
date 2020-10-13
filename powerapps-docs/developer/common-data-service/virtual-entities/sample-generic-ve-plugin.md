@@ -2,7 +2,7 @@
 title: "Sample: Generic virtual entity data provider plug-in (Common Data Service) | Microsoft Docs"
 description: "Sample demonstrates how to implement a generic custom Dynamics 365 virtual entity plug-in."
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 06/24/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.suite: ""
@@ -11,9 +11,9 @@ ms.topic: "samples"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: d329dade-16c5-46e9-8dec-4b8efb996d24
-author: "mayadumesh" # GitHub ID
-ms.author: "jdaly"
-manager: "annbe"
+author: "Sunil-Garg" # GitHub ID
+ms.author: "pehecke"
+manager: "ryjones"
 search.audienceType: 
   - developer
 search.app: 
@@ -26,6 +26,9 @@ search.app:
 ## Demonstrates
 
 This sample shows a minimal implementation for a generic Common Data Service virtual entity data provider plug-in, **DropboxRetrieveMultiplePlugin**, for the [Dropbox](https://www.dropbox.com/) file-sharing service. It uses the "bare metal" approach, translating the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> through the creation of the custom visitor class, **DropBoxExpressionVisitor**. It returns a collection of the files that satisfy the search criteria as an <xref:Microsoft.Xrm.Sdk.EntityCollection>. 
+
+> [!NOTE]
+> This sample requires the use of ILMERGE to combine the plug-in and Dropbox assemblies prior to registering the assembly with Common Data Service. Use of ILMERGE is not officially supported. A future update to this sample will remove the need to use ILMERGE. 
 
 ## Getting started
 

@@ -1,14 +1,13 @@
 ---
 title: Frequently asked questions | Microsoft Docs
 description: Frequently asked questions in Power Apps portals.
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/14/2020
-ms.author: tapanm
-ms.reviewer: 
+ms.date: 09/25/2020
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Power Apps portals FAQ
@@ -16,6 +15,16 @@ ms.reviewer:
 We've compiled a list of frequently asked questions and provided brief answers to help you get to your information quickly.
 
 ## General
+
+### Rendering Power BI report on my portal page fails with the following error:
+
+*A configuration error occurred while rendering your report.*
+
+This can happen due to multiple reasons such as:
+
+- Your [Power BI Embedded configuration](admin/set-up-power-bi-integration.md) is incorrect.
+- [Row-level security](https://docs.microsoft.com/power-bi/admin/service-admin-rls) in Power BI is enabled but you didn't pass roles in [Power BI component configuration](compose-page.md#add-power-bi) (Advanced settings), or *roles* parameter in the [powerbi liquid tag](liquid/portals-entity-tags.md#powerbi).
+- **Embed content in apps** in Power BI [Developer Settings](https://docs.microsoft.com/power-bi/admin/service-admin-portal#developer-settings) is not enabled.
 
 ### Does Power Apps portals support TLS 1.2?
 
@@ -97,7 +106,7 @@ If you don't have sufficient privileges to create a portal in an environment, yo
 
 For information on creating a portal and the required privileges, see [Create a portal](create-portal.md).
 
-### I'm getting the message: “Your data isn’t quite ready”.
+### I'm getting the message: "Your data isn't quite ready".
 
 Sometimes the database creation can take time and the correct status might not reflect on the home page. In this case, you'll see the following message:
 
@@ -132,13 +141,6 @@ Set-TenantSettings -RequestBody @{ "disablePortalsCreationByNonAdminUsers" = $fa
 
 More information: [Disable portal creation in a tenant](create-portal.md#disable-portal-creation-in-a-tenant)
 
-### I'm getting an error that I don't have appropriate license to access this website.
-
-Internal users of an organization that use portals for accessing authenticated pages require that licenses be assigned to the environment that a portal is connected to. You  can read more about the user rights for portals for internal users [here](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users). When an environment doesn't have licenses assigned, internal users will get an error such as follows:
-
-> [!div class=mx-imgBorder]
-> ![Portal login error](media/portal-login-error.png "Portal login error")
-
 ## Licensing and provisioning
 
 ### How do I get a portal subscription?
@@ -161,17 +163,40 @@ You can change the base URL of a portal after it's provisioned by following the 
 
 ### How do I delete a portal completely after it's provisioned?
 
-Portals consists of the following components:
+A Power Apps portal consists of the following components:
 
 - **Portal website host**: Portal website host is the Portal code that forms the actual website.
 
+- **Portal configuration**: The portal configuration in the Common Data Service environment that defines portal components such as *Websites*, *Pages*, *Content Snippets* and *Web Roles* records.
+
 - **Portal solutions**: Solutions that are installed in the Common Data Service environment and contain the metadata entities for any portal.
 
-Deleting a portal completely requires deleting the Portal website host and as uninstalling Portal solutions from your Common Data Service environment.
+**To delete a portal**, you must delete the **portal website host** and the  **portal configuration**.
 
-To reset the portal host, follow the steps in [Reset a portal](admin/reset-portal.md). It's important to note that resetting a portal host doesn't affect the configuration done in your Common Data Service environment.
+- To delete **portal web site host**, do one of the following:
+    - Option 1: Go to [Power Apps](https://make.powerapps.com), and [delete](manage-existing-portals.md#delete) the portal.
+    - Option 2: Go to [Power Apps portals admin center](admin/admin-overview.md), and [Reset the portal](admin/reset-portal.md).
 
-To delete portal solutions, you'll have to delete solutions from the Dynamics 365 solution explorer UI. The order in which Portal solutions should be uninstalled is provided in [Uninstalling Portal Solutions](https://community.dynamics.com/365/b/dynamics365portalssupport/archive/2017/02/27/portal-troubleshooting-part-three-uninstalling-portal-solutions).
+- To delete **portal configuration**, delete the corresponding website record for the portal you want to delete using the **Portal Management** app.
+
+> [!NOTE]
+> If you [delete](manage-existing-portals.md#delete), or [reset](admin/reset-portal.md) the portal but do not delete the corresponding website record associated with the portal using the [Portal Management](configure/configure-portal.md) app, new portal that you create will re-use the existing **portal configuration**.
+
+If you want, you can also delete **portal solutions**. Deleting **portal solutions** is not required to create a new portal with clean configuration. However, you may need to delete the **portal solutions** for other reasons such as a business requirement to not have any more portals in a specific environment.
+
+If you deleted **Portal Management** app by mistake while trying to delete a portal, refer [how to create custom Portal Management app](configure/create-custom-portal-management-app.md).
+
+### I'm getting an error that I don't have appropriate license to access this website.
+
+Internal users with Azure Active Directory credentials trying to sign-in without a valid license assigned will see this message on the sign-in page: *You don't have a valid license to access this website. Please contact your system administrator*.
+
+![Portal login error](media/portal-login-error.png "Portal login error")
+
+Depending on the purchased SKU type - such as different *Dynamics 365 SKUs*, *Power Apps per app plan* or *Power Apps per user plan*, an administrator will need to either provide an appropriate license to the users, or have appropriate number of app passes available to the environment. For more information about app passes, go to [Allocate or change capacity in an environment](https://docs.microsoft.com/power-platform/admin/capacity-add-on#allocate-or-change-capacity-in-an-environment). Once app passes are allocated to the environment, the portal will have to be restarted for changes to take effect.
+
+For details about licensing of internal users, go to [Portal Licensing FAQ](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-share-more-details-regarding-the-new-power-apps-portals-licensing). 
+
+For details about use rights to portals for internal users, go to FAQ [use rights to portals for internal users](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#can-you-clarify-the-use-rights-to-portals-for-internal-users) and [Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) section **Power Apps Portals – Use rights for Internal users**.
 
 ## Common Data Service environment lifecycle
 
@@ -233,11 +258,11 @@ When you enable diagnostic logging, you can search for particular errors that us
 
 ## Portal administration and management
 
-### Do portals use any static content from CDNs (Content Delivery Network) that I need to whitelist?
+### Do portals use any static content from CDNs (Content Delivery Network) that I need to allow-list?
 
-Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must whitelist the following CDN URL to render portals successfully:
+Yes. Power Apps portals uses out of the box portal's static assets from Azure CDN that includes default JavaScript and CSS files for presentation that earlier rendered as part of the portal app. You must allow-list the following CDN URL to render portals successfully:
 
-    https://content.powerapps.com/resource/powerappsportal
+`https://content.powerapps.com/resource/powerappsportal`
 
 > [!NOTE]
 > Power Apps portals hosted in Microsoft Government Cloud don't use CDN.
@@ -317,7 +342,7 @@ There are situations in which portal won't be able to recreate website binding r
 
       - **Name**: Can be any string
       - **Website**: Select the website record that you want to be rendered on portal
-      - **Sitename**: Type in the hostname of your portal i.e Portal URL without ```https://``` in the beginning. If your Portal is using custom domain name, then use custom domain name here.
+      - **Sitename**: Type in the hostname of your portal i.e Portal URL without `https://` in the beginning. If your Portal is using custom domain name, then use custom domain name here.
       - Leave all other fields blank.
 
 3. Once website binding record is recreated, restart your portal from Power Apps Portals admin center.
@@ -392,11 +417,11 @@ Enabling a portal login tracking can lead to performance issues in your portal. 
 
 The portal checker tool will check if login tracking is enabled for your portal and will show a failed check if it's enabled. Login tracking should be disabled by following these steps:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	Go to **Portals** > **Site Settings**.
-3.	Search for site setting named `Authentication/LoginTrackingEnabled`.
-4.	Change the value of this site setting to **False** or delete the site setting.
-5.	Restart the portal. 
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    Go to **Portals** > **Site Settings**.
+3.    Search for site setting named `Authentication/LoginTrackingEnabled`.
+4.    Change the value of this site setting to **False** or delete the site setting.
+5.    Restart the portal. 
 
 #### Header output cache is disabled
 
@@ -475,28 +500,28 @@ This issue occurs when the **Home** site marker isn't available in your portal c
 
 This issue occurs when the **Home** site marker is available but isn't pointing to any webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Home** site marker record.
-4.	Update the **Page** field to point to an active home page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Home** site marker record.
+4.    Update the **Page** field to point to an active home page of your portal.
 
 ### The Home site marker is pointing to a deactivated web page
 
 This issue occurs when the **Home** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Home** site marker record.
-4.	Update the **Page** field to point to an active home page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Home** site marker record.
+4.    Update the **Page** field to point to an active home page of your portal.
 
 ### The Home site marker isn't pointing to home page of the portal
 
 This issue occurs when the **Home** site marker is available, but is pointing to a webpage that isn't a home page of your portal. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Home** site marker record.
-4.	Update the **Page** field to point to an active home page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Home** site marker record.
+4.    Update the **Page** field to point to an active home page of your portal.
 
 ### An active Profile site marker isn't available for this portal
 
@@ -513,19 +538,19 @@ This issue occurs when the **Profile** site marker isn't available in your porta
 
 This issue occurs when the **Profile** site marker is available but isn't pointing to any webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Profile** site marker record.
-4.	Update the **Page** field to point to an active profile page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Profile** site marker record.
+4.    Update the **Page** field to point to an active profile page of your portal.
 
 ### The Profile site marker is pointing to a deactivated web page
 
 This issue occurs when the **Profile** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Profile** site marker record.
-4.	Update the **Page** field to point to an active profile page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Profile** site marker record.
+4.    Update the **Page** field to point to an active profile page of your portal.
 
 ### An active Page Not Found site marker isn't available for this portal
 
@@ -542,19 +567,19 @@ This issue occurs when the **Page Not Found** site marker isn't available in you
 
 This issue occurs when the **Page Not Found** site marker is available but isn't pointing to any webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Page Not Found** site marker record.
-4.	Update the **Page** field to point to an active Page Not Found page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Page Not Found** site marker record.
+4.    Update the **Page** field to point to an active Page Not Found page of your portal.
 
 ### The Page Not Found site marker is pointing to a deactivated web page
 
 This issue occurs when the **Page Not Found** site marker is available, but is pointing to a deactivated webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Page Not Found** site marker record.
-4.	Update the **Page** field to point to an active Page Not Found page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Page Not Found** site marker record.
+4.    Update the **Page** field to point to an active Page Not Found page of your portal.
 
 ### An active Access Denied site marker isn't available for this portal
 
@@ -571,19 +596,19 @@ This issue occurs when the **Access Denied** site marker isn't available in your
 
 This issue occurs when the **Access Denied** site marker is available but isn't pointing to any webpage. To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Access Denied** site marker record.
-4.	Update the **Page** field to point to an active Access Denied page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Access Denied** site marker record.
+4.    Update the **Page** field to point to an active Access Denied page of your portal.
 
 ### The Access Denied site marker is pointing to a deactivated web page
 
 This issue occurs when the **Access Denied** site marker is available, but is pointing to a deactivated webpage (root or content page can be deactivated). To fix this issue:
 
-1.	Open the [Portal Management app](configure/configure-portal.md).
-2.	In the left pane, select **Site Markers**.
-3.	Find the **Access Denied** site marker record.
-4.	Update the **Page** field to point to an active Access Denied page of your portal.
+1.    Open the [Portal Management app](configure/configure-portal.md).
+2.    In the left pane, select **Site Markers**.
+3.    Find the **Access Denied** site marker record.
+4.    Update the **Page** field to point to an active Access Denied page of your portal.
 
 ### Profile web form isn't available for contact entity
 
@@ -624,3 +649,7 @@ To fix this issue, add the CSS file with entire content in the notes section of 
 ### MIME type of file isn't text/css
 
 To fix this issue, ensure that there are no plugins or flows that override the MIME type of the CSS file(s).
+
+### See also
+
+[Microsoft Learn: Power App portal maintenance and troubleshooting](https://docs.microsoft.com/learn/modules/portals-maintenance-troubleshooting/)

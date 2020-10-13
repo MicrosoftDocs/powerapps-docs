@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.date: 03/09/2020
+ms.date: 08/10/2020
 ms.author: chmoncay
 ms.reviewer: tapanm
 search.audienceType: 
@@ -23,7 +23,7 @@ The attachment control has these limitations:
 
 1. Upload and delete functionality work only inside a form. The Attachment control appears disabled when in Edit mode and not inside a form. To save file additions and deletions, the app user must save the form. Because of this limitation, the Attachment control isn't available from the **Insert** tab but appears in the form when the Attachment form field is enabled in a SharePoint or Common Data Service form.
 
-1. You can upload files only if they're 10 MB or smaller.  
+1. You can upload files only if they're 50 MB or smaller.  
 
 ## Description
 An **Attachments** control lets you open, add, and delete files from a SharePoint list or a Common Data Service entity.
@@ -33,13 +33,13 @@ An **Attachments** control lets you open, add, and delete files from a SharePoin
 
 **MaxAttachments** – The maximum number of files the control will accept.
 
-**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 10 MB.
+**MaxAttachmentSize** – The maximum allowed file size in MB of each new attachment.  Currently there is a limit of 50 MB.
 
-**OnAttach** – How the app responds when the user adds a new file attachment.
+**OnAddFile** – How the app responds when the user adds a new file attachment.
 
-**OnRemove** – How the app responds when the user deletes an existing attachment.
+**OnRemoveFile** – How the app responds when the user deletes an existing attachment.
 
-**[OnSelect](properties-core.md)** – How the app responds when the user clicks on an attachment.
+**OnUndoRemoveFile** – How the app responds when the user restores a deleted attachment.
 
 ## Additional properties
 **[AccessibleLabel](properties-accessibility.md)** – Label for screen readers. Should describe the purpose of the attachments.

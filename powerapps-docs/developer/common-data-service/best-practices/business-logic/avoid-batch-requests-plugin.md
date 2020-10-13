@@ -31,7 +31,7 @@ search.app:
 
 ## Symptoms
 
-Due to their long-running nature, using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> message request classes within the context of a plug-in or workflow activity expose sandbox-isolated plug-in types to the two-minute (12000ms) channel timeout exception and can degrade the user experience for synchronous registrations.
+Due to their long-running nature, using <xref:Microsoft.Xrm.Sdk.Messages.ExecuteMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.ExecuteTransactionRequest> message request classes within the context of a plug-in or workflow activity expose sandbox-isolated plug-in types to the two-minute (120000ms) channel timeout exception and can degrade the user experience for synchronous registrations.
 
 
 <a name='guidance'></a>

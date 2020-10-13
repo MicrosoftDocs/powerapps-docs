@@ -1,14 +1,13 @@
 ---
 title: "Use Power Apps Common Data Service entity tags for a portal | MicrosoftDocs"
 description: "Learn about Power Apps Common Data Service entity tags available in portal."
-author: tapanm-msft
-manager: kvivek
+author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/28/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: gisingh
+ms.reviewer: tapanm
 ---
 
 # Power Apps Common Data Service entity tags

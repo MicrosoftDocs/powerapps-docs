@@ -25,7 +25,8 @@ Entity views are special saved queries that retrieve data by using a specific fi
   
  You can also use the customization tool to customize views. More information: [Create and edit views](../../maker/model-driven-apps/create-edit-views.md)
   
-<a name="BKMK_TypesOfViews"></a>   
+<a name="BKMK_TypesOfViews"></a>  
+ 
 ## Types of views  
  The following table lists the five types of views that are supported for customization. The type code of a view is stored in the `SavedQuery.QueryType` attribute. Note that there are other valid values for the `QueryType` attribute not listed here because this entity is also used to store Office Outlook filters and templates. For more information, see [Offline and Outlook Filters and Templates](../common-data-service/outlook-client/offline-outlook-filters-templates.md). 
   
@@ -103,9 +104,8 @@ Entity views are special saved queries that retrieve data by using a specific fi
       FetchXml = fetchXml,
       LayoutXml = layoutXml,
       QueryType = 0
-    };
-                    
-  _customViewId = _serviceProxy.Create(sq);
+    };                  
+  _customViewId = service.Create(sq);
   Console.WriteLine("A new view with the name {0} was created.", sq.Name);
   ```  
   
@@ -149,7 +149,7 @@ Entity views are special saved queries that retrieve data by using a specific fi
         };
         RetrieveMultipleRequest retrieveSavedQueriesRequest = new RetrieveMultipleRequest { Query = mySavedQuery };
 
-        RetrieveMultipleResponse retrieveSavedQueriesResponse = (RetrieveMultipleResponse)_serviceProxy.Execute(retrieveSavedQueriesRequest);
+        RetrieveMultipleResponse retrieveSavedQueriesResponse = (RetrieveMultipleResponse)service.Execute(retrieveSavedQueriesRequest);
 
         DataCollection<Entity> savedQueries = retrieveSavedQueriesResponse.EntityCollection.Entities;
 
@@ -199,7 +199,7 @@ QueryExpression ClosedOpportunitiesViewQuery = new QueryExpression
 
 RetrieveMultipleRequest retrieveOpportuntiesViewRequest = new RetrieveMultipleRequest { Query = ClosedOpportunitiesViewQuery };
 
-RetrieveMultipleResponse retrieveOpportuntiesViewResponse = (RetrieveMultipleResponse)_serviceProxy.Execute(retrieveOpportuntiesViewRequest);
+RetrieveMultipleResponse retrieveOpportuntiesViewResponse = (RetrieveMultipleResponse)service.Execute(retrieveOpportuntiesViewRequest);
 
 SavedQuery OpportunityView = (SavedQuery)retrieveOpportuntiesViewResponse.EntityCollection.Entities[0];
 _viewOriginalState = (SavedQueryState)OpportunityView.StateCode;
@@ -212,8 +212,8 @@ SetStateRequest ssreq = new SetStateRequest
     State = new OptionSetValue((int)SavedQueryState.Inactive),
     Status = new OptionSetValue(2)
 };
-_serviceProxy.Execute(ssreq);
- ``` 
+service.Execute(ssreq);
+``` 
  
 > [!NOTE]
 > The view state, active or inactive, is not included with the view when it is added to a solution. Therefore, when the solution is imported into a target organization, the status will be set to active by default.

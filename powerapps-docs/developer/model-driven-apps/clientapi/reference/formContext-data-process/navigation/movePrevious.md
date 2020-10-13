@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 649fe7b0-016d-409f-ba3c-b14e0f1953e0
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -64,6 +64,10 @@ You can also move to a previous stage in a different entity.
 <tr>
 <td>dirtyForm</td>
 <td>This value will be returned if the data in the page is not saved.</td>
+</tr>
+<tr>
+<td>stageGate</td>
+<td>One or more required field on the current stage is empty.</td>
 </tr>
 </table>
 </td>

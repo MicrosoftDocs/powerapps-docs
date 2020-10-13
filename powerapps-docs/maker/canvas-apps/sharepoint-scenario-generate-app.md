@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/12/2017
+ms.date: 06/18/2020
 ms.author: emcoope
 search.audienceType: 
   - maker
@@ -166,3 +166,6 @@ If you stuck with us up to this point, we hope you have a better sense of how th
 ## Next steps
 The next step in this tutorial series is to [Create a flow to manage project approvals](sharepoint-scenario-approval-flow.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 12/05/2019
+ms.date: 06/18/2020
 ms.author: tapanm
 search.audienceType: 
   - maker
@@ -97,3 +97,7 @@ In this topic, you created an app to manage data in a SharePoint list. As a next
 
 > [!div class="nextstepaction"]
 > [Customize a default browse screen](customize-layout-sharepoint.md)
+
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)

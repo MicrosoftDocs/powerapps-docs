@@ -35,11 +35,13 @@ The portal enables configuring the most common options, but certain options can 
 
 1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Entities**.
 
-![View entities](media/view-entities-portal.png)
+    > [!div class="mx-imgBorder"] 
+    > ![View entities](media/view-entities-portal.png)
 
 You can filter the entities you see using the following views in a list: 
 
-![Entity views](media/entity-views-portal.png)
+  > [!div class="mx-imgBorder"] 
+	> ![Entity views](media/entity-views-portal.png)
 
  |View|Description|
  |--|--|
@@ -54,7 +56,8 @@ You can also select **Group** to group entities by the **Tags** applied to them.
 
 While [viewing entities](#view-entities), in the menu bar select **New entity**. This will open the New entity panel.
 
-![New entity Panel](media/new-entity-panel.png)
+  > [!div class="mx-imgBorder"] 
+	> ![New entity Panel](media/new-entity-panel.png)
 
 Enter data for the following fields
 
@@ -83,7 +86,8 @@ Select **Create** to continue, this will close the **New entity** panel and disp
 
 The **Primary Name** field of the entity is displayed in the list of fields. Select the **Primary Name** field to edit it if you want to change the **Display Name**or **Name** of the field. The default values are shown below:
 
-![Primary Name panel](media/primary-name-panel.png)
+  > [!div class="mx-imgBorder"] 
+	> ![Primary Name panel](media/primary-name-panel.png)
 
 ## Edit an entity
 
@@ -91,7 +95,8 @@ While [viewing entities](#view-entities), select the entity you want to edit.
 
 Select **Settings** from the menu if you want to edit the **Display name**, **Plural display name** or **Description** for the entity.
 
-![Entity Settings](media/entity-settings-portal.png)
+  > [!div class="mx-imgBorder"] 
+	> ![Entity Settings](media/entity-settings-portal.png)
 
 For other items choose from the tabs.
 
@@ -132,7 +137,8 @@ See [Define alternate keys to reference records](define-alternate-keys-reference
 View the data in the entity.
 Use the **Select view** menu to choose from available views for the entity or to show all fields.
 
-![Select view](media/entity-data-select-view.png)
+  > [!div class="mx-imgBorder"] 
+	> ![Select view](media/entity-data-select-view.png)
 
 Use the **Next Page** and **Previous Page** commands at the bottom of the form to see more data.
 
@@ -148,7 +154,8 @@ As someone with the system administrator security role, you can delete custom en
 
 While [viewing entities](#view-entities), select the entity and select **Delete entity** from the menu.
 
-![Delete an entity using the Power Apps portal](media/delete-entity-powerapps-portal.png)
+  > [!div class="mx-imgBorder"] 
+	> ![Delete an entity using the Power Apps portal](media/delete-entity-powerapps-portal.png)
 
 If the entity has dependencies that prevent it from being deleted you will see an error message. To identify and remove any dependencies, you will need to use the solution explorer. More information [Identify entity dependencies](create-edit-entities-solution-explorer.md#identify-entity-dependencies)
 

@@ -21,9 +21,8 @@ In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpr
   
  The following table lists the properties for the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> class.  
   
-|||  
-|-|-|  
-|Property|Description|  
+|Property|Description|
+|-|-|
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Conditions>|Gets or sets condition expressions that include attributes, condition operators, and attribute values.|  
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.FilterOperator>|Gets or sets logical `AND/OR` filter operators. This is set by using the <xref:Microsoft.Xrm.Sdk.Query.LogicalOperator> enumeration.|  
 |<xref:Microsoft.Xrm.Sdk.Query.FilterExpression.Filters>|Gets or sets a hierarchy of condition and logical filter expressions that filter the results of the query.|  
