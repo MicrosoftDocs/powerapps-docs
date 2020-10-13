@@ -144,7 +144,7 @@ To edit a provider you've configured, select it, select **More Commands** (**...
 
 ![Edit a provider](media/use-simplified-authentication-configuration/edit-provider.png "Edit a provider")
 
-Refer to the provider-specific sections later in this article to edit settings for the provider type you selected.
+Refer to the provider-specific articles to edit settings for the provider type you selected.
 
 ### Delete a provider
 
