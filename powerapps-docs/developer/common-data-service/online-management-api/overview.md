@@ -14,7 +14,7 @@ search.app:
 ---
 # Online Management API for Common Data Service
 
-Online Management API is a REST API that lets you create and manage Common Data Service environments in your Office 365 tenant. 
+Online Management API is a REST API that lets you create and manage Common Data Service environments in your Microsoft 365 tenant. 
 
 Application publishers and ISVs can use the Online Management API to:
 -  Automate creation of custom demo Common Data Service environments
