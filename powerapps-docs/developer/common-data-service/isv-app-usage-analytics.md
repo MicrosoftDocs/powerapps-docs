@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# ISV app usage analytics
+# App usage analytics
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
