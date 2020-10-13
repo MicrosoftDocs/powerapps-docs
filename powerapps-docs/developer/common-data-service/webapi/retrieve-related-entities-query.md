@@ -12,7 +12,7 @@ applies_to:
 ms.assetid: 3D8FB9AF-3663-437A-988E-CBAE9579F167
 caps.latest.revision: 78
 author: "JimDaly"
-ms.author: "phecke"
+ms.author: "pehecke"
 manager: "ryjones"
 search.audienceType: 
   - developer
