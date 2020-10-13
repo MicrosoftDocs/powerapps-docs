@@ -16,14 +16,6 @@ This feature allows a customer to make client-side calls to external APIs and se
 
 OAuth 2.0 implicit grant flow supports endpoints that a client can call to get an ID token. Two endpoints are used for this purpose: [authorize](#authorize-endpoint-details) and [token](#token-endpoint-details).
 
-> [!NOTE]
-> Power Apps portals supports following OpenIdConnect flows and response types:
->
-> - **Implicit Flow** with response types *id_token* or *id_token token*.
-> - **Hybrid Flow** with response type *code id_token*.
->
-> **Authorization Code Flow** with response type *code* is **not supported**. For more information, read [OpenID Connect](https://openid.net/specs/openid-connect-core-1_0.html#Authentication) documentation for authentication.
-
 ## Authorize endpoint details 
 
 The URL for authorize endpoint is: `<portal_url>/_services/auth/authorize`. The authorize endpoint supports the following parameters:

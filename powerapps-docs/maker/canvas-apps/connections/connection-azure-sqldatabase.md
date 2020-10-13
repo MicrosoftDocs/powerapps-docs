@@ -17,7 +17,7 @@ search.app:
 # Connect to SQL Server from Power Apps
 ![SQL Server icon](./media/connection-azure-sqldatabase/sqlicon.png)
 
-Connect to SQL Server, in either Azure or an on-premises database, so that you can display information from it in Power Apps.
+Connect to SQL Server, in either Azure or an on-premises database, so that you can manage your data with create, read, update, and delete operations.
 
 ## Prerequisites
 
