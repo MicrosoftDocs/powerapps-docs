@@ -49,9 +49,9 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 
 - Have the System Customizer or System Administrator Role, or another role that has the Learning Path Authoring privilege.  
 
-- Enable Learning Path authoring. This creates the [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] Learning Path Authors security group.  
+- Enable Learning Path authoring. This creates the Microsoft 365 Learning Path Authors security group.  
 
-- Be a member of the [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] Learning Path Authors security group.  
+- Be a member of the Microsoft 365 Learning Path Authors security group.  
 
   You can author Learning Path content for web app modules and Unified Interface app modules. This includes [!include[](../../includes/pn-dyn-365-tablets.md)].  
 
@@ -74,14 +74,14 @@ Learning Path facilitates learning and adoption of your apps and organizational 
 5. Select **OK**.  
 
 <a name="ReqsAuth"></a>   
-## Add a user to the Office 365 Learning Path Authors security group  
- If you're not a member of the [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] Learning Path Authors security group, you'll see the following error message when you open the Learning Path Content Library.  
+## Add a user to the Learning Path Authors security group  
+ If you're not a member of the Microsoft 365 security group named **Learning Path Authors**, you'll see the following error message when you open the Learning Path Content Library.  
 
  ![Error message indicating that you are not a member of the Learning Path security group](media/lp-o365-security-group.png "Error message indicating that you are not a member of the Learning Path security group")  
 
 #### Add a user  
 
-1. Go to the admin portal for your [!INCLUDE[pn_Office_365](../../includes/pn-office-365.md)] tenant by selecting  the **Navigate to other applications** button in the upper-left corner of the page when you're signed in to [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)], and then select **Admin**.  
+1. Go to the admin portal for your Microsoft 365 tenant by selecting  the **Navigate to other applications** button in the upper-left corner of the page when you're signed in to [!INCLUDE[pn_crm_shortest](../../includes/pn-crm-shortest.md)], and then select **Admin**.  
 
     You might be asked to reenter your password.  
 
