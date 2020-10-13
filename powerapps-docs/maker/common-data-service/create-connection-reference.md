@@ -47,7 +47,7 @@ You can add a connection reference to a solution in a few different ways:
 
 ## Limits
 
-During the preview, the same connection reference can be used a maximum of 16 times in flows.
+While Connection References are in preview, one Connection Reference can only be used within a maximum of 16 flows. If the same connection needs to be used in more than 16 flows, then create another Connection Reference with a connection to the same connector. There is no limit to the number of actions in each flow that can be associated with the Connection Reference.
 
 ### See also
 
