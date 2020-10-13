@@ -343,8 +343,8 @@
       href: isv-app-management-appsource-checker.md
     - name: Connector Certification 
       href: isv-app-management-certification.md
-  - name: App usage analytics
-    href: isv-app-usage-analytics.md
+    - name: App usage analytics
+      href: isv-app-usage-analytics.md
 - name: Create client applications
   href: connect-cds.md
   items:
