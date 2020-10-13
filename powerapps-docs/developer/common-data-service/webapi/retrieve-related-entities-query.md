@@ -1,6 +1,6 @@
 ---
 title: "Retrieve related entity records with a query (Common Data Service)| Microsoft Docs"
-description: "ead how you can retrieve related entity records by expanding the navigation properties."
+description: "Read how you can retrieve related entity records by expanding the navigation properties."
 ms.custom: ""
 ms.date: 06/27/2020
 ms.service: powerapps
@@ -12,7 +12,7 @@ applies_to:
 ms.assetid: 3D8FB9AF-3663-437A-988E-CBAE9579F167
 caps.latest.revision: 78
 author: "JimDaly"
-ms.author: "phecke"
+ms.author: "pehecke"
 manager: "ryjones"
 search.audienceType: 
   - developer
@@ -312,6 +312,7 @@ The Web API allows you to use two lambda operators, which are `any` and `all` to
 
 ## See also
 
+[Search across entity data using relevance search](relevance-search.md)  
 [Query data using Web API](query-data-web-api.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
