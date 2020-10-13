@@ -1,5 +1,6 @@
 ---
 title: "Why choose Common Data Service? | MicrosoftDocs"
+description: Understand how Common Data Service can help your business become more agile.
 ms.custom: ""
 ms.date: 06/16/2020
 ms.reviewer: "Mattp123"
