@@ -4,7 +4,7 @@ description: Learn how to use the Employee Ideas app from Teams store.
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 10/13/2020
 author: navjotm
 ms.author: namarwah
 ms.reviewer: tapanm
@@ -105,6 +105,8 @@ To add campaigns:
     >    - Delete idea questions.
 
 1. (Optional) Select **Post to channel**.
+
+1. (Optional) Select ![Add cover image](media/employee-ideas/cover-image-add.png "Add cover image") to add **Cover image**, and select a cover image of your choice. You can also upload a custom image.
 
 1. Select **Save**.
 
