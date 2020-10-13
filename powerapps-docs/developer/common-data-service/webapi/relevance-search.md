@@ -83,13 +83,13 @@ parameters are indicated in the next section.
 
 A list of supported query parameters for relevance search is listed below.
 
-**entities=[list\<string\>] (optional)**
+#### `entities=[list<string>] (optional)`
 
 The default entity list searches across all relevance search-configured entities
 and fields. The default list is configured by your administrator when relevance
 search is enabled.
 
-**facets=[list\<string\>] (optional)**
+#### `facets=[list<string>] (optional)`
 
 Facets support the ability to drill into data results after they have been
 retrieved.
@@ -107,7 +107,7 @@ POST [Organization URI]/api/search/v1.0/query
 }
 ```
 
-**filter=[string] (optional)**
+#### `filter=[string] (optional)`
 
 Filters are applied while searching data and are specified in standard OData
 syntax.
@@ -125,20 +125,20 @@ POST [Organization URI]/api/search/v1.0/query
 }
 ```
 
-**returntotalrecordcount = true \| false (optional)**
+#### `returntotalrecordcount = true | false (optional)`
 
 Specify **true** to return the total record count; otherwise **false**. The default
 is **false**.
 
-**skip=[int] (optional)**
+#### `skip=[int] (optional)`
 
 Specifies the number of search results to skip.
 
-**top=[int] (optional)**
+#### `top=[int] (optional)`
 
 Specifies the number of search results to retrieve. The default is 50.
 
-**orderby=[list\<string\>] (optional)**
+#### `orderby=[list<string>] (optional)`
 
 A list of comma-separated clauses where each clause consists of an attribute name followed by ‘asc’ (shorthand for ascending) or ‘desc’ (shorthand for descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
@@ -148,7 +148,7 @@ For a set of results that contains multiple entity types, the list of clauses fo
 
 If the query request includes a filter for a specific entity type, `orderby` can optionally specify entity-specific attributes.
 
-**searchmode= any \| all (optional)**
+#### `searchmode= any | all (optional)`
 
 Specifies whether any or all the search terms must be matched to count the
 document as a match. The default is 'any'.
@@ -156,7 +156,7 @@ document as a match. The default is 'any'.
 > [!NOTE]
 > The `searchMode` parameter on a query request controls whether a term with the NOT operator is AND'ed or OR'ed with other terms in the query (assuming there is no + or | operator on the other terms).<p/> Using `searchMode=any` increases the recall of queries by including more results, and by default, will be interpreted as "OR NOT". For example, "wifi -luxury" will match documents that either contain the term "wifi" or those that do not contain the term "luxury".<p/>Using `searchMode=all` increases the precision of queries by including fewer results, and by default, will be interpreted as "AND NOT". For example, "wifi -luxury" will match documents that contain the term "wifi" and do not contain the term "luxury".
 
-**searchtype= simple \| full (optional)**
+#### `searchtype= simple | full (optional)`
 
 The search type specifies the syntax of a search query. Using 'simple' selects
 simple query syntax and 'full' selects Lucene query syntax. The default is
@@ -369,15 +369,15 @@ query parameters are indicated in the next section.
 
 ### Query parameters
 
-**usefuzzy=true \| false (optional)**
+#### `usefuzzy=true | false (optional)`
 
 Use fuzzy search to aid with misspellings. The default is **false**.
 
-**top=[int] (optional)**
+#### `top=[int] (optional)`
 
 Number of suggestions to retrieve. The default is 5.
 
-**orderby=[List\<string\>] (optional)**
+#### `orderby=[List<string>] (optional)`
 
 A list of comma-separated clauses where each clause consists of an attribute name followed by ‘asc’ (shorthand for ascending) or ‘desc’ (shorthand for descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
@@ -387,11 +387,11 @@ For a set of results that contains multiple entity types, the list of clauses fo
 
 If the query request includes a filter for a specific entity type, `orderby` can optionally specify entity-specific attributes.
 
-**entities=[list\<string\>] (optional)**
+#### `entities=[list<string>] (optional)`
 
 Default is searching across all relevance search configured entities.
 
-**filter=[string] (optional)**
+#### `filter=[string] (optional)`
 
 Filters are applied while searching data and are specified in standard OData
 syntax.
@@ -469,16 +469,16 @@ parameters are indicated in the next section.
 
 ### Query parameters
 
-**usefuzzy=true \| false (optional)**
+#### `usefuzzy=true | false (optional)`
 
 Fuzzy search to aid with misspellings. The default is **false**.
 
-**entities=[list\<string\>] (optional)**
+#### `entities=[list<string>] (optional)`
 
 The default scope is searching across all relevance search configured entities
 and fields.
 
-**filter=[string] (optional)**
+#### `filter=[string] (optional)`
 
 Filters are applied while searching data and are specified in standard OData
 syntax.
