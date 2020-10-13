@@ -5,7 +5,7 @@ author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 08/25/2020
+ms.date: 10/05/2020
 ms.author: garybird
 ms.reviewer: kvivek
 ---
@@ -32,7 +32,7 @@ The left pane lists all the components available in the **Facility Management** 
 ## App components
 
 The Facility Safety Management app has the following components:
-<!--markdownlint-disable MD036-->
+
 **Facility Management**
 
 - **Facilities**: List of the facilities (for example, buildings and plants) that require monitoring to reopen.
@@ -49,9 +49,13 @@ The Facility Safety Management app has the following components:
 
 - **Employee Sentiment** -  Keeps track of general employee well-being. This is self-reported information, but it's a valuable parameter when tracked consistently over time and with bigger groups. This data is typically entered by employees with the Employee Return to the Workplace app.
 
-- **Employee Attestation** - Keeps track of employee health assessments or attestations based on a series of questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
+- **Employee Attestation** - Keeps track of employee health assessments or attestations based on the questions answered by the employee. Employee attestation data is typically entered by employees with the Employee Return to the Workplace app.
 
-- **Employee Bookings** - Keeps track of the employee's area, start (arrival) time, and end (departure) time. Employee bookings are linked to the employees' attestation record and are updated with actual employee visits.
+- **Employee Visits** - Keeps track of the visits. Employee visits are linked to an employee and a booking record.
+
+**Guests**
+
+- **Guest Registrations** - Keep track of registered guests. Guest registrations are always linked to a booking for an employee. The employee serves as a host. Guests are stored as a contact record of type `Guest`. Guests can be added via the Employee app.
 
 - **Employee Visits** - Keeps track of visits to the facility. Employee visits are linked to an employee and a booking record. 
 
@@ -160,22 +164,22 @@ You can monitor and assess the current status of a facility by reviewing its ass
 
 1. On the left pane, select **Facility**. The default view, **My Facilities**, shows only your facilities. When switching the views, you can see all the active or inactive facilities. 
 
-2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information about facility usage, guides the reopening process, and analyzes occupancy at a facility. The report has three main tabs: **Facility**, **Virus Spread**, and **Employee Activity**.
+2. Select the facility record for which you want to access data. The **General** tab shows the facility manager dashboard, which provides information on facility usage, guide reopening, and analyze the occupancy at a facility.  The report has three main tabs: Facility, Virus Spread, and Employee Activity.
 
-   - **Facility** tab
+   **Facility**:
 
-     **Readiness** shows the status of the readiness checks needed for a facility's safe reopening. Checks are separated into categories (for example, **Employee Experience** and **Communications**), which can be expanded to show the progress of individual actions. The reproductive number is the average number of people to whom COVID-19 might be transmitted by an infected individual.
+   The **Readiness** tab shows the status of the readiness checks needed for a facility’s safe reopening. At the top, the phase is shown together with the reproductive number, which is the average number of people to whom COVID-19 may be transmitted by an infected individual, and the average sentiment. In the middle, you find the checks separated into categories (for example, Employee Experience, Communications, etc.) which can be expanded to show the progress of individual actions. 
 
-     **Occupancy** provides metrics regarding the facility capacity and usage, such as:
-      - The facility's total capacity, and its current capacity based on the reopen phase.
-      - The number of bookings and visits for the most recent day, and daily average for the last seven days.
-      - Two charts&mdash;which can be filtered by date range, floor, or area&mdash;that show:
-          - Number of bookings and the current capacity.
-          - Average daily occupancy, shown as a black bar. Capacity is represented by the green zone. Floors and areas with black bars in the red zone are over capacity. Occupancy can be viewed at the floor or area level. Hover over the information symbol (🛈) next to the chart to see detailed instructions.
+   The **Occupancy** tab provides metrics regarding the facility capacity and usage, such as:
+      - Facility’s total capacity, and current capacity based on reopening phase.
+      - Number of bookings, guest registrations, and visits for the most recent day and daily average for the last seven days.
+      - Two charts, that can be filtered by date range, and to a floor or an area:
+          - Employee bookings (or Employee bookings + guest registrations) vs capacity by date. Shows the employee bookings (+ guest registrations) on a certain date on the total capacity on that date.
+          - Average daily occupancy by Floor (or Floor and Area). The dot represents the capacity and the contents show the average employee bookings and average guest registrations. 
 
-     **Daily Arrivals** shows booking information to assist in controlling facility traffic, such as:
-        - Capacity and visit metrics, busiest weekday, and the arrival time window for the last seven days.
-        - Two charts, which can be filtered by date range, that display the number of bookings by arrival window and by weekday.
+   The **Daily Arrivals** tab shows booking information to assist in controlling the facility traffic, such as:
+      - Capacity and visit metrics, busiest weekday, and arrival time window for the last seven days.
+      - Two charts, which can be filtered by date range, display number of bookings by arrival window, and by weekday.
 
      > [!div class="mx-imgBorder"]
      > ![Facility manager dashboard - Readiness](media/pbi-dash-facility-manager-readiness.png "Facility manager dashboard - Readiness")
@@ -184,9 +188,13 @@ You can monitor and assess the current status of a facility by reviewing its ass
 
       This tab shows data from public health sources by country (by state in the United States):
 
-      - **New COVID-19 Cases** shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
+   The **New COVID-19 Cases** tab shows the number of cases for the last reporting day, 14-day average, daily trend, and the total number of cases.
+   
+   The **Fatal COVID Cases** tab shows information for COVID-19 cases with fatalities.
+   
+   The **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the US is at the state level.
 
-      - **Fatal COVID Cases** shows information for COVID-19 cases with fatalities.
+      - **Fatal COVID Cases show information for COVID-19 cases with fatalities.
 
       - **Reproductive Number** is the average number of people to whom COVID-19 might be transmitted by an infected individual.  Data for the United States is at the state level.
 
@@ -203,7 +211,7 @@ You can monitor and assess the current status of a facility by reviewing its ass
 
       - Number of passes generated
 
-      - Two charts, one of which displays employee sentiment by date and the other, passes generated versus the number of visits by date, along with the trend over time.
+      There are two charts. One displays the sentiment by date and the other displays the pass + guest registrations generated vs. the number of visits by date, along with the trend over time.
 
       > [!div class="mx-imgBorder"]
       > ![Facility manager dashboard - Employee activity](media/pbi-dash-facility-manager-employee-activity.png "Facility manager dashboard - Employee activity")
@@ -338,7 +346,7 @@ For ease of use, you can also use the business process flow to create new transi
 
 - Moving forward
 
-   Given that the facility isn't in the final phase, you can select the circle of the current stage and then select **Next Stage**. The business process flow won't move instantly, but in the background, a new transition record is created and you'll go to that record. The record is prepopulated with the next phase and is ready for approval.
+   Given that the facility isn't in the final phase, you can select the circle of the current stage and then select **Next Stage**. The business process flow won't move instantly, but in the background, a new transition record is created and you'll go to that record. The record is auto populated with the next phase and is ready for approval.
 
 - Moving backward
 
@@ -346,7 +354,7 @@ For ease of use, you can also use the business process flow to create new transi
 
 ## Monitor employee attestations
 
-You can monitor whether your organization's employees are feeling healthy enough to be eligible to return to your facility. You can track employee self-attestations of their health based on a series of questions that the employees answer. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Attestations** area of the Facility Safety Management app.
+You can monitor whether your organization's employees are feeling healthy enough to be eligible to return to your facility. You can track employee self-attestations of their health based on the questions employees answer. This data is typically entered by the employee by using the Employee Return to the Workplace app. You can view the summary of the responses in the **Employee Attestations** area of the Facility Safety Management app.
 
 > [!div class="mx-imgBorder"]
 > ![Employee attestations](media/facility-manager-employee-attestations.png "Employee attestations")
