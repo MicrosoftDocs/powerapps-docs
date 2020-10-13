@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 12/05/2019
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -52,3 +52,6 @@ Ideally, you have basic familiarity with each technology, but you can still comp
 ## Next steps
 The next step in this tutorial series is to [set up the SharePoint Online lists](sharepoint-scenario-setup.md) that we use throughout the series.
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)

@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 02/07/2020
+ms.date: 06/29/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -78,7 +78,7 @@ Let's change our simple adder to act like an old-fashioned adding machine, with 
 
 | Display | Description |
 |----|----|
-| <style> img { max-width: none } </style> ![App with a Text input control, a label, and two buttons](media/working-with-variables/button-changes-state-1.png) | When the app starts, the running total is 0.<br><br>The red dot represents the user's finger in the text-input box, where the user enters **77**. |
+|  ![App with a Text input control, a label, and two buttons](media/working-with-variables/button-changes-state-1.png) | When the app starts, the running total is 0.<br><br>The red dot represents the user's finger in the text-input box, where the user enters **77**. |
 | ![The Text input control contains 77, and the Add button is being pressed](media/working-with-variables/button-changes-state-2.png) | The user selects the **Add** button. |
 | ![The total is 77, and another 77 is being added to it](media/working-with-variables/button-changes-state-3.png) | 77 is added to the running total.<br><br>The user selects the **Add** button again. |
 | ![The total is 154 before it's cleared.](media/working-with-variables/button-changes-state-4.png) | 77 is again added to the running total, resulting in 154.<br><br>The user selects the **Clear** button. |
@@ -319,4 +319,4 @@ Let's recreate our adding machine by using a collection:
 12. Preview again by pressing the F5 key, enter numbers in the text-input control, and select buttons. Select the **Save** button. Close and reload the app, and select the **Load** button to reload your collection.
 
 > [!NOTE]
-> **SaveData** and **LoadData** function in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.
+> **SaveData** and **LoadData** functions work in Power Apps Mobile but not Power Apps Studio or the web player for Power Apps.

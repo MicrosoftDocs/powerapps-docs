@@ -36,12 +36,12 @@ Model-driven apps and canvas apps (public preview).
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <manifest>
   <control namespace="PcfSample" constructor="TestDataSetCtrl" version="0.0.6" display-name-key="TestDataSetCtrl" description-key="TestDataSetCtrl description" control-type="standard" api-version="1.2.1">
-    <data-set name="simpleTableGrid" display-name-key="Dataset_Display_Key">
+    <data-set name="sampleDataSet" display-name-key="Dataset_Display_Key">
       <property-set name="samplePropertySet" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true"/>
       <property-set name="samplePropertySet2" display-name-key="Property_Display_Key2" description-key="Property_Desc_Key2" of-type="SingleLine.Text" usage="bound" required="true"/>
     </data-set>
     <resources>
-      <code path="bundle.js" order="1"/>
+      <code path="index.ts" order="1"/>
       <css path="css/TestDataSetCtrl.css" order="1"/>
       <resx path="strings/TestDataSetCtrl.1033.resx" version="1.0.0"/>
     </resources>
@@ -445,6 +445,8 @@ private onLoadPrevButtonClick(event: Event): void {
 ```
 
 ```XML
+<?xml version="1.0" encoding="utf-8"?>
+<root>
 <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">

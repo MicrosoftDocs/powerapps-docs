@@ -2,7 +2,7 @@
 title: "Use the ConditionExpression class (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Read how you can use the ConditionExpression class to compare an attribute to a value or set of values by using an operator, such as &quot;equal to&quot; or &quot;greater than&quot;" # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 08/03/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -82,7 +82,49 @@ condition3.Operator = ConditionOperator.Equal;
 condition3.Values.Add(AccountState.Active);  
   
 ```  
-  
+
+## Column comparison using the SDK API
+
+The following example shows how to compare columns using SDK API and the Organization service:
+
+```csharp
+public ConditionExpression
+(
+  string attributeName,
+  ConditionOperator conditionOperator,
+  bool compareColumns,
+  object value
+)
+
+public ConditionExpression
+(
+  string attributeName,
+  ConditionOperator conditionOperator,
+  bool compareColumns,
+  object[] values
+)
+```
+
+By passing in `true` as the value for the `compareColumns` parameter, the `value` is treated as the
+name of the second attribute to compare the values in `attributeName` to. Pass in `false` to treat it
+as a literal value instead.
+
+For example:
+
+```csharp
+new ConditionExpression("firstname", ConditionOperator.Equal, true, "lastname");
+```
+
+This code creates a condition to return only records where the first and last names are the same, while
+
+```csharp
+new ConditionExpression("firstname", ConditionOperator.Equal, false, "John");
+```
+
+creates a condition to return only records where the first name is John.
+
+More information: [Use column comparison in queries](../column-comparison.md)
+
 ### See also  
  [Building Queries](build-queries-with-queryexpression.md)   
  [Build Queries with QueryExpression](build-queries-with-queryexpression.md)   

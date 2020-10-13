@@ -1,1 +1,1 @@
-Adds a function to be called when the record is saved.
+Adds a function to be called when the [OnSave](../../events/form-onsave.md) event is triggered. The event occurs before the save occurs, giving the handler an option to cancel the save operation.

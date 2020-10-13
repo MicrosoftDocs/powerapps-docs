@@ -33,3 +33,7 @@ Contains a set of geographic coordinates along with the associated currency as w
 Represents the time when the object is acquired and is represented ad DOMTimeStamp.
 
 **Type**: `Date`
+
+## Remarks
+
+See more details on [Position](https://developer.mozilla.org/docs/Web/API/Position)

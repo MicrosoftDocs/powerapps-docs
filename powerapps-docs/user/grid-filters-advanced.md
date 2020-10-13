@@ -5,7 +5,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 04/02/2020
+ms.date: 06/24/2020
 ms.author: mkaur
 ms.reviewer: ""
 ms.assetid: 
@@ -23,9 +23,10 @@ Use the advanced filter options to create a personal view to see the records tha
 
 
 > [!NOTE]
-> - The advanced filter option is available only in English language versions.
+> - The advanced filter option is available only in English language versions. We plan to support more languages in future releases.
 > - The advanced filter option on the Queues entity does not work and displays this error messsage: We are unable to display the filter conditions for this view.
 > - In the Unified Interface grids do not prepopulate column filters based on the current view definition.
+> - Public views created in Power Apps that include **Contains data** or **Does not contain data** filters will not appear in the list of saved views in Advanced Find.
 
 When you create and save a personal view, it appears in your list of personal views under **My Views**.
 

@@ -1,16 +1,14 @@
 ---
 title: Administer the Regional Government Emergency Response and Monitoring portal | Microsoft Docs
 description: Learn how to configure the Regional Hospital Emergency Response portal.
-author: tapanm-msft
+author: pankajarora-msft
 manager: kvivek
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/06/2020
-ms.author: tapanm
+ms.date: 06/05/2020
+ms.author: pankar
 ms.reviewer: tapanm
-searchScope:
-  - PowerApps
 ---
 # Administer the Regional Government Emergency Response and Monitoring portal
 
@@ -43,15 +41,16 @@ You can view all administrative options available to you after selecting **Admin
 
 | **Option name** | **Description**                                                                                               |
 |-----------------|---------------------------------------------------------------------------------------------------------------|
-| [User Requests](#user-requests) | View, approve or decline portal user requests.
+| [User Requests](#user-requests) | View, approve, or decline portal user requests.
 | [Users](#users)       | Create, edit, or deactivate portal users.                                                         |
 | [Systems](#systems)      | Create, edit, or delete systems. |
 | [Regions](#regions)      | Create or delete regions.                              |
 | [Facilities](#facilities)    | Create, edit, or delete facilities.                        |
+| [CDC Data Feed](#cdc-data-feed) | View, edit or download the Centers for Disease Control and Prevention (CDC) data feed so that you can upload the data to the CDC web site.
 
 ### User Requests
 
-You can view, approve and decline portal user requests using the **User Requests** administrative task option.
+You can view, approve, and decline portal user requests using the **User Requests** administrative task option.
 
 When you select **User Requests**, you can see all existing portal user requests submitted pending review:
 
@@ -156,10 +155,10 @@ The role of the user defines components that show up on the portal:
 The highlighted components are visible to the users with the following roles assigned:
 
 1. [Organizational HealthCare Worker](#organizational-healthcare-worker)
-2. [Report Viewer](#report-viewer)
+2. [Report Viewer](#report-viewer) and [Regional Report Viewer](#regional-report-viewer)
 3. [Parent Organization Administrator](#parent-organization-administrator)
 
-The following section walks through each one of the roles with details of what the member of the role can do:
+Here are the details of what the member of each role can do:
 
 ##### Organizational HealthCare Worker
 
@@ -177,7 +176,7 @@ A Healthcare Worker is an employee of a hospital system such as a registered nur
 
 ##### Report Viewer
 
-A Report Viewer role is for the users that can view the dashboards available on this portal. Members of Report Viewer role can view the following dashboards:
+The Report Viewer role is for the users who can view the dashboards available on this portal. Members of Report Viewer role can view the following dashboards:
 
 - System at a glance
 
@@ -191,7 +190,7 @@ A Report Viewer role is for the users that can view the dashboards available on 
 
 ##### Parent Organization Administrator
 
-A Parent Organization Administrator can create users that can access the organization details using this portal.
+A Parent Organization Administrator can create users who can access the organization details using this portal.
 
 Members of Parent Organization Administrator role can:
 
@@ -207,6 +206,25 @@ Members of Parent Organization Administrator role can:
 
 > [!TIP]
 > Select all 3 roles to allow a user to access all components.
+
+##### Regional Report Viewer
+
+The Regional Report Viewer role is for the users who can view the [dashboards](#get-insights) available for the entire region. Typically, Regional Report Viewer role users don't have a parent organization associated with them.
+
+> [!NOTE]
+> Using the portal, you can request a user with Regional Report Viewer role to be created. However, user request approvals for this role can only be done by regional admins using the admin model-driven app. More information: [Manage portal user requests](configure.md#manage-portal-user-requests).
+
+Members of Regional Report Viewer role can view the following dashboards for the entire region:
+
+- System at a glance
+
+- COVID-19 patient details
+
+- Bed capacity details
+
+- Equipment details
+
+- Supplies details
 
 #### View user details
 
@@ -325,17 +343,24 @@ To create a facility, select the **Create** button:
 |------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Facility Name                                  | Name of the facility.                                                                                                                                                                                      |
 | Region                                         | Select a region this facility is associated with.                                                                                                                                                          |
-| Licensed Beds Total Capacity                   | Total licensed bed capacity, in number format.                                                                                                                                                             |
+| Total Inpatient Bed Capacity | Total inpatient bed capacity at this facility. |
+| Neonatal Bed Capacity | Total neonatal bed capacity at this facility. |
 | ICU Beds (AIIR Room) Total Capacity            | Number of total ICU beds in AIIR (Airborne Infect Isolation Room).                                                                                                                                         |
+| ICU Beds (non-AIIR Room) Total Capacity            | Number of total ICU beds in non-AIIR (Non-Airborne Infect Isolation Room).                                                                                                                                         |
 | Acute Care Beds (AIIR Room) Total Capacity     | Total Acute Care beds (AIIR) capacity, in number format.                                                                                                                                                   |
-| Ventilators Total Capacity                     | Total ventilator capacity, in number format.                                                                                                                                                               |
+| Acute Care Beds (non-AIIR Room) Total Capacity     | Total Acute Care beds (non-AIIR) capacity, in number format.                                                                                                                                                   |
+| Total Mortuary Capacity | Total mortuary capacity for the facility.<br/> **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** [form](portals-user.md#bed-capacity).
 | Supplies List | Select [Supplies List](#supplies-list-for-a-facility) to choose items from the available supplies available at the facility. |
 | DOH Number                                     | The Department of Health number for this facility.                                                                                                                                                         |
 | Follows Droplet Protocol                       | Select **Yes**/**No**. Relates to the facility following Droplet Precautions for patients known or suspected to be infected with pathogens transmitted by respiratory droplets, such as in COVID-19 cases. |
-| Surge Beds Total Capacity                      | Total surge beds capacity, in number format. Surge beds are those that can be staffed above and beyond licensed bed capacity if patients need to be admitted                                               |
-| ICU Beds (non-AIIR Room) Total Capacity        | Number of total ICU beds (non-AIIR).                                                                                                                                                                       |
-| Acute Care Beds (non-AIIR Room) Total Capacity | Total Acute Care beds (non-AIIR) capacity, in number format.                                                                                                                                               |
-| Total Mortuary Capacity | Total mortuary capacity for the facility. **Note**: When set to at least 1, causes field *Number of decedent accommodations currently in use* to be available for the facility's **Bed capacity** form.
+| Total Outpatient Bed Capacity | Total outpatient bed capacity at this facility. |
+| Total Overflow/Surge/Expansion Bed Capacity | Total overflow, surge, or expansion bed capacity at this facility. |
+| Total Pediatric ICU Beds (AIIR Room) Capacity | Total pediatric ICU beds (AIIR) at this facility. |
+| Total Pediatric ICU Beds (Non-AIIR Room) Capacity | Total pediatric ICU beds (non-AIIR) at this facility. |
+| Total Pediatric Acute Care Beds (Non-AIIR) Capacity | Total pediatric Acute Care beds (non-AIIR) at this facility. |
+| Total Pediatric Acute Care Beds (AIIR) Capacity | Total pediatric Acute Care beds (AIIR) at this facility. |
+| Does this facility have an Emergency Department/Overflow location? | Select **Yes**/**No** to confirm if the facility has emergency department or overflow location(s). | 
+| Ventilators Total Capacity                     | Total ventilator capacity, in number format.                                                                                                                                                               |
 | Facility Address                               | Street, City, County, State, and Zip code for the facility location.                                                                                                                                        |
 
 ##### Supplies list for a facility
@@ -353,7 +378,7 @@ option:
 
 You're prompted confirming deletion before the facility gets deleted:
 
-![Delete facility confirm](media/portal-admin-delete-facility-confirm.png)
+![Confirm facility deletion](media/portal-admin-delete-facility-confirm.png)
 
 #### Edit Facility
 
@@ -363,9 +388,47 @@ To delete a facility, select the drop-down menu and then select **Edit** option:
 
 Update the fields and select **Submit** to save the changes.
 
+### CDC Data Feed
+
+Parent Organization Administrators can use **CDC Data Feed** to view, edit and download the data feed for upload to the Centers for Disease Control and Prevention (CDC) web site.
+
+![CDC Data Feed](media/portal-regional-report-viewer-cdc-data-feed.png)
+
+The CDC data feed is shown for each facility separately. After you select a facility, you have the option to select one from the three available **CDC Pathways**.
+
+![CDC Pathway](media/portal-admin-cdc-pathway.png)
+
+#### CDC Pathway
+
+CDC requires data to be uploaded in a three specific formats, shown as the **CDC Pathway**. Each pathway includes data for the respective category as explained in the following table:
+
+| CDC Pathway | Description |
+| - | - |
+| **Patient Impact And Hospital Capacity** | Includes Bed Capacity, Equipment and COVID-19 statistics.
+| **Healthcare Supply** | Includes Supplies inventory statistics.
+| **Healthcare Worker Staffing** | Includes Staffing statistics.
+
+#### Edit CDC Data Feed
+
+Select the drop-down option for the feed, and then select **Edit** to update the selected feed statistics.
+
+![Edit CDC feed](media/portal-admin-cdc-edit.png)
+
+After updating the feed statistics, select **Submit** to save the changes.
+
+![Edit CDC feed details](media/portal-admin-cdc-edit-feed.png)
+
+#### Download CDC Data Feed
+
+When ready to download the CDC Data Feed for uploading to CDC web site, select the appropriate data feeds, and then select **Download Data For Selected Date Range**.
+
+![Edit CDC feed details](media/portal-admin-cdc-download.png)
+
+The CDC Data Feed is downloaded in CSV format to your Downloads folder. You can now upload the downloaded files to the CDC web site.
+
 ## Get Insights
 
-If you are a member of **Report Viewer** role, you’ll see option to view **Dashboards**:
+If you're a member of **Report Viewer**, or **Regional Report Viewer** roles, you’ll see option to view **Dashboards**:
 
 ![Get insights](media/portal-admin-get-insights.png)
 

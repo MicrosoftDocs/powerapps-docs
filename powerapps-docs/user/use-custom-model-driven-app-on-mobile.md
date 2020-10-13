@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 05/07/2020
+ms.date: 09/25/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -34,7 +34,7 @@ Legend:
 
 1. **Site map**: Open the menu and move between apps, get to your favorite and recently used records, access settings, and more.
 2. **Search**: Search for app records in Common Data Service.
-3. **Quick Create**: Create a new record and quickly enter almost any type of information into the system.
+3. **New**: Create a new record and quickly enter almost any type of information into the system.
 4. **Relationship Assistant**: Use the assistant to monitor and track daily actions and communications. It helps you stay on top of your day with insight cards that are displayed prominently throughout the app to provide tailored and actionable insights.
 
 ## Site map 
@@ -100,7 +100,7 @@ The **Pinned** and **Recent** lists provide quick access to records that you've 
 
 ## Add a record quickly
 
-1. From the Home screen, select **New** ![Create record button](media/create-record-button.png "Create record button").
+1. From the Home screen, select **New** ![Create record button](media/pa1_create-record-button.png "Create record button").
 2. Fill in the fields, and then select **Save**.
 3. After the record is created, you can view the new record. 
 

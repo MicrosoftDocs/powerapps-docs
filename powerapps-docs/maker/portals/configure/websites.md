@@ -1,14 +1,13 @@
 ---
 title: "Manage websites in portals | MicrosoftDocs"
 description: "Learn how to manage websites in portals."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/30/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Manage websites

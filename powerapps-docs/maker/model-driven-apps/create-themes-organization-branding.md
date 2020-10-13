@@ -1,7 +1,8 @@
 ---
-title: "Change the color scheme or add a logo to match your organization’s brand  | MicrosoftDocs"
+title: "Change the color scheme or add a logo to match your brand  | MicrosoftDocs"
+description: Learn how to create a theme
 ms.custom: ""
-ms.date: 02/19/2019
+ms.date: 04/30/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -18,7 +19,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Create a theme
+# Use a theme to create a custom look for your app
 
 You can create a custom look and feel (a theme), for your app by making changes to the default colors and visual elements provided in the uncustomized system. For example, you can create your personal product branding by adding a company logo and providing entity-specific coloring. A theme is created by using the customization tools in the user interface, without requiring a developer to write code. You can create, change or delete themes that are used in your organization. The theme customization is supported in the Web forms in Dynamics 365 for Outlook. You can define multiple themes, but only one can be set and published as the default theme.  
   
@@ -39,8 +40,6 @@ You can create a custom look and feel (a theme), for your app by making changes 
 -   Navigation bar color  
   
 -   Navigation bar shelf color
-
--   Main command bar color on the Unified Interface
   
 -   Header color  
   
@@ -68,15 +67,11 @@ You can create a custom look and feel (a theme), for your app by making changes 
 ## Copy and alter the existing theme  
  The easiest and quickest way to create a new theme is to clone and alter an existing theme, then save it, preview and publish. 
  
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+1. Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Settings** ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right), and then select **Advanced settings**.
 
-2.	Select **Model-driven** (lower left). 
+2. Select **Customizations**, and then select **Themes**.
 
-3.	Select ![Settings icon](../model-driven-apps/media/powerapps-gear.png) (upper right) > **Advanced customizations**. 
-
-4. Under **Themes** select **All themes**. 
-
-5. Select **CRM Default Theme**. 
+3. Under **All themes**, select **CRM Default Theme**. 
 
 The following screenshot shows a portion of the default theme setup.  
 

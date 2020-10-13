@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: overview
 ms.component: cds
-ms.date: 06/21/2019
+ms.date: 06/16/2020
 ms.reviewer: matp
 ms.author: matp
 search.audienceType: 
@@ -32,6 +32,8 @@ Standard and custom entities within Common Data Service provide a secure and clo
 * **Rich metadata** &ndash; Data types and relationships are leveraged directly within Power Apps.
 * **Logic and validation** &ndash; Define calculated fields, business rules, workflows, and business process flows to ensure data quality and drive business processes.
 * **Productivity tools** &ndash; Entities are available within the add-ins for Microsoft Excel to increase productivity and ensure data accessibility.
+
+For more information, see [Why choose Common Data Service?](why-cds-overview.md).
 
 ## Dynamics 365 and Common Data Service
 

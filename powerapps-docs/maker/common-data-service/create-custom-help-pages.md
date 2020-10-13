@@ -2,7 +2,7 @@
 title: "Create custom help pages | MicrosoftDocs"
 description: "Create custom help pages on UCI"
 ms.custom: ""
-ms.date: 09/13/2019
+ms.date: 10/02/2020
 ms.reviewer: ""
 ms.service: "powerapps"
 ms.suite: ""
@@ -51,7 +51,7 @@ Custom help panes don't provide the following key features that are available wi
 To author custom help panes, you need the following: 
 - Version 9.1.0.10300 or later.
 - Global create, read, write, delete, append, and append to permissions on the **Help Page** privilege. By default, System Administrator and System Customizer security roles both have this privilege.  
-- [Your environment must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment)
+- [Your environment must have custom help panes enabled.](#enable-custom-help-panes-for-your-environment) 
 
 ## Enable custom help panes for your environment
 1. Open a model-driven app, and then on the command bar select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) > **Advanced  Settings**.
@@ -63,7 +63,8 @@ To author custom help panes, you need the following:
     > ![Enable custom help panes](media/enable-custom-help-panes.png "Enable custom help panes")
 
 > [!IMPORTANT]
-> You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are both set to **No**.  
+> - You can enable custom help panes or customizable help, but not both at the same time. Confirm that **Use custom Help for customizable entities** and **Append parameters to URL** are both set to **No**.  
+> - Some environments may require that you also set **Enable Learning Path** to **Yes**.
  
 ## Context-sensitive custom help
 Each help pane is unique for these contexts: 
@@ -88,9 +89,6 @@ By default, a help pane stays open and on the help content you first opened it w
     - Enter text by typing directly in the help pane area. 
     - Format text by using the rich text commands, such as bold, italic, strikethrough, and create lists. 
     - Select the **Insert** tab to add sections, video, images, links, coach marks, and balloon help. 
-<!-- confirm the image is safe for use
-    > [!div class="mx-imgBorder"] 
-    > ![Custom help pane edit](media/custom-help-pane-edit.png)  -->
 4.	To save your changes, select **Save**.  
 
 ### Free-form text
@@ -133,15 +131,10 @@ All help content is stored in a help page component in Common Data Service as pa
 ### Moving content via solutions
 By default, all new help pages appear in the default solution. If you want to move your content to another environment, first add your existing help pages into an unmanaged solution before you export them. To add a help page to an unmanaged solution, follow these steps:
 
-1. Navigate to your unmanaged solution.
-2. Select **Switch to classic** from the ellipsis on the command bar.
-3. Select **Add Existing**.
-4. Select **Help Page**.
-5. Select the help pages that you want to add, and then select **Ok**.
-
-> [!NOTE]
-> Currently, you can't add existing help panes to an unmanaged solution in the modern solution explorer. 
-
+1. Sign into [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+2. On the left navigation pane, select **Solutions** and then open the unmanaged solution you want.
+3. Select **Add Existing** on the command bar, and then select **Help Page**.
+4. Select the help pages that you want to add, and then select **Add**. More information: [Export solutions](export-solutions.md)
 
 ## Help page documentation automation
 You might want to back up or store your content in a source code control system. You might also like to use documentation automation tools, such as translation tools or checkers, on help pane content. The custom help pane data is stored directly in Common Data Service and can be exported and imported for this purpose.  

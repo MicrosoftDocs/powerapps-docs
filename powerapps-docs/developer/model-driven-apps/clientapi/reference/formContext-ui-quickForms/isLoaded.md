@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 1870151d-6029-4733-ac35-6ee4d43f9553
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -47,6 +47,11 @@ function getAttributeValue(executionContext) {
             // Access the value of the attribute bound to the constituent control
             var myValue = quickViewControl.getControl(0).getAttribute().getValue();
             console.log(myValue);
+            
+            // Search by a specific attribute present in the control       
+            var myValue2 =  quickViewControl.getControl().find(control => control.getName() == "<AttributeSchemaName>").getAttribute().getValue();
+            console.log(myValue2);
+            
             return;
         }
         else {

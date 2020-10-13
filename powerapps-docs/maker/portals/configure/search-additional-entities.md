@@ -1,12 +1,11 @@
 ---
 title: "Global search for additional entities in Power Apps portal | MicrosoftDocs"
 description: "Learn how global search works for additional entities in a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 04/28/2020
+ms.date: 09/22/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -15,18 +14,28 @@ ms.reviewer: tapanm
 
 ## Overview
 
-You can enable additional entities for search functionality. Configuring search for additional entities requires additional actions, which are described in this article.
+You can enable additional entities for search functionality. Configuring search for additional entities requires additional actions, which are described in this article. These explicit configuration steps ensure that no records will accidentally be made available using global search.
 
-Following considerations apply when configuring additional entities for global search:
+## Steps to configure search for additional entities
 
-- Ensure that the [site setting](#site-setting-for-additional-entities) for search for additional entities is enabled.
-- Create a view named **Portal Search** for any additional entity you want to enable search for. More information: [searchable fields in global search](search.md#fields-searchable-in-global-search)
-- Ensure an **Entity Permission** is created that provides Read privilege, and appropriate scope for the records to show in search results.
-- Associate the entity permission with required **Web Roles**.
-- Entity permissions must be associated with the **Anonymous Web Role** if you want to allow anonymous search for an entity.
-- Configure a [search results page](#results-page-for-additional-entities) to display search results.
+To configure search for additional entities:
 
-The explicit configuration explained above ensures that no records will accidentally be made available via global search.
+1. [Enable additional entities search](#step-1-add-or-update-search-site-settings) for the first time by adding a new setting [Search/EnableAdditionalEntities](#site-setting-for-additional-entities) and set it to *true*. This is a one-time step that enables search for all additional out-of-the-box and custom entities.
+
+1. [Create Portal Search view](#step-2-create-or-verify-the-portal-search-view) for each additional entity with the required filters and columns that needs to be searchable.
+
+1. [Configure entity permissions](#step-3-create-entity-permissions) for each additional entity with a Web Role to have at least read privilege. Skip this step if you already have the read permissions configured for each entity.
+
+1. [Create a record details page](#step-4-add-record-details-webpage) for each entity to show the [details of the selected record](#site-marker-for-record-details-page) from the search results page. Skip this step if you already have created separate results record details page for each entity.
+
+1. [Create a site marker](#step-5-add-a-site-marker-for-record-details-webpage) named `<entitylogicalname>_SearchResultPage` for each entity with the associated [record details page](#site-marker-for-record-details-page).
+
+1. [Rebuild the search index](#step-6-rebuild-the-search-index).
+
+1. [Verify the search results](#step-7-verify-that-global-search-works-with-the-custom-entity).
+
+> [!WARNING]
+> If you don't create a record details page, or if you don't bind the record details page with site marker for search, you won't be able to select the additional entity records from search results page to view the record details.
 
 ### Site setting for additional entities
 
@@ -35,24 +44,22 @@ The site setting **Search/EnableAdditionalEntities** is required when configurin
 > [!IMPORTANT]
 > **Search/EnableAdditionalEntities** is explicitly for enabling search for additional entities. The main search site setting **Search/Enabled** must be set to **true** when using search functionality.
 
-You can also configure other related site settings similar to the search configuration for default entities. For example, you can use the **Search/Filters** setting to configure additional entities and add a drop-down filter option to the global search. More information: [Site setting](search.md#related-site-settings)
+You can also configure other related site settings similar to the search configuration for default entities. For example, you can use the **Search/Filters** setting to configure additional entities and add a drop-down filter option to the global search. More information: [Site setting](search.md#related-site-settings).
 
-### Results page for additional entities
+### Site marker for record details page
 
-The search result page is configured via a **Site Marker** named ```<entitylogicalname>_SearchResultPage```.
+The record details page is configured using a **Site Marker** named `<entitylogicalname>_SearchResultPage`.
 
-For example, if your entity logical name is *nwind_products*, the site marker will be ```nwind_products_SearchResultPage```. The value of the site marker is the page that you want to open when that search result is selected. By default, a record ID is passed in the *id* querystring parameter to the search results page.
+For example, if your entity logical name is *nwind_products*, the site marker will be `nwind_products_SearchResultPage`. The value of the site marker is the record details page that you want to open when that search result is selected. By default, a record ID is passed in the *id* querystring parameter to the record details page. For more information about adding forms on a page, go to [Compose a page](../compose-page.md#add-form).
 
-Ensure that your search results page has an entity form, or has logic written to show the search result details.
+> [!IMPORTANT]
+> Ensure that your record details page has an entity form, or has logic written to show the search result details. For example, [Step 4 - Add record details page](#step-4-add-record-details-webpage) in the following walkthrough.
 
-## Walkthrough - configure search for additional entities with sample database
+The following walkthrough explains each step in detail with a sample database and solution to configure search for additional entities.
 
-The following walkthrough explains how to enable search for the **Order Products** entity in the sample database **Northwind**, available with Common Data Service.
-
-For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
-
-> [!TIP]
-> You can follow the walkthrough with an entity of your choice by replacing the *nwind_products* entity name with your entity's logical name.
+> [!NOTE]
+> - This walkthrough explains how to enable search for the **Order Products** entity in the sample database **Northwind**, available with Common Data Service. For more information about sample databases, see [Install Northwind Traders database and apps](../../canvas-apps/northwind-install.md).
+> - You can follow the walkthrough with an entity of your choice by replacing the *nwind_products* entity name with your entity's logical name.
 
 ## Step 1: Add or update search site settings
 
@@ -94,7 +101,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
 1. Select the **Order Product** entity, and then select **Views**.
 
-    ![Views](media/search-additional-entities/views.png "Views")
+    ![Order Product - Views](media/search-additional-entities/views.png "Order Product - Views")
 
 1. Ensure that you see **Portal Search** in the views list.
 
@@ -144,7 +151,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
     ![Add authenticated users](media/search-additional-entities/add-authenticated-users.png "Add authenticated users")
 
-## Step 4: Add a webpage
+## Step 4: Add record details webpage
 
 1. Go to [Power Apps](https://make.powerapps.com), and select **Apps** in the left navigation pane.
 
@@ -154,7 +161,10 @@ For more information about sample databases, see [Install Northwind Traders data
 
     ![New page](media/search-additional-entities/new-page.png "New page")
 
-1. Enter the webpage name as **Order Products**. This page will be configured as the search results page.
+1. Enter the webpage name as **Order Products**. 
+
+    > [!NOTE] 
+    > This page will be shown when users select a record from the search results page to view the details of the selected record.
 
 1. Select **Components** in the left navigation pane, and then add a **Form** component to this webpage.
 
@@ -164,7 +174,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
     ![Set the mode](media/search-additional-entities/mode.png "Set the mode")
 
-## Step 5: Add a site marker for the search results details page
+## Step 5: Add a site marker for record details webpage
 
 1. Sign in to [Power Apps](https://make.powerapps.com).
 
@@ -197,7 +207,7 @@ For more information about sample databases, see [Install Northwind Traders data
 
 1. Go to the search toolbar or the search page, and search for a known record.
 
-   For example, use the search keyword **Northwind Clam Chowder** to display results associated with the **nwind_products** entity.
+   For example, use the search keyword **Northwind Clam Chowder** to get the results associated with the **nwind_products** entity.
 
    ![Search results](media/search-additional-entities/search-results.png "Search results")
 

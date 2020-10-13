@@ -1,13 +1,13 @@
 ---
 title: "Relevance Search| MicrosoftDocs"
-ms.custom: ""
+description: How to use relevance search
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 5/07/2020
-ms.author: mduelae
+ms.date: 9/09/2020
+ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
 ms.assetid: 
@@ -20,13 +20,11 @@ search.app:
 
 # Using relevance search to search for records
 
-## What is relevance search?
-
-Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. It uses a dedicated search service external to Common Data Service (powered by [!INCLUDE[pn_Windows_Azure](../includes/pn-windows-azure.md)]) to boost search performance.
+Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
   
 Relevance search brings the following enhancements and benefits:  
-<!--note from editor: Edits to these list items are suggested, so they can be parallel throughout this section.-->  
-- Improves performance by using external indexing and [!INCLUDE[pn_azure_shortest](../includes/pn-azure-shortest.md)] search technology.  
+
+- Improved performance compared to Categorized search.  
   
 - Finds matches to any word in the search term in any field in the entity, compared to quick find where all words from the search term must be found in one field. 
 
@@ -60,7 +58,7 @@ Relevance search brings the following enhancements and benefits:
 
 ## Enable relevance search
 
-Relevance search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing relevance search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system.
+Relevance search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing relevance search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
 ## Switch between relevance search and categorized search
 

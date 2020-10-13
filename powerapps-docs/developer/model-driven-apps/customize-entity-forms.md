@@ -37,12 +37,14 @@ Forms provide the user interface (UI) that people use to create, view, or edit e
 <a name="BKMK_ViewingFormXml"></a>   
 
 ### View FormXML from an exported entity  
+
  Only definitions of system entity forms that have been customized are included in exported managed solution. To view the definition of a system entity form, you must either change it in some way, or create a new form by saving the existing form with a new name.  
 
  After you export the solution, extract the contents and view the customizations.xml file. You'll find the definition of the forms in `ImportExportXml` > `Entities` > `Entity` > `FormXml`. 
  In the `<FormXml>` node, you'll find each type of form is grouped in a `<forms>` element with the `type` attribute specifying the type of form.  
 
 <a name="BKMK_FormProperties"></a>   
+
 ## Form properties  
  The following table describes key `SystemForm` entity attributes and the corresponding data included in the XML elements exported with the solution.  
 

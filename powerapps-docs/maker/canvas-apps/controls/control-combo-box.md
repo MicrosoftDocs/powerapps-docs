@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 04/10/2020
+ms.date: 07/06/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -23,6 +23,8 @@ A **Combo box** control allows you to search for items you will select.  The sea
 Single or multi-select mode is configured via the SelectMultiple property.
 
 When searching for items to select, for each item you can choose to show a single data value, two values, or a picture and two values (Person) by modifying the Layout settings in the Data pane.
+
+When viewing on small screens, the items list flyout will become a full screen control for better usablility.
 
 > [!NOTE]
 > If you want to search for items with *numbers*, convert numbers to text with [Text()](https://docs.microsoft.com/powerapps/maker/canvas-apps/functions/function-text) function. For example, *Text(12345)*.

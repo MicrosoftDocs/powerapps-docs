@@ -1,12 +1,12 @@
 ---
 title: "Work with business processes in model-driven apps| MicrosoftDocs"
-ms.custom: ""
+description: Overview of business process 
 author: mduelae
 manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 01/29/2020
+ms.date: 08/21/2020
 ms.author: mduelae
 ms.custom: ""
 ms.reviewer: ""
@@ -25,15 +25,17 @@ Business processes help everyone follow best practices, even for situations that
 As you work on a new customer record, the business process flow helps you see each step that you need to take to create the new record and fill out the required information according to your organizations business process. 
 
 
-> [!div class="mx-imgBorder"]
-> ![Business process bar](media/business-process.png "Business process bar")
+  > [!div class="mx-imgBorder"]
+  > ![Business process bar](media/business-process.png "The business process bar")
 
 
 
 The process bar can also be docked to the right side of the screen for easy reference as you work with a customer record. 
 
-> [!div class="mx-imgBorder"]
-> ![Business process bar](media/bpdock.gif "Business process bar")
+- On the prcess bar select a stage, and then select **Pin the stage flyout** ![Pin business stage flyout"](media/bp_stage_flyout.png "Pin business process stage flyout"). 
+
+  > [!div class="mx-imgBorder"]
+  > ![Business process](media/bpdock.gif "Business process")
  
   
  
