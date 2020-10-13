@@ -1,5 +1,5 @@
 ---
-title: "Relevance search using the Web API (Common Data Service)| Microsoft Docs"
+title: "Search across entity data using relevance search (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to find entity data, including search, suggestions, and autocomplete, and even search across entity types using Common Data Service."
 ms.custom: ""
 ms.date: 10/12/2020
@@ -22,15 +22,14 @@ search.app:
   - D365CE
 ---
 
-# Search entity data using relevance search
+# Search across entity data using relevance search
 
 Relevance search delivers fast and comprehensive search results across multiple
 entities, in a single list, sorted by relevance. Relevance search must be
 enabled in your target environment by an administrator prior to using the
 feature.
 
-For more information about relevance search including instructions to enable the
-feature, see [Using relevance search to search for records](https://docs.microsoft.com/powerapps/user/relevance-search).
+For more information about relevance search see [Using relevance search to search for records](https://docs.microsoft.com/powerapps/user/relevance-search).
 
 To begin using relevance search, your application simply issues an HTTP POST
 request (presently Web API only) to start a relevance search. When searching
@@ -61,7 +60,7 @@ POST [Organization URI]/api/search/v1.0/query
 }
 ```
 
-The search parameter value contains the term to be searched for and has a
+The `search` parameter value contains the term to be searched for and has a
 100-character limit.
 
 A successful search response returns an HTTP status of 200 and consists of:
@@ -71,7 +70,7 @@ A successful search response returns an HTTP status of 200 and consists of:
     value contained within the `crmhit` tag of the response.
 
 - totalrecordcount: The total count of results (of type long). A value of -1
-    is returned if returntotalrecordcount set to false (default).
+    is returned if `returntotalrecordcount` set to **false** (default).
 
 - facets: The facet results.
 
@@ -97,13 +96,13 @@ retrieved.
 ```http
 POST [Organization URI]/api/search/v1.0/query
 {  
-“search”: ”maria”,
+  “search”: ”maria”,
 
-“facets”: ["\@search.entityname,count:100",  
-  "account.primarycontactid,count:100",  
-  "ownerid,count:100",  
-  "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00\|2020-04-20T00:00:00|2020-04-27T00:00:00",
-  "createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00\|2020-04-20T00:00:00|2020-04-27T00:00:00"]
+  “facets”: ["\@search.entityname,count:100",  
+    "account.primarycontactid,count:100",  
+    "ownerid,count:100",  
+    "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00\|2020-04-20T00:00:00|2020-04-27T00:00:00",
+    "createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00\|2020-04-20T00:00:00|2020-04-27T00:00:00"]
 }
 ```
 
@@ -115,13 +114,11 @@ syntax.
 ```http
 POST [Organization URI]/api/search/v1.0/query
 {  
-“search”: ”maria”,
+  “search”: ”maria”,
 
-“filter”: "account:modifiedon ge 2020-04-27T00:00:00,
-
-  activities: regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account',
-
-  incident: (prioritycode eq 1 or prioritycode eq 2)"
+  “filter”: "account:modifiedon ge 2020-04-27T00:00:00,
+    activities: regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account',
+    incident: (prioritycode eq 1 or prioritycode eq 2)"
 }
 ```
 
@@ -136,7 +133,7 @@ Specifies the number of search results to skip.
 
 #### `top=[int] (optional)`
 
-Specifies the number of search results to retrieve. The default is 50.
+Specifies the number of search results to retrieve. The default is 50, and the maximum value is 100.
 
 #### `orderby=[list<string>] (optional)`
 
@@ -144,7 +141,7 @@ A list of comma-separated clauses where each clause consists of an attribute nam
 
 For a set of results that contains multiple entity types, the list of clauses for `orderby` must be globally applicable (for example: modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
-`“orderby”: “@search.score desc, modifiedon desc”`
+`“orderby”: [“@search.score desc", "modifiedon desc”]`
 
 If the query request includes a filter for a specific entity type, `orderby` can optionally specify entity-specific attributes.
 
@@ -177,7 +174,7 @@ The Lucene query syntax supports the following functionality:
 |---|---|
 | Boolean operators | Provides an expanded set compared to simple query syntax.<br/>AND operator; denoted by AND, &&, +<br/>OR operator; denoted by OR, \|\|<br/>NOT operator; denoted by NOT, !, – |
 | Precedence operators              | The same functionality as simple query syntax. |
-| Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – alp\*<br/>Leading wildcard - \*ine |
+| Wildcards                         | In addition to a trailing wildcard, also supports a leading wildcard.<br/>Trailing wildcard – "alp\*"<br/>Leading wildcard - "\*ine" |
 | Fuzzy search                      | Supports queries misspelled by up to 2 characters.<br/>“Uniersty\~” will return “University”<br/>“Blue\~1” will return “glue”, “blues” |
 | Term boosting                     | Weighs specific terms in a query differently.<br/>“Rock\^2 electronic” will return results where the matches of “rock” are more important than matches to “electronic”. |
 | Proximity search                  | Returns results where terms are within X words of each other - for more contextual results.<br/>For example, “airport hotel”\~5 returns results where “airport” and “hotel” are within 5 words of each other, thus boosting the chances of finding a hotel located close to an airport. |
@@ -192,14 +189,13 @@ Below is an example of a basic search request and response.
 ```http
 POST [Organization URI]/api/search/v1.0/query
 {  
-“search”: ”maria”,
+  “search”: ”maria”,
 
-“facets”: ["\@search.entityname,count:100",  
-  "account.primarycontactid,count:100",  
-  "ownerid,count:100",  
-  "modifiedon,values:2019-04-27T00:00:00\|2020-03-27T00:00:00\|2020-04-20T00:00:00\|2020-04-27T00:00:00",
-
-  "createdon,values:2019-04-27T00:00:00\|2020-03-27T00:00:00\|2020-04-20T00:00:00\|2020-04-27T00:00:00"]
+  “facets”: ["\@search.entityname,count:100",  
+    "account.primarycontactid,count:100",  
+    "ownerid,count:100",  
+    "modifiedon,values:2019-04-27T00:00:00\|2020-03-27T00:00:00\|2020-04-20T00:00:00\|2020-04-27T00:00:00",
+    "createdon,values:2019-04-27T00:00:00\|2020-03-27T00:00:00\|2020-04-20T00:00:00\|2020-04-27T00:00:00"]
 }
 ```
 
@@ -383,7 +379,7 @@ A list of comma-separated clauses where each clause consists of an attribute nam
 
 For a set of results that contains multiple entity types, the list of clauses for `orderby` must be globally applicable (for example: modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
-`“orderby”: “@search.score desc, modifiedon desc”`
+`“orderby”: [“@search.score desc", "modifiedon desc”]`
 
 If the query request includes a filter for a specific entity type, `orderby` can optionally specify entity-specific attributes.
 
@@ -401,10 +397,10 @@ syntax.
 ```http
 POST [Organization URI]/api/search/v1.0/suggest
 {  
-“search”: ”mar”,
+  “search”: ”mar”,
 
-“filter”: "account:modifiedon ge 2020-04-27T00:00:00,
-  activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
+  “filter”: "account:modifiedon ge 2020-04-27T00:00:00,
+    activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
 }
 ```
 
@@ -488,10 +484,10 @@ syntax.
 ```http
 POST [Organization URI]/api/search/v1.0/autocomplete
 {  
-“search”: ”mar”,
+  “search”: ”mar”,
 
-“filter”: "account:modifiedon ge 2020-04-27T00:00:00,
-  activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
+  “filter”: "account:modifiedon ge 2020-04-27T00:00:00,
+    activities:regardingobjecttypecode eq 'account', annotation:objecttypecode eq 'account'"
 }
 ```
 
@@ -512,13 +508,13 @@ POST [Organization URI]/api/search/v1.0/autocomplete
 
 ```json
 {
-    "value": "{crmhit}maria{/crmhit}"
+  "value": "{crmhit}maria{/crmhit}"
 }
 ```
 
 ### See Also
 
 [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization)  
-[Compare search options in Common Data Service](/user/search)  
+[Compare search options in Common Data Service](/powerapps/user/search)  
 [Retrieve related entity records with a query](retrieve-related-entities-query.md)  
 [Query Data using the Web API](query-data-web-api.md)
