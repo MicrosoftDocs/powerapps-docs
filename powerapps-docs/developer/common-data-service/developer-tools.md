@@ -28,9 +28,9 @@ The following tools are distributed in NuGet packages. The [Developer Guide: Dow
 |---------|---------|
 |Code generation tool `CrmSvcUtil.exe`|A command-line code generation tool that generates early-bound .NET Framework classes that represent the entity data model used by the organization service. <br />More information: <br />[Organization Service](work-with-data-cds.md#organization-service)<br />[Create early bound entity classes with the code generation tool](/dynamics365/customer-engagement/developer/org-service/create-early-bound-entity-classes-code-generation-tool)|
 |Configuration Migration tool `DataMigrationUtility.exe`|Used to move configuration data across environments. Configuration data is used to define custom functionality  and is typically stored in custom entities. This tool is not designed to move business data. <br /> More information: [Common Data Service Administrator Guide: Move configuration data across instances and organizations with the Configuration Migration tool](/dynamics365/customer-engagement/admin/manage-configuration-data)|
-|Package Deployer `PackageDeployer.exe`|Used to deploy packages on Common Data Service instances. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy Solution Packages](introduction-solutions.md#deploy-solution-packages)<br />[Create packages for the Common Data Service Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)|
+|Package Deployer `PackageDeployer.exe`|Used to deploy packages on Common Data Service instances. A package is an installable unit that includes solutions. <br /> More information: <br />[Deploy packages](/power-platform/admin/deploy-packages-using-package-deployer-windows-powershell)<br />[Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)|
 |Plug-in Registration Tool `PluginRegistration.exe`|A tool used to subscribe .NET assembly plug-in classes to server events. <br />More information: <br />[Create a plug-in](apply-business-logic-with-code.md#create-a-plug-in)<br />[Register a plug-in](register-plug-in.md)|
-|SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a Common Data Service compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development of solutions](introduction-solutions.md#team-development-of-solutions)<br />[Use the SolutionPackager tool to compress and extract a solution file](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
+|SolutionPackager tool `SolutionPackager.exe`|A tool that can reversibly decompose a Common Data Service compressed solution file into multiple XML files and other files so that these files can be easily managed by a source control system.<br /> More information: <br />[Team development](/power-platform/alm/team-development-alm)<br />[Use the SolutionPackager tool to compress and extract a solution file](/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)|
 
 ## .NET SDK Assemblies 
 
@@ -81,7 +81,7 @@ More information [Build Windows client applications using the XRM tools](/dynami
 
 Use these assemblies to create packages for the Package Deployer.
 
-More information: [Create packages for the Common Data Service Package Deployer](/dynamics365/customer-engagement/developer/create-packages-package-deployer)
+More information: [Create packages for the Package Deployer](/power-platform/alm/package-deployer-tool)
 
 **NuGet Package**: [Microsoft.CrmSdk.XrmTooling.PackageDeployment](https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PackageDeployment/)
 

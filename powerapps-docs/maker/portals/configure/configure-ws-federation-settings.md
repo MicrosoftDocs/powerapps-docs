@@ -1,14 +1,13 @@
 ---
 title: "Configure WS-Federation provider settings for a portal  | MicrosoftDocs"
 description: "Instructions to add and configure WS-Federation provider settings for a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 10/18/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Configure WS-Federation provider settings for portals

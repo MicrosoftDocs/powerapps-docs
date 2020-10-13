@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/09/2018
+ms.date: 06/18/2020
 ms.author: stepsic
 search.audienceType: 
   - maker
@@ -161,3 +161,6 @@ By default, this branch sends a rejection email to the requestor. We'll also upd
 ## Next steps
 The next step in this tutorial series is to [create an app to manage projects](sharepoint-scenario-build-app.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)

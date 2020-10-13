@@ -19,7 +19,7 @@ search.app:
 
 This sample shows how to override the goal total count and close the goal. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/OverrideGoalTotal).
 
-This sample requires additional users that are not in your system. Create the required user **as is** shown below manually in **Office 365**. Replace `yourorg` with the `OrgName` of your organization.
+This sample requires additional users that are not in your system. Create the required user **as is** shown below manually in **Microsoft 365**. Replace `yourorg` with the `OrgName` of your organization.
 
 **First Name**: Samantha<br/>
 **Last Name**: Smith<br/>
@@ -42,7 +42,7 @@ In order to simulate the scenario described in [What this sample does](#what-thi
 ### Setup
 
 1. Checks for the version of the org.
-2. Retrieves the sales manager user created manually in **Office 365**.
+2. Retrieves the sales manager user created manually in **Microsoft 365**.
 3. Creates a `PhoneCall` record and supporting account record for the sample.
 4. Creates ActivityPartys for the phone calls "From" field.
 5. Creates an open phone call.

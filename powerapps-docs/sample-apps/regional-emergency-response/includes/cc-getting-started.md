@@ -12,7 +12,7 @@ Select **Sign In** when you already have signing credentials. Select **Redeem In
 
 Enter your first and last names, email address and mobile phone to request access to the portal. To select the parent organization, use the search icon and then select the parent organization or search as appropriate.
 
-You can select a role when you request access. The **Parent Organization Administrator** role lets you manage administrative tasks. **Organizational HealthCare Worker** role allows you to submit healthcare related information. And **Report Viewer** role is used to view various dashboards using the Regional Government Emergency Response and Monitoring portal. For more information about roles, go to **Users** section in **Administrative Tasks**.
+You can select a role when you request access. The **Parent Organization Administrator** role lets you manage administrative tasks. **Organizational HealthCare Worker** role allows you to submit healthcare related information. **Report Viewer** role is used to view various dashboards using the Regional Government Emergency Response and Monitoring portal. For report viewers from regional organization with no parent organization associated, you can select **Regional Report Viewer** role to view dashboards using the Regional Government Emergency Response and Monitoring portal. For more information about roles, go to **Users** section in **Administrative Tasks**.
 
 After you submit your access request, you'll receive an acknowledgement on portal and you'll receive an email once your access request is processed.
 

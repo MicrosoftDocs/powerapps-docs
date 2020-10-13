@@ -2,21 +2,15 @@
 title: "Field data types in Common Data Service | MicrosoftDocs"
 description: "Understand the different field data types available for your app"
 keywords: ""
-ms.date: 09/30/2019
+ms.date: 05/27/2020
 ms.service: powerapps
 ms.custom: 
 ms.topic: article
-applies_to: 
-  - "Dynamics 365 (online)"
-  - "Dynamics 365 Version 9.x"
-  - "powerapps"
 author: "Mattp123"
 ms.assetid: 734b4ffa-5543-4f88-8517-299589f433f7
 ms.author: matp
 manager: kvivek
 ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 search.audienceType: 
   - maker
 search.app: 
@@ -25,7 +19,7 @@ search.app:
 ---
 # Types of fields
 
-The names used for types depends on the designer used. [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
+The names used for types depend on the designer used. [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
 |Portal Data type |Solution Explorer  type| API type|
 |--|--|--|
@@ -58,7 +52,7 @@ The names used for types depends on the designer used. [Power Apps portal](https
 |**URL**|**Single Line of Text**<br />*URL* Format|`StringType`|
 |**Whole Number**|**Whole Number**<br />*None* Format|`IntegerType`|
 
-For more descriptions for each type you can add or edit, see the topic for the corresponding designer:
+For more descriptions for each type you can add or edit, see the article for the corresponding designer:
  - [Create and edit fields for Common Data Service using Power Apps portal: Field Data types](create-edit-field-portal.md#field-data-types)
  - [Create and edit fields for Common Data Service using Power Apps solution explorer: Field Data types](create-edit-field-solution-explorer.md#field-data-types)
 
@@ -104,7 +98,7 @@ You can use global option sets that are defined in your organization to configur
   
 ## Using the right type of number
 
-When choosing the correct type of number field to use, the choice to use a **Whole Number** or **Currency** type should be pretty straightforward. The choice between using **Floating Point** or **Decimal** numbers requires more thought.  
+When choosing the correct type of number field to use, the choice to use a **Whole Number** or **Currency** type should be straightforward. The choice between using **Floating Point** or **Decimal** numbers requires more thought.  
   
 Decimal numbers are stored in the database exactly as specified. Floating point numbers store an extremely close approximation of the value. Why choose extremely close approximation when you can have the exact value? The answer is that you get different system performance.  
   
@@ -215,6 +209,9 @@ By default,	when an app user adds an image to display to a form or canvas app, t
 
 11.	On the form editor ribbon, select **Save**, and then select **Publish**. Close the form editor. 
 
+>[!NOTE]
+> Once the maximum file size has been saved, it can't be changed.
+
 App users can now select the image to display on the form. When an app user opens the form for a record, they can choose the image that they want displayed on the form. 
 
 > [!IMPORTANT]
@@ -240,10 +237,16 @@ More information for developers working with image data:
 ## File fields
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-Currently, the file data type is only available to canvas apps and flows. 
-
 The **File** field is used for storing binary data. The primary intended use of this field is to store a single image, note, or attachment. However, storage of other forms of binary data is also possible. One or more fields of this data type can be added to an existing standard customizable entity or a custom entity.
 
 The default **Maximum file size** is 32 MB and the largest size you can set is 128 MB. The file size limit can be set individually for each field of file type added to an entity. 
+
+>[!NOTE]
+> Once the maximum file size has been saved, it can't be changed.
+
+To create a file field, on the left pane in Power Apps select **Solutions**, open the solution you want, open the entity you want, on the **Fields** tab select **Add Field**, and then in the **Field properties** pane, select **File** as the **Data type**. 
+
+> [!div class="mx-imgBorder"] 
+> ![File data type](media/file-data-type.png)
 
 More information for developers working with file data: [File attributes](/powerapps/developer/common-data-service/file-attributes)

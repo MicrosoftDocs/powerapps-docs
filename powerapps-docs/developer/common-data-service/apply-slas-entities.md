@@ -63,7 +63,7 @@ Service level agreements (SLAs) in Common Data Service help you define the level
   
 <a name="Limitations"></a>   
 
-## Limitations to applying SLAs in Dynamics 365 (online)  
+## Limitations to applying SLAs  
 
  In Common Data Service, the following limitations are applicable for SLAs per Common Data Service instance (organization):  
   

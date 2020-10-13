@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 5/4/2020
+ms.date: 5/22/2020
 ms.author: iawilt
 search.audienceType: 
   - maker
@@ -25,21 +25,19 @@ You can display a single 3D model, or you can let the user select from a gallery
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4vyoW]
 
->[!IMPORTANT]
->Your 3D content must be in the .glb file format.  
->You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
+> [!IMPORTANT]
+> Your 3D content must be in the .glb file format.  
+> You can [convert your existing 3D models into the .glb file format](/dynamics365/mixed-reality/import-tool/) from a variety of 3D formats.
 
 To use the component, you need to [enable the mixed reality (MR) features for each app](mixed-reality-overview.md#enable-the-mixed-reality-features-for-each-app) that you want to use it in.
 
 Make sure to also [review the prerequisites for using MR components](mixed-reality-overview.md#prerequisites).
 
-
-
 ## Use the component
 
 Insert the component into your app as you normally would for any other control or component.
 
-With an app open for editing in the [Power Apps Studio](https://create.powerapps.com):
+With an app open for editing in [Power Apps Studio](https://create.powerapps.com):
 
 1. Open the **Insert** tab.
 2. Expand **Media**.
@@ -51,14 +49,14 @@ You can modify the component with a number of properties.
 
 The following properties are on the component's **View in 3D** pane on the **Properties** and **Advanced** tabs.
 
-![](./media/augmented-3d/augmented-3d-viewer-controls.png)
+![Properties on the component's View in 3D pane](./media/augmented-3d/augmented-3d-viewer-controls.png "Properties on the component's View in 3D pane")
 
 Some properties are only available in the **Advanced** tab on the **View in 3D** pane.
 
 Property | Description | Type | Location
 - | - | - | -
 Source | Data source that identifies the .glb file to display. The **View in 3D** component supports loading models from:<br/><ul><li>Publicly accessible, CORS-compliant URLs</li><li>Base64-encoded URIs</li><li>Attachments or media content accessed through data connectors</li> | Not applicable | **Properties** (also in **Advanced** as **Src**)
-Background fill | Set the background color for the component. | Color picker | **Properties** (also in **Advanced** as **BackgroundFill**, where it accepts RGBA or HTML hexadecimal color codes)
+Background fill | Set the background color for the component | Color picker | **Properties** (also in **Advanced** as **BackgroundFill**, where it accepts RGBA or HTML hexadecimal color codes)
 
 ### Additional properties
 
@@ -92,15 +90,15 @@ You can use the following services to host and obtain a CORS-compliant URL.
 
 1. Upload your file to Dropbox as you normally would.
 1. Select the **Share** button.
-1. Generate a public download link, for example, *https://www.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb?dl=0*.
-1. Replace **www** in the URL with **dl**, and remove **?dl=0** at the end. You now have a direct-access URL, for example, *https://dl.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb*.
+1. Generate a public download link. For example, *https://www.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb?dl=0*.
+1. Replace **www** in the URL with **dl**, and remove **?dl=0** at the end. You now have a direct-access URL. For example, *https://dl.dropbox.com/s/rANdoMGeneR4tedLink/my-file.glb*.
 
 **To use GitHub**
 
-1. Ensure that your git repo is set to **Public**.
+1. Ensure that your Git repo is set to **Public**.
 1. Navigate to your file. For example, *https://github.com/microsoft/experimental-pcf-control-assets/blob/master/robot_arm.glb*.
 1. Remove **/blob/**.
-1. Replace **https://github.com** with **https://raw.githubusercontent.com**. You now have raw access to your file, for example, *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*
+1. Replace **https://github.com** with **https://raw.githubusercontent.com**. You now have raw access to your file. For example, *https://raw.githubusercontent.com/microsoft/experimental-pcf-control-assets/master/robot_arm.glb*.
 
 ### Loading base64-encoded models
 
@@ -110,7 +108,7 @@ The following are two common ways you can create a base64-encoded URI of your mo
 
 **To use Power Automate**
 
-Power Automate can convert files to base64 using the dataUri(base64(*file content*)) expression. For example, if you want to store .glb files in a SharePoint Document Library, you could do the following to load them in power apps using the View In 3D:
+Power Automate can convert files to base64 using the dataUri(base64(*file content*)) expression. For example, if you want to store .glb files in a SharePoint document library, you could do the following to load them in Power Apps using the View in 3D:
 
 1. Create a **SharePoint Document Library** and a **SharePoint List**. The list should have a column of type **multiple-line text**.
 1. From the **Document Library**, create a new flow using the **When a new file is added in SharePoint, complete a custom action** template.
@@ -122,25 +120,25 @@ Power Automate can convert files to base64 using the dataUri(base64(*file conten
 
 When you add .glb files to the **Document Library**, they'll be converted to a base64-encoded data URI, which you can set to the **Source** property of the **View in 3D** component, using the SharePoint data connector to access the list.
 
-**To use Common Data Service (CDS):**
+**To use Common Data Service**
 
-The [Note entity](/powerapps/developer/common-data-service/annotation-note-entity) in CDS converts any attached file to base64 in the **Document** field.
+The [Note entity](/powerapps/developer/common-data-service/annotation-note-entity) in Common Data Service converts any attached file to base64 in the **Document** field.
 
 ### Loading models as attachments or media content
 
-Loading models as attachments or media content works through the binary storage associated with Power Apps. To check if a data connector uses binary storage, add a label and set the **Text** property to the data source. If the label starts with `appres://`, then that data source should work with the **View In 3D** component.
+Loading models as attachments or media content works through the binary storage associated with Power Apps. To check if a data connector uses binary storage, add a label and set the **Text** property to the data source. If the label starts with `appres://`, then that data source should work with the **View in 3D** component.
 
-**To use a SharePoint List:**
+**To use a SharePoint list**
 
-1. Create a SharePoint List.
-1. In the created list, click + Add column and then click Show/hide columns.
-1. Make sure Attachments is checked and press Apply at the top.
-1. Create a new item in the List and press Add attachments.
+1. Create a SharePoint list.
+1. In the created list, select the **+ Add** column and then select **Show/hide columns**.
+1. Make sure **Attachments** is selected and press **Apply** at the top.
+1. Create a new item in the list and press **Add attachments**.
 1. Select your 3D model (.glb file).
-1. Create a new item in the list for each 3D model that you want to have in your Power App.
-1. In a canvas Power App, add a Gallery.
+1. Create a new item in the list for each 3D model that you want to have in your app.
+1. In a canvas app, add a Gallery.
 1. Set the gallery data source to the SharePoint list created earlier.
-1. Add the View In 3D control and in the Advanced tab set the Src property to First(Gallery1.Selected.Attachments).Value
+1. Add the **View in 3D** control and in the **Advanced** tab, set the **Src** property to **First(Gallery1.Selected.Attachments).Value**.
 
 **To use Excel Online**
 
@@ -155,7 +153,7 @@ Loading models as attachments or media content works through the binary storage 
 
 1. In a canvas-based app, add a **Gallery**.
 1. Set the gallery data source to the Excel Online workbook.
-1. In the **Advanced** properties tab for the **View In 3D** component, set the **Src** property to **Gallery1.Selected.3DModel**.
+1. In the **Advanced** properties tab for the **View in 3D** component, set the **Src** property to **Gallery1.Selected.3DModel**.
 
 ## Known constraints
 

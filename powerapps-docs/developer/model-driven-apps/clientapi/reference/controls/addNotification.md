@@ -5,9 +5,9 @@ ms.service: powerapps
 ms.topic: "reference"
 applies_to: "Dynamics 365 (online)"
 ms.assetid: 4d025f92-db16-440c-9f82-e40d71e09862
-author: "KumarVivek"
-ms.author: "kvivek"
-manager: "annbe"
+author: "Nkrb"
+ms.author: "nabuthuk"
+manager: "kvivek"
 search.audienceType: 
   - developer
 search.app: 
@@ -103,6 +103,11 @@ function addTickerSymbolRecommendation(executionContext) {
         console.log("Notification not set");
 }
 ```
+
+This how the notification appears in model-driven apps:
+
+> [!div class="mx-imgBorder"]
+> ![Example add notification](../../../media/clientapi_addnotification.png "Example add notification")
 
 ### Related topics
 

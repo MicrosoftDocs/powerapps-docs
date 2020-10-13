@@ -23,7 +23,7 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Import translated entity and field text back into an app
+# Import translated entity, form, and field text back into an app
 
 If you have customized entity or field text, such as field labels or drop-down list values, you can provide the users in your organization who are not working with the base language version of your environment with this customized text in their own languages. To do so, you export the text strings for all your customizations so that they can be translated into the languages you use in your organization.  
   

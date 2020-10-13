@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 06/12/2017
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -68,3 +68,6 @@ We will see this flow run when we [run through the scenario end-to-end](sharepoi
 ## Next steps
 The next step in this tutorial series is to [embed the Power BI project report in SharePoint Online](sharepoint-scenario-embed-report.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)
