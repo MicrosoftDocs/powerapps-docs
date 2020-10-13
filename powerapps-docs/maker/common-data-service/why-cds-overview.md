@@ -40,7 +40,7 @@ Common Data Service is designed to work with any type of data and incorporates a
 
 Common Data Service includes a set of visual designers to create, edit, and interact with data. This makes it easy to quickly define the entities, relationships, business rules, forms, and workflows that represent your business.
 
-With the easy-to-configure integration features built into Common Data Service, deep integration with Microsoft's cloud services such as Azure, Dynamics 365, and Office 365&mdash;plus access to many connectors in Power Automate and Azure Logic Apps&mdash;Common Data Service can connect to the devices, apps, systems, services, and popular SaaS offerings that contain the data for your business.
+With the easy-to-configure integration features built into Common Data Service, deep integration with Microsoft's cloud services such as Azure, Dynamics 365, and Microsoft 365&mdash;plus access to many connectors in Power Automate and Azure Logic Apps&mdash;Common Data Service can connect to the devices, apps, systems, services, and popular SaaS offerings that contain the data for your business.
 
 As a result, a wide range of enterprise integration scenarios&mdash;from retrieving
 data sent in a spreadsheet as an email attachment to emerging scenarios like
