@@ -2,7 +2,7 @@
 title: "Search across entity data using relevance search (Common Data Service)| Microsoft Docs"
 description: "Read about the various ways to find entity data, including search, suggestions, and autocomplete, and even search across entity types using Common Data Service."
 ms.custom: ""
-ms.date: 10/12/2020
+ms.date: 10/13/2020
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -98,11 +98,11 @@ POST [Organization URI]/api/search/v1.0/query
 {  
   “search”: ”maria”,
 
-  “facets”: ["\@search.entityname,count:100",  
+  “facets”: ["@search.entityname,count:100",  
     "account.primarycontactid,count:100",  
     "ownerid,count:100",  
-    "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00\|2020-04-20T00:00:00|2020-04-27T00:00:00",
-    "createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00\|2020-04-20T00:00:00|2020-04-27T00:00:00"]
+    "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00",
+    "createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00"]
 }
 ```
 
@@ -137,7 +137,7 @@ Specifies the number of search results to retrieve. The default is 50, and the m
 
 #### `orderby=[list<string>] (optional)`
 
-A list of comma-separated clauses where each clause consists of an attribute name followed by ‘asc’ (shorthand for ascending) or ‘desc’ (shorthand for descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
+A list of comma-separated clauses where each clause consists of an attribute name followed by ‘asc’ (default is ascending) or ‘desc’ (descending). This list specifies how to order the results in order of precedence. By default, results are listed in descending order of relevance score (@search.score). For results with identical scores, the ordering will be random.
 
 For a set of results that contains multiple entity types, the list of clauses for `orderby` must be globally applicable (for example: modifiedon, createdon, @search.score). Note that specifying the `orderby` parameter overrides the default. For example, to get results ranked (in order of precedence) by relevance, followed by the most recently modified records listed higher:
 
@@ -191,11 +191,11 @@ POST [Organization URI]/api/search/v1.0/query
 {  
   “search”: ”maria”,
 
-  “facets”: ["\@search.entityname,count:100",  
+  “facets”: ["@search.entityname,count:100",  
     "account.primarycontactid,count:100",  
     "ownerid,count:100",  
-    "modifiedon,values:2019-04-27T00:00:00\|2020-03-27T00:00:00\|2020-04-20T00:00:00\|2020-04-27T00:00:00",
-    "createdon,values:2019-04-27T00:00:00\|2020-03-27T00:00:00\|2020-04-20T00:00:00\|2020-04-27T00:00:00"]
+    "modifiedon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00",
+    "createdon,values:2019-04-27T00:00:00|2020-03-27T00:00:00|2020-04-20T00:00:00|2020-04-27T00:00:00"]
 }
 ```
 
@@ -205,10 +205,10 @@ POST [Organization URI]/api/search/v1.0/query
 {
     "value": [
         {
-            "\@search.score": 0.4547767,
-            "\@search.highlights": {
+            "@search.score": 0.4547767,
+            "@search.highlights": {
                 "emailaddress1": [
-                    "{crmhit}maria{/crmhit}\@contoso.com"
+                    "{crmhit}maria{/crmhit}@contoso.com"
                 ],
                 "firstname": [
                     "{crmhit}Maria{/crmhit}"
@@ -217,24 +217,24 @@ POST [Organization URI]/api/search/v1.0/query
                     "{crmhit}Maria{/crmhit} Sullivan"
                 ]
             },
-            "\@search.entityname": "contact",
-            "\@search.objectid": "16ffc791-d06d-4d8c-84ad-89a8978e14f3",
+            "@search.entityname": "contact",
+            "@search.objectid": "16ffc791-d06d-4d8c-84ad-89a8978e14f3",
             "key": "5d3d6f6b-a721-4108-ad95-fe25eebbc277contact2",
             "ownerid": "bb2500d1-5e6d-4953-8389-bfedf57e3857",
             "owneridname": "Corey Gray",
-            "\@search.ownerid.logicalname": "systemuser",
+            "@search.ownerid.logicalname": "systemuser",
             "owningbusinessunit": "e854b0d3-3441-418d-854f-b7d11bb17f1b",
             "owningbusinessunitname": "",
-            "\@search.owningbusinessunit.logicalname": "businessunit",
+            "@search.owningbusinessunit.logicalname": "businessunit",
             "sharedtoprincipalid": [],
-            "\@search.objecttypecode": 2,
+            "@search.objecttypecode": 2,
             "fullname": "Maria Sullivan",
             "versionnumber": 1622564,
-            "statecode\@stringcollection": [
+            "statecode@stringcollection": [
                 "Active"
             ],
             "statecode": 0,
-            "statuscode\@stringcollection": [
+            "statuscode@stringcollection": [
                 "Active"
             ],
             "statuscode": 1,
@@ -245,7 +245,7 @@ POST [Organization URI]/api/search/v1.0/query
             "documentbody": **null**,
             "body": **null**,
             "filebody": **null**,
-            "emailaddress1": "maria\@contoso.com",
+            "emailaddress1": "maria@contoso.com",
             "address1_city": **“Seattle”**,
             "address1_telephone1": **“206-400-0200”**,
             "parentcustomerid": **null**,
@@ -263,7 +263,7 @@ POST [Organization URI]/api/search/v1.0/query
                 "Count": 1
             }
         ],
-        "\@search.entityname": [
+        "@search.entityname": [
             {
                 "Type": "Value",
                 "Value": "contact",
@@ -425,12 +425,12 @@ POST [Organization URI]/api/search/v1.0/suggest
         {
             "text": "{crmhit}Mar{/crmhit}ia Sullivan",
             "document": {
-                "\@search.objectid": "52a33850-8f0a-eb11-a813-000d3a8ab142",
-                "\@search.entityname": "contact",
-                "\@search.objecttypecode": 2,
+                "@search.objectid": "52a33850-8f0a-eb11-a813-000d3a8ab142",
+                "@search.entityname": "contact",
+                "@search.objecttypecode": 2,
                 "fullname": "Maria Sullivan",
                 "entityimage_url": **null**,
-                "emailaddress1": "maria\@contoso.com",
+                "emailaddress1": "maria@contoso.com",
                 "address1_city": **null**,
                 "address1_telephone1": **null**,
                 "parentcustomerid": **null**,
