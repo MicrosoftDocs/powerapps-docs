@@ -62,6 +62,10 @@ To configure SAML 2.0 provider:
 
 1. Select **Confirm**.
 
+## Edit WS-Federation provider
+
+To edit a configured WS-Federation provider, see [Edit a provider](use-simplified-authentication-configuration.md#edit-a-provider).
+
 ### See also
 
 - [Example: Configure WS-Federation for portals with Azure Active Directory](configure-ws-federation-settings-azure-ad.md)

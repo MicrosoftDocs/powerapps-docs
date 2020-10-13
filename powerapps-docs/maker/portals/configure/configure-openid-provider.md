@@ -69,16 +69,14 @@ To configure OpenID Connect provider:
 
     | Name | Description |
     | - | - |
-    | Authority | The authority (or issuer) URL associated with the identity provider. <br> Examples: `https://login.microsoftonline.com/contoso.onmicrosoft.com/` <br> `https://accounts.google.com/.well-known/openid-configuration/` |
+    | Authority | The authority (or issuer) URL associated with the identity provider. <br> Example (Azure AD) : `https://login.microsoftonline.com/contoso.onmicrosoft.com/` |
     | Client ID | The ID of the application created with the identity provider and to be used with the portal. |
-    | Redirect URL | The location where the identity provider will send the authentication response. <br> Example: `https://portal.contoso.com/signin-saml2` |
-    | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. <br> Example: `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` |
-    | Scope | A space-separated list of permissions to request. Default value: ‘openid’.  <br> Example: `openid` |
-    | Response type | The value for the OpenID Connect 'response_type' parameter. |
+    | Redirect URL | The location where the identity provider will send the authentication response. <br> Example: `https://portal.contoso.com/signin-openid_1` <br> **Note**: If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in *Create and configure OpenID Connect provider* settings. If you're using a custom domain name, enter the URL manually. However, ensure that the value enter here is exactly the same as the **Redirect URI** value for the application in the Azure portal. |
+    | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. <br> Example (Azure AD) : `https://login.microsoftonline.com/contoso.onmicrosoft.com/.well-known/openid-configuration` |
+    | Scope | A space-separated list of scopes to request via the OpenID Connect scope parameter. <br> Default value: `openid` <br> Example: `openid profile email` |
+    | Response type | The value for the OpenID Connect 'response_type' parameter. <br> Possible values: <ul> <li> `code` </li> <li> `code id_token` </li><li> `id_token` </li><li> `id_token token` </li><li> `code id_token token` </li> </ul> <br> Default: `code id_token` |
     | Client secret | The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". This setting is required if the selected response type is “code”. |
     | Response mode | The value for the OpenID Connect “response_mode” parameter. The value should be  “query”  if the selected response type is “code”. Default value: ‘form_post’. |
-
-1. Select **Next**.
 
 1. Configure logout settings.
 
@@ -87,7 +85,7 @@ To configure OpenID Connect provider:
     | Name | Description |
     | - | - |
     | External logout | Enables or disables external account sign-out. When enabled, users are redirected to the external sign-out user experience when they sign out from the portal. When disabled, users are only signed out from the portal. |
-    | Post logout redirection URL | The location where the identity provider will redirect post logout. This location should be set appropriately in the identity provider configuration. |
+    | Post logout redirection URL | The location where the identity provider will redirect post external logout. This location should be set appropriately in the identity provider configuration. |
     | RP initiated logout | Enables / disables a relying party initiated logout. To use this setting, the external logout should be enabled first. |
 
 1. (Optional) Configure additional settings.
@@ -100,14 +98,16 @@ To configure OpenID Connect provider:
     | Validate audience | If enabled, the audience will be validated during the token validation.  |
     | Valid audiences | Comma-separated list of audience URLs.  |
     | Validate issuers | If enabled, the issuer will be validated during token validation. |
-    | Valid issuers | Comma-separated list of Issuer URLs. |
+    | Valid issuers | Comma-separated list of issuer URLs. |
     | Registration claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD |
     | Login claims mapping | List of logical name-claim pairs to map claim values returned from the provider during the sign-up for the attributes of the contact record. <br> Example: `firstname=given_name,lastname=family_name` when using *Scope* as `profile` for Azure AD  |
     | Nonce lifetime | Lifetime of nonce, in minutes. Default: 10 minutes. |
-    | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this value will override the Application Cookie Expire Timespan value. |
+    | Use token lifetime | Indicates that the authentication session lifetime (such as cookies) should match that of the authentication token. If specified, this value will override the Application Cookie Expire Timespan value in the *Authentication/ApplicationCookie/ExpireTimeSpan* site setting. |
     | Contact mapping with email | Specify whether the contacts are mapped to a corresponding email. <br> When set to *On*, a unique contact record is associated with a matching email address, assigning the external identity provider to the contact after a successful user sign-in. |
 
-1. Select **Confirm**.
+## Edit OpenID Connect provider
+
+To edit a configured OpenID Connect provider, see [Edit a provider](use-simplified-authentication-configuration.md#edit-a-provider).
 
 ### See also
 

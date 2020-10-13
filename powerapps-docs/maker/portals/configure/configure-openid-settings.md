@@ -53,7 +53,7 @@ To configure OpenID Connect provider with Azure AD:
 
     1. If necessary, select a different **Supported account type**. More information: [Supported account types](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app)
 
-    1. If not already, select **Web** for **Redirect URI**.
+    1. If not selected already, select **Web** for **Redirect URI**.
 
     1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-openid_1`
 
@@ -143,9 +143,9 @@ To configure additional claims, such as using first name, or last name:
 
 You can configure your portal to accept [!include[](../../../includes/pn-azure-active-directory.md)] users from any tenant in [!include[](../../../includes/pn-azure-shortest.md)] and not just a specific tenant by using the multi-tenant application registered in [!include[](../../../includes/pn-azure-active-directory.md)]. To enable multi-tenancy, [update the application registration](https://docs.microsoft.com/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multi-tenant) in the [!include[](../../../includes/pn-azure-active-directory.md)] application.
 
-To support authentication against [!include[](../../../includes/pn-azure-active-directory.md)] using a multi-tenanted application, you have to create or configure the additional **Issue Filter** site setting in portals.
+To support authentication against [!include[](../../../includes/pn-azure-active-directory.md)] using a multi-tenanted application, you have to create or configure the additional **Issue Filter** site setting.
 
-`Authentication/OpenIdConnect/[provider]/IssuerFilter`
+![Issuer filter for multi-tenancy](media/authentication/issuer-filter-multi-tenant.png "Issuer filter for multi-tenancy")
 
 This site setting is a wildcard-based filter that matches on all issuers across all tenants. Example: `https://sts.windows.net/*/`
 

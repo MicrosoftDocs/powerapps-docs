@@ -58,6 +58,10 @@ To configure SAML 2.0 provider:
 
 1. Select **Confirm**.
 
+## Edit SAML 2.0 provider
+
+To edit a configured SAML 2.0 provider, see [Edit a provider](use-simplified-authentication-configuration.md#edit-a-provider).
+
 ### See also
 
 - [Example: Configure SAML 2.0 for portals with Azure Active Directory](configure-saml2-settings-azure-ad.md)

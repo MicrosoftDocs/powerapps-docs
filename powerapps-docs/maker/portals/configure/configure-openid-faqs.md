@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Frequently Asked Questions (FAQs) when using OpenID Connect in portals
 
-In this article, learn about the common scenarios, or the FAQs when using an authentication provider with Power Apps portals that uses OpenID Connect specifications.
+In this article, learn about the common scenarios, or the FAQs when using an authentication provider with Power Apps portals that uses [OpenID Connect specifications](https://openid.net/specs/openid-connect-core-1_0.html).
 
 ## Do I require OpenId Connect Auto-Discovery Document to integrate with portals?
 
