@@ -17,14 +17,16 @@ search.app:
 ---
 # Use ExecuteAsync to execute messages asynchronously
 
-Except for two, all data operations using the SDK assembly request classes are synchronous.
+Except for three, all data operations using the SDK assembly request classes are synchronous.
 
 Importing a solution is one operation which can require considerable resources, so there is an option to execute this operation asynchronously using the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> request class. The <xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest> request class performs similar resource intensive operations.
 
 Importing a solution asynchronously improves system performance by postponing message execution until some later time when the server load may be less. Interactive users do not have to wait for the target message to execute before they can continue. This is especially useful when importing solutions which may take a few minutes or more to execute.  
+
+Merging records with a large number of related activities or other entity types can also take a long time to update all the related records, so executing these in the background can improve the user experience.
   
 > [!NOTE]
->  <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest> and <xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest> are the only request classes that can be used with the `ExecuteAsync` message.
+>  <xref:Microsoft.Crm.Sdk.Messages.ImportSolutionRequest>, <xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest>, and <xref:Microsoft.Crm.Sdk.Messages.MergeRequest> are the only request classes that can be used with <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest>.
   
 Use the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> request class to execute a message asynchronously. You configure the request and pass the request instance as an argument to <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>. <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncResponse> returns with the ID of the asynchronous job. You can (optionally) query the job using the ID to find out its current state.  
   

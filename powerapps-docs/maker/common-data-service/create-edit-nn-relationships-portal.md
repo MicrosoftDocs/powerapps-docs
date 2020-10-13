@@ -2,7 +2,7 @@
 title: "Create Many-to-many entity relationships in Common Data Service using Power Apps portal | MicrosoftDocs"
 description: "Learn how to create many-to-may relationships"
 ms.custom: ""
-ms.date: 06/11/2018
+ms.date: 08/27/2019
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -41,7 +41,6 @@ The portal enables configuring the most common options, but certain options can 
  |**All**| Shows all the relationships for the entity|
  |**Custom**|Shows only custom relationships for the entity|
  |**Default**|Shows only the standard relationships for the entity|
-<!-- TODO: What is the actual difference between All and Default? -->
 
 ![Account entity relationships](media/view-account-relationships-portal.png)
 
@@ -58,11 +57,13 @@ While [viewing entity relationships](#view-many-to-many-entity-relationships), i
 
 In the **Many-to-many** panel, choose the entity you want related to the current entity.
 
-![Many-to-many panel with account entity selected](media/many-to-many-panel-1.png)
+> [!div class="mx-imgBorder"] 
+> ![Many-to-many panel with account entity selected](media/many-to-many-panel-1.png)
 
 Select **More Options** to view the **Relationship Name** and **Relationship entity name** fields.
 
-![Many-to-many panel with More Options selected](media/many-to-many-panel-2.png)
+> [!div class="mx-imgBorder"] 
+> ![Many-to-many panel with More Options selected](media/many-to-many-panel-2.png)
 
 The values for these fields are generated for you based on the entities chosen.
 

@@ -1,15 +1,15 @@
 ---
 title: "Get started with virtual entities (Common Data Service) | Microsoft Docs"
 description: "Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service, without replication of data and often without custom coding."
-ms.date: 10/31/2018
+ms.date: 06/24/2020
 ms.service: powerapps
 ms.topic: "get-started-article"
 applies_to: 
   - "Dynamics 365 (online)"
 ms.assetid: 14c5fbbc-98db-4e49-b245-2c84c1cd11cd
-author: "mayadumesh" # GitHub ID
-ms.author: "jdaly"
-manager: "annbe"
+author: "Sunil-Garg" # GitHub ID
+ms.author: "pehecke"
+manager: "ryjones"
 search.audienceType: 
   - developer
 search.app: 
@@ -19,7 +19,7 @@ search.app:
 
 # Get started with virtual entities
 
-Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service, without replication of data and often without custom coding. The initial implementation of this feature provides just read-only support for such entities, and has a number of other limitations described in the section [Limitations of Virtual Entities](#limitations-of-virtual-entities) below. Besides these limitations, virtual entities behave the same as other custom entities. 
+Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service, without replication of data and often without custom coding. Virtual entities support create, updates and delete of data in the external system. 
 
 Virtual entities replace previous client-side and server-side approaches to integrating external data, which required customized code and suffered from numerous limitations, including imperfect integration, data duplication, or extensive commitment of development resources.  In addition, for administrators and system customizers, the use of virtual entities greatly simplifies administration and configuration.
 
@@ -31,13 +31,13 @@ Virtual entities replace previous client-side and server-side approaches to inte
 A virtual entity is a definition of an entity in the Common Data Service platform metadata without the associated physical tables for entity instances created in the Common Data Service database. Instead during runtime, when an entity instance is required, its state is dynamically retrieved from the associated external system. Each virtual entity type is associated with a *virtual entity data provider* and (optionally) some configuration information from an associated *virtual entity data source*. 
 
 <!-- TODO:
-A data provider is a particular type of Common Data Service plug-in, which is registered against CRUD events that occur in the platform. This initial release only supports READ operations. More information: [Write a plug-in](../write-plugin.md) -->
+A data provider is a particular type of Common Data Service plug-in, which is registered against CRUD events that occur in the platform. More information: [Write a plug-in](../write-plugin.md) -->
 
 The following data providers ship with Common Data Service:
 - An [OData v4](https://www.odata.org/documentation/) provider is included with the service and is installed by default.
 - An [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) (formerly *Microsoft Document DB*) provider is available from [AppSource](https://appsource.microsoft.com).
 
-Additional providers will be made available by Microsoft, its partners, or other third parties. If a data provider cannot be found for your external data source, you can develop a *custom virtual entity data provider*; for more information, see [Virtual entity data providers](custom-ve-data-providers.md).
+If a data provider cannot be found for your external data source, you can develop a *custom virtual entity data provider*; for more information, see [Virtual entity data providers](custom-ve-data-providers.md).
 
 ## Virtual entity creation and mapping
 
@@ -47,8 +47,8 @@ In this example, a corresponding virtual entity data source would also be provid
 
 ## Limitations of Virtual Entities
 
-In this release, there are some limitations to virtual entities that you need to be aware of when evaluating whether you can use virtual entities with your external data.
-- Data is read-only. The virtual entity feature doesn’t support pushing changes made in Common Data Service back to the external system.
+Following are the limitations in virtual entities that must be considered.
+
 - Only organization-owned entities are supported. The security filtering applied to user-owned entities is not supported. Access to the virtual entity data can be turned on or off for individual users based on their security role. Field-level security is not supported.
 - It must be possible to model the external data as a Common Data Service entity. This means:
     - All entities in the external data source must have an associated GUID primary key.  
@@ -56,7 +56,7 @@ In this release, there are some limitations to virtual entities that you need to
     - You must be able to model any entity relationships in Common Data Service.
     - An attribute on a virtual entity cannot be calculated or rollup.  Any desired calculations must be done on the external side, possibly within or directed by the data provider.
     - Although you can add virtual entity columns as a lookup on a grid or other UI views, you cannot filter or sort based on this virtual entity lookup column.
-- Auditing and change tracking is not supported.  These may be implemented within the external data store.
+- Auditing and change tracking is not supported.
 - Virtual entities cannot be enabled for queues.
 - Offline caching of values is not supported for virtual entities.
 - A virtual entity cannot represent an activity and do not support business process flows.

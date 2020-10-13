@@ -22,7 +22,7 @@ search.app:
 Find the records you want in your app by using the Advanced Find search option. You can also use Advanced Find to prepare data for export to Office Excel so that you analyze, summarize, or aggregate data, or create PivotTables to view your data from different perspectives.  
 
   
-1. On the command bar, select the **Advanced Find** button.
+1. On the command bar, the select **Advanced Find** button ![Advanced find button](media/advanced_filter_icon.png "Advanced find button").
   
 2. Specify what to search for.  
   

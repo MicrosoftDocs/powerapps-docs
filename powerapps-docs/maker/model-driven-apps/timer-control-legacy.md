@@ -2,7 +2,7 @@
 title: "Model-driven app timer control in Power Apps | MicrosoftDocs"
 description: "Understand how you can use the timer control"
 ms.custom: ""
-ms.date: 06/06/2018
+ms.date: 04/28/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -25,25 +25,36 @@ search.app:
 ---
 # Model-driven app timer control overview
 
- Use a timer control with forms where records need to meet a specific time-based milestone. A timer control shows people how much time is available to complete an action in the resolution of an active record or how much time has passed since the time to complete the action has passed. At a minimum, timer controls must be configured to show success or failure in completing the action. In addition, they can be configured to display warnings when the conditions are approaching failure.  
+Use a timer control with forms where records need to meet a specific time-based milestone. A timer control shows people how much time is available to complete an action in the resolution of an active record or how much time has passed since the time to complete the action has passed. At a minimum, timer controls must be configured to show success or failure in completing the action. In addition, they can be configured to display warnings when the conditions are approaching failure.  
   
- A timer control can be added to a form for any entity, but they are most frequently used for the case entity, especially when linked to fields that track service level agreements. You can add multiple timer controls in the body of a form. You can’t add them to the header or footer.  
+A timer control can be added to a form for any entity, but they are most frequently used for the case entity, especially when linked to fields that track service level agreements. You can add multiple timer controls in the body of a form. You can’t add them to the header or footer.
+
+To add a timer control to a form:
+
+1.  Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc).
+
+2.  On the left navigation pane, expand **Data**, and then select **Entities**.
+
+3.  Select an entity, such as the account entity, and then select the **Forms** tab.
+
+4.  Select the form that you want.
+
+5.  In the form designer, on the command menu, select **Switch to classic**.
   
- Timer control **Data Source** properties use fields for the entity.  
+6.  In the classic form designer, select the **Insert** tab, and then on the toolbar select **Timer**. 
+
+    > [!div class="mx-imgBorder"] 
+    > ![Insert timer control](media/insert-timer-control.png)
+
+7.  On the Timer Control properties page, enter or select the properties that you want, and then select **OK**. 
+
+Timer control **Data Source** properties use fields for the entity.  
   
 -   The **Failure Time Field** uses a date-time field to set the time.  
   
 -   The three condition fields use one of the **Option Set**, **Two Options**, **Status**, or **Status Reason** fields for the entity.  
 
-To create a timer control, in the form designer select the **Insert** tab, and then on the toolbar select **Timer**. 
-
-  > [!div class="mx-imgBorder"] 
-  > ![Insert timer control](media/insert-timer-control.png)
-
-On the Timer Control properties page, enter or select the properties that you want, and then select **OK**. 
-
-  
-<a name="BKMK_TimerControlProperties"></a>   
+<a name="BKMK_TimerControlProperties"></a>
 
 ## Timer control properties  
  The following table describes the properties of a timer control.  

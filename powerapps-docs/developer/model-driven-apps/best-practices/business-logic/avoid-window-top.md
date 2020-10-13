@@ -64,7 +64,6 @@ The following are the recommended approaches:
             catch (err) {
                 return false;
             }
-        }
     }
 
     var canAccess = isTopAccessible();

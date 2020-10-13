@@ -6,7 +6,7 @@ author: Mattp123
 ms.author: matp
 manager: kvivek
 ms.custom: ""
-ms.date: 05/14/2019
+ms.date: 05/04/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -37,11 +37,9 @@ The solutions area is where you can view, edit, create, import, export, and dele
 ## Solution explorer
 Use solution explorer to perform app making and customization tasks that can’t be completed from the Power Apps home page.
 
-1.	Sign in to [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc). 
-2.	On the left navigation pane select **Solutions**.  
-3.	Select **Switch to classic** on the toolbar to open the **All Solutions** view. 
-    Notice that the **Switch to classic** command isn't available when you select a solution in the list.
-4.  In the list of available solutions select the solution you want in the **Display Name** column to open solution explorer.
+1.	From a Power Apps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
+
+2.	Select **Settings** > **Customizations** > **Customize the System**, and then select the settings area that you want.
 
 ## Apps
 The Apps area lists all model-driven and canvas apps that you have privileges to in your environment. In addition to launching an app, from the Apps area you can also assign security roles to it. 
@@ -61,15 +59,12 @@ To share an app:
 ## Settings
 Use the settings area to configure environment settings, activate or deactivate processes, and more. 
 
-First, see if the setting you need is in the ![Settings icon](media/powerapps-gear.png)  > **Advanced customizations** menu.
+1.  From a Power Apps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**.
 
-To find settings not available from **Advanced customizations**:  
-1.	From a Power Apps model-driven app, select **Settings** ![Settings](../model-driven-apps/media/powerapps-gear.png) on the app toolbar, and then select **Advanced Settings**. 
-2.	Select **Settings**, and then select the settings area that you want.
+2.  Select **Settings**, and then select the settings area that you want.
 
     > [!div class="mx-imgBorder"] 
     > ![Settings areas](media/settings-areas.png) 
 
 ## See also
 [Create or edit a model-driven app by using the app designer](create-edit-app.md)
-[Create or edit apps in Power Apps Studio for web](../canvas-apps/create-app-browser.md)

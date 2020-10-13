@@ -2,7 +2,7 @@
 title: "Define alternate keys using Power Apps portal | MicrosoftDocs"
 description: "Learn how to define alternate keys using Power Apps portal"
 ms.custom: ""
-ms.date: 05/31/2018
+ms.date: 08/01/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -23,18 +23,20 @@ search.app:
 ---
 # Define alternate keys using Power Apps portal
 
-The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view and create entity alternate keys with the Common Data Service.
+[Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view and create entity alternate keys with the Common Data Service. For more information about alternate keys, see [Define alternate keys to reference records](define-alternate-keys-reference-records.md).
 
-The portal enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
-- [Define alternate keys to reference records](define-alternate-keys-reference-records.md)
-- [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)
+Power Apps enables configuring the most common options, but certain options can only be set using solution explorer. More information: [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)
+
+> [!IMPORTANT]
+> If the data within a field that is used in an alternate key will contain one of the following characters `/`,`<`,`>`,`*`,`%`,`&`,`:`,`\\`,`?` then `GET` or `PATCH` actions will not work. If you only need uniqueness then this approach will work, but if you need to use these keys as part of data integration then it is best to create the key on fields that won't have data with those characters.
 
 ## View alternate keys
 
 1. From the [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Data** > **Entities** and select the entity that you want to view.
 2. Select **Keys** to view a list of any alternate keys that are defined.
 
-    ![View alternate keys](media/view-alternate-keys-portal.png)
+   > [!div class="mx-imgBorder"] 
+	 > ![View alternate keys](media/view-alternate-keys-portal.png)
 
 ## Create an alternate key
 
@@ -46,7 +48,7 @@ The portal enables configuring the most common options, but certain options can 
     ![Example Alternate Key Definition](media/alternate-key-account-number-sic-code.png)
 
 1. Select **Done** to close the panel.
-2. Click **Save Entity** to create the alternate key.
+2. Select **Save Entity** to create the alternate key.
 
 > [!NOTE]
 > The alternate key will not be immediately available. A system job is initiated when you save the entity to create database indexes to support the alternate key.
@@ -57,6 +59,4 @@ While [viewing alternate keys](#view-alternate-keys), select the key you want to
 
 ### See also
 
-[Define alternate keys to reference records](define-alternate-keys-reference-records.md)<br />
-[Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)<br />
-[Developer Documentation: Define alternate keys for an entity](/dynamics365/customer-engagement/developer/define-alternate-keys-entity)
+[Developer Documentation: Work with alternate keys](../../developer/common-data-service/define-alternate-keys-entity.md)

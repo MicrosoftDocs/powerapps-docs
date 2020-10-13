@@ -1,14 +1,13 @@
 ---
 title: "Use simplified authentication and identity provider configuration (Preview) | MicrosoftDocs"
 description: "Learn how to use quick, easy, and simplified portal configuration for authentication."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 05/05/2020
-ms.author: tapanm
-ms.reviewer:
+ms.date: 07/29/2020
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Simplified authentication and identity provider configuration (Preview)
@@ -182,8 +181,24 @@ Configure the following site settings and password reset policy for your Azure A
 <br> To get the issuer URL:
 
    1. Open the sign-up and sign-in user flow you created in [step 1](#step-1---configure-the-azure-active-directory-b2c-application). For this step, you need to go to the Azure AD B2C tenant on [Azure portal](https://portal.azure.com).
-   1. Select **Run user flow**, and in the **Open** dialog box, select the URL at the top to open the configuration document. <br> The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
-   1. Copy the URL of the **Issuer** from the configuration document that opens in a new browser.  
+
+        ![Select the user flow](media/use-simplified-authentication-configuration/user-flow.png "Select the user flow")
+
+   1. Select **Run user flow**.
+
+        ![Run user flow](media/use-simplified-authentication-configuration/run-user-flow.png "Run user flow")
+
+   1. Select the OpenID configuration URL to open in a new browser window or a tab.
+
+        ![Select the OpenID configuration URL](media/use-simplified-authentication-configuration/select-openid-configuration-url.png "Select the OpenID configuration URL")
+        
+        The URL refers to the *OpenID Connect identity provider configuration document*, also known as the *OpenID well-known configuration endpoint*.
+
+   1. Copy the URL of the **Issuer** from the new browser window or tab.
+
+        ![Copy the Issuer URL](media/use-simplified-authentication-configuration/issuer-url.png "Copy the Issuer URL")
+
+        Ensure you copy only the URL, without the double quotation marks (*""*). <br> For example, `https://tailspintoysorg.b2clogin.com/acf18993-4325-4d94-b519-96824b0d06db/v2.0/`
 
 - **Client ID​** - Enter the **Application ID** of the Azure AD B2C application created in [step 1](#step-1---configure-the-azure-active-directory-b2c-application).
 
@@ -204,7 +219,7 @@ For more information about site settings, see [related site settings](azure-ad-b
 
 You have the option of configuring additional setting for the Azure AD B2C identity provider.
 
-![Configure additional settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings")
+![Configure additional settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step3.png "Configure additional settings - Azure AD B2C")
 
 - **Registration claims mapping​** - List of logical name/claim pairs to be used to map claim values returned from Azure AD B2C created during sign up to attributes in the contact record. <br> 
 For example, if you've enabled **Job Title (jobTitle)** and **Postal Code (postalCode)** as **User Attributes** in your user flow and you want to update the corresponding Contact entity fields **Job Title (jobtitle)** and **Address 1: ZIP / Postal Code (address1_postalcode)**, enter the claims mapping as: ```jobtitle=jobTitle,address1_postalcode=postalCode```.
@@ -258,7 +273,7 @@ For more information about configuring OAuth 2 providers, see [OAuth 2 provider 
 
 ![Configure the Google app](media/use-simplified-authentication-configuration/configure-google.png "Configure the Google app")
 
-To use **Google** as an identity provider, you need to [create an app in Google](https://console.developers.google.com/) with a redirect URL.
+To use **Google** as an identity provider, you need to [create an app in Google](configure-oauth2-settings.md#google-people-api-settings) with a redirect URL.
 
 The redirect URL is used by the Google app to redirect users to the portal after the authentication succeeds. If your portal uses a custom domain name, you might have a different URL than the one provided here.​
 
@@ -326,3 +341,4 @@ For more information, see [OAuth2 site settings](configure-oauth2-settings.md#cr
 - [Set authentication identity for a portal](set-authentication-identity.md)
 - [Configure Azure AD B2C provider settings](azure-ad-b2c.md)
 - [Configure OAuth2 provider settings](configure-oauth2-settings.md)
+- [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)

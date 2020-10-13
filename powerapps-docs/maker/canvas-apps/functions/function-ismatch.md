@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 02/07/2020
 ms.author: gregli
 search.audienceType: 
@@ -205,9 +205,9 @@ Set( pangram, "The quick brown fox jumps over the lazy dog." )
 | Formula | Description | Result |
 |---------|-------------|--------|
 | `Match( pangram, "THE", IgnoreCase )` | Find all matches of "THE" in the text string that the **pangram** variable contains. The string contains two matches, but only the first is returned because you're using **Match** and not **MatchAll**. The SubMatches column is empty because no sub-matches were defined.  | {<br>FullMatch: "The",<br>SubMatches: [&nbsp;],<br>StartMatch: 32<br>} |
-| `MatchAll( pangram, "the" )` | Find all matches of "the" in the text string that the **pangram** variable contains. The test is case sensitive, so only the second instance of "the" is found. The SubMatches column is empty because no sub-matches were defined.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-one.png) |
-| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string that the **pangram** variable contains. In this case, the test is case insensitive, so both instances of the word are found. The SubMatches column is empty because no sub-matches were defined.  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-the-two.png) |
-| `MatchAll( pangram, "\b\wo\w\b" )` | Finds all three-letter words with an "o" in the middle. Note that "brown" is excluded because it's not a three-letter word and, therefore, fails to match "\b" (word boundary).  | <style> img { max-width: none } </style> ![](media/function-ismatch/pangram-fox-dog.png) |
+| `MatchAll( pangram, "the" )` | Find all matches of "the" in the text string that the **pangram** variable contains. The test is case sensitive, so only the second instance of "the" is found. The SubMatches column is empty because no sub-matches were defined.  |  ![](media/function-ismatch/pangram-the-one.png) |
+| `MatchAll( pangram, "the", IgnoreCase )` | Find all matches of "the" in the text string that the **pangram** variable contains. In this case, the test is case insensitive, so both instances of the word are found. The SubMatches column is empty because no sub-matches were defined.  |  ![](media/function-ismatch/pangram-the-two.png) |
+| `MatchAll( pangram, "\b\wo\w\b" )` | Finds all three-letter words with an "o" in the middle. Note that "brown" is excluded because it's not a three-letter word and, therefore, fails to match "\b" (word boundary).  |  ![](media/function-ismatch/pangram-fox-dog.png) |
 | `Match( pangram, "\b\wo\w\b\s\*(?<between>\w.+\w)\s\*\b\wo\w\b" )` | Matches all the characters between "fox" and "dog". | {<br>between:&nbsp;"jumps&nbsp;over&nbsp;the&nbsp;lazy",<br>FullMatch:&nbsp;"fox&nbsp;jumps&nbsp;over&nbsp;the&nbsp;lazy&nbsp;dog",<br>SubMatches: [ "jumps over the lazy" ],<br>StartMatch: 17<br> } |
 
 To see the results of **MatchAll** in a gallery:

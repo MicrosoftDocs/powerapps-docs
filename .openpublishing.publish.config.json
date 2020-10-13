@@ -39,10 +39,6 @@
           "ReferenceTOCUrl": "/dotnet/api/ce-9-general/toc.json"
         },
         {
-          "ConceptualTOC": "powerapps-docs/developer/common-data-service/package-deployer/toc.yml",
-          "ReferenceTOCUrl": "/dotnet/api/ce-9-packagedeployer/toc.json"
-        },
-        {
           "ConceptualTOC": "powerapps-docs/developer/common-data-service/workflow/toc.yml",
           "ReferenceTOCUrl": "/dotnet/api/ce-9-workflow/toc.json"
         },
@@ -109,10 +105,10 @@
       "Publish",
       "PDF"
     ],
-   "alm-guide": [
+    "alm-guide": [
       "Publish",
       "PDF"
-    ] 
+    ]
   },
   "need_generate_pdf_url_template": true,
   "Targets": {
@@ -120,5 +116,8 @@
       "template_folder": "_themes.pdf"
     }
   },
-  "need_generate_intellisense": false
+  "need_generate_intellisense": false,
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }
