@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/30/2018
+ms.date: 06/18/2020
 ms.author: niwaggon
 search.audienceType: 
   - maker
@@ -62,3 +62,6 @@ That wraps up our work in Power BI for this scenario. You started by pulling dat
 ## Next steps
 The next step in this tutorial series is to [run through the workflow we created end-to-end](sharepoint-scenario-summary.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)

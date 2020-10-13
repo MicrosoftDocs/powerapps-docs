@@ -23,7 +23,7 @@ In the [overview](create-component.md) article for creating components, you are 
 Component libraries are containers of component definitions that make it easy to:
 
 - Discover and search components.
-- Publish updates across environments.
+- Publish updates.
 - Notify app makers of available component updates. 
 
 > [!NOTE]

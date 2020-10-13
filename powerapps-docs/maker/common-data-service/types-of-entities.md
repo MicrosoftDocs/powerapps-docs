@@ -1,5 +1,6 @@
 ---
 title: "Types of entities | MicrosoftDocs"
+description: "Learn about the different types of Common Data Service entities."
 ms.custom: ""
 ms.date: 05/30/2018
 ms.reviewer: ""
@@ -24,24 +25,24 @@ search.app:
 ---
 # Types of entities
 
-Before creating or editing entities in Common Data Service, you should understand that there are different types of entities. Once a custom entity is created, these types cannot be changed. The two major divisions are based on entity ownership and whether the entities are activity entities.  
+Before creating or editing entities in Common Data Service, you should understand that there are different types of entities. Once a custom entity is created, these types can't be changed. The two main entity types are standard entities and activity entities.  
   
 <a name="BKMK_EntityOwnership"></a>
 
-## Entity ownership  
+## Standard entities 
 
-There are four different types of entity ownership. When you create a custom entity the only options are **user or team owned** or **organization-owned**, but you should be aware that other entities have different ownership types.  
+There are four different types of standard entity ownership. When you create a custom standard entity the only options are **User or team** owned or **Organization** owned, but you should be aware that other entities have different ownership types.  
   
 |Ownership|Description|  
 |---------------|-----------------|  
 |**Business-owned**|Data in these entities belongs to the Business unit. Access to the data can be controlled at the business unit level.|  
 |**None**|Data not owned by another entity.|  
-|**Organization-owned**|Data belongs to the organization. Access to the data is controlled at the organization level.|  
-|**User or Team Owned**|Data belongs to a user or a team. Actions that can be performed on these records can be controlled on a user level.|  
+|**Organization**|Data belongs to the organization. Access to the data is controlled at the organization level.|  
+|**User or team**|Data belongs to a user or a team. Actions that can be performed on these records can be controlled on a user level.|  
   
   
 > [!IMPORTANT]
->  After an entity is created, you can’t change the ownership. Before you create an entity, make sure that you choose the correct type of ownership. If you later determine that your custom entity must be of a different type, you have to delete it and create a new one.
+>  After a standard entity is created, you can’t change the ownership. Before you create an entity, make sure that you choose the correct type of ownership. If you later determine that your custom entity must be of a different type, you have to delete it and create a new one.
   
 <a name="BKMK_ActivityEntities"></a>
 
@@ -66,6 +67,10 @@ The following table lists activity entities that are available in a default Comm
 You can create new custom activity entities. For example you might create a custom activity entity to record instant message communications. Creating an activity entity is different from creating a non-activity entity because you don’t specify a primary field. All activity entities have a **Primary Field** set to **Subject** and other common fields that are defined by the Activity entity. This allows all types of activities to be shown in a view where just the common fields are displayed.  
 
 To create a custom activity entity, open the **More settings** section in the **New entity** panel, select **Activity entity** option from the **Choose entity type** drop-down list. After you select this, you’ll see that **Display in Activity Menus** is selected. This setting allows people to create this type of activity in the activity menus. This isn’t selected for activities that are typically associated with specific events and created behind using code or by a workflow. After you save the entity, you can’t change these settings.  
+
+## Virtual entities
+
+A virtual entity is a custom entity in Common Data Service that has fields containing data from an external data source. Virtual entities appear in your app to users as regular entity records, but contain data that is read-only and sourced from an external database, such as an  Azure SQL Database. Records based on virtual entities are available in all clients including custom clients developed using the Common Data Service web services.  More information: [Create and edit virtual entities that contain data from an external data source](create-edit-virtual-entities.md)
 
 ### See also
 [Create or edit entities](create-edit-entities.md)

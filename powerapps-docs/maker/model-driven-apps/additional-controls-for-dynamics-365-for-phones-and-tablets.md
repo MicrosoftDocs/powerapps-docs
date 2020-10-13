@@ -2,8 +2,8 @@
 title: "Additional controls for Dynamics 365 for phones and tablets | MicrosoftDocs"
 description: "A list of controls available for use with Dynamics 365 for phones and tablets"
 ms.custom: ""
-ms.date: 06/18/2018
-ms.reviewer: ""
+ms.date: 05/18/2020
+ms.reviewer: "matp"
 ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -16,55 +16,36 @@ author: "Mattp123"
 ms.assetid: 7920ef78-2540-48ad-ba25-9ce9cb995ed1
 caps.latest.revision: 63
 ms.author: "matp"
-manager: "kvivek"
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
   - D365CE
 ---
-# Additional controls for Dynamics 365 for phones and tablets 
+# Custom controls available 
 
- You can use a rich set of additional controls to create a more touch-friendly experience on Dynamics 365 for phones and tablets. These include sliders, switches, multimedia player, input masks, calendar, and other controls.  
+You can use a rich set of additional controls to create a more touch-friendly experience on model-driven apps. These include sliders, switches, multimedia player, input masks, calendar, and other controls.  
 
- 
-> [!NOTE]
->  You can use these additional controls only with the mobile apps. They aren’t supported in the web app.  
-  
- To use these controls in the form editor:  
+To use these controls in the form editor:  
   
 1.  Double-click the field or list you want to add the control to.  
   
-2.  Click the **Controls** tab.  
+2.  Select the **Controls** tab.  
   
-3.  Click **Add control**.  
+3.  Select **Add control**.  
   
-4.  Select the control you want and then click **Add**.  
+4.  Select the control you want and then select **Add**.  
   
     > [!NOTE]
-    >  Different controls are available depending on the field or list type. For example, slider controls might only be available for numerical or money fields, and the calendar control is only available for lists.  
+    >  Different controls are available depending on the field or list type. For example, slider controls might only be available for numerical or money fields.  
   
-5.  Select the devices you want the control to appear on (phone, tablet, or both). Controls aren’t available for phone header fields.  
+5.  Select the devices you want the control to appear on. Controls aren’t available for phone header fields.  
   
 6.  Configure the values for each property.  
   
-7.  Click **OK** when you’re done configuring the control.  
+7.  Select **OK** when you’re done configuring the control.  
   
- Following are descriptions for each control you can use on forms for Dynamics 365 for phones and tablets.  
-  
-## Calendar control  
- Use this control to configure forms so they show up as a calendar view in Dynamics 365 for phones and tablets. You can also use this control to replace dashboards, lists, or entity grids for phones and tablets.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Start Date|Define the start date and time of the item to visualize in the calendar view. The available values are any of the columns in this view of type date.|  
-|End Date|Define the end date and time of the item to visualize in the calendar view. The available values are any of the columns in this view of type date.|  
-|Duration|The duration in minutes. If you specify a value for End Date, Duration is ignored.|  
-|Description|This is the caption you want to see for calendar items.|  
-  
- The minimum duration shown in the calendar is 30 minutes. Items with a duration less than 30 minutes will still appear as 30 minutes long.  
-  
- The calendar control supports all date behaviors (User Local, Date Only, and Time-Zone Independent).  
+ Following are descriptions for each control you can use on forms.  
   
 ## Timeline control  
  Provide a timeline of recent, relevant news articles and Twitter tweets for an account.  
@@ -157,18 +138,6 @@ search.app:
 |--------------|-----------------|  
 |Field|Shows the field the control is mapped to.|  
   
-## Bullet graph  
- The bullet graph control displays a single key measure with a comparative measure and qualitative ranges to instantly signal whether the measure is good, bad, or in another state. Use this control in dashboards for any numerical or money field. For example, you can map the value to actual revenue and the target to estimated revenue to visualize actual versus estimated revenue.  
-  
-|Property|Description|  
-|--------------|-----------------|  
-|Max|Set the maximum value to display on the graph.|  
-|Min|Set the minimum value to display on the graph.|  
-|Good|Set a value that’s considered good for the measure (optional).|  
-|Bad|Set a value that’s considered bad for the measure (optional).|  
-|Value|Shows the field that the control is mapped to.|  
-|Target|Map this to the field you want to compare the value with. For example, if **Value** is mapped to **Actual Revenue**, you can map **Target** to **Estimated Revenue**, or you can provide a static value.|  
-  
 ## Pen control  
  Use the pen control to capture written input such as signatures.  
   
@@ -256,4 +225,5 @@ search.app:
 |Step|Set the amount to add or subtract from the current value when entering data with this control.|  
   
 ## Next steps
-[Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)
+[Tutorial: Use custom controls for data visualizations](use-custom-controls-data-visualizations.md)</br>
+[Work with records in the new calendar view](../../user/calendar-view.md)

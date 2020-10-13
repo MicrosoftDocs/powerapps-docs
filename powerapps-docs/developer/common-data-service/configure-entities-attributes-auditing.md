@@ -39,7 +39,7 @@ There are three levels where auditing can be configured: organization, entity, a
   
  The following table lists the non-customizable entities that cannot be audited. This table was obtained by testing for a `CanModifyAuditSettings` attribute value of `false` on each entity’s metadata.  
   
-||  
+|Non-customizable entities|  
 |-|  
 |ActivityPointer|  
 |Annotation|  

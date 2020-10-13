@@ -33,6 +33,7 @@ Organization-owned dashboards can be created by using the Common Data Service or
 - **Dashboard layout**: While creating dashboards, you have to use the FormXML to define the dashboard components and layout. For information about working with FormXML to define a dashboard, see [Dashboard Components and FormXML Elements](understand-dashboards-dashboard-components-formxml.md#DashboardComponentsandFormXML). For some sample FormXMLs of different types of dashboards, see [Sample Dashboards](sample-dashboards.md).  
   
 <a name="UsingSDK"></a>   
+
 ## Create a dashboard by using the SDK  
  To create a dashboard, create an instance of `SystemForm` for an organization-owned dashboard, or `UserForm` for a user-owned dashboard. The following sample shows how to create an organization-owned dashboard.  
   
@@ -136,18 +137,20 @@ SystemForm dashboard = new SystemForm
     visualization.SavedQueryVisualizationId.Value.ToString("B")),
     IsDefault = false
 };
-_dashboardId = _serviceProxy.Create(dashboard);
+_dashboardId = service.Create(dashboard);
  ``` 
   
- For a complete sample, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a User-Owned Dashboard to Another User](/dynamics365/customer-engagement/developer/customize-dev/sample-assign-user-owned-dashboard-another-user).  
+ For a complete sample, see [Sample: Create, Retrieve, Update and Delete (CRUD) a Dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboard). For a sample to create a user-owned dashboard, and assign it to another user, see [Sample: Assign a User-Owned Dashboard to Another User](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/AssignUserOwnedDashboardToAnother).  
   
 <a name="UsingFormCustomization"></a>   
+
 ## Create an organization-owned dashboard by customizing the entity form  
+
  The customizations.xml file that is exported with an unmanaged solution contains definitions for entity forms and dashboards. You can add or modify the customizations.xml file to add or update a dashboard.  
   
 #### Create a dashboard by customizing an entity form  
   
-1. Log on to Common Data Service.  
+1. Log in to Common Data Service.  
   
 2. Export a solution. For information about doing so, see [Exporting, Preparing to Edit, and Importing the Ribbon](export-prepare-edit-import-ribbon.md).  
   
@@ -202,10 +205,11 @@ _dashboardId = _serviceProxy.Create(dashboard);
   
  **Resolution**: Make sure that you specify a value for the `<Url>` parameter while creating an IFRAME in the FormXML.  
   
-### See also  
+### See also 
+
  [Dashboards](analyze-data-with-dashboards.md)   
  [Using FormXML for dashboards](understand-dashboards-dashboard-components-formxml.md)   
  [Actions on dashboards](actions-dashboards.md)   
  [Sample dashboards](sample-dashboards.md)   
- [Sample: Create, Retrieve, Update and Delete (CRUD) a dashboard](/dynamics365/customer-engagement/developer/customize-dev/sample-create-retrieve-update-delete-dashboard)   <!-- TODO relevant powerapps repo topic must be linked-->
+ [Sample: Create, Retrieve, Update and Delete (CRUD) a dashboard](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/CRUDOperationsDashboardd)   
  [Customize entity forms](customize-entity-forms.md)

@@ -16,6 +16,7 @@ ms.assetid: a118f54f-be47-4f35-9ffb-7afa6c296631
 # Property
 
 Interface for `context.parameters.<property_key>`
+
 ## Available for
 
 Model-driven apps and canvas apps (public preview)
@@ -42,7 +43,7 @@ Model-driven apps and canvas apps (public preview)
 
 **Type**: `any`
 
-### attribute
+### attributes
 
 **Type**: `FieldPropertyMetadata`
 

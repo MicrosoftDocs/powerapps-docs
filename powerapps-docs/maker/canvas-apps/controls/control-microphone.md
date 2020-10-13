@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 03/16/2020
+ms.date: 09/28/2020
 ms.author: chmoncay
 search.audienceType: 
   - maker
@@ -20,7 +20,7 @@ A control that enables app users to record sounds from their device.
 
 ## Description
 
-Use the **Microphone** control to capture audio with a device's microphone.  The device must have a microphone and the user must authorize the app to use the microphone.  The microphone control is supported when running in a web browser.  
+Use the **Microphone** control to capture audio with a device's microphone. The device must have a microphone and the user must authorize the app to use the microphone. 
 
 The most recently recorded audio clip is available through the **Audio** property. With this property, recorded audio can be:
 
@@ -36,6 +36,17 @@ Format of the recorded audio:
 - *OGG* format for *web browsers*.
 
 Captured media is referenced by a text string URI. For more information, read the [data type documentation](../functions/data-types.md#uris-for-images-and-other-media).
+
+> [!NOTE]
+> The microphone control is supported only on Microsoft Edge based on Chromium, Chrome, and Firefox browsers; and Android and iOS devices. All other browsers and platforms will show a warning that some features of the app won't work.
+
+## Considerations for Teams Mobile
+
+The following conditions apply when using the Microphone control in apps created using Power Apps on Teams Mobile:
+
+1. The audio format for microphone recordings in Teams will always be *AAC* with a file extension of .MP4.
+1. Teams has its own recording experience. Hence, the microphone control inside apps created using Power Apps will be disabled during the recording period.
+1. Microphone recordings are limited to a maximum duration of 10 minutes.
 
 ## Key properties
 

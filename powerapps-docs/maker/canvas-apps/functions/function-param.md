@@ -6,8 +6,8 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
-ms.date: 05/04/2020
+ms.reviewer: nabuthuk
+ms.date: 05/20/2020
 ms.author: gregli
 search.audienceType: 
   - maker
@@ -97,10 +97,11 @@ Use the *LaunchTarget* argument to specify the target browser window in which to
 | **Self** | The webpage or app replaces the current window or tab. |
 | *name* | Instead of an enum value, use your own text string to *name* the window or tab.  *Self* is an internal only name that is only used by the **Launch** function. It has no impact on nor will it match the title of the window that your users see.  If a window or tab with the given *name* already exists, its contents will be replaced. Otherwise, a new window or tab will be created.  *name* can't begin with the underscore character "_". |
 
-**Blank** is the default when running in a web browser with **Self** and *name* as available options.  In a mobile player, **Blank** is the default for webpages with *name* as available option; while **Self** will always be used for apps.
+**Blank** is the default enum when running in a web browser with **Self** and *name* as available options. In a mobile player, **Blank** is the default for webpages with *name* as an available option; while the current canvas app will always be replaced by another canvas app.
 
 > [!NOTE]
-> *LaunchTarget* enum names are in transition.  You can use **Blank** and **Self** today but these names will be changing in the weeks ahead.  Your app will automatically be updated when this occurs, your formulas will not require an update.
+> - Using a *LaunchTarget* with any value other than **Blank** in embedded scenarios (for example, Power BI or SharePoint) is not supported and may result in unexpected behavior. In the future, this behavior may change, or may cause an error.
+> - *LaunchTarget* enum names are in transition. You may use **Blank** and **Self** currently, though these names will change in the future. **Self** will go through an intermediate change to **'Self'** as a new **Self** keyword is introduced. To avoid this conflict, the expected names may be **New** and **Replace**. Your app will automatically update when these changes occur. Your formulas won't need an update manually.
 
 ### Security zones
 

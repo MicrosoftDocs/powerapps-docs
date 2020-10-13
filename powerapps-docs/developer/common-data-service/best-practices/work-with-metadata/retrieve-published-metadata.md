@@ -60,7 +60,7 @@ public RetrieveAllEntitiesAttributesResponse GetAllEntitiesImplicit(IOrganizatio
 }
 ```
 
-### Explictly controlling the behavior
+### Explicitly controlling the behavior
 
 Explicitly setting the `RetrieveAsIfPublished` property to retrieve only published customizations
 

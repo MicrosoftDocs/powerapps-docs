@@ -199,6 +199,7 @@ An (HTML) web resource page can only accept a single custom parameter called `da
  The `ParseDataValue` function uses similar logic found in `getDataParam` to locate the custom parameter delimiters to create an array of name value pairs. Then it generates a table and appends it to the otherwise empty document.body.  
   
 ### See also  
+
  [Web Resources](web-resources.md)   
  [Sample: Import Files as Web Resources](sample-import-files-web-resources.md)   
  [Web Page (HTML) Web Resources](webpage-html-web-resources.md)   

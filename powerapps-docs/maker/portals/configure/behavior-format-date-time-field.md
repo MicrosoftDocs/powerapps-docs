@@ -1,14 +1,13 @@
 ---
 title: "Behavior and format of the date and time field in Common Data Service | MicrosoftDocs"
 description: "Behavior and format of the date and time fields that are used in a portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 11/04/2019
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Behavior and format of the date and time field
