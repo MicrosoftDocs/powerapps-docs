@@ -69,6 +69,7 @@ non-employee.
 
 The occupancy dashboards have been updated to reflect guest registrations.
 
+
 ## New and updated features in August 2020 (v.1.1)
 
 ### Employee bookings and arrivals (Employee app)
@@ -116,6 +117,7 @@ the facility traffic, such as bookings by day of the week and by arrival time
 window
 
 ![](media/whats-new-facility-management-pbi-arrivals.png)
+
 
 ## New and updated features in July 2020 (v1.0)
 
