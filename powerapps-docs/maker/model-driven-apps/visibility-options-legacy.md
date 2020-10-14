@@ -41,7 +41,7 @@ In the Unified Interface, for sections where fields don’t span more than one c
 
 ## Client API methods for controlling the visibility of form elements
 
-For information about how to change the form element show or hide status for the header, command bar, footer, and tabs at app runtime, see these client API reference topics:
+For information about how to change the form element show or hide status for the header, command bar, footer, and tabs at app runtime, see these client API reference articles:
 - [formContext.ui.headerSection item (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-headerSection.md)
 - [formContext.ui.footerSection item (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-footerSection.md)
 - [formContext.ui.tabs (Client API reference)](../../developer/model-driven-apps/clientapi/reference/formContext-ui-tabs.md)
