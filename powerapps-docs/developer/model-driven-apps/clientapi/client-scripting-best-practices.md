@@ -25,27 +25,22 @@ When you write functions that will be used in JavaScript libraries, your functio
 
 - **Unique function prefix**: Define each of your functions using the standard syntax with a consistent name that includes a unique naming convention, as shown in the following example.
     ```JavaScript
-    function MyUniqueName_performMyAction()
-    {
-        // Code to perform your action.
-    }
+    var Sdk = window.Sdk || {};
+    (function () {
+       // Code to perform your actions.
+    }). call(Sdk);
     ```
 - **Namespaced library names**: Associate each of your functions with a JavaScript object to create a kind of namespace to use when you call your functions as shown in the following example.
     ```JavaScript
-    //If the MyUniqueName namespace object isn’t defined, create it.
-    if (typeof (MyUniqueName) == "undefined")
-       { MyUniqueName = {}; }
-       // Create Namespace container for functions in this library;
-       MyUniqueName.MyFunctions = {
-         performMyAction: function(){
-         // Code to perform your action.
-         //Call another function in your library
-         this.anotherAction();
-       },
-       anotherAction: function(){
-         // Code in another function
-      }
-    };
+    this.formOnLoad = function () {
+      // Code to perform your actions.
+    }
+    this.attributeOnChange = function () {
+        // Code to perform your actions.
+    } 
+    this.formOnSave = function () {
+        // Display an alert dialog
+    }
     ```
 
     Then when you use your function you can specify the full name. The following example shows this.
