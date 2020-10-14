@@ -27,7 +27,8 @@ Refer to the sample link at the end of this topic for sample code that demonstra
 
 > [!IMPORTANT]
 > Large attribute values, such as **Email** description or **Annotations** are limited (capped) to 5KB or ~5,000 characters in length. A capped attribute value can be recognized by three dots at the end of the text, for example “lorem ipsum, lorem ip…”.
-> Going forward, **Audit** entity records will be stored in Common Data Service’s log storage. Linking audit with other entities using FetchXML will no longer be possible.
+>
+> Going forward, **Audit** entity records will be stored in Common Data Service’s log storage. Linking **Audit** with other entity records using FetchXML will no longer be possible.
 
 ## Delete the change history for a record
  
