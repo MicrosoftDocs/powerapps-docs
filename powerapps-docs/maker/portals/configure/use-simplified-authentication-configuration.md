@@ -98,6 +98,7 @@ Several identity providers are added by default that you can configure. You can 
 > - You can't change the configuration of the **Local sign in** and **Azure Active Directory** providers when using this interface.
 > - You can have only one instance of each identity provider type for OAuth 2.0, such as **Facebook**, **LinkedIn**, **Google**, **Twitter**, and **Microsoft**.
 > - Updates to identity provider configuration might take a few minutes to be reflected on the portal. To apply your changes immediately, you can [restart the portal](../admin/admin-overview.md#open-power-apps-portals-admin-center).
+> - If you [add a custom domain name](../admin/add-custom-domain.md), or [change the base URL of your portal](../admin/change-base-url.md), you must recreate the provider configuration with the correct URL.
 
 ### Add or configure a provider
 
@@ -144,7 +145,7 @@ To edit a provider you've configured, select it, select **More Commands** (**...
 
 ![Edit a provider](media/use-simplified-authentication-configuration/edit-provider.png "Edit a provider")
 
-Refer to the provider-specific sections later in this article to edit settings for the provider type you selected.
+Refer to the provider-specific articles to edit settings for the provider type you selected.
 
 ### Delete a provider
 

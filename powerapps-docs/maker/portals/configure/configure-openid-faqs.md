@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Frequently Asked Questions (FAQs) when using OpenID Connect in portals
 
-In this article, learn about the common scenarios, or the FAQs when using an authentication provider with Power Apps portals that uses OpenID Connect specifications.
+In this article, learn about the common scenarios, or the FAQs when using an authentication provider with Power Apps portals that uses [OpenID Connect specifications](https://openid.net/specs/openid-connect-core-1_0.html).
 
 ## Do I require OpenId Connect Auto-Discovery Document to integrate with portals?
 
@@ -38,7 +38,7 @@ Yes. Custom scope parameter(s) can be specified using scope option in configurat
 
 ## Why does the username value in contact, or external identity record in Common Data Service, show a different value compared to what the user entered on the sign-in page?
 
-Username field on contact record, and externally identity record, will show the value sent in either the sub-claim or oid-claim (oid claim for only Azure AD-based providers). This is because the sub claim represents the identifier for end user, and is guaranteed by IDP to be unique. Oid claim (Object ID - a unique identifier for all users in a tenant) is supported when used with single-tenant Azure AD-based providers.
+Username field on contact record, and externally identity record, will show the value sent in either the sub-claim or oid-claim (oid claim for only Azure AD-based providers). This is because the sub claim represents the identifier for end user, and is guaranteed by identity provider (IDP) to be unique. Oid claim (Object ID - a unique identifier for all users in a tenant) is supported when used with single-tenant Azure AD-based providers.
 
 ## Does portals support logout from OpenId Connect-based provider?
 
