@@ -1265,9 +1265,10 @@
     href: ../developer/model-driven-apps/overview.md
     # href: ../developer/model-driven-apps/TOC.yml For authoring I find having developer content buried so deep is awkward
 
-- name: Power Apps mobile
-  href: ../mobile/run-powerapps-on-mobile.md
+- name: Power Apps mobile  
   items:
+  - name: Run apps on Power Apps mobile
+    href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../user/use-custom-model-driven-app-on-mobile.md
 
