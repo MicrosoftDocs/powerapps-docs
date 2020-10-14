@@ -53,7 +53,20 @@ The default, an application command bar or ribbon is defined by Common Data Serv
 > 
 > - If you want to remove a button that is associated with a specific privilege, you should adjust the privileges for the entity in the security roles in your implementation. This will allow the default ribbon display and enables rules to hide or disable ribbon elements from users who do not have the necessary privileges to perform those actions.  
 >   -   If you want to replace an existing ribbon element with a custom ribbon element, you can overwrite that element by specifying a `CustomAction.Location` value identical to the existing element.  
-> - The `HideCustomAction` element can only be created or deleted, but can't be updated. To remove the `HideCustomAction` element you need to create a new updated version of the same solution that installed the `HideCustomAction` element. A new patch of the solution cannot remove the `HideCustomAction` element.
+> - To remove the `HideCustomAction` element you need to create a new updated version of the same solution that installed the `HideCustomAction` element. A new patch of the solution cannot remove the `HideCustomAction` element.
+> - The `HideCustomAction` element cannot be removed, once added, except by creating a new updated solution. Instead, ribbon buttons should be hidden using the `DisplayRule` element that always evaluate to false. Having both `Mscrm.HideOnModern` and `Mscrm.ShowOnlyOnModern` would always evaluate to false. For example, to hide a deactivate button:
+    ```xml
+    <CommandDefinition Id="Mscrm.HomepageGrid.Deactivate">
+            <EnableRules>
+            </EnableRules>
+            <DisplayRules>
+              <DisplayRule Id="Mscrm.HideOnModern" />
+              <DisplayRule Id="Mscrm.ShowOnlyOnModern" />
+            </DisplayRules>
+            <Actions>
+            </Actions>
+          </CommandDefinition>
+    ```
   
  The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** attribute must match the Id of the ribbon element you want to remove.  
   
