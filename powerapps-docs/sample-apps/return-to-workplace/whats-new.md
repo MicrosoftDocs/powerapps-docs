@@ -31,9 +31,7 @@ Case managers can now manage facility access and set a date when facility access
 will be next available for the affected employee and provide them instructions
 through the app
 
-![](media/whats-new-employee-app-access-management1.jpg)
-
-![](media/whats-new-employee-app-access-management2.jpg)
+![](media/whats-new-employee-app-access-management1.jpg)    ![](media/whats-new-employee-app-access-management2.jpg)
 
 -   **Prioritized case view**
 
