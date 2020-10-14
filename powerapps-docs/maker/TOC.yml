@@ -1270,7 +1270,7 @@
   - name: Run apps on Power Apps mobile
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
-    href: ../user/use-custom-model-driven-app-on-mobile.md
+    href: ../mobile/use-custom-model-driven-app-on-mobile.md
 
 - name: Portals
   items:
