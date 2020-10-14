@@ -25,6 +25,7 @@ To configure the additional settings for any OAuth 2.0 identity provider, select
 - **Sign in As authentication type** - The name of another authentication middleware that will be responsible for actually issuing a user Claims Identity: MicrosoftAccountAuthenticationOptions.SignInAsAuthenticationType.​
 - **Scope** - A comma-separated list of permissions to request: MicrosoftAccountAuthenticationOptions.Scope.​
 - ​**Registration Enabled**​ - Enables or disables the registration requirement for the existing identity provider. When disabled, the user is denied registration with an error if no contact record exists for the user. When enabled, user registration is allowed for a new user only if the site setting **Authentication/Registration/Enabled** is set to true.​
+- **Contact mapping with email** - Specifies whether contacts are mapped to a corresponding email. When set to **On**, this setting associates a unique contact record with a matching email address, and then automatically assigns the external identity provider to the contact after the user successfully signs in.
 
 ### See also
 
