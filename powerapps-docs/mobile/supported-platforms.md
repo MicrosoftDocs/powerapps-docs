@@ -19,6 +19,8 @@ search.app:
 
 # Supported platforms for running model-driven apps using the Power Apps mobile app
 
+This topic contains device and platform requirements for running model-driven apps on the Power Apps mobile app.
+
 | **Minimum required** | **Recommended** |
 | --- | --- |
 | iOS 12 or later |iOS 12 or later|
