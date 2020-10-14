@@ -14,30 +14,26 @@ ms.reviewer: kvivek
 
 ## New and updated features in October 2020 (v1.2)
 
-### Employee app
-
-**Guest bookings**
+### Guest bookings (Employee App)
 
 To support essential visits to a facility, employees can now register, book
 passes for their escorted guests and share passes with them through Outlook
 
 ![Guest Booking](media/whats-new-employee-app-guest-booking.png "Guest Booking")
 
-**QR code**
+### QR code (Employee App)
 
 The new update also introduces QR code functionality that enables integration
 with health and safety systems, such as temperature scanning and badge reader
 systems.
 
-### Workplace care management app
-
-**Manual contact tracing**
+### Manual contact tracing (Workplace care management app)
 
 Manual contact tracers can quickly identify case contacts through a suggested
 list, and manually add additional case contacts. The case contacts can be
 evaluated, and new cases can be opened, if needed
 
-**Employee access management**
+### Employee access management (Workplace care management app)
 
 Case managers can now manage facility access and set a date when facility access
 will be next available for the affected employee and provide them instructions
@@ -45,16 +41,14 @@ through the app
 
 ![](media/whats-new-employee-app-access-management1.jpg)    ![](media/whats-new-employee-app-access-management2.jpg)
 
-**Prioritized case view**
+### Prioritized case view (Workplace care management app)
 
 A new view for case managers has been introduced to help them prioritize their
 case workload. They can view the list of high-risk cases and cases due for
 contact and investigation. They can also visualize cases by duration they have
 been open and by their risk.
 
-### Workplace care management dashboard
-
-**View and assess case clusters**
+### View and assess case clusters (Workplace care management dashboard)
 
 Health and safety leaders can visualize case clusters and view associated
 metrics to assess risk of an outbreak and take immediate actions. The core data
@@ -65,25 +59,19 @@ workplace care management app
 
 ![](media/whats-new-workplacecare-pbi-cluster-network.png)
 
-### Facility safety management app
-
-**Contact type field**
+### Contact type field (Facility safety management app)
 
 Contacts are now differentiated by a new contact type field: Employee and Guest,
 that enables a facility manager to differentiate between an employee and
 non-employee.
 
-### Facility management dashboard
+### Enhanced occupancy dashboards (Facility management dashboard)
 
-**Enhanced occupancy dashboards**
-
-The occupancy dashboards have been updated to reflect guest registrations
+The occupancy dashboards have been updated to reflect guest registrations.
 
 ## New and updated features in August 2020 (v.1.1)
 
-### Employee app
-
-**Employee bookings and arrivals**
+### Employee bookings and arrivals (Employee app)
 
 Employees can now book space in available buildings remotely through the
 application. They can choose from specific floors and areas that are available,
@@ -92,9 +80,7 @@ and receive a personalized day pass that can be used for building entry.
 
 ![](media/whats-new-employee-app-bookings-and-arrivals.png)
 
-### Workplace care management dashboard
-
-**New dashboard for health and safety leaders**
+### New dashboard for health and safety leaders (Workplace care management dashboard)
 
 With this update, we are introducing a new Microsoft Power BI dashboard for
 health and safety leaders that are authorized to view employee cases across the
@@ -105,9 +91,7 @@ force leadership have a comprehensive and consolidated view.
 
 ![](media/whats-new-workplacecare-dashboard-pbi.png)
 
-### Facility safety management app
-
-**Partition facility and set capacity limits**
+### Partition facility and set capacity limits (Facility safety management app)
 
 We are introducing a new Location Management capability designed to enable
 companies to better manage facility occupancy and arrivals, ensuring effective
@@ -116,9 +100,7 @@ areas based on adjusted designs and establish capacity limits for each. Area
 capacity can also be limited by phase. These limits establish how many passes
 can be issued daily to ensure adherence to safety constraints. 
 
-### Facility management dashboard
-
-**New occupancy tab**
+### New occupancy tab (Facility management dashboard)
 
 The new occupancy tab enables a facility manager to monitor and manage occupancy
 by comparing bookings and visits against capacity. The facility manager can view
@@ -127,7 +109,7 @@ occupancy spaces.
 
 ![](media/whats-new-facility-management-pbi-occupancy.png)
 
-**New Daily Arrivals tab**
+### New Daily Arrivals tab (Facility management dashboard)
 
 This tab shows booking information to assist a facility manager in controlling
 the facility traffic, such as bookings by day of the week and by arrival time
