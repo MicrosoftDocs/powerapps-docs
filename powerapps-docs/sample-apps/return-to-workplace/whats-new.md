@@ -2,7 +2,7 @@
 
 ## New and updated features in October 2020 (v1.2)
 
-#### Employee app
+### Employee app
 
 **Guest bookings**
 
@@ -17,7 +17,7 @@ The new update also introduces QR code functionality that enables integration
 with health and safety systems, such as temperature scanning and badge reader
 systems.
 
-#### Workplace care management app
+### Workplace care management app
 
 **Manual contact tracing**
 
