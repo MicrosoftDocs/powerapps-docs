@@ -1,4 +1,16 @@
-# What's new in the Return to the Workplace solution
+---
+title: Extend the Return to the Workplace Solution
+description: Provides an overview of how to extend the Return to the Workplace solution.
+author: v-wfranc
+ms.service: powerapps
+ms.topic: conceptual
+ms.custom: 
+ms.date: 10/14/2020
+ms.author: garybird
+ms.reviewer: kvivek
+---
+
+# What's new in the Return to the Workplace solution?
 
 ## New and updated features in October 2020 (v1.2)
 
