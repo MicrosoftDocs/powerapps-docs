@@ -22,7 +22,7 @@ search.app:
   - D365CE
 ---
 
-# ISV app usage analytics
+# App usage analytics
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -43,7 +43,7 @@ App usage feature allows ISVs to filter the usage data by **Component Type**, **
 Some of the components of a solution can have shared ownership by multiple ISVs. For shared components, only the publisher who created the component gets the usage credit. For example, ISV1 created a form and ISV2 extends the form by adding a widget to it. Every time the form is used, ISV1 gets the usage credit and ISV2 gets the usage credit whenever the widget is used. If a user visited the form only to access the widget, ISV1 also gets the usage credit.
 
 For components that are not shared, only the publisher who created gets the usage credit. 
-
+    
 ## View the app usage dashboard
 
 To view the app usage data:
@@ -55,7 +55,7 @@ To view the app usage data:
    > [!div class="mx-imgBorder"]
    > ![List of top apps](media/isv-top-apps.png "List of top apps")
 
-1. You can also see the app usage details by directly selecting the app usage icon from the list of apps as shown  screenshot:
+1. You can also see the app usage details by directly selecting the app usage icon from the list of apps as shown in the screenshot:
 
    > [!div class="mx-imgBorder"]
    > ![Usage icon](media/isv-select-app-to-see-details.png "Usage icon")
@@ -71,7 +71,7 @@ The usage dashboard shows the following metrics:
 - **Monthly active users by component type**: Tracks the information about the number of monthly active users filtered by component type.
 - **Monthly active users by component name**: Tracks the information about the number of monthly active users filtered by component name.
 
-If ISV is looking at the metrics at a solution level, all the components are rolled up to the solution level. Similarly, all the solution metrics are rolled up to package and all package metrics are rolled up to an app. 
+If ISV is looking at the metrics at a solution level, all the components are rolled up to the solution level. Similarly, all the solution metrics are rolled up to package and all package metrics are rolled up to an app.
 
 ### Filtering the usage dashboard
 
