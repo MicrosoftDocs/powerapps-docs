@@ -1,6 +1,6 @@
 **Return to the workplace solution v1.2**
 
-### New and updated features in October 2020
+## New and updated features in October 2020
 
 ### Employee app
 
@@ -9,7 +9,7 @@
 To support essential visits to a facility, employees can now register, book
 passes for their escorted guests and share passes with them through Outlook
 
-![](media/38abf6ee3591b8b99ce890461845f7f6.png)
+![](media/whats-new-employee-app-guest-booking.png)
 
 -   **QR code**
 
@@ -31,9 +31,9 @@ Case managers can now manage facility access and set a date when facility access
 will be next available for the affected employee and provide them instructions
 through the app
 
-![](media/65ca2eb60319457f9ce74307beea96ec.jpg)
+![](media/whats-new-employee-app-access-management1.jpg)
 
-![](media/3df2f7593efa5d3a247989b1440f4114.jpg)
+![](media/whats-new-employee-app-access-management2.jpg)
 
 -   **Prioritized case view**
 
@@ -51,9 +51,9 @@ metrics to assess risk of an outbreak and take immediate actions. The core data
 for visualizations is sourced from the manual contact tracing feature in the
 workplace care management app
 
-![](media/f8c7639bc912d7ea7360c11be84b38b9.png)
+![](media/whats-new-workplacecare-pbi-cluster.png)
 
-![](media/26fbcdb6a0e9e32b68f792b09af550d4.png)
+![](media/whats-new-workplacecare-pbi-cluster-network.png)
 
 ### Facility safety management app
 
@@ -71,7 +71,7 @@ The occupancy dashboards have been updated to reflect guest registrations
 
 **Return to the workplace solution v1.1**
 
-### New and updated features in August 2020
+## New and updated features in August 2020
 
 ### Employee app
 
@@ -82,7 +82,7 @@ application. They can choose from specific floors and areas that are available,
 choose arrival times to avoid high-traffic hours, attest to being symptom-free,
 and receive a personalized day pass that can be used for building entry.
 
-![](media/3d395778f417df824e0ad868cbe93bfa.png)
+![](media/whats-new-employee-app-bookings-and-arrivals.png)
 
 ### Workplace care management dashboard
 
@@ -95,7 +95,7 @@ view specific locations. There are also focused reports for viewing cases under
 investigation and cases being monitored to ensure health and safety and task
 force leadership have a comprehensive and consolidated view.
 
-![](media/9feef709b8cf163bb5b06fefded3558c.png)
+![](media/whats-new-workplacecare-dashboard-pbi.png)
 
 ### Facility safety management app
 
@@ -117,7 +117,7 @@ by comparing bookings and visits against capacity. The facility manager can view
 trends by time and drill down to a floor and an area level to identify the high
 occupancy spaces.
 
-![](media/992789d0d1a7dd2b9d9192a453272169.png)
+![](media/whats-new-facility-management-pbi-occupancy.png)
 
 -   **\*New\* Daily Arrivals tab**
 
@@ -125,11 +125,11 @@ This tab shows booking information to assist a facility manager in controlling
 the facility traffic, such as bookings by day of the week and by arrival time
 window
 
-![](media/0360b9a89d9f59b0c81e91918e27fa1e.png)
+![](media/whats-new-facility-management-pbi-arrivals.png)
 
 **Return to the workplace solution v1.0**
 
-### New and updated features in July 2020
+## New and updated features in July 2020
 
 ### Employee app
 
@@ -137,7 +137,7 @@ Allow employees to self-serve in looking up facility status and workspace
 availability. Employees can let the organization know how they are feeling about
 safely returning to work.
 
-![](media/7c071269ceb555e2e3637bc7d05ba348.png)
+![](media/whats-new-rtw-v1-employee-app-featues.png)
 
 ### Facility safety management app
 
@@ -145,14 +145,14 @@ Provide facility managers the tools they need to manage the reopening and
 readiness of the facilities. This helps organizations ensure that they can
 provide a safe working environment for employees to return to the workplace
 
-![](media/7b3b0f7b8c4a0ad123a8659943b1d0e1.png)
+![](media/whats-new-rtw-v1-facility-management-app.png)
 
 ### Workplace care management app
 
 Allow case managers to open and investigate cases for affected employees and
 import data from external systems to support case management.
 
-![](media/567f2c212dcd692fcfd9c9620d684274.png)
+![](media/whats-new-rtw-v1-workplace-care-management-app.png)
 
 ### Facility management dashboard
 
@@ -165,7 +165,7 @@ The app allows facility managers to:
 
 -   consolidate signals and scores into a readiness model
 
-    ![](media/2f865676073dfecb508efc21310c8e59.png)
+    ![](media/whats-new-rtw-v1-facility-management-dashboard.png)
 
 ### Location readiness dashboard
 
@@ -173,4 +173,4 @@ Allow leaders to review current data related to all conditions and facility
 readiness factors, compare selected measures and metrics associated to targets
 for locations, review guidelines set for locations by government agencies.
 
-![](media/1bbce096a03623667811de301baf7cb4.png)
+![](media/whats-new-rtw-v1-location-readiness-dashboard.png)
