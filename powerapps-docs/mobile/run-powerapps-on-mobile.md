@@ -220,6 +220,6 @@ Select the site map ![Site map icon](media/pa_mobile_sitemap_icon.png "Site map 
 
 ## See also
 
-[Troubleshoot issues for the Power Apps mobile app](powerapps_mobile_troubleshoot.md)
+[Troubleshoot issues for the Power Apps mobile app](https://docs.microsoft.com/powerapps/user/powerapps_mobile_troubleshoot)
 
 
