@@ -1,4 +1,4 @@
-**Return to the workplace solution v1.2**
+#What's new in the Return to the Workplace solution
 
 ## New and updated features in October 2020
 
