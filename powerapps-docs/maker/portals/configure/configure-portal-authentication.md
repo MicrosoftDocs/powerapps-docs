@@ -58,5 +58,5 @@ With open registration enabled, users aren't required to provide an invitation c
 - [Configure different OAuth 2.0 providers](configure-oauth2-provider.md)
 - [Configure OpenID Connect provider](configure-openid-provider.md)
 - [Configure SAML 2.0 provider](configure-saml2-provider.md)
-- [Configure WS-FED provider](configure-ws-federation-provider.md)
+- [Configure WS-Federation provider](configure-ws-federation-provider.md)
 - [Microsoft Learn: Authentication and user management in Power Apps portals](https://docs.microsoft.com/learn/modules/authentication-user-management/)
