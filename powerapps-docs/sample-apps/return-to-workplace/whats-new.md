@@ -10,7 +10,8 @@
 To support essential visits to a facility, employees can now register, book
 passes for their escorted guests and share passes with them through Outlook
 
-![](media/whats-new-employee-app-guest-booking.png)
+[!div class="mx-imgBorder"]
+![Guest Booking](media/whats-new-employee-app-guest-booking.png "Guest Booking")
 
 -   **QR code**
 
