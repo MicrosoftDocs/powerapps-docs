@@ -57,24 +57,24 @@ The default, an application command bar or ribbon is defined by Common Data Serv
 
 The `HideCustomAction` element cannot be removed, once added, except by creating a new updated solution. Instead, ribbon buttons should be hidden using a `DisplayRule` element that always evaluate to false. Having both `Mscrm.HideOnModern` and `Mscrm.ShowOnlyOnModern` would always evaluate to false. For example, to hide a deactivate button:
 
-   ```xml
-    <CommandDefinition Id="Mscrm.HomepageGrid.Deactivate">
-           <EnableRules>
-            </EnableRules>
-           <DisplayRules>
-            <DisplayRule Id="Mscrm.HideOnModern" />
-              <DisplayRule Id="Mscrm.ShowOnlyOnModern" />
-            </DisplayRules>
-            <Actions>
-            </Actions>
-          </CommandDefinition>
-      ```
+```xml
+<CommandDefinition Id="Mscrm.HomepageGrid.Deactivate">
+    <EnableRules>
+      </EnableRules>
+      <DisplayRules>
+        <DisplayRule Id="Mscrm.HideOnModern" />
+        <DisplayRule Id="Mscrm.ShowOnlyOnModern" />
+      </DisplayRules>
+      <Actions>
+        </Actions>
+    </CommandDefinition>
+```
   
- The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** attribute must match the Id of the ribbon element you want to remove.  
+The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** attribute must match the Id of the ribbon element you want to remove.  
   
 ### See also  
 
- [Customize commands and the ribbon](customize-commands-ribbon.md)   
- [Pass data from a page as a parameter to Ribbon actions](/dynamics365/customerengagement/on-premises/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions
+[Customize commands and the ribbon](customize-commands-ribbon.md)   
+[Pass data from a page as a parameter to Ribbon actions](/dynamics365/customerengagement/on-premises/developer/customize-dev/pass-dynamics-365-data-page-parameter-ribbon-actions
 )<br/> 
- [Define scaling for Ribbon elements](define-scaling-ribbon-elements.md)
+[Define scaling for Ribbon elements](define-scaling-ribbon-elements.md)
