@@ -32,8 +32,6 @@
       href: query-data-web-api.md
     - name: Retrieve related entities with query
       href: retrieve-related-entities-query.md
-    - name: Relevance search, suggestions, and autocomplete
-      href: relevance-search.md
   - name: Retrieve and execute predefined queries
     href: retrieve-and-execute-predefined-queries.md
   - name: Create an entity
@@ -82,6 +80,8 @@
     href: use-postman-perform-operations.md
 - name: Client-side JavaScript using Web API in model-driven apps
   href: get-started-web-api-client-side-javascript.md
+- name: Relevance search, suggestions, and autocomplete
+  href: relevance-search.md
 - name: Discover the URL for your organization
   items:
   - name: Get started
