@@ -6,9 +6,9 @@ ms.date: 10/31/2018
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "paulliew" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: "Bluebear73" # GitHub ID
+ms.author: "munzinge" # MSFT alias of Microsoft employees only
+manager: "mayadu" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
