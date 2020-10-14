@@ -47,6 +47,8 @@ The default, an application command bar or ribbon is defined by Common Data Serv
 ### Hide custom actions  
 
  A `<HideCustomAction>` is a statement that you use when you want to remove an existing ribbon element so that it is not rendered. This does not hide the ribbon element, it actually removes the ribbon element at runtime so that it doesn’t exist in the ribbon.  
+
+The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** attribute must match the Id of the ribbon element you want to remove.  
   
 > [!NOTE]
 > Because the `HideCustomAction` element removes a specified node from the ribbon, removing ribbon elements in this manner may not be the best option for every situation.  
@@ -70,7 +72,7 @@ The `HideCustomAction` element cannot be removed, once added, except by creating
     </CommandDefinition>
 ```
   
-The **HideActionId** element provides a unique ID for the action. For consistency and readability, you should follow the same naming convention described for `<CustomAction>` elements. The **Location** attribute must match the Id of the ribbon element you want to remove.  
+
   
 ### See also  
 
