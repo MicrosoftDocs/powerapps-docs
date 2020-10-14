@@ -17,7 +17,7 @@ search.app:
 ---
 # Best practices: Client scripting in model-driven apps
 
-These are some of the best practice tips you could consider while writing your JavaScript code for model-driven apps.
+The following are some of the tips you could consider while writing your JavaScript code for model-driven apps.
 
 ## Define unique JavaScript function names
 
@@ -52,7 +52,7 @@ When you write functions that will be used in JavaScript libraries, your functio
     Sdk.attributeOnChange();
     ```
 
-    If you call a function within another function you can use the this keyword as a shortcut to the object that contains both functions. However, if your function is being used as an event handler, the this keyword will refer to the object that the event is occurring on.
+    If you call a function within another function, you can use this keyword as a shortcut to the object that contains both functions. However, if your function is being used as an event handler, this keyword will refer to the object that the event is occurring on.
 
 ## Avoid using unsupported methods
 
@@ -71,4 +71,4 @@ If you decide to use the remaining capabilities of jQuery that are useful with m
 
 ## Write your code for multiple browsers
 
-Model-driven apps support multiple browsers. You should make sure that any scripts that you use will work with all supported browsers. Most of the significant differences between Internet Explorer and other browser have to do with HTML and XML DOM manipulation. Because HTML DOM manipulation is not supported, if script logic is only performing supported actions and using the [Xrm object model](understand-clientapi-object-model.md), the changes required to support other browsers could be small. 
+Model-driven apps support multiple browsers. Make sure that any scripts that you use will work with all supported browsers. Most of the significant differences between Internet Explorer and other browser have to do with HTML and XML DOM manipulation. Because HTML DOM manipulation is not supported, if script logic is only performing supported actions and using the [Xrm object model](understand-clientapi-object-model.md), the changes required to support other browsers could be small. 
