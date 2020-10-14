@@ -25,28 +25,31 @@ When you write functions that will be used in JavaScript libraries, your functio
 
 - **Unique function prefix**: Define each of your functions using the standard syntax with a consistent name that includes a unique naming convention, as shown in the following example.
     ```JavaScript
-    var Sdk = window.Sdk || {};
-    (function () {
-       // Code to perform your actions.
-    }). call(Sdk);
+    function MyUniqueName_performMyAction()
+     {
+    // Code to perform your action.
+       }
     ```
 - **Namespaced library names**: Associate each of your functions with a JavaScript object to create a kind of namespace to use when you call your functions as shown in the following example.
     ```JavaScript
+    var Sdk = window.Sdk || {};
+    (function () {
     this.formOnLoad = function () {
       // Code to perform your actions.
-    }
+       }
     this.attributeOnChange = function () {
-        // Code to perform your actions.
-    } 
-    this.formOnSave = function () {
-        // Display an alert dialog
+    // Code to perform your actions.
+      } 
+     this.formOnSave = function () {
+    // Display an alert dialog
     }
+    }). call(Sdk);
     ```
 
     Then when you use your function you can specify the full name. The following example shows this.
 
     ```JavaScript
-    MyUniqueName.MyFunctions.performMyAction();
+    Sdk.attributeOnChange();
     ```
 
     If you call a function within another function you can use the this keyword as a shortcut to the object that contains both functions. However, if your function is being used as an event handler, the this keyword will refer to the object that the event is occurring on.
