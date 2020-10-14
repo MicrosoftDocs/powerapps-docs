@@ -46,10 +46,10 @@ Project Oakdale doesn't support [hidden membership groups](https://docs.microsof
 
 | Action | Error |
 | - | - |
-| [Create your first app](create-first-app.md#get-started-with-creating-your-first-app) | `Something went wrong` <br> `The request failed with error: '{"errorCode":"BadRequest"}'. The tracking Id is 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'` |
-| [Install a sample app](use-sample-apps-from-teams-store.md#install-the-sample-app) | `Something went wrong. Please try again later.` <br> `We couldn't save your tab settings. Please try again.` |
+| [Create your first app](create-first-app.md#get-started-with-creating-your-first-app) | `Existing limits on this team` <br> `You're unable to continue due to an administrative setting on this team. You can try again with another team.` |
+| [Install a sample app](use-sample-apps-from-teams-store.md#install-the-sample-app) | `Existing limits on this team` <br> `You're unable to continue due to an administrative setting on this team. You can try again with another team.` |
 
-The group may have hidden membership enabled by your administrator. Try using a different Teams team that has hidden membership not enabled, or contact your administrator.
+The group may have hidden membership enabled by your administrator. Try using Project Oakdale on a new Teams team, an existing team that does not have hidden membership enabled, or contact your administrator.
 
 ## Localization
 
