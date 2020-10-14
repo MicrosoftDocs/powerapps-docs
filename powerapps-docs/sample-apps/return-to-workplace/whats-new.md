@@ -1,8 +1,9 @@
 # What's new in the Return to the Workplace solution
 
-## New and updated features in October 2020
+## Return to the workplace solution v1.2
+### New and updated features in October 2020
 
-### Employee app
+#### Employee app
 
 -   **Guest bookings**
 
@@ -17,7 +18,7 @@ The new update also introduces QR code functionality that enables integration
 with health and safety systems, such as temperature scanning and badge reader
 systems.
 
-### Workplace care management app
+#### Workplace care management app
 
 -   **Manual contact tracing**
 
@@ -40,7 +41,7 @@ case workload. They can view the list of high-risk cases and cases due for
 contact and investigation. They can also visualize cases by duration they have
 been open and by their risk.
 
-### Workplace care management dashboard
+#### Workplace care management dashboard
 
 -   **View and assess case clusters**
 
@@ -53,7 +54,7 @@ workplace care management app
 
 ![](media/whats-new-workplacecare-pbi-cluster-network.png)
 
-### Facility safety management app
+#### Facility safety management app
 
 -   **Contact type field**
 
@@ -61,17 +62,17 @@ Contacts are now differentiated by a new contact type field: Employee and Guest,
 that enables a facility manager to differentiate between an employee and
 non-employee.
 
-### Facility management dashboard
+#### Facility management dashboard
 
 -   **Enhanced occupancy dashboards**
 
 The occupancy dashboards have been updated to reflect guest registrations
 
-**Return to the workplace solution v1.1**
+## Return to the workplace solution v1.1
 
-## New and updated features in August 2020
+### New and updated features in August 2020
 
-### Employee app
+#### Employee app
 
 -   **Employee bookings and arrivals**
 
@@ -82,7 +83,7 @@ and receive a personalized day pass that can be used for building entry.
 
 ![](media/whats-new-employee-app-bookings-and-arrivals.png)
 
-### Workplace care management dashboard
+#### Workplace care management dashboard
 
 -   **\*New\* dashboard for health and safety leaders**
 
@@ -95,7 +96,7 @@ force leadership have a comprehensive and consolidated view.
 
 ![](media/whats-new-workplacecare-dashboard-pbi.png)
 
-### Facility safety management app
+#### Facility safety management app
 
 -   **Partition facility and set capacity limits**
 
@@ -106,7 +107,7 @@ areas based on adjusted designs and establish capacity limits for each. Area
 capacity can also be limited by phase. These limits establish how many passes
 can be issued daily to ensure adherence to safety constraints. 
 
-### Facility management dashboard
+#### Facility management dashboard
 
 -   **\*New\* occupancy tab**
 
@@ -125,11 +126,11 @@ window
 
 ![](media/whats-new-facility-management-pbi-arrivals.png)
 
-**Return to the workplace solution v1.0**
+## Return to the workplace solution v1.0
 
-## New and updated features in July 2020
+### New and updated features in July 2020
 
-### Employee app
+#### Employee app
 
 Allow employees to self-serve in looking up facility status and workspace
 availability. Employees can let the organization know how they are feeling about
@@ -137,7 +138,7 @@ safely returning to work.
 
 ![](media/whats-new-rtw-v1-employee-app-featues.png)
 
-### Facility safety management app
+#### Facility safety management app
 
 Provide facility managers the tools they need to manage the reopening and
 readiness of the facilities. This helps organizations ensure that they can
@@ -145,14 +146,14 @@ provide a safe working environment for employees to return to the workplace
 
 ![](media/whats-new-rtw-v1-facility-management-app.png)
 
-### Workplace care management app
+#### Workplace care management app
 
 Allow case managers to open and investigate cases for affected employees and
 import data from external systems to support case management.
 
 ![](media/whats-new-rtw-v1-workplace-care-management-app.png)
 
-### Facility management dashboard
+#### Facility management dashboard
 
 The app allows facility managers to:
 
@@ -165,7 +166,7 @@ The app allows facility managers to:
 
     ![](media/whats-new-rtw-v1-facility-management-dashboard.png)
 
-### Location readiness dashboard
+#### Location readiness dashboard
 
 Allow leaders to review current data related to all conditions and facility
 readiness factors, compare selected measures and metrics associated to targets
