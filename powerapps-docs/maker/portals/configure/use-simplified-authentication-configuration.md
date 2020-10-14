@@ -70,7 +70,7 @@ You can configure the following general authentication settings by selecting **A
 
 - **[Open registration](configure-portal-authentication.md#open-registration)** - Enables or disables the sign-up registration form for creating new local users. The sign-up form allows any anonymous user to visit the portal and create a new user account. <br> When set to **Off**, disables and hides new user account registration.
 
-- **Require unique email** - Specifies whether a unique email address is needed for validating a new user during sign-up. When set to **On**, may cause sign up attempts to fail if a user provides an email address already present in a contact record. <br> When set to **Off**, an existing contact email address is used to sign up if it matches with the user provided email address.
+- **Require unique email** - Specifies whether a unique email address is needed for validating a new user during sign-up. When set to **On**, may cause sign up attempts to fail if a user provides an email address already present in a contact record. <br> When set to **Off**, a contact with duplicate email address is allowed to be created.
 
 You can also go to general authentication settings from the portal details page by selecting **Settings** in the upper-right corner of the **Identity providers** section.
 
