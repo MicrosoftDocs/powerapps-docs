@@ -4,7 +4,7 @@ description: Learn how to use the Employee Ideas app from Teams store.
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/13/2020
+ms.date: 10/14/2020
 author: navjotm
 ms.author: namarwah
 ms.reviewer: tapanm
@@ -32,7 +32,8 @@ Employee ideas app is used by the Teams users to perform the following activitie
 - Review how their own idea is performing compared to others within a campaign.
 
 > [!NOTE]
-> Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+> - Before you can use this app, you may be asked for your permissions to use the connection. More information: [Allow connections in sample apps](use-sample-apps-from-teams-store.md#step-1---allow-connections)
+> - This app is available in three different Teams themes: Default, Dark and High contrast. When you [change the theme in Teams](https://support.microsoft.com/en-us/office/change-settings-in-teams-b506e8f1-1a96-4cf1-8c6b-b6ed4f424bc7), the app automatically updates to match the selected theme.
 
 ## Prerequisites
 
