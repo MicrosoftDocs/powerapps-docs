@@ -45,7 +45,7 @@ If you trigger a push notification from a flow, you can send the notification to
    > [!div class="mx-imgBorder"] 
    > ![Select Instant flow](media/create-notification-step2.png)
 
-3. On the **Build an instant flow** dialog box, enter a name for the flow and select **Manually trigger a flow**. When you done, select **Create**.
+3. On the **Build an instant flow** dialog box, enter a name for the flow and then select **Manually trigger a flow**. When you're done, select **Create**.
 
    > [!div class="mx-imgBorder"] 
    > ![Enter the flow name and then select manually triger a flow](media/create-notification-step3.png)
@@ -54,7 +54,7 @@ If you trigger a push notification from a flow, you can send the notification to
  4. On the next screen, select **+ New step**.   
  
     > [!div class="mx-imgBorder"] 
-    > ![Select new step](media/create-notification-step3.png)
+    > ![Select new step](media/create-notification-step4.png)
 
 2. Create an action for the flow by using the **Power Apps Notification** connector, and enter the **App ID** of the app to which you want to send notifications.
 
