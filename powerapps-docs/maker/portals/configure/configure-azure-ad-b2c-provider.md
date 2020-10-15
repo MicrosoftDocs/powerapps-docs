@@ -41,6 +41,8 @@ To configure OpenID Connect provider with Azure AD B2C:
 
     1. [Configure token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/configure-tokens#configure-token-compatibility) with an **Issuer (iss) claim** URL that includes **tfp**. More information: [Token compatibility](https://docs.microsoft.com/azure/active-directory-b2c/tokens-overview#compatibility)
 
+        ![Configure token compatibility with tfp](media/authentication/token-compatibility.png "Configure token compatibility with tfp") 
+
 1. In this step, enter the site settings and password reset settings for the portal configuration.
 
     ![Configure site settings](media/use-simplified-authentication-configuration/configure-ad-b2c-step2.png "Configure site settings")
