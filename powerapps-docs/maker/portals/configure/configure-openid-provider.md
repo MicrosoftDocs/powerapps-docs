@@ -69,10 +69,10 @@ To configure OpenID Connect provider:
 
     | Name | Description |
     | - | - |
-    | Authority | The authority (or issuer) URL associated with the identity provider. <br> Example (Azure AD) : `https://login.microsoftonline.com/22a47203-270e-4476-a9fd-189d82e4b467/` |
+    | Authority | The authority (or issuer) URL associated with the identity provider. <br> Example (Azure AD) : `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/` |
     | Client ID | The ID of the application created with the identity provider and to be used with the portal. |
     | Redirect URL | The location where the identity provider will send the authentication response. <br> Example: `https://contoso-portal.powerappsportals.com/signin-openid_1` <br> **Note**: If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in *Create and configure OpenID Connect provider* settings. If you're using a custom domain name, enter the URL manually. However, ensure that the value enter here is exactly the same as the **Redirect URI** value for the application in the Azure portal. |
-    | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. <br> Example (Azure AD) : `https://login.microsoftonline.com/22a47203-270e-4476-a9fd-189d82e4b467/v2.0/.well-known/openid-configuration` |
+    | Metadata address | The discovery endpoint for obtaining metadata. Common format: [Authority URL]/.well-known/openid-configuration. <br> Example (Azure AD) : `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/v2.0/.well-known/openid-configuration` |
     | Scope | A space-separated list of scopes to request via the OpenID Connect scope parameter. <br> Default value: `openid` <br> Example: `openid profile email` |
     | Response type | The value for the OpenID Connect 'response_type' parameter. <br> Possible values: <ul> <li> `code` </li> <li> `code id_token` </li><li> `id_token` </li><li> `id_token token` </li><li> `code id_token token` </li> </ul> <br> Default: `code id_token` |
     | Client secret | The client secret value from the provider application. It may also be referred to as an "App Secret" or "Consumer Secret". This setting is required if the selected response type is “code”. |

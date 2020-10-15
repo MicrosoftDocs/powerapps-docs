@@ -41,10 +41,10 @@ To configure SAML 2.0 provider:
 
     | Name | Description |
     | - | - |
-    | Metadata address | The SAML 2.0 identity provider metadata file location. <br> Example (Azure AD): `https://login.microsoftonline.com/22a47203-270e-4476-a9fd-189d82e4b467/federationmetadata/2007-06/federationmetadata.xml` |
-    | Authentication type | The Entity Id value that specifies a globally unique name for the SAML 2.0 identity provider. <br> Example (Azure AD): `https://login.microsoftonline.com/22a47203-270e-4476-a9fd-189d82e4b467/` |
-    | Service provider realm | The portal URL that specifies the service provider realm for the SAML 2.0 identity provider. <br> Example: `https://contoso-portal.powerappsportals.com/` <br> **Note**: If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in *Create and configure SAML 2.0 provider* settings. If you're using a custom domain name, enter the URL manually. However, ensure that the value enter here is exactly the same as the **Redirect URI** value for the application in the Azure portal. |
-    | Assertion consumer service URL | The portal URL that corresponds to the service provider's endpoint (URL). This URL is responsible for receiving and parsing a SAML assertion. <br> Example: `https://contoso-portal.powerappsportals.com/signin-saml_1` |
+    | Metadata address | The SAML 2.0 identity provider metadata file location. <br> Example (Azure AD): `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/federationmetadata/2007-06/federationmetadata.xml` |
+    | Authentication type | The Entity Id value that specifies a globally unique name for the SAML 2.0 identity provider. <br> Example (Azure AD): `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/` |
+    | Service provider realm | The portal URL that specifies the service provider realm for the SAML 2.0 identity provider. <br> Example: `https://contoso-portal.powerappsportals.com/` |
+    | Assertion consumer service URL | The portal URL that corresponds to the service provider's endpoint (URL). This URL is responsible for receiving and parsing a SAML assertion. <br> Example: `https://contoso-portal.powerappsportals.com/signin-saml_1`  <br> **Note**: If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in *Create and configure SAML 2.0 provider* settings. If you're using a custom domain name, enter the URL manually. However, ensure that the value enter here is exactly the same as the **Redirect URI** value for the application in the Azure portal. |
 
 1. Select **Next**.
 

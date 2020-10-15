@@ -1487,7 +1487,7 @@
                     href: ./portals/configure/configure-ws-federation-settings-azure-ad.md
                   - name: Configure WS-Federation with ADFS
                     href: ./portals/configure/configure-ws-federation-settings.md
-          - name: Local authentication
+          - name: Local authentication, registration and other settings
             href: ./portals/configure/set-authentication-identity.md
           - name: Migrate to Azure AD B2C
             href: ./portals/configure/migrate-identity-providers.md

@@ -77,7 +77,7 @@ To configure OpenID Connect provider with Azure AD:
 
         `https://login.microsoftonline.com/<Directory (tenant) ID>/`
 
-        For example, if the *Directory (tenant) ID* in the Azure portal is `22a47203-270e-4476-a9fd-189d82e4b467`, the authority URL is `https://login.microsoftonline.com/22a47203-270e-4476-a9fd-189d82e4b467/`
+        For example, if the *Directory (tenant) ID* in the Azure portal is `7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb`, the authority URL is `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/`
 
     1. **Client ID** - Copy the **Application (client) ID** from the Azure portal as the client ID.
 
@@ -139,11 +139,15 @@ To configure additional claims, such as using first name, or last name:
 1. Set the **Login claims mapping** additional site setting.
     <br> Example: `firstname=given_name,lastname=family_name`
 
+For example, the first name, last name and email addresses supplied with the additional claims will become the default values in the portal's profile page.
+
+![Profile page example](media/authentication/profile-page.png "Profile page example")
+
 ## Enable authentication using a multi-tenant Azure Active Directory application
 
 You can configure your portal to accept [!include[](../../../includes/pn-azure-active-directory.md)] users from any tenant in [!include[](../../../includes/pn-azure-shortest.md)] and not just a specific tenant by using the multi-tenant application registered in [!include[](../../../includes/pn-azure-active-directory.md)]. To enable multi-tenancy, [update the application registration](https://docs.microsoft.com/azure/active-directory/develop/howto-convert-app-to-be-multi-tenant#update-registration-to-be-multi-tenant) in the [!include[](../../../includes/pn-azure-active-directory.md)] application.
 
-To support authentication against [!include[](../../../includes/pn-azure-active-directory.md)] using a multi-tenanted application, you have to create or configure the additional **Issue Filter** site setting.
+To support authentication against [!include[](../../../includes/pn-azure-active-directory.md)] using a multi-tenanted application, you have to create or configure the additional **Issuer Filter** site setting.
 
 ![Issuer filter for multi-tenancy](media/authentication/issuer-filter-multi-tenant.png "Issuer filter for multi-tenancy")
 

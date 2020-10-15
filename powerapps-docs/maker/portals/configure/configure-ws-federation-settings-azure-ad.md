@@ -112,7 +112,7 @@ To configure WS-Federation provider with Azure AD:
 
             ![Federation metadata entityID](media/authentication/entity-id-metadata-document-wsfed.png "Federation metadata entityID")
 
-        1. Paste the copied value of `entityID` as the **Authentication type**. <br> Example: `https://sts.windows.net/22a47203-270e-4476-a9fd-189d82e4b467/`
+        1. Paste the copied value of `entityID` as the **Authentication type**. <br> Example: `https://sts.windows.net/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/`
 
     1. **Service provider realm** - Enter the portal URL as the service provider realm. <br> Example: `https://contoso-portal.powerappsportals.com`
     
