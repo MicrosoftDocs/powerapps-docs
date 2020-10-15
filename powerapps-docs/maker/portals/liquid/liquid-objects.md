@@ -5,7 +5,7 @@ author: gitanjalisingh33msft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/13/2020
+ms.date: 10/14/2020
 ms.author: gisingh
 ms.reviewer: tapanm
 ---
@@ -822,6 +822,21 @@ category is an [entity](#entity) object, with all of the same attributes, in add
 |name|An alternate alias for the title of the category.|
 |title|The title of the category.|
 |||
+
+## language
+
+Provides the current language name, and language code if  [multiple-language support](../configure/enable-multiple-language-support.md) is enabled.
+
+### Attributes
+
+| Attribute | Description |
+| - | - |
+| url | The current request URL prefixed with the current language code. |
+| url_substitution | The current request URL prefixed with the current language code bypassing the page output cache. |
+| name | Title of the current language. |
+| code | The language code of the language. |
+
+For example, the **Languages Dropdown** web template by default uses this liquid object to list the available languages when multiple-languages are available. More information: [Update the Languages Dropdown web template to use page output cache](../configure/enable-header-footer-output-caching.md)
 
 ## page
 
