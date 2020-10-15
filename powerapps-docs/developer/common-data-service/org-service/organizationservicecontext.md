@@ -144,7 +144,7 @@ contact.EMailAddress1 = “sonny@contoso.com”;
   
  When creating a new entity record, you add the object to the organization service context by using the <xref:Microsoft.Xrm.Sdk.Client.OrganizationServiceContext.AddObject(Microsoft.Xrm.Sdk.Entity)>. method.  
   
- The following sample shows how to instantiate and save a new contact record by using the entity data model. It also demonstrates how tp access a custom attribute.  
+ The following sample shows how to instantiate and save a new contact record by using the entity data model. It also demonstrates how to access a custom attribute.  
   
 ```csharp  
 OrganizationServiceContext orgContext =new OrganizationServiceContext(svc);  
