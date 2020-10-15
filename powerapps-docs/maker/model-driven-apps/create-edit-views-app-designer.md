@@ -62,7 +62,7 @@ As an app maker, you can create and edit public views by using Power Apps.
    ![Add column](../common-data-service/media/add-column-to-view.png)
 
    > [!TIP]
-   > The **Default** view displays the commonly used columns. If the column you want isn’t listed, select **All** to display additional columns.
+   > The **Default** view in the **Add column** pane displays the commonly used columns. If the column you want isn’t listed, select **All** to display additional columns.
    >
    > <img src = "media/display-all-columns.png" alt = "Select All to display all columns" width = "350" height = "557">
 
