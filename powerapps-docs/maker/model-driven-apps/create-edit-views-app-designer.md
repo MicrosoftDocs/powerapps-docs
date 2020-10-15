@@ -28,7 +28,7 @@ search.app:
 
 # Create and edit public or system model-driven app views
 
-In this topic you perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.
+In this article you perform several tasks required to work with views, such as create a public view, add an existing view to an app, and change columns, filters, and sort order for a view.
 
 In Power Apps, views define how records for a specific entity are  displayed. A view defines the following:
 -  The columns (attributes) to display
@@ -57,12 +57,18 @@ As an app maker, you can create and edit public views by using Power Apps.
 
 4. On the **Create a view** dialog box, enter a name and, optionally, a description, and then select **Create**. 
     
-5. In the view designer, select the plus button to add additional columns you want to display in the view. More information: [Add a column to your view in app designer](#add-a-column-to-your-view-in-app-designer) 
+5. In the view designer, select **Add column** to add additional columns you want to display in the view. (#add-a-column-to-your-view-in-app-designer) 
 
    ![Add column](../common-data-service/media/add-column-to-view.png)
 
+   > [!TIP]
+   > The **Default** view displays the commonly used columns. If the column you want isn’t listed, select **All** to display additional columns.
+   >
+   > <img src = "media/display-all-columns.png" alt = "Select All to display all columns" width = "350" height = "557">
+
+
 6. In the view designer, you can perform the follow tasks: 
-   - To change the column filtering select the header of the column you want to filter and then in the dropdown select **Filter by**.
+   - To change the column filtering select the header of the column you want to filter, and then in the dropdown select **Filter by**.
    - To change the column sorting select the header of the column you want to filter and then select **Sort A-Z** or **Sort Z-A**.
    - Configure column width by clicking and dragging the column to the desired position.
    - Reorder columns by dragging a column to the position you want to move it to. 
