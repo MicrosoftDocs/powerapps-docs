@@ -78,7 +78,7 @@ The `CascadeConfiguration` (<xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguratio
 
 <a name="BKMK_MergeAction"></a>  
 ### About the merge action  
- The merge action can sometimes have problems completing if a record that is part of the operation set is deleted while the merge job is running. Often this will result in an error indicating that the record will be "differently parented" or the child record "might lose its parenting". If this occurs, and you would prefer the merge continue forward even if the record is missing, you can choose to disable the parent check when you select the columns to merge.
+ The merge action can sometimes have problems completing if a record that is part of the operation set is deleted while the merge system job is running. Often this will result in an error indicating that the record will be "differently parented" or the child record "might lose its parenting". If this occurs, and you would prefer the merge continue forward even if the record is missing, you can choose to disable the parent check when you select the columns to merge.
 
 
 > [!NOTE]
