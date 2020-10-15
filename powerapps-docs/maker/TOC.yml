@@ -1271,6 +1271,10 @@
     href: ../mobile/run-powerapps-on-mobile.md
   - name: Use model-driven apps on mobile
     href: ../mobile/use-custom-model-driven-app-on-mobile.md
+  - name: Configure mobile offline synchronization (Preview)
+    href: ../mobile/setup-mobile-offline.md 
+  - name: Work offline on your mobile device (Preview)
+    href: ../mobile/work-in-offline-mode.md  
 
 - name: Portals
   items:
