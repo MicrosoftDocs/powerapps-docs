@@ -31,15 +31,21 @@ Add a push notification to your app if:
 ## Before you start
 In an app for which you have the **Contributor** permission, add a Power Apps Notification connection. If you don't already have an app, you can quickly [create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app), or [create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
 
-## Send a notification from a flow
-> [!NOTE]
-> If you trigger a push notification from a flow, you can send the notification to only one user or security group at a time currently.
+## Step 1: Set up the notification from a flow
 
-1. In [Power Automate](https://flow.microsoft.com), create a trigger that specifies when the push notification is sent.
+If you trigger a push notification from a flow, you can send the notification to only one user or security group at a time.
 
-    For example, you might want to send a notification when a record is added to the **Case** entity in the Common Data Service.
+1. Go to [Power Automate](https://flow.microsoft.com) and **Create**.
 
-    ![Screenshot of creating a flow with a Common Data Service trigger](media/pic4-step1-flowupdated.png)
+   > [!div class="mx-imgBorder"] 
+   > ![Select Create](media/create-notification.png)
+
+2. Select **Instant flow**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Select Instant flow](media/create-notification-step2.png)
+
+
 2. Create an action for the flow by using the **Power Apps Notification** connector, and enter the **App ID** of the app to which you want to send notifications.
 
     You can also rename the connection to reflect your scenario.
