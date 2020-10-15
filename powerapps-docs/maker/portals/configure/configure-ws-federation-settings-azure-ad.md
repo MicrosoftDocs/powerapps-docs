@@ -58,7 +58,7 @@ To configure WS-Federation provider with Azure AD:
     1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-wsfederation_1`
 
         > [!NOTE]
-        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Create and configure WS-Federation provider settings**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Assertion consumer service URL** in your portal settings while configuring WS-Federation provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-wsfederation_1`, use it as is for the WS-Federation configuration in portals. In this example, using `https://contoso-portal.powerappsportals.com/signin-wsfederation` or `https://portal.contoso.com/signin-wsfederation_1` in portals site settings will be incorrect.
+        > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Create and configure WS-Federation provider settings**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Assertion consumer service URL** in your portal settings while configuring WS-Federation provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-wsfederation_1`, use it as is for the WS-Federation configuration in portals.
 
         ![Register application](media/authentication/register-application-wsfed.png "Register application")
 
