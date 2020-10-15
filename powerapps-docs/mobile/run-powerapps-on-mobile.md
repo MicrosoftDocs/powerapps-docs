@@ -35,7 +35,7 @@ Legend:
 
 ## Supported devices 
 
-The table below list the support devices for running model-driven apps and canvas apps on the Power Apps mobile app.
+These are the supported devices for running model-driven apps and canvas apps on the Power Apps mobile app.
 
 | **Minimum required** | **Recommended** |
 | --- | --- |
