@@ -42,7 +42,10 @@ Ready to convert your ideas into an app? Start here: [Planning a Power Apps proj
 
 ## Power Apps for app users
 
-You can run apps that you created, or that someone else created and shared with you, in browser or on mobile devices (phone or tablet). More information: [Find and run apps](user/index.md)
+You can run apps that you created, or that someone else created and shared with you, in browser or on mobile devices (phone or tablet). More information: 
+
+- [Find and run apps](user/index.md)
+- [Run apps on Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile)
 
 ## Power Apps for admins
 
