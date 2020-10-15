@@ -55,6 +55,12 @@ If you trigger a push notification from a flow, you can send the notification to
  
     > [!div class="mx-imgBorder"] 
     > ![Select new step](media/create-notification-step4.png)
+    
+ 5. In the search box, enter **send a push notification** and then select the **Power Apps Notification** connector. In the resluts, select the **Send push notification V2** action.
+ 
+    > [!div class="mx-imgBorder"] 
+    > ![Enter the action and select the connector](media/create-notification-step5.png)
+ 
 
 2. Create an action for the flow by using the **Power Apps Notification** connector, and enter the **App ID** of the app to which you want to send notifications.
 
