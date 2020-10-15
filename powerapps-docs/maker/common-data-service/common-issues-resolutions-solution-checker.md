@@ -265,7 +265,7 @@ Solution checker supports global variables for ECMAScript 2015 (ES6) and up to E
 
 For plug-in and workflow activity rules where the issue is only relevant in the calling context, the solution checker tool starts its analysis at the IPlugin interface implementation and traverses a call graph to detect issues within the scope of that implementation.  In some cases, many call paths may arrive at the same location where the issue is detected.  Since the issue is relevant to the call scope, the tool may report based on that scope to provide a better picture of impact rather than on distinct locations. As a result, multiple issues may reference a single location that should be fixed.
 
-## app-formula-issues-high and app-formula-issues-high may show different number of errors than those shown in design mode
+## app-formula-issues-high may show different number of errors than those shown in design mode
 
 The solution checker will list the number of the errors found in the app, *including those from tests*. The app checker in design mode only shows errors from screen controls and components. If the error count shown in the app checker in design mode is smaller, open the [Test Studio](../canvas-apps/test-studio.md) and search for the errors in the expressions used in tests.
 
