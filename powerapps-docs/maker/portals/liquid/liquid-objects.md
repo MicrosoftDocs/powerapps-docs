@@ -836,7 +836,7 @@ Provides the current language name, and language code if  [multiple-language sup
 | name | Title of the current language. |
 | code | The language code of the language. |
 
-For example, the **Languages Dropdown** web template by default uses this liquid object to list the available languages when multiple-languages are available. More information: [Update the Languages Dropdown web template to use page output cache](../configure/enable-header-footer-output-caching.md)
+For example, the **Languages Dropdown** web template by default uses this liquid object to list the available languages when multiple-languages are available.
 
 ## page
 
