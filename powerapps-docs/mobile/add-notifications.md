@@ -15,7 +15,7 @@ search.app:
 ---
 # Send a push notification in Power Apps
 
-Push notifications are used in mobile apps for consumer and business scenarios primarily to engage app users and help them prioritize key tasks. In Power Apps, you can send notifications by using the Power Apps Notification connector. You can send native push notifications to any app that you create in Power Apps. We plan to add more notification types in the future.
+Push notifications are used in mobile apps to engage app users and help them prioritize key tasks. In Power Apps, you can send notifications by using the Power Apps Notification connector. You can send native push notifications to any app that you create in Power Apps. 
 
 ![Example of what a push notification looks like](media/pic1-notification-screenshot.png)
 
@@ -26,10 +26,10 @@ Add a push notification to your app if:
 * You want to engage your users on a specific interval, or you need users to enter the app in a specific context.
 
 > [!NOTE]
-> To receive push notifications, each user must have opened the app in Power Apps Mobile once or gotten the app from AppSource in [Dynamics 365](https://home.dynamics.com/).
+> To receive push notifications, each user must have opened the app in Power Apps Mobile once or gotten the app from the [Microsoft 365 apps page](https://www.office.com/apps).
 
 ## Before you start
-In an app for which you have the **Contributor** permission, add a Power Apps Notification connection. If you don't already have an app, you can quickly [create one from a template](get-started-test-drive.md), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
+In an app for which you have the **Contributor** permission, add a Power Apps Notification connection. If you don't already have an app, you can quickly [create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app), or [create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
 
 ## Send a notification from a flow
 > [!NOTE]
