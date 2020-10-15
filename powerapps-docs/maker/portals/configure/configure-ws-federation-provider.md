@@ -34,7 +34,7 @@ To configure WS-Federation provider:
 
 1. Enter the following site settings for portal configuration.
 
-    ![Configure WS-FED site settings](media/authentication/configure-wsfed-site-settings.png "Configure WS-FED site settings")
+    ![Configure WS-Federation site settings](media/authentication/configure-wsfed-site-settings.png "Configure WS-Federation site settings")
 
     > [!NOTE]
     > Ensure that you review&mdash;and if required, change&mdash;the default values.
