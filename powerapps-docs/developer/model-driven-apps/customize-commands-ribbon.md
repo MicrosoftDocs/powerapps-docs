@@ -30,7 +30,7 @@ Both the command bar and the ribbon use the same underlying XML data to define w
 The articles in this section introduce you to key concepts that you must understand, and common tasks you perform when you customize the command bar or the ribbon.  
   
 > [!NOTE]
->  Because the underlying XML schema was designed to display commands as ribbons, the term *ribbon* will continue to be used in the documentation.  
+> Because the underlying XML schema was designed to display commands as ribbons, the term *ribbon* will continue to be used in the documentation.  
   
 ## Troubleshoot ribbon issues
 
@@ -38,6 +38,7 @@ If you are experiencing an issue with a ribbon command bar button, use this [tro
 
 
 ## Community tool
+
 The SDK describes the process of editing the ribbon by editing the customization.xml file directly. You can also use a community tool, [Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx), to visually edit ribbons using the UI. 
 
 > [!NOTE]

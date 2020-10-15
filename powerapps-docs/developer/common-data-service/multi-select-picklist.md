@@ -89,7 +89,7 @@ The following examples shows the use of `ContainValues` and `not-contain-values`
 
 ### Contact entity values
 
-|`fullname`| `sample_outdooractivities` |
+|'fullname' attribute| 'sample_outdooractivities' attribute |
 |--------|-------------------|
 |Wayne Yarborough|1,9|
 |Monte Orton|2|

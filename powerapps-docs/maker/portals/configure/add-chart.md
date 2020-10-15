@@ -1,29 +1,33 @@
 ---
-title: "Add a chart to a webpage in a portal | MicrosoftDocs"
+title: "Add a chart created in a model-driven app to a webpage in portal"
 description: "Instructions to add a chart created in a model-driven app to a webpage in the portal."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 01/29/2020
-ms.author: tapanm
-ms.reviewer:
+ms.date: 09/30/2020
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Add a chart created in a model-driven app to a webpage in portal
 
-You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/portals-entity-tags.md#chart). You can add the chart Liquid tag in the **Copy** field on a webpage or in the **Source** field on a [Web template](../liquid/store-content-web-templates.md).
- 
-For example, {% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}
+You add a chart to a webpage by using a Liquid tag named [Chart](../liquid/portals-entity-tags.md#chart). You can add the chart Liquid tag in:
+
+- The **Copy** field on a webpage.
+- In the **Source** field on a [Web template](../liquid/store-content-web-templates.md).
 
 ![Chart example](../media/dynamics365-chart-example.png "Chart example")
 
-You can also specify the ID of a view (saved query) to filter the query. For example:
+For example, to show leads by source and filtered for only open leads view:
 
+```
 <!—Leads by Source – Open Leads -->
-
 {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"00000000-0000-0000-00AA-000010001006" %}
+```
+
+> [!IMPORTANT]
+> You must specify the values for both the [`chart id`](#get-the-id-of-a-chart) and the [`viewid`](#get-the-id-of-a-view) parameters to render a chart on a portals webpage.
 
 ## Get the ID of a chart
 
@@ -35,13 +39,18 @@ You can also specify the ID of a view (saved query) to filter the query. For exa
     ![Export a chart](../media/export-dynamics365-chart.png "Export a chart")
 
 5. Open the XML file of the exported chart in a text editor.
-6. Copy the value of the \<visualizationid\> tag.
+6. Copy the value of the `<visualizationid>` tag.
 
     ![Get chartid for a chart](../media/dynamics365-chart-chartid.png "Get the chart ID for a chart")
 
-7. Paste the visualizationid value into your Liquid chart tag declaration for the chart ID parameter, for example:
+7. Paste the `visualizationid` value into your Liquid chart tag declaration for the chart ID parameter, for example:
 
-    {% chart id:EE3C733D-5693-DE11-97D4-00155DA3B01E %}.
+    ```
+    <!—Leads by Source – Open Leads -->
+    {% chart id:"EE3C733D-5693-DE11-97D4-00155DA3B01E" viewid:"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" %}
+    ```
+
+Now that the Liquid chart tag declaration has the chart ID, follow the next steps to get the view ID.
 
 ## Get the ID of a view
 
@@ -66,11 +75,39 @@ You must open the view editor to get the view ID to be used with the Liquid char
 
 Read privilege is asserted for the target entity being queried in the chart. For anonymous or authenticated users to be able to view the chart, you must ensure that the appropriate [Entity Permission](assign-entity-permissions.md) records are created and assigned to applicable [web roles](create-web-roles.md). 
  
-If permission is not granted, the user will see an access denied message.
+If permission isn't granted, the user will see an access denied message.
+
+## Supported charts and chart types
+
+The following chart types are supported in portals:
+
+- Column
+- Bar
+- Area
+- Pie
+- Line
+- Funnel
+
+Supported configuration for Legend Entries (Series):
+
+- Single Series
+- Multiple Series
+- Aggregates Types - Sum, Counts, Min, Max, Avg in Single or Multiple Series
+- Top X / Bottom X Rules
+
+Supported configuration for Horizontal (Category) Axis Labels:
+
+- Categories on attributes of an entity or linked entity (on attribute data types supported by portals).
+- Multiple categories (X-Axis).
+- *Group by* and *Order by* on attributes.
+- Date Grouping Types – Day, Month, Year on Primary Entity and First Level Linked Entity.
+    - Date Grouping by Week, Fiscal Year, Fiscal Period, and Quarter are **not supported**.
+    - Date Grouping on Linked Entity attributes is supported only until the first level of Link.
 
 ## Unsupported charts and chart types
 
 The following chart types are currently not supported in portals:
+
 - Doughnut
 - Tag
 
@@ -95,3 +132,14 @@ The following table lists the charts that are currently not supported in portals
 | By Owner                                | 330068fd-833b-e511-80d1-00155db10d2b | knowledgearticle |
 | By Subject                              | bcd3f9a5-913b-e511-80d1-00155db10d2b | knowledgearticle | 
 | | |
+
+## Other considerations
+
+- Long labels on Horizontal (Category) Axis Label can get overlapped when using a high number of data points on the chart.
+- Hovering over currency data types formatting shows values with spaces instead of separators.
+- Numeric fields are currently shown in decimal format.
+- Horizontal Axis values can show only up-to 15 Labels.
+
+### See also
+
+[Microsoft Learn: Model-driven charts in portals](https://docs.microsoft.com/learn/modules/portals-integration/4-model-driven-charts)

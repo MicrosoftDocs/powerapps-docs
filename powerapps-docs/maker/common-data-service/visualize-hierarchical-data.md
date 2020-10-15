@@ -2,7 +2,7 @@
 title: "Visualize hierarchical data with model-driven apps | MicrosoftDocs"
 description: "Learn how to query and visualize hierarchical related data"
 ms.custom: ""
-ms.date: 05/28/2019
+ms.date: 06/11/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -36,11 +36,11 @@ The  entities that have visualizations available by default include [Account](/p
   
  A few other entities can be enabled for a hierarchy. These entities include [Contact](/powerapps/developer/common-data-service/reference/entities/contact) and [Team](/powerapps/developer/common-data-service/reference/entities/team). All custom entities can be enabled for a hierarchy.  
   
-Important things to remember when you create visualizations:  
+## Important things to remember 
   
 - Only one (1:N) self-referential relationship per entity can be set as hierarchical. In a self-referential relationship the primary entity and the related entity must be of the same type.  
 - A hierarchy or visualization is based on one entity only. You can depict the account hierarchy showing accounts at multiple levels, but you can’t show accounts and contacts in the same hierarchy visualization. 
-- The maximum number of fields that can be displayed in a tile is three. If you add more fields to the Quick Form that is used for the tile view, only the first three fields will be displayed. 
+- The maximum number of fields that can be displayed in a tile is three with the Unified Interface and four with the legacy web client. If you add more fields to the Quick Form that is used for the tile view, only the first three fields will be displayed. 
 
 ## Hierarchy settings
 
@@ -83,7 +83,7 @@ Next, in the **Hierarchy Settings** grid view, we selected the `new_new_widget_n
 > [!div class="mx-imgBorder"] 
 > ![Hierarchy settings](media/hierarchy-settings.png)  
   
-For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form, we added four fields to display in each tile.  
+For the **Quick View Form**, we created a Quick Form called **Widget Hierarchy Tile Form**. In this form that will be used in a legacy web client app, we added four fields to display in each tile. More information: [Important things to remember](#important-things-to-remember) 
 
 > [!div class="mx-imgBorder"] 
 > ![Create quick form for widget](media/create-quickform.png)  

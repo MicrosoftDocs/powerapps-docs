@@ -80,10 +80,9 @@ However, semantic HTML can only go so far. Modern web applications typically inc
   
 <a name="BKMK_AdditionalResources"></a> 
 
-## Additional resources  
+## Additional resources
+
  The following resources provide a starting point for defining requirements for making your web resources accessible:  
-  
-- [CRM, Accessibility, and 508](https://blogs.msdn.com/b/devkeydet/archive/2013/01/29/crm-accessibility-and-508.aspx)  
   
 - [Introduction to web accessibility](https://docs.microsoft.com/previous-versions/windows/apps/hh452681(v=win.10))  
   
@@ -98,6 +97,6 @@ However, semantic HTML can only go so far. Modern web applications typically inc
 - [Web Content Accessibility Guidelines (WCAG) 2.0](https://www.w3.org/TR/WCAG20/)  
   
 ### See also  
- [Web Page (HTML) web resources](webpage-html-web-resources.md)   
- [Silverlight (XAP) web resources](/dynamics365/customer-engagement/developer/silverlight-xap-web-resources)<br/>   <!--TODO No relevant topic in powerapps repo-->
- [Web resources](web-resources.md)
+
+[Web Page (HTML) web resources](webpage-html-web-resources.md)   
+[Web resources](web-resources.md)

@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.topic: reference
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: nabuthuk
 ms.date: 07/06/2017
 ms.author: gregli
 search.audienceType: 
@@ -14,16 +14,19 @@ search.audienceType:
 search.app: 
   - PowerApps
 ---
+
 # EditForm, NewForm, SubmitForm, ResetForm, and ViewForm functions in Power Apps
+
 View, edit, or create an item, save the contents, and reset the controls in an **[Edit form](../controls/control-form-detail.md)** control.
 
 ## Overview
+
 These functions change the state of the **Edit form** control.  The form control can be in one of these modes:
 
 | Mode | Description |
 | --- | --- |
 | **FormMode.Edit** |The form is populated with an existing record and the user can modify the values of the fields.  Once complete, the user can save the changes to the record. |
-| **FormMode.New** |The form is populates with default values and the user can modify the values of the fields.  Once complete, the user can add the record to the data source. |
+| **FormMode.New** |The form is populated with default values and the user can modify the values of the fields.  Once complete, the user can add the record to the data source. |
 | **FormMode.View** |The form is populated with an existing record but the user cannot modify the values of the fields. |
 
 ## Description
@@ -56,7 +59,7 @@ The **ResetForm** function resets the contents of a form to their initial values
 The **ViewForm** function changes the Form control's mode to **FormMode.View**. In this mode, the contents of the Form control's **[Item](../controls/control-form-detail.md)** property are used to populate the form.  The **SubmitForm** and **ResetForm** functions have no effect when in this mode.
 
 ### DisplayMode Property
-The current mode can be read through the **Mode** property.  The mode also determines the value of the **DisplayMode** property which can be used by data cards and controls within the form control.  Often, the data card's **DisplayMode** property will be set to **Parent.DisplayMode** (referencing the form) as will the control's **DisplayMode** property (referencing the data card): 
+The current mode can be read through the **Mode** property.  The mode also determines the value of the **DisplayMode** property, which can be used by data cards and controls within the form control.  Often, the data card's **DisplayMode** property will be set to **Parent.DisplayMode** (referencing the form) as will the control's **DisplayMode** property (referencing the data card): 
 
 | Mode | DisplayMode | Description |
 | --- | --- | --- |
