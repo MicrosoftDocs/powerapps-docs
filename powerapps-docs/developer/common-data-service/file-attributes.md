@@ -2,7 +2,7 @@
 title: "File attributes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Learn about File attributes that store file data within the application, supporting attributes, retrieving data, and uploading file data." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 05/08/2020
+ms.date: 10/15/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
@@ -136,7 +136,11 @@ none   | <xref:Microsoft.Crm.Sdk.Messages.InitializeFileBlocksUploadRequest>,<br
 PATCH /api/data/v9.1/\<entity-type(id)\>/\<file-attribute-name\>   | <xref:Microsoft.Crm.Sdk.Messages.UploadBlockRequest>
 none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAttachmentBlocksUploadRequest>,<br/><xref:Microsoft.Crm.Sdk.Messages.CommitAnnotationBlocksUploadRequest>
 
-Files can be uploaded either in full or in chunks. As of October 2020, the restriction of using chunked upload for files greater than 16 MB has been removed. Files can be uploaded in full up to the maximum size configured. The previous chunking APIs will be still be available to maintain backwards compatibility with existing solutions.
+Files can be uploaded either in full up to the maximum size configured, or in chunks.
+
+> [!NOTE]
+> As of this articles publication date, the restriction of using chunked upload for files greater than 16 MB has been removed.
+> The chunking APIs will continue to be available to maintain backwards compatibility with existing solutions.
 
 ### Example: .NET C# code for full file upload
 
