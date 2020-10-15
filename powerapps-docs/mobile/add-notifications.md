@@ -1,22 +1,23 @@
 ---
 title: Send a push notification | Microsoft Docs
 description: Learn how to send native push notifications to an app in Power Apps.
-author: kavishi
+author: mduelae
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
-ms.date: 08/20/2020
-ms.author: kaagar
+ms.date: 10/30/2020
+ms.author: mkaur
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
 # Send a push notification in Power Apps
+
 Push notifications are used in mobile apps for consumer and business scenarios primarily to engage app users and help them prioritize key tasks. In Power Apps, you can send notifications by using the Power Apps Notification connector. You can send native push notifications to any app that you create in Power Apps. We plan to add more notification types in the future.
 
-![Example of what a push notification looks like](./media/add-notifications/pic1-notification-screenshot.png)
+![Example of what a push notification looks like](media/add-notifications/pic1-notification-screenshot.png)
 
 Add a push notification to your app if:
 
@@ -38,17 +39,17 @@ In an app for which you have the **Contributor** permission, add a Power Apps No
 
     For example, you might want to send a notification when a record is added to the **Case** entity in the Common Data Service.
 
-    ![Screenshot of creating a flow with a Common Data Service trigger](./media/add-notifications/pic4-step1-flowupdated.png)
+    ![Screenshot of creating a flow with a Common Data Service trigger](media/add-notifications/pic4-step1-flowupdated.png)
 2. Create an action for the flow by using the **Power Apps Notification** connector, and enter the **App ID** of the app to which you want to send notifications.
 
     You can also rename the connection to reflect your scenario.
 
-    ![Screenshot of creating a connection to the Power Apps that will receive these push notifications](./media/add-notifications/pic5-step2-create-connection.jpg)
+    ![Screenshot of creating a connection to the Power Apps that will receive these push notifications](media/add-notifications/pic5-step2-create-connection.jpg)
 3. (optional) Pass parameters to the app when it opens (after the user taps the push notification).
 
     In our example, we pass along the **Case ID** and **Initial Owner** fields for the selected contact.
 
-    ![Screenshot of passing optional parameters into the push notification](./media/add-notifications/pic6-step3-configure-notif.jpg)
+    ![Screenshot of passing optional parameters into the push notification](media/add-notifications/pic6-step3-configure-notif.jpg)
 
 ## Send a notification from an app
 You can send a push notification from one app to another or to the same app.
