@@ -23,9 +23,10 @@ search.app:
 Use Stylesheet (XSL) Web resources to transform XML data.  
   
 ## Capabilities of XSL Web resources  
+
  Use XSL Web resources to transform XML data used by your solution.  
   
- The following Web resources work together to render a page that displays a table using the data in the XML Web resource. The source files for these Web resources are part of the Import Web Resources sample under the **filestoimport** folder. Download the sample of [Import files as web resources](https://code.msdn.microsoft.com/Import-files-as-web-f84ad8dc).  
+ The following Web resources work together to render a page that displays a table using the data in the XML Web resource. The source files for these Web resources are part of the Import Web Resources sample under the **filestoimport** folder. Download the sample of [Import files as web resources](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ImportWebResources).  
   
  **HTML Web resource:** sample_/ImportWebResources/Content/ShowData.htm  
  ```html  

@@ -333,7 +333,7 @@ If your application is currently using the low-level <xref:Microsoft.Xrm.Sdk.Cli
 
 More information:
 
-- [Build Windows client applications using the XRM tools](/xrm-tooling/build-windows-client-applications-xrm-tools).
+- [Build Windows client applications using the XRM tools](xrm-tooling/build-windows-client-applications-xrm-tools.md).
 - [Deprecation of Office365 authentication type and OrganizationServiceProxy class for connecting to Common Data Service](/power-platform/important-changes-coming#deprecation-of-office365-authentication-type-and-organizationserviceproxy-class-for-connecting-to-common-data-service)
 
 ### Use Task Parallel Library with CrmServiceClient

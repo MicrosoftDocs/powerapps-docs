@@ -49,7 +49,7 @@ When you create customizations in Common Data Service, you can support multiple 
 <a name="BKMK_MessagesToWorkWithLabels"></a>   
 
 ## Messages to use with labels  
- The following table lists the messages you can use to work with localized labels to support multiple languages. When you import translations you can generate a report based on the import Jjob in the same way you can when importing a solution. For more information, see [Install or Upgrade a Solution](work-solutions.md#BKMK_InstallUpgradeSolution).  
+ The following table lists the messages you can use to work with localized labels to support multiple languages. When you import translations you can generate a report based on the import job in the same way you can when importing a solution. For more information, see [Import an unmanaged solution](/power-platform/alm/solution-api#import-an-unmanaged-solution).  
 
 
 |                                                                                          Message                                                                                          |                                                    Web API Operation                                                     |                                SDK Assembly                                |

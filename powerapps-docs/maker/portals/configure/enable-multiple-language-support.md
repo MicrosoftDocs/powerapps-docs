@@ -1,14 +1,13 @@
 ---
 title: "Enable multiple-language portal support | MicrosoftDocs"
 description: "Instructions to enable multiple languages for a portal and create content in multiple languages."
-author: tapanm-msft
-manager: kvivek
+author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
 ms.date: 04/30/2020
-ms.author: tapanm
-ms.reviewer:
+ms.author: sandhan
+ms.reviewer: tapanm
 ---
 
 # Enable multiple-language portal support

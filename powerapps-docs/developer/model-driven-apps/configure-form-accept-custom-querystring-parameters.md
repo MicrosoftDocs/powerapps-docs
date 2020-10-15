@@ -28,6 +28,7 @@ The ability to pass values to a Web page by using query strings represents a con
  In your applications, you may want to pass custom query string parameters to an entity form. This topic provides information about how you can define a set of specific parameter names and data types that can be accepted for a specific entity form.  
   
 ## Define allowed query string parameters  
+
  There are two ways to specify which query string parameters will be accepted by the form:  
   
 - Edit form properties  
@@ -35,11 +36,13 @@ The ability to pass values to a Web page by using query strings represents a con
 - Edit form XML  
   
 ### Edit form properties  
+
  When you edit an entity form, on the **Home** tab in the **Form** group, click **Form Properties**. In the **Form Properties** dialog box, select the **Parameters** tab.  
   
  Use this tab to modify the names and data types that the form allows.  
   
 ### Edit FormXml  
+
  Within the exported solution customizations.xml file, immediately following the footer element, you can add a `<formparameters>` element. In the `<formparameters>` element, add `<querystringparameter>` elements to specify which parameters will be allowed.  
   
  The following describes the `querystringparameter` element attributes, `name` and `type`:  
@@ -75,5 +78,6 @@ The ability to pass values to a Web page by using query strings represents a con
     -   UnsignedInt  
   
 ### See also  
+
  [Set field values using parameters passed to a form](set-field-values-using-parameters-passed-form.md)   
  [Open Forms And Views with a URL](open-forms-views-dialogs-reports-url.md)

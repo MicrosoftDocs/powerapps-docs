@@ -55,13 +55,13 @@ Parameter aliases also allow you to re-use parameter values to reduce the total 
 
 ## Pass reference to an entity to a function
 
-Certain functions will require passing a reference to an existing entity. For example, the following functions have a parameter that requires a <xref href="Microsoft.Dynamics.CRM.crmbaseentity?text=crmbaseentity EntityType" />:  
+Certain functions will require passing a reference to an existing entity. For example, the following functions have a parameter that requires a <xref:Microsoft.Dynamics.CRM.crmbaseentity?text=crmbaseentity EntityType/>:  
   
-||||  
+|Functions|Functions (cont'd)|Functions (cont'd)|  
 |-|-|-|  
-|<xref href="Microsoft.Dynamics.CRM.CalculateRollupField?text=CalculateRollupField Function" />|<xref href="Microsoft.Dynamics.CRM.IncrementKnowledgeArticleViewCount?text=IncrementKnowledgeArticleViewCount Function" />|<xref href="Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function" />|  
-|<xref href="Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function" />|<xref href="Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates Function" />|<xref href="Microsoft.Dynamics.CRM.RetrieveLocLabels?text=RetrieveLocLabels Function" />|  
-|<xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" />|<xref href="Microsoft.Dynamics.CRM.RetrieveRecordWall?text=RetrieveRecordWall Function" />|<xref href="Microsoft.Dynamics.CRM.ValidateRecurrenceRule?text=ValidateRecurrenceRule Function" />|  
+|<xref:Microsoft.Dynamics.CRM.CalculateRollupField?text=CalculateRollupField Function/>|<xref:Microsoft.Dynamics.CRM.IncrementKnowledgeArticleViewCount?text=IncrementKnowledgeArticleViewCount Function/>|<xref:Microsoft.Dynamics.CRM.InitializeFrom?text=InitializeFrom Function/>|  
+|<xref:Microsoft.Dynamics.CRM.IsValidStateTransition?text=IsValidStateTransition Function/>|<xref:Microsoft.Dynamics.CRM.RetrieveDuplicates?text=RetrieveDuplicates Function/>|<xref:Microsoft.Dynamics.CRM.RetrieveLocLabels?text=RetrieveLocLabels Function/>|  
+|<xref:Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function/>|<xref:Microsoft.Dynamics.CRM.RetrieveRecordWall?text=RetrieveRecordWall Function/>|<xref:Microsoft.Dynamics.CRM.ValidateRecurrenceRule?text=ValidateRecurrenceRule Function/>|  
   
 When you pass a reference to an existing entity, use the `@odata.id` annotation to the Uri for the entity. For example if you are using the <xref href="Microsoft.Dynamics.CRM.RetrievePrincipalAccess?text=RetrievePrincipalAccess Function" /> you can use the following Uri to specify retrieving access to a specific contact:  
   
@@ -179,12 +179,12 @@ There are two ways that functions can be used to control data returned with quer
 
 Some functions listed in <xref:Microsoft.Dynamics.CRM.FunctionIndex> will return a collection of entities. A subset of these functions are *composable*, which means that you can include an additional `$select` or `$filter` system query option to control which columns are returned in the results. These functions have an `IsComposable` attribute in the CSDL. Each of these functions has a companion message in the organization service that accept either a <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> or <xref:Microsoft.Xrm.Sdk.Query.QueryBase> type parameter. The OData system query options provide the same functionality so these functions do not have the same parameters as their companion messages in the organization service. The following table shows a list of those composable functions in this release.  
   
-||||  
+|Functions|Functions (cont'd)|Functions (cont'd)|  
 |-|-|-|  
-|<xref href="Microsoft.Dynamics.CRM.GetDefaultPriceLevel?text=GetDefaultPriceLevel Function" />|<xref href="Microsoft.Dynamics.CRM.RetrieveAllChildUsersSystemUser?text=RetrieveAllChildUsersSystemUser Function" />|<xref href="Microsoft.Dynamics.CRM.RetrieveBusinessHierarchyBusinessUnit?text=RetrieveBusinessHierarchyBusinessUnit Function" />|  
-|<xref href="Microsoft.Dynamics.CRM.RetrieveByGroupResource?text=RetrieveByGroupResource Function" />|<xref href="Microsoft.Dynamics.CRM.RetrieveByResourceResourceGroup?text=RetrieveByResourceResourceGroup Function" />|<xref href="Microsoft.Dynamics.CRM.RetrieveMembersBulkOperation?text=RetrieveMembersBulkOperation Function" />|  
-|<xref href="Microsoft.Dynamics.CRM.RetrieveParentGroupsResourceGroup?text=RetrieveParentGroupsResourceGroup Function" />|<xref href="Microsoft.Dynamics.CRM.RetrieveSubGroupsResourceGroup?text=RetrieveSubGroupsResourceGroup Function" />|<xref href="Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function" />|  
-|<xref href="Microsoft.Dynamics.CRM.SearchByBodyKbArticle?text=SearchByBodyKbArticle Function" />|<xref href="Microsoft.Dynamics.CRM.SearchByKeywordsKbArticle?text=SearchByKeywordsKbArticle Function" />|<xref href="Microsoft.Dynamics.CRM.SearchByTitleKbArticle?text=SearchByTitleKbArticle Function" />|  
+|<xref:Microsoft.Dynamics.CRM.GetDefaultPriceLevel?text=GetDefaultPriceLevel Function />|<xref:Microsoft.Dynamics.CRM.RetrieveAllChildUsersSystemUser?text=RetrieveAllChildUsersSystemUser Function />|<xref:Microsoft.Dynamics.CRM.RetrieveBusinessHierarchyBusinessUnit?text=RetrieveBusinessHierarchyBusinessUnit Function />|  
+|<xref:Microsoft.Dynamics.CRM.RetrieveByGroupResource?text=RetrieveByGroupResource Function />|<xref:Microsoft.Dynamics.CRM.RetrieveByResourceResourceGroup?text=RetrieveByResourceResourceGroup Function />|<xref:Microsoft.Dynamics.CRM.RetrieveMembersBulkOperation?text=RetrieveMembersBulkOperation Function />|  
+|<xref:Microsoft.Dynamics.CRM.RetrieveParentGroupsResourceGroup?text=RetrieveParentGroupsResourceGroup Function />|<xref:Microsoft.Dynamics.CRM.RetrieveSubGroupsResourceGroup?text=RetrieveSubGroupsResourceGroup Function />|<xref:Microsoft.Dynamics.CRM.RetrieveUnpublishedMultiple?text=RetrieveUnpublishedMultiple Function />|  
+|<xref:Microsoft.Dynamics.CRM.SearchByBodyKbArticle?text=SearchByBodyKbArticle Function />|<xref:Microsoft.Dynamics.CRM.SearchByKeywordsKbArticle?text=SearchByKeywordsKbArticle Function />|<xref:Microsoft.Dynamics.CRM.SearchByTitleKbArticle?text=SearchByTitleKbArticle Function />|  
   
 <a name="bkmk_queryevaluationFunctions"></a>
   

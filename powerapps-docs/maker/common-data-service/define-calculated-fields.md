@@ -205,7 +205,7 @@ The following examples show how to use the **TRIMLEFT** and **TRIMRIGHT** functi
  
 You should be aware of certain conditions and limitations when working with calculated fields:  
   
-- Saved queries, charts, and visualizations can have a maximum of 10 unique calculated fields.  
+- [Saved queries](/powerapps/developer/common-data-service/saved-queries), charts, and visualizations can have a maximum of 10 unique calculated fields.  
 - The calculated field values are not displayed in the Outlook Client Offline mode in the tile views or on entity main forms.  
 - A maximum number of chained calculated fields is 5.  
 - A calculated field can’t refer to itself or have cyclic chains.  

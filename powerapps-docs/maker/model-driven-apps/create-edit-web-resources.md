@@ -28,8 +28,7 @@ search.app:
 Web resources are typically used by developers to extend an app using files that are used in web development. App users may need to manage web resources provided by a developer or designer.  
 
 > [!TIP]
-> For an in-depth discussion of web resources, see [Developer Documentation: Web resources for model-driven apps](/powerapps/developer/model-driven-apps/web-resources).<br /> 
-> For information on web resource dependencies added in Power Apps, see [Developer Documentation: Web resource dependencies](/dynamics365/customer-engagement/developer/web-resources).
+> For an in-depth discussion of web resources, see [Developer Documentation: Web resources for model-driven apps](/powerapps/developer/model-driven-apps/web-resources).
    
 <a name="BKMK_WhatAreWebResources"></a>
 
@@ -45,27 +44,23 @@ where *\<base URL>* is the part of the URL you use to view apps that ends in `dy
     
 Because web resources are data in the system and are solution aware, you can move them to different organizations by exporting them as part of a solution and importing the solution into a different organization. You must use solution explorer to work with web resources.
   
-## Open solution explorer
+## Solution publisher prefix
 
-Part of the name of any web resource you create is the customization prefix. This is set based on the solution publisher for the solution you’re working in. If you care about the customization prefix, make sure that you are working in an unmanaged solution where the customization prefix is the one you want for this web resource. More information: [Change the solution publisher prefix](../common-data-service/change-solution-publisher-prefix.md) 
+Part of the name of any web resource you create is the solution publisher prefix. This is set based on the solution publisher for the solution you’re working in. Make sure that you are working in the unmanaged solution where the publisher prefix is the one you want for this web resource. More information: [Solution publisher](../common-data-service/create-solution.md#solution-publisher)  
 
-[!INCLUDE [cc_navigate-solution-from-powerapps-portal](../../includes/cc_navigate-solution-from-powerapps-portal.md)]
+## View and add web resources
+1. Sign in to [Power Apps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. 
+2. Open an unmanaged solution, on the command bar select **Add existing**, point to **Other**, and then select **Web resource**. 
+   The list of web resources available are displayed. 
+3. To add a web resource to the unmanaged solution, select the web resource, and then select **Add**. To close the list without adding a web resource select **Cancel**. 
 
-## View web resources
+## Create a web resource
 
-With solution explorer open, under **Components** select **Web Resources**.
+1. Sign in to [Power Apps](https:///?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then on the left navigation pane select **Solutions**. 
+2. Open an unmanaged solution, on the command bar select **New**, point to **Other**, and then select **Web resource**. 
+3. Complete the form to create the web resource:
 
-![View web resources](media/view-web-resources-solution-explorer.png)
-
-<a name="BKMK_CreateAndEditWebResources"></a>
-
-## Create or edit web resources  
-
-While [viewing web resources](#view-web-resources), select **New** to create a new web resource or double-click an existing web resource to edit it.
-
-![New web resource form](media/new-web-resource-form.png)
-
-Complete the form to create or edit the web resource:
+    ![Create a web resource](media/new-web-resource-form.png)
   
 |Field|Description|  
 |-----------|-----------------|  
@@ -78,26 +73,26 @@ Complete the form to create or edit the web resource:
 |**Upload File**|Select the **Browse…** button to choose a file to upload as a web resource.<br />&bull; You can upload a file when creating a new web resource or to overwrite an existing web resource.<br />&bull; The file name extension of the file must match allowed extensions.<br />&bull; By default the maximum size file that can be uploaded as a web resource is 5MB. This value can be modified by using the **System Settings** > **Email** tab > **Set file size limit for attachments** setting. More information: [System Settings dialog box - Email tab](https://docs.microsoft.com/dynamics365/customer-engagement/admin/system-settings-dialog-box-email-tab) |  
 |**URL**|After you save the web resource, the URL to the web resource will be displayed here. Select this link to view the web resource in your browser.|  
   
-After you have added your changes, choose **Save** and then **Publish**.  
+4. After you have added your changes, select **Save** and then select **Publish**.  
+
+## Edit a web resource
+Open an unmanaged solution and select the web resource to edit it. 
+
 
 > [!NOTE]
 > Changes to a web resource will not be visible in the application until you publish it.
   
-<a name="BKMK_UsingTextEditor"></a>
-   
 ### Use the text editor appropriately
 
 The text editor provided in the application for web resources should only be used for simple edits of text files. You can use it to create and edit HTML web resources, but you should only edit HTML web resources that were created using the text editor. The text editor is designed for very simple HTML content. 
 
 > [!IMPORTANT]
 > If the content of an HTML web resource wasn’t created using the text editor, don’t use the text editor to edit it.  
-> The text editor uses a control that modifies the HTML source in a way that allows it to be edited. These changes can make the page behave differently in the browser and cause more sophisticated code to stop working. Opening an HTML web resource with the text editor and saving it without making any changes can break some HTML web resources.  More information: [Developer Documentation: Use the text editor for HTML web resources](/dynamics365/customer-engagement/developer/webpage-html-web-resources#use-the-text-editor-for-html-web-resources)
+> The text editor uses a control that modifies the HTML source in a way that allows it to be edited. These changes can make the page behave differently in the browser and cause more sophisticated code to stop working. Opening an HTML web resource with the text editor and saving it without making any changes can break some HTML web resources.  <!--More information: [Developer Documentation: Use the text editor for HTML web resources](/dynamics365/customer-engagement/developer/webpage-html-web-resources#use-the-text-editor-for-html-web-resources)  -->
   
 We recommend that you use an external editor to edit text files and then save them locally before uploading them with the **Upload File** button. This way you can preserve a copy of the web resource if you need to return to an earlier version. You can use a simple editor like Notepad, but a text editor with more advanced capabilities is highly recommended. [Visual Studio Community](https://www.visualstudio.com/vs/community/) and [Visual Studio Code](https://code.visualstudio.com/) are free and provide powerful capabilities for editing the text-based files used by web resources.  
 
-<a name="BKMK_CreateAndEditFormWebResources"></a>
- 
-## Create and edit a web resource on a form
+## Create and edit a web resource on a form using solution explorer
 
 You can add or edit web resources on a form to make it more appealing or useful to users. 
 

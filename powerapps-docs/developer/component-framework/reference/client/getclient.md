@@ -35,7 +35,7 @@ Type: `String`
 
 Returns a value to indicate in which client the script is executing.
 
-|||
+|Client type|Description|
 |-----|-----|
 |Web| Web application, or Unified Interface|
 |Outlook| Outlook|

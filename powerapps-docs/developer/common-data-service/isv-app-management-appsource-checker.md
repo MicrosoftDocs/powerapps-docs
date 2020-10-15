@@ -27,7 +27,7 @@ search.app:
 
 You can use the AppSource checker to verify whether your app has met certification criteria before you submit it to [AppSource](https://appsource.microsoft.com/). The checker lets you know whether your solution file has errors that need to be corrected and verifies whether AppSource certification criteria have been met. 
 
-In ISV Studio, you can upload either a full [package](/powerapps/developer/common-data-service/package-deployer/create-packages-package-deployer) or solution(s). You'll be notified whether any issues need to be remediated.
+In ISV Studio, you can upload either a full [package](/power-platform/alm/package-deployer-tool) or solution(s). You'll be notified whether any issues need to be remediated.
 
 **To run AppSource checker**
 
