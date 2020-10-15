@@ -139,7 +139,7 @@ none   | <xref:Microsoft.Crm.Sdk.Messages.CommitFileBlocksUploadRequest>,<br/><x
 Files can be uploaded either in full up to the maximum size configured, or in chunks.
 
 > [!NOTE]
-> As of this articles publication date, the restriction of using chunked upload for files greater than 16 MB has been removed.
+> As of this article's publication date, the restriction of using chunked upload for files greater than 16 MB has been removed.
 > The chunking APIs will continue to be available to maintain backwards compatibility with existing solutions.
 
 ### Example: .NET C# code for full file upload
