@@ -1,8 +1,8 @@
 ---
-title: "Web API CDSWebApiService class (C#) (Common Data Service)| Microsoft Docs"
-description: "This sample .NET Framework Class library project demonstrates an assembly to define a service client when using the Common Data Service Web API and C#."
+title: "CDSWebApiService class library (C#) (Common Data Service) | Microsoft Docs"
+description: "This .NET Framework class library provides an easier to use API for HTTP messaging with the the Common Data Service Web API."
 ms.custom: ""
-ms.date: 04/20/2020
+ms.date: 07/16/2020
 ms.service: powerapps
 applies_to: 
   - "Dynamics 365 (online)"
@@ -15,17 +15,18 @@ search.app:
   - PowerApps
   - D365CE
 ---
-# Web API CDSWebApiService class Sample (C#)
+# CDSWebApiService class library (C#)
 
+A .NET Framework sample class library that uses JSON objects and common HTTP messaging operations with the Common Data Service Web API. Use of these class methods result in less complicated application code, implementation of performance best practices, and improved error processing.
 
-This is a .NET Framework Class library project that creates an assembly to define a service when using the CDS Web API.
-
-This assembly demonstrates how to:
+This class library demonstrates how to:
 
 - Make your code '[DRY](/dotnet/architecture/modern-web-apps-azure/architectural-principles#dont-repeat-yourself-dry)'er by wrapping common operations by Http methods.
 - Manage an <xref:System.Net.Http.HttpClient> in a thread-safe manner.
 - Manage Service Protection Limit API [429 Too Many Requests](https://developer.mozilla.org/docs/Web/HTTP/Status/429) errors that a client application should expect.
     - More information: [Service Protection API Limits](../../api-limits.md)
+
+Using the provided Visual Studio project, you can build a class library and include this functionality in your own application code.
 
 ## Example
 
@@ -328,8 +329,10 @@ This class simply extends <xref:System.Exception> and provides additional proper
 
 ## Samples using this class
 
-The following samples use this class:
+The following C# samples use this class:
 
-- [Web API CDSWebApiService Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)
-- [Web API CDSWebApiService Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)
-- [Web API CDSWebApiService Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)
+- [Basic Operations Sample (C#)](cdswebapiservice-basic-operations.md)
+- [Parallel Operations Sample (C#)](cdswebapiservice-parallel-operations.md)
+- [Async Parallel Operations Sample (C#)](cdswebapiservice-async-parallel-operations.md)
+- [Conditional Operations sample (C#)](cdswebapiservice-conditional-operations.md)
+- [Query Data sample (C#)](cdswebapiservice-query-data.md)

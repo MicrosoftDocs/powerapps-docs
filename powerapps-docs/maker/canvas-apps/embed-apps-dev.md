@@ -34,6 +34,11 @@ If you have an app you want to embed, the first step is to set parameters for th
 ```
 https://apps.powerapps.com/play/[AppID]?source=iframe
 ```
+For GCC users
+
+```
+https://apps.gov.powerapps.us/play[AppID]?source=iframe
+```
 
 > [!IMPORTANT]
 > As of August 2019, the URI format has changed from https://web.powerapps.com/webplayer to https://apps.powerapps.com/play. Please update any embedded iframes to use the new URI format. References to the previous format will be redirected to the new URI to ensure compatibility.

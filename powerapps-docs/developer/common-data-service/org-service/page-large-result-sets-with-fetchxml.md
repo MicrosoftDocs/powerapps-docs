@@ -108,7 +108,9 @@ while (true)
 }
 ```
   
-### See also  
+### See also
+
+ [Paging behaviors and ordering](paging-behaviors-and-ordering.md)  
  [Sample: Use FetchXML with a Paging Cookie](samples/use-fetchxml-paging-cookie.md)   
  [Building Queries with FetchXML](/dynamics365/customer-engagement/developer/org-service/build-queries-fetchxml)   
  [Fiscal date and older than datetime query operators in FetchXML](../use-fetchxml-fiscal-date-older-datetime-query-operators.md)   

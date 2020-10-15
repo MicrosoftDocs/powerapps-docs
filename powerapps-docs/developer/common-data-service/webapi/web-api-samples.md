@@ -36,9 +36,9 @@ The following table describes the Common Data Service Web API samples and their 
 |-----------------------------------|------------------------|--------------------------------------------|  
 |[Web API Samples](web-api-samples.md) (this topic)|[Web API Samples (C#)](web-api-samples-csharp.md)|[Web API Samples (Client-side JavaScript)](web-api-samples-client-side-javascript.md)|  
 <!-- TODO:
-|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|[Web API Basic Operations Sample (C#)](samples/basic-operations-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
-|[Web API Query Data Sample](web-api-query-data-sample.md)|[Web API Query Data Sample (C#)](samples/query-data-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|   
-|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|[Web API Conditional Operations Sample (C#)](samples/conditional-operations-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
+|[Web API Basic Operations Sample](web-api-basic-operations-sample.md)|[Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
+|[Web API Query Data Sample](web-api-query-data-sample.md)|[Web API Query Data Sample (C#)](samples/cdswebapiservice-query-data.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|   
+|[Web API Conditional Operations Sample](web-api-conditional-operations-sample.md)|[Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  
 |[Web API Functions and Actions Sample](web-api-functions-actions-sample.md)|[Web API Functions and Actions Sample (C#)](samples/functions-actions-csharp.md)|Under construction. See [Xrm.WebApi](../clientapi/reference/xrm-webapi.md)|  -->
   
  The following tables categorize the sample topics by the groups of operations demonstrated and by implementation issues.  

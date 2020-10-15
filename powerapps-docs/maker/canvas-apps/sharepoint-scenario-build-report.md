@@ -7,7 +7,7 @@ ms.service: powerapps
 ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: 
-ms.date: 01/10/2018
+ms.date: 06/18/2020
 ms.author: fikaradz
 search.audienceType: 
   - maker
@@ -381,3 +381,6 @@ That brings us to the end of the report section, and you should now have a compl
 ## Next steps
 The next step in this tutorial series is to [publish the Power BI project report and create a dashboard](sharepoint-scenario-publish-report.md).
 
+### See also
+
+- [SharePoint integration scenarios](sharepoint/scenarios-intro.md)

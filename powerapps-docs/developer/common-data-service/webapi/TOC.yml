@@ -10,6 +10,8 @@
       href: get-started-dynamics-365-web-api-csharp.md
     - name: 'Quick Start: Web API sample (C#)'
       href: quick-start-console-app-csharp.md
+    - name: 'Quick Start: Blazor Server sample (C#)'
+      href: quick-start-blazor-server-app.md
     - name: Enhanced quick start (C#)
       href: enhanced-quick-start.md
     - name: Start Web API project in Visual Studio
@@ -40,6 +42,8 @@
     href: update-delete-entities-using-web-api.md
   - name: Associate and disassociate entities
     href: associate-disassociate-entities-using-web-api.md
+  - name: Merge entities 
+    href: merge-entity-using-web-api.md
   - name: Use functions
     href: use-web-api-functions.md
   - name: Use actions
@@ -76,6 +80,10 @@
     href: use-postman-perform-operations.md
 - name: Client-side JavaScript using Web API in model-driven apps
   href: get-started-web-api-client-side-javascript.md
+- name: Web API versions and limitations
+  href: web-api-versions.md
+- name: Relevance search, suggestions, and autocomplete
+  href: relevance-search.md
 - name: Discover the URL for your organization
   items:
   - name: Get started
@@ -84,22 +92,5 @@
     href: discovery-orgsdk-to-webapi.md
   - name: Global Discovery Service Sample (C#)
     href: samples/global-discovery-service-csharp.md
-- name: Web API versions and limitations
-  href: web-api-versions.md
-- name: Sample data
-  href: ../sample-data.md #Topic is for both Web API and Organization service
 - name: Samples
-  items:
-  - name: Data operations Sample Templates
-    href: web-api-samples.md
-    items:
-    - name: Basic Operations
-      href: web-api-basic-operations-sample.md
-    - name: Query Data
-      href: web-api-query-data-sample.md
-    - name: Conditional Operations
-      href: web-api-conditional-operations-sample.md
-    - name: Functions and Actions
-      href: web-api-functions-actions-sample.md
-    - name: Samples
-      href: samples/toc.yml
+  href: samples/toc.yml
