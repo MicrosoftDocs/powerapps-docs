@@ -12,7 +12,7 @@ ms.reviewer: tapanm
 
 # Configure WS-Federation provider for portals
 
-A WS-Federation–compliant security token service provider can be added as an identity provider. For example, Azure Active Directory, or single Active Directory Federation Services server. Also, a single [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] ACS](https://azure.microsoft.com/documentation/articles/active-directory-dotnet-how-to-use-access-control/) namespace can be configured as a set of individual identity providers. The settings for both AD FS and ACS are based on the properties of the WsFederationAuthenticationOptions class.
+A WS-Federation–compliant security token service provider can be added as an identity provider. For example, Azure Active Directory, or single Active Directory Federation Services server. Also, a single [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] ACS](https://azure.microsoft.com/documentation/articles/active-directory-dotnet-how-to-use-access-control/) namespace can be configured as a set of individual identity providers.
 
 To configure WS-Federation provider:
 
@@ -20,7 +20,7 @@ To configure WS-Federation provider:
 
 1. Select **Login provider** as **Other**.
 
-1. Select **Protocol** as **WS FED**.
+1. Select **Protocol** as **WS-Federation**.
 
 1. Enter a provider name.
 
@@ -41,10 +41,10 @@ To configure WS-Federation provider:
 
     | Name | Description |
     | - | - |
-    | Metadata address | The WS-Federation identity provider metadata file location. <br> Example (Azure AD): `https://login.microsoftonline.com/22a47203-270e-4476-a9fd-189d82e4b467/federationmetadata/2007-06/federationmetadata.xml` |
-    | Authentication type | The Entity Id value that specifies a globally unique name for the WS-Federation identity provider. <br> Example (Azure AD): `https://login.microsoftonline.com/22a47203-270e-4476-a9fd-189d82e4b467/` |
-    | Service provider realm | The portal URL that specifies the service provider realm for the WS-Federation identity provider. <br> Example: `https://contoso-portal.powerappsportals.com/signin-wsfederation_1` <br> **Note**: If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in *Create and configure WS-Federation provider* settings. If you're using a custom domain name, enter the URL manually. However, ensure that the value enter here is exactly the same as the **Redirect URI** value for the application in the Azure portal. |
-    | Assertion consumer service URL | The portal URL that corresponds to the service provider's endpoint (URL). |
+    | Metadata address | The WS-Federation identity provider metadata file location. <br> Example (Azure AD): `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/federationmetadata/2007-06/federationmetadata.xml` |
+    | Authentication type | The Entity Id value that specifies a globally unique name for the WS-Federation identity provider. <br> Example (Azure AD): `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/` |
+    | Service provider realm | The portal URL that specifies the service provider realm for the WS-Federation identity provider. <br> Example: `https://contoso-portal.powerappsportals.com/signin-wsfederation_1` |
+    | Assertion consumer service URL | The portal URL that corresponds to the service provider's endpoint (URL). <br> **Note**: If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in *Create and configure WS-Federation provider* settings. If you're using a custom domain name, enter the URL manually. However, ensure that the value enter here is exactly the same as the **Redirect URI** value for the application in the Azure portal. |
 
 1. Select **Next**.
 
@@ -54,7 +54,7 @@ To configure WS-Federation provider:
 
     | Name | Description
     | - | - |
-    | Sign-out reply | The URL to return to (sign-out wreply) once the sign-out is complete. <br> Example: `https://portal.contoso.com/signin-federation` |
+    | Sign-out reply | The URL to return to (sign-out wreply) once the sign-out is complete. |
     | Valid audiences | Comma-separated list of audience URLs. |
     | Validate audiences | If enabled, the audience will be validated during the token validation. |
     | WHR | The home realm of the identity provider (IdP) to use for authentication. Sets the WS-Federation sign-in request **whr** parameter. If empty, the **whr** parameter isn't included in the request. <br> More information: [wsFederation](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation) |

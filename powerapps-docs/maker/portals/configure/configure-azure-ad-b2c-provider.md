@@ -68,7 +68,7 @@ To configure OpenID Connect provider with Azure AD B2C:
 
                 ![Copy the Issuer URL](media/use-simplified-authentication-configuration/issuer-url.png "Copy the Issuer URL")
 
-                Ensure you copy only the URL, without the double quotation marks (*""*). <br> For example, `https://tailspintoysorg.b2clogin.com/acf18993-4325-4d94-b519-96824b0d06db/v2.0/`
+                Ensure you copy only the URL, without the double quotation marks (*""*). <br> For example, `https://tailspintoysorg.b2clogin.com/799f7b50-f7b9-49ec-ba78-67eb67210998/v2.0/`
 
         - **Client ID​** - Enter the **Application ID** of the Azure AD B2C application created earlier.
 

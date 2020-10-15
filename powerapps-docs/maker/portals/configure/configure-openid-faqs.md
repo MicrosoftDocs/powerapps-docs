@@ -64,13 +64,13 @@ When in use, "emailclaimsmapping" is also used to search for an existing contact
 
 No. Id_token provided by the identity provider isn't made available through any standard technique on the client side; and is only used for authentication purpose.
 
-However, if you're using Implicit Grant Flow, you can use the methods provided by your identity provider to get access to ID or Access tokens. 
+However, if you're using Implicit Grant Flow, you can use the methods provided by your identity provider to get access to ID or Access tokens.
 
 For example, Azure AD provides [MSAL library](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) to achieve this scenario in clients.
 
 ## Can I use a custom OpenId Connect provider, instead of Azure AD?
 
-Yes. Portals supports any OpenID Connect provider that supports the standard OpenID Connect protocol.
+Yes. Portals supports any OpenID Connect provider that supports the standard [OpenID Connect specifications](https://openid.net/specs/openid-connect-core-1_0.html).
 
 ### See also
 
