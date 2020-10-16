@@ -74,3 +74,7 @@ If you trigger a push notification from a flow, you can send the notification to
 	- **Entity**: Select which entity the notification is for.
 	- **Form or view**: Select if the notification is for a form or view.
 	- **Record ID**: If the notification is for a form then select the record ID.
+
+### See also
+
+[Send a notification from an app](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-notifications)
