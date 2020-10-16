@@ -61,17 +61,17 @@ If you trigger a push notification from a flow, you can send the notification to
     > [!div class="mx-imgBorder"] 
     > ![Enter the action and select the connector](media/create-notification-step5.png)
  
+ 6. on the next screen, enter the information below and then select **Save**.
+ 
+ 	- **Mobile app**: Select **Power Apps**.
+	- **Your app**: Select the app that you want to set up the notification for.
+	- **Recipient Items-1**: Select how the flow is triggered.
+	- **Message**: Enter the notification message..
+	- **Open app**: Select whether to open the app or not when the user selects the notification.
+	- **Entity**: Select which entity the notification is for.
+	- **Form or view**: Select if the notification is for a form or view.
+	- **Record ID**: If the notification is for a form then select the record ID.
 
-2. Create an action for the flow by using the **Power Apps Notification** connector, and enter the **App ID** of the app to which you want to send notifications.
-
-    You can also rename the connection to reflect your scenario.
-
-    ![Screenshot of creating a connection to the Power Apps that will receive these push notifications](media/pic5-step2-create-connection.jpg)
-3. (optional) Pass parameters to the app when it opens (after the user taps the push notification).
-
-    In our example, we pass along the **Case ID** and **Initial Owner** fields for the selected contact.
-
-    ![Screenshot of passing optional parameters into the push notification](media/pic6-step3-configure-notif.jpg)
 
 ## Send a notification from an app
 You can send a push notification from one app to another or to the same app.
