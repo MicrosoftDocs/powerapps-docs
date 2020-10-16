@@ -2,13 +2,13 @@
 title: "Retrieve and delete the history of audited data changes (Common Data Service) | Microsoft Docs" # Intent and product brand in a unique string of 43-59 chars including spaces
 description: "Programmatically retrieve the audit change history or delete audit records." # 115-145 characters including spaces. This abstract displays in the search result.
 ms.custom: ""
-ms.date: 10/31/2018
+ms.date: 10/14/2020
 ms.reviewer: "pehecke"
 ms.service: powerapps
 ms.topic: "article"
-author: "paulliew" # GitHub ID
-ms.author: "jdaly" # MSFT alias of Microsoft employees only
-manager: "ryjones" # MSFT alias of manager or PM counterpart
+author: "Bluebear73" # GitHub ID
+ms.author: "munzinge" # MSFT alias of Microsoft employees only
+manager: "mayadu" # MSFT alias of manager or PM counterpart
 search.audienceType: 
   - developer
 search.app: 
@@ -19,11 +19,16 @@ search.app:
 
 After auditing is enabled and data changes are made to those entities and attributes being audited, you can proceed to obtain the data change history. Optionally, you can delete the audit records after you review the change history. Follow the sample code link at the end of this topic for more information.  
   
-## Retrieve the change history 
- 
+## Retrieve the change history
+
  There are several messages requests that can be used to retrieve the audit change history. These requests are differentiated by the nature of what they retrieve. 
 <!-- Bug 696490 should make the Audit entity public again: Refer to the topic  [Audit Entity](entities/audit.md) for a list of message requests related to auditing. -->
 Refer to the sample link at the end of this topic for sample code that demonstrates some of these change history message requests.
+
+> [!IMPORTANT]
+> Large attribute values, such as [Email.Description](reference/entities/email.md#BKMK_Description) or [Annotation](reference/entities/annotation.md) are limited (capped) to 5KB or ~5,000 characters in length. A capped attribute value can be recognized by three dots at the end of the text, for example “lorem ipsum, lorem ip…”.
+>
+> Going forward, [Audit](reference/entities/audit.md) entity records will be stored in Common Data Service’s log storage. Linking audit records with other entity records using FetchXML will no longer be possible.
 
 ## Delete the change history for a record
  
