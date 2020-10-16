@@ -40,8 +40,8 @@ The following prebuilt components can be used for mixed reality scenarios:
 
 ## Prerequisites
 
-1. [Enable the MR features for each app](#enable-the-mixed-reality-features-for-each-app).
-2. You'll need an MR-capable device. 
+1. You'll need an MR-capable device.
+2. [Enable the MR features for each app](#enable-the-mixed-reality-features-for-each-app).
 
 ### Mixed-reality capable devices
 
