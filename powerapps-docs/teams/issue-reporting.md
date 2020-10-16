@@ -348,6 +348,6 @@ To review and edit existing issues in Planner:
 ### See also
 
 - [Sample apps FAQs](sample-apps-faqs.md)
-- [Inspection sample apps](inspection.md)  
-- [Employee Ideas sample app](employee-ideas.md)
-- [Customize sample apps](customize-sample-apps.md)
+- [Inspection sample app](inspection.md)  
+- [Employee ideas sample app](employee-ideas.md)
+- [Customize sample app](customize-sample-apps.md)
