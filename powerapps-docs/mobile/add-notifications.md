@@ -88,6 +88,8 @@ You can send a push notification from one app to another or to the same app.
     
  3. Copy the **App ID** of the app.
     
+    > [!div class="mx-imgBorder"] 
+    > ![Copy the app ID](media/create-notification-step8.png)    
     
 3. On the **Connections** tab, create a connection to the Power Apps Notification connector, and paste in the app ID from the previous step.
 
