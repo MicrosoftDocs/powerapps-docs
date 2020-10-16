@@ -31,8 +31,24 @@ Add a push notification to your app if:
 > [!NOTE]
 > To receive push notifications, each user must have opened the app in Power Apps Mobile once or gotten the app from the [Microsoft 365 apps page](https://www.office.com/apps).
 
-## Before you start
-In an app for which you have the **Contributor** permission, add a Power Apps Notification connection. If you don't already have an app, you can quickly [create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app), or [create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), and you'll have the required permission by default.
+## Prerequisites
+
+Before you can create push notification you need to have the following:
+
+1. You need have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create. For information, see:
+
+     - [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
+     - [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), and you'll have the required permission by default.
+     
+2. Open the app that you want to create mobile notification for and from the URL cope the **appid**.
+
+   > [!div class="mx-imgBorder"] 
+   > ![Get the app id of your app](media/appid.png)
+
+
+
+
+
 ## Create a notification from a flow
 
 When you trigger a push notification from a flow, you can send the notification to only one user or security group at a time.
