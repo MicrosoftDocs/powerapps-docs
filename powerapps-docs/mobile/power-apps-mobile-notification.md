@@ -18,8 +18,8 @@ search.app:
 
 # Set up push notifications for the Power Apps mobile app
 
-Push notifications are used in mobile apps to engage app users and help them prioritize key tasks. In Power Apps, you can send notifications by using the Power Apps Notification connector. You can send native push notifications to any app that you create in Power Apps. 
-
+Push notifications are used in Power Apps mobile to engage app users and help them prioritize key tasks. In Power Apps, you can create notifications for Power Apps mobile by using the Power Apps Notification connector. You can send notifications to any app that you create in Power Apps. 
+ 
 ![Example of what a push notification looks like](media/pic1-notification-screenshot.png)
 
 Add a push notification to your app if:
@@ -32,11 +32,10 @@ Add a push notification to your app if:
 > To receive push notifications, each user must have opened the app in Power Apps Mobile once or gotten the app from the [Microsoft 365 apps page](https://www.office.com/apps).
 
 ## Before you start
-In an app for which you have the **Contributor** permission, add a Power Apps Notification connection. If you don't already have an app, you can quickly [create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app), or [create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
+In an app for which you have the **Contributor** permission, add a Power Apps Notification connection. If you don't already have an app, you can quickly [create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app), or [create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), and you'll have the required permission by default.
+## Create a notification from a flow
 
-## Step 1: Set up the notification from a flow
-
-If you trigger a push notification from a flow, you can send the notification to only one user or security group at a time.
+When you trigger a push notification from a flow, you can send the notification to only one user or security group at a time.
 
 1. Go to [Power Automate](https://flow.microsoft.com) and select **Create**.
 
