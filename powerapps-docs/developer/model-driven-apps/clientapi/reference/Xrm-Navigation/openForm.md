@@ -167,6 +167,12 @@ formParameters["jobtitle"] = "Sr. Marketing Manager";
 formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this record were set programmatically.";
 
+// Set lookup field
+formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
+formParameters["preferredsystemuseridname"] = "Admin user"; // Name of the user.
+formParameters["preferredsystemuseridtype"] = "systemuser"; // Entity name. 
+// End of set lookup field
+
 // Open the form.
 Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
     function (success) {
@@ -196,6 +202,12 @@ formParameters["jobtitle"] = "Sr. Marketing Manager";
 formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this record were set programmatically.";
 
+// Set lookup field
+formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
+formParameters["preferredsystemuseridname"] = " Admin user"; // Name of the user.
+formParameters["preferredsystemuseridtype"] = "systemuser"; // Entity name.
+// End of set lookup field
+
 // Open the form.
 Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
     function (success) {
@@ -209,7 +221,3 @@ Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
 ### Related topics
 
 [Xrm.Navigation](../xrm-navigation.md)
-
-
-
-
