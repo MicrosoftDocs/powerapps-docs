@@ -1275,6 +1275,9 @@
     href: ../mobile/setup-mobile-offline.md 
   - name: Work offline on your mobile device (Preview)
     href: ../mobile/work-in-offline-mode.md  
+  - name: Set up push notifications for Power Apps mobile
+    href: ../mobilepower-apps-mobile-notification.md
+ 
 
 - name: Portals
   items:
