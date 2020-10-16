@@ -18,7 +18,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer.md](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-You can add a number of mixed reality (MR) components to your canvas app to support multiple 3D and mixed reality scenarios.
+You can add a number of mixed reality (MR) components to your canvas app to support multiple 3D and MR scenarios.
 
 Components are groups of controls that can answer the need for a specific scenario. For example, you can use these MR components to:
 
@@ -40,12 +40,12 @@ The following prebuilt components can be used for mixed reality scenarios:
 
 ## Prerequisites
 
-1. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
-2. You'll need a mixed reality-capable device. 
+1. [Enable the MR features for each app](#enable-the-mixed-reality-features-for-each-app).
+2. You'll need an MR-capable device. 
 
 ### Mixed-reality capable devices
 
-To use the components in an app created with Power Apps, the device that runs the app needs to have specific hardware and software.
+To use the components in an app created with Power Apps, the device that runs the app (such as a phone or tablet) needs to have specific hardware and software. The device you use to create the app in the Power Apps studio (such as your PC) does not need to be MR-capable.
 
 For Android devices (and some iOS devices), this means you'll need to have the ARCore services installed. ARCore is usually installed automatically as part of the default set of apps and services on your device if it supports mixed reality. If necessary, you can also download ARCore from the Google Play Store.
 
