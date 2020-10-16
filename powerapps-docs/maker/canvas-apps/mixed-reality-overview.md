@@ -41,7 +41,21 @@ The following prebuilt components can be used for mixed reality scenarios:
 ## Prerequisites
 
 1. [Enable the mixed reality features for each app](#enable-the-mixed-reality-features-for-each-app).
-2. You'll need a mixed reality-capable device. Any [ARCore capable device](https://developers.google.com/ar/discover/supported-devices) is supported, as are [certain Apple iOS devices](https://www.apple.com/augmented-reality/).
+2. You'll need a mixed reality-capable device. 
+
+### Mixed-reality capable devices
+
+To use the components in an app created with Power Apps, the device that runs the app needs to have specific hardware and software.
+
+For Android devices (and some iOS devices), this means you'll need to have the ARCore services installed. ARCore is usually installed automatically as part of the default set of apps and services on your device if it supports mixed reality. If necessary, you can also download ARCore from the Google Play Store.
+
+For more details, including which specific devices are installed, and how to confirm you have ARCore installed (and how to install it if you don't), see the [list of supported devices on the Google ARCore support site](https://developers.google.com/ar/discover/supported-devices#android_play).
+
+For devices in China, the experience is a little different as you'll need to [download ARCore from specific, supported app stores in China](https://developers.google.com/ar/discover/supported-devices#android_china).  
+
+For iOS devices, mixed reality is supported on specific hardware, either by ARCore or ARKit:
+- [List of iOS devices supported by ARCore (as listed by Google)](https://developers.google.com/ar/discover/supported-devices#ios)
+- [List of iOS devices supported (as listed by Apple)](https://www.apple.com/augmented-reality/)
 
 ### Enable the mixed reality features for each app
 
