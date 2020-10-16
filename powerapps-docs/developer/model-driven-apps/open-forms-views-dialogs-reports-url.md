@@ -17,8 +17,6 @@ search.app:
 ---
 # Open forms, views, dialogs, and reports with a URL
 
-<!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/open-forms-views-dialogs-reports-url -->
-
 URL addressable elements enable you to include links to forms, views, dialogs, and reports in other applications. In this manner, you can easily extend other applications, reports, or websites so that users can view information and perform actions without switching applications.  
 
 > [!NOTE]
@@ -117,13 +115,13 @@ To display a list of entity records within the application for a SubArea set the
 However, if you want to have a SubArea element that uses a specific initial default view, use the following Url pattern.  
 
 ```xml  
-Url=“/_root/homepage.aspx?etn=<entity logical name >&amp;viewid=%7b<GUID value of view id>%7d”  
+Url=“/main.aspx?pagetype=entitylist&etn=account&amp;viewid=%7b<GUID value of view id>%7d”  
 ```  
 
  When you use this URL, you must also specify appropriate values for `<Titles>` and `<Descriptions>`, and specify an icon for the entity.  
 
 > [!NOTE]
-> If you specify the view using the `/_root/homepage.aspx` page, the view selector will still be shown. If the user changes the view, Model-driven apps remembers the user’s most recent selection and the initial default view displays after they close and re-open their browser.  
+> If you specify the view using the `/main.aspx` page, the view selector will still be shown. If the user changes the view, Model-driven apps remembers the user’s most recent selection and the initial default view displays after they close and re-open their browser.  
 
 <a name="BKMK_OpenADialogProcess"></a>   
 
