@@ -94,6 +94,7 @@ You can send a push notification from one app to another or to the same app.
 3. On the **Connections** tab, create a connection to the Power Apps Notification connector, and paste in the app ID from the previous step.
 
     ![Create connection](media/create-connection.png)
+    
 4. Add the connection to the trigger app.
 
     In our example, we use the same app as the trigger app. The user who reassigns the case also triggers a push notification to the new case owner.
