@@ -76,10 +76,19 @@ If you trigger a push notification from a flow, you can send the notification to
 ## Send a notification from an app
 You can send a push notification from one app to another or to the same app.
 
-1. In [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to the app to which you want to send push notifications.
-2. On the **Details** tab, copy the **App ID** of that app.
+1. Go to [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), and then selct **Apps**.
 
-    ![Get App ID](media/grab-id.png)
+    > [!div class="mx-imgBorder"] 
+    > ![Select apps](media/create-notification-step6.png)    
+
+2. Select an app and then go to **More Commands** > **Details**.
+
+    > [!div class="mx-imgBorder"] 
+    > ![Select more commands and then Details](media/create-notification-step7.png)    
+    
+ 3. Copy the **App ID** of the app.
+    
+    
 3. On the **Connections** tab, create a connection to the Power Apps Notification connector, and paste in the app ID from the previous step.
 
     ![Create connection](media/create-connection.png)
