@@ -168,9 +168,9 @@ formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this record were set programmatically.";
 
 // Set lookup field
-formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; //the ID of the entity record. Format "<field name>". E.g. "preferredsystemuserid"
-formParameters["preferredsystemuseridname"] = "lookup label"; //the label display on the form lookup field. Format "<field name>name". E.g. "preferredsystemuseridname"
-formParameters["preferredsystemuseridtype"] = "systemuser"; //the entity name. Format "<field name>type". E.g. "preferredsystemuseridtype"
+formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
+formParameters["preferredsystemuseridname"] = "Admin user"; // Name of the user.
+formParameters["preferredsystemuseridtype"] = "systemuser"; // Entity name. 
 // End of set lookup field
 
 // Open the form.
@@ -203,9 +203,9 @@ formParameters["donotemail"] = "1";
 formParameters["description"] = "Default values for this record were set programmatically.";
 
 // Set lookup field
-formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; //the ID of the entity record. Format "<field name>". E.g. "preferredsystemuserid"
-formParameters["preferredsystemuseridname"] = "lookup label"; //the label display on the form lookup field. Format "<field name>name". E.g. "preferredsystemuseridname"
-formParameters["preferredsystemuseridtype"] = "systemuser"; //the entity name. Format "<field name>type". E.g. "preferredsystemuseridtype"
+formParameters["preferredsystemuserid"] = "3493e403-fc0c-eb11-a813-002248e258e0"; // ID of the user.
+formParameters["preferredsystemuseridname"] = " Admin user"; // Name of the user.
+formParameters["preferredsystemuseridtype"] = "systemuser"; // Entity name.
 // End of set lookup field
 
 // Open the form.
