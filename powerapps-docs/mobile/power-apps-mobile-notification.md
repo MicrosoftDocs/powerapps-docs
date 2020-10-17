@@ -90,7 +90,7 @@ When you trigger a push notification from a flow, you can send the notification 
 	- **Open app**: Select whether to open the app or not when the user selects the notification.
 	- **Entity**: Select which entity the notification is for.
 	- **Form or view**: Select if the notification is for a form or view.
-	- **Record ID**: If the notification is for a form then enter the record ID that you copied earlier in [Step 2]() . 
+	- **Record ID**: If the notification is for a form then enter the record ID that you copied earlier in [Step 2](power-apps-mobile-notification.md#step-2-create-a-notification-from-a-flow.md) . 
 
 ### See also
 
