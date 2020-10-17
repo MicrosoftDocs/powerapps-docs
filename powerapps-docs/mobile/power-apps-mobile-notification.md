@@ -16,7 +16,7 @@ search.app:
   - PowerApps
 ---
 
-# Set up push notifications for the Power Apps mobile app
+# Create push notifications for the Power Apps mobile app
 
 Push notifications are used in Power Apps mobile to engage app users and help them prioritize key tasks. In Power Apps, you can create notifications for Power Apps mobile by using the Power Apps Notification connector. You can send notifications to any app that you create in Power Apps. 
  
@@ -90,7 +90,7 @@ When you trigger a push notification from a flow, you can send the notification 
 	- **Open app**: Select whether to open the app or not when the user selects the notification.
 	- **Entity**: Select which entity the notification is for.
 	- **Form or view**: Select if the notification is for a form or view.
-	- **Record ID**: If the notification is for a form then enter the record ID that you copied earlier in [Step 2](power-apps-mobile-notification.md#step-2-create-a-notification-from-a-flow.md) . 
+	- **Record ID**: If the notification is for a form then enter the record ID that you copied earlier in [Step 2](power-apps-mobile-notification#step-2-get-the-record-id-required-only-if-creating-a-notification-for-a-form.md) . 
 
 ### See also
 
