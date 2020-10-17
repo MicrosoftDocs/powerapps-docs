@@ -93,4 +93,4 @@ When you trigger a push notification from a flow, you can send the notification 
 	- **Record ID**: If the notification is for a form then enter the record ID that you copied earlier in [Step 2](power-apps-mobile-notification#step-2-get-the-record-id-required-only-if-creating-a-notification-for-a-form.md) . 
 7. When you done, select **Save**. 
 8. Select **Flow checker** to check for error or warnings.
-9. Test the flow by select **Test**.
+9. Test the flow by selecting **Test** and follow the prompts. 
