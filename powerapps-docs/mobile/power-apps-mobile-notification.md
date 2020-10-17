@@ -29,9 +29,9 @@ Add a push notification to your app if:
 * You want to engage your users on a specific interval, or you need users to enter the app in a specific context.
 
 > [!NOTE]
-> To receive push notifications, each user must have opened the app in Power Apps Mobile once or gotten the app from the [Microsoft 365 apps page](https://www.office.com/apps).
+> To receive push notification, each user must have opened the app in Power Apps Mobile once or gotten the app from the [Microsoft 365 apps page](https://www.office.com/apps).
 
-Before you can create push notification you need have access to an app and have the record ID if you're creating a notificatin for a form.
+Before you can create push notification  you need have access to an app and have the record ID if you're creating a notificatin for a form.
 
 ## Step 1: Create an app
 
@@ -42,7 +42,7 @@ You need have **Contributor** permission for a model-driven app or canvas app. I
      
 ## Step 2: Get the record ID (required only if creating a notification for a form)
 
-You need the record ID if you want create a notification for a form. To get the record ID, do the following:
+You need the record ID if you want to create a notification for a form. To get the record ID, do the following:
 
 1. Open the app and create a record for an entity. For example, let's create a new account record for the Account entity.
 2. Open the record and in the URL copy the ID of the record. 
@@ -76,7 +76,7 @@ When you trigger a push notification from a flow, you can send the notification 
     > [!div class="mx-imgBorder"] 
     > ![Select new step](media/create-notification-step4.png)
     
- 5. In the search box, enter **send a push notification** and then select the **Power Apps Notification** connector. In the resluts, select the **Send push notification V2** action.
+ 5. In the search box, enter **send a push notification** and then select the **Power Apps Notification** connector. In the results, select the **Send push notification V2** action.
  
     > [!div class="mx-imgBorder"] 
     > ![Enter the action and select the connector](media/create-notification-step5.png)
@@ -86,7 +86,7 @@ When you trigger a push notification from a flow, you can send the notification 
  	- **Mobile app**: Select **Power Apps**.
 	- **Your app**: Select the app that you want to set up the notification for.
 	- **Recipient Items-1**: Select how the flow is triggered.
-	- **Message**: Enter the notification message..
+	- **Message**: Enter the notification message.
 	- **Open app**: Select whether to open the app or not when the user selects the notification.
 	- **Entity**: Select which entity the notification is for.
 	- **Form or view**: Select if the notification is for a form or view.
