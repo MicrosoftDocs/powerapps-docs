@@ -35,18 +35,18 @@ Add a push notification to your app if:
 
 Before you can create push notification you need to have the following:
 
-1. You need have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create. For information, see:
+- You need have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
 
      - [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
      - [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive)
      
-2. Create a record for an entity in your app site map and get the ID of the record. The ID is in the URL.
+- You need the record ID to want create a notification for a form. To get the record ID, do the following:
 
-   > [!div class="mx-imgBorder"] 
-   > ![Get the app id of your app](media/appid.png)
+    1. Open the app and create a record for an entity. For example, let's create a new account record for the Account entity.
+    2. Open the record and in the URL copy the ID of the create. 
 
-
-
+     > [!div class="mx-imgBorder"] 
+     > ![Get the app id of your app](media/appid.png)
 
 
 ## Create a notification from a flow
