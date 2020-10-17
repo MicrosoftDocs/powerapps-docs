@@ -31,25 +31,27 @@ Add a push notification to your app if:
 > [!NOTE]
 > To receive push notifications, each user must have opened the app in Power Apps Mobile once or gotten the app from the [Microsoft 365 apps page](https://www.office.com/apps).
 
-## Prerequisites
+Before you can create push notification you need have access to an app and have the record ID if you're creating a notificatin for a form.
 
-Before you can create push notification you need to have the following:
+## Step 1: Create an app
 
-- You need have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
+You need have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
 
-     - [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
-     - [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive)
+- [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
+- [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive)
      
-- You need the record ID to want create a notification for a form. To get the record ID, do the following:
+## Step 2: Get the record ID (required only if creating a notification for a form)
 
-    1. Open the app and create a record for an entity. For example, let's create a new account record for the Account entity.
-    2. Open the record and in the URL copy the ID of the create. 
+You need the record ID if you want create a notification for a form. To get the record ID, do the following:
 
-     > [!div class="mx-imgBorder"] 
-     > ![Get the app id of your app](media/appid.png)
+1. Open the app and create a record for an entity. For example, let's create a new account record for the Account entity.
+2. Open the record and in the URL copy the ID of the record. 
 
+   > [!div class="mx-imgBorder"] 
+   > ![Get the app id of your app](media/appid.png)
+     
 
-## Create a notification from a flow
+## Step 3: Create a notification from a flow
 
 When you trigger a push notification from a flow, you can send the notification to only one user or security group at a time.
 
@@ -88,7 +90,7 @@ When you trigger a push notification from a flow, you can send the notification 
 	- **Open app**: Select whether to open the app or not when the user selects the notification.
 	- **Entity**: Select which entity the notification is for.
 	- **Form or view**: Select if the notification is for a form or view.
-	- **Record ID**: If the notification is for a form then select the record ID.
+	- **Record ID**: If the notification is for a form then enter the record ID that you copied earlier in [Step 2]() . 
 
 ### See also
 
