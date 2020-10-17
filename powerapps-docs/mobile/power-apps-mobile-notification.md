@@ -38,9 +38,9 @@ Before you can create push notification you need to have the following:
 1. You need have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create. For information, see:
 
      - [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
-     - [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive), and you'll have the required permission by default.
+     - [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive)
      
-2. Open the app that you want to create mobile notification for and from the URL cope the **appid**.
+2. Create a record for an entity in your app site map and get the ID of the record. The ID is in the URL.
 
    > [!div class="mx-imgBorder"] 
    > ![Get the app id of your app](media/appid.png)
