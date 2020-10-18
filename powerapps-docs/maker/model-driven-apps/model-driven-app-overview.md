@@ -12,6 +12,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+searchScope:
+  - "Power Apps"
 ---
 # What are model-driven apps in Power Apps?
 
