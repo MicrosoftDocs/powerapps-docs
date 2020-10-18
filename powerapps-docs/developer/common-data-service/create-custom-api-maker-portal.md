@@ -36,6 +36,7 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 
 1. In your solution, click **New** and select **Custom API** from the drop-down.
 1. Edit the fields to set the properties of your Custom API. You must set values for the following fields. For more information see [CustomAPI entity attributes](custom-api.md#customapi-entity-attributes)
+
     |Field  |Description  |
     |---------|---------|
     |**Unique Name**|Unique name for the custom API. This will be the name of the message created. This value must include a customization prefix. It should match the prefix set for your solution publisher.|
@@ -71,6 +72,7 @@ If the Custom API is bound to an **Entity** or **EntityCollection**, that parame
 
 1. In your solution, click **New** and select **Custom API Request Parameter** from the drop-down.
 1. Edit the fields to set the properties of your Custom API Request Parameter. You must set values for the following fields. For more information see [CustomAPIRequestParameter entity attributes](custom-api.md#customapirequestparameter-entity-attributes)
+
     |Field  |Description  |
     |---------|---------|
     |**Custom API**|Set the lookup to the Custom API that this parameter is for.|
@@ -96,6 +98,7 @@ If there is only a single **Entity** or **EntityCollection** response property d
 
 1. In your solution, click **New** and select **Custom API Response Property** from the drop-down.
 1. Edit the fields to set the properties of your Custom API Response Property. You must set values for the following fields. For more information see [CustomAPIResponseProperty entity attributes](custom-api.md#customapiresponseproperty-entity-attributes)
+
     |Field  |Description  |
     |---------|---------|
     |**Custom API**|Set the lookup to the Custom API that this property is for.|
