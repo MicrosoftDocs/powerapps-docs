@@ -7,7 +7,9 @@ ms.topic: conceptual
 ms.custom: 
 ms.date: 09/22/2020
 ms.author: kvivek
-ms.reviewer: 
+ms.reviewer:
+searchScope:
+  - "Power Apps"
 ---
 # Power Apps and Microsoft Teams integration
 
