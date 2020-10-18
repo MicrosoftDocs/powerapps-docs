@@ -5,6 +5,8 @@ author: loreleishannonmsft
 ms.topic: article
 ms.date: 01/27/2020
 ms.author: v-lshann
+searchScope:
+  - "Power Apps"
 ---
 # Learning catalog for Power Apps
 
