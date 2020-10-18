@@ -9,6 +9,8 @@ ms.custom:
 ms.date: 09/20/2020
 ms.author: kvivek
 ms.reviewer: kvivek
+searchScope:
+  - "Power Apps"
 ---
 # What is Power Apps?
 
