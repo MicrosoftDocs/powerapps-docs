@@ -95,7 +95,7 @@ When you trigger a push notification from a flow, you can send the notification 
          - **Recipient Items-1**: Select how the flow is triggered.
          - **Message**: Enter the notification message.
          - **Open app**: Select whether to open the app or not when the user selects the notification.
-         - **Parameters**: Key-value parameters to pass with the notification. These can be further processed in the app to open a specific page and load a specific state. Your  push notification can pass specific parameters to the app. 
+         - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app These can be further processed in the app to open a specific page and load a specific state. 
 	 
 	   > [!div class="mx-imgBorder"] 
            > ![Enter the notification information for the model-driven app](media/modelapp-info.png)
