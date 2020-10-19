@@ -257,6 +257,10 @@ Add-ADFSClaimDescription -name "Persistent Identifier" -ClaimType "urn:oasis:nam
 Add-CrmRelyingPartyTrust $domain
 ```
 
+### Configure the SAML 2.0 provider
+
+After setting up the AD FS relying party trust, you can follow the steps to [configure the SAML 2.0 provider](configure-saml2-provider.md).
+
 ### See also
 
 - [Example: Configure SAML 2.0 for portals with Azure Active Directory](configure-saml2-settings-azure-ad.md)

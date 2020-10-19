@@ -14,6 +14,9 @@ ms.reviewer: tapanm
 
 A WS-Federation–compliant security token service provider can be added as an identity provider. For example, Azure Active Directory, or single Active Directory Federation Services server. Also, a single [[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)] ACS](https://azure.microsoft.com/documentation/articles/active-directory-dotnet-how-to-use-access-control/) namespace can be configured as a set of individual identity providers.
 
+> [!NOTE]
+> Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
+
 To configure WS-Federation provider:
 
 1. Select [Add provider](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) for your portal.

@@ -28,6 +28,9 @@ This article explains how an identity provider&mdash;that supports OpenId Connec
     - Hybrid Flow in portals follows the same flow as Implicit Grant Flow, and uses *id_token* to directly sign in the users.
 - Portals doesn’t support PKCE-based techniques (Proof Key for Code Exchange) to authenticate users.
 
+> [!NOTE]
+> Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
+
 ## Configure OpenID Connect provider
 
 Similar to all other providers, you have to sign in to [Power Apps](https://make.powerapps.com) to configure the OpenID Connect provider.
