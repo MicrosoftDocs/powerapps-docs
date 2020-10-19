@@ -18,7 +18,7 @@ search.app:
 
 # Use Workflow Custom Actions with code
 
-Workflow Custom Actions, also known as simply *Custom Actions*, are one of two ways to create custom messages for the Common Data service. The other is a preview feature called *Custom APIs*. More information: [Create and use Custom APIs](custom-api.md).
+Workflow Custom Actions, also known as simply *Custom Actions*, are one of two ways to create custom messages for the Common Data service. The other is a preview feature called *Custom APIs*. More information: [Create and use Custom APIs](custom-api).
 
 Both of these capabilities allow for creating new messages that can be called from web services. Workflow Custom Actions will continue to provide a no-code way to declaratively define synchronous business logic. Custom actions have always been synchronous 'real-time' workflows and therefore not suitable to be converted to use Power Automate.
 
