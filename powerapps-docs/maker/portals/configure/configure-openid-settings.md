@@ -65,9 +65,9 @@ To configure OpenID Connect provider with Azure AD:
 
     1. Select **Register**.
 
-    1. Select **Authentication** from the left-pane.
+    1. In the left menu, under **Manage**, select **Authentication**.
 
-    1. Select **ID tokens** under **Implicit grant**.
+    1. Under **Implicit grant**, select **ID tokens** check box.
 
     1. Select **Save**.
 
