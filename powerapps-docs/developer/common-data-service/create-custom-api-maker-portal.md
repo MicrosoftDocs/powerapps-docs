@@ -17,6 +17,8 @@ search.app:
 ---
 # Create a Custom API in the maker portal
 
+[This topic is pre-release documentation and is subject to change.] 
+
 In the future we intend that the designer for Custom Actions will provide a single experience that will include both Workflow Custom Actions and Custom APIs. For now, the only way to create Custom APIs with a user interface is to use the steps described here.
 
 
@@ -215,7 +217,8 @@ You need to know the following information:
 - The names and types of the parameters and properties.
 
 The Request Parameter values will be included in the [InputParameters](understand-the-data-context.md#inputparameters).
-You need to set the values for the Response Properties in the [OutputParameters](understand-the-data-context.md#outputparameters)
+
+You need to set the values for the Response Properties in the [OutputParameters](understand-the-data-context.md#outputparameters).
 
 The following is a simple plug-in that reverses the characters in the `StringParameter` and returns the result as the `StringProperty`.
 
@@ -286,5 +289,9 @@ Once you have set the **Type**, you can test your Custom API to verify the corre
 
 With the example custom API defined above, with the plug-in registered and type set, the `StringParameter` value of `A Test String Parameter Value` modified and set at the `StringProperty` value of: `eulaV retemaraP gnirtS tseT A`.
 
-## Next Steps
+## Other ways to create Custom APIs
+
+You may have requirements to create a client application which will allow creation of Custom APIs outside of the designer. Because the data for Custom APIs is stored in entities, you can create them using code. More information: [Create a Custom API with code](create-custom-api-with-code.md).
+
+Your ALM process may be better served by creating Custom APIs by editing solution files. More information: [Create a Custom API with solution files](create-custom-api-solution.md).
 

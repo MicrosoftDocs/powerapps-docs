@@ -24,6 +24,10 @@
       items:
       - name: Create a Custom API in the maker portal
         href: create-custom-api-maker-portal.md
+      - name: Create a Custom API with code
+        href: create-custom-api-with-code.md
+      - name: Create a Custom API with solution files
+        href: create-custom-api-solution.md
   - name: Use FetchXML to query data
     href: use-fetchxml-construct-query.md
     items:
