@@ -1,7 +1,7 @@
 ---
 title: Whats new in Return to the Workplace Solution
 description: Provides an overview of whats new in the Return to the Workplace solution.
-author: v-wfranc
+author: wbakker-11
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
@@ -53,7 +53,7 @@ Health and safety leads can visualize case clusters and view associated metrics 
 
 ### Contact type 
 
-Contacts are now differentiated by a new contact type field (Employee and Guest) that enables a facility manager to differentiate between an employee and non-employee. More information: [Facility Safety management app](app-for-facility-manager.md).
+Contacts are now differentiated by a new contact type field (Employee and Guest) that enables a facility manager to differentiate between an employee and non-employee. More information: [Facility Safety Management app](app-for-facility-manager.md).
 
 ### Enhanced occupancy dashboards 
 
