@@ -49,7 +49,7 @@ To use the components in an app created with Power Apps, the device that runs th
 
 For Android devices (and some iOS devices), this means you'll need to have the ARCore services installed. ARCore is usually installed automatically as part of the default set of apps and services on your device if it supports mixed reality. If necessary, you can also download ARCore from the Google Play Store.
 
-For more details, including which specific devices are installed, and how to confirm you have ARCore installed (and how to install it if you don't), see the [list of supported devices on the Google ARCore support site](https://developers.google.com/ar/discover/supported-devices#android_play).
+For more details on ARCore and supported devices, see the [list of supported devices on the Google ARCore support site](https://developers.google.com/ar/discover/supported-devices#android_play).
 
 For devices in China, the experience is a little different as you'll need to [download ARCore from specific, supported app stores in China](https://developers.google.com/ar/discover/supported-devices#android_china).  
 
