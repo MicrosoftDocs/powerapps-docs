@@ -9,6 +9,8 @@ ms.custom:
 ms.date: 09/22/2020
 ms.author: tapanm
 ms.reviewer:
+searchScope:
+  - "Power Apps"
 ---
 
 # Overview of creating apps in Power Apps

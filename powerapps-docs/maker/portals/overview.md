@@ -8,6 +8,8 @@ ms.custom:
 ms.date: 09/02/2020
 ms.author: sandhan
 ms.reviewer: tapanm
+searchScope:
+  - "Power Apps"
 ---
 
 # What is Power Apps portals?
