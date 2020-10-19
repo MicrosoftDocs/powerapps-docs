@@ -23,6 +23,7 @@ To learn about individual OAuth 2.0 providers, select the name of the provider t
 - [Twitter](configure-oauth2-twitter.md)
 
 > [!NOTE]
-> Custom OAuth providers aren't supported. For custom OAuth providers, use [OpenID Connect](configure-openid-provider.md) instead.
+> - Custom OAuth providers aren't supported. For custom OAuth providers, use [OpenID Connect](configure-openid-provider.md) instead.
+> - Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
 
 For general settings applicable to all OAuth 2.0 providers, go to [Additional OAuth 2.0 provider settings](configure-oauth2-settings.md).

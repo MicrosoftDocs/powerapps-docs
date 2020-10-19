@@ -15,7 +15,8 @@ ms.reviewer: tapanm
 In this article, you'll learn about configuring OpenID Connect provider for portals with Azure Active Directory, and multi-tenant Azure AD.
 
 > [!NOTE]
-> Portals isn't limited to only Azure AD, multi-tenant Azure AD, or Azure AD B2C as the OpenID Connect providers. You can use any other provider that confirms to the OpenID Connect specifications with portals.
+> - Portals isn't limited to only Azure AD, multi-tenant Azure AD, or Azure AD B2C as the OpenID Connect providers. You can use any other provider that confirms to the OpenID Connect specifications with portals.
+> - Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
 
 To configure OpenID Connect provider with Azure AD:
 
@@ -63,6 +64,14 @@ To configure OpenID Connect provider with Azure AD:
         ![Register application](media/authentication/register-application.png "Register application")
 
     1. Select **Register**.
+
+    1. Select **Authentication** from the left-pane.
+
+    1. Select **ID tokens** under **Implicit grant**.
+
+    1. Select **Save**.
+
+        ![Enable implicit grant flow with ID tokens](media/authentication/id-tokens-openid.png "Enable implicit grant flow with ID tokens")
 
     1. Keep the Azure portal open, and switch to the OpenID Connect configuration for Power Apps portals for the next steps.
 

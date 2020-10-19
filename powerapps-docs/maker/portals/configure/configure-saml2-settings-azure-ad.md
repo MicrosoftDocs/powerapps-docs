@@ -15,7 +15,8 @@ ms.reviewer: tapanm
 In this article, you'll learn about configuring SAML 2.0 provider for portals with Azure Active Directory.
 
 > [!NOTE]
-> Portals can be configured with identity providers that conform to the SAML 2.0 standards. In this article, you'll learn about using Azure Active Directory as an example of identity providers using SAML 2.0.
+> - Portals can be configured with identity providers that conform to the SAML 2.0 standards. In this article, you'll learn about using Azure Active Directory as an example of identity providers using SAML 2.0.
+> - Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
 
 To configure SAML 2.0 provider with Azure AD:
 
