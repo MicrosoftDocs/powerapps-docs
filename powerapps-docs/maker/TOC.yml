@@ -1923,6 +1923,8 @@
     items:
     - name: Overview
       href: ../sample-apps/return-to-workplace/overview.md
+    - name: What's new?
+      href: ../sample-apps/return-to-workplace/whats-new.md
     - name: Deploy the solution
       href: ../sample-apps/return-to-workplace/deploy.md
     - name: Upgrade the solution

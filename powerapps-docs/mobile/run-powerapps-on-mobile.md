@@ -15,6 +15,8 @@ search.audienceType:
 search.app: 
   - PowerApps
   - D365CE
+searchScope:
+  - "Power Apps"
 ---
 
 # Run model-driven apps and canvas apps on Power Apps mobile
