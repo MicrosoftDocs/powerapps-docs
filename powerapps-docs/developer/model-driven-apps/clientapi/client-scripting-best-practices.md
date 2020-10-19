@@ -1,6 +1,6 @@
 ---
 title: "Best practices: Client scripting in model-driven apps| MicrosoftDocs"
-ms.date: 10/31/2018
+ms.date: 10/19/2020
 ms.service: powerapps
 ms.topic: "article"
 applies_to: 
@@ -30,7 +30,7 @@ When you write functions that will be used in JavaScript libraries, your functio
     // Code to perform your action.
        }
     ```
-- **Namespaced library names**: Associate each of your functions with a JavaScript object to create a kind of namespace to use when you call your functions as shown in the following example.
+- **Namespaced library names**:  As a best practice, you should always create namespaced JavaScript libraries to avoid having your functions overridden by functions in another library. More information: [Write you first JavaScript](walkthrough-write-your-first-client-script.md)
     ```JavaScript
     var Sdk = window.Sdk || {};
     (function () {
@@ -52,7 +52,6 @@ When you write functions that will be used in JavaScript libraries, your functio
     Sdk.attributeOnChange();
     ```
 
-    If you call a function within another function, you can use this keyword as a shortcut to the object that contains both functions. However, if your function is being used as an event handler, this keyword will refer to the object that the event is occurring on.
 
 ## Avoid using unsupported methods
 
