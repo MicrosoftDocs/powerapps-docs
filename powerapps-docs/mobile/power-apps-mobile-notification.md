@@ -78,17 +78,17 @@ When you trigger a push notification from a flow, you can send the notification 
 	
  7. Do one of the following:
  
- - For model-driven app enter the following informaiton:
+ 	- For model-driven app enter the following informaiton:
  
-    > [!div class="mx-imgBorder"] 
-    > ![Enter the notification information for the model-driven app](media/modelapp-info.png)
- 
-	- **Recipient Items-1**: Select how the flow is triggered.
-	- **Message**: Enter the notification message.
-	- **Open app**: Select whether to open the app or not when the user selects the notification.
-	- **Entity**: Select which entity the notification is for.
-	- **Form or view**: Select if the notification is for a form or view.
-	- **Record ID**: If the notification is for a form then enter the record ID that you copied earlier in [Step 2](power-apps-mobile-notification#step-2-get-the-record-id-required-only-if-creating-a-notification-for-a-form.md) . 
+	   - **Recipient Items-1**: Select how the flow is triggered.
+	   - **Message**: Enter the notification message.
+	   - **Open app**: Select whether to open the app or not when the user selects the notification.
+	   - **Entity**: Select which entity the notification is for.
+	   - **Form or view**: Select if the notification is for a form or view.
+	   - **Record ID**: If the notification is for a form then enter the record ID that you copied earlier in [Step 2](power-apps-mobile-notification#step-2-get-the-record-id-required-only-if-creating-a-notification-for-a-form.md) . 
+	
+	   > [!div class="mx-imgBorder"] 
+           > ![Enter the notification information for the model-driven app](media/modelapp-info.png)
 
  - For canvas app, enter the following information: 
 
