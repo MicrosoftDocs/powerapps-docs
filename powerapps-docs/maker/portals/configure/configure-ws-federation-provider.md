@@ -43,8 +43,8 @@ To configure WS-Federation provider:
     | - | - |
     | Metadata address | The WS-Federation identity provider metadata file location. <br> Example (Azure AD): `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/federationmetadata/2007-06/federationmetadata.xml` |
     | Authentication type | The Entity Id value that specifies a globally unique name for the WS-Federation identity provider. <br> Example (Azure AD): `https://login.microsoftonline.com/7e6ea6c7-a751-4b0d-bbb0-8cf17fe85dbb/` |
-    | Service provider realm | The portal URL that specifies the service provider realm for the WS-Federation identity provider. <br> Example: `https://contoso-portal.powerappsportals.com/signin-wsfederation_1` |
-    | Assertion consumer service URL | The portal URL that corresponds to the service provider's endpoint (URL). <br> **Note**: If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in *Create and configure WS-Federation provider* settings. If you're using a custom domain name, enter the URL manually. However, ensure that the value enter here is exactly the same as the **Redirect URI** value for the application in the identity provider configuration (such as Azure portal). |
+    | Service provider realm | The portal URL that specifies the service provider realm for the WS-Federation identity provider. <br> Example: `https://contoso-portal.powerappsportals.com/` |
+    | Assertion consumer service URL | The portal URL that corresponds to the service provider's endpoint (URL). <br> Example: `https://contoso-portal.powerappsportals.com/signin-wsfederation_1` <br> **Note**: If you're using the default portal URL, you can copy and paste the **Reply URL** as shown in *Create and configure WS-Federation provider* settings. If you're using a custom domain name, enter the URL manually. However, ensure that the value enter here is exactly the same as the **Redirect URI** value for the application in the identity provider configuration (such as Azure portal). |
 
 1. Select **Next**.
 
