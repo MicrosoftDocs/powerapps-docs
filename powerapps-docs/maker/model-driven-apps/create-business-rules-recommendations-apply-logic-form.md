@@ -1,5 +1,6 @@
 ---
 title: "Create model-driven app business rules and recommendations | MicrosoftDocs"
+description: Learn how to create a business rule for a specific form in Power Apps
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
@@ -146,12 +147,12 @@ A business rule may not execute because the field referenced in the business rul
 4.    In the business rule designer select each condition and action to verify all the fields referenced in each condition and action. 
 
         > [!div class="mx-imgBorder"] 
-        > ![](media/business-rule-field.png "Field referenced in business rule exists in entity")
+        > ![Field referenced in business rule exists in entity](media/business-rule-field.png "Field referenced in business rule exists in entity")
 
  5.    Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
 
         > [!div class="mx-imgBorder"] 
-        > ![](media/account-name-on-form.png "Account name field on form")
+        > ![Account name field on form](media/account-name-on-form.png "Account name field on form")
 
 A business rule may also not execute because a field referenced in the business rule is a composite field. You can use the constituent fields of the composite field instead.
 ## Frequently asked questions (FAQ)
