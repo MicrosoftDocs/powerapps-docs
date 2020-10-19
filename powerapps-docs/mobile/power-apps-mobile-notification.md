@@ -90,7 +90,7 @@ When you trigger a push notification from a flow, you can send the notification 
  
  - For model-driven app enter the following informaiton:
  
-     > [!div class="mx-imgBorder"] 
+    > [!div class="mx-imgBorder"] 
     > ![Enter the notification information for the model-driven app](media/modelapp-info.png)
  
 	- **Recipient Items-1**: Select how the flow is triggered.
@@ -100,11 +100,16 @@ When you trigger a push notification from a flow, you can send the notification 
 	- **Form or view**: Select if the notification is for a form or view.
 	- **Record ID**: If the notification is for a form then enter the record ID that you copied earlier in [Step 2](power-apps-mobile-notification#step-2-get-the-record-id-required-only-if-creating-a-notification-for-a-form.md) . 
 
-- For canvas app, enter the following: 
+ - For canvas app, enter the following information: 
 
     > [!div class="mx-imgBorder"] 
     > ![Enter the notification information for the canvas app](media/canvasapp-info.png)
+    
+      - **Recipient Items-1**: Select how the flow is triggered.
+      - **Message**: Enter the notification message.
+      - **Open app**: Select whether to open the app or not when the user selects the notification.
+      - **Parameters**: Key-value parameters to pass with the notification. These can be further processed in the app to open a specific page and load a specific state. Your  push notification can pass specific parameters to the app. 
 	
-7. When you done, select **Save**. 
+7. When you're done, select **Save**. 
 8. Select **Flow checker** to check for error or warnings.
 9. Test the flow by selecting **Test** and follow the prompts. 
