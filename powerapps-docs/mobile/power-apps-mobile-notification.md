@@ -86,9 +86,8 @@ When you trigger a push notification from a flow, you can send the notification 
       - **Entity**: Select which entity the notification is for.
       - **Form or view**: Select if the notification is for a form or view.
       - **Record ID**: If the notification is for a form then enter the record ID.
-	
-	  > [!div class="mx-imgBorder"] 
-          > ![Enter the notification information for the model-driven app](media/modelapp-info.png)
+
+      ![Enter the notification information for the model-driven app](media/modelapp-info.png)
 
 - For a canvas app, enter the following information: 
     
@@ -97,8 +96,7 @@ When you trigger a push notification from a flow, you can send the notification 
      - **Open app**: Select whether to open the app or not when the user selects the notification.
      - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app These can be further processed in the app to open a specific page and load a specific state. 
 	 
-	 > [!div class="mx-imgBorder"] 
-         > ![Enter the notification information for the model-driven app](media/modelapp-info.png)
+     ![Enter the notification information for the model-driven app](media/modelapp-info.png)
 	
 7. When you're done, select **Save**. 
 8. Select **Flow checker** to check for error or warnings.
