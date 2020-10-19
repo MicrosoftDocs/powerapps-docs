@@ -103,3 +103,14 @@ When you trigger a push notification from a flow, you can send the notification 
 7. When you're done, select **Save**. 
 8. Select **Flow checker** to check for error or warnings.
 9. Test the flow by selecting **Test** and follow the prompts. 
+
+
+## Known limitations
+
+* Currently, notifications aren't displayed on Power Apps Mobile for Windows Phone.
+* Currently, we don't provide push notifications for users who run apps only in a web browser.
+* Notifications show the generic Power Apps icon instead of a specific app icon.
+
+For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
+
+
