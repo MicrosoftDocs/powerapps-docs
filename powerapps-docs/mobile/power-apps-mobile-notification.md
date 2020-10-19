@@ -90,7 +90,7 @@ When you trigger a push notification from a flow, you can send the notification 
 	   > [!div class="mx-imgBorder"] 
            > ![Enter the notification information for the model-driven app](media/modelapp-info.png)
 
-       - For canvas app, enter the following information: 
+      - For canvas app, enter the following information: 
     
          - **Recipient Items-1**: Select how the flow is triggered.
          - **Message**: Enter the notification message.
