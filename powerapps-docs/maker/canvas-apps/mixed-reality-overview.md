@@ -40,12 +40,14 @@ The following prebuilt components can be used for MR scenarios:
 
 ## Prerequisites
 
-1. You'll need an MR-capable device.
+1. [You'll need an MR-capable device](#mixed-reality-capable-devices).
 2. [Enable the MR features for each app](#enable-the-mixed-reality-features-for-each-app).
 
 ### Mixed-reality capable devices
 
 To use the components in an app created with Power Apps, the device that runs the app (such as a phone or tablet) needs to have specific hardware and software. The device you use to create the app in the Power Apps studio (such as your PC) does not need to be MR-capable.
+
+#### For Android devices
 
 For Android devices, this means you'll need to have the ARCore services installed. ARCore is usually installed automatically as part of the default set of apps and services on your device if it supports MR. The services are referred to as Google Play Services for AR. If necessary, you can download [Google Play Services for AR from the Google Play Store](https://play.google.com/store/apps/details?id=com.google.ar.core).
 
@@ -53,14 +55,16 @@ For more details on ARCore and supported devices, see the [list of supported dev
 
 For devices in China, the experience is a little different as you'll need to [download ARCore from specific, supported app stores in China](https://developers.google.com/ar/discover/supported-devices#android_china).  
 
+#### For iOS (Apple) devices
+
 For iOS devices, MR is supported on specific hardware with ARKit. See the [list of iOS devices supported for MR at the bottom of the Apple augmented reality website](https://www.apple.com/augmented-reality/).
 
 ### Enable the mixed reality features for each app
 
-For each app you create, you need to enable the MR features:
+For each app you create, you need to enable the MR features. This should be enabled by default, but if it isn't or you've turned it off, you can enable the features as follows:
 
 
-1. Open the app for editing in Power Apps Studio at [https://preview.create.powerapps.com](https://preview.create.powerapps.com).
+1. Open the app for editing in Power Apps Studio at [https://create.powerapps.com](https://preview.create.powerapps.com).
 
 
 2. Select **File** from the top menu.
