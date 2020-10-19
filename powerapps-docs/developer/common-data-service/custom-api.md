@@ -38,8 +38,8 @@ Your Custom API will be completed when the data defining the Custom API is saved
 There are several different ways to create a custom API:
 
 - By manually entering data in available forms.  More information: [Create a Custom API in the maker portal](create-custom-api-maker-portal.md)
-- By using the web services, such as the Web API or Organization Service. More information TODO
-- By editing solution files. More information TODO
+- By using the web services, such as the Web API or Organization Service. More information: [Create a Custom API with code](create-custom-api-with-code.md)
+- By editing solution files. More information: [Create a Custom API with solution files](create-custom-api-solution.md).
 
 Regardless of the process you use, the following information describes selected attributes for the three entities that contain the data for a Custom API. You should review this as you plan the behavior for your Custom API.
 
