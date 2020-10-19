@@ -96,6 +96,10 @@ The following Common Data Service datatypes are not supported with the SQL conne
 > group by act.activityid, act.subject
 > ```
 
+## Plug-ins
+
+Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any re-writing of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
+
 ### See also
 
 [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
