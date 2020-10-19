@@ -57,9 +57,9 @@ landingContent:
     linkLists:
        - linkListType: overview
          links:          
-          - text: Create canvas apps?
+          - text: Create canvas apps
             url: /powerapps/maker/canvas-apps/getting-started
-          - text: Create model-driven apps?
+          - text: Create model-driven apps
             url: /powerapps/maker/model-driven-apps/model-driven-app-overview
           - text: Power Platform Center of Excellence (CoE) kit
             url: /power-platform/guidance/coe/starter-kit
