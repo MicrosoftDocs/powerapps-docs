@@ -40,11 +40,11 @@ You can also select **Create** at the bottom of the environment list.
 
 To create an app while you're inside a team, go to the team and select the channel. Select **Add a tab** ![Add a tab](media/additional-apps-5.png "Add a tab").
 
-![Create an app while inside a team](media/additional-apps-6.png "Create an app while inside a team")
+![Create an app from inside a team by adding a tab](media/additional-apps-7.png "Create an app from inside a team by adding a tab")
 
 In the dialog box, select **Power Apps**, and then select **Create an app in Power Apps**.
 
-![Create an app from inside a team by adding a tab](media/additional-apps-7.png "Create an app from inside a team by adding a tab")
+![Create an app while inside a team](media/additional-apps-6.png "Create an app while inside a team")
 
 ## Create an app from the build hub
 
