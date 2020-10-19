@@ -40,18 +40,8 @@ You need have **Contributor** permission for a model-driven app or canvas app. I
 - [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
 - [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive)
      
-## Step 2: Get the record ID (required only if creating a notification for a form)
 
-You need the record ID if you want to create a notification for a form. To get the record ID, do the following:
-
-1. Open the app and create a record for an entity. For example, let's create a new account record for the Account entity.
-2. Open the record and in the URL copy the ID of the record. 
-
-   > [!div class="mx-imgBorder"] 
-   > ![Get the app id of your app](media/appid.png)
-     
-
-## Step 3: Create a notification from a flow
+## Step 2: Create a notification from a flow
 
 When you trigger a push notification from a flow, you can send the notification to only one user or security group at a time.
 
