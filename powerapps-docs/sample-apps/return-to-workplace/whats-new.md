@@ -1,6 +1,6 @@
 ---
-title: Extend the Return to the Workplace Solution
-description: Provides an overview of how to extend the Return to the Workplace solution.
+title: Whats new in Return to the Workplace Solution
+description: Provides an overview of whats new in the Return to the Workplace solution.
 author: v-wfranc
 ms.service: powerapps
 ms.topic: conceptual
