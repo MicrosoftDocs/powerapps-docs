@@ -98,9 +98,9 @@ When you trigger a push notification from a flow, you can send the notification 
 	 
      ![Enter the notification information for the model-driven app](media/canvasapp-info.png)
 	
-7. When you're done, select **Save**. 
-8. Select **Flow checker** to check for error or warnings.
-9. Test the flow by selecting **Test** and follow the prompts. 
+8. When you're done, select **Save**. 
+9. Select **Flow checker** to check for error or warnings.
+10. Test the flow by selecting **Test** and follow the prompts. 
 
 
 ## Known limitations
