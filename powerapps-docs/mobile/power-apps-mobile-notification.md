@@ -71,7 +71,7 @@ When you trigger a push notification from a flow, you can send the notification 
     > [!div class="mx-imgBorder"] 
     > ![Enter the action and select the connector](media/create-notification-step5.png)
  
- 6. On the **Send push notification** screen, enter the follwoing information:
+ 6. On the **Send push notification** screen, enter the following information:
  
  	- **Mobile app**: Select **Power Apps**.
 	- **Your app**: Select the app that you want to set up the notification for. Model-driven apps and canvas apps have different parameters. The next step will depend on the type of app you select here.
@@ -94,9 +94,9 @@ When you trigger a push notification from a flow, you can send the notification 
      - **Recipient Items-1**: Select how the flow is triggered.
      - **Message**: Enter the notification message.
      - **Open app**: Select whether to open the app or not when the user selects the notification.
-     - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app These can be further processed in the app to open a specific page and load a specific state. 
+     - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app These can be further processed in the app to open a specific page and load a specific state. For more information, see [Load a specific page and context when a user taps the notification](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-notifications#load-a-specific-page-and-context-when-a-user-taps-the-notification).
 	 
-     ![Enter the notification information for the model-driven app](media/modelapp-info.png)
+     ![Enter the notification information for the model-driven app](media/canvasapp-info.png)
 	
 7. When you're done, select **Save**. 
 8. Select **Flow checker** to check for error or warnings.
