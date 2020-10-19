@@ -32,6 +32,9 @@ When creating a Custom API it is expected that you will use a solution. Your sol
 
 :::image type="content" source="media/solution-publisher-with-sample-prefix.png" alt-text="Solution publisher with sample prefix":::
 
+> [!NOTE]
+> This topic assumes you are familar with solutions. If you are not, see [Create a solution](../../maker/common-data-service/create-solution.md)
+
 ## Create a Custom API record
 
 1. In your solution, click **New** and select **Custom API** from the drop-down.
@@ -49,12 +52,15 @@ When creating a Custom API it is expected that you will use a solution. Your sol
     |**Allowed Custom Processing Step Type**|The type of custom processing steps allowed for this Custom API. This allows you to control whether other plug-ins can be registered. Options are **None**, **Async Only**, **Sync and Async**.|
 
     You cannot set values for **Plug-in Type** unless you have already created the plug-in. You can change this later.
+
+    As noted in Known Issues: [The Is Private field is not included in the Custom API form](custom-api.md#the-is-private-field-is-not-included-in-the-custom-api-form).
+
 1. Click **Save**. Your form should look something like this:
     :::image type="content" source="media/saved-customapi-form.png" alt-text="Saved Custom API form":::
 
 
 > [!NOTE]
-> If you delete the Custom API record, all request parameters and response properties will be deleted with it. Make sure that the Custom API field values are correct before proceeding. Otherwise you may need to repeat these steps to re-create your Custom API if you need to delete it.
+> If you delete the Custom API record, all request parameters and response properties will be deleted with it. Make sure that the Custom API field values are correct before proceeding. Otherwise you may need to repeat all of these steps to re-create your Custom API if you need to delete it.
 
 ### Known issue: Add your Custom API to your solution
 
@@ -132,12 +138,14 @@ Search the result to find the name of the Custom API. For example, the API defin
 </Action>
 ```
 
-If you have set the `IsPrivate` property for your Custom API, you won't find it. But you can set the `IsPrivate` value back to `false` and retrieve the `$metadata`again. The API will work exactly the same whether it is private or not. You can always set it back to `true` before you ship your solution if you don't want to support others using your Custom API.
+If you have set the `IsPrivate` property for your Custom API, you won't find your custom API in the results. But you can set the `IsPrivate` value back to `false` and retrieve the `$metadata` again. The API will work exactly the same whether it is returned by the $metadata or not. You can always set it back to `true` before you ship your solution if you don't want to support others using your Custom API.
 
 
 ## Test your Custom API
 
 Now that you have created your Custom API you can try it. Even if you haven't set a plug-in type to define the main operation, you can test it now to verify that you can call it correctly. Any response properties will return their default value, such as null.
+
+### Test using the Web API
 
 You can test your API using PostMan. Use the steps described in [Set up a Postman environment](webapi/setup-postman-environment.md) to set up a PostMan environment that will generate the access token you will need. Then, apply the steps described in [Use Web API actions](webapi/use-web-api-actions.md) if your API is an action. If it is a function, use the steps in [Use Web API functions](webapi/use-web-api-functions.md).
 
@@ -174,6 +182,109 @@ OData-Version: 4.0
 }
 ```
 
+> [!NOTE]
+> The `StringProperty` value is null because there is no plug-in set for the main operation to set it to anything other than the default value.
+
+### Test using the Organization Service
+
+If you are using the Organization Service, you can call the Custom API using the late-bound programming style using <xref:Microsoft.Xrm.Sdk.OrganizationRequest> with <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute*>
+
+```csharp
+ParameterCollection parameters = new ParameterCollection();
+parameters.Add("StringParameter", "A Test String Parameter Value");
+
+OrganizationRequest request = new OrganizationRequest() {
+RequestName = "sample_CustomAPIExample",
+Parameters = parameters
+};
+
+OrganizationResponse response = svc.Execute(request);
+
+var stringProperty = (string)response.Results["StringProperty"];
+```
+
+For more information, see [Use messages with the Organization service](org-service/use-messages.md);
 
 
-## Next steps
+## Write a Plug-in for your Custom API
+
+Writing a plug-in to implement the main operation for your Custom API isn't different from writing any other kind of plug-in, except that you do not use the Plug-in Registration tool to set a specific step.
+You need to know the following information:
+
+- The name of the message
+- The names and types of the parameters and properties.
+
+The Request Parameter values will be included in the [InputParameters](understand-the-data-context.md#inputparameters).
+You need to set the values for the Response Properties in the [OutputParameters](understand-the-data-context.md#outputparameters)
+
+The following is a simple plug-in that reverses the characters in the `StringParameter` and returns the result as the `StringProperty`.
+
+```csharp
+using System;
+using System.Linq;
+using System.ServiceModel;
+using Microsoft.Xrm.Sdk;
+
+namespace CustomAPIExamples
+{
+    public class Sample_CustomAPIExample : IPlugin
+    {
+        public void Execute(IServiceProvider serviceProvider)
+        {
+            // Obtain the tracing service
+            ITracingService tracingService =
+            (ITracingService)serviceProvider.GetService(typeof(ITracingService));
+
+            // Obtain the execution context from the service provider.  
+            IPluginExecutionContext context = (IPluginExecutionContext)
+                serviceProvider.GetService(typeof(IPluginExecutionContext));
+
+            if (context.MessageName.Equals("sample_CustomAPIExample") && context.Stage.Equals(30)) {
+
+                try
+                {
+                    string input = (string)context.InputParameters["StringParameter"];
+                    
+                    if (!string.IsNullOrEmpty(input)) {
+                        //Simply reversing the characters of the string
+                        context.OutputParameters["StringProperty"] = new string(input.Reverse().ToArray());
+                    }
+                }
+                catch (FaultException<OrganizationServiceFault> ex)
+                {
+                    throw new InvalidPluginExecutionException("An error occurred in Sample_CustomAPIExample.", ex);
+                }
+
+                catch (Exception ex)
+                {
+                    tracingService.Trace("Sample_CustomAPIExample: {0}", ex.ToString());
+                    throw;
+                }
+            }
+            else
+            {
+                tracingService.Trace("Sample_CustomAPIExample plug-in is not associated with the expected message or is not registered for the main operation.");
+            }
+        }
+    }
+}
+
+```
+
+For more information about writing plug-ins, see [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md). You need to register the assembly, but you do not need to register a step.
+
+After you have registered the assembly, make sure to add the assembly and any types to your solution.
+
+
+## Update the Custom API Type
+
+After you have registered your assembly, you need to set the **Type** value for the Custom API you created. This is a lookup property, so you just need to find the Plug-in Type that represents the type created when you registered the assembly.
+
+:::image type="content" source="media/set-custom-api-type.png" alt-text="Set the Custom API Type Lookup":::
+
+Once you have set the **Type**, you can test your Custom API to verify the correct results are returned.
+
+With the example custom API defined above, with the plug-in registered and type set, the `StringParameter` value of `A Test String Parameter Value` modified and set at the `StringProperty` value of: `eulaV retemaraP gnirtS tseT A`.
+
+## Next Steps
+
