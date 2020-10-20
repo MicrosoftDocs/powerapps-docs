@@ -50,7 +50,7 @@ When you trigger a push notification from a flow, you can send the notification 
    > [!div class="mx-imgBorder"] 
    > ![Select Create](media/create-notification.png)
 
-2. Select **Instant flow**.
+2. Select **Automated flow**.
 
    > [!div class="mx-imgBorder"] 
    > ![Select Instant flow](media/create-notification-step2.png)
