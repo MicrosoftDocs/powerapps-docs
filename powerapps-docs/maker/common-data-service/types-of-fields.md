@@ -78,10 +78,13 @@ You can customize forms (main, quick create, and quick view) and email templates
 
 For example, if an organization operates in multiple areas or countries, you can include multiple locations or countries in an ‘Area of operation’ field. A user can then select one or more locations from the list of available values.
 
-Multi-select option set is only available in read-only grids, editable grids, and forms. Multi-select option set is not supported in: 
-- Workflows, Actions, Dialogs, Roll Ups, charts, and Calculated fields.
-- Reports, SLA, and Routing Rule.
+Multi-select option sets can be used with read-only grids, editable grids, and most forms. Multi-select option sets can't be used with: 
+- Workflows, actions, dialogs, charts, rollup fields, or calculated fields.
+- Reports, SLA<sup>1</sup>, and routing rules<sup>1</sup>.
 
+<sup>1</sup>Entity requires Dynamics 365 Customer Service.
+
+### Forms
 Multi-select fields are supported in the following types of forms:
 
 |Form Type|Availability|
