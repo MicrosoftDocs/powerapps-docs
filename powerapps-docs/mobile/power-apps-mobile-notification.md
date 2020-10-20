@@ -33,15 +33,14 @@ Add a push notification to your app if:
 
 Before you can create push notification  you need have access to an app and have the record ID if you're creating a notificatin for a form.
 
-## Step 1: Create an app
+Create an app
 
 You need have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
 
 - [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
 - [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive)
      
-
-## Step 2: Create a notification from a flow
+## Create a notification from a flow
 
 When you trigger a push notification from a flow, you can send the notification to only one user or security group at a time.
 
@@ -64,12 +63,12 @@ When you trigger a push notification from a flow, you can send the notification 
  4. From the list of connector and triggers select **Common Data Service**.  
  
     > [!div class="mx-imgBorder"] 
-    > ![Select new step](media/create-notification-step4.png)
+    > ![Select Common Data Service](media/create-notification-step4.png)
     
- 5. In the search box, enter **send a push notification** and then select the **Power Apps Notification** connector. In the results, select the **Send push notification V2** action.
+ 5. Select they action that will trigger the notification. For this example, let's choose **When a record is created, updated, or deleted**.
  
     > [!div class="mx-imgBorder"] 
-    > ![Enter the action and select the connector](media/create-notification-step5.png)
+    > ![Choose a trigger for the notification](media/create-notification-step5.png)
  
  6. On the **Send push notification** screen, enter the following information:
  
