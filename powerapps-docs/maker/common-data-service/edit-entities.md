@@ -2,7 +2,7 @@
 title: "Edit an entity in Power Apps | MicrosoftDocs"
 description: "Learn the different ways that an entity can be edited"
 ms.custom: ""
-ms.date: 05/15/2018
+ms.date: 10/20/2020
 ms.reviewer: ""
 ms.service: powerapps
 ms.suite: ""
@@ -26,22 +26,14 @@ search.app:
 # Edit an entity
 
 You can edit any custom entity that you create. Standard entities or managed custom entities may have limitations about changes you can make.  
+
+You can perform the following edits to an entity:
+
+- Entity properties. More information: [Edit entity properties using Power Apps](#edit-entity-properties-using-power-apps)
+
+- **Fields**. More information:  [Create and edit fields for Common Data Service](create-edit-fields.md)
   
-> [!NOTE]
-> **Standard** entities are common entities that are included with your environment that are not **System** or **Custom** entities. *Managed custom entities* are entities that have been added to the system by importing a managed solution. The degree to which you can edit these entities is determined by the managed properties set for each entity. Any properties that can’t be edited will be disabled. 
-
-There are two ways to edit an entity using a designer:
-
-|Designer|Description|
-|--|--|
-|[Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc)|Provides an easy streamlined experience, but some special settings are not available.|
-|Solution explorer|Not as easy, but provides for more flexibility for less common requirements.|
-
-In both the Power Apps portal and solution explorer you can perform the following:
-
-- **Edit the entity fields**. More information:  [Create and edit fields for Common Data Service](create-edit-fields.md)
-  
-- **Edit the entity relationships**. More information:  [Create and edit relationships between entities](create-edit-entity-relationships.md)
+- **Relationships**. More information:  [Create and edit relationships between entities](create-edit-entity-relationships.md)
 
 - **Keys**. [Define alternate keys to reference records](define-alternate-keys-reference-records.md)
   
@@ -57,23 +49,24 @@ You can also make changes to records that support the entity:
 
 - **Charts**. [Create or edit a system chart](../model-driven-apps/create-edit-system-chart.md)
 
-## Edit using Power Apps portal designer
+> [!NOTE]
+> **Standard** entities are common entities that are included with your environment that are not **System** or **Custom** entities. *Managed custom entities* are entities that have been added to the system by importing a managed solution. The degree to which you can edit these entities is determined by the managed properties set for each entity. Any properties that can’t be edited will be disabled.
 
-Within the Power Apps portal designer there are only three entity properties you can edit:
- - Display name
- - Plural display name
- - Description
+## Edit entity properties using Power Apps
 
-In the designer, select the entity you want to edit and click it to open the entity designer. To modify the entity properties, click the **Settings** command to view the **Edit entity** form as shown below:
+In [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), select **Solutions**, open the unmanaged solution you want, and then select the entity you want to edit. To modify the entity properties, select **Settings** on the command bar to view the **Edit entity** pane as shown below:
 
 ![Edit entity properties](media/edit-entity-properties-powerapps-portal-designer.png)
 
+For a description of the properties available to edit see, [Create an entity](data-platform-create-entity.md#create-an-entity).
+
 > [!NOTE]
->  The name of many standard entities may also be used in other text in the application. To locate and change text where this name was used, see [Edit standard entity messages](edit-system-entity-messages.md)
+> Once enabled, not all entity properties can be changed. More information: [Entity options that can only be enabled](#entity-options-that-can-only-be-enabled)
+>
+> The name of many standard entities may also be used in other text in the application. To locate and change text where this name was used, see [Edit standard entity messages](edit-system-entity-messages.md)
 
-For any other changes to entity options, you must edit the entity using solution explorer.
 
-## Edit using Solution Explorer
+## Edit an entity using Solution Explorer
 
 When editing an entity using the solution explorer you need to find the unmanaged solution that you want to add it to.
 
