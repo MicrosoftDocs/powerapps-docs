@@ -56,8 +56,8 @@ If an app requires a connection to a data source or permission to use the device
 
 ![Connection](./media/run-app-browser/app-connection.png)
 
-## Close an app
-To close an app, sign out of the Dynamics 365 Home page, or open another app.
+## Sign out
+To sign out of the Microsoft 365 apps page, select your profile image and then select **Sign out**.
 
 
 ![Sign out](media/bussinessapps-2.png)
