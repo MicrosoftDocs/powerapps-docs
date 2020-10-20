@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/12/2020
+ms.date: 10/20/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -18,9 +18,9 @@ This article explains how an identity provider&mdash;that supports OpenId Connec
 
 ## Supported and unsupported authentication flows in portals
 
-- Implicit Grant Flow
+- Implicit Grant flow
     - This flow is the default authentication method used by portals.
-- Authorization Code Flow
+- Authorization Code flow
     - Portals uses *client_secret_post* method to communicate with token endpoint of identity server.
     - *private_key_jwt* method to authenticate with token endpoint isn't supported.
 - Hybrid Flow (restricted support)
