@@ -42,12 +42,12 @@ Sign in to the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 The Home page may show several types of business apps, but you can find a specific app by typing part of its name in the search box. You also select **Bussiness Apps** to lauch your business app that you have access to.
 
 
-![Bussiness Apps](media/businessapps.png)
+![Bussiness Apps](media/bussinessapps.png)
 
 
 You ca also use the filter list to show only apps created by a specific source, such as Power Apps. To do this, click in the search box and then select the source.
 
-![Bussiness Apps search filter](media/businessapps-1.png)
+![Bussiness Apps search filter](media/bussinessapps-1.png)
 
 
 ## Run an app from a URL
@@ -64,7 +64,7 @@ If an app requires a connection to a data source or permission to use the device
 To close an app, sign out of the Dynamics 365 Home page, or open another app.
 
 
-![Sign out](media/businessapps-2.png)
+![Sign out](media/bussinessapps-2.png)
 
 ## Next steps
 In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to:
