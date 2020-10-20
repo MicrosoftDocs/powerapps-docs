@@ -19,7 +19,7 @@ A portal owner can configure the portal to accept [!include[Azure](../../../incl
 > [!NOTE]
 > Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
 
-To configure Azure AD B2C provider with the OpenID Connect protocol:
+To configure Azure AD B2C as the OpenID Connect provider:
 
 1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
 
