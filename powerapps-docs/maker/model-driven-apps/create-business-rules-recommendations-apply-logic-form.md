@@ -1,5 +1,6 @@
 ---
 title: "Create model-driven app business rules and recommendations | MicrosoftDocs"
+description: Learn how to create a business rule for a specific form in Power Apps
 ms.custom: ""
 ms.date: 03/30/2020
 ms.reviewer: ""
@@ -27,10 +28,7 @@ search.app:
 # Create business rules and recommendations to apply logic in a model-driven app form
 
 This topic shows you how to create business rules and recommendations to apply form logic in a model-driven app without writing JavaScript code or creating plug-ins. Business rules provide a simple interface to implement and maintain fast-changing and commonly used rules. They can be applied to Main and Quick Create forms, and they work in model-driven apps, legacy web apps, Dynamics 365 for tablets, and Dynamics 365 for Outlook (online or offline mode).
-
-> [!NOTE]
-> To define a business rule for an entity so that it applies to all forms and server, see [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule).
-  
+ 
  By combining conditions and actions, you can do any of the following with business rules:  
   
 -   Set field values  
@@ -46,6 +44,11 @@ This topic shows you how to create business rules and recommendations to apply f
 -   Validate data and show error messages  
   
 -   Create business recommendations based on business intelligence.  
+
+> [!NOTE]
+> To define a business rule for an entity so that it applies to all forms, see [Create a business rule for an entity](/powerapps/maker/common-data-service/data-platform-create-business-rule).
+>
+> Business rules don’t work with multi-select option sets.
   
 ## Create a business rule or business recommendation
 
@@ -144,12 +147,12 @@ A business rule may not execute because the field referenced in the business rul
 4.    In the business rule designer select each condition and action to verify all the fields referenced in each condition and action. 
 
         > [!div class="mx-imgBorder"] 
-        > ![](media/business-rule-field.png "Field referenced in business rule exists in entity")
+        > ![Field referenced in business rule exists in entity](media/business-rule-field.png "Field referenced in business rule exists in entity")
 
  5.    Verify that each field referenced in the business rule is also included on the form. If not, add the missing field to the form.
 
         > [!div class="mx-imgBorder"] 
-        > ![](media/account-name-on-form.png "Account name field on form")
+        > ![Account name field on form](media/account-name-on-form.png "Account name field on form")
 
 A business rule may also not execute because a field referenced in the business rule is a composite field. You can use the constituent fields of the composite field instead.
 ## Frequently asked questions (FAQ)
