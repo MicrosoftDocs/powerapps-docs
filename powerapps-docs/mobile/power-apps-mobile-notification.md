@@ -54,13 +54,13 @@ When you trigger a push notification from a flow, you can send the notification 
    > [!div class="mx-imgBorder"] 
    > ![Select Instant flow](media/create-notification-step2.png)
 
-3. On the **Build an instant flow** screen, choose one of the flow trigger or select **Skip** and manually create one.
+3. On the **Build an automated flow** screen, choose one of the flow trigger or select **Skip** and manually create one.
 
    > [!div class="mx-imgBorder"] 
    > ![Select skip](media/create-notification-step3.png)
    
    
- 4. From the list of connectors and triggers select **Common Data Service**.  
+ 4. From the list of connectors and triggers select **Common Data Service (current enviroment)**.  
  
     > [!div class="mx-imgBorder"] 
     > ![Select Common Data Service](media/create-notification-step4.png)
