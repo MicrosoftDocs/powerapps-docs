@@ -23,9 +23,9 @@ This article explains how an identity provider&mdash;that supports OpenId Connec
 - Authorization Code flow
     - Portals uses *client_secret_post* method to communicate with token endpoint of identity server.
     - *private_key_jwt* method to authenticate with token endpoint isn't supported.
-- Hybrid Flow (restricted support)
+- Hybrid flow (restricted support)
     - Portals requires *id_token* to be present in the response. So, *response_type* value as *code token* isn't supported.
-    - Hybrid Flow in portals follows the same flow as Implicit Grant Flow, and uses *id_token* to directly sign in the users.
+    - Hybrid flow in portals follows the same flow as Implicit Grant flow, and uses *id_token* to directly sign in the users.
 - Portals doesn’t support PKCE-based techniques (Proof Key for Code Exchange) to authenticate users.
 
 > [!NOTE]
