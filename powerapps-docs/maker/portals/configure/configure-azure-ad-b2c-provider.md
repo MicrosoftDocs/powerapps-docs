@@ -54,7 +54,7 @@ To configure Azure AD B2C provider with the OpenID Connect protocol:
         1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`
 
             > [!NOTE]
-            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Configure Azure Active Directory B2C application**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Redirect URL** in your portal settings while configuring Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, use it as is for the OpenID Connect configuration in portals.
+            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Configure Azure Active Directory B2C application**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Redirect URL** in your portal settings while configuring Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, use it as is for the Azure AD B2C configuration in portals.
     
             ![Register application](media/authentication/register-application-b2c.png "Register application")
     
