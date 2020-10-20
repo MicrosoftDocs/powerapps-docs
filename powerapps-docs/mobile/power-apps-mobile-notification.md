@@ -55,10 +55,10 @@ When you trigger a push notification from a flow, you can send the notification 
    > [!div class="mx-imgBorder"] 
    > ![Select Instant flow](media/create-notification-step2.png)
 
-3. On the **Build an instant flow** dialog box, enter a name for the flow and then select **Manually trigger a flow**. When you're done, select **Create**.
+3. On the **Build an instant flow** screen, choose one of the flow trigger or select **Skip**and manually create one.
 
    > [!div class="mx-imgBorder"] 
-   > ![Enter the flow name and then select manually triger a flow](media/create-notification-step3.png)
+   > ![Select skip](media/create-notification-step3.png)
    
    
  4. On the next screen, select **+ New step**.   
