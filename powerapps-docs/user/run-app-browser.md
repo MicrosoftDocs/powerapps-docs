@@ -51,7 +51,7 @@ You ca also use the filter list to show only apps created by a specific source, 
 
 
 ## Run an app from a URL
-You can save an app's URL as a bookmark in your tablet's browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
+You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
 
 ![](./media/run-app-browser/web-login.png)
 
