@@ -93,7 +93,7 @@ When you trigger a push notification from a flow, you can send the notification 
  	- **Mobile app**: Select **Power Apps**.
 	- **Your app**: Select the app that you want to set up the notification for. Model-driven apps and canvas apps have different parameters. The next step will depend on the type of app you select here.
 	
- 7. Do one of the following:
+ 7. Depending on the type of app, do one of the following:
  
  - For a model-driven app, enter the following informaiton:
  
