@@ -65,7 +65,7 @@ When you trigger a push notification from a flow, you can send the notification 
     > [!div class="mx-imgBorder"] 
     > ![Select Common Data Service](media/create-notification-step4.png)
     
- 5. Select the action which will trigger the notification. For this example, let's choose **When a record is created, updated, or deleted**.
+ 5. Select the action which will trigger the notification. 
  
     > [!div class="mx-imgBorder"] 
     > ![Choose a trigger for the notification](media/create-notification-step5.png)
@@ -79,6 +79,8 @@ When you trigger a push notification from a flow, you can send the notification 
     | The entity name |Select which entity the notification is for. |
     | Scope |Select the scope. |
  
+    > [!div class="mx-imgBorder"] 
+    > ![Choose the tigger condition](media/create-notification-step6.png)
  
  7. 
  
