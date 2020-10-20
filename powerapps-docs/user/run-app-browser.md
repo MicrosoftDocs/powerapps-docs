@@ -64,7 +64,6 @@ To sign out of the Microsoft 365 apps page, select your profile image and then s
 
 ## Next steps
 In this topic, you learned how to run a canvas or model-driven app in a web browser. To learn how to:
-- run a canvas app on a mobile device, see [Run a canvas app on a mobile device](run-app-client.md)
-- run a model-driven app on a mobile device, see [Run a model-driven app on a mobile device](run-app-client-model-driven.md)
+- run a model-driven apps or canvas apps on a mobile device, see [Run model-driven apps and canvas apps on Power Apps mobile](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile)
 - use a model-driven app, see [Use model-driven apps](use-model-driven-apps.md)
 
