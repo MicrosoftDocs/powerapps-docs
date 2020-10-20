@@ -35,7 +35,7 @@ To follow this quickstart, you need:
    - For model-driven apps, see: [Requirements/supported configurations](https://docs.microsoft.com/power-platform/admin/online-requirements)
 
 
-## Sign in to Dynamics 365
+## Sign in to Microsoft 365 apps page
 Sign in to the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 
 ## Find an app on the Home page
