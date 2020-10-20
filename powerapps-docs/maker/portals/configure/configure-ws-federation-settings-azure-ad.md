@@ -18,7 +18,7 @@ In this article, you'll learn about configuring WS-Federation provider for porta
 > - Portals isn't limited to only Azure AD, multi-tenant Azure AD, or Azure AD B2C as the WS-Federation providers. You can use any other provider that confirms to the WS-Federation specifications with portals.
 > - Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
 
-To configure WS-Federation provider with Azure AD:
+To configure Azure AD as the WS-Federation provider:
 
 1. Select [Add provider](use-simplified-authentication-configuration.md#add-configure-or-delete-an-identity-provider) for your portal.
 
