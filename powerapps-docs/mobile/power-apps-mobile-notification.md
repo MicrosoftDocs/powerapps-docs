@@ -5,7 +5,7 @@ author: mduelae
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 10/15/2020
+ms.date: 10/19/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -61,7 +61,7 @@ When you trigger a push notification from a flow, you can send the notification 
    > ![Select skip](media/create-notification-step3.png)
    
    
- 4. On the next screen, select **+ New step**.   
+ 4. From the list of connector and triggers select **Common Data Service**.  
  
     > [!div class="mx-imgBorder"] 
     > ![Select new step](media/create-notification-step4.png)
