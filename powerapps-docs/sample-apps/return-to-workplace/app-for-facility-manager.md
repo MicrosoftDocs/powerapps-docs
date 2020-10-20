@@ -55,6 +55,8 @@ The Facility Safety Management app has the following components:
 
 **Guests**
 
+- **Guest Attestations** - Keep track of attestations made by guests. Guest attestations should be linked to a guest registration. 
+
 - **Guest Registrations** - Keep track of registered guests. Guest registrations are always linked to a booking for an employee. The employee serves as a host. Guests are stored as a contact record of type `Guest`. Guests can be added via the Employee app.
 
 - **Employee Visits** - Keeps track of visits to the facility. Employee visits are linked to an employee and a booking record. 

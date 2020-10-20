@@ -104,6 +104,7 @@ These entities are used primarily by the Employee Return to the Workplace canvas
 | Employee Facility Search | Contains a list of most recently used employee app facility results associated with system users.             |
 | Employee Sentiment       | Contains associations of employee and information relevant to their recorded sentiment.                         |
 | Employee Visit           | Contains associations of employee and facilities for a given time representing a physical entry and exit.|
+| Guest Attestation        | Contains associations of guests to their attestations                                           |
 | Guest Registration       | Contains associations of employees (hosts) and guests that are associated with an Employee Booking.|
 |||
 
@@ -341,6 +342,18 @@ The data definitions section provides information about a list of entities, data
 | Reopen Phase | Lookup     | Used to associate the appropriate reopen phase.                                                          | Model-driven app |
 | Target Type  | Option Set | The option set values for the target type. | Model-driven app |
 | Target Value | Decimal    | The value used to evaluate success.                                                                      | Model-driven app |
+|||||
+
+### Guest Attestation
+
+| Display name     | Data type     | Description  | Platform use |
+|------------------|---------------|-------------------------------------------|------------------------------|
+| Attestation Date | DateTime | Used to capture the date and time the attestation was recorded.     | Model-driven app             |
+| Attested         | Option Set    | Used to capture whether the Guest has attested.                 | Model-driven  |
+| Guest            | Lookup        | Used to denote the guest completing the attestation.             | Model-driven app             |
+| Facility         | Lookup        | Used to associate the facility for which the Guest is attesting. | Model-driven  |
+| Name             | Text          | Used to create a name for the Guest attestation record.  | Model-driven app             |
+| Guest Registration | Lookup        | Used to associate the attestation to an Guest booking. | Model-driven  |
 |||||
 
 ### Guest Registration
