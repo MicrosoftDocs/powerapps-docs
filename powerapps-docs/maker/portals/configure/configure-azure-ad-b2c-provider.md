@@ -5,7 +5,7 @@ author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 10/12/2020
+ms.date: 10/20/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
@@ -19,7 +19,7 @@ A portal owner can configure the portal to accept [!include[Azure](../../../incl
 > [!NOTE]
 > Changes to the authentication settings [may take a few minutes](../admin/clear-server-side-cache.md#caching-changes-for-portals-with-version-926x-or-later) to reflect on the portal. Restart the portal using the [portal actions](../admin/admin-overview.md) if you want to reflect the changes immediately.
 
-To configure OpenID Connect provider with Azure AD B2C:
+To configure Azure AD B2C provider with the OpenID Connect protocol:
 
 1. Select **Configure** for **Azure Active Directory B2C**. More information: [Configure a provider](use-simplified-authentication-configuration.md#add-or-configure-a-provider)
 
@@ -33,12 +33,40 @@ To configure OpenID Connect provider with Azure AD B2C:
 
     ![Configure the Azure AD B2C app](media/use-simplified-authentication-configuration/configure-ad-b2c-step1.png "Configure the Azure AD B2C app")
 
-    1. [Create and configure an Azure AD B2C tenant](#create-and-configure-an-azure-ad-b2c-tenant).
+    1. Sign in to your [Azure portal](https://portal.azure.com/).
 
-    1. [Register an application](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant. Use the **Reply URL** provided in the wizard while configuring the application.
+    1. [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant).
 
-        > [!NOTE]
-        > You must choose **Yes** for the **Allow implicit flow** field and enter your portal URL in the **Reply URL** field.
+    1. [Register an application](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-register-applications?tabs=applications#register-a-web-application) in your tenant.
+
+        1. Search for and select **Azure AD B2C**.
+
+        1. Under **Manage**, select **App registrations**.
+
+        1. Select **New registration**.
+
+            ![New app registration](media/authentication/app-registration-new-b2c.png "New app registration")
+
+        1. Enter a name.
+
+        1. If not selected already, select **Web** for **Redirect URI**.
+
+        1. Enter the **Reply URL** for your portal in the **Redirect URI** text box. <br> Example: `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`
+
+            > [!NOTE]
+            > If you're using the default portal URL, copy and paste the **Reply URL** as shown in **Configure Azure Active Directory B2C application**. If you're using custom domain name for the portal, enter the custom URL. However, ensure you use this value when you configure the **Redirect URL** in your portal settings while configuring Azure AD B2C provider. <br> For example, if you enter the **Reply URL** in Azure portal as `https://contoso-portal.powerappsportals.com/signin-aad-b2c_1`, use it as is for the OpenID Connect configuration in portals.
+    
+            ![Register application](media/authentication/register-application-b2c.png "Register application")
+    
+        1. Select **Register**.
+    
+        1. In the left menu, under **Manage**, select **Authentication**.
+    
+            ![Enable implicit grant flow with ID tokens](media/authentication/id-tokens-b2c.png "Enable implicit grant flow with ID tokens")
+    
+        1. Under **Implicit grant**, select **ID tokens** check box.
+    
+        1. Select **Save**.
 
     1. [Create a sign-up and sign-in user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-sign-up-and-sign-in-user-flow). Optionally, [create a password reset user flow](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-user-flows#create-a-password-reset-user-flow).
 
@@ -106,33 +134,6 @@ To configure OpenID Connect provider with Azure AD B2C:
      - **Registration Enabled**​ - Turn [open registration](configure-portal-authentication.md#open-registration) for your portal on or off. Setting this toggle to **Off** disables and hides external account registration.
 
 1. Select **Confirm** to view a summary of your configuration and complete the identity configuration.
-
-### Create and configure an Azure AD B2C tenant
-
-> [!NOTE]
-> For more details about creating and configuring Azure AD B2C tenant on Azure portal, go to [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/tutorial-create-tenant).
-
-To create Azure AD B2C tenant:
-
-1. Sign in to your [Azure portal](https://portal.azure.com/).
-1. [Create an Azure AD B2C tenant](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-get-started).
-1. Select **[!include[Azure](../../../includes/pn-azure-shortest.md)] AD B2C** on the leftmost navigation bar.
-1. [Create Azure application](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-app-registration#register-a-web-application).
-
-   > [!Note]
-   > You must choose **Yes** for the **Allow implicit flow** field and specify your portal URL in the **Reply URL** field. The value in the **Reply URL** field should be in the format [portal domain]/signin-[Federation-Name]. For example, `https://contosocommunity.microsoftcrmportals.com/signin-B2C`.
-
-1. Copy the application name, and enter it as the value of Application-Name in the preceding table.
-1. Copy the application (client) ID, and enter it as the value of Application-ID in the preceding table.
-1. [Create a sign-up or sign-in policy](https://docs.microsoft.com/azure/active-directory-b2c/active-directory-b2c-reference-policies#create-a-sign-up-or-sign-in-policy).
-1. Navigate to **Azure AD B2C** resource.
-1. Select **User flows** under Policies.
-1. Choose the newly created Sign up and sign in policy.
-1. From **Settings** list, select **Properties**
-1. Under **Token compatibility settings**, from the **Issuer (iss) claim** list, select the URL that has **/tfp** in its path.
-1. Save the policy.
-1. Select the URL in the **Metadata endpoint for this policy** field.
-1. Copy the value of the issuer field and enter it as the value of Issuer-URL in the preceding table.
 
 ### See also
 
