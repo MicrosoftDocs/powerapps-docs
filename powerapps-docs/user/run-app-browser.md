@@ -20,9 +20,9 @@ search.app:
 
 # Run an app in a web browser
 
-When you create an app, or someone shares an app with you, you can run that app on the [Power Apps mobile app](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile) or in a web browser on a tablet. In this topic, you'll learn how to run a canvas or model-driven app in a web browser on a tablet from the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
+When you create an app, or someone shares an app with you, you can run that app on the [Power Apps mobile app](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile) or in a web browser. In this topic, you'll learn how to run a canvas or model-driven app in a web browser from the [Microsoft 365 apps page](https://www.office.com/apps?auth=2).
 
-For full functionality and optimized experience on a mobile device, we strongly recommend that you use the [Power Apps mobile app](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile). If you don't have the Power Apps mobile installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [What's supported](https://docs.microsoft.com/dynamics365/mobile-app/support-phones-(https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#supported-devices).
+For full functionality and optimized experience on a tablet device, we strongly recommend that you use the [Power Apps mobile app](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile). If you don't have the Power Apps mobile installed, you can still use the web browser on your tablet, as long as your device has sufficiently high screen resolution. For more information: [What's supported](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile#supported-devices).
 
 > [!NOTE]
 > Using the web browser on your phone to run your model-driven apps isn't supported; you must use the [Power Apps mobile app](https://docs.microsoft.com/powerapps/mobile/run-powerapps-on-mobile).
