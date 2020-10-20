@@ -45,10 +45,6 @@ The Home page may show several types of business apps, but you can find a specif
 ![Bussiness Apps](media/bussinessapps.png)
 
 
-You ca also use the filter list to show only apps created by a specific source, such as Power Apps. To do this, click in the search box and then select the source.
-
-![Bussiness Apps search filter](media/bussinessapps-1.png)
-
 
 ## Run an app from a URL
 You can save an app's URL as a bookmark in your browser and run it by selecting the bookmark, or you can send a URL as a link through email. If someone else created an app and shared it with you in an email, you can run the app by selecting the link in the email. When running an app using a URL, you may be prompted to sign in using your Azure Active Directory credentials.
