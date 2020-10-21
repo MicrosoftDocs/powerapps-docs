@@ -1,5 +1,6 @@
 ---
-title: "Overview of the model-driven form designer | MicrosoftDocs"
+title: "Overview of the model-driven app form designer | MicrosoftDocs"
+description: Learn about the form designer for model-driven apps.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""

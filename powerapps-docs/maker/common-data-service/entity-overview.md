@@ -1,6 +1,6 @@
 ---
 title: "Entity overview in Power Apps | MicrosoftDocs"
-description: "Learn how to create and edit entities using Power Apps portal"
+description: "Learn about entities in Power Apps"
 ms.custom: ""
 ms.date: 07/25/2018
 ms.reviewer: ""

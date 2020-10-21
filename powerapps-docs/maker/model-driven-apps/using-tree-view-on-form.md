@@ -1,5 +1,6 @@
 ---
 title: "Using the tree view in the form designer | MicrosoftDocs"
+description: Work with the tree view control in the form designer.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
