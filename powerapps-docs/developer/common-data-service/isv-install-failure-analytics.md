@@ -28,7 +28,7 @@ search.app:
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
-The install failure feature gives the ability to see the  app installation failure data for ISVs. The install failure features makes it easy for ISVs to quickly resolve the customer app install failure issues thus reducing the time for the customers to get the issues resolved and at the same time reducing the support requests.
+The install failure analytics feature gives the ability to see the  app installation failure data for ISVs. The install failure features makes it easy for ISVs to quickly resolve the customer app install failure issues by providing the detailed error logs thus reducing the time for the customers to get the issues resolved.
 
 > [!NOTE]
 > The install failure dashboard shows the failure data from the last 28 days only.
@@ -44,13 +44,13 @@ To view the install failure data:
 
 1. Sign in to [ISV studio](https://aka.ms/ISVStudio/).
 1. On the **Home** page, you can see a list of published applications. Select the desired application for which you want to see the install failure details. 
-1. Scroll-down to the page to view all the apps. Select the app and select the **Install Failure** tab.
+1. Scroll-down to the page to view all the apps. Select the app and select the **Install Failures** tab.
 1. You can also see the install failure details by directly selecting the install failure icon from the list of apps as shown in the screenshot:
 
    > [!div class="mx-imgBorder"]
    > ![Failure icon](media/isv-install-failure-icon.png "Failure icon")
 
-The install failure tab contains the following graphs and metrics.
+The install failures tab contains the following graphs and metrics.
 
 ### Failure by date
 
@@ -74,7 +74,7 @@ The pie chart shown below illustrates the number app installation failures by GE
 
 ### Failure by package version
 
-The line chart shown below illustrates the number of app installation failures occurred by package version. When hovering over the graph, the following information is shown:
+The bar chart shown below illustrates the number of app installation failures occurred by package version. When hovering over the graph, the following information is shown:
 
 1. Package Version
 1. Error Category
