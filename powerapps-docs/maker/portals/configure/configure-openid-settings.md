@@ -73,8 +73,6 @@ To configure Azure AD as the OpenID Connect provider using Implicit Grant flow:
 
     1. Select **Save**.
 
-    1. Keep the Azure portal open, and switch to the OpenID Connect configuration for Power Apps portals for the next steps.
-
 1. In this step, enter the site settings for the portal configuration.
 
     ![Configure OpenID Connect site settings](media/authentication/openid-site-settings-1.png "Configure OpenID Connect site settings")
