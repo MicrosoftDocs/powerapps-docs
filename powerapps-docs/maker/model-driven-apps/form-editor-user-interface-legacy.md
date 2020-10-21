@@ -8,6 +8,7 @@ applies_to:
   - "powerapps"
 ms.author: "matp"
 manager: "kvivek"
+ms.service: powerapps
 ms.assetid: 146f8035-4fcd-4572-8e71-4270cd150495
 search.audienceType: 
   - maker
