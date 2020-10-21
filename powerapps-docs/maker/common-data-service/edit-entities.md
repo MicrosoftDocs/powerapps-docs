@@ -25,6 +25,8 @@ search.app:
 ---
 # Edit an entity
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can edit any custom entity that you create. Standard entities or managed custom entities may have limitations about changes you can make.  
 
 You can perform the following edits to an entity:

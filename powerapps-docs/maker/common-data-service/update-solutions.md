@@ -24,6 +24,8 @@ search.app:
 ---
 
 # Upgrade or update a solution  
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 There are times when you need to update an existing managed solution. To update the solution, follow these steps: 
 
 1.	Open the unmanaged solution in your development environment and create new or add and remove the existing components that you want. 

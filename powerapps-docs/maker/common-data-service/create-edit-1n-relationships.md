@@ -26,6 +26,8 @@ search.app:
 ---
 # Create one-to-many or many-to-one entity relationships overview
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service 1:N (one-to-many) or N:1 (many-to-one) relationships define how two entities are related to each other. 
   
 Before you create a custom entity relationship, evaluate whether using an existing entity relationship would meet your requirements. <br />More information: [Create new metadata or use existing metadata?](create-edit-metadata.md#create-new-metadata-or-use-existing-metadata)

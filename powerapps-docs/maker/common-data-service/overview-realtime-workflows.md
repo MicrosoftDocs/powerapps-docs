@@ -18,6 +18,8 @@ search.audienceType:
 ---
 # Common Data Service real-time workflows 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Workflows automate business processes without a user interface. People usually use workflow processes to initiate automation that doesn’t require any user interaction.
 
 There are two types of workflows:
