@@ -17,6 +17,8 @@ search.app:
 ---
 # Browse the metadata for your environment
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can use the Entity Metadata Browser to view entities and their properties in Common Data Service. The Entity Metadata Browser is a managed solution you can download using the links below.
 
 

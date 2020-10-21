@@ -23,6 +23,8 @@ search.app:
 ---
 # Compose HTTP requests and handle errors
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 You interact with the Web API by composing and sending HTTP requests. You need to know how to set the appropriate HTTP headers and handle any errors included in the response.  
 
 <a name="bkmk_url_versions"></a>

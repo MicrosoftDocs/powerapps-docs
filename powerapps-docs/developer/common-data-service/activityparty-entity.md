@@ -17,6 +17,8 @@ search.app:
 ---
 # ActivityParty entity
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 An activity party represents a person or group associated with an activity. An activity can have multiple activity parties.  
   
 <a name="ActivityPartyTypes"></a>   

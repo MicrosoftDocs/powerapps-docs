@@ -24,6 +24,8 @@ search.app:
 ---
 
 # Export solutions  
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can manually export solutions using the steps in this article. We recommend that you create an unmanaged solution to use for exporting your customizations, and then export your customizations periodically so that you have a backup in case anything happens. You can't export [managed](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions) solutions or the [Default Solution](solutions-overview.md#default-solutions). 
  
 > [!NOTE]

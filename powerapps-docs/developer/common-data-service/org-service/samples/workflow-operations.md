@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Workflow operations
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample demonstrates how to perform a number of workflow operations such as create, delete, activate, set state , and more.
 
 Download the sample: [Workflow](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/Workflow)

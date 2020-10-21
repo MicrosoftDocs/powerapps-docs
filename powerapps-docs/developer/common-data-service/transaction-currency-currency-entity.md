@@ -17,6 +17,8 @@ search.app:
 ---
 # Transaction Currency (currency) entity
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service is a multicurrency system, in which each record can be associated with its own currency. This currency is called the *transaction* currency. The multicurrency features enable users to perform financial transactions like opportunities, quotes, orders, and invoices in multiple currencies. This feature also provides a currency choice to the end user when a financial transaction occurs.  
   
  Multiple records in different transaction currencies can be aggregated, compared, or analyzed with regard to a single currency, by using an exchange rate. This is known as the *base currency*. You first define a base currency for the organization and then define exchange rates to associate the base currency with transaction currencies. The base currency is the currency in which other currencies are quoted. The exchange rate is the value of a transaction currency equal to one base currency.  

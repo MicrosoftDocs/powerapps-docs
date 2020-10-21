@@ -17,6 +17,8 @@ search.app:
 ---
 # Associate and disassociate entities using the Organization Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Entity records are associated to each other using lookup attributes on the related entity. The simplest way to associate two entity records in a one-to-many relationship is to use an <xref:Microsoft.Xrm.Sdk.EntityReference> to set the value of a lookup attribute on the related entity.
 
 The simplest way to disassociate two entity records in a one-to-many relationship is to set the value of the lookup attribute to null.

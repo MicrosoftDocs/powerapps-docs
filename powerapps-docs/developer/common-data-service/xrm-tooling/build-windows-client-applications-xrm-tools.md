@@ -23,6 +23,8 @@ search.app:
 ---
 # Build Windows client applications using the XRM tools
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 XRM tooling is a set of APIs built on top of the Common Data Service assembly APIs (Organization service and Discovery service) that provide support for building Windows client applications for Common Data Service. It provides the following capabilities:  
   
 - Supports all the authentication modes to sign in to Common Data Service instance.  

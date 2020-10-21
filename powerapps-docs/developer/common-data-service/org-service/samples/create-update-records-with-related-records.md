@@ -18,6 +18,8 @@ search.app:
 
 # Create and update records with related records (early bound)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to create and update a record and related records in one call by using the following methods:
 
 - [IOrganizationService.Create](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9)

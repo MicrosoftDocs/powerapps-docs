@@ -24,6 +24,8 @@ search.app:
 
 # Best practices and guidance while working with metadata for the Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This list below contains all of the guidance and best practices regarding interacting and working with metadata within the Common Data Service.
 
 

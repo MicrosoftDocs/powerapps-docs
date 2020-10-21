@@ -17,6 +17,8 @@ search.app:
 ---
 # Community tools for Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The Power Apps community creates tools! 
 
 Many of the most popular ones are distributed in the [XrmToolBox](https://www.xrmtoolbox.com/). XrmToolBox is a Windows application that connects to Common Data Service, providing tools to ease customization, configuration and operation tasks. It is shipped with more than 30 plugins to make administration, customization or configuration tasks easier and less time consuming. 

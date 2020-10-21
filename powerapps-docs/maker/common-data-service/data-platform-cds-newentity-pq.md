@@ -17,6 +17,8 @@ search.app:
 ---
 
 # Add data to an entity in Common Data Service by using Power Query
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In this procedure, you'll create an entity in [Common Data Service](data-platform-intro.md) and fill that entity with data from an OData feed by using Power Query. You can use the same techniques to integrate data from these online and on-premises sources, among others:
 
 * SQL Server

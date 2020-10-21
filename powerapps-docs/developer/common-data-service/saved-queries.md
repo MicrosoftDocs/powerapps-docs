@@ -17,6 +17,8 @@ search.app:
 ---
 # Saved queries
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Saved queries are business entities that define the parameters and criteria of a Common Data Service environment search. Saved queries support cross-entity searches. There are two entities available for queries against the Common Data Service environment.  
   
 - A *user query*, called a saved view in the application, is owned by an individual user, can be assigned and shared with other users, and can be viewed by other users depending on the query's access privileges. This is appropriate for frequently used queries that span entity types and queries that perform aggregation. More information: [UserQuery entity](reference/entities/userquery.md) 

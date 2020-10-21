@@ -18,6 +18,8 @@ search.app:
 ---
 
 # View dependencies for a component
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Solution components often depend on other solution components. You can’t delete any solution component that has dependencies from another solution component. You can view the dependent components from the **Solutions** area of Power Apps.  
 
 

@@ -20,6 +20,8 @@ search.app:
 ---
 # Perform operations using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The Web API provides a modern, RESTful web service you can use to interact with data in Common Data Service using a wide variety of platforms, programming languages and devices.
 
 > [!NOTE]

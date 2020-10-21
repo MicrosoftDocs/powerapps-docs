@@ -23,6 +23,8 @@ search.app:
 ---
 # Query metadata using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Because Common Data Service is a metadata-driven application, developers may need to query the system metadata at run-time to adapt to how an organization has been configured. This capability uses a RESTful query style.
 
 > [!NOTE]

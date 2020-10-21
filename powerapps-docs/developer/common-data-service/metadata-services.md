@@ -19,6 +19,8 @@ search.app:
 
 # Work with metadata using code
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Both the [Web API](webapi/overview.md) and the [Organization service](org-service/overview.md) include capabilities to perform CRUD operations on the entity schema. While you can perform these operations using code, generally you will use designers to add, update, or delete custom schema elements. Users must have administrator privileges to apply schema changes, but all users can read metadata.
 
 ## Why work with metadata?
