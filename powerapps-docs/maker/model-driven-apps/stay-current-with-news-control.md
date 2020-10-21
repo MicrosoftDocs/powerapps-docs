@@ -8,10 +8,10 @@ ms.service: powerapps
 ms.suite: ""
 ms.tgt_pltfrm: ""
 ms.topic: "article"
-author: "kamalmeetsingh"
+author: "Mattp123"
 ms.assetid: 15d123e0-b604-45dd-ab34-0b37787a04bb
 caps.latest.revision: 33
-ms.author: "kamsing"
+ms.author: "matp"
 manager: "kvivek"
 tags: 
 search.audienceType: 

@@ -33,13 +33,10 @@ In this topic, you create and edit a quick create form.
   
 <a name="BKMK_QuickCreateFormEntities"></a>   
 ## Entities with quick create forms  
- By default only the following system entities have quick create forms.  
-  
-|||||  
-|-|-|-|-|  
-|Account|Campaign Response|Case|Competitor|  
-|Contact|Lead|Opportunity||  
-  
+ By default only these system entities have quick create forms: account, <sup>1</sup>campaign response, <sup>1</sup>case, <sup>1</sup>competitor, contact, <sup>1</sup>lead, <sup>1</sup>opportunity.  
+ 
+<sup>1</sup>Requires a Dynamics 365 customer engagement app.
+ 
 Although you can create quick create forms for system activity entities, with the exception of the appointment entity, they do not support quick create forms. Currently, the option to disable the quick create form for the appointment entity is not supported. Any of the other [updated entities](create-design-forms.md) and any custom entities can be enabled to support these forms by selecting **Enable quick create forms** in the entity definition and creating a quick create form for the entity. 
 
 You can enable custom activity entities to support quick create forms, and you can create quick create forms for those entities. However, the quick create form for custom activity entities will not be used when people select **Create** on the navigation bar. These quick create forms can be used only when people add a new record for a sub-grid that displays that specific custom activity entity.  
