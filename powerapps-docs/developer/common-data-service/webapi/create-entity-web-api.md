@@ -24,6 +24,8 @@ search.app:
 
 # Create an entity record using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Use a POST request to send data to create an entity. You can create multiple related entity records in a single operation using *deep insert*. You also need to know how to set values to associate a new entity record to existing entities using the `@odata.bind` annotation.  
 
 > [!NOTE]

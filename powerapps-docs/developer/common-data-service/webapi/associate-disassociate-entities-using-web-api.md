@@ -23,6 +23,8 @@ search.app:
 ---
 # Associate and disassociate entities using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 There are several methods you can use to associate and disassociate entities. Which method you apply depends on whether you’re creating or updating the entities and whether you’re operating in the context of the referenced entity or the referencing entity.  
 
 <a name="bkmk_Addareferencetoacollection"></a>

@@ -23,6 +23,8 @@ search.app:
 ---
 # Set KeepAlive to false when interacting with external hosts in a plug-in
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Performance
 
 **Impact potential**: High

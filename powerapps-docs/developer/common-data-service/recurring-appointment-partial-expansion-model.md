@@ -17,6 +17,8 @@ search.app:
 ---
 # Recurring appointment partial expansion model
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service implements a partial expansion model to create recurring appointment instances in the database. The recurrence information, specified when you create a `RecurringAppointmentMaster` record, is used to create or synchronize individual instances in a phased manner. This controls the creation of a large number of appointment records in Common Data Service due to the creation or synchronization of recurring appointments that have a large or infinite (no end date) recurrence range.  
 
  The partial expansion model is an asynchronous job in Common Data Service that runs at pre-specified intervals, and is defined at the organization level using the `Organization.RecurrenceExpansionJobBatchInterval` attribute. Moreover, the instance expansion model depends on an organization-level parameter, for example, “N,” where “N” stands for the maximum number of instances that can be created synchronously. You can specify an appropriate value for this variable using the `Organization.RecurrenceExpansionSynchCreateMax` attribute. These properties are covered in detail in the [Parameters for the partial expansion job](#Parameter) section later.  

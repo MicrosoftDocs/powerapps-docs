@@ -17,6 +17,8 @@ search.app:
 ---
 # Customize entity and attribute mappings
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can map attributes between entities that have an entity relationship. This lets you set default values for a record that is created in the context of another record. Use the customization tools in the application to map attributes; see [Map entity fields](../../maker/common-data-service/map-entity-fields.md).
 
 <a name="bkmk_BehaviorintheApplication"></a>

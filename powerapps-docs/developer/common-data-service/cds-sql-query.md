@@ -18,6 +18,8 @@ search.app:
 
 # Use SQL to query data (Preview)
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 > [!WARNING]
@@ -95,6 +97,10 @@ The following Common Data Service datatypes are not supported with the SQL conne
 > left outer join activityparty as [to] on act.activityid = [to].activityid and [to].participationtypemask = 2
 > group by act.activityid, act.subject
 > ```
+
+## Plug-ins
+
+Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any re-writing of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
 
 ### See also
 

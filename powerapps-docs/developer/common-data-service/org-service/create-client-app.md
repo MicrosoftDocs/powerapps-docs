@@ -17,6 +17,8 @@ search.app:
 ---
 # Create a client application
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Content coming soon...
 <!-- 
 

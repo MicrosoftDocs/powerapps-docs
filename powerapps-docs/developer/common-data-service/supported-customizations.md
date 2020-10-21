@@ -23,6 +23,8 @@ https://docs.microsoft.com/dynamics365/customer-engagement/developer/supported-e
 
 # Supported Customizations for Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can customize Common Data Service by using tools that are available in the Power Apps portal or that are described in the official documentation. These customizations are supported and can be upgraded.
 
 Customizations made using methods other than those described here are unsupported and could cause problems during updates and upgrades to Common Data Service. For more information, see [Unsupported Customizations](#unsupported-customizations).

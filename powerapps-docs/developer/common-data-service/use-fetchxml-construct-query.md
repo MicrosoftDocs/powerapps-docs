@@ -18,6 +18,8 @@ search.app:
 
 # Use FetchXML to construct a query
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 FetchXML is a proprietary query language that is used in Common Data Service. It's based on a schema that describes the capabilities of the language. The FetchXML language supports similar query capabilities as query expressions. In addition, it's used as a serialized form of query, used to save a query as a user-owned saved view in the [UserQuery Entity](reference/entities/userquery.md) and as an organization-owned saved view in the [SavedQuery Entity](reference/entities/savedquery.md).  
   
 A FetchXML query can be executed by using either the **Web API** or the **Organization service**.
@@ -94,6 +96,8 @@ This example shows an inner join between EntityMap and AttributeMap where the En
 
 > [!IMPORTANT]
 > A FetchXML query has a limit of a maximum of 10 allowed link entities.
+>
+> The In operator of a FetchXML query is limited to 2000 values.
 
 ## Execute the FetchXML query
 

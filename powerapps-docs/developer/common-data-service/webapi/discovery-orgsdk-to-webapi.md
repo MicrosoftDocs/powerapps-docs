@@ -18,6 +18,8 @@ search.app:
 
 # Modify your code to use global Discovery Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The Discovery Service APIs can be used by your application to discover business organization instances that the application user has access to. If your application currently uses the Organization Service API on the 2011 SOAP endpoint to discover organization instances, you can follow the steps in this topic and convert your application to access organization details using the OData V4 RESTful API with the global Discovery Service URL. If your application accesses the Discovery Service using the regional Discovery Service URL, you will need to change the application code from using the regional URL to the global Discovery Service URL.
 
 A detailed description of using the Discovery Service with the RESTful API can be found on the [Discover the URL for your organization](/powerapps/developer/common-data-service/webapi/discover-url-organization-web-api) page.

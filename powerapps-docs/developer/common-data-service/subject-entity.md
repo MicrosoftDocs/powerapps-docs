@@ -17,6 +17,8 @@ search.app:
 ---
 # Subject entity
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 A *subject* categorizes entity records, such as articles and sales literature. By using subjects, you can create a hierarchy of topics to organize and maintain information in Common Data Service. The information organized in the subject tree can be used by any entity in Common Data Service. The `Subject` entity categorizes the following:  
   
 - Knowledge base articles  

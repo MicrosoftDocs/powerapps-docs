@@ -18,6 +18,8 @@ search.app:
 
 # Developer tools and resources
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Developers will use the following tools and resources when working with solutions using Common Data Service.
 
 ## Tools available for download from NuGet

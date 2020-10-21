@@ -17,6 +17,8 @@ search.app:
 ---
 # Annotation (note) entity
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The *annotations (notes)* provide easy ways to append additional information to any record in the 
 Common Data Service database. An annotation (note) is a text entry that can be associated with any entity in 
 Common Data Service. However, you can associate annotations with only those custom entities that are created with 

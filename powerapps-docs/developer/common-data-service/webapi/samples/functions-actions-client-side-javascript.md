@@ -22,6 +22,8 @@ search.app:
 ---
 # Web API Functions and Actions Sample (Client-side JavaScript)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample demonstrates how to perform bound and unbound functions and actions, including custom actions, using the Common Data Service Web API using client-side JavaScript.  
   
 > [!NOTE]

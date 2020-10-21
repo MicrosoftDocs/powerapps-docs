@@ -24,6 +24,8 @@ search.app:
 
 # Create Many-to-many entity relationships in Common Data Service using Power Apps portal
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit Many-to-many entity relationships for Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 

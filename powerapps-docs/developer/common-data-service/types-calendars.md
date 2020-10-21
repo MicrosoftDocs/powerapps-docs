@@ -17,6 +17,8 @@ search.app:
 ---
 # Types of calendars
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The calendar entity was modified to support additional types of calendars in Common Data Service.  
   
 ## Calendar type  

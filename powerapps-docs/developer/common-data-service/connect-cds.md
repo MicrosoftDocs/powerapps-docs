@@ -17,6 +17,8 @@ search.app:
 ---
 # Create Client applications
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can create client applications without writing code using canvas and model-driven apps.
 More information: [Overview of creating apps in Power Apps](../../maker/index.md)
 
