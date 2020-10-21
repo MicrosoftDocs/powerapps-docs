@@ -21,6 +21,8 @@ search.app:
 
 # Importing and exporting data
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 There are multiple ways to import and export data into Common Data Service. You can use dataflows, Power Query, Azure Data Factory, Azure Logic Apps, and Power Automate.
 
 Dynamics customers also have access to the Data Export Service.

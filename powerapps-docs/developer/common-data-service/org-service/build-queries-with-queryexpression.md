@@ -17,6 +17,8 @@ search.app:
 ---
 # Build queries with QueryExpression
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> class to programmatically build a query containing data filters and search conditions that define the scope of a database search. A query expression is used for single-object searches. For example, you can create a search to return all accounts that match certain search criteria. The <xref:Microsoft.Xrm.Sdk.Query.QueryBase> class is the base class for query expressions. There are three derived classes: <xref:Microsoft.Xrm.Sdk.Query.QueryExpression>, <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> and <xref:Microsoft.Xrm.Sdk.Query.FetchExpression>. The `QueryExpression` class supports complex queries. The `QueryByAttribute` class is a simple means to search for entities where attributes match specified values. 
 
 > [!NOTE]

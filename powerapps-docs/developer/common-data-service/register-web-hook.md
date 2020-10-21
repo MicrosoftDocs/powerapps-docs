@@ -17,6 +17,8 @@ search.app:
 ---
 # Register a webhook
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Use the Plug-in Registration tool to register a webhook. To get the Plug-in registration tool, see [Download tools from NuGet](download-tools-nuget.md). 
 
 In the Plug-in Registration tool there is a new **Register New Web Hook** option to select.

@@ -25,6 +25,8 @@ search.app:
 ---
 # Define alternate keys to reference records
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 *Alternate keys* provide an efficient and accurate way of integrating data with external systems. It’s essential in cases when an external system doesn’t store the Globally Unique Identifier (GUID) IDs that uniquely identify records in Common Data Service. 
 
 A data integration system will use alternate keys to uniquely identify records using one or more entity field values that represent a unique combination. Each alternate key has a unique name. 

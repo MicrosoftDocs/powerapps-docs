@@ -17,6 +17,8 @@ search.app:
 ---
 # Order results using entity attributes with LINQ
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service(Common Data Service) for Apps, you can use lookup or OptionSet (Picklist) attributes to order results within a LINQ query. This topic shows several examples of this type of query.  
   
 ## Using a Lookup Value to Order By  

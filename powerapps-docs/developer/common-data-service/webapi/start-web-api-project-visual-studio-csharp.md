@@ -20,6 +20,8 @@ search.app:
 ---
 # Start a Common Data Service Web API project in Visual Studio (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic demonstrates how to create a new project in Visual Studio 2017 that builds a console application that uses the Common Data Service Web API. It illustrates the common references and project resources that most applications, including the SDK C# samples, use to implement Web API-based solutions.  
   
 <a name="bkmk_prerequisites"></a>   

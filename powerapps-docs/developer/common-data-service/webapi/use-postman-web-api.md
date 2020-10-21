@@ -21,6 +21,8 @@ search.app:
 
 # Use Postman with the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 There are a number of third-party tools that allow you to authenticate to Common Data Service instances and to compose and send Web API requests and view responses. Postman is one of the most popular.
 
 Use Postman to perform ad hoc queries or to verify the behavior of operations without writing a program. This section covers information on how to configure a Postman environment that connects to your Common Data Service instance and use Postman to perform operations with the Web API.

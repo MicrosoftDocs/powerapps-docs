@@ -21,6 +21,8 @@ search.app:
 ---
 # Sample: Task Parallel Library with CrmServiceClient
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Task Parallel Library (TPL) makes developers more productive by simplifying the process of adding parallelism and concurrency to applications.
 
 Adding parallelism and concurrency can significantly improve the total throughput for applications that need to perform a large number of CDS operations in a short period of time.

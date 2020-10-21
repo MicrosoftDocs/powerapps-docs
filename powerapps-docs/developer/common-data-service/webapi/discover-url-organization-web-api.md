@@ -23,6 +23,8 @@ search.app:
 ---
 # Discover the URL for your organization
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-discovery-service-description](../includes/cc-discovery-service-description.md)]
 
 When accessing the Discovery Service using the OData V4 RESTful API, you can add standard `$filter` and `$select` parameters to the service request to customize the returned list of instance data.

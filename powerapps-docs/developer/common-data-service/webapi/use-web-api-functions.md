@@ -23,6 +23,8 @@ search.app:
 ---
 # Use Web API functions
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Functions and actions represent re-usable operations you can perform using the Web API. There are two types of functions in the Web API:  
   
 **Functions**  

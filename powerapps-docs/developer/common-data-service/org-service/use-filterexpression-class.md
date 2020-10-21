@@ -17,6 +17,8 @@ search.app:
 ---
 # Use the FilterExpression class
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> class to build a query that expresses multiple conditions. For example, you can create a query expression that is the equivalent of a SQL statement such as `([FirstName] = 'Joe' OR [FirstName] = 'John') AND [City] = 'Redmond'`.  
   
  The following table lists the properties for the <xref:Microsoft.Xrm.Sdk.Query.FilterExpression> class.  

@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Bulk delete exported records
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to perform a bulk deletion of records that were previously exported from Common Data Service by using the **Export to Excel** option. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/BulkDeleteExported).
 
 ## How to run this sample

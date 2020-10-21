@@ -17,6 +17,8 @@ search.app:
 ---
 # On-premises deployment options
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <!-- 
 
 TODO: This page and any links to it will not be published until an on-premises version of Common Data Service is released.

@@ -17,6 +17,8 @@ search.app:
 ---
 # Use late-bound entity class with a LINQ query
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, you can use late binding with .NET Language-Integrated Query (LINQ) queries. Late binding uses the attribute logical name, and is resolved at runtime.  
   
 <a name="usinglatebindingjoin"></a>   

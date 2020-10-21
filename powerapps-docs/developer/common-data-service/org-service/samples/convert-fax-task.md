@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Convert a fax to a task
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-convert-fax-task -->
 
 

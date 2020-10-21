@@ -22,6 +22,8 @@ search.app:
 ---
 # Web API Functions and Actions Sample (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample demonstrates how to call bound and unbound functions and actions, including custom actions, using the Common Data Service Web API.  
   
 > [!NOTE]

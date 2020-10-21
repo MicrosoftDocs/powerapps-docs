@@ -17,6 +17,8 @@ search.app:
 ---
 # Page large result sets with LINQ
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, you can page the results of a large .NET Language-Integrated Query (LINQ) query by using the `Take` and `Skip` operators. The `Take` operator retrieves a specified number of results and the `Skip` operator skips over a specified number of results.  
   
 ## LINQ paging example  

@@ -24,6 +24,8 @@ search.app:
 
 # Solution publisher overview
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Every app you create or customization you make is part of a solution. Every solution has a publisher. You specify the publisher when you create a solution. 
 
 The solution publisher indicates who developed the app. For this reason, you should create a solution publisher that is meaningful. You can view the solution publisher for a solution by selecting **Settings** from the **Solutions** area in Power Apps.

@@ -18,6 +18,8 @@ search.app:
 
 # Scalable Customization Design: Concurrency issues
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 > [!NOTE]
 > This is the third in a series of topics about scalable customization design. To start at the beginning, see [Scalable Customization Design in Common Data Service](overview.md).
 > The previous topic [Scalable Customization Design: Database transactions](database-transactions.md) described how database transactions are applied and the effect they have on different types of customizations.

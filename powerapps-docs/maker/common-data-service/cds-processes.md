@@ -24,6 +24,8 @@ search.app:
   - D365CE
 ---
 # Apply business logic in Common Data Service
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 There are several choices available for applying business logic in Common Data Service. 
 
 ## Business rules

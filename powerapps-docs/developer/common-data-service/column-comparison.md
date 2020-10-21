@@ -18,6 +18,8 @@ search.app:
 
 # Use column comparison in queries
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In the Common Data Service, users can perform a column comparison for the
 following condition operators using FetchXML, Web API, or the SDK API:
 
