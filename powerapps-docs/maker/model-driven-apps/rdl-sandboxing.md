@@ -245,7 +245,7 @@ In Common Data Service, reports run in the sandbox mode. This is done by enablin
 ## Common denied members  
  The following table contains a list of denied members common in allowed types:  
   
-||  
+|Denied member|  
 |-|  
 |DateString|  
 |Duration|  
