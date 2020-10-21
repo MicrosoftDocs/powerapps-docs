@@ -24,7 +24,7 @@ search.app:
   - D365CE
 ---
 
-# Entity overview
+# Entity summary
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
