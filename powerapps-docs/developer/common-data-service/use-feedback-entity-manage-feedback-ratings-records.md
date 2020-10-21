@@ -17,6 +17,8 @@ search.app:
 ---
 # Use the Feedback entity to manage feedback and ratings for records
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Improve your products and services by enabling users to provide feedback and ratings for entity records in Common Data Service. For example, you can enable feedbacks and ratings for the `Product` entity to know user's feedback on the products you sell, or on the `Incident` (case) entity to understand and improve the quality of your customer support team.  
   
  You can enable feedback and rating for both system and custom entities in Common Data Service. By default, the `KnowledgeArticle` entity is enabled for feedback and ratings. Use the new `Feedback` entity to programmatically create and manage feedback for entity records.  

@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Create and retrieve Outlook filters
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This sample code is for Common Data Service. To download the sample, refer [Sample: Create and retrieve Outlook filters](/dynamics365/customer-engagement/developer/outlook-client/sample-create-retrieve-outlook-filters).
 
 ## Prerequisites

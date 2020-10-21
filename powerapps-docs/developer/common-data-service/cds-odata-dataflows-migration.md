@@ -15,6 +15,8 @@ search.app:
 
 # Migrate data between Common Data Service environments using the dataflows OData connector
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service [Web API](/powerapps/developer/common-data-service/webapi/overview) works with any technology that supports OData and OAuth. There are many options available to move data in and out of Common Data Service. OData connector is one of the dataflows, which is designed to support migration and synchronization of large datasets in Common Data Service. 
 
 In this article, we walk you through how to migrate data between Common Data Service environments using the dataflows OData connector. 

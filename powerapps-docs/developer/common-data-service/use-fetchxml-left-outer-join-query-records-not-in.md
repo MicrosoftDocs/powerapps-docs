@@ -17,6 +17,8 @@ search.app:
 ---
 # Use a left outer join in FetchXML to query for records "not in"
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can use a left outer join in FetchXML to perform a query that filters on the join table, such as to find all contacts who did not have any campaign activities in the past two months. Another common use for this type of a query is to find records “not in” a set, such as in these cases:  
   
 - Find all leads that have no tasks  

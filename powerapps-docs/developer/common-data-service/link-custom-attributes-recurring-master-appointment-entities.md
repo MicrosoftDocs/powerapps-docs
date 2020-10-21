@@ -17,6 +17,8 @@ search.app:
 ---
 # Link custom attributes of the recurring appointment master and appointment entities
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can link the custom attributes created for the `RecurringAppointmentMaster` entity with the custom attributes created for the `Appointment` entity to automatically copy the data from the recurring appointment master custom attribute to the linked recurring appointment instances custom attribute, every time it is expanded.  
   
  There is a 1:1 mapping between the custom attributes, which implies that a custom attribute of the recurring appointment master entity can be linked to only one custom attribute of the appointment entity. Moreover, the custom attributes that are to be linked together must be of the same type. For example, you cannot link a custom attribute of type `string` with a `decimal` custom attribute. For information about different types of attributes, see [Customize Entity Attribute Metadata](/dynamics365/customer-engagement/developer/customize-entity-attribute-metadata).  

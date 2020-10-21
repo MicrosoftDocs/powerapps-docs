@@ -23,6 +23,8 @@ search.app:
 ---
 # Verify certification dependencies for plug-ins making outbound calls
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Maintainability, Supportability
 
 **Impact potential**: High

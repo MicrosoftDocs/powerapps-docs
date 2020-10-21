@@ -23,6 +23,8 @@ search.app:
 
 # Export entity data to Azure Data Lake Storage Gen2
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The Export to Data Lake service is a pipeline to continuously export data from Common Data Service to Azure Data Lake Storage Gen2. The Export to Data Lake service is designed for enterprise big data analytics by delivering scalable high availability with disaster recovery capabilities. Data is stored in the Common Data Model format, which provides semantic consistency across apps and deployments. 
 
 ![Export to data lake overview](media/export-data-lake-overview.png "Export to Data Lake overview")

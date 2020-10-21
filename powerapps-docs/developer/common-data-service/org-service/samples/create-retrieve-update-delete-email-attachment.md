@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Create, retrieve, update, and delete an email attachment
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to create, retrieve, update, and delete email attachments using the following methods:
 
 - [IOrganizationService.Create](https://docs.microsoft.com/dotnet/api/microsoft.xrm.sdk.iorganizationservice.create?view=dynamics-general-ce-9)

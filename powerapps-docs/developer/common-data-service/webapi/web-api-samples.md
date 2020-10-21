@@ -22,6 +22,8 @@ search.app:
 ---
 # Web API Data operations Samples
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 You can use the Common Data Service Web API with a wide variety of programming languages or libraries. This guide provides a matrix of samples demonstrating how to use the Web API in a number of different ways. This topic introduces the samples available for each group of operations and how to perform these operations using different languages or libraries.
 
 <!-- TODO:

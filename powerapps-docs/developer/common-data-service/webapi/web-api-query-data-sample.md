@@ -23,6 +23,8 @@ search.app:
 ---
 # Web API Query Data Sample
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This group of  samples demonstrate how to query data using the Common Data Service Web API. This sample is implemented as a separate project for the following languages:
 
 - [Web API Query Data Sample (Client-side JavaScript)](samples/query-data-client-side-javascript.md)

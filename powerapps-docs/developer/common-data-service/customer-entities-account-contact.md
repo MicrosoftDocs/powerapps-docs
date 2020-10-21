@@ -17,6 +17,8 @@ search.app:
 ---
 # Customer entities (account, contact, customeraddress)
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <!-- 
 Was Mike Carter
 

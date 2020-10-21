@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Modify query in PreOperation stage
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to write a plug-in that modifies a query defined within the `PreOperation` stage of a `RetrieveMultiple` request.
 
 Data filtering in a plug-in is commonly done in the `PostOperation` stage. The <xref:Microsoft.Xrm.Sdk.EntityCollection.Entities> data can be examined and entities that should not be returned are removed from the collection. But this pattern introduces issues where the number of records returned within a page may not match the expected paging sizes.

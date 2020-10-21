@@ -24,6 +24,8 @@ search.app:
 
 # Best practices and guidance around working with data for the Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This list below contains all of the best practices and guidance around integrating data using code with the Common Data Service.
 
 |Best Practice  |Description  |

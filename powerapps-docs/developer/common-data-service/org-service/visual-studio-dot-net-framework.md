@@ -17,6 +17,8 @@ search.app:
 ---
 # Visual Studio and the .NET Framework
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The .NET SDK assemblies for Common Data Service are built on .NET Framework 4.6.2. 
 
 You can use Visual Studio to build your managed code applications using .NET Framework 4.6.2 or later. 

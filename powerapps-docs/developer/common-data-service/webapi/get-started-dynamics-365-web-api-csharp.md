@@ -23,6 +23,8 @@ search.app:
 ---
 # Get started with Common Data Service Web API (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This section shows you how to access the Common Data Service Web API using the C# programming language. The first topic, [Quick Start: Web API sample (C#)](quick-start-console-app-csharp.md), provides the quickest example of how to accomplish this, as all source code is simplified and provided in one file. The rest of this section shows you how to create and configure Visual Studio projects that use the Common Data Service Web API to perform common business data operations.  
   
 After completing this guide, you will have learned enough to explore the many other business operations that are supported by the Common Data Service Web API.   You will also have a better understanding about how the [Web API Samples (C#)](web-api-samples-csharp.md) are structured.  

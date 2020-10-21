@@ -17,6 +17,8 @@ search.app:
 ---
 # Conditional Operations sample (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to perform conditional message operations when accessing entity instance records of the Common Data Service. The sample uses the Common Data Service Web API and the CDSWebApiService class.
 
 Messages using a conditional statement, such as "If-None-Match", in the message header are sent to Common Data Service.

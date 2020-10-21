@@ -1,16 +1,20 @@
 ---
-title: "Set authentication identity for a portal  | MicrosoftDocs"
-description: "Instructions to set authentication identity for a portal."
+title: "Understand how to use local authentication, registration and other settings for authentication in Power Apps portals.  | MicrosoftDocs"
+description: "Learn about different site settings for portals, local authentication and registration process in Power Apps portals."
 author: sandhangitmsft
 ms.service: powerapps
 ms.topic: conceptual
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 10/12/2020
 ms.author: sandhan
 ms.reviewer: tapanm
 ---
 
-# Set authentication identity for a portal
+# Local authentication, registration and other settings
+
+> [!IMPORTANT]
+> - We recommend that you use [Azure AD B2C](configure-azure-ad-b2c-provider.md) identity provider for authentication, and deprecate local identity provider for your portal. To learn about migrating to Azure AD B2C identity provider, go to [Migrate identity providers to Azure AD B2C](migrate-identity-providers.md).
+> - Configuring local authentication requires using the [Portal Management app](configure-portal.md) to configure the required site settings manually.
 
 Portals provides authentication functionality built on the [ASP.NET Identity](https://www.asp.net/identity) API. ASP.NET Identity is in turn built on the [OWIN](https://www.asp.net/aspnet/overview/owin-and-katana) framework, which is also an important component of the authentication system. The services provided include:
 
@@ -103,6 +107,14 @@ The email sent by this workflow must be customized by using the URL to the redee
 
     ![Sign up with an invitation code](../media/sign-up-invitation-code.png "Sign up by using an invitation code")  
 
+### Disabled registration
+
+If registration is disabled for a user after the user has redeemed an invitation, display a message by using the following content snippet:
+
+**Name**: Account/Register/RegistrationDisabledMessage
+
+**Value**: Registration has been disabled.
+
 ## Manage user accounts through profile pages
 
 Authenticated users manage their user accounts through the **Security** navigation bar of the profile page. Users aren't limited to the single local account or single external account they chose at user registration time. Users who have an external account can choose to create a local account by applying a username and password. Users who started with a local account can choose to associate multiple external identities to their account. The profile page is also where the user is reminded to confirm their email address by requesting a confirmation email to be sent to their email account.
@@ -136,14 +148,14 @@ Changing an email address (or setting it for the first time) puts it into an unc
 3. The user checks email for confirmation.
 4. Process: Send email confirmation to contact
 5. Customize the confirmation email.
-6. The user clicks the confirmation link to complete the confirmation process.
+6. The user selects the confirmation link to complete the confirmation process.
 
 > [!NOTE]
 > Ensure that the primary email is specified for the contact because the confirmation email is sent only to the primary email (emailaddress1) of the contact. The confirmation email is not sent to the secondary email (emailaddress2) or alternate email (emailaddress3) of the contact record.
 
 ## Enable two-factor authentication
 
-The two-factor authentication feature increases user account security by requiring proof of ownership of a confirmed email in addition to the standard local or external account sign-in. A user trying to sign in to an account that has two-factor authentication enabled is sent a security code to the confirmed email associated with their account. The security code must be submitted to complete the sign-in process. A user can choose to remember the browser that successfully passed the verification, so that the security code won't be required for next sign ins from the same browser. Each user account enables this feature individually and requires a confirmed email.
+The two-factor authentication feature increases user account security by requiring proof of ownership of a confirmed email in addition to the standard local or external account sign-in. A user trying to sign in to an account that has two-factor authentication enabled is sent a security code to the confirmed email associated with their account. The security code must be submitted to complete the sign-in process. A user can choose to remember the browser that successfully passed the verification, so that the security code won't be required for next sign-ins from the same browser. Each user account enables this feature individually and requires a confirmed email.
 
 > [!WARNING]
 > If you create and enable the **Authentication/Registration/MobilePhoneEnabled** site setting to enable the legacy functionality, an error will occur. This site setting is not provided out of the box and not supported by portals.
@@ -163,7 +175,7 @@ The two-factor authentication feature increases user account security by requiri
 
 ## Manage external accounts
 
-An authenticated user may connect (register) multiple external identities to their user account, one from each configured identity provider. After the identities are connected, the user may choose to sign in by using any of the connected identities. Existing identities can also be disconnected, as long as a single external or local identity remains.
+An authenticated user may connect (register) multiple external identities to their user account, one from each configured identity provider. After the identities are connected, the user may choose to sign in by using any of the connected identities. Existing identities can also be disconnected, as long as a single external, or local identity remains.
 
 **Related Site Settings:**
 
@@ -181,7 +193,7 @@ The provider is now connected. The provider can also be disconnected.
 
 ## Enable ASP.NET identity authentication
 
-The following describes the settings for enabling and disabling various authentication features and behaviors:
+The following table describes the settings for enabling and disabling various authentication features and behaviors:
 
 
 |                        Site Setting Name                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -196,7 +208,7 @@ The following describes the settings for enabling and disabling various authenti
 | Authentication/Registration/ResetPasswordRequiresConfirmedEmail |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Enables or disables password reset for confirmed email addresses only. If enabled, unconfirmed email addresses can't be used to send password reset instructions. Default: false                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |   Authentication/Registration/TriggerLockoutOnFailedPassword    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Enables or disables recording of failed password attempts. If disabled, user accounts won't be locked out. Default: true                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 |             Authentication/Registration/IsDemoMode              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Enables or disables a demo mode flag to be used in development or demonstration environments only. Don't enable this setting on production environments. Demo mode also requires the web browser to be running locally to the web application server. When demo mode is enabled, the password reset code and second-factor code are displayed to the user for quick access. Default: false                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|    Authentication/Registration/LoginButtonAuthenticationType    | If a portal only requires a single external identity provider (to handle all authentication), this allows the **Sign-In** button of the header nav bar to link directly to the sign-in page of that external identity provider (instead linking to the intermediate local sign-in form and identity provider selection page). Only a single identity provider can be selected for this action. Specify the [AuthenticationType](https://msdn.microsoft.com/library/microsoft.owin.security.authenticationoptions.authenticationtype.aspx) value of the provider.<br>For a single sign-on configuration using OpenIdConnect, such as using Azure Active Directory B2C, the user needs to provide the Authority.<br>For OAuth2 based providers the accepted values are: `Facebook, Google, Yahoo, [!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)], LinkedIn, Yammer,` or `Twitter`<br>For WS-Federation-based providers, use the value specified for the `Authentication/WsFederation/ADFS/AuthenticationType` and `Authentication/WsFederation/[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]/\[provider\]/AuthenticationType` site settings. Examples: https://adfs.contoso.com/adfs/services/trust, Facebook-0123456789, Google, Yahoo!, uri:[!INCLUDE[pn-ms-windows-short](../../../includes/pn-ms-windows-short.md)]LiveID. |
+|    Authentication/Registration/LoginButtonAuthenticationType    | If a portal only requires a single external identity provider (to handle all authentication), this allows the **Sign-In** button of the header nav bar to link directly to the sign-in page of that external identity provider (instead linking to the intermediate local sign-in form and identity provider selection page). Only a single identity provider can be selected for this action. Specify the *AuthenticationType* value of the provider.<br>For a single sign-on configuration using OpenIdConnect, such as using Azure Active Directory B2C, the user needs to provide the Authority.<br>For OAuth2 based providers the accepted values are: `Facebook, Google, Yahoo, [!INCLUDE[cc-microsoft](../../../includes/cc-microsoft.md)], LinkedIn, Yammer,` or `Twitter`<br>For WS-Federation-based providers, use the value specified for the `Authentication/WsFederation/ADFS/AuthenticationType` and `Authentication/WsFederation/[!INCLUDE[pn-azure-shortest](../../../includes/pn-azure-shortest.md)]/\[provider\]/AuthenticationType` site settings. Examples: https://adfs.contoso.com/adfs/services/trust, Facebook-0123456789, Google, Yahoo!, uri:[!INCLUDE[pn-ms-windows-short](../../../includes/pn-ms-windows-short.md)]LiveID. |
 |                                                                 |                                                                                                                                                                                                                                                                                                  |
 
 ## Enable or disable user registration
@@ -221,13 +233,13 @@ The following describes the settings for adjusting username and password validat
 | Site Setting Name                                                       | Description                                                                                                                                                                                         |
 |-------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Authentication/UserManager/PasswordValidator/EnforcePasswordPolicy      | Whether the password contains characters from three of the following categories:<br><ul><li>Uppercase letters of European languages (A through Z, with diacritic marks, Greek and Cyrillic characters)</li><li>Lowercase letters of European languages (a through z, sharp-s, with diacritic marks, Greek and Cyrillic characters)</li><li>Base 10 digits (0 through 9)</li><li>Nonalphanumeric characters (special characters) (for example, !, $, \#, %)</li></ul>Default: true. For more information: [Password policy](https://technet.microsoft.com/library/hh994562(v=ws.10).aspx).                                                                                                           |  
-| Authentication/UserManager/UserValidator/AllowOnlyAlphanumericUserNames | Whether to allow only alphanumeric characters for the username. Default: false. For more information: [UserValidator<TUser, TKey>.AllowOnlyAlphanumericUserNames](https://msdn.microsoft.com/library/dn613211.aspx).                                                          |  
-| Authentication/UserManager/UserValidator/RequireUniqueEmail             | Whether a unique email address is needed for validating the user. Default: true. For more information: [UserValidator<TUser, TKey>.RequireUniqueEmail](https://msdn.microsoft.com/library/dn613213.aspx).                                                                   |  
-| Authentication/UserManager/PasswordValidator/RequiredLength             | The minimum required password length. Default: 8. For more information: [PasswordValidator.RequiredLength](https://msdn.microsoft.com/library/microsoft.aspnet.identity.passwordvalidator.requiredlength.aspx).                                       |  
-| Authentication/UserManager/PasswordValidator/RequireNonLetterOrDigit    | Whether the password requires a non-letter or digit character. Default: false. For more information: [PasswordValidator.RequireNonLetterOrDigit](https://msdn.microsoft.com/library/microsoft.aspnet.identity.passwordvalidator.requirenonletterordigit.aspx). |  
-| Authentication/UserManager/PasswordValidator/RequireDigit               | Whether the password requires a numeric digit (from 0 through 9). Default: false. For more information: [PasswordValidator.RequireDigit](https://msdn.microsoft.com/library/microsoft.aspnet.identity.passwordvalidator.requiredigit.aspx).                |  
-| Authentication/UserManager/PasswordValidator/RequireLowercase           | Whether the password requires a lowercase letter (from a through z). Default: false. For more information: [PasswordValidator.RequireLowercase](https://msdn.microsoft.com/library/microsoft.aspnet.identity.passwordvalidator.requirelowercase.aspx).        |  
-| Authentication/UserManager/PasswordValidator/RequireUppercase           | Whether the password requires an uppercase letter (from A through Z). Default: false. For more information: [PasswordValidator.RequireUppercase](https://msdn.microsoft.com/library/microsoft.aspnet.identity.passwordvalidator.requireuppercase.aspx).       | 
+| Authentication/UserManager/UserValidator/AllowOnlyAlphanumericUserNames | Whether to allow only alphanumeric characters for the username. <br> Default: `false` |  
+| Authentication/UserManager/UserValidator/RequireUniqueEmail             | Whether a unique email address is needed for validating the user. <br> Default: `true` |  
+| Authentication/UserManager/PasswordValidator/RequiredLength             | The minimum required password length. <br> Default: `8`. |  
+| Authentication/UserManager/PasswordValidator/RequireNonLetterOrDigit    | Whether the password requires a non-letter or digit character. <br> Default: `false` |  
+| Authentication/UserManager/PasswordValidator/RequireDigit               | Whether the password requires a numeric digit (from 0 through 9). <br> Default: `false` |  
+| Authentication/UserManager/PasswordValidator/RequireLowercase           | Whether the password requires a lowercase letter (from a through z). <br> Default: `false` |  
+| Authentication/UserManager/PasswordValidator/RequireUppercase           | Whether the password requires an uppercase letter (from A through Z). <br>  Default: `false` | 
 || 
 
 ## User account lockout settings
@@ -236,38 +248,42 @@ The following describes the settings that define how and when an account becomes
 
 | Site Setting Name                                               | Description                                                                                                                                                                                                                                     |
 |-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Authentication/UserManager/UserLockoutEnabledByDefault          | Indicates whether the user lockout is enabled when users are created. Default: true. For more information: [UserManager<TUser, TKey>.UserLockoutEnabledByDefault](https://msdn.microsoft.com/library/dn613214.aspx).                                                                                                  |  
-| Authentication/UserManager/DefaultAccountLockoutTimeSpan        | The default amount of time that a user is locked out for after Authentication/UserManager/MaxFailedAccessAttemptsBeforeLockout is reached. Default: 24:00:00 (1 day). For more information: [UserManager<TUser, TKey>.DefaultAccountLockoutTimeSpan](https://msdn.microsoft.com/library/dn613201.aspx).                 |  
-| Authentication/UserManager/MaxFailedAccessAttemptsBeforeLockout | The maximum number of access attempts allowed before a user is locked out (if lockout is enabled). Default: 5. For more information: [UserManager<TUser, TKey>.MaxFailedAccessAttemptsBeforeLockout](https://msdn.microsoft.com/library/dn613202.aspx).                                                                        |  
+| Authentication/UserManager/UserLockoutEnabledByDefault          | Indicates whether the user lockout is enabled when users are created. <br> Default: `true` |  
+| Authentication/UserManager/DefaultAccountLockoutTimeSpan        | The default amount of time that a user is locked out for after Authentication/UserManager/MaxFailedAccessAttemptsBeforeLockout is reached. <br> Default: `24:00:00` (1 day) |  
+| Authentication/UserManager/MaxFailedAccessAttemptsBeforeLockout | The maximum number of access attempts allowed before a user is locked out (if lockout is enabled). <br> Default: `5` |  
 
 
 ## Cookie authentication site settings
 
-Settings for modifying the default authentication cookie behavior. Defined by the [CookieAuthenticationOptions](https://msdn.microsoft.com/library/microsoft.owin.security.cookies.cookieauthenticationoptions.aspx) class.
+Settings for modifying the default authentication cookie behavior. Defined by the CookieAuthenticationOptions class.
 
 | Site Setting Name   | Description       |
 |----------------------|------------------------------------------------|
-| Authentication/ApplicationCookie/AuthenticationType                      | The type of the application authentication cookie. Default: ApplicationCookie. For more information: [AuthenticationOptions::AuthenticationType](https://msdn.microsoft.com/library/dn300391.aspx).  |
-| Authentication/ApplicationCookie/CookieName                              | Determines the cookie name used to persist the identity. Default: .AspNet.Cookies. For more information: [CookieAuthenticationOptions::CookieName](https://msdn.microsoft.com/library/dn385537.aspx).  |
-| Authentication/ApplicationCookie/CookieDomain                            | Determines the domain used to create the cookie. For more information: [CookieAuthenticationOptions::CookieDomain](https://msdn.microsoft.com/library/dn385536.aspx).  |
-| Authentication/ApplicationCookie/CookiePath                              | Determines the path used to create the cookie. Default: /. For more information: [CookieAuthenticationOptions::CookiePath](https://msdn.microsoft.com/library/dn385539.aspx). |
-| Authentication/ApplicationCookie/CookieHttpOnly                          | Determines if the browser should allow the cookie to be accessed by client-side JavaScript. Default: true. For more information: [CookieAuthenticationOptions::CookieHttpOnly](https://msdn.microsoft.com/library/dn385540.aspx).                     |
-| Authentication/ApplicationCookie/CookieSecure                            | Determines if the cookie should only be transmitted on HTTPS request. Default: SameAsRequest. For more information: [CookieAuthenticationOptions::CookieSecure](https://msdn.microsoft.com/library/dn385538.aspx).  |
-| Authentication/ApplicationCookie/ExpireTimeSpan                          | Controls how much time the application cookie will remain valid from the point it's created. Default: 24:00:00 (1 day). For more information: [CookieAuthenticationOptions::ExpireTimeSpan](https://msdn.microsoft.com/library/microsoft.owin.security.cookies.cookieauthenticationoptions.expiretimespan(v=vs.113).aspx).  |
-| Authentication/ApplicationCookie/SlidingExpiration                       | The SlidingExpiration is set to true to instruct the middleware to reissue a new cookie with a new expiration time anytime it processes a request that is more than halfway through the expiration window. Default: true. For more information: [CookieAuthenticationOptions::SlidingExpiration](https://msdn.microsoft.com/library/dn385548.aspx). |
-| Authentication/ApplicationCookie/LoginPath                               | The LoginPath property informs the middleware that it should change an outgoing 401 Unauthorized status code into a 302 redirection onto the given login path. Default: ~/signin. For more information: [CookieAuthenticationOptions::LoginPath](https://msdn.microsoft.com/library/dn385541.aspx).                                            |
-| Authentication/ApplicationCookie/LogoutPath                              | If the LogoutPath is provided by the middleware, then a request to that path will redirect based on the ReturnUrlParameter. For more information: [CookieAuthenticationOptions::LogoutPath](https://msdn.microsoft.com/library/dn385545.aspx).               |
-| Authentication/ApplicationCookie/ReturnUrlParameter                      | The ReturnUrlParameter determines the name of the query string parameter that is appended by the middleware when a 401 Unauthorized status code is changed to a 302 redirect onto the login path. For more information: [CookieAuthenticationOptions::ReturnUrlParameter](https://msdn.microsoft.com/library/dn385546.aspx).                           |
-| Authentication/ApplicationCookie/SecurityStampValidator/ValidateInterval | The period of time between security stamp validations. Default: 30 mins. For more information: [SecurityStampValidator::OnValidateIdentity](https://msdn.microsoft.com/library/microsoft.aspnet.identity.owin.securitystampvalidator.onvalidateidentity.aspx).                    |
-| Authentication/TwoFactorCookie/AuthenticationType                        | The type of the two-factor authentication cookie. Default: TwoFactorCookie. For more information: [AuthenticationOptions::AuthenticationType](https://msdn.microsoft.com/library/dn300391.aspx).            |
-| Authentication/TwoFactorCookie/ExpireTimeSpan                            | Controls how much time the two-factor cookie will remain valid from the point it's created. Default: 5 mins. For more information: [CookieAuthenticationOptions::ExpireTimeSpan](https://msdn.microsoft.com/library/dn385543.aspx).     |
+| Authentication/ApplicationCookie/AuthenticationType                      | The type of the application authentication cookie. <br> Default: `ApplicationCookie` |
+| Authentication/ApplicationCookie/CookieName                              | Determines the cookie name used to persist the identity. <br> Default: `.AspNet.Cookies` |
+| Authentication/ApplicationCookie/CookieDomain                            | Determines the domain used to create the cookie. |
+| Authentication/ApplicationCookie/CookiePath                              | Determines the path used to create the cookie. <br> Default: `/` |
+| Authentication/ApplicationCookie/CookieHttpOnly                          | Determines if the browser should allow the cookie to be accessed by client-side JavaScript. <br> Default: `true` |
+| Authentication/ApplicationCookie/CookieSecure                            | Determines if the cookie should only be transmitted on HTTPS request. <br> Default: `SameAsRequest` |
+| Authentication/ApplicationCookie/ExpireTimeSpan                          | Controls how much time the application cookie will remain valid from the point it's created. <br> Default: `24:00:00` (1 day) |
+| Authentication/ApplicationCookie/SlidingExpiration                       | The SlidingExpiration is set to true to instruct the middleware to reissue a new cookie with a new expiration time anytime it processes a request that is more than halfway through the expiration window. <br> Default: `true` |
+| Authentication/ApplicationCookie/LoginPath                               | The LoginPath property informs the middleware that it should change an outgoing 401 Unauthorized status code into a 302 redirection onto the given login path. <br> Default: `~/signin` |
+| Authentication/ApplicationCookie/LogoutPath                              | If the LogoutPath is provided by the middleware, then a request to that path will redirect based on the ReturnUrlParameter. |
+| Authentication/ApplicationCookie/ReturnUrlParameter                      | The ReturnUrlParameter determines the name of the query string parameter that is appended by the middleware when a 401 Unauthorized status code is changed to a 302 redirect onto the login path. |
+| Authentication/ApplicationCookie/SecurityStampValidator/ValidateInterval | The period of time between security stamp validations. <br> Default: `30` minutes |
+| Authentication/TwoFactorCookie/AuthenticationType                        | The type of the two-factor authentication cookie. <br> Default: `TwoFactorCookie` |
+| Authentication/TwoFactorCookie/ExpireTimeSpan                            | Controls how much time the two-factor cookie will remain valid from the point it's created. <br> Default: `5` minutes |
 |||
+
+## Next steps
+
+[Migrate identity providers to Azure AD B2C](migrate-identity-providers.md)
 
 ### See also
 
-- [Configure portal authentication](configure-portal-authentication.md)  
-- [OAuth2 provider settings for portals](configure-oauth2-settings.md)  
-- [Open ID Connect provider settings for portals](configure-openid-settings.md)  
-- [WS-Federation provider settings for portals](configure-ws-federation-settings.md)  
-- [SAML 2.0 provider settings for portals](configure-saml2-settings.md)
+- [Overview of authentication in Power Apps portals](configure-portal-authentication.md)  
+- [Configure OAuth 2.0 providers for portals](configure-oauth2-provider.md)  
+- [Configure the Open ID Connect provider for portals](configure-openid-provider.md)  
+- [Configure SAML 2.0 provider for portals](configure-saml2-provider.md)
+- [Configure WS-Federation provider for portals](configure-ws-federation-provider.md)  
 - [Microsoft Learn: Power Apps portals authentication settings](https://docs.microsoft.com/learn/modules/authentication-user-management/2-authentication-settings)

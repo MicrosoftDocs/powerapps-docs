@@ -17,6 +17,8 @@ search.app:
 ---
 # Fiscal date and older than datetime query operators in FetchXML
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 A FetchXML query in Common Data Service can use special fiscal date values and *older than* clauses for date and time values in queries. For example, a FetchXML query can find all orders fulfilled in the last fiscal month or urgent cases with high severity that are older than 15 minutes.  
   
 > [!NOTE]

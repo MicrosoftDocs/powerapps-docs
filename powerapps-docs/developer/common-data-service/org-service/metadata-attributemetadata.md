@@ -17,6 +17,8 @@ search.app:
 ---
 # Work with attribute metadata
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic describes a number of common operations that can be applied to attribute metadata.
 
 <a name="BKMK_CreateAttributes"></a>   

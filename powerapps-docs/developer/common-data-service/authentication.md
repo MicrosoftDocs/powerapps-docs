@@ -17,6 +17,8 @@ search.app:
 ---
 # Authentication with Common Data Service web services
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 When you create client applications that use Common Data Service web services you need to authenticate to gain access to data. 
 How you authenticate depends on the software framework you use and which web service you want to connect with.
 

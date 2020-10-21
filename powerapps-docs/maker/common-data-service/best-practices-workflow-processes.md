@@ -26,6 +26,8 @@ search.audienceType:
 # Best practices for real-time workflow processes
 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This topic contains best practices for creating and managing real-time workflow processes.  
 
 

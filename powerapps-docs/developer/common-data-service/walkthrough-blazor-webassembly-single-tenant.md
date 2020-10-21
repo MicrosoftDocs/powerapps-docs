@@ -18,6 +18,8 @@ search.app:
 
 # Tutorial: Create an ASP.NET Core Blazor WebAssembly App using Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Use the steps in this tutorial to create a Blazor WebAssembly app that connects to the Common Data Service. The focus of this topic is to understand the necessary steps to authenticate a user with a specific Common Data Service instance and retrieve data.
 
 Blazor WebAssembly is one of two hosting models available for ASP.NET Core Blazor, the other is Blazor Server. For a complete description of the differences, see [ASP.NET Core Blazor hosting models](/aspnet/core/blazor/hosting-models).

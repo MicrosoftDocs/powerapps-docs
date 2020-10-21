@@ -17,6 +17,8 @@ search.app:
 ---
 # File attributes
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 A file attribute is used for storing file data up to a specified maximum size. A custom or customizable entity can have zero or more file attributes plus a notes (annotation) collection with zero to one attachment in each note. The <xref:Microsoft.Xrm.Sdk.Metadata.AttributeMetadata.SchemaName> of the file attribute is `EntityFile`.
 
 Web API (REST) | .NET API (SOAP)

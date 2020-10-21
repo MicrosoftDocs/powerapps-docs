@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Access the Discovery service
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample code shows how to use the discovery service with SDK assemblies. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/DiscoveryService)
 
 ## How to run this sample

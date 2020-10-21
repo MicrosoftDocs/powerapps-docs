@@ -17,6 +17,8 @@ search.app:
 ---
 # Use the ColumnSet class
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, you can use the <xref:Microsoft.Xrm.Sdk.Query.ColumnSet> class to specify what attributes to return from a query defined using the <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and <xref:Microsoft.Xrm.Sdk.Query.QueryByAttribute> classes. It is also a parameter for the <xref:Microsoft.Xrm.Sdk.IOrganizationService>.<xref:Microsoft.Xrm.Sdk.IOrganizationService.Retrieve*> method and it is used as a property in a number of message request classes which return data in an <xref:Microsoft.Xrm.Sdk.EntityCollection>.
 
 > [!NOTE]
