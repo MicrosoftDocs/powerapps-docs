@@ -30,7 +30,7 @@ To learn about the roles required to perform this task, read [Admin roles requir
      > [!NOTE]
      > The SSL certificate must meet all the following requirements:
      > - Signed by a trusted certificate authority.
-     > - [Exported](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps) as a password-protected PFX file.
+     > - [Exported](https://docs.microsoft.com/powershell/module/pkiclient/export-pfxcertificate?view=win10-ps&preserve-view=true) as a password-protected PFX file.
      > - Contains private key at least 2048 bits long.
      > - Contains all intermediate certificates in the certificate chain.
      > - Must be SHA2 enabled; SHA1 support is being removed from popular browsers.
