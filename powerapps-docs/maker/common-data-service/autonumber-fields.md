@@ -80,7 +80,7 @@ Autonumber fields have a default seed value of 1000, but you may set a custom se
 5.  On the right pane, enter a **Display name** and select **Autonumber** for the **Data type**.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/create-autonumber-field.png "Create an autonumber field")
+    > ![Create an autonumber field](media/create-autonumber-field.png "Create an autonumber field")
   
 6. Set optional fields as needed. More information: [Create and edit fields](create-edit-field-portal.md#create-a-field)
 
