@@ -19,7 +19,7 @@ search.app:
 
 # Configure mobile offline synchronization for the Power Apps mobile app
 
-Mobile offline allows users to use the [Power Apps mobile](https://powerapps.microsoft.com/downloads/) app in offline mode. Users can interact with their data, even when they are not connected to the internet. To enable users to use Power Apps mobile in offline mode, you need to configure mobile offline synchronization for your organization. Once mobile offline synchronization set up then your app users can start using Power Apps mobile in offlince mobe. For more information see,  [Configure mobile offline synchronization](https://docs.microsoft.com/dynamics365/mobile-app/preview-setup-mobile-offline).
+Mobile offline allows users to use the [Power Apps mobile](https://powerapps.microsoft.com/downloads/) app in offline mode. Model-driven app users can interact with their data, even when they are not connected to the internet. To enable users to use Power Apps mobile in offline mode, you need to configure mobile offline synchronization for your organization. Once mobile offline synchronization set up then your app users can start using Power Apps mobile in offlince mobe. For more information see,  [Configure mobile offline synchronization](https://docs.microsoft.com/dynamics365/mobile-app/preview-setup-mobile-offline).
 
 > [!IMPORTANT]
 > The [Configure mobile offline synchronization](https://docs.microsoft.com/dynamics365/mobile-app/preview-setup-mobile-offline) topic covers how to set up mobile offline synchronization for both the Power Apps mobile app and the Dynamics 365 phones and tablet app. The set up process is the same for both apps. 
