@@ -23,6 +23,8 @@ search.app:
 ---
 # Use XRM tooling to retrieve data
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 There are many methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for retrieving data in Common Data Service. The following examples demonstrate how you can retrieve a record by ID or FetchXML query.  
   
 ## GetEntityDataById  

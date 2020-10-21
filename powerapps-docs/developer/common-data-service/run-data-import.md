@@ -17,6 +17,8 @@ search.app:
 ---
 # Run data import
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Data import runs directly on the Common Data Service server. To run data import, set up asynchronous jobs to run in the background that do the following, in this order:  
   
 - Parse source data that is contained in the import file.  

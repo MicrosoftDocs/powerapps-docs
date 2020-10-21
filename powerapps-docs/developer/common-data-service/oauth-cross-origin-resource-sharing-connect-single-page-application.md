@@ -25,6 +25,8 @@ search.app:
 -->
 # Use OAuth with Cross-Origin Resource Sharing to connect a Single Page Application
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can create a Single Page Apps (SPAs) which uses JavaScript to work with Common Data Service data. To provide this, Cross-Origin Resource Sharing (CORS) is enabled so that your SPAs can bypass browser restrictions that normally prevent requests that cross domain boundaries.  
   
 > [!NOTE]

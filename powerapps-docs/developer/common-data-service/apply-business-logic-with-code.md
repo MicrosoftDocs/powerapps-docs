@@ -22,6 +22,8 @@ search.app:
 
 # Apply business logic using code
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Whenever possible, you should first consider applying one of the several declarative process options to define or apply business logic. More information: [Apply business logic in Common Data Service](../../maker/common-data-service/cds-processes.md)
 
 When a declarative process doesn’t meet a requirement, as a developer you have several options. This topic will introduce common options to write code.

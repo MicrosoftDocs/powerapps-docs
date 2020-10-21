@@ -17,6 +17,8 @@ search.app:
 ---
 # Update a recurring appointment
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can either update the whole series or update an instance of a recurring appointment.  
   
 ## Update a recurring appointment series  

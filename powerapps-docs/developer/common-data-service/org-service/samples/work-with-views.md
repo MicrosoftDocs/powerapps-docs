@@ -18,6 +18,8 @@ search.app:
 
 # Work with views
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to perform various actions on views.
 
 ## How to run this sample

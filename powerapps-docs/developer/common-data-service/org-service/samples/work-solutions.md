@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Work with solutions
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-work-solutions -->
 
 This sample shows how to how to perform the following actions with solutions:

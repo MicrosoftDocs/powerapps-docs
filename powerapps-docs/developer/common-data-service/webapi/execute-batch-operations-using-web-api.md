@@ -23,6 +23,8 @@ search.app:
 ---
 # Execute batch operations using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 You can group multiple operations into a single HTTP request using a batch operation.  
   
 <a name="bkmk_Whentousebatchrequests"></a>

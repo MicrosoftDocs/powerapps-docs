@@ -17,6 +17,8 @@ search.app:
 ---
 # Upload and manage document templates
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <!-- 
 Was Mike Carter
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/upload-manage-document-templates

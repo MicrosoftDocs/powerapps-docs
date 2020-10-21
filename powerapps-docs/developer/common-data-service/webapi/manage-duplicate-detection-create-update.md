@@ -23,6 +23,8 @@ search.app:
 
 # Detect duplicate data using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Common Data Service Web API allows you to detect duplicate records of an existing record in order to maintain integrity of data. For detailed information about detecting duplicate data using code, see [Detect duplicate data using code](../detect-duplicate-data-with-code.md) 
 
 ## Detect duplicates during Create operation

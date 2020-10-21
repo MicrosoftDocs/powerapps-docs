@@ -17,6 +17,8 @@ search.app:
 ---
 # Describe a relationship between entities with connection roles
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can describe the relationship between records through the roles that you assign to them.  
   
  There are several ways you can use the connection roles in a connection:  

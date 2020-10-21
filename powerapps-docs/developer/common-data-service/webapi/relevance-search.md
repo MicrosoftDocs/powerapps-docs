@@ -24,6 +24,8 @@ search.app:
 
 # Search across entity data using relevance search
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Relevance search delivers fast and comprehensive search results across multiple
 entities, in a single list, sorted by relevance. Relevance search must be
 enabled in your target environment by an administrator prior to using the

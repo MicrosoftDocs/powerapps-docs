@@ -17,6 +17,8 @@ search.app:
 ---
 # CDSWebApiService class library (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 A .NET Framework sample class library that uses JSON objects and common HTTP messaging operations with the Common Data Service Web API. Use of these class methods result in less complicated application code, implementation of performance best practices, and improved error processing.
 
 This class library demonstrates how to:

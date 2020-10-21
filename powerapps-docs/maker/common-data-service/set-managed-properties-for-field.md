@@ -26,6 +26,8 @@ search.app:
 ---
 # Set managed properties for fields
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_SettingManagedProperties"></a>   
 
  Managed properties only apply when you include fields in a managed solution and import the solution into another environment. These settings allow a solution maker to have some control over the level of customization that people who install their managed solution can have when they customize this field. To set managed properties for a field, select **Managed Properties** on the menu bar.  
