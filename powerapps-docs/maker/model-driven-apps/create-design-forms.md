@@ -47,7 +47,7 @@ Power Apps provides many options for designing forms. With Unified Interface, mo
   
 There are still a number of entities, referred to here as classic entities, that retain the appearance and capabilities from earlier versions. These entities are used less often. They are listed here:  
   
-||||||  
+|<!--Item-->|<!--Item-->|<!--Item-->|<!--Item-->|<!--Item-->|  
 |-|-|-|-|-|  
 |Address|Article|Article Comment|Bulk Delete Operation|Connection|  
 |Discount|Discount List|Document Location|Email Attachment|Follow|  
