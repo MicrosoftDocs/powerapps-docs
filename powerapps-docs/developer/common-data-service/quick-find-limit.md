@@ -18,6 +18,8 @@ search.app:
 
 # Work with Quick Find’s search item limit
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Quick Find provides an easy way to configure the default search experience
 across Dynamics 365 Customer Engagement or Common Data Service entities. Quick Find provides optimized searching across multiple fields in a single query. When using Quick Find, the data service may return an error during a
 query indicating:

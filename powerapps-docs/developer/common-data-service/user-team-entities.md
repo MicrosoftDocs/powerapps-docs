@@ -17,6 +17,8 @@ search.app:
 ---
 # User and team entities
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 User and team management is the area of Common Data Service where you can create and maintain user accounts and profiles.  
 
  A *user* is any person who works for a business unit who uses Common Data Service. Each user has a user account. All users must be associated with only one business unit. This association controls which customer data the user will have access to. Included in the user's account is information such as the user's telephone numbers, email address, and a link to the user's manager. Each user has privileges and rights to manage their own personal settings. Each user corresponds to a user in the Azure Active Directory for that organization. When you create a user, you must assign the user to at least one security role. Even if the user is part of a team that has assigned roles, the user should be assigned to a role. For more information about access levels and roles, see [How Role-Based Security Can Be Used to Control Access to Entities In Dynamics 365](/dynamics365/customer-engagement/developer/security-dev/how-role-based-security-control-access-entities).  

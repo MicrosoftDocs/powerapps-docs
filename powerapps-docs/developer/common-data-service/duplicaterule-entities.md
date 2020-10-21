@@ -17,6 +17,8 @@ search.app:
 ---
 # Duplicate rule entities
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 For information about how to configure duplicate rules in the application, see [Administrators Guide: Set up duplicate detection rules to keep your data clean](/dynamics365/customer-engagement/admin/set-up-duplicate-detection-rules-keep-data-clean).
 
 Duplicate detection rules are defined using the following entities:

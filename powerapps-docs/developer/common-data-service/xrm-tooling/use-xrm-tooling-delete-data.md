@@ -23,6 +23,8 @@ search.app:
 ---
 # Use XRM tooling to delete data
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 There are two methods available in the <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient> class for deleting data in Common Data Service: <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntity(System.String,System.Guid,System.Guid)> and <xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntityAssociation(System.String,System.Guid,System.String,System.Guid,System.String,System.Guid)>.  
   
 ## DeleteEntity  

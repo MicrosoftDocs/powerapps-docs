@@ -17,6 +17,8 @@ search.app:
 ---
 # Data import entities
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The Common Data Service data import entities are used to create data maps, configure and run data imports, and log failure information.  
 
  The following table lists the entities that are used to configure, run, and log failures for import operations.  

@@ -23,6 +23,8 @@ search.app:
 ---
 # Limit the registration of plug-ins for Retrieve and RetrieveMultiple messages
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Performance
 
 **Impact potential**: Medium

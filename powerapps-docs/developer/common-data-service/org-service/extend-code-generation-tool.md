@@ -17,6 +17,8 @@ search.app:
 ---
 # Create extensions for the code generation tool
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 You can extend the functionality of the code generation tool by specifying additional command-line parameters and parameter values. To specify a parameter, add the following to the command line: /\<*parametername*>:\<*class name*>,\<*assembly name*>. Note that assembly name does not include the .dll extension. As an alternative, you can add the equivalent value to the config file in the format “<add key=”\<*parametername*>” value=”\<*class name*>,\<*assembly name*>” />”.  
 
 The following table lists the parameters that you can use.  

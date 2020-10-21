@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Retrieve time zone information
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-retrieve-time-zone-information -->
 
 This sample shows how to retrieve time zone information. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/RetrieveTimeZone).

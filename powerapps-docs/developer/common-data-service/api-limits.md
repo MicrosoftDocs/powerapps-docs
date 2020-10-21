@@ -17,6 +17,8 @@ search.app:
 ---
 # Service Protection API Limits
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 To ensure consistent availability and performance for everyone we apply some limits to how APIs are used. These limits are designed to detect when client applications are making extraordinary demands on server resources.
 
 The limits should not affect normal users of interactive clients. Only client applications that perform extraordinary API requests should be affected. The limits provide a level of protection from random and unexpected surges in request volumes that threaten the availability and performance characteristics of the Common Data Service platform.

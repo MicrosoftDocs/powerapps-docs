@@ -17,6 +17,8 @@ search.app:
 ---
 # Insert, update, delete, and order global option set options
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 <!-- 
 
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/org-service/insert-update-delete-order-global-option-set-options 

@@ -23,6 +23,8 @@ search.app:
 ---
 # Define alternate keys using Power Apps portal
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to view and create entity alternate keys with the Common Data Service. For more information about alternate keys, see [Define alternate keys to reference records](define-alternate-keys-reference-records.md).
 
 Power Apps enables configuring the most common options, but certain options can only be set using solution explorer. More information: [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)

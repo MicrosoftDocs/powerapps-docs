@@ -24,6 +24,8 @@ search.app:
 
 # The Tenant page
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 To view the install history of a tenant, the ISV can switch to **Top tenants** view on the home page and select a tenant.

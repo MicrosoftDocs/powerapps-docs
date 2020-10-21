@@ -23,6 +23,8 @@ search.app:
 ---
 # Query Data using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 If you want to retrieve data for an entity set, use a `GET` request. When retrieving data, you can apply query options to set criteria for the data you want and the entity properties that should be returned.  
     
 <a name="bkmk_basicQuery"></a>

@@ -25,6 +25,8 @@ search.app:
 # Customization solutions file schema
 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The following is the schema definition for an import/export customization file from Common Data Service. 
 
 You can find schema  in the `Schemas\9.0.0.2090\CustomizationsSolution.xsd` folder when you download the Schemas zip file.

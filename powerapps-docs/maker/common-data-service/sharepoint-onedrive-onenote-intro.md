@@ -17,6 +17,8 @@ search.app:
 
 # SharePoint, OneNote, and OneDrive integration with Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service provides support for SharePoint, OneDrive, and OneNote integration. Integration with these services requires that you first enable SharePoint integration.   
 
 

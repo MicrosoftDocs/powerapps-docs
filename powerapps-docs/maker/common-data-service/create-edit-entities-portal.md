@@ -25,6 +25,8 @@ search.app:
 
 # Create and edit entities using Power Apps portal
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) provides an easy way to create and edit entities for  Common Data Service.
 
 The portal enables configuring the most common options, but certain options can only be set using solution explorer. More information: 

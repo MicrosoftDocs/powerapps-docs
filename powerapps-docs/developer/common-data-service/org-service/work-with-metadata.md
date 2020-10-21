@@ -17,6 +17,8 @@ search.app:
 ---
 # Work with metadata using the Organization service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Metadata refers to the structure of entities used to manage data in Common Data Service. <xref:Microsoft.Xrm.Sdk.Metadata.MetadataBase> is the base class for classes that contain metadata information. This section describes how to programmatically access and modify the metadata model using the Organization service.
 
 > [!IMPORTANT]

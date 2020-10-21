@@ -17,6 +17,8 @@ search.app:
 ---
 # Page large result sets with QueryExpression
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, you can use the paging cookie feature to make paging in an application faster for large datasets. The feature is available in both FetchXML and <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> queries. When you use the paging cookie feature when querying a set of records, the result contains a value for the paging cookie. To improve system performance, you can then pass that value when you retrieve the next set of records.  
   
  <xref:Microsoft.Xrm.Sdk.Query.QueryExpression> and FetchXML use different formats for their paging cookies. If you convert from one query format to the other by using the <xref:Microsoft.Crm.Sdk.Messages.QueryExpressionToFetchXmlRequest> message or the <xref:Microsoft.Crm.Sdk.Messages.FetchXmlToQueryExpressionRequest> message, the paging cookie value is ignored. In addition, if you request nonconsecutive pages, the paging cookie value is ignored.  

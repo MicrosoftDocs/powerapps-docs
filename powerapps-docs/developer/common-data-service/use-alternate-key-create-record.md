@@ -18,6 +18,8 @@ search.app:
 
 # Use an alternate key to create a record
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can use alternate keys to create instances of <xref:Microsoft.Xrm.Sdk.Entity> and <xref:Microsoft.Xrm.Sdk.EntityReference> classes. This topic discusses the usage patterns and possible exceptions that might be thrown when using alternate keys. To understand how to define alternate keys for an entity, see [Define alternate keys for an entity](define-alternate-keys-entity.md).  
 
 > [!NOTE]

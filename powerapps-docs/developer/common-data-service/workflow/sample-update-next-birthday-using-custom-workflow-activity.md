@@ -23,6 +23,8 @@ search.app:
 ---
 # Sample: Update next birthday using a custom workflow activity
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Download the complete sample here: [WorkflowActivities](https://github.com/microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/WorkflowActivities).
 
 ## Prerequisites

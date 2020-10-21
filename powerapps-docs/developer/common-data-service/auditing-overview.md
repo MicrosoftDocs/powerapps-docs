@@ -17,6 +17,8 @@ search.app:
 ---
 # Auditing overview
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Organizations often need to be in compliance with various regulations to ensure availability of customer interaction history, audit logs, access reports, and security incident tracking reports. Organizations may want to track changes in Common Data Service data for security and analytical purpose.  
   
  Common Data Service supports an auditing capability where entity and attribute data changes within an organization can be recorded over time for use in analysis and reporting purposes. Auditing is supported on all custom and most customizable entities and attributes. Auditing is not supported on metadata changes, retrieve operations, export operations, or during authentication. For information on how to configure auditing, see [Configure Entities and Attributes for Auditing](configure-entities-attributes-auditing.md).  

@@ -17,6 +17,8 @@ search.app:
 ---
 # Configure Azure integration with Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can post the message request data for the current core operation to cloud hosted applications listening on the Azure Service Bus. To enable this capability in Common Data Service, perform the tasks detailed in this topic.
 
 ## Configure Azure For Common Data Service integration

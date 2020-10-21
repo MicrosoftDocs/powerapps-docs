@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Bulk delete records that match common criteria
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/sample-bulk-delete-records-match-common-criteria -->
 
 This sample shows how to delete records, in bulk, that match common criteria. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/BulkDeleteMatchCriteria).
