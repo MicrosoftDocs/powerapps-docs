@@ -46,7 +46,7 @@ Adding a tab on an entity main form to display SharePoint documents helps users 
 11. Scroll down to the control id="*field name*" element, such as **control id="address1_city"** and replace the entire element with the [XML sample](#xml-sample-for-adding-the-documents-tab-to-a-form) in this topic. 
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/form-xml.png "XML sample insertion point")
+    > ![XML sample insertion point](media/form-xml.png "XML sample insertion point")
 
 12. Make these modifications to the XML sample. 
     
