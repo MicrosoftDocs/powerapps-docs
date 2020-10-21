@@ -21,6 +21,8 @@ search.app:
 
 # Use Postman to perform operations with the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Use Postman to compose and send Web API requests and view responses. This topic describes how to use Postman to create Web API requests that perform create, retrieve, update, and delete (CRUD) operations and use functions and actions.
 
 > [!IMPORTANT]

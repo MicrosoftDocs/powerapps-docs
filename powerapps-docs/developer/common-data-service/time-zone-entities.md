@@ -17,6 +17,8 @@ search.app:
 ---
 # Time zone entities
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 > [!NOTE]
 > The *time zone rule* entity is deprecated. The time conversion calculation is now provided by Microsoft Windows. Refer to this article for more information: [Microsoft policy in response to daylight saving time and time zone changes](https://support.microsoft.com/help/22803/daylight-saving-time).
 

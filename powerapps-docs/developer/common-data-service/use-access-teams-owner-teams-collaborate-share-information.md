@@ -17,6 +17,8 @@ search.app:
 ---
 # Use access teams and owner teams to collaborate and share information
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 With *owner* teams or *access* teams, you can easily share business objects and collaborate with the users across business units in Common Data Service. A team belongs to one business unit, but it can include users from other business units. A user can be associated with more than one team.  
   
  An owner team owns records and has security roles assigned to the team. The team’s privileges are defined by these security roles. In addition to privileges provided by the team, team members have the privileges defined by their individual security roles and by the roles from other teams in which they are members. A team has full access rights on the records that the team owns.  

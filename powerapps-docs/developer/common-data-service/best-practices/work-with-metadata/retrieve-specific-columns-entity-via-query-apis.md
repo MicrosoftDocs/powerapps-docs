@@ -23,6 +23,8 @@ search.app:
 --- 
 # Do not retrieve Entity all columns via query APIs
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Performance
 
 **Impact potential**: High

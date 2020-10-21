@@ -18,6 +18,8 @@ search.app:
 
 # Use the Common Data Service Organization Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The Organization service is one of two web services you can use to work with data and metadata in Common Data Service. The other is the [Web API](../webapi/overview.md).
 
 The organization service is optimized for use with the .NET Framework and the SDK assemblies in the [Microsoft.CrmSdk.CoreAssemblies](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/) NuGet package provide the classes for the <xref:Microsoft.Xrm.Sdk.IOrganizationService> interface necessary work with data and metadata using this service. 

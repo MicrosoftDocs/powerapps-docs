@@ -17,6 +17,8 @@ search.app:
 ---
 # Use Single-Tenant server-to-server authentication
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The single-tenant server-to-server scenario typically applies for enterprise organizations that have multiple Common Data Service environments using Active Directory Federation Services (AD FS) for authentication. However, it can also be applied by environments when the application won't be distributed to other environments.  
   
  An enterprise can create a web application or service to connect to any Common Data Service environments associated with a single Azure Active Directory (Azure AD) tenant.

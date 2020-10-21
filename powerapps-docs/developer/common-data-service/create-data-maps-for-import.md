@@ -17,6 +17,8 @@ search.app:
 ---
 # Create data maps for import
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 To import data into Common Data Service, you must provide the appropriate data maps.  
   
  You can download examples of data maps from [Microsoft Downloads: DataImportMaps.zip](https://download.microsoft.com/download/D/5/F/D5F73E15-439B-4EBC-BFFB-C6837B146C76/DataImportMaps.zip).
