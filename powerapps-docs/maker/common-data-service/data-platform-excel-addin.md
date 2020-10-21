@@ -15,6 +15,8 @@ search.app:
   - D365CE
 ---
 # Open entity data in Excel
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 By opening entity data in Microsoft Excel, you can quickly and easily view and edit data by using the Microsoft Power Apps Excel Add-in. <!-- The Power Apps Excel Add-in requires Microsoft Excel 2016. -->
 
 > [!div class="mx-imgBorder"] 

@@ -26,6 +26,8 @@ search.app:
 
 # Entity relationships overview
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Entity relationships define the ways that entity records can be associated with records from other entities or the same entity. There are two types of entity relationships.
 - **One-to-many relationships**. In a one-to-many entity relationship, many referencing (related) entity records can be associated with a single referenced (primary) entity record. The referenced entity record is sometimes referred to as the ”parent” and records of the referencing entity are referred to as ”children.”  A many-to-one relationship is just the child perspective of a one-to-many relationship.
 - **Many-to-many relationships**. In a many-to-many entity relationship many entity records can be associated with many other entity records. Records related using a many-to-many relationship can be considered peers and the relationship is reciprocal. 

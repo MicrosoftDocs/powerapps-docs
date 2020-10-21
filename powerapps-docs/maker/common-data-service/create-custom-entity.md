@@ -17,6 +17,8 @@ search.app:
 
 # Create a custom entity that has components in Power Apps
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 With Power Apps, you tailor your app to closely fit your organization’s industry, nomenclature, and unique business processes. Power Apps app development includes adding standard "out-of-box" entities or creating custom entities. An entity defines the information you want to track in the form of records, which typically include properties such as company name, location, products, email, and phone. 
 
 In this topic you create an entity and then add or customize key components such as fields, relationships, views, and forms. You learn how to:

@@ -25,6 +25,8 @@ search.app:
 ---
 # Configure an entity for feedback/ratings
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Let customers or employees write feedback for any entity record, or rate entity records within a defined rating range by enabling entities for feedback.  
 
 This capability is commonly used with a system that captures data from customers via a portal, or survey. Data about service or product satisfaction can be applied with entities that represent that kind of data.

@@ -23,6 +23,8 @@ search.app:
 ---
 # Define alternate keys using solution explorer
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Solution explorer provides one way to view and create alternate keys for Common Data Service.
 
 The [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) enables configuring the most common options, but certain options can only be set using solution explorer. <br />More information: 
