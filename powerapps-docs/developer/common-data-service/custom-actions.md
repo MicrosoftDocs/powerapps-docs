@@ -17,6 +17,8 @@ search.app:
 ---
 # Create your own actions
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can extend the functionality of Common Data Service by creating custom messages known as *actions*. These actions will have associated request/response classes and a Web API action will be generated. Actions are typically used to add new domain specific functionality to the organization web service or to combine multiple organization web service message requests into a single request. For example, in a support call center, you may want to combine the Create, Assign, and Update messages into a single new Escalate message.  
   
 The business logic of an action is implemented using a workflow. When you create an action, the associated real-time workflow is automatically registered to execute in the main operation stage of the execution pipeline. 

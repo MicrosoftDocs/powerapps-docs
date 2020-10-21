@@ -17,6 +17,8 @@ search.app:
 ---
 # LINQ query examples using OrganizationServiceContext with Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic contains many code samples of LINQ queries.  
   
 <a name="SimpleWhereClause"></a>   

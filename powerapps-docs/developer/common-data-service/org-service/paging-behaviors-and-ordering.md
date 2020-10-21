@@ -18,6 +18,8 @@ search.app:
 
 # Paging behaviors and ordering
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 When querying data using FetchXML, paging query results can make viewing large
 volumes of information easier. It is important when using paging to include
 ordering parameters as well. Without proper ordering, paging requests for the

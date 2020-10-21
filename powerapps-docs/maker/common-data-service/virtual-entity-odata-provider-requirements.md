@@ -24,6 +24,8 @@ search.app:
 
 # OData v4 Data Provider configuration, requirements, and best practices
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This topic describes how to configure the OData v4 Data Provider as well as the requirements and recommended best practices for using the OData v4 data provider to connect with an OData v4 web service. 
 
 ## OData v4 data provider best practices

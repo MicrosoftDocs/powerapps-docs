@@ -16,6 +16,8 @@ search.app:
 ---
 # Workflow extensions
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 You can extend the options available within the designer for workflows used in Common Data Service. These extensions are added by adding an assembly that contains a class the extends the [CodeActivity](/dotnet/api/system.activities.codeactivity) class. These extensions are commonly called *workflow assemblies* or *workflow activities*.
 
 You can use these custom extensions within the designer used for workflows, custom actions, and dialogs (deprecated).

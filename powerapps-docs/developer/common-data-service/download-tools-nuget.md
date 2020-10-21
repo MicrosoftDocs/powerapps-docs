@@ -23,6 +23,8 @@ search.app:
 
 # Download tools from NuGet 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can download tools used in development from NuGet using the  powershell script found below. These tools include:
 
 |Tool|NuGet Package|

@@ -17,6 +17,8 @@ search.app:
 ---
 # Web API CDSWebApiService Basic Operations Sample (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample demonstrates how to perform basic CRUD (Create, Retrieve, Update, and Delete) and association and dissociation operations on Common Data Service entity instances, using the Common Data Service Web API.  
   
 > [!NOTE]

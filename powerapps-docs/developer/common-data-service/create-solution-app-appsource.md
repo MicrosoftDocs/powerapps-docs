@@ -17,6 +17,8 @@ search.app:
 ---
 # Step 2: Create a managed solution for your app
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Create a managed solution to include all the components for your app. You might find these topics helpful as you plan and create a managed solution to package your app components:
 - [Introduction to solutions](introduction-solutions.md)
 - [Plan for solution development](/dynamics365/customer-engagement/developer/plan-solution-development) 

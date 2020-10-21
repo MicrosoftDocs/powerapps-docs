@@ -19,6 +19,8 @@ search.app:
 
 # Tutorial: Register an Azure-aware plug-in using the Plug-in Registration Tool
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/walkthrough-register-azure-aware-plug-in-using-plug-in-registration-tool -->
 
 This walkthrough demonstrates how to register a service endpoint step using the Plug-in Registration Tool. Once configured, Common Data Service (CDS) can post the execution context of the current operation to a Azure solution endpoint. For this walkthrough, the step is registered to post the execution context of the <xref:Microsoft.Xrm.Sdk.Messages.CreateRequest> message for an `Account` entity to the Azure Service Bus.  

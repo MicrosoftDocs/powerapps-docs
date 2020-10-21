@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Create a connection
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to create a connection between an account and a contact entity that have matching connection roles. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/ConnectionEarlyBound). 
   
 ## How to run this sample

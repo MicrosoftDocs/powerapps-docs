@@ -18,6 +18,8 @@ search.app:
 
 # Use FetchXML aggregation
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, `FetchXML` includes grouping and aggregation features that let you calculate sum, average min, max and count.  
   
  The following aggregate functions are supported:  

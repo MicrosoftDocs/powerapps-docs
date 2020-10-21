@@ -23,6 +23,8 @@ search.app:
 ---
 # Retrieve published metadata
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Performance, Usage
 
 **Impact potential**: High

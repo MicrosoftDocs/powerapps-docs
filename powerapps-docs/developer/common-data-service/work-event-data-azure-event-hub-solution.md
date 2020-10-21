@@ -19,6 +19,8 @@ search.app:
 
 # Work with Common Data Service event data in your Azure Event Hub solution
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Azure Event Hubs is a highly scalable publish-subscribe service that can ingest millions of events per second and stream them into multiple applications. The Common Data Service-Azure interface enables your event data to be published to the Azure Service Bus and made available to your event hub solution subscribers. The following information describes the general  tasks that must be completed to send Azure event data to an event hub solution.  
   
 > [!NOTE]

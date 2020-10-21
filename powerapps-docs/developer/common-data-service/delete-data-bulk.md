@@ -17,6 +17,8 @@ search.app:
 ---
 # Delete data in bulk
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The *bulk deletion* feature helps you to maintain data quality and manage the consumption of system storage in Common Data Service by deleting data that you no longer need. For example, you can delete the following data in bulk:  
   
 - Stale data.  

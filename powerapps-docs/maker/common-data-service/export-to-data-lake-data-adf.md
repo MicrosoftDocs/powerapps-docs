@@ -22,6 +22,8 @@ search.app:
 
 # Ingest exported Common Data Service data with Azure Data Factory
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 After exporting data from Common Data Service to Azure Data Lake Storage Gen2 with the Export to Data Lake service, you can use Azure Data Factory to create dataflows, transform your data, and run analysis.
 
 This article shows you how to perform the following tasks: 

@@ -17,6 +17,8 @@ search.app:
 ---
 # Retrieve, update, and delete entities
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic shows how to retrieve, update, and delete an entity by using the custom `Bank Account` entity created in [Create a Custom Entity](create-custom-entity.md).  
   
 <a name="BKMK_RetrieveAndUpdateEntity"></a>  

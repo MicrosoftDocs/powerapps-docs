@@ -17,6 +17,8 @@ search.app:
 ---
 # Test webhook registration with request logging site 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Before you create or configure a service to consume web hooks, you should test what kind of data the service will receive so that you can know what kind of data you will need to process. For this purpose, you can use one of several request logging sites. For the purpose of this example, we will use [Webhook Tester](https://webhook.site) to configure a target for the webhook requests. Use the following steps:
 
 1. Go to [https://webhook.site](https://webhook.site). In the top right-hand corner you will see a green **Copy** button.

@@ -17,6 +17,8 @@ search.app:
 ---
 # Next steps: Submit your app on Partner Center
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Your app is ready for submission after completing steps 1-5. 
 
 If you have completed access to [Partner Center](https://partner.microsoft.com/dashboard/account/v3/enrollment/introduction/azureisv), proceed to [create an offer](https://docs.microsoft.com/azure/marketplace/partner-center-portal/offer-creation-checklist) on Partner Center to submit your app.

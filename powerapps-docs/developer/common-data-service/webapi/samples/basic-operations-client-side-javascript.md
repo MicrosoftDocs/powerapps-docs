@@ -23,6 +23,8 @@ search.app:
 ---
 # Web API Basic Operations Sample (Client-side JavaScript)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample demonstrates how to perform basic CRUD (create, retrieve, update, and delete) and association and dissociation operations on entity instances using client-side JavaScript.  
   
 > [!NOTE]

@@ -17,6 +17,8 @@ search.app:
 ---
 # Run duplicate detection
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 There are several ways to perform duplicate detection after you enable it and publish the duplicate detection rules.  
 
 <a name="BKMK_RetDupwebapi"></a>
