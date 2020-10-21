@@ -67,13 +67,11 @@ To configure Azure AD as the OpenID Connect provider using Implicit Grant flow:
 
     1. In the left menu, under **Manage**, select **Authentication**.
 
+        ![Enable implicit grant flow with ID tokens](media/authentication/id-tokens-openid.png "Enable implicit grant flow with ID tokens")
+
     1. Under **Implicit grant**, select **ID tokens** check box.
 
     1. Select **Save**.
-
-        ![Enable implicit grant flow with ID tokens](media/authentication/id-tokens-openid.png "Enable implicit grant flow with ID tokens")
-
-    1. Keep the Azure portal open, and switch to the OpenID Connect configuration for Power Apps portals for the next steps.
 
 1. In this step, enter the site settings for the portal configuration.
 
@@ -133,7 +131,7 @@ To configure Azure AD as the OpenID Connect provider using Implicit Grant flow:
 
 1. Select **Close**.
 
-### Configure additional claims
+## Configure additional claims
 
 To configure additional claims, such as using first name, or last name:
 
