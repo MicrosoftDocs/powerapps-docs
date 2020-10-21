@@ -1,5 +1,6 @@
 ---
 title: "RDL sandboxing  | MicrosoftDocs"
+description: Learn about RDL sandboxing that may affect SSRS reports in Power Apps.
 ms.custom: 
 ms.date: 09/30/2017
 ms.reviewer: 

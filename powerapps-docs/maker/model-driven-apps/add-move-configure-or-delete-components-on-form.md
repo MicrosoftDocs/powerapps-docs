@@ -1,5 +1,6 @@
 ---
 title: "Add, configure, move, or delete components on a form | MicrosoftDocs"
+description: Learn how to use the form designer to work with form components.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
@@ -23,7 +24,8 @@ search.app:
   - D365CE
 ---
 
-# Add, configure, move, or delete components on a form  
+# Add, configure, move, or delete components on a form
+
 By using the form designer, makers can easily add and configure popular components such as [sub-grid](form-designer-add-configure-subgrid.md), [quick view](form-designer-add-configure-quickview.md), arc knob, linear slider, and more.
 
 ## Add components to a form

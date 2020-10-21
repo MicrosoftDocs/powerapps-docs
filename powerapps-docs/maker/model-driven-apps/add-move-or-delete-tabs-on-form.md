@@ -1,5 +1,6 @@
 ---
 title: "Add, configure, move, or delete tabs on a form using the form designer | MicrosoftDocs"
+description: Learn how to work with tabs on a form using Power Apps. 
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
