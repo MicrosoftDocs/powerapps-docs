@@ -17,6 +17,8 @@ search.app:
 ---
 # Add and remove sample data
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can install and uninstall sample data programmatically for an organization using the `InstallSampleData` and  `UninstallSampleData` messages: 
 
 |Web API Action |Organization Service Class|

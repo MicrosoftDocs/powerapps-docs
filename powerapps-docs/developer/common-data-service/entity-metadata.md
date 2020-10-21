@@ -30,6 +30,8 @@ Overlap with content in https://docs.microsoft.com/dynamics365/customer-engageme
 -->
 # Entity metadata
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Each entity provides the capability to store structured data. For developers, entities correspond to the classes you will use when working with data in Common Data Service.
 
 ## Entity names

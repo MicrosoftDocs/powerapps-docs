@@ -17,6 +17,8 @@ search.app:
 ---
 # Use Multi-Tenant Server-to-server authentication
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This is the most common scenario and the one which is used for apps distributed using Microsoft AppSource, but you can also use multi-tenant without listing your application with Microsoft AppSource.  
   
 Each Common Data Service organization is associated with an Azure Active Directory tenant. Your web application or service is registered with its own Azure AD tenant.  

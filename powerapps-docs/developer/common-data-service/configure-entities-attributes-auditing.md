@@ -17,6 +17,8 @@ search.app:
 ---
 # Configure entities and attributes for auditing
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 There are three levels where auditing can be configured: organization, entity, and attribute. The organization level is the highest level, followed by the entity level, and finally the attribute level. For attribute auditing to take place, auditing must be enabled at the attribute, entity, and organization levels. For entity auditing to take place, auditing must be enabled at the entity and organization levels.  
   
  There is a slight difference in how auditing is enabled or disable for an organization compared to an entity or attribute. You enable or disable auditing at the organization level by setting a particular attribute value of the organization record. However, for entities and attributes, you set a property value of the entity or attribute metadata.  

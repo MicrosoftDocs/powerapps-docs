@@ -22,6 +22,8 @@ search.app:
 ---
 # Retrieve related entity records with a query
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Use the `$expand` system query option in the navigation properties to control what data from related entities is returned. There are two types of navigation properties:  
   
 - *Single-valued* navigation properties correspond to Lookup attributes that support many-to-one relationships and allow setting a reference to another entity.  

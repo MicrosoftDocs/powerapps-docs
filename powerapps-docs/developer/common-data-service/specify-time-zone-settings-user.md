@@ -17,6 +17,8 @@ search.app:
 ---
 # Specify time zone settings for a user
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Use the `UserSettings` entity to specify time zone settings for a user in Common Data Service. The following attributes are exposed for the `UserSettings` entity related to time zone. All time zone attributes in the `UserSettings` entity are of `Integer` data type.  
 
 

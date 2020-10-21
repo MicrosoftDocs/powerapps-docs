@@ -17,6 +17,8 @@ search.app:
 ---
 # Calculated and rollup attributes
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 *Calculated* and *rollup* attributes free the user from having to manually perform calculations and focus on their work. System administrators can now easily define a field to contain the value of many common calculations without having to work with a developer. Developers can also leverage the platform capabilities to perform these calculations rather than within their own code.  
   
  [Video: Rollup and Calculated Fields in Microsoft Dynamics CRM 2015](https://youtu.be/RoahCH1p3T8)  
