@@ -104,7 +104,7 @@ When you trigger a push notification from a flow, you can send the notification 
       - **Form or view**: Select if the notification is for a form or view.
       - **Record ID**: If the notification is for a form, then enter the record ID.
 
-      ![Enter the notification information for the model-driven app](media/modelapp-info.png)
+      ![Enter the notification information for the app](media/modelapp-info.png)
 
 - For a canvas app, enter this information: 
     
@@ -113,7 +113,7 @@ When you trigger a push notification from a flow, you can send the notification 
      - **Open app**: Select whether to open the app or not when the user selects the notification.
      - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Load a specific page and context when a user taps the notification](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-notifications#load-a-specific-page-and-context-when-a-user-taps-the-notification).
 	 
-     ![Enter the notification information for the model-driven app](media/canvasapp-info.png)
+     ![Enter the notification information](media/canvasapp-info.png)
 	
 8. When you're done, select **Save**. 
 9. Select **Flow checker** to check for error or warnings.
