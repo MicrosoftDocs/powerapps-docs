@@ -31,11 +31,11 @@ Add a push notification to your app if:
 > [!NOTE]
 > To receive push notification, each user must have opened the app in Power Apps Mobile once or gotten the app from the [Microsoft 365 apps page](https://www.office.com/apps).
 
-Before you can create push notification  you need have access to an app and have the record ID if you're creating a notificatin for a form.
+Before you can create push notification you need to have access to an app and have the record ID if you're creating a notification for a form.
 
 Create an app
 
-You need have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
+You need to have **Contributor** permission for a model-driven app or canvas app. If you don't have an app, you can create one. For information, see:
 
 - [Create a model-drive app](https://docs.microsoft.com/powerapps/maker/model-driven-apps/build-first-model-driven-app#create-your-model-driven-app)
 - [Create a canvas app](https://docs.microsoft.com/powerapps/maker/canvas-apps/get-started-test-drive)
@@ -60,12 +60,12 @@ When you trigger a push notification from a flow, you can send the notification 
    > ![Select skip](media/create-notification-step3.png)
    
    
- 4. From the list of connectors and triggers select **Common Data Service (current enviroment)**.  
+ 4. From the list of connectors and triggers select **Common Data Service (current environment)**.  
  
     > [!div class="mx-imgBorder"] 
     > ![Select Common Data Service](media/create-notification-step4.png)
     
- 5. Select the action which will trigger the notification. 
+ 5. Select the action that will trigger the notification. 
  
     > [!div class="mx-imgBorder"] 
     > ![Choose a trigger for the notification](media/create-notification-step5.png)
@@ -95,14 +95,14 @@ When you trigger a push notification from a flow, you can send the notification 
 	
  7. Depending on the type of app that you selected in the previous step, do one of the following:
  
- - For a model-driven app, enter this informaiton:
+ - For a model-driven app, enter this information:
  
       - **Recipient Items-1**: Select how the flow is triggered.
       - **Message**: Enter the notification message.
       - **Open app**: Select whether to open the app or not when the user selects the notification.
       - **Entity**: Select which entity the notification is for.
       - **Form or view**: Select if the notification is for a form or view.
-      - **Record ID**: If the notification is for a form then enter the record ID.
+      - **Record ID**: If the notification is for a form, then enter the record ID.
 
       ![Enter the notification information for the model-driven app](media/modelapp-info.png)
 
@@ -111,7 +111,7 @@ When you trigger a push notification from a flow, you can send the notification 
      - **Recipient Items-1**: Select how the flow is triggered.
      - **Message**: Enter the notification message.
      - **Open app**: Select whether to open the app or not when the user selects the notification.
-     - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app These can be further processed in the app to open a specific page and load a specific state. For more information, see [Load a specific page and context when a user taps the notification](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-notifications#load-a-specific-page-and-context-when-a-user-taps-the-notification).
+     - **Parameters**: Key-value parameters to pass with the notification. Your push notification can pass specific parameters to the app. These can be further processed in the app to open a specific page and load a specific state. For more information, see [Load a specific page and context when a user taps the notification](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-notifications#load-a-specific-page-and-context-when-a-user-taps-the-notification).
 	 
      ![Enter the notification information for the model-driven app](media/canvasapp-info.png)
 	
