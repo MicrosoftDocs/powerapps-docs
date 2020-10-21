@@ -19,6 +19,8 @@ search.app:
 
 # Get started with virtual entities
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Virtual entities enable the integration of data residing in external systems by seamlessly representing that data as entities in Common Data Service, without replication of data and often without custom coding. Virtual entities support create, updates and delete of data in the external system. 
 
 Virtual entities replace previous client-side and server-side approaches to integrating external data, which required customized code and suffered from numerous limitations, including imperfect integration, data duplication, or extensive commitment of development resources.  In addition, for administrators and system customizers, the use of virtual entities greatly simplifies administration and configuration.

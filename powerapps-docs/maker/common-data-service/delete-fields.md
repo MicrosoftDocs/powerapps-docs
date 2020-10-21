@@ -26,6 +26,8 @@ search.app:
 ---
 # Delete fields
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <a name="BKMK_DeletingFields"></a>   
  
  As someone with the system administrator security role, you can delete any custom fields that aren’t part of a managed solution. When you delete a field, any data stored in the field is lost. The only way to recover data from a field that was deleted is to restore the database from a point before the field was deleted.  

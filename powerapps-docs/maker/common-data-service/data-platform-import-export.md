@@ -15,6 +15,8 @@ search.app:
 ---
 # Import or export data from Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 To bulk import and export data from Microsoft Excel or CSV files, use the Get Data from Excel file and Export Data features for updated Common Data Service environments.
 
 There are two ways that you can import files into entities from Excel or CSV files.

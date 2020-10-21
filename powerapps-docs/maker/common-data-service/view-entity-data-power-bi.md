@@ -17,6 +17,8 @@ search.app:
 ---
 # View entity data in Power BI Desktop (Preview)
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 > [!WARNING]

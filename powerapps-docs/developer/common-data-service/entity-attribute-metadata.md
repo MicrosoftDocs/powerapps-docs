@@ -29,6 +29,8 @@ Overlap with https://docs.microsoft.com/dynamics365/customer-engagement/develope
 -->
 # Attribute metadata
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Entities include a collection of attributes that represent the data that can be included within each record. Developers need to understand the different types of attributes and how to work with them. 
 
 More information: [Introduction to entity attributes](/dynamics365/customer-engagement/developer/introduction-entity-attributes)

@@ -18,6 +18,8 @@ search.app:
 
 # Understand the execution context
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The **Event Execution Pipeline** passes registered plug-ins a wealth of data about the current operation being processed and the plug-in's execution environment.
 
 ## For plug-ins

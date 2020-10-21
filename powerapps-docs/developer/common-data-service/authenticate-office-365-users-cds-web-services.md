@@ -17,6 +17,8 @@ search.app:
 ---
 # Authenticate Microsoft 365 users with Common Data Service web services
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <!-- https://docs.microsoft.com/dynamics365/customer-engagement/developer/authenticate-office-365-users-customer-engagement-web-services 
 
 This topic is extremely stale and needs help

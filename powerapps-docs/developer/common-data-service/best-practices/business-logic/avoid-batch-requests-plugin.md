@@ -23,6 +23,8 @@ search.app:
 ---
 # Avoid usage of batch request types in plug-ins and workflow activities
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Usage, Reliability, Performance
 
 **Impact potential**: Medium

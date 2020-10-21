@@ -16,6 +16,8 @@ search.app:
 ---
 
 # Troubleshoot Power Query
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 When you use Power Query for Excel to create a custom entity that contains data from external sources, this error might appear:
 
 >"Your Azure Active Directory administrator has set a policy that prevents you from using this feature. Please contact your administrator, who can grant permissions for this feature on your behalf."

@@ -17,6 +17,8 @@ search.app:
 ---
 # Prepare source files for import
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Before you can import data into Common Data Service, you must create the source data files.  
   
 The data source files that you use in an import must be formatted as comma-separated values (.csv), XML Spreadsheet 2003 (.xml), or text files. The use of source files enables the transfer of data from database systems that use different formats into Common Data Service.  

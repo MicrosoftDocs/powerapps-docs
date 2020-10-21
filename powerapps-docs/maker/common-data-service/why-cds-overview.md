@@ -22,6 +22,8 @@ search.app:
 
 # Why choose Common Data Service?
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Data is at the center of everything a business does today and powers the
 insights that can drive what it should do tomorrow. To thrive and grow,
 businesses need to capture, analyze, predict, present, and report data and do it

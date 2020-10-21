@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Late-bound entity operations
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- show deep insert equivalent 
 
 sample-initialize-record-existing-record.md
