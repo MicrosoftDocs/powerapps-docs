@@ -133,7 +133,7 @@ To configure Azure AD as the OpenID Connect provider using Implicit Grant flow:
 
 1. Select **Close**.
 
-### Configure additional claims
+## Configure additional claims
 
 To configure additional claims, such as using first name, or last name:
 
