@@ -92,8 +92,8 @@ Each entity that supports entity images will have three supporting attributes.
 |`EntityImageId`|`UniqueIdentifierType`|The unique identifier of the image|
 
 More information: 
-- [Common Data Service Developer Guide Image attributes](/dynamics365/customer-engagement/developer/image-attributes)
-- [Common Data Service Developer Guide Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
+- [Common Data Service Developer Guide Image attributes](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/image-attributes)
+- [Common Data Service Developer Guide Sample: Set and retrieve entity images](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/org-service/samples/set-retrieve-entity-images)
 
 > [!NOTE]
 > This is different from the icon displayed for an entity in model-driven apps. The `IconVectorName` property contains the name of the SVG web resource that sets this.
