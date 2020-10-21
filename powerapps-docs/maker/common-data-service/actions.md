@@ -22,6 +22,8 @@ search.audienceType:
 # Use actions
 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Actions open a range of possibilities for composing business logic. With actions, you can perform operations, such as Create, Update, Delete, Assign, or Perform Action. Internally, an action creates a custom message. Developers refer to these actions as *messages*. Each of these messages is based on actions taken on an entity record. If the goal of a process is to create a record, then update it, and then assign it, there are three separate steps. Each step is defined by the capabilities of the entity—not necessarily your business process.  
   
 Actions provide the ability to define a single verb (or message) that matches an operation you need to perform for your business. These new messages are driven by a process or behavior rather than what can be done with an entity. These messages can correspond to verbs like Escalate, Convert, Schedule, Route, or Approve—whatever you need. The addition of these verbs helps provide a richer vocabulary for you to fluently define your business processes. You can apply this richer vocabulary from clients or integrations rather than having to write the action within clients. This also makes it easier because you can manage and log the success or failure of the entire action as a single unit.  

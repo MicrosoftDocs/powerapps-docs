@@ -17,6 +17,8 @@ search.app:
 ---
 # Online Management API
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 <!-- 
 
 https://docs.microsoft.com/dynamics365/customer-engagement/developer/online-management-api 

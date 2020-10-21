@@ -26,6 +26,8 @@ search.app:
 ---
 # Connect Azure Data Lake Storage Gen2 for dataflow storage
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 You can configure dataflows to store their data in your organization’s Azure Data Lake Storage Gen2 account. This article describes the general steps necessary to do so, and provides guidance and best practices along the way. 
 
 > [!IMPORTANT]

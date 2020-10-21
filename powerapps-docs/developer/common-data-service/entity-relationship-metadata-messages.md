@@ -17,6 +17,8 @@ search.app:
 ---
 # Entity relationship metadata messages
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Entity relationships define how entities are related to each other. This includes information about how relationships are represented in the application. Also, when actions are performed on a record, the relationship indicates what actions to perform on related records.  
   
 The following table lists the messages that you can use to create, retrieve, update, and delete entity relationships.  

@@ -26,6 +26,8 @@ search.app:
 
 # Fields overview
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Fields define the individual data items that can be used to store information in an entity. Create new fields to capture data when existing standard entities don’t have fields that meet your requirements. After you create a new field, be sure to include it on the appropriate forms and views for the entity so that they are available in your app.
 
 ## See also

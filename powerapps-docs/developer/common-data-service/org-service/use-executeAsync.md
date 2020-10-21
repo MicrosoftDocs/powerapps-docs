@@ -17,6 +17,8 @@ search.app:
 ---
 # Use ExecuteAsync to execute messages asynchronously
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Except for three, all data operations using the SDK assembly request classes are synchronous.
 
 Importing a solution is one operation which can require considerable resources, so there is an option to execute this operation asynchronously using the <xref:Microsoft.Xrm.Sdk.Messages.ExecuteAsyncRequest> request class. The <xref:Microsoft.Crm.Sdk.Messages.DeleteAndPromoteRequest> request class performs similar resource intensive operations.

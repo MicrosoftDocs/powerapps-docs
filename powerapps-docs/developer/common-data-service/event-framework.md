@@ -17,6 +17,8 @@ search.app:
 ---
 # Event Framework
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The capability to extend the default behavior of Common Data Service depends on detecting when events occur on the server. The *Event Framework* provides the capability to register custom code to be run in response to specific events. 
 
 All capabilities to extend the default behavior of the platform depend on the event framework. When you configure a workflow to respond to an event using the workflow designer without writing code, that event is provided by the event framework. 

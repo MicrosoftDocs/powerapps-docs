@@ -17,6 +17,8 @@ search.app:
 ---
 # Global Discovery Service Sample (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to access the Discovery Service using the OData V4 RESTful API.
 
 ## How to run this sample

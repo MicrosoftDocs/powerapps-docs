@@ -22,6 +22,8 @@ search.app:
 ---
 # Retrieve metadata by name or MetadataId
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Your applications can adapt to configuration changes by querying the metadata. When you know one of the key properties of a metadata item, you can retrieve metadata definitions using the Web API.  
 
 <a name="bkmk_byName"></a>

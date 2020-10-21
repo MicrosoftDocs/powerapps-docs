@@ -1371,26 +1371,6 @@
           href: ./portals/configure/configure-portal.md
         - name: Configure site settings
           href: ./portals/configure/configure-site-settings.md
-        - name: Portal authentication
-          items:
-            - name: Configure portal authentication
-              href: ./portals/configure/configure-portal-authentication.md
-            - name: Use simplified authentication configuration (Preview)
-              href: ./portals/configure/use-simplified-authentication-configuration.md
-            - name: Set authentication identity
-              href: ./portals/configure/set-authentication-identity.md
-            - name: Azure AD B2C provider settings for portals
-              href: ./portals/configure/azure-ad-b2c.md
-            - name: Configure OAuth2 provider settings
-              href: ./portals/configure/configure-oauth2-settings.md
-            - name: Configure OpenID provider settings
-              href: ./portals/configure/configure-openid-settings.md
-            - name: Configure WS-Federation provider settings
-              href: ./portals/configure/configure-ws-federation-settings.md
-            - name: Configure SAML 2.0 provider settings
-              href: ./portals/configure/configure-saml2-settings.md
-            - name: Migrate identity providers to Azure AD B2C
-              href: ./portals/configure/migrate-identity-providers.md
         - name: Search
           items:
             - name: About search
@@ -1465,6 +1445,64 @@
           href: ./portals/configure/publishing-states.md
         - name: Create custom Portal Management app
           href: ./portals/configure/create-custom-portal-management-app.md
+    - name: Portal authentication
+      items:
+          - name: Overview
+            href: ./portals/configure/configure-portal-authentication.md
+          - name: Get started
+            href: ./portals/configure/use-simplified-authentication-configuration.md
+          - name: Azure AD B2C
+            items:
+                - name: Configure
+                  href: ./portals/configure/configure-azure-ad-b2c-provider.md
+                - name: Customize the Azure AD B2C user interface
+                  href: ./portals/configure/azure-ad-b2c.md
+          - name: OAuth 2.0
+            items:
+                 - name: Overview
+                   href: ./portals/configure/configure-oauth2-provider.md
+                 - name: Microsoft
+                   href: ./portals/configure/configure-oauth2-microsoft.md
+                 - name: LinkedIn
+                   href: ./portals/configure/configure-oauth2-linkedin.md
+                 - name: Facebook
+                   href: ./portals/configure/configure-oauth2-facebook.md
+                 - name: Google
+                   href: ./portals/configure/configure-oauth2-google.md
+                 - name: Twitter
+                   href: ./portals/configure/configure-oauth2-twitter.md
+                 - name: Additional settings
+                   href: ./portals/configure/configure-oauth2-settings.md
+          - name: OpenID Connect
+            items:
+                 - name: Configure
+                   href: ./portals/configure/configure-openid-provider.md
+                 - name: Configure OpenID Connect for Azure AD
+                   href: ./portals/configure/configure-openid-settings.md
+                 - name: FAQs when using OpenID Connect
+                   href: ./portals/configure/configure-openid-faqs.md                                        
+          - name: SAML 2.0
+            items:
+                  - name: Configure
+                    href: ./portals/configure/configure-saml2-provider.md
+                  - name: Configure Azure AD with SAML 2.0
+                    href: ./portals/configure/configure-saml2-settings-azure-ad.md
+                  - name: Configure ADFS with SAML 2.0
+                    href: ./portals/configure/configure-saml2-settings.md
+                  - name: FAQs when using SAML 2.0
+                    href: ./portals/configure/configure-saml2-faqs.md
+          - name: WS-Federation
+            items:
+                  - name: Configure
+                    href: ./portals/configure/configure-ws-federation-provider.md
+                  - name: Configure WS-Federation with Azure AD
+                    href: ./portals/configure/configure-ws-federation-settings-azure-ad.md
+                  - name: Configure WS-Federation with ADFS
+                    href: ./portals/configure/configure-ws-federation-settings.md
+          - name: Local authentication, registration and other settings
+            href: ./portals/configure/set-authentication-identity.md
+          - name: Migrate to Azure AD B2C
+            href: ./portals/configure/migrate-identity-providers.md
     - name:  Advanced portal customization
       items:
         - name: Work with Liquid templates

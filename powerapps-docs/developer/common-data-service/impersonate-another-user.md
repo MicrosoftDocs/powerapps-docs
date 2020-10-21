@@ -17,6 +17,8 @@ search.app:
 ---
 # Impersonate another user
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Use impersonation to execute business logic on behalf of another Common Data Service user to provide a desired feature or service using the appropriate role and object-based security of that impersonated user. 
 
 This is necessary because the Common Data Service web services can be called by various clients and services on behalf of a Common Data Service user.

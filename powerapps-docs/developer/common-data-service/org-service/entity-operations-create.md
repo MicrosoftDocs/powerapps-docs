@@ -17,6 +17,8 @@ search.app:
 ---
 # Create entities using the Organization Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic will include examples using both late-bound and early-bound programming styles. More information: 
 - [Early-bound and Late-bound programming using the Organization service](early-bound-programming.md)
 - [Generate early-bound classes for the Organization service](generate-early-bound-classes.md)

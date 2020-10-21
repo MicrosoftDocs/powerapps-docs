@@ -17,6 +17,8 @@ search.app:
 ---
 # Appendix: App design best practices checklist
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Use the following checklist to evaluate your app design. 
 
 <table>

@@ -17,6 +17,8 @@ search.app:
 ---
 # Retrieve and detect changes to metadata
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The classes in the <xref:Microsoft.Xrm.Sdk.Metadata.Query> namespace and the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesRequest> and <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMetadataChangesResponse> classes let you build efficient metadata queries and capture changes to metadata as they occur over time.  
   
  All code examples referenced in this document are found in [Sample: Query Metadata and Detect Changes](/dynamics365/customer-engagement/developer/org-service/sample-query-metadata-detect-changes).  

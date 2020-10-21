@@ -18,6 +18,8 @@ search.app:
 
 # Offline use of services
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Dynamics 365 for Outlook with Offline Access enables you to continue your work when you are disconnected from the server.  
   
  In addition, the event and plug-in infrastructure lets you leverage development investments across solutions by using the same APIs and programming model. The <xref:Microsoft.Xrm.Sdk.IOrganizationService> methods and the Common Data Service OData service methods function both online and offline. When using a method such as `Create` or `Update` offline, the data is written locally and then when the user connects to the server, the actions are played back to the server.  

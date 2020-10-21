@@ -23,6 +23,8 @@ search.app:
 
 # Merge entity records using the Web API 
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 When you find duplicate records you can combine them into one using the [Merge Action](/dynamics365/customer-engagement/web-api/merge).
 
 > [!NOTE]

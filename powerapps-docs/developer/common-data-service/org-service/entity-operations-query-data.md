@@ -17,6 +17,8 @@ search.app:
 ---
 # Query data using the Organization service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The SDK assemblies for the organization service provide several styles to query data. Each provides different advantages.
 
 |Style|Advantages|

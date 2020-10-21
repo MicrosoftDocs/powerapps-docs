@@ -22,6 +22,8 @@ search.app:
 ---
 # Web API Data operations Samples (C#)
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic provides information about the Web API samples implemented with C#. While each sample focuses on a different aspect of the Common Data Service Web API, they share similar characteristics and structure.  
   
 > [!NOTE]

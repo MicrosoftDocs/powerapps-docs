@@ -20,6 +20,8 @@ search.app:
 ---
 # Client-side JavaScript using Web API in model-driven apps
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 In HTML web resources, form scripts, or ribbon commands in model-driven apps, you can use JavaScript to perform operations on Common Data Service data using the Web API. Use the [Xrm.WebApi](/powerapps/developer/model-driven-apps/clientapi/reference/xrm-webapi) client API methods to use Web API with JavaScript and web resources.
 
 ### See also

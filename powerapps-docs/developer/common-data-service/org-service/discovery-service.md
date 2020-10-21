@@ -17,6 +17,8 @@ search.app:
 ---
 # Use the Discovery Service with the SDK Assemblies
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 > [!IMPORTANT]
 > Effective March 2, 2020, the *regional* Discovery Service will be [deprecated](/power-platform/important-changes-coming#regional-discovery-service-is-deprecated).
 > 

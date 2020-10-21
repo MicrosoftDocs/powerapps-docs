@@ -24,6 +24,8 @@ search.app:
 
 # Best practices and guidance for the Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The Common Data Service is an extensible framework that will allow developers to build highly customized and tailored experiences. While customizing, extending, or integrating with the Common Data Service, a developer should be aware of the established guidance and best practices. 
 
 Within this section you will learn about the issues we have identified, their impact, and understand the guidance to resolve them. We will explain the background about why things should be done in a certain way and avoid potential problems in the future. This can benefit the usability, supportability, and performance of your environment. The guidance documentation supports the existing information within the Developer and Administration guides.

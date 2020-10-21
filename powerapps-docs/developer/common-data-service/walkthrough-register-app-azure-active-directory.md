@@ -19,6 +19,8 @@ search.app:
 
 # Tutorial: Register an app with Azure Active Directory
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This tutorial describes how to register an application with Azure Active Directory, which enables a user with Power Apps user account to connect to their Common Data Service environment from external client applications using OAuth authentication.
 
 > [!IMPORTANT]
