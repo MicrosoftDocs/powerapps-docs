@@ -12,8 +12,8 @@ applies_to:
   - "powerapps"
 ms.assetid: 
 author: iangpgh
-ms.author: v-iapr
-manager: matp
+ms.author: matp
+manager: kvivek
 ms.reviewer: srihas
 ms.suite: 
 ms.tgt_pltfrm: 

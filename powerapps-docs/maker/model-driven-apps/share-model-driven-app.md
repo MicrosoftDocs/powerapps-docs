@@ -37,11 +37,11 @@ Sharing a model-driven app involves two primary steps. First, associate a one or
 2. Select a model-driven app and click **Share**.
 3. Select the app then choose a security role from the list.
     > [!div class="mx-imgBorder"] 
-    > ![](media/share-model-driven-app/share-app.png "Assign a role to the app")
+    > ![Assign a role to the app](media/share-model-driven-app/share-app.png "Assign a role to the app")
 4. Search for a user
 5. Select the user then select a role from the list.
     > [!div class="mx-imgBorder"] 
-    > ![](media/share-model-driven-app/share-user.png "Assign a role to the user")
+    > !["Assign a role to the user](media/share-model-driven-app/share-user.png "Assign a role to the user")
 6. Click **Share**.
 
 ### Share the link to your app
@@ -106,7 +106,7 @@ Security roles control a user’s access to data through a set of access levels 
 
 3. Click **Manage security roles.**
     > [!div class="mx-imgBorder"] 
-    > ![](media/share-model-driven-app/manage-roles.png "Manage roles")
+    > ![Manage roles](media/share-model-driven-app/manage-roles.png "Manage roles")
 
 4. On the **All Roles** page, select **Common data service user** then click **Actions** then **Copy Role.** 
 
