@@ -22,7 +22,7 @@ search.app:
 
 Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
   
-## Benefits of Relevance
+## Benefits of relevance search
 
 Relevance search brings the following enhancements and benefits:  
 
