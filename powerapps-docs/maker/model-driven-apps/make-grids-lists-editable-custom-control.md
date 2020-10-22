@@ -25,9 +25,9 @@ search.app:
 ---
 # Make model-driven app grids (lists) editable using the Editable Grid custom control
 
-In previous releases of Dynamics CRM, users couldn't enter data directly in grids (sometimes called lists) or sub-grids on forms. They had to select the record in the grid to open a form, edit the data, and then save, which required multiple steps. With editable grids, users can do rich in-line editing directly from grids and sub-grids whether they're using a web app, tablet, or phone.  
+In previous releases of Dynamics CRM, users couldn't enter data directly in grids (sometimes called lists) or sub-grids on forms. They had to select the record in the grid to open a form, edit the data, and then save, which required multiple steps. With editable grids, users can do rich in-line editing directly from views and sub-grids whether they're using a web app, tablet, or phone.  
   
- ![Editable grid examples](media/editable-grid-examples.png "Editable grid examples")  
+ ![Editable grid examples](media/editable-grid-example.png "Editable grid examples")  
   
  When editable grids are enabled through the Editable Grids custom control, users can edit most types of fields, including basic Lookup fields and option sets.  
 
