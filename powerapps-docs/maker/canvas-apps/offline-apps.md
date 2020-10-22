@@ -211,7 +211,7 @@ This formula determines whether the device is online. If it is, the app tweets a
 
     The status label shows that the app is **Offline**.
 
-1. While the device is offline, write a tweet that includes **PowerApps**, and then select the **Tweet** button.
+1. While the device is offline, write a tweet that includes **Power Apps**, and then select the **Tweet** button.
 
     The tweet is stored locally in the **LocalTweetsToPost** collection.
 
