@@ -72,7 +72,7 @@ If you're on the Microsoft Power Platform release plan for the 2020 release wave
 When the new relevance search experience is turned then it will be available by default to users. Users will have a prominent and globally discoverable search bar on the header.
 
    > [!div class="mx-imgBorder"]
-   > ![Search box on header]](media/new-search-exp.png) 
+   > ![Search box on header](media/new-search-exp.png) 
 
 
 ### Switch between relevance search and categorized search
