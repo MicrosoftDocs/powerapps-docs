@@ -22,6 +22,8 @@ search.app:
 
 Relevance search delivers fast and comprehensive results across multiple entities, in a single list, sorted by relevance. 
   
+## Benefits of Relevance
+
 Relevance search brings the following enhancements and benefits:  
 
 - Improved performance compared to Categorized search.  
@@ -51,16 +53,23 @@ Relevance search brings the following enhancements and benefits:
   > [!NOTE]
   >  Relevance search is text-based, and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type.
   
-- Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Simple query syntax in Azure Cognitive Search](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search).<!--note from editor: The "More information:" pattern is good when there aren't any additional modifiers, which you have here. -->
+- Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Simple query syntax in Azure Cognitive Search](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search).
   
   > [!NOTE]
-  > Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.<!--note from editor: Via style guide, it's always capital "Boolean," and it's "might" instead of "may.-->
+  > Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.
 
 ## Enable relevance search
 
 Relevance search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing relevance search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
-## Switch between relevance search and categorized search
+If you're on the Microsoft Power Platform release plan for the 2020 release wave 2, you can turn on the new search experience for your organization. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Search button on the commmandbar](media/admin-enable-search.jpg) 
+
+
+
+### Switch between relevance search and categorized search
 
 If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
 
@@ -74,7 +83,7 @@ If your organization has turned on both search options (relevance search and cat
    > [!div class="mx-imgBorder"]
    > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
     
-## Set a default search experience
+### Set a default search experience
 
 If your organization has turned on both search options, you can select a default search experience in your personal settings.
 
@@ -88,7 +97,9 @@ If your organization has turned on both search options, you can select a default
    > [!div class="mx-imgBorder"]
    > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
 
-## Start a search 
+## Old relevance search experience 
+
+### Start a search 
  
 1.  From the top nav bar, select **Search**.  
 
@@ -100,7 +111,7 @@ If your organization has turned on both search options, you can select a default
     > [!div class="mx-imgBorder"]
     > ![Relevance Search Box](media/relevance-search-box.png "Relevance search box")   
 
-## Filter records with facets
+### Filter records with facets
 
 With Common Data Service, you can now refine your search results by using facets and filters. Facets and filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms.
 
@@ -114,7 +125,7 @@ Facets are available in the leftmost pane. Immediately after you perform a searc
   
 -   Modified On  
   
-### Record Type facets
+#### Record Type facets
 
 To narrow your search results to a specific entity, select the entity under the **Record Type** section.  
  
@@ -132,7 +143,7 @@ When you refine by record type, the facet scope switches to the selected entity,
   
 In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator or customer has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
   
-### Text-based facets
+#### Text-based facets
 
 All lookups, option sets, and record types are text-based facets. For example, the text-based facet Owner consists of a list of field values and their corresponding counts.  
  
@@ -141,7 +152,7 @@ All lookups, option sets, and record types are text-based facets. For example, t
   
 Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all records where the owner is Jim Glynn. When you select a lookup or option set facet value, search results are filtered to only include records with the value that you specified.  
   
-### Date and Time facets
+#### Date and Time facets
 
 Like other facets, you can use date and time facets to filter and see search results for a specific time. To select a range of values, drag the slider or select one of the vertical columns.  
  
