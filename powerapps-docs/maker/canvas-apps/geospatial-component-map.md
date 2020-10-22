@@ -56,33 +56,39 @@ You can load a table that contains existing data from an Excel workbook into the
 
 Your workbook needs to contain a named table with the following columns that should then be mapped to the associated property in the component's **Advanced** pane.
 
-Column description | Maps to property
--- | -- 
-Label for the pin | ItemsLabels
-Longitude of the pin | ItemsLongitudes
-Latitude of the pin | ItemsLattitudes
+Column description | Maps to property | Required
+-- | -- | --
+Label for the pin | ItemsLabels | Required
+Longitude of the pin | ItemsLongitudes | Required
+Latitude of the pin | ItemsLattitudes | Required
+Color of the pin | ItemsColors | Optional
+Icon for the pin | ItemsIcons | Optional
 
-You can also use a string to denote the address, in which case ItemsLongitudes and ItemsLatitudes won't work.
+You can also use a string to denote the address in ItemsAddresses, in which case ItemsLongitudes and ItemsLatitudes won't work.
 
+The color field accepts any CSS string, as defined in [Color enumeration and ColorFade, ColorValue, and RGBA functions in Power Apps](./functions/function-colors).
+
+You can use the icons described in the [List of image templates](/azure/azure-maps/how-to-use-image-templates-web-sdk#list-of-image-templates) topic as your icon.
 
 The following is an example of an Excel table with the required columns:
 
-![Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns](./media/geospatial/sample-excel.png)
+
+:::image type="content" source="media/geospatial/sample-excel.png" alt-text="Sample excel file with a table named TestData and containing Name, Longitude, and Latitude columns":::
 
 You can copy the following sample data to test this functionality:
 
-Name | Longitude | Latitude
--- | -- | --
-Fourth Coffee (sample) | -98.29277 | 26.2774
-Litware, Inc. (sample) | -96.85572 | 32.55253
-Adventure Works (sample) | -96.99952 | 32.72058
-Fabrikam, Inc. (sample) | -118.30746 | 34.86543
-Blue Yonder Airlines (sample) | -118.66184 | 34.17553
-City Power & Light (sample) | -113.46184 | 37.15363
-Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918
-Alpine Ski House (sample) | -102.63908 | 35.20919
-A. Datum Corporation (sample) | -89.39433 | 40.71025
-Coho Winery (sample) | -116.97751 | 32.87466
+Name | Longitude | Latitude | Color | Icon
+-- | -- | -- | -- | --
+Fourth Coffee (sample) | -98.29277 | 26.2774 | Blue | marker-flat
+Litware, Inc. (sample) | -96.85572 | 32.55253 | #ffefcd| hexagon-thick
+Adventure Works (sample) | -96.99952 | 32.72058 | | car
+Fabrikam, Inc. (sample) | -118.30746 | 34.86543 | |
+Blue Yonder Airlines (sample) | -118.66184 | 34.17553 | |
+City Power & Light (sample) | -113.46184 | 37.15363 | |
+Contoso Pharmaceuticals (sample) | -80.26711 | 40.19918 | |
+Alpine Ski House (sample) | -102.63908 | 35.20919 | |
+A Datum Corporation (sample) | -89.39433 | 40.71025 | |
+Coho Winery (sample) | -116.97751 | 32.87466 | |
 
 
 
@@ -101,9 +107,10 @@ Coho Winery (sample) | -116.97751 | 32.87466
 
 1. Open or create a new app in Power Apps, and insert the map component.
 
-1. On the **Properties** pane, select the **Data source(Items)** field and then search for *excel* and select **Import from Excel**.
+1. On the **Properties** pane, select the **Locations(Items)** field and then search for *excel* and select **Import from Excel**.
 
-    ![](./media/geospatial/select-excel.png)
+    :::image type="content" source="media/select-excel.png" alt-text=" ":::
+
 
 1. Locate the Excel workbook and then select **Open**. Select the table that contains the information, **TestData**, and then **Connect**.
 
@@ -116,10 +123,19 @@ Coho Winery (sample) | -116.97751 | 32.87466
     - **ItemsLabels** as *TestData.Name*
     - **ItemLatitudes** as *TestData.Latitude*
     - **ItemsLongitudes** as *TestData.Longitude*
+    - (Optional) **ItemsColors** as *TestData.Colors*
+    - (Optional) **ItemsIcons as *TestData.Icons*
 
-1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table.
+1. The map component will now show each row in the table as a pin, labeled with its *Name* as defined in the Excel table, and using the provided icons and colors. If an icon or color isn't provided, then the component will use the default icon and color.
 
     ![](./media/geospatial/map-expanded.png)
+
+    ![A screenshot of the map component with custom icons and different colors ](./media/geospatial/geospatial-custom-pins-formula.png)
+
+>[!TIP]
+>You can assign the same custom icon to all pins. For the **ItemsIcons** field in the Advanced Properties pane, enter the icon you want to use. For example, set **ItemsIcons** to *MarkerSquare*.
+
+
 
 ### Properties
 
