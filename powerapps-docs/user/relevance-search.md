@@ -58,7 +58,7 @@ Relevance search brings the following enhancements and benefits:
   > [!NOTE]
   > Relevance search is configured to require matches to any (instead of all) of the criteria in a query, which might bring about results that are different from your expectations. This is especially true when Boolean operators are included in the query.
 
-## Enable relevance search
+## Turn on relevance search
 
 Relevance search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing relevance search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
@@ -69,11 +69,40 @@ If you're on the Microsoft Power Platform release plan for the 2020 release wave
    > [!div class="mx-imgBorder"]
    > ![Turn on new search experience](media/admin-enable-search.jpg) 
 
-When the new relevance search experience is turned then it will be available by default to users. Users will have a prominent and globally discoverable search bar on the header.
+When the new relevance search experience is turned then is available by default to all your users. There is also a prominent search bar at the top.
 
    > [!div class="mx-imgBorder"]
    > ![Search box on header](media/new-search-exp.png) 
+   
+ ## Set a default search experience
 
+If your organization has turned on both search options, you can select a default search experience in your personal settings.
+
+1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
+  
+   > [!div class="mx-imgBorder"]
+   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")  
+
+2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
+
+
+## Use the new relevance search experience 
+
+   > [!div class="mx-imgBorder"]
+   > ![Legend for new search experience](media/legend-for-new-exp.png) 
+
+Legend
+
+1. **Search bar**: Globally discoverable search bar 
+2. **Recent searches**: Shows recent searches and recently accessed records.
+3. **Seggested records**: Automatic suggestions of records based on the typed query.
+
+    
+
+## Use the old relevance search experience 
 
 ### Switch between relevance search and categorized search
 
@@ -88,22 +117,6 @@ If your organization has turned on both search options (relevance search and cat
 
    > [!div class="mx-imgBorder"]
    > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
-    
-### Set a default search experience
-
-If your organization has turned on both search options, you can select a default search experience in your personal settings.
-
-1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
-  
-   > [!div class="mx-imgBorder"]
-   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")  
-
-2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
-
-## Old relevance search experience 
 
 ### Start a search 
  
