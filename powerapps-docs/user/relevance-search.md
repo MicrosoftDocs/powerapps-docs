@@ -66,6 +66,9 @@ If your organization has turned on both search options (relevance search and cat
 
 1. To switch between search types, on the navigation bar, select **Search**.
 
+   > [!div class="mx-imgBorder"]
+   > ![Search button on the commmandbar](media/commandbar-search-button.png) 
+
 2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
 
    > [!div class="mx-imgBorder"]
