@@ -1,5 +1,6 @@
 ---
 title: "Add, configure, move, or delete fields on a form | MicrosoftDocs"
+description: Learn how to work with fields on a form using Power Apps.
 ms.custom: ""
 ms.date: 05/04/2020
 ms.reviewer: ""
@@ -30,7 +31,7 @@ Add, configure, move, or delete fields using the form designer.
 To add fields to a form, use the **Fields** pane. The **Fields** pane lets you search and filter to help you quickly find fields. It also includes the option to show only unused fields. 
 
 > [!div class="mx-imgBorder"] 
->    ![](media/FormDesignerFieldsPane.png "Fields pane")
+>    ![Fields pane](media/FormDesignerFieldsPane.png "Fields pane")
 
 ### Add fields to a form using drag and drop
 > [!NOTE]
