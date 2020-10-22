@@ -181,7 +181,7 @@ Some entities will have different sets of options.
 |---------|---------|
 |0 : Open|1: Open|
 |1 : Completed|2: Made <br />4: Received|
-|2: Cancelled|3: Cancelled|
+|2: Canceled|3: Canceled|
 
 The set of valid state codes for an entity is not customizable, but the status codes are customizable. You can add additional `StatusCode` options for a corresponding `StateCode`.
 
