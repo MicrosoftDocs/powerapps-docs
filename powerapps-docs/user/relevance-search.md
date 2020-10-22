@@ -62,11 +62,17 @@ Relevance search brings the following enhancements and benefits:
 
 Relevance search is disabled by default. Your administrator needs to enable it for the organization, thus allowing all users in the organization to use it. After relevance search is enabled, you might have to wait up to an hour or more, depending on the size of your organization, before you start seeing relevance search results for your apps. Smaller changes in indexed data can take up to 15 minutes to show up in your system. For more information, see [Configure Relevance Search to improve search results and performance](https://docs.microsoft.com/power-platform/admin/configure-relevance-search-organization).
 
+## new relevance search experience  
+
 If you're on the Microsoft Power Platform release plan for the 2020 release wave 2, you can turn on the new search experience for your organization. 
 
    > [!div class="mx-imgBorder"]
-   > ![Search button on the commmandbar](media/admin-enable-search.jpg) 
+   > ![Turn on new search experience](media/admin-enable-search.jpg) 
 
+When the new relevance search experience is turned then it will be available by default to users. Users will have a prominent and globally discoverable search bar on the header.
+
+   > [!div class="mx-imgBorder"]
+   > ![Search box on header]](media/new-search-exp.png) 
 
 
 ### Switch between relevance search and categorized search
