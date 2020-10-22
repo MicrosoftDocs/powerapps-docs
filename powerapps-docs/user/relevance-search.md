@@ -76,7 +76,7 @@ When the new relevance search experience is turned then is available by default 
    
  ### Set a default search experience
 
-If your organization has turned on both search options, you can select a default search experience in your personal settings.
+If your organization has turned on both relevacne search and categorized search, you can select a default search experience in your personal settings.
 
 1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
   
