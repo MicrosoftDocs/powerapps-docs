@@ -23,7 +23,7 @@ search.app:
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 > [!WARNING]
-> A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is globally disabled, and we are working urgently to address the issue. A fix for the issue found is being being deployed. It will be deployed and the feature re-enabled to all public regions the first week of November. The safe deployment practice is being followed so the feature may be available in your region earlier. Thanks for your patience as we developed a fix. 
+> A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is globally disabled, and we are working urgently to address the security issue. A fix for the issue has been found. The fix will be deployed and the feature re-enabled to all public regions the first week of November 2020. A safe deployment practice is being followed so the feature may be available in your region earlier. Thank you for your patience as we developed a fix. 
 
 
 
