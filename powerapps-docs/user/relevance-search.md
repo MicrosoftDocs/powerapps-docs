@@ -91,6 +91,8 @@ If your organization has turned on both search options, you can select a default
 
 ## Use the new relevance search experience 
 
+The new search experience is intuitive and easy to use. Start typing your search query and you will see suggestions on recent searches and records, automatic record suggestions based on the typed query. 
+
    > [!div class="mx-imgBorder"]
    > ![Legend for new search experience](media/legend-for-new-exp.png) 
 
@@ -99,7 +101,10 @@ Legend
 1. **Search bar**: Globally discoverable search bar 
 2. **Recent searches**: Shows recent searches and recently accessed records.
 3. **Seggested records**: Automatic suggestions of records based on the typed query.
-   
+
+The search results page allow users to search for their information quickly.
+
+
 
 ## Use the old relevance search experience 
 
