@@ -103,7 +103,7 @@ reference)](reference/collections.md).
 |**formContext.ui.navigation.**[items](reference/formContext-ui-navigation.md)|The **formContext.ui.navigation.items** collection provides access to navigation items that are defined using the navigation area of the form editor. People navigate to these using the command bar.|
 | **formContext.ui.**[quickForms](reference/formContext-ui-quickForms.md) | Provides methods to access all the quick view controls and its constituent controls on the Customer Enagagement forms.| **Xrm.Page.ui.tabs** collection provides access to each of these tabs.|
 | **formContext.ui.**[tabs](reference/formContext-ui-tabs.md) | You can organize each form by using one or more tabs. This collection provides access to each of these tabs.|
-| **formContext.ui.tabs.**[sections](reference/formContext-ui-sections.md) | You can organize each form tab by using one or more sections. The tab **sections** collection provides access to each of these sections.|
+| **formContext.ui.tabs.**[sections](reference/formContext-ui-sections.md) | You can organize each form tab by using one or more sections. The tab **sections** collection provides access to each of these sections. You need to define the tab which contains the desired section or iterate through each tab to find the relevant section.|
 
 
   

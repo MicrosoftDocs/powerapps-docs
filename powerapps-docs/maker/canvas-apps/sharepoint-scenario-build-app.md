@@ -402,7 +402,7 @@ The completed screen should now look like the following image (if the fields are
 Now that the app is complete, let's run it to see how it works. We'll add a link on the SharePoint site to the app. You will be able to run the app in the browser, but you might need to share the app for other people to run it. For more information, see [Share your app](share-app.md).
 
 ### Add a link to the app
-1. In the Office 365 app launcher, click or tap **PowerApps**.
+1. In the Office 365 app launcher, click or tap **Power Apps**.
    
     ![Power Apps in Office 365 app launcher](./media/sharepoint-scenario-build-app/04-07-02a-waffle.png)
 
