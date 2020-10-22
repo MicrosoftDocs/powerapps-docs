@@ -93,7 +93,7 @@ If your organization has turned on both search options, you can select a default
 1.  From the top nav bar, select **Search**.  
 
     > [!div class="mx-imgBorder"]
-    > ![Global Search Button](media/global-search-button.png "Global search") 
+    > ![Global Search Button](media/commandbar-search-button.png "Global search") 
   
 2.  Enter your search words in the search box, and then select **Search**.
 
