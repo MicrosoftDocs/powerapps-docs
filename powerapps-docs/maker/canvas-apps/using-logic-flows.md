@@ -38,7 +38,7 @@ You can use Power Automate to create logic that performs one or more tasks when 
 
 1. Near the bottom of the page that appears, select **Search hundreds of connections and triggers**.
 
-1. In the search box, type **PowerApps**, and then select the **PowerApps** icon.
+1. In the search box, type **Power Apps**, and then select the **Power Apps** icon.
 
     ![Create a Power Apps trigger](./media/using-logic-flows/set-trigger.png)
     

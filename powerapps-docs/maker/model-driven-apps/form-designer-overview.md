@@ -1,5 +1,6 @@
 ---
-title: "Overview of the model-driven form designer | MicrosoftDocs"
+title: "Overview of the model-driven app form designer | MicrosoftDocs"
+description: Learn about the form designer for model-driven apps.
 ms.custom: ""
 ms.date: 08/26/2019
 ms.reviewer: ""
@@ -40,7 +41,7 @@ The form designer interface has the following areas:
 - Fit to width - Quick action to fit the form preview to the available width.
 
 > [!div class="mx-imgBorder"] 
-> ![](media/FormDesignerOverview.png "Form designer layout")
+> ![Form designer layout](media/FormDesignerOverview.png "Form designer layout")
 
 ## See also
 [Create, edit, or configure forms using the form designer](create-and-edit-forms.md)  
