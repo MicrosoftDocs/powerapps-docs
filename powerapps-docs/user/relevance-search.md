@@ -129,9 +129,24 @@ If your organization has turned on both relevacne search and categorized search,
 
 ## Use the old relevance search experience 
 
-If you're organization has relevance search but your administrator has not turned on the [new relevance search experince](relevance-search.md#new-relevance-search-experience) then you can use the old search experience.
+If you're organization has relevance search enabled but your administrator has not turned on the [new relevance search experince](relevance-search.md#new-relevance-search-experience) then you will see the old search experience.
 
-### Start a search 
+
+### Switch between the old relevance search experience and categorized search
+
+If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
+
+1. To switch between search types, on the navigation bar, select **Search**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Search button on the commmandbar](media/commandbar-search-button.png) 
+
+2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
+   
+### Start a search using the old relevance search experience
  
 1.  From the top nav bar, select **Search**.  
 
@@ -142,6 +157,7 @@ If you're organization has relevance search but your administrator has not turne
 
     > [!div class="mx-imgBorder"]
     > ![Relevance Search Box](media/relevance-search-box.png "Relevance search box")   
+
 
 ### Filter records with facets
 
@@ -209,6 +225,11 @@ Like other facets, you can use date and time facets to filter and see search res
    > ![Configure Facets and Filters](media/configure-facets-filters.png "Configure Facets and Filters")  
   
 3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for an entity. Your system administrator or customizer can set a default experience for all entities, but you can set your own here.  
+
+   > [!div class="mx-imgBorder"]
+   > ![Configure Facets and Filters dialog box](media/configure-ff.png  
+  
+  
   
    - In the **Select Entity** drop-down list, select an entity you want to configure facets for. This drop-down list contains only the entities that are enabled for relevance search.  
   
@@ -220,16 +241,3 @@ Like other facets, you can use date and time facets to filter and see search res
    > - If a system customizer deletes a field or makes it no longer searchable, and you've saved a facet for that field, it will no longer show up as a facet.  
    >   -   You'll only see the fields that exist in the default solution and that are configured as searchable by your system customizer.  
    
-### Switch between relevance search and categorized search
-
-If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
-
-1. To switch between search types, on the navigation bar, select **Search**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Search button on the commmandbar](media/commandbar-search-button.png) 
-
-2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
