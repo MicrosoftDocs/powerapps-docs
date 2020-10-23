@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 09/29/2020
+ms.date: 10/30/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -53,8 +53,9 @@ For more information on how privileges and access checks work, go to [How access
 Contact your administrator if you don't have the required access. Only an administrator can edit your security role and privileges. To find your administrator, go to [Find your administrator or support person](https://docs.microsoft.com/powerapps/user/find-admin).
 
 
+When you run the access check as an administrator, the **Check Access** dialog box look a 
 
-
-    
+   > [!div class="mx-imgBorder"]
+   > ![Access checker showing your access level for an admin.](media/check_access_page_admin.png "Access checker showing your access level for an admin")
   
   
