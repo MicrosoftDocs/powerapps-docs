@@ -14,41 +14,8 @@ search.app:
   - PowerApps
 ---
 # Send a push notification in Power Apps
-Push notifications are used in mobile apps for consumer and business scenarios primarily to engage app users and help them prioritize key tasks. In Power Apps, you can send notifications by using the Power Apps Notification connector. You can send native push notifications to any app that you create in Power Apps. We plan to add more notification types in the future.
 
-![Example of what a push notification looks like](./media/add-notifications/pic1-notification-screenshot.png)
-
-Add a push notification to your app if:
-
-* Your users need to know information immediately.
-* Your users must complete important tasks by using your app, in a preloaded context.
-* You want to engage your users on a specific interval, or you need users to enter the app in a specific context.
-
-> [!NOTE]
-> To receive push notifications, each user must have opened the app in Power Apps Mobile once or gotten the app from AppSource in [Dynamics 365](https://home.dynamics.com/).
-
-## Before you start
-In an app for which you have the **Contributor** permission, add a Power Apps Notification connection. If you don't already have an app, you can quickly [create one from a template](get-started-test-drive.md), and you'll have the required permission by default. That tutorial and this one use an app based on the Case Management template.
-
-## Send a notification from a flow
-> [!NOTE]
-> If you trigger a push notification from a flow, you can send the notification to only one user or security group at a time currently.
-
-1. In [Power Automate](https://flow.microsoft.com), create a trigger that specifies when the push notification is sent.
-
-    For example, you might want to send a notification when a record is added to the **Case** entity in the Common Data Service.
-
-    ![Screenshot of creating a flow with a Common Data Service trigger](./media/add-notifications/pic4-step1-flowupdated.png)
-2. Create an action for the flow by using the **Power Apps Notification** connector, and enter the **App ID** of the app to which you want to send notifications.
-
-    You can also rename the connection to reflect your scenario.
-
-    ![Screenshot of creating a connection to the Power Apps that will receive these push notifications](./media/add-notifications/pic5-step2-create-connection.jpg)
-3. (optional) Pass parameters to the app when it opens (after the user taps the push notification).
-
-    In our example, we pass along the **Case ID** and **Initial Owner** fields for the selected contact.
-
-    ![Screenshot of passing optional parameters into the push notification](./media/add-notifications/pic6-step3-configure-notif.jpg)
+Push notifications are used in mobile apps to engage app users and help them prioritize key tasks. In Power Apps, you can send notifications by using the Power Apps Notification connector. You can send native push notifications to any app that you create in Power Apps. 
 
 ## Send a notification from an app
 You can send a push notification from one app to another or to the same app.
@@ -136,3 +103,4 @@ PowerAppsNotification.SendPushNotification(
 * Push notifications aren't currently supported for Model Driven apps. 
 
 For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
+
