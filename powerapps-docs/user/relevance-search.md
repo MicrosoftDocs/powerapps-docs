@@ -124,6 +124,9 @@ If your organization has turned on both relevacne search and categorized search,
    > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
 
 
+> [!IMPORTANT]
+> If you have the new relevance search experience available but you set your default search experience to categorized search, then the old relevance search experience and categorized is available. To use the new relevance search experience you must set your deault search experice to, Relevance Search. 
+
 ## Use the old relevance search experience 
 
 If you're organization has relevance search but your administrator has not turned on the [new relevance search experince](relevance-search.md#new-relevance-search-experience) then you can use the old search experience.
