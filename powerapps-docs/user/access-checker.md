@@ -53,9 +53,14 @@ For more information on how privileges and access checks work, go to [How access
 Contact your administrator if you don't have the required access. Only an administrator can edit your security role and privileges. To find your administrator, go to [Find your administrator or support person](https://docs.microsoft.com/powerapps/user/find-admin).
 
 
-When you run the access check as an administrator, the **Check Access** dialog box look a 
+## Check another user's access to a record
+
+If you're a administrator you can check the acccess another user has to a record.
+
+1. Open a record, select **Check Access** on the command bar.
+2. In the **User Lookup** field select or enter a user name.
 
    > [!div class="mx-imgBorder"]
-   > ![Access checker showing your access level for an admin.](media/check_access_page_admin.png "Access checker showing your access level for an admin")
+   > ![Access checker showing your access level for an admin.](media/check_access_page_admin-1.png "Access checker showing your access level for an admin")
   
   
