@@ -73,20 +73,6 @@ When the new relevance search experience is turned then is available by default 
 
    > [!div class="mx-imgBorder"]
    > ![Search box on header](media/new-search-exp.png) 
-   
- ### Set a default search experience
-
-If your organization has turned on both relevacne search and categorized search, you can select a default search experience in your personal settings.
-
-1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
-  
-   > [!div class="mx-imgBorder"]
-   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")  
-
-2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
-
-   > [!div class="mx-imgBorder"]
-   > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
 
 
 ## Use the new relevance search experience 
@@ -122,6 +108,20 @@ Legend
 9. **Clear**: Only clears the **Owner** filter. Note, you only see this filter when the **Owner** filter is selected.
 10. **Modified on**: Filter the search results by when the record was last modified.
 11. **Created on**: Select a time range to find records created in the selected time range.
+
+## Set a default search experience
+
+If your organization has turned on both relevacne search and categorized search, you can select a default search experience in your personal settings.
+
+1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
+  
+   > [!div class="mx-imgBorder"]
+   > ![Personalization Settings](media/personalization-settings.png "Personalization Settings")  
+
+2. On the **General** tab, in the **Select the default search experience** section, for the **Default Search Experience**, select your default experience. 
+
+   > [!div class="mx-imgBorder"]
+   > ![Select default search experience](media/default-search-experience.png "Select a default search experience")  
 
 
 ## Use the old relevance search experience 
