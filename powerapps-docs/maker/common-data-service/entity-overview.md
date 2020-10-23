@@ -1,6 +1,6 @@
 ---
 title: "Entity overview in Power Apps | MicrosoftDocs"
-description: "Learn how to create and edit entities using Power Apps portal"
+description: "Learn about entities in Power Apps"
 ms.custom: ""
 ms.date: 07/25/2018
 ms.reviewer: ""
@@ -24,7 +24,7 @@ search.app:
   - D365CE
 ---
 
-# Entity overview
+# Entity summary
 
 [!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
 
