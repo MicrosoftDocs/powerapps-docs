@@ -45,7 +45,7 @@ If you find a problem with a canvas app in Power Apps, you can help Microsoft tr
 
 1. Tap **Session details**.
 
-    ![Get a session ID from a browser](media/get-sessionid/mobile.png "Get a session ID from a browser")
+    ![Get a session ID from a phone or a tablet](media/get-sessionid/mobile.png "Get a session ID from a phone or a tablet")
 
 ### When running an embedded app or form
 
