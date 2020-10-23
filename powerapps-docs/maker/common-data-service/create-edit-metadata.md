@@ -26,6 +26,8 @@ search.app:
 
 # Entities and metadata in Common Data Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service is designed so that you can quickly and easily create a data model for your application. Normally, you shouldn't have to concern yourself with some of the details about metadata that this topic will introduce. But if you want to develop a deeper understanding about how apps that use Common Data Service work or you are evaluating what is possible, understanding the metadata used by Common Data Service may provide you insight.
 
 *Metadata* means data about data. Common Data Service provides a flexible platform for you because it is relatively easy to edit the definitions of the data that the environment will use. In Common Data Service, the metadata is a collection of entities. Entities describe the kinds of data which is stored in the database.  Each entity corresponds to a database table and each field (also known as attribute) within an entity represents a column in that table. Entity metadata is what controls the kinds of records you can create and what kind of actions can be performed on them. When you use the customization tools to create or edit entities, fields, and entity relationships, you are editing this metadata. 

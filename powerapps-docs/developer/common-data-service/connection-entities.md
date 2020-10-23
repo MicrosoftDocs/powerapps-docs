@@ -17,6 +17,8 @@ search.app:
 ---
 # Use connections to link records to each other
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The *connections* provide a flexible way to connect and describe the relationships between any two entity records Common Data Service. It helps you to promote teamwork, collaboration, and effective management of business and sales processes. Connections enable you to easily associate users, contacts, quotes, sales orders, and many other entity records with each other. The records in the association can be assigned particular roles that help define the purpose of the relationship.  
   
  Connections provide the following capabilities:  

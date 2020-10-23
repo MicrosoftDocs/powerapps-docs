@@ -18,6 +18,8 @@ search.app:
 
 # Web service error codes
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This topic lists the error codes you might encounter when you debug your code.
 
 <a name="BKMK_CRMErrors"></a>   

@@ -19,6 +19,8 @@ search.app:
 ---
 # Import solutions
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 You can manually import solutions using the steps in this article. You must import only those solutions that you've obtained from a trusted source.

@@ -23,6 +23,8 @@ search.app:
 ---
 # Use ITracingService in Plug-ins
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Maintainability, Supportability
 
 **Impact potential**: Medium

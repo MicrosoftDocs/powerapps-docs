@@ -17,6 +17,8 @@ search.app:
 ---
 # Impersonate a user
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Sometimes you need the code in a plug-in to run in the context of a different user, for example to perform an operation on their behalf.
 
 There are two ways to apply impersonation in plug-ins: at registration or execution.

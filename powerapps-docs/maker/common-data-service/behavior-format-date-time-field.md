@@ -24,6 +24,8 @@ search.app:
 ---
 # Behavior and format of the Date and Time field
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 In Common Data Service, the Date and Time data type is used in many standard entity fields. Depending on what kind of date the field represents, you can choose different field behaviors: **User Local**, **Date Only** or **Time-Zone Independent**.  
   
 <a name="Behavior"></a>   

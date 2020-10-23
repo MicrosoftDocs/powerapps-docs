@@ -32,6 +32,8 @@ search.app:
 
 # Self-service data prep with dataflows
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 As the volume of data continues to grow, so does the challenge of shaping that
 data into well-structured, actionable information. You want data that’s ready for
 apps, AI workloads, or analytics so that you can quickly turn volumes of

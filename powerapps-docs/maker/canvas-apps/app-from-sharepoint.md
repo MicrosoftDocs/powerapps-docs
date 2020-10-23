@@ -66,7 +66,7 @@ The principles of generating an app won't change even if you create a list that'
 
 If you create an app of a custom list from the SharePoint Online command bar, the app appears as a view of that list. You can also run the app on an iOS or Android device, in addition to a web browser.
 
-1. In SharePoint Online, open a custom list, select **PowerApps** on the command bar, and then select **Create an app**.
+1. In SharePoint Online, open a custom list, select **Power Apps** on the command bar, and then select **Create an app**.
 
     ![Create an app](./media/app-from-sharepoint/generate-new-app.png)
 

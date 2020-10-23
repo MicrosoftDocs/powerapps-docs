@@ -17,6 +17,8 @@ search.app:
 ---
 # Tutorial: Debug a plug-in
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This tutorial is the second in a series that will show you how to work with plug-ins. 
 
 - [Tutorial: Write and register a plug-in](tutorial-write-plug-in.md)

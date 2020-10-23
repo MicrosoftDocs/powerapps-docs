@@ -17,6 +17,8 @@ search.app:
 ---
 # Discovery Service
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE [cc-discovery-service-description](includes/cc-discovery-service-description.md)]
 
 The Discovery Service is accessed through two different APIs:

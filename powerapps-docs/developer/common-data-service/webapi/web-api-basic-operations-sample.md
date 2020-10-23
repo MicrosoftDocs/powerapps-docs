@@ -23,6 +23,8 @@ search.app:
 ---
 # Web API Basic Operations Sample
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This group of samples demonstrate how to perform basic CRUD (Create, Retrieve, Update, and Delete) and associative operations using the Common Data Service Web API.  
   
 -   [Web API Basic Operations Sample (C#)](samples/cdswebapiservice-basic-operations.md)  

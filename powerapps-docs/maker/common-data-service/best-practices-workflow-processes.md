@@ -26,26 +26,33 @@ search.audienceType:
 # Best practices for real-time workflow processes
 
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 This topic contains best practices for creating and managing real-time workflow processes.  
-  
+
+
+<!-- from editor: Having trouble following the second sentence below. Where it says "then updates that attribute," it isn't clear what does the updating. 
+Also, if this was recently updated, please update the publication date. -->
+
+
 <a name="BKMK_AvoidInfiniteLoops"></a>   
 ## Avoid infinite loops  
- It’s possible to create logic in a real-time workflow that initiates an infinite loop, which consumes server resources and affects performance. The typical situation where an infinite loop might occur is if you have a real-time workflow configured to start when an attribute is updated and then updates that attribute in the logic of the workflow. The update action triggers the same real-time workflow that updates the record and triggers the real-time workflow again and again.  
+It’s possible to create logic in a real-time workflow that initiates an infinite loop, which consumes server resources and affects performance. The typical situation where an infinite loop might occur is when you have a real-time workflow configured to start when an attribute is updated and then updates that attribute in the logic of the workflow. The update action triggers the same real-time workflow that updates the record and triggers the real-time workflow again and again.  
   
- The workflows you create include logic to detect and stop infinite loops. If a real-time workflow process is run more than a certain number of times on a specific record in a short period of time, the process fails with the following error: **This workflow job was canceled because the workflow that started it included an infinite loop. Correct the workflow logic and try again**. The limit of times is 16.  
+The workflows you create include logic to detect and stop infinite loops. If a real-time workflow process is run more than a certain number of times on a specific record in a short period of time, the process fails with the following error: **This workflow job was canceled because the workflow that started it included an infinite loop. Correct the workflow logic and try again**. The limit of times is 16.  
   
 <a name="BKMK_UseWorkflowTemplates"></a>   
 ## Use real-time workflow templates  
- If you have workflows that are similar and you anticipate creating more workflows that follow the same pattern, save your real-time workflow as a workflow template. This way, the next time you need to create a similar workflow, create the real-time workflow using the template and avoid entering all the conditions and actions from scratch.  
+If you have workflows that are similar and you anticipate creating more workflows that follow the same pattern, save your real-time workflow as a workflow template. This way, the next time you need to create a similar workflow, you can create the real-time workflow using the template and avoid entering all the conditions and actions from scratch.  
   
- In the **Create Process** dialog, choose **New process from an existing template (select from list)**.  
+In the **Create Process** dialog, choose **New process from an existing template (select from list)**.  
   
 <a name="BKMK_UseChildWorkflows"></a>   
 ## Use child workflows  
- If you apply the same logic in different workflows or in conditional branches, define that logic as a child real-time workflow so you don’t have to replicate that logic manually in each real-time workflow or conditional branch. This helps make your workflows easier to maintain. Instead of examining many workflows that may apply the same logic, you can just update one workflow.  
+If you apply the same logic in different workflows or in conditional branches, define that logic as a child real-time workflow so you don’t have to replicate that logic manually in each real-time workflow or conditional branch. This helps make your workflows easier to maintain. Instead of examining many workflows that might apply the same logic, you can just update one workflow.  
   
 ## Automatically delete completed real-time workflow jobs
-For background (asynchronous) workflows, we recommend selecting the **Automatically delete completed workflow jobs (to save disk space)** option in the real-time workflow definition. Checking this box allows the system to delete real-time workflow logs for successful executions to save space. Notice that logs from failed real-time workflow executions will always be saved for troubleshooting.  
+For background (asynchronous) workflows, we recommend selecting the **Automatically delete completed workflow jobs (to save disk space)** option in the real-time workflow definition. Selecting this option allows the system to delete real-time workflow logs for successful executions to save space. Note that logs from failed real-time workflow executions will always be saved for troubleshooting.  
 
 ![Workflow job retention](media/workflow-job-retention.png)
 
@@ -61,10 +68,10 @@ Running more than one real-time workflow that updates the same entity can cause 
   
 <a name="BKMK_DocumentChangesUsingNotes"></a>   
 ## Use Notes to keep track of changes  
- When you edit workflows you should use the Notes tab and type what you did and why you did it. This allows someone else to understand the changes you made.  
+When you edit workflows you should use the Notes tab and type what you did and why. This allows someone else to understand the changes you made.  
   
 ## Next steps  
- <!-- [Workflow processes overview](workflow-processes.md)    -->
- [Configure real-time workflow processes](configure-workflow-steps.md)   
- [Monitor and manage real-time workflow processes](monitor-manage-processes.md)
+<!-- [Workflow processes overview](workflow-processes.md)    -->
+[Configure real-time workflow processes](configure-workflow-steps.md)   
+[Monitor and manage real-time workflow processes](monitor-manage-processes.md)
    

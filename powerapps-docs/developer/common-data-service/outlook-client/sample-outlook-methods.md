@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Use Dynamics 365 for Outlook methods
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This sample code is for Common Data Service. To download the sample, refer [Sample: Use Dynamics 365 for Outlook methods](https://msdn.microsoft.com/library/gg309513.aspx).
 
 ## Prerequisites
