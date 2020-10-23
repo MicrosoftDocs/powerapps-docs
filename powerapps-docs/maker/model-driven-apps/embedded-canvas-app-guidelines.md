@@ -1,5 +1,6 @@
 ---
 title: "Guidelines on working with embedded canvas apps | MicrosoftDocs"
+description: Understand the recommended ways to work with embedded canvas apps in Power Apps
 ms.custom: ""
 ms.date: 08/28/2020
 ms.reviewer: ""
