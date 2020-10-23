@@ -103,7 +103,7 @@ Legend
 4. **Created on**: Shows when the record was created.
 5. **Show more**: Select to show more results.
 6. **Filters**: Refine the search results by using filters. Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. Immediately after you perform a search you can filter by record type, owner, created on, and modified on.
-7. **Clear all**: Select to clear all the filters.
+7. **Clear all**: Select to clear all the filters. 
 8. **Owner**: Select your user name to find records that you are the owner of.
 9. **Clear**: Only clears the **Owner** filter. Note, you only see this filter when the **Owner** filter is selected.
 10. **Modified on**: Filter the search results by when the record was last modified.
@@ -189,7 +189,7 @@ Search results that are found in email attachments or appointment entities are s
   
 When you refine by record type, the facet scope switches to the selected entity, and up to four facets that are specific to the entity are shown. For example, if you select the Account entity, you'll see the **Primary Contact** facet in addition to the global facets.  
   
-In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator or customer has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
+In the **Set Personal Options** dialog box, you can also choose other facets from the ones that your system administrator has made available to you. The user setting overrides the default setting. [!INCLUDE[proc_more_information](../includes/proc-more-information.md)] [Configure facets and filters for the search](#BKMK_ConfigureFacets)  
   
 #### Text-based facets
 
