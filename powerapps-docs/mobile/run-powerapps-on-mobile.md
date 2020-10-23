@@ -1,6 +1,6 @@
 ---
 title: Run canvas app and model-driven apps on Power Apps mobile | Microsoft Docs
-description: Learn how to run canva and model-driven apps on a mobile device.
+description: Learn how to run canvas and model-driven apps on a mobile device.
 author: mduelae
 ms.service: powerapps
 ms.component: pa-user
@@ -35,9 +35,29 @@ Legend:
 1. **Model-driven apps**
 2. **Canvas apps**
 
-## Install the Power Apps mobile app
+## Supported devices 
 
-To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin, and then download Power Apps from the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8) or [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps) onto an iPhone, iPad, or Android device running a [supported operating system](../maker/canvas-apps/limits-and-config.md). Also, make sure you have access to a canvas app that you created or that someone else created and shared with you.
+These are the supported devices for running model-driven apps and canvas apps on the Power Apps mobile app.
+
+| **Minimum required** | **Recommended** |
+| --- | --- |
+| iOS 12 or later |iOS 12 or later|
+| Android 7 or later |Android 7 or later |
+| Windows 8.1 or later (PC only) |Windows 10 Fall Creators Update with at least 8 GB of RAM)|
+
+> [!NOTE]
+> - On October 16, 2020 we will no longer support iOS 12. After October 16, 2020 iOS 13 or later will be supported. 
+> - We currently don't support new features on Windows platform for [Power Apps mobile app](/powerapps/user/run-app-client). Features such as the Improved Common Data Service option and guest access are not available on this platform. We recommend using a web player on Windows to leverage the full set of capabilities. Updates to the Power Apps mobile app for Windows platform will be announced in future.
+
+## Install Power Apps mobile app
+
+To follow this procedure, if you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=).  Also, make sure you have access to a model-driven app or canvas app that you created or that someone else created and shared with you. 
+
+Choose the download link for your device:
+
+- For iOS (iPad or iPhone), go to the [App Store](https://itunes.apple.com/app/powerapps/id1047318566?mt=8).
+
+- For Android, go to [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.msapps). 
 
 
 ## Open Power Apps, and sign in
