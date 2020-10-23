@@ -23,7 +23,7 @@ search.app:
 
 > [!WARNING]
 > A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is globally disabled, and we are working urgently to address the issue. 
-> A fix for the issue found is being being deployed. It will be deployed and the feature re-enabled to all public regions the first week of November. The safe deployment practice is being followed so the feature may be available in your region earlier. Thanks for your patience as we developed a fix. 
+> A fix for the issue found is being being deployed. It will be deployed and the feature re-enabled to all public regions the first week of November. The safe deployment practice is being followed so the feature may be available in your region earlier. Thank you for your patience. 
 > 
 > While this feature is disabled, the existing Commmon Data Service connector still works using the import connection mode.
 
