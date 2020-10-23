@@ -55,7 +55,7 @@ Contact your administrator if you don't have the required access. Only an admini
 
 ## Check another user's access to a record
 
-If you're a administrator you can check the acccess another user has to a record.
+If you're an administrator, you can check the access another user has to a record.
 
 1. Open a record, select **Check Access** on the command bar.
 2. In the **User Lookup** field select or enter a user name to search for the user.
