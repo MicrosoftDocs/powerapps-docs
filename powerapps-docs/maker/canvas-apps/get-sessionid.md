@@ -31,7 +31,7 @@ If you find a problem with a canvas app in Power Apps, you can help Microsoft tr
 
 ### When running an app in a browser
 
-1. In the upper-right corner, select the gear icon.
+1. In the upper-right corner, select ![Gear icon](media/get-sessionid/gear-icon.png "Gear icon").
 
 1. Select **Session details**.
 
@@ -39,7 +39,7 @@ If you find a problem with a canvas app in Power Apps, you can help Microsoft tr
 
 ### When running an app on a phone or a tablet
 
-1. Select ![App settings from top-left](media/get-sessionid/mobile-icon.png "App settings from top-left").
+1. In the upper-left corner, select ![App settings from top-left](media/get-sessionid/mobile-icon.png "App settings from top-left").
 
     ![App settings from top-left - on mobile screen](media/get-sessionid/mobile-2.png "App settings from top-left - on mobile screen")
 
