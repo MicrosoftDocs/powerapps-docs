@@ -6,7 +6,7 @@ manager: kvivek
 ms.service: powerapps
 ms.component: pa-user
 ms.topic: conceptual
-ms.date: 9/09/2020
+ms.date: 11/01/2020
 ms.author: mkaur
 ms.custom: ""
 ms.reviewer: ""
@@ -126,19 +126,7 @@ If your organization has turned on both relevacne search and categorized search,
 
 ## Use the old relevance search experience 
 
-### Switch between relevance search and categorized search
-
-If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
-
-1. To switch between search types, on the navigation bar, select **Search**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Search button on the commmandbar](media/commandbar-search-button.png) 
-
-2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
-
-   > [!div class="mx-imgBorder"]
-   > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
+If you're organization has relevance search but your administrator has not turned on the [new relevance search experince](relevance-search.md#new-relevance-search-experience) then you can use the old search experience.
 
 ### Start a search 
  
@@ -228,3 +216,17 @@ Like other facets, you can use date and time facets to filter and see search res
    > [!NOTE]
    > - If a system customizer deletes a field or makes it no longer searchable, and you've saved a facet for that field, it will no longer show up as a facet.  
    >   -   You'll only see the fields that exist in the default solution and that are configured as searchable by your system customizer.  
+   
+### Switch between relevance search and categorized search
+
+If your organization has turned on both search options (relevance search and categorized search), you can switch between the two.
+
+1. To switch between search types, on the navigation bar, select **Search**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Search button on the commmandbar](media/commandbar-search-button.png) 
+
+2. On the left, select the drop-down menu to switch between **Relevance Search** or **Categorized Search**.
+
+   > [!div class="mx-imgBorder"]
+   > ![Switch between Relevance and Categorized search](media/switch-global-search.png "Switch between relevance search and categorized search") 
