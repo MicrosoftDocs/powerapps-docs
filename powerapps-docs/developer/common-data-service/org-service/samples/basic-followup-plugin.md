@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Create a basic plug-in
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to write a simple plug-in that creates a follow-up activity. You can download the sample from [here](https://github.com/Microsoft/PowerApps-Samples/tree/master/cds/orgsvc/C%23/FollowupPlugin).
 
 ## How to run this sample

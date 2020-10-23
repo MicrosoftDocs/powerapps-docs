@@ -23,6 +23,8 @@ search.app:
 ---
 # Remove unsupported code that uses reflection in custom workflow activities
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Reliability
 
 **Impact potential**: High

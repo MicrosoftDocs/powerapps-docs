@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Detect solution dependencies
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to detect dependencies before you delete a solution component.
 
 ## How to run this sample

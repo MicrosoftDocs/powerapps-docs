@@ -18,10 +18,14 @@ search.app:
 
 # Use SQL to query data (Preview)
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 [!INCLUDE[cc-beta-prerelease-disclaimer](../../includes/cc-beta-prerelease-disclaimer.md)]
 
 > [!WARNING]
-> A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is globally disabled, and we are working urgently to address the issue. This topic will be updated when the issue is resolved or when we have more information to share.
+> A problem has been identified with the Tabular Data Stream (TDS) endpoint. This feature is presently globally disabled as we work to address a security issue. A fix for the issue has been developed. Deployment of the fix and feature re-enablement to all public regions is planned for the first week of November 2020. A safe deployment practice is being followed so the feature may be available in your region earlier. Thank you for your patience on this matter.
+
+
 
 A SQL data connection is available on the Common Data Service endpoint. The SQL connection provides read-only access to the entity data of the target Common Data Service environment. This allows you to write and execute SQL queries against the entity data table. Table columns provide the attribute data of the entity. No custom views of the data have been provided.
 
@@ -95,6 +99,10 @@ The following Common Data Service datatypes are not supported with the SQL conne
 > left outer join activityparty as [to] on act.activityid = [to].activityid and [to].participationtypemask = 2
 > group by act.activityid, act.subject
 > ```
+
+## Plug-ins
+
+Querying data using SQL does not trigger any plug-ins registered on the <xref:Microsoft.Xrm.Sdk.Messages.RetrieveMultipleRequest> or <xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest> messages. Any re-writing of the query or results that would normally be performed by such a plug-in will therefore not take effect for a SQL query.
 
 ### See also
 

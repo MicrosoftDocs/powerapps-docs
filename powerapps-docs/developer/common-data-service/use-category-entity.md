@@ -17,6 +17,8 @@ search.app:
 ---
 # Use the Category entity
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Categorizing entity records in Common Data Service helps you tag the records so that you can easily search them. Use the  `Category` entity to create and manage a hierarchical structure of categories in Common Data Service, and then associate entity records to one or more categories.  
   
  A category can have multiple child categories, but a child category can have only one parent category. Deleting a parent `Category` record automatically deletes all its child records and entity associations. You define a parent category for a category using the `Category.ParentCategoryId` attribute.  

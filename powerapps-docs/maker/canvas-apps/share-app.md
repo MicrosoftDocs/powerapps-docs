@@ -145,7 +145,8 @@ After a while, you can discover this group in the Power Apps sharing panel and s
 If you create an app based on Common Data Service, you must also ensure that the users that you share the app with have the appropriate permissions for the entity or entities used by the app. Particularly, those users must belong to a security role that can do tasks such as creating, reading, writing, and deleting relevant records. In many cases, you'll want to create one or more custom security roles with the exact permissions that users need to run the app. You can then assign a role to each user as appropriate.
 
 > [!NOTE]
-> As of this writing, you can assign security roles to individual users and security groups in Azure AD but not to Office groups.
+> - You can assign security roles to individual users and security groups in Azure AD but not to Office groups.
+> - The user must also be in the Common Data Service root business unit. If the user is not in the root business unit, you can share the app without providing a security role, and then set the security role directly.
 
 #### Prerequisite
 

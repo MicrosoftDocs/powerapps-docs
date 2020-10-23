@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Detect multiple duplicate records
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 This sample shows how to detect and log multiple duplicate records for a specified entity type.
 
 ## How to run this sample

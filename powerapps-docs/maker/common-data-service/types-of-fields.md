@@ -19,6 +19,8 @@ search.app:
 ---
 # Types of fields
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 The names used for types depend on the designer used. [Power Apps portal](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) uses a convention that includes the way the data is formatted. The solution explorer type uses a name aligned with the database data type with a format modifier. The following table includes the corresponding `AttributeTypeDisplayName` API type.
 
 |Portal Data type |Solution Explorer  type| API type|
@@ -78,10 +80,13 @@ You can customize forms (main, quick create, and quick view) and email templates
 
 For example, if an organization operates in multiple areas or countries, you can include multiple locations or countries in an ‘Area of operation’ field. A user can then select one or more locations from the list of available values.
 
-Multi-select option set is only available in read-only grids, editable grids, and forms. Multi-select option set is not supported in: 
-- Workflows, Actions, Dialogs, Roll Ups, charts, and Calculated fields.
-- Reports, SLA, and Routing Rule.
+Multi-select option sets can be used with read-only grids, editable grids, and most forms. Multi-select option sets can't be used with: 
+- Workflows, business process flows, actions, dialogs, business rules, charts, rollup fields, or calculated fields.
+- Reports, SLA<sup>1</sup>, and routing rules<sup>1</sup>.
 
+<sup>1</sup>Entity requires Dynamics 365 Customer Service.
+
+### Forms
 Multi-select fields are supported in the following types of forms:
 
 |Form Type|Availability|
@@ -156,7 +161,7 @@ Even though an entity has an image field, displaying that image in a model-drive
 When image display is enabled for an entity, any records that don’t have an image will display a placeholder image. For example:
 
 > [!div class="mx-imgBorder"] 
-> ![Default entity image](../common-data-service/media/account-record-default-image.png "Default account entity image")
+> ![Sample entity image for an account record](../common-data-service/media/account-record-default-image.png "Default account entity image")
   
 People can choose the default image to upload a picture from their computer. Images must be less than 10 MB and must be in one of the following formats:  
   

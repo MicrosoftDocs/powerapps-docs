@@ -19,6 +19,8 @@ search.app:
 
 # API considerations of virtual entities
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 There are two broad categories of changes to the metadata system that are associated with the introduction of virtual entities in Common Data Service:
 
 - Addition of a new assembly, namespaces, classes and other types to support development of custom virtual entity data providers

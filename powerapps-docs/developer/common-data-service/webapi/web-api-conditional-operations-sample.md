@@ -22,6 +22,8 @@ search.app:
 ---
 # Web API Conditional Operations Sample
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 This group of samples demonstrate how to perform operations that are conditionally based upon the version of the entity record contained on the Common Data Service server and/or currently maintained by the client. For more information, see [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md). This sample is implemented as a separate project for the following languages:  
   
  [Web API Conditional Operations Sample (C#)](samples/cdswebapiservice-conditional-operations.md)  

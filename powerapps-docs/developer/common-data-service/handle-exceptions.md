@@ -17,6 +17,8 @@ search.app:
 ---
 # Handle exceptions in plug-ins
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 There are two possible outcomes when a plug-in allows an exception to be passed back to the D365 system: information about the exception is logged or displayed to the user, and the current message request being processed is cancelled. The exact behavior as described below is dependent on how the plug-in is executed: in the sandbox or not, synchronous or asynchronous.
 
 <a name='cancelling-an-operation'></a>

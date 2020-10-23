@@ -17,6 +17,8 @@ search.app:
 ---
 # Duplicate detection messages
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Use the messages listed in the following table to detect duplicates in Common Data Service.  
 
 

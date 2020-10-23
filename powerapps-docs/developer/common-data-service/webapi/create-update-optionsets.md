@@ -23,6 +23,8 @@ search.app:
 
 # Create and update option sets using the Web API
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 Typically, you use *global* option sets to set fields so that different fields can share the same set of options, which are maintained in one location. Unlike *local* options sets which are defined only for a specific attribute, you can reuse global option sets. You will also see them used in request parameters in a manner similar to an enumeration.  
   
 When you define a global option set using a POST request to *[Organization URI]*`/api/data/v9.0/GlobalOptionSetDefinitions`, 

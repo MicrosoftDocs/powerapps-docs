@@ -24,6 +24,8 @@ search.app:
 # Create and update entity relationships using the Web API
 
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 The Web API supports working with relationship metadata. The concepts described in [Entity relationship metadata](../entity-relationship-metadata.md) also apply to the Web API.  
 
 <a name="bkmk_RelationshipEligibility"></a>

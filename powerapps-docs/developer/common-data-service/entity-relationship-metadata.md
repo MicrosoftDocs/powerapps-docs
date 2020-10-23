@@ -24,6 +24,8 @@ search.app:
 
 # Entity relationship metadata
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 When you look at the solution explorer or the three relationship collections in the `EntityMetadata`, you might think that there are three types of entity relationships. Actually, there are only two, as shown in the following table.
 
 |Relationship Type|Description|

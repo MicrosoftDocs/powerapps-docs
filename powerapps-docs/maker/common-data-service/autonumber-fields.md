@@ -25,6 +25,8 @@ search.app:
 ---
 # Autonumber fields
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Autonumber fields are fields that automatically generate alphanumeric strings whenever they are created. Makers can customize the format of these fields to their liking, and then rely on the system to generate matching values that automatically fill them in at runtime.
 
 While autonumber fields are formally just text fields with additional functionality built on top of them, [Power Apps](https://make.powerapps.com/?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) simplifies this concept by simply exposing **Autonumber** as a distinct data type under the **Text** category. It is important to note that the classic solution explorer doesn't support creating or managing autonumber fields.
@@ -78,7 +80,7 @@ Autonumber fields have a default seed value of 1000, but you may set a custom se
 5.  On the right pane, enter a **Display name** and select **Autonumber** for the **Data type**.
 
     > [!div class="mx-imgBorder"] 
-    > ![](media/create-autonumber-field.png "Create an autonumber field")
+    > ![Create an autonumber field](media/create-autonumber-field.png "Create an autonumber field")
   
 6. Set optional fields as needed. More information: [Create and edit fields](create-edit-field-portal.md#create-a-field)
 

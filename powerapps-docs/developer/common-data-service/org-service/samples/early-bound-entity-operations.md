@@ -17,6 +17,8 @@ search.app:
 ---
 # Sample: Early-bound entity operations
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 <!-- sample-associate-records-early-bound.md 
 
 sample-create-update-records-related-records-early-bound.md

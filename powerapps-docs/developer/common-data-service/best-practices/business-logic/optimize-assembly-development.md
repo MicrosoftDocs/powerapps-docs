@@ -23,6 +23,8 @@ search.app:
 ---
 # Optimize assembly development
 
+[!INCLUDE[cc-data-platform-banner](../../../../includes/cc-data-platform-banner.md)]
+
 **Category**: Performance, Maintainability, Design
 
 **Impact potential**: Low

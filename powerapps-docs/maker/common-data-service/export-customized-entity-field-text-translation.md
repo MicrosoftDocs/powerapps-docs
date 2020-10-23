@@ -24,6 +24,8 @@ search.app:
   - D365CE
 ---
 # Translate customized entity, form, and field text into other languages
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 After you create customized entity and field text in your unmanaged solution, you may want to translate it into other languages.  
 
 > [!IMPORTANT]

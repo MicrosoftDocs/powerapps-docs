@@ -17,6 +17,8 @@ search.app:
 ---
 # Security Model
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Common Data Service provides a security model that protects data integrity and privacy, and supports efficient data access and collaboration. The goals of the model are as follows:
 - Provide users with the access only to the appropriate levels of information that is required to do their jobs.
 - Categorize users by role and restrict access based on those roles.

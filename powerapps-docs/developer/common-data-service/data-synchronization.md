@@ -17,6 +17,8 @@ search.app:
 ---
 # Data Synchronization
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 Sometimes you’ll need to synchronize and integrate Common Data Service data with data that is stored in other systems. The common data integration patterns include taking data from an external system and pushing it into Common Data Service, taking data from Common Data Service and synchronizing it to some external data store, or updating Common Data Service with external data. You can now use several new capabilities to make it easier to write code to achieve these scenarios.  
 
  These new features can be used separately as needed in any situation, but together they address common issues related to synchronizing and integrating data with external data. The following table introduces these new features.  

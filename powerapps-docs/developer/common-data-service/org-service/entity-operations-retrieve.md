@@ -17,6 +17,8 @@ search.app:
 ---
 # Retrieve an entity using the Organization Service
 
+[!INCLUDE[cc-data-platform-banner](../../../includes/cc-data-platform-banner.md)]
+
 You will typically retrieve a record based on the results of a query and the query results should include a unique identifier for the entity record.
 
 > [!NOTE]

@@ -25,6 +25,8 @@ search.app:
 ---
 # Create many-to-many entity relationships overview
 
+[!INCLUDE[cc-data-platform-banner](../../includes/cc-data-platform-banner.md)]
+
 One-to-many (1:N) entity relationships establish a hierarchy between records. With Many-to-many (N:N) relationships there is no explicit hierarchy. There are no lookup fields or behaviors to configure. Records created using Many-to-many relationships can be considered peers and the relationship is reciprocal.  
 
 One example of a many-to-many relationship is defined between two standard entities included with the Dynamics 365 Sales app. The opportunity entity has an N:N relationship with the competitor entity. This allows for multiple competitors to be added to the opportunity and multiple opportunities associated with the same competitor. 
