@@ -100,10 +100,28 @@ Legend
 
 1. **Search bar**: Globally discoverable search bar 
 2. **Recent searches**: Shows recent searches and recently accessed records.
-3. **Seggested records**: Automatic suggestions of records based on the typed query.
+3. **Suggested records**: Automatic suggestions of records based on the typed query.
 
-The search results page allow users to search for their information quickly.
+### Search results
 
+The search results page allow users to search for their information quickly. When you run a search the search results page display the search results
+
+   > [!div class="mx-imgBorder"]
+   > ![Legend the search results page](media/legend-for-new-exp-2.png) 
+
+Legend
+
+1. **Top results**: Show records that best matches the search queary.
+2. **Other tabs**: Shows results that are filtered by page (entity) type. When you select a tab then you can use the **Filters** option to filter your serach results for the page (entity) type. 
+3. **Name**: Shows the name of the record.
+4. **Created on**: Shows when the record was created.
+5. **Show more**: Select to show more results.
+6. **Filters**: Refine the search results by using filters. Filters let you drill into and explore the results of your current search without having to repeatedly refine your search terms. 
+7. **Clear all**: Select to clear all the filters.
+8. **Owner**: Select your user name to find records that you are the owner of.
+9. **Clear**: Only clears the **Owner** filter. Note, you only see this filter when the **Owner** filter is selected.
+10. **Modified on**: Filter the search results by when the record was last modified.
+11. **Created on**: Select a time range to find records created in the selected time range.
 
 
 ## Use the old relevance search experience 
