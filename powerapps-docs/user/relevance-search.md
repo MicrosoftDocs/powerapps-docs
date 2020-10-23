@@ -39,7 +39,7 @@ Relevance search brings the following enhancements and benefits:
     > [!NOTE]
     > - Certain words that are very commonly used in a language (like **the** or **a**) are ignored during search, because they don't help uniquely identify records. Because they're ignored during search, these words are also not highlighted in results.
     > - Highlighted terms are often returned as a portion of the full value in a field because only the matched terms are highlighted.
-    > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a field has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results where part of the matched field is truncated.
+    > - Highlighted results are shown in context of the sentence that it is a part of. This may result in unexpected behavior, when a field has a period (.) because the period is considered as the end of sentence. Due this behavior, you may get results were part of the matched field is truncated.
 
 - Includes search results for text in a document that's stored in Common Data Service, including text in notes, email attachments, or appointments. The following file formats are supported for search: PDF, Microsoft Office documents, HTML, XML, ZIP, EML, plain text, and JSON.  
   
@@ -48,10 +48,10 @@ Relevance search brings the following enhancements and benefits:
   > [!NOTE]
   >  Hierarchical security models aren't supported. Even if you see a row in Common Data Service because you have access to it through hierarchical security, you won't see the result in relevance search.  
   
-- Lets you also search for option sets and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.
+- Let's you also search for option sets and lookups. For example, let's say you want to find a retail store account that has **Pharmaceuticals** in the name. When you search for **Pharmaceutical Retail**, you'll find the result because there's a match to the Industry field, which is a searchable option set.
 
   > [!NOTE]
-  >  Relevance search is text-based, and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type.
+  >  Relevance search is text-based and can search only on fields of type Single Line of Text, Multiple Lines of Text, Option Sets, or Lookups. It doesn't support searching in fields of Numeric or Date data type.
   
 - Allows you to use syntax in your search term to get the results you want. For example, type **car silver 2-door** to include matches for any word in the search term in the search results. Type **car+silver+2-door** to find only matches that include all three words. Type **car&#124;silver&#124;2-door** to  get results that contain **car** or **silver** or **2-door**, or all three words. For more information about syntax you can use in your search queries, see [Simple query syntax in Azure Cognitive Search](https://docs.microsoft.com/rest/api/searchservice/simple-query-syntax-in-azure-search).
   
@@ -90,14 +90,14 @@ Legend
 
 ### Search results
 
-The search results page allow users to search for their information quickly. When you run a search the search results page display the search results
+The search results page allow users to search for their information quickly. When you run a search the search results page displays the search results
 
    > [!div class="mx-imgBorder"]
    > ![Legend the search results page](media/legend-for-new-exp-2.png) 
 
 Legend
 
-1. **Top results**: Show records that best matches the search queary.
+1. **Top results**: Show records that best matches the search query.
 2. **Record type**: To narrow your search results to a specific page (entity), select the page (entity) tab.
 3. **Name**: Shows the name of the record.
 4. **Created on**: Shows when the record was created.
@@ -109,9 +109,9 @@ Legend
 10. **Modified on**: Filter the search results by when the record was last modified.
 11. **Created on**: Select a time range to find records created in the selected time range.
 
-## Set a default search experience
+## Set default search experience
 
-If your organization has turned on both relevacne search and categorized search, you can select a default search experience in your personal settings.
+If your organization has turned on both relevance search and categorized search, you can select a default search experience in your personal settings.
 
 1. In the upper-right corner of the page, select **Settings**, and then select **Personalization Settings**.  
   
@@ -125,11 +125,11 @@ If your organization has turned on both relevacne search and categorized search,
 
 
 > [!IMPORTANT]
-> If you have the new relevance search experience available but you set your default search experience to categorized search, then the old relevance search experience and categorized is available. To use the new relevance search experience you must set your deault search experice to, Relevance Search. 
+> If you have the new relevance search experience available but you set your default search experience to categorized search, then the old relevance search experience and categorized is available. To use the new relevance search experience, you must set your deault search experience to, Relevance Search. 
 
 ## Use the old relevance search experience 
 
-If you're organization has relevance search enabled but your administrator has not turned on the [new relevance search experince](relevance-search.md#new-relevance-search-experience) then you will see the old search experience.
+If you're organization has relevance search enabled but your administrator has not turned on the [new relevance search experience](relevance-search.md#new-relevance-search-experience) then you will see the old search experience.
 
 
 ### Switch between the old relevance search experience and categorized search
@@ -198,7 +198,7 @@ All lookups, option sets, and record types are text-based facets. For example, t
   > [!div class="mx-imgBorder"]
   > ![Text-based facet in Relevance Search](media/relevance-search-text-based-facets.png "Text-based facet in relevance search")  
   
-Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all records where the owner is Jim Glynn. When you select a lookup or option set facet value, search results are filtered to only include records with the value that you specified.  
+Filters in these facets are sorted in descending order by count. The top four facet values are displayed by default. When there are more than four facet values, you'll see a **SHOW MORE** link that you can select to expand the list and see up to fifteen top facet values. Select each value to filter the search results to show only records where the field has the value you've selected. For example, if you select **Jim Glynn**, the search results will show all records where the owner is Jim Glynn. When you select a lookup or option to set the facet value, search results are filtered to only include records with the value that you specified.  
   
 #### Date and Time facets
 
