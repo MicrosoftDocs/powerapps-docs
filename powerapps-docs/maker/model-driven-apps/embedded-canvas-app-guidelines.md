@@ -20,6 +20,7 @@ search.app:
 ---
 
 # Guidelines on working with embedded canvas apps
+
 This topic provides guidelines on working with embedded canvas apps as well as helpful tips to troubleshoot any issues you might encounter.
 
 -	Embedded canvas apps are only supported with Unified Interface model-driven apps.
@@ -36,10 +37,7 @@ This topic provides guidelines on working with embedded canvas apps as well as h
 -	The ModelDrivenFormIntegration.Item object is read-only. 
      - To write back data you must use the Common Data Service connector. More information: [Common Data Service](/connectors/commondataservice/)
 -	Embedded canvas apps can only be created via the host model-driven form. 
-    - Adding existing canvas apps as embedded on model-driven forms is currently not supported.
-    - Support to embed an existing canvas app in a model-driven form using App ID will be provided in a future update.
-- When you view a model-driven form with an embedded canvas app, if you see an error message that reads "Sorry we didn't find that app" make sure that the embedded canvas app is in the same solution as the model-driven form.
-- When you view a model-driven form with an embedded canvas app, if you see an error message that reads "It looks like you don’t have access to this app. Ask its owner to share it with you" make sure that the author has shared the embedded canvas app with you. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
+- When you view a model-driven form with an embedded canvas app, if you see an error message that reads "It looks like you don’t have access to this app" ask its owner to share it with you" make sure that the author has shared the embedded canvas app with you. More information: [Share an embedded canvas app](share-embedded-canvas-app.md).
 - Adding a canvas app on the sub-grid control is no longer available.
     - In the preview release, makers were able to add a canvas app on a sub-grid control. With canvas app embedding on model-driven forms now generally available, adding an embedded canvas app on a model-driven form is streamlined to the field. 
     - This makes it easier for makers since they don't have to decide up front whether to pass the current (main form) record as data context or a list of records related to the current (main form) record. 
