@@ -227,10 +227,10 @@ Like other facets, you can use date and time facets to filter and see search res
 3. In the **Configure Facets and Filters** dialog box, specify the facets you'd like to see for an entity. Your system administrator or customizer can set a default experience for all entities, but you can set your own here.  
 
    > [!div class="mx-imgBorder"]
-   > ![Configure Facets and Filters dialog box](media/configure-ff.png  
+   > ![Configure Facets and Filters dialog box](media/configure-ff.png)  
   
   
-  
+ 
    - In the **Select Entity** drop-down list, select an entity you want to configure facets for. This drop-down list contains only the entities that are enabled for relevance search.  
   
    - For the selected entity, select up to four facet fields. By default, the first four "facet-able" fields in the **Quick Find** view for the selected entity are selected in the list. At any time, you can only have four fields selected as facets.  
