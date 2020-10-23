@@ -91,9 +91,7 @@ Each entity that supports entity images will have three supporting attributes.
 |`EntityImage_URL`|`StringType`|An absolute URL to display the entity image in a client.|
 |`EntityImageId`|`UniqueIdentifierType`|The unique identifier of the image|
 
-More information: 
-- [Common Data Service Developer Guide Image attributes](/dynamics365/customer-engagement/developer/image-attributes)
-- [Common Data Service Developer Guide Sample: Set and retrieve entity images](/dynamics365/customer-engagement/developer/sample-set-retrieve-entity-images)
+More information: [Image attributes](image-attributes.md), [Sample: Set and retrieve entity images](org-service/samples/set-retrieve-entity-images.md)
 
 > [!NOTE]
 > This is different from the icon displayed for an entity in model-driven apps. The `IconVectorName` property contains the name of the SVG web resource that sets this.
@@ -183,7 +181,7 @@ Some entities will have different sets of options.
 |---------|---------|
 |0 : Open|1: Open|
 |1 : Completed|2: Made <br />4: Received|
-|2: Cancelled|3: Cancelled|
+|2: Canceled|3: Canceled|
 
 The set of valid state codes for an entity is not customizable, but the status codes are customizable. You can add additional `StatusCode` options for a corresponding `StateCode`.
 
