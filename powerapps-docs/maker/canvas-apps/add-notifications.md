@@ -20,7 +20,7 @@ You can send a push notification from one app to another or to the same app. In 
 In this article, the sample app used for notifications is built from the default **Case Management** app template.
 
 > [!NOTE]
-> Before you begin, create push notifications for the Power Apps mobile app. More information: [Create push notifications for the Power Apps mobile app](../../mobile/power-apps-mobile-notification).
+> Before you begin, create push notifications for the Power Apps mobile app. More information: [Create push notifications for the Power Apps mobile app](../../mobile/power-apps-mobile-notification.md).
 
 1. In [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to the app to which you want to send push notifications.
 
@@ -124,5 +124,5 @@ PowerAppsNotification.SendPushNotification(
 
 ### See also
 
-- [Create push notifications for the Power Apps mobile app](../../mobile/power-apps-mobile-notification)
+- [Create push notifications for the Power Apps mobile app](../../mobile/power-apps-mobile-notification.md)
 - [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/)
