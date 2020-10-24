@@ -19,13 +19,16 @@ You can send a push notification from one app to another or to the same app. In 
 
 In this article, the sample app used for notifications is built from the default **Case Management** app template.
 
+> [!NOTE]
+> Before you begin, create push notifications for the Power Apps mobile app. More information: [Create push notifications for the Power Apps mobile app](../../mobile/power-apps-mobile-notification).
+
 1. In [Power Apps](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc), go to the app to which you want to send push notifications.
 
 1. Copy the app ID. More information: [Get an app ID](get-sessionid.md#get-an-app-id)
 
 1. In the left pane, select **Data** - **Connections**.
 
-1. Edit the app that you want to send the notifications from. More information: [Edit an app](edit-app.md)
+1. Edit the app. More information: [Edit an app](edit-app.md)
 
 1. Select **View** - **Data sources**.
 
@@ -43,23 +46,19 @@ In this article, the sample app used for notifications is built from the default
 
 1. Select **Connect**.
 
-1. Add the connection to the trigger app.
+1. Add the push notification connection to the trigger app using the similar steps.
 
     In our example, we use the same app as the trigger app. The user who reassigns the case also triggers a push notification to the new case owner.
 
     ![Add connection](./media/add-notifications/add-connection.png)
 
-1. In [Power Automate](https://flow.microsoft.com), create a trigger that specifies when the push notification is sent.
-
-
-
-5. From the push notification connection, call the **SendPushNotification** method.
+1. From the push notification connection, call the **SendPushNotification** method.
 
     In our example, we trigger this notification by using the **OnSuccess** property in a form.
 
     ![Power Apps formula](./media/add-notifications/powerapps-function.png)
 
-## Load a specific page and context when a user taps the notification
+## Perform an action when a user taps the notification
 
 ### Pass parameters
 
@@ -70,9 +69,12 @@ Your push notification can pass specific parameters to the app. For example, to 
 You can set your app to open, for example, the **Case details** page as soon as the app opens:
 
 1. Add a **Timer** control, and set its **OnTimerEnd** property to this formula:
-   <br>**Navigate(EditCase, ScreenTransition.None)**
-2. (optional) Hide the **Timer** control by setting its **Visible** property to **false**.
-3. Set the **OnVisible** property of the screen to **Timer.Start()**.
+
+    `Navigate(EditCase, ScreenTransition.None)`
+
+1. (optional) Hide the **Timer** control by setting its **Visible** property to **false**.
+
+1. Set the **OnVisible** property of the screen to **Timer.Start()**.
 
 > [!TIP]
 > It's a good idea to create a unique first page in the app for the notification:
@@ -120,11 +122,7 @@ PowerAppsNotification.SendPushNotification(
 )
 ```
 
-## Known limitations
+### See also
 
-* Currently, notifications aren't displayed on Power Apps Mobile for Windows Phone.
-* Currently, we don't provide push notifications for users who run apps only in a web browser.
-* Notifications show the generic Power Apps icon instead of a specific app icon.
-* Push notifications aren't currently supported for Model Driven apps. 
-
-For reference information, see [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/).
+- [Create push notifications for the Power Apps mobile app](../../mobile/power-apps-mobile-notification)
+- [Power Apps Notification reference](https://docs.microsoft.com/connectors/powerappsnotification/)
