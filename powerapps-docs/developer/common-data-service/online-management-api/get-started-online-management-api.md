@@ -16,7 +16,7 @@ search.app:
 # Get started with Online Management API 
 
 > [!NOTE]
-> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated). 
+> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming#online-management-api-powershell-module-and-rest-api-are-deprecated). 
 
 This topic provides basic information to help you get started with the Online Admin API for Common Data Service.
 
