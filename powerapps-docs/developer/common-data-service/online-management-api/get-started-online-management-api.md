@@ -1,7 +1,7 @@
 ---
 title: "Get started with Online Management API for Common Data Service| MicrosoftDocs"
 description: "Provides basic information to help you get started with the Online Admin API for Common Data Service."
-ms.date: 09/30/2019
+ms.date: 10/23/2020
 ms.service: powerapps
 ms.topic: conceptual
 ms.assetid: c292c148-01f0-41f6-a2fe-7ed05a01a733
@@ -14,6 +14,9 @@ search.app:
   - PowerApps
 ---
 # Get started with Online Management API 
+
+> [!NOTE]
+> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated). 
 
 This topic provides basic information to help you get started with the Online Admin API for Common Data Service.
 

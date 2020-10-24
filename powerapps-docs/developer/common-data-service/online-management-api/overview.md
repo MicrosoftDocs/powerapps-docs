@@ -1,6 +1,6 @@
 ---
 title: "Online Management API for Common Data Service| MicrosoftDocs"
-ms.date: 09/30/2019
+ms.date: 10/23/2020
 ms.service: powerapps
 ms.topic: conceptual
 ms.assetid: b9ee3048-7065-48e6-87fc-7728c51bdd4e
@@ -13,6 +13,9 @@ search.app:
   - PowerApps
 ---
 # Online Management API for Common Data Service
+
+> [!NOTE]
+> Effective August 26, 2020, the Online Management API is [deprecated](/power-platform/important-changes-coming##online-management-api-powershell-module-and-rest-api-are-deprecated). 
 
 Online Management API is a REST API that lets you create and manage Common Data Service environments in your Microsoft 365 tenant. 
 
