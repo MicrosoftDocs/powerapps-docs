@@ -92,15 +92,18 @@ Within the folder, the data representing the Custom API is found within an XML f
     <customapi uniquename="sample_CustomAPIExample">
       <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
       <bindingtype>0</bindingtype>
+      <boundentitylogicalname />
       <description default="A simple example of a Custom API">
         <label description="A simple example of a Custom API" languagecode="1033" />
       </description>
       <displayname default="Custom API Example">
         <label description="Custom API Example" languagecode="1033" />
       </displayname>
-      <iscustomizable>1</iscustomizable>
+      <executeprivilegename />
       <isfunction>0</isfunction>
+      <isprivate>0</isprivate>
       <name>sample_CustomAPIExample</name>
+      <plugintypeid />
     </customapi>
     ```
 
@@ -138,8 +141,8 @@ Any definitions of request parameters for the Custom API are included in a folde
     <displayname default="Custom API Example String Parameter">
       <label description="Custom API Example String Parameter" languagecode="1033" />
     </displayname>
-    <iscustomizable>1</iscustomizable>
     <isoptional>0</isoptional>
+    <logicalentityname />
     <name>sample_CustomAPIExample.StringParameter</name>
     <type>10</type>
   </customapirequestparameter>
@@ -165,7 +168,7 @@ Any definitions of response properties for the Custom API are included in a fold
     <displayname default="Custom API Example String Property">
       <label description="Custom API Example String Property" languagecode="1033" />
     </displayname>
-    <iscustomizable>1</iscustomizable>
+    <logicalentityname />
     <name>sample_CustomAPIExample.StringProperty</name>
     <type>10</type>
   </customapiresponseproperty>

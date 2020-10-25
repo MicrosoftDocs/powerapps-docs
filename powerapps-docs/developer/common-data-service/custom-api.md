@@ -126,6 +126,139 @@ This table includes attributes of the Custom API Response Property entity that y
 > [!NOTE]
 > Some values are not valid for update. They cannot be changed after the Custom API Response Property is saved. If you need to change one of these values, you must delete the Custom API Response Property and re-create it with the changes you want to make.
 
+## Retrieve data about Custom APIs
+
+You can use the following queries to retrieve data about Custom APIs.
+
+### Web API
+
+Using the Web API where `yourorg.crm.dynamics.com` is the URl for your organization. More information: [Query Data using the Web API](webapi/query-data-web-api.md)
+
+```http
+GET https://yourorg.crm.dynamics.com/api/data/v9.1/customapis?$select=
+    uniquename,
+    allowedcustomprocessingsteptype,
+    bindingtype,
+    boundentitylogicalname,
+    description,
+    displayname,
+    executeprivilegename,
+    isfunction,
+    isprivate
+  &$expand=
+  CustomAPIRequestParameters($select=
+    uniquename,
+    name,
+    description,
+    displayname,
+    type,
+    logicalentityname,
+    isoptional),
+  CustomAPIResponseProperties($select=
+    uniquename,
+    name,
+    description,
+    displayname,
+    type,
+    logicalentityname),
+  PluginTypeId($select=
+    plugintypeid,
+    typename,
+    version,
+    name,
+    assemblyname)
+```
+
+### FetchXml
+
+More information: [Use FetchXML to construct a query](use-fetchxml-construct-query.md)
+
+```xml
+<fetch>
+  <entity name='customapi' >
+    <attribute name='isprivate' />
+    <attribute name='description' />
+    <attribute name='displayname' />
+    <attribute name='executeprivilegename' />
+    <attribute name='isfunction' />
+    <attribute name='allowedcustomprocessingsteptype' />
+    <attribute name='boundentitylogicalname' />
+    <attribute name='bindingtype' />
+    <attribute name='uniquename' />
+    <link-entity name='customapirequestparameter' from='customapiid' to='customapiid' alias='req' >
+      <attribute name='description' />
+      <attribute name='displayname' />
+      <attribute name='logicalentityname' />
+      <attribute name='name' />
+      <attribute name='uniquename' />
+      <attribute name='type' />
+      <attribute name='isoptional' />
+    </link-entity>
+    <link-entity name='customapiresponseproperty' from='customapiid' to='customapiid' >
+      <attribute name='description' />
+      <attribute name='displayname' />
+      <attribute name='logicalentityname' />
+      <attribute name='name' />
+      <attribute name='uniquename' />
+      <attribute name='type' />
+    </link-entity>
+    <link-entity name='plugintype' from='plugintypeid' to='plugintypeid' alias='plugintype' >
+      <attribute name='name' />
+      <attribute name='assemblyname' />
+      <attribute name='version' />
+      <attribute name='plugintypeid' />
+      <attribute name='typename' />
+    </link-entity>
+  </entity>
+</fetch>
+```
+
+### Using SQL
+
+More information: [Use SQL to query data (Preview)](cds-sql-query.md)
+
+```sql
+SELECT api.customapiid,
+       api.uniquename,
+       api.allowedcustomprocessingsteptype,
+       api.bindingtype,
+       api.boundentitylogicalname,
+       api.description,
+       api.displayname,
+       api.executeprivilegename,
+       api.isfunction,
+       api.isprivate,
+       req.customapirequestparameterid,
+       req.uniquename,
+       req.name,
+       req.description,
+       req.displayname,
+       req.type,
+       req.logicalentityname,
+       req.isoptional,
+       resp.customapiresponsepropertyid,
+       resp.uniquename,
+       resp.name,
+       resp.description,
+       resp.type,
+       resp.logicalentityname,
+       type.plugintypeid,
+       type.typename,
+       type.version,
+       type.name,
+       type.assemblyname
+FROM   customapi AS api
+       INNER JOIN
+       customapirequestparameter AS req
+       ON api.customapiid = req.customapiid
+       INNER JOIN
+       customapiresponseproperty AS resp
+       ON api.customapiid = resp.customapiid
+       INNER JOIN
+       plugintype AS type
+       ON api.plugintypeid = type.plugintypeid
+```
+
 ## Frequently Asked Questions (FAQs)
 
 ### Q: Do I have to provide localized display names and descriptions for my Custom API, parameters, and response properties?
