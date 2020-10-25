@@ -95,7 +95,7 @@ If the Custom API is bound to an **Entity** or **EntityCollection**, that parame
     |**Is Optional**|Indicates if the request parameter is optional. If it is not optional, it is required to pass a value for this parameter when using the message.|
 1. Click **Save**. Your form should look something like this:
 
-:::image type="content" source="media/customapi-request-parameter-form.png" alt-text="Example of a Custom API Request Parameter Form":::
+    :::image type="content" source="media/customapi-request-parameter-form.png" alt-text="Example of a Custom API Request Parameter Form":::
 
 > [!NOTE]
 > As noted earlier in [Known issue: Add your Custom API to your solution](#known-issue-add-your-custom-api-to-your-solution) you will have to manually add this request parameter record to your solution.
@@ -121,7 +121,7 @@ If there is only a single **Entity** or **EntityCollection** response property d
 
 1. Click **Save**. Your form should look something like this:
 
-:::image type="content" source="media/customapi-response-property-form.png" alt-text="Custom API Response Property Form":::
+    :::image type="content" source="media/customapi-response-property-form.png" alt-text="Custom API Response Property Form":::
 
 > [!NOTE]
 > As noted earlier in [Known issue: Add your Custom API to your solution](#known-issue-add-your-custom-api-to-your-solution) you will have to manually add this response property record to your solution.

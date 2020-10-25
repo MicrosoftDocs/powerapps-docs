@@ -86,7 +86,7 @@ Within the folder, the data representing the Custom API is found within an XML f
 
 1. In the folder with the extracted files, create a new folder named `customapis`.
 1. In the **customapis** folder, create a folder with the `UniqueName` of the Custom API you want to create. For this example we will use `sample_CustomAPIExample`.
-1. In the **sample_CustomAPIExample** folder, create a file named `customapi.xml`.
+1. In the **sample_CustomAPIExample** folder you created, create a file named `customapi.xml`.
 1. Edit the customapi.xml to set the properties of the custom API you want to create. For this example, we will use the following:
     ```xml
     <customapi uniquename="sample_CustomAPIExample">
@@ -115,10 +115,10 @@ Within the folder, the data representing the Custom API is found within an XML f
   >    </plugintypeid>
   >  ```
   >
-  >  You can retrieve the Plug-in Type Id using a query like this where you know the name of the plug-in type:
+  >  You can retrieve the Plug-in Type Id using a Web API query like this where you know the name of the plug-in type:
   >
   >  ```http
-  >  GET {{webapiurl}}plugintypes?$select=name&$filter=contains(name,'MyPlugin.TypeName')
+  >  GET https://yourorg.crm.dynamics.com/api/data/v9.1/plugintypes?$select=name&$filter=contains(name,'MyPlugin.TypeName')
   >  ```
 
 ## Step 4: Add any Custom API Request Parameters
@@ -178,7 +178,7 @@ See the information in [CustomAPIResponseProperty entity attributes](custom-api.
 
 ## Step 6: Compress the files to create a new solution file
 
-1. Return to the folder where you extracted the original solution file in [Step 2: Extract the contents of the solution](#step-2-extract-the-contents-of-the-solution)
+1. Return to the folder where you extracted the original solution file in [Step 2: Extract the contents of the solution and update the version](#step-2-extract-the-contents-of-the-solution-and-update-the-version)
 1. Select all the extracted files and the **customapis** folder you created.
 
     :::image type="content" source="media/selected-solution-files.png" alt-text="The selected solution files":::
