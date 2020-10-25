@@ -44,11 +44,13 @@ You should not try to compose a solution file manually. Use the tools in [Power 
 1. [Create a solution](../../maker/common-data-service/create-solution.md)
 
   For this example, the solution is defined simply like this:
+
   :::image type="content" source="media/custom-api-solution.png" alt-text="An empty solution":::
 
 1. [Export solutions](../../maker/common-data-service/export-solutions.md)
 
   For this example, make sure you export an unmanaged solution. Managed solution is the default.
+
   :::image type="content" source="media/export-empty-unmanaged-solution.png" alt-text="Option to select to export an unmanaged solution":::
   
 You can find the exported file in your downloads folder.
@@ -66,6 +68,9 @@ You should see just the following three files in the folder:
 You will not need to edit any of these files.
 
 ## Step 3: Add the definition of the Custom API
+
+All Custom APIs in a solution are found within a folder named **customapis**. Within that folder each Custom API will be in a folder named after the Custom API `UniqueName` property.
+Within the folder, the data representing the Custom API is found within an XML file named `customapi.xml`
 
 1. In the folder with the extracted files, create a new folder named `customapis`.
 1. In the **customapis** folder, create a folder with the `UniqueName` of the Custom API you want to create. For this example we will use `sample_CustomAPIExample`.
@@ -87,17 +92,20 @@ You will not need to edit any of these files.
   </customapi>
   ```
     
-> [!NOTE]
-> If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the  `<customapi>` element:
->
->  ```xml
->    <plugintypeid>
->      <plugintypeid>{Add the GUID value of the plug-in type id}</plugintypeid>
->    </plugintypeid>
->  ```
->
->  You can retrieve the Plug-in Type Id using a query like this where you know the name of the plug-in type:
->
->  ```http
->  GET {{webapiurl}}plugintypes?$select=name&$filter=contains(name,'MyPlugin.TypeName')
->  ```
+  > [!NOTE]
+  > If you already have a Plug-in Type that you want to associate with this Custom API, you can include a reference to it in this definition by adding the following element within the  `<customapi>` element:
+  >
+  >  ```xml
+  >    <plugintypeid>
+  >      <plugintypeid>{Add the GUID value of the plug-in type id}</plugintypeid>
+  >    </plugintypeid>
+  >  ```
+  >
+  >  You can retrieve the Plug-in Type Id using a query like this where you know the name of the plug-in type:
+  >
+  >  ```http
+  >  GET {{webapiurl}}plugintypes?$select=name&$filter=contains(name,'MyPlugin.TypeName')
+  >  ```
+
+## Step 4: Add any Custom API Request Parameters
+
